@@ -48,9 +48,11 @@ const sortNotes = (resultRest, resultDevelopers) => {
 const createFrontMatter = ((metadata, releaseNote) => {
   let frontMatter = '---\n'
   metadata.forEach(data => {
-    frontMatter += `${data}: ${releaseNote[data]}\n`
+    const stringsType = ['title', 'slug', 'type'];
+    const isString = stringsType.includes(data);
+    frontMatter += `${data}: ${isString ? '"': ''}${releaseNote[data]}${isString ? '"': ''}\n`
   })
-  return frontMatter + '---\n'
+  return frontMatter + '---\n\n'
 })
 
 const createNotes = async (rootDir, apiKey1, apiKey2) => {
