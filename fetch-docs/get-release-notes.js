@@ -39,11 +39,11 @@ const sortNotes = (resultRest, resultDevelopers) => {
     } else if (j == resultDevelopers.length) {
       result.push(resultRest[i]);
       i++;
-    } else if (resultRest[i].createAt === resultDevelopers[j].createAt) {
+    } else if (resultRest[i].createdAt === resultDevelopers[j].createdAt) {
       result.push(resultDevelopers[j]);
       i++;
       j++;
-    } else if (resultRest[i].createAt > resultDevelopers[j].createAt) {
+    } else if (resultRest[i].createdAt > resultDevelopers[j].createdAt) {
       result.push(resultRest[i]);
       i++;
     } else {
