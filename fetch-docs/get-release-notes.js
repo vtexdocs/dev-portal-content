@@ -50,7 +50,8 @@ const createFrontMatter = ((metadata, releaseNote) => {
   metadata.forEach(data => {
     const stringsType = ['title', 'slug', 'type'];
     const isString = stringsType.includes(data);
-    frontMatter += `${data}: ${isString ? '"': ''}${releaseNote[data]}${isString ? '"': ''}\n`
+    const metaDataValue = isString ? releaseNote[data].replace(/"/g, '\\"') : releaseNote[data]
+    frontMatter += `${data}: ${isString ? '"': ''}${metaDataValue}${isString ? '"': ''}\n`
   })
   return frontMatter + '---\n\n'
 })
