@@ -3,6 +3,16 @@ const path = require('path');
 const sdk = require('api')('@developers/v2.0#nysezql0wwo236');
 require('dotenv').config()
 
+const docsDir = path.join(__dirname, '..', 'docs')
+const notesDir = path.join(docsDir, 'release-notes')
+
+const createDir = (dir) => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir)
+  }
+}
+
+
 const getNotes = async (rootDir, apikey) => {
   sdk.auth(apikey);
   if (!fs.existsSync(rootDir)) {
@@ -56,9 +66,12 @@ const createFrontMatter = ((metadata, releaseNote) => {
   return frontMatter + '---\n\n'
 })
 
-const createNotes = async (rootDir, apiKey1, apiKey2) => {
-  const resultRest = await getNotes(rootDir, apiKey1);
-  const resultDevelopers = await getNotes(rootDir, apiKey2);
+const createNotes = async (rootDir, restAPIKEY, devPortalAPIKEY) => {
+  const dirs = [docsDir, notesDir]
+  dirs.forEach((dir) => createDir(dir))
+
+  const resultRest = await getNotes(rootDir, restAPIKEY);
+  const resultDevelopers = await getNotes(rootDir, devPortalAPIKEY);
 
   const sorteredResult = sortNotes(resultRest, resultDevelopers);
   sorteredResult.forEach((releaseNote) => {
@@ -70,4 +83,4 @@ const createNotes = async (rootDir, apiKey1, apiKey2) => {
   })
 }
 
-createNotes(path.join(__dirname, '..', 'docs', 'release-notes'), process.env.REST_API_KEY, process.env.DEVPORTAL_API_KEY);
+createNotes(notesDir, process.env.REST_API_KEY, process.env.DEVPORTAL_API_KEY);
