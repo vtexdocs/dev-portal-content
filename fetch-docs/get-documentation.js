@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const yaml = require('yaml')
 require('dotenv').config()
 
 const sdk = require('api')('@developers/v2.0#nysezql0wwo236')
@@ -15,6 +16,20 @@ const createDir = (dir) => {
   }
 }
 
+const getMarkdownBody = (doc) => {
+  const frontMatter = yaml.stringify({
+    title: doc.title,
+    category: doc.category,
+    hidden: doc.hidden,
+    order: doc.order,
+    parentDoc: doc.parentDoc
+  })
+
+  const body = `---\n${frontMatter}---\n${doc.body}`
+
+  return body;
+}
+
 const getDoc = async (dir, docSlug) => {
   const docDir = path.join(dir, docSlug)
   createDir(docDir)
@@ -22,6 +37,9 @@ const getDoc = async (dir, docSlug) => {
   const fetchDoc = async (attempts) => {
     try {
       const doc = await sdk.getDoc({ slug: docSlug })
+
+      const body = getMarkdownBody(doc)
+
       console.log(`Fetched document ${docSlug}`)
     } catch (e) {
       if (attempts < 10) {
