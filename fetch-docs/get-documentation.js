@@ -40,6 +40,8 @@ const getDoc = async (dir, docSlug) => {
 
       const body = getMarkdownBody(doc)
 
+      fs.writeFileSync(`${docDir}/${doc.title}.md`, body)
+
       console.log(`Fetched document ${docSlug}`)
     } catch (e) {
       if (attempts < 10) {
