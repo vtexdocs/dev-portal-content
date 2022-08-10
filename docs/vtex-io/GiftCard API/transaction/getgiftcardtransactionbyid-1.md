@@ -1,0 +1,326 @@
+---
+title: "Get GiftCard Transaction by ID"
+slug: "getgiftcardtransactionbyid-1"
+hidden: false
+createdAt: "2019-12-25T01:06:56.455Z"
+updatedAt: "2020-07-31T20:05:24.536Z"
+---
+## Response body has the following properties:
+---
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Mandatory</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><code>value</code></td>
+        <td>decimal</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+ <tr>
+        <td><code>description</code></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+ <tr>
+        <td><code>date</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+ <tr>
+        <td><code>requestId</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+ <tr>
+        <td><code>orderInfo</code></td>
+        <td>object</td>
+        <td></td>
+        <td></td>
+    </tr>
+ <tr>
+        <td>&#x21B3;<code>orderId</code></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+ <tr>
+        <td>&#x21B3;<code>sequence</code></td>
+        <td>number</td>
+        <td></td>
+        <td></td>
+    </tr>
+ <tr>
+        <td><code>cart</code></td>
+        <td>object</td>
+        <td></td>
+        <td></td>
+    </tr>
+ <tr>
+        <td><code>items</code></td>
+        <td>array</td>
+        <td></td>
+        <td></td>
+    </tr>
+ <tr>
+        <td>&#x21B3;<code>id</code></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>productId</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>refId</code></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>name</code></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>price</code></td>
+        <td>decimal</td>
+        <td></td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>sellingPrice</code></td>
+        <td>decimal</td>
+        <td></td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>quantity</code></td>
+        <td>number</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>totalShippingDiscount</code></td>
+        <td>decimal</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>totalDiscount</code></td>
+        <td>decimal</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>priceTags</code></td>
+        <td>array</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>name</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>value</code></td>
+        <td>decimal</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>grandTotal</code></td>
+        <td>decimal</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>discounts</code></td>
+        <td>decimal</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>shipping</code></td>
+        <td>decimal</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>taxes</code></td>
+        <td>decimal</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>itemsTotal</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>clientProfile</code></td>
+        <td>object</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>email</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>firstName</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+ <td>&#x21B3;<code>lastName</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>document</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>phone</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+ <td>&#x21B3;<code>birthDate</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>isCorporate</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>shipping</code></td>
+        <td>object</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>receiverName</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+ <td>&#x21B3;<code>postalCode</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>city</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>state</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>country</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+ <td>&#x21B3;<code>street</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>number</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>neighborhood</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td><code>settlement</code></td>
+        <td>object</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+ <td>&#x21B3;<code>href</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td>Resource URL</td>
+    </tr>
+<tr>
+        <td><code>cancellation</code></td>
+        <td>object</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>href</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td>Resource URL</td>
+    </tr>
+<tr>
+        <td><code>authorization</code></td>
+        <td>object</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+<tr>
+        <td>&#x21B3;<code>href</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td>Resource URL</td>
+    </tr>
+<tr>
+        <td><code>operation</code></td>
+        <td>string</td>
+        <td>Yes</td>
+        <td></td>
+    </tr>
+</table>
+
+<br>
+
+## Response body example:
+[block:code]
+{
+  "codes": [
+    {
+      "code": "{\n    \"value\": 200.0,\n    \"description\": \"\",\n    \"date\": \"2020-06-29T21:19:46.5466866Z\",\n    \"requestId\": \"\",\n    \"orderInfo\": {\n        \"orderId\": \"v5006128str\",\n        \"sequence\": 5006128,\n        \"cart\": {\n            \"items\": [\n                {\n                    \"id\": \"2001023\",\n                    \"productId\": \"2000492\",\n                    \"refId\": \"35994\",\n                    \"name\": \"\",\n                    \"price\": 14.99,\n                    \"sellingPrice\": 0.0,\n                    \"quantity\": 1,\n                    \"totalShippingDiscount\": 0.0,\n                    \"totalDiscount\": 0.0,\n                    \"priceTags\": [\n                        {\n                            \"name\": \"\",\n                            \"value\": 0.0\n                        }\n                    ]\n                }\n            ],\n            \"grandTotal\": 0.0,\n            \"discounts\": 0.0,\n            \"shipping\": 7.27,\n            \"taxes\": 0.0,\n            \"itemsTotal\": 14.99\n        },\n        \"clientProfile\": {\n            \"email\": \"\",\n            \"firstName\": \"\",\n            \"lastName\": \"\",\n            \"document\": \"\",\n            \"phone\": \"\",\n            \"birthDate\": \"0001-01-01T00:00:00\",\n            \"isCorporate\": false\n        },\n        \"shipping\": {\n            \"receiverName\": \"\",\n            \"postalCode\": \"\",\n            \"city\": \"\",\n            \"state\": \"\",\n            \"country\": \"\",\n            \"street\": \"\",\n            \"number\": \"\",\n            \"neighborhood\": \"\"\n        }\n    },\n    \"settlement\": {\n        \"href\": \"/accountname/giftcards/6/transactions/b476900cde63460f8e2ebc0965527310/settlements\"\n    },\n    \"cancellation\": {\n        \"href\": \"/accountname/giftcards/6/transactions/b476900cde63460f8e2ebc0965527310/cancellations\"\n    },\n    \"authorization\": {\n        \"href\":  \"/accountname/giftcards/6/transactions/b476900cde63460f8e2ebc0965527310/authorization\"\n    },\n    \"operation\": \"Debit\"\n}",
+      "language": "json"
+    }
+  ]
+}
+[/block]
