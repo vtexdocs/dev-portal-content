@@ -1,5 +1,5 @@
 {
-  "name": "fetch-docs",
+  "name": "docs-utils",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,8 @@
   "dependencies": {
     "api": "^4.4.0",
     "dotenv": "^16.0.0",
+    "front-matter": "^4.0.2",
+    "image-downloader": "^4.3.0",
     "yaml": "^2.1.0"
   }
 }
