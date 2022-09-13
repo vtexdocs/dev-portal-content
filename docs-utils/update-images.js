@@ -3,6 +3,9 @@ const path = require('path')
 const frontmatter = require('front-matter')
 const imageDownloader = require('image-downloader')
 
+const baseURL = 'https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main'
+const rootDir = path.resolve(__dirname, '..')
+
 const getExtension = (url) => {
   let dotIndex = url.length - 1
   while (dotIndex >= 0 && url[dotIndex] !== '.') {
@@ -20,16 +23,27 @@ const updateImages = async (filepath) => {
   const images = []
   const newContent = content.replace(
     /\!\[(.*)\]\((.*)\)/g,
-    (_match, altText, url) => {
-      const ext = getExtension(url)
-      const filename = `${slug}-${images.length}.${ext}`
+    (match, altText, url) => {
+      if (url.startsWith(baseURL)) return match
 
-      images.push({
-        filepath: path.resolve('images', filename),
-        url
-      })
+      if (url.startsWith('http://') || url.startsWith('https://')) {
+        const ext = getExtension(url)
+        const filename = `${slug}-${images.length}.${ext}`
+  
+        images.push({
+          filepath: path.resolve('images', filename),
+          url
+        })
 
-      return `![${altText}](/images/${filename})`
+        return `![${altText}](${baseURL}/images/${filename})`
+      }
+
+      if (path.isAbsolute(url)) {
+        return `![${altText}](${baseURL}${url})`
+      }
+
+      const imagePath = path.resolve(path.dirname(filepath), url).replace(rootDir, '')
+      return `![${altText}](${baseURL}${imagePath})`
     }
   )
 
