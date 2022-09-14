@@ -29,7 +29,6 @@ jobs:
           IFS=',' read -a filepaths <<< "${{ steps.changed_files.outputs.all_changed_files }}"
 
           for filepath in "${filepaths[@]}"; do
-            echo "$filepath"
             if [[ $filepath == *.md ]] || [[ $filepath == *.mdx ]]; then
               node ./docs-utils/update-images.js "./$filepath"
             fi
