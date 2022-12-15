@@ -735,9 +735,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://avatars1.githubusercontent.com/u/49173685?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gustavopvasconcellos</b></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=gustavopvasconcellos" title="Code">💻</a></td>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://avatars.githubusercontent.com/u/71461884?v=4?s=100" width="100px;" alt=""/><br /><sub><b>razvanudream</b></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=razvanudream" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/claudiu-iviteb"><img src="https://avatars.githubusercontent.com/u/73105476?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Claudiu Ionita</b></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=claudiu-iviteb" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://avatars1.githubusercontent.com/u/49173685?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>gustavopvasconcellos</strong></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=gustavopvasconcellos" title="Code">💻</a></td>
+    <td align="center"><a href="https://razvanudrea.com"><img src="https://avatars.githubusercontent.com/u/71461884?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>razvanudream</strong></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=razvanudream" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/claudiu-iviteb"><img src="https://avatars.githubusercontent.com/u/73105476?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>Claudiu Ionita</strong></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=claudiu-iviteb" title="Code">💻</a></td>
   </tr>
 </table>
 

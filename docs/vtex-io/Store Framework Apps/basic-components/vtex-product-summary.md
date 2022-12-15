@@ -114,8 +114,8 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://avatars1.githubusercontent.com/u/49173685?v=4" width="100px;" alt=""/><br /><sub><b>gustavopvasconcellos</b></sub></a><br /><a href="https://github.com/vtex-apps/product-summary/commits?author=gustavopvasconcellos" title="Code">💻</a></td>
-    <td align="center"><a href="http://imdanielpiva.me"><img src="https://avatars0.githubusercontent.com/u/26178791?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Piva</b></sub></a><br /><a href="https://github.com/vtex-apps/product-summary/commits?author=imdanielpiva" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://avatars1.githubusercontent.com/u/49173685?v=4" width="100px;" alt=""/><br /><sub><strong>gustavopvasconcellos</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-summary/commits?author=gustavopvasconcellos" title="Code">💻</a></td>
+    <td align="center"><a href="http://imdanielpiva.me"><img src="https://avatars0.githubusercontent.com/u/26178791?v=4" width="100px;" alt=""/><br /><sub><strong>Daniel Piva</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-summary/commits?author=imdanielpiva" title="Code">💻</a></td>
   </tr>
 </table>
 

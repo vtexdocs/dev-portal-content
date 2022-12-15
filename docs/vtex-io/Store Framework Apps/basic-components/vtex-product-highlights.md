@@ -191,7 +191,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/igor-becker-73b7901a3/"><img src="https://avatars.githubusercontent.com/u/57180581?v=4?s=100" width="100px;" alt=""/><br /><sub><b>proudynyu</b></sub></a><br /><a href="https://github.com/vtex-apps/product-highlights/commits?author=proudynyu" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/igor-becker-73b7901a3/"><img src="https://avatars.githubusercontent.com/u/57180581?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>proudynyu</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-highlights/commits?author=proudynyu" title="Code">💻</a></td>
   </tr>
 </table>
 

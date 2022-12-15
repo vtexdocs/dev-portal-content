@@ -95,7 +95,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://avatars.githubusercontent.com/u/43498488?v=4?s=100" width="100px;" alt=""/><br /><sub><b>khrizzcristian</b></sub></a><br /><a href="https://github.com/vtex-apps/category-menu/commits?author=khrizzcristian" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://avatars.githubusercontent.com/u/43498488?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>khrizzcristian</strong></sub></a><br /><a href="https://github.com/vtex-apps/category-menu/commits?author=khrizzcristian" title="Code">💻</a></td>
   </tr>
 </table>
 

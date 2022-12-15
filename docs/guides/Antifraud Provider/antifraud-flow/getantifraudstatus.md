@@ -16,48 +16,48 @@ The parameter in the URL `transactions.id` is VTEX transaction ID that was passe
 <table>
     <tr>
         <td><code>id</code></td>
-        <td><b>string</b></td>
+        <td><strong>string</strong></td>
         <td>VTEX transaction ID. The ID of this transaction must be in the response.</td>
     </tr>
         <tr>
         <td><code>tid</code></td>
-        <td><b>string</b></td>
+        <td><strong>string</strong></td>
      <td>Provider transaction ID. The ID of this transaction must be in the response. The antifraud provider MUST generates an unique transaction Id.</td>
     </tr>
     <tr>
         <td><code>status</code></td>
-        <td><b>string</b></td>
+        <td><strong>string</strong></td>
         <td>Transaction status from provider. Must be one of the values: <i>approved</i>, <i>denied</i> or <i>undefined</i></td>
     </tr>
     <tr>
         <td><code>score</code></td>
-        <td><b>decimal</b></td>
+        <td><strong>decimal</strong></td>
         <td>The value of the score risk in percentage. 100.00 as max value means total fraud</td>
     </tr>
     <tr>
         <td><code>AnalysisType</code></td>
-        <td><b>string</b></td>
-        <td>Analysis type. Valid values are <b>authomatic</b> or <b>manual</b></td>
+        <td><strong>string</strong></td>
+        <td>Analysis type. Valid values are <strong>authomatic</strong> or <strong>manual</strong></td>
     </tr>
     <tr>
         <td><code>responses</code>&nbsp;(optional)</td>
-        <td><b>dictionary or string</b></td>
+        <td><strong>dictionary or string</strong></td>
         <td>Key Value dictionary to add custom responses from  analysis</td>
     </tr>
     <tr>
         <td><code>tid</code></td>
-        <td><b>string</b></td>
+        <td><strong>string</strong></td>
         <td>Transaction ID in the provider. This is the transaction identifier that the provider assigns</td>
     </tr>
     <tr>
         <td><code>code</code>&nbsp;(optional)</td>
-        <td><b>string</b></td>
-        <td>Error code returned from provider. <b>Will be logged in transaction interactions log</b></td>
+        <td><strong>string</strong></td>
+        <td>Error code returned from provider. <strong>Will be logged in transaction interactions log</strong></td>
     </tr>
     <tr>
         <td><code>message</code>&nbsp;(optional)</td>
-        <td><b>string</b></td>
-        <td>Error message returned from provider. <b>Will be logged in transaction interactions log</b></td>
+        <td><strong>string</strong></td>
+        <td>Error message returned from provider. <strong>Will be logged in transaction interactions log</strong></td>
     </tr>
 </table>
 

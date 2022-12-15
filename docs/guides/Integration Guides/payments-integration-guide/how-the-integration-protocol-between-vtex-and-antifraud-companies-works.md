@@ -228,7 +228,7 @@ During payment transactions analysis, some anti-fraud providers may choose not t
 [block:callout]
 {
   "type": "warning",
-  "body": "The configuration option <b>Cardholder document field</b> will only be available to the merchant if the antifraud provider declares in its <a href=\"https://developers.vtex.com/vtex-rest-api/reference/manifest\">manifest</a>, the cardholder document field (<code>cardholderDocument</code>) as <code>optional</code>. Learn more at <a href=\"https://developers.vtex.com/vtex-rest-api/docs/cardholder-document-configuration\">Cardholder Document Configuration</a>."
+  "body": "The configuration option <strong>Cardholder document field</strong> will only be available to the merchant if the antifraud provider declares in its <a href=\"https://developers.vtex.com/vtex-rest-api/reference/manifest\">manifest</a>, the cardholder document field (<code>cardholderDocument</code>) as <code>optional</code>. Learn more at <a href=\"https://developers.vtex.com/vtex-rest-api/docs/cardholder-document-configuration\">Cardholder Document Configuration</a>."
 }
 [/block]
 To set up the cardholder document field, follow the steps below:
@@ -246,7 +246,7 @@ To set up the cardholder document field, follow the steps below:
     - __Hide Field__: the field will not be displayed at checkout.
 
 <ui>
-  8. Click on <b>Save.</b>
+  8. Click on <strong>Save.</strong>
   </ui>
 
 

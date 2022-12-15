@@ -6,29 +6,29 @@ createdAt: "2020-05-13T21:52:02.370Z"
 updatedAt: "2020-05-18T23:16:11.535Z"
 ---
 #### RESPONSE BODY
+
 ---
 
 <table>
-  <tr>
-      <td><code>applicationId</code></td>
-      <td><b>string<b></td>
-      <td>applicationId used</td>
-  </tr>
-  <tr>
-      <td><code>appKey</code></td>
-      <td><b>string</b></td>
-      <td>Will be used in all request API Calls as X-VTEX-API-AppKey</td>
-   </tr>
     <tr>
-      <td><code>appToken</code></td>
-      <td><b>string<b></td>
-      <td>Will be used in all request API Calls as X-VTEX-API-AppToken</td>
-  </tr>
+        <td><code>applicationId</code></td>
+        <td><strong>string</strong></td>
+        <td>applicationId used</td>
+    </tr>
+    <tr>
+        <td><code>appKey</code></td>
+        <td><strong>string</strong></td>
+        <td>Will be used in all request API Calls as X-VTEX-API-AppKey</td>
+    </tr>
+    <tr>
+        <td><code>appToken</code></td>
+        <td><strong>string</strong></td>
+        <td>Will be used in all request API Calls as X-VTEX-API-AppToken</td>
+    </tr>
 </table>
 
-
-
 #### REQUEST EXAMPLES AND THEIR RESPONSES
+
 ---
 [block:code]
 {

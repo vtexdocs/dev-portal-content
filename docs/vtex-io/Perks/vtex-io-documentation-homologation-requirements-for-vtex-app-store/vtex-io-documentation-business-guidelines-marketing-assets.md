@@ -60,7 +60,7 @@ Your app icon is one of the first elements of your app that developers and merch
 - The icon must not exceed 75% of the total space available of the icon size.
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <img src="https://user-images.githubusercontent.com/67270558/126643069-18ead453-ce79-44d6-847b-e9e4f1a378c4.png" alt="Icon with size description required for the App Store">
 <br>
@@ -125,7 +125,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 - Keep it concise and descriptive. Ensure that it alludes to the experiences the app provides.
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -145,7 +145,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -165,7 +165,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -185,7 +185,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -205,7 +205,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -225,7 +225,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -257,7 +257,7 @@ The headline should describe the value proposition of your app in a concise sent
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -281,7 +281,7 @@ The headline should describe the value proposition of your app in a concise sent
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -305,7 +305,7 @@ The headline should describe the value proposition of your app in a concise sent
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -333,7 +333,7 @@ The overview is the description of the app and should be an engaging message tha
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -357,7 +357,7 @@ The overview is the description of the app and should be an engaging message tha
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -377,7 +377,7 @@ The overview is the description of the app and should be an engaging message tha
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -397,7 +397,7 @@ The overview is the description of the app and should be an engaging message tha
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -430,7 +430,7 @@ In `features`, provide a list of your app's main features.
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -473,7 +473,7 @@ Use this field to provide more specific details about the app. For example, is y
 
 
 <details>
-    <summary><b>Show example</b></summary>
+    <summary><strong>Show example</strong></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">

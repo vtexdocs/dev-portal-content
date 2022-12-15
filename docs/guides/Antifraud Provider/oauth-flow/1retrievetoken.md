@@ -11,16 +11,16 @@ updatedAt: "2021-11-24T20:47:58.411Z"
 
 <table>
   <tr>
-        <td><b>Header</b></td>
-        <td><b>Value</b></td>
+        <td><strong>Header</strong></td>
+        <td><strong>Value</strong></td>
     </tr>
     <tr>
         <td><code>Accept</code></td>
-        <td><b>application/json</b></td>
+        <td><strong>application/json</strong></td>
     </tr>
     <tr>
         <td><code>Content-Typen</code></td>
-        <td><b>application/json</b></td>
+        <td><strong>application/json</strong></td>
     </tr>
 </table>
 
@@ -28,16 +28,16 @@ updatedAt: "2021-11-24T20:47:58.411Z"
 <table>
   <tr>
       <td><code>applicationId</code></td>
-      <td><b>string</b></td>
+      <td><strong>string</strong></td>
       <td>Always will have the [vtex] value</td>
   </tr>
   <tr>
       <td><code>returnUrl</code></td>
-      <td><b>string</b></td>
+      <td><strong>string</strong></td>
       <td>Return URL. VTEX Url Web site. You will redirect the user after he completes the login/logon 
     in your payment provider web site.  
     The Url will contain a query string parameter 
-    called <b>authorizationCode</b> that will be passed empty and that you MUST fill before return the user </td>
+    called <strong>authorizationCode</strong> that will be passed empty and that you MUST fill before return the user </td>
   </tr>
 </table>
 
@@ -49,7 +49,7 @@ updatedAt: "2021-11-24T20:47:58.411Z"
 <table>
   <tr>
       <td><code>token</code></td>
-      <td><b>string</b></td>
+      <td><strong>string</strong></td>
       <td>Payment Provider Token. Used to identify the context after you receive the redirected user to your site</td>
   </tr>
 </table>

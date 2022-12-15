@@ -51,7 +51,7 @@ The same request, for the same `paymentId`, can be executed several times, so yo
         <td><code>paymentId</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td>VTEX payment ID that can be used as <b>unique identifier</b>.</td>
+        <td>VTEX payment ID that can be used as <strong>unique identifier</strong>.</td>
     </tr>
     <tr>
         <td><code>paymentMethod</code></td>

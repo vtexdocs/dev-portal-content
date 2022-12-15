@@ -53,13 +53,13 @@ Returns a specific giftcard with details.
         <td><code>emissionDate</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td><b>Important: </b>It must be in the format <code>YYYY-MM-DDThh:mm:ss.fff</code></td>
+        <td><strong>Important: </strong>It must be in the format <code>YYYY-MM-DDThh:mm:ss.fff</code></td>
     </tr>
     <tr>
         <td><code>expiringDate</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td><b>Important: </b>It must be in the format <code>YYYY-MM-DDThh:mm:ss.fff</code></td>
+        <td><strong>Important: </strong>It must be in the format <code>YYYY-MM-DDThh:mm:ss.fff</code></td>
     </tr>
     <tr>
         <td><code>caption</code></td>

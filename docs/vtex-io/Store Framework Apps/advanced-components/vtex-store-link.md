@@ -152,7 +152,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/anto90fg"><img src="https://avatars.githubusercontent.com/u/73878310?v=4?s=100" width="100px;" alt=""/><br /><sub><b>anto90fg</b></sub></a><br /><a href="https://github.com/vtex-apps/store-link/commits?author=anto90fg" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/anto90fg"><img src="https://avatars.githubusercontent.com/u/73878310?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>anto90fg</strong></sub></a><br /><a href="https://github.com/vtex-apps/store-link/commits?author=anto90fg" title="Code">💻</a></td>
   </tr>
 </table>
 

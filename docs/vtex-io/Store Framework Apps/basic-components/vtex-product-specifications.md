@@ -203,8 +203,8 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/raissacmp"><img src="https://avatars0.githubusercontent.com/u/62183926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raissa Campos</b></sub></a><br /><a href="https://github.com/vtex-apps/product-specifications/commits?author=raissacmp" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/samuel-rodrigues-48638618b/"><img src="https://avatars.githubusercontent.com/u/62268414?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samuel Rodrigues</b></sub></a><br /><a href="https://github.com/vtex-apps/product-specifications/commits?author=SamuelRodriguess" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/raissacmp"><img src="https://avatars0.githubusercontent.com/u/62183926?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>Raissa Campos</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-specifications/commits?author=raissacmp" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/samuel-rodrigues-48638618b/"><img src="https://avatars.githubusercontent.com/u/62268414?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>Samuel Rodrigues</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-specifications/commits?author=SamuelRodriguess" title="Code">💻</a></td>
   </tr>
 </table>
 

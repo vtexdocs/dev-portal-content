@@ -177,10 +177,10 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://avatars1.githubusercontent.com/u/43498488?v=4" width="100px;" alt=""/><br /><sub><b>khrizzcristian</b></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=khrizzcristian" title="Code">💻</a></td>
-    <td align="center"><a href="https://juliomoreira.pro"><img src="https://avatars2.githubusercontent.com/u/1207017?v=4" width="100px;" alt=""/><br /><sub><b>Julio Moreira</b></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=juliomoreira" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/btalma"><img src="https://avatars.githubusercontent.com/u/47258865?v=4" width="100px;" alt=""/><br /><sub><b>Brian Talma</b></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=btalma" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/arturo777"><img src="https://avatars.githubusercontent.com/u/49737670?v=4" width="100px;" alt=""/><br /><sub><b>Arturo Castillo</b></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=arturo777" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://avatars1.githubusercontent.com/u/43498488?v=4" width="100px;" alt=""/><br /><sub><strong>khrizzcristian</strong></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=khrizzcristian" title="Code">💻</a></td>
+    <td align="center"><a href="https://juliomoreira.pro"><img src="https://avatars2.githubusercontent.com/u/1207017?v=4" width="100px;" alt=""/><br /><sub><strong>Julio Moreira</strong></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=juliomoreira" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/btalma"><img src="https://avatars.githubusercontent.com/u/47258865?v=4" width="100px;" alt=""/><br /><sub><strong>Brian Talma</strong></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=btalma" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/arturo777"><img src="https://avatars.githubusercontent.com/u/49737670?v=4" width="100px;" alt=""/><br /><sub><strong>Arturo Castillo</strong></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=arturo777" title="Code">💻</a></td>
   </tr>
 </table>
 

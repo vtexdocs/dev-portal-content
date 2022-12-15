@@ -99,7 +99,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/regis-samurai"><img src="https://avatars0.githubusercontent.com/u/38638226?v=4" width="100px;" alt=""/><br /><sub><b>Reginaldo</b></sub></a><br /><a href="https://github.com/vtex-apps/product-quantity/commits?author=regis-samurai" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/regis-samurai"><img src="https://avatars0.githubusercontent.com/u/38638226?v=4" width="100px;" alt=""/><br /><sub><strong>Reginaldo</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-quantity/commits?author=regis-samurai" title="Code">💻</a></td>
   </tr>
 </table>
 

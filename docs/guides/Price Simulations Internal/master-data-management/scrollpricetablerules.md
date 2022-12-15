@@ -13,16 +13,16 @@ updatedAt: '2021-02-03T20:45:46.580Z'
 
 <table>
     <tr>
-        <td><b>Header</b></td>
-        <td><b>Value</b></td>
+        <td><strong>Header</strong></td>
+        <td><strong>Value</strong></td>
     </tr>
     <tr>
         <td><code>Content-Type</code></td>
-        <td><b>application/json</b></td>
+        <td><strong>application/json</strong></td>
     </tr>
     <tr>
         <td><code>Accept</code></td>
-        <td><b>application/json</b></td>
+        <td><strong>application/json</strong></td>
     </tr>
 </table>
 

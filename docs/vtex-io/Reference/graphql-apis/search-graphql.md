@@ -165,11 +165,11 @@ Search term. It can contain any character.
 </td></tr><tr><td colspan="2" valign="top"><strong>productSearch</strong></td><td valign="top"><a href="#productsearch">ProductSearch</a></td><td>
 Lists the products for a given query.
 </td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>fullText</code> instead.
+<strong>Deprecated</strong>. Use <code>fullText</code> instead.
 </td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>
 Search term. It can contain any character.
 </td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
+<strong>Deprecated</strong>. Use <code>selectedFacets</code> instead.
 </td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
 List of the selected facets
 
@@ -177,13 +177,13 @@ The order in which the terms appear is not relevant to the search.
 
 You can also repeat the same <code>facetKey</code> several times for different values.
 </td></tr><tr><td colspan="2" align="right" valign="top">category</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
+<strong>Deprecated</strong>. Use <code>selectedFacets</code> instead.
 </td></tr><tr><td colspan="2" align="right" valign="top">specificationFilters</td><td valign="top">[<a href="#string">String</a>]</td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
+<strong>Deprecated</strong>. Use <code>selectedFacets</code> instead.
 </td></tr><tr><td colspan="2" align="right" valign="top">priceRange</td><td valign="top"><a href="#string">String</a></td><td>
 Filter by price range. e.g.: {a} TO {b} - {a} is the minimum price "from" and {b} is the highest price "to"
 </td></tr><tr><td colspan="2" align="right" valign="top">collection</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
+<strong>Deprecated</strong>. Use <code>selectedFacets</code> instead.
 </td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#string">String</a></td><td>
 Filter by availability at a specific sales channel. e.g.: salesChannel:4 if want filter by available products for the sales channel 4
 </td></tr><tr><td colspan="2" align="right" valign="top">orderBy</td><td valign="top"><a href="#string">String</a></td><td>
@@ -253,11 +253,11 @@ Filter by availability at a specific sales channel.
 </td></tr><tr><td colspan="2" valign="top"><strong>facets</strong></td><td valign="top"><a href="#facets">Facets</a></td><td>
 Returns facets category
 </td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>fullText</code> instead.
+<strong>Deprecated</strong>. Use <code>fullText</code> instead.
 </td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>
 Search term. It can contain any character.
 </td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
+<strong>Deprecated</strong>. Use <code>selectedFacets</code> instead.
 </td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
 List of the selected facets
 
