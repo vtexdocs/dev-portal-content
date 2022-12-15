@@ -2,7 +2,7 @@
 title: "Get frequency options by subscriptionId"
 slug: "getfrequencyoptionsbysubscriptionid"
 excerpt: "Lists frequency options for the Subscription, filtering by `subscriptionId`."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2022-05-05T16:26:42.625Z"
 ---

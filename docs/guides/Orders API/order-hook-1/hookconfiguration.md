@@ -1,10 +1,10 @@
 ---
 title: "Create or update hook configuration"
 slug: "hookconfiguration"
-excerpt: "Configures filtering rules applied to orders hook. Learn more with the [orders hook guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook).\n\r\n\rThere are two types of filtering that can be used. The `FromWorkflow` type filters orders by status, whereas the `FromOrders` type uses JSONata expressions to filter orders according to any property in the orders JSON document. This enables stores to filter delivered orders and orders in which products have been added or removed, for example.\n\r\n\rTo learn more, access the [JSONata documentation](https://docs.jsonata.org/overview.html) and test filtering JSONata expressions with our [expressions API](https://developers.vtex.com/vtex-rest-api/reference/feed-v3#testjsonataexpression)."
+excerpt: "Configures filtering rules applied to orders hook. Learn more with the [orders hook guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook).\n\r\n\rThere are two types of filtering that can be used: \n\r\n\r - `FromWorkflow`: filters orders by status.\n\r\n\r - `FromOrders`: uses JSONata expressions to filter orders according to any property in the orders JSON document.\n\r\n\r This enables stores to filter delivered orders and orders in which products have been added or removed, for example.\n\r\n\rTo learn more, access the [JSONata documentation](https://docs.jsonata.org/overview.html) and test filtering JSONata expressions with our [expressions API](https://developers.vtex.com/vtex-rest-api/reference/feed-v3#testjsonataexpression)."
 hidden: false
 createdAt: "2019-12-11T00:42:27.604Z"
-updatedAt: "2022-03-23T21:43:56.511Z"
+updatedAt: "2022-09-06T20:48:28.109Z"
 ---
 [block:callout]
 {

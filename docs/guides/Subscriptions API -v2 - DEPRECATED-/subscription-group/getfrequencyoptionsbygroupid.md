@@ -2,7 +2,7 @@
 title: "Get frequency options by groupId"
 slug: "getfrequencyoptionsbygroupid"
 excerpt: "Lists frequency options of a given Subscription group, filtering by groupId."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-02T15:02:18.052Z"
 ---

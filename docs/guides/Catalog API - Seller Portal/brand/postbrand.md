@@ -1,59 +1,8 @@
 ---
-title: "Create a Brand"
+title: "Create Brand"
 slug: "postbrand"
-excerpt: "The endpoint creates a new brand."
-hidden: true
+excerpt: ">📘 This API is part of the [Seller Portal Catalog](https://help.vtex.com/en/tutorial/how-the-seller-portal-catalog-works--7pMB6YOt6YQDQQbzFB4Pxp). This functionality is in the Beta stage and can be discontinued at any moment at VTEX's discretion. VTEX will not be responsible for any instabilities caused by its use or discontinuity. If you have any questions, please contact [our Support Center](https://support.vtex.com/hc/en-us/requests). \r\n\r\n Creates a new brand.\r\n\r\n## Request body example\r\n\r\n```json\r\n{\r\n  \"name\": \"Zwilling\",\r\n  \"isActive\": true\r\n}\r\n```\r\n\r\n## Response body example\r\n\r\n```json\r\n{\r\n  \"id\": \"20\",\r\n  \"name\": \"Zwilling\",\r\n  \"isActive\": true,\r\n  \"createdAt\": \"2021-05-17T15:20:36.077253+00:00\",\r\n  \"updatedAt\": \"2021-01-18T14:41:45.696488+00:00\"\r\n}\r\n```"
+hidden: false
 createdAt: "2021-07-05T14:05:36.176Z"
-updatedAt: "2021-07-05T15:11:04.828Z"
+updatedAt: "2022-11-01T22:00:43.626Z"
 ---
-## Request body has the following properties:
-
-| Attribute          | Type    | Description                                                                                  |
-| ------------------ | ------- | -------------------------------------------------------------------------------------------- |
-| name               | string  | Brand Name.                                                                                  |
-| metaTagDescription | string  | Meta tag description of the brand. This information is used on SEO.                          |
-| keywords           | array   | An array of strings with keywords of the Brand that can be used on the search.               |
-| siteTitle          | string  | Name that will be displayed in the site title.                                               |
-| isActive           | boolean | The condition defines if the brand is active or inactive.                                    |
-| slug               | string  | Reference of the product in the URL of the store.                                            |
-| score              | integer | Brand’s score. The score of the brand is used to set the priority on the search result page. |
-| displayOnMenu      | boolean | The condition will display the brand on the store menu.                                      |
-
-## Request body example:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n  \"name\": \"Marca 27/04\",\n  \"metaTagDescription\": \"description\",\n  \"keywords\": [],\n  \"siteTitle\": \"description\",\n  \"isActive\": true,\n  \"slug\": \"slug/marca/marca27/04\",\n  \"score\": 123,\n  \"displayOnMenu\": true\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]
-## Response body has the following properties:
-
-| Attribute          | Type    | Description                                                                                  |
-| ------------------ | ------- | -------------------------------------------------------------------------------------------- |
-| id                 | string  | Brand unique identifier number.                                                              |
-| name               | string  | Brand Name.                                                                                  |
-| metaTagDescription | string  | Meta tag description of the brand. This information is used on SEO.                          |
-| keywords           | array   | An array of strings with keywords of the Brand, that can be used on the search.              |
-| siteTitle          | string  | Name that will be displayed in the site title.                                               |
-| isActive           | boolean | The condition defines if the brand is active or inactive.                                    |
-| slug               | string  | Reference of the product in the URL of the store.                                            |
-| score              | integer | Brand’s score. The score of the brand is used to set the priority on the search result page. |
-| createdAt          | string  | Date when the brand was created.                                                             |
-| updatedAt          | string  | Last date when the brand was updated.                                                        |
-| displayOnMenu      | boolean | The condition will display the brand on the store menu.                                      |
-
-## ## Response body example:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n    \"id\": \"1409\",\n    \"name\": \"Marca 27/04\",\n    \"metaTagDescription\": \"description\",\n    \"keywords\": [],\n    \"siteTitle\": \"description\",\n    \"isActive\": true,\n    \"slug\": \"slug/marca/marca27/04\",\n    \"score\": 123,\n    \"createdAt\": \"2021-05-17T15:20:36.077253+00:00\",\n    \"updatedAt\": \"2021-05-17T15:20:36.077253+00:00\",\n    \"displayOnMenu\": true\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]

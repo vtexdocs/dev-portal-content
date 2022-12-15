@@ -1,10 +1,10 @@
 ---
 title: "Get Product and SKU IDs"
 slug: "catalog-api-get-products-skus"
-excerpt: "Retrieves the IDs of products and SKUs."
+excerpt: "Retrieves the IDs of products and SKUs. \r\n> 📘 Onboarding guide \r\n>\r\n> Check the new [Catalog onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Catalog and is organized by focusing on the developer's journey."
 hidden: false
 createdAt: "2020-02-05T23:07:29.210Z"
-updatedAt: "2022-05-20T22:26:07.156Z"
+updatedAt: "2022-08-25T13:52:41.526Z"
 ---
 ## Response body example:
 [block:code]

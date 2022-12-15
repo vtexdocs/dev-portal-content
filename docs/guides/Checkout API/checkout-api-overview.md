@@ -3,7 +3,7 @@ title: "Checkout API - Overview"
 slug: "checkout-api-overview"
 hidden: false
 createdAt: "2019-12-22T12:06:51.977Z"
-updatedAt: "2022-07-01T11:48:51.703Z"
+updatedAt: "2022-11-18T13:47:36.558Z"
 ---
 [block:callout]
 {
@@ -21,11 +21,12 @@ The Checkout API allows you to obtain and configure information about the shoppi
 Allows merchants to simulate, configure and customize shopping cart information.
 
 - [POST - Cart Simulation](https://developers.vtex.com/vtex-rest-api/reference/cartsimulation)
-- [GET - Get current cart or create a new one](https://developers.vtex.com/vtex-rest-api/reference/getcurrentcartorcreateanewone)
+- [GET - Create a new cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart)
 - [GET - Get cart information by ID](https://developers.vtex.com/vtex-rest-api/reference/getcartinformationbyid)
 - [POST - Remove all items](https://developers.vtex.com/vtex-rest-api/reference/removeallitems)
 - [GET - Remove all personal data](https://developers.vtex.com/vtex-rest-api/reference/removeallpersonaldata)
-- [PATCH - Update cart items](https://developers.vtex.com/vtex-rest-api/reference/itemsupdate)
+- [POST - Update cart items](https://developers.vtex.com/vtex-rest-api/reference/itemsupdate)
+- [POST - Add cart items](https://developers.vtex.com/vtex-rest-api/reference/items)
 - [PUT - Change price](https://developers.vtex.com/vtex-rest-api/reference/pricechange)
 - [PATCH - Ignore profile data](https://developers.vtex.com/vtex-rest-api/reference/ignoreprofiledata)
 - [GET - Cart installments](https://developers.vtex.com/vtex-rest-api/reference/getcartinstallments)

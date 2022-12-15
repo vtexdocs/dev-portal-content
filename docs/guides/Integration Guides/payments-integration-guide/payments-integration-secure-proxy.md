@@ -3,7 +3,7 @@ title: "Secure Proxy"
 slug: "payments-integration-secure-proxy"
 hidden: false
 createdAt: "2022-02-15T20:28:58.081Z"
-updatedAt: "2022-03-14T15:36:11.524Z"
+updatedAt: "2022-11-03T18:14:40.007Z"
 ---
 Secure Proxy is a solution that allows payment integrations to transfer sensitive data (i.e.: credit card numbers) in a secure environment. An integration must use Secure Proxy if it meets the following conditions:
 
@@ -47,7 +47,12 @@ Considering that the integration environment is fundamental for a transaction to
 Through this solution, the Payments Gateway acts as a communication service between a payment provider in a non-PCI environment and an acquirer. The Payments Gateway sends tokenized card information to the payment provider without the risk of compromising data security. The tokens are used to replace sensitive information in the provider and to act as a reference to the information in the Gateway.
 
 When a system does not meet all the security requirements, it might be vulnerable to attacks and data theft. This can lead to serious consequences including fraud losses, loss of confidence from customers, reduction in sales, legal costs, fines, etc. More information about these security issues can be found in the PCI article [Why Security Matters](https://www.pcisecuritystandards.org/pci_security/why_security_matters). By meeting the requirements of PCI DSS, those issues and their consequences can be avoided.
-
+[block:callout]
+{
+  "type": "info",
+  "body": "Secure Proxy is mandatory for connectors built with the VTEX IO infrastructure since it is not compliant with PCI DSS. This also includes connectors made through our [Payment Provider Framework](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-framework)."
+}
+[/block]
 ## How it works
 
 In this section, we detail how the solution works in a payment authorization flow. The image below shows an overview of the flow containing the Secure Proxy, as well as the four steps required for the payment to be authorized by the acquirer.

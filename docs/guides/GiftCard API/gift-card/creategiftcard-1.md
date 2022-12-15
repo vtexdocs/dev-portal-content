@@ -1,15 +1,16 @@
 ---
 title: "Create GiftCard"
 slug: "creategiftcard-1"
+excerpt: "Creates a GiftCard for a specific user"
 hidden: false
 createdAt: "2019-12-25T01:06:56.455Z"
-updatedAt: "2022-02-21T17:26:49.560Z"
+updatedAt: "2022-11-01T14:16:19.655Z"
 ---
 ## Warning
 ---
 
 <ul>
-<li>The field <code>profileId</code> should be filled with a value that identifies the client. It can be the ID itself or the client's e-mail.</li>
+<li>The field <code>userProfileId</code> should be filled with a value that identifies the client. It is the ID itself.</li>
 <li>The field <code>expiringDate</code> should be filled in ISO 8601 format <code>YYYY-MM-DDThh:mm:ss.fff</code></li>
 </ul>
 

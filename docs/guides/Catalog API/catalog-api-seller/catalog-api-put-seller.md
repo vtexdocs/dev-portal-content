@@ -2,14 +2,14 @@
 title: "Update Seller"
 slug: "catalog-api-put-seller"
 excerpt: "Updates a seller."
-hidden: false
+hidden: true
 createdAt: "2020-02-05T23:07:29.210Z"
-updatedAt: "2022-04-19T00:03:05.058Z"
+updatedAt: "2022-10-21T18:16:30.162Z"
 ---
 [block:callout]
 {
   "type": "warning",
-  "body": "Check out the updated version of the Sellers' endpoints in our [Marketplace API documentation](https://developers.vtex.com/vtex-rest-api/reference/sellers). If you are doing this integration for the first time, we recommend that you follow the updated documentation.",
+  "body": "This is part of a legacy version of the Sellers' endpoints. Check out the updated version in our [Marketplace API documentation](https://developers.vtex.com/vtex-rest-api/reference/sellers). If you are doing this integration for the first time, we recommend that you follow the updated documentation instead.",
   "title": "New version of Sellers API"
 }
 [/block]

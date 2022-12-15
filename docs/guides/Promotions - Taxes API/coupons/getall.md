@@ -4,8 +4,15 @@ slug: "getall"
 excerpt: "Retrives all coupons from an account."
 hidden: false
 createdAt: "2021-11-09T19:16:40.460Z"
-updatedAt: "2021-11-12T20:10:41.970Z"
+updatedAt: "2022-09-06T19:18:04.990Z"
 ---
+[block:callout]
+{
+  "type": "info",
+  "title": "Onboarding guide",
+  "body": "Check the new [Promotions onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/promotions-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about the Promotions and is organized by focusing on the developer's journey."
+}
+[/block]
 ## Response object has the following properties:
 [block:parameters]
 {

@@ -1,7 +1,7 @@
 ---
 title: "Create a middleware to issue tax coupons for inStore"
 slug: "create-a-middleware-to-issue-tax-coupons-for-instore"
-hidden: false
+hidden: true
 createdAt: "2022-06-06T14:01:04.901Z"
 updatedAt: "2022-06-06T14:06:38.857Z"
 ---

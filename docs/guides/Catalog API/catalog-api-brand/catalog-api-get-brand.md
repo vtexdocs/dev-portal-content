@@ -1,29 +1,8 @@
 ---
 title: "Get Brand"
 slug: "catalog-api-get-brand"
-excerpt: "Retrieves a specific Brand by its ID."
+excerpt: "Retrieves a specific Brand by its ID.\r\n## Response body example\r\n\r\n```json\r\n{\r\n  \"id\": 7000000,\r\n  \"name\": \"Pedigree\",\r\n  \"isActive\": true,\r\n  \"title\": \"Pedigree\",\r\n  \"metaTagDescription\": \"Pedigree\",\r\n  \"imageUrl\": null\r\n}\r\n```"
 hidden: false
 createdAt: "2020-02-05T23:07:29.210Z"
-updatedAt: "2022-02-03T14:44:05.688Z"
+updatedAt: "2022-09-28T20:21:11.735Z"
 ---
-## Response object has the following properties:
-
-
-| Attribute    | Type        | Description |
-| --------------- |:---------:| -------------------------------------------------------------------------------------------:|
-| `id` | integer | ID of the Brand |
-| `name` | string      |  Name of the Brand  |
-| `imageUrl`  | string | Category Image URL |
-| `isActive` | boolean    | If the Brand is active  |
-| `title` | string | Meta Title for the Brand page |
-| `metaTagDescription` | string | Meta Description for the Brand page |
-
-
-
-## Authentication
-
-This is a private API which requires credentials with viewer access.
-
-
-
-> Learn more about [Creating appKeys and appTokens to authenticate integrations](https://help.vtex.com/en/tutorial/creating-appkeys-and-apptokens-to-authenticate-integrations)

@@ -4,8 +4,15 @@ slug: "instantpublishing"
 excerpt: "This endpoint will index a specific product immediately"
 hidden: true
 createdAt: "2021-01-14T20:48:13.155Z"
-updatedAt: "2021-01-26T19:11:48.042Z"
+updatedAt: "2022-08-22T17:13:35.272Z"
 ---
+[block:callout]
+{
+  "type": "danger",
+  "body": "This API is deprecated.",
+  "title": "Deprecated"
+}
+[/block]
 ## Response body object has the following properties
 
 | Attribute              | Type    | Description                                                                           |

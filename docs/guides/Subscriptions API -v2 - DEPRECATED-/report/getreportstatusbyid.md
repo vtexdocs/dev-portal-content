@@ -2,7 +2,7 @@
 title: "Get report status by ID"
 slug: "getreportstatusbyid"
 excerpt: "Retrieves the Subscription's report status, filtering by its reportId."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-02T15:02:19.133Z"
 ---

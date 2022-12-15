@@ -1,9 +1,9 @@
 ---
-title: "Marketplace API"
+title: "Marketplace"
 slug: "marketplace-api"
 hidden: true
 createdAt: "2021-04-12T18:20:19.152Z"
-updatedAt: "2021-04-12T18:20:19.152Z"
+updatedAt: "2022-09-26T18:02:08.598Z"
 ---
 The **Marketplace API** enables marketplaces and sellers hosted on VTEX to perform their collaborative operations.  
 [block:callout]

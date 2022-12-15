@@ -2,7 +2,7 @@
 title: "Retrieve subscription by ID"
 slug: "getsubscriptionbyid"
 excerpt: "Lists Subscription's details, searching by `subscriptionId`."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2022-05-05T16:26:42.495Z"
 ---

@@ -1,10 +1,10 @@
 ---
 title: "Get order"
 slug: "getorder"
-excerpt: "Retrieve order details by searching a specific order ID or sequence number.\n\r\n\r> The `View order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#)."
+excerpt: "Retrieves order details by searching a specific order ID or sequence number.\n\r\n\r> The `View order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).\r\n\r\n> 📘 Onboarding guide \r\n>\r\n> Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey."
 hidden: false
 createdAt: "2019-12-11T00:42:27.604Z"
-updatedAt: "2022-03-23T21:47:20.557Z"
+updatedAt: "2022-11-30T17:22:54.197Z"
 ---
 [block:api-header]
 {
@@ -127,12 +127,12 @@ updatedAt: "2022-03-23T21:47:20.557Z"
 | `brandName` | string | Brand name |
 | `categoriesIds` | string | Item category ID |
 | `commercialConditionId` | string | Invoice date |
-| `dimension` | string | Item dimension object |
-| `cubicweight` | string | Item cubic weight |
-| `height` | string | Item height |
-| `length` | string | Item length |
-| `weight` | string | Item weight |
-| `width` | string | Item width |
+| `dimension` | object | Item dimension object |
+| `cubicweight` | number | Item cubic weight |
+| `height` | number | Item height |
+| `length` | number | Item length |
+| `weight` | number | Item weight |
+| `width` | number | Item width |
 | `offeringInfo` | string | Extra information on offering |
 | `offeringType` | string | Offering type |
 | `offeringTypeId` | string | ID of offering type |

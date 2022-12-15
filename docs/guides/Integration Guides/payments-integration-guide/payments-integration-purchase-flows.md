@@ -3,7 +3,7 @@ title: "Purchase Flows"
 slug: "payments-integration-purchase-flows"
 hidden: false
 createdAt: "2021-03-26T14:45:28.135Z"
-updatedAt: "2022-07-07T14:04:03.259Z"
+updatedAt: "2022-10-07T21:06:12.411Z"
 ---
 A purchase flow (also known as shopping flow) represents the steps or actions a customer takes in order to complete payment for a purchase. In VTEX, the available purchase flows are:
 
@@ -91,6 +91,20 @@ To break this cycle of asynchronous retries, there are two possible flows depend
 
   * **Without VTEX IO (developed in the partner's infrastructure)**: when the provider gets an updated payment status, it will use a **notification** endpoint from the `callbackURL` parameter to change the payment status in the Gateway to `authorized` or `denied`. Both responses end the authorization flow.
   * **With VTEX IO**: when the provider gets an updated payment status, it will read the `callbackURL` parameter to call a **retry** endpoint. Then, the Gateway makes another Create Payment request to obtain the new status defined by the provider, which will be `authorized` or `denied`. Both responses end the authorization flow.
+
+#### Callback URL
+
+The `callbackUrl` field contains an URL that the payment provider uses to make a callback and inform our gateway of the final payment status: `approved` or `denied`. 
+
+This URL has some query parameters, including the `X-VTEX-signature`. This parameter is mandatory and contains a signature token to identify that the request has been generated from VTEX as a security measure. The signature token has at most 32 characters. You can check an example of callback URL with the signature token below:
+
+```
+https://gatewayqa.vtexpayments.com.br/api/pvt/payment-provider/transactions/8FB0F111111122222333344449984ACB/payments/A2A9A25B11111111222222333327883C/callback?accountName=teampaymentsintegrations&X-VTEX-signature=R123456789aBcDeFGHij1234567890tk
+```
+
+In the [Transactions page of the Admin](https://help.vtex.com/en/tutorial/how-to-view-the-orders-details--tutorials_452), the signature token appears masked for security reasons, as in this example: `X-VTEX-signature=Rj******tk`.
+
+When making the callback request, we recommend that payment providers use the callback URL exactly as received, which guarantees that all the parameters are included.
 
 #### Mode-off
 

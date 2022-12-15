@@ -1,26 +1,8 @@
 ---
-title: "Get Similar Product Category"
+title: "Get Similar Categories"
 slug: "get_api-catalog-pvt-product-productid-similarcategory"
-excerpt: "Retrieves Similar Categories from a Product."
+excerpt: "Retrieves Similar Categories from a Product.\r\n\r\n## Response body example\r\n\r\n```json\r\n[\r\n    {\r\n        \"ProductId\": 1,\r\n        \"CategoryId\": 1\r\n    },\r\n    {\r\n        \"ProductId\": 1,\r\n        \"CategoryId\": 20\r\n    }\r\n]\r\n```"
 hidden: false
 createdAt: "2020-12-03T19:43:36.930Z"
-updatedAt: "2022-05-20T22:23:43.174Z"
+updatedAt: "2022-09-28T20:17:34.987Z"
 ---
-## Response body has the following properties:
-
-| Attribute       | Type    | Description     |
-| --------------- | ------- | --------------- |
-| ProductId | integer | Product ID      |
-| CategoryId | integer | Similar Category ID |
-
-## Response body example:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "[\n    {\n        \"ProductId\": 1,\n        \"CategoryId\": 1\n    },\n    {\n        \"ProductId\": 1,\n        \"CategoryId\": 20\n    }\n]",
-      "language": "json"
-    }
-  ]
-}
-[/block]

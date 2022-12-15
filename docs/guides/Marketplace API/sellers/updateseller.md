@@ -4,8 +4,14 @@ slug: "updateseller"
 excerpt: "This endpoint allows marketplace operators to update the information of sellers connected to their account. You can replace a path's value with another value in order to update that single information. There is no need to fill all the body params available, only the one you wish to update."
 hidden: false
 createdAt: "2021-11-09T18:52:06.572Z"
-updatedAt: "2022-04-08T17:30:06.513Z"
+updatedAt: "2022-10-21T18:09:01.376Z"
 ---
+[block:callout]
+{
+  "type": "warning",
+  "body": "This documentation refers to the updated version of the Sellers' endpoints in our Marketplace API. If you are doing this integration for the first time, we recommend that you follow the updated documentation.\n\nIf you are still using the Legacy version of Sellers endpoints, check the [Catalog API documentation](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-seller)."
+}
+[/block]
 ## Request body can have one of the following properties:
 
 [block:parameters]

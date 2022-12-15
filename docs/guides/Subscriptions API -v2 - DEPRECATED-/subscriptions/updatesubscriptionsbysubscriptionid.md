@@ -2,7 +2,7 @@
 title: "Update Subscriptions by SubscriptionId"
 slug: "updatesubscriptionsbysubscriptionid"
 excerpt: "Update, add or alter information of a given Subscription, filtering by `subscriptionId`."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2022-05-05T16:26:42.516Z"
 ---

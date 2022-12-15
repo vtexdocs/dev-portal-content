@@ -4,7 +4,7 @@ slug: "createpayment"
 excerpt: "Creates a new payment and/or initiates the payment flow."
 hidden: false
 createdAt: "2019-12-30T03:21:07.203Z"
-updatedAt: "2022-06-03T16:04:35.211Z"
+updatedAt: "2022-10-07T21:08:21.934Z"
 ---
 For credit/debit card payments, or any sync payments, you're expected to execute the authorization.
 
@@ -845,6 +845,20 @@ The same request, for the same `paymentId`, can be executed several times, so yo
 > This request should be authenticated using a Key and Token you can <a href="https://help.vtex.com/tutorial/criar-appkey-e-apptoken-para-autenticar-integracoes" target="_blank">generate from your VTEX partner account License Manager</a>. To do so, `POST` your request passing the `X-VTEX-API-AppKey` and `X-VTEX-API-AppToken` headers with your credentials. **Note:** do not mix up these credentials with the ones we send on behalf of the merchant when sending our requests.
 
 <br>
+
+### Callback URL
+
+The `callbackUrl` field contains an URL that the payment provider uses to make a callback and inform our gateway of the final payment status: `approved` or `denied`. 
+
+This URL has some query parameters, including the `X-VTEX-signature`. This parameter is mandatory and contains a signature token to identify that the request has been generated from VTEX as a security measure. The signature token has at most 32 characters. You can check an example of callback URL with the signature token below:
+
+```
+https://gatewayqa.vtexpayments.com.br/api/pvt/payment-provider/transactions/8FB0F111111122222333344449984ACB/payments/A2A9A25B11111111222222333327883C/callback?accountName=teampaymentsintegrations&X-VTEX-signature=R123456789aBcDeFGHij1234567890tk
+```
+
+In the [Transactions page of the Admin](https://help.vtex.com/en/tutorial/how-to-view-the-orders-details--tutorials_452), the signature token appears masked for security reasons, as in this example: `X-VTEX-signature=Rj******tk`.
+
+When making the callback request, we recommend that payment providers use the callback URL exactly as received, which guarantees that all the parameters are included.
 
 ## Beta features 
 ---

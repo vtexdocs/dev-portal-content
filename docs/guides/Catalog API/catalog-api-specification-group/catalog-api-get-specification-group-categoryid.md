@@ -1,25 +1,8 @@
 ---
-title: "List Specifications Group by Category"
+title: "List Specification Group by Category"
 slug: "catalog-api-get-specification-group-categoryid"
-excerpt: "Retrieves a list of specification groups by the category ID."
+excerpt: "Retrieves a list of specification groups by the category ID. \r\n## Response body example\r\n\r\n```json\r\n[\r\n    {\r\n      \"CategoryId\": 1,\r\n      \"Id\": 5,\r\n      \"Name\": \"Materials\",\r\n      \"Position\": 2\r\n    },\r\n    {\r\n      \"CategoryId\": 1,\r\n      \"Id\": 6,\r\n      \"Name\": \"Sizes\",\r\n      \"Position\": 3\r\n    }\r\n  ]\r\n```"
 hidden: false
 createdAt: "2020-02-05T23:07:29.210Z"
-updatedAt: "2022-02-03T16:26:24.947Z"
+updatedAt: "2022-11-25T00:37:42.407Z"
 ---
-## Response object has the following properties:
-
-
-| Attribute    | Type        | Description |
-| --------------- |:---------:| --------------------------------------:|
-| `CategoryId` | integer |  Category ID |
-| `Id` | integer | Specification Group ID |
-| `Name` | string | Specification Group Name |
-| `Position` | integer | Specification Group Position |
-
-
-## Authentication
-
-This is a private API which requires credentials with viewer access.
-
-
-> Learn more about [Creating appKeys and appTokens to authenticate integrations](https://help.vtex.com/en/tutorial/creating-appkeys-and-apptokens-to-authenticate-integrations)

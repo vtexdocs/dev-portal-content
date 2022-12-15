@@ -4,7 +4,7 @@ slug: "manifest-1"
 excerpt: "Exposes provider manifest, a range of metadata settings, like payment methods, split configuration and custom fields."
 hidden: false
 createdAt: "2020-09-29T19:55:46.924Z"
-updatedAt: "2022-07-15T14:54:32.723Z"
+updatedAt: "2022-09-28T14:44:08.935Z"
 ---
 ## Response body
 ---
@@ -222,6 +222,16 @@ updatedAt: "2022-07-15T14:54:32.723Z"
     <tr>
         <td><code>Bitcoin</code></td>
         <td>Cryptocurrency</td>
+        <td>Global</td>
+    </tr>
+    <tr>
+        <td><code>Venda Direta Credito</code></td>
+        <td>Credit Card (Physical)</td>
+        <td>Global</td>
+    </tr>
+    <tr>
+        <td><code>Venda Direta Debito</code></td>
+        <td>Debit Card (Physical)</td>
         <td>Global</td>
     </tr>
 </table>

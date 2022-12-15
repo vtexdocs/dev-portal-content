@@ -2,7 +2,7 @@
 title: "List Subscription group's Configuration"
 slug: "getconfigsubscriptionsgroup"
 excerpt: "Retrieves details about a given subscription group's configuration, filtering by groupId."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-02T15:02:18.420Z"
 ---

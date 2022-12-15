@@ -3,7 +3,7 @@ title: "Payment Provider Homologation"
 slug: "payments-integration-payment-provider-homologation"
 hidden: false
 createdAt: "2020-10-27T15:19:20.313Z"
-updatedAt: "2022-02-03T15:13:30.406Z"
+updatedAt: "2022-11-03T14:26:34.287Z"
 ---
 The last step to complete the implementation process is to check if the integration was done correctly.
 
@@ -130,7 +130,7 @@ If everything is ok, you need to [open a ticket to the VTEX support team](https:
 - **New Payment methods**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.
 - **New Payment method purchase flow**: if a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows] (https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
 
-The SLA required for the payment team to carry out homologation is 30 days.
+The SLA required for the payment team to carry out the homologation is 30 days. This term will start only after the submission of the document **Master Partner Agreement for Financial Services (MPA)**. For homologation requests without using the MPA, the SLA term may be extended due to the need for additional analysis by the payment team.
 [block:callout]
 {
   "type": "danger",

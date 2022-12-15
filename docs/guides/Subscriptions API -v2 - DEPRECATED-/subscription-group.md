@@ -1,7 +1,7 @@
 ---
 title: "Subscription Group"
 slug: "subscription-group"
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-06-10T21:25:46.745Z"
 ---

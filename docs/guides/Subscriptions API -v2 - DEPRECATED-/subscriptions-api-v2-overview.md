@@ -1,7 +1,7 @@
 ---
 title: "Subscriptions API - v2 - Overview"
 slug: "subscriptions-api-v2-overview"
-hidden: false
+hidden: true
 createdAt: "2020-01-02T05:18:04.374Z"
 updatedAt: "2021-02-10T19:01:53.494Z"
 ---

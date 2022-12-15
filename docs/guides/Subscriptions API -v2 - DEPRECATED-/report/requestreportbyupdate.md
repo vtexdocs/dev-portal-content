@@ -2,7 +2,7 @@
 title: "Request report by update"
 slug: "requestreportbyupdate"
 excerpt: "Retrieves a report regarding Subscriptions updated in the date interval chosen. The report will be sent by email, to the address inserted in the API's path."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-02T15:02:19.039Z"
 ---

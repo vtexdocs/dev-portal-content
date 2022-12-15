@@ -2,7 +2,7 @@
 title: "Insert Addresses for Subscription"
 slug: "insertaddressesforsubscription"
 excerpt: "Inserts address's information to complement the Subscription details."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-02-28T14:18:39.194Z"
 ---

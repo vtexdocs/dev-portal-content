@@ -1,10 +1,10 @@
 ---
 title: "Get Category by ID"
 slug: "catalog-api-get-category"
-excerpt: "Retrieves general information about a Category."
+excerpt: "Retrieves general information about a Category. \r\n## Response body example\r\n\r\n```json\r\n{\r\n    \"Id\": 1,\r\n    \"Name\": \"Home Appliances\",\r\n    \"FatherCategoryId\": null,\r\n    \"Title\": \"Home Appliances\",\r\n    \"Description\": \"Discover our range of home appliances. Find smart vacuums, kitchen and laundry appliances to suit your needs. Order online now.\",\r\n    \"Keywords\": \"Kitchen, Laundry, Appliances\",\r\n    \"IsActive\": true,\r\n    \"LomadeeCampaignCode\": \"\",\r\n    \"AdWordsRemarketingCode\": \"\",\r\n    \"ShowInStoreFront\": true,\r\n    \"ShowBrandFilter\": true,\r\n    \"ActiveStoreFrontLink\": true,\r\n    \"GlobalCategoryId\": 3367,\r\n    \"StockKeepingUnitSelectionMode\": \"LIST\",\r\n    \"Score\": null,\r\n    \"LinkId\": \"Alimentacao\",\r\n    \"HasChildren\": true\r\n}\r\n```"
 hidden: false
 createdAt: "2020-04-16T15:43:24.310Z"
-updatedAt: "2022-05-20T22:23:43.052Z"
+updatedAt: "2022-09-09T19:28:13.879Z"
 ---
 ## Response body has the following properties:
 

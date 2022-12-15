@@ -1,37 +1,8 @@
 ---
 title: "Create Specification Value"
 slug: "catalog-api-post-specification-value"
-excerpt: "Creates a new Specification Value for a Category."
+excerpt: "Creates a new Specification Value for a Category. \r\n## Request body example\r\n\r\n```json\r\n{\r\n    \"FieldId\": 193,\r\n    \"Name\": \"Metal\",\r\n    \"IsActive\": true,\r\n    \"Position\": 1\r\n  }\r\n```\r\n\r\n## Response body example\r\n\r\n```json\r\n{\r\n  \"FieldValueId\": 360,\r\n  \"FieldId\": 193,\r\n  \"Name\": \"Metal\",\r\n  \"Text\": null,\r\n  \"IsActive\": true,\r\n  \"Position\": 1\r\n}\r\n```"
 hidden: false
 createdAt: "2020-03-04T00:59:55.765Z"
-updatedAt: "2022-05-20T22:23:45.462Z"
+updatedAt: "2022-11-25T00:38:39.415Z"
 ---
-## Request body has the following properties:
-| Attribute | Type    | Description                                                            |
-| --------- | ------- | ---------------------------------------------------------------------- |
-| FieldId   | integer | Field ID                                                               |
-| Name      | string  | Specification Value Name                                               |
-| Text      | string  | Specification Value Text                                               |
-| IsActive  | boolean | Shows if the Category is active or not                                 |
-| Position  | integer | The current Specification Value’s position in comparison to the others |
-
-## Request body example
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n    \"FieldId\": 101,\n    \"Name\": \"Teste\",\n    \"Text\": null,\n    \"IsActive\": true,\n    \"Position\": 1\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]
-## Response body has the following properties:
-
-| Attribute | Type    | Description                                                            |
-| --------- | ------- | ---------------------------------------------------------------------- |
-| FieldId   | integer | Field ID                                                               |
-| Name      | string  | Specification Value Name                                               |
-| Text      | string  | Specification Value Text                                               |
-| IsActive  | boolean | Shows if the Category is active or not                                 |
-| Position  | integer | The current Specification Value’s position in comparison to the others |

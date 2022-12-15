@@ -3,7 +3,7 @@ title: "Catalog"
 slug: "catalog-integration"
 hidden: false
 createdAt: "2021-12-06T20:34:13.795Z"
-updatedAt: "2022-02-03T19:38:38.639Z"
+updatedAt: "2022-11-22T17:07:53.138Z"
 ---
 VTEX Catalog architecture is based on five fundamental concepts:
 - [Category](https://developers.vtex.com/vtex-rest-api/docs/categories)
@@ -38,11 +38,11 @@ An example of a VTEX Catalog architecture blueprint is found below:
   "images": [
     {
       "image": [
-        "https://files.readme.io/69be76c-fluxo.png",
-        "fluxo.png",
-        1085,
-        1081,
-        "#fbedf2"
+        "https://files.readme.io/2f24d86-EN_1.png",
+        "EN (1).png",
+        2345,
+        1405,
+        "#000000"
       ],
       "caption": "VTEX Catalog architecture example"
     }

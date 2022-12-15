@@ -1,10 +1,10 @@
 ---
 title: "Create Category"
 slug: "catalog-api-post-category"
-excerpt: "Creates a new Category."
+excerpt: "Creates a new Category.\r\n  ## Request body example\r\n\r\n```json\r\n{\r\n    \"Name\": \"Home Appliances\",\r\n    \"FatherCategoryId\": null,\r\n    \"Title\": \"Home Appliances\",\r\n    \"Description\": \"Discover our range of home appliances. Find smart vacuums, kitchen and laundry appliances to suit your needs. Order online now.\",\r\n    \"Keywords\": \"Kitchen, Laundry, Appliances\",\r\n    \"IsActive\": true,\r\n    \"LomadeeCampaignCode\": null,\r\n    \"AdWordsRemarketingCode\": null,\r\n    \"ShowInStoreFront\": true,\r\n    \"ShowBrandFilter\": true,\r\n    \"ActiveStoreFrontLink\": true,\r\n    \"GlobalCategoryId\": 800,\r\n    \"StockKeepingUnitSelectionMode\": \"SPECIFICATION\",\r\n    \"Score\": null\r\n}\r\n```\r\n\r\n## Response body example\r\n\r\n```json\r\n{\r\n    \"Id\": 1,\r\n    \"Name\": \"Home Appliances\",\r\n    \"FatherCategoryId\": null,\r\n    \"Title\": \"Home Appliances\",\r\n    \"Description\": \"Discover our range of home appliances. Find smart vacuums, kitchen and laundry appliances to suit your needs. Order online now.\",\r\n    \"Keywords\": \"Kitchen, Laundry, Appliances\",\r\n    \"IsActive\": true,\r\n    \"LomadeeCampaignCode\": \"\",\r\n    \"AdWordsRemarketingCode\": \"\",\r\n    \"ShowInStoreFront\": true,\r\n    \"ShowBrandFilter\": true,\r\n    \"ActiveStoreFrontLink\": true,\r\n    \"GlobalCategoryId\": 3367,\r\n    \"StockKeepingUnitSelectionMode\": \"LIST\",\r\n    \"Score\": null,\r\n    \"LinkId\": \"Alimentacao\",\r\n    \"HasChildren\": true\r\n}\r\n```"
 hidden: false
 createdAt: "2020-03-03T21:03:42.777Z"
-updatedAt: "2022-05-20T22:23:43.131Z"
+updatedAt: "2022-09-09T19:28:14.024Z"
 ---
 ## Request body has the following properties:
 

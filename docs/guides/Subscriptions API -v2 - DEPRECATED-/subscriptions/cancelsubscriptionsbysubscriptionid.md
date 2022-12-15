@@ -2,7 +2,7 @@
 title: "Cancel Subscriptions by SubscriptionId"
 slug: "cancelsubscriptionsbysubscriptionid"
 excerpt: "Cancels all Subscriptions of a subscription group. This operation does not have a rollback. Once cancelled, it cannot be re-activated"
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-02T15:02:16.643Z"
 ---

@@ -2,7 +2,7 @@
 title: "Get Next purchase"
 slug: "getnextpurchase"
 excerpt: "Lists details of a given subscription group's next purchase, filtering by dateStr."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-16T21:20:45.296Z"
 ---

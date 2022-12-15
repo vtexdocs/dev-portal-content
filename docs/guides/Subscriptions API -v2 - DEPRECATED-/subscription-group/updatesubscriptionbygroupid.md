@@ -2,7 +2,7 @@
 title: "Update Subscription by groupId"
 slug: "updatesubscriptionbygroupid"
 excerpt: "Updates a Subscription by `groupId`."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2022-05-05T16:26:42.663Z"
 ---

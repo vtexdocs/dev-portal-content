@@ -1,10 +1,16 @@
 ---
-title: "Back office (ERP/PIM/WMS)"
+title: "Back office integration guide (ERP/PIM/WMS)"
 slug: "erp-integration-guide"
 hidden: false
 createdAt: "2020-03-11T20:58:11.386Z"
-updatedAt: "2022-05-19T20:10:05.575Z"
+updatedAt: "2022-09-22T14:51:08.009Z"
 ---
+[block:callout]
+{
+  "type": "info",
+  "body": "This guide refers mostly to ERPs. But keep in mind that integrating PIMs and WMSs basically follows the same principles and the content will point out whenever that is not the case."
+}
+[/block]
 An ecommerce operation may use a range of software to better manage its resources and information. In this guide, we take a look at the best ways to integrate these systems with your VTEX store. This allows your store to optimize operations by creating efficient communications between VTEX and other software.
 
 Each operation has its specific needs and we do not recommend any particular software. However, here are some examples used by different operations:
@@ -27,15 +33,15 @@ Each operation has its specific needs and we do not recommend any particular sof
     - Informatica
     - inRiver
     - Widen Collective
+
+For a complete back-office integration, you should use our APIs to send your Products, Pricing, and Inventory to VTEX and to receive your Orders from VTEX. In order to provide more detail on this data flow, this overview is split into the initial setup and the ongoing integration flow.
+
 [block:callout]
 {
   "type": "info",
-  "body": "This guide refers mostly to ERPs. But keep in mind that integrating PIMs and WMSs basically follows the same principles and the content will point out whenever that is not the case."
+  "body": "Check the new [Catalog onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Catalog and is organized by focusing on the developer's journey."
 }
 [/block]
-For a complete back-office integration, you should use our APIs to send your Products, Pricing, and Inventory to VTEX and to receive your Orders from VTEX. In order to provide more detail on this data flow, this overview is split into the initial setup and the ongoing integration flow.
-
-
 ## Initial setup
 
 To get your integration up and running, you need to perform some configuration steps and then set up the middleware that will handle the ongoing flow. See the steps below.

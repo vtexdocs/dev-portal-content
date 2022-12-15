@@ -3,8 +3,15 @@ title: "Price Simulations API - Overview"
 slug: "price-simulations-api-overview"
 hidden: false
 createdAt: "2020-09-04T15:58:43.493Z"
-updatedAt: "2020-09-04T16:22:50.611Z"
+updatedAt: "2022-08-11T20:38:08.291Z"
 ---
+[block:callout]
+{
+  "type": "info",
+  "body": "Check the new [Pricing onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/pricing-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Pricing and is organized by focusing on the developer's journey.",
+  "title": "Onboarding guide"
+}
+[/block]
 The Price Simulations API allows you to configure custom price selectors for B2B stores, based on the context set by the [Orders Configuration app](https://vtex.io/docs/components/content-blocks/vtex.order-configuration/readme).
 
 

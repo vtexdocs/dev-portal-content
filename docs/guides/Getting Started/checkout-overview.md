@@ -3,12 +3,11 @@ title: "Checkout"
 slug: "checkout-overview"
 hidden: false
 createdAt: "2020-09-11T23:12:53.108Z"
-updatedAt: "2022-07-25T20:07:02.554Z"
+updatedAt: "2022-10-21T13:19:52.868Z"
 ---
-[block:callout]
+[block:html]
 {
-  "type": "info",
-  "body": "📣 Help us improve our documentation! Share your feedback by filling out [this form](https://forms.gle/VVZpy2zFBHcoLp5Q8)."
+  "html": "<style>\n    .markdown-body .callout[theme=\"📣\"] {\n    --icon: \"\\f0a1\";\n    --icon-color: #142032;\n    --border: #142032;\n    --background: #f8f7fc;\n    --text: #4a596b;\n    }\n  </style>\n  <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n    <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n      <p>\n      Tell us about your experience with this article by filling out <button style=\"background-color:transparent;color:#f71963;text-decoration:underline;border:none;padding:0;cursor:pointer;font-size: var(--markdown-font-size,14px);\" onclick=\"closeModal()\">this form.</button>\n      </p>\n  </blockquote>"
 }
 [/block]
 ## Customizing Checkout UI 
@@ -20,11 +19,11 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 * [Checkout UI Settings App](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings)
 * [Checkout Settings (B2B)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-checkout-settings)
 * [Customizing the Header and Footer blocks by page](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page)
-* [Customizing the Checkout Confirmation pages](https://developers.vtex.com/vtex-rest-api/docs/customizing-the-checkout-confirmation-pages)
-* [Enabling an Observation field on the Checkout page](https://developers.vtex.com/vtex-rest-api/docs/enabling-an-observation-field-on-the-checkout-page)
+* [Customize checkout confirmation pages](https://developers.vtex.com/vtex-rest-api/docs/customize-checkout-confirmation-pages)
+* [Enable an Observation field on the Checkout page](https://developers.vtex.com/vtex-rest-api/docs/enable-an-observation-field-on-the-checkout-page)
 * [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/vtex-rest-api/docs/layout-development-guide-for-payment-methods-in-smart-checkout-vtex)
 * [How to setup and use checkout data from client side (vtex.js for Checkout)](https://developers.vtex.com/vtex-rest-api/docs/vtexjs-for-checkout)
-* [Changing the names of payment methods at the Checkout](https://developers.vtex.com/vtex-rest-api/docs/changing-the-names-of-payment-methods-at-the-checkout)<br>
+* [Change payment method names in Checkout](https://developers.vtex.com/vtex-rest-api/docs/change-payment-method-names-in-checkout)<br>
 Smart Checkout - Payment layout customization example:
 
 
@@ -49,7 +48,7 @@ Smart Checkout - Payment layout customization example:
 The architecture of VTEX Checkout is organized in such a way that the main data structure is the `orderForm` object. It is composed of several sections and fields that allow you to have control over all the important information of a purchase order. See the links below for useful information and endpoints related to the `orderForm` object.
 
 * [OrderForm overview](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields)
-* [Using Checkout API to set a discount](https://developers.vtex.com/vtex-rest-api/docs/using-checkout-api-to-set-a-discount)
+* [Set a discount using the Checkout API](https://developers.vtex.com/vtex-rest-api/docs/set-a-discount-using-the-checkout-api)
 * [Enabling the orderForm optimization - Store Framework only](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-enabling-order-form-optimization)
 * [GET- Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration)
 * [POST - Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration)
@@ -60,8 +59,7 @@ The architecture of VTEX Checkout is organized in such a way that the main data 
 
 To request client data additional to those available in the `orderForm`, stores can create `custom fields`. See the links below for useful information and endpoints related to custom client data.
 
-* [Creating customizable fields in the cart with Checkout API](https://developers.vtex.com/vtex-rest-api/docs/customizable-fields-with-checkout-api)
-* [How to add and handle custom information in the order (B2B)](how-to-add-and-handle-custom-information-in-the-order)
+* [Add and handle custom information in the order](add-and-handle-custom-information-in-the-order)
 * [Custom fields created by Mercado Libre connector](https://developers.vtex.com/vtex-rest-api/docs/get-payment-data-mercado-libre-orders-api#understanding-customdata)
 * [PUT - Set multiple custom field values](https://developers.vtex.com/vtex-rest-api/reference/setmultiplecustomfieldvalues)
 * [PUT - Set single custom field value](https://developers.vtex.com/vtex-rest-api/reference/setsinglecustomfieldvalue)
@@ -72,7 +70,7 @@ To request client data additional to those available in the `orderForm`, stores 
 
 Once you already have the client information registered, you can check their profile data or even add them to a specific cart. See the links below to access endpoints related to client data.
 
-* [Save user data opt-in on Checkout](https://developers.vtex.com/vtex-rest-api/docs/save-user-data-opt-in-on-checkout)
+* [Enable the Save user data opt-in](https://developers.vtex.com/vtex-rest-api/docs/enable-the-save-user-data-opt-in)
 * [GET - Get client profile by email](https://developers.vtex.com/vtex-rest-api/reference/getclientprofilebyemail)
 * [POST - Add client profile](https://developers.vtex.com/vtex-rest-api/reference/addclientprofile)
 * [POST - Add client preferences](https://developers.vtex.com/vtex-rest-api/reference/addclientpreferences)
@@ -96,11 +94,10 @@ In your store, you can perform various actions related to the shopping cart, inc
 * [ADD TO CART Button](https://developers.vtex.com/vtex-developer-docs/docs/vtex-add-to-cart-button#configuration)
 * [reCAPTCHA](https://developers.vtex.com/vtex-rest-api/docs/recaptcha)
 * [Implementing reCAPTCHA in integrations](https://developers.vtex.com/vtex-rest-api/docs/implementing-recaptcha-in-integrations)
-* [Enabling Manual Price](https://developers.vtex.com/vtex-rest-api/docs/enabling-manual-price-in-my-store)
-* [Why are the UTMs not being applied to the cart?](https://developers.vtex.com/vtex-rest-api/docs/why-are-the-utms-not-being-applied-to-the-cart)
-* [Identifying whether marketing UTMs are being sent to Checkout](https://developers.vtex.com/vtex-rest-api/docs/identifying-whether-marketing-utms-are-being-sent-to-checkout)
+* [Enable the Manual Price](https://developers.vtex.com/vtex-rest-api/docs/enable-the-manual-price)
+* [Check marketing UTMs used at Checkout](https://developers.vtex.com/vtex-rest-api/docs/check-marketing-utms-used-at-checkout)
 * [POST - Cart simulation](https://developers.vtex.com/vtex-rest-api/reference/cartsimulation)
-* [GET - Get current cart or create a new one](https://developers.vtex.com/vtex-rest-api/reference/getcurrentcartorcreateanewone)
+* [GET - Create a new cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart)
 * [GET - Get cart information by ID](https://developers.vtex.com/vtex-rest-api/reference/getcartinformationbyid)
 * [POST - Remove all items](https://developers.vtex.com/vtex-rest-api/reference/removeallitems)
 * [GET - Remove all personal data](https://developers.vtex.com/vtex-rest-api/reference/removeallpersonaldata)
@@ -141,7 +138,7 @@ reCAPTCHA view:
 By verifying addresses, pickup points, and fulfillment simulations, it is possible to have an overview of how the delivery process will be carried out in your store. Additionally, you can configure your store to allow delivery to other countries. See the links below to access endpoints related to delivery logistics.
 
 * [Calculate SLA](https://developers.vtex.com/vtex-rest-api/reference/calculatesla)
-* [Setting up the Global Checkout](https://developers.vtex.com/vtex-rest-api/docs/setting-up-the-global-checkout)
+* [Configure the Global Checkout](https://developers.vtex.com/vtex-rest-api/docs/configure-the-global-checkout)
 * [GET - List pickup points by location](https://developers.vtex.com/vtex-rest-api/reference/listpickupppointsbylocation)
 * [GET - Get address by postal code](https://developers.vtex.com/vtex-rest-api/reference/getaddressbypostalcode)
 * [POST - Fulfillment simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation#request-body-example---checkout-simulation)
@@ -151,7 +148,7 @@ By verifying addresses, pickup points, and fulfillment simulations, it is possib
 
 Through APIs it is possible to simulate all the steps in the order process carried out by the client. See the links below for useful information and endpoints related to the flow of an order.
 
-* [Using APIs to place a regular order](https://developers.vtex.com/vtex-rest-api/docs/using-apis-to-place-a-regular-order)
+* [Create a regular order using the Checkout API](https://developers.vtex.com/vtex-rest-api/docs/create-a-regular-order-using-the-checkout-api)
 * [PUT - Place an order (no cart information available)](https://developers.vtex.com/vtex-rest-api/reference/placeorder) 
 * [POST - Place an order from an existing cart](https://developers.vtex.com/vtex-rest-api/reference/placeorderfromexistingorderform)
 * [POST - Process order](https://developers.vtex.com/vtex-rest-api/reference/processorder)

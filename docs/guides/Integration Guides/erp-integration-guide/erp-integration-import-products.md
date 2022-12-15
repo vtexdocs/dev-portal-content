@@ -3,7 +3,7 @@ title: "Import products"
 slug: "erp-integration-import-products"
 hidden: false
 createdAt: "2020-03-11T20:58:07.913Z"
-updatedAt: "2022-05-04T13:40:15.226Z"
+updatedAt: "2022-08-24T18:33:17.132Z"
 ---
 In this step, you will send all product information from your ERP or PIM to VTEX. 
 [block:callout]
@@ -231,3 +231,10 @@ You can use the [Get SKU File](https://developers.vtex.com/vtex-rest-api/referen
 ## Wrapping up
 
 If you have done things correctly, you should have imported all your products and their information to your catalog. This includes the Products, Product Specifications, SKUs, SKU Specifications and Images.
+[block:callout]
+{
+  "type": "warning",
+  "title": "Timeout errors",
+  "body": "When registering products through ERP in a store's catalog, you may notice that the integration might not work at first. Instead, the API might return a `Timeout` error. Sometimes the answer lies in a simple system issue, regardless of whether or not the integration was correctly configured. In other cases, the error occurs because of a coding problem.  \n\nNo matter the scenario, `Timeout` is a way for the system to inform the user that command took more time than expected to complete the required task. Even though it is considered an \"error\", getting a `Timeout` is foreseen within the integration flow. Because of this, the code should envision retries. If this happens, repeat the product registration process normally. If, even by doing so, the problem still persists, seek the assistance of our support team to evaluate the situation."
+}
+[/block]

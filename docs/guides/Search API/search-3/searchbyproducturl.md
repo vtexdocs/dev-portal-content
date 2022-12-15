@@ -1,10 +1,10 @@
 ---
 title: "Search Product by Product URL"
 slug: "searchbyproducturl"
-excerpt: "Retrieves general information about the product of the URL you searched for"
+excerpt: "Retrieves general information about the product of the URL you searched for."
 hidden: false
 createdAt: "2019-12-30T03:21:07.203Z"
-updatedAt: "2021-08-31T18:21:45.865Z"
+updatedAt: "2022-12-01T21:43:34.332Z"
 ---
 No site a url original do produto é www.seudominio.com/produto-selecao-sku-lista/p
 <br>

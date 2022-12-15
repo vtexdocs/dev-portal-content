@@ -3,7 +3,7 @@ title: "Webstore (OAuth 2.0)"
 slug: "login-integration-guide-webstore-oauth2"
 hidden: false
 createdAt: "2020-06-30T20:23:48.041Z"
-updatedAt: "2022-05-20T18:42:39.868Z"
+updatedAt: "2022-09-23T14:35:03.422Z"
 ---
 VTEX stores are capable of identifying returning clients by requesting that they provide login information. That way, logged-in clients can access their previous purchases and the store can present personalized content based on a client's profile data.
 
@@ -155,15 +155,15 @@ In order to configure this process, follow the steps below:
 
 When you start the custom OAuth setup, you must fill in the following information:
 - **Identity provider’s** name
-- **client ID** key
+- **client ID** key (`client_id`)
 - **client ID** value
-- **client secret** key
+- **client secret** key (`client_secret`)
 - **client secret** value
 
 [block:callout]
 {
-  "type": "info",
-  "body": "These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider."
+  "type": "danger",
+  "body": "These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret` respectively."
 }
 [/block]
 
@@ -172,11 +172,11 @@ When you start the custom OAuth setup, you must fill in the following informatio
   "images": [
     {
       "image": [
-        "https://files.readme.io/50d9393-2.PNG",
-        "2.PNG",
-        878,
-        564,
-        "#fbfbfb"
+        "https://files.readme.io/b538997-identity_feedback_oauth.PNG",
+        "identity feedback oauth.PNG",
+        978,
+        630,
+        "#000000"
       ],
       "caption": "Provider details section, in the custom OAuth set up interface with the options described in the tutorial."
     }

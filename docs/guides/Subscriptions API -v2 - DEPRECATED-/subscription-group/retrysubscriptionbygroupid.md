@@ -2,7 +2,7 @@
 title: "Retry subscription by groupId"
 slug: "retrysubscriptionbygroupid"
 excerpt: "Permits the retry of a Subscription group, via API, filtering by groupId and instanceId."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-02T15:02:18.144Z"
 ---

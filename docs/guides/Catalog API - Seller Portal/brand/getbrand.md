@@ -1,31 +1,8 @@
 ---
 title: "Get Brand by ID"
 slug: "getbrand"
-excerpt: "The endpoint retrieves general information about a brand by its ID."
-hidden: true
+excerpt: ">📘 This API is part of the [Seller Portal Catalog](https://help.vtex.com/en/tutorial/how-the-seller-portal-catalog-works--7pMB6YOt6YQDQQbzFB4Pxp). This functionality is in the Beta stage and can be discontinued at any moment at VTEX's discretion. VTEX will not be responsible for any instabilities caused by its use or discontinuity. If you have any questions, please contact [our Support Center](https://support.vtex.com/hc/en-us/requests). \r\n\r\n Retrieves general information about a brand by its ID.\r\n\r\n## Response body example\r\n\r\n```json\r\n{\r\n  \"id\": \"863\",\r\n  \"name\": \"Zwilling\",\r\n  \"isActive\": false,\r\n  \"createdAt\": \"2021-01-18T14:41:45.696488+00:00\",\r\n  \"updatedAt\": \"2021-01-18T14:41:45.696488+00:00\"\r\n}\r\n```"
+hidden: false
 createdAt: "2021-07-05T14:05:36.178Z"
-updatedAt: "2021-07-05T15:04:47.175Z"
+updatedAt: "2022-11-21T22:28:07.474Z"
 ---
-## Response body has the following properties:
-
-| Attribute     | Type    | Description                                                                                  |
-| ------------- | ------- | -------------------------------------------------------------------------------------------- |
-| id            | string  | Brand unique identifier number.                                                              |
-| name          | string  | Brand Name.                                                                                  |
-| isActive      | boolean | The condition defines if the brand is active or inactive.                                    |
-| score         | integer | Brand’s score. The score of the brand is used to set the priority on the search result page. |
-| createdAt     | string  | Date when the brand was created.                                                             |
-| updatedAt     | string  | Last date when the brand was updated.                                                        |
-| displayOnMenu | boolean | The condition will display the brand on the store menu.                                      |
-
-## Response body example:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n    \"id\": \"1\",\n    \"name\": \"Givenchy\",\n    \"isActive\": false,\n    \"score\": 0,\n    \"createdAt\": \"2021-01-18T14:32:15.682643+00:00\",\n    \"updatedAt\": \"2021-01-18T14:32:15.682643+00:00\",\n    \"displayOnMenu\": false\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]

@@ -3,7 +3,7 @@ title: "External seller connector"
 slug: "external-seller-integration-connector"
 hidden: false
 createdAt: "2020-09-01T13:47:40.310Z"
-updatedAt: "2022-02-03T13:21:23.217Z"
+updatedAt: "2022-09-30T16:51:08.972Z"
 ---
 The seller integration flow comprises eight different API requests. Four of these are calls that the seller should make to the marketplace. The other four are requests that the marketplace will need to make to the seller. So, for these, you will need to implement endpoints that are prepared to receive specific request bodies and respond with specific objects.
 
@@ -21,6 +21,9 @@ In the table below, you will find every API request needed for each step of the 
 | [Order Invoicing and Tracking](#order-invoicing) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/invoicenotification">Order Invoice Notification</a><span></div>  | ➡ Marketplace |
 | [Cancellation by the Marketplace](#cancellation-by-the-marketplace) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation">Marketplace Order Cancellation</a><span></div> | ⬅ Seller |
 | [Cancellation by the Seller](#cancellation-by-the-seller) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a><span></div>  | ➡ Marketplace |
+| [Order invoicing](#order-invoicing)                   | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-invoice">Send invoice</a><span></div>                     | ➡ Marketplace  |
+| [Send tracking information](#order-tracking)       | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-tracking-information">Send tracking information</a><span></div>     | ➡ Marketplace  |
+| [Update tracking status](#order-tracking)          | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/update-tracking-status">Update tracking status</a><span></div>         | ➡ Marketplace  |
 [block:callout]
 {
   "type": "info",

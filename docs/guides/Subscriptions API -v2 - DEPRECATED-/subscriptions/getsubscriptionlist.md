@@ -2,7 +2,7 @@
 title: "Get Subscription List"
 slug: "getsubscriptionlist"
 excerpt: "Retrieves a list of Subscriptions linked to your store."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-02-28T14:18:38.974Z"
 ---

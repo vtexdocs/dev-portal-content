@@ -1,9 +1,9 @@
 ---
-title: "Search API - Overview"
+title: "Legacy Search API - Overview"
 slug: "search-api-overview"
 hidden: false
 createdAt: "2020-01-15T00:07:22.367Z"
-updatedAt: "2022-06-15T20:03:49.228Z"
+updatedAt: "2022-12-01T21:52:29.635Z"
 ---
 [block:callout]
 {

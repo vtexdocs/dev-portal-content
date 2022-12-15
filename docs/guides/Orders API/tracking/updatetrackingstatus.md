@@ -4,7 +4,7 @@ slug: "updatetrackingstatus"
 excerpt: "Sends a tracking event to an order that already has a tracking number registered to its invoice.\n\r\n\rThis endpoint is not meant to send tracking number and URL to the invoice. If you wish to send tracking number and URL to an order, use the [Update order's partial invoice API request](https://developers.vtex.com/vtex-rest-api/reference/invoice#updatepartialinvoicesendtrackingnumber). You can also learn more about [Partial invoice](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe) scenarios. \n\r\n\r> The `Notify invoice` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#)."
 hidden: false
 createdAt: "2019-12-11T00:42:27.604Z"
-updatedAt: "2022-06-27T20:21:48.234Z"
+updatedAt: "2022-11-04T23:01:37.022Z"
 ---
 [block:callout]
 {
@@ -25,7 +25,7 @@ Important: the **package** is generated when an invoice is added to the order.
 | `orderId` | string | Order Id |
 | `invoiceNumber` | string | Order Invoice ID |
 | `isDelivered` | boolean | If the order package is delivered |
-| `deliveredDate` | string | the date when the **package** was delivered. It is not the same as the tracking date parameter. |
+| `deliveredDate` | string | Date and time of when the package was delivered. Note that it is different from the tracking date parameter. The `deliveredDate` format is `yyyy-mm-dd hh:mm`.  |
 | `events` | object | Events Details Object |
 | `city` | string | Event Tracking City |
 | `state` | string | Event Tracking State |

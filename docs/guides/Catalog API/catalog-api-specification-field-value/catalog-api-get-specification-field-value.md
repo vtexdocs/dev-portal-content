@@ -1,32 +1,8 @@
 ---
-title: "Get Specifications Field Value"
+title: "Get Specification Field Value"
 slug: "catalog-api-get-specification-field-value"
-excerpt: "Retrieves details from a specification field's value by this value's ID."
+excerpt: "Retrieves details from a specification field's value by this value's ID. \r\n>⚠️ This is a legacy endpoint. We recommend using [Get Specification Value](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-specification-value-id) instead.\r\n\r\n## Response body example\r\n\r\n```json\r\n{\r\n    \"FieldValueId\": 143,\r\n    \"FieldId\": 34,\r\n    \"Name\": \"TesteInsert\",\r\n    \"Text\": \"Value Description\",\r\n    \"IsActive\": true,\r\n    \"Position\": 100\r\n}\r\n```"
 hidden: false
 createdAt: "2020-02-05T23:07:29.210Z"
-updatedAt: "2022-05-12T22:31:15.656Z"
+updatedAt: "2022-11-25T00:40:15.577Z"
 ---
-[block:callout]
-{
-  "type": "info",
-  "body": "This is a legacy endpoint. We recommend using [Get Specification Value](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-specification-value-id) instead."
-}
-[/block]
-## Response object has the following properties:
-
-| Attribute    | Type        | Description |
-| --------------- |:---------:| --------------------------------------:|
-| `FieldValueId` | integer | Specification Field Value ID |
-| `FieldId` | integer | Specification Field ID |
-| `Name` | string |  Specification Field Value Name |
-| `Text` | string |  Specification Field Value Description |
-| `IsActive` | boolean | If the Specification Field Value is active |
-| `Position` | integer | Specification Field Value Position |
-
-
-## Authentication
-
-This is a private API which requires credentials with viewer access.
-
-
-> Learn more about [Creating appKeys and appTokens to authenticate integrations](https://help.vtex.com/en/tutorial/creating-appkeys-and-apptokens-to-authenticate-integrations)

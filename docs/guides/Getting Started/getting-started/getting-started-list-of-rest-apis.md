@@ -4,7 +4,7 @@ slug: "getting-started-list-of-rest-apis"
 excerpt: "See how to use our APIs to integrate third-party solutions to a single platform for all experiences."
 hidden: false
 createdAt: "2020-01-16T19:09:12.209Z"
-updatedAt: "2022-02-11T16:50:49.884Z"
+updatedAt: "2022-09-09T17:59:09.868Z"
 ---
 [block:parameters]
 {
@@ -22,7 +22,7 @@ updatedAt: "2022-02-11T16:50:49.884Z"
     "9-0": "[Orders API](ref:orders-api-overview)",
     "10-0": "[Payments Gateway API](ref:payments-gateway-api-overview)",
     "11-0": "[Pricing API](ref:pricing-api-overview)",
-    "12-0": "[Rates and Benefits API](ref:rates-and-benefits-api-overview)",
+    "12-0": "[Promotions API](ref:rates-and-benefits-api-overview)",
     "13-0": "[Search API](ref:search-api-overview)",
     "14-0": "[Session Manager API](ref:session-manager-api-overview)",
     "15-0": "[Subscriptions API](https://developers.vtex.com/vtex-rest-api/reference/subscriptions-api-v3-overview)",

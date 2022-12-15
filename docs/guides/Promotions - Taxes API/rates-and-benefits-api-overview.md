@@ -3,8 +3,14 @@ title: "Promotions & Taxes API - Overview"
 slug: "rates-and-benefits-api-overview"
 hidden: false
 createdAt: "2020-01-15T00:07:21.427Z"
-updatedAt: "2022-05-23T20:34:23.331Z"
+updatedAt: "2022-08-11T20:46:55.138Z"
 ---
+[block:callout]
+{
+  "type": "info",
+  "body": "Check the new [Promotions onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/promotions-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about the Promotions and is organized by focusing on the developer's journey."
+}
+[/block]
 The Promotions & Taxes API allows you to manage and retrieve all promotions, coupons and tax rules from your VTEX store.
 
 ## Index

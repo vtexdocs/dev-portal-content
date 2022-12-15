@@ -2,7 +2,7 @@
 title: "Retrieve Subscription report by order date"
 slug: "requestreportbyorderdate"
 excerpt: "Retrieves a report regarding the Subscriptions created during the date interval of orders."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-02T15:02:18.947Z"
 ---

@@ -3,7 +3,7 @@ title: "Change seller"
 slug: "change-seller"
 hidden: false
 createdAt: "2021-07-29T19:25:33.532Z"
-updatedAt: "2022-06-08T22:44:48.771Z"
+updatedAt: "2022-08-30T18:13:03.813Z"
 ---
 Marketplaces have the autonomy to change a seller that has been designated to fulfill an order. This can only be done under specific circumstances described in this [article on the Change seller feature](https://help.vtex.com/en/tutorial/how-to-use-the-change-seller--5TBAwO2kOAMw44uyaaQMQO#).
 
@@ -16,12 +16,12 @@ There are a few different APIs that can be useful to execute a seller change. He
 [/block]
 ## Seller listing
 
-In the case of a seller change, the marketplace is responsible for choosing the new seller. VTEX does not have any automated system to make this choice, but we do suggest you use the [Get seller list API request](https://developers.vtex.com/vtex-developer-docs/reference/catalog-api-seller#catalog-api-get-seller-list) to see the list of sellers associated with your marketplace. It is also possible to filter sellers returned by this call using query params.
+In the case of a seller change, the marketplace is responsible for choosing the new seller. VTEX does not have any automated system to make this choice, but we do suggest you use the [Get seller list API request](https://developers.vtex.com/vtex-rest-api/reference/getlistsellers) to see the list of sellers associated with your marketplace. It is also possible to filter sellers returned by this call using query params.
 
 
 ## Cart simulation
 
-With the information of the sellers in hand, you can simulate carts to check the availability of the products. To do this, you may use our Fulfillment [simulation endpoint](https://developers.vtex.com/vtex-developer-docs/reference/external-seller#fulfillment-simulation).
+With the information of the sellers in hand, you can simulate carts to check the availability of the products. To do this, you may use our Fulfillment [simulation endpoint](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation).
 
 
 ## Window to change seller
@@ -58,6 +58,6 @@ This is an example of what the body of this request should look like:
 {
   "type": "danger",
   "title": "After the change",
-  "body": "When a change of seller is successfully completed, the marketplace order loses courier information, since the array in `shippingData.logisticsInfo.deliveryIds` is now empty. In order to get the updated information, it is necessary to make a [Get order](https://developers.vtex.com/vtex-rest-api/reference/orders#getorder) request to the new seller's endpoint, such as `https://{newSeller}.{environment}.com.br/api/oms/pvt/orders/{orderId}`."
+  "body": "When a change of seller is successfully completed, the marketplace order loses courier information, since the array in `shippingData.logisticsInfo.deliveryIds` is now empty. In order to get the updated information, it is necessary to make a [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder) request to the new seller's endpoint, such as `https://{newSeller}.{environment}.com.br/api/oms/pvt/orders/{orderId}`."
 }
 [/block]

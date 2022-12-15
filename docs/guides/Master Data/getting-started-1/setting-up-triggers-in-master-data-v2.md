@@ -3,24 +3,20 @@ title: "Setting up triggers in Master Data v2"
 slug: "setting-up-triggers-in-master-data-v2"
 hidden: false
 createdAt: "2022-07-05T16:11:49.082Z"
-updatedAt: "2022-07-27T21:00:23.947Z"
+updatedAt: "2022-10-28T14:34:21.479Z"
 ---
-[block:callout]
-{
-  "type": "info",
-  "body": "This article is about Master Data v2 triggers. If you want to use Master Data v1, check out the steps described in [How to create a trigger in Master Data v1](https://help.vtex.com/pt/tutorial/creating-trigger-in-master-data--tutorials_1270)."
-}
-[/block]
-A Master Data trigger is an action executed after the insert or update of a given document. Actions can be of three types:
+A Master Data trigger is an [action](#action) executed after the insert or update of a given document. Actions can be of three types:
 - Send an HTTP request.
 - Send an email.
-- Save in another data entity.
+- Send email using [Message Center](https://help.vtex.com/pt/tutorial/conhecendo-o-message-center--tutorials_84) template.
+- Save data to another data entity.
 
 In this guide, you will learn how to set up Master Data v2 triggers and see some code examples of different use cases.
 [block:callout]
 {
   "type": "info",
-  "body": "Note that you may use Master Data triggers to create add hooks to VTEX first party apps. To do that, [Create a new JSON schema](ref:saveschemabyname) for the data entity used by the app and then follow the instructions below."
+  "body": "- This article is about Master Data v2 triggers. If you want to use Master Data v1, check out the steps described in [How to create a trigger in Master Data v1](https://help.vtex.com/pt/tutorial/creating-trigger-in-master-data--tutorials_1270).\n- You may use Master Data triggers to create add hooks to VTEX first party apps. To do that, [Create a new JSON schema](ref:saveschemabyname) for the data entity used by the app and then follow the instructions below.",
+  "title": "Note that:"
 }
 [/block]
 ## Creating triggers
@@ -133,6 +129,34 @@ There are 3 types of actions: `Call an HTTP Request`, `send an email` and `save 
     	],
     	"replyTo": "noreply@company.com",
     	"body": "My email with document {!id}."
+    }
+```
+
+- Setting up an email action using a [Message Center](https://help.vtex.com/pt/tutorial/conhecendo-o-message-center--tutorials_84) template.
+```json
+    {
+        "type": "t-email",
+        "template": "template-name",
+        "provider": "default",
+        "subject": "My template email with VTEX Master Data",
+        "to": [
+            "{!email}",
+            "test@email.com"
+        ],
+        "bcc": [
+            "myemail@test.com"
+        ],
+        "replyTo": "noreply@company.com",
+         "body": {
+                        "firstName": "{firstName}",
+                        "email": "{email}",
+                        "id": "{!id}",
+                        "clientName": "{!clientProfileData.firstName} {!clientProfileData.lastName}",
+                        "ownerListName": "{!customData.customApps[0].fields.ownerListName}",
+                        "ownerListEmail": "{!customData.customApps[0].fields.ownerListEmail}",
+                        "items": "{!items}",
+                        "openTextField": "{!openTextField.value}"
+                    }
     }
 ```
 

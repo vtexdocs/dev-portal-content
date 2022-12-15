@@ -3,7 +3,7 @@ title: "Define payment methods displayed on inStore"
 slug: "define-payment-methods-displayed-on-instore"
 hidden: false
 createdAt: "2021-09-16T22:06:59.987Z"
-updatedAt: "2022-02-24T20:34:57.897Z"
+updatedAt: "2022-10-05T18:22:47.556Z"
 ---
 After creating a payment condition as described in the [inStore - Payments](https://help.vtex.com/en/tracks/instore-payments--43B4Nr7uZva5UdwWEt3PEy/2liigRors32hzqBNs2M1Oa) guide, we need to create the filters that will define which payment methods will appear at inStore’s checkout.
 
@@ -48,14 +48,14 @@ The code should look similar to the example below.
 {
   "codes": [
     {
-      "code": "\nwindow.PAYMENTS_FILTER_GLOBAL = {\n  removeFilters: [\n    '6', // Boleto Bancário\n    '45', // Direct debit\n  ],\n  filters: [\n    '2', '4', // Credit card\n    '202' // Cash\n  ]\n};",
+      "code": "\nwindow.PAYMENTS_FILTER_GLOBAL = {\n  removeFilters: [\n    '6', // Boleto Bancário\n    '45', // Direct debit\n  ],\n  filters: [\n    '2', '4', // Credit card\n    '202' // Cash\n    '125' // Pix\n  ]\n};",
       "language": "javascript"
     }
   ]
 }
 [/block]
 
-In this example, we are excluding the conditions “Boleto bancário” (ID = 6) and "Direct debit" (ID = 45); and we are including “Credit card” (IDs = 2 and 4) and “Cash” (ID = 202). The first two will not be displayed at checkout, while the last two will be displayed.
+In this example, we are excluding the conditions “Boleto bancário” (ID = 6) and "Direct debit" (ID = 45); and we are including “Credit card” (IDs = 2 and 4), “Cash” (ID = 202) and "Pix" (ID = 125). The first two will not be displayed at checkout, while the last two will be displayed.
 
 2. Still in the `checkout-instore-custom.js` file, you need to add a reference to the object created within the `window.INSTORE_CONFIG` object.
 

@@ -2,7 +2,7 @@
 title: "Get subscription group list"
 slug: "getsubscriptiongrouplist"
 excerpt: "Retrieves a list of Subscription groups in your store."
-hidden: false
+hidden: true
 createdAt: "2019-12-30T04:15:05.393Z"
 updatedAt: "2020-03-02T15:02:17.387Z"
 ---

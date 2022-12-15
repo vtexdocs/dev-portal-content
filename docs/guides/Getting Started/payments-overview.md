@@ -3,12 +3,11 @@ title: "Payments"
 slug: "payments-overview"
 hidden: false
 createdAt: "2022-04-28T21:34:56.911Z"
-updatedAt: "2022-08-01T20:00:37.543Z"
+updatedAt: "2022-09-29T21:05:13.444Z"
 ---
-[block:callout]
+[block:html]
 {
-  "type": "info",
-  "body": "📣 Help us improve this documentation! Share your feedback by filling out [this form](https://forms.gle/qrqvAPy7755DxMM59)."
+  "html": "<style>\n    .markdown-body .callout[theme=\"📣\"] {\n    --icon: \"\\f0a1\";\n    --icon-color: #142032;\n    --border: #142032;\n    --background: #f8f7fc;\n    --text: #4a596b;\n    }\n  </style>\n  <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n    <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n      <p>\n      Tell us about your experience with this article by filling out <button style=\"background-color:transparent;color:#f71963;text-decoration:underline;border:none;padding:0;cursor:pointer;font-size: var(--markdown-font-size,14px);\" onclick=\"closeModal()\">this form.</button>\n      </p>\n  </blockquote>"
 }
 [/block]
 ## Developing an antifraud integration
@@ -61,6 +60,7 @@ Payment providers can implement their integrations using our [Payment Provider P
 - [PCI - DSS Compliance](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-pci-dss-compliance)
 - [Secure Proxy](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-secure-proxy)
 - [Payment Provider Framework](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-framework)
+- [Payment Provider Protocol applied to payments with POS](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-ppp-applied-to-pos)
 
 Below there are the steps you usually need to follow to implement an integration:
 

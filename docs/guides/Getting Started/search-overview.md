@@ -3,12 +3,11 @@ title: "Search"
 slug: "search-overview"
 hidden: false
 createdAt: "2022-04-28T19:54:24.451Z"
-updatedAt: "2022-05-10T20:23:33.106Z"
+updatedAt: "2022-09-13T20:26:18.916Z"
 ---
-[block:callout]
+[block:html]
 {
-  "type": "info",
-  "body": "📣 Help us improve our documentation! Share your feedback by filling out [this form](https://forms.gle/s5BZqNbYFJNigpNM8)."
+  "html": "<style>\n    .markdown-body .callout[theme=\"📣\"] {\n    --icon: \"\\f0a1\";\n    --icon-color: #142032;\n    --border: #142032;\n    --background: #f8f7fc;\n    --text: #4a596b;\n    }\n  </style>\n  <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n    <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n      <p>\n      Tell us about your experience with this article by filling out <button style=\"background-color:transparent;color:#f71963;text-decoration:underline;border:none;padding:0;cursor:pointer;font-size: var(--markdown-font-size,14px);\" onclick=\"closeModal()\">this form.</button>\n      </p>\n  </blockquote>"
 }
 [/block]
 Intelligent Search is a [VTEX IO](https://vtex.com/us-en/store-framework/) alternative to Legacy Search. It assists the customer in their purchase journey and presents results from the first interaction with the search bar. The tool displays search and product suggestions that may interest the user. Intelligent Search also corrects spelling errors and understands words not contained in the product information.
@@ -76,6 +75,8 @@ The [Autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-sea
 
 [DidYouMean](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-didyoumean) is a component used to suggest a possible misspelling correction to the current query.
 
+## Search Control
+The [Search Control](https://developers.vtex.com/vtex-rest-api/docs/search-control-fulltextsearchbox) control is responsible for generating the search box. Besides the search filed, the control renders a combo for restricting a search in one department.
 
 ## Customizing the search result 
 
@@ -109,6 +110,8 @@ You can integrate your store's search to some Google features, such as the Googl
 ## Consulting search information using Legacy Search
 
 You can consult, search and sort products in the catalog using fulltext, category, and brand search terms. 
+
+- [How search parameters work](https://developers.vtex.com/vtex-rest-api/docs/how-search-parameters-work)
 
 ### Search API
 

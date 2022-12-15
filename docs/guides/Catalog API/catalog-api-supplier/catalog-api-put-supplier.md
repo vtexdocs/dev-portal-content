@@ -1,59 +1,8 @@
 ---
 title: "Update Supplier"
 slug: "catalog-api-put-supplier"
-excerpt: "Updates general information of an existing Supplier."
+excerpt: "Updates general information of an existing Supplier. \r\n## Request body example\r\n\r\n```json\r\n{\r\n    \"Name\": \"Supplier\",\r\n    \"CorporateName\": \"TopStore\",\r\n    \"StateInscription\": \"\",\r\n    \"Cnpj\": \"33304981001272\",\r\n    \"Phone\": \"3333333333\",\r\n    \"CellPhone\": \"4444444444\",\r\n    \"CorportePhone\": \"5555555555\",\r\n    \"Email\": \"email@email.com\",\r\n    \"IsActive\": true\r\n}\r\n```\r\n\r\n## Response body example\r\n\r\n```json\r\n{\r\n    \"Id\": 1,\r\n    \"Name\": \"Supplier\",\r\n    \"CorporateName\": \"TopStore\",\r\n    \"StateInscription\": \"\",\r\n    \"Cnpj\": \"33304981001272\",\r\n    \"Phone\": \"3333333333\",\r\n    \"CellPhone\": \"4444444444\",\r\n    \"CorportePhone\": \"5555555555\",\r\n    \"Email\": \"email@email.com\",\r\n    \"IsActive\": true\r\n}\r\n```"
 hidden: false
 createdAt: "2020-04-16T15:43:24.310Z"
-updatedAt: "2022-05-20T22:23:46.258Z"
+updatedAt: "2022-12-02T21:19:54.287Z"
 ---
-## Request body has the following properties:
-
-| Attribute        | Type    | Description                  |
-| ---------------- | ------- | ---------------------------- |
-| Name             | string  | Supplier Name                |
-| CorporateName    | string  | Supplier Corporate Name      |
-| StateInscription | string  | State Inscription            |
-| Cnpj             | string  | Business ID                  |
-| Phone            | string  | Supplier Phone               |
-| CellPhone        | string  | Supplier Cellphone           |
-| CorportePhone    | string  | Supplier Corporate Phone     |
-| Email            | string  | Supplier email               |
-| IsActive         | boolean | If Supplier is active or not |
-
-## Request body example:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n    \"Name\": \"Supplier\",\n    \"CorporateName\": \"TopStore\",\n    \"StateInscription\": \"\",\n    \"Cnpj\": \"33304981001272\",\n    \"Phone\": \"3333333333\",\n    \"CellPhone\": \"4444444444\",\n    \"CorportePhone\": \"5555555555\",\n    \"Email\": \"email@email.com\",\n    \"IsActive\": true\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]
-## Response body has the following properties:
-
-| Attribute        | Type    | Description                  |
-| ---------------- | ------- | ---------------------------- |
-| Id               | integer | Supplier ID                  |
-| Name             | string  | Supplier Name                |
-| CorporateName    | string  | Supplier Corporate Name      |
-| StateInscription | string  | State Inscription            |
-| Cnpj             | string  | Business ID                  |
-| Phone            | string  | Supplier Phone               |
-| CellPhone        | string  | Supplier Cellphone           |
-| CorportePhone    | string  | Supplier Corporate Phone     |
-| Email            | string  | Supplier email               |
-| IsActive         | boolean | If Supplier is active or not |
-
-## Response body example:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n    \"Id\":1\n    \"Name\": \"Supplier\",\n    \"CorporateName\": \"TopStore\",\n    \"StateInscription\": \"\",\n    \"Cnpj\": \"33304981001272\",\n    \"Phone\": \"3333333333\",\n    \"CellPhone\": \"4444444444\",\n    \"CorportePhone\": \"5555555555\",\n    \"Email\": \"email@email.com\",\n    \"IsActive\": true\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]

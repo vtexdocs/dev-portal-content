@@ -1,9 +1,10 @@
 ---
 title: "Scroll documents"
 slug: "scrolldocuments-1"
+excerpt: "Scroll through documents according to the query parameter filters.\n\r\n\r> Avoid sending too many requests with wildcards (`*`) in the search parameters or that use the `keyword` parameter. This may lead to this endpoint being temporarily blocked for your account. If this happens you will receive an error with status code `429`."
 hidden: false
 createdAt: "2019-12-18T22:14:53.633Z"
-updatedAt: "2021-09-14T20:57:43.419Z"
+updatedAt: "2022-12-01T20:20:22.419Z"
 ---
 Use all the features of ```search``` API to perform filters.
 
