@@ -8,6 +8,7 @@ updatedAt: "2022-09-01T19:53:36.514Z"
 This is a guide intended for those responsible for ​​integrating the [PSE payment method](xxxxx) in a VTEX store. As part of the order transaction flow, it is necessary to inform the connector that will process the payment which bank was selected by the customer.
 
 To provide this information in a way that is frictionless to the shopper experience, follow the steps below:
+
 1. Send banks and authentication information to VTEX.
 2. Update the [List Payment Provider Manifest](https://developers.vtex.com/vtex-developer-docs/reference/manifest-1) or [List Payment Methods](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods) API.
 3. [POST Create Payment](https://developers.vtex.com/vtex-rest-api/reference/createpayment) configuration.
@@ -18,7 +19,8 @@ To provide this information in a way that is frictionless to the shopper experie
 To start the PSE integration process, VTEX needs to receive information that will allow performing the necessary setting in API requests.
 
 The following information should be sent to [VTEX](https://help.vtex.com/en/support):
-- **GET Banks endpoint** used by you to list the banks available to the customer. It should include the response body and any additional information required. 
+
+- **GET Banks endpoint** used by you to list the banks available to the customer. It should include the response body and any additional information required.
 - **Authentication key information** required to perform the GET request call.
 
 See below an example of the GET Banks endpoint that VTEX will make:
@@ -57,13 +59,14 @@ After that, VTEX expects a response body following the structure described below
   "body": "The **GET Banks endpoint** is used whenever the PSE payment app is loaded at Checkout. In this way, when there is any modification in the endpoint (removal or addition of banks to the list), the information is automatically updated at Checkout, requiring no action from VTEX."
 }
 [/block]
+
 ## List Payment Provider Manifest / List Payment Methods API Update
 
 After forwarding the banking and authentication information to VTEX, it will be necessary for the payment provider to update information in the API, so that the PSE is recognized as a payment method.
 
-The below PSE information should be added in one of the two APIs bellow (according to your choice): 
+The below PSE information should be added in one of the two APIs bellow (according to your choice):
 
-- [List Payment Provider Manifest API](https://developers.vtex.com/vtex-developer-docs/reference/manifest-1) 
+- [List Payment Provider Manifest API](https://developers.vtex.com/vtex-developer-docs/reference/manifest-1)
 
 [block:code]
 {
@@ -75,6 +78,7 @@ The below PSE information should be added in one of the two APIs bellow (accordi
   ]
 }
 [/block]
+
 - [List Payment Methods API](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods)
 
 [block:code]
@@ -87,6 +91,7 @@ The below PSE information should be added in one of the two APIs bellow (accordi
   ]
 }
 [/block]
+
 ## POST Creating Payment request configuration
 
 The bank selected by the shopper will be sent to the connector on the authorization request in the following format:
@@ -121,6 +126,7 @@ For more information, check [POST Create Payment](https://developers.vtex.com/vt
   "body": "By selecting the PSE payment method at checkout, your customers will be redirected to the bank environment (page). There, they will complete the necessary authentication (specified according to the chosen bank). After that, there are two possible scenarios:\n- **Payment approved**: a page containing the order details is shown.\n- **Payment denied**: a page containing the specific error is shown."
 }
 [/block]
+
 ## Payment Connector Update
 
 Request the payment connector update through the [VTEX Support Portal](https://help.vtex.com/support).

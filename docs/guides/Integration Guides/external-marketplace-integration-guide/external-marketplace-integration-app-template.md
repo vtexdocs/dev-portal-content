@@ -7,26 +7,23 @@ updatedAt: "2022-06-23T20:26:15.880Z"
 ---
 The integration Template App is a pre-built app developed by VTEX for our partners to reduce development and implementation time when integrating with external marketplaces. By using the template to build your integration app, connectors will also have the app displayed in the [VTEX App Store](https://apps.vtex.com/).
 
-
 ## What the App Template includes for the VTEX Admin
 
 An integration app created from our App Template already includes:
 
--  **Standard set up page** containing:
-    - Activate/deactivate the integration button
-    - Field identifying the affiliate ID
-    - Field to inform the email that will receive notifications about changes in the affiliate
-    - Callback URL used by the VTEX notification system
-    - Field for the [sales channel](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) ID
-    - Fields included in the [sales channel form](https://help.vtex.com/en/tutorial/o-que-e-uma-politica-comercial--563tbcL0TYKEKeOY4IAgAE#filling-in-the-fields)
-    - Save Settings button
--  **Custom settings page** containing:
-    - Button to activate/deactivate [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl)
+- **Standard set up page** containing:
+  - Activate/deactivate the integration button
+  - Field identifying the affiliate ID
+  - Field to inform the email that will receive notifications about changes in the affiliate
+  - Callback URL used by the VTEX notification system
+  - Field for the [sales channel](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) ID
+  - Fields included in the [sales channel form](https://help.vtex.com/en/tutorial/o-que-e-uma-politica-comercial--563tbcL0TYKEKeOY4IAgAE#filling-in-the-fields)
+  - Save Settings button
+- **Custom settings page** containing:
+  - Button to activate/deactivate [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl)
 - Complete **search endpoint** to retrieve seller configurations using [AppKey and AppToken](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) generated in the seller’s account, defined by the appVendor.
 - **Feed creation mechanism in [Offer Management](https://help.vtex.com/tutorial/anuncios-enviados-beta--6yg2CBv5Z5AnD0qS0cw2sa)**, that allows the connector to interact with Offer Management for generating logs.
 - **Link to [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration)**, allowing sellers to map their catalog according to the marketplace’s definitions
-
-<br>
 
 ## Before you start
 
@@ -54,16 +51,13 @@ The Template App runs in [VTEX IO](https://developers.vtex.com/vtex-developer-do
 6. Do not check the **Include all branches** option.
 7. Click on `Create repository from template`.
 
-<br>
-
 ## Step 2 - App configurations
 
 Once your repository is created from the template, you must configure your app by substituting placeholders and setting up the necessary Template App Configurations.
 
+### Substituting placeholders
 
-### Substituting placeholders 
-
-Follow the list below to substitute placeholders properly. Once placeholders are replaced, the App’s foundation will include the fields needed to set up the seller and the integration on VTEX's side. 
+Follow the list below to substitute placeholders properly. Once placeholders are replaced, the App’s foundation will include the fields needed to set up the seller and the integration on VTEX's side.
 
 [block:callout]
 {
@@ -149,7 +143,7 @@ Follow the list below to substitute placeholders properly. Once placeholders are
   <tr>
    <td><code>connectorEndpoint</code>
    </td>
-   <td>Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples: <code>https://externalconnector.com</code> or relative URL <code>https://externalconnector.com/api/vtex</code>. 
+   <td>Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples: <code>https://externalconnector.com</code> or relative URL <code>https://externalconnector.com/api/vtex</code>.
    </td>
    <td>
 <ol>
@@ -164,7 +158,7 @@ Follow the list below to substitute placeholders properly. Once placeholders are
  <tr>
    <td><code>connectorEndpointHost</code>
    </td>
-   <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>. 
+   <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>.
    </td>
    <td>
 <ol>
@@ -216,7 +210,7 @@ Follow the list below to substitute placeholders properly. Once placeholders are
   <tr>
    <td><code>mapperId</code>
    </td>
-   <td>Connector’s ID in VTEX Mapper. 
+   <td>Connector’s ID in VTEX Mapper.
    </td>
    <td>
 <ol>
@@ -279,22 +273,21 @@ The Template App is divided into two areas:
 - **TitleArea:** where the app's title goes, defined by the `{{appTitle}}` field.
 - **ConfigArea:** where the app's set up fields go. The ConfigArea has two types of configurations: Default Configurations and Custom Configurations.
 
-
 #### DefaultConfigs
 
 DefaultConfigs is where the mandatory fields for all apps are included. This section does not need to be changed, regardless of the marketplace's needs, since they are internal configurations used by VTEX. This section already includes:
 
 - Toggle indicating if the integration is activated or inactivated.
 - Input field showing the marketplace's affiliateId.
-- Input field showing the connector's endpoint, for notifying product and order updates occurred in VTEX. 
+- Input field showing the connector's endpoint, for notifying product and order updates occurred in VTEX.
 - Input field for sellers to fill in the email registered as the affiliate.
 - Button leading to the account's Affiliate page.
 - Selection box showing a list of countries, currencies, time zones and other [information](https://help.vtex.com/en/tutorial/o-que-e-uma-politica-comercial--563tbcL0TYKEKeOY4IAgAE) registered in the [sales channels](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) that the seller has set up in their account. This way, sellers can create or edit their sales channel information directly through the Default Configs page.
-- Field showing the sales channel's name used for the marketplace, with a button leading to the VTEX account's Sales channels page. This becomes available after the initial set up of the fields listed above. 
+- Field showing the sales channel's name used for the marketplace, with a button leading to the VTEX account's Sales channels page. This becomes available after the initial set up of the fields listed above.
 
 #### CustomConfigs
 
-The CustomConfigs section is where you find configurations that come as default but are optional, like VTEX Mapper, Offer Management and AllowFranchiseAccounts. 
+The CustomConfigs section is where you find configurations that come as default but are optional, like VTEX Mapper, Offer Management and AllowFranchiseAccounts.
 
 ##### Removing VTEX Mapper
 
@@ -310,6 +303,7 @@ You can remove [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-
   ]
 }
 [/block]
+
 ##### Removing Offer Management
 
 You can remove [Offer Management](https://help.vtex.com/tutorial/anuncios-enviados-beta--6yg2CBv5Z5AnD0qS0cw2sa) from the app, If your integration already includes a solution to generate logs for offers. To remove Offer Management, on the `node/resolvers/saveConfig.ts` file (line 15), remove the feed’s creation in Sent Offers:
@@ -395,7 +389,7 @@ Ex. _email.tsx_, _token.tsx_.
    </td>
   </tr>
   <tr>
-   <td>DefaultProps 
+   <td>DefaultProps
    </td>
    <td>Defines attributes used by all components present in the integration. The attributes include `intl` (used for field internationalization) and `config` (represents the seller’s current configuration).
    </td>
@@ -403,9 +397,6 @@ Ex. _email.tsx_, _token.tsx_.
    </td>
   </tr>
 </table>
-
-
-
 
 3. To add more properties to the `DefaultProps` for a specific field, **extend the `DefaultProps` interface**, adding the extra properties. This step is optional.
 [block:code]
@@ -419,8 +410,7 @@ Ex. _email.tsx_, _token.tsx_.
   ]
 }
 [/block]
-In the example above, a new interface called `CustomProps` was created, that can `extend` the `DefaultProps`, by adding a `newProp` string property. Thus, it is possible to use `CustomProps` in place of `DefaultProps`, and the component can now accept the extra `newProp` property. 
-
+In the example above, a new interface called `CustomProps` was created, that can `extend` the `DefaultProps`, by adding a `newProp` string property. Thus, it is possible to use `CustomProps` in place of `DefaultProps`, and the component can now accept the extra `newProp` property.
 
 4. To use other properties that are not listed in `DefaultProps`, define a **new interface** with the needed properties.
 
@@ -437,7 +427,7 @@ In the example below, a new interface called `CustomProps` is created, with only
   ]
 }
 [/block]
-5. Add **components developed** to the app’s template. 
+5. Add **components developed** to the app’s template.
 
 Here’s an example code for adding an input field:
 [block:code]
@@ -469,9 +459,10 @@ The example above creates an input field called `ExampleComponent`. It uses an e
 }
 [/block]
 6. To finalize the new field’s inclusion, add the new field within the **CustomConfigsArea**. To do that:
+
 - In the `react/areas/configArea/customConfigs/index.tsx` field, add an **import** to the new component developed.  
 Following the example above: _import ExampleComponent from './example'_
-- Add the component within the **<div> </div>** of `CustomConfigArea`. 
+- Add the component within the **<div> </div>** of `CustomConfigArea`.
 
 [block:code]
 {
@@ -486,11 +477,11 @@ Following the example above: _import ExampleComponent from './example'_
 [/block]
 Note that the `CustomConfigArea` in the template does not include `intl`, `config` and `setConfig`. They must be added, like in the example above, depending on which properties are needed. To add more properties, repeat step 3.  
 
-7. If other components are necessary, add them in the `return` object. 
+7. If other components are necessary, add them in the `return` object.
 
 The order of components within the `return` affects the order in which components are rendered in the app.  
 
-<br> 
+<br>
 
 ## Step 3 - Translating a component
 
@@ -501,20 +492,20 @@ The `intl` library gets what locale is being used in the VTEX Admin’s context 
 To add translations to the app:
 
 1. Add the translations in the `messages` folder. The Template app already includes the files:
+
 - **en.json:** english
 - **es.json:** spanish
 - **pt.json:** portuguese
 
 The following languages are also available in the VTEX Admin: italian (it), japanese (ja), korean (ko), dutch (nl) and romanian (ro).
 
-
 2. Add the translations in the `{messageId}` to the corresponding locale’s file in the format `"admin/{messageId}": "translation"`.
 3. In the selected property that needs translation, substitute the text for the code `intl.formatMessage({ id: 'admin/{messageId}' })`.
+
 - **admin/:** used to identify a translation of a component installed in the VTEX Admin. It must be every Id’s prefix.
 - **messageId:** can be substituted for any text. It only accepts letters and `-` to define the text.
 
 To illustrate with an example, let’s suppose we have the following component:
-
 
 [block:code]
 {
@@ -561,16 +552,16 @@ To add the id to the file, we add the code: `“admin/app.test.title”: “Test
   ]
 }
 [/block]
-<br> 
+<br>
 
 ## Step 4 - Testing the app locally
 
 1. With the app already configured, open a CLI in the project’s **root**.
-2. Login into a test account using the command: `vtex login {{account}}`. Substitute {{account}} by the test account’s *accountName*.
-3. Once logged into the account, use the command `vtex use {{workspace}}` to access a development workspace to link the app. Substitute  *{{workspace}}* by any name you choose.
-4. Use the command `vtex setup` to adjust IO types and variables based on the values set in the app’s configuration. 
+2. Login into a test account using the command: `vtex login {{account}}`. Substitute {{account}} by the test account’s _accountName_.
+3. Once logged into the account, use the command `vtex use {{workspace}}` to access a development workspace to link the app. Substitute  _{{workspace}}_ by any name you choose.
+4. Use the command `vtex setup` to adjust IO types and variables based on the values set in the app’s configuration.
 5. Use the command `vtex link` to link the app so it operates on VTEX IO’s infrastructure.
-6. Access the following address: 
+6. Access the following address:
 `https://{{workspace}}--{{account}}.myvtex.com/admin/{{appVendor}}/{{appName}}` substituting the placeholders for the chosen values in the previous steps.
 
 <br>
@@ -578,8 +569,6 @@ To add the id to the file, we add the code: `“admin/app.test.title”: “Test
 ### Collecting the app’s configurations
 
 Once the app is configured, it is possible to recover the seller’s configuration through the app. To search a seller’s configuration:
-
-
 
 1. Call the following API:
 `https://{{workspace}}--{(account}}.myvtex.com/_v/{{appVendor}}/{{appName}}/config`
@@ -617,13 +606,9 @@ Once the app is configured, it is possible to recover the seller’s configurati
   </tr>
 </table>
 
-
-
-
 2. Generate the account’s [AppKey and AppToken](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) to authenticate it.
 
-
-#### Request’s curl in a workspace:
+#### Request’s curl in a workspace
 
 [block:code]
 {
@@ -636,7 +621,9 @@ Once the app is configured, it is possible to recover the seller’s configurati
   ]
 }
 [/block]
-#### Request’s curl in production:
+
+#### Request’s curl in production
+
 [block:code]
 {
   "codes": [
@@ -648,7 +635,7 @@ Once the app is configured, it is possible to recover the seller’s configurati
   ]
 }
 [/block]
-<br> 
+<br>
 
 ## Step 5 - Publishing the app in the VTEX App Store
 

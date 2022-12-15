@@ -6,13 +6,13 @@ hidden: false
 createdAt: "2020-09-01T13:10:10.114Z"
 updatedAt: "2022-11-25T20:53:03.133Z"
 ---
-The call's payload can be adapted into two scenarios: 
+The call's payload can be adapted into two scenarios:
 
-- **Displaying items in the storefront**: the address information can be nulled in the request, since they are not mandatory data for this context.   
-- **Making a shopping cart simulation during checkout**: address information must be sent, since this data is needed to calculate freight values. If the address information (including `postalCode` and `country`) is not sent through the call, VTEX interprets the stock balance as zero. Without a valid stock balance, the seller will not be shown as an option during checkout. 
-
+- **Displaying items in the storefront**: the address information can be nulled in the request, since they are not mandatory data for this context.
+- **Making a shopping cart simulation during checkout**: address information must be sent, since this data is needed to calculate freight values. If the address information (including `postalCode` and `country`) is not sent through the call, VTEX interprets the stock balance as zero. Without a valid stock balance, the seller will not be shown as an option during checkout.
 
 ## Request body example - Indexing simulation
+
 [block:code]
 {
   "codes": [
@@ -23,7 +23,9 @@ The call's payload can be adapted into two scenarios:
   ]
 }
 [/block]
+
 ## Request body example - Checkout simulation
+
 [block:code]
 {
   "codes": [
@@ -34,6 +36,7 @@ The call's payload can be adapted into two scenarios:
   ]
 }
 [/block]
+
 ## Response body fields to be sent by the seller
 
 <table>
@@ -65,7 +68,7 @@ The call's payload can be adapted into two scenarios:
         <td><code>&#x21B3; attachmentOfferings</code></td>
         <td>array</td>
         <td>No</td>
-        <td>Contains the attachments that are available for the SKU customization. If this array is sent, the following fields are mandatory. If you don’t have any attachment to send, this array should be empty.</b></td>
+        <td>Contains the attachments that are available for the SKU customization. If this array is sent, the following fields are mandatory. If you don’t have any attachment to send, this array should be empty.</td>
     </tr>
     <tr>
         <td><code>&nbsp;&#x21B3; name</code></td>
@@ -412,6 +415,7 @@ The call's payload can be adapted into two scenarios:
 </table>
 
 ## Response body example
+
 [block:code]
 {
   "codes": [

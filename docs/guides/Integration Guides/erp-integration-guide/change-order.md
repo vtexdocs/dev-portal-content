@@ -12,6 +12,7 @@ Change order is a feature that allows your store to modify the items or prices o
   "body": "Learn more about [Order replacement](https://help.vtex.com/en/tutorial/order-replacement--2IK9mwQjBKseQmE8K8saO8#) and how to enable your customers to easily request order changes."
 }
 [/block]
+
 ## Implementation
 
 The [Register change on order](https://developers.vtex.com/vtex-rest-api/reference/registerchange) endpoint in the Orders API allows you to create a discount, change an item or increase the price of an order.
@@ -28,24 +29,24 @@ Changes made this way can be confirmed by the `changesAttachment` field in the r
   "body": "Increasing the price of an order is only available for credit card purchases. The connector must also be able to handle purchases without the CVV, as well as duplicated sequences."
 }
 [/block]
+
 ### Errors
 
 See below what API errors can be returned when attempting to [change an order via API](https://developers.vtex.com/vtex-rest-api/reference/registerchange) and how to avoid or work around them.
-
 
 #### Request errors
 
 These errors happen when there are one or more errors in the information sent in the request.
 
 <table>
-   <td><b> Error</b> 
+   <td><b> Error</b>
 
    </td>
-   <td><b> Description</b> 
+   <td><b> Description</b>
 
    </td>
   <tr>
-   <td><code>The change value needs to be greater or equal than zero</code> 
+   <td><code>The change value needs to be greater or equal than zero</code>
 
    </td>
    <td><code>discountValue</code>  or <code>incrementValue</code> is smaller than 0.
@@ -82,6 +83,7 @@ These errors happen when there are one or more errors in the information sent in
 
    </td>
   </tr>
+
 </table>
 
 #### Restriction errors
@@ -89,14 +91,14 @@ These errors happen when there are one or more errors in the information sent in
 These are errors that are returned when the request is correct but the order cannot be modified due to [order change restrictions](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190#restrictions).
 
 <table>
-   <td><b> Error</b> 
+   <td><b> Error</b>
 
    </td>
-   <td><b> Description</b> 
+   <td><b> Description</b>
 
    </td>
   <tr>
-   <td><code>Só é permitido registrar mudanças (change) quando o pedido estiver em manuseio: status = handling, waiting for fulfillment or ready for invoicing</code> 
+   <td><code>Só é permitido registrar mudanças (change) quando o pedido estiver em manuseio: status = handling, waiting for fulfillment or ready for invoicing</code>
 
    </td>
    <td>The fulfillment order is not in a status that allows changes (<code>handling</code>, <code>waiting for fulfillment</code> and <code>ready-for-invoice</code>).
@@ -205,7 +207,7 @@ Consult with your payment gateway to see which methods allow for order value cha
    </td>
   </tr>
   <tr>
-   <td><code>500 Internal Server Error</code> 
+   <td><code>500 Internal Server Error</code>
 
    </td>
    <td>There is an issue with the payment gateway.

@@ -11,11 +11,11 @@ This article explains how to use the Message Center API to generate DKIM keys th
 
 > 📘
 >
-> These instructions only apply if the [sender](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/42LVaxtFb2VHX9xTZU58qC) is set up using VTEX mail servers. If you are using your own SMTP provider, you need to configure DKIM in your mail server. 
+> These instructions only apply if the [sender](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/42LVaxtFb2VHX9xTZU58qC) is set up using VTEX mail servers. If you are using your own SMTP provider, you need to configure DKIM in your mail server.
 
 ## DKIM endpoint
 
-<span class="pg-type type-post">post</span><span> `https://{accountName}.{environment}.com/api/mail-service/pvt/providers/:EmailProvider/dkim`
+<span class="pg-type type-post">post</span> `https://{accountName}.{environment}.com/api/mail-service/pvt/providers/:EmailProvider/dkim`
 
 - `{accountName}` should be replaced with your store's account name (e.g. _cosmetics2_)
 - `{environment}` should be replaced with the environment you are using (e.g. _vtexcommercestable_)
@@ -34,7 +34,7 @@ Before you have setup a sender in [Message Center](https://help.vtex.com/en/trac
 }
 ```
 
-Once the sender has been set up, you should receive an e-mail from Amazon Web Services requesting you to authorize the configured e-mail address for use with [Amazon SES](https://aws.amazon.com/ses/). 
+Once the sender has been set up, you should receive an e-mail from Amazon Web Services requesting you to authorize the configured e-mail address for use with [Amazon SES](https://aws.amazon.com/ses/).
 [block:image]
 {
   "images": [

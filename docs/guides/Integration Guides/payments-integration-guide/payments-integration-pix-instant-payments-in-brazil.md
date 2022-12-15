@@ -50,6 +50,7 @@ In this step, we’ll explain how to extend your Payment Provider Protocol imple
   "title": "Expected launch: November 2020"
 }
 [/block]
+
 ## Integration conditions
 
 If you are ready to develop the middleware that implements our Payment Provider Protocol, you should be aware of these requirements:
@@ -62,9 +63,9 @@ If you are ready to develop the middleware that implements our Payment Provider 
 
 While our protocol describes ten endpoints for implementation, not all of them are applicable when integrating Pix instant payments. Regarding the two provider flows:
 
-- [Payment Flow](https://developers.vtex.com/vtex-rest-api/reference/payment-flow): its implementation is <strong>mandatory</strong>. 
+- [Payment Flow](https://developers.vtex.com/vtex-rest-api/reference/payment-flow): its implementation is **mandatory**.
 
-- [Configuration Flow](https://developers.vtex.com/vtex-rest-api/reference/configuration-flow): its implementation is <strong>optional and currently not available for Pix</strong>.
+- [Configuration Flow](https://developers.vtex.com/vtex-rest-api/reference/configuration-flow): its implementation is **optional and currently not available for Pix**.
 
 The table below gives further detail on the applicability of each endpoint to Pix instant payments. More details on the integration steps are given in the rest of this tutorial.
 [block:parameters]
@@ -120,7 +121,7 @@ The table below gives further detail on the applicability of each endpoint to Pi
 [block:callout]
 {
   "type": "danger",
-  "body": "We strongly advise against using the <span class=\"api\"><span class=\"pg-type type-get\">GET</span>[List Payment Methods] (https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods) to proceed with the implementation. This route is obsolete and it will be deprecated in soon - early 2021",
+  "body": "We strongly advise against using the <span class=\"api\"><span class=\"pg-type type-get\">GET</span>[List Payment Methods] (<https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods>) to proceed with the implementation. This route is obsolete and it will be deprecated in soon - early 2021",
   "title": "GET List Payment Methods route"
 }
 [/block]
@@ -132,11 +133,12 @@ The table below gives further detail on the applicability of each endpoint to Pi
   "title": "Request and response examples"
 }
 [/block]
+
 ## Integration steps
 
 ### Establish the payment methods available
 
-The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API call using the <span class="api"><span class="pg-type type-get">GET</span>[List Payment Provider Manifest] (https://developers.vtex.com/vtex-developer-docs/reference/manifest-1) route.
+The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API call using the <span class="api pg-type type-get">GET</span>[List Payment Provider Manifest] (<https://developers.vtex.com/vtex-developer-docs/reference/manifest-1>) route.
 
 The expected response is:
 [block:code]
@@ -158,11 +160,11 @@ The expected response is:
   "body": "Pix does <strong>not</strong> handle payment split yet, this functionality will be released soon."
 }
 [/block]
-For more details, check the [complete documentation] (https://developers.vtex.com/vtex-developer-docs/reference/manifest-1).
+For more details, check the [complete documentation] (<https://developers.vtex.com/vtex-developer-docs/reference/manifest-1>).
 
 ### Create Pix Payment Method
 
-Now you have to create a new payment method and there’s only one route as an option: <span class="api"><span class="pg-type type-post">POST</span>[Create Payment] (https://developers.vtex.com/vtex-developer-docs/reference/createpayment). 
+Now you have to create a new payment method and there’s only one route as an option: <span class="api pg-type type-post">POST</span>[Create Payment] (<https://developers.vtex.com/vtex-developer-docs/reference/createpayment>).
 
 There’s a lot of information needed stem from the cart data in the Smart Checkout, so be careful and validate all the payload’s information.
 
@@ -198,11 +200,11 @@ As a result, we expect the following response:
   ]
 }
 [/block]
-The complete documentation is [here] (https://developers.vtex.com/vtex-developer-docs/reference/createpayment).
+The complete documentation is [here] (<https://developers.vtex.com/vtex-developer-docs/reference/createpayment>).
 
-### Cancel a Payment 
+### Cancel a Payment
 
-To cancel a payment, you must already have created one. To do so, you’ll make an API call using the route <span class="api"><span class="pg-type type-post">POST</span>[Cancel Payment] (https://developers.vtex.com/vtex-developer-docs/reference/cancelpayment):
+To cancel a payment, you must already have created one. To do so, you’ll make an API call using the route <span class="api pg-type type-post">POST</span>[Cancel Payment] (<https://developers.vtex.com/vtex-developer-docs/reference/cancelpayment>):
 [block:code]
 {
   "codes": [
@@ -214,7 +216,7 @@ To cancel a payment, you must already have created one. To do so, you’ll make 
   ]
 }
 [/block]
-After the provider realizes the payment cancelation, we expect is a response like this: 
+After the provider realizes the payment cancelation, we expect is a response like this:
 [block:code]
 {
   "codes": [
@@ -226,13 +228,13 @@ After the provider realizes the payment cancelation, we expect is a response lik
   ]
 }
 [/block]
-See the [complete documentation] (https://developers.vtex.com/vtex-developer-docs/reference/cancelpayment) for more details.
+See the [complete documentation] (<https://developers.vtex.com/vtex-developer-docs/reference/cancelpayment>) for more details.
 
 ### Capture Payment
 
 If your transaction was completed successfully, the provider can capture the payment.  
 
-So, to capture payment, VTEX will send the information below through the <span class="api"><span class="pg-type type-post">POST</span>[Capture Payment route] (https://developers.vtex.com/vtex-developer-docs/reference/capturepayment): 
+So, to capture payment, VTEX will send the information below through the <span class="api pg-type type-post">POST</span>[Capture Payment route] (<https://developers.vtex.com/vtex-developer-docs/reference/capturepayment>):
 [block:code]
 {
   "codes": [
@@ -256,11 +258,11 @@ The response should be similar to the following response body:
   ]
 }
 [/block]
-You can check more details in the [endpoint’s documentation] (https://developers.vtex.com/vtex-developer-docs/reference/capturepayment).
+You can check more details in the [endpoint’s documentation] (<https://developers.vtex.com/vtex-developer-docs/reference/capturepayment>).
 
-### Refund Payment 
+### Refund Payment
 
-The provider should be ready to receive the following request through the <span class="api"><span class="pg-type type-post">POST</span>[Refund Payment route](https://developers.vtex.com/vtex-developer-docs/reference/refundpayment):
+The provider should be ready to receive the following request through the <span class="api pg-type type-post">POST</span>[Refund Payment route](https://developers.vtex.com/vtex-developer-docs/reference/refundpayment):
 [block:code]
 {
   "codes": [
@@ -284,11 +286,11 @@ The expected response is:
   ]
 }
 [/block]
-Go to the [route’s documentation] (https://developers.vtex.com/vtex-developer-docs/reference/refundpayment) to check all the details.
+Go to the [route’s documentation] (<https://developers.vtex.com/vtex-developer-docs/reference/refundpayment>) to check all the details.
 
-###  Communicate with the Gateway
+### Communicate with the Gateway
 
-The last route - <span class="api"><span class="pg-type type-post">POST</span>[Inbound Request (BETA)] (https://developers.vtex.com/vtex-developer-docs/reference/inboundrequestbeta) -  implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider. 
+The last route - <span class="api pg-type type-post">POST</span>[Inbound Request (BETA)] (<https://developers.vtex.com/vtex-developer-docs/reference/inboundrequestbeta>) -  implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider.
 
 The request will be:
 [block:code]
@@ -322,7 +324,7 @@ As a result, the client should send the following response:
   "title": "Not required for Payment App"
 }
 [/block]
-Check the complete endpoint documentation [here] (https://developers.vtex.com/vtex-developer-docs/reference/inboundrequestbeta).
+Check the complete endpoint documentation [here] (<https://developers.vtex.com/vtex-developer-docs/reference/inboundrequestbeta>).
 
 For more information and frequently asked questions, refer to [Pix - FAQ](https://help.vtex.com/pt/tutorial/pix-faq--3lx7zCU2lQroTEBCYKYbo3).
 

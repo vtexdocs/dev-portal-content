@@ -18,7 +18,8 @@ If you use synchronous tax service integration, you might find some limitations:
   "title": ""
 }
 [/block]
-# Asynchronous integration
+
+## Asynchronous integration
 
 Asynchronous integration is an alternative that offers a better user experience, as it ensures that the flow will always have the taxes at the right time, although it depends directly on the resilience of third parties.
 
@@ -26,20 +27,19 @@ By definition, this type of integration allows other processes to move forward w
 
 Instead of calling the external tax service API for each item added to the cart, asynchronous integration will send just one request resulting in  less data being processed, and thus checkout becomes faster and more efficient. That request can be triggered, for instance, by an event in the checkout UI.
 
-
-## Implementing asynchronous integration
+### Implementing asynchronous integration
 
 To use asynchronous integration, Checkout can not be configured to handle the External Tax Services. This configuration should only be done for synchronous integration. To use asynchronous integration, make sure that the response from the [Checkout Configuration API](https://developers.vtex.com/reference/configuration) has the `taxConfiguration` object with the value ´null´. If not, use the Checkout Configuration UPDATE request to make it `null`.
 
 The asynchronous call to the tax engine does not require any configuration. It must be implemented by the store, as described in this [recipe](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-recipe). It is usually triggered by an event or button in the checkout UI.
 
 To query the tax engine, the implementation must follow this flow:
+
 - Get the orderForm.
 - Calculate taxes (or get calculation from the external provider).
 - Submit response with taxes.
 
-
-### Getting the orderForm
+#### Getting the orderForm
 
 To obtain the orderForm, the implementation must use the following request:
 
@@ -58,13 +58,16 @@ To obtain the orderForm, the implementation must use the following request:
   "body": "Although the route is public (`/pub`), it is necessary to use credentials (`appKey` and `appToken`) with permission to access the cart data to obtain the unmasked data."
 }
 [/block]
-### Calculating taxes and sending the response
+
+#### Calculating taxes and sending the response
 
 Having obtained the `orderForm`, the implementation must calculate the appropriate taxes, or get the appropriate calculations from the external provider, and send the following information in the response:
+
 - `itemTaxResponse`: an array of items (SKUs), each containing an array of applicable taxes.
 - `miniCartRequest`: an object containing the items, delivery address, buyer data, orderForm ID, and trade policy of the cart receiving the taxes.
 
 Taxes should be sent to the following endpoint:
+
 - __Method__: `POST`
 - __URL__: `https://{accountName}.vtexcommercestable.com.br/api/checkout/pvt/orderForms/taxes`
 
@@ -148,16 +151,15 @@ This request requires the `appKey` and `appToken` credentials.
 }
 ```
 
-
-### Validating taxes
+#### Validating taxes
 
 Note that the tax engine response includes, in addition to the taxes, the minicart that was used for the calculation. So, VTEX is able to guarantee that the calculated tax is consistent with the cart that is completing the purchase. This happens through the following algorithm:
+
 - When the system receives the response from the tax provider, it gets the minicart that was used to calculate the taxes.
 - The system generates a token for this minicart and saves it in the cart.
 - When the purchase is concluded, the token is sent to the seller, who checks whether it matches the cart that is completing the purchase.
 - If it is the same token, the purchase is completed, with the tax applied. If the tokens do not match, the purchase is denied.
 - If the purchase is denied, there will be a 500 error in the request `/transaction`: “The order cannot be created. Please try again."
-
 
 [block:callout]
 {
@@ -179,7 +181,8 @@ Note that the tax engine response includes, in addition to the taxes, the minica
   "body": "If the system takes too long to review the tax after changes to the cart, it will not be possible to complete the order."
 }
 [/block]
-### Example of order object
+
+#### Example of order object
 
 Finally, see an example of an order object at VTEX after taxes are applied. Note that they have been included in the `totals` array.
 

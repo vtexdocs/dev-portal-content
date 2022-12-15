@@ -11,114 +11,66 @@ To learn more, see this article about [Best practices with catalog images](https
 
 ## Data Model
 
-<table>
-  <tr>
-   <td><strong>Field</strong>
-   </td>
-   <td><strong>Description</strong>
-   </td>
-   <td><strong>Required</strong>
-   </td>
-   <td><strong>Type</strong>
-   </td>
-   <td><strong>Default</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Id
-   </td>
-   <td>ID of `SkuImage` (`SkuFileId`). This is the ID that is used to delete/update it.
-   </td>
-   <td>No
-   </td>
-   <td>Integer
-   </td>
-   <td>AutoIncrement
-   </td>
-  </tr>
-  <tr>
-   <td>ArchiveId
-   </td>
-   <td>Unique identifier of the Image file.
-   </td>
-   <td>No
-   </td>
-   <td>Integer
-   </td>
-   <td>-
-   </td>
-  </tr>
-  <tr>
-   <td>SkuId
-   </td>
-   <td>ID of SKU
-   </td>
-   <td>Yes
-   </td>
-   <td>Integer
-   </td>
-   <td>null
-   </td>
-  </tr>
-  <tr>
-   <td>Name
-   </td>
-   <td>Name of SKU’s file
-   </td>
-   <td>No*
-   </td>
-   <td>String
-   </td>
-   <td>null
-   </td>
-  </tr>
-  <tr>
-   <td>IsMain
-   </td>
-   <td>Set the image as the main image for the product.
-   </td>
-   <td>No
-   </td>
-   <td>Boolean (true/false)
-   </td>
-   <td>null
-   </td>
-  </tr>
-  <tr>
-   <td>Label
-   </td>
-   <td>Image label
-   </td>
-   <td>No
-   </td>
-   <td>String
-   </td>
-   <td>false
-   </td>
-  </tr>
-  <tr>
-   <td>Url
-   </td>
-   <td>External image URL
-   </td>
-   <td>Yes
-   </td>
-   <td>String
-   </td>
-   <td>-
-   </td>
-  </tr>
-</table>
-
+| **Field**
+    | **Description**
+    | **Required**
+    | **Type**
+    | **Default**
+    |
+|---|---|---|---|---|
+| Id
+    | ID of `SkuImage` (`SkuFileId`). This is the ID that is used to delete/update it.
+    | No
+    | Integer
+    | AutoIncrement
+    |
+| ArchiveId
+    | Unique identifier of the Image file.
+    | No
+    | Integer
+    | -
+    |
+| SkuId
+    | ID of SKU
+    | Yes
+    | Integer
+    | null
+    |
+| Name
+    | Name of SKU’s file
+    | No*
+    | String
+    | null
+    |
+| IsMain
+    | Set the image as the main image for the product.
+    | No
+    | Boolean (true/false)
+    | null
+    |
+| Label
+    | Image label
+    | No
+    | String
+    | false
+    |
+| Url
+    | External image URL
+    | Yes
+    | String
+    | -
+    |
 
 ## API implementation
-### Register SKU image
-To register an image to an SKU, it must be hosted on an external server and with read permission. Then you may use the [Create SKU file API endpoint](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-sku-file).
 
+### Register SKU image
+
+To register an image to an SKU, it must be hosted on an external server and with read permission. Then you may use the [Create SKU file API endpoint](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-sku-file).
 
 #### Example request
 
 Body:
+
 ```json
 {
     "IsMain": true,
@@ -127,7 +79,9 @@ Body:
     "Url": "https://m.media-amazon.com/images/I/610G2-sJx5L._AC_UX695_.jpg"
 }
 ```
+
 Response:
+
 ```json
 {
     "Id": 520,
@@ -139,6 +93,7 @@ Response:
 ```
 
 ### Change SKU image
+
 To change an existing SKU image that already existed, you can use the [Update SKU file endpoint](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-put-sku-file).
 
 [block:callout]
@@ -149,7 +104,9 @@ To change an existing SKU image that already existed, you can use the [Update SK
 [/block]
 
 #### Example request
+
 Body:
+
 ```json
 {
     "IsMain": true,
@@ -158,7 +115,9 @@ Body:
     "Url": "https://m.media-amazon.com/images/I/610G2-sJx5L._AC_UX695_.jpg"
 }
 ```
+
 Response:
+
 ```json
 {
     "Id": 520,
@@ -169,10 +128,10 @@ Response:
 }
 ```
 
-
 ### Remove SKU Image
+
 To remove an SKU image use the [Delete SKU image by file ID API request](https://developers.vtex.com/vtex-rest-api/reference/delete_api-catalog-pvt-stockkeepingunit-skuid-file-skufileid). You will need the `SkuFileId`.
 
-
 ### Remove all SKU images
+
 To delete all images of one specific SKU, use the [Delete all SKU file API endpoint](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-delete-sku-file).

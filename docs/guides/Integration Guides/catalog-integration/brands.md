@@ -28,4 +28,5 @@ To learn more see [Brand on our Help Center](https://help.vtex.com/en/tutorial/w
 [/block]
 
 ## API integration
+
 To create a new brand, check our [Create a brand](https://developers.vtex.com/vtex-rest-api/docs/create-a-brand) guide.
