@@ -52,7 +52,6 @@ updatedAt: "2021-02-03T20:45:46.580Z"
         <td>Yes</td>
         <td>Quantity of the retrieved information</td>
     </tr>
-     <tr>
 </table>
 <br>
 
@@ -96,7 +95,6 @@ updatedAt: "2021-02-03T20:45:46.580Z"
         <td>Yes</td>
         <td>Delivery location</td>
     </tr>
-     <tr>
 </table>
 <br>
 

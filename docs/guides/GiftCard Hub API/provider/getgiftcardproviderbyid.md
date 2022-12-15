@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2019-12-25T01:06:56.270Z"
 updatedAt: "2021-07-01T18:47:10.923Z"
 ---
-## Response body has the following properties: 
+## Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -30,7 +31,7 @@ updatedAt: "2021-07-01T18:47:10.923Z"
         <td><code>oauthProvider</code></td>
         <td>string</td>
         <td>Yes</td>
-       <td>Provider’s authentication</td>
+        <td>Provider’s authentication</td>
     </tr>
     <tr>
         <td><code>caption</code></td>
@@ -42,7 +43,7 @@ updatedAt: "2021-07-01T18:47:10.923Z"
         <td><code>preAuthEnabled</code></td>
         <td>boolean</td>
         <td>Yes</td>
-       <td>Related to the pre-authorization that can happen on the transaction generated through the provider</td>
+        <td>Related to the pre-authorization that can happen on the transaction generated through the provider</td>
     </tr>
     <tr>
         <td><code>cancelEnabled</code></td>
@@ -72,13 +73,13 @@ updatedAt: "2021-07-01T18:47:10.923Z"
         <td>&#x21B3;<code>href</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td>This is one of the fields inside the _self . It is exactly the route that identifies this provider on the Hub’s API, but it is not the same thing as the serviceURL</td>       
+        <td>This is one of the fields inside the_self . It is exactly the route that identifies this provider on the
+            Hub’s API, but it is not the same thing as the serviceURL</td>
     </tr>
 </table>
 
-<br>
+## Response body example
 
-## Response body example:
 [block:code]
 {
   "codes": [

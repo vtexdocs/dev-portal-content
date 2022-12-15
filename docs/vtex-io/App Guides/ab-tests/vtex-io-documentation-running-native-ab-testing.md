@@ -47,7 +47,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
 
   ```
   vtex login {accountName}
-  ````
+  ```
 
 2. [Create and switch to a Production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace) by running the following command:
 
@@ -63,7 +63,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
 
   ```
   vtex use master
-  ````
+  ```
 
 5. Install the VTEX A/B tester app in the Master workspace to enable A/B testing on your store website by running:
 

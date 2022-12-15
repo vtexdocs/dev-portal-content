@@ -65,7 +65,7 @@ Product subscriptions facilitate recurring sales by automatically scheduling the
       "assembly-option-input-values"
     ]
   },
-````
+```
 
 2. Use the blocks exported by the `product-customizer` app to build the most suitable solution for your scenario.
 

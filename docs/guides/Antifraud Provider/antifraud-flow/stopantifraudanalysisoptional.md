@@ -10,7 +10,7 @@ Implement this API if you want to be notified if the order was canceled either b
 
 The parameter in the URL <code>transactions.id</code> is VTEX transaction ID that was passed in the body of send antifraud data api : <code>id</code>
 
-<br>
+
 
 #### REQUEST EXAMPLES AND THEIR RESPONSES
 ---

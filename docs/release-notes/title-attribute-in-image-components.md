@@ -7,11 +7,7 @@ type: "fixed"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "</br>"
-}
-[/block]
+
 The title attribute was missing in store images due to the fact it was linked to the incorrect HTML element when the components were rendered - `a` instead of `img`.
 
 This behavior is now [fixed](https://github.com/vtex-apps/store-image/pull/24) and the title attribute can be properly found and tracked.

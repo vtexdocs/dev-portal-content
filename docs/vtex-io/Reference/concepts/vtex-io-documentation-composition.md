@@ -24,7 +24,7 @@ Once you define that a block composition is `blocks`, you are also defining in p
 "shelf#home": {
   "blocks": ["product-summary.shelf"]
 },
-````
+```
 *The `product-summary.shelf` has `blocks` composition. Thereby, it is declared in the shelf's `blocks` list.*
 
 In addition to that, the children will have an specific, fixed and preordained (according to the React component nature) position on the UI, regardless of its code positioning in the theme.

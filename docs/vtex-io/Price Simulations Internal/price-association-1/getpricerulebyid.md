@@ -65,7 +65,6 @@ updatedAt: "2021-02-03T20:48:37.681Z"
         <td>Yes</td>
         <td>Delivery location</td>
     </tr>
-     <tr>
 </table>
 <br>
 

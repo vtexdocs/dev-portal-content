@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2019-12-25T01:06:56.270Z"
 updatedAt: "2020-07-16T17:44:11.963Z"
 ---
-## Response body has the following properties:
+## Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -20,272 +21,278 @@ updatedAt: "2020-07-16T17:44:11.963Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>description</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>date</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>requestId</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>orderInfo</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td>&#x21B3;<code>orderId</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td> &#x21B3;<code>sequence</code></td>
         <td>number</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td>&#x21B3;<code>cart</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>items</code></td>
         <td>array</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>id</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>productId</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>name</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>price</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>sellingPrice</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>quantity</code></td>
         <td>number</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>totalShippingDiscount</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>totalDiscount</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>priceTags</code></td>
         <td>array</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>grandTotal</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>discounts</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>shipping</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>taxes</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>itemsTotal</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&#x21B3<code>clientProfile</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>email</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>firstName</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>lastName</code></td>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>lastName</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>document</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>phone</code></td>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>phone</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>birthDate</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>isCorporate</code></td>
         <td>boolean</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&#x21B3<code>shipping</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>receiverName</code></td>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>receiverName</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-</tr>
- <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>postalCode</code></td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>postalCode</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>city</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>state</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>country</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>street</code></td>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>street</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>number</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>neighborhood</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td><code>settlement</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <td> &#x21B3;<code>href</code></td>
+    <tr>
+        <td> &#x21B3;<code>href</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Resource URL</td>
     </tr>
-<tr>
+    <tr>
         <td><code>cancellation</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&#x21B3;<code>href</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Resource URL</td>
     </tr>
-<tr>
+    <tr>
         <td><code>authorization</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&#x21B3;<code>href</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Resource URL</td>
     </tr>
-<tr>
+    <tr>
         <td><code>operation</code></td>
         <td>string</td>
         <td>Yes</td>
@@ -293,9 +300,8 @@ updatedAt: "2020-07-16T17:44:11.963Z"
     </tr>
 </table>
 
-<br>
+## Response body example
 
-## Response body example:
 [block:code]
 {
   "codes": [

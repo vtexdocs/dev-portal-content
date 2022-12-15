@@ -220,7 +220,7 @@ Now, let's take a look at the `shelf#home` block in the same file (`home.jsonc`)
 "shelf#home": {
   "blocks": ["product-summary.shelf"]
 },
-````
+```
 
 Note that it declares another block to your `blocks` list, that in turn declares other blocks below in a list called `children`:
 

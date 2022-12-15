@@ -22,7 +22,7 @@ Then you redirect the store administrator to:
 
 `https://store.vtex.com/return?authorizationCode=pro2018&otherquerystringparameters`
 
-<br>
+
 
 #### REQUEST EXAMPLES AND THEIR RESPONSES
 ---

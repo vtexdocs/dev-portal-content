@@ -11,7 +11,7 @@ VTEX will redirect the store administrator to the Payment Provider Web Site usin
 At this point the Provider shows, the login/logon web site to the store administrator and he/she authorize to VTEX use your integration as a valid Payment Provider Processor. At this time
 your server generate an <b>authorizationCode</b>.
 
-<br>
+
 
 #### REQUEST EXAMPLES AND THEIR RESPONSES
 ---

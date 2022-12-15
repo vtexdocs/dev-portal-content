@@ -6,15 +6,15 @@ hidden: false
 createdAt: "2019-12-24T00:49:31.616Z"
 updatedAt: "2022-05-23T12:15:06.773Z"
 ---
-## Paging params 
+## Paging params
+
 ---
 <ul>
 <li><strong>By page numbers</strong>:<code>?from={int}&to={int}</code></li>
 </ul>
 
-<br>
-
 ## Date params
+
 ---
 
 You can refine the API response using the two date params that will always be used in ISO8601 format.
@@ -24,9 +24,8 @@ You can refine the API response using the two date params that will always be us
   <li><strong>By due date</strong>: <code>?dueDateFrom={dateISO8601}&dueDateTo={dateISO8601}</code></li>
   </ul>
 
-<br>
+## Other filters
 
-## Other filters 
 ---
 For proper responses, you can use the filters below:
 
@@ -38,22 +37,20 @@ For proper responses, you can use the filters below:
 <li><strong>By creditAccountId</strong>: <code>?creditAccountId={creditAcountId}</code></li>
 </ul>
 
-<br>
+## Combine filters
 
-## Combine filters 
 ---
 
 You can use the query parameter `op` to specify if filters will be evaluated as `AND` or `OR` for the query. In this case, the default is `AND`.
 
-Let's see how it works? 
+Let's see how it works?
 
-For example, if we take the query string `?value=100&status=Paid`, the criteria will build <strong>value=100 AND status=Paid</strong>. 
+For example, if we take the query string `?value=100&status=Paid`, the criteria will build <strong>value=100 AND status=Paid</strong>.
 
 Now, if we take the same query string and add the `op` parameter, the result will be `?value=100&status=Paid&op=or` and the criteria will build <strong>value=100 OR status=Paid</strong>
 
-<br>
+## Response body has the following properties
 
-## Response body has the following properties:
 <table>
     <tr>
         <th>Name</th>
@@ -67,25 +64,25 @@ Now, if we take the same query string and add the `op` parameter, the result wil
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td><code>friendlyId</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>status</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>value</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>accountId</code></td>
         <td>string</td>
         <td>Yes</td>
@@ -97,31 +94,32 @@ Now, if we take the same query string and add the `op` parameter, the result wil
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>createdAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>resolvedAt</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>updatedAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>paymentLink</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <td><code>originalDueDate</code></td>
+    <tr>
+        <td><code>originalDueDate</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
@@ -132,31 +130,32 @@ Now, if we take the same query string and add the `op` parameter, the result wil
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>installment</code></td>
         <td>number</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>orderId</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>observation</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>transactionId</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<td><code>numberOfInstallments</code></td>
+    <tr>
+        <td><code>numberOfInstallments</code></td>
         <td>number</td>
         <td>Yes</td>
         <td></td>
@@ -166,12 +165,11 @@ Now, if we take the same query string and add the `op` parameter, the result wil
         <td>string</td>
         <td>Yes</td>
         <td></td>
-  </tr>
+    </tr>
 </table>
 
-<br>
+## Response body example
 
-## Response body example:
 [block:code]
 {
   "codes": [

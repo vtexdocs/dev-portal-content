@@ -69,7 +69,6 @@ updatedAt: "2021-02-02T21:15:02.526Z"
         <td>Yes</td>
         <td>Order Configuration criteria</td>
     </tr>
-     <tr>
 </table>
 <br>
 
@@ -101,7 +100,6 @@ updatedAt: "2021-02-02T21:15:02.526Z"
         <td>Yes</td>
         <td>Order Configuration criteria</td>
     </tr>
-     <tr>
 </table>
 <br>
 

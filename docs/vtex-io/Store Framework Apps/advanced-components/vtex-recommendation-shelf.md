@@ -52,7 +52,7 @@ vtex install vtex.recommendation-resolver
   "dependencies": {
 +   "vtex.recommendation-shelf": "1.x"
   }
-````
+```
  
 Now, you can use all blocks exported by the `recommendation-shelf` app. Check out the complete list below:
 \
@@ -342,7 +342,7 @@ You can customize the blocks `recommendation-shelf`, `recommendation-refresh`, a
   "dependencies": {
 +   "vtex.shelf-components": "0.x"
   }
-````
+```
  
 Now it is possible to customize these blocks, building their components by using its children blocks `default-shelf`, `refresh-shelf`, and `buy-together`, respectively.
  

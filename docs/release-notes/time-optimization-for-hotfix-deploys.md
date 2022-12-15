@@ -7,11 +7,7 @@ type: "improved"
 ---
 
 <div class="badge" id="vtex-io">VTEX IO</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 The VTEX IO team has finally made it possible to warp time exactly as those kids from Dark did in order to deploy your hotfixes in less than 7 minutes! 
 
 Using the Toolbelt's `2.118.0` version or newer, you can now run `vtex deploy --force` in your terminal when needed. 

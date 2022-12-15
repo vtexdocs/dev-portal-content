@@ -7,10 +7,9 @@ updatedAt: "2022-11-02T14:39:45.843Z"
 ---
 To present an efficient search result to your customer, it is essential to understand how they search for products in your store. You can use the [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference/intelligent-search-api-overview), as detailed in the following sections, to gather [the most popular search terms](#get-the-most-searched-terms) and [autocomplete suggestions](#get-autocomplete-suggested-terms-and-similar-attributes).
 
-
 ## Get the most searched terms
 
-To get your customers' most searched terms, you must use the [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches) endpoint. You can filter the endpoint response by defining the term's `locale` on the query. 
+To get your customers' most searched terms, you must use the [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches) endpoint. You can filter the endpoint response by defining the term's `locale` on the query.
 
 [block:image]
 {
@@ -28,7 +27,7 @@ To get your customers' most searched terms, you must use the [Get list of the 10
   ]
 }
 [/block]
-The response will return the most searched terms by popularity order and the number of searches for each term. 
+The response will return the most searched terms by popularity order and the number of searches for each term.
 
 **Response body example**
 
@@ -81,7 +80,7 @@ The response will return the most searched terms by popularity order and the num
 
 ## Get autocomplete suggested terms and similar attributes
 
-To get information about the [autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-autocomplete) suggested terms and similar attributes presented to your customers, use the [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_autocomplete-suggestions) endpoint. You can filter the endpoint response by defining the term's ``locale` and ``query``.
+To get information about the [autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-autocomplete) suggested terms and similar attributes presented to your customers, use the [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_autocomplete-suggestions) endpoint. You can filter the endpoint response by defining the term's ``locale` and``query``.
 [block:image]
 {
   "images": [
@@ -105,42 +104,42 @@ The response will return the searched terms by popularity order and the correspo
 ``` json
 {
   "searches": [
-	{
-  	"term": "tv",
-  	"count": 28861,
-  	"attributes": [
-    	{
-      	"key": "departamento",
-      	"value": "tvs-e-video",
-      	"labelKey": "Departamento",
-      	"labelValue": "TVs e Vídeo"
-    	},
-    	{
-      	"key": "categoria",
-      	"value": "tvs",
-      	"labelKey": "Categoria",
-      	"labelValue": "TVs"
-    	},
-    	{
-      	"key": "subcategoria",
-      	"value": "receptor-de-controle-de-acesso",
-      	"labelKey": "Subcategoria",
-      	"labelValue": "Receptor de Controle de Acesso"
-    	}
-  	]
-	},
-	{
-  	"term": "smarth tv",
-  	"count": 2308
-	},
-	{
-  	"term": "painel para tv",
-  	"count": 975
-	},
-	{
-  	"term": "rack tv",
-  	"count": 589
-	}
+ {
+   "term": "tv",
+   "count": 28861,
+   "attributes": [
+     {
+       "key": "departamento",
+       "value": "tvs-e-video",
+       "labelKey": "Departamento",
+       "labelValue": "TVs e Vídeo"
+     },
+     {
+       "key": "categoria",
+       "value": "tvs",
+       "labelKey": "Categoria",
+       "labelValue": "TVs"
+     },
+     {
+       "key": "subcategoria",
+       "value": "receptor-de-controle-de-acesso",
+       "labelKey": "Subcategoria",
+       "labelValue": "Receptor de Controle de Acesso"
+     }
+   ]
+ },
+ {
+   "term": "smarth tv",
+   "count": 2308
+ },
+ {
+   "term": "painel para tv",
+   "count": 975
+ },
+ {
+   "term": "rack tv",
+   "count": 589
+ }
   ]
 }
 ```

@@ -7,11 +7,7 @@ type: "improved"
 ---
 
 <div class="badge" id="vtex-io">VTEX IO</div>
-[block:html]
-{
-  "html": "</br>"
-}
-[/block]
+
 We have added the variable `originalReferrer` to the VTEX Google Tag Manager (GTM) app to help Google Analytics (GA) identify and maintain correct campaign data when a user, throughout their session, does not have an explicit `utm_source` in the URL.  
 
 

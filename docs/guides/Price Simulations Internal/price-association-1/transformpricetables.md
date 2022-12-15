@@ -5,10 +5,13 @@ hidden: true
 createdAt: "2021-02-02T13:50:02.025Z"
 updatedAt: "2021-02-02T21:15:02.526Z"
 ---
-## Request Headers 
+
+## Request Headers
+
 ---
+
 <table>
-  <tr>
+    <tr>
         <td><b>Header</b></td>
         <td><b>Value</b></td>
     </tr>
@@ -16,16 +19,16 @@ updatedAt: "2021-02-02T21:15:02.526Z"
         <td><code>Content-Type</code></td>
         <td><b>application/json</b></td>
     </tr>
-  <tr>
+    <tr>
         <td><code>Accept</code></td>
         <td><b>application/json</b></td>
     </tr>
 </table>
 
-<br>
-
 ## Request Body
+
 ---
+
 <table>
     <tr>
         <th>Name</th>
@@ -45,7 +48,7 @@ updatedAt: "2021-02-02T21:15:02.526Z"
         <td>Yes</td>
         <td>Criteria of the Custom Price you want to be retrieved</td>
     </tr>
-     <tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>value</code></td>
         <td>string</td>
         <td>Yes</td>
@@ -63,17 +66,16 @@ updatedAt: "2021-02-02T21:15:02.526Z"
         <td>Yes</td>
         <td>User's email</td>
     </tr>
-     <tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>value</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Order Configuration criteria</td>
     </tr>
-     <tr>
 </table>
-<br>
 
-## Response Body 
+## Response Body
+
 ---
 
 <table>
@@ -95,17 +97,16 @@ updatedAt: "2021-02-02T21:15:02.526Z"
         <td>Yes</td>
         <td></td>
     </tr>
-         <tr>
+    <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>value</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Order Configuration criteria</td>
     </tr>
-     <tr>
 </table>
-<br>
 
-## Request examples and their responses 
+## Request examples and their responses
+
 ---
 [block:code]
 {

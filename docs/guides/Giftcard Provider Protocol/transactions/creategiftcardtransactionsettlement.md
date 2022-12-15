@@ -10,7 +10,6 @@ updatedAt: "2020-02-27T17:48:11.808Z"
 
 ---
 
-
 <table>
     <tr>
         <th>Name</th>
@@ -23,7 +22,7 @@ updatedAt: "2020-02-27T17:48:11.808Z"
         <td>number</td>
         <td>Yes</td>
         <td>value to be settled from transaction</td>
-    </tr>   
+    </tr>
     <tr>
         <td><code>requestId</code></td>
         <td>string</td>
@@ -31,8 +30,6 @@ updatedAt: "2020-02-27T17:48:11.808Z"
         <td>unique <code>requestId</code> to guarantee idempotency</td>
     </tr>
 </table>
-
-<br>
 
 ##### RESPONSE BODY
 
@@ -52,7 +49,7 @@ SETTLEMENT INFO
         <td>string</td>
         <td>Yes</td>
         <td>operation id</td>
-    </tr>   
+    </tr>
     <tr>
         <td><code>value</code></td>
         <td>number</td>
@@ -60,10 +57,9 @@ SETTLEMENT INFO
         <td><code>value</code> of the transaction</td>
     </tr>
     <tr>
-        <tr>
         <td><code>date</code></td>
         <td>string</td>
         <td>Yes</td>
         <td><code>date</code> of the event</td>
-    </tr>      
+    </tr>
 </table>

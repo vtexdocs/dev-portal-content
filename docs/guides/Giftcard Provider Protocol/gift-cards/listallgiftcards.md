@@ -6,12 +6,10 @@ hidden: false
 createdAt: "2019-12-25T15:13:56.093Z"
 updatedAt: "2021-09-27T15:21:11.609Z"
 ---
-<br>
 
 ##### REQUEST BODY
 
 ---
-
 
 <table>
     <tr>
@@ -32,110 +30,110 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>grandTotal</code></td>
         <td>number</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>relationName</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>redemptionCode</code></td>
         <td>string</td>
         <td></td>
         <td>Minimum of six characters</td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>discounts</code></td>
         <td>number</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>shipping</code></td>
         <td>number</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>taxes</code></td>
         <td>number</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>items</code></td>
         <td>array</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>productId</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>id</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>refId</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>name</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>price</code></td>
         <td>number</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>sellingPrice</code></td>
         <td>number</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>sellerId</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>quantity</code></td>
         <td>integer</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>totalShippingDiscount</code></td>
         <td>number</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>totalDiscount</code></td>
         <td>number</td>
@@ -153,7 +151,7 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td>array of string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>payments</code></td>
@@ -196,7 +194,7 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>sc</code></td>
@@ -215,7 +213,7 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td>object</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>receiverName</code></td>
         <td>string</td>
@@ -263,32 +261,32 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td>string</td>
         <td></td>
         <td></td>
-    </tr>   
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>complement</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr>   
+    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3; <code>reference</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>client</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>id</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>email</code></td>
@@ -351,14 +349,13 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
 </table>
-
-<br>
 
 ##### RESPONSE
 
 ---
+
 ###### RESPONSE HEADERS
 
 <table>
@@ -373,10 +370,8 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td>Yes</td>
         <td><code>resources 0-1/5</code></td>
         <td>Must follow the format <code>resources {from}-{to}/{total}</code></td>
-    </tr>   
+    </tr>
 </table>
-
-<br>
 
 ###### RESPONSE BODY (array of)
 
@@ -408,21 +403,21 @@ GIFT CARD SUMMARY OBJECTS
         <td>number</td>
         <td>Yes</td>
         <td>Gift card current <code>balance</code></td>
-    </tr>   
+    </tr>
     <tr>
         <tr>
         <td><code>totalBalance</code></td>
         <td>number</td>
         <td></td>
         <td></td>
-    </tr>    
+    </tr>
     <tr>
         <tr>
         <td><code>relationName</code></td>
         <td>string</td>
         <td></td>
         <td>Represents the relationship between the client and the store</td>
-    </tr>    
+    </tr>
     <tr>
         <tr>
         <td><code>caption</code></td>
@@ -443,12 +438,12 @@ GIFT CARD SUMMARY OBJECTS
         <td>object</td>
         <td>Yes</td>
         <td></td>
-    </tr>      
+    </tr>
     <tr>
         <tr>
         <td>&#x21B3; <code>href</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Resource URL (see example)</td>
-    </tr>     
+    </tr>
 </table>

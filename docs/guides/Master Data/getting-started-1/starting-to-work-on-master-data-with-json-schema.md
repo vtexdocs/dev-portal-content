@@ -8,6 +8,7 @@ updatedAt: "2022-08-03T13:10:23.602Z"
 A JSON Schema defines how your data will be validated. Further information can be found in [External documentation on JSON Schemas](http://json-schema.org), this article on [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema), and our article about the [Master Data schema lifecycle](doc:master-data-schema-lifecycle).
 
 Use the following API requests to manage your Master Data schemas:
+
 - [Get schemas](https://developers.vtex.com/vtex-rest-api/reference/getschemas)
 - [Get schemas by name](https://developers.vtex.com/vtex-rest-api/reference/getschemabyname)
 - [Save schema by name](https://developers.vtex.com/vtex-rest-api/reference/saveschemabyname)
@@ -23,7 +24,8 @@ A JSON Schema is composed of three main fields:
 - Title: Schema name.
 
 Example:
-```
+
+```json
 {
   "title": "Basic information of SKU",
   "properties": {
@@ -37,7 +39,7 @@ The schema above defines the basic format of an SKU. In this case, only the `nam
 
 This JSON Schema validates the following JSON:
 
-```
+```json
 {
   "name": "T-shirt"
 }
@@ -46,13 +48,16 @@ This JSON Schema validates the following JSON:
 You can add these examples to [JSON Schema Validator](http://www.jsonschemavalidator.net/). If you change the JSON example in the validator to an integer, you will receive an error message, like in the example below.
 
 changing the name to an integer:
-```
+
+```json
 {
   "name": 1
 }
 ```
+
 Error message:
-```
+
+```txt
 Invalid type. Expected String but got Integer.
 ```
 
@@ -62,7 +67,7 @@ The JSON Schema validates only the fields configured in properties. The exceedin
 
 Use the property `v-indexed` to set up indexed fields. You must add the field to the properties to generate the indexer configuration with the right type.
 
-```
+```json
 {
   "properties": { 
     "field1": { "type": "string" }, 
@@ -74,9 +79,9 @@ Use the property `v-indexed` to set up indexed fields. You must add the field to
 
 ## Default fields
 
-Use the property `v-default-fields` to configure which fields will return without indication in the \_fields query string. 
+Use the property `v-default-fields` to configure which fields will return without indication in the \_fields query string.
 
-```
+```json
 {
   "v-default-fields": [ "field1", "field2" ]
 }
@@ -86,7 +91,7 @@ Use the property `v-default-fields` to configure which fields will return withou
 
 Use the property `v-canonicalto` to set up another JSON Schema in the same data entity to inheritance.
 
-```
+```json
 {
   "v-canonicalto": "https://{host}/api/dataentities/{data-entity-name}/schemas/{my-base-schema}"
 }
@@ -96,7 +101,7 @@ Use the property `v-canonicalto` to set up another JSON Schema in the same data 
 
 Use the property `v-security` to set up which fields are public (request without user authentication).
 
-```
+```json
 {
   "v-security": {
     "allowGetAll": false,
@@ -111,7 +116,7 @@ Use the property `v-security` to set up which fields are public (request without
 
 Use the property `v-cache` to disable default caching.
 
-```
+```json
 {
   "v-cache": false
 }

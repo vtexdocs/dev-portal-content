@@ -21,86 +21,85 @@ updatedAt: "2020-07-09T20:57:12.095Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>invoicePostponementLimit</code></td>
         <td>number</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>taxRate</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>maxPostponementDays</code></td>
         <td>number</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>defaultCreditValue</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>automaticCheckingAccountCreationEnabled</code></td>
         <td>boolean</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>toleranceEnabled</code></td>
         <td>boolean</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>myCreditsEnabled</code></td>
         <td>boolean</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>maxPreAuthorizationGrowthRate</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>notificationsSettings</code></td>
         <td>object</td>
         <td></td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&#x21B3; <code>daysPrior</code></td>
         <td>array</td>
         <td></td>
         <td></td>
     </tr>
- <td>&#x21B3<code>daysAfter</code></td>
+    <tr>
+        <td>&#x21B3<code>daysAfter</code></td>
         <td>array</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>days</code></td>
         <td>number</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>timeOfDay</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
 </table>
-
-<br>
 
 ## Response body example:
 [block:code]

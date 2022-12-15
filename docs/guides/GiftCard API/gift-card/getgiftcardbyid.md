@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2019-12-25T01:06:56.455Z"
 updatedAt: "2021-09-27T15:19:41.296Z"
 ---
-## Response body has the following properties:
+## Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -20,55 +21,55 @@ updatedAt: "2021-09-27T15:19:41.296Z"
         <td>Yes</td>
         <td>Gift card <code>id</code></td>
     </tr>
- <tr>
+    <tr>
         <td><code>redemptionToken</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>redemptionCode</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>balance</code></td>
         <td>decimal</td>
         <td></td>
         <td>Gift card current balance. For Gift Cards newly created, the balance will be 0.0</td>
     </tr>
- <tr>
+    <tr>
         <td><code>relationName</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>emissionDate</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>expiringDate</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>caption</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>transaction</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&#x21B3; <code>href</code></td>
         <td>string</td>
         <td>Yes</td>
@@ -76,9 +77,8 @@ updatedAt: "2021-09-27T15:19:41.296Z"
     </tr>
 </table>
 
-<br>
+## Response body example
 
-## Response body example:
 [block:code]
 {
   "codes": [

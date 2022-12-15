@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2019-12-24T00:49:31.616Z"
 updatedAt: "2022-01-05T15:04:13.708Z"
 ---
-## Response body has the following properties:
+## Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -20,34 +21,37 @@ updatedAt: "2022-01-05T15:04:13.708Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
-<td>&#x21B3;<code>value</code></td>
+    <tr>
+        <td>&#x21B3;<code>value</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<td>&#x21B3; <code>date</code></td>
+    <tr>
+        <td>&#x21B3; <code>date</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<td>&#x21B3; <code>origin</code></td>
+    <tr>
+        <td>&#x21B3; <code>origin</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
+    <tr>
         <td><code>currentBalance</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td>Current balance value</td>
     </tr>
- <tr>
+    <tr>
         <td><code>intervalBalance</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td>Balance range that has changed in the listing items</td>
     </tr>
- <tr>
+    <tr>
         <td><code>previousBalance</code></td>
         <td>decimal</td>
         <td>Yes</td>
@@ -55,9 +59,8 @@ updatedAt: "2022-01-05T15:04:13.708Z"
     </tr>
 </table>
 
-<br>
+## Response body example
 
-## Response body example:
 [block:code]
 {
   "codes": [

@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2019-12-24T00:49:31.616Z"
 updatedAt: "2020-07-07T20:43:48.741Z"
 ---
-#### Response body has the following properties:
+#### Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -20,19 +21,19 @@ updatedAt: "2020-07-07T20:43:48.741Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>balance</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>document</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>status</code></td>
         <td>string</td>
         <td>Yes</td>
@@ -44,25 +45,26 @@ updatedAt: "2020-07-07T20:43:48.741Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>creditLimit</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>updatedAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>createdAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <td><code>description</code></td>
+    <tr>
+        <td><code>description</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
@@ -73,34 +75,34 @@ updatedAt: "2020-07-07T20:43:48.741Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>preAuthorizedCredit</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>email</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>tolerance</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<td><code>availableTolerance</code></td>
+    <tr>
+        <td><code>availableTolerance</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
 </table>
 
-<br>
-
 #### Response body example
+
 [block:code]
 {
   "codes": [

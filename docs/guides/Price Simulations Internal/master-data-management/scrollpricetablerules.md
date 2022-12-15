@@ -1,15 +1,18 @@
 ---
-title: "Scroll Custom Price"
-slug: "scrollpricetablerules"
-excerpt: "Retrieves general information about a Custom Price"
+title: 'Scroll Custom Price'
+slug: 'scrollpricetablerules'
+excerpt: 'Retrieves general information about a Custom Price'
 hidden: true
-createdAt: "2021-02-02T13:50:02.015Z"
-updatedAt: "2021-02-03T20:45:46.580Z"
+createdAt: '2021-02-02T13:50:02.015Z'
+updatedAt: '2021-02-03T20:45:46.580Z'
 ---
-## Request Headers 
+
+## Request Headers
+
 ---
+
 <table>
-  <tr>
+    <tr>
         <td><b>Header</b></td>
         <td><b>Value</b></td>
     </tr>
@@ -17,16 +20,16 @@ updatedAt: "2021-02-03T20:45:46.580Z"
         <td><code>Content-Type</code></td>
         <td><b>application/json</b></td>
     </tr>
-  <tr>
+    <tr>
         <td><code>Accept</code></td>
         <td><b>application/json</b></td>
     </tr>
 </table>
 
-<br>
-
 ## Request Body
+
 ---
+
 <table>
     <tr>
         <th>Name</th>
@@ -46,19 +49,17 @@ updatedAt: "2021-02-03T20:45:46.580Z"
         <td>Yes</td>
         <td>Criteria of the Custom Price you want to be retrieved</td>
     </tr>
-     <tr>
+    <tr>
         <td><code>_size</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Quantity of the retrieved information</td>
     </tr>
-     <tr>
 </table>
-<br>
 
-## Response Body 
+## Response Body
+
 ---
-
 <table>
     <tr>
         <th>Name</th>
@@ -78,38 +79,38 @@ updatedAt: "2021-02-03T20:45:46.580Z"
         <td>Yes</td>
         <td>Order type</td>
     </tr>
-     <tr>
+    <tr>
         <td><code>pricetable</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Name of the Price Table associated with the scenario</td>
     </tr>
-         <tr>
+    <tr>
         <td><code>email</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>User's email</td>
     </tr>
-         <tr>
+    <tr>
         <td><code>state</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Delivery location</td>
     </tr>
-     <tr>
 </table>
-<br>
 
-## Request examples and their responses 
+## Request examples and their responses
+
 ---
+
 [block:code]
 {
-  "codes": [
-    {
-      "code": "[\n    {\n        \"id\": \"65b1fc90\",\n        \"resell\": null,\n        \"pricetable\": \"example4\",\n        \"email\": null,\n        \"state\": \"RJ\"\n    },\n    {\n        \"id\": \"d5c3cd9f\",\n        \"resell\": null,\n        \"pricetable\": \"for-email\",\n        \"email\": \"api.example@vtex.com.br\",\n        \"state\": null\n    }\n]",
-      "language": "curl",
-      "name": "200 - OK"
-    }
-  ]
+"codes": [
+{
+"code": "[\n {\n \"id\": \"65b1fc90\",\n \"resell\": null,\n \"pricetable\": \"example4\",\n \"email\": null,\n \"state\": \"RJ\"\n },\n {\n \"id\": \"d5c3cd9f\",\n \"resell\": null,\n \"pricetable\": \"for-email\",\n \"email\": \"api.example@vtex.com.br\",\n \"state\": null\n }\n]",
+"language": "curl",
+"name": "200 - OK"
+}
+]
 }
 [/block]

@@ -138,7 +138,7 @@ The table below gives further detail on the applicability of each endpoint to Pi
 
 ### Establish the payment methods available
 
-The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API call using the <span class="api pg-type type-get">GET</span>[List Payment Provider Manifest] (<https://developers.vtex.com/vtex-developer-docs/reference/manifest-1>) route.
+The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API call using the <span class="api pg-type type-get">GET</span>[List Payment Provider Manifest](https://developers.vtex.com/vtex-developer-docs/reference/manifest-1) route.
 
 The expected response is:
 [block:code]

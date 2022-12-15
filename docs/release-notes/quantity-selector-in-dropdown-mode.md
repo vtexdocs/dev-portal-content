@@ -7,11 +7,7 @@ type: "improved"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 The Quantity Selector block, exported by the [Product Quantity app](https://vtex.io/docs/components/all/vtex.product-quantity/), can now be rendered as a dropdown thanks to its new prop: the `selectorType`! 
 [block:image]
 {

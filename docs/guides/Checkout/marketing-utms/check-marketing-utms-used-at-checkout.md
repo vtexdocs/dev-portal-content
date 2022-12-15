@@ -61,6 +61,7 @@ The presence of the `utmSource` field with the same value as `utm_source` means 
   "body": "When the value is not sent to the Checkout, any benefits linked to the `utm_source` will **not** be applied to the orders, and OMS will **not** register these UTMs as order parameters."
 }
 [/block]
+
 # Why are the UTMs not being applied to the cart?
 
 One of the most common reasons the marketing context is not sent to the Checkout is the **customization of the purchase call**.

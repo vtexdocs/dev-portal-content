@@ -7,11 +7,7 @@ type: "added"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 Let's give a warm welcome to the new [Store Media app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-media), responsible for displaying image alongside video assets in your storefront. 
 [block:callout]
 {

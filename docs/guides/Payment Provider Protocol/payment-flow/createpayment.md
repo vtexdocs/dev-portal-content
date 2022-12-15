@@ -12,9 +12,8 @@ For bank issued invoice, redirect, or any async payments, you're expected to ret
 
 The same request, for the same `paymentId`, can be executed several times, so you must handle it in a way to avoid recreating the payment, but returning the most updated status instead.
 
-<br>
-
 ## Request Body
+
 ---
 
 <table>
@@ -590,9 +589,8 @@ The same request, for the same `paymentId`, can be executed several times, so yo
     </tr>
 </table>
 
-<br>
-
 ## Response body
+
 ---
 
 <table>
@@ -613,9 +611,9 @@ The same request, for the same `paymentId`, can be executed several times, so yo
         <td>string</td>
         <td>Yes</td>
         <td>The Provider's status for this payment. Must be one of three values:
-        	&bull; <code>approved</code>
-        	&bull; <code>denied</code>
-        	&bull; <code>undefined</code></td>
+         &bull; <code>approved</code>
+         &bull; <code>denied</code>
+         &bull; <code>undefined</code></td>
     </tr>
 <tr>
         <td><code>authorizationId</code></td>
@@ -639,7 +637,7 @@ The same request, for the same `paymentId`, can be executed several times, so yo
         <td><code>paymentAppData</code></td>
         <td>object</td>
         <td></td>
-        <td><Indicates the VTEX IO app which will handle the payment flow at Checkout</td>
+        <td>Indicates the VTEX IO app which will handle the payment flow at Checkout</td>
     </tr>
     <tr>
         <td>&#x21B3; <code>appName</code></td>
@@ -738,9 +736,8 @@ The same request, for the same `paymentId`, can be executed several times, so yo
     </tr>
 </table>
 
-<br>
-
 ## Pix response body
+
 ---
 
 <table>
@@ -761,9 +758,9 @@ The same request, for the same `paymentId`, can be executed several times, so yo
         <td>string</td>
         <td>Yes</td>
         <td>The Provider's status for this payment. Must be one of three values:
-        	&bull; <code>approved</code>
-        	&bull; <code>denied</code>
-        	&bull; <code>undefined</code></td>
+         &bull; <code>approved</code>
+         &bull; <code>denied</code>
+         &bull; <code>undefined</code></td>
     </tr>
      <tr>
         <td><code>tid</code></td>
@@ -828,9 +825,8 @@ The same request, for the same `paymentId`, can be executed several times, so yo
     </tr>
 </table>
 
-<br>
-
 ## Callbacks
+
 ---
 [block:callout]
 {
@@ -839,16 +835,14 @@ The same request, for the same `paymentId`, can be executed several times, so yo
 }
 [/block]
 > **Notification:** If a payment returns with `undefined` status, you are expected to send us a callback/notification to update it later, sending a POST with an updated version of your response (same structure as above) to the `callbackUrl` we have provided.
-> 
+>
 > **Retry:** If a payment returns with `undefined` status, you are expected to call the retry endpoint provided by the `callbackUrl` when the processing of the payment is completed, so we make another Create Payment request to update the status with the new value (`authorized` or `denied`).
-> 
+>
 > This request should be authenticated using a Key and Token you can <a href="https://help.vtex.com/tutorial/criar-appkey-e-apptoken-para-autenticar-integracoes" target="_blank">generate from your VTEX partner account License Manager</a>. To do so, `POST` your request passing the `X-VTEX-API-AppKey` and `X-VTEX-API-AppToken` headers with your credentials. **Note:** do not mix up these credentials with the ones we send on behalf of the merchant when sending our requests.
-
-<br>
 
 ### Callback URL
 
-The `callbackUrl` field contains an URL that the payment provider uses to make a callback and inform our gateway of the final payment status: `approved` or `denied`. 
+The `callbackUrl` field contains an URL that the payment provider uses to make a callback and inform our gateway of the final payment status: `approved` or `denied`.
 
 This URL has some query parameters, including the `X-VTEX-signature`. This parameter is mandatory and contains a signature token to identify that the request has been generated from VTEX as a security measure. The signature token has at most 32 characters. You can check an example of callback URL with the signature token below:
 
@@ -860,18 +854,19 @@ In the [Transactions page of the Admin](https://help.vtex.com/en/tutorial/how-to
 
 When making the callback request, we recommend that payment providers use the callback URL exactly as received, which guarantees that all the parameters are included.
 
-## Beta features 
+## Beta features
+
 ---
 
 > You can reach out to our team by openning a ticket to know more about any **`BETA`** features.
 >
-> `paymentAppData`<br>
+> `paymentAppData`
 > As an option to the redirect flow, we're offering a new way to allow payment providers to open a modal at the Checkout page to finish the payment process.
 >
-> `inboundRequestsUrl`<br>
+> `inboundRequestsUrl`
 > Allows to forward external requests back to your payment provider implementation, including the configured credentials (`X-VTEX-API-*` headers), and settings.
 
-## Request examples and their responses 
+## Request examples and their responses
 
 [block:code]
 {

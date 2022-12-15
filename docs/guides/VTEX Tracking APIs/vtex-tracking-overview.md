@@ -9,7 +9,7 @@ This API is only available in our Brazilian operation, for VTEX Tracking custome
 [block:callout]
 {
   "type": "info",
-  "body": "We have unified our VTEX Tracking APIs into a single version, so it's no longer necessary to specify the version on the URL. We have also translated all paths to english. Check out our [changelog ](https://developers.vtex.com/vtex-developer-docs/changelog/vtex-tracking-api-changes-in-all-paths) to know more about the changes.\n\nThe previous paths were not deprecated, and are still being maintained by the VTEX Tracking team. If your business' integration was built with the previous `v1` and `v1.1` endpoints, it will still run smoothly. No changes in your integrations should be done during critical periods. We will communicate any updates, and deprecations of endpoints in the future.",
+  "body": "We have unified our VTEX Tracking APIs into a single version, so it's no longer necessary to specify the version on the URL. We have also translated all paths to english. Check out our [changelog](https://developers.vtex.com/vtex-developer-docs/changelog/vtex-tracking-api-changes-in-all-paths) to know more about the changes.\n\nThe previous paths were not deprecated, and are still being maintained by the VTEX Tracking team. If your business' integration was built with the previous `v1` and `v1.1` endpoints, it will still run smoothly. No changes in your integrations should be done during critical periods. We will communicate any updates, and deprecations of endpoints in the future.",
   "title": "Changes in VTEX Tracking endpoints"
 }
 [/block]
@@ -21,20 +21,20 @@ This API is only available in our Brazilian operation, for VTEX Tracking custome
   "title": "Throttling warning"
 }
 [/block]
+
 # Index
 
 ## Authentication
+
 *Acquire the mandatory authentication to access the VTEX Tracking endpoints.*
-<span class="api"><span class="pg-type type-post">post</span> [Asynchronous Login](https://developers.vtex.com/vtex-developer-docs/reference/vtex-tracking-api-authentication)   
-
-
-
+<span class="api pg-type type-post">post</span> [Asynchronous Login](https://developers.vtex.com/vtex-developer-docs/reference/vtex-tracking-api-authentication)
 
 ## Delivery Services
+
 *Operate all VTEX Tracking Delivery Services funcionalities*
-<span class="api"><span class="pg-type type-post">post</span> [Post Delivery Service](https://developers.vtex.com/vtex-rest-api/reference/post-delivery-service) 
-<span class="api"><span class="pg-type type-get">get</span> [Get Delivery Services List](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list) 
-<span class="api"><span class="pg-type type-get">get</span> [Get Delivery Service by ID](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-by-id) 
-<span class="api"><span class="pg-type type-post">post</span> [Post Delivery Service With Route Scheduling](https://developers.vtex.com/vtex-rest-api/reference/post-delivery-service-route-scheduling) 
-<span class="api"><span class="pg-type type-get">get</span> [Get Delivery Services List by Route](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list-by-route) 
-<span class="api"><span class="pg-type type-get">get</span> [Get Delivery Service by Invoice](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list-by-invoice)
+<span class="api pg-type type-post">post</span> [Post Delivery Service](https://developers.vtex.com/vtex-rest-api/reference/post-delivery-service)
+<span class="api pg-type type-get">get</span> [Get Delivery Services List](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list)
+<span class="api pg-type type-get">get</span> [Get Delivery Service by ID](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-by-id)
+<span class="api pg-type type-post">post</span> [Post Delivery Service With Route Scheduling](https://developers.vtex.com/vtex-rest-api/reference/post-delivery-service-route-scheduling)
+<span class="api pg-type type-get">get</span> [Get Delivery Services List by Route](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list-by-route)
+<span class="api pg-type type-get">get</span> [Get Delivery Service by Invoice](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list-by-invoice)

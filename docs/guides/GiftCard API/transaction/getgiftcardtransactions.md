@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2019-12-25T01:06:56.455Z"
 updatedAt: "2020-07-31T20:00:34.193Z"
 ---
-## Response body has the following properties:
+## Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -20,33 +21,34 @@ updatedAt: "2020-07-31T20:00:34.193Z"
         <td>Yes</td>
         <td> Transaction Id</td>
     </tr>
- <tr>
+    <tr>
         <td><code>cardId</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Gift card <code>id</code></td>
     </tr>
-<tr>
+    <tr>
         <td><code>provider</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></code></td>
     </tr>
- <tr>
+    <tr>
         <td><code>_self</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td>&#x21B3; <code>href</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Resource Url</td>
     </tr>
-<br>
+</table>
 
-## Response body example:
+## Response body example
+
 [block:code]
 {
   "codes": [

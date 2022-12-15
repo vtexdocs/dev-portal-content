@@ -6,22 +6,21 @@ hidden: false
 createdAt: "2019-12-25T01:06:56.455Z"
 updatedAt: "2022-11-01T14:16:19.655Z"
 ---
+
 ## Warning
----
 
-<ul>
-<li>The field <code>userProfileId</code> should be filled with a value that identifies the client. It is the ID itself.</li>
-<li>The field <code>expiringDate</code> should be filled in ISO 8601 format <code>YYYY-MM-DDThh:mm:ss.fff</code></li>
-</ul>
+- The field `userProfileId` should be filled with a value that identifies the client. It is the ID itself.
+- The field `expiringDate` should be filled in ISO 8601 format `YYYY-MM-DDThh:mm:ss.fff`
 
-<be>
 [block:callout]
 {
   "type": "info",
   "body": "The `redemptionCode` field for a Gift Card is auto-generated on creation and cannot be set to an arbitrary value."
 }
 [/block]
-## Response body has the following properties: 
+
+## Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -35,55 +34,56 @@ updatedAt: "2022-11-01T14:16:19.655Z"
         <td>Yes</td>
         <td>Gift card <code>id</code></td>
     </tr>
- <tr>
+    <tr>
         <td><code>redemptionToken</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>redemptionCode</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>balance</code></td>
         <td>decimal</td>
         <td></td>
         <td>Gift card current balance. For Gift Cards newly created, the balance will be 0.0</td>
     </tr>
- <tr>
+    <tr>
         <td><code>relationName</code></td>
         <td>string</td>
         <td></td>
-        <td>Field to be filled in when it is not necessary to use a loyalty program for the Gift Card. Observation: A new <code>relationName</code>value is required for each new Gift Card to be created.</td>
+        <td>Field to be filled in when it is not necessary to use a loyalty program for the Gift Card. Observation: A
+            new <code>relationName</code>value is required for each new Gift Card to be created.</td>
     </tr>
- <tr>
+    <tr>
         <td><code>emissionDate</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>expiringDate</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>caption</code></td>
         <td>string</td>
         <td></td>
         <td>Field to be filled in if a loyalty program must be created for the Gift Card.</td>
     </tr>
- <tr>
+    <tr>
         <td><code>transaction</code></td>
         <td>object</td>
         <td></td>
         <td></td>
     </tr>
-  <tr>
+    <tr>
         <td>&#x21B3; <code>href</code></td>
         <td>string</td>
         <td></td>
@@ -91,9 +91,8 @@ updatedAt: "2022-11-01T14:16:19.655Z"
     </tr>
 </table>
 
-<br>
+## Response body example
 
-## Response body example:
 [block:code]
 {
   "codes": [

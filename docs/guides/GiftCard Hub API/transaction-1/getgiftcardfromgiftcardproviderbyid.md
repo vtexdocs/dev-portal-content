@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2019-12-25T01:06:56.270Z"
 updatedAt: "2020-07-16T17:31:01.700Z"
 ---
-## Response body has the following properties:
+## Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -20,76 +21,76 @@ updatedAt: "2020-07-16T17:31:01.700Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>redemptionToken</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>redemptionCode</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>balance</code></td>
         <td>decimal</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>relationName</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
- <tr>
+    <tr>
         <td><code>emissionDate</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>expiringDate</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
-   <td><code>caption</code></td>
+    <tr>
+        <td><code>caption</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>provider</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Resource URL</td>
     </tr>
-   <td><code>discount</code></td>
+    <tr>
+        <td><code>discount</code></td>
         <td>boolean</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>transaction</code></td>
         <td>object</td>
         <td>Yes</td>
         <td>Resource URL</td>
     </tr>
- <tr>
+    <tr>
         <td><code>href</code></td>
         <td>href</td>
         <td>Yes</td>
         <td></td>
     </tr>
- </table>
+</table>
 
-<br>
+## Response body example
 
-## Response body example:
 [block:code]
 {
   "codes": [

@@ -7,11 +7,7 @@ type: "added"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 > ℹ️
 >
 > The Live Streaming app is now known as [the Live Shopping app](https://apps.vtex.com/liveshopping/p).

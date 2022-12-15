@@ -7,11 +7,7 @@ type: "improved"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 Thanks to the two new props added to the `gallery` block from the [Search Results app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result), namely the`customSummaryInterval` and the `CustomSummary`,  it is now possible to build a custom product summary in your search result page. 
 
 Together, both props allow you to choose a block to be rendered in a specific product interval.

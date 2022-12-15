@@ -6,12 +6,10 @@ hidden: false
 createdAt: "2019-12-25T01:06:56.455Z"
 updatedAt: "2020-07-13T15:02:48.473Z"
 ---
-## WARNING
+## Warning
 ---
 Giftcards with balance 0.0 must be not returned if user is not authenticated.
-<br>
 
-## Response body has the following properties:
 <table>
     <tr>
         <th>Name</th>
@@ -25,50 +23,49 @@ Giftcards with balance 0.0 must be not returned if user is not authenticated.
         <td>Yes</td>
         <td>Gift card <code>id</code></td>
     </tr>
- <tr>
+    <tr>
         <td><code>provider</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>balance</code></td>
         <td>string</td>
         <td></td>
         <td>Gift card current balance. For Gift Cards newly created, the balance will be 0.0</td>
     </tr>
- <tr>
+    <tr>
         <td><code>totalBalance</code></td>
         <td>decimal</td>
         <td></td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>relationName</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>caption</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>groupName</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
- <tr>
+    <tr>
         <td><code>transaction</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<tr>
+    <tr>
         <td>&#x21B3;<code>href</code></td>
         <td>string</td>
         <td>Yes</td>
@@ -76,7 +73,7 @@ Giftcards with balance 0.0 must be not returned if user is not authenticated.
     </tr>
 </table>
 
-<br>
+## Response body has the following properties:
 
 ## Response body example:
 [block:code]

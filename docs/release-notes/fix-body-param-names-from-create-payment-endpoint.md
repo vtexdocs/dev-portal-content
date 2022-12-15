@@ -6,4 +6,4 @@ hidden: false
 type: "fixed"
 ---
 
-Fixed the request body param names of <span class="api"><span class="pg-type type-post">post</span>[Create Payment](https://developers.vtex.com/vtex-rest-api/reference/payment-flow#createpayment) endpoint, from `numberLenght` to `numberLength`, and from `cscLenght` to `cscLength`.
+Fixed the request body param names of <span class="api pg-type type-post">post</span>[Create Payment](https://developers.vtex.com/vtex-rest-api/reference/payment-flow#createpayment) endpoint, from `numberLenght` to `numberLength`, and from `cscLenght` to `cscLength`.

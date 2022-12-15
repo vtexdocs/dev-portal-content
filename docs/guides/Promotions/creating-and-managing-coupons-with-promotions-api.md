@@ -18,22 +18,27 @@ A single coupon can be associated with one or more promotions by filling the `ut
   "title": ""
 }
 [/block]
-## Restrictions 
+
+## Restrictions
+
 There’s a quantity limit to the active coupons. We recommend reusing coupons because a high number of coupons can compromise the Promotions & Taxes performance.
 
 ## How to create a coupon
-You can create one coupon or multiple coupons at a time. 
 
-- To create a single coupon, use the <span class="api"><span class="pg-type type-post">post</span><span> 
- [Create coupon](ref:post_api-rnb-pvt-coupon)<span></span> endpoint. 
-- If you want to create multiple coupons use the <span class="api"><span class="pg-type type-post">post</span><span> [Create multiple coupons](ref:post_api-rnb-pvt-multiple-coupons)<span></span> endpoint.
+You can create one coupon or multiple coupons at a time.
+
+- To create a single coupon, use the <span class="api pg-type type-post">post</span> [Create coupon](ref:post_api-rnb-pvt-coupon) endpoint.
+- If you want to create multiple coupons use the <span class="api pg-type type-post">post</span> [Create multiple coupons](ref:post_api-rnb-pvt-multiple-coupons) endpoint.
+- 
 [block:callout]
 {
   "type": "danger",
   "body": "If you try to create a coupon with an existing `coupon code`, the API will update the existing coupon."
 }
 [/block]
+
 ## How to edit a coupon
+
 Coupons can be edited and reused as you wish. However, the `coupon code` cannot be modified.
 [block:callout]
 {
@@ -41,14 +46,16 @@ Coupons can be edited and reused as you wish. However, the `coupon code` cannot 
   "body": "There is a limited quantity of active coupons. Coupon reuse is highly recommended since a high number of coupons may compromise the Promotions & Taxes performance."
 }
 [/block]
+
 ## How to archive a coupon
 
-As said before, you can only archive one coupon at a time. You must use the <span class="api"><span class="pg-type type-post">post</span><span> [Archive coupon by coupon code](ref:archivebycouponcode)<span></span> endpoint to do so.
+As said before, you can only archive one coupon at a time. You must use the <span class="api pg-type type-post">post</span> [Archive coupon by coupon code](ref:archivebycouponcode) endpoint to do so.
 
 ## Examples of usage
 
 ### Creating 50 coupons
-To create 50 different coupons with `coupon codes` randomly generated, you must use the [Create multiple coupons](ref:post_api-rnb-pvt-multiple-coupons) endpoint with `quantity` set to `50`. 
+
+To create 50 different coupons with `coupon codes` randomly generated, you must use the [Create multiple coupons](ref:post_api-rnb-pvt-multiple-coupons) endpoint with `quantity` set to `50`.
 
 If you want to define the `coupon codes`, you can use this route as well, setting the `coupon codes` params with the desired values and `quantity` as `1` for each `coupon configuration`, as the example below.
 [block:code]
@@ -63,9 +70,10 @@ If you want to define the `coupon codes`, you can use this route as well, settin
 [/block]
 You can associate these 50 coupons to a single promotion by repeating the same `utmSource` or `utmCampaign` in all of them, and then linking that UTM tag to the promotion. This can be done for any number of coupons.
 
-To create or update a promotion, check the <span class="api"><span class="pg-type type-post">post</span><span> [Create Or Update Promotion](ref:createorupdatecalculatorconfiguration)<span></span> endpoint.
+To create or update a promotion, check the <span class="api pg-type type-post">post</span> [Create Or Update Promotion](ref:createorupdatecalculatorconfiguration) endpoint.
 
 ### Creating single-use coupon and promotion
+
 Sandy is a frequent client of your store and it is her birthday. You can use the [Create coupon](ref:post_api-rnb-pvt-coupon) endpoint with the `coupon code` set to `Birthday123`, associate it to a promotion then, send it to her.
 
 To enable the single-use of a coupon, you must restrict the promotion to a single-use as well so she use the `Birthday123` code on her checkout for only one purchase. To do so, follow the steps bellow:
@@ -109,6 +117,7 @@ To enable the single-use of a coupon, you must restrict the promotion to a singl
 7. Click on **Save**.
 
 ### Coupon massive generation
+
 To create a large number of coupons with the same settings, you can use the [Coupon Massive Generation](ref:massivegeneration) endpoint. This endpoint will generate the determined quantity of coupons differing only their names through automatic generation.
 
 First, set the query param `quantity` to `10`, for example. Then, make the following request body:

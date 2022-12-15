@@ -39,7 +39,6 @@ The Template App runs in [VTEX IO](https://developers.vtex.com/vtex-developer-do
   "title": "VTEX Partner"
 }
 [/block]
-<br>
 
 ## Step 1 - Creating your repository from the template
 
@@ -66,173 +65,122 @@ Follow the list below to substitute placeholders properly. Once placeholders are
   "title": "Manifest file"
 }
 [/block]
+
 <table>
-  <tr>
-   <td><strong>Placeholder</strong>
-   </td>
-   <td><strong>Description</strong>
-   </td>
-   <td><strong>Files where it can be found</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><code>appName</code>
-   </td>
-   <td>Name of the app. This value must follow the kebab case (only minor case letters and the `-` character).
-   </td>
-   <td>
-<ol>
-
-<li>manifest.json
-
-<li>navigation.json
-
-<li>routes.json
-
-<li>node/service.json
-
-<li>node/constants/variables.ts
-
-<li>react/package.json
-</li>
-</ol>
-   </td>
-  </tr>
-  <tr>
-   <td><code>appVendor</code>
-   </td>
-   <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX `accountName`.
-   </td>
-   <td>
-<ol>
-
-<li>manifest.json
-
-<li>navigation.json
-
-<li>node/routes.json
-
-<li>node/service.json
-
-<li>node/constants/variables.json
-</li>
-</ol>
-   </td>
-  </tr>
-  <tr>
-   <td><code>appTitle</code>
-   </td>
-   <td>Title of the app that will appear in the VTEX Admin’s screen and left navigation, once the seller accesses it.
-   </td>
-   <td>
-<ol>
-
-<li>messages/context.json
-
-<li>messages/en.json
-
-<li>messages/pt.json
-
-<li>messages/es.json
-
-<li>node/constants/variables.ts
-</li>
-</ol>
-   </td>
-  </tr>
-  <tr>
-   <td><code>connectorEndpoint</code>
-   </td>
-   <td>Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples: <code>https://externalconnector.com</code> or relative URL <code>https://externalconnector.com/api/vtex</code>.
-   </td>
-   <td>
-<ol>
-
-<li>node/constants/variables.ts
-
-<li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx
-</li>
-</ol>
-   </td>
-  </tr>
- <tr>
-   <td><code>connectorEndpointHost</code>
-   </td>
-   <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>.
-   </td>
-   <td>
-<ol>
-
-<li>manifest.json
-
-</ol>
-   </td>
-  </tr>
-  <tr>
-   <td><code>affiliateId</code>
-   </td>
-   <td>Affiliate identifier code, which consists of three consonants, whether they are repeated or not.
-   </td>
-   <td>
-<ol>
-
-<li>react/areas/ConfigArea/index.tsx
-</li>
-</ol>
-   </td>
-  </tr>
-  <tr>
-   <td><code>manifestTitle</code>
-   </td>
-   <td>App’s title in the VTEX App Store.
-   </td>
-   <td>
-<ol>
-
-<li>manifest.json
-</li>
-</ol>
-   </td>
-  </tr>
-  <tr>
-   <td><code>manifestDescription</code>
-   </td>
-   <td>App’s description in the VTEX App Store.
-   </td>
-   <td>
-<ol>
-
-<li>manifest.json
-</li>
-</ol>
-   </td>
-  </tr>
-  <tr>
-   <td><code>mapperId</code>
-   </td>
-   <td>Connector’s ID in VTEX Mapper.
-   </td>
-   <td>
-<ol>
-
-<li>admin/navigation.json
-</li>
-</ol>
-   </td>
-  </tr>
-  <tr>
-   <td><code>feedId</code>
-   </td>
-   <td>Connector’s ID in Offer Management.
-   </td>
-   <td>
-<ol>
-
-<li>node/constants/variables.ts
-</li>
-</ol>
-   </td>
-  </tr>
+    <tr>
+        <td><strong>Placeholder</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Files where it can be found</strong></td>
+    </tr>
+    <tr>
+        <td><code>appName</code></td>
+        <td>Name of the app. This value must follow the kebab case (only minor case letters and the `-` character).</td>
+        <td>
+            <ol>
+                <li>manifest.json
+                <li>navigation.json
+                <li>routes.json
+                <li>node/service.json
+                <li>node/constants/variables.ts
+                <li>react/package.json</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>appVendor</code></td>
+        <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX
+            `accountName`.</td>
+        <td>
+            <ol>
+                <li>manifest.json
+                <li>navigation.json
+                <li>node/routes.json
+                <li>node/service.json
+                <li>node/constants/variables.json</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>appTitle</code></td>
+        <td>Title of the app that will appear in the VTEX Admin’s screen and left navigation, once the seller accesses
+            it.</td>
+        <td>
+            <ol>
+                <li>messages/context.json
+                <li>messages/en.json
+                <li>messages/pt.json
+                <li>messages/es.json
+                <li>node/constants/variables.ts</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>connectorEndpoint</code></td>
+        <td>Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples:
+            <code>https://externalconnector.com</code> or relative URL
+            <code>https://externalconnector.com/api/vtex</code>.</td>
+        <td>
+            <ol>
+                <li>node/constants/variables.ts
+                <li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>connectorEndpointHost</code></td>
+        <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>.
+        </td>
+        <td>
+            <ol>
+                <li>manifest.json
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>affiliateId</code></td>
+        <td>Affiliate identifier code, which consists of three consonants, whether they are repeated or not.</td>
+        <td>
+            <ol>
+                <li>react/areas/ConfigArea/index.tsx</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>manifestTitle</code></td>
+        <td>App’s title in the VTEX App Store.</td>
+        <td>
+            <ol>
+                <li>manifest.json</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>manifestDescription</code></td>
+        <td>App’s description in the VTEX App Store.</td>
+        <td>
+            <ol>
+                <li>manifest.json</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>mapperId</code></td>
+        <td>Connector’s ID in VTEX Mapper.</td>
+        <td>
+            <ol>
+                <li>admin/navigation.json</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><code>feedId</code></td>
+        <td>Connector’s ID in Offer Management.</td>
+        <td>
+            <ol>
+                <li>node/constants/variables.ts</li>
+            </ol>
+        </td>
+    </tr>
 </table>
 
 The fields listed above come with the App Template as default. However, it is possible to remove fields that represent features not used by your integration, like the VTEX Mapper and Offer Management. They are listed ahead in the section [CustomConfigs](#customconfigs).
@@ -378,24 +326,19 @@ Ex. _email.tsx_, _token.tsx_.
   ]
 }
 [/block]
+
 <table>
-  <tr>
-   <td>
-<strong>Field</strong>
-   </td>
-   <td><strong>Description</strong>
-   </td>
-   <td><strong>Files where it can be found</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>DefaultProps
-   </td>
-   <td>Defines attributes used by all components present in the integration. The attributes include `intl` (used for field internationalization) and `config` (represents the seller’s current configuration).
-   </td>
-   <td>react/typings/props.tsx
-   </td>
-  </tr>
+    <tr>
+        <td><strong>Field</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Files where it can be found</strong></td>
+    </tr>
+    <tr>
+        <td>DefaultProps</td>
+        <td>Defines attributes used by all components present in the integration. The attributes include `intl` (used
+            for field internationalization) and `config` (represents the seller’s current configuration).</td>
+        <td>react/typings/props.tsx</td>
+    </tr>
 </table>
 
 3. To add more properties to the `DefaultProps` for a specific field, **extend the `DefaultProps` interface**, adding the extra properties. This step is optional.
@@ -481,8 +424,6 @@ Note that the `CustomConfigArea` in the template does not include `intl`, `confi
 
 The order of components within the `return` affects the order in which components are rendered in the app.  
 
-<br>
-
 ## Step 3 - Translating a component
 
 The app’s internationalization is made using the `intl` library in the `messages` builder, declared in the `manifest.json`. This builder’s addition comes in the Template App as default and does not need to be altered. It is only necessary to add translations for new inserted fields. Check out [Translating the component](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-8-translating-the-component) to know more.
@@ -552,7 +493,6 @@ To add the id to the file, we add the code: `“admin/app.test.title”: “Test
   ]
 }
 [/block]
-<br>
 
 ## Step 4 - Testing the app locally
 
@@ -564,8 +504,6 @@ To add the id to the file, we add the code: `“admin/app.test.title”: “Test
 6. Access the following address:
 `https://{{workspace}}--{{account}}.myvtex.com/admin/{{appVendor}}/{{appName}}` substituting the placeholders for the chosen values in the previous steps.
 
-<br>
-
 ### Collecting the app’s configurations
 
 Once the app is configured, it is possible to recover the seller’s configuration through the app. To search a seller’s configuration:
@@ -574,36 +512,28 @@ Once the app is configured, it is possible to recover the seller’s configurati
 `https://{{workspace}}--{(account}}.myvtex.com/_v/{{appVendor}}/{{appName}}/config`
 
 <table>
-  <tr>
-   <td><strong>Field</strong>
-   </td>
-   <td><strong>Description</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>workspace
-   </td>
-   <td>Environment where the app was linked. In production, the workspace is not included in the call, so the endpoint is as follows: `https://{(account}}.myvtex.com/_v/{{appVendor}}/{{appName}}/config`
-   </td>
-  </tr>
-  <tr>
-   <td>account
-   </td>
-   <td>Seller’s VTEX account you wish to recover configuration information from.
-   </td>
-  </tr>
-  <tr>
-   <td>appVendor
-   </td>
-   <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX `accountName`.
-   </td>
-  </tr>
-  <tr>
-   <td>appName
-   </td>
-   <td>Name of the app. This value must follow the kebab case (only minor case letters and the `-` character).
-   </td>
-  </tr>
+    <tr>
+        <td><strong>Field</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td>workspace</td>
+        <td>Environment where the app was linked. In production, the workspace is not included in the call, so
+            theendpoint is as follows: `https://{(account}}.myvtex.com/_v/{{appVendor}}/{{appName}}/config`</td>
+    </tr>
+    <tr>
+        <td>account</td>
+        <td>Seller’s VTEX account you wish to recover configuration information from.</td>
+    </tr>
+    <tr>
+        <td>appVendor</td>
+        <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s
+            VTEX`accountName`.</td>
+    </tr>
+    <tr>
+        <td>appName</td>
+        <td>Name of the app. This value must follow the kebab case (only minor case letters and the `-` character).</td>
+    </tr>
 </table>
 
 2. Generate the account’s [AppKey and AppToken](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) to authenticate it.
@@ -635,7 +565,6 @@ Once the app is configured, it is possible to recover the seller’s configurati
   ]
 }
 [/block]
-<br>
 
 ## Step 5 - Publishing the app in the VTEX App Store
 

@@ -7,11 +7,7 @@ type: "added"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 The Store Video app has arrived, allowing you to display video assets on your store pages with divine features such as autoplay, loop, and mute. 
 
 And It gets better: the app also supports Youtube, Vimeo, and other third-party players!

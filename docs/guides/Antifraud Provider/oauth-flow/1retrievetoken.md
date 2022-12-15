@@ -41,7 +41,7 @@ updatedAt: "2021-11-24T20:47:58.411Z"
   </tr>
 </table>
 
-<br>
+
 
 #### RESPONSE BODY
 ---
@@ -54,7 +54,7 @@ updatedAt: "2021-11-24T20:47:58.411Z"
   </tr>
 </table>
 
-<br>
+
 
 #### REQUEST EXAMPLES AND THEIR RESPONSES
 ---

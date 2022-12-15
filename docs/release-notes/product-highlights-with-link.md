@@ -7,11 +7,7 @@ type: "improved"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 It is now possible to add a link to the Product Highlight's string text thanks to the new `link` prop of the `product-highlight-text` block.
 
 The link allows you to redirect users to a store page of your choice, such as the product collection. 

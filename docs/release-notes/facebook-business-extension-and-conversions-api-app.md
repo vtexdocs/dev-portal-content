@@ -7,7 +7,6 @@ type: "added"
 ---
 
 <div class="badge" id="suggestions-api">Integration</div>
-<br></br>
 
 VTEX has developed the [Facebook Business Extension and Conversions API app](https://apps.vtex.com/vtex-facebook-fbe/p) to simplify integrating VTEX stores with [Facebook Business Extension (FBE)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-facebook-fbe).
 
@@ -22,7 +21,6 @@ type: "added"
 ---
 
 <div class="badge" id="suggestions-api">Integration</div>
-<br></br>
 
 VTEX has developed the [Facebook Business Extension and Conversions API app](https://apps.vtex.com/vtex-facebook-fbe/p) to simplify integrating VTEX stores with [Facebook Business Extension (FBE)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-facebook-fbe).
 

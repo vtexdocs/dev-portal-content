@@ -26,7 +26,7 @@ updatedAt: "2020-05-18T23:16:11.535Z"
   </tr>
 </table>
 
-<br>
+
 
 #### REQUEST EXAMPLES AND THEIR RESPONSES
 ---

@@ -7,11 +7,7 @@ type: "improved"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 Opened submenus are now natively closed whenever another submenu is clicked/hovered on. Previously, the shift between submenus was so fluid that users were not able to notice when content changed - now that's what I call a smooth experience! 
 
 This behavior was enhanced as shown below:

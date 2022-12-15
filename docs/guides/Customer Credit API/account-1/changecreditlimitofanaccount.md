@@ -7,10 +7,12 @@ createdAt: "2019-12-24T00:49:31.616Z"
 updatedAt: "2020-07-08T20:40:51.560Z"
 ---
 ## Warning
+
 ---
 The value will be summed with the current account credit limit.
 
-## Response body has the following properties:
+## Response body has the following properties
+
 <table>
     <tr>
         <th>Name</th>
@@ -24,37 +26,38 @@ The value will be summed with the current account credit limit.
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>balance</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>status</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>creditLimit</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>updatedAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>createdAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <td><code>description</code></td>
+    <tr>
+        <td><code>description</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
@@ -65,28 +68,28 @@ The value will be summed with the current account credit limit.
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>preAuthorizedCredit</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>tolerance</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<td><code>availableTolerance</code></td>
+    <tr>
+        <td><code>availableTolerance</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
 </table>
 
-<br>
+## Response body example
 
-## Response body example:
 [block:code]
 {
   "codes": [

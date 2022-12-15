@@ -61,7 +61,7 @@ The parameter in the URL `transactions.id` is VTEX transaction ID that was passe
     </tr>
 </table>
 
-<br>
+
 
 #### REQUEST EXAMPLES AND THEIR RESPONSES
 ---

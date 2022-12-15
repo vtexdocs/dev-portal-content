@@ -6,9 +6,9 @@ hidden: false
 createdAt: "2019-12-30T03:21:07.203Z"
 updatedAt: "2022-07-07T14:58:51.313Z"
 ---
-<br>
 
 ## Request body
+
 ---
 
 <table>
@@ -30,13 +30,13 @@ updatedAt: "2022-07-07T14:58:51.313Z"
         <td>Yes</td>
         <td>The unique identifier for this request to ensure its idempotency</td>
     </tr>
-     <tr>
+    <tr>
         <td><code>authorizationId</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Payment authorization identifier (in case it was authorized previous to the cancellation request)</td>
     </tr>
-     <tr>
+    <tr>
         <td><code>sandboxMode</code></td>
         <td>string</td>
         <td></td>
@@ -44,9 +44,8 @@ updatedAt: "2022-07-07T14:58:51.313Z"
     </tr>
 </table>
 
-<br>
+## Response body
 
-## Response body 
 ---
 
 <table>
@@ -62,13 +61,13 @@ updatedAt: "2022-07-07T14:58:51.313Z"
         <td>Yes</td>
         <td>The same <code>paymentId</code> sent in the request</td>
     </tr>
-      <tr>
+    <tr>
         <td><code>status</code></td>
         <td>string</td>
         <td></td>
         <td><strong>This field is deprecated, please don't send it</strong></td>
     </tr>
-      <tr>
+    <tr>
         <td><code>message</code></td>
         <td>string</td>
         <td></td>
@@ -78,13 +77,15 @@ updatedAt: "2022-07-07T14:58:51.313Z"
         <td><code>code</code></td>
         <td>string</td>
         <td></td>
-        <td>Provider's operation/error code to be logged (return <code>cancel-manually</code> if you do not support this operation, so we can send a notification to the merchant)</td>
+        <td>Provider's operation/error code to be logged (return <code>cancel-manually</code> if you do not support this
+            operation, so we can send a notification to the merchant)</td>
     </tr>
     <tr>
         <td><code>cancellationId</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td>Provider's cancellation identifier (if the operation has failed you <strong>MUST</strong> return <code>null</code>)</td>
+        <td>Provider's cancellation identifier (if the operation has failed you <strong>MUST</strong> return
+            <code>null</code>)</td>
     </tr>
     <tr>
         <td><code>requestId</code></td>
@@ -94,7 +95,8 @@ updatedAt: "2022-07-07T14:58:51.313Z"
     </tr>
 </table>
 
-## Request examples and their responses 
+## Request examples and their responses
+
 [block:code]
 {
   "codes": [

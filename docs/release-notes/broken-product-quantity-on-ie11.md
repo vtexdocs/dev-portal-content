@@ -7,11 +7,7 @@ type: "fixed"
 ---
 
 <div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 Internet Explorer 11 is one of the browsers supported by the Store Framework, but it seems to me that the [Product Quantity](https://vtex.io/docs/components/all/vtex.product-quantity/) component didn't get that until now... silly component! 
 [block:image]
 {

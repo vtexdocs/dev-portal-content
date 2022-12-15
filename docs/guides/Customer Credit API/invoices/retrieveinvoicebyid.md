@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2019-12-24T00:49:31.616Z"
 updatedAt: "2020-07-07T19:09:09.533Z"
 ---
-## Response body has the following properties:
+## Response body has the following properties
 
 <table>
     <tr>
@@ -21,19 +21,19 @@ updatedAt: "2020-07-07T19:09:09.533Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>status</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>value</code></td>
         <td>decimal</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>accountId</code></td>
         <td>string</td>
         <td>Yes</td>
@@ -45,25 +45,26 @@ updatedAt: "2020-07-07T19:09:09.533Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>createdAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>resolvedAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>updatedAt</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <td><code>originalDueDate</code></td>
+    <tr>
+        <td><code>originalDueDate</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
@@ -74,25 +75,26 @@ updatedAt: "2020-07-07T19:09:09.533Z"
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>installment</code></td>
         <td>number</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>orderId</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
- <tr>
+    <tr>
         <td><code>transactionId</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
     </tr>
-<td><code>numberOfInstallments</code></td>
+    <tr>
+        <td><code>numberOfInstallments</code></td>
         <td>number</td>
         <td>Yes</td>
         <td></td>
@@ -102,10 +104,11 @@ updatedAt: "2020-07-07T19:09:09.533Z"
         <td>string</td>
         <td>Yes</td>
         <td></td>
-  </tr>
+    </tr>
 </table>
 
-## Response body example:
+## Response body example
+
 [block:code]
 {
   "codes": [

@@ -7,68 +7,66 @@ createdAt: "2021-04-30T17:21:06.429Z"
 updatedAt: "2022-04-26T00:13:55.633Z"
 ---
 ## Response body
+
 ---
 <table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Mandatory</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><code>cardholderDocument</code></td>
-        <td>string</td>
-        <td></td>
-        <td>Describes the need for cardholder documentation to process antifraud analysis. Accepted values:
-<br> 
-<code>required</code>: a cardholder document is mandatory. 
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Mandatory</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>cardholderDocument</code></td>
+<td>string</td>
+<td></td>
+<td>Describes the need for cardholder documentation to process antifraud analysis. Accepted values:
 <br>
-<code>optional</code>: a cardholder document can be used, but is not required. 
+<code>required</code>: a cardholder document is mandatory.
+<br>
+<code>optional</code>: a cardholder document can be used, but is not required.
 <br>
 <code>unused</code>: a cardholder document is not required.</td>
-    </tr>    
-    <tr>
-        <td><code>customFields</code></td>
-        <td>object</td>
-        <td></td>
-        <td>Describes the customized fields supported by the connector</td>
-    </tr>
-    <tr>
-        <td>&#x21B3; <code>name</code></td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Custom field name </td>
-    </tr>
-    <tr>
-        <td>&#x21B3; <code>type</code></td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Custom field type. Accepted values: <code>text</code>, <code>select</code></td>
-    </tr>
-    <tr>
-        <td>&#x21B3; <code>options</code></td>
-        <td>string</td>
-        <td></td>
-        <td>In case of <code>select</code> type, the possible params are <code>text</code> and <code>value</code></td>
-    </tr>
-    <tr>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>text</code></td>
-        <td>object</td>
-        <td></td>
-        <td>Custom field description</td>
-    </tr>
-    <tr>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>value</code></td>
-        <td>string</td>
-        <td></td>
-        <td>Custom field value</td>
-    </tr>    
-    </table>
+</tr>
+<tr>
+<td><code>customFields</code></td>
+<td>object</td>
+<td></td>
+<td>Describes the customized fields supported by the connector</td>
+</tr>
+<tr>
+<td>&#x21B3; <code>name</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Custom field name </td>
+</tr>
+<tr>
+<td>&#x21B3; <code>type</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Custom field type. Accepted values: <code>text</code>, <code>select</code></td>
+</tr>
+<tr>
+<td>&#x21B3; <code>options</code></td>
+<td>string</td>
+<td></td>
+<td>In case of <code>select</code> type, the possible params are <code>text</code> and <code>value</code></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>text</code></td>
+<td>object</td>
+<td></td>
+<td>Custom field description</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>value</code></td>
+<td>string</td>
+<td></td>
+<td>Custom field value</td>
+</tr>
+</table>
 
-<br>
-
-## Request examples and their responses 
-
+## Request examples and their responses
 
 [block:code]
 {

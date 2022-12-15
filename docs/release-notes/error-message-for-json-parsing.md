@@ -7,11 +7,7 @@ type: "improved"
 ---
 
 <div class="badge" id="vtex-io">VTEX IO</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 The lack of additional information was part of the developers' routine whenever something went wrong with parsing the app's JSON files. But not anymore: file and error line references will from now on be displayed in the error message.
 [block:image]
 {

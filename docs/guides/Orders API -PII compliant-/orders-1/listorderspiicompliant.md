@@ -8,9 +8,7 @@ updatedAt: "2022-04-29T19:41:50.360Z"
 ---
 ## Throtling
 
-<div class="alert alert-info">Throttling: Each account can make up to 5000 requests per minute.
-</div>
-
+<div class="alert alert-info">Throttling: Each account can make up to 5000 requests per minute.</div>
 
 ## Request parameters
 
@@ -20,36 +18,27 @@ updatedAt: "2022-04-29T19:41:50.360Z"
 | `OrderField` | string | Order Field expected values: `creationDate`,`orderId`,`items`,`totalValue` and `origin` |
 | `OrderType` | string | Order Type expected values: `asc` and `desc`  |
 
-
 Sorting Examples
-
 
 CreationDate:
 
-	/api/oms/pvt/orders?orderBy=creationDate,desc
-
+ `/api/oms/pvt/orders?orderBy=creationDate,desc`
 
 OrderID:
 
-	/api/oms/pvt/orders?orderBy=orderId,desc
-
+ `/api/oms/pvt/orders?orderBy=orderId,desc`
 
 Items:
 
-	/api/oms/pvt/orders?orderBy=items,asc
-
+ `/api/oms/pvt/orders?orderBy=items,asc`
 
 TotalValue:
 
-	/api/oms/pvt/orders?orderBy=totalValue,desc
+ `/api/oms/pvt/orders?orderBy=totalValue,desc`
 
+Origin:
 
-Origin: 
-
-	/api/oms/pvt/orders?orderBy=origin,asc
-
-
-
+ `/api/oms/pvt/orders?orderBy=origin,asc`
 
 | Attribute    | Type      | Description |
 | ------------ |:---------:| -----------:|
@@ -57,9 +46,7 @@ Origin:
 
 Pagination Examples:
 
-	/api/oms/pvt/orders?page=3
-
-
+ /api/oms/pvt/orders?page=3
 
 | Attribute    | Type      | Description |
 | ------------ |:---------:| -----------:|
@@ -67,17 +54,9 @@ Pagination Examples:
 
 Quantity per Page Examples:
 
-	/api/oms/pvt/orders?per_page=15
+ /api/oms/pvt/orders?per_page=15
 
-
-
-
-
-<div class="alert alert-info">Pagination Limit: The limit of pages that can be requested is 30.
-</div>
-
-
-
+<div class="alert alert-info">Pagination Limit: The limit of pages that can be requested is 30.</div>
 
 | Attribute    | Type      | Description |
 | ------------ |:---------:| -----------:|
@@ -85,13 +64,9 @@ Quantity per Page Examples:
 
 Time Zone Example:
 
-	/api/oms/pvt/orders?utc=-0200
+ `/api/oms/pvt/orders?utc=-0200`
 
-
-
-
-## Request filters 
-
+## Request filters
 
 ### Shipping Estimate
 
@@ -99,33 +74,23 @@ Time Zone Example:
 | ------------ |:---------:| -----------:|
 | `f_shippingEstimate` | string | Concatened value of quantity days and sufix `.days`  |
 
-
-
-
 Shipping Estimate filter Examples:
-
 
 Next 7 days:
 
-	/api/oms/pvt/orders?f_shippingEstimate=7.days
+ `/api/oms/pvt/orders?f_shippingEstimate=7.days`
 
+Tomorrow:
 
-Tomorrow: 
-
-	/api/oms/pvt/orders?f_shippingEstimate=1.days
-
+ `/api/oms/pvt/orders?f_shippingEstimate=1.days`
 
 Today:
-	
-	/api/oms/pvt/orders?f_shippingEstimate=0.days
 
+ `/api/oms/pvt/orders?f_shippingEstimate=0.days`
 
 Late:
-	
-	/api/oms/pvt/orders?f_shippingEstimate=-1.days
 
-
-
+ `/api/oms/pvt/orders?f_shippingEstimate=-1.days`
 
 ### Invoiced Date
 
@@ -133,24 +98,19 @@ Late:
 | ------------ |:---------:| -----------:|
 | `f_invoicedDate` | string | Concatened value sufix `invoicedDate` and range date in Timestamp format  |
 
-
-
 Invoiced Date filter Examples:
 
-1 Day: 
+1 Day:
 
-	/api/oms/pvt/orders?f_invoicedDate=invoicedDate:[2017-01-01T02:00:00.000Z TO 2017-01-02T01:59:59.999Z]
+ `/api/oms/pvt/orders?f_invoicedDate=invoicedDate:[2017-01-01T02:00:00.000Z TO 2017-01-02T01:59:59.999Z]`
 
+1 Month:
 
-1 Month: 
-	
-	/api/oms/pvt/orders?f_invoicedDate=invoicedDate:[2017-01-01T02:00:00.000Z TO 2017-02-01T01:59:59.999Z]
-
+ `/api/oms/pvt/orders?f_invoicedDate=invoicedDate:[2017-01-01T02:00:00.000Z TO 2017-02-01T01:59:59.999Z]`
 
 1 Year:
 
-	/api/oms/pvt/orders?f_invoicedDate=invoicedDate:[2016-01-01T02:00:00.000Z TO 2017-01-01T01:59:59.999Z]
-
+ `/api/oms/pvt/orders?f_invoicedDate=invoicedDate:[2016-01-01T02:00:00.000Z TO 2017-01-01T01:59:59.999Z]`
 
 ### Authorized Date
 
@@ -158,26 +118,19 @@ Invoiced Date filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_authorizedDate` | string | Concatened value sufix `authorizedDate` and range date in Timestamp format  |
 
-
-
 Authorized Date filter Examples:
 
 1 Day:
 
-	/api/oms/pvt/orders?f_authorizedDate=authorizedDate:[2017-01-01T02:00:00.000Z TO 2017-01-02T01:59:59.999Z]
-
+ `/api/oms/pvt/orders?f_authorizedDate=authorizedDate:[2017-01-01T02:00:00.000Z TO 2017-01-02T01:59:59.999Z]`
 
 1 Month:
 
-	/api/oms/pvt/orders?f_authorizedDate=authorizedDate:[2017-01-01T02:00:00.000Z TO 2017-02-01T01:59:59.999Z]
-
+ `/api/oms/pvt/orders?f_authorizedDate=authorizedDate:[2017-01-01T02:00:00.000Z TO 2017-02-01T01:59:59.999Z]`
 
 1 Year:
 
-	/api/oms/pvt/orders?f_authorizedDate=authorizedDate:[2016-01-01T02:00:00.000Z TO 2017-01-01T01:59:59.999Z]
-
-
-
+ `/api/oms/pvt/orders?f_authorizedDate=authorizedDate:[2016-01-01T02:00:00.000Z TO 2017-01-01T01:59:59.999Z]`
 
 ### UTMs
 
@@ -185,14 +138,9 @@ Authorized Date filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_UtmSource` | string | UTM Source value  |
 
-
-
 Channels filter Examples:
 
-	/api/oms/pvt/orders?f_UtmSource=buscape_campaign
-
-
-
+ /api/oms/pvt/orders?f_UtmSource=buscape_campaign
 
 ### Seller
 
@@ -200,14 +148,9 @@ Channels filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_sellerNames` | string | Seller Name value  |
 
-
-
 Seller filter Examples:
 
-	/api/oms/pvt/orders?f_sellerNames=Fast+Shop
-
-
-
+ /api/oms/pvt/orders?f_sellerNames=Fast+Shop
 
 ### Call Center Operator
 
@@ -215,14 +158,9 @@ Seller filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_callCenterOperatorName` | string | Call Center Operator Value  |
 
-
-
 Call Center Operator filter Examples:
 
-	/api/oms/pvt/orders?f_callCenterOperatorName=Operator%20Name
-
-
-
+ `/api/oms/pvt/orders?f_callCenterOperatorName=Operator%20Name`
 
 ### Sales Channel Name
 
@@ -230,15 +168,9 @@ Call Center Operator filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_salesChannel` | string | Sales Channel Name Value  |
 
-
-
 Sales Channel Name filter Examples:
 
-	/api/oms/pvt/orders?f_salesChannel=Main
-
-
-
-
+ `/api/oms/pvt/orders?f_salesChannel=Main`
 
 ### Sales Channel ID
 
@@ -246,15 +178,9 @@ Sales Channel Name filter Examples:
 | ------------ |:---------:| -----------:|
 | `salesChannelId` | string | Sales Channel ID Value  |
 
-
-
 Sales Channel ID filter Examples:
 
-	/api/oms/pvt/orders?salesChannelId=1
-
-
-
-
+ `/api/oms/pvt/orders?salesChannelId=1`
 
 ### Affiliate ID
 
@@ -262,40 +188,29 @@ Sales Channel ID filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_affiliateId` | string | Affiliate ID Value  |
 
-
-
 Affiliate ID filter Examples:
 
-	/api/oms/pvt/orders?f_affiliateId=WLM
+ `/api/oms/pvt/orders?f_affiliateId=WLM`
 
-
-
-
-### Order Status 
+### Order Status
 
 | Attribute    | Type      | Description |
 | ------------ |:---------:| -----------:|
 | `f_status` | string | Order Status Value  |
 
-
-
 | Order Status avaible to filter    |
 | --------------------- |
-| `waiting-for-sellers-confirmation` | 
-| `payment-pending` | 
-| `payment-approved` | 
-| `ready-for-handling` | 
-| `handling` | 
-| `invoiced` | 
-| `canceled` | 
-
+| `waiting-for-sellers-confirmation` |
+| `payment-pending` |
+| `payment-approved` |
+| `ready-for-handling` |
+| `handling` |
+| `invoiced` |
+| `canceled` |
 
 Order Status filter Examples:
 
-	/api/oms/pvt/orders?f_status=ready-for-handling
-
-
-
+ `/api/oms/pvt/orders?f_status=ready-for-handling`
 
 ### Order Status Description
 
@@ -303,27 +218,19 @@ Order Status filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_statusDescription` | string | Order Status Description Value  |
 
-
-
-
-
 | Order Status Description avaible to filter |
 | --------------------- |
-| `Aguardando+autorização+para+despachar` | 
-| `Pagamento+Pendente` | 
-| `Pagamento+Aprovado` | 
-| `Pronto+para+o+manuseio` | 
-| `Preparando+Entrega` | 
-| `Faturado` | 
-| `Cancelado` | 
+| `Aguardando+autorização+para+despachar` |
+| `Pagamento+Pendente` |
+| `Pagamento+Aprovado` |
+| `Pronto+para+o+manuseio` |
+| `Preparando+Entrega` |
+| `Faturado` |
+| `Cancelado` |
 
 Order Status Description filter Examples:
 
-	/api/oms/pvt/orders?f_statusDescription=Pronto+para+o+manuseio
-
-
-
-
+ `/api/oms/pvt/orders?f_statusDescription=Pronto+para+o+manuseio`
 
 ### Order Situation
 
@@ -331,16 +238,11 @@ Order Status Description filter Examples:
 | ------------ |:---------:| -----------:|
 | `incompleteOrders` | boolean | If is a Incomplete Order  |
 
-
 > know more about [Incomplete Orders in VTEX Help](https://help.vtex.com/en/tutorial/understanding-incomplete-orders)
 
 Order Situation filter Examples:
 
-	/api/oms/pvt/orders?incompleteOrders=true
-
-
-
-
+ `/api/oms/pvt/orders?incompleteOrders=true`
 
 ### Error Situation
 
@@ -348,23 +250,15 @@ Order Situation filter Examples:
 | ------------ |:---------:| -----------:|
 | `incompleteOrders` | boolean | Error Situation Type  |
 
-
-
 | Error Situation Values avaible to filter |
 | ------- |
-| `all` | 
-| `perm` | 
+| `all` |
+| `perm` |
 | `temp` |  
-
 
 Error Situation filter Examples:
 
-	/api/oms/pvt/orders?filterError=all
-
-
-
-
-
+ `/api/oms/pvt/orders?filterError=all`
 
 ### Payment Type Name
 
@@ -372,15 +266,9 @@ Error Situation filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_paymentNames` | string | Payment Type Value  |
 
-
-
 Payment Type Name filter Examples:
 
-	/api/oms/pvt/orders?f_paymentNames=Visa
-
-
-
-
+ /api/oms/pvt/orders?f_paymentNames=Visa
 
 ### Rates and Benefits Name
 
@@ -388,14 +276,9 @@ Payment Type Name filter Examples:
 | ------------ |:---------:| -----------:|
 | `f_RnB` | string | Rates and Benefits Name  |
 
-
-
 Rates and Benefits filter Examples:
 
-	/api/oms/pvt/orders?f_RnB="Free+Shipping"
-
-
-
+ /api/oms/pvt/orders?f_RnB="Free+Shipping"
 
 ### Search Field
 
@@ -409,53 +292,38 @@ Rates and Benefits filter Examples:
 | `paymentId&paymentId` | integer | Payment ID (PID)  |
 | `nsu&nsu` | integer | Connector's NSU  |
 
-
-
 Search Field filter Examples:
 
 SKU ID:
-	
-	/api/oms/pvt/orders?searchField=sku_Ids&sku_Ids=11223
 
-
+ /api/oms/pvt/orders?searchField=sku_Ids&sku_Ids=11223
 
 Gift List ID:
-	
-	/api/oms/pvt/orders?searchField=listId&listId=11223
 
+ /api/oms/pvt/orders?searchField=listId&listId=11223
 
-	
 Transaction ID (TID):
-	
-	/api/oms/pvt/orders?searchField=tid&tid=54546300238810034995829230012
 
+ /api/oms/pvt/orders?searchField=tid&tid=54546300238810034995829230012
 
-	
 PCI Connector's Transaction ID (TID):
 
-	/api/oms/pvt/orders?searchField=pci_tid&pci_tid=7032909234899834298423209
+ /api/oms/pvt/orders?searchField=pci_tid&pci_tid=7032909234899834298423209
 
-
-	
 Payment ID (PID):
-	
-	/api/oms/pvt/orders?searchField=paymentId&paymentId=2
 
+ /api/oms/pvt/orders?searchField=paymentId&paymentId=2
 
-	
 Connector's NSU:
-	
-	/api/oms/pvt/orders?searchField=nsu&nsu=2437281
 
+ /api/oms/pvt/orders?searchField=nsu&nsu=2437281
 
 <div class="alert alert-warning">As of October 3, 2018, this API will not return the <strong>"items"</strong> property.
 </div>
 
-
 ## Response objects
 
 **Response object has the following properties:**
-
 
 | Attribute    | Type        | Description |
 | --------------- |:---------:| --------------------------------------:|
@@ -503,7 +371,6 @@ Connector's NSU:
 | `Sum` | object | Paging Details Object |
 | `SumOfSquares` | object | Paging Details Object |
 
-
 ## Request body example
 
 ```
@@ -513,7 +380,6 @@ curl --location --request GET 'https://luxstore.{{environment}}.com.br/api/oms/p
 --header 'X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}' \
 --header 'X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}'
 ```
-
 
 ## Response body example
 

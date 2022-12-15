@@ -21,13 +21,13 @@ This app **uses Google Chrome language processing** to listen with the microphon
 1. Adding the app as a theme dependency in the `manifest.json` file;
 2. Declaring the app's main block in a given theme template or inside another block from the theme. For example:
 
-````
+```
   "flex-layout.col#text-speech": {
     "children": [
       "speech-to-text"
     ]
   },
-````
+```
 
 And then add the needed configuration:
 

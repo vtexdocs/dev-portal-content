@@ -10,7 +10,6 @@ updatedAt: "2020-06-17T23:33:17.568Z"
 
 ---
 
-
 <table>
     <tr>
         <th>Name</th>
@@ -29,26 +28,26 @@ updatedAt: "2020-06-17T23:33:17.568Z"
         <td>string</td>
         <td>Yes</td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>redemptionCode</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>date</code></td>
         <td>dateTime</td>
         <td>Yes</td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>requestId</code></td>
         <td>string</td>
         <td>Yes</td>
         <td></td>
-    </tr> 
-    <tr> 
+    </tr>
+    <tr>
         <td><code>orderInfo</code></td>
         <td>object</td>
         <td>Yes</td>
@@ -89,44 +88,41 @@ updatedAt: "2020-06-17T23:33:17.568Z"
         <td>object</td>
         <td>Yes</td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>_href</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr>  
+    </tr>
     <tr>
         <td><code>cancellation</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
-    </tr>  
+    </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>_href</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>authorization</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
-    </tr>  
+    </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>_href</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr>  
+    </tr>
     <tr>
         <td><code>operation</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Possible values: {"Credit","Debit"}</td>
-    </tr> 
+    </tr>
 </table>

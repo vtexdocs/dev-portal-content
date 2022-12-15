@@ -35,25 +35,21 @@ There are two ways to solve this situation:
 
 We recommend that you use `extended-ajax.js` (used by default in the bundle). With that, all requests are queued, that is, they don’t happen in parallel.
 
-
 ## Events
 
 ### `orderFormUpdated.vtex [orderForm]`
 
 When a call updates the orderForm, the orderFormUpdated.vtex event is fired. This is useful for different components that use vtex.js to keep up to date without the need to know the other present components.
 
-** Important **: This event is only sent when the last pending request is terminated. That is, if multiple consecutive calls to the API are queued, the event will only be sent at the end of the last call.
-
+**Important**: This event is only sent when the last pending request is terminated. That is, if multiple consecutive calls to the API are queued, the event will only be sent at the end of the last call.
 
 ### `checkoutRequestBegin.vtex [ajaxOptions]`
 
 When any request that changes the orderForm is started, that event is fired. It can be used, for example, to initiate a load on the screen and prevent the user from making further modifications. The ajaxOptions parameter is the options object originally used to initiate this request.
 
-
 ### `checkoutRequestEnd.vtex [orderForm|jqXHR]`
 
 When any request that changes the orderForm is terminated, _with or without success_, that event is fired. Note that the argument can be an `orderForm`, on success, or a `jqXHR`, in case of failure. It is not recommended to use this request to detect changes in the orderForm. Instead, use `orderFormUpdated.vtex`.
-
 
 ## expectedOrderFormSections
 
@@ -69,7 +65,6 @@ You can find out what each section is by taking a look at the `_allOrderFormSect
 
 Given this explanation, this argument will no longer be explained in the method documentation.
 
-
 ### Example
 
 ```js
@@ -79,18 +74,15 @@ $(window).on("orderFormUpdated.vtex", function(evt, orderForm) {
 })
 ```
 
-
 ## getOrderForm(expectedOrderFormSections
 
 Gets the current orderForm.
 
 This is one of the most important methods: it is essential to make sure that an orderForm is available before making calls that change it.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Example
 
@@ -99,7 +91,6 @@ vtexjs.checkout.getOrderForm().done(function(orderForm) {
   console.log(orderForm)
 })
 ```
-
 
 ## sendAttachment(attachmentId, attachment, expectedOrderFormSections
 
@@ -113,31 +104,26 @@ Check the [OrderForm documentation](./checkout/order-form.md) to find out which 
 
 Do not forget to use `getOrderForm` first.
 
-
 ### Returns
 
 `Promise` para o orderForm
 
-
 ### Arguments
 
 <table>
-  <tr>
-    <td>Name</td>
-    <td>Type</td>
-  </tr>
-  <tr>
-    <td>attachmentId</td>
-    <td>String
-the name of the attachment being sent.</td>
-  </tr>
-  <tr>
-    <td>attachment</td>
-    <td>Object
-the attachment itself.</td>
-  </tr>
+    <tr>
+        <td>Name</td>
+        <td>Type</td>
+    </tr>
+    <tr>
+        <td>attachmentId</td>
+        <td>String the name of the attachment being sent.</td>
+    </tr>
+    <tr>
+        <td>attachment</td>
+        <td>Object the attachment itself.</td>
+    </tr>
 </table>
-
 
 ### Examples
 
@@ -163,7 +149,6 @@ vtexjs.checkout
   })
 ```
 
-
 #### Change openTextField
 
 The openTextField is a field for comments. Check the [OrderForm documentation](./checkout/order-form.md) for more details on it.
@@ -180,7 +165,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## addToCart(items, expectedOrderFormSections, salesChannel)
 
 Add items to the orderForm.
@@ -194,31 +178,27 @@ An item to be added is necessarily composed of: `id`, `quantity` and `seller`. T
 
 Items that are already in the orderForm will remain unchanged.
 
-
 ### Returns
 
 `Promise` for the orderForm
 
-
 ### Arguments
 
 <table>
-  <tr>
-    <td>Name</td>
-    <td>Type</td>
-  </tr>
-  <tr>
-    <td>items</td>
-    <td>Array
-the set of items that will be added. Even if there is only one item, it must be wrapped in an Array.</td>
-  </tr>
-  <tr>
-    <td>salesChannel</td>
-    <td>Number or String
-(Optional parameter, default = 1)</td>
-  </tr>
+    <tr>
+        <td>Name</td>
+        <td>Type</td>
+    </tr>
+    <tr>
+        <td>items</td>
+        <td>Arraythe set of items that will be added. Even if there is only one item, it must be wrapped in an Array.
+        </td>
+    </tr>
+    <tr>
+        <td>salesChannel</td>
+        <td>Number or String(Optional parameter, default = 1)</td>
+    </tr>
 </table>
-
 
 ### Example
 
@@ -236,7 +216,6 @@ vtexjs.checkout.addToCart([item], null, 3).done(function(orderForm) {
 })
 ```
 
-
 ## updateItems(items, expectedOrderFormSections)
 
 Updates items in the orderForm.
@@ -249,32 +228,29 @@ Properties that are not sent will be kept unchanged, as well as items that are i
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
 
-
 ### Arguments
 
 <table>
-  <tr>
-    <td>Name</td>
-    <td>Type</td>
-  </tr>
-  <tr>
-    <td>items</td>
-    <td>Array
-the set of items that will be updated. Even if there is only one item, it must be wrapped in an Array.</td>
-  </tr>
-  <tr>
-    <td>splitItem</td>
-    <td>Boolean
-Default: true
-Informs if a separate item should be created in case the items to be updated have attachments/services.</td>
-  </tr>
+    <tr>
+        <td>Name</td>
+        <td>Type</td>
+    </tr>
+    <tr>
+        <td>items</td>
+        <td>Array
+            the set of items that will be updated. Even if there is only one item, it must be wrapped in an Array.</td>
+    </tr>
+    <tr>
+        <td>splitItem</td>
+        <td>Boolean
+            Default: true
+            Informs if a separate item should be created in case the items to be updated have attachments/services.</td>
+    </tr>
 </table>
-
 
 ### Example
 
@@ -298,7 +274,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## removeItems(items, expectedOrderFormSections)
 
 Removes items from the orderForm.
@@ -307,26 +282,22 @@ An item is identified by its `index` property. In the orderForm, this property c
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
 
-
 ### Arguments
 
 <table>
-  <tr>
-    <td>Name</td>
-    <td>Type</td>
-  </tr>
-  <tr>
-    <td>items</td>
-    <td>Array
-the set of items that will be removed. Even if there is only one item, it must be wrapped in an Array.</td>
-  </tr>
+    <tr>
+        <td>Name</td>
+        <td>Type</td>
+    </tr>
+    <tr>
+        <td>items</td>
+        <td>Array the set of items that will be removed. Even if there is only one item, it must be wrapped in an Array.</td>
+    </tr>
 </table>
-
 
 ### Example
 
@@ -352,7 +323,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## removeAllItems(expectedOrderFormSections)
 
 Removes all items from the orderForm.
@@ -363,18 +333,15 @@ Do not forget to use getOrderForm first.
 
 `Promise` for the orderForm
 
-
 ### Example
 
-``html
+```html
 vtexjs.checkout.removeAllItems()
 .done(function(orderForm) {
 alert('Empty cart.');
 console.log(orderForm);
 });
-
-````
-
+```
 
 ## cloneItem(itemIndex, newItemsOptions, expectedOrderFormSections)
 
@@ -384,35 +351,31 @@ An item is identified by its `index` property. In the orderForm, this property c
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
 
-
 ### Arguments
 
 <table>
-  <tr>
-    <td>Name</td>
-    <td>Type</td>
-  </tr>
-  <tr>
-    <td>itemIndex</td>
-    <td>Number
-the index of the item to which the offer is applied</td>
-  </tr>
-  <tr>
-    <td>newItemsOptions</td>
-    <td>Array (Optional)
-Properties that should be assigned to the new items</td>
-  </tr>
+    <tr>
+        <td>Name</td>
+        <td>Type</td>
+    </tr>
+    <tr>
+        <td>itemIndex</td>
+        <td>Numberthe index of the item to which the offer is applied</td>
+    </tr>
+    <tr>
+        <td>newItemsOptions</td>
+        <td>Array (Optional) Properties that should be assigned to the new items</td>
+    </tr>
 </table>
-
 
 ### Example
 
 Creates a new item based on the item with index 0.
+
 ```js
 var itemIndex = 0;
 
@@ -420,7 +383,7 @@ vtexjs.checkout.cloneItem(itemIndex)
   .done(function(orderForm) {
     console.log(orderForm);
   });
-````
+```
 
 Creates a new item based on item with index 0 with quantity 2 and an attachment already configured.
 
@@ -445,7 +408,6 @@ vtexjs.checkout.cloneItem(itemIndex, newItemsOptions).done(function(orderForm) {
 })
 ```
 
-
 ## calculateShipping(address)
 
 Receiving an address, records the address in the user's shippingData.
@@ -454,26 +416,23 @@ The effect of this is that the shipping will be calculated and available in one 
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
 
-
 ### Arguments
 
 <table>
-  <tr>
-    <td>Name</td>
-    <td>Type</td>
-  </tr>
-  <tr>
-    <td>address</td>
-    <td>Object
-the address must have at least postalCode and country. With these two properties, the others will be inferred.</td>
-  </tr>
+    <tr>
+        <td>Name</td>
+        <td>Type</td>
+    </tr>
+    <tr>
+        <td>address</td>
+        <td>Objectthe address must have at least postalCode and country. With these two properties, the others will be
+            inferred.</td>
+    </tr>
 </table>
-
 
 ### Example
 
@@ -495,7 +454,6 @@ vtexjs.checkout.getOrderForm()
   });
 ```
 
-
 ## simulateShipping(items, postalCode, country, salesChannel) [DEPRECATED]
 
 Receiving a list of items, the postalCode, and country, it simulates the shipping of these items to this address.
@@ -506,41 +464,34 @@ The result of this simulation includes the different carriers that can be used f
 
 It’s ideal for simulating shipping on the product page.
 
-
 ### Returns
 
 Promise for the result. The result has the property logisticsInfo.
 
-
 ### Arguments
 
 <table>
-  <tr>
-    <td>Name</td>
-    <td>Type</td>
-  </tr>
-  <tr>
-    <td>items</td>
-    <td>Array
-of objects that have at least id, quantity and seller.</td>
-  </tr>
-  <tr>
-    <td>postalCode</td>
-    <td>String
-In the case of Brazil it is the client’s CEP.</td>
-  </tr>
-  <tr>
-    <td>country</td>
-    <td>String
-the 3-letter country abbreviation. For example, "BRA".</td>
-  </tr>
-  <tr>
-    <td>salesChannel</td>
-    <td>Number or String
-(Optional parameter, default = 1)</td>
-  </tr>
+    <tr>
+        <td>Name</td>
+        <td>Type</td>
+    </tr>
+    <tr>
+        <td>items</td>
+        <td>Arrayof objects that have at least id, quantity and seller.</td>
+    </tr>
+    <tr>
+        <td>postalCode</td>
+        <td>StringIn the case of Brazil it is the client’s CEP.</td>
+    </tr>
+    <tr>
+        <td>country</td>
+        <td>Stringthe 3-letter country abbreviation. For example, "BRA".</td>
+    </tr>
+    <tr>
+        <td>salesChannel</td>
+        <td>Number or String(Optional parameter, default = 1)</td>
+    </tr>
 </table>
-
 
 ### Example
 
@@ -573,7 +524,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## simulateShipping(shippingData, orderFormId, country, salesChannel)
 
 Receiving an object containing shipping information (`shippingData`), the `orderFormId` and `country`, it simulates the shipping of these items to this address.
@@ -584,11 +534,9 @@ This is an overloaded function.
 
 The result of this simulation is the same of the last one: returns different carriers that can be used for each item, accompanied by name, delivery date and price.
 
-
 ### Returns
 
 Promise for the result. The result has the property `logisticsInfo`.
-
 
 ### Arguments**
 
@@ -599,13 +547,11 @@ Promise for the result. The result has the property `logisticsInfo`.
   </tr>
   <tr>
     <td>shippingData</td>
-    <td>Object
-containing shipping information and item information with logisticsInfo and selectedAddresses.</td>
+    <td>Object containing shipping information and item information with logisticsInfo and selectedAddresses.</td>
   </tr>
   <tr>
     <td>orderFormId</td>
-    <td>String
-representing the Id of the current session's orderForm.</td>
+    <td>String representing the Id of the current session's orderForm.</td>
   </tr>
   <tr>
     <td>country</td>
@@ -614,11 +560,9 @@ the 3-letter country abbreviation. For example, "BRA".</td>
   </tr>
   <tr>
     <td>salesChannel</td>
-    <td>Number or String
-(Optional parameter, default = 1)</td>
+    <td>Number or String (Optional parameter, default = 1)</td>
   </tr>
 </table>
-
 
 ### Example
 
@@ -648,16 +592,13 @@ vtexjs.checkout
   })
 ```
 
-
 ## getAddressInformation(address)
 
 Given an incomplete address with postalCode and country, it returns a complete address, with city, state, street, and any other available information.
 
-
 ### Returns
 
 `Promise` for the complete address
-
 
 ### Arguments
 
@@ -668,8 +609,7 @@ Given an incomplete address with postalCode and country, it returns a complete a
   </tr>
   <tr>
     <td>address</td>
-    <td>Object
-the address must have at least postalCode and country. With these two properties, the others will be inferred.</td>
+    <td>Object the address must have at least postalCode and country. With these two properties, the others will be inferred.</td>
   </tr>
 </table>
 
@@ -694,7 +634,6 @@ vtexjs.checkout.getAddressInformation(address).done(function(result) {
 })
 ```
 
-
 ## getProfileByEmail(email, salesChannel)
 
 Performs the partial user login using email.
@@ -702,7 +641,6 @@ Performs the partial user login using email.
 The information will likely come masked and you will not be able to edit it if the user already exists. For this, it’s necessary to authenticate with VTEX ID. Make sure of this with the orderForm’s canEditData property. Check the [OrderForm documentation](./checkout/order-form.md).
 
 Do not forget to use getOrderForm first.
-
 
 ### Returns
 
@@ -721,11 +659,9 @@ Do not forget to use getOrderForm first.
   </tr>
   <tr>
     <td>salesChannel</td>
-    <td>Number or String
-(default = 1)</td>
+    <td>Number or String (default = 1)</td>
   </tr>
 </table>
-
 
 ### Example
 
@@ -741,18 +677,15 @@ vtexjs.checkout
   })
 ```
 
-
 ## removeAccountId(accountId, expectedOrderFormSections)
 
 In orderForm.paymentData.availableAccounts, you find the user's payment accounts. Each account has several details, and one of them is the accountId. This ID can be used in this method for the removal of the payment account.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` of success
-
 
 ### Arguments
 
@@ -763,10 +696,9 @@ Do not forget to use getOrderForm first.
   </tr>
   <tr>
     <td>accountId</td>
-    <td>String </td>
+    <td>String</td>
   </tr>
 </table>
-
 
 ### Example
 
@@ -782,7 +714,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## addDiscountCoupon(couponCode, expectedOrderFormSections)
 
 Adds a discount coupon to the orderForm.
@@ -791,11 +722,9 @@ There can only be one discount coupon for each purchase.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -809,7 +738,6 @@ Do not forget to use getOrderForm first.
     <td>String </td>
   </tr>
 </table>
-
 
 ### Example
 
@@ -828,7 +756,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## removeDiscountCoupon(expectedOrderFormSections)
 
 Removes the orderForm discount coupon.
@@ -837,11 +764,9 @@ There can only be one discount coupon for each purchase, so there is no need to 
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Example
 
@@ -859,7 +784,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## removeGiftRegistry(expectedOrderFormSections)
 
 Removes the gift registry from the orderForm.
@@ -868,11 +792,9 @@ This unlinks the gift list to which the orderForm is bound, if it is. If it’s 
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Example
 
@@ -888,7 +810,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## addOffering(offeringId, itemIndex, expectedOrderFormSections)
 
 Adds an offer to the orderForm.
@@ -899,11 +820,9 @@ When an offer is added, it will appear in the item's `bundleItems` field.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -914,16 +833,13 @@ Do not forget to use getOrderForm first.
   </tr>
   <tr>
     <td>offeringId</td>
-    <td>String or Number
-May be found in the offering’s id property</td>
+    <td>String or Number May be found in the offering’s id property</td>
   </tr>
   <tr>
     <td>itemIndex</td>
-    <td>Number
-The index of the item to which the offer is applied</td>
+    <td>Number The index of the item to which the offer is applied</td>
   </tr>
 </table>
-
 
 ### Example
 
@@ -964,18 +880,15 @@ vtexjs.checkout
   })
 ```
 
-
 ## removeOffering(offeringId, itemIndex, expectedOrderFormSections)
 
 Removes an offer.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -986,16 +899,13 @@ Do not forget to use getOrderForm first.
   </tr>
   <tr>
     <td>offeringId</td>
-    <td>String or Number
-May be found in the offering’s id property</td>
+    <td>String or Number May be found in the offering’s id property</td>
   </tr>
   <tr>
     <td>itemIndex</td>
-    <td>Number
-The index of the item to which the offer is applied</td>
+    <td>Number The index of the item to which the offer is applied</td>
   </tr>
 </table>
-
 
 ### Example
 
@@ -1042,7 +952,6 @@ vtexjs.checkout
     console.log(orderForm)
   })
 ```
-
 
 ## addItemAttachment(itemIndex, attachmentName, content, expectedOrderFormSections, splitItem)
 
@@ -1095,11 +1004,9 @@ vtexjs.checkout.addItemAttachment(
 
 Do not forget to call getOrderForm at least once before.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -1131,7 +1038,6 @@ Informs whether a separate item should be created in case the items to be update
   </tr>
 </table>
 
-
 ### Example
 
 ```js
@@ -1153,7 +1059,6 @@ vtexjs.checkout
   })
 ```
 
-
 ### Possible Errors
 
 404 - The item does not have this associated `attachment` or the `content` object has an invalid property 400 - The `content` object was not passed correctly
@@ -1166,11 +1071,9 @@ Removes an item attachment in the cart.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -1196,7 +1099,6 @@ an object that respects the schema described in the schema property in attachmen
   </tr>
 </table>
 
-
 ## addBundleItemAttachment(itemIndex, bundleItemId, attachmentName, content, expectedOrderFormSections)
 
 This method adds an attachment to a service (bundleItem) of an item in the cart.
@@ -1205,11 +1107,9 @@ You can associate an attachment with the service through the administrative inte
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -1240,7 +1140,6 @@ an object that respects the schema described in the schema property in attachmen
   </tr>
 </table>
 
-
 ### Example
 
 ```js
@@ -1267,18 +1166,15 @@ vtexjs.checkout
   })
 ```
 
-
 ## removeBundleItemAttachment(itemIndex, bundleItemId, attachmentName, content, expectedOrderFormSections)
 
 Removes an attachment from a service.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -1308,7 +1204,6 @@ can be found in the name property in attachmentOfferings within the service obje
   </tr>
 </table>
 
-
 ## sendLocale(locale)
 
 Change user's locale.
@@ -1317,11 +1212,9 @@ This causes a change in the orderForm, in `clientPreferencesData`.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for success (no orderForm section is requested)
-
 
 ### Arguments
 
@@ -1337,7 +1230,6 @@ examples: "pt-BR", "en-US"</td>
   </tr>
 </table>
 
-
 ### Example
 
 ```js
@@ -1351,7 +1243,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## clearMessages(expectedOrderFormSections)
 
 Occasionally, the orderForm has its `messages` section populated with informational or error messages.
@@ -1360,11 +1251,9 @@ To clear these messages, use this method.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `Promise` for success (no orderForm section is requested)
-
 
 ### Example
 
@@ -1379,7 +1268,6 @@ vtexjs.checkout
   })
 ```
 
-
 ## getLogoutURL()
 
 This method returns an URL that logs the user out, but keeps their cart.
@@ -1388,11 +1276,9 @@ It is your responsibility to perform this redirection.
 
 Do not forget to use getOrderForm first.
 
-
 ### Returns
 
 `String`
-
 
 ### Example
 
@@ -1404,7 +1290,6 @@ $(".logout").on("click", function() {
   })
 })
 ```
-
 
 ## getOrders(orderGroupId)
 
@@ -1418,11 +1303,9 @@ In most cases, an orderGroup will only contain one order.
 
 In terms of data, an orderGroup is an array of order objects. An order has several properties related to the completion of the purchase. Full documentation of this object will be available shortly.
 
-
 ### Returns
 
 `Promise` for the orders
-
 
 ### Arguments
 
@@ -1437,7 +1320,6 @@ In terms of data, an orderGroup is an array of order objects. An order has sever
   </tr>
 </table>
 
-
 ### Example
 
 ```js
@@ -1448,18 +1330,15 @@ vtexjs.checkout.getOrders(orderGroupId).then(function(orders) {
 })
 ```
 
-
 ## changeItemsOrdination(criteria, ascending, expectedOrderFormSections)
 
 It changes the order of the items according to a criteria (criteria) and an ascending parameter (ascending).
 
 This causes a change in the `itemsOrdinatio`n object of the `OrderForm` and also in the order of the objects in the array of `items`.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -1480,7 +1359,6 @@ true for increasing and false for decreasing</td>
   </tr>
 </table>
 
-
 ### Example
 
 ```js
@@ -1494,16 +1372,13 @@ vtexjs.checkout
   })
 ```
 
-
 ## replaceSKU(items, expectedOrderFormSections, splitItem)
 
 Removes SKU from a current item and replaces it with a new one.
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
@@ -1524,7 +1399,6 @@ Default: true
 Informs if a separate item should be created in case the items to be updated have attachments/services.</td>
   </tr>
 </table>
-
 
 ### Example
 
@@ -1547,23 +1421,19 @@ vtexjs.checkout.replaceSKU(items).then(function(orderForm) {
 })
 ```
 
-
 ## finishTransaction(orderGroupId, expectedOrderFormSections)
 
 Informs the Checkout API to finish a transaction and go to the final url (e.g. `order-placed`, `checkout`).
 
-
 ### Returns
 
 `Promise` for the orderForm
-
 
 ### Arguments
 
 |             Nome | Tipo                                                                                |
 | ---------------: | :---------------------------------------------------------------------------------- |
 | **orderGroupId** | **number** <br> ID from an order to be created after finishing the checkout process |
-
 
 ### Example
 

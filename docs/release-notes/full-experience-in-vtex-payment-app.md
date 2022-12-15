@@ -7,11 +7,7 @@ type: "improved"
 ---
 
 <div class="badge" id="VTEX-Payment-for-physical-stores"> VTEX Payment for Physical Stores</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+
 The VTEX Payment for physical solutions integrates the VTEX Payment app to point of sales' payment devices. Frequently, our clients use inStore - VTEX Omnichannel solution - to operates this dynamic.  
 
 However, some payment terminal connections instabilities happened during the buying act. For example, when a client tried to make a purchase, the VTEX Payment system couldn't pair up with the store's physical payment device.  
