@@ -32,6 +32,7 @@ The Template App runs in [VTEX IO](https://developers.vtex.com/vtex-developer-do
 - [Prep the basic setup for your environment](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio).
 - [Install VTEX IO’s Toolbelt](https://learn.vtex.com/page/setting-up-your-environment).
 - Have your VTEX Partner account in hand for step 2.
+
 [block:callout]
 {
   "type": "info",
@@ -75,44 +76,17 @@ Follow the list below to substitute placeholders properly. Once placeholders are
     <tr>
         <td><code>appName</code></td>
         <td>Name of the app. This value must follow the kebab case (only minor case letters and the `-` character).</td>
-        <td>
-            <ol>
-                <li>manifest.json
-                <li>navigation.json
-                <li>routes.json
-                <li>node/service.json
-                <li>node/constants/variables.ts
-                <li>react/package.json</li>
-            </ol>
-        </td>
+        <td><ol><li>manifest.json<li>navigation.json<li>routes.json<li>node/service.json<li>node/constants/variables.ts<li>react/package.json</li></ol></td>
     </tr>
     <tr>
         <td><code>appVendor</code></td>
-        <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX
-            `accountName`.</td>
-        <td>
-            <ol>
-                <li>manifest.json
-                <li>navigation.json
-                <li>node/routes.json
-                <li>node/service.json
-                <li>node/constants/variables.json</li>
-            </ol>
-        </td>
+        <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX `accountName`.</td>
+        <td><ol><li>manifest.json<li>navigation.json<li>node/routes.json<li>node/service.json<li>node/constants/variables.json</li></ol></td>
     </tr>
     <tr>
         <td><code>appTitle</code></td>
-        <td>Title of the app that will appear in the VTEX Admin’s screen and left navigation, once the seller accesses
-            it.</td>
-        <td>
-            <ol>
-                <li>messages/context.json
-                <li>messages/en.json
-                <li>messages/pt.json
-                <li>messages/es.json
-                <li>node/constants/variables.ts</li>
-            </ol>
-        </td>
+        <td>Title of the app that will appear in the VTEX Admin’s screen and left navigation, once the seller accesses it.</td>
+        <td><ol><li>messages/context.json<li>messages/en.json<li>messages/pt.json<li>messages/es.json<li>node/constants/variables.ts</li></ol></td>
     </tr>
     <tr>
         <td><code>connectorEndpoint</code></td>
@@ -120,66 +94,39 @@ Follow the list below to substitute placeholders properly. Once placeholders are
             <code>https://externalconnector.com</code> or relative URL
             <code>https://externalconnector.com/api/vtex</code>.</td>
         <td>
-            <ol>
-                <li>node/constants/variables.ts
-                <li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx</li>
-            </ol>
+            <ol><li>node/constants/variables.ts<li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx</li></ol>
         </td>
     </tr>
     <tr>
         <td><code>connectorEndpointHost</code></td>
         <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>.
         </td>
-        <td>
-            <ol>
-                <li>manifest.json
-            </ol>
-        </td>
+        <td><ol><li>manifest.json</ol></td>
     </tr>
     <tr>
         <td><code>affiliateId</code></td>
         <td>Affiliate identifier code, which consists of three consonants, whether they are repeated or not.</td>
-        <td>
-            <ol>
-                <li>react/areas/ConfigArea/index.tsx</li>
-            </ol>
-        </td>
+        <td><ol><li>react/areas/ConfigArea/index.tsx</li></ol></td>
     </tr>
     <tr>
         <td><code>manifestTitle</code></td>
         <td>App’s title in the VTEX App Store.</td>
-        <td>
-            <ol>
-                <li>manifest.json</li>
-            </ol>
-        </td>
+        <td><ol><li>manifest.json</li></ol></td>
     </tr>
     <tr>
         <td><code>manifestDescription</code></td>
         <td>App’s description in the VTEX App Store.</td>
-        <td>
-            <ol>
-                <li>manifest.json</li>
-            </ol>
-        </td>
+        <td><ol><li>manifest.json</li></ol></td>
     </tr>
     <tr>
         <td><code>mapperId</code></td>
         <td>Connector’s ID in VTEX Mapper.</td>
-        <td>
-            <ol>
-                <li>admin/navigation.json</li>
-            </ol>
-        </td>
+        <td><ol><li>admin/navigation.json</li></ol></td>
     </tr>
     <tr>
         <td><code>feedId</code></td>
         <td>Connector’s ID in Offer Management.</td>
-        <td>
-            <ol>
-                <li>node/constants/variables.ts</li>
-            </ol>
-        </td>
+        <td><ol><li>node/constants/variables.ts</li></ol></td>
     </tr>
 </table>
 
@@ -240,6 +187,7 @@ The CustomConfigs section is where you find configurations that come as default 
 ##### Removing VTEX Mapper
 
 You can remove [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration) from the app, if the integration does not require mapping categories, or the partner already has a solution for mapping catalog architecture. To remove VTEX Mapper, on the `admin/navigation.json`, remove file the object that defines the Mapper endpoint in the Admin:
+
 [block:code]
 {
   "codes": [
@@ -255,6 +203,7 @@ You can remove [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-
 ##### Removing Offer Management
 
 You can remove [Offer Management](https://help.vtex.com/tutorial/anuncios-enviados-beta--6yg2CBv5Z5AnD0qS0cw2sa) from the app, If your integration already includes a solution to generate logs for offers. To remove Offer Management, on the `node/resolvers/saveConfig.ts` file (line 15), remove the feed’s creation in Sent Offers:
+
 [block:code]
 {
   "codes": [
@@ -270,6 +219,7 @@ You can remove [Offer Management](https://help.vtex.com/tutorial/anuncios-enviad
 ##### Removing _AllowFranchiseAccounts_
 
 When the configuration _AllowFranchiseAccounts_ is configured, the component becomes a toggle indicating whether [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) are permitted.
+
 [block:image]
 {
   "images": [
@@ -335,13 +285,13 @@ Ex. _email.tsx_, _token.tsx_.
     </tr>
     <tr>
         <td>DefaultProps</td>
-        <td>Defines attributes used by all components present in the integration. The attributes include `intl` (used
-            for field internationalization) and `config` (represents the seller’s current configuration).</td>
+        <td>Defines attributes used by all components present in the integration. The attributes include `intl` (used for field internationalization) and `config` (represents the seller’s current configuration).</td>
         <td>react/typings/props.tsx</td>
     </tr>
 </table>
 
 3. To add more properties to the `DefaultProps` for a specific field, **extend the `DefaultProps` interface**, adding the extra properties. This step is optional.
+
 [block:code]
 {
   "codes": [
@@ -353,6 +303,7 @@ Ex. _email.tsx_, _token.tsx_.
   ]
 }
 [/block]
+
 In the example above, a new interface called `CustomProps` was created, that can `extend` the `DefaultProps`, by adding a `newProp` string property. Thus, it is possible to use `CustomProps` in place of `DefaultProps`, and the component can now accept the extra `newProp` property.
 
 4. To use other properties that are not listed in `DefaultProps`, define a **new interface** with the needed properties.
@@ -370,9 +321,11 @@ In the example below, a new interface called `CustomProps` is created, with only
   ]
 }
 [/block]
+
 5. Add **components developed** to the app’s template.
 
 Here’s an example code for adding an input field:
+
 [block:code]
 {
   "codes": [
@@ -384,6 +337,7 @@ Here’s an example code for adding an input field:
   ]
 }
 [/block]
+
 The example above creates an input field called `ExampleComponent`. It uses an extra property, or the `setConfig`, used in this case within the `onChange` property of the Input component. This updates the `email` field in the config, whenever the seller types something within the field. This is how it is rendered in the UI:
 
 [block:image]
@@ -401,11 +355,12 @@ The example above creates an input field called `ExampleComponent`. It uses an e
   ]
 }
 [/block]
+
 6. To finalize the new field’s inclusion, add the new field within the **CustomConfigsArea**. To do that:
 
 - In the `react/areas/configArea/customConfigs/index.tsx` field, add an **import** to the new component developed.  
 Following the example above: _import ExampleComponent from './example'_
-- Add the component within the **<div> </div>** of `CustomConfigArea`.
+- Add the component within the ` ` of `CustomConfigArea`.
 
 [block:code]
 {
@@ -418,9 +373,10 @@ Following the example above: _import ExampleComponent from './example'_
   ]
 }
 [/block]
+
 Note that the `CustomConfigArea` in the template does not include `intl`, `config` and `setConfig`. They must be added, like in the example above, depending on which properties are needed. To add more properties, repeat step 3.  
 
-7. If other components are necessary, add them in the `return` object.
+1. If other components are necessary, add them in the `return` object.
 
 The order of components within the `return` affects the order in which components are rendered in the app.  
 
@@ -459,7 +415,9 @@ To illustrate with an example, let’s suppose we have the following component:
   ]
 }
 [/block]
+
 In this case, we have an Input component, type “text”, and its label will be translated according to the VTEX Admin’s locale. If we do not add the id `"admin/app.test.title"` in the `messages` folder, this is what is rendered in the UI:
+
 [block:image]
 {
   "images": [
@@ -475,9 +433,11 @@ In this case, we have an Input component, type “text”, and its label will be
   ]
 }
 [/block]
+
 Since the id does not exist in any `messages` file, it renders the id itself as a response.
 
 To add the id to the file, we add the code: `“admin/app.test.title”: “Teste no en.json”`. Once the id is rendered in all files, the component will then render:
+
 [block:image]
 {
   "images": [
@@ -518,8 +478,7 @@ Once the app is configured, it is possible to recover the seller’s configurati
     </tr>
     <tr>
         <td>workspace</td>
-        <td>Environment where the app was linked. In production, the workspace is not included in the call, so
-            theendpoint is as follows: `https://{(account}}.myvtex.com/_v/{{appVendor}}/{{appName}}/config`</td>
+        <td>Environment where the app was linked. In production, the workspace is not included in the call, so the endpoint is as follows: <code>https://{(account}}.myvtex.com/_v/{{appVendor}}/{{appName}}/config</code></td>
     </tr>
     <tr>
         <td>account</td>
@@ -527,8 +486,7 @@ Once the app is configured, it is possible to recover the seller’s configurati
     </tr>
     <tr>
         <td>appVendor</td>
-        <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s
-            VTEX`accountName`.</td>
+        <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX <code>accountName</code>.</td>
     </tr>
     <tr>
         <td>appName</td>
