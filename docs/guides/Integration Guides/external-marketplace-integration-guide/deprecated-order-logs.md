@@ -159,8 +159,7 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     </tr>
     <tr>
         <td>N</td>
-        <td>When sending the product registration to the marketplace, and obtaining failure for sending incorrect data.
-        </td>
+        <td>When sending the product registration to the marketplace, and obtaining failure for sending incorrect data.</td>
         <td>Oops, we couldn't prepare the SKU registration in the marketplace due to {list all errors occurred during data transformation, and in case any data infringes marketplace rules}. (Connectors should list all errors at once, so the user knows all actions needed to send the SKU).</td>
         <td>Error</td>
         <td>400</td>
@@ -168,8 +167,7 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     <tr>
         <td>O</td>
         <td>When trying to collect the category or attribute mapping from the VTEX Mapper.</td>
-        <td>Oops, we couldn’t find the category {name of the category} mapping of the {SKU name + ID} SKU in the marketplace. Please access the link below to perform this mapping. {Link indicating the store’s mapper}.
-        </td>
+        <td>Oops, we couldn’t find the category {name of the category} mapping of the {SKU name + ID} SKU in the marketplace. Please access the link below to perform this mapping. {Link indicating the store’s mapper}.</td>
         <td>Error</td>
         <td>400</td>
     </tr>

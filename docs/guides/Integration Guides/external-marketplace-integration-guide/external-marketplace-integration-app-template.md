@@ -95,8 +95,7 @@ Follow the list below to substitute placeholders properly. Once placeholders are
     </tr>
     <tr>
         <td><code>connectorEndpointHost</code></td>
-        <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>.
-        </td>
+        <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>.</td>
         <td><ol><li>manifest.json</li></ol></td>
     </tr>
     <tr>

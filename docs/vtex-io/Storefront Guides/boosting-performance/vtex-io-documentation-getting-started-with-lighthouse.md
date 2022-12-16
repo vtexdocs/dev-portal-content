@@ -8,7 +8,7 @@ updatedAt: "2022-08-02T00:03:06.478Z"
 ---
 ## What is Lighthouse
 
-<img align="right" src="https://user-images.githubusercontent.com/60782333/100936269-02d09c80-34d0-11eb-9990-c0b7b910f60e.png">
+<img align="right" src="https://user-images.githubusercontent.com/60782333/100936269-02d09c80-34d0-11eb-9990-c0b7b910f60e.png"/>
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) is an open-source, automated tool created by Google, capable of identifying common problems related to the quality of a webpage through audits.
 

@@ -195,7 +195,7 @@ This resource creates an assortment of products and SKUs and sets their specific
                     <br>
             <li>Product Name: adidas Women's Microdot Polo - True Pink (880004)</li><ul>
                     <li>SKU Name: S     (880040)</li>
-                    <li>SKU Name: M     (880041)</li:>
+                    <li>SKU Name: M     (880041)</li>
                     <li>SKU Name: L     (880042)</li>
                     <li>SKU Name: XL    (880043)</li></ul></li>
      </details>

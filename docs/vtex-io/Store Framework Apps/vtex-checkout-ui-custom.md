@@ -10,7 +10,7 @@ The Checkout UI Custom app is responsible for customizing your store's Checkout 
 
 This feature renders a form in the checkout that allows the user to upload a file to the orderForm.
 
-<img width="1010" alt="Captura de Pantalla 2021-09-14 a la(s) 11 44 16" src="https://user-images.githubusercontent.com/36748003/133279530-cdbb030b-a04d-4b1d-bffe-a63b58b3622f.png">
+<img width="1010" alt="Captura de Pantalla 2021-09-14 a la(s) 11 44 16" src="https://user-images.githubusercontent.com/36748003/133279530-cdbb030b-a04d-4b1d-bffe-a63b58b3622f.png"/>
 
 
 ## Configuration
