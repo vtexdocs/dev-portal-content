@@ -11,7 +11,7 @@ To present an efficient search result to your customer, it is essential to under
 
 To get your customers' most searched terms, you must use the [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches) endpoint. You can filter the endpoint response by defining the term's `locale` on the query.
 
-![Example of most searched terms on a store](https://files.readme.io/eab93dc-image.png)
+![Example of most searched terms on a store](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Search/eab93dc-image_14.png)
 
 The response will return the most searched terms by popularity order and the number of searches for each term.
 
@@ -68,7 +68,7 @@ The response will return the most searched terms by popularity order and the num
 
 To get information about the [autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-autocomplete) suggested terms and similar attributes presented to your customers, use the [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_autocomplete-suggestions) endpoint. You can filter the endpoint response by defining the term's ``locale` and``query``.
 
-![Example of autocomplete suggested terms and similar attributes](https://files.readme.io/3d888dd-image_3.png)
+![Example of autocomplete suggested terms and similar attributes](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Search/3d888dd-image_3_71.png)
 
 The response will return the searched terms by popularity order and the corresponding autocomplete suggestions for each term.
 

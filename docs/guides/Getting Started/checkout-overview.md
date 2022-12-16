@@ -111,7 +111,7 @@ In your store, you can perform various actions related to the shopping cart, inc
 <br>
 Minicart view:
 <br>
-![minicart-v2-gif](https://user-images.githubusercontent.com/52087100/73321194-7f477e80-4220-11ea-844b-f24d1c10363c.gif)
+![minicart-v2-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/52087100/73321194-7f477e80-4220-11ea-844b-f24d1c10363c_114.gif)
 <br>
 <br>
 reCAPTCHA view:
