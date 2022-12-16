@@ -7,7 +7,7 @@ updatedAt: "2022-08-22T20:30:59.655Z"
 ---
 This guide explains how to create an integration with the Conversational Commerce VTEX and Zendesk. To do so, first you will need to gather some information about the store's Zendesk account:
 
-* **URL:** store's Zendesk account URL, such as ``https://{accountName}.zendesk.com``.
+* **URL:** store's Zendesk account URL, such as `https://{accountName}.zendesk.com`.
 * **Tags:** tags that will be added by VTEX when a new ticket is created by the user.
 * **Email:** email of a Zendesk account that will be used to create the tickets. This email must have permission to create tickets and add comments to it via API. This email will be used in the `from` field in all support emails.
 * **API token**: Zendesk API token that needs to be sent to [VTEX support](https://support.vtex.com/hc/en-us/requests). To generate a token, follow the steps in this [article](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
@@ -31,13 +31,13 @@ After gathering this information, follow the steps below:
 * **Category:** `Notifications`
 * **Conditions**: Meet ALL of the following conditions
   * `Tags` `Contains at least one of the following` `{VTEX tag}`
-  * `Update via`` `Is not``Web service (API)`
+  * `Update via` `Is not Web service (API)`
   * `Ticket` `Is` `Updated`
   * `Comment` `Is` `Present, and requester can see the comment`
 
 1. On **Actions**, you must select `Notify active webhook` and the previously configurated webhook.
 
-2. Add the following code on the **JSON body** field. Notice that you must replace ``{{ticket.ticket_field_6228597897108}}`` with the custom field ID previously created.
+2. Add the following code on the **JSON body** field. Notice that you must replace `{{ticket.ticket_field_6228597897108}}` with the custom field ID previously created.
 
 ```json
 {
@@ -58,10 +58,10 @@ After gathering this information, follow the steps below:
 
 * **Conditions:**
   * Meet ALL of the following conditions
-    * ``Tags`` ``Contains at least one of the following`` ``{VTEX tag}``
+    * `Tags` `Contains at least one of the following` `{VTEX tag}`
   * Meet ANY of the following conditions
-    * ``Status`` ``Changed to`` ``Solved``
-    * ``Status`` ``Changed to`` ``Closed``
+    * `Status` `Changed to` `Solved`
+    * `Status` `Changed to` `Closed`
 
 1. On **Actions**, you must select the `Notify active webhook` and the previously configurated webhook.
 2. Add the following code on the **JSON body** field. Notice that you must replace `{{ticket.ticket_field_6228597897108}}` with the custom field ID previously created.
