@@ -7,7 +7,7 @@ updatedAt: "2022-08-22T20:30:59.655Z"
 ---
 This guide explains how to create an integration with the Conversational Commerce VTEX and Zendesk. To do so, first you will need to gather some information about the store's Zendesk account:
 
-* **URL:**store's Zendesk account URL, such as ``https://{accountName}.zendesk.com``.
+* **URL:** store's Zendesk account URL, such as ``https://{accountName}.zendesk.com``.
 * **Tags:** tags that will be added by VTEX when a new ticket is created by the user.
 * **Email:** email of a Zendesk account that will be used to create the tickets. This email must have permission to create tickets and add comments to it via API. This email will be used in the `from` field in all support emails.
 * **API token**: Zendesk API token that needs to be sent to [VTEX support](https://support.vtex.com/hc/en-us/requests). To generate a token, follow the steps in this [article](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
@@ -25,7 +25,7 @@ After gathering this information, follow the steps below:
 
 3. Once you created the webhook, you must create two triggers to activate the webhook. To create a trigger check this [documentation](https://support.zendesk.com/hc/en-us/articles/4408886797466). Create the first trigger with the following information:
 
-![](https://files.readme.io/f938d15-Captura_de_Tela_2022-08-19_as_14.02.46.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Conversational%20Commerce/f938d15-Captura_de_Tela_2022-08-19_as_14.02.46_28.png)
 
 * **Trigger name:** VTEX Chatbot - Incoming Live Agent Comment
 * **Category:** `Notifications`
@@ -54,7 +54,7 @@ After gathering this information, follow the steps below:
 
 6. [Create another trigger](https://support.zendesk.com/hc/en-us/articles/4408886797466) that will be activated when a support agent resolves a ticket. Fill the trigger form with the following information:
 
-![](https://files.readme.io/1a16f64-Captura_de_Tela_2022-08-19_as_14.08.50.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Conversational%20Commerce/1a16f64-Captura_de_Tela_2022-08-19_as_14.08.50_57.png)
 
 * **Conditions:**
   * Meet ALL of the following conditions
