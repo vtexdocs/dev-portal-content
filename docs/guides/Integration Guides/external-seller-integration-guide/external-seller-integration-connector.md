@@ -13,17 +13,18 @@ In the table below, you will find every API request needed for each step of the 
 
 | Step | API Request | Request Target |
 |---|---|---|
-| [Catalog Notification](#catalog-notification) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-developer-docs/reference/catalog-api-get-seller-sku-notification">Change Notification</a></span></div>| ➡ Marketplace |
-| [Catalog Registration](#catalog-registration) | <div class="api"><span class="pg-type type-put">put</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/manage-suggestions ">Send SKU Suggestion</a></span></div> | ➡ Marketplace |
-| [Catalog and Storefront Update](#catalog-update) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment Simulation</a></span></div>  | ⬅ Seller |
-| [Order Placement](#order-placement) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/order-placement">Order Placement</a></span></div>  | ⬅ Seller |
-| [Order Dispatching](#order-dispatching) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/authorize-fulfillment">Authorize Fulfillment</a></span></div>  | ⬅ Seller |
-| [Order Invoicing and Tracking](#order-invoicing) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/invoicenotification">Order Invoice Notification</a></span></div>  | ➡ Marketplace |
-| [Cancellation by the Marketplace](#cancellation-by-the-marketplace) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation">Marketplace Order Cancellation</a></span></div> | ⬅ Seller |
-| [Cancellation by the Seller](#cancellation-by-the-seller) | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a></span></div>  | ➡ Marketplace |
-| [Order invoicing](#order-invoicing)                   | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-invoice">Send invoice</a></span></div>                     | ➡ Marketplace  |
-| [Send tracking information](#order-tracking)       | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-tracking-information">Send tracking information</a></span></div>     | ➡ Marketplace  |
-| [Update tracking status](#order-tracking)          | <div class="api"><span class="pg-type type-post">post</span><span><a href="https://developers.vtex.com/vtex-rest-api/reference/update-tracking-status">Update tracking status</a></span></div>         | ➡ Marketplace  |
+| [Catalog Notification](#catalog-notification) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-developer-docs/reference/catalog-api-get-seller-sku-notification">Change Notification</a></div>| ➡ Marketplace |
+| [Catalog Registration](#catalog-registration) | <div class="api"><span class="pg-type type-put">put</span><a href="https://developers.vtex.com/vtex-rest-api/reference/manage-suggestions ">Send SKU Suggestion</a></div> | ➡ Marketplace |
+| [Catalog and Storefront Update](#catalog-update) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment Simulation</a></div>  | ⬅ Seller |
+| [Order Placement](#order-placement) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/order-placement">Order Placement</a></div>  | ⬅ Seller |
+| [Order Dispatching](#order-dispatching) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/authorize-fulfillment">Authorize Fulfillment</a></div>  | ⬅ Seller |
+| [Order Invoicing and Tracking](#order-invoicing) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/invoicenotification">Order Invoice Notification</a></div>  | ➡ Marketplace |
+| [Cancellation by the Marketplace](#cancellation-by-the-marketplace) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation">Marketplace Order Cancellation</a></div> | ⬅ Seller |
+| [Cancellation by the Seller](#cancellation-by-the-seller) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a></div>  | ➡ Marketplace |
+| [Order invoicing](#order-invoicing)                   | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-invoice">Send invoice</a></div>                     | ➡ Marketplace  |
+| [Send tracking information](#order-tracking)       | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-tracking-information">Send tracking information</a></div>     | ➡ Marketplace  |
+| [Update tracking status](#order-tracking)          | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/update-tracking-status">Update tracking status</a></div>         | ➡ Marketplace  |
+
 [block:callout]
 {
   "type": "info",
@@ -31,6 +32,7 @@ In the table below, you will find every API request needed for each step of the 
   "body": "To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.\n\n[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/427dea44d854e202d6ca)"
 }
 [/block]
+
 Let’s walk through each of the steps in the integration.
 
 ## Catalog notification
@@ -51,19 +53,23 @@ The “status 200” response means that the SKU informed in the request already
 ## Catalog registration
 
 When the marketplace responds to the Change Notification request with status 404, it means that the SKU informed by the seller does not exist in the marketplace’s catalog. In this case, the seller should send an SKU offer to the marketplace.
+
 [block:callout]
 {
   "type": "info",
   "body": "The catalog is owned by the marketplace, and the seller has no direct access to it. This is why every SKU is sent as an offer, which needs to be approved by the marketplace in order to become an SKU actually registered in the marketplace’s catalog."
 }
 [/block]
+
 The SKU offer is sent through the <span class="pg-type type-put">put</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/manage-suggestions">Send SKU Suggestion</a></span> API request. In this request, the seller informs mandatory information about the SKU, such as the product and SKU name, the seller ID, and the image URL.
+
 [block:callout]
 {
   "type": "warning",
   "body": "Don’t forget that, for the Save Suggestion request to work, the marketplace must have created the proper brands and categories in their account. This should be done in the [setup phase]() of the integration."
 }
 [/block]
+
 Besides sending new SKU offers to the marketplace, the seller can update offers that have already been sent and have not yet been approved by the marketplace. To do this, you should make the same request used to create a new offer. In this case, the offer information will be replaced by the new one.
 [block:callout]
 {
@@ -86,6 +92,7 @@ So the seller needs to have an endpoint implemented in order to receive this cal
 The endpoint that the marketplace will call is the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-developer-docs/reference/fulfillment-simulation">Fulfillment Simulation</a></span> endpoint. The marketplace will send an object containing an array of items. The seller must use this list to get the updated information about the referred SKUs and send them back to the marketplace, following the response format explained in the API Reference.
 
 Be mindful to add ´/api` in your endpoint's base url for the call to function properly.
+
 [block:callout]
 {
   "type": "warning",

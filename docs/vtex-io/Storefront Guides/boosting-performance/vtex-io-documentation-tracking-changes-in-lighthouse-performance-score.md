@@ -24,7 +24,7 @@ You're not satisfied yet, so you work on more changes and you manage to take *LC
 
 ![6to4](https://user-images.githubusercontent.com/60782333/100952021-771a3880-34ee-11eb-9142-c897ed21c990.gif)
 
-Notice that in both cases, there was a reduction of 2s in the _LCP_ time. However, in the first case, this improvement led to a gain of 10 points (from 3 to 13) in the *Metric Score*. Meanwhile, in the second case, the same reduction of 2s led to a gain of 37 points (from 13 to 50).
+Notice that in both cases, there was a reduction of 2s in the *LCP* time. However, in the first case, this improvement led to a gain of 10 points (from 3 to 13) in the *Metric Score*. Meanwhile, in the second case, the same reduction of 2s led to a gain of 37 points (from 13 to 50).
 
 With that in mind, let's dive deeper and explore some other reasons for "unexpected" behaviors from Lighthouse.
 
@@ -34,7 +34,7 @@ When you have a metric that scores too low, a seemingly significant change may n
 
 To better illustrate that, let's investigate the *Largest Contentful Paint (LCP)* metric.
 
-*LCP* has a weight of 25% on the *Performance Score*. Therefore, to affect the overall *Performance Score*, the *LCP* score must be at least 2, which would correspond to 1 point (rounding up 2*0.25=0,5) in the *Performance Score*.
+*LCP* has a weight of 25% on the *Performance Score*. Therefore, to affect the overall *Performance Score*, the *LCP* score must be at least 2, which would correspond to 1 point (rounding up 2*0.25=0,5) in the*Performance Score*.
 
 >ℹ️ When calculating the *Performance Score*, decimal values greater than 0.5 are rounded up to the next largest whole number.
 
@@ -102,7 +102,6 @@ These metrics are affected by conditions that don't necessarily make the page sl
 Notice that these three metrics have a huge impact on the overall *Performance Score* and account for 45 points of the total.
 
 ![atfp](https://user-images.githubusercontent.com/60782333/101225903-79f16680-3671-11eb-97e3-636d415af6fe.png)
-
 
 ## Everything is connected
 

@@ -8,9 +8,7 @@ updatedAt: "2022-08-02T00:03:06.982Z"
 ---
 Once you have installed the [VTEX IO Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/google-tag-manager), set it up in your store by configuring all the necessary variables, triggers, and tags.
 
-> ⚠️ Warning
->
-> If you are using the Google Tag Manager 2.x., **we strongly recommend migrating to the major 3.x.** Google Tag Manager 3.x tracks the entire user’s journey through the store, from viewing a product to purchasing it. Refer to [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) and follow the step-by-step.
+>⚠️ If you are using the Google Tag Manager 2.x., **we strongly recommend migrating to the major 3.x.** Google Tag Manager 3.x tracks the entire user’s journey through the store, from viewing a product to purchasing it. Refer to [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) and follow the step-by-step.
 
 ## Before you start
 
@@ -27,24 +25,21 @@ Once you have installed the [VTEX IO Google Tag Manager app](https://developers.
 
 GTM components trigger these events, allowing you to measure your store's data through. If you are not familiar with the GTM components, **we strongly recommend** checking the [Google Tag Manager documentation](https://support.google.com/tagmanager/answer/6103657?hl=en) before starting the setup.
 
-> ℹ Info
->
-> To track the events related to the search use on your site in Google Analytics, learn how to [set up Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking) in your VTEX IO store.
+>ℹ To track the events related to the search use on your site in Google Analytics, learn how to [set up Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking) in your VTEX IO store.
 
 Follow the steps below to create all necessary GTM components for your store.
 
 ## Step-by-step
 
 ### Step 1 - Creating variables
+
 Variables are little data points that you can use in tags or triggers to indicate when and where to fire a tag according to a trigger’s conditions. For example, you want to fire a tag on a page view, thus you need to decide if the tag will be fired on all page views or on a specific page.
 
 To start, create the essential variables to work within GTM: **Data Layer** and **Google Analytics settings.**
 
-- **Data Layer variables:** store and deliver data from your website to the GTM. Data such as page title and URL, user ID, product ID, product price, etc. 
+- **Data Layer variables:** store and deliver data from your website to the GTM. Data such as page title and URL, user ID, product ID, product price, etc.
 
 - **Google Analytics settings variables:** a template to set up Google Analytics tags in one place, instead of performing changes in each tag. These variables track page views, events, and ecommerce transactions.
-
-
 
 1. Open the [Google Tag Manager dashboard](https://tagmanager.google.com).
 2. Click on **Variables.**
@@ -61,20 +56,17 @@ To start, create the essential variables to work within GTM: **Data Layer** and 
 Repeat the instructions above, now changing the data layer variable name to each of the following variables, unless the **Data Layer Variable - currency** already declared in the example above:
 
 | Variable name | Value | Description | Tags that will use it |
-| --------------- | --------------- | --------------- |  --------------- | 
+| --------------- | --------------- | --------------- |  --------------- |
 | Data Layer Variable - currency | `currency` | Indicates the local currency for all transaction currency values. | `Google Ads Conversion Tracking` |
 | Data Layer Variable - transactionId |  `transactionId`  |  Indicates a unique transaction identifier. |  `Google Ads Conversion Tracking` |
 | Data Layer Variable - transactionTotal |  `transactionTotal`  | Indicates the total value transaction. |  `Google Ads Conversion Tracking` |
 
-
 | Variable name | Value | Description | Variables that will use it |
-| --------------- | --------------- | --------------- |  --------------- | 
+| --------------- | --------------- | --------------- |  --------------- |
 | Data Layer Variable - userId | `userId` | Enables the association of one or more sessions with a unique and persistent ID for your store’s users. | `Google Analytics` |
 | ecommerceV2 | `ecommerceV2`  |  Triggers events to track the entire user’s journey through the store, from viewing a product to purchasing it. **This variable is part of the major 3.x** of the GTM app. | `Google Analytics - Checkout and Order Placed` |
 
-
 There are two other variables, **The `originalLocation` and `originalReferrer`,** that you must create to **prevent GTM from making additional session identifiers every time a user navigates the website.** Learn how to create them in the following steps.
-
 
 ##### Creating the Original Location and Original Referrer variables
 
@@ -107,6 +99,7 @@ Once you have saved the `originalLocation` variable, create the `originalReferre
 7. Click on `Save`.
 
 #### Google Analytics Variables
+
 You will create one variable for the storefront - default - and another for the store’s checkout.
 
 | Variable type | Description | Tags that will use it |
@@ -114,8 +107,7 @@ You will create one variable for the storefront - default - and another for the 
 | Default - For storefront | Tracks the page’s view. | `Google Analytics - Enhanced Ecommerce - No Interaction`, `Google Analytics - Enhanced Ecommerce - Yes Interaction`, `Google Analytics - Page View` |
 | For store’s checkout | Tracks a user’s journey through the store, from viewing a product to purchasing it. | `Google Analytics - Checkout and Order Placed` |
 
-
-##### Default - For storefront:
+##### Default - For storefront
 
 1. In the **User-Defined Variables** box, click on `New`.
 2. Click on the **Variable Configuration** box and select **Google Analytics Settings**.
@@ -130,7 +122,7 @@ You will create one variable for the storefront - default - and another for the 
 7. Then, go to **Ecommerce**  and tick the `Enable Enhanced Ecommerce Features` and `Use data layer` boxes.
 8. Save your changes as **Google Analytics**.
 
-If you intend to use the [User ID feature of Google Analytics](https://support.google.com/analytics/answer/3123662#zippy=%2Cneste-artigo), you need to set a field using the `userId` variable previously created. 
+If you intend to use the [User ID feature of Google Analytics](https://support.google.com/analytics/answer/3123662#zippy=%2Cneste-artigo), you need to set a field using the `userId` variable previously created.
 To do this, click on Fields to set and add the `userId` field with its desired value.
 
 ##### For the store's checkout
@@ -146,23 +138,24 @@ To do this, click on Fields to set and add the `userId` field with its desired v
 9. Select the `{{ecommerceV2}}` option in **Read data from variable**.
 10. Save your changes as **Google Analytics - Checkout and Order Placed**.
 
-> ⚠️ Warning
->
-> If you have any Google Analytics tags using the Google Analytics Settings variables you have changed, apply the same changes above directly on the tags that need it.
+>⚠️ If you have any Google Analytics tags using the Google Analytics Settings variables you have changed, apply the same changes above directly on the tags that need it.
 
 ### Step 2 - Creating triggers
+
 Triggers are conditions to when you want your tags to fire. For example, if you want to activate the Google Ads conversion tag when a visitor signs up your store newsletter, you use a trigger to do it.
 To create a trigger, click on Trigger in the left menu and then on New:
 
 ![trigger-overview](https://user-images.githubusercontent.com/67270558/149345629-4cccb301-b13d-4349-b772-584e75d63686.png)
 
 #### Custom Events
+
 1. Click on the **Trigger Configuration** box.
 2. Select **Custom Event**.
 3. Type `addToCart` in the **Event Name** field;
 4. Click on `Save`and save it as **Custom Event - addToCart**.
 
 Repeat the instructions above, now changing the event name for each of the following event triggers:
+
 - `cart`
 - `email`
 - `orderPlaced`
@@ -202,7 +195,7 @@ To create a tag, click on Tags in the left menu and then on New:
 - `Custom Event - payment`
 - `Custom Event - profile`
 - `Custom Event - shipping`
-     
+
 9. Save the new tag as **Google Analytics - Checkout and Order Placed**.
 
 #### Google Analytics - Enhanced Ecommerce - No Interaction
@@ -267,41 +260,38 @@ To create a tag, click on Tags in the left menu and then on New:
 - Transaction ID: `{{Data Layer Variable - transactionId}}`
 - Currency Code: `{{Data Layer Variable - currency}}`
 
-> ⚠️ Warning
->
-> Remember to replace the values between the curly brackets according to your scenario.
+>⚠️ Remember to replace the values between the curly brackets according to your scenario.
 
-5. In the **Triggering** box, select the **Custom Event - orderPlaced** trigger.
-6. Save the new tag as **Google Ads Conversion Tracking**.
+1. In the **Triggering** box, select the **Custom Event - orderPlaced** trigger.
+2. Save the new tag as **Google Ads Conversion Tracking**.
 
 ### Step 4 - Publishing your changes
+
 Once you have set up the Google Analytics variables, triggers, and tags, follow Google's official guide [to submitting and publishing your store’s container](https://support.google.com/tagmanager/answer/6107163).
 
-### (Optional) Advanced configurations with Enhanced Ecommerce 
-
+### (Optional) Advanced configurations with Enhanced Ecommerce
 
 To make the product information consistent across all store areas and help capture the entire user's journey on the store, [Google Tag Manager 3.x.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) includes Enhanced Ecommerce properties to the product data schema as events. These properties enable stores to provide additional information, such as product printing, promotion, and sales data.
-
 
 | Prop name | Description |
 | --------------- | --------------- |
 | id | Product ID - Previously SKU ID. |
 | variant | SKU ID - Previously SKU Name. The variant of the product, e.g., Rebel pink. |
-| name | Product Name - Previously Product Name or SKU Name.| 
+| name | Product Name - Previously Product Name or SKU Name.|
 | quantity | Product quantity |
 | price | Product price. |
 | category | Product category, e.g., Apparel. |
-| brand	| Product brand. |
+| brand | Product brand. |
 | dimension1 | Product Reference ID. |
 | dimension2 | SKU Reference ID. |
 | dimension3 | SKU Name (does not include the Product Name). |
 
-The `dimension1`, `dimension2`, `dimension3` properties are custom dimensions that you can use to collect and analyze data that Google Analytics does not automatically create. 
+The `dimension1`, `dimension2`, `dimension3` properties are custom dimensions that you can use to collect and analyze data that Google Analytics does not automatically create.
 
 For more information about custom dimensions and Enhanced Ecommerce, refer to [Custom dimensions and metrics](https://support.google.com/analytics/answer/2709828?hl=en&ref_topic=2709827#configuration&zippy=%2Cin-this-article) and [Google Enhanced ecommerce official guide](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce#ecommerce-data) respectively.
 
-
 ## Related resources
-- [Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/google-tag-manager) 
+
+- [Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/google-tag-manager)
 - [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app)
 - [Setting up Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking)

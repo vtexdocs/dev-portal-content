@@ -6,11 +6,11 @@ hidden: false
 createdAt: "2021-04-04T22:02:14.003Z"
 updatedAt: "2022-08-02T00:03:06.608Z"
 ---
+
 According to your operating system, take the respective steps to install VTEX IO’s CLI on your machine.
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
-<br>
 
 - **Brew**
 
@@ -29,7 +29,6 @@ According to your operating system, take the respective steps to install VTEX IO
   brew install vtex
   ```
 
-<br>
 </details>
 
 <details>
@@ -39,7 +38,7 @@ According to your operating system, take the respective steps to install VTEX IO
 - **Tarball**
   
   >⚠️ Caution
-  > 
+  >
   > Before the installation, check if you have the [curl](https://curl.se/) command-line tool and library installed on your machine.
 
   Open the terminal and run the following command to install the VTEX IO CLI.
@@ -48,19 +47,16 @@ According to your operating system, take the respective steps to install VTEX IO
   curl -L https://vtex.io/vtexcli/install | sh
   ```
 
-<br>
 </details>
 
 <details>
   <summary><span class="fa fa-windows">&nbsp;</span>Windows</summary>
-<br>
 
 - **Installer for Windows**
   
 1. Download the appropriate installer for your Windows system ([64-bit installer](https://vtex.io/vtexcli/install/win-x64); [32-bit installer](https://vtex.io/vtexcli/install/win-x32)).
 2. Open the downloaded file and follow the instructions to finish the installation process.
 
-<br>
 </details>
 
 ## Installing the CLI via NPM
@@ -68,12 +64,11 @@ According to your operating system, take the respective steps to install VTEX IO
 Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can manually install it via [npm](https://www.npmjs.com/package/vtex). This method is recommended only for environments in which auto-updating VTEX IO's CLI is not ideal.
 
 >❗️Danger
-> 
+>
 > We strongly recommend using an alternative installation method. If you opt to use npm to install the VTEX IO CLI, keep in mind that the CLI won't be automatically updated, and the Node version on your machine might conflict with the one used by the CLI developers. Preferably, if you opt for any other installation method, VTEX IO's CLI will always be up-to-date, and you will avoid installation issues.
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
-  <br>
 
   1. Install **Homebrew** by following the instructions on [**Homebrew website**](https://brew.sh/index).
 
@@ -97,15 +92,13 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
   yarn global add vtex
   ```
   
-<br>
 </details>
 
 <details>
   <summary><span class="fa fa-linux">&nbsp;</span>Linux</summary>
-<br>
 
   1. Install **Node.js** by running the following command.
-   
+
   ```sh
   sudo apt install nodejs
   ```
@@ -117,12 +110,10 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
   sudo yarn global add vtex
   ```
 
-<br>
 </details>
 
 <details>
   <summary><span class="fa fa-windows">&nbsp;</span>Windows</summary>
-<br>
 
   1. Download and install [**Node.js**](https://nodejs.org/pt-br/download/).
   2. Download and install [**Yarn**](https://classic.yarnpkg.com/en/docs/getting-started).
@@ -133,9 +124,7 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
   yarn global add vtex
   ```
 
-<br>
 </details>
- 
 
 ## Verifying the installation
 
@@ -155,9 +144,8 @@ If the problem persists, check the following instructions.
 
 <details>
   <summary><code>Error: Cannot find module 'vtex'</code></summary>
-  <br>
 
-This error is related to [plugins](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-vtex-io-cli-plugins) detached from the VTEX IO's CLI base code. 
+This error is related to [plugins](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-vtex-io-cli-plugins) detached from the VTEX IO's CLI base code.
 
 Even though plugins are decoupled from VTEX IO's CLI, they rely on the CLI functionalities. Therefore, this error signalizes that these plugins are failing to access VTEX IO's CLI functionalities.
 
@@ -167,14 +155,16 @@ According to your operating system, run the following command in the terminal to
 
 - <span class="fa fa-apple">&nbsp;</span> MacOS
 
-  ```
+  ```sh
   ln -s /usr/local/Cellar/vtex/2.119.2/libexec /usr/local/Cellar/vtex/2.119.2/libexec/node_modules/vtex
   ```
+
 - <span class="fa fa-linux">&nbsp;</span>Linux
   
-  ```
+  ```sh
   ln -s /usr/local/lib/vtex /usr/local/lib/vtex/node_modules/vtex
   ```
 
-  
 If the error persists, don't hesitate to [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
+
+</details>

@@ -5,25 +5,26 @@ hidden: false
 createdAt: "2021-07-28T20:53:10.893Z"
 updatedAt: "2022-07-19T17:44:04.867Z"
 ---
-B2B Easy Set Up is an app that helps you quickly get your store configured for B2B ecommerce. 
+B2B Easy Set Up is an app that helps you quickly get your store configured for B2B ecommerce.
 
 ## Installation
 
 1. Download and install the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
-2. [Log in to your account] (https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-1---logging-in-to-your-vtex-account) with `vtex login {accountName}`.
-3. [Create a new workspace] (https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-2---creating-your-own-workspace) with `vtex use easysetupworkspace`.
-4. [Install the app on your store] (https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) with `vtex install vtex.easy-setup`.
+2. [Log in to your account] (<https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-1---logging-in-to-your-vtex-account>) with `vtex login {accountName}`.
+3. [Create a new workspace] (<https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-2---creating-your-own-workspace>) with `vtex use easysetupworkspace`.
+4. [Install the app on your store] (<https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app>) with `vtex install vtex.easy-setup`.
 [block:callout]
 {
   "type": "danger",
   "body": "We strongly advise that you do <strong>not run Easy Setup on a production environment</strong>. It will make <strong>irreversible changes</strong> and may delete some previous configurations on your store."
 }
 [/block]
+
 ## Store configuration
 
-Now that the Easy Setup app is installed in your store, proceed to operate the app on the Admin. 
+Now that the Easy Setup app is installed in your store, proceed to operate the app on the Admin.
 
-1. Open your Admin panel and navigate to **Store Settings** > **Easy Setup**. 
+1. Open your Admin panel and navigate to **Store Settings** > **Easy Setup**.
 2. On the right side of the screen, select which resources you want to apply on your store. If you want to configure all the options, select **All Resources**.
 
     > ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, you must not select the **Organizations** resource. Otherwise this will alter the user profile Master Data schema and prevent the B2B Suite apps from creating users.
@@ -96,6 +97,7 @@ Check out the [Resources](https://developers.vtex.com/vtex-developer-docs/docs/i
 ## Resources
 
 ### Users
+
 This resource creates some users with `priceTables` data.
 
 <details>
@@ -113,6 +115,7 @@ This resource creates some users with `priceTables` data.
 <hr></details>
 
 ### Brands
+
 This resource creates one brand.
 
 <details>
@@ -123,6 +126,7 @@ This resource creates one brand.
 <hr></details>
 
 ### Categories
+
 This resource creates seven categories.
 
 <details>
@@ -139,6 +143,7 @@ This resource creates seven categories.
 <hr></details>
 
 ### Collections
+
 This resource creates a collection with all products.
 
 <details>
@@ -151,6 +156,7 @@ This resource creates a collection with all products.
 <hr></details>
 
 ### Fields
+
 This resource creates a group with two fields containing a variety of field values for two specifics categories.
 
 <details>
@@ -169,6 +175,7 @@ This resource creates a group with two fields containing a variety of field valu
 <hr></details>
 
 ### Products
+
 This resource creates an assortment of products and SKUs and sets their specifications, images and attachments (related to customizations and subscriptions).
 
 <details><hr>
@@ -314,7 +321,7 @@ This resource creates an assortment of products and SKUs and sets their specific
                 <li>1un of Acer Aspire Z24-890-UA91 AIO Desktop - Windows 10 (880015)</li>
                 <li>1un of Acer Aspire TC-885-UA92 Desktop - Windows 10 (880017)</li></ul>
       </details>
-      <details><summary>Category: Power tools (9287)</summary><ul>    
+      <details><summary>Category: Power tools (9287)</summary><ul>
                 <li>Product Name: BLACK+DECKER 20V MAX Drill & Home Tool Kit, 68 Piece (LDX120PK),Black/Orange (880009)</li><ul>
                 <li>SKU Name: _same name_ (880090)</li></ul>
                 <br>
@@ -340,6 +347,7 @@ This resource creates an assortment of products and SKUs and sets their specific
 #### Attachments
 
 ##### Customization
+
 <details><hr>
   <summary>View Sample Data</summary>
     <ul>
@@ -349,6 +357,7 @@ This resource creates an assortment of products and SKUs and sets their specific
 <hr></details>
 
 ##### Subscriptions
+
 It is mandatory to [follow these additional steps](https://help.vtex.com/tutorial/como-configurar-assinatura-v2--1FA9dfE7vJqxBna9Nft5Sj#2-how-to-install-the-subscription-app) if you want to enable subscriptions.
 <details><hr>
   <summary>View Sample Data</summary>
@@ -359,9 +368,11 @@ It is mandatory to [follow these additional steps](https://help.vtex.com/tutoria
 <hr></details>
 
 ### Prices
+
 This resource sets sample prices and price tables.
 
 #### Most products
+
 <details><hr>
   <summary>View Sample Data</summary>
     <ul>
@@ -372,6 +383,7 @@ This resource sets sample prices and price tables.
     <hr></details>
 
 #### Quantity prices
+
 <details>
   <summary>View Sample Data</summary>
     <ul>
@@ -391,6 +403,7 @@ This resource sets sample prices and price tables.
 </details>
 
 #### Price Tables
+
 <details><hr>
   <summary>View Sample Data</summary>
     <ul>
@@ -405,8 +418,8 @@ This resource sets sample prices and price tables.
     </ul>
     <hr></details>
 
-
 ### Payments
+
 This resource sets 3 affiliations (Promissory, Test and CreditControlV2), the custom payment Promissories and the payment condition using them, the VISA credit card condition and the Customer Credit condition.
 <details><hr>
   <summary>View Sample Data</summary>
@@ -428,6 +441,7 @@ This resource sets 3 affiliations (Promissory, Test and CreditControlV2), the cu
 <hr></details>
 
 ### Benefits
+
 This resource sets a Progressive Discount promotion.
 <details><hr>
   <summary>View Sample Data</summary>
@@ -450,6 +464,7 @@ This resource sets a Progressive Discount promotion.
     <hr></details>
 
 ### Taxes
+
 This resource sets VAT and ICMS taxes.
 <details><hr>
   <summary>View Sample Data</summary>
@@ -471,6 +486,7 @@ This resource sets VAT and ICMS taxes.
     <hr></details>
 
 ### Logistics
+
 This resource updates the <strong>Logistics</strong> module using sample docks, warehouse and carrier.
 <details><hr>
   <summary>View Sample Data</summary>
@@ -498,4 +514,5 @@ This resource updates the <strong>Logistics</strong> module using sample docks, 
 <hr></details>
 
 ### Organizations
+
 This resource creates Master Data schemas that are necessary to set up **Roles and Permissions** in your store's Admin, as described in [this guide](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#create-master-data-schemas).

@@ -8,7 +8,7 @@ updatedAt: "2022-08-02T00:03:06.039Z"
 ---
 Events or Pixel Events are notifications automatically broadcasted by a website whenever users perform critical actions in your store, such as:
 
-- Adding an item to the cart (`addToCart` event). 
+- Adding an item to the cart (`addToCart` event).
 - Removing an item from the cart (`removeItem` event).
 - Accessing a loaded page (`pageView` event).
 - Seeing a product data (`productImpression` event).
@@ -21,11 +21,11 @@ The `customPixelEventId` prop works as an event sender and receiver depending on
 
 In the table below, you can find the list of blocks that currently accept the `customPixelEventId` as means to work with events, as well as their behavior when declaring the prop:
 
-| Block name | Behavior | 
-| ---------- | --------- | 
+| Block name | Behavior |
+| ---------- | --------- |
 | `add-to-cart-button` | Sends an event whenever it is clicked on. |
 | `minicart.v2` | Receives an event and behave on the UI accordingly. |
-| `drawer-trigger` | Sends an event whenever it is clicked on. | 
+| `drawer-trigger` | Sends an event whenever it is clicked on. |
 | `drawer` | Receives an event and behave on the UI accordingly. |
 | `modal-trigger` | Sends an event whenever it is clicked on. |
 | `modal-layout` | Receives an event and behave on the UI accordingly. |
@@ -36,7 +36,7 @@ In the step by step below, you are going to learn how events and the `customPixe
 
 ## Step by step
 
-1. Make sure the apps whose blocks are responsible for sending and receiving the desired event are already listed as dependencies in the theme's `manifest.json` file: 
+1. Make sure the apps whose blocks are responsible for sending and receiving the desired event are already listed as dependencies in the theme's `manifest.json` file:
 
 ```json
 "dependencies": {
@@ -55,7 +55,7 @@ In the step by step below, you are going to learn how events and the `customPixe
     }
   },
 }
-```   
+```
 
 3. Declare the `customPixelEventId prop in the block responsible for listening to the desired event, passing as its value the same unique ID previously declared in the sender block. For example:
 

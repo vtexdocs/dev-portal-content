@@ -15,7 +15,7 @@ Stores are made up of several different pages, each one having a different layou
 - `store.login` - Login page
 - `store.orderplaced` - Order Placed page
 
->ℹ️ You can manage each page's title and template in the Pages section, within the admin's CMS. 
+>ℹ️ You can manage each page's title and template in the Pages section, within the admin's CMS.
 
 However, you may want to create a new custom page to attend your store's specific needs. In this case, a new URL and content to go with it must be created by you from scratch.  
 
@@ -30,7 +30,7 @@ Follow the steps below and learn how to define a different layout and path for a
 
 ### Creating the new template
 
-A template sets the page layout, so if you want to create a custom page for your store you also will need to create a new template for it. 
+A template sets the page layout, so if you want to create a custom page for your store you also will need to create a new template for it.
 
 In order to do so, you first must choose one of three template types to host your new page:
 
@@ -40,7 +40,7 @@ In order to do so, you first must choose one of three template types to host you
 
 - **Standard** - For pages with no specific product content. For instance, the Home page.
 
->ℹ️ Even though `Standard` pages are not directly linked to any specific product, they may display shelves or lists of any chosen group of products. The main difference is that the group of products shown in such page does not depend on the URL query, but only on the setting of the shelf itself. 
+>ℹ️ Even though `Standard` pages are not directly linked to any specific product, they may display shelves or lists of any chosen group of products. The main difference is that the group of products shown in such page does not depend on the URL query, but only on the setting of the shelf itself.
 
 Let's suppose we are going to create a simple About Us page for a store. As such the page is not directly connected to any specific product, we should create a custom `Standard` template for it with an image in its left column and a a title and text content in its right column:
 
@@ -106,11 +106,11 @@ To learn more about how the Flex Layout works, access its [documentation](https:
 
 ### Creating the new page's path
 
-Now that your page layout has been defined in the store theme code, the next step is to define the page's path to make the page accessible. You can define it through direct code changes or by using the account's admin. 
+Now that your page layout has been defined in the store theme code, the next step is to define the page's path to make the page accessible. You can define it through direct code changes or by using the account's admin.
 
 #### Through code changes
 
-1. In your theme's source code, access the `routes.json` file. It can be found in the `store` folder. 
+1. In your theme's source code, access the `routes.json` file. It can be found in the `store` folder.
 2. There, add a path to the recently created template's JSON:
 
 ```json

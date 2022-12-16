@@ -5,7 +5,8 @@ hidden: false
 createdAt: "2022-07-05T19:36:42.104Z"
 updatedAt: "2022-08-03T13:10:23.602Z"
 ---
-A JSON Schema defines how your data will be validated. Further information can be found in [External documentation on JSON Schemas](http://json-schema.org), this article on [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema), and our article about the [Master Data schema lifecycle](doc:master-data-schema-lifecycle).
+
+A JSON Schema defines how your data will be validated. Further information can be found in [External documentation on JSON Schemas](http://json-schema.org), this article on [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema), and our article about the [Master Data schema lifecycle](https://developers.vtex.com/vtex-rest-api/reference/master-data-schema-lifecycle).
 
 Use the following API requests to manage your Master Data schemas:
 

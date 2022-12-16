@@ -11,22 +11,8 @@ To present an efficient search result to your customer, it is essential to under
 
 To get your customers' most searched terms, you must use the [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches) endpoint. You can filter the endpoint response by defining the term's `locale` on the query.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/eab93dc-image.png",
-        "image.png",
-        1342,
-        640,
-        "#000000"
-      ],
-      "caption": "Example of most searched terms on a store"
-    }
-  ]
-}
-[/block]
+![Example of most searched terms on a store](https://files.readme.io/eab93dc-image.png)
+
 The response will return the most searched terms by popularity order and the number of searches for each term.
 
 **Response body example**
@@ -81,22 +67,9 @@ The response will return the most searched terms by popularity order and the num
 ## Get autocomplete suggested terms and similar attributes
 
 To get information about the [autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-autocomplete) suggested terms and similar attributes presented to your customers, use the [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_autocomplete-suggestions) endpoint. You can filter the endpoint response by defining the term's ``locale` and``query``.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3d888dd-image_3.png",
-        "image (3).png",
-        1358,
-        692,
-        "#000000"
-      ],
-      "caption": "Example of autocomplete suggested terms and similar attributes"
-    }
-  ]
-}
-[/block]
+
+![Example of autocomplete suggested terms and similar attributes](https://files.readme.io/3d888dd-image_3.png)
+
 The response will return the searched terms by popularity order and the corresponding autocomplete suggestions for each term.
 
 **Response body example**

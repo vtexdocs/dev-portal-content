@@ -19,42 +19,39 @@ To make sure the content of the `utm_source` parameter is being sent to the Chec
 2. Enter the **Developer tools** (**F12** in Chrome, if you are in Windows, or **Cmd+Opt+I** on a Mac)
 3. Go to the **Application** tab.
 4. Open the store's website cookies and look for the **IPS** cookie.
+
 [block:image]
 {
   "images": [
     {
       "image": [
-        "https://files.readme.io/7b613ab-utmsource1.PNG",
-        "utmsource1.PNG",
-        1741,
-        834,
-        "#a5a6a6"
+        "https://files.readme.io/7b613ab-utmsource1.PNG"
       ]
     }
   ]
 }
 [/block]
-5. Go to a product page and add it to the cart.
-6. Access the cart.
-7. Refresh the page and monitor the requests on the **Network** tab (located in Developer tools).
-8. In the preview, open the `marketingData` node.
-9. Check the value of the `utmSource` field.
+
+1. Go to a product page and add it to the cart.
+2. Access the cart.
+3. Refresh the page and monitor the requests on the **Network** tab (located in Developer tools).
+4. In the preview, open the `marketingData` node.
+5. Check the value of the `utmSource` field.
+
 [block:image]
 {
   "images": [
     {
       "image": [
-        "https://files.readme.io/9a5c682-utmsource2.PNG",
-        "utmsource2.PNG",
-        1038,
-        771,
-        "#a3a2a2"
+        "https://files.readme.io/9a5c682-utmsource2.PNG"
       ]
     }
   ]
 }
 [/block]
+
 The presence of the `utmSource` field with the same value as `utm_source` means that the information was correctly received by Checkout. If the utmSource` field was empty in the orderForm, it would indicate that the value was not sent to the Checkout.
+
 [block:callout]
 {
   "type": "info",

@@ -15,10 +15,8 @@ While developing in an account, we should be aware of all its installed or linke
 
 `vtex list`
 
-VTEX IO CLI will then display a table containing the account’s installed and linked apps, in addition to their respective version, as shown in the example below: 
+VTEX IO CLI will then display a table containing the account’s installed and linked apps, in addition to their respective version, as shown in the example below:
 
 ![listing-apps](https://user-images.githubusercontent.com/52087100/67044546-dfe3fd00-f102-11e9-83d7-936f229b7b26.png)
 
-<div class=“alert alert-warning”>
-Note that the table is divided into apps related to an <strong>Edition</strong>, apps independently <strong>installed</strong> and <strong>linked</strong> apps.
-</div>
+>⚠️ Note that the table is divided into apps related to an **Edition**, apps independently installed and linked.

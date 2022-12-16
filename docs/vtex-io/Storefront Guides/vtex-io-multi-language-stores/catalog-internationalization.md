@@ -8,12 +8,9 @@ updatedAt: "2022-06-14T15:14:52.164Z"
 In this step-by-step, we teach you how to overwrite an automatic message translation from the Catalog, such as a product name or a product description, with a more specific and representative content of your store.
 
 As a background, catalog messages are translatable text strings related to the catalog of a store, saved as external data in the [Catalog API](https://developers.vtex.com/reference/catalog-api-overview).
-[block:callout]
-{
-  "type": "info",
-  "body": "The Catalog API is one of the multiple REST APIs that compose the VTEX Administrative panel. This particular API is responsible for manipulating a store’s sales channels, categories, brands, products, SKUs, and specifications."
-}
-[/block]
+
+>ℹ️ The Catalog API is one of the multiple REST APIs that compose the VTEX Administrative panel. This particular API is responsible for manipulating a store’s sales channels, categories, brands, products, SKUs, and specifications.
+
 The following list contains the settings from the Catalog API that are internally set as translatable. Meaning that, given a locale, an automatic translation fetched from the *automatic translation service* is available.
 
 - **Category:** name, keywords (similar words), page title (tag title), meta tag description, and the URL slug (cross-border stores only).
@@ -23,7 +20,7 @@ The following list contains the settings from the Catalog API that are internall
 - **[SKU or product specification](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP):** name, description, and values.
 - **[Category group](https://help.vtex.com/en/tutorial/creating-category-groups--tutorials_246)** name.
 
-However, we understand that considering literal translations and cultural factors, you may want to overwrite automatic translations with specific and representative content of your store. 
+However, we understand that considering literal translations and cultural factors, you may want to overwrite automatic translations with specific and representative content of your store.
 
 This is possible via the `catalog-graphql` app, which is the GraphQL interface of the Catalog API.
 
@@ -35,7 +32,7 @@ Follow this step by step if you aim to translate text messages from your store's
 
 2. Access the **GraphQL admin IDE** section of the desired account. You will find it in the admin's side-bar menu:
 
-<img style="box-shadow: 0 3px 9px 0 rgba(61, 62, 64, 0.2);" src="https://user-images.githubusercontent.com/52087100/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5.png">
+<img style="box-shadow: 0 3px 9px 0 rgba(61, 62, 64, 0.2);" src="https://user-images.githubusercontent.com/52087100/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5.png"/>
 
 3. From the dropdown list, choose the `vtex.catalog-graphql` app.
 4. Click on  *Query Variables* at the bottom of the page.
@@ -54,7 +51,7 @@ Check the following gif of the complete process of overwriting automatic transla
 
 Fill in the main text box with the following mutation command:
 
-```
+```gql
 mutation translate($args:CategoryInputTranslation, $locale:Locale){
   translateCategory(category:$args,locale:$locale)
 }
@@ -81,17 +78,15 @@ According to the following example and the following explanations, fill in the *
 }
 ```
 
-  - `id`: the category ID. Every category in your store has a unique ID that can be found under *Catalog* > *Categories* in the admin.
-  - `name`: category name.
-  - `title`: category page meta title.
-  - `description`: detailed description about the category.
-  - `keywords`: an object containing the translations of **each** substitute word of the category.
-  - `linkId`: the `textLink` (unless your store is a cross-border one, it must **not** be translated).
-  - `locale`: target translation locale.
+- `id`: the category ID. Every category in your store has a unique ID that can be found under *Catalog* > *Categories* in the admin.
+- `name`: category name.
+- `title`: category page meta title.
+- `description`: detailed description about the category.
+- `keywords`: an object containing the translations of **each** substitute word of the category.
+- `linkId`: the `textLink` (unless your store is a cross-border one, it must **not** be translated).
+- `locale`: target translation locale.
 
-<div class="alert alert-info">
-If your store is a cross-border one, keep in mind that the <code>linkId</code> is the slug used to build the category URL. Hence, an alias with the translated URL slug of this category will be automatically created in the <a href="https://developers.vtex.com/docs/rewriter">Rewriter</a> app for the binding associated to the target locale. The alias is stored in the <code>resolveAs</code> field of its related internal route in the Rewriter app. For example: a category registered under the <code>eletronics</code> slug as in <code>http://{storename}.com/us/eletronics/d</code>, could have its slug translated to <code>eletronicos</code> for the <code>pt-BR</code> binding, as in <code>http://{storename}.com/br/eletronicos/d</code>.
-</div>
+>ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the category URL. Hence, an alias with the translated URL slug of this category will be automatically created in the [Rewriter](https://developers.vtex.com/docs/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a category registered under the `eletronics` slug as in `http://{storename}.com/us/eletronics/d`, could have its slug translated to `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
 
 ## Brand
 
@@ -99,7 +94,7 @@ If your store is a cross-border one, keep in mind that the <code>linkId</code> i
 
 Fill in the main text box with the following mutation command:
 
-```
+```gql
 mutation translate($args:BrandInputTranslation, $locale:Locale){
   translateBrand(brand:$args,locale:$locale)
 }
@@ -122,12 +117,12 @@ According to the following example and the following explanations, fill in the *
 }
 ```
 
-  - `id`: the brand ID. Every brand in your store has a unique ID that can be found under *Catalog* > *Brands* in the admin.
-  - `name`: brand name.
-  - `text`: brand description (meta tag description).
-  - `siteTitle`: brand page title (tag title).
-  - `keywords`: an object containing the translations of **each** substitute word of the brand.
-  - `locale`: target translation locale.
+- `id`: the brand ID. Every brand in your store has a unique ID that can be found under *Catalog* > *Brands* in the admin.
+- `name`: brand name.
+- `text`: brand description (meta tag description).
+- `siteTitle`: brand page title (tag title).
+- `keywords`: an object containing the translations of **each** substitute word of the brand.
+- `locale`: target translation locale.
 
 ## Product
 
@@ -163,19 +158,17 @@ According to the following example and the following explanations, fill in the *
 }
 ```
 
-  - `id`: the product ID. Every product in your store has a unique ID that can be found under *Catalog* > *Products and SKUs* in the admin.
-  - `name`: product name.
-  - `description`: product description.
-  - `shortDescription`: additional short description.
-  - `title`: page title (tag title)
-  - `metaTagDescription`: description (meta tag description).
-  - `keywords`: an object containing the translations of **each** substitute word of the product.
-  - `linkId`: the `textLink` (unless your store is a cross-border one, it must **not** be translated).
-  - `locale`: target translation locale.
- 
-<div class="alert alert-info">
-If your store is a cross-border one, keep in mind that the <code>linkId</code> is the slug used to build the product URL. Hence, an alias with the translated URL slug of this product will be automatically created in the <a href ="https://developers.vtex.com/docs/rewriter">Rewriter</a> app for the binding associated to the target locale. The alias is stored in the <code>resolveAs</code> field of its related internal route in the Rewriter app. For example: a product registered under the <code>blue-top-retro-camera</code> slug as in <code>http://{storename}.com/us/blue-top-retro-camera/p</code>, could have its slug translated to <code>camera-retro-azul</code> for the <code>pt-BR</code> binding, as in <code>http://{storename}.com/br/camera-retro-azul/p</code>.
-</div>
+- `id`: the product ID. Every product in your store has a unique ID that can be found under *Catalog* > *Products and SKUs* in the admin.
+- `name`: product name.
+- `description`: product description.
+- `shortDescription`: additional short description.
+- `title`: page title (tag title)
+- `metaTagDescription`: description (meta tag description).
+- `keywords`: an object containing the translations of **each** substitute word of the product.
+- `linkId`: the `textLink` (unless your store is a cross-border one, it must **not** be translated).
+- `locale`: target translation locale.
+
+>ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the product URL. Hence, an alias with the translated URL slug of this product will be automatically created in the [Rewriter](https://developers.vtex.com/docs/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a product registered under the `blue-top-retro-camera` slug as in `http://{storename}.com/us/blue-top-retro-camera/p`, could have its slug translated to `camera-retro-azul` for the `pt-BR` binding, as in `http://{storename}.com/br/camera-retro-azul/p`.
 
 ## SKU
 
@@ -203,9 +196,9 @@ According to the following example and the following explanations, fill in the *
 }
 ```
 
-  - `id`: the SKU ID. Every product in your store has a unique ID that can be found under *Catalog* > *Products and SKUs* in the admin.
-  - `name`: the SKU name.
-  - `locale`: target translation locale.
+- `id`: the SKU ID. Every product in your store has a unique ID that can be found under *Catalog* > *Products and SKUs* in the admin.
+- `name`: the SKU name.
+- `locale`: target translation locale.
 
 ## SKU or product [specification](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP)
 
@@ -213,7 +206,7 @@ According to the following example and the following explanations, fill in the *
 
 Fill in the main text box with the following mutation command:
 
-```
+```graphql
 mutation translate($args:FieldInputTranslation, $locale:Locale){
   translateField(field:$args,locale:$locale)
 }
@@ -222,7 +215,7 @@ mutation translate($args:FieldInputTranslation, $locale:Locale){
 ### Query Variables
 
 According to the following example and the following explanations, fill in the *Query Variables* section with the desired translations of each parameter.
- 
+
 ```json
 {
   "args":{
@@ -233,9 +226,9 @@ According to the following example and the following explanations, fill in the *
 }
 ```
 
-  - `fieldId`: the product or SKU specification field ID. Every product or SKU specification in your store has a unique ID that can be found following this [orientation for SKU specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en) or this [orientation for product specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4fcdmJzQ6QYA9zWf3bLWin).
-  - `name`: the specification name.
-  - `locale`: target translation locale.
+- `fieldId`: the product or SKU specification field ID. Every product or SKU specification in your store has a unique ID that can be found following this [orientation for SKU specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en) or this [orientation for product specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4fcdmJzQ6QYA9zWf3bLWin).
+- `name`: the specification name.
+- `locale`: target translation locale.
 
 ## [Specification](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP) values
 
@@ -243,7 +236,7 @@ According to the following example and the following explanations, fill in the *
 
 Fill in the main text box with the following mutation command:
 
-```
+```gql
 mutation translate($args:FieldValueInputTranslation, $locale:Locale){
   translateFieldValues(fieldValues:$args,locale:$locale)
 }
@@ -272,15 +265,15 @@ According to the following example and the following explanations, fill in the *
 }
 ```
 
-  - `fieldId`: the product or SKU specification field ID. Every product or SKU specification in your store has a unique ID that can be found following this [orientation for SKU specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en) or this [orientation for product specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4fcdmJzQ6QYA9zWf3bLWin).  
-  - `fieldValuesNames`: an object containing:
-      - `id`: the specification value ID.
-      - `name`: the specification value name.
-  - `locale`: target translation locale.
+- `fieldId`: the product or SKU specification field ID. Every product or SKU specification in your store has a unique ID that can be found following this [orientation for SKU specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en) or this [orientation for product specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4fcdmJzQ6QYA9zWf3bLWin).  
+- `fieldValuesNames`: an object containing:
+  - `id`: the specification value ID.
+  - `name`: the specification value name.
+- `locale`: target translation locale.
 
-:warning: *Specification values ID can be found by running the following query:*
+>⚠️ *Specification values ID can be found by running the following query:*
 
-```        
+```gql
 query{
   fieldValues(fieldId:"24"){
     fieldValueId
@@ -297,7 +290,7 @@ query{
 
 Fill in the main text box with the following mutation command:
 
-``` 
+```graphql
 mutation translate($args: GroupInputTranslation, $locale:Locale) {
   translateGroup(group: $args, locale:$locale)
 }
@@ -307,7 +300,7 @@ mutation translate($args: GroupInputTranslation, $locale:Locale) {
 
 According to the following example and the following explanations, fill in the Query Variables section with the desired translations of each parameter.
 
-```
+```json
 {
   "args":{
     "groupId": "14",
@@ -321,9 +314,9 @@ According to the following example and the following explanations, fill in the Q
 - `name`: the category group name.
 - `locale`: target translation locale.
 
-:warning: *Category group IDs can be found by running the following query:*
+>⚠️ *Category group IDs can be found by running the following query:*
 
-```
+```gql
 query{
   groupsByCategory(categoryId:1){
     id
