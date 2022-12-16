@@ -41,7 +41,7 @@ In both cases, the user can fill the field `value` to set the amount of credit y
         <td><code>provider</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td></code></td>
+        <td></td>
     </tr>
  <tr>
         <td><code>_self</code></td>

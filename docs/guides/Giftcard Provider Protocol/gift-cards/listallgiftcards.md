@@ -25,56 +25,48 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>id</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>grandTotal</code></td>
         <td>number</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>relationName</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>redemptionCode</code></td>
         <td>string</td>
         <td></td>
         <td>Minimum of six characters</td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>discounts</code></td>
         <td>number</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>shipping</code></td>
         <td>number</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>taxes</code></td>
         <td>number</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>items</code></td>
         <td>array</td>
         <td></td>
@@ -153,7 +145,6 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>payments</code></td>
         <td>array</td>
         <td></td>
@@ -196,7 +187,6 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>sc</code></td>
         <td>string</td>
         <td></td>
@@ -281,70 +271,60 @@ updatedAt: "2021-09-27T15:21:11.609Z"
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>id</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>email</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>  
     <tr>
-        <tr>
         <td>&#x21B3; <code>name</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>  
     <tr>
-        <tr>
         <td>&#x21B3; <code>ip</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>  
     <tr>
-        <tr>
         <td>&#x21B3; <code>userAgent</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>  
     <tr>
-        <tr>
         <td>&#x21B3; <code>document</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>  
     <tr>
-        <tr>
         <td>&#x21B3; <code>documentType</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>  
     <tr>
-        <tr>
         <td>&#x21B3; <code>corporateName</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>  
     <tr>
-        <tr>
         <td>&#x21B3; <code>tradeName</code></td>
         <td>string</td>
         <td></td>
         <td></td>
     </tr>  
     <tr>
-        <tr>
         <td>&#x21B3; <code>corporateDocument</code></td>
         <td>string</td>
         <td></td>
@@ -391,56 +371,48 @@ GIFT CARD SUMMARY OBJECTS
         <td>Gift card <code>id</code></td>
     </tr>
     <tr>
-        <tr>
         <td><code>provider</code></td>
         <td>string</td>
         <td>Yes</td>
         <td><code>provider</code> name</td>
     </tr>
     <tr>
-        <tr>
         <td><code>balance</code></td>
         <td>number</td>
         <td>Yes</td>
         <td>Gift card current <code>balance</code></td>
     </tr>
     <tr>
-        <tr>
         <td><code>totalBalance</code></td>
         <td>number</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td><code>relationName</code></td>
         <td>string</td>
         <td></td>
         <td>Represents the relationship between the client and the store</td>
     </tr>
     <tr>
-        <tr>
         <td><code>caption</code></td>
         <td>string</td>
         <td></td>
         <td>The <code>caption</code> of the card</td>
-    </tr>  
+    </tr>
     <tr>
-        <tr>
         <td><code>groupName</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr>  
+    </tr>
     <tr>
-        <tr>
         <td><code>_self</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
     </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>href</code></td>
         <td>string</td>
         <td>Yes</td>

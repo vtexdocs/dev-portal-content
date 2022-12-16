@@ -58,7 +58,6 @@ The messages contained in logs should follow the standard defined below, allowin
 # Log messages
 
 Each step of the catalog integration requires a specific set of Log messages. The table describes all messages, for each scenario within the integration.
-
 <table>
     <tr>
         <td>Code</td>
@@ -97,9 +96,9 @@ Each step of the catalog integration requires a specific set of Log messages. Th
                 simulation</a> API, the SKU is not retrieved in the `items` object.</td>
         <td>Oops, we couldn’t obtain the information of SKU {{skuId}}. Please check if the items below are configured
             correctly in the VTEX platform.<ol>
-                <li>In product registration, check if it is associated with the trade policy.
+                <li>In product registration, check if it is associated with the trade policy.</li>
                 <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment
-                        simulation</a>, check if the carrier attending the SKU exists.
+                        simulation</a>, check if the carrier attending the SKU exists.</li>
                 <li>In price configuration, check if there’s a price associated with the trade policy.</li>
             </ol>
         </td>
@@ -118,10 +117,10 @@ Each step of the catalog integration requires a specific set of Log messages. Th
         <td>F</td>
         <td>When checking if the SKU is inactive \\</td>
         <td>Oops, the SKU is inactive in VTEX. We recommend that you check:<ol>
-                <li>In Catalog, identify the SKU and check if the field “Activate SKU” is checked.
-                <li>In Catalog, check if the image is uploaded.
+                <li>In Catalog, identify the SKU and check if the field “Activate SKU” is checked.</li>
+                <li>In Catalog, check if the image is uploaded.</li>
                 <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment
-                        simulation</a>, check if the carrier attending the SKU exists.
+                        simulation</a>, check if the carrier attending the SKU exists.</li>
                 <li>On price configuration, check if there’s a price associated with the trade policy.</li>
             </ol>
         </td>
@@ -147,8 +146,8 @@ Each step of the catalog integration requires a specific set of Log messages. Th
         <td>I</td>
         <td>When transforming Order data to the format demanded by the marketplace.</td>
         <td>Oops, we couldn't prepare the SKU registration in the marketplace due to {{list all errors occurred during
-            data transformation, and in case any data infringes marketplace rules}}.<p>(Connectors should list all
-                errors at once, so the user knows all actions needed to send the SKU).</td>
+            data transformation, and in case any data infringes marketplace rules}}. (Connectors should list all
+            errors at once, so the user knows all actions needed to send the SKU).</td>
         <td>Error</td>
         <td>400</td>
     </tr>
@@ -187,8 +186,8 @@ Each step of the catalog integration requires a specific set of Log messages. Th
         <td>When sending the product registration to the marketplace, and obtaining failure for sending incorrect data.
         </td>
         <td>Oops, we couldn't prepare the SKU registration in the marketplace due to {list all errors occurred during
-            data transformation, and in case any data infringes marketplace rules}.<p>(Connectors should list all errors
-                at once, so the user knows all actions needed to send the SKU).</td>
+            data transformation, and in case any data infringes marketplace rules}. (Connectors should list all errors
+            at once, so the user knows all actions needed to send the SKU).</td>
         <td>Error</td>
         <td>400</td>
     </tr>

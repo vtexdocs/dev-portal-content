@@ -209,7 +209,7 @@ updatedAt: "2021-11-24T20:47:20.426Z"
     </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>estimatedDate</code></td>
-        <td><strong>date</strong> <strong>2028-06-15T21:15:07</td>
+        <td><strong>date</strong> 2028-06-15T21:15:07</td>
         <td>Yes</td>
         <td>Estimated shipping date ISO 8601</td>
     </tr>
@@ -317,7 +317,7 @@ updatedAt: "2021-11-24T20:47:20.426Z"
     </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>categoryName</code></td>
-        <td><strong>string</strong> <strong>max 255</td>
+        <td><strong>string</strong> max 255</td>
          <td>Yes</td>
         <td>Category name for the Item. Configured by each store</td>
     </tr>
@@ -371,7 +371,7 @@ updatedAt: "2021-11-24T20:47:20.426Z"
     </tr>
     <tr>
         <td>&#x21B3;<code>method</code></td>
-        <td><strong>string</strong> <strong>max 255</td>
+        <td><strong>string</strong> max 255</td>
          <td>Yes</td>
         <td>Payment method used for the buyer.  See <strong> Payment Methods <strong> </td>
     </tr>

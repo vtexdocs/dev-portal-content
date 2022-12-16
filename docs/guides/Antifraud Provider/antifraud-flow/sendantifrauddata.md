@@ -308,7 +308,7 @@ VTEX expects that your antifraud provider process this request and retrieves the
     </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3;<code>categoryName</code></td>
-        <td><strong>string</strong> <strong>max 255</td>
+        <td><strong>string</strong> max 255</td>
          <td>Yes</td>
         <td>Category name for the Item. Configured by each store</td>
     </tr>
@@ -362,7 +362,7 @@ VTEX expects that your antifraud provider process this request and retrieves the
     </tr>
     <tr>
         <td>&#x21B3;<code>method</code></td>
-        <td><strong>string</strong> <strong>max 255</td>
+        <td><strong>string</strong> max 255</td>
          <td>Yes</td>
         <td>Payment method used for the buyer.  See <strong> Payment Methods <strong> </td>
     </tr>

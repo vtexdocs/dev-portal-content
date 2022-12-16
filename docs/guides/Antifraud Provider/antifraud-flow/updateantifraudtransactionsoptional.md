@@ -169,7 +169,7 @@ order flow will follow your response status in order to cancel or approve the tr
     </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒⇒&nbsp;&nbsp;<code>estimatedDate</code></td>
-        <td><strong>date 2028-06-15T21:15:07</td>
+        <td><strong>date</strong> 2028-06-15T21:15:07</td>
         <td>Estimated shipping date ISO 8601</td>
     </tr>
     <tr>

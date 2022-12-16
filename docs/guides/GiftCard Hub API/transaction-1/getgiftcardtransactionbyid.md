@@ -213,7 +213,6 @@ updatedAt: "2020-07-16T17:44:11.963Z"
         <td>Yes</td>
         <td></td>
     </tr>
-    </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp; &#x21B3<code>postalCode</code></td>
         <td>string</td>

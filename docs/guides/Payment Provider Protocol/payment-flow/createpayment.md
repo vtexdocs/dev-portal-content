@@ -667,7 +667,7 @@ The same request, for the same `paymentId`, can be executed several times, so yo
         <td><code>barCodeImageType</code></td>
         <td>string</td>
         <td></td>
-        <td>The bank invoice barcode image type. For instance, "i25" for Brazilian <em>Boleto Bancário</em>. Should only be present when the payment is made via bank invoice.</em></td>
+        <td>The bank invoice barcode image type. For instance, "i25" for Brazilian <em>Boleto Bancário</em>. Should only be present when the payment is made via bank invoice.</td>
     </tr>
     <tr>
         <td><code>barCodeImageNumber</code></td>

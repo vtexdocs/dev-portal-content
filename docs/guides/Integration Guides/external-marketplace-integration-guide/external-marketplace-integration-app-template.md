@@ -76,17 +76,17 @@ Follow the list below to substitute placeholders properly. Once placeholders are
     <tr>
         <td><code>appName</code></td>
         <td>Name of the app. This value must follow the kebab case (only minor case letters and the `-` character).</td>
-        <td><ol><li>manifest.json<li>navigation.json<li>routes.json<li>node/service.json<li>node/constants/variables.ts<li>react/package.json</li></ol></td>
+        <td><ol><li>manifest.json</li><li>navigation.json</li><li>routes.json</li><li>node/service.json</li><li>node/constants/variables.ts</li><li>react/package.json</li></ol></td>
     </tr>
     <tr>
         <td><code>appVendor</code></td>
         <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX `accountName`.</td>
-        <td><ol><li>manifest.json<li>navigation.json<li>node/routes.json<li>node/service.json<li>node/constants/variables.json</li></ol></td>
+        <td><ol><li>manifest.json</li><li>navigation.json</li><li>node/routes.json</li><li>node/service.json</li><li>node/constants/variables.json</li></ol></td>
     </tr>
     <tr>
         <td><code>appTitle</code></td>
         <td>Title of the app that will appear in the VTEX Admin’s screen and left navigation, once the seller accesses it.</td>
-        <td><ol><li>messages/context.json<li>messages/en.json<li>messages/pt.json<li>messages/es.json<li>node/constants/variables.ts</li></ol></td>
+        <td><ol><li>messages/context.json</li><li>messages/en.json</li><li>messages/pt.json</li><li>messages/es.json</li><li>node/constants/variables.ts</li></ol></td>
     </tr>
     <tr>
         <td><code>connectorEndpoint</code></td>
@@ -94,14 +94,14 @@ Follow the list below to substitute placeholders properly. Once placeholders are
             <code>https://externalconnector.com</code> or relative URL
             <code>https://externalconnector.com/api/vtex</code>.</td>
         <td>
-            <ol><li>node/constants/variables.ts<li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx</li></ol>
+            <ol><li>node/constants/variables.ts</li><li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx</li></ol>
         </td>
     </tr>
     <tr>
         <td><code>connectorEndpointHost</code></td>
         <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>.
         </td>
-        <td><ol><li>manifest.json</ol></td>
+        <td><ol><li>manifest.json</li></ol></td>
     </tr>
     <tr>
         <td><code>affiliateId</code></td>

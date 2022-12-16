@@ -118,8 +118,7 @@ The table below describes the fields that were added or changed in the order's d
     <tr>
         <td>origin</td>
         <td>Changed</td>
-        <td>The field 'origin' will come with `chain` as a value, and not `fulfillment` or `marketplace` like before.
-        </td>
+        <td>The field 'origin' will come with `chain` as a value, and not `fulfillment` or `marketplace` like before.</td>
     </tr>
     <tr>
         <td>paymentData</td>

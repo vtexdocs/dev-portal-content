@@ -260,9 +260,7 @@ The table below describes the fields that were added or changed in the order's d
     <tr>
         <td>affiliateId</td>
         <td>New</td>
-        <td>The <a href="https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0">afiliate</a>
-            identification code created by the seller. The seller must inform this ID to the marketplace so that the
-            marketplace can complete the configuration process.</td>
+        <td>The <a href="https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0">afiliate</a> identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.</td>
     </tr>
     <tr>
         <td>marketplacePaymentValue</td>
@@ -277,8 +275,7 @@ The table below describes the fields that were added or changed in the order's d
     <tr>
         <td>origin</td>
         <td>Changed</td>
-        <td>The field 'origin' will come with `chain` as a value, and not `fulfillment` or `marketplace` like before.
-        </td>
+        <td>The field 'origin' will come with `chain` as a value, and not `fulfillment` or `marketplace` like before.</td>
     </tr>
     <tr>
         <td>paymentData</td>

@@ -31,7 +31,7 @@ updatedAt: "2020-07-31T20:00:34.193Z"
         <td><code>provider</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td></code></td>
+        <td></td>
     </tr>
     <tr>
         <td><code>_self</code></td>
