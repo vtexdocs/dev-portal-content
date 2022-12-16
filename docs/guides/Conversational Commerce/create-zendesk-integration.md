@@ -64,7 +64,7 @@ After gathering this information, follow the steps below:
     * ``Status`` ``Changed to`` ``Closed``
 
 1. On **Actions**, you must select the `Notify active webhook` and the previously configurated webhook.
-2. Add the following code on the **JSON body** field. Notice that you must replace ``{{ticket.ticket_field_6228597897108}}`` with the custom field ID previously created.
+2. Add the following code on the **JSON body** field. Notice that you must replace `{{ticket.ticket_field_6228597897108}}` with the custom field ID previously created.
 
 ```json
 {
