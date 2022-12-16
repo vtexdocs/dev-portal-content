@@ -373,7 +373,7 @@ updatedAt: "2021-11-24T20:47:20.426Z"
         <td>&#x21B3;<code>method</code></td>
         <td><strong>string</strong> max 255</td>
          <td>Yes</td>
-        <td>Payment method used for the buyer.  See <strong> Payment Methods <strong> </td>
+        <td>Payment method used for the buyer.  See <strong> Payment Methods</strong> </td>
     </tr>
     <tr>
         <td>&#x21B3;<code>name</code></td>

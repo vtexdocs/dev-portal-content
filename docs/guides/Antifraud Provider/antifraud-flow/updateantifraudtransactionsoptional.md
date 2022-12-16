@@ -259,7 +259,7 @@ order flow will follow your response status in order to cancel or approve the tr
     </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒⇒&nbsp;&nbsp;<code>categoryName</code></td>
-        <td><strong>string max 255</td>
+        <td><strong>string max 255</strong></td>
         <td>Category name for the Item. Configured by each store</td>
     </tr>
     <tr>
@@ -299,8 +299,8 @@ order flow will follow your response status in order to cancel or approve the tr
     </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;⇒&nbsp;<code>method</code></td>
-        <td><strong>string max 255</td>
-        <td>Payment method used for the buyer.  See <strong> Payment Methods <strong> </td>
+        <td><strong>string max 255</strong></td>
+        <td>Payment method used for the buyer.  See <strong> Payment Methods</strong> </td>
     </tr>
     <tr>
         <td>&nbsp;&nbsp;&nbsp;⇒&nbsp;<code>name</code></td>

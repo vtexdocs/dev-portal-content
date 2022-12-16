@@ -364,7 +364,7 @@ VTEX expects that your antifraud provider process this request and retrieves the
         <td>&#x21B3;<code>method</code></td>
         <td><strong>string</strong> max 255</td>
          <td>Yes</td>
-        <td>Payment method used for the buyer.  See <strong> Payment Methods <strong> </td>
+        <td>Payment method used for the buyer.  See <strong> Payment Methods</strong> </td>
     </tr>
     <tr>
         <td>&#x21B3;<code>name</code></td>

@@ -7,6 +7,7 @@ createdAt: "2020-09-29T19:55:46.924Z"
 updatedAt: "2022-09-28T14:44:08.935Z"
 ---
 ## Response body
+
 ---
 <table>
     <tr>
@@ -31,7 +32,11 @@ updatedAt: "2022-09-28T14:44:08.935Z"
         <td>&#x21B3; <code>allowsSplit</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td>Describes which transaction flow stage the connector should receive payment split data . Accepted values: <code>onAuthorize</code>, <code>onCapture</code>, <code>disabled</code>. Check more details on the <a href="https://developers.vtex.com/vtex-rest-api/docs/split-payouts-on-payment-provider-protocol" target="_blank">Split Payouts on the Payment Provider Protocol</a> article.</td>
+        <td>Describes which transaction flow stage the connector should receive payment split data . Accepted values:
+            <code>onAuthorize</code>, <code>onCapture</code>, <code>disabled</code>. Check more details on the <a
+                href="https://developers.vtex.com/vtex-rest-api/docs/split-payouts-on-payment-provider-protocol"
+                target="_blank">Split Payouts on the Payment Provider Protocol</a> article.
+        </td>
     </tr>
     <tr>
         <td><code>customFields</code></td>
@@ -73,7 +78,11 @@ updatedAt: "2022-09-28T14:44:08.935Z"
         <td><code>autoSettleDelay</code></td>
         <td>number</td>
         <td></td>
-        <td>Describes the allowed delay value for the auto settle capture. Accepted values: <code>minimum</code> and <code>maximum</code> in whole hours (decimals are not allowed). Check more details on the <a href="https://developers.vtex.com/vtex-rest-api/docs/custom-auto-capture-feature" target="_blank">Custom Auto Capture Feature</a> article.</td>
+        <td>Describes the allowed delay value for the auto settle capture. Accepted values: <code>minimum</code> and
+            <code>maximum</code> in whole hours (decimals are not allowed). Check more details on the <a
+                href="https://developers.vtex.com/vtex-rest-api/docs/custom-auto-capture-feature" target="_blank">Custom
+                Auto Capture Feature</a> article.
+        </td>
     </tr>
     <tr>
         <td>&#x21B3;<code>minimum</code></td>
@@ -86,11 +95,11 @@ updatedAt: "2022-09-28T14:44:08.935Z"
         <td>string</td>
         <td>Yes</td>
         <td>Maximum amount of time to auto settle in hours.</td>
-    </table>
-    
-<br>
+    </tr>
+</table>
 
-## Available payment methods 
+## Available payment methods
+
 ---
 
 <table>
@@ -154,7 +163,7 @@ updatedAt: "2022-09-28T14:44:08.935Z"
         <td>Credit Card</td>
         <td>Brazil</td>
     </tr>
-  <tr>
+    <tr>
         <td><code>VirtualDebitElo</code></td>
         <td>Debit Card</td>
         <td>Brazil</td>
@@ -204,7 +213,7 @@ updatedAt: "2022-09-28T14:44:08.935Z"
         <td>Offline/Voucher</td>
         <td>Brazil (Boleto Bancário)</td>
     </tr>
- <tr>
+    <tr>
         <td><code>Pix</code></td>
         <td>Online Transfer</td>
         <td>Brazil</td>
@@ -236,9 +245,8 @@ updatedAt: "2022-09-28T14:44:08.935Z"
     </tr>
 </table>
 
-<br>
+## Request examples and their responses
 
-## Request examples and their responses 
 [block:code]
 {
   "codes": [

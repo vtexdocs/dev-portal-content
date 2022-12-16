@@ -35,10 +35,9 @@ When implementing the billing endpoint, ensure that it can receive requests for 
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><code>type</code>
-        </td>
-        <td>Defines the type of the endpoint, if it is a billing ("<code>Output"</code>) or if it is a return
-            (<code>"Input"</code>).</td>
+        <td><code>type</code></td>
+        <td>Defines the type of the endpoint, if it is a billing ("<code>Output"</code>) or if it is a
+            return(<code>"Input"</code>).</td>
     </tr>
     <tr>
         <td><code>items</code></td>
@@ -67,35 +66,19 @@ After this step, you must invoice the order with the _Receita Federal_ (brazilia
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td>
-            <ul>
-                <li><code>invoiceNumber</code></li>
-            </ul>
-        </td>
+        <td><ul><li><code>invoiceNumber</code></li></ul></td>
         <td>Tax coupon number. Mandatory field.</td>
     </tr>
     <tr>
-        <td>
-            <ul>
-                <li><code>invoiceUrl</code></li>
-            </ul>
-        </td>
+        <td><ul><li><code>invoiceUrl</code></li></ul></td>
         <td>Link following the <code>'https://'</code> protocol that identifies the tax coupon. It can be used to print the tax coupon if the field <code>printUrl</code> is not sent. Mandatory field.</td>
     </tr>
     <tr>
-        <td>
-            <ul>
-                <li><code>printUrl</code></li>
-            </ul>
-        </td>
+        <td><ul><li><code>printUrl</code></li></ul></td>
         <td><code>'https://'</code> link or file path with the tax coupon that will be printed. If this field is sent empty the field <code>invoiceUrl</code> will be printed instead.</td>
     </tr>
     <tr>
-        <td>
-            <ul>
-                <li><code>shouldPrintInvoice</code></li>
-            </ul>
-        </td>
+        <td><ul><li><code>shouldPrintInvoice</code></li></ul></td>
         <td>Indicates to the inStore that it should print the file. This is a boolean an the default value is <code>true</code>.</td>
     </tr>
 </table>

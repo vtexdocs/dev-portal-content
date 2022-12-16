@@ -90,12 +90,8 @@ Follow the list below to substitute placeholders properly. Once placeholders are
     </tr>
     <tr>
         <td><code>connectorEndpoint</code></td>
-        <td>Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples:
-            <code>https://externalconnector.com</code> or relative URL
-            <code>https://externalconnector.com/api/vtex</code>.</td>
-        <td>
-            <ol><li>node/constants/variables.ts</li><li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx</li></ol>
-        </td>
+        <td>Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples: <code>https://externalconnector.com</code> or relative URL; <code>https://externalconnector.com/api/vtex</code>.</td>
+        <td><ol><li>node/constants/variables.ts</li><li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx</li></ol></td>
     </tr>
     <tr>
         <td><code>connectorEndpointHost</code></td>

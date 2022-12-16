@@ -6,9 +6,8 @@ hidden: false
 createdAt: "2019-12-25T15:13:56.093Z"
 updatedAt: "2020-02-27T17:48:11.271Z"
 ---
-<br>
 
-##### REQUEST BODY 
+##### REQUEST BODY
 
 ---
 
@@ -24,7 +23,7 @@ updatedAt: "2020-02-27T17:48:11.271Z"
         <td>string</td>
         <td></td>
         <td>Possible values: {"Credit","Debit"}</td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>value</code></td>
         <td>number</td>
@@ -36,26 +35,26 @@ updatedAt: "2020-02-27T17:48:11.271Z"
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>redemptionToken</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>redemptionCode</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td><code>requestId</code></td>
         <td>string</td>
         <td></td>
         <td></td>
-    </tr> 
-    <tr> 
+    </tr>
+    <tr>
         <td><code>orderInfo</code></td>
         <td>object</td>
         <td></td>
@@ -96,7 +95,7 @@ updatedAt: "2020-02-27T17:48:11.271Z"
         <td>object</td>
         <td>Yes</td>
         <td></td>
-    </tr> 
+    </tr>
     <tr>
         <td>&#x21B3; <code>seller</code></td>
         <td>string</td>
@@ -123,10 +122,7 @@ updatedAt: "2020-02-27T17:48:11.271Z"
     </tr>
 </table>
 
-
-<br>
-
-##### RESPONSE BODY 
+##### RESPONSE BODY
 
 ---
 
@@ -144,7 +140,7 @@ TRANSACTION SUMMARY
         <td>string</td>
         <td>Yes</td>
         <td>Gift card <code>cardId</code></td>
-    </tr>   
+    </tr>
     <tr>
         <td><code>id</code></td>
         <td>string</td>
@@ -152,17 +148,15 @@ TRANSACTION SUMMARY
         <td><code>id</code> of the transaction</td>
     </tr>
     <tr>
-        <tr>
         <td><code>_self</code></td>
         <td>object</td>
         <td>Yes</td>
         <td></td>
-    </tr>      
+    </tr>
     <tr>
-        <tr>
         <td>&#x21B3; <code>href</code></td>
         <td>string</td>
         <td>Yes</td>
         <td>Resource URL (see example)</td>
-    </tr>     
+    </tr>
 </table>

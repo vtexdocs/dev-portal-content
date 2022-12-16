@@ -476,8 +476,7 @@ Request example:
         <td>invoiceValue</td>
         <td>string</td>
         <td>Yes</td>
-        <td>Total amount being invoiced in cents. Do not use any decimal separator. For instance, $24.99 should be
-            represented as 2499.</td>
+        <td>Total amount being invoiced in cents. Do not use any decimal separator. For instance, $24.99 should be represented as 2499.</td>
     </tr>
     <tr>
         <td>issuanceDate</td>
@@ -489,30 +488,25 @@ Request example:
         <td>invoiceUrl</td>
         <td>string</td>
         <td></td>
-        <td>URL of the invoice. Can be used to send the URL of an XML file, for example, which is useful for some
-            integrations.</td>
+        <td>URL of the invoice. Can be used to send the URL of an XML file, for example, which is useful for some integrations.</td>
     </tr>
     <tr>
         <td>trackingNumber</td>
         <td>string</td>
         <td>No</td>
-        <td>The number code that identifies the order tracking. This field should only be used when sending the tracking
-            information. When the request is used for sending the invoice, this field should be left empty</td>
+        <td>The number code that identifies the order tracking. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty</td>
     </tr>
     <tr>
         <td>trackingUrl</td>
         <td>string</td>
         <td>No</td>
-        <td>The URL used to track the order. This field should only be used when sending the tracking information. When
-            the request is used for sending the invoice, this field should be left empty</td>
+        <td>The URL used to track the order. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty</td>
     </tr>
     <tr>
         <td>courier</td>
         <td>string</td>
         <td>No</td>
-        <td>The name of the carrier responsible for delivering the order. This field should only be used when sending
-            the tracking information. When the request is used for sending the invoice, this field should be left empty
-        </td>
+        <td>The name of the carrier responsible for delivering the order. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty</td>
     </tr>
     <tr>
         <td>items</td>
@@ -530,8 +524,7 @@ Request example:
         <td>price</td>
         <td>integer</td>
         <td>Yes</td>
-        <td>Total price of the SKU being invoiced in cents. Do not use any decimal separator. For instance, $24.99
-            should be represented as 2499.</td>
+        <td>Total price of the SKU being invoiced in cents. Do not use any decimal separator. For instance, $24.99 should be represented as 2499.</td>
     </tr>
     <tr>
         <td>quantity</td>

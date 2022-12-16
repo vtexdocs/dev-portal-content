@@ -69,16 +69,14 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     <tr>
         <td>A</td>
         <td>When integrating the order successfully in VTEX</td>
-        <td>The order {{marketplaceOrderId}} was created in VTEX successfully under the ID {{vtexOrderId}}. <em>Link to
-                the order within VTEX.</em></td>
+        <td>The order {{marketplaceOrderId}} was created in VTEX successfully under the ID {{vtexOrderId}}. <em>Link to the order within VTEX.</em></td>
         <td>Success</td>
         <td>201</td>
     </tr>
     <tr>
         <td>B</td>
         <td>When sending the SKU register to the marketplace</td>
-        <td>The standard rule with 0-100% manual approval was created successfully. To view or change this rule click
-            [here] (https://accountname.myvtex.com/admin/order-auth)</td>
+        <td>The standard rule with 0-100% manual approval was created successfully. To view or change this rule click [here] (https://accountname.myvtex.com/admin/order-auth)</td>
         <td>Success</td>
         <td>201</td>
     </tr>
@@ -91,39 +89,22 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     </tr>
     <tr>
         <td>D</td>
-        <td>When using the <a
-                href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment
-                simulation</a> API, the SKU is not retrieved in the `items` object.</td>
-        <td>Oops, we couldn’t obtain the information of SKU {{skuId}}. Please check if the items below are configured
-            correctly in the VTEX platform.<ol>
-                <li>In product registration, check if it is associated with the trade policy.</li>
-                <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment
-                        simulation</a>, check if the carrier attending the SKU exists.</li>
-                <li>In price configuration, check if there’s a price associated with the trade policy.</li>
-            </ol>
-        </td>
+        <td>When using the <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment simulation</a> API, the SKU is not retrieved in the `items` object.</td>
+        <td>Oops, we couldn’t obtain the information of SKU {{skuId}}. Please check if the items below are configured correctly in the VTEX platform.<ol> <li>In product registration, check if it is associated with the trade policy.</li> <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment simulation</a>, check if the carrier attending the SKU exists.</li> <li>In price configuration, check if there’s a price associated with the trade policy.</li></ol></td>
         <td>Warning</td>
         <td>400</td>
     </tr>
     <tr>
         <td>E</td>
         <td>When trying to send the Cancel Order request and receiving failure for multiple requests</td>
-        <td>Oops, we could not cancel the order right now, due to the high volume of requests we’re receiving. We’ll try
-            again later. If you prefer, you can cancel the order directly in VTEX.</td>
+        <td>Oops, we could not cancel the order right now, due to the high volume of requests we’re receiving. We’ll try again later. If you prefer, you can cancel the order directly in VTEX.</td>
         <td>Alert</td>
         <td>400</td>
     </tr>
     <tr>
         <td>F</td>
         <td>When checking if the SKU is inactive \\</td>
-        <td>Oops, the SKU is inactive in VTEX. We recommend that you check:<ol>
-                <li>In Catalog, identify the SKU and check if the field “Activate SKU” is checked.</li>
-                <li>In Catalog, check if the image is uploaded.</li>
-                <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment
-                        simulation</a>, check if the carrier attending the SKU exists.</li>
-                <li>On price configuration, check if there’s a price associated with the trade policy.</li>
-            </ol>
-        </td>
+        <td>Oops, the SKU is inactive in VTEX. We recommend that you check:<ol><li>In Catalog, identify the SKU and check if the field “Activate SKU” is checked.</li> <li>In Catalog, check if the image is uploaded.</li> <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment simulation</a>, check if the carrier attending the SKU exists.</li> <li>On price configuration, check if there’s a price associated with the trade policy.</li></ol></td>
         <td>Warning</td>
         <td>400</td>
     </tr>
@@ -137,17 +118,14 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     <tr>
         <td>H</td>
         <td>When receiving an error about divergences</td>
-        <td>Oops, we couldn’t find the values needed for order placement, with standard values accepted by the
-            marketplace. {{list containing FIELD and VALUE attributed}}</td>
+        <td>Oops, we couldn’t find the values needed for order placement, with standard values accepted by the marketplace. {{list containing FIELD and VALUE attributed}}</td>
         <td>Warning</td>
         <td>200</td>
     </tr>
     <tr>
         <td>I</td>
         <td>When transforming Order data to the format demanded by the marketplace.</td>
-        <td>Oops, we couldn't prepare the SKU registration in the marketplace due to {{list all errors occurred during
-            data transformation, and in case any data infringes marketplace rules}}. (Connectors should list all
-            errors at once, so the user knows all actions needed to send the SKU).</td>
+        <td>Oops, we couldn't prepare the SKU registration in the marketplace due to {{list all errors occurred during data transformation, and in case any data infringes marketplace rules}}. (Connectors should list all errors at once, so the user knows all actions needed to send the SKU).</td>
         <td>Error</td>
         <td>400</td>
     </tr>
@@ -161,16 +139,14 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     <tr>
         <td>K</td>
         <td>When trying to cancel an order with invalid credentials</td>
-        <td>Oops, we were not able to communicate with VTEX to cancel the Order. Please check if your integration’s
-            settings are correct.</td>
+        <td>Oops, we were not able to communicate with VTEX to cancel the Order. Please check if your integration’s settings are correct.</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>L</td>
         <td>When trying to communicate with the marketplace API used to register the product</td>
-        <td>Oops, the product registration in the {name} marketplace is unavailable right now. Don’t worry - we’ll try
-            again in a few minutes. In case the problem persists, get in touch with the marketplace.</td>
+        <td>Oops, the product registration in the {name} marketplace is unavailable right now. Don’t worry - we’ll try again in a few minutes. In case the problem persists, get in touch with the marketplace.</td>
         <td>Error</td>
         <td>500</td>
     </tr>
@@ -185,17 +161,14 @@ Each step of the catalog integration requires a specific set of Log messages. Th
         <td>N</td>
         <td>When sending the product registration to the marketplace, and obtaining failure for sending incorrect data.
         </td>
-        <td>Oops, we couldn't prepare the SKU registration in the marketplace due to {list all errors occurred during
-            data transformation, and in case any data infringes marketplace rules}. (Connectors should list all errors
-            at once, so the user knows all actions needed to send the SKU).</td>
+        <td>Oops, we couldn't prepare the SKU registration in the marketplace due to {list all errors occurred during data transformation, and in case any data infringes marketplace rules}. (Connectors should list all errors at once, so the user knows all actions needed to send the SKU).</td>
         <td>Error</td>
         <td>400</td>
     </tr>
     <tr>
         <td>O</td>
         <td>When trying to collect the category or attribute mapping from the VTEX Mapper.</td>
-        <td>Oops, we couldn’t find the category {name of the category} mapping of the {SKU name + ID} SKU in the
-            marketplace. Please access the link below to perform this mapping. {Link indicating the store’s mapper}.
+        <td>Oops, we couldn’t find the category {name of the category} mapping of the {SKU name + ID} SKU in the marketplace. Please access the link below to perform this mapping. {Link indicating the store’s mapper}.
         </td>
         <td>Error</td>
         <td>400</td>
@@ -203,16 +176,14 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     <tr>
         <td>P</td>
         <td>When trying to communicate with the mapping API from the mapper.</td>
-        <td>Oops, the VTEX category mapping is unavailable right now. Don’t worry - we’ll try again in a few minutes. In
-            case the problem persists, get in touch with support.</td>
+        <td>Oops, the VTEX category mapping is unavailable right now. Don’t worry - we’ll try again in a few minutes. In case the problem persists, get in touch with support.</td>
         <td>Error</td>
         <td>500</td>
     </tr>
     <tr>
         <td>Q</td>
         <td>When trying to reprocess an order that is already canceled in the marketplace due to inventory error</td>
-        <td>Oops, we couldn’t reprocess the order {{orderId}} of the {{marketplaceName}}, since this order was cancelled
-            manually in the marketplace.</td>
+        <td>Oops, we couldn’t reprocess the order {{orderId}} of the {{marketplaceName}}, since this order was cancelled manually in the marketplace.</td>
         <td>Error</td>
         <td>400</td>
     </tr>

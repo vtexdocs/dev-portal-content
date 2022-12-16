@@ -191,8 +191,7 @@ Items that are already in the orderForm will remain unchanged.
     </tr>
     <tr>
         <td>items</td>
-        <td>Arraythe set of items that will be added. Even if there is only one item, it must be wrapped in an Array.
-        </td>
+        <td>Arraythe set of items that will be added. Even if there is only one item, it must be wrapped in an Array.</td>
     </tr>
     <tr>
         <td>salesChannel</td>
@@ -241,14 +240,11 @@ Do not forget to use getOrderForm first.
     </tr>
     <tr>
         <td>items</td>
-        <td>Array
-            the set of items that will be updated. Even if there is only one item, it must be wrapped in an Array.</td>
+        <td>Array the set of items that will be updated. Even if there is only one item, it must be wrapped in an Array.</td>
     </tr>
     <tr>
         <td>splitItem</td>
-        <td>Boolean
-            Default: true
-            Informs if a separate item should be created in case the items to be updated have attachments/services.</td>
+        <td>Boolean Default: true. Informs if a separate item should be created in case the items to be updated have attachments/services.</td>
     </tr>
 </table>
 
@@ -1389,14 +1385,11 @@ Removes SKU from a current item and replaces it with a new one.
   </tr>
   <tr>
     <td>items</td>
-    <td>Array
-object with the SKU to be removed in quantity 0, and the new SKU to be added. Must be wrapped in an array</td>
+    <td>Array object with the SKU to be removed in quantity 0, and the new SKU to be added. Must be wrapped in an array</td>
   </tr>
   <tr>
     <td>splitItem</td>
-    <td>Boolean
-Default: true
-Informs if a separate item should be created in case the items to be updated have attachments/services.</td>
+    <td>Boolean Default: true Informs if a separate item should be created in case the items to be updated have attachments/services.</td>
   </tr>
 </table>
 
