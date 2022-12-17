@@ -55,21 +55,7 @@ For sending emails
 }
 [/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a51cf46-Captura_de_Tela_2021-05-07_s_15.26.45.png",
-        "Captura de Tela 2021-05-07 às 15.26.45.png",
-        1078,
-        1328,
-        "#f8f8f8"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/a51cf46-Captura_de_Tela_2021-05-07_s_15.26.45.png)
 For deactivating the promotions
 [block:code]
 {

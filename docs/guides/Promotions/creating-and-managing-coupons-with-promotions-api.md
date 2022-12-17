@@ -82,38 +82,10 @@ To enable the single-use of a coupon, you must restrict the promotion to a singl
 2. Click on **Promotions**.
 3. Click on the **New Promotion** > **Regular** button.
 4. Check the selection box of `utm_source` and add the `Birthday123` code to the field.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6341488-cupom-Birthday123.png",
-        "cupom-Birthday123.png",
-        637,
-        381,
-        "#f8f8f8"
-      ]
-    }
-  ]
-}
-[/block]
+![cupom-Birthday123](https://files.readme.io/6341488-cupom-Birthday123.png)
 5. Uncheck the unlimited selection boxes from the **How many times will your promotion be applied in your store** and **How many times will your promotion be applied in your store per client fields**.
 6. Add the number one to each field to enable the single-use promotion.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0b2666e-restricao-promo-single.png",
-        "restricao-promo-single.png",
-        638,
-        254,
-        "#f3f3f3"
-      ]
-    }
-  ]
-}
-[/block]
+![restricao-promo-single](https://files.readme.io/0b2666e-restricao-promo-single.png)
 7. Click on **Save**.
 
 ### Coupon massive generation
