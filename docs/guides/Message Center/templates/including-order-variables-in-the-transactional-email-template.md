@@ -27,42 +27,14 @@ Let's say you want to enter the name of the carrier in the "product sent" email.
 
 To do this, enter the "product sent" template and, in the **JSON Data** field, search for the `courier` property.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/670a3f7-Group_32.png",
-        "Group 3(2).png",
-        1204,
-        656,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/670a3f7-Group_32.png)
 The filled-in value for this property is just an example, but you can use it in the **HTML** field so that when the email is sent the customer sees the carrier that is actually responsible for the order delivery.
 
 Note that the `courier` property is inside the `package` object. Therefore, you need to enter it as follows:
 
 `{{package.courier}}`
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/903dd9e-Group_4.png",
-        "Group 4.png",
-        1202,
-        989,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/903dd9e-Group_4.png)
 As you see, the sample value ("Transportadora Teste Courier S.A.") was inserted in the preview screen, below the **HTML** and **JSON Data** fields.
 
 ### Other order email variables

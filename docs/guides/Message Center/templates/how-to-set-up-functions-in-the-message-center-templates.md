@@ -28,21 +28,7 @@ When editing the email, it is possible to use a range of variables provided by t
 }
 [/block]
 **Template HTML:** `<strong>{{_accountInfo.HostName}}</strong> => lojavirtual`
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b9d5c9b-exemplohtml.png",
-        "exemplohtml.png",
-        1209,
-        214,
-        "#f4f4f6"
-      ]
-    }
-  ]
-}
-[/block]
+![exemplo html](https://files.readme.io/b9d5c9b-exemplohtml.png)
 The above example can have different values when comparing Sellers and Marketplaces.
 
 ## Functions
@@ -87,18 +73,4 @@ The use of the functions follows the following syntax: `{{funcão classe.atribut
 }
 [/block]
 **Result:**
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/715c58d-3.1.jpg",
-        "3.1.jpg",
-        582,
-        173,
-        "#f2f2f1"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/715c58d-3.1.jpg)
