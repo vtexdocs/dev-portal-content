@@ -15,22 +15,7 @@ The payment method's ID can be configured to have Simple Interest Rates and is o
 4. In **Payment Conditions** tab, select the payment condition that should be configured to use Simple Interest Rates.
 5. Copy the last URL parameter, which shows the ID of this Payment Method (see image).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b6f8c9d-ENjuros.png",
-        "ENjuros.png",
-        1993,
-        825,
-        "#f5f8f9"
-      ]
-    }
-  ]
-}
-[/block]
-<br>
+![ENjuros](https://files.readme.io/b6f8c9d-ENjuros.png)
 
 ## Setting up the interest rate type using API
 

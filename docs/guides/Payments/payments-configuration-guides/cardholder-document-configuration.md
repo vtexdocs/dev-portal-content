@@ -29,21 +29,7 @@ To configure the cardholder document field, follow the steps below:
       3. `"unused"`: a cardholder document is not required to perform fraud analysis. The field will not be displayed at checkout nor on [my cards](https://help.vtex.com/en/tutorial/como-funciona-a-minha-conta--2BQ3GiqhqGJTXsWVuio3Xh#credit-cards). 
 
 Anti-Fraud Provider Manifest example:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e4de0e5-cardholderDocument.PNG",
-        "cardholderDocument.PNG",
-        857,
-        227,
-        "#f6f5f2"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/e4de0e5-cardholderDocument.PNG)
 2. Access [VTEX Support](https://help.vtex.com/en/support) to open a ticket, and request that the connector on VTEX be updated.
 [block:callout]
 {
