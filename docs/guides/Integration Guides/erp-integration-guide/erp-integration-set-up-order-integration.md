@@ -14,23 +14,9 @@ After an order is placed in a VTEX store, it follows a predefined [order flow](h
 There are two ways to track order status changes in VTEX: the orders [Feed and the Hook](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1). While the feed provides an endpoint you can call to check for status changes, the hook notifies an endpoint provided by the user whenever there is an order update.
 
 The order integration process using the orders feed is illustrated in the diagram below.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7df0e42-image4.png",
-        "image4.png",
-        319,
-        602,
-        "#dd2574"
-      ],
-      "sizing": "original",
-      "caption": "Order integration flowchart"
-    }
-  ]
-}
-[/block]
+
+![Order integration flowchart](https://files.readme.io/7df0e42-image4.png)
+
 See this [boilerplate implementation of an orders feed consumer in C#](https://github.com/vtex/FeedConsumerCSharp) to get you started. If you would like a conceptual overview of our Orders Management module, check out this [beginner track](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa) in our Help Center. More details on the orders feed can be found [here](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1).
 
 

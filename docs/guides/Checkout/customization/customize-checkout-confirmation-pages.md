@@ -8,21 +8,9 @@ updatedAt: "2022-10-20T17:35:49.970Z"
 All order confirmation information at checkout is available on the Placed Orders and Order Confirmation pages. If the merchant wants to change some features on these UIs, VTEX also offers the option of customizing them.
 
 Order Placed page example:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d1564c7-Pgina_de_confirmao_de_pedido_Order_Placed.png",
-        "Página de confirmação de pedido (Order Placed).png",
-        3239,
-        2174,
-        "#f9fbfa"
-      ]
-    }
-  ]
-}
-[/block]
+
+![Página de confirmação de pedido (Order Placed)](https://files.readme.io/d1564c7-Pgina_de_confirmao_de_pedido_Order_Placed.png)
+
 In the Checkout section, located in the Admin VTEX side menu, you can access one or more websites (stores) registered in your account and perform checkout settings, including UI customization.
 
 By clicking on the `blue gear` button of the chosen website, and selecting the **Code** tab, you will have access to a list of files and templates, where you can edit or import the HTML information. 
@@ -42,21 +30,7 @@ To edit Checkout confirmation UI information, access the following templates:
 - **checkout-confirmation-top**
 
 Code tab view:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ec842da-checkout_confirmation_information_codes_section.png",
-        "checkout confirmation information codes section.png",
-        1287,
-        839,
-        "#f9fafb"
-      ]
-    }
-  ]
-}
-[/block]
+![Checkout confirmation information codes section](https://files.readme.io/ec842da-checkout_confirmation_information_codes_section.png)
 
 [block:callout]
 {
@@ -65,42 +39,16 @@ Code tab view:
 }
 [/block]
 Template areas on the page:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e23bee0-Pgina_de_confirmao_de_pedido_com_imports_de_HTML.png",
-        "Página de confirmação de pedido com imports de HTML.png",
-        3239,
-        3245,
-        "#ebecec"
-      ]
-    }
-  ]
-}
-[/block]
+![Página de confirmação de pedido com imports de HTML](https://files.readme.io/e23bee0-Pgina_de_confirmao_de_pedido_com_imports_de_HTML.png)
 
 # Customizing styles
 
 You can also edit the Checkout Confirmation interface via CSS classes. Your styles should be added in a `<stile>` tag in one of the HTML templates loaded on the page.
 
 CSS class areas on the page:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2691dcc-Pgina_de_OrderPlaced_do_Checkout_Confirmation_com_classes_de_customizao_marcadas.png",
-        "Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png",
-        3239,
-        2174,
-        "#f9faf9"
-      ]
-    }
-  ]
-}
-[/block]
+
+![Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png](https://files.readme.io/2691dcc-Pgina_de_OrderPlaced_do_Checkout_Confirmation_com_classes_de_customizao_marcadas.png)
+
 To customize the Checkout Confirmation styles, use the following classes:
 [block:code]
 {

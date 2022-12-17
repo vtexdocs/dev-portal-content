@@ -69,18 +69,5 @@ To consult the verification, you need to:
 }
 [/block]
 Here is a [consult example using the VTEX domain](https://www.digwebinterface.com/?hostnames=vtex.com&type=TXT&ns=resolver&useresolver=8.8.4.4&nameservers=):
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c9a066c-Screenshot_2021-05-19_Boas_prticas_de_SPF_Sender_Policy_Framework.png",
-        "Screenshot_2021-05-19 Boas práticas de SPF (Sender Policy Framework).png",
-        1003,
-        345,
-        "#fafafa"
-      ]
-    }
-  ]
-}
-[/block]
+
+![](https://files.readme.io/c9a066c-Screenshot_2021-05-19_Boas_prticas_de_SPF_Sender_Policy_Framework.png)

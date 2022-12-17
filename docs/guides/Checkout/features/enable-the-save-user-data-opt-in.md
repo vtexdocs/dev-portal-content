@@ -19,21 +19,8 @@ To use the **Save user data opt-in** functionality in your store, you must first
 1. Make a `GET` request using the endpoint [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/configuration).
 2. Make a `POST` request using the endpoint [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) with the same data obtained in the GET request, just modifying the value of the `savePersonalDataAsOptIn` parameter from `null` to `true`.
 3. Make a new `GET` request using the endpoint [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) to confirm activation. This will be indicated by the presence of the `savePaymentData` and `savePersonalData` fields under the `clientPreferencesData` object in the `orderForm`.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/df79aae-savePersonalData1.PNG",
-        "savePersonalData1.PNG",
-        714,
-        508,
-        "#959799"
-      ]
-    }
-  ]
-}
-[/block]
+
+![savePersonalData](https://files.readme.io/df79aae-savePersonalData1.PNG)
 
 [block:callout]
 {
@@ -42,41 +29,15 @@ To use the **Save user data opt-in** functionality in your store, you must first
 }
 [/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/103d591-savePersonalData2.PNG",
-        "savePersonalData2.PNG",
-        928,
-        481,
-        "#828487"
-      ]
-    }
-  ]
-}
-[/block]
-##Saving personal and payment data
+![savePersonalData2](https://files.readme.io/103d591-savePersonalData2.PNG)
+
+## Saving personal and payment data
 
 Once the **Save user data opt-in** is enabled, the user will have access to checkboxes on the Checkout page to select whether their personal and payment data should be kept by the store and used in future orders.
 
 Checkbox for saving personal data:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3cccdf1-Contact_Information.png",
-        "Contact Information.png",
-        1266,
-        854,
-        "#f6f8f5"
-      ]
-    }
-  ]
-}
-[/block]
+
+![Contact Information](https://files.readme.io/3cccdf1-Contact_Information.png)
 
 [block:callout]
 {
@@ -86,21 +47,7 @@ Checkbox for saving personal data:
 [/block]
 Checkbox for saving payment data:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f1601b3-Pagamento.PNG",
-        "Pagamento.PNG",
-        1266,
-        638,
-        "#f9f9f9"
-      ]
-    }
-  ]
-}
-[/block]
+![Pagamento](https://files.readme.io/f1601b3-Pagamento.PNG)
 
 [block:callout]
 {
@@ -110,39 +57,10 @@ Checkbox for saving payment data:
 [/block]
 Checkbox not available to save payment data if (the user has not previously selected the option to save personal data):
 
+![Payment_No Checkbox](https://files.readme.io/5d3b723-Payment_No_Checkbox.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5d3b723-Payment_No_Checkbox.png",
-        "Payment_No Checkbox.png",
-        1266,
-        627,
-        "#f9fafa"
-      ]
-    }
-  ]
-}
-[/block]
 If the user chooses to use two cards to pay for the purchase, when selecting the option to save payment data, the data of both cards will be saved. There is no option to save only one of the cards.
 
 Checkbox to save payment data from both cards:
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/32f86b5-Payment_two_cards.png",
-        "Payment two cards.png",
-        1266,
-        906,
-        "#fafafb"
-      ]
-    }
-  ]
-}
-[/block]
+![Payment two cards](https://files.readme.io/32f86b5-Payment_two_cards.png)

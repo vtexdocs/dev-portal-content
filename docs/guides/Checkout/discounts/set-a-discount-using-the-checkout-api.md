@@ -13,21 +13,8 @@ This Checkout configuration sets the discount price and links it to a payment me
 
 2. To get the payment method ID, access Settings in the **Payments** module. The ID of the condition you want to use is on the right side of the screen in the **Payments Settings** > **Payments Conditions** section.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4d77eb6-meiopagamento.png",
-        "meiopagamento.png",
-        1423,
-        364,
-        "#fafafc"
-      ]
-    }
-  ]
-}
-[/block]
+![Payment condition](https://files.readme.io/4d77eb6-meiopagamento.png)
+
 3. After updating `paymentSystemToCheckFirstInstallment`, you can run the [Do OrderForm Simulation](ref:fulfillment-simulation) endpoint. Thus, you will be able to verify that the chosen payment method has been updated with the discount in the cash payment option in the `installmentOptions` section, within `paymentData`.
 [block:code]
 {

@@ -13,21 +13,9 @@ This guide will describe all the steps to create a specification for a product o
 2. Create a specification*
 3. Create a specification value
 4. Associating a specification to a product or to an SKU*
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a06d152-guide_specification_diagram_v1-01.png",
-        "guide_specification_diagram_v1-01.png",
-        2501,
-        1014,
-        "#d73873"
-      ]
-    }
-  ]
-}
-[/block]
+
+![](https://files.readme.io/a06d152-guide_specification_diagram_v1-01.png)
+
 ## Creating a Specification Group
 
 The first step is to create a Specification Group. A Specification Group is a grouping of specifications related to a product or SKUs. The specification group is associated with a category and all products or SKUs. 

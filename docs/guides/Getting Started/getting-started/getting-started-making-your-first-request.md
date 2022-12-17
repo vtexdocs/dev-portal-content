@@ -9,39 +9,11 @@ updatedAt: "2021-03-26T14:04:17.887Z"
 Let's test a simple `GET` call to see if you receive a `200 OK` response.
 
 Check out the following example, where we use the **Try It** feature in the API Reference of these Developer Docs to try a GET Category request. The `{{appKey}}` and `{{appToken}}` in the image should be replaced by your own appKey and appToken.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/aab36e2-TryIt.png",
-        "TryIt.png",
-        1506,
-        730,
-        "#e3e1e1"
-      ],
-      "caption": "API Reference testing feature. Try it yourself!"
-    }
-  ]
-}
-[/block]
+![API Reference testing feature. Try it yourself!](https://files.readme.io/aab36e2-TryIt.png)
+
 See below the expected response in our `apiexamples` store:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/caf0563-6iodj1V.png",
-        "6iodj1V.png",
-        1034,
-        493,
-        "#52555a"
-      ],
-      "caption": "Sample response object received from a recently created account"
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/caf0563-6iodj1V.png)
+
 If you get a `401 - Unauthorized` as response, review the authentication steps. Make sure that the right permissions are defined in the roles and that you copied the exact appKey and appToken values into the headers of the request.
 
 If you received a `200 OK` response, congratulations on your first successful request to VTEX APIs!   :tada:

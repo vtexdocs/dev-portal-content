@@ -14,18 +14,4 @@ By default, this field is disabled. To enable it, it is necessary to insert the 
 `.note { display: block; }`
 
 Checkout code configuration page view in Admin:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3bdc4a3-Observation_field.PNG",
-        "Observation field.PNG",
-        1169,
-        453,
-        "#f4f8fa"
-      ]
-    }
-  ]
-}
-[/block]
+![Observation field](https://files.readme.io/3bdc4a3-Observation_field.PNG)

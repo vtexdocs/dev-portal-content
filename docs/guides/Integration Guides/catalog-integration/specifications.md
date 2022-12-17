@@ -350,22 +350,7 @@ After creating the specification fields, if the `FieldTypeId` is `5`, `6` or `7`
 
 Those values will be shown on product register page like this one:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a9bde79-catalog_technical_specifications.png",
-        "catalog technical specifications.png",
-        1008,
-        1056,
-        "#f8f8f9"
-      ],
-      "caption": "Product register page example with specification"
-    }
-  ]
-}
-[/block]
+![Product register page example with specification](https://files.readme.io/a9bde79-catalog_technical_specifications.png)
 
 ### Specification values data model
 

@@ -22,24 +22,9 @@ Each [product](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3L
 
 Categories are associated with [Specification](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP) groups, which gather Product Specifications and SKU Specifications that will be applied for all items associated with the category. All specifications must be filled in for items to be active in your store.
 
+![VTEX Catalog architecture](https://files.readme.io/bbe67a3-Group_3_4.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/bbe67a3-Group_3_4.png",
-        "Group 3 (4).png",
-        2345,
-        1405,
-        "#000000"
-      ],
-      "caption": "VTEX Catalog architecture"
-    }
-  ]
-}
-[/block]
-## Setting up your catalog 
+## Setting up your catalog
 
 One of the first steps for new stores is making an initial load of products into VTEX, whether from your ERP, back office system or other methods. See the links below for an overview of this integration flow and for detailed guides on each step of the process.
 [block:html]

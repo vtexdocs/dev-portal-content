@@ -26,23 +26,7 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 * [Change payment method names in Checkout](https://developers.vtex.com/vtex-rest-api/docs/change-payment-method-names-in-checkout)<br>
 Smart Checkout - Payment layout customization example:
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4767f4f-Layout_Dev_Guide_-_Guide.gif",
-        "Layout Dev Guide - Guide.gif",
-        512,
-        421,
-        "#f1f4f3"
-      ],
-      "caption": ""
-    }
-  ]
-}
-[/block]
+![Layout Dev Guide - Guide](https://files.readme.io/4767f4f-Layout_Dev_Guide_-_Guide.gif)
 ## Understanding Checkout data structures
 
 The architecture of VTEX Checkout is organized in such a way that the main data structure is the `orderForm` object. It is composed of several sections and fields that allow you to have control over all the important information of a purchase order. See the links below for useful information and endpoints related to the `orderForm` object.
@@ -117,22 +101,8 @@ Minicart view:
 reCAPTCHA view:
 <br>     
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5d0eb13-newCaptchaAnchor.gif",
-        "newCaptchaAnchor.gif",
-        616,
-        164,
-        "#f0f1f3"
-      ],
-      "caption": ""
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/5d0eb13-newCaptchaAnchor.gif)
+
 ## Getting information and simulating delivery logistics
 
 By verifying addresses, pickup points, and fulfillment simulations, it is possible to have an overview of how the delivery process will be carried out in your store. Additionally, you can configure your store to allow delivery to other countries. See the links below to access endpoints related to delivery logistics.
@@ -174,37 +144,7 @@ At VTEX checkout, some features are activated through apps. See the links below 
 * [PowerReviews App - UGC (User Generated Content) Ratings & Reviews Tool](https://developers.vtex.com/vtex-developer-docs/docs/vtex-powerreviews)
 <br>
 Hotjar heatmap example:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/df6d1e8-Hotjar_heatmap_example.png",
-        "Hotjar heatmap example.png",
-        952,
-        646,
-        "#808489"
-      ],
-      "caption": ""
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/df6d1e8-Hotjar_heatmap_example.png)
 <br>
 Product review example:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ac54295-Shop-for-Soft-Clean-Silky-Hydrating-Lotion-by-Estee-Lauder-Shoppers-Drug-Mart-copy-1009x1024.png",
-        "Shop-for-Soft-Clean-Silky-Hydrating-Lotion-by-Estée-Lauder-Shoppers-Drug-Mart-copy-1009x1024.png",
-        1009,
-        1024,
-        "#edebe9"
-      ],
-      "caption": ""
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/ac54295-Shop-for-Soft-Clean-Silky-Hydrating-Lotion-by-Estee-Lauder-Shoppers-Drug-Mart-copy-1009x1024.png)

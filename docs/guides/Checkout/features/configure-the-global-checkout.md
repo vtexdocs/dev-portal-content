@@ -22,33 +22,19 @@ To display document and phone typing options different from those used by the st
 {
   "codes": [
     {
-      "code": "/* Displays the option to enter a foreign document */\n.document-box { display: block; }\n\n/* Displays the option to enter an international phone */\n.phone-box { display: block; }",
+      "code": "/*Displays the option to enter a foreign document*/\n.document-box { display: block; }\n\n/*Displays the option to enter an international phone*/\n.phone-box { display: block; }",
       "language": "css"
     }
   ]
 }
 [/block]
 6. Click on `Save`.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/dfc24b6-Document_and_Phone_field.png",
-        "Document and Phone field.png",
-        1169,
-        457,
-        "#f4f7f9"
-      ]
-    }
-  ]
-}
-[/block]
+![Document and Phone field](https://files.readme.io/dfc24b6-Document_and_Phone_field.png)
+
 After saving this configuration, two new buttons will be shown in your Checkout:
 
 - "I don't have CPF."
 - "I don't have a Brazilian phone."
-
 
 # New delivery and invoice addresses
 
@@ -56,15 +42,15 @@ After saving this configuration, two new buttons will be shown in your Checkout:
 
 To allow deliveries to a new country (for example, you want to deliver products to a customer located in England), the following actions must be performed:
 
-1. [Create a new carrier](https://help.vtex.com/en/tutorial/registering-a-carrier/). 
-2. For the new carrier, create a shipping worksheet with the column “Country”. 
+1. [Create a new carrier](https://help.vtex.com/en/tutorial/registering-a-carrier/).
+2. For the new carrier, create a shipping worksheet with the column “Country”.
 [block:callout]
 {
   "type": "info",
-  "body": "The value of the column “Country” must be the 3-digit ISO code of the countries (e.g., for England, you will use the “GBR” value). To check the codes, we recommend the website https://countrycode.org/."
+  "body": "The value of the column “Country” must be the 3-digit ISO code of the countries (e.g., for England, you will use the “GBR” value). To check the codes, we recommend the website <https://countrycode.org/>."
 }
 [/block]
-After defining the delivery settings for the countries intended, a new field will be shown on your checkout's delivery form, allowing the user to choose the desired international delivery option. 
+After defining the delivery settings for the countries intended, a new field will be shown on your checkout's delivery form, allowing the user to choose the desired international delivery option.
 
 ## Invoices
 
@@ -77,7 +63,7 @@ Also, if you want the option to display all countries in the Invoice Address fie
 {
   "codes": [
     {
-      "code": "/* Show all countries */\n.CountrySelector--all-countries { display: block; }\n\n/* Hide delivery countries */\n.CountrySelector { display: none; } ",
+      "code": "/*Show all countries*/\n.CountrySelector--all-countries { display: block; }\n\n/*Hide delivery countries*/\n.CountrySelector { display: none; } ",
       "language": "css"
     }
   ]

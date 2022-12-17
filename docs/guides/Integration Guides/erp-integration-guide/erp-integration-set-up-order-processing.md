@@ -13,40 +13,12 @@ When an order is processed in an external fulfillment platform such as an ERP or
 
 During handling an order can be [changed](https://help.vtex.com/tutorial/change-making-changes-to-an-order--3d1XLIgPQcwaKGyMiWaYog?locale=en), [cancelled](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/4ts2ItvjYo8wm5gg76miS3) or [invoiced](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/2WgQrlHTyVo4hLjhUs1LMT). These events should be notified as illustrated in the diagram below.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/68be322-image1.png",
-        "image1.png",
-        477,
-        745,
-        "#924284"
-      ],
-      "sizing": "original",
-      "caption": "Order processing flowchart"
-    }
-  ]
-}
-[/block]
+![Order processing flowchart](https://files.readme.io/68be322-image1.png)
+
 If your freight carrier is integrated with VTEX, all you need to do is inform its identifier and tracking number when invoicing the order and order tracking information will be set up. Otherwise you should add the order tracking updates you want customers to see separately, as seen in the diagram below.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7fc2394-image5.png",
-        "image5.png",
-        383,
-        416,
-        "#ad3874"
-      ],
-      "caption": "Order tracking flowchart"
-    }
-  ]
-}
-[/block]
+
+![Order tracking flowchart](https://files.readme.io/7fc2394-image5.png)
+
 ## Change order
 
 Changing items is a feature that allows your store to modify the items or prices of an order. With this feature, the store can handle eventual changes in orders motivated by customer mistakes, product unavailability, and the inclusion of discounts, among other things. Learn more about how it works and its restrictions in the article [Changing items from a completed order](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190#).

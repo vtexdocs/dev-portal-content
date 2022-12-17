@@ -11,21 +11,8 @@ Customer Credit sends invoice payment reminders by e-mail to customers. By defau
 
 The `notificationsSettings` object can set up to three e-mail notification triggers each for the pre-payment (`daysPrior`) and post-payment (`daysAfter`) timelines. These triggers can be set in a range of 10 days before or after the payment day.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/05c7e7d-Prepayment-PostPayment-Timeline.png",
-        "Prepayment-PostPayment-Timeline.png",
-        1666,
-        1260,
-        "#f4f4f5"
-      ]
-    }
-  ]
-}
-[/block]
+![Prepayment-PostPayment-Timeline](https://files.readme.io/05c7e7d-Prepayment-PostPayment-Timeline.png)
+
 In the example above, this is what the `notificationsSettings` object would look like:
 [block:code]
 {

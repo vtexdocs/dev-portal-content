@@ -6,19 +6,6 @@ hidden: false
 createdAt: "2020-12-21T16:28:05.318Z"
 updatedAt: "2022-05-20T22:23:44.301Z"
 ---
-## Response file example:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3123eb3-Screenshot_2020-12-22_collection_template_xls.png",
-        "Screenshot_2020-12-22 collection_template xls.png",
-        735,
-        148,
-        "#ededed"
-      ]
-    }
-  ]
-}
-[/block]
+## Response file example
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Catalog%20API/collection-beta/3123eb3-Screenshot_2020-12-22_collection_template_xls_11.png)

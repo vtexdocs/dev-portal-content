@@ -42,21 +42,7 @@ The [Search Bar component](https://developers.vtex.com/vtex-developer-docs/docs/
 
 The [Autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-autocomplete) is an alternative for the default VTEX autocomplete. The functionality displays previous search results based on current and previous searches. These results are presented in four different lists, which can be together or separated, depending on the customer's interaction.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5a475dd-Screenshot_2022-05-10_at_17-21-04_https___biggy.myvtex.com.png",
-        "Screenshot 2022-05-10 at 17-21-04 https __biggy.myvtex.com.png",
-        1528,
-        692,
-        "#eae9e8"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/5a475dd-Screenshot_2022-05-10_at_17-21-04_https___biggy.myvtex.com.png)
 
 ### Banners
 

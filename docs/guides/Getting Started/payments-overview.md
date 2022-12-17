@@ -81,36 +81,7 @@ When developing a payment integration, you might need to add specific features. 
 - [Custom Auto Capture Feature](https://developers.vtex.com/vtex-rest-api/docs/custom-auto-capture-feature)
 - [Cardholder document configuration](https://developers.vtex.com/vtex-rest-api/docs/cardholder-document-configuration)
 - [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/vtex-rest-api/docs/layout-development-guide-for-payment-methods-in-smart-checkout-vtex)
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/98a1ba7-2b693ad-layout_gif.gif",
-        "2b693ad-layout_gif.gif",
-        512,
-        421,
-        "#f1f4f3"
-      ],
-      "caption": "Payment layout customization example"
-    }
-  ]
-}
-[/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d9a2e11-c95f758-kX6y8QN55B.gif",
-        "c95f758-kX6y8QN55B.gif",
-        1454,
-        1135,
-        "#f5f3f3"
-      ],
-      "caption": "Payment App example"
-    }
-  ]
-}
-[/block]
+![Payment layout customization example](https://files.readme.io/98a1ba7-2b693ad-layout_gif.gif)
+
+![Payment App example](https://files.readme.io/d9a2e11-c95f758-kX6y8QN55B.gif)

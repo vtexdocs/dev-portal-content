@@ -8,22 +8,9 @@ updatedAt: "2022-11-22T17:13:51.833Z"
 The category tree is the backbone of the Catalog, so it needs to be carefully planned and validated before importing to VTEX.
 
 We strongly recommend starting to work on the category tree by creating a table similar to this one:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8b98f38-tabela_2.PNG",
-        "tabela 2.PNG",
-        1249,
-        193,
-        "#d4b7c7"
-      ],
-      "caption": "Category tree table example"
-    }
-  ]
-}
-[/block]
+
+![Category tree table example](https://files.readme.io/8b98f38-tabela_2.PNG)
+
 The idea behind this template is to allow easy visualization of how the tree is organized and how the specifications are being presented.
 
 ## Category inheritance

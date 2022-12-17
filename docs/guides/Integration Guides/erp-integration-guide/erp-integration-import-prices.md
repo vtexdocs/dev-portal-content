@@ -28,39 +28,10 @@ Also, given a specific Price Table is selected according to the context, there a
 
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/931b88e-image2.png",
-        "image2.png",
-        703,
-        115,
-        "#eceaed"
-      ],
-      "caption": "*The computed Price is obtained from the application of price rules on a base price*"
-    }
-  ]
-}
-[/block]
+![The computed Price is obtained from the application of price rules on a base price](https://files.readme.io/931b88e-image2.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6458670-image6.png",
-        "image6.png",
-        703,
-        115,
-        "#f0eff1"
-      ],
-      "caption": "*A fixed price overrides the computed price for an SKU in a price table*"
-    }
-  ]
-}
-[/block]
+![A fixed price overrides the computed price for an SKU in a price table](https://files.readme.io/6458670-image6.png)
+
 So if you decide not to use price rules to compute your prices in VTEX, the way to do it is to send a single **base price** for each SKU sent by your ERP and set multiple **fixed prices** as needed to differentiate the value charged for each trade policy. If you would like a conceptual overview of our Pricing module, check out the [beginner track](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP) in our Help Center.
 
 ## Set base price
