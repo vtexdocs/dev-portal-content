@@ -22,21 +22,7 @@ Considering this, our B2B Seller Price feature allows sellers from B2B marketpla
 
 The diagram below shows how the process works, after all the required [configurations](#setup). 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/32e8e14-image1.png",
-        "image1.png",
-        997,
-        619,
-        "#f7f7f7"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/32e8e14-image1.png)
 When a customer logs in on a B2B marketplace which has Pricing Hub enabled, it will make a `POST` [Get Prices](https://developers.vtex.com/vtex-rest-api/reference/post_api-pricing-hub-prices) request to the Pricing Hub API to fetch prices information from the B2B Seller’s external prices app. The app will then return the prices information in the response, applying the specific prices associated with each customer email, as set by the seller.
 
 

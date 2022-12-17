@@ -125,39 +125,9 @@ const appSettings = await ctx.clients.apps.getAppSettings(
 
 In case you want to test your authentication setting before the app is published, you can do so whenever it is linked. In this case, go to the Admin page of your VTEX account, then go to **Apps**, **My Apps** and open the **settings **of the linked app.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7440dcd-image1.png",
-        "image1.png",
-        1363,
-        625,
-        "#f6f7f8"
-      ],
-      "caption": "Carrier notifier app example on the app store"
-    }
-  ]
-}
-[/block]
+![Carrier notifier app example on the app store](https://files.readme.io/7440dcd-image1.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9dbeb65-image2.png",
-        "image2.png",
-        1365,
-        622,
-        "#fafafb"
-      ],
-      "caption": "User and Token settings displayed on admin"
-    }
-  ]
-}
-[/block]
+![User and Token settings displayed on admin](https://files.readme.io/9dbeb65-image2.png)
 
 [block:callout]
 {

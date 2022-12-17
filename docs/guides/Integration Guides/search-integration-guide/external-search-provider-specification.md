@@ -37,21 +37,7 @@ The following queries are not needed to reimplement using the external search pr
 
 - You can also use the same VTEX IO app responsible for being a search provider to also set up a webhook and receive notifications whenever a change in the catalog occurs. This VTEX IO app can, then, send the catalog changes to the search provider.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/cc299d1-catalog.png",
-        "catalog.png",
-        2188,
-        772,
-        "#dbe1e5"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/cc299d1-catalog.png)
 To receive catalog changes, refer to this [article](https://www.notion.so/How-to-receive-Catalog-changes-on-VTEX-IO-d2587b0bcd634f0ea8d6f50955a2d70a)
 
 # Onboarding

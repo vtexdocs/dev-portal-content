@@ -28,21 +28,7 @@ When a store sells its products in a marketplace, we have a one-level relationsh
 
 Stores that have white label sellers and franchises are marketplaces to those accounts. But they can also be connected to external marketplaces, becoming sellers themselves. In this case, we have a three level architecture, as illustrated in the image below.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ec93fc5-Screen_Shot_2022-09-30_at_18.57.26.png",
-        "Screen Shot 2022-09-30 at 18.57.26.png",
-        1460,
-        1048,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/ec93fc5-Screen_Shot_2022-09-30_at_18.57.26.png)
 
 * **Marketplace (level 1):** storefront where the product is sold and order is placed.
 * **Direct seller (level 2):** main account, integrated to the marketplace level 1. Serves as a marketplace for white label sellers, franchise accounts and physical stores connected to it.
@@ -98,21 +84,7 @@ Therefore, chain orders in direct seller have characteristics that come from bot
 Check out the order flow for chain orders in the image below:
 
 ​
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c8fecea-Screen_Shot_2022-09-30_at_19.00.04.png",
-        "Screen Shot 2022-09-30 at 19.00.04.png",
-        1758,
-        832,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/c8fecea-Screen_Shot_2022-09-30_at_19.00.04.png)
 The order flow seen by the level 2 store in a Multilevel Omnichannel Inventory is similar to the marketplace order flow, except for receiving the payment for orders. In the Payment pending stage, instead of the chain receiving payment directly from the gateway, the marketplace informs the chain it has received the payment confirmation.
 
 ## Initial setup
@@ -136,22 +108,7 @@ https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{a
 * **affiliateId**: the 3-digit [afiliate](https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0) identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.  
 * **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data)) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.  
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1eeb67d-Screen_Shot_2022-09-30_at_19.01.28.png",
-        "Screen Shot 2022-09-30 at 19.01.28.png",
-        1508,
-        574,
-        "#000000"
-      ],
-      "caption": "Chain Order Flow"
-    }
-  ]
-}
-[/block]
+![Chain Order Flow](https://files.readme.io/1eeb67d-Screen_Shot_2022-09-30_at_19.01.28.png)
 
 ## API Integration
 

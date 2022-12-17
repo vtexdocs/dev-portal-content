@@ -19,22 +19,7 @@ Search protocol benefits both developers and VTEX stores!
 
 The **VTEX Search Protocol** is a set of definitions and GraphQL schemas that allows VTEX IO applications to serve **e-commerce search results** that can be used by VTEX Store Framework.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b4ac10c-search-protocol.png",
-        "search-protocol.png",
-        2000,
-        1205,
-        "#ededed"
-      ],
-      "caption": ""
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/b4ac10c-search-protocol.png)
 Creating a **search-resolver** service app on VTEX IO, which implements VTEX Search Protocol, allows any VTEX Account using VTEX IO to **install such an application** and, instantly, **change the store's provider for search results.** This is really useful as no frontend modification is required. It's also possible to distribute the search provider on [VTEX App Store](https://apps.vtex.com/) to make the installation process even simpler.
 
 ### Search Schema

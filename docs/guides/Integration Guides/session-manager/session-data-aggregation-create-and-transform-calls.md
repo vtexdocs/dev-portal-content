@@ -12,22 +12,7 @@ Apps with a session dependency monitor change to their inputs and modify session
 Transforms often trigger other transforms, repeating until apps send no further parameter updates. This operation is, naturally, carefully monitored for loop conditions. The diagram below illustrates one such transform cycle:
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3442b69-Session_Manager.jpg",
-        "Session_Manager.jpg",
-        1347,
-        742,
-        "#f7f7f7"
-      ],
-      "caption": "Sessions transform diagram, as described in the steps below."
-    }
-  ]
-}
-[/block]
+![Sessions transform diagram, as described in the steps below.](https://files.readme.io/3442b69-Session_Manager.jpg)
 1. A change was made to session parameter X
 2. App A was monitoring session parameter X, so that triggered Transform 1
 3. Transform 1 led App A to change session parameter Y

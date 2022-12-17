@@ -33,22 +33,7 @@ VTEX Catalog architecture also includes specifications, which are a category’s
 Such specifications are, for example, SKU voltage, size, or color.
 
 An example of a VTEX Catalog architecture blueprint is found below:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2f24d86-EN_1.png",
-        "EN (1).png",
-        2345,
-        1405,
-        "#000000"
-      ],
-      "caption": "VTEX Catalog architecture example"
-    }
-  ]
-}
-[/block]
+![VTEX Catalog architecture example](https://files.readme.io/2f24d86-EN_1.png)
 
 ## Integration flow
 Catalog integration must follow a specific workflow. The registers are related to each other, so following the correct order below is crucial:
