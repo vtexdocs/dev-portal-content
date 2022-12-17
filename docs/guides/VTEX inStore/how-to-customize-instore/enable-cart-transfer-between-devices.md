@@ -51,37 +51,7 @@ The result should look like:
 After making this change, open the inStore menu and update the data by clicking on the `Reset app local data` button.
 
 Once this is done, a slider will appear at the bottom of the inStore identification page:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/41c68e3-24._Enable_cart_transfer_between_devices_-_1_-_EN.png",
-        "24._Enable_cart_transfer_between_devices_-_1_-_EN.png",
-        852,
-        1722,
-        "#efeff1"
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/41c68e3-24._Enable_cart_transfer_between_devices_-_1_-_EN.png)
 When you drag the screen to the right, you will see the __Cart Capture__ option, as shown in the image below.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/742d448-24._Enable_cart_transfer_between_devices_-_2_-_EN.png",
-        "24._Enable_cart_transfer_between_devices_-_2_-_EN.png",
-        844,
-        1707,
-        "#e4e8f1"
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/742d448-24._Enable_cart_transfer_between_devices_-_2_-_EN.png)
 For more information on how to use this feature, check our [guide](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2hlBqxHlxgFo2o4R52pbsk).

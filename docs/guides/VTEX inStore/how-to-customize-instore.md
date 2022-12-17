@@ -16,37 +16,9 @@ You can perform JavaScript customizations on the  `checkout-instore-custom.js` f
 1. Access `https://{{AccountName}}.myvtex.com/admin` and following the steps below. Remember to replace `{{AccountName}}` with your VTEX account name.
 2. In the main menu, click on __Checkout__.
 3. Click on the store's gear symbol, as shown in the image below.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e9fb85c-20._inStore_Customizations_-_1_-_EN.png",
-        "20._inStore_Customizations_-_1_-_EN.png",
-        3840,
-        1769,
-        "#9c9d9d"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/e9fb85c-20._inStore_Customizations_-_1_-_EN.png)
 4. Click on the __Code__ tab and finally on the `checkout-instore-custom.js` file, which is in the **Files** list on the right-hand side of the screen, as illustrated in the image below.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/321ddf2-20._inStore_Customizations_-_2_-_EN.png",
-        "20._inStore_Customizations_-_2_-_EN.png",
-        3840,
-        1703,
-        "#f9fafb"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/321ddf2-20._inStore_Customizations_-_2_-_EN.png)
 
 [block:callout]
 {
@@ -62,21 +34,7 @@ You can perform JavaScript customizations on the  `checkout-instore-custom.js` f
 To make any changes to the file, simply add or modify the lines of code directly in the file edit box. Check out our list of possible customizations to learn more. 
 
 Once you are done, click on the `Save` button, as shown in the image below.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e941660-20._inStore_Customizations_-_3_-_EN.png",
-        "20._inStore_Customizations_-_3_-_EN.png",
-        2989,
-        1667,
-        "#939596"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/e941660-20._inStore_Customizations_-_3_-_EN.png)
 
 [block:callout]
 {
@@ -88,21 +46,7 @@ Once you are done, click on the `Save` button, as shown in the image below.
 
 For CSS customizations, you need to edit the  `checkout-instore-custom.css` file, which you can access by following the same steps as to open the [JavaScript customizations](#javascript-customizations) file. In the **Files** section, just remember to open `checkout-instore-custom.css` instead.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b95cbba-25._Enable_product_recommendations_-_1_-_EN.png_h_250",
-        "25._Enable_product_recommendations_-_1_-_EN.png_h_250",
-        756,
-        250,
-        "#f3f7f9"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/b95cbba-25._Enable_product_recommendations_-_1_-_EN.png_h_250)
 Likewise, you can modify the CSS style sheet directly in the edit box.
 
 When you have finished, make sure you click the `Save` button.

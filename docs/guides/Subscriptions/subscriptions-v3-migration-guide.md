@@ -38,39 +38,9 @@ In the Subscriptions v2 module, the entity subscription was an order composed of
 This principle allowed the store’s customers to subscribe to several SKUs using different delivery addresses and payment methods - which represented an evolution compared to the system’s first version. 
 
 This behavior required another entity to be created: the subscriptionGroup. It allowed subscribed SKUs with similar purchase settings to be grouped in your customers’ My Account page, so they could see their subscription orders in a more organized way. The diagram below illustrates those concepts:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1868af1-1.PNG",
-        "1.PNG",
-        1361,
-        696,
-        "#ece4ec"
-      ],
-      "caption": "Subscription v2 concept diagram"
-    }
-  ]
-}
-[/block]
+![Subscription v2 concept diagram](https://files.readme.io/1868af1-1.PNG)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/26a3df0-image1.png",
-        "image1.png",
-        1999,
-        733,
-        "#ececef"
-      ],
-      "caption": "Subscription v2 grouping examples"
-    }
-  ]
-}
-[/block]
+![Subscription v2 grouping examples](https://files.readme.io/26a3df0-image1.png)
 
 
 ## What is a “subscription” to Subscriptions v3?
@@ -79,22 +49,7 @@ For the 3rd version of our module, we have changed our system’s understanding 
 
 This change takes out the need of creating a subscriptionGroup to arrange multiple SKUs. 
 Therefore, all operations function around the `subscription` entity (which holds all the data necessary to generate a subscription order), instead of `subscriptionGroup`. The diagram below illustrates the updated concept:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ed95ea1-2.PNG",
-        "2.PNG",
-        1361,
-        694,
-        "#e8e3ea"
-      ],
-      "caption": "Subscription v3 concept diagram"
-    }
-  ]
-}
-[/block]
+![Subscription v3 concept diagram](https://files.readme.io/ed95ea1-2.PNG)
 
 We have also renamed the entity `subscriptionOrder` to `subscriptionCycle`. Now a subscription is not tied necessarily to the first order. 
 

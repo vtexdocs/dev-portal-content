@@ -13,22 +13,7 @@ This guide shows the steps to change the appearance of the Authentication tab in
 }
 [/block]
 To customize the appearance of My Authentication components, first you have to create your own CSS file with the desired customization settings. Below you can find the list of CSS handles and a CSS file example.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9e8300e-image6.png",
-        "image6.png",
-        637,
-        187,
-        "#262725"
-      ],
-      "caption": "My Authentication CSS code Portal"
-    }
-  ]
-}
-[/block]
+![My Authentication CSS code Portal](https://files.readme.io/9e8300e-image6.png)
 | CSS Handles                         |
 | ----------------------------------- |
 | `vtex_my-authentication_box_container`                     |
@@ -87,126 +72,21 @@ Then go to the Admin of your store and do the following steps:
 1. In the Admin left panel, go to the **STORE SETUP** section.
 2. Click on **CMS**.
 3. Click on **Layout**. You can also get here from the link `{accountName}.myvtex.com/admin/a/` replacing `{accountName}` for the name of your account.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9d1249e-image5.png",
-        "image5.png",
-        342,
-        239,
-        "#fcfafb"
-      ],
-      "caption": "Admin menu Layout"
-    }
-  ]
-}
-[/block]
+![Admin menu Layout](https://files.readme.io/9d1249e-image5.png)
 4. In the **Front-end CMS** left panel, navigate to **CMS** > **Files Manager** > **.css**.
 5. In the **Files Manager** tab, click on the **Add** button.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/dd4552a-image7.png",
-        "image7.png",
-        1417,
-        786,
-        "#eff1f3"
-      ],
-      "caption": "CMS File Manager CSS"
-    }
-  ]
-}
-[/block]
+![CMS File Manager CSS](https://files.readme.io/dd4552a-image7.png)
 6. In the **Files Maintenance** tab, click on the `Localizar` button.
 7. A window with a file explorer will open. Choose the CSS file you created.
 8. Click on the `Salvar arquivo` button. This will upload your CSS file to the CMS of the store.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/bbd4d04-image8.png",
-        "image8.png",
-        715,
-        278,
-        "#e6ecf1"
-      ],
-      "caption": "Add CSS file CMS"
-    }
-  ]
-}
-[/block]
+![Add CSS file CMS](https://files.readme.io/bbd4d04-image8.png)
 9. In the **Front-end CMS** left panel, navigate to **CMS** > **HTML Templates** > **Account**.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/209dec7-image2.png",
-        "image2.png",
-        303,
-        143,
-        "#f3f6f9"
-      ],
-      "caption": "CMS HTML Template Account"
-    }
-  ]
-}
-[/block]
+![CMS HTML Template Account](https://files.readme.io/209dec7-image2.png)
 10. In the right panel will appear the My Account HTML template. Inside the `<head>` section, insert the tag `<link href="https://{accountName}.vteximg.com.br/arquivos/{cssFile}" rel="stylesheet"></link>`, replacing `{accountName}` for the account name of your store and `{cssFile}` for the name of the CSS file you uploaded.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/beec809-image3.png",
-        "image3.png",
-        952,
-        145,
-        "#f5f7f6"
-      ],
-      "caption": "My Authentication HTML code"
-    }
-  ]
-}
-[/block]
+![My Authentication HTML code](https://files.readme.io/beec809-image3.png)
 11. A popup window will show up. In the last field type **yes**.
 12. Click on the `Update Item` button.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1d1158d-image4.png",
-        "image4.png",
-        508,
-        463,
-        "#edf2f6"
-      ],
-      "caption": "CMS Update HMTL template"
-    }
-  ]
-}
-[/block]
+![CMS Update HMTL template](https://files.readme.io/1d1158d-image4.png)
 13. A new popup window will appear. If there are no errors, the HTML template will be saved. Then click on **Ok**.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3a354f4-image1.png",
-        "image1.png",
-        633,
-        184,
-        "#deeaf3"
-      ],
-      "caption": "CMS template successfully saved"
-    }
-  ]
-}
-[/block]
+![CMS template successfully saved](https://files.readme.io/3a354f4-image1.png)
 After updating the HTML template, you should see the changes in the Authentication tab of your store.

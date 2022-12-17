@@ -44,22 +44,7 @@ Once you reload inStore, whenever a sales associate prints an order, the text yo
 
 Before adding extra text, the printout of the order summary has the following format:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4aa60bd-28._Adding_extra_text_to_the_order_print_-_1.png",
-        "28._Adding_extra_text_to_the_order_print_-_1.png",
-        171,
-        404,
-        "#f6f6f6"
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/4aa60bd-28._Adding_extra_text_to_the_order_print_-_1.png)
 In the example below, we changed the `checkout-instore-custom.js` file by inserting the following extra text:
 [block:code]
 {
@@ -74,19 +59,4 @@ In the example below, we changed the `checkout-instore-custom.js` file by insert
 Now, whenever an order summary is printed, we will get the following result:
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4e4272e-28._Adding_extra_text_to_the_order_print_-_2.png",
-        "28._Adding_extra_text_to_the_order_print_-_2.png",
-        171,
-        440,
-        "#f6f6f6"
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/4e4272e-28._Adding_extra_text_to_the_order_print_-_2.png)

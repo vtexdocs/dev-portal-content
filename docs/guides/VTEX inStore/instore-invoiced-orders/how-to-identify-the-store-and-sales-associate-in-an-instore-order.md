@@ -20,21 +20,7 @@ To send order data to external systems, such as dashboards and data lakes, we re
 When an order is closed in inStore, the ID of the user logged into the application is visible at the top of the order details screen in Admin. In the example below, the user name is `A123456`.
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5a6f515-Screenshot_2022-09-14_at_15-09-09_https___storecomponents.myvtex.com.png",
-        "Screenshot 2022-09-14 at 15-09-09 https __storecomponents.myvtex.com.png",
-        1072,
-        63,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/5a6f515-Screenshot_2022-09-14_at_15-09-09_https___storecomponents.myvtex.com.png)
 When the order details are retrieved by [Orders API](https://developers.vtex.com/vtex-developer-docs/reference/orders), the user name is available in the `callCenterOperatorData.userName` field. You can also access the email address of this user in `callCenterOperatorData.email`.
 
 ```json
@@ -48,21 +34,7 @@ When the order details are retrieved by [Orders API](https://developers.vtex.com
 If the user logged into the application is shared between salespeople in the same store, it is also possible to include the salesperson's ID in the **Customer information** field.
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/27787ee-Screenshot_2022-09-14_at_16-59-32_https___storecomponents.myvtex.com.png",
-        "Screenshot 2022-09-14 at 16-59-32 https __storecomponents.myvtex.com.png",
-        263,
-        256,
-        "#f2f6f8"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/27787ee-Screenshot_2022-09-14_at_16-59-32_https___storecomponents.myvtex.com.png)
 When the order details are fetched from the Orders API, this information is available in the `openTextField.value` field.
 
 ```json
@@ -76,21 +48,7 @@ When the order details are fetched from the Orders API, this information is avai
 When an order is closed in inStore, the store ID is visible in the **Sales and Marketing** section of the order details screen in Admin. In the example below, the store identifier is `8fc9d8df-5961-11ea-8311-0a43926dcc3d`.
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2fa2f5f-Screenshot_2022-09-14_at_16-56-29_https___vtexinstoredev.myvtex.com.png",
-        "Screenshot 2022-09-14 at 16-56-29 https __vtexinstoredev.myvtex.com.png",
-        252,
-        250,
-        "#f5f6f6"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/2fa2f5f-Screenshot_2022-09-14_at_16-56-29_https___vtexinstoredev.myvtex.com.png)
 When the order details are obtained from the [Orders API](ref:orders-api-overview), this information is available in the `marketingData.utmSource` field.
 
 ```json
@@ -113,21 +71,7 @@ When the order details are obtained from the [Orders API](ref:orders-api-overvie
 ## Query Registration Data
 
 The merchant and store identifier can be used to query the registration data at `https://{accountName}.myvtex.com/admin/vtable`. 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a90909c-Screenshot_2022-09-14_at_17-06-18_https___vtexinstoredev.myvtex.com.png",
-        "Screenshot 2022-09-14 at 17-06-18 https __vtexinstoredev.myvtex.com.png",
-        849,
-        215,
-        "#fbf9f9"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/a90909c-Screenshot_2022-09-14_at_17-06-18_https___vtexinstoredev.myvtex.com.png)
 
 [block:callout]
 {
@@ -147,21 +91,7 @@ To do this search, follow the instructions below:
 
 When you complete step 4, the search filter expression should be in the format `Nome:=:A123456`. This will allow you to find the salesperson in the salesperson listing, as seen in the image below.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e4cfd68-Screenshot_2022-09-14_at_17-09-57_https___vtexinstoredev.myvtex.com.png",
-        "Screenshot 2022-09-14 at 17-09-57 https __vtexinstoredev.myvtex.com.png",
-        1075,
-        187,
-        "#f4f5f5"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/e4cfd68-Screenshot_2022-09-14_at_17-09-57_https___vtexinstoredev.myvtex.com.png)
 If you prefer to do this query by API, just use the [Search Documents](https://developers.vtex.com/vtex-developer-docs/reference/search#searchdocuments) endpoint of the [Master Data API - V2](https://developers.vtex.com/reference/master-data-api-v2-overview) to search for the store identifier in the `vendors` data entity.
 
 ### Search by store
@@ -176,19 +106,5 @@ To do this search, follow the instructions below:
 
 When you complete step 4, the search filter expression should be in the format `DocumentId:=: "c2a0b3ee-03f3-11eb-8367-128fa24166a9"`. This will allow you to find the store in the store list, as seen in the image below.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/961049e-Screenshot_2022-09-14_at_17-30-41_https___vtexinstoredev.myvtex.com.png",
-        "Screenshot 2022-09-14 at 17-30-41 https __vtexinstoredev.myvtex.com.png",
-        1091,
-        203,
-        "#f6f6f6"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/961049e-Screenshot_2022-09-14_at_17-30-41_https___vtexinstoredev.myvtex.com.png)
 If you prefer to do this query by API, just use the [Search Documents](https://developers.vtex.com/vtex-developer-docs/reference/search#searchdocuments) endpoint of the [Master Data API - V2](https://developers.vtex.com/reference/master-data-api-v2-overview) to search for the store identifier in the `stores` data entity.

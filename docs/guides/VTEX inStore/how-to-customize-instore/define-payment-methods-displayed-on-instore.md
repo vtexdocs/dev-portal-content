@@ -160,19 +160,5 @@ You can find the ID of each condition in the **Payments** module. In the main me
 
 In the **Payment conditions** tab, you will find the ID next to each of the conditions. In the example below, we see that the payment condition ID for Cash is `202`.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5d9d769-CASH-CODE.png",
-        "CASH-CODE.png",
-        1161,
-        206,
-        "#fafafb"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/5d9d769-CASH-CODE.png)
 If we wanted to include Cash as a payment condition to be displayed at the inStore checkout, this would be the value we would add to the `filters` array, inside the `window.PAYMENTS_FILTER_GLOBAL` object of the `checkout-instore-custom.js` file.

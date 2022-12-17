@@ -6,21 +6,7 @@ createdAt: "2021-08-17T20:00:23.079Z"
 updatedAt: "2021-08-17T20:24:18.657Z"
 ---
 This article aims to explain how the inStore app configures AppLinking for `payment` and `payment-reversal` actions with the acquirers' apps.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/de29bd5-Payment_app.png",
-        "Payment_app.png",
-        3520,
-        3805,
-        "#bfbdc5"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/de29bd5-Payment_app.png)
 
 ## Setting fields
 

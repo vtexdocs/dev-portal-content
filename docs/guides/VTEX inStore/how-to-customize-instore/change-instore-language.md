@@ -85,20 +85,4 @@ If you want to change inStore's language to English, for example, replace the `p
 ## Check out your changes
 
 To see the reflected changes on inStore, enter the menu and click the `Reset app local data` button, as shown in the image below.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/11a56c5-22._Change_the_inStore_language_-_1_-_EN.png",
-        "22._Change_the_inStore_language_-_1_-_EN.png",
-        845,
-        1716,
-        "#d1d7ea"
-      ],
-      "border": false,
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/11a56c5-22._Change_the_inStore_language_-_1_-_EN.png)
