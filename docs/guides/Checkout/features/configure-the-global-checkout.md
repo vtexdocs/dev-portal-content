@@ -29,7 +29,7 @@ To display document and phone typing options different from those used by the st
 }
 [/block]
 6. Click on `Save`.
-![Document and Phone field](https://files.readme.io/dfc24b6-Document_and_Phone_field.png)
+    ![Document and Phone field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/dfc24b6-Document_and_Phone_field_32.png)
 
 After saving this configuration, two new buttons will be shown in your Checkout:
 

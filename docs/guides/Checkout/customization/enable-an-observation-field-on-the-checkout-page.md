@@ -14,4 +14,4 @@ By default, this field is disabled. To enable it, it is necessary to insert the 
 `.note { display: block; }`
 
 Checkout code configuration page view in Admin:
-![Observation field](https://files.readme.io/3bdc4a3-Observation_field.PNG)
+![Observation field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/3bdc4a3-Observation_field_17.PNG)

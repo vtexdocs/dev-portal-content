@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-10-07T17:07:32.040Z"
 updatedAt: "2022-11-17T12:27:47.716Z"
 ---
+
 The shopping cart is where the information on the products chosen by the customer while browsing a store is gathered. This data may include item prices, shipping value, payment, and delivery methods, among others.
 
 This guide will describe how to access information for a specific shopping cart by its identification code (`orderFormId`).
@@ -18,8 +19,8 @@ The first step is to get the `orderFormId` of the shopping cart you want to chec
     a. Go to the **Dev. Tools** screen (press the `F12` key).
     b. Click the **Application** tab, and under **Cookies**, click the name of the site's URL.
     c. In the table, locate the line `checkout.vtex.com` and record the value `_ofid=`. This is the `orderFormId` of the current shopping cart.
-    
-![orderFormId Dev Tools](https://files.readme.io/e9ceca5-orderFormId_Dev_Tools.png)
+
+![orderFormId Dev Tools](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/shopping-cart-section-api-quick-start-guides/e9ceca5-orderFormId_Dev_Tools_22.png)
 
 ## Accessing shopping cart information
 

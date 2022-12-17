@@ -18,6 +18,7 @@ By clicking on the `blue gear` button of the chosen website, and selecting the *
   "body": "The same files shown in the Code tab are publicly available in the route https://{accountName}.myvtex.com/files/"
 }
 [/block]
+
 ### Edit Information
 
 To edit Checkout UI information, access the following files/templates:
@@ -44,9 +45,9 @@ You can import additional information and files by clicking on the `New` button 
 [/block]
 For more information, access [configuring template in the SmartCheckout](https://help.vtex.com/en/tutorial/configurar-template-no-smartcheckout--frequentlyAskedQuestions_599#).
 
-![](https://files.readme.io/a8afebf-Code_page.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/a8afebf-Code_page_47.PNG)
 
-### Legacy CMS 
+### Legacy CMS
 
 In stores using the Legacy CMS, files are managed by the **Files Manager**. The CMS and JS files are located in the route https://{accountName}.myvtex.com/arquivos/, and named respectively as _checkout-custom.css_ and _checkout-custom.js_.
 [block:callout]
@@ -57,7 +58,7 @@ In stores using the Legacy CMS, files are managed by the **Files Manager**. The 
 [/block]
 For more information, access [View the contents of the store's CSS files](https://help.vtex.com/en/tutorial/view-the-contents-of-the-stores-css-files--U5v7DXpRSee86uqiKQUQi#).
 
-![](https://files.readme.io/f62ee29-CMS_File_manager.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/f62ee29-CMS_File_manager_60.PNG)
 
 [block:callout]
 {
@@ -94,4 +95,4 @@ For more information, access the [Checkout UI Settings Guide](https://developers
 
 The Checkout UI Custom app can be used to quickly apply pre-defined customization options (e.g. show items unit price, text size, colors) that have already been approved by VTEX. For more information, access the [Checkout UI Custom Guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-custom-v0). 
 
-![](https://files.readme.io/b49efd2-Checkout_UI_Custom_view.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/b49efd2-Checkout_UI_Custom_view_97.PNG)

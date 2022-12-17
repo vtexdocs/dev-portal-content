@@ -20,7 +20,7 @@ To use the **Save user data opt-in** functionality in your store, you must first
 2. Make a `POST` request using the endpoint [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) with the same data obtained in the GET request, just modifying the value of the `savePersonalDataAsOptIn` parameter from `null` to `true`.
 3. Make a new `GET` request using the endpoint [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) to confirm activation. This will be indicated by the presence of the `savePaymentData` and `savePersonalData` fields under the `clientPreferencesData` object in the `orderForm`.
 
-![savePersonalData](https://files.readme.io/df79aae-savePersonalData1.PNG)
+![savePersonalData](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/df79aae-savePersonalData1_23.PNG)
 
 [block:callout]
 {
@@ -29,7 +29,7 @@ To use the **Save user data opt-in** functionality in your store, you must first
 }
 [/block]
 
-![savePersonalData2](https://files.readme.io/103d591-savePersonalData2.PNG)
+![savePersonalData2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/103d591-savePersonalData2_32.PNG)
 
 ## Saving personal and payment data
 
@@ -37,7 +37,7 @@ Once the **Save user data opt-in** is enabled, the user will have access to chec
 
 Checkbox for saving personal data:
 
-![Contact Information](https://files.readme.io/3cccdf1-Contact_Information.png)
+![Contact Information](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/3cccdf1-Contact_Information_40.png)
 
 [block:callout]
 {
@@ -47,7 +47,7 @@ Checkbox for saving personal data:
 [/block]
 Checkbox for saving payment data:
 
-![Pagamento](https://files.readme.io/f1601b3-Pagamento.PNG)
+![Pagamento](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/f1601b3-Pagamento_50.PNG)
 
 [block:callout]
 {
@@ -57,10 +57,10 @@ Checkbox for saving payment data:
 [/block]
 Checkbox not available to save payment data if (the user has not previously selected the option to save personal data):
 
-![Payment_No Checkbox](https://files.readme.io/5d3b723-Payment_No_Checkbox.png)
+![Payment\_No Checkbox](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/5d3b723-Payment_No_Checkbox_60.png)
 
 If the user chooses to use two cards to pay for the purchase, when selecting the option to save payment data, the data of both cards will be saved. There is no option to save only one of the cards.
 
 Checkbox to save payment data from both cards:
 
-![Payment two cards](https://files.readme.io/32f86b5-Payment_two_cards.png)
+![Payment two cards](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/32f86b5-Payment_two_cards_66.png)

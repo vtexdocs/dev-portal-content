@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-07-25T19:16:25.665Z"
 updatedAt: "2022-10-20T18:05:39.446Z"
 ---
+
 When the `utm_source`, `utm_campaign` or `utm_medium` parameters are used to load a store page, the system creates a cookie named **IPS** whose value is equal to the value of the parameter.
 
 The orderForm of orders closed by the user will receive this cookie in the header of the request sent to Checkout (until this cookie expires). In other words, the moment the customer clicks the **Buy** button, the buy button native control (`<vtex.cmc:BuyButton/>`) will perform a **POST** request to send the value of the **utm_source** parameter to the Checkout.
@@ -15,12 +16,12 @@ In this way, the Checkout will be able to assemble the orderForm considering the
 
 To make sure the content of the `utm_source` parameter is being sent to the Checkout, you can follow the steps below:
 
-1. Access any page of the store with the utm in the querystring (e.g. {*AccountName*}.com.br?utm_source=facebook).
+1. Access any page of the store with the utm in the querystring (e.g. `{*AccountName*}.com.br?utm_source=facebook`).
 2. Enter the **Developer tools** (**F12** in Chrome, if you are in Windows, or **Cmd+Opt+I** on a Mac)
 3. Go to the **Application** tab.
 4. Open the store's website cookies and look for the **IPS** cookie.
 
-![](https://files.readme.io/7b613ab-utmsource1.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/marketing-utms/7b613ab-utmsource1_23.PNG)
 
 1. Go to a product page and add it to the cart.
 2. Access the cart.
@@ -28,9 +29,9 @@ To make sure the content of the `utm_source` parameter is being sent to the Chec
 4. In the preview, open the `marketingData` node.
 5. Check the value of the `utmSource` field.
 
-![](https://files.readme.io/9a5c682-utmsource2.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/marketing-utms/9a5c682-utmsource2_31.PNG)
 
-The presence of the `utmSource` field with the same value as `utm_source` means that the information was correctly received by Checkout. If the utmSource` field was empty in the orderForm, it would indicate that the value was not sent to the Checkout.
+The presence of the `utmSource` field with the same value as `utm_source` means that the information was correctly received by Checkout. If the `utmSource` field was empty in the orderForm, it would indicate that the value was not sent to the Checkout.
 
 [block:callout]
 {
