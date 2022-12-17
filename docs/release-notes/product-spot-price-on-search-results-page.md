@@ -14,18 +14,4 @@ Previously, the product spot price was only available for product detail pages.
 
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2ede701-spot-price-search-results.png",
-        "spot-price-search-results.png",
-        1592,
-        1016,
-        "#d5d7db"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/2ede701-spot-price-search-results.png)

@@ -12,22 +12,9 @@ Thanks to the two new props added to the `gallery` block from the [Search Result
 
 Together, both props allow you to choose a block to be rendered in a specific product interval.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ee5fb9e-gallery-custom.png",
-        "gallery-custom.png",
-        448,
-        1392,
-        "#d4d4d2"
-      ],
-      "caption": "Notice how the search results page above has a flexible layout to show fetched products."
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/ee5fb9e-gallery-custom.png)
+
+Notice how the search results page above has a flexible layout to show fetched products.
 Do not forget to check out the [Search Results documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) to read further about the props and learn how to set them up in your store! 
 [block:callout]
 {

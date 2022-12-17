@@ -15,18 +15,4 @@ And It gets better: the app also supports Youtube, Vimeo, and other third-party 
 What are you waiting for? Check out now the [documentation](https://vtex.io/docs/components/content-blocks/vtex.store-video/)!
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d2838cf-store-video.png",
-        "store-video.png",
-        1674,
-        1000,
-        "#725e52"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/d2838cf-store-video.png)

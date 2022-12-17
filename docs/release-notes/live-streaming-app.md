@@ -13,19 +13,5 @@ type: "added"
 > The Live Streaming app is now known as [the Live Shopping app](https://apps.vtex.com/liveshopping/p).
 
 The Live Streaming app is here to start a revolution in your e-commerce: use the app to broadcast live on your store website, increasing selling rates, enhancing user experience, and boosting customer interaction simultaneously and in real-time.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/90d592a-live-streaming-web.png",
-        "live-streaming-web.png",
-        1804,
-        1024,
-        "#5c5c61"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/90d592a-live-streaming-web.png)
 Get to know installation instructions and other configurations in the [**app documentation**](https://developers.vtex.com/vtex-developer-docs/docs/vtexventures-livestreaming)!

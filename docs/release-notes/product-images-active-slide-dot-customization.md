@@ -13,18 +13,4 @@ A new CSS Handle (`swiperBullet--active`) was added to the [Product Images block
 This handle is extremely useful for scenarios where the Product Images block is used to build a slider component, such as a [Carousel](https://vtex.io/docs/recipes/templates/building-a-carousel-using-slider-layout).
 
 :information-source: *The slider active dot represents the slide currently being hovered on by users.*
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/18199ca-rn-swiper-product-images.png",
-        "rn-swiper-product-images.png",
-        804,
-        486,
-        "#c5b7b4"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/18199ca-rn-swiper-product-images.png)

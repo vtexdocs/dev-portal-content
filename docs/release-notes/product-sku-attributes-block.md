@@ -13,18 +13,4 @@ type: "added"
 Learn more about it in the [Product SKU Attributes documentation](https://vtex.io/docs/components/content-blocks/vtex.store-components/productskuattributes/)!
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3e52e6a-product-sku-attributes.png",
-        "product-sku-attributes.png",
-        886,
-        704,
-        "#f2f2f2"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/3e52e6a-product-sku-attributes.png)

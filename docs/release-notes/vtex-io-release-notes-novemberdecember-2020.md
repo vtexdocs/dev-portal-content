@@ -37,41 +37,13 @@ With almost a year gone by, it's time to say goodbye: to better take advantage o
 > :inf
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3bb0edb-Developers-portal.png",
-        "Developers-portal.png",
-        2876,
-        1578,
-        "#f5f4f5"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/3bb0edb-Developers-portal.png)
 Home to our [API documentation](https://developers.vtex.com/reference) and [guides](https://developers.vtex.com/docs) aimed at developers working with integrations and customization, the [**Developer Portal**](https://developers.vtex.com/) - formerly known as Help Center Developer Docs - offers all the necessary resources for VTEX's most advanced users in a single place.
 
 Such changes to the VTEX IO documentation mean a lot more than just content redistribution, trust me: they will ensure a **better and greater support for VTEX IO users** and their specific objectives on our platform.
 
 As to the future of our beloved Release Notes, don't worry: in addition to the [Developer Newsletter](https://forms.gle/DHo3SS7ZaGCvAMow8) bringing you all the essential updates on platform changes, the Developer Portal also has its own Release Notes section:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c4dc627-portal-release-notes.png",
-        "portal-release-notes.png",
-        2878,
-        1580,
-        "#fdfbfc"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/c4dc627-portal-release-notes.png)
 Nothing but the address will change, I promise! Everything else stays the same, with the same high-quality impactful content, working together as always, but now housed in a place that can fully encourage our potential :sparkles:
 
 ## Features 🚀
@@ -100,57 +72,15 @@ Nothing but the address will change, I promise! Everything else stays the same, 
 
  - **Placeholders on the Store Form component** - Thanks to the new `placeholder` prop, added to the `form-input.textarea` block, the [Store Form](https://vtex.io/docs/components/content-blocks/vtex.store-form/) component now accepts placeholders for text inputs, meaning that from now on you can add descriptions as well as other desired instructions to the form's text fields.
  
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f2d0d01-store-form-placeholder.png",
-        "store-form-placeholder.png",
-        1268,
-        471,
-        "#e4e3e1"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/f2d0d01-store-form-placeholder.png)
  
 - **Link building in the product brand's name** -  A new prop has arrived for the [`product-brand` block](https://vtex.io/docs/components/all/vtex.store-components/product-brand) from the [Store Components app](https://vtex.io/docs/app/vtex.store-components/): the `withLink`! Replacing the former `logoWithLink` prop, the new one is here to help you create links for the product brand's website based on text strings or image icons.  
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7fc87de-brand-name-with-link.png",
-        "brand-name-with-link.png",
-        888,
-        646,
-        "#f6f5f5"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/7fc87de-brand-name-with-link.png)
 *take a deep breath, we're half way through already... it's been two whole months! There's a lot where that came from! Check it out:*
 
 - **Multiple gallery layouts** - Having multiple layout configurations for your search results page may sound impossible, but thanks to the Search Result's `gallery-layout-switcher` and `gallery-layout-option` new blocks, it is not! To learn how to customize the page, check out the [Building a search results page with multiple layouts recipe](https://vtex.io/docs/recipes/templates/building-a-search-results-page-with-multiple-layouts/)!
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3ae3597-multiple-layouts.png",
-        "multiple-layouts.png",
-        1406,
-        486,
-        "#f4f4f4"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/3ae3597-multiple-layouts.png)
 -  **Multiple seller compatibility** - The [Add To Cart Button](https://vtex.io/docs/components/all/vtex.add-to-cart-button/), [Buy Button](https://vtex.io/docs/components/all/vtex.store-components/buy-button) and [Product Price](https://vtex.io/docs/components/all/vtex.store-components/product-price) now use as their default behavior the first *available* seller's data, meaning they are able to work with multiple seller data. Previously, the components only worked with the first seller's data, regardless of their availability and ignoring the rest of the seller list - tricky, wasn't it? now, this is what our team calls an improvement! 
 
 - **Product image placeholder** - From now on, set a default image as placeholder for your store products thanks to the new `placeholder` prop, available for the [`product-images`](https://vtex.io/docs/components/product/vtex.store-components/product-images/) and [`product-summary-image`](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-image) blocks, respectively from the [Store Components](https://vtex.io/docs/app/vtex.store-components/) and the [Product Summary](https://vtex.io/docs/components/all/vtex.product-summary/) apps. 
@@ -161,21 +91,7 @@ Nothing but the address will change, I promise! Everything else stays the same, 
 
 - **The `promoView` and `promotionClick` events** - New events for the [Google Tag Manager pixel app](https://vtex.io/docs/components/all/vtex.google-tag-manager/). Best of all? They all follow the official google enhanced commerce format! Please welcome the [`promoView`](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-impressions) and the [`promotionClick`](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-clicks) events, responsible for displaying a store's promotion impressions. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9aa9293-events-promotions.png",
-        "events-promotions.png",
-        699,
-        360,
-        "#f8f5f6"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/9aa9293-events-promotions.png)
 ## Warnings ⚠️
 
 - **Unannotated queries requested as public**

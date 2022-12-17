@@ -14,36 +14,6 @@ The new prop makes it possible to display a different text on a product selling 
 
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/047be76-rn-no-list-price.png",
-        "rn-no-list-price.png",
-        630,
-        298,
-        "#ececec"
-      ],
-      "caption": "Product selling price with no list price being displayed."
-    }
-  ]
-}
-[/block]
+![Product selling price with no list price being displayed.](https://files.readme.io/047be76-rn-no-list-price.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c5c9ed1-rn-with-list-price.png",
-        "rn-with-list-price.png",
-        516,
-        326,
-        "#ececec"
-      ],
-      "caption": "Product selling price with the list price also being displayed."
-    }
-  ]
-}
-[/block]
+![Product selling price with the list price also being displayed.](https://files.readme.io/c5c9ed1-rn-with-list-price.png)

@@ -23,18 +23,4 @@ These are:
 * Cancel Operation
 
 All these commands communicate with the inStore solution and instruct the user which action has to be done to solve each issue.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/662bc86-VTEX_Payment_App.PNG",
-        "VTEX Payment App.PNG",
-        311,
-        565,
-        "#e6e4eb"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/662bc86-VTEX_Payment_App.PNG)

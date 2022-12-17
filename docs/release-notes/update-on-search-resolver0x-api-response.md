@@ -16,34 +16,6 @@ For further information, check our [announcement](https://help.vtex.com/en/annou
 }
 [/block]
 ## Response before the update
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e119700-Screenshot_1.png",
-        "Screenshot_1.png",
-        1136,
-        724,
-        "#f1f0f2"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/e119700-Screenshot_1.png)
 ## Response after the update
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a5fc0ea-image_44.png",
-        "image (44).png",
-        1365,
-        820,
-        "#efeff0"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/a5fc0ea-image_44.png)

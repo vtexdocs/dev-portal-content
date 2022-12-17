@@ -11,18 +11,4 @@ type: "improved"
 The [Product Identifier app](https://vtex.io/docs/components/content-blocks/vtex.product-identifier/) from now on also accepts item IDs as product identifiers. 
 
 Before this release, only Product Reference, Product ID, SKU EAN, and SKU Reference ID were accepted as valid to be displayed on the component.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ea2a6e8-product-identifier.png",
-        "product-identifier.png",
-        1633,
-        869,
-        "#f7f7f7"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/ea2a6e8-product-identifier.png)
