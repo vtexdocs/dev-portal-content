@@ -10,10 +10,10 @@ updatedAt: "2022-09-29T21:05:13.444Z"
   "html": "<style>\n    .markdown-body .callout[theme=\"📣\"] {\n    --icon: \"\\f0a1\";\n    --icon-color: #142032;\n    --border: #142032;\n    --background: #f8f7fc;\n    --text: #4a596b;\n    }\n  </style>\n  <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n    <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n      <p>\n      Tell us about your experience with this article by filling out <button style=\"background-color:transparent;color:#f71963;text-decoration:underline;border:none;padding:0;cursor:pointer;font-size: var(--markdown-font-size,14px);\" onclick=\"closeModal()\">this form.</button>\n      </p>\n  </blockquote>"
 }
 [/block]
+
 ## Developing an antifraud integration
 
 Antifraud solutions are used along with payment transactions to make them more secure by performing a risk analysis. VTEX allows antifraud systems to be integrated by providers through a protocol. The [Antifraud Provider Protocol](https://help.vtex.com/en/tutorial/antifraud-provider--4aZtmdpgFikcsQomWyqAOq) is a contract between VTEX and providers where VTEX defines a set of rules that have to be implemented by the providers in their integrations. The integrations have to include a set of endpoints defined in our [Antifraud Provider Protocol API](https://developers.vtex.com/vtex-rest-api/reference/antifraud-provider-protocol-overview).
-
 
 ## Developing a gift card integration
 
@@ -23,7 +23,6 @@ At VTEX, gift cards are treated as a payment option and their transactions are p
 - [Gift Card system architecture](https://developers.vtex.com/vtex-rest-api/docs/gift-card-integration-guide-system-architecture)
 - [Gift Card Provider Protocol API](https://developers.vtex.com/vtex-rest-api/reference/giftcard-provider-protocol-overview)
 
-
 ## Understanding VTEX’s Payments architecture
 
 VTEX’s payment systems provide many resources to support all kinds of payment methods, conditions and integrations. This versatility also comes with complexity. If you are developing an integration or dealing with a more complex payment configuration, having a better understanding of our Payments architecture might help you. You can check details about it in these articles:
@@ -32,7 +31,6 @@ VTEX’s payment systems provide many resources to support all kinds of payment 
 - [Payment Methods](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-methods)
 - [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows)
 
-
 ## Configuring specific payment methods or affiliations
 
 The most common process to make payments available in your store is by configuring an [affiliation](https://help.vtex.com/tutorial/registering-gateway-affiliations--tutorials_444) (related to the provider you have a contract with) and a [method](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions) in the Admin. Instructions for this process are found mostly in our [Help Center](https://help.vtex.com/subcategory/payment-settings--3tDGibM2tqMyqIyukqmmMw), but some configurations are more advanced and described in the articles below:
@@ -40,14 +38,12 @@ The most common process to make payments available in your store is by configuri
 - [Setting up Merchant ID in Apple Pay](https://developers.vtex.com/vtex-rest-api/docs/setting-up-merchant-id-in-apple-pay)
 - [Installing Affirm Payment App](https://developers.vtex.com/vtex-rest-api/docs/installing-affirm-payment-app-1)
 
-
 ## Configuring payments for specific use cases
 
 When adding or editing a payment configuration in your store, you might need specific use cases such as defining a type of interest rate or processing payments through an external seller. Check the articles below for more information:
 
 - [Setting up the type of interest rate](https://developers.vtex.com/vtex-rest-api/docs/setting-up-the-type-of-interest-rate)
 - [External seller processing payments](https://developers.vtex.com/vtex-rest-api/docs/external-seller-processing-payments)
-
 
 ## Developing a payment integration
 
@@ -82,6 +78,6 @@ When developing a payment integration, you might need to add specific features. 
 - [Cardholder document configuration](https://developers.vtex.com/vtex-rest-api/docs/cardholder-document-configuration)
 - [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/vtex-rest-api/docs/layout-development-guide-for-payment-methods-in-smart-checkout-vtex)
 
-![Payment layout customization example](https://files.readme.io/98a1ba7-2b693ad-layout_gif.gif)
+![Payment layout customization example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/98a1ba7-2b693ad-layout_gif_85.gif)
 
-![Payment App example](https://files.readme.io/d9a2e11-c95f758-kX6y8QN55B.gif)
+![Payment App example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/d9a2e11-c95f758-kX6y8QN55B_87.gif)

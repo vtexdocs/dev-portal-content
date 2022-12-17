@@ -36,7 +36,7 @@ Before you have setup a sender in [Message Center](https://help.vtex.com/en/trac
 
 Once the sender has been set up, you should receive an e-mail from Amazon Web Services requesting you to authorize the configured e-mail address for use with [Amazon SES](https://aws.amazon.com/ses/).
 
-![](https://files.readme.io/9070bed-image1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/api-guides/9070bed-image1_39.png)
 
 Clicking on the confirmation link provided in the e-mail body verifies you are the owner of the configured e-mail address. This is required for the mail server to send mail on your behalf. Until this is done, this is the expected response from the DKIM endpoint:
 
@@ -49,10 +49,10 @@ Clicking on the confirmation link provided in the e-mail body verifies you are t
 
 Once you have clicked on the confirmation link, you may test your SMTP configuration by clicking on the ✅**Test** button, as shown in the image below.
 
-![](https://files.readme.io/33c85ef-image3.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/api-guides/33c85ef-image3_52.png)
 After clicking on ✅**Test** button, you should receive an e-mail from the VTEX mail server using the sender you selected. The e-mail message sent follows the [Message Center template](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/335JZKUYgvYlGOJgvJYxRO) `messageservice_teste_email`, which can be customized as seen in the image below.
 
-![](https://files.readme.io/705e4dc-image2.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/api-guides/705e4dc-image2_55.png)
 
 > 🚧
 >

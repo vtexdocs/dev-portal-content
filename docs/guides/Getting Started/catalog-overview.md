@@ -22,7 +22,7 @@ Each [product](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3L
 
 Categories are associated with [Specification](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP) groups, which gather Product Specifications and SKU Specifications that will be applied for all items associated with the category. All specifications must be filled in for items to be active in your store.
 
-![VTEX Catalog architecture](https://files.readme.io/bbe67a3-Group_3_4.png)
+![VTEX Catalog architecture](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/bbe67a3-Group_3_4_25.png)
 
 ## Setting up your catalog
 

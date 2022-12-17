@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-01-02T04:28:35.508Z"
 updatedAt: "2022-06-15T20:47:28.940Z"
 ---
+
 [block:callout]
 {
   "type": "info",
@@ -12,12 +13,12 @@ updatedAt: "2022-06-15T20:47:28.940Z"
   "title": "Onboarding guide"
 }
 [/block]
-The Gift Card Hub API allows interactions with all Gift Card providers registered to a store from a single point. 
+The Gift Card Hub API allows interactions with all Gift Card providers registered to a store from a single point.
 
 Gift Card providers are systems capable of providing cards to be used in the buying process.
 
 The following is the sequence diagram that represents calls in the purchase closing process.
-![](https://files.readme.io/4ac5cf6-giftcardHub.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/GiftCard%20Hub%20API/4ac5cf6-giftcardHub_20.png)
 
 **Checkout + Gateway**: Systems responsible for the sale and for processing orders and payments.
 

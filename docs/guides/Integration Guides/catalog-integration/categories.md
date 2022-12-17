@@ -5,11 +5,12 @@ hidden: false
 createdAt: "2021-12-10T21:47:46.801Z"
 updatedAt: "2022-11-22T17:13:51.833Z"
 ---
+
 The category tree is the backbone of the Catalog, so it needs to be carefully planned and validated before importing to VTEX.
 
 We strongly recommend starting to work on the category tree by creating a table similar to this one:
 
-![Category tree table example](https://files.readme.io/8b98f38-tabela_2.PNG)
+![Category tree table example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/catalog-integration/8b98f38-tabela_2_12.PNG)
 
 The idea behind this template is to allow easy visualization of how the tree is organized and how the specifications are being presented.
 
@@ -22,21 +23,26 @@ Note that the Shirt category (level 2) has the `Style` field as a specification.
 Products must be associated with the categories at the lowest level of the category tree. In this example, they must be associated with the category: `Jeans` with `Pants` or `Polo` with `Shirt`.
 
 ## Limitations
+
 - **Number of categories:** VTEX does not limit the number of categories that can be created.
 - **Number of category levels:** VTEX supports more than three levels of categories but we strongly recommend having a maximum of three.
 
 ## FAQ
+
 See below the answer to some frequently asked questions.
 
 ### When should I choose to import categories manually or by an integration via API?
+
 It is not common for the customer to change the category tree once it is defined. Usually, specific changes may be required and can be made manually under VTEX Admin rather than having one more integration to take care of. Potentially we can find some cases where the category tree is built progressively according to the evolution of the store. But this typically happens during the validation of a new business. In that case, having category integration can be useful.
 
 ### What category fields are actually used by VTEX Intelligent Search?
+
 - Title
 - Description
 
 ### What are the best practices for Title and Meta Tag Description for SEO?
-- The Title should be about 55 to 60 characters long. 
+
+- The Title should be about 55 to 60 characters long.
 - When writing the Meta Tag Description, aim for about 1-2 sentences (140-160 characters) long. Offer a compelling reason to visit the webpage. Add a clear call to action, address an emotional pain point, or offer a specific benefit to visitors.
 [block:callout]
 {
@@ -44,6 +50,7 @@ It is not common for the customer to change the category tree once it is defined
   "body": "Department, Category, and Subcategory titles can be customized using the VTEX Intelligent Search. So on the search navigation bar, the store can present different titles for each category level."
 }
 [/block]
+
 ## Pitfalls
 
 - **Deleting categories:** Due to some relationships that categories have with other parts of the catalog, such as products, specifications, and collections, you cannot delete categories unless you clear the entire catalog.

@@ -26,7 +26,8 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 * [Change payment method names in Checkout](https://developers.vtex.com/vtex-rest-api/docs/change-payment-method-names-in-checkout)<br>
 Smart Checkout - Payment layout customization example:
 
-![Layout Dev Guide - Guide](https://files.readme.io/4767f4f-Layout_Dev_Guide_-_Guide.gif)
+![Layout Dev Guide - Guide](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/4767f4f-Layout_Dev_Guide_-_Guide_29.gif)
+
 ## Understanding Checkout data structures
 
 The architecture of VTEX Checkout is organized in such a way that the main data structure is the `orderForm` object. It is composed of several sections and fields that allow you to have control over all the important information of a purchase order. See the links below for useful information and endpoints related to the `orderForm` object.
@@ -38,7 +39,6 @@ The architecture of VTEX Checkout is organized in such a way that the main data 
 * [POST - Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration)
 * [POST - Clear orderForm messages](https://developers.vtex.com/vtex-rest-api/reference/clearorderformmessages)
 
-
 ## Collecting custom client data
 
 To request client data additional to those available in the `orderForm`, stores can create `custom fields`. See the links below for useful information and endpoints related to custom client data.
@@ -48,7 +48,6 @@ To request client data additional to those available in the `orderForm`, stores 
 * [PUT - Set multiple custom field values](https://developers.vtex.com/vtex-rest-api/reference/setmultiplecustomfieldvalues)
 * [PUT - Set single custom field value](https://developers.vtex.com/vtex-rest-api/reference/setsinglecustomfieldvalue)
 * [DELETE - Remove single custom field value](https://developers.vtex.com/vtex-rest-api/reference/removesinglecustomfieldvalue)
-
 
 ## Accessing client data
 
@@ -60,7 +59,6 @@ Once you already have the client information registered, you can check their pro
 * [POST - Add client preferences](https://developers.vtex.com/vtex-rest-api/reference/addclientpreferences)
 * [POST - Add shipping address and select delivery option](https://developers.vtex.com/vtex-rest-api/reference/addshippingaddress)
 
-
 ## Accessing seller data
 
 In the marketplace context, you can check the seller's database to find out which sellers are available in a given region and configure the exchange of sellers that fulfill a purchase order. See the links below to access endpoints related to seller data.
@@ -69,8 +67,7 @@ In the marketplace context, you can check the seller's database to find out whic
 * [GET - Get window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller)
 * [POST - Update window to change seller](https://developers.vtex.com/vtex-rest-api/reference/updatewindowtochangeseller)
 
-
-## Handling the shopping cart 
+## Handling the shopping cart
 
 In your store, you can perform various actions related to the shopping cart, including adding security items, simulating carts, modifying item quantities, etc. See the links below for useful information and endpoints related to the handle the shopping cart in your store.
 
@@ -101,7 +98,7 @@ Minicart view:
 reCAPTCHA view:
 <br>     
 
-![](https://files.readme.io/5d0eb13-newCaptchaAnchor.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/5d0eb13-newCaptchaAnchor_104.gif)
 
 ## Getting information and simulating delivery logistics
 
@@ -113,28 +110,25 @@ By verifying addresses, pickup points, and fulfillment simulations, it is possib
 * [GET - Get address by postal code](https://developers.vtex.com/vtex-rest-api/reference/getaddressbypostalcode)
 * [POST - Fulfillment simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation#request-body-example---checkout-simulation)
 
-
 ## Making orders via API
 
 Through APIs it is possible to simulate all the steps in the order process carried out by the client. See the links below for useful information and endpoints related to the flow of an order.
 
 * [Create a regular order using the Checkout API](https://developers.vtex.com/vtex-rest-api/docs/create-a-regular-order-using-the-checkout-api)
-* [PUT - Place an order (no cart information available)](https://developers.vtex.com/vtex-rest-api/reference/placeorder) 
+* [PUT - Place an order (no cart information available)](https://developers.vtex.com/vtex-rest-api/reference/placeorder)
 * [POST - Place an order from an existing cart](https://developers.vtex.com/vtex-rest-api/reference/placeorderfromexistingorderform)
 * [POST - Process order](https://developers.vtex.com/vtex-rest-api/reference/processorder)
-
 
 ## Configuring tax customization systems
 
 When your store sells products to many regions or has stocks in different locations, you may need to calculate different taxes to apply to each order. To facilitate this procedure, at VTEX you can integrate an external tax calculation provider. See the links below to access information on how to integrate an external tax calculation provider into your store.
 
-* [Tax Service - Overview](https://developers.vtex.com/vtex-rest-api/docs/tax-services-overview) 
+* [Tax Service - Overview](https://developers.vtex.com/vtex-rest-api/docs/tax-services-overview)
 * [Tax Service - Specification](https://developers.vtex.com/vtex-rest-api/docs/tax-services-specification#checkout-configuration)
 * [Tax Service - Recipe](https://developers.vtex.com/vtex-rest-api/docs/tax-services-recipe)
 * [Tax Service - Implementation](https://developers.vtex.com/vtex-rest-api/docs/tax-services-reference-implementation)
 
-
-## Integrating Checkout with apps 
+## Integrating Checkout with apps
 
 At VTEX checkout, some features are activated through apps. See the links below to access information about the apps available for your store's checkout.
 
@@ -144,7 +138,10 @@ At VTEX checkout, some features are activated through apps. See the links below 
 * [PowerReviews App - UGC (User Generated Content) Ratings & Reviews Tool](https://developers.vtex.com/vtex-developer-docs/docs/vtex-powerreviews)
 <br>
 Hotjar heatmap example:
-![](https://files.readme.io/df6d1e8-Hotjar_heatmap_example.png)
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/df6d1e8-Hotjar_heatmap_example_147.png)
+
 <br>
+
 Product review example:
-![](https://files.readme.io/ac54295-Shop-for-Soft-Clean-Silky-Hydrating-Lotion-by-Estee-Lauder-Shoppers-Drug-Mart-copy-1009x1024.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/ac54295-Shop-for-Soft-Clean-Silky-Hydrating-Lotion-by-Estee-Lauder-Shoppers-Drug-Mart-copy-1009x1024_150.png)

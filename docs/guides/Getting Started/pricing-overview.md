@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-08-01T20:19:35.374Z"
 updatedAt: "2022-09-30T22:06:42.648Z"
 ---
+
 [block:html]
 {
   "html": "<style>\n    .markdown-body .callout[theme=\"📣\"] {\n    --icon: \"\\f0a1\";\n    --icon-color: #142032;\n    --border: #142032;\n    --background: #f8f7fc;\n    --text: #4a596b;\n    }\n  </style>\n  <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n    <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n      <p>\n      Tell us about your experience with this article by filling out <button style=\"background-color:transparent;color:#f71963;text-decoration:underline;border:none;padding:0;cursor:pointer;font-size: var(--markdown-font-size,14px);\" onclick=\"closeModal()\">this form.</button>\n      </p>\n  </blockquote>"
@@ -15,9 +16,9 @@ The Prices module, also called Pricing, is a system responsible for the creation
 
 ## Understanding VTEX’s Pricing architecture
 
-**Prices** represent your SKU sales value information. In VTEX, these prices are stored in **price tables.** In turn, these price tables can be applied to different **contexts**, like trade policies. These concepts are related as shown in the image below. Learn more about VTEX's pricing architecture in our [Pricing system architecture](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/7GptzvlPDVM11ojEjywIQx) article. 
+**Prices** represent your SKU sales value information. In VTEX, these prices are stored in **price tables.** In turn, these price tables can be applied to different **contexts**, like trade policies. These concepts are related as shown in the image below. Learn more about VTEX's pricing architecture in our [Pricing system architecture](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/7GptzvlPDVM11ojEjywIQx) article.
 
-![](https://files.readme.io/db14048-Screen_Shot_2022-08-03_at_17.18.09.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/db14048-Screen_Shot_2022-08-03_at_17.18.09_20.png)
 
 [block:html]
 {
