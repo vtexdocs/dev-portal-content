@@ -14,21 +14,7 @@ updatedAt: "2022-09-15T18:56:45.172Z"
 When making a search on VTEX, there are different possibilities of URLs. The URLs of Departments and Categories are made up as follows:
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/69c7883-Screenshot_2022-09-12_at_18-02-09_Categories.png",
-        "Screenshot 2022-09-12 at 18-02-09 Categories.png",
-        374,
-        280,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/69c7883-Screenshot_2022-09-12_at_18-02-09_Categories.png)
 In the categories tree above, the links are as follows:
 
 * `www.store.com/clothes`
@@ -36,21 +22,7 @@ In the categories tree above, the links are as follows:
 * `www.store.com/clothes/women/shirts`
 
 The URL will always be made up with the term entered in the search field:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/410a80e-Screenshot_2022-09-12_at_18-10-39_https___lojadobreno.myvtex.com.png",
-        "Screenshot 2022-09-12 at 18-10-39 https __lojadobreno.myvtex.com.png",
-        971,
-        76,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/410a80e-Screenshot_2022-09-12_at_18-10-39_https___lojadobreno.myvtex.com.png)
 `www.store.com/shoes`
 
 The browsing filters also have specific URLs that are defined by certain parameters in the URL. These parameters are as follows:
@@ -70,21 +42,7 @@ The browsing filters also have specific URLs that are defined by certain paramet
 Where:
 
 * **C:\[DepartmentId/CategoryId/SubcategoryId\]**: shows products of a specific category, according to the IDs informed for the department, category, and subcategory. This code appears next to category names on **Products**>**Catalog**>**Categories**.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3e2c755-Group_11.png",
-        "Group 1(1).png",
-        382,
-        288,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/3e2c755-Group_11.png)
 
 [block:callout]
 {
@@ -93,37 +51,9 @@ Where:
 }
 [/block]
 * **B:\[BrandId\]:** shows products of a specific brand, according to the ID informed. This code is shown at the end of the URL, on the page used for changing the brand, in **Products**>**Catalog**>**Brands**.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/58ac2e5-Group_2.png",
-        "Group 2.png",
-        2022,
-        450,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/58ac2e5-Group_2.png)
 * **H:\[CollectionId\]**: shows products of a specific collection, according to the ID informed. This code is informed in collection editing, in **Store setup**>**CMS**>**Layout**>**CMS**>**Product Clusters (Collections)**.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/da99f6b-Group_21.png",
-        "Group 2(1).png",
-        1648,
-        692,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/da99f6b-Group_21.png)
 
 [block:callout]
 {
