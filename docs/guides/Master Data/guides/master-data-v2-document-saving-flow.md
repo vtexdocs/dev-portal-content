@@ -7,21 +7,7 @@ updatedAt: "2022-08-04T19:27:16.561Z"
 ---
 Whenever you save a document in Master Data v2, the platform performs a specific sequence of processes indicated in the image below. In this article, you can learn more about each step in this saving flow.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e7cca94-master_data_v2_document_saving_flow.png",
-        "master data v2 document saving flow.png",
-        167,
-        923,
-        "#ed2568"
-      ]
-    }
-  ]
-}
-[/block]
+![master data v2 document saving flow](https://files.readme.io/e7cca94-master_data_v2_document_saving_flow.png)
 ## Save API call
 
 It happens whenever you send a request to the saving documents APIs ([POST](https://developers.vtex.com/vtex-rest-api/reference/createnewdocument), [PUT](https://developers.vtex.com/vtex-rest-api/reference/updateentiredocument )or [PATCH](https://developers.vtex.com/vtex-rest-api/reference/updatepartialdocument)). This triggers the rest of the sequence of processes.
