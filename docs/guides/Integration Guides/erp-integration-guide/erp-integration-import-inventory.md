@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-03-11T20:58:11.777Z"
 updatedAt: "2022-02-10T15:59:10.915Z"
 ---
+
 In this step, you will send the number of products you currently have in stock to VTEX.
 
 ## Before you start
@@ -13,7 +14,7 @@ The Logistics module is the service responsible for the inventory and shipping i
 
 A basic concept here is that of a **logistics route**, the path connecting your store to the customer. For an order to be placed in a store, the desired item should have stock available in at least one [warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) connected through a [loading dock](https://help.vtex.com/en/tutorial/loading-dock--5DY8xHEjOLYDVL41Urd5qj) to a freight [carrier](https://help.vtex.com/en/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE) that delivers to the customer's address. The image below illustrates these concepts.
 
-![](https://files.readme.io/e492ed1-image3.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/erp-integration-guide/e492ed1-image3_16.png)
 
 If you would like an introduction to our Logistics module, check out the [Logistics overview](https://help.vtex.com/en/tutorial/logistics--53udnvI5eBy8DKo8FOjMoP) in our Help Center.
 

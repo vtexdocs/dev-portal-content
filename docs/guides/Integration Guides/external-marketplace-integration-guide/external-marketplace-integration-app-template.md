@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2021-09-27T16:02:23.338Z"
 updatedAt: "2022-06-23T20:26:15.880Z"
 ---
+
 The integration Template App is a pre-built app developed by VTEX for our partners to reduce development and implementation time when integrating with external marketplaces. By using the template to build your integration app, connectors will also have the app displayed in the [VTEX App Store](https://apps.vtex.com/).
 
 ## What the App Template includes for the VTEX Admin
@@ -136,7 +137,7 @@ To receive notifications from VTEX, the seller needs to implement specific API r
 
 ##### Catalog notification
 
-To receive product update notifications and product variations (including stock, price and trade policy), you must implement the POST `{{connectorEndpoint}}/catalog/notification` route.  
+To receive product update notifications and product variations (including stock, price and trade policy), you must implement the POST `{{connectorEndpoint}}/catalog/notification` route.
 
 This notification follows the format of our VTEX [Broadcaster Adapter](https://developers.vtex.com/vtex-developer-docs/docs/vtex-broadcaster#sku-data).
 
@@ -215,7 +216,7 @@ You can remove [Offer Management](https://help.vtex.com/tutorial/anuncios-enviad
 
 When the configuration _AllowFranchiseAccounts_ is configured, the component becomes a toggle indicating whether [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) are permitted.
 
-![](https://files.readme.io/8a67b4d-allow_franchise_account.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/8a67b4d-allow_franchise_account_218.png)
 
 You can remove the configuration by performing the following actions:
 
@@ -320,7 +321,7 @@ Here’s an example code for adding an input field:
 
 The example above creates an input field called `ExampleComponent`. It uses an extra property, or the `setConfig`, used in this case within the `onChange` property of the Input component. This updates the `email` field in the config, whenever the seller types something within the field. This is how it is rendered in the UI:
 
-![](https://files.readme.io/45213db-Template_App_1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/45213db-Template_App_1_323.png)
 
 6. To finalize the new field’s inclusion, add the new field within the **CustomConfigsArea**. To do that:
 
@@ -384,13 +385,13 @@ To illustrate with an example, let’s suppose we have the following component:
 
 In this case, we have an Input component, type “text”, and its label will be translated according to the VTEX Admin’s locale. If we do not add the id `"admin/app.test.title"` in the `messages` folder, this is what is rendered in the UI:
 
-![Template App 2](https://files.readme.io/49c0509-Template_App_2.png)
+![Template App 2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/49c0509-Template_App_2_387.png)
 
 Since the id does not exist in any `messages` file, it renders the id itself as a response.
 
 To add the id to the file, we add the code: `“admin/app.test.title”: “Teste no en.json”`. Once the id is rendered in all files, the component will then render:
 
-![Template App 3](https://files.readme.io/fb82a4b-Template_App_3.png)
+![Template App 3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/fb82a4b-Template_App_3_393.png)
 
 ## Step 4 - Testing the app locally
 
@@ -406,8 +407,7 @@ To add the id to the file, we add the code: `“admin/app.test.title”: “Test
 
 Once the app is configured, it is possible to recover the seller’s configuration through the app. To search a seller’s configuration:
 
-1. Call the following API:
-`https://{{workspace}}--{(account}}.myvtex.com/_v/{{appVendor}}/{{appName}}/config`
+1. Call the following API: `https://{{workspace}}--{(account}}.myvtex.com/_v/{{appVendor}}/{{appName}}/config`
 
 <table>
     <tr>

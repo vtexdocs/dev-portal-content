@@ -5,17 +5,17 @@ hidden: false
 createdAt: "2021-06-28T21:49:41.610Z"
 updatedAt: "2022-02-03T20:42:57.443Z"
 ---
+
 Learn how to keep integrated products updated with price and inventory level information. Before you start, check out what’s included in the product update flow:
 
 | Included                                     | Not Included                                                          |
-|----------------------------------------------|-----------------------------------------------------------------------|
+| -------------------------------------------- | --------------------------------------------------------------------- |
 | Prices defined in the VTEX main account      | Prices defined in third party sellers or franchise accounts           |
 |                                              | Prices updated directly to the marketplace integration                |
 | Inventory levels defined in the main account | Inventory levels defined in third party sellers or franchise accounts |
 |                                              | Inventory levels updated directly to the marketplace integration      |
 
-
-## How to configure the affiliate endpoint 
+## How to configure the affiliate endpoint
 
 To use this flow, the connector should provide an endpoint according to the standard:
 
@@ -23,15 +23,14 @@ To use this flow, the connector should provide an endpoint according to the stan
 
 This endpoint should be configured in the VTEX affiliate registration page. Check out our [Configuring an Affiliate](https://help.vtex.com/en/tutorial/configuring-affiliates--tutorials_187) article.
 
-
 ## VTEX Notification
 
-Whenever the seller updates a  product or SKU in VTEX, a notification will be sent through the url configured in the section above. The table below presents the fields sent in this notification’s payload. The connector should use this data to implement the new product registration flow, described in the scenarios that will follow. 
+Whenever the seller updates a  product or SKU in VTEX, a notification will be sent through the url configured in the section above. The table below presents the fields sent in this notification’s payload. The connector should use this data to implement the new product registration flow, described in the scenarios that will follow.
 
 ### Fields sent in the notification
 
 | Name                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                          |
-|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | idSKU                                   | SKU  ID in VTEX                                                                                                                                                                                                                                                                                                                                                                                                      |
 | productId                               | Product ID in VTEX                                                                                                                                                                                                                                                                                                                                                                                                   |
 | an                                      | Seller’s account name in VTEX, shown in the store’s VTEX Admin url.                                                                                                                                                                                                                                                                                                                                                  |
@@ -43,12 +42,12 @@ Whenever the seller updates a  product or SKU in VTEX, a notification will be se
 | HasStockKeepingUnitModified             | Identifies that the product/SKU registration data has changed, like name, description, weight, etc                                                                                                                                                                                                                                                                                                                   |
 | HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the trade policy. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
 
-The price update flow begins when the connector receives a VTEX Catalog notification, indicating that changes have been made to the SKU or product. Besides the notification mechanism, we recommend using an independent  inventory update mechanism, so stocks are always updated. Diagram 1 illustrates the information flow used to keep prices of seller’s SKUs updated in the marketplace integration.  
+The price update flow begins when the connector receives a VTEX Catalog notification, indicating that changes have been made to the SKU or product. Besides the notification mechanism, we recommend using an independent  inventory update mechanism, so stocks are always updated. Diagram 1 illustrates the information flow used to keep prices of seller’s SKUs updated in the marketplace integration.
 
-![](https://files.readme.io/115b895-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/115b895-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1_48.jpg)
 Diagram 2 illustrates how the price update occurs in the integration
 
-![](https://files.readme.io/34d82b3-MarketplaceConnections_Docs_-_Integration_through_notification-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/34d82b3-MarketplaceConnections_Docs_-_Integration_through_notification-1_51.jpg)
 Follow the steps below to maintain prices updated in the marketplace integration:
 
 1. Connector validates the VTEX &lt;> Marketplace authentication. In case it has expired, perform the update routine defined in the marketplace’s documentation. Otherwise, connectors should log the error AND put the VTEX notification in a contingency queue.
@@ -67,7 +66,7 @@ h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/refere
 3. Register operation’s [Logs](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#log-messages). Check out [Content of the messages](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#content-of-the-messages) for this step. 
 
 
-If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#log-messages) section. 
+If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#log-messages) section.
 
 If the IDs between VTEX and the marketplace differ, the connector should store both values.
 
@@ -75,12 +74,12 @@ If the IDs between VTEX and the marketplace differ, the connector should store b
 
 To avoid processing gaps due to the big volume of information of the initial load of products, we recommend:
 
-- Using an async messaging architecture, using individual queues by context and store.  
-- Creating mechanisms that respect the marketplace API limit rates. We suggest the standard use of the _Circuit Breaker_ integration.  
-- In case any of the steps listed above presents failures in communication, we suggest using the contingency mechanism of _deadLetters_.   
-- Being TotalReader: whenever possible, in the data transformation process, using standard values accepted by the marketplace, in case the information is not filled or sent by VTEX.  
-- In case the marketplace’s processing is in lots - meaning that the connector assembles a group of SKUs, guaranteeing the the limit of records per lot is respected, according to marketplace riles, and sending them to the marketplace at once - it is fundamental to control the lot’s processing, to avoid sending SKU updates without making sure that the product exists in the marketplace.     
-- Keeping a states table to know which SKUs have not been integrated with success, attempt date and the response received. This allows the system to use the contingency flow effectively, avoiding infinite loops, and avoiding reaching the request limit.    
+- Using an async messaging architecture, using individual queues by context and store.
+- Creating mechanisms that respect the marketplace API limit rates. We suggest the standard use of the *Circuit Breaker* integration.
+- In case any of the steps listed above presents failures in communication, we suggest using the contingency mechanism of *deadLetters*.
+- Being TotalReader: whenever possible, in the data transformation process, using standard values accepted by the marketplace, in case the information is not filled or sent by VTEX.
+- In case the marketplace’s processing is in lots - meaning that the connector assembles a group of SKUs, guaranteeing the the limit of records per lot is respected, according to marketplace riles, and sending them to the marketplace at once - it is fundamental to control the lot’s processing, to avoid sending SKU updates without making sure that the product exists in the marketplace.
+- Keeping a states table to know which SKUs have not been integrated with success, attempt date and the response received. This allows the system to use the contingency flow effectively, avoiding infinite loops, and avoiding reaching the request limit.
 [block:callout]
 {
   "type": "warning",
@@ -88,11 +87,12 @@ To avoid processing gaps due to the big volume of information of the initial loa
   "title": "Recommendations"
 }
 [/block]
+
 ## API Reference
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
 
-![](https://files.readme.io/47367c6-Marketplace_Docs_-_API_Ref.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/47367c6-Marketplace_Docs_-_API_Ref_95.jpg)
 
 [block:callout]
 {

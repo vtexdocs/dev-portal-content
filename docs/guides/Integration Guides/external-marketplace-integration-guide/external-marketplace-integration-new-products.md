@@ -5,8 +5,10 @@ hidden: false
 createdAt: "2021-06-25T21:03:55.330Z"
 updatedAt: "2022-02-03T20:26:40.959Z"
 ---
+
 This part of the guide explains how the connector should act when receiving the VTEX notification of a new product or SKU registered. The information flows according to the diagram below:
-![](https://files.readme.io/a85da6e-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a85da6e-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1_9.jpg)
+
 ## How to configure the affiliate endpoint
 
 To use this flow, the connector should provide an endpoint according to the standard:
@@ -15,32 +17,28 @@ To use this flow, the connector should provide an endpoint according to the stan
 
 This endpoint should be configured in the VTEX affiliate registration page. Check out our [Configuring an Affiliate](https://help.vtex.com/en/tutorial/configuring-affiliates--tutorials_187) article.
 
+## VTEX Notification
 
-## VTEX Notification 
-
-When creating a new product or SKU in VTEX a notification will be sent through the url configured in the section above. The table below presents the fields sent in this notification’s payload. The connector should use this data to implement the new product registration flow, described in the scenarios that will follow. 
+When creating a new product or SKU in VTEX a notification will be sent through the url configured in the section above. The table below presents the fields sent in this notification’s payload. The connector should use this data to implement the new product registration flow, described in the scenarios that will follow.
 
 Fields sent in the notification:
 
 | Name                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                          |
-|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | idSKU                                   | SKU  ID in VTEX                                                                                                                                                                                                                                                                                                                                                                                                      |
 | productId                               | Product ID in VTEX                                                                                                                                                                                                                                                                                                                                                                                                   |
 | an                                      | Seller’s account name in VTEX, shown in the store’s VTEX Admin url.                                                                                                                                                                                                                                                                                                                                                  |
 | idAffiliate                             | Affiliate ID generated automatically in the configuration.                                                                                                                                                                                                                                                                                                                                                           |
 | DateModified                            | Date when the item was updated                                                                                                                                                                                                                                                                                                                                                                                       |
 | isActive                                | Identifies whether the product is active or not. In case it is “false”, it means the product was deactivated in VTEX and should be blocked in the marketplace. We recommend that the inventory level is zeroed in the marketplace, and the product is blocked. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector. |
-| StockModified                           | Identifies that the inventory level has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                                                                                                      |
-| PriceModified                           | Identifies that the price  has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                                                                                                               |
+| StockModified                           | Identifies that the inventory level has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                         |
+| PriceModified                           | Identifies that the price  has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                                  |
 | HasStockKeepingUnitModified             | Identifies that the product/SKU registration data has changed, like name, description, weight, etc                                                                                                                                                                                                                                                                                                                   |
 | HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the trade policy. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
 
-
-## Integration flow after notification 
+## Integration flow after notification
 
 Follow the steps below, to send the initial load of products in the integration’s flow:
-
-
 
 1. Connector validates the VTEX <> Marketplace authentication. In case it has expired, perform the update routine defined in the marketplace’s documentation. Otherwise, connectors should log the error AND put the VTEX notification in a contingency queue.
 2. After receiving the VTEX notification, connectors should:
@@ -49,12 +47,12 @@ b. If the `HasStockKeepingUnitModified` is defined as true, the product should b
 c. Collect details from every SKU using the [Get details of an SKU associated with a sales channel. ](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku)
 d. Validate if the product is active through the [Get Product by ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-product) endpoint, through the `isActive` property.
 e. Validate if the product is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
-f. Identify whether the SKU conforms to the marketplace’s product registration rules. 
-g. Validate if the product’s category is mapped in the marketplace.  \
+f. Identify whether the SKU conforms to the marketplace’s product registration rules.
+g. Validate if the product’s category is mapped in the marketplace.
 In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) is complete.
-h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy. 
+h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy.
 
-If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#log-messages) section. 
+If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#log-messages) section.
 
 If the IDs between VTEX and the marketplace differ, the connector should store both values. This information will be used for SKU [update](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-product-updates) operations.
 
@@ -62,12 +60,12 @@ If the IDs between VTEX and the marketplace differ, the connector should store b
 
 To avoid processing gaps due to the big volume of information of the initial load of products, we recommend:
 
-- Using an async messaging architecture, using individual queues by context and store.  
-- Creating mechanisms that respect the marketplace API limit rates. We suggest the standard use of the _Circuit Breaker_ integration.  
-- In case any of the steps listed above presents failures in communication, we suggest using the contingency mechanism of _deadLetters_.   
-- Being TotalReader: whenever possible, in the data transformation process, using standard values accepted by the marketplace, in case the information is not filled or sent by VTEX.  
-- In case the marketplace’s processing is in lots - meaning that the connector assembles a group of SKUs, guaranteeing the the limit of records per lot is respected, according to marketplace riles, and sending them to the marketplace at once - it is fundamental to control the lot’s processing, to avoid sending SKU updates without making sure that the product exists in the marketplace.     
-- Keeping a states table to know which SKUs have not been integrated with success, attempt date and the response received. This allows the system to use the contingency flow effectively, avoiding infinite loops, and avoiding reaching the request limit.    
+- Using an async messaging architecture, using individual queues by context and store.
+- Creating mechanisms that respect the marketplace API limit rates. We suggest the standard use of the *Circuit Breaker* integration.
+- In case any of the steps listed above presents failures in communication, we suggest using the contingency mechanism of *deadLetters*.
+- Being TotalReader: whenever possible, in the data transformation process, using standard values accepted by the marketplace, in case the information is not filled or sent by VTEX.
+- In case the marketplace’s processing is in lots - meaning that the connector assembles a group of SKUs, guaranteeing the the limit of records per lot is respected, according to marketplace riles, and sending them to the marketplace at once - it is fundamental to control the lot’s processing, to avoid sending SKU updates without making sure that the product exists in the marketplace.
+- Keeping a states table to know which SKUs have not been integrated with success, attempt date and the response received. This allows the system to use the contingency flow effectively, avoiding infinite loops, and avoiding reaching the request limit.
 [block:callout]
 {
   "type": "warning",
@@ -75,11 +73,11 @@ To avoid processing gaps due to the big volume of information of the initial loa
   "title": "Validations"
 }
 [/block]
-## API Reference 
+
+## API Reference
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
-![](https://files.readme.io/a5c950f-Marketplace_Docs_-_API_Ref.jpg)
-
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a5c950f-Marketplace_Docs_-_API_Ref_81.jpg)
 [block:callout]
 {
   "type": "info",

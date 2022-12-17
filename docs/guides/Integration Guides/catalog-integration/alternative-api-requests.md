@@ -5,17 +5,17 @@ hidden: false
 createdAt: "2021-12-14T14:24:06.624Z"
 updatedAt: "2022-02-04T21:30:08.332Z"
 ---
+
 As you may have noticed, many catalog API requests use VTEX IDs in order to create and update values. Fields like `BrandId`, `FieldId`, `FieldValueId`, `GroupId` and `CategoryId`.
 
 While it is important to keep track of these IDs, there are some alternative endpoints that do not require them for performing some tasks.
-
 
 ## Create product using brand name and category path
 
 [Create product API endpoint](https://developers.vtex.com/vtex-rest-api/reference/post-product)
 
-
 ### Example body:
+
 ```json
 {
     "Name": "Test Product",
@@ -36,12 +36,12 @@ While it is important to keep track of these IDs, there are some alternative end
 
 ```
 
-
 ## Create product specification using field, group names
+
 API request: [Associate product specification using specification and group names](https://developers.vtex.com/vtex-rest-api/reference/put_api-catalog-pvt-product-productid-specificationvalue)
 
-
 ### Example body
+
 ```json
 {
     "FieldName": "TesteAPI",

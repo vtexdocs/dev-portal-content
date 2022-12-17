@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-03-11T22:25:23.921Z"
 updatedAt: "2022-02-03T13:51:54.342Z"
 ---
+
 In this step, you will send your orders from VTEX to your ERP or WMS.
 
 ## Before you start
@@ -15,15 +16,13 @@ There are two ways to track order status changes in VTEX: the orders [Feed and t
 
 The order integration process using the orders feed is illustrated in the diagram below.
 
-![Order integration flowchart](https://files.readme.io/7df0e42-image4.png)
+![Order integration flowchart](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/erp-integration-guide/7df0e42-image4_18.png)
 
 See this [boilerplate implementation of an orders feed consumer in C#](https://github.com/vtex/FeedConsumerCSharp) to get you started. If you would like a conceptual overview of our Orders Management module, check out this [beginner track](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa) in our Help Center. More details on the orders feed can be found [here](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1).
-
 
 ## Configure orders feed
 
 Before using the orders feed to track status changes, you should configure the filtering rule applied to it using the [Update feed configuration](https://developers.vtex.com/vtex-rest-api/reference/feedconfiguration) endpoint in the Orders API. You can use the [Retrieve feed configuration](https://developers.vtex.com/vtex-rest-api/reference/getfeedorderstatus1) endpoint to check the current feed configuration at any time.
-
 
 ### Filter
 
@@ -31,7 +30,7 @@ The Feed configuration filters what types of order updates actually generate eve
 
 When filtering changes in status (`”type”: “FromWorkflow”`) for ERP integrations, `ready-for-handling` is probably the most important to monitor. `start-handling` and `handling` may also be relevant depending on your operation’s architecture. For marketplaces with external fulfillment, `cancelation-request` and `waiting-ffmt-authorization` may also be pertinent.
 
-The other filtering type (`”type”: “FromOrders”`) can also be used to filter changes in status or any other change made to an order, which provides a much more customizable option. You can, for example, filter orders that have been delivered or that have had items removed or added to by the store. 
+The other filtering type (`”type”: “FromOrders”`) can also be used to filter changes in status or any other change made to an order, which provides a much more customizable option. You can, for example, filter orders that have been delivered or that have had items removed or added to by the store.
 
 Learn more about how to configure filtering options in this [Feed API guide](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1).
 [block:callout]

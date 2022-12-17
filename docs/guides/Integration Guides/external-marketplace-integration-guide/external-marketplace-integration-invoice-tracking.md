@@ -5,9 +5,10 @@ hidden: false
 createdAt: "2021-09-02T20:56:04.330Z"
 updatedAt: "2022-06-09T21:59:50.349Z"
 ---
+
 When integrating orders fulfilled by VTEX sellers, it is important to include tracking codes and invoice data. There are some requirements needed, before connectors can make sure that invoice and tracking code were sent to the marketplace:
 
-- The tracking code and invoice information must be contained within the VTEX Order. 
+- The tracking code and invoice information must be contained within the VTEX Order.
 - Connectors should offer a secure endpoint to receive VTEX notification from our [Retrieve feed order status](https://developers.vtex.com/vtex-rest-api/reference/getfeedorderstatus1) endpoint updating tracking code and invoice data
 - Tracking code and other data about the order’s delivery will only be made available to orders where the seller is in charge of delivery.
 
@@ -23,11 +24,10 @@ If the connector does not take that into account in their integration, they migh
 
 The diagram below describes the notification flow, for integrating tracking code and invoice data:
 
-
 Follow the steps below to integrate them, once receiving the notification. Make sure to review our [Recommendations](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-recommendations) page before you start.
 
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/4f9507b-MarketplaceConnections_Docs_-_English_-_Cdigo_de_RastreioNota_fiscal_1-1_30.jpg)
 
-![](https://files.readme.io/4f9507b-MarketplaceConnections_Docs_-_English_-_Cdigo_de_RastreioNota_fiscal_1-1.jpg)
 1. VTEX Orders receive tracking and/or invoice data. This information can be inserted via [Place Fulfillment Order API](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) or manually in VTEX Admin. 
 After receiving invoice information, the order status is updated to `invoiced` in VTEX. In this case, it is not possible to cancel the order anymore. 
 2. VTEX OMS notifies the connector through the URL informed in [Invoice notification from VTEX](#invoice-notification-from-vtex) by the connector through the property `marketplaceServicesEndpoint`, once the order is inserted in VTEX. 
@@ -65,8 +65,7 @@ Note that:
 
 Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token.
 
-![](https://files.readme.io/d783148-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1.jpg)
-
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/d783148-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1_68.jpg)
 [block:callout]
 {
   "type": "info",

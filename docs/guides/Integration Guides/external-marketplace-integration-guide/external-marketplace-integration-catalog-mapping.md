@@ -5,25 +5,24 @@ hidden: false
 createdAt: "2021-06-28T21:31:02.506Z"
 updatedAt: "2022-02-03T18:04:42.939Z"
 ---
-This section of the integration guide goes over which mappings are necessary to maintain the connection between the VTEX platform and the marketplace. It includes mappings for Catalog and mappings for Orders. 
 
+This section of the integration guide goes over which mappings are necessary to maintain the connection between the VTEX platform and the marketplace. It includes mappings for Catalog and mappings for Orders.
 
 ## Product Mapping
 
-Usually marketplaces offer a unique ID that identifies an SKU within its storefront. This ID enables SKU consultation, updates, blocking and exclusion operations. 
+Usually marketplaces offer a unique ID that identifies an SKU within its storefront. This ID enables SKU consultation, updates, blocking and exclusion operations.
 
-When this ID differs from the code that identifies the SKU within VTEX, the connector must offer a mechanism/repository that allows the mapping of these IDs. 
+When this ID differs from the code that identifies the SKU within VTEX, the connector must offer a mechanism/repository that allows the mapping of these IDs.
 
 It is important to implement a routine that allows the cleaning of this mapping in case the SKU is blocked or excluded in VTEX.
 
-In case the marketplace’s ID is the same used in VTEX, this action is not necessary. 
+In case the marketplace’s ID is the same used in VTEX, this action is not necessary.
 
+## Category Mapping
 
-## Category Mapping 
+Mapping categories guarantees that the VTEX category tree has a correct association with the marketplace’s category tree.
 
-Mapping categories guarantees that the VTEX category tree has a correct association with the marketplace’s category tree. 
-
-To perform this association, VTEX made VTEX Mapper available. It is a tool integrated to the VTEX platform that allows the user to relate categories created in VTEX to categories from the marketplace. 
+To perform this association, VTEX made VTEX Mapper available. It is a tool integrated to the VTEX platform that allows the user to relate categories created in VTEX to categories from the marketplace.
 
 ## VTEX Mapper
 
@@ -33,15 +32,17 @@ To use the category mapping service, follow the steps below, that will be furthe
 2. [Send category tree to VTEX Mapper](#send-category-tree-to-vtex-mapper)
 3. [Receive the category mapping in VTEX Mapper](#receive-the-category-mapping-in-vtex-mapper)
 4. [Use the category mapping in the product registration flow](#use-the-category-mapping-in-the-product-registration-flow)
+
 ## API Reference
 
-- [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration) 
-- [Send Category Mapping to VTEX Mapper](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) 
+- [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration)
+- [Send Category Mapping to VTEX Mapper](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper)
 
 ### Register the connector in VTEX Mapper
 
 After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) to operate a VTEX account, the diagram below illustrates the necessary steps to register the connector in VTEX Mapper.
-![](https://files.readme.io/929cc12-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Autenticao_-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/929cc12-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Autenticao_-1_44.jpg)
+
 1. Use the [Mapper Registration endpoint](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration).
 2. In case the registration is successful, VTEX Mapper returns a unique ID and endpoint to the connector. 
 3. Store the ID returned, to be later used in the category tree update action, in VTEX Matcher.
@@ -52,10 +53,12 @@ After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs
   "title": "Errors"
 }
 [/block]
+
 ### Send category tree to VTEX Mapper
 
 To send the marketplace’s category tree to VTEX Mapper, follow the steps illustrated in this diagram:
-![](https://files.readme.io/a672dae-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Envio_da_rvore_do_marketplace_ao_mapper-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a672dae-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Envio_da_rvore_do_marketplace_ao_mapper-1_58.jpg)
+
 1. Collect marketplace category tree.
 2. Check if the category tree doesn’t already exist in its repository. 
 a. If it is **not** mapped, store the category tree and the last update’s date. 

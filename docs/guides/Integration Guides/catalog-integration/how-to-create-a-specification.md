@@ -5,7 +5,8 @@ hidden: false
 createdAt: "2021-03-25T20:16:13.760Z"
 updatedAt: "2022-05-12T15:03:54.944Z"
 ---
-Specifications are additional properties that can be added to your store's products or SKUs. A specification is used to create site browsing filters and to differentiate SKUs and products within the product page. 
+
+Specifications are additional properties that can be added to your store's products or SKUs. A specification is used to create site browsing filters and to differentiate SKUs and products within the product page.
 
 This guide will describe all the steps to create a specification for a product or an SKU. They are (steps with * are mandatory):
 
@@ -14,11 +15,11 @@ This guide will describe all the steps to create a specification for a product o
 3. Create a specification value
 4. Associating a specification to a product or to an SKU*
 
-![](https://files.readme.io/a06d152-guide_specification_diagram_v1-01.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/catalog-integration/a06d152-guide_specification_diagram_v1-01_17.png)
 
 ## Creating a Specification Group
 
-The first step is to create a Specification Group. A Specification Group is a grouping of specifications related to a product or SKUs. The specification group is associated with a category and all products or SKUs. 
+The first step is to create a Specification Group. A Specification Group is a grouping of specifications related to a product or SKUs. The specification group is associated with a category and all products or SKUs.
 
 To create a specification group, use the [Create Specification Group](https://developers.vtex.com/vtex-rest-api/reference/specificationgroupinsert2) endpoint. The request body for this endpoint must include the `CategoryId` of the category that you are creating the specification group and the `Name` for the specification group. See the request body example below:
 [block:code]

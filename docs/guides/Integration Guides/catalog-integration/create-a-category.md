@@ -5,9 +5,10 @@ hidden: false
 createdAt: "2022-03-16T18:40:49.494Z"
 updatedAt: "2022-03-16T18:40:49.494Z"
 ---
-Categories organize your product assortment within your ecommerce. They work as hierarchical levels of product classification, making your client’s search for a product easier and keeping your store organized. 
 
-Creating a category is the most basic configuration you must do in Catalog. For a product to exist, it must have a category associated with it. 
+Categories organize your product assortment within your ecommerce. They work as hierarchical levels of product classification, making your client’s search for a product easier and keeping your store organized.
+
+Creating a category is the most basic configuration you must do in Catalog. For a product to exist, it must have a category associated with it.
 
 To create a category, one can use the [Create category](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-category) endpoint. See the request body example below of the creation of a category called Clothing:
 
@@ -52,7 +53,7 @@ To create a category, one can use the [Create category](https://developers.vtex.
 }
 ```
 
-In this example, the created category is a parent category, which means that it is not inside another category. A *parent category* can have subcategories, or *children categories*, associated with it. To create a subcategory, you must insert the parent category ID on the `"FatherCategoryId"`. 
+In this example, the created category is a parent category, which means that it is not inside another category. A *parent category* can have subcategories, or *children categories*, associated with it. To create a subcategory, you must insert the parent category ID on the `"FatherCategoryId"`.
 
 [block:callout]
 {
@@ -60,6 +61,7 @@ In this example, the created category is a parent category, which means that it 
   "body": "You cannot delete a category unless you make a [full cleanup](https://help.vtex.com/en/tutorial/database-maintenance-full-cleanup--34P9LGs7BCIQK6acQom802) of the catalog."
 }
 [/block]
+
 ## Edit a category
 
 You can edit an existing category by using the [Update Category](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-put-category) endpoint.
@@ -68,7 +70,7 @@ You can edit an existing category by using the [Update Category](https://develop
 
 You can get information of all the category tree or just some specific level by using the [Get Category Tree](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-category-tree) endpoint.
 
-##Get a category
+## Get a category
 
 You can get information about a specific category by using the [Get Category by ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-category)
- endpoint.
+endpoint.

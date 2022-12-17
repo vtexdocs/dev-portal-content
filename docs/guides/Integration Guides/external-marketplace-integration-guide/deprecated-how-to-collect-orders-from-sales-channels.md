@@ -5,6 +5,7 @@ hidden: true
 createdAt: "2022-06-09T21:22:22.023Z"
 updatedAt: "2022-06-10T16:12:54.251Z"
 ---
+
 [block:callout]
 {
   "type": "warning",
@@ -16,15 +17,14 @@ Orders in an integration fit into two different categories:
 
 **Paid orders:** the marketplace only makes orders available for the integration once they are paid by the customer.
 
-![MarketplaceConnections](https://files.readme.io/4798d0a-MarketplaceConnections_Docs_-_English_-_Pedidos_pagos-1.jpg)
+![MarketplaceConnections](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/4798d0a-MarketplaceConnections_Docs_-_English_-_Pedidos_pagos-1_19.jpg)
 
 **Orders to be paid:** the marketplace makes orders that have not been paid by the customer available for the integration.
 
-![](https://files.readme.io/9199593-MarketplaceConnections_Docs_-_English_-_pedidos_a_pagar-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/9199593-MarketplaceConnections_Docs_-_English_-_pedidos_a_pagar-1_23.jpg)
 Right after the payment confirmation by the marketplace, the flow goes as the image below describes it:
 
-![](https://files.readme.io/1453596-MarketplaceConnections_Docs_-_English_-_Atualizar_o_status_do_pedido_para_Pago-1.jpg)
-
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/1453596-MarketplaceConnections_Docs_-_English_-_Atualizar_o_status_do_pedido_para_Pago-1_26.jpg)
 
 ## How orders reach the connector
 
@@ -32,10 +32,10 @@ A marketplace order can reach the connector by either a:
 
 1. **Notification sent by the marketplace:** when the marketplace informs the connector about the existence of an order, and the connector, after receiving the notification, goes to the marketplace to get order details.
 
-![](https://files.readme.io/3e0d502-MarketplaceConnections_Docs_-_English_-_Marketplace_Notifica_Conector_1-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/3e0d502-MarketplaceConnections_Docs_-_English_-_Marketplace_Notifica_Conector_1-1_35.jpg)
 
 2. **Polling request made by the connector:** when the connector checks the marketplace from time to time, to collect new orders.
-![](https://files.readme.io/7d35d7d-MarketplaceConnections_Docs_-_Copy_of_Coletando_Pedido_do_marketplace-1.jpg)
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/7d35d7d-MarketplaceConnections_Docs_-_Copy_of_Coletando_Pedido_do_marketplace-1_38.jpg)
 
 ## Integrating orders
 
@@ -51,7 +51,9 @@ Follow the steps below, to integrate orders from external marketplaces:
     b. Validate if the SKU is associated to the sales channel used in the integration through the `salesChannel` property.
 
 5. In case step 4 retrieves all SKUs that compose the order with their respective inventory levels and prices, the connector should insert the order through the [Order Placement](https://developers.vtex.com/vtex-rest-api/reference/order-placement) endpoint.  
+
 - In the `marketplaceServicesEndpoint` field, the endpoint will be used by VTEX to inform the connector of the changes in order status, inserting tracking code and invoice. For more information check out [Sending invoice and tracking code to the marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-invoice-tracking).
+
 6. In case step 5 returns success and creates the order within the VTEX platform, authorize the dispatch by the seller through the [Authorize dispatch for fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/authorize-dispatch-for-fulfillment-order) endpoint.
 7. Check the [Recommendations](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-recommendations) page to follow integration best practices.
 8. Check out the [Order logs](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) page to create appropriate error messages.
@@ -67,11 +69,12 @@ After VTEX OMS returns `success`, if the IDs between VTEX and the marketplace di
   "title": "Validations and logs"
 }
 [/block]
+
 ## API Reference
 
 Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. The diagram illustrates the endpoints used in the integration:
 
-![](https://files.readme.io/a7db68e-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a7db68e-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1_74.jpg)
 
 [block:callout]
 {
