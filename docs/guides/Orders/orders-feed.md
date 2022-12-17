@@ -291,22 +291,7 @@ The Orders Feed can be useful in lots of different ways. For instance, say you w
 <br>
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e5c2970-feedFlow-min.png",
-        "feedFlow-min.png",
-        250,
-        472,
-        "#000000"
-      ],
-      "sizing": "original"
-    }
-  ]
-}
-[/block]
+![feedFlow-min](https://files.readme.io/e5c2970-feedFlow-min.png)
 <br>
 
 Access this [backoffice order integration guide](https://developers.vtex.com/vtex-developer-docs/docs/erp-integration-set-up-order-integration) to learn more about how you can integrate VTEX’s order Feed with an ERP.

@@ -18,43 +18,14 @@ To apply VTEX Admin filters via API, follow the steps below:
 
 <br>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/df54dbf-filter_icon_step_2.jpg",
-        "filter_icon_step_2.jpg",
-        483,
-        146,
-        "#000000"
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+![filter_icon_step_2](https://files.readme.io/df54dbf-filter_icon_step_2.jpg)
 <br>
 
 3. Select the filter you want to apply and click `Confirm`. You can combine multiple filters.
 
 <br>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0a13fb3-filter_type_step_3.jpg",
-        "filter_type_step_3.jpg",
-        423,
-        219,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![filter_type_step_3](https://files.readme.io/0a13fb3-filter_type_step_3.jpg)
 
 <br>
 
@@ -63,22 +34,7 @@ To apply VTEX Admin filters via API, follow the steps below:
 
 <br>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f9abe45-decode_print.jpg",
-        "decode_print.jpg",
-        770,
-        387,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+![decode_print](https://files.readme.io/f9abe45-decode_print.jpg)
 
 <br>
 
