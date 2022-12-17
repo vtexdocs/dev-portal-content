@@ -29,12 +29,10 @@ To perform this association, VTEX made VTEX Mapper available. It is a tool integ
 
 To use the category mapping service, follow the steps below, that will be further explored in the items that follow:
 
-
 1. [Register the connector in VTEX Mapper](#register-the-connector-in-vtex-mapper)
 2. [Send category tree to VTEX Mapper](#send-category-tree-to-vtex-mapper)
 3. [Receive the category mapping in VTEX Mapper](#receive-the-category-mapping-in-vtex-mapper)
 4. [Use the category mapping in the product registration flow](#use-the-category-mapping-in-the-product-registration-flow)
-
 ## API Reference
 
 - [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration) 
@@ -43,21 +41,7 @@ To use the category mapping service, follow the steps below, that will be furthe
 ### Register the connector in VTEX Mapper
 
 After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) to operate a VTEX account, the diagram below illustrates the necessary steps to register the connector in VTEX Mapper.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/929cc12-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Autenticao_-1.jpg",
-        "MarketplaceConnections Docs - Mapeamento de Categorias  Autenticação -1.jpg",
-        5262,
-        2267,
-        "#faeee7"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/929cc12-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Autenticao_-1.jpg)
 1. Use the [Mapper Registration endpoint](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration).
 2. In case the registration is successful, VTEX Mapper returns a unique ID and endpoint to the connector. 
 3. Store the ID returned, to be later used in the category tree update action, in VTEX Matcher.
@@ -71,21 +55,7 @@ After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs
 ### Send category tree to VTEX Mapper
 
 To send the marketplace’s category tree to VTEX Mapper, follow the steps illustrated in this diagram:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a672dae-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Envio_da_rvore_do_marketplace_ao_mapper-1.jpg",
-        "MarketplaceConnections Docs - Mapeamento de Categorias  Envio da árvore do marketplace ao mapper-1.jpg",
-        5262,
-        1442,
-        "#fcf3eb"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/a672dae-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Envio_da_rvore_do_marketplace_ao_mapper-1.jpg)
 1. Collect marketplace category tree.
 2. Check if the category tree doesn’t already exist in its repository. 
 a. If it is **not** mapped, store the category tree and the last update’s date. 

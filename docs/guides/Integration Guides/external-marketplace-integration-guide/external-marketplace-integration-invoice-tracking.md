@@ -27,21 +27,7 @@ The diagram below describes the notification flow, for integrating tracking code
 Follow the steps below to integrate them, once receiving the notification. Make sure to review our [Recommendations](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-recommendations) page before you start.
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4f9507b-MarketplaceConnections_Docs_-_English_-_Cdigo_de_RastreioNota_fiscal_1-1.jpg",
-        "MarketplaceConnections Docs - English - Código de RastreioNota fiscal (1)-1.jpg",
-        5262,
-        1134,
-        "#f6ebec"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/4f9507b-MarketplaceConnections_Docs_-_English_-_Cdigo_de_RastreioNota_fiscal_1-1.jpg)
 1. VTEX Orders receive tracking and/or invoice data. This information can be inserted via [Place Fulfillment Order API](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) or manually in VTEX Admin. 
 After receiving invoice information, the order status is updated to `invoiced` in VTEX. In this case, it is not possible to cancel the order anymore. 
 2. VTEX OMS notifies the connector through the URL informed in [Invoice notification from VTEX](#invoice-notification-from-vtex) by the connector through the property `marketplaceServicesEndpoint`, once the order is inserted in VTEX. 
@@ -79,21 +65,7 @@ Note that:
 
 Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d783148-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1.jpg",
-        "MarketplaceConnections Docs - English - Fluxo de chamada das APIs-1.jpg",
-        5262,
-        3389,
-        "#f9e5e2"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/d783148-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1.jpg)
 
 [block:callout]
 {

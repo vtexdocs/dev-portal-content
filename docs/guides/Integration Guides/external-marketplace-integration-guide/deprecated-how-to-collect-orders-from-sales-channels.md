@@ -12,101 +12,34 @@ updatedAt: "2022-06-10T16:12:54.251Z"
   "title": "New method for integrating orders"
 }
 [/block]
-Orders in an integration fit into two different categories: 
+Orders in an integration fit into two different categories:
 
+**Paid orders:** the marketplace only makes orders available for the integration once they are paid by the customer.
 
+![MarketplaceConnections](https://files.readme.io/4798d0a-MarketplaceConnections_Docs_-_English_-_Pedidos_pagos-1.jpg)
 
-**Paid orders: **the marketplace only makes orders available for the integration once they are paid by the customer. 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4798d0a-MarketplaceConnections_Docs_-_English_-_Pedidos_pagos-1.jpg",
-        "MarketplaceConnections Docs - English - Pedidos pagos-1.jpg",
-        5262,
-        1509,
-        "#f6e4e4"
-      ]
-    }
-  ]
-}
-[/block]
-**Orders to be paid:** the marketplace makes orders that have not been paid by the customer available for the integration. 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9199593-MarketplaceConnections_Docs_-_English_-_pedidos_a_pagar-1.jpg",
-        "MarketplaceConnections Docs - English - pedidos a pagar-1.jpg",
-        5262,
-        1325,
-        "#f6e3e3"
-      ]
-    }
-  ]
-}
-[/block]
+**Orders to be paid:** the marketplace makes orders that have not been paid by the customer available for the integration.
+
+![](https://files.readme.io/9199593-MarketplaceConnections_Docs_-_English_-_pedidos_a_pagar-1.jpg)
 Right after the payment confirmation by the marketplace, the flow goes as the image below describes it:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1453596-MarketplaceConnections_Docs_-_English_-_Atualizar_o_status_do_pedido_para_Pago-1.jpg",
-        "MarketplaceConnections Docs - English - Atualizar o status do pedido para Pago-1.jpg",
-        5262,
-        1481,
-        "#f5e6e4"
-      ]
-    }
-  ]
-}
-[/block]
+
+![](https://files.readme.io/1453596-MarketplaceConnections_Docs_-_English_-_Atualizar_o_status_do_pedido_para_Pago-1.jpg)
+
+
 ## How orders reach the connector
 
 A marketplace order can reach the connector by either a:
 
+1. **Notification sent by the marketplace:** when the marketplace informs the connector about the existence of an order, and the connector, after receiving the notification, goes to the marketplace to get order details.
 
+![](https://files.readme.io/3e0d502-MarketplaceConnections_Docs_-_English_-_Marketplace_Notifica_Conector_1-1.jpg)
 
-1.  **Notification sent by the marketplace:** when the marketplace informs the connector about the existence of an order, and the connector, after receiving the notification, goes to the marketplace to get order details.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3e0d502-MarketplaceConnections_Docs_-_English_-_Marketplace_Notifica_Conector_1-1.jpg",
-        "MarketplaceConnections Docs - English - Marketplace Notifica Conector (1)-1.jpg",
-        5262,
-        1476,
-        "#f7eae8"
-      ]
-    }
-  ]
-}
-[/block]
-2. **Polling request made by the connector: **when the connector checks the marketplace from time to time, to collect new orders.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7d35d7d-MarketplaceConnections_Docs_-_Copy_of_Coletando_Pedido_do_marketplace-1.jpg",
-        "MarketplaceConnections Docs - Copy of Coletando Pedido do marketplace-1.jpg",
-        5262,
-        1136,
-        "#f7eae8"
-      ]
-    }
-  ]
-}
-[/block]
-## Integrating orders 
+2. **Polling request made by the connector:** when the connector checks the marketplace from time to time, to collect new orders.
+![](https://files.readme.io/7d35d7d-MarketplaceConnections_Docs_-_Copy_of_Coletando_Pedido_do_marketplace-1.jpg)
+
+## Integrating orders
 
 Follow the steps below, to integrate orders from external marketplaces:
-
-
 
 1. Collect order details from the endpoint provided by the marketplace.
 2. Create a request on the [Place fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) endpoint.
@@ -114,7 +47,6 @@ Follow the steps below, to integrate orders from external marketplaces:
 4. For each SKU retrieved, the connector must call the [Get SKU and Context endpoint](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku-context) and:
 
     a. Validate if the SKU is active through the `isActive` property.
-
 
     b. Validate if the SKU is associated to the sales channel used in the integration through the `salesChannel` property.
 
@@ -124,7 +56,7 @@ Follow the steps below, to integrate orders from external marketplaces:
 7. Check the [Recommendations](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-recommendations) page to follow integration best practices.
 8. Check out the [Order logs](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) page to create appropriate error messages.
 
-If all validations pass, the order is sent to VTEX and the operation is logged according to information described in the [Order logs](doc:order-logs) . 
+If all validations pass, the order is sent to VTEX and the operation is logged according to information described in the [Order logs](doc:order-logs).
 
 After VTEX OMS returns `success`, if the IDs between VTEX and the marketplace differ, the connector should store the mapping of the order (VTEX ID and Marketplace ID). This information will be used for[ order status update operations](link).
 
@@ -137,24 +69,9 @@ After VTEX OMS returns `success`, if the IDs between VTEX and the marketplace di
 [/block]
 ## API Reference
 
-Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. The diagram illustrates the endpoints used in the integration: 
+Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. The diagram illustrates the endpoints used in the integration:
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a7db68e-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1.jpg",
-        "MarketplaceConnections Docs - English - Fluxo de chamada das APIs-1.jpg",
-        5262,
-        3389,
-        "#f9e5e2"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/a7db68e-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1.jpg)
 
 [block:callout]
 {

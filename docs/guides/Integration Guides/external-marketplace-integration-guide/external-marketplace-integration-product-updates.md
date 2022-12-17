@@ -6,21 +6,8 @@ createdAt: "2021-06-25T21:24:13.724Z"
 updatedAt: "2022-02-03T20:38:11.391Z"
 ---
 This section of the integration guide goes over the process of updating SKUs that are already integrated in the marketplace. The information flows according to the diagram below:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6b6be77-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1.jpg",
-        "MarketplaceConnections Docs - VTEX SKU notification (1)-1.jpg",
-        5262,
-        1325,
-        "#f7e9ed"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/6b6be77-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1.jpg)
+
 To begin the integration of this process, it is necessary to have a search Endpoint configured, in order to receive notifications.
 
 ## How to configure the affiliate endpoint
@@ -49,21 +36,7 @@ Fields sent in the notification:
 | PriceModified                           | Identifies that the price  has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                                                                                                               |
 | HasStockKeepingUnitModified             | Identifies that the product/SKU registration data has changed, like name, description, weight, etc                                                                                                                                                                                                                                                                                                                   |
 | HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the trade policy. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a9122b3-MarketplaceConnections_Docs_-_Integration_through_notification-1.jpg",
-        "MarketplaceConnections Docs - Integration through notification-1.jpg",
-        5262,
-        1467,
-        "#fcf6f3"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/a9122b3-MarketplaceConnections_Docs_-_Integration_through_notification-1.jpg)
 ## Integration flow
 
 1. Connector validates the VTEX <> Marketplace authentication. In case it has expired, perform the update routine defined in the marketplace’s documentation. Otherwise, connectors should log the error AND put the VTEX notification in a contingency queue.
@@ -102,21 +75,7 @@ To avoid processing gaps due to the big volume of information of the initial loa
 ## API Reference
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b67f098-Marketplace_Docs_-_API_Ref.jpg",
-        "Marketplace Docs - API Ref.jpg",
-        12866,
-        8568,
-        "#fae5e1"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/b67f098-Marketplace_Docs_-_API_Ref.jpg)
 
 [block:callout]
 {

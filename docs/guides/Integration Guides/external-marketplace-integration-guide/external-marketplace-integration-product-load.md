@@ -9,21 +9,7 @@ The initial load of products only occurs after the user installs and configures 
 
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ceb5fb3-MarketplaceConnections_Docs_-_Initial_load_of_products-1.jpg",
-        "MarketplaceConnections Docs - Initial load of products-1.jpg",
-        5262,
-        1295,
-        "#fcf5f2"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/ceb5fb3-MarketplaceConnections_Docs_-_Initial_load_of_products-1.jpg)
 ## Send initial load of products
 
 Follow the steps below, to send the initial load of products in the integration’s flow:
@@ -73,21 +59,7 @@ Use the endpoints described below to get SKU, price and inventory details. It is
 
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8f8b5c9-Marketplace_Docs_-_API_Ref.jpg",
-        "Marketplace Docs - API Ref.jpg",
-        12866,
-        8568,
-        "#fae5e1"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/8f8b5c9-Marketplace_Docs_-_API_Ref.jpg)
 [Get list of SKUs associated with a sales channel](https://developers.vtex.com/vtex-rest-api/reference/get_api-catalog-system-pvt-sku-stockkeepingunitidsbysaleschannel)
 
 [Get details of an SKU associated with a sales channel ](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku)

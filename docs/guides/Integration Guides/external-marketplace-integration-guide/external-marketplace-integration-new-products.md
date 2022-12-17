@@ -6,21 +6,7 @@ createdAt: "2021-06-25T21:03:55.330Z"
 updatedAt: "2022-02-03T20:26:40.959Z"
 ---
 This part of the guide explains how the connector should act when receiving the VTEX notification of a new product or SKU registered. The information flows according to the diagram below:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a85da6e-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1.jpg",
-        "MarketplaceConnections Docs - VTEX SKU notification (1)-1.jpg",
-        5262,
-        1325,
-        "#f7e9ed"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/a85da6e-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1.jpg)
 ## How to configure the affiliate endpoint
 
 To use this flow, the connector should provide an endpoint according to the standard:
@@ -92,21 +78,7 @@ To avoid processing gaps due to the big volume of information of the initial loa
 ## API Reference 
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a5c950f-Marketplace_Docs_-_API_Ref.jpg",
-        "Marketplace Docs - API Ref.jpg",
-        12866,
-        8568,
-        "#fae5e1"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/a5c950f-Marketplace_Docs_-_API_Ref.jpg)
 
 [block:callout]
 {

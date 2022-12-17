@@ -215,22 +215,7 @@ You can remove [Offer Management](https://help.vtex.com/tutorial/anuncios-enviad
 
 When the configuration _AllowFranchiseAccounts_ is configured, the component becomes a toggle indicating whether [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) are permitted.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8a67b4d-allow_franchise_account.png",
-        "allow_franchise_account.png",
-        291,
-        115,
-        "#dce2ee"
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/8a67b4d-allow_franchise_account.png)
 
 You can remove the configuration by performing the following actions:
 
@@ -335,21 +320,7 @@ Here’s an example code for adding an input field:
 
 The example above creates an input field called `ExampleComponent`. It uses an extra property, or the `setConfig`, used in this case within the `onChange` property of the Input component. This updates the `email` field in the config, whenever the seller types something within the field. This is how it is rendered in the UI:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/45213db-Template_App_1.png",
-        "Template App 1.png",
-        1283,
-        239,
-        "#e3e6ec"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/45213db-Template_App_1.png)
 
 6. To finalize the new field’s inclusion, add the new field within the **CustomConfigsArea**. To do that:
 
@@ -413,41 +384,13 @@ To illustrate with an example, let’s suppose we have the following component:
 
 In this case, we have an Input component, type “text”, and its label will be translated according to the VTEX Admin’s locale. If we do not add the id `"admin/app.test.title"` in the `messages` folder, this is what is rendered in the UI:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/49c0509-Template_App_2.png",
-        "Template App 2.png",
-        935,
-        121,
-        "#fbfbfc"
-      ]
-    }
-  ]
-}
-[/block]
+![Template App 2](https://files.readme.io/49c0509-Template_App_2.png)
 
 Since the id does not exist in any `messages` file, it renders the id itself as a response.
 
 To add the id to the file, we add the code: `“admin/app.test.title”: “Teste no en.json”`. Once the id is rendered in all files, the component will then render:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/fb82a4b-Template_App_3.png",
-        "Template App 3.png",
-        1764,
-        1297,
-        "#f9fafb"
-      ]
-    }
-  ]
-}
-[/block]
+![Template App 3](https://files.readme.io/fb82a4b-Template_App_3.png)
 
 ## Step 4 - Testing the app locally
 

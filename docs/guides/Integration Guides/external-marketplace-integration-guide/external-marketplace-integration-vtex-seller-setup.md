@@ -33,24 +33,7 @@ Once all the channel settings that should be applied to the marketplace are grou
 ### Catalog
 
 When [adding products to your catalog](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1ROhz3Y7mfSMmCO1I1GxEL), you may restrict their availability to certain trade policies. If no restriction is made, the product will be available in all sales channels.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c824bb5-Screen_Shot_2020-08-31_at_18.00.34.png",
-        "Screen Shot 2020-08-31 at 18.00.34.png",
-        866,
-        260,
-        "#f8f8f9"
-      ],
-      "caption": "Catalog: products may be restricted to certain trade policies",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
+![Catalog: products may be restricted to certain trade policies](https://files.readme.io/c824bb5-Screen_Shot_2020-08-31_at_18.00.34.png)
 In the example above, the product will be available only to the sales channels using the **B2C - USA** and **Marketplace - USA** trade policies.
 
 ### Pricing
@@ -59,23 +42,7 @@ When setting prices for your products, keep in mind that each trade policy is cr
 
 - [Price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) to set a different markup for specific categories / brands
 - [Fixed prices](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/3HxF2u5VwidqnUGnFoKdDy) to set a different price for specific products
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2145998-Screen_Shot_2020-08-31_at_17.38.41.png",
-        "Screen Shot 2020-08-31 at 17.38.41.png",
-        976,
-        182,
-        "#edefed"
-      ],
-      "caption": "Prices: define price rules or fixed prices to differentiate prices",
-      "border": true
-    }
-  ]
-}
-[/block]
+![Prices: define price rules or fixed prices to differentiate prices](https://files.readme.io/2145998-Screen_Shot_2020-08-31_at_17.38.41.png)
 In the example above, a price rule applied an additional 10% markup to the **B2C - USA** trade policy and a fixed price of $ 500.00 was set in the **Marketplace - USA** trade policy for SKU 14.
 [block:callout]
 {
@@ -86,90 +53,26 @@ In the example above, a price rule applied an additional 10% markup to the **B2C
 ### Promotions
 
 When creating promotions as a seller, you may restrict their availability to certain trade policies. If no trade policy is selected, the promotion will be available in all sales channels. The origin must be set as **Fulfillment / Delivered by me** in all promotions you offer as a seller.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3593ed5-Screen_Shot_2020-08-31_at_18.51.37.png",
-        "Screen Shot 2020-08-31 at 18.51.37.png",
-        892,
-        302,
-        "#fbfbfc"
-      ],
-      "caption": "Promotions: must be set as fulfillment, may be restricted to certain trade policies",
-      "border": true
-    }
-  ]
-}
-[/block]
+![Promotions: must be set as fulfillment, may be restricted to certain trade policies](https://files.readme.io/3593ed5-Screen_Shot_2020-08-31_at_18.51.37.png)
+
 In the example above, the promotion will be applied only to **Marketplace - USA** orders where the store is acting as a seller. The promotion will *not* be available in the VTEX storefront.
 
 ### Inventory
 
 When defining your shipping strategy, you may restrict the [logistics routes](https://help.vtex.com/en/tracks/logistics-101--13TFDwDttPl9ki9OXQhyjx/1xo0jmMDcnAUU5ZOavdQ7M) available to certain trade policies through loading docks. Each loading dock linked to a trade policy makes inventory available through the warehouses connected to it.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6d85928-Screen_Shot_2020-08-31_at_21.00.58.png",
-        "Screen Shot 2020-08-31 at 21.00.58.png",
-        823,
-        170,
-        "#f8f8f9"
-      ],
-      "caption": "Inventory: warehouse must be connected to loading docks available to the trade policy",
-      "border": true
-    }
-  ]
-}
-[/block]
+![Inventory: warehouse must be connected to loading docks available to the trade policy](https://files.readme.io/6d85928-Screen_Shot_2020-08-31_at_21.00.58.png)
 In the example above, a warehouse is connected to the **Main Warehouse Dock**. This makes its inventory available to all trade policies linked to that loading dock.
 
 ### Shipping
 
 When defining your shipping strategy, you may restrict the [logistics routes](https://help.vtex.com/en/tracks/logistics-101--13TFDwDttPl9ki9OXQhyjx/1xo0jmMDcnAUU5ZOavdQ7M) available to certain trade policies through loading docks. Each loading dock linked to a trade policy makes carriers and pick-up points available through the shipping policies connected to it.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/187b2f8-Screen_Shot_2020-08-31_at_21.01.24.png",
-        "Screen Shot 2020-08-31 at 21.01.24.png",
-        830,
-        182,
-        "#f3f4f4"
-      ],
-      "caption": "Shipping: shipping policies must be connected to loading docks available to the trade policy",
-      "border": true
-    }
-  ]
-}
-[/block]
+![Shipping: shipping policies must be connected to loading docks available to the trade policy](https://files.readme.io/187b2f8-Screen_Shot_2020-08-31_at_21.01.24.png)
 In the example above, the loading dock is linked to **B2C - USA** and **Marketplace - USA**. This makes its associated shipping policies available to those trade policies.
 
 ### Payment
 
 When [creating a payment condition](https://help.vtex.com/en/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3), you may restrict its availability to certain trade policies through [special conditions](https://help.vtex.com/en/tutorial/special-conditions--tutorials_456). If no restriction is made, it will be available in all sales channels.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1090e67-Screen_Shot_2020-08-31_at_22.32.37.png",
-        "Screen Shot 2020-08-31 at 22.32.37.png",
-        546,
-        230,
-        "#f9f9f9"
-      ],
-      "caption": "Payment: payment conditions may be restricted to certain trade policies",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
+![Payment: payment conditions may be restricted to certain trade policies](https://files.readme.io/1090e67-Screen_Shot_2020-08-31_at_22.32.37.png)
 In the example above, the payment condition is linked to **Marketplace - USA**. This makes it available only to the sales channels associated with this trade policy.
 
 ## Set up catalog notifications

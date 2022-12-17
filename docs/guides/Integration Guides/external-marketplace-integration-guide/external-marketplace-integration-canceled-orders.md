@@ -6,21 +6,7 @@ createdAt: "2021-09-02T20:58:44.715Z"
 updatedAt: "2022-02-03T20:09:10.012Z"
 ---
 An order can be canceled by the marketplace, or by the VTEX Admin The diagram below describes the notification flow, for cancelling the order and updating the status in VTEX:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8aaca47-MarketplaceConnections_-_cancelling_order.jpg",
-        "MarketplaceConnections - cancelling order.jpg",
-        3801,
-        1298,
-        "#fbf0ee"
-      ]
-    }
-  ]
-}
-[/block]
+![MarketplaceConnections - cancelling order](https://files.readme.io/8aaca47-MarketplaceConnections_-_cancelling_order.jpg)
 ## Cancelling the Order and Updating the status
 
 Follow the steps below, once receiving the notification:
@@ -64,21 +50,7 @@ Orders with the `invoiced` status cannot be canceled in VTEX right away. Connect
 ## API Reference
 
 Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3e8cb61-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1.jpg",
-        "MarketplaceConnections Docs - English - Fluxo de chamada das APIs-1.jpg",
-        5262,
-        3389,
-        "#f9e5e2"
-      ]
-    }
-  ]
-}
-[/block]
+![MarketplaceConnections Docs - English - Fluxo de chamada das APIs-1](https://files.readme.io/3e8cb61-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1.jpg)
 
 [block:callout]
 {
