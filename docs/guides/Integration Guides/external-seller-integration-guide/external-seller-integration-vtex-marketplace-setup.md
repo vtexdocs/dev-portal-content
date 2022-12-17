@@ -9,7 +9,7 @@ For a VTEX store to act as a marketplace and sell products from external sellers
 
 - [Register the seller in the marketplace Admin](#register-the-seller-in-the-marketplace-admin)
 - [Activate the seller for a trade policy](#activate-the-seller-for-a-trade-policy)
-- [Set up API authentication credentials](#set-up-apiauthentication-credentials)
+- [Set up API authentication credentials](#set-up-api-authentication-credentials)
 
 This article explains what must be done to complete each of these configuration steps.
 
@@ -33,21 +33,7 @@ The article [Configuring a seller](https://help.vtex.com/en/tutorial/configuring
 }
 [/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/32d3648-ffm-endpoint.png",
-        "ffm-endpoint.png",
-        3733,
-        2150,
-        "#fcfbfb"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/32d3648-ffm-endpoint.png)
 
 [block:callout]
 {
@@ -62,21 +48,7 @@ The article [Configuring a seller](https://help.vtex.com/en/tutorial/configuring
 Trade policies are used in VTEX to group catalog, pricing, promotions, inventory, shipping, and payment settings for different sales channels. In a VTEX marketplace, each trade policy may apply to a different set of sellers. So, after creating a new seller, the marketplace needs to activate this seller for the trade policies that make sense for the business.
 
 To do this, in the marketplace management panel's main menu, click on the option **Trade Policies**, then choose the trade policy you want to edit by clicking on the button **Alter** next to it. Next, select the sellers you want to activate. In the example of the image below, the trade policy "Marketplace" is only enabled for the seller "Store 1".
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/27999ef-seller-trade-policy.png",
-        "seller-trade-policy.png",
-        1772,
-        735,
-        "#fafafa"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/27999ef-seller-trade-policy.png)
 Check out the Help Center documentation to get the complete explanation on how to [enable the seller for a trade policy](https://help.vtex.com/en/tutorial/configuring-the-seller--tutorials_392#editing-the-trade-policy).
 
 <br>

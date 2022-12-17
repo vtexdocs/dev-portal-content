@@ -53,21 +53,7 @@ Buy some product, you should see the mock gift card there
 ## Where each route is called
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2052a81-GiftCard.png",
-        "GiftCard.png",
-        1682,
-        1400,
-        "#fbf7f9"
-      ]
-    }
-  ]
-}
-[/block]
+![GiftCard](https://files.readme.io/2052a81-GiftCard.png)
 This is what is needed to make Gift Card available in checkout:
 
 ### List cards

@@ -36,39 +36,11 @@ vtex install vtex.oauth-provider-admin
 ```
 3. On the Admin panel of your **primary account**, go to `ACCOUNT SETTINGS` > `OAuth Provider`. This will take you to the [OAuth Provider](https://github.com/vtex/oauth-provider) app tab.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4ab35f1-1.PNG",
-        "1.PNG",
-        1355,
-        567,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/4ab35f1-1.PNG)
 4. Click `ADD OAUTH CLIENT`.
 5. Fill in the new OAuth client information, which is the **secondary account**.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/29ad7bb-2.PNG",
-        "2.PNG",
-        981,
-        717,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/29ad7bb-2.PNG)
 - **Name**: this identifies the OAuth client. For instance, you may use the name of the corresponding **secondary account**.
 - **Allowed URI’s**:
 ```
@@ -81,37 +53,9 @@ https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx
 ```
 6. Click `SAVE`.
 7. Once you have saved your new OAuth client, you will be able to see it on the OAuth Provider Admin tab. Click on the client’s name to see its details.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/efe62c6-3.PNG",
-        "3.PNG",
-        1008,
-        318,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/efe62c6-3.PNG)
 8. Copy the client ID and secret. You will need these credentials to set up the OAuth connection in the **secondary account**.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/06ef572-4.PNG",
-        "4.PNG",
-        879,
-        540,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/06ef572-4.PNG)
 ### Set up OAuth connection in secondary account
 
 Now that you have setup an OAuth identity provider in your **primary account** and registered your **secondary account** as an OAuth client, you must head to the Admin panel of your **secondary account** and set up the connection between the accounts according to the [custom OAuth integration guide](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-webstore-oauth2#integration). For the purpose of this method, there are some custom OAuth configuration information that you must fill in specific ways. See the specification below to learn how to fill in this information for each configuration step of the [custom OAuth integration guide](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-webstore-oauth2#integration).
@@ -177,18 +121,4 @@ Now that you have setup an OAuth identity provider in your **primary account** a
 
 The account host, used in the **URLs** for some of the configuration steps above, can be defined in the VTEX Admin panel, by going to `ACCOUNT SETTINGS` > `Account management` > `Account`.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8a2c2a5-6.PNG",
-        "6.PNG",
-        1366,
-        693,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/8a2c2a5-6.PNG)

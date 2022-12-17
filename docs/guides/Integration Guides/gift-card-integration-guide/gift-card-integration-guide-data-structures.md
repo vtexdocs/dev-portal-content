@@ -16,22 +16,7 @@ The minimum information needed to define a provider includes:
 - `id`: the provider identifier in the context of Gift Card Hub API
 - `caption`: the name seen by shoppers in the store checkout
 - `serviceUrl`: the base URL that should be prepended to all provider endpoints
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9a4bd43-Screen_Shot_2020-10-13_at_21.59.31.png",
-        "Screen Shot 2020-10-13 at 21.59.31.png",
-        658,
-        286,
-        "#f1f3f4"
-      ],
-      "caption": "The name seen by shoppers in the store checkout is set by the `caption` parameter\n\n(e.g. My Gift Card Provider)"
-    }
-  ]
-}
-[/block]
+![The name seen by shoppers in the store checkout is set by the caption parameter (e.g. My Gift Card Provider)](https://files.readme.io/9a4bd43-Screen_Shot_2020-10-13_at_21.59.31.png)
 Below you will find an example of the gift card provider data structure and more details on the usage of each parameter. Parameters that were not mentioned in our short description above can usually be set to the values in the example.
 [block:code]
 {
@@ -196,22 +181,7 @@ Some fields are shown in the order details page when gift cards are used to pay 
 - Gift Card Issuer: `provider`
 
 The image below illustrates how these might be presented in a specific order.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/543d003-Screen_Shot_2020-10-14_at_18.47.59.png",
-        "Screen Shot 2020-10-14 at 18.47.59.png",
-        256,
-        545,
-        "#f0f2f3"
-      ],
-      "caption": "Gift card fields seen in the order details page: \n`redemptionCode`, `relationName`, `caption`, `provider`"
-    }
-  ]
-}
-[/block]
+![Gift card fields seen in the order details page: redemptionCode, relationName, caption, provider](https://files.readme.io/543d003-Screen_Shot_2020-10-14_at_18.47.59.png)
 ## Transactions
 
 A gift card transaction is a record of an operation that changes the gift card balance as a side-effect, such as a purchase or a refund. Our protocol expects gift cards to store their transactions for bookkeeping throughout the different stages of the purchase process. 

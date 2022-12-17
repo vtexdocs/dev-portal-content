@@ -25,22 +25,7 @@ It is an open standard, a product of the OASIS Security Services Technical Commi
 
 ## Authentication flow
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d1220f4-SAML.drawio.png",
-        "SAML.drawio.png",
-        621,
-        521,
-        "#f7f7f7"
-      ],
-      "caption": "VTEX ID SAML authentication flow."
-    }
-  ]
-}
-[/block]
+![VTEX ID SAML authentication flow.](https://files.readme.io/d1220f4-SAML.drawio.png)
 ## SAML roles
 
 In the context of SAML, you should be aware of the different roles performed by the entities that exchange information during authentication.
@@ -160,58 +145,13 @@ Once you have [setup your identity provider](#identity-provider-configuration) a
 
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e41cdf1-1.PNG",
-        "1.PNG",
-        897,
-        530,
-        "#f8f9f9"
-      ],
-      "caption": "Admin panel authentication page."
-    }
-  ]
-}
-[/block]
+![Admin panel authentication page](https://files.readme.io/e41cdf1-1.PNG)
 3. Click `SET UP` in the **My SAML** section.
 4. Fill in the [required information](#required-information) as described above.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f2044ba-2.PNG",
-        "2.PNG",
-        884,
-        518,
-        "#f9f9f9"
-      ],
-      "caption": "Custom SAML configuration page."
-    }
-  ]
-}
-[/block]
+![Custom SAML configuration page](https://files.readme.io/f2044ba-2.PNG)
 5. Upload your metadata XML according to the information provided in [required information](#required-information).
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b61d66f-3.PNG",
-        "3.PNG",
-        885,
-        435,
-        "#fbfbfd"
-      ],
-      "caption": "Custom SAML configuration page (metadata upload section)."
-    }
-  ]
-}
-[/block]
+![Custom SAML configuration page (metadata upload section).](https://files.readme.io/b61d66f-3.PNG)
 6. You have the option of setting the **Send AuthRequest** toggle. Turning it on means that the attributes `RelayState` and `SAMLRequest` will be sent on the URL when authenticating on the identity provider.
 7. Click `SAVE`
 

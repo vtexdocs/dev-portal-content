@@ -124,22 +124,7 @@ In order to configure this process, follow the steps below:
 1. Go to the **Admin panel** > **Account settings** > **Authentication**.
 2. In the **Webstore** tab, click `SET UP` in the **My Custom OAuth** section
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5f26fac-1.PNG",
-        "1.PNG",
-        909,
-        529,
-        "#fafafb"
-      ],
-      "caption": "Authentication settings screen with options: Access Key, Password, Facebook, Google and My Custom OAuth."
-    }
-  ]
-}
-[/block]
+![Authentication settings screen with options: Access Key, Password, Facebook, Google and My Custom OAuth.](https://files.readme.io/5f26fac-1.PNG)
 3. [Set provider details](#3.-set-provider-details)
 4. [Configure authorization code requests](#4.-configure-authorization-code-requests)
 5. [Configure access token exchange request](#5.-configure-access-token-exchange)
@@ -167,22 +152,7 @@ When you start the custom OAuth setup, you must fill in the following informatio
 }
 [/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b538997-identity_feedback_oauth.PNG",
-        "identity feedback oauth.PNG",
-        978,
-        630,
-        "#000000"
-      ],
-      "caption": "Provider details section, in the custom OAuth set up interface with the options described in the tutorial."
-    }
-  ]
-}
-[/block]
+![Provider details section, in the custom OAuth set up interface with the options described in the tutorial.](https://files.readme.io/b538997-identity_feedback_oauth.PNG)
 Click `NEXT`.
 
 
@@ -190,22 +160,7 @@ Click `NEXT`.
 
 In this step, you must first provide the authorization request **URL**.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/cd0d53e-3.PNG",
-        "3.PNG",
-        685,
-        554,
-        "#f8f9f9"
-      ],
-      "caption": "Authorization code section, in the custom OAuth set up interface with the options described in the tutorial."
-    }
-  ]
-}
-[/block]
+![Authorization code section, in the custom OAuth set up interface with the options described in the tutorial](https://files.readme.io/cd0d53e-3.PNG)
 
 [block:callout]
 {
@@ -214,22 +169,7 @@ In this step, you must first provide the authorization request **URL**.
 }
 [/block]
 Then, scroll down to the **Callback Request Information** section and fill in the **Key** under which the authorization code will be sent by the **identity provider** to VTEX.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8e76cb3-4.PNG",
-        "4.PNG",
-        884,
-        557,
-        "#f8f9f9"
-      ],
-      "caption": "Scrolling further down in the authorization code section, in the custom OAuth set up interface with the options described in the tutorial."
-    }
-  ]
-}
-[/block]
+![Scrolling further down in the authorization code section, in the custom OAuth set up interface with the options described in the tutorial.](https://files.readme.io/8e76cb3-4.PNG)
 Click `NEXT`.
 
 #### 5. Configure access token exchange
@@ -237,22 +177,7 @@ Click `NEXT`.
 In order to configure the **access token** exchange request, provide:
 - The request **URL**
 - **Authorization code key,** under which VTEX should send the authorization code to the identity provider.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0968553-5.PNG",
-        "5.PNG",
-        883,
-        865,
-        "#f8f9f9"
-      ],
-      "caption": "Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial."
-    }
-  ]
-}
-[/block]
+![Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://files.readme.io/0968553-5.PNG)
 
 [block:callout]
 {
@@ -264,22 +189,7 @@ Then, you may scroll down to the **Response Information** section and inform the
 - **Access token key**
 - **Token duration key**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/56a36a4-6.PNG",
-        "6.PNG",
-        876,
-        511,
-        "#f9fafb"
-      ],
-      "caption": "Scrolling further down in the Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial."
-    }
-  ]
-}
-[/block]
+![Scrolling further down in the Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://files.readme.io/56a36a4-6.PNG)
 Click `NEXT`.
 
 #### 6. Configure user information exchange
@@ -290,22 +200,7 @@ Now you must provide information regarding the user information exchange:
 
 Check the **Request Preview** section to make sure it matches the format expected by the **identity provider.** Also, note that if you toggle **Send on query string,** you can edit the access token key under which VTEX will send it to the **identity provider.**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9ba2436-7.PNG",
-        "7.PNG",
-        877,
-        665,
-        "#f8f8f9"
-      ],
-      "caption": "Get user info section, in the custom OAuth set up interface with the options described in the tutorial."
-    }
-  ]
-}
-[/block]
+![Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://files.readme.io/9ba2436-7.PNG)
 
 [block:callout]
 {
@@ -319,22 +214,7 @@ Scroll down to the **Response Information** section, and provide the **Keys** un
 - **User ID key**
 - **User name key**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/31ad171-8.PNG",
-        "8.PNG",
-        882,
-        524,
-        "#f9fafa"
-      ],
-      "caption": "Scrolling further down in the Get user info section, in the custom OAuth set up interface with the options described in the tutorial."
-    }
-  ]
-}
-[/block]
+![Scrolling further down in the Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://files.readme.io/31ad171-8.PNG)
 To finalize your Custom OAuth configuration, click `FINISH`.
 
 #### Custom parameters
