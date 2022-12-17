@@ -33,55 +33,13 @@ The **Payment capture** field is composed of the following options:
 [/block]
 2. **autoSettleDelay**: provides a customized capture option for merchants based on hourly intervals. The “minimum” and “maximum” interval values must be defined by the provider in their manifest.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/efb0672-autoSettleDelay_illustration.JPG",
-        "autoSettleDelay_illustration.JPG",
-        564,
-        123,
-        "#f5f6f0"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/efb0672-autoSettleDelay_illustration.JPG)
 When the `useAutoSettleOptions` field is enabled in the provider’s connector (set to “true”) and the `autoSettleDelay` field is set in the provider’s manifest, the **“Scheduled: Schedules The Automatic Capture”** option will be available in the **Payment capture** field when configuring a gateway on the VTEX Admin.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/210021b-payment_capture_installation.JPG",
-        "payment capture_installation.JPG",
-        567,
-        177,
-        "#dcdddd"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/210021b-payment_capture_installation.JPG)
 After selecting this option, a new field **“Scheduled time frame in hours for automatic capture”** will be displayed. This field is used by the merchant to set the capture time.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/94f24fc-schedule_time_installation.JPG",
-        "schedule_time_installation.JPG",
-        546,
-        159,
-        "#f5f4f4"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/94f24fc-schedule_time_installation.JPG)
 
 [block:callout]
 {

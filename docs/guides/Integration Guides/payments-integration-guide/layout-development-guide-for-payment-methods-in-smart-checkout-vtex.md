@@ -95,21 +95,7 @@ In addition to localizing the texts, images should be altered to better suit eac
 [/block]
 Follow these steps to create your layout:
 1. Download the repository to your local machine (either through the Github clone or by downloading the repository from the download option).
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/53454c0-vtex_payment_mocker.png",
-        "vtex_payment_mocker.png",
-        512,
-        205,
-        "#161b20"
-      ]
-    }
-  ]
-}
-[/block]
+![vtex_payment_mocker](https://files.readme.io/53454c0-vtex_payment_mocker.png)
 2. Install the [NodeJS](https://nodejs.org/en/).
 3. Enter the following commands in the terminal to install Grunt and Sass:
     * **Grunt**: ` $ sudo npm i -g grunt-cli `   
@@ -155,37 +141,9 @@ See below an example of layout and language switching ([Brastemp](http://loja.br
 }
 [/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8abf7e5-layout_junto.png",
-        "layout junto.png",
-        1156,
-        626,
-        "#eef1f2"
-      ]
-    }
-  ]
-}
-[/block]
+![layout junto](https://files.readme.io/8abf7e5-layout_junto.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2b693ad-layout_gif.gif",
-        "layout_gif.gif",
-        512,
-        421,
-        "#f1f4f3"
-      ]
-    }
-  ]
-}
-[/block]
+![layout_gif](https://files.readme.io/2b693ad-layout_gif.gif)
 ### Reference Links
 
 [GitHub - Payment Mocker - HTML](https://github.com/vtex/payment-mocker/blob/master/src/partials/payment.html)

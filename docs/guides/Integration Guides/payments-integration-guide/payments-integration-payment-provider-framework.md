@@ -360,40 +360,12 @@ A prerequisite for this procedure is to have products for sale at your store for
 1. Launch a beta version of your connector. E.g.: `vtex.payment-provider-test@0.1.0-beta`. If you need, check the [Making your app publicly available article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
 2. Install the beta version on `master` workspace. Wait for around 1 hour.
 3. Go to https://{account}.myvtex.com/admin/pci-gateway/#/affiliations/{connector-name}/. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8a96659-Payment_affiliation_configuration.png",
-        "Payment affiliation configuration.png",
-        2534,
-        1246,
-        "#f3f5f7"
-      ]
-    }
-  ]
-}
-[/block]
+![Payment affiliation configuration](https://files.readme.io/8a96659-Payment_affiliation_configuration.png)
 4. Change the toggle option to `Test`.
 5. Click on **Save** and refresh the page.
 6. Enter again in the saved configuration and you will notice that a new field appears, called **Workspace**.
 7. Set the **Workspace** as you wish. You can leave it as `master` if it is the workspace you want to test on.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/32e7232-Payment_affiliation_configuration_test.png",
-        "Payment affiliation configuration test.png",
-        2520,
-        1398,
-        "#f4f6f7"
-      ]
-    }
-  ]
-}
-[/block]
+![Payment affiliation configuration test](https://files.readme.io/32e7232-Payment_affiliation_configuration_test.png)
 8. Configure a [payment condition](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) with your newly created connector and wait 10 minutes to appear on Checkout.
 9. Make a purchase with the payment condition you configured with your connector.
 [block:callout]

@@ -16,22 +16,7 @@ When an integration is PCI compliant, it does not need to use Secure Proxy, bein
 2. The provider receives tokens from VTEX’s Payments Gateway that refers to the sensitive data, instead of the actual data.
 3. The provider sends the API endpoint of the acquirer and the merchant credentials to the Gateway.
 4. The Gateway makes the API call to the acquirer, acting as a proxy between the provider and the acquirer. In this call, the tokens are replaced by sensitive data.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a68e6b6-Secure_Proxy_simplified_flow_diagram.png",
-        "Secure Proxy simplified flow diagram.png",
-        2310,
-        755,
-        "#dd7878"
-      ],
-      "caption": "Secure Proxy flow"
-    }
-  ]
-}
-[/block]
+![Secure Proxy simplified flow](https://files.readme.io/a68e6b6-Secure_Proxy_simplified_flow_diagram.png)
 ## What is PCI DSS and how is it used in VTEX?
 
 PCI DSS is an international standard for how companies must process card information. Among the many rules of this standard is an important one that states that card information must be transferred in a secure infrastructure that has been audited by a [QSA (Qualified Security Assessors) Company](https://www.pcisecuritystandards.org/assessors_and_solutions/qualified_security_assessors), which are qualified by the PCI Security Standards Council.
@@ -56,21 +41,7 @@ When a system does not meet all the security requirements, it might be vulnerabl
 ## How it works
 
 In this section, we detail how the solution works in a payment authorization flow. The image below shows an overview of the flow containing the Secure Proxy, as well as the four steps required for the payment to be authorized by the acquirer.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3e0fbfa-Secure_Proxy_detailed_flow.png",
-        "Secure Proxy detailed flow.png",
-        1972,
-        530,
-        "#fbefef"
-      ]
-    }
-  ]
-}
-[/block]
+![Secure Proxy detailed flow](https://files.readme.io/3e0fbfa-Secure_Proxy_detailed_flow.png)
 ### 1. Checkout submits a payment authorization request to the Gateway
 
 There is no change to the current flow. The Checkout makes an [Authorization request](https://developers.vtex.com/vtex-rest-api/reference/4doauthorization) to the Gateway.

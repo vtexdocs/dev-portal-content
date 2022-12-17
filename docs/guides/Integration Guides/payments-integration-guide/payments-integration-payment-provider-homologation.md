@@ -20,69 +20,13 @@ Considering that you want to download the app through the Admin, proceed as foll
 3. Click on **Apps** then **App Store**.
 4. Now look for **Payment Provider Test Suite** in the search bar.
 5. Click **Install**.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c2c9925-Test_suite_1.png",
-        "Test_suite_1.png",
-        2770,
-        1082,
-        "#f8f8f9"
-      ]
-    }
-  ]
-}
-[/block]
+![Test_suite_1](https://files.readme.io/c2c9925-Test_suite_1.png)
 6. After that, you will be redirected to the VTEX App Store. Click the **GET APP** button at the top right corner of the page.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7e850d8-Test_suite_2.png",
-        "Test_suite_2.png",
-        2486,
-        1526,
-        "#f7f7f8"
-      ]
-    }
-  ]
-}
-[/block]
+![Test_suite_2](https://files.readme.io/7e850d8-Test_suite_2.png)
 7. Then, on the popup screen, type your account's name - with lowercase and no space in between - and click the **CONFIRM** button.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/571bd57-Test_suite_3.png",
-        "Test_suite_3.png",
-        1602,
-        1172,
-        "#cccdcf"
-      ]
-    }
-  ]
-}
-[/block]
+![Test_suite_3](https://files.readme.io/571bd57-Test_suite_3.png)
 8. Click **INSTALL** to complete the installation process.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9191e2b-Test_suite_4.png",
-        "Test_suite_4.png",
-        2138,
-        834,
-        "#f2f4f6"
-      ]
-    }
-  ]
-}
-[/block]
+![Test_suite_4](https://files.readme.io/9191e2b-Test_suite_4.png)
 After that, the Test Suite app will be installed in your Admin. 
 
 ## Run the tests

@@ -36,57 +36,13 @@ Before setting up the VTEX environment, the provider must implement the back-end
 ### 3. Antifraud Provider Administration Panel
 After receiving the access data and deploying the backend, the provider can access the approval tool through VTEX Admin. To do this, you must install the Antifraud Provider App from the Apps menu:
 &nbsp;
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/caf66c0-Apps_image.png",
-        "Apps_image.png",
-        1407,
-        936,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
-&nbsp;
+![Apps Image](https://files.readme.io/caf66c0-Apps_image.png)
+
 Click on the installed app or access `https://{{AccountName}}.myvtex.com/admin/antifraud-provider`, replacing `{{AccountName}}` with the name of your account on the platform. In this environment, you can register the provider back-end configuration data and perform integration tests.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2619a18-gatewayio.png",
-        "gatewayio.png",
-        391,
-        910,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
-&nbsp;
+![gatewayio](https://files.readme.io/2619a18-gatewayio.png)
 ### 4. Initial settings
 &nbsp;
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2eddf2f-Antifraud_test_suite.png",
-        "Antifraud test suite.png",
-        1402,
-        936,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
-&nbsp;
+![Antifraud test suite](https://files.readme.io/2eddf2f-Antifraud_test_suite.png)
 When you access the environment through the link described in the previous item, you will see a form. Fill in the fields as indicated below:
 
 - __Connector Name__: fill in with the name you want to give to your connector within VTEX. This field can be edited whenever necessary.
@@ -106,21 +62,7 @@ After completing the fields correctly, the system will check the approved transa
 
 The tests that should be done in your integration before sending it to VTEX evaluation are displayed in the next module. You can select which tests you want to run, but for your integration to go through the analysis of our team, __all tests need to be done__. Therefore, we recommend that all of them remain selected.
 &nbsp;
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/61d06d9-Antifraud_test_suite2.png",
-        "Antifraud test suite2.png",
-        1402,
-        936,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![Antifraud test suite2](https://files.readme.io/61d06d9-Antifraud_test_suite2.png)
 &nbsp;
 ### 5. Testing
 When you click the __Execute tests__ button, the Antifraud Provider will apply the tests in your integration to the different possible scenarios. It's important to remember that __all of them are required__. To run them your service must be in HTTPS. The tests are:
@@ -148,39 +90,11 @@ For each Antifraud Provider Protocol test, we send a specific ID end to return t
 ### 6. Results
 After running the tests, the system returns the results, both positive and negative. The system also provides information on the expected results for each test. Thus, you have more visibility of what should be corrected in case of error.
 &nbsp;
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/52eeb76-Antifraud_test_suite3.png",
-        "Antifraud test suite3.png",
-        1407,
-        934,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![Antifraud test suite3](https://files.readme.io/52eeb76-Antifraud_test_suite3.png)
 &nbsp;
 To visualize in detail each action performed by the integration (and thus to identify possible errors), just click on the __Show logs__ link. A list of the complete information about the events that happened during the test will be displayed below the results.
 &nbsp;
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/437c486-Antifraud_test_suite4.png",
-        "Antifraud test suite4.png",
-        1407,
-        936,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![Antifraud test suite4](https://files.readme.io/437c486-Antifraud_test_suite4.png)
 &nbsp;
 When your integration has successfully passed all tests, please open a ticket in our [VTEX support](https://help.vtex.com/pt/support "VTEX Help"). However, before opening the ticket, make sure you have the following information:
 
@@ -205,21 +119,7 @@ Once the integration with your antifraud is approved, a connector will be made a
 
 An example of how the antifraud settings screen will look for the VTEX store:
 &nbsp;
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1886bc0-gateway_affiliations_screen.png",
-        "gateway affiliations screen.png",
-        1892,
-        827,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![gateway affiliations screen](https://files.readme.io/1886bc0-gateway_affiliations_screen.png)
 &nbsp;
 These keys should be made available by you and will serve to identify the store that hired and is using your antifraud service.
 

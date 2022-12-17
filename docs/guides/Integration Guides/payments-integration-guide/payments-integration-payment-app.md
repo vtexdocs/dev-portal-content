@@ -23,21 +23,7 @@ The main reasons why someone would choose to build a Payment App over a standard
 - Measure conversions by analytics tools for customized flows.
 
 As you can see below, the Payment App is displayed as a modal window when the customer clicks on the **Buy now** button:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c95f758-kX6y8QN55B.gif",
-        "kX6y8QN55B.gif",
-        1454,
-        1135,
-        "#f5f3f3"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://files.readme.io/c95f758-kX6y8QN55B.gif)
 This tutorial will guide you through the steps required to develop, test, and set up a Payment App in your store. The sections of this tutorial are:
 
 - [Understanding the Payment App flow](#understanding-the-payment-app-flow): An explanation of what a Payment App is, its behavior, and usage.
@@ -47,22 +33,7 @@ This tutorial will guide you through the steps required to develop, test, and se
 ## Understanding the Payment App flow
 
 Our Payment App model applies to a large variety of payment methods thanks to its interaction with the Checkout API, as shown in the following sequence diagram:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7d5c6a2-Payment_App_flow.drawio.png",
-        "Payment App flow.drawio.png",
-        1082,
-        759,
-        "#f9f9f9"
-      ],
-      "caption": "Payment App sequence diagram"
-    }
-  ]
-}
-[/block]
+![Payment App flow](https://files.readme.io/7d5c6a2-Payment_App_flow.drawio.png)
 Below is described the flow in the same order of the sequence diagram (steps from 1 to 4 are the same for every payment flow; steps unique to the Payment App flow are from 5 onwards):
 
 1. Checkout UI sends a Start Transaction request to the Checkout API.
@@ -248,19 +219,4 @@ After finishing the interaction with the Payment App, the app closes and redirec
 The following image shows how the 3DS2 is displayed to customers:
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/81d7880-Payment_App_3DS2.png",
-        "Payment App 3DS2.png",
-        1999,
-        1245,
-        "#878488"
-      ],
-      "caption": "Payment App 3DS2"
-    }
-  ]
-}
-[/block]
+![Payment App 3DS2](https://files.readme.io/81d7880-Payment_App_3DS2.png)

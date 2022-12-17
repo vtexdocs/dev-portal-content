@@ -29,21 +29,7 @@ Some examples include: displaying a QR code for payment, filling in an applicati
 }
 [/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c3f3d8b-Payment_Redirect-editado.png",
-        "Payment Redirect-editado.png",
-        1830,
-        1144,
-        "#f7f7f7"
-      ]
-    }
-  ]
-}
-[/block]
+![Payment Redirect](https://files.readme.io/c3f3d8b-Payment_Redirect-editado.png)
 The sequence of events in a Redirect payment flow occurs as described in the following steps:
 
 1. The customer clicks on **Finish Payment** in the Checkout.

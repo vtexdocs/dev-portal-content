@@ -84,21 +84,7 @@ There are some steps needed for the connector to be able to process payments in 
 ## Scenery and flow
 
 Here we describe the payment flow in the context of a physical store using a POS. The following sequence diagram represents all the steps in this flow, where the green bars are the steps that the payment provider is responsible for:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f9b9b81-Fluxo_PPP_com_POS_atualizado.png",
-        "Fluxo PPP com POS atualizado.png",
-        2502,
-        1638,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![Fluxo PPP com POS atualizado](https://files.readme.io/f9b9b81-Fluxo_PPP_com_POS_atualizado.png)
 1. The flow starts with a buyer finishing a purchase in a VTEX physical store created on [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc).
 2. The inStore makes an [Authorization](https://developers.vtex.com/vtex-rest-api/reference/4doauthorization) request to the VTEX Payment Gateway.
 3. Our Gateway makes a [Create Payment](https://developers.vtex.com/vtex-rest-api/reference/createpayment) request to the connector defined in the store settings for the specific payment method used in the purchase (i.e.: `Venda Direta Credito`).
@@ -207,22 +193,7 @@ Payload example:
         }"
 }
 ```
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2970e93-image2.png",
-        "image2.png",
-        851,
-        457,
-        "#000000"
-      ],
-      "caption": "Print of the Fullfil form app using the example payload above"
-    }
-  ]
-}
-[/block]
+![Print of the Fullfil form app using the example payload above](https://files.readme.io/2970e93-image2.png)
 #### Pagar.me Payment App
 
 This app uses the device camera to read the barcode of the POS that will be used for the purchase. After reading the barcode, the information is sent automatically to the URL defined by the `submitUrl` parameter. The payload sent by the app to the URL uses the following format: `{"serialNumber": "12345"}`.
@@ -245,22 +216,7 @@ Payload example:
         }"
 }
 ```
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c98303e-image3.png",
-        "image3.png",
-        846,
-        1006,
-        "#000000"
-      ],
-      "caption": "Print of the Pagarme Payment App using the camera to scan the bar code of the POS"
-    }
-  ]
-}
-[/block]
+![Print of the Pagarme Payment App using the camera to scan the bar code of the POS](https://files.readme.io/c98303e-image3.png)
 #### Wait for confirmation
 
 This app is returned by the connector after the payment has started on the POS, so that the inStore polls for the payment status. The waiting time for a status change in the payment is defined by the ``secondsWaiting`` parameter, which comes from the connector in the payload.
