@@ -1,10 +1,10 @@
 ---
 title: "Understanding how store URL indexing works"
 slug: "vtex-io-documentation-understanding-how-store-url-indexing-works"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: true
 createdAt: "2020-06-03T16:02:44.299Z"
-updatedAt: "2022-08-02T00:03:06.015Z"
+updatedAt: "2022-12-13T20:17:44.212Z"
 ---
 ## Introduction
 
@@ -18,13 +18,13 @@ To solve this issue, **each website URL needs its canonical URL**, which is noth
   
 ## URL indexing requisites
 
-**In VTEX IO, all store canonical URLs (product, category, subcategory, brand and custom page URLs) are automatically held in Sitemap where they are indexed by search engines.** 
+**In VTEX IO, all store canonical URLs (product, category, subcategory, brand and custom page URLs) are automatically held in Sitemap where they are indexed by search engines.**
 
 As the name suggests, Sitemap is simply the mapping tool for all canonical URLs, and displays your site's architecture to search bots and user browsers.
 
 To ensure that every relevant URL from your site has been indexed, VTEX IO also identifies the **most visited search URLs** and transforms these into canonical URLs that are then added to Sitemap.
 
-### Most visited search URLs 
+### Most visited search URLs
 
 To define the most visited search URLs, the platform calculates how many users already visited each of these site addresses, as long as the site is online.
 
@@ -42,7 +42,7 @@ A URL can be removed from the Sitemap listing and no longer be indexed if:
 - It returns a status code `404`;
 - It lost its relevance (is no longer accessed) and, consequently, fell off the list of most visited site URLs.
 
->ℹ️ Note: URLs that will are removed from the Sitemap list and are no longer indexed by search engines will still continue to work normally for site users. 
+>ℹ️ Note: URLs that will are removed from the Sitemap list and are no longer indexed by search engines will still continue to work normally for site users.
 
 #### Managing the most visited search URLs list
 
@@ -50,7 +50,7 @@ It's not possible to control which search URLs will enter the most visited list,
 
 What you can do is **control the max number of most visited URLs that your site will index**, by following the instructions below:
 
-1. Log in to the admin of the desired VTEX account; 
+1. Log in to the admin of the desired VTEX account;
 2. Access the Apps section, located in the admin side bar;
 3. Select the Store Indexer;
 4. In the Setup section, fill out the following field with the desired value `Number of search URLs to be indexed`;

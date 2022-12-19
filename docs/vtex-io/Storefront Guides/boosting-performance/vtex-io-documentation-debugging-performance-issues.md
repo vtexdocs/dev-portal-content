@@ -1,10 +1,10 @@
 ---
 title: "Debugging performance issues"
 slug: "vtex-io-documentation-debugging-performance-issues"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-07T18:18:23.849Z"
-updatedAt: "2022-08-02T00:03:06.121Z"
+updatedAt: "2022-12-13T20:17:44.952Z"
 ---
 In the e-commerce business, website performance and user experience are closely connected. That means that performance can directly impact sales conversion rate, user session time, among other relevant metrics.
 
@@ -18,7 +18,7 @@ With that in mind, the following [section](#step-by-step) intends to guide you w
 
 # Step by step
 
-Before proceeding any further, we recommend that you run [Lighthouse](https://developers.google.com/speed/pagespeed/insights/) using the following URL pattern `https://{account}.myvtex.com/?workspace={workspace}`, given the production workspace you're currently working, and take note of your store's performance. You can also analyze the store in production. In this case, please consider the URL available to end-users. 
+Before proceeding any further, we recommend that you run [Lighthouse](https://developers.google.com/speed/pagespeed/insights/) using the following URL pattern `https://{account}.myvtex.com/?workspace={workspace}`, given the production workspace you're currently working, and take note of your store's performance. You can also analyze the store in production. In this case, please consider the URL available to end-users.
 
 >⚠️ **Keep in mind:** you must always use the `?workspace={workspace}` query string to analyze performance in a production workspace. Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show the performance score of your store in the specified workspace.
 
@@ -68,7 +68,6 @@ For that, you must run Lighthouse again, including the `__disablePixels` and `v`
 
 >⚠️ Notice that the random value added to the query string `v` is used to avoid cache. Remember to replace the values between the curly brackets according to your scenario.
 
-
 Take the following example:
 
 ![pixelapps](https://user-images.githubusercontent.com/60782333/102830478-277dad00-43c8-11eb-8062-f0733095f3d6.png)
@@ -102,7 +101,7 @@ By knowing that, it's possible to take targeted actions to reduce your app's bun
 Use [SpeedCurve](https://speedcurve.com/) or any other tool of your preference to detect your website's heaviest scripts, and consider:
 
 - Removing them.
-- Replacing them with lighter and similar scripts. 
+- Replacing them with lighter and similar scripts.
 - Implementing alternative loading solutions with a lower negative impact on performance.
 
 ## Step 5: Enabling performance settings
@@ -128,7 +127,7 @@ Critical CSS optimization requires that the page is server-side rendered and tha
 Hence, after enabling the critical CSS optimization, check if your pages are being optimized:
 
 1. Make sure your pages are server-side rendered (Step 1)
-2. Look for the style tag `<style id="critical" type="text/css">` inside the `<head>` tag of the corresponding pages. 
+2. Look for the style tag `<style id="critical" type="text/css">` inside the `<head>` tag of the corresponding pages.
 
 ## Step 7: Using the Lighthouse Scoring Calculator
 
@@ -140,7 +139,7 @@ With the performance features enabled, as proposed in Step 5, reproduce your sco
 
 >ℹ️ [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) is a Chrome DevTools extension for the open-source React JavaScript library.
 
-2. If [First Contentful Paint (FCP)](https://web.dev/fcp/) is high, consider prioritizing the above-the-fold content by bringing, at first, only the necessary assets to render that part of the page. 
+2. If [First Contentful Paint (FCP)](https://web.dev/fcp/) is high, consider prioritizing the above-the-fold content by bringing, at first, only the necessary assets to render that part of the page.
 3. If [Largest Contentful Paint (LCP)](https://web.dev/lcp/) is high, consider centering most of the page content on one or fewer elements, such as a banner, and having that part rendered with priority (e.g., loading the main image first).
 
 >ℹ️ Follow [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-getting-started-with-lighthouse) to learn more about Lighthouse metrics.

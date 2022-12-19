@@ -1,10 +1,10 @@
 ---
 title: "Creating modals using icons"
 slug: "vtex-io-documentation-creating-modals-using-icons"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-18T15:04:52.686Z"
-updatedAt: "2022-08-02T00:03:06.172Z"
+updatedAt: "2022-12-13T20:17:44.107Z"
 ---
 When talking about ecommerce, a modal is a **popup window**, triggered by an UI component, that forces users to interact with it before a certain action is taken during browsing.
 
@@ -12,7 +12,7 @@ Let's look at the following scenario: ready to proceed to checkout, a user brows
 
 To your business, it's advantageous to trigger a popup window in this removal icon, requiring user confirmation to complete the action. In a lot of cases, the modal will contribute to an increase in conversion rate.
 
-To build modals in such a scenario using Store Framework, we'll use the [Modal Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-modal-layout) block and the icons exported by the [Store Icons](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-icons) app. 
+To build modals in such a scenario using Store Framework, we'll use the [Modal Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-modal-layout) block and the icons exported by the [Store Icons](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-icons) app.
 
 ## Step by step
 

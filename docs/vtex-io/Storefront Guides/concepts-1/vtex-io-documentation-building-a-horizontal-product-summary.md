@@ -1,17 +1,17 @@
 ---
 title: "Building a horizontal Product Summary"
 slug: "vtex-io-documentation-building-a-horizontal-product-summary"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-12-15T16:28:08.220Z"
-updatedAt: "2022-08-02T00:03:06.168Z"
+updatedAt: "2022-12-13T20:17:44.651Z"
 ---
 The [Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) is a VTEX native app responsible for displaying important product data in your store's components, such as the Shelf and the Minicart.
 
 ![product-summary-vertical](https://user-images.githubusercontent.com/52087100/102239663-dbb59a00-3ed5-11eb-882f-48672d6f1325.png)
 
 Thanks to the [Flex Layout app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout), it is possible to customize the default presentation showed above and thereby display the Product Summary blocks in a **horizontal alignment** to your users:
- 
+
 ![horizontal-product-summary](https://user-images.githubusercontent.com/52087100/102240101-436be500-3ed6-11eb-84a1-0c957cf4f4d6.png)
 
 Learn in the instructions below how to use the powerful combination between the Flex Layout and the Product Summary apps in order to display your product data horizontally.
@@ -51,7 +51,7 @@ Learn in the instructions below how to use the powerful combination between the 
 },
 ```
 
-4. Add the [`product-summary-image` block](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryimage) to the `flex-layout.col#product-image`'s children list and then declare it as desired: 
+4. Add the [`product-summary-image` block](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryimage) to the `flex-layout.col#product-image`'s children list and then declare it as desired:
 
 ```json
 "flex-layout.col#product-image": {

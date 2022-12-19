@@ -1,10 +1,10 @@
 ---
 title: "Using Sandbox blocks"
 slug: "vtex-io-documentation-using-sandbox-blocks"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.614Z"
-updatedAt: "2022-08-02T00:03:06.077Z"
+updatedAt: "2022-12-13T20:17:44.309Z"
 ---
 ## Introduction
 
@@ -14,7 +14,7 @@ The **Sandbox App** is basically a component that supports iFrames. Therefore, i
 
 ## Step by step
 
-1. Go ahead and open your `manifest.json` file and declare the Sandbox app as a dependency. 
+1. Go ahead and open your `manifest.json` file and declare the Sandbox app as a dependency.
 
 ![sandbox dependency](https://user-images.githubusercontent.com/19555647/64436951-b95e8b00-d09b-11e9-90af-7d11f6d9d501.png)
 
@@ -35,7 +35,7 @@ Let's suppose you want to create a simple `h1` sandbox block. It would look simi
 
 ![sanbox hello world](https://user-images.githubusercontent.com/19555647/64436924-ae0b5f80-d09b-11e9-9080-fd4c983689d1.png)
 
-3. Reference it in another's block `child dependency` or `blocks`. For instance, your `store.home`: 
+3. Reference it in another's block `child dependency` or `blocks`. For instance, your `store.home`:
 
 ```json
 //home.jsonc
@@ -57,6 +57,6 @@ That should render the h1 sandbox on the store's page!
 
 ## Best Practices
 
-If you think that a component is very similar to what will serve your store needs but that it still needs some tweaks, you should find the right style and props to turn into the custom component you are looking for. 
+If you think that a component is very similar to what will serve your store needs but that it still needs some tweaks, you should find the right style and props to turn into the custom component you are looking for.
 
 **Sandbox should only be used whenever Store Framework native components won't handle your scenario** and when what you intend to do is simple enough that it doesn't require a lot of outsource data. Creating everything using iFrames will make your store easily obsolete to new Store Framework features and not very good in terms of performance.

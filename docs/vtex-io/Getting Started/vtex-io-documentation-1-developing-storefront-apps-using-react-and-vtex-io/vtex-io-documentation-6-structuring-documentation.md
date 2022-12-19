@@ -1,10 +1,10 @@
 ---
 title: "5. Structuring documentation"
 slug: "vtex-io-documentation-6-structuring-documentation"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.350Z"
-updatedAt: "2022-08-02T00:03:05.657Z"
+updatedAt: "2022-12-13T20:17:44.328Z"
 ---
 Now that you have created a component and defined its style, it is time to generate the documentation for the new app!
 
@@ -15,9 +15,9 @@ With that in mind, the VTEX IO team provides a *documentation template* to help 
 1. Access your app's `docs` folder.
 2. Access the `README.md` file.
 
-In the `README.md` file, you will find structured recommendations you should follow when generating your documentation. Read the file carefully and make changes according to your particular scenario. 
+In the `README.md` file, you will find structured recommendations you should follow when generating your documentation. Read the file carefully and make changes according to your particular scenario.
 
-In addition to presenting the theme blocks exported by your app, you also need to describe their properties and list the CSS Handles created in the previous step, as described in the *template*. 
+In addition to presenting the theme blocks exported by your app, you also need to describe their properties and list the CSS Handles created in the previous step, as described in the *template*.
 
 Remember that **documentation is an ongoing process**–whenever a new setting modifies the user experience in your app, the `README.md` file needs to be updated.
 

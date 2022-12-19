@@ -1,18 +1,18 @@
 ---
 title: "Dependencies"
 slug: "vtex-io-documentation-dependencies"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-07-21T13:18:17.212Z"
-updatedAt: "2022-08-02T00:03:05.602Z"
+updatedAt: "2022-12-13T20:17:44.566Z"
 ---
 The dependencies property is a JSON object field (`dependencies`) in the app's `manifest.json` file.  
 
-This field **specifies which VTEX IO apps your app relies on to properly work**. Its semantics resembles [`package.json`'s `dependencies`](https://docs.npmjs.com/files/package.json#dependencies) property on Javascript apps. 
+This field **specifies which VTEX IO apps your app relies on to properly work**. Its semantics resembles [`package.json`'s `dependencies`](https://docs.npmjs.com/files/package.json#dependencies) property on Javascript apps.
 
 In practice, when an app is installed on a VTEX account, every app included in its manifest's `dependencies` field is automatically installed on the account.
 
-Therefore, if your app needs to interact with another IO app, such as a VTEX API or a store framework block, you may declare it in the `manifest.json` file under `dependencies`, according to the following structure `"{account}.{appName}": "{majorVersion}.x"`. 
+Therefore, if your app needs to interact with another IO app, such as a VTEX API or a store framework block, you may declare it in the `manifest.json` file under `dependencies`, according to the following structure `"{account}.{appName}": "{majorVersion}.x"`.
 
 The `dependencies` object of your app's `manifest.json` file may look something like this:
 

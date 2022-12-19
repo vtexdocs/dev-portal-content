@@ -1,10 +1,10 @@
 ---
 title: "Installing apps on live stores"
 slug: "vtex-io-documentation-installing-apps-in-live-stores-best-practices"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.252Z"
-updatedAt: "2022-08-02T00:03:06.141Z"
+updatedAt: "2022-12-13T20:17:44.589Z"
 ---
 Once a store is live, worries and uncertainties about security, stability and performance begin to grow.
 

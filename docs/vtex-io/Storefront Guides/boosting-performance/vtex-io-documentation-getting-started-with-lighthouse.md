@@ -1,10 +1,10 @@
 ---
 title: "Getting started with Lighthouse performance audit"
 slug: "vtex-io-documentation-getting-started-with-lighthouse"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-07T18:18:24.258Z"
-updatedAt: "2022-08-02T00:03:06.478Z"
+updatedAt: "2022-12-13T20:17:44.161Z"
 ---
 ## What is Lighthouse
 
@@ -40,7 +40,7 @@ The Lighthouse performance report is composed of:
 
 ## Performance metrics
 
-Web performance is a relative term. From the user's point of view, it's a perception of how he experiences page loading and how responsive a page feels. 
+Web performance is a relative term. From the user's point of view, it's a perception of how he experiences page loading and how responsive a page feels.
 
 Even if, for a computer, performance could be better described as the time it takes for the whole page to load, this specific metric may not necessarily correspond to anything the user cares about.
 
@@ -136,7 +136,7 @@ Notice that this metric can be affected by:
 - image size, fonts, etc.
 - client-side rendering via JS.
 
-### [Largest Contentful Paint (LCP)](https://web.dev/lcp/) | 25% 
+### [Largest Contentful Paint (LCP)](https://web.dev/lcp/) | 25%
 
 *Largest Contentful Paint* measures the time it takes to render the largest visible element of the page within the viewport.
 
@@ -175,7 +175,7 @@ Notice that this metric can be affected by:
 
 TTI might also be affected by large images and CSS since loading these files can delay the load time of JS scripts.
 
-### [Total Blocking Time (TBT)](https://web.dev/lighthouse-total-blocking-time/) | 25% 
+### [Total Blocking Time (TBT)](https://web.dev/lighthouse-total-blocking-time/) | 25%
 
 The *Total Blocking Time* metric measures the amount of time during page-load in which user inputs, such as mouse clicks, screen taps, or keyboard presses, are blocked.
 
@@ -199,7 +199,7 @@ TBT is mostly affected by JS parsing and execution.
 
 Besides removing or reducing JS codes, it's possible to improve TBT by splitting long tasks into smaller ones, improving code efficiency, and implementing lazy load.
 
-### [Cumulative Layout Shift (CLS)](https://web.dev/cls/) | 5% 
+### [Cumulative Layout Shift (CLS)](https://web.dev/cls/) | 5%
 
 >⚠️ The weight of CLS on the Performance score may increase in the future.
 

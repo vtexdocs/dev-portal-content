@@ -1,20 +1,20 @@
 ---
 title: "Using the Markers prop to customize a block's message"
 slug: "vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:45.317Z"
-updatedAt: "2022-08-02T00:03:05.843Z"
+updatedAt: "2022-12-13T20:17:44.379Z"
 ---
 CSS Handles and Block Classes are identifiers used to give storefront components a unique identity through CSS classes.
 
 While capable of solving most scenarios, both identifiers have limitations in terms of more specific customization.
 
-For example: you can customize all blocks exported by an app in the same way using CSS Handles or you can customize each one of them in a unique way using Block Classes. However, none of the two identifiers is capable of customizing the **messages** these blocks export. 
+For example: you can customize all blocks exported by an app in the same way using CSS Handles or you can customize each one of them in a unique way using Block Classes. However, none of the two identifiers is capable of customizing the **messages** these blocks export.
 
-To resolve this scenario, we use the `markers` prop. Following the same logic as the Block Class prop, the `markers` prop is tasked with **defining unique values that will ultimately act as identifiers for the text messages** that are exported by the block in which it was declared. 
+To resolve this scenario, we use the `markers` prop. Following the same logic as the Block Class prop, the `markers` prop is tasked with **defining unique values that will ultimately act as identifiers for the text messages** that are exported by the block in which it was declared.
 
-Find out how to configure the `markers` prop in the step-by-step below. 
+Find out how to configure the `markers` prop in the step-by-step below.
 
 ## Step by step
 

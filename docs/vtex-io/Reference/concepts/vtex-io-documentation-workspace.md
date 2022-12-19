@@ -1,10 +1,10 @@
 ---
 title: "Workspace"
 slug: "vtex-io-documentation-workspace"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.368Z"
-updatedAt: "2022-08-02T00:03:06.031Z"
+updatedAt: "2022-12-13T20:17:44.537Z"
 ---
 Workspaces are environments isolated from one another. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your store's live version or other developers' work.
 

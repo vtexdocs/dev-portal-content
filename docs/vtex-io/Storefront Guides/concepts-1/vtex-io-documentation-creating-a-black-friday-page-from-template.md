@@ -1,24 +1,24 @@
 ---
 title: "Creating a Black Friday page from template"
 slug: "vtex-io-documentation-creating-a-black-friday-page-from-template"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-14T16:05:41.336Z"
-updatedAt: "2022-08-02T00:03:06.045Z"
+updatedAt: "2022-12-13T20:17:45.036Z"
 ---
-You may want to create custom landing pages for big events, such as Black Friday and Cyber Monday, to compose your marketing strategy. 
+You may want to create custom landing pages for big events, such as Black Friday and Cyber Monday, to compose your marketing strategy.
 
-With that in mind, we created a landing page template for Black Friday following VTEX recommended practices to help your store maximize profits and conversions. 
+With that in mind, we created a landing page template for Black Friday following VTEX recommended practices to help your store maximize profits and conversions.
 
 This guide will show you how to implement the Black Friday landing page template.
- 
+
 >ℹ️ You can also base on this template to create a new or refreshed homepage for your store website.
 
 ![Black Friday landing page template](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/Recipes/templates/blackfriday.gif?raw=true)
 
 ## Step by step
 
-### Step 1 - Downloading the template files 
+### Step 1 - Downloading the template files
 
 Download the template files available here: [black-friday-template-files 2021.zip](https://drive.google.com/file/d/1sNOehohokdx-GLsvjdr9tRxhm42NWZKy/view). Within it, you'll find the following folders:
 
@@ -48,9 +48,8 @@ Download the template files available here: [black-friday-template-files 2021.zi
 
 ![bf-template](https://user-images.githubusercontent.com/60782333/137352422-c8f144bb-750e-4ccf-b339-c921efaf9950.png)
 
-5. Using the terminal, run `vtex link` on your project folder. 
+5. Using the terminal, run `vtex link` on your project folder.
 7. Go back to your code and customize the template as you wish.
-
 
 ### Step 3 - Implementing the page at your store
 

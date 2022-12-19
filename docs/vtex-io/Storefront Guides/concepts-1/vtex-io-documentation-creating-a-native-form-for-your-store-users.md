@@ -1,10 +1,10 @@
 ---
 title: "Creating a native form for your store users"
 slug: "vtex-io-documentation-creating-a-native-form-for-your-store-users"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.837Z"
-updatedAt: "2022-08-02T00:03:06.692Z"
+updatedAt: "2022-12-13T20:17:45.509Z"
 ---
 Many brick and mortar stores assign the task of developing the brand's relationship with customers to their sales team, encouraging a closer relationship between customers and sales reps for any necessary support.
 
@@ -13,7 +13,7 @@ It goes without saying that this is not the case for online stores. Without a fa
 In such scenarios, forms become essential tools for an ecommerce store, as they **promote clear and direct communication** with customers.
 
 A form may give a greater amount of information about your users, as well as more insight into satisfaction levels with the service being offered.
- 
+
 With VTEX IO Store Framework, your store can have a 100% native form component which is integrated with [**VTEX Master Data**](https://help.vtex.com/tutorial/what-is-master-data--4otjBnR27u4WUIciQsmkAw?locale=en).
   
 ## Step by step

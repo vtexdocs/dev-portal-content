@@ -1,10 +1,10 @@
 ---
 title: "Indicating alternate versions of localized pages in cross border stores"
 slug: "vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-23T14:49:49.171Z"
-updatedAt: "2022-08-02T00:03:06.090Z"
+updatedAt: "2022-12-13T20:17:44.702Z"
 ---
 If you have different versions of a [landing page](https://developers.vtex.com/docs/vtex-io-documentation-creating-a-new-custom-page) for each region your store is present, we recommend that you save them as `alternate` versions.
 

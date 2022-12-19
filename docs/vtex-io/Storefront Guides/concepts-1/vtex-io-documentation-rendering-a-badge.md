@@ -1,13 +1,12 @@
 ---
 title: "Rendering a badge on top of a product"
 slug: "vtex-io-documentation-rendering-a-badge"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-12-29T19:51:43.371Z"
-updatedAt: "2022-08-02T00:03:06.006Z"
+updatedAt: "2022-12-13T20:17:44.260Z"
 ---
 To render a badge on top of a [Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) component, for example, product collection on a [Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf) block, you combine the [Product Highlights app](https://vtex.io/docs/components/all/vtex.product-highlights@2.2.0/) and [Stack Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-stack-layout).
-
 
 ![badge](https://user-images.githubusercontent.com/67270558/132249207-502468eb-3dc2-4fc4-a7ef-669ea333a177.png)
 
@@ -15,7 +14,6 @@ To render a badge on top of a [Product Summary](https://developers.vtex.com/vtex
 
 1. Knowledge of how the Product Summary, Product Highlights, Stack Layout, and Product collections work is required for this recipe. If you have any doubts regarding them, we strongly recommend you access their technical documentation: [Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary), [Product Highlights](https://vtex.io/docs/components/all/vtex.product-highlights@2.2.0/), [Stack Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-stack-layout)
 and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye).
-
 
 2. Ensure you have already installed [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) on your machine.
 
@@ -34,7 +32,6 @@ and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--y
 
     ```
 
-
 2. Open a product template you desire.
 3. Then, add the `stack-layout` component to the `blocks` list of the desired template, for example:
 
@@ -48,7 +45,7 @@ and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--y
     ...
     ```
   
-4. In the theme’s template, declare the `stack-layout` component, and add the `"product-summary-image#shelf"` and `"vtex.product-highlights@2.x:product-highlights#collection"` as its `children`  to render the image and the badge, respectivetly. 
+4. In the theme’s template, declare the `stack-layout` component, and add the `"product-summary-image#shelf"` and `"vtex.product-highlights@2.x:product-highlights#collection"` as its `children`  to render the image and the badge, respectivetly.
 
     ```json
     "stack-layout#prodsum": {
@@ -59,7 +56,7 @@ and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--y
       },
     ```
 
-5. Then declare the props of the children. The first is `"product-summary-image#shelf"` props, responsible for rendering the product's image. 
+5. Then declare the props of the children. The first is `"product-summary-image#shelf"` props, responsible for rendering the product's image.
 
     ```json
 
@@ -77,7 +74,6 @@ and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--y
     > ℹ️ Info
     >
     > The `product-highlight-text` only renders the text already defined in the **Collection** page in a store’s Admin.  For more information about it, refer to [Collections articles](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye) and the [Product Highlights app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-highlights#configuration)
-
 
     ```json
 
@@ -101,12 +97,11 @@ and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--y
       ...
      ```
 
-
 Once you have declared the blocks’ props, [link the app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) and see the changes live at the [Development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace) you are working.
 
 ## Related Articles
 
-- [Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) 
+- [Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary)
 - [Product Highlights](https://vtex.io/docs/components/all/vtex.product-highlights@2.2.0/)
 - [Stack Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-stack-layout)
 - [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye)

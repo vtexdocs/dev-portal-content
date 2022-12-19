@@ -1,12 +1,12 @@
 ---
 title: "Preparing your app for distribution"
 slug: "vtex-io-documentation-preparing-your-app-distribution"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-03-04T20:09:05.195Z"
-updatedAt: "2022-08-02T00:03:06.592Z"
+updatedAt: "2022-12-13T20:17:44.658Z"
 ---
-This guide will teach you how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution. 
+This guide will teach you how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution.
 
 Notice that every app goes through a homologation process before being available at the VTEX App Store. During this process, our team ensures the apps follow the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Hence, be sure to review these guidelines while you develop and prepare your app for distribution.
 
@@ -14,7 +14,7 @@ Notice that every app goes through a homologation process before being available
 
 Before proceeding, make sure you have already:
 
-1. Developed your app. Please refer to the [Developing an app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app) guide for more information. 
+1. Developed your app. Please refer to the [Developing an app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app) guide for more information.
 
 2. Registered as [VTEX App Store developer](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer).
 
@@ -35,23 +35,22 @@ After establishing your app's billing model, you must set up the marketing asset
 3. Create the following folders and files for the respectives directories.
 
 ```
-   public
-	metadata
-		images
-			icon.png
-			screenshots
-				desktop
+public
+ metadata
+  images
+   icon.png
+   screenshots
+    desktop
 
-				mobile
-	licenses
-		en-US.md
-		es-AR.md
-		pt-BR.md
-	messages
-		en-US.json
-		es-AR.json
-		pt-BR.json
-
+    mobile
+ licenses
+  en-US.md
+  es-AR.md
+  pt-BR.md
+ messages
+  en-US.json
+  es-AR.json
+  pt-BR.json
 ```
 
 4. Create the files and folders needed to compose your App Page according to the following:
@@ -62,15 +61,15 @@ The `images` folder is where you store the images of your app's page. They may i
 
 ```
 images
-	icon.png 
-	screenshots
-		desktop
-			{add-a-file}.png
-			{add-a-file}.png
+ icon.png 
+ screenshots
+  desktop
+   {add-a-file}.png
+   {add-a-file}.png
 
-		mobile
-			{add-a-file}.png
-			{add-a-file}.png
+  mobile
+   {add-a-file}.png
+   {add-a-file}.png
 
 ```
 
@@ -90,10 +89,10 @@ Inside the `licenses` folder, create the files named over locale codes to provid
 The `messages` folder contains textual information regarding your app, such as its name and list of features, in different languages.
 See below the base template for structuring this file:
 
-```
-    {
+```json
+{
   "name": "Order Tracker",
-    "headline": "Headline Order Tracker.",
+  "headline": "Headline Order Tracker.",
   "overview": "Tracks all orders\\nSecond line\\n\\nThird line\\n\\n\\n\\n\\nFourth line",
   "features": [
     "First feature",
@@ -101,14 +100,14 @@ See below the base template for structuring this file:
     "Third feature",
     "Fourth feature"
   ],
-    "additionalinformation": "Additional information\\nYou can also write new lines here\\n\\n\\nIt should work just like the overview",
+  "additionalinformation": "Additional information\\nYou can also write new lines here\\n\\n\\nIt should work just like the overview",
   "video": "<https://www.youtube.com/embed/645ASYhJS-Q>",
   "websiteURL": "<https://www.website.com/en>",
   "support": {
-      "email": "a@bcd.io"
-      "url": "www....",
-      "phone": +1....
-    },
+    "email": "a@bcd.io"
+    "url": "www....",
+    "phone": +1....
+  },
   "metricDescription": {
     "track": "English description for metric track",
     "notify": "English description for metric notify en-US"
@@ -119,11 +118,11 @@ See below the base template for structuring this file:
 - **`name`:** App name, limited to 26 characters.
 - **`headline`:** Short description of the main functionality of your application. The field has a 120 character limit.
 - **`overview`:** Detailed description of your app’s main purposes and benefits. There is no character limit.
-- **`features`:** List of your app’s main features and highlights. 
+- **`features`:** List of your app’s main features and highlights.
 - **`websiteURL`:** Link to the app's landing page or your corporate website.
 - **`support`:** Link to the support channel. It can be an email, a ticket portal, or a phone number.
 - **`additionalinformation`:** Additional details and disclaimers related to your app.
-- **`video`:** URL of a video featuring the app's behavior. 
+- **`video`:** URL of a video featuring the app's behavior.
 - **`metricDescription`:** Billing options' metrics (declared in the app's `manifest.json` file). This field is required only for apps whose pricing is based on one or more metrics. Please do not fill in this field if this is not the case.
 
 The files in this folder must be available in English, Spanish, and Portuguese in the following paths: `public/metadata/messages/en-US.json`, `public/metadata/messages/es-AR.json` and `public/metadata/messages/pt-BR.json`, respectively.

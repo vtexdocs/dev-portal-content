@@ -1,17 +1,16 @@
 ---
 title: "Sending custom events to Google Tag Manager"
 slug: "vtex-io-documentation-sending-custom-events-to-google-tag-manager"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-06-09T15:48:58.064Z"
-updatedAt: "2022-08-02T00:03:06.015Z"
+updatedAt: "2022-12-13T20:17:43.891Z"
 ---
 This guide will teach you how to send custom events to [Google Tag Manager (GTM)](https://tagmanager.google.com/). Custom events can track website interactions that aren't supported by GTM's standard methods. For example, you can set up a custom event to notify GTM that a user has clicked on a particular button.
 
 >ℹ️ For standard Google Tag Manager events and Universal Analytics Enhanced Ecommerce features, please consider using the [Google Tag Manager Pixel app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-google-tag-manager).
 
-
-## Step by step 
+## Step by step
 
 ### Step 1 - Tracking a custom event
 
@@ -28,7 +27,7 @@ To notify GTM about a specific action performed on your website, you must send a
    ```
 
 >ℹ️ Remember to make the `dataLayer` variable available in the `window` object before saving event data in it.
-        
+
 3. Go to the code line where the event happens and call your function, providing your event data as an argument. For example:
 
     ```tsx
@@ -39,7 +38,7 @@ To notify GTM about a specific action performed on your website, you must send a
         categoryId: data.category?.id,
     })
     ```
-    
+
 4. Save and deploy your changes.
 
 ### Step 2 - Testing the event
@@ -52,5 +51,5 @@ To notify GTM about a specific action performed on your website, you must send a
 
 Once you've validated that the `dataLayer` event is working properly, you'll need to set up a trigger so GTM can perform a specific action when your event is registered.
 
-1. Create a custom event trigger using the [GTM console](https://tagmanager.google.com/). Please refer to [this guide](https://support.google.com/tagmanager/answer/7679219?hl=en) for more information. Notice that you must enter the exact name of your data layer `event` in the **Event name** field. Considering our example, that would be `categoryView`. 
+1. Create a custom event trigger using the [GTM console](https://tagmanager.google.com/). Please refer to [this guide](https://support.google.com/tagmanager/answer/7679219?hl=en) for more information. Notice that you must enter the exact name of your data layer `event` in the **Event name** field. Considering our example, that would be `categoryView`.
 2. If applicable, create new variables of the **Data Layer Variable** type. Please refer to [this guide](https://support.google.com/tagmanager/topic/9125128?hl=en&ref_topic=7683268) for more information. Notice that you must set up new Data Layer variables only if you are sending additional information to your custom event. Considering our example, that would be `categoryId`.

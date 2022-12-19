@@ -1,14 +1,14 @@
 ---
 title: "3. Configuring your app settings"
 slug: "vtex-io-documentation-4-configuringyourappsettings"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:23.222Z"
-updatedAt: "2022-08-02T00:03:05.808Z"
+updatedAt: "2022-12-13T20:17:44.408Z"
 ---
 When developing a Pixel app, you must define a way to identify whether or not a VTEX account has the necessary permissions to communicate with the third-party solution in question. Otherwise, sharing data between the store and the solution won't be possible.
 
-This verification is generally performed via a user identification issued by the third-party solution. The user identification is an individual and untransferable value that identifies if you have the required permissions to use that solution. Think of the Google Tag Manager Pixel app: in order to use it, you must provide a user identification previously issued. 
+This verification is generally performed via a user identification issued by the third-party solution. The user identification is an individual and untransferable value that identifies if you have the required permissions to use that solution. Think of the Google Tag Manager Pixel app: in order to use it, you must provide a user identification previously issued.
 
 In the following step by step, you'll learn how to make your Pixel app read the user identification and determine whether or not a user is allowed.
 
@@ -39,7 +39,7 @@ In the following step by step, you'll learn how to make your Pixel app read the 
 },
 ```
 
-If needed, you can also use the `properties` object to read the user preferences. Check the following example: 
+If needed, you can also use the `properties` object to read the user preferences. Check the following example:
 
 ```json
 "settingsSchema": {

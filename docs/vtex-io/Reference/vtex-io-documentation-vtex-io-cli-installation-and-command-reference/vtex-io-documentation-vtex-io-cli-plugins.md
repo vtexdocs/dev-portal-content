@@ -1,23 +1,23 @@
 ---
 title: "Managing plugins"
 slug: "vtex-io-documentation-vtex-io-cli-plugins"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-20T14:59:19.813Z"
-updatedAt: "2022-08-02T00:03:06.292Z"
+updatedAt: "2022-12-13T20:17:44.761Z"
 ---
 VTEX IO CLI 3.x has a plug-in architecture that makes it more flexible and extensible to inject new commands and functionalities. This way, you can go beyond VTEX IO's CLI default commands and add specific plugins to achieve a more comprehensive experience.
 
 Check the [Command Reference](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference#plugins) for a detailed description of all plugins developed by VTEX.
 
->ℹ️ The following plugins are native to VTEX IO'S CLI. Therefore, you do not need to install them:  `abtest`, `autoupdate`, `deploy`, `deps`, `edition`, `plugins`, `whoami`, `workspace`. 
+>ℹ️ The following plugins are native to VTEX IO'S CLI. Therefore, you do not need to install them:  `abtest`, `autoupdate`, `deploy`, `deps`, `edition`, `plugins`, `whoami`, `workspace`.
 
 ## Checking plugin commands
 
 Check all commands related to plugins by running the following command.
 
 ```shell
-$ vtex plugins
+vtex plugins
 ```
 
 ![vtex-plugins-source](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-plugins.png)
@@ -42,9 +42,9 @@ Install a new plugin by running the following command.
 vtex plugins install {pluginName}
 ```
 
-Replace the value between curly brackets with the name of the plugin you want to install. 
+Replace the value between curly brackets with the name of the plugin you want to install.
 
-- For `vtex` plugins, use just the plugin name. For example, `vtex plugins install infra`. 
+- For `vtex` plugins, use just the plugin name. For example, `vtex plugins install infra`.
   
   >ℹ️ Tip: you can run `vtex plugins source` to check the available VTEX plugins.
 

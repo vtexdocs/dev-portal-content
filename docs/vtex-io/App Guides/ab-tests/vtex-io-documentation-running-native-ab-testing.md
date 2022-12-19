@@ -1,10 +1,10 @@
 ---
 title: "Running A/B tests"
 slug: "vtex-io-documentation-running-native-ab-testing"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.475Z"
-updatedAt: "2022-08-02T00:03:05.545Z"
+updatedAt: "2022-12-13T20:17:44.109Z"
 ---
 An A/B test compares traffic between two workspaces: the master and a production workspace, and reveals which version is best for your business needs.
 
@@ -14,29 +14,29 @@ To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app
 
 ![ab-testing](https://user-images.githubusercontent.com/52087100/64129197-21a62780-cd91-11e9-86f9-1ec8a3d2e2c8.png)
 
-
 ## Running A/B tests via the Admin
+
 The A/B Tester app allows you to run A/B tests via Admin. To use the app, first you need to install it in your account:
 
 1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account.
 
 2. Install the A/B Tester app in the `master` workspace to enable A/B testing on your store website by running:
 
-  ```
+  ```sh
   vtex use master
   vtex install vtex.ab-tester
   ```
 
-3. Type `y` to confirm that you want to install the app in the `master` workspace. 
+3. Type `y` to confirm that you want to install the app in the `master` workspace.
 
 4. Install the **A/B Tester Admin app** in the `master` workspace by running the following:
 
-  ```
+  ```sh
   vtex install vtexarg.abtester
   ```
   
 5. Type `y` to confirm the installation.
-6. Now, access the Admin and go to Installed Apps > AB Tester. 
+6. Now, access the Admin and go to Installed Apps > AB Tester.
 7. Create A/B tests, compare and finish tests, referring to the [A/B Tester Admin app documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtexarg-abtester#usage).
 
 ## Running A/B tests via the VTEX IO CLI
@@ -45,13 +45,13 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
 
 1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account:
 
-  ```
+  ```sh
   vtex login {accountName}
   ```
 
 2. [Create and switch to a Production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace) by running the following command:
 
-  ```
+  ```sh
   vtex use {workspaceName} --production
   ```
 
@@ -61,7 +61,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
 
 4. Switch to the master workspace.
 
-  ```
+  ```sh
   vtex use master
   ```
 
@@ -75,7 +75,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
 
 6. Run the following command in the master workspace.
 
-  ```
+  ```sh
   vtex workspace abtest start
   ```
 
@@ -92,19 +92,20 @@ By agreeing to proceed with the test, you will need to answer the two following 
   > ℹ️ To promote the changes from your production workspace in the safest way possible, we strongly recommend that you leave 90% of traffic dedicated to the master and the other 10% to the production workspace being tested.
 
 2. `What's the amount of time respecting the restriction?`. This is the amount of time (in hours) during which the traffic proportion stated in the previous question remains constant. After this period, the A/B testing system automatically balances the traffic proportions, sending more traffic to the best-performing workspace. There are two possible answers to this question:
-  - **Answer `0` to automatically proceed with the A/B test.** In this case, VTEX IO will automatically split your website traffic between workspaces, routing 50% of your store's traffic to the master and the other 50% to the production workspace being tested. Following that, the platform will automatically balance traffic every three minutes based on the conversion rates. This means that traffic will be gradually routed from the workspace with the lowest conversion rate to the workspace with the highest conversion rate. It's important to note that the test does not end on its own. We also suggest that you evaluate the test results on a daily basis.
-  - **Answer with the number of hours you want to keep constant the proportion of traffic previously specified.** During peak operational periods, it's critical for the test to extract as much data as possible. At the same time, the test shouldn't overextend and end up being harmful to users who are navigating the workspace with the poorest performance.
+
+- **Answer `0` to automatically proceed with the A/B test.** In this case, VTEX IO will automatically split your website traffic between workspaces, routing 50% of your store's traffic to the master and the other 50% to the production workspace being tested. Following that, the platform will automatically balance traffic every three minutes based on the conversion rates. This means that traffic will be gradually routed from the workspace with the lowest conversion rate to the workspace with the highest conversion rate. It's important to note that the test does not end on its own. We also suggest that you evaluate the test results on a daily basis.
+- **Answer with the number of hours you want to keep constant the proportion of traffic previously specified.** During peak operational periods, it's critical for the test to extract as much data as possible. At the same time, the test shouldn't overextend and end up being harmful to users who are navigating the workspace with the poorest performance.
   
   > ℹ️ You can run many A/B tests simultaneously by comparing two or more workspaces to the master individually. However, if you opt to set up the traffic manually, the A/B test will distribute the traffic evenly among all production workspaces being A/B tested. For example, suppose you started an A/B test between workspace A and master, routing 90% of traffic to the former and 10% to the latter. If you run a new A/B test between workspace B and the master, each production workspace, A and B, will only receive 5% of the store's traffic.
- 
+
 ### Step 3 - Interpreting the test results
 
 Any time during the A/B test, you can run the following command to check the live results:
 
-```
+```sh
 vtex workspace abtest status
 ```
- 
+
 ![ab-testing-step5](https://user-images.githubusercontent.com/52087100/64129599-69c64980-cd93-11e9-85fd-575665fbf532.png)
 
 If desired, you can still update the workspaces being used in the A/B test. However, notice that the fewer changes made to these workspaces, the more accurate your results will be.
@@ -123,7 +124,7 @@ Before completing your A/B test, it's important to understand both workspaces' c
 - **Start Date** - Date and time for the beginning of the test.
 - **Running Time** - Test duration.
 - **Probability B beats A** - Probability, in percentage points, that the production workspace is better for your store than the current master workspace. This calculation is based on the number of sessions and the number of sessions with completed sales. Notice: if the result of these metrics is greater than `10%`, the production workspace is able to become the winner.
-- **Winner** - Workspace you chose as the winner. 
+- **Winner** - Workspace you chose as the winner.
 
 > ⚠️ The main results of the A/B test are aimed at scenarios where the platform automatically directed store traffic. While you can and should use A/B tests even if you manually direct the traffic, bear in mind that the numbers behind each result reflect an automatic segmentation according to each workspace experience.
 
@@ -135,7 +136,7 @@ For example, you can set a maximum conversion loss of `0,0001%` when starting yo
 
 If your test has already reached the time frame you've manually set for it, or if you have already detected a winner during Step 3, run the following command in Master to finish the test.
 
-```
+```sh
 vtex workspace abtest finish
 ```
 

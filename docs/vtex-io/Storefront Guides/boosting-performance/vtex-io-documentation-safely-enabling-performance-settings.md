@@ -1,10 +1,10 @@
 ---
 title: "Safely enabling performance settings"
 slug: "vtex-io-documentation-safely-enabling-performance-settings"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-11T12:55:23.952Z"
-updatedAt: "2022-08-02T00:03:06.281Z"
+updatedAt: "2022-12-13T20:17:44.058Z"
 ---
 We understand that *site performance* is a common concern among e-commerce stores since it directly impacts the number of visited pages, sales conversion rate, user session time, bounce rate, and more.
 
@@ -20,7 +20,7 @@ Thus, to help you guarantee the success of your brand's online presence, we'll t
 >⚠️ Remember to replace the values between the curly braces according to your scenario.
 
 3. Using your browser, access the account's admin relative to that workspace.
-4. From the account's admin panel, go to _Store Setup > CMS > Store > Advanced_.
+4. From the account's admin panel, go to *Store Setup > CMS > Store > Advanced*.
 5. Now, considering our documentation on [Best practices for optimizing performance](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance), activate the desired features, and save the changes.
 6. Access your store in the current workspace that you're working in and check if the performance improvements were applied.
 
@@ -36,6 +36,6 @@ Thus, to help you guarantee the success of your brand's online presence, we'll t
 
 >ℹ️ Before promoting your workspace to master, we recommend that you measure the performance improvements by comparing the performance score in the production and the master workspace.
 
-## Step 3: Making your changes publicly available 
+## Step 3: Making your changes publicly available
 
 If you're happy with the results obtained in the previous steps, run `vtex promote` to promote your workspace and to benefit from a faster store.

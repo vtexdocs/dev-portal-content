@@ -1,10 +1,10 @@
 ---
 title: "Publishing an app"
 slug: "vtex-io-documentation-publishing-an-app"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.284Z"
-updatedAt: "2022-08-02T00:03:05.724Z"
+updatedAt: "2022-12-13T20:17:44.112Z"
 ---
 After [releasing](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-releasing-a-new-app-version) an app version, you must publish your app so that you can install it in certain accounts to perform A/B tests and validate your changes. In other words, you must turn your app into a **candidate version**.
 
@@ -12,7 +12,7 @@ A candidate version of an app is a build distributed internally for **testing pu
 
 ## Before you start
 
-Before proceeding any further, make sure the app you are about to publish has already been [released](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-releasing-a-new-app-version). 
+Before proceeding any further, make sure the app you are about to publish has already been [released](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-releasing-a-new-app-version).
 
 Notice that publishing an app is one of the steps to **making your new app version publicly available**. Please refer to [this](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available) guide for more information.
 
@@ -35,17 +35,18 @@ vtex publish
 Before deploying your candidate version, you must install it in a new Production workspace and perform tests to check your app's behavior. Notice that production workspaces are ready to receive traffic and be accessed by other users.
 
 1. Change to a new [Production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace):
-  - _Remember to replace the values between the curly brackets according to your scenario._
 
-```
+- _Remember to replace the values between the curly brackets according to your scenario._
+
+```sh
 vtex use {workspaceName} --production
 ```
 
-
 2. Install the candidate version by indicating the new app's exact version:
-  - _Remember to replace the values between the curly brackets according to your scenario._
 
-```
+- _Remember to replace the values between the curly brackets according to your scenario._
+
+```sh
 vtex install {appvendor}.{appname}@{appversion}
 ```
 

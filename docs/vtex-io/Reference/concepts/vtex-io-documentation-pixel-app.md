@@ -1,16 +1,16 @@
 ---
 title: "Pixel app"
 slug: "vtex-io-documentation-pixel-app"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:22.859Z"
-updatedAt: "2022-08-02T00:03:05.974Z"
+updatedAt: "2022-12-13T20:17:44.481Z"
 ---
-A Pixel app is a VTEX IO app that **natively integrates your store with a third party solution**, such as sales tracking, user support, and marketing services. 
+A Pixel app is a VTEX IO app that **natively integrates your store with a third party solution**, such as sales tracking, user support, and marketing services.
 
 When installed in your VTEX account, the Pixel app adds scripts to all your store website pages (and sometimes even some JavaScript configuration), so that the solution is able to fully work and fulfill its goal.
 
-[Facebook](https://developers.vtex.com/vtex-developer-docs/docs/vtex-facebook-pixel/), [Google Tag Manager](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager/) and [Zendesk Chat](https://developers.vtex.com/vtex-developer-docs/docs/vtex-zendesk-chat/) are examples of pixel apps that are already available for installation in the VTEX Store Framework. 
+[Facebook](https://developers.vtex.com/vtex-developer-docs/docs/vtex-facebook-pixel/), [Google Tag Manager](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager/) and [Zendesk Chat](https://developers.vtex.com/vtex-developer-docs/docs/vtex-zendesk-chat/) are examples of pixel apps that are already available for installation in the VTEX Store Framework.
 
 >ℹ️ You can check out every native configuration already available for implementation by accessing our documentation for [Pixel Apps](https://developers.vtex.com/vtex-developer-docs/docs/pixel-apps/).
 

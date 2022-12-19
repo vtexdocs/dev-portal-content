@@ -1,22 +1,22 @@
 ---
 title: "Using Flex Layout"
 slug: "vtex-io-documentation-using-flex-layout"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.331Z"
-updatedAt: "2022-08-02T00:03:06.324Z"
+updatedAt: "2022-12-13T20:17:44.874Z"
 ---
-Since [**Flex Layout**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) is a structure that allows the construction of custom layouts according to the concept of **rows** and **columns**, it basically can be used to build any desired store page. 
+Since [**Flex Layout**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) is a structure that allows the construction of custom layouts according to the concept of **rows** and **columns**, it basically can be used to build any desired store page.
 
 In this recipe, we will learn how to use it in a practical case, building an **About Us** page from scratch just as the one below:
 
 ![Screen Shot 2019-08-21 at 5 47 45 PM](https://user-images.githubusercontent.com/27777263/63467414-d0667180-c43b-11e9-8cf3-473c1c94f10e.png)
 
-If we think on how we could divide this page layout, we realize that it could be easily thought of as a "one row with two columns" model: 
+If we think on how we could divide this page layout, we realize that it could be easily thought of as a "one row with two columns" model:
 
 ![Screen Shot 2019-08-21 at 4 05 19 PM](https://user-images.githubusercontent.com/27777263/63467270-736abb80-c43b-11e9-8a7b-dfe8f218f081.png)
 
-To achieve the layout shown above, we must use the `flex-layout.row` and `flex-layout.col` blocks, which are going to define each row and column in the page layout and their children blocks. 
+To achieve the layout shown above, we must use the `flex-layout.row` and `flex-layout.col` blocks, which are going to define each row and column in the page layout and their children blocks.
 
 ## Declaring the `flex-layout.row`
 
@@ -88,7 +88,7 @@ The `preventVerticalStretch` prop prevents the column from occupying 100% of its
 
 ### Final results
 
-Here is the final `about-us.json` file using Flex Layout: 
+Here is the final `about-us.json` file using Flex Layout:
 
 ```json
 {

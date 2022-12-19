@@ -1,12 +1,12 @@
 ---
 title: "6. Structuring the documentation"
 slug: "vtex-io-documentation-7-structuringthedocumentation"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:22.848Z"
-updatedAt: "2022-08-02T00:03:05.780Z"
+updatedAt: "2022-12-13T20:17:44.605Z"
 ---
-Now that your Pixel app is defined, it is time to create its **documentation**! 
+Now that your Pixel app is defined, it is time to create its **documentation**!
 
 Creating a documentation for your app is one of the most essential parts of your development journey, since the documentation will be the one responsible for presenting your app functionality to its future users.
 

@@ -1,10 +1,10 @@
 ---
 title: "Improving filter navigator experience"
 slug: "vtex-io-documentation-improving-filter-navigator-experience"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-08T19:44:50.866Z"
-updatedAt: "2022-08-02T00:03:05.598Z"
+updatedAt: "2022-12-13T20:17:44.152Z"
 ---
 The filter navigator is one of the most important components on the search page. This recipe will show you how to set the filter navigator component in a way that has been proven to improve the conversion of your store.
 

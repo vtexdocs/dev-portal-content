@@ -1,14 +1,14 @@
 ---
 title: "Setting up Google Tag Manager"
 slug: "vtex-io-documentation-setting-up-google-tag-manager"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.272Z"
-updatedAt: "2022-08-02T00:03:06.982Z"
+updatedAt: "2022-12-13T20:17:44.813Z"
 ---
 Once you have installed the [VTEX IO Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/google-tag-manager), set it up in your store by configuring all the necessary variables, triggers, and tags.
 
->⚠️ If you are using the Google Tag Manager 2.x., **we strongly recommend migrating to the major 3.x.** Google Tag Manager 3.x tracks the entire user’s journey through the store, from viewing a product to purchasing it. Refer to [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) and follow the step-by-step.
+> ⚠️ If you are using the Google Tag Manager 2.x., **we strongly recommend migrating to the major 3.x.** Google Tag Manager 3.x tracks the entire user’s journey through the store, from viewing a product to purchasing it. Refer to [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) and follow the step-by-step.
 
 ## Before you start
 
@@ -25,7 +25,7 @@ Once you have installed the [VTEX IO Google Tag Manager app](https://developers.
 
 GTM components trigger these events, allowing you to measure your store's data through. If you are not familiar with the GTM components, **we strongly recommend** checking the [Google Tag Manager documentation](https://support.google.com/tagmanager/answer/6103657?hl=en) before starting the setup.
 
->ℹ To track the events related to the search use on your site in Google Analytics, learn how to [set up Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking) in your VTEX IO store.
+> ℹ To track the events related to the search use on your site in Google Analytics, learn how to [set up Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking) in your VTEX IO store.
 
 Follow the steps below to create all necessary GTM components for your store.
 
@@ -138,7 +138,7 @@ To do this, click on Fields to set and add the `userId` field with its desired v
 9. Select the `{{ecommerceV2}}` option in **Read data from variable**.
 10. Save your changes as **Google Analytics - Checkout and Order Placed**.
 
->⚠️ If you have any Google Analytics tags using the Google Analytics Settings variables you have changed, apply the same changes above directly on the tags that need it.
+> ⚠️ If you have any Google Analytics tags using the Google Analytics Settings variables you have changed, apply the same changes above directly on the tags that need it.
 
 ### Step 2 - Creating triggers
 
@@ -260,10 +260,10 @@ To create a tag, click on Tags in the left menu and then on New:
 - Transaction ID: `{{Data Layer Variable - transactionId}}`
 - Currency Code: `{{Data Layer Variable - currency}}`
 
->⚠️ Remember to replace the values between the curly brackets according to your scenario.
+> ⚠️ Remember to replace the values between the curly brackets according to your scenario.
 
-1. In the **Triggering** box, select the **Custom Event - orderPlaced** trigger.
-2. Save the new tag as **Google Ads Conversion Tracking**.
+5. In the **Triggering** box, select the **Custom Event - orderPlaced** trigger.
+6. Save the new tag as **Google Ads Conversion Tracking**.
 
 ### Step 4 - Publishing your changes
 

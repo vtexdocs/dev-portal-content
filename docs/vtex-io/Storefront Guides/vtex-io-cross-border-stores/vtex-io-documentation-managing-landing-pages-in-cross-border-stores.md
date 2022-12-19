@@ -1,10 +1,10 @@
 ---
 title: "Managing landing pages in cross-border stores"
 slug: "vtex-io-documentation-managing-landing-pages-in-cross-border-stores"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-05T13:01:54.912Z"
-updatedAt: "2022-08-02T00:03:06.024Z"
+updatedAt: "2022-12-13T20:17:44.059Z"
 ---
 To meet your store's specific needs, you may want to [create custom landing pages](https://developers.vtex.com/docs/vtex-io-documentation-creating-a-new-custom-page). In a cross-border context, you may also want them to be distinct depending on the locations in which your shop operates.
 
@@ -15,6 +15,7 @@ Finally, you may want to remove your landing page from the *default binding*. Fo
 ## Before you start
 
 Before proceeding any further with this step-by-step:
+
 - Create your custom landing pages as presented in [this](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-new-custom-page) guide.
 - [Check your account's binding ids](https://developers.vtex.com/docs/checking-your-stores-binding-id) and keep the returned data with you.
 
@@ -35,7 +36,8 @@ After creating a new page, the page's route becomes available only in the store 
 2. Open the Admin and go to the GraphQL IDE section.
 3. From the GraphQL IDE dropdown list, choose the `vtex.rewriter` app.
 4. Run the following query to get the internal data related to your custom page's path.
-  - _Replace the values between the curly brackets according to your scenario._
+
+- *Replace the values between the curly brackets according to your scenario.*
 
   ```graphql
   {
@@ -93,7 +95,7 @@ mutation saveInternal($args: InternalInput!) {
 ```
 
 - Replace the `args` values with the information obtained in Step 4.
-- Update the `binding` value with the binding `id` of the store you want to have your new custom landing page live. 
+- Update the `binding` value with the binding `id` of the store you want to have your new custom landing page live.
 
 Done! Now, your landing page will be accessible in the *default* binding as well as in the desired binding.
 
@@ -106,7 +108,8 @@ If you don't want to have this landing page in the *default* binding, check the 
 1. Open the Admin and go to the GraphQL IDE section.
 2. From the GraphQL IDE dropdown list, choose the `vtex.rewriter` app.
 3. Fill in the main text box with the following mutation.
-  - _Replace the values between the curly brackets according to your scenario._
+
+- *Replace the values between the curly brackets according to your scenario.*
 
   ```graphql
   mutation deleteInternal($args:RouteLocator){
@@ -119,7 +122,8 @@ If you don't want to have this landing page in the *default* binding, check the 
   ```
 
 4. Click on *Query Variables* at the bottom of the page and fill in the *Query Variables* section as in the following.
-  - _Replace the values between the curly brackets according to your scenario._
+
+- *Replace the values between the curly brackets according to your scenario.*
 
   ```json
   {

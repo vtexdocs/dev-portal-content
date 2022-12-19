@@ -1,10 +1,10 @@
 ---
 title: "7. Making your Pixel app publicly available"
 slug: "vtex-io-documentation-8-makingyourpixelapppubliclyavailable"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:23.096Z"
-updatedAt: "2022-08-02T00:03:06.052Z"
+updatedAt: "2022-12-13T20:17:44.384Z"
 ---
 Up until now, your Pixel app is being developed in your local files, meaning it is only connected to the VTEX IO platform through your development workspace.
 
@@ -12,18 +12,18 @@ Once you are happy with the implemented configurations, you are ready to make yo
 
 The first thing to be defined is your app distribution: who will be able to install it? Will you charge your app users? If positive, how much?
 
-The answers for these questions directly depend on the chosen distribution type. In the VTEX IO platform, an app can be: 
+The answers for these questions directly depend on the chosen distribution type. In the VTEX IO platform, an app can be:
 
-- **Private** - It can only be installed by the `vendor` account i.e. the VTEX account responsible for the app development and management. 
-- **Public** - It is available to all account ecosystem using VTEX platform. 
+- **Private** - It can only be installed by the `vendor` account i.e. the VTEX account responsible for the app development and management.
+- **Public** - It is available to all account ecosystem using VTEX platform.
 
 ## Step 1 - Defining your app distribution
 
-The decision between private or public must be made even before the application is released. 
+The decision between private or public must be made even before the application is released.
 
 Depending on what is chosen, some settings must be made in the `manifest.json` file of the app before its distribution takes place in order to define who can use the app, as well as whether its use will be free or not.
 
-Access the documentation on [Billing Options](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options/) and follow the instructions to perform the needed settings according to the desired scenario for your app distribution. 
+Access the documentation on [Billing Options](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options/) and follow the instructions to perform the needed settings according to the desired scenario for your app distribution.
 
 >ℹ️ Remember that [linking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) the app you are working on will not suffice: you will also need to release it, publish it, have it installed in a production workspace for testing and, finally, validate it for *deploy* - as we shall see below.
 
@@ -34,12 +34,12 @@ If you're sure of all the changes performed in your development workspace, it's 
 Using your terminal, access the app directory and run the following command:
 
 ```sh
-$ vtex release major
+vtex release major
 ```
 
 It will be responsible for:
 
-- Updating the new version in the app's `CHANGELOG.md` and` manifest.json` files according to the [proper semantics](https://semver.org/).
+- Updating the new version in the app's `CHANGELOG.md` and`manifest.json` files according to the [proper semantics](https://semver.org/).
 - Creating a launch *commit*.
 - Creating a new repository on GitHub for your application.
 
@@ -47,9 +47,9 @@ If you want to release a **Beta** version of your app, run the command `vtex rel
 
 >⚠️ Don't forget to log in to the desired VTEX account before releasing the new version - the app's `vendor` should be the VTEX account you are working on!
 
-## Step 3 - Publishing the app in the VTEX IO platform 
+## Step 3 - Publishing the app in the VTEX IO platform
 
-Once the application has been released, it must be properly installed in other workspace in order to have your settings tested. 
+Once the application has been released, it must be properly installed in other workspace in order to have your settings tested.
 
 It is not possible, however, to install an app that only exists in your local environment: it will be necessary to *publish* your new Pixel app in the VTEX IO platform!
 
@@ -58,8 +58,8 @@ It is not possible, however, to install an app that only exists in your local en
 Using your terminal, access the app directory and run the following command:
 
 ```sh
-$ vtex publish
-``` 
+vtex publish
+```
 
 The command will make your app a ***release candidate version***, thereby enabling it to be installed via VTEX IO CLI for testing purposes.
 
@@ -74,7 +74,7 @@ Once your app is ready to be installed, you must create a production workspace t
 Using your terminal, run the following command (replacing `workspaceName` with the desired name for your new workspace):
 
 ```sh
-$ vtex use workspaceName --production
+vtex use workspaceName --production
 ```
 
 >⚠️ From this moment on, changes in your app code are no longer recommended, since production workspaces are able to receive traffic from users i.e. it can be accessed by other people other than you. If you want to make any changes in the code, work on the new settings from a development workspace and then follow the steps detailed in this documentation again.
@@ -82,10 +82,10 @@ $ vtex use workspaceName --production
 To install the app in the new workspace, run the command below replacing the default values with real ones from your scenario:
 
 ```sh
-$ vtex install appVendor.appName@appVersion
+vtex install appVendor.appName@appVersion
 ```
 
-## Step 5 - Validating your app deploy 
+## Step 5 - Validating your app deploy
 
 It is finally time to validate your release candidate version!
 
@@ -96,7 +96,7 @@ We strongly recommend you to firstly run a [native A/B test](https://developers.
 If your happy with your results, access the app directory using your terminal and run the following command to deploy your *release candidate* version as a *stable* version:
 
 ```sh
-$ vtex deploy
+vtex deploy
 ```
 
 >ℹ️ Running the command above will automatically install the new *stable* version of your app in all accounts that had previously installed the release candidate version.
@@ -110,7 +110,7 @@ Promoting the production workspace in which the application was installed to Mas
 Using your terminal, log in to your VTEX account and make sure you are using the production workspace used in the previous steps. Then, run the following command:
 
 ```sh
-$ vtex workspace promote
+vtex workspace promote
 ```
 
 >ℹ️ The status of a Master workspace is `production true`. Once you receive this response from your terminal, your new Pixel app is already available in your store website.
@@ -121,7 +121,7 @@ It is also possible to add your brand new Pixel app in the catalog of the **VTEX
 
 The [VTEX App Store](https://extensions.vtex.com/) is a marketplace for plug&play solutions, and it can be used by any VTEX account interested in making its solutions available to other VTEX accounts as well.
 
-To make your new Pixel app part of our App Store, check out the documentation [Submitting an app in the VTEX App Store] (https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store/).
+To make your new Pixel app part of our App Store, check out the documentation [Submitting an app in the VTEX App Store] (<https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store/>).
 
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "Routes"
 slug: "vtex-io-documentation-routes"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-07-16T19:36:59.239Z"
-updatedAt: "2022-08-02T00:03:06.127Z"
+updatedAt: "2022-12-13T20:17:44.554Z"
 ---
 A route maps a URL pattern and an HTTP request method to an action. It's, therefore, a way of setting the application expected behavior for client requests to specific endpoints.
 
@@ -12,7 +12,7 @@ In VTEX IO, however, you don't need to worry about routing and HTTP request meth
 
 Therefore, all you need to know is how to create and manage route paths and page templates.
 
-In this sense, it's important to know that VTEX IO routes can be classified into four different categories: 
+In this sense, it's important to know that VTEX IO routes can be classified into four different categories:
 
 - Product routes - routes related to product pages.
 - Search routes - routes related to search pages.
@@ -29,7 +29,7 @@ Commonly, routes stored in the Rewriter have complex paths since they communicat
 
 Take the product route as an example. Its standard path is `/_v/segment/routing/vtex.store@2.x/product/:id/:slug/p`. Notice that this path is not user-friendly in the client-side context and, consequently, a solution that provides a more personable path is needed.
 
-Hence, in Rewriter, besides the path itself, a route definition must include a canonical path for client-side usage and enhanced SEO rankings. 
+Hence, in Rewriter, besides the path itself, a route definition must include a canonical path for client-side usage and enhanced SEO rankings.
 
 The canonical path is the unique string that contains the route shortest absolute path. For the product route example, its canonical is `/:slug/p`.
 
@@ -41,7 +41,7 @@ Rewriter interprets the *canonical path* received from the client request and tr
 
 In VTEX IO, search, product, and some navigation pages with preset paths are already available, such as [home page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L2), [product page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L11), [login page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L8), etc.
 
-However, it's also possible to create [*custom* landing pages](https://developers.vtex.com/docs/vtex-io-documentation-creating-a-new-custom-page). 
+However, it's also possible to create [*custom* landing pages](https://developers.vtex.com/docs/vtex-io-documentation-creating-a-new-custom-page).
 
 In this case, routing is handled by the Store builder, meaning that custom routes are not stored in the Rewriter app and that their paths are directly forwarded to the render server.
 

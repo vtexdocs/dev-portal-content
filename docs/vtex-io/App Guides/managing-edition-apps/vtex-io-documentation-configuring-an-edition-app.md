@@ -1,10 +1,10 @@
 ---
 title: "Configuring an Edition App"
 slug: "vtex-io-documentation-configuring-an-edition-app"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.714Z"
-updatedAt: "2022-08-02T00:03:05.985Z"
+updatedAt: "2022-12-13T20:17:44.546Z"
 ---
 The hierarchical relationship between a [Sponsor Account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-sponsor-account/) and its children, established by an [Edition app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-edition-app/), creates uniformity throughout an account family.
 
@@ -64,6 +64,7 @@ After setting up the initial configurations needed to develop your own Edition A
 
 1. Open the `edition/apps.json` file.
 2. In the `apps` section, add all the apps and settings you want to impose to the child accounts. For example:
+
 ```diff
 {
     "apps": {
@@ -76,11 +77,13 @@ After setting up the initial configurations needed to develop your own Edition A
     }
 }
 ```
+
 Only the `defaultMajor` (or previously `major`) is obligatory, and all the others can be omited if they don't need to be configured.
-   * `defaultMajor` or `major` fields determines the major of the app that will be installed by default, when the edition is set in some account.
-   * `allowedMajors` allows specifying alternative majors that can be used by any account using the edition. Those majors can be used by manually installing the alternate version of the app using VTEX IO CLI (`vtex install`). If this field is omited or empty, it means that only the default major is allowed and it cannot be changed.
-   * `allowsUninstall` serves to allow users to uninstall the app from the edition as well, to be done manually using VTEX IO CLI (`vtex uninstall`). If omited will default to `false`, i.e. that the app cannot be uninstalled by the account.
-   * `settings` specifies the initial app settings to be set when the app is installed in the account via the edition. If omited, which is the recommended for most of the cases, no setting changes are made when installing the app.
+
+- `defaultMajor` or `major` fields determines the major of the app that will be installed by default, when the edition is set in some account.
+- `allowedMajors` allows specifying alternative majors that can be used by any account using the edition. Those majors can be used by manually installing the alternate version of the app using VTEX IO CLI (`vtex install`). If this field is omited or empty, it means that only the default major is allowed and it cannot be changed.
+- `allowsUninstall` serves to allow users to uninstall the app from the edition as well, to be done manually using VTEX IO CLI (`vtex uninstall`). If omited will default to `false`, i.e. that the app cannot be uninstalled by the account.
+- `settings` specifies the initial app settings to be set when the app is installed in the account via the edition. If omited, which is the recommended for most of the cases, no setting changes are made when installing the app.
 
 >⚠️ Be aware that an Edition App can only contain apps exclusively developed by the same `vendor` responsible for its release.
 

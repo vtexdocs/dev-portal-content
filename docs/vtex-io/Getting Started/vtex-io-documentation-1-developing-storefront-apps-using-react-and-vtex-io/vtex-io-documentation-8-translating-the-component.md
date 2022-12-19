@@ -1,10 +1,10 @@
 ---
 title: "7. Translating the component"
 slug: "vtex-io-documentation-8-translating-the-component"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.694Z"
-updatedAt: "2022-08-02T00:03:05.984Z"
+updatedAt: "2022-12-13T20:17:44.662Z"
 ---
 Before thinking about brand globalization, it is very important to first look into **content internationalization on your website**.
 
@@ -24,15 +24,15 @@ For Messages to work as expected, we will use the [`react-intl`](https://formatj
 {
   ...
   "builders": {
-    "react": "3.x",
-    "docs": "0.x",
-   + "messages": "1.x"
+  "react": "3.x",
+  "docs": "0.x",
++ "messages": "1.x"
   },
   ...
 }
 ```
 
-1. Save your code changes.
+4. Save your code changes.
 
 All set! Having all the `react-intl` dependencies installed and the Messages [builder](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders/) configured, we can proceed to the next steps.
 
@@ -73,11 +73,11 @@ export default HelloWorld
 
 >⚠️ Note that in the example above we use the `FormattedMessage` component by associating it to the `"store/my-app.hello"` ID, which we created for our example. Since each ID has to be linked to a single string only, it is necessary to define the `FormattedMessage` component in this folder as many times as necessary in accordance with the translatable strings.
 
->ℹ️ When creating an `id`, consider using the `store/` or `admin/` prefixes (depending on your app's functionality) followed by the app name (`my-app`) and, finally, a short word that can identify this string. For example, `store/my-app.hello`.
+>ℹ️ When creating an `id`, consider using the `store/` or `admin/` prefixes (depending on your app's functionality) followed by the app name (< code>my-app`) and, finally, a short word that can identify this string. For example,`store/my-app.hello`.
 
-1. In your app's root directory, create a `messages` folder.
-2. In the newly created folder, create a new `.json` file named using the ISO code for the desired language. For example: `pt`, `en`, `fr`.
-3. In the desired language file, such as `messages/en.json`, associate the `id` used in the `FormattedMessage` component with the desired string:
+2. In your app's root directory, create a `messages` folder.
+3. In the newly created folder, create a new `.json` file named using the ISO code for the desired language. For example: `pt`, `en`, `fr`.
+4. In the desired language file, such as `messages/en.json`, associate the `id` used in the `FormattedMessage` component with the desired string:
 
 ```json
 {

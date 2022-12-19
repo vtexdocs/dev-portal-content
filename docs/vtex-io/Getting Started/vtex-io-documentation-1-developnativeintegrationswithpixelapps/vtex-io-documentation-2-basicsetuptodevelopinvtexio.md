@@ -1,10 +1,10 @@
 ---
 title: "1. Setting up your development environment"
 slug: "vtex-io-documentation-2-basicsetuptodevelopinvtexio"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:50.522Z"
-updatedAt: "2022-08-02T00:03:05.543Z"
+updatedAt: "2022-12-13T20:17:44.579Z"
 ---
 In this part of the tutorial, you will:
 
@@ -61,7 +61,7 @@ After running this command, you'll be taken to the `exampleworkspace` workspace,
 
 After creating a new development workspace, you can access this version of your store by going to: `https://exampleworkspace--accountName.myvtex.com`, where:
 
-- `exampleworkspace` - Name of the workspace that you've just created. 
+- `exampleworkspace` - Name of the workspace that you've just created.
 - `accountName` - Name of the VTEX account in which you are working.
 
 Done! You're now ready to start developing your Pixel app!

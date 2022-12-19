@@ -1,27 +1,26 @@
 ---
 title: "Customizing the Header and Footer blocks by page"
 slug: "vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.275Z"
-updatedAt: "2022-08-02T00:03:06.087Z"
+updatedAt: "2022-12-13T20:17:44.048Z"
 ---
 The Header and Footer are the two blocks that come up the most during a user's store navigation. From the homepage to the product page, from checkout to the Order Placed page: whatever a template's content may be, these two blocks will probably be present.
 
-With that constancy in mind, you just need to declare these blocks **once** in the `blocks.jsonc` file, in a template of your choosing (usually it's `store.home`). 
+With that constancy in mind, you just need to declare these blocks **once** in the `blocks.jsonc` file, in a template of your choosing (usually it's `store.home`).
 
 This is only possible because both Header and Footer have been previously defined behind the scenes as **default store interface elements**, allowing the Framework to identify the Header and Footer block as default for any other templates as well.
 
 You may, however, want to apply a Header configured differently onto your Homepage and keep the default Framework Header for the Order Placed page or you may even not want any Footer on your product pages.
 
-All of the above and more may be easily customized in the Header and Footer blocks, by simply **overwriting the specific automatic duplication** and **declaring the desired new configurations** thereafter. 
+All of the above and more may be easily customized in the Header and Footer blocks, by simply **overwriting the specific automatic duplication** and **declaring the desired new configurations** thereafter.
 
 ## Step 1 - Overwriting automatic duplication
 
 In the desired template, declare the code given as example below to overwrite the Header and Footer automatic duplication.  
 
 > ℹ *Remember to replace the `{headerBlock}` and `{footerBlock}` values with real block names. Also, replace the `{templateName}` value with a valid theme template, such as `product`, `search#category` and `custom`.*
-
 
 ```json
 {

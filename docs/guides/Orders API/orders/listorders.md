@@ -20,7 +20,7 @@ updatedAt: "2022-08-31T20:24:40.224Z"
 }
 [/block]
 
-<div class="alert alert-info">Throttling: Each account can make up to 5000 requests per minute.</div>
+> ℹ️ Throttling: Each account can make up to 5000 requests per minute.
 
 [block:api-header]
 {
@@ -71,7 +71,7 @@ Quantity per Page Examples:
 
  /api/oms/pvt/orders?per_page=15
 
-<div class="alert alert-info">Pagination Limit: The limit of pages that can be requested is 30.</div>
+> ℹ️ Pagination Limit: The limit of pages that can be requested is 30.</div>
 
 ### Time zone query
 

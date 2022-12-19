@@ -1,14 +1,14 @@
 ---
 title: "4. Defining styles"
 slug: "vtex-io-documentation-5-defining-styles"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:44.003Z"
-updatedAt: "2022-08-02T00:03:06.299Z"
+updatedAt: "2022-12-13T20:17:44.865Z"
 ---
-After defining your theme's block, it is time to think about the style you want for it, defining colors, typography, among other elements that establish the visual identity of the app when it is rendered. 
+After defining your theme's block, it is time to think about the style you want for it, defining colors, typography, among other elements that establish the visual identity of the app when it is rendered.
 
-To define the style of your component(s), we will use *Cascading Style Sheets* - **CSS**. 
+To define the style of your component(s), we will use *Cascading Style Sheets* - **CSS**.
 
 In VTEX IO, there are three different tools for using CSS in a store:
 
@@ -16,7 +16,7 @@ In VTEX IO, there are three different tools for using CSS in a store:
 - **CSS Modules** - Secondary option for styling components from CSS classes. It should only be used when the desired style cannot be configured using Tachyons.
 - **CSS Handles** - Exports generic CSS classes to allow users that work with your component to customize it according to their respective scenarios.
 
-Now that you know the difference between the tools that are available on the platform, you are ready to learn more about them. 
+Now that you know the difference between the tools that are available on the platform, you are ready to learn more about them.
 
 Below, you can find the instructions for each of these tools and their purpose.
 
@@ -26,7 +26,7 @@ Below, you can find the instructions for each of these tools and their purpose.
 
 VTEX Tachyons is a functional CSS structure built on a [Tachyons](https://tachyons.io/) base.
 
-The framework has single-purpose CSS classes that can be structured to build anything from complex layouts to responsive components. 
+The framework has single-purpose CSS classes that can be structured to build anything from complex layouts to responsive components.
 
 In practice, VTEX Tachyons helps you use CSS classes in your store-front app with little effort.
 
@@ -45,7 +45,7 @@ const Example = () => (
 )
 ```
 
-5. Save your changes. 
+5. Save your changes.
 
 ## Using CSS Modules
 
@@ -89,9 +89,9 @@ export default function MyButton() {
 }
 ```
 
->ℹ️ Remember that the name of the created classes will depend on the *import* model you made (step 3 or step 4 in this section). 
+>ℹ️ Remember that the name of the created classes will depend on the *import* model you made (step 3 or step 4 in this section).
 
-6. Save the changes you made and [link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) your app. 
+6. Save the changes you made and [link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) your app.
 
 When rendered and inspected, the component will now have the following HTML structure if you chose to follow the *import* model shown in step 3:
 
@@ -99,7 +99,7 @@ When rendered and inspected, the component will now have the following HTML stru
 <button class="vtex-my-app-name-0-x-myButton">My button</button>
 ```
 
-## Using CSS Handles 
+## Using CSS Handles
 
 A CSS Handle is an **HTML element identifier**. That is why Handles are very handy when creating store themes, allowing your app users to apply CSS classes according to the visual identity they want.
 
@@ -113,7 +113,7 @@ To make Handles available for future app users, add `vtex.css-handles` to the `d
 
 Once `vtex.css-handles` is added as a dependency, your app is ready to generate CSS Handles.
 
-However, when generating them, you will need to pay attention to how your app's React component(s) are imported and defined. 
+However, when generating them, you will need to pay attention to how your app's React component(s) are imported and defined.
 
 There are two possible scenarios:
 
@@ -183,7 +183,7 @@ class ExampleComponent extends Component {
   render() {
     const { cssHandles } = this.props
  ```
- 
+
 >ℹ️ Since components defined as classes cannot use *hooks*, we will use an *HOC* called `withCssHandles`.
 
 3. In the `CSS_HANDLES` *array*, replace the example strings with new ones (according to the names of the *CSS Handles* you want). You can choose any name for the *CSS Handle*, but remember, it will be used with CSS classes by your app users to personalize HTML elements. We recommend using intuitive names.

@@ -1,10 +1,10 @@
 ---
 title: "Making your new app version publicly available"
 slug: "vtex-io-documentation-making-your-new-app-version-publicly-available"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.750Z"
-updatedAt: "2022-08-02T00:03:06.029Z"
+updatedAt: "2022-12-13T20:17:44.423Z"
 ---
 To make your new app version available to end-users, you'll need to take the following steps:
 

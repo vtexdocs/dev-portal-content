@@ -1,10 +1,10 @@
 ---
 title: "Optimizing performance"
 slug: "vtex-io-documentation-best-practices-for-optimizing-performance"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-11T12:55:53.602Z"
-updatedAt: "2022-08-02T00:03:06.008Z"
+updatedAt: "2022-12-13T20:17:44.632Z"
 ---
 For the e-commerce business, appealing offers, high-quality products, or brand recognition might not be enough for *converting leads* if *user-experience* is left behind.
 
@@ -54,9 +54,9 @@ The content which a user first sees when opening a web page is known as *above-t
 
 ![critical](https://user-images.githubusercontent.com/60782333/93504484-ed47cf80-f8ef-11ea-8af9-4d640f9cfe6b.png)
 
-In other words, before anything else, the critical part of the page must be correctly and promptly rendered. 
+In other words, before anything else, the critical part of the page must be correctly and promptly rendered.
 
-However, by default, the browser starts rendering a web page only after it has finished loading, parsing, and executing all related CSS files. As a result, given large CSS codes, the time taken by a browser to render the critical part of the page can significantly increase. 
+However, by default, the browser starts rendering a web page only after it has finished loading, parsing, and executing all related CSS files. As a result, given large CSS codes, the time taken by a browser to render the critical part of the page can significantly increase.
 
 Fortunately, VTEX IO offers the possibility of enabling critical CSS optimization in home pages. This feature provides the browser a way to find the *minimum blocks of CSS code* needed to first display the critical content of the page. Meanwhile, the remainder CSS code is loaded asynchronously.
 
@@ -64,15 +64,15 @@ Fortunately, VTEX IO offers the possibility of enabling critical CSS optimizatio
 
 ### Improving download speed with CSS concatenation
 
-To properly display a web page layout, the browser needs to make multiple HTTP requests to download each CSS file. However, numerous requests might increase the time taken to render a single web page. 
+To properly display a web page layout, the browser needs to make multiple HTTP requests to download each CSS file. However, numerous requests might increase the time taken to render a single web page.
 
-In this sense, VTEX IO offers the possibility of avoiding various download requests by concatenating multiple CSS files into one. 
+In this sense, VTEX IO offers the possibility of avoiding various download requests by concatenating multiple CSS files into one.
 
 ![concatenation](https://user-images.githubusercontent.com/60782333/93513175-dd35ed00-f8fb-11ea-8da4-95acd6b56d3f.png)
 
 Notice that, by combining CSS in a single file, the browser makes fewer requests and loads web pages faster, improving your store website's performance.
 
-### Lazy loading page metadata 
+### Lazy loading page metadata
 
 Before displaying a web page, the VTEX IO service app responsible for server-side rendering, or simply, the Render Runtime, interprets the page's metadata script. An example of the before-mentioned script is presented below.
 
@@ -81,7 +81,7 @@ Before displaying a web page, the VTEX IO service app responsible for server-sid
         __RUNTIME__ = {"account":"vtexstore","amp":false,"bindingChanged":false,"binding":{"id":"aacb04t3-a8fa-4bab-b5bd-2d654d20dcd8","canonicalBaseAddress":"vtexstore.vtex.com"},"culture":{"availableLocales":[],"country":"USA","currency":"USD","language":"en","locale":"en-US","customCurrencyDecimalDigits":null,"customCurrencySymbol":"$"},"production":true,"query":{},"settings":{....
 ```
 
-Notice that this script holds many important data about a web page and it can be long, characterizing a long task to be performed by the browser. 
+Notice that this script holds many important data about a web page and it can be long, characterizing a long task to be performed by the browser.
 
 Therefore, to avoid your store website's total blocking time to be compromised, by enabling the lazy runtime, such script will be broken into smaller ones.
 
@@ -91,7 +91,7 @@ This way, long tasks will be prevented and you'll advantage of a faster store.
 
 ### Lazy rendering submenu items
 
-By enabling this option, menus containing submenus will take advantage of automatically having the `experimentalOptimizeRendering` prop enabled. Such configuration prevents a whole chain of `submenu`s to be loaded unnecessarily. 
+By enabling this option, menus containing submenus will take advantage of automatically having the `experimentalOptimizeRendering` prop enabled. Such configuration prevents a whole chain of `submenu`s to be loaded unnecessarily.
 
 Therefore, `submenu`s will be loaded only in case the user interacts with its parent menu (in which the prop was configured).
 
@@ -101,15 +101,15 @@ Therefore, `submenu`s will be loaded only in case the user interacts with its pa
 
 By enabling this option, scrollable facets box and search result pages will be lazy rendered.
 
-This way, content contained inside the user's viewport will be initially loaded for rendering. On the other hand, content outside the user viewport will be loaded only during scrolling. 
+This way, content contained inside the user's viewport will be initially loaded for rendering. On the other hand, content outside the user viewport will be loaded only during scrolling.
 
 >⚠️ Keep in mind that, by enabling this option, you might notice unexpected behaviors, such as gaps while scrolling. Hence, if you experience any kind of side-effect in your website pages, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) and let us know!
 
-### Partially fetching facets 
+### Partially fetching facets
 
 This option improves search pages' performance by partially fetching the total number of facets available to be displayed.
 
-Once this option is enabled, users on the search results page will see a maximum of 10 facets per filter - the remaining facets, if any, will not be automatically fetched by the search query, nor displayed to the end-user. 
+Once this option is enabled, users on the search results page will see a maximum of 10 facets per filter - the remaining facets, if any, will not be automatically fetched by the search query, nor displayed to the end-user.
 
 Instead, a `Show more` button will be displayed below the rendered facets, allowing users to fetch the remaining ones.
 
@@ -119,9 +119,9 @@ Instead, a `Show more` button will be displayed below the rendered facets, allow
 
 ### Improving scrolling performance
 
-We recommend the use of the `__fold__` block in scrollable pages. 
+We recommend the use of the `__fold__` block in scrollable pages.
 
-With this block, it's possible to define which interface components will be initially loaded for rendering and which will be loaded during user scrolling. 
+With this block, it's possible to define which interface components will be initially loaded for rendering and which will be loaded during user scrolling.
 
 This way, only the first visible blocks will be loaded, and the ones "below the fold" will be lazy-loaded during scrolling.
 
@@ -139,11 +139,11 @@ For instance, in the example below, the main `menu-items` (Apparel & Accessories
 
 ![menu](https://user-images.githubusercontent.com/60782333/93248000-9a421100-f765-11ea-90b1-144f7622138d.png)
 
-The internal `menu-items` (Clothing, Accessories and, Eyeglasses), however, can have their implementation changed from children to props. 
+The internal `menu-items` (Clothing, Accessories and, Eyeglasses), however, can have their implementation changed from children to props.
 
-Notice that, previously, every `menu-item` was configured as a children/block. With the change, the `menu-items` group, declared as props, is interpreted as a single block (blue square). 
+Notice that, previously, every `menu-item` was configured as a children/block. With the change, the `menu-items` group, declared as props, is interpreted as a single block (blue square).
 
-This way, the number of blocks is reduced from 3 to 1. 
+This way, the number of blocks is reduced from 3 to 1.
 
 >ℹ️ Check out how to apply both configurations in the [Menu's documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-menu).
 

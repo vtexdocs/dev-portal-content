@@ -1,12 +1,12 @@
 ---
 title: "Roles"
 slug: "vtex-io-documentation-roles"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-07-16T20:35:02.045Z"
-updatedAt: "2022-08-02T00:03:05.782Z"
+updatedAt: "2022-12-13T20:17:44.060Z"
 ---
-Roles are uniquely identifiable names given to request sources. 
+Roles are uniquely identifiable names given to request sources.
 
 Whenever a request is performed in the VTEX IO platform, the source of this action, which can be the user or app responsible for performing that request, automatically receives a unique role.
 

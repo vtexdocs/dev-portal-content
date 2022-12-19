@@ -1,24 +1,22 @@
 ---
 title: "Building a Shelf"
 slug: "vtex-io-documentation-building-a-shelf"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-28T00:08:33.278Z"
-updatedAt: "2022-08-02T00:03:06.377Z"
+updatedAt: "2022-12-13T20:17:44.565Z"
 ---
 The Shelf component is a product list that helps you to build your own shop window and work on your store's visual merchandising.
 
 ![shelf](https://user-images.githubusercontent.com/52087100/70079904-60dc5280-15e4-11ea-8ef6-0aa69cadd61d.png)
 
-Using VTEX Store Framework, you can build two different shelves in your store: one to be rendered in the store home page, displaying any products you desire, and another one to be rendered in the product details page, displaying related products that may be interesting for users. 
+Using VTEX Store Framework, you can build two different shelves in your store: one to be rendered in the store home page, displaying any products you desire, and another one to be rendered in the product details page, displaying related products that may be interesting for users.
 
-By installing the [Shelf app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf), you can use the `shelf.RelatedProducts` block to build the Shelf in your store. However, when building the traditional Shelf to be displayed on your store home page, the Shelf app will not suffice since the `shelf` block was deprecated. 
+By installing the [Shelf app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf), you can use the `shelf.RelatedProducts` block to build the Shelf in your store. However, when building the traditional Shelf to be displayed on your store home page, the Shelf app will not suffice since the `shelf` block was deprecated.
 
 Aiming to display a flexible product list in your home page, the traditional shelf component as we know is now configured using the [Product Summary List](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummarylist), the [Product Summary Shelf](https://vtex.io/docs/components/all/vtex.product-summary/) and the [Slider Layout](https://vtex.io/docs/components/all/vtex.slider-layout/) blocks.
 
->ℹ️ Info
-> 
-> Since these three blocks come from the [**Product Summary**](https://github.com/vtex-apps/product-summary) and the [**Slider-Layout**](https://github.com/vtex-apps/slider-layout) app, it is strongly recommended to check out each documentation in order to understand how the blocks work as well as the props available to set their behavior and consequently the Shelf behavior. 
+> ℹ️ Since these three blocks come from the [**Product Summary**](https://github.com/vtex-apps/product-summary) and the [**Slider-Layout**](https://github.com/vtex-apps/slider-layout) app, it is strongly recommended to check out each documentation in order to understand how the blocks work as well as the props available to set their behavior and consequently the Shelf behavior.
 
 Check out the instructions below for how it can be done.
 

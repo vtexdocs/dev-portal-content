@@ -1,14 +1,14 @@
 ---
 title: "Composition"
 slug: "vtex-io-documentation-composition"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-23T13:33:26.394Z"
-updatedAt: "2022-08-02T00:03:05.644Z"
+updatedAt: "2022-12-13T20:17:44.627Z"
 ---
 Composition is one of the main properties for the theme's `interfaces.json` file, being used to **define the expected behavior from a React component in your Store Theme app once it is declared as a block**.
 
-According to the framework logic, a component can be a crossroad for several different blocks: it is possible and desirable to render it using a family tree, leveraging from the parent/child relationship between blocks to achieve the proper results on the UI. 
+According to the framework logic, a component can be a crossroad for several different blocks: it is possible and desirable to render it using a family tree, leveraging from the parent/child relationship between blocks to achieve the proper results on the UI.
 
 What defines how a parent block should declare its children in your Store Theme app is the `composition` property: whenever a new block is about to be developed for the framework, it gets a composition definition in the `interfaces.json` file that can either be `blocks`, `children`, or `slots`.
 
@@ -16,7 +16,7 @@ What defines how a parent block should declare its children in your Store Theme 
 
 ## Blocks
 
-The `blocks` composition is the default value for a React component definition in your theme. 
+The `blocks` composition is the default value for a React component definition in your theme.
 
 Once you define that a block composition is `blocks`, you are also defining in practice that all of its child blocks must be declared through an `blocks` list, as shown in the example below:
 
@@ -25,6 +25,7 @@ Once you define that a block composition is `blocks`, you are also defining in p
   "blocks": ["product-summary.shelf"]
 },
 ```
+
 *The `product-summary.shelf` has `blocks` composition. Thereby, it is declared in the shelf's `blocks` list.*
 
 In addition to that, the children will have an specific, fixed and preordained (according to the React component nature) position on the UI, regardless of its code positioning in the theme.
@@ -51,9 +52,10 @@ For example:
   ]
 },
 ```
+
 *The `product-summary-name` has `children` composition, thereby it is declared in the `product-summary.shelf`'s children list.*
 
-Notice that in the example above, `product-summary.shelf` requires other blocks as children, such as `product-summary-name`, to properly render the component. 
+Notice that in the example above, `product-summary.shelf` requires other blocks as children, such as `product-summary-name`, to properly render the component.
 
 In this scenario, keep in mind that the blocks ordering matters. The `product-summary-name` will be rendered first, followed by the `product-summary-description` and so on.
 
@@ -61,7 +63,7 @@ In this scenario, keep in mind that the blocks ordering matters. The `product-su
 
 ## Slots
 
-The `slots` composition, in turn, allows you to declare child blocks using regular React props instead of declaring an array for it. 
+The `slots` composition, in turn, allows you to declare child blocks using regular React props instead of declaring an array for it.
 
 ```json
 {
@@ -77,6 +79,7 @@ The `slots` composition, in turn, allows you to declare child blocks using regul
   }
 }
 ```
+
 *The `icon-caret#point-up` has `slots` composition, thereby it is declared as a prop in the `hello-world` block. Notice that the prop name can be any of your choosing and is usually defined by the block in which it is declared.*
 
 Check out the complete documentation for slots [here](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-slots/)!

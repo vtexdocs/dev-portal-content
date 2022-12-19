@@ -1,10 +1,10 @@
 ---
 title: "5. Listening to store events"
 slug: "vtex-io-documentation-6-listeningtostoreevents"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:23.235Z"
-updatedAt: "2022-08-02T00:03:06.275Z"
+updatedAt: "2022-12-13T20:17:44.943Z"
 ---
 Some services provided by third-party solutions may rely on store events. Events are notifications that a web application automatically broadcasts whenever a user performs an important action in a store, such as adding items to the shopping cart or accessing a product page.
 
@@ -23,7 +23,6 @@ For these scenarios, your Pixel app must be able to listen to the desired events
 >ℹ️ All the available event properties are written in **TypeScript**. Check them out [here](https://github.com/vtex-apps/pixel-app-template/blob/master/react/typings/events.d.ts).
 
 Take the following example of an event implementation in the [Google Tag Manager Pixel app](https://github.com/vtex-apps/google-tag-manager/blob/master/react/index.tsx):
-
 
 ```ts
 import { canUseDOM } from 'vtex.render-runtime'

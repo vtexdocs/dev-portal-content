@@ -1,10 +1,10 @@
 ---
 title: "Updating VTEX IO's CLI"
 slug: "vtex-io-documentation-vtex-io-cli-update"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-20T14:59:19.840Z"
-updatedAt: "2022-08-02T00:03:05.899Z"
+updatedAt: "2022-12-13T20:17:44.315Z"
 ---
 If the VTEX IO’s CLI version installed on your machine is outdated or deprecated, run the command relative to your operating system to update it.
 
@@ -17,6 +17,7 @@ If the VTEX IO’s CLI version installed on your machine is outdated or deprecat
 ```sh Update
 brew upgrade vtex
 ```
+
 ```sh Reinstall
 brew unlink vtex
 brew install vtex/vtex
@@ -31,7 +32,7 @@ brew install vtex/vtex
 
 - Standalone
   
-```sh 
+```sh
 vtex autoupdate
 ```  
 
@@ -54,9 +55,9 @@ vtex autoupdate
 </details>
 
 ## Updating VTEX IO's CLI via NPM
- 
+
 If you have [installed VTEX IO's CLI via NPM](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install), run the following command to update or handle a deprecated version:
- 
+
 ```sh
 yarn global add vtex
 ```

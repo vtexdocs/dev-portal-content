@@ -1,10 +1,10 @@
 ---
 title: "Contributing with new CSS Handles"
 slug: "vtex-io-documentation-contributing-with-new-css-handles"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.292Z"
-updatedAt: "2022-08-02T00:03:05.962Z"
+updatedAt: "2022-12-13T20:17:44.236Z"
 ---
 A CSS Handle is a **CSS class that maps out an HTML element**. Therefore, it can be used to [customize any of the store blocks](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) by simply using CSS classes in the store theme's code.
 
@@ -108,7 +108,7 @@ Following our example, we would have something like:
 ```
 
 #### Using the `import styles from './styles.css'` function
- 
+
 1. Open the CSS file referenced in the `import styles from './styles.css'` function;
 
 ```jsx
@@ -144,7 +144,7 @@ Following our example, we would have something like:
 
 It's also possible to apply modifiers to a specific CSS Handle.
 
-Handle modifiers work as identifiers. They are responsible for overriding the HTML element style according to the behavior assumed by them on the interface, according to user interaction. 
+Handle modifiers work as identifiers. They are responsible for overriding the HTML element style according to the behavior assumed by them on the interface, according to user interaction.
 
 Let's suppose you have a handle called `handles.slide` for each slide of a slider and you want to customize the current visible slide via CSS. For this purpose, you should add a modifier to `handles.slide`, allowing the customization according to the user navigation.
 

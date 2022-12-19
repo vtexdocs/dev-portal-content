@@ -1,21 +1,21 @@
 ---
 title: "2. Creating the new app"
 slug: "vtex-io-documentation-3-creating-the-new-app"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.434Z"
-updatedAt: "2022-08-02T00:03:05.858Z"
+updatedAt: "2022-12-13T20:17:44.062Z"
 ---
 To start developing your app optimally, you need to:
 
 - Copy our [React app boilerplate](https://github.com/vtex-apps/react-app-template) to your local files.
-- Make the first and main changes to the `manifest.json` file in the React example app. 
+- Make the first and main changes to the `manifest.json` file in the React example app.
 
 This step is important to eliminate the concerns about the default settings in the VTEX IO platform. Once copied, the repository will automatically import the basic settings that you will need to start developing your app.  
 
 ## Cloning the boilerplate repository to your local files
 
-Clone the boilerplate repository to your local files by running the following command: 
+Clone the boilerplate repository to your local files by running the following command:
 
 ```sh
 git clone https://github.com/vtex-apps/react-app-template
@@ -27,13 +27,13 @@ Then, open the imported React app's repository using the code editor of your cho
 
 Having the app's code open in your code editor, let us analyze the `manifest.json` file, which saves **basic and essential information** about the app, such as:
 
-- `vendor` - Name of the VTEX account that develops, maintains, and distributes the app. 
-- `name` - App name. You choose the name, but be careful to avoid special characters (with the exception `-` hyphens). 
-- `version` - App's current version. For versioning, VTEX IO uses [Semantic Versioning 2.0.0](https://semver.org/). 
+- `vendor` - Name of the VTEX account that develops, maintains, and distributes the app.
+- `name` - App name. You choose the name, but be careful to avoid special characters (with the exception `-` hyphens).
+- `version` - App's current version. For versioning, VTEX IO uses [Semantic Versioning 2.0.0](https://semver.org/).
 - `title` - App's distribution name. This name will be displayed on the `Apps` section in the admin and, also, on the VTEX App Store.
-- `description` - Brief description of the app's functionality. 
-- `builders` - List of [Builders](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders/) that facilitate the app's development, abstracting service configurations. 
-- `dependencies` - List of apps that the app you are developing depends on for proper functioning. 
+- `description` - Brief description of the app's functionality.
+- `builders` - List of [Builders](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders/) that facilitate the app's development, abstracting service configurations.
+- `dependencies` - List of apps that the app you are developing depends on for proper functioning.
 
 At the beginning of the process, it is very important to incorporate the new app's basic information in the `manifest.json` file in order to make it your own instead of it staying another example version provided by VTEX. To do that:
 

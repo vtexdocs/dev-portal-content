@@ -1,10 +1,10 @@
 ---
 title: "Tracking changes in Lighthouse performance score"
 slug: "vtex-io-documentation-tracking-changes-in-lighthouse-performance-score"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-07T18:18:24.559Z"
-updatedAt: "2022-08-02T00:03:05.553Z"
+updatedAt: "2022-12-13T20:17:44.828Z"
 ---
 >ℹ️ In this tutorial, we'll use [Lighthouse Scoring Calculator](https://googlechrome.github.io/lighthouse/scorecalc/#version=6), a tool created by Google that allows you to play with Lighthouse performance metrics and define which thresholds you should aim for to achieve the desired Performance Score.
 

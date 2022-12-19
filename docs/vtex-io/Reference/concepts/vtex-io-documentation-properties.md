@@ -1,12 +1,12 @@
 ---
 title: "Properties"
 slug: "vtex-io-documentation-properties"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-23T13:33:26.418Z"
-updatedAt: "2022-08-02T00:03:05.579Z"
+updatedAt: "2022-12-13T20:17:44.194Z"
 ---
-Every JSON is defined between `{ }` by keys and values that together define its properties i.e. its **inherent characteristics**. 
+Every JSON is defined between `{ }` by keys and values that together define its properties i.e. its **inherent characteristics**.
 
 ```json
 {
@@ -15,7 +15,7 @@ Every JSON is defined between `{ }` by keys and values that together define its 
 }
 ```
 
-In the example above, `name` and `height` are the object's keys whose values are, respectively, `Pedro` and `1.90`. 
+In the example above, `name` and `height` are the object's keys whose values are, respectively, `Pedro` and `1.90`.
 
 The `key + value` set constitutes what we call the property (or *prop*) of the JSON, being responsible for qualifying it by setting its essential characteristics.
 
@@ -28,7 +28,7 @@ The list of properties a JSON accepts are separated by comma (`,`), and the valu
 - `string` - A prop of the `string` type has its value in quotation marks, being a text composed by alphabetic characters.
 - `number` - A prop of the type `number` has its value without quotation marks, being it an integral or real number. When it is the real type, the `.` (dot) character should be used to separate the integral part from the decimal places. E.g.: `1` (integer) or `23.454` (real).
 - `boolean` - A prop of the `boolean` type has its value without quotes, being necessarily `true` or `false`.
-- `object` - A prop of the 'object' type has its value between curly brackets `{}` being a list with various data types, that is, a new object. 
+- `object` - A prop of the 'object' type has its value between curly brackets `{}` being a list with various data types, that is, a new object.
 - `array` - A prop of the `array` type has its value between brackets `[]`, being a list with only one data type.
 
 There are two other types also used by the Store Framework blocks properties:

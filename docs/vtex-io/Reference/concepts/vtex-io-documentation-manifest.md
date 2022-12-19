@@ -1,10 +1,10 @@
 ---
 title: "Manifest"
 slug: "vtex-io-documentation-manifest"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-22T21:29:09.380Z"
-updatedAt: "2022-08-02T00:03:05.652Z"
+updatedAt: "2022-12-13T20:17:44.879Z"
 ---
 The `manifest.json` file is the first communication point with VTEX IO, holding important metadata about an app, such as its **name**, **version**, **vendor**, **description**, **dependencies**, etc.
 
@@ -12,7 +12,7 @@ Hence, keep in mind that every IO app must have a `manifest.json` file on its ro
 
 # Manifest fields summary
 
-Check the following snippet, which shows a manifest example and its supported fields. 
+Check the following snippet, which shows a manifest example and its supported fields.
 
 Click on each field to learn more about it.
 
@@ -45,7 +45,7 @@ For a real example of a `manifest.json` file, check [this file](https://github.c
 
 ## name
 
-The app name. It should concisely express the app's purpose. 
+The app name. It should concisely express the app's purpose.
 
 On the VTEX IO platform, apps' names are [kebab case](https://en.wiktionary.org/wiki/kebab_case). Basically, they must be comprised of lowercase letters separated by hyphens. Special characters, such as `*` and `@`, and numbers at the beginning of the name are not recommended.
 
@@ -55,7 +55,7 @@ On the VTEX IO platform, apps' names are [kebab case](https://en.wiktionary.org/
 
 The app owner. That is, the VTEX account responsible for the app development, maintenance, and distribution.
 
-If the app is to-be sold on VTEX App Store, the vendor is the one to profit from its installations. Therefore, remember the following: an app must have only one vendor. Even is the app is installed on multiple accounts, you shouldn't change the app's `vendor` value for each one of them. 
+If the app is to-be sold on VTEX App Store, the vendor is the one to profit from its installations. Therefore, remember the following: an app must have only one vendor. Even is the app is installed on multiple accounts, you shouldn't change the app's `vendor` value for each one of them.
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
@@ -135,7 +135,7 @@ The list of policies, responsible for granting permissions to the app in case it
 
 ## settingsSchema
 
-The layout settings of the app, displayed in the VTEX Admin. 
+The layout settings of the app, displayed in the VTEX Admin.
 
 Using [JSON Schema](https://json-schema.org/), it’s possible to accept multiple fields with multiple data types. The persistence of the information is taken care by the VTEX Platform, and you may fetch the current configuration on your app code.
 

@@ -1,10 +1,10 @@
 ---
 title: "Command reference"
 slug: "vtex-io-documentation-vtex-io-cli-command-reference"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-04T22:02:14.325Z"
-updatedAt: "2022-08-02T00:03:06.167Z"
+updatedAt: "2022-12-13T20:17:44.857Z"
 ---
 This documentation is a reference for:
 
@@ -17,10 +17,9 @@ This documentation is a reference for:
 
 Check in the following a brief description of the default commands of VTEX IO's CLI. For a detailed description of each command, click on its respective name. You can also access this information in your terminal by adding `--help` or `-h` after the command name.
 
-
 |Command Name|Functionality|
 |------------|-------------|
-| [`autoupdate`](#autoupdate) |	Automatically updates VTEX IO's CLI.|
+| [`autoupdate`](#autoupdate) | Automatically updates VTEX IO's CLI.|
 | [`browse`](#browse) |Opens the URL relative to your current workspace and account in a new browser window.|
 | [`deploy`](#deploy) | Publishes an app as a stable version. Only works for apps previously published as a release candidate version.|
 | [`deprecate`](#deprecate) |Deprecates the specified app, uninstalling and downgrading it to the latest stable version in every VTEX account.|
@@ -31,7 +30,7 @@ Check in the following a brief description of the default commands of VTEX IO's 
 | [`edition set`](#edition-set) |Sets the Edition App version for the current account.|
 | [`help`](#help) |Displays help for VTEX CLI commands.|
 | [`init`](#init) |Copies starting files and folders from VTEX boilerplates into your local directories.|
-| [`install`](#install) | Installs an app on the current workspace. If not specified which one, it defaults to the app in the current directory.| 
+| [`install`](#install) | Installs an app on the current workspace. If not specified which one, it defaults to the app in the current directory.|
 | [`link`](#link) |Syncs the app in the current directory with the development workspace in use.|
 | [`list`](#list)| Lists the apps installed on the current workspace and account.|
 | [`local token`](#local-token) |Prints the user's auth token and copies it to the clipboard. |
@@ -67,7 +66,7 @@ Automatically updates VTEX IO's CLI.
 #### Usage
 
 ```shell
-  $ vtex autoupdate [CHANNEL]
+  vtex autoupdate [CHANNEL]
 ```
 
 #### Arguments
@@ -85,7 +84,7 @@ Opens the URL relative to your current workspace and account in a new browser wi
 #### Usage
 
 ```shell
-  $ vtex browse [PATH]
+  vtex browse [PATH]
 ```
 
 #### Arguments
@@ -109,7 +108,6 @@ Opens the URL relative to your current workspace and account in a new browser wi
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
-
 ### deploy
 
 >ℹ️ This command refers to the plugin `@vtex/cli-plugin-deploy`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
@@ -119,7 +117,7 @@ Publishes an app as a stable version. Only works for apps previously published a
 #### Usage
 
 ```shell
-  $ vtex deploy [APPID]
+  vtex deploy [APPID]
 ```
 
 #### Arguments
@@ -151,7 +149,7 @@ Deprecates the specified app, uninstalling and downgrading it to the latest stab
 #### Usage
 
 ```shell
-  $ vtex deprecate [APPID] [ITHAPPID]
+  vtex deprecate [APPID] [ITHAPPID]
 ```
 
 #### Arguments
@@ -185,7 +183,7 @@ Displays the differences between the dependencies of two distinct workspaces. If
 #### Usage
 
 ```shell
-  $ vtex deps diff [WORKSPACE1] [WORKSPACE2]
+  vtex deps diff [WORKSPACE1] [WORKSPACE2]
 ```
 
 #### Arguments
@@ -212,7 +210,7 @@ Displays the complete dependency tree of the current workspace.
 #### Usage
 
 ```shell
-  $ vtex deps list
+  vtex deps list
 ```
 
 #### Options
@@ -222,11 +220,10 @@ Displays the complete dependency tree of the current workspace.
 |**--keys**|-k|Shows only key dependencies.|
 |**--npm** |-n|Includes dependencies from the npm registry.|
   
-
 #### Alias
 
 ```shell
-  $ vtex deps ls
+  vtex deps ls
 ```
 
 #### Examples
@@ -247,7 +244,7 @@ Updates a dependency of the current workspace. If not specified which dependency
 #### Usage
 
 ```shell
-  $ vtex deps update [APPID] [ITHAPPID]
+  vtex deps update [APPID] [ITHAPPID]
 ```
 
 #### Arguments
@@ -275,7 +272,7 @@ Displays the Edition App version installed on the current account.
 #### Usage
 
 ```shell
-  $ vtex edition get
+  vtex edition get
 ```
 
 #### Example
@@ -295,7 +292,7 @@ Sets the Edition App version for the current account.
 #### Usage
 
 ```shell
-  $ vtex edition set EDITION
+  vtex edition set EDITION
 ```
 
 #### Arguments
@@ -319,7 +316,7 @@ Displays help for VTEX CLI commands.
 #### Usage
 
 ```shell
-  $ vtex help [COMMAND]
+  vtex help [COMMAND]
 ```
 
 #### Arguments
@@ -343,7 +340,7 @@ Copies starting files and folders from VTEX boilerplates into your local directo
 #### Usage
 
 ```shell
-  $ vtex init
+  vtex init
 ```
 
 #### Example
@@ -361,7 +358,7 @@ Installs an app on the current workspace. If not specified which one, it default
 #### Usage
 
 ```shell
-  $ vtex install [APPID] [ITHAPPID]
+  vtex install [APPID] [ITHAPPID]
 ```
 
 #### Arguments
@@ -394,7 +391,7 @@ Syncs the app in the current directory with the development workspace in use.
 #### Usage
 
 ```shell
-  $ vtex link
+  vtex link
 ```
 
 #### Options
@@ -423,13 +420,13 @@ Lists the apps installed on the current workspace and account.
 #### Usage
 
 ```shell
-  $ vtex list
+  vtex list
 ```
 
 #### Aliases
 
 ```shell
-  $ vtex ls
+  vtex ls
 
 ```
 
@@ -449,7 +446,7 @@ Prints the user's auth token and copies it to the clipboard.
 #### Usage
 
 ```shell
-  $ vtex local token
+  vtex local token
 ```
 
 #### Example
@@ -467,7 +464,7 @@ Logs in to a VTEX account.
 #### Usage
 
 ```shell
-  $ vtex login [ACCOUNT]
+  vtex login [ACCOUNT]
 ```
 
 #### Arguments
@@ -498,7 +495,7 @@ Logs out of the current VTEX account.
 #### Usage
 
 ```shell
-  $ vtex logout
+  vtex logout
 ```
 
 #### Example
@@ -516,7 +513,7 @@ Publishes the app in the current directory as a release candidate version.
 #### Usage
 
 ```shell
-  $ vtex publish
+  vtex publish
 ```
 
 #### Options
@@ -528,7 +525,6 @@ Publishes the app in the current directory as a release candidate version.
 |**--workspace=workspace**|-w|Uses the specified workspace in the app registry.|
 |**--yes**|-y|Answers yes to all prompts.|
   
-
 #### Example
 
 ```shell
@@ -537,14 +533,14 @@ Publishes the app in the current directory as a release candidate version.
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
-### release 
+### release
 
 (Only for git users.) Bumps the app version, commits, and pushes to remote the app in the current directory.
 
 #### Usage
 
 ```shell
-  $ vtex release [RELEASETYPE] [TAGNAME]
+  vtex release [RELEASETYPE] [TAGNAME]
 ```
 
 #### Arguments
@@ -573,7 +569,7 @@ Sets up typings and tools for the current development environment.
 #### Usage
 
 ```shell
-  $ vtex setup
+  vtex setup
 ```
 
 #### Options
@@ -595,7 +591,7 @@ Switches to another VTEX account.
 #### Usage
 
 ```shell
-  $ vtex switch ACCOUNT
+  vtex switch ACCOUNT
 ```
 
 #### Arguments
@@ -625,7 +621,7 @@ Reestablishes a deprecated version of an app as a stable version.
 #### Usage
 
 ```shell
-  $ vtex undeprecate [APPID] [ITHAPPID]
+  vtex undeprecate [APPID] [ITHAPPID]
 ```
 
 #### Arguments
@@ -656,7 +652,7 @@ Uninstalls an app from the current workspace. If not specified which app to unin
 #### Usage
 
 ```shell
-  $ vtex uninstall [APPNAME] [ITHAPPNAME]
+  vtex uninstall [APPNAME] [ITHAPPNAME]
 ```
 
 #### Arguments
@@ -689,7 +685,7 @@ Unlinks an app from the current workspace. If not specified which app to unlink,
 #### Usage
 
 ```shell
-  $ vtex unlink [APPID] [ITHAPPID]
+  vtex unlink [APPID] [ITHAPPID]
 ```
 
 appname Name of the app to unlink.
@@ -723,7 +719,7 @@ Updates all installed apps to the latest (minor or patch) version. Does not upgr
 #### Usage
 
 ```shell
-  $ vtex update
+  vtex update
 ```
 
 #### Example
@@ -743,7 +739,7 @@ Prints the current account, workspace, environment, and login details.
 #### Usage
 
 ```shell
-  $ vtex whoami
+  vtex whoami
 ```
 
 #### Example
@@ -763,7 +759,7 @@ Stops all A/B tests from running on the current account.
 #### Usage
 
 ```shell
-  $ vtex workspace abtest finish
+  vtex workspace abtest finish
 ```
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
@@ -777,7 +773,7 @@ Starts a new A/B test on the current workspace.
 #### Usage
 
 ```shell
-  $ vtex workspace abtest start
+  vtex workspace abtest start
 ```
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
@@ -791,7 +787,7 @@ Displays the results of the active A/B tests.
 #### Usage
 
 ```shell
-  $ vtex workspace abtest status
+  vtex workspace abtest status
 ```
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
@@ -803,7 +799,7 @@ Deletes one or many workspaces from the current account.
 #### Usage
 
 ```shell
-  $ vtex workspace delete WORKSPACE1 [ITHWORKSPACE]
+  vtex workspace delete WORKSPACE1 [ITHWORKSPACE]
 ```
 
 #### Arguments
@@ -836,13 +832,13 @@ Lists all workspaces of the current account.
 #### Usage
 
 ```shell
-  $ vtex workspace list
+  vtex workspace list
 ```
 
 #### Aliases
   
 ```shell
-  $ vtex workspace ls
+  vtex workspace ls
 
 ```
 
@@ -862,13 +858,13 @@ Promotes the current workspace to master. Only works for production workspaces.
 #### Usage
 
 ```shell
-  $ vtex workspace promote
+  vtex workspace promote
 ```
 
 #### Aliases
   
 ```shell
-  $ vtex promote
+  vtex promote
 
 ```
 
@@ -888,7 +884,7 @@ Cleans all configurations of the specified workspace and recreates it with the c
 #### Usage
 
 ```shell
-  $ vtex workspace reset [WORKSPACENAME]
+  vtex workspace reset [WORKSPACENAME]
 ```
 
 #### Arguments
@@ -920,7 +916,7 @@ Displays information about the specified workspace.
 #### Usage
 
 ```shell
-  $ vtex workspace status [WORKSPACENAME]
+  vtex workspace status [WORKSPACENAME]
 
 ```
 
@@ -945,7 +941,7 @@ Creates and switches to a new workspace or simply switches to an existing one.
 #### Usage
 
 ```shell
-  $ vtex workspace use WORKSPACE
+  vtex workspace use WORKSPACE
 ```
 
 #### Arguments
@@ -964,7 +960,7 @@ Creates and switches to a new workspace or simply switches to an existing one.
 #### Aliases
 
 ```shell
-  $ vtex use
+  vtex use
 ```
 
 #### Examples
@@ -976,11 +972,9 @@ Creates and switches to a new workspace or simply switches to an existing one.
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
-
- ## Plugins
+## Plugins
 
 Check in the following a brief description of the commands available by VTEX plugins. For a detailed description of each command, click on its respective name. After installing the corresponding plugin, you can also access this information in your terminal by adding `--help` or `-h` after the command name.
-
 
 >ℹ️ Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
@@ -990,7 +984,7 @@ Check in the following a brief description of the commands available by VTEX plu
 |[`config get`](#-config-get)|Prints the value of the requested configuration key.|
 |[`config reset`](#-config-reset)|Resets the specified configuration to its default value.|
 |[`config set`](#-config-set)|Sets the value of a configuration key.|
-| [`debug dotnet`](#debug-donet) | Debugs .NET applications (IDEs only).| 
+| [`debug dotnet`](#debug-donet) | Debugs .NET applications (IDEs only).|
 | [`infra install`](#infra-install) |Installs an infra service.|
 | [`infra list`](#infra-list) |Lists installed infra services.|
 | [`infra update`](#infra-update) |Updates all installed infra services.|
@@ -1017,7 +1011,6 @@ Check in the following a brief description of the commands available by VTEX plu
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
-
 ### add
 
 Adds the specified app(s) to the manifest's dependencies.
@@ -1025,7 +1018,7 @@ Adds the specified app(s) to the manifest's dependencies.
 #### Usage
   
 ```shell
-$ vtex add APPID [ITHAPPID]
+vtex add APPID [ITHAPPID]
 ```
 
 #### Arguments
@@ -1050,7 +1043,7 @@ Automatically updates VTEX IO's CLI.
 #### Usage
 
 ```shell
-  $ vtex autoupdate [CHANNEL]
+  vtex autoupdate [CHANNEL]
 ```
 
 #### Arguments
@@ -1061,7 +1054,6 @@ Automatically updates VTEX IO's CLI.
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
-
 ### config get
 
 Prints the value of the requested configuration key.
@@ -1069,7 +1061,7 @@ Prints the value of the requested configuration key.
 #### Usage
   
 ```shell
-$ vtex config get CONFIGNAME
+vtex config get CONFIGNAME
 ```
 
 #### Arguments
@@ -1077,7 +1069,6 @@ $ vtex config get CONFIGNAME
 |Argument|Description|
 |--------|-----------|
 |**CONFIGNAME**|Configuration to retrieve the value from.|
-
 
 #### Example
 
@@ -1095,7 +1086,7 @@ Resets the specified configuration to its default value.
 #### Usage
   
 ```shell
-$ vtex config reset CONFIGNAME
+vtex config reset CONFIGNAME
 ```
 
 #### Arguments
@@ -1103,7 +1094,6 @@ $ vtex config reset CONFIGNAME
 |Argument|Description|
 |--------|-----------|
 |**CONFIGNAME**|Name of the configuration to reset.|
-
 
 #### Example
 
@@ -1121,7 +1111,7 @@ Sets the value of a configuration key.
 #### Usage
   
 ```shell
-$ vtex config set CONFIGNAME VALUE
+vtex config set CONFIGNAME VALUE
 ```
 
 #### Arguments
@@ -1130,7 +1120,6 @@ $ vtex config set CONFIGNAME VALUE
 |--------|-----------|
 |**CONFIGNAME**|Name of the configuration.|
 |**VALUE**|New value of the specified configuration.|
-
 
 #### Example
 
@@ -1148,7 +1137,7 @@ Debugs .NET applications (IDEs only).
 #### Usage
 
 ```shell
-  $ vtex debug dotnet DEBUGINST
+  vtex debug dotnet DEBUGINST
 ```
 
 #### Arguments
@@ -1166,7 +1155,7 @@ Installs an infra service.
 #### Usage
 
 ```shell
-  $ vtex infra install SERVICEID
+  vtex infra install SERVICEID
 ```
 
 #### Arguments
@@ -1191,7 +1180,7 @@ Lists installed infra services.
 #### Usage
 
 ```shell
-  $ vtex infra list [NAME]
+  vtex infra list [NAME]
 ```
 
 #### Arguments
@@ -1210,7 +1199,7 @@ Lists installed infra services.
 #### Aliases
 
 ```shell
-  $ vtex infra ls
+  vtex infra ls
 ```
 
 #### Examples
@@ -1229,7 +1218,7 @@ Updates all installed infra services.
 #### Usage
 
 ```shell
-  $ vtex infra update
+  vtex infra update
 ```
 
 #### Example
@@ -1247,7 +1236,7 @@ Runs a Lighthouse audit over the specified URL.
 #### Usage
 
 ```shell
-  $ vtex lighthouse audit URL
+  vtex lighthouse audit URL
 ```
 
 #### Arguments
@@ -1265,7 +1254,7 @@ Runs a Lighthouse audit over the specified URL.
 #### Aliases
 
 ```shell
-  $ vtex lh audit
+  vtex lh audit
 ```
 
 #### Examples
@@ -1284,7 +1273,7 @@ Shows a previous audit report, filtering by app and/or URL.
 #### Usage
 
 ```shell
-  $ vtex lighthouse show
+  vtex lighthouse show
 ```
 
 #### Options
@@ -1297,7 +1286,7 @@ Shows a previous audit report, filtering by app and/or URL.
 #### Aliases
 
 ```shell
-  $ vtex lh show
+  vtex lh show
 ```
 
 #### Examples
@@ -1320,8 +1309,9 @@ Shows logs of an app. (Only apps in production.)
 #### Usage
 
 ```shell
-  $ vtex logs [APP]
+  vtex logs [APP]
 ```
+
 #### Arguments
 
 |Argument|Description|
@@ -1347,13 +1337,15 @@ Shows logs of an app. (Only apps in production.)
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
 ### plugins install
+
 Installs a plugin into the CLI.
 
 #### Usage
 
 ```shell
-  $ vtex plugins install PLUGIN
+  vtex plugins install PLUGIN
 ```
+
 #### Arguments
 
 |Argument|Description|
@@ -1369,7 +1361,7 @@ Installs a plugin into the CLI.
 #### Aliases
 
 ```shell
-  $ vtex plugins:add
+  vtex plugins:add
 ```
 
 #### Examples
@@ -1389,7 +1381,7 @@ Links a plugin into the CLI for development.
 #### Usage
 
 ```shell
-  $ vtex plugins link PLUGIN
+  vtex plugins link PLUGIN
 ```
 
 #### Arguments
@@ -1413,7 +1405,7 @@ Lists all plugins installed on your machine.
 #### Usage
 
 ```shell
-  $ vtex plugins:list
+  vtex plugins:list
 ```
 
 #### Options
@@ -1437,7 +1429,7 @@ Lists all plugins supported by VTEX.
 #### Usage
 
 ```shell
-  $ vtex plugins source PLUGIN
+  vtex plugins source PLUGIN
 ```
 
 #### Arguments
@@ -1456,12 +1448,13 @@ Lists all plugins supported by VTEX.
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
 ### plugins uninstall
+
 Removes a plugin from the CLI.
 
 #### Usage
 
 ```shell
-  $ vtex plugins uninstall PLUGIN
+  vtex plugins uninstall PLUGIN
 ```
 
 #### Arguments
@@ -1473,12 +1466,11 @@ Removes a plugin from the CLI.
 #### Aliases
 
 ```shell
-  $ vtex plugins unlink
-  $ vtex plugins remove
+  vtex plugins unlink
+  vtex plugins remove
 ```
 
 #### Examples
-
 
 ```shell
 vtex plugins uninstall lighthouse
@@ -1495,7 +1487,7 @@ Updates all plugins installed on your machine.
 #### Usage
 
 ```shell
-  $ vtex plugins update
+  vtex plugins update
 ```
 
 ### redirects delete
@@ -1505,8 +1497,9 @@ Deletes redirects from the current account and workspace.
 #### Usage
 
 ```shell
-  $ vtex redirects delete CSVPATH
+  vtex redirects delete CSVPATH
 ```
+
 #### Arguments
 
 |Argument|Description|
@@ -1528,7 +1521,7 @@ Exports all redirects defined in the current account and workspace to a CSV file
 #### Usage
 
 ```shell
-  $ vtex redirects export CSVPATH
+  vtex redirects export CSVPATH
 ```
 
 #### Arguments
@@ -1552,7 +1545,7 @@ Imports redirects from a CSV file to the current account and workspace.
 #### Usage
 
 ```shell
-  $ vtex redirects import CSVPATH
+  vtex redirects import CSVPATH
 ```
 
 #### Options
@@ -1576,7 +1569,7 @@ Prints the settings of the specified app.
 #### Usage
 
 ```shell
-  $ vtex settings get APPNAME [FIELD]
+  vtex settings get APPNAME [FIELD]
 ```
 
 #### Arguments
@@ -1589,7 +1582,7 @@ Prints the settings of the specified app.
 #### Aliases
 
 ```shell
-  $ vtex settings
+  vtex settings
 ```
 
 #### Example
@@ -1607,7 +1600,7 @@ Sets value to the specified setting of an app.
 #### Usage
 
 ```shell
-  $ vtex settings set APPNAME FIELD VALUE 
+  vtex settings set APPNAME FIELD VALUE 
 ```
 
 #### Arguments
@@ -1626,7 +1619,6 @@ Sets value to the specified setting of an app.
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
-
 ### settings unset
 
 Disables the specified setting of an app.
@@ -1634,7 +1626,7 @@ Disables the specified setting of an app.
 #### Usage
 
 ```shell
-  $ vtex settings unset APPNAME FIELD
+  vtex settings unset APPNAME FIELD
 ```
 
 #### Arguments
@@ -1653,12 +1645,13 @@ Disables the specified setting of an app.
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
 ### submit
+
 Submits the current app, or an specified one, to validation from VTEX App Store team.
 
 #### Usage
 
 ```shell
-  $ vtex submit [APPID]
+  vtex submit [APPID]
 ```
 
 #### Arguments
@@ -1683,7 +1676,7 @@ Logs in as support to another VTEX account.
 #### Usage
 
 ```shell
-  $ vtex support ACCOUNT
+  vtex support ACCOUNT
 ```
 
 #### Arguments
@@ -1702,20 +1695,15 @@ Logs in as support to another VTEX account.
 
 ### test e2e
 
-
 Runs E2E integration tests for the app in the current directory.
-
 
 #### Usage
 
-
 ```shell
-  $ vtex test e2e
+  vtex test e2e
 ```
 
-
 #### Options
-
 
 |Option|Alias|Description|
 |-------|-----|-----------|
@@ -1732,7 +1720,7 @@ Runs unit tests for the app in the current directory.
 #### Usage
 
 ```shell
-  $ vtex test unit
+  vtex test unit
 ```
 
 #### Options
@@ -1744,12 +1732,13 @@ Runs unit tests for the app in the current directory.
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
 ### url
+
 Prints base URL for current account, workspace and environment.
 
 #### Usage
 
 ```shell
-  $ vtex url
+  vtex url
 ```
 
 #### Example

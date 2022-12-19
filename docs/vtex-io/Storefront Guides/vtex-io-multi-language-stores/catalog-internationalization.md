@@ -130,7 +130,7 @@ According to the following example and the following explanations, fill in the *
 
 Fill in the main text box with the following mutation command:
 
-```
+```gql
 mutation translate($args:ProductInputTranslation, $locale:Locale){
   translateProduct(product:$args,locale:$locale)
 }
@@ -206,7 +206,7 @@ According to the following example and the following explanations, fill in the *
 
 Fill in the main text box with the following mutation command:
 
-```graphql
+```gql
 mutation translate($args:FieldInputTranslation, $locale:Locale){
   translateField(field:$args,locale:$locale)
 }
@@ -290,7 +290,7 @@ query{
 
 Fill in the main text box with the following mutation command:
 
-```graphql
+```gql
 mutation translate($args: GroupInputTranslation, $locale:Locale) {
   translateGroup(group: $args, locale:$locale)
 }

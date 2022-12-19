@@ -1,19 +1,16 @@
 ---
 title: "Cleaning cart data on log out"
 slug: "vtex-io-documentation-cleaning-cart-data-on-log-out"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-04-27T13:50:39.980Z"
-updatedAt: "2022-08-02T00:03:06.020Z"
+updatedAt: "2022-12-13T20:17:44.280Z"
 ---
 The VTEX shopping cart default behavior is to keep the cart alive until an order is placed. When this happens, a new cart is created. If a business rule requires a new cart every time a user logs out, we can use the [Session Watcher](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-collecting-user-session-data) to clear cart information.
 
-> ℹ️
->
-> It is not possible to get a brand new cart, but we can repurpose the current cart by removing any existing information on it. 
+> ℹ️ It is not possible to get a brand new cart, but we can repurpose the current cart by removing any existing information on it.
 
 This document will guide you on how to use the [Session Watcher app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-collecting-user-session-data) to clean up an existing cart during logout.
-
 
 ## Clients
 
@@ -44,9 +41,11 @@ VTEX IO Service Context gives you access to external clients. Clients are additi
 You can always extend your App Clients if you need to give it access to external or internal providers.
 
 ## Checkout Client
+
 The VTEX IO Service Context does not have an out-of-the-box checkout client. The following steps will guide you on this setup of a client from our internal APIs.
 
 1. Create a new `./node/clients/checkout.ts` file where you can keep all the methods for the `Checkout` class. This class will extend **JanusClient** (VTEX’s internal router), you can import it from `@vtex/api`. It should look like the example below. Types are also imported from `@vtex/api`.
+
 ```javascript
 import type { InstanceOptions, IOContext } from ‘@’vtex/api’
 import { JanusClient } from ‘@vtex/api’
@@ -58,9 +57,7 @@ export class Checkout extends JanusClient {
 }
 ```
 
-
 2. These internal APIs are going through `portal.vtexcommercestable.com.br/api/*`, which means we need to declare it as an `outbound-access` in our `manifest.json` file under "policies".
-
 
 ```json
 "policies": [
@@ -73,15 +70,11 @@ export class Checkout extends JanusClient {
 },
 ```
 
-
 The same thing is required if you're accessing an external endpoint. Always add the `host` and `path` as an `outbound-access`.
 
-> ⚠️
->
-> Do not use protocol in the `host` (http, https). The `host` does not support wildcard within the address. It can be either fixed `host` or only ` *` , never both. The `path` supports wildcard.
+>⚠️ Do not use protocol in the `host` (http, https). The `host` does not support wildcard within the address. It can be either fixed `host` or only `*` , never both. The `path` supports wildcard.
 
 3. Now that you have an initial class setup, you can let your application know that it exists. Do this by importing it to the `Clients` constructor under `./node/clients/index.ts`
-
 
 ```javascript
 import { IOClients } from ‘@vtex/api’
@@ -96,8 +89,8 @@ export class Clients extends IOClients {
 }
 ```
 
-
 The checkout client will now be available to our handler, just like the others.
+
 ```json
 {
     "name": "outbound-access",
@@ -111,6 +104,7 @@ The checkout client will now be available to our handler, just like the others.
 
 This method uses a path starting with `/checkout`, which means we need to include it to our policy by creating a new `outbound-access` entry.
 Back to`checkout.ts`, add a new public method inside the `Checkout` class.
+
 ```javascript
 public changeToAnonymous = (orderFormId: string) => {
     return this.http.getRaw(`/checkout/changeToAnonymousUser/${orderFormId}`, {
@@ -119,10 +113,7 @@ public changeToAnonymous = (orderFormId: string) => {
 }
 ```
 
-
-> ℹ️
->
-> `JanusClient` gives you access to `http` and its methods. This example uses `getRaw`, which will return the entire response, including `httpCode`, headers, etc. If you do not need it, you can use only `get` instead. This `metric` property is used for logging, it is not not strictly necessary.
+> ℹ️ `JanusClient` gives you access to `http` and its methods. This example uses `getRaw`, which will return the entire response, including `httpCode`, headers, etc. If you do not need it, you can use only `get` instead. This `metric` property is used for logging, it is not not strictly necessary.
 
 5. Create the other methods, `orderForm`, and `updateItems`, as shown below.
 
@@ -148,8 +139,8 @@ public updateItems = (orderFormId: string, orderItems: any) => {
 }
 ```
 
-
 ### Clear Cart handler
+
 Back to `./resolvers/index.ts` load the checkout client from the context of our method `clearCart` and expose both `orderFormId` and `email` from the request body.
 
 The logical flow is:
@@ -231,12 +222,11 @@ export const resolvers = {
 }
 ```
 
-> ⚠️
->
-> Don't forget to change the vendor in your `./manifest.json` file.
+>⚠️ Don't forget to change the vendor in your `./manifest.json` file.
 
 To link the app, run this command:
-```
+
+```sh
 vtex link
 ```
 

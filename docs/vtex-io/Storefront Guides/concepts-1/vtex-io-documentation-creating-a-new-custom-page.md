@@ -1,10 +1,10 @@
 ---
 title: "Creating a new custom page"
 slug: "vtex-io-documentation-creating-a-new-custom-page"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.295Z"
-updatedAt: "2022-08-02T00:03:05.678Z"
+updatedAt: "2022-12-13T20:17:44.080Z"
 ---
 Stores are made up of several different pages, each one having a different layout and content. When creating a store from scratch in VTEX IO, some default pages with predefined URLs are already available to you, such as:
 
@@ -145,8 +145,6 @@ Your new page now has a custom layout, thanks to the newly created template, and
 You can define your page content performing changes directly to your Store Theme app or using the admin's Site Editor. When using this last one, you can browse to your custom page or simply write its URL in the `Page URL` field. For example:
 
 ![custom-pages-siteeditor](https://user-images.githubusercontent.com/52087100/64428904-36cdcf80-d08b-11e9-8de4-06bf0a89b14f.png)
-
-Once there, feel free to change its content by customizing the page's component. For more on possible customization, access our [Template recipes](https://developers.vtex.com/vtex-developer-docs/docs/concepts-1).
 
 ### Making your theme content publicly available
 

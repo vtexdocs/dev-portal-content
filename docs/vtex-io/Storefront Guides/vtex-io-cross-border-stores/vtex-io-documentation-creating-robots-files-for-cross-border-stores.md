@@ -1,10 +1,10 @@
 ---
 title: "Creating robots files for cross-border stores"
 slug: "vtex-io-documentation-creating-robots-files-for-cross-border-stores"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-15T12:24:38.963Z"
-updatedAt: "2022-08-02T00:03:06.089Z"
+updatedAt: "2022-12-13T20:17:44.124Z"
 ---
 A `robots.txt` file defines which folders or files a search engine may or may not ignore when crawling a website. Considering the effects of this file for a store's SEO, the following step by step explains how to create `robots` files for cross-border stores.
 

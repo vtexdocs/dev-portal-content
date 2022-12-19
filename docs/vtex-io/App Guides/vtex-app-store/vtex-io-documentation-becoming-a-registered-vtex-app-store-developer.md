@@ -1,13 +1,14 @@
 ---
 title: "Becoming a registered VTEX App Store developer"
 slug: "vtex-io-documentation-becoming-a-registered-vtex-app-store-developer"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-11-12T20:06:26.255Z"
-updatedAt: "2022-08-02T00:03:06.243Z"
+updatedAt: "2022-12-13T20:17:44.104Z"
 ---
-The [**VTEX App Store**](https://apps.vtex.com/) is a marketplace for VTEX IO plug-and-play solutions. 
-As a developer, you can **share your own solutions** with other VTEX users in the [**VTEX App Store**](https://apps.vtex.com/) so they can also **leverage their business**. 
+The [**VTEX App Store**](https://apps.vtex.com/) is a marketplace for VTEX IO plug-and-play solutions.
+
+As a developer, you can **share your own solutions** with other VTEX users in the [**VTEX App Store**](https://apps.vtex.com/) so they can also **leverage their business**.
 
 For that, you must register as a VTEX App Store seller by taking the following steps:
 
@@ -15,15 +16,15 @@ For that, you must register as a VTEX App Store seller by taking the following s
 2. Sign our commercial agreement.
 3. Register as a VTEX App Store seller.
 
-##  Step by step
+## Step by step
 
-###  Step 1 - Expressing your interest
+### Step 1 - Expressing your interest
 
 Fill out the [Application form](https://forms.gle/wpkXMxgSfCXwMPbs8) to **share your interest** in publishing your application or integration on the VTEX App Store.
 
 The form will help our team to understand the best approach and prioritize the publication demands.
 
-###  Step 2 - Signing our commercial agreement
+### Step 2 - Signing our commercial agreement
 
 If the form was correctly filled out and the team agrees that the application is suitable for the VTEX App Store, the next step is to sign a commercial agreement with VTEX.
 
@@ -33,14 +34,14 @@ This contract, provided by the VTEX team to you, will grant VTEX distribution ri
 
 ### Step 3 - Registering as a VTEX App Store seller
 
-The App Store is a **Marketplace**. Therefore, partners looking to distribute their apps should register as a  **seller** there. 
+The App Store is a **Marketplace**. Therefore, partners looking to distribute their apps should register as a  **seller** there.
 
 This [structure](https://help.vtex.com/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520) (seller - marketplace) configuration is done through the `vtex.app-store-seller` app.
 
 Follow the steps below to register as a new seller on VTEX App Store:
 
 1. Logged into the VTEX account in which you are working, run `vtex install vtex.app-store-seller@0.x` in your terminal.
-2. Access the admin of the VTEX account in which you're working. 
+2. Access the admin of the VTEX account in which you're working.
 3. In `Other`, access `Seller setup` and fill out the required fields.
 4. Select the sales channel you intend to use to connect to the App Store.
 5. Choose an affiliate ID, made up of 3 consonants:

@@ -1,10 +1,10 @@
 ---
 title: "VTEX IO CLI"
 slug: "vtex-io-documentation-toolbelt"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.236Z"
-updatedAt: "2022-08-02T00:03:06.043Z"
+updatedAt: "2022-12-13T20:17:44.400Z"
 ---
 VTEX IO CLI is a **command-line interface** that gives you access to every feature of the VTEX platform.
 

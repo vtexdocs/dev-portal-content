@@ -1,12 +1,12 @@
 ---
 title: "Site Editor"
 slug: "vtex-io-documentation-site-editor"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-06-17T21:47:35.963Z"
-updatedAt: "2022-08-02T00:03:06.405Z"
+updatedAt: "2022-12-13T20:17:44.208Z"
 ---
-Site Editor works as a [CMS](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-cms) specially designed for [Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-store-framework) users. 
+Site Editor works as a [CMS](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-cms) specially designed for [Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-store-framework) users.
 
 ![site-editor](https://user-images.githubusercontent.com/52087100/119380417-11398d00-bc97-11eb-9ebd-2be23aad6856.png)
 

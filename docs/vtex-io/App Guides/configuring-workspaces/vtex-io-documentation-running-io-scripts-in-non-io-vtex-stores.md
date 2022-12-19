@@ -1,10 +1,10 @@
 ---
 title: "Running IO scripts in non-IO VTEX stores"
 slug: "vtex-io-documentation-running-io-scripts-in-non-io-vtex-stores"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-26T21:04:47.465Z"
-updatedAt: "2022-08-02T00:03:05.976Z"
+updatedAt: "2022-12-13T20:17:44.117Z"
 ---
 To make it possible to run VTEX IO scripts in non-IO VTEX stores, you must develop and release your own *Scripts app*.
 
@@ -19,16 +19,16 @@ In the following sections, we'll teach you how to develop and implement your own
 ## Step 1 - Developing your app
 
 1. Using your terminal, clone the *Scripts app* boilerplate repository to your local files by running:
-    
-```
+
+```sh
 git clone https://github.com/vtex-apps/app-scripts-example
 ```
-    
+
 2. Then, using any code editor of your choice, open the boilerplate repository's directory.
 3. Open the `manifest.json` file and update its metadata, according to your scenario. It's essential that you update the following fields:
 
- - `vendor` - The app owner. That is, the VTEX account responsible for the app development, maintenance, and distribution.
- - `name` - The app name. It should concisely express the app's purpose. They must be comprised of lowercase letters separated by hyphens. Special characters, such as `*` and `@`, and numbers at the beginning of the name are not recommended.
+- `vendor` - The app owner. That is, the VTEX account responsible for the app development, maintenance, and distribution.
+- `name` - The app name. It should concisely express the app's purpose. They must be comprised of lowercase letters separated by hyphens. Special characters, such as `*` and `@`, and numbers at the beginning of the name are not recommended.
 - `title` - The app distribution name. This name is the one used in the Apps section from the Administrative Panel and in the VTEX App Store.
 - `description` - A brief description explaining the app's purpose. This description will be publicly available in the App Store, providing context for whoever wants to install your app.
 
@@ -37,13 +37,13 @@ git clone https://github.com/vtex-apps/app-scripts-example
 6. Open the admin of the account you're using to develop your app, and follow the instructions provided in the [Importing scripts](#importing-scripts) section, considering a development workspace.
 7. Once everything is set up, use the terminal and the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/) to log in to the VTEX Account that you are using to develop your VTEX IO *Scripts App*.
 8. Run `vtex use {workspace}` to use a developer environment.
-    
+
 >⚠️ Remember to replace the values between the curly brackets according to your scenario.
-    
+
 9. Run `cd app-scripts-example` to go to the local app directory.
 10. Run `vtex link` to [link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) your new app to your development workspace.
-11. Check the pages for which you implemented your scripts. 
-12. Once you're happy with the changes, update your *Scripts app* `docs/README.md` file as instructed in [Documenting your app](#documenting-your-app). Therefore, follow our documentation on [making your new app version publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available/) to run your app on master. 
+11. Check the pages for which you implemented your scripts.
+12. Once you're happy with the changes, update your *Scripts app* `docs/README.md` file as instructed in [Documenting your app](#documenting-your-app). Therefore, follow our documentation on [making your new app version publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available/) to run your app on master.
 
 ## Step 2 - Implementing your scripts in the desired account
 
@@ -54,7 +54,7 @@ Now that you finished developing your *Scripts* app, you must implement it in th
 
 ## Configuring the `loader.json` file
 
-The `loader.json` file acts as a declarer of which scripts should be executed on which page. 
+The `loader.json` file acts as a declarer of which scripts should be executed on which page.
 
 Each entry in the `loader` `JSON` object must have a `RegExp` key, indicating the page path, and a corresponding array of strings, where each string points to the script files that must be loaded to a page if the `RegExp` key matches the path of that page URL.
 
@@ -68,9 +68,9 @@ Take the following example:
 }
 ```
 
-In this example, the `script1` will be loaded and executed in all pages (`.*`) of the application. 
+In this example, the `script1` will be loaded and executed in all pages (`.*`) of the application.
 
-For brand pages, expressed by URLs ending in `/b`, besides the `script1`, the `script2` will also be loaded. 
+For brand pages, expressed by URLs ending in `/b`, besides the `script1`, the `script2` will also be loaded.
 
 Finally, for product pages, expressed by URLs ending in `/p`, besides the `script1`, the `script2` and the `script3` will also be loaded.
 
@@ -112,7 +112,7 @@ According to the definitions from the `loader.json` file, the script server will
 
 ## Modus Operandi
 
-All scripts available in a *Scripts app* are saved in its `/scripts` folder along with a `loader.json` file, which indicates in which page each script must be executed. 
+All scripts available in a *Scripts app* are saved in its `/scripts` folder along with a `loader.json` file, which indicates in which page each script must be executed.
 
 The scrips builder, set in the `manifest.json` file, is responsible for parsing each script declared in the `loader.json` file and for making them available to the `/load.js` route of the VTEX IO script server.
 

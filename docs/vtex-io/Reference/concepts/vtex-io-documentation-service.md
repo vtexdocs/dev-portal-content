@@ -1,10 +1,10 @@
 ---
 title: "Service"
 slug: "vtex-io-documentation-service"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-06T14:55:45.779Z"
-updatedAt: "2022-08-02T00:03:05.881Z"
+updatedAt: "2022-12-13T20:17:44.904Z"
 ---
 A service is a piece of code used to run .NET and Node.js on VTEX servers. This way, services allow VTEX IO apps to export HTTP routes, GraphQL resolvers, and event handlers to the server.
 

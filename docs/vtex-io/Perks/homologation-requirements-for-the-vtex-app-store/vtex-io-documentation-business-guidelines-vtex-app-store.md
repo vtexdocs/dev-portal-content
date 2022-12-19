@@ -1,10 +1,10 @@
 ---
 title: "Business guidelines"
 slug: "vtex-io-documentation-business-guidelines-vtex-app-store"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: true
 createdAt: "2021-07-21T21:13:45.252Z"
-updatedAt: "2022-08-02T00:03:05.975Z"
+updatedAt: "2022-12-13T20:17:44.194Z"
 ---
 * [App monetization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-app-monetization#paid-distribution)
 * [Self-service level](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-self-service-level)

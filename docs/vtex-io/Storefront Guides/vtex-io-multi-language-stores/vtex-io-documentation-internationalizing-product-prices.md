@@ -1,12 +1,12 @@
 ---
 title: "Internationalizing product prices"
 slug: "vtex-io-documentation-internationalizing-product-prices"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.310Z"
-updatedAt: "2022-08-02T00:03:05.501Z"
+updatedAt: "2022-12-13T20:17:44.058Z"
 ---
-Before globalizing your brand, it's crucial to first take care of your website's content internationalization. 
+Before globalizing your brand, it's crucial to first take care of your website's content internationalization.
 
 It goes without saying that new international users must be able to understand every text being displayed, navigate seamlessly and be able to conclude their purchases without being frustrated by misleading product price information due to the conversion of currencies.
 
@@ -28,7 +28,7 @@ Once your changes are saved, VTEX IO will be able to understand that whenever a 
 
 Therefore, the currency code shown should follow currency code international standards (ISO standard). For these scenarios, the platform will display prices (including their decimal places) according to the international currency code set in the `Currency Code` field.
 
->ℹ️ The price's decimal places are displayed according to language selected in the `Currency Code` field, following the ISO standards. Therefore, the `Currency Decimal Places` field is not mandatory. You should only use it in scenarios where you desire to overwrite the decimal places defined by the ISO standards. 
+>ℹ️ The price's decimal places are displayed according to language selected in the `Currency Code` field, following the ISO standards. Therefore, the `Currency Decimal Places` field is not mandatory. You should only use it in scenarios where you desire to overwrite the decimal places defined by the ISO standards.
 
 Following the same logic, whenever a user's locale is the same as the default one set in the `Culture Info` field, VTEX IO will interpret that it is dealing with a local user and thereby the currency code won’t need to follow international standards - the commonly used currency symbol for that country will suffice.
 

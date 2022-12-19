@@ -1,10 +1,10 @@
 ---
 title: "Updating Edition apps"
 slug: "vtex-io-documentation-updating-edition-apps"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.265Z"
-updatedAt: "2022-08-02T00:03:06.403Z"
+updatedAt: "2022-12-13T20:17:44.354Z"
 ---
 After an [Edition app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-edition-app) is [configured](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-configuring-an-edition-app), you can launch new versions of it, either by **defining new required apps for child accounts** or by **changing the Edition initial settings**.
 
@@ -22,7 +22,7 @@ To do this, follow the walk-through below:
 
 After the new version is published, **the Edition is automatically updated in all accounts by Housekeeper**. This automatic update is done asynchronously, periodically and individually in each child account.
 
-Notice that **Housekeeper only updates an Edition version as long as the major has not been changed**, meaning it is not a breaking change for the child accounts consuming that Edition. 
+Notice that **Housekeeper only updates an Edition version as long as the major has not been changed**, meaning it is not a breaking change for the child accounts consuming that Edition.
 
 In case bumping the major version is necessary due to the changes performed, the Edition update must be made manually and individually for each child account as well.
 

@@ -1,10 +1,10 @@
 ---
 title: "4. Writing the header and body scripts"
 slug: "vtex-io-documentation-5-writingtheheaderandbodyscripts"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:23.999Z"
-updatedAt: "2022-08-02T00:03:05.595Z"
+updatedAt: "2022-12-13T20:17:44.369Z"
 ---
 Now, it is time to define the scripts that your Pixel app will run on the store website. You can specify scripts that execute inside the `<header>` and/or `<body>` tags.
 
@@ -12,10 +12,10 @@ Adding a script to the `<header>` ensures that it will be executed before any ot
 
 ## Step by step
 
-1. Open the `pixel/header.html` file and replace the provided function with your own. 
+1. Open the `pixel/header.html` file and replace the provided function with your own.
 
   >ℹ️ If you opt to execute your script inside the `<body>` tag, rename the `header.html` file to `body.html`.
-   
+
 2. Use the `settingsSchema` identification key previously defined where applicable. Take the following example:
 
 ```html

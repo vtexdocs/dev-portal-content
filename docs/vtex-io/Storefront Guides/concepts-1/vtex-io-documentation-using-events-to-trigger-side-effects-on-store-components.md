@@ -1,10 +1,10 @@
 ---
 title: "Using events to trigger side effects on store components"
 slug: "vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-26T10:30:54.362Z"
-updatedAt: "2022-08-02T00:03:06.039Z"
+updatedAt: "2022-12-13T20:17:44.413Z"
 ---
 Events or Pixel Events are notifications automatically broadcasted by a website whenever users perform critical actions in your store, such as:
 

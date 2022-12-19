@@ -1,21 +1,21 @@
 ---
 title: "Slots"
 slug: "vtex-io-documentation-slots"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-21T17:35:29.193Z"
-updatedAt: "2022-08-02T00:03:06.165Z"
+updatedAt: "2022-12-13T20:17:44.635Z"
 ---
 Slots composition is a new way to declare a React component in your store theme code.
 
-Working simarly to the blocks and children composition, the slots allows you to use React props instead of passing an array of blocks when rendering a component on the store UI. 
+Working simarly to the blocks and children composition, the slots allows you to use React props instead of passing an array of blocks when rendering a component on the store UI.
 
 It enables Store Framework users to be way more flexible when developing the store theme by removing the need for the `allowed` property in the components' interface definitions!  
 
 Some advantages of using slots over the traditional blocks composition are, namely:
 
 - No need for `blocks` attribute when implementing a component in the store theme. Users just need to pass the desired blocks as regular props.
-- No need for the `allowed` interface attribute. Any block from any app can be declared as a regular prop. 
+- No need for the `allowed` interface attribute. Any block from any app can be declared as a regular prop.
 
 ## Practical example
 

@@ -1,10 +1,10 @@
 ---
 title: "Enabling 404 pages"
 slug: "vtex-io-documentation-enabling-404-pages"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.190Z"
-updatedAt: "2022-08-02T00:03:05.670Z"
+updatedAt: "2022-12-13T20:17:44.467Z"
 ---
 The 404 error is a HTTP standard response code for when the server was not able to return what the browser request or was configured to not handle that request.
 
@@ -35,10 +35,10 @@ You can customize 404 pages using blocks in your store's theme following the ste
 
 1. In your terminal, [create a development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace/).
 2. Then, open your store's theme in it using your preferred code editor.
-3. In the theme's product or search template (`store.product` or `store.search`) you can declare, respectively, the block `store.not-found#product` or `store.not-found#search`  and have it contain another Rich Text block. 
+3. In the theme's product or search template (`store.product` or `store.search`) you can declare, respectively, the block `store.not-found#product` or `store.not-found#search`  and have it contain another Rich Text block.
 
-Find below an example of a `store.not-found#product` in a product template: 
- 
+Find below an example of a `store.not-found#product` in a product template:
+
 ```json
 "store.not-found#product": {
   "blocks": ["rich-text#not-found"]

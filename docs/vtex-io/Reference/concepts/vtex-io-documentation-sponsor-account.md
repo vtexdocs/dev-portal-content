@@ -1,10 +1,10 @@
 ---
 title: "Sponsor Account"
 slug: "vtex-io-documentation-sponsor-account"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:47.740Z"
-updatedAt: "2022-08-02T00:03:05.633Z"
+updatedAt: "2022-12-13T20:17:44.643Z"
 ---
 A Sponsor Account is responsible for developing, maintaining, and distributing the [**Edition App**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-edition-app) installed in its child accounts.
 

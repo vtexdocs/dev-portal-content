@@ -1,21 +1,21 @@
 ---
 title: "Managing URL redirects"
 slug: "vtex-io-documentation-managing-url-redirects"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.302Z"
-updatedAt: "2022-08-02T00:03:05.631Z"
+updatedAt: "2022-12-13T20:17:44.350Z"
 ---
-URL redirection is a method of forwarding website visitors and search engines from one URL to another. Redirects might be useful when you need to move content to a new URL, remove an old product page, or forward users from a specific region to a custom page. Implementing the appropriate redirects can improve the user experience by preventing visitors from hitting 404 error pages. 
+URL redirection is a method of forwarding website visitors and search engines from one URL to another. Redirects might be useful when you need to move content to a new URL, remove an old product page, or forward users from a specific region to a custom page. Implementing the appropriate redirects can improve the user experience by preventing visitors from hitting 404 error pages.
 
 Check the following sections to learn how to [create](#creating-url-redirects), [remove](#deleting-url-redirects) and [verify](#verifying-url-redirects) your store's URL redirects.
 
 ## Before you start
 
 1. [Install the VTEX IO Command-Line Interface (CLI)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
-2. [Install the `redirects` plugin for the VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins#installing-a-plugin): 
+2. [Install the `redirects` plugin for the VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins#installing-a-plugin):
 
-  ```
+  ```sh
   vtex plugins install redirects
   ```
 
@@ -27,7 +27,7 @@ Check the following sections to learn how to [create](#creating-url-redirects), 
 4. Import redirects to your account by running the following command:
   - _Replace `{CSVpath}` with the path to your `.csv` file._
 
-```
+  ```sh
   vtex redirects import {CSVpath}
   ```
 
@@ -41,7 +41,7 @@ Once your file is processed, the redirects will take effect. Please keep in mind
 4. Delete redirects from your account by running the following command:
   - _Replace `{CSVpath}` with the path to your `.csv` file._
 
-  ```
+  ```sh
   vtex redirects delete {CSVpath}
   ```
 
@@ -51,7 +51,7 @@ Once your file is processed, the redirects will take effect. Please keep in mind
 2. Retrieve the full list of your store's redirects into a `.csv` file by running the following command.
   - _Replace `{fileName}` with any name of your choice._
 
-  ```
+  ```sh
   vtex redirects export {fileName}.csv
   ```
 

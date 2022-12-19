@@ -1,10 +1,10 @@
 ---
 title: "Deploying the app's stable version"
 slug: "vtex-io-documentation-deploying-the-app-stable-version"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-06-20T15:38:45.024Z"
-updatedAt: "2022-08-02T00:03:06.245Z"
+updatedAt: "2022-12-13T20:17:44.365Z"
 ---
 This guide will teach you how to deploy the latest stable version of your app so that all accounts having your app installed can be automatically updated with the new stable version.
 
@@ -16,11 +16,12 @@ Also, keep in mind that after publishing your app, you must wait 7 minutes befor
 
 ## Step by step
 
-If you have already published and validated your app, take the steps below to deploy your app's candidate version as a **stable version**. 
+If you have already published and validated your app, take the steps below to deploy your app's candidate version as a **stable version**.
 
 1. Open the terminal and log in to the account responsible for the app development, i.e., **the account specified as the app's vendor in the [`manifest.json`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest) file.**
 2. Deploy your new app version:
-  - _Replace the values between the curly brackets according to your scenario._
+
+- _Replace the values between the curly brackets according to your scenario._
 
   ```sh
   vtex deploy {appvendor}.{appname}@{appversion}

@@ -1,10 +1,10 @@
 ---
 title: "Marketing guidelines"
 slug: "vtex-io-documentation-business-guidelines-marketing-assets"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-07-22T14:20:05.553Z"
-updatedAt: "2022-08-02T00:03:06.149Z"
+updatedAt: "2022-12-13T20:17:44.747Z"
 ---
 Once you have [developed your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.
 
@@ -20,7 +20,7 @@ Note that if we see room for improvement, we’ll reach out to you before listin
 
 Refer to the following sections to improve your App Page and increase its adoption on the VTEX App Store.
 
->ℹ️ We recommend you follow these best practices while setting up the files that compose the marketing assets of an app. Please refer to [this guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-preparing-your-app-distribution#step-2---setting-the-public-folder) for more information.
+> ℹ️ We recommend you follow these best practices while setting up the files that compose the marketing assets of an app. Please refer to [this guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-preparing-your-app-distribution#step-2---setting-the-public-folder) for more information.
 
 ## Tone & Voice
 
@@ -58,9 +58,9 @@ Your app icon is one of the first elements of your app that developers and merch
 - The icon must not exceed 75% of the total space available of the icon size.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
-  <img src="https://user-images.githubusercontent.com/67270558/126643069-18ead453-ce79-44d6-847b-e9e4f1a378c4.png" alt="Icon with size description required for the App Store"/>
+  <img src="https://user-images.githubusercontent.com/67270558/126643069-18ead453-ce79-44d6-847b-e9e4f1a378c4.png" alt="Icon with size description required for the App Store">
 <br>
 </details>
 
@@ -101,9 +101,7 @@ Licenses are written documents that contain the Terms and Conditions (T&C) of yo
 - Review specific legislation related to your business, such as those issued by central banks if you are in financial services.
 - Make it clear how you can hire your service: free, freemium, or premium, for example. Also, review the regulations regarding the payment methods you will accept.
 
-> ⚠️
->
-> The recommendations presented here are intended to serve as guidelines for the third-party developers and do not represent a legal recommendation. VTEX is not responsible for direct, indirect, moral, punitive damages, consequential damages or loss of profits arising from the use and/or compliance with these guidelines. Hiring legal advice is necessary and recommended for the final writing of terms and conditions for applications.
+>⚠️ The recommendations presented here are intended to serve as guidelines for the third-party developers and do not represent a legal recommendation. VTEX is not responsible for direct, indirect, moral, punitive damages, consequential damages or loss of profits arising from the use and/or compliance with these guidelines. Hiring legal advice is necessary and recommended for the final writing of terms and conditions for applications.
 
 ## Messaging
 
@@ -124,7 +122,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 - Keep it concise and descriptive. Ensure that it alludes to the experiences the app provides.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -143,7 +141,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 - Capitalize the first letter of each word.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -162,7 +160,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 - Use *&* instead of *And*.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -181,7 +179,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 - Do not include the word *VTEX*.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -200,7 +198,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 - Do not use punctuation, such as period, comma, exclamation point, question mark, semicolon, colon, and underscore unless it’s part of the actual company name.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -219,7 +217,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 - Do not include the version number of the app.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -248,7 +246,7 @@ The headline should describe the value proposition of your app in a concise sent
 - Capture your app's key value proposition in a consise way.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -271,7 +269,7 @@ The headline should describe the value proposition of your app in a concise sent
 <br>
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -294,7 +292,7 @@ The headline should describe the value proposition of your app in a concise sent
 - Avoid repeating the application name.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -322,7 +320,7 @@ The overview is the description of the app and should be an engaging message tha
 - The app description must give a glimpse of your app’s benefits and functionalities, not a step-by-step on how it works.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -340,12 +338,10 @@ The overview is the description of the app and should be an engaging message tha
 
 - Make sure you are addessing for whom your app is, what need it solves and how uniquely do you solve it.
 
-> ℹ️
->  
-> There are numerous value proposition frameworks that can be used as a reference in this task, such as the following: *Our [product] help(s) [audience] who wants to [jobs to be done] by [verb e.g. reducing, avoiding] + [a user pain or gain].*
+> ℹ️  There are numerous value proposition frameworks that can be used as a reference in this task, such as the following: *Our [product] help(s) [audience] who wants to [jobs to be done] by [verb e.g. reducing, avoiding] + [a user pain or gain].*
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -364,7 +360,7 @@ The overview is the description of the app and should be an engaging message tha
 - Use the active voice to give a sense of action to the user.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -383,7 +379,7 @@ The overview is the description of the app and should be an engaging message tha
 - Avoid technical and jargon language.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -416,7 +412,7 @@ In `features`, provide a list of your app's main features.
 - Describe what makes your app unique.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -460,7 +456,7 @@ Use this field to provide more specific details about the app. For example, is y
 - Consider your app’s audience: regional location or global user, IO or Legacy user.
 
 <details>
-    <summary><strong>Show example</strong></summary>
+    <summary><b>Show example</b></summary>
 <br>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">

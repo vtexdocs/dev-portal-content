@@ -1,10 +1,10 @@
 ---
 title: "Builders"
 slug: "vtex-io-documentation-builders"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.727Z"
-updatedAt: "2022-08-02T00:03:06.187Z"
+updatedAt: "2022-12-13T20:17:44.395Z"
 ---
 A *Builder* is responsible for processing, validating, and forwarding a given block of code to a runtime or a framework capable of executing it.
 
@@ -48,7 +48,7 @@ When running your app, the `react@3.x` builder will transform the source code of
 
 ## List of builders
 
-The VTEX Product Team is always improving how our builders work and *creating new ones* to ease the development of commerce solutions. Notice that some of these are builders are not open beta. 
+The VTEX Product Team is always improving how our builders work and *creating new ones* to ease the development of commerce solutions. Notice that some of these are builders are not open beta.
 
 >⚠️ If you need to use a builder that is not open beta, you must [fill in the application form for development](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-filling-the-application-form-for-development).
 

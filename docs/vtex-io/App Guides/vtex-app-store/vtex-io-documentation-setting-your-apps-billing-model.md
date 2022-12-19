@@ -1,16 +1,17 @@
 ---
 title: "Setting your app's billing model"
 slug: "vtex-io-documentation-setting-your-apps-billing-model"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-31T16:50:10.042Z"
-updatedAt: "2022-08-02T00:03:06.281Z"
+updatedAt: "2022-12-13T20:17:44.838Z"
 ---
 Once your app has been developed and is ready to go live, it's time to think about its distribution. In this step, you must define who will be allowed to install your app, whether your app will be paid or not, and how much it will cost if so.
 
-When preparing your app for distribution, you must first establish if your new app will be private or public on the VTEX IO platform. 
-- **Private apps** can only be installed by their `vendor` account  (i.e., the account responsible for the app's development and maintenance). 
-- **Public apps** are available to all accounts of the VTEX IO ecosystem. These apps can be charged or not. 
+When preparing your app for distribution, you must first establish if your new app will be private or public on the VTEX IO platform.
+
+- **Private apps** can only be installed by their `vendor` account  (i.e., the account responsible for the app's development and maintenance).
+- **Public apps** are available to all accounts of the VTEX IO ecosystem. These apps can be charged or not.
 
 ## Setting the app as private
 
@@ -21,7 +22,7 @@ Take the following steps to make your app private:
 1. Open your project in any code editor of your preference.
 2. Open the `manifest.json` file and remove the `billingOptions` field.
 
-Without `billingOptions`, VTEX IO will understand that the app in question should not be made available to any account other than the one specified in the `vendor` field of the `manifest.json` file. 
+Without `billingOptions`, VTEX IO will understand that the app in question should not be made available to any account other than the one specified in the `vendor` field of the `manifest.json` file.
 
 ## Setting the app as public
 
@@ -54,6 +55,7 @@ The first step in making an app public is defining whether the app will be charg
     "availableCountries" : ["*"]
   }
 ```
+
 #### Setting the app as charged
 
 1. Open your app in any code editor of your preference.
@@ -74,14 +76,17 @@ The first step in making an app public is defining whether the app will be charg
 ```
 
 7. Now, choose one of the following billing options and follow the procedures corresponding to your selection.
-  - [**Fixed subscription**](#fixed-subscription) - Charges a fixed subscription price per month. This billing model only allows a single subscription plan to be created for the app.
-  - [**Fixed subscription + Variable rate**](#fixed-subscription--variable-rate) - Charges a fixed subscription price plus a variable charge based on the app's usage. Apps with a variable rate are charged according to a metric value.
-  - [**Variable subscription + Variable rate**](#variable-subscription--variable-rate) - Charges a variable subscription price plus a variable rate based on the app's usage. Apps with a variable rate are charged according to a metric value.
+
+- [**Fixed subscription**](#fixed-subscription) - Charges a fixed subscription price per month. This billing model only allows a single subscription plan to be created for the app.
+- [**Fixed subscription + Variable rate**](#fixed-subscription--variable-rate) - Charges a fixed subscription price plus a variable charge based on the app's usage. Apps with a variable rate are charged according to a metric value.
+- [**Variable subscription + Variable rate**](#variable-subscription--variable-rate) - Charges a variable subscription price plus a variable rate based on the app's usage. Apps with a variable rate are charged according to a metric value.
+
 8. Finally, if you opt for a variable-charge pricing strategy, take the steps presented in the [Registering the metrics data](#registering-the-metrics-data-only-for-apps-with-a-variable-pricing-strategy) section.
 
 ##### Fixed subscription
 
-Establish a subscription plan for your app by setting up the `plan` property and its child properties: 
+Establish a subscription plan for your app by setting up the `plan` property and its child properties:
+
 - `id`: Plan identifier.
 - `currency`: Currency code following the ISO.
 - `price.subscription`: Subscription price.
@@ -112,10 +117,11 @@ Establish a subscription plan for your app by setting up the `plan` property and
 ##### Fixed subscription + variable rate
 
 1. Establish a subscription plan for your app by setting up the `plan` property and its child properties:
-  - `id`: Plan identifier.
-  - `currency`: Currency code following the ISO.
-  - `price.subscription`: Subscription price.
-  - `price.metrics`: An array specifying the metric's id and the ranges related to the app's usage and associated extra charge. Notice that you can set one or more metrics to calculate the variable rate.
+
+- `id`: Plan identifier.
+- `currency`: Currency code following the ISO.
+- `price.subscription`: Subscription price.
+- `price.metrics`: An array specifying the metric's id and the ranges related to the app's usage and associated extra charge. Notice that you can set one or more metrics to calculate the variable rate.
 
 <details>
   <summary>Example of an app with a fixed subscription price plus a variable rate that considers only one metric</summary>
@@ -163,9 +169,9 @@ From the previous example, we have:
 
 Therefore, the extra variable rate would be charged as follows:
 
-- For 1500 SMSs =  US$ 30.00 *(1500 x US$ 0.07 = US$ 30.00)*
-- For 3500 SMSs = US$ 60.00 *(3500 x US$ 0.06 = US$ 60.00)*
-- For 7000 SMSs = US$ 100.00 *(7000 x US$ 0.05 = US$ 100.00)*
+- For 1500 SMSs =  US$ 30.00 _(1500 x US$ 0.07 = US$ 30.00)_
+- For 3500 SMSs = US$ 60.00 _(3500 x US$ 0.06 = US$ 60.00)_
+- For 7000 SMSs = US$ 100.00 _(7000 x US$ 0.05 = US$ 100.00)_
 
 </details>
 
@@ -215,13 +221,15 @@ Therefore, the extra variable rate would be charged as follows:
   
 </details>
 
-##### Variable subscription + variable rate 
+##### Variable subscription + variable rate
 
 1. Establish a subscription plan for your app by setting up the `plan` property and its child properties:
-  - `id`: Plan identifier.
-  - `currency`: Currency code following the ISO.
-  - `price.subscription`: Subscription price.
-  - `price.metrics`: An array specifying the metric's id and the ranges related to the app's usage and associated extra charge. Notice that you can set one or more metrics to calculate the variable rate.
+
+- `id`: Plan identifier.
+- `currency`: Currency code following the ISO.
+- `price.subscription`: Subscription price.
+- `price.metrics`: An array specifying the metric's id and the ranges related to the app's usage and associated extra charge. Notice that you can set one or more metrics to calculate the variable rate.
+
 2. Repeat the previous step to create a new subscription plan. This new plan will be a new object inside the `plan` array.
   
 <details>
@@ -318,11 +326,11 @@ If you opted for a variable-charge pricing strategy, you must ensure that your m
 ```
 
 Remember to remove the curly brackets from the endpoint and body replacing them with real values according to your own scenario.
+
 - `account` - VTEX account responsible for the app development and maintenance.
 - `Workspace` - Workspace being used for the app development.
 - `metricId` - ID of the metric specified in the `billingOptions` field.
 - `metricAmount` - Use of metrics for billing. For example: if your metric consists of charging for each SMS sent, the `metricAmount` should be equal to 1.
-
 
 3. Create a client for the `vtex.billing` app or complement it with the `saveBillingMetric` method:
 

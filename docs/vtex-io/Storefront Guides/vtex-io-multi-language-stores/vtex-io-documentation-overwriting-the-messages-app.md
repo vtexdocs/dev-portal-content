@@ -1,16 +1,16 @@
 ---
 title: "Overwriting the Messages app"
 slug: "vtex-io-documentation-overwriting-the-messages-app"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-01T19:49:09.322Z"
-updatedAt: "2022-08-02T00:03:06.187Z"
+updatedAt: "2022-12-13T20:17:44.427Z"
 ---
 ## Introduction
 
-Messages is VTEX IO's key tool for your store's **internationalization**, since it's responsible for translating any website message (that is, website text content) for rendering. 
+Messages is VTEX IO's key tool for your store's **internationalization**, since it's responsible for translating any website message (that is, website text content) for rendering.
 
-However, you may feel that some translations done by the app are not what you want them to be. Therefore, you may want to change the translated content to something more specific or representative of your store, such as a special login message for Spanish speaking users from Argentina. 
+However, you may feel that some translations done by the app are not what you want them to be. Therefore, you may want to change the translated content to something more specific or representative of your store, such as a special login message for Spanish speaking users from Argentina.
 
 In the next section, we present you a step by step on how to overwrite a translation from your store's catalog, such as a product name or a product description, and text messages exported from an app.
 
@@ -49,10 +49,10 @@ mutation Save($saveArgs: SaveArgsV2!) {
   }
 }
 ```
+
 Once you receive the expected response, no further actions are needed on your part: you are ready to check out the desired changes in your store!
 
 You also can confirm whether Messages properly saved the new translations or not by performing a query. To know further, check out the **Checking your changes** section.
-
 
 ### Catalog translations
 
@@ -78,10 +78,10 @@ Use the following example as a guide if you aim to translate text messages from 
 
 - `to`: target translation locale.
 - `messages`: a list of the messages you want to translate, containing the following parameters:
-    - `srcLang`: source message locale.
-    - `srcMessage`: source message string.
-    - `context`: ID of the product/brand/category that you want to translate. IDs can be found in your store's registration on the admin under Product > Catalog.
-    - `targetMessage`: translated message string.
+  - `srcLang`: source message locale.
+  - `srcMessage`: source message string.
+  - `context`: ID of the product/brand/category that you want to translate. IDs can be found in your store's registration on the admin under Product > Catalog.
+  - `targetMessage`: translated message string.
 
 To better understand the full process of overwriting a product message translation, check the following gif:
 
@@ -111,16 +111,17 @@ Use the following example as a guide if you aim to translate text messages expor
 
 - `to`: target translation locale.
 - `messages`: a list of the messages you want to translate, containing the following parameters:
-    - `srcLang`: source message locale. This variable must contain the value `en-DV`, no matter which locale is rendered on the app's interface.
-    - `srcMessage`: the `id` of your message string declared in the app's `messages` folder.
-    - `context`: the name of the app in which the message is being overwritten.
-    - `targetMessage`: translated message string.
+  - `srcLang`: source message locale. This variable must contain the value `en-DV`, no matter which locale is rendered on the app's interface.
+  - `srcMessage`: the `id` of your message string declared in the app's `messages` folder.
+  - `context`: the name of the app in which the message is being overwritten.
+  - `targetMessage`: translated message string.
 
 To better understand the full process of overwriting an app message translation, check the following gif:
 
 ![AppMessageTranslation](https://user-images.githubusercontent.com/60782333/85605881-fbf05480-b628-11ea-8ea9-1dbf364f07fd.gif)
 
 ### VTEX Intelligent Search context
+
 Use the following example as a guide if you aim to translate text messages exported from the [VTEX Intelligent Search](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search).
 
 ```json
@@ -143,8 +144,8 @@ Use the following example as a guide if you aim to translate text messages expor
 
 - `to`: target translation locale.
 - `messages`: a list of the messages you want to translate, containing the following parameters:
-    - `srcLang`: store's locale default. In the VTEX Intelligent Search context, this variable must be the store's binding default. 
-    - `srcMessage`: source message string. Check the table below to the possible values of this variable.
+  - `srcLang`: store's locale default. In the VTEX Intelligent Search context, this variable must be the store's binding default.
+  - `srcMessage`: source message string. Check the table below to the possible values of this variable.
       |Value|Definition|
       |--|--|
       |`Category 1`|Department|
@@ -156,8 +157,8 @@ Use the following example as a guide if you aim to translate text messages expor
       |`Location`|Location|
       |`Brand`|Brand|
 
-    - `context`: `intelligentSearchFacets`, which defines the context of the VTEX Intelligent Search.
-    - `targetMessage`: translated message string.
+  - `context`: `intelligentSearchFacets`, which defines the context of the VTEX Intelligent Search.
+  - `targetMessage`: translated message string.
 
 ## Checking your changes
 
@@ -177,7 +178,7 @@ query GetTranslation($args2: TranslateArgs!) {
 
 - `from`: source message locale.
 - `messages`: a list of the messages you want to check translations, containing the following parameters:
-  - `content`: source message string. 
+  - `content`: source message string.
   - `context`: ID of the product/brand/category that you want to check the translation. IDs can be found in your store's registration on the admin under Product > Catalog.
 - `to`: target translation locale.
 
@@ -188,8 +189,8 @@ Take the following example:
   "args2": {
     "indexedByFrom": [
       {
-      	"from": "en-US",
-      	"messages": [
+       "from": "en-US",
+       "messages": [
           {
             "content": "Original product name in English",
             "context": "543123"
@@ -202,7 +203,7 @@ Take the following example:
 }
 ```
 
-3. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale. 
+3. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale.
 
 For the given example, the expected response is as follows:
 
@@ -242,8 +243,8 @@ Take the following example:
 "args": {
     "indexedByFrom": [
       {
-      	"from": "en-DV",
-      	"messages": [
+       "from": "en-DV",
+       "messages": [
           {
             "content": "store/search.placeholder",
             "context": "vtex.store-components@3.x"
@@ -257,7 +258,7 @@ Take the following example:
 }
 ```
 
-3. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale. 
+3. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale.
 
 For the given example, the expected response is as follows:
 

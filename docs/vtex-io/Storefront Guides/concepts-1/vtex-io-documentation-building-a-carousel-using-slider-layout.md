@@ -1,10 +1,10 @@
 ---
 title: "Building a Carousel using Slider Layout"
 slug: "vtex-io-documentation-building-a-carousel-using-slider-layout"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.233Z"
-updatedAt: "2022-08-02T00:03:06.018Z"
+updatedAt: "2022-12-13T20:17:43.910Z"
 ---
 ## Introduction
 
@@ -12,7 +12,7 @@ There are block types in VTEX IO's Store Framework that instead of being respons
 
 These blocks are instances of a `list-context` interface called `lists`. They are exported by the `vtex.list-context` app.
 
-Since **a Carousel is a slider with images displayed on it**, you can create one for your store using one of the available `list-context` instances together with a `slider-layout`, a generic layout block that enables you to create a Slider component out of a set of other blocks. 
+Since **a Carousel is a slider with images displayed on it**, you can create one for your store using one of the available `list-context` instances together with a `slider-layout`, a generic layout block that enables you to create a Slider component out of a set of other blocks.
 
 See the instructions below for how it can be easily done!
 
@@ -59,7 +59,7 @@ _For example:_
 
 >⚠️ Bear in mind that <strong>list blocks do not render anything in your store</strong>, they simply hold content that can be edited using the Site Editor and pass it down to their child blocks.
 
-4. Now that you've specified which data (in this case, which images) will be displayed in your slider using a `list` block, you need to configure the [slider properties](https://developers.vtex.com/vtex-developer-docs/docs/vtex-slider-layout) themselves, meaning those of the `slider-layout`. 
+4. Now that you've specified which data (in this case, which images) will be displayed in your slider using a `list` block, you need to configure the [slider properties](https://developers.vtex.com/vtex-developer-docs/docs/vtex-slider-layout) themselves, meaning those of the `slider-layout`.
 
 _For example:_
 
@@ -92,11 +92,11 @@ _For example:_
   }
 ```
 
-And there you go! You now have a fully functioning Carousel for your store. 
+And there you go! You now have a fully functioning Carousel for your store.
 
 ![gif-caroulsel-slider-layout](https://user-images.githubusercontent.com/52087100/68598106-ea34b500-047c-11ea-8f69-0b05cf81e6a1.gif)
-_When inspecting the page you’ll notice that the `carousel` block was not used to build the component._ 
+_When inspecting the page you’ll notice that the `carousel` block was not used to build the component._
 
-Bear in mind that you are also able to edit data contained in `list-context.image-list` using the admin's Site Editor section: 
+Bear in mind that you are also able to edit data contained in `list-context.image-list` using the admin's Site Editor section:
 
 ![carousel-slider-site-editor](https://user-images.githubusercontent.com/52087100/68598836-4815cc80-047e-11ea-80e8-28e0070d2f1d.png)

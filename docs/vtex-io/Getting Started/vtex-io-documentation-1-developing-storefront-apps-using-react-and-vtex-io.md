@@ -1,10 +1,10 @@
 ---
 title: "Storefront apps"
 slug: "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.339Z"
-updatedAt: "2022-08-02T00:03:05.452Z"
+updatedAt: "2022-12-13T20:17:45.041Z"
 ---
 This track will show you how to build sophisticated, tailor-made React storefront components using the VTEX IO platform.
 
@@ -28,7 +28,4 @@ The components you develop can be used in your store's theme or be made availabl
 
 - [App Store Guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store)
 
-
-> ℹ️ **Info**
->
-> Custom apps are the liability of whoever developed and implemented them, meaning the [app's vendor](https://developers.vtex.com/vtex-developer-docs/docs/manifest#vendor). VTEX shall bear no responsibility for any of these apps nor provide support for their users.
+> ℹ️  Custom apps are the liability of whoever developed and implemented them, meaning the [app's vendor](https://developers.vtex.com/vtex-developer-docs/docs/manifest#vendor). VTEX shall bear no responsibility for any of these apps nor provide support for their users.

@@ -1,10 +1,10 @@
 ---
 title: "What is a VTEX App"
 slug: "vtex-io-documentation-what-is-a-vtex-app"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-01-18T17:20:04.667Z"
-updatedAt: "2022-08-02T00:03:05.629Z"
+updatedAt: "2022-12-13T20:17:44.128Z"
 ---
 A VTEX App extends the functionalities of the VTEX platform, helping merchants create comprehensive experiences for different layers of digital commerce, such as:
 
@@ -17,7 +17,7 @@ A VTEX App extends the functionalities of the VTEX platform, helping merchants c
 - Privacy and security
 - Store design
 
-From enhancing storefronts to composing the VTEX Admin, VTEX Apps can be as unique as possible. VTEX Apps are available for download at the [VTEX App Store](https://apps.vtex.com/), and they can be either free or paid. 
+From enhancing storefronts to composing the VTEX Admin, VTEX Apps can be as unique as possible. VTEX Apps are available for download at the [VTEX App Store](https://apps.vtex.com/), and they can be either free or paid.
 
 ## VTEX App Store
 
@@ -29,7 +29,7 @@ You can use VTEX Apps to:
 
 - Connect to VTEX Commerce APIs and integrate with VTEX modules.
 - Integrate third-party solutions to the VTEX IO platform.
-- Extend the native VTEX admin. 
+- Extend the native VTEX admin.
 - Enhance storefront components with the [VTEX Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-store-framework).
 - Speed up connections with Storefront and Admin apps.
 
@@ -62,7 +62,7 @@ A VTEX App can also be characterized as:
 - [Concepts](https://developers.vtex.com/vtex-developer-docs/docs/concepts): VTEX IO concepts.
 - [Developing an app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app): Steps and tools you need to create your app.
 
-- [Preparing your app for distribution](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-preparing-your-app-distribution): Basic requirements to meet before submitting your app to the review process. 
+- [Preparing your app for distribution](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-preparing-your-app-distribution): Basic requirements to meet before submitting your app to the review process.
 
 - [Best Practices](https://developers.vtex.com/vtex-developer-docs/docs/best-practices): Achieve better results by following VTEX developer's recommendations.
 

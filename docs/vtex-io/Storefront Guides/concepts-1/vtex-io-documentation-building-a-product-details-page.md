@@ -1,10 +1,10 @@
 ---
 title: "Building a Product Details Page"
 slug: "vtex-io-documentation-building-a-product-details-page"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.244Z"
-updatedAt: "2022-08-02T00:03:05.954Z"
+updatedAt: "2022-12-13T20:17:44.056Z"
 ---
 A Product Details Page, or PDP, is the web page on an ecommerce website that presents information on a particular product, including the product dimensions, color, price, reviews, shipping information, and other relevant details that shoppers may want to check before making a purchase.
 
@@ -49,7 +49,7 @@ The PDP is defined within the `store.product` block in the Store Theme app, and 
 
 <h2>Before you start</h2>
 
-To build a responsive PDP, the [`flex-layout`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout) will be used. Hence, knowledge of how to use the `flex-layout` block is strongly recommended. For more information, please refer to [this](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) guide. 
+To build a responsive PDP, the [`flex-layout`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout) will be used. Hence, knowledge of how to use the `flex-layout` block is strongly recommended. For more information, please refer to [this](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) guide.
 
 ## Practical example
 
@@ -147,7 +147,7 @@ Consider the following example of a Product Details Page built with the `store.p
 
 ![Product Details Page](https://user-images.githubusercontent.com/52087100/64383385-26c2db00-d00c-11e9-96d4-d3b7ecaf0376.png)
 
-From the code sample, notice that the `store.product` child dependencies define five blocks, the first two being `flex-layout.row`. 
+From the code sample, notice that the `store.product` child dependencies define five blocks, the first two being `flex-layout.row`.
 
 >⚠️ Keep in mind that the `flex-layout` block may suffer modifications if you are on mobile mode. Please refer to the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) document for more information.
 
@@ -178,7 +178,7 @@ To customize the breadcrumb, we can then declare the `breadcrumb` block and conf
 
 ### Flex layout second row
 
-The second row of the `flex-layout` block is responsible for rendering the main information about the product. 
+The second row of the `flex-layout` block is responsible for rendering the main information about the product.
 
 In the left column, it renders the product image (`flex-layout.col#product-image`), while in the right column (`flex-layout.col#right-col`), it renders the name, price, SKU selector, and buy button:
 
@@ -254,7 +254,7 @@ The right column of the second row presents the price, buy button, and other rel
 
 ### Related products
 
-After the `flex-layout` rows, we declared the `shelf.relatedProducts` block in our `store.product` block. This block is a [Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf/) that displays products related to the one shoppers are browsing. These products are defined through the Catalog in the Admin. 
+After the `flex-layout` rows, we declared the `shelf.relatedProducts` block in our `store.product` block. This block is a [Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf/) that displays products related to the one shoppers are browsing. These products are defined through the Catalog in the Admin.
 
 ```json
 "shelf.relatedProducts": {

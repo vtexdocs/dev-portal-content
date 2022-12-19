@@ -1,10 +1,10 @@
 ---
 title: "Linking an app"
 slug: "vtex-io-documentation-linking-an-app"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.237Z"
-updatedAt: "2022-08-02T00:03:06.286Z"
+updatedAt: "2022-12-13T20:17:45.061Z"
 ---
 For development, an app can be linked to a **development workspace** so that any local code change can be automatically synced and made available in that corresponding workspace.
 
@@ -13,19 +13,26 @@ For development, an app can be linked to a **development workspace** so that any
 ## Step by step
 
 1. Open the terminal and log in to your VTEX account.
-  ```
+
+  ```sh
   vtex login {account}
   ```
+
 2. Change to a **development workspace**.
-  ```
+
+  ```sh
   vtex use {workspace}
   ```
+
 3. Change to your app's directory.
-  ```
+
+  ```sh
   cd {directory}
   ```
-4. Link your app to the current workspace by running the following command: 
-  ```
+
+4. Link your app to the current workspace by running the following command:
+
+  ```sh
   vtex link
   ```
 

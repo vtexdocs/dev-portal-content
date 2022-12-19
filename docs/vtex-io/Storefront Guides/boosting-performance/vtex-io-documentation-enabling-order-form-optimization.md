@@ -1,10 +1,10 @@
 ---
 title: "Enabling the Order Form optimization"
 slug: "vtex-io-documentation-enabling-order-form-optimization"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.278Z"
-updatedAt: "2022-08-02T00:03:05.828Z"
+updatedAt: "2022-12-13T20:17:44.505Z"
 ---
 Every VTEX store uses the `orderForm` object to **record and fetch data from a user's order**, including each item added to the cart.
 
@@ -19,7 +19,7 @@ This comes with a performance cost since it means every store is now fetching **
 
 To avoid this unnecessary overhead, it is possible to disable the legacy `OrderFormProvider` and allow your store to only use the newer one. Enabling this should result in a smoother navigation experience for your users.
 
->⚠️ This setting must be enabled with <strong>caution,</strong> since it may cause harm to your store if any of its blocks still need the legacy `orderFormProvider` to properly function. In case your store already uses the `minicart.v2` and the `add-to-cart-button` blocks, and there are no custom blocks that depend on the legacy provider, there should be no issues regarding the optimization.
+>⚠️ This setting must be enabled with **caution**, since it may cause harm to your store if any of its blocks still need the legacy `orderFormProvider` to properly function. In case your store already uses the `minicart.v2` and the `add-to-cart-button` blocks, and there are no custom blocks that depend on the legacy provider, there should be no issues regarding the optimization.
 
 Find out how to enable the Order Form optimization in the steps below.
 

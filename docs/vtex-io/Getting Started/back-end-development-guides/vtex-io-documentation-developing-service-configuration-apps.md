@@ -1,10 +1,10 @@
 ---
 title: "Developing service configuration apps"
 slug: "vtex-io-documentation-developing-service-configuration-apps"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.410Z"
-updatedAt: "2022-08-02T00:03:06.454Z"
+updatedAt: "2022-12-13T20:17:44.992Z"
 ---
 ## Introduction
 
@@ -18,7 +18,7 @@ By becoming apps that are **independent**, service configurations gain the follo
 
 - Leveraging **workspace functionality**;
 - **Versioning**, which makes it easier to rollback or deprecate;
-- Can be **altered according to requests sent by other platform apps**, allowing a single service to be individually configured by one or more apps. 
+- Can be **altered according to requests sent by other platform apps**, allowing a single service to be individually configured by one or more apps.
 
 Read the instructions below to better understand how you can improve your VTEX IO app development by developing another app which is solely dedicated to services configuration.
 
@@ -31,7 +31,7 @@ In this initial stage, we will create an app to house the services configuration
 1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the VTEX Account in which you are currently working in.
 2. Using the command below, clone the `service-example` repository:
 
-```
+```sh
 git clone https://github.com/vtex-apps/service-example.git
 ```
 
@@ -52,7 +52,7 @@ git clone https://github.com/vtex-apps/service-example.git
 ```
 
 7. Create a `configuration` folder in your app's root directory, and, then, a `schema.json` file inside it. This file will hold information about the settings structure that the service app is going to accept from other apps on the platform.
-8.  In the `configuration/schema.json` file, create a JSON Schema, according to your scenario. For example:
+8. In the `configuration/schema.json` file, create a JSON Schema, according to your scenario. For example:
 
 ```json
 {
@@ -64,12 +64,11 @@ git clone https://github.com/vtex-apps/service-example.git
 }
 ```
 
-The JSON Schema will be used to identify new configurations coming from apps. It will also define the expected format of a new configuration. 
+The JSON Schema will be used to identify new configurations coming from apps. It will also define the expected format of a new configuration.
 
 In the example above, the accepted configuration is an object with two keys: `id` and `name`, where the first is a number, and the second, a string.
 
 9. Save your changes and then [publish your new service app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-publishing-an-app/).
-
 
 #### If your app has a Node Service
 
@@ -86,7 +85,7 @@ In the `node/service.json` file, add `"settingsType": "workspace"` to the app's 
 }
 ```
 
-It is also possible to **define your configurations through event listening**. For this scenario, you should add in the  `node/service.json` file something similar to the example below, replacing the values according to your needs: 
+It is also possible to **define your configurations through event listening**. For this scenario, you should add in the  `node/service.json` file something similar to the example below, replacing the values according to your needs:
 
 ``` json
 "events": {
@@ -118,7 +117,7 @@ type Query {
 
 ### Step 2 - Linking your app configurations to the service app
 
-Once your service app is deployed, it is ready to receive configurations from others. 
+Once your service app is deployed, it is ready to receive configurations from others.
 
 1. In your VTEX IO configuration app, add the recently created service app as a new builder. For example:
 
@@ -134,7 +133,7 @@ Once your service app is deployed, it is ready to receive configurations from ot
 
 Notice that the name of the builder is exactly the same as that of the service you want your app to configure. The version also needs to match the desired service app version.
 
-2.  In your app code, create a new file called `configuration.json` inside the folder named after the desired Service App. Following our example, we would have something similar to: `vtex.most-amazing-service-ever/configuration.json`.
+2. In your app code, create a new file called `configuration.json` inside the folder named after the desired Service App. Following our example, we would have something similar to: `vtex.most-amazing-service-ever/configuration.json`.
 3. In the file you've just created, define which service configurations are expected according to the JSON schema structure previously defined in the Service App. For example:
 
 ```json
@@ -150,7 +149,7 @@ Notice that the name of the builder is exactly the same as that of the service y
 
 Lastly, we must know how to access configurations received by the service app.
 
-As previously mentioned, the service configurations originate from other platform apps through the context of their given request. 
+As previously mentioned, the service configurations originate from other platform apps through the context of their given request.
 
 To access all configurations sent to the service app, use the following command:
 
@@ -160,7 +159,7 @@ const settings = ctx.vtex.settings
 
 The `ctx` can be either a `EventContext` or a `ServiceContext`.
 
-The structure of the received configurations list is similar to the example below: 
+The structure of the received configurations list is similar to the example below:
 
 ```json
 [
@@ -188,6 +187,6 @@ Hence, to avoid errors, remember to always have the service you're configuring l
 
 Also, if you want to publish your configuration app, but doesn't want to have your service installed in the `master` workspace, you can link or install the service in an alternative branch and, then, when you're ready to publish it, you can use the `-w` flag, as in:
 
-```
+```sh
 vtex publish -w <alternative-branch-name>
 ```

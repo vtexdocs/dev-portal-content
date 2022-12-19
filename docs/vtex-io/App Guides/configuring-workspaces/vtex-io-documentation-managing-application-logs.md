@@ -1,10 +1,10 @@
 ---
 title: "Managing application logs"
 slug: "vtex-io-documentation-managing-application-logs"
-excerpt: "vtex.io-documentation@0.88.5"
+excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-22T21:29:09.307Z"
-updatedAt: "2022-08-02T00:03:06.413Z"
+updatedAt: "2022-12-13T20:17:44.453Z"
 ---
 VTEX IO provides a logging service that allows developers to keep track of errors, warnings, and informative events within an application. The VTEX IO Logging Service collects data from the cloud infrastructure where VTEX applications run and delivers them via the VTEX IO CLI.
 
@@ -35,7 +35,7 @@ const helloWorld = (Context: ctx) => {
 }
 ```
 
-In this example, the `helloWorld` function receives an object with a [**Context**](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts#L34) interface as a parameter. 
+In this example, the `helloWorld` function receives an object with a [**Context**](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts#L34) interface as a parameter.
 
 >ℹ️ The `Context` interface contains many implementations inherent to the VTEX IO platform. One of those implementations is called `vtex` - an object containing all [VTEX IO infrastructure](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts#L116) related metadata, such as `account`, `workspace`, `tenant`, `settings`, and some service implementations. In the previous example, we used the `logger` service, which is an implementation inside `vtex` responsible for generating log messages.
 
@@ -62,20 +62,20 @@ Every log written by a running application with the VTEX IO logging service is c
 1. Log in to your VTEX account.
 2. Install the Logs plugin for the VTEX IO CLI by running the following command:
 
-```
+```sh
 vtex plugins add logs
 ```
 
 3. Check if the installation of the Logs plugin was successful by running `vtex logs --help`.
 4. Retrieve logs from all apps installed in your account by running the following command:
 
-```
+```sh
 vtex logs --all
 ```
 
 As an output, you should see a message similar to the following:
 
-```
+```sh
 vtex logs --all
 18:15:26.779 - info: Connecting to logs stream for store components
 18:15:26.782 - info: Press CTRL+C to abort
@@ -94,7 +94,6 @@ vtex logs --all
 
 >ℹ️ You can also retrieve logs from a specific app installed in your account by running the following command: `vtex logs {account}.{serviceAppExample}`. Remeber to replace `account` with your account name and `serviceAppExample` with the desired app name.
 
-
-We suggest running `vtex logs --all > {mylogfile.logs}` to save the log messages in a local file. Replace `{mylogfile.logs}` with the most suitable name for you. 
+We suggest running `vtex logs --all > {mylogfile.logs}` to save the log messages in a local file. Replace `{mylogfile.logs}` with the most suitable name for you.
 
 Also, if you want to see log messages that you have previously retrieved, run `vtex logs --past`.
