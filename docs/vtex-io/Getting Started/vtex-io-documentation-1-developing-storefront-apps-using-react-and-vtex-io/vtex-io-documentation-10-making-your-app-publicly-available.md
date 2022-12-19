@@ -51,7 +51,7 @@ If you want to release a **Beta** version, run the command `vtex release major b
 
 Once the app has been launched, it has to be properly installed to have the settings you tested. However, it is not possible to simply install an existing app on your local desktop.
 
->ℹ️ Note that when launching your app in step 2 above, you did not link it to the VTEX IO platform. The previous command only automated actions for proper versioning.
+> ℹ️ Note that when launching your app in step 2 above, you did not link it to the VTEX IO platform. The previous command only automated actions for proper versioning.
 
 That means now you have to publish the app on the platform! Using your terminal, access the app folder and run the following command:
 

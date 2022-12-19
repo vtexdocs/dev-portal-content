@@ -6,13 +6,14 @@ hidden: false
 createdAt: "2020-06-03T16:02:47.740Z"
 updatedAt: "2022-12-13T20:17:44.643Z"
 ---
+
 A Sponsor Account is responsible for developing, maintaining, and distributing the [**Edition App**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-edition-app) installed in its child accounts.
 
 Having a specific Sponsor Account is convenient for accounts that keep a hierarchical relationship with others, such as the main VTEX account of a holding or a brand with many sub-brands.
 
 The image below exemplifies the hierarchy among VTEX accounts.
 
-![Accounts hierarchy](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Concepts/Media/sponsoraccount.png)
+![Accounts hierarchy](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/concepts/sponsoraccount_15.png)
 
 Notice that the `vtex` account sponsors all the other accounts of the VTEX platform. That's because the `vtex` account is responsible for the development and release of the two standard Edition Apps, which all others derive from:
 

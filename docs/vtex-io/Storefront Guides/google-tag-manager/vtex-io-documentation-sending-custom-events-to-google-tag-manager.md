@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T20:17:43.891Z"
 ---
 This guide will teach you how to send custom events to [Google Tag Manager (GTM)](https://tagmanager.google.com/). Custom events can track website interactions that aren't supported by GTM's standard methods. For example, you can set up a custom event to notify GTM that a user has clicked on a particular button.
 
->ℹ️ For standard Google Tag Manager events and Universal Analytics Enhanced Ecommerce features, please consider using the [Google Tag Manager Pixel app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-google-tag-manager).
+> ℹ️ For standard Google Tag Manager events and Universal Analytics Enhanced Ecommerce features, please consider using the [Google Tag Manager Pixel app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-google-tag-manager).
 
 ## Step by step
 
@@ -26,7 +26,7 @@ To notify GTM about a specific action performed on your website, you must send a
    }
    ```
 
->ℹ️ Remember to make the `dataLayer` variable available in the `window` object before saving event data in it.
+> ℹ️ Remember to make the `dataLayer` variable available in the `window` object before saving event data in it.
 
 3. Go to the code line where the event happens and call your function, providing your event data as an argument. For example:
 

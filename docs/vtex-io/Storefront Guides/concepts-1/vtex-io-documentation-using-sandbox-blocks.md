@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.614Z"
 updatedAt: "2022-12-13T20:17:44.309Z"
 ---
+
 ## Introduction
 
 VTEX Store Framework is a very powerful tool meant to attend most client needs. It's understandable, though, that some custom requirements that your store needs and will not be served by the framework. That's where the **Sandbox App** comes in.
@@ -16,7 +17,7 @@ The **Sandbox App** is basically a component that supports iFrames. Therefore, i
 
 1. Go ahead and open your `manifest.json` file and declare the Sandbox app as a dependency.
 
-![sandbox dependency](https://user-images.githubusercontent.com/19555647/64436951-b95e8b00-d09b-11e9-90af-7d11f6d9d501.png)
+![sandbox dependency](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/64436951-b95e8b00-d09b-11e9-90af-7d11f6d9d501_19.png)
 
 2. Then, declare the Sandbox block in the `blocks` folder or in the `blocks.jsonc` file.
 
@@ -33,7 +34,7 @@ The **Sandbox App** is basically a component that supports iFrames. Therefore, i
 
 Let's suppose you want to create a simple `h1` sandbox block. It would look similar to the following:
 
-![sanbox hello world](https://user-images.githubusercontent.com/19555647/64436924-ae0b5f80-d09b-11e9-9080-fd4c983689d1.png)
+![sanbox hello world](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/64436924-ae0b5f80-d09b-11e9-9080-fd4c983689d1_36.png)
 
 3. Reference it in another's block `child dependency` or `blocks`. For instance, your `store.home`:
 

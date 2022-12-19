@@ -5,14 +5,16 @@ hidden: false
 createdAt: "2020-12-18T12:18:54.634Z"
 updatedAt: "2021-03-03T22:51:55.095Z"
 ---
+
 ## I don't see my changes
 
->ℹ️ Once you [link your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app), you should see all your changes live at `https://{workspace}-{account}.myvtex.com`. If your theme changes are not reflecting on your store workspace, check the following workarounds to fix your scenario.
+> ℹ️ Once you [link your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app), you should see all your changes live at `https://{workspace}-{account}.myvtex.com`. If your theme changes are not reflecting on your store workspace, check the following workarounds to fix your scenario.
 
 <details>
 <summary>My workspace does not reflect changes in Typescript types</summary>
 
 The `vtex link` command does not listen to changes in Typescript types. To solve this issue, run `vtex unlink` to stop the link. Then, link the app again after the new changes.
+
 </details>
 
 <details>
@@ -26,7 +28,8 @@ ctx.set('Cache-Control', 'no-cache')
 
 Notice that, for providing a fast response, caching is enabled by default. However, we understand that a real-time response might be necessary when testing an app during development.
 
->ℹ️ We strongly recommend that you do not disable cache for stores in production.
+> ℹ️ We strongly recommend that you do not disable cache for stores in production.
+
 </details>
 
 <details>
@@ -36,7 +39,7 @@ Notice that, for providing a fast response, caching is enabled by default. Howev
 2. Run `vtex ls` to list the apps installed on your account.
 3. Check if the major of the `store theme` app installed is different from the one you are developing.
 
->ℹ️ To see your changes in action, the version of the theme project you're working must be in the same major as the one from the `store theme` app installed on your account.
+> ℹ️ To see your changes in action, the version of the theme project you're working must be in the same major as the one from the `store theme` app installed on your account.
 
 4. Check if there is another `store theme` app installed on your VTEX account. If positive, uninstall it.
 
@@ -47,12 +50,12 @@ Notice that, for providing a fast response, caching is enabled by default. Howev
 <details>
 <summary>I can't install an app with a major other than <code>0.x</code></summary>
 
-
-![major](https://user-images.githubusercontent.com/60782333/102230433-9ee4a580-3ecb-11eb-8926-6b5c44750123.png)
+![major](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/troubleshooting/102230433-9ee4a580-3ecb-11eb-8926-6b5c44750123_51.png)
 
 Run `vtex ls` to check which apps are included on the [Edition App](https://vtex.io/docs/concepts/edition-app/) installed on your account. If you see the app you're trying to install with another major, you might have an issue with the Edition App installed on your account.
 
 In this case, consider [opening a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to change the Edition App installed on an account. First, go to the [Edition App](https://vtex.io/docs/concepts/edition-app/) doc to learn more about the available Edition Apps.
+
 </details>
 
 ## I can't create a new workspace
@@ -68,9 +71,10 @@ In this case, consider [opening a support ticket](https://help-tickets.vtex.com/
 
 The indexing process will start and you will see a link to the Indexing Status screen.
 
->ℹ️ The [Integration settings](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) is responsible for the Catalog's initial indexing with VTEX Intelligent Search. After installing the application, this will be the first step to integrating it with the Catalog.
+> ℹ️ The [Integration settings](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) is responsible for the Catalog's initial indexing with VTEX Intelligent Search. After installing the application, this will be the first step to integrating it with the Catalog.
 
-![start-integration](https://user-images.githubusercontent.com/60782333/102246861-fab82a00-3edd-11eb-8115-8ecdf892262c.png)
+![start-integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/troubleshooting/102246861-fab82a00-3edd-11eb-8115-8ecdf892262c_73.png)
+
 </details>
 
->⚠️ Still having trouble? Contact our [support team](https://help-tickets.vtex.com/smartlink/sso/login/zendesk)!
+> ⚠️ Still having trouble? Contact our [support team](https://help-tickets.vtex.com/smartlink/sso/login/zendesk)!

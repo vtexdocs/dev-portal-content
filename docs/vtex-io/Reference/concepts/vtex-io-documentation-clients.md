@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2022-02-16T13:52:17.234Z"
 updatedAt: "2022-12-13T20:17:43.979Z"
 ---
+
 Systems are meant to solve real problems by communicating to the needed services. A delivery app, for example, solves the issue of the desire to eat by communicating with a local restaurant service.
 
 On VTEX IO architecture, the communication made by a system to request a service is so crucial that a whole concept was built for it: **Clients**.
@@ -21,6 +22,6 @@ These are some of the features built-in our clients infrastructure:
 - Retry and timeout options;
 - Billing tracking.
 
-![Clients on IO Services](https://imgur.com/i45O8MN.png)
+![Clients on IO Services](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/concepts/i45O8MN_24.png)
 
 Learn how to create Clients of your own by accessing [Managing Clients](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-how-to-create-and-use-clients) documentation.

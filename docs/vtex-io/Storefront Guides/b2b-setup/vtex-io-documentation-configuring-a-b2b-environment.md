@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.631Z"
 updatedAt: "2022-12-13T20:17:44.342Z"
 ---
+
 B2B (Business to Business) is an abbreviation used in ecommerce in reference to commercial transactions between companies.
 
 In other words, B2B stores only sell their products to other businesses. Because of that, their environments require **user authentication**, since these are usually blocked, completely or partially, for anonymous users.
@@ -31,12 +32,12 @@ To define the condition rule, you first need to choose which of your store's Tra
 Make sure you fully understand what the [Trade Policies](https://help.vtex.com/tutorial/what-is-a-sales-policy--563tbcL0TYKEKeOY4IAgAE) for VTEX stores are before performing the steps below:
 
 1. Access the **Trade policies** section in the admin's sidebar;
-2. Choose the desired Trade Policy. You can edit an existing one, by clicking on **Edit**, or [create one from scratch](https://help.vtex.com/faq/how-to-configure-a-new-trade-policy--frequentlyAskedQuestions_700), by clicking on **New Trade Policy**. 
+2. Choose the desired Trade Policy. You can edit an existing one, by clicking on **Edit**, or [create one from scratch](https://help.vtex.com/faq/how-to-configure-a-new-trade-policy--frequentlyAskedQuestions_700), by clicking on **New Trade Policy**.
 3. In the **Condition Rule** field, define an access criterion of your choosing for the users who will access the trade policy in question. For example: if only logged in users can access store content, your **Condition Rule** could be something like `approved=true`.
 
-![condition-rule](https://user-images.githubusercontent.com/52087100/74885765-24073880-5355-11ea-81ab-41b9449a718b.png)
+![condition-rule](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/74885765-24073880-5355-11ea-81ab-41b9449a718b_37.png)
 
->ℹ️ The value entered in the Condition Rule field can be any one of your choosing. Remember to choose an intuitive condition and a clear rule, since both will be added to Master Data later for the user's verification to be successful.
+> ℹ️ The value entered in the Condition Rule field can be any one of your choosing. Remember to choose an intuitive condition and a clear rule, since both will be added to Master Data later for the user's verification to be successful.
 
 ### Step 3 - Updating the user form in Master Data
 

@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.244Z"
 updatedAt: "2022-12-13T20:17:44.056Z"
 ---
+
 A Product Details Page, or PDP, is the web page on an ecommerce website that presents information on a particular product, including the product dimensions, color, price, reviews, shipping information, and other relevant details that shoppers may want to check before making a purchase.
 
 The PDP is defined within the `store.product` block in the Store Theme app, and is composed of a series of child blocks. The `store.product` block accepts all blocks allowed by the `store` and `flex-layout` blocks as child dependencies, as well as the following blocks list:
@@ -142,20 +143,20 @@ Consider the following example of a Product Details Page built with the `store.p
 }
 
 ```
-  
+
 </details>
 
-![Product Details Page](https://user-images.githubusercontent.com/52087100/64383385-26c2db00-d00c-11e9-96d4-d3b7ecaf0376.png)
+![Product Details Page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/64383385-26c2db00-d00c-11e9-96d4-d3b7ecaf0376_148.png)
 
 From the code sample, notice that the `store.product` child dependencies define five blocks, the first two being `flex-layout.row`.
 
->⚠️ Keep in mind that the `flex-layout` block may suffer modifications if you are on mobile mode. Please refer to the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) document for more information.
+> ⚠️ Keep in mind that the `flex-layout` block may suffer modifications if you are on mobile mode. Please refer to the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) document for more information.
 
 ### Flex layout first row
 
 In the first row of the `flex-layout` block, the [`breadcrumb`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-breadcrumb/) block is rendered as in the following:
 
-![First row](https://i.ibb.co/ZhNry22/image.png)
+![First row](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/image_158.png)
 
 ```json
 "flex-layout.row#product-breadcrumb": {
@@ -234,13 +235,13 @@ To customize the `flex-layout.col#product-image` and `flex-layout.col#right-col`
 
 The left column of the second row contains the [`product-images`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productimages) block since this was the first `flex-layout.col` block to be declared.
 
-![Left column](https://i.ibb.co/ns8sP0Y/image.png).
+![Left column](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/image_237.png).
 
 #### Right column
 
 The right column of the second row presents the price, buy button, and other relevant product details. It is, in practice, composed of the following blocks:
 
-![Right column](https://user-images.githubusercontent.com/60782333/174835415-bfbbca3c-b300-451e-af2a-0038f6b21591.png)
+![Right column](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/174835415-bfbbca3c-b300-451e-af2a-0038f6b21591_243.png)
 
 - [`product-name`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productname): displays the product name, along with its SKU name, if desired.
 - [`product-price`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productprice): displays a properly formatted selling price. You can set it to show the list price (if it's different), installments, etc. Check out below an example of a Product Price displaying both the sale and the list price:
@@ -270,6 +271,6 @@ After the `flex-layout` rows, we declared the `shelf.relatedProducts` block in o
 
 When related products are identified, they are presented as in the following:
 
-![Related products](https://i.ibb.co/QpyMyXM/image.png)
+![Related products](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/image_273.png)
 
 The `shelf.relatedProducts` block accepts different recommendation types, such as `similars`, `view`, `buy`, `accessories`, `viewAndBought`, `suggestions`.

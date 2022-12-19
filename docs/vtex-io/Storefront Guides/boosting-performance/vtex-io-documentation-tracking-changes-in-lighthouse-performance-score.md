@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2021-04-07T18:18:24.559Z"
 updatedAt: "2022-12-13T20:17:44.828Z"
 ---
->ℹ️ In this tutorial, we'll use [Lighthouse Scoring Calculator](https://googlechrome.github.io/lighthouse/scorecalc/#version=6), a tool created by Google that allows you to play with Lighthouse performance metrics and define which thresholds you should aim for to achieve the desired Performance Score.
+
+> ℹ️ In this tutorial, we'll use [Lighthouse Scoring Calculator](https://googlechrome.github.io/lighthouse/scorecalc/#version=6), a tool created by Google that allows you to play with Lighthouse performance metrics and define which thresholds you should aim for to achieve the desired Performance Score.
 
 It's possible that a change you expected to cause a considerable increase in the *Performance Score* doesn't affect it at all. Conversely, a seemingly small change may affect the score significantly. The same applies in reverse for possible regressions in performance.
 
@@ -14,15 +15,15 @@ In the following sections, we'll explore some of the factors that might be the r
 
 1. The *Performance Score* is not linear. Actually, **the *Performance Score* is a weighted average** of the following six in the lab metrics:
 
-![pfscore](https://user-images.githubusercontent.com/60782333/101204350-d8571e80-364a-11eb-9a43-6bb1ccaa6346.png)
+![pfscore](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/101204350-d8571e80-364a-11eb-9a43-6bb1ccaa6346_17.png)
 
 2. **The *Metrics' Scores* are not linear.** Lighthouse metrics follow their own rules. To better illustrate that, take the following example: imagine you have a *Largest Contentful Paint (LCP)* of 8s. You work on some improvements, and you reduce *LCP* by 2 seconds. When you look at the *Metric Score* you notice it went from 3 to 13, increasing the overall *Performance Score* by 2 points (from 76 to 78).
 
-![8to6](https://user-images.githubusercontent.com/60782333/100952347-2820d300-34ef-11eb-9512-3d0f3afa7fe9.gif)
+![8to6](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/100952347-2820d300-34ef-11eb-9512-3d0f3afa7fe9_21.gif)
 
 You're not satisfied yet, so you work on more changes and you manage to take *LCP* from 6s to 4s, which also corresponds to a reduction of 2s. However, this time, when you look at the *Metric Score*, you notice it went from 13 to 50, improving the overall *Performance Score* by 10 points (from 78 to 88).
 
-![6to4](https://user-images.githubusercontent.com/60782333/100952021-771a3880-34ee-11eb-9142-c897ed21c990.gif)
+![6to4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/100952021-771a3880-34ee-11eb-9142-c897ed21c990_25.gif)
 
 Notice that in both cases, there was a reduction of 2s in the *LCP* time. However, in the first case, this improvement led to a gain of 10 points (from 3 to 13) in the *Metric Score*. Meanwhile, in the second case, the same reduction of 2s led to a gain of 37 points (from 13 to 50).
 
@@ -34,32 +35,32 @@ When you have a metric that scores too low, a seemingly significant change may n
 
 To better illustrate that, let's investigate the *Largest Contentful Paint (LCP)* metric.
 
-*LCP* has a weight of 25% on the *Performance Score*. Therefore, to affect the overall *Performance Score*, the *LCP* score must be at least 2, which would correspond to 1 point (rounding up 2*0.25=0,5) in the*Performance Score*.
+*LCP* has a weight of 25% on the *Performance Score*. Therefore, to affect the overall *Performance Score*, the *LCP* score must be at least 2, which would correspond to 1 point (rounding up 2*0.25=0,5) in the*Performance Score\*.
 
->ℹ️ When calculating the *Performance Score*, decimal values greater than 0.5 are rounded up to the next largest whole number.
+> ℹ️ When calculating the *Performance Score*, decimal values greater than 0.5 are rounded up to the next largest whole number.
 
 With that in mind, suppose *LCP* went from 12s to 8s.
 
-![12to8](https://user-images.githubusercontent.com/60782333/100952745-d9c00400-34ef-11eb-9f50-166dd6b8c36c.gif)
+![12to8](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/100952745-d9c00400-34ef-11eb-9f50-166dd6b8c36c_43.gif)
 
-Notice that, even if this could be considered a significant improvement, any LCP time greater than approximately 8s yields a *Performance Score* of 0. So, in this example, the *LCP* score went from 0 to 3, leading to a gain equivalent to 1 in the *Performance Score* (rounding up 3*0.25=0.75).
+Notice that, even if this could be considered a significant improvement, any LCP time greater than approximately 8s yields a *Performance Score* of 0. So, in this example, the *LCP* score went from 0 to 3, leading to a gain equivalent to 1 in the *Performance Score* (rounding up 3\*0.25=0.75).
 
 In this sense, to have an idea of when the *Metric Score* is too slow, we recommend that you take a look at the maximum values for starting punctuating with each metric.
 
-![maxvalue](https://user-images.githubusercontent.com/60782333/101213209-c8ded200-3658-11eb-8f6e-9f624a8bcf9e.png)
+![maxvalue](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/101213209-c8ded200-3658-11eb-8f6e-9f624a8bcf9e_49.png)
 
->ℹ️ Notice that the metrics scores will be 0 for any value above the given limits.
+> ℹ️ Notice that the metrics scores will be 0 for any value above the given limits.
 
 We also recommend being attentive to the following values:
 
-||Good|Needs improvement|Poor|
-|-|:---|:---|:---|
-|**First Contentful Paint (FCP**)|0 - 1000ms|1000ms - 3000ms|Over 3000ms|
-|**Speed Index (SI)**|0 - 4300ms|4400ms - 5800ms|Over 5800ms|
-|**Largest Contentful Paint(LCP)**|0 - 2500ms|2500ms - 4000ms|Over 4000ms|
-|**Time to Interactive (TTI)**|0 - 3800ms|3900ms - 7300ms|Over 7300ms|
-|**Total Blocking Time (TBT)**|0 - 300ms|300ms - 600ms|Over 600ms|
-|**Cumulative Layout Shift(CLS)**|0 - 0.1|0.1 - 0.25|Over 0.25|
+|                                   | Good       | Needs improvement | Poor        |
+| --------------------------------- | :--------- | :---------------- | :---------- |
+| **First Contentful Paint (FCP**)  | 0 - 1000ms | 1000ms - 3000ms   | Over 3000ms |
+| **Speed Index (SI)**              | 0 - 4300ms | 4400ms - 5800ms   | Over 5800ms |
+| **Largest Contentful Paint(LCP)** | 0 - 2500ms | 2500ms - 4000ms   | Over 4000ms |
+| **Time to Interactive (TTI)**     | 0 - 3800ms | 3900ms - 7300ms   | Over 7300ms |
+| **Total Blocking Time (TBT)**     | 0 - 300ms  | 300ms - 600ms     | Over 600ms  |
+| **Cumulative Layout Shift(CLS)**  | 0 - 0.1    | 0.1 - 0.25        | Over 0.25   |
 
 ## Cascading effect
 
@@ -73,13 +74,13 @@ A slow *FCP* time might mean that, for some reason, the server is taking too lon
 
 If SSR is not working correctly, the page needs to download, parse, and execute all of its JS files so it can finally display any content at all.
 
-![page](https://user-images.githubusercontent.com/60782333/101224418-4ad8f600-366d-11eb-82b9-35298f65f551.gif)
+![page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/101224418-4ad8f600-366d-11eb-82b9-35298f65f551_76.gif)
 
 Notice that many metrics, such as *SI*, *LCP*, *TTI*, depend on the content being displayed as soon as possible. Consequently, they are directly affected by *FCP*, making this metric extremely important for the overall *Performance Score*.
 
 Take the following example:
 
-![FCP-Lab-Data](https://user-images.githubusercontent.com/60782333/101080950-340ca380-3588-11eb-9046-aad8c7f8668f.png)
+![FCP-Lab-Data](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/101080950-340ca380-3588-11eb-9046-aad8c7f8668f_82.png)
 
 ## Variabilities from run to run
 
@@ -101,7 +102,7 @@ These metrics are affected by conditions that don't necessarily make the page sl
 
 Notice that these three metrics have a huge impact on the overall *Performance Score* and account for 45 points of the total.
 
-![atfp](https://user-images.githubusercontent.com/60782333/101225903-79f16680-3671-11eb-97e3-636d415af6fe.png)
+![atfp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/101225903-79f16680-3671-11eb-97e3-636d415af6fe_104.png)
 
 ## Everything is connected
 

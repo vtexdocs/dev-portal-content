@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-04-04T22:02:14.084Z"
 updatedAt: "2022-12-13T20:17:44.738Z"
 ---
+
 ## Accessing the list of commands
 
 Start using the VTEX IO CLI by running the following command to access a summary of the CLI's default commands.
@@ -14,9 +15,9 @@ Start using the VTEX IO CLI by running the following command to access a summary
 vtex help
 ```
 
-![VTEX command](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-help-command.png)
+![VTEX command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-help-command_17.png)
 
->ℹ️ Check the [Command Reference](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference) for more details.
+> ℹ️ Check the [Command Reference](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference) for more details.
 
 ## Logging into your VTEX account
 
@@ -26,7 +27,7 @@ Log in to your VTEX account by running the following command.
 vtex login {account-name}
 ```
 
->⚠️ Replace the value between curly braces according to your scenario.
+> ⚠️ Replace the value between curly braces according to your scenario.
 
 After you run this command, a new tab will open on your browser, asking you to log in to the desired VTEX account with your email.
 
@@ -34,9 +35,9 @@ Once you log in, the web page will display the following message: *“You may no
 
 Now, when you go back to the computer terminal, you'll have access to a development environment for this VTEX account. You'll see some basic information about your account as in the following.
 
-![Login Screen](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-login-command.png)
+![Login Screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-login-command_37.png)
 
->ℹ️ If you later decide to work on another account, run `vtex switch {account-name}`, specifying the account name you want to switch to.
+> ℹ️ If you later decide to work on another account, run `vtex switch {account-name}`, specifying the account name you want to switch to.
 
 ## Creating a new workspace
 
@@ -52,11 +53,11 @@ vtex use {workspace-name}
 
 Notice that if a workspace with the chosen name already exists, you'll be taken to it.
 
-![Change Workspace](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-use-command-one.png)
+![Change Workspace](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-use-command-one_55.png)
 
 Otherwise, you'll be asked if you want to create it.
 
-![New Workspace](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-use-two.png)
+![New Workspace](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-use-two_59.png)
 
 From now on, every operation performed will happen in the specified workspace.
 
@@ -76,17 +77,17 @@ Install an app on your current account and workspace by running the following co
 vtex install {appvendor}.{appname}@{appversion}
 ```
 
->⚠️ Replace the value between curly braces according to your scenario.
+> ⚠️ Replace the value between curly braces according to your scenario.
 
 If you try to install an app that has [Billing Options](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options), you first need to access the [VTEX App Store](https://apps.vtex.com/) and agree to the app's terms and conditions.
 
-![Billing Options](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-install-app.png)
+![Billing Options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-install-app_83.png)
 
 1. If you type `Y`, the app's page you intend to install from the VTEX App Store will open in your browser.
 2. To continue with the installation, click on `GET APP` > `CONFIRM` to log in to your VTEX store.
 3. Read and agree to the app's terms and conditions
 
->ℹ️ Notice that some apps are free and others will have specific methods of charging.
+> ℹ️ Notice that some apps are free and others will have specific methods of charging.
 
 ## Starting a new project
 
@@ -96,7 +97,7 @@ Start a new project from pre-defined templates by running the following command.
 vtex init
 ```
 
-![Init command](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-init-command.png)
+![Init command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-init-command_99.png)
 
 For example, to start developing a store theme app, choose the `store` option. This will clone the [Store Theme](https://github.com/vtex-apps/store) boilerplate app into your local files.
 
@@ -108,7 +109,7 @@ Change to the directory of the app you're developing and run the following comma
 vtex link
 ```
 
-![Link Command](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-link-command.png)
+![Link Command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-link-command_111.png)
 
 VTEX IO's CLI will monitor your files and provide an URL related to that workspace. You'll be able to access it through `https://{workspace}--{account}.myvtex.com`, by replacing the value between curly braces with the name of the workspace previously created and your VTEX account. For example, `https://marianacaetano--appliancetheme.myvtex.com`.
 
@@ -140,7 +141,7 @@ vtex local token
 
 The token will be automatically copied to the clipboard and can authenticate requests for 24h. Learn more about [user tokens](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#user-token).
 
->⚠️ The authentication of VTEX IO apps operations does not require this token. If you are developing VTEX IO apps, see the guide [App authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#app-authentication).
+> ⚠️ The authentication of VTEX IO apps operations does not require this token. If you are developing VTEX IO apps, see the guide [App authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#app-authentication).
 
 ## Learning more about a command
 
@@ -150,4 +151,4 @@ Use the `--help` flag as in the following to learn more about a specific command
 vtex [COMMAND] --help
 ```
 
-![Help Command](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-browse-help-command.png)
+![Help Command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-browse-help-command_153.png)

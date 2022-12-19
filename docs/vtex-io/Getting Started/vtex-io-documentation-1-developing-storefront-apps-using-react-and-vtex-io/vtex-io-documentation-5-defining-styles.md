@@ -20,7 +20,7 @@ Now that you know the difference between the tools that are available on the pla
 
 Below, you can find the instructions for each of these tools and their purpose.
 
->ℹ️ Customizing the style in a component requires basic CSS knowledge. We recommended that you check the [documentation](https://www.w3schools.com/css/default.asp) for this language before following the instructions detailed in this article.
+> ℹ️ Customizing the style in a component requires basic CSS knowledge. We recommended that you check the [documentation](https://www.w3schools.com/css/default.asp) for this language before following the instructions detailed in this article.
 
 ## Using Tachyons
 
@@ -30,7 +30,7 @@ The framework has single-purpose CSS classes that can be structured to build any
 
 In practice, VTEX Tachyons helps you use CSS classes in your store-front app with little effort.
 
->ℹ️ To better understand VTEX Tachyons tokens for CSS classes, it is important to familiarize yourself with the Tachyons solution. Carefully read your [documentation](https://tachyons.io/#getting-started).
+> ℹ️ To better understand VTEX Tachyons tokens for CSS classes, it is important to familiarize yourself with the Tachyons solution. Carefully read your [documentation](https://tachyons.io/#getting-started).
 
 1. Open your app's code in your code editor.
 2. In the `react` folder, access the file created for the component you want to style.
@@ -89,7 +89,7 @@ export default function MyButton() {
 }
 ```
 
->ℹ️ Remember that the name of the created classes will depend on the *import* model you made (step 3 or step 4 in this section).
+> ℹ️ Remember that the name of the created classes will depend on the *import* model you made (step 3 or step 4 in this section).
 
 6. Save the changes you made and [link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) your app.
 
@@ -149,7 +149,7 @@ const Component: FC = () => {
 }
 ```
 
->ℹ️ Note that the CSS Handles generated and stored in the object follow this pattern: `vtex-{appName}-{majorVersion}-x-{handleName}`.
+> ℹ️ Note that the CSS Handles generated and stored in the object follow this pattern: `vtex-{appName}-{majorVersion}-x-{handleName}`.
 
 4. Add the new *CSS Handle* to the desired CSS class–according to the HTML element to be customized by app users. Remember to use the `handle` variable when adding it and also the *CSS Handle* name defined in the `CSS_HANDLES` array (like `container`). For example:
 
@@ -184,7 +184,7 @@ class ExampleComponent extends Component {
     const { cssHandles } = this.props
  ```
 
->ℹ️ Since components defined as classes cannot use *hooks*, we will use an *HOC* called `withCssHandles`.
+> ℹ️ Since components defined as classes cannot use *hooks*, we will use an *HOC* called `withCssHandles`.
 
 3. In the `CSS_HANDLES` *array*, replace the example strings with new ones (according to the names of the *CSS Handles* you want). You can choose any name for the *CSS Handle*, but remember, it will be used with CSS classes by your app users to personalize HTML elements. We recommend using intuitive names.
 
@@ -196,7 +196,7 @@ class ExampleComponent extends Component {
 }
 ```
 
->ℹ️ Note that the CSS Handles generated and stored in the object follow this pattern: `vtex-{appName}-{majorVersion}-x-{handleName}`.
+> ℹ️ Note that the CSS Handles generated and stored in the object follow this pattern: `vtex-{appName}-{majorVersion}-x-{handleName}`.
 
 4. Add the new *CSS Handle* to the desired CSS class–according to the HTML element to be customized by app users. Remember to use the `handle` variable when adding it and also the *CSS Handle* name defined in the `CSS_HANDLES` array (like `text`). For example:
 
@@ -206,4 +206,4 @@ class ExampleComponent extends Component {
 
 After saving your changes, your app will be able to not only export a predefined style according to the CSS classes you set up but also export *CSS Handles*, giving your users more customization flexibility.
 
->ℹ️ For more details on how *CSS Handles* can be used to define styles, access the documentation for [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+> ℹ️ For more details on how *CSS Handles* can be used to define styles, access the documentation for [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).

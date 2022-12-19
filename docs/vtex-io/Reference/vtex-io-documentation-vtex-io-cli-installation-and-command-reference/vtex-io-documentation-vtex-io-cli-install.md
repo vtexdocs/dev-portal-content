@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-04-04T22:02:14.003Z"
 updatedAt: "2022-12-13T20:17:44.621Z"
 ---
+
 According to your operating system, take the respective steps to install VTEX IO’s CLI on your machine.
 
 <details>
@@ -17,10 +18,10 @@ According to your operating system, take the respective steps to install VTEX IO
   > ⚠️ Warning
   >
   > For machines running on Apple M1 chip, before installing VTEX IO CLI, install [Rosetta](https://support.apple.com/en-us/HT211861) and enable the machine to use the command-line interface for a Mac with an Intel processor.  To install Rosetta, run the following in your terminal: `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`.
-  
+
   1. Install **Homebrew** by following the instructions on [**Homebrew website**](https://brew.sh/index).
 
-  ![brew](https://files.readme.io/7a812a5-Screen_Shot_2021-04-20_at_19.49.25.png)
+  ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/7a812a5-Screen_Shot_2021-04-20_at_19.49.25_23.png)
 
   2. Then, install **VTEX IO'S CLI** by running the following command.
 
@@ -37,10 +38,8 @@ According to your operating system, take the respective steps to install VTEX IO
 <br>
 
 - **Tarball**
-  
-  >⚠️ Caution
-  >
-  > Before the installation, check if you have the [curl](https://curl.se/) command-line tool and library installed on your machine.
+
+  > ⚠️ Before the installation, check if you have the [curl](https://curl.se/) command-line tool and library installed on your machine.
 
   Open the terminal and run the following command to install the VTEX IO CLI.
 
@@ -56,19 +55,19 @@ According to your operating system, take the respective steps to install VTEX IO
 <br>
 
 - **Installer for Windows**
-  
+
 1. Download the appropriate installer for your Windows system ([64-bit installer](https://vtex.io/vtexcli/install/win-x64); [32-bit installer](https://vtex.io/vtexcli/install/win-x32)).
 2. Open the downloaded file and follow the instructions to finish the installation process.
 3. Run the Windows Terminal with elevated administrator permission by right-clicking on the Windows Terminal icon and selecting "Run as administrator."
 4. Run the following command to complete the installation.
 
-```sh
-vtex
-```
+  ```sh
+  vtex
+  ```
 
- To which will appear the following message.
+  To which will appear the following message.
 
-  ![](https://user-images.githubusercontent.com/32786712/205149759-4b6207c9-b497-4e39-82ff-e1358e72699f.png)
+  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/205149759-4b6207c9-b497-4e39-82ff-e1358e72699f_71.png)
 
   For the next step, you won't need to be in your admin role.
 
@@ -79,9 +78,7 @@ vtex
 
 Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can manually install it via [npm](https://www.npmjs.com/package/vtex). This method is recommended only for environments in which auto-updating VTEX IO's CLI is not ideal.
 
->❗️Danger
->
-> We strongly recommend using an alternative installation method. If you opt to use npm to install the VTEX IO CLI, keep in mind that the CLI won't be automatically updated, and the Node version on your machine might conflict with the one used by the CLI developers. Preferably, if you opt for any other installation method, VTEX IO's CLI will always be up-to-date, and you will avoid installation issues.
+> ❗️ We strongly recommend using an alternative installation method. If you opt to use npm to install the VTEX IO CLI, keep in mind that the CLI won't be automatically updated, and the Node version on your machine might conflict with the one used by the CLI developers. Preferably, if you opt for any other installation method, VTEX IO's CLI will always be up-to-date, and you will avoid installation issues.
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
@@ -89,7 +86,7 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
 
   1. Install **Homebrew** by following the instructions on [**Homebrew website**](https://brew.sh/index).
 
-  ![brew](https://files.readme.io/7a812a5-Screen_Shot_2021-04-20_at_19.49.25.png)
+  ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/7a812a5-Screen_Shot_2021-04-20_at_19.49.25_92.png)
 
   2. Install **Node.js** via Homebrew by running the following command.
 
@@ -98,17 +95,17 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
   ```
 
   3. Then, install **Yarn**.
-  
+
   ```sh
   brew install yarn
   ```
 
-  4. Finally, install the **VTEX IO CLI**.
+4. Finally, install the **VTEX IO CLI**.
 
   ```sh
   yarn global add vtex
   ```
-  
+
 <br>
 </details>
 
@@ -150,10 +147,10 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
   ```sh
   vtex
   ```
-  
+
   To which will appear the following message.
 
-  ![](https://user-images.githubusercontent.com/32786712/205149759-4b6207c9-b497-4e39-82ff-e1358e72699f.png)
+  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/205149759-4b6207c9-b497-4e39-82ff-e1358e72699f_156.png)
 
   For the next step, you won't need to be in your admin role.
 
@@ -168,7 +165,7 @@ To confirm that the installation occurred as expected, run the following command
 vtex
 ```
 
-![vtex](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/development/Media/vtex-command.png)
+![vtex](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-command_171.png)
 
 ### Troubleshooting
 
@@ -195,7 +192,7 @@ According to your operating system, run the following command in the terminal to
   ```
 
 - <span class="fa fa-linux">&nbsp;</span>Linux
-  
+
   ```sh
   ln -s /usr/local/lib/vtex /usr/local/lib/vtex/node_modules/vtex
   ```

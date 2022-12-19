@@ -28,7 +28,7 @@ Once your changes are saved, VTEX IO will be able to understand that whenever a 
 
 Therefore, the currency code shown should follow currency code international standards (ISO standard). For these scenarios, the platform will display prices (including their decimal places) according to the international currency code set in the `Currency Code` field.
 
->ℹ️ The price's decimal places are displayed according to language selected in the `Currency Code` field, following the ISO standards. Therefore, the `Currency Decimal Places` field is not mandatory. You should only use it in scenarios where you desire to overwrite the decimal places defined by the ISO standards.
+> ℹ️ The price's decimal places are displayed according to language selected in the `Currency Code` field, following the ISO standards. Therefore, the `Currency Decimal Places` field is not mandatory. You should only use it in scenarios where you desire to overwrite the decimal places defined by the ISO standards.
 
 Following the same logic, whenever a user's locale is the same as the default one set in the `Culture Info` field, VTEX IO will interpret that it is dealing with a local user and thereby the currency code won’t need to follow international standards - the commonly used currency symbol for that country will suffice.
 

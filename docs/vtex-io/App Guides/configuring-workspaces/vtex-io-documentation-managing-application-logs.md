@@ -10,7 +10,7 @@ VTEX IO provides a logging service that allows developers to keep track of error
 
 In the following section, you'll learn how to implement the VTEX IO Logging Service in your apps and how to retrieve their logs.
 
->ℹ️ The VTEX IO Logging Service is currently available for Node apps only.
+> ℹ️ The VTEX IO Logging Service is currently available for Node apps only.
 
 ---
 
@@ -37,7 +37,7 @@ const helloWorld = (Context: ctx) => {
 
 In this example, the `helloWorld` function receives an object with a [**Context**](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts#L34) interface as a parameter.
 
->ℹ️ The `Context` interface contains many implementations inherent to the VTEX IO platform. One of those implementations is called `vtex` - an object containing all [VTEX IO infrastructure](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts#L116) related metadata, such as `account`, `workspace`, `tenant`, `settings`, and some service implementations. In the previous example, we used the `logger` service, which is an implementation inside `vtex` responsible for generating log messages.
+> ℹ️ The `Context` interface contains many implementations inherent to the VTEX IO platform. One of those implementations is called `vtex` - an object containing all [VTEX IO infrastructure](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts#L116) related metadata, such as `account`, `workspace`, `tenant`, `settings`, and some service implementations. In the previous example, we used the `logger` service, which is an implementation inside `vtex` responsible for generating log messages.
 
 3. [Destructure](https://www.typescriptlang.org/docs/handbook/variable-declarations.html#destructuring) the `logger` object from the `vtex` context and use its methods (i.e., `error`, `warn`, `info`, and `debug`) to provide error, warning, debugging, or informative messages in the log. Take the following example:
 
@@ -53,7 +53,7 @@ const helloWorld = (Context: ctx) => {
 }
 ```
 
->ℹ️ Every exception that happens inside a VTEX IO service application is intercepted and automatically logged with a `logger.error` implementation.
+> ℹ️ Every exception that happens inside a VTEX IO service application is intercepted and automatically logged with a `logger.error` implementation.
 
 ## Retrieving application logs
 
@@ -92,7 +92,7 @@ vtex logs --all
   routeId: 'login' }
 ```
 
->ℹ️ You can also retrieve logs from a specific app installed in your account by running the following command: `vtex logs {account}.{serviceAppExample}`. Remeber to replace `account` with your account name and `serviceAppExample` with the desired app name.
+> ℹ️ You can also retrieve logs from a specific app installed in your account by running the following command: `vtex logs {account}.{serviceAppExample}`. Remeber to replace `account` with your account name and `serviceAppExample` with the desired app name.
 
 We suggest running `vtex logs --all > {mylogfile.logs}` to save the log messages in a local file. Replace `{mylogfile.logs}` with the most suitable name for you.
 

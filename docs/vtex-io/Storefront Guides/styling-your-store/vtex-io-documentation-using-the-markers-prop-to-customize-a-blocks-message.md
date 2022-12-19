@@ -18,7 +18,7 @@ Find out how to configure the `markers` prop in the step-by-step below.
 
 ## Step by step
 
->ℹ️ Before going through the steps, make sure that the block in which you are working accepts the `markers` prop. You can check this in its <a href="https://developers.vtex.com/vtex-developer-docs/docs/overview-5/">documentation</a>.
+> ℹ️ Before going through the steps, make sure that the block in which you are working accepts the `markers` prop. You can check this in its <a href="https://developers.vtex.com/vtex-developer-docs/docs/overview-5/">documentation</a>.
 
 1. Using your terminal and [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired VTEX in a [Development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace/).
 2. Access the directory where your store's theme is stored and open it using your code editor.
@@ -42,9 +42,9 @@ Find out how to configure the `markers` prop in the step-by-step below.
 
 ![markers-prop-site-editor](https://user-images.githubusercontent.com/52087100/78163670-0f6f9300-741f-11ea-83a4-7122113234fb.gif)
 
->ℹ️ You can use the prop's value to wrap any desired part of the block's message.
+> ℹ️ You can use the prop's value to wrap any desired part of the block's message.
 
->ℹ️ Notice: the block's message variables can be found in the block/app documentation.
+> ℹ️ Notice: the block's message variables can be found in the block/app documentation.
 
 9. Save the changes. This will give the wrapped text a unique identifier, allowing for CSS customization of the HTML message related element.
 10. Using the Development workspace, access the site of the account that you are working on (`{workspaceName}--{accountName}.myvtex.com`). Thereafter, inspect the HTML element that corresponds to the edited block's message.

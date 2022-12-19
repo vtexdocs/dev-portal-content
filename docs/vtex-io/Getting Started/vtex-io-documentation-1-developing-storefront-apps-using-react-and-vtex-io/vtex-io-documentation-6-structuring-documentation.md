@@ -21,4 +21,4 @@ In addition to presenting the theme blocks exported by your app, you also need t
 
 Remember that **documentation is an ongoing process**–whenever a new setting modifies the user experience in your app, the `README.md` file needs to be updated.
 
->ℹ️ Block properties are the same as the React component that it renders. This means that when you import a React component and link it to a theme block being developed, the theme block automatically inherits the properties of the React component. So, do not forget to access the component's documentation and document the properties available for the block in your app's `README.md` file, clarifying the setting for each one and its default value.
+> ℹ️ Block properties are the same as the React component that it renders. This means that when you import a React component and link it to a theme block being developed, the theme block automatically inherits the properties of the React component. So, do not forget to access the component's documentation and document the properties available for the block in your app's `README.md` file, clarifying the setting for each one and its default value.

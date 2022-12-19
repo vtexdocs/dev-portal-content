@@ -24,7 +24,7 @@ Thus, to help you guarantee the success of your brand's online presence, we'll t
 5. Now, considering our documentation on [Best practices for optimizing performance](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance), activate the desired features, and save the changes.
 6. Access your store in the current workspace that you're working in and check if the performance improvements were applied.
 
->ℹ️ Keep in mind that it might take some time before some changes are applied.
+> ℹ️ Keep in mind that it might take some time before some changes are applied.
 
 ## Step 2: Testing and analyzing performance
 
@@ -34,7 +34,7 @@ Thus, to help you guarantee the success of your brand's online presence, we'll t
 
 >⚠️ Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show the performance score of your store in the specified workspace. Thus, keep in mind: to analyze performance in a workspace, **you must use the `?workspace={productionWorkspace}` query string** as shown in Step 2.3.
 
->ℹ️ Before promoting your workspace to master, we recommend that you measure the performance improvements by comparing the performance score in the production and the master workspace.
+> ℹ️ Before promoting your workspace to master, we recommend that you measure the performance improvements by comparing the performance score in the production and the master workspace.
 
 ## Step 3: Making your changes publicly available
 

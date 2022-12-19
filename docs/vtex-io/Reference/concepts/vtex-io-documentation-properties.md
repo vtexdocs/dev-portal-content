@@ -19,7 +19,7 @@ In the example above, `name` and `height` are the object's keys whose values are
 
 The `key + value` set constitutes what we call the property (or *prop*) of the JSON, being responsible for qualifying it by setting its essential characteristics.
 
->ℹ️ The key and value can also be called, respectively, property name and property value.
+> ℹ️ The key and value can also be called, respectively, property name and property value.
 
 In the blocks context, the properties (`props`) end up acting on the **definition of the performance and visual identity of the component rendered in the interface** - the more props a block has, the more flexible its configuration is for the end user.
 

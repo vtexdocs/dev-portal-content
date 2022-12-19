@@ -12,7 +12,7 @@ Therefore, when using the VTEX Store Framework, you will need to install several
 
 In addition to that, if you are developing a new project, installing an app is a fundamental step for testing the reliability of your new code settings. Once your app is already [published](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-publishing-an-app), you are able to install it in any workspace you may be working on.
 
->ℹ️ Remember the following: private apps (apps without the `billingOptions` field in its `manifest.json` file) can only be installed in the VTEX account where it was published. Public apps with free `billingOptions` can be installed in any VTEX account by any admin user. Lastly, public apps with billable `billingOptions` can only be installed by admin users with the License Manager's `BuyApp` permission. Once this installation takes place, the app will be charged by the end of every month in the accounts that installed it.
+> ℹ️ Remember the following: private apps (apps without the `billingOptions` field in its `manifest.json` file) can only be installed in the VTEX account where it was published. Public apps with free `billingOptions` can be installed in any VTEX account by any admin user. Lastly, public apps with billable `billingOptions` can only be installed by admin users with the License Manager's `BuyApp` permission. Once this installation takes place, the app will be charged by the end of every month in the accounts that installed it.
 
 ## Step by step
 

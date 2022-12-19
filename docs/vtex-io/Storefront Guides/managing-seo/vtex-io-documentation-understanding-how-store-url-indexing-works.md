@@ -42,7 +42,7 @@ A URL can be removed from the Sitemap listing and no longer be indexed if:
 - It returns a status code `404`;
 - It lost its relevance (is no longer accessed) and, consequently, fell off the list of most visited site URLs.
 
->ℹ️ Note: URLs that will are removed from the Sitemap list and are no longer indexed by search engines will still continue to work normally for site users.
+> ℹ️ Note: URLs that will are removed from the Sitemap list and are no longer indexed by search engines will still continue to work normally for site users.
 
 #### Managing the most visited search URLs list
 

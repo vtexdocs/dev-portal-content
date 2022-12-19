@@ -33,7 +33,7 @@ brew uninstall vtex
 curl -L https://vtex.io/vtexcli/uninstall | sh
 ```
 
->ℹ️ The standalone is a tarball with a binary that contains its own node.js binary.
+> ℹ️ The standalone is a tarball with a binary that contains its own node.js binary.
 <br>
 </details>
 

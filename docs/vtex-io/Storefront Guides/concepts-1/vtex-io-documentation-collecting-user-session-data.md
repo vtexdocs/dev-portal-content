@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2022-04-27T13:50:39.981Z"
 updatedAt: "2022-12-13T20:17:44.566Z"
 ---
+
 VTEX keeps track of users’ sessions within apps by keeping session information within a namespace. Each app owns its namespace, and only those can change its session properties. For example, **vtex.search-session** is responsible for the namespace search.
 
 This guide covers the basics of how to identify session changes from a specific namespace  and react to them.
@@ -20,30 +21,30 @@ It is easier to understand how your session is structured by seeing it. In your 
 `https://{workspace}–{accountName}.myvtex.com/api/sessions?items=*`
 This will show the session available for your navigation.
 
->⚠️ Only use `items=*` during the discovery phase, never in production; if for some reason you need to get the user's session using this API, you can specify which namespace and property you need, i.e.,
- `items=authentication.storeUserEmail,checkout.orderFormId`.
+> ⚠️ Only use `items=*` during the discovery phase, never in production; if for some reason you need to get the user's session using this API, you can specify which namespace and property you need, i.e.,
+> `items=authentication.storeUserEmail,checkout.orderFormId`.
 
 ## Hands-on
 
 ### Bootstrapping
 
->⚠️ The [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) already has a list of templates you can use to start any project, such as Services, Admin apps, React Apps, among others. If you already have an App and only want to include this feature, skip this and go to the next step.
+> ⚠️ The [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) already has a list of templates you can use to start any project, such as Services, Admin apps, React Apps, among others. If you already have an App and only want to include this feature, skip this and go to the next step.
 
 1. Open your terminal after installing our CLI, navigate to your preferred folder, and type `vtex init.`
-You will see the following options:
-
-![Screenshot with init options](https://user-images.githubusercontent.com/47991446/165641477-d13b61e3-b465-4c11-99ee-1edeee6ad96d.png)
+   You will see the following options:
+   ![Screenshot with init options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/165641477-d13b61e3-b465-4c11-99ee-1edeee6ad96d_35.png)
 
 2. Using your keyboard arrow, select `service-example` , press `enter`/`return`, and confirm the folder name your project will be initiated and confirm your selection.
 
 3. Rename it to a different folder name if you want.
+
 4. Open your project's folder and edit the `manifest.json` file using your favorite code editor. Make the changes to `vendor`, `name`, `description`, and `version`. Remember that "vendor" is your account name.
 
 5. Using your terminal, enter this command:
 
-    ```
-    cd YOUR_APP_FOLDER_NAME and vtex link.
-    ```
+   ```
+   cd YOUR_APP_FOLDER_NAME and vtex link.
+   ```
 
 That's it for your bootstrap, it should be running.
 
@@ -53,13 +54,13 @@ That's it for your bootstrap, it should be running.
 
 1. First, add `vtex.session@0.x` to your manifest.json file under `builders`
 
-    ```json
-    "Builders": {
-        "Node": "6.x",
-        "Docs: "0.x",
-        "Vtex.session": "0.x"
-    },
-    ```
+   ```json
+   "Builders": {
+       "Node": "6.x",
+       "Docs: "0.x",
+       "Vtex.session": "0.x"
+   },
+   ```
 
 2. Create a folder with the same name as this builder (`vtex.session`) on your project root path and add a `configuration.json` file to it.
 
@@ -131,7 +132,7 @@ This handler will receive a Context that gives you access to the request body. A
 
 It should look like the example below.
 
-![Example resulting code](https://user-images.githubusercontent.com/47991446/165641499-de03f9c0-b719-4d30-b57e-6b5312bf2dd7.png)
+![Example resulting code](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/165641499-de03f9c0-b719-4d30-b57e-6b5312bf2dd7_134.png)
 
 4. Now that you have your handler, import it to the `./node/index.ts` file and load it to the Service.
 
@@ -149,9 +150,9 @@ Export default new Service{{
 
 Now that everything is set, link your app to a workspace and keep an eye on the terminal. Once you authenticate or log out, you should be able to see `clearCart =>` in the terminal containing the body request.
 
- ![Terminal screenshot](https://user-images.githubusercontent.com/47991446/165641518-8ed69506-f4e1-4143-81cc-4b9504c9659c.png)
+![Terminal screenshot](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/165641518-8ed69506-f4e1-4143-81cc-4b9504c9659c_152.png)
 
- You can also access this path to check the public namespace being changed:
+You can also access this path to check the public namespace being changed:
 
 ```
 https://{workspace}–{accountName}.myvtex.com/api/sessions?items=public.demo
@@ -182,4 +183,4 @@ After linking, it may take a few minutes to initiate everything on the `vtex.ses
 
 If you wish, you can [download this complete example](https://drive.google.com/file/d/1ISNE6MhYz5pQEWmqjOmfpsUJ7ApBrwXw/view?usp=sharing).
 
->⚠️ Don't forget to change the vendor in your `./manifest.json` file.
+> ⚠️ Don't forget to change the vendor in your `./manifest.json` file.

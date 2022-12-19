@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-07-16T18:56:22.303Z"
 updatedAt: "2022-12-13T20:17:44.052Z"
 ---
+
 The VTEX IO platform provides a **native [service worker](https://developers.google.com/web/fundamentals/primers/service-workers)** to every store using VTEX Store Framework.
 
 This is due to the fact that all VTEX Store Framework stores natively benefit from having a **PWA** at their disposal.
@@ -22,10 +23,10 @@ Since a website can only have one service worker running, you can **choose to de
 3. Click on the Advanced tab.
 4. Toggle the Service Worker button.
 
-![service-worker-toggle-recipe](https://user-images.githubusercontent.com/52087100/87695658-233ccc00-c766-11ea-9615-7cab9045f62d.png)
+![service-worker-toggle-recipe](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/87695658-233ccc00-c766-11ea-9615-7cab9045f62d_25.png)
 
 5. Save changes.
 
->ℹ️ Notice that the toggle button can activate and deactivate the VTEX IO native service worker. Therefore, use the step by step above to manage it according to your store's needs.
+> ℹ️ Notice that the toggle button can activate and deactivate the VTEX IO native service worker. Therefore, use the step by step above to manage it according to your store's needs.
 
 Once you save the changes, the VTEX Service Worker will be automatically disabled.

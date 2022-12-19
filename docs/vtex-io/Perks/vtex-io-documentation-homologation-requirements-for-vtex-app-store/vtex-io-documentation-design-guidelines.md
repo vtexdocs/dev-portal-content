@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-07-22T14:20:04.371Z"
 updatedAt: "2022-12-13T20:17:45.071Z"
 ---
+
 Before you begin [developing your App](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app), you must first decide on the UX flows and interfaces that will make it accessible and intuitive to use.
 
 Refer to the best practices listed below when designing your app.
@@ -22,21 +23,21 @@ The apps available through the [VTEX App Store](https://apps.vtex.com) must be c
 
 Take a look at the following example of an Admin app using some of the VTEX Styleguide components.
 
-![admin-page-example](https://user-images.githubusercontent.com/67270558/158217591-cba1ddec-2de5-4eda-aa4a-c45fee38db0f.png)
+![admin-page-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/158217591-cba1ddec-2de5-4eda-aa4a-c45fee38db0f_25.png)
 
 Check out some of our most-used components listed on [VTEX Styleguide](https://styleguide.vtex.com/#/Introduction):
 
-| Component Name | Usage |
-| -------- | -------- |
-| Layout     | Displays an empty standard Admin page. Refer to the [Layout guidelines](https://styleguide.vtex.com/#/Components/Admin%20structure/Layout) for more details.    |
-| PageBlock   | Displays an empty container. Refer to the [PageBlock guidelines](https://styleguide.vtex.com/#/Components/Admin%20structure/PageBlock) for more details.|
-| PageHeader   | Displays a standard header used in Admin pages. Refer to the [PageHeader guidelines](https://styleguide.vtex.com/#/Components/Admin%20structure/PageHeader) for more details.|
-| Styles     |  The Styles configure your app's layout's colors, spacing, and typography. Refer to the [Styles guidelines](https://styleguide.vtex.com/#/Styles) for more details.|
-| Tabs     |  Displays a navigation tab that allows alternating between content in the same level of hierarchy Refer to the [Tabs guidelines](https://styleguide.vtex.com/#/Components/Navigation/Tabs) for more details.    |
-| Button     | Displays a button that trigger actions and/or redirects users to another page. Refer to the [Button guidelines](https://styleguide.vtex.com/#/Components/Forms/Button) for more details.|
-| Alerts    | Displays short notifications to users about an issue or a new feature. Refer to the [Alert guidelines](https://styleguide.vtex.com/#/Components/Notification/Alert) for more details.|
-| Table     | Displays structured data and offers controls to navigate, search, and filter through it. Refer to the [Table guidelines](https://styleguide.vtex.com/#/Components/Display/Table) for more details.|
-| Modal    | Displays a dialog window on top of a page content. Once a Modal opens, the user can not interact with the content behind it. Refer to the [Modal guidelines](https://styleguide.vtex.com/#/Components/Overlays/Modal) for more details. |
+| Component Name | Usage                                                                                                                                                                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layout         | Displays an empty standard Admin page. Refer to the [Layout guidelines](https://styleguide.vtex.com/#/Components/Admin%20structure/Layout) for more details.                                                                            |
+| PageBlock      | Displays an empty container. Refer to the [PageBlock guidelines](https://styleguide.vtex.com/#/Components/Admin%20structure/PageBlock) for more details.                                                                                |
+| PageHeader     | Displays a standard header used in Admin pages. Refer to the [PageHeader guidelines](https://styleguide.vtex.com/#/Components/Admin%20structure/PageHeader) for more details.                                                           |
+| Styles         | The Styles configure your app's layout's colors, spacing, and typography. Refer to the [Styles guidelines](https://styleguide.vtex.com/#/Styles) for more details.                                                                      |
+| Tabs           | Displays a navigation tab that allows alternating between content in the same level of hierarchy Refer to the [Tabs guidelines](https://styleguide.vtex.com/#/Components/Navigation/Tabs) for more details.                             |
+| Button         | Displays a button that trigger actions and/or redirects users to another page. Refer to the [Button guidelines](https://styleguide.vtex.com/#/Components/Forms/Button) for more details.                                                |
+| Alerts         | Displays short notifications to users about an issue or a new feature. Refer to the [Alert guidelines](https://styleguide.vtex.com/#/Components/Notification/Alert) for more details.                                                   |
+| Table          | Displays structured data and offers controls to navigate, search, and filter through it. Refer to the [Table guidelines](https://styleguide.vtex.com/#/Components/Display/Table) for more details.                                      |
+| Modal          | Displays a dialog window on top of a page content. Once a Modal opens, the user can not interact with the content behind it. Refer to the [Modal guidelines](https://styleguide.vtex.com/#/Components/Overlays/Modal) for more details. |
 
 ## Identify potential
 

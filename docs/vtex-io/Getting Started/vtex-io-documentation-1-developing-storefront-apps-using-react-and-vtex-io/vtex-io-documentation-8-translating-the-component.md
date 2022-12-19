@@ -73,7 +73,7 @@ export default HelloWorld
 
 >⚠️ Note that in the example above we use the `FormattedMessage` component by associating it to the `"store/my-app.hello"` ID, which we created for our example. Since each ID has to be linked to a single string only, it is necessary to define the `FormattedMessage` component in this folder as many times as necessary in accordance with the translatable strings.
 
->ℹ️ When creating an `id`, consider using the `store/` or `admin/` prefixes (depending on your app's functionality) followed by the app name (< code>my-app`) and, finally, a short word that can identify this string. For example,`store/my-app.hello`.
+> ℹ️ When creating an `id`, consider using the `store/` or `admin/` prefixes (depending on your app's functionality) followed by the app name (< code>my-app`) and, finally, a short word that can identify this string. For example,`store/my-app.hello`.
 
 2. In your app's root directory, create a `messages` folder.
 3. In the newly created folder, create a new `.json` file named using the ISO code for the desired language. For example: `pt`, `en`, `fr`.
@@ -89,7 +89,7 @@ export default HelloWorld
 
 When you [*link*](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) your app again and change the page language, you will notice that the text `Hello World!` is automatically translated into the UI thanks to the `react-intl` library component and Messages.
 
->ℹ️ To test these effects in the store linked to your VTEX account, access `https://{workspaceName}-{accountName}.myvtex.com` and add the query string `cultureInfo` with desired language value. For example, to check your page in Brazilian Portuguese type: `https://{workspaceName}-{accountName}.myvtex.com/?cultureInfo=pt-BR`, substituting `{workspaceName}` and `{accountName}` with the development workspace name and your VTEX account name, respectively.
+> ℹ️ To test these effects in the store linked to your VTEX account, access `https://{workspaceName}-{accountName}.myvtex.com` and add the query string `cultureInfo` with desired language value. For example, to check your page in Brazilian Portuguese type: `https://{workspaceName}-{accountName}.myvtex.com/?cultureInfo=pt-BR`, substituting `{workspaceName}` and `{accountName}` with the development workspace name and your VTEX account name, respectively.
 
 ## Overwriting automatic translations
 
@@ -198,7 +198,7 @@ export default HelloUser
 
 5. Save your code changes.
 
->ℹ️ If concatenating the string seems complicated, we recommend reading this [documentation](https://format-message.github.io/icu-message-format-for-translators/index.html). It will help your learning process, explaining more details about formatting messages using ICU and variable interpolation.
+> ℹ️ If concatenating the string seems complicated, we recommend reading this [documentation](https://format-message.github.io/icu-message-format-for-translators/index.html). It will help your learning process, explaining more details about formatting messages using ICU and variable interpolation.
 
 ### Adjusting gender and number agreement
 
@@ -243,7 +243,7 @@ export default PluralSingularComponent
 
 5. Save your code changes.
 
->ℹ️ If concatenating the string seems complicated, we recommend reading this <a href="https://format-message.github.io/icu-message-format-for-translators/index.html">documentation</a>. It will help your learning process, explaining more details about formatting messages using ICU and variable interpolation.
+> ℹ️ If concatenating the string seems complicated, we recommend reading this <a href="https://format-message.github.io/icu-message-format-for-translators/index.html">documentation</a>. It will help your learning process, explaining more details about formatting messages using ICU and variable interpolation.
 
 ### Adjusting percentage representation
 
@@ -310,4 +310,4 @@ export default ErrorMessage
 
 3. Save your code changes.
 
->ℹ️ Note that we use a variable to choose the `id` used in the `FormattedMessage` component, making the message dynamic. To declare dynamic messages in your block's code, you need to describe all possible exported messages in an object passed in the `defineMessages` function from the `react-intl` package. This function, which returns the same object without changes, is useful for analyzing the code statically, ensuring that Messages delivers only the messages necessary for the browser to render.
+> ℹ️ Note that we use a variable to choose the `id` used in the `FormattedMessage` component, making the message dynamic. To declare dynamic messages in your block's code, you need to describe all possible exported messages in an object passed in the `defineMessages` function from the `react-intl` package. This function, which returns the same object without changes, is useful for analyzing the code statically, ensuring that Messages delivers only the messages necessary for the browser to render.

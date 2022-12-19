@@ -48,7 +48,7 @@ Once you [enable the Sponsor Account behavior](https://developers.vtex.com/vtex-
 1. In the `manifest.json` file, go to the `dependecies`section.
 2. Change the `dependencies` declaration, according to your development needs:
 
->ℹ️ Notice that the Edition App being developed extends its dependency, inheriting all its apps and configurations.
+> ℹ️ Notice that the Edition App being developed extends its dependency, inheriting all its apps and configurations.
 
 - If your store was built with [VTEX legacy CMS](https://help.vtex.com/tutorial/o-que-e-o-cms--EmO8u2WBj2W4MUQCS8262) and this is your first Edition App, keep it as `"vtex.edition-business": "0.x"`.
 - If your store was built with the [Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-store-framework) and this is your first Edition App, change it to `"vtex.edition-store": "5.x"`.
@@ -103,4 +103,4 @@ Once you are sure of all the changes performed, **[publish and deploy](https://d
 
 Once you receive a successful reply from the support ticket, you'll start to have child accounts sponsored by the account you just used to develop and release your new Edition App.
 
->ℹ️ Notice that, from the child accounts' point of view, the apps specified by the Sponsor Account are immutable. That means child accounts aren't able to perform changes nor uninstall apps installed by a Sponsor Account. Hence, if you need to modify any app or configuration of your Edition App, you'll have to **launch a new version** bearing these changes. In this case, check our documentation on [updating Edition apps](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-updating-edition-apps).
+> ℹ️ Notice that, from the child accounts' point of view, the apps specified by the Sponsor Account are immutable. That means child accounts aren't able to perform changes nor uninstall apps installed by a Sponsor Account. Hence, if you need to modify any app or configuration of your Edition App, you'll have to **launch a new version** bearing these changes. In this case, check our documentation on [updating Edition apps](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-updating-edition-apps).

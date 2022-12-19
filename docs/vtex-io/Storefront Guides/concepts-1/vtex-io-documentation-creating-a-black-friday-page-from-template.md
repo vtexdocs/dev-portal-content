@@ -6,15 +6,16 @@ hidden: false
 createdAt: "2021-10-14T16:05:41.336Z"
 updatedAt: "2022-12-13T20:17:45.036Z"
 ---
+
 You may want to create custom landing pages for big events, such as Black Friday and Cyber Monday, to compose your marketing strategy.
 
 With that in mind, we created a landing page template for Black Friday following VTEX recommended practices to help your store maximize profits and conversions.
 
 This guide will show you how to implement the Black Friday landing page template.
 
->ℹ️ You can also base on this template to create a new or refreshed homepage for your store website.
+> ℹ️ You can also base on this template to create a new or refreshed homepage for your store website.
 
-![Black Friday landing page template](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/templates/blackfriday.gif)
+![Black Friday landing page template](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/blackfriday_17.gif)
 
 ## Step by step
 
@@ -42,14 +43,14 @@ Download the template files available here: [black-friday-template-files 2021.zi
 
 3. Copy and paste the code you previously downloaded into the corresponding folders of your store theme project.
 
->⚠️ If you are running "styles": "1.x", you must copy and paste the CSS code within its corresponding CSS files since this version doesn't allow subfolders for CSS.
+> ⚠️ If you are running "styles": "1.x", you must copy and paste the CSS code within its corresponding CSS files since this version doesn't allow subfolders for CSS.
 
 4. Check the code comments within the `/store/blocks/custom-template-blackfriday-lp/custom-template-blackfriday-lp.jsonc` file and add your pre-existing shelves accordingly.
 
-![bf-template](https://user-images.githubusercontent.com/60782333/137352422-c8f144bb-750e-4ccf-b339-c921efaf9950.png)
+![bf-template](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/137352422-c8f144bb-750e-4ccf-b339-c921efaf9950_49.png)
 
 5. Using the terminal, run `vtex link` on your project folder.
-7. Go back to your code and customize the template as you wish.
+6. Go back to your code and customize the template as you wish.
 
 ### Step 3 - Implementing the page at your store
 

@@ -20,7 +20,7 @@ For implementation details on how to associate a custom page to a content type, 
 
 In this step by step, you will learn how to create a content type and customize different pages associated with it via the Admin. As an example, we'll use the `${collection}` content type.
 
->ℹ️ Content types cannot be used in the `blocks.json` file.
+> ℹ️ Content types cannot be used in the `blocks.json` file.
 
 ### Step 1 - Creating a new page
 

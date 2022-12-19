@@ -36,7 +36,7 @@ At the end of the day, CSS Handles are nothing more than your **store's layout b
 }
 ```
 
->ℹ️ Remember: if the Handle requests an add-on, such as the HTML element's attribute or a Handle modifier, add it next to the Handle's name, following this format: `{cssHandleName}--{addon)`.
+> ℹ️ Remember: if the Handle requests an add-on, such as the HTML element's attribute or a Handle modifier, add it next to the Handle's name, following this format: `{cssHandleName}--{addon)`.
 
 Once you app is linked and the changes duly saved, the new customization should immediately be reflected onto your workspace.  
 
@@ -72,7 +72,7 @@ After that, you can use the class `.menuItem--header` to target specifically the
 
 ![specific menu items with css handles applied using blockClass](https://user-images.githubusercontent.com/5691711/70259424-e985fa80-176c-11ea-93e7-5c72770804f6.png)
 
->ℹ️  Our team is constantly working on developing CSS Handles for every possible store component. If however your are unable to find a CSS Handle for a component you wish to customize, share this scenario with us at [Store Discussion](https://github.com/vtex-apps/store-discussion).  
+> ℹ️  Our team is constantly working on developing CSS Handles for every possible store component. If however your are unable to find a CSS Handle for a component you wish to customize, share this scenario with us at [Store Discussion](https://github.com/vtex-apps/store-discussion).  
 
 ## Best practices
 

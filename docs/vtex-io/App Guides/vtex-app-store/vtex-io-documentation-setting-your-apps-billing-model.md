@@ -28,7 +28,7 @@ Without `billingOptions`, VTEX IO will understand that the app in question shoul
 
 When making your app public available to the VTEX IO ecosystem, you must set up the `billingOptions` field in the app's [`manifest.json`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest) file. In this context, you first need to define whether or not your app will be charged. For more information, please refer to the [`billingOptions` documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options).
 
->ℹ️ You can [contact the VTEX support team](https://help.vtex.com/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) to get more information about the contracts and accounts that have installed your app.
+> ℹ️ You can [contact the VTEX support team](https://help.vtex.com/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) to get more information about the contracts and accounts that have installed your app.
 
 ### Step by step
 

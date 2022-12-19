@@ -16,7 +16,7 @@ In fact, the whole app implementation must relate to the builders declared in th
 
 When running an IO app, each builder converts the files included in its corresponding folder into configurations to the competent services. Check our [implementation example](#implementation-example).
 
->ℹ️ Notice that each builder has its own set of rules and validation process.
+> ℹ️ Notice that each builder has its own set of rules and validation process.
 
 One important aspect is that an app can have as many builders as you want. That allows bundling front and backend development and delivering your solution with just one package.
 

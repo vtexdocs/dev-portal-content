@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2022-04-27T13:50:39.980Z"
 updatedAt: "2022-12-13T20:17:44.280Z"
 ---
+
 The VTEX shopping cart default behavior is to keep the cart alive until an order is placed. When this happens, a new cart is created. If a business rule requires a new cart every time a user logs out, we can use the [Session Watcher](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-collecting-user-session-data) to clear cart information.
 
 > ℹ️ It is not possible to get a brand new cart, but we can repurpose the current cart by removing any existing information on it.
@@ -72,7 +73,7 @@ export class Checkout extends JanusClient {
 
 The same thing is required if you're accessing an external endpoint. Always add the `host` and `path` as an `outbound-access`.
 
->⚠️ Do not use protocol in the `host` (http, https). The `host` does not support wildcard within the address. It can be either fixed `host` or only `*` , never both. The `path` supports wildcard.
+> ⚠️ Do not use protocol in the `host` (http, https). The `host` does not support wildcard within the address. It can be either fixed `host` or only `*` , never both. The `path` supports wildcard.
 
 3. Now that you have an initial class setup, you can let your application know that it exists. Do this by importing it to the `Clients` constructor under `./node/clients/index.ts`
 
@@ -145,7 +146,7 @@ Back to `./resolvers/index.ts` load the checkout client from the context of our 
 
 The logical flow is:
 
-![Cart cleaning app logical flow](https://user-images.githubusercontent.com/47991446/165640268-97a65125-0e82-4ccc-aa89-f01afcd5cd9a.png)
+![Cart cleaning app logical flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/165640268-97a65125-0e82-4ccc-aa89-f01afcd5cd9a_148.png)
 
 You should have code similar to the example below.
 
@@ -222,7 +223,7 @@ export const resolvers = {
 }
 ```
 
->⚠️ Don't forget to change the vendor in your `./manifest.json` file.
+> ⚠️ Don't forget to change the vendor in your `./manifest.json` file.
 
 To link the app, run this command:
 

@@ -6,9 +6,10 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.368Z"
 updatedAt: "2022-12-13T20:17:44.537Z"
 ---
+
 Workspaces are environments isolated from one another. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your store's live version or other developers' work.
 
->ℹ️ If you're used to working with git, think of workspaces as branches.
+> ℹ️ If you're used to working with git, think of workspaces as branches.
 
 There are three main types of workspaces:
 
@@ -18,4 +19,4 @@ There are three main types of workspaces:
 
 Development and production workspaces can be accessed at `https://{workspace}--{account}.myvtex.com`.
 
-![Workspaces](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Concepts/Media/workspace.png)
+![Workspaces](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/concepts/workspace_21.png)

@@ -36,7 +36,7 @@ brew install vtex/vtex
 vtex autoupdate
 ```  
 
->ℹ️ The standalone update is a tarball with a binary that contains its own node.js binary.
+> ℹ️ The standalone update is a tarball with a binary that contains its own node.js binary.
 
 <br>
 </details>

@@ -9,7 +9,7 @@ In this step-by-step, we teach you how to overwrite an automatic message transla
 
 As a background, catalog messages are translatable text strings related to the catalog of a store, saved as external data in the [Catalog API](https://developers.vtex.com/reference/catalog-api-overview).
 
->ℹ️ The Catalog API is one of the multiple REST APIs that compose the VTEX Administrative panel. This particular API is responsible for manipulating a store’s sales channels, categories, brands, products, SKUs, and specifications.
+> ℹ️ The Catalog API is one of the multiple REST APIs that compose the VTEX Administrative panel. This particular API is responsible for manipulating a store’s sales channels, categories, brands, products, SKUs, and specifications.
 
 The following list contains the settings from the Catalog API that are internally set as translatable. Meaning that, given a locale, an automatic translation fetched from the *automatic translation service* is available.
 
@@ -86,7 +86,7 @@ According to the following example and the following explanations, fill in the *
 - `linkId`: the `textLink` (unless your store is a cross-border one, it must **not** be translated).
 - `locale`: target translation locale.
 
->ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the category URL. Hence, an alias with the translated URL slug of this category will be automatically created in the [Rewriter](https://developers.vtex.com/docs/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a category registered under the `eletronics` slug as in `http://{storename}.com/us/eletronics/d`, could have its slug translated to `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
+> ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the category URL. Hence, an alias with the translated URL slug of this category will be automatically created in the [Rewriter](https://developers.vtex.com/docs/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a category registered under the `eletronics` slug as in `http://{storename}.com/us/eletronics/d`, could have its slug translated to `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
 
 ## Brand
 
@@ -168,7 +168,7 @@ According to the following example and the following explanations, fill in the *
 - `linkId`: the `textLink` (unless your store is a cross-border one, it must **not** be translated).
 - `locale`: target translation locale.
 
->ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the product URL. Hence, an alias with the translated URL slug of this product will be automatically created in the [Rewriter](https://developers.vtex.com/docs/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a product registered under the `blue-top-retro-camera` slug as in `http://{storename}.com/us/blue-top-retro-camera/p`, could have its slug translated to `camera-retro-azul` for the `pt-BR` binding, as in `http://{storename}.com/br/camera-retro-azul/p`.
+> ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the product URL. Hence, an alias with the translated URL slug of this product will be automatically created in the [Rewriter](https://developers.vtex.com/docs/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a product registered under the `blue-top-retro-camera` slug as in `http://{storename}.com/us/blue-top-retro-camera/p`, could have its slug translated to `camera-retro-azul` for the `pt-BR` binding, as in `http://{storename}.com/br/camera-retro-azul/p`.
 
 ## SKU
 

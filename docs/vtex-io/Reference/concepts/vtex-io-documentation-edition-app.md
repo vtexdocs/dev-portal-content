@@ -6,11 +6,12 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.317Z"
 updatedAt: "2022-12-13T20:17:44.705Z"
 ---
+
 An Edition App consists of a bundle of settings, policies, back-end and front-end apps encapsulated and exported by a [Sponsor Account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-sponsor-account).
 
 Its main objective is to facilitate the installation of numerous apps that might be considered essential to set up one specific environment.
 
-![EditionApp](https://user-images.githubusercontent.com/60782333/91470034-927c0480-e86a-11ea-866e-54575f3c0975.png)
+![EditionApp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/concepts/91470034-927c0480-e86a-11ea-866e-54575f3c0975_13.png)
 
 For example, consider the following two Edition Apps developed by the `vtex` account:
 
@@ -24,7 +25,7 @@ Notice that this can be especially useful for complex account families, such as 
 
 That's because, besides the fundamental development environment set up by a `vtex` native Edition App, a Sponsor Account can extend an Edition App by creating a new and customized one that meets its account family needs.
 
->ℹ️ To change the Edition App installed in an account, you must [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk). This is required to avoid critical issues that its misconfiguration could cause.
+> ℹ️ To change the Edition App installed in an account, you must [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk). This is required to avoid critical issues that its misconfiguration could cause.
 
 Note that all Edition apps must depend, directly or indirectly, on either `vtex.edition-business` or `vtex.edition-store`.
 

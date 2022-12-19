@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-10-26T10:30:54.362Z"
 updatedAt: "2022-12-13T20:17:44.413Z"
 ---
+
 Events or Pixel Events are notifications automatically broadcasted by a website whenever users perform critical actions in your store, such as:
 
 - Adding an item to the cart (`addToCart` event).
@@ -21,18 +22,18 @@ The `customPixelEventId` prop works as an event sender and receiver depending on
 
 In the table below, you can find the list of blocks that currently accept the `customPixelEventId` as means to work with events, as well as their behavior when declaring the prop:
 
-| Block name | Behavior |
-| ---------- | --------- |
-| `add-to-cart-button` | Sends an event whenever it is clicked on. |
-| `minicart.v2` | Receives an event and behave on the UI accordingly. |
-| `drawer-trigger` | Sends an event whenever it is clicked on. |
-| `drawer` | Receives an event and behave on the UI accordingly. |
-| `modal-trigger` | Sends an event whenever it is clicked on. |
-| `modal-layout` | Receives an event and behave on the UI accordingly. |
+| Block name           | Behavior                                            |
+| -------------------- | --------------------------------------------------- |
+| `add-to-cart-button` | Sends an event whenever it is clicked on.           |
+| `minicart.v2`        | Receives an event and behave on the UI accordingly. |
+| `drawer-trigger`     | Sends an event whenever it is clicked on.           |
+| `drawer`             | Receives an event and behave on the UI accordingly. |
+| `modal-trigger`      | Sends an event whenever it is clicked on.           |
+| `modal-layout`       | Receives an event and behave on the UI accordingly. |
 
 In the step by step below, you are going to learn how events and the `customPixelEventId` prop can trigger side effects on the interface in a real scenario, configuring the Minicart to automatically open itself once a new product gets added to it by the Add To Cart Button.
 
-![open-minicart-demo](https://user-images.githubusercontent.com/52087100/97001261-787b3d00-150e-11eb-8ba5-071eb4991990.gif)
+![open-minicart-demo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/97001261-787b3d00-150e-11eb-8ba5-071eb4991990_35.gif)
 
 ## Step by step
 
@@ -57,7 +58,7 @@ In the step by step below, you are going to learn how events and the `customPixe
 }
 ```
 
-3. Declare the `customPixelEventId prop in the block responsible for listening to the desired event, passing as its value the same unique ID previously declared in the sender block. For example:
+3. Declare the `customPixelEventId` prop in the block responsible for listening to the desired event, passing as its value the same unique ID previously declared in the sender block. For example:
 
 ```json
 {
@@ -70,6 +71,6 @@ In the step by step below, you are going to learn how events and the `customPixe
 }
 ```
 
-Once you save your changes and deploy your new Store Theme version, the Add To Cart Button component will send the `example-add-to-cart` event whenever it is clicked on. At the same time, the Minicart will be ready to automatically open itself as a response to any received event with this ID.  
+Once you save your changes and deploy your new Store Theme version, the Add To Cart Button component will send the `example-add-to-cart` event whenever it is clicked on. At the same time, the Minicart will be ready to automatically open itself as a response to any received event with this ID.
 
->ℹ️ You can check out this behavior live in our [default Store Theme implementation](https://storetheme.vtex.com)!
+> ℹ️ You can check out this behavior live in our [default Store Theme implementation](https://storetheme.vtex.com)!

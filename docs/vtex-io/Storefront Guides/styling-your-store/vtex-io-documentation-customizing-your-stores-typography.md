@@ -46,6 +46,6 @@ In the following, check the [best practices of CSS handles](https://developers.v
 }
 ```
 
->ℹ️  Notice that fonts uploaded on Assets builder can be referenced in your CSS files by declaring the desired file path in the `src` property.
+> ℹ️  Notice that fonts uploaded on Assets builder can be referenced in your CSS files by declaring the desired file path in the `src` property.
 
 >⚠️ The `font-faces.css` is a global file meaning its configurations are applied to all texts from the website. If you want to customize a component's typography independently, overriding the global configurations,you should declare the `font-faces.css` file still and refer the desired component font using the `font-family` property in the app's CSS overriding file.

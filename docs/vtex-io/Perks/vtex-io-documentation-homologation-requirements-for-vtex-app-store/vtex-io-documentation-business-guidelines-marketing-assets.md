@@ -6,15 +6,16 @@ hidden: false
 createdAt: "2021-07-22T14:20:05.553Z"
 updatedAt: "2022-12-13T20:17:44.747Z"
 ---
+
 Once you have [developed your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.
 
-![appstore-page-example](https://user-images.githubusercontent.com/67270558/153282275-98bab015-81e8-4858-8538-72c9fa33d17e.gif)
+![appstore-page-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/153282275-98bab015-81e8-4858-8538-72c9fa33d17e_11.gif)
 
 Make sure to present your solutions professionally by adhering to the following principles:
 
 - Clearly describe your app’s value proposition, key benefits, and how merchants can benefit from it.
 - Choose a product name that indicates the purpose of the app.
-- Use high-quality images (icon and screenshots) and videos (if applicable).  
+- Use high-quality images (icon and screenshots) and videos (if applicable).
 
 Note that if we see room for improvement, we’ll reach out to you before listing your app on the VTEX App Store.
 
@@ -26,10 +27,10 @@ Refer to the following sections to improve your App Page and increase its adopti
 
 Choose to favor the Serious and Authority tones. We understand that they capture the reliability and expertise our system’s voice should have.
 
-| Tone and Voice | Description |
-| ----------------- | ------------- |
-| Serious | Speak firmly, respectfully, and honestly - always with a more serious tone than playful. |
-| Authority | Speak with mastery, proficiency, and expertise. |
+| Tone and Voice | Description                                                                              |
+| -------------- | ---------------------------------------------------------------------------------------- |
+| Serious        | Speak firmly, respectfully, and honestly - always with a more serious tone than playful. |
+| Authority      | Speak with mastery, proficiency, and expertise.                                          |
 
 To see more about VTEX’s tone and voice, go to [UX Writing Guidelines](https://uxwriting.vtex.com/docs/principles/goals-principles/#tone-and-voice) and [VTEX Brand Guide](https://brand.vtex.com/brand/voiceandtone) pages.
 
@@ -47,7 +48,7 @@ Images are a tool to express the visual identity of your app, make users learn m
 
 Your app icon is one of the first elements of your app that developers and merchants see. It expresses the visual identity and reinforces your brand in the VTEX App Store environment.
 
-![2-Icon](https://user-images.githubusercontent.com/67270558/157433167-6118f67e-4042-40d8-bee3-e64ca5a65f12.png)
+![2-Icon](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157433167-6118f67e-4042-40d8-bee3-e64ca5a65f12_50.png)
 
 #### Do’s and Don’ts
 
@@ -68,7 +69,7 @@ Your app icon is one of the first elements of your app that developers and merch
 
 Use screenshots to visually represent your app’s key features and purpose.
 
-![1- screenshot](https://user-images.githubusercontent.com/67270558/157434543-3b706ebd-7570-4d1e-8cda-d1ee230014e5.png)
+![1- screenshot](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157434543-3b706ebd-7570-4d1e-8cda-d1ee230014e5_71.png)
 
 #### Do’s and Don’ts
 
@@ -101,7 +102,7 @@ Licenses are written documents that contain the Terms and Conditions (T&C) of yo
 - Review specific legislation related to your business, such as those issued by central banks if you are in financial services.
 - Make it clear how you can hire your service: free, freemium, or premium, for example. Also, review the regulations regarding the payment methods you will accept.
 
->⚠️ The recommendations presented here are intended to serve as guidelines for the third-party developers and do not represent a legal recommendation. VTEX is not responsible for direct, indirect, moral, punitive damages, consequential damages or loss of profits arising from the use and/or compliance with these guidelines. Hiring legal advice is necessary and recommended for the final writing of terms and conditions for applications.
+> ⚠️ The recommendations presented here are intended to serve as guidelines for the third-party developers and do not represent a legal recommendation. VTEX is not responsible for direct, indirect, moral, punitive damages, consequential damages or loss of profits arising from the use and/or compliance with these guidelines. Hiring legal advice is necessary and recommended for the final writing of terms and conditions for applications.
 
 ## Messaging
 
@@ -113,7 +114,7 @@ Remember, your App Page is your main marketing tool and touchpoint with merchant
 
 The name of an app is decisive for how merchants will find your app on the VTEX App Store.
 
-![3 - Name](https://user-images.githubusercontent.com/67270558/157513213-1fa5c1f1-6f55-40ef-99da-d9f6cdee5685.png)
+![3 - Name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157513213-1fa5c1f1-6f55-40ef-99da-d9f6cdee5685_116.png)
 
 #### Do’s and Don’ts
 
@@ -237,7 +238,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 The headline should describe the value proposition of your app in a concise sentence.
 
-![4-Headline](https://user-images.githubusercontent.com/67270558/157516505-f43a11ed-ac35-49f7-9b41-08f5099f34ba.png)
+![4-Headline](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157516505-f43a11ed-ac35-49f7-9b41-08f5099f34ba_240.png)
 
 ### Do’s and Don’ts
 
@@ -312,7 +313,7 @@ The headline should describe the value proposition of your app in a concise sent
 
 The overview is the description of the app and should be an engaging message that focuses on how your app can benefit merchants in a clear and precise way.
 
-![5-overview](https://user-images.githubusercontent.com/67270558/157517177-836ba2c6-f7d2-4795-940e-7532eea475f6.png)
+![5-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157517177-836ba2c6-f7d2-4795-940e-7532eea475f6_315.png)
 
 #### Do’s and Don’ts
 
@@ -338,7 +339,7 @@ The overview is the description of the app and should be an engaging message tha
 
 - Make sure you are addessing for whom your app is, what need it solves and how uniquely do you solve it.
 
-> ℹ️  There are numerous value proposition frameworks that can be used as a reference in this task, such as the following: *Our [product] help(s) [audience] who wants to [jobs to be done] by [verb e.g. reducing, avoiding] + [a user pain or gain].*
+> ℹ️  There are numerous value proposition frameworks that can be used as a reference in this task, such as the following: *Our \[product] help(s) \[audience] who wants to \[jobs to be done] by \[verb e.g. reducing, avoiding] + \[a user pain or gain].*
 
 <details>
     <summary><b>Show example</b></summary>
@@ -399,7 +400,7 @@ The overview is the description of the app and should be an engaging message tha
 
 In `features`, provide a list of your app's main features.
 
-![6-features](https://user-images.githubusercontent.com/67270558/157520024-66ee8e75-4b53-41f0-90ca-e4c8c37281cf.png)
+![6-features](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520024-66ee8e75-4b53-41f0-90ca-e4c8c37281cf_402.png)
 
 #### Do’s
 
@@ -442,13 +443,13 @@ The Website URL is a hyperlink to your website to redirect users to your own cor
 
 Provide support information to make potential buyers aware of your support channels, such as email, a ticket portal, or a phone number. Including details on how support for your app works might make merchants more confident to choose your app.
 
-![9-Support](https://user-images.githubusercontent.com/67270558/157520794-a8a1173e-2781-4c0c-b292-caa30de2bb87.png)
+![9-Support](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520794-a8a1173e-2781-4c0c-b292-caa30de2bb87_445.png)
 
 ### Additional Information
 
 Use this field to provide more specific details about the app. For example, is your app only available in certain regions? How the merchant will receive the app’s billing information? Is your app available only in specific environments (Legacy CMS Portal or VTEX IO)?
 
-![7-Additional info](https://user-images.githubusercontent.com/67270558/157520727-dc72709f-b386-47ec-bb50-5731bfab2201.png)
+![7-Additional info](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520727-dc72709f-b386-47ec-bb50-5731bfab2201_451.png)
 
 #### Do
 
@@ -486,7 +487,7 @@ Use this field to provide more specific details about the app. For example, is y
 
 Use videos to demonstrate how your app behaves in different scenarios. Videos are exciting resources to complement [images](#images) as an educational tool showing your app’s main benefits and features.
 
-![8-Video](https://user-images.githubusercontent.com/67270558/157520797-a42e7221-7a48-4c89-b809-8f8fd196b3a2.png)
+![8-Video](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520797-a42e7221-7a48-4c89-b809-8f8fd196b3a2_489.png)
 
 #### Do's
 

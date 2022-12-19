@@ -24,7 +24,7 @@ In this guide, you will learn how to perform A/B testing between store workspace
 vtex login {account-name}
 ```
 
->ℹ️ Remember to replace the value between the brackets for the VTEX account name you desire. For example: `vtex login account-name`.
+> ℹ️ Remember to replace the value between the brackets for the VTEX account name you desire. For example: `vtex login account-name`.
 
 2. Access the Development workspace that you have created by running:
 

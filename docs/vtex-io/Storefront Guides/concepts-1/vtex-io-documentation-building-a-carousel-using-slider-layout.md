@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.233Z"
 updatedAt: "2022-12-13T20:17:43.910Z"
 ---
+
 ## Introduction
 
 There are block types in VTEX IO's Store Framework that instead of being responsible for rendering store components, such as the `shelf`, they **carry and provide data to their subsequent child blocks**.
@@ -29,14 +30,14 @@ See the instructions below for how it can be easily done!
 
 3. Declare the `list-context.image-list` block and use the `slider-layout` as its only child. Each desired image should be forwarded to the `list-context.image-list` as an object with the following properties:
 
-| Property      | Type                                                                                                                                | Description                                                | Default value |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------- |
-| `image`       | `String`                                                                                                                            | Link for the image                                         | N/A           |
-| `mobileImage` | `String`                                                                                                                            | Link for the mobile image                                  | N/A           |
-| `description` | `String`                                                                                                                            | The image's description                                    | N/A           |
+| Property      | Type                                                                                                                                | Description                                                   | Default value |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ------------- |
+| `image`       | `String`                                                                                                                            | Link for the image                                            | N/A           |
+| `mobileImage` | `String`                                                                                                                            | Link for the mobile image                                     | N/A           |
+| `description` | `String`                                                                                                                            | The image's description                                       | N/A           |
 | `link`        | [`Link`](https://github.com/vtex-apps/native-types/blob/f63aeeb8f6e62f4a9aaec052a8be34973be7389b/pages/contentSchemas.json#L52-L74) | Specifies the link the image will redirect to when clicked on | N/A           |
 
-_For example:_
+*For example:*
 
 ```json
 "list-context.image-list#demo": {
@@ -57,11 +58,11 @@ _For example:_
   },
 ```
 
->⚠️ Bear in mind that <strong>list blocks do not render anything in your store</strong>, they simply hold content that can be edited using the Site Editor and pass it down to their child blocks.
+> ⚠️ Bear in mind that **list blocks do not render anything in your store**, they simply hold content that can be edited using the Site Editor and pass it down to their child blocks.
 
 4. Now that you've specified which data (in this case, which images) will be displayed in your slider using a `list` block, you need to configure the [slider properties](https://developers.vtex.com/vtex-developer-docs/docs/vtex-slider-layout) themselves, meaning those of the `slider-layout`.
 
-_For example:_
+*For example:*
 
 ```json
   "list-context.image-list#demo": {
@@ -94,9 +95,9 @@ _For example:_
 
 And there you go! You now have a fully functioning Carousel for your store.
 
-![gif-caroulsel-slider-layout](https://user-images.githubusercontent.com/52087100/68598106-ea34b500-047c-11ea-8f69-0b05cf81e6a1.gif)
-_When inspecting the page you’ll notice that the `carousel` block was not used to build the component._
+![gif-caroulsel-slider-layout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/68598106-ea34b500-047c-11ea-8f69-0b05cf81e6a1_97.gif)
+*When inspecting the page you’ll notice that the `carousel` block was not used to build the component.*
 
 Bear in mind that you are also able to edit data contained in `list-context.image-list` using the admin's Site Editor section:
 
-![carousel-slider-site-editor](https://user-images.githubusercontent.com/52087100/68598836-4815cc80-047e-11ea-80e8-28e0070d2f1d.png)
+![carousel-slider-site-editor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/68598836-4815cc80-047e-11ea-80e8-28e0070d2f1d_102.png)

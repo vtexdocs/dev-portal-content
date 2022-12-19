@@ -61,7 +61,7 @@ The expected answer is a JSON object containing all the redirects related to tha
 
 Open your account admin and go to *Store Setup > CMS > Pages > Redirects*. Then, save the desired URL redirects.
 
->ℹ️ For more information, check our doc on [managing URL redirects.](https://vtex.io/docs/recipes/store-management/managing-url-redirects/)
+> ℹ️ For more information, check our doc on [managing URL redirects.](https://vtex.io/docs/recipes/store-management/managing-url-redirects/)
 
 #### If the query returns the redirect path
 
@@ -75,11 +75,11 @@ If this route is already declared, the redirect will be ignored.
 <details>
 <summary>Product price is different on Search Results and Product Detail pages</summary>
 
->ℹ️ The Search Results and Product Details pages have different indexing processes. This can lead to differences in the price.
+> ℹ️ The Search Results and Product Details pages have different indexing processes. This can lead to differences in the price.
 
 1. [Reindex](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-understanding-how-store-url-indexing-works) the products presenting inconsistencies.
 
 2. Check out the value declared for the [Search Result](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result)'s `simulationBehavior` prop. If set as `skip`, change it to `default`.
 
->ℹ️ When the `simulationBehavior` is set as `skip`, the Search Results page displays the cold price based on the user cache. In order to fetch and display the latest price registered in the catalog, change it to `default`.
+> ℹ️ When the `simulationBehavior` is set as `skip`, the Search Results page displays the cold price based on the user cache. In order to fetch and display the latest price registered in the catalog, change it to `default`.
 </details>

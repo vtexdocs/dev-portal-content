@@ -26,4 +26,4 @@ Notice that **Housekeeper only updates an Edition version as long as the major h
 
 In case bumping the major version is necessary due to the changes performed, the Edition update must be made manually and individually for each child account as well.
 
->ℹ️ In addition to updating the Edition itself, Housekeeper is also responsible for enforcing to child accounts all required apps exported by the Edition. This means that you don't have to worry about installing the new apps defined by the edition, as Housekeeper will do the job for you when the Edition App is updated.
+> ℹ️ In addition to updating the Edition itself, Housekeeper is also responsible for enforcing to child accounts all required apps exported by the Edition. This means that you don't have to worry about installing the new apps defined by the edition, as Housekeeper will do the job for you when the Edition App is updated.

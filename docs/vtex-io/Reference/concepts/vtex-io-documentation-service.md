@@ -10,7 +10,7 @@ A service is a piece of code used to run .NET and Node.js on VTEX servers. This 
 
 By setting the `node` or `dotnet` [builders](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders) in your app's [`manifest.json`](https://developers.vtex.com/vtex-developer-docs/docs/manifest) file, VTEX IO apps can export services just like themes and store blocks.
 
->ℹ️ It´s also possible to export GraphQL services, using the `graphql` builder. Check the [vtex.graphql-example](https://github.com/vtex-apps/graphql-example) app to see how it's done.
+> ℹ️ It´s also possible to export GraphQL services, using the `graphql` builder. Check the [vtex.graphql-example](https://github.com/vtex-apps/graphql-example) app to see how it's done.
 
 Considering the builder in use (`node` or `dotnet`), services must be configured in the `service.json` file inside the `/node` or `/dotnet` folder. This file is responsible for declaring routes and events that the service must respond to. It also configures parameters such as `timeout` and `memory`.
 
@@ -47,4 +47,4 @@ As a reference, consider the following parameters for the `services.json` file:
 
 Keep in mind that most of these fields are optional and default values from the platform are commonly used.
 
->ℹ️ For more information, check our [Node.js](https://github.com/vtex-apps/service-example), [.NET](https://github.com/vtex-apps/service-example-dotnet), and [GraphQL](https://github.com/vtex-apps/graphql-example) service example apps.
+> ℹ️ For more information, check our [Node.js](https://github.com/vtex-apps/service-example), [.NET](https://github.com/vtex-apps/service-example-dotnet), and [GraphQL](https://github.com/vtex-apps/graphql-example) service example apps.

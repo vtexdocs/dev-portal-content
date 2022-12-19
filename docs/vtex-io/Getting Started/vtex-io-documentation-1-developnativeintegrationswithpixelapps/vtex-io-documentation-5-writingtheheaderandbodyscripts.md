@@ -14,7 +14,7 @@ Adding a script to the `<header>` ensures that it will be executed before any ot
 
 1. Open the `pixel/header.html` file and replace the provided function with your own.
 
-  >ℹ️ If you opt to execute your script inside the `<body>` tag, rename the `header.html` file to `body.html`.
+  > ℹ️ If you opt to execute your script inside the `<body>` tag, rename the `header.html` file to `body.html`.
 
 2. Use the `settingsSchema` identification key previously defined where applicable. Take the following example:
 

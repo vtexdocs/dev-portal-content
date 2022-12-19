@@ -10,7 +10,7 @@ If you have different versions of a [landing page](https://developers.vtex.com/d
 
 This way, search engines will be aware of the different versions of your page and able to provide the right content to the right audience.
 
->ℹ️ Notice that this is especially useful for improving your store's SEO.
+> ℹ️ Notice that this is especially useful for improving your store's SEO.
 
 Keep in mind that when indicating alternate versions of a page, you must do it in pairs. For example, if you point the USA version of a page to a Brazilian variant, then the Brazilian page must point to the USA version as well.
 
@@ -20,7 +20,7 @@ By doing that, search engines are capable of understanding the relationship betw
 
 Hence, be aware that you'll need to perform the following step by step for each localized version of your landing page.
 
->ℹ️ It's important for search engines that each version of a page indicates itself as well as the other localized versions as `alternates`. However, **you don't need to worry about self-referencing** since we already do that for you.
+> ℹ️ It's important for search engines that each version of a page indicates itself as well as the other localized versions as `alternates`. However, **you don't need to worry about self-referencing** since we already do that for you.
 
 ## Step by step
 

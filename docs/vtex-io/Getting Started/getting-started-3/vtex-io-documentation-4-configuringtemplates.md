@@ -24,7 +24,7 @@ Although they may look simple at first, blocks are imbued with higher flexibilit
 
 This means that whenever you edit your theme's code using the Store Theme app, you're also editing blocks that will end up being your store's page components when rendered.
 
->ℹ️ We declare a new block in a template in order to add a new component to a page, in the same way that a component can be excluded from a page simply by removing a block from a template.
+> ℹ️ We declare a new block in a template in order to add a new component to a page, in the same way that a component can be excluded from a page simply by removing a block from a template.
 
 ## Step 2 - Managing blocks in your theme
 
@@ -210,7 +210,7 @@ You can now take a look at the [documentation](https://developers.vtex.com/vtex-
 
 When looking at the documentation, you'll notice that the exported block's name is merely `rich-text`, however Store Theme uses `rich-text#block`. This is due to the fact that we can use a `#` after the block's official name to easily identify when inserting it in our theme's code, thereby better organizing the theme itself.
 
->ℹ️ All the props available to configure a block can be found in the documentation of its exporting app or in the block's own documentation (if it exists).
+> ℹ️ All the props available to configure a block can be found in the documentation of its exporting app or in the block's own documentation (if it exists).
 
 ## Step 5 - Understanding blocks composition
 
@@ -239,7 +239,7 @@ Note that it declares another block to your `blocks` list, that in turn declares
 
 You'll notice that in the example above, `product-summary.shelf` requires other blocks as children, such as `product-summary-name`, to properly render the component.
 
->ℹ️ As previously mentioned, a component can be a crossroad for several different blocks, and therefore one of your theme's blocks may need to list other blocks to achieve the proper rendering results on the UI.
+> ℹ️ As previously mentioned, a component can be a crossroad for several different blocks, and therefore one of your theme's blocks may need to list other blocks to achieve the proper rendering results on the UI.
 
 To build a component using several blocks, the main block can declare a `blocks` list onto itself, such as `shelf#home`, or it can declare a list of `children` blocks, as the `product-summary.shelf` block does.
 
@@ -254,4 +254,4 @@ The conclusion is that, according to their composition, the listed blocks themse
 
 In our example, the `product-summary.shelf` block has a `blocks` composition, while `product-summary-name` has a `children` composition. This explains why they are declared, respectively, in a `blocks` and `children` lists.
 
->ℹ️ You can find out which composition a block has by looking at its code in the exporting app's `interfaces.json` file.
+> ℹ️ You can find out which composition a block has by looking at its code in the exporting app's `interfaces.json` file.

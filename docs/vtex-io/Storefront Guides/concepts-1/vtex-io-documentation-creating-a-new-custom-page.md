@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.295Z"
 updatedAt: "2022-12-13T20:17:44.080Z"
 ---
+
 Stores are made up of several different pages, each one having a different layout and content. When creating a store from scratch in VTEX IO, some default pages with predefined URLs are already available to you, such as:
 
 - `store.home` - Home page
@@ -15,9 +16,9 @@ Stores are made up of several different pages, each one having a different layou
 - `store.login` - Login page
 - `store.orderplaced` - Order Placed page
 
->ℹ️ You can manage each page's title and template in the Pages section, within the admin's CMS.
+> ℹ️ You can manage each page's title and template in the Pages section, within the admin's CMS.
 
-However, you may want to create a new custom page to attend your store's specific needs. In this case, a new URL and content to go with it must be created by you from scratch.  
+However, you may want to create a new custom page to attend your store's specific needs. In this case, a new URL and content to go with it must be created by you from scratch.
 
 ## Step by step
 
@@ -40,11 +41,11 @@ In order to do so, you first must choose one of three template types to host you
 
 - **Standard** - For pages with no specific product content. For instance, the Home page.
 
->ℹ️ Even though `Standard` pages are not directly linked to any specific product, they may display shelves or lists of any chosen group of products. The main difference is that the group of products shown in such page does not depend on the URL query, but only on the setting of the shelf itself.
+> ℹ️ Even though `Standard` pages are not directly linked to any specific product, they may display shelves or lists of any chosen group of products. The main difference is that the group of products shown in such page does not depend on the URL query, but only on the setting of the shelf itself.
 
 Let's suppose we are going to create a simple About Us page for a store. As such the page is not directly connected to any specific product, we should create a custom `Standard` template for it with an image in its left column and a a title and text content in its right column:
 
-![store-product-exp](https://user-images.githubusercontent.com/12139385/63775975-dbdfef80-c8b6-11e9-9b76-e50924b828ae.png)
+![store-product-exp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/63775975-dbdfef80-c8b6-11e9-9b76-e50924b828ae_47.png)
 
 1. In your store theme's code, declare a new template within your `blocks` folder or `blocks.jsonc` file.
 
@@ -120,7 +121,7 @@ Now that your page layout has been defined in the store theme code, the next ste
 ```
 
 3. Save your files.
-4. [Link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) the theme to a Development workspace. You will be able to access and see your new page live through your workspace, using the following format: `{workspaceName}--{accountName}.myvtex.com/{pathName}.
+4. [Link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) the theme to a Development workspace. You will be able to access and see your new page live through your workspace, using the following format: `{workspaceName}--{accountName}.myvtex.com/{pathName}`.
 
 #### Using the account admin
 
@@ -132,11 +133,11 @@ Once your changes are set up in a Production workspace, you will be able to use 
 2. Click on **Create New**.
 3. Choose the desired URL and any created template. For instance, the About Us page template previously created:
 
-![custom-pages-pages](https://user-images.githubusercontent.com/52087100/64428903-36353900-d08b-11e9-8d19-186c8831b4d7.png)
+![custom-pages-pages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/64428903-36353900-d08b-11e9-8d19-186c8831b4d7_135.png)
 
 Notice that a template only sets the page layout, hence any new template becomes available to be set on any page that accepts templates of the same type as the page itself.
 
->ℹ️ When editing any content using the CMS section, it's always good to make your changes in a production workspace. Therefore, make sure you are not creating your new custom page in the store's master workspace.
+> ℹ️ When editing any content using the CMS section, it's always good to make your changes in a production workspace. Therefore, make sure you are not creating your new custom page in the store's master workspace.
 
 ### Adding the content
 
@@ -144,7 +145,7 @@ Your new page now has a custom layout, thanks to the newly created template, and
 
 You can define your page content performing changes directly to your Store Theme app or using the admin's Site Editor. When using this last one, you can browse to your custom page or simply write its URL in the `Page URL` field. For example:
 
-![custom-pages-siteeditor](https://user-images.githubusercontent.com/52087100/64428904-36cdcf80-d08b-11e9-8de4-06bf0a89b14f.png)
+![custom-pages-siteeditor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/64428904-36cdcf80-d08b-11e9-8de4-06bf0a89b14f_147.png)
 
 ### Making your theme content publicly available
 

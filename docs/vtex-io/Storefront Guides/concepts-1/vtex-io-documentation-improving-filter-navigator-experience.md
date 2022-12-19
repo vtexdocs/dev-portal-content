@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-04-08T19:44:50.866Z"
 updatedAt: "2022-12-13T20:17:44.152Z"
 ---
+
 The filter navigator is one of the most important components on the search page. This recipe will show you how to set the filter navigator component in a way that has been proven to improve the conversion of your store.
 
 Here is a quick summary of the changes that will be made:
@@ -85,4 +86,4 @@ All props mentioned here are documented on [documentation page](https://develope
 
 4. Your filter-navigator should look like this:
 
-![filter-navigator demo](https://user-images.githubusercontent.com/40380674/114074357-abc24600-987a-11eb-86ed-35aa05c4b1e8.gif)
+![filter-navigator demo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/114074357-abc24600-987a-11eb-86ed-35aa05c4b1e8_88.gif)

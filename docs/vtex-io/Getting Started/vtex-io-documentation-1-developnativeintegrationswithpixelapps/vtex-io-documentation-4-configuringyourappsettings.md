@@ -60,4 +60,4 @@ If needed, you can also use the `properties` object to read the user preferences
 },
 ```
 
->ℹ️ Please refer to the [JSON Schema documentation](http://json-schema.org/understanding-json-schema/) while building your app's `settingSchema` field.
+> ℹ️ Please refer to the [JSON Schema documentation](http://json-schema.org/understanding-json-schema/) while building your app's `settingSchema` field.

@@ -25,7 +25,7 @@ Even though custom pages do not have the needed context to fetch search data, si
 }
 ```
 
->ℹ️ The value defined for `path` can and should be replaced according to what is most suitable for your store's scenario.
+> ℹ️ The value defined for `path` can and should be replaced according to what is most suitable for your store's scenario.
 
 3. In the `blocks.jsonc` folder, create a new file to store the new custom search results page blocks. The new file could be called `search-landing.jsonc`, for example.
 4. In the file, declare the new custom page template name, such as `store.custom#landing`. Notice that the name must match the one declared in *step 2*.
@@ -42,7 +42,7 @@ Even though custom pages do not have the needed context to fetch search data, si
 }
 ```
 
->ℹ️ You can learn how to use the `search-result-layout.customQuery` block in order to define how the search query data should be fetched accessing the <a href="https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result/">3rd step of the Search Result app documentation</a>.
+> ℹ️ You can learn how to use the `search-result-layout.customQuery` block in order to define how the search query data should be fetched accessing the <a href="https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result/">3rd step of the Search Result app documentation</a>.
 
 6. Declare the blocks according to the search results custom page you wish to have. Below you can find an example of a custom search results template:
 
