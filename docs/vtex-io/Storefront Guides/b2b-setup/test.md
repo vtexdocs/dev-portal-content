@@ -5,6 +5,7 @@ hidden: true
 createdAt: "2021-07-28T21:48:27.462Z"
 updatedAt: "2022-07-08T19:04:35.975Z"
 ---
+
 B2B Store Theme is a front-end template to help your store get started with VTEX’s core features for businesses selling to other businesses.
 
 > ⚠️ The B2B Store Theme is not compatible with the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) documentation.
@@ -19,20 +20,19 @@ Before starting with the B2B Store Theme setup itself, you must:
 2. Follow [these instructions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-prerequesites) to make sure you meet all the prerequisites to develop using Store Framework.
 3. Make sure your store’s catalog is integrated with VTEX Intelligent Search, as described in [this article](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V).
 
-
 ### Install required B2B apps
 
 Now you must install the required apps listed below. They are mandatory for the B2B Store Theme to work properly.
 
-* [Wishlist](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#wishlist)
-* [Reviews and Ratings](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#reviews-and-ratings)
-* [Quick Order](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#quick-order)
-* [Location Availability](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#location-availability)
-* [Shopper Location](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#shopper-location)
-* [Order Quote](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#order-quote)
-* [Wordpress Integration](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#wordpress-integration)
-* [Admin Organizations](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#admin-organizations)
-* [Organizations](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#organizations)
+- [Wishlist](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#wishlist)
+- [Reviews and Ratings](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#reviews-and-ratings)
+- [Quick Order](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#quick-order)
+- [Location Availability](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#location-availability)
+- [Shopper Location](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#shopper-location)
+- [Order Quote](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#order-quote)
+- [Wordpress Integration](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#wordpress-integration)
+- [Admin Organizations](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#admin-organizations)
+- [Organizations](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#organizations)
 
 #### Wishlist
 
@@ -40,7 +40,7 @@ Now you must install the required apps listed below. They are mandatory for the 
 
 To install this app on your store, run the following command on the CLI:
 
-```
+```sh
 vtex install vtex.wish-list@1.x
 ```
 
@@ -48,44 +48,31 @@ vtex install vtex.wish-list@1.x
 
 The [Reviews and ratings](https://github.com/vtex-apps/reviews-and-ratings) app enables your clients to submit reviews and ratings — using a star rating system — to your store’s products.
 
-Install it using the command: 
+Install it using the command:
 
 ```
 vtex install vtex.reviews-and-ratings@2.x
 ```
 
-After that, go to your store's Admin to proceed with the installation. 
+After that, go to your store's Admin to proceed with the installation.
 
 Once you are logged in, follow these steps:
 
 1. Go to the **Account Settings** module.
 2. Click on `Apps`.
-3. Then, click on `My apps`. 
-4. Then, find the **Reviews and Ratings** app card and click on `Settings`. 
+3. Then, click on `My apps`.
+4. Then, find the **Reviews and Ratings** app card and click on `Settings`.
 5. It is recommended that you check the **Display stars in product-rating-summary if there are no reviews** option and uncheck the **Display total reviews number on product-rating-summary block** option, as illustrated below.
 6. Click on the `Save` button.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e683a71-image2.png",
-        "image2.png",
-        1491,
-        826,
-        "#f9f9fa"
-      ]
-    }
-  ]
-}
-[/block]
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/e683a71-image2_67.png)
+
 #### Quick Order
 
 [Quick Order](https://github.com/vtex-apps/quickorder) is an app that enables customers to make bulk orders.
 
-To install it, use the following command: 
+To install it, use the following command:
 
-```
+```sh
  vtex install vtex.quickorder@3.x
 ```
 
@@ -93,15 +80,13 @@ To install it, use the following command:
 
 The [Location Availability](https://github.com/vtex-apps/location-availability) app shows product availability and shipping information in the storefront based on the customer’s location, providing a personalized shopping experience.
 
-Install this app on your store using the `vtex.location-availability@0.x ` command.
-
+Install this app on your store using the `vtex.location-availability@0.x` command.
 
 #### Shopper Location
 
 [Shopper Location](https://github.com/vtex-apps/shopper-location) is a geolocation app. Once it is installed, the app tracks the customer’s location, after permission is granted.
 
-To install it, use the following command: 
-
+To install it, use the following command:
 
 ```
 vtex install vtex.shopper-location@0.x
@@ -109,21 +94,21 @@ vtex install vtex.shopper-location@0.x
 
 #### Order Quote
 
-[Order Quote](https://github.com/vtex-apps/order-quote) is an app that allows the B2B customer to save a cart’s information and use it later for any order. 
+[Order Quote](https://github.com/vtex-apps/order-quote) is an app that allows the B2B customer to save a cart’s information and use it later for any order.
 
-To install it, use the following command: 
+To install it, use the following command:
 
 ```
 vtex install vtex.orderquote@1.x
 ```
 
-#### Wordpress integration 
+#### Wordpress integration
 
 The [Wordpress integration](https://github.com/vtex-apps/wordpress-integration) app enables the account admin to create content on your store’s front through Wordpress’ API.
 
 To install this app, run the following command on the CLI:
 
-```
+```sh
 vtex install vtex.wordpress-integration@2.x
 ```
 
@@ -131,16 +116,15 @@ vtex install vtex.wordpress-integration@2.x
 
 In brief, the [Admin Organizations](https://github.com/vtex-apps/admin-organizations) app is responsible for managing the **Roles** and **Permissions** modules on your store’s Admin.
 
-To install it, run `vtex install vtex.admin-organizations@1.x `on the CLI.
+To install it, run `vtex install vtex.admin-organizations@1.x` on the CLI.
 
 #### Organizations
 
 The [Organizations](https://github.com/vtex-apps/organizations) app allows you to create an organization — a business store — and manage users under that organization with different roles.
 
-Run the command `vtex install vtex.organizations@1.x ` to install it on your store.
+Run the command `vtex install vtex.organizations@1.x` to install it on your store.
 
-
-### Create fields in Master Data 
+### Create fields in Master Data
 
 After installing all the required apps, you need to create two new fields in Master Data: `isOrgAdmin` and `organizationId`. You must create these fields on the **Client** entity. To do so, check our step-by-step tutorial on [how to create a field on Master Data](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829).
 [block:parameters]
@@ -159,18 +143,18 @@ After installing all the required apps, you need to create two new fields in Mas
 [/block]
 When creating the `isOrgAdmin` field, you should check the following checkboxes:
 
-* **Make readable without credential**
-* **Is searchable**
-* **Is filterable**
+- **Make readable without credential**
+- **Is searchable**
+- **Is filterable**
 
 When creating the `organizationId` field, you should check the following checkboxes:
 
-* **Is nullable**
-* **Make readable without credential**
-* **Allow editing without credential**
-* **Allow filter without credential**
-* **Is searchable**
-* **Is filterable**
+- **Is nullable**
+- **Make readable without credential**
+- **Allow editing without credential**
+- **Allow filter without credential**
+- **Is searchable**
+- **Is filterable**
 [block:callout]
 {
   "type": "warning",
@@ -178,22 +162,9 @@ When creating the `organizationId` field, you should check the following checkbo
 }
 [/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0e71b5a-Group_1_6.png",
-        "Group 1 (6).png",
-        152,
-        58,
-        "#fcf5f8"
-      ]
-    }
-  ]
-}
-[/block]
-### Install B2B Easy Setup (optional) 
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/0e71b5a-Group_1_6_167.png)
+
+### Install B2B Easy Setup (optional)
 
 If you are setting up a new store, you can follow the instructions in [this guide](https://developers.vtex.com/vtex-rest-api/docs/installing-b2b-easy-set-up) to quickly set up a test store with sample data using the B2B Easy Setup app.
 
@@ -208,13 +179,12 @@ If you are setting up a new store, you can follow the instructions in [this guid
 
 If you have [installed B2B Easy Setup](https://developers.vtex.com/vtex-rest-api/docs/installing-b2b-easy-set-up) and selected **Organizations** resources, you can skip this step, because the required Master Data schemas will already have been created and you should have all **Permissions** and **Roles** ready.
 
-If you have opted not to install B2B Easy Setup, you need to use the **[Save schema by name](https://developers.vtex.com/vtex-rest-api/reference/schemas#saveschemabyname)** endpoint of the **Master Data API - V2 **to create the following schemas.
+If you have opted not to install B2B Easy Setup, you need to use the **[Save schema by name](https://developers.vtex.com/vtex-rest-api/reference/schemas#saveschemabyname)** endpoint of the **Master Data API - V2** to create the following schemas.
 
-* [`BusinessPermission schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businesspermission-schema)
-* [`BusinessRole schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businessrole-schema)
-* [`BusinessOrganization schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businessorganization-schema)
-* [`UserOrganization schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#userorganization-schema)
-
+- [`BusinessPermission schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businesspermission-schema)
+- [`BusinessRole schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businessrole-schema)
+- [`BusinessOrganization schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businessorganization-schema)
+- [`UserOrganization schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#userorganization-schema)
 
 #### `BusinessPermission` schema
 
@@ -244,7 +214,9 @@ Request body:
   ]
 }
 [/block]
+
 #### `BusinessRole` schema
+
 [block:parameters]
 {
   "data": {
@@ -270,7 +242,9 @@ Request body:
   ]
 }
 [/block]
+
 #### `BusinessOrganization` schema
+
 [block:parameters]
 {
   "data": {
@@ -296,7 +270,9 @@ Request body:
   ]
 }
 [/block]
+
 #### `UserOrganization` schema
+
 [block:parameters]
 {
   "data": {
@@ -322,29 +298,17 @@ Request body:
   ]
 }
 [/block]
+
 ## Installation
 
 After following the steps above, you are ready to install the B2B Store Theme. You must:
 
-1. Run the `vtex install vtex.b2bstore@1.x `command on the CLI.
+1. Run the `vtex install vtex.b2bstore@1.x` command on the CLI.
 2. Run the `vtex browse` command to see the B2B Store Theme on your browser.
 
 Finally, your storefront should look like this:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d6eeb9f-image3.png",
-        "image3.png",
-        1416,
-        774,
-        "#93b1d8"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/d6eeb9f-image3_305.png)
+
 ## Customization
 
 After installing the B2B Store Theme, you can customize it according to your store’s business needs. Check our guide on [Customizing the B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/customizing-the-b2b-store-theme) for more information.

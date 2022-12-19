@@ -20,44 +20,14 @@ The image below is an example of an affiliate’s page to be shared with shopper
 
 <br>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9c32209-image_1.png",
-        "image (1).png",
-        2989,
-        1421,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/9c32209-image_1.png)
 <br>
 
 The app also creates a profile page for the affiliate to keep track of orders and commissions, as you will see in the next section. Affiliates do not need access to your VTEX store Admin in order to access their profile page, which looks like the following image:
 
 <br>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4bdea92-print_profile_en.png",
-        "print_profile_en.png",
-        2987,
-        1152,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/4bdea92-print_profile_en.png)
 <br>
 
 The **Affiliates Program app’s** main characteristics and behavior are the following:
@@ -76,60 +46,17 @@ After installing and configuring the app, you will find three pages in your VTEX
 - [Affiliate Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#affiliate-management): allows you to add new affiliates and manage the existing ones. You can add a new affiliate by clicking on the button `Add affiliate` and filling out the form.
 
 <br>
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/71eab07-print_affiliates_management_admin.png",
-        "print_affiliates_management_admin.png",
-        1366,
-        634,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/71eab07-print_affiliates_management_admin.png)
+
 <br>
 
 - [Orders Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#order-management): provides information about affiliates’ orders. The page enables you to filter data in multiple ways and export it via email.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/fadf83a-admin-Orders_Management.png",
-        "admin-Orders Management.png",
-        1366,
-        801,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/fadf83a-admin-Orders_Management.png)
 <br>
 
 - [Commissions Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#commission-management): allows you to manage affiliates’ commissions and import information using files with .CSV or .XLSX extension.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2386c48-admin-Commissions_Management.png",
-        "admin-Commissions Management.png",
-        1366,
-        923,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/2386c48-admin-Commissions_Management.png)
 <br>
 
 ## Compatibility
@@ -154,22 +81,9 @@ The app settings will appear in your VTEX Admin under _Other > Affiliates_, and 
 > If using the [New VTEX Admin](https://content.vtex.com/join-new-admin-beta-program-en/), you will find the app settings under _Apps > Affiliates_.
 
 <br>
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f7f135d-vtex-affiliates-en.png",
-        "vtex-affiliates-en.png",
-        1366,
-        810,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/f7f135d-vtex-affiliates-en.png)
+
 <br>
 
 In **Settings**, you will define for how long the lead will be valid and set a default commission percentage. To do so, follow the steps below:
@@ -271,21 +185,8 @@ It is possible to change the parameter property used for the affiliate to share 
 > If using the [New VTEX Admin](https://content.vtex.com/join-new-admin-beta-program-en/), go to _Storefront > Site Editor > Blocks > Affiliate Monitoring_.
 
 <br>
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b49634d-site-editor.png",
-        "site-editor.png",
-        261,
-        280,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/b49634d-site-editor.png)
 
 <br>
 
@@ -473,22 +374,7 @@ To create a new custom email template, follow the steps below:
 4. Fill in the fields that appear.
 
     > You can use the image below as a reference, but use your information.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/98d0fed-print_spredsheet_affiliates.jpg",
-        "print_spredsheet_affiliates.jpg",
-        1209,
-        365,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/98d0fed-print_spredsheet_affiliates.jpg)
 5. Copy the **Affiliate Orders Export Template** code - you will find it below.
 6. Paste it in the `Html` section.
 7. Change it as you wish. 
@@ -503,22 +389,7 @@ After creating the _Affiliate Orders Export Template_, repeat the process to cre
 
 <br>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/bfcb7ff-print_spredsheet_affiliates_commissions.jpg",
-        "print_spredsheet_affiliates_commissions.jpg",
-        1203,
-        364,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/functional-apps/bfcb7ff-print_spredsheet_affiliates_commissions.jpg)
 
 <br>
 

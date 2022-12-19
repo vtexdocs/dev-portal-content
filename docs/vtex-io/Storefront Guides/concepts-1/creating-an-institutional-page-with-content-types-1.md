@@ -11,39 +11,10 @@ To create an institutional page, follow these tutorial.
 
 1. Define the components of your page. In the example below, we use the `ww.vtex.com` page and its title, partners, highlights, and carousel components.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8bb5b1f-image1.png",
-        "image1.png",
-        1049,
-        559,
-        "#000000"
-      ],
-      "caption": ""
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/8bb5b1f-image1.png)
 2. In the cms folder, go to the `content-types.json` file.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f42dc5b-image2.png",
-        "image2.png",
-        381,
-        216,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/f42dc5b-image2.png)
 3. In the `content-type.json` file, create a new content type. To do this, define the following information:
 `id`: content type ID. It is recommended to have a lowercase pattern with no spaces, like with URLs.
 `name`: name that will be displayed on the page.

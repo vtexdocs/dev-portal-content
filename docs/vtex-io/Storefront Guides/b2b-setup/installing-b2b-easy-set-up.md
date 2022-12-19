@@ -5,14 +5,15 @@ hidden: false
 createdAt: "2021-07-28T20:53:10.893Z"
 updatedAt: "2022-07-19T17:44:04.867Z"
 ---
+
 B2B Easy Set Up is an app that helps you quickly get your store configured for B2B ecommerce.
 
 ## Installation
 
 1. Download and install the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
-2. [Log in to your account] (<https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-1---logging-in-to-your-vtex-account>) with `vtex login {accountName}`.
-3. [Create a new workspace] (<https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-2---creating-your-own-workspace>) with `vtex use easysetupworkspace`.
-4. [Install the app on your store] (<https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app>) with `vtex install vtex.easy-setup`.
+2. [Log in to your account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-1---logging-in-to-your-vtex-account) with `vtex login {accountName}`.
+3. [Create a new workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-2---creating-your-own-workspace) with `vtex use easysetupworkspace`.
+4. [Install the app on your store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) with `vtex install vtex.easy-setup`.
 [block:callout]
 {
   "type": "danger",
@@ -25,26 +26,14 @@ B2B Easy Set Up is an app that helps you quickly get your store configured for B
 Now that the Easy Setup app is installed in your store, proceed to operate the app on the Admin.
 
 1. Open your Admin panel and navigate to **Store Settings** > **Easy Setup**.
+
 2. On the right side of the screen, select which resources you want to apply on your store. If you want to configure all the options, select **All Resources**.
 
-    > ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, you must not select the **Organizations** resource. Otherwise this will alter the user profile Master Data schema and prevent the B2B Suite apps from creating users.
+   > ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, you must not select the **Organizations** resource. Otherwise this will alter the user profile Master Data schema and prevent the B2B Suite apps from creating users.
 
 3. Click on the `Start Easy Setup` button.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/475b079-200d9b8-easy_1.PNG",
-        "200d9b8-easy_1.PNG",
-        1289,
-        798,
-        "#f2f3f5"
-      ]
-    }
-  ]
-}
-[/block]
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/475b079-200d9b8-easy_1_33.PNG)
+
 4. Click on the `I Understand` button that will appear in the **Are you sure you want to proceed?** dialog.
 [block:callout]
 {
@@ -53,38 +42,11 @@ Now that the Easy Setup app is installed in your store, proceed to operate the a
 }
 [/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/01b2f3c-740c91d-easy_2.PNG",
-        "740c91d-easy_2.PNG",
-        1210,
-        749,
-        "#919091"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/01b2f3c-740c91d-easy_2_42.PNG)
 5. Wait a few seconds for the setup to complete.
+
 6. When the configuration is complete, you will receive a positive feedback on the screen.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e35c78c-38bb9ce-easy_4.PNG",
-        "38bb9ce-easy_4.PNG",
-        1158,
-        719,
-        "#f6f8f7"
-      ]
-    }
-  ]
-}
-[/block]
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/e35c78c-38bb9ce-easy_4_45.PNG)
 
 [block:callout]
 {
@@ -359,6 +321,7 @@ This resource creates an assortment of products and SKUs and sets their specific
 ##### Subscriptions
 
 It is mandatory to [follow these additional steps](https://help.vtex.com/tutorial/como-configurar-assinatura-v2--1FA9dfE7vJqxBna9Nft5Sj#2-how-to-install-the-subscription-app) if you want to enable subscriptions.
+
 <details><hr>
   <summary>View Sample Data</summary>
     <ul>
@@ -421,6 +384,7 @@ This resource sets sample prices and price tables.
 ### Payments
 
 This resource sets 3 affiliations (Promissory, Test and CreditControlV2), the custom payment Promissories and the payment condition using them, the VISA credit card condition and the Customer Credit condition.
+
 <details><hr>
   <summary>View Sample Data</summary>
     <ul>
@@ -443,6 +407,7 @@ This resource sets 3 affiliations (Promissory, Test and CreditControlV2), the cu
 ### Benefits
 
 This resource sets a Progressive Discount promotion.
+
 <details><hr>
   <summary>View Sample Data</summary>
     <ul>
@@ -466,6 +431,7 @@ This resource sets a Progressive Discount promotion.
 ### Taxes
 
 This resource sets VAT and ICMS taxes.
+
 <details><hr>
   <summary>View Sample Data</summary>
     <ul>
@@ -488,6 +454,7 @@ This resource sets VAT and ICMS taxes.
 ### Logistics
 
 This resource updates the <strong>Logistics</strong> module using sample docks, warehouse and carrier.
+
 <details><hr>
   <summary>View Sample Data</summary>
     <ul>

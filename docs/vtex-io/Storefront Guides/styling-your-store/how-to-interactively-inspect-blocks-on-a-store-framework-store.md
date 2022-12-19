@@ -16,19 +16,4 @@ You can only use this method on a **development workspace**.
 3. You can see the VTEX IO app that exports this block, the block itself and block class.
 
 ## Example:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/49291af-inspect.png",
-        "inspect.png",
-        2068,
-        1124,
-        "#aeb2bc"
-      ],
-      "caption": ""
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/styling-your-store/49291af-inspect.png)

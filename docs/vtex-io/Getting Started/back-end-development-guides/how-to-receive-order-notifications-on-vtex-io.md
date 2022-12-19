@@ -16,18 +16,5 @@ updatedAt: "2021-03-25T14:45:50.605Z"
 7. If you want more details check out the [readme on the example app](https://github.com/vtex-apps/orders-feed-example/blob/master/docs/README.md)
 
 *Example running on account cliqueretire and workspace lucis:*
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ead1c53-events.png",
-        "events.png",
-        2880,
-        1658,
-        "#090909"
-      ]
-    }
-  ]
-}
-[/block]
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/back-end-development-guides/ead1c53-events.png)
