@@ -1,10 +1,10 @@
 ---
 title: "Slider Layout"
 slug: "vtex-slider-layout"
-excerpt: "vtex.slider-layout@0.22.2"
+excerpt: "vtex.slider-layout@0.23.0"
 hidden: false
 createdAt: "2020-06-03T15:19:47.985Z"
-updatedAt: "2022-07-18T16:40:52.520Z"
+updatedAt: "2022-09-14T12:37:24.494Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
@@ -14,7 +14,19 @@ Slider Layout is a flexible solution for building sliders of blocks within VTEX 
 
 ![](https://user-images.githubusercontent.com/27777263/70230361-e839db00-1736-11ea-9f29-7c945c10a5f7.png)
 
-:information_source: *In order to use the Slider Layout as a substitute to the [Carousel app](https://github.com/vtex-apps/carousel), check out the [Building a Carousel through lists and Slider Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-carousel-using-slider-layout) documentation.*
+>*In order to use the Slider Layout as a substitute to the [Carousel app](https://github.com/vtex-apps/carousel), check out the [Building a Carousel through lists and Slider Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-carousel-using-slider-layout) documentation.*
+
+## Integration with Google Analytics Enhanced Ecommerce
+
+Slider layout also gives you the possibility to integrate your component with the [Google Analytics Enhanced Ecommerce feature](https://developers.google.com/analytics/devguides/collection/ua/gtm/enhanced-ecommerce). With this integration, you will be able to set up your promotion’s ID, name, and position on the [Site Editor](https://help.vtex.com/en/tutorial/site-editor-overview--299Dbeb9mFczUTyNQ9xPe1) to be shown on a Google Analytics dashboard.
+
+To do so, you must go to your store’s Admin, click **Store Setup > CMS > Site Editor** and open the image configurations of the internal promotion you want to track. These configurations are displayed on the right side of the page.
+
+![](https://user-images.githubusercontent.com/32786712/188009083-b1a1eca3-9f59-4186-80bf-bb49e99dc364.png)
+
+> For more information about managing your page content, access [Managing page and template content](https://help.vtex.com/en/tutorial/managing-page-and-template-content--3tMbx6HXy4Fy5r9EhboG37).
+
+With everything set up, Google Analytics is now able to track your internal promotions and generate reports of its views, clicks, click-through rate, conversions, and revenue. 
 
 ## Configuration
 

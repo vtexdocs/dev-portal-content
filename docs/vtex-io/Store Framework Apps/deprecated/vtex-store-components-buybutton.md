@@ -1,10 +1,10 @@
 ---
 title: "Buy Button"
 slug: "vtex-store-components-buybutton"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.375Z"
-updatedAt: "2022-08-01T13:32:26.240Z"
+updatedAt: "2022-11-22T18:39:23.054Z"
 ---
 > ⚠️ Warning
 >

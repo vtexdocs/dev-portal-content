@@ -1,10 +1,10 @@
 ---
 title: "Suggestions"
 slug: "vtex-search-suggestions"
-excerpt: "vtex.search@2.13.1"
+excerpt: "vtex.search@2.14.0"
 hidden: false
 createdAt: "2021-02-23T17:09:08.541Z"
-updatedAt: "2022-07-07T20:18:50.780Z"
+updatedAt: "2022-09-15T11:39:25.159Z"
 ---
 `Suggestions` is a component used to suggest search terms similar to the current query.
 

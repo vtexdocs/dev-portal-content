@@ -1,10 +1,10 @@
 ---
 title: "PayPal Checkout with Smart Payment Buttons"
 slug: "vtex-connector-paypal-commerce-platform"
-excerpt: "vtex.connector-paypal-commerce-platform@0.8.1"
+excerpt: "vtex.connector-paypal-commerce-platform@0.10.3"
 hidden: false
 createdAt: "2022-07-05T14:29:52.628Z"
-updatedAt: "2022-08-05T19:17:55.192Z"
+updatedAt: "2022-12-15T14:22:59.351Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -34,6 +34,8 @@ An app integrating PayPal Checkout with Smart Payment Buttons with a VTEX IO sto
 ## Configuration
 
 ### Installation & Onboarding
+
+> ⚠️ _Only users with access to the **Payments** section in the VTEX admin (or assigned the **PCI Gateway** role in License Manager) will be able to configure the app._
 
 1. Install this app from the [VTEX App Store](https://apps.vtex.com/vtex-connector-paypal-commerce-platform/p) by clicking `Get App`.
 2. If you wish to use the **Smart Payment Buttons**, install the Checkout Cart app by following its [documentation](https://vtex.io/docs/app/vtex.checkout-cart), **OR** modify your store-theme following the [Customization](#customization) section below. If using Checkout Cart, no store-theme modification is necessary.

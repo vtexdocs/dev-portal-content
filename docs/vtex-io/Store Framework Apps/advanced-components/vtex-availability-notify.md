@@ -1,10 +1,10 @@
 ---
 title: "Availability Notify"
 slug: "vtex-availability-notify"
-excerpt: "vtex.availability-notify@1.8.5"
+excerpt: "vtex.availability-notify@1.8.8"
 hidden: false
 createdAt: "2021-05-28T17:11:48.473Z"
-updatedAt: "2022-08-08T17:08:06.397Z"
+updatedAt: "2022-10-18T20:59:10.400Z"
 ---
 The Availability Notify component is responsible for showing a subscription form when a product SKU is not available. The form lets customers subscribe to get notified when that item gets restocked.
 

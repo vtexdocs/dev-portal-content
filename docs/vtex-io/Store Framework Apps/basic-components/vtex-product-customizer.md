@@ -1,10 +1,10 @@
 ---
 title: "Product Customizer"
 slug: "vtex-product-customizer"
-excerpt: "vtex.product-customizer@2.11.3"
+excerpt: "vtex.product-customizer@2.11.4"
 hidden: false
 createdAt: "2020-06-03T15:19:31.995Z"
-updatedAt: "2022-07-19T17:04:04.114Z"
+updatedAt: "2022-12-12T14:10:01.827Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
@@ -176,7 +176,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/leoWorkingGood"><img src="https://avatars2.githubusercontent.com/u/51805410?v=4" width="100px;" alt=""/><br /><sub><strong>leoWorkingGood</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-customizer/commits?author=leoWorkingGood" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/leoWorkingGood"><img src="https://avatars2.githubusercontent.com/u/51805410?v=4" width="100px;" alt=""/><br /><sub><b>leoWorkingGood</b></sub></a><br /><a href="https://github.com/vtex-apps/product-customizer/commits?author=leoWorkingGood" title="Code">💻</a></td>
   </tr>
 </table>
 

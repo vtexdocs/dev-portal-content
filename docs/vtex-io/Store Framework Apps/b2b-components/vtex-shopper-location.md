@@ -1,10 +1,10 @@
 ---
 title: "Shopper Location"
 slug: "vtex-shopper-location"
-excerpt: "vtex.shopper-location@1.4.13"
+excerpt: "vtex.shopper-location@1.6.3"
 hidden: false
 createdAt: "2020-09-03T21:01:54.967Z"
-updatedAt: "2022-08-02T19:57:15.201Z"
+updatedAt: "2022-11-11T12:33:47.603Z"
 ---
 This app attempts to determine the user's location if not already known, first by requesting permission to use their browser's geolocation feature, then by looking up their location based on their IP address as a fallback. The location is stored in the `shippingData` section of the `orderForm` and can then be used by other apps, such as [Location Availability](https://github.com/vtex-apps/location-availability).
 
@@ -12,7 +12,10 @@ A block is also provided which renders a form allowing the user to manually chan
 
 Shopper Location also supports redirecting a user to a URL based off their location determined by the app. See the [Client Redirect](#client-redirect) section.
 
+This app also supports white label sellers selection, allowing shoppers to select one or more sellers available in their location. Shoppers will then be able to search and view products from those select sellers. See the [Region Seller Selection](#region-seller-selection) section.
+
 :information*source: The Google Geolocation API key in your \_Inventory & Shipping* settings is required for the geolocation feature.
+
 :warning: To use the IP lookup fallback, you must have an API key for https://ip-geolocation.whoisxmlapi.com.
 
 ## Configuration
@@ -118,6 +121,23 @@ On their first visit, if a user is not on their country's website, a modal will 
 
 Additionally, there is an `Automatic Redirect` option, that will redirect the user automatically, without displaying the modal.
 
+### Region Sellers Selection
+
+Allow users to select one or more sellers serving their location from a list of options and display only products carried by those sellers in the search results.
+
+:information_source: For this feature to work properly, the item cannot have inventory in seller "1". If there's stock in seller "1", then the item will always appear in the search results, regardless of inventory in whichever sellers are selected.
+
+Add the `region-sellers` block as a child of the `shopper-location` block to get started:
+
+```json
+"shopper-location": {
+    "children": ["modal-trigger#address", "region-sellers"],
+    "props": {
+      "autofill": ["city", "country", "neighborhood", "number", "postalCode", "state", "street"]
+    }
+  },
+```
+
 #### Props
 
 `shopper-location`:
@@ -128,12 +148,21 @@ Additionally, there is an `Automatic Redirect` option, that will redirect the us
 
 `change-location`:
 
-| Prop name      | Type      | Description                                         | Default value | Accepted values                                                                                              |
-| -------------- | --------- | --------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------ |
-| `postalCode`   | `string`  | Define the postalCode position on the form          | `last`        | `first`,`last`                                                                                               |
+| Prop name      | Type      | Description                                                                                            | Default value | Accepted values                                                                                              |
+| -------------- | --------- | ------------------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------ |
+| `postalCode`   | `string`  | Define the postalCode position on the form                                                             | `last`        | `first`,`last`                                                                                               |
 | `autocomplete` | `boolean` | Enables google autocomplete based on the postalCode (Only works when **postalCode** is set to `first`) | `false`       | `true`,`false`                                                                                               |
-| `notRequired`  | `array`   | Turn visible fields not required                    | `undefined`   | `["city", "country", "neighborhood", "number", "state", "street", "complement","receiverName", "reference"]` |
-| `hideFields`   | `array`   | Hide fields and turn them not required              | `undefined`   | `["city", "country", "neighborhood", "number", "state", "street", "complement","receiverName", "reference"]` |
+| `notRequired`  | `array`   | Turn visible fields not required                                                                       | `undefined`   | `["city", "country", "neighborhood", "number", "state", "street", "complement","receiverName", "reference"]` |
+| `hideFields`   | `array`   | Hide fields and turn them not required                                                                 | `undefined`   | `["city", "country", "neighborhood", "number", "state", "street", "complement","receiverName", "reference"]` |
+
+`region-sellers`:
+
+| Prop name            | Type      | Description                                                                                                    | Default value | Accepted values     |
+| -------------------- | --------- | -------------------------------------------------------------------------------------------------------------- | ------------- | ------------------- |
+| `mode`               | `string`  | Specify if component will be used as a search filter (`filter`). Otherwise display as a dropdown (`default`).  | `default`     | `filter`, `default` |
+| `initiallyCollapsed` | `boolean` | When using `filter` mode, set sellers list to display as collapsed (`true`) or open (`false`) initially.       | `false`       | `true`,`false`      |
+| `displayStoreIcon`   | `boolean` | Display store icon.                                                                                            | `true`        | `true`,`false`      |
+| `useApplyButton`     | `boolean` | Apply sellers selection using a button (`true`) or automatically apply changes after each selection (`false`). | `false`       | `true`,`false`      |
 
 ## Customization
 
@@ -152,6 +181,17 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `changeLocationSubmitButton`      |
 | `changeLocationTitle`             |
 | `changeLocationError`             |
+| `sellersSelector`                 |
+| `sellersSelectorContainer`        |
+| `storeListWrapper`                |
+| `storeIcon`                       |
+| `storesCurrent`                   |
+| `storesCurrentNames`              |
+| `storeFilterTitle`                |
+| `storeListIcon`                   |
+| `storeListContainer`              |
+| `storeListItems`                  |
+| `storeListItem`                   |
 
 ## Contributors ✨
 

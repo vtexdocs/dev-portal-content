@@ -1,10 +1,10 @@
 ---
 title: "Cookie Script"
 slug: "vtex-cookie-script"
-excerpt: "vtex.cookie-script@0.1.8"
+excerpt: "vtex.cookie-script@0.1.9"
 hidden: false
 createdAt: "2020-07-03T17:34:56.652Z"
-updatedAt: "2021-09-23T12:44:16.840Z"
+updatedAt: "2022-08-11T10:02:19.333Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->

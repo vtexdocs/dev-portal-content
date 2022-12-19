@@ -1,10 +1,10 @@
 ---
 title: "Notification"
 slug: "vtex-store-components-notification"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.371Z"
-updatedAt: "2022-08-01T13:32:26.334Z"
+updatedAt: "2022-11-22T18:39:23.075Z"
 ---
 The `notification` component displays text content in a bar style (`notification.bar`) or inline (`notification.inline`). This Component can be imported and used by any VTEX app.
 

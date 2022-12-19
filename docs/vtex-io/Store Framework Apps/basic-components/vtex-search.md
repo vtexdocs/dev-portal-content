@@ -1,10 +1,10 @@
 ---
 title: "Search"
 slug: "vtex-search"
-excerpt: "vtex.search@2.13.1"
+excerpt: "vtex.search@2.14.0"
 hidden: false
 createdAt: "2020-06-03T15:15:11.555Z"
-updatedAt: "2022-07-07T20:18:50.554Z"
+updatedAt: "2022-10-10T23:25:50.492Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
@@ -41,7 +41,7 @@ You are now able to use all of the blocks exported by the `search` app. Check th
 | `did-you-mean`                | Helps users with possible misspelling corrections for the current search query.             |
 | `search-suggestions`          | Renders a list of similar search terms for the current search query.          |
 
->ℹ️ The blocks `search-banner`, `did-you-mean` and `search-suggestions` require you to have [Search Result app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) version `3.x` or higher installed in your theme.
+> ℹ️ The blocks `search-banner`, `did-you-mean` and `search-suggestions` require you to have [Search Result app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) version `3.x` or higher installed in your theme.
 
 ### Add the Search's blocks into the theme
 

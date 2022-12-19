@@ -1,10 +1,10 @@
 ---
 title: "Autocomplete"
 slug: "vtex-search-autocomplete"
-excerpt: "vtex.search@2.13.1"
+excerpt: "vtex.search@2.14.0"
 hidden: false
 createdAt: "2021-02-23T17:09:08.552Z"
-updatedAt: "2022-07-07T20:18:50.813Z"
+updatedAt: "2022-09-15T11:39:24.420Z"
 ---
 ## Description
 

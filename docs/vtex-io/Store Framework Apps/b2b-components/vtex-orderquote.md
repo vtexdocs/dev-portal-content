@@ -1,10 +1,10 @@
 ---
 title: "Order Quote"
 slug: "vtex-orderquote"
-excerpt: "vtex.orderquote@1.6.0"
+excerpt: "vtex.orderquote@1.6.2"
 hidden: false
 createdAt: "2020-06-03T15:19:21.542Z"
-updatedAt: "2022-08-02T15:36:46.582Z"
+updatedAt: "2022-09-21T16:35:08.727Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 

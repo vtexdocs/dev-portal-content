@@ -1,10 +1,10 @@
 ---
 title: "Location Availability"
 slug: "vtex-location-availability"
-excerpt: "vtex.location-availability@0.5.2"
+excerpt: "vtex.location-availability@0.5.7"
 hidden: false
 createdAt: "2020-09-02T15:29:28.176Z"
-updatedAt: "2022-08-08T21:03:19.564Z"
+updatedAt: "2022-11-22T16:02:14.171Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->

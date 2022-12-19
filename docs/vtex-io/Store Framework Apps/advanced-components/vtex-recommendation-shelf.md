@@ -20,7 +20,7 @@ The Product Recommendation app shows a selection of products using [recommendati
  
 ## Prerequisites
  
->ℹ️ The Product Recommendation app does not fetch user data for itself. However, most recommendation strategies require user navigation data to provide relevant suggestions to users. Hence, before proceeding any further, make sure you have an app capable of tracking user navigation installed on your VTEX account.
+> ℹ️ The Product Recommendation app does not fetch user data for itself. However, most recommendation strategies require user navigation data to provide relevant suggestions to users. Hence, before proceeding any further, make sure you have an app capable of tracking user navigation installed on your VTEX account.
  
 Make sure you have the Biggy pixel app installed on your VTEX account or install it by the following steps:
  
@@ -97,7 +97,7 @@ Now, you can use all blocks exported by the `recommendation-shelf` app. Check ou
   }
 ```
  
->ℹ️ You can add the `recommendation-shelf` in any store template desired, such as the `store.home` or `store.product`. You can also add the `recommendation-buy-together` and `recommendation-refresh` blocks if desired. For example:
+> ℹ️ You can add the `recommendation-shelf` in any store template desired, such as the `store.home` or `store.product`. You can also add the `recommendation-buy-together` and `recommendation-refresh` blocks if desired. For example:
  
 ```json
   "store.product": {
@@ -249,7 +249,7 @@ To configure the `recommendation-buy-together` you will need to add props to it.
  
 ### `recommendation-buy-together` props
 
->ℹ️ The only possible value for `strategy` is `BOUGHT_TOGETHER`.
+> ℹ️ The only possible value for `strategy` is `BOUGHT_TOGETHER`.
 \
 &nbsp;
 

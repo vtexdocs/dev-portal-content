@@ -1,10 +1,10 @@
 ---
 title: "Speech to Text Search"
 slug: "vtexarg-speech-to-text"
-excerpt: "vtexarg.speech-to-text@1.0.8"
+excerpt: "vtexarg.speech-to-text@1.0.10"
 hidden: false
 createdAt: "2021-07-28T15:17:51.703Z"
-updatedAt: "2022-04-27T16:52:56.923Z"
+updatedAt: "2022-11-03T17:57:01.905Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -12,14 +12,14 @@ updatedAt: "2022-04-27T16:52:56.923Z"
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
-This app **uses Google Chrome language processing** to listen with the microphone and return as a result a word. With that **result** the component redirects to the search page using it as a parameter.
+The `speech-to-text` app uses Google Chrome language processing to listen to the user's microphone and convert speech-to-text. The recognized text is then used to redirect the user to the corresponding search page.
 
 ![speechlow](https://user-images.githubusercontent.com/23383993/127346535-62a7546b-accd-468b-adfa-3495cabe64b9.gif)
 
 ## Configuration 
 
-1. Adding the app as a theme dependency in the `manifest.json` file;
-2. Declaring the app's main block in a given theme template or inside another block from the theme. For example:
+1. Add the `vtexarg.speech-to-text` app to your theme's **peer dependency** in the `manifest.json` file.
+2. Add the `text-speech` block to the desired theme template or inside another block. For example:
 
 ```
   "flex-layout.col#text-speech": {
@@ -29,7 +29,7 @@ This app **uses Google Chrome language processing** to listen with the microphon
   },
 ```
 
-And then add the needed configuration:
+3. Then, declare the `speech-to-text` block using the props stated in the [Props](#props) table. For example
 
 ```
  "speech-to-text": {
@@ -42,19 +42,19 @@ And then add the needed configuration:
   }
 ```
 
-### `speech-to-text` props
+## Props
 
 | Prop name    | Type            | Description    | Default value                                                                                                                               |
 | ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
-| `lang`      | `enum`       | Defines the language that will be used by the Google Chrome NLP API         | `en-EN`        |
-| `iconHeight`      | `string`       | Defines the icon height in px         | `20px`        |
-| `iconWidth`      | `string`       | Defines the icon width in px         | `20px`        |
-| `imgSrc`      | `string`       | Defines the link to the image to be shown         | `none`        |
+| `lang`      | `enum`       | Language used by the Google Chrome NLP API.         | `en-EN`        |
+| `iconHeight`      | `string`       | Icon height in px.         | `20px`        |
+| `iconWidth`      | `string`       | Icon width in px.         | `20px`        |
+| `imgSrc`      | `string`       | URL of the source image.         | `none`        |
 
 
-#
+
 ## Customization
-`In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).`
+To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles |
 | ----------- | 
@@ -75,7 +75,7 @@ Thanks goes to these wonderful people:
 [Fabricio Vagliente](https://github.com/Favri)
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://avatars.githubusercontent.com/u/774112?v=4" width="100px;" alt=""/><br /><sub><strong>Tomás Alfredo Mehdi</strong></sub></a><br /><a href="https://github.com/vtex-apps/speech-to-text/commits?author=tomymehdi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://avatars.githubusercontent.com/u/774112?v=4" width="100px;" alt=""/><br /><sub><b>Tomás Alfredo Mehdi</b></sub></a><br /><a href="https://github.com/vtex-apps/speech-to-text/commits?author=tomymehdi" title="Code">💻</a></td>
   </tr>
 </table>
 

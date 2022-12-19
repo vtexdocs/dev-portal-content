@@ -248,8 +248,8 @@ Thanks goes out to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/LucasCastroAcctGlobal"><img src="https://avatars0.githubusercontent.com/u/55210107?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>LucasCastroAcctGlobal</strong></sub></a><br /><a href="https://github.com/vtex-apps/condition-layout/commits?author=LucasCastroAcctGlobal" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/vini-lima-acct"><img src="https://avatars.githubusercontent.com/u/78028684?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>vini-lima-acct</strong></sub></a><br /><a href="https://github.com/vtex-apps/condition-layout/commits?author=vini-lima-acct" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/LucasCastroAcctGlobal"><img src="https://avatars0.githubusercontent.com/u/55210107?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LucasCastroAcctGlobal</b></sub></a><br /><a href="https://github.com/vtex-apps/condition-layout/commits?author=LucasCastroAcctGlobal" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/vini-lima-acct"><img src="https://avatars.githubusercontent.com/u/78028684?v=4?s=100" width="100px;" alt=""/><br /><sub><b>vini-lima-acct</b></sub></a><br /><a href="https://github.com/vtex-apps/condition-layout/commits?author=vini-lima-acct" title="Code">💻</a></td>
   </tr>
 </table>
 

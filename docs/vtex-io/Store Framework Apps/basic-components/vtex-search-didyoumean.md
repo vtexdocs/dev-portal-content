@@ -1,10 +1,10 @@
 ---
 title: "DidYouMean"
 slug: "vtex-search-didyoumean"
-excerpt: "vtex.search@2.13.1"
+excerpt: "vtex.search@2.14.0"
 hidden: false
 createdAt: "2021-02-23T17:09:08.617Z"
-updatedAt: "2022-07-07T20:18:50.777Z"
+updatedAt: "2022-09-15T11:39:24.346Z"
 ---
 `DidYouMean` is a component used to suggest a possible misspelling correction to the current query.
 

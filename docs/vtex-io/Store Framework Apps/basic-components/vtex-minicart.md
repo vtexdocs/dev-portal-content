@@ -190,9 +190,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/lucasayb"><img src="https://avatars2.githubusercontent.com/u/17356081?v=4" width="100px;" alt=""/><br /><sub><strong>Lucas Antônio Yamamoto Borges</strong></sub></a><br /><a href="https://github.com/vtex-apps/minicart/commits?author=lucasayb" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/lucaspacheco-acct"><img src="https://avatars0.githubusercontent.com/u/59736416?v=4" width="100px;" alt=""/><br /><sub><strong>lucaspacheco-acct</strong></sub></a><br /><a href="https://github.com/vtex-apps/minicart/commits?author=lucaspacheco-acct" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://avatars1.githubusercontent.com/u/49173685?v=4" width="100px;" alt=""/><br /><sub><strong>gustavopvasconcellos</strong></sub></a><br /><a href="https://github.com/vtex-apps/minicart/commits?author=gustavopvasconcellos" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/lucasayb"><img src="https://avatars2.githubusercontent.com/u/17356081?v=4" width="100px;" alt=""/><br /><sub><b>Lucas Antônio Yamamoto Borges</b></sub></a><br /><a href="https://github.com/vtex-apps/minicart/commits?author=lucasayb" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/lucaspacheco-acct"><img src="https://avatars0.githubusercontent.com/u/59736416?v=4" width="100px;" alt=""/><br /><sub><b>lucaspacheco-acct</b></sub></a><br /><a href="https://github.com/vtex-apps/minicart/commits?author=lucaspacheco-acct" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://avatars1.githubusercontent.com/u/49173685?v=4" width="100px;" alt=""/><br /><sub><b>gustavopvasconcellos</b></sub></a><br /><a href="https://github.com/vtex-apps/minicart/commits?author=gustavopvasconcellos" title="Code">💻</a></td>
   </tr>
 </table>
 

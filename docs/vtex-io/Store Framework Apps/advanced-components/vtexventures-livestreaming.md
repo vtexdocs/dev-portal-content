@@ -1,10 +1,10 @@
 ---
 title: "Live Shopping"
 slug: "vtexventures-livestreaming"
-excerpt: "vtexventures.livestreaming@3.4.0"
+excerpt: "vtexventures.livestreaming@3.4.8"
 hidden: false
 createdAt: "2021-05-13T18:20:06.128Z"
-updatedAt: "2022-08-03T21:04:22.060Z"
+updatedAt: "2022-10-13T22:39:05.115Z"
 ---
 The Live Shopping app allows businesses to broadcast live on the store website, increasing selling rates, enhancing user experience, and boosting customer interaction simultaneously and in real-time.
 
@@ -108,9 +108,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 7. Click in **Item** and in **Events (In live)** choose the desired event. Then click on `APPLY`.
 8. If desired, set a start and end date for the component display.
 
-> ℹ️ Info
->
->  Use the Site Editor module to configure not only the live event but also texts, images, and banners to be displayed alongside it.
+> ℹ️  Use the Site Editor module to configure not only the live event but also texts, images, and banners to be displayed alongside it.
 
 9. Save your changes.
 
@@ -153,9 +151,7 @@ The Live Shopping app counts with a live chat, enabling your users to engage wit
 
 ![block-words](https://user-images.githubusercontent.com/67270558/142054500-692d3f98-4289-4cf5-8d84-96d676ee1dc0.png)
 
-> ℹ️ Info
->
-> This feature is helpful to block rude, politician, or non-related comments from your live stream. Notice that the added words will be applied to all events, with no exceptions.
+> ℹ️ This feature is helpful to block rude, politician, or non-related comments from your live stream. Notice that the added words will be applied to all events, with no exceptions.
 
 6. Do not forget to save all of your changes during the steps.
 

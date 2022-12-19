@@ -1,10 +1,10 @@
 ---
 title: "Product Images"
 slug: "vtex-store-components-productimages"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.419Z"
-updatedAt: "2022-08-01T13:32:26.367Z"
+updatedAt: "2022-11-22T18:39:23.087Z"
 ---
 The `product-images` block is responsible for rendering a product image or video.
 

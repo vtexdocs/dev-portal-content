@@ -1,10 +1,10 @@
 ---
 title: "Store Link"
 slug: "vtex-store-link"
-excerpt: "vtex.store-link@0.8.1"
+excerpt: "vtex.store-link@0.9.2"
 hidden: false
 createdAt: "2020-06-03T15:19:30.090Z"
-updatedAt: "2021-08-09T19:49:05.396Z"
+updatedAt: "2022-11-11T16:13:51.504Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -18,20 +18,13 @@ The Store Link app provides blocks responsible for displaying links in other the
 
 ## Configuration
 
-1. Add `store-link` app to your theme's dependencies in the `manifest.json`, for example:
+1. Add the `store-link` app to your theme's dependencies in the `manifest.json` file. You'll, then, be able to use all the [blocks](#blocks) exported by the `store-link` app and its respective [props](#props).
 
 ```diff
   "dependencies": {
 +   "vtex.store-link": "0.x"
   }
 ```
-
-Now, you are able to use all blocks exported by the `store-link` app. Check out the full list below:
-
-| Block name     | Description                                     |
-| -------------- | ----------------------------------------------- |
-| `link.product` | A link that consumes the product context.       |
-| `link`         | A normal link that doesn't consume any context. |
 
 2. Based on the exported list, choose the desired block and declare it in the block that will host the link. Find below an example of a `link.product` being used in the [`product-summary`](https://vtex.io/docs/components/product/vtex.product-summary) block:
 
@@ -50,15 +43,22 @@ Now, you are able to use all blocks exported by the `store-link` app. Check out 
       "product-rating-inline",
       "product-summary-space",
       "product-summary-price",
-      "link.product#product-page
+      "link.product#product-page"
     ]
   },
 }
 ```
 
-:warning: *Note that there is a `{slug}` placeholder being passed onto the `href` prop in the example above. When rendered, this placeholder will be overwritten by the value accrued from the closest product context, generating a link like `/everyday-necessaire/p`. Therefore, remember that in order for this format to work you have to place the `link.product` block inside of a another block that provides a product context, such as the [`ProductSummary`](https://vtex.io/docs/components/product/vtex.product-summary).*
+>⚠️ Note that you must place the `link.product` block inside a block that provides a product context (e.g., [`ProductSummary`](https://vtex.io/docs/components/product/vtex.product-summary)). From the previous example, note that a `{slug}` placeholder is being passed onto the `href` prop. When rendered, this placeholder is overwritten by the value accrued from the closest product context, generating a link like `/everyday-necessaire/p`.
 
-### Props
+## Blocks
+
+| Block     | Description                                     |
+| -------------- | ----------------------------------------------- |
+| `link.product` | A link that consumes the product context.       |
+| `link`         | A normal link that doesn't consume any context. |
+
+## Props
 
 All blocks exported by `store-link` share the same props:
 
@@ -96,10 +96,9 @@ When creating an URL link using the `href` prop, you can create hypotheticals qu
 }
 ```
 
+Considering the `href` prop from the previous example, note that the URL link will be built correctly if the current page has the `returnUrl` query string. Otherwise, an empty value will take place.
 
-According to the example above, if the current page have the query string `returnUrl` the value passed to the `href` prop will be used and the URL link will be properly built. If it does not have the `returnURL` query string, an empty string will take place.
-
-Due to the context used by the `link.product` block, you can also build an URL path with product variables when using the `href` prop. 
+Depending on the context used by the `link.product` block, you can use *product variables* to structure different URL paths for the `href` prop, such as a link to a given product department (`/{department}`).
 
 | Product variable   | Description                                   |
 | -------------- | --------------------------------------------- |
@@ -114,9 +113,7 @@ Due to the context used by the `link.product` block, you can also build an URL p
 | `skuId`      | Current selected SKU ID.                       |
 | `slug`       | The link text used to create the product link. |
 
-Using one of these variables, you will be able to structure any desired URL for your store, such as a link to a given product department (`/{department}`).
-
-To build URLs with variables related to the product specifications, you should use the following format: `{specificationGroups.groupName.specifications.specificationName}`, replacing `groupName` and `specificationName` with the specification group and the product specification names. For example:
+To build URLs with variables related to product specifications, use the following format: `{specificationGroups.groupName.specifications.specificationName}`. Replace `groupName` and `specificationName` with the specification group and the product specification names accordingly. For example:
 
 ```jsonc
 {
@@ -133,7 +130,7 @@ In the example above, `Design` is the specification group name and `Dimensions` 
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization). All blocks have the same handles
+To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide. All blocks have the same handles.
 
 | CSS Handles         |
 | ------------------- |
@@ -152,7 +149,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/anto90fg"><img src="https://avatars.githubusercontent.com/u/73878310?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>anto90fg</strong></sub></a><br /><a href="https://github.com/vtex-apps/store-link/commits?author=anto90fg" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/anto90fg"><img src="https://avatars.githubusercontent.com/u/73878310?v=4?s=100" width="100px;" alt=""/><br /><sub><b>anto90fg</b></sub></a><br /><a href="https://github.com/vtex-apps/store-link/commits?author=anto90fg" title="Code">💻</a></td>
   </tr>
 </table>
 

@@ -1,10 +1,10 @@
 ---
 title: "Wordpress Integration"
 slug: "vtex-wordpress-integration"
-excerpt: "vtex.wordpress-integration@2.21.2"
+excerpt: "vtex.wordpress-integration@2.22.0"
 hidden: false
 createdAt: "2020-06-03T15:19:10.536Z"
-updatedAt: "2022-07-25T20:29:24.703Z"
+updatedAt: "2022-12-15T16:50:19.073Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
@@ -55,16 +55,16 @@ It is time to create the store pages that will host the blog content. Before per
 
 ```json
 "store.blog-home": {
- "path": "/blog"
+	"path": "/blog"
 },
 "store.blog-category": {
- "path": "/blog/category/:categoryslug_id"
+	"path": "/blog/category/:categoryslug_id"
 },
 "store.blog-post": {
- "path": "/blog/post/:slug_id"
+	"path": "/blog/post/:slug_id"
 },
 "store.blog-search-result": {
- "path": "/blog/search/:term_id"
+	"path": "/blog/search/:term_id"
 }
 ```
 
@@ -81,7 +81,7 @@ If you wish to display WordPress **pages** on your store site in addition to **p
 
 ```json
 "store.custom#blog-page": {
- "path": "/blog/page/:slug"
+	"path": "/blog/page/:slug"
 }
 ```
 
@@ -89,13 +89,13 @@ In addition to that, you can optionally add `:page` parameters for URL-controlle
 
 ```json
 "store.blog-home": {
- "path": "/blog(/page/:page)"
+	"path": "/blog(/page/:page)"
 },
 "store.blog-category": {
- "path": "/blog/category/:categoryslug_id(/page/:page)"
+	"path": "/blog/category/:categoryslug_id(/page/:page)"
 },
 "store.blog-search-result": {
- "path": "/blog/search/:term_id(/page/:page)"
+	"path": "/blog/search/:term_id(/page/:page)"
 },
 ```
 
@@ -132,7 +132,7 @@ The Wordpress Integration app provides the following blocks for your use:
 | -------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | `mediaSize`    | `MediaSizeEnum` | WordPress media image size that should be used in the blog's preview blocks.                                                                                                                                                                                                                                                                               | `full`          |
 | `ampLinks`     | `boolean`       | Whether the links from each blog post should point to the external blog AMP (Accelrated Mobile Page) in a new tab (`true`) or not (`false`). Only valid for AMPs generated using the [WordPress AMP plugin](https://wordpress.org/plugins/amp/).                                                                                                           | `false`         |
-| `ampUrlFormat` | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. For example, possible URLs are `https://www.wordpressblog.com/blog-post/amp`, `https://www.wordpressblog.com/blog-post?amp`, or `https://www.wordpressblog.com/blog-post?amp=1`. | `ampPathSuffix` |
+| `ampUrlFormat` | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are https://www.wordpressblog.com/blog-post/amp, https://www.wordpressblog.com/blog-post?amp, or https://www.wordpressblog.com/blog-post?amp=1. | `ampPathSuffix` |
 
 #### `blog-category-list.wordpress-category-list` props
 
@@ -140,7 +140,7 @@ The Wordpress Integration app provides the following blocks for your use:
 | -------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | `mediaSize`    | `MediaSizeEnum` | WordPress media image size that should be used in the blog's preview blocks.                                                                                                                                                                                                                                                                               | `full`          |
 | `ampLinks`     | `boolean`       | Whether the links from each blog post should point to the external blog AMP (Accelrated Mobile Page) in a new tab (`true`) or not (`false`). Only valid for AMPs generated using the [WordPress AMP plugin](https://wordpress.org/plugins/amp/).                                                                                                           | `false`         |
-| `ampUrlFormat` | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. For example, possible URLs are `https://www.wordpressblog.com/blog-post/amp`, `https://www.wordpressblog.com/blog-post?amp`, or `https://www.wordpressblog.com/blog-post?amp=1`. | `ampPathSuffix` |
+| `ampUrlFormat` | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are https://www.wordpressblog.com/blog-post/amp, https://www.wordpressblog.com/blog-post?amp, or https://www.wordpressblog.com/blog-post?amp=1. | `ampPathSuffix` |
 
 #### `blog-latest-posts-preview.wordpress-latest-posts-preview` props
 
@@ -159,7 +159,7 @@ The Wordpress Integration app provides the following blocks for your use:
 | `mediaSize`         | `MediaSizeEnum` | WordPress media image size that should be used in the blog's preview blocks.                                                                                                                                                                                                                                                                                                                                 | `full`          |
 | `absoluteLinks`     | `boolean`       | Whether the links from each blog post should point to the external blog in a new tab (`true`) or not (`false`).                                                                                                                                                                                                                                                                                              | `false`         |
 | `ampLinks`          | `boolean`       | Whether the links from each blog post should point to the external blog AMP (Accelrated Mobile Page) in a new tab (`true`) or not (`false`). <br></br> Only valid for AMPs generated using the [WordPress AMP plugin](https://wordpress.org/plugins/amp/). If `true` but AMP is not enabled for a particular post and `absoluteLinks` is enabled, then the the external blog post link will be used instead. | `false`         |
-| `ampUrlFormat`      | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are <https://www.wordpressblog.com/blog-post/amp>, <https://www.wordpressblog.com/blog-post?amp>, or <https://www.wordpressblog.com/blog-post?amp=1>.                                                   | `ampPathSuffix` |
+| `ampUrlFormat`      | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are https://www.wordpressblog.com/blog-post/amp, https://www.wordpressblog.com/blog-post?amp, or https://www.wordpressblog.com/blog-post?amp=1.                                                   | `ampPathSuffix` |
 
 #### `blog-category-preview.wordpress-category-preview` props
 
@@ -179,7 +179,7 @@ The Wordpress Integration app provides the following blocks for your use:
 | `absoluteLinks`    | `boolean`       | Whether the links from each blog post should point to the external blog in a new tab (`true`) or not (`false`).                                                                                                                                                                                                                                                                                              | `false`                  |
 | `showPostButton`   | `boolean`       | Displays a button that allows the user to link directly to WP post (`true`) or not (`false`).                                                                                                                                                                                                                                                                                                                | `false`                  |
 | `ampLinks`         | `boolean`       | Whether the links from each blog post should point to the external blog AMP (Accelrated Mobile Page) in a new tab (`true`) or not (`false`). <br></br> Only valid for AMPs generated using the [WordPress AMP plugin](https://wordpress.org/plugins/amp/). If `true` but AMP is not enabled for a particular post and `absoluteLinks` is enabled, then the the external blog post link will be used instead. | `false`                  |
-| `ampUrlFormat`     | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are <https://www.wordpressblog.com/blog-post/amp>, <https://www.wordpressblog.com/blog-post?amp>, or <https://www.wordpressblog.com/blog-post?amp=1>.                                                   | `ampPathSuffix`          |
+| `ampUrlFormat`     | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are https://www.wordpressblog.com/blog-post/amp, https://www.wordpressblog.com/blog-post?amp, or https://www.wordpressblog.com/blog-post?amp=1.                                                   | `ampPathSuffix`          |
 
 #### `blog-search.wordpress-search` props
 
@@ -193,7 +193,7 @@ The Wordpress Integration app provides the following blocks for your use:
 | -------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | `mediaSize`    | `MediaSizeEnum` | WordPress media image size that should be used in the blog's preview blocks.                                                                                                                                                                                                                                                                               | `full`          |
 | `ampLinks`     | `boolean`       | Whether the links from each blog post should point to the external blog AMP (Accelrated Mobile Page) in a new tab (`true`) or not (`false`). Only valid for AMPs generated using the [WordPress AMP plugin](https://wordpress.org/plugins/amp/).                                                                                                           | `false`         |
-| `ampUrlFormat` | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are <https://www.wordpressblog.com/blog-post/amp>, <https://www.wordpressblog.com/blog-post?amp>, or <https://www.wordpressblog.com/blog-post?amp=1>. | `ampPathSuffix` |
+| `ampUrlFormat` | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are https://www.wordpressblog.com/blog-post/amp, https://www.wordpressblog.com/blog-post?amp, or https://www.wordpressblog.com/blog-post?amp=1. | `ampPathSuffix` |
 
 #### `search-blog-articles-preview.wordpress` props
 
@@ -208,7 +208,7 @@ The Wordpress Integration app provides the following blocks for your use:
 | `mediaSize`       | `MediaSizeEnum` | WordPress media image size that should be used in the blog's preview blocks.                                                                                                                                                                                                                                                                                                                                 | `full`          |
 | `absoluteLinks`   | `boolean`       | Whether the links from each blog post should point to the external blog in a new tab (`true`) or not (`false`).                                                                                                                                                                                                                                                                                              | `false`         |
 | `ampLinks`        | `boolean`       | Whether the links from each blog post should point to the external blog AMP (Accelrated Mobile Page) in a new tab (`true`) or not (`false`). <br></br> Only valid for AMPs generated using the [WordPress AMP plugin](https://wordpress.org/plugins/amp/). If `true` but AMP is not enabled for a particular post and `absoluteLinks` is enabled, then the the external blog post link will be used instead. | `false`         |
-| `ampUrlFormat`    | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are <https://www.wordpressblog.com/blog-post/amp>, <https://www.wordpressblog.com/blog-post?amp>, or <https://www.wordpressblog.com/blog-post?amp=1>.                                                   | `ampPathSuffix` |
+| `ampUrlFormat`    | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are https://www.wordpressblog.com/blog-post/amp, https://www.wordpressblog.com/blog-post?amp, or https://www.wordpressblog.com/blog-post?amp=1.                                                   | `ampPathSuffix` |
 
 #### `blog-related-posts.wordpress-related-posts` props
 
@@ -224,7 +224,7 @@ The Wordpress Integration app provides the following blocks for your use:
 | `mediaSize`       | `MediaSizeEnum` | WordPress media image size that should be used in the blog's preview blocks.                                                                                                                                                                                                                                                                                                                                 | `full`          |
 | `absoluteLinks`   | `boolean`       | Whether the links from each blog post should point to the external blog in a new tab (`true`) or not (`false`).                                                                                                                                                                                                                                                                                              | `false`         |
 | `ampLinks`        | `boolean`       | Whether the links from each blog post should point to the external blog AMP (Accelrated Mobile Page) in a new tab (`true`) or not (`false`). <br></br> Only valid for AMPs generated using the [WordPress AMP plugin](https://wordpress.org/plugins/amp/). If `true` but AMP is not enabled for a particular post and `absoluteLinks` is enabled, then the the external blog post link will be used instead. | `false`         |
-| `ampUrlFormat`    | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are <https://www.wordpressblog.com/blog-post/amp>, <https://www.wordpressblog.com/blog-post?amp>, or <https://www.wordpressblog.com/blog-post?amp=1>.                                                   | `ampPathSuffix` |
+| `ampUrlFormat`    | `string`        | URL structure for AMP links. `ampPathSuffix` appends `/amp` to the end of the external blog post URL. `ampQuery` appends `?amp` and `ampQueryValue` appends `?amp=1`. <br></br> For example, possible URLs are https://www.wordpressblog.com/blog-post/amp, https://www.wordpressblog.com/blog-post?amp, or https://www.wordpressblog.com/blog-post?amp=1.                                                   | `ampPathSuffix` |
 
 #### `blog-search-list.wordpress-category-related-posts` props
 
@@ -276,19 +276,19 @@ It is time to create the store pages that will host the blog content. Before per
 
 ```json
 "store.blog-home": {
- "path": "/blog"
+	"path": "/blog"
 },
 "store.blog-category": {
- "path": "/:customdomainslug/category/:categoryslug_id"
+	"path": "/:customdomainslug/category/:categoryslug_id"
 },
 "store.blog-post": {
- "path": "/:customdomainslug/post/:slug_id"
+	"path": "/:customdomainslug/post/:slug_id"
 },
 "store.blog-search-result": {
- "path": "/:customdomainslug/search/:term_id"
+	"path": "/:customdomainslug/search/:term_id"
 },
 "store.custom#blog-page": {
- "path": "/:customdomainslug/page/:slug_id"
+	"path": "/:customdomainslug/page/:slug_id"
 }
 ```
 
@@ -382,10 +382,10 @@ Add an additional category route including the `:categoryslug` and `:subcategory
 
 ```json
 "store.blog-category": {
- "path": "/blog/category/:categoryslug_id"
+	"path": "/blog/category/:categoryslug_id"
 },
 "store.blog-category#subcategory": {
- "path": "/blog/category/:categoryslug/:subcategoryslug_id"
+	"path": "/blog/category/:categoryslug/:subcategoryslug_id"
 },
 ```
 

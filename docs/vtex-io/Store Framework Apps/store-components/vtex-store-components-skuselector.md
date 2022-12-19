@@ -1,10 +1,10 @@
 ---
 title: "SKU Selector"
 slug: "vtex-store-components-skuselector"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.364Z"
-updatedAt: "2022-08-01T13:32:26.403Z"
+updatedAt: "2022-11-22T18:39:23.224Z"
 ---
 The `sku-selector` block is mainly used in Product Details Pages (PDPs) to display all the SKUs available for a given product.
 

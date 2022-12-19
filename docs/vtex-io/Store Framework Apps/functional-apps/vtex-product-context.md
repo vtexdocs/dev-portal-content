@@ -105,7 +105,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/sahanljc"><img src="https://avatars.githubusercontent.com/u/42151054?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>Sahan Jayawardana</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-context/commits?author=sahanljc" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/sahanljc"><img src="https://avatars.githubusercontent.com/u/42151054?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sahan Jayawardana</b></sub></a><br /><a href="https://github.com/vtex-apps/product-context/commits?author=sahanljc" title="Code">💻</a></td>
   </tr>
 </table>
 

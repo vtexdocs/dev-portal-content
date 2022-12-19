@@ -1,10 +1,10 @@
 ---
 title: "Flex Layout"
 slug: "vtex-flex-layout"
-excerpt: "vtex.flex-layout@0.20.0"
+excerpt: "vtex.flex-layout@0.20.1"
 hidden: false
 createdAt: "2020-06-03T15:19:18.642Z"
-updatedAt: "2022-08-04T17:10:17.880Z"
+updatedAt: "2022-09-01T17:03:52.331Z"
 ---
 Flex Layout is a **layout structure** built within VTEX IO store framework. It allows the construction of complex custom layouts using the concept of **rows** and **columns**, setting the desired structure and positioning of blocks in a given page.
 

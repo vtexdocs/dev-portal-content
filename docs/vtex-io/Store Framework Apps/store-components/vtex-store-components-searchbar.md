@@ -1,10 +1,10 @@
 ---
 title: "Search Bar"
 slug: "vtex-store-components-searchbar"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.385Z"
-updatedAt: "2022-08-01T13:32:26.264Z"
+updatedAt: "2022-11-22T18:39:23.161Z"
 ---
 The `search-bar` component shows a search bar with autocomplete options and displays the matching products as well. This component can be imported and used by any VTEX App.
 

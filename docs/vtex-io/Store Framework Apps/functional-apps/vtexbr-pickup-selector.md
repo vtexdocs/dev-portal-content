@@ -1,10 +1,10 @@
 ---
 title: "Pickup point selector"
 slug: "vtexbr-pickup-selector"
-excerpt: "vtexbr.pickup-selector@2.0.4"
+excerpt: "vtexbr.pickup-selector@3.0.0"
 hidden: false
 createdAt: "2022-04-20T12:40:48.378Z"
-updatedAt: "2022-06-30T19:59:43.817Z"
+updatedAt: "2022-08-18T13:26:16.005Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->

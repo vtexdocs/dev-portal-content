@@ -1,10 +1,10 @@
 ---
 title: "Trustpilot"
 slug: "vtex-trustpilot"
-excerpt: "vtex.trustpilot@2.1.0"
+excerpt: "vtex.trustpilot@2.2.0"
 hidden: false
 createdAt: "2020-06-03T15:19:16.745Z"
-updatedAt: "2021-08-02T18:16:14.401Z"
+updatedAt: "2022-09-23T18:04:06.851Z"
 ---
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -72,6 +72,7 @@ To use widget without `shop-review-badge` to landing pages, for example, you can
          "height":"240px",
          "theme":"light",
          "stars":"4,5",
+         "tag":"cart",
          "businessUnitId":"597a23fwffdsfe05a793fe",
          "templateId":"5419b6a8b0d04a076446a9ad"
       }
@@ -85,6 +86,7 @@ To use widget without `shop-review-badge` to landing pages, for example, you can
 |  `height`  | `string` | Change height of template |  `undefined`   |
 |  `theme`  | `string` | Change theme of template `light` or `dark` |  `undefined`   |
 |  `stars`  | `string` | Change stars stock of template |  `undefined`   |
+|  `tag`  | `string` | Change tag of template. More info [here](https://support.trustpilot.com/hc/en-us/articles/203840856-Tag-your-service-reviews) |  `undefined`   |
 |  `businessUnitId`  | `string` | Set your business code  |  `undefined`  |
 |  `templateId`  | `string` | Set your template ID  | `5419b6a8b0d04a076446a9ad`  |
 

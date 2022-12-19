@@ -1,10 +1,10 @@
 ---
 title: "Login"
 slug: "vtex-login"
-excerpt: "vtex.login@2.52.1"
+excerpt: "vtex.login@2.56.0"
 hidden: false
 createdAt: "2020-06-03T15:19:20.242Z"
-updatedAt: "2022-03-24T15:47:41.586Z"
+updatedAt: "2022-12-08T14:42:50.254Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -91,7 +91,7 @@ Now, you are able to use all the blocks exported by the Login app. Check out the
 | Prop name                 | Type        | Description                                                                        | Default value          |
 | :-----------------------: | :---------: |:---------------------------------------------------------------------------------: | :--------------------: |
 | `isInitialScreenOptionOnly` | `boolean` | Whether only the login options will be displayed on the initial screen (`true`) or not (`false`). | `true` |
-| `defaultOption` | `enum` | Defines the default login options to be shown. Possible values are: `0` (shows the access-code option for login) and `1` (shows the email/password option for login). | `0` |
+| `defaultOption` | `enum` | Defines the default login options to be shown. Possible values are: `0` (shows the access-code option for login), `1` (shows the email/password option for login) and `2` (shows the corporate option for login). | `0` |
 | `optionsTitle` | `string` | Text to entitle the login options. | `undefined` |
 | `emailAndPasswordTitle` | `String`  | Text to display the email-and-password option. | `undefined` |
 | `accessCodeTitle` | `string` | Text to display the access-code option.  | `undefined` |
@@ -238,6 +238,7 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `optionsListItemContainer`   |                                                                                                                  
 | `accessCodeOptionBtn`        |                                                                                                                  
 | `emailPasswordOptionBtn`     |                                                                                                                 
+| `corporateOptionBtn`         |                                                                                                                 
 | `facebookOptionBtn`          |                                                                                                                 
 | `googleOptionBtn`            |                                                                                                                
 | `customOAuthOptionBtn`       |                                                                                                                  
@@ -267,6 +268,7 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `backButton`                 | 
 | `accountOptions`             | 
 | `codeConfirmation`           |
+| `corporateEmail`             |
 | `formTitle`                  | 
 | `formSubtitle`               | 
 | `box`                        |

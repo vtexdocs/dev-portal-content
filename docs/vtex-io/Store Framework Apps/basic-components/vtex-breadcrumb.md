@@ -1,10 +1,10 @@
 ---
 title: "Breadcrumb"
 slug: "vtex-breadcrumb"
-excerpt: "vtex.breadcrumb@1.9.5-hkignore.0"
+excerpt: "vtex.breadcrumb@1.9.5-hkignore.3.auc"
 hidden: false
 createdAt: "2020-06-03T15:19:30.725Z"
-updatedAt: "2022-06-21T09:03:03.018Z"
+updatedAt: "2022-09-14T13:27:01.333Z"
 ---
 The VTEX BreadCrumb is a navigation scheme that shows a user's browsing history up to their current location in your store.
 

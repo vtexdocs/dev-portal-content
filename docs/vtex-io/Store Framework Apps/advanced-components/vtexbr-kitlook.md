@@ -1,10 +1,10 @@
 ---
 title: "Kit Look"
 slug: "vtexbr-kitlook"
-excerpt: "vtexbr.kitlook@5.3.0"
+excerpt: "vtexbr.kitlook@5.6.1"
 hidden: false
 createdAt: "2021-10-07T18:46:15.904Z"
-updatedAt: "2022-07-25T20:06:31.514Z"
+updatedAt: "2022-12-06T12:19:29.650Z"
 ---
 The Kit Look app displays relevant products to the shopper at the time of purchase, increasing the store's product selling. 
 
@@ -25,9 +25,7 @@ Set up the Kit with all the products that will be displayed. To do so, refer to 
 
 2. You will be redirected to the checkout and choose a payment method since **the Kit Look is a paid app.**
 
-> ℹ️
->
-> As the Kit look is a paid app, you will be charged a US$0.01 fee to validate your credit card information. This will be refunded as soon as the payment is approved.
+> ℹ️ As the Kit look is a paid app, you will be charged a US$0.01 fee to validate your credit card information. This will be refunded as soon as the payment is approved.
 
 Once you have paid for the app, it is installed in your account.
 
@@ -45,7 +43,9 @@ Once you have paid for the app, it is installed in your account.
 
 The Kit Look order by default is sorted by the productId in ascending order, but it is possible to configure it to respect the Kit order registration through the settings in the Kit Look app inside my applications.
 
-![KitOrder](https://user-images.githubusercontent.com/67066494/179033651-29ebcb47-6ce1-4de4-9a71-c61232047b50.png)
+Furthermore it is possible to select which components the kitlook block should render. The default configuration is shown in the image:
+
+![KitOrder](https://user-images.githubusercontent.com/67066494/205094714-ff95412e-c6ed-42bd-a011-b99c624a731b.png)
 
 The `kitlook-layout` interface works by alternating the blocks if it detects that the product is a kit. 
 
@@ -88,9 +88,7 @@ Check out the following sections to add the `kitlook-layout` interface.
 }
 ```
 
-> ℹ️
->
-> Keep in mind that the first block specified will always be for regular products, and the second one is for your custom product page that you want to display if the product is a kit.
+> ℹ️ Keep in mind that the first block specified will always be for regular products, and the second one is for your custom product page that you want to display if the product is a kit.
 
 3. In your second block, you can use the `kitlook` block to display the kit items. For example:
 
@@ -169,6 +167,23 @@ In the example above, we are reusing the `flex-layout.col#stack` block shared wi
 }
 ```
 
+## Customization
+
+In order to apply CSS customizations in the kitlook block, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+
+| CSS Handles           |
+| --------------------- |
+| `kitlookContainer`          |
+| `kitlookBox` |
+| `kitlookImage`    |
+| `kitlookDetails`    |
+| `kitlookName`    |
+| `kitlookDescription`    |
+| `kitlookPrice`    |
+| `kitlookButton`    |
+| `kitlookCheckbox`    |
+
+
 ### Product Summary
 
 If you have any shelves which may display kits you need to replace the `product-summary` or `product-summary.shelf` interface with `product-summary.kitlook-layout` in those shelves in `store/blocks/home/home.jsonc`
@@ -194,9 +209,7 @@ If you have any shelves which may display kits you need to replace the `product-
 }
 ```
 
-> ⚠️
->
-> We recommend you do the same for your `gallery` block, so the new layout is used in search results and categories pages.
+>⚠️ We recommend you do the same for your `gallery` block, so the new layout is used in search results and categories pages.
 
 ```json
 {

@@ -1,14 +1,14 @@
 ---
 title: "Image"
 slug: "vtex-store-components-image"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.359Z"
-updatedAt: "2022-08-01T13:32:26.191Z"
+updatedAt: "2022-11-22T18:39:23.235Z"
 ---
 The `image` block renders images in the storefront. 
 
-![image](https://user-images.githubusercontent.com/284515/70230392-f982e780-1736-11ea-921b-e83208e80620.png)
+<img src="https://user-images.githubusercontent.com/60782333/197802548-bc9940ae-b9c8-47df-9769-e76155b9219b.png" width="400" />
 
 ## Configuration
 

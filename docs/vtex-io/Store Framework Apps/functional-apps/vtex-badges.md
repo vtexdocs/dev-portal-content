@@ -1,10 +1,10 @@
 ---
 title: "Badges"
 slug: "vtex-badges"
-excerpt: "vtex.badges@3.5.0"
+excerpt: "vtex.badges@3.10.0"
 hidden: false
 createdAt: "2022-07-04T19:51:14.430Z"
-updatedAt: "2022-07-14T17:57:50.472Z"
+updatedAt: "2022-11-22T20:29:21.028Z"
 ---
 This app allows you to add content badges to an ecommerce. In the Admin panel, you can create, edit and remove badges. There is also a storefront component that allows these badges to be added to your store theme.
 
@@ -13,12 +13,15 @@ This app allows you to add content badges to an ecommerce. In the Admin panel, y
 In order to setup **Badges** in your store, follow these steps:
 
 1. Install the app. You can do this by going to the [Badges app page](https://apps.vtex.com/vtex-badges/p) in the VTEX app store or by running this command in your terminal:
+
 ```bash
   vtex install vtex.badges@3.x
 ```
+
 2. Add **Badges** to the `peerDependencies` in your `manifest.json` file:
+
 ```json
-"dependencies": {
+"peerDependencies": {
   "vtex.badges": "3.x"
 }
 ```
@@ -34,6 +37,7 @@ After installing the app you will be able to access it by going to the `OTHER` s
 ### Creating badges
 
 The `Add badges` tab allows you to create new badges by following these steps:
+
 1. Fill in the name of the badge.
 2. Select the badge type, which can be `IMAGE`, `TEXT` or `HTML`.
 3. Insert the badge content, according to the selected type.
@@ -50,6 +54,7 @@ See below a badge creation example.
 ### Editing badges
 
 To edit an existing badge, go to the `Edit badges` tab and follow these steps:
+
 1. Click the menu icon in the row corresponding with the badge you wish to edit.
 2. Click `Edit`.
 3. Edit the badge attributes.
@@ -60,9 +65,19 @@ To edit an existing badge, go to the `Edit badges` tab and follow these steps:
 ### Deleting badges
 
 If you wish to delete an existing badge from your store, go to the `Edit badges` tab and follow these steps:
+
 1. Click the menu icon in the row corresponding with the badge you wish to edit.
 2. Click `Delete`.
 3. In the prompt that will be displayed, click `DELETE`.
+
+### Filtering badges
+
+To improve the search for badges, it is possible to select which fields you want the search for them to be filtered. This makes searching the Database simpler and more efficient when returning badges to your website.
+To configure it, just enter the My Applications area. Then choose <b> App Badges </b> and select which fields you want the search to be related to.
+
+<img width="935" alt="Captura de Tela 2022-11-22 às 13 50 50" src="https://user-images.githubusercontent.com/80836180/203373595-aef6bf9b-de00-43a5-b2fd-0636b97c2fb5.png">
+
+Remember that by default all fields are used as a filter
 
 ## Displaying badges in your store
 
@@ -108,10 +123,10 @@ In order to display the created badges in your store, you must add the `store-ba
 
 These are the props available for customization of the badge component.
 
-| Prop name     | Type     | Description                                                                                                                                                       |
-| ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `numberOfBadges` | `number` | Number of badges that will be rendered.                                                                                                                        |
-| `text`           | `array`  | Defines values that will be used when rendering a badge. To learn more about this prop see [Rich text](https://github.com/vtex-apps/rich-text).    |
+| Prop name        | Type     | Description                                                                                                                                              |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `numberOfBadges` | `number` | Number of badges that will be rendered.                                                                                                                  |
+| `text`           | `array`  | Defines values that will be used when rendering a badge. To learn more about this prop see [Rich text](https://github.com/vtex-apps/rich-text).          |
 | `image`          | `array`  | Defines values that will be used when rendering image badges. To learn more about these prop see [Store image](https://github.com/vtex-apps/store-image) |
 
 ## Final result

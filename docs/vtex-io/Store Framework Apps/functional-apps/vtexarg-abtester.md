@@ -53,7 +53,7 @@ In the following step by step, you will learn how to set up a new A/B test. Noti
    - **Workspace Name -** Enter the name of the production workspace containing the changes you want to examine via the A/B test.
    - **Traffic Proportion -** Enter the desired traffic proportion to be destined for the **master** workspace during the first hours of the A/B test. This value must be any whole number between 0 and 10000. For example, to set 90% of the traffic to the master workspace, enter 9000.
    - **Amount of Time -** Enter the amount of time (in hours) during which the specified **Traffic Proportion** will be maintained. After this period, the traffic proportions of the test will be automatically updated by the A/B testing system. Enter `0` if you prefer the A/B testing system to take care of your website traffic distribution from the start.
-     >ℹ️ The A/B testing automatically balances traffic every 3 minutes according to the conversion or revenue rates.
+     > ℹ️ The A/B testing automatically balances traffic every 3 minutes according to the conversion or revenue rates.
    - **Test Type -** Enter what the A/B test must evaluate: revenue or conversion.
 5. Click on **Save**.
 
@@ -94,7 +94,7 @@ Thanks goes to these wonderful people:
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://avatars.githubusercontent.com/u/774112?v=4" width="100px;" alt=""/><br /><sub><strong>Tomás Alfredo Mehdi</strong></sub></a><br /><a href="https://github.com/vtex-apps/admin-ab-tester/commits?author=tomymehdi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://avatars.githubusercontent.com/u/774112?v=4" width="100px;" alt=""/><br /><sub><b>Tomás Alfredo Mehdi</b></sub></a><br /><a href="https://github.com/vtex-apps/admin-ab-tester/commits?author=tomymehdi" title="Code">💻</a></td>
   </tr>
 </table>
 

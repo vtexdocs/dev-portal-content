@@ -1,10 +1,10 @@
 ---
 title: "Shipping Simulator"
 slug: "vtex-store-components-shippingsimulator"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.413Z"
-updatedAt: "2022-08-01T13:32:26.474Z"
+updatedAt: "2022-11-22T18:39:23.376Z"
 ---
 The `shipping-simulator` block estimates the shipping fee based on a zip code input.
 

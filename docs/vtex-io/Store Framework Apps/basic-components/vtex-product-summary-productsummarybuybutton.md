@@ -10,9 +10,7 @@ Product Summary Buy Button is the block exported by the [Product Summary app](ht
 
 ![buy-button](https://user-images.githubusercontent.com/52087100/76864047-38006600-683f-11ea-8a4e-74dc91712984.png)
 
-> ⚠️
->
-> **The Product Summary Buy Button only effectively adds products to the Minicart if the store still uses the [Minicart v1](https://github.com/vtex-apps/minicart/blob/383d7bbd3295f06d1b5854a0add561a872e1515c/docs/README.md)**. If the store uses the [Minicart v2](https://vtex.io/docs/components/all/vtex.minicart/), please configure the [Add To Cart Button](https://developers.vtex.com/vtex-developer-docs/docs/vtex-add-to-cart-button/) in the `product-summary.shelf` block instead.
+>⚠️ **The Product Summary Buy Button only effectively adds products to the Minicart if the store still uses the [Minicart v1](https://github.com/vtex-apps/minicart/blob/383d7bbd3295f06d1b5854a0add561a872e1515c/docs/README.md)**. If the store uses the [Minicart v2](https://vtex.io/docs/components/all/vtex.minicart/), please configure the [Add To Cart Button](https://developers.vtex.com/vtex-developer-docs/docs/vtex-add-to-cart-button/) in the `product-summary.shelf` block instead.
 
 ## Configuration
 

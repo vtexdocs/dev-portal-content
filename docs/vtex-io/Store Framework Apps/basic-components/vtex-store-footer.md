@@ -1,10 +1,10 @@
 ---
 title: "Footer"
 slug: "vtex-store-footer"
-excerpt: "vtex.store-footer@2.25.0"
+excerpt: "vtex.store-footer@2.26.0"
 hidden: false
 createdAt: "2020-06-03T15:19:35.578Z"
-updatedAt: "2022-03-09T19:19:03.015Z"
+updatedAt: "2022-09-29T17:56:01.992Z"
 ---
 Footer is a store component that shows information about the store such as address, social networks and payment methods. Furthermore, it is possible to add hyperlinks for privacy policy, FAQ, benefits and attendance. This app is used by store theme.
 

@@ -1,10 +1,10 @@
 ---
 title: "B2B Organizations"
 slug: "vtex-b2b-organizations"
-excerpt: "vtex.b2b-organizations@1.11.2"
+excerpt: "vtex.b2b-organizations@1.17.0"
 hidden: false
 createdAt: "2021-10-26T13:12:33.521Z"
-updatedAt: "2022-07-06T14:48:54.605Z"
+updatedAt: "2022-12-08T18:41:35.402Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -76,6 +76,18 @@ Follow the instructions below to display the user widget.
 
 4. Publish and install the modified store theme. You can follow our documentation on [Making your theme content public](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public) to do so.
 
+## Configuration
+
+if we have only one associated organization:
+![](https://i.imgur.com/5yXFU6y.png)
+
+if we have more than one associated organization:
+![](https://i.imgur.com/ScQtfIz.png)
+
+### `b2b-user-widget`
+| Prop name                  | Type                              | Description                                                                                                             | Default value |
+| -------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `showDropdown`               | `Boolean`                          | controls whether we are viewing the dropdown if we have more than one organization associated with the same email.                  | `true`          |
 ## Customization
 
 In order to apply CSS customizations in this and other apps, follow the instructions on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).

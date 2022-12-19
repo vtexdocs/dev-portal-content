@@ -1,10 +1,10 @@
 ---
 title: "Curbside Pickup"
 slug: "vtex-curbside-pickup"
-excerpt: "vtex.curbside-pickup@0.3.8"
+excerpt: "vtex.curbside-pickup@0.3.9"
 hidden: false
 createdAt: "2020-07-07T13:45:04.134Z"
-updatedAt: "2022-05-31T16:20:48.774Z"
+updatedAt: "2022-10-04T02:07:18.225Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 

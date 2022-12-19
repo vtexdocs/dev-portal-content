@@ -1,10 +1,10 @@
 ---
 title: "Listrak"
 slug: "vtex-listrak-pixel"
-excerpt: "vtex.listrak-pixel@2.2.1"
+excerpt: "vtex.listrak-pixel@2.3.0"
 hidden: false
 createdAt: "2020-06-03T15:20:18.786Z"
-updatedAt: "2022-08-04T14:00:18.335Z"
+updatedAt: "2022-10-03T18:26:48.050Z"
 ---
 This app provides pixel integration for Listrak metrics and cart abandonment functionality, and provides related routes and blocks for use in an account's store-theme.
 
@@ -36,11 +36,13 @@ The settings below are only needed if you have created a [Listrak Data Integrati
 
 - **Use SKU Reference ID**: Send Listrak SKU reference IDs instead of VTEX SKU IDs.
 
-**Listrak Fields and Values (Optional)** 
+- **Image Size (in pixels)**: Set dimensions for images imported to Listrak. If left blank, the default size for your store's thumbnail images wil be used, usually 100x100 pixels.
+
+**Listrak Fields and Values (Optional)**
 
 The following optional settings allow you to map VTEX product specifications to specific Listrak fields. If left blank, they will be filled according to the default behavior explained below:
 
-- **Category**: Input the name of the product specification field containing the product's main category. If left blank, this will be automatically set as the first category that the product belongs to. 
+- **Category**: Input the name of the product specification field containing the product's main category. If left blank, this will be automatically set as the first category that the product belongs to.
 
 - **Sub Category**: Input the name of the product specification field containing the product's secondary category. If left blank, this will be automatically set as "Type/Silhouette".
 
@@ -49,7 +51,6 @@ The following optional settings allow you to map VTEX product specifications to 
 - **Meta 2**: Input the name of the product specification field containing any additional data you wish to send. If left blank, this will be automatically set with a placeholder value of "meta_2".
 
 - **Meta 3**: Input the name of the product specification field containing any additional data you wish to send. If left blank, this will be automatically set with a placeholder value of "meta_3".
-
 
 ## (Optional) On-Site Recommendation Integration Block
 
@@ -66,7 +67,7 @@ Then you may use this block in your layouts:
 - `"listrak-recommendations"`: The Listrak app provides this block which is designed to be added to the product page (`store.product`). It renders Listrak's On-Site Recommendations product shelf. The block takes two props:
 
 | Prop name            | Type     | Description                                                               |
-|----------------------|----------|---------------------------------------------------------------------------|
+| -------------------- | -------- | ------------------------------------------------------------------------- |
 | `merchandiseBlockId` | `String` | The Merchandise Block ID from Listrak's admin. Default: `''`              |
 | `templateHTML`       | `String` | The HTML template for the recommender from Listrak's admin. Default: `''` |
 
@@ -202,5 +203,5 @@ There are three possible IPs the app may use to send data to the Listrak API, th
 In order to apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
 
 | CSS Handles       |
-|-------------------|
+| ----------------- |
 | `recommendations` |

@@ -1,10 +1,10 @@
 ---
 title: "Product Identifier"
 slug: "vtex-product-identifier"
-excerpt: "vtex.product-identifier@0.4.0"
+excerpt: "vtex.product-identifier@0.4.1"
 hidden: false
 createdAt: "2020-06-03T15:19:25.494Z"
-updatedAt: "2022-06-09T17:02:10.339Z"
+updatedAt: "2022-08-18T10:57:35.113Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
@@ -24,7 +24,19 @@ Add the `vtex.product-identifier` app to your theme's dependencies in the `manif
 }
 ```
 
-Now, the `product-identifier` interface is available. Within the admin's CMS, you can configure this component to show other identifiers, such as:
+Add `product-identifier.product` block to your store as a child of `product-summary.shelf`.
+
+```
+"product-identifier.product": {
+  "props": {
+    "label": "default", //'default' | 'custom' | 'hide'
+    "customLabel": "teste", // text if label is custom
+    "idField": "skuReferenceId" //'itemId' | 'productId' | 'productReference' | 'skuEan' | 'skuReferenceId'
+  }
+},
+```
+
+The `product-identifier` interface is available is also available within the admin's CMS where you can configure this component to show other identifiers, such as:
 
 - Product Reference
 - Product ID
@@ -56,7 +68,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://carafizi.com/"><img src="https://avatars3.githubusercontent.com/u/51974587?v=4" width="100px;" alt=""/><br /><sub><strong>Gabriel Carafizi</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-identifier/commits?author=carafizi1" title="Code">💻</a></td>
+    <td align="center"><a href="http://carafizi.com/"><img src="https://avatars3.githubusercontent.com/u/51974587?v=4" width="100px;" alt=""/><br /><sub><b>Gabriel Carafizi</b></sub></a><br /><a href="https://github.com/vtex-apps/product-identifier/commits?author=carafizi1" title="Code">💻</a></td>
   </tr>
 </table>
 

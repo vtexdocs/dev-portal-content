@@ -1,10 +1,10 @@
 ---
 title: "TikTok for Business"
 slug: "vtexbr-tiktok-tbp"
-excerpt: "vtexbr.tiktok-tbp@1.2.0"
+excerpt: "vtexbr.tiktok-tbp@1.2.2"
 hidden: false
 createdAt: "2022-04-14T23:35:51.398Z"
-updatedAt: "2022-05-19T20:07:12.467Z"
+updatedAt: "2022-09-14T21:31:31.699Z"
 ---
 > �The integration with TikTok is available only for stores in *Brazil*.
 
@@ -96,3 +96,4 @@ After disconnecting, it is possible to reactivate the integration at any time by
 **Upcoming documentation:**
 
  - [Feature/error toast](https://github.com/vtex-apps/tiktok-tbp/pull/88)
+ - [Feature/brpa 1305 update register account](https://github.com/vtex-apps/tiktok-tbp/pull/89)

@@ -1,10 +1,10 @@
 ---
 title: "Wishlist"
 slug: "vtex-wish-list"
-excerpt: "vtex.wish-list@1.15.0"
+excerpt: "vtex.wish-list@1.15.4"
 hidden: false
 createdAt: "2020-06-03T15:19:09.963Z"
-updatedAt: "2022-08-09T21:36:45.387Z"
+updatedAt: "2022-11-23T14:55:16.485Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
@@ -171,28 +171,28 @@ If you want to configure the layout without the `slider-layout` dependency, you 
 There are couple URLs to read, search and modify data for the app:
 
 To read the schema of the wishlist app: 
-```
+````
 curl --request GET \ 
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/schemas/wishlist' \
      --header 'VtexIdClientAutCookie: {authToken}' \
-```
+````
 
 To GET all the wishlist data: 
-```
+````
 curl --request GET \
      --url 'https://{environment}--{accountName}.myvtex.com/_v/wishlist/export-lists' \
      --header 'VtexIdClientAutCookie: {authToken}' \
-```
+````
 
 To search wishlist by user email: 
-```
+````
 curl --request GET \
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/search?' \
      --header 'VtexIdClientAutCookie: {authToken}' \
-```
+````
 
 To PATCH a wishlist to the MasterData: 
-```
+````
 curl --request PATCH \
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/documents' \
      --header 'VtexIdClientAutCookie: {authToken}' \
@@ -206,18 +206,18 @@ curl --request PATCH \
             "IsPublic",
         ]
      '
-```
+````
 
 To DELETE a wishlist from the MasterData:: 
-```
+````
 curl --request DELETE \
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/documents/{documentId}' \
      --header 'VtexIdClientAutCookie: {authToken}' \
-```
+````
 ## Custom toast URL
 Change the link of toast message
 
-``` json
+```` json
 {
   "add-to-list-btn#myButton": {
     "props": {
@@ -225,7 +225,7 @@ Change the link of toast message
     }
   }
 }
-```
+````
 | Prop name |   Type   |                         Description                         | Default value |
 | :-------: | :------: | :---------------------------------------------------------: | :-----------: |
 |  `toastURL`  | `string` | Change the link of toast message |  `/account/#wishlist'`   |
@@ -233,7 +233,7 @@ Change the link of toast message
 ## Custom View Wishlist Empty
 Show custom view in case there are no added products.
 
-```diff
+````diff
 {
   "list-context.wishlist": {
 +    "blocks": ["wishlist-empty-list", "product-summary.shelf#wishlist"],
@@ -256,7 +256,7 @@ Show custom view in case there are no added products.
     }
   },
 }
-```
+````
 
 #### `list-context.wishlist` props
 | Prop name |   Type   |                         Description                         | Default value |

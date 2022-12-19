@@ -1,10 +1,10 @@
 ---
 title: "Storefront Permissions UI"
 slug: "vtex-storefront-permissions-ui"
-excerpt: "vtex.storefront-permissions-ui@1.1.0"
+excerpt: "vtex.storefront-permissions-ui@1.1.1"
 hidden: false
 createdAt: "2021-08-12T01:05:10.534Z"
-updatedAt: "2022-07-12T20:02:32.513Z"
+updatedAt: "2022-11-14T14:14:48.952Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 

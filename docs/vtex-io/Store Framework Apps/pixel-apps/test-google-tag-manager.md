@@ -32,7 +32,7 @@ It is possible to install the VTEX native GTM app in your store either by using 
 3. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your **GTM ID** in the `Google Tag Manager` field.
 4. Click on **Save**.
 
->ℹ️ *Access the [Google Tag Manager page](https://tagmanager.google.com/) and login to your account in order to find out what is your account **GTM ID**. The number your should use is the one provided by the `Container ID` column.*
+> ℹ️ *Access the [Google Tag Manager page](https://tagmanager.google.com/)</a> and login to your account in order to find out what is your account **GTM ID**. The number your should use is the one provided by the `Container ID` column.*
 
 ### Using VTEX IO Toolbelt
 

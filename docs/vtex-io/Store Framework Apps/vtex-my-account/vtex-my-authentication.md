@@ -1,10 +1,10 @@
 ---
 title: "My Authentication"
 slug: "vtex-my-authentication"
-excerpt: "vtex.my-authentication@1.4.0"
+excerpt: "vtex.my-authentication@1.5.0"
 hidden: false
 createdAt: "2021-07-28T18:23:47.807Z"
-updatedAt: "2022-04-05T17:51:36.738Z"
+updatedAt: "2022-08-30T13:04:37.639Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 

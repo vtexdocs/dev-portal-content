@@ -10,7 +10,7 @@ updatedAt: "2020-06-23T20:27:17.252Z"
 
 Use this layout component to show blocks on top of other blocks.
 
-<img width="306" alt="Screen Shot 2019-12-05 at 15 52 28" src="https://user-images.githubusercontent.com/27777263/70265324-e55fda00-1778-11ea-8d56-e73e3848b0b3.png"/>
+<img width="306" alt="Screen Shot 2019-12-05 at 15 52 28" src="https://user-images.githubusercontent.com/27777263/70265324-e55fda00-1778-11ea-8d56-e73e3848b0b3.png">
 
 Each children passed to `stack-layout` will receive an increasingly higher value of `zIndex`.
 

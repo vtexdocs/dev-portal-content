@@ -1,12 +1,12 @@
 ---
-title: "SafeData"
+title: "Querying personal MasterData Information with SafeData"
 slug: "vtex-safedata"
-excerpt: "vtex.safedata@1.0.0"
+excerpt: "vtex.safedata@1.0.1"
 hidden: false
 createdAt: "2021-06-01T18:05:47.887Z"
-updatedAt: "2022-03-23T12:59:56.239Z"
+updatedAt: "2022-09-15T20:59:44.867Z"
 ---
-The SafeData app queries personal MasterData information. An easy to use, configurable middleware to retrieve and save MasterData (V1 & V2) information directly on the front-end, or through another back-end.
+The SafeData app provides an easy to use, configurable middleware to retrieve and save MasterData (V1 & V2) information directly on the front-end, or through another back-end.
 
 It works by acting as an validation layer on top of MasterData API to ensure the data being queried belongs to the user executing the action.
 
@@ -28,14 +28,9 @@ SafeData respects the same MasterData routes which can be accessed by replacing 
 
 For example, you need to query the address `AD` entity by the addressName (`addressName=12345`):
 
-#### For IO Stores:
-You can use it directly, check the following:
+#### Path
 
-`GET https://myaccount.myvtex.com/safedata/AD/search?_where=addressName=12345`
-
-#### For Non-IO Stores:
-
-If you are implementing SafeData in a store which does not use Store Framework, you need to insert the path `api/io` to your endpoint before `safedata`, for example:
+To implement SafeData in a store, you need to insert the path `api/io` to your endpoint before `safedata`, for example:
 `GET https://myaccount.myvtex.com/api/io/safedata/AD/search?_where=addressName=12345`
 
 ## Supported Routes

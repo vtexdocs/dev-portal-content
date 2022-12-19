@@ -1,10 +1,10 @@
 ---
 title: "Share"
 slug: "vtex-store-components-share"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.418Z"
-updatedAt: "2022-08-01T13:32:26.317Z"
+updatedAt: "2022-11-22T18:39:23.096Z"
 ---
 The `Share` component allows shoppers to share a product URL via social media. This component can be imported and used by any VTEX app.
 

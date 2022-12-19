@@ -379,10 +379,10 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://avatars.githubusercontent.com/u/71461884?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>razvanudream</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=razvanudream" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://avatars.githubusercontent.com/u/43498488?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>khrizzcristian</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=khrizzcristian" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Git-the-Sanz"><img src="https://avatars.githubusercontent.com/u/50715158?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>Sanz</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=Git-the-Sanz" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/renan-guerra-ba91aa17b/"><img src="https://avatars.githubusercontent.com/u/69531548?v=4?s=100" width="100px;" alt=""/><br /><sub><strong>Renan Guerra</strong></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=renanguerraa1" title="Code">💻</a></td>
+    <td align="center"><a href="https://razvanudrea.com"><img src="https://avatars.githubusercontent.com/u/71461884?v=4?s=100" width="100px;" alt=""/><br /><sub><b>razvanudream</b></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=razvanudream" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://avatars.githubusercontent.com/u/43498488?v=4?s=100" width="100px;" alt=""/><br /><sub><b>khrizzcristian</b></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=khrizzcristian" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Git-the-Sanz"><img src="https://avatars.githubusercontent.com/u/50715158?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sanz</b></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=Git-the-Sanz" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/renan-guerra-ba91aa17b/"><img src="https://avatars.githubusercontent.com/u/69531548?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Renan Guerra</b></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=renanguerraa1" title="Code">💻</a></td>
   </tr>
 </table>
 

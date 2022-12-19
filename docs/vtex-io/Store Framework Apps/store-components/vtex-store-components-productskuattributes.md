@@ -1,10 +1,10 @@
 ---
 title: "Product SKU Attributes"
 slug: "vtex-store-components-productskuattributes"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-09-21T20:47:31.412Z"
-updatedAt: "2022-08-01T13:32:26.291Z"
+updatedAt: "2022-11-22T18:39:23.237Z"
 ---
 The `product-sku-attributes` block displays a list of the current SKU variations of a product.
 

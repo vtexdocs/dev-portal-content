@@ -1,10 +1,10 @@
 ---
 title: "Yotpo Reviews Integration"
 slug: "vtex-yotpo"
-excerpt: "vtex.yotpo@1.2.0"
+excerpt: "vtex.yotpo@1.2.1"
 hidden: false
 createdAt: "2020-06-03T15:19:16.340Z"
-updatedAt: "2022-06-02T17:46:15.953Z"
+updatedAt: "2022-08-17T19:40:06.760Z"
 ---
 The Yotpo Reviews Integration app is a product review and rating integration with [Yotpo](https://www.yotpo.com/).
 

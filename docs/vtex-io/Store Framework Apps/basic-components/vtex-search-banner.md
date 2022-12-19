@@ -1,10 +1,10 @@
 ---
 title: "Banner"
 slug: "vtex-search-banner"
-excerpt: "vtex.search@2.13.1"
+excerpt: "vtex.search@2.14.0"
 hidden: false
 createdAt: "2021-02-23T17:09:08.532Z"
-updatedAt: "2022-07-07T20:18:50.885Z"
+updatedAt: "2022-09-15T11:39:24.357Z"
 ---
 A simple banner with that can configured to appear depending on the context of the search.
 

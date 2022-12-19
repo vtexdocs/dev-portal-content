@@ -1,10 +1,10 @@
 ---
 title: "Newsletter"
 slug: "vtex-store-components-newsletter"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.374Z"
-updatedAt: "2022-08-01T13:32:26.266Z"
+updatedAt: "2022-11-22T18:39:23.082Z"
 ---
 ![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red)
 

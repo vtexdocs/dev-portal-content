@@ -1,10 +1,10 @@
 ---
 title: "Autocomplete Result List"
 slug: "vtex-store-components-autocompleteresults"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.446Z"
-updatedAt: "2022-08-01T13:32:26.428Z"
+updatedAt: "2022-11-22T18:39:23.201Z"
 ---
 The `autocomplete-result-list` component displays the autocomplete functionality in the search bar. This component serves mainly to ease the creation of custom autocomplete components for search engines.
 
@@ -34,9 +34,7 @@ The `autocomplete-result-list` component displays the autocomplete functionality
 
 ### Props
 
-> ℹ️ Info
->
-> The `autocomplete-result-list` block is commonly used with [Downshift](https://github.com/downshift-js/downshift). Hence, some of its props are directly related to it.
+> ℹ️ The `autocomplete-result-list` block is commonly used with [Downshift](https://github.com/downshift-js/downshift). Hence, some of its props are directly related to it.
 
 | Prop name                      | Type               | Description                                                                                                                                                                                                                                              | Default value |
 | ------------------------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |

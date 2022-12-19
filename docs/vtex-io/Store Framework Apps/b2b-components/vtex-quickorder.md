@@ -1,10 +1,10 @@
 ---
 title: "Quickorder"
 slug: "vtex-quickorder"
-excerpt: "vtex.quickorder@3.9.4"
+excerpt: "vtex.quickorder@3.12.4"
 hidden: false
 createdAt: "2020-06-03T15:19:15.869Z"
-updatedAt: "2022-07-15T14:30:43.863Z"
+updatedAt: "2022-12-13T22:23:30.600Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
@@ -23,11 +23,11 @@ _Example of a quick order page without customization_
 2. Open your store's Store Theme app directory in your code editor.
 3. Add the Quickorder app as a `peerDependency` in the `manifest.json` file:
 
-    ```diff
-     "peerDependencies": {
-    +  "vtex.quickorder": "3.x"
-     }
-    ```
+   ```diff
+    "peerDependencies": {
+   +  "vtex.quickorder": "3.x"
+    }
+   ```
 
 Once installed, the app will generate a new route called `/quickorder` for your store, creating the Quickorder custom page that allows bulk orders.
 
@@ -39,12 +39,12 @@ However, you can customize it by overwriting the template and creating a brand n
 
 In order to define the **Quickorder** custom page UI, you must use the blocks exported by the `vtex.quickorder` app:
 
-| Block name                | Description                                                                                                                                                                                                                                                  |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `quickorder-textarea`     | Renders a text box, allowing users to paste a list of desired SKUs following the structure `[Sku's Code],[Quantity]`. For more on this component, check out the [How the app works](#how-the-app-works) section.                                                                      |
+| Block name                | Description                                                                                                                                                                                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `quickorder-textarea`     | Renders a text box, allowing users to paste a list of desired SKUs following the structure `[SKU Reference ID],[Quantity]`. For more on this component, check out the [How the app works](#how-the-app-works) section.                                                                |
 | `quickorder-upload`       | Renders an upload box, working as an option that replaces the Copy/Paste SKU component (`quickorder-textarea` block). It allows users to upload a spreadsheet containing the desired SKUs. For more on this component, check out the [How the app works](#how-the-app-works) section. |
 | `quickorder-autocomplete` | Renders a custom search bar, allowing users to look for SKUs and add them to the Minicart at once according to the desired quantity. For more on this component, check out the [How the app works](#how-the-app-works) section.                                                       |
-| `quickorder-categories`   | Renders the store's category tree, allowing users to look for the desired SKUs and add them to the Minicart at once according to the desired quantity.                                                                                                       |
+| `quickorder-categories`   | Renders the store's category tree, allowing users to look for the desired SKUs and add them to the Minicart at once according to the desired quantity.                                                                                                                                |
 
 To use these blocks, follow the instructions below.
 
@@ -52,106 +52,106 @@ To use these blocks, follow the instructions below.
 2. Then, create a new store template called `store.quickorder`.
 3. In its `blocks` array, declare the blocks responsible for building your **Quickorder** custom page. For example:
 
-    ```json
-    {
-      "store.quickorder": {
-        "blocks": [
-          "flex-layout.row#title",
-          "flex-layout.row#textarea",
-          "flex-layout.row#upload",
-          "flex-layout.row#autocomplete",
-          "flex-layout.row#categories"
-        ]
-      },
-    ```
+   ```json
+   {
+     "store.quickorder": {
+       "blocks": [
+         "flex-layout.row#title",
+         "flex-layout.row#textarea",
+         "flex-layout.row#upload",
+         "flex-layout.row#autocomplete",
+         "flex-layout.row#categories"
+       ]
+     },
+   ```
 
-3. Configure each one of the blocks previously declared using its props, as shown in the example below:
+4. Configure each one of the blocks previously declared using its props, as shown in the example below:
 
-    ```json
-    {
-      "store.quickorder": {
-        "blocks": [
-          "flex-layout.row#title",
-          "flex-layout.row#textarea",
-          "flex-layout.row#upload",
-          "flex-layout.row#autocomplete",
-          "flex-layout.row#categories"
-        ]
-      },
-      "flex-layout.row#title": {
-        "children": ["flex-layout.col#title"]
-      },
-      "flex-layout.col#title": {
-        "children": ["rich-text#title"],
-        "props": {
-          "blockClass": "titleQuickorder",
-          "preventVerticalStretch": true
-        }
-      },
-      "rich-text#title": {
-        "props": {
-          "text": "## Quick Order"
-        }
-      },
-    
-      "flex-layout.row#textarea": {
-        "children": ["flex-layout.col#textarea"]
-      },
-      "flex-layout.col#textarea": {
-        "children": ["quickorder-textarea"]
-      },
-      "quickorder-textarea": {
-        "props": {
-          "componentOnly": false,
-          "text": "Copy/Paste Skus",
-          "description": "[Sku's Code],[Quantity]"
-        }
-      },
-    
-      "flex-layout.row#upload": {
-        "children": ["flex-layout.col#upload"]
-      },
-      "flex-layout.col#upload": {
-        "children": ["quickorder-upload"]
-      },
-      "quickorder-upload": {
-        "props": {
-          "componentOnly": false,
-          "text": "Upload",
-          "description": "Upload a Spreadsheet with two columns (SKU, Quantity) to bulk order",
-          "downloadText": "Click here to download a spreadsheet model"
-        }
-      },
-    
-      "flex-layout.row#autocomplete": {
-        "children": ["flex-layout.col#autocomplete"]
-      },
-      "flex-layout.col#autocomplete": {
-        "children": ["quickorder-autocomplete"]
-      },
-      "quickorder-autocomplete": {
-        "props": {
-          "componentOnly": false,
-          "text": "One by One",
-          "description": "Type the product name, select, enter quantity, add to the cart"
-        }
-      },
-    
-      "flex-layout.row#categories": {
-        "children": ["flex-layout.col#categories"]
-      },
-      "flex-layout.col#categories": {
-        "children": ["quickorder-categories"]
-      },
-      "quickorder-categories": {
-        "props": {
-          "componentOnly": false,
-          "text": "Categories",
-          "description": "Add products directly from their categories"
-        }
-      }
-    }
-    ```
+   ```json
+   {
+     "store.quickorder": {
+       "blocks": [
+         "flex-layout.row#title",
+         "flex-layout.row#textarea",
+         "flex-layout.row#upload",
+         "flex-layout.row#autocomplete",
+         "flex-layout.row#categories"
+       ]
+     },
+     "flex-layout.row#title": {
+       "children": ["flex-layout.col#title"]
+     },
+     "flex-layout.col#title": {
+       "children": ["rich-text#title"],
+       "props": {
+         "blockClass": "titleQuickorder",
+         "preventVerticalStretch": true
+       }
+     },
+     "rich-text#title": {
+       "props": {
+         "text": "## Quick Order"
+       }
+     },
+
+     "flex-layout.row#textarea": {
+       "children": ["flex-layout.col#textarea"]
+     },
+     "flex-layout.col#textarea": {
+       "children": ["quickorder-textarea"]
+     },
+     "quickorder-textarea": {
+       "props": {
+         "componentOnly": false,
+         "text": "Copy/Paste Skus",
+         "description": "[SKU Reference ID],[Quantity]"
+       }
+     },
+
+     "flex-layout.row#upload": {
+       "children": ["flex-layout.col#upload"]
+     },
+     "flex-layout.col#upload": {
+       "children": ["quickorder-upload"]
+     },
+     "quickorder-upload": {
+       "props": {
+         "componentOnly": false,
+         "text": "Upload",
+         "description": "Upload a Spreadsheet with two columns (SKU, Quantity) to bulk order",
+         "downloadText": "Click here to download a spreadsheet model"
+       }
+     },
+
+     "flex-layout.row#autocomplete": {
+       "children": ["flex-layout.col#autocomplete"]
+     },
+     "flex-layout.col#autocomplete": {
+       "children": ["quickorder-autocomplete"]
+     },
+     "quickorder-autocomplete": {
+       "props": {
+         "componentOnly": false,
+         "text": "One by One",
+         "description": "Type the product name, select, enter quantity, add to the cart"
+       }
+     },
+
+     "flex-layout.row#categories": {
+       "children": ["flex-layout.col#categories"]
+     },
+     "flex-layout.col#categories": {
+       "children": ["quickorder-categories"]
+     },
+     "quickorder-categories": {
+       "props": {
+         "componentOnly": false,
+         "text": "Categories",
+         "description": "Add products directly from their categories"
+       }
+     }
+   }
+   ```
 
 #### Props
 
@@ -171,9 +171,9 @@ Especially, the `quickorder-upload` block also can use the following prop:
 
 In addition, the `quickorder-upload` and the `quickorder-textarea` block can use the following prop:
 
-| Prop name      | Type     | Description                                                                                                                                                  | Default value |
-| -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
-| `hiddenColumns` | `array of strings (i.e. ["sku", "seller", "quantity"])` | Defines which columns of the review block must be hidden, you might hide more than one column separating the values with comma | `[]`   |
+| Prop name       | Type                                                    | Description                                                                                                                    | Default value |
+| --------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| `hiddenColumns` | `array of strings (i.e. ["sku", "seller", "quantity"])` | Defines which columns of the review block must be hidden, you might hide more than one column separating the values with comma | `[]`          |
 
 For more on each of the components and their respective functionalities, check out the [How the app works](#how-the-app-works) section below.
 
@@ -189,9 +189,9 @@ Read the following sections to learn more about the available options.
 
 ### Copy/Paste SKU (`quickorder-textarea` block)
 
-The **Copy/Paste SKU** option allows user to paste a list of desired SKUs in a text box following the structure `[Sku's Code],[Quantity]`, where:
+The **Copy/Paste SKU** option allows user to paste a list of desired SKUs in a text box following the structure `[SKU Reference ID],[Quantity]`, where:
 
-- `SKU's code`: SKU Reference ID (be aware that this is not the SKU ID displayed in your admin's Catalog).
+- `SKU Reference ID`: SKU Reference ID (be aware that this is not the SKU ID displayed in your admin's Catalog).
 - `Quantity`: SKU quantity you wish to add to the cart.
 
 For example:
@@ -212,7 +212,6 @@ The spreadsheet will work in the same way as the list pasted using the **Copy/Pa
 - `Quantity` column: SKU quantity you wish to add to the cart.
 
 > ℹ Once uploaded, the spreadsheet is then validated. Based on the filled in SKU reference IDs, **Quickorder** will confirm whether the SKUs are in fact available for purchase.
-
 
 ### Custom Search Bar (`quickorder-autocomplete` block)
 
@@ -276,7 +275,7 @@ In order to apply CSS customizations to this and other blocks, follow the instru
 | `textContainerTitle`         |
 | `textContainerDescription`   |
 | `title`                      |
-| `customOptionButton`                      |
+| `customOptionButton`         |
 
 <!-- DOCS-IGNORE:start -->
 

@@ -1,10 +1,10 @@
 ---
 title: "Product Description"
 slug: "vtex-store-components-productdescription"
-excerpt: "vtex.store-components@3.162.0"
+excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.451Z"
-updatedAt: "2022-08-01T13:32:26.231Z"
+updatedAt: "2022-11-22T18:39:23.075Z"
 ---
 The `product-description` block displays the description of a product. This Component can be imported and used by any VTEX App.
 
