@@ -13,17 +13,17 @@ In the table below, you will find every API request needed for each step of the 
 
 | Step | API Request | Request Target |
 |---|---|---|
-| [Catalog Notification](#catalog-notification) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-developer-docs/reference/catalog-api-get-seller-sku-notification">Change Notification</a></div>| ➡ Marketplace |
-| [Catalog Registration](#catalog-registration) | <div class="api"><span class="pg-type type-put">put</span><a href="https://developers.vtex.com/vtex-rest-api/reference/manage-suggestions ">Send SKU Suggestion</a></div> | ➡ Marketplace |
-| [Catalog and Storefront Update](#catalog-update) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment Simulation</a></div>  | ⬅ Seller |
-| [Order Placement](#order-placement) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/order-placement">Order Placement</a></div>  | ⬅ Seller |
-| [Order Dispatching](#order-dispatching) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/authorize-fulfillment">Authorize Fulfillment</a></div>  | ⬅ Seller |
-| [Order Invoicing and Tracking](#order-invoicing) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/invoicenotification">Order Invoice Notification</a></div>  | ➡ Marketplace |
-| [Cancellation by the Marketplace](#cancellation-by-the-marketplace) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation">Marketplace Order Cancellation</a></div> | ⬅ Seller |
-| [Cancellation by the Seller](#cancellation-by-the-seller) | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a></div>  | ➡ Marketplace |
-| [Order invoicing](#order-invoicing)                   | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-invoice">Send invoice</a></div>                     | ➡ Marketplace  |
-| [Send tracking information](#order-tracking)       | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-tracking-information">Send tracking information</a></div>     | ➡ Marketplace  |
-| [Update tracking status](#order-tracking)          | <div class="api"><span class="pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/update-tracking-status">Update tracking status</a></div>         | ➡ Marketplace  |
+| [Catalog Notification](#catalog-notification) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-developer-docs/reference/catalog-api-get-seller-sku-notification">Change Notification</a>| ➡ Marketplace |
+| [Catalog Registration](#catalog-registration) | <span class="api pg-type type-put">put</span><a href="https://developers.vtex.com/vtex-rest-api/reference/manage-suggestions ">Send SKU Suggestion</a> | ➡ Marketplace |
+| [Catalog and Storefront Update](#catalog-update) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment Simulation</a>  | ⬅ Seller |
+| [Order Placement](#order-placement) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/order-placement">Order Placement</a>  | ⬅ Seller |
+| [Order Dispatching](#order-dispatching) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/authorize-fulfillment">Authorize Fulfillment</a>  | ⬅ Seller |
+| [Order Invoicing and Tracking](#order-invoicing) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/invoicenotification">Order Invoice Notification</a>  | ➡ Marketplace |
+| [Cancellation by the Marketplace](#cancellation-by-the-marketplace) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation">Marketplace Order Cancellation</a> | ⬅ Seller |
+| [Cancellation by the Seller](#cancellation-by-the-seller) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a>  | ➡ Marketplace |
+| [Order invoicing](#order-invoicing)                   | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-invoice">Send invoice</a>                     | ➡ Marketplace  |
+| [Send tracking information](#order-tracking)       | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-tracking-information">Send tracking information</a>     | ➡ Marketplace  |
+| [Update tracking status](#order-tracking)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/update-tracking-status">Update tracking status</a>         | ➡ Marketplace  |
 
 [block:callout]
 {
@@ -177,12 +177,7 @@ For the seller to:
 
 On certain occasions, the seller may also need to cancel the order itself. This might happen, for example, if there’s a problem with the order that prevents the seller from fulfilling it. In this case, the seller must call the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a></span> endpoint.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "If the order status is `Invoiced`, the order can only be canceled if—before using the Cancel Order endpoint—the seller sends a return invoice.\n\nTo do this, you must use the Order Invoice Notification endpoint, explained in the [Order invoicing](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#order-invoicing) session. To inform the system that you are sending a return invoice, you must use the value input for the field type of the request body.\n\nAfter doing this, you will be able to send a cancellation request for the invoiced order, by using the endpoint referenced below."
-}
-[/block]
+>⚠️ If the order status is `Invoiced`, the order can only be canceled if—before using the Cancel Order endpoint—the seller sends a return invoice.\n\nTo do this, you must use the Order Invoice Notification endpoint, explained in the [Order invoicing](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#order-invoicing) session. To inform the system that you are sending a return invoice, you must use the value input for the field type of the request body.\n\nAfter doing this, you will be able to send a cancellation request for the invoiced order, by using the endpoint referenced below.
 
 ## Setting payment conditions
 

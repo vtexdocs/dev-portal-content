@@ -32,7 +32,7 @@ Example:
   "properties": {
     "name": { "type": "string" }
   },
-  "required": [ "name" ]
+  "required": ["name"]
 }
 ```
 
@@ -58,7 +58,7 @@ changing the name to an integer:
 
 Error message:
 
-```txt
+```sh
 Invalid type. Expected String but got Integer.
 ```
 
@@ -70,11 +70,11 @@ Use the property `v-indexed` to set up indexed fields. You must add the field to
 
 ```json
 {
-  "properties": { 
-    "field1": { "type": "string" }, 
-    "field2": { "type": "integer" } 
+  "properties": {
+    "field1": { "type": "string" },
+    "field2": { "type": "integer" }
   },
-  "v-indexed": [ "field1", "field2" ]
+  "v-indexed": ["field1", "field2"]
 }
 ```
 
@@ -84,7 +84,7 @@ Use the property `v-default-fields` to configure which fields will return withou
 
 ```json
 {
-  "v-default-fields": [ "field1", "field2" ]
+  "v-default-fields": ["field1", "field2"]
 }
 ```
 
@@ -106,9 +106,9 @@ Use the property `v-security` to set up which fields are public (request without
 {
   "v-security": {
     "allowGetAll": false,
-    "publicRead": [ "field1" ],
-    "publicWrite": [ "field1" ],
-    "publicFilter": [ "field1" ]
+    "publicRead": ["field1"],
+    "publicWrite": ["field1"],
+    "publicFilter": ["field1"]
   }
 }
 ```

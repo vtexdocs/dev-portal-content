@@ -318,7 +318,7 @@ Connector's NSU:
 
  /api/oms/pvt/orders?searchField=nsu&nsu=2437281
 
-<div class="alert alert-warning">As of October 3, 2018, this API will not return the <strong>"items"</strong> property.</div>
+>⚠️ As of October 3, 2018, this API will not return the **"items"** property.
 
 ## Response objects
 
