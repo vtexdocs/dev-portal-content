@@ -35,7 +35,7 @@ When you have a metric that scores too low, a seemingly significant change may n
 
 To better illustrate that, let's investigate the *Largest Contentful Paint (LCP)* metric.
 
-*LCP* has a weight of 25% on the *Performance Score*. Therefore, to affect the overall *Performance Score*, the *LCP* score must be at least 2, which would correspond to 1 point (rounding up 2*0.25=0,5) in the*Performance Score\*.
+*LCP* has a weight of 25% on the *Performance Score*. Therefore, to affect the overall *Performance Score*, the *LCP* score must be at least 2, which would correspond to 1 point (rounding up 2\*0.25=0,5) in the *Performance Score*.
 
 > ℹ️ When calculating the *Performance Score*, decimal values greater than 0.5 are rounded up to the next largest whole number.
 

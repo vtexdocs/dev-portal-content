@@ -243,7 +243,7 @@ export default PluralSingularComponent
 
 5. Save your code changes.
 
-> ℹ️ If concatenating the string seems complicated, we recommend reading this <a href="https://format-message.github.io/icu-message-format-for-translators/index.html">documentation</a>. It will help your learning process, explaining more details about formatting messages using ICU and variable interpolation.
+> ℹ️ If concatenating the string seems complicated, we recommend reading this [documentation](https://format-message.github.io/icu-message-format-for-translators/index.html). It will help your learning process, explaining more details about formatting messages using ICU and variable interpolation.
 
 ### Adjusting percentage representation
 

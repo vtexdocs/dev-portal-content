@@ -66,7 +66,7 @@ The SKU offer is sent through the <span class="pg-type type-put">put</span><span
 [block:callout]
 {
   "type": "warning",
-  "body": "Don’t forget that, for the Save Suggestion request to work, the marketplace must have created the proper brands and categories in their account. This should be done in the [setup phase]() of the integration."
+  "body": "Don’t forget that, for the Save Suggestion request to work, the marketplace must have created the proper brands and categories in their account. This should be done in the setup phase of the integration."
 }
 [/block]
 

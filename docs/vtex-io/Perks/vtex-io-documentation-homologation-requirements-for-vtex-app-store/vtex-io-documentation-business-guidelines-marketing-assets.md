@@ -60,9 +60,9 @@ Your app icon is one of the first elements of your app that developers and merch
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
-  <img src="https://user-images.githubusercontent.com/67270558/126643069-18ead453-ce79-44d6-847b-e9e4f1a378c4.png" alt="Icon with size description required for the App Store">
-<br>
+<br/>
+  <img src="https://user-images.githubusercontent.com/67270558/126643069-18ead453-ce79-44d6-847b-e9e4f1a378c4.png" alt="Icon with size description required for the App Store"/>
+<br/>
 </details>
 
 ### Screenshots
@@ -124,114 +124,114 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
     <p>Live Shopping<p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>❌</p>
     Live Shopping - The app that allows you to live stream events on your store's website.
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 - Capitalize the first letter of each word.
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
     <p>Live Shopping<p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>❌</p>
     Live shopping
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 - Use *&* instead of *And*.
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
     <p>Reviews & Ratings<p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
    <p>Reviews and Ratings<p>
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 - Do not include the word *VTEX*.
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
     <p>Abandoned Cart<p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
     VTEX Abandoned Cart
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 - Do not use punctuation, such as period, comma, exclamation point, question mark, semicolon, colon, and underscore unless it’s part of the actual company name.
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
     <p>Social Selling<p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
     Social Selling
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 - Do not include the version number of the app.
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
     <p>Google Tag Manager<p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
     Google Tag Manager 2.x
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 ### Headline
@@ -248,45 +248,46 @@ The headline should describe the value proposition of your app in a concise sent
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Engage with customers through live broadcasts, real-time chat, and product promotion.<p>
-   <hr>
+    <p>Engage with customers through live broadcasts, real-time chat, and product promotion.</p>
+   <hr/>
     <p>Create live broadcasts on your store, increase sales and boost customer interaction in real-time.</p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
     <p>Live broadcasts with customers.</p>
-    <hr>
+    <hr/>
     <p>Create Live streaming and sell more.</p>
   </div>
 </section>
-<br>
+<br/>
 </details>
 
-<br>
+<br/>
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p><i>Set</i> shipping address based on user browser's or IP Geolocation.<p>
+    <p><i>Set</i> shipping address based on user browser's or IP Geolocation.</p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
     <p>This app <i>attempts to determine</i> the users' location and set their shipping address.</p>
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 - Consider using verbs that reference the actions the users will be able to do with your app and the benefit it will deliver
+
   - `Integrate data` | `create wishlists` | `monitor performance`.
   - `Increase revenue` | `deliver convenient experiences`.
 
@@ -294,19 +295,19 @@ The headline should describe the value proposition of your app in a concise sent
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Integrate your store with Google's navigation and conversion tracking platform.<p>
+    <p>Integrate your store with Google's navigation and conversion tracking platform.</p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
     <p><i>Google Tag Manager</i> is the app to integrate your store with Google's navigation and conversion tracking platform.</p>
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 ### Overview
@@ -322,78 +323,91 @@ The overview is the description of the app and should be an engaging message tha
 
 <details>
     <summary><b>Show example</b></summary>
-<br>
+<br/>
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Integrate with WordPress to bring blog data to your VTEX IO store and create a blog "homepage", category pages, and blog post pages.<p>
+    <p>Integrate with WordPress to bring blog data to your VTEX IO store and create a blog "homepage", category pages, and blog post pages.</p>
   </div>
-  <br>
+  <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>❌</p>
     <p>The Wordpress Integration app provides a way to bring in blog data from the Wordpress API and create a blog homepage, category pages, and blog post pages on your store, using your existing store header, footer, and styling.</p>
   </div>
 </section>
-<br>
+<br/>
 </details>
 
 - Make sure you are addessing for whom your app is, what need it solves and how uniquely do you solve it.
 
-> ℹ️  There are numerous value proposition frameworks that can be used as a reference in this task, such as the following: *Our \[product] help(s) \[audience] who wants to \[jobs to be done] by \[verb e.g. reducing, avoiding] + \[a user pain or gain].*
+> ℹ️  There are numerous value proposition frameworks that can be used as a reference in this task, such as the following: *Our [product] help(s) [audience] who wants to [jobs to be done] by [verb e.g. reducing, avoiding] + [a user pain or gain].*
 
 <details>
-    <summary><b>Show example</b></summary>
-<br>
+  <summary><b>Show example</b></summary>
+  <br/>
   <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-     <p>✔️</p>
-    <p>With The Live Shopping app, <i>create</i> live stream events on your store's website, promote product collections, increase sales, and enhance user experience simultaneously while interacting via live chat.<p>
-  </div>
-  <br>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-   <p>❌</p>
-    <p>Live shopping is an app to stream live events on your store in real-time.</p>
-  </div>
-</section>
-<br>
+    <div
+      style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>✔️</p>
+      <p>With The Live Shopping app, <i>create</i> live stream events on your store's website, promote product
+        collections, increase sales, and enhance user experience simultaneously while interacting via live chat.
+      </p>
+    </div>
+    <br/>
+    <div
+      style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>❌</p>
+      <p>Live shopping is an app to stream live events on your store in real-time.</p>
+    </div>
+  </section>
+  <br/>
 </details>
 
 - Use the active voice to give a sense of action to the user.
 
 <details>
-    <summary><b>Show example</b></summary>
-<br>
+  <summary><b>Show example</b></summary>
+  <br/>
   <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-    <p>✔️</p>
-    <p>Offer an exclusive payment method to selected clients. With Customer Credit, you grant credit, determine limits, and manage invoices.<p>
-  </div>
-  <br>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-   <p>❌</p>
-    <p>With Customer Credit, the credit will be granted, limits determined, and invoices will be managed.</p>
-  </div>
-</section>
-<br>
+    <div
+      style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>✔️</p>
+      <p>Offer an exclusive payment method to selected clients. With Customer Credit, you grant credit, determine
+        limits, and manage invoices.
+      </p>
+    </div>
+    <br/>
+    <div
+      style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>❌</p>
+      <p>With Customer Credit, the credit will be granted, limits determined, and invoices will be managed.</p>
+    </div>
+  </section>
+  <br/>
 </details>
 
 - Avoid technical and jargon language.
 
 <details>
-    <summary><b>Show example</b></summary>
-<br>
+  <summary><b>Show example</b></summary>
+  <br/>
   <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-    <p>✔️</p>
-    <p>Interact with customers in real-time by generating personalized experiences through real-time chat and interactive like button.<p>
-  </div>
-  <br>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-   <p>❌</p>
-    <p>Interact with customers by managing the event’s live chat in the events list clicking on the desired live event’s arrow button.</p>
-  </div>
-</section>
-<br>
+    <div
+      style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>✔️</p>
+      <p>Interact with customers in real-time by generating personalized experiences through real-time chat and
+        interactive like button.
+      </p>
+    </div>
+    <br/>
+    <div
+      style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>❌</p>
+      <p>Interact with customers by managing the event’s live chat in the events list clicking on the desired live
+        event’s arrow button.</p>
+    </div>
+  </section>
+  <br/>
 </details>
 
 ### Features
@@ -413,22 +427,26 @@ In `features`, provide a list of your app's main features.
 - Describe what makes your app unique.
 
 <details>
-    <summary><b>Show example</b></summary>
-<br>
+  <summary><b>Show example</b></summary>
+  <br/>
   <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-    <p>✔️</p>
-    <p>- Stream & Sell with the VTEX Live Shopping app. No need to hire a separate streaming platform.<p>
-    <p>- Highlight products in the live stream to increase sales.</p>
-    <p>- Add to cart alert: Show which products are trending and encourage the audience to add these products to their shopping cart.</p>
-  </div>
-  <br>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-   <p>❌</p>
-    <p>Stream and sell with the VTEX Live Shopping app without hiring a separate streaming platform. Also, highlight products during the live stream to increase sales.</p>
-  </div>
-</section>
-<br>
+    <div
+      style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>✔️</p>
+      <p>- Stream & Sell with the VTEX Live Shopping app. No need to hire a separate streaming platform.</p>
+      <p>- Highlight products in the live stream to increase sales.</p>
+      <p>- Add to cart alert: Show which products are trending and encourage the audience to add these products to their
+        shopping cart.</p>
+    </div>
+    <br/>
+    <div
+      style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>❌</p>
+      <p>Stream and sell with the VTEX Live Shopping app without hiring a separate streaming platform. Also, highlight
+        products during the live stream to increase sales.</p>
+    </div>
+  </section>
+  <br/>
 </details>
 
 ### Website URL
@@ -457,30 +475,34 @@ Use this field to provide more specific details about the app. For example, is y
 - Consider your app’s audience: regional location or global user, IO or Legacy user.
 
 <details>
-    <summary><b>Show example</b></summary>
-<br>
+  <summary><b>Show example</b></summary>
+  <br/>
   <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-    <p>✔️</p>
-    <p>This application is only being made available in a Beta version.<p>
-    <hr>
-    <p>If you do not have the integration done yet, you will need to complete the integration form.</p>
-    <hr>
-    <p>We have three different plans that adjust to your content and commercial needs to have the most competitive rates.</p>
-  </div>
-  <br>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
-   <p>❌</p>
-    <p>Simpler logistical operation and a reduction in logistical costs.</p>
-   <hr>
-    <p>Automatic messages (after-sales)</p>
-    <hr>
-    <p>Real-time metrics: After the end of the event, review quality KPIs such as likes, comments, and shares, as well as performance KPIs such as sales and average product value (AOV).</p>
-    <br>
-    <h6>These describe the features of apps. Therefore, they should be in the feature section.</h6>
-  </div>
-</section>
-<br>
+    <div
+      style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>✔️</p>
+      <p>This application is only being made available in a Beta version.</p>
+      <hr/>
+      <p>If you do not have the integration done yet, you will need to complete the integration form.</p>
+      <hr/>
+      <p>We have three different plans that adjust to your content and commercial needs to have the most competitive
+        rates.</p>
+    </div>
+    <br/>
+    <div
+      style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+      <p>❌</p>
+      <p>Simpler logistical operation and a reduction in logistical costs.</p>
+      <hr/>
+      <p>Automatic messages (after-sales)</p>
+      <hr/>
+      <p>Real-time metrics: After the end of the event, review quality KPIs such as likes, comments, and shares, as well
+        as performance KPIs such as sales and average product value (AOV).</p>
+      <br/>
+      <h6>These describe the features of apps. Therefore, they should be in the feature section.</h6>
+    </div>
+  </section>
+  <br/>
 </details>
 
 ### Video
@@ -500,9 +522,7 @@ For example, check out the [video for the Live Shopping app](https://apps.vtex.c
 
 ### Metric description
 
-> ⚠️
->
-> Metric descriptios are required only for apps whose pricing is based on one or more metrics. If this is not the case, please do not fill in this field.
+> ⚠️ Metric descriptios are required only for apps whose pricing is based on one or more metrics. If this is not the case, please do not fill in this field.
 
 For each metric declared in the `billingOptions` field (found in the app's manifest.json file), you must include a simple description of how it works. This description will help the extension buyer understand what each metric does and how it will impact the application billing.
 

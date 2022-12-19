@@ -80,7 +80,7 @@ Use the property `v-indexed` to set up indexed fields. You must add the field to
 
 ## Default fields
 
-Use the property `v-default-fields` to configure which fields will return without indication in the \_fields query string.
+Use the property `v-default-fields` to configure which fields will return without indication in the `fields` query string.
 
 ```json
 {
