@@ -396,7 +396,7 @@ After that, you need to [open a ticket to the VTEX support team](https://help.vt
 
 - **Connector App Name**: Name of the PPF connector app. Use the following format: `"vendor.appname"`. For example: `partnername.connector-partnername`. These can be found in the `manifest.json` file.
 - **Partner contact**: partner email address in case we need to communicate changes and new features of our protocol.
-- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g. *<https://vtex.pagadito.com>*. It has to respond to at least one of the following routes: `{{serviceUrl}}/manifest` or `{{serviceUrl}}/payment-methods`. This endpoint must be publicly available.
+- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g. `https://vtex.pagadito.com`. It has to respond to at least one of the following routes: `{{serviceUrl}}/manifest` or `{{serviceUrl}}/payment-methods`. This endpoint must be publicly available.
 - **Allowed Accounts**: describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
 - **New Payment methods**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.
 - **New Payment method purchase flow**: if a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access the [Purchase Flows article](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).

@@ -353,10 +353,10 @@ order flow will follow your response status in order to cancel or approve the tr
     <tr>
         <td><code>AnalysisType</code></td>
         <td><strong>string</strong></td>
-        <td>Analysis type. Valid values are <strong>authomatic<strong> or <strong>manual<strong> </td>
+        <td>Analysis type. Valid values are <strong>authomatic<strong> or <strong>manual</strong></td>
     </tr>
     <tr>
-        <td><code>responses<code>&nbsp;(optional)</td>
+        <td><code>responses</code>&nbsp;(optional)</td>
         <td><strong>dictionary or string, string</strong></td>
         <td>Key Value dictionary to add custom responses from  analysis</td>
     </tr>
@@ -366,12 +366,12 @@ order flow will follow your response status in order to cancel or approve the tr
         <td>Transaction ID in the provider. This is the transaction identifier that the provider assigns</td>
     </tr>
     <tr>
-        <td><code>code<code>&nbsp;(optional)</td>
+        <td><code>code</code>&nbsp;(optional)</td>
         <td><strong>string</strong></td>
         <td>Error code returned from provider. <strong>Will be logged in transaction interactions log</strong></td>
     </tr>
     <tr>
-        <td><code>message<code>&nbsp;(optional)</td>
+        <td><code>message</code>&nbsp;(optional)</td>
         <td><strong>string</strong></td>
         <td>Error message returned from provider. <strong>Will be logged in transaction interactions log</strong></td>
     </tr>

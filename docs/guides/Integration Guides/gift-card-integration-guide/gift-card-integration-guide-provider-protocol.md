@@ -72,7 +72,7 @@ This is what is needed to make Gift Card fully integrated with orders:
 
 ## Cancel
 
-<https://developers.vtex.com/reference/transactions#getgiftcardtransactionbyid-2>
+[Create GiftCard Transaction](https://developers.vtex.com/reference/transactions#getgiftcardtransactionbyid-2)
 
 ## Invoice
 

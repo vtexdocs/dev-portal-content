@@ -152,7 +152,7 @@ X-PROVIDER-Forward-MerchantKey: 012345678901234567890123456789012345678
 
 ### 4. Requests for external gateways or acquirers in a PCI environment
 
-An example request that the Gateway will submit to the acquirer: POST <https://apisandbox.acquirer.com/v2/sales/>\*
+An example request that the Gateway will submit to the acquirer: POST `https://apisandbox.acquirer.com/v2/sales/`.
 
 **Request header**
 

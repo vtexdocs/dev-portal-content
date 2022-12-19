@@ -27,11 +27,11 @@ The `interestRateMethod` field is where the setup should be implemented, if we w
 
 A `GET Rule by ID` call will initially be sent in order to receive the updated Payment Method setting through the following API:
 
-<https://developers.vtex.com/vtex-rest-api/reference/rulebyid>
+[https://developers.vtex.com/vtex-rest-api/reference/rulebyid](https://developers.vtex.com/vtex-rest-api/reference/rulebyid)
 
 The reply that the `GET Rule by ID` call returns will be the request of the thereafter `POST Rule by ID` call. To save the new configuration, only the value `interestRateMethod`:1 should be modified:
 
-<https://developers.vtex.com/vtex-rest-api/reference/putrulebyid>
+[https://developers.vtex.com/vtex-rest-api/reference/putrulebyid](https://developers.vtex.com/vtex-rest-api/reference/putrulebyid)
 [block:callout]
 {
   "type": "danger",

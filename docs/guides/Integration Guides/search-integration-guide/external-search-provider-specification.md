@@ -43,7 +43,7 @@ To receive catalog changes, refer to this [article](https://www.notion.so/How-to
 
 ## Onboarding
 
-- When a user installs your search-resolver app, you probably will need an admin panel to set up the app. You can find a working example on <https://github.com/vtex-apps/admin-example>. This admin app can show the indexing progress and also notify the search provider service that a new customer needs to be onboarded.
+- When a user installs your search-resolver app, you probably will need an admin panel to set up the app. You can find a working example on `https://github.com/vtex-apps/admin-example`. This admin app can show the indexing progress and also notify the search provider service that a new customer needs to be onboarded.
 - The onboarding flow usually is: VTEX client installs app in a different workspace than master → Enters the admin panel to set up the app → app notifies indexing system that a new account is to be indexed → index is 100% completed → VTEX client can promote/install the search provider in master
 [block:html]
 {

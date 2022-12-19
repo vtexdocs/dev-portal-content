@@ -55,7 +55,7 @@ When you access the environment through the link described in the previous item,
 
 - **Connector Name**: fill in with the name you want to give to your connector within VTEX. This field can be edited whenever necessary.
 
-- **Service URL**: set the URL of your provider service. This URL will be the base address of the protocol and must follow the format determined by it. For example, if the service URL is *<http://10.10.10.10>*, the full URL for the endpoint */transactions* will be *<http://10.10.10.10/transactions>*.
+- **Service URL**: set the URL of your provider service. This URL will be the base address of the protocol and must follow the format determined by it. For example, if the service URL is `http://10.10.10.10`, the full URL for the endpoint *transactions* will be `http://10.10.10.10/transactions`.
 
 - **Application Key**: Enter the "X-PROVIDER-API-AppKey" value of your provider's request header for testing purposes.
 
@@ -114,8 +114,8 @@ When your integration has successfully passed all tests, please open a ticket in
 
 - **Connector Name**: a description of the provider. Use max. 16 alphanumeric characters. This name can not be modified after being published.
 - **Partner contact**: partner email address in case we need to communicate changes and new features of our protocol.
-- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g., *<https://vtex.pagadito.com>*. It has to respond to at least one of the following routes: `{{serviceUrl}}/manifest` or `{{serviceUrl}}/payment-methods`. This endpoint must be publicly available.
-- **Sandbox Service Provider Endpoint**: the base path that will be used in test mode for API calls to the provider. E.g., *<https://sandboxserviceproviderendpoint.com>*.
+- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g., `https://vtex.pagadito.com`. It has to respond to at least one of the following routes: `{{serviceUrl}}/manifest` or `{{serviceUrl}}/payment-methods`. This endpoint must be publicly available.
+- **Sandbox Service Provider Endpoint**: the base path that will be used in test mode for API calls to the provider. E.g., `https://sandboxserviceproviderendpoint.com`.
 - **Owner account**: the VTEX account name which will be used in callback requests. This account must be available at *{account}.myvtex.com*.
 - **Allowed Accounts**: describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
 - **New Payment methods**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.

@@ -47,7 +47,7 @@ To allow deliveries to a new country (for example, you want to deliver products 
 [block:callout]
 {
   "type": "info",
-  "body": "The value of the column “Country” must be the 3-digit ISO code of the countries (e.g., for England, you will use the “GBR” value). To check the codes, we recommend the website <https://countrycode.org/>."
+  "body": "The value of the column “Country” must be the 3-digit ISO code of the countries (e.g., for England, you will use the “GBR” value). To check the codes, we recommend the website `https://countrycode.org/`."
 }
 [/block]
 After defining the delivery settings for the countries intended, a new field will be shown on your checkout's delivery form, allowing the user to choose the desired international delivery option.

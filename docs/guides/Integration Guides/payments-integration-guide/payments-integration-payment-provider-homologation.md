@@ -68,8 +68,8 @@ If everything is ok, you need to [open a ticket to the VTEX support team](https:
 
 - **Connector Name**: a description of the provider. Use max. 16 alphanumeric characters. This name can not be modified after being published.
 - **Partner contact**: partner email address in case we need to communicate changes and new features of our protocol.
-- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g. *<https://vtex.pagadito.com>*. It has to respond to at least one of the following routes: `{{serviceUrl}}/manifest` or `{{serviceUrl}}/payment-methods`. This endpoint must be publicly available.
-- **Sandbox Service Provider Endpoint**: the base path that will be used in test mode for API calls to the provider. E.g. *<https://sandboxserviceproviderendpoint.com>*.
+- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g. `https://vtex.pagadito.com>` It has to respond to at least one of the following routes: `{{serviceUrl}}/manifest` or `{{serviceUrl}}/payment-methods`. This endpoint must be publicly available.
+- **Sandbox Service Provider Endpoint**: the base path that will be used in test mode for API calls to the provider. E.g. `https://sandboxserviceproviderendpoint.com`.
 - **Owner account**: the VTEX account name which will be used in callback requests. This account must be available at *[account].myvtex.com*.
 - **Allowed Accounts**: describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
 - **New Payment methods**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.

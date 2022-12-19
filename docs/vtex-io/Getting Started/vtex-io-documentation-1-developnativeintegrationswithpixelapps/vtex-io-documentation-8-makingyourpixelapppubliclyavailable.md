@@ -121,7 +121,7 @@ It is also possible to add your brand new Pixel app in the catalog of the **VTEX
 
 The [VTEX App Store](https://extensions.vtex.com/) is a marketplace for plug&play solutions, and it can be used by any VTEX account interested in making its solutions available to other VTEX accounts as well.
 
-To make your new Pixel app part of our App Store, check out the documentation [Submitting an app in the VTEX App Store] (<https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store/>).
+To make your new Pixel app part of our App Store, check out the documentation [Submitting an app in the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store/).
 
 ---
 
