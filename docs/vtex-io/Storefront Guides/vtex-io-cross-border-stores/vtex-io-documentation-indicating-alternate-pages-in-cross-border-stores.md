@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-11-23T14:49:49.171Z"
 updatedAt: "2022-12-13T20:17:44.702Z"
 ---
+
 If you have different versions of a [landing page](https://developers.vtex.com/docs/vtex-io-documentation-creating-a-new-custom-page) for each region your store is present, we recommend that you save them as `alternate` versions.
 
 This way, search engines will be aware of the different versions of your page and able to provide the right content to the right audience.
@@ -16,7 +17,7 @@ Keep in mind that when indicating alternate versions of a page, you must do it i
 
 By doing that, search engines are capable of understanding the relationship between those two pages, avoiding issues such as indicating the incorrect title for a given page or wrong indexing.
 
-![Frame 15](https://user-images.githubusercontent.com/60782333/99296845-2a640b80-2826-11eb-978a-a36bd1d49dd5.png)
+![Frame 15](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-cross-border-stores/99296845-2a640b80-2826-11eb-978a-a36bd1d49dd5_19.png)
 
 Hence, be aware that you'll need to perform the following step by step for each localized version of your landing page.
 
@@ -43,12 +44,12 @@ Hence, be aware that you'll need to perform the following step by step for each 
 }
 ```
 
->⚠️ Remember to replace the values between the curly brackets according to your scenario.
+> ⚠️ Remember to replace the values between the curly brackets according to your scenario.
 
 5. Save the returned data.
 6. Erase the previous query and fill in the main text box with the following mutation command.
 
-``` graphql
+```graphql
 mutation saveInternal($args: InternalInput!) {
   internal {
     save(route: $args) {
@@ -85,6 +86,6 @@ mutation saveInternal($args: InternalInput!) {
 - Replace the `from`, `declarer`, `type`, `id`, and `binding` values with the information obtained in step 4.
 - Regarding the `alternates` field, fill in the `binding` and `path` values according to the alternate landing page's data.
 
->⚠️ If you don't know the `binding` values of your stores, follow [this step by step on checking your account's `binding` ids](https://developers.vtex.com/docs/checking-your-stores-binding-id).
+> ⚠️ If you don't know the `binding` values of your stores, follow [this step by step on checking your account's `binding` ids](https://developers.vtex.com/docs/checking-your-stores-binding-id).
 
 Once you perform these changes, remember to repeat the process from step 4 as many times as the number of existing versions of that landing page, using each `alternate` page as the `path`.

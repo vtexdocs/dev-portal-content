@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-08-31T17:18:54.238Z"
 updatedAt: "2022-06-14T15:14:52.164Z"
 ---
+
 In this step-by-step, we teach you how to overwrite an automatic message translation from the Catalog, such as a product name or a product description, with a more specific and representative content of your store.
 
 As a background, catalog messages are translatable text strings related to the catalog of a store, saved as external data in the [Catalog API](https://developers.vtex.com/reference/catalog-api-overview).
@@ -43,7 +44,7 @@ Now, no further actions are needed on your part. Once you receive the expected r
 
 Check the following gif of the complete process of overwriting automatic translations of a product:
 
-![catalog](https://user-images.githubusercontent.com/60782333/89960323-1a300500-dc15-11ea-89a0-bbd5d6494d64.gif)
+![catalog](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/89960323-1a300500-dc15-11ea-89a0-bbd5d6494d64_46.gif)
 
 ## Category
 
@@ -265,13 +266,13 @@ According to the following example and the following explanations, fill in the *
 }
 ```
 
-- `fieldId`: the product or SKU specification field ID. Every product or SKU specification in your store has a unique ID that can be found following this [orientation for SKU specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en) or this [orientation for product specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4fcdmJzQ6QYA9zWf3bLWin).  
+- `fieldId`: the product or SKU specification field ID. Every product or SKU specification in your store has a unique ID that can be found following this [orientation for SKU specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en) or this [orientation for product specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4fcdmJzQ6QYA9zWf3bLWin).
 - `fieldValuesNames`: an object containing:
   - `id`: the specification value ID.
   - `name`: the specification value name.
 - `locale`: target translation locale.
 
->⚠️ *Specification values ID can be found by running the following query:*
+> ⚠️ *Specification values ID can be found by running the following query:*
 
 ```gql
 query{
@@ -314,7 +315,7 @@ According to the following example and the following explanations, fill in the Q
 - `name`: the category group name.
 - `locale`: target translation locale.
 
->⚠️ *Category group IDs can be found by running the following query:*
+> ⚠️ *Category group IDs can be found by running the following query:*
 
 ```gql
 query{

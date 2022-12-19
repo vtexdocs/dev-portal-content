@@ -5,7 +5,8 @@ hidden: false
 createdAt: "2020-09-01T11:40:22.738Z"
 updatedAt: "2020-10-07T14:32:47.618Z"
 ---
-If your store is a [Multistore](https://help.vtex.com/en/tutorial/creating-multi-store-multi-domain--tutorials_510?locale=en) or a Cross-border one, it's important to know the `id` values of its related `bindings`'s. 
+
+If your store is a [Multistore](https://help.vtex.com/en/tutorial/creating-multi-store-multi-domain--tutorials_510?locale=en) or a Cross-border one, it's important to know the `id` values of its related `bindings`'s.
 
 Hence, for a step by step on how to access this information, check the following section.
 
@@ -15,11 +16,10 @@ Hence, for a step by step on how to access this information, check the following
 
 2. Access the **GraphQL admin IDE** section of the desired account. You may find it in the admin's side-bar menu:
 
-![adminsidebarmenu](https://user-images.githubusercontent.com/52087100/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5.png)
+![adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-cross-border-stores/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5_18.png)
 
 3. From the dropdown list, choose the `vtex.tenant` app.
 4. Write the following query command in the text box that is displayed:
-[block:code]
 {
   "codes": [
     {

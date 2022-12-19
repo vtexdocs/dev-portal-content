@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-01-11T17:01:24.365Z"
 updatedAt: "2022-12-13T20:17:44.768Z"
 ---
+
 Automatic translation is enabled by default in the Messages app, a standalone application that provides message translations for rendering.
 
 The Messages app aggregates all the translation services in the VTEX platform, regardless of the app nature (backend or frontend) and the actor responsible for that translation (e.g., app definition, automatic translation service, or overwritten messages via APIs).
@@ -27,7 +28,7 @@ To disable the Messages' automatic translation service, check the following sect
 3. Search for the VTEX Messages app.
 4. Uncheck the following checkbox: **Enable Automatic Translations**.
 
-![Messages Interface](https://user-images.githubusercontent.com/52087100/104200375-586d6280-5407-11eb-8016-199f5e8f2d3e.png)
+![Messages Interface](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/104200375-586d6280-5407-11eb-8016-199f5e8f2d3e_30.png)
 
 5. Save your changes.
 

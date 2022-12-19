@@ -5,15 +5,16 @@ hidden: false
 createdAt: "2020-08-31T17:17:21.148Z"
 updatedAt: "2020-09-01T16:14:21.366Z"
 ---
+
 A message is any website text content set as translatable, and Messages is the VTEX IO app responsible for providing message translations for rendering.
 
 As a background, it's important to know that every text set as translatable during the development of a storefront component is automatically translated either by the *storefront app's definitions* (declared in the app's `/messages` folder) or by the *automatic translation service* (when the storefront app doesn't include any specific translation of a message).
 
-However, considering literal translations and cultural factors, some translations might be unsatisfactory. 
+However, considering literal translations and cultural factors, some translations might be unsatisfactory.
 
-Hence, you may want to overwrite a translation provided by the automatic translation service or by the app's definitions with a more specific or representative content of your store. 
+Hence, you may want to overwrite a translation provided by the automatic translation service or by the app's definitions with a more specific or representative content of your store.
 
-For example, you may want to set a special login message for Spanish speaking users from Argentina. 
+For example, you may want to set a special login message for Spanish speaking users from Argentina.
 
 Considering this case, in the following step by step, we'll teach you how to overwrite a storefront message with exclusive content for your store through the Messages app.
 
@@ -25,7 +26,7 @@ Follow this step by step if you aim to translate text messages exported from an 
 
 2. Access the **GraphQL admin IDE** section of the desired account. You may find it in the admin's side-bar menu:
 
-![overwriting-messages-adminsidebarmenu](https://user-images.githubusercontent.com/52087100/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5.png)
+![overwriting-messages-adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5_28.png)
 
 3. From the dropdown list, choose the `vtex.messages` app.
 4. Write the following mutation command in the text box that is displayed:
@@ -41,17 +42,16 @@ Follow this step by step if you aim to translate text messages exported from an 
 [/block]
 5. Then, click on  *Query Variables* at the bottom of the page. Now, your screen may look like the following:
 
-![queryvariables](https://user-images.githubusercontent.com/60782333/85610649-8e92f280-b62d-11ea-9a5e-aa7ced1a1549.png)
-
+![queryvariables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/85610649-8e92f280-b62d-11ea-9a5e-aa7ced1a1549_44.png)
 
 6. To fill in the *Query Variables* box, you must provide the following parameters:
 
 - `to`: target translation locale.
 - `messages`: a list of the messages you want to translate, containing the following parameters:
-    - `srcLang`: source message locale. This variable must contain the value `en-DV`, no matter which locale is rendered on the app's interface.
-    - `srcMessage`: the `id` of your message string declared in the app's `messages` folder.
-    - `context`: the name of the storefront app that declared the message being overwritten.
-    - `targetMessage`: the desired translation for the message string.
+  - `srcLang`: source message locale. This variable must contain the value `en-DV`, no matter which locale is rendered on the app's interface.
+  - `srcMessage`: the `id` of your message string declared in the app's `messages` folder.
+  - `context`: the name of the storefront app that declared the message being overwritten.
+  - `targetMessage`: the desired translation for the message string.
 
 Take the following example:
 [block:code]
@@ -88,7 +88,7 @@ Now, no further actions are needed on your part. Once you receive the expected r
 
 To better understand the full process of overwriting an app message translation, check the following gif:
 
-![AppMessageTranslation](https://user-images.githubusercontent.com/60782333/85605881-fbf05480-b628-11ea-8ea9-1dbf364f07fd.gif)
+![AppMessageTranslation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/85605881-fbf05480-b628-11ea-8ea9-1dbf364f07fd_91.gif)
 
 ## Checking your changes
 
@@ -127,7 +127,7 @@ Take the following example:
   ]
 }
 [/block]
-4. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale. 
+4. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale.
 
 For the given example, the expected response is as follows:
 [block:code]

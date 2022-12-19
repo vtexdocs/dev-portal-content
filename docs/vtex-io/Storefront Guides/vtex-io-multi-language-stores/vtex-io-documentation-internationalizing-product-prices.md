@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.310Z"
 updatedAt: "2022-12-13T20:17:44.058Z"
 ---
+
 Before globalizing your brand, it's crucial to first take care of your website's content internationalization.
 
 It goes without saying that new international users must be able to understand every text being displayed, navigate seamlessly and be able to conclude their purchases without being frustrated by misleading product price information due to the conversion of currencies.
@@ -22,7 +23,7 @@ Through your store's [trade policies](https://help.vtex.com/tutorial/what-is-a-s
 4. In the `Currency Code` field, set the international currency code used to display prices;
 5. In the `Culture Info` field, select your store's native country and the website's native language.
 
-![international-currency](https://user-images.githubusercontent.com/52087100/82942068-c8f56b00-9f6d-11ea-8346-77260c8ae3a0.png)
+![international-currency](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/82942068-c8f56b00-9f6d-11ea-8346-77260c8ae3a0_25.png)
 
 Once your changes are saved, VTEX IO will be able to understand that whenever a user's locale differs from the default one set in the `Culture Info` field, it is dealing with an international user.
 
@@ -36,4 +37,4 @@ To make this platform logic more tangible, imagine the following scenario: a Bra
 
 For international users, the product prices will be displayed using the `BRL` currency code but for local ones, meaning for user whose locale is the same as the one set in `Culture Info`, the `R$` currency code is enough.
 
->⚠️Remember that **the saved configuration will only be applied to the specifically selected trade policy**. To replicate these configurations in all of your store's trade policies, you must fill out the fields in each trade policy and save the changes.
+> ⚠️Remember that **the saved configuration will only be applied to the specifically selected trade policy**. To replicate these configurations in all of your store's trade policies, you must fill out the fields in each trade policy and save the changes.

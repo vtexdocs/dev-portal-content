@@ -5,13 +5,12 @@ hidden: false
 createdAt: "2022-01-13T14:20:38.126Z"
 updatedAt: "2022-02-01T17:19:48.865Z"
 ---
+
 The **Google Tag Manager (GTM) app** is a first-party solution that integrates your VTEX account with the [Google Tag Manager](https://tagmanager.google.com), a **JavaScript and HTML tag management system** provided by Google for tracking user browsing.
 
 With the app, you can avoid contact with the store's source code when adding, editing, or removing website tags and quickly provide user browsing tracking for Google Analytics.
 
-
-![gtm-overview](https://user-images.githubusercontent.com/67270558/149195530-858aebb6-7ebf-44ee-bd1b-63841521e0b7.png)
-
+![gtm-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/149195530-858aebb6-7ebf-44ee-bd1b-63841521e0b7_13.png)
 
 [block:html]
 {

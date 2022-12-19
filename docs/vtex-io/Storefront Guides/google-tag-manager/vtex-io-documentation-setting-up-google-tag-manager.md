@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.272Z"
 updatedAt: "2022-12-13T20:17:44.813Z"
 ---
+
 Once you have installed the [VTEX IO Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/google-tag-manager), set it up in your store by configuring all the necessary variables, triggers, and tags.
 
 > ⚠️ If you are using the Google Tag Manager 2.x., **we strongly recommend migrating to the major 3.x.** Google Tag Manager 3.x tracks the entire user’s journey through the store, from viewing a product to purchasing it. Refer to [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) and follow the step-by-step.
@@ -45,7 +46,7 @@ To start, create the essential variables to work within GTM: **Data Layer** and 
 2. Click on **Variables.**
 3. In the **User-Defined Variables** box, click on **New.**
 
-![variables-overview](https://user-images.githubusercontent.com/67270558/150008763-d6fdfb43-3d1d-413c-bbf8-0f8159434eca.png)
+![variables-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/150008763-d6fdfb43-3d1d-413c-bbf8-0f8159434eca_48.png)
 
 #### Data Layer Variables
 
@@ -55,16 +56,16 @@ To start, create the essential variables to work within GTM: **Data Layer** and 
 
 Repeat the instructions above, now changing the data layer variable name to each of the following variables, unless the **Data Layer Variable - currency** already declared in the example above:
 
-| Variable name | Value | Description | Tags that will use it |
-| --------------- | --------------- | --------------- |  --------------- |
-| Data Layer Variable - currency | `currency` | Indicates the local currency for all transaction currency values. | `Google Ads Conversion Tracking` |
-| Data Layer Variable - transactionId |  `transactionId`  |  Indicates a unique transaction identifier. |  `Google Ads Conversion Tracking` |
-| Data Layer Variable - transactionTotal |  `transactionTotal`  | Indicates the total value transaction. |  `Google Ads Conversion Tracking` |
+| Variable name                          | Value              | Description                                                       | Tags that will use it            |
+| -------------------------------------- | ------------------ | ----------------------------------------------------------------- | -------------------------------- |
+| Data Layer Variable - currency         | `currency`         | Indicates the local currency for all transaction currency values. | `Google Ads Conversion Tracking` |
+| Data Layer Variable - transactionId    | `transactionId`    | Indicates a unique transaction identifier.                        | `Google Ads Conversion Tracking` |
+| Data Layer Variable - transactionTotal | `transactionTotal` | Indicates the total value transaction.                            | `Google Ads Conversion Tracking` |
 
-| Variable name | Value | Description | Variables that will use it |
-| --------------- | --------------- | --------------- |  --------------- |
-| Data Layer Variable - userId | `userId` | Enables the association of one or more sessions with a unique and persistent ID for your store’s users. | `Google Analytics` |
-| ecommerceV2 | `ecommerceV2`  |  Triggers events to track the entire user’s journey through the store, from viewing a product to purchasing it. **This variable is part of the major 3.x** of the GTM app. | `Google Analytics - Checkout and Order Placed` |
+| Variable name                | Value         | Description                                                                                                                                                               | Variables that will use it                     |
+| ---------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Data Layer Variable - userId | `userId`      | Enables the association of one or more sessions with a unique and persistent ID for your store’s users.                                                                   | `Google Analytics`                             |
+| ecommerceV2                  | `ecommerceV2` | Triggers events to track the entire user’s journey through the store, from viewing a product to purchasing it. **This variable is part of the major 3.x** of the GTM app. | `Google Analytics - Checkout and Order Placed` |
 
 There are two other variables, **The `originalLocation` and `originalReferrer`,** that you must create to **prevent GTM from making additional session identifiers every time a user navigates the website.** Learn how to create them in the following steps.
 
@@ -78,10 +79,10 @@ Creating the following variables is important to persist campaign data throughou
 4. Replace the `Untitled Variable` value with `Original Location`.
 5. Click on `Variable Configuration`.
 6. On **Page Variables**, click on `Data Layer Variable`.
-7. In the `Data Layer Variable Name` field, type `originalLocation´.
+7. In the `Data Layer Variable Name` field, type `originalLocation`.
 8. Enable the `Set Default Value` option and fill in the `Default Value` field with the following value: `{{Page URL}}`.
 
-![gtm-variable-location](https://user-images.githubusercontent.com/67270558/139482165-21f93c6a-48e5-421a-8e06-c942bda01974.gif)
+![gtm-variable-location](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/139482165-21f93c6a-48e5-421a-8e06-c942bda01974_84.gif)
 
 9. Click on `Save`.
 
@@ -94,7 +95,7 @@ Once you have saved the `originalLocation` variable, create the `originalReferre
 5. In the `Data Layer Variable Name` field, type `originalReferrer`.
 6. Enable the `Set Default Value` option and fill in the `Default Value` field with the following value: `{{Referrer}}`.
 
-![gtm-variable-referrer](https://user-images.githubusercontent.com/67270558/141315033-56e6e498-8c44-490d-a6dd-51f226dd6fc9.gif)
+![gtm-variable-referrer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/141315033-56e6e498-8c44-490d-a6dd-51f226dd6fc9_97.gif)
 
 7. Click on `Save`.
 
@@ -102,10 +103,10 @@ Once you have saved the `originalLocation` variable, create the `originalReferre
 
 You will create one variable for the storefront - default - and another for the store’s checkout.
 
-| Variable type | Description | Tags that will use it |
-| ----------------- | --------------- | ----------------------------- |
-| Default - For storefront | Tracks the page’s view. | `Google Analytics - Enhanced Ecommerce - No Interaction`, `Google Analytics - Enhanced Ecommerce - Yes Interaction`, `Google Analytics - Page View` |
-| For store’s checkout | Tracks a user’s journey through the store, from viewing a product to purchasing it. | `Google Analytics - Checkout and Order Placed` |
+| Variable type            | Description                                                                         | Tags that will use it                                                                                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Default - For storefront | Tracks the page’s view.                                                             | `Google Analytics - Enhanced Ecommerce - No Interaction`, `Google Analytics - Enhanced Ecommerce - Yes Interaction`, `Google Analytics - Page View` |
+| For store’s checkout     | Tracks a user’s journey through the store, from viewing a product to purchasing it. | `Google Analytics - Checkout and Order Placed`                                                                                                      |
 
 ##### Default - For storefront
 
@@ -117,7 +118,7 @@ You will create one variable for the storefront - default - and another for the 
 6. Click **Add Field**. Then, type `referrer` in **Field Name** and `{{Original Referrer}}` in the **Value** field.
 7. Click **Add Field**. Then, type `page` in **Field Name** and `{{Page Path}}` in the **Value** field.
 
-![img-example](https://user-images.githubusercontent.com/67270558/149200665-162c9354-ccba-4b20-bbcd-ec2339f10ba8.png)
+![img-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/149200665-162c9354-ccba-4b20-bbcd-ec2339f10ba8_120.png)
 
 7. Then, go to **Ecommerce**  and tick the `Enable Enhanced Ecommerce Features` and `Use data layer` boxes.
 8. Save your changes as **Google Analytics**.
@@ -145,7 +146,7 @@ To do this, click on Fields to set and add the `userId` field with its desired v
 Triggers are conditions to when you want your tags to fire. For example, if you want to activate the Google Ads conversion tag when a visitor signs up your store newsletter, you use a trigger to do it.
 To create a trigger, click on Trigger in the left menu and then on New:
 
-![trigger-overview](https://user-images.githubusercontent.com/67270558/149345629-4cccb301-b13d-4349-b772-584e75d63686.png)
+![trigger-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/149345629-4cccb301-b13d-4349-b772-584e75d63686_148.png)
 
 #### Custom Events
 
@@ -176,7 +177,7 @@ Tags are tracking code you want to implement on your store. For example, if you 
 
 To create a tag, click on Tags in the left menu and then on New:
 
-![tag-overview](https://user-images.githubusercontent.com/67270558/149345261-e973654c-8ada-4e34-bdc9-d157fbf358ee.png)
+![tag-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/149345261-e973654c-8ada-4e34-bdc9-d157fbf358ee_179.png)
 
 #### Google Analytics - Checkout and Order Placed
 
@@ -273,18 +274,18 @@ Once you have set up the Google Analytics variables, triggers, and tags, follow 
 
 To make the product information consistent across all store areas and help capture the entire user's journey on the store, [Google Tag Manager 3.x.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) includes Enhanced Ecommerce properties to the product data schema as events. These properties enable stores to provide additional information, such as product printing, promotion, and sales data.
 
-| Prop name | Description |
-| --------------- | --------------- |
-| id | Product ID - Previously SKU ID. |
-| variant | SKU ID - Previously SKU Name. The variant of the product, e.g., Rebel pink. |
-| name | Product Name - Previously Product Name or SKU Name.|
-| quantity | Product quantity |
-| price | Product price. |
-| category | Product category, e.g., Apparel. |
-| brand | Product brand. |
-| dimension1 | Product Reference ID. |
-| dimension2 | SKU Reference ID. |
-| dimension3 | SKU Name (does not include the Product Name). |
+| Prop name  | Description                                                                 |
+| ---------- | --------------------------------------------------------------------------- |
+| id         | Product ID - Previously SKU ID.                                             |
+| variant    | SKU ID - Previously SKU Name. The variant of the product, e.g., Rebel pink. |
+| name       | Product Name - Previously Product Name or SKU Name.                         |
+| quantity   | Product quantity                                                            |
+| price      | Product price.                                                              |
+| category   | Product category, e.g., Apparel.                                            |
+| brand      | Product brand.                                                              |
+| dimension1 | Product Reference ID.                                                       |
+| dimension2 | SKU Reference ID.                                                           |
+| dimension3 | SKU Name (does not include the Product Name).                               |
 
 The `dimension1`, `dimension2`, `dimension3` properties are custom dimensions that you can use to collect and analyze data that Google Analytics does not automatically create.
 

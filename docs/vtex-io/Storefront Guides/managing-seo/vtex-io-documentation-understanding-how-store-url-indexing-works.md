@@ -6,6 +6,7 @@ hidden: true
 createdAt: "2020-06-03T16:02:44.299Z"
 updatedAt: "2022-12-13T20:17:44.212Z"
 ---
+
 ## Introduction
 
 In order to be accessed by any type of user, all website pages need to have their own addresses, called **URLs**.
@@ -15,7 +16,7 @@ It is however possible for a page to have more than one address format, thereby 
 The two URLs in the example above are distinct and therefore indexed separately by search engines - even if they direct to the same page.
 
 To solve this issue, **each website URL needs its canonical URL**, which is nothing more than the official URL - not necessarily identical - that will be given to search engines and indexed, thereby improving the site's overall content findability.
-  
+
 ## URL indexing requisites
 
 **In VTEX IO, all store canonical URLs (product, category, subcategory, brand and custom page URLs) are automatically held in Sitemap where they are indexed by search engines.**
@@ -55,7 +56,7 @@ What you can do is **control the max number of most visited URLs that your site 
 3. Select the Store Indexer;
 4. In the Setup section, fill out the following field with the desired value `Number of search URLs to be indexed`;
 
-![store-indexer](https://user-images.githubusercontent.com/52087100/78806539-2ec76c80-7999-11ea-81cb-5286e0444410.png)
+![store-indexer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/managing-seo/78806539-2ec76c80-7999-11ea-81cb-5286e0444410_58.png)
 
 5. Save the configurations.
 

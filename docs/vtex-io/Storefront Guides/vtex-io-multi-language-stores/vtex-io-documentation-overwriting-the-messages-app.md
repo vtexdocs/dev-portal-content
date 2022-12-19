@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-09-01T19:49:09.322Z"
 updatedAt: "2022-12-13T20:17:44.427Z"
 ---
+
 ## Introduction
 
 Messages is VTEX IO's key tool for your store's **internationalization**, since it's responsible for translating any website message (that is, website text content) for rendering.
@@ -18,13 +19,13 @@ In the next section, we present you a step by step on how to overwrite a transla
 
 1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the **GraphQL IDE app** by running the following in your terminal.
 
-```
+```sh
 vtex install vtex.admin-graphql-ide@3.x
 ```
 
 2. Access the **GraphQL admin IDE** section of the desired account. You may find it in the admin's side-bar menu:
 
-![overwriting-messages-adminsidebarmenu](https://user-images.githubusercontent.com/52087100/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5.png)
+![overwriting-messages-adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5_27.png)
 
 3. From the dropdown list, choose the `vtex.messages` app.
 4. Write the following mutation command in the text box that is displayed:
@@ -37,7 +38,7 @@ mutation Save($saveArgs: SaveArgsV2!) {
 
 5. Then, click on  **Query Variables** at the bottom of the page. Now, your screen may look like the following:
 
-![queryvariables](https://user-images.githubusercontent.com/60782333/85610649-8e92f280-b62d-11ea-9a5e-aa7ced1a1549.png)
+![queryvariables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/85610649-8e92f280-b62d-11ea-9a5e-aa7ced1a1549_40.png)
 
 6. To fill in the `Query Variables` box, check the next sections **according to your store's desired scenario** (*catalog* or *app* messages translations).
 7. After adjusting your query, click on the play button to run the declared mutation. For both scenarios, the expected response is as follows:
@@ -85,7 +86,7 @@ Use the following example as a guide if you aim to translate text messages from 
 
 To better understand the full process of overwriting a product message translation, check the following gif:
 
-![ProductTranslation](https://user-images.githubusercontent.com/60782333/85765724-c2811d00-b6ec-11ea-8ada-a9e688c36b86.gif)
+![ProductTranslation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/85765724-c2811d00-b6ec-11ea-8ada-a9e688c36b86_88.gif)
 
 ### App messages translations
 
@@ -118,7 +119,7 @@ Use the following example as a guide if you aim to translate text messages expor
 
 To better understand the full process of overwriting an app message translation, check the following gif:
 
-![AppMessageTranslation](https://user-images.githubusercontent.com/60782333/85605881-fbf05480-b628-11ea-8ea9-1dbf364f07fd.gif)
+![AppMessageTranslation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/85605881-fbf05480-b628-11ea-8ea9-1dbf364f07fd_121.gif)
 
 ### VTEX Intelligent Search context
 
@@ -145,19 +146,21 @@ Use the following example as a guide if you aim to translate text messages expor
 - `to`: target translation locale.
 - `messages`: a list of the messages you want to translate, containing the following parameters:
   - `srcLang`: store's locale default. In the VTEX Intelligent Search context, this variable must be the store's binding default.
+
   - `srcMessage`: source message string. Check the table below to the possible values of this variable.
-      |Value|Definition|
-      |--|--|
-      |`Category 1`|Department|
-      |`Category 2`|Category|
-      |`Category 3`|Subcategory|
-      |`Price`|Price|
-      |`Promotion`|Promotion|
-      |`New Release`|New Release|
-      |`Location`|Location|
-      |`Brand`|Brand|
+    | Value         | Definition  |
+    | ------------- | ----------- |
+    | `Category 1`  | Department  |
+    | `Category 2`  | Category    |
+    | `Category 3`  | Subcategory |
+    | `Price`       | Price       |
+    | `Promotion`   | Promotion   |
+    | `New Release` | New Release |
+    | `Location`    | Location    |
+    | `Brand`       | Brand       |
 
   - `context`: `intelligentSearchFacets`, which defines the context of the VTEX Intelligent Search.
+
   - `targetMessage`: translated message string.
 
 ## Checking your changes

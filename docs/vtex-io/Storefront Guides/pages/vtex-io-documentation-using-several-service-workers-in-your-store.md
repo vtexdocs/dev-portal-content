@@ -6,13 +6,14 @@ hidden: false
 createdAt: "2021-06-17T21:47:36.065Z"
 updatedAt: "2022-12-13T20:17:44.864Z"
 ---
+
 The Service Worker builder is responsible for fetching service workers exported by the account's installed apps and bundling them in a single file.
 
 > ℹ️ Working as JavaScript files, Service Workers sit between web apps, the browser, and the network to enable effective offline experiences. They can intercept, cache, and modify navigation, providing you control over your web app behavior once the network is not available.
 
 Thanks to the builder's bundling feature, stores can leverage from the generated file and simultaneously work with several service workers at once without needing to stick to a single one and deactivate others as essential to the operation.
 
-![service-worker-diagram](https://user-images.githubusercontent.com/52087100/122475832-9ca6f500-cf9b-11eb-89d7-7b980d5508c0.png)
+![service-worker-diagram](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/pages/122475832-9ca6f500-cf9b-11eb-89d7-7b980d5508c0_15.png)
 
 Find below the instructions on how to generate an app using the Service Worker builder.
 
@@ -34,7 +35,7 @@ vtex init
 
 3. Select the `service-worker-example` option and confirm that you want to download the app to the destination you just chose:
 
-![service-worker-VTEX IO CLI](https://user-images.githubusercontent.com/52087100/122475839-a03a7c00-cf9b-11eb-8619-53db3503f2cb.png)
+![service-worker-VTEX IO CLI](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/pages/122475839-a03a7c00-cf9b-11eb-8619-53db3503f2cb_37.png)
 
 > ℹ️ Once you select the `service-worker-example` option, the CLI will ask you for important information about the app, such as a value for the vendor, name, title, and description. With the exception of vendor, press enter to keep each field's predefined values.
 
