@@ -8,11 +8,10 @@ type: "added"
 
 <div class="badge" id="store-framework">Store Framework</div>
 
-The Store Video app has arrived, allowing you to display video assets on your store pages with divine features such as autoplay, loop, and mute. 
+The Store Video app has arrived, allowing you to display video assets on your store pages with divine features such as autoplay, loop, and mute.
 
 And It gets better: the app also supports Youtube, Vimeo, and other third-party players!
 
 What are you waiting for? Check out now the [documentation](https://vtex.io/docs/components/content-blocks/vtex.store-video/)!
 
-
-![](https://files.readme.io/d2838cf-store-video.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/d2838cf-store-video_18.png)

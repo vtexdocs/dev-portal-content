@@ -12,9 +12,7 @@ Previously, there were no CSS handles to enable users to select and customize no
 
 :information-source: *The non-active dot represents the image that is not currently being hovered on by users.*
 
-
-
-![](https://files.readme.io/220187b-image-dot-non-active.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/220187b-image-dot-non-active_17.png)
 
 In the image above only the first image dot, which was currently selected (or *active*), had both `vtex-store-components-3-x-swiperBullet`  and `vtex-store-components-3-x-swiperBullet--active` CSS classes. The second image dot, which was not active, did not have any CSS class which basically means that users were not able to select it for customization.
 

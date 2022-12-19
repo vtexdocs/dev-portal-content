@@ -15,7 +15,11 @@ For further information, check our [announcement](https://help.vtex.com/en/annou
   "body": "This update does not apply to customers using the `search-resolver@1.x`."
 }
 [/block]
+
 ## Response before the update
-![](https://files.readme.io/e119700-Screenshot_1.png)
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/e119700-Screenshot_1_19.png)
+
 ## Response after the update
-![](https://files.readme.io/a5fc0ea-image_44.png)
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/a5fc0ea-image_44_21.png)

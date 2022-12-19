@@ -13,7 +13,11 @@ For stores using `search-resolver@0.x`  and the native search,  [VTEX Search Gra
   "body": "This update does not apply to customers using the `search-resolver@1.x`."
 }
 [/block]
+
 ## Response before the update
-![](https://files.readme.io/f62b7f6-Screenshot_1.png)
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/f62b7f6-Screenshot_1_17.png)
+
 ## Response after the update
-![](https://files.readme.io/dd1a88b-Screenshot_3.png)
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/dd1a88b-Screenshot_3_19.png)

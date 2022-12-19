@@ -8,8 +8,8 @@ type: "improved"
 
 ![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
 
-Thanks to the new `openFiltersMode` prop it is now possible to define how many filters can be opened by a user at the same time on the Filter Navigator component. 
-![](https://files.readme.io/37c6bf9-filter-selection.gif)
+Thanks to the new `openFiltersMode` prop it is now possible to define how many filters can be opened by a user at the same time on the Filter Navigator component.
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/37c6bf9-filter-selection_12.gif)
 
 Notice that only one filter can be opened at one time. In the example above, the prop `openFiltersMode` is declared as `one`.
 

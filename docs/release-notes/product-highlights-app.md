@@ -10,8 +10,7 @@ type: "added"
 
 The Product Highlights app is here: it allows you to display highlight badges on products according to the collection or promotion they are linked to.
 
-
-![](https://files.readme.io/c9dbe7c-product-highlight.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/c9dbe7c-product-highlight_14.png)
 
 In the image above, the product has a `Top Seller` highlight.
 

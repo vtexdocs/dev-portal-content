@@ -16,6 +16,6 @@ The main differences between the standard flow and making use of Secure Proxy ar
 2. The provider receives tokens from VTEX’s Gateway that refers to the sensitive data, instead of the actual data.
 3. The provider sends the API endpoint of the acquirer and the merchant credentials to the Gateway, instead of making the call directly to the acquirer.
 4. The Gateway makes the API call to the acquirer, acting as a proxy between the provider and the acquirer. In this call, the tokens are replaced by sensitive data.
-![Secure Proxy flow](https://files.readme.io/6a44052-Secure_Proxy_simplified_flow_diagram.png)
+   ![Secure Proxy flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/6a44052-Secure_Proxy_simplified_flow_diagram_19.png)
 
 To learn more about the feature, check our [Secure Proxy article](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-secure-proxy).

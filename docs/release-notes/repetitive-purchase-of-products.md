@@ -11,7 +11,7 @@ type: "improved"
 Before this release, adding the same product to the cart multiple times were kind of a big challenge for users. Due to an error message ( `Item already on cart` ) displayed whenever the `Add to cart` button was clicked on more the once,  users were being blocked from having a smooth experience of shopping.
 
 Good thing is that loss in sales is not something we approve, nor want. Therefore, it is now possible to click on the [Add to cart button](https://vtex.io/docs/components/content-blocks/vtex.add-to-cart-button/) as many times as desired! Cheers to that!
-![](https://files.readme.io/cbaf8d8-add-to-cart-loop.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/cbaf8d8-add-to-cart-loop_14.gif)
 
 [block:callout]
 {

@@ -8,7 +8,7 @@ type: "added"
 
 <div class="badge" id="store-framework">Store Framework</div>
 
-Display a newsletter subscription form for your store users using the [Store Newsletter app](https://vtex.io/docs/components/all/vtex.store-newsletter/)! 
+Display a newsletter subscription form for your store users using the [Store Newsletter app](https://vtex.io/docs/components/all/vtex.store-newsletter/)!
 
 Leveraging from the former [Newsletter block](https://github.com/vtex-apps/store-components/blob/master/docs/Newsletter.md) (from the [Store Components app](https://vtex.io/docs/components/all/vtex.store-components/)), this latest and prettier one is here to let bygones be bygones and upgrade your store!
-![](https://files.readme.io/b8da3f0-newsletter.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/b8da3f0-newsletter_14.png)

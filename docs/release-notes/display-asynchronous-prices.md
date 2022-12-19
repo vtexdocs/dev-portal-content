@@ -16,4 +16,4 @@ To display the most up-to-date prices without compromising the increase of your 
 
 The recipe guides you on setting your store up to decrease page response time with asynchronous prices by fetching product prices on the client-side, promoting a decrease of response time in your pages, and displaying the asynchronous prices.
 
-![priceasync](https://user-images.githubusercontent.com/40380674/96735041-85265680-1391-11eb-80e9-2eb35607fd72.gif)
+![priceasync](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/96735041-85265680-1391-11eb-80e9-2eb35607fd72_19.gif)
