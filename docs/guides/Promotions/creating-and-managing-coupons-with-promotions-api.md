@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-09-14T20:52:19.857Z"
 updatedAt: "2022-06-28T18:25:27.448Z"
 ---
+
 A coupon is a code that when entered in the cart grants the customer a discount on the price of purchase for a determined product.
 
 To make a coupon available for use you need to associate the coupon to a **Promotion**.
@@ -29,7 +30,7 @@ You can create one coupon or multiple coupons at a time.
 
 - To create a single coupon, use the <span class="api pg-type type-post">post</span> [Create coupon](ref:post_api-rnb-pvt-coupon) endpoint.
 - If you want to create multiple coupons use the <span class="api pg-type type-post">post</span> [Create multiple coupons](ref:post_api-rnb-pvt-multiple-coupons) endpoint.
-- 
+
 [block:callout]
 {
   "type": "danger",
@@ -82,10 +83,10 @@ To enable the single-use of a coupon, you must restrict the promotion to a singl
 2. Click on **Promotions**.
 3. Click on the **New Promotion** > **Regular** button.
 4. Check the selection box of `utm_source` and add the `Birthday123` code to the field.
-![cupom-Birthday123](https://files.readme.io/6341488-cupom-Birthday123.png)
+   ![cupom-Birthday123](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Promotions/6341488-cupom-Birthday123_85.png)
 5. Uncheck the unlimited selection boxes from the **How many times will your promotion be applied in your store** and **How many times will your promotion be applied in your store per client fields**.
 6. Add the number one to each field to enable the single-use promotion.
-![restricao-promo-single](https://files.readme.io/0b2666e-restricao-promo-single.png)
+   ![restricao-promo-single](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Promotions/0b2666e-restricao-promo-single_88.png)
 7. Click on **Save**.
 
 ### Coupon massive generation

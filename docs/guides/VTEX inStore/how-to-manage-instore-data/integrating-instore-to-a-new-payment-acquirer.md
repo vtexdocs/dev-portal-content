@@ -5,8 +5,9 @@ hidden: true
 createdAt: "2021-08-17T20:00:23.079Z"
 updatedAt: "2021-08-17T20:24:18.657Z"
 ---
+
 This article aims to explain how the inStore app configures AppLinking for `payment` and `payment-reversal` actions with the acquirers' apps.
-![](https://files.readme.io/de29bd5-Payment_app.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-manage-instore-data/de29bd5-Payment_app_9.png)
 
 ## Setting fields
 

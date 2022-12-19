@@ -5,7 +5,8 @@ hidden: false
 createdAt: "2022-01-27T14:33:58.199Z"
 updatedAt: "2022-02-03T16:47:43.820Z"
 ---
-## Identifying the payment method`s ID
+
+## Identifying the payment method's ID
 
 The payment method's ID can be configured to have Simple Interest Rates and is obtained by following these steps:
 
@@ -15,14 +16,14 @@ The payment method's ID can be configured to have Simple Interest Rates and is o
 4. In **Payment Conditions** tab, select the payment condition that should be configured to use Simple Interest Rates.
 5. Copy the last URL parameter, which shows the ID of this Payment Method (see image).
 
-![ENjuros](https://files.readme.io/b6f8c9d-ENjuros.png)
+![ENjuros](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/b6f8c9d-ENjuros_18.png)
 
 ## Setting up the interest rate type using API
 
 The `interestRateMethod` field is where the setup should be implemented, if we were to use the Simple Interest Rate or Compound Interest Rate calculation algorithm:
 
-* **Simple Interest Rate** will equal `interestRateMethod`: 1.
-* **Compound Interest Rate** will equal `interestRateMethod`: null.
+- **Simple Interest Rate** will equal `interestRateMethod`: 1.
+- **Compound Interest Rate** will equal `interestRateMethod`: null.
 
 A `GET Rule by ID` call will initially be sent in order to receive the updated Payment Method setting through the following API:
 

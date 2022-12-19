@@ -5,8 +5,9 @@ hidden: false
 createdAt: "2020-07-01T02:20:23.146Z"
 updatedAt: "2020-10-14T23:59:34.329Z"
 ---
+
 Our Gift Card system provides stores with the flexibility to plug in multiple gift card providers and offer these different options to their customers. This is possible thanks to a layer of interaction between gift card providers and the store, which we call **Gift Card Hub**, and the communication standards defined in our **Gift Card Provider Protocol**.
-![Gift Card Hub](https://files.readme.io/6ccd9d4-gift-card-hub.png)
+![Gift Card Hub](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/gift-card-integration-guide/6ccd9d4-gift-card-hub_9.png)
 [/block]
 This article presents an overview of this architecture, so you understand its building blocks and how they interact with each other. We will also explain the purpose of the [Gift Card API](https://developers.vtex.com/reference/giftcard-api-overview) and the [Gift Card Hub API](https://developers.vtex.com/reference/giftcard-hub-api-overview) and how they should be used.
 [block:callout]
@@ -16,6 +17,7 @@ This article presents an overview of this architecture, so you understand its bu
   "body": "If you do not need to integrate an external solution, remember you can [set up and manage gift cards](https://help.vtex.com/tutorial/gift-card--tutorials_995) natively in your admin panel or using our [Gift Card API](https://developers.vtex.com/reference/giftcard-api-overview)."
 }
 [/block]
+
 ## Gift Card Hub
 
 This is the system that provides a layer of interaction between gift card providers and VTEX stores. It is used to manage multiple gift card providers connected to a store, both native and external, using a single interface - the [Gift Card Hub API](https://developers.vtex.com/reference/giftcard-hub-api-overview).

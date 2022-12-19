@@ -5,19 +5,21 @@ hidden: true
 createdAt: "2020-07-01T02:24:37.898Z"
 updatedAt: "2020-10-16T02:29:18.408Z"
 ---
+
 Before developing your gift card provider implementation, it's important to clearly understand the data structures and the behaviors expected by Gift Card Hub. In most cases, developers will need to map the data structures and behaviors exhibited by external gift card providers and create parsing routines in their middleware to switch back and forth between standards.
 
 ## Gift Card Provider
 
-A gift card provider is an external system that manages gift cards and their transactions. 
+A gift card provider is an external system that manages gift cards and their transactions.
 
 The minimum information needed to define a provider includes:
 
 - `id`: the provider identifier in the context of Gift Card Hub API
 - `caption`: the name seen by shoppers in the store checkout
 - `serviceUrl`: the base URL that should be prepended to all provider endpoints
-![The name seen by shoppers in the store checkout is set by the caption parameter (e.g. My Gift Card Provider)](https://files.readme.io/9a4bd43-Screen_Shot_2020-10-13_at_21.59.31.png)
-Below you will find an example of the gift card provider data structure and more details on the usage of each parameter. Parameters that were not mentioned in our short description above can usually be set to the values in the example.
+  ![The name seen by shoppers in the store checkout is set by the caption parameter (e.g. My Gift Card Provider)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/gift-card-integration-guide/9a4bd43-Screen_Shot_2020-10-13_at_21.59.31_19.png)
+  Below you will find an example of the gift card provider data structure and more details on the usage of each parameter. Parameters that were not mentioned in our short description above can usually be set to the values in the example.
+  
 [block:code]
 {
   "codes": [
@@ -76,9 +78,10 @@ Below you will find an example of the gift card provider data structure and more
   "body": "Failing to define a valid `oauthProvider` will generate an error in your store's checkout. Most implementations should set this parameter to `'vtex'`"
 }
 [/block]
+
 ## Gift card
 
-A gift card can work as either a redeemable gift voucher or a loyalty program. Although the data structure is the same, the required fields for each behavior are slightly different. 
+A gift card can work as either a redeemable gift voucher or a loyalty program. Although the data structure is the same, the required fields for each behavior are slightly different.
 
 The minimum information needed to define a gift card includes:
 
@@ -94,6 +97,7 @@ When used as a redeemable gift voucher, you should also set:
 - `caption`: the gift card identifier in checkout
 
 Below you will find an example of the gift card data structure for a loyalty program card. The `provider` and `transaction` fields are added by Gift Card Hub.
+
 [block:code]
 {
   "codes": [
@@ -105,6 +109,7 @@ Below you will find an example of the gift card data structure for a loyalty pro
   ]
 }
 [/block]
+
 ### Redeemable voucher
 
 When used as a redeemable gift voucher, you should also set:
@@ -112,6 +117,7 @@ When used as a redeemable gift voucher, you should also set:
 - `redemptionCode`: the gift card code in checkout
 
 Below you will find an example of the gift card data structure for a redeemable gift voucher. The `provider` and `transaction` fields are added by Gift Card Hub.
+
 [block:code]
 {
   "codes": [
@@ -181,12 +187,13 @@ Some fields are shown in the order details page when gift cards are used to pay 
 - Gift Card Issuer: `provider`
 
 The image below illustrates how these might be presented in a specific order.
-![Gift card fields seen in the order details page: redemptionCode, relationName, caption, provider](https://files.readme.io/543d003-Screen_Shot_2020-10-14_at_18.47.59.png)
+![Gift card fields seen in the order details page: redemptionCode, relationName, caption, provider](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/gift-card-integration-guide/543d003-Screen_Shot_2020-10-14_at_18.47.59_184.png)
+
 ## Transactions
 
-A gift card transaction is a record of an operation that changes the gift card balance as a side-effect, such as a purchase or a refund. Our protocol expects gift cards to store their transactions for bookkeeping throughout the different stages of the purchase process. 
+A gift card transaction is a record of an operation that changes the gift card balance as a side-effect, such as a purchase or a refund. Our protocol expects gift cards to store their transactions for bookkeeping throughout the different stages of the purchase process.
 
-The minimum information needed to define a transaction includes: 
+The minimum information needed to define a transaction includes:
 
 - `operation`: indicates whether credit should be added (`Credit`) or redeemed (`Debit`)
 - `value`: the amount of credit that should be added or redeemed

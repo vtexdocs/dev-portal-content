@@ -5,11 +5,12 @@ hidden: false
 createdAt: "2021-03-26T16:37:08.694Z"
 updatedAt: "2022-02-24T20:37:12.126Z"
 ---
+
 The sales associate code field is an additional customization of the [**Observation** field](https://developers.vtex.com/vtex-rest-api/docs/enable-the-remarks-field-in-the-order-screen) that turns this component into a field where vendors should insert their code during the purchase flow.
 
 Once enabled, this field becomes a mandatory step in the purchase flow, meaning that the order can only be completed if the `sales associate code` field is filled with a personal code.
 
-![The inStore's UI once the sales rep code is enabled on the purchase flow](https://files.readme.io/4048c5c-sales_rep_code.PNG)
+![The inStore's UI once the sales rep code is enabled on the purchase flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/4048c5c-sales_rep_code_12.PNG)
 
 [block:html]
 {

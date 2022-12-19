@@ -5,11 +5,12 @@ hidden: false
 createdAt: "2022-09-30T21:56:06.725Z"
 updatedAt: "2022-11-18T19:15:33.816Z"
 ---
+
 A [marketplace](https://help.vtex.com/pt/tutorial/estrategias-de-marketplace-na-vtex--tutorials_402) is the environment where the product is sold, or the storefront. The [seller](https://help.vtex.com/en/tutorial/estrategias-de-marketplace-na-vtex--tutorials_402#selling-on-marketplaces) owns the product and is responsible for fulfillment. [VTEX promotes digital collaboration](https://vtex.com/us-en/ecommerce-marketplace/) by allowing multiple combinations of architecture between these two entities. One of these combinations is called [Multilevel Omnichannel Inventory](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).
 
-_Multilevel Omnichannel Inventory_ is the VTEX setting that allows [franchises](https://help.vtex.com/en/tutorial/o-que-e-conta-franquia--kWQC6RkFSCUFGgY5gSjdl) or [white label sellers](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa)' inventory to be sold in marketplaces to which the main account is connected.
+*Multilevel Omnichannel Inventory* is the VTEX setting that allows [franchises](https://help.vtex.com/en/tutorial/o-que-e-conta-franquia--kWQC6RkFSCUFGgY5gSjdl) or [white label sellers](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa)' inventory to be sold in marketplaces to which the main account is connected.
 
-For VTEX sellers, this means being able to sell products from its franchises or white label sellers in a marketplace, without the need to set up the integration with the desired marketplace for all franchise stores, and white label sellers.  
+For VTEX sellers, this means being able to sell products from its franchises or white label sellers in a marketplace, without the need to set up the integration with the desired marketplace for all franchise stores, and white label sellers.
 
 For marketplaces, this means selling products from its direct sellers and also physical stores and white label sellers associated with those sellers in a scalable way.
 
@@ -20,7 +21,6 @@ For marketplaces, this means selling products from its direct sellers and also p
   "title": "Restrictions of use"
 }
 [/block]
-<br>
 
 ## Account architecture
 
@@ -28,11 +28,11 @@ When a store sells its products in a marketplace, we have a one-level relationsh
 
 Stores that have white label sellers and franchises are marketplaces to those accounts. But they can also be connected to external marketplaces, becoming sellers themselves. In this case, we have a three level architecture, as illustrated in the image below.
 
-![](https://files.readme.io/ec93fc5-Screen_Shot_2022-09-30_at_18.57.26.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/ec93fc5-Screen_Shot_2022-09-30_at_18.57.26_31.png)
 
-* **Marketplace (level 1):** storefront where the product is sold and order is placed.
-* **Direct seller (level 2):** main account, integrated to the marketplace level 1. Serves as a marketplace for white label sellers, franchise accounts and physical stores connected to it.
-* **Franchise accounts/physical stores (level 3):** owns the product, and is responsible for fulfillment. Connected as white label sellers to the main account.
+- **Marketplace (level 1):** storefront where the product is sold and order is placed.
+- **Direct seller (level 2):** main account, integrated to the marketplace level 1. Serves as a marketplace for white label sellers, franchise accounts and physical stores connected to it.
+- **Franchise accounts/physical stores (level 3):** owns the product, and is responsible for fulfillment. Connected as white label sellers to the main account.
 
 With the Multilevel Omnichannel Inventory setting, all franchise accounts and white label sellers (level 3) are already fully integrated to a store's main account (level 2). This means that when the main account sets up an integration with an external marketplace (level 1), the franchise accounts can be integrated as well, no longer being necessary to manage each franchise individually in order to set up its integration with the marketplace.
 
@@ -82,19 +82,17 @@ The Multilevel Omnichannel Inventory setting allows the entire inventory from a 
 
 Let's break down how chain orders are applied in Multilevel Omnichannel Inventory architecture:
 
-* Order originates in the marketplace (level 1).
-* Order goes through an intermediate agent, in this case, the direct sellers (level 2).
-* Order reaches its destination, to be fulfilled by the white label sellers (level 3).
+- Order originates in the marketplace (level 1).
+- Order goes through an intermediate agent, in this case, the direct sellers (level 2).
+- Order reaches its destination, to be fulfilled by the white label sellers (level 3).
 
-Therefore, chain orders in direct seller have characteristics that come from both _marketplaces_, because they take the role of a seller's marketplace, and _sellers_, since they are also sellers of a marketplace.
+Therefore, chain orders in direct seller have characteristics that come from both *marketplaces*, because they take the role of a seller's marketplace, and *sellers*, since they are also sellers of a marketplace.
 
 Check out the order flow for chain orders in the image below:
 
 ​
-![](https://files.readme.io/c8fecea-Screen_Shot_2022-09-30_at_19.00.04.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/c8fecea-Screen_Shot_2022-09-30_at_19.00.04_94.png)
 The order flow seen by the level 2 store in a Multilevel Omnichannel Inventory is similar to the marketplace order flow, except for receiving the payment for orders. In the Payment pending stage, instead of the chain receiving payment directly from the gateway, the marketplace informs the chain it has received the payment confirmation.
-
-<br>
 
 ## Initial setup
 
@@ -112,9 +110,10 @@ https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{a
 
 3. Substitute the placeholders for the following values:
 
-* **sellerAccount**: [account name](https://help.vtex.com/pt/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC) of the seller in VTEX.
+- **sellerAccount**: [account name](https://help.vtex.com/pt/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC) of the seller in VTEX.
 
-* **affiliateId**: the 3-digit [afiliate](https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0) identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.  
-* **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data)) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.  
+- **affiliateId**: the 3-digit [afiliate](https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0) identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
 
-![Chain Order Flow](https://files.readme.io/1eeb67d-Screen_Shot_2022-09-30_at_19.01.28.png)
+- **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
+
+![Chain Order Flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/1eeb67d-Screen_Shot_2022-09-30_at_19.01.28_120.png)

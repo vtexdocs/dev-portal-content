@@ -13,6 +13,7 @@ By default, the application's language is Portuguese, but you can change it by e
   "html": "<br>"
 }
 [/block]
+
 ## Edit the `checkout-instore-custom.js` file
 
 To change the language used on inStore, first check if the `checkout-instore-custom.js` file contains the following lines of code:
@@ -82,7 +83,8 @@ If you want to change inStore's language to English, for example, replace the `p
   "html": "<br>"
 }
 [/block]
+
 ## Check out your changes
 
 To see the reflected changes on inStore, enter the menu and click the `Reset app local data` button, as shown in the image below.
-![](https://files.readme.io/11a56c5-22._Change_the_inStore_language_-_1_-_EN.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/11a56c5-22._Change_the_inStore_language_-_1_-_EN_88.png)

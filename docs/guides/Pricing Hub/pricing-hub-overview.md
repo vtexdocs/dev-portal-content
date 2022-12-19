@@ -5,6 +5,7 @@ hidden: true
 createdAt: "2021-10-25T18:44:02.713Z"
 updatedAt: "2022-06-13T16:06:15.138Z"
 ---
+
 [block:callout]
 {
   "type": "info",
@@ -14,13 +15,14 @@ updatedAt: "2022-06-13T16:06:15.138Z"
 In the B2B scenario, it is common for stores to have personalized prices per customer and complex pricing systems that require external integrations. Pricing Hub is a system developed for the B2B context that works as an intermediary between VTEX and external pricing systems.
 
 In VTEX, B2B stores have the option to use our internal pricing system or an external one. If the store chooses to operate with an external pricing system, Pricing Hub will query an external price calculation API. The external API should then respond with the price for all items in the shopping cart according to its predefined tax rules.
-![Pricing hub protocal diagram](https://files.readme.io/c1fc65b-pricing_hub_protocol_diagram_v2_1.png)
+![Pricing hub protocal diagram](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Pricing%20Hub/c1fc65b-pricing_hub_protocol_diagram_v2_1_17.png)
+
 ## Implementation
 
 To connect with external pricing systems using Pricing Hub, it is necessary to build a VTEX IO middleware app. We offer two reference implementation templates to simplify this process:
 
-* [C# template](https://github.com/vtex-apps/external-prices-app)
-* [Node template](https://github.com/vtex-apps/external-prices-node)
+- [C# template](https://github.com/vtex-apps/external-prices-app)
+- [Node template](https://github.com/vtex-apps/external-prices-node)
 
 Read the documentation on each repository to learn more about the required steps to use and customize the app.
 
@@ -39,7 +41,6 @@ The external prices calculation tool must provide an endpoint that will receive 
 }
 [/block]
 In this request, Pricing Hub provides a body in a specific format, exemplified below. This means that either the endpoint must be prepared to receive this body format, or the app must contain a parser to adapt it to the correct format.
-
 
 #### Request body example
 
@@ -67,7 +68,6 @@ The request body should have the following properties:
 | ↪ `quantity`  | integer  | This is the amount of items that will be priced. It is possible to have a volume discount for many repeated items. Hence, the price may not be the quantity of the item multiplied by the unitary price. |
 | `context`     | object   | The object that contains the context to inform the query.                                                                                                                                                |
 | ↪ `email`     | string   | The customer's email address. If there is no value, use an empty string.                                                                                                                                 |
-
 
 ### External prices provider response
 

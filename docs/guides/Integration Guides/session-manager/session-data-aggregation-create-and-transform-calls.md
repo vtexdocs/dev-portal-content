@@ -5,14 +5,15 @@ hidden: false
 createdAt: "2022-08-04T20:56:02.047Z"
 updatedAt: "2022-08-04T21:09:23.124Z"
 ---
-Strictly speaking, Session Manager is a backend API system that stores and processes session data in JSON objects. Each VTEX account has settings that indicate which installed apps have a session dependency and how they intend to process this information. 
+
+Strictly speaking, Session Manager is a backend API system that stores and processes session data in JSON objects. Each VTEX account has settings that indicate which installed apps have a session dependency and how they intend to process this information.
 
 Apps with a session dependency monitor change to their inputs and modify session parameters through their outputs. When a session parameter changes, Session Manager notifies all apps monitoring it and listens to their response, which indicates whether any other parameters must be updated as a result. Session Manager then patches the session data by compiling the responses sent by all apps, if necessary. We refer to this notification / response / update cycle as **transform call** or transform.
 
 Transforms often trigger other transforms, repeating until apps send no further parameter updates. This operation is, naturally, carefully monitored for loop conditions. The diagram below illustrates one such transform cycle:
 
+![Sessions transform diagram, as described in the steps below.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/session-manager/3442b69-Session_Manager_15.jpg)
 
-![Sessions transform diagram, as described in the steps below.](https://files.readme.io/3442b69-Session_Manager.jpg)
 1. A change was made to session parameter X
 2. App A was monitoring session parameter X, so that triggered Transform 1
 3. Transform 1 led App A to change session parameter Y

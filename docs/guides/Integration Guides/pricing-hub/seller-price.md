@@ -5,6 +5,7 @@ hidden: true
 createdAt: "2021-11-08T16:34:25.542Z"
 updatedAt: "2022-06-13T16:08:09.500Z"
 ---
+
 [block:callout]
 {
   "type": "info",
@@ -17,19 +18,16 @@ This scenario gets more complex when the seller’s products are offered in a B2
 
 Considering this, our B2B Seller Price feature allows sellers from B2B marketplaces to configure specific price tables for each customer, based on their email address, and apply these personalized prices using [Pricing Hub](https://developers.vtex.com/vtex-rest-api/reference/pricing-hub-overview). This feature works for all types of sellers in the B2B scenario, whether they are white label or not.
 
-
 ## How it works
 
-The diagram below shows how the process works, after all the required [configurations](#setup). 
+The diagram below shows how the process works, after all the required [configurations](#setup).
 
-![](https://files.readme.io/32e8e14-image1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/pricing-hub/32e8e14-image1_25.png)
 When a customer logs in on a B2B marketplace which has Pricing Hub enabled, it will make a `POST` [Get Prices](https://developers.vtex.com/vtex-rest-api/reference/post_api-pricing-hub-prices) request to the Pricing Hub API to fetch prices information from the B2B Seller’s external prices app. The app will then return the prices information in the response, applying the specific prices associated with each customer email, as set by the seller.
-
 
 ## Setup
 
 To set up this process, the marketplace and each seller must follow the instructions below.
-
 
 ### Marketplace
 
@@ -52,9 +50,9 @@ The B2B sellers – white label or not – who want to use this feature must fol
 1. Configure specific price tables associated with the customers’ respective email addresses, either using the [Pricing API](https://developers.vtex.com/vtex-rest-api/reference/pricing-api-overview) or the [VTEX Admin panel](https://help.vtex.com/en/tutorial/configurar-price-tables-especificas--5S9oDOMHNmY4K0kAewAiWY).
 2. Develop a VTEX IO app to allow querying price tables by email, integrating with external price systems, and install it in the master workspace.
 
-    We offer a reference implementation template to simplify this process: [Node template](https://github.com/vtex/unilever-external-prices-node). This template app can be customized to use other price parameters, by following the instructions on the app repository.
+   We offer a reference implementation template to simplify this process: [Node template](https://github.com/vtex/unilever-external-prices-node). This template app can be customized to use other price parameters, by following the instructions on the app repository.
 
-    Make sure your app complies with the [specifications detailed in the Pricing Hub documentation](https://developers.vtex.com/vtex-rest-api/reference/pricing-hub-overview#specifications).
+   Make sure your app complies with the [specifications detailed in the Pricing Hub documentation](https://developers.vtex.com/vtex-rest-api/reference/pricing-hub-overview#specifications).
 
 [block:callout]
 {
@@ -65,5 +63,5 @@ The B2B sellers – white label or not – who want to use this feature must fol
 
 ## Learn more
 
-* [Pricing Hub - Overview](https://developers.vtex.com/vtex-rest-api/reference/pricing-hub-overview)
-* [Pricing Hub - Get Prices](https://developers.vtex.com/vtex-rest-api/reference/post_api-pricing-hub-prices)
+- [Pricing Hub - Overview](https://developers.vtex.com/vtex-rest-api/reference/pricing-hub-overview)
+- [Pricing Hub - Get Prices](https://developers.vtex.com/vtex-rest-api/reference/post_api-pricing-hub-prices)

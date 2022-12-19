@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-01-27T15:02:19.691Z"
 updatedAt: "2022-01-27T19:29:46.835Z"
 ---
+
 In order for your store to begin receiving payments with **Apple Pay**, you will need to set **Merchant ID** in your [Apple developer account](developer.apple.com).
 
 ## Creating the Merchand ID
@@ -22,26 +23,26 @@ Let's now turn our attention to the step-by-step process below:
 1. Access your Apple **developer account** at `https://developer.apple.com/account/#/overview/`.
 2. Select the **Certificates, IDs & Profiles** option.
 
-![](https://files.readme.io/3cfad12-AP1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/3cfad12-AP1_25.png)
 
 3. Select **Identifiers**.
 
-![](https://files.readme.io/fd0ce1d-AP2.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/fd0ce1d-AP2_29.png)
 
 4. Next to Identifiers, click on the blue **+** button.
 
-![](https://files.readme.io/2eb156b-AP3.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/2eb156b-AP3_33.png)
 
 5. Select the **Merchant IDs** option.
 6. Click on the blue **Continue** button.
 
-![](https://files.readme.io/d5d7950-AP4.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/d5d7950-AP4_38.png)
 
 7. Fill on the **Description** field.
 8. Fill in the **Identifier** field.
 9. Click on **Continue**.
 
-![](https://files.readme.io/fc1ba70-AP5.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/fc1ba70-AP5_44.png)
 
 You will have created your **Merchant ID**.
 
@@ -57,20 +58,20 @@ Follow the instructions below to proceed to this step:
 
 1. On the left-hand side, open **Certificates** from the menu.
 
-![](https://files.readme.io/ec990fd-AP6.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/ec990fd-AP6_60.png)
 
 2. Type in your newly created **Merchant ID** in the search bar.
 3. Select the desired **Merchant ID**.
 
-![](https://files.readme.io/245d0ac-AP7.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/245d0ac-AP7_65.png)
 
 4. Under **Apple Pay Payment Processing Certificate**, click the **Create Certificate** button.
 
-![](https://files.readme.io/331b7cc-AP8.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/331b7cc-AP8_69.png)
 
 5. Ensure that the question *"Will payments associated with this Merchant ID be processed exclusively in China?"* is ticked with the **default option (No)**.
 
-![](https://files.readme.io/d698a21-AP9.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/d698a21-AP9_73.png)
 
 You'll then be redirected to a screen with instructions on creating the Certificate Signing Request (CSR).
 
@@ -84,11 +85,11 @@ With the `{{merchantID}}.csr` that you've received, complete the following:
 2. Select the desired **CSR file**.
 3. Click on **Continue**.
 
-![](https://files.readme.io/caafbd7-AP10.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/caafbd7-AP10_87.png)
 
 4. Click on **Download**.
 
-![](https://files.readme.io/837b621-AP11.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/837b621-AP11_91.png)
 
 5. Click on **Done**.
 
@@ -110,12 +111,12 @@ Follow these steps:
 
 1. Search for the recently created **MerchantID** in the search bar.
 
-![](https://files.readme.io/d16da6a-AP12.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/d16da6a-AP12_113.png)
 
 2. Click on the desired **MerchantID**.
 3. In the **Merchant Domain** module, click on **Add Domain**.
 
-![](https://files.readme.io/2d7e546-AP13.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/2d7e546-AP13_118.png)
 
 4. Add the domain in the **Enter the domain you wish to register** field.
 5. Click on **Save**.
@@ -124,7 +125,7 @@ Thereafter, to upload the`.txt` file by API, follow these instructions:
 
 1. Click on **Download** and make no changes to the file.
 
-![](https://files.readme.io/aafb5cc-AP14.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/aafb5cc-AP14_127.png)
 
 2. Open the `.txt` file and **copy** all the content.
 
@@ -138,7 +139,7 @@ Now, when making the **POST** call, the response will inform you that your certi
 
 Head back to the Apple's website. On the same screen where you downloaded the `.txt` file, click on **Verify**.
 
-![](https://files.readme.io/8d2c64f-AP15.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/8d2c64f-AP15_141.png)
 
 If you've followed the step-by-step correctly, your domain will be registered with the **verified** status. If you want, you can repeat the process to add more domains by using the **Add Domain** button in the **Merchant Domains** section.
 
@@ -159,21 +160,21 @@ To complete the action, you'll need to create a password to protect the exported
 2. From the left side menu, choose **Identifiers**.
 3. In the upper right corner, filter by **Merchant IDs**.
 
-![](https://files.readme.io/4e48e0c-AP16.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/4e48e0c-AP16_162.png)
 
 4. Select the desired **Merchant Identifier**.
 5. Click on **Create Certificate**.
 
-![](https://files.readme.io/4cf8941-AP17.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/4cf8941-AP17_167.png)
 
 6. Follow the **instructions** displayed on the screen to create a certificate.
 7. Click on **Continue**.
 
-![](https://files.readme.io/109d91f-AP18.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/109d91f-AP18_172.png)
 
 8. Click on **Download**.
 
-![](https://files.readme.io/e05a913-AP19.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/e05a913-AP19_176.png)
 After the file has been downloaded, double-click it to install it in Keychain Access.
 
 Afterwards, proceed to the following steps:
@@ -182,7 +183,7 @@ Afterwards, proceed to the following steps:
 2. Locate the **certificate** created in step 4 above.
 3. Right click on the **key** icon.
 
-![](https://files.readme.io/4a93846-AP20.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/4a93846-AP20_185.png)
 
 4. Click on **Export**.
 5. Give the **certificate** a name.

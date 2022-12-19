@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2021-10-15T15:21:14.824Z"
 updatedAt: "2022-02-10T20:58:11.681Z"
 ---
+
 The purpose of this article is to present the most used commands and all the functions that can be used to boost your store’s templates.
 
 To configure its templates, Message Center uses a language called **HandleBars**, which is quite simple, with only a few commands, making it easy to implement while expanding its customization.
@@ -28,7 +29,7 @@ When editing the email, it is possible to use a range of variables provided by t
 }
 [/block]
 **Template HTML:** `<strong>{{_accountInfo.HostName}}</strong> => lojavirtual`
-![exemplo html](https://files.readme.io/b9d5c9b-exemplohtml.png)
+![exemplo html](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Message%20Center/templates/b9d5c9b-exemplohtml_31.png)
 The above example can have different values when comparing Sellers and Marketplaces.
 
 ## Functions
@@ -44,6 +45,7 @@ The use of the functions follows the following syntax: `{{funcão classe.atribut
   ]
 }
 [/block]
+
 - **formatCurrency**: formats a value for currency `{{formatCurrency items.0.sellingPrice}}`
   - **Result:** R$ 200,00
 - **formatUSDCurrency:** formats a value for the american decimal pattern `{{formatUSDCurrency items.0.sellingPrice}}`
@@ -62,6 +64,7 @@ The use of the functions follows the following syntax: `{{funcão classe.atribut
   - **Result:** 8 business days
 
 ## Example
+
 [block:code]
 {
   "codes": [
@@ -73,4 +76,4 @@ The use of the functions follows the following syntax: `{{funcão classe.atribut
 }
 [/block]
 **Result:**
-![](https://files.readme.io/715c58d-3.1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Message%20Center/templates/715c58d-3.1_76.jpg)

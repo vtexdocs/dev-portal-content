@@ -7,16 +7,13 @@ updatedAt: "2022-10-05T18:22:47.556Z"
 ---
 After creating a payment condition as described in the [inStore - Payments](https://help.vtex.com/en/tracks/instore-payments--43B4Nr7uZva5UdwWEt3PEy/2liigRors32hzqBNs2M1Oa) guide, we need to create the filters that will define which payment methods will appear at inStore’s checkout.
 
-You must do this by inserting a JavaScript object in the `checkout-instore-custom.js `file. Check out the [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore) guide for further information on how to access this file.
+You must do this by inserting a JavaScript object in the `checkout-instore-custom.js` file. Check out the [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore) guide for further information on how to access this file.
 
 ## Edit the `checkout-instore-custom.js` file
 
 There are two options for defining which payment methods will be displayed on inStore. You can set global payment methods, that is, payment methods that any inStore user will be able to see, or payment methods per vendor, which means only specific users will be able to see them.
 
-
-
 ### Define global payment methods
-
 
 1. The object that contains the payment filters is called `window.PAYMENTS_FILTER_GLOBAL`. If this object does not already exist in the code, you should insert it, as described below.
 
@@ -72,6 +69,7 @@ window.INSTORE_CONFIG = {
     payments: window.PAYMENTS_FILTER_GLOBAL,
 };
 ```
+
 [block:callout]
 {
   "type": "danger",
@@ -79,8 +77,6 @@ window.INSTORE_CONFIG = {
 }
 [/block]
 3. After making changes in the code, make sure you press the `Save` button.
-
-
 
 ### Define payment methods per sales associate
 
@@ -160,5 +156,5 @@ You can find the ID of each condition in the **Payments** module. In the main me
 
 In the **Payment conditions** tab, you will find the ID next to each of the conditions. In the example below, we see that the payment condition ID for Cash is `202`.
 
-![](https://files.readme.io/5d9d769-CASH-CODE.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/5d9d769-CASH-CODE_163.png)
 If we wanted to include Cash as a payment condition to be displayed at the inStore checkout, this would be the value we would add to the `filters` array, inside the `window.PAYMENTS_FILTER_GLOBAL` object of the `checkout-instore-custom.js` file.

@@ -15,6 +15,7 @@ However, there is often the need to enable or enforce the use of credentials fro
   "title": "SAML 2.0 is required for Admin login integration"
 }
 [/block]
+
 ## SAML
 
 Security Assertion Markup Language (SAML) is a standard for exchanging authentication and authorization data between domains.
@@ -25,7 +26,8 @@ It is an open standard, a product of the OASIS Security Services Technical Commi
 
 ## Authentication flow
 
-![VTEX ID SAML authentication flow.](https://files.readme.io/d1220f4-SAML.drawio.png)
+![VTEX ID SAML authentication flow.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/d1220f4-SAML.drawio_28.png)
+
 ## SAML roles
 
 In the context of SAML, you should be aware of the different roles performed by the entities that exchange information during authentication.
@@ -46,6 +48,7 @@ A **Service Provider** is an application server that communicates with an IdP to
   "body": "In the context of this guide, the external authentication system is the **Identity Provider** and the module for identifying users on the VTEX platform, VTEX ID, is the **Service Provider**."
 }
 [/block]
+
 ## SAML Assertions
 
 SAML 2.0 uses assertions (packages) to pass information between the SP and the IdP. These packages contain information about a user (subject) and are written using the XML markup language. Although the standard specification defines [three types of subject-related assertion statements](http://saml.xml.org/assertions), VTEX only supports the **Authentication Assertion** type. We recommend the reading of [this document](https://github.com/jch/saml) to get a better understanding of the SAML protocol.
@@ -56,9 +59,11 @@ SAML 2.0 uses assertions (packages) to pass information between the SP and the I
   "title": ""
 }
 [/block]
+
 ## Integration
 
 You can implement a custom SAML login option for your Admin panel by providing some information about the communication between VTEX and your **identity provider**. To do that:
+
 1. Make sure that you have correctly [set up your identity provider](#identity-provider-configuration).
 2. Guarantee that you possess all the [required information](#required-information).
 3. Follow the [step by step setup](#setup).
@@ -66,21 +71,28 @@ You can implement a custom SAML login option for your Admin panel by providing s
 ### Identity provider configuration
 
 If required by the identity provider, you must use the appropriate service provider `metadata.xml` file to configure the identity provider. It is available for download in the following URL:
+
 ```
 https://vtexid.vtex.com.br/api/vtexid/pub/saml/{accountName}/sp/metadata
 ```
 
 If you do not use the file indicated above, configure your identity provider manually with the Assertion Consumer Service (ACS), **NameID** and **EntityDescriptor** present in the SP `metadata.xml`.
 URL:
+
 - **ACS**:
+
 ```xml
 https://vtexid.vtex.com.br/api/vtexid/pub/saml/{accountName}/idps/{accountName}-saml/sso
 ```
+
 - **NameID**:
+
 ```xml
 urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress 
 ```
+
 - **EntityDescriptor**:
+
 ```xml
 https://identity-broker.vtex.com/{accountName}/idps/{accountName}-saml
 ```
@@ -105,6 +117,7 @@ In the table below you can learn more about the information you need to provide 
 | `Redirect URL`         | You can choose to redirect users to one of two URLs: `https://{accountName}.myvtex.com/` or `https://{accountName}.myvtex.com/admin`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `Allowed Email Hosts`  | List of hosts (the portion after the `@` symbol in an email address) allowed for authentication. When a SAML Authentication Assertion is received by our platform, the email provided by the user is checked against the list of **Allowed Email Hosts**. Only emails with hosts listed here are allowed.                                                                                                                                                                                                                                                                                                                                                                          |
 | `Metadata`             | XML file that must be uploaded to the VTEX platform. It must describe your identity provider in a way that allows our servers to redirect users to it and securely identify assertions made by it. It usually contains information like the SSO and Logout URLs as well as the certificate used by the identity provider to sign the assertions. The authentication system your organization is using should be capable of generating this file for you. Learn more about [SAML 2.0 metadata](http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf). This file must also contain the `SSO Service Endpoint`, described above. You can see an example file below. |
+
 #### Example metadata file
 
 ```xml
@@ -140,18 +153,16 @@ In the table below you can learn more about the information you need to provide 
 ### Setup
 
 Once you have [setup your identity provider](#identity-provider-configuration) and have all the [required information](#required-information), follow these steps to set up SAML login:
+
 1. Go to the **Admin panel** > **Account settings** > **Authentication**.
 2. Click the **Admin** tab.
 
-
-
-![Admin panel authentication page](https://files.readme.io/e41cdf1-1.PNG)
+![Admin panel authentication page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/e41cdf1-1_148.PNG)
 3. Click `SET UP` in the **My SAML** section.
 4. Fill in the [required information](#required-information) as described above.
-
-![Custom SAML configuration page](https://files.readme.io/f2044ba-2.PNG)
+    ![Custom SAML configuration page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/f2044ba-2_152.PNG)
 5. Upload your metadata XML according to the information provided in [required information](#required-information).
-![Custom SAML configuration page (metadata upload section).](https://files.readme.io/b61d66f-3.PNG)
+    ![Custom SAML configuration page (metadata upload section).](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/b61d66f-3_154.PNG)
 6. You have the option of setting the **Send AuthRequest** toggle. Turning it on means that the attributes `RelayState` and `SAMLRequest` will be sent on the URL when authenticating on the identity provider.
 7. Click `SAVE`
 
@@ -160,7 +171,6 @@ With this, your SAML configuration is set up.
 ### Edit existing SAML configuration
 
 Once you created your SAML configuration, you may edit it by going through the same steps described above, in [Setup](#setup).
-
 
 ## Certificate renewals
 

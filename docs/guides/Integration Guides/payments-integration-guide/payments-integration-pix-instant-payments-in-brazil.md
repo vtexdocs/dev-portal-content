@@ -5,13 +5,13 @@ hidden: false
 createdAt: "2020-10-27T00:35:36.404Z"
 updatedAt: "2022-02-03T15:19:06.694Z"
 ---
+
 [Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix) is the instant payments ecosystem implementation led by the Central Bank of Brazil (BCB) to enable online money transfers with reduced costs, increased safety and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account, without the need for intermediaries, resulting in lower transaction costs.
 
 Pix will be available for persons and businesses. Both need to have an identifier key registered in some financial entity - banks, fintechs or payment institutions - to proceed with the transaction. According to the [eligibility criteria](https://www.bcb.gov.br/estabilidadefinanceira/participantespix) set forth by the BCB, certain entities will be required to offer this payment method, while others may optionally offer it or not be eligible to participate.
 
 In this step, we’ll explain how to extend your Payment Provider Protocol implementation to allow stores to offer Pix as an additional payment method to their clients.
-![These are some of the benefits of an instant payments ecosystem highlighted by the BCB](https://files.readme.io/bf3c11b-post_BCexplica_pagamentos_instantaneos_ingles_Features.png)
-
+![These are some of the benefits of an instant payments ecosystem highlighted by the BCB](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/bf3c11b-post_BCexplica_pagamentos_instantaneos_ingles_Features_13.png)
 [block:callout]
 {
   "type": "success",

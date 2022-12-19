@@ -5,7 +5,9 @@ hidden: false
 createdAt: "2021-12-06T20:34:13.795Z"
 updatedAt: "2022-11-22T17:07:53.138Z"
 ---
+
 VTEX Catalog architecture is based on five fundamental concepts:
+
 - [Category](https://developers.vtex.com/vtex-rest-api/docs/categories)
 - [Brand](https://developers.vtex.com/vtex-rest-api/docs/brands)
 - [Product](https://developers.vtex.com/vtex-rest-api/docs/products)
@@ -21,6 +23,7 @@ When organized into categories, products can be classified hierarchically. Usual
 VTEX Intelligent Search doesn't have a limit of category levels. Category works as an attribute. On the other hand, running under Classic CMS, we strongly suggest using a maximum of three levels.
 
 For a product to be made available in your store, it must:
+
 - Be part of a brand, a category.
 - Have at least one active SKU.
 
@@ -33,10 +36,12 @@ VTEX Catalog architecture also includes specifications, which are a category’s
 Such specifications are, for example, SKU voltage, size, or color.
 
 An example of a VTEX Catalog architecture blueprint is found below:
-![VTEX Catalog architecture example](https://files.readme.io/2f24d86-EN_1.png)
+![VTEX Catalog architecture example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/2f24d86-EN_1_36.png)
 
 ## Integration flow
+
 Catalog integration must follow a specific workflow. The registers are related to each other, so following the correct order below is crucial:
+
 1. Department and Categories
 2. Specifications Fields
 3. Brand
@@ -44,14 +49,14 @@ Catalog integration must follow a specific workflow. The registers are related t
 5. SKUs
 6. Product/SKU Specifications
 
-
 ## Registering products
+
 VTEX provides three different ways to register products to a catalog:
 
 1. **API Integration:** the collection with all methods can be found at the following link: [Catalog API Overview](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-overview).
 2. **Spreadsheets:** there are two possible ways to import a spreadsheet with your  Catalog information.  They are:
-    a. **Google Drive Import:** import the Catalog from a single Google Drive file. See the [google-import app details](https://github.com/vtex-apps/google-import)
-    b. **Classic Method:** import the Catalog using multiple files (product, SKU, specification, image)
+   a. **Google Drive Import:** import the Catalog from a single Google Drive file. See the [google-import app details](https://github.com/vtex-apps/google-import)
+   b. **Classic Method:** import the Catalog using multiple files (product, SKU, specification, image)
 3. **Manual input:** [Catalog data is loaded manually into VTEX Admin panel](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1ROhz3Y7mfSMmCO1I1GxEL), by filling out each field.
 
 In order to import your products, it is possible that you have to use more than one method, depending on how the data is structured and what types of software are used in your operation.

@@ -7,6 +7,7 @@ metadata:
 createdAt: "2021-04-08T20:21:10.886Z"
 updatedAt: "2021-04-08T22:43:45.769Z"
 ---
+
 [block:callout]
 {
   "type": "warning",
@@ -16,7 +17,7 @@ updatedAt: "2021-04-08T22:43:45.769Z"
 JSON Schema is a tool with rules to validate the structure of JSON data. More information about JSON Schema can be found in the book [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html). A Schema lets users configure the structure of a Data Entity.
 
 This article explains how changes in a Schema affect the Data Entities, which actions are triggered in the background and the amount of inconsistency time until all configurations are completed. So, consider the lifecycle of a Schema below:
-![MD_Schema_Lifecycle](https://files.readme.io/10d37de-MD_Schema_Lifecycle.jpg)
+![MD\_Schema\_Lifecycle](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Master%20Data/master-data-how-it-works/10d37de-MD_Schema_Lifecycle_19.jpg)
 Each phase of the lifecycle will be split into 3 areas: saving data, searching and background process.
 
 ## Master Data without Schemas

@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-09-11T16:46:12.406Z"
 updatedAt: "2020-10-30T20:44:33.600Z"
 ---
+
 # What is the VTEX Search Protocol
 
 A search engine is a crucial part of e-commerce. It can drive more sales if the search results are good and it can worsen the user experience if they are bad.
@@ -19,12 +20,12 @@ Search protocol benefits both developers and VTEX stores!
 
 The **VTEX Search Protocol** is a set of definitions and GraphQL schemas that allows VTEX IO applications to serve **e-commerce search results** that can be used by VTEX Store Framework.
 
-![](https://files.readme.io/b4ac10c-search-protocol.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/search-integration-guide/b4ac10c-search-protocol_22.png)
 Creating a **search-resolver** service app on VTEX IO, which implements VTEX Search Protocol, allows any VTEX Account using VTEX IO to **install such an application** and, instantly, **change the store's provider for search results.** This is really useful as no frontend modification is required. It's also possible to distribute the search provider on [VTEX App Store](https://apps.vtex.com/) to make the installation process even simpler.
 
 ### Search Schema
 
-The **GraphQL schema** for VTEX Search Protocol defines the set of **queries** necessary for Store Framework to retrieve search information. This also includes the appropriate GraphQL types that any search resolver app should respond to. 
+The **GraphQL schema** for VTEX Search Protocol defines the set of **queries** necessary for Store Framework to retrieve search information. This also includes the appropriate GraphQL types that any search resolver app should respond to.
 
 You can check this schema on the **vtex.search-graphql** app [here](https://github.com/vtex-apps/search-graphql). The schema definition is on `graphql/schema.graphql` but there's also a reference on the repository's `README.md`.
 

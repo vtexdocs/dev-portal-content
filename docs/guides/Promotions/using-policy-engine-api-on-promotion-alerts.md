@@ -13,7 +13,7 @@ This guide will describe all the steps to [create](#creating-a-promotion-alert),
 
 To create a new promotion alert, you should use the [Create Policy](https://developers.vtex.com/vtex-rest-api/reference/policy#policy_createorupdate) endpoint. Let us take a scenario: you want to be alert on Slack if products from the brand *Easy Cosmetics* are sold with a discount greater than 40%. To do so, you should create conditions to check unusual prices or promotions.
 
-### Setting up the `actions` 
+### Setting up the `actions`
 
 First, you should define the alert action. This array will define what action it should take when encountering products with the wrong discount or promotion. The alert can have multiple steps. See the code below as an example.
 [block:code]
@@ -26,7 +26,9 @@ First, you should define the alert action. This array will define what action it
   ]
 }
 [/block]
+
 #### The `id` parameter
+
 Each object inside it contains an `id` that establishes what the warning will be. Check the table below for its possible values.
 
 | `id` possible values   | Definition                                      |
@@ -35,7 +37,7 @@ Each object inside it contains an `id` that establishes what the warning will be
 | `SendEmail`            | It sends an email.                              |
 | `DeactivatePromotions` | It deactivates the promotions.                  |
 
-In the example case, you should define `id` as `SendSlackMessage`. 
+In the example case, you should define `id` as `SendSlackMessage`.
 
 #### Other parameters
 
@@ -55,7 +57,7 @@ For sending emails
 }
 [/block]
 
-![](https://files.readme.io/a51cf46-Captura_de_Tela_2021-05-07_s_15.26.45.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Promotions/a51cf46-Captura_de_Tela_2021-05-07_s_15.26.45_58.png)
 For deactivating the promotions
 [block:code]
 {
@@ -69,9 +71,9 @@ For deactivating the promotions
 [/block]
 After configuring the `actions`, you should fill the `condition` object with specific information to include the promotion alert context.
 
-### Creating the `conditions` 
+### Creating the `conditions`
 
-Every alert will be described by an object that has a `condition` parameter. This will teach the VTEX platform how to know if the action should be executed or not. Conditions usually check a parameter described by the `key` parameter against the` values` by means of the `operation`. 
+Every alert will be described by an object that has a `condition` parameter. This will teach the VTEX platform how to know if the action should be executed or not. Conditions usually check a parameter described by the `key` parameter against the`values` by means of the `operation`.
 
 The `condition` object contains a `conditions` array, a `key` string, a `values` array of strings, and an `operation` string. The `condition` parameter allows recursiveness up to a limit of ten object levels inside it.
 

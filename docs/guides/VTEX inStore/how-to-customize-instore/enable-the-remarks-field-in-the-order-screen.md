@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2021-08-11T19:48:00.546Z"
 updatedAt: "2022-02-24T20:35:52.440Z"
 ---
+
 The inStore app allows the use of an **Observation** field, where it's possible to store additional information regarding the order.
 
 The data entered in this field is sent via API to the Order Management System. They populate the `openTextField` field, which can be retrieved later either in the Admin or through an [Orders API](https://developers.vtex.com/vtex-rest-api/docs/orders-api) call.
@@ -12,11 +13,7 @@ The data entered in this field is sent via API to the Order Management System. T
 A common example of using the **Observation** field is the case where the store wants to receive an identification number from the sales associate who made the sale, such as the **[sales associate code](https://developers.vtex.com/vtex-rest-api/docs/sales-associate-code)**. In this case, the sales associate has to enter this number in the **Observation** field whenever closing an order.
 
 The **Observation** field is enabled by editing the `checkout-instore-custom.js` file. Check out the [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore) guide for further information on how to access this file.
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
+
 ## Edit the `checkout-instore-custom.js` file
 
 To enable the **Observation** field, you must set the following properties inside the `window.LOCALE_MESSAGES` object in the `checkout-instore-custom.js` file. In the **UI display** column below, you can see where the information you set is rendered in the inStore UI. You can click on each image to enlarge it.
@@ -35,9 +32,9 @@ To enable the **Observation** field, you must set the following properties insid
     "1-1": "string",
     "2-1": "string",
     "h-0": "Name",
-    "0-3": "![cartObservation](https://files.readme.io/849a340-cartObservation.png)",
-    "1-3": "![cartObservationTitle](https://files.readme.io/1256b3a-cartObservationTitle_1.png)",
-    "2-3": "![observationNote](https://files.readme.io/019f89b-observationNote_1.png)",
+    "0-3": "![cartObservation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/849a340-cartObservation_38.png)",
+    "1-3": "![cartObservationTitle](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/1256b3a-cartObservationTitle_1_39.png)",
+    "2-3": "![observationNote](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/019f89b-observationNote_1_40.png)",
     "h-3": "UI display"
   },
   "cols": 4,

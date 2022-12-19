@@ -5,49 +5,36 @@ hidden: false
 createdAt: "2022-08-30T21:36:16.898Z"
 updatedAt: "2022-10-21T00:10:50.805Z"
 ---
+
 This article explains how to use the VTEX Admin Order Management filters via the [List orders](https://developers.vtex.com/vtex-rest-api/reference/listorders) API:
 
 **GET** - `https://{accountName}.{environment}.com.br/api/oms/pvt/orders`
-
-<br>
 
 To apply VTEX Admin filters via API, follow the steps below:
 
 1. Access your VTEX Admin in **Orders > Order Management > All Orders**.
 2. Click on the filters icon.
 
-<br>
-
-![filter_icon_step_2](https://files.readme.io/df54dbf-filter_icon_step_2.jpg)
-<br>
+![filter\_icon\_step\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Orders/actions-orders/df54dbf-filter_icon_step_2_21.jpg)
 
 3. Select the filter you want to apply and click `Confirm`. You can combine multiple filters.
 
-<br>
+![filter\_type\_step\_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Orders/actions-orders/0a13fb3-filter_type_step_3_28.jpg)
 
-![filter_type_step_3](https://files.readme.io/0a13fb3-filter_type_step_3.jpg)
-
-<br>
-
-4. After selecting the filters, copy the URL generated in your browser. 
+4. After selecting the filters, copy the URL generated in your browser.
 5. Using an [URL decoder](http://meyerweb.com/eric/tools/dencoder/) tool, decode the URL so that It will look like the following example:
 
-<br>
-
-![decode_print](https://files.readme.io/f9abe45-decode_print.jpg)
-
-<br>
+![decode\_print](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Orders/actions-orders/f9abe45-decode_print_37.jpg)
 
 6. Copy only the URL extension after the question mark `?`.
 
-    > For example: `orderBy=creationDate,desc&page=1&f_creationDate=creationDate:[2022-10-01T03:00:00.000Z TO 2022-11-01T02:59:59.999Z]&f_status=$$ALL_VALUES$$`
+   > For example: `orderBy=creationDate,desc&page=1&f_creationDate=creationDate:[2022-10-01T03:00:00.000Z TO 2022-11-01T02:59:59.999Z]&f_status=$$ALL_VALUES$$`
 
-7. In your browser, insert the API [List orders](https://developers.vtex.com/vtex-rest-api/reference/listorders) path (`https://{accountName}.{environment}.com.br/api/oms/pvt/orders`) followed by the URL excerpt from last step. 
-    > For example: `https://{accountName}.{environment}.com.br/api/oms/pvt/orders?orderBy=creationDate,desc&page=1&f_creationDate=creationDate:[2022-10-01T03:00:00.000Z TO 2022-11-01T02:59:59.999Z]&f_status=$$ALL_VALUES$$`
+7. In your browser, insert the API [List orders](https://developers.vtex.com/vtex-rest-api/reference/listorders) path (`https://{accountName}.{environment}.com.br/api/oms/pvt/orders`) followed by the URL excerpt from last step.
+   > For example: `https://{accountName}.{environment}.com.br/api/oms/pvt/orders?orderBy=creationDate,desc&page=1&f_creationDate=creationDate:[2022-10-01T03:00:00.000Z TO 2022-11-01T02:59:59.999Z]&f_status=$$ALL_VALUES$$`
 
 8. Click on `Enter`.
 
-<br>
 [block:callout]
 {
   "type": "info",

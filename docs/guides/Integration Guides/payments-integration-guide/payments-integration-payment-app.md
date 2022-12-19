@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2021-08-05T18:04:05.139Z"
 updatedAt: "2022-03-09T16:31:39.613Z"
 ---
+
 [block:callout]
 {
   "type": "info",
@@ -23,7 +24,7 @@ The main reasons why someone would choose to build a Payment App over a standard
 - Measure conversions by analytics tools for customized flows.
 
 As you can see below, the Payment App is displayed as a modal window when the customer clicks on the **Buy now** button:
-![](https://files.readme.io/c95f758-kX6y8QN55B.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/c95f758-kX6y8QN55B_26.gif)
 This tutorial will guide you through the steps required to develop, test, and set up a Payment App in your store. The sections of this tutorial are:
 
 - [Understanding the Payment App flow](#understanding-the-payment-app-flow): An explanation of what a Payment App is, its behavior, and usage.
@@ -33,21 +34,21 @@ This tutorial will guide you through the steps required to develop, test, and se
 ## Understanding the Payment App flow
 
 Our Payment App model applies to a large variety of payment methods thanks to its interaction with the Checkout API, as shown in the following sequence diagram:
-![Payment App flow](https://files.readme.io/7d5c6a2-Payment_App_flow.drawio.png)
+![Payment App flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/7d5c6a2-Payment_App_flow.drawio_36.png)
 Below is described the flow in the same order of the sequence diagram (steps from 1 to 4 are the same for every payment flow; steps unique to the Payment App flow are from 5 onwards):
 
 1. Checkout UI sends a Start Transaction request to the Checkout API.
 2. Checkout API sends a [Start Transaction request](https://developers.vtex.com/vtex-rest-api/reference/1createanewtransaction) to the Gateway API.
-    - VTEX Payment Gateway creates the new transaction and generates a unique `transactionId`, which is returned to the Checkout, and then to the Checkout UI.
+   - VTEX Payment Gateway creates the new transaction and generates a unique `transactionId`, which is returned to the Checkout, and then to the Checkout UI.
 3. Checkout UI sends a [Send Payments request](https://developers.vtex.com/vtex-rest-api/reference/2sendpaymentspublic) directly to the Gateway API.
-    - The Gateway will create, for each payment, a payment entity inside the transaction entity that was created in the previous request. Note that, for multiple payments, they are all sent in this same request. That is, one transaction can have multiple payments. For each payment entity, a `paymentId` is generated and all of them are returned to the Checkout UI. This step sends the actual payment information (i.e.: credit card data).
+   - The Gateway will create, for each payment, a payment entity inside the transaction entity that was created in the previous request. Note that, for multiple payments, they are all sent in this same request. That is, one transaction can have multiple payments. For each payment entity, a `paymentId` is generated and all of them are returned to the Checkout UI. This step sends the actual payment information (i.e.: credit card data).
 4. Checkout UI sends an Authorization request to the Checkout API.
 5. Checkout API encapsulates two requests to the Gateway API.
-    - The first is the [Send Additional Data request](https://developers.vtex.com/vtex-rest-api/reference/3sendadditionaldata) that sends to the Gateway API information about the order, such as the client profile data, the shipping address, and the cart information (cart items). Such information is securely stored in the Gateway database, and this information is used by anti-fraud providers, and also used by a few payment providers to Authorize the transaction.
-    - The second is the actual [Authorization request](https://developers.vtex.com/vtex-rest-api/reference/4doauthorization) that the Checkout API performs to the Gateway API. This request will trigger the Payment Authorization workflow inside the Gateway API.
-      1. The Gateway API calls the [Create Payment request](https://developers.vtex.com/vtex-developer-docs/reference/createpayment) for the correct connector depending on the Payment Conditions that was set up by the store administrator.
-      2. At this point, the connector handles the request and performs its logic depending on the Payment method. Using Pix as an example, the connector will request the Payment Provider to create a payment in their API and will receive the necessary information to build the Pix QR Code.
-      3. The connector responds the Create Payment request to the Gateway. The body of the response has a `paymentAppData` field, which contains two properties. The first is `appName` for the name of the Payment App that will be used in the transaction. The second is `payload` containing the payload to complete the transaction (i.e.: the information to build the Pix QR code). Then, the Gateway responds to the Checkout API and it responds back to the Checkout UI which instantiates the Payment App with the corresponding payload that was generated in the connector.
+   - The first is the [Send Additional Data request](https://developers.vtex.com/vtex-rest-api/reference/3sendadditionaldata) that sends to the Gateway API information about the order, such as the client profile data, the shipping address, and the cart information (cart items). Such information is securely stored in the Gateway database, and this information is used by anti-fraud providers, and also used by a few payment providers to Authorize the transaction.
+   - The second is the actual [Authorization request](https://developers.vtex.com/vtex-rest-api/reference/4doauthorization) that the Checkout API performs to the Gateway API. This request will trigger the Payment Authorization workflow inside the Gateway API.
+     1. The Gateway API calls the [Create Payment request](https://developers.vtex.com/vtex-developer-docs/reference/createpayment) for the correct connector depending on the Payment Conditions that was set up by the store administrator.
+     2. At this point, the connector handles the request and performs its logic depending on the Payment method. Using Pix as an example, the connector will request the Payment Provider to create a payment in their API and will receive the necessary information to build the Pix QR Code.
+     3. The connector responds the Create Payment request to the Gateway. The body of the response has a `paymentAppData` field, which contains two properties. The first is `appName` for the name of the Payment App that will be used in the transaction. The second is `payload` containing the payload to complete the transaction (i.e.: the information to build the Pix QR code). Then, the Gateway responds to the Checkout API and it responds back to the Checkout UI which instantiates the Payment App with the corresponding payload that was generated in the connector.
 6. The Checkout UI instantiates the Payment App defined by the `paymentAppData.appName` and adds to the app object the `appPayload` property and fills this property with the content of `paymentAppData.payload`. Then the Payment App can perform its logic here. For instance, it could be an Authorization App (3DS v2) or a QR Code (Pix), or it could simulate a redirection inside the Payment App frame. At this point, the transaction is in Authorizing state (more information about transaction status can be found in the [Transaction flow in Payments](https://help.vtex.com/en/tutorial/transaction-flow-in-payments--Er2oWmqPIWWyeIy4IoEoQ) article).
 7. When the user finishes the interaction, the Payment App closes and it will trigger the transaction Validation in the Checkout UI, which starts the validation where the Checkout UI gets the transaction status from the Checkout API (which will [request the transaction status](https://developers.vtex.com/vtex-rest-api/reference/transactiondetails) from the Gateway API). If the transaction status is **Authorized** or **Undefined** then the Checkout UI displays the Order Placed screen. Else, the Checkout UI shows a warning and returns to the state where the user can choose the payment method.
 
@@ -67,6 +68,7 @@ To proceed with the following steps, you will be using the [VTEX IO](https://dev
   "body": "If you are implementing a new payment method in your Payment App, please contact the [VTEX Support Team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support) to add it to the VTEX backend."
 }
 [/block]
+
 ### Step 1: Setting up the development environment
 
 1. Using your computer system terminal, [install the VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) (Command Line Interface).
@@ -84,10 +86,13 @@ In addition to these modifications, you need to add the business logic of your p
   "body": "Before you start editing the Payment App, it is necessary to have Git installed on your computer. Click [here](https://git-scm.com/downloads) to learn more."
 }
 [/block]
+
 1. Using your terminal, clone the repository that contains a Payment App model to your local files by running:
-```
+
+```shell
 git clone https://github.com/vtex-apps/example-payment-authorization-app.git
 ```
+
 2. After cloning the repository, use a code editor of your choice to open the project locally.
 3. Open the `manifest.json` file and update its content according to your scenario. If you need more information about the required fields, access our [Manifest documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest). The value set in the `name` field will be the unique identifier for this app and must be the exact name that corresponds to the response of your connector (`appname` property of `paymentAppData` field in the response body of the Create Payment endpoint). The `billingOptions` field is also required and set with the property `type` as `free`. More information about the `billingOptions` field can be found in the [Billing Options article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options).
 4. After finishing the update, open the `pages/pages.json` file and replace `example-payment-auth-app` with the app `name` set in `manifest.json`. The `pages.json` file is responsible for creating the routes for your application. So it is necessary to make this configuration for the VTEX system to find and display the app at checkout. Also, the `"component"` field having the `"index"` value indicates that the `index.js` file in the `react` folder is the file with the component that will be instantiated at checkout.
@@ -98,7 +103,8 @@ git clone https://github.com/vtex-apps/example-payment-authorization-app.git
 }
 [/block]
 5. Using your terminal, go to the app directory and run the following command:
-```
+
+```shell
 vtex link
 ```
 
@@ -113,6 +119,7 @@ A Payment App will appear on the checkout screen by following the steps below, a
   "body": "Proceed with the following steps only when you want to test a Payment App flow; otherwise, skip to [Step 4: Deploying the Payment app](#step-4-deploying-your-payment-app)."
 }
 [/block]
+
 1. Make sure you have your connector installed in your account configured with the Payment App and the payment method you want to test in your Payment App. The connector must contain the field `paymentAppData` in the response body of the [Create Payment endpoint](https://developers.vtex.com/vtex-developer-docs/reference/createpayment) with the right properties (`appName` and `payload`). If you do not have the connector installed yet, contact the [VTEX Support Team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support) to help you with the installation process. More information about how the endpoints should be implemented can be found in the article [Implementing a Payment Provider](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-implementing-a-payment-provider).
 2. Select the payment condition associated with your connector in the checkout and finish the purchase to test the flow.
 
@@ -124,7 +131,7 @@ Once you finish the changes, follow our documentation on [Making your new app ve
 
 If you followed all the previous steps, it means that you successfully created a Payment App and are ready to take advantage of the benefits of having an additional verification step to the checkout of your store.
 
-This section discusses the following topics to help you make the best use of the Payment App: 
+This section discusses the following topics to help you make the best use of the Payment App:
 
 - Handling the order payload.
 - Understanding the response to the Checkout UI.
@@ -133,14 +140,16 @@ This section discusses the following topics to help you make the best use of the
 ### Handling the order payload
 
 The `appPayload` is what the Payment App receives as props, and it consists of a serialized JSON of the order payload. This variable is not declared in the Payment App class, but it is added to its `props` after the Payment App is instantiated in the Checkout UI. You can access this information with the following code:
-```
+
+```js
 const { appPayload } = this.props // This appPayload is a serialized JSON (as string).
 ```
 
 The expected content is a JSON object consisting of the Payment App’s data needed for the Payment App to allow or deny an order placement. Thus, the `appPayload` fields will be defined by the developer of the associated connector.
 
 To exemplify how the payload can be used, take the following example:
-```
+
+```json
 {
     "timeToCancel": 300,
     "transactionApproveLink": "https://..."
@@ -154,7 +163,8 @@ In this example, there are two fields for illustration. The first field (`"timeT
 When the Payment App finishes its operation, it has to inform the Checkout UI that it should be closed and then check if the transaction is approved or not. If the transaction is `approved` or `undefined`, the Checkout UI will redirect the user to the Order Placed page; otherwise, it will show a warning pop-up and then take the user back to the payment options.
 
 To perform these steps, the Checkout UI listens to the `transactionValidation.vtex` event that is triggered by the Payment App using the [browser’s native event handling engine](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) during the validation step. When this event is triggered, the Checkout UI will close the Payment App and check the transaction status from the Gateway. The following [example method](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.js#L28) can be used by the Payment App to trigger the event:
-```
+
+```js
 respondTransaction = () => {
     $(window).trigger('transactionValidation.vtex')
 }
@@ -163,7 +173,8 @@ respondTransaction = () => {
 ### Injecting external scripts
 
 An external script injection allows your Payment App to have additional content and behavior. To run external scripts on your Payment app, you need to inject the following script on the `head` of the checkout `html`. To do so, you have to do a DOM injection as follows:
-```
+
+```js
 const head = document.getElementsByTagName('head')[0]
 
 const js = document.createElement('script')
@@ -184,6 +195,7 @@ There is an example of script injection [here](https://github.com/vtex-apps/exam
   "body": "Keep in mind that if the external `js` script handles DOM manipulation, you should use [React's Ref](https://reactjs.org/docs/refs-and-the-dom.html) to create a `div` container and hand it over to the library. You can find an [example here](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.js#L12)."
 }
 [/block]
+
 ## Payment App Scenarios
 
 In the following sections, you will find some scenarios in which you can use a Payment App.
@@ -201,22 +213,21 @@ The 3D Secure 2 (3DS2) is an evolution of the 3D Secure 1 (3DS1). It introduces 
 #### 3DS2 flow
 
 To apply the 3DS2 to the checkout, the acquirer that processes the website payments needs to create a Payment App that will handle challenges for each [issuing Bank](https://help.vtex.com/en/tutorial/what-is-the-issuing-bank--7aVIVGwgtU4SWuqowSQksg) that will use the Strong Authentication through the 3DS2.
- 
-When the customer adds the credit card information and clicks on the Checkout button, the acquirer will call the issuing bank through the 3DS2 flow. 
- 
+
+When the customer adds the credit card information and clicks on the Checkout button, the acquirer will call the issuing bank through the 3DS2 flow.
+
 The card issuer will, in turn, analyze the fraud context of that purchase (the score, probability), also called [Risk-based Authentication](https://3dsecure2.com/frictionless-flow/#what-is-risk-based-authentication). The score will be a result of a series of risk-based elements which can include the value of the purchase, transactional history, device information, among others. If this analysis returns as a score for high fraud risk, the provider can choose to call the 3DS2 challenge asking the customer to proceed with the Strong Authentication method (i.e.: approve the payment in the bank app). If it falls in a score for low fraud risk, the provider will not call the challenge.
- 
+
 If the acquirer decides that it must perform the Strong Authentication for any payment, it must return to VTEX, in the response body of the [Create Payment](ref:createpayment) route, his `status` as `undefined` and his Payment App information in the `paymentAppData` field.
- 
+
 The `status` returned as `undefined` indicates to our Gateway that the payment has not yet been authorized or denied. There may be several reasons for this, with Strong Authentication being one of them. What will make the Payment App, which runs 3DS2, be called is the `paymentAppData` field in the response.
- 
+
 The Gateway will save this app data on the payment and tell the Checkout that payment has not yet been authorized or denied. It will make the Checkout UI run the Payment App specified in the `paymentAppData` field.
- 
+
 Once the Payment App opens, the Strong Authentication warning will be displayed to the customer within the Payment App on the checkout screen. It will require the customer to approve the transaction from his account on the issuing Bank (i.e.: in the bank app).
- 
+
 After finishing the interaction with the Payment App, the app closes and redirects the customer depending on the `status` of the transaction. If it is `approved` or still is `undefined`, it will go to the order placed screen. If it is `denied` or `canceled`, the Checkout UI shows a warning and returns to the state where the user can choose the payment method.
- 
+
 The following image shows how the 3DS2 is displayed to customers:
 
-
-![Payment App 3DS2](https://files.readme.io/81d7880-Payment_App_3DS2.png)
+![Payment App 3DS2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/81d7880-Payment_App_3DS2_222.png)

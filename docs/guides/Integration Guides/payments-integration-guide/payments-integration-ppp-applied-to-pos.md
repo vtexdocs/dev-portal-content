@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-09-28T22:39:13.979Z"
 updatedAt: "2022-09-29T17:49:33.957Z"
 ---
+
 VTEX has multiple solutions to deliver a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience to shoppers, being able to handle orders from both the ecommerce and physical stores. To deal with the physical store experience, VTEX offers the [inStore app](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), where sellers can serve customers and complete the entire sales process. When finishing a purchase, the customer will have the option to make the payment with a physical card in a payment terminal, also known as a Point of Sale (POS).
 
 For payment partners to integrate their solutions for payments using a POS, there are a series of requirements that must be taken into account. You can check a summary of the requirements in the list below:
@@ -84,7 +85,8 @@ There are some steps needed for the connector to be able to process payments in 
 ## Scenery and flow
 
 Here we describe the payment flow in the context of a physical store using a POS. The following sequence diagram represents all the steps in this flow, where the green bars are the steps that the payment provider is responsible for:
-![Fluxo PPP com POS atualizado](https://files.readme.io/f9b9b81-Fluxo_PPP_com_POS_atualizado.png)
+![Fluxo PPP com POS atualizado](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/f9b9b81-Fluxo_PPP_com_POS_atualizado_87.png)
+
 1. The flow starts with a buyer finishing a purchase in a VTEX physical store created on [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc).
 2. The inStore makes an [Authorization](https://developers.vtex.com/vtex-rest-api/reference/4doauthorization) request to the VTEX Payment Gateway.
 3. Our Gateway makes a [Create Payment](https://developers.vtex.com/vtex-rest-api/reference/createpayment) request to the connector defined in the store settings for the specific payment method used in the purchase (i.e.: `Venda Direta Credito`).
@@ -93,17 +95,17 @@ Here we describe the payment flow in the context of a physical store using a POS
 6. The seller interacts with the app to identify the POS to be used in the payment process. Then the app sends the serial number of the POS to the connector and closes.
 7. The connector requests to update the order in the payment processor with the serial number of the POS.
 8. After the app closes, a callback is triggered in the inStore to the Gateway, initiating the sequence of requests to make the payment in the POS.
-    1. The Gateway makes a Create Payment request to the connector with the same payment ID used in step 3. This means that the Gateway is waiting for an update on the payment status.
-    2. The connector calls the payment processor to start the payment in the POS.
-    3. The payment processor calls the POS to make the payment with the card. Then, the payment processor returns to the connector telling that the payment in the POS has started.
-    4. Since it takes some time for the payment to be concluded in the POS, the connector returns to the Gateway once more with an `undefined` status and information to open another Payment App called `vtex.challenge-wait-for-confirmation`.
-    5. The Gateway returns to the inStore telling it to open the **Wait for confirmation** Payment App.
+   1. The Gateway makes a Create Payment request to the connector with the same payment ID used in step 3. This means that the Gateway is waiting for an update on the payment status.
+   2. The connector calls the payment processor to start the payment in the POS.
+   3. The payment processor calls the POS to make the payment with the card. Then, the payment processor returns to the connector telling that the payment in the POS has started.
+   4. Since it takes some time for the payment to be concluded in the POS, the connector returns to the Gateway once more with an `undefined` status and information to open another Payment App called `vtex.challenge-wait-for-confirmation`.
+   5. The Gateway returns to the inStore telling it to open the **Wait for confirmation** Payment App.
 9. The inStore opens the **Wait for confirmation** app, so the user visually understands that the inStore is waiting for the POS to finish the payment.
-    1. The **Wait for confirmation** app asks the Gateway for the updated payment status.
-    2. The Gateway uses the Create Payment request to the connector for the updated payment status.
-    3. While the POS does not finish the payment and responds, the Payment Connector keeps responding that the payment status is `undefined`.
-    4. The Gateway responds to the **Wait for confirmation** app with the `undefined` status.
-    5. The **Wait for confirmation** app enters in a loop, repeating from step 9.a, calling the Gateway again for the updated status until the POS finishes the payment and the status change or there is a timeout. The time for the timeout is defined in the `secondsWaiting` parameter from the payload. If there is a timeout, the payment is canceled and the buyer has to finish the order again. More information about the **Wait for confirmation** app can be found in the [Wait for confirmation](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-ppp-applied-to-pos#wait-for-confirmation) section.
+   1. The **Wait for confirmation** app asks the Gateway for the updated payment status.
+   2. The Gateway uses the Create Payment request to the connector for the updated payment status.
+   3. While the POS does not finish the payment and responds, the Payment Connector keeps responding that the payment status is `undefined`.
+   4. The Gateway responds to the **Wait for confirmation** app with the `undefined` status.
+   5. The **Wait for confirmation** app enters in a loop, repeating from step 9.a, calling the Gateway again for the updated status until the POS finishes the payment and the status change or there is a timeout. The time for the timeout is defined in the `secondsWaiting` parameter from the payload. If there is a timeout, the payment is canceled and the buyer has to finish the order again. More information about the **Wait for confirmation** app can be found in the [Wait for confirmation](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-ppp-applied-to-pos#wait-for-confirmation) section.
 10. After step 8.c, many of the steps occurred in the background. But from that point, the buyer is allowed to insert the card and interact with the POS to perform the payment.
 11. The POS responds to the payment processor from the request in step 8.c.
 12. The payment processor processes the transaction and uses a webhook to call the connector.
@@ -112,7 +114,7 @@ Here we describe the payment flow in the context of a physical store using a POS
 15. The **Wait for confirmation** app receives the updated payment status.
 16. The **Wait for confirmation** app responds to the inStore that it can proceed, so the app is closed.
 17. From a callback, the inStore calls the Gateway to know the status of the payment.
-18. The Gateway responds to the inStore with the last status. If the payment status is ``denied`` or ``canceled``, the inStore shows an error and the buyer can try to finish the purchase again from the checkout. Else, the purchase is concluded and the order is placed in the system.
+18. The Gateway responds to the inStore with the last status. If the payment status is `denied` or `canceled`, the inStore shows an error and the buyer can try to finish the purchase again from the checkout. Else, the purchase is concluded and the order is placed in the system.
 
 ### Details on the Create Payment route
 
@@ -135,7 +137,7 @@ The request body of the [Create Payment](https://developers.vtex.com/vtex-rest-a
 ```
 
 - `paymentMethod`: for payments in physical stores, instead of using values like `"Visa"` and `"Mastercard"`, this field will be filled with the values `"Venda Direta Debito"` or `"Venda Direta Credito"`. If the connector works both for ecommerce and physical payments, it can decide which of them is being used by checking this field.
-- `callbackUrl`: this field is needed since physical payments follow an asynchronous flow. The Gateway uses this field to tell the provider which URL has to be used to notify VTEX about updates in the payment status. First, the payment is created with an ``undefined`` status. Then, when the status changes to `approved` or `denied`, the provider has to send a request to the URL from the `callbackUrl` field with the updated status. You can find more details about this flow in the [Additional interactions and paymentAppData](#additional-interactions-and-paymentappdata) section and the [Payment App](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-app#understanding-the-payment-app-flow) article.
+- `callbackUrl`: this field is needed since physical payments follow an asynchronous flow. The Gateway uses this field to tell the provider which URL has to be used to notify VTEX about updates in the payment status. First, the payment is created with an `undefined` status. Then, when the status changes to `approved` or `denied`, the provider has to send a request to the URL from the `callbackUrl` field with the updated status. You can find more details about this flow in the [Additional interactions and paymentAppData](#additional-interactions-and-paymentappdata) section and the [Payment App](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-app#understanding-the-payment-app-flow) article.
 
 ### Asynchronous flow and delayToCancel
 
@@ -154,9 +156,10 @@ We have some apps that are ready to use for additional interaction with payments
   "body": "Besides the provided apps, partners can also develop apps for their specific needs. You can check more details in the [Payment App](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-app) article."
 }
 [/block]
+
 #### Fulfill form
 
-This is an app that renders a form to the user. The form fields are defined by the `jsonSchema` parameter and the URL to where the form is submitted is defined by the ``submitUrl`` parameter. This is a generic app for integration tests.
+This is an app that renders a form to the user. The form fields are defined by the `jsonSchema` parameter and the URL to where the form is submitted is defined by the `submitUrl` parameter. This is a generic app for integration tests.
 
 Fields used in this app:
 
@@ -193,7 +196,9 @@ Payload example:
         }"
 }
 ```
-![Print of the Fullfil form app using the example payload above](https://files.readme.io/2970e93-image2.png)
+
+![Print of the Fullfil form app using the example payload above](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/2970e93-image2_196.png)
+
 #### Pagar.me Payment App
 
 This app uses the device camera to read the barcode of the POS that will be used for the purchase. After reading the barcode, the information is sent automatically to the URL defined by the `submitUrl` parameter. The payload sent by the app to the URL uses the following format: `{"serialNumber": "12345"}`.
@@ -216,10 +221,12 @@ Payload example:
         }"
 }
 ```
-![Print of the Pagarme Payment App using the camera to scan the bar code of the POS](https://files.readme.io/c98303e-image3.png)
+
+![Print of the Pagarme Payment App using the camera to scan the bar code of the POS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/c98303e-image3_219.png)
+
 #### Wait for confirmation
 
-This app is returned by the connector after the payment has started on the POS, so that the inStore polls for the payment status. The waiting time for a status change in the payment is defined by the ``secondsWaiting`` parameter, which comes from the connector in the payload.
+This app is returned by the connector after the payment has started on the POS, so that the inStore polls for the payment status. The waiting time for a status change in the payment is defined by the `secondsWaiting` parameter, which comes from the connector in the payload.
 
 Fields used in this app:
 
@@ -236,6 +243,7 @@ Payload example:
     "payload": "{ \"secondsWaiting\": 600 }"
 }
 ```
+
 ### Interaction with the POS
 
 After the user interacts with the app that identifies the POS, the payment processor is responsible for the communication with the POS to read the physical card of the buyer. When communicating with the POS, the payment process is done without VTEX’s intervention. The payment processor is also responsible to deal with retries caused by password errors, insufficient credit, and other reasons.
@@ -247,7 +255,6 @@ The callback flow starts with the payment connector calling the URL in the `call
 - `cardBrand`: Brand of the card.
 - `firstDigits`: First six digits of the card number.
 - `lastDigits`: Last four digits of the card number.
-
 
 ## Testing your connector
 

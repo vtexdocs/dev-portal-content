@@ -19,17 +19,18 @@ To allow each anti-fraud provider and merchant to have the autonomy to decide wh
 [/block]
 The procedures below demonstrate how to configure anti-fraud providers via PPP.
 
-##Configuring cardholder document field - Antifraud Provider (PPP)
+## Configuring cardholder document field - Antifraud Provider (PPP)
 
 To configure the cardholder document field, follow the steps below:
 
 1. In the anti-fraud provider manifest, add the `cardholderDocument` field with one of the following values:
       1. `"required"`: a cardholder document is required for the purpose of fraud analysis. The field must be displayed at checkout and on [my cards](https://help.vtex.com/en/tutorial/como-funciona-a-minha-conta--2BQ3GiqhqGJTXsWVuio3Xh#credit-cards).
       2. `"optional"`: a cardholder document can be used to complete the fraud analysis but is not required. The merchant must configure if they want to display the field at checkout and on [my cards](https://help.vtex.com/en/tutorial/como-funciona-a-minha-conta--2BQ3GiqhqGJTXsWVuio3Xh#credit-cards). Learn more at [Cardholder Document Configuration](https://help.vtex.com/en/tutorial/antifraud-provider--4aZtmdpgFikcsQomWyqAOq#cardholder-document-configuration).
-      3. `"unused"`: a cardholder document is not required to perform fraud analysis. The field will not be displayed at checkout nor on [my cards](https://help.vtex.com/en/tutorial/como-funciona-a-minha-conta--2BQ3GiqhqGJTXsWVuio3Xh#credit-cards). 
+      3. `"unused"`: a cardholder document is not required to perform fraud analysis. The field will not be displayed at checkout nor on [my cards](https://help.vtex.com/en/tutorial/como-funciona-a-minha-conta--2BQ3GiqhqGJTXsWVuio3Xh#credit-cards).
 
 Anti-Fraud Provider Manifest example:
-![](https://files.readme.io/e4de0e5-cardholderDocument.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Payments/payments-configuration-guides/e4de0e5-cardholderDocument_32.PNG)
+
 2. Access [VTEX Support](https://help.vtex.com/en/support) to open a ticket, and request that the connector on VTEX be updated.
 [block:callout]
 {

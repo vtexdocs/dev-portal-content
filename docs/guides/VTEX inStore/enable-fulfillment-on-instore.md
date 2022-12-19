@@ -9,7 +9,6 @@ updatedAt: "2022-02-24T20:45:25.026Z"
 
 Follow the instructions below to enable **Fulfillment** on inStore.
 
-
 ## Prerequisites
 
 Before you start the **Fulfillment** setup itself, you must:
@@ -21,9 +20,7 @@ Before you start the **Fulfillment** setup itself, you must:
 
 Make sure you meet all the requirements above before you proceed with the installation.
 
-
 ## Installation
-
 
 ### Step 1 - Enable the **Fulfillment** tab
 
@@ -75,7 +72,9 @@ The first step in the installation process is to enable the **Fulfillment** tab 
   "rows": 11
 }
 [/block]
+
 #### Example code
+
 [block:code]
 {
   "codes": [
@@ -86,6 +85,7 @@ The first step in the installation process is to enable the **Fulfillment** tab 
   ]
 }
 [/block]
+
 ### Step 2 - Install the Picking app
 
 In both the main account (marketplace) and franchise account (seller), you must install the Picking app via CLI. Use the following command:
@@ -100,6 +100,7 @@ vtex install vtex.picking-app@2.x
   "body": "If you need to list the franchise accounts associated with the main account, use the following License Manager API request: `GET https://licensemanager.vtex.com.br/api/license-manager/pvt/accounts/{{accountName}}?childAccounts=true`\n\nThe franchise accounts will be listed in the `childAccounts` object."
 }
 [/block]
+
 ### Step 3 - Install the Invoice Notifier app
 
 Follow the instructions below to install the Invoice Notifier app, which allows you to notify an external endpoint automatically when an order is ready to be invoiced.
@@ -118,7 +119,7 @@ vtex install vtex.invoice-notifier
 
    - **URL to notify**: insert the external endpoint URL that will be notified when an order is ready to be invoiced.
 
-   - **Provide a token that will be passed in the request**: insert a token to be used in the request to the external endpoint. This field is optional. Keep in mind this token must be previously set in the external infrastructure you want to notify, if you opt to use it. 
+   - **Provide a token that will be passed in the request**: insert a token to be used in the request to the external endpoint. This field is optional. Keep in mind this token must be previously set in the external infrastructure you want to notify, if you opt to use it.
 
 5. Click on `Save`.
 [block:callout]
@@ -128,7 +129,9 @@ vtex install vtex.invoice-notifier
   "title": "Testing the invoicing process without an ERP system"
 }
 [/block]
+
 ### Step 4 - Set a **Message Center** template for pick up orders [optional]
+
 [block:callout]
 {
   "type": "info",
@@ -142,15 +145,15 @@ In the main account (marketplace), make sure you configure the **Message Center*
 2. Click on **Templates** to view all existing email templates.
 3. Click on `New template` to create a new email template.
 4. Name your template `Order ready for pickup in store` or `order-ready-for-pickup-in-store`, as illustrated below. It is important to use one of these exact names for the email to be sent automatically when orders are ready to be picked up.
-![](https://files.readme.io/7f1f4f3-order-ready-for-pickup-in-store-template.gif)
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/7f1f4f3-order-ready-for-pickup-in-store-template_145.gif)
 5. Enable the **Enable e-mail sending?** option, as shown above.
 6. Fill in the template fields and write the HTML code for your template. To learn more about how to do this, read [our articles in the Templates category](https://help.vtex.com/en/subcategory/templates--4D5LrWwlHGmOWMomOaaGee). Make sure you use the `{{clientProfileData.email}}` tag in the **To** field, to indicate clients’ respective emails.
 7. Click `Save` when you are done.
 
-
 #### Example template
 
-![](https://files.readme.io/8d215a6-screencapture-vtexinstoredev-myvtex-admin-message-center-2021-11-17-17_54_14.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/8d215a6-screencapture-vtexinstoredev-myvtex-admin-message-center-2021-11-17-17_54_14_153.png)
+
 ### Step 5 - Set the seller’s origin address [optional]
 
 [block:callout]
@@ -174,7 +177,9 @@ Below you can find an example of what the body of this request should look like.
   ]
 }
 [/block]
+
 ### Step 6 - Install the carrier apps [optional]
+
 [block:callout]
 {
   "type": "info",
@@ -193,16 +198,17 @@ If your carrier is integrated to **VTEX Log**, you must also install the Carrier
 ```
 vtex install vtex.carrier-tracking
 ```
+
 [block:callout]
 {
   "type": "info",
   "body": "In case you have previously installed the apps, make sure they are updated by running the `vtex update` command on the CLI."
 }
 [/block]
+
 ### Step 7 - Configure a printer
 
 Follow the steps detailed in the [Set up the order summary printing](https://developers.vtex.com/vtex-rest-api/docs/set-up-the-order-summary-printing) guide to configure a printer.
-
 
 ## Testing the module
 

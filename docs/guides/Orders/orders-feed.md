@@ -9,8 +9,7 @@ The [Orders Feed](https://developers.vtex.com/vtex-rest-api/reference/feed-v3) i
 
 The Feed is therefore not a list of orders but rather a list of events. For example, if an order’s status gets changed to `Approve Payment` and then to `Authorize Shipping`, two events will be received by the Feed: one for each of these updates, both referring to the same order. You can configure the Feed to filter what events will actually generate feed items or not, instead of every update that happens in every single order generating items in the feed queue.
 
-Here you will learn how the Feed and Hook work and how to configure them to build order integrations. Also, towards the end of the article we discuss the particularities of each and why should you choose one over the other given the specific needs of your operation. 
-
+Here you will learn how the Feed and Hook work and how to configure them to build order integrations. Also, towards the end of the article we discuss the particularities of each and why should you choose one over the other given the specific needs of your operation.
 
 ## Order integration: Feed vs. List orders
 
@@ -47,18 +46,16 @@ The Feed application key must have a [role](https://help.vtex.com/en/tutorial/ro
   "body": "Before getting data from the Orders Feed queue, you need to configure it. Otherwise, the API will return a `404 not found`. Only after configuration do order updates start appearing on the Feed queue. Below you can learn more about Feed configuration."
 }
 [/block]
+
 ## Configuration
 
 Feed configuration is done through a POST request to the [Create or update Feed configuration](https://developers.vtex.com/vtex-rest-api/reference/feed-v3#feedconfiguration) endpoint.
 
 The body for this request is composed of two objects, the `filter` and the `queue`.
 
-
-
 ### `filter`
 
 By configuring the filter, you define which order updates should appear in the Feed. There are two types of filters that can be used in the Feed: `FromWorkflow` and `FromOrders`. Below you can see an example of each and more details.
-
 
 #### `FromWorkflow`
 
@@ -79,12 +76,14 @@ The list of possible order statuses can be seen in the article [Order flow in or
         ]
     }
 ```
+
 [block:callout]
 {
   "type": "info",
   "body": "The `FromWorkflow` filtering type may be limited depending on your store’s integration necessities. If you want more filtering options, consider using the filter `FromOrders`."
 }
 [/block]
+
 #### `FromOrders`
 
 The `FromOrders` type configuration allows you to filter updates in your Feed by any property in the order JSON document, not only changes in status. This is done with a JSONata expression passed in the `expression` field.
@@ -96,6 +95,7 @@ The `FromOrders` type configuration allows you to filter updates in your Feed by
     "disableSingleFire": false
     }
 ```
+
 [block:callout]
 {
   "type": "warning",
@@ -109,28 +109,32 @@ The `FromOrders` type configuration allows you to filter updates in your Feed by
   "body": "If the `filter` is not configured, the `FromWorkflow` type is used, and all status changes will appear on the Feed."
 }
 [/block]
+
 ##### `expression`
 
 This field receives a string with a JSONata query expression that defines what conditions must be met for an order to be included in the Feed.
 
-JSONata is a query and transformation language for JSON data, and you can learn more about it in the [JSONata documentation](https://docs.jsonata.org/overview.html). 
+JSONata is a query and transformation language for JSON data, and you can learn more about it in the [JSONata documentation](https://docs.jsonata.org/overview.html).
 
 This type of filtering provides lots of possibilities that can not be achieved with the `FromWorkflow` type configuration. You can, for example, filter orders that have been delivered or that have had items removed or added to by the store. You can also combine two or more selection criteria. See the examples below:
 
 - Delivered orders
+
 ```
 isAllDelivered = true
 ```
 
-- Orders with items added 
+- Orders with items added
+
 ```
 $count(changesAttachment.changesData.itemsAdded) > 0
 ```
 
 - Orders with items removed
+
 ```
 $count(changesAttachment.changesData.itemsRemoved) > 0
-``` 
+```
 
 You can also filter multiple properties at once. For example, this is an expression that filters orders that contain at least one refrigerator that costs at least $1000,00:
 
@@ -140,26 +144,30 @@ $count(items[name ~> /.*refrigerator.*/i and price>=1000]) > 0
 
 See more expression examples:
 
+- Order in specific status and sales channel
 
-- Order in specific status and sales channel 
 ```
 (status = "ready-for-handling" and salesChannel="2")
 ```
 
-- Orders from a seller that do not have a specific [trade policy](https://help.vtex.com/pt/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV) (sales channel) 
+- Orders from a seller that do not have a specific [trade policy](https://help.vtex.com/pt/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV) (sales channel)
+
 ```
 (salesChannel.Id != "3" and sellers.id ="sellerId")
 ```
 
 - Order with restitution/item return
+
 ```
 $count(packageAttachment.packages.restitutions.Refund.value) > 0
 ```
 
 - Order invoiced with a specific shipping policy
+
 ```
 status = "invoiced" and (packageAttachment.packages[$[$contains($string(courier), "Carrier Name")]])
 ```
+
 [block:callout]
 {
   "type": "danger",
@@ -167,6 +175,7 @@ status = "invoiced" and (packageAttachment.packages[$[$contains($string(courier)
 }
 [/block]
 See an example of a complete `filter` object with a more complex and escaped JSONata expression.
+
 ```json
 "filter": {
     "type": "FromOrders",
@@ -192,6 +201,7 @@ This field sets a limit to how many times a specific order shows on the Feed aft
   "body": "The `FromOrders` type filter receives order updates whenever any change is made to the order JSON document, providing the order meets the criteria set in the `expression` field. Because of this, if the `disableSingleFire` field is set to `true`, orders may appear more than once on a Feed - even up to hundreds of times in some cases. To prevent that from happening, keep `disableSingleFire` set to `false`."
 }
 [/block]
+
 ### `queue`
 
 This object’s properties dictate the behavior of Feed items once they are included in the Feed or are retrieved. This is an example of the `queue`object:
@@ -207,13 +217,12 @@ This object’s properties dictate the behavior of Feed items once they are incl
 
 - `MessageRetentionPeriodInSeconds` - Items will be excluded from the Feed - even if not committed - when they stay on the Feed longer than the retention period defined in this field.
 
-
 ### Other fields
 
 There are also a couple of other fields which give us some information on the state of the field:
+
 - `quantity`: current number of messages in the feed, including messages that may not be visible due to time out after retrieval.
 - `approximateAgeOfOldestMessageInSeconds`: approximate age of the oldest message in the feed, measured in seconds.
-
 
 ### Examples
 
@@ -256,6 +265,7 @@ Here are two complete example bodies for the [Feed configuration response](https
     "aproximateAgeOfOldestMessageInSeconds": 1113.349305555555
 }
 ```
+
 [block:callout]
 {
   "type": "info",
@@ -269,6 +279,7 @@ Here are two complete example bodies for the [Feed configuration response](https
   "body": "Should the Feed not receive any new events in its queue for the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it, using the [Feed configuration API call](https://developers.vtex.com/vtex-rest-api/reference/feed-v3#feedconfiguration) in order to continue to use the Feed. So it is important to be mindful of the filter configuration you are using. You can check it at any time using the [Get feed configuration](https://developers.vtex.com/vtex-rest-api/reference/feed-v3#getfeedconfiguration) endpoint."
 }
 [/block]
+
 ## Feed readout
 
 Every system that depends on order updates should consume the Feed to be able to take the necessary actions based on that information. The most common behavior is, therefore, that of a store system or an integration reading every event in the Feed and, based on the status, making a decision for each one.
@@ -278,6 +289,7 @@ Every system that depends on order updates should consume the Feed to be able to
   "body": "When filtering statuses, be aware that all possible order statuses must be dealt with during integration to avoid errors. Special attention should be given to `Status Null`, which may be unidentified and end up being mapped as another status, potentially leading to errors."
 }
 [/block]
+
 ### Example
 
 The Orders Feed can be useful in lots of different ways. For instance, say you want to develop an integration between your ERP and VTEX. This integration could have the following behavior:
@@ -288,14 +300,9 @@ The Orders Feed can be useful in lots of different ways. For instance, say you w
 4. Then, it commits the events to the Feed (removing them from the queue).
 5. After reading and removing these ten events from the list, the integration moves to the next ten events in the Feed and repeats the whole process.
 
-<br>
-
-
-![feedFlow-min](https://files.readme.io/e5c2970-feedFlow-min.png)
-<br>
+![feedFlow-min](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Orders/e5c2970-feedFlow-min_294.png)
 
 Access this [backoffice order integration guide](https://developers.vtex.com/vtex-developer-docs/docs/erp-integration-set-up-order-integration) to learn more about how you can integrate VTEX’s order Feed with an ERP.
-
 
 ## Hook
 
@@ -306,11 +313,13 @@ The Hook is a complement to the Feed, which allows integrations to consume order
   "body": "Since the Hook is a complement, [access](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1#access) follows the same principles described above for the Feed. This means each appKey can configure or access only one Hook. Different users that share one appKey access the same Hook. Therefore we recommend the configuration of one Hook per appKey per user, ensuring each user has access to an exclusive Hook."
 }
 [/block]
+
 ### Configuration
 
 Similarly to the Feed, the Hook can be configured through a POST call to the [Create or update hook configuration](https://developers.vtex.com/vtex-rest-api/reference/order-hook-1#hookconfiguration) endpoint of the Orders API. Here are a couple of example bodies for that request, each with a different type of filter:
 
 `FromWorkflow`
+
 ```json
 {
     "filter": {
@@ -329,6 +338,7 @@ Similarly to the Feed, the Hook can be configured through a POST call to the [Cr
 ```
 
 `FromOrders`
+
 ```json
 {
     "filter": {
@@ -360,6 +370,7 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
     “hookConfig”: “ping”
 }
 ```
+
 [block:callout]
 {
   "type": "warning",
@@ -373,6 +384,7 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
   "body": "We recommend configuring the Hook on the main account. This ensures more visibility to commit all events correctly and that the configured endpoint is more frequently notified, and that there is greater, preventing Hook exclusion by inactivity."
 }
 [/block]
+
 ### Hook notifications
 
 If configured, the Hook notifies the integration endpoint whenever an order update happens that meets the conditions specified in the `filter`.
@@ -405,12 +417,14 @@ Below is an example of a hook notification request body made to the integration 
    }
 }
 ```
+
 [block:callout]
 {
   "type": "warning",
   "body": "When using the Hook, it is important to be aware that it is a reactive feature. This means your middleware or ERP system must be ready to deal with whatever volume of data is sent by the Hook. Large peaks in sales - due to Black Friday, for example - tend to generate increase in Hook notifications. If the implementation is not prepared for this peak, it may cause the integration to malfunction, compromising the store’s ability to handle orders and receive further notifications. Learn more about how to deal with this issue in the next session."
 }
 [/block]
+
 ## Feed or Hook, which should you use?
 
 Both the Feed and the Hook allow you to get order updates automatically in order to integrate with other systems and improve your store’s processes. However, they are different and it is important to understand which one best suits your needs.

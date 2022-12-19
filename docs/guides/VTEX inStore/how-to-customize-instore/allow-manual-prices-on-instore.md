@@ -18,7 +18,6 @@ To make this feature available to sales associates using inStore, it is necessar
 [/block]
 Since inStore sales associates are automatically created with the inStore Salesperson role, as explained in [Managing physical stores and sales reps on inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/5PSjRstg7UU4lOm0s8aqKN), they already have the **Telesales** resource associated with their account. This means that once the configuration is enabled on the Checkout API, they will automatically be able to edit prices on inStore or in the ecommerce shopping cart.
 
-
 ## Usage
 
 After enabling manual prices, to change a product price on inStore, sales associates can follow the steps below.
@@ -27,7 +26,7 @@ After enabling manual prices, to change a product price on inStore, sales associ
 2. Click on `More details`.
 3. Click on the desired variation of the product.
 4. Click on `Change`, an option that will appear next to the product price. When you click this component, you will see a modal that allows you to set a new price, as shown below.
-![](https://files.readme.io/39b4020-image1.png)
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/39b4020-image1_30.png)
 5. Enter a new value to change the product price. There are no restrictions to increase or reduce prices.
 6. Click on `Change price` to confirm. The altered price will be applied only on this purchase.
 

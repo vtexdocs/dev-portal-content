@@ -66,7 +66,7 @@ The response will return the most searched terms by popularity order and the num
 
 ## Get autocomplete suggested terms and similar attributes
 
-To get information about the [autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-autocomplete) suggested terms and similar attributes presented to your customers, use the [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_autocomplete-suggestions) endpoint. You can filter the endpoint response by defining the term's ``locale` and``query``.
+To get information about the [autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-autocomplete) suggested terms and similar attributes presented to your customers, use the [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_autocomplete-suggestions) endpoint. You can filter the endpoint response by defining the term's `locale` and `query`.
 
 ![Example of autocomplete suggested terms and similar attributes](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Search/3d888dd-image_3_71.png)
 
