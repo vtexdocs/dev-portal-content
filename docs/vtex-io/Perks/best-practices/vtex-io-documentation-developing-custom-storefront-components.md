@@ -6,13 +6,14 @@ hidden: false
 createdAt: "2021-03-12T13:21:31.408Z"
 updatedAt: "2022-12-13T20:17:44.389Z"
 ---
+
 During the development process, it is natural to face,  among other issues that directly affect the shopping experience, critical questions regarding performance and internationalization.
 
 Although **VTEX does not grant any support for custom projects**, we have put together the guidelines adopted by our very own product team to cooperate with your development journey using Store Framework, VTEX IO and the React technology.
 
 Find below the best practices regarding tooling, features, flexibility, scalability, performance, accessibility, internationalization, and styling, to be adopted when creating your storefront component.
 
->⚠️ Before applying the configurations stated below, it is highly recommended that you understand how VTEX IO, Store Framework and React work since the guidelines take into account previous knowledge. You can take a closer look at the [VTEX IO learning course](https://learn.vtex.com/) and the [React official documentation](https://reactjs.org/) for support.*
+> ⚠️ Before applying the configurations stated below, it is highly recommended that you understand how VTEX IO, Store Framework and React work since the guidelines take into account previous knowledge. You can take a closer look at the [VTEX IO learning course](https://learn.vtex.com/) and the [React official documentation](https://reactjs.org/) for support.
 
 ## Tooling
 
@@ -26,7 +27,7 @@ Use Typescript types as an ally in your development journey since they provide a
 
 `vtex setup --typings`
 
->⚠️ The command above will install all Typescript types from the apps listed in the app's `dependencies` list in your project. Whenever you add a new dependency, the command must be executed again.
+> ⚠️ The command above will install all Typescript types from the apps listed in the app's `dependencies` list in your project. Whenever you add a new dependency, the command must be executed again.
 
 ## Feature development
 
@@ -90,7 +91,7 @@ The VTEX IO platform automatically provides JavaScript polyfills responsible for
 
 Although this practice ensures the good performance of your component in several user agents, you may work with NPM libraries that can not be implemented in old web browsers.
 
-Check out which web browsers are more common among your audience and focus on them when developing your storefront component. Despite the fact that the Internet Explorer is falling into disuse, some stores are still IE11-oriented, for example.  
+Check out which web browsers are more common among your audience and focus on them when developing your storefront component. Despite the fact that the Internet Explorer is falling into disuse, some stores are still IE11-oriented, for example.
 
 ### Prop substitution
 
@@ -100,15 +101,15 @@ However, they do not present great scalability considering that the component ev
 
 Boolean props, therefore, demand creating brand new props whenever unprecedented use cases are introduced to your component.
 
->⚠️ Once the component is deployed, avoid managing its props (creating, removing, and/or updating them)! Managing props can be costly since it can directly impact the API's maintenance and therefore harm other developers working with it.
+> ⚠️ Once the component is deployed, avoid managing its props (creating, removing, and/or updating them)! Managing props can be costly since it can directly impact the API's maintenance and therefore harm other developers working with it.
 
 With that in mind, replace boolean for enum props! The latter has a broader range, being more ready to keep up with your component's evolution and the several behaviors it may have.
 
 For example:
 
-| xxxxxxxxx | Don't | Do |
-| --------- | ----- | -- |
-| Prop name | `show` | `visibility` |  
+| xxxxxxxxx | Don't             | Do                  |
+| --------- | ----------------- | ------------------- |
+| Prop name | `show`            | `visibility`        |
 | Values    | `true` or `false` | `visible` or `none` |
 
 Bet on enum props to develop a future-proofing component!
@@ -121,15 +122,15 @@ Instead of creating specific props to attend to devices' typical scenarios, leve
 
 #### Don't
 
-![best-practices-for-storefront-component-development-1](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/Recipes/development/Media/best-practices-for-storefront-component-development-1.png?raw=true)
+![best-practices-for-storefront-component-development-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/best-practices-for-storefront-component-development-1_124.png)
 
 #### Do
 
-![best-practices-for-storefront-component-development-2](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/Recipes/development/Media/best-practices-for-storefront-component-development-2.png?raw=true)
+![best-practices-for-storefront-component-development-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/best-practices-for-storefront-component-development-2_128.png)
 
->ℹ️ Combine enum props with responsive values, as shown below, and enhance your code quality with super optimized props!
+> ℹ️ Combine enum props with responsive values, as shown below, and enhance your code quality with super optimized props!
 
-![best-practices-for-storefront-component-development-3](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/Recipes/development/Media/best-practices-for-storefront-component-development-3.png?raw=true)
+![best-practices-for-storefront-component-development-3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/best-practices-for-storefront-component-development-3_132.png)
 
 ### Slots
 
@@ -139,11 +140,11 @@ You can learn more about Slots [here](https://developers.vtex.com/vtex-developer
 
 #### Don't
 
-![best-practices-for-storefront-component-development-4](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/Recipes/development/Media/best-practices-for-storefront-component-development-4.png?raw=true)
+![best-practices-for-storefront-component-development-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/best-practices-for-storefront-component-development-4_142.png)
 
 #### Do
 
-![best-practices-for-storefront-component-development-5](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/Recipes/development/Media/best-practices-for-storefront-component-development-5.png?raw=true)
+![best-practices-for-storefront-component-development-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/best-practices-for-storefront-component-development-5_146.png)
 
 > ℹ️ When not using Slots, prefer to use the `children` [composition](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-composition).
 
@@ -157,13 +158,13 @@ In addition to the practices listed below, do not forget to access our documenta
 
 Avoid using heavy npm libraries since they negatively impact the page's loading time and can therefore harm user experience on your store.
 
-Prefer light libraries to support your code and optimize its performance!  
+Prefer light libraries to support your code and optimize its performance!
 
 > ℹ️ Check how your npm libraries can impact user browsing accessing [bundlephobia.com](https://bundlephobia.com/).
 
 ### Data sharing
 
-Use the React context to share data between components and avoid over-fetching at all costs.  
+Use the React context to share data between components and avoid over-fetching at all costs.
 
 The Dispatcher and State patterns, as well as the useMemo feature, are powerful resources that can be made available by the context and used by your component.
 

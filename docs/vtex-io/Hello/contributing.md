@@ -5,15 +5,16 @@ hidden: false
 createdAt: "2021-03-18T22:45:55.338Z"
 updatedAt: "2021-03-24T18:19:35.480Z"
 ---
+
 VTEX IO is an open-source project. Contributions of all kinds are welcome, including feature requests, bug reports, and updates to our codebase and documentation.
 
 # Codebase
 
-VTEX IO native apps are fully stored in the [VTEX Apps Organization](https://github.com/vtex-apps) on <span class="fa fa-github"></span> GitHub. 
+VTEX IO native apps are fully stored in the [VTEX Apps Organization](https://github.com/vtex-apps) on <span class="fa fa-github"></span> GitHub.
 
 That means you can contribute to our codebase by looking for the desired app on the VTEX Apps Organization and then [opening an issue](#opening-an-issue) or [creating a Pull Request.](#creating-a-pull-request)
 
->ℹ️ When looking for an app on the VTEX Apps Organization, keep in mind that the name of VTEX IO apps are [kebab case.](https://en.wiktionary.org/wiki/kebab_case) That means they are comprised of lowercase letters separated by hyphens. Therefore, if, for example, you want to contribute to the Product Summary app you must look for [`product-summary`](https://github.com/vtex-apps/product-summary) on the VTEX Apps Organization.
+> ℹ️ When looking for an app on the VTEX Apps Organization, keep in mind that the name of VTEX IO apps are [kebab case.](https://en.wiktionary.org/wiki/kebab_case) That means they are comprised of lowercase letters separated by hyphens. Therefore, if, for example, you want to contribute to the Product Summary app you must look for [`product-summary`](https://github.com/vtex-apps/product-summary) on the VTEX Apps Organization.
 
 ## Opening an issue
 
@@ -23,7 +24,7 @@ There are three main situations you should opt for opening an issue:
 - Request a new feature or suggest an idea.
 - Ask questions you had during development.
 
-![](https://user-images.githubusercontent.com/60782333/112347367-8db6ec00-8ca5-11eb-997f-39b179b855d2.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/112347367-8db6ec00-8ca5-11eb-997f-39b179b855d2_26.png)
 
 Once you open an issue, our team will evaluate your contribution as soon as possible.
 
@@ -31,13 +32,13 @@ Once you open an issue, our team will evaluate your contribution as soon as poss
 
 We use GitHub tags to classify issues between **Questions, Bugs or Enhancements.** This way, you can filter issues by specifying a label and author.
 
-![image](https://user-images.githubusercontent.com/18701182/60682041-0a69bd00-9e68-11e9-8ee2-f388ddf225a8.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/60682041-0a69bd00-9e68-11e9-8ee2-f388ddf225a8_34.png)
 
-![image](https://user-images.githubusercontent.com/18701182/60682095-5d437480-9e68-11e9-9933-5651efa063a4.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/60682095-5d437480-9e68-11e9-9933-5651efa063a4_36.png)
 
 You can also change the **sort criteria** for the issues. For example, you can look for the most and least commented issues, the ones with most 👍 and most recently updated.
 
-![image](https://user-images.githubusercontent.com/18701182/60682317-39ccf980-9e69-11e9-9b4e-95c51753bee0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/60682317-39ccf980-9e69-11e9-9b4e-95c51753bee0_40.png)
 
 ## Creating a Pull Request
 
@@ -89,7 +90,7 @@ All guides, references, and tutorials from the [VTEX IO Developer Documentation]
 
 In its turn, the documentation of VTEX IO apps are fetched directly from its corresponding GitHub repository.
 
->⚠️ App documentation is fetched only from apps using the Docs builder.
+> ⚠️ App documentation is fetched only from apps using the Docs builder.
 
 Therefore, you can create a Pull Request with your fixes directly on the [`io-documentation`](https://github.com/vtex-apps/io-documentation) repository or on the repository of the corresponding app you want to contribute (e.g., [`product-summary`](https://github.com/vtex-apps/product-summary))
 
@@ -100,22 +101,22 @@ To make the documentation of your custom app public on the Developer Portal, you
 1. Create a `docs/` folder in the app’s root.
 2. Update the app's `manifest.json` file to declare `vtex.docs` as one of the app's builders.
 
-![image](https://user-images.githubusercontent.com/18701182/64052096-a99eee00-cb53-11e9-8d69-925a451231ab.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/64052096-a99eee00-cb53-11e9-8d69-925a451231ab_103.png)
 
 3. Inside the `docs/` folder create a `README.md` file.
-    
-    >ℹ️ When writing the documentation of your app, make sure to follow our [documentation templates.](#documentation-templates)
+
+   > ℹ️ When writing the documentation of your app, make sure to follow our [documentation templates.](#documentation-templates)
 
 4. Contact us to make your documentation visible.
 
->ℹ️ In order to not have to keep track of two `README.md` files (one in the project’s root and another it the `docs/` folder), you can delete the former and only keep the latter. GitHub will read the one from the `docs/` folder and render it on the landing page.
+> ℹ️ In order to not have to keep track of two `README.md` files (one in the project’s root and another it the `docs/` folder), you can delete the former and only keep the latter. GitHub will read the one from the `docs/` folder and render it on the landing page.
 
 ### Documentation templates
 
 #### React app README template
 
 [React app template](https://github.com/vtex-apps/react-app-template)
- 
+
 ```markdown
 📢 Use this project, [contribute](https://github.com/{OrganizationName}/{AppName}) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 

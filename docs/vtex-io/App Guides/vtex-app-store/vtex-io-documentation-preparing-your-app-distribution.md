@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2022-03-04T20:09:05.195Z"
 updatedAt: "2022-12-13T20:17:44.658Z"
 ---
+
 This guide will teach you how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution.
 
 Notice that every app goes through a homologation process before being available at the VTEX App Store. During this process, our team ensures the apps follow the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Hence, be sure to review these guidelines while you develop and prepare your app for distribution.
@@ -28,7 +29,7 @@ After developing your app, you must establish whether your app will be charged o
 
 After establishing your app's billing model, you must set up the marketing assets (e.g., icons, images, and descriptions) that will compose your app's page on the VTEX App Store. During this step, please refer to our [Marketing](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-marketing-assets) guidelines.
 
-![App Page on the VTEX App Store](https://user-images.githubusercontent.com/67270558/153282275-98bab015-81e8-4858-8538-72c9fa33d17e.gif)
+![App Page on the VTEX App Store](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/153282275-98bab015-81e8-4858-8538-72c9fa33d17e_31.gif)
 
 1. Create a new folder named `public` in the root directory of your project.
 2. Inside the `public` folder, create the `metadata` folder. Also, create the `images`, `licenses` and `messages` folders inside `metadata`.

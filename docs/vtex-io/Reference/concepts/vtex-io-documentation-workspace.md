@@ -18,4 +18,4 @@ There are three main types of workspaces:
 
 Development and production workspaces can be accessed at `https://{workspace}--{account}.myvtex.com`.
 
-![Workspaces](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/Concepts/Media/workspace.png?raw=true)
+![Workspaces](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Concepts/Media/workspace.png)

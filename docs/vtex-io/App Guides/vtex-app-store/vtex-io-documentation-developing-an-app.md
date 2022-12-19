@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2022-03-04T20:09:05.300Z"
 updatedAt: "2022-12-13T20:17:44.583Z"
 ---
+
 In this guide, you will learn how to develop an app using the VTEX IO platform. You will be presented with some core concepts of the platform and guided through the necessary steps to have a running application in VTEX IO.
 
 [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io) is a cloud-native development platform that allows you to develop web storefronts, custom admin apps, and backend integrations for VTEX.
@@ -46,7 +47,7 @@ vtex init
 
 2. Select the boilerplate that you want.
 
-![boilerplates](https://user-images.githubusercontent.com/67270558/156827878-b43f13b6-3ba0-48d8-b425-ed7790e3ba5f.png)
+![boilerplates](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/156827878-b43f13b6-3ba0-48d8-b425-ed7790e3ba5f_49.png)
 
 3. A new folder will be created in your machine, and to access it run `cd {folder-name}` in your terminal.
 
@@ -104,14 +105,14 @@ vtex login {accountName}
 
 3. Once logged in, run the `vtex whoami` command to show which account and workspace the VTEX IO CLI is using.
 
-![Login - Whoami](https://user-images.githubusercontent.com/67270558/151855497-21a966cf-9529-42df-8e25-27245f8e26f2.png)
+![Login - Whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/151855497-21a966cf-9529-42df-8e25-27245f8e26f2_107.png)
 
 #### Creating a development workspace
 
 When using VTEX IO, any development must happen in a [workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace).
 
 > ℹ️ **Workspaces** are environments isolated from one another. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your app’s live version or other developers' work.
-Refer to the [Workspace article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace) for more information.
+> Refer to the [Workspace article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace) for more information.
 
 To start developing, you have to create a [Development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace) in your VTEX account. When you log in, you automatically use the Master workspace, which means you are in the version available to the end-user.
 
@@ -123,7 +124,7 @@ vtex use {exampleName}
 
 This changes your VTEX account to a Developer workspace called `exampleName` ( ️ replace it with the name of your choice), creating it from scratch if it does not already exist.
 
-![vtex-use](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/GettingStarted/develop-storefront-apps-using-react-and-vtex-io/assets/basic-development-setup-in-vtex-io-2.png)
+![vtex-use](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/basic-development-setup-in-vtex-io-2_126.png)
 
 2. Type `Y`, and a Development workspace will be created under your chosen name.
 

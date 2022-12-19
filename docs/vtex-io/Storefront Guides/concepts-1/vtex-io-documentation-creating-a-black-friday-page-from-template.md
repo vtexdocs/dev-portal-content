@@ -14,7 +14,7 @@ This guide will show you how to implement the Black Friday landing page template
 
 >ℹ️ You can also base on this template to create a new or refreshed homepage for your store website.
 
-![Black Friday landing page template](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/Recipes/templates/blackfriday.gif?raw=true)
+![Black Friday landing page template](https://raw.githubusercontent.com/vtex-apps/io-documentation/master/docs/en/Recipes/templates/blackfriday.gif)
 
 ## Step by step
 

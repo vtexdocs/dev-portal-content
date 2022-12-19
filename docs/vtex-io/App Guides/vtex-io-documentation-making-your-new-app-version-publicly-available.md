@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.750Z"
 updatedAt: "2022-12-13T20:17:44.423Z"
 ---
+
 To make your new app version available to end-users, you'll need to take the following steps:
 
 1. [**Release** your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-releasing-a-new-app-version) - create a release commit and a release tag.
@@ -14,5 +15,4 @@ To make your new app version available to end-users, you'll need to take the fol
 4. [**Deploy** the app as a stable version](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-deploying-the-app-stable-version) - update the app version on all accounts with the app installed.
 5. [Promote your changes to **Master**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-promoting-a-workspace-to-master) - make the new app version available to end-users.
 
-&nbsp;
-![public](https://user-images.githubusercontent.com/60782333/92799699-61332680-f38a-11ea-8a06-a342607070d9.png)
+![public](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/92799699-61332680-f38a-11ea-8a06-a342607070d9_18.png)

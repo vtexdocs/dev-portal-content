@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-11-12T20:06:26.255Z"
 updatedAt: "2022-12-13T20:17:44.104Z"
 ---
+
 The [**VTEX App Store**](https://apps.vtex.com/) is a marketplace for VTEX IO plug-and-play solutions.
 
 As a developer, you can **share your own solutions** with other VTEX users in the [**VTEX App Store**](https://apps.vtex.com/) so they can also **leverage their business**.
@@ -30,7 +31,7 @@ If the form was correctly filled out and the team agrees that the application is
 
 This contract, provided by the VTEX team to you, will grant VTEX distribution rights over the app. In addition, it is going to sign your account up to the VTEX **Network Partner Program** if you are not already a member.
 
->ℹ️ The [Network Partner Program](https://network.vtex.com/terms_of_use) provides access to a VTEX account, allowing you to test and develop new apps and have access to tech support from the VTEX partner team.
+> ℹ️ The [Network Partner Program](https://network.vtex.com/terms_of_use) provides access to a VTEX account, allowing you to test and develop new apps and have access to tech support from the VTEX partner team.
 
 ### Step 3 - Registering as a VTEX App Store seller
 
@@ -46,9 +47,9 @@ Follow the steps below to register as a new seller on VTEX App Store:
 4. Select the sales channel you intend to use to connect to the App Store.
 5. Choose an affiliate ID, made up of 3 consonants:
 
-![submitting-seller-1](https://user-images.githubusercontent.com/52087100/92964918-48d71080-f44b-11ea-8929-b744915e3fb0.png)
+![submitting-seller-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/92964918-48d71080-f44b-11ea-8929-b744915e3fb0_49.png)
 
-![submitting-seller-2](https://user-images.githubusercontent.com/52087100/92964922-4a083d80-f44b-11ea-886d-39eac7a3cee0.png)
+![submitting-seller-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/92964922-4a083d80-f44b-11ea-886d-39eac7a3cee0_51.png)
 
 After submitting the request to be a seller, you can check its `status` until our team approves it. This approval is required in order to complete the next steps and be able to successfully publish your app in the VTEX App Store.
 

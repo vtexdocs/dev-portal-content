@@ -6,13 +6,14 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.475Z"
 updatedAt: "2022-12-13T20:17:44.109Z"
 ---
+
 An A/B test compares traffic between two workspaces: the master and a production workspace, and reveals which version is best for your business needs.
 
 For example, suppose you want to update your store's landing page. To confirm the beneficial results of your changes, you can run an A/B test and base your decisions on quantitative metrics.
 
 To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/vtex-developer-docs/docs/vtexarg-abtester). For more information, please refer to the following sections.
 
-![ab-testing](https://user-images.githubusercontent.com/52087100/64129197-21a62780-cd91-11e9-86f9-1ec8a3d2e2c8.png)
+![ab-testing](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/ab-tests/64129197-21a62780-cd91-11e9-86f9-1ec8a3d2e2c8_15.png)
 
 ## Running A/B tests via the Admin
 
@@ -79,7 +80,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
   vtex workspace abtest start
   ```
 
-  ![ab-testing-step4](https://user-images.githubusercontent.com/52087100/64129583-50bd9880-cd93-11e9-8b80-f1fe4cad943b.png)
+![ab-testing-step4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/ab-tests/64129583-50bd9880-cd93-11e9-8b80-f1fe4cad943b_82.png)
 
 7. Select the production workspace you want to use for comparison with the master and agree to proceed.
 
@@ -95,7 +96,7 @@ By agreeing to proceed with the test, you will need to answer the two following 
 
 - **Answer `0` to automatically proceed with the A/B test.** In this case, VTEX IO will automatically split your website traffic between workspaces, routing 50% of your store's traffic to the master and the other 50% to the production workspace being tested. Following that, the platform will automatically balance traffic every three minutes based on the conversion rates. This means that traffic will be gradually routed from the workspace with the lowest conversion rate to the workspace with the highest conversion rate. It's important to note that the test does not end on its own. We also suggest that you evaluate the test results on a daily basis.
 - **Answer with the number of hours you want to keep constant the proportion of traffic previously specified.** During peak operational periods, it's critical for the test to extract as much data as possible. At the same time, the test shouldn't overextend and end up being harmful to users who are navigating the workspace with the poorest performance.
-  
+
   > ℹ️ You can run many A/B tests simultaneously by comparing two or more workspaces to the master individually. However, if you opt to set up the traffic manually, the A/B test will distribute the traffic evenly among all production workspaces being A/B tested. For example, suppose you started an A/B test between workspace A and master, routing 90% of traffic to the former and 10% to the latter. If you run a new A/B test between workspace B and the master, each production workspace, A and B, will only receive 5% of the store's traffic.
 
 ### Step 3 - Interpreting the test results
@@ -106,7 +107,7 @@ Any time during the A/B test, you can run the following command to check the liv
 vtex workspace abtest status
 ```
 
-![ab-testing-step5](https://user-images.githubusercontent.com/52087100/64129599-69c64980-cd93-11e9-85fd-575665fbf532.png)
+![ab-testing-step5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/ab-tests/64129599-69c64980-cd93-11e9-85fd-575665fbf532_109.png)
 
 If desired, you can still update the workspaces being used in the A/B test. However, notice that the fewer changes made to these workspaces, the more accurate your results will be.
 
@@ -144,6 +145,6 @@ vtex workspace abtest finish
 
 When running the command, a list of all workspaces being tested by the `vtex.ab-tester` app in Master will show up. Select the one which should end. For example:
 
-![ab-testing-step6](https://user-images.githubusercontent.com/52087100/64129622-a7c36d80-cd93-11e9-9b77-9a0bae552439.png)
+![ab-testing-step6](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/ab-tests/64129622-a7c36d80-cd93-11e9-9b77-9a0bae552439_147.png)
 
 > ⚠️ Note that you will only end the test on the selected workspace. **It will not promote any workspace to master**. You must do that by yourself to make the new configurations public for all users.

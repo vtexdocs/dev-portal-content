@@ -6,12 +6,13 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.306Z"
 updatedAt: "2022-12-13T20:17:44.629Z"
 ---
+
 While building your brand's visual identity, you'll often use images in your store theme. Images, however, can significantly impact a website's performance. In this sense, Store Framework provides different image blocks for different use cases. Each block defines how images will be cropped, rendered, and displayed to end-users. Hence, to implement the right solution for your use case, please consider the practices presented in the following.
 
----
+***
 
 ## Uploading images to your theme's code
-  
+
 - Upload images to your theme's code using the [**Assets Builder**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-the-assets-builder) or the [Site Editor](https://help.vtex.com/en/tutorial/site-editor-overview). The Assets Builder and the Site Editor ensure that the images are properly cropped, providing end-users a consistent and uniform experience.
 - Don't declare the URLs of the desired images directly in the `blocks.json` file. Otherwise, the images may end up deformed.
 - Don't use images with large dimensions. Otherwise, the Site Editor may not be able to crop them.
@@ -34,8 +35,8 @@ When using the Product Summary component, define at least one of the following p
 
 These props define the image's dimensions and allow product summary images to be presented with the same size, regardless of the dimensions of the images uploaded via the admin's Catalog.
 
->ℹ️ You don't have to specify these four properties in your Product Summary Image block at the same time. Each one has a distinct purpose and can be used independently. For more information on implementing these props, please refer to the [**Product Summary Image**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryimage) documentation.
+> ℹ️ You don't have to specify these four properties in your Product Summary Image block at the same time. Each one has a distinct purpose and can be used independently. For more information on implementing these props, please refer to the [**Product Summary Image**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryimage) documentation.
 
 For example, by declaring these props, your store's Shelf will have image consistency across all products being displayed, differently from the Shelf example below:
 
-![beat-practices-images](https://user-images.githubusercontent.com/52087100/80645249-3bdbf680-8a41-11ea-8f63-8b96b20f7c4b.png)
+![beat-practices-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/80645249-3bdbf680-8a41-11ea-8f63-8b96b20f7c4b_41.png)

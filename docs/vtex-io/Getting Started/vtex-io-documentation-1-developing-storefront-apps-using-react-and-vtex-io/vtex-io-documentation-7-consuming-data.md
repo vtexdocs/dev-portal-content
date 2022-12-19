@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-03-25T20:58:43.152Z"
 updatedAt: "2022-12-13T20:17:44.370Z"
 ---
+
 Now you need to learn how this new component will talk with the *back-end* system, in other words, how it is going to **consume and insert data in the platform**.
 
 Communication between store-front apps and VTEX IO is done through **GraphQL APIs**.
@@ -18,10 +19,10 @@ To manage the data consumed in GraphQL, we will use a library called [**React Ap
 
 The main components in this library are:
 
-| Name | Description |
-|-----|-----|
-|[useQuery](https://www.apollographql.com/docs/react/data/queries/) | *React Hook* which, when executed, queries the server using the *GraphQL API* and returns what was requested in the *query* variables. |
-|[useMutation](https://www.apollographql.com/docs/react/data/mutations/) | *React Hook* which returns a function that, when executed, communicates with the server from the *GraphQL API* in order to send *updates* and overwrite data. |
+| Name                                                                    | Description                                                                                                                                                   |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [useQuery](https://www.apollographql.com/docs/react/data/queries/)      | *React Hook* which, when executed, queries the server using the *GraphQL API* and returns what was requested in the *query* variables.                        |
+| [useMutation](https://www.apollographql.com/docs/react/data/mutations/) | *React Hook* which returns a function that, when executed, communicates with the server from the *GraphQL API* in order to send *updates* and overwrite data. |
 
 The `useQuery` *React Hook* returns an object that contains the following properties:
 
@@ -36,7 +37,7 @@ The `useMutation` *React Hook* returns an *array* containing:
 
 Keeping in mind the objects received by the `useQuery` and `useMutation` *React Hooks*, it is possible to define what you want to render in *React* for the specific `loading` and `error` conditions, in addition to managing the content returned by queries made in the API (stored in `data`).
 
->ℹ️ To better understand the detailed instructions below, we recommended having a basic knowledge of the GraphQL language. If you are not familiar with the solution, we recommended checking the [documentation](https://graphql.org/learn/) and reading it carefully before proceeding to the next steps.
+> ℹ️ To better understand the detailed instructions below, we recommended having a basic knowledge of the GraphQL language. If you are not familiar with the solution, we recommended checking the [documentation](https://graphql.org/learn/) and reading it carefully before proceeding to the next steps.
 
 ## Installing the React Apollo library
 
@@ -50,7 +51,7 @@ yarn add react-apollo
 
 For your component to render the information provided by the VTEX IO platform, you have to query the data stored on the server using *GraphQL APIs*.
 
-![GraphQL-query](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/GettingStarted/develop-storefront-apps-using-react-and-vtex-io/assets/consuming-data-1.png?raw=true)
+![GraphQL-query](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io/consuming-data-1_53.png)
 
 We will use the `useQuery` *React Hook* to do this:
 
@@ -106,7 +107,7 @@ Notice how the `useQuery` React Hook returns an object with `loading`, `error`, 
 
 According to the example above, if `loading` returns `true`, the message `Loading...` will be rendered. If an error occurs, the message `Error {error description}` will be rendered instead. Finally, if the `data` parameter receives the values of the executed *query* correctly, the message `Done fetching {data obtained from the query}` will be rendered.
 
->ℹ️ Check [this](https://www.apollographql.com/docs/react/data/queries/) practical example of a GraphQL query.
+> ℹ️ Check [this](https://www.apollographql.com/docs/react/data/queries/) practical example of a GraphQL query.
 
 ## Mutating in GraphQL
 
@@ -114,7 +115,7 @@ In addition to *queries*, *mutations* are another type of operation available fo
 
 *Mutations* are used to insert or modify data that already exists on the platform; they are used to send *updates* to the server.
 
-![GraphQL-mutation](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/GettingStarted/develop-storefront-apps-using-react-and-vtex-io/assets/consuming-data-2.png?raw=true)
+![GraphQL-mutation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io/consuming-data-2_117.png)
 
 1. Open your app's code in the code editor of your choice.
 2. In the `react` folder, access the `HelloMutation.tsx` file or create it if it does not already exist.
@@ -144,7 +145,7 @@ Let us say, for example, that one of the *mutation* variables you are running is
 + return <button onClick={() => { doSomething({ variables: { cityName: 'Rio' ) }}>Click me</button>
 ```
 
->ℹ️ Check [this](https://www.apollographql.com/docs/react/data/mutations/) practical example of a GraphQL mutation.
+> ℹ️ Check [this](https://www.apollographql.com/docs/react/data/mutations/) practical example of a GraphQL mutation.
 
 ## Debugging queries and mutations in GraphQL
 
@@ -163,12 +164,12 @@ Once the app is installed, follow the steps outlined below:
 3. Look for GraphQL IDE in the installed apps list.
 4. In the `Choose your app from the list below` field, select the name of the app where you want to debug/test. In this case, you need to choose the name of the app you are developing.
 
->ℹ️ Remember that, until now, the front app you have been developing has been living in your local files, being connected to the VTEX platform only by the `link`. To find the name of your app in this listing and be able to debug, it needs to be already available (published) and properly installed in the account's Master workspace. The necessary settings to make your app publicly available are described in the last section of this walkthrough.
+> ℹ️ Remember that, until now, the front app you have been developing has been living in your local files, being connected to the VTEX platform only by the `link`. To find the name of your app in this listing and be able to debug, it needs to be already available (published) and properly installed in the account's Master workspace. The necessary settings to make your app publicly available are described in the last section of this walkthrough.
 
 5. On the left side of the text editor, type the *query* or *mutation* that you want to run for testing purposes.
 6. Then click on the *play* button, and the API query response will appear in the text editor to the right.
 
 If you need help, there is a `docs` tab on the right corner of your screen that describes the queries and mutations available for the selected app.
 
-![GraphQL IDE example](https://camo.githubusercontent.com/7e7dc6c6c4463c904d1442fca59730dbc2d24082/68747470733a2f2f692e696d6775722e636f6d2f68734d747843322e706e67)
+![GraphQL IDE example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io/68747470733a2f2f692e696d6775722e636f6d2f68734d747843322e706e67.png)
 *The example above shows how to use the GraphQL IDE Admin to query an internal route in the `vtex.rewriter` app.*

@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2022-02-16T13:52:17.247Z"
 updatedAt: "2022-12-13T20:17:44.776Z"
 ---
+
 In this guide, you will learn how to create [clients](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-clients) and how to use them in your implementations.
 
 ## Before you start
@@ -28,13 +29,13 @@ export const authorize = async (ctx: Context) {
 
 1. The [`@vtex/api`](https://github.com/vtex/node-vtex-api/) SDK provides a structured way to create clients, and the first thing to do is **identify the type of communication you want to implement.** As of now, we support these out of the box:
 
-| Type | Use case |
-|--|--|
-| `AppClient` | Communication with other IO Services via *plain-old* HTTP calls |
-| `AppGraphQLClient` | Communication with other IO GraphQL services |
-| `ExternalClient` | Communication with external API's |
-| `JanusClient` | Communication with VTEX Core Commerce API's through Janus Router |
-| `InfraClient` | Communication with VTEX IO Infra services |
+| Type               | Use case                                                         |
+| ------------------ | ---------------------------------------------------------------- |
+| `AppClient`        | Communication with other IO Services via *plain-old* HTTP calls  |
+| `AppGraphQLClient` | Communication with other IO GraphQL services                     |
+| `ExternalClient`   | Communication with external API's                                |
+| `JanusClient`      | Communication with VTEX Core Commerce API's through Janus Router |
+| `InfraClient`      | Communication with VTEX IO Infra services                        |
 
 > ⚠️ When using clients, do not forget to add the **appropriate policies** on your `manifest.json`. Incorrect policies may result in request blocking.
 
@@ -43,7 +44,7 @@ export const authorize = async (ctx: Context) {
 Let's take a look on the anatomy of an *ExternalClient* to the *Github API*:
 
 `node/clients/github.ts`
-![Github API Client example](https://i.imgur.com/rcSivwD.png)
+![Github API Client example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/back-end-development-guides/rcSivwD_46.png)
 
 **Reference**
 1 - Look, it's one of the types from the **table above**.
@@ -52,7 +53,7 @@ Let's take a look on the anatomy of an *ExternalClient* to the *Github API*:
 
 3 - Read more about **app's pricing** [here](https://help.vtex.com/tutorial/app-pricing-options--2ZKBKxLe08Q6seA6sCi6o2).
 
-4 - There are a lot of other methods available, you can check them on [**HttpClient**].(<https://github.com/vtex/node-vtex-api/blob/master/src/HttpClient/HttpClient.ts>)
+4 - There are a lot of other methods available, you can check them on [**HttpClient.**](https://github.com/vtex/node-vtex-api/blob/master/src/HttpClient/HttpClient.ts)
 
 > ⚠️ You're free to add data handling logic inside your client's methods (*i.e:* mapping fields, or filtering data), but be careful to not lose track of the client's responsabilities.
 
@@ -64,7 +65,7 @@ After you've learned how to create **great clients**, it's time to **ship them**
 
 **Let's suppose you've created the Github client** we've described above!
 
-1. Make sure you've **exported** the *client* from its module. _(Either [default or named export](https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910))_
+1. Make sure you've **exported** the *client* from its module. *(Either [default or named export](https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910))*
 2. Create a `node/clients/index.ts` file.
 3. Paste the following snippet on it. *(If you've used named export on Step 2, change the import clause)*
 

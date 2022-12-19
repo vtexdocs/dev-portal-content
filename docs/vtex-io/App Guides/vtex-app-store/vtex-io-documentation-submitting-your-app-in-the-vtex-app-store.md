@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-09-11T19:35:00.561Z"
 updatedAt: "2022-12-13T20:17:44.608Z"
 ---
+
 To share your solutions in the VTEX App Store, you must follow our homologation process:
 
 1. Check out our business, design and engineering guidelines.
@@ -46,11 +47,11 @@ After step 4 , a GitHub repository will be automatically created and a Pull Requ
 
 > ℹ️ You'll be added to the repository with your GitHub handle and will have read-only permissions to be able to follow your app's review process. Comments can be followed in the same repository and after performing adjustments, any new app version can be submitted following the step 2 above, thereby creating a new `branch` containing the new version in the same repository.
 
-![submitting-github-terminal](https://user-images.githubusercontent.com/52087100/92964915-483e7a00-f44b-11ea-8bbf-f8f4e8c4da32.png)
+![submitting-github-terminal](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/92964915-483e7a00-f44b-11ea-8bbf-f8f4e8c4da32_49.png)
 
-When a branch has the adjustments it needs, you should open a _Pull Request_ to the VTEX team.
+When a branch has the adjustments it needs, you should open a *Pull Request* to the VTEX team.
 
-![submitting-github-pr](https://user-images.githubusercontent.com/52087100/92964912-470d4d00-f44b-11ea-8c2b-e09a13093da6.png)
+![submitting-github-pr](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/92964912-470d4d00-f44b-11ea-8c2b-e09a13093da6_53.png)
 
 ### Step 3 - Waiting for the app homologation
 

@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:50.597Z"
 updatedAt: "2022-12-13T20:17:44.074Z"
 ---
+
 While developing in an account, we should be aware of all its installed or linked apps. With VTEX IO CLI, access to the app list is made easy by running a single command.
 
 ## Step by step
@@ -19,6 +20,6 @@ vtex list
 
 VTEX IO CLI will then display a table containing the account’s installed and linked apps, in addition to their respective version, as shown in the example below:
 
-![listing-apps](https://user-images.githubusercontent.com/52087100/67044546-dfe3fd00-f102-11e9-83d7-936f229b7b26.png)
+![listing-apps](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/configuring-workspaces/67044546-dfe3fd00-f102-11e9-83d7-936f229b7b26_22.png)
 
->⚠️ Note that the table is divided into apps related to an **Edition**, apps independently **installed** and **linked** apps.
+> ⚠️ Note that the table is divided into apps related to an **Edition**, apps independently **installed** and **linked** apps.

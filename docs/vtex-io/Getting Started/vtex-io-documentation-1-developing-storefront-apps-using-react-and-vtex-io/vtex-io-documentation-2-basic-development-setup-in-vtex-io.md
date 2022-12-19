@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-03-25T20:58:43.721Z"
 updatedAt: "2022-12-13T20:17:44.103Z"
 ---
+
 Any development in VTEX IO begins and ends with the [**VTEX IO CLI**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference). The VTEX IO CLI works as a communication gateway between your VTEX account and the VTEX IO development platform.
 
 With VTEX IO's CLI, you will be able to log in to your VTEX account, manage workspaces, develop apps, and install new ones.
@@ -26,11 +27,11 @@ vtex login {accountName}
 
 This will open a browser window asking for your credentials.
 
->⚠️ Replace `{accountName}` with the name of your VTEX account.
+> ⚠️ Replace `{accountName}` with the name of your VTEX account.
 
 Once you are logged in, run the `vtex whoami` command to show which **VTEX account** and **workspace** are being used by the VTEX IO CLI.
 
-![VTEX IO CLI - whoami](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/GettingStarted/develop-storefront-apps-using-react-and-vtex-io/assets/basic-development-setup-in-vtex-io-1.png?raw=true)
+![VTEX IO CLI - whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io/basic-development-setup-in-vtex-io-1_33.png)
 
 ## Creating your own workspace
 
@@ -48,6 +49,6 @@ vtex use {exampleName}
 
 This changes your VTEX account to a Development workspace called `exampleName`, creating it from scratch if it does not already exist.
 
-![workspace-examplename EN](https://github.com/vtex-apps/io-documentation/blob/master/docs/en/GettingStarted/develop-storefront-apps-using-react-and-vtex-io/assets/basic-development-setup-in-vtex-io-2.png?raw=true)
+![workspace-examplename EN](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io/basic-development-setup-in-vtex-io-2_51.png)
 
 Having logged in to your account and created your own Development workspace, you are ready to begin developing your React app and building your storefront using VTEX IO.
