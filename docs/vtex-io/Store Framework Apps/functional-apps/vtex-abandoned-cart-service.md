@@ -35,7 +35,7 @@ You should follow the documentation to [Setting up Cart Abandonment (Trigger)](h
 }
 ```
 Like the example bellow:
-<img width="1440" alt="Captura de Tela 2022-08-03 às 17 51 51" src="https://user-images.githubusercontent.com/67066494/184005464-d06e1cda-3b21-42ec-b020-d85d684e6b7c.png">
+<img width="1440" alt="Captura de Tela 2022-08-03 às 17 51 51" src="https://user-images.githubusercontent.com/67066494/184005464-d06e1cda-3b21-42ec-b020-d85d684e6b7c.png"/>
 
 
 _The template field in the JSON above depends on the template id configured in the message center_

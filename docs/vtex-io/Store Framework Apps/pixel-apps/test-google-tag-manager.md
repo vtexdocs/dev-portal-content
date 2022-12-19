@@ -53,7 +53,7 @@ We, by default, blacklist the `html` ID, which automatically blocklists all the 
 
 > ⚠️ *The HTML blacklist is VTEX Google Tag Manager app's default. If you want to disable this restriction go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@2.x/setup` and check the toggle below.*
 
-<img src="https://user-images.githubusercontent.com/11340665/103930428-7c762e80-50fd-11eb-9cab-bc9e542b4dbf.png">
+<img src="https://user-images.githubusercontent.com/11340665/103930428-7c762e80-50fd-11eb-9cab-bc9e542b4dbf.png"/>
 
 Most of the widely used Custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs a Custom HTML for one of those cases, the integration can either be done by transforming the tags into a [VTEX IO Pixel App](https://vtex.io/docs/apps/pixel/) or by removing this restriction.
 

@@ -75,7 +75,7 @@ If you wish to delete an existing badge from your store, go to the `Edit badges`
 To improve the search for badges, it is possible to select which fields you want the search for them to be filtered. This makes searching the Database simpler and more efficient when returning badges to your website.
 To configure it, just enter the My Applications area. Then choose <b> App Badges </b> and select which fields you want the search to be related to.
 
-<img width="935" alt="Captura de Tela 2022-11-22 às 13 50 50" src="https://user-images.githubusercontent.com/80836180/203373595-aef6bf9b-de00-43a5-b2fd-0636b97c2fb5.png">
+<img width="935" alt="Captura de Tela 2022-11-22 às 13 50 50" src="https://user-images.githubusercontent.com/80836180/203373595-aef6bf9b-de00-43a5-b2fd-0636b97c2fb5.png"/>
 
 Remember that by default all fields are used as a filter
 

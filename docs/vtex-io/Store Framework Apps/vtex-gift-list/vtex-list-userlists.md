@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.291Z"
 ---
 The `user-lists` block displays the lists the user has with their names and privacy information. It has as title and a subtitle and a link button to generate new lists.
 
-<img width="1392" alt="image" src="https://user-images.githubusercontent.com/76453090/190492242-fdddc8d1-ca4e-405c-a46d-b9315a9f392f.png">
+<img width="1392" alt="image" src="https://user-images.githubusercontent.com/76453090/190492242-fdddc8d1-ca4e-405c-a46d-b9315a9f392f.png"/>
 
 ## Configuration
 
