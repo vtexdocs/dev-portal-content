@@ -7,7 +7,7 @@ hidden: false
 ---
 We have updated the architecture of how our OMS communicates with VTEX's Payment gateway so that [partial invoices](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe) also trigger partial settlements in transactions.
 
-Previously, a partial invoice triggered a settlement of the order's full, initial value, despite having changes in value due to changes in the order. 
+Previously, a partial invoice triggered a settlement of the order's full, initial value, despite having changes in value due to changes in the order.
 
 Now, the gateway settles the value corresponding to the invoice inserted. Know more about this change in our Announcement.
 

@@ -8,7 +8,6 @@ type: "fixed"
 
 <div class="badge" id="store-framework">Store Framework</div>
 
-
-Shopping experience was being harmed because of the unexpected extra time needed to redirect users to the Minicart once the `Add to cart` button was clicked on. 
+Shopping experience was being harmed because of the unexpected extra time needed to redirect users to the Minicart once the `Add to cart` button was clicked on.
 
 [Our wonderful team deployed a series of performance fixes and small improvements](https://github.com/vtex-apps/add-to-cart-button/pull/50), such as adding a native loading bar to the page, in order to enhance navigation during the shopping experience!

@@ -13,6 +13,7 @@ The app is only available for stores developed using [VTEX IO](https://vtex.com/
 The **Assembly Options** app enables an interface to set up and manage customization options, illustrated below. This experience aims to offer an alternative to the manual configuration available through **Catalog > Attachments** using a specific syntax.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/906f8aa-assembly-options-app-en_14.PNG)
+
 You can install it for free from the [VTEX App Store](https://apps.vtex.com/vtex-admin-assembly-options/p) or using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), following the steps in the [Assembly Options app](https://developers.vtex.com/vtex-developer-docs/docs/assembly-options-app) guide. After the installation, the **Products > Assembly options** page becomes available on VTEX Admin.
 
 For more details about how to use the new page, read the [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) user guide.

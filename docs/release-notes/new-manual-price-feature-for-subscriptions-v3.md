@@ -27,26 +27,14 @@ We also added these properties to the following endpoints:
     <tbody>
         <tr>
             <td><code class="rdmd-code lang- theme-light">manualPriceAllowed</code></td>
-            <td rowspan="2"><span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span>
-                <a href="https: //developers.vtex.com/vtex-rest-api/reference/getsettings-1" target="_blank"
-                    rel="noopener noreferrer">Get Subscription Settings</a> <br><br><span
-                        class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span>
-                    <a href="https: //developers.vtex.com/vtex-rest-api/reference/editsettings-1" target="_blank"
-                        rel="noopener noreferrer">Edit Subscription Settings</a>
-            </td>
+            <td rowspan="2"><span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span><a href="https: //developers.vtex.com/vtex-rest-api/reference/getsettings-1" target="_blank" rel="noopener noreferrer">Get Subscription Settings</a> <br><br><span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span><a href="https: //developers.vtex.com/vtex-rest-api/reference/editsettings-1" target="_blank" rel="noopener noreferrer">Edit Subscription Settings</a></td>
         </tr>
         <tr>
             <td><code class="rdmd-code lang- theme-light">useItemPriceFromOriginalOrder</code></td>
         </tr>
         <tr>
             <td><code class="rdmd-code lang- theme-light">manualPrice</code></td>
-            <td><span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span>
-                <a href="https://developers.vtex.com/vtex-rest-api/reference/post_api-rns-pub-subscriptions-id-items" target="_blank"
-                    rel="noopener noreferrer">Add item to subscription</a> <br><span
-                        class="APIMethod APIMethod_fixedWidth APIMethod_patch">patch</span>
-                    <a href="https://developers.vtex.com/vtex-rest-api/reference/patch_api-rns-pub-subscriptions-id-items-itemid" target="_blank"
-                        rel="noopener noreferrer">Edit item on subscription</a>
-            </td>
+            <td><span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/post_api-rns-pub-subscriptions-id-items" target="_blank" rel="noopener noreferrer">Add item to subscription</a> <br> <span class="APIMethod APIMethod_fixedWidth APIMethod_patch">patch</span><a href="https://developers.vtex.com/vtex-rest-api/reference/patch_api-rns-pub-subscriptions-id-items-itemid" target="_blank" rel="noopener noreferrer">Edit item on subscription</a></td>
         </tr>
     </tbody>
 </table>
@@ -83,35 +71,15 @@ We also added these properties to the following endpoints:
     </thead>
     <tbody>
         <tr>
-            <td><code class="rdmd-code lang- theme-light" data-lang=""
-                    name="">manualPriceAllowed</code>
-            </td>
-            <td rowspan="2">
-                <span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span> <a
-                    href="https://developers.vtex.com/vtex-rest-api/reference/getsettings-1" target="_blank"
-                    rel="noopener noreferrer">Get Subscription Settings</a> <br><br>
-                <span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> <a
-                    href="https://developers.vtex.com/vtex-rest-api/reference/editsettings-1" target="_blank"
-                    rel="noopener noreferrer">Edit Subscription Settings</a>
-            </td>
+            <td><code class="rdmd-code lang- theme-light" data-lang="" name="">manualPriceAllowed</code></td>
+            <td rowspan="2"><span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/getsettings-1" target="_blank" rel="noopener noreferrer">Get Subscription Settings</a> </br></br><span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/editsettings-1" target="_blank" rel="noopener noreferrer">Edit Subscription Settings</a></td>
         </tr>
         <tr>
-            <td><code class="rdmd-code lang- theme-light" data-lang=""
-                    name="">useItemPriceFromOriginalOrder</code>
-            </td>
+            <td><code class="rdmd-code lang- theme-light" data-lang="" name="">useItemPriceFromOriginalOrder</code></td>
         </tr>
         <tr>
-            <td><code class="rdmd-code lang- theme-light" data-lang=""
-                    name="">manualPrice</code>
-            </td>
-            <td>
-                <span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> <a
-                    href="https://developers.vtex.com/vtex-rest-api/reference/post_api-rns-pub-subscriptions-id-items"
-                    target="_blank" rel="noopener noreferrer">Add item to subscription</a> <br>
-                <span class="APIMethod APIMethod_fixedWidth APIMethod_patch">patch</span> <a
-                    href="https://developers.vtex.com/vtex-rest-api/reference/patch_api-rns-pub-subscriptions-id-items-itemid"
-                    target="_blank" rel="noopener noreferrer">Edit item on subscription</a>
-            </td>
+            <td><code class="rdmd-code lang- theme-light" data-lang="" name="">manualPrice</code></td>
+            <td><span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/post_api-rns-pub-subscriptions-id-items" target="_blank" rel="noopener noreferrer">Add item to subscription</a> </br> <span class="APIMethod APIMethod_fixedWidth APIMethod_patch">patch</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/patch_api-rns-pub-subscriptions-id-items-itemid" target="_blank" rel="noopener noreferrer">Edit item on subscription</a></td>
         </tr>
     </tbody>
 </table>

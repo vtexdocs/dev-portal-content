@@ -10,4 +10,4 @@ In compliance with regulations that promote the preservation and protection of c
 
 This feature displays a checkbox on the Checkout screen for the user to decide if they want the store to keep their personal and payment details for future purchases.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/7478654-Save_user_data_-_EN_12.PNG)
+![Save user data](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/7478654-Save_user_data_-_EN_12.PNG)

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![](https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![](https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
 
 Aiming to strengthen the security of our development process, published apps will now have to wait 7 minutes until they become able to be deployed.
 

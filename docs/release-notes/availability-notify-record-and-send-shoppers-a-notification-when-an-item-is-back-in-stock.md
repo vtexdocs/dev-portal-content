@@ -7,11 +7,7 @@ type: "added"
 ---
 
 <div class="badge" id="vtex-io">VTEX IO</div>
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
+
 The Availability Notify app shows a subscription form when a product SKU is unavailable. The form lets customers subscribe to get notified when that item gets restocked.
 
 ![store-notifier](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/132012045-06c65073-2692-4827-b08a-7be5730b6422_17.png)
