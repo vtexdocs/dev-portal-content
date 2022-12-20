@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+<span class="badge" id="vtex-io">VTEX IO</span>
 
 We have added the documentation [Homologation requirements for the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Following the guidelines described on it, you guarantee a baseline standard of quality, viability, and usability for the app available for VTEX stores and succeed in the homologation process.
 
