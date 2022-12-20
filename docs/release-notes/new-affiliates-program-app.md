@@ -5,6 +5,7 @@ type: "added"
 createdAt: "2022-10-14T17:02:16.829Z"
 hidden: false
 ---
+
 We have launched the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate.
 
 <br>
@@ -16,7 +17,7 @@ We have launched the [Affiliates Program app](https://developers.vtex.com/vtex-d
 [/block]
 <br>
 
-> The **Affiliates Program app** is compatible only with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), and it is not available for stores using [Legacy CMS](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS](https://faststore.dev/tutorials/cms/0#vtex-headless-cms). 
+> The **Affiliates Program app** is compatible only with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), and it is not available for stores using [Legacy CMS](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS](https://faststore.dev/tutorials/cms/0#vtex-headless-cms).
 
 <br>
 
@@ -26,51 +27,23 @@ The app also provides a profile page and dashboard for the affiliates to keep tr
 
 <br>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4502082-affiliate-profile-page.png",
-        "affiliate-profile-page.png",
-        3580,
-        1084,
-        "#000000"
-      ],
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/4502082-affiliate-profile-page_29.png)
+
 <br>
 
-After [installing the app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app#installation) in your VTEX store, three new pages will be available in VTEX Admin, under _Other > Affiliates_:
+After [installing the app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app#installation) in your VTEX store, three new pages will be available in VTEX Admin, under *Other > Affiliates*:
 
 - Affiliate Management
 - Orders Management
-- Commissions Management 
+- Commissions Management
 
-> If using the [New VTEX Admin](https://content.vtex.com/join-new-admin-beta-program-en/), the pages will be under _Apps > Affiliates_.
+> If using the [New VTEX Admin](https://content.vtex.com/join-new-admin-beta-program-en/), the pages will be under *Apps > Affiliates*.
 
 On these pages, you can manage everything related to your affiliates, making use of multiple filters and exporting data via email. They look like the example below:
 
 <br>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/be138ce-affiliates_program_app.gif",
-        "affiliates_program_app.gif",
-        1355,
-        579,
-        "#000000"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/be138ce-affiliates_program_app_45.gif)
 
 <br>
 

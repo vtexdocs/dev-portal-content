@@ -5,6 +5,7 @@ type: "added"
 createdAt: "2022-09-16T13:36:04.922Z"
 hidden: false
 ---
+
 <div class="badge" id="vtex-io">VTEX IO</div>
 
 The [Gift List app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-gift-list) offers a new environment in the store where shoppers can create, manage and share gift lists.
@@ -37,121 +38,16 @@ And the guests can:
 You can install the app from the [App Store](https://apps.vtex.com/vtex-list/p). To learn more about the app and implement it in your store, please refer to its [technical documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-gift-list).
 
 You can see below some images of the Gift List environment in a store:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5e2dd04-image5.png",
-        "image5.png",
-        1679,
-        836,
-        "#000000"
-      ],
-      "caption": "Gift List environment"
-    }
-  ]
-}
-[/block]
+![Gift List environment](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/5e2dd04-image5_40.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e546825-image2.png",
-        "image2.png",
-        787,
-        248,
-        "#000000"
-      ],
-      "caption": "Section with the created lists and button to create a new list"
-    }
-  ]
-}
-[/block]
+![Section with the created lists and button to create a new list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/e546825-image2_42.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d65232e-image3.png",
-        "image3.png",
-        517,
-        457,
-        "#000000"
-      ],
-      "caption": "Section with the wallet (gift card)"
-    }
-  ]
-}
-[/block]
+![Section with the wallet (gift card)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/d65232e-image3_44.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/eb7b37e-image1.png",
-        "image1.png",
-        557,
-        454,
-        "#000000"
-      ],
-      "caption": "Window to create a new list"
-    }
-  ]
-}
-[/block]
+![Window to create a new list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/eb7b37e-image1_46.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8346a07-image4.png",
-        "image4.png",
-        1745,
-        771,
-        "#000000"
-      ],
-      "caption": "Page to manage the items on the list"
-    }
-  ]
-}
-[/block]
+![Page to manage the items on the list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/8346a07-image4_48.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4172bf6-image6.png",
-        "image6.png",
-        1732,
-        768,
-        "#000000"
-      ],
-      "caption": "Shared gift list where a guest can choose to gift items"
-    }
-  ]
-}
-[/block]
+![Shared gift list where a guest can choose to gift items](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/4172bf6-image6_50.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/fb8839c-image7.png",
-        "image7.png",
-        797,
-        554,
-        "#000000"
-      ],
-      "caption": "Summary of the checkout with the message"
-    }
-  ]
-}
-[/block]
+![Summary of the checkout with the message](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/fb8839c-image7_52.png)
