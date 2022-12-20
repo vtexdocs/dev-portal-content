@@ -1,9 +1,9 @@
 ---
-title: "Set up catalog"
-slug: "erp-integration-set-up-catalog"
+title: Set up catalog
+slug: erp-integration-set-up-catalog
 hidden: false
-createdAt: "2020-03-11T20:58:09.345Z"
-updatedAt: "2022-05-04T13:47:44.670Z"
+createdAt: 2020-03-11T20:58:09.345Z
+updatedAt: 2022-05-04T13:47:44.670Z
 ---
 In this step, we give you an overview of how to prepare your catalog structure to receive all of your products.
 [block:callout]
