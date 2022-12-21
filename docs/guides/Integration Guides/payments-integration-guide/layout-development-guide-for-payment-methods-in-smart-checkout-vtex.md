@@ -154,6 +154,7 @@ To deliver the code (which is a repository of the Payment Mocker containing all 
   "body": "You must delete any additionally files or folders created during the compilation process of the project, such as, the folder _node_modules_ or file _yarn.lock_ (e.g. for those use yarn package manager)."
 }
 [/block]
+
 ## Layout Example
 
 See below an example of layout and language switching ([Brastemp](http://loja.brastemp.com.br/)) for payment methods located in VTEX's Smart Checkout payment methods.

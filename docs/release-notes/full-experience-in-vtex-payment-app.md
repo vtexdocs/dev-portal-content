@@ -6,7 +6,7 @@ hidden: true
 type: "improved"
 ---
 
-<span class="badge" id="VTEX-Payment-for-physical-stores"> VTEX Payment for Physical Stores</span>
+![Payments](https://img.shields.io/badge/-Payments-blueviolet)
 
 The VTEX Payment for physical solutions integrates the VTEX Payment app to point of sales' payment devices. Frequently, our clients use inStore - VTEX Omnichannel solution - to operates this dynamic.
 

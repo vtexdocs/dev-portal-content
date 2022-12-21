@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 If there is one thing that everyone dreams about is performance optimization! With that in mind, the VTEX IO team has prepared a bunch of new configs for you, such as *Fetching filters partially* and *Improving download speed with CSS concatenation*. 
 

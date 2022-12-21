@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="notification">Marketplace API</span>
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
 
 We added two new endpoints to the Marketplace APIs:
 

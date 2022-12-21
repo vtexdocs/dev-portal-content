@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="notification">Marketplace API</span>  
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
 
 We have improved our Marketplace API documentation on the following endpoints:
 

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="vtex-io">VTEX IO</span>
+![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
 
 The VTEX IO team has finally made it possible to warp time exactly as those kids from Dark did in order to deploy your hotfixes in less than 7 minutes! 
 

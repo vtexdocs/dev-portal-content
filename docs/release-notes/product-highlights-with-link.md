@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 It is now possible to add a link to the Product Highlight's string text thanks to the new `link` prop of the `product-highlight-text` block.
 

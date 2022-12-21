@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 A new block responsible for rendering an upload button on store forms is among us: let's welcome the `form-input.upload`! 
 

@@ -6,6 +6,6 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The [Power Review app](https://vtex.io/docs/components/pixel/vtex.powerreviews/) now properly works with international stores! When globalizing your brand, no longer worry about user reviews: from this release on, they are fetched, translated, and displayed according to the store locale set by users.

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 A new Zendesk's chat button was developed to lazy-load the default and heavier one provided by the solution. 
 

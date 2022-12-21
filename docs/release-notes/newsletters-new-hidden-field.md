@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The [Store Newsletter app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-newsletter) has now a new block: the `newsletter-hidden-field`!
 

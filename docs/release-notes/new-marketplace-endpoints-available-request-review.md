@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="suggestions-api">Marketplace API</span>
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
 
 We have just launched new endpoints in our Marketplace API, that allow marketplace operators to ask sellers to review their SKUs, before approving them to their catalog and also retrieve inventory levels and price values of the already matched suggestions in their catalog.
 

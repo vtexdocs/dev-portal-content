@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The Condition Layout as we know was remodeled in order to achieve a clearer logic when setting the conditions to build your store's layout.
 

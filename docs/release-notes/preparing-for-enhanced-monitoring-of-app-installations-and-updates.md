@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="vtex-io">VTEX IO</span>
+![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
 
 If you are a developer using our [toolbelt](doc:vtex-io-documentation-toolbelt) on a daily basis, you may have noticed a new app called `app-install-monitor` when [listing an account’s apps](doc:vtex-io-documentation-listing-an-accounts-apps). 
 

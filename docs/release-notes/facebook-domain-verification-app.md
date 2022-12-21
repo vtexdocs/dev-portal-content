@@ -6,7 +6,7 @@ hidden: true
 type: "added"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The Facebook Domain Verification adds to your homepage's `<head>` section a meta-tag containing the Facebook verification code, which is used by Facebook for checking your website accountability.
 

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="vtex-io">VTEX IO</span>
+![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
 
 Shall we talk about *SEO* now? Your store's Sitemap can now be extended by other apps, meaning new files can now be natively added to the Sitemap's root XML. 
 

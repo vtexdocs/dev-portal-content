@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The product specification value, rendered by the [Product Specification app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-specifications), now processes HTML code, enabling a better migration from CMS to the VTEX IO platform!
 [block:callout]

@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Display a newsletter subscription form for your store users using the [Store Newsletter app](https://vtex.io/docs/components/all/vtex.store-newsletter/)!
 

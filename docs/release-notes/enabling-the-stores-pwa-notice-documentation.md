@@ -6,7 +6,7 @@ hidden: false
 type: "removed"
 ---
 
-<span class="badge" id="vtex-io">VTEX IO</span>
+![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
 [block:html]
 {
   "html": "<br>"

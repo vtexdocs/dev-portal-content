@@ -6,6 +6,6 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="suggestions-api">Suggestions API</span>
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
 
 We added a new endpoint to the [Suggestions](https://developers.vtex.com/reference/match-received-skus#matchmultiple) API, so that marketplace operators can bulk match received SKUs from their sellers. Now you can match up to 25 items per call, while the previous endpoint only allowed single items to be matched.  Both endpoints will be available and maintained. This improvement provides faster operations for stores that rely on manual SKU approval.

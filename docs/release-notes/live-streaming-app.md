@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 > ℹ️ The Live Streaming app is now known as [the Live Shopping app](https://apps.vtex.com/liveshopping/p).
 

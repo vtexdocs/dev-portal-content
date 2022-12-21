@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-<span class="badge" id="suggestions-api">Marketplace API</span>
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
 
 We have published 17 new endpoints in our Dev Portal, composing our new Seller Management API! They allow marketplace operators to invite, onboard and retrieve information from their sellers.
 

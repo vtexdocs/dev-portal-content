@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Shopping experience was being harmed because of the unexpected extra time needed to redirect users to the Minicart once the `Add to cart` button was clicked on.
 

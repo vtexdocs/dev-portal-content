@@ -6,6 +6,6 @@ hidden: false
 type: "fixed"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The `addToCart` event was displaying misleading data on product prices, harming Facebook tracking tools. [The bug was quickly fixed](https://github.com/vtex-apps/facebook-pixel/pull/16) and the currency values are now fetched as they ought to be!

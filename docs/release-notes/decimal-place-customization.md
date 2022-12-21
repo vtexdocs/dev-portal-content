@@ -6,6 +6,6 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Customization is power and we do know that! CSS Handles were added to the product price's decimal places, allowing you to display them half a character above the normal line, and/or in a smaller font.

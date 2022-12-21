@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Error messages were added to the Store Form app in order to warn developers whenever the JSON schema was invalid, i.e. built with an inaccurate structure! 
 

@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="payment-provider-protocol">Payment  Provider Protocol</span>
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
 
 Our [Payment Provider Protocol](https://developers.vtex.com/reference/payment-provider-protocol-api-overview) was extended to make it easier to include payments in installments in your provider implementation.
 

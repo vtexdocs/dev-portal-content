@@ -6,7 +6,7 @@ hidden: true
 type: "added"
 ---
 
-<span class="badge" id="instore">inStore</span>
+![inStore](https://img.shields.io/badge/-inStore-yellow)
 
 We have added documentation explaning how to customize the inStore experience according to your business needs.
 

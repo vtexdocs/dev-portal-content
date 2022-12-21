@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 It ain't Christmas yet, but this one surely will make you feel gifted: a new improvement in the [`product-context`](https://github.com/vtex-apps/product-context)' types has enabled the auto-complete feature when declaring the desired app's properties.
 

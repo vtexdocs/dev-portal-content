@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Before this release, adding the same product to the cart multiple times were kind of a big challenge for users. Due to an error message ( `Item already on cart` ) displayed whenever the `Add to cart` button was clicked on more the once,  users were being blocked from having a smooth experience of shopping.
 

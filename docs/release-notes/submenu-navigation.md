@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Opened submenus are now natively closed whenever another submenu is clicked/hovered on. Previously, the shift between submenus was so fluid that users were not able to notice when content changed - now that's what I call a smooth experience!
 

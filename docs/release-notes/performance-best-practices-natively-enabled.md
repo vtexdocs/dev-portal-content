@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<span class="badge" id="vtex-io">VTEX IO</span>
+![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
 
  If performance improvements are great and loved by everyone, shouldn't they be natively enabled? The VTEX IO team thinks the answer to that is a resounding yes! 
 

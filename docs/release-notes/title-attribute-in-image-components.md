@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-<span class="badge" id="store-framework">Store Framework</span>
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The title attribute was missing in store images due to the fact it was linked to the incorrect HTML element when the components were rendered - `a` instead of `img`.
 
