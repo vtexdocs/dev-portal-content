@@ -22,7 +22,7 @@ In synchronous integration, VTEX’s Checkout API triggers and sends a request t
 
 Synchronous tax integration can be activated or deactivated through a request to the Checkout Configuration API.
 
-<img src="https://appliancetheme.vtexassets.com/assets/app/src/tax-protocol-image-2___28abb75b71aba103910c818a4fd037a5.svg"></img>
+<img src="https://appliancetheme.vtexassets.com/assets/app/src/tax-protocol-image-2___28abb75b71aba103910c818a4fd037a5.svg"/>
 
 First, it is necessary to GET the current `orderForm` settings from this endpoint:
 

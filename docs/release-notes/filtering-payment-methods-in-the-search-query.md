@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 Thanks to two new props, namely `includedPaymentSystems`  and `excludedPaymentSystems`, it finally became possible to define in the search query which payment methods should and should not be taken into account when displaying the installment options to users. 
 

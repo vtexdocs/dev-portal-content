@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="payment-provider-protocol">Payment  Provider Protocol</div>
+<span class="badge" id="payment-provider-protocol">Payment  Provider Protocol</span>
 
 Our [Payment Provider Protocol](https://developers.vtex.com/reference/payment-provider-protocol-api-overview) was extended to make it easier to include payments in installments in your provider implementation.
 

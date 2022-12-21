@@ -11,7 +11,8 @@ According to your operating system, take the respective steps to install VTEX IO
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
-<br>
+  
+</br>
 
 - **Brew**
 
@@ -30,12 +31,12 @@ According to your operating system, take the respective steps to install VTEX IO
   brew install vtex
   ```
 
-<br>
+</br>
 </details>
 
 <details>
   <summary><span class="fa fa-linux">&nbsp;</span>Linux</summary>
-<br>
+</br>
 
 - **Tarball**
 
@@ -47,12 +48,12 @@ According to your operating system, take the respective steps to install VTEX IO
   curl -L https://vtex.io/vtexcli/install | sh
   ```
 
-<br>
+</br>
 </details>
 
 <details>
   <summary><span class="fa fa-windows">&nbsp;</span>Windows</summary>
-<br>
+</br>
 
 - **Installer for Windows**
 
@@ -71,7 +72,7 @@ According to your operating system, take the respective steps to install VTEX IO
 
   For the next step, you won't need to be in your admin role.
 
-<br>
+</br>
 </details>
 
 ## Installing the CLI via NPM
@@ -82,7 +83,7 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
-  <br>
+  </br>
 
   1. Install **Homebrew** by following the instructions on [**Homebrew website**](https://brew.sh/index).
 
@@ -106,12 +107,12 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
   yarn global add vtex
   ```
 
-<br>
+</br>
 </details>
 
 <details>
   <summary><span class="fa fa-linux">&nbsp;</span>Linux</summary>
-<br>
+</br>
 
   1. Install **Node.js** by running the following command.
 
@@ -126,12 +127,12 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
   sudo yarn global add vtex
   ```
 
-<br>
+</br>
 </details>
 
 <details>
   <summary><span class="fa fa-windows">&nbsp;</span>Windows</summary>
-<br>
+</br>
 
   1. Download and install [**Node.js**](https://nodejs.org/pt-br/download/).
   2. Download and install [**Yarn**](https://classic.yarnpkg.com/en/docs/getting-started).
@@ -154,7 +155,7 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
 
   For the next step, you won't need to be in your admin role.
 
-<br>
+</br>
 </details>
 
 ## Verifying the installation
@@ -175,7 +176,7 @@ If the problem persists, check the following instructions.
 
 <details>
   <summary><code>Error: Cannot find module 'vtex'</code></summary>
-  <br>
+  </br>
 
 This error is related to [plugins](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-vtex-io-cli-plugins) detached from the VTEX IO's CLI base code.
 

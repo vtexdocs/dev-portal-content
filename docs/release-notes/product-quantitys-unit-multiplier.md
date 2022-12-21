@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 Previously, the VTEX Styleguide's unit multiplier, used by other storefront components such as the [Product Quantity](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-quantity), was not accepting inputs of any values other than 1.
 

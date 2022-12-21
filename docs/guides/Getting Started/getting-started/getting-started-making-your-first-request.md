@@ -21,8 +21,8 @@ If you received a `200 OK` response, congratulations on your first successful re
 
 ## Using Postman
 
-Our API reference documentation is built using the <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md" target="_blank">Open API 3.0 (OAS 3.0)</a> standard. The OAS 3.0 schemas are available for <a href="https://github.com/vtex/openapi-schemas" target="_blank">download</a> in our GitHub repository.
+Our API reference documentation is built using the [Open API 3.0 (OAS 3.0)](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) standard. The OAS 3.0 schemas are available for [download](https://github.com/vtex/openapi-schemas) in our GitHub repository.
 
 ![Download ZIP](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/getting-started/BT9IRsX_52_25.png)
 
-You can import our API endpoints to <a href="https://www.postman.com/product/api-client/">Postman</a> by downloading the JSON schemas you are interested in and following <a href="https://learning.postman.com/docs/postman/collections/working-with-openAPI" target="_blank">these instructions</a>.
+You can import our API endpoints to [Postman](https://www.postman.com/product/api-client/) by downloading the JSON schemas you are interested in and following [these instructions](https://learning.postman.com/docs/postman/collections/working-with-openAPI).

@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 A new block responsible for rendering an upload button on store forms is among us: let's welcome the `form-input.upload`! 
 

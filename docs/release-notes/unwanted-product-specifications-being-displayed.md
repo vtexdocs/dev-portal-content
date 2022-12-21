@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 Although we have a checkbox in the Catalog module to set whether a specification should be displayed on the product details page or not, this info was not properly handled in our Product Specifications component. 
 

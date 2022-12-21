@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 A new Zendesk's chat button was developed to lazy-load the default and heavier one provided by the solution. 
 

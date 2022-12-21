@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+<span class="badge" id="vtex-io">VTEX IO</span>
 
 It's what I always say: If it contains performance improvements, then we can call it a good VTEX IO Release Notes! Glad to say that our team has worked really hard on CSS and GraphQL query optimizations and that these are already natively enabled in your store. 
 

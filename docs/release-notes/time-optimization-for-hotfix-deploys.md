@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+<span class="badge" id="vtex-io">VTEX IO</span>
 
 The VTEX IO team has finally made it possible to warp time exactly as those kids from Dark did in order to deploy your hotfixes in less than 7 minutes! 
 

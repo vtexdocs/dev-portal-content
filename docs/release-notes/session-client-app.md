@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+<span class="badge" id="vtex-io">VTEX IO</span>
 
 The new Session Client app provides React hooks and GraphQL query and mutation for your React components to read and update the [VTEX Session cookie](https://help.vtex.com/en/tutorial/vtex-session-sessions-system-overview--6C4Edou6bYqqEAOCAg2MQQ).
 [block:callout]

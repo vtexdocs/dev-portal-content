@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 It is now possible to add a link to the Product Highlight's string text thanks to the new `link` prop of the `product-highlight-text` block.
 

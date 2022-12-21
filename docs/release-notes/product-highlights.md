@@ -6,6 +6,6 @@ hidden: false
 type: "fixed"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 The Product Highlights app misunderstood its concept and was displaying *all* collections as highlighted in the store. The undesired behavior was properly [fixed](https://github.com/vtex-apps/product-highlights/pull/4), with the component now only displaying collections that have the highlight feature turned on!

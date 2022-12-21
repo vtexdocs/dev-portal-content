@@ -43,17 +43,12 @@ Rewriter includes functionalities to:
 <tr>
 <td colspan="1" valign="top"><strong>redirect</strong></td>
 <td valign="top"><a href="#queryredirect">QueryRedirect</a>!</td>
-<td>
-Provides <i>redirect</i> routes data.
-<br>Redirect routes are used to redirect a route from one path to another.
-</td>
+<td>Provides <i>redirect</i> routes data.</br>Redirect routes are used to redirect a route from one path to another.</td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>internal</strong></td>
 <td valign="top"><a href="#queryinternal">QueryInternal</a>!</td>
-<td>
-Provides <i>internal</i> routes data.<br>Internal routes are navigation routes.
-</td>
+<td>Provides <i>internal</i> routes data.</br>Internal routes are navigation routes.</td>
 </tr>
 </tbody>
 </table>
@@ -77,13 +72,13 @@ Provides <i>internal</i> routes data.<br>Internal routes are navigation routes.
 <td colspan="1" valign="top"><strong>redirect</strong></td>
 <td valign="top"><a href="#mutateredirect">MutateRedirect</a>!</td>
 <td>Updates or deletes <i>redirect</i> routes data according to the provided arguments.
-<br>Redirect routes are used to redirect a route from one path to another.</td>
+</br>Redirect routes are used to redirect a route from one path to another.</td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>internal</strong></td>
 <td valign="top"><a href="#mutateinternal">MutateInternal</a>!</td>
 <td>Updates or deletes <i>internal</i> routes data according to the provided arguments.
-<br>Internal routes are navigation routes.</td>
+</br>Internal routes are navigation routes.</td>
 </tr>
 </tbody>
 </table>
@@ -98,105 +93,102 @@ Provides <i>internal</i> routes data.<br>Internal routes are navigation routes.
 ## QueryRedirect
 
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">(argument)</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>get</strong></td>
-<td valign="top"><a href="#redirect">Redirect</a></td>
-<td valign="top">Returns information regarding a specific redirect route, given its related <i>path</i> and <i>locator</i>.
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">path</td>
-<td valign="top"><strong>String!</strong></td>
-<td>The path of the desired route to fetch data.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">locator</td>
-<td valign="top"><a href="#routelocator">RouteLocator</a></td>
-<td>The <i>RouteLocator</i>  object, containing information about the store locale and route origin.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>listRedirects</strong></td>
-<td valign="top"><a href="#listredirectsresponse">ListRedirectsResponse</a>!</td>
-<td>Lists all redirect routes.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top" align="right">limit</td>
-<td valign="top">Int</td>
-<td>The number of <i>ListRedirectsResponse</i> objects to be displayed at once.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top" align="right">next</td>
-<td valign="top">String</td>
-<td>The argument used to fetch more internal routes from <i>ListRedirectsResponse</i>.<br>It must be empty in the first query and, in the following, filled in with the string previously obtained from the <i>ListRedirectsResponse</i> object.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">(argument)</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>get</strong></td>
+            <td valign="top"><a href="#redirect">Redirect</a></td>
+            <td valign="top">Returns information regarding a specific redirect route, given its related <i>path</i> and <i>locator</i>.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">path</td>
+            <td valign="top"><strong>String!</strong></td>
+            <td>The path of the desired route to fetch data.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">locator</td>
+            <td valign="top"><a href="#routelocator">RouteLocator</a></td>
+            <td>The <i>RouteLocator</i> object, containing information about the store locale and route origin.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>listRedirects</strong></td>
+            <td valign="top"><a href="#listredirectsresponse">ListRedirectsResponse</a>!</td>
+            <td>Lists all redirect routes.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top" align="right">limit</td>
+            <td valign="top">Int</td>
+            <td>The number of <i>ListRedirectsResponse</i> objects to be displayed at once.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top" align="right">next</td>
+            <td valign="top">String</td>
+            <td>The argument used to fetch more internal routes from <i>ListRedirectsResponse</i>.</br>It must be empty in the first query and, in the following, filled in with the string previously obtained from the <i>ListRedirectsResponse</i> object.</td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#query">Query</a> 🔼</div>
 
 ## QueryInternal
-
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">(argument)</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>get</strong></td>
-<td valign="top"><a href="#internal">Internal</a></td>
-<td>Returns information regarding a specific internal route, given its related <i>path</i> and <i>locator</i>.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">path</td>
-<td valign="top">String!</td>
-<td>
-The path of the desired route to fetch data.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">locator</td>
-<td valign="top"><a href="#routelocator">RouteLocator</a></td>
-<td>The <i>RouteLocator</i> object, containing information about the store locale and route origin.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>listInternals</strong></td>
-<td valign="top"><a href="#listinternalsresponse">ListInternalsResponse</a>!</td>
-<td>Lists all internal routes.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">limit</td>
-<td valign="top">Int</td>
-<td>The number of <i>ListInternalsResponse</i> objects to be displayed at once.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">next</td>
-<td valign="top">String</td>
-<td>The argument used to fetch more internal routes from <i>ListInternalsResponse</i>.<br>It must be empty in the first query and, in the following, filled in with the string previously obtained from the <i>ListInternalsResponse</i> object.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>routes</strong></td>
-<td valign="top">[<a href="#routesbybinding">RoutesByBinding</a>!]</td>
-<td>Lists all internal routes of a specific type (e.g. deparment routes, category routes, etc.) and its related <i>binding</i>, which is an identifier for each store locale.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">locator</td>
-<td valign="top"><a href="#entitylocator">EntityLocator</a></td>
-<td>The <i>EntityLocator</i> object, containing information about the entity type of the routes to be listed.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">(argument)</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>get</strong></td>
+            <td valign="top"><a href="#internal">Internal</a></td>
+            <td>Returns information regarding a specific internal route, given its related <i>path</i> and <i>locator</i></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">path</td>
+            <td valign="top">String!</td>
+            <td>The path of the desired route to fetch data.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">locator</td>
+            <td valign="top"><a href="#routelocator">RouteLocator</a></td>
+            <td>The <i>RouteLocator</i> object, containing information about the store locale and route origin.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>listInternals</strong></td>
+            <td valign="top"><a href="#listinternalsresponse">ListInternalsResponse</a>!</td>
+            <td>Lists all internal routes.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">limit</td>
+            <td valign="top">Int</td>
+            <td>The number of <i>ListInternalsResponse</i> objects to be displayed at once.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">next</td>
+            <td valign="top">String</td>
+            <td>The argument used to fetch more internal routes from <i>ListInternalsResponse</i>.</br>It must be empty in the first query and, in the following, filled in with the string previously obtained from the <i>ListInternalsResponse</i> object.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>routes</strong></td>
+            <td valign="top">[<a href="#routesbybinding">RoutesByBinding</a>!]</td>
+            <td>Lists all internal routes of a specific type (e.g. deparment routes, category routes, etc.) and its related <i>binding</i>, which is an identifier for each store locale.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">locator</td>
+            <td valign="top"><a href="#entitylocator">EntityLocator</a></td>
+            <td>The <i>EntityLocator</i> object, containing information about the entity type of the routes to be listed.</td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#query">Query</a> 🔼</div>
@@ -204,68 +196,67 @@ The path of the desired route to fetch data.</td>
 ## MutateRedirect
 
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">(argument)</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>save</strong></td>
-<td valign="top"><a href="#redirect">Redirect</a></td>
-<td>Creates or updates a redirect route according to the provided arguments.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">route</td>
-<td valign="top"><a href="#redirectinput">RedirectInput</a>!</td>
-<td>The data regarding the redirect route to be created or updated.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>saveMany</strong></td>
-<td valign="top">Boolean!</td>
-<td>Creates or updates many redirect routes according to the provided arguments.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">routes</td>
-<td valign="top">[<a href="#redirectinput">RedirectInput</a>!]!</td>
-<td>The data regarding the redirect routes to be created or updated.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>delete</strong></td>
-<td valign="top"><a href="#redirect">Redirect</a></td>
-<td>Deletes a redirect route according to the provided arguments.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">path</td>
-<td valign="top">String!</td>
-<td>
-The path of the route to be deleted.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">locator</td>
-<td valign="top"><a href="#routelocator">RouteLocator</a></td>
-<td>The <i>EntityLocator</i> object, containing information about the entity type of the route to be deleted.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteMany</strong></td>
-<td valign="top">Boolean!</td>
-<td>Deletes many redirect route according to the provided arguments.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">paths</td>
-<td valign="top">[String!]!</td>
-<td>
-The paths of the routes to be deleted.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">locators</td>
-<td valign="top">[<a href="#routelocator">RouteLocator</a>!]</td>
-<td>The <i>EntityLocator</i> objects, containing information about the entity type of the routes to be deleted.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">(argument)</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>save</strong></td>
+            <td valign="top"><a href="#redirect">Redirect</a></td>
+            <td>Creates or updates a redirect route according to the provided arguments.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">route</td>
+            <td valign="top"><a href="#redirectinput">RedirectInput</a>!</td>
+            <td>The data regarding the redirect route to be created or updated.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>saveMany</strong></td>
+            <td valign="top">Boolean!</td>
+            <td>Creates or updates many redirect routes according to the provided arguments.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">routes</td>
+            <td valign="top">[<a href="#redirectinput">RedirectInput</a>!]!</td>
+            <td>The data regarding the redirect routes to be created or updated.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>delete</strong></td>
+            <td valign="top"><a href="#redirect">Redirect</a></td>
+            <td>Deletes a redirect route according to the provided arguments.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">path</td>
+            <td valign="top">String!</td>
+            <td>The path of the route to be deleted.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">locator</td>
+            <td valign="top"><a href="#routelocator">RouteLocator</a></td>
+            <td>The <i>EntityLocator</i> object, containing information about the entity type of the route to be deleted.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>deleteMany</strong></td>
+            <td valign="top">Boolean!</td>
+            <td>Deletes many redirect route according to the provided arguments.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">paths</td>
+            <td valign="top">[String!]!</td>
+            <td>
+                The paths of the routes to be deleted.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">locators</td>
+            <td valign="top">[<a href="#routelocator">RouteLocator</a>!]</td>
+            <td>The <i>EntityLocator</i> objects, containing information about the entity type of the routes to be deleted.</td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#mutation">Mutation</a> 🔼</div>
@@ -273,68 +264,67 @@ The paths of the routes to be deleted.</td>
 ## MutateInternal
 
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">(argument)</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>save</strong></td>
-<td valign="top"><a href="#internal">Internal</a></td>
-<td>Creates or updates an internal route according to the provided arguments.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">route</td>
-<td valign="top"><a href="#internalinput">InternalInput</a>!</td>
-<td>The data regarding the internal route to be created or updated.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>saveMany</strong></td>
-<td valign="top">Boolean!</td>
-<td>Creates or updates many internal routes according to the provided arguments.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">routes</td>
-<td valign="top">[<a href="#internalinput">InternalInput</a>!]!</td>
-<td>The data regarding the internal routes to be created or updated.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>delete</strong></td>
-<td valign="top"><a href="#internal">Internal</a></td>
-<td>Deletes an internal route according to the provided arguments.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">path</td>
-<td valign="top">String!</td>
-<td>
-The path of the route to be deleted.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">locator</td>
-<td valign="top"><a href="#routelocator">RouteLocator</a></td>
-<td>The <i>EntityLocator</i> object, containing information about the entity type of the route to be deleted.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteMany</strong></td>
-<td valign="top">Boolean!</td>
-<td>Deletes many internal routes according to the provided arguments.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">paths</td>
-<td valign="top">[String!]!</td>
-<td>
-The paths of the routes to be deleted.</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">locators</td>
-<td valign="top">[<a href="#routelocator">RouteLocator</a>!]</td>
-<td>The <i>EntityLocator</i> objects, containing information about the entity type of the routes to be deleted.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">(argument)</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>save</strong></td>
+            <td valign="top"><a href="#internal">Internal</a></td>
+            <td>Creates or updates an internal route according to the provided arguments.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">route</td>
+            <td valign="top"><a href="#internalinput">InternalInput</a>!</td>
+            <td>The data regarding the internal route to be created or updated.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>saveMany</strong></td>
+            <td valign="top">Boolean!</td>
+            <td>Creates or updates many internal routes according to the provided arguments.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">routes</td>
+            <td valign="top">[<a href="#internalinput">InternalInput</a>!]!</td>
+            <td>The data regarding the internal routes to be created or updated.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>delete</strong></td>
+            <td valign="top"><a href="#internal">Internal</a></td>
+            <td>Deletes an internal route according to the provided arguments.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">path</td>
+            <td valign="top">String!</td>
+            <td>
+                The path of the route to be deleted.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">locator</td>
+            <td valign="top"><a href="#routelocator">RouteLocator</a></td>
+            <td>The <i>EntityLocator</i> object, containing information about the entity type of the route to be deleted.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>deleteMany</strong></td>
+            <td valign="top">Boolean!</td>
+            <td>Deletes many internal routes according to the provided arguments.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">paths</td>
+            <td valign="top">[String!]!</td>
+            <td>The paths of the routes to be deleted.</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">locators</td>
+            <td valign="top">[<a href="#routelocator">RouteLocator</a>!]</td>
+            <td>The <i>EntityLocator</i> objects, containing information about the entity type of the routes to be deleted.</td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#mutation">Mutation</a> 🔼</div>
@@ -361,7 +351,7 @@ The paths of the routes to be deleted.</td>
 <td colspan="1" valign="top"><strong>declarer</strong></td>
 <td valign="top">String!</td>
 <td>The app that originally defined the route in a <code>routes.json</code> file.
-<br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
+</br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>type</strong></td>
@@ -381,18 +371,12 @@ The paths of the routes to be deleted.</td>
 <tr>
 <td colspan="1" valign="top"><strong>binding</strong></td>
 <td valign="top">String!</td>
-<td>
-The id of the <i>binding</i> which the route is available.
-<br>
-<i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i>
-</td>
+<td>The id of the <i>binding</i> which the route is available.</br><i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
-<td>The date a route stops being valid.
-<br>
-<i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
+<td>The date a route stops being valid.</br><i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>imagePath</strong></td>
@@ -408,16 +392,13 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="1" valign="top"><strong>routesVersion</strong></td>
 <td valign="top">Float</td>
 <td>The current routes version. 
-<br>
+</br>
 <i>Keep in mind: If the <code>routesVersion</code> value is <code>null</code> or different from the current version, the route is not currently available in the store.</i></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>resolveAs</strong></td>
 <td valign="top">String</td>
-<td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.
-<br>
-<i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i>
-</td>
+<td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.</br><i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>origin</strong></td>
@@ -457,7 +438,7 @@ The id of the <i>binding</i> which the route is available.
 <tr>
 <td colspan="1" valign="top"><strong>next</strong></td>
 <td valign="top">String</td>
-<td>Returns a string to be used as the <i>next</i> argument of the succeeding <i>listInternals</i> query to fetch more data.<br>When <i>next</i> returns <i>null</i>, all data have already been fetched.</td>
+<td>Returns a string to be used as the <i>next</i> argument of the succeeding <i>listInternals</i> query to fetch more data.</br>When <i>next</i> returns <i>null</i>, all data have already been fetched.</td>
 </tr>
 </tbody>
 </table>
@@ -479,7 +460,7 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="1" valign="top"><strong>binding</strong></td>
 <td valign="top">String!</td>
 <td>The id of the <i>binding</i> which the route is available.
-<br>
+</br>
 <i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
@@ -517,7 +498,7 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="1" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
 <td>The date a redirect route stops being valid.
-<br>
+</br>
 <i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
 </tr>
 <tr>
@@ -529,7 +510,7 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="1" valign="top"><strong>binding</strong></td>
 <td valign="top">String!</td>
 <td>The id of the <i>binding</i> which the route is available.
-<br>
+</br>
 <i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
@@ -563,7 +544,7 @@ The id of the <i>binding</i> which the route is available.
 <tr>
 <td valign="top"><strong>next</strong></td>
 <td valign="top">String</td>
-<td>Returns a string to be used as the <i>next</i> argument of the succeeding <i>listInternals</i> query to fetch more data.<br>When <i>next</i> returns <i>null</i>, all data have already been fetched.</td>
+<td>Returns a string to be used as the <i>next</i> argument of the succeeding <i>listInternals</i> query to fetch more data.</br>When <i>next</i> returns <i>null</i>, all data have already been fetched.</td>
 </tr>
 </tbody>
 </table>
@@ -616,7 +597,7 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="2" valign="top"><strong>declarer</strong></td>
 <td valign="top">String!</td>
 <td>The app that originally defined the route in a <code>routes.json</code> file.
-<br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
+</br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>type</strong></td>
@@ -637,14 +618,14 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="2" valign="top"><strong>binding</strong></td>
 <td valign="top">String</td>
 <td>The id of the <i>binding</i> which the route is available.
-<br>
+</br>
 <i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
 <td>The date a route stops being valid.
-<br>
+</br>
 <i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
 </tr>
 <tr>
@@ -661,7 +642,7 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="2" valign="top"><strong>resolveAs</strong></td>
 <td valign="top">String</td>
 <td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.
-<br>
+</br>
 <i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
 </tr>
 <tr>
@@ -704,7 +685,7 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="2" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
 <td>The date a route stops being valid.
-<br>
+</br>
 <i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
 </tr>
 <tr>
@@ -716,7 +697,7 @@ The id of the <i>binding</i> which the route is available.
 <td colspan="2" valign="top"><strong>binding</strong></td>
 <td valign="top">String</td>
 <td>The id of the <i>binding</i> which the route is available.
-<br>
+</br>
 <i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
@@ -748,9 +729,7 @@ The id of the <i>binding</i> which the route is available.
 <tr>
 <td colspan="2" valign="top"><strong>binding</strong></td>
 <td valign="top">String!</td>
-<td>The id of the <i>binding</i> which the route is available.
-<br>
-<i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
+<td>The id of the <i>binding</i> which the route is available.</br><i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 </tbody>
 </table>

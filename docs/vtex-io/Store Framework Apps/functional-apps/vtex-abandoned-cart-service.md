@@ -182,9 +182,7 @@ align="center">
 <div
 style="box-sizing: border-box; width: 8rem; margin-bottom: 1rem; margin-top: 2rem; margin-right: auto; margin-left: auto !important;">
 <a href="http://{{_accountInfo.HostName}}.com.br" style="box-sizing: border-box !important;">
-<img alt="" border="0" width="auto"
-src="http://licensemanager.vtex.com.br/api/site/pub/accounts/{{_accountInfo.Id}}/logos/show"
-style="vertical-align: top; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; border: none; max-height: 80px !important;">
+<img alt="" border="0" width="auto" src="http://licensemanager.vtex.com.br/api/site/pub/accounts/{{_accountInfo.Id}}/logos/show" style="vertical-align: top; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; border: none; max-height: 80px !important;"/>
 </></a>
 </div>
 <h1 style="margin: 0; font-size: 50px; line-height: 58px; box-sizing: border-box !important;">Abandoned Cart</h1>

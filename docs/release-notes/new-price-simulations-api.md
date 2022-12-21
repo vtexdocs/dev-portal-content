@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="price-simulations-api">Price Simulations API</div>
+<span class="badge" id="price-simulations-api">Price Simulations API</span>
 
 The Price Simulations API allows you to configure custom price selectors for B2B stores, based on the context set by the [Orders Configuration app](https://vtex.io/docs/components/content-blocks/vtex.order-configuration/readme/). It contains the following endpoints:
 

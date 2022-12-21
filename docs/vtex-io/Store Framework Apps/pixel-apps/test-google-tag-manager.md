@@ -32,7 +32,7 @@ It is possible to install the VTEX native GTM app in your store either by using 
 3. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your **GTM ID** in the `Google Tag Manager` field.
 4. Click on **Save**.
 
-> ℹ️ *Access the [Google Tag Manager page](https://tagmanager.google.com/)</a> and login to your account in order to find out what is your account **GTM ID**. The number your should use is the one provided by the `Container ID` column.*
+> ℹ️ *Access the [Google Tag Manager page](https://tagmanager.google.com/) and login to your account in order to find out what is your account **GTM ID**. The number your should use is the one provided by the `Container ID` column.*
 
 ### Using VTEX IO Toolbelt
 
@@ -41,7 +41,7 @@ It is possible to install the VTEX native GTM app in your store either by using 
 3. Fill in the `Google Tag Manager` field with your **GTM ID**.
 4. Click on **Save**.
 
-> ℹ️ Access the [Google Tag Manager page](https://tagmanager.google.com/)</a> and login to you account in order to find out what is your account **GTM ID**. The number your should use is the one provided by the `Container ID` column.
+> ℹ️ Access the [Google Tag Manager page](https://tagmanager.google.com/) and login to you account in order to find out what is your account **GTM ID**. The number your should use is the one provided by the `Container ID` column.
 
 After installing the app, you are ready to use your GTM as usual by accessing your account dashboard directly on the [Google Tag Manager](https://tagmanager.google.com/) page.
 
@@ -74,27 +74,26 @@ Check out below the full list of tags and variables that are blocked, by default
 Check out a list with all the GTM available tags on the [Google Developer Guide](https://developers.google.com/tag-manager/devguide).
 
 ## Troubleshooting
+
 ### Persisting campaign data across user navigation
 
 VTEX IO’s page routing system requires a special configuration in the Google Tag Manager container to maintain the [Google Tag Manager (GTM)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager)  session identifier. Without the configuration, the GTM detects that the campaign data is no longer in the URL and It creates a new session without the data, leading to inconsistent Google Analytics (GA) campaign data.
 
 To persist campaign data across user navigation you must add the variable `OriginalLocation` to your GTM container and configure your store’s Google Analytics tags to persist campaign data correctly and prevent GTM from creating additional sessions when a user navigates the website. Follow the step-by-step below to add the variable and persist the campaign data during user navigation.
 
-> ⚠️ *The variable, `OriginalLocation`, is already available by the VTEX app (versions 2.x or 3.x). If you have another Google Tag Manager app installed, we strongly recommend using [The VTEX Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager#configuration) to use the variable.* 
-
+> ⚠️ *The variable, `OriginalLocation`, is already available by the VTEX app (versions 2.x or 3.x). If you have another Google Tag Manager app installed, we strongly recommend using [The VTEX Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager#configuration) to use the variable.*
 
 ### Step-by-step
 
 #### Step 1 - Creating the variable Original Location
 
-1. Login into your [GTM account](https://tagmanager.google.com) and click on the GTM container you want to work with. 
+1. Login into your [GTM account](https://tagmanager.google.com) and click on the GTM container you want to work with.
 
-
-> ℹ️  *The GTM ID is in your store's Admin, and in the section **My Apps**, search for the Google Tag Manager app. Click on the app and, on the settings page, look for the "Google Tag Manager" field with the GTM ID value, for example:,`GTM-XXXXXXX`.* 
+> ℹ️  *The GTM ID is in your store's Admin, and in the section **My Apps**, search for the Google Tag Manager app. Click on the app and, on the settings page, look for the "Google Tag Manager" field with the GTM ID value, for example:,`GTM-XXXXXXX`.*
 
 1. On the container's page, click on **Variables**.
 
-2. In the section **Built-In Variables**, check if the variables `Page URL` and `Page Path` are enabled. Otherwise, click on `Configure` and select `Page URL` and `Page Path` to enable them. 
+2. In the section **Built-In Variables**, check if the variables `Page URL` and `Page Path` are enabled. Otherwise, click on `Configure` and select `Page URL` and `Page Path` to enable them.
 
 4. Once you have enabled the variables, go to the section **User-Defined Variables**, click on `New`, and a side popup will open.
 
@@ -107,6 +106,7 @@ To persist campaign data across user navigation you must add the variable `Origi
 {{Page URL}}
 
 ```
+
 ![gif1](https://user-images.githubusercontent.com/67270558/136271386-afe75beb-32f3-46db-bb31-726f9275973d.gif)
 
 9. Click on `Save`
@@ -115,8 +115,7 @@ To persist campaign data across user navigation you must add the variable `Origi
 
 After [creating the variable `OriginalLocation`](#link para o step1), use the Google Analytics Settings variables to configure every Google Analytics Tags that fire.
 
-> ℹ️ * to create a Google Analytics Settings variable follow the [Google Tag Manager documentation](https://support.google.com/tagmanager/answer/9207621?hl=en)*
-
+> ℹ️ *to create a Google Analytics Settings variable follow the [Google Tag Manager documentation](https://support.google.com/tagmanager/answer/9207621?hl=en)*
 
 1. Click on the **Variables** section, on **User-Defined Variables** and select one of the  Google Analytics Settings variables.
 
@@ -125,14 +124,13 @@ After [creating the variable `OriginalLocation`](#link para o step1), use the Go
 2. Click on **Variable Configuration** box and in **More Settings** select **Fields to Set**.
 3. In **Fields to set**, click on `Add Field`.
 4. Set the `Field Name` field as `location` and `Value` as `{{Original Location}}`.
-5. Click on `Save`. 
+5. Click on `Save`.
 
-> ⚠️ *Ensure that you do not have any Google Analytics tags using the Google Analytics Settings variables you have changed. Otherwise, apply the same changes above directly on the tags that need it. *
+> ⚠️ *Ensure that you do not have any Google Analytics tags using the Google Analytics Settings variables you have changed. Otherwise, apply the same changes above directly on the tags that need it.*
 
 #### Step 3 - Publishing your changes
 
 Once you have set up the Google Analytics variables and tags, follow Google's official guide on [how to submit and publish your store’s container changes](https://support.google.com/tagmanager/answer/6107163).
-
 
 <!-- DOCS-IGNORE:start -->
 

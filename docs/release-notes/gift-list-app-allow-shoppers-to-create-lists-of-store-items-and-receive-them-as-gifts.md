@@ -6,7 +6,7 @@ createdAt: "2022-09-16T13:36:04.922Z"
 hidden: false
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+<span class="badge" id="vtex-io">VTEX IO</span>
 
 The [Gift List app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-gift-list) offers a new environment in the store where shoppers can create, manage and share gift lists.
 

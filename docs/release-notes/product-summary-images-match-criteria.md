@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 The [Product Summary Images app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryimage) can now identify and render images according to its label's substrings, set in the [Catalog module](https://help.vtex.com/en/tutorial/visao-geral-da-estrutura-do-catalogo--6ejJHhmTaoMMeoIgg4OgA0)'s `imageLabel` field. 
 

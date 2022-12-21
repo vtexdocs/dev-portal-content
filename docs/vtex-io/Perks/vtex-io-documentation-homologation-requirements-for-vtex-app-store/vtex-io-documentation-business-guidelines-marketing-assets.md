@@ -128,7 +128,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Live Shopping<p>
+    <p>Live Shopping</p>
   </div>
   <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -147,7 +147,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Live Shopping<p>
+    <p>Live Shopping</p>
   </div>
   <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -166,12 +166,12 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Reviews & Ratings<p>
+    <p>Reviews & Ratings</p>
   </div>
   <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
-   <p>Reviews and Ratings<p>
+   <p>Reviews and Ratings</p>
   </div>
 </section>
 <br/>
@@ -185,7 +185,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Abandoned Cart<p>
+    <p>Abandoned Cart</p>
   </div>
   <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -204,7 +204,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Social Selling<p>
+    <p>Social Selling</p>
   </div>
   <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
@@ -223,7 +223,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p>Google Tag Manager<p>
+    <p>Google Tag Manager</p>
   </div>
   <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">

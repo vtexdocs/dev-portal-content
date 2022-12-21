@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 The [Product Identifier app](https://vtex.io/docs/components/content-blocks/vtex.product-identifier/) from now on also accepts item IDs as product identifiers.
 

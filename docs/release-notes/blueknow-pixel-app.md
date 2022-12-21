@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 A new pixel app is out of the oven for the [Blueknow solution](https://www.blueknow.com/en/), responsible for using big data techniques and digital merchandising to provide recovery of lost sales, onsite retargeting, customized recommendations, and more! 
 

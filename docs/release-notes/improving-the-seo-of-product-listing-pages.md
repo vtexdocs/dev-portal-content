@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+<span class="badge" id="vtex-io">VTEX IO</span>
 
 The Product Listing Pages (PLPs) are responsible for presenting all the products available within a specific category, brand, department, or other filters applied, and the PLPs influence SEO performance.
  

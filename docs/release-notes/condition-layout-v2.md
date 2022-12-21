@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 The Condition Layout as we know was remodeled in order to achieve a clearer logic when setting the conditions to build your store's layout.
 

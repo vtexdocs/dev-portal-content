@@ -6,11 +6,11 @@ hidden: true
 type: "improved"
 ---
 
-<div class="badge" id="vtex-tracking-api">VTEX Tracking API</div>
+<span class="badge" id="vtex-tracking-api">VTEX Tracking API</dsiv>
 
-We have unified our VTEX Tracking APIs into a single version, so it's no longer necessary to specify the version on the URL. We have also translated all paths to english. 
+We have unified our VTEX Tracking APIs into a single version, so it's no longer necessary to specify the version on the URL. We have also translated all paths to english.
 
-Previously, users could access `VTEX Tracking v1` and `VTEX Tracking v1.1` endpoints. The only difference between the two versions, was that `v1.1` retrieved a `pictures` object in delivery service responses. We have now unified both versions, and translated paths to english. 
+Previously, users could access `VTEX Tracking v1` and `VTEX Tracking v1.1` endpoints. The only difference between the two versions, was that `v1.1` retrieved a `pictures` object in delivery service responses. We have now unified both versions, and translated paths to english.
 
 No endpoints were deleted, and no attributes were changed. Check out the updated documentation for the [unified VTEX Tracking APIs](https://developers.vtex.com/vtex-developer-docs/reference/authentication).
 [block:callout]

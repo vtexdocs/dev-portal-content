@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="B2B">B2B</div>
+<span class="badge" id="B2B">B2B</span>
 
 We have added documentation explaning how to use the B2B Store Theme, a front-end template to help your store get started with VTEX’s core features for businesses selling to other businesses.
 

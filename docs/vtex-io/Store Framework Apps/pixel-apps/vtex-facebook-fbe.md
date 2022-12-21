@@ -100,15 +100,15 @@ After inserting the pixel’s code in the front, is required that you also use t
 
 On the ads plugin cards, it's possible to manage your facebook ads. 
 
-<img alt= "Ads Plugin Cards" src="https://user-images.githubusercontent.com/12246072/176775187-f48636de-8ffa-41c6-b839-18d316b15109.png" width="500px">
+<img alt= "Ads Plugin Cards" src="https://user-images.githubusercontent.com/12246072/176775187-f48636de-8ffa-41c6-b839-18d316b15109.png" width="500px"/>
 
 Upon clicking on the "Open Ads Insights" button, a popup will open with your ads metrics and performance. 
 
-<img alt= "Ads Insights Modal" src="https://user-images.githubusercontent.com/12246072/176775192-a6d9059a-eb9c-46e6-a78a-03ac25298975.png" width="500px">
+<img alt= "Ads Insights Modal" src="https://user-images.githubusercontent.com/12246072/176775192-a6d9059a-eb9c-46e6-a78a-03ac25298975.png" width="500px"/>
 
 By clicking on the "Open Ads Creation" button, another popup will open with a lightweight interface for ads creation. 
 
-<img alt= "Ads Creation Modal" src="https://user-images.githubusercontent.com/12246072/176775197-7bcbb463-6be0-4259-ad24-55ab97d16ef7.png" width="500px">
+<img alt= "Ads Creation Modal" src="https://user-images.githubusercontent.com/12246072/176775197-7bcbb463-6be0-4259-ad24-55ab97d16ef7.png" width="500px"/>
 
 ## Conversions API Integration
 

@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 Before, developers interested in creating custom components in [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/what-is-vtex-io) using the [VTEX Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/what-is-store-framework) had to request VTEX authorization. They had to fill in an application form sharing their project's details and wait for our approval to use the React [builder](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders).
 

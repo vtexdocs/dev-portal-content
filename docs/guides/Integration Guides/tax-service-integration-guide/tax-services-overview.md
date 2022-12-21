@@ -10,7 +10,7 @@ Selling products online is subject to different types of taxes that may vary acc
 For such cases, it is possible to build an integration that allows a store to send Checkout information to an external tax calculation API. The external API should then respond with the appropriate taxes and values that apply to the purchase.
 
 
-<img src="https://appliancetheme.vtexassets.com/assets/app/src/tax-protocol-image-1___65ee3508d7ae0aaf441ab45b6f182c66.svg"></img>
+<img src="https://appliancetheme.vtexassets.com/assets/app/src/tax-protocol-image-1___65ee3508d7ae0aaf441ab45b6f182c66.svg"/>
 
 
 # Implementation

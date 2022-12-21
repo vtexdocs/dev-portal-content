@@ -6,12 +6,8 @@ hidden: true
 type: "added"
 ---
 
-<div class="badge" id="instore">inStore</div>
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
+<span class="badge" id="instore">inStore</span>
+
 We have added documentation explaning how to customize the inStore experience according to your business needs.
 
 inStore is VTEX's main product for Unified Commerce operations. It enables your store to provide a true omnichannel experience, seamlessly integrating your online and physical channels, and placing your customers at the business core.

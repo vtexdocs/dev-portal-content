@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-<div class="badge" id="suggestions-api">Integration</div>
+<span class="badge" id="suggestions-api">Integration</span>
 
 We have improved the way installments are calculated and displayed to our customers at Checkout. This change aims to provide accurate information on discounts in the appropriate contexts. 
 

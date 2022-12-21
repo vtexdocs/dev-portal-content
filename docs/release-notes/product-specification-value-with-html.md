@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 The product specification value, rendered by the [Product Specification app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-specifications), now processes HTML code, enabling a better migration from CMS to the VTEX IO platform!
 [block:callout]

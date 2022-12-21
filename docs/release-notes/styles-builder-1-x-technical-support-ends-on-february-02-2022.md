@@ -6,7 +6,7 @@ hidden: false
 type: "deprecated"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+<span class="badge" id="vtex-io">VTEX IO</span>
 
 [block:html]
 {

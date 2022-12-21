@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 The SKU Selector had its product data frozen when rendered on slider components. In the previous and ugly scenario, users could only update the data displayed when scrolling the page or changing the slide currently being hovered on. 
 

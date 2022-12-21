@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+<span class="badge" id="vtex-io">VTEX IO</span>
 
 Image Widget is an improvement on how you manage and reuse images on blocks from Site Editor. Previously, you could upload pictures and use them on Site Editor. However, it was not possible to store or reuse them.
 

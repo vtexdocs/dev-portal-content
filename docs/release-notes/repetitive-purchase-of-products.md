@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
+<span class="badge" id="store-framework">Store Framework</span>
 
 Before this release, adding the same product to the cart multiple times were kind of a big challenge for users. Due to an error message ( `Item already on cart` ) displayed whenever the `Add to cart` button was clicked on more the once,  users were being blocked from having a smooth experience of shopping.
 
