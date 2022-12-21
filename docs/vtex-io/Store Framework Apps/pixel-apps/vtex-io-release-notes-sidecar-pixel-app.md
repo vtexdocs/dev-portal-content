@@ -10,7 +10,7 @@ updatedAt: "2021-02-01T18:47:46.198Z"
 
 Integrate your store with the [Sidecar solution](https://hello.getsidecar.com/) by simply using the VTEX IO Sidecar pixel app.
 
-:information_source: The Sidecar solution is used to track and manage Google Shopping campaigns, as well as individual product performance.
+> ℹ️ The Sidecar solution is used to track and manage Google Shopping campaigns, as well as individual product performance.
 
 ## What has changed
 
@@ -39,4 +39,4 @@ vtex install vtex.sidecar-pixel@1.x
 
 **3.** Click on the Sidecar box and fill in your **Site Domain** and **Site ID**. Then, click on **Save**.
 
-:warning: Installing the pixel app does not automatically contract Sidecar services, but merely provides a native integration together with a solution. It is therefore only available to those that already use this solution in their store.
+> ⚠️ Installing the pixel app does not automatically contract Sidecar services, but merely provides a native integration together with a solution. It is therefore only available to those that already use this solution in their store.

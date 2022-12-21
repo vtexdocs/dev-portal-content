@@ -41,7 +41,7 @@ It is possible to install the VTEX native GTM app in your store either by using 
 3. Fill in the `Google Tag Manager` field with your **GTM ID**.
 4. Click on **Save**.
 
-:information_source: Access the [Google Tag Manager page](https://tagmanager.google.com/)</a> and login to you account in order to find out what is your account **GTM ID**. The number your should use is the one provided by the `Container ID` column.
+> ℹ️ Access the [Google Tag Manager page](https://tagmanager.google.com/)</a> and login to you account in order to find out what is your account **GTM ID**. The number your should use is the one provided by the `Container ID` column.
 
 After installing the app, you are ready to use your GTM as usual by accessing your account dashboard directly on the [Google Tag Manager](https://tagmanager.google.com/) page.
 

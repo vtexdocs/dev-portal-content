@@ -44,7 +44,7 @@ Now, you are able to use all blocks exported by the `store-header` app. Check ou
   },
 ```
 
-:information_source: *The Header does not need to be declared in a specific template of your theme, once the app is defined as default store interface element in the `interfaces.json` file. This means that Store Framework will reproduce the configurations defined in the file you just created for all store templates behind the scenes. If you want to apply different configurations to each store template, check the **advanced configurations** section below.*
+> ℹ️ *The Header does not need to be declared in a specific template of your theme, once the app is defined as default store interface element in the `interfaces.json` file. This means that Store Framework will reproduce the configurations defined in the file you just created for all store templates behind the scenes. If you want to apply different configurations to each store template, check the **advanced configurations** section below.*
 
 
 4. Configure both `header-layout.desktop` and `header-layout.mobile`, declaring `header-row` to create Header lines according to your store needs. 
@@ -67,7 +67,7 @@ Now, you are able to use all blocks exported by the `store-header` app. Check ou
   },
 ```
 
-:warning: *In the example above, we configured 4 different levels for `header-layout.desktop`. It will thus be possible to replicate the Header displayed above sheltering the telemarketing functionalities (when activated), a notification, links to pages and every other blocks, such as Logo, Menu, etc. **Remember that the number of `header-row`s should meet your business needs**, determining how many Header lines you want to apply to your store.*
+> ⚠️ *In the example above, we configured 4 different levels for `header-layout.desktop`. It will thus be possible to replicate the Header displayed above sheltering the telemarketing functionalities (when activated), a notification, links to pages and every other blocks, such as Logo, Menu, etc. **Remember that the number of `header-row`s should meet your business needs**, determining how many Header lines you want to apply to your store.*
 
 5. Configure each of the `header-row`s , applying props and declaring the desired store blocks for each line. To correctly structure your Header, you should check the [documentation](https://vtex.io/docs/components/all) for each of the desired blocks. The most commonly used are [Logo](https://vtex.io/docs/components/all/vtex.store-components/logo), [Minicart](https://vtex.io/docs/components/all/vtex.minicart/) and [Menu](https://vtex.io/docs/components/all/vtex.menu/). In the example below, we will configure the `header-row#1-desktop` as [Telemarketing](https://vtex.io/docs/components/all/vtex.telemarketing/):
 
@@ -91,7 +91,7 @@ Now, you are able to use all blocks exported by the `store-header` app. Check ou
 | `fullWidth` | `Boolean` | Whether the Header should take the full width of the screen or not                                                                   | `true`          |
 | `inverted` | `Boolean` | Whether the row will use the base color (`false`) or the inverted base color (`true`) as defined in `styles.json`.                                                                    | `false`          |
 
-:warning: ***Repeat step 4 for any other `header-rows` you may have in the `header-layout.desktop`**. Remember to declare the desired blocks for each row, as we declared the Telemarketing block for the `header-row#1-desktop`, and properly configure all blocks using props. Once it is all finished, **redo steps 3 and 4 to define your `header-layout.mobile` as well***.
+> ⚠️ ***Repeat step 4 for any other `header-rows` you may have in the `header-layout.desktop`**. Remember to declare the desired blocks for each row, as we declared the Telemarketing block for the `header-row#1-desktop`, and properly configure all blocks using props. Once it is all finished, **redo steps 3 and 4 to define your `header-layout.mobile` as well***.
 
 Three blocks can be added as `header-row`'s children in order to customize your Header row layout: `header-border`, `header-force-center` and `header-spacer`. 
 

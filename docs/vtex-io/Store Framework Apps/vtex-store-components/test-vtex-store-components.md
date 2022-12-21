@@ -90,7 +90,7 @@ Below we have a documentation for each component of this project that explains h
 - [Notification](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-notification)
 
 
-> :warning: **The following blocks have been deprecated:** `Animation`, `Categories Highlights`, `Collection Badges`, `Container`, `Discount Badge`, `Gradient Collapse`, `Greeting`, `Slider`. 
+> ⚠️ **The following blocks have been deprecated:** `Animation`, `Categories Highlights`, `Collection Badges`, `Container`, `Discount Badge`, `Gradient Collapse`, `Greeting`, `Slider`. 
 > Despite this, support for them is still granted.
 
 ## Creating a new component

@@ -140,7 +140,7 @@ Below, you can find a practical example using three `slider-layout` blocks insid
 
 ![slider-layout-group demo](https://user-images.githubusercontent.com/27777263/89814281-46665b80-db19-11ea-9ff2-8aff60c72a73.gif)
 
-:warning: ***All `slider-layout` blocks declared in the `slider-layout-group` must receive the same configuration, meaning the same props and values**. Due to implementation rules, they are only allowed to differ in their `children` block list. Notice the following: declaring `slider-layout` blocks with different configuration will result in unexpected behavior, leading to errors whose support is **not** granted by the VTEX Store Framework team.*
+> ⚠️ ***All `slider-layout` blocks declared in the `slider-layout-group` must receive the same configuration, meaning the same props and values**. Due to implementation rules, they are only allowed to differ in their `children` block list. Notice the following: declaring `slider-layout` blocks with different configuration will result in unexpected behavior, leading to errors whose support is **not** granted by the VTEX Store Framework team.*
 
 ## Customization
 

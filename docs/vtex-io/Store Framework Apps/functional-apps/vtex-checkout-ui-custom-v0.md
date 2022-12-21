@@ -32,7 +32,7 @@ Let's assume you were working in a [Development workspace](https://vtex.io/docs/
 
 For this purpose, you can access the `History` tab using the desired Production workspace, load your last changes from `testredcolor` and then click on `Publish`, copying your configurations to the Production workspace you are currently working in.
 
-:warning: _The Header and Footer HTMLs are still configured using the admin's Portal (`/admin/portal/#/sites`). In order to properly use the Checkout UI Custom app, it is strongly recommended to use the HTMLs stated below:_
+> ⚠️ _The Header and Footer HTMLs are still configured using the admin's Portal (`/admin/portal/#/sites`). In order to properly use the Checkout UI Custom app, it is strongly recommended to use the HTMLs stated below:_
 
 - **Header HTML:**
 

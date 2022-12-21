@@ -71,7 +71,7 @@ Then you may use this block in your layouts:
 | `merchandiseBlockId` | `String` | The Merchandise Block ID from Listrak's admin. Default: `''`              |
 | `templateHTML`       | `String` | The HTML template for the recommender from Listrak's admin. Default: `''` |
 
-:warning: Both props must be filled for the component to render.
+> ⚠️ Both props must be filled for the component to render.
 
 Example - Listrak provides sample template code that looks like this:
 
@@ -101,9 +101,9 @@ In this case, your block's props would look like this:
 },
 ```
 
-:warning: Note that the HTML has all been combined into a single line, and double quotes `"` replaced with single quotes `'`.
+> ⚠️ Note that the HTML has all been combined into a single line, and double quotes `"` replaced with single quotes `'`.
 
-:warning: Also note that each `@Recommendation.LinkUrl` has been replaced with `@(window.location.origin + Recommendation.LinkUrl)`. This is because the `LinkUrl` stored for each product in Listrak is a relative URL. `ImageUrl` does NOT need this same treatment because each `ImageUrl` is already an absolute URL.
+> ⚠️ Also note that each `@Recommendation.LinkUrl` has been replaced with `@(window.location.origin + Recommendation.LinkUrl)`. This is because the `LinkUrl` stored for each product in Listrak is a relative URL. `ImageUrl` does NOT need this same treatment because each `ImageUrl` is already an absolute URL.
 
 ## Checkout Integration
 
@@ -174,7 +174,7 @@ var biJsHost = 'https:' == document.location.protocol ? 'https://' : 'http://'
 // end Listrak
 ```
 
-:warning: Make sure to replace `'LISTRAK-MERCHANT-ID'` in the second-to-last line with your Listrak Merchant ID. No other customizations are needed.
+> ⚠️ Make sure to replace `'LISTRAK-MERCHANT-ID'` in the second-to-last line with your Listrak Merchant ID. No other customizations are needed.
 
 ## Listrak Data Integration
 

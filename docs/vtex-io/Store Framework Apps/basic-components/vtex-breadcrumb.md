@@ -36,7 +36,7 @@ The VTEX BreadCrumb is a navigation scheme that shows a user's browsing history 
 | `homeIconSize`  | `Number`        | Controls the `size` property of [`IconHome`](https://github.com/vtex-apps/store-icons#icons)                                                                                                      | `26` |
 | `caretIconSize` | `Number`        | Controls the `size` property of [`IconCaret`](https://github.com/vtex-apps/store-icons#icons)                                                                                                     | `8` |
 
-:warning: The product's categories should appear as an array in one of this two formats:
+> ⚠️ The product's categories should appear as an array in one of this two formats:
 
 ```javascript
 categories = ['/Eletronics/', '/Eletronics/Computers']

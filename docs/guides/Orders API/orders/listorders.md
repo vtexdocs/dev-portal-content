@@ -71,7 +71,7 @@ Quantity per Page Examples:
 
  /api/oms/pvt/orders?per_page=15
 
-> ℹ️ Pagination Limit: The limit of pages that can be requested is 30.</div>
+> ℹ️ Pagination Limit: The limit of pages that can be requested is 30.
 
 ### Time zone query
 

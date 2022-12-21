@@ -14,7 +14,7 @@ Product Price app is responsible for exporting blocks related to the product's p
 
 ![image](https://user-images.githubusercontent.com/8443580/77692675-d5694180-6f85-11ea-8690-49db5be24b3d.png)
 
-:information_source: Currently, **the Product Price is the only app responsible for providing product price blocks for your theme**. Both [Product Summary Price](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-price/) and [Product Price](https://vtex.io/docs/components/all/vtex.store-components/product-price/) blocks, respectively from [Product Summary](https://vtex.io/docs/components/all/vtex.product-summary/) and [Store Components](https://vtex.io/docs/components/all/vtex.store-components/) apps, were deprecated and therefore will no longer be evolved.
+> ℹ️ Currently, **the Product Price is the only app responsible for providing product price blocks for your theme**. Both [Product Summary Price](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-price/) and [Product Price](https://vtex.io/docs/components/all/vtex.store-components/product-price/) blocks, respectively from [Product Summary](https://vtex.io/docs/components/all/vtex.product-summary/) and [Store Components](https://vtex.io/docs/components/all/vtex.store-components/) apps, were deprecated and therefore will no longer be evolved.
 
 ## Configuration
 

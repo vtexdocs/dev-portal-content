@@ -62,7 +62,7 @@ The table below gives further detail on the applicability of each endpoint to Pi
     "h-2": "Applicable to Pix?",
     "0-0": "Payment",
     "1-0": "Payment",
-    "0-2": ":warning: Obsolete",
+    "0-2": "⚠️ Obsolete",
     "1-1": "List Payment Provider Manifest",
     "1-2": ":white-check-mark: Yes",
     "2-0": "Payment",

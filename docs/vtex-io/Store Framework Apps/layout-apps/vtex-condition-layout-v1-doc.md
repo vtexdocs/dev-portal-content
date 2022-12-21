@@ -10,7 +10,7 @@ updatedAt: "2022-07-19T14:16:44.931Z"
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-:warning: ***Condition Layout app v1 has been deprecated in favor of Condition Layout app v2**. Although support for the former version is still granted, we strongly recommend you to access the [Migration Guide](https://github.com/vtex-apps/condition-layout/tree/master/docs/MIGRATION-GUIDE.md) and update your store theme with the app's newest version in order to keep up with the components' evolution.*
+> ⚠️ ***Condition Layout app v1 has been deprecated in favor of Condition Layout app v2**. Although support for the former version is still granted, we strongly recommend you to access the [Migration Guide](https://github.com/vtex-apps/condition-layout/tree/master/docs/MIGRATION-GUIDE.md) and update your store theme with the app's newest version in order to keep up with the components' evolution.*
 
 As the name implies, the Condition Layout app allows a block to be rendered if certain conditions are met.
 
@@ -47,7 +47,7 @@ In the product theme template, add the `condition-layout.{context}` block, repla
   },
 ```
 
-:warning: *You should never use `condition-layout` directly. Make sure to always use it with the context variant, such as `condition-layout.product`.*
+> ⚠️ *You should never use `condition-layout` directly. Make sure to always use it with the context variant, such as `condition-layout.product`.*
   
 ### Step 3 - Configuring the `condition-layout.{context}` block
 
@@ -147,7 +147,7 @@ If users interact with a product whose ID is not equal to 12, the block that is 
 | `specificationProperties` | `array` | List of product specifications. |
 | `areAllVariationsSelected` | `value` | Whether all product variations available on the page were selected by the user (`true`) or not (`false`). | 
 
-:information_source: *Since the Condition Layout can only be used with product contexts, only the subjects listed above are needed for the proper functioning of the `condition` block. Remember to choose the subject's value according to the value passed to the `object` prop*.
+> ℹ️ *Since the Condition Layout can only be used with product contexts, only the subjects listed above are needed for the proper functioning of the `condition` block. Remember to choose the subject's value according to the value passed to the `object` prop*.
 
 ## Modus Operandi
 

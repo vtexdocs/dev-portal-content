@@ -43,7 +43,7 @@ const MyComponent: FC = () => {
 export default MyComponent
 ```
 
-:warning: *Be sure to run `vtex setup` in your project to install the correct TypeScript types exported by this app.*
+> ⚠️ *Be sure to run `vtex setup` in your project to install the correct TypeScript types exported by this app.*
 
 ### Hooks
 
@@ -74,7 +74,7 @@ interface ProductContextState {
 
 You should expect an object that looks like that as the return value of `useProduct`. Be aware that, if the hook is called **outside** of a `ProductContextProvider`, the return value could be `undefined` or an empty object.
 
-:information_source: *To have the full type definition in your development environment, be sure to run `vtex setup` in your project to install all TypeScript types exported by this app.*
+> ℹ️ *To have the full type definition in your development environment, be sure to run `vtex setup` in your project to install all TypeScript types exported by this app.*
 
 #### `useProductDispatch`
 
@@ -92,7 +92,7 @@ The function is capable of performing the following `actions`:
 - `SET_PRODUCT`: Sets the value for the `product` property.
 - `SET_LOADING_ITEM`: Sets the value if a selected item is loading or not.
 
-:information_source: *To have the full type definition in your development environment, be sure to run `vtex setup` in your project to install all TypeScript types exported by this app.*
+> ℹ️ *To have the full type definition in your development environment, be sure to run `vtex setup` in your project to install all TypeScript types exported by this app.*
 
 <!-- DOCS-IGNORE:start -->
 

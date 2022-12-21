@@ -153,7 +153,7 @@ If no actions are required, you may skip the following subtopic.
 
 > ℹ️ **A redundant setup** is when you send the same events through from both a browser pixel and Conversions API. This is the default setup used by this App.
 
-> :warning: **What events will I be able to configure in this step?** For now, the only supported event for this step is the Purchase event. The other 5 (PageView, ViewContent, Search, AddToCart and InitiateCheckout) are just supported by VTEX IO stores. These scripts for Legacy stores are on our implementation roadmap.
+> ⚠️ **What events will I be able to configure in this step?** For now, the only supported event for this step is the Purchase event. The other 5 (PageView, ViewContent, Search, AddToCart and InitiateCheckout) are just supported by VTEX IO stores. These scripts for Legacy stores are on our implementation roadmap.
 
 This is done through specific parameters that may be used to guarantee the events are the same. The two parameters we'll be configuring in this section are the *Event ID* and the *Event Name*.
 

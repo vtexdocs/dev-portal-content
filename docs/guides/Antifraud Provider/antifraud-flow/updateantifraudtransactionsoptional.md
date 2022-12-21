@@ -353,7 +353,7 @@ order flow will follow your response status in order to cancel or approve the tr
     <tr>
         <td><code>AnalysisType</code></td>
         <td><strong>string</strong></td>
-        <td>Analysis type. Valid values are <strong>authomatic<strong> or <strong>manual</strong></td>
+        <td>Analysis type. Valid values are <strong>authomatic</strong> or <strong>manual</strong></td>
     </tr>
     <tr>
         <td><code>responses</code>&nbsp;(optional)</td>

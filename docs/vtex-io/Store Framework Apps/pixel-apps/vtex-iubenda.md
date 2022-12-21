@@ -31,7 +31,7 @@ This is a Iubenda first party integration app. The [solution](https://www.iubend
 
 ![image](https://user-images.githubusercontent.com/284515/80036904-08411f80-84c9-11ea-95e9-162a6bcc0ce4.png)
 
-:information_source: *The Site ID and the Cookie Policy ID are provided by Iubenda*.
+> ℹ️ *The Site ID and the Cookie Policy ID are provided by Iubenda*.
 
 ### Recommended Iubenda configuration
 

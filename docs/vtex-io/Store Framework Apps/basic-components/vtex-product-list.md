@@ -12,7 +12,7 @@ updatedAt: "2022-07-27T14:36:38.486Z"
 
 The Product List component displays all items in the user's cart and informs the user when some of them are unavailable. 
 
-:warning: Currently, the Product List only works with the [Minicart v2](https://vtex.io/docs/components/all/vtex.minicart/).
+> ⚠️ Currently, the Product List only works with the [Minicart v2](https://vtex.io/docs/components/all/vtex.minicart/).
 
 ![product-list image](https://user-images.githubusercontent.com/52087100/83676314-de434880-a5b0-11ea-8590-3b823d72ef29.png)
 

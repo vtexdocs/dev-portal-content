@@ -43,7 +43,7 @@ The `trustpilot` app also enables Truspilot's widget component to be added to yo
 7. Access your store's website using the Developer workspace to check out the new component. If no more changes are desired, repeat the steps above in a [Production workspace](https://vtex.io/docs/recipes/development/creating-a-production-workspace/) and then [promote it to Master](https://vtex.io/docs/recipes/development/promoting-a-workspace-to-master).
 
 
-:information_source: _The integration key must be provided by Trustpilot._
+> ℹ️ _The integration key must be provided by Trustpilot._
 
 The `trustpilot` app also enables Truspilot's widgets to be added to your store theme by inserting the `shop-review-badge` interface in your layout and then using the `trustpilot-widget` block in a template of your choosing.
 

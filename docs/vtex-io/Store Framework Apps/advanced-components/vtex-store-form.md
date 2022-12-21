@@ -16,7 +16,7 @@ The Store Form app provides blocks responsible for displaying an user form conne
 
 ## Configuration
 
-:warning: Before configuring the Store Form block in your theme, make sure you've already configure a <strong>JSON schema in Master Data</strong>, otherwise the client form won't be properly saved. To more info, access the recipe on [Creating forms for your store users](https://vtex.io/docs/recipes/templates/creating-a-native-form-for-your-store-users/).
+> ⚠️ Before configuring the Store Form block in your theme, make sure you've already configure a <strong>JSON schema in Master Data</strong>, otherwise the client form won't be properly saved. To more info, access the recipe on [Creating forms for your store users](https://vtex.io/docs/recipes/templates/creating-a-native-form-for-your-store-users/).
 
 1. Add `store-form` app to your theme's dependencies in the `manifest.json`, for example:
 
@@ -81,7 +81,7 @@ In the example below, the form block is contained in a Flex Layout row:
 }
 ```
 
-:information_source: If the <code>form</code> block does not have any children configured, <strong>a default form will be rendered</strong> automatically based on the JSON schema in Master Data. This reading and interpretation of  JSON schemas is due to the <a href="[https://github.com/vtex/react-hook-form-jsonschema)](https://github.com/vtex/react-hook-form-jsonschema))">Reacht Hook Form JSON Schema</a> library (which is supporting the Store Form blocks logic behind the scenes).
+> ℹ️ If the `form` block does not have any children configured, **a default form will be rendered** automatically based on the JSON schema in Master Data. This reading and interpretation of  JSON schemas is due to the [Reacht Hook Form JSON Schema](https://github.com/vtex/react-hook-form-jsonschema) library (which is supporting the Store Form blocks logic behind the scenes).
 
 | Prop name | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |

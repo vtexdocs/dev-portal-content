@@ -10,7 +10,7 @@ If you're currently using the Condition Layout in its **`1.x.x`** version, the f
 
 If you’re using the former version, you can still find its documentation [here](https://github.com/vtex-apps/condition-layout/tree/master/docs/v1-DOC.md). Do not forget to also access the [**Condition Layout current documentation**](https://github.com/vtex-apps/condition-layout/tree/master/docs/README.md) for its `2.x.x` version. 
 
-:information_source: *Although support for the former version is still granted, we strongly recommend you to update your store theme with the app's newest version in order to keep up with the components' evolution.*
+> ℹ️ *Although support for the former version is still granted, we strongly recommend you to update your store theme with the app's newest version in order to keep up with the components' evolution.*
 
 ## Overview
 

@@ -32,11 +32,7 @@ updatedAt: "2022-09-28T14:44:08.935Z"
         <td>&#x21B3; <code>allowsSplit</code></td>
         <td>string</td>
         <td>Yes</td>
-        <td>Describes which transaction flow stage the connector should receive payment split data . Accepted values:
-            <code>onAuthorize</code>, <code>onCapture</code>, <code>disabled</code>. Check more details on the <a
-                href="https://developers.vtex.com/vtex-rest-api/docs/split-payouts-on-payment-provider-protocol"
-                target="_blank">Split Payouts on the Payment Provider Protocol</a> article.
-        </td>
+        <td>Describes which transaction flow stage the connector should receive payment split data . Accepted values: <code>onAuthorize</code>, <code>onCapture</code>, <code>disabled</code>. Check more details on the <a href="https://developers.vtex.com/vtex-rest-api/docs/split-payouts-on-payment-provider-protocol" target="_blank">Split Payouts on the Payment Provider Protocol</a> article.</td>
     </tr>
     <tr>
         <td><code>customFields</code></td>
@@ -79,10 +75,7 @@ updatedAt: "2022-09-28T14:44:08.935Z"
         <td>number</td>
         <td></td>
         <td>Describes the allowed delay value for the auto settle capture. Accepted values: <code>minimum</code> and
-            <code>maximum</code> in whole hours (decimals are not allowed). Check more details on the <a
-                href="https://developers.vtex.com/vtex-rest-api/docs/custom-auto-capture-feature" target="_blank">Custom
-                Auto Capture Feature</a> article.
-        </td>
+            <code>maximum</code> in whole hours (decimals are not allowed). Check more details on the <a href="https://developers.vtex.com/vtex-rest-api/docs/custom-auto-capture-feature" target="_blank">Custom Auto Capture Feature</a> article.</td>
     </tr>
     <tr>
         <td>&#x21B3;<code>minimum</code></td>

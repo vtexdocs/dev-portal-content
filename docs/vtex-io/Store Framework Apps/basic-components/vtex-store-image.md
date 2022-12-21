@@ -97,7 +97,7 @@ Note that the `slider-layout` block, exported from the Slider Layout app, is giv
 | `openNewTab` | `string`  | Whether a new tab on browser will be opened (`true`) or not (`false`) .                                                                                                         | `undefined`   |
 | `title`      | `string`  | Text label used to identify the image in the admin's Site Editor.                                                                                                               | `undefined`   |
 
-:information_source: Use the **admin's Site Editor** to manage all images declared in the `list-context.image-list` block.
+> ℹ️ Use the **admin's Site Editor** to manage all images declared in the `list-context.image-list` block.
 
 ## Customization
 

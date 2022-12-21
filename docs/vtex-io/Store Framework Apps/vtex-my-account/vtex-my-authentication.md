@@ -48,7 +48,7 @@ Set `Authentication` option to :white_check_mark: `Visible`, then click `Save`.
 
 :loudspeaker: **Disclaimer:** in a close future, the `Authentication` tab visibility will become always true.
 
-:information_source: **Before making this tab visible**, you should [customize](#customization) it to match your store visual identity
+> ℹ️ **Before making this tab visible**, you should [customize](#customization) it to match your store visual identity
 
 ## Customization
 
@@ -82,7 +82,7 @@ https://`{{accountName}}`.vtexcommercestable.com.br/\_secure/account#/authentica
 
 ## CSS Handles List
 
-:information_source: **If you're in a Portal Store**, append the prefix `vtex_my-authentication_` to each handle for your CSS class selectors.
+> ℹ️ **If you're in a Portal Store**, append the prefix `vtex_my-authentication_` to each handle for your CSS class selectors.
 
 | CSS Handles                         |
 | ----------------------------------- |

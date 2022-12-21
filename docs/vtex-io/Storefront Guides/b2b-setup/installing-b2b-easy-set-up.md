@@ -174,7 +174,6 @@ This resource creates an assortment of products and SKUs and sets their specific
           <li>SKU Name: L (880012)</li>
           <li>SKU Name: XL (880013)</li>
         </ul>
-        </li>
         <br />
         <li>Product Name: adidas Men's Performance Polo - Green Night (880002)</li>
         <ul>
@@ -183,7 +182,6 @@ This resource creates an assortment of products and SKUs and sets their specific
           <li>SKU Name: L (880022)</li>
           <li>SKU Name: XL (880023)</li>
         </ul>
-        </li>
         <br />
         <li>Product Name: adidas Women's Microdot Polo - Night Indigo (880003)</li>
         <ul>
@@ -192,7 +190,6 @@ This resource creates an assortment of products and SKUs and sets their specific
           <li>SKU Name: L (880032)</li>
           <li>SKU Name: XL (880033)</li>
         </ul>
-        </li>
         <br />
         <li>Product Name: adidas Women's Microdot Polo - True Pink (880004)</li>
         <ul>
@@ -201,7 +198,6 @@ This resource creates an assortment of products and SKUs and sets their specific
           <li>SKU Name: L (880042)</li>
           <li>SKU Name: XL (880043)</li>
         </ul>
-        </li>
     </details>
     <details>
       <summary>Category: Food and beverage (9282)</summary>
@@ -220,7 +216,6 @@ This resource creates an assortment of products and SKUs and sets their specific
         <ul>
           <li>SKU Name: _same name_ (880280)</li>
         </ul>
-        </li>
         <br />
         <li>Product Name: Fresh Hass Avocadoes (880029)</li>
         <ul>

@@ -16,7 +16,7 @@ This app also supports white label sellers selection, allowing shoppers to selec
 
 :information*source: The Google Geolocation API key in your \_Inventory & Shipping* settings is required for the geolocation feature.
 
-:warning: To use the IP lookup fallback, you must have an API key for https://ip-geolocation.whoisxmlapi.com.
+> ⚠️ To use the IP lookup fallback, you must have an API key for https://ip-geolocation.whoisxmlapi.com.
 
 ## Configuration
 
@@ -125,7 +125,7 @@ Additionally, there is an `Automatic Redirect` option, that will redirect the us
 
 Allow users to select one or more sellers serving their location from a list of options and display only products carried by those sellers in the search results.
 
-:information_source: For this feature to work properly, the item cannot have inventory in seller "1". If there's stock in seller "1", then the item will always appear in the search results, regardless of inventory in whichever sellers are selected.
+> ℹ️ For this feature to work properly, the item cannot have inventory in seller "1". If there's stock in seller "1", then the item will always appear in the search results, regardless of inventory in whichever sellers are selected.
 
 Add the `region-sellers` block as a child of the `shopper-location` block to get started:
 

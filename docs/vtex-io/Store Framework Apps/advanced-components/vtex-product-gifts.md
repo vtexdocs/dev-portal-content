@@ -8,7 +8,7 @@ updatedAt: "2022-06-09T17:19:17.708Z"
 ---
 The Product Gifts app provides blocks responsible for displaying, in the Product Description block, all gifts available for a given product.
 
-:information_source: *A product's gift is configured in a [Buy&Win promotion](https://help.vtex.com/tutorial/buy-and-win--tutorials_322)*
+> ℹ️ *A product's gift is configured in a [Buy&Win promotion](https://help.vtex.com/tutorial/buy-and-win--tutorials_322)*
 
 ![product-gift](https://user-images.githubusercontent.com/52087100/75782082-20a08380-5d3d-11ea-9ae1-60873e03f1ac.png)
 
@@ -157,7 +157,7 @@ You can configure the string received by the `text` prop using the following var
 | `minHeight`  | `Number` &#124; `String` | Gift image minimum height.                   | `125`         |
 | `imageLabel` | `String`                 | The label of the image that should be rendered. | `undefined`   |
 
-:information_source: *If no image label is defined, the* `gift-image` *block will use the first available image from the product's SKU.*
+> ℹ️ *If no image label is defined, the* `gift-image` *block will use the first available image from the product's SKU.*
 
 ## Customization
 
