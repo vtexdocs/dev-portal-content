@@ -6,6 +6,8 @@ hidden: false
 type: "improved"
 ---
 
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 Starting November 18, 2021, there will be critical improvements to the My Cards API endpoint:
 ```
 POST

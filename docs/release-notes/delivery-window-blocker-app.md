@@ -6,6 +6,8 @@ createdAt: "2022-07-14T14:00:00.000Z"
 hidden: false
 ---
 
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+
 We have launched the **Delivery Window Blocker** app, an interface on VTEX Admin for you to manually block or unblock scheduled delivery windows with greater precision and an improved UI. You can block or unblock scheduled delivery windows on demand or set up weekly recurrent blocking.
 
 The app expands and fine-tunes delivery window control alongside the [Delivery Capacity](https://help.vtex.com/en/tutorial/managing-delivery-capacity--2y217FQZCjD0I1n62yxVcz) feature. Note that actions performed by the app will override delivery capacity settings.

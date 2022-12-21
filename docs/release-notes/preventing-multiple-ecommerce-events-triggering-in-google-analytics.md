@@ -6,6 +6,8 @@ hidden: false
 type: "fixed"
 ---
 
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+
 The `ecommerce` variable was fixed to prevent the same ecommerce event from being triggered to Google Analytics (GA) multiple times and resulting in a financial cost.
 
 ## Why did we make these changes?

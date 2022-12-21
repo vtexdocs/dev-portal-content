@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red) 
 
 A trigger responsible for automatically opening the Minicart v2 on the interface can now be set by you using a store event and the block's new `customPixelEventId`  and `customPixelEventName` props!
 

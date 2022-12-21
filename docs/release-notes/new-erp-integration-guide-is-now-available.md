@@ -6,6 +6,8 @@ hidden: false
 type: "improved"
 ---
 
+![Documentation](https://img.shields.io/badge/-Documentation-lightgray)
+
 As a follow-up to our recently published [new Catalog API endpoints](https://developers.vtex.com/changelog/new-endpoints-available-in-catalog-api), we have published an updated [ERP integration guide](https://developers.vtex.com/docs/erp-integration-guide) detailing how to use our API endpoints to:
 
 - Set up catalog

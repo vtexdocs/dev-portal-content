@@ -6,13 +6,10 @@ hidden: false
 type: "deprecated"
 ---
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 
-The `shelf.relatedProducts` block, exported by the [Shelf app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf), is now deprecated. The block will only stop receiving updates, but you can still use it. 
+
+
+The `shelf.relatedProducts` block, exported by the [Shelf app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf), is now deprecated. The block will only stop receiving updates, but you can still use it.
 
 The block is responsible for rendering a list of related products on the product details page.
 

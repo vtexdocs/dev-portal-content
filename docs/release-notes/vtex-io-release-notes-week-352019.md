@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 Welcome to the VTEX IO weekly release notes!
 
 We're extremely happy to have achieved 10 straight weeks of VTEX IO Release Notes 🎉 We hope that you're excited as well!

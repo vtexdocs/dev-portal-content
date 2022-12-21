@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 Hey, team! Welcome to the **Black** VTEX IO Release Notes.
 
 Yep, that's right. If this Friday is **Black Friday**, you can call us **Black Release Notes** this week because we are thrilled with this long awaited event being just around the corner.

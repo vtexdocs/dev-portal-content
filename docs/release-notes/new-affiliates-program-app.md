@@ -6,16 +6,16 @@ createdAt: "2022-10-14T17:02:16.829Z"
 hidden: false
 ---
 
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+
 We have launched the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate.
 
-<br>
 [block:callout]
 {
   "type": "info",
   "body": "For the **Affiliates Program app**, an affiliate is different from the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0). In the app’s context, an affiliate is anyone who associates with a VTEX store to promote sales while receiving a commission."
 }
 [/block]
-<br>
 
 > The **Affiliates Program app** is compatible only with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), and it is not available for stores using [Legacy CMS](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS](https://faststore.dev/tutorials/cms/0#vtex-headless-cms).
 
@@ -25,11 +25,7 @@ The **Affiliates Program app** creates a specific URL of your VTEX store for eac
 
 The app also provides a profile page and dashboard for the affiliates to keep track of orders and commissions associated with them, as can be seen in the image below:
 
-<br>
-
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/4502082-affiliate-profile-page_29.png)
-
-<br>
 
 After [installing the app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app#installation) in your VTEX store, three new pages will be available in VTEX Admin, under *Other > Affiliates*:
 
@@ -41,10 +37,6 @@ After [installing the app](https://developers.vtex.com/vtex-developer-docs/docs/
 
 On these pages, you can manage everything related to your affiliates, making use of multiple filters and exporting data via email. They look like the example below:
 
-<br>
-
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/be138ce-affiliates_program_app_45.gif)
-
-<br>
 
 The app is available on [VTEX App Store](https://apps.vtex.com/vtex-affiliates/p) and you can find more information in the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app) guide.

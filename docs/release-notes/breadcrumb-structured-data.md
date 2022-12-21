@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Previously, neither the [Breadcrumb app](https://vtex.io/docs/components/all/vtex.breadcrumb/) or the store itself provided the `position` and `itemListElement` data necessary to guide search engines to the current page position in the store category tree.
 

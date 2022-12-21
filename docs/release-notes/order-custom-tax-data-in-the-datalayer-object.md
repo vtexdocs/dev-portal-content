@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 New fields were added to the `dataLayer` object, allowing the store's website to export data related to the order custom taxes.
 

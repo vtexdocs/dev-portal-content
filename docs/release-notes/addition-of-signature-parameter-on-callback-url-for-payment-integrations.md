@@ -5,6 +5,9 @@ type: "improved"
 createdAt: "2022-10-07T20:55:54.566Z"
 hidden: false
 ---
+
+![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+
 For some payment methods, the result of the payment cannot be obtained immediately after the request, returning an `undefined` status. These methods are classified as asynchronous payments. To deal with these methods at VTEX we use [callbacks](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization), so the provider can tell our gateway later if the payment is approved or denied.
 
 When making asynchronous payments through a [payment integration](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-protocol), our gateway sends an URL in the `callbackUrl` field of the [Create Payment](https://developers.vtex.com/vtex-rest-api/reference/createpayment) request. This field contains the callback URL that the payment provider will have to call and deliver the final payment status to our gateway.

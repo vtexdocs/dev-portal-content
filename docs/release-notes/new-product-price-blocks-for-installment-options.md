@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The Product Price component now displays all the available installment options according to the desired payment method, thanks to the new blocks `product-installments-list` and  `product-installments-list-item`.
 

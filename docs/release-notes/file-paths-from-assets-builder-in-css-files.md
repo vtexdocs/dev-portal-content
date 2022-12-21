@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Media uploaded on Assets builder can now be referenced in your store theme CSS files by adding the desired file path.
 

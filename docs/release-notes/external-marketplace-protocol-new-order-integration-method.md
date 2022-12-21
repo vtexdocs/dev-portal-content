@@ -5,6 +5,9 @@ type: "added"
 createdAt: "2022-06-10T14:00:00.000Z"
 hidden: false
 ---
+
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. For the new method, we have developed two new endpoints:
 
 - <span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> [New Order Integration API Reference](https://developers.vtex.com/vtex-rest-api/reference/new-order-integration)

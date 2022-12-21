@@ -6,11 +6,7 @@ createdAt: "2021-08-11T19:19:18.457Z"
 updatedAt: "2022-02-24T20:39:26.065Z"
 ---
 Sales associates can see the full list of completed orders on inStore. However, it sometimes makes sense for a sales associate to see only the orders they have personally completed. To enable this option, it is necessary to edit the `checkout-instore-custom.js` file. Check out the [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore) guide for further information on how to access this file.
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
+
 ## Edit the `checkout-instore-custom.js` file
 
 Inside this file, you must find the `window.INSTORE_CONFIG` object and add the `OMSFilters` object to it.
@@ -41,11 +37,6 @@ With that, the app will filter orders to display only those made by the sales as
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Check out your changes
 
 To see the reflected changes on inStore, enter the menu and click the `Reset app local data` button. After this, each sales associate will only see orders they were responsible for.

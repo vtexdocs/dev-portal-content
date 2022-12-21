@@ -6,15 +6,12 @@ createdAt: "2021-08-11T19:18:54.813Z"
 updatedAt: "2022-02-24T20:38:39.014Z"
 ---
 By default, inStore shows a list of suggested products to the sales associate in two stages of the order:
+
 - In the cart
 - On the product page
 
 If you want to hide these recommendations, you need to follow the steps below to edit the `checkout-instore-custom.css` and `checkout-instore-custom.js` files. To learn more about these files, read the [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore) guide.
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
+
 ## Edit the CSS file
 
 In the `checkout-instore-custom.css` file, you must include the following CSS rule:
@@ -36,11 +33,6 @@ This rule hides the product recommendation component from the front-end.
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Edit the JavaScript file
 
 In addition to editing the CSS file, it is necessary to make a change to the `checkout-instore-custom.js` file.
@@ -58,7 +50,7 @@ The code block should look like this:
   ]
 }
 [/block]
-2. Click on `Save` to store your changes. 
+2. Click on `Save` to store your changes.
 
 [block:callout]
 {
@@ -67,11 +59,6 @@ The code block should look like this:
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Check out your changes
 
 1. Open the inStore app menu

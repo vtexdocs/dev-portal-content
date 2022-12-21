@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 New CSS Handles with modifiers (`submenuWrapper--isOpen`  and `submenuWrapper--isClosed`) were added to the [Menu app](https://vtex.io/docs/components/all/vtex.menu/), making it possible to create animation effects when the submenu opens and closes according to the user navigation.
 

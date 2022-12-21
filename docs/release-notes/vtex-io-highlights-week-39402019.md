@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 Welcome to the one and only VTEX IO Release Notes!
 
 I bet that you've missed us these past couple weeks, but weep no more 🤗

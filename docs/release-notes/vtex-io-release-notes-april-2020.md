@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 The VTEX IO Release Notes is here, team!
 
 Thrilled to announce that this April's Release Notes brings a ton of beautiful releases to enlighten your cloudy days at home.

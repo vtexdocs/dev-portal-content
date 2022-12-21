@@ -77,6 +77,6 @@ Even though the payment facilities, its disbursement can take two commercial day
 {
   "type": "info",
   "title": "Payment conditions",
-  "body": "For every payment method, there is a payment condition. You can learn how these terms work in VTEX checking our [101 Payments module track] (https://help.vtex.com/en/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3)."
+  "body": "For every payment method, there is a payment condition. You can learn how these terms work in VTEX checking our [101 Payments module track](https://help.vtex.com/en/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3)."
 }
 [/block]

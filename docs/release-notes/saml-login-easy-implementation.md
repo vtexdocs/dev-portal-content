@@ -5,6 +5,9 @@ type: "improved"
 createdAt: "2022-09-01T19:21:56.237Z"
 hidden: false
 ---
+
+![Integration](https://img.shields.io/badge/-integration-brightgreen)
+
 The VTEX platform allows you to implement a custom Single Sign-On (SSO) option to the Admin panel of your store with [SAML 2.0](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-admin-saml2).
 
 ## What changed?

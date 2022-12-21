@@ -6,6 +6,8 @@ hidden: false
 type: "improved"
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 [block:html]
 {
   "html": "<div class=\"badge\" id=\"vtex-io\">VTEX IO</div>\n<br>"

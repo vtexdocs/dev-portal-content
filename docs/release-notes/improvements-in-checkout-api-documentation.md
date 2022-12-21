@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 We have made new Checkout endpoints available in our API documentation:
 - [New shopping cart](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#newshoppingcart)
 - [Get cart information](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#getcartinformation)

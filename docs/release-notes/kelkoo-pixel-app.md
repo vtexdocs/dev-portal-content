@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
 
 The more native integrations, the better: get ready for the [Kelkoo](https://www.kelkoogroup.com/) native integration! 
 

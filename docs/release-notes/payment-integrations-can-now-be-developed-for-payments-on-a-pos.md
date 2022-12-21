@@ -5,6 +5,9 @@ type: "added"
 createdAt: "2022-09-29T17:48:50.582Z"
 hidden: false
 ---
+
+![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+
 VTEX has solutions for selling at ecommerce and physical stores, providing a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience to shoppers. This includes the context of payments, where shoppers can pay for the purchase on a payment terminal, also known as a Point of Sale (POS).
 
 We have just updated our documentation to enable payment partners to develop their integrations for payments on a POS, with purchases made through the [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc). This solution is a specific application of our [Payment Provider Protocol (PPP)](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m) to accept physical credit and debit cards as payment methods. There are some requirements for this solution to work, including:

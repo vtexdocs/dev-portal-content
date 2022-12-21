@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
 
 The Availability Notify app shows a subscription form when a product SKU is unavailable. The form lets customers subscribe to get notified when that item gets restocked.
 

@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
 
 A VTEX [**Cookie Script**](https://cookie-script.com/) native integration is now available for stores using **VTEX Store Framework**, making your website cookies comply with GDPR and CCPA.
 

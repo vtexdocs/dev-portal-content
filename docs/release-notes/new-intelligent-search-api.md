@@ -6,6 +6,8 @@ hidden: false
 type: "added"
 ---
 
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 The [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference/intelligent-search-api-overview) allows you to consult information about the user's search in your store and also the terms used for it. It contains the following endpoints:
 
 - [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches)

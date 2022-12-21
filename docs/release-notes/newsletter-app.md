@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
 
 Display a newsletter subscription form for your store users using the [Store Newsletter app](https://vtex.io/docs/components/all/vtex.store-newsletter/)!
 

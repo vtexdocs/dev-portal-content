@@ -6,8 +6,8 @@ hidden: false
 type: "improved"
 ---
 
-![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
 
-These really are the glory days for VTEX IO developers: you can now count on a marvelous auto-complete feature in your IDE by running the `vtex setup --typings` command to add the Render Runtime's types to your app. 
+These really are the glory days for VTEX IO developers: you can now count on a marvelous auto-complete feature in your IDE by running the `vtex setup --typings` command to add the Render Runtime's types to your app.
 
 For more info, check out the [Render Runtime documentation](https://github.com/vtex-apps/render-runtime)!

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 A new CSS Handle (`swiperBullet--active`) was added to the [Product Images block](https://vtex.io/docs/components/all/vtex.store-components/productimages)(from the [Store Components app](https://vtex.io/docs/components/all/vtex.store-components/)), enabling the customization of the active slide dot.
 

@@ -6,6 +6,8 @@ hidden: false
 type: "added"
 ---
 
+![Documentation](https://img.shields.io/badge/-Documentation-lightgray)
+
 In order to support our clients' integrations implementation, we have published new Catalog integration developer guides, including:
 
 - [Catalog integration overview](https://developers.vtex.com/vtex-rest-api/docs/catalog-integration)

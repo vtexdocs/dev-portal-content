@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 A VTEX [**Elfsight**](https://elfsight.com/?gclid=EAIaIQobChMI4Yejsrnh6gIVVQmRCh0UPgQJEAAYASAAEgIvR_D_BwE) native integration is now available for stores using **VTEX Store Framework**, providing widgets to increase sales, engage visitors, collect leads, and more.
 

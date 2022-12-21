@@ -5,6 +5,9 @@ type: "added"
 createdAt: "2022-10-20T14:45:00.000Z"
 hidden: false
 ---
+
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 [block:callout]
 {
   "type": "info",

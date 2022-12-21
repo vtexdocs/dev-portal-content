@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 A new CSS Handle (`dot--isActive`) was added to the [Shelf app](https://vtex.io/docs/components/all/vtex.shelf/), enabling the customization of the shelf active slide dot.
 

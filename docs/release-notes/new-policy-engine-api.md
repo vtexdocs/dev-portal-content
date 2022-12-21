@@ -6,6 +6,8 @@ hidden: false
 type: "added"
 ---
 
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 The [Policy Engine API](https://developers.vtex.com/vtex-rest-api/reference/policy-engine-api-overview) will allow you to create promotion alerts when certain products are sold with undesired prices and promotions. It contains the following endpoints:
 
 <span class="api pg-type type-get">get</span> [Get Policy List](https://developers.vtex.com/vtex-rest-api/reference/policy#policy_list)

@@ -5,6 +5,9 @@ type: "added"
 createdAt: "2022-07-18T13:14:43.462Z"
 hidden: false
 ---
+
+![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+
 We have just made publicly available the Payment Provider Framework (PPF), which is an alternative way to develop payment connectors through VTEX IO. This feature is in the beta stage.
 
 ## What changed?

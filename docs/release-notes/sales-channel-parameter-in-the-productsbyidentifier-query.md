@@ -7,9 +7,5 @@ type: "improved"
 ---
 
 ![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
-[block:html]
-{
-  "html": "<div></div>\n\n<style></style>"
-}
-[/block]
+
 A new parameter was added to the [`productsByIdentifier`  search query](https://github.com/vtex-apps/search-graphql/blob/master/graphql/schema.graphql#L216), allowing your custom components to fetch and display products according to the desired sales channel.

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The `hasListPrice` prop was added to the `product-selling-price` block from [Product Price app](https://vtex.io/docs/components/all/vtex.product-price/), and it is responsible for defining whether the product should display its [list price](https://help.vtex.com/en/tutorial/prices-v2--tutorials_4393?locale=en) (if any) or not.
 

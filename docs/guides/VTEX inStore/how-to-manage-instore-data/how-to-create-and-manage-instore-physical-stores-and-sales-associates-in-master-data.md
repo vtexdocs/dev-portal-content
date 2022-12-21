@@ -9,18 +9,8 @@ inStore is VTEX’s core product for Unified Commerce operations. It allows your
 
 When setting inStore in your business, you might need to add physical stores and sales associates to the system, as well as managing existing stores and sales associates. You can do this by using VTable, as described in [this article](https://help.vtex.com/en/tracks/instore-setting-up--zav76TFEZlAjnyBVL5tRc/5PSjRstg7UU4lOm0s8aqKN), or you can use the [Master Data API - V2](https://developers.vtex.com/vtex-developer-docs/reference/documents), as described below.
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Stores
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Create a store
 
 If you want to create a new physical store on inStore, you should use the [Create or update entire document](https://developers.vtex.com/vtex-developer-docs/reference/createorupdateentiredocument) endpoint with the params listed below.
@@ -71,12 +61,6 @@ When the request is successful, the response is a `json` schema including a new 
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
-
 ### Update store information
 
 To update store information, you can use the same request you would use to [Create a store](#create-a-store), but including the `id` field in the request body and changing any attribute you want:
@@ -108,11 +92,6 @@ Response body example:
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Find a store
 
 In case you need to find an existing physical store to check their ID or other information, you should use the [Search documents](https://developers.vtex.com/vtex-developer-docs/reference/searchdocuments) endpoint. You can use any other query params you want in this request.
@@ -122,11 +101,6 @@ In case you need to find an existing physical store to check their ID or other i
 | `data_entity_name` | `stores` |
 | `_schema` | `v1` |
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Delete a store
 
 In order to delete a physical store and remove its data in Master Data, you should use the [Delete document](https://developers.vtex.com/vtex-developer-docs/reference/deletedocument) endpoint.
@@ -136,19 +110,8 @@ In order to delete a physical store and remove its data in Master Data, you shou
 | `data_entity_name` | `stores` |
 | `id` | Store `DocumentId` value, which represents the store ID number |
 
-
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Sales associates
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Create a sales associate
 
 If you want to create a new sales associate on inStore, you should use the [Create or update entire document](https://developers.vtex.com/vtex-developer-docs/reference/createorupdateentiredocument) endpoint. Using this request, you will give the sales associate access to inStore and automatically give them the inStore Sales Person role in your account.
@@ -178,7 +141,7 @@ Request body example:
   ]
 }
 [/block]
-When the request is successful, the response is a `json` including a new `DocumentId` attribute, which represents the sales associate ID number: 
+When the request is successful, the response is a `json` including a new `DocumentId` attribute, which represents the sales associate ID number:
 [block:code]
 {
   "codes": [
@@ -190,11 +153,6 @@ When the request is successful, the response is a `json` including a new `Docume
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Update sales associate information
 
 To update sales associate information, you can use the same request you would use to [Create a sales associate](#create-a-sales-associate), but including the `id` field in the request body:
@@ -226,11 +184,6 @@ Response body example:
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Find a sales associate
 
 In case you need to find an existing sales associate to check their ID or other information, you should use the [Search documents](https://developers.vtex.com/vtex-developer-docs/reference/searchdocuments) endpoint. You can use any other query params you want in this request. The response body will contain information about the sales associate and the store they are associated with.
@@ -240,12 +193,6 @@ In case you need to find an existing sales associate to check their ID or other 
 | `data_entity_name` | `vendors` |
 | `_schema` | `v1` |
 
-
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Delete a sales associate
 
 In order to delete a sales associate and remove their data in Master Data, you should use the [Delete document](https://developers.vtex.com/vtex-developer-docs/reference/deletedocument) endpoint.

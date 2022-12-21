@@ -12,19 +12,10 @@ Once enabled, this field becomes a mandatory step in the purchase flow, meaning 
 
 ![The inStore's UI once the sales rep code is enabled on the purchase flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/4048c5c-sales_rep_code_12.PNG)
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Prerequisites
 
 Before customizing the **sales associate code** field, you must enable the **Observation** field on inStore. Check [this article](https://developers.vtex.com/vtex-rest-api/docs/enable-the-remarks-field-in-the-order-screen) to learn how to do that.
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
+
 ## Edit the `checkout-instore-custom.js` file
 
 After enabling the **Observation** field, you should [configure the sales associate code](https://help.vtex.com/en/tracks/instore-customizations--1z9kBm12oBPyVNDo1ivVc2/5kNtS80hbBGg58jMeF8CRv) by editing the `checkout-instore-custom.js` file.
@@ -73,12 +64,8 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Example code
+
 [block:code]
 {
   "codes": [
@@ -91,11 +78,6 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### Use cases
 
 - <strong>Validation according to sales associate’s document ID</strong>: in this example, the regular expression applied in the mask expresses that the code has three numbers and two letters.
@@ -109,7 +91,7 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
   ]
 }
 [/block]
-- <strong>Validation only on Master Data</strong>: the following regular expression doesn't have any mask applied on the JS file, which means that the system will proceed with the Master Data's validation.
+- **Validation only on Master Data**: the following regular expression doesn't have any mask applied on the JS file, which means that the system will proceed with the Master Data's validation.
 [block:code]
 {
   "codes": [
@@ -120,7 +102,7 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
   ]
 }
 [/block]
-- <strong>Validation according to the mask only</strong>: in this example, the regular expression applied in the mask expresses that the code has two numbers.
+- **Validation according to the mask only**: in this example, the regular expression applied in the mask expresses that the code has two numbers.
 [block:code]
 {
   "codes": [
@@ -136,6 +118,6 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
 {
   "type": "info",
   "title": "Get in touch",
-  "body": "In case of doubt, contact Customer Excellence by creating a [support ticket] (https://help.vtex.com/en/tutorial/abrir-chamados-para-o-suporte-vtex--16yOEqpO32UQYygSmMSSAM)."
+  "body": "In case of doubt, contact Customer Excellence by creating a [support ticket](https://help.vtex.com/en/tutorial/abrir-chamados-para-o-suporte-vtex--16yOEqpO32UQYygSmMSSAM)."
 }
 [/block]

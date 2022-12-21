@@ -6,6 +6,8 @@ hidden: false
 type: "fixed"
 ---
 
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 Before, [Catalog API](ref:catalog-api-overview) did not apply the same validation rules seen in Admin, which had unintended side effects for our users when they attempted to activate an SKU they created or updated. Now we have corrected this behavior and the following restrictions apply.
 
 <span class="api pg-type type-post">post</span> [Create SKU](ref:catalog-api-post-sku)

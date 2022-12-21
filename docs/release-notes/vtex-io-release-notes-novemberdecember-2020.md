@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 Weep no more, team: here we (*finally*) are :tada:
 
 Let's make room for the VTEX IO Release Notes, this time around bringing you double the excitement from last November and December!
@@ -21,7 +23,7 @@ And unlike 2020, things are looking up, okay? In addition to the tremendous deli
 
 Believe me when I say it... you can't sit this one out! Without further ado, introducing the one and only VTEX IO Release Notes:
 
-## Special announcement :speaker:
+## Special announcement :speaker
 
 - **New home for the VTEX IO documentation**
 

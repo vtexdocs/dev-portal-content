@@ -5,6 +5,9 @@ type: "improved"
 createdAt: "2022-06-02T20:57:52.908Z"
 hidden: false
 ---
+
+![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+
 The [Payment Provider Protocol (PPP) API documentation](https://developers.vtex.com/vtex-rest-api/reference/payment-provider-protocol-api-overview) and the [Redirect section of the Purchase Flows article](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows#redirect) have just been updated. The changes in the PPP API documentation are:
 
 - [POST Create Payment](https://developers.vtex.com/vtex-rest-api/reference/createpayment) endpoint.

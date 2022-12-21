@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 Hey team! Another week is dawning!
 
 The start of the week is always the perfect opportunity to set the pace for the week, month and even life, right? We always promise ourselves to start a new diet, or to better organize our tasks, come up with plans and so on...

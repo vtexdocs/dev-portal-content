@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 New CSS Handles were added to the [Product Specifications block](https://github.com/vtex-apps/store-components/blob/master/docs/ProductSpecifications.md), exported by the [Store Components app](https://vtex.io/docs/app/vtex.store-components/), in order to grant you more flexibility while customizing the component's elements.
 

@@ -4,6 +4,9 @@ slug: "payment-connector-homologation-freeze-in-preparation-for-black-friday"
 createdAt: "2022-10-06T21:38:10.661Z"
 hidden: false
 ---
+
+![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+
 A [homologation](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-homologation) freeze is a precaution taken by VTEX before Black Friday to ensure our platform no longer performs any updates and becomes more resilient and reliable. During this period, we will be in security mode to avoid jeopardizing the stability of our customers' businesses.
 
 ## How is the freeze done?

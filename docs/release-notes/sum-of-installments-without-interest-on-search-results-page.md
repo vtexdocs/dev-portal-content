@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red) 
 
 Previously, the search query was presenting price errors when displaying product data on the search results page.
 

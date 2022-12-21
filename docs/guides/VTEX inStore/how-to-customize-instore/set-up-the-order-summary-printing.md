@@ -8,11 +8,7 @@ updatedAt: "2022-02-24T20:40:08.499Z"
 When a sales associate completes an order with inStore, they can print a summary of that order, as described in the [Print order summary](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/5UeqJA3sHp5goJacvHwPoS) article on Help Center.
 
  To enable this feature, you must follow the steps below to customize inStore's JavaScript file and make additional settings on the inStore app main menu.
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
+
 ## Edit the `checkout-instore-custom.js` file
 
 1. Open the `checkout-instore-custom.js` file, available in the Admin of your VTEX account (if you do not know how to access this file, check out the guide on [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore).
@@ -41,14 +37,9 @@ The code should look like the example below:
 
 This change will make the `Configure device` option appear in the inStore main menu. It is through this option that you will configure the printer.
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ### [OPTIONAL] Print automatically
 
-There is an option to automatically print the order summary as soon as the order is completed. To enable it, add the <code>printPageAutomatically</code> property with the value <code>true</code> inside the <code>printingConfig</code> object. See below how the code would look like in this case.
+There is an option to automatically print the order summary as soon as the order is completed. To enable it, add the `printPageAutomatically`< property with the value `true` inside the `printingConfig` object. See below how the code would look like in this case.
 [block:code]
 {
   "codes": [
@@ -60,11 +51,6 @@ There is an option to automatically print the order summary as soon as the order
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Configure the printer device on inStore
 
 The next step is to configure the printer on inStore. Make sure you follow the instructions on the [Print order summary](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/5UeqJA3sHp5goJacvHwPoS) article on Help Center to do so.

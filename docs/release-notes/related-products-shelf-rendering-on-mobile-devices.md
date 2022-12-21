@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Due to an implementation detail in the `isMobile` prop, the Related Products Shelf component was only being rendered in its desktop mode, even when displayed on mobile devices. 
 

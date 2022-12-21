@@ -8,11 +8,6 @@ updatedAt: "2021-08-24T20:17:18.836Z"
 Currently, it is possible to use inStore in Portuguese, English, or Spanish.
 
 By default, the application's language is Portuguese, but you can change it by editing the `checkout-instore-custom.js` file. Check out the [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore) guide for further information on how to access this file.
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 
 ## Edit the `checkout-instore-custom.js` file
 
@@ -51,12 +46,6 @@ Check out the possible values for this property:
 }
 [/block]
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
-
 ## Example
 
 If you want to change inStore's language to English, for example, replace the `pt` value with `en`. The resulting code snippet should look like this:
@@ -75,12 +64,6 @@ If you want to change inStore's language to English, for example, replace the `p
 {
   "type": "info",
   "body": "After making changes in the code, make sure you press the `Save` button."
-}
-[/block]
-
-[block:html]
-{
-  "html": "<br>"
 }
 [/block]
 

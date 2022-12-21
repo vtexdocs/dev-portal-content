@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Image Widget is an improvement on how you manage and reuse images on blocks from Site Editor. Previously, you could upload pictures and use them on Site Editor. However, it was not possible to store or reuse them.
 

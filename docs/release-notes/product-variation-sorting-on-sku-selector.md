@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 Previously, the SKU Selector rendered in a Product Summary Component ([product-summary-sku-selector block](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-sku-selector/)) did not respect the Catalog data when displaying product variations. 
 

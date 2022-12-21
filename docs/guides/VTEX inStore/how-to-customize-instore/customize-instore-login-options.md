@@ -7,32 +7,16 @@ updatedAt: "2022-02-24T20:33:34.298Z"
 ---
 To allow your [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc) sales associates to use custom login options, such as using their Google or Facebook accounts, follow the instructions in this guide.
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Prerequisites
 
 Make sure you meet these requirements before you proceed with the customization:
 
-
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 1. When you [add a new sales associate to inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/5PSjRstg7UU4lOm0s8aqKN), you should register them with their Google email address — if you want them to log in with Google — or the email address registered on their Facebook account — if you want them to log in with Facebook.
 2. It is necessary that you enable using Google or Facebook accounts as login options in your VTEX account, by following the instructions in [this article](https://help.vtex.com/en/tutorial/configuring-login-with-facebook-and-google--tutorials_513).
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
 ## Edit the `checkout-instore-custom.js` file
 
-To set custom login options, you can copy the example code below and insert it in the [`checkout-instore-custom.js` file](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore), using different value combinations for the <code>auth</code> object properties: <code>showLoginAndPassword</code>, <code>showSaml</code>, and <code>oAuthProviderName</code>.
+To set custom login options, you can copy the example code below and insert it in the [`checkout-instore-custom.js` file](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore), using different value combinations for the `auth` object properties: `showLoginAndPassword`, `showSaml`, and `oAuthProviderName`.
 [block:code]
 {
   "codes": [

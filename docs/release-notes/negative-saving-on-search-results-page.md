@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The Search Results page used to display the product list price even if it was lower than the product selling price, leading to a negative saving for users.
 

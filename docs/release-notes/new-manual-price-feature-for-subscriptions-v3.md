@@ -6,6 +6,8 @@ hidden: false
 type: "added"
 ---
 
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 You can now enable the Manual Price feature for [Subscriptions v3](https://developers.vtex.com/vtex-rest-api/docs/subscriptions-v3-migration-guide), which allows you to:
 
 * Apply a manual price to each subscription item, instead of the current price applied.

@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 I don't know if it was the extra day we had due to the leap year or the Carnival rest (or should I say *party*?), but something is certain: our wonderful development team was truly inspired in February! 
 
 Brace yourselves... This month's VTEX IO Release Notes is here and you'll need to muster all the energy you can to catch up with everything that has been prepared for you. I really do mean it! Just check it out:

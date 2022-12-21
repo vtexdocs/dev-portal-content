@@ -6,4 +6,6 @@ hidden: false
 type: "fixed"
 ---
 
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 Fixed the request body param name of <span class="api pg-type type-post">post</span>[Create Or Update Promotion](https://developers.vtex.com/vtex-rest-api/reference/promotions/createorupdatecalculatorconfiguration) endpoint, from `id` to `idCalculatorConfiguration`.

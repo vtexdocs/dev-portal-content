@@ -4,6 +4,9 @@ slug: "correction-in-events-sent-to-facebook-business-extension"
 createdAt: "2022-11-21T13:55:00.000Z"
 hidden: false
 ---
+
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+
 The [Facebook Business Extension and Conversions API app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-facebook-fbe) is the one-stop shop for merchants to easily connect their stores to Facebook services through the FBE platform.
 
 Through the app, a series of events are sent from VTEX servers to Facebook to track a store's performance.

@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 Welcome to yet another VTEX IO weekly release notes, this one being more than special because we are announcing the release of our brand new VTEX IO documentation website.
 
 Honestly, why are still reading the into after such news? Scroll down and have a look at last week's key changes:

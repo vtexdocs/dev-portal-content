@@ -6,8 +6,8 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
-The EAN (product identifier) data is now included in the `addToCart` event. 
+The EAN (product identifier) data is now included in the `addToCart` event.
 
 In practice, this means that the VTEX Store Framework now provides EAN data to Google Analytics events, allowing deeper analysis and extra integrations to retailers.

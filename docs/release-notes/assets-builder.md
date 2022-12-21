@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
 
 The Assets Builder now supports assets whose URLs are built using markdown.
 

@@ -6,6 +6,8 @@ createdAt: "2022-06-14T12:35:30.264Z"
 hidden: false
 ---
 
+![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+
 We have launched a new app to make product customization easier using [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) – [attachments](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm) for complex scenarios where it is necessary to manage different product combinations, quantities, additional items and costs.
 
 The app is only available for stores developed using [VTEX IO](https://vtex.com/us-en/store-framework/). Before using it, you need to [install and configure Product Customizer](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-customizer) in your store.

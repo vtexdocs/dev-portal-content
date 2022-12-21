@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 Did you ever imagine two VTEX IO Release Notes in one week? **we**. **are**. **on**. **fire** 🔥
 
 Hope you will be able to set some time aside from your busy workweek to catch up with VTEX IO one more time.

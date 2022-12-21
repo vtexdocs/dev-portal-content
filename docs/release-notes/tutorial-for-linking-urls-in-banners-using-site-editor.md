@@ -6,13 +6,8 @@ hidden: false
 type: "removed"
 ---
 
-![VTEX IO](https://img.shields.io/badge/-VTEX%20IO-orange)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
-[block:html]
-{
-  "html": "<br>"
-}
-[/block]
-The documentation for [Linking URLs in banners using Site Editor](https://help.vtex.com/en/tutorial/linking-urls-to-banners-using-the-site-editor--4z2PagtN733waiWA8ttOuD) has been updated and now it is available in [VTEX Help Center](https://help.vtex.com/). 
+The documentation for [Linking URLs in banners using Site Editor](https://help.vtex.com/en/tutorial/linking-urls-to-banners-using-the-site-editor--4z2PagtN733waiWA8ttOuD) has been updated and now it is available in [VTEX Help Center](https://help.vtex.com/).
 
 Before, it was in the Storefront implementation guides of the Developer Portal. However, as it is a tutorial related to a setting in the Admin’s Site Editor, we have added it in the Site Editor track of Help Center.

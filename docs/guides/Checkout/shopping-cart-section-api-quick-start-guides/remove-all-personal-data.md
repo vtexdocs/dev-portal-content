@@ -48,6 +48,6 @@ After accessing the URL created in your browser, you will be redirected to the c
 [block:callout]
 {
   "type": "warning",
-  "body": "Alternatively, if you are using a backend or similar implementation, it is also possible to create a new cart (without any personal data) using the [Create a new Cart] (https://developers.vtex.com/vtex-rest-api/reference/createanewcart) endpoint and adding the same items from the previous cart through the [Update cart items](https://developers.vtex.com/vtex-rest-api/reference/itemsupdate)."
+  "body": "Alternatively, if you are using a backend or similar implementation, it is also possible to create a new cart (without any personal data) using the [Create a new Cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart) endpoint and adding the same items from the previous cart through the [Update cart items](https://developers.vtex.com/vtex-rest-api/reference/itemsupdate)."
 }
 [/block]

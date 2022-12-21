@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red) 
 
 Previously, there were no CSS handles to enable users to select and customize non-active dots in the `product-images` block (from [Store Components app](https://vtex.io/docs/app/vtex.store-components/)).
 

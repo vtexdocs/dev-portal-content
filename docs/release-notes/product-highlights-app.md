@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red) 
 
 The Product Highlights app is here: it allows you to display highlight badges on products according to the collection or promotion they are linked to.
 

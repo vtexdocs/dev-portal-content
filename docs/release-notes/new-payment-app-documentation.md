@@ -6,6 +6,8 @@ hidden: false
 type: "added"
 ---
 
+![Documentation](https://img.shields.io/badge/-Documentation-lightgray)
+
 We created new documentation for **Payment App**, a feature that allows for one of our three types of [purchase flow](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows). You can use it to develop your own app on VTEX IO for personalized payment experiences in [payment integrations](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-implementing-a-payment-provider). This app makes a UI element (a window) appear in the payment step of the checkout, like the one below.
 
 ![Payment App GIF](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/c95f758-kX6y8QN55B_11.gif)

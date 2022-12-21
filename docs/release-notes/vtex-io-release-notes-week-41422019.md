@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 Hey team! One more VTEX IO Release Notes coming your way.
 
 In tune with the Halloween spirit, quick disclosure: more so than ghosts and zombies, my worst fear is not knowing what is going on with VTEX IO 😨 I'm betting you dread the same thing!

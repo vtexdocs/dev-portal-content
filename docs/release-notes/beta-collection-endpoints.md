@@ -6,6 +6,8 @@ hidden: false
 type: "added"
 ---
 
+![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+
 The new [Beta Collections module](https://help.vtex.com/announcements/new-beta-collections-module-easily-create-and-manage-product-collections--6KvFxylC5SNsbVm8L8XZpZ#) launch allowed us to engineer new endpoints that create and manage Collections. These are the endpoints:
 
 <span class="api pg-type type-get">get</span>[Get All Collections](https://developers.vtex.com/vtex-developer-docs/reference/collection-beta#get-allcollections)

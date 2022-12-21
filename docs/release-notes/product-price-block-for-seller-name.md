@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red) 
 
 A new block responsible for displaying the seller name beside the product price was added to the Product Prices app.
 

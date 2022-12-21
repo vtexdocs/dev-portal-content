@@ -76,7 +76,7 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     <tr>
         <td>B</td>
         <td>When sending the SKU register to the marketplace</td>
-        <td>The standard rule with 0-100% manual approval was created successfully. To view or change this rule click [here] (https://accountname.myvtex.com/admin/order-auth)</td>
+        <td>The standard rule with 0-100% manual approval was created successfully. To view or change this rule click [here](https://accountname.myvtex.com/admin/order-auth)</td>
         <td>Success</td>
         <td>201</td>
     </tr>

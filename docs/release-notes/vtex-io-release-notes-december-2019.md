@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://img.shields.io/badge/-App%20Development-blue)
+
 You better watch out, you better not cry, you better not pout and I'm telling you why: **Release Notes** (once again) **is coming to town**!
 
 Given the holiday's never ending glee (and the 117 Fahrenheit if you're in Brazil) that December bestows upon us all, the **Christmasy Release Notes** comes in an exclusive format this last month of the year, bringing the best and latest of the past few weeks.
