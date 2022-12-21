@@ -24,16 +24,14 @@ The following information should be sent to [VTEX](https://help.vtex.com/en/supp
 - **Authentication key information** required to perform the GET request call.
 
 See below an example of the GET Banks endpoint that VTEX will make:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "curl --request GET \\\n--url https://{{providerPSEEndpoint}}/ \\\n--header 'Application: application/json' \\\n--header 'Content-type: application/json' \\\n--header 'auth-token: token'",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+
+```sh
+curl --request GET \
+--url https://{{providerPSEEndpoint}}/ \
+--header 'Application: application/json' \
+--header 'Content-type: application/json' \
+--header 'auth-token: token'
+```
 
 [block:callout]
 {
@@ -42,16 +40,25 @@ See below an example of the GET Banks endpoint that VTEX will make:
 }
 [/block]
 After that, VTEX expects a response body following the structure described below:
-[block:code]
-{
-  "codes": [
+
+```json
+'{
+ “banks”:  [
     {
-      "code": "'{\n “banks”:  [\n    {\n      “name”: “XXXX BANK”,\n      “code”:  “1111”\n    },\n   {\n      “name”: “YYYY BANK”,\n      “code”:  “2000”\n    },\n  {\n      “name”: “ZZZZ BANK”,\n      “code”:  “5555”\n    },\n  ]\n}'",
-      "language": "json"
-    }
+      “name”: “XXXX BANK”,
+      “code”:  “1111”
+    },
+   {
+      “name”: “YYYY BANK”,
+      “code”:  “2000”
+    },
+  {
+      “name”: “ZZZZ BANK”,
+      “code”:  “5555”
+    },
   ]
-}
-[/block]
+}'
+```
 
 [block:callout]
 {
@@ -68,44 +75,46 @@ The below PSE information should be added in one of the two APIs bellow (accordi
 
 - [List Payment Provider Manifest API](https://developers.vtex.com/vtex-developer-docs/reference/manifest-1)
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n...\n\"paymentMethods\":[\n...\n{\n    \"name\": \"PSE\",\n    \"allowsSplit\": \"disabled\"\n},\n...\n]\n...\n}",
-      "language": "json"
-    }
-  ]
+...
+"paymentMethods":[
+...
+{
+    "name": "PSE",
+    "allowsSplit": "disabled"
+},
+...
+]
+...
 }
-[/block]
+```
 
 - [List Payment Methods API](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods)
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n...\n\"paymentMethods\":[\n       \"PSE\",\n]\n...\n}",
-      "language": "json"
-    }
-  ]
+...
+"paymentMethods":[
+       "PSE",
+]
+...
 }
-[/block]
+```
 
 ## POST Creating Payment request configuration
 
 The bank selected by the shopper will be sent to the connector on the authorization request in the following format:
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "```\n…\n    \"metadata\": {\n        \"bankCode\": \"1051\"\n    },\n   \"transactionId\": \"xyz\",\n   \"paymentId\": \"xpt0\"\n…\n```\n",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+```json
+…
+    "metadata": {
+        "bankCode": "1051"
+    },
+   "transactionId": "xyz",
+   "paymentId": "xpt0"
+…
+```
 
 [block:callout]
 {

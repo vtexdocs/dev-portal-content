@@ -120,7 +120,7 @@ Follow these steps to create your layout:
 
 5. Run the command _Grunt_ on the project folder.
 
-6. Open your preferred browser and go to the link <http://localhost:8080/>.
+6. Open your preferred browser and go to the link `http://localhost:8080`.
 
 7. Modify the following files in accordance with the requirements of the User interface: structure and code section:
    * _src/partials/payment.html_: this file is responsible for the presented layout itself. This is where you should insert the HTML structure of your layout.

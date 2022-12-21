@@ -1,6 +1,6 @@
 ---
 slug: "add-to-cart-button-performance"
-title: "`Add to cart` button performance"
+title: "Add to cart button performance"
 createdAt: 2020-11-26T18:43:15.322Z
 hidden: false
 type: "fixed"
