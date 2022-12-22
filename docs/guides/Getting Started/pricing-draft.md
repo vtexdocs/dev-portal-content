@@ -29,12 +29,7 @@ The Prices module, also called Pricing, is a system responsible for the creation
 There are several actions a VTEX store can perform on prices. In the next sections, you will find the main actions related to a store’s pricing management routine.
 
 Before using our Pricing API Reference, check out our [Pricing v2 - API Reference Overview](https://developers.vtex.com/vtex-rest-api/reference/pricing-api-overview) for more details about rate limits.
-[block:callout]
-{
-  "type": "info",
-  "body": "Pricing v2 is the second generation of our pricing module, and is the only version currently available in VTEX. We have [discontinued Pricing v1](https://help.vtex.com/en/announcements/pricing-v1-module-will-be-discontinued-update-your-store-by-september--46YxKNOCLH2Ykw6a9uyxXB) in 2020 and our documentation refers to Pricing v2."
-}
-[/block]
+>ℹ️ Pricing v2 is the second generation of our pricing module, and is the only version currently available in VTEX. We have [discontinued Pricing v1](https://help.vtex.com/en/announcements/pricing-v1-module-will-be-discontinued-update-your-store-by-september--46YxKNOCLH2Ykw6a9uyxXB) in 2020 and our documentation refers to Pricing v2.
 
 [block:html]
 {
@@ -48,12 +43,7 @@ Before using our Pricing API Reference, check out our [Pricing v2 - API Referenc
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "[Master Data](https://developers.vtex.com/vtex-rest-api/docs/master-data-introduction) is used to [connect a price table to a desired context](https://help.vtex.com/en/tutorial/criando-promocao-para-um-cluster-de-clientes--tutorials_342)"
-}
-[/block]
+>ℹ️ [Master Data](https://developers.vtex.com/vtex-rest-api/docs/master-data-introduction) is used to [connect a price table to a desired context](https://help.vtex.com/en/tutorial/criando-promocao-para-um-cluster-de-clientes--tutorials_342)
 
 [block:html]
 {

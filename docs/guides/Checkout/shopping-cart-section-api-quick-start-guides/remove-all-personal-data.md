@@ -26,12 +26,8 @@ See below an example of some personal data contained in a shopping cart:
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
-}
-[/block]
+>ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+
 ## Removing all personal data from the shopping cart 
 
 To remove all personal data from a shopping cart, you can use your browser to create an URL based on the  `orderFormId` value. See an example below:

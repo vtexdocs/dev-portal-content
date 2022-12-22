@@ -28,12 +28,8 @@ If you have a small quantity of warehouses to manage, this can be done with the 
 
 To update an SKU inventory, you should use the [Update Inventory By SKU and Warehouse](https://developers.vtex.com/vtex-rest-api/reference/updateinventorybyskuandwarehouse) endpoint, from the Logistics API.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "You can find the `warehouseId` for each Warehouse using the [List All Warehouses](https://developers.vtex.com/vtex-rest-api/reference/allwarehouses) endpoint."
-}
-[/block]
+>ℹ️ You can find the `warehouseId` for each Warehouse using the [List All Warehouses](https://developers.vtex.com/vtex-rest-api/reference/allwarehouses) endpoint.
+
 You should set the total quantity of items in stock for each SKU. In between steps, you can use the [List Inventory By SKU](https://developers.vtex.com/vtex-rest-api/reference/inventorybysku) endpoint or see how you can [Manage inventory](https://help.vtex.com/pt/tutorial/gerenciar-itens-em-estoque--tutorials_139) from your Admin panel.
 
 ## Wrapping up

@@ -29,12 +29,8 @@ After sending the request, the endpoint will return the response body containing
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Fields that were not registered in the customer’s profile will be displayed as `null`."
-}
-[/block]
+>ℹ️ Fields that were not registered in the customer’s profile will be displayed as `null`.
+
 ## Error codes
 
 The following errors may appear as a message in the response body.

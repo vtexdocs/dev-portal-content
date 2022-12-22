@@ -22,12 +22,7 @@ To use the **Save user data opt-in** functionality in your store, you must first
 
 ![savePersonalData](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/df79aae-savePersonalData1_23.PNG)
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Under the `storePreferencesData` object, the `saveUserData` field may be indicated as `true`. This field is ignored, and kept in this configuration for backwards compatibility only."
-}
-[/block]
+>ℹ️ Under the `storePreferencesData` object, the `saveUserData` field may be indicated as `true`. This field is ignored, and kept in this configuration for backwards compatibility only.
 
 ![savePersonalData2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/103d591-savePersonalData2_32.PNG)
 
@@ -39,12 +34,8 @@ Checkbox for saving personal data:
 
 ![Contact Information](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/3cccdf1-Contact_Information_40.png)
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Previously, it was possible to display this checkbox by modifying the `display` property of the `.save-data` element, via CSS. However, with the **Save user data opt-in** enabled, the method through CSS is no longer recommended."
-}
-[/block]
+>ℹ️ Previously, it was possible to display this checkbox by modifying the `display` property of the `.save-data` element, via CSS. However, with the **Save user data opt-in** enabled, the method through CSS is no longer recommended.
+
 Checkbox for saving payment data:
 
 ![Pagamento](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/features/f1601b3-Pagamento_50.PNG)

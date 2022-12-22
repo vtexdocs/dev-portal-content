@@ -25,12 +25,8 @@ See a request body example below:
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "The fields `id`, `quantity`, `seller`, and `country` are just examples of content that you can simulate in your cart. You can add more fields to the request as per your need. Access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview to check the available fields."
-}
-[/block]
+>ℹ️ The fields `id`, `quantity`, `seller`, and `country` are just examples of content that you can simulate in your cart. You can add more fields to the request as per your need. Access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview to check the available fields.
+
 After sending the request, the endpoint will return the response body containing the shopping cart information, as shown in the example below:
 [block:code]
 {

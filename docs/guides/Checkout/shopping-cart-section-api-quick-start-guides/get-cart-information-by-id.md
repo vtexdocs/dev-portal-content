@@ -44,10 +44,7 @@ After sending the request, the endpoint will return the response body containing
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
+>ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
 }
 [/block]
 ## Error code

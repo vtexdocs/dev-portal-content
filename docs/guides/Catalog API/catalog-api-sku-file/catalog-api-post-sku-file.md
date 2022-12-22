@@ -6,12 +6,7 @@ hidden: false
 createdAt: "2020-04-01T19:50:27.986Z"
 updatedAt: "2022-07-11T17:57:40.184Z"
 ---
-[block:callout]
-{
-  "type": "info",
-  "body": "You can add up to 50 files for each SKU. If you have any questions, please feel free to contact [our Support](https://support.vtex.com/hc/en-us/requests)."
-}
-[/block]
+>ℹ️ You can add up to 50 files for each SKU. If you have any questions, please feel free to contact [our Support](https://support.vtex.com/hc/en-us/requests).
 
 [block:callout]
 {

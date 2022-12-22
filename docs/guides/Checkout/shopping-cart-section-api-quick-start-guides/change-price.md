@@ -8,12 +8,8 @@ updatedAt: "2022-11-17T12:38:07.532Z"
 The shopping cart is where the information on the products chosen by the customer while browsing a store is gathered. This data may include item prices, shipping value, payment, and delivery methods, among others.
 
 This guide will describe how to change the price of an SKU (item) in a cart by the API.
-[block:callout]
-{
-  "type": "info",
-  "body": "Before starting to manually change prices on an item, make sure the [Manual Price](https://developers.vtex.com/vtex-rest-api/docs/enable-the-manual-price) feature is already enabled in your store."
-}
-[/block]
+>ℹ️ Before starting to manually change prices on an item, make sure the [Manual Price](https://developers.vtex.com/vtex-rest-api/docs/enable-the-manual-price) feature is already enabled in your store.
+
 ## Getting and accessing shopping cart information
 
 The first step is to get the `orderFormId` and access the shopping cart information that you want to change the item price. For more information, access the [Get cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.
@@ -30,12 +26,8 @@ Below is an example of pricing details for items contained in a shopping cart:
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
-}
-[/block]
+>ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+
 ## Changing the price of a shopping cart item
 
 With the `orderFormId` information available, you must use the [Change price](https://developers.vtex.com/vtex-rest-api/reference/pricechange) endpoint to send the path parameters information through the URL:

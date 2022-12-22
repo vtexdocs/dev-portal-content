@@ -138,12 +138,8 @@ Check the request body example below to see all requirements and read their desc
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "This request is only valid to one specification at a time. To register multiple values to one specification, you will need to create a request for each one of the values."
-}
-[/block]
+>ℹ️ This request is only valid to one specification at a time. To register multiple values to one specification, you will need to create a request for each one of the values.
+
 ## Associating a Specification 
 
 Once you have created a specification, and if needed added a value to it, you will associate the specification with a product or an SKU. 

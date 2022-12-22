@@ -8,12 +8,8 @@ updatedAt: "2022-11-17T13:00:19.482Z"
 The shopping cart is where the information on the products chosen by the customer while browsing a store is gathered. This data may include item prices, shipping value, payment, and delivery methods, among others.
 
 This guide will describe how to add coupons to the shopping cart by the API.
-[block:callout]
-{
-  "type": "info",
-  "body": "Before adding the coupon code to the cart, call the [Get all coupons](https://developers.vtex.com/vtex-rest-api/reference/getall) endpoint to confirm that it is active in your store. If necessary, you can [create a new coupon](https://developers.vtex.com/vtex-rest-api/docs/creating-and-managing-coupons-with-promotions-api)."
-}
-[/block]
+>ℹ️ Before adding the coupon code to the cart, call the [Get all coupons](https://developers.vtex.com/vtex-rest-api/reference/getall) endpoint to confirm that it is active in your store. If necessary, you can [create a new coupon](https://developers.vtex.com/vtex-rest-api/docs/creating-and-managing-coupons-with-promotions-api).
+
 ## Getting shopping cart information
 
 The first step is to get the `orderFormId` of the shopping cart information that you want to obtain information about the number of installments. For more information, access the [Get cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.
@@ -47,12 +43,8 @@ After sending the request, the endpoint will return the response body containing
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
-}
-[/block]
+>ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+
 ## Error codes
 
 The following errors may appear as a message in the response body.

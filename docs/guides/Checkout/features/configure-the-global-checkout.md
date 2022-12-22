@@ -44,12 +44,9 @@ To allow deliveries to a new country (for example, you want to deliver products 
 
 1. [Create a new carrier](https://help.vtex.com/en/tutorial/registering-a-carrier/).
 2. For the new carrier, create a shipping worksheet with the column “Country”.
-[block:callout]
-{
-  "type": "info",
-  "body": "The value of the column “Country” must be the 3-digit ISO code of the countries (e.g., for England, you will use the “GBR” value). To check the codes, we recommend the website `https://countrycode.org/`."
-}
-[/block]
+
+>ℹ️ The value of the column “Country” must be the 3-digit ISO code of the countries (e.g., for England, you will use the “GBR” value). To check the codes, we recommend the website `https://countrycode.org/`.
+
 After defining the delivery settings for the countries intended, a new field will be shown on your checkout's delivery form, allowing the user to choose the desired international delivery option.
 
 ### Invoices

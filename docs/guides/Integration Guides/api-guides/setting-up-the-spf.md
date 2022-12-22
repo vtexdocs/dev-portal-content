@@ -63,12 +63,8 @@ To consult the verification, you need to:
 1. Fill your domain in **hostnames or IP addresses**.
 2. Select **TXT** as **Type**.
 3. Click on **Dig**.
-[block:callout]
-{
-  "type": "info",
-  "body": "The modifications are impacted by the domain propagation time. This can take between 24 or 48 hours to reflect the changes."
-}
-[/block]
+>ℹ️ The modifications are impacted by the domain propagation time. This can take between 24 or 48 hours to reflect the changes.
+
 Here is a [consult example using the VTEX domain](https://www.digwebinterface.com/?hostnames=vtex.com&type=TXT&ns=resolver&useresolver=8.8.4.4&nameservers=):
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/api-guides/c9a066c-Screenshot_2021-05-19_Boas_prticas_de_SPF_Sender_Policy_Framework_73.png)

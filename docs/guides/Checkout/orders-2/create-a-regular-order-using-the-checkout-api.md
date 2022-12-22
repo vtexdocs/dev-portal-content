@@ -6,12 +6,8 @@ createdAt: "2021-10-25T23:13:41.287Z"
 updatedAt: "2022-10-27T18:56:50.737Z"
 ---
 There are different ways of using VTEX APIs to handle shopping carts and checkout in order to place orders. For instance, you can use API requests to [create](https://developers.vtex.com/vtex-rest-api/reference/createanewcart) and [manage](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments) shopping carts on the VTEX platform, so as to place an order from that information later, or directly place an order with a single request containing all cart data.
-[block:callout]
-{
-  "type": "info",
-  "body": "The main data structure used in VTEX Checkout is the `orderForm`. It contains every piece of information pertinent to a shopping cart, including logistics, payment, products and customer profile, for instance. Learn more in the [orderForm documentation.](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields)"
-}
-[/block]
+>ℹ️ The main data structure used in VTEX Checkout is the `orderForm`. It contains every piece of information pertinent to a shopping cart, including logistics, payment, products and customer profile, for instance. Learn more in the [orderForm documentation.](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields)
+
 For this tutorial, we chose one of the more objective ways to understand and use our APIs to place a regular order (placed, paid, and delivered under the liability of a single account). To do this, we will follow these steps:
 
 1. [Simulate a cart](doc:create-a-regular-order-using-the-checkout-api#1-simulate-a-cart);
@@ -74,12 +70,7 @@ An [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fie
 "paymentData": {}
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Note that we are assembling this data structure to be sent as the request body in the next step. Below, we discuss these sections briefly, but you can learn more about each field in the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)"
-}
-[/block]
+>ℹ️ Note that we are assembling this data structure to be sent as the request body in the next step. Below, we discuss these sections briefly, but you can learn more about each field in the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
 
 ### items
 
@@ -100,12 +91,7 @@ Then, build a block with the following structure:
 ]
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)"
-}
-[/block]
+>ℹ️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
 
 ### clientProfileData
 
@@ -190,12 +176,7 @@ This is an array that contains logistics information for each item in the `items
 The `selectedSla` field indicates the selected delivery option. You can choose an `id` value, from among the options in the `slas` array obtained in the [Cart simulation step](doc:create-a-regular-order-using-the-checkout-api#1-simulate-a-cart). The corresponding `price` can also be found in the simulation response data, in the same object.
 
 The `logisticsInfo` array should contain a number of objects equal to the number of objects in the `items` array. The `itemIndex` of a `logisticsInfo` object indicates to which item of the array `items` that information is referring. The object referring to the first item in `items` will contain an `itemIndex` of `0` and so on.
-[block:callout]
-{
-  "type": "info",
-  "body": "For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)"
-}
-[/block]
+>ℹ️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
 
 ### paymentData
 
@@ -215,12 +196,8 @@ This object informs the payment method and installment options (if available) se
 ```
 
 Note that the `value` field corresponds to the full value to be payed by the shopper, whereas the `referenceValue` is the base number over which interests apply. If no interest apply to the order, they should be equal.
-[block:callout]
-{
-  "type": "info",
-  "body": "For this example, we are considering a single payment method, with a single installment and no interest. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)"
-}
-[/block]
+>ℹ️ For this example, we are considering a single payment method, with a single installment and no interest. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
+
 Use the options and information from the [simulation](doc:create-a-regular-order-using-the-checkout-api#1-simulate-a-cart) response data to assemble your own `paymentData`.
 
 ## 4. Place the order
@@ -342,12 +319,8 @@ If the delivery method is pickup point, add the information <code>"selectedDeliv
     }
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "This exemplifies a fairly simple fictitious shopping cart. The `orderForm` is actually highly customizable. Learn more about all possibilities in the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)"
-}
-[/block]
+>ℹ️ This exemplifies a fairly simple fictitious shopping cart. The `orderForm` is actually highly customizable. Learn more about all possibilities in the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
+
 This `orderForm` can now be sent as the body in the [Place order API request.](https://developers.vtex.com/vtex-rest-api/reference/placeorder)
 
 If you get a status `201 Created` response, take note of four pieces of information from its response content:
@@ -395,12 +368,7 @@ For most cases, it will look like the following:
 ]
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "In the `fields` object, you can send an `addressId` to use an existing address or a new `address` object."
-}
-[/block]
+>ℹ️ In the `fields` object, you can send an `addressId` to use an existing address or a new `address` object.
 
 >❗ Make sure that all value-related fields match the information sent in [step four](doc:create-a-regular-order-using-the-checkout-api#4-place-the-order), when placing the order.
 

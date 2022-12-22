@@ -38,9 +38,5 @@ The availability and price information for this seller's products shown to that 
 When there is still no user location information, the seller selection heuristic shows only the products of the main seller (seller 1) and comprehensive sellers.
 
 This happens both in the shop window and in the cart and aims to prevent the customer from seeing products from sellers that they will not actually be able to deliver to their address.
-[block:callout]
-{
-  "type": "info",
-  "body": "Even if the customer's location was captured in the shop window stage and stored in the `regionId` field of the Session API, this information is not used in the cart. Therefore, upon reaching the cart, the customer will again see only the information from the main seller and the comprehensive sellers. The remaining sellers are only eligible after the customer informs the delivery zip code."
-}
-[/block]
+
+>ℹ️ Even if the customer's location was captured in the shop window stage and stored in the `regionId` field of the Session API, this information is not used in the cart. Therefore, upon reaching the cart, the customer will again see only the information from the main seller and the comprehensive sellers. The remaining sellers are only eligible after the customer informs the delivery zip code.

@@ -5,13 +5,8 @@ hidden: false
 createdAt: "2019-12-20T02:25:40.558Z"
 updatedAt: "2022-08-08T21:09:09.766Z"
 ---
-[block:callout]
-{
-  "type": "info",
-  "body": "Check the new [Catalog onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Catalog and is organized by focusing on the developer's journey.",
-  "title": "Onboarding guide"
-}
-[/block]
+>ℹ️ Check the new [Catalog onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Catalog and is organized by focusing on the developer's journey.
+
 Methods for collecting product/SKU catalog data, categories, brands and other information. All content that comes between `{{}}` keys must be replaced with the correct data before performing the request.
 
 

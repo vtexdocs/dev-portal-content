@@ -111,13 +111,8 @@ Go through each of the Specification Groups you created previously and add the f
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For more details, see our [Catalog specifications integration guide](https://developers.vtex.com/vtex-rest-api/docs/specifications).",
-  "title": "Learn more"
-}
-[/block]
+>ℹ️ For more details, see our [Catalog specifications integration guide](https://developers.vtex.com/vtex-rest-api/docs/specifications).
+
 ## Create Specification Values
 
 To add Specification Values to a Specification Field, you should use the [Create Specification Field Value](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-specification-field-value) endpoint in the Catalog API.

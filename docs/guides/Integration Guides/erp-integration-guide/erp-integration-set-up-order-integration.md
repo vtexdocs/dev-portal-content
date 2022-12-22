@@ -33,12 +33,7 @@ When filtering changes in status (`”type”: “FromWorkflow”`) for ERP inte
 The other filtering type (`”type”: “FromOrders”`) can also be used to filter changes in status or any other change made to an order, which provides a much more customizable option. You can, for example, filter orders that have been delivered or that have had items removed or added to by the store.
 
 Learn more about how to configure filtering options in this [Feed API guide](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1).
-[block:callout]
-{
-  "type": "info",
-  "body": "The orders feed is unique to each `appKey` / `appToken` so that it can be configured and used by different applications with no interference between them."
-}
-[/block]
+>ℹ️ The orders feed is unique to each `appKey` / `appToken` so that it can be configured and used by different applications with no interference between them.
 
 [block:callout]
 {
@@ -65,12 +60,8 @@ To acknowledge an event from the orders feed, you should use the [Commit feed it
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Committed or not, all events are automattically excluded from the feed after a period of 4 days. To avoid losing data, your middleware should run continuously."
-}
-[/block]
+>ℹ️ Committed or not, all events are automattically excluded from the feed after a period of 4 days. To avoid losing data, your middleware should run continuously.
+
 ## Get order details
 
 If there is any action to be done on a specific order due to their current status, you should use the [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder) endpoint in the Orders API to get all order details (products, payments, delivery and customer data). The `orderId` can be obtained from the feed event.
@@ -110,20 +101,11 @@ Let’s imagine a simple integration scenario, in which a store configured a fee
 4. Now that the appropriate action has been taken, the implementation may acknowledge to the feed that this specific item was read, passing its `handle` on a [Commit feed items](https://developers.vtex.com/vtex-developer-docs/reference/feed-v3) request.
 
 5. Finally, the implementation should update the order’s status to `start-handling` with the [Start handling](https://developers.vtex.com/vtex-rest-api/reference/starthandling) endpoint in the Orders API.
-[block:callout]
-{
-  "type": "info",
-  "body": "This is a basic example of a typical Orders Feed ERP integration. There are many possibilities of more complex use. You can, for example, monitor different types of updates and trigger different actions for each."
-}
-[/block]
+>ℹ️ This is a basic example of a typical Orders Feed ERP integration. There are many possibilities of more complex use. You can, for example, monitor different types of updates and trigger different actions for each.
+
 ## Wrapping up
 
 To learn more, access our [ERP integration FAQ](https://developers.vtex.com/vtex-developer-docs/docs/faq-erp-integration).
 
 See also the [Feed v3 API guide](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1) and check the order [Feed v3 API reference](https://developers.vtex.com/vtex-developer-docs/reference/feed-v3).
-[block:callout]
-{
-  "type": "info",
-  "body": "You can also use a hook in order to build a reactive order integration, as oposed to the feed, with which the integration must actively retrieve events from the queue. To learn more about the Hook and find out which type is best for you, access the [Feed v3 API guide](https://developers.vtex.com/vtex-developer-docs/docs/feed-v3-1)."
-}
-[/block]
+>ℹ️ You can also use a hook in order to build a reactive order integration, as oposed to the feed, with which the integration must actively retrieve events from the queue. To learn more about the Hook and find out which type is best for you, access the [Feed v3 API guide](https://developers.vtex.com/vtex-developer-docs/docs/feed-v3-1).

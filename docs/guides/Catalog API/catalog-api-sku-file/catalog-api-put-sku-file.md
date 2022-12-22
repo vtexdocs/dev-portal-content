@@ -21,9 +21,4 @@ updatedAt: "2022-07-11T17:58:22.088Z"
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "You can add up to 50 files for each SKU. If you have any questions, please feel free to contact [our Support](https://support.vtex.com/hc/en-us/requests)."
-}
-[/block]
+>ℹ️ You can add up to 50 files for each SKU. If you have any questions, please feel free to contact [our Support](https://support.vtex.com/hc/en-us/requests).

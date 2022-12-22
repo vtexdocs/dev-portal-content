@@ -15,10 +15,7 @@ Order Placed page example:
 In the Checkout section, located in the Admin VTEX side menu, you can access one or more websites (stores) registered in your account and perform checkout settings, including UI customization.
 
 By clicking on the `blue gear` button of the chosen website, and selecting the **Code** tab, you will have access to a list of files and templates, where you can edit or import the HTML information. 
-[block:callout]
-{
-  "type": "info",
-  "body": "The same files shown in the Code tab are publicly available in the route https://{accountName}.myvtex.com/files/"
+>ℹ️ The same files shown in the Code tab are publicly available in the route https://{accountName}.myvtex.com/files/"
 }
 [/block]
 

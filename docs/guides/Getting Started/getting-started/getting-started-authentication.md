@@ -11,12 +11,8 @@ In this article, you can learn about all authentication aspects relevant to deve
 - [Single Sign On integration](#single-sign-on-integration)
 - [Shopper authentication for B2B stores](#shopper-authentication-for-b2b-stores)
 
-[block:callout]
-{
-  "type": "info",
-  "body": "See this related content:\n- Authorization: [Users](https://help.vtex.com/en/subcategory/users--63DHe3VQEEE6Uuua8gIs2M), [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [License Manager Resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)\n- Accounting: [Audit](https://help.vtex.com/en/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA)"
-}
-[/block]
+>ℹ️ See this related content:\n- Authorization: [Users](https://help.vtex.com/en/subcategory/users--63DHe3VQEEE6Uuua8gIs2M), [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [License Manager Resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)\n- Accounting: [Audit](https://help.vtex.com/en/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA)
+
 ## Machine authentication
 
 There are different contexts in which machine authentication is required in the regular functioning of a VTEX store. Because of that, there are different ways this is done. Below are some example use cases and details about machine authentication methods.
@@ -28,12 +24,8 @@ There are different contexts in which machine authentication is required in the 
 | Self-hosted backend request to VTEX APIs | [Application keys](#application-keys) |
 | Self-hosted frontend request to VTEX APIs | [User token](#user-token) |
 
-[block:callout]
-{
-  "type": "info",
-  "body": "The authentication methods in the table above are indicated but are not the only alternative for these use cases. Learn more about each method and how to use them below."
-}
-[/block]
+>ℹ️ The authentication methods in the table above are indicated but are not the only alternative for these use cases. Learn more about each method and how to use them below.
+
 ### Application keys
 
 Application keys (`appKey`) are credentials used to authenticate requests to VTEX APIs. Store administrators can create multiple application keys that may be used, for example, for different integrations.
@@ -67,12 +59,8 @@ curl --location --request GET 'https://apiexamples.vtexcommercebeta.com.br/api/o
 --header 'Content-Type: application/json'
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "According to the [W3C definition of Message Headers in HTTP requests](https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2), header names are case-insensitive. `X-VTEX-API-AppKey`, `x-vtex-api-appkey` or any other variation in the authentication headers will work the same way."
-}
-[/block]
+>ℹ️ According to the [W3C definition of Message Headers in HTTP requests](https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2), header names are case-insensitive. `X-VTEX-API-AppKey`, `x-vtex-api-appkey` or any other variation in the authentication headers will work the same way.
+
 ### User token
 
 Whenever a user successfully logs in to your VTEX store, VTEX ID generates a [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) user token and sets it as the `VtexIdclientAutCookie` cookie.
@@ -133,12 +121,8 @@ We recommend using the VTEX IO [clients package](https://github.com/vtex/io-clie
 }
 [/block]
 The tokens shown above are available via the VTEX IO context and are associated with different permissions. See the table below to learn about each token.
-[block:callout]
-{
-  "type": "info",
-  "body": "You can import the context in your app like this:\n```ts\nimport { IOContext } as ctx from '@vtex/api'\n```"
-}
-[/block]
+>ℹ️ You can import the context in your app like this:\n```ts\nimport { IOContext } as ctx from '@vtex/api'\n```
+
 | **Token**                | **`authMethod`** | **Via context**         | **Description**                                                                                                                              | **Permissions**                                                                                                                                                                                                                                                                                                                          |
 |--------------------------|------------------|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App authentication token | `AUTH_TOKEN`     | `ctx.authToken`          | Every VTEX IO app has its own rotating authentication token. We recommend you avoid using this app token whenever user tokens are available. | Developers must declare precisely what actions are allowed for the app they are building. You must do this by editing the [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies) in your app's [manifest](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest). |

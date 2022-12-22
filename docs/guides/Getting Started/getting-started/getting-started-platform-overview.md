@@ -10,12 +10,7 @@ updatedAt: "2020-04-25T19:38:17.337Z"
 **We know our business.** We combined our commerce expertise and technology DNA to make implementation faster, through out-of-the-box and low-code features.
 
 Below you'll find the main technical aspects of our platform and see how everything connects to deliver the new sweet-spot: low cost of implementation and high customization capability.
-[block:callout]
-{
-  "type": "info",
-  "body": "For a business-focused platform overview, see <a href=\"https://vtex.com/us-en/platform-overview\" target=\"_blank\">this page</a>."
-}
-[/block]
+>ℹ️ For a business-focused platform overview, see [this page](https://vtex.com/us-en/platform-overview).
 
 [block:api-header]
 {

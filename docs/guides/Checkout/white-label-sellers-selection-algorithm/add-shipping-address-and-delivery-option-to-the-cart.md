@@ -46,12 +46,8 @@ After sending the request, the endpoint will return the response body containing
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
-}
-[/block]
+>ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+
 ## Adding a delivery option to the shopping cart
 
 To add a delivery option to the shopping cart, you must have already added a shipping address (according to the [previous section](#adding-a-shipping-address-to-the-shopping-cart)), and use the same [Add shipping address and select delivery option](https://developers.vtex.com/vtex-rest-api/reference/addshippingaddress) endpoint. However, you need to send the request body with the `logisticsInfo` array containing the following information:

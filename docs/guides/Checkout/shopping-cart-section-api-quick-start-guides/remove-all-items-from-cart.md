@@ -25,12 +25,8 @@ See below an example of item details contained in a shopping cart:
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
-}
-[/block]
+>ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+
 ## Removing all items from the shopping cart 
 
 To remove all items from the shopping cart, you need to use the [Remove all items](https://developers.vtex.com/vtex-rest-api/reference/removeallitems) endpoint. In this request, the `ordeFormId` of the shopping cart must be sent through the URL request, as shown by the example below:

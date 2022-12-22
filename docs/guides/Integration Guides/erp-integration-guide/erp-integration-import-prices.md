@@ -39,12 +39,7 @@ To set the base price for an SKU, you should use the [Create/Edit Price](https:/
 
 You should set a base price for each SKU. In between steps, you can use the [Get Price](https://developers.vtex.com/vtex-rest-api/reference/getprice) endpoint or visit the *Products > Prices > Price list* section of your Admin panel to check on your progress.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "In the same [Create/Edit Price](https://developers.vtex.com/vtex-rest-api/reference/getprice) request, you may optionally set a list price. Additionally, you may set either a cost price or a markup value. By defining either one of them, the other will be calculated to conform to the formula `basePrice = costPrice * (1 + markup)`."
-}
-[/block]
+>ℹ️ In the same [Create/Edit Price](https://developers.vtex.com/vtex-rest-api/reference/getprice) request, you may optionally set a list price. Additionally, you may set either a cost price or a markup value. By defining either one of them, the other will be calculated to conform to the formula `basePrice = costPrice * (1 + markup)`.
 
 ## Set fixed prices for specific contexts
 
@@ -59,12 +54,7 @@ You should set a fixed price for each price table / SKU combination that needs t
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Keep in mind that [price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) might be a better option than fixed prices if you are consistently applying the same criteria for SKUs in the same category, brand or markup range."
-}
-[/block]
+>ℹ️ Keep in mind that [price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) might be a better option than fixed prices if you are consistently applying the same criteria for SKUs in the same category, brand or markup range.
 
 ## Wrapping up
 

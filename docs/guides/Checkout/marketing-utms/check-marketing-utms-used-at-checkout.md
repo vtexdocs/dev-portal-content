@@ -33,12 +33,7 @@ To make sure the content of the `utm_source` parameter is being sent to the Chec
 
 The presence of the `utmSource` field with the same value as `utm_source` means that the information was correctly received by Checkout. If the `utmSource` field was empty in the orderForm, it would indicate that the value was not sent to the Checkout.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "When the value is not sent to the Checkout, any benefits linked to the `utm_source` will **not** be applied to the orders, and OMS will **not** register these UTMs as order parameters."
-}
-[/block]
+>ℹ️ When the value is not sent to the Checkout, any benefits linked to the `utm_source` will **not** be applied to the orders, and OMS will **not** register these UTMs as order parameters.
 
 ## Why are the UTMs not being applied to the cart?
 

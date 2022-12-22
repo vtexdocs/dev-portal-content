@@ -59,12 +59,8 @@ Information availability:
 
 Product import steps:
 1. Backend sends new product/sku to VTEX associated with a [mock category](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-catalog#category-migration-from-erps) called **Integration**. 
-[block:callout]
-{
-  "type": "info",
-  "body": "If brands are not available, you may do the same, creating a mock brand called **Integration**, for products to be enriched later."
-}
-[/block]
+>ℹ️ If brands are not available, you may do the same, creating a mock brand called **Integration**, for products to be enriched later.
+
 2. Store team uses the [Google sheet method](https://github.com/vtex-apps/google-import) or Admin to manually enrich the imported catalog information, assigning the correct categories to each product in the **Integration** category.
 >❗ Make sure the **Integration** category is inactive, so that the incomplete products are not displayed in the store.
 
@@ -166,12 +162,7 @@ You can use the **Get Trade Policies Linked to Product** endpoint to check on yo
 3. In the *Edit* column, click on the *Update* button corresponding to that product;
 4. You should now be able to see the Trade Policies you linked to that Product.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "The ID of the main trade policy is always 1, but you can use the [Get Sales Channel List](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-saleschannel-list) endpoint in the Catalog API to get more information on the trade policies that are available in your store. To enable a new trade policy, follow the instructions provided in our [Help Center article](https://help.vtex.com/faq/how-to-configure-a-new-trade-policy--frequentlyAskedQuestions_700?locale=en)."
-}
-[/block]
+>ℹ️ The ID of the main trade policy is always 1, but you can use the [Get Sales Channel List](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-saleschannel-list) endpoint in the Catalog API to get more information on the trade policies that are available in your store. To enable a new trade policy, follow the instructions provided in our [Help Center article](https://help.vtex.com/faq/how-to-configure-a-new-trade-policy--frequentlyAskedQuestions_700?locale=en).
 ## Import SKU 
 
 To add an SKU to a Product in your catalog, you should use the [Create SKU](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-sku) endpoint in the Catalog API.

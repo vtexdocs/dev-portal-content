@@ -16,6 +16,7 @@ The first step is to get the `orderFormId` of the shopping cart to which you wan
 ## Adding items to the shopping cart
 
 To add items to the shopping cart, you need to use the [Add cart items](https://developers.vtex.com/vtex-rest-api/reference/items) endpoint. In this request, you must send the following information through the URL:
+
 - **Path param**: `orderFormId` value.
 - **Query param**: `allowedOutdatedData`. You can set up this query as `false` or `true` to define whether some cart information can be updated through the minicart.
 
@@ -25,17 +26,14 @@ See a URL example below:
 
 Additionally, you must send the request body containing the following information about the new item to be added to the cart:
 
-- `quantity` 
-- `seller` 
-- `id` 
-- `index` 
-- `price` 
-[block:callout]
-{
-  "type": "info",
-  "body": "`price` should be sent only in case you want to make a bulk price change."
-}
-[/block]
+- `quantity`
+- `seller`
+- `id`
+- `index`
+- `price`
+
+>ℹ️ `price` should be sent only in case you want to make a bulk price change.
+
 See a request body example below:
 [block:code]
 {
@@ -59,12 +57,8 @@ After sending the request, the endpoint will return the response body containing
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
-}
-[/block]
+>ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+
 ## Error codes
 
 The following errors may appear as a message in the response body.
@@ -93,6 +87,7 @@ The following errors may appear as a message in the response body.
   ]
 }
 [/block]
+
 ### 403 - Forbidden
 
 - **Message error example (code CHK003)**: `"Access denied"`. This message indicates that it is not possible to make a bulk price change on this item.
@@ -106,6 +101,7 @@ The following errors may appear as a message in the response body.
   ]
 }
 [/block]
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`. Check that the URL data is correct.

@@ -11,13 +11,8 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 
 In the Checkout section, located in the Admin VTEX side menu, you can access one or more websites (stores) registered in your account and perform checkout settings, including UI customization.
 
-By clicking on the `blue gear` button of the chosen website, and selecting the **Code** tab, you will have access to a list of files and templates, where you can edit or import the HTML information. 
-[block:callout]
-{
-  "type": "info",
-  "body": "The same files shown in the Code tab are publicly available in the route https://{accountName}.myvtex.com/files/"
-}
-[/block]
+By clicking on the `blue gear` button of the chosen website, and selecting the **Code** tab, you will have access to a list of files and templates, where you can edit or import the HTML information.
+>ℹ️ The same files shown in the Code tab are publicly available in the route `https://{accountName}.myvtex.com/files/`.
 
 ### Edit Information
 
@@ -34,9 +29,10 @@ To edit Checkout UI information, access the following files/templates:
   "body": "It is not possible to edit information in HTML body of the page."
 }
 [/block]
+
 ### Import Information
 
-You can import additional information and files by clicking on the `New` button and then on **File upload**, located in the **Code** tab. 
+You can import additional information and files by clicking on the `New` button and then on **File upload**, located in the **Code** tab.
 [block:callout]
 {
   "type": "warning",
@@ -49,7 +45,7 @@ For more information, access [configuring template in the SmartCheckout](https:/
 
 ### Legacy CMS
 
-In stores using the Legacy CMS, files are managed by the **Files Manager**. The CMS and JS files are located in the route https://{accountName}.myvtex.com/arquivos/, and named respectively as _checkout-custom.css_ and _checkout-custom.js_.
+In stores using the Legacy CMS, files are managed by the **Files Manager**. The CMS and JS files are located in the route `https://{accountName}.myvtex.com/arquivos/`, and named respectively as _checkout-custom.css_ and _checkout-custom.js_.
 [block:callout]
 {
   "type": "warning",
@@ -71,13 +67,14 @@ In addition to Admin VTEX, you can use two apps to customize your store’s Chec
   "body": "If you want to use the Checkout UI Settings app, any script changes made through it will override HTML, CSS, and JS information made through [Admin VTEX](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings)."
 }
 [/block]
+
 ### Checkout UI Settings app
 
 The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install). This app, if compared to the [Admin VTEX](https://docs.google.com/document/d/15oDUQtf4Tywt0aLhp6fhQsuw7P-ieI6WS4Qz1wJJEWY/edit#heading=h.29eil9ypzyao) method, offers the possibility to:
 
-- Perform A/B Testing 
+- Perform A/B Testing
 - Easily track all changes made to the UI (through app versions)
-- Apply quick rollbacks to a previous version, if needed. 
+- Apply quick rollbacks to a previous version, if needed.
 
 [block:callout]
 {
@@ -89,6 +86,6 @@ For more information, access the [Checkout UI Settings Guide](https://developers
 
 ### Checkout UI Custom app
 
-The Checkout UI Custom app can be used to quickly apply pre-defined customization options (e.g. show items unit price, text size, colors) that have already been approved by VTEX. For more information, access the [Checkout UI Custom Guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-custom-v0). 
+The Checkout UI Custom app can be used to quickly apply pre-defined customization options (e.g. show items unit price, text size, colors) that have already been approved by VTEX. For more information, access the [Checkout UI Custom Guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-custom-v0).
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/b49efd2-Checkout_UI_Custom_view_97.PNG)
