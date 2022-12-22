@@ -5,7 +5,7 @@ type: "improved"
 createdAt: "2022-11-22T14:07:01.550Z"
 hidden: false
 ---
-![Store Framework](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 New CSS handles have been added to the [Kit Look app](https://developers.vtex.com/vtex-developer-docs/docs/vtexbr-kitlook) in order to allow greater customization flexibility.
 

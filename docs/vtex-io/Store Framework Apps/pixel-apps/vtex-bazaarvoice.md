@@ -12,7 +12,7 @@ updatedAt: "2022-08-01T16:08:12.306Z"
 
 This is a Bazaarvoice first party integration app that is responsible for showing the components related to Bazaarvoice Reviews in your store.
 
-:loudspeaker: **Disclaimer:** Don't fork this project; use, contribute, or open issue with your feature request.
+📢 **Disclaimer:** Don't fork this project; use, contribute, or open issue with your feature request.
 
 ## Release schedule
 

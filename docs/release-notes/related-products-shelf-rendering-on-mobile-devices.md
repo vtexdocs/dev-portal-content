@@ -12,4 +12,4 @@ Due to an implementation detail in the `isMobile` prop, the Related Products She
 
 This undesirable behavior is now [fixed](https://github.com/vtex-apps/shelf/pull/227) and the Related Products Shelf is working for mobile users as expected.
 
-:sparkles: *We would not be able to deliver this amazing result if it was not for [Sahan Jayawardana](https://github.com/sahanljc) from Clouda Inc! Our sincere thanks, Sahan!*
+✨ *We would not be able to deliver this amazing result if it was not for [Sahan Jayawardana](https://github.com/sahanljc) from Clouda Inc! Our sincere thanks, Sahan!*

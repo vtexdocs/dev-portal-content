@@ -114,7 +114,7 @@ declare global {
 }
 ```
 
-8. **That's it** :sparkles:! Now you can, on your functions, **access your client** from the `ctx`.
+8. **That's it** ✨! Now you can, on your functions, **access your client** from the `ctx`.
 
 ```typescript
 export const authorize = async (ctx: Context) {

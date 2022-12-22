@@ -10,7 +10,7 @@ updatedAt: "2020-10-05T18:52:00.091Z"
 
   Here we describe all our SVG fragment identifiers. 
   
- :loudspeaker: **Disclaimer:** The `svg/` folder is just to render the icons in this MD.
+ 📢 **Disclaimer:** The `svg/` folder is just to render the icons in this MD.
 
 
 ### How to use this fragments? 

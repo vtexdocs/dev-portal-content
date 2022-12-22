@@ -20,7 +20,7 @@ updatedAt: "2021-03-10T19:35:11.404Z"
 
 The VTEX product kit app shows two or more products as a kit. Usually these products are sold together and offer a discount. This app is used by store theme.
 
-:loudspeaker: **Disclaimer:** Don't fork this project, use, contribute, or open issue with your feature request.
+📢 **Disclaimer:** Don't fork this project, use, contribute, or open issue with your feature request.
 
 ## Release schedule
 

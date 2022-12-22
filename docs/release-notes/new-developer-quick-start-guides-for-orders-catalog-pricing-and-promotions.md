@@ -15,6 +15,6 @@ To facilitate your onboarding with VTEX, we have created new 'Getting Started' g
 - [Pricing](https://developers.vtex.com/vtex-rest-api/docs/pricing-overview)
 - [Promotions](https://developers.vtex.com/vtex-rest-api/docs/promotions-overview)
 
-:mega:  :sparkles: **We need your help to improve this content, based on your feedback!**
+📣  ✨ **We need your help to improve this content, based on your feedback!**
 
 Once you access any of these guides, a satisfaction survey will appear on your screen. Fill in the fields to share your experience with us! Rating our docs takes less than 60 seconds, we promise!

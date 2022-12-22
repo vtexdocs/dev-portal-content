@@ -17,4 +17,4 @@ Other VTEX Store Framework apps can now use the context exported by the [Seller 
   ]
 }
 [/block]
-:sparkles: We would not be able to deliver this amazing result if it was not for [Beatriz Miranda](https://github.com/BeatrizMiranda) from ACCT! Our sincere thanks, Beatriz!
+✨ We would not be able to deliver this amazing result if it was not for [Beatriz Miranda](https://github.com/BeatrizMiranda) from ACCT! Our sincere thanks, Beatriz!

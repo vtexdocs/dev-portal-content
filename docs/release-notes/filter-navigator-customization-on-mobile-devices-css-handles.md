@@ -15,4 +15,4 @@ New CSS Handles were added to the [Search Result app](https://vtex.io/docs/compo
 - `filterBreadcrumbsContent` 
 - `filterBreadcrumbsText`
 
-:sparkles: We would not be able to deliver this amazing result if it was not for [Beatriz Miranda](https://github.com/BeatrizMiranda) from ACCT! Our sincere thanks, Beatriz!
+✨ We would not be able to deliver this amazing result if it was not for [Beatriz Miranda](https://github.com/BeatrizMiranda) from ACCT! Our sincere thanks, Beatriz!

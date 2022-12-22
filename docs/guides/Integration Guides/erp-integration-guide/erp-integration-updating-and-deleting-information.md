@@ -53,6 +53,6 @@ To perform ongoing inventory updates, you may follow the same flow mentioned pre
 {
   "type": "success",
   "title": "Let us know what you think",
-  "body": "Congratulations in completing all the steps in this integration guide :tada:\n\nIf you found it helpful, please let us know by clicking the :thumbsup: icon below! Otherwise, feel free to make suggestions in the `Feedback` button on the top of the page, after you click the :thumbsdown: icon."
+  "body": "Congratulations in completing all the steps in this integration guide 🎉\n\nIf you found it helpful, please let us know by clicking the 👍🏼 icon below! Otherwise, feel free to make suggestions in the `Feedback` button on the top of the page, after you click the 👎🏼 icon."
 }
 [/block]

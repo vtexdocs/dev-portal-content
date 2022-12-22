@@ -6,7 +6,7 @@ createdAt: "2022-12-12T12:40:04.564Z"
 hidden: false
 ---
 
-![Store Development](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Development](https://img.shields.io/badge/-Store%Development-red)
 
 Go-live is the process that puts your new VTEX store into production, making it available for customers to access it and make purchases.
 

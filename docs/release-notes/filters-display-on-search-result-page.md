@@ -15,4 +15,4 @@ Notice that only one filter can be opened at one time. In the example above, the
 
 For more details, access the [Search Result app documentation](https://vtex.io/docs/components/all/vtex.search-result/).
 
-:sparkles: *We would not be able to deliver this amazing result if it was not for [Felipe Ireslan](https://github.com/felipeireslan) from ACCT! Our sincere thanks, Felipe!*
+✨ *We would not be able to deliver this amazing result if it was not for [Felipe Ireslan](https://github.com/felipeireslan) from ACCT! Our sincere thanks, Felipe!*

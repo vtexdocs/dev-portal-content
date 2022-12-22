@@ -14,4 +14,4 @@ This improvement is extremely useful for VTEX Store Framework stores who use Goo
 
 In case no product spot price was configured, Google structured data will fetch the product selling price instead.
 
-:sparkles: We would not be able to deliver this amazing result if it was not for [Matheus Araujo](https://github.com/MatheusR42) from Corebiz! Our sincere thanks, Matheus!
+✨ We would not be able to deliver this amazing result if it was not for [Matheus Araujo](https://github.com/MatheusR42) from Corebiz! Our sincere thanks, Matheus!

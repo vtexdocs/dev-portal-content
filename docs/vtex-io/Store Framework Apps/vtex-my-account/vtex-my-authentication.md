@@ -46,7 +46,7 @@ Set `Authentication` option to :white_check_mark: `Visible`, then click `Save`.
 
 ![image](https://user-images.githubusercontent.com/22064061/112537098-0b095c00-8d8d-11eb-915a-3dd7e8da86da.png)
 
-:loudspeaker: **Disclaimer:** in a close future, the `Authentication` tab visibility will become always true.
+📢 **Disclaimer:** in a close future, the `Authentication` tab visibility will become always true.
 
 > ℹ️ **Before making this tab visible**, you should [customize](#customization) it to match your store visual identity
 
@@ -68,7 +68,7 @@ In order to customize the app, create a `.css` file with your own rules. Your cl
 
 A list of all `CSS Handles` is in [this section](#css-handles-list).
 
-:loudspeaker: **Avoid** using element or position-based selectors, as the customization may break in the face of the smallest UI changes.
+📢 **Avoid** using element or position-based selectors, as the customization may break in the face of the smallest UI changes.
 
 To upload your `.css` file, go to the VTEX CMS (`/admin/a`) and open the `CMS/Files Manager/.css` file. Click `Add` and you'll be able to upload it. This file is accessible from [VTEX CMS storage](https://help.vtex.com/en/tutorial/ver-o-conteudo-dos-arquivos-css-da-loja--U5v7DXpRSee86uqiKQUQi).
 

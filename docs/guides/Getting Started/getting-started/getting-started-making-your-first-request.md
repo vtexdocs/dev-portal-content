@@ -17,7 +17,7 @@ See below the expected response in our `apiexamples` store:
 
 If you get a `401 - Unauthorized` as response, review the authentication steps. Make sure that the right permissions are defined in the roles and that you copied the exact appKey and appToken values into the headers of the request.
 
-If you received a `200 OK` response, congratulations on your first successful request to VTEX APIs!   :tada:
+If you received a `200 OK` response, congratulations on your first successful request to VTEX APIs!   🎉
 
 ## Using Postman
 

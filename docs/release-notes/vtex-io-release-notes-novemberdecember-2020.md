@@ -8,11 +8,11 @@ type: ""
 
 ![App Development](https://img.shields.io/badge/-App%20Development-blue)
 
-Weep no more, team: here we (*finally*) are :tada:
+Weep no more, team: here we (*finally*) are 🎉
 
 Let's make room for the VTEX IO Release Notes, this time around bringing you double the excitement from last November and December!
 
-If 2020 made us shed some tears, our VTEX IO team worked around the clock to bring a smile back on our faces :grin: Just look at the awesome stuff they've delivered as last year came to an end:
+If 2020 made us shed some tears, our VTEX IO team worked around the clock to bring a smile back on our faces 😀 Just look at the awesome stuff they've delivered as last year came to an end:
 
 - 🚀 Condition Layout v2
 - ➕ Importing private CSS Classes
@@ -30,14 +30,8 @@ Believe me when I say it... you can't sit this one out! Without further ado, int
 Officially housing VTEX IO documentation since March 13, 2020, IO Docs was the successful result of VTEX's effort to create a more in-depth and narrowly focused documentation.
 
 With almost a year gone by, it's time to say goodbye: to better take advantage of existing and future VTEX IO documentation and to leverage the development experience of our users, **VTEX IO documentation will henceforth be stored on our [Developer Portal](https://developers.vtex.com/), starting today (January 15, 2021)!**
-[block:callout]
-{
-  "type": "info",
-  "body": "All existing documentation will be redirected and automatically migrated to the new platform. No existing link will be lost during this process."
-}
-[/block]
 
-> :info:
+> ℹ️ All existing documentation will be redirected and automatically migrated to the new platform. No existing link will be lost during this process.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/3bb0edb-Developers-portal_40.png)
 Home to our [API documentation](https://developers.vtex.com/reference) and [guides](https://developers.vtex.com/docs) aimed at developers working with integrations and customization, the [**Developer Portal**](https://developers.vtex.com/) - formerly known as Help Center Developer Docs - offers all the necessary resources for VTEX's most advanced users in a single place.
@@ -46,7 +40,7 @@ Such changes to the VTEX IO documentation mean a lot more than just content redi
 
 As to the future of our beloved Release Notes, don't worry: in addition to the [Developer Newsletter](https://forms.gle/DHo3SS7ZaGCvAMow8) bringing you all the essential updates on platform changes, the Developer Portal also has its own Release Notes section:
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/c4dc627-portal-release-notes_46.png)
-Nothing but the address will change, I promise! Everything else stays the same, with the same high-quality impactful content, working together as always, but now housed in a place that can fully encourage our potential :sparkles:
+Nothing but the address will change, I promise! Everything else stays the same, with the same high-quality impactful content, working together as always, but now housed in a place that can fully encourage our potential ✨
 
 ## Features 🚀
 
@@ -130,4 +124,4 @@ We would not be able to deliver so many amazing results during these last two mo
 - [Renan Guerra](https://github.com/renanguerraa1)
 - [Pmarignan](https://github.com/pmarignan)
 
-Thank you, team :muscle:
+Thank you, team 💪

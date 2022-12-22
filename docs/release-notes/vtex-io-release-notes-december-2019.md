@@ -42,6 +42,6 @@ You can call me Santa Claus 'cause once you've read everything you'll feel like 
 ---
 
 Words cannot express how glad we are to have you with us on this journey!
-Here's to next year and to the incredible releases that awaity :beers:
+Here's to next year and to the incredible releases that awaity 🍻
 
 **Happy Holidays!**

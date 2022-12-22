@@ -16,7 +16,7 @@ Notice: i'm not saying this only because I'm the one writing the VTEX IO release
 
 - 🚀 The new Sitemap app
 - ➕ The 404 pages improvement
-- :bug: The Clear button (from mobile filter sidebar) bug fix
+- 🐛 The Clear button (from mobile filter sidebar) bug fix
 
 Check out the last month's key changes below:
 
