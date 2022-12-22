@@ -32,13 +32,7 @@ This step actually creates the order in the [OMS](https://help.vtex.com/en/tutor
 
 To do this, use the [Place fulfillment order API request](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order).
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "In order to successfully place an order on the platform, you must have products already registered in your VTEX [catalog](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ#) and make sure they are available in the platform's [inventory](https://help.vtex.com/en/tutorial/managing-stock-items--tutorials_139#). For this purpose, it may be a good idea to [set infinite inventory](https://help.vtex.com/en/tutorial/managing-stock-items--tutorials_139#inventory-table-fields).",
-  "title": ""
-}
-[/block]
+>❗ In order to successfully place an order on the platform, you must have products already registered in your VTEX [catalog](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ#) and make sure they are available in the platform's [inventory](https://help.vtex.com/en/tutorial/managing-stock-items--tutorials_139#). For this purpose, it may be a good idea to [set infinite inventory](https://help.vtex.com/en/tutorial/managing-stock-items--tutorials_139#inventory-table-fields).
 
 [block:callout]
 {

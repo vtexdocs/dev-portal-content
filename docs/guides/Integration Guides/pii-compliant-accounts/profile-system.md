@@ -5,13 +5,8 @@ hidden: true
 createdAt: "2022-02-22T22:28:50.366Z"
 updatedAt: "2022-08-19T18:42:00.613Z"
 ---
-[block:callout]
-{
-  "type": "danger",
-  "body": "This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.",
-  "title": "Closed beta"
-}
-[/block]
+>❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
+
 VTEX’s Profile System provides APIs that enable stores to:
 - Deal with a single source of truth for shoppers’ data.
 - [Safely store](https://developers.vtex.com/vtex-rest-api/docs/data-privacy) PII and sensitive information.
@@ -25,12 +20,8 @@ Below you can learn more about some of the Profile System’s features and how t
 }
 [/block]
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "When implementing your integration:\n- Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/vtex-rest-api/docs/adaptations-and-limitations) that impact other integrations.\n- Note that, at the moment, Master Data triggers are not supported by the PII compliant Profile System."
-}
-[/block]
+>❗ When implementing your integration:\n- Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/vtex-rest-api/docs/adaptations-and-limitations) that impact other integrations.\n- Note that, at the moment, Master Data triggers are not supported by the PII compliant Profile System.
+
 ## Permission
 
 To use the Profile System features, ensure you have the appropriate [License Manager resources](https://help.vtex.com/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) enabled for that user.

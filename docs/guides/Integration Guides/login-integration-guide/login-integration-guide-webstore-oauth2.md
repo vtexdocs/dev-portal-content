@@ -145,12 +145,7 @@ When you start the custom OAuth setup, you must fill in the following informatio
 - **client secret** key (`client_secret`)
 - **client secret** value
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret` respectively."
-}
-[/block]
+>❗ These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret` respectively.
 
 ![Provider details section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/b538997-identity_feedback_oauth_155.PNG)
 Click `NEXT`.
@@ -232,9 +227,4 @@ For each of the [relevant requests](#relevant-requests) that are sent by VTEX to
 
 After you set your custom OAuth option up, you can edit it by following the same steps described below for [implementation](#configuration-steps).
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "If your implementation was initially set up via [VTEX support](https://help.vtex.com/en/support) instead of the process described above, you must be extra careful when editing it via the Admin panel. Incorrect edits may cause your custom OAuth to stop working. We recommend you check the previews thoroughly and make sure they match what is expected by the **identity provider.**"
-}
-[/block]
+>❗ If your implementation was initially set up via [VTEX support](https://help.vtex.com/en/support) instead of the process described above, you must be extra careful when editing it via the Admin panel. Incorrect edits may cause your custom OAuth to stop working. We recommend you check the previews thoroughly and make sure they match what is expected by the **identity provider.**

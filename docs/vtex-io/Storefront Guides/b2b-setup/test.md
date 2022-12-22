@@ -168,12 +168,7 @@ When creating the `organizationId` field, you should check the following checkbo
 
 If you are setting up a new store, you can follow the instructions in [this guide](https://developers.vtex.com/vtex-rest-api/docs/installing-b2b-easy-set-up) to quickly set up a test store with sample data using the B2B Easy Setup app.
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "We strongly advise that you do not run Easy Setup on a production environment. It will make irreversible changes and may delete some previous configurations on your store."
-}
-[/block]
+>❗ We strongly advise that you do not run Easy Setup on a production environment. It will make irreversible changes and may delete some previous configurations on your store.
 
 ### Create Master Data schemas
 

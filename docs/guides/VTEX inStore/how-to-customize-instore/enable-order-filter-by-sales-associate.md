@@ -23,12 +23,7 @@ The code snippet should look like the example below:
 }
 [/block]
 With that, the app will filter orders to display only those made by the sales associate currently logged in on inStore.
-[block:callout]
-{
-  "type": "danger",
-  "body": "Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities."
-}
-[/block]
+>❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
 
 [block:callout]
 {

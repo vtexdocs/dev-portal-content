@@ -66,12 +66,8 @@ Product import steps:
 }
 [/block]
 2. Store team uses the [Google sheet method](https://github.com/vtex-apps/google-import) or Admin to manually enrich the imported catalog information, assigning the correct categories to each product in the **Integration** category.
-[block:callout]
-{
-  "type": "danger",
-  "body": "Make sure the **Integration** category is inactive, so that the incomplete products are not displayed in the store."
-}
-[/block]
+>❗ Make sure the **Integration** category is inactive, so that the incomplete products are not displayed in the store.
+
 #### Backend provides categories
 
 Information availability:

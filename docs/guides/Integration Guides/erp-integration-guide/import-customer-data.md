@@ -55,12 +55,8 @@ Depending on your project’s architecture, it may also be important to:
 
 To register a new customer profile, use the [Create new document](https://developers.vtex.com/vtex-rest-api/reference/createnewdocument) for the `CL` data entity.
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "When creating a new document, you will receive an `Id` in the response. This identifies the customer in Master Data and will be used later to register addresses associated with that customer. Make sure you save this ID and associate it with the customer’s ID in your source database."
-}
-[/block]
+>❗ When creating a new document, you will receive an `Id` in the response. This identifies the customer in Master Data and will be used later to register addresses associated with that customer. Make sure you save this ID and associate it with the customer’s ID in your source database.
+
 #### Creating customer profile request example
 
 POST

@@ -169,12 +169,7 @@ You can set more than one data entity in you app. To do so, create one folder in
 
 Your app creates regular Master Data entities, which can be accessed via the [Master Data v2 endpoints](https://developers.vtex.com/vtex-rest-api/reference/master-data-api-v2-overview). The name of the entity created follows this pattern: `{vendor}_{appName}_{entityName}`.
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "Whenever you install or link a different version of your app, the Master Data builder cerates a new schema with the app’s name and version."
-}
-[/block]
+>❗ Whenever you install or link a different version of your app, the Master Data builder cerates a new schema with the app’s name and version.
 
 ## Usage
 

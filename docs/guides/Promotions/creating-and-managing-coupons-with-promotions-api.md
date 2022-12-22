@@ -31,12 +31,7 @@ You can create one coupon or multiple coupons at a time.
 - To create a single coupon, use the <span class="api pg-type type-post">post</span> [Create coupon](ref:post_api-rnb-pvt-coupon) endpoint.
 - If you want to create multiple coupons use the <span class="api pg-type type-post">post</span> [Create multiple coupons](ref:post_api-rnb-pvt-multiple-coupons) endpoint.
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "If you try to create a coupon with an existing `coupon code`, the API will update the existing coupon."
-}
-[/block]
+>❗ If you try to create a coupon with an existing `coupon code`, the API will update the existing coupon.
 
 ## How to edit a coupon
 

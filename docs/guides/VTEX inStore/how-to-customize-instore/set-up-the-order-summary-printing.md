@@ -27,12 +27,8 @@ The code should look like the example below:
 }
 [/block]
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities."
-}
-[/block]
+>❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
+
 3. After making changes in the code, make sure you press the `Save` button.
 
 This change will make the `Configure device` option appear in the inStore main menu. It is through this option that you will configure the printer.

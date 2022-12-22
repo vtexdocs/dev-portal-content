@@ -21,12 +21,8 @@ In this file, inside the `window.INSTORE_CONFIG` object, add the `printedOrderEx
 }
 [/block]
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities."
-}
-[/block]
+>❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
+
 After making changes in the code, make sure you press the `Save` button.
 
 Once you reload inStore, whenever a sales associate prints an order, the text you configured will appear on the order summary printout.

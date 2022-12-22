@@ -33,12 +33,7 @@ Since every route stored in the Rewriter app carries additional related data, su
 That means cross-border stores can also have their catalog URLs translated into other languages. For example, a cross-border store that operates in the USA and Argentina, sharing the same catalog, could have two different slugs for the same product: one in English and the other in Spanish.
 
 Hence, a product registered under the `yellow-dress` slug, for example, as in `http://{storename}.com/us/yellow-dress/p`, could have its slug translated to `vestido-amarillo`, as in `http://{storename}.com/ar/vestido-amarillo/p`.
-[block:callout]
-{
-  "type": "danger",
-  "body": "Keep in mind that catalog URLs translations are accepted for each `binding`, not for a single multi-language store."
-}
-[/block]
+>❗ Keep in mind that catalog URLs translations are accepted for each `binding`, not for a single multi-language store.
 
 [block:callout]
 {

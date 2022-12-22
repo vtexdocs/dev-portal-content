@@ -32,9 +32,4 @@ A `GET Rule by ID` call will initially be sent in order to receive the updated P
 The reply that the `GET Rule by ID` call returns will be the request of the thereafter `POST Rule by ID` call. To save the new configuration, only the value `interestRateMethod`:1 should be modified:
 
 [https://developers.vtex.com/vtex-rest-api/reference/putrulebyid](https://developers.vtex.com/vtex-rest-api/reference/putrulebyid)
-[block:callout]
-{
-  "type": "danger",
-  "body": "At present, the only way to change a payment method is through API. Should it be necessary to change the payment method by using the user interface, the setup process through API would have to be repeated, since when saving the changes, the value will be considered empty by default."
-}
-[/block]
+>❗ At present, the only way to change a payment method is through API. Should it be necessary to change the payment method by using the user interface, the setup process through API would have to be repeated, since when saving the changes, the value will be considered empty by default.

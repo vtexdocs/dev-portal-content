@@ -5,13 +5,8 @@ hidden: true
 createdAt: "2022-02-22T22:27:02.330Z"
 updatedAt: "2022-11-18T18:34:36.446Z"
 ---
-[block:callout]
-{
-  "type": "danger",
-  "body": "This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.",
-  "title": "Closed beta"
-}
-[/block]
+>❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
+
 This integration allows stores to manage shoppers’ Personal Identifiable Information (PII) in compliance with data privacy regulations such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/). This means that:
 - PII is hidden by default.
 - Each PII retrieval is an auditable event.

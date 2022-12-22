@@ -9,13 +9,8 @@ Some commerce features of the VTEX platform are not available for PII-compliant 
 
 In order to integrate with the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and manage your customers’ information in [compliance with data privacy laws](https://developers.vtex.com/vtex-rest-api/docs/data-privacy), see in this article the changes and limitations you must make.
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.",
-  "title": "Closed beta"
-}
-[/block]
+>❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
+
 ## Adaptations
 
 ### OMS 

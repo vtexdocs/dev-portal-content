@@ -8,12 +8,8 @@ updatedAt: "2022-08-30T18:13:03.813Z"
 Marketplaces have the autonomy to change a seller that has been designated to fulfill an order. This can only be done under specific circumstances described in this [article on the Change seller feature](https://help.vtex.com/en/tutorial/how-to-use-the-change-seller--5TBAwO2kOAMw44uyaaQMQO#).
 
 There are a few different APIs that can be useful to execute a seller change. Here we will see which are they and how to use them to perform this task.
-[block:callout]
-{
-  "type": "danger",
-  "body": "Make sure you are aware of the limitations for using this, as described in this [article on the Change Seller feature](https://help.vtex.com/en/tutorial/como-utilizar-change-seller--5TBAwO2kOAMw44uyaaQMQO#). Also, note that this can only be done while the order's status is `window-to-change-seller`, `payment-pending` or `waiting-for-authorization` as seen on the API."
-}
-[/block]
+>❗ Make sure you are aware of the limitations for using this, as described in this [article on the Change Seller feature](https://help.vtex.com/en/tutorial/como-utilizar-change-seller--5TBAwO2kOAMw44uyaaQMQO#). Also, note that this can only be done while the order's status is `window-to-change-seller`, `payment-pending` or `waiting-for-authorization` as seen on the API.
+
 ## Seller listing
 
 In the case of a seller change, the marketplace is responsible for choosing the new seller. VTEX does not have any automated system to make this choice, but we do suggest you use the [Get seller list API request](https://developers.vtex.com/vtex-rest-api/reference/getlistsellers) to see the list of sellers associated with your marketplace. It is also possible to filter sellers returned by this call using query params.

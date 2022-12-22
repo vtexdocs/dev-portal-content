@@ -6,12 +6,7 @@ hidden: false
 createdAt: "2020-12-21T16:28:05.320Z"
 updatedAt: "2022-05-20T22:23:44.385Z"
 ---
-[block:callout]
-{
-  "type": "danger",
-  "body": "Due to an issue in our documentation platform, the file upload will not work in the `Try it` button. But you can still use the `cURL` code generated to test it."
-}
-[/block]
+>❗ Due to an issue in our documentation platform, the file upload will not work in the `Try it` button. But you can still use the `cURL` code generated to test it.
 
 [block:callout]
 {

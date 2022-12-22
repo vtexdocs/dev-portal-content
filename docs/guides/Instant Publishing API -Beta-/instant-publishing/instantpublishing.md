@@ -6,13 +6,8 @@ hidden: true
 createdAt: "2021-01-14T20:48:13.155Z"
 updatedAt: "2022-08-22T17:13:35.272Z"
 ---
-[block:callout]
-{
-  "type": "danger",
-  "body": "This API is deprecated.",
-  "title": "Deprecated"
-}
-[/block]
+>❗ This API is deprecated.
+
 ## Response body object has the following properties
 
 | Attribute              | Type    | Description                                                                           |

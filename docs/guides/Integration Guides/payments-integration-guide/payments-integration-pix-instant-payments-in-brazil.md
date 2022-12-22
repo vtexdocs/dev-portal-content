@@ -103,13 +103,7 @@ The table below gives further detail on the applicability of each endpoint to Pi
 }
 [/block]
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "We strongly advise against using the <span class=\"api pg-type type-get\">GET</span>[List Payment Methods](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods) to proceed with the implementation. This route is obsolete and it will be deprecated in soon - early 2021",
-  "title": "GET List Payment Methods route"
-}
-[/block]
+>❗ We strongly advise against using the <span class=\"api pg-type type-get\">GET</span>[List Payment Methods](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods) to proceed with the implementation. This route is obsolete and it will be deprecated in soon - early 2021
 
 [block:callout]
 {
@@ -166,13 +160,7 @@ The request goes like this:
 }
 [/block]
 As a result, we expect the following response:
-[block:callout]
-{
-  "type": "danger",
-  "body": "Have in mind that, by default, the QRCode <strong>must</strong> have five minutes (300 seconds) expiration time. Also, the partner <strong>must</strong> respect the callback time (20 seconds).",
-  "title": "Establish an organized flow"
-}
-[/block]
+>❗ Have in mind that, by default, the QRCode **must** have five minutes (300 seconds) expiration time. Also, the partner **must** respect the callback time (20 seconds).
 
 [block:code]
 {

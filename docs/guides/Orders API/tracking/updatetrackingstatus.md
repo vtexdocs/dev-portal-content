@@ -6,12 +6,8 @@ hidden: false
 createdAt: "2019-12-11T00:42:27.604Z"
 updatedAt: "2022-11-04T23:01:37.022Z"
 ---
-[block:callout]
-{
-  "type": "danger",
-  "body": "Do not use this request with orders that do not have a tracking number already added to their invoice. If you wish to send tracking number and URL to an order, use the [Update order's partial invoice API request](https://developers.vtex.com/vtex-rest-api/reference/invoice#updatepartialinvoicesendtrackingnumber)"
-}
-[/block]
+>❗ Do not use this request with orders that do not have a tracking number already added to their invoice. If you wish to send tracking number and URL to an order, use the [Update order's partial invoice API request](https://developers.vtex.com/vtex-rest-api/reference/invoice#updatepartialinvoicesendtrackingnumber)
+
 > Learn more about [Transaction Details in VTEX Help](https://help.vtex.com/en/tutorial/how-to-view-the-orders-details)
 
 Important: the **package** is generated when an invoice is added to the order.

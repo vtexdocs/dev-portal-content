@@ -435,9 +435,4 @@ Response:
 }
 ```
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "You should activate specification fields, otherwise they will not work."
-}
-[/block]
+>❗ You should activate specification fields, otherwise they will not work.

@@ -53,12 +53,8 @@ This information must be added to the code as shown in the example below.
 }
 [/block]
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "Do not remove any of the other properties present in the <code>window.INSTORE_CONFIG</code> object, to avoid breaking other functionalities."
-}
-[/block]
+>❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
+
 If it's necessary to apply some validation logic or mask to the data entered in this field, you can include in the `checkout-instore-custom.js` file a function that listens to the `note.visible` event, which is triggered when the modal is open, and then develop your logic.
 [block:code]
 {

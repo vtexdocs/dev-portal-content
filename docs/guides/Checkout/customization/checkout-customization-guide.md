@@ -60,12 +60,8 @@ For more information, access [View the contents of the store's CSS files](https:
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/f62ee29-CMS_File_manager_60.PNG)
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "VTEX does not support the use of custom scripts and is not responsible for any damages that their use may cause. Using custom scripts can break your store or stop sales."
-}
-[/block]
+>❗ VTEX does not support the use of custom scripts and is not responsible for any damages that their use may cause. Using custom scripts can break your store or stop sales.
+
 ## Customizing Checkout UI - Apps
 
 In addition to Admin VTEX, you can use two apps to customize your store’s Checkout UI: _Checkout UI Settings_ and _Checkout UI Custom_.

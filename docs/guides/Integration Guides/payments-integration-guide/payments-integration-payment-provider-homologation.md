@@ -76,19 +76,8 @@ If everything is ok, you need to [open a ticket to the VTEX support team](https:
 - **New Payment method purchase flow**: if a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
 
 The SLA required for the payment team to carry out the homologation is 30 days. This term will start only after the submission of the document **Master Partner Agreement for Financial Services (MPA)**. For homologation requests without using the MPA, the SLA term may be extended due to the need for additional analysis by the payment team.
-[block:callout]
-{
-  "type": "danger",
-  "body": "Do **not** open the ticket for homologation if the Logs box presents any type of error. Redo the operation until the Logs box results are clear. If you need help in this scenario, talk to your Partner Account Manager.",
-  "title": "Obey the process"
-}
-[/block]
+>❗ Do **not** open the ticket for homologation if the Logs box presents any type of error. Redo the operation until the Logs box results are clear. If you need help in this scenario, talk to your Partner Account Manager.
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "It is mandatory to open a ticket to VTEX Support. Without that, the implementation will not be recognized by our system.",
-  "title": "Contact VTEX Support Team"
-}
-[/block]
+>❗ It is mandatory to open a ticket to VTEX Support. Without that, the implementation will not be recognized by our system.
+
 After that, the VTEX support team will inform you if the implementation was done correctly.

@@ -28,12 +28,7 @@ If your provider just processes payments with “boleto bancário”, promissory
 ## Self-Assessment Questionnaire (SAQ)
 
 The [Self-Assessment Questionnaire](https://www.pcisecuritystandards.org/pci_security/completing_self_assessment) (SAQ) is a list of “yes or no” questions designed to help service providers or merchants report the results of their PCI DSS self-assessment. 
-[block:callout]
-{
-  "type": "danger",
-  "body": "The SAQ (Self-Assessment Questionnaire) is not accepted in the VTEX integration process."
-}
-[/block]
+>❗ The SAQ (Self-Assessment Questionnaire) is not accepted in the VTEX integration process.
 
 ## Attestation of Compliance for Onsite Assessments (AOC)
 
@@ -44,9 +39,4 @@ The provider must forward the AOC (Service Provider version) fully completed to 
 - <strong>Company Name</strong>: the “URL” field (Part 1a.) must be the same as that of the company requesting the integration procedure. If it is filled in with another name (example: a company acquired by another), it will be necessary to send extra documentation that proves the relationship between the companies, and that the PCI DSS evaluated the provider's service URL.
 - <strong>Signature</strong>: document signed by the company representative and the QSA.
 - <strong>Expiration Date</strong>: the validity of the AOC is 1 year after the signing date. The AOC issued more than 11 months ago must not be sent to VTEX, that is, less than 30 days before its expiration date.
-[block:callout]
-{
-  "type": "danger",
-  "body": "The AOC (Merchant version) is not accepted in the VTEX integration process."
-}
-[/block]
+>❗ The AOC (Merchant version) is not accepted in the VTEX integration process.

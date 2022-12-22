@@ -52,12 +52,7 @@ The code block should look like this:
 [/block]
 2. Click on `Save` to store your changes.
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities."
-}
-[/block]
+>❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
 
 ## Check out your changes
 

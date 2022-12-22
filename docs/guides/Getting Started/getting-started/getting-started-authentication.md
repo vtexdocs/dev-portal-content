@@ -42,12 +42,8 @@ You can [manage permissions for any given application key](https://help.vtex.com
 
 Application keys are usually the best way to authenticate API calls in your integrations. However, there are some VETX API endpoints that do not allow this mode of authentication. Authenticate those with [user tokens](#user-token).
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "[Do not use application keys in your client-side code](https://help.vtex.com/en/tutorial/best-practices-application-keys--7b6nD1VMHa49aI5brlOvJm#never-use-client-side-code-for-integrations). This makes your store vulnerable to attacks."
-}
-[/block]
+>❗ [Do not use application keys in your client-side code](https://help.vtex.com/en/tutorial/best-practices-application-keys--7b6nD1VMHa49aI5brlOvJm#never-use-client-side-code-for-integrations). This makes your store vulnerable to attacks.
+
 Below you can learn more about how to authenticate API requests in this way. Still, we recommend reading these other articles to develop secure API integrations:
 - [Generating and managing application keys](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet)
 - [Best practices for using application keys](https://help.vtex.com/en/tutorial/best-practices-application-keys--7b6nD1VMHa49aI5brlOvJm)
@@ -148,12 +144,8 @@ The tokens shown above are available via the VTEX IO context and are associated 
 | App authentication token | `AUTH_TOKEN`     | `ctx.authToken`          | Every VTEX IO app has its own rotating authentication token. We recommend you avoid using this app token whenever user tokens are available. | Developers must declare precisely what actions are allowed for the app they are building. You must do this by editing the [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies) in your app's [manifest](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest). |
 | Store user token         | `STORE_TOKEN`    | `ctx.storeUserAuthToken` | [User token](#user-token) with store scope.                                                                                                  | Shopper permissions.                                                                                                                                                                                                                                                                                                                     |
 | Admin user token         | `ADMIN_TOKEN`    | `ctx.adminUserAuthToken` | [User token](#user-token) with Admin scope.                                                                                                  | Administrative permissions as defined by [License Manager roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) associated with the logged in user.                                                                                                                                                                    |
-[block:callout]
-{
-  "type": "danger",
-  "body": "Authenticate your apps' actions with user tokens whenever possible. Currently, app authentication tokens are not subject to [License Manager permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). We recommend that you consider this when defining your app's architecture and configuring [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies)."
-}
-[/block]
+>❗ Authenticate your apps' actions with user tokens whenever possible. Currently, app authentication tokens are not subject to [License Manager permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). We recommend that you consider this when defining your app's architecture and configuring [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies).
+
 ## Single sign on integrations
 
 VTEX allows stores to integrate with external identity providers to provide single sign on (SSO) experiences to shoppers and Administrative users. You can learn more about this in the article [Login (SSO)](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide) and below you can find more information on these and other SSO use cases:

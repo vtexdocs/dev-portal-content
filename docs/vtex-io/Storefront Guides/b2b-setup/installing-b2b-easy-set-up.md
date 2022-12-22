@@ -14,12 +14,7 @@ B2B Easy Set Up is an app that helps you quickly get your store configured for B
 2. [Log in to your account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-1---logging-in-to-your-vtex-account) with `vtex login {accountName}`.
 3. [Create a new workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-2---creating-your-own-workspace) with `vtex use easysetupworkspace`.
 4. [Install the app on your store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) with `vtex install vtex.easy-setup`.
-[block:callout]
-{
-  "type": "danger",
-  "body": "We strongly advise that you do <strong>not run Easy Setup on a production environment</strong>. It will make <strong>irreversible changes</strong> and may delete some previous configurations on your store."
-}
-[/block]
+>❗ We strongly advise that you do **not run Easy Setup on a production environment**. It will make **irreversible changes** and may delete some previous configurations on your store.
 
 ## Store configuration
 
@@ -35,12 +30,7 @@ Now that the Easy Setup app is installed in your store, proceed to operate the a
    ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/475b079-200d9b8-easy_1_33.PNG)
 
 4. Click on the `I Understand` button that will appear in the **Are you sure you want to proceed?** dialog.
-[block:callout]
-{
-  "type": "danger",
-  "body": "Once you click `I Understand`, this step is irreversible."
-}
-[/block]
+>❗ Once you click `I Understand`, this step is irreversible.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/01b2f3c-740c91d-easy_2_42.PNG)
 5. Wait a few seconds for the setup to complete.

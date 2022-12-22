@@ -28,12 +28,7 @@ The [Register change on order](https://developers.vtex.com/vtex-rest-api/referen
 
 Changes made this way can be confirmed by the `changesAttachment` field in the response of the [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder) endpoint. Alternatively, you may search for the order in the *Orders > Orders management > All orders* section of your Admin panel and see the item change history in the order details.
 
-[block:callout]
-{
-  "type": "danger",
-  "body": "Increasing the price of an order is only available for credit card purchases. The connector must also be able to handle purchases without the CVV, as well as duplicated sequences."
-}
-[/block]
+>❗ Increasing the price of an order is only available for credit card purchases. The connector must also be able to handle purchases without the CVV, as well as duplicated sequences.
 
 ### Errors
 
