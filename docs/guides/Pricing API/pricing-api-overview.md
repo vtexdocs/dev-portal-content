@@ -21,17 +21,15 @@ Pricing (v2) is the VTEX module responsible for the SKU's price list. At this mo
 
 You can get more information about how to use this module and its business logic at [VTEX Help](http://help.vtex.com).
 
+## Rate Limits
 
-# Rate Limits
-
-#### Limits per route
+### Limits per route
 
 - `GET`:  routes are not rate limited at the moment
 - `PUT or POST`: `40 requests/second/account` in any **price insert/update route** with 1000 *Burst Credits*
 - `DELETE`: `16 requests/second/account` in any **price deletion route**, with 300 *Burst Credits*.
 
-
-#### What are Burst Credits?
+### What are Burst Credits?
 
 In case the account exceeds the limit frequency for a  `Rate Limiter` (for instance, when one account makes `41 requests/second` in any `price insert/update route`), we decrease from the *Burst Credit* count the exceeding (in this example, *1 Credit*).
 
@@ -39,8 +37,7 @@ In the event of the *Burst Credits* reaching **0 (zero)**, the request is blocke
 
 The credits fill up over time when the route is not being used, in the same rate as the route's `Rate Limiter`. In our example, for each second not sending a **PUT or POST request**, we increase *40 Burst Credits* to this `Rate Limiter`
 
-
-#### New Response Headers
+### New Response Headers
 
 In the response headers of any request to Pricing v2 there are some new headers indicating the current status of the Rate Limiting.
 This information may be useful to evaluate the ideal frequency to send requests to a route, and when to send a new request in the event of reaching a Rate Limit.
@@ -50,7 +47,7 @@ This information may be useful to evaluate the ideal frequency to send requests 
 - `Ratelimit-Reset` - How long (in seconds) it will take to the *Burst Credits* to fill up completely (It will fill up to the `Ratelimit-Limit`)
 - `Retry-After` - Indicates how many seconds you will need to wait until the `Rate Limiter` accepts a new request to this route again. If this header response exists, this means your current request has been rate limited and has not been processed.
 
-#### How to integrate with Pricing v2 considering our Rate Limits
+### How to integrate with Pricing v2 considering our Rate Limits
 
 Integrate considering the limits of **requests/route/account** specified in the [*Limits per route*](#rate-limits) section, avoiding to surpass this frequency.
 

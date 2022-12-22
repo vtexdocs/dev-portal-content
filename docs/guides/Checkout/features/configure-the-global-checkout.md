@@ -9,7 +9,7 @@ Global Checkout is a setting in your store that allows you to sell to many diffe
 
 For a complete Global Checkout experience, it is also important that your store be displayed in other languages. For more information about these settings, visit the article about [displaying store in another language](https://help.vtex.com/en/tutorial/displaying-the-store-in-another-language).
 
-# New document and phone fields
+## New document and phone fields
 
 To display document and phone typing options different from those used by the store country, follow the steps below:
 
@@ -36,9 +36,9 @@ After saving this configuration, two new buttons will be shown in your Checkout:
 - "I don't have CPF."
 - "I don't have a Brazilian phone."
 
-# New delivery and invoice addresses
+## New delivery and invoice addresses
 
-## Deliveries
+### Deliveries
 
 To allow deliveries to a new country (for example, you want to deliver products to a customer located in England), the following actions must be performed:
 
@@ -52,7 +52,7 @@ To allow deliveries to a new country (for example, you want to deliver products 
 [/block]
 After defining the delivery settings for the countries intended, a new field will be shown on your checkout's delivery form, allowing the user to choose the desired international delivery option.
 
-## Invoices
+### Invoices
 
 By unchecking the **My invoice address is the same as the delivery** box on the Checkout page, the user can enter a new invoice address among the available countries for delivery. However, nothing prevents this user from having an international credit card from other countries not available in your store.
 

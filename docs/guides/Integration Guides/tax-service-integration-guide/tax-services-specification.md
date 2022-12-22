@@ -7,7 +7,7 @@ updatedAt: "2022-02-11T15:38:54.137Z"
 ---
 Below, we are going to go over tax service integration works, and if you want to know more about how to implement a client to connect your tax calculation provider to VTEX’s APIs, this [recipe](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-recipe) and [example](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-reference-implementation) might help you.
 
-# How it works
+## How it works
 
 In synchronous integration, VTEX’s Checkout API triggers and sends a request to the external tax service API whenever there are changes to a customer’s cart, such as adding or removing items.
 
@@ -18,7 +18,7 @@ In synchronous integration, VTEX’s Checkout API triggers and sends a request t
   "title": "When using Tax Service integration, keep in mind that:"
 }
 [/block]
-## Checkout Configuration
+### Checkout Configuration
 
 Synchronous tax integration can be activated or deactivated through a request to the Checkout Configuration API.
 
@@ -48,7 +48,7 @@ Once the POST for the Checkout Configuration API has finished processing the req
   "body": "When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/pt/tutorial/definicoes-de-conta-franquia-e-seller-white-label--5orlGHyDHGAYciQ64oEgKa#) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly."
 }
 [/block]
-## Tax calculation request
+### Tax calculation request
 
 The tax calculation tool must provide an endpoint that will receive a POST request. In this request, Checkout provides a body in a specific format. This means that either the endpoint must be prepared to receive this body format, or the integration must contain a parser to adapt it to the correct format.
 
@@ -144,7 +144,7 @@ This body has eight main fields:
 
 - `paymentData`: *object* that contains an *array* of payments, where there is information regarding the payment methods, etc.
 
-## Tax provider response to the request
+### Tax provider response to the request
 
 In response to the request sent by Checkout, we expect an array of products, each with its own array of taxes. See the example below:
 
@@ -206,7 +206,7 @@ In the example above, the only item in the items array has a cost of `10`, and, 
 }
 [/block]
 
-### Jurisdiction fields
+#### Jurisdiction fields
 
 If you use Avalara as your tax calculation provider, response bodies might also include the following fields, which refer to the different jurisdictions that may apply according to location.
 

@@ -53,14 +53,15 @@ See the example below to understand the change:
   "body": "It should not exist duplicated entries, or even mixed with other values, to avoid possible validation errors."
 }
 [/block]
-##  Verifying the SPF
+
+## Verifying the SPF
 
 To verify the SPF entries on your domain, we recommend using the DIG tool. You can check the online version on [the Dig web interface](http://www.digwebinterface.com).
 
 To consult the verification, you need to:
 
 1. Fill your domain in **hostnames or IP addresses**.
-2. Select **TXT **as **Type**.
+2. Select **TXT** as **Type**.
 3. Click on **Dig**.
 [block:callout]
 {

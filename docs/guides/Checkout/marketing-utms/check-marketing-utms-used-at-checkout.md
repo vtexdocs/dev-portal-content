@@ -12,7 +12,7 @@ The orderForm of orders closed by the user will receive this cookie in the heade
 
 In this way, the Checkout will be able to assemble the orderForm considering the `marketingData` used in the purchase.
 
-# Simulation
+## Simulation
 
 To make sure the content of the `utm_source` parameter is being sent to the Checkout, you can follow the steps below:
 
@@ -40,7 +40,7 @@ The presence of the `utmSource` field with the same value as `utm_source` means 
 }
 [/block]
 
-# Why are the UTMs not being applied to the cart?
+## Why are the UTMs not being applied to the cart?
 
 One of the most common reasons the marketing context is not sent to the Checkout is the **customization of the purchase call**.
 

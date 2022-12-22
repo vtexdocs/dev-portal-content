@@ -1,10 +1,11 @@
 ---
-title: "Customize checkout confirmation pages"
-slug: "customize-checkout-confirmation-pages"
+title: 'Customize checkout confirmation pages'
+slug: 'customize-checkout-confirmation-pages'
 hidden: false
-createdAt: "2022-07-22T12:35:58.498Z"
-updatedAt: "2022-10-20T17:35:49.970Z"
+createdAt: '2022-07-22T12:35:58.498Z'
+updatedAt: '2022-10-20T17:35:49.970Z'
 ---
+
 All order confirmation information at checkout is available on the Placed Orders and Order Confirmation pages. If the merchant wants to change some features on these UIs, VTEX also offers the option of customizing them.
 
 Order Placed page example:
@@ -20,6 +21,7 @@ By clicking on the `blue gear` button of the chosen website, and selecting the *
   "body": "The same files shown in the Code tab are publicly available in the route https://{accountName}.myvtex.com/files/"
 }
 [/block]
+
 ## Edit Information
 
 To edit Checkout confirmation UI information, access the following templates:
@@ -41,7 +43,7 @@ Code tab view:
 Template areas on the page:
 ![Página de confirmação de pedido com imports de HTML](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/e23bee0-Pgina_de_confirmao_de_pedido_com_imports_de_HTML_42.png)
 
-# Customizing styles
+## Customizing styles
 
 You can also edit the Checkout Confirmation interface via CSS classes. Your styles should be added in a `<stile>` tag in one of the HTML templates loaded on the page.
 
@@ -60,6 +62,7 @@ To customize the Checkout Confirmation styles, use the following classes:
   ]
 }
 [/block]
-# JS customization
+
+## JS customization
 
 The page may also be changed through Javascript using the files **checkout-confirmation-custom.js** or **checkout-confirmation-custom4.js** (depending on the version of Checkout confirmation you are using, v3 or v4), which can be accessed by selecting the **Code** tab at the Admin.

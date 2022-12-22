@@ -16,7 +16,7 @@ The idea behind the VTEX search protocol is to provide a clear contract between 
 
 Search protocol benefits both developers and VTEX stores!
 
-# How it Works
+## How it Works
 
 The **VTEX Search Protocol** is a set of definitions and GraphQL schemas that allows VTEX IO applications to serve **e-commerce search results** that can be used by VTEX Store Framework.
 
