@@ -8,7 +8,7 @@ updatedAt: "2021-03-24T18:19:35.480Z"
 
 VTEX IO is an open-source project. Contributions of all kinds are welcome, including feature requests, bug reports, and updates to our codebase and documentation.
 
-# Codebase
+## Codebase
 
 VTEX IO native apps are fully stored in the [VTEX Apps Organization](https://github.com/vtex-apps) on <span class="fa fa-github"></span> GitHub.
 
@@ -16,7 +16,7 @@ That means you can contribute to our codebase by looking for the desired app on 
 
 > ℹ️ When looking for an app on the VTEX Apps Organization, keep in mind that the name of VTEX IO apps are [kebab case.](https://en.wiktionary.org/wiki/kebab_case) That means they are comprised of lowercase letters separated by hyphens. Therefore, if, for example, you want to contribute to the Product Summary app you must look for [`product-summary`](https://github.com/vtex-apps/product-summary) on the VTEX Apps Organization.
 
-## Opening an issue
+### Opening an issue
 
 There are three main situations you should opt for opening an issue:
 
@@ -28,7 +28,7 @@ There are three main situations you should opt for opening an issue:
 
 Once you open an issue, our team will evaluate your contribution as soon as possible.
 
-### Filtering issues
+#### Filtering issues
 
 We use GitHub tags to classify issues between **Questions, Bugs or Enhancements.** This way, you can filter issues by specifying a label and author.
 
@@ -40,7 +40,7 @@ You can also change the **sort criteria** for the issues. For example, you can l
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/60682317-39ccf980-9e69-11e9-9b4e-95c51753bee0_40.png)
 
-## Creating a Pull Request
+### Creating a Pull Request
 
 We recommend creating a Pull Request for trivial fixes or if you have already started working on a specific solution.
 
@@ -70,7 +70,7 @@ git commit -m "Add nice new thing"
 
 Once you open a Pull Request, our team will evaluate your contribution as soon as possible.
 
-# Documentation
+## Documentation
 
 There are three main ways to contribute to VTEX IO documentation:
 
@@ -78,13 +78,13 @@ There are three main ways to contribute to VTEX IO documentation:
 - [Creating a Pull Request](#creating-a-pull-request-1) - work directly on a solution for improving a specific document and create a Pull Request.
 - [Writing new documentation](#writing-new-documentation) - keep up with our best practices and write the documentation of your custom app.
 
-## Giving feedback
+### Giving feedback
 
 Fill out our [📣 Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSfmnotPvPjw-SjiE7lt2Nt3RQgNUe10ixXZmuO2v9enOJReoQ/viewform?entry.1972292648=developers.vtex.com&entry.1799503232=) and leave your suggestions on how we can improve a specific document.
 
 Responses to the form are automatically added to our internal backlog and assigned to the team concerned. If you ask for a follow-up, we will let you know once we have addressed your feedback.
 
-## Creating a Pull Request
+### Creating a Pull Request
 
 All guides, references, and tutorials from the [VTEX IO Developer Documentation](link) is fetched from the [`io-documentation`](https://github.com/vtex-apps/io-documentation) repository.
 
@@ -94,7 +94,7 @@ In its turn, the documentation of VTEX IO apps are fetched directly from its cor
 
 Therefore, you can create a Pull Request with your fixes directly on the [`io-documentation`](https://github.com/vtex-apps/io-documentation) repository or on the repository of the corresponding app you want to contribute (e.g., [`product-summary`](https://github.com/vtex-apps/product-summary))
 
-## Writing new documentation
+### Writing new documentation
 
 To make the documentation of your custom app public on the Developer Portal, you must take the following steps:
 
@@ -111,9 +111,9 @@ To make the documentation of your custom app public on the Developer Portal, you
 
 > ℹ️ In order to not have to keep track of two `README.md` files (one in the project’s root and another it the `docs/` folder), you can delete the former and only keep the latter. GitHub will read the one from the `docs/` folder and render it on the landing page.
 
-### Documentation templates
+#### Documentation templates
 
-#### React app README template
+##### React app README template
 
 [React app template](https://github.com/vtex-apps/react-app-template)
 
@@ -234,7 +234,7 @@ Check out some documentation models that are already live:
 - [Store Form](https://vtex.io/docs/components/all/vtex.store-form@0.3.4/)
 ```
 
-#### Pixel app README template
+##### Pixel app README template
 
 [Pixel app template](https://github.com/vtex-apps/pixel-app-template)
 
