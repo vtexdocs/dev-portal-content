@@ -4,6 +4,10 @@ slug: "checkout-overview"
 hidden: false
 createdAt: "2020-09-11T23:12:53.108Z"
 updatedAt: "2022-10-21T13:19:52.868Z"
+seeAlso:
+ - "/docs/api-guides/enable-the-manual-price"
+ - "/docs/api-guides/formatting-order-invoicing-time"
+ - "/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetProductAndSkuIds"
 ---
 [block:html]
 {
