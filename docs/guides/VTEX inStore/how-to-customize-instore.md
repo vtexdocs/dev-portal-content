@@ -10,7 +10,7 @@ updatedAt: "2022-02-24T20:32:46.010Z"
 
 You can customize the inStore experience according to your business needs by editing custom [JavaScript](#javascript-customizations) and [CSS](#css-customizations) files.
 
-\##JavaScript customizations
+## JavaScript customizations
 
 You can perform JavaScript customizations on the  `checkout-instore-custom.js` file, which you must access from the VTEX Admin home, following the steps below.
 

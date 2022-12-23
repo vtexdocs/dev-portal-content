@@ -12,7 +12,8 @@ To comply with GDPR (General Data Protection Regulation - Europe) and LGPD - Lei
   "body": "The **Save user data opt-in** feature is only available for Checkout v6."
 }
 [/block]
-##Save user data opt-in activation
+
+## Save user data opt-in activation
 
 To use the **Save user data opt-in** functionality in your store, you must first enable it. Then, follow the settings below:
 

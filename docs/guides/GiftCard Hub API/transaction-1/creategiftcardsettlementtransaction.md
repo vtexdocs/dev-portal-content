@@ -36,7 +36,7 @@ updatedAt: "2020-07-22T15:09:34.492Z"
 
 <br>
 
-##Response body example:
+## Response body example:
 [block:code]
 {
   "codes": [
