@@ -3,6 +3,7 @@ title: "Correction in events sent to Facebook Business Extension"
 slug: "correction-in-events-sent-to-facebook-business-extension"
 createdAt: "2022-11-21T13:55:00.000Z"
 hidden: false
+excerpt: 'The Facebook Business Extension and Conversions API app is the one-stop shop for merchants to easily connect their stores to Facebook services through the FBE platform.'
 ---
 
 ![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
@@ -22,6 +23,6 @@ Some customers have reported that the server events below were being sent tripli
 | Initiate Checkout    | ⚠️  |
 | Purchase              | ✅  |
 
-:white-check-mark: **We have adjusted our app's architecture to fix this issue, so that events won't be triplicated anymore.**
+✅ **We have adjusted our app's architecture to fix this issue, so that events won't be triplicated anymore.**
 
 Due to this correction, users might see an expressive change change in the number of events received, since the numbers of events will decrease from now on. This is the expected behavior.
