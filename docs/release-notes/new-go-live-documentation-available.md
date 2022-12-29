@@ -7,7 +7,7 @@ hidden: false
 excerpt: "If you have configured your store's ecommerce capabilities and built your storefront, these new and improved guides are sure to help you take your store to production."
 ---
 
-![Store Development](https://img.shields.io/badge/-Store%Development-red)
+![Store Development](https://img.shields.io/badge/-Store%20Development-red)
 
 Go-live is the process that puts your new VTEX store into production, making it available for customers to access it and make purchases.
 
