@@ -23,7 +23,7 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 * [Enable an Observation field on the Checkout page](https://developers.vtex.com/vtex-rest-api/docs/enable-an-observation-field-on-the-checkout-page)
 * [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/vtex-rest-api/docs/layout-development-guide-for-payment-methods-in-smart-checkout-vtex)
 * [How to setup and use checkout data from client side (vtex.js for Checkout)](https://developers.vtex.com/vtex-rest-api/docs/vtexjs-for-checkout)
-* [Change payment method names in Checkout](https://developers.vtex.com/vtex-rest-api/docs/change-payment-method-names-in-checkout)</br>
+* [Change payment method names in Checkout](https://developers.vtex.com/vtex-rest-api/docs/change-payment-method-names-in-checkout)<br>
 Smart Checkout - Payment layout customization example:
 
 ![Layout Dev Guide - Guide](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/4767f4f-Layout_Dev_Guide_-_Guide_29.gif)
@@ -89,14 +89,14 @@ In your store, you can perform various actions related to the shopping cart, inc
 * [POST - Add marketing data](https://developers.vtex.com/vtex-rest-api/reference/addmarketingdata)
 * [POST - Add payment data](https://developers.vtex.com/vtex-rest-api/reference/addpaymentdata)
 * [POST - Add coupons to the cart](https://developers.vtex.com/vtex-rest-api/reference/addcoupons)
-</br>
+<br>
 Minicart view:
-</br>
+<br>
 ![minicart-v2-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/52087100/73321194-7f477e80-4220-11ea-844b-f24d1c10363c_114.gif)
-</br>
-</br>
+<br>
+<br>
 reCAPTCHA view:
-</br>     
+<br>     
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/5d0eb13-newCaptchaAnchor_104.gif)
 
@@ -136,12 +136,12 @@ At VTEX checkout, some features are activated through apps. See the links below 
 * [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app#before-you-start)
 * [Hotjar App - Website Heatmaps & Behavior Analytics Tools](https://developers.vtex.com/vtex-developer-docs/docs/vtex-hotjar)
 * [PowerReviews App - UGC (User Generated Content) Ratings & Reviews Tool](https://developers.vtex.com/vtex-developer-docs/docs/vtex-powerreviews)
-</br>
+<br>
 Hotjar heatmap example:
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/df6d1e8-Hotjar_heatmap_example_147.png)
 
-</br>
+<br>
 
 Product review example:
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/ac54295-Shop-for-Soft-Clean-Silky-Hydrating-Lotion-by-Estee-Lauder-Shoppers-Drug-Mart-copy-1009x1024_150.png)

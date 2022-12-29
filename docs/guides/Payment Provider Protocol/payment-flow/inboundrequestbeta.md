@@ -8,7 +8,7 @@ updatedAt: "2020-09-29T21:25:30.646Z"
 ---
 The `:action` part of the path will be the same you have used to call the `inboundRequestsUrl`.
 
-</br>
+<br>
 
 ## Request body
 ---
@@ -64,7 +64,7 @@ The `:action` part of the path will be the same you have used to call the `inbou
     </tr>
 </table>
 
-</br>
+<br>
 
 ## Response body
 ---

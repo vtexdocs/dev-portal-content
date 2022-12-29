@@ -92,7 +92,7 @@ If you are experienced in developing and customizing your store’s theme, follo
 
     | **Block name** | **Description** |  |
     |---|---|---|
-    | `check-permission` | Checks if the current user has the required permissions to access the content wrapped with this block.</br>You can wrap content blocks with check-permission when declaring them to validate if the user has the required permissions to see that content. Example: `check-permission#carousel` |  |
+    | `check-permission` | Checks if the current user has the required permissions to access the content wrapped with this block.<br>You can wrap content blocks with check-permission when declaring them to validate if the user has the required permissions to see that content. Example: `check-permission#carousel` |  |
     | `allowed-content` | Allows you to define on children blocks the content that will be shown for allowed users – users with roles that have the required permissions to view the block. |  |
     | `disallowed-content` | Optional block that allows you to define on children blocks the content that will be shown for disallowed users – users with roles that do not have the required permissions to view the block. |  |
     

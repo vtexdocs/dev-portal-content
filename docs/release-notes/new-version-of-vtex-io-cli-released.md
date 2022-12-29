@@ -10,7 +10,7 @@ type: "improved"
 
 [block:html]
 {
-  "html": "<div class=\"badge\" id=\"vtex-io\">VTEX IO</div>\n</br>"
+  "html": "<div class=\"badge\" id=\"vtex-io\">VTEX IO</div>\n<br>"
 }
 [/block]
 [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) has changed its version 3 to enhance developers' productivity and experience. To allow this evolution, we adapted VTEX IO CLI to a plugin-based architecture, added a new color scheme, and included a more comprehensive command description. Also, VTEX IO CLI is now available on multiple platforms.

@@ -43,12 +43,12 @@ Rewriter includes functionalities to:
 <tr>
 <td colspan="1" valign="top"><strong>redirect</strong></td>
 <td valign="top"><a href="#queryredirect">QueryRedirect</a>!</td>
-<td>Provides <i>redirect</i> routes data.</br>Redirect routes are used to redirect a route from one path to another.</td>
+<td>Provides <i>redirect</i> routes data.<br>Redirect routes are used to redirect a route from one path to another.</td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>internal</strong></td>
 <td valign="top"><a href="#queryinternal">QueryInternal</a>!</td>
-<td>Provides <i>internal</i> routes data.</br>Internal routes are navigation routes.</td>
+<td>Provides <i>internal</i> routes data.<br>Internal routes are navigation routes.</td>
 </tr>
 </tbody>
 </table>
@@ -72,13 +72,13 @@ Rewriter includes functionalities to:
 <td colspan="1" valign="top"><strong>redirect</strong></td>
 <td valign="top"><a href="#mutateredirect">MutateRedirect</a>!</td>
 <td>Updates or deletes <i>redirect</i> routes data according to the provided arguments.
-</br>Redirect routes are used to redirect a route from one path to another.</td>
+<br>Redirect routes are used to redirect a route from one path to another.</td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>internal</strong></td>
 <td valign="top"><a href="#mutateinternal">MutateInternal</a>!</td>
 <td>Updates or deletes <i>internal</i> routes data according to the provided arguments.
-</br>Internal routes are navigation routes.</td>
+<br>Internal routes are navigation routes.</td>
 </tr>
 </tbody>
 </table>
@@ -130,7 +130,7 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="2" valign="top" align="right">next</td>
             <td valign="top">String</td>
-            <td>The argument used to fetch more internal routes from <i>ListRedirectsResponse</i>.</br>It must be empty in the first query and, in the following, filled in with the string previously obtained from the <i>ListRedirectsResponse</i> object.</td>
+            <td>The argument used to fetch more internal routes from <i>ListRedirectsResponse</i>.<br>It must be empty in the first query and, in the following, filled in with the string previously obtained from the <i>ListRedirectsResponse</i> object.</td>
         </tr>
     </tbody>
 </table>
@@ -176,7 +176,7 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="2" align="right" valign="top">next</td>
             <td valign="top">String</td>
-            <td>The argument used to fetch more internal routes from <i>ListInternalsResponse</i>.</br>It must be empty in the first query and, in the following, filled in with the string previously obtained from the <i>ListInternalsResponse</i> object.</td>
+            <td>The argument used to fetch more internal routes from <i>ListInternalsResponse</i>.<br>It must be empty in the first query and, in the following, filled in with the string previously obtained from the <i>ListInternalsResponse</i> object.</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>routes</strong></td>
@@ -351,7 +351,7 @@ Rewriter includes functionalities to:
 <td colspan="1" valign="top"><strong>declarer</strong></td>
 <td valign="top">String!</td>
 <td>The app that originally defined the route in a <code>routes.json</code> file.
-</br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
+<br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>type</strong></td>
@@ -371,12 +371,12 @@ Rewriter includes functionalities to:
 <tr>
 <td colspan="1" valign="top"><strong>binding</strong></td>
 <td valign="top">String!</td>
-<td>The id of the <i>binding</i> which the route is available.</br><i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
+<td>The id of the <i>binding</i> which the route is available.<br><i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
-<td>The date a route stops being valid.</br><i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
+<td>The date a route stops being valid.<br><i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>imagePath</strong></td>
@@ -392,13 +392,13 @@ Rewriter includes functionalities to:
 <td colspan="1" valign="top"><strong>routesVersion</strong></td>
 <td valign="top">Float</td>
 <td>The current routes version. 
-</br>
+<br>
 <i>Keep in mind: If the <code>routesVersion</code> value is <code>null</code> or different from the current version, the route is not currently available in the store.</i></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>resolveAs</strong></td>
 <td valign="top">String</td>
-<td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.</br><i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
+<td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.<br><i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
 </tr>
 <tr>
 <td colspan="1" valign="top"><strong>origin</strong></td>
@@ -438,7 +438,7 @@ Rewriter includes functionalities to:
 <tr>
 <td colspan="1" valign="top"><strong>next</strong></td>
 <td valign="top">String</td>
-<td>Returns a string to be used as the <i>next</i> argument of the succeeding <i>listInternals</i> query to fetch more data.</br>When <i>next</i> returns <i>null</i>, all data have already been fetched.</td>
+<td>Returns a string to be used as the <i>next</i> argument of the succeeding <i>listInternals</i> query to fetch more data.<br>When <i>next</i> returns <i>null</i>, all data have already been fetched.</td>
 </tr>
 </tbody>
 </table>
@@ -460,7 +460,7 @@ Rewriter includes functionalities to:
 <td colspan="1" valign="top"><strong>binding</strong></td>
 <td valign="top">String!</td>
 <td>The id of the <i>binding</i> which the route is available.
-</br>
+<br>
 <i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
@@ -498,7 +498,7 @@ Rewriter includes functionalities to:
 <td colspan="1" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
 <td>The date a redirect route stops being valid.
-</br>
+<br>
 <i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
 </tr>
 <tr>
@@ -510,7 +510,7 @@ Rewriter includes functionalities to:
 <td colspan="1" valign="top"><strong>binding</strong></td>
 <td valign="top">String!</td>
 <td>The id of the <i>binding</i> which the route is available.
-</br>
+<br>
 <i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
@@ -544,7 +544,7 @@ Rewriter includes functionalities to:
 <tr>
 <td valign="top"><strong>next</strong></td>
 <td valign="top">String</td>
-<td>Returns a string to be used as the <i>next</i> argument of the succeeding <i>listInternals</i> query to fetch more data.</br>When <i>next</i> returns <i>null</i>, all data have already been fetched.</td>
+<td>Returns a string to be used as the <i>next</i> argument of the succeeding <i>listInternals</i> query to fetch more data.<br>When <i>next</i> returns <i>null</i>, all data have already been fetched.</td>
 </tr>
 </tbody>
 </table>
@@ -597,7 +597,7 @@ Rewriter includes functionalities to:
 <td colspan="2" valign="top"><strong>declarer</strong></td>
 <td valign="top">String!</td>
 <td>The app that originally defined the route in a <code>routes.json</code> file.
-</br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
+<br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>type</strong></td>
@@ -618,14 +618,14 @@ Rewriter includes functionalities to:
 <td colspan="2" valign="top"><strong>binding</strong></td>
 <td valign="top">String</td>
 <td>The id of the <i>binding</i> which the route is available.
-</br>
+<br>
 <i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
 <td>The date a route stops being valid.
-</br>
+<br>
 <i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
 </tr>
 <tr>
@@ -642,7 +642,7 @@ Rewriter includes functionalities to:
 <td colspan="2" valign="top"><strong>resolveAs</strong></td>
 <td valign="top">String</td>
 <td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.
-</br>
+<br>
 <i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
 </tr>
 <tr>
@@ -685,7 +685,7 @@ Rewriter includes functionalities to:
 <td colspan="2" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
 <td>The date a route stops being valid.
-</br>
+<br>
 <i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
 </tr>
 <tr>
@@ -697,7 +697,7 @@ Rewriter includes functionalities to:
 <td colspan="2" valign="top"><strong>binding</strong></td>
 <td valign="top">String</td>
 <td>The id of the <i>binding</i> which the route is available.
-</br>
+<br>
 <i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 <tr>
@@ -729,7 +729,7 @@ Rewriter includes functionalities to:
 <tr>
 <td colspan="2" valign="top"><strong>binding</strong></td>
 <td valign="top">String!</td>
-<td>The id of the <i>binding</i> which the route is available.</br><i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
+<td>The id of the <i>binding</i> which the route is available.<br><i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
 </tr>
 </tbody>
 </table>
