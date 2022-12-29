@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/persist-campaign-data-throughout-a-user-session-0.png)
 
 To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable `OriginalLocation` to your [Google Tag Manager (GTM) container](https://tagmanager.google.com/) and configure your store’s Google Analytics tags.
 

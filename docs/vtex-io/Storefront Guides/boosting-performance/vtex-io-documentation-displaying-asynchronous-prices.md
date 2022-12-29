@@ -15,7 +15,7 @@ A favorable way out is to set your store to fetch product prices on the client-s
 
 > ℹ️ **Asynchronous prices do not mean outdated**. They are product prices stored in the browser cache according to the user navigation. If your store does not routinely update product prices, it is strongly recommended to display asynchronous prices instead.
 
-![priceasync](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/96735041-85265680-1391-11eb-80e9-2eb35607fd72_17.gif)
+![priceasync](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-displaying-asynchronous-prices-0.gif)
 
 Learn below how to set your store up to decrease page response time with asynchronous prices!
 

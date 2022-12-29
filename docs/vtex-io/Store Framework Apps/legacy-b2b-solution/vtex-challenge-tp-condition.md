@@ -7,7 +7,7 @@ createdAt: "2020-06-03T15:19:30.796Z"
 updatedAt: "2021-04-29T13:29:19.890Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/legacy-b2b-solution/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Used in B2B environments, the Challenge block is a non-rendered block responsible for checking if a user is allowed to access the store's content. 

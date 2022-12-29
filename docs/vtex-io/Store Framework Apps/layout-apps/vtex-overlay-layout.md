@@ -11,12 +11,12 @@ updatedAt: "2020-10-06T13:51:03.943Z"
 # Overlay Layout
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/layout-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Overlay Layout app provides blocks that help you create a Dropdown, Select or a Tooltip component.
 
-![overlay-layout](https://user-images.githubusercontent.com/52087100/78159134-881f2100-7418-11ea-94e1-d70343cd021f.gif)
+![overlay-layout](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-overlay-layout-0.gif)
 
 *Example of a [Locale Switcher](https://vtex.io/docs/components/all/vtex.locale-switcher@0.5.5) using the Overlay Layout*. 
 
@@ -36,8 +36,8 @@ Now you can use the two blocks exported by the app:
 
 Block name | Description |
 | --------------------| -------- |
-| `overlay-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Declares a renderable children block responsible for triggering the `overlay-layout` content. |
-| `overlay-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Declares a renderable children block responsible for building the   |
+| `overlay-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-overlay-layout-1.png) Declares a renderable children block responsible for triggering the `overlay-layout` content. |
+| `overlay-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-overlay-layout-2.png) Declares a renderable children block responsible for building the   |
 
 2.  In any desired theme template, add the `overlay-trigger` and then declare it using a block of your choosing and the `overlay-layout`:
 

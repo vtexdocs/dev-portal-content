@@ -6,9 +6,9 @@ hidden: false
 type: "added"
 ---
 
-![Checkout](https://img.shields.io/badge/-Checkout-yellow)
+![Checkout](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/checkout-ui-custom-0.png)
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/checkout-ui-custom-1.png)
 
 A new app responsible for customizing your store's Checkout UI through the admin's interface is now available for you.
 

@@ -22,7 +22,7 @@ After enabling manual prices, to change a product price on inStore, sales associ
 2. Click on `More details`.
 3. Click on the desired variation of the product.
 4. Click on `Change`, an option that will appear next to the product price. When you click this component, you will see a modal that allows you to set a new price, as shown below.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/39b4020-image1_30.png)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/allow-manual-prices-on-instore-0.png)
 5. Enter a new value to change the product price. There are no restrictions to increase or reduce prices.
 6. Click on `Change price` to confirm. The altered price will be applied only on this purchase.
 

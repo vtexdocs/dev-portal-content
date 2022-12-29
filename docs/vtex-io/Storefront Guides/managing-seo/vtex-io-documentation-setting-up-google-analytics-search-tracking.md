@@ -22,6 +22,6 @@ Follow the steps below and configure your store’s tracking.
 3. Enable **Site search Tracking** and fill out the **Query parameter** field with `_q,rest`.
 4. Enable **Site search categories** and fill out the **Category parameter** field with `_c`.
 
-![parameter-fields-analytics](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/managing-seo/63990605-ff738780-caba-11e9-8f99-ca7ba6751d59_24.png)
+![parameter-fields-analytics](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-setting-up-google-analytics-search-tracking-0.png)
 
 5. Click on **Save**.

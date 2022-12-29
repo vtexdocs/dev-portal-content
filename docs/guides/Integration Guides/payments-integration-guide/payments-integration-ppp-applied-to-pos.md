@@ -85,7 +85,7 @@ There are some steps needed for the connector to be able to process payments in 
 ## Scenery and flow
 
 Here we describe the payment flow in the context of a physical store using a POS. The following sequence diagram represents all the steps in this flow, where the green bars are the steps that the payment provider is responsible for:
-![Fluxo PPP com POS atualizado](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/f9b9b81-Fluxo_PPP_com_POS_atualizado_87.png)
+![Fluxo PPP com POS atualizado](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-ppp-applied-to-pos-0.png)
 
 1. The flow starts with a buyer finishing a purchase in a VTEX physical store created on [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc).
 2. The inStore makes an [Authorization](https://developers.vtex.com/vtex-rest-api/reference/4doauthorization) request to the VTEX Payment Gateway.
@@ -197,7 +197,7 @@ Payload example:
 }
 ```
 
-![Print of the Fullfil form app using the example payload above](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/2970e93-image2_196.png)
+![Print of the Fullfil form app using the example payload above](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-ppp-applied-to-pos-1.png)
 
 #### Pagar.me Payment App
 
@@ -222,7 +222,7 @@ Payload example:
 }
 ```
 
-![Print of the Pagarme Payment App using the camera to scan the bar code of the POS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/c98303e-image3_219.png)
+![Print of the Pagarme Payment App using the camera to scan the bar code of the POS](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-ppp-applied-to-pos-2.png)
 
 #### Wait for confirmation
 

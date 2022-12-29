@@ -27,9 +27,9 @@ Also, given a specific Price Table is selected according to the context, there a
   - **Computed price**: retail price after applying the [price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) of a specific context
   - **Fixed price**: fixed value that overrides the computed price for an SKU in a price table
 
-![The computed Price is obtained from the application of price rules on a base price](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/erp-integration-guide/931b88e-image2_31.png)
+![The computed Price is obtained from the application of price rules on a base price](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-import-prices-0.png)
 
-![A fixed price overrides the computed price for an SKU in a price table](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/erp-integration-guide/6458670-image6_33.png)
+![A fixed price overrides the computed price for an SKU in a price table](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-import-prices-1.png)
 
 So if you decide not to use price rules to compute your prices in VTEX, the way to do it is to send a single **base price** for each SKU sent by your ERP and set multiple **fixed prices** as needed to differentiate the value charged for each trade policy. If you would like a conceptual overview of our Pricing module, check out the [beginner track](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP) in our Help Center.
 

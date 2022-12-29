@@ -9,15 +9,15 @@ updatedAt: "2022-10-07T13:56:32.252Z"
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The Store Locator app fetches the Pickup point data in order to display address location for retail stores.
 
-![store-list](https://user-images.githubusercontent.com/52087100/99975140-9f809500-2d80-11eb-87ce-2f9cfcf567d6.png)
-![store-detail](https://user-images.githubusercontent.com/52087100/99975130-9abbe100-2d80-11eb-95ac-49ea37490c50.png)
+![store-list](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-locator-0.png)
+![store-detail](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-locator-1.png)
 
 ## Configuration
 

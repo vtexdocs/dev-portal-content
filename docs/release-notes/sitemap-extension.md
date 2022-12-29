@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/sitemap-extension-0.png)
 
 Shall we talk about *SEO* now? Your store's Sitemap can now be extended by other apps, meaning new files can now be natively added to the Sitemap's root XML.
 

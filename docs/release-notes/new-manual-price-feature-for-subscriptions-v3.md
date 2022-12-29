@@ -7,7 +7,7 @@ type: 'added'
 excerpt: "You can now enable the Manual Price feature for [Subscriptions v3](https://developers.vtex.com/vtex-rest-api/docs/subscriptions-v3-migration-guide)."
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-manual-price-feature-for-subscriptions-v3-0.png)
 
 You can now enable the Manual Price feature for [Subscriptions v3](https://developers.vtex.com/vtex-rest-api/docs/subscriptions-v3-migration-guide), which allows you to:
 

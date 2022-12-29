@@ -8,13 +8,13 @@ updatedAt: "2022-09-08T19:10:41.275Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Store Image app exports the `list-context.image-list` block, which is responsible for working with image content in the store's theme.
 
-![store-image](https://user-images.githubusercontent.com/52087100/78939489-a3c69f00-7a8a-11ea-8c66-7475f1a3f69e.png)
+![store-image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-image-0.png)
 
 ## Configuration
 

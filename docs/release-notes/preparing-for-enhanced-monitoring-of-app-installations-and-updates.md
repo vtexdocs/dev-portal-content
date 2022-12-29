@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![App Development](https://img.shields.io/badge/-App%20Development-blue)
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/preparing-for-enhanced-monitoring-of-app-installations-and-updates-0.png)
 
 If you are a developer using our [toolbelt](doc:vtex-io-documentation-toolbelt) on a daily basis, you may have noticed a new app called `app-install-monitor` when [listing an account’s apps](doc:vtex-io-documentation-listing-an-accounts-apps).
 

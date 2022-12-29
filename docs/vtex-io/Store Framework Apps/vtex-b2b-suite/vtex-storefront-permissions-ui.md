@@ -8,7 +8,7 @@ updatedAt: "2022-11-14T14:14:48.952Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/vtex-b2b-suite/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -50,7 +50,7 @@ To manage roles and their respective app permissions using the Storefront Permis
 4. Select which permissions you want to enable for the role, as illustrated below.
 5. Once you are done, click on `Save`.
 
-![storefront-permissions-ui](https://raw.githubusercontent.com/vtex-apps/storefront-permissions-ui/master/docs/images/storefront-permissions-ui.gif)
+![storefront-permissions-ui](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-storefront-permissions-ui-0.gif)
 
 After associating roles with the desired permissions, you may then assign roles to users. To learn more about this, read our [B2B Organizations documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#users).
 

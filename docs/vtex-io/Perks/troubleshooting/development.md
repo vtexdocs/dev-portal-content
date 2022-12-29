@@ -50,7 +50,7 @@ Notice that, for providing a fast response, caching is enabled by default. Howev
 <details>
 <summary>I can't install an app with a major other than <code>0.x</code></summary>
 
-![major](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/troubleshooting/102230433-9ee4a580-3ecb-11eb-8926-6b5c44750123_51.png)
+![major](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/development-0.png)
 
 Run `vtex ls` to check which apps are included on the [Edition App](https://vtex.io/docs/concepts/edition-app/) installed on your account. If you see the app you're trying to install with another major, you might have an issue with the Edition App installed on your account.
 
@@ -73,7 +73,7 @@ The indexing process will start and you will see a link to the Indexing Status s
 
 > ℹ️ The [Integration settings](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) is responsible for the Catalog's initial indexing with VTEX Intelligent Search. After installing the application, this will be the first step to integrating it with the Catalog.
 
-![start-integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/troubleshooting/102246861-fab82a00-3edd-11eb-8115-8ecdf892262c_73.png)
+![start-integration](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/development-1.png)
 
 </details>
 

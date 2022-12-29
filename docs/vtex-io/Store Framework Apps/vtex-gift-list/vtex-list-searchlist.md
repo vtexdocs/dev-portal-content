@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.216Z"
 ---
 The `search-list` block displays a search box for public lists according to the name of the owner of the list or the name of the list.
 
-![SearchList](https://user-images.githubusercontent.com/67066494/190510257-576c70ec-43e3-4f75-b917-fd5b8ee2df24.gif)
+![SearchList](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-searchlist-0.gif)
 
 ## Configuration
 

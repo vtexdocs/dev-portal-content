@@ -16,6 +16,6 @@ A **Subscription** is a list of items (SKUs) tied to certain recurring purchase 
 
 Once you have [configured subscriptions](https://help.vtex.com/tutorial/how-to-configure-subscriptions%20--1FA9dfE7vJqxBna9Nft5Sj) in your store, the Subscriptions API allows you to create, manage and monitor your customers' subscriptions.
 
-![Subscription v3 concept diagram](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Subscriptions%20API%20-v3-/ed95ea1-2_18.PNG)
+![Subscription v3 concept diagram](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/subscriptions-api-v3-overview-0.PNG)
 
 To read more about the Subscriptions feature, check our article [How Subscription works](https://help.vtex.com/tutorial/como-funciona-a-assinatura--frequentlyAskedQuestions_4453).

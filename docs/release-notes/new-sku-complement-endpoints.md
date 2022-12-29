@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-sku-complement-endpoints-0.png)
 
 To facilitate your experience, we improved the SKU Complements retrieval by making two new endpoints available for use. You can get all SKU Complements of an SKU by its SKU ID and filter the Complements by its type. Check out the endpoints:
 

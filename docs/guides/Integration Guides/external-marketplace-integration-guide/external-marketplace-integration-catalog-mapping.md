@@ -41,7 +41,7 @@ To use the category mapping service, follow the steps below, that will be furthe
 ### Register the connector in VTEX Mapper
 
 After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) to operate a VTEX account, the diagram below illustrates the necessary steps to register the connector in VTEX Mapper.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/929cc12-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Autenticao_-1_44.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-catalog-mapping-0.jpg)
 
 1. Use the [Mapper Registration endpoint](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration).
 2. In case the registration is successful, VTEX Mapper returns a unique ID and endpoint to the connector. 
@@ -57,7 +57,7 @@ After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs
 ### Send category tree to VTEX Mapper
 
 To send the marketplace’s category tree to VTEX Mapper, follow the steps illustrated in this diagram:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a672dae-MarketplaceConnections_Docs_-_Mapeamento_de_Categorias_Envio_da_rvore_do_marketplace_ao_mapper-1_58.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-catalog-mapping-1.jpg)
 
 1. Collect marketplace category tree.
 2. Check if the category tree doesn’t already exist in its repository. 

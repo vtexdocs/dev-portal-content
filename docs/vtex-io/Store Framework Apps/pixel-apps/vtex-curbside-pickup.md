@@ -8,13 +8,13 @@ updatedAt: "2022-10-04T02:07:18.225Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Curbside Pickup app allows shoppers and store staff to coordinate curbside pickup orders through email notifications.
 
-![curbside](https://user-images.githubusercontent.com/52087100/94301877-b43bda80-ff41-11ea-9bc8-e28cc61b9246.png)
+![curbside](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-curbside-pickup-0.png)
 
 ## Configuration
 
@@ -30,7 +30,7 @@ In your VTEX account's admin, perform the following actions:
 2. Select the **Curbside Pickup** app box.
 3. Enter your [app key and token](https://developers.vtex.com/docs/getting-started-authentication#creating-the-appkey-and-apptoken) in the `App Key` and `App Token` fields.
 
-![curbside-pickup-admin](https://user-images.githubusercontent.com/52087100/94301599-37a8fc00-ff41-11ea-8f25-33ecee833d43.png)
+![curbside-pickup-admin](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-curbside-pickup-1.png)
 
 4. Access **Inventory & shipping** and then **Pickup points**. 
 5. For each of your pickup point store locations, enter the store's email address in the **Address Line 2** field. The Curbside Pickup app will use this email to send the store pickup notifications.

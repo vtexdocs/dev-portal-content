@@ -48,7 +48,7 @@ Create the store's checkout variable by following the step **For the store’s c
 6. In the `Data Layer Variable Name` field, type `ecommerceV2`.
 7. Click on `Save`:
 
-![ecommercev2-variable](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/137797960-9287770e-6e77-4088-b6ce-a7c4a0f0187c_50.png)
+![ecommercev2-variable](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-migrating-google-tag-manager-app-0.png)
 
 ### Using the `ecommerceV2` variable on the Google Analytics tag
 

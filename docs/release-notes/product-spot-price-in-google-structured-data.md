@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-spot-price-in-google-structured-data-0.png)
 
 The product spot price is now considered in the  `lowPrice`  field from Google structured data, used to understand and gather information about the content of the store page.
 

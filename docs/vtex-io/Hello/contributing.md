@@ -24,7 +24,7 @@ There are three main situations you should opt for opening an issue:
 - Request a new feature or suggest an idea.
 - Ask questions you had during development.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/112347367-8db6ec00-8ca5-11eb-997f-39b179b855d2_26.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-0.png)
 
 Once you open an issue, our team will evaluate your contribution as soon as possible.
 
@@ -32,13 +32,13 @@ Once you open an issue, our team will evaluate your contribution as soon as poss
 
 We use GitHub tags to classify issues between **Questions, Bugs or Enhancements.** This way, you can filter issues by specifying a label and author.
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/60682041-0a69bd00-9e68-11e9-8ee2-f388ddf225a8_34.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-1.png)
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/60682095-5d437480-9e68-11e9-9933-5651efa063a4_36.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-2.png)
 
 You can also change the **sort criteria** for the issues. For example, you can look for the most and least commented issues, the ones with most 👍 and most recently updated.
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/60682317-39ccf980-9e69-11e9-9b4e-95c51753bee0_40.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-3.png)
 
 ### Creating a Pull Request
 
@@ -101,7 +101,7 @@ To make the documentation of your custom app public on the Developer Portal, you
 1. Create a `docs/` folder in the app’s root.
 2. Update the app's `manifest.json` file to declare `vtex.docs` as one of the app's builders.
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Hello/64052096-a99eee00-cb53-11e9-8d69-925a451231ab_103.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-4.png)
 
 3. Inside the `docs/` folder create a `README.md` file.
 
@@ -124,7 +124,7 @@ To make the documentation of your custom app public on the Developer Portal, you
 
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Hello/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
@@ -132,7 +132,7 @@ Under the app's name, you should explain the topic, giving a **brief description
 
 Next, **add media** (either an image of a GIF) with the rendered components, so that users can better understand how the app works in practice. 
 
-![Media Placeholder](https://user-images.githubusercontent.com/52087100/71204177-42ca4f80-227e-11ea-89e6-e92e65370c69.png)
+![Media Placeholder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-5.png)
 
 ## Configuration 
 
@@ -245,7 +245,7 @@ Check out some documentation models that are already live:
 
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Hello/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
@@ -253,7 +253,7 @@ Under the app's name, you should explain the topic, giving a **brief description
 
 Next, you can **add media** (either an image of a GIF) if possible, so that users can better understand how the app works in practice. 
 
-![Media Placeholder](https://user-images.githubusercontent.com/52087100/71204177-42ca4f80-227e-11ea-89e6-e92e65370c69.png)
+![Media Placeholder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-6.png)
 
 ## Configuration
 

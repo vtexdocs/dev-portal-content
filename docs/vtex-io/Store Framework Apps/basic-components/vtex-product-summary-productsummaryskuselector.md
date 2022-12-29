@@ -8,7 +8,7 @@ updatedAt: "2022-07-02T00:50:32.998Z"
 ---
 The `product-summary-sku-selector` is a VTEX block that's tasked with rendering the [SKU Selector](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-skuselector) component in a Product Summary component, such as the Shelf or the Search Results Page.
 
-![product-summary-sku-selector](https://user-images.githubusercontent.com/52087100/68625690-87f9a580-04b8-11ea-835d-009ac768805f.gif)
+![product-summary-sku-selector](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummaryskuselector-0.gif)
 
 ## Configuration
 

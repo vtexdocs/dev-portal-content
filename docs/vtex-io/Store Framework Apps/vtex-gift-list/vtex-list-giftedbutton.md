@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.220Z"
 ---
 The `gifted-button` block displays the counter of purchases that have already been made for a product within the list.
 
-![GiftedButton](https://user-images.githubusercontent.com/67066494/190457314-0b836637-0eca-43ed-9943-dc75a6252cca.gif)
+![GiftedButton](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-giftedbutton-0.gif)
 
 ## Configuration
 

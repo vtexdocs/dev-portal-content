@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.087Z"
 ---
 The `product-images` block is responsible for rendering a product image or video.
 
-![image](https://user-images.githubusercontent.com/284515/70234551-a5c8cc00-173f-11ea-87d9-9f95c79761c8.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productimages-0.png)
 
 ## Configuration
 

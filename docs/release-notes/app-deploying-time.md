@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![App Development](https://img.shields.io/badge/-App%20Development-blue)
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/app-deploying-time-0.png)
 
 Aiming to strengthen the security of our development process, published apps will now have to wait 7 minutes until they become able to be deployed.
 

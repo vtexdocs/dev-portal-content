@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:04:30.348Z"
 updatedAt: "2021-10-25T14:49:23.936Z"
 ---
-![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red)
+![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-discountbadge-0.png)
 
 >⚠️ **Warning**
 >
@@ -30,7 +30,7 @@ You can use it in your code like a React component with the jsx tag: `<DiscountB
 <DiscountBadge listPrice={commertialOffer.ListPrice}
                 sellingPrice={commertialOffer.Price}
                 label={badgeText}>
-  <img src="" alt="">
+  <img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/deprecated/" alt="">
 </DiscountBadge>
 ```
 

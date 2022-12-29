@@ -13,14 +13,14 @@ updatedAt: "2021-03-31T17:25:38.265Z"
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The Media app allows you to display image and video assets using a single block.
 
-![media-list-example](https://user-images.githubusercontent.com/8127610/107076678-848fbf80-67ca-11eb-9ba3-8a7d285c4b2c.gif)
+![media-list-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-media-0.gif)
 ## Configuration
 
 1. Add the `store-media` app to your theme's dependencies in the `manifest.json` file:

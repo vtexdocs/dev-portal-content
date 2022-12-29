@@ -8,13 +8,13 @@ updatedAt: "2022-04-25T13:13:25.281Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The **Quantity on Cart** app allows you to display a message to your customers informing how many units of a product they have added to the cart. This message can be displayed in a [Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-shelf) or in a product page.
 
-![app-example](https://user-images.githubusercontent.com/67270558/162291375-e469fb78-ef87-4eeb-bd8b-f228a4579a52.gif)
+![app-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-quantity-on-cart-0.gif)
 
 > ⚠️
 > 
@@ -68,8 +68,8 @@ To apply CSS customizations in this and other blocks, follow the instructions gi
 Thanks goes to these wonderful people:
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/germanBonacchi"><img src="https://avatars.githubusercontent.com/u/55905671?v=4" width="100px;" alt=""/><br /><sub><b>Germán Bonacchi</b></sub></a><br /><a href="https://github.com/vtex-apps/quantity-on-cart/commits?author=germanBonacchi" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://avatars.githubusercontent.com/u/774112?v=4" width="100px;" alt=""/><br /><sub><b>Tomás Alfredo Mehdi</b></sub></a><br /><a href="https://github.com/vtex-apps/quantity-on-cart/commits?author=tomymehdi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/germanBonacchi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-quantity-on-cart-1.png">💻</a></td>
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-quantity-on-cart-2.png">💻</a></td>
   </tr>
 </table>
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

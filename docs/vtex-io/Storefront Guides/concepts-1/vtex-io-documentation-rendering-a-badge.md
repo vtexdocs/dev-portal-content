@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.260Z"
 
 To render a badge on top of a [Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) component, for example, product collection on a [Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf) block, you combine the [Product Highlights app](https://vtex.io/docs/components/all/vtex.product-highlights@2.2.0/) and [Stack Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-stack-layout).
 
-![badge](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/132249207-502468eb-3dc2-4fc4-a7ef-669ea333a177_11.png)
+![badge](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-rendering-a-badge-0.png)
 
 ## Before you start
 

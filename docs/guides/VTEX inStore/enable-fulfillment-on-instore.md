@@ -145,14 +145,14 @@ In the main account (marketplace), make sure you configure the **Message Center*
 2. Click on **Templates** to view all existing email templates.
 3. Click on `New template` to create a new email template.
 4. Name your template `Order ready for pickup in store` or `order-ready-for-pickup-in-store`, as illustrated below. It is important to use one of these exact names for the email to be sent automatically when orders are ready to be picked up.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/7f1f4f3-order-ready-for-pickup-in-store-template_145.gif)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-fulfillment-on-instore-0.gif)
 5. Enable the **Enable e-mail sending?** option, as shown above.
 6. Fill in the template fields and write the HTML code for your template. To learn more about how to do this, read [our articles in the Templates category](https://help.vtex.com/en/subcategory/templates--4D5LrWwlHGmOWMomOaaGee). Make sure you use the `{{clientProfileData.email}}` tag in the **To** field, to indicate clients’ respective emails.
 7. Click `Save` when you are done.
 
 #### Example template
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/8d215a6-screencapture-vtexinstoredev-myvtex-admin-message-center-2021-11-17-17_54_14_153.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-fulfillment-on-instore-1.png)
 
 ### Step 5 - Set the seller’s origin address [optional]
 

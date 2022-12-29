@@ -9,7 +9,7 @@ updatedAt: "2022-03-08T16:15:36.572Z"
 The Header app is responsible for displaying a **navigation bar** fixed on a store's page upper side. 
 Other blocks that are important for user navigation are found in the Header, for example the store's [logo](https://vtex.io/docs/components/all/vtex.store-components/logo), the [minicart](https://vtex.io/docs/components/all/vtex.minicart/), user [login](https://vtex.io/docs/components/all/vtex.login/) and [search bar](https://vtex.io/docs/components/all/vtex.store-components/search-bar).
 
-![header](https://user-images.githubusercontent.com/52087100/74090325-b6235d00-4a88-11ea-8227-317f93204d8f.png) 
+![header](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-header-0.png) 
 
 ## Configuration
 
@@ -25,9 +25,9 @@ Now, you are able to use all blocks exported by the `store-header` app. Check ou
 
 | Block name | Description | 
 | --------  | ------------ | 
-| `header-layout.desktop` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines the Header layout for desktop device through `header-row` blocks. | 
+| `header-layout.desktop` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-header-1.png) Defines the Header layout for desktop device through `header-row` blocks. | 
 | `header-layout.mobile`| Defines the Header layout for mobile device through `header-row` blocks. |
-| `header-row` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Create Header lines according to your store needs. |  
+| `header-row` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-header-2.png) Create Header lines according to your store needs. |  
 | `header-border` | Adds a `1px` margin to a Header row. | 
 | `header-force-center` | Centralizes its children blocks in a Header row. | 
 | `header-spacer` | Adds spacing between blocks throughout a Header row. | 
@@ -151,7 +151,7 @@ When passed on, the `header-force-center` centralizes its children blocks in a H
 },
 ```
 
-![header-force-center](https://user-images.githubusercontent.com/52087100/76665339-2d577f80-6566-11ea-981d-3f4cdaec1a2b.png)
+![header-force-center](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-header-3.png)
 
 - **`header-spacer`**: 
 
@@ -173,7 +173,7 @@ The `header-spacer` is tasked with adding spacing between blocks throughout the 
 
 In practice, it will make all blocks declared before it position themselves to the left on the screen, whereas blocks that are declared after will be positioned to the right. Considering that the Menus were properly declared and configured in the theme code, we would have the following: 
 
-![header-spacer](https://user-images.githubusercontent.com/52087100/74090331-c8050000-4a88-11ea-8566-98097b18c83d.png)
+![header-spacer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-header-4.png)
 
 ### Advanced configuration
 

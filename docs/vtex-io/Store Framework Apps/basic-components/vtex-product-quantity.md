@@ -7,12 +7,12 @@ createdAt: "2020-06-03T15:19:10.308Z"
 updatedAt: "2022-06-22T14:56:14.269Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Product Quantity allows users to a add a chosen amount of the displayed product in their cart.
 
-![product-quantity](https://user-images.githubusercontent.com/52087100/70237475-0f4bd900-1746-11ea-9af2-38f794f4a3dd.png)
+![product-quantity](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-quantity-0.png)
 
 ## Configuration 
 
@@ -99,7 +99,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/regis-samurai"><img src="https://avatars0.githubusercontent.com/u/38638226?v=4" width="100px;" alt=""/><br /><sub><b>Reginaldo</b></sub></a><br /><a href="https://github.com/vtex-apps/product-quantity/commits?author=regis-samurai" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/regis-samurai"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-quantity-1.png">💻</a></td>
   </tr>
 </table>
 

@@ -9,14 +9,14 @@ updatedAt: "2021-09-28T13:22:41.852Z"
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 
 This is a Cookiebot first party integration app. The [solution](https://www.cookiebot.com/) helps make your use of cookies and online tracking compliant.
 
-![Cookie dialog](https://user-images.githubusercontent.com/284515/77015180-d92c1100-6952-11ea-97e6-f2b94b900399.png)
+![Cookie dialog](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookiebot-0.png)
 
 ## Configuration
 
@@ -24,18 +24,18 @@ This is a Cookiebot first party integration app. The [solution](https://www.cook
 2. In your VTEX account's admin, open the **App** section and select the Cookiebot App box;
 3. Fill in your **Domain Group ID**. You can find yours at the [Cookiebot Settings page](https://manage.cookiebot.com/en/manage);
 
-![Cookiebot Domain ID](https://user-images.githubusercontent.com/284515/77793196-6acd0a00-7048-11ea-9de5-0da4eb1c1917.png)
+![Cookiebot Domain ID](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookiebot-1.png)
 
 4. On the [Settings page](https://manage.cookiebot.com/en/manage), make sure you use **Active Consent**; 
 
-<br/> <img width="500" src="https://user-images.githubusercontent.com/284515/78317146-de36b600-7537-11ea-885e-5b8a39d1db8c.png" />
+<br/> <img width="500" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookiebot-3.png" />
 
 5. On the [Cookies page](https://manage.cookiebot.com/en/cookies), run a Scan. After the scan is complete, make sure the following cookies are categorized as **Necessary**: `ASPXAUTH`, `checkout.vtex.com`, `CookieConsent`, `device`, `vtex_segment`, `vtex_session`, `VtexFingerPrint`, `VtexRCMacIdv7`, `VtexRCRequestCounter`, `VtexRCSessionIdv7`, `VtexWorkspace`;
 6. Save your changes.
    
 This pixel app also creates the page `/cookie-declaration` in your store with Cookiebot's Cookie declaration:
 
-![Cookie declaration page](https://user-images.githubusercontent.com/284515/78317698-61a4d700-7539-11ea-9429-1a6275be1123.png)
+![Cookie declaration page](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookiebot-2.png)
 
 You can edit the new page using the admin's Site Editor.
 

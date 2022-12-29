@@ -43,7 +43,7 @@ The result should look like:
 After making this change, open the inStore menu and update the data by clicking on the `Reset app local data` button.
 
 Once this is done, a slider will appear at the bottom of the inStore identification page:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/41c68e3-24._Enable_cart_transfer_between_devices_-_1_-_EN_54.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-cart-transfer-between-devices-0.png)
 When you drag the screen to the right, you will see the **Cart Capture** option, as shown in the image below.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/742d448-24._Enable_cart_transfer_between_devices_-_2_-_EN_56.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-cart-transfer-between-devices-1.png)
 For more information on how to use this feature, check our [guide](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2hlBqxHlxgFo2o4R52pbsk).

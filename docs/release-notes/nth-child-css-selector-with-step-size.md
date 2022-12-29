@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/nth-child-css-selector-with-step-size-0.png)
 
 `:nth-child` selectors with step size, such as `:nth-child(2n)` are now allowed for your store customization with CSS!
 

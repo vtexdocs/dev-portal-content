@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/store-locator-app-0.png)
 
 If adding information regarding pickup points to your store sounded complicated, it's water under the bridge! The Store Locator is among us to untie the knots in this setup - check out its [documentation](https://vtex.io/docs/components/all/vtex.store-locator/) now!
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/66776c2-store-list_12.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/store-locator-app-1.png)

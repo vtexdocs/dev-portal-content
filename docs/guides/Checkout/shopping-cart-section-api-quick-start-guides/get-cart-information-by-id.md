@@ -20,7 +20,7 @@ The first step is to get the `orderFormId` of the shopping cart you want to chec
     b. Click the **Application** tab, and under **Cookies**, click the name of the site's URL.
     c. In the table, locate the line `checkout.vtex.com` and record the value `_ofid=`. This is the `orderFormId` of the current shopping cart.
 
-![orderFormId Dev Tools](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/shopping-cart-section-api-quick-start-guides/e9ceca5-orderFormId_Dev_Tools_22.png)
+![orderFormId Dev Tools](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/get-cart-information-by-id-0.png)
 
 ## Accessing shopping cart information
 

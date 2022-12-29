@@ -7,7 +7,7 @@ hidden: false
 excerpt: "We have just updated our documentation to enable payment partners to develop their integrations for payments on a POS, with purchases made through the [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc)."
 ---
 
-![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+![Payments](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payment-integrations-can-now-be-developed-for-payments-on-a-pos-0.png)
 
 VTEX has solutions for selling at ecommerce and physical stores, providing a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience to shoppers. This includes the context of payments, where shoppers can pay for the purchase on a payment terminal, also known as a Point of Sale (POS).
 

@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![App Development](https://img.shields.io/badge/-App%20Development-blue)
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-week-45462019-0.png)
 
 Hey, team! Welcome to the **Black** VTEX IO Release Notes.
 

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/dynamic-content-on-slider-layout-0.png)
 
 The Slider Layout has gained full support for dynamic content!
 

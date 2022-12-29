@@ -8,7 +8,7 @@ updatedAt: "2022-12-09T21:28:45.069Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/vtex-b2b-suite/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 

@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2020-06-03T15:19:16.075Z"
 updatedAt: "2022-08-01T16:08:12.306Z"
 ---
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors)
 
 ## Description
 
@@ -148,4 +148,4 @@ To execute our tests go to `react/` folder and run `yarn test`
 
 ### Travis CI
 
-[![Build Status](https://travis-ci.org/vtex-apps/menu.svg?branch=master)](https://travis-ci.org/vtex-apps/menu)
+[![Build Status](https://travis-ci.org/vtex-apps/menu.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-bazaarvoice-0.png)

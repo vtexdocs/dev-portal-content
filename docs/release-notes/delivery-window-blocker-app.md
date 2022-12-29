@@ -7,7 +7,7 @@ hidden: false
 excerpt: "We have launched the **Delivery Window Blocker** app, an interface on VTEX Admin for you to manually block or unblock scheduled delivery windows with greater precision and an improved UI. You can block or unblock scheduled delivery windows on demand or set up weekly recurrent blocking."
 ---
 
-![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/delivery-window-blocker-app-0.png)
 
 We have launched the **Delivery Window Blocker** app, an interface on VTEX Admin for you to manually block or unblock scheduled delivery windows with greater precision and an improved UI. You can block or unblock scheduled delivery windows on demand or set up weekly recurrent blocking.
 
@@ -17,7 +17,7 @@ The **Delivery Window Blocker** app is available for all VTEX stores. You can in
 
 Once the app is installed, a new page becomes available on your VTEX Admin, under **Orders > Inventory & shipping > Delivery Window Blocker**. The UI can be seen below:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/ae8d585-image1_16.gif)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/delivery-window-blocker-app-1.gif)
 
 > If using the [New VTEX Admin](https://content.vtex.com/join-new-admin-beta-program-en/), you will find the app settings under **Apps > Installed Apps**.
 

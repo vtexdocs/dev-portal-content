@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.282Z"
 ---
 The `add-to-list-button` block displays a button that allows owners of the list to add products and remove products inside their list.
 
-![AddToListButton](https://user-images.githubusercontent.com/67066494/190252744-5a696343-621f-4cef-8821-c9fd452b8bff.gif)
+![AddToListButton](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-addtolistbutton-0.gif)
 
 ## Configuration
 

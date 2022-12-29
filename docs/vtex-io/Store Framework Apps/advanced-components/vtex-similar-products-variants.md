@@ -9,14 +9,14 @@ updatedAt: "2022-01-03T20:02:34.361Z"
 The Similar Products Variants app returns similar products related to an SKU so users can select other colors or types of the same product.
 
 
-![similar-in-action](https://user-images.githubusercontent.com/67270558/147780521-db76029b-c1fa-4627-a8bb-fa7485355424.png)
+![similar-in-action](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-similar-products-variants-0.png)
 
 ## Before you start
 1. Set up similar products in your store’s **Products and SKU.** Access your store’s Admin and go to **Products > Catalog > Products and SKU**.
 2. In **Products and SKU**, in the column **SKU**, click on the desired SKU.
 3. In the field **Similar (Alternative Products)**, type the product name you desire
 
-![similar-field](https://user-images.githubusercontent.com/67270558/147780337-ccc0d622-535e-47ce-9ede-d86f1d571546.gif)
+![similar-field](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-similar-products-variants-1.gif)
 
 4. Then, In **Products and SKU**, in the column **SKU**, click on the one you have added in the last step.
 5. Go to the `Images` tab, and on the field `Label`, type a name to identify the image displayed in the thumbnail through the `imageLabel` prop of the `Similar Products` Variants app.

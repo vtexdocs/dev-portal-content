@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.325Z"
 ---
 The `create-or-edit-list-modal` block displays a modal for editing or creating lists.
 
-![ListModal](https://user-images.githubusercontent.com/67066494/190409971-debe7831-256c-4849-9f01-a1789a03120e.gif)
+![ListModal](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-listmodal-0.gif)
 
 ## Configuration
 

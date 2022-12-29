@@ -8,13 +8,13 @@ updatedAt: "2021-08-27T00:05:10.919Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The Product Specifications app provides blocks to render product specification data.
 
-![Product Specifications Example](https://user-images.githubusercontent.com/284515/90801619-859c6580-e2ec-11ea-9a7d-6e80d8f3d315.png)
+![Product Specifications Example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-0.png)
 
 ## Configuration
 
@@ -203,8 +203,8 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/raissacmp"><img src="https://avatars0.githubusercontent.com/u/62183926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raissa Campos</b></sub></a><br /><a href="https://github.com/vtex-apps/product-specifications/commits?author=raissacmp" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/samuel-rodrigues-48638618b/"><img src="https://avatars.githubusercontent.com/u/62268414?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samuel Rodrigues</b></sub></a><br /><a href="https://github.com/vtex-apps/product-specifications/commits?author=SamuelRodriguess" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/raissacmp"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-1.png">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/samuel-rodrigues-48638618b/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-2.png">💻</a></td>
   </tr>
 </table>
 

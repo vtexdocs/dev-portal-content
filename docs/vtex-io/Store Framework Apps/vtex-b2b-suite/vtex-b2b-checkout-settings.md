@@ -57,7 +57,7 @@ Note that if you have [Storefront Permissions UI](https://developers.vtex.com/vt
 
 The **B2B Checkout Settings** app communicates with the **B2B Organizations** app and automatically lists the [Cost Center addresses](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#cost-center-details) associated with the user during checkout:
 
-| ![cost-center-details-addresses](https://raw.githubusercontent.com/vtex-apps/b2b-checkout-settings/master/docs/images/cost-center-details-addresses.png) | ![shipping](https://raw.githubusercontent.com/vtex-apps/b2b-checkout-settings/master/docs/images/shipping.png) |
+| ![cost-center-details-addresses](https://raw.githubusercontent.com/vtex-apps/b2b-checkout-settings/master/docs/images/cost-center-details-addresses.png) | ![shipping](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-b2b-checkout-settings-0.png) |
 |-|-|
 | **Cost Center Details** page, displaying two options of addresses associated with the cost center in question | Checkout page for an user associated with this organization and cost center |
 
@@ -70,7 +70,7 @@ Having a purchase order number allows B2B customers to pay for authorized purcha
 
 Using **B2B Checkout Settings**, it is possible to enable an optional **Reference or PO Number** field for customers to insert this information during the checkout.
 
-![purchase-order](https://raw.githubusercontent.com/vtex-apps/b2b-checkout-settings/master/docs/images/purchase-order.png)
+![purchase-order](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-b2b-checkout-settings-1.png)
 
 See the [Configuration](#configuration) section to understand how to enable or disable this button.
 
@@ -78,7 +78,7 @@ See the [Configuration](#configuration) section to understand how to enable or d
 
 To change app settings, in the VTEX Admin go to **Store Setup** > **B2B Checkout Settings**.
 
-![b2b-checkout-settings](https://raw.githubusercontent.com/vtex-apps/b2b-checkout-settings/master/docs/images/b2b-checkout-settings.png)
+![b2b-checkout-settings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-b2b-checkout-settings-2.png)
 
 You can use the toggle button to activate or deactivate the available settings:
 

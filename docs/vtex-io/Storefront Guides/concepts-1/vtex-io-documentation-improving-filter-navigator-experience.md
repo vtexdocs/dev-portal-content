@@ -86,4 +86,4 @@ All props mentioned here are documented on [documentation page](https://develope
 
 4. Your filter-navigator should look like this:
 
-![filter-navigator demo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/114074357-abc24600-987a-11eb-86ed-35aa05c4b1e8_88.gif)
+![filter-navigator demo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-improving-filter-navigator-experience-0.gif)

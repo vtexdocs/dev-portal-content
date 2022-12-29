@@ -20,7 +20,7 @@ If you do not have an account for a Google product, create one at [Creating your
 1. Access your VTEX **Admin** and go to **Account settings > Apps > App Store**
 
 2. Search for the Google Tag Manager app and click on `Install`. You will be redirected to the [App Store page](https://apps.vtex.com/vtex-google-tag-manager/p) and login into your App Store account if you are not already logged in.
-   ![image2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/151416637-46d44cb0-c1a2-4b56-8116-778c2c0ce8b3_21.gif)
+   ![image2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-installing-google-tag-manager-0.gif)
 
 3. After you will be redirected to the [App Store landing page](https://apps.vtex.com/), and in the search field, type `Google Tag Manager`, click on the app, then on  `GET APP`.
 
@@ -42,7 +42,7 @@ In order to avoid performance problems and unforeseen behavior, the VTEX IO Goog
 By default, the HTML ID is blocked, which automatically blocklists all the tags, variables, and triggers of the type `customScripts`. The main consequence of this blocklist is that Custom HTML tags will not be triggered.
 **The HTML blacklist is a VTEX Google Tag Manager app's default.** If you want to disable this restriction go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.x/setup` and check the toggle below.
 
-![restrictions](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/google-tag-manager/149350479-42dd3fbd-c727-4181-9c84-b76da0873d2f_42.png)
+![restrictions](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-installing-google-tag-manager-1.png)
 
 Most of the widely used Custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs a Custom HTML for one of those cases, the integration can either be done by transforming the tags into a [VTEX IO Pixel App](https://developers.vtex.com/vtex-developer-docs/docs/pixel-apps) or by removing this restriction.
 Check out below the full list of tags and variables that are blocked, by default, in VTEX IO Google Tag Manager solution below:

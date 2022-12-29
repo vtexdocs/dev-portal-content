@@ -7,7 +7,7 @@ hidden: false
 excerpt: "We have created quick-start guides to provide more details on how the Checkout APIs work and use them."
 ---
 
-![Documentation](https://img.shields.io/badge/-Documentation-lightgray)
+![Documentation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-quick-start-guides-for-checkout-0.png)
 
 We have created quick-start guides to provide more details on how the Checkout APIs work and use them. Initially, we are making available the following guides from the [Shopping cart section](https://developers.vtex.com/vtex-rest-api/reference/checkout-api-overview#shopping-cart):
 

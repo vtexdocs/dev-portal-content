@@ -15,4 +15,4 @@ To make your new app version available to end-users, you'll need to take the fol
 4. [**Deploy** the app as a stable version](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-deploying-the-app-stable-version) - update the app version on all accounts with the app installed.
 5. [Promote your changes to **Master**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-promoting-a-workspace-to-master) - make the new app version available to end-users.
 
-![public](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/92799699-61332680-f38a-11ea-8a06-a342607070d9_18.png)
+![public](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-making-your-new-app-version-publicly-available-0.png)

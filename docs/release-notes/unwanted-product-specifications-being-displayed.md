@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/unwanted-product-specifications-being-displayed-0.png)
 
 Although we have a checkbox in the Catalog module to set whether a specification should be displayed on the product details page or not, this info was not properly handled in our Product Specifications component.
 

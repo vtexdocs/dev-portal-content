@@ -21,13 +21,13 @@ Considering that you want to download the app through the Admin, proceed as foll
 3. Click on **Apps** then **App Store**.
 4. Now look for **Payment Provider Test Suite** in the search bar.
 5. Click **Install**.
-   ![Test_suite_1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/c2c9925-Test_suite_1_23.png)
+   ![Test_suite_1](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-provider-homologation-0.png)
 6. After that, you will be redirected to the VTEX App Store. Click the **GET APP** button at the top right corner of the page.
-   ![Test_suite_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/7e850d8-Test_suite_2_25.png)
+   ![Test_suite_2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-provider-homologation-1.png)
 7. Then, on the popup screen, type your account's name - with lowercase and no space in between - and click the **CONFIRM** button.
-   ![Test_suite_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/571bd57-Test_suite_3_27.png)
+   ![Test_suite_3](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-provider-homologation-2.png)
 8. Click **INSTALL** to complete the installation process.
-   ![Test_suite_4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/9191e2b-Test_suite_4_29.png)
+   ![Test_suite_4](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-provider-homologation-3.png)
    After that, the Test Suite app will be installed in your Admin.
 
 ## Run the tests

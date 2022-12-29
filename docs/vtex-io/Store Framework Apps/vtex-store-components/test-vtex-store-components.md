@@ -134,7 +134,7 @@ To execute our tests go to `react/` folder and run `yarn test`
 
 ### Travis CI
 
-[![Build Status](https://api.travis-ci.org/vtex-apps/store-components.svg?branch=master)](https://travis-ci.org/vtex-apps/store-components)
+[![Build Status](https://api.travis-ci.org/vtex-apps/store-components.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-0.png)
 
 <!-- DOCS-IGNORE:start -->
 ## Contributors
@@ -146,27 +146,27 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/hapoza"><img src="https://avatars3.githubusercontent.com/u/27775611?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dan</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=hapoza" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/JNussens"><img src="https://avatars0.githubusercontent.com/u/7662734?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jean Nussenzveig</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=JNussens" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/lucasayb"><img src="https://avatars2.githubusercontent.com/u/17356081?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Antônio Yamamoto Borges</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=lucasayb" title="Code">💻</a></td>
-    <td align="center"><a href="https://t.co/LTjWBxRnqE"><img src="https://avatars3.githubusercontent.com/u/28419764?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sebastian Sanchez Vega</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=sebaskun98" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Erislandio"><img src="https://avatars1.githubusercontent.com/u/34255207?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erislandio</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=Erislandio" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/BeatrizMiranda"><img src="https://avatars2.githubusercontent.com/u/28959326?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Beatriz Miranda</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=BeatrizMiranda" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Jayendra88"><img src="https://avatars1.githubusercontent.com/u/2637457?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jayendra</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=Jayendra88" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/hapoza"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-1.png">💻</a></td>
+    <td align="center"><a href="https://github.com/JNussens"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-2.png">💻</a></td>
+    <td align="center"><a href="https://github.com/lucasayb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-3.png">💻</a></td>
+    <td align="center"><a href="https://t.co/LTjWBxRnqE"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-4.png">💻</a></td>
+    <td align="center"><a href="https://github.com/Erislandio"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-5.png">💻</a></td>
+    <td align="center"><a href="https://github.com/BeatrizMiranda"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-6.png">💻</a></td>
+    <td align="center"><a href="https://github.com/Jayendra88"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-7.png">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/pgrimaud"><img src="https://avatars1.githubusercontent.com/u/1866496?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pierre Grimaud</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=pgrimaud" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/igorpoubel"><img src="https://avatars2.githubusercontent.com/u/6241622?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Igor Poubel</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=igorpoubel" title="Code">💻</a></td>
-    <td align="center"><a href="http://www.hugoccosta.com"><img src="https://avatars2.githubusercontent.com/u/20212776?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hugo Costa</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=hugocostadev" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/MatheusR42"><img src="https://avatars0.githubusercontent.com/u/16908590?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matheus Araujo</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=MatheusR42" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/LuisaFCorrea"><img src="https://avatars3.githubusercontent.com/u/66276121?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luisa Correa</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=LuisaFCorrea" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/pmarignan"><img src="https://avatars2.githubusercontent.com/u/32361926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pmarignan</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=pmarignan" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/rcmuniz1994"><img src="https://avatars.githubusercontent.com/u/32344098?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rodrigo Muniz</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=rcmuniz1994" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/pgrimaud"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-8.png">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/igorpoubel"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-9.png">💻</a></td>
+    <td align="center"><a href="http://www.hugoccosta.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-10.png">💻</a></td>
+    <td align="center"><a href="https://github.com/MatheusR42"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-11.png">📖</a></td>
+    <td align="center"><a href="https://github.com/LuisaFCorrea"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-12.png">💻</a></td>
+    <td align="center"><a href="https://github.com/pmarignan"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-13.png">💻</a></td>
+    <td align="center"><a href="https://github.com/rcmuniz1994"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-14.png">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/ovio224"><img src="https://avatars.githubusercontent.com/u/68231117?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ovi</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=oviolion" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/LucasCastroJussi"><img src="https://avatars.githubusercontent.com/u/80407814?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LucasCastroJussi</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=LucasCastroJussi" title="Code">💻</a></td>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://avatars.githubusercontent.com/u/71461884?v=4?s=100" width="100px;" alt=""/><br /><sub><b>razvanudream</b></sub></a><br /><a href="https://github.com/vtex-apps/store-components/commits?author=razvanudream" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ovio224"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-15.png">💻</a></td>
+    <td align="center"><a href="https://github.com/LucasCastroJussi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-16.png">💻</a></td>
+    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-17.png">💻</a></td>
   </tr>
 </table>
 

@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2020-06-09T14:48:53.569Z"
 updatedAt: "2022-07-02T00:50:32.880Z"
 ---
-![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red)
+![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummaryspecificationbadges-0.png)
 
 > ⚠️ 
 >

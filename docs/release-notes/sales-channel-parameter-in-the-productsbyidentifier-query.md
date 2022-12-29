@@ -6,6 +6,6 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/sales-channel-parameter-in-the-productsbyidentifier-query-0.png)
 
 A new parameter was added to the [`productsByIdentifier`  search query](https://github.com/vtex-apps/search-graphql/blob/master/graphql/schema.graphql#L216), allowing your custom components to fetch and display products according to the desired sales channel.

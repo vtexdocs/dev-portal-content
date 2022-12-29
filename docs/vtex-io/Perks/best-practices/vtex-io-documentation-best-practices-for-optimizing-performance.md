@@ -17,7 +17,7 @@ Thus, to help you guarantee the success of your brand's online presence, this ar
 
 Some actions that can boost your store's website performance can be enabled in your store's Admin Panel, under *Store Setup > CMS > Store > Advanced*.
 
-![cms-store-advanced](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/96817679-3a8af580-13f6-11eb-918d-2c60e7c685df_19.png)
+![cms-store-advanced](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-best-practices-for-optimizing-performance-0.png)
 
 These features are presented and explained in the [Enabling store settings](#enabling-store-settings) section.
 
@@ -53,7 +53,7 @@ Hence, you can choose to deactivate the native service worker provided by VTEX I
 
 The content which a user first sees when opening a web page is known as *above-the-fold*. Besides, since this part of the page must be loaded quickly for better user experience, it can also be referred to as *critical*.
 
-![critical](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/93504484-ed47cf80-f8ef-11ea-8af9-4d640f9cfe6b_55.png)
+![critical](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-best-practices-for-optimizing-performance-1.png)
 
 In other words, before anything else, the critical part of the page must be correctly and promptly rendered.
 
@@ -69,7 +69,7 @@ To properly display a web page layout, the browser needs to make multiple HTTP r
 
 In this sense, VTEX IO offers the possibility of avoiding various download requests by concatenating multiple CSS files into one.
 
-![concatenation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/93513175-dd35ed00-f8fb-11ea-8da4-95acd6b56d3f_71.png)
+![concatenation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-best-practices-for-optimizing-performance-2.png)
 
 Notice that, by combining CSS in a single file, the browser makes fewer requests and loads web pages faster, improving your store website's performance.
 
@@ -138,7 +138,7 @@ In scenarios in which a Menu block doesn't contain submenus declared within itse
 
 For instance, in the example below, the main `menu-items` (Apparel & Accessories, Home & Decor, and More) cannot have their implementation changed. They must remain as children, since they have a trigger to open a `submenu`.
 
-![menu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/best-practices/93248000-9a421100-f765-11ea-90b1-144f7622138d_140.png)
+![menu](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-best-practices-for-optimizing-performance-3.png)
 
 The internal `menu-items` (Clothing, Accessories and, Eyeglasses), however, can have their implementation changed from children to props.
 

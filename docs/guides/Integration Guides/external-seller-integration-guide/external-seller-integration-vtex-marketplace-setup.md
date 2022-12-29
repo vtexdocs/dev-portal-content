@@ -33,7 +33,7 @@ The article [Configuring a seller](https://help.vtex.com/en/tutorial/configuring
 }
 [/block]
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-seller-integration-guide/32d3648-ffm-endpoint_36.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-seller-integration-vtex-marketplace-setup-0.png)
 
 [block:callout]
 {
@@ -48,7 +48,7 @@ The article [Configuring a seller](https://help.vtex.com/en/tutorial/configuring
 Trade policies are used in VTEX to group catalog, pricing, promotions, inventory, shipping, and payment settings for different sales channels. In a VTEX marketplace, each trade policy may apply to a different set of sellers. So, after creating a new seller, the marketplace needs to activate this seller for the trade policies that make sense for the business.
 
 To do this, in the marketplace management panel's main menu, click on the option **Trade Policies**, then choose the trade policy you want to edit by clicking on the button **Alter** next to it. Next, select the sellers you want to activate. In the example of the image below, the trade policy "Marketplace" is only enabled for the seller "Store 1".
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-seller-integration-guide/27999ef-seller-trade-policy_51.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-seller-integration-vtex-marketplace-setup-1.png)
 Check out the Help Center documentation to get the complete explanation on how to [enable the seller for a trade policy](https://help.vtex.com/en/tutorial/configuring-the-seller--tutorials_392#editing-the-trade-policy).
 
 <br>

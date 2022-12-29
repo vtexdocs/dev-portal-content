@@ -30,14 +30,14 @@ Let's say you want to enter the name of the carrier in the "product sent" email.
 
 To do this, enter the "product sent" template and, in the **JSON Data** field, search for the `courier` property.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Message%20Center/templates/670a3f7-Group_32_30.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/including-order-variables-in-the-transactional-email-template-0.png)
 The filled-in value for this property is just an example, but you can use it in the **HTML** field so that when the email is sent the customer sees the carrier that is actually responsible for the order delivery.
 
 Note that the `courier` property is inside the `package` object. Therefore, you need to enter it as follows:
 
 `{{package.courier}}`
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Message%20Center/templates/903dd9e-Group_4_37.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/including-order-variables-in-the-transactional-email-template-1.png)
 As you see, the sample value ("Transportadora Teste Courier S.A.") was inserted in the preview screen, below the **HTML** and **JSON Data** fields.
 
 ### Other order email variables

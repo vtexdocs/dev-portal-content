@@ -7,7 +7,7 @@ type: "added"
 excerpt: "The [Policy Engine API](https://developers.vtex.com/vtex-rest-api/reference/policy-engine-api-overview) will allow you to create promotion alerts when certain products are sold with undesired prices and promotions."
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-policy-engine-api-0.png)
 
 The [Policy Engine API](https://developers.vtex.com/vtex-rest-api/reference/policy-engine-api-overview) will allow you to create promotion alerts when certain products are sold with undesired prices and promotions. It contains the following endpoints:
 

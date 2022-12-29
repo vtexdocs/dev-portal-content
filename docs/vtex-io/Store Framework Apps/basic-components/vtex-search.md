@@ -8,13 +8,13 @@ updatedAt: "2022-10-10T23:25:50.492Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The VTEX Search app is responsible for handling the new [**VTEX Intelligent Search**](https://help.vtex.com/tracks/vtex-intelligent-search) solution in IO stores by providing new UI components that enhance the search experience, such as the autocomplete feature.
 
-![search-app-gif](https://user-images.githubusercontent.com/52087100/82367576-6d196800-99ea-11ea-9672-77fa2b90a581.gif)
+![search-app-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-search-0.gif)
 
 ## Configuration
 

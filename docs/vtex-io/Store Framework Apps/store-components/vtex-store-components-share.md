@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.096Z"
 ---
 The `Share` component allows shoppers to share a product URL via social media. This component can be imported and used by any VTEX app.
 
-![share-component](https://user-images.githubusercontent.com/67270558/134995068-62543fb4-f2fe-4f06-b220-658f4b4c7eb1.png)
+![share-component](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-share-0.png)
 
 ## Configuration
 

@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:04:30.345Z"
 updatedAt: "2022-11-22T18:39:23.146Z"
 ---
-![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red)
+![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productspecifications-0.png)
 
 > ⚠️ Warning
 >
@@ -14,7 +14,7 @@ updatedAt: "2022-11-22T18:39:23.146Z"
 
 The `product-specifications` block shows the technical [specifications](https://help.vtex.com/tutorial/what-are-fields-or-specifications--2lB4AgibEseceMggKE2k2m) of a product.
 
-![Product Specifications](https://user-images.githubusercontent.com/27777263/71525823-4bd8a380-28b2-11ea-8d5c-7678426ec1ab.png)
+![Product Specifications](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productspecifications-1.png)
 
 ## Configuration
 

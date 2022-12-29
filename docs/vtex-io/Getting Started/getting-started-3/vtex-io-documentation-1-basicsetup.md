@@ -41,7 +41,7 @@ As you log in to a VTEX store using VTEX IO, you are automatically in its master
 
 To confirm this, you can run the `vtex whoami` command in your terminal to find out which **account** and **workspace** is being used by the VTEX IO CLI for your login:
 
-![VTEX IO CLI-whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/getting-started-3/61886028-517e2780-aed5-11e9-9398-b6d2f3909a50_43.png)
+![VTEX IO CLI-whoami](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-1-basicsetup-0.png)
 
 To start performing the desired changes in your storefront, we will need to create a [Development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace/).
 
@@ -55,7 +55,7 @@ vtex use examplename
 
 Following our example, the command will change the login to the  `examplename` workspace if it exists. If it does not, VTEX IO CLI will create it:
 
-![workspace-examplename EN](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/getting-started-3/63979000-30899300-ca8e-11e9-9d9d-234e31ac45f7_57.png)
+![workspace-examplename EN](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-1-basicsetup-1.png)
 
 > ℹ️ The `vtex use` command makes all your operations run in the workspace specified in the command, which means you can shift your operations to Master simply by running `vtex use master` in VTEX IO CLI, for example.
 

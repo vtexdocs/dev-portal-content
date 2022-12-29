@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/session-client-app-0.png)
 
 The new Session Client app provides React hooks and GraphQL query and mutation for your React components to read and update the [VTEX Session cookie](https://help.vtex.com/en/tutorial/vtex-session-sessions-system-overview--6C4Edou6bYqqEAOCAg2MQQ).
 

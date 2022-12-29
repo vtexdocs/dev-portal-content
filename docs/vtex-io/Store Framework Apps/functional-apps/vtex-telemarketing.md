@@ -8,7 +8,7 @@ updatedAt: "2022-10-25T16:30:05.018Z"
 ---
 The Telemarketing app is a store component that enables a [call center operator](https://help.vtex.com/pt/tutorial/como-criar-um-usuario-de-televendas--frequentlyAskedQuestions_4227) to represent a customer in the store and shop on their behalf.
 
-![telemarketing](https://user-images.githubusercontent.com/52087100/71182442-dab34380-2254-11ea-8a86-e8ef4d3f09f1.png)
+![telemarketing](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-telemarketing-0.png)
 
 >⚠️ Warning
 > 

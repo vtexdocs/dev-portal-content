@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Documentation](https://img.shields.io/badge/-Documentation-lightgray)
+![Documentation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-payment-integration-guide-0.png)
 
 To make it easier for partners to integrate payment providers into VTEX, we have published an updated [Payments Integration Guide](doc:payment-provider-integration-guide). The new guide details how our [Payment Provider Protocol](doc:payment-provider-protocol) works and everything you need to know to perform an integration such as:
 

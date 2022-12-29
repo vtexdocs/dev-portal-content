@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/condition-layout-v2-0.png)
 
 The Condition Layout as we know was remodeled in order to achieve a clearer logic when setting the conditions to build your store's layout.
 

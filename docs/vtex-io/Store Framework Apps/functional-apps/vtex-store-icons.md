@@ -10,13 +10,13 @@ updatedAt: "2020-10-05T18:52:00.018Z"
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/functional-apps/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Store Icons
 
-[![Build Status](https://travis-ci.org/vtex-apps/store-icons.svg?branch=master)](https://travis-ci.org/vtex-apps/store-icons)
+[![Build Status](https://travis-ci.org/vtex-apps/store-icons.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-icons-0.png)
 
 All Store icons components.
 

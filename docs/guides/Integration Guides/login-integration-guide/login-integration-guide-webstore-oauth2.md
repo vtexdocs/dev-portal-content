@@ -124,7 +124,7 @@ In order to configure this process, follow the steps below:
 1. Go to the **Admin panel** > **Account settings** > **Authentication**.
 2. In the **Webstore** tab, click `SET UP` in the **My Custom OAuth** section
 
-![Authentication settings screen with options: Access Key, Password, Facebook, Google and My Custom OAuth.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/5f26fac-1_127.PNG)
+![Authentication settings screen with options: Access Key, Password, Facebook, Google and My Custom OAuth.](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-0.PNG)
 3. [Set provider details](#3.-set-provider-details)
 4. [Configure authorization code requests](#4.-configure-authorization-code-requests)
 5. [Configure access token exchange request](#5.-configure-access-token-exchange)
@@ -147,14 +147,14 @@ When you start the custom OAuth setup, you must fill in the following informatio
 
 >❗ These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret` respectively.
 
-![Provider details section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/b538997-identity_feedback_oauth_155.PNG)
+![Provider details section, in the custom OAuth set up interface with the options described in the tutorial.](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-1.PNG)
 Click `NEXT`.
 
 #### 4. Configure authorization code requests
 
 In this step, you must first provide the authorization request **URL**.
 
-![Authorization code section, in the custom OAuth set up interface with the options described in the tutorial](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/cd0d53e-3_163.PNG)
+![Authorization code section, in the custom OAuth set up interface with the options described in the tutorial](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-2.PNG)
 
 [block:callout]
 {
@@ -163,7 +163,7 @@ In this step, you must first provide the authorization request **URL**.
 }
 [/block]
 Then, scroll down to the **Callback Request Information** section and fill in the **Key** under which the authorization code will be sent by the **identity provider** to VTEX.
-![Scrolling further down in the authorization code section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/8e76cb3-4_172.PNG)
+![Scrolling further down in the authorization code section, in the custom OAuth set up interface with the options described in the tutorial.](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-3.PNG)
 Click `NEXT`.
 
 #### 5. Configure access token exchange
@@ -172,7 +172,7 @@ In order to configure the **access token** exchange request, provide:
 
 - The request **URL**
 - **Authorization code key,** under which VTEX should send the authorization code to the identity provider.
-  ![Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/0968553-5_180.PNG)
+  ![Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-4.PNG)
 
 [block:callout]
 {
@@ -185,7 +185,7 @@ Then, you may scroll down to the **Response Information** section and inform the
 - **Access token key**
 - **Token duration key**
 
-![Scrolling further down in the Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/56a36a4-6_192.PNG)
+![Scrolling further down in the Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-5.PNG)
 Click `NEXT`.
 
 #### 6. Configure user information exchange
@@ -197,7 +197,7 @@ Now you must provide information regarding the user information exchange:
 
 Check the **Request Preview** section to make sure it matches the format expected by the **identity provider.** Also, note that if you toggle **Send on query string,** you can edit the access token key under which VTEX will send it to the **identity provider.**
 
-![Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/9ba2436-7_203.PNG)
+![Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-6.PNG)
 
 [block:callout]
 {
@@ -212,7 +212,7 @@ Scroll down to the **Response Information** section, and provide the **Keys** un
 - **User ID key**
 - **User name key**
 
-![Scrolling further down in the Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/31ad171-8_217.PNG)
+![Scrolling further down in the Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-7.PNG)
 To finalize your Custom OAuth configuration, click `FINISH`.
 
 #### Custom parameters

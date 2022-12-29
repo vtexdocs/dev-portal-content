@@ -10,9 +10,9 @@ The Live Shopping app allows businesses to broadcast live on the store website, 
 
 The app works on both devices, desktop, and mobile.
 
-![live-streaming-web](https://user-images.githubusercontent.com/52087100/118993914-49ba2d80-b95c-11eb-9720-dc3b35de3a59.png)
+![live-streaming-web](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-0.png)
 
-![mobile-livestreaming](https://user-images.githubusercontent.com/52087100/118993920-4aeb5a80-b95c-11eb-96c1-4e292f3c8133.png)
+![mobile-livestreaming](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-1.png)
 
 ## Installation
 
@@ -55,7 +55,7 @@ Once you have deployed your changes, check out the [app's overview on VTEX Admin
 
 Once you have [installed the VTEX Live Shopping app](#installation), access your store's **Admin** > **Store Setup** > **Live Shopping** > **Events** and you will see an interface as the following:
 
-![app-overview](https://user-images.githubusercontent.com/67270558/142218027-44d00504-900f-47d7-a188-1f7a7be2f41e.png)
+![app-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-2.png)
 
 - **Events**: section responsible for creating new events, managing them, and tracking events' data. Check out the [Configuration section below.](#configuration) set up the app on your store's.
 
@@ -75,7 +75,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 3. Click on `Events`.
 4. Click on the `New` button to schedule a new live shopping on your website.
 
-![creating-events](https://user-images.githubusercontent.com/67270558/142029782-6241d870-ce09-4912-9355-0dd94ed4848e.png)
+![creating-events](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-3.png)
 
 5. Fill out the fields according to the instructions below:
 
@@ -87,13 +87,13 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 
 ### Live Shopping events
 
-![admin-events](https://user-images.githubusercontent.com/52087100/118993701-1f687000-b95c-11eb-8fa5-276426c690da.png)
+![admin-events](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-4.png)
 
 1. In the events list, click on the desired event's arrow button (in the `Action` column).
 2. Copy the event's ID in the `Details` section.
 3. Change its status to `Live` by toggling the `Status` button.
 
-![details](https://user-images.githubusercontent.com/52087100/119001139-17abca00-b962-11eb-951a-414492949869.png)
+![details](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-5.png)
 
 > ⚠️ Warning
 >
@@ -102,7 +102,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 4. Using the admin sidebar, access `CMS` and then `**Site Editor**`.
 5. Locate the Live Shopping block in your store, according to the template you have declared it, and click on it.
 
-![site-editor-configs](https://user-images.githubusercontent.com/67270558/142052891-c08256b2-a108-4a41-819c-c780bb3aa570.png)
+![site-editor-configs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-6.png)
 
 6. Toggle the `Show component` button to display the Live Shopping component on your store.
 7. Click in **Item** and in **Events (In live)** choose the desired event. Then click on `APPLY`.
@@ -128,7 +128,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 
 When you click on `ACCESS`, a new window will appear redirecting you to the live studio.
 	
-![access](https://user-images.githubusercontent.com/67270558/142058459-817a0f59-dfec-4187-90b7-be27c355d2cb.png)
+![access](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-7.png)
 
 In the `Complete my profile` field, type your name and click on `CONTINUE`.
 Then, the page will redirect you to the live event studios.
@@ -140,16 +140,16 @@ The Live Shopping app counts with a live chat, enabling your users to engage wit
 1. In the events list, click on the desired live event's arrow button (in the `Action` column).
 2. In the `Live Chat` section, keep up with real-time comments, as well as the number of viewers and likes.
 
-![live-chat](https://user-images.githubusercontent.com/52087100/118993865-3dce6b80-b95c-11eb-8118-74b2986f9a17.png)
+![live-chat](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-8.png)
 
 3. In the `Questions` section, create questions to be displayed to the audience through the `New question` button. You can choose between quizzes and polls and define the time frame in which they will be displayed. The fetched answers will be stored in the same section.
 
-![new-question](https://user-images.githubusercontent.com/52087100/118993903-46bf3d00-b95c-11eb-8cce-623627abfb48.png)
+![new-question](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-9.png)
 
 4. In the admin sidebar, access the `Block list of words` section.
 5. Click on the `New` button to define which words will be forbidden to be displayed on the real-time chat.
 
-![block-words](https://user-images.githubusercontent.com/67270558/142054500-692d3f98-4289-4cf5-8d84-96d676ee1dc0.png)
+![block-words](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-10.png)
 
 > ℹ️ This feature is helpful to block rude, politician, or non-related comments from your live stream. Notice that the added words will be applied to all events, with no exceptions.
 
@@ -162,7 +162,7 @@ When you [create a new event](#creating-new-events), you have the option to add 
 1. In the events list, click on the desired live event's arrow button (in the `Action` column).
 2. In the `Products within collection` section, choose the desired products to show during the Live stream and toggle the `Actions` button.
 
-![live-shopping-products](https://user-images.githubusercontent.com/67270558/142084543-4f0245ed-03d4-4c8d-b688-4431c6e72833.png)
+![live-shopping-products](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-11.png)
 
 ### Finalising live-streamed events
 
@@ -173,7 +173,7 @@ When you [create a new event](#creating-new-events), you have the option to add 
 >
 > The live shopping completion process may take a while. Do not close the page until the `Finalized` status is green, as shown in the image below.
 
-![finalized-status](https://user-images.githubusercontent.com/52087100/118993844-3b6c1180-b95c-11eb-9b16-de346d4b7c43.png)
+![finalized-status](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-12.png)
 
 Once finished, you can request the recording of your event in **Recording the event** section and click on the button `REQUEST VIDEO`.
 
@@ -182,7 +182,7 @@ Once finished, you can request the recording of your event in **Recording the ev
 1. In the events list, click on the desired event's graphic button in the `Action` column.
 2. Check out the events' analytics data, as shown below:
 
-![analytics-event](https://user-images.githubusercontent.com/52087100/118993713-21323380-b95c-11eb-83e8-a5e3059136f1.png)
+![analytics-event](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexventures-livestreaming-13.png)
 
 ## Customization
 

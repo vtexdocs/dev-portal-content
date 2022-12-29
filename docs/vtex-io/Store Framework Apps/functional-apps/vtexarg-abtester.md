@@ -8,13 +8,13 @@ updatedAt: "2022-07-21T17:37:37.156Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/functional-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The A/B Tester app allows you to list, start and finish A/B tests via the VTEX Admin.
 
-![A/B Tester Settings](https://user-images.githubusercontent.com/36748003/138300964-63bc3545-efd7-435c-acd6-3e3e3a35b285.png)
+![A/B Tester Settings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-abtester-0.png)
 
 In the following, you'll learn how to install and use the A/B Tester app.
 
@@ -94,7 +94,7 @@ Thanks goes to these wonderful people:
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://avatars.githubusercontent.com/u/774112?v=4" width="100px;" alt=""/><br /><sub><b>Tomás Alfredo Mehdi</b></sub></a><br /><a href="https://github.com/vtex-apps/admin-ab-tester/commits?author=tomymehdi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-abtester-1.png">💻</a></td>
   </tr>
 </table>
 

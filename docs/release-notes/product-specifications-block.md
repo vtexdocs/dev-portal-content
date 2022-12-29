@@ -6,7 +6,7 @@ hidden: false
 type: "deprecated"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-specifications-block-0.png)
 
 The [Product Specification block](https://github.com/vtex-apps/store-components/blob/master/docs/ProductSpecifications.md), pertaining to the [Store Components app](https://vtex.io/docs/app/vtex.store-components/) was deprecated.
 

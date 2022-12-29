@@ -19,7 +19,7 @@ At the end of the day, CSS Handles are nothing more than your **store's layout b
 
 2. Hover on the element you want to customize. It should display its available CSS handles in a box (the large names beginning with `.`), along with their respective CSS file names, and other information.
 
-![css-handles-inspect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/styling-your-store/70256857-ffdd8780-1767-11ea-936d-a98cbfc924c1_21.png)
+![css-handles-inspect](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-css-handles-for-store-customization-0.png)
 
 > ⚠️ Before proceeding to the third step, check the CSS Handles table in the documentation of the app/block responsible for rendering the HTML element. It will therefore be possible to confirm whether the inspected Handle is valid and mainly if the customization requires another add-on to function, such as the HTML element's attribute.
 
@@ -41,7 +41,7 @@ At the end of the day, CSS Handles are nothing more than your **store's layout b
 
 Once you app is linked and the changes duly saved, the new customization should immediately be reflected onto your workspace.
 
-![css handles customization applied to the menuItem](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/styling-your-store/70257811-d160ac00-1769-11ea-8434-67f71afc2056_43.png)
+![css handles customization applied to the menuItem](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-css-handles-for-store-customization-1.png)
 
 As we've seen, CSS Handles are used to overwrite a store's default style and thus independently customize a type of block from the rest of the theme. Note that the change above was applied to all `menu-item` blocks.
 
@@ -67,11 +67,11 @@ For example:
 
 After saving and updating your workspace, when you inspect the element it should display an additional CSS handle along with its default one, like this:
 
-![css handles with block class](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/styling-your-store/70259211-7c726500-176c-11ea-9252-32b4aad76c12_69.png)
+![css handles with block class](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-css-handles-for-store-customization-2.png)
 
 After that, you can use the class `.menuItem--header` to target specifically the elements that have this `blockClass`.
 
-![specific menu items with css handles applied using blockClass](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/styling-your-store/70259424-e985fa80-176c-11ea-93e7-5c72770804f6_73.png)
+![specific menu items with css handles applied using blockClass](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-css-handles-for-store-customization-3.png)
 
 > ℹ️  Our team is constantly working on developing CSS Handles for every possible store component. If however your are unable to find a CSS Handle for a component you wish to customize, share this scenario with us at [Store Discussion](https://github.com/vtex-apps/store-discussion).
 

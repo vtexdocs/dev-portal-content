@@ -11,7 +11,7 @@ An Edition App consists of a bundle of settings, policies, back-end and front-en
 
 Its main objective is to facilitate the installation of numerous apps that might be considered essential to set up one specific environment.
 
-![EditionApp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/concepts/91470034-927c0480-e86a-11ea-866e-54575f3c0975_13.png)
+![EditionApp](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-edition-app-0.png)
 
 For example, consider the following two Edition Apps developed by the `vtex` account:
 

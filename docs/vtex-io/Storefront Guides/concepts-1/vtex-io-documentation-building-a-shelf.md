@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.565Z"
 
 The Shelf component is a product list that helps you to build your own shop window and work on your store's visual merchandising.
 
-![shelf](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/70079904-60dc5280-15e4-11ea-8ef6-0aa69cadd61d_11.png)
+![shelf](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-shelf-0.png)
 
 Using VTEX Store Framework, you can build two different shelves in your store: one to be rendered in the store home page, displaying any products you desire, and another one to be rendered in the product details page, displaying related products that may be interesting for users.
 

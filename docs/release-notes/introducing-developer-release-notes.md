@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![Documentation](https://img.shields.io/badge/-Documentation-lightgray)
+![Documentation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/introducing-developer-release-notes-0.png)
 
 We now have a dedicated Release Notes page to share technical updates in our product!
 

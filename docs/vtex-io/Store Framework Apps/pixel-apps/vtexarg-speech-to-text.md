@@ -8,13 +8,13 @@ updatedAt: "2022-11-03T17:57:01.905Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The `speech-to-text` app uses Google Chrome language processing to listen to the user's microphone and convert speech-to-text. The recognized text is then used to redirect the user to the corresponding search page.
 
-![speechlow](https://user-images.githubusercontent.com/23383993/127346535-62a7546b-accd-468b-adfa-3495cabe64b9.gif)
+![speechlow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-speech-to-text-0.gif)
 
 ## Configuration 
 
@@ -75,7 +75,7 @@ Thanks goes to these wonderful people:
 [Fabricio Vagliente](https://github.com/Favri)
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://avatars.githubusercontent.com/u/774112?v=4" width="100px;" alt=""/><br /><sub><b>Tomás Alfredo Mehdi</b></sub></a><br /><a href="https://github.com/vtex-apps/speech-to-text/commits?author=tomymehdi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-speech-to-text-1.png">💻</a></td>
   </tr>
 </table>
 

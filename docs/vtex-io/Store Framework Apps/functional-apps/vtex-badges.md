@@ -32,7 +32,7 @@ With this, you should be able to start using the app.
 
 After installing the app you will be able to access it by going to the `OTHER` section of the Admin panel and clicking `Badge Management`.
 
-![badges home screen](https://user-images.githubusercontent.com/47991446/176534387-6ce7a70c-3c75-4e19-acf6-3211cfa69555.PNG)
+![badges home screen](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-0.PNG)
 
 ### Creating badges
 
@@ -47,7 +47,7 @@ The `Add badges` tab allows you to create new badges by following these steps:
 
 See below a badge creation example.
 
-![form fill](https://user-images.githubusercontent.com/47991446/176534433-be56d30d-bdf3-4c30-a933-235aba6b1115.PNG)
+![form fill](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-1.PNG)
 
 > ⚠️ Note that each badge must contain at least one activation rule condition with the verb `is`. The app will not work properly if all activation rules conditions use `is not`.
 
@@ -60,7 +60,7 @@ To edit an existing badge, go to the `Edit badges` tab and follow these steps:
 3. Edit the badge attributes.
 4. Click `EDIT`.
 
-![edit badges](https://user-images.githubusercontent.com/47991446/176534410-67fac67e-3ae5-40ef-96a0-e8fabb09f2bb.PNG)
+![edit badges](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-2.PNG)
 
 ### Deleting badges
 
@@ -75,7 +75,7 @@ If you wish to delete an existing badge from your store, go to the `Edit badges`
 To improve the search for badges, it is possible to select which fields you want the search for them to be filtered. This makes searching the Database simpler and more efficient when returning badges to your website.
 To configure it, just enter the My Applications area. Then choose <b> App Badges </b> and select which fields you want the search to be related to.
 
-<img width="935" alt="Captura de Tela 2022-11-22 às 13 50 50" src="https://user-images.githubusercontent.com/80836180/203373595-aef6bf9b-de00-43a5-b2fd-0636b97c2fb5.png"/>
+<img width="935" alt="Captura de Tela 2022-11-22 às 13 50 50" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-4.png"/>
 
 Remember that by default all fields are used as a filter
 
@@ -133,4 +133,4 @@ These are the props available for customization of the badge component.
 
 After finishing all steps, you can check the result in your store. The order of the badges is set according to the priority defined when creating them. See the image below, that corresponds to the badge setup in this tutorial's examples.
 
-![result](https://user-images.githubusercontent.com/47991446/176911546-14dd3e5b-2af7-4f66-bd9e-2cd2c154cd09.PNG)
+![result](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-3.PNG)

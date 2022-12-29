@@ -6,10 +6,10 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-sku-attributes-block-0.png)
 
 The brand new block from the [Store Component app](https://vtex.io/docs/components/content-blocks/vtex.store-components/) is here to allow you to effortlessly display the attributes for the product's SKU.
 
 Learn more about it in the [Product SKU Attributes documentation](https://vtex.io/docs/components/content-blocks/vtex.store-components/productskuattributes/)!
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/3e52e6a-product-sku-attributes_16.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-sku-attributes-block-1.png)

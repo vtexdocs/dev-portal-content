@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+![Payments](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/improvement-in-first-installment-payment-discount-configuration-0.png)
 
 VTEX allows stores to [Configure discounts for orders prepaid in full](https://help.vtex.com/en/tutorial/configurar-desconto-de-preco-a-vista--7Lfcj9Wb5dpYfA2gKkACIt#). In order to do this, you must set the Checkout configuration parameter `paymentSystemToCheckFirstInstallment`.
 

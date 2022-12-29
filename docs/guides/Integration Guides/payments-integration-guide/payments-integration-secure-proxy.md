@@ -17,7 +17,7 @@ When an integration is PCI compliant, it does not need to use Secure Proxy, bein
 2. The provider receives tokens from VTEX’s Payments Gateway that refers to the sensitive data, instead of the actual data.
 3. The provider sends the API endpoint of the acquirer and the merchant credentials to the Gateway.
 4. The Gateway makes the API call to the acquirer, acting as a proxy between the provider and the acquirer. In this call, the tokens are replaced by sensitive data.
-   ![Secure Proxy simplified flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/a68e6b6-Secure_Proxy_simplified_flow_diagram_19.png)
+   ![Secure Proxy simplified flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-secure-proxy-0.png)
 
 ## What is PCI DSS and how is it used in VTEX?
 
@@ -45,7 +45,7 @@ When a system does not meet all the security requirements, it might be vulnerabl
 ## How it works
 
 In this section, we detail how the solution works in a payment authorization flow. The image below shows an overview of the flow containing the Secure Proxy, as well as the four steps required for the payment to be authorized by the acquirer.
-![Secure Proxy detailed flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/3e0fbfa-Secure_Proxy_detailed_flow_44.png)
+![Secure Proxy detailed flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-secure-proxy-1.png)
 
 ### 1. Checkout submits a payment authorization request to the Gateway
 

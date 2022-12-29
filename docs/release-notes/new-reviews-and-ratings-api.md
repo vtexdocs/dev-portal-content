@@ -6,7 +6,7 @@ hidden: true
 type: "added"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-reviews-and-ratings-api-0.png)
 
 Reviews & Ratings is a [VTEX IO native solution](https://developers.vtex.com/vtex-developer-docs/docs/vtex-reviews-and-ratings) that allows shoppers to submit reviews and ratings for products, as well as see them while navigating the store.
 

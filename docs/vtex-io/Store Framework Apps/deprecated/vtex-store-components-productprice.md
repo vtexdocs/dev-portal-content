@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2020-06-25T18:52:51.079Z"
 updatedAt: "2022-11-22T18:39:23.079Z"
 ---
-![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red)
+![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productprice-0.png)
 
 > ⚠️ Warning
 >
@@ -14,7 +14,7 @@ updatedAt: "2022-11-22T18:39:23.079Z"
 
 The `product-price` component is responsible for **displaying the price** of a given product.
 
-![image](https://user-images.githubusercontent.com/284515/70233684-d3ad1100-173d-11ea-8582-4acf52263521.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productprice-1.png)
 
 ## Configuration
 

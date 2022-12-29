@@ -9,14 +9,14 @@ updatedAt: "2022-11-22T16:02:14.171Z"
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/b2b-components/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 This app provides availability and shipping information based on the user's location, if available at the session, to have a more accurate result, even without authentication. We recommend using this app along with `vtex.shopper-location`; you can find more information about this app [here](https://github.com/vtex-apps/shopper-location).
 
-![Shelf](./images/shelf.png)
+![Shelf](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/b2b-components/images/shelf.png)
 
 ## Configuration
 
@@ -136,7 +136,7 @@ These blocks provide more detailed availability information and are designed for
 
 The above JSON will render an availability section that looks like this:
 
-![Availability example](./images/availability-example.png)
+![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/b2b-components/images/availability-example.png)
 
 ## Customization
 

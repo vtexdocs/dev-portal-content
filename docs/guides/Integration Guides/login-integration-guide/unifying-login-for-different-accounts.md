@@ -40,11 +40,11 @@ vtex install vtex.oauth-provider-admin
 
 3. On the Admin panel of your **primary account**, go to `ACCOUNT SETTINGS` > `OAuth Provider`. This will take you to the [OAuth Provider](https://github.com/vtex/oauth-provider) app tab.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/4ab35f1-1_39.PNG)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/unifying-login-for-different-accounts-0.PNG)
 4. Click `ADD OAUTH CLIENT`.
 5. Fill in the new OAuth client information, which is the **secondary account**.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/29ad7bb-2_43.PNG)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/unifying-login-for-different-accounts-1.PNG)
 
 - **Name**: this identifies the OAuth client. For instance, you may use the name of the corresponding **secondary account**.
 - **Allowed URI’s**:
@@ -62,9 +62,9 @@ https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx
 
 6. Click `SAVE`.
 7. Once you have saved your new OAuth client, you will be able to see it on the OAuth Provider Admin tab. Click on the client’s name to see its details.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/efe62c6-3_56.PNG)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/unifying-login-for-different-accounts-2.PNG)
 8. Copy the client ID and secret. You will need these credentials to set up the OAuth connection in the **secondary account**.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/06ef572-4_58.PNG)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/unifying-login-for-different-accounts-3.PNG)
 
 ### Set up OAuth connection in secondary account
 
@@ -135,4 +135,4 @@ Now that you have setup an OAuth identity provider in your **primary account** a
 
 The account host, used in the **URLs** for some of the configuration steps above, can be defined in the VTEX Admin panel, by going to `ACCOUNT SETTINGS` > `Account management` > `Account`.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/login-integration-guide/8a2c2a5-6_124.PNG)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/unifying-login-for-different-accounts-4.PNG)

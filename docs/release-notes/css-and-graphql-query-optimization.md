@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/css-and-graphql-query-optimization-0.png)
 
 It's what I always say: If it contains performance improvements, then we can call it a good VTEX IO Release Notes! Glad to say that our team has worked really hard on CSS and GraphQL query optimizations and that these are already natively enabled in your store.
 

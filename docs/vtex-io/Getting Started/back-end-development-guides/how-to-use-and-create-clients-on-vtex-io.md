@@ -16,7 +16,7 @@ Clients, on VTEX IO, are **abstractions to other services**. We tackle complexi
 - Native metrics support
 - Retry and timeout options
 - Billing tracking *(you can easily charge who uses your app)*
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/back-end-development-guides/2e85738-clients.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-use-and-create-clients-on-vtex-io-0.png)
 Before talking about *how we create clients*, let’s *recap* how we use them. If you are familiar with IO services, you already know that your implementation **exports functions** that receive a ***context*** object. These functions can be a **resolver function to a GraphQL field**, a **middleware to an HTTP server** or an **event handler**, and, in all of them, you receive a `ctx`*(or however you wanna call it)* object of type `[Context](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts)`, and it is inside of `ctx.clients` where you’ll find each client.
 
 [block:code]
@@ -61,7 +61,7 @@ After finding the *base* client you are looking for, you need to implement a **T
 Let’s take a look on the anatomy of an *ExternalClient* to the *Github API*:
 
 `node/clients/github.ts`
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/back-end-development-guides/fadfbf9-client.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-use-and-create-clients-on-vtex-io-1.png)
 **Reference** 
 
 1. Look, it’s one of the types from the **table above**.

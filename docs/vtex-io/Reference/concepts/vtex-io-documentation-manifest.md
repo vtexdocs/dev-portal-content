@@ -168,7 +168,7 @@ For example, on the `vtex.wordpress-integration` app, the following `settingsSch
 
 will generate the following form once that app is installed:
 
-![settingsschema](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/concepts/92953164-a5c8cb80-f437-11ea-87ba-0458b68ed0c9_170.png)
+![settingsschema](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-manifest-0.png)
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 

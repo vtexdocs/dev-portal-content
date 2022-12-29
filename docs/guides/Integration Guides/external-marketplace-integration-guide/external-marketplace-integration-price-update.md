@@ -44,10 +44,10 @@ Whenever the seller updates a  product or SKU in VTEX, a notification will be se
 
 The price update flow begins when the connector receives a VTEX Catalog notification, indicating that changes have been made to the SKU or product. Besides the notification mechanism, we recommend using an independent  inventory update mechanism, so stocks are always updated. Diagram 1 illustrates the information flow used to keep prices of seller’s SKUs updated in the marketplace integration.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/115b895-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1_48.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-price-update-0.jpg)
 Diagram 2 illustrates how the price update occurs in the integration
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/34d82b3-MarketplaceConnections_Docs_-_Integration_through_notification-1_51.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-price-update-1.jpg)
 Follow the steps below to maintain prices updated in the marketplace integration:
 
 1. Connector validates the VTEX &lt;> Marketplace authentication. In case it has expired, perform the update routine defined in the marketplace’s documentation. Otherwise, connectors should log the error AND put the VTEX notification in a contingency queue.
@@ -92,7 +92,7 @@ To avoid processing gaps due to the big volume of information of the initial loa
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/47367c6-Marketplace_Docs_-_API_Ref_95.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-price-update-2.jpg)
 
 [block:callout]
 {

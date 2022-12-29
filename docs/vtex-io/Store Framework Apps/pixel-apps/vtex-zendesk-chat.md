@@ -16,7 +16,7 @@ Now, open the app settings on your admin and fill in your Zendesk Chat's Account
 
 You can find your Account Key going to Settings > Widget
 
-![](account-key.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/account-key.png)
 
 The key in this case would be:
 > xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx

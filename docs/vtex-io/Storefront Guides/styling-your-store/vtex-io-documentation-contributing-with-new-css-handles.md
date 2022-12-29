@@ -29,7 +29,7 @@ In the step by step below, we will guide you on how to **create new CSS Handle w
 3. Change the tab opened in Chrome Dev Tools to the `Components` tab;
 4. You will then be able to read the name of the highlighted React component. In our example, it's `CategoryItem`:
 
-![React Component name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/styling-your-store/74465583-6e2f7c00-4e74-11ea-8791-c15681b73917_31.png)
+![React Component name](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-contributing-with-new-css-handles-0.png)
 
 ### Step 2 - Forking the app's repository
 

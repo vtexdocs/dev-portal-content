@@ -14,7 +14,7 @@ updatedAt: "2022-09-15T18:56:45.172Z"
 [/block]
 When making a search on VTEX, there are different possibilities of URLs. The URLs of Departments and Categories are made up as follows:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Search/69c7883-Screenshot_2022-09-12_at_18-02-09_Categories_17.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-search-parameters-work-0.png)
 In the categories tree above, the links are as follows:
 
 - `www.store.com/clothes`
@@ -22,7 +22,7 @@ In the categories tree above, the links are as follows:
 - `www.store.com/clothes/women/shirts`
 
 The URL will always be made up with the term entered in the search field:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Search/410a80e-Screenshot_2022-09-12_at_18-10-39_https___lojadobreno.myvtex.com_25.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-search-parameters-work-1.png)
 `www.store.com/shoes`
 
 The browsing filters also have specific URLs that are defined by certain parameters in the URL. These parameters are as follows:
@@ -43,7 +43,7 @@ The browsing filters also have specific URLs that are defined by certain paramet
 Where:
 
 - **C:\[DepartmentId/CategoryId/SubcategoryId]**: shows products of a specific category, according to the IDs informed for the department, category, and subcategory. This code appears next to category names on **Products**>**Catalog**>**Categories**.
-  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Search/3e2c755-Group_11_45.png)
+  ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-search-parameters-work-2.png)
 
 [block:callout]
 {
@@ -53,9 +53,9 @@ Where:
 [/block]
 
 - **B:[BrandId]:** shows products of a specific brand, according to the ID informed. This code is shown at the end of the URL, on the page used for changing the brand, in **Products**>**Catalog**>**Brands**.
-  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Search/58ac2e5-Group_2_54.png)
+  ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-search-parameters-work-3.png)
 - **H:[CollectionId]**: shows products of a specific collection, according to the ID informed. This code is informed in collection editing, in **Store setup**>**CMS**>**Layout**>**CMS**>**Product Clusters (Collections)**.
-  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Search/da99f6b-Group_21_56.png)
+  ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-search-parameters-work-4.png)
 
 [block:callout]
 {

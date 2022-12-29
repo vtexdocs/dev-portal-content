@@ -56,7 +56,7 @@ What you can do is **control the max number of most visited URLs that your site 
 3. Select the Store Indexer;
 4. In the Setup section, fill out the following field with the desired value `Number of search URLs to be indexed`;
 
-![store-indexer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/managing-seo/78806539-2ec76c80-7999-11ea-81cb-5286e0444410_58.png)
+![store-indexer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-understanding-how-store-url-indexing-works-0.png)
 
 5. Save the configurations.
 

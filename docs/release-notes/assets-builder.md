@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![App Development](https://img.shields.io/badge/-App%20Development-blue)
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assets-builder-0.png)
 
 The Assets Builder now supports assets whose URLs are built using markdown.
 

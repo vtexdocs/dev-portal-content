@@ -21,7 +21,7 @@ In the **UI display** column below, you can see how the element you can hide is 
     "h-2": "UI display",
     "0-0": "`customer-anonymous-container`",
     "0-1": "The ID selector you can use to style the `Continue as anonymous` button. This button enables you to place an order on inStore without identifying the customer.",
-    "0-2": "![continue-as-anonymous](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/dccab06-image1_24.png)"
+    "0-2": "![continue-as-anonymous](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/hide-anonymous-customer-option-0.png)"
   },
   "cols": 3,
   "rows": 1

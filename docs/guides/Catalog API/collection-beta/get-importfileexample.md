@@ -8,4 +8,4 @@ updatedAt: "2022-05-20T22:23:44.301Z"
 ---
 ## Response file example
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Catalog%20API/collection-beta/3123eb3-Screenshot_2020-12-22_collection_template_xls_11.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/get-importfileexample-0.png)

@@ -9,7 +9,7 @@ updatedAt: "2022-08-18T13:26:16.005Z"
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/functional-apps/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
@@ -136,7 +136,7 @@ Below you can see and example of this:
 
 Using the configuration above, the end result would look like this:
 
-![image](https://user-images.githubusercontent.com/8519076/136956522-eb7fab05-66dd-4356-9fe2-62d857e32341.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexbr-pickup-selector-0.png)
 
 
 ## Blocks

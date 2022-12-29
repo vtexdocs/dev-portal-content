@@ -67,4 +67,4 @@ To consult the verification, you need to:
 
 Here is a [consult example using the VTEX domain](https://www.digwebinterface.com/?hostnames=vtex.com&type=TXT&ns=resolver&useresolver=8.8.4.4&nameservers=):
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/api-guides/c9a066c-Screenshot_2021-05-19_Boas_prticas_de_SPF_Sender_Policy_Framework_73.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/setting-up-the-spf-0.png)

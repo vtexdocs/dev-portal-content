@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/slider-layouts-slide-navigation-0.png)
 
 The [Slider Layout app](https://vtex.io/docs/components/all/vtex.slider-layout/) has gone through fundamental changes in order to improve its usability and therefore the user experience on it.
 

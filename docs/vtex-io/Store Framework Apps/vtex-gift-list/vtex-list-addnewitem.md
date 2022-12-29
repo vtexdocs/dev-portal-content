@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.226Z"
 ---
 The `add-new-item` block displays a button to direct the list owner to the search page for adding new items to their list.
 
-![addNewItem](https://user-images.githubusercontent.com/67066494/190399924-dda34a9d-dc23-4e90-b3d8-e1a1105696f1.gif)
+![addNewItem](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-addnewitem-0.gif)
 
 ## Configuration
 

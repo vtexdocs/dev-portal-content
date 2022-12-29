@@ -14,4 +14,4 @@ Access: https://{workspace}--{account}.myvtex.com/_v/private/assets/v1/linked/{a
 Access: https://{workspace}--{account}.myvtex.com/_v/public/assets/v1/published/{app}@{version}/public/react/[prod|dev]Report.html
 
 Here is an example of the result:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/b80fe93-bundle.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-check-an-apps-bundle-size-on-vtex-io-0.png)

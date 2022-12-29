@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-endpoints-on-marketplace-api-0.png)
 
 We added two new endpoints to the Marketplace APIs:
 

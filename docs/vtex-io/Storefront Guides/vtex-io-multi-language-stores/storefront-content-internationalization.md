@@ -26,7 +26,7 @@ Follow this step by step if you aim to translate text messages exported from an 
 
 2. Access the **GraphQL admin IDE** section of the desired account. You may find it in the admin's side-bar menu:
 
-![overwriting-messages-adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5_28.png)
+![overwriting-messages-adminsidebarmenu](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/storefront-content-internationalization-0.png)
 
 3. From the dropdown list, choose the `vtex.messages` app.
 4. Write the following mutation command in the text box that is displayed:
@@ -42,7 +42,7 @@ Follow this step by step if you aim to translate text messages exported from an 
 [/block]
 5. Then, click on  *Query Variables* at the bottom of the page. Now, your screen may look like the following:
 
-![queryvariables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/85610649-8e92f280-b62d-11ea-9a5e-aa7ced1a1549_44.png)
+![queryvariables](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/storefront-content-internationalization-1.png)
 
 6. To fill in the *Query Variables* box, you must provide the following parameters:
 
@@ -88,7 +88,7 @@ Now, no further actions are needed on your part. Once you receive the expected r
 
 To better understand the full process of overwriting an app message translation, check the following gif:
 
-![AppMessageTranslation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/85605881-fbf05480-b628-11ea-8ea9-1dbf364f07fd_91.gif)
+![AppMessageTranslation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/storefront-content-internationalization-2.gif)
 
 ## Checking your changes
 

@@ -47,11 +47,11 @@ After step 4 , a GitHub repository will be automatically created and a Pull Requ
 
 > ℹ️ You'll be added to the repository with your GitHub handle and will have read-only permissions to be able to follow your app's review process. Comments can be followed in the same repository and after performing adjustments, any new app version can be submitted following the step 2 above, thereby creating a new `branch` containing the new version in the same repository.
 
-![submitting-github-terminal](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/92964915-483e7a00-f44b-11ea-8bbf-f8f4e8c4da32_49.png)
+![submitting-github-terminal](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store-0.png)
 
 When a branch has the adjustments it needs, you should open a *Pull Request* to the VTEX team.
 
-![submitting-github-pr](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/vtex-app-store/92964912-470d4d00-f44b-11ea-8c2b-e09a13093da6_53.png)
+![submitting-github-pr](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store-1.png)
 
 ### Step 3 - Waiting for the app homologation
 

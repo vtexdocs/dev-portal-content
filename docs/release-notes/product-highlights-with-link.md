@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-highlights-with-link-0.png)
 
 It is now possible to add a link to the Product Highlight's string text thanks to the new `link` prop of the `product-highlight-text` block.
 

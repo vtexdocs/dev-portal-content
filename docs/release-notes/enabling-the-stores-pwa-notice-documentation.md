@@ -6,7 +6,7 @@ hidden: false
 type: "removed"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enabling-the-stores-pwa-notice-documentation-0.png)
 
 The documentation for [Enabling the store's PWA notice](https://help.vtex.com/en/tutorial/enabling-pwa-push-notifications-in-your-store--1be3ZPhbsgZSbE7h5H46pG?&utm_source=autocomplete) has been updated, and now it is available in [VTEX Help Center](https://help.vtex.com/).
 

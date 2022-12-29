@@ -8,13 +8,13 @@ updatedAt: "2022-02-04T15:02:40.482Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The Product Highlights app provides blocks to display highlight badges on products according to the collection or promotion they are linked to.
 
-![Product Highlights Example](https://user-images.githubusercontent.com/284515/92048986-7216e300-ed5f-11ea-86d4-abf535227ef1.png)
+![Product Highlights Example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-highlights-0.png)
 _In the image above, the product has a `Top Seller` highlight._
 
 ## Configuration
@@ -191,7 +191,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/igor-becker-73b7901a3/"><img src="https://avatars.githubusercontent.com/u/57180581?v=4?s=100" width="100px;" alt=""/><br /><sub><b>proudynyu</b></sub></a><br /><a href="https://github.com/vtex-apps/product-highlights/commits?author=proudynyu" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/igor-becker-73b7901a3/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-highlights-1.png">💻</a></td>
   </tr>
 </table>
 

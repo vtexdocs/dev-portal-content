@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.376Z"
 ---
 The `shipping-simulator` block estimates the shipping fee based on a zip code input.
 
-![shipping](https://user-images.githubusercontent.com/52087100/70262606-6ddb7c00-1773-11ea-91af-ededfd27aa95.png)
+![shipping](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-shippingsimulator-0.png)
 
 ## Configuration
 

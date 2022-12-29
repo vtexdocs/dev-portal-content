@@ -7,7 +7,7 @@ createdAt: "2020-06-03T15:19:18.052Z"
 updatedAt: "2022-05-02T08:51:37.588Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/layout-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Sticky Layout app provides layout structures to help building elements that should be fixed relative to the viewport in certain contexts.

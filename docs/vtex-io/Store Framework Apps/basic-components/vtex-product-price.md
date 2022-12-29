@@ -7,12 +7,12 @@ createdAt: "2020-06-03T15:19:16.935Z"
 updatedAt: "2022-06-22T16:04:48.125Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Product Price app is responsible for exporting blocks related to the product's price, such as list price, selling price and savings.
 
-![image](https://user-images.githubusercontent.com/8443580/77692675-d5694180-6f85-11ea-8690-49db5be24b3d.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-0.png)
 
 > ℹ️ Currently, **the Product Price is the only app responsible for providing product price blocks for your theme**. Both [Product Summary Price](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-price/) and [Product Price](https://vtex.io/docs/components/all/vtex.store-components/product-price/) blocks, respectively from [Product Summary](https://vtex.io/docs/components/all/vtex.product-summary/) and [Store Components](https://vtex.io/docs/components/all/vtex.store-components/) apps, were deprecated and therefore will no longer be evolved.
 
@@ -168,7 +168,7 @@ For example:
 }
 ```
 
-![9SOSUdfAVa](https://user-images.githubusercontent.com/40380674/97020006-69ed4f80-1527-11eb-8165-ff12389c7c81.gif)
+![9SOSUdfAVa](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-1.gif)
 
 ### Step 3 - Editing the block's messages
 
@@ -180,7 +180,7 @@ It is possible, however, to define which message texts a block will render on th
 
 The `markers` prop, in turn, needs an extra configuration in the admin's Site Editor to properly work. When using it, do not forget to access the [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message/) documentation. 
 
-![Product-Price-Site-Editor-gif](https://user-images.githubusercontent.com/52087100/78073694-bdbffd80-7377-11ea-9262-40854dccdd53.gif)
+![Product-Price-Site-Editor-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-2.gif)
 
 In addition to that, keep in mind the message variables for each block since you will need them to edit the desired messages using the admin's Site Editor:
 
@@ -306,7 +306,7 @@ Still, according to the example, products that don't have a measurement unit and
 
 In the gif example above, the block was firstly displaying a `Save $224.40` message. By editing the message exported, it now renders a `You are saving: $224.40 (37%)` message thanks to the changes performed through the admin's Site Editor:
 
-![product-price-edited-img](https://user-images.githubusercontent.com/52087100/78073688-bc8ed080-7377-11ea-9a7a-53c36d9a9fe2.png)
+![product-price-edited-img](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-3.png)
 
 ## Customization
 
@@ -379,10 +379,10 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://avatars.githubusercontent.com/u/71461884?v=4?s=100" width="100px;" alt=""/><br /><sub><b>razvanudream</b></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=razvanudream" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://avatars.githubusercontent.com/u/43498488?v=4?s=100" width="100px;" alt=""/><br /><sub><b>khrizzcristian</b></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=khrizzcristian" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Git-the-Sanz"><img src="https://avatars.githubusercontent.com/u/50715158?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sanz</b></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=Git-the-Sanz" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/renan-guerra-ba91aa17b/"><img src="https://avatars.githubusercontent.com/u/69531548?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Renan Guerra</b></sub></a><br /><a href="https://github.com/vtex-apps/product-price/commits?author=renanguerraa1" title="Code">💻</a></td>
+    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-4.png">💻</a></td>
+    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-5.png">💻</a></td>
+    <td align="center"><a href="https://github.com/Git-the-Sanz"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-6.png">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/renan-guerra-ba91aa17b/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-7.png">💻</a></td>
   </tr>
 </table>
 

@@ -34,25 +34,25 @@ The order flow describes the status, possibilities, and actions throughout the l
 
 The order flow visible to the store responsible for the sale only.
 
-![](https://images.ctfassets.net/alneenqid6w5/4w02G7dndER0WfrNyU2VUi/d514ea4a32df67fa857f7de2cc26f365/Flowchart_-_Marketplace_-_EN.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/orders-overview-0.jpg)
 
 ### Seller flow
 
 The order flow visible to the store responsible for handling the order.
 
-![](https://drive.google.com/uc?export=download&id=1gOeB2zd5otwmUUDAz93dhRiBB4jgawS2)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/orders-overview-1.png)
 
 ### Complete flow
 
 The order flow visible to the store responsible for the order's sale and delivery. In this case, the store acts both as a seller and marketplace.
 
-![](https://drive.google.com/uc?export=download&id=1jMdPHbgPO0a6wnMHk8YAXt5YLkDGJebd)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/orders-overview-2.png)
 
 ### Chain flow
 
 The order flow visible to the store that acts as an intermediary between the marketplace and the seller. This flow is similar to the marketplace flow. However, the payment is made only in the marketplace, not in the store that acts as a chain. This flow occurs in [Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) sales scenarios.
 
-![](https://drive.google.com/uc?export=download&id=17m0OPmHt_tLkr0JcqxKPANaW1LiJaMbW)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/orders-overview-3.png)
 
 ## Creating an order integration
 

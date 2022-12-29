@@ -6,7 +6,7 @@ hidden: true
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/facebook-domain-verification-app-1-0.png)
 
 The Facebook Domain Verification adds to your homepage's `<head>` section a meta-tag containing the Facebook verification code, which is used by Facebook for checking your website accountability.
 

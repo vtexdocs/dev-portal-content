@@ -8,7 +8,7 @@ updatedAt: "2021-07-16T16:19:13.912Z"
 ---
 The Locale Switcher app provides a component capable of changing the current language of your store.
 
-![img-locale-switcher](https://user-images.githubusercontent.com/27777263/74359290-c2b5f700-4da1-11ea-8612-c05ccf1988d5.png)
+![img-locale-switcher](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-locale-switcher-0.png)
 
 ## Configuration
 

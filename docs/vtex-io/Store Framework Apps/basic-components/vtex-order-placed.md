@@ -255,7 +255,7 @@ Renders the confirmation icon.
 
 | Default appearance                                         |
 | ---------------------------------------------------------- |
-| ![op-confirmation-icon](https://user-images.githubusercontent.com/17712401/89224372-c38c5080-d5ae-11ea-8112-9870c854e5a2.png) |
+| ![op-confirmation-icon](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-0.png) |
 
 ### `op-confirmation-title`
 
@@ -273,7 +273,7 @@ Renders the confirmation title.
 
 | Default appearance                                           |
 | ------------------------------------------------------------ |
-| ![op-confirmation-title](https://user-images.githubusercontent.com/17712401/89224442-df8ff200-d5ae-11ea-824a-25d7530249dd.png) |
+| ![op-confirmation-title](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-1.png) |
 
 ### `op-confirmation-message`
 
@@ -291,7 +291,7 @@ Renders the confirmation message, containing the clients email.
 
 | Default appearance                                               |
 | ---------------------------------------------------------------- |
-| ![op-confirmation-message](https://user-images.githubusercontent.com/17712401/89224480-f0406800-d5ae-11ea-8602-0cb9541b0459.png) |
+| ![op-confirmation-message](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-2.png) |
 
 ### `op-print-button`
 
@@ -305,7 +305,7 @@ Renders a button that triggers a full page print.
 
 | Default appearance                 |
 | ---------------------------------- |
-| ![op-print](https://user-images.githubusercontent.com/17712401/89224547-0817ec00-d5af-11ea-9b6a-9ae33a89daef.png) |
+| ![op-print](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-3.png) |
 
 ### `op-notices`
 
@@ -324,7 +324,7 @@ Renders a list of important informations relevant to the currently placed order.
 
 | Default appearance                     |
 | -------------------------------------- |
-| ![op-notices](https://user-images.githubusercontent.com/17712401/89224594-16fe9e80-d5af-11ea-9c3e-4cfddcf76a4c.png) |
+| ![op-notices](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-4.png) |
 
 ### `op-summary-section`
 
@@ -352,7 +352,7 @@ If a placed order is split between delivery and pickup, renders a summary of all
 
 | Default appearance                                     |
 | ------------------------------------------------------ |
-| ![op-summary-section](https://user-images.githubusercontent.com/17712401/89224626-267de780-d5af-11ea-80c1-7771c6dae670.png) |
+| ![op-summary-section](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-5.png) |
 
 ### `op-bank-invoice-section`
 
@@ -376,7 +376,7 @@ Renders the bank invoice section if payment method chosen was bank invoice.
 
 | Default appearance                                               |
 | ---------------------------------------------------------------- |
-| ![op-bank-invoice-section](https://user-images.githubusercontent.com/17712401/89224654-3695c700-d5af-11ea-9b17-98c68450370d.png) |
+| ![op-bank-invoice-section](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-6.png) |
 
 ### `op-order`
 
@@ -409,7 +409,7 @@ Renders the order id number. Must be placed inside an [`op-order`](#op-order) bl
 
 | Default appearance                               |
 | ------------------------------------------------ |
-| ![op-order-number](https://user-images.githubusercontent.com/17712401/89224695-4c0af100-d5af-11ea-866e-bea733073346.png) |
+| ![op-order-number](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-7.png) |
 
 ### `op-order-datetime`
 
@@ -427,7 +427,7 @@ Renders the date and time an order was placed. Must be placed inside an [`op-ord
 
 | Default appearance                                   |
 | ---------------------------------------------------- |
-| ![op-order-datetime](https://user-images.githubusercontent.com/17712401/89224728-5a590d00-d5af-11ea-8901-7654c543d9e9.png) |
+| ![op-order-datetime](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-8.png) |
 
 ### `op-order-seller`
 
@@ -446,7 +446,7 @@ Renders the seller of an order. Must be placed inside an [`op-order`](#op-order)
 
 | Default appearance                               |
 | ------------------------------------------------ |
-| ![op-order-seller](https://user-images.githubusercontent.com/17712401/89224779-765cae80-d5af-11ea-9320-29902e7f47dd.png) |
+| ![op-order-seller](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-9.png) |
 
 ### `op-order-split-notice`
 
@@ -464,7 +464,7 @@ Renders a message with the number of packages of an order if the order was split
 
 | Default appearance                                           |
 | ------------------------------------------------------------ |
-| ![op-order-split-notice](https://user-images.githubusercontent.com/17712401/89224825-88d6e800-d5af-11ea-8801-7f2d5267da5b.png) |
+| ![op-order-split-notice](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-10.png) |
 
 ### `op-order-customer`
 
@@ -478,7 +478,7 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 
 | Default appearance                                   |
 | ---------------------------------------------------- |
-| ![op-order-customer](https://user-images.githubusercontent.com/17712401/89224880-a015d580-d5af-11ea-8314-bc223b3da0aa.png) |
+| ![op-order-customer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-11.png) |
 
 ### `op-order-options`
 
@@ -501,7 +501,7 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 
 | Default appearance                                 |
 | -------------------------------------------------- |
-| ![op-order-options](https://user-images.githubusercontent.com/17712401/89224923-b754c300-d5af-11ea-8b28-0efa82329e96.png) |
+| ![op-order-options](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-12.png) |
 
 ### `op-order-payment`
 
@@ -518,7 +518,7 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 
 | Default appearance                                 |
 | -------------------------------------------------- |
-| ![op-order-payment](https://user-images.githubusercontent.com/17712401/89225037-eec36f80-d5af-11ea-82af-267cb69c7d7b.png) |
+| ![op-order-payment](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-13.png) |
 
 ### `op-order-delivery-packages`
 
@@ -560,7 +560,7 @@ Renders an order delivery packages information and product list. Must be placed 
 
 | Default appearance                                                     |
 | ---------------------------------------------------------------------- |
-| ![op-order-delivery-packages](https://user-images.githubusercontent.com/17712401/89225054-f8e56e00-d5af-11ea-9c0a-b2cc37fe34f4.png) |
+| ![op-order-delivery-packages](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-14.png) |
 
 ### `op-order-pickup-packages`
 
@@ -583,7 +583,7 @@ _Note: Include the same CSS handles as [`op-order-delivery-packages`](#op-order-
 
 | Default appearance                                                 |
 | ------------------------------------------------------------------ |
-| ![op-order-pickup-packages](https://user-images.githubusercontent.com/17712401/89225074-03076c80-d5b0-11ea-840e-69998a41ec9d.png) |
+| ![op-order-pickup-packages](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-15.png) |
 
 ### `op-order-total`
 
@@ -603,7 +603,7 @@ Renders an order delivery packages information and product list. Must be placed 
 
 | Default appearance                             |
 | ---------------------------------------------- |
-| ![op-order-total](https://user-images.githubusercontent.com/17712401/89225092-0b5fa780-d5b0-11ea-976e-da3c64453eff.png) |
+| ![op-order-total](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-16.png) |
 
 ## API
 
@@ -735,9 +735,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://avatars1.githubusercontent.com/u/49173685?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gustavopvasconcellos</b></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=gustavopvasconcellos" title="Code">💻</a></td>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://avatars.githubusercontent.com/u/71461884?v=4?s=100" width="100px;" alt=""/><br /><sub><b>razvanudream</b></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=razvanudream" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/claudiu-iviteb"><img src="https://avatars.githubusercontent.com/u/73105476?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Claudiu Ionita</b></sub></a><br /><a href="https://github.com/vtex-apps/order-placed/commits?author=claudiu-iviteb" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-17.png">💻</a></td>
+    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-18.png">💻</a></td>
+    <td align="center"><a href="https://github.com/claudiu-iviteb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-19.png">💻</a></td>
   </tr>
 </table>
 

@@ -9,13 +9,13 @@ updatedAt: "2022-12-13T20:17:44.730Z"
 
 By default, the [SKU selector](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-skuselector) component uses **thumbnail images of SKU** when rendered.
 
-![sku-selector-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/68624704-30f2d100-04b6-11ea-852b-df2dd140a09c_11.png)
+![sku-selector-images](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-0.png)
 
 These images that the component uses are taken from the SKU's previously given information in admin's Catalog.
 
 However, you can configure the SKU selector to display a **custom image**, meaning an image different than the default one used by the SKU. For example:
 
-![sku-selector-image-custom](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/68700719-20992f80-0564-11ea-955a-d65c5a5808be_17.png)
+![sku-selector-image-custom](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-1.png)
 
 Follow the step-by-step below to see how to apply this configuration in your store.
 
@@ -25,7 +25,7 @@ Follow the step-by-step below to see how to apply this configuration in your sto
 2. Select the desired SKU and access the Images tab.
 3. Upload the desired custom image, by clicking on **Insert**.
 
-![configuring-sku-selector-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/68624506-bde95a80-04b5-11ea-8d2a-4f30aa44860a_27.png)
+![configuring-sku-selector-images](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-2.png)
 
 4. Upload the file in the `File` field and set an ID for the recently uploaded file in the `Label` field. Click on **Save** after performing all your changes.
 5. In your theme's code `sku-selector` block, add the `thumbnailImage` prop, whose past value should be the same as the label added in the catalog. For example:
@@ -65,7 +65,7 @@ Consequently, you'll be able to configure a customized image exclusively for you
 
 Once you have configured the [custom images](###step-by-step), you should set a specific name to display the SKU color variations.
 
-![color-variation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/137754578-fb668c73-1eab-4440-a328-76556616d036_67.png)
+![color-variation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-3.png)
 
 Follow the next step-by-step on how to configure the SKU color variations.
 
@@ -74,6 +74,6 @@ Follow the next step-by-step on how to configure the SKU color variations.
 3. Choose the desired categorie and in `ACTIONS` click on **Field(SKU)**
 4. In **Field** click in the group's `Edit` and in the fields **Name** and **Text** complete with a color variation name which you can check the values in the [SKU Selector component](https://github.com/vtex-apps/store-components/blob/e130859a02e5c5d5e9deb9494bde9cfb6a0babc2/react/components/SKUSelector/utils/index.ts#L50-L72). For example:
 
-![color-name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/137756255-4eee1339-e51f-4861-a7fa-72b1f684ed7c_76.png)
+![color-name](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-4.png)
 
 5. Click on `Save` to make your changes available on SKU with thumbnail images.

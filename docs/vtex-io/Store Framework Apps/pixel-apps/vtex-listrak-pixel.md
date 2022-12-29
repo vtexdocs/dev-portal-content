@@ -82,7 +82,7 @@ Example - Listrak provides sample template code that looks like this:
 >
   <script type="text/html">
     <div style="box-sizing:border-box; vertical-align:top; display:inline-block; width:25%; padding:20px;">
-        <a href="@Recommendation.LinkUrl"><img src="@Recommendation.ImageUrl" title="@Recommendation.Title" style="display:block; width:auto; height: 100%; max-height:200px; margin:auto;"/></a>
+        <a href="@Recommendation.LinkUrl"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/@Recommendation.ImageUrl" title="@Recommendation.Title" style="display:block; width:auto; height: 100%; max-height:200px; margin:auto;"/></a>
         <a href="@Recommendation.LinkUrl" title="@Recommendation.Title" style="display:block; width:100%; font-family:Segoe UI,Roboto,Helvetica Neue,sans-serif; font-size: 15px; font-weight: 500; color:#333;text-decoration:none; text-align:center; padding-top:8px;">@Recommendation.Title</a>
         <a href="@Recommendation.LinkUrl" title="@Recommendation.Title" style="display:block; width:100%; font-family:Segoe UI,Roboto,Helvetica Neue,sans-serif; font-size: 13px; font-weight: 700; color:#d43e3e; text-decoration:none; text-align:center; padding-top:8px;">$@Recommendation.Price</a>
     </div>

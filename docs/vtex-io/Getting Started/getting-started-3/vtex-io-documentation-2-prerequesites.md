@@ -63,7 +63,7 @@ After installing the Search apps, you will need to start indexing and integrate 
 2. In the side menu, go to *Store Setup > Search > [Integration settings](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V)*.
 3. Press the *Start integration* button to start integration.
 
-![start-integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Getting%20Started/getting-started-3/102246861-fab82a00-3edd-11eb-8115-8ecdf892262c_65.png)
+![start-integration](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-2-prerequesites-0.png)
 
 The indexing process will start, and you will then see a link to the Indexing Status screen.
 

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/drawer-overlay-customization-css-handles-0.png)
 
 The Drawer app has gained two new CSS Handles, namely `overlay` and `overlay--visible`, responsible for allowing retailers to customize the overlay structure used by the mobile component.
 

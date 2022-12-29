@@ -13,7 +13,7 @@ For example, suppose you want to update your store's landing page. To confirm th
 
 To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/vtex-developer-docs/docs/vtexarg-abtester). For more information, please refer to the following sections.
 
-![ab-testing](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/ab-tests/64129197-21a62780-cd91-11e9-86f9-1ec8a3d2e2c8_15.png)
+![ab-testing](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-running-native-ab-testing-0.png)
 
 ## Running A/B tests via the Admin
 
@@ -80,7 +80,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
   vtex workspace abtest start
   ```
 
-![ab-testing-step4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/ab-tests/64129583-50bd9880-cd93-11e9-8b80-f1fe4cad943b_82.png)
+![ab-testing-step4](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-running-native-ab-testing-1.png)
 
 7. Select the production workspace you want to use for comparison with the master and agree to proceed.
 
@@ -107,7 +107,7 @@ Any time during the A/B test, you can run the following command to check the liv
 vtex workspace abtest status
 ```
 
-![ab-testing-step5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/ab-tests/64129599-69c64980-cd93-11e9-85fd-575665fbf532_109.png)
+![ab-testing-step5](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-running-native-ab-testing-2.png)
 
 If desired, you can still update the workspaces being used in the A/B test. However, notice that the fewer changes made to these workspaces, the more accurate your results will be.
 
@@ -145,6 +145,6 @@ vtex workspace abtest finish
 
 When running the command, a list of all workspaces being tested by the `vtex.ab-tester` app in Master will show up. Select the one which should end. For example:
 
-![ab-testing-step6](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/App%20Guides/ab-tests/64129622-a7c36d80-cd93-11e9-9b77-9a0bae552439_147.png)
+![ab-testing-step6](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-running-native-ab-testing-3.png)
 
 > ⚠️ Note that you will only end the test on the selected workspace. **It will not promote any workspace to master**. You must do that by yourself to make the new configurations public for all users.

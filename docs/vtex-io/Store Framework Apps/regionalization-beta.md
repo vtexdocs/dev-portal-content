@@ -9,7 +9,7 @@ updatedAt: "2021-10-25T20:15:31.016Z"
 
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
@@ -24,7 +24,7 @@ Regionalization is a feature of [VTEX Intelligent Search](https://help.vtex.com/
 
 For the Regionalization to work, it uses a native behavior from the VTEX Intelligent Search called [Availability](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/7LMQbWK5nElIkXo0NK8Kux). The platform searches for available products according to the stock in a given region. In a Availability paradigm, the platform also checks the sellers registered in the store for their stocks.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/2e4db3d-ezgif-7-2366e318d81c.gif)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/regionalization-beta-0.gif)
 
 ## Configuration
 

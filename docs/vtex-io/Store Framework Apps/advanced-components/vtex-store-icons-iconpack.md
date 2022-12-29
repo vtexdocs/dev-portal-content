@@ -62,89 +62,89 @@ We use a series of prefixes to help us understand what an specific icon means.
 
 | Icon                                    | ID                         |
 | --------------------------------------- | -------------------------- |
-| ![](./bnd-logo.svg)  | bnd-logo | 
-| ![](./mpa-expand.svg)  | mpa-expand | 
-| ![](./hpa-arrow-back.svg)  | hpa-arrow-back | 
-| ![](./hpa-arrow-from-bottom.svg)  | hpa-arrow-from-bottom | 
-| ![](./hpa-arrow-to-bottom.svg)  | hpa-arrow-to-bottom | 
-| ![](./hpa-calendar.svg)  | hpa-calendar | 
-| ![](./hpa-cart.svg)  | hpa-cart | 
-| ![](./hpa-delete.svg)  | hpa-delete | 
-| ![](./hpa-hamburguer-menu.svg)  | hpa-hamburguer-menu | 
-| ![](./hpa-location-marker.svg)  | hpa-location-marker | 
-| ![](./hpa-play.svg)  | hpa-play | 
-| ![](./hpa-profile.svg)  | hpa-profile | 
-| ![](./hpa-save.svg)  | hpa-save | 
-| ![](./hpa-search.svg)  | hpa-search | 
-| ![](./hpa-telemarketing.svg)  | hpa-telemarketing | 
-| ![](./inf-help--filled.svg)  | inf-help--filled | 
-| ![](./inf-help--outline.svg)  | inf-help--outline | 
-| ![](./inf-star.svg)  | inf-star | 
-| ![](./inf-tooltip--filled.svg)  | inf-tooltip--filled | 
-| ![](./inf-tooltip--outline.svg)  | inf-tooltip--outline | 
-| ![](./inf-warning--filled.svg)  | inf-warning--filled | 
-| ![](./inf-warning--outline.svg)  | inf-warning--outline | 
-| ![](./mpa-angle--down.svg)  | mpa-angle--down | 
-| ![](./mpa-angle--up.svg)  | mpa-angle--up | 
-| ![](./mpa-arrows.svg)  | mpa-arrows | 
-| ![](./mpa-bag.svg)  | mpa-bag | 
-| ![](./mpa-bars.svg)  | mpa-bars | 
-| ![](./mpa-bookmark--filled.svg)  | mpa-bookmark--filled | 
-| ![](./mpa-bookmark--outline.svg)  | mpa-bookmark--outline | 
-| ![](./mpa-clone--filled.svg)  | mpa-clone--filled | 
-| ![](./mpa-clone--outline.svg)  | mpa-clone--outline | 
-| ![](./mpa-cog.svg)  | mpa-cog | 
-| ![](./mpa-columns.svg)  | mpa-columns | 
-| ![](./mpa-credit-card.svg)  | mpa-credit-card | 
-| ![](./mpa-edit--filled.svg)  | mpa-edit--filled | 
-| ![](./mpa-edit--outline.svg)  | mpa-edit--outline | 
-| ![](./mpa-elypsis.svg)  | mpa-elypsis | 
-| ![](./mpa-exchange.svg)  | mpa-exchange | 
-| ![](./mpa-export.svg)  | mpa-export | 
-| ![](./mpa-external-link--line.svg)  | mpa-external-link--line | 
-| ![](./mpa-external-link--outline.svg)  | mpa-external-link--outline | 
-| ![](./mpa-eyesight--filled--off.svg)  | mpa-eyesight--filled--off | 
-| ![](./mpa-eyesight--filled--on.svg)  | mpa-eyesight--filled--on | 
-| ![](./mpa-eyesight--outline--off.svg)  | mpa-eyesight--outline--off | 
-| ![](./mpa-eyesight--outline--on.svg)  | mpa-eyesight--outline--on | 
-| ![](./mpa-filter--filled.svg)  | mpa-filter--filled | 
-| ![](./mpa-filter--outline.svg)  | mpa-filter--outline | 
-| ![](./mpa-filter-settings.svg)  | mpa-filter-settings | 
-| ![](./mpa-gallery.svg)  | mpa-gallery | 
-| ![](./mpa-globe.svg)  | mpa-globe | 
-| ![](./mpa-heart.svg)  | mpa-heart | 
-| ![](./mpa-link.svg)  | mpa-link | 
-| ![](./mpa-list-items.svg)  | mpa-list-items | 
-| ![](./mpa-location-input.svg)  | mpa-location-input | 
-| ![](./mpa-minus--filled.svg)  | mpa-minus--filled | 
-| ![](./mpa-minus--line.svg)  | mpa-minus--line | 
-| ![](./mpa-minus--outline.svg)  | mpa-minus--outline | 
-| ![](./mpa-plus--filled.svg)  | mpa-plus--filled | 
-| ![](./mpa-plus--line.svg)  | mpa-plus--line | 
-| ![](./mpa-plus--outline.svg)  | mpa-plus--outline | 
-| ![](./mpa-remove.svg)  | mpa-remove | 
-| ![](./mpa-settings.svg)  | mpa-settings | 
-| ![](./mpa-single-item.svg)  | mpa-single-item | 
-| ![](./mpa-store.svg)  | mpa-store | 
-| ![](./mpa-swap.svg)  | mpa-swap | 
-| ![](./nav-arrow--left.svg)  | nav-arrow--left | 
-| ![](./nav-arrow--right.svg)  | nav-arrow--right | 
-| ![](./nav-caret--down.svg)  | nav-caret--down | 
-| ![](./nav-caret--left.svg)  | nav-caret--left | 
-| ![](./nav-caret--right.svg)  | nav-caret--right | 
-| ![](./nav-caret--up.svg)  | nav-caret--up | 
-| ![](./nav-home.svg)  | nav-home | 
-| ![](./nav-minus.svg)  | nav-minus | 
-| ![](./nav-plus.svg)  | nav-plus | 
-| ![](./nav-thin-caret--left.svg)  | nav-thin-caret--left | 
-| ![](./nav-thin-caret--right.svg)  | nav-thin-caret--right | 
-| ![](./sti-check--filled.svg)  | sti-check--filled | 
-| ![](./sti-check--line.svg)  | sti-check--line | 
-| ![](./sti-check--outline.svg)  | sti-check--outline | 
-| ![](./sti-clock.svg)  | sti-clock | 
-| ![](./sti-close--filled.svg)  | sti-close--filled | 
-| ![](./sti-close--line.svg)  | sti-close--line | 
-| ![](./sti-close--outline.svg)  | sti-close--outline | 
-| ![](./sti-discount.svg)  | sti-discount | 
-| ![](./sti-equals.svg)  | sti-equals | 
-| ![](./sti-loading.svg)  | sti-loading |
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/bnd-logo.svg)  | bnd-logo | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-expand.svg)  | mpa-expand | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-arrow-back.svg)  | hpa-arrow-back | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-arrow-from-bottom.svg)  | hpa-arrow-from-bottom | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-arrow-to-bottom.svg)  | hpa-arrow-to-bottom | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-calendar.svg)  | hpa-calendar | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-cart.svg)  | hpa-cart | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-delete.svg)  | hpa-delete | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-hamburguer-menu.svg)  | hpa-hamburguer-menu | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-location-marker.svg)  | hpa-location-marker | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-play.svg)  | hpa-play | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-profile.svg)  | hpa-profile | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-save.svg)  | hpa-save | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-search.svg)  | hpa-search | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/hpa-telemarketing.svg)  | hpa-telemarketing | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/inf-help--filled.svg)  | inf-help--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/inf-help--outline.svg)  | inf-help--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/inf-star.svg)  | inf-star | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/inf-tooltip--filled.svg)  | inf-tooltip--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/inf-tooltip--outline.svg)  | inf-tooltip--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/inf-warning--filled.svg)  | inf-warning--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/inf-warning--outline.svg)  | inf-warning--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-angle--down.svg)  | mpa-angle--down | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-angle--up.svg)  | mpa-angle--up | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-arrows.svg)  | mpa-arrows | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-bag.svg)  | mpa-bag | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-bars.svg)  | mpa-bars | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-bookmark--filled.svg)  | mpa-bookmark--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-bookmark--outline.svg)  | mpa-bookmark--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-clone--filled.svg)  | mpa-clone--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-clone--outline.svg)  | mpa-clone--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-cog.svg)  | mpa-cog | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-columns.svg)  | mpa-columns | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-credit-card.svg)  | mpa-credit-card | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-edit--filled.svg)  | mpa-edit--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-edit--outline.svg)  | mpa-edit--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-elypsis.svg)  | mpa-elypsis | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-exchange.svg)  | mpa-exchange | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-export.svg)  | mpa-export | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-external-link--line.svg)  | mpa-external-link--line | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-external-link--outline.svg)  | mpa-external-link--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-eyesight--filled--off.svg)  | mpa-eyesight--filled--off | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-eyesight--filled--on.svg)  | mpa-eyesight--filled--on | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-eyesight--outline--off.svg)  | mpa-eyesight--outline--off | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-eyesight--outline--on.svg)  | mpa-eyesight--outline--on | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-filter--filled.svg)  | mpa-filter--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-filter--outline.svg)  | mpa-filter--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-filter-settings.svg)  | mpa-filter-settings | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-gallery.svg)  | mpa-gallery | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-globe.svg)  | mpa-globe | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-heart.svg)  | mpa-heart | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-link.svg)  | mpa-link | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-list-items.svg)  | mpa-list-items | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-location-input.svg)  | mpa-location-input | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-minus--filled.svg)  | mpa-minus--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-minus--line.svg)  | mpa-minus--line | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-minus--outline.svg)  | mpa-minus--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-plus--filled.svg)  | mpa-plus--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-plus--line.svg)  | mpa-plus--line | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-plus--outline.svg)  | mpa-plus--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-remove.svg)  | mpa-remove | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-settings.svg)  | mpa-settings | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-single-item.svg)  | mpa-single-item | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-store.svg)  | mpa-store | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/mpa-swap.svg)  | mpa-swap | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-arrow--left.svg)  | nav-arrow--left | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-arrow--right.svg)  | nav-arrow--right | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-caret--down.svg)  | nav-caret--down | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-caret--left.svg)  | nav-caret--left | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-caret--right.svg)  | nav-caret--right | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-caret--up.svg)  | nav-caret--up | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-home.svg)  | nav-home | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-minus.svg)  | nav-minus | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-plus.svg)  | nav-plus | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-thin-caret--left.svg)  | nav-thin-caret--left | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/nav-thin-caret--right.svg)  | nav-thin-caret--right | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-check--filled.svg)  | sti-check--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-check--line.svg)  | sti-check--line | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-check--outline.svg)  | sti-check--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-clock.svg)  | sti-clock | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-close--filled.svg)  | sti-close--filled | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-close--line.svg)  | sti-close--line | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-close--outline.svg)  | sti-close--outline | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-discount.svg)  | sti-discount | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-equals.svg)  | sti-equals | 
+| ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/sti-loading.svg)  | sti-loading |

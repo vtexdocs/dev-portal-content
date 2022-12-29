@@ -7,12 +7,12 @@ createdAt: "2020-06-03T15:19:30.918Z"
 updatedAt: "2022-04-11T08:02:58.274Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/layout-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Modal Layout app provides blocks that can help you create modals in your store.
 
-![image](https://user-images.githubusercontent.com/8517023/73455440-da778f00-434e-11ea-9d38-e31b2576b670.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-0.png)
 
 ## Configuration
 
@@ -28,8 +28,8 @@ Now, you are able to use all blocks exported by the `modal-layout` app. Check ou
 
 | Block name | Description | 
 | --------  | ------------ | 
-| `modal-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines how the Modal content will be triggered through its children blocks. | 
-| `modal-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines how the Modal content will be rendered through its children blocks. You can declare as its children the blocks `modal-header` and `modal-content`, described below, in order to create a modal with header and footer. |
+| `modal-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-1.png) Defines how the Modal content will be triggered through its children blocks. | 
+| `modal-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-2.png) Defines how the Modal content will be rendered through its children blocks. You can declare as its children the blocks `modal-header` and `modal-content`, described below, in order to create a modal with header and footer. |
 | `modal-header` | Renders a close button and the blocks listed as its children, building a modal header. Notice: it does not automatically render a header for your modal. Instead, you should create the modal header as you desire using this block's children list. | 
 | `modal-content`| Defines how the Modal content will be rendered through its children blocks. Preferably, this block should be used along with the `modal-header` in order to create a modal with header and footer. | 
 | `modal-actions` | Logical block only responsible for rendering its child blocks that, in turn, are responsible for rendering call-to-action buttons inside the modal, such as a confirmation button. | 
@@ -143,9 +143,9 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/BeatrizMiranda"><img src="https://avatars2.githubusercontent.com/u/28959326?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Beatriz Miranda</b></sub></a><br /><a href="https://github.com/vtex-apps/modal-layout/commits?author=BeatrizMiranda" title="Code">💻</a></td>
-    <td align="center"><a href="https://acct.global/"><img src="https://avatars0.githubusercontent.com/u/38354801?v=4?s=100" width="100px;" alt=""/><br /><sub><b>weslybrandao</b></sub></a><br /><a href="https://github.com/vtex-apps/modal-layout/commits?author=weslybrandao" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/renanguerraa1"><img src="https://avatars2.githubusercontent.com/u/69531548?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Renan Guerra</b></sub></a><br /><a href="https://github.com/vtex-apps/modal-layout/commits?author=renanguerraa1" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/BeatrizMiranda"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-3.png">💻</a></td>
+    <td align="center"><a href="https://acct.global/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-4.png">💻</a></td>
+    <td align="center"><a href="https://github.com/renanguerraa1"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-5.png">💻</a></td>
   </tr>
 </table>
 

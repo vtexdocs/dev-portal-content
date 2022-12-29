@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/improvements-in-checkout-api-documentation-0.png)
 
 We have made new Checkout endpoints available in our API documentation:
 

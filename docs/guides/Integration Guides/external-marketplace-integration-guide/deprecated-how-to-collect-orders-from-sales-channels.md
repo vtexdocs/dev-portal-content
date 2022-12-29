@@ -17,14 +17,14 @@ Orders in an integration fit into two different categories:
 
 **Paid orders:** the marketplace only makes orders available for the integration once they are paid by the customer.
 
-![MarketplaceConnections](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/4798d0a-MarketplaceConnections_Docs_-_English_-_Pedidos_pagos-1_19.jpg)
+![MarketplaceConnections](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-0.jpg)
 
 **Orders to be paid:** the marketplace makes orders that have not been paid by the customer available for the integration.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/9199593-MarketplaceConnections_Docs_-_English_-_pedidos_a_pagar-1_23.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-1.jpg)
 Right after the payment confirmation by the marketplace, the flow goes as the image below describes it:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/1453596-MarketplaceConnections_Docs_-_English_-_Atualizar_o_status_do_pedido_para_Pago-1_26.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-2.jpg)
 
 ## How orders reach the connector
 
@@ -32,10 +32,10 @@ A marketplace order can reach the connector by either a:
 
 1. **Notification sent by the marketplace:** when the marketplace informs the connector about the existence of an order, and the connector, after receiving the notification, goes to the marketplace to get order details.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/3e0d502-MarketplaceConnections_Docs_-_English_-_Marketplace_Notifica_Conector_1-1_35.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-3.jpg)
 
 2. **Polling request made by the connector:** when the connector checks the marketplace from time to time, to collect new orders.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/7d35d7d-MarketplaceConnections_Docs_-_Copy_of_Coletando_Pedido_do_marketplace-1_38.jpg)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-4.jpg)
 
 ## Integrating orders
 
@@ -74,7 +74,7 @@ After VTEX OMS returns `success`, if the IDs between VTEX and the marketplace di
 
 Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. The diagram illustrates the endpoints used in the integration:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a7db68e-MarketplaceConnections_Docs_-_English_-_Fluxo_de_chamada_das_APIs-1_74.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-5.jpg)
 
 [block:callout]
 {

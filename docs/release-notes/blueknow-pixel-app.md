@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/blueknow-pixel-app-0.png)
 
 A new pixel app is out of the oven for the [Blueknow solution](https://www.blueknow.com/en/), responsible for using big data techniques and digital merchandising to provide recovery of lost sales, onsite retargeting, customized recommendations, and more! 
 

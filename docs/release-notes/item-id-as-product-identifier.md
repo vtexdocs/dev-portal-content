@@ -6,9 +6,9 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/item-id-as-product-identifier-0.png)
 
 The [Product Identifier app](https://vtex.io/docs/components/content-blocks/vtex.product-identifier/) from now on also accepts item IDs as product identifiers.
 
 Before this release, only Product Reference, Product ID, SKU EAN, and SKU Reference ID were accepted as valid to be displayed on the component.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/ea2a6e8-product-identifier_14.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/item-id-as-product-identifier-1.png)

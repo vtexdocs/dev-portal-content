@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-sku-service-endpoints-0.png)
 
 SKU Service actions can now be accessed using the [Catalog API](https://developers.vtex.com/reference/catalog-api-overview), allowing you to create and edit SKU Service types, values and attachments. These are the new endpoints:
 

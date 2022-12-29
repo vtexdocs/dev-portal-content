@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/facebook-business-extension-and-conversions-api-app-0.png)
 
 VTEX has developed the [Facebook Business Extension and Conversions API app](https://apps.vtex.com/vtex-facebook-fbe/p) to simplify integrating VTEX stores with [Facebook Business Extension (FBE)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-facebook-fbe).
 

@@ -10,7 +10,7 @@ The Product Gifts app provides blocks responsible for displaying, in the Product
 
 > ℹ️ *A product's gift is configured in a [Buy&Win promotion](https://help.vtex.com/tutorial/buy-and-win--tutorials_322)*
 
-![product-gift](https://user-images.githubusercontent.com/52087100/75782082-20a08380-5d3d-11ea-9ae1-60873e03f1ac.png)
+![product-gift](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-gifts-0.png)
 
 ## Configuration
 
@@ -26,8 +26,8 @@ Now, you are able to use all blocks exported by the `product-gifts` app. Check o
 
 | Block name     | Description                                     |
 | -------------- | ----------------------------------------------- |
-| `product-gifts`| ![mandatory](https://img.shields.io/badge/-Mandatory-red) Renders a default Product Gifts block implementation. | 
-| `gift-text` | ![mandatory](https://img.shields.io/badge/-Mandatory-red) Reads Catalog data regarding the product's gifts and provides it to its children. |
+| `product-gifts`| ![mandatory](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-gifts-1.png) Renders a default Product Gifts block implementation. | 
+| `gift-text` | ![mandatory](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-gifts-2.png) Reads Catalog data regarding the product's gifts and provides it to its children. |
 | `product-gift-list` | Renders the available gifts in a list format. It also provides context for its 3 children listed below. |
 | `gift-name` | Renders the product's gift name. |
 | `gift-image` | Renders the product's gift image.|
@@ -114,7 +114,7 @@ As a result, you will be able to configure the Product Gifts behavior by using a
 
 - **`product-gifts`**
 
-![product-gifts](https://user-images.githubusercontent.com/27777263/75771051-ee385b80-5d27-11ea-8600-5ea7f47ff64c.png)
+![product-gifts](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-gifts-3.png)
 
 | Prop name         | Type                        | Description                                            | Default value |
 | ----------------- | --------------------------- | ------------------------------------------------------ | ------------- |
@@ -122,7 +122,7 @@ As a result, you will be able to configure the Product Gifts behavior by using a
 
 - **`gift-text`**
 
-![gift-text](https://user-images.githubusercontent.com/27777263/75767717-01e0c380-5d22-11ea-8054-4440438a5441.png)
+![gift-text](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-gifts-4.png)
 
 | Prop name | Type     | Description                                                                                         | Default value                                                       |
 | --------- | -------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -138,7 +138,7 @@ You can configure the string received by the `text` prop using the following var
 
 -  **`gift-name`**
 
-![gift-name](https://user-images.githubusercontent.com/27777263/75767722-03aa8700-5d22-11ea-8150-2cbe2a7bb37a.png)
+![gift-name](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-gifts-5.png)
 
 | Prop name           | Type      | Description                                                               | Default value |
 | ------------------- | --------- | ------------------------------------------------------------------------- | ------------- |
@@ -147,7 +147,7 @@ You can configure the string received by the `text` prop using the following var
 
 - **`gift-image`** 
 
-![gift-image](https://user-images.githubusercontent.com/27777263/75767721-02795a00-5d22-11ea-8f51-fe80664b7f68.png)
+![gift-image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-gifts-6.png)
 
 | Prop name    | Type                     | Description                                     | Default value |
 | ------------ | ------------------------ | ----------------------------------------------- | ------------- |

@@ -7,7 +7,7 @@ hidden: false
 excerpt: "The [Gift List app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-gift-list) offers a new environment in the store where shoppers can create, manage and share gift lists."
 ---
 
-![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-them-as-gifts-0.png)
 
 The [Gift List app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-gift-list) offers a new environment in the store where shoppers can create, manage and share gift lists.
 
@@ -36,16 +36,16 @@ And the guests can:
 You can install the app from the [App Store](https://apps.vtex.com/vtex-list/p). To learn more about the app and implement it in your store, please refer to its [technical documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-gift-list).
 
 You can see below some images of the Gift List environment in a store:
-![Gift List environment](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/5e2dd04-image5_40.png)
+![Gift List environment](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-them-as-gifts-1.png)
 
-![Section with the created lists and button to create a new list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/e546825-image2_42.png)
+![Section with the created lists and button to create a new list](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-them-as-gifts-2.png)
 
-![Section with the wallet (gift card)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/d65232e-image3_44.png)
+![Section with the wallet (gift card)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-them-as-gifts-3.png)
 
-![Window to create a new list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/eb7b37e-image1_46.png)
+![Window to create a new list](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-them-as-gifts-4.png)
 
-![Page to manage the items on the list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/8346a07-image4_48.png)
+![Page to manage the items on the list](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-them-as-gifts-5.png)
 
-![Shared gift list where a guest can choose to gift items](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/4172bf6-image6_50.png)
+![Shared gift list where a guest can choose to gift items](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-them-as-gifts-6.png)
 
-![Summary of the checkout with the message](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/fb8839c-image7_52.png)
+![Summary of the checkout with the message](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-them-as-gifts-7.png)

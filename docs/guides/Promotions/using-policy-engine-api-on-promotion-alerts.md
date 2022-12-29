@@ -57,7 +57,7 @@ For sending emails
 }
 [/block]
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Promotions/a51cf46-Captura_de_Tela_2021-05-07_s_15.26.45_58.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/using-policy-engine-api-on-promotion-alerts-0.png)
 For deactivating the promotions
 [block:code]
 {

@@ -146,7 +146,7 @@ Back to `./resolvers/index.ts` load the checkout client from the context of our 
 
 The logical flow is:
 
-![Cart cleaning app logical flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/165640268-97a65125-0e82-4ccc-aa89-f01afcd5cd9a_148.png)
+![Cart cleaning app logical flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-cleaning-cart-data-on-log-out-0.png)
 
 You should have code similar to the example below.
 

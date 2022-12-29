@@ -12,13 +12,13 @@ updatedAt: "2020-07-16T16:18:03.236Z"
 
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 Elfsight first party integration app. The [solution](https://elfsight.com/) provides widgets that help website owners to increase sales, engage visitors, collect leads and more.
 
-![image](https://user-images.githubusercontent.com/284515/87573824-dbee0700-c6a3-11ea-9ca2-0f03809b785b.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-elfsight-0.png)
 
 ## Configuration 
 
@@ -56,7 +56,7 @@ Elfsight first party integration app. The [solution](https://elfsight.com/) prov
 
 You should get the app ID from the Elfsight admin:
 
-![App Id](https://user-images.githubusercontent.com/284515/87574775-3d62a580-c6a5-11ea-8278-3090254b16af.png)
+![App Id](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-elfsight-1.png)
 
 
 <!-- DOCS-IGNORE:start -->

@@ -9,14 +9,14 @@ updatedAt: "2021-03-25T19:36:37.526Z"
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The Store Newsletter app provides a set of blocks that you can use to create a newsletter subscription form.
 
-![newsletter-demo](https://user-images.githubusercontent.com/27777263/96277790-1c169b80-0fab-11eb-99cb-6b55ea7f5b7f.png)
+![newsletter-demo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-newsletter-0.png)
 
 ## Configuration
 
@@ -32,13 +32,13 @@ Now, you are able to use all blocks exported by the `store-newsletter` app. Chec
 
 | Block name                         | Description                                                                                                          |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `newsletter-form`                  | ![mandatory](https://img.shields.io/badge/-Mandatory-red) Top level block that provides context to all its children. |
-| `newsletter-input-email`           | ![mandatory](https://img.shields.io/badge/-Mandatory-red) Renders an email input in the newsletter form.             |
+| `newsletter-form`                  | ![mandatory](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-newsletter-1.png) Top level block that provides context to all its children. |
+| `newsletter-input-email`           | ![mandatory](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-newsletter-2.png) Renders an email input in the newsletter form.             |
 | `newsletter-input-name`            | Renders an name input in the newsletter form.                                                                        |
 | `newsletter-input-phone`           | Renders an phone input in the newsletter form.                                                                       |
 | `newsletter-checkbox-confirmation` | Renders a confirmation checkbox in the newsletter form.                                                              |
 | `newsletter-hidden-field`          | Doesn't render anything, but enables hidden fields on the form to fetch custom data and save them in the store's [Master Data](https://help.vtex.com/en/tutorial/what-is-master-data--4otjBnR27u4WUIciQsmkAw) whenever a user subscribes to the newsletter. |
-| `newsletter-submit`                | ![mandatory](https://img.shields.io/badge/-Mandatory-red) Renders a `Submit` button for the newsletter form.         |
+| `newsletter-submit`                | ![mandatory](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-newsletter-3.png) Renders a `Submit` button for the newsletter form.         |
 
 2. In the desired store template, such as the `store.home`, add the `newsletter-form` block and its desired children:
 

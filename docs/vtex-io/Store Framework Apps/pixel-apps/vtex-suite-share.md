@@ -31,6 +31,6 @@ This app integrates your store with the Suiteshare platform, adding the WhatsApp
 
       `ba776dfa9e2fe90641696945dfea429113110686`
 
-![SuiteshareId](https://user-images.githubusercontent.com/1629129/119191255-c0d2ed00-ba54-11eb-94a1-13027c6c1c51.png)
+![SuiteshareId](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-suite-share-0.png)
  
 After completing the app installation and setup, you are all set! Additional settings can be found in your [Suiteshare account](https://suiteshare.com/auth/signin).

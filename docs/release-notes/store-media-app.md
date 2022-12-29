@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/store-media-app-0.png)
 
 Let's give a warm welcome to the new [Store Media app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-media), responsible for displaying image alongside video assets in your storefront.
 

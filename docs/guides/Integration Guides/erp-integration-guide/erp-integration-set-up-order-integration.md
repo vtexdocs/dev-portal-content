@@ -16,7 +16,7 @@ There are two ways to track order status changes in VTEX: the orders [Feed and t
 
 The order integration process using the orders feed is illustrated in the diagram below.
 
-![Order integration flowchart](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/erp-integration-guide/7df0e42-image4_18.png)
+![Order integration flowchart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-set-up-order-integration-0.png)
 
 See this [boilerplate implementation of an orders feed consumer in C#](https://github.com/vtex/FeedConsumerCSharp) to get you started. If you would like a conceptual overview of our Orders Management module, check out this [beginner track](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa) in our Help Center. More details on the orders feed can be found [here](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1).
 

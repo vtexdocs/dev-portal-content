@@ -13,14 +13,14 @@ updatedAt: "2020-11-10T14:41:34.438Z"
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 
 This is a Iubenda first party integration app. The [solution](https://www.iubenda.com/en/?utm_source=adwords&utm_medium=ppc&utm_campaign=aw_brand_global_exact&utm_term=iubenda&utm_content=336331123145&gclid=EAIaIQobChMI38Tz0Jqg6QIVlwyRCh3KoQtkEAAYASAAEgKtK_D_BwE) is integrated with the IAB TCF and US Privacy Framework and it is responsible for managing consent preferences for the ePrivacy, GDPR, and CCPAntegrated. 
 
-![image](https://user-images.githubusercontent.com/284515/80036701-a4b6f200-84c8-11ea-91fa-5c5f9d6f0e16.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-iubenda-0.png)
 
 ## Configuration
 
@@ -29,13 +29,13 @@ This is a Iubenda first party integration app. The [solution](https://www.iubend
 3. Add the Site ID and the Cookie Policy ID in the respective fields;
 4. Save your changes.
 
-![image](https://user-images.githubusercontent.com/284515/80036904-08411f80-84c9-11ea-95e9-162a6bcc0ce4.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-iubenda-1.png)
 
 > ℹ️ *The Site ID and the Cookie Policy ID are provided by Iubenda*.
 
 ### Recommended Iubenda configuration
 
-![image](https://user-images.githubusercontent.com/284515/81110526-07a97f80-8ef2-11ea-9689-6ef0a9f0376d.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-iubenda-2.png)
 
 Iubenda also provides a store component to let visitors update their advertising tracking preferences even after closing the cookie banner. Use the [Iubenda Components app](https://github.com/vtex-apps/iubenda-components) for that.
 

@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.161Z"
 
 ## What is Lighthouse
 
-<img align="right" src="https://user-images.githubusercontent.com/60782333/100936269-02d09c80-34d0-11eb-9990-c0b7b910f60e.png"/>
+<img align="right" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-3.png"/>
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) is an open-source, automated tool created by Google, capable of identifying common problems related to the quality of a webpage through audits.
 
@@ -56,7 +56,7 @@ In this sense, page loading can be understood as a progressive journey with four
 
 Considering these four moments during the page load journey, a series of individual metrics were created considering what might be relevant for users in each one of these moments.
 
-![page journey](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/100931294-162c3980-34c9-11eb-8e83-e4c2976eec23_58.png)
+![page journey](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-0.png)
 
 Before diving deeper into performance metrics, it's important to differentiate *Lab* and *Field* Data, two types of metric data that Lighthouse provides.
 
@@ -71,7 +71,7 @@ In this sense, *Field* data presents a historical report about how the page has 
 In light of that, the **Performance score** provides an estimated representation of user's perception of performance by computing a *weighted average* of the following **six in the lab metrics**:
 
 <p align="center">
-<img height="353" width="665" src="https://user-images.githubusercontent.com/60782333/100743375-f9a1db80-33ba-11eb-8a11-cd58a8f7da76.png"/>
+<img height="353" width="665" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-4.png"/>
 </p>
 
 > ℹ️ Notice that [Largest Contentful Paint](#largest-contentful-paint-lcp--25) and [Total Blocking Time](#total-blocking-time-tbt--25) are more heavily weighted. Consequently, they have a bigger impact on the overall Performance score than the other metrics. Paying close attention to these two measurements is paramount.
@@ -83,7 +83,7 @@ Each of these metrics is briefly explained in the following sections.
 When running Lighthouse, you may also notice that the metrics results obey a color code according to the following ranges:
 
 <p align="center">
-<img height="300" width="503" src="https://user-images.githubusercontent.com/60782333/100747617-0e816d80-33c1-11eb-8221-14e35e6fa98c.png"/>
+<img height="300" width="503" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-5.png"/>
 </p>
 
 > ℹ️ When tracking improvements and regressions, we recommend **focusing on improving individual metrics rather than on the total score.**
@@ -141,7 +141,7 @@ Notice that this metric can be affected by:
 
 *Largest Contentful Paint* measures the time it takes to render the largest visible element of the page within the viewport.
 
-![FCP](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/100933448-209c0280-34cc-11eb-8cb1-74857834f92d_143.png)
+![FCP](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-1.png)
 
 In practice, a fast LCP time helps reassure the user that the page is useful.
 
@@ -210,7 +210,7 @@ A layout shift occurs when a visible element changes its initial position from o
 
 > ℹ️ Rendering new elements or resizing existing ones will cause layout shift only if it makes another visible component changes its start position.
 
-![CLS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/100920056-60a5ba00-34b9-11eb-86f3-81312884e4bb_212.png)
+![CLS](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-2.png)
 
 The layout shift score is a product of two measures: the [impact](https://web.dev/cls/#impact-fraction) and the [distance fraction](https://web.dev/cls/#distance-fraction). Check in the following how Lighthouse classifies CLS:
 

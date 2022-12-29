@@ -8,12 +8,12 @@ updatedAt: "2021-03-10T19:35:11.404Z"
 ---
 # VTEX Product Kit 
 
-![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red)
+![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-kit-0.png)
 
 > ⚠️ ***The Product Kit app has been deprecated.** Although support for this app is still granted by VTEX, we strongly recommend you to update your store theme in order to keep up with the framework's evolution!*
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/deprecated/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Description
@@ -168,8 +168,8 @@ To execute our tests go to `react/` folder and run `yarn test`
 
 ### Travis CI
 
-[![Build Status](https://travis-ci.org/vtex-apps/product-kit.svg?branch=master)](https://travis-ci.org/vtex-apps/product-kit)
-[![Coverage Status](https://coveralls.io/repos/github/vtex-apps/product-kit/badge.svg?branch=master)](https://coveralls.io/github/vtex-apps/product-kit?branch=master)
+[![Build Status](https://travis-ci.org/vtex-apps/product-kit.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-kit-1.png)
+[![Coverage Status](https://coveralls.io/repos/github/vtex-apps/product-kit/badge.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-kit-2.png)
 
 ## Contributors ✨
 

@@ -18,10 +18,10 @@ General instructions for customization of IO apps using CSS handles can be found
 2. Navigate to the `styles\css` folder.
 3. Insert or create the css file for My Authentication customization. This file should have the name `vtex.my-authentication.css`.
 4. In the css file, insert the code to customize the appearance of the components. The list of CSS handles is found below.
-![My Authentication CSS code IO](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/my-account/25501c5-image2.png)
+![My Authentication CSS code IO](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-my-authentication-0.png)
 5. In the root folder of the code of the app, open the `manifest.json` file.
 6. Inside `"dependencies"`, insert the property `"vtex.my-authentication": "1.x"`.
-![My Authentication dependency](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/my-account/8789ba5-image1.png)
+![My Authentication dependency](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-my-authentication-1.png)
 7. In a terminal, navigate to the root folder of the code of the app.
 8. Run the command `vtex link`. After running this command, the theme app should be updated and the visual components should be as defined in the CSS file.
 

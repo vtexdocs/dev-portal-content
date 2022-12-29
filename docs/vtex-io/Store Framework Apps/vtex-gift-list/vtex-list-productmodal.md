@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.347Z"
 ---
 The `modal-select-product` block displays a modal with detailed information (such as size and color) about the product the costumer wants to add to the lists they own.
 
-![chrome-capture-2022-8-15 (2)](https://user-images.githubusercontent.com/76453090/190513307-0d92633f-e0ad-4a92-a794-5defb1beb7c0.gif)
+![chrome-capture-2022-8-15 (2)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-productmodal-0.gif)
 
 ## Configuration
 

@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.318Z"
 ---
 The list information is made up of three blocks `list-info.name` , `list-info.event-date` and `list-info.owner` and each one represents a type of information associated with the list, which are the name of the list, date of the event and name of the owner of the list respectively.
 
-![ListInfo](https://user-images.githubusercontent.com/67066494/190486006-d58a19f5-d03b-47b7-897c-4e0e2f6b0df9.gif)
+![ListInfo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-listinfo-0.gif)
 
 ## Configuration
 

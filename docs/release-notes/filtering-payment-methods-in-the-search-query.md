@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/filtering-payment-methods-in-the-search-query-0.png)
 
 Thanks to two new props, namely `includedPaymentSystems`  and `excludedPaymentSystems`, it finally became possible to define in the search query which payment methods should and should not be taken into account when displaying the installment options to users.
 

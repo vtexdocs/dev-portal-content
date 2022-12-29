@@ -29,7 +29,7 @@ When editing the email, it is possible to use a range of variables provided by t
 }
 [/block]
 **Template HTML:** `<strong>{{_accountInfo.HostName}}</strong> => lojavirtual`
-![exemplo html](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Message%20Center/templates/b9d5c9b-exemplohtml_31.png)
+![exemplo html](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-set-up-functions-in-the-message-center-templates-0.png)
 The above example can have different values when comparing Sellers and Marketplaces.
 
 ## Functions
@@ -76,4 +76,4 @@ The use of the functions follows the following syntax: `{{funcão classe.atribut
 }
 [/block]
 **Result:**
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Message%20Center/templates/715c58d-3.1_76.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-set-up-functions-in-the-message-center-templates-1.jpg)

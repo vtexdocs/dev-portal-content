@@ -10,7 +10,7 @@ The sales associate code field is an additional customization of the [**Observat
 
 Once enabled, this field becomes a mandatory step in the purchase flow, meaning that the order can only be completed if the `sales associate code` field is filled with a personal code.
 
-![The inStore's UI once the sales rep code is enabled on the purchase flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-customize-instore/4048c5c-sales_rep_code_12.PNG)
+![The inStore's UI once the sales rep code is enabled on the purchase flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/sales-associate-code-0.PNG)
 
 ## Prerequisites
 

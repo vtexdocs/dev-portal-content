@@ -8,7 +8,7 @@ updatedAt: "2022-09-16T00:56:57.871Z"
 ---
 The quantity selector is made up of three blocks `quantity-selector-minicart`, `quantity-selector-shelf-guest` and `quantity-selector-shelf-owner-list` and each of them represents a quantity selector for different contexts which are use in mini-cart, guest shelf, list owner shelf and selection modal on search page.
 
-![QuantitySelector](https://user-images.githubusercontent.com/67066494/190498359-2418db72-f3a3-4e51-9a70-2d2764f945ce.gif)
+![QuantitySelector](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-quantity-selector-1-0.gif)
 
 ## Configuration
 

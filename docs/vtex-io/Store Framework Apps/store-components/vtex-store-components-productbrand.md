@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.077Z"
 ---
 The `product-brand` block displays either the **name** or the **logo** of a product's brand.
 
-![product-brand](https://user-images.githubusercontent.com/52087100/70259346-bb081f80-176c-11ea-84db-5785c45829ce.png)
+![product-brand](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productbrand-0.png)
 
 ## Before you start
 Ensure that you have registered [brands](https://help.vtex.com/en/tutorial/what-is-a-brand--QU07yhHoaWcEYseEucOQW) in your store. To do so, follow the [How to register brands](https://help.vtex.com/en/tutorial/registering-brands--tutorials_1414) documentation.
@@ -60,7 +60,7 @@ Ensure that you have registered [brands](https://help.vtex.com/en/tutorial/what-
 | `fallbackToText` | `boolean` | Defines the behavior of the Product Brand block when set to display a brand logo but no image is registered in the VTEX admin's Catalog. If `true`, it allows the logo to be replaced with the brand name. If `false`, neither the brand name nor the brand logo are displayed. **This prop is only available for the `logo` display mode.** | `true` |
 | `height` | `number` | The logo height. **This prop is only available for the `logo` display mode.** | `100` |
 | `loadingPlaceholder` | `string` | Defines if the loading placeholder should have the size of the logo or the text. Possible values are: `logo` and `text`. | `undefined` |
-| `logoWithLink` | `boolean` | ![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red) Use `withLink` instead | `false` |
+| `logoWithLink` | `boolean` | ![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productbrand-1.png) Use `withLink` instead | `false` |
 | `withLink` | `enum` | Defines the scenarios in which the product brand should have a link that leads to its website. Possible values are: `none` (never includes the link), `logo` (includes the link whenever the brand logo is displayed), `text` (includes the link whenever the brand name is displayed), and `logoAndText` (includes the link whenever the brand logo or the brand name is displayed).  | `none` |
 
 ## Customization 

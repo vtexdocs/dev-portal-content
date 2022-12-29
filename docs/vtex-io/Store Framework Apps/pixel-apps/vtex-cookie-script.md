@@ -8,13 +8,13 @@ updatedAt: "2022-08-11T10:02:19.333Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 [Cookie Script](https://cookie-script.com/) app brings the [solution](https://apps.vtex.com/vtex-cookie-script/p) to make your website cookies comply with GDPR and CCPA.
 
-![image](https://user-images.githubusercontent.com/284515/86488877-d35b0f80-bd38-11ea-95f9-7610985e19d5.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookie-script-0.png)
 
 Learn how to install and configure the app on the following sections.
 
@@ -53,7 +53,7 @@ Once you have installed the app, you need to create an account in [Cookie Script
 1. Go to the [Cookie Script](https://cookie-script.com/create-an-account.html) page and create your account.
 2. After creating your account, go to the **Dashboard** tab and click on `Add website`.
 
-![app-dashboard](https://user-images.githubusercontent.com/67270558/133613562-3248fadc-e6a0-4859-8b05-5167085e4242.gif)
+![app-dashboard](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookie-script-1.gif)
 
 3. Once you have added your website, go to the **Cookie scanner** tab and run a scan. 
 2. After the scan is complete, go to **Cookies** tab and make sure the following cookies are categorized as **Stricly Necessary**: `ASPXAUTH`, `checkout.vtex.com`, `CookieConsent`, `device`, `vtex_segment`, `vtex_session`, `VtexFingerPrint`, `VtexRCMacIdv7`, `VtexRCRequestCounter`, `VtexRCSessionIdv7` and `VtexWorkspace`.

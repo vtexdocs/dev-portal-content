@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/onesignal-pixel-app-0.png)
 
 A VTEX [**OneSignal**](https://onesignal.com/) native integration is now available for stores using **VTEX Store Framework**, providing web push notifications for customer engagement.
 

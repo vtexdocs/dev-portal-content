@@ -8,7 +8,7 @@ updatedAt: "2022-07-02T00:50:32.864Z"
 ---
 The  Product Summary List app (`list-context.product-list`) is an instance of the `list-context` interface - a set of special interfaces used to create lists of content, such as a list of products.
 
-![list-context-example](https://user-images.githubusercontent.com/67270558/153598896-f252b9f4-9fce-4242-b311-48d52e0345e7.png)
+![list-context-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummarylist-0.png)
 
 To create a list of products, you must use the `list-context.product-list` and `product-summary.shelf` blocks.
 

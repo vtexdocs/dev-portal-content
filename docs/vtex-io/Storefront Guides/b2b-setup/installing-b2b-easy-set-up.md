@@ -27,16 +27,16 @@ Now that the Easy Setup app is installed in your store, proceed to operate the a
    > ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, you must not select the **Organizations** resource. Otherwise this will alter the user profile Master Data schema and prevent the B2B Suite apps from creating users.
 
 3. Click on the `Start Easy Setup` button.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/475b079-200d9b8-easy_1_33.PNG)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/installing-b2b-easy-set-up-0.PNG)
 
 4. Click on the `I Understand` button that will appear in the **Are you sure you want to proceed?** dialog.
 >❗ Once you click `I Understand`, this step is irreversible.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/01b2f3c-740c91d-easy_2_42.PNG)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/installing-b2b-easy-set-up-1.PNG)
 5. Wait a few seconds for the setup to complete.
 
 6. When the configuration is complete, you will receive a positive feedback on the screen.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/b2b-setup/e35c78c-38bb9ce-easy_4_45.PNG)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/installing-b2b-easy-set-up-2.PNG)
 
 [block:callout]
 {

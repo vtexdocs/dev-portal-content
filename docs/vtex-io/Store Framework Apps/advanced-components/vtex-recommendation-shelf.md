@@ -11,12 +11,12 @@ updatedAt: "2022-07-07T13:16:16.542Z"
 > This app is on alpha version, which means we are working to improve it and it is not possible to add other accounts for tests. If you have any questions, please contact [our Support](https://support.vtex.com/hc/en-us/requests).
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
  
 The Product Recommendation app shows a selection of products using [recommendation strategies](#recommendation-shelf-props). For example, you can use the Product Recommendation to suggest often bought-together products to the one that the user is looking for.
  
-![recommendation-shelf-buy-together](https://user-images.githubusercontent.com/52087100/96002543-9c07fe80-0e0f-11eb-94c3-cac778eaf21c.png)
+![recommendation-shelf-buy-together](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-recommendation-shelf-0.png)
  
 ## Prerequisites
  
@@ -70,18 +70,18 @@ Now, you can use all blocks exported by the `recommendation-shelf` app. Check ou
 
 `recommendation-shelf`
  
-![recommendation-shelf](https://raw.githubusercontent.com/vtex-apps/recommendation-shelf/master/docs/image%20(31).png)
+![recommendation-shelf](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-recommendation-shelf-1.png)
  
 
 `recommendation-buy-together`
  
-![recommendation-buy-together](https://raw.githubusercontent.com/vtex-apps/recommendation-shelf/master/docs/image%20(32).png)
+![recommendation-buy-together](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-recommendation-shelf-2.png)
  
 
  
 `recommendation-refresh`
 
-![recommendation-refresh](https://raw.githubusercontent.com/vtex-apps/recommendation-shelf/master/docs/Screenshot_3.png)
+![recommendation-refresh](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-recommendation-shelf-3.png)
 
  
 3. Add the `recommendation-shelf` app to your store template. See the example below to know how to add it to a template:

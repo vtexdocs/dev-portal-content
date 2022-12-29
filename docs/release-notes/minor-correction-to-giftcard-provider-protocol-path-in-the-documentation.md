@@ -7,7 +7,7 @@ hidden: false
 excerpt: "Some of the GiftCard Provider Protocol endpoints had an `/api` segment in their paths. This was corrected and the `/api` segment was removed in the documentation."
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/minor-correction-to-giftcard-provider-protocol-path-in-the-documentation-0.png)
 
 Some of the GiftCard Provider Protocol endpoints had an `/api` segment in their paths. This was corrected and the `/api` segment was removed in the documentation. The affected endpoints are:
 

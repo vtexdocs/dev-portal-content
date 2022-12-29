@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.237Z"
 ---
 The `product-sku-attributes` block displays a list of the current SKU variations of a product.
 
-![image](https://user-images.githubusercontent.com/24723/93642867-358ced80-f9d5-11ea-9dad-a5286eb04efd.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productskuattributes-0.png)
 
 ## Configuration
 

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/ean-in-google-analytics-events-0.png)
 
 The EAN (product identifier) data is now included in the `addToCart` event.
 

@@ -13,6 +13,6 @@ In the VTEX scenario, CMS is the module responsible for managing the pages that 
 
 Through the Admin interface, it allows you to create your storefront with the most suitable technology for your scenario: HTML and CSS, on the **Layout** section, or the VTEX Store Framework, on the [**Site Editor**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-site-editor) section.
 
-![CMS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/concepts/119380423-13035080-bc97-11eb-8c1d-4b0c25f39194_15.png)
+![CMS](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-cms-0.png)
 
-![site-editor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/concepts/119380417-11398d00-bc97-11eb-9ebd-2be23aad6856_17.png)
+![site-editor](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-cms-1.png)

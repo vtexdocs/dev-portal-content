@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.156Z"
 ---
 The `add-to-cart-button-list` block displays a button that allows users to add products in the Minicart from a guest page if the quantity purchased has not yet reached the limit.
 
-![AddToCartButton](https://user-images.githubusercontent.com/67066494/190247953-58f73d99-008f-432b-8cdf-cb2970e51df0.gif)
+![AddToCartButton](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-listaddtocartbutton-0.gif)
 
 ## Configuration
 

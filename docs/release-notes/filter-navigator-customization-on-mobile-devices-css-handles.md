@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/filter-navigator-customization-on-mobile-devices-css-handles-0.png)
 
 New CSS Handles were added to the [Search Result app](https://vtex.io/docs/components/all/vtex.search-result/) to enable the Filter Navigator component customization on mobile devices. Namely:
 

@@ -10,7 +10,7 @@ All order confirmation information at checkout is available on the Placed Orders
 
 Order Placed page example:
 
-![Página de confirmação de pedido (Order Placed)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/d1564c7-Pgina_de_confirmao_de_pedido_Order_Placed_12.png)
+![Página de confirmação de pedido (Order Placed)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/customize-checkout-confirmation-pages-0.png)
 
 In the Checkout section, located in the Admin VTEX side menu, you can access one or more websites (stores) registered in your account and perform checkout settings, including UI customization.
 
@@ -29,7 +29,7 @@ To edit Checkout confirmation UI information, access the following templates:
 - **checkout-confirmation-top**
 
 Code tab view:
-![Checkout confirmation information codes section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/ec842da-checkout_confirmation_information_codes_section_33.png)
+![Checkout confirmation information codes section](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/customize-checkout-confirmation-pages-1.png)
 
 [block:callout]
 {
@@ -38,7 +38,7 @@ Code tab view:
 }
 [/block]
 Template areas on the page:
-![Página de confirmação de pedido com imports de HTML](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/e23bee0-Pgina_de_confirmao_de_pedido_com_imports_de_HTML_42.png)
+![Página de confirmação de pedido com imports de HTML](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/customize-checkout-confirmation-pages-2.png)
 
 ## Customizing styles
 
@@ -46,7 +46,7 @@ You can also edit the Checkout Confirmation interface via CSS classes. Your styl
 
 CSS class areas on the page:
 
-![Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Checkout/customization/2691dcc-Pgina_de_OrderPlaced_do_Checkout_Confirmation_com_classes_de_customizao_marcadas_50.png)
+![Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/customize-checkout-confirmation-pages-3.png)
 
 To customize the Checkout Confirmation styles, use the following classes:
 [block:code]

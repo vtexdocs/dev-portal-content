@@ -7,7 +7,7 @@ updatedAt: "2022-02-03T20:38:11.391Z"
 ---
 
 This section of the integration guide goes over the process of updating SKUs that are already integrated in the marketplace. The information flows according to the diagram below:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/6b6be77-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1_9.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-product-updates-0.jpg)
 
 To begin the integration of this process, it is necessary to have a search Endpoint configured, in order to receive notifications.
 
@@ -37,7 +37,7 @@ Fields sent in the notification:
 | PriceModified                           | Identifies that the price  has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                                                                                                               |
 | HasStockKeepingUnitModified             | Identifies that the product/SKU registration data has changed, like name, description, weight, etc                                                                                                                                                                                                                                                                                                                   |
 | HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the trade policy. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a9122b3-MarketplaceConnections_Docs_-_Integration_through_notification-1_39.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-product-updates-1.jpg)
 
 ## Integration flow
 
@@ -78,7 +78,7 @@ To avoid processing gaps due to the big volume of information of the initial loa
 ## API Reference
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/b67f098-Marketplace_Docs_-_API_Ref_78.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-product-updates-2.jpg)
 
 [block:callout]
 {

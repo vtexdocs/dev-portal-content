@@ -8,7 +8,7 @@ updatedAt: "2022-12-05T12:45:09.103Z"
 ---
 Reviews & Ratings is a VTEX IO native solution that allows shoppers to submit reviews and ratings for products, as well as see them while navigating the store..
 
-![reviews-and-ratings-app](https://user-images.githubusercontent.com/52087100/71026526-31e7d580-20e8-11ea-93d8-094c1e8af7cd.png)
+![reviews-and-ratings-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-0.png)
 
 ## Configuration
 
@@ -22,15 +22,15 @@ Using your terminal, log in to the desired VTEX account and run the following co
 
 1. In the account's admin dashboard, access `Apps > My Apps` and then click on the box for `Reviews and Ratings`:
 
-![apps-reviews-and-ratings](https://user-images.githubusercontent.com/52087100/71026670-77a49e00-20e8-11ea-9e01-0cb4dec12a56.png)
+![apps-reviews-and-ratings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-1.png)
 _When using the admin v3_
 
-![apps-reviews-and-ratings](https://user-images.githubusercontent.com/26655596/99747634-b772c300-2ab9-11eb-927b-cd03e89421af.png)
+![apps-reviews-and-ratings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-2.png)
 _When using the admin v4_
 
 2. Once in the app's settings page, define the following settings according to the desired scenario:
 
-![reviews-settings](https://user-images.githubusercontent.com/43498488/97418081-0e4d0880-1911-11eb-9b80-47b92bbdef93.jpg)
+![reviews-settings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-3.jpg)
 
 - **Allow Anonymous Reviews** - If unchecked, only logged-in shoppers will be able to review products.
 
@@ -160,7 +160,7 @@ In order to see how to use the graphQL queries and mutations you can go through 
 1. Open the Admin [GraphQL IDE app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-admin-graphql-ide). 
 2. Select vtex.reviews-and-ratings app.
 3. Click on `docs` at the top right corner.
-![reviews-and-ratings-app](/public/metadata/images/screenshots/graphQL_docs.png)
+![reviews-and-ratings-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/public/metadata/images/screenshots/graphQL_docs.png)
 
 You will see the list of all available queries and mutations, including schemas and variable descriptions.
 
@@ -177,10 +177,10 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://avatars1.githubusercontent.com/u/43498488?v=4" width="100px;" alt=""/><br /><sub><b>khrizzcristian</b></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=khrizzcristian" title="Code">💻</a></td>
-    <td align="center"><a href="https://juliomoreira.pro"><img src="https://avatars2.githubusercontent.com/u/1207017?v=4" width="100px;" alt=""/><br /><sub><b>Julio Moreira</b></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=juliomoreira" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/btalma"><img src="https://avatars.githubusercontent.com/u/47258865?v=4" width="100px;" alt=""/><br /><sub><b>Brian Talma</b></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=btalma" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/arturo777"><img src="https://avatars.githubusercontent.com/u/49737670?v=4" width="100px;" alt=""/><br /><sub><b>Arturo Castillo</b></sub></a><br /><a href="https://github.com/vtex-apps/reviews-and-ratings/commits?author=arturo777" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-4.png">💻</a></td>
+    <td align="center"><a href="https://juliomoreira.pro"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-5.png">💻</a></td>
+    <td align="center"><a href="https://github.com/btalma"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-6.png">💻</a></td>
+    <td align="center"><a href="https://github.com/arturo777"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-7.png">💻</a></td>
   </tr>
 </table>
 

@@ -7,7 +7,7 @@ updatedAt: "2022-02-03T20:26:40.959Z"
 ---
 
 This part of the guide explains how the connector should act when receiving the VTEX notification of a new product or SKU registered. The information flows according to the diagram below:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a85da6e-MarketplaceConnections_Docs_-_VTEX_SKU_notification_1-1_9.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-new-products-0.jpg)
 
 ## How to configure the affiliate endpoint
 
@@ -77,7 +77,7 @@ To avoid processing gaps due to the big volume of information of the initial loa
 ## API Reference
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/a5c950f-Marketplace_Docs_-_API_Ref_81.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-new-products-1.jpg)
 [block:callout]
 {
   "type": "info",

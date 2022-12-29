@@ -14,7 +14,7 @@ The Logistics module is the service responsible for the inventory and shipping i
 
 A basic concept here is that of a **logistics route**, the path connecting your store to the customer. For an order to be placed in a store, the desired item should have stock available in at least one [warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) connected through a [loading dock](https://help.vtex.com/en/tutorial/loading-dock--5DY8xHEjOLYDVL41Urd5qj) to a freight [carrier](https://help.vtex.com/en/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE) that delivers to the customer's address. The image below illustrates these concepts.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/erp-integration-guide/e492ed1-image3_16.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-import-inventory-0.png)
 
 If you would like an introduction to our Logistics module, check out the [Logistics overview](https://help.vtex.com/en/tutorial/logistics--53udnvI5eBy8DKo8FOjMoP) in our Help Center.
 

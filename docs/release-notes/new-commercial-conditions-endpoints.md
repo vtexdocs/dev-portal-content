@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-commercial-conditions-endpoints-0.png)
 
 We have just launched new Commercial Conditions endpoints in our Catalog API. Check out the API Reference for the new endpoints:
 

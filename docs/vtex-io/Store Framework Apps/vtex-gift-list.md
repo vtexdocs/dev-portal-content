@@ -35,17 +35,17 @@ To set up Gift List in your store, follow these steps:
 1. Install the Gift List app. You can do this by going to the [List app page](https://apps.vtex.com/vtex-list/p) and acquiring the app in the subaccount created previously.
 2. Access your subaccount Admin.
 3. Access the **Gift List App Settings** menu. The conversion of the values ​​received from the gifts will be sent to a Gift Voucher that can be used in your official store. But for that, we have to configure it. When accessing the previously specified menu, the following screen will be displayed:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/92618f6-image1.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-0.png)
 4. In the **Account Setting** tab, click on the **Main account name field** and choose the account which is the official store where the generated gift cards will be used.
 5. Click on the `SAVE` button.
 6. Go to the **Advanced Settings** tab.
 7. Use the app key and the app token created previously in the **VTEX App Key** and **VTEX App Token** fields respectively for the order hook. This application key must have no hook registered to it.
 8. Click on the `SAVE` button.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/cf70748-image6.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-1.png)
 9. In the left panel of the Admin, go to **Search** > **Integration Configuration**. Here you will configure the [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) so that your entire store catalog is indexed in the subaccount.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/2488186-image7.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-2.png)
 Click on the `START INTEGRATION` button and wait until all the integration is completed successfully as shown in the image below.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/49705e1-image3.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-3.png)
 After these steps, the app is configured and the gift lists are available in the store for the shoppers.
 
 ## Components
@@ -78,7 +78,7 @@ vtex install vtex.list-theme@3.x
 ```
 
 After the theme is created, it will be necessary to enter the **Site Editor** in the Admin to add which category the list owner will be redirected to when adding a product to your list, as can be seen below:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/e14fbf9-image9.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-4.png)
 ### Checkout
 
 We recommend using the checkout created by us for the gift list, as it will allow some personalized features to be added, such as the possibility of sending personalized emails from a guest to the person to be gifted. To use it, just install it with the following command:
@@ -107,7 +107,7 @@ With the checkout apps installed, you can enable the message field. To do this, 
 ### Email for gift purchase
 
 If you want to send the emails that are triggered with the checkout above, you must create a new template in the admin, in the **Message Center** -> **Templates** page. The name of the template must be `new-list-order` and the recipient `{{ownerListEmail}}`.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/fa685b1-Gift_List_email_template.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-5.png)
 An optional HTML code for the email template can be found [here](https://drive.google.com/file/d/1ZkI--JZn25PyG4FssoqqPi6a33075skO/view?usp=sharing).
 
 ### Login integration with the main account
@@ -117,8 +117,8 @@ Another recommendation is to unify the login of the main account with the subacc
 ## Store owner interface
 
 There is also an interface available for the shopkeeper to follow the metrics obtained by the list application. You can access it on the Admin by going to the **Store owner interface** menu. In this interface, you will see on the first screen all the users that contain a gift list, with their respective amounts of lists, the value they have already earned in gifts, the value converted into gift vouchers, and whether or not there is already an active list at the moment, respectively. You can also search for emails.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/cc27dd2-image8.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-6.png)
 If you want to have more information about a specific user, just click on the arrow next to the user's name, which will redirect you to a second screen. On this new screen, you can find information from each list of this user, including the name of the list, the value gained in the list, the date of the event, and if the event has already occurred or not. 
 
 There is also a totalizer with the number of lists, the amount invoiced on the lists, and the converted amount. It is worth adding that if a search is performed or a filter is used, the number of lists ​​and purchased values will be updated according to the result. The search can be done by the list title and the available filters are the status of the lists and the date of creation of the list. Finally, if you want to see the list in question, you can click on the <i class="fa fa-eye"></i> button and you will be redirected to the list in question in the guest view.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/efd4e85-image4.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-7.png)

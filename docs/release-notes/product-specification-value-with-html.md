@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-specification-value-with-html-0.png)
 
 The product specification value, rendered by the [Product Specification app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-specifications), now processes HTML code, enabling a better migration from CMS to the VTEX IO platform!
 

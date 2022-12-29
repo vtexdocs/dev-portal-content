@@ -7,7 +7,7 @@ hidden: false
 excerpt: "We have adjusted the architecture of the Facebook Business Extension and Conversions API app so that events won't be triplicated anymore."
 ---
 
-![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/correction-in-events-sent-to-facebook-business-extension-0.png)
 
 The [Facebook Business Extension and Conversions API app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-facebook-fbe) is the one-stop shop for merchants to easily connect their stores to Facebook services through the FBE platform.
 

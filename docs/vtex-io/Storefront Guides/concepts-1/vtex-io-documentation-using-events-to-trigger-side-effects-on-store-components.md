@@ -33,7 +33,7 @@ In the table below, you can find the list of blocks that currently accept the `c
 
 In the step by step below, you are going to learn how events and the `customPixelEventId` prop can trigger side effects on the interface in a real scenario, configuring the Minicart to automatically open itself once a new product gets added to it by the Add To Cart Button.
 
-![open-minicart-demo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/concepts-1/97001261-787b3d00-150e-11eb-8ba5-071eb4991990_35.gif)
+![open-minicart-demo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components-0.gif)
 
 ## Step by step
 

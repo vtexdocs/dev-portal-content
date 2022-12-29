@@ -14,11 +14,11 @@ When an order is processed in an external fulfillment platform such as an ERP or
 
 During handling an order can be [changed](https://help.vtex.com/tutorial/change-making-changes-to-an-order--3d1XLIgPQcwaKGyMiWaYog?locale=en), [cancelled](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/4ts2ItvjYo8wm5gg76miS3) or [invoiced](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/2WgQrlHTyVo4hLjhUs1LMT). These events should be notified as illustrated in the diagram below.
 
-![Order processing flowchart](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/erp-integration-guide/68be322-image1_16.png)
+![Order processing flowchart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-set-up-order-processing-0.png)
 
 If your freight carrier is integrated with VTEX, all you need to do is inform its identifier and tracking number when invoicing the order and order tracking information will be set up. Otherwise you should add the order tracking updates you want customers to see separately, as seen in the diagram below.
 
-![Order tracking flowchart](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/erp-integration-guide/7fc2394-image5_20.png)
+![Order tracking flowchart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-set-up-order-processing-1.png)
 
 ## Change order
 

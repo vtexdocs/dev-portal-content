@@ -9,14 +9,14 @@ updatedAt: "2021-12-08T18:22:55.061Z"
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The Video app allows you to display video assets on your store pages.
 
-![Media Placeholder](https://storecomponents.vtexassets.com/arquivos/ids/155640)
+![Media Placeholder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-video-0.png)
 
 ## Configuration
 

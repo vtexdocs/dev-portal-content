@@ -7,14 +7,14 @@ createdAt: "2020-06-03T15:19:16.041Z"
 updatedAt: "2022-07-27T14:36:38.486Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Product List component displays all items in the user's cart and informs the user when some of them are unavailable. 
 
 > ⚠️ Currently, the Product List only works with the [Minicart v2](https://vtex.io/docs/components/all/vtex.minicart/).
 
-![product-list image](https://user-images.githubusercontent.com/52087100/83676314-de434880-a5b0-11ea-8590-3b823d72ef29.png)
+![product-list image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-list-0.png)
 
 ## Configuration
 
@@ -253,7 +253,7 @@ Therefore, in order to customize the `product-list` configuration, you can simpl
 
 | Block name     | Description                                     |
 | -------------- | ----------------------------------------------- |
-| `product-list` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red)  Top level block that must be declared in the `minicart-product-list` block to render a default detailed list with all products added to the shopping cart.   |
+| `product-list` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-list-1.png)  Top level block that must be declared in the `minicart-product-list` block to render a default detailed list with all products added to the shopping cart.   |
 | `product-list-content-desktop` | Creates the product list layout for desktop devices.  |
 | `product-list-content-mobile` | Creates the product list layout for mobile devices. |
 | `message` | Renders a message text about the product availability. | 

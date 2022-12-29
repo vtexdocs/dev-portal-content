@@ -8,13 +8,13 @@ updatedAt: "2022-07-13T12:50:36.404Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 Tawk.to first party integration app. The [solution](https://www.tawk.to/) allows you to monitor and chat with the visitors on your website, mobile app or from a free customizable page.
 
-![image](https://user-images.githubusercontent.com/284515/86490223-043d4380-bd3d-11ea-98a5-80e6d84b44e8.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tawk-to-0.png)
 
 ## Configuration
 

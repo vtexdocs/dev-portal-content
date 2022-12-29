@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.195Z"
 ---
 The `auth-condition` performs validation that the user is logged in to render different layouts.
 
-![AuthCondition](https://user-images.githubusercontent.com/67066494/190255470-dda6e057-0a38-480c-8e10-31e6a93acca1.gif)
+![AuthCondition](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-authcondition-0.gif)
 
 ## Configuration
 

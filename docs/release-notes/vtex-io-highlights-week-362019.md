@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![App Development](https://img.shields.io/badge/-App%20Development-blue)
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-highlights-week-362019-0.png)
 
 Welcome to yet another VTEX IO weekly release notes, this one being more than special because we are announcing the release of our brand new VTEX IO documentation website.
 

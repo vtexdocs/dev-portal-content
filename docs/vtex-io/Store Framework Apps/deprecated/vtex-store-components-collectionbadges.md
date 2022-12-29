@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:04:30.346Z"
 updatedAt: "2021-10-25T14:50:59.973Z"
 ---
-![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red)
+![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-collectionbadges-0.png)
 
 >⚠️ **Warning**
 >
@@ -29,7 +29,7 @@ You can use it in your code like a React component with the `JSX` tag: `<Collect
 
 ```tsx
 <CollectionBadges collectionBadgesText={[ 'foo', 'bar' ]}>
-  <img src="..." alt="...">
+  <img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/deprecated/..." alt="...">
 </CollectionBadges>
 ```
 

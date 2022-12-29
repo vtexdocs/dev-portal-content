@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-seller-management-endpoints-0.png)
 
 We have published 17 new endpoints in our Dev Portal, composing our new Seller Management API! They allow marketplace operators to invite, onboard and retrieve information from their sellers.
 

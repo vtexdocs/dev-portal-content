@@ -7,12 +7,12 @@ createdAt: "2020-06-03T15:19:17.916Z"
 updatedAt: "2022-07-19T14:16:44.719Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/layout-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Condition Layout app allows a component to be rendered in your store if predefined conditions are met.
 
-![Screen-Recording-certo](https://user-images.githubusercontent.com/12139385/79379694-a8c99980-7f35-11ea-9f01-7021c6529332.gif)
+![Screen-Recording-certo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-0.gif)
 
 ## Configuration
 
@@ -248,8 +248,8 @@ Thanks goes out to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/LucasCastroAcctGlobal"><img src="https://avatars0.githubusercontent.com/u/55210107?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LucasCastroAcctGlobal</b></sub></a><br /><a href="https://github.com/vtex-apps/condition-layout/commits?author=LucasCastroAcctGlobal" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/vini-lima-acct"><img src="https://avatars.githubusercontent.com/u/78028684?v=4?s=100" width="100px;" alt=""/><br /><sub><b>vini-lima-acct</b></sub></a><br /><a href="https://github.com/vtex-apps/condition-layout/commits?author=vini-lima-acct" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/LucasCastroAcctGlobal"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-1.png">💻</a></td>
+    <td align="center"><a href="https://github.com/vini-lima-acct"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-2.png">💻</a></td>
   </tr>
 </table>
 

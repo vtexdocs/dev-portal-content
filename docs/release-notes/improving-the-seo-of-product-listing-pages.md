@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/improving-the-seo-of-product-listing-pages-0.png)
 
 The Product Listing Pages (PLPs) are responsible for presenting all the products available within a specific category, brand, department, or other filters applied, and the PLPs influence SEO performance.
 

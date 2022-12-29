@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![B2B](https://img.shields.io/badge/-B2B-blue)
+![B2B](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-b2b-store-theme-guides-0.png)
 
 We have added documentation explaning how to use the B2B Store Theme, a front-end template to help your store get started with VTEX’s core features for businesses selling to other businesses.
 

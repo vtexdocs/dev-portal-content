@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/cardholder-document-configuration-0.png)
 
 VTEX allows anti-fraud providers and merchants to have the autonomy to decide whether an identification document from the cardholder (example: CPF, Social Security) will be required during fraud analysis. This functionality is applied through a field called "cardholder document" that can be shown on the checkout page.
 

@@ -30,7 +30,7 @@ Some examples include: displaying a QR code for payment, filling in an applicati
 }
 [/block]
 
-![Payment Redirect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/payments-integration-guide/c3f3d8b-Payment_Redirect-editado_32.png)
+![Payment Redirect](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-purchase-flows-0.png)
 The sequence of events in a Redirect payment flow occurs as described in the following steps:
 
 1. The customer clicks on **Finish Payment** in the Checkout.

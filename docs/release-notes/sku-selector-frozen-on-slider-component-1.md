@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/sku-selector-frozen-on-slider-component-1-0.png)
 
 The SKU Selector had its product data frozen when rendered on slider components. In the previous and ugly scenario, users could only update the data displayed when scrolling the page or changing the slide currently being hovered on.
 

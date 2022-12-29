@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/react-builder-in-vtex-io-now-in-open-beta-0.png)
 
 Before, developers interested in creating custom components in [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/what-is-vtex-io) using the [VTEX Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/what-is-store-framework) had to request VTEX authorization. They had to fill in an application form sharing their project's details and wait for our approval to use the React [builder](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders).
 

@@ -23,7 +23,7 @@ The apps available through the [VTEX App Store](https://apps.vtex.com) must be c
 
 Take a look at the following example of an Admin app using some of the VTEX Styleguide components.
 
-![admin-page-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/158217591-cba1ddec-2de5-4eda-aa4a-c45fee38db0f_25.png)
+![admin-page-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-design-guidelines-0.png)
 
 Check out some of our most-used components listed on [VTEX Styleguide](https://styleguide.vtex.com/#/Introduction):
 

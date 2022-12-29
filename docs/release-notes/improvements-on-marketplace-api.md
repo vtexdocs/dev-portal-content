@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/improvements-on-marketplace-api-0.png)
 
 We have improved our Marketplace API documentation on the following endpoints:
 

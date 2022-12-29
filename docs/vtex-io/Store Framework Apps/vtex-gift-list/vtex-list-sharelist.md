@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.336Z"
 ---
 The `share-list` block displays a button to automatically copy the URL to send the list to guests.
 
-![ShareList](https://user-images.githubusercontent.com/67066494/190505826-2c30c927-aa04-4813-9deb-da7845a4e8f3.gif)
+![ShareList](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-sharelist-0.gif)
 
 ## Configuration
 

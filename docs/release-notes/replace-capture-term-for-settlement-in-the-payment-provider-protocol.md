@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+![Payments](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/replace-capture-term-for-settlement-in-the-payment-provider-protocol-0.png)
 
 The "Capture" term was replaced by "Settlement" in our Payment Provider Protocol (PPP), including similar forms (e.g.: "to capture" was replaced by "to settle"). This change in nomenclature is applied throughout our documentation, including in our API reference. The **Capture Payment** endpoint is now called **Settle Payment**. You can check the changes in our [API Reference](https://developers.vtex.com/vtex-rest-api/reference/payment-provider-protocol-api-overview) and in the [Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m).
 

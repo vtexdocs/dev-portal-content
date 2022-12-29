@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![App Development](https://img.shields.io/badge/-App%20Development-blue)
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/time-optimization-for-hotfix-deploys-0.png)
 
 The VTEX IO team has finally made it possible to warp time exactly as those kids from Dark did in order to deploy your hotfixes in less than 7 minutes!
 

@@ -8,13 +8,13 @@ updatedAt: "2022-02-25T16:57:31.666Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The Product Availability app displays text messages regarding the in-stock quantity for products. 
 
-![product-availability](https://user-images.githubusercontent.com/52087100/99307082-c8f76900-2834-11eb-96f2-df5e9d2bc49a.png)
+![product-availability](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-availability-0.png)
 
 ## Configuration
 

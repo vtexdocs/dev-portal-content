@@ -7,7 +7,7 @@ updatedAt: "2021-08-17T20:24:18.657Z"
 ---
 
 This article aims to explain how the inStore app configures AppLinking for `payment` and `payment-reversal` actions with the acquirers' apps.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/VTEX%20inStore/how-to-manage-instore-data/de29bd5-Payment_app_9.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/integrating-instore-to-a-new-payment-acquirer-0.png)
 
 ## Setting fields
 

@@ -6,7 +6,7 @@ hidden: true
 type: "added"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-customer-credits-use-conditions-endpoint-0.png)
 
 Each Customer Credit account has a set of use conditions configured specifically for it.
 

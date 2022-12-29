@@ -28,10 +28,10 @@ Find out how to enable the Order Form optimization in the steps below.
 
 1. In the desired account's admin, access **CMS** and select the **Store**.
 
-    ![store-settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/76884738-e8c92e00-685c-11ea-8448-599ae595cf35_30.png)
+    ![store-settings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-enabling-order-form-optimization-0.png)
 
 2. In the **Advanced** tab, toggle the **Enable orderForm optimization** button.
 
-    ![enabling-pwa](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/boosting-performance/76884611-b5869f00-685c-11ea-9999-c867b5500771_34.png)
+    ![enabling-pwa](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-enabling-order-form-optimization-1.png)
 
 3. Save your changes.

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/pageinfo-event-on-search-results-page-0.png)
 
 Retailers can now benefit from the new search results page's event: the `pageInfo`.
 

@@ -33,7 +33,7 @@ Follow this step by step if you aim to translate text messages from your store's
 
 2. Access the **GraphQL admin IDE** section of the desired account. You will find it in the admin's side-bar menu:
 
-<img style="box-shadow: 0 3px 9px 0 rgba(61, 62, 64, 0.2);" src="https://user-images.githubusercontent.com/52087100/66516950-95d29a00-eab8-11e9-8cea-080fbdab84d5.png"/>
+<img style="box-shadow: 0 3px 9px 0 rgba(61, 62, 64, 0.2);" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/catalog-internationalization-1.png"/>
 
 3. From the dropdown list, choose the `vtex.catalog-graphql` app.
 4. Click on  *Query Variables* at the bottom of the page.
@@ -44,7 +44,7 @@ Now, no further actions are needed on your part. Once you receive the expected r
 
 Check the following gif of the complete process of overwriting automatic translations of a product:
 
-![catalog](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/vtex-io-multi-language-stores/89960323-1a300500-dc15-11ea-89a0-bbd5d6494d64_46.gif)
+![catalog](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/catalog-internationalization-0.gif)
 
 ## Category
 

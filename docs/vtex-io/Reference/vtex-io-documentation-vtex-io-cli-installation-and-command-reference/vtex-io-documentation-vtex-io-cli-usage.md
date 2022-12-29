@@ -15,7 +15,7 @@ Start using the VTEX IO CLI by running the following command to access a summary
 vtex help
 ```
 
-![VTEX command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-help-command_17.png)
+![VTEX command](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-usage-0.png)
 
 > ℹ️ Check the [Command Reference](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference) for more details.
 
@@ -35,7 +35,7 @@ Once you log in, the web page will display the following message: *“You may no
 
 Now, when you go back to the computer terminal, you'll have access to a development environment for this VTEX account. You'll see some basic information about your account as in the following.
 
-![Login Screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-login-command_37.png)
+![Login Screen](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-usage-1.png)
 
 > ℹ️ If you later decide to work on another account, run `vtex switch {account-name}`, specifying the account name you want to switch to.
 
@@ -53,11 +53,11 @@ vtex use {workspace-name}
 
 Notice that if a workspace with the chosen name already exists, you'll be taken to it.
 
-![Change Workspace](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-use-command-one_55.png)
+![Change Workspace](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-usage-2.png)
 
 Otherwise, you'll be asked if you want to create it.
 
-![New Workspace](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-use-two_59.png)
+![New Workspace](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-usage-3.png)
 
 From now on, every operation performed will happen in the specified workspace.
 
@@ -81,7 +81,7 @@ vtex install {appvendor}.{appname}@{appversion}
 
 If you try to install an app that has [Billing Options](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options), you first need to access the [VTEX App Store](https://apps.vtex.com/) and agree to the app's terms and conditions.
 
-![Billing Options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-install-app_83.png)
+![Billing Options](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-usage-4.png)
 
 1. If you type `Y`, the app's page you intend to install from the VTEX App Store will open in your browser.
 2. To continue with the installation, click on `GET APP` > `CONFIRM` to log in to your VTEX store.
@@ -97,7 +97,7 @@ Start a new project from pre-defined templates by running the following command.
 vtex init
 ```
 
-![Init command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-init-command_99.png)
+![Init command](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-usage-5.png)
 
 For example, to start developing a store theme app, choose the `store` option. This will clone the [Store Theme](https://github.com/vtex-apps/store) boilerplate app into your local files.
 
@@ -109,7 +109,7 @@ Change to the directory of the app you're developing and run the following comma
 vtex link
 ```
 
-![Link Command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-link-command_111.png)
+![Link Command](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-usage-6.png)
 
 VTEX IO's CLI will monitor your files and provide an URL related to that workspace. You'll be able to access it through `https://{workspace}--{account}.myvtex.com`, by replacing the value between curly braces with the name of the workspace previously created and your VTEX account. For example, `https://marianacaetano--appliancetheme.myvtex.com`.
 
@@ -151,4 +151,4 @@ Use the `--help` flag as in the following to learn more about a specific command
 vtex [COMMAND] --help
 ```
 
-![Help Command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-browse-help-command_153.png)
+![Help Command](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-usage-7.png)

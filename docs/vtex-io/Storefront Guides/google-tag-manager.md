@@ -10,7 +10,7 @@ The **Google Tag Manager (GTM) app** is a first-party solution that integrates y
 
 With the app, you can avoid contact with the store's source code when adding, editing, or removing website tags and quickly provide user browsing tracking for Google Analytics.
 
-![gtm-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/149195530-858aebb6-7ebf-44ee-bd1b-63841521e0b7_13.png)
+![gtm-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/google-tag-manager-0.png)
 
 [block:html]
 {

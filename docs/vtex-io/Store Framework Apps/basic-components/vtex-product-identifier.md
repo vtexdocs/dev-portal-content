@@ -7,12 +7,12 @@ createdAt: "2020-06-03T15:19:25.494Z"
 updatedAt: "2022-08-18T10:57:35.113Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Product Identifier app is responsible for showing a product identifier, such as: product reference, product ID, sku EAN or sku reference.
 
-![reference](https://user-images.githubusercontent.com/60782333/90151384-0abbd380-dd5d-11ea-9022-69ba4685e1d0.png)
+![reference](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-identifier-0.png)
 
 ## Configuration
 
@@ -46,7 +46,7 @@ The `product-identifier` interface is available is also available within the adm
 
 It's also possible to hide the component label or customize its text. Notice that, in the following example, the "Reference" text was substituted by "Foo".
 
-![foo](https://user-images.githubusercontent.com/60782333/90145130-004a0b80-dd56-11ea-9cbd-5ee621da4d69.png)
+![foo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-identifier-1.png)
 
 ## Customization
 
@@ -68,7 +68,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://carafizi.com/"><img src="https://avatars3.githubusercontent.com/u/51974587?v=4" width="100px;" alt=""/><br /><sub><b>Gabriel Carafizi</b></sub></a><br /><a href="https://github.com/vtex-apps/product-identifier/commits?author=carafizi1" title="Code">💻</a></td>
+    <td align="center"><a href="http://carafizi.com/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-identifier-2.png">💻</a></td>
   </tr>
 </table>
 

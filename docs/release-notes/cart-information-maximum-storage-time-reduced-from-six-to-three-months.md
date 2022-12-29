@@ -7,7 +7,7 @@ hidden: false
 excerpt: "From now on, the cart information, as well as the items chosen by the customer, will no longer be accessible after three months of creating the cart. After this period, the `orderFormId` can be automatically reassigned to any new cart created."
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/cart-information-maximum-storage-time-reduced-from-six-to-three-months-0.png)
 
 The `orderFormId` is the parameter that allows identifying a cart and verifying what information is present in it (items, payment method, delivery channel, etc.).
 

@@ -8,7 +8,7 @@ updatedAt: "2022-02-24T13:01:33.578Z"
 ---
 The Rich Text block converts texts written in Markdown to HTML and displays it in your storefront.
 
-![image](https://user-images.githubusercontent.com/12139385/70084949-119b1f80-15ee-11ea-91dd-1277427c8aee.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-rich-text-0.png)
 
 For example, the text `[Help](https://developers.vtex.com/vtex-developer-docs/docs/welcome).\n**Be Bold!**\n*This is italic*` is converted to:
 

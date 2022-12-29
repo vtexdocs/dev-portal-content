@@ -12,8 +12,8 @@ For stores using `search-resolver@0.x`  and the native search,  [VTEX Search Gra
 
 ## Response before the update
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/f62b7f6-Screenshot_1_17.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/update-on-search-resolver-api-response-0.png)
 
 ## Response after the update
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/dd1a88b-Screenshot_3_19.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/update-on-search-resolver-api-response-1.png)

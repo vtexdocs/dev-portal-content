@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.044Z"
 ---
 The `logo` block displays a logo in the store header.
 
-![logo](https://user-images.githubusercontent.com/52087100/70247921-f1d43a80-1758-11ea-853e-065dfed06c73.png)
+![logo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-logo-0.png)
 
 ## Configuration
 

@@ -8,13 +8,13 @@ updatedAt: "2022-11-11T16:13:51.504Z"
 ---
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
 The Store Link app provides blocks responsible for displaying links in other theme blocks, such as the Product Summary. 
 
-![image](https://user-images.githubusercontent.com/8517023/73387868-f1b36f80-42af-11ea-8e24-3045d2c819b4.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-link-0.png)
 
 ## Configuration
 
@@ -149,7 +149,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/anto90fg"><img src="https://avatars.githubusercontent.com/u/73878310?v=4?s=100" width="100px;" alt=""/><br /><sub><b>anto90fg</b></sub></a><br /><a href="https://github.com/vtex-apps/store-link/commits?author=anto90fg" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/anto90fg"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-link-1.png">💻</a></td>
   </tr>
 </table>
 

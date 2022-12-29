@@ -7,19 +7,19 @@ createdAt: "2020-06-03T15:19:31.995Z"
 updatedAt: "2022-12-12T14:10:01.827Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Product Customizer component can be used on the Product Details Page (PDP) to display [attachments](https://help.vtex.com/tutorial/o-que-e-um-anexo--aGICk0RVbqKg6GYmQcWUm) and/or a [subscription form](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453).
 
 An attachment is the optional and cost-free customization of a product.
 
-![attachment-product-customization-select](https://user-images.githubusercontent.com/52087100/65711995-707f6e00-e06c-11e9-8faa-43aecfed3e51.png)
+![attachment-product-customization-select](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-0.png)
 *Example of a PDP with the Product Customizer component displaying the product's attachments.*
 
 Product subscriptions facilitate recurring sales by automatically scheduling the purchase of a specific product at the frequency requested by the customer.
 
-![subscription-gif](https://user-images.githubusercontent.com/52087100/104508392-eba0c680-55c6-11eb-9d08-772a173c1df3.gif)
+![subscription-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-1.gif)
 *Example of a PDP with the Product Customizer component displaying the product subscription.*
 
 ## Before you start
@@ -100,11 +100,11 @@ While building your solution, notice that you can receive inputs from three type
  
 Check the following example where the three attachment types are implemented:
 
-![product-customizer-select](https://user-images.githubusercontent.com/52087100/65720836-32d81080-e07f-11e9-9782-0f5a2e6934f0.png)
+![product-customizer-select](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-2.png)
 
 Check out below how the product attachment displayed above was registered in the Catalog: 
 
-![attachment-product-customizer](https://user-images.githubusercontent.com/52087100/65720878-471c0d80-e07f-11e9-8267-27c35fb4c6b4.png)
+![attachment-product-customizer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-3.png)
 
 It's worth noting that when an attachment is registered as **required**, all attachment options are automatically made available to shoppers. If an attachment is **not required**, the `Add customization` button is rendered as in the example above, giving shoppers the option to add or not an attachment to their product.
 
@@ -176,7 +176,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/leoWorkingGood"><img src="https://avatars2.githubusercontent.com/u/51805410?v=4" width="100px;" alt=""/><br /><sub><b>leoWorkingGood</b></sub></a><br /><a href="https://github.com/vtex-apps/product-customizer/commits?author=leoWorkingGood" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/leoWorkingGood"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-4.png">💻</a></td>
   </tr>
 </table>
 

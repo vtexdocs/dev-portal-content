@@ -12,14 +12,14 @@ updatedAt: "2021-10-06T20:09:57.389Z"
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 
 The VTEX Google Tag Manager app is a first party integration to the [Google Tag Manager solution](https://tagmanager.google.com).
 
-![google-tag-manager-app](https://user-images.githubusercontent.com/52087100/84321347-55e11c80-ab49-11ea-9445-24eec6a07785.png)
+![google-tag-manager-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-google-tag-manager-0.png)
 
 ## Configuration
 
@@ -53,7 +53,7 @@ We, by default, blacklist the `html` ID, which automatically blocklists all the 
 
 > ⚠️ *The HTML blacklist is VTEX Google Tag Manager app's default. If you want to disable this restriction go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@2.x/setup` and check the toggle below.*
 
-<img src="https://user-images.githubusercontent.com/11340665/103930428-7c762e80-50fd-11eb-9cab-bc9e542b4dbf.png"/>
+<img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-google-tag-manager-3.png"/>
 
 Most of the widely used Custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs a Custom HTML for one of those cases, the integration can either be done by transforming the tags into a [VTEX IO Pixel App](https://vtex.io/docs/apps/pixel/) or by removing this restriction.
 
@@ -107,7 +107,7 @@ To persist campaign data across user navigation you must add the variable `Origi
 
 ```
 
-![gif1](https://user-images.githubusercontent.com/67270558/136271386-afe75beb-32f3-46db-bb31-726f9275973d.gif)
+![gif1](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-google-tag-manager-1.gif)
 
 9. Click on `Save`
 
@@ -119,7 +119,7 @@ After [creating the variable `OriginalLocation`](#link para o step1), use the Go
 
 1. Click on the **Variables** section, on **User-Defined Variables** and select one of the  Google Analytics Settings variables.
 
-![img](https://user-images.githubusercontent.com/67270558/136271858-f8e783e4-177d-4fd0-b6f1-3768cc175fef.png)
+![img](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-google-tag-manager-2.png)
 
 2. Click on **Variable Configuration** box and in **More Settings** select **Fields to Set**.
 3. In **Fields to set**, click on `Add Field`.

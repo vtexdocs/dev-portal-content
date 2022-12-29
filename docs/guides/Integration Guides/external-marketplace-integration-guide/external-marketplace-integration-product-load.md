@@ -8,7 +8,7 @@ updatedAt: "2022-04-06T21:10:32.305Z"
 
 The initial load of products only occurs after the user installs and configures the connector to use the VTEX Catalog and communicate with the marketplace. All products active on the main account and associated to a sales channel must be sent to the marketplace.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/ceb5fb3-MarketplaceConnections_Docs_-_Initial_load_of_products-1_12.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-product-load-0.jpg)
 
 ## Send initial load of products
 
@@ -57,7 +57,7 @@ To avoid processing gaps due to the big volume of information of the initial loa
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-marketplace-integration-guide/8f8b5c9-Marketplace_Docs_-_API_Ref_62.jpg)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-product-load-1.jpg)
 [Get list of SKUs associated with a sales channel](https://developers.vtex.com/vtex-rest-api/reference/get_api-catalog-system-pvt-sku-stockkeepingunitidsbysaleschannel)
 
 [Get details of an SKU associated with a sales channel](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku)

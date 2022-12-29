@@ -7,12 +7,12 @@ createdAt: "2020-06-03T15:19:35.560Z"
 updatedAt: "2022-02-24T13:00:12.534Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/layout-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Tab Layout app provides you the needed structure to create different layouts within the store's main one from the use of *tabs*.
 
-![tab-layout](https://user-images.githubusercontent.com/52087100/66661201-fc70c880-ec1c-11e9-8387-3fea98f59e3c.png)
+![tab-layout](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-0.png)
 *Example of an brazilian VTEX store with tabs (`Perfumes até 40%off`, `Presentes`, and `Best Sellers`) displaying different content for users.* 
 
 ## Configuration
@@ -29,12 +29,12 @@ Now, you are able to use all the blocks exported by the `tab-layou` app. Check o
 
 | Block name   | Description                |
 | :----------: | :------------------------: |
-| `tab-layout` |  ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Parent block that merely defines the logic (via its children blocks) for the layout structure, declaring the desired list of tabs and its content. |
-| `tab-list`   |  ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines the list of tabs to be rendered. It only accepts the `tab-list.item` block as child. | 
-| `tab-list.item` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines the rendering for a given tab. Notice that it does not define the tab content, which is handled by the `tab-content.item` block.  |
+| `tab-layout` |  ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-1.png) for the layout structure, declaring the desired list of tabs and its content. |
+| `tab-list`   |  ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-2.png) Defines the list of tabs to be rendered. It only accepts the `tab-list.item` block as child. | 
+| `tab-list.item` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-3.png) Defines the rendering for a given tab. Notice that it does not define the tab content, which is handled by the `tab-content.item` block.  |
 | `tab-list.item.children` | Flexible alternative to `tab-list.item`. Defines the rendering for a given tab and also accepts any array of blocks as its children. |
-| `tab-content` |  ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines the list of content to be rendered in each tab. It only accepts the `tab-content.item` block as child. |
-| `tab-content.item` |  ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines the content for a given tab. | 
+| `tab-content` |  ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-4.png) Defines the list of content to be rendered in each tab. It only accepts the `tab-content.item` block as child. |
+| `tab-content.item` |  ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-5.png) Defines the content for a given tab. | 
 
 2. In the desired page tempate, such as `store.home`, add the `tab-layout` block:
 
@@ -242,9 +242,9 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/JNussens"><img src="https://avatars0.githubusercontent.com/u/7662734?v=4" width="100px;" alt=""/><br /><sub><b>Jean Nussenzveig</b></sub></a><br /><a href="https://github.com/vtex-apps/tab-layout/commits?author=JNussens" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/lucasayb"><img src="https://avatars2.githubusercontent.com/u/17356081?v=4" width="100px;" alt=""/><br /><sub><b>Lucas Yamamoto</b></sub></a><br /><a href="https://github.com/vtex-apps/tab-layout/commits?author=lucasayb" title="Code">💻</a></td>
-    <td align="center"><a href="https://acct.global/"><img src="https://avatars0.githubusercontent.com/u/38354801?v=4" width="100px;" alt=""/><br /><sub><b>weslybrandao</b></sub></a><br /><a href="https://github.com/vtex-apps/tab-layout/commits?author=weslybrandao" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/JNussens"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-6.png">💻</a></td>
+    <td align="center"><a href="https://github.com/lucasayb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-7.png">💻</a></td>
+    <td align="center"><a href="https://acct.global/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-8.png">💻</a></td>
   </tr>
 </table>
 

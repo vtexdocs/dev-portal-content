@@ -26,7 +26,7 @@ In VTEX IO, 404 pages are **natively** enabled for inexistent product pages and 
 3. In the Settings section, check the radio button to **enable 404 for paths with one segment**, e.g. `/foo`. This will enable 404 pages on pages whose URLs have one invalid segment, following the restriction stated above.
 4. Save your changes.
 
-![404-pages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/pages/87157435-a0fb6600-c294-11ea-8f46-e47ac4549c6f_28.png)
+![404-pages](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-enabling-404-pages-0.png)
 
 Once your changes are duly saved, your store is ready to display 404 pages whenever this scenario occurs.
 
@@ -58,6 +58,6 @@ Find below an example of a `store.not-found#product` in a product template:
 
 4. Save your changes and then run `vtex link` in your terminal to witness the above block being rendered as follows:
 
-![not-found-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Storefront%20Guides/pages/76447318-4108b780-63a7-11ea-9b03-77413e0e4855_60.png)
+![not-found-block](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-enabling-404-pages-1.png)
 
 5. If you're happy with all configurations done in your Development workspace, it is time do [make your new theme version publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public/).

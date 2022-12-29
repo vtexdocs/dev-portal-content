@@ -7,12 +7,12 @@ createdAt: "2020-06-03T15:19:30.080Z"
 updatedAt: "2022-04-11T12:41:12.534Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The `add-to-cart-button` is a block responsible for adding products in the [Minicart](https://vtex.io/docs/components/all/vtex.minicart/) (`minicart.v2`). 
 
-![image](https://user-images.githubusercontent.com/284515/70233985-69e13700-173e-11ea-91f7-6675a6a0e73b.png)
+![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-add-to-cart-button-0.png)
 
 > ⚠️ **The Add To Cart Button only effectively function i.e. only adds products to the Minicart if the store uses the Minicart v2**. In this scenario, it successfully works in the Shelf component as well as in the Product Details page. **When using the [Minicart v1](https://github.com/vtex-apps/minicart/blob/383d7bbd3295f06d1b5854a0add561a872e1515c/docs/README.md), you should configure the [Buy Button block](https://vtex.io/docs/components/all/vtex.store-components/buybutton/) in the Product Details page, and the [Product Summary Buy Button](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-buy-button/) in the Shelf component instead**.
 
@@ -73,9 +73,9 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/JNussens"><img src="https://avatars0.githubusercontent.com/u/7662734?v=4" width="100px;" alt=""/><br /><sub><b>Jean Nussenzveig</b></sub></a><br /><a href="https://github.com/vtex-apps/add-to-cart-button/commits?author=JNussens" title="Code">💻</a></td>
-    <td align="center"><a href="http://ygorneves.com"><img src="https://avatars1.githubusercontent.com/u/39542011?v=4" width="100px;" alt=""/><br /><sub><b>Ygor Neves</b></sub></a><br /><a href="https://github.com/vtex-apps/add-to-cart-button/commits?author=ygorneves10" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/lucaspacheco-acct"><img src="https://avatars0.githubusercontent.com/u/59736416?v=4" width="100px;" alt=""/><br /><sub><b>Lucas Pacheco</b></sub></a><br /><a href="https://github.com/vtex-apps/add-to-cart-button/commits?author=lucaspacheco-acct" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/JNussens"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-add-to-cart-button-1.png">💻</a></td>
+    <td align="center"><a href="http://ygorneves.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-add-to-cart-button-2.png">💻</a></td>
+    <td align="center"><a href="https://github.com/lucaspacheco-acct"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-add-to-cart-button-3.png">💻</a></td>
   </tr>
 </table>
 

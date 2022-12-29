@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/improvement-price-consistency-checkout-discounts-installments-0.png)
 
 We have improved the way installments are calculated and displayed to our customers at Checkout. This change aims to provide accurate information on discounts in the appropriate contexts.
 

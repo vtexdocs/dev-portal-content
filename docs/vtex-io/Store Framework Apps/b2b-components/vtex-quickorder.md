@@ -8,13 +8,13 @@ updatedAt: "2022-12-13T22:23:30.600Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/b2b-components/#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Quickorder app, designed for **B2B scenarios**, creates a custom page in your store aimed at purchases in bulk, offering tools such as uploading a spreadsheet to make bulk orders more agile.
 
-![quick-order](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/RawQuickorder.png)
+![quick-order](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-quickorder-0.png)
 _Example of a quick order page without customization_
 
 ## Configuration
@@ -196,7 +196,7 @@ The **Copy/Paste SKU** option allows user to paste a list of desired SKUs in a t
 
 For example:
 
-![Copy & Paste](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/Copy-n-Paste.gif)
+![Copy & Paste](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-quickorder-1.gif)
 
 > ℹ Remember that you need to validate the list after pasting it. Validating the Reference IDs will let you know if the selected SKUs are in fact available for purchase.
 
@@ -204,7 +204,7 @@ For example:
 
 Another possible option that replaces the **Copy/Paste SKU** option is to upload a spreadsheet containing two columns (SKU and Quantity) to the **Upload** component (`quickorder-upload` block).
 
-![Spreadsheet](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/Spreadsheet.png)
+![Spreadsheet](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-quickorder-2.png)
 
 The spreadsheet will work in the same way as the list pasted using the **Copy/Paste SKU** option, as follows:
 
@@ -219,7 +219,7 @@ The **Custom Search Bar** component works as a custom search bar. Simply add the
 
 Remember to add each selected item to the cart by clicking on `Add`.
 
-![One by One](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/One-by-One.gif)
+![One by One](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-quickorder-3.gif)
 
 This option does not require any validation, since selecting the SKUs using a search bar already ensures that they are available to purchase.
 
@@ -227,7 +227,7 @@ This option does not require any validation, since selecting the SKUs using a se
 
 The **Categories** component allows users to choose their desired SKUs and respective quantities using the store's categories tree, adding all the selected options to the cart at once.
 
-![Category](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/Category.gif)
+![Category](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-quickorder-4.gif)
 
 > ⚠ This option is only recommended if you have less than 50 SKUs for each category in your Catalog. Otherwise, the component will take too long to load and will negatively affect your store's user experience.
 

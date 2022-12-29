@@ -78,6 +78,6 @@ When developing a payment integration, you might need to add specific features. 
 - [Cardholder document configuration](https://developers.vtex.com/vtex-rest-api/docs/cardholder-document-configuration)
 - [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/vtex-rest-api/docs/layout-development-guide-for-payment-methods-in-smart-checkout-vtex)
 
-![Payment layout customization example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/98a1ba7-2b693ad-layout_gif_85.gif)
+![Payment layout customization example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-overview-0.gif)
 
-![Payment App example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Getting%20Started/d9a2e11-c95f758-kX6y8QN55B_87.gif)
+![Payment App example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-overview-1.gif)

@@ -7,7 +7,7 @@ createdAt: "2020-06-03T15:19:15.716Z"
 updatedAt: "2021-08-18T22:07:13.639Z"
 ---
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/functional-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Product Context app is responsible for providing data regarding a certain product to all of its children blocks.
@@ -105,7 +105,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/sahanljc"><img src="https://avatars.githubusercontent.com/u/42151054?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sahan Jayawardana</b></sub></a><br /><a href="https://github.com/vtex-apps/product-context/commits?author=sahanljc" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/sahanljc"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-context-0.png">💻</a></td>
   </tr>
 </table>
 

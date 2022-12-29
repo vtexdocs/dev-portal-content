@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![App Development](https://img.shields.io/badge/-App%20Development-blue)
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-week-342019-0.png)
 
 Hello, team!
 

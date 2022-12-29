@@ -13,14 +13,14 @@ updatedAt: "2021-01-14T16:09:37.659Z"
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 
 This is a first party integration app for Google Customer Reviews, a free service that enables Google to collect valuable feedback from customers who’ve made a purchase on your site.
 
-![Google Customer Reviews](https://user-images.githubusercontent.com/284515/77967280-31500500-72bb-11ea-9e71-b3abf8d677df.png)
+![Google Customer Reviews](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-google-customer-reviews-0.png)
 
 ## Configuration
 

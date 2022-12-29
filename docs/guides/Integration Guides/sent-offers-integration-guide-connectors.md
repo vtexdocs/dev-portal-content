@@ -29,7 +29,7 @@ Connectors interact with Offer Management in four ways:
 
 The diagram below shows the Offer Management’s interface, which the vendors access through their VTEX accounts.
 
-![offer\_management\_ui](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/979d549-offer_management_ui_32.png)
+![offer\_management\_ui](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/sent-offers-integration-guide-connectors-0.png)
 
 ## 1.  Create Channel
 
@@ -66,7 +66,7 @@ Ex. “vtex.netshoes”, “anymarket.b2w”, `"vtex.meli-premium"`, `"vtex.meli
 > **API Reference:** Open Interaction, Close Interaction
 
 Both the Marketplace and the seller operate everything that happens to offers by creating interactions. For every action that happens to an offer, the connector must create an interaction to notify it. The image below shows how interactions appear on the Offer Management's UI.
-![sent\_offers\_print\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/0f50908-sent_offers_print_2_69.png)
+![sent\_offers\_print\_2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/sent-offers-integration-guide-connectors-1.png)
 
 ### Interaction Lifecycle
 
@@ -84,7 +84,7 @@ A seller interaction’s `origin` indicates what the process  is about, and incl
 - Price
 - Inventory
 
-![Updates seller portal](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/5e655f0-Updates_seller_portal_86.jpg)
+![Updates seller portal](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/sent-offers-integration-guide-connectors-2.jpg)
 Interactions are usually used to deal with a single type of process at a time. However, there are situations in which data about catalog, price or inventory are added in the same interaction.
 
 > Ex: B2W’s API has only one endpoint for creating and updating products. This means that to send them a seller’s catalog, both price and inventory data must be sent through the request. So even though initially an `Inventory type`  interaction is created, price data will also be added.

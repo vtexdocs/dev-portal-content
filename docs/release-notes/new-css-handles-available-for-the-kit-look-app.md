@@ -6,7 +6,7 @@ createdAt: "2022-11-22T14:07:01.550Z"
 hidden: false
 excerpt: 'New CSS handles have been added to the Kit Look app in order to allow greater customization flexibility.'
 ---
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-css-handles-available-for-the-kit-look-app-0.png)
 
 New CSS handles have been added to the [Kit Look app](https://developers.vtex.com/vtex-developer-docs/docs/vtexbr-kitlook) in order to allow greater customization flexibility.
 

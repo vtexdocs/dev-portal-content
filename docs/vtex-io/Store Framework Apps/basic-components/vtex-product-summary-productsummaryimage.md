@@ -8,7 +8,7 @@ updatedAt: "2022-07-02T00:50:33.284Z"
 ---
 `product-summary-image` is a block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) that renders the product's image.
 
-![foto-product-summary-image](https://user-images.githubusercontent.com/52087100/79134289-d5d64a80-7d83-11ea-84e6-a5a237acfae1.png)
+![foto-product-summary-image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummaryimage-0.png)
 
 ## Configuration
 
@@ -58,7 +58,7 @@ updatedAt: "2022-07-02T00:50:33.284Z"
 | `displayMode` | `enum` | Defines the Product Summary Image display mode. Possible values are: `normal` and `inline`. | `normal` |
 | `placeholder` | `string` | Defines the Product Summary Image placeholder image. | `undefined` |
 | `mainImageLabel` | `string \| object` | Matches the value defined in the `imageLabel` field from the admin's Catalog. Once matched, it defines which product image will be the main image displayed in the Product Summary component. | `undefined`|
-| `hoverImageLabel` | `string` | ![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red) Text value that matches the value defined in the `imageLabel` field from the admin's Catalog. Once matched, it defines which product image will be displayed when the user is hovering. If you set a label and no match is found, no image will be displayed during the hover. *Caution*: Use the `hoverImage` prop instead. | `undefined` | 
+| `hoverImageLabel` | `string` | ![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummaryimage-1.png) Text value that matches the value defined in the `imageLabel` field from the admin's Catalog. Once matched, it defines which product image will be displayed when the user is hovering. If you set a label and no match is found, no image will be displayed during the hover. *Caution*: Use the `hoverImage` prop instead. | `undefined` | 
 | `hoverImage` | `object` | Defines which criteria should be used to define the hover image according to the product images in the admin's Catalog. | `undefined`|
 | `width` | `object` | Defines the Product Summary Image width. | `undefined` |
 | `height` | `object` | Defines the Product Summary Image height. | `undefined` |

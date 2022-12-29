@@ -7,7 +7,7 @@ hidden: false
 excerpt: "The [Payment Provider Protocol (PPP) API documentation](https://developers.vtex.com/vtex-rest-api/reference/payment-provider-protocol-api-overview) and the [Redirect section of the Purchase Flows article](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows#redirect) have just been updated."
 ---
 
-![Payments](https://img.shields.io/badge/-Payments-blueviolet)
+![Payments](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/improvements-to-the-payment-provider-protocol-api-and-redirect-flow-documentation-0.png)
 
 The [Payment Provider Protocol (PPP) API documentation](https://developers.vtex.com/vtex-rest-api/reference/payment-provider-protocol-api-overview) and the [Redirect section of the Purchase Flows article](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows#redirect) have just been updated. The changes in the PPP API documentation are:
 

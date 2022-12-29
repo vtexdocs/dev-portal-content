@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-specifications-app-0.png)
 
 Aiming to bring you more flexibility when using the Product Specifications component, our product team developed the Product Specifications app, replacing the former [Product Specifications block](https://github.com/vtex-apps/store-components/blob/master/docs/ProductSpecifications.md) exported by the [Store Components app](https://vtex.io/docs/app/vtex.store-components).
 

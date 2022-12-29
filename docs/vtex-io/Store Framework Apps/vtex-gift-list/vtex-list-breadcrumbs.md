@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.277Z"
 ---
 The `breadcrumbs` block displays the path to the user's navigation list.
 
-![breadcrumbs](https://user-images.githubusercontent.com/67066494/190403886-c7038e52-7926-457e-a7bc-19bb13d52ead.gif)
+![breadcrumbs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-breadcrumbs-0.gif)
 
 ## Configuration
 

@@ -19,10 +19,10 @@ To determine which promotions are attributed to an SKU, we have to analyze its *
 1. Go to the product shopping cart.
 2. In Google Chrome, go to **Developer Tools** (`Ctrl+Shift+I`).
 3. Select the tab **Network** and press `F5` to record the reload.
-   ![network-f5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Promotions/363c9bf-network-f5_21.png)
+   ![network-f5](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-promotions-attributed-to-an-sku-0.png)
 4. After loading, press `Ctrl+F` on the **Developer Tools** and search for **orderform**.
-   ![Order form](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Promotions/4a4fc1f-order-form_23.png)
+   ![Order form](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-promotions-attributed-to-an-sku-1.png)
 5. Click on **orderform** and go to `items`. After clicking on `items`, click on the numbers (`0`, `1`, `2`, etc.) to see the details of the product you want. In our example, since there is only one item, it is represented by the number `0` in the array.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Promotions/9fd752f-items-0_25.png)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-promotions-attributed-to-an-sku-2.png)
 6. After clicking on the number, scroll down to **priceTags**. Click on priceTags and then on the numbers (0, 1, 2, etc.) to see the details of the promotion you want. In our example, since there is only one promotion, it is represented by the number `0` in the array. After this, look for the “identifier” of the promotion.
 7. Open another tab, and go to URL `https://{nomedaloja}.vtexcommercestable.com.br/admin/pricing/#/benefit/{numero-do-identifier}`. This is the promotion that is being applied to the product in the cart. Check the configurations of the promotion and see whether the conditions apply to the SKU in question.

@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/create-a-product-availability-form-for-the-availability-subscriber-block-0.png)
 
 Before configuring the [Availability Subscriber block](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-availabilitysubscriber), to show the availability subscriber form when a product is unavailable, you must configure a JSON schema in Master Data.
 
