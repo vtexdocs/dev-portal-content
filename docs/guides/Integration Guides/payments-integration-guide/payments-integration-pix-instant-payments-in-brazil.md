@@ -64,10 +64,10 @@ The table below gives further detail on the applicability of each endpoint to Pi
     "1-0": "Payment",
     "0-2": "⚠️ Obsolete",
     "1-1": "List Payment Provider Manifest",
-    "1-2": ":white-check-mark: Yes",
+    "1-2": "✅ Yes",
     "2-0": "Payment",
     "2-1": "Create Payment",
-    "2-2": ":white-check-mark: Yes",
+    "2-2": "✅ Yes",
     "3-0": "Payment",
     "3-1": "Cancel Payment",
     "4-1": "Capture Payment",
@@ -85,10 +85,10 @@ The table below gives further detail on the applicability of each endpoint to Pi
     "7-2": ":x: No",
     "8-2": ":x: No",
     "9-2": ":x: No",
-    "3-2": ":white-check-mark: Yes",
-    "4-2": ":white-check-mark: Yes",
-    "5-2": ":white-check-mark: Yes",
-    "6-2": ":white-check-mark: Yes"
+    "3-2": "✅ Yes",
+    "4-2": "✅ Yes",
+    "5-2": "✅ Yes",
+    "6-2": "✅ Yes"
   },
   "cols": 3,
   "rows": 10
@@ -103,7 +103,7 @@ The table below gives further detail on the applicability of each endpoint to Pi
 }
 [/block]
 
->❗ We strongly advise against using the <span class=\"api pg-type type-get\">GET</span>[List Payment Methods](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods) to proceed with the implementation. This route is obsolete and it will be deprecated in soon - early 2021
+>❗ We strongly advise against using the <span class="api pg-type type-get">GET</span>[List Payment Methods](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods) to proceed with the implementation. This route is obsolete and it will be deprecated in soon - early 2021
 
 [block:callout]
 {

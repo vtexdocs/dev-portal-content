@@ -1,10 +1,10 @@
 ---
-title: 'New go-live documentation available'
-slug: 'new-go-live-documentation-available'
-type: 'added'
-createdAt: '2022-12-12T12:40:04.564Z'
+title: "New go-live documentation available"
+slug: "new-go-live-documentation-available"
+type: "added"
+createdAt: "2022-12-12T12:40:04.564Z"
 hidden: false
-excerpt: 'If you have configured your store's ecommerce capabilities and built your storefront, these new and improved guides are sure to help you take your store to production.'
+excerpt: "If you have configured your store's ecommerce capabilities and built your storefront, these new and improved guides are sure to help you take your store to production."
 ---
 
 ![Store Development](https://img.shields.io/badge/-Store%Development-red)
