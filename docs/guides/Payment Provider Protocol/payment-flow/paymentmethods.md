@@ -8,7 +8,7 @@ updatedAt: "2022-07-15T14:55:38.053Z"
 ---
 **Important:** this endpoint must be public, and should not require `X-VTEX-API-AppKey`/`X-VTEX-API-AppToken` headers.
 
-<br></br>
+</br>
 
 ## Response body
 ---
@@ -28,7 +28,7 @@ updatedAt: "2022-07-15T14:55:38.053Z"
     </tr>
 </table>
 
-<br></br>
+</br>
 
 ## Available payment methods
 ---

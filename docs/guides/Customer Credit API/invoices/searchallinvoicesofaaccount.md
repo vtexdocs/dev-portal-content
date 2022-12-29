@@ -12,7 +12,7 @@ updatedAt: "2022-05-23T12:17:31.134Z"
 <li><strong>By page numbers</strong>:<code>?from={int}&to={int}</code></li>
 </ul>
 
-<br></br>
+</br>
 
 ## Date params
 ---
@@ -24,7 +24,7 @@ You can refine the API response using the two date params that will always be us
   <li><strong>By due date</strong>: <code>?dueDateFrom={dateISO8601}&dueDateTo={dateISO8601}</code></li>
   </ul>
 
-<br></br>
+</br>
 
 ## Other filters 
 ---
@@ -38,7 +38,7 @@ For proper responses, you can use the filters below:
 <li><strong>By creditAccountId</strong>: <code>?creditAccountId={creditAcountId}</code></li>
 </ul>
 
-<br></br>
+</br>
 
 ## Combine filters 
 ---
@@ -51,4 +51,4 @@ For example, if we take the query string `?value=100&status=Paid`, the criteria 
 
 Now, if we take the same query string and add the `op` parameter, the result will be `?value=100&status=Paid&op=or` and the criteria will build <strong>value=100 OR status=Paid</strong>
 
-<br></br>
+</br>

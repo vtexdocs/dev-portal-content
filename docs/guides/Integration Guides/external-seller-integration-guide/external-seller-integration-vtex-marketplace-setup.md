@@ -13,11 +13,11 @@ For a VTEX store to act as a marketplace and sell products from external sellers
 
 This article explains what must be done to complete each of these configuration steps.
 
-<br></br>
+</br>
 
 ---
 
-<br></br>
+</br>
 
 ## Register the seller in the marketplace Admin
 
@@ -41,7 +41,7 @@ The article [Configuring a seller](https://help.vtex.com/en/tutorial/configuring
   "body": "The `seller ID`, created during this step, will be essential for the integration. Most of the API requests explained in the next section of this guide will use it to identify the seller."
 }
 [/block]
-<br></br>
+</br>
 
 ## Activate the seller for a trade policy
 
@@ -51,7 +51,7 @@ To do this, in the marketplace management panel's main menu, click on the option
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-seller-integration-guide/27999ef-seller-trade-policy_51.png)
 Check out the Help Center documentation to get the complete explanation on how to [enable the seller for a trade policy](https://help.vtex.com/en/tutorial/configuring-the-seller--tutorials_392#editing-the-trade-policy).
 
-<br></br>
+</br>
 
 ## Set up API authentication credentials
 

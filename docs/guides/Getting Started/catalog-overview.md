@@ -12,7 +12,7 @@ updatedAt: "2022-09-27T21:01:32.508Z"
 [/block]
 Catalog is your store's administration module for configuring the features related to your ecommerce products to make them available for customers on your website. This overview article goes over what you can accomplish with the VTEX Catalog, including relevant links to our developer documentation about this topic.
 
-<br></br>
+</br>
 
 ## Understanding Catalog architecture
 

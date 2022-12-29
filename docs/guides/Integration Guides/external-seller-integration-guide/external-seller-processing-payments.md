@@ -11,13 +11,13 @@ Although in our [marketplace / seller architecture](https://developers.vtex.com/
 - **External seller processing payments:** seller should follow the instructions below. 
 
 
-<br></br>
+</br>
 
 ## Split Payments
 
 Marketplace orders can often contain items from multiple sellers, which are paid for in a unified checkout experience at the marketplace’s storefront. If external sellers process payments, they are tied to the conditions determined in our [Transaction Split](https://help.vtex.com/en/tutorial/split-payment--6k5JidhYRUxileNolY2VLx#transaction-split). If marketplaces decide to process payments, they can either transfer seller's purchase amount outside of VTEX, or fall under the [Payout split](https://help.vtex.com/en/tutorial/split-payment--6k5JidhYRUxileNolY2VLx#payout-split) flow. We suggest that you read our [Split Payment](https://help.vtex.com/en/tutorial/split-payment--6k5JidhYRUxileNolY2VLx) article to better inform the decision of who processes payments.
 
-<br></br> 
+</br> 
 
 ## Seller setup
 
@@ -51,7 +51,7 @@ _Email: caroldanvers@sellerstore.com_
 | Europe                  | sales-operations@vtex.com | EUR 250     |
 | United States and LatAm | sales-operations@vtex.com | 250 USD     |
 
-<br></br>
+</br>
 
 ### Configure payment settings
 
@@ -88,7 +88,7 @@ You can view all the affiliations natively connected to VTEX through your VTEX A
 [/block]
 
 
-<br></br>
+</br>
 
 #### Set up Payment Conditions and Antifraud
 To finalize Payment settings on the seller's side, it is necessary to set up Payment Conditions, or Rules, and an Antifraud for transactions.
@@ -102,7 +102,7 @@ The Antifraud can be set up  through your gateway account’s VTEX Admin.  Check
 To configure it through API, fill in the `antifraud` object in the [Insert Rule](https://developers.vtex.com/vtex-rest-api/reference/insertrule) edpoint.
 
 
-<br></br>
+</br>
 
 ## Wrapping up
 
