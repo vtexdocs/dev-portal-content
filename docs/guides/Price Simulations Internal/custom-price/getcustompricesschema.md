@@ -23,7 +23,7 @@ updatedAt: "2021-02-03T20:08:34.978Z"
     </tr>
 </table>
 
-<br>
+</br>
 
 ## Request examples and their responses 
 ---

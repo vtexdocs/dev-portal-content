@@ -34,7 +34,7 @@ updatedAt: "2020-08-19T22:00:51.768Z"
     </tr>
 </table>
 
-<br>
+</br>
 
 ## Response body example:
 [block:code]

@@ -16,7 +16,7 @@ There are two ways to manipulate data from the `orderForm` to enter a second add
 - Using the vtex.js library
 - Through API REST
 
-<br>
+</br>
 
 [block:callout]
 {
@@ -24,7 +24,7 @@ There are two ways to manipulate data from the `orderForm` to enter a second add
   "body": "Although it is possible to create a custom interface superimposed on that of VTEX containing the second address field, we do not recommend it, because it increases the chances of errors in order management."
 }
 [/block]
-<br> 
+</br> 
 
 ## vtex.js
 
@@ -40,7 +40,7 @@ The `{{orderFormId}}` value must be replaced by the ID of the orderForm that you
 
 In the `orderForm` object there is the object` invoiceData`, which contains information about the order's invoice and contains the field `address`. This field must be set with the second address you wish to add. The request body looks like the example below:
 
-<br>
+</br>
 [block:code]
 {
   "codes": [

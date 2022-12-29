@@ -131,7 +131,7 @@ The **B2B Organizations** app adds the following functionalities and components 
   </tr>
   <tr>
     <td>Organizations page</td>
-    <td>Manage Organizations<br></td>
+    <td>Manage Organizations</br></td>
   </tr>
   <tr>
     <td rowspan="5">Organization Details page</td>

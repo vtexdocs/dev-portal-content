@@ -46,15 +46,15 @@ The ability to use these resources depends on having the required [storefront pe
 
 | **Permission**                                | **Default roles**                                                                                                                        |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **Create Quotes and Carts**                   | Store Admin<br>Sales Admin<br>Sales Manager<br>Sales Representative<br>Organization Admin<br>Organization Approver<br>Organization Buyer |
-| **Access My Cost Center's Quotes and Carts**  | Sales Representative<br>Organization Approver<br>Organization Buyer                                                                      |
-| **Access My Organization's Quotes and Carts** | Sales Manager<br>Organization Admin                                                                                                      |
-| **Access All Quotes and Carts**               | Store Admin<br>Sales Admin                                                                                                               |
-| **Place Orders from Quotes and Carts**        | Store Admin<br>Sales Admin<br>Sales Manager<br>Sales Representative<br>Organization Admin<br>Organization Approver                       |
-| **Decline Quotes and Carts**                  | Store Admin<br>Sales Admin<br>Sales Manager<br>Sales Representative<br>Organization Admin<br>Organization Approver                       |
+| **Create Quotes and Carts**                   | Store Admin</br>Sales Admin</br>Sales Manager</br>Sales Representative</br>Organization Admin</br>Organization Approver</br>Organization Buyer |
+| **Access My Cost Center's Quotes and Carts**  | Sales Representative</br>Organization Approver</br>Organization Buyer                                                                      |
+| **Access My Organization's Quotes and Carts** | Sales Manager</br>Organization Admin                                                                                                      |
+| **Access All Quotes and Carts**               | Store Admin</br>Sales Admin                                                                                                               |
+| **Place Orders from Quotes and Carts**        | Store Admin</br>Sales Admin</br>Sales Manager</br>Sales Representative</br>Organization Admin</br>Organization Approver                       |
+| **Decline Quotes and Carts**                  | Store Admin</br>Sales Admin</br>Sales Manager</br>Sales Representative</br>Organization Admin</br>Organization Approver                       |
 | **Edit My Cost Center's Quotes and Carts**    | Sales Representative                                                                                                                     |
 | **Edit My Organization's Quotes and Carts**   | Sales Manager                                                                                                                            |
-| **Edit All Quotes and Carts**                 | Store Admin<br>Sales Admin                                                                                                               |
+| **Edit All Quotes and Carts**                 | Store Admin</br>Sales Admin                                                                                                               |
 
 If you want to be able to manage roles and permissions for **B2B Quotes & Carts** on the VTEX Admin, you must install [Storefront Permissions UI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions-ui) and refer to its documentation.
 
@@ -179,8 +179,8 @@ The following actions are available, depending on the user’s storefront permis
 
 | Actions                                                                                         | Required storefront permissions                                                                                                               |
 | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Editing a quote](#editing-a-quote)                                                             | Any of the following:<br>Edit My Cost Center's Quotes and Carts<br>Edit My Organization's Quotes and Carts<br>Edit All Quotes and Carts       |
-| [Requesting additional adjustments to a quote](#requesting-additional-adjustments-to-a-quote)   | Any of the following:<br>Access My Cost Center's Quotes and Carts<br>Access My Organization's Quotes and Carts<br>Access All Quotes and Carts |
+| [Editing a quote](#editing-a-quote)                                                             | Any of the following:</br>Edit My Cost Center's Quotes and Carts</br>Edit My Organization's Quotes and Carts</br>Edit All Quotes and Carts       |
+| [Requesting additional adjustments to a quote](#requesting-additional-adjustments-to-a-quote)   | Any of the following:</br>Access My Cost Center's Quotes and Carts</br>Access My Organization's Quotes and Carts</br>Access All Quotes and Carts |
 | [Declining a quote or saved cart](#declining-a-quote-or-saved-cart)                             | Decline Quotes and Carts                                                                                                                      |
 | [Using a quote or saved cart to place an order](#using-a-quote-or-saved-cart-to-place-an-order) | Place Orders from Quotes and Carts                                                                                                            |
 
@@ -229,7 +229,7 @@ The **B2B Quotes & Carts** app provides a set of three email templates to be sen
 
 | Template name | Recipients                                                                                                                                                     | Trigger                                                                                                            |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Quote created | Users with any of the following permissions:<br>Edit My Cost Center's Quotes and Carts<br>Edit My Organization's Quotes and Carts<br>Edit All Quotes and Carts | The quote request was created.                                                                                     |
+| Quote created | Users with any of the following permissions:</br>Edit My Cost Center's Quotes and Carts</br>Edit My Organization's Quotes and Carts</br>Edit All Quotes and Carts | The quote request was created.                                                                                     |
 | Quote placed  | All users who have previously interacted with the quote by editing it, requesting adjustments or approving it.                                                 | An order was placed from the existing quote.                                                                       |
 | Quote updated | All users who have previously interacted with the quote.                                                                                                       | The quote was updated in any way – including changes in discounts or expiration dates, new notes added or refusal. |
 

@@ -15,7 +15,7 @@ To increase the balance, the user can fill the field `operation` with `credit` i
 
 In both cases, the user can fill the field `value` to set the amount of credit you want to add or subtract from the balance.
 
-<br>
+</br>
 
 ## Response body has the following properties: 
 <table>
@@ -57,7 +57,7 @@ In both cases, the user can fill the field `value` to set the amount of credit y
     </tr>
 </table>
 
-<br>
+</br>
 
 ## Response body example:
 [block:code]

@@ -116,7 +116,7 @@ https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{a
 
 - **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data)) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
 
-![Chain Order Flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/1eeb67d-Screen_Shot_2022-09-30_at_19.01.28_118.png) <br>
+![Chain Order Flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/1eeb67d-Screen_Shot_2022-09-30_at_19.01.28_118.png) </br>
 
 ## API Integration
 
