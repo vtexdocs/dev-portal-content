@@ -28,7 +28,7 @@ No endpoints were deleted, and no attributes were changed. Check out the updated
     "h-1": "Previous Path - v1.1",
     "h-2": "Current Path",
     "0-0": "<span class=\"api pg-type type-post\">post</span> /receiver/v1/auth",
-    "1-0": "<span class=\"api pg-type type-get\">get</span><span class=\"api\"> <span class=\"pg-type type-put\">put</span><span class=\"api pg-type type-post\">post</span>/receiver/v1/servicos",
+    "1-0": "<span class=\"api pg-type type-get\">get</span><span class=\"api pg-type type-put\">put</span><span class=\"api pg-type type-post\">post</span>/receiver/v1/servicos",
     "2-0": "<span class=\"api pg-type type-get\">get</span> /receiver/v1/servicos/{{idDeliveryService}}",
     "3-0": "<span class=\"api pg-type type-get\">get</span> /receiver/v1/servicos/nf",
     "4-0": "<span class=\"api pg-type type-get\">get</span><span class=\"api pg-type type-post\">post</span> /receiver/v1/servicos/roteirizado",
