@@ -4,6 +4,7 @@ slug: "payment-integrations-can-now-be-developed-for-payments-on-a-pos"
 type: "added"
 createdAt: "2022-09-29T17:48:50.582Z"
 hidden: false
+excerpt: "We have just updated our documentation to enable payment partners to develop their integrations for payments on a POS, with purchases made through the [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc)."
 ---
 
 ![Payments](https://img.shields.io/badge/-Payments-blueviolet)

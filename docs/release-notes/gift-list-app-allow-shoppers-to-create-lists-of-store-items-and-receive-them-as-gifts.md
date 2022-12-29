@@ -4,6 +4,7 @@ slug: "gift-list-app-allow-shoppers-to-create-lists-of-store-items-and-receive-t
 type: "added"
 createdAt: "2022-09-16T13:36:04.922Z"
 hidden: false
+excerpt: "The [Gift List app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-gift-list) offers a new environment in the store where shoppers can create, manage and share gift lists."
 ---
 
 ![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)

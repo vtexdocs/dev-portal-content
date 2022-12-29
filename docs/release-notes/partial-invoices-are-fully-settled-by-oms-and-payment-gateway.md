@@ -4,6 +4,7 @@ slug: "partial-invoices-are-fully-settled-by-oms-and-payment-gateway"
 type: "improved"
 createdAt: "2022-06-27T17:00:00.000Z"
 hidden: false
+excerpt: "We have updated the architecture of how our OMS communicates with VTEX's Payment gateway so that [partial invoices](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe) also trigger partial settlements in transactions."
 ---
 We have updated the architecture of how our OMS communicates with VTEX's Payment gateway so that [partial invoices](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe) also trigger partial settlements in transactions.
 

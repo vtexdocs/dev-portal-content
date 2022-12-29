@@ -4,6 +4,7 @@ slug: "addition-of-signature-parameter-on-callback-url-for-payment-integrations"
 type: "improved"
 createdAt: "2022-10-07T20:55:54.566Z"
 hidden: false
+excerpt: "The callback URL now has an additional `X-VTEX-signature` parameter. This parameter contains a signature token to identify that the request has been generated from VTEX as a security measure."
 ---
 
 ![Payments](https://img.shields.io/badge/-Payments-blueviolet)

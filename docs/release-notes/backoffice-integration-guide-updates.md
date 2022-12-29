@@ -4,6 +4,7 @@ slug: 'backoffice-integration-guide-updates'
 type: 'improved'
 createdAt: '2022-05-19T19:46:38.157Z'
 hidden: false
+excerpt: "During the past few months, we have improved our [Back office integration content](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-guide) with new guides and relevant updates."
 ---
 
 ![Integration](https://img.shields.io/badge/-integration-brightgreen)

@@ -4,6 +4,7 @@ slug: "new-developer-quick-start-guides-for-orders-catalog-pricing-and-promotion
 type: "added"
 createdAt: "2022-08-22T17:02:40.314Z"
 hidden: false
+excerpt: "To facilitate your onboarding with VTEX, we have created new 'Getting Started' guides for developers. They serve as a map of existing content in our Developer Portal, directing you to the main developer journeys in VTEX's Catalog, Orders, Promotions and Pricing features."
 ---
 
 ![Documentation](https://img.shields.io/badge/-Documentation-lightgray)

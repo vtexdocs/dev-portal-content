@@ -4,6 +4,7 @@ slug: "new-affiliates-program-app"
 type: "added"
 createdAt: "2022-10-14T17:02:16.829Z"
 hidden: false
+excerpt: "We have launched the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate."
 ---
 
 ![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)

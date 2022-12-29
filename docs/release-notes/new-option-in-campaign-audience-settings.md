@@ -4,6 +4,7 @@ slug: "new-option-in-campaign-audience-settings"
 type: "added"
 createdAt: "2022-07-22T13:48:52.370Z"
 hidden: false
+excerpt: "It is now possible to use multiple target audiences in a [campaign audience](https://help.vtex.com/en/tutorial/campaign-audiences--3o7lhpNseXY2WmjZO0gQ6m) simultaneously, instead of applying either one target audience or another, when using the Promotions & Taxes API."
 ---
 It is now possible to use multiple target audiences in a [campaign audience](https://help.vtex.com/en/tutorial/campaign-audiences--3o7lhpNseXY2WmjZO0gQ6m) simultaneously, instead of applying either one target audience or another, when using the Promotions & Taxes API.
 

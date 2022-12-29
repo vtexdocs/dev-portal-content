@@ -4,6 +4,7 @@ slug: "minor-correction-to-giftcard-provider-protocol-path-in-the-documentation"
 type: "fixed"
 createdAt: "2022-09-05T20:21:11.019Z"
 hidden: false
+excerpt: "Some of the GiftCard Provider Protocol endpoints had an `/api` segment in their paths. This was corrected and the `/api` segment was removed in the documentation."
 ---
 
 ![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)

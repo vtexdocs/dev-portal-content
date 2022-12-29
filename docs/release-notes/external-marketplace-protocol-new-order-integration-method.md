@@ -4,6 +4,7 @@ slug: "external-marketplace-protocol-new-order-integration-method"
 type: "added"
 createdAt: "2022-06-10T14:00:00.000Z"
 hidden: false
+excerpt: "We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. For the new method, we have developed two new endpoints."
 ---
 
 ![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)

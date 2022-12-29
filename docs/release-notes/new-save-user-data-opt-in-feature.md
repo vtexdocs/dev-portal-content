@@ -4,6 +4,7 @@ slug: "new-save-user-data-opt-in-feature"
 type: "added"
 createdAt: "2022-06-21T12:58:56.957Z"
 hidden: false
+excerpt: "In compliance with regulations that promote the preservation and protection of consumer data, such as GDPR (General Data Protection Regulation) in Europe, and LGPD (General Data Protection Law) in Brazil, VTEX provides the new [Save User Data opt-in](https://developers.vtex.com/vtex-rest-api/docs/enable-the-save-user-data-opt-in) feature."
 ---
 
 ![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)

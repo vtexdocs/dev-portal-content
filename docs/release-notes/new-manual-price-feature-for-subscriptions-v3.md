@@ -4,6 +4,7 @@ title: 'New Manual Price feature for Subscriptions v3'
 createdAt: 2022-05-10T20:00:04.576Z
 hidden: false
 type: 'added'
+excerpt: "You can now enable the Manual Price feature for [Subscriptions v3](https://developers.vtex.com/vtex-rest-api/docs/subscriptions-v3-migration-guide)."
 ---
 
 ![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)

@@ -4,6 +4,7 @@ slug: "new-catalog-api-available-for-seller-portal"
 type: "added"
 createdAt: "2022-10-20T14:45:00.000Z"
 hidden: false
+excerpt: "We have released the [Catalog API - Seller Portal](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-seller-portal-overview) to enable sellers using Seller Portal to massively create, fetch and edit information concerning products, SKUs, brands and categories."
 ---
 
 ![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)

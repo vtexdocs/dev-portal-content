@@ -4,6 +4,7 @@ slug: "assembly-options-new-app-for-product-customization"
 type: "added"
 createdAt: "2022-06-14T12:35:30.264Z"
 hidden: false
+excerpt: "We have launched a new app to make product customization easier using [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) – [attachments](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm) for complex scenarios where it is necessary to manage different product combinations, quantities, additional items and costs."
 ---
 
 ![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)

@@ -4,6 +4,7 @@ slug: "improvements-to-the-payment-provider-protocol-api-and-redirect-flow-docum
 type: "improved"
 createdAt: "2022-06-02T20:57:52.908Z"
 hidden: false
+excerpt: "The [Payment Provider Protocol (PPP) API documentation](https://developers.vtex.com/vtex-rest-api/reference/payment-provider-protocol-api-overview) and the [Redirect section of the Purchase Flows article](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows#redirect) have just been updated."
 ---
 
 ![Payments](https://img.shields.io/badge/-Payments-blueviolet)

@@ -4,6 +4,7 @@ slug: "saml-login-easy-implementation"
 type: "improved"
 createdAt: "2022-09-01T19:21:56.237Z"
 hidden: false
+excerpt: "You can now easily implement SAML login for your store via the new custom SAML interface in the Admin panel instead of having to open a support ticket."
 ---
 
 ![Integration](https://img.shields.io/badge/-integration-brightgreen)
