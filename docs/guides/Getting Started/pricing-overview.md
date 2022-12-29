@@ -67,7 +67,7 @@ Before using our Pricing API Reference, check out our [Pricing v2 - API Referenc
   "title": "Deleting price tables"
 }
 [/block]
-</br>
+<br></br>
 
 ##  Retrieving pricing information
 

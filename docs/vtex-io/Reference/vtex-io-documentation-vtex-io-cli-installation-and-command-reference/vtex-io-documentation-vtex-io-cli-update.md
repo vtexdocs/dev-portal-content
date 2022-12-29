@@ -10,7 +10,7 @@ If the VTEX IO’s CLI version installed on your machine is outdated or deprecat
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
-  </br>
+  <br></br>
   
 - Brew
 
@@ -23,12 +23,12 @@ brew unlink vtex
 brew install vtex/vtex
 ```
 
-</br>
+<br></br>
 </details>
 
 <details>
   <summary><span class="fa fa-linux">&nbsp;</span>Linux</summary>
-</br>
+<br></br>
 
 - Standalone
   
@@ -38,12 +38,12 @@ vtex autoupdate
 
 > ℹ️ The standalone update is a tarball with a binary that contains its own node.js binary.
 
-</br>
+<br></br>
 </details>
 
 <details>
   <summary><span class="fa fa-windows">&nbsp;</span>Windows</summary>
-</br>
+<br></br>
 
 - Standalone.exe
 
@@ -51,7 +51,7 @@ vtex autoupdate
 vtex autoupdate
 ```
 
-</br>
+<br></br>
 </details>
 
 ## Updating VTEX IO's CLI via NPM

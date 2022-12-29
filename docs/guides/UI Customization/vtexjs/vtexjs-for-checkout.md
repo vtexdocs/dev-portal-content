@@ -1426,7 +1426,7 @@ Informs the Checkout API to finish a transaction and go to the final url (e.g. `
 
 |             Nome | Tipo                                                                                |
 | ---------------: | :---------------------------------------------------------------------------------- |
-| **orderGroupId** | **number** </br> ID from an order to be created after finishing the checkout process |
+| **orderGroupId** | **number** <br></br> ID from an order to be created after finishing the checkout process |
 
 ### Example
 

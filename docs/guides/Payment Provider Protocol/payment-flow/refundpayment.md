@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2019-12-30T03:21:07.203Z"
 updatedAt: "2022-04-04T14:22:57.854Z"
 ---
-</br>
+<br></br>
 
 ## Request body
 ---
@@ -116,7 +116,7 @@ updatedAt: "2022-04-04T14:22:57.854Z"
     </tr>
 </table>
 
-</br>
+<br></br>
 
 ## Response body
 ---
