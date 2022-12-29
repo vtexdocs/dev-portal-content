@@ -29,6 +29,7 @@ For the  [External Seller integration guide](https://developers.vtex.com/vtex-re
 ### API Reference
 
 You can also check out our [External Seller API Reference](https://developers.vtex.com/vtex-rest-api/reference/external-seller), where we have improved fields and descriptions in the following endpoints:
-[Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation)  
-[Cancel Order in Marketplace](https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace)
-[Marketplace Order Cancellation](https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation)
+
+- [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation)  
+- [Cancel Order in Marketplace](https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace)
+- [Marketplace Order Cancellation](https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation)

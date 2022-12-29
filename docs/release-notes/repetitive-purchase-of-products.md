@@ -13,10 +13,4 @@ Before this release, adding the same product to the cart multiple times were kin
 Good thing is that loss in sales is not something we approve, nor want. Therefore, it is now possible to click on the [Add to cart button](https://vtex.io/docs/components/content-blocks/vtex.add-to-cart-button/) as many times as desired! Cheers to that!
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/cbaf8d8-add-to-cart-loop_14.gif)
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "This release is only available for stores using the [Minicart v2](https://vtex.io/docs/components/content-blocks/vtex.minicart/).",
-  "title": "Caution"
-}
-[/block]
+> ⚠️ This release is only available for stores using the [Minicart v2](https://vtex.io/docs/components/content-blocks/vtex.minicart/).

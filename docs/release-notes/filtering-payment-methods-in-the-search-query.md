@@ -8,6 +8,6 @@ type: "improved"
 
 ![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
-Thanks to two new props, namely `includedPaymentSystems`  and `excludedPaymentSystems`, it finally became possible to define in the search query which payment methods should and should not be taken into account when displaying the installment options to users. 
+Thanks to two new props, namely `includedPaymentSystems`  and `excludedPaymentSystems`, it finally became possible to define in the search query which payment methods should and should not be taken into account when displaying the installment options to users.
 
 Access now the [Search Results app documentation](https://vtex.io/docs/components/content-blocks/vtex.search-result/) and learn how to set them up in your store!

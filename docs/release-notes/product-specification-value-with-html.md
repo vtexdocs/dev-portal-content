@@ -9,10 +9,5 @@ type: "improved"
 ![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
 The product specification value, rendered by the [Product Specification app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-specifications), now processes HTML code, enabling a better migration from CMS to the VTEX IO platform!
-[block:callout]
-{
-  "type": "info",
-  "title": "Praise",
-  "body": "This release is possible thanks to [Samuel Rodrigues](https://github.com/SamuelRodriguess)! Cheers!"
-}
-[/block]
+
+> ℹ️ This release is possible thanks to [Samuel Rodrigues](https://github.com/SamuelRodriguess)! Cheers!"

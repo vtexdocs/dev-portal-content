@@ -4,6 +4,7 @@ title: 'VTEX Tracking API: changes in all paths'
 createdAt: 2020-11-10T12:00:00.000Z
 hidden: true
 type: 'improved'
+excerpt: "We have unified our VTEX Tracking APIs into a single version, so it's no longer necessary to specify the version on the URL. We have also translated all paths to english."
 ---
 
 ![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)

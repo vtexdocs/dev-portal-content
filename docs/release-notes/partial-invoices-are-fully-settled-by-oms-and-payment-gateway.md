@@ -14,17 +14,11 @@ Now, the gateway settles the value corresponding to the invoice inserted. Know m
 
 No additional setting is needed to activate this feature, the OMS is already operating in the new format automatically.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "The partial invoices feature is available to all VTEX stores, but the partial settlement in the gateway is in beta. Besides, for partial invoices to trigger partial settlements in the transaction, it is necessary to use a connector with the [Payment Provider Protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m). Legacy connectors do not support the functionality."
-}
-[/block]
-The following APIs can be called to reproduce this behavior:
+> ℹ️ The partial invoices feature is available to all VTEX stores, but the partial settlement in the gateway is in beta. Besides, for partial invoices to trigger partial settlements in the transaction, it is necessary to use a connector with the [Payment Provider Protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m). Legacy connectors do not support the functionality.
 
-* [Register Change on Order](https://developers.vtex.com/vtex-rest-api/reference/registerchange)
-* [Invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification)
-* [Retrieve Payment transaction](https://developers.vtex.com/vtex-rest-api/reference/getpaymenttransaction)
-* [Update order's partial invoice (send tracking number)](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber)
+- [Register Change on Order](https://developers.vtex.com/vtex-rest-api/reference/registerchange)
+- [Invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification)
+- [Retrieve Payment transaction](https://developers.vtex.com/vtex-rest-api/reference/getpaymenttransaction)
+- [Update order's partial invoice (send tracking number)](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber)
 
 Their descriptions have been updated to guide you through the change.

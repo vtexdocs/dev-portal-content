@@ -10,6 +10,6 @@ type: "improved"
 
 Media uploaded on Assets builder can now be referenced in your store theme CSS files by adding the desired file path.
 
-Previously, file paths from Assets builder only worked in `blocks.json` and `blocks.jsonc` files. 
+Previously, file paths from Assets builder only worked in `blocks.json` and `blocks.jsonc` files.
 
 For more on this topic, access [Using the Assets Builder](https://vtex.io/docs/recipes/development/using-the-assets-builder/) documentation.

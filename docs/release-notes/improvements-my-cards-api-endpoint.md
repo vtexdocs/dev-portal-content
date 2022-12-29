@@ -9,6 +9,7 @@ type: "improved"
 ![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
 
 Starting November 18, 2021, there will be critical improvements to the My Cards API endpoint:
+
 ```
 POST
 https://{accountName}.{environment}.com.br/api/checkout/pub/current-user/payment-tokens
@@ -17,7 +18,6 @@ https://{accountName}.{environment}.com.br/api/checkout/pub/current-user/payment
 This request is used when a customer registers a new credit card through the [My Cards page](https://help.vtex.com/en/tutorial/como-funciona-a-minha-conta--2BQ3GiqhqGJTXsWVuio3Xh#cartoes).
 
 The most significant change is the requirement of [reCAPTCHA](https://developers.google.com/recaptcha/docs/display) validation, which dramatically reduces the likelihood of card attacks to this particular API path.
-
 
 ## What needs to be done
 

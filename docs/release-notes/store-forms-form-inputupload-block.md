@@ -8,6 +8,6 @@ type: "added"
 
 ![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
-A new block responsible for rendering an upload button on store forms is among us: let's welcome the `form-input.upload`! 
+A new block responsible for rendering an upload button on store forms is among us: let's welcome the `form-input.upload`!
 
 For more on this beauty and its implementation, do not forget to check out the [Store Form app documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-form)!

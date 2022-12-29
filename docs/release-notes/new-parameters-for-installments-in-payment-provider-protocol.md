@@ -10,7 +10,7 @@ type: "added"
 
 Our [Payment Provider Protocol](https://developers.vtex.com/reference/payment-provider-protocol-api-overview) was extended to make it easier to include payments in installments in your provider implementation.
 
-The <span class="api pg-type type-post">post</span> [Create payment](https://developers.vtex.com/reference/payment-flow#createpayment) endpoint now has two new parameters:
+The post [Create payment](https://developers.vtex.com/reference/payment-flow#createpayment) endpoint now has two new parameters:
 
 - `installmentsValue`
 - `installmentsInterestRate`

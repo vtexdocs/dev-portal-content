@@ -25,6 +25,6 @@ SKU Service actions can now be accessed using the [Catalog API](https://develope
 
 This means the following [Webservice](https://assets.ctfassets.net/alneenqid6w5/4OdeCFbcVQtEgkuWsuuidl/80b79448cf2b327e07b567a8411afaa0/vtex_WebServiceGuide.pdf) methods have been incorporated into the Catalog API:
 
-- StockKeepingUnitServiceGet
-- StockKeepingUnitServiceInsertUpdate
-- StockKeepingUnitServiceList
+- `StockKeepingUnitServiceGet`
+- `StockKeepingUnitServiceInsertUpdate`
+- `StockKeepingUnitServiceList`

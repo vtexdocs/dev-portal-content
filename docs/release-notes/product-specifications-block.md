@@ -6,8 +6,8 @@ hidden: false
 type: "deprecated"
 ---
 
-![Store Framework](https://img.shields.io/badge/-Store%20Framework-red) 
+![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)
 
-The [Product Specification block](https://github.com/vtex-apps/store-components/blob/master/docs/ProductSpecifications.md), pertaining to the [Store Components app](https://vtex.io/docs/app/vtex.store-components/) was deprecated. 
+The [Product Specification block](https://github.com/vtex-apps/store-components/blob/master/docs/ProductSpecifications.md), pertaining to the [Store Components app](https://vtex.io/docs/app/vtex.store-components/) was deprecated.
 
 Although support for this block is still provided, it is strongly recommended to update your store theme with the [**Product Specifications app**](https://vtex.io/docs/components/all/vtex.product-specifications@1.0.1/) in order to benefit from greater flexibility and keep up with the component evolution.

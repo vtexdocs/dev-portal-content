@@ -10,10 +10,10 @@ type: "fixed"
 
 Before, [Catalog API](ref:catalog-api-overview) did not apply the same validation rules seen in Admin, which had unintended side effects for our users when they attempted to activate an SKU they created or updated. Now we have corrected this behavior and the following restrictions apply.
 
-<span class="api pg-type type-post">post</span> [Create SKU](ref:catalog-api-post-sku)
+- post [Create SKU](ref:catalog-api-post-sku)
 SKU should never be created as active.
 
-<span class="api pg-type type-put">put</span> [Update SKU](ref:catalog-api-put-sku)
+- put [Update SKU](ref:catalog-api-put-sku)
 SKU should not be saved as active if:
 
 - It does not have files added and associated to it.

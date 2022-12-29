@@ -8,11 +8,6 @@ type: "improved"
 
 ![App Development](https://img.shields.io/badge/-App%20Development-blue)
 
-[block:html]
-{
-  "html": "<div class=\"badge\" id=\"vtex-io\">VTEX IO</div>\n<br>"
-}
-[/block]
 [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) has changed its version 3 to enhance developers' productivity and experience. To allow this evolution, we adapted VTEX IO CLI to a plugin-based architecture, added a new color scheme, and included a more comprehensive command description. Also, VTEX IO CLI is now available on multiple platforms.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/release-notes/5e85742-vtex-plugins_15.png)
 
@@ -25,12 +20,8 @@ Likewise, it is important to highlight that VTEX IO CLI used to be available onl
 - NPM
 - AWS-S3 (Windows, Linux, Mac)
 - Homebrew (Mac)
-[block:callout]
-{
-  "type": "warning",
-  "body": "**Attention:** Some commands from previous versions of VTEX IO's CLI were detached from its base code and are now available as plugins: `add`, `config`, `debug`, `infra`, `lighthouse`, `logs`, `redirects`, `settings`, `submit`, `support`, `test`, `url`. Hence, you may need to install them manually. For more information, check out our documentation on Managing plugins."
-}
-[/block]
+
+> ⚠️ **Attention:** Some commands from previous versions of VTEX IO's CLI were detached from its base code and are now available as plugins: `add`, `config`, `debug`, `infra`, `lighthouse`, `logs`, `redirects`, `settings`, `submit`, `support`, `test`, `url`. Hence, you may need to install them manually. For more information, check out our documentation on Managing plugins.
 
 ## Why did we make this change?
 

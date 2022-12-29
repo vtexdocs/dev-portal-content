@@ -4,6 +4,7 @@ title: "List price presentation on product selling price"
 createdAt: 2020-08-14T12:48:22.865Z
 hidden: false
 type: "improved"
+excerpt: "The `hasListPrice` prop was added to the `product-selling-price` block from [Product Price app](https://vtex.io/docs/components/all/vtex.product-price/)."
 ---
 
 ![Store Framework](https://img.shields.io/badge/-Store%20Framework-red)

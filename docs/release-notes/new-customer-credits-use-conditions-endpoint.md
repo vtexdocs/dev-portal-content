@@ -8,7 +8,7 @@ type: "added"
 
 ![Commerce APIs](https://img.shields.io/badge/-Commerce%20APIs-brightgreen)
 
-Each Customer Credit account has a set of use conditions configured specifically for it. 
+Each Customer Credit account has a set of use conditions configured specifically for it.
 
 With that, the Checkout displays a personalized scenario every time that a client chooses the Customer Credit as a payment method to make a purchase.
 

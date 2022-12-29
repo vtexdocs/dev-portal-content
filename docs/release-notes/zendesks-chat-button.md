@@ -4,6 +4,7 @@ title: "Zendesk's chat button"
 createdAt: 2020-11-25T21:04:40.268Z
 hidden: false
 type: "improved"
+excerpt: "A new Zendesk's chat button was developed to lazy-load the default and heavier one provided by the solution."
 ---
 
 ![VTEX IO App](https://img.shields.io/badge/-VTEX%20IO%20App-orange)

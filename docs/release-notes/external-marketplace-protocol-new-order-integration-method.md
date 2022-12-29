@@ -16,8 +16,8 @@ We have released a new method for integrating orders from external marketplaces,
 
 You can learn more about their implementation and use case scenarios in the following articles:
 
--  [New Order Integration guide](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders)
--  [Update Order Status guide](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-update-order-status)
+- [New Order Integration guide](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders)
+- [Update Order Status guide](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-update-order-status)
 
 The other steps for the External Marketplace Protocol have not been changed.
 

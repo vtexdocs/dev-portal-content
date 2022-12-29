@@ -30,12 +30,9 @@ And the guests can:
 - View the list.
 - Buy the products available on the list. The amount of each purchase is converted to credits in the list wallet.
 - Insert a message or a comment on the purchase.
-[block:callout]
-{
-  "type": "info",
-  "body": "The app will be free to trial until December 31. After this period, it will have a fixed cost billed monthly."
-}
-[/block]
+
+> ℹ️ he app will be free to trial until December 31. After this period, it will have a fixed cost billed monthly.
+
 You can install the app from the [App Store](https://apps.vtex.com/vtex-list/p). To learn more about the app and implement it in your store, please refer to its [technical documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-gift-list).
 
 You can see below some images of the Gift List environment in a store:

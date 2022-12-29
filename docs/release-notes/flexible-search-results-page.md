@@ -16,10 +16,5 @@ Together, both props allow you to choose a block to be rendered in a specific pr
 
 Notice how the search results page above has a flexible layout to show fetched products.
 Do not forget to check out the [Search Results documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) to read further about the props and learn how to set them up in your store!
-[block:callout]
-{
-  "type": "info",
-  "title": "Praise",
-  "body": "This release was possible thanks to [Julio Moreira](https://github.com/juliomoreira)! Cheers!"
-}
-[/block]
+
+> ℹ️ This release was possible thanks to [Julio Moreira](https://github.com/juliomoreira)! Cheers!

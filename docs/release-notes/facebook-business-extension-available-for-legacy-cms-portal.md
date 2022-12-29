@@ -4,7 +4,7 @@ slug: "facebook-business-extension-available-for-legacy-cms-portal"
 createdAt: "2022-10-28T20:45:28.931Z"
 hidden: true
 ---
-[Facebook Business Extension (FBE)](https://developers.facebook.com/products/business-apps/?locale=en_US) is an app that provides a streamlined way to integrate with Facebook services and features. The integration offers different features, including: 
+[Facebook Business Extension (FBE)](https://developers.facebook.com/products/business-apps/?locale=en_US) is an app that provides a streamlined way to integrate with Facebook services and features. The integration offers different features, including:
 
 1. **Facebook Pixel:** Facebook Pixel allows you to measure the effectiveness of your business advertising by analyzing the actions users take on your website.
 2. **Conversions API:** The Conversions API is designed to create a direct connection between your marketing data and the Facebook system.

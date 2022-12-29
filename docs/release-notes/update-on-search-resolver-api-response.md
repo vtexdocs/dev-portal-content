@@ -7,12 +7,8 @@ type: "improved"
 ---
 
 For stores using `search-resolver@0.x`  and the native search,  [VTEX Search GraphQL](https://github.com/vtex-apps/search-graphql) attribute `AvailableQuantity`  will not return the exact quantity of products anymore. Instead, it will return binary results with `0` for products without stock and `10000` for products with stock.
-[block:callout]
-{
-  "type": "warning",
-  "body": "This update does not apply to customers using the `search-resolver@1.x`."
-}
-[/block]
+
+> ⚠️ This update does not apply to customers using the `search-resolver@1.x`.
 
 ## Response before the update
 
