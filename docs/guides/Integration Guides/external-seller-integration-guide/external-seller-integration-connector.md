@@ -29,7 +29,7 @@ In the table below, you will find every API request needed for each step of the 
 {
   "type": "info",
   "title": "API Collection",
-  "body": "To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.\n\n[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/guides/Integration%20Guides/external-seller-integration-guide/button_32.svg)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-seller-integration-connector-0.png)"
+  "body": "To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.\n\n[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-seller-integration-guide/button_32.svg)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-seller-integration-connector-0.png)"
 }
 [/block]
 

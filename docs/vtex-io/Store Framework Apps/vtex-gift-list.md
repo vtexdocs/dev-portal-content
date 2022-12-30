@@ -94,7 +94,7 @@ With the checkout apps installed, you can enable the message field. To do this, 
 ```css
 .note { display: block; }
 ```
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Store%20Framework%20Apps/1c3174c-image5.png",
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Store%20Framework%20Apps/1c3174c-image5.png",
         "image5.png",
         1999,
         1032,

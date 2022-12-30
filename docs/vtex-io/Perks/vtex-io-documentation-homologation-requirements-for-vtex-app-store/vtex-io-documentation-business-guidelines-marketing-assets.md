@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.747Z"
 
 Once you have [developed your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.
 
-![appstore-page-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/153282275-98bab015-81e8-4858-8538-72c9fa33d17e_11.gif)
+![appstore-page-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/153282275-98bab015-81e8-4858-8538-72c9fa33d17e_11.gif)
 
 Make sure to present your solutions professionally by adhering to the following principles:
 
@@ -48,7 +48,7 @@ Images are a tool to express the visual identity of your app, make users learn m
 
 Your app icon is one of the first elements of your app that developers and merchants see. It expresses the visual identity and reinforces your brand in the VTEX App Store environment.
 
-![2-Icon](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157433167-6118f67e-4042-40d8-bee3-e64ca5a65f12_50.png)
+![2-Icon](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157433167-6118f67e-4042-40d8-bee3-e64ca5a65f12_50.png)
 
 #### Do’s and Don’ts
 
@@ -69,7 +69,7 @@ Your app icon is one of the first elements of your app that developers and merch
 
 Use screenshots to visually represent your app’s key features and purpose.
 
-![1- screenshot](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157434543-3b706ebd-7570-4d1e-8cda-d1ee230014e5_71.png)
+![1- screenshot](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157434543-3b706ebd-7570-4d1e-8cda-d1ee230014e5_71.png)
 
 #### Do’s and Don’ts
 
@@ -114,7 +114,7 @@ Remember, your App Page is your main marketing tool and touchpoint with merchant
 
 The name of an app is decisive for how merchants will find your app on the VTEX App Store.
 
-![3 - Name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157513213-1fa5c1f1-6f55-40ef-99da-d9f6cdee5685_116.png)
+![3 - Name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157513213-1fa5c1f1-6f55-40ef-99da-d9f6cdee5685_116.png)
 
 #### Do’s and Don’ts
 
@@ -238,7 +238,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 The headline should describe the value proposition of your app in a concise sentence.
 
-![4-Headline](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157516505-f43a11ed-ac35-49f7-9b41-08f5099f34ba_240.png)
+![4-Headline](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157516505-f43a11ed-ac35-49f7-9b41-08f5099f34ba_240.png)
 
 ### Do’s and Don’ts
 
@@ -314,7 +314,7 @@ The headline should describe the value proposition of your app in a concise sent
 
 The overview is the description of the app and should be an engaging message that focuses on how your app can benefit merchants in a clear and precise way.
 
-![5-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157517177-836ba2c6-f7d2-4795-940e-7532eea475f6_315.png)
+![5-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157517177-836ba2c6-f7d2-4795-940e-7532eea475f6_315.png)
 
 #### Do’s and Don’ts
 
@@ -414,7 +414,7 @@ The overview is the description of the app and should be an engaging message tha
 
 In `features`, provide a list of your app's main features.
 
-![6-features](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520024-66ee8e75-4b53-41f0-90ca-e4c8c37281cf_402.png)
+![6-features](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520024-66ee8e75-4b53-41f0-90ca-e4c8c37281cf_402.png)
 
 #### Do’s
 
@@ -461,13 +461,13 @@ The Website URL is a hyperlink to your website to redirect users to your own cor
 
 Provide support information to make potential buyers aware of your support channels, such as email, a ticket portal, or a phone number. Including details on how support for your app works might make merchants more confident to choose your app.
 
-![9-Support](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520794-a8a1173e-2781-4c0c-b292-caa30de2bb87_445.png)
+![9-Support](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520794-a8a1173e-2781-4c0c-b292-caa30de2bb87_445.png)
 
 ### Additional Information
 
 Use this field to provide more specific details about the app. For example, is your app only available in certain regions? How the merchant will receive the app’s billing information? Is your app available only in specific environments (Legacy CMS Portal or VTEX IO)?
 
-![7-Additional info](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520727-dc72709f-b386-47ec-bb50-5731bfab2201_451.png)
+![7-Additional info](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520727-dc72709f-b386-47ec-bb50-5731bfab2201_451.png)
 
 #### Do
 
@@ -509,7 +509,7 @@ Use this field to provide more specific details about the app. For example, is y
 
 Use videos to demonstrate how your app behaves in different scenarios. Videos are exciting resources to complement [images](#images) as an educational tool showing your app’s main benefits and features.
 
-![8-Video](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@readme-docs/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520797-a42e7221-7a48-4c89-b809-8f8fd196b3a2_489.png)
+![8-Video](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520797-a42e7221-7a48-4c89-b809-8f8fd196b3a2_489.png)
 
 #### Do's
 
