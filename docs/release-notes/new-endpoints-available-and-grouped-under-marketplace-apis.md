@@ -6,7 +6,7 @@ hidden: true
 type: ""
 ---
 
-Now you can find all marketplace endpoints under the same category: Marketplace API. We grouped the Suggestions and Notifications endpoints under a single space, so all the marketplace and seller operations are more accessible to users. 
+Now you can find all marketplace endpoints under the same category: Marketplace API. We grouped the Suggestions and Notifications endpoints under a single space, so all the marketplace and seller operations are more accessible to users.
 
 We’ve also added a new set of endpoints to the Marketplace API. The **SKU Approval Settings** endpoints allow marketplaces to automatically approve SKUs received from sellers. These are the new endpoints available:
 

@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-highlights-week-362019-0.png)
+
 Welcome to yet another VTEX IO weekly release notes, this one being more than special because we are announcing the release of our brand new VTEX IO documentation website.
 
 Honestly, why are still reading the into after such news? Scroll down and have a look at last week's key changes:
@@ -21,7 +23,7 @@ Honestly, why are still reading the into after such news? Scroll down and have a
 - [Platform performance](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-36/platform-performance.md) - Understand last week's VTEX IO performance improvement key points.
 - _Storefront name change_ - Your account Admin's Storefront section, responsible for defining your store's front-end content is now called **Site Editor**. Commit to memory!
 - [Events context](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-36/events-context.md) - Create a web app with more ease with help from Events' expanding functionalities.
-- [Google Analytics `orderPlaced` event ](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-36/google-analytics-orderplaced-event.md) - Make your Google Analytics metrics more reliable with the `orderPlaced` event trigger improvement.
+- [Google Analytics `orderPlaced` event](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-36/google-analytics-orderplaced-event.md) - Make your Google Analytics metrics more reliable with the `orderPlaced` event trigger improvement.
 
 ### Notable bug fixes 🐛
 

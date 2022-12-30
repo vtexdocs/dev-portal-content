@@ -6,13 +6,13 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/filter-navigator-customization-on-mobile-devices-css-handles-0.png)
 
 New CSS Handles were added to the [Search Result app](https://vtex.io/docs/components/all/vtex.search-result/) to enable the Filter Navigator component customization on mobile devices. Namely:
 
-- `accordionFilterContainer`         
-- `accordionFilterContent` 
-- `filterBreadcrumbsContent` 
+- `accordionFilterContainer`
+- `accordionFilterContent`
+- `filterBreadcrumbsContent`
 - `filterBreadcrumbsText`
 
-:sparkles: We would not be able to deliver this amazing result if it was not for [Beatriz Miranda](https://github.com/BeatrizMiranda) from ACCT! Our sincere thanks, Beatriz!
+✨ We would not be able to deliver this amazing result if it was not for [Beatriz Miranda](https://github.com/BeatrizMiranda) from ACCT! Our sincere thanks, Beatriz!

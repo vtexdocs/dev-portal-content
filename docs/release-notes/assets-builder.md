@@ -6,8 +6,8 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assets-builder-0.png)
 
-The Assets Builder now supports assets whose URLs are built using markdown. 
+The Assets Builder now supports assets whose URLs are built using markdown.
 
 This improvement is extremely useful since block's props use the markdown structure to declare media on components.

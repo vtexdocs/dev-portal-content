@@ -6,22 +6,8 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/structured-data-in-bazaar-voice-0.png)
 
-From now on, user review data fetched by the Bazaar Voice app is considered in the Google structured data, used to understand and gather information about the content of the store page. 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/bcce2a1-bazaar-voice-structured-data.png",
-        "bazaar-voice-structured-data.png",
-        2424,
-        612,
-        "#f1eef0"
-      ]
-    }
-  ]
-}
-[/block]
+From now on, user review data fetched by the Bazaar Voice app is considered in the Google structured data, used to understand and gather information about the content of the store page.
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/structured-data-in-bazaar-voice-1.png)
 This improvement is extremely useful for SEO purposes since google will now be able to effectively fetch product reviews and display them on search result pages.

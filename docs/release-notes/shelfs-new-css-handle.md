@@ -6,23 +6,9 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/shelfs-new-css-handle-0.png)
 
 A new CSS Handle (`dot--isActive`) was added to the [Shelf app](https://vtex.io/docs/components/all/vtex.shelf/), enabling the customization of the shelf active slide dot.
 
 :information-source: *The shelf slide dot represents the shelf slide currently being hovered on by users.*
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/dd5e86f-shelf-handle.png",
-        "shelf-handle.png",
-        3584,
-        2114,
-        "#deddde"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/shelfs-new-css-handle-1.png)

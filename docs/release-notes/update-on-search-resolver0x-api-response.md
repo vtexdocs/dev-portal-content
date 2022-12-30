@@ -9,41 +9,13 @@ type: "improved"
 For stores using `search-resolver@0.x`  and the native search, [VTEX Search GraphQL](https://github.com/vtex-apps/search-graphql) attribute `AvailableQuantity`  will not return the exact quantity of products anymore. Instead, this field will always return `null`.
 
 For further information, check our [announcement](https://help.vtex.com/en/announcements/search-resolve-hides-number-product-stock--7Ah6ou3RCoNmMeedZaBeJS).
-[block:callout]
-{
-  "type": "warning",
-  "body": "This update does not apply to customers using the `search-resolver@1.x`."
-}
-[/block]
+
+> ⚠️ This update does not apply to customers using the `search-resolver@1.x`.
+
 ## Response before the update
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e119700-Screenshot_1.png",
-        "Screenshot_1.png",
-        1136,
-        724,
-        "#f1f0f2"
-      ]
-    }
-  ]
-}
-[/block]
+
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/update-on-search-resolver0x-api-response-0.png)
+
 ## Response after the update
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a5fc0ea-image_44.png",
-        "image (44).png",
-        1365,
-        820,
-        "#efeff0"
-      ]
-    }
-  ]
-}
-[/block]
+
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/update-on-search-resolver0x-api-response-1.png)

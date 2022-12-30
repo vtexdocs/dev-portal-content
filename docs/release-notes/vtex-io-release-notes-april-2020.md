@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-april-2020-0.png)
+
 The VTEX IO Release Notes is here, team!
 
 Thrilled to announce that this April's Release Notes brings a ton of beautiful releases to enlighten your cloudy days at home.

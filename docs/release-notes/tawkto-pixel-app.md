@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tawkto-pixel-app-0.png)
 
 A VTEX [**Tawk.to**](https://www.tawk.to/) native integration is now available for stores using **VTEX Store Framework**, allowing you to monitor and chat with the visitors on your website, mobile app, or from a free customizable page.
 

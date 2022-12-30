@@ -6,9 +6,11 @@ hidden: false
 type: ""
 ---
 
-And we are back, ladies and gentlemen! 
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-january-2020-0.png)
 
-Long time no see... really missed you guys! I'm sure that you've missed us too, right? RIGHT! 
+And we are back, ladies and gentlemen!
+
+Long time no see... really missed you guys! I'm sure that you've missed us too, right? RIGHT!
 
 2019 was a special, intense and long year, full of learnings for each and every one of us, that's for sure. But the time has come to aim above and beyond to **greatness**. Therefore, make sure to keep up-to-date with the IO Release Notes! It's the only way to keep up with everything that we're dutifully preparing for you.
 

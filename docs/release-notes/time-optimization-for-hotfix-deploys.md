@@ -6,19 +6,10 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
-The VTEX IO team has finally made it possible to warp time exactly as those kids from Dark did in order to deploy your hotfixes in less than 7 minutes! 
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/time-optimization-for-hotfix-deploys-0.png)
 
-Using the Toolbelt's `2.118.0` version or newer, you can now run `vtex deploy --force` in your terminal when needed. 
-[block:callout]
-{
-  "type": "warning",
-  "title": "Take note",
-  "body": "The `--force` flag is only recommended for hotfixes! Normal deploys should use the `vtex deploy` as usual, since the 7 minutes are fundamental for testing your store's performance."
-}
-[/block]
+The VTEX IO team has finally made it possible to warp time exactly as those kids from Dark did in order to deploy your hotfixes in less than 7 minutes!
+
+Using the Toolbelt's `2.118.0` version or newer, you can now run `vtex deploy --force` in your terminal when needed.
+
+>⚠️ The `--force` flag is only recommended for hotfixes! Normal deploys should use the `vtex deploy` as usual, since the 7 minutes are fundamental for testing your store's performance.

@@ -6,28 +6,13 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/slides-positioning-0.png)
 
 The Slider Layout has gained a new prop called `centerMode` responsible for defining the slider elements positioning on the screen.
 
 Thanks to it, stores can now display slides whose elements are centered, allowing users to see a peek of the previous and next slides while navigating on the store, as shown in the image below:
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/835b4dd-RN-.png",
-        "RN-.png",
-        802,
-        1126,
-        "#d4d3d2"
-      ]
-    }
-  ]
-}
-[/block]
-This improvement is extremely useful in Shelves and other components that use the Slider Layout for rendering product data. 
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/slides-positioning-1.png)
+This improvement is extremely useful in Shelves and other components that use the Slider Layout for rendering product data.
 
 For more details on the new prop, access the [Slider Layout documentation](https://vtex.io/docs/app/vtex.slider-layout).

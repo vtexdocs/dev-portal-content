@@ -6,8 +6,10 @@ hidden: false
 type: "added"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Checkout](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/checkout-ui-custom-0.png)
 
-A new app responsible for customizing your store's Checkout UI through the admin's interface is now available for you. 
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/checkout-ui-custom-1.png)
+
+A new app responsible for customizing your store's Checkout UI through the admin's interface is now available for you.
 
 Check out now the [Checkout UI Custom app](https://vtex.io/docs/components/functional/vtex.checkout-ui-custom@0.0.9/) documentation!

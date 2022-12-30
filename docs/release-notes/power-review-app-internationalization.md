@@ -6,10 +6,6 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/power-review-app-internationalization-0.png)
+
 The [Power Review app](https://vtex.io/docs/components/pixel/vtex.powerreviews/) now properly works with international stores! When globalizing your brand, no longer worry about user reviews: from this release on, they are fetched, translated, and displayed according to the store locale set by users.

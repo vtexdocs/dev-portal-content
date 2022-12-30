@@ -6,25 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
-The Quantity Selector block, exported by the [Product Quantity app](https://vtex.io/docs/components/all/vtex.product-quantity/), can now be rendered as a dropdown thanks to its new prop: the `selectorType`! 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c01e07e-quantity-selector-dropdown.png",
-        "quantity-selector-dropdown.png",
-        1062,
-        540,
-        "#d9dee9"
-      ]
-    }
-  ]
-}
-[/block]
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/quantity-selector-in-dropdown-mode-0.png)
+
+The Quantity Selector block, exported by the [Product Quantity app](https://vtex.io/docs/components/all/vtex.product-quantity/), can now be rendered as a dropdown thanks to its new prop: the `selectorType`!
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/quantity-selector-in-dropdown-mode-1.png)

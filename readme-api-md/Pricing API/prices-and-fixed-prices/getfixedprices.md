@@ -1,0 +1,8 @@
+---
+title: "Get Fixed Prices"
+slug: "getfixedprices"
+excerpt: "The **fixed price** is an optional price of the SKU for a specific trade policy with a specific minimum quantity to be activated. This method retrieves an array of Fixed Prices for an SKU in a Trade Policy with Minimum Quantities.\r\n\r\n The default value for a Minimum Quantity is `1`. This means a Fixed Price will be valid for a SKU in a Trade Policy for orders containing the specified number of Minimum Quantity or above, unless a higher Minimum Quantity is specified.\r\n\r\n Fixed prices may, optionally, be scheduled. If so, these objects will contain the `dateRange` object with `from` and `to` properties, indicating the start and end time of the scheduled fixed price in the RFC3339 timestamp format (`YYYY-MM-DDT23:59:60Z`).\r\n\r\n Note that the 'Z', at the end, represents the UTC time (GMT+00:00). If it was in GMT-03:00, for example, it would be (`YYYY-MM-DDT23:59:60-03:00`).\r\n\r\n ## Response body example\r\n\r\n```json\r\n[\r\n    {\r\n        \"tradePolicyId\": \"6\",\r\n        \"value\": 20.9,\r\n        \"listPrice\": 22.9,\r\n        \"minQuantity\": 1,\r\n        \"dateRange\": {\r\n            \"from\": \"2021-12-30T22:00:00-03:00\",\r\n            \"to\": \"2021-12-30T22:00:00-03:00\"\r\n        }\r\n    },\r\n    {\r\n        \"tradePolicyId\": \"1\",\r\n        \"value\": 18.9,\r\n        \"listPrice\": null,\r\n        \"minQuantity\": 1,\r\n        \"dateRange\": {\r\n            \"from\": \"2021-12-30T22:00:00-03:00\",\r\n            \"to\": \"2021-12-30T22:00:00-03:00\"\r\n        }\r\n    }\r\n]\r\n```"
+hidden: false
+createdAt: "2019-12-30T17:39:05.877Z"
+updatedAt: "2022-06-20T13:27:52.911Z"
+---

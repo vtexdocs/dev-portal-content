@@ -6,6 +6,8 @@ hidden: false
 type: "added"
 ---
 
+![Documentation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-catalog-integration-documentation-0.png)
+
 In order to support our clients' integrations implementation, we have published new Catalog integration developer guides, including:
 
 - [Catalog integration overview](https://developers.vtex.com/vtex-rest-api/docs/catalog-integration)
@@ -22,11 +24,11 @@ In order to support our clients' integrations implementation, we have published 
 
 We have also improved our [Catalog API documentation](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-overview), with more accurate descriptions and new endpoints:
 
-<span class="api"><span class="pg-type type-post">post</span>[Create Category](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-category#catalog-api-post-category)
-<span class="api"><span class="pg-type type-post">post</span>[Create Brand](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-brand#catalog-api-post-brand)
-<span class="api"><span class="pg-type type-post">post</span>[Create Specification](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-specification#catalog-api-post-specification)
-<span class="api"><span class="pg-type type-post">post</span>[Create Product](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-product#post-product)
-<span class="api"><span class="pg-type type-put">put</span>[Update Product](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-product#catalog-api-put-product)
-<span class="api"><span class="pg-type type-post">post</span>[Create SKU](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-sku#catalog-api-post-sku)
-<span class="api"><span class="pg-type type-put">put</span>[Update SKU](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-sku#catalog-api-put-sku)
-<span class="api"><span class="pg-type type-put">put</span>[Associate product specification using specification and group names](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-product-specification#put_api-catalog-pvt-product-productid-specificationvalue)
+- post [Create Category](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-category#catalog-api-post-category)
+- post [Create Brand](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-brand#catalog-api-post-brand)
+- post [Create Specification](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-specification#catalog-api-post-specification)
+- post [Create Product](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-product#post-product)
+- put [Update Product](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-product#catalog-api-put-product)
+- post [Create SKU](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-sku#catalog-api-post-sku)
+- put [Update SKU](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-sku#catalog-api-put-sku)
+- put [Associate product specification using specification and group names](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-product-specification#put_api-catalog-pvt-product-productid-specificationvalue)

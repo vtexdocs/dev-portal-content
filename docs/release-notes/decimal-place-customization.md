@@ -6,10 +6,6 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/decimal-place-customization-0.png)
+
 Customization is power and we do know that! CSS Handles were added to the product price's decimal places, allowing you to display them half a character above the normal line, and/or in a smaller font.

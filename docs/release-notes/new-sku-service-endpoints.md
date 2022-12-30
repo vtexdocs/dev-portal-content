@@ -6,6 +6,8 @@ hidden: false
 type: "added"
 ---
 
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-sku-service-endpoints-0.png)
+
 SKU Service actions can now be accessed using the [Catalog API](https://developers.vtex.com/reference/catalog-api-overview), allowing you to create and edit SKU Service types, values and attachments. These are the new endpoints:
 
 - [[POST] Create SKU Service Type](https://developers.vtex.com/reference/sku-service#post_api-catalog-pvt-skuservicetype)
@@ -23,6 +25,6 @@ SKU Service actions can now be accessed using the [Catalog API](https://develope
 
 This means the following [Webservice](https://assets.ctfassets.net/alneenqid6w5/4OdeCFbcVQtEgkuWsuuidl/80b79448cf2b327e07b567a8411afaa0/vtex_WebServiceGuide.pdf) methods have been incorporated into the Catalog API:
 
-- StockKeepingUnitServiceGet
-- StockKeepingUnitServiceInsertUpdate
-- StockKeepingUnitServiceList
+- `StockKeepingUnitServiceGet`
+- `StockKeepingUnitServiceInsertUpdate`
+- `StockKeepingUnitServiceList`

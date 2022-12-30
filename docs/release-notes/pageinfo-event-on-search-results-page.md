@@ -6,9 +6,9 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/pageinfo-event-on-search-results-page-0.png)
 
-Retailers can now benefit from the new search results page's event: the `pageInfo`. 
+Retailers can now benefit from the new search results page's event: the `pageInfo`.
 
 Your store's new taggable event is triggered whenever the search results page content is changed due to user interaction, namely:
 

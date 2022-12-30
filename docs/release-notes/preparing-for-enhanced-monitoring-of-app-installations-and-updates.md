@@ -6,14 +6,10 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/preparing-for-enhanced-monitoring-of-app-installations-and-updates-0.png)
 
-If you are a developer using our [toolbelt](doc:vtex-io-documentation-toolbelt) on a daily basis, you may have noticed a new app called `app-install-monitor` when [listing an account’s apps](doc:vtex-io-documentation-listing-an-accounts-apps). 
+If you are a developer using our [toolbelt](doc:vtex-io-documentation-toolbelt) on a daily basis, you may have noticed a new app called `app-install-monitor` when [listing an account’s apps](doc:vtex-io-documentation-listing-an-accounts-apps).
 
 **No need to worry!** This is a new app our team has installed in all VTEX accounts to improve our capacity to monitor app installations and updates. Basically, it uses VTEX IO events to notify our internal services every time an app is installed or updated in a store.
-[block:callout]
-{
-  "type": "info",
-  "body": "We plan to use this new capability to allow our infrastructure to automatically identify and solve issues that arise from app installations and updates. Stay tuned for more on this topic!"
-}
-[/block]
+
+>ℹ️ We plan to use this new capability to allow our infrastructure to automatically identify and solve issues that arise from app installations and updates. Stay tuned for more on this topic!

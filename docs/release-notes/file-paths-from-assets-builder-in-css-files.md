@@ -6,10 +6,10 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/file-paths-from-assets-builder-in-css-files-0.png)
 
 Media uploaded on Assets builder can now be referenced in your store theme CSS files by adding the desired file path.
 
-Previously, file paths from Assets builder only worked in `blocks.json` and `blocks.jsonc` files. 
+Previously, file paths from Assets builder only worked in `blocks.json` and `blocks.jsonc` files.
 
 For more on this topic, access [Using the Assets Builder](https://vtex.io/docs/recipes/development/using-the-assets-builder/) documentation.

@@ -6,12 +6,8 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
-It's what I always say: If it contains performance improvements, then we can call it a good VTEX IO Release Notes! Glad to say that our team has worked really hard on CSS and GraphQL query optimizations and that these are already natively enabled in your store. 
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/css-and-graphql-query-optimization-0.png)
+
+It's what I always say: If it contains performance improvements, then we can call it a good VTEX IO Release Notes! Glad to say that our team has worked really hard on CSS and GraphQL query optimizations and that these are already natively enabled in your store.
 
 For more info, check out our documentation on [best practices for optimizing performance](https://vtex.io/docs/recipes/store-management/best-practices-for-optimizing-performance/)!

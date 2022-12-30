@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-highlights-week-372019-0.png)
+
 Hey! 👋 Welcome to VTEX IO Release Notes for week 37 of 2019!
 
 You might have noticed that last week’s Release Notes didn’t reach you. Not to worry. To put you on track with VTEX IO, this week will have **two** publications! 🎉

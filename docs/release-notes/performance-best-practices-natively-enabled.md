@@ -6,12 +6,8 @@ hidden: false
 type: "improved"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
- If performance improvements are great and loved by everyone, shouldn't they be natively enabled? The VTEX IO team thinks the answer to that is a resounding yes! 
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/performance-best-practices-natively-enabled-0.png)
+
+If performance improvements are great and loved by everyone, shouldn't they be natively enabled? The VTEX IO team thinks the answer to that is a resounding yes!
 
 From now on, all new accounts using the platform will automatically inherit all the currently available store performance best practices.

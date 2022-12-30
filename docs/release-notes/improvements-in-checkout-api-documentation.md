@@ -6,7 +6,10 @@ hidden: false
 type: ""
 ---
 
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/improvements-in-checkout-api-documentation-0.png)
+
 We have made new Checkout endpoints available in our API documentation:
+
 - [New shopping cart](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#newshoppingcart)
 - [Get cart information](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#getcartinformation)
 - [Ignore profile data](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#ignoreprofiledata)
@@ -19,23 +22,24 @@ We have made new Checkout endpoints available in our API documentation:
 - [Place order from existing cart](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorderfromexistingorderform)
 
 Also, we have reorganized some of the existing endpoints. The new categories include:
+
 - [Shopping cart](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart)
-    - Cart simulation
-    - New shopping cart
-    - Get cart information
-    - Remove all items
-    - Remove all personal data
-    - Update cart items
-    - Change price
-    - Ignore profile data
+  - Cart simulation
+  - New shopping cart
+  - Get cart information
+  - Remove all items
+  - Remove all personal data
+  - Update cart items
+  - Change price
+  - Ignore profile data
 
 - [Cart attachments](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments)
-    - Add client profile
-    - Add shipping address and select delivery option
-    - Add client preferences
-    - Add marketing data
-    - Add payment data
+  - Add client profile
+  - Add shipping address and select delivery option
+  - Add client preferences
+  - Add marketing data
+  - Add payment data
 
 - [Order placement](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1)
-    - Place order from existing cart
-    - Place order
+  - Place order from existing cart
+  - Place order

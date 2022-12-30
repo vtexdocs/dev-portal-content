@@ -6,7 +6,9 @@ hidden: true
 type: "added"
 ---
 
-Each Customer Credit account has a set of use conditions configured specifically for it. 
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-customer-credits-use-conditions-endpoint-0.png)
+
+Each Customer Credit account has a set of use conditions configured specifically for it.
 
 With that, the Checkout displays a personalized scenario every time that a client chooses the Customer Credit as a payment method to make a purchase.
 

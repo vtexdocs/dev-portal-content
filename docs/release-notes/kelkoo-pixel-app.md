@@ -6,12 +6,8 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="store-framework">Store Framework</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/kelkoo-pixel-app-0.png)
+
 The more native integrations, the better: get ready for the [Kelkoo](https://www.kelkoogroup.com/) native integration! 
 
 The new [pixel app](https://vtex.io/docs/components/all/vtex.kelkoo/) is here to help your store with incremental e-commerce leads!

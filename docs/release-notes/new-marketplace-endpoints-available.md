@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-<div class="badge" id="suggestions-api">Marketplace API</div>
+![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-marketplace-endpoints-available-0.png)
 
 We have just launched new endpoints in our Marketplace API, so marketplace operators have more agility when approving received SKUs. The new endpoints represent more ways of setting up your auto approve rules, for received SKUs.
 

@@ -6,6 +6,8 @@ hidden: false
 type: ""
 ---
 
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-december-2019-0.png)
+
 You better watch out, you better not cry, you better not pout and I'm telling you why: **Release Notes** (once again) **is coming to town**!
 
 Given the holiday's never ending glee (and the 117 Fahrenheit if you're in Brazil) that December bestows upon us all, the **Christmasy Release Notes** comes in an exclusive format this last month of the year, bringing the best and latest of the past few weeks.
@@ -40,6 +42,6 @@ You can call me Santa Claus 'cause once you've read everything you'll feel like 
 ---
 
 Words cannot express how glad we are to have you with us on this journey!
-Here's to next year and to the incredible releases that awaity :beers:
+Here's to next year and to the incredible releases that awaity 🍻
 
 **Happy Holidays!**

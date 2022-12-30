@@ -6,19 +6,11 @@ hidden: false
 type: "added"
 ---
 
-<div class="badge" id="vtex-io">VTEX IO</div>
-[block:html]
-{
-  "html": "<br/>"
-}
-[/block]
-The new Session Client app provides React hooks and GraphQL query and mutation for your React components to read and update the [VTEX Session cookie](https://help.vtex.com/en/tutorial/vtex-session-sessions-system-overview--6C4Edou6bYqqEAOCAg2MQQ).
-[block:callout]
-{
-  "type": "info",
-  "body": "The Session cookie is natively enabled in all VTEX stores and is responsible for saving data of a specific session of a user browsing in your store."
-}
-[/block]
+![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/session-client-app-0.png)
 
-To know more about the Session Client functionality as well as its installation instructions, access the 
+The new Session Client app provides React hooks and GraphQL query and mutation for your React components to read and update the [VTEX Session cookie](https://help.vtex.com/en/tutorial/vtex-session-sessions-system-overview--6C4Edou6bYqqEAOCAg2MQQ).
+
+> ℹ️ The Session cookie is natively enabled in all VTEX stores and is responsible for saving data of a specific session of a user browsing in your store.
+
+To know more about the Session Client functionality as well as its installation instructions, access the
 [app documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-session-client) now!

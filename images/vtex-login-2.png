@@ -1,0 +1,4625 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#009688"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.com/identity/gsi/web/guides/overview"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google Developers" href="https://developers.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/identity/gsi/web/guides/overview" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/identity/gsi/web/guides/overview" /><link rel="alternate" hreflang="ar"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developers.google.com/identity/gsi/web/guides/overview?hl=vi" /><title>Overview &nbsp;|&nbsp; Authentication &nbsp;|&nbsp; Google Developers</title>
+
+<meta property="og:title" content="Overview &nbsp;|&nbsp; Authentication &nbsp;|&nbsp; Google Developers"><meta property="og:url" content="https://developers.google.com/identity/gsi/web/guides/overview"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/opengraph/teal.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Google Identity",
+      "item": "https://developers.google.com/identity"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Authentication",
+      "item": "https://developers.google.com/identity/authentication"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Overview",
+      "item": "https://developers.google.com/identity/gsi/web/guides/overview"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="teal"
+        type="article"
+        
+        
+        
+        layout="docs"
+        
+        
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper"><devsite-header>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/identity"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Identity"
+      
+    >
+    
+          <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Identity
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab dropdown
+    
+    active
+    
+    >
+  
+    <a href="https://developers.google.com/identity/authentication"
+      track-metadata-eventdetail="https://developers.google.com/identity/authentication"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - authentication"
+       track-metadata-module="primary nav"
+       aria-label="Authentication, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Authentication"
+         
+           track-name="authentication"
+         
+       >
+    Authentication
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Authentication"
+       track-type="nav"
+       track-metadata-eventdetail="https://developers.google.com/identity/authentication"
+       track-metadata-position="nav - authentication"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Authentication"
+        
+          track-name="authentication"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Sign In with Google SDKs</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/one-tap/android/overview"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/one-tap/android/overview"
+                     track-metadata-position="nav - authentication"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="sign in with google sdks"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      One Tap sign-up/sign-in for Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/gsi/web/guides/overview"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/gsi/web/guides/overview"
+                     track-metadata-position="nav - authentication"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="sign in with google sdks"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Sign In with Google for Web (including One Tap)
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/sign-in/ios/start"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/sign-in/ios/start"
+                     track-metadata-position="nav - authentication"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="sign in with google sdks"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Sign-In for iOS and macOS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Industry standards</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/passkeys"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/passkeys"
+                     track-metadata-position="nav - authentication"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="sign in with google sdks"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Passkeys
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/openid-connect/openid-connect"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/openid-connect/openid-connect"
+                     track-metadata-position="nav - authentication"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="sign in with google sdks"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      OpenID Connect
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Legacy Sign In</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/sign-in/android/start"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/sign-in/android/start"
+                     track-metadata-position="nav - authentication"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="sign in with google sdks"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Sign-In for Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/sign-in/web/sign-in"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/sign-in/web/sign-in"
+                     track-metadata-position="nav - authentication"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="sign in with google sdks"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Sign-In for Web
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab dropdown
+    
+    
+    
+    >
+  
+    <a href="https://developers.google.com/identity/authorization"
+      track-metadata-eventdetail="https://developers.google.com/identity/authorization"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - authorization"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Authorization"
+         
+           track-name="authorization"
+         
+       >
+    Authorization
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Authorization"
+       track-type="nav"
+       track-metadata-eventdetail="https://developers.google.com/identity/authorization"
+       track-metadata-position="nav - authorization"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Authorization"
+        
+          track-name="authorization"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Call Google APIs</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/sign-in/android/additional-scopes"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/sign-in/android/additional-scopes"
+                     track-metadata-position="nav - authorization"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="call google apis"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Authorizing for Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/oauth2/web/guides/overview"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/oauth2/web/guides/overview"
+                     track-metadata-position="nav - authorization"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="call google apis"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Authorizing for Web
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/sign-in/ios/api-access"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/sign-in/ios/api-access"
+                     track-metadata-position="nav - authorization"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="call google apis"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Authorizing for iOS/macOS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/protocols/oauth2"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/protocols/oauth2"
+                     track-metadata-position="nav - authorization"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="call google apis"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Using OAuth 2.0
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Share data with Google apps and devices</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/account-linking"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/account-linking"
+                     track-metadata-position="nav - authorization"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="call google apis"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Account Linking
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab dropdown
+    
+    
+    
+    >
+  
+    <a href="https://developers.google.com/identity/credential-management"
+      track-metadata-eventdetail="https://developers.google.com/identity/credential-management"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - credential management"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Credential management"
+         
+           track-name="credential management"
+         
+       >
+    Credential management
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Credential management"
+       track-type="nav"
+       track-metadata-eventdetail="https://developers.google.com/identity/credential-management"
+       track-metadata-position="nav - credential management"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Credential management"
+        
+          track-name="credential management"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Android</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/blockstore/android"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/blockstore/android"
+                     track-metadata-position="nav - credential management"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="android"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Blockstore
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/smartlock-passwords/android/overview"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/smartlock-passwords/android/overview"
+                     track-metadata-position="nav - credential management"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="android"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Smart Lock for passwords
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/smartlock-passwords/android/associate-apps-and-sites"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/smartlock-passwords/android/associate-apps-and-sites"
+                     track-metadata-position="nav - credential management"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="android"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Digital Asset Links
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.android.com/guide/topics/text/autofill"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.android.com/guide/topics/text/autofill"
+                     track-metadata-position="nav - credential management"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="android"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Android autofill framework
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Web</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/sign-in-form-best-practices/"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/sign-in-form-best-practices/"
+                     track-metadata-position="nav - credential management"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="android"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Autocomplete
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab dropdown
+    
+    
+    
+    >
+  
+    <a href="https://developers.google.com/identity/credential-verification"
+      track-metadata-eventdetail="https://developers.google.com/identity/credential-verification"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - credential verification"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Credential verification"
+         
+           track-name="credential verification"
+         
+       >
+    Credential verification
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Credential verification"
+       track-type="nav"
+       track-metadata-eventdetail="https://developers.google.com/identity/credential-verification"
+       track-metadata-position="nav - credential verification"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Credential verification"
+        
+          track-name="credential verification"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Android</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/sms-retriever/overview"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/sms-retriever/overview"
+                     track-metadata-position="nav - credential verification"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="android"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Verify users by SMS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/identity/phone-number-hint/android"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/identity/phone-number-hint/android"
+                     track-metadata-position="nav - credential verification"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="android"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Phone Number Hint
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Web</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/web-otp/"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/web-otp/"
+                     track-metadata-position="nav - credential verification"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="android"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Verify phone numbers on the web
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    project-name="Authentication"
+    tenant-name="Google Developers"
+    project-scope="/identity/authentication"
+    url-scoped="https://developers.google.com/s/results/identity/authentication"
+    
+    
+    
+    
+    role="combobox">
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-haspopup="false"
+          aria-multiline="false"
+          aria-label="Search box"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="searchbox"
+          type="text"
+          value=""
+          >
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Bahasa Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developers.google.com/identity/authentication"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Authentication"
+      
+    >
+    
+        Authentication
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/identity/one-tap/android/overview"
+      track-metadata-eventdetail="https://developers.google.com/identity/one-tap/android/overview"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - one tap for android"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: One Tap for Android"
+         
+           track-name="one tap for android"
+         
+       >
+    One Tap for Android
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  active>
+            
+    <a href="https://developers.google.com/identity/gsi/web/guides/overview"
+      track-metadata-eventdetail="https://developers.google.com/identity/gsi/web/guides/overview"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - sign in with google for web"
+       track-metadata-module="primary nav"
+       aria-label="Sign In with Google for Web, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Sign In with Google for Web"
+         
+           track-name="sign in with google for web"
+         
+       >
+    Sign In with Google for Web
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/identity/sign-in/ios/start"
+      track-metadata-eventdetail="https://developers.google.com/identity/sign-in/ios/start"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - google sign-in for ios and macos"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Google Sign-In for iOS and macOS"
+         
+           track-name="google sign-in for ios and macos"
+         
+       >
+    Google Sign-In for iOS and macOS
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/identity/passkeys"
+      track-metadata-eventdetail="https://developers.google.com/identity/passkeys"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - passkeys"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Passkeys"
+         
+           track-name="passkeys"
+         
+       >
+    Passkeys
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/identity/openid-connect/openid-connect"
+      track-metadata-eventdetail="https://developers.google.com/identity/openid-connect/openid-connect"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - openid connect"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: OpenID Connect"
+         
+           track-name="openid connect"
+         
+       >
+    OpenID Connect
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/identity/sign-in/android/start"
+      track-metadata-eventdetail="https://developers.google.com/identity/sign-in/android/start"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - google sign-in for android (legacy)"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Google Sign-In for Android (legacy)"
+         
+           track-name="google sign-in for android (legacy)"
+         
+       >
+    Google Sign-In for Android (legacy)
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/identity/sign-in/web/sign-in"
+      track-metadata-eventdetail="https://developers.google.com/identity/sign-in/web/sign-in"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - google sign-in for web (deprecated)"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Google Sign-In for Web (deprecated)"
+         
+           track-name="google sign-in for web (deprecated)"
+         
+       >
+    Google Sign-In for Web (deprecated)
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter
+            ">
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/identity"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Identity"
+      
+    >
+    
+          <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Identity
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/identity/authentication"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Authentication"
+      
+        track-name="authentication"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Authentication"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Authentication
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Authentication"
+      
+        track-name="authentication"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Authentication">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Authentication">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/identity/one-tap/android/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: One Tap for Android"
+      
+        track-name="one tap for android"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: One Tap for Android"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      One Tap for Android
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/identity/gsi/web/guides/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Sign In with Google for Web"
+      
+        track-name="sign in with google for web"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Sign In with Google for Web"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Sign In with Google for Web
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/identity/sign-in/ios/start"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Google Sign-In for iOS and macOS"
+      
+        track-name="google sign-in for ios and macos"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Sign-In for iOS and macOS"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Sign-In for iOS and macOS
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/identity/passkeys"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Passkeys"
+      
+        track-name="passkeys"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Passkeys"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Passkeys
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/identity/openid-connect/openid-connect"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: OpenID Connect"
+      
+        track-name="openid connect"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: OpenID Connect"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      OpenID Connect
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/identity/sign-in/android/start"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Google Sign-In for Android (legacy)"
+      
+        track-name="google sign-in for android (legacy)"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Sign-In for Android (legacy)"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Sign-In for Android (legacy)
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/identity/sign-in/web/sign-in"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Google Sign-In for Web (deprecated)"
+      
+        track-name="google sign-in for web (deprecated)"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Sign-In for Web (deprecated)"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Sign-In for Web (deprecated)
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/identity/authorization"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Authorization"
+      
+        track-name="authorization"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Authorization"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Authorization
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Authorization"
+      
+        track-name="authorization"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Authorization">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Authorization">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/identity/credential-management"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Credential management"
+      
+        track-name="credential management"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Credential management"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Credential management
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Credential management"
+      
+        track-name="credential management"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Credential management">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Credential management">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/identity/credential-verification"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Credential verification"
+      
+        track-name="credential verification"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Credential verification"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Credential verification
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Credential verification"
+      
+        track-name="credential verification"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Credential verification">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Credential verification">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom" role="navigation">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Get started</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/overview"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/overview"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/offerings"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/offerings"
+      ><span class="devsite-nav-text" tooltip>Features</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/integrate"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/integrate"
+      ><span class="devsite-nav-text" tooltip>Integration considerations</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/supported-browsers"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/supported-browsers"
+      ><span class="devsite-nav-text" tooltip>Supported browsers</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/get-google-api-clientid"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/get-google-api-clientid"
+      ><span class="devsite-nav-text" tooltip>Setup</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/client-library"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/client-library"
+      ><span class="devsite-nav-text" tooltip>Load the client library</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/tools/configurator"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/tools/configurator"
+      ><span class="devsite-nav-text" tooltip>Generate the integration code</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Sign in With Google button</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/personalized-button"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/personalized-button"
+      ><span class="devsite-nav-text" tooltip>Understand personalized button</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/display-button"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/display-button"
+      ><span class="devsite-nav-text" tooltip>Display the Sign in With Google button</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>One Tap guides</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/features"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/features"
+      ><span class="devsite-nav-text" tooltip>Understand the One Tap user experience</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/automatic-sign-in-sign-out"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/automatic-sign-in-sign-out"
+      ><span class="devsite-nav-text" tooltip>Automatic sign-in and sign-out</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/display-google-one-tap"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/display-google-one-tap"
+      ><span class="devsite-nav-text" tooltip>Display the One Tap prompt</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/itp"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/itp"
+      ><span class="devsite-nav-text" tooltip>One Tap on ITP browsers</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Advanced topics</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/verify-google-id-token"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/verify-google-id-token"
+      ><span class="devsite-nav-text" tooltip>Verify the Google ID token on your server side</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/toggle-outside-tap"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/toggle-outside-tap"
+      ><span class="devsite-nav-text" tooltip>Toggle outside tap to close One Tap</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/change-sign-in-context"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/change-sign-in-context"
+      ><span class="devsite-nav-text" tooltip>Change the One Tap sign-in context</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/subdomains"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/subdomains"
+      ><span class="devsite-nav-text" tooltip>Display One Tap across subdomains</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/toggle-display-with-cookies"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/toggle-display-with-cookies"
+      ><span class="devsite-nav-text" tooltip>Toggle the One Tap display with cookies</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/change-position"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/change-position"
+      ><span class="devsite-nav-text" tooltip>Change the One Tap prompt position</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/receive-notifications-prompt-ui-status"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/receive-notifications-prompt-ui-status"
+      ><span class="devsite-nav-text" tooltip>Receive notifications on the prompt UI status</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/use-one-tap-js-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/use-one-tap-js-api"
+      ><span class="devsite-nav-text" tooltip>Use the JavaScript API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/revoke"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/revoke"
+      ><span class="devsite-nav-text" tooltip>Revoke an ID token</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/display-browsers-native-credential-manager"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/display-browsers-native-credential-manager"
+      ><span class="devsite-nav-text" tooltip>Display the browser&#39;s native credential manager</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/handle-credential-responses-js-functions"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/handle-credential-responses-js-functions"
+      ><span class="devsite-nav-text" tooltip>Handle credential responses with JavaScript functions</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/devices"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/devices"
+      ><span class="devsite-nav-text" tooltip>Sign-In on TVs and Limited Input Devices</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Accelerated Mobile Pages</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/amp/amp"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/amp/amp"
+      ><span class="devsite-nav-text" tooltip>Display One Tap in AMP pages</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/amp/intermediate-iframe"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/amp/intermediate-iframe"
+      ><span class="devsite-nav-text" tooltip>Integrate One Tap via an Iframe</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Resources</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/guides/migration"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/guides/migration"
+      ><span class="devsite-nav-text" tooltip>Migrating from Google Sign-In</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/tools/configurator"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/tools/configurator"
+      ><span class="devsite-nav-text" tooltip>Code Generator</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Reference</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/reference/html-reference"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/reference/html-reference"
+      ><span class="devsite-nav-text" tooltip>HTML API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/reference/js-reference"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/reference/js-reference"
+      ><span class="devsite-nav-text" tooltip>JavaScript API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/amp/amp-reference"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/amp/amp-reference"
+      ><span class="devsite-nav-text" tooltip>AMP Component API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/amp/nonamp-reference"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/amp/nonamp-reference"
+      ><span class="devsite-nav-text" tooltip>Non-AMP Component API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/amp/intermediate-support-reference"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/amp/intermediate-support-reference"
+      ><span class="devsite-nav-text" tooltip>AMP Intermediate Support API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/identity/gsi/web/reference/release-notes"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/gsi/web/reference/release-notes"
+      ><span class="devsite-nav-text" tooltip>Release Notes</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Related topics</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/identity/protocols/oauth2/openid-connect"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/identity/protocols/oauth2/openid-connect"
+      ><span class="devsite-nav-text" tooltip>OpenID Connect for Google</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://webauthn.guide/"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://webauthn.guide/"
+      ><span class="devsite-nav-text" tooltip>WebAuthn</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+          </ul>
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="Authentication"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Sign In with Google SDKs
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/one-tap/android/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: One Tap sign-up/sign-in for Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      One Tap sign-up/sign-in for Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/gsi/web/guides/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Sign In with Google for Web (including One Tap)"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Sign In with Google for Web (including One Tap)
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/sign-in/ios/start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Sign-In for iOS and macOS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Sign-In for iOS and macOS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Industry standards
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/passkeys"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Passkeys"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Passkeys
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/openid-connect/openid-connect"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: OpenID Connect"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      OpenID Connect
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Legacy Sign In
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/sign-in/android/start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Sign-In for Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Sign-In for Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/sign-in/web/sign-in"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Sign-In for Web"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Sign-In for Web
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Authorization"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Call Google APIs
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/sign-in/android/additional-scopes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Authorizing for Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Authorizing for Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/oauth2/web/guides/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Authorizing for Web"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Authorizing for Web
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/sign-in/ios/api-access"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Authorizing for iOS/macOS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Authorizing for iOS/macOS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/protocols/oauth2"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Using OAuth 2.0"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Using OAuth 2.0
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Share data with Google apps and devices
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/account-linking"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Account Linking"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Account Linking
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Credential management"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Android
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/blockstore/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blockstore"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blockstore
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/smartlock-passwords/android/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Smart Lock for passwords"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Smart Lock for passwords
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/smartlock-passwords/android/associate-apps-and-sites"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Digital Asset Links"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Digital Asset Links
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.android.com/guide/topics/text/autofill"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android autofill framework"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Android autofill framework
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Web
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/sign-in-form-best-practices/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Autocomplete"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Autocomplete
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Credential verification"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Android
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/sms-retriever/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Verify users by SMS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Verify users by SMS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/identity/phone-number-hint/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Phone Number Hint"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Phone Number Hint
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Web
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/web-otp/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Verify phone numbers on the web"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Verify phone numbers on the web
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav
+            has-sidebar>
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+              
+              <devsite-toc class="devsite-nav"
+                           role="navigation"
+                           aria-label="On this page"
+                           depth="2"
+                           scrollbars
+                ></devsite-toc>
+              <devsite-recommendations-sidebar class="nocontent devsite-nav">
+              </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Home
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/products"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Products
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/identity"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Google Identity"
+      
+    >
+    
+        Google Identity
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/identity/authentication"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail="Authentication"
+      
+    >
+    
+        Authentication
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/identity/gsi/web/guides/overview"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="5"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="5"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Sign In with Google for Web
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Authentication"
+  product-id="5186570"
+  bucket="Identity guides"
+  context="External devsite feedback"
+  version="t-devsite-webserver-20221208-r00-rc02.448541697210665307"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/touchicon-180.png"
+  
+  
+  feedback-type="thumb-rating">
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  <h1 class="devsite-page-title">Overview</h1><devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events"
+          analytics-action-show="Callout Profile displayed"
+          analytics-action-close="Callout Profile dismissed"
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+    
+  
+  <devsite-toc class="devsite-nav"
+               depth="2"
+               devsite-toc-embedded
+               >
+  </devsite-toc>
+
+  
+  <devsite-recommendations-dropdown class="nocontent"></devsite-recommendations-dropdown>
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+
+
+<p>Sign in with Google helps you to
+quickly and easily manage user authentication on your website.
+Users sign into a Google account, provide their consent, and securely share
+their profile information with your platform.</p>
+
+<p>Customizable buttons and multiple flows are supported for user sign-up and
+sign-in.</p>
+
+<p>Sign-up refers to the steps to obtain a Google account holder&#39;s consent to
+share their profile information with your platform. Typically, a new account is
+created on your site using this shared data, but this is not a requirement.</p>
+
+<p>Sign-in refers to logging users into your website using their active Google
+account with a <a href="/identity/gsi/web/guides/personalized-button">personalized sign-in button</a>
+or <a href="/identity/gsi/web/guides/display-google-one-tap">One Tap</a> and
+<a href="/identity/gsi/web/guides/automatic-sign-in-sign-out">Automatic sign-in</a> for
+users already logged in to their Google account.</p>
+
+<p>See the <a href="/identity/sign-in/case-studies">Case Studies</a>
+for some success stories of Sign In With Google integrations.</p>
+
+<p>You can also use the <a href="/identity/oauth2/web/guides/overview">Google Identity Services
+authorization API</a>, which allows you
+to obtain an access token for use with Google APIs, or to access user data.</p>
+
+<h2 id="sign_in_with_google_demo" data-text="Sign in with Google demo">Sign in with Google demo</h2>
+
+<p>Click the button to sign-in to your Google Account.</p>
+
+<devsite-iframe><iframe src="https://developers.google.com/frame/identity/gsi/web/guides/overview_c694146549f8825c2cecf7d7dadc1e8efa13ce99ecf67bf5bf88acc0ba4b65f8.frame" class="framebox inherit-locale " allow="clipboard-write https://developers-dot-devsite-v2-prod.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+<h2 id="user_privacy" data-text="User privacy">User privacy</h2>
+
+<p>Data from Sign in with Google is not used for ads or other non-security purposes.</p>
+
+<h2 id="use_cases" data-text="Use cases">Use cases</h2>
+
+<p>Some of the reasons to add Sign in with Google to your site are:</p>
+
+<ul>
+<li>Add a visibly trusted and secure Sign in with Google button to an account
+creation or settings page.</li>
+<li>Pre-populate new accounts with consensually shared data from a Google Account
+profile.</li>
+<li>Users can sign in once to a Google Account without re-entering usernames or passwords
+on other sites.</li>
+<li>On return visits, users can sign in automatically or with one click across an entire
+site.</li>
+<li>Use verified Google Accounts to protect comments, voting or forms from abuse,
+while allowing anonymity.</li>
+</ul>
+
+<h2 id="supported_features" data-text="Supported features">Supported features</h2>
+
+<p>These features are supported by Sign in with Google:</p>
+
+<ul>
+<li>Sign up, to optionally create a new account auto-filled from a Google Account
+profile.</li>
+<li>Sign in, using an account chooser to select from multiple accounts.</li>
+<li>Sign in with one tap, if you&#39;ve already signed in to your Google Account.</li>
+<li>Sign in automatically, on return visits using your computer, phone or
+even multiple browser tabs.</li>
+<li>Sign out, to disable automatic sign-in across all your devices.</li>
+</ul>
+
+<p>Note how account states may affect Sign in with Google:
+* Suspending your Google account stops sign in to all sites using
+  Sign in with Google.
+* Deleting your Google or partner account affects one, but not the other.</p>
+
+<h2 id="compare_to_oauth_and_openid_connect" data-text="Compare to OAuth and OpenId Connect">Compare to OAuth and OpenId Connect</h2>
+
+<p>OAuth and OpenId Connect are open standards that offer a wide range of
+configurable options to fine-tune the behavior of authentication and
+authorization flows. Please refer to Google&#39;s <a href="/identity/protocols/oauth2">OAuth documentation</a>
+for more details.</p>
+
+<p>Sign in with Google offers a single SDK to
+encompass several related offerings including a personalized button, One Tap,
+Automatic sign-in, and authorization. It aims to offer an easier and more secure out-of-the-box
+experience for developers than the standard OAuth and OpenId Connect protocols,
+while providing a more seamless user experience.</p>
+
+<ul>
+<li>Sign in with Google is based on OAuth 2.0. The permissions that users granted
+through Sign in with Google are the same as those that they grant for OAuth,
+and vice versa.</li>
+<li>OAuth 2.0 is also the industry-standard protocol for authorization.
+It provides for a set of endpoints with which relying parties integrate using
+HTTP.</li>
+<li>Google Identity Services (GIS) APIs are available in several languages
+including JavaScript and HTML, that provide for both authentication
+and authorization.</li>
+<li>GIS separates the authentication moment from the authorization moment.
+In the authentication moment, a quick integration can be achieved by just
+integrating some UI elements into your website, such as the personalized
+button, One Tap, and automatic sign-in, etc. These UI elements provide
+a consistent authentication UX across all third party websites.
+In the authorization moment, GIS triggers OAuth flows to return tokens
+for data access on behalf of the user.</li>
+<li>GIS authentication makes integration with relying parties easier,
+and reduces most of the OAuth and security knowledge burden on developers.
+You don&#39;t need to choose from various approaches to obtain access tokens or
+authorization code, or risk the consequences of choosing the wrong approach.
+While the OAuth 2.0 protocol exposes many details such as the
+request/response parameters of the HTTP endpoints, GIS handles these
+implementation details for you. Also, GIS includes some security
+implementations for Cross-Site Request Forgery (CSRF) protection by default.</li>
+<li>With the HTML API and <a href="/identity/gsi/web/tools/configurator">Code Generator</a>,
+The GIS authentication lowers the bar for relying parties integration
+even further. You don&#39;t need a JavaScript developer to generate the code.
+This reduces the level of OAuth experience required as well as time
+to implement.</li>
+<li>The GIS authorization UX is fully based on OAuth UX. However, the GIS
+JavaScript library adds some restrictions for easier and safer
+relying party integration.</li>
+<li>GIS also provides some features beyond the OAuth protocol. For example,
+it integrates <a href="/identity/gsi/web/guides/display-browsers-native-credential-manager">Password Credential Manager API</a>
+and <a href="/identity/gsi/web/guides/supported-browsers#third-party_cookies">Federated Credential Manager API</a>
+(to be launched soon).</li>
+</ul>
+
+<p>With Google Identity Services, developers can use a dedicated and integrated
+service to help their users to sign in to the developer&#39;s website and apps
+with whatever login credentials the user chooses.
+The mission of GIS is to support and streamline the UX for multiple types of
+credentials, to lower the technical bar for the relying party integration.</p>
+
+<h3 id="separated_authentication_and_authorization_moments" data-text="Separated authentication and authorization moments">Separated authentication and authorization moments</h3>
+
+<p>To obtain an access token for use with Google APIs, or to access user data,
+you need to call the <a href="/identity/oauth2/web/guides/overview">Google Identity Services authorization API</a>.
+It&#39;s a separate JavaScript API, but packaged together with the
+authentication API.</p>
+
+<p>If your website needs to call both authentication and authorization APIs, you
+need to call them separately at different moments. At the authentication moment,
+your website can integrate with One Tap, automatic sign-in and/or the Sign In
+with Google button to allow users to sign in or sign up to your website.
+At a later time, when accessing data from Google is required, you call
+the authorization API to ask for the consent and get access
+tokens for data access. This separation complies with our recommended
+<a href="/identity/protocols/oauth2/web-server#incrementalAuth">incremental authorization</a>
+best practice, in which the permissions are requested in context.</p>
+
+<p>To enforce this separation, the authentication API can only return ID tokens
+which are used to sign in to your website, whereas the authorization API can
+only return code or access tokens which are used only for data access but
+not sign-in.</p>
+
+<p>Thanks to this separation, users will have consistent authentication experiences
+across different websites, which may bring more user trust and usage, and
+resulting in better user conversion rates on your website. Also, due to this
+separation, Google Identity Services reduces the level of OAuth experience
+ required and time to implement for authentication developers.</p>
+<aside class="key-point"><strong>Key Point:</strong><span> Google Identity Services designates Sign in with Google for the
+  authentication moment API and features.
+  Google Identity Services designates the <a href="/identity/oauth2/web/guides/overview">Authorization API</a>
+  for the authorization moment API and features.</span></aside>
+  
+
+  
+</div>
+
+  
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Authentication"
+  product-id="5186570"
+  bucket="Identity guides"
+  context="External devsite feedback"
+  version="t-devsite-webserver-20221208-r00-rc02.448541697210665307"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/touchicon-180.png"
+  
+  
+  feedback-type="thumb-rating">
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2022-12-23 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Authentication"
+  product-id="5186570"
+  bucket="Identity guides"
+  context="External devsite feedback"
+  version="t-devsite-webserver-20221208-r00-rc02.448541697210665307"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/touchicon-180.png"
+  
+  
+  feedback-type="thumb-rating">
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+
+<nav class="devsite-footer-promos nocontent" aria-label="Promotions">
+  <ul class="devsite-footer-promos-list">
+    
+    <li class="devsite-footer-promo">
+      <a href="//github.com/googlesamples/google-services"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+         
+         data-label="Footer Promo Link (index 1)"
+       
+       >
+        
+        
+          
+            <img class="devsite-footer-promo-icon"
+                 src="/static/site-assets/logo-github.svg"
+                 loading="lazy"
+                 alt="GitHub">
+          
+        
+        GitHub
+      </a>
+      <div class="devsite-footer-promo-description">Fork our samples and try them yourself</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="//stackoverflow.com/questions/tagged/google-signin"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+         
+         data-label="Footer Promo Link (index 2)"
+       
+       >
+        
+        
+          
+            <img class="devsite-footer-promo-icon"
+                 src="/static/site-assets/logo-stack-overflow.svg"
+                 loading="lazy"
+                 alt="Stack Overflow">
+          
+        
+        Stack Overflow
+      </a>
+      <div class="devsite-footer-promo-description">Ask a question under the google-signin tag</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="//googledevelopers.blogspot.com/search/label/sign-in"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+         
+         data-label="Footer Promo Link (index 3)"
+       
+       >
+        
+        
+          
+            <img class="devsite-footer-promo-icon"
+                 src="/static/site-assets/developers_64dp.png"
+                 loading="lazy"
+                 alt="Blog">
+          
+        
+        Blog
+      </a>
+      <div class="devsite-footer-promo-description">The latest news on the Google Developers blog</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="https://blog.chromium.org"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+         
+         data-label="Footer Promo Link (index 4)"
+       
+       >
+        
+        
+          
+            <img class="devsite-footer-promo-icon"
+                 src="https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png"
+                 loading="lazy"
+                 alt="Chromium Blog">
+          
+        
+        Chromium Blog
+      </a>
+      <div class="devsite-footer-promo-description">The latest news on the Chromium blog.</div>
+    </li>
+    
+  </ul>
+</nav>
+
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Product Info</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/terms"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Terms of Service
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/identity/branding-guidelines"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            Branding Guidelines
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Help</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//stackoverflow.com/questions/tagged/google-signin"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Sign In With Google
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//stackoverflow.com/questions/tagged/google-identity"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            Google Identity
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Developer consoles</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google API Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.cloud.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Cloud Platform Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//play.google.com/apps/publish"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Play Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.firebase.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Firebase Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.actions.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Actions on Google Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//cast.google.com/publish"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Cast SDK Developer Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//chrome.google.com/webstore/developer/dashboard"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+              
+              
+            
+          
+            Chrome Web Store Dashboard
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        <source srcset="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/lockup-developers-dark-theme.svg"
+                media="(prefers-color-scheme: none)"
+                class="devsite-dark-theme"
+                loading="lazy"
+                alt="Google Developers">
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/lockup-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+        
+        <span class="devsite-footer-utility-description">Sign up for the Google Developers newsletter</span>
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          Subscribe
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Bahasa Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension6&#34;: &#34;en&#34;, &#34;dimension3&#34;: false, &#34;dimension4&#34;: &#34;Authentication&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension11&#34;: false, &#34;dimension5&#34;: &#34;en&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}}]</script>
+<script type="application/json" gtm>{&#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Authentication&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}, &#34;tags&#34;: []}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="EEzLxnJ9d+jJfn7VlbB2YWLVuHsXJc">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53","https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,111,112,113,115,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,144,147,148,149,150,151,152,154,155,156,157,158,159,161,163,164,165,168,169,170,172,173,179,180,182,183,186,190,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Search__enable_devsite_serp","Profiles__enable_developer_profiles_interests","Cloud__enable_cloudx_experiment_ids","BookNav__enable_collapsible_book_nav","SignIn__enable_auto_signin_oauth","Significatio__enable_experiment_id_caching","BookNav__enable_book_nav_filtering","Experiments__reqs_query_experiments","Cloud__enable_cloud_facet_chat","Cloud__enable_cloud_dlp_service","Cloud__enable_cloud_shell_fte_user_flow","Profiles__enable_profile_collections","Search__enable_suggestions_from_borg","Profiles__require_profile_eligibility_for_signin","Search__enable_acl_suggestions","Profiles__enable_profile_notifications_ui","Significatio__enable_by_tenant","Profiles__enable_page_saving","Search__enable_page_map","Profiles__enable_developer_profiles_dashboard_recommendations","Badges__enable_delete_badges","MiscFeatureFlags__enable_footprints_record_views","Cloud__enable_cloud_shell","Badges__enable_drag_and_drop_badges","Profiles__enable_developer_profiles_callout","Experiments__enable_experiments","Profiles__enable_public_developer_profiles","MiscFeatureFlags__emergency_css","MiscFeatureFlags__enable_tls_version_for_gaia_calls"]]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

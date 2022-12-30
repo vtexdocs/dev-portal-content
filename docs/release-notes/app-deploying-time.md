@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/app-deploying-time-0.png)
 
 Aiming to strengthen the security of our development process, published apps will now have to wait 7 minutes until they become able to be deployed.
 

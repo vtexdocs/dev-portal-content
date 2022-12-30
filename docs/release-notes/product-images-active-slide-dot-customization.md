@@ -6,25 +6,11 @@ hidden: false
 type: "improved"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red)
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-images-active-slide-dot-customization-0.png)
 
-A new CSS Handle (`swiperBullet--active`) was added to the [Product Images block](https://vtex.io/docs/components/all/vtex.store-components/productimages)(from the [Store Components app](https://vtex.io/docs/components/all/vtex.store-components/)), enabling the customization of the active slide dot. 
+A new CSS Handle (`swiperBullet--active`) was added to the [Product Images block](https://vtex.io/docs/components/all/vtex.store-components/productimages)(from the [Store Components app](https://vtex.io/docs/components/all/vtex.store-components/)), enabling the customization of the active slide dot.
 
 This handle is extremely useful for scenarios where the Product Images block is used to build a slider component, such as a [Carousel](https://vtex.io/docs/recipes/templates/building-a-carousel-using-slider-layout).
 
 :information-source: *The slider active dot represents the slide currently being hovered on by users.*
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/18199ca-rn-swiper-product-images.png",
-        "rn-swiper-product-images.png",
-        804,
-        486,
-        "#c5b7b4"
-      ]
-    }
-  ]
-}
-[/block]
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-images-active-slide-dot-customization-1.png)

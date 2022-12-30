@@ -6,25 +6,12 @@ hidden: false
 type: "added"
 ---
 
-![https://img.shields.io/badge/-VTEX%20Store%20Framework-red](https://img.shields.io/badge/-VTEX%20Store%20Framework-red) 
+![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-highlights-app-0.png)
 
 The Product Highlights app is here: it allows you to display highlight badges on products according to the collection or promotion they are linked to.
 
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-highlights-app-1.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c9dbe7c-product-highlight.png",
-        "product-highlight.png",
-        255,
-        479,
-        "#dddcde"
-      ],
-      "caption": "In the image above, the product has a `Top Seller` highlight."
-    }
-  ]
-}
-[/block]
+In the image above, the product has a `Top Seller` highlight.
+
 To learn how to configure it in your store, access now the [Product Highlights app documentation](https://vtex.io/docs/components/all/vtex.product-highlights/)!
