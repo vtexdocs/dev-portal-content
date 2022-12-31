@@ -50,9 +50,7 @@ Now, you are able to use all blocks exported by the `product-summary` app. Check
   },
 ```
 
-> ℹ️ Info 
-> 
-> Although the name of the block 'product-summary.shelf' alludes to the Shelf component, this block is not required to create a Shelf component. The Product Summary Shelf is used to present summary product information in other components, such as the [Minicart](https://developers.vtex.com/vtex-developer-docs/docs/vtex-minicart) and the [Search Results](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) page.
+> ℹ️ Although the name of the block 'product-summary.shelf' alludes to the Shelf component, this block is not required to create a Shelf component. The Product Summary Shelf is used to present summary product information in other components, such as the [Minicart](https://developers.vtex.com/vtex-developer-docs/docs/vtex-minicart) and the [Search Results](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) page.
     
 3. Add the blocks from the list above as children of the `product-summary.shelf`, considering the product information you want to present in the product list. Take the following example in which the product name, description, image, price, SKU selector, and Buy Button are all displayed in the Product Summary:
 

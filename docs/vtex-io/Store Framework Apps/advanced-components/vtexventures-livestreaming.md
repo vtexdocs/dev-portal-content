@@ -19,9 +19,7 @@ The app works on both devices, desktop, and mobile.
 1. Access the [Live Shopping app page on the VTEX App Store](https://apps.vtex.com/vtexventures-livestreaming/p).
 2. Click on the `Get app` button to install the app in your VTEX account.
 
-> ⚠️ Warning
->
-> Notice that this is a paid app whose subscription costs will depend on the plan that you have chosen: **Lite**, **Standard**, or **Pro**. All payment details are provided at the moment of installation. Plan pricing refers to the total monthly minutes available for you to make as many transmissions as you like within the plan's available minutes. Each plan includes a set number of minutes for a month. For more details on the plans and pricing check out the [Live Shopping App Store page](https://apps.vtex.com/liveshopping/p).
+> ⚠️ Notice that this is a paid app whose subscription costs will depend on the plan that you have chosen: **Lite**, **Standard**, or **Pro**. All payment details are provided at the moment of installation. Plan pricing refers to the total monthly minutes available for you to make as many transmissions as you like within the plan's available minutes. Each plan includes a set number of minutes for a month. For more details on the plans and pricing check out the [Live Shopping App Store page](https://apps.vtex.com/liveshopping/p).
 
 3. Once the app is successfully installed, open your account's Store Theme app using the code editor of your preference.
 4. In the `manifest.json` file, add the app to the theme's peer dependencies list:
@@ -61,9 +59,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 
 - **Usage**: helps you track how many Live events minutes are available and were used by your account.
 
-> ⚠️ Warning
->
-> The total amount of minutes available will depend on your chosen plan: **Lite**, **Standard**, or **Pro**. All payment details are provided at the moment of installation.
+> ⚠️ The total amount of minutes available will depend on your chosen plan: **Lite**, **Standard**, or **Pro**. All payment details are provided at the moment of installation.
 
 
 ## Configuration
@@ -95,9 +91,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 
 ![details](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexventures-livestreaming-5.png)
 
-> ⚠️ Warning
->
-> The event will take approximately 3 minutes to turn on, i.e., be live.
+> ⚠️ The event will take approximately 3 minutes to turn on, i.e., be live.
 
 4. Using the admin sidebar, access `CMS` and then `**Site Editor**`.
 5. Locate the Live Shopping block in your store, according to the template you have declared it, and click on it.
@@ -169,9 +163,7 @@ When you [create a new event](#creating-new-events), you have the option to add 
 1. In the events list, click on the desired live event's arrow button (in the `Action` column).
 2. Change its status to `Finalized` by toggling the `Status` button.
 
-> ⚠️ Warning
->
-> The live shopping completion process may take a while. Do not close the page until the `Finalized` status is green, as shown in the image below.
+> ⚠️ The live shopping completion process may take a while. Do not close the page until the `Finalized` status is green, as shown in the image below.
 
 ![finalized-status](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexventures-livestreaming-12.png)
 

@@ -116,9 +116,7 @@ According to your desire, copy one of the examples stated below and paste it in 
 }
 ```
 
-> ⚠️ warning
->
->  Notice that **the Product Highlights' blocks need a Product context in order to work properly since they handle product data**. Therefore, when declaring them, be sure that they are in a theme template or block in which this context is available, such as the `store.product` and `product-summary.shelf`.
+> ⚠️ Notice that **the Product Highlights' blocks need a Product context in order to work properly since they handle product data**. Therefore, when declaring them, be sure that they are in a theme template or block in which this context is available, such as the `store.product` and `product-summary.shelf`.
 
 ### `product-highlights` props
 
@@ -127,8 +125,7 @@ According to your desire, copy one of the examples stated below and paste it in 
 | `type`    | `enum`   | Desired type of product highlight to be displayed. Possible values are: `collection`, `promotion`, and `teaser`. `collection` highlights the product's collection therefore it must be be used in conjuction with the [Collection Highlight](https://help.vtex.com/en/tutorial/collection-highlight-control--1tGdb2ndjqy6yWsk2YwKMu?locale=en) feature. `promotion` and `teaser` should be used when the product is configured with a [promotion with highlights](https://help.vtex.com/en/tutorial/configuring-promotions-with-a-highlightflag--tutorials_2295?locale=en), but notice the following: `teaser` must only be used when the promotion presents restrictions. `promotion`, in turn, when it does not. ⚠️*Be aware that nominal promotions will only be displayed in the cart, not on the shelf or product page.*| `collection`  |
 | `filter`  | `object` | Defines the highlights that should and should not be displayed by the block. | `undefined`   |
 
-> ⚠️ warning
-> 
+> ⚠️  
 > Technically, `collection` maps to the property [`clusterHighlights`](https://github.com/vtex-apps/search-graphql/blob/ea1d7e244e6b00b58e5aa4272fbb16987c483468/graphql/types/Product.graphql#L29); `promotion` to [`discountHighlights`](https://github.com/vtex-apps/search-graphql/blob/ea1d7e244e6b00b58e5aa4272fbb16987c483468/graphql/types/Product.graphql#L283); and `teaser` to [`teasers`](https://github.com/vtex-apps/search-graphql/blob/ea1d7e244e6b00b58e5aa4272fbb16987c483468/graphql/types/Product.graphql#L284).
 
 - **`filter` object:**

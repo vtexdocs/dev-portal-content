@@ -75,13 +75,9 @@ To access and use the review moderation admin interface, follow the instructions
 1. Enable the **Require Admin Approval** setting as described above.
 2. In the admin dashboard, navigate to **Catalog > Reviews** using the admin's sidebar.
 3. You may view either **Pending** or **Approved** reviews using the tabs at the top of the page.
-> ⚠️ Warning
->
-> You can export reviews to XLS files from the **Download** tab, and it is limited to exporting 800 reviews at a time. Please use the date pickers to select the time range of reviews you want to export.
+> ⚠️ You can export reviews to XLS files from the **Download** tab, and it is limited to exporting 800 reviews at a time. Please use the date pickers to select the time range of reviews you want to export.
 
-> ⚠️ Warning
->
-> If you have updated to version 3.x after using a prior version of **Reviews and Ratings**, you may see the **Migrate Data** button instead of a list of reviews in the **Catalog > Reviews** page. Clicking this button will migrate all existing review data from the previous storage solution (VBASE) to the new solution (Masterdata V2). Once the migration is finished, the page will automatically refresh, and the list of reviews will become available for you.
+> ⚠️ If you have updated to version 3.x after using a prior version of **Reviews and Ratings**, you may see the **Migrate Data** button instead of a list of reviews in the **Catalog > Reviews** page. Clicking this button will migrate all existing review data from the previous storage solution (VBASE) to the new solution (Masterdata V2). Once the migration is finished, the page will automatically refresh, and the list of reviews will become available for you.
 
 Individual pending reviews may be either approved or deleted using the Kebab Menu (3 dots button) in the right column or selecting the checkbox in the left. Multiple reviews can also be selected using the checkboxes, being approved or deleted in bulk.
 
