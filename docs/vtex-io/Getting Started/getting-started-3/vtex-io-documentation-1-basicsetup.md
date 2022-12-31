@@ -5,6 +5,8 @@ excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-08-11T07:03:17.968Z"
 updatedAt: "2022-12-13T20:17:44.100Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-2-prerequesites"
 ---
 
 You may not realize it, but once you've implemented [**VTEX Store Framework**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-store-framework) in your store, you'll be developing in [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io/) on a certain scale.
