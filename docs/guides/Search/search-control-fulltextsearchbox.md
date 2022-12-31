@@ -14,7 +14,7 @@ updatedAt: "2022-09-13T14:49:33.433Z"
 [/block]
 The `<vtex.cmc:fullTextSearchBox />` control is responsible for generating the search box. Besides the search filed, the control renders a combo for restricting a search in one department. Below we have an example of the control with no application of CSS:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-cru_16.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-cru.png)
 
 Search is a functionality that must be available on all the pages of a store. That is why it is suggested inserting the control inside a [subtemplate](https://help.vtex.com/en/tutorial/subtemplates--tutorials_577). The search control is used within the subtemplate of the store header.
 
@@ -67,10 +67,10 @@ The autocomplete functionality is already provided for in this control, and it i
 ## Examples of how the control can be customized
 
 **Example 1**
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-autocomplete-560x318_70.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-autocomplete-560x318.png)
 
 **Example 2**
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-exemplo-560x43_73.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-exemplo-560x43.png)
 
 **Example 3**
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-exemplo1_76.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-exemplo1.png)
