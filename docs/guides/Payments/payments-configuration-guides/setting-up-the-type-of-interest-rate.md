@@ -16,7 +16,7 @@ The payment method's ID can be configured to have Simple Interest Rates and is o
 4. In **Payment Conditions** tab, select the payment condition that should be configured to use Simple Interest Rates.
 5. Copy the last URL parameter, which shows the ID of this Payment Method (see image).
 
-![ENjuros](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/setting-up-the-type-of-interest-rate-0.png)
+![ENjuros](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Payments/payments-configuration-guides/setting-up-the-type-of-interest-rate-0_19.png)
 
 ## Setting up the interest rate type using API
 
@@ -27,9 +27,10 @@ The `interestRateMethod` field is where the setup should be implemented, if we w
 
 A `GET Rule by ID` call will initially be sent in order to receive the updated Payment Method setting through the following API:
 
-[https://developers.vtex.com/vtex-rest-api/reference/rulebyid](https://developers.vtex.com/vtex-rest-api/reference/rulebyid)
+- [`rulebyid`](https://developers.vtex.com/vtex-rest-api/reference/rulebyid)
 
 The reply that the `GET Rule by ID` call returns will be the request of the thereafter `POST Rule by ID` call. To save the new configuration, only the value `interestRateMethod`:1 should be modified:
 
-[https://developers.vtex.com/vtex-rest-api/reference/putrulebyid](https://developers.vtex.com/vtex-rest-api/reference/putrulebyid)
->❗ At present, the only way to change a payment method is through API. Should it be necessary to change the payment method by using the user interface, the setup process through API would have to be repeated, since when saving the changes, the value will be considered empty by default.
+- [`putrulebyid`](https://developers.vtex.com/vtex-rest-api/reference/putrulebyid)
+
+> ❗ At present, the only way to change a payment method is through API. Should it be necessary to change the payment method by using the user interface, the setup process through API would have to be repeated, since when saving the changes, the value will be considered empty by default.

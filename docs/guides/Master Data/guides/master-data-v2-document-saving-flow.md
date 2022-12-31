@@ -8,7 +8,7 @@ updatedAt: "2022-08-04T19:27:16.561Z"
 
 Whenever you save a document in Master Data v2, the platform performs a specific sequence of processes indicated in the image below. In this article, you can learn more about each step in this saving flow.
 
-![master data v2 document saving flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/master-data-v2-document-saving-flow-0.png)
+![master data v2 document saving flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Master%20Data/guides/master-data-v2-document-saving-flow-0_11.png)
 
 ## Save API call
 

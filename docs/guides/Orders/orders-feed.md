@@ -286,7 +286,7 @@ The Orders Feed can be useful in lots of different ways. For instance, say you w
 4. Then, it commits the events to the Feed (removing them from the queue).
 5. After reading and removing these ten events from the list, the integration moves to the next ten events in the Feed and repeats the whole process.
 
-![feedFlow-min](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/orders-feed-0.png)
+![feedFlow-min](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Orders/orders-feed-0_289.png)
 
 Access this [backoffice order integration guide](https://developers.vtex.com/vtex-developer-docs/docs/erp-integration-set-up-order-integration) to learn more about how you can integrate VTEX’s order Feed with an ERP.
 

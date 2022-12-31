@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-04-19T17:14:08.281Z"
 updatedAt: "2022-04-29T12:37:41.520Z"
 ---
+
 When a customer decides to use a credit or debit card as a payment method for their purchase, in addition to the card data (number, name, expiration date, and CVV code), on some occasions, an identification document from the cardholder may also be requested (example: CPF, Social Security Number). Some payment providers use this information to authorize the transaction and anti-fraud providers to perform fraud analysis.
 
 However, in some countries, there are anti-fraud providers that do not require this type of additional document, and local legislation does not encourage the use of this information. Likewise, some people do not have a personal identification document that can be used to prove that they are the owners of the card used in the purchase.
@@ -29,7 +30,7 @@ To configure the cardholder document field, follow the steps below:
       3. `"unused"`: a cardholder document is not required to perform fraud analysis. The field will not be displayed at checkout nor on [my cards](https://help.vtex.com/en/tutorial/como-funciona-a-minha-conta--2BQ3GiqhqGJTXsWVuio3Xh#credit-cards).
 
 Anti-Fraud Provider Manifest example:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/cardholder-document-configuration-0.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Payments/payments-configuration-guides/cardholder-document-configuration-0_32.PNG)
 
 2. Access [VTEX Support](https://help.vtex.com/en/support) to open a ticket, and request that the connector on VTEX be updated.
 [block:callout]
