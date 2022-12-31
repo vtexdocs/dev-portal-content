@@ -16,15 +16,16 @@ The first step is to get the `orderFormId` of the shopping cart you want to chec
 
 1. Creating a new cart using the [Create a new cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart) endpoint. The response body of this request will give you the `orderFormId` for an empty cart. See more information at [Create a new cart Guide](https://dash.readme.com/project/vtex-rest-api/v2.1/docs/create-a-new-cart).
 2. Accessing the website where a shopping cart is open (the order has not already been concluded), and following these steps:
-    a. Go to the **Dev. Tools** screen (press the `F12` key).
-    b. Click the **Application** tab, and under **Cookies**, click the name of the site's URL.
-    c. In the table, locate the line `checkout.vtex.com` and record the value `_ofid=`. This is the `orderFormId` of the current shopping cart.
+   a. Go to the **Dev. Tools** screen (press the `F12` key).
+   b. Click the **Application** tab, and under **Cookies**, click the name of the site's URL.
+   c. In the table, locate the line `checkout.vtex.com` and record the value `_ofid=`. This is the `orderFormId` of the current shopping cart.
 
-![orderFormId Dev Tools](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/get-cart-information-by-id-0.png)
+![orderFormId Dev Tools](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/shopping-cart-section-api-quick-start-guides/get-cart-information-by-id-0_23.png)
 
 ## Accessing shopping cart information
 
 With the `orderFormId` information available, you must use the [Get cart information by ID](https://developers.vtex.com/vtex-rest-api/reference/getcartinformationbyid) endpoint to send the following information through the URL:
+
 - **Path param**: `orderFormId` value.
 - **Query param**: `refreshOutdatedData`. You can set up this query as `false` or `true` to define whether some cart information can be updated by the [Update cart items](https://developers.vtex.com/vtex-rest-api/reference/itemsupdate) endpoint.
 
@@ -44,9 +45,8 @@ After sending the request, the endpoint will return the response body containing
 }
 [/block]
 
->ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
-}
-[/block]
+> ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+
 ## Error code
 
 The following error may appear as a message in the response body.

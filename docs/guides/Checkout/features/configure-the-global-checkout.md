@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-07-22T17:22:58.265Z"
 updatedAt: "2022-10-20T17:37:14.332Z"
 ---
+
 Global Checkout is a setting in your store that allows you to sell to many different countries regardless of the country of origin of your VTEX account.
 
 For a complete Global Checkout experience, it is also important that your store be displayed in other languages. For more information about these settings, visit the article about [displaying store in another language](https://help.vtex.com/en/tutorial/displaying-the-store-in-another-language).
@@ -29,7 +30,7 @@ To display document and phone typing options different from those used by the st
 }
 [/block]
 6. Click on `Save`.
-    ![Document and Phone field](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/configure-the-global-checkout-0.png)
+   ![Document and Phone field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/features/configure-the-global-checkout-0_32.png)
 
 After saving this configuration, two new buttons will be shown in your Checkout:
 
@@ -45,7 +46,7 @@ To allow deliveries to a new country (for example, you want to deliver products 
 1. [Create a new carrier](https://help.vtex.com/en/tutorial/registering-a-carrier/).
 2. For the new carrier, create a shipping worksheet with the column “Country”.
 
->ℹ️ The value of the column “Country” must be the 3-digit ISO code of the countries (e.g., for England, you will use the “GBR” value). To check the codes, we recommend the website `https://countrycode.org/`.
+> ℹ️ The value of the column “Country” must be the 3-digit ISO code of the countries (e.g., for England, you will use the “GBR” value). To check the codes, we recommend the website `https://countrycode.org/`.
 
 After defining the delivery settings for the countries intended, a new field will be shown on your checkout's delivery form, allowing the user to choose the desired international delivery option.
 
