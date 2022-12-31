@@ -5,6 +5,8 @@ excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.052Z"
 updatedAt: "2022-12-13T20:17:44.240Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available"
 ---
 
 Repeated searches for similar data can become an expensive and frustrating investment as they require a high number of responses from the server to deliver the requested information.

@@ -5,6 +5,8 @@ excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-08-11T07:03:18.428Z"
 updatedAt: "2022-12-13T20:17:46.410Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-3-settingyourstoretheme"
 ---
 
 Now that you have completed the VTEX IO basic setup, it is time to:

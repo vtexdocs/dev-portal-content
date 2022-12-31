@@ -5,6 +5,8 @@ excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.350Z"
 updatedAt: "2022-12-13T20:17:44.328Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-7-consuming-data"
 ---
 Now that you have created a component and defined its style, it is time to generate the documentation for the new app!
 

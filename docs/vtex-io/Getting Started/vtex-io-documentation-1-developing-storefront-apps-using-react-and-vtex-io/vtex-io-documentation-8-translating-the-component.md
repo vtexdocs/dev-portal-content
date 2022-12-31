@@ -5,6 +5,8 @@ excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.694Z"
 updatedAt: "2022-12-13T20:17:44.662Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-9-improving-performance-with-caching"
 ---
 Before thinking about brand globalization, it is very important to first look into **content internationalization on your website**.
 

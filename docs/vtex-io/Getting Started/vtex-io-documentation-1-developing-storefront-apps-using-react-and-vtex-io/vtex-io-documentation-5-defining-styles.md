@@ -5,6 +5,8 @@ excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:44.003Z"
 updatedAt: "2022-12-13T20:17:44.865Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-6-structuring-documentation"
 ---
 After defining your theme's block, it is time to think about the style you want for it, defining colors, typography, among other elements that establish the visual identity of the app when it is rendered.
 

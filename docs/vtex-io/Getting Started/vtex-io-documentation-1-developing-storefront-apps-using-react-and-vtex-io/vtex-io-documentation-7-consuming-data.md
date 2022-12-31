@@ -5,6 +5,8 @@ excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.152Z"
 updatedAt: "2022-12-13T20:17:44.370Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-8-translating-the-component"
 ---
 
 Now you need to learn how this new component will talk with the *back-end* system, in other words, how it is going to **consume and insert data in the platform**.

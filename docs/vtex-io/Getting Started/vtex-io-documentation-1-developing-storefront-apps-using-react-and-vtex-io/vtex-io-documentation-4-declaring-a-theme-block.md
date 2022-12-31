@@ -5,6 +5,8 @@ excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.073Z"
 updatedAt: "2022-12-13T20:17:44.349Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-5-defining-styles"
 ---
 
 With the app template already copied, we will now create a **new theme block**. Follow the instructions below to create the new theme block.
