@@ -8,6 +8,7 @@ updatedAt: "2022-12-13T20:17:44.662Z"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-9-improving-performance-with-caching"
 ---
+
 Before thinking about brand globalization, it is very important to first look into **content internationalization on your website**.
 
 **Messages** is the VTEX IO app that translates store components, working directly on block code so that the development cycle is not limited by the necessary versioning flow from one language to another.
@@ -134,7 +135,7 @@ To automate these price changes in the translation flow, you need to add the `vt
 
 ```diff
   dependencies: {
-+ "vtex.format-currency": "0.x"
++   "vtex.format-currency": "0.x"
   }
 ```
 

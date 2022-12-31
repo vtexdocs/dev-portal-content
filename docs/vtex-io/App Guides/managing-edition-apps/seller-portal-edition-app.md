@@ -20,6 +20,8 @@ Every Seller Portal account is created from a VTEX IO Edition App, which is defi
 {
   "vendor": "vtex",
   "name": "edition-seller",
+  //...
+}
 ```
 
 >ℹ️ It is not possible to create edition apps without a VTEX account as the sponsor.
@@ -102,10 +104,10 @@ After cloning the repository, follow the instructions below to configure your ap
 After configuring your manifest, you can specify apps to be installed in the sub-accounts that have this edition configured. You do that through the `edition/apps.json` file, adding an entry to the object under the `apps` key in the format:
 
 ```json
-   "<vendor>.<name>": {
-      "major": <desired major>,
-      "settings": <initial settings>
-    }
+"<vendor>.<name>": {
+  "major": <desired major>,
+  "settings": <initial settings>
+}
 ```
 
 The settings are optional and can be omitted, but they will define the initial settings that should be configured for the app when it is installed through the current edition.
