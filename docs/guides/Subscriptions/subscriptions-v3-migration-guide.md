@@ -38,9 +38,9 @@ In the Subscriptions v2 module, the entity subscription was an order composed of
 This principle allowed the store’s customers to subscribe to several SKUs using different delivery addresses and payment methods - which represented an evolution compared to the system’s first version.
 
 This behavior required another entity to be created: the subscriptionGroup. It allowed subscribed SKUs with similar purchase settings to be grouped in your customers’ My Account page, so they could see their subscription orders in a more organized way. The diagram below illustrates those concepts:
-![Subscription v2 concept diagram](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/subscriptions-v3-migration-guide-0.PNG)
+![Subscription v2 concept diagram](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Subscriptions/subscriptions-v3-migration-guide-0_41.PNG)
 
-![Subscription v2 grouping examples](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/subscriptions-v3-migration-guide-1.png)
+![Subscription v2 grouping examples](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Subscriptions/subscriptions-v3-migration-guide-1_43.png)
 
 ## What is a “subscription” to Subscriptions v3?
 
@@ -48,7 +48,7 @@ For the 3rd version of our module, we have changed our system’s understanding 
 
 This change takes out the need of creating a subscriptionGroup to arrange multiple SKUs.
 Therefore, all operations function around the `subscription` entity (which holds all the data necessary to generate a subscription order), instead of `subscriptionGroup`. The diagram below illustrates the updated concept:
-![Subscription v3 concept diagram](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/subscriptions-v3-migration-guide-2.PNG)
+![Subscription v3 concept diagram](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Subscriptions/subscriptions-v3-migration-guide-2_51.PNG)
 
 We have also renamed the entity `subscriptionOrder` to `subscriptionCycle`. Now a subscription is not tied necessarily to the first order.
 
