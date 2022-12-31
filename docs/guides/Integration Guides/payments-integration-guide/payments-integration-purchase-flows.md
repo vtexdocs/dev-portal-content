@@ -42,7 +42,8 @@ The sequence of events in a Redirect payment flow occurs as described in the fol
 7. Provider captures the input of customer interaction.
 8. Provider [responds](https://developers.vtex.com/vtex-rest-api/reference/createpayment#callbacks) to `callbackURL` with final authorization status (`approved` or `denied`).
 9. Provider redirects the customer to the `returnURL` webpage.
-> ℹ️ The content of the `paymentURL` parameter has to include the complete URL to properly redirect the customer to the desired webpage, including the endpoint path and a code to that specific payment (e.g.:  <http://php-connector.herokuapp.com/installments.php?paymentId=7ee64e51-a0d3-4405-874c-d7497ab84572>)
+
+> ℹ️ The content of the `paymentURL` parameter has to include the complete URL to properly redirect the customer to the desired webpage, including the endpoint path and a code to that specific payment (e.g.: `http://php-connector.herokuapp.com/installments.php?paymentId=7ee64e51-a0d3-4405-874c-d7497ab84572`)
 
 ## Payment App
 

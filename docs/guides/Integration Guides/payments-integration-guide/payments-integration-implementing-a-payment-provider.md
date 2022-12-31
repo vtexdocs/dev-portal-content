@@ -208,7 +208,7 @@ Also, the parameters `code` and `message` are fields to which the provider can s
 
 All the fields are described in the [POST Create Payment](https://developers.vtex.com/reference/createpayment) documentation. 
 
-**4. POST Cancel Payment **
+4. **POST Cancel Payment**
 
 To cancel a payment, you must already have created one. Your provider must be ready to receive only two information: the `paymentId`, the identifier of the payment that will be canceled, and the `requestId`, the identifier that ensures its idempotency.
 
@@ -233,7 +233,7 @@ After the provider realizes the payment cancelation, we expect a response like t
 ```
 Refer to the [complete documentation](https://developers.vtex.com/reference/cancelpayment) for more details.
 
-**5. POST Capture Payment **
+5. **POST Capture Payment**
 
 If your transaction was completed successfully, the provider can capture the payment. In fact, it is really important for you to know that VTEX supports partial captures. 
 
@@ -393,7 +393,7 @@ In the response body, we expect an `authorizationCode` related to the `returnUrl
 
 Refer to the [Get Provider Authentication](https://developers.vtex.com/vtex-developer-docs/reference/providerauthentication) endpoint for more details.
 
-**3. GET Credentials**
+3. **GET Credentials**
 
 Finally, the provider must send us the values of the three credentials. 
 
