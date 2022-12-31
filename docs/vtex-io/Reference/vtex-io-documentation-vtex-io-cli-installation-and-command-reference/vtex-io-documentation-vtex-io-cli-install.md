@@ -11,8 +11,7 @@ According to your operating system, take the respective steps to install VTEX IO
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
-  
-<br>
+  <br>
 
 - **Brew**
 
@@ -197,3 +196,6 @@ According to your operating system, run the following command in the terminal to
   ```
 
 If the error persists, don't hesitate to [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
+
+<br>
+</details>
