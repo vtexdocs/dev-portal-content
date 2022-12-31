@@ -38,7 +38,7 @@ The following queries are not needed to reimplement using the external search pr
 
 - You can also use the same VTEX IO app responsible for being a search provider to also set up a webhook and receive notifications whenever a change in the catalog occurs. This VTEX IO app can, then, send the catalog changes to the search provider.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-search-provider-specification-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/search-integration-guide/cc299d1-catalog_40.png)
 To receive catalog changes, refer to this [article](https://www.notion.so/How-to-receive-Catalog-changes-on-VTEX-IO-d2587b0bcd634f0ea8d6f50955a2d70a)
 
 ## Onboarding

@@ -85,7 +85,7 @@ There are some steps needed for the connector to be able to process payments in 
 ## Scenery and flow
 
 Here we describe the payment flow in the context of a physical store using a POS. The following sequence diagram represents all the steps in this flow, where the green bars are the steps that the payment provider is responsible for:
-![Fluxo PPP com POS atualizado](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-ppp-applied-to-pos-0.png)
+![Fluxo PPP com POS atualizado](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-ppp-applied-to-pos-0_88.png)
 
 1. The flow starts with a buyer finishing a purchase in a VTEX physical store created on [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc).
 2. The inStore makes an [Authorization](https://developers.vtex.com/vtex-rest-api/reference/4doauthorization) request to the VTEX Payment Gateway.
@@ -150,12 +150,8 @@ It is important to note that the payment cannot stay `undefined` forever. There 
 At VTEX, payments in physical stores follow an asynchronous flow that requires additional interactions with the user, also called challenges, until it is approved. To offer this kind of interaction, the connector has to tell our Gateway from the `paymentAppData` field in the response of the Create Payment endpoint. This field contains the name of the VTEX IO app (`appName`) that will be presented on the inStore and the data needed for the app to work (`payload`).
 
 We have some apps that are ready to use for additional interaction with payments on a POS.
-[block:callout]
-{
-  "type": "info",
-  "body": "Besides the provided apps, partners can also develop apps for their specific needs. You can check more details in the [Payment App](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-app) article."
-}
-[/block]
+
+> ℹ️ Besides the provided apps, partners can also develop apps for their specific needs. You can check more details in the [Payment App](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-app) article.
 
 #### Fulfill form
 
@@ -197,7 +193,7 @@ Payload example:
 }
 ```
 
-![Print of the Fullfil form app using the example payload above](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-ppp-applied-to-pos-1.png)
+![Print of the Fullfil form app using the example payload above](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-ppp-applied-to-pos-1_200.png)
 
 #### Pagar.me Payment App
 
@@ -222,7 +218,7 @@ Payload example:
 }
 ```
 
-![Print of the Pagarme Payment App using the camera to scan the bar code of the POS](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-ppp-applied-to-pos-2.png)
+![Print of the Pagarme Payment App using the camera to scan the bar code of the POS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-ppp-applied-to-pos-2_225.png)
 
 #### Wait for confirmation
 

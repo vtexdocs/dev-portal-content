@@ -43,14 +43,14 @@ Before setting up the VTEX environment, the provider must implement the back-end
 
 After receiving the access data and deploying the backend, the provider can access the approval tool through VTEX Admin. To do this, you must install the Antifraud Provider App from the Apps menu:
  
-![Apps Image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-0.png)
+![Apps Image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-0_46.png)
 
 Click on the installed app or access `https://{{AccountName}}.myvtex.com/admin/antifraud-provider`, replacing `{{AccountName}}` with the name of your account on the platform. In this environment, you can register the provider back-end configuration data and perform integration tests.
-![gatewayio](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-1.png)
+![gatewayio](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-1_49.png)
 
 ### 4. Initial settings
 
-![Antifraud test suite](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-2.png)
+![Antifraud test suite](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-2_53.png)
 When you access the environment through the link described in the previous item, you will see a form. Fill in the fields as indicated below:
 
 - **Connector Name**: fill in with the name you want to give to your connector within VTEX. This field can be edited whenever necessary.
@@ -68,12 +68,11 @@ When you access the environment through the link described in the previous item,
 }
 [/block]
 
-  After completing the fields correctly, the system will check the approved transactions through a call to the ***/transactions*** endpoint of your provider. See the API reference [here](https://developers.vtex.com/vtex-rest-api/reference/antifraud-flow).
+After completing the fields correctly, the system will check the approved transactions through a call to the ***/transactions*** endpoint of your provider. See the API reference [here](https://developers.vtex.com/vtex-rest-api/reference/antifraud-flow).
 
 The tests that should be done in your integration before sending it to VTEX evaluation are displayed in the next module. You can select which tests you want to run, but for your integration to go through the analysis of our team, **all tests need to be done**. Therefore, we recommend that all of them remain selected.
  
-![Antifraud test suite2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-3.png)
- 
+![Antifraud test suite2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-3_75.png)
 
 ### 5. Testing
 
@@ -104,11 +103,11 @@ For each Antifraud Provider Protocol test, we send a specific ID end to return t
 
 After running the tests, the system returns the results, both positive and negative. The system also provides information on the expected results for each test. Thus, you have more visibility of what should be corrected in case of error.
  
-![Antifraud test suite3](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-4.png)
+![Antifraud test suite3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-4_107.png)
  
 To visualize in detail each action performed by the integration (and thus to identify possible errors), just click on the **Show logs** link. A list of the complete information about the events that happened during the test will be displayed below the results.
  
-![Antifraud test suite4](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-5.png)
+![Antifraud test suite4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-5_111.png)
  
 When your integration has successfully passed all tests, please open a ticket in our [VTEX support](https://help.vtex.com/pt/support "VTEX Help"). However, before opening the ticket, make sure you have the following information:
 
@@ -135,7 +134,7 @@ Once the integration with your antifraud is approved, a connector will be made a
 
 An example of how the antifraud settings screen will look for the VTEX store:
  
-![gateway affiliations screen](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-6.png)
+![gateway affiliations screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-6_138.png)
  
 These keys should be made available by you and will serve to identify the store that hired and is using your antifraud service.
 
@@ -151,17 +150,23 @@ During payment transactions analysis, some anti-fraud providers may choose not t
 To set up the cardholder document field, follow the steps below:
 
 1. Acess **Admin** VTEX.
+
 2. Click on **Payments**.
+
 3. Then, click on **Settings**.
+
 4. On the **Gateway Affiliations** tab, click the **`+`** botton.
+
 5. Select the antifraud provider you wish to use.
+
 6. On the antifraud configuration screen, fill in the requested information.
+
 7. In **Cardholder document field,**, select one of the following options:
 
    - **Display as a required field**: the field will be displayed at checkout with the information “required”, and the customer must fill in the cardholder information to complete the order.
    - **Display as an optional field**: the field will be displayed at checkout with the information “optional”, and the customer will decide whether or not to fill in it. The order can be completed even if the field is not filled in.
    - **Hide Field**: the field will not be displayed at checkout.
 
-8. Click on <strong>Save.</strong>
+8. Click on **Save**.
 
 After following the steps indicated, the settings made above may take up to 10 minutes to appear at your store’s checkout.

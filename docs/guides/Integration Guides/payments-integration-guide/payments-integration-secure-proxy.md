@@ -17,7 +17,7 @@ When an integration is PCI compliant, it does not need to use Secure Proxy, bein
 2. The provider receives tokens from VTEX’s Payments Gateway that refers to the sensitive data, instead of the actual data.
 3. The provider sends the API endpoint of the acquirer and the merchant credentials to the Gateway.
 4. The Gateway makes the API call to the acquirer, acting as a proxy between the provider and the acquirer. In this call, the tokens are replaced by sensitive data.
-   ![Secure Proxy simplified flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-secure-proxy-0.png)
+   ![Secure Proxy simplified flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-secure-proxy-0_20.png)
 
 ## What is PCI DSS and how is it used in VTEX?
 
@@ -35,17 +35,12 @@ Through this solution, the Payments Gateway acts as a communication service betw
 
 When a system does not meet all the security requirements, it might be vulnerable to attacks and data theft. This can lead to serious consequences including fraud losses, loss of confidence from customers, reduction in sales, legal costs, fines, etc. More information about these security issues can be found in the PCI article [Why Security Matters](https://www.pcisecuritystandards.org/pci_security/why_security_matters). By meeting the requirements of PCI DSS, those issues and their consequences can be avoided.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Secure Proxy is mandatory for connectors built with the VTEX IO infrastructure since it is not compliant with PCI DSS. This also includes connectors made through our [Payment Provider Framework](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-framework)."
-}
-[/block]
+> ℹ️ Secure Proxy is mandatory for connectors built with the VTEX IO infrastructure since it is not compliant with PCI DSS. This also includes connectors made through our [Payment Provider Framework](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-framework).
 
 ## How it works
 
 In this section, we detail how the solution works in a payment authorization flow. The image below shows an overview of the flow containing the Secure Proxy, as well as the four steps required for the payment to be authorized by the acquirer.
-![Secure Proxy detailed flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-secure-proxy-1.png)
+![Secure Proxy detailed flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-secure-proxy-1_48.png)
 
 ### 1. Checkout submits a payment authorization request to the Gateway
 

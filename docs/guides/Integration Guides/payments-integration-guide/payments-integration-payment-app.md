@@ -6,13 +6,8 @@ createdAt: "2021-08-05T18:04:05.139Z"
 updatedAt: "2022-03-09T16:31:39.613Z"
 ---
 
-[block:callout]
-{
-  "type": "info",
-  "title": "Demo videos",
-  "body": "You can check the demo videos of Payment App on our Office Hours through these links in [English](https://youtu.be/nrZOZ7LMtLE?t=3119) and [Portuguese](https://youtu.be/YJ0qSgYiN8c?t=1064)."
-}
-[/block]
+> ℹ️ You can check the demo videos of Payment App on our Office Hours through these links in [English](https://youtu.be/nrZOZ7LMtLE?t=3119) and [Portuguese](https://youtu.be/YJ0qSgYiN8c?t=1064).
+
 A Payment App is a special type of app built-in [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/what-is-vtex-io) which allows developers to create custom payment experiences on the checkout page, without redirecting customers to an external website.
 
 In terms of programming, a Payment App is defined as a class in TypeScript that extends from [React’s Component](https://reactjs.org/docs/react-component.html). You can configure a payment method to use a specific Payment App, and this app is instantiated by the Checkout UI when the payment method is selected in the purchase.
@@ -24,7 +19,7 @@ The main reasons why someone would choose to build a Payment App over a standard
 - Measure conversions by analytics tools for customized flows.
 
 As you can see below, the Payment App is displayed as a modal window when the customer clicks on the **Buy now** button:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-app-0.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-app-0_27.gif)
 This tutorial will guide you through the steps required to develop, test, and set up a Payment App in your store. The sections of this tutorial are:
 
 - [Understanding the Payment App flow](#understanding-the-payment-app-flow): An explanation of what a Payment App is, its behavior, and usage.
@@ -34,7 +29,7 @@ This tutorial will guide you through the steps required to develop, test, and se
 ## Understanding the Payment App flow
 
 Our Payment App model applies to a large variety of payment methods thanks to its interaction with the Checkout API, as shown in the following sequence diagram:
-![Payment App flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-app-1.png)
+![Payment App flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-app-1_37.png)
 Below is described the flow in the same order of the sequence diagram (steps from 1 to 4 are the same for every payment flow; steps unique to the Payment App flow are from 5 onwards):
 
 1. Checkout UI sends a Start Transaction request to the Checkout API.
@@ -62,12 +57,7 @@ The following tutorial will guide you through the steps required to implement a 
 - Information about the deployment process.
 
 To proceed with the following steps, you will be using the [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io) development platform.
-[block:callout]
-{
-  "type": "warning",
-  "body": "If you are implementing a new payment method in your Payment App, please contact the [VTEX Support Team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support) to add it to the VTEX backend."
-}
-[/block]
+> ⚠️ If you are implementing a new payment method in your Payment App, please contact the [VTEX Support Team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support) to add it to the VTEX backend.
 
 ### Step 1: Setting up the development environment
 
@@ -80,12 +70,7 @@ To proceed with the following steps, you will be using the [VTEX IO](https://dev
 These are the minimum things you need to change in the boilerplate and make your own app.
 
 In addition to these modifications, you need to add the business logic of your payment system.
-[block:callout]
-{
-  "type": "warning",
-  "body": "Before you start editing the Payment App, it is necessary to have Git installed on your computer. Click [here](https://git-scm.com/downloads) to learn more."
-}
-[/block]
+> ⚠️ Before you start editing the Payment App, it is necessary to have Git installed on your computer. Click [here](https://git-scm.com/downloads) to learn more.
 
 1. Using your terminal, clone the repository that contains a Payment App model to your local files by running:
 
@@ -96,12 +81,7 @@ git clone https://github.com/vtex-apps/example-payment-authorization-app.git
 2. After cloning the repository, use a code editor of your choice to open the project locally.
 3. Open the `manifest.json` file and update its content according to your scenario. If you need more information about the required fields, access our [Manifest documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest). The value set in the `name` field will be the unique identifier for this app and must be the exact name that corresponds to the response of your connector (`appname` property of `paymentAppData` field in the response body of the Create Payment endpoint). The `billingOptions` field is also required and set with the property `type` as `free`. More information about the `billingOptions` field can be found in the [Billing Options article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options).
 4. After finishing the update, open the `pages/pages.json` file and replace `example-payment-auth-app` with the app `name` set in `manifest.json`. The `pages.json` file is responsible for creating the routes for your application. So it is necessary to make this configuration for the VTEX system to find and display the app at checkout. Also, the `"component"` field having the `"index"` value indicates that the `index.js` file in the `react` folder is the file with the component that will be instantiated at checkout.
-[block:callout]
-{
-  "type": "warning",
-  "body": "Replace only the last part of the path in the `pages.json` file for the name of your app. In this case, the `example-payment-auth-app` part.  Do not change the beginning of the path `checkout/transactions/`, since the checkout uses it to identify a payment application.\n\nAlso, if you are using the **Test Connector** to make internal tests with your app, you have to keep the original name of the app that came from the repository in the `pages.json` file, since it will be the reference for this connector to open the Payment App in the checkout."
-}
-[/block]
+> ⚠️ Replace only the last part of the path in the `pages.json` file for the name of your app. In this case, the `example-payment-auth-app` part.  Do not change the beginning of the path `checkout/transactions/`, since the checkout uses it to identify a payment application.\n\nAlso, if you are using the **Test Connector** to make internal tests with your app, you have to keep the original name of the app that came from the repository in the `pages.json` file, since it will be the reference for this connector to open the Payment App in the checkout.
 5. Using your terminal, go to the app directory and run the following command:
 
 ```shell
@@ -113,12 +93,8 @@ Once you [link the app](https://vtex.io/docs/recipes/development/linking-an-app/
 ### Step 3: Testing a Payment App flow
 
 A Payment App will appear on the checkout screen by following the steps below, allowing you to test the Payment App general flow.
-[block:callout]
-{
-  "type": "info",
-  "body": "Proceed with the following steps only when you want to test a Payment App flow; otherwise, skip to [Step 4: Deploying the Payment app](#step-4-deploying-your-payment-app)."
-}
-[/block]
+
+> ℹ️ Proceed with the following steps only when you want to test a Payment App flow; otherwise, skip to [Step 4: Deploying the Payment app](#step-4-deploying-your-payment-app).
 
 1. Make sure you have your connector installed in your account configured with the Payment App and the payment method you want to test in your Payment App. The connector must contain the field `paymentAppData` in the response body of the [Create Payment endpoint](https://developers.vtex.com/vtex-developer-docs/reference/createpayment) with the right properties (`appName` and `payload`). If you do not have the connector installed yet, contact the [VTEX Support Team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support) to help you with the installation process. More information about how the endpoints should be implemented can be found in the article [Implementing a Payment Provider](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-implementing-a-payment-provider).
 2. Select the payment condition associated with your connector in the checkout and finish the purchase to test the flow.
@@ -189,12 +165,7 @@ head.appendChild(js)
 ```
 
 There is an example of script injection [here](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.js#L70) that inserts Google Recaptcha to a Payment App.
-[block:callout]
-{
-  "type": "info",
-  "body": "Keep in mind that if the external `js` script handles DOM manipulation, you should use [React's Ref](https://reactjs.org/docs/refs-and-the-dom.html) to create a `div` container and hand it over to the library. You can find an [example here](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.js#L12)."
-}
-[/block]
+> ℹ️ Keep in mind that if the external `js` script handles DOM manipulation, you should use [React's Ref](https://reactjs.org/docs/refs-and-the-dom.html) to create a `div` container and hand it over to the library. You can find an [example here](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.js#L12).
 
 ## Payment App Scenarios
 
@@ -230,4 +201,4 @@ After finishing the interaction with the Payment App, the app closes and redirec
 
 The following image shows how the 3DS2 is displayed to customers:
 
-![Payment App 3DS2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-app-2.png)
+![Payment App 3DS2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-app-2_233.png)

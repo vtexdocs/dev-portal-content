@@ -30,7 +30,7 @@ Some examples include: displaying a QR code for payment, filling in an applicati
 }
 [/block]
 
-![Payment Redirect](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-purchase-flows-0.png)
+![Payment Redirect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-purchase-flows-0_33.png)
 The sequence of events in a Redirect payment flow occurs as described in the following steps:
 
 1. The customer clicks on **Finish Payment** in the Checkout.
@@ -42,12 +42,7 @@ The sequence of events in a Redirect payment flow occurs as described in the fol
 7. Provider captures the input of customer interaction.
 8. Provider [responds](https://developers.vtex.com/vtex-rest-api/reference/createpayment#callbacks) to `callbackURL` with final authorization status (`approved` or `denied`).
 9. Provider redirects the customer to the `returnURL` webpage.
-[block:callout]
-{
-  "type": "info",
-  "body": "The content of the `paymentURL` parameter has to include the complete URL to properly redirect the customer to the desired webpage, including the endpoint path and a code to that specific payment (e.g.:  http://php-connector.herokuapp.com/installments.php?paymentId=7ee64e51-a0d3-4405-874c-d7497ab84572)"
-}
-[/block]
+> ℹ️ The content of the `paymentURL` parameter has to include the complete URL to properly redirect the customer to the desired webpage, including the endpoint path and a code to that specific payment (e.g.:  <http://php-connector.herokuapp.com/installments.php?paymentId=7ee64e51-a0d3-4405-874c-d7497ab84572>)
 
 ## Payment App
 

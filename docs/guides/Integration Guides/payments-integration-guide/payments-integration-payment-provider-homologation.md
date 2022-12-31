@@ -21,13 +21,13 @@ Considering that you want to download the app through the Admin, proceed as foll
 3. Click on **Apps** then **App Store**.
 4. Now look for **Payment Provider Test Suite** in the search bar.
 5. Click **Install**.
-   ![Test_suite_1](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-provider-homologation-0.png)
+   ![Test\_suite\_1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-provider-homologation-0_24.png)
 6. After that, you will be redirected to the VTEX App Store. Click the **GET APP** button at the top right corner of the page.
-   ![Test_suite_2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-provider-homologation-1.png)
+   ![Test\_suite\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-provider-homologation-1_26.png)
 7. Then, on the popup screen, type your account's name - with lowercase and no space in between - and click the **CONFIRM** button.
-   ![Test_suite_3](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-provider-homologation-2.png)
+   ![Test\_suite\_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-provider-homologation-2_28.png)
 8. Click **INSTALL** to complete the installation process.
-   ![Test_suite_4](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-integration-payment-provider-homologation-3.png)
+   ![Test\_suite\_4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-provider-homologation-3_30.png)
    After that, the Test Suite app will be installed in your Admin.
 
 ## Run the tests
@@ -76,8 +76,9 @@ If everything is ok, you need to [open a ticket to the VTEX support team](https:
 - **New Payment method purchase flow**: if a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
 
 The SLA required for the payment team to carry out the homologation is 30 days. This term will start only after the submission of the document **Master Partner Agreement for Financial Services (MPA)**. For homologation requests without using the MPA, the SLA term may be extended due to the need for additional analysis by the payment team.
->❗ Do **not** open the ticket for homologation if the Logs box presents any type of error. Redo the operation until the Logs box results are clear. If you need help in this scenario, talk to your Partner Account Manager.
 
->❗ It is mandatory to open a ticket to VTEX Support. Without that, the implementation will not be recognized by our system.
+> ❗ Do **not** open the ticket for homologation if the Logs box presents any type of error. Redo the operation until the Logs box results are clear. If you need help in this scenario, talk to your Partner Account Manager.
+
+> ❗ It is mandatory to open a ticket to VTEX Support. Without that, the implementation will not be recognized by our system.
 
 After that, the VTEX support team will inform you if the implementation was done correctly.
