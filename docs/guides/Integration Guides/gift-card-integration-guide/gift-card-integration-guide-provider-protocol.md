@@ -17,17 +17,21 @@ All mock routes will be available in /my-provider
 ## Setting up for development
 
 [List All GiftCard Providers](https://developers.vtex.com/reference/provider#listallgiftcardproviders) from Gift Card Hub should have only native Gift Card
-[block:code]
-{
-  "codes": [
+
+```json
+[
     {
-      "code": "[\n    {\n        \"id\": \"VtexGiftCard\",\n        \"serviceUrl\": \"http://api.vtex.com/cosmetics2\",\n        \"oauthProvider\": \"vtex\",\n        \"preAuthEnabled\": true,\n        \"cancelEnabled\": true,\n        \"_self\": {\n            \"href\": \"cosmetics2/giftcardproviders/VtexGiftCard\"\n        }\n    }\n]",
-      "language": "json",
-      "name": "Response Body"
+        "id": "VtexGiftCard",
+        "serviceUrl": "http://api.vtex.com/cosmetics2",
+        "oauthProvider": "vtex",
+        "preAuthEnabled": true,
+        "cancelEnabled": true,
+        "_self": {
+            "href": "cosmetics2/giftcardproviders/VtexGiftCard"
+        }
     }
-  ]
-}
-[/block]
+]
+```
 [Create/Update GiftCard Provider by ID](https://developers.vtex.com/reference/provider#createupdategiftcardproviderbyid) from Gift Card Hub should let you add your own
 [block:code]
 {
@@ -53,7 +57,7 @@ Buy some product, you should see the mock gift card there
 
 ## Where each route is called
 
-![GiftCard](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-card-integration-guide-provider-protocol-0.png)
+![GiftCard](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/gift-card-integration-guide/gift-card-integration-guide-provider-protocol-0_56.png)
 This is what is needed to make Gift Card available in checkout:
 
 ### List cards

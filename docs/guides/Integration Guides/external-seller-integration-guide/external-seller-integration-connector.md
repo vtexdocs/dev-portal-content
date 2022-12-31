@@ -91,7 +91,7 @@ So the seller needs to have an endpoint implemented in order to receive this cal
 
 The endpoint that the marketplace will call is the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-developer-docs/reference/fulfillment-simulation">Fulfillment Simulation</a></span> endpoint. The marketplace will send an object containing an array of items. The seller must use this list to get the updated information about the referred SKUs and send them back to the marketplace, following the response format explained in the API Reference.
 
-Be mindful to add ´/api` in your endpoint's base url for the call to function properly.
+Be mindful to add `/api` in your endpoint's base url for the call to function properly.
 
 [block:callout]
 {
@@ -169,15 +169,15 @@ The <span class="pg-type type-post">post</span><span class="api"><a href="https:
 
 For the seller to:
 
-- **Evaluate a cancellation request:** it is possible to send an empty body as a response to the cancellation request, meaning that the seller is evaluating whether to proceed with the cancellation or not.  
-- **Confirm the cancellation request:**it is possible to confirm the order cancellation by the marketplace by responding to the call with a body including only one information: the `marketplaceOrderId`, which identifies the order in the marketplace. The seller should use this ID to trigger the cancellation of the corresponding order. The seller should then respond with the same `marketplaceOrderId` and also with the `orderId`, which identifies the order in the seller, the date and time of the notification receipt, and a protocol code that confirms the receipt of the request (which may have the value `null`).
+- **Evaluate a cancellation request:** it is possible to send an empty body as a response to the cancellation request, meaning that the seller is evaluating whether to proceed with the cancellation or not.
+- **Confirm the cancellation request:** it is possible to confirm the order cancellation by the marketplace by responding to the call with a body including only one information: the `marketplaceOrderId`, which identifies the order in the marketplace. The seller should use this ID to trigger the cancellation of the corresponding order. The seller should then respond with the same `marketplaceOrderId` and also with the `orderId`, which identifies the order in the seller, the date and time of the notification receipt, and a protocol code that confirms the receipt of the request (which may have the value `null`).
 - **Refuse a cancellation request:** it is possible to to [send the Invoice](https://developers.vtex.com/vtex-rest-api/reference/send-invoice), meaning that the cancellation has been denied, and the flow continues to the [Order Invoicing](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#order-invoicing) step, and the ones that follow it.
 
 ## Cancellation by the seller
 
 On certain occasions, the seller may also need to cancel the order itself. This might happen, for example, if there’s a problem with the order that prevents the seller from fulfilling it. In this case, the seller must call the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a></span> endpoint.
 
->⚠️ If the order status is `Invoiced`, the order can only be canceled if—before using the Cancel Order endpoint—the seller sends a return invoice.\n\nTo do this, you must use the Order Invoice Notification endpoint, explained in the [Order invoicing](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#order-invoicing) session. To inform the system that you are sending a return invoice, you must use the value input for the field type of the request body.\n\nAfter doing this, you will be able to send a cancellation request for the invoiced order, by using the endpoint referenced below.
+> ⚠️ If the order status is `Invoiced`, the order can only be canceled if—before using the Cancel Order endpoint—the seller sends a return invoice.\n\nTo do this, you must use the Order Invoice Notification endpoint, explained in the [Order invoicing](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#order-invoicing) session. To inform the system that you are sending a return invoice, you must use the value input for the field type of the request body.\n\nAfter doing this, you will be able to send a cancellation request for the invoiced order, by using the endpoint referenced below.
 
 ## Setting payment conditions
 

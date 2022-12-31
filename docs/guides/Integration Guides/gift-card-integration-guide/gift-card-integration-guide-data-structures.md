@@ -17,20 +17,22 @@ The minimum information needed to define a provider includes:
 - `id`: the provider identifier in the context of Gift Card Hub API
 - `caption`: the name seen by shoppers in the store checkout
 - `serviceUrl`: the base URL that should be prepended to all provider endpoints
-  ![The name seen by shoppers in the store checkout is set by the caption parameter (e.g. My Gift Card Provider)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-card-integration-guide-data-structures-0.png)
+  ![The name seen by shoppers in the store checkout is set by the caption parameter (e.g. My Gift Card Provider)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/gift-card-integration-guide/gift-card-integration-guide-data-structures-0_20.png)
   Below you will find an example of the gift card provider data structure and more details on the usage of each parameter. Parameters that were not mentioned in our short description above can usually be set to the values in the example.
-  
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"id\": \"GiftCardExample\",\n    \"serviceUrl\": \"https://giftcard--cosmetics2.myvtex.com/my-provider\",\n    \"caption\": \"My Gift Card Provider\",\n    \"oauthProvider\": \"vtex\",\n    \"preAuthEnabled\": true,\n    \"cancelEnabled\": true,\n    \"_self\": {\n        \"href\": \"cosmetics2/giftcardproviders/GiftCardExample\"\n    }\n}",
-      "language": "json",
-      "name": "Gift Card Provider - Example"
+    "id": "GiftCardExample",
+    "serviceUrl": "https://giftcard--cosmetics2.myvtex.com/my-provider",
+    "caption": "My Gift Card Provider",
+    "oauthProvider": "vtex",
+    "preAuthEnabled": true,
+    "cancelEnabled": true,
+    "_self": {
+        "href": "cosmetics2/giftcardproviders/GiftCardExample"
     }
-  ]
 }
-[/block]
+```
 
 [block:parameters]
 {
@@ -98,17 +100,19 @@ When used as a redeemable gift voucher, you should also set:
 
 Below you will find an example of the gift card data structure for a loyalty program card. The `provider` and `transaction` fields are added by Gift Card Hub.
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"id\": \"1\",\n    \"balance\": 100.0,\n    \"emissionDate\": \"2020-07-30T00:00:00Z\",\n    \"expiringDate\": \"2030-07-30T00:00:00Z\",\n    \"caption\": \"My Awesome Card 1\",\n    \"provider\": \"GiftCardExample\",\n    \"transaction\": {\n        \"href\": \"cosmetics2/giftcardproviders/GiftCardExample/giftcards/1/transactions\"\n    }\n}",
-      "language": "json",
-      "name": "Gift Card - Loyalty Program Example"
+    "id": "1",
+    "balance": 100.0,
+    "emissionDate": "2020-07-30T00:00:00Z",
+    "expiringDate": "2030-07-30T00:00:00Z",
+    "caption": "My Awesome Card 1",
+    "provider": "GiftCardExample",
+    "transaction": {
+        "href": "cosmetics2/giftcardproviders/GiftCardExample/giftcards/1/transactions"
     }
-  ]
 }
-[/block]
+```
 
 ### Redeemable voucher
 
@@ -118,17 +122,20 @@ When used as a redeemable gift voucher, you should also set:
 
 Below you will find an example of the gift card data structure for a redeemable gift voucher. The `provider` and `transaction` fields are added by Gift Card Hub.
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"id\": \"2\",\n    \"balance\": 50.0,\n    \"emissionDate\": \"2020-07-30T00:00:00Z\",\n    \"expiringDate\": \"2030-07-30T00:00:00Z\",\n    \"caption\": \"My Awesome Card 2\",\n    \"redemptionCode\": \"123456\",\n    \"provider\": \"GiftCardExample\",\n    \"transaction\": {\n        \"href\": \"cosmetics2/giftcardproviders/GiftCardExample/giftcards/2/transactions\"\n    }\n}",
-      "language": "json",
-      "name": "Gift Card - Redeemable Gift Voucher Example"
+    "id": "2",
+    "balance": 50.0,
+    "emissionDate": "2020-07-30T00:00:00Z",
+    "expiringDate": "2030-07-30T00:00:00Z",
+    "caption": "My Awesome Card 2",
+    "redemptionCode": "123456",
+    "provider": "GiftCardExample",
+    "transaction": {
+        "href": "cosmetics2/giftcardproviders/GiftCardExample/giftcards/2/transactions"
     }
-  ]
 }
-[/block]
+```
 
 [block:callout]
 {
@@ -187,7 +194,7 @@ Some fields are shown in the order details page when gift cards are used to pay 
 - Gift Card Issuer: `provider`
 
 The image below illustrates how these might be presented in a specific order.
-![Gift card fields seen in the order details page: redemptionCode, relationName, caption, provider](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-card-integration-guide-data-structures-1.png)
+![Gift card fields seen in the order details page: redemptionCode, relationName, caption, provider](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/gift-card-integration-guide/gift-card-integration-guide-data-structures-1_190.png)
 
 ## Transactions
 
@@ -223,17 +230,22 @@ Below you will find an example of the gift card transaction data structure and m
 }
 [/block]
 When gift card transactions are listed for a specific gift card, Gift Card expects a minimal list including only the transaction IDs and references paths where full details can be found for each gift card. This allows for better performance.
-[block:code]
-{
-  "codes": [
+```json
+[
     {
-      "code": "[\n    {\n        \"id\": \"112172\",\n        \"_self\": {\n            \"href\": \"rihappy/giftcardproviders/safe/giftcards/6392472000000066891/transactions/112172\"\n        }\n    },\n    {\n        \"id\": \"112173\",\n        \"_self\": {\n            \"href\": \"rihappy/giftcardproviders/safe/giftcards/6392472000000066891/transactions/112173\"\n        }\n    }\n]",
-      "language": "json",
-      "name": "Get transactions response"
+        "id": "112172",
+        "_self": {
+            "href": "rihappy/giftcardproviders/safe/giftcards/6392472000000066891/transactions/112172"
+        }
+    },
+    {
+        "id": "112173",
+        "_self": {
+            "href": "rihappy/giftcardproviders/safe/giftcards/6392472000000066891/transactions/112173"
+        }
     }
-  ]
-}
-[/block]
+]
+```
 If your gift cards need code or not, it's all about how you implement your search endpoint. Our native provider requires redemption code and sometimes document (if restricted)
 
 Loyalty program: list is fine
