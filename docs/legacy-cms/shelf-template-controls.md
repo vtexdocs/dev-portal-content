@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-09-08T14:28:04.492Z"
 updatedAt: "2022-09-08T14:28:04.492Z"
 ---
+
 VTEX system offers some controls for the creation of shelves.
 
 Products attributes can be stored in variables, and these are used in every template. To declare the variables and receive an attribute of a product, use the following command: `#set ($variable=$attribute)`
@@ -47,7 +48,7 @@ Shows the image and the type of image you want. It follows this list of image ty
 - File = 11;
 - ProductManual = 12.
 
-**Note:** _The sizes of the images are according to the layout of the store_
+> ℹ️ The sizes of the images are according to the layout of the store.
 
 `$product.ProductField(IdField)`
 
@@ -87,7 +88,7 @@ Shows the value of the installment of the product's highest payment condition, t
 
 Shows the price PLUS the rates applied to it.
 
-**Note**: _Rate values that are set by region, ie by using zip codes, will not be displayed on the shelves. If there is more than one rate that includes the same product, the values are summed and displayed by the control._
+> ℹ️ Rate values that are set by region, ie by using zip codes, will not be displayed on the shelves. If there is more than one rate that includes the same product, the values are summed and displayed by the control.
 
 `$product.ListPriceMinusBestPrice`
 
@@ -135,7 +136,7 @@ Shows the brand's link.
 
 Includes a buy button to add to the list shelf, where the product with specification added by the customer is sent directly to the cart. If the product in question has already been purchased for the list, a specific class will be added to the item. This way, you can customize the layout also for this status.
 
-_Note: Control must be added to the shelf template used in the “Lista-Prateleira” page template._
+> ℹ️ Control must be added to the shelf template used in the “Lista-Prateleira” page template.
 
 `$product.BottomBuy`
 
@@ -145,13 +146,13 @@ Includes a buy button in the shop window that takes the customer directly to the
 
 Includes a buy button that inserts the product into the cart and keeps the customer in the shop window.
 
-_OBS: The above control needs the `$product.AmountInCart` control to add a desired quantity textbox to add to the cart._
+> ℹ️ The above control needs the `$product.AmountInCart` control to add a desired quantity textbox to add to the cart.
 
 `$product.AmountInCart`
 
 Inserts a textbox element to set the desired quantity of the product to be added to the cart.
 
-_OBS: This control is used in conjunction with the control `$product.ButtonBuyModal(false,true)`_
+> ℹ️ This control is used in conjunction with the control `$product.ButtonBuyModal(false,true)`.
 
 ### Others
 
@@ -167,7 +168,7 @@ Shows the collections of highlights of which the product is part.
 
 Shows the promotions with highlight of which the product is part.
 
-_Note: If the promotion has any condition of freight, payment method or cluster, it will not be presented until these conditions are met._
+> ℹ️ If the promotion has any condition of freight, payment method or cluster, it will not be presented until these conditions are met.
 
 `$product.IsInStock`
 

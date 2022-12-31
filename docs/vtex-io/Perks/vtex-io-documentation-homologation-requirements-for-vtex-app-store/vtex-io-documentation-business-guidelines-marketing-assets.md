@@ -27,10 +27,10 @@ Refer to the following sections to improve your App Page and increase its adopti
 
 Choose to favor the Serious and Authority tones. We understand that they capture the reliability and expertise our system’s voice should have.
 
-| Tone and Voice | Description                                                                              |
-| -------------- | ---------------------------------------------------------------------------------------- |
-| Serious        | Speak firmly, respectfully, and honestly - always with a more serious tone than playful. |
-| Authority      | Speak with mastery, proficiency, and expertise.                                          |
+|Tone and Voice|Description|
+|--------------|-----------|
+|Serious|Speak firmly, respectfully, and honestly - always with a more serious tone than playful.|
+|Authority|Speak with mastery, proficiency, and expertise.|
 
 To see more about VTEX’s tone and voice, go to [UX Writing Guidelines](https://uxwriting.vtex.com/docs/principles/goals-principles/#tone-and-voice) and [VTEX Brand Guide](https://brand.vtex.com/brand/voiceandtone) pages.
 
@@ -485,19 +485,16 @@ Use this field to provide more specific details about the app. For example, is y
       <hr/>
       <p>If you do not have the integration done yet, you will need to complete the integration form.</p>
       <hr/>
-      <p>We have three different plans that adjust to your content and commercial needs to have the most competitive
-        rates.</p>
+      <p>We have three different plans that adjust to your content and commercial needs to have the most competitive rates.</p>
     </div>
     <br/>
-    <div
-      style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+    <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
       <p>❌</p>
       <p>Simpler logistical operation and a reduction in logistical costs.</p>
       <hr/>
       <p>Automatic messages (after-sales)</p>
       <hr/>
-      <p>Real-time metrics: After the end of the event, review quality KPIs such as likes, comments, and shares, as well
-        as performance KPIs such as sales and average product value (AOV).</p>
+      <p>Real-time metrics: After the end of the event, review quality KPIs such as likes, comments, and shares, as well as performance KPIs such as sales and average product value (AOV).</p>
       <br/>
       <h6>These describe the features of apps. Therefore, they should be in the feature section.</h6>
     </div>

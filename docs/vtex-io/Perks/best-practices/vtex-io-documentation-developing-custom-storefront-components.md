@@ -7,7 +7,7 @@ createdAt: "2021-03-12T13:21:31.408Z"
 updatedAt: "2022-12-13T20:17:44.389Z"
 ---
 
-During the development process, it is natural to face,  among other issues that directly affect the shopping experience, critical questions regarding performance and internationalization.
+During the development process, it is natural to face, among other issues that directly affect the shopping experience, critical questions regarding performance and internationalization.
 
 Although **VTEX does not grant any support for custom projects**, we have put together the guidelines adopted by our very own product team to cooperate with your development journey using Store Framework, VTEX IO and the React technology.
 
@@ -120,13 +120,9 @@ One of the critical points of flexibility and scalability is to have a component
 
 Instead of creating specific props to attend to devices' typical scenarios, leverage from the [VTEX Responsive Values app](https://github.com/vtex-apps/responsive-values) to enable your component's props to accept different values by device, such as desktop and mobile.
 
-#### Don't
-
-![best-practices-for-storefront-component-development-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-0.png)
-
-#### Do
-
-![best-practices-for-storefront-component-development-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-1.png)
+|✅ Do|❌ Don't|
+|-----|--|
+|![best-practices-for-storefront-component-development-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-1.png)|![best-practices-for-storefront-component-development-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-0.png)|
 
 > ℹ️ Combine enum props with responsive values, as shown below, and enhance your code quality with super optimized props!
 
@@ -138,13 +134,9 @@ Slots enable you to render components through props instead of declaring an arra
 
 You can learn more about Slots [here](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-slots).
 
-#### Don't
-
-![best-practices-for-storefront-component-development-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-3.png)
-
-#### Do
-
-![best-practices-for-storefront-component-development-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-4.png)
+|✅ Do|❌ Don't|
+|-----|--|
+| ![best-practices-for-storefront-component-development-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-4.png)|![best-practices-for-storefront-component-development-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-3.png)|
 
 > ℹ️ When not using Slots, prefer to use the `children` [composition](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-composition).
 
