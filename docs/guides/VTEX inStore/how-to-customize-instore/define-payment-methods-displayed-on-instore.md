@@ -152,5 +152,5 @@ You can find the ID of each condition in the **Payments** module. In the main me
 
 In the **Payment conditions** tab, you will find the ID next to each of the conditions. In the example below, we see that the payment condition ID for Cash is `202`.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/define-payment-methods-displayed-on-instore-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/define-payment-methods-displayed-on-instore-0_155.png)
 If we wanted to include Cash as a payment condition to be displayed at the inStore checkout, this would be the value we would add to the `filters` array, inside the `window.PAYMENTS_FILTER_GLOBAL` object of the `checkout-instore-custom.js` file.

@@ -19,29 +19,31 @@ The **Observation** field is enabled by editing the `checkout-instore-custom.js`
 To enable the **Observation** field, you must set the following properties inside the `window.LOCALE_MESSAGES` object in the `checkout-instore-custom.js` file. In the **UI display** column below, you can see where the information you set is rendered in the inStore UI. You can click on each image to enlarge it.
 [block:parameters]
 {
-  "data": {
-    "0-0": "`cartObservation`",
-    "1-0": "`cartObservationTitle`",
-    "2-0": "`observationNote`",
-    "h-2": "Description",
-    "2-2": "Description of the field that will appear to the sales associate.",
-    "0-2": "Title of the button that will appear in the cart to open the **Observation** field.",
-    "1-2": "Title of the modal that will appear when the sales associate opens the **Observation** field.",
-    "h-1": "Type",
-    "0-1": "string",
-    "1-1": "string",
-    "2-1": "string",
-    "h-0": "Name",
-    "0-3": "![cartObservation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-the-remarks-field-in-the-order-screen-0.png)",
-    "1-3": "![cartObservationTitle](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-the-remarks-field-in-the-order-screen-1.png)",
-    "2-3": "![observationNote](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-the-remarks-field-in-the-order-screen-2.png)",
-    "h-3": "UI display"
-  },
-  "cols": 4,
-  "rows": 3
+"data": {
+"0-0": "`cartObservation`",
+"1-0": "`cartObservationTitle`",
+"2-0": "`observationNote`",
+"h-2": "Description",
+"2-2": "Description of the field that will appear to the sales associate.",
+"0-2": "Title of the button that will appear in the cart to open the **Observation** field.",
+"1-2": "Title of the modal that will appear when the sales associate opens the **Observation** field.",
+"h-1": "Type",
+"0-1": "string",
+"1-1": "string",
+"2-1": "string",
+"h-0": "Name",
+"0-3": "![cartObservation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/enable-the-remarks-field-in-the-order-screen-0_35.png)",
+"1-3": "![cartObservationTitle](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/enable-the-remarks-field-in-the-order-screen-1_36.png)",
+"2-3": "![observationNote](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/enable-the-remarks-field-in-the-order-screen-2_37.png)",
+"h-3": "UI display"
+},
+"cols": 4,
+"rows": 3
 }
 [/block]
+
 This information must be added to the code as shown in the example below.
+
 [block:code]
 {
   "codes": [
@@ -53,7 +55,7 @@ This information must be added to the code as shown in the example below.
 }
 [/block]
 
->❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
+> ❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
 
 If it's necessary to apply some validation logic or mask to the data entered in this field, you can include in the `checkout-instore-custom.js` file a function that listens to the `note.visible` event, which is triggered when the modal is open, and then develop your logic.
 [block:code]
