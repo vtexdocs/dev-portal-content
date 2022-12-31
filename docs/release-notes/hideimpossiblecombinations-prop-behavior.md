@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/hideimpossiblecombinations-prop-behavior-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/hideimpossiblecombinations-prop-behavior-0.png)
 
 Before this fix, [SKU Selector](https://vtex.io/docs/components/all/vtex.store-components/sku-selector/)'s `hideImpossibleCombinations` prop was not properly hiding impossible specifications (specifications that can't be chosen according to the filter previously selected) when defined as `true` in certain scenarios. 
 

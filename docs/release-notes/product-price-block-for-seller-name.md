@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-price-block-for-seller-name-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/product-price-block-for-seller-name-0.png)
 
 A new block responsible for displaying the seller name beside the product price was added to the Product Prices app.
 

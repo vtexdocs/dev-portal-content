@@ -14,7 +14,7 @@ The Product List component displays all items in the user's cart and informs the
 
 > ⚠️ Currently, the Product List only works with the [Minicart v2](https://vtex.io/docs/components/all/vtex.minicart/).
 
-![product-list image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-list-0.png)
+![product-list image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-list-0.png)
 
 ## Configuration
 
@@ -253,7 +253,7 @@ Therefore, in order to customize the `product-list` configuration, you can simpl
 
 | Block name     | Description                                     |
 | -------------- | ----------------------------------------------- |
-| `product-list` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-list-1.png)  Top level block that must be declared in the `minicart-product-list` block to render a default detailed list with all products added to the shopping cart.   |
+| `product-list` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-list-1.png)  Top level block that must be declared in the `minicart-product-list` block to render a default detailed list with all products added to the shopping cart.   |
 | `product-list-content-desktop` | Creates the product list layout for desktop devices.  |
 | `product-list-content-mobile` | Creates the product list layout for mobile devices. |
 | `message` | Renders a message text about the product availability. | 

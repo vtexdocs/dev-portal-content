@@ -8,7 +8,7 @@ updatedAt: "2022-09-29T00:01:36.992Z"
 ---
 The `list-items-orderby` block allows the user order by the items of an list. The options for order is alphabetically or addition date.
 
-![ListItemsOrderBy](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-gift-list-listitemsorderby-0.gif)
+![ListItemsOrderBy](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-gift-list-listitemsorderby-0.gif)
 
 ## Configuration
 

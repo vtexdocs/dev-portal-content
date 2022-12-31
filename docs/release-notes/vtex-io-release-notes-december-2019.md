@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-december-2019-0.png)
+![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-december-2019-0.png)
 
 You better watch out, you better not cry, you better not pout and I'm telling you why: **Release Notes** (once again) **is coming to town**!
 

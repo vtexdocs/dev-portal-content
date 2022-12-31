@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/file-paths-from-assets-builder-in-css-files-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/file-paths-from-assets-builder-in-css-files-0.png)
 
 Media uploaded on Assets builder can now be referenced in your store theme CSS files by adding the desired file path.
 

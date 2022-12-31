@@ -14,7 +14,7 @@ updatedAt: "2022-03-21T17:10:43.606Z"
 
 The **Order Configuration** app, designed for B2B scenarios, displays a form responsible for collecting order data in a modal.
 
-![order-configuration-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-configuration-0.gif)
+![order-configuration-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-configuration-0.gif)
 
 
 Once the form is submitted, the order data collected will be available at Master Data and saved in the current VTEX session.

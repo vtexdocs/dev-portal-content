@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Documentation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-catalog-integration-documentation-0.png)
+![Documentation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-catalog-integration-documentation-0.png)
 
 In order to support our clients' integrations implementation, we have published new Catalog integration developer guides, including:
 

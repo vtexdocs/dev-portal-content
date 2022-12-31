@@ -20,7 +20,7 @@ updatedAt: "2020-09-15T20:55:00.326Z"
 
 The Disclosure Layout is an app responsible for creating a layout structure based on disclosure indicators.
 
-![Disclosure Example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-disclosure-layout-0.gif)
+![Disclosure Example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-disclosure-layout-0.gif)
 [Check example](https://github.com/vtex-apps/store-theme/pull/226)
 
 ## Configuration
@@ -39,7 +39,7 @@ Now, you are able to use all the blocks exported by the `disclosure-layout` app.
 
 | Block name                   | Description                                                                                                                                                                                                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `disclosure-layout`          | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-disclosure-layout-1.png) Parent block that enables you to build the disclosure layout using its 3 children blocks: `disclosure-trigger`, `disclosure-content`, and `disclosure-state-indicator`. |
+| `disclosure-layout`          | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-disclosure-layout-1.png) Parent block that enables you to build the disclosure layout using its 3 children blocks: `disclosure-trigger`, `disclosure-content`, and `disclosure-state-indicator`. |
 | `disclosure-trigger`         | Declares the blocks that will be rendered as disclosure triggers i.e. the blocks that when clicked on will open or close the disclosure content (defined by the `disclosure-content` block). |
 | `disclosure-content`         | Declares the blocks that are responsible for displaying the desired content when the disclosure trigger is clicked on. |
 | `disclosure-state-indicator` | Optional block responsible for rendering chevron or other UI elements that change when the disclosure is opened or closed.  |

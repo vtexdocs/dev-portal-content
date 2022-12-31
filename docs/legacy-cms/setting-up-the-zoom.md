@@ -10,7 +10,7 @@ A tool very commonly used in online stores is the zoom.
 
 It allows the customer to see a detailed image by passing the mouse over a photo of the product. Let us see how to set up and implement this function.
 
-![zoom-configurações](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/setting-up-the-zoom-0.png)
+![zoom-configurações](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-the-zoom-0.png)
 
 ## Setting up the CSS
 
@@ -26,7 +26,7 @@ Next we are going to send the saved CSS file to the server. To do this, click on
 
 Then find the CSS file you saved and send it to the server, clicking on **Localizar** ("Find") and then on **Salvar arquivo** ("Save File")
 
-![add-cms-.css ](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/setting-up-the-zoom-1.png)
+![add-cms-.css ](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-the-zoom-1.png)
 
 Your file will then be listed in the window, as shown above.
 
@@ -43,4 +43,4 @@ Now all you have to do is insert `zoom="on"` in the product tag, like this:
 
 You also have to set up the standard size for the zoom image. You can do this in **CMS** module > **Settings** > **File Types**. By default, this type of zoom image is set up with 1000×1000 pixels.
 
-![zoom-tiposdearquivos EN](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/setting-up-the-zoom-2.png)
+![zoom-tiposdearquivos EN](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-the-zoom-2.png)

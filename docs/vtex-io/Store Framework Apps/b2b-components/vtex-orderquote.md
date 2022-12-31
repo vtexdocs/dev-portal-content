@@ -18,7 +18,7 @@ The Order Quote app provides **B2B** capabilities to save a shopping cart (its i
 
 The user can also print the quotation information containing the cart information along with expiration date which is defined at **Admin > Apps**.
 
-![quick-order](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-orderquote-0.png)
+![quick-order](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-orderquote-0.png)
 
 ## Configuration
 

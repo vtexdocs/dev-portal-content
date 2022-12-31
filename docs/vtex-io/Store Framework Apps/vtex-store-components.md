@@ -131,7 +131,7 @@ To execute our tests go to `react/` folder and run `yarn test`
 
 ### Travis CI
 
-[![Build Status](https://api.travis-ci.org/vtex-apps/store-components.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-0.png)
+[![Build Status](https://api.travis-ci.org/vtex-apps/store-components.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-0.png)
 
 <!-- DOCS-IGNORE:start -->
 ## Contributors

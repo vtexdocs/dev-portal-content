@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-marketplace-endpoints-available-request-review-0.png)
+![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-marketplace-endpoints-available-request-review-0.png)
 
 We have just launched new endpoints in our Marketplace API, that allow marketplace operators to ask sellers to review their SKUs, before approving them to their catalog and also retrieve inventory levels and price values of the already matched suggestions in their catalog.
 

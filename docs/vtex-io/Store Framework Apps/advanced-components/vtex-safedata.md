@@ -63,7 +63,7 @@ SafeData also provides a `patchDocument` mutation in GraphQL which enables react
 
 The schema is as follows:
 
-![GraphQL](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-safedata-0.png)
+![GraphQL](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-safedata-0.png)
 
 `fields` is a Key/Value pair for each MD field.
 
@@ -101,7 +101,7 @@ This is done through a field comparison between `CL` and whatever entity is bein
 
 It is possible to allow other MasterData entities to follow these rules by registering them on the app settings:
 
-![SafeData Config](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-safedata-1.png)
+![SafeData Config](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-safedata-1.png)
 
 *Please be aware that the field options are currently unavailable, and users are allowed to update any fields.*
 

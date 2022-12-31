@@ -10,7 +10,7 @@ updatedAt: "2020-09-21T15:03:40.709Z"
 
 This app sets the meta-tag containing the verification code into the `<head>` section of your website's homepage.
 
-![facebook-domain](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-facebook-domain-verification-0.png)
+![facebook-domain](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-facebook-domain-verification-0.png)
 
 ## Configuration
 

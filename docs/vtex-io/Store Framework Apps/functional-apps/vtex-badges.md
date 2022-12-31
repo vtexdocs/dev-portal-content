@@ -32,7 +32,7 @@ With this, you should be able to start using the app.
 
 After installing the app you will be able to access it by going to the `OTHER` section of the Admin panel and clicking `Badge Management`.
 
-![badges home screen](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-0.PNG)
+![badges home screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-badges-0.PNG)
 
 ### Creating badges
 
@@ -47,7 +47,7 @@ The `Add badges` tab allows you to create new badges by following these steps:
 
 See below a badge creation example.
 
-![form fill](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-1.PNG)
+![form fill](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-badges-1.PNG)
 
 > ⚠️ Note that each badge must contain at least one activation rule condition with the verb `is`. The app will not work properly if all activation rules conditions use `is not`.
 
@@ -60,7 +60,7 @@ To edit an existing badge, go to the `Edit badges` tab and follow these steps:
 3. Edit the badge attributes.
 4. Click `EDIT`.
 
-![edit badges](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-2.PNG)
+![edit badges](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-badges-2.PNG)
 
 ### Deleting badges
 
@@ -133,4 +133,4 @@ These are the props available for customization of the badge component.
 
 After finishing all steps, you can check the result in your store. The order of the badges is set according to the priority defined when creating them. See the image below, that corresponds to the badge setup in this tutorial's examples.
 
-![result](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-badges-3.PNG)
+![result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-badges-3.PNG)

@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/suiteshare-app-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/suiteshare-app-0.png)
 
 We are excited to announce The Suiteshare app is here to provide conversational commerce experiences to your store via WhatsApp. Use the app to attract more customers, organize your team's demands, close sales, measure results and optimize your campaigns.
 

@@ -136,7 +136,7 @@ Below you can see and example of this:
 
 Using the configuration above, the end result would look like this:
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexbr-pickup-selector-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexbr-pickup-selector-0.png)
 
 
 ## Blocks

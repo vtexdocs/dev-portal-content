@@ -23,7 +23,7 @@ Since a website can only have one service worker running, you can **choose to de
 3. Click on the Advanced tab.
 4. Toggle the Service Worker button.
 
-![service-worker-toggle-recipe](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker-0.png)
+![service-worker-toggle-recipe](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker-0.png)
 
 5. Save changes.
 

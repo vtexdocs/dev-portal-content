@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.218Z"
 ---
 The `go-back-to-list` block allows the user to return to the list.
 
-![GoBackToList](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-gobacktolist-0.gif)
+![GoBackToList](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-list-gobacktolist-0.gif)
 
 ## Configuration
 

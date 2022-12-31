@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-highlights-week-39402019-0.png)
+![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-highlights-week-39402019-0.png)
 
 Welcome to the one and only VTEX IO Release Notes!
 

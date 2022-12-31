@@ -41,7 +41,7 @@ Find out how to configure the `markers` prop in the step-by-step below.
 7. Select the block in which the `markers` prop was added during step 3;
 8. Once the editing screen is open, use the prop's value as a tag, wrapping the block's desired message variable that will ultimately be customized. For example: `<discount>-{savingsPercentage}</discount>`
 
-![markers-prop-site-editor](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message-0.gif)
+![markers-prop-site-editor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message-0.gif)
 
 > ℹ️ You can use the prop's value to wrap any desired part of the block's message.
 
@@ -50,7 +50,7 @@ Find out how to configure the `markers` prop in the step-by-step below.
 9. Save the changes. This will give the wrapped text a unique identifier, allowing for CSS customization of the HTML message related element.
 10. Using the Development workspace, access the site of the account that you are working on (`{workspaceName}--{accountName}.myvtex.com`). Thereafter, inspect the HTML element that corresponds to the edited block's message.
 
-![product-price-markers-inspect](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message-1.png)
+![product-price-markers-inspect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message-1.png)
 *Notice that the message's HTML element is wrapped in a new `span` with its own unique selector: `<span class="vtex-product-price-1-x-savings-discount">`.*
 
 If you are happy with the changes to your store theme, make your new theme content public. Up until this point, only you could see the changes performed using the `markers` prop in your Development workspace. Access our documentation on [Making your theme content publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public/) and follow the steps detailed there.

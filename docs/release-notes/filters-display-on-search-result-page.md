@@ -6,10 +6,10 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/filters-display-on-search-result-page-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/filters-display-on-search-result-page-0.png)
 
 Thanks to the new `openFiltersMode` prop it is now possible to define how many filters can be opened by a user at the same time on the Filter Navigator component.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/filters-display-on-search-result-page-1.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/filters-display-on-search-result-page-1.gif)
 
 Notice that only one filter can be opened at one time. In the example above, the prop `openFiltersMode` is declared as `one`.
 

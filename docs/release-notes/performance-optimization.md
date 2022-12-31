@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/performance-optimization-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/performance-optimization-0.png)
 
 If there is one thing that everyone dreams about is performance optimization! With that in mind, the VTEX IO team has prepared a bunch of new configs for you, such as *Fetching filters partially* and *Improving download speed with CSS concatenation*.
 

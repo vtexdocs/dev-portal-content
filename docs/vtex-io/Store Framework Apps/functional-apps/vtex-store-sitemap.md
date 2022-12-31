@@ -32,7 +32,7 @@ Before generating your store's sitemap, you might want to adjust if products, na
 4. Run `vtex install vtex.admin-graphql-ide@3.x` to install the GraphQL admin IDE.
 5. In your browser, access the account's administrative panel and select the **GraphQL IDE**.
 
-![adminsidebarmenu](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-sitemap-0.png)
+![adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-sitemap-0.png)
 
 6. From the dropdown list, choose the `vtex.routes-bootstrap@0.x` app.
 7. If this is **not** the **first time** you're generating your store's sitemap or if your store's routes **did not suffer any changes** since the last time you generated your store's sitemap, go to step 8. Otherwise, run the following query:
@@ -103,7 +103,7 @@ You can manage if you want to include product, navigation and/or apps routes in 
 2. Go to **Account settings > Apps > My apps** and search for **Sitemap** app.
 3. Enable or disable product, navigation, or app routes according to your scenario.
 
-![sitemap-admin](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-sitemap-1.png)
+![sitemap-admin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-sitemap-1.png)
 
 #### Enabling custom routes
 

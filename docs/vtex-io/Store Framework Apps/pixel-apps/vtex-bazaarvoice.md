@@ -148,4 +148,4 @@ To execute our tests go to `react/` folder and run `yarn test`
 
 ### Travis CI
 
-[![Build Status](https://travis-ci.org/vtex-apps/menu.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-bazaarvoice-0.png)
+[![Build Status](https://travis-ci.org/vtex-apps/menu.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-bazaarvoice-0.png)

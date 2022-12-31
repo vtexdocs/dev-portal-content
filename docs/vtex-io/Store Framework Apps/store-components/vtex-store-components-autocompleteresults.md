@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.201Z"
 ---
 The `autocomplete-result-list` component displays the autocomplete functionality in the search bar. This component serves mainly to ease the creation of custom autocomplete components for search engines.
 
-![autocomplete-bar-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-autocompleteresults-0.gif)
+![autocomplete-bar-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-autocompleteresults-0.gif)
 
 ## Configuration
 

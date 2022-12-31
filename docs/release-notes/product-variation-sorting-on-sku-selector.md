@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-variation-sorting-on-sku-selector-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/product-variation-sorting-on-sku-selector-0.png)
 
 Previously, the SKU Selector rendered in a Product Summary Component ([product-summary-sku-selector block](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-sku-selector/)) did not respect the Catalog data when displaying product variations.
 

@@ -11,7 +11,7 @@ The Kit Look app displays relevant products to the shopper at the time of purcha
 The customer can choose the items from the kit they want to buy or add the complete kit to the cart if they are interested in the combinations highlighted automatically by the store.
 
 
-![Kitlook](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexbr-kitlook-0.jpg)
+![Kitlook](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexbr-kitlook-0.jpg)
 
 In the following sections, learn how to add the app to your store and configure it.
 ## Before you start
@@ -45,7 +45,7 @@ The Kit Look order by default is sorted by the productId in ascending order, but
 
 Furthermore it is possible to select which components the kitlook block should render. The default configuration is shown in the image:
 
-![KitOrder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexbr-kitlook-1.png)
+![KitOrder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexbr-kitlook-1.png)
 
 The `kitlook-layout` interface works by alternating the blocks if it detects that the product is a kit. 
 
@@ -366,4 +366,4 @@ After that, do not forget to change the default product page interface on **CMS 
 
 You can expect to have a similar result as the following:
 
-![kitlook-advanced-preview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexbr-kitlook-2.png)
+![kitlook-advanced-preview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexbr-kitlook-2.png)

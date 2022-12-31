@@ -13,7 +13,7 @@ The Service Worker builder is responsible for fetching service workers exported 
 
 Thanks to the builder's bundling feature, stores can leverage from the generated file and simultaneously work with several service workers at once without needing to stick to a single one and deactivate others as essential to the operation.
 
-![service-worker-diagram](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-several-service-workers-in-your-store-0.png)
+![service-worker-diagram](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-several-service-workers-in-your-store-0.png)
 
 Find below the instructions on how to generate an app using the Service Worker builder.
 
@@ -35,7 +35,7 @@ vtex init
 
 3. Select the `service-worker-example` option and confirm that you want to download the app to the destination you just chose:
 
-![service-worker-VTEX IO CLI](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-several-service-workers-in-your-store-1.png)
+![service-worker-VTEX IO CLI](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-several-service-workers-in-your-store-1.png)
 
 > ℹ️ Once you select the `service-worker-example` option, the CLI will ask you for important information about the app, such as a value for the vendor, name, title, and description. With the exception of vendor, press enter to keep each field's predefined values.
 

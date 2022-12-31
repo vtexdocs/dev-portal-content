@@ -64,7 +64,7 @@ Check the [CSV file template](#csv-file-template) to understand the meaning of e
 
 To create or delete URL redirects in your store, you must create a `.csv` file as in the following example.
 
-![csv-file-url-redirect](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-managing-url-redirects-0.png)
+![csv-file-url-redirect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-managing-url-redirects-0.png)
 
 Notice that the file must contain a row with four columns and the following values:
 
@@ -79,7 +79,7 @@ Notice that the file must contain a row with four columns and the following valu
 
 Under the first row of your `.csv` file, you must enter the `from`, `to`, `type`, and `endDate` values corresponding to the redirects you want to create or delete, as in the following example:
 
-![urls-redirect-csv-file](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-managing-url-redirects-1.png)
+![urls-redirect-csv-file](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-managing-url-redirects-1.png)
 
 Keep in mind that:
 

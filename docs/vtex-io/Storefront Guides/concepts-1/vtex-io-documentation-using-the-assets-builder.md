@@ -31,7 +31,7 @@ Check out the instructions to use it below:
 2. In the `store`  root directory of your app, create an  `assets` folder to manage your store's assets, such as images.
 3. Then, add the desired asset files in the  `assets` folder. Notice that you can create subfolders within the  `assets`  folder to better organize the assets used by the theme blocks, as shown below:
 
-![assets-folder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-the-assets-builder-0.png)
+![assets-folder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-the-assets-builder-0.png)
 
 > ⚠️ If you created subfolders inside the Assets folder, remember to include the folder hierarchy in the asset path, such as:  `assets/events/vtex-day.jpg`.
 

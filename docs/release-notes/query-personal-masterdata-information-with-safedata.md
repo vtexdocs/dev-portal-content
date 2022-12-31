@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/query-personal-masterdata-information-with-safedata-0.png)
+![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/query-personal-masterdata-information-with-safedata-0.png)
 
 The SafeData app is a middleware to retrieve and save MasterData (V1 & V2) information directly on the front-end.
 

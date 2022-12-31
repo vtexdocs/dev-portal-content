@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.075Z"
 ---
 The `notification` component displays text content in a bar style (`notification.bar`) or inline (`notification.inline`). This Component can be imported and used by any VTEX app.
 
-![notification-bar](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-notification-0.png)
+![notification-bar](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-notification-0.png)
 ## Configuration
 
 1. Import the `vtex.store-components` app to your theme's dependencies in the `manifest.json` file as in the following example:

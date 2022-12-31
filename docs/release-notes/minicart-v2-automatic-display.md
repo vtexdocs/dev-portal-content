@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/minicart-v2-automatic-display-0.png) 
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/minicart-v2-automatic-display-0.png) 
 
 A trigger responsible for automatically opening the Minicart v2 on the interface can now be set by you using a store event and the block's new `customPixelEventId`  and `customPixelEventName` props!
 

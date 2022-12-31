@@ -14,7 +14,7 @@ updatedAt: "2021-08-27T00:05:10.919Z"
 
 The Product Specifications app provides blocks to render product specification data.
 
-![Product Specifications Example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-0.png)
+![Product Specifications Example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-specifications-0.png)
 
 ## Configuration
 

@@ -6,13 +6,13 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/images-non-active-dots-customization-css-handle-0.png) 
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/images-non-active-dots-customization-css-handle-0.png) 
 
 Previously, there were no CSS handles to enable users to select and customize non-active dots in the `product-images` block (from [Store Components app](https://vtex.io/docs/app/vtex.store-components/)).
 
 :information-source: *The non-active dot represents the image that is not currently being hovered on by users.*
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/images-non-active-dots-customization-css-handle-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/images-non-active-dots-customization-css-handle-1.png)
 
 In the image above only the first image dot, which was currently selected (or *active*), had both `vtex-store-components-3-x-swiperBullet`  and `vtex-store-components-3-x-swiperBullet--active` CSS classes. The second image dot, which was not active, did not have any CSS class which basically means that users were not able to select it for customization.
 

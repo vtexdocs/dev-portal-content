@@ -6,7 +6,7 @@ hidden: true
 type: "added"
 ---
 
-![inStore](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/instore-customization-guides-0.png)
+![inStore](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/instore-customization-guides-0.png)
 
 We have added documentation explaning how to customize the inStore experience according to your business needs.
 

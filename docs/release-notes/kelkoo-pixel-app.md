@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/kelkoo-pixel-app-0.png)
+![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/kelkoo-pixel-app-0.png)
 
 The more native integrations, the better: get ready for the [Kelkoo](https://www.kelkoogroup.com/) native integration! 
 

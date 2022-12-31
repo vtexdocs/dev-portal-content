@@ -53,7 +53,7 @@ yarn add react-apollo
 
 For your component to render the information provided by the VTEX IO platform, you have to query the data stored on the server using *GraphQL APIs*.
 
-![GraphQL-query](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-7-consuming-data-0.png)
+![GraphQL-query](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-7-consuming-data-0.png)
 
 We will use the `useQuery` *React Hook* to do this:
 
@@ -117,7 +117,7 @@ In addition to *queries*, *mutations* are another type of operation available fo
 
 *Mutations* are used to insert or modify data that already exists on the platform; they are used to send *updates* to the server.
 
-![GraphQL-mutation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-7-consuming-data-1.png)
+![GraphQL-mutation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-7-consuming-data-1.png)
 
 1. Open your app's code in the code editor of your choice.
 2. In the `react` folder, access the `HelloMutation.tsx` file or create it if it does not already exist.
@@ -173,5 +173,5 @@ Once the app is installed, follow the steps outlined below:
 
 If you need help, there is a `docs` tab on the right corner of your screen that describes the queries and mutations available for the selected app.
 
-![GraphQL IDE example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-7-consuming-data-2.png)
+![GraphQL IDE example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-7-consuming-data-2.png)
 *The example above shows how to use the GraphQL IDE Admin to query an internal route in the `vtex.rewriter` app.*

@@ -17,7 +17,7 @@ Keep in mind that when indicating alternate versions of a page, you must do it i
 
 By doing that, search engines are capable of understanding the relationship between those two pages, avoiding issues such as indicating the incorrect title for a given page or wrong indexing.
 
-![Frame 15](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores-0.png)
+![Frame 15](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores-0.png)
 
 Hence, be aware that you'll need to perform the following step by step for each localized version of your landing page.
 

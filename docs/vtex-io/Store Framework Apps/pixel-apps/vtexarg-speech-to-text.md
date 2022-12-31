@@ -14,7 +14,7 @@ updatedAt: "2022-11-03T17:57:01.905Z"
 
 The `speech-to-text` app uses Google Chrome language processing to listen to the user's microphone and convert speech-to-text. The recognized text is then used to redirect the user to the corresponding search page.
 
-![speechlow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-speech-to-text-0.gif)
+![speechlow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-speech-to-text-0.gif)
 
 ## Configuration 
 

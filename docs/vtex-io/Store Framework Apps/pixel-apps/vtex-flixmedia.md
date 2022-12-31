@@ -34,7 +34,7 @@ In your terminal, log into your VTEX account and [install](https://vtex.io/docs/
 2. Fill out the fields according to your Flixmedia data.
 3. Save your changes.
 
-![flixmedia-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-flixmedia-0.gif)
+![flixmedia-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-flixmedia-0.gif)
 
 ### Step 3 - Updating your store theme 
 

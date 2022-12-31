@@ -255,7 +255,7 @@ Renders the confirmation icon.
 
 | Default appearance                                         |
 | ---------------------------------------------------------- |
-| ![op-confirmation-icon](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-0.png) |
+| ![op-confirmation-icon](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-0.png) |
 
 ### `op-confirmation-title`
 
@@ -273,7 +273,7 @@ Renders the confirmation title.
 
 | Default appearance                                           |
 | ------------------------------------------------------------ |
-| ![op-confirmation-title](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-1.png) |
+| ![op-confirmation-title](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-1.png) |
 
 ### `op-confirmation-message`
 
@@ -291,7 +291,7 @@ Renders the confirmation message, containing the clients email.
 
 | Default appearance                                               |
 | ---------------------------------------------------------------- |
-| ![op-confirmation-message](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-2.png) |
+| ![op-confirmation-message](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-2.png) |
 
 ### `op-print-button`
 
@@ -305,7 +305,7 @@ Renders a button that triggers a full page print.
 
 | Default appearance                 |
 | ---------------------------------- |
-| ![op-print](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-3.png) |
+| ![op-print](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-3.png) |
 
 ### `op-notices`
 
@@ -324,7 +324,7 @@ Renders a list of important informations relevant to the currently placed order.
 
 | Default appearance                     |
 | -------------------------------------- |
-| ![op-notices](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-4.png) |
+| ![op-notices](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-4.png) |
 
 ### `op-summary-section`
 
@@ -352,7 +352,7 @@ If a placed order is split between delivery and pickup, renders a summary of all
 
 | Default appearance                                     |
 | ------------------------------------------------------ |
-| ![op-summary-section](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-5.png) |
+| ![op-summary-section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-5.png) |
 
 ### `op-bank-invoice-section`
 
@@ -376,7 +376,7 @@ Renders the bank invoice section if payment method chosen was bank invoice.
 
 | Default appearance                                               |
 | ---------------------------------------------------------------- |
-| ![op-bank-invoice-section](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-6.png) |
+| ![op-bank-invoice-section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-6.png) |
 
 ### `op-order`
 
@@ -409,7 +409,7 @@ Renders the order id number. Must be placed inside an [`op-order`](#op-order) bl
 
 | Default appearance                               |
 | ------------------------------------------------ |
-| ![op-order-number](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-7.png) |
+| ![op-order-number](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-7.png) |
 
 ### `op-order-datetime`
 
@@ -427,7 +427,7 @@ Renders the date and time an order was placed. Must be placed inside an [`op-ord
 
 | Default appearance                                   |
 | ---------------------------------------------------- |
-| ![op-order-datetime](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-8.png) |
+| ![op-order-datetime](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-8.png) |
 
 ### `op-order-seller`
 
@@ -446,7 +446,7 @@ Renders the seller of an order. Must be placed inside an [`op-order`](#op-order)
 
 | Default appearance                               |
 | ------------------------------------------------ |
-| ![op-order-seller](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-9.png) |
+| ![op-order-seller](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-9.png) |
 
 ### `op-order-split-notice`
 
@@ -464,7 +464,7 @@ Renders a message with the number of packages of an order if the order was split
 
 | Default appearance                                           |
 | ------------------------------------------------------------ |
-| ![op-order-split-notice](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-10.png) |
+| ![op-order-split-notice](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-10.png) |
 
 ### `op-order-customer`
 
@@ -478,7 +478,7 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 
 | Default appearance                                   |
 | ---------------------------------------------------- |
-| ![op-order-customer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-11.png) |
+| ![op-order-customer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-11.png) |
 
 ### `op-order-options`
 
@@ -501,7 +501,7 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 
 | Default appearance                                 |
 | -------------------------------------------------- |
-| ![op-order-options](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-12.png) |
+| ![op-order-options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-12.png) |
 
 ### `op-order-payment`
 
@@ -518,7 +518,7 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 
 | Default appearance                                 |
 | -------------------------------------------------- |
-| ![op-order-payment](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-13.png) |
+| ![op-order-payment](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-13.png) |
 
 ### `op-order-delivery-packages`
 
@@ -560,7 +560,7 @@ Renders an order delivery packages information and product list. Must be placed 
 
 | Default appearance                                                     |
 | ---------------------------------------------------------------------- |
-| ![op-order-delivery-packages](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-14.png) |
+| ![op-order-delivery-packages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-14.png) |
 
 ### `op-order-pickup-packages`
 
@@ -583,7 +583,7 @@ _Note: Include the same CSS handles as [`op-order-delivery-packages`](#op-order-
 
 | Default appearance                                                 |
 | ------------------------------------------------------------------ |
-| ![op-order-pickup-packages](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-15.png) |
+| ![op-order-pickup-packages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-15.png) |
 
 ### `op-order-total`
 
@@ -603,7 +603,7 @@ Renders an order delivery packages information and product list. Must be placed 
 
 | Default appearance                             |
 | ---------------------------------------------- |
-| ![op-order-total](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-16.png) |
+| ![op-order-total](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-16.png) |
 
 ## API
 

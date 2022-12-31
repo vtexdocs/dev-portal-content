@@ -16,4 +16,4 @@ You can only use this method on a **development workspace**.
 3. You can see the VTEX IO app that exports this block, the block itself and block class.
 
 ## Example:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-interactively-inspect-blocks-on-a-store-framework-store-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-interactively-inspect-blocks-on-a-store-framework-store-0.png)

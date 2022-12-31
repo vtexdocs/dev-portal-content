@@ -17,7 +17,7 @@ The VTEX IO development platform already applies advanced *cache* techniques to 
 
 We highly recommended using the [Apollo solution](https://www.apollographql.com/docs/react/caching/cache-configuration/) in your app and, that way, define your own *cache* strategies that mold to the business scenario that applies to your store.
 
-![React Apollo overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-9-improving-performance-with-caching-0.jpeg)
+![React Apollo overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-9-improving-performance-with-caching-0.jpeg)
 
 Once implemented, the solution operates without major configurations: two GraphQL *requests* with the same *query* and variables reach the server only once for data collection.
 

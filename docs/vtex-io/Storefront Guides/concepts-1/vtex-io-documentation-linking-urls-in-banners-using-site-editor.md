@@ -20,7 +20,7 @@ You can configure one of your store’s banner to have a page redirect, meaning 
 
 Indicate that an internal URL will be inserted in the banner, selecting the **External Route** toggle. Then, in the `Internal URL` field, simply copy and paste the internal desired address.
 
-![internal-url-field](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-linking-urls-in-banners-using-site-editor-0.png)
+![internal-url-field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-linking-urls-in-banners-using-site-editor-0.png)
 
 5. Click on **Save**.
 
@@ -33,6 +33,6 @@ Indicate that an internal URL will be inserted in the banner, selecting the **Ex
 3. Select the **Carousel** block and choose the banner that will have its content edited.
 4. Selecting the **External Route** toggle and in the `URL (external)` field, simply copy and paste the external desired address.
 
-![external-url-field-storefront](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-linking-urls-in-banners-using-site-editor-1.png)
+![external-url-field-storefront](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-linking-urls-in-banners-using-site-editor-1.png)
 
 5. Click on **Save**.

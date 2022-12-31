@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/order-custom-tax-data-in-the-datalayer-object-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/order-custom-tax-data-in-the-datalayer-object-0.png)
 
 New fields were added to the `dataLayer` object, allowing the store's website to export data related to the order custom taxes.
 

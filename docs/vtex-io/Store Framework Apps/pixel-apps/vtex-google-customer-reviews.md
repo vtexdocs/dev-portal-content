@@ -20,7 +20,7 @@ updatedAt: "2021-01-14T16:09:37.659Z"
 
 This is a first party integration app for Google Customer Reviews, a free service that enables Google to collect valuable feedback from customers who’ve made a purchase on your site.
 
-![Google Customer Reviews](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-google-customer-reviews-0.png)
+![Google Customer Reviews](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-google-customer-reviews-0.png)
 
 ## Configuration
 

@@ -12,7 +12,7 @@ updatedAt: "2022-08-18T10:57:35.113Z"
 
 Product Identifier app is responsible for showing a product identifier, such as: product reference, product ID, sku EAN or sku reference.
 
-![reference](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-identifier-0.png)
+![reference](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-identifier-0.png)
 
 ## Configuration
 
@@ -46,7 +46,7 @@ The `product-identifier` interface is available is also available within the adm
 
 It's also possible to hide the component label or customize its text. Notice that, in the following example, the "Reference" text was substituted by "Foo".
 
-![foo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-identifier-1.png)
+![foo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-identifier-1.png)
 
 ## Customization
 

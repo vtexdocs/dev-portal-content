@@ -16,7 +16,7 @@ updatedAt: "2021-09-28T13:22:41.852Z"
 
 This is a Cookiebot first party integration app. The [solution](https://www.cookiebot.com/) helps make your use of cookies and online tracking compliant.
 
-![Cookie dialog](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookiebot-0.png)
+![Cookie dialog](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-cookiebot-0.png)
 
 ## Configuration
 
@@ -24,7 +24,7 @@ This is a Cookiebot first party integration app. The [solution](https://www.cook
 2. In your VTEX account's admin, open the **App** section and select the Cookiebot App box;
 3. Fill in your **Domain Group ID**. You can find yours at the [Cookiebot Settings page](https://manage.cookiebot.com/en/manage);
 
-![Cookiebot Domain ID](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookiebot-1.png)
+![Cookiebot Domain ID](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-cookiebot-1.png)
 
 4. On the [Settings page](https://manage.cookiebot.com/en/manage), make sure you use **Active Consent**; 
 
@@ -35,7 +35,7 @@ This is a Cookiebot first party integration app. The [solution](https://www.cook
    
 This pixel app also creates the page `/cookie-declaration` in your store with Cookiebot's Cookie declaration:
 
-![Cookie declaration page](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-cookiebot-2.png)
+![Cookie declaration page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-cookiebot-2.png)
 
 You can edit the new page using the admin's Site Editor.
 

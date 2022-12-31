@@ -16,9 +16,9 @@ The Product Comparison app compares specifications of pre-selected SKUs, allowin
 
 The app exports several blocks, which you can leverage from in order to display a Product Comparison drawer on seach results page and a new Product Comparison page in your store.
 
-![Comparison drawer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-comparison-0.png)
+![Comparison drawer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-comparison-0.png)
 *Product Comparison drawer on the store's search results page*
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-comparison-1.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-comparison-1.png)
 *Product Comparison page*
 
 ## Configuration
@@ -37,7 +37,7 @@ Now, you are able to use all the blocks exported by the Product Comparison app. 
 
 | Block name   | Description                |
 | :--------:   | :------------------------: |
-| `product-comparison-drawer` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-comparison-2.png) Main block responsible for rendering the drawer from the Product Comparison component in which the items will be compared. |
+| `product-comparison-drawer` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-comparison-2.png) Main block responsible for rendering the drawer from the Product Comparison component in which the items will be compared. |
 | `list-context.comparison-product-summary-slider` | Extends the `list-context` block to built the Product Comparison component using the [Slider Layout](https://vtex.io/docs/components/layout-blocks/vtex.slider-layout/.) |
 | `product-summary.shelf.product-comparison` | Extends the default `product-summary.shelf` block (from the [Product Summary app](https://vtex.io/docs/components/all/vtex.product-summary/)) for the Product Comparison component's features. |
 | `product-comparison-block` | Logical block that, once extended (see blocks listed below), is responsible for rendering the Product Comparison component's features. |

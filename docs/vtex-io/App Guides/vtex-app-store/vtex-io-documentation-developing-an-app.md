@@ -47,7 +47,7 @@ vtex init
 
 2. Select the boilerplate that you want.
 
-![boilerplates](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-developing-an-app-0.png)
+![boilerplates](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-0.png)
 
 3. A new folder will be created in your machine, and to access it run `cd {folder-name}` in your terminal.
 
@@ -105,7 +105,7 @@ vtex login {accountName}
 
 3. Once logged in, run the `vtex whoami` command to show which account and workspace the VTEX IO CLI is using.
 
-![Login - Whoami](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-developing-an-app-1.png)
+![Login - Whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-1.png)
 
 #### Creating a development workspace
 
@@ -124,7 +124,7 @@ vtex use {exampleName}
 
 This changes your VTEX account to a Developer workspace called `exampleName` ( ️ replace it with the name of your choice), creating it from scratch if it does not already exist.
 
-![vtex-use](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-developing-an-app-2.png)
+![vtex-use](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-2.png)
 
 2. Type `Y`, and a Development workspace will be created under your chosen name.
 

@@ -13,7 +13,7 @@ updatedAt: "2022-02-01T21:09:11.415Z"
 
 The Shelf app displays a list of products on your store pages, helping you build your shop window and work on your store's visual merchandising.
 
-![shelf](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-shelf-0.png)
+![shelf](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-shelf-0.png)
 
 ## Configuration
 
@@ -29,8 +29,8 @@ Now, you can use all the blocks exported by the `shelf` app. Check out the compl
 
 | Block name          |  Description |
 | --------------------| -------- |
-|`shelf`| ![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-shelf-1.png) Renders in the store home page a list of products. | 
-| `shelf.relatedProducts` | ![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-shelf-2.png) Renders in the product details page a list of related products. |
+|`shelf`| ![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-shelf-1.png) Renders in the store home page a list of products. | 
+| `shelf.relatedProducts` | ![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-shelf-2.png) Renders in the product details page a list of related products. |
 
 
 2. Declare the `shelf.relatedProduct` in the product template (`store.product`) using its props. For example:

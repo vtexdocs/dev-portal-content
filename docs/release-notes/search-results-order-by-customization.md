@@ -6,8 +6,8 @@ hidden: false
 type: "improved"
 ---
 
-![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/search-results-order-by-customization-0.png)
+![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-results-order-by-customization-0.png)
 
 A new CSS Handle (`orderByOptionItem--selected`) was added to the [Search Result app](https://vtex.io/docs/components/all/vtex.search-result/), allowing you to customize the item selected by users on the page's Order By component.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/search-results-order-by-customization-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-results-order-by-customization-1.png)
 ✨ We would not be able to deliver this amazing result if it was not for [Beatriz Miranda](https://github.com/BeatrizMiranda) from ACCT! Our sincere thanks, Beatriz!

@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/breadcrumb-structured-data-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/breadcrumb-structured-data-0.png)
 
 Previously, neither the [Breadcrumb app](https://vtex.io/docs/components/all/vtex.breadcrumb/) or the store itself provided the `position` and `itemListElement` data necessary to guide search engines to the current page position in the store category tree.
 

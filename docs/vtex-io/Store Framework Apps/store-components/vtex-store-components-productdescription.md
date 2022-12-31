@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.075Z"
 ---
 The `product-description` block displays the description of a product. This Component can be imported and used by any VTEX App.
 
-![product-description-ui](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productdescription-0.png)
+![product-description-ui](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-productdescription-0.png)
 ## Configuration
 
 1. Import the `vtex.store-components` app to your theme's dependencies in the `manifest.json` file as in the following example:

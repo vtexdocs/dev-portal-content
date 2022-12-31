@@ -71,7 +71,7 @@ For that, you must run Lighthouse again, including the `__disablePixels` and `v`
 
 Take the following example:
 
-![pixelapps](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-debugging-performance-issues-0.png)
+![pixelapps](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-debugging-performance-issues-0.png)
 
 ## Step 3: Checking an app's bundle size
 
@@ -91,7 +91,7 @@ For analyzing you app's bundle, you can access the following paths:
 
 Here is an example of the result:
 
-![bundle](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-debugging-performance-issues-1.png)
+![bundle](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-debugging-performance-issues-1.png)
 
 From the given example, we have the name of the bundle (`vendors~Pickup.js`) followed by the `modules` folder, in which it's noticeable that the `react-icons` component takes up the majority of the bundle size.
 

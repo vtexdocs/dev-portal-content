@@ -14,7 +14,7 @@ updatedAt: "2022-03-10T18:31:22.068Z"
 
 An app that makes it possible to render external iframes on a store.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-iframe-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-iframe-0.png)
 
 ## Configuration - standard Iframe
 

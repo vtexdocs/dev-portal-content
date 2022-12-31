@@ -157,14 +157,14 @@ When you start the custom OAuth setup, you must fill in the following informatio
 
 >❗ These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret` respectively.
 
-![Provider details section, in the custom OAuth set up interface with the options described in the tutorial.](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-1.PNG)
+![Provider details section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-1.PNG)
 Click `NEXT`.
 
 #### 4. Configure authorization code requests
 
 In this step, you must first provide the authorization request __URL__.
 
-![Authorization code section, in the custom OAuth set up interface with the options described in the tutorial](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/login-integration-guide-webstore-oauth2-2.PNG)
+![Authorization code section, in the custom OAuth set up interface with the options described in the tutorial](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-2.PNG)
 
 [block:callout]
 {

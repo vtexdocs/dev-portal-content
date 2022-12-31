@@ -12,7 +12,7 @@ updatedAt: "2022-02-24T13:00:12.534Z"
 
 The Tab Layout app provides you the needed structure to create different layouts within the store's main one from the use of *tabs*.
 
-![tab-layout](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-0.png)
+![tab-layout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-tab-layout-0.png)
 *Example of an brazilian VTEX store with tabs (`Perfumes até 40%off`, `Presentes`, and `Best Sellers`) displaying different content for users.* 
 
 ## Configuration
@@ -29,12 +29,12 @@ Now, you are able to use all the blocks exported by the `tab-layou` app. Check o
 
 | Block name   | Description                |
 | :----------: | :------------------------: |
-| `tab-layout` |  ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-1.png) for the layout structure, declaring the desired list of tabs and its content. |
-| `tab-list`   |  ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-2.png) Defines the list of tabs to be rendered. It only accepts the `tab-list.item` block as child. | 
-| `tab-list.item` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-3.png) Defines the rendering for a given tab. Notice that it does not define the tab content, which is handled by the `tab-content.item` block.  |
+| `tab-layout` |  ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-tab-layout-1.png) for the layout structure, declaring the desired list of tabs and its content. |
+| `tab-list`   |  ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-tab-layout-2.png) Defines the list of tabs to be rendered. It only accepts the `tab-list.item` block as child. | 
+| `tab-list.item` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-tab-layout-3.png) Defines the rendering for a given tab. Notice that it does not define the tab content, which is handled by the `tab-content.item` block.  |
 | `tab-list.item.children` | Flexible alternative to `tab-list.item`. Defines the rendering for a given tab and also accepts any array of blocks as its children. |
-| `tab-content` |  ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-4.png) Defines the list of content to be rendered in each tab. It only accepts the `tab-content.item` block as child. |
-| `tab-content.item` |  ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-5.png) Defines the content for a given tab. | 
+| `tab-content` |  ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-tab-layout-4.png) Defines the list of content to be rendered in each tab. It only accepts the `tab-content.item` block as child. |
+| `tab-content.item` |  ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-tab-layout-5.png) Defines the content for a given tab. | 
 
 2. In the desired page tempate, such as `store.home`, add the `tab-layout` block:
 

@@ -122,15 +122,15 @@ Instead of creating specific props to attend to devices' typical scenarios, leve
 
 #### Don't
 
-![best-practices-for-storefront-component-development-1](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-developing-custom-storefront-components-0.png)
+![best-practices-for-storefront-component-development-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-0.png)
 
 #### Do
 
-![best-practices-for-storefront-component-development-2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-developing-custom-storefront-components-1.png)
+![best-practices-for-storefront-component-development-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-1.png)
 
 > ℹ️ Combine enum props with responsive values, as shown below, and enhance your code quality with super optimized props!
 
-![best-practices-for-storefront-component-development-3](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-developing-custom-storefront-components-2.png)
+![best-practices-for-storefront-component-development-3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-2.png)
 
 ### Slots
 
@@ -140,11 +140,11 @@ You can learn more about Slots [here](https://developers.vtex.com/vtex-developer
 
 #### Don't
 
-![best-practices-for-storefront-component-development-4](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-developing-custom-storefront-components-3.png)
+![best-practices-for-storefront-component-development-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-3.png)
 
 #### Do
 
-![best-practices-for-storefront-component-development-5](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-developing-custom-storefront-components-4.png)
+![best-practices-for-storefront-component-development-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-4.png)
 
 > ℹ️ When not using Slots, prefer to use the `children` [composition](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-composition).
 

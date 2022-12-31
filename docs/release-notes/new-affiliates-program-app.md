@@ -7,7 +7,7 @@ hidden: false
 excerpt: "We have launched the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate."
 ---
 
-![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-affiliates-program-app-0.png)
+![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-affiliates-program-app-0.png)
 
 We have launched the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate.
 
@@ -19,7 +19,7 @@ The **Affiliates Program app** creates a specific URL of your VTEX store for eac
 
 The app also provides a profile page and dashboard for the affiliates to keep track of orders and commissions associated with them, as can be seen in the image below:
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-affiliates-program-app-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-affiliates-program-app-1.png)
 
 After [installing the app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app#installation) in your VTEX store, three new pages will be available in VTEX Admin, under *Other > Affiliates*:
 
@@ -31,6 +31,6 @@ After [installing the app](https://developers.vtex.com/vtex-developer-docs/docs/
 
 On these pages, you can manage everything related to your affiliates, making use of multiple filters and exporting data via email. They look like the example below:
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-affiliates-program-app-2.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-affiliates-program-app-2.gif)
 
 The app is available on [VTEX App Store](https://apps.vtex.com/vtex-affiliates/p) and you can find more information in the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app) guide.

@@ -34,7 +34,7 @@ After installing the VTEX IO CLI in your machine, take the following steps to lo
 
   >⚠️ Replace `accountName` with the name of your VTEX account.
 
-![toobelt-login](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-2-basicsetuptodevelopinvtexio-0.png)
+![toobelt-login](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-2-basicsetuptodevelopinvtexio-0.png)
 
 2. After running the command, a browser window will open and ask for your credentials. Please enter the information required to log in to your account successfully.
 
@@ -54,7 +54,7 @@ When you log in to a VTEX account using the VTEX IO CLI, you are automatically i
 
 2. Enter `Y` to create the new workspace.
 
-![VTEX IO CLI-workspace](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-2-basicsetuptodevelopinvtexio-1.png)
+![VTEX IO CLI-workspace](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-2-basicsetuptodevelopinvtexio-1.png)
 
 After running this command, you'll be taken to the `exampleworkspace` workspace, and all your operations will now run in this specified workspace.
 

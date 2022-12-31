@@ -46,7 +46,7 @@ To start, create the essential variables to work within GTM: **Data Layer** and 
 2. Click on **Variables.**
 3. In the **User-Defined Variables** box, click on **New.**
 
-![variables-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-setting-up-google-tag-manager-0.png)
+![variables-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-0.png)
 
 #### Data Layer Variables
 
@@ -82,7 +82,7 @@ Creating the following variables is important to persist campaign data throughou
 7. In the `Data Layer Variable Name` field, type `originalLocation`.
 8. Enable the `Set Default Value` option and fill in the `Default Value` field with the following value: `{{Page URL}}`.
 
-![gtm-variable-location](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-setting-up-google-tag-manager-1.gif)
+![gtm-variable-location](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-1.gif)
 
 9. Click on `Save`.
 
@@ -95,7 +95,7 @@ Once you have saved the `originalLocation` variable, create the `originalReferre
 5. In the `Data Layer Variable Name` field, type `originalReferrer`.
 6. Enable the `Set Default Value` option and fill in the `Default Value` field with the following value: `{{Referrer}}`.
 
-![gtm-variable-referrer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-setting-up-google-tag-manager-2.gif)
+![gtm-variable-referrer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-2.gif)
 
 7. Click on `Save`.
 
@@ -118,7 +118,7 @@ You will create one variable for the storefront - default - and another for the 
 6. Click **Add Field**. Then, type `referrer` in **Field Name** and `{{Original Referrer}}` in the **Value** field.
 7. Click **Add Field**. Then, type `page` in **Field Name** and `{{Page Path}}` in the **Value** field.
 
-![img-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-setting-up-google-tag-manager-3.png)
+![img-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-3.png)
 
 7. Then, go to **Ecommerce**  and tick the `Enable Enhanced Ecommerce Features` and `Use data layer` boxes.
 8. Save your changes as **Google Analytics**.
@@ -146,7 +146,7 @@ To do this, click on Fields to set and add the `userId` field with its desired v
 Triggers are conditions to when you want your tags to fire. For example, if you want to activate the Google Ads conversion tag when a visitor signs up your store newsletter, you use a trigger to do it.
 To create a trigger, click on Trigger in the left menu and then on New:
 
-![trigger-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-setting-up-google-tag-manager-4.png)
+![trigger-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-4.png)
 
 #### Custom Events
 
@@ -177,7 +177,7 @@ Tags are tracking code you want to implement on your store. For example, if you 
 
 To create a tag, click on Tags in the left menu and then on New:
 
-![tag-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-setting-up-google-tag-manager-5.png)
+![tag-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-5.png)
 
 #### Google Analytics - Checkout and Order Placed
 

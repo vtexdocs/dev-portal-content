@@ -17,7 +17,7 @@ The **Sandbox App** is basically a component that supports iFrames. Therefore, i
 
 1. Go ahead and open your `manifest.json` file and declare the Sandbox app as a dependency.
 
-![sandbox dependency](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-sandbox-blocks-0.png)
+![sandbox dependency](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-sandbox-blocks-0.png)
 
 2. Then, declare the Sandbox block in the `blocks` folder or in the `blocks.jsonc` file.
 
@@ -34,7 +34,7 @@ The **Sandbox App** is basically a component that supports iFrames. Therefore, i
 
 Let's suppose you want to create a simple `h1` sandbox block. It would look similar to the following:
 
-![sanbox hello world](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-sandbox-blocks-1.png)
+![sanbox hello world](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-sandbox-blocks-1.png)
 
 3. Reference it in another's block `child dependency` or `blocks`. For instance, your `store.home`:
 

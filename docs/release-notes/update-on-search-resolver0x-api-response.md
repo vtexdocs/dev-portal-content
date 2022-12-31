@@ -14,8 +14,8 @@ For further information, check our [announcement](https://help.vtex.com/en/annou
 
 ## Response before the update
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/update-on-search-resolver0x-api-response-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/update-on-search-resolver0x-api-response-0.png)
 
 ## Response after the update
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/update-on-search-resolver0x-api-response-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/update-on-search-resolver0x-api-response-1.png)

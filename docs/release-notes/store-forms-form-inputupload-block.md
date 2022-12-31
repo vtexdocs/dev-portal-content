@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/store-forms-form-inputupload-block-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/store-forms-form-inputupload-block-0.png)
 
 A new block responsible for rendering an upload button on store forms is among us: let's welcome the `form-input.upload`!
 

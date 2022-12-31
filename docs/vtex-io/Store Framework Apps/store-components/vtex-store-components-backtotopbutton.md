@@ -8,11 +8,11 @@ updatedAt: "2022-11-22T18:39:23.174Z"
 ---
 The `back-to-top-button` component is a button that redirects users to the top of the page when clicked.
 
-![Back To Top Button rendered as a text button](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-backtotopbutton-0.png)
+![Back To Top Button rendered as a text button](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-backtotopbutton-0.png)
 
 _Back To Top Button rendered as a text button_
 
-![Back To Top Button rendered as a caret icon](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-backtotopbutton-1.png)
+![Back To Top Button rendered as a caret icon](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-backtotopbutton-1.png)
 
 _Back To Top Button rendered as a caret icon_
 

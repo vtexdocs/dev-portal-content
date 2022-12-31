@@ -14,7 +14,7 @@ updatedAt: "2022-07-13T12:50:36.404Z"
 
 Tawk.to first party integration app. The [solution](https://www.tawk.to/) allows you to monitor and chat with the visitors on your website, mobile app or from a free customizable page.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tawk-to-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-tawk-to-0.png)
 
 ## Configuration
 

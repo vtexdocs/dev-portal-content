@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.097Z"
 
 Your results presentation on the search results page doesn't need to be always the same for your users: thanks to enhancements in the Search Result app, you can provide them a more **customized experience** to navigate between the fetched products.
 
-![multiple-layouts](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts-0.png)
+![multiple-layouts](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts-0.png)
 *Notice that the search results page above works with two different layouts: `grid` and `list`.*
 
 The flexibility to offer multiple layouts, which can help the sales tax rates by enhancing the shopping experience, is at hands! Check out the step-by-step section below.

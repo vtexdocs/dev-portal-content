@@ -14,7 +14,7 @@ updatedAt: "2022-10-04T02:07:18.225Z"
 
 The Curbside Pickup app allows shoppers and store staff to coordinate curbside pickup orders through email notifications.
 
-![curbside](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-curbside-pickup-0.png)
+![curbside](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-curbside-pickup-0.png)
 
 ## Configuration
 
@@ -30,7 +30,7 @@ In your VTEX account's admin, perform the following actions:
 2. Select the **Curbside Pickup** app box.
 3. Enter your [app key and token](https://developers.vtex.com/docs/getting-started-authentication#creating-the-appkey-and-apptoken) in the `App Key` and `App Token` fields.
 
-![curbside-pickup-admin](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-curbside-pickup-1.png)
+![curbside-pickup-admin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-curbside-pickup-1.png)
 
 4. Access **Inventory & shipping** and then **Pickup points**. 
 5. For each of your pickup point store locations, enter the store's email address in the **Address Line 2** field. The Curbside Pickup app will use this email to send the store pickup notifications.

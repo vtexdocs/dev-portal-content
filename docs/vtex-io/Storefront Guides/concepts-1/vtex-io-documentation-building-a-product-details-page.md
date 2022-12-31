@@ -146,7 +146,7 @@ Consider the following example of a Product Details Page built with the `store.p
 
 </details>
 
-![Product Details Page](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-product-details-page-0.png)
+![Product Details Page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-product-details-page-0.png)
 
 From the code sample, notice that the `store.product` child dependencies define five blocks, the first two being `flex-layout.row`.
 
@@ -156,7 +156,7 @@ From the code sample, notice that the `store.product` child dependencies define 
 
 In the first row of the `flex-layout` block, the [`breadcrumb`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-breadcrumb/) block is rendered as in the following:
 
-![First row](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-product-details-page-1.png)
+![First row](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-product-details-page-1.png)
 
 ```json
 "flex-layout.row#product-breadcrumb": {
@@ -235,13 +235,13 @@ To customize the `flex-layout.col#product-image` and `flex-layout.col#right-col`
 
 The left column of the second row contains the [`product-images`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productimages) block since this was the first `flex-layout.col` block to be declared.
 
-![Left column](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-product-details-page-2.png).
+![Left column](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-product-details-page-2.png).
 
 #### Right column
 
 The right column of the second row presents the price, buy button, and other relevant product details. It is, in practice, composed of the following blocks:
 
-![Right column](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-product-details-page-3.png)
+![Right column](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-product-details-page-3.png)
 
 - [`product-name`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productname): displays the product name, along with its SKU name, if desired.
 - [`product-price`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productprice): displays a properly formatted selling price. You can set it to show the list price (if it's different), installments, etc. Check out below an example of a Product Price displaying both the sale and the list price:
@@ -271,6 +271,6 @@ After the `flex-layout` rows, we declared the `shelf.relatedProducts` block in o
 
 When related products are identified, they are presented as in the following:
 
-![Related products](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-product-details-page-4.png)
+![Related products](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-product-details-page-4.png)
 
 The `shelf.relatedProducts` block accepts different recommendation types, such as `similars`, `view`, `buy`, `accessories`, `viewAndBought`, `suggestions`.

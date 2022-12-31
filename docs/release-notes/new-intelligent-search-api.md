@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-intelligent-search-api-0.png)
+![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-intelligent-search-api-0.png)
 
 The [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference/intelligent-search-api-overview) allows you to consult information about the user's search in your store and also the terms used for it. It contains the following endpoints:
 

@@ -6,7 +6,7 @@ hidden: false
 type: "deprecated"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/styles-builder-1-x-technical-support-ends-on-february-02-2022-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/styles-builder-1-x-technical-support-ends-on-february-02-2022-0.png)
 
 We **strongly recommend** that accounts using the deprecated Styles Builder 1. x **migrate to the major 2. x.** before February 02, 2022. After this date, **we will no longer offer support for Styles Builder 1. x.**
 

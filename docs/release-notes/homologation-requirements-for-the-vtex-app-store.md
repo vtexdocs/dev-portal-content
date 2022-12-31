@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/homologation-requirements-for-the-vtex-app-store-0.png)
+![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/homologation-requirements-for-the-vtex-app-store-0.png)
 
 We have added the documentation [Homologation requirements for the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Following the guidelines described on it, you guarantee a baseline standard of quality, viability, and usability for the app available for VTEX stores and succeed in the homologation process.
 

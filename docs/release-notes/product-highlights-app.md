@@ -6,11 +6,11 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-highlights-app-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/product-highlights-app-0.png)
 
 The Product Highlights app is here: it allows you to display highlight badges on products according to the collection or promotion they are linked to.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/product-highlights-app-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/product-highlights-app-1.png)
 
 In the image above, the product has a `Top Seller` highlight.
 

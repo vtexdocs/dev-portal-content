@@ -6,7 +6,7 @@ hidden: true
 type: ""
 ---
 
-![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/gift-card-system-api-was-deprecated-0.png)
+![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/gift-card-system-api-was-deprecated-0.png)
 
 The **Gift Card System API** was used in VTEX to provide a built-in solution for stores who wanted to use gift cards in their business, but there were opportunities to improve the mechanics of how it worked. So our developers created the new  [Gift Card API](https://developers.vtex.com/reference/giftcard-api-overview) as a replacement.
 

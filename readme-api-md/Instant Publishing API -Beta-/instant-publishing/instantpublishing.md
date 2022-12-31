@@ -43,7 +43,7 @@ If published with success, the response will have a status code `200 OK`, with t
 }
 [/block]
 To use the Product Instant Publishing API, you need to install the `vtex.instant-publishing` app to a workspace. After installed, you must have the `Instant Publish` resource on your access profile. Only afterwards all this setup, you can use this API.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/instantpublishing-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/instantpublishing-0.png)
 
 [block:api-header]
 {

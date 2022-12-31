@@ -14,7 +14,7 @@ updatedAt: "2022-02-04T15:02:40.482Z"
 
 The Product Highlights app provides blocks to display highlight badges on products according to the collection or promotion they are linked to.
 
-![Product Highlights Example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-highlights-0.png)
+![Product Highlights Example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-highlights-0.png)
 _In the image above, the product has a `Top Seller` highlight._
 
 ## Configuration

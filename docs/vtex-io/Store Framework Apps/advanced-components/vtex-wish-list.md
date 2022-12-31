@@ -14,15 +14,15 @@ updatedAt: "2022-11-23T14:55:16.485Z"
 
 The Wishlist app, designed for **B2C** stores, adds a heart icon to shelves and product detail pages, so users can add the desired products to a Wishlist.
 
-![wishlist-list](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-wish-list-0.png)<br/>
+![wishlist-list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-0.png)<br/>
 _Example of heart icons on a shelf._
 
-![wish-list-pdp](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-wish-list-1.png)
+![wish-list-pdp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-1.png)
 _Example of a heart icon on a product details page._
 
 In addition to that, a brand new route called `/wishlist` is generated under the My Account menu, creating a page responsible for listing all wishlisted items for your users.
 
-![wishlist-my-account](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-wish-list-2.png)
+![wishlist-my-account](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-2.png)
 _Example of a wishlist page._
 
 ## Configuration

@@ -39,4 +39,4 @@ These props define the image's dimensions and allow product summary images to be
 
 For example, by declaring these props, your store's Shelf will have image consistency across all products being displayed, differently from the Shelf example below:
 
-![beat-practices-images](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-best-practices-for-rendering-images-0.png)
+![beat-practices-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-rendering-images-0.png)

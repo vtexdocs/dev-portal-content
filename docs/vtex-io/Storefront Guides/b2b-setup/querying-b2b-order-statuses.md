@@ -283,10 +283,10 @@ Follow the steps below to install the B2B Orders app.
    - **Token**: authentication token to access the service.
 7. Click on `Save`.
 
-![b2b-orders](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/querying-b2b-order-statuses-0.png)
+![b2b-orders](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/querying-b2b-order-statuses-0.png)
 
 Once your changes are duly saved, a new tab, named **Orders B2B**, will be available in your client's menu on the **[My Account page](https://help.vtex.com/en/tutorial/how-does-my-account-work--2BQ3GiqhqGJTXsWVuio3Xh)**, as shown in the following image:
 
-![client-view](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/querying-b2b-order-statuses-1.png)
+![client-view](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/querying-b2b-order-statuses-1.png)
 
 Read our article [Understanding B2B Orders](https://help.vtex.com/en/tutorial/understanding-b2b-orders--1arpUseqasZZ45Lq7PgevO) for more information on the B2B Orders app.

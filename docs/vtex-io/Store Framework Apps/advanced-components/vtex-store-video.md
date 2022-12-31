@@ -16,7 +16,7 @@ updatedAt: "2021-12-08T18:22:55.061Z"
 
 The Video app allows you to display video assets on your store pages.
 
-![Media Placeholder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-video-0.png)
+![Media Placeholder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-video-0.png)
 
 ## Configuration
 

@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-february-2020-0.png)
+![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-february-2020-0.png)
 
 I don't know if it was the extra day we had due to the leap year or the Carnival rest (or should I say *party*?), but something is certain: our wonderful development team was truly inspired in February!
 

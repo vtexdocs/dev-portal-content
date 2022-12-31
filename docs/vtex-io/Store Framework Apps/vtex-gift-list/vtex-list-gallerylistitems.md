@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.276Z"
 ---
 The `gallery.list-items` block displays the gallery with the products contained in a list.
 
-![GalleryListItems](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-gallerylistitems-0.gif)
+![GalleryListItems](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-list-gallerylistitems-0.gif)
 
 ## Configuration
 

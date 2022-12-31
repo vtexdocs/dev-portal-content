@@ -8,7 +8,7 @@ updatedAt: "2022-07-02T00:50:33.068Z"
 ---
 Product Summary Description is a block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) responsible for rendering the description of the product.
 
-![product-description-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummarydescription-0.png)
+![product-description-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummarydescription-0.png)
 ## Configuration
 
 1. Import the `vtex.product-summary` app to your theme's dependencies in the `manifest.json`:

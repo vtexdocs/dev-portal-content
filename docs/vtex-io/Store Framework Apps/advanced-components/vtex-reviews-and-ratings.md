@@ -8,7 +8,7 @@ updatedAt: "2022-12-05T12:45:09.103Z"
 ---
 Reviews & Ratings is a VTEX IO native solution that allows shoppers to submit reviews and ratings for products, as well as see them while navigating the store..
 
-![reviews-and-ratings-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-0.png)
+![reviews-and-ratings-app](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-reviews-and-ratings-0.png)
 
 ## Configuration
 
@@ -22,15 +22,15 @@ Using your terminal, log in to the desired VTEX account and run the following co
 
 1. In the account's admin dashboard, access `Apps > My Apps` and then click on the box for `Reviews and Ratings`:
 
-![apps-reviews-and-ratings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-1.png)
+![apps-reviews-and-ratings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-reviews-and-ratings-1.png)
 _When using the admin v3_
 
-![apps-reviews-and-ratings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-2.png)
+![apps-reviews-and-ratings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-reviews-and-ratings-2.png)
 _When using the admin v4_
 
 2. Once in the app's settings page, define the following settings according to the desired scenario:
 
-![reviews-settings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-3.jpg)
+![reviews-settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-reviews-and-ratings-3.jpg)
 
 - **Allow Anonymous Reviews** - If unchecked, only logged-in shoppers will be able to review products.
 

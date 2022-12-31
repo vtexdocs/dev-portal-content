@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.224Z"
 ---
 The `sku-selector` block is mainly used in Product Details Pages (PDPs) to display all the SKUs available for a given product.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-skuselector-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-skuselector-0.png)
 
 ## Configuration
 

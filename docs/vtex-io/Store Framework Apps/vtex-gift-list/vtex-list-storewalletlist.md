@@ -8,7 +8,7 @@ updatedAt: "2022-12-01T16:44:24.275Z"
 ---
 The `store-wallet-list` renders the virtual wallet that contains the user's credit and gift card information.
 
-![StoreWalletList](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-list-storewalletlist-0.gif)
+![StoreWalletList](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-list-storewalletlist-0.gif)
 
 ## Configuration
 

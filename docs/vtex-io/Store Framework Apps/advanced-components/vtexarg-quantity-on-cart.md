@@ -14,7 +14,7 @@ updatedAt: "2022-04-25T13:13:25.281Z"
 
 The **Quantity on Cart** app allows you to display a message to your customers informing how many units of a product they have added to the cart. This message can be displayed in a [Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-shelf) or in a product page.
 
-![app-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-quantity-on-cart-0.gif)
+![app-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-quantity-on-cart-0.gif)
 
 > ⚠️
 > 

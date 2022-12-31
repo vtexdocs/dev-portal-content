@@ -12,7 +12,7 @@ updatedAt: "2022-07-02T00:50:32.579Z"
 
 Product Summary is an app responsible for summarizing product information (such as name, price and image) in other store blocks, such as the [Shelf](https://vtex.io/docs/components/all/vtex.shelf/) and the [Minicart](https://vtex.io/docs/components/all/vtex.minicart/).
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-0.png)
 
 ## Configuration
 
@@ -28,8 +28,8 @@ Now, you are able to use all blocks exported by the `product-summary` app. Check
 
 | Block name     | Description | 
 | -------------- | ----------- | 
-| [`list-context.product-list`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummarylist) | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-1.png) Renders the list of products in the Product Summary component. It fetches product data and provides it to the `product-summary.shelf` block. This block, then, provides its child blocks with the product data. | 
-| `product-summary.shelf` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-2.png). 
+| [`list-context.product-list`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummarylist) | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-1.png) Renders the list of products in the Product Summary component. It fetches product data and provides it to the `product-summary.shelf` block. This block, then, provides its child blocks with the product data. | 
+| `product-summary.shelf` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-2.png). 
 | [`product-summary-attachment-list`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryattachmentlist) | Renders a list for the product [attachments](https://help.vtex.com/tutorial/adding-an-attachment--7zHMUpuoQE4cAskqEUWScU). | 
 | [`product-summary-brand`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummarybrand)         | Renders the product brand. | 
 | [`product-summary-buy-button`](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-buy-button) | Renders the Buy Button. This block must be configured only if your store uses the [Minicart v1](https://github.com/vtex-apps/minicart/blob/383d7bbd3295f06d1b5854a0add561a872e1515c/docs/README.md). If your store uses the [Minicart v2](https://developers.vtex.com/vtex-developer-docs/docs/vtex-minicart), please configure the [**Add To Cart Button**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-add-to-cart-button) instead.  | 
@@ -37,7 +37,7 @@ Now, you are able to use all blocks exported by the `product-summary` app. Check
 | [`product-summary-image`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryimage) | Renders the product image. | 
 | [`product-summary-name`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryname) | Renders the product name. | 
 | [`product-summary-sku-name`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryskuname) | Renders the selected sku name. | 
-| `product-summary-price` | ![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red) Renders the product price. This block has been deprecated in favor of the [Product Price](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-3.png) app. Although support for this block is still available, we strongly recommend that you use the Product Price app. | 
+| `product-summary-price` | ![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red) Renders the product price. This block has been deprecated in favor of the [Product Price](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-3.png) app. Although support for this block is still available, we strongly recommend that you use the Product Price app. | 
 | [`product-summary-sku-selector`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryskuselector) | Renders the SKU Selector block. | 
 | [`product-specification-badges`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryspecificationbadges) | Renders badges based on the product specifications. |
 

@@ -6,9 +6,9 @@ hidden: false
 type: "added"
 ---
 
-![Checkout](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/checkout-ui-custom-0.png)
+![Checkout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/checkout-ui-custom-0.png)
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/checkout-ui-custom-1.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/checkout-ui-custom-1.png)
 
 A new app responsible for customizing your store's Checkout UI through the admin's interface is now available for you.
 

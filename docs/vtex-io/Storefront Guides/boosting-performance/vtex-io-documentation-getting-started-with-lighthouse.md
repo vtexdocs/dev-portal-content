@@ -56,7 +56,7 @@ In this sense, page loading can be understood as a progressive journey with four
 
 Considering these four moments during the page load journey, a series of individual metrics were created considering what might be relevant for users in each one of these moments.
 
-![page journey](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-0.png)
+![page journey](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-getting-started-with-lighthouse-0.png)
 
 Before diving deeper into performance metrics, it's important to differentiate *Lab* and *Field* Data, two types of metric data that Lighthouse provides.
 
@@ -141,7 +141,7 @@ Notice that this metric can be affected by:
 
 *Largest Contentful Paint* measures the time it takes to render the largest visible element of the page within the viewport.
 
-![FCP](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-1.png)
+![FCP](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-getting-started-with-lighthouse-1.png)
 
 In practice, a fast LCP time helps reassure the user that the page is useful.
 
@@ -210,7 +210,7 @@ A layout shift occurs when a visible element changes its initial position from o
 
 > ℹ️ Rendering new elements or resizing existing ones will cause layout shift only if it makes another visible component changes its start position.
 
-![CLS](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-2.png)
+![CLS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-getting-started-with-lighthouse-2.png)
 
 The layout shift score is a product of two measures: the [impact](https://web.dev/cls/#impact-fraction) and the [distance fraction](https://web.dev/cls/#distance-fraction). Check in the following how Lighthouse classifies CLS:
 

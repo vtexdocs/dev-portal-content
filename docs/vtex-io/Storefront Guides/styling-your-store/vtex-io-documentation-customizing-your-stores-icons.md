@@ -25,17 +25,17 @@ Although these can satisfy your store’s needs, you may want to override and cu
 
 This is how your `styles/` folder structure should look like after you've accomplished that:
 
-![iconpack-folder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-customizing-your-stores-icons-0.png)
+![iconpack-folder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-customizing-your-stores-icons-0.png)
 
 The `iconpack.svg` file will implement [SVG frament identifiers](https://css-tricks.com/svg-fragment-identifiers-work/), allowing you to simply change the part of the code that declares the icon's `g` tag instead of customize itself.
 
 For instance, let's customize the cart icon (`hpa-cart`) changing only its `g` content:
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-customizing-your-stores-icons-1.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-customizing-your-stores-icons-1.png)
 
 After [linking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) your app, you should see the changes in the browser:
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-customizing-your-stores-icons-2.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-customizing-your-stores-icons-2.png)
 
 Check out each icon's ID by accessing the [Icon Pack list](https://github.com/vtex-apps/store-icons/blob/cbbb1b82bfca247a811d146b1e2cafb642db1928/docs/ICONPACK.md).
 

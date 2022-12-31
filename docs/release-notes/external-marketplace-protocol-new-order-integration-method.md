@@ -7,7 +7,7 @@ hidden: false
 excerpt: "We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. For the new method, we have developed two new endpoints."
 ---
 
-![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-protocol-new-order-integration-method-0.png)
+![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-protocol-new-order-integration-method-0.png)
 
 We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. For the new method, we have developed two new endpoints:
 

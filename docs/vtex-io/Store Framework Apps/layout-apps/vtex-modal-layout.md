@@ -12,7 +12,7 @@ updatedAt: "2022-04-11T08:02:58.274Z"
 
 The Modal Layout app provides blocks that can help you create modals in your store.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-modal-layout-0.png)
 
 ## Configuration
 
@@ -28,8 +28,8 @@ Now, you are able to use all blocks exported by the `modal-layout` app. Check ou
 
 | Block name | Description | 
 | --------  | ------------ | 
-| `modal-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-1.png) Defines how the Modal content will be triggered through its children blocks. | 
-| `modal-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-modal-layout-2.png) Defines how the Modal content will be rendered through its children blocks. You can declare as its children the blocks `modal-header` and `modal-content`, described below, in order to create a modal with header and footer. |
+| `modal-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-modal-layout-1.png) Defines how the Modal content will be triggered through its children blocks. | 
+| `modal-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-modal-layout-2.png) Defines how the Modal content will be rendered through its children blocks. You can declare as its children the blocks `modal-header` and `modal-content`, described below, in order to create a modal with header and footer. |
 | `modal-header` | Renders a close button and the blocks listed as its children, building a modal header. Notice: it does not automatically render a header for your modal. Instead, you should create the modal header as you desire using this block's children list. | 
 | `modal-content`| Defines how the Modal content will be rendered through its children blocks. Preferably, this block should be used along with the `modal-header` in order to create a modal with header and footer. | 
 | `modal-actions` | Logical block only responsible for rendering its child blocks that, in turn, are responsible for rendering call-to-action buttons inside the modal, such as a confirmation button. | 

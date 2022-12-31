@@ -6,7 +6,7 @@ hidden: false
 type: ""
 ---
 
-![App Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-0.png)
+![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-0.png)
 
 Weep no more, team: here we (*finally*) are 🎉
 
@@ -33,13 +33,13 @@ With almost a year gone by, it's time to say goodbye: to better take advantage o
 
 > ℹ️ All existing documentation will be redirected and automatically migrated to the new platform. No existing link will be lost during this process.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-1.png)
 Home to our [API documentation](https://developers.vtex.com/reference) and [guides](https://developers.vtex.com/docs) aimed at developers working with integrations and customization, the [**Developer Portal**](https://developers.vtex.com/) - formerly known as Help Center Developer Docs - offers all the necessary resources for VTEX's most advanced users in a single place.
 
 Such changes to the VTEX IO documentation mean a lot more than just content redistribution, trust me: they will ensure a **better and greater support for VTEX IO users** and their specific objectives on our platform.
 
 As to the future of our beloved Release Notes, don't worry: in addition to the [Developer Newsletter](https://forms.gle/DHo3SS7ZaGCvAMow8) bringing you all the essential updates on platform changes, the Developer Portal also has its own Release Notes section:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-2.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-2.png)
 Nothing but the address will change, I promise! Everything else stays the same, with the same high-quality impactful content, working together as always, but now housed in a place that can fully encourage our potential ✨
 
 ## Features 🚀
@@ -48,7 +48,7 @@ Nothing but the address will change, I promise! Everything else stays the same, 
 
 - **Native integration between the Subscription module and the front-end** - Forget the messy old days when you had to develop a custom app to manage subscriptions on the front-end! The Product Customizer app is now natively compatible with the [Subscription module](https://help.vtex.com/en/tutorial/how-subscription-works--frequentlyAskedQuestions_4453), meaning you are now able to edit the name and the frequency of a product subscription through the store component in the product details page. Access the [Product Customizer app documentation](https://vtex.io/docs/components/all/vtex.product-customizer/) now to get more details of this new feature!
 
-![subscription-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-3.gif)
+![subscription-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-3.gif)
 
 - **The `product-reference` block** - Let's greet the new `product-reference`, exported by the Product List app! The block is responsible for rendering product reference data onto components that leverage from its app, such as the [Minicart](https://vtex.io/docs/components/all/vtex.minicart/). Do we have your attention? Do not forget to cast your eyes on the [documentation](https://vtex.io/docs/components/all/vtex.product-list/) for more details!
 
@@ -56,7 +56,7 @@ Nothing but the address will change, I promise! Everything else stays the same, 
 
 - **Enabling automatic translation in the Messages app** - Safely and quickly enable or disable automatic Messages app translations directly from your VTEX admin account, as highlighted in the screen grab below! But please note: the toggle only defines the configuration for automatic translations, not for manual ones. If you need more info, access the recipe on [Disabling automatic translation](https://vtex.io/docs/recipes/store-management/disabling-automatic-translation/)!
 
-![image (10)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-4.png)
+![image (10)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-4.png)
 
 ## Improvements ➕
 
@@ -68,15 +68,15 @@ Nothing but the address will change, I promise! Everything else stays the same, 
 
 - **Placeholders on the Store Form component** - Thanks to the new `placeholder` prop, added to the `form-input.textarea` block, the [Store Form](https://vtex.io/docs/components/content-blocks/vtex.store-form/) component now accepts placeholders for text inputs, meaning that from now on you can add descriptions as well as other desired instructions to the form's text fields.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-5.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-5.png)
 
 - **Link building in the product brand's name** -  A new prop has arrived for the [`product-brand` block](https://vtex.io/docs/components/all/vtex.store-components/product-brand) from the [Store Components app](https://vtex.io/docs/app/vtex.store-components/): the `withLink`! Replacing the former `logoWithLink` prop, the new one is here to help you create links for the product brand's website based on text strings or image icons.\
-  ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-6.png)
+  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-6.png)
   *take a deep breath, we're half way through already... it's been two whole months! There's a lot where that came from! Check it out:*
 
 - **Multiple gallery layouts** - Having multiple layout configurations for your search results page may sound impossible, but thanks to the Search Result's `gallery-layout-switcher` and `gallery-layout-option` new blocks, it is not! To learn how to customize the page, check out the [Building a search results page with multiple layouts recipe](https://vtex.io/docs/recipes/templates/building-a-search-results-page-with-multiple-layouts/)!
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-7.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-7.png)
 
 - **Multiple seller compatibility** - The [Add To Cart Button](https://vtex.io/docs/components/all/vtex.add-to-cart-button/), [Buy Button](https://vtex.io/docs/components/all/vtex.store-components/buy-button) and [Product Price](https://vtex.io/docs/components/all/vtex.store-components/product-price) now use as their default behavior the first *available* seller's data, meaning they are able to work with multiple seller data. Previously, the components only worked with the first seller's data, regardless of their availability and ignoring the rest of the seller list - tricky, wasn't it? now, this is what our team calls an improvement!
 
@@ -88,7 +88,7 @@ Nothing but the address will change, I promise! Everything else stays the same, 
 
 - **The `promoView` and `promotionClick` events** - New events for the [Google Tag Manager pixel app](https://vtex.io/docs/components/all/vtex.google-tag-manager/). Best of all? They all follow the official google enhanced commerce format! Please welcome the [`promoView`](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-impressions) and the [`promotionClick`](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-clicks) events, responsible for displaying a store's promotion impressions.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-release-notes-novemberdecember-2020-8.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-8.png)
 
 ## Warnings ⚠️
 

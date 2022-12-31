@@ -7,7 +7,7 @@ hidden: false
 excerpt: "To facilitate your onboarding with VTEX, we have created new 'Getting Started' guides for developers. They serve as a map of existing content in our Developer Portal, directing you to the main developer journeys in VTEX's Catalog, Orders, Promotions and Pricing features."
 ---
 
-![Documentation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-developer-quick-start-guides-for-orders-catalog-pricing-and-promotions-0.png)
+![Documentation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-developer-quick-start-guides-for-orders-catalog-pricing-and-promotions-0.png)
 
 To facilitate your onboarding with VTEX, we have created new 'Getting Started' guides for developers. They serve as a map of existing content in our Developer Portal, directing you to the main developer journeys in VTEX's Catalog, Orders, Promotions and Pricing features.
 

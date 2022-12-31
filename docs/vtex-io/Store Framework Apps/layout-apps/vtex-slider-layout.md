@@ -12,7 +12,7 @@ updatedAt: "2022-09-14T12:37:24.494Z"
 
 Slider Layout is a flexible solution for building sliders of blocks within VTEX Store Framework, such as a carousel component. 
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-slider-layout-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-slider-layout-0.png)
 
 >*In order to use the Slider Layout as a substitute to the [Carousel app](https://github.com/vtex-apps/carousel), check out the [Building a Carousel through lists and Slider Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-carousel-using-slider-layout) documentation.*
 
@@ -22,7 +22,7 @@ Slider layout also gives you the possibility to integrate your component with th
 
 To do so, you must go to your store’s Admin, click **Store Setup > CMS > Site Editor** and open the image configurations of the internal promotion you want to track. These configurations are displayed on the right side of the page.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-slider-layout-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-slider-layout-1.png)
 
 > For more information about managing your page content, access [Managing page and template content](https://help.vtex.com/en/tutorial/managing-page-and-template-content--3tMbx6HXy4Fy5r9EhboG37).
 
@@ -42,7 +42,7 @@ Now, you are able to use all blocks exported by the `slider-layout` app. Check o
 
 | Block name     | Description                                     |
 | -------------- | ----------------------------------------------- |
-| `slider-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-slider-layout-2.png) Builds sliders of blocks for your store through its `children` list blocks. |
+| `slider-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-slider-layout-2.png) Builds sliders of blocks for your store through its `children` list blocks. |
 | `slider-layout-group` | Enables you to keep a group of `slider-layout` blocks in sync with each other. For more on this, check out the Advanced configurations section below. |
 
 2. Add the `slider-layout` block to your template. For example:
@@ -138,7 +138,7 @@ The `slider-layout-group`  therefore does not render any specific component on y
 
 Below, you can find a practical example using three `slider-layout` blocks inside of a `slider-layout-group`. Each of those `slider-layout`s received three `rich-text` blocks as `children` to serve as individual slides:
 
-![slider-layout-group demo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-slider-layout-3.gif)
+![slider-layout-group demo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-slider-layout-3.gif)
 
 > ⚠️ ***All `slider-layout` blocks declared in the `slider-layout-group` must receive the same configuration, meaning the same props and values**. Due to implementation rules, they are only allowed to differ in their `children` block list. Notice the following: declaring `slider-layout` blocks with different configuration will result in unexpected behavior, leading to errors whose support is **not** granted by the VTEX Store Framework team.*
 

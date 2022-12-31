@@ -8,7 +8,7 @@ updatedAt: "2022-09-14T13:27:01.333Z"
 ---
 The VTEX BreadCrumb is a navigation scheme that shows a user's browsing history up to their current location in your store.
 
-![img2-breadcrumb](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-breadcrumb-0.png)
+![img2-breadcrumb](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-breadcrumb-0.png)
 
 ## Configuration
 

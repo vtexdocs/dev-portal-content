@@ -6,7 +6,7 @@ hidden: true
 type: "improved"
 ---
 
-![Payments](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/full-experience-in-vtex-payment-app-0.png)
+![Payments](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/full-experience-in-vtex-payment-app-0.png)
 
 The VTEX Payment for physical solutions integrates the VTEX Payment app to point of sales' payment devices. Frequently, our clients use inStore - VTEX Omnichannel solution - to operates this dynamic.
 
@@ -23,4 +23,4 @@ These are:
 - Cancel Operation
 
 All these commands communicate with the inStore solution and instruct the user which action has to be done to solve each issue.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/full-experience-in-vtex-payment-app-1.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/full-experience-in-vtex-payment-app-1.PNG)

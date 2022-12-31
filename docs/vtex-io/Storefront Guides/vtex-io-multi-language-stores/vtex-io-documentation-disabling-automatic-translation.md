@@ -28,7 +28,7 @@ To disable the Messages' automatic translation service, check the following sect
 3. Search for the VTEX Messages app.
 4. Uncheck the following checkbox: **Enable Automatic Translations**.
 
-![Messages Interface](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-disabling-automatic-translation-0.png)
+![Messages Interface](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-disabling-automatic-translation-0.png)
 
 5. Save your changes.
 

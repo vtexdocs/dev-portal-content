@@ -6,7 +6,7 @@ hidden: false
 type: "fixed"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/title-attribute-in-image-components-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/title-attribute-in-image-components-0.png)
 
 The title attribute was missing in store images due to the fact it was linked to the incorrect HTML element when the components were rendered - `a` instead of `img`.
 

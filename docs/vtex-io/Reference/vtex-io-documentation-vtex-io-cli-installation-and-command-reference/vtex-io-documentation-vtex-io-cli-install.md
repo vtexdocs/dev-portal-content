@@ -22,7 +22,7 @@ According to your operating system, take the respective steps to install VTEX IO
 
   1. Install **Homebrew** by following the instructions on [**Homebrew website**](https://brew.sh/index).
 
-  ![brew](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
+  ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
 
   2. Then, install **VTEX IO'S CLI** by running the following command.
 
@@ -68,7 +68,7 @@ According to your operating system, take the respective steps to install VTEX IO
 
   To which will appear the following message.
 
-  ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-install-1.png)
+  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-1.png)
 
   For the next step, you won't need to be in your admin role.
 
@@ -87,7 +87,7 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
 
   1. Install **Homebrew** by following the instructions on [**Homebrew website**](https://brew.sh/index).
 
-  ![brew](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-install-2.png)
+  ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-2.png)
 
   2. Install **Node.js** via Homebrew by running the following command.
 
@@ -151,7 +151,7 @@ Since VTEX IO's CLI is built with [Node.js](https://nodejs.org/en/), you can man
 
   To which will appear the following message.
 
-  ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-install-3.png)
+  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-3.png)
 
   For the next step, you won't need to be in your admin role.
 
@@ -166,7 +166,7 @@ To confirm that the installation occurred as expected, run the following command
 vtex
 ```
 
-![vtex](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-install-4.png)
+![vtex](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-4.png)
 
 ### Troubleshooting
 

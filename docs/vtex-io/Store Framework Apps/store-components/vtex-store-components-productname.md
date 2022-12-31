@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.151Z"
 ---
 The `product-name` block is responsible for displaying a product name along with other information about the product, such as the **SKU** or **brand**.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-productname-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-productname-0.png)
 
 ## Configuration
 

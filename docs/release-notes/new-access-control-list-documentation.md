@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Documentation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-access-control-list-documentation-0.png)
+![Documentation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-access-control-list-documentation-0.png)
 
 We created new documentation about **Access Control List**, a feature that allows you to create a list of users that can access specific products on the store. This feature can be integrated into the B2B ecommerce model.
 

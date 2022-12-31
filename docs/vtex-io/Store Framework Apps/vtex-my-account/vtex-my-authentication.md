@@ -16,7 +16,7 @@ updatedAt: "2022-08-30T13:04:37.639Z"
 
 This VTEX IO app extends the [MyAccount](https://github.com/vtex-apps/my-account) app to add authentication-related menu options (`Authentication` tab). It is installed by default in every VTEX account. Just like `MyAccount`, this can be used in either `IO` or `Portal` stores.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-my-authentication-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-my-authentication-0.png)
 
 ## Table of Contents
 
@@ -40,11 +40,11 @@ https://`{{accountName}}`.myvtex.com/admin/apps/
 
 and search for `My Account` among the `installed` apps. Then click `Settings`.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-my-authentication-1.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-my-authentication-1.png)
 
 Set `Authentication` option to :white_check_mark: `Visible`, then click `Save`.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-my-authentication-2.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-my-authentication-2.png)
 
 📢 **Disclaimer:** in a close future, the `Authentication` tab visibility will become always true.
 

@@ -33,7 +33,7 @@ This will open a browser window asking for your credentials.
 
 Once you are logged in, run the `vtex whoami` command to show which **VTEX account** and **workspace** are being used by the VTEX IO CLI.
 
-![VTEX IO CLI - whoami](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-2-basic-development-setup-in-vtex-io-0.png)
+![VTEX IO CLI - whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-2-basic-development-setup-in-vtex-io-0.png)
 
 ## Creating your own workspace
 
@@ -51,6 +51,6 @@ vtex use {exampleName}
 
 This changes your VTEX account to a Development workspace called `exampleName`, creating it from scratch if it does not already exist.
 
-![workspace-examplename EN](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-2-basic-development-setup-in-vtex-io-1.png)
+![workspace-examplename EN](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-2-basic-development-setup-in-vtex-io-1.png)
 
 Having logged in to your account and created your own Development workspace, you are ready to begin developing your React app and building your storefront using VTEX IO.

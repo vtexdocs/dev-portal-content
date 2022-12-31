@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:23.145Z"
 ---
 The `availability-subscriber` component shows the availability subscriber form displayed when a product isn't available. This component can be imported and used by any VTEX App.
 
-![availability-component](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-availabilitysubscriber-0.png)
+![availability-component](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-availabilitysubscriber-0.png)
 
 This component only collects the emails of the customers that subscribed to receive updates about a specific out-of-stock product. It does not email shoppers automatically when the product gets back in stock. 
 

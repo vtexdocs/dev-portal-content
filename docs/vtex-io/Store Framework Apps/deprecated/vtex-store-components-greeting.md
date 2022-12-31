@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2020-06-03T16:04:30.408Z"
 updatedAt: "2021-10-25T15:16:30.248Z"
 ---
-![deprecated](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-greeting-0.png)
+![deprecated](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-greeting-0.png)
 
 >️⚠️ **Warning**
 >

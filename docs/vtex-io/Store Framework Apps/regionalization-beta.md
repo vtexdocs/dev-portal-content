@@ -24,7 +24,7 @@ Regionalization is a feature of [VTEX Intelligent Search](https://help.vtex.com/
 
 For the Regionalization to work, it uses a native behavior from the VTEX Intelligent Search called [Availability](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/7LMQbWK5nElIkXo0NK8Kux). The platform searches for available products according to the stock in a given region. In a Availability paradigm, the platform also checks the sellers registered in the store for their stocks.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/regionalization-beta-0.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/regionalization-beta-0.gif)
 
 ## Configuration
 

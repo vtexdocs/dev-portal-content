@@ -16,7 +16,7 @@ updatedAt: "2022-07-28T16:16:38.228Z"
 
 The VTEX Minicart is a block that displays a summary list of all items added by customers in their shopping cart. Its data is fetched from the Checkout OrderForm API.
 
-![minicart-v2-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-minicart-0.gif)
+![minicart-v2-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-minicart-0.gif)
 
 ## Configuration
 

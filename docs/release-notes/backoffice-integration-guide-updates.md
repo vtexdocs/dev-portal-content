@@ -7,7 +7,7 @@ hidden: false
 excerpt: "During the past few months, we have improved our [Back office integration content](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-guide) with new guides and relevant updates."
 ---
 
-![Integration](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/backoffice-integration-guide-updates-0.png)
+![Integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/backoffice-integration-guide-updates-0.png)
 
 During the past few months, we have improved our [Back office integration content](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-guide) with new guides and relevant updates. If you need to integrate VTEX to back office systems such as ERPs, WMSs, PIMs and CRMs, take a look at the new [Backoffice integration overview](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-guide) and these other recent improvements:
 

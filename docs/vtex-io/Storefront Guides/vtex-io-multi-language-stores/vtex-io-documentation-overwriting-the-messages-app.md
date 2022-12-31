@@ -25,7 +25,7 @@ vtex install vtex.admin-graphql-ide@3.x
 
 2. Access the **GraphQL admin IDE** section of the desired account. You may find it in the admin's side-bar menu:
 
-![overwriting-messages-adminsidebarmenu](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-overwriting-the-messages-app-0.png)
+![overwriting-messages-adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-overwriting-the-messages-app-0.png)
 
 3. From the dropdown list, choose the `vtex.messages` app.
 4. Write the following mutation command in the text box that is displayed:
@@ -38,7 +38,7 @@ mutation Save($saveArgs: SaveArgsV2!) {
 
 5. Then, click on  **Query Variables** at the bottom of the page. Now, your screen may look like the following:
 
-![queryvariables](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-overwriting-the-messages-app-1.png)
+![queryvariables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-overwriting-the-messages-app-1.png)
 
 6. To fill in the `Query Variables` box, check the next sections **according to your store's desired scenario** (*catalog* or *app* messages translations).
 7. After adjusting your query, click on the play button to run the declared mutation. For both scenarios, the expected response is as follows:
@@ -86,7 +86,7 @@ Use the following example as a guide if you aim to translate text messages from 
 
 To better understand the full process of overwriting a product message translation, check the following gif:
 
-![ProductTranslation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-overwriting-the-messages-app-2.gif)
+![ProductTranslation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-overwriting-the-messages-app-2.gif)
 
 ### App messages translations
 
@@ -119,7 +119,7 @@ Use the following example as a guide if you aim to translate text messages expor
 
 To better understand the full process of overwriting an app message translation, check the following gif:
 
-![AppMessageTranslation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-overwriting-the-messages-app-3.gif)
+![AppMessageTranslation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-overwriting-the-messages-app-3.gif)
 
 ### VTEX Intelligent Search context
 

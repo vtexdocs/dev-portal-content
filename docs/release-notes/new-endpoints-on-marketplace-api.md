@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-endpoints-on-marketplace-api-0.png)
+![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-endpoints-on-marketplace-api-0.png)
 
 We added two new endpoints to the Marketplace APIs:
 

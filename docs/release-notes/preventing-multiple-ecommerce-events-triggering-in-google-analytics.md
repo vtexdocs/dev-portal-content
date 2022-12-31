@@ -7,7 +7,7 @@ type: "fixed"
 excerpt: "The `ecommerce` variable was fixed to prevent the same ecommerce event from being triggered to Google Analytics (GA) multiple times and resulting in a financial cost."
 ---
 
-![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/preventing-multiple-ecommerce-events-triggering-in-google-analytics-0.png)
+![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/preventing-multiple-ecommerce-events-triggering-in-google-analytics-0.png)
 
 The `ecommerce` variable was fixed to prevent the same ecommerce event from being triggered to Google Analytics (GA) multiple times and resulting in a financial cost.
 

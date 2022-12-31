@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/auto-complete-on-product-context-properties-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/auto-complete-on-product-context-properties-0.png)
 
 It ain't Christmas yet, but this one surely will make you feel gifted: a new improvement in the [`product-context`](https://github.com/vtex-apps/product-context)' types has enabled the auto-complete feature when declaring the desired app's properties.
 

@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-font-facescss-file-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-font-facescss-file-0.png)
 
 Create a CSS global file specifically for your store's fonts and change your store's typography according to your business needs using your store theme code.
 

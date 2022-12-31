@@ -11,11 +11,11 @@ Due to some changes on Google Chrome, the `Show more` button from the Search Res
 Even though new products were duly rendered, the interface followed the button, automatically leading users to the last visible product on the page.
 
 This behavior was harming user experience on the Search Results page since users were not able to focus on the new products being displayed but on the button itself.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/show-more-button-on-search-results-page-0.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/show-more-button-on-search-results-page-0.gif)
 
 Notice how the interface follows the button once it is clicked on, leading users to the last visible product on the page.
 This behavior is now [fixed](https://github.com/vtex-apps/search-result/pull/402) and the `Show more` button works as expected.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/show-more-button-on-search-results-page-1.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/show-more-button-on-search-results-page-1.gif)
 
 Notice how the interface does not follow the `Show more` button when it is clicked on. Instead, it shows the new  loaded products.

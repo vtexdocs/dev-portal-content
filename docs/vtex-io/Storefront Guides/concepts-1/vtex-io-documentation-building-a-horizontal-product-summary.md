@@ -9,11 +9,11 @@ updatedAt: "2022-12-13T20:17:44.651Z"
 
 The [Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) is a VTEX native app responsible for displaying important product data in your store's components, such as the Shelf and the Minicart.
 
-![product-summary-vertical](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-horizontal-product-summary-0.png)
+![product-summary-vertical](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-horizontal-product-summary-0.png)
 
 Thanks to the [Flex Layout app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout), it is possible to customize the default presentation showed above and thereby display the Product Summary blocks in a **horizontal alignment** to your users:
 
-![horizontal-product-summary](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-building-a-horizontal-product-summary-1.png)
+![horizontal-product-summary](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-horizontal-product-summary-1.png)
 
 Learn in the instructions below how to use the powerful combination between the Flex Layout and the Product Summary apps in order to display your product data horizontally.
 

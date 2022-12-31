@@ -20,14 +20,14 @@ The image below is an example of an affiliate’s page to be shared with shopper
 
 <br>
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-0.png)
 <br>
 
 The app also creates a profile page for the affiliate to keep track of orders and commissions, as you will see in the next section. Affiliates do not need access to your VTEX store Admin in order to access their profile page, which looks like the following image:
 
 <br>
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-1.png)
 <br>
 
 The **Affiliates Program app’s** main characteristics and behavior are the following:
@@ -47,16 +47,16 @@ After installing and configuring the app, you will find three pages in your VTEX
 
 <br>
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-2.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-2.png)
 
 <br>
 
 - [Orders Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#order-management): provides information about affiliates’ orders. The page enables you to filter data in multiple ways and export it via email.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-3.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-3.png)
 <br>
 
 - [Commissions Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#commission-management): allows you to manage affiliates’ commissions and import information using files with .CSV or .XLSX extension.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-4.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-4.png)
 <br>
 
 ## Compatibility
@@ -82,7 +82,7 @@ The app settings will appear in your VTEX Admin under _Other > Affiliates_, and 
 
 <br>
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-5.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-5.png)
 
 <br>
 
@@ -186,7 +186,7 @@ It is possible to change the parameter property used for the affiliate to share 
 
 <br>
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-6.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-6.png)
 
 <br>
 
@@ -374,7 +374,7 @@ To create a new custom email template, follow the steps below:
 4. Fill in the fields that appear.
 
     > You can use the image below as a reference, but use your information.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-7.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-7.jpg)
 5. Copy the **Affiliate Orders Export Template** code - you will find it below.
 6. Paste it in the `Html` section.
 7. Change it as you wish. 
@@ -389,7 +389,7 @@ After creating the _Affiliate Orders Export Template_, repeat the process to cre
 
 <br>
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/affiliates-program-app-8.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-8.jpg)
 
 <br>
 

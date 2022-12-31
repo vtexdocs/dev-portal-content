@@ -14,7 +14,7 @@ updatedAt: "2022-03-15T18:24:10.878Z"
 
 The **Product Highlight by VTEX Segment** app allows shoppers to select a Whitelabel Seller available in their region, and it filters the product listing results accordingly. The app also uses a badge to highlight products of Whitelabel Sellers that are available in the shopper's region.
 
-![Media Placeholder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-0.gif)
+![Media Placeholder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-0.gif)
 
 ---
 
@@ -22,7 +22,7 @@ The **Product Highlight by VTEX Segment** app allows shoppers to select a Whitel
 
 Before configuring the **Product Highlight by VTEX Segment** app, make sure to create a collection for each Whitelabel Seller of your store (*See [Creating Collections Beta](https://help.vtex.com/en/tutorial/creating-collections-beta) for more information).* When naming your collection, make sure to use the following naming structure: `{sellerId}-{defaultCollectionName}`, where the `{sellerId}` is the `sellerId` of the Whitelabel Seller and `{defaultCollectionName}` is the name of the Collection.
 
-![Colection Name](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-1.png)
+![Colection Name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-1.png)
 
 ---
 
@@ -45,12 +45,12 @@ By the end of these steps, you'll have your store products highlighted according
 4. Go to **Account Settings > Apps > My apps**.
 5. Look for the **Product Highlight by VTEX Segment** app and click on **Settings**.
 
-   ![Product Highlight by VTEX Segment](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-2.png)
+   ![Product Highlight by VTEX Segment](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-2.png)
 
 6. Fill in the presented fields as in the following:
    - **Default Seller Id** - Enter the default seller ID to use in cases the shopper's region is not detected (e.g., `jumboargentinav692lanus692`).
    - **Default Collection Name** - Enter the name of the collection corresponding to the default seller ID (e.g., `leyDeGondolas`). This is the `{defaultCollectionName}` part of the **Collection Name** (*See [Before you start](#before-you-start) for more information*).
-   - **Image Url of Highlight** - Enter the URL of the ximage badge that will highlight the products. For example: ![Image Url of Highlight](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-3.png)
+   - **Image Url of Highlight** - Enter the URL of the ximage badge that will highlight the products. For example: ![Image Url of Highlight](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-3.png)
 7. Click on **Save**.
 
 ### Adding the Product Highlights component to your store theme
@@ -88,11 +88,11 @@ Now, see the [Customization](#customization) section to add custom styles to you
 
 After [linking your store theme app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) in a development workspace, you'll be able to select a Whitelabel Seller available in your region from a dropdown menu list. 
 
-![Select Whitelabel Seller](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-4.png)
+![Select Whitelabel Seller](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-4.png)
 
 You'll then be able to see the chosen badge in the product cards of the selected Whitelabel Seller's collection.
 
-![Image Url of Highlight](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-5.png)
+![Image Url of Highlight](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-5.png)
 
 ## Customization
 

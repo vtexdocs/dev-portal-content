@@ -32,7 +32,7 @@ This will show the session available for your navigation.
 
 1. Open your terminal after installing our CLI, navigate to your preferred folder, and type `vtex init.`
    You will see the following options:
-   ![Screenshot with init options](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-collecting-user-session-data-0.png)
+   ![Screenshot with init options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-collecting-user-session-data-0.png)
 
 2. Using your keyboard arrow, select `service-example` , press `enter`/`return`, and confirm the folder name your project will be initiated and confirm your selection.
 
@@ -132,7 +132,7 @@ This handler will receive a Context that gives you access to the request body. A
 
 It should look like the example below.
 
-![Example resulting code](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-collecting-user-session-data-1.png)
+![Example resulting code](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-collecting-user-session-data-1.png)
 
 4. Now that you have your handler, import it to the `./node/index.ts` file and load it to the Service.
 
@@ -150,7 +150,7 @@ Export default new Service{{
 
 Now that everything is set, link your app to a workspace and keep an eye on the terminal. Once you authenticate or log out, you should be able to see `clearCart =>` in the terminal containing the body request.
 
-![Terminal screenshot](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-collecting-user-session-data-2.png)
+![Terminal screenshot](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-collecting-user-session-data-2.png)
 
 You can also access this path to check the public namespace being changed:
 

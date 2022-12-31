@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/store-video-app-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/store-video-app-0.png)
 
 The Store Video app has arrived, allowing you to display video assets on your store pages with divine features such as autoplay, loop, and mute.
 
@@ -14,4 +14,4 @@ And It gets better: the app also supports Youtube, Vimeo, and other third-party 
 
 What are you waiting for? Check out now the [documentation](https://vtex.io/docs/components/content-blocks/vtex.store-video/)!
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/store-video-app-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/store-video-app-1.png)

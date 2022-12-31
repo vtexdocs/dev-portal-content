@@ -17,4 +17,4 @@ updatedAt: "2021-03-25T14:45:50.605Z"
 
 *Example running on account cliqueretire and workspace lucis:*
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-receive-order-notifications-on-vtex-io-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-receive-order-notifications-on-vtex-io-0.png)

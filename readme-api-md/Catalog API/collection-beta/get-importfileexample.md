@@ -8,4 +8,4 @@ updatedAt: "2022-05-20T22:23:44.301Z"
 ---
 ## Response file example
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/get-importfileexample-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/get-importfileexample-0.png)

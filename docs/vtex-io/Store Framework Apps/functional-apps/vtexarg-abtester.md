@@ -14,7 +14,7 @@ updatedAt: "2022-07-21T17:37:37.156Z"
 
 The A/B Tester app allows you to list, start and finish A/B tests via the VTEX Admin.
 
-![A/B Tester Settings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-abtester-0.png)
+![A/B Tester Settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-abtester-0.png)
 
 In the following, you'll learn how to install and use the A/B Tester app.
 

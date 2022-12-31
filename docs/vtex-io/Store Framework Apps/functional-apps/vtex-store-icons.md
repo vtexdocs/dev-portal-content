@@ -16,7 +16,7 @@ updatedAt: "2020-10-05T18:52:00.018Z"
 
 # Store Icons
 
-[![Build Status](https://travis-ci.org/vtex-apps/store-icons.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-icons-0.png)
+[![Build Status](https://travis-ci.org/vtex-apps/store-icons.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-icons-0.png)
 
 All Store icons components.
 

@@ -7,7 +7,7 @@ hidden: false
 excerpt: "The callback URL now has an additional `X-VTEX-signature` parameter. This parameter contains a signature token to identify that the request has been generated from VTEX as a security measure."
 ---
 
-![Payments](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/addition-of-signature-parameter-on-callback-url-for-payment-integrations-0.png)
+![Payments](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/addition-of-signature-parameter-on-callback-url-for-payment-integrations-0.png)
 
 For some payment methods, the result of the payment cannot be obtained immediately after the request, returning an `undefined` status. These methods are classified as asynchronous payments. To deal with these methods at VTEX we use [callbacks](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization), so the provider can tell our gateway later if the payment is approved or denied.
 

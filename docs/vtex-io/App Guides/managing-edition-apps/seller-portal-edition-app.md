@@ -62,7 +62,7 @@ Once VTEX’s edition is declared as a dependency, you can add your own desired 
 
 Every **Edition App** has a **dependency** declared, which imports pages from another edition app.
 
-![Composable Seller Portal - How does Edition work](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/seller-portal-edition-app-0.jpg)
+![Composable Seller Portal - How does Edition work](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/seller-portal-edition-app-0.jpg)
 
 ## Configuring your Edition App
 

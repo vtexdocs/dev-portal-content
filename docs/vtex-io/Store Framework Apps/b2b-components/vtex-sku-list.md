@@ -14,7 +14,7 @@ updatedAt: "2022-06-09T16:53:53.438Z"
 
 The SKU List app is an essential B2B feature responsible for rendering a SKU list in the product details page.
 
-![sku-list](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-sku-list-0.png)
+![sku-list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-sku-list-0.png)
 
 ## Configuration
 

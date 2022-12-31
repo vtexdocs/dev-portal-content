@@ -20,6 +20,6 @@ vtex list
 
 VTEX IO CLI will then display a table containing the account’s installed and linked apps, in addition to their respective version, as shown in the example below:
 
-![listing-apps](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-listing-an-accounts-apps-0.png)
+![listing-apps](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-listing-an-accounts-apps-0.png)
 
 > ⚠️ Note that the table is divided into apps related to an **Edition**, apps independently **installed** and **linked** apps.

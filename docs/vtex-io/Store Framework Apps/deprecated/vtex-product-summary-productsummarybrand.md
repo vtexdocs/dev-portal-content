@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2020-06-09T14:48:53.038Z"
 updatedAt: "2022-07-02T00:50:32.906Z"
 ---
-![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummarybrand-0.png)
+![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummarybrand-0.png)
 
 > ⚠️ 
 > 
@@ -14,7 +14,7 @@ updatedAt: "2022-07-02T00:50:32.906Z"
 
 Product Summary Brand is a block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) responsible for rendering the brand of the product.
 
-![product-brand](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummarybrand-1.png)
+![product-brand](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummarybrand-1.png)
 
 ## Before you start
 

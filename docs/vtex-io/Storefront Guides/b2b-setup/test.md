@@ -64,7 +64,7 @@ Once you are logged in, follow these steps:
 4. Then, find the **Reviews and Ratings** app card and click on `Settings`.
 5. It is recommended that you check the **Display stars in product-rating-summary if there are no reviews** option and uncheck the **Display total reviews number on product-rating-summary block** option, as illustrated below.
 6. Click on the `Save` button.
-   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-0.png)
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-0.png)
 
 #### Quick Order
 
@@ -162,7 +162,7 @@ When creating the `organizationId` field, you should check the following checkbo
 }
 [/block]
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-1.png)
 
 ### Install B2B Easy Setup (optional)
 
@@ -302,7 +302,7 @@ After following the steps above, you are ready to install the B2B Store Theme. Y
 2. Run the `vtex browse` command to see the B2B Store Theme on your browser.
 
 Finally, your storefront should look like this:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-2.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-2.png)
 
 ## Customization
 

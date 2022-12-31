@@ -8,7 +8,7 @@ updatedAt: "2022-10-18T20:59:10.400Z"
 ---
 The Availability Notify component is responsible for showing a subscription form when a product SKU is not available. The form lets customers subscribe to get notified when that item gets restocked.
 
-![store-notifier](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-availability-notify-0.png)
+![store-notifier](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-availability-notify-0.png)
 
 The app records the notification request and monitors inventory updates. This way, once the requested SKU gets back in stock, the app will email the shoppers who asked to be notified.
 
@@ -46,7 +46,7 @@ The app records the notification request and monitors inventory updates. This wa
 6. Go to **Orders** > **Inventory & Shipping** > **Availability Notifier**.
 7. Then, you will see the app's settings:
 
-![app-settings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-availability-notify-1.png)
+![app-settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-availability-notify-1.png)
 
 | Setting field           | Description                                                                                                            |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -73,7 +73,7 @@ Once you have installed the app, you can customize the email template to send to
 2. Search for the `availability-notify` component template, named **BACK IN STOCK** and click on it.
 3. After, you will see the email template and its configuration. For example:
 
-![template-back-in-stock](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-availability-notify-2.gif)
+![template-back-in-stock](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-availability-notify-2.gif)
 
 To edit the email template's field, check the documentation on [How to create and edit transactional email templates](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/335JZKUYgvYlGOJgvJYxRO), and you will notice the **JSON Data** field, which is responsible for adding variables that allow you to dynamically add data to the email. These variables are JSON properties, and you can see more details about them in [Get SKU and context](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-sku#catalog-api-get-sku-context) and in [Including order variables in email template](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/fLMUCPArCYB9vcTZEZ6bi).
 

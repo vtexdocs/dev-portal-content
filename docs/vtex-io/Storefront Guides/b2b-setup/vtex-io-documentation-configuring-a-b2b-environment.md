@@ -35,7 +35,7 @@ Make sure you fully understand what the [Trade Policies](https://help.vtex.com/t
 2. Choose the desired Trade Policy. You can edit an existing one, by clicking on **Edit**, or [create one from scratch](https://help.vtex.com/faq/how-to-configure-a-new-trade-policy--frequentlyAskedQuestions_700), by clicking on **New Trade Policy**.
 3. In the **Condition Rule** field, define an access criterion of your choosing for the users who will access the trade policy in question. For example: if only logged in users can access store content, your **Condition Rule** could be something like `approved=true`.
 
-![condition-rule](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-configuring-a-b2b-environment-0.png)
+![condition-rule](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-a-b2b-environment-0.png)
 
 > ℹ️ The value entered in the Condition Rule field can be any one of your choosing. Remember to choose an intuitive condition and a clear rule, since both will be added to Master Data later for the user's verification to be successful.
 

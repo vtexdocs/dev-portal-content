@@ -8,7 +8,7 @@ updatedAt: "2021-03-10T19:35:11.404Z"
 ---
 # VTEX Product Kit 
 
-![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-kit-0.png)
+![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-kit-0.png)
 
 > ⚠️ ***The Product Kit app has been deprecated.** Although support for this app is still granted by VTEX, we strongly recommend you to update your store theme in order to keep up with the framework's evolution!*
 
@@ -168,8 +168,8 @@ To execute our tests go to `react/` folder and run `yarn test`
 
 ### Travis CI
 
-[![Build Status](https://travis-ci.org/vtex-apps/product-kit.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-kit-1.png)
-[![Coverage Status](https://coveralls.io/repos/github/vtex-apps/product-kit/badge.svg?branch=master)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-kit-2.png)
+[![Build Status](https://travis-ci.org/vtex-apps/product-kit.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-kit-1.png)
+[![Coverage Status](https://coveralls.io/repos/github/vtex-apps/product-kit/badge.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-kit-2.png)
 
 ## Contributors ✨
 

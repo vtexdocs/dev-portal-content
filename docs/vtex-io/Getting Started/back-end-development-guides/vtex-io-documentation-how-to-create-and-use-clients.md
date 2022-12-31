@@ -44,7 +44,7 @@ export const authorize = async (ctx: Context) {
 Let's take a look on the anatomy of an *ExternalClient* to the *Github API*:
 
 `node/clients/github.ts`
-![Github API Client example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-how-to-create-and-use-clients-0.png)
+![Github API Client example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-how-to-create-and-use-clients-0.png)
 
 **Reference**
 1 - Look, it's one of the types from the **table above**.

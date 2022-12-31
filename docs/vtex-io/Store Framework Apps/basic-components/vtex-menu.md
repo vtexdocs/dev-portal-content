@@ -14,7 +14,7 @@ updatedAt: "2022-12-06T17:06:12.798Z"
 
 VTEX Menu is a store component responsible for displaying a bar containing links and drop-down sub-menus.
 
-![menu-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-menu-0.png)
+![menu-app](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-menu-0.png)
 
 ## Configuration
 

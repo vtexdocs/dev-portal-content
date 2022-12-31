@@ -10,7 +10,7 @@ Promoting a production workspace to Master marks the final step to [making an ap
 
 Notice that, once promoted to Master, it's not possible to perform new code changes in your app version. Alternatively, you would need to develop your code in a [development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace/) and reproduce it in a new production workspace, so you could test your changes with user traffic before making your new changes publicly available.
 
-![Promoting a Production workspace to Master](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-promoting-a-workspace-to-master-0.gif)
+![Promoting a Production workspace to Master](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-promoting-a-workspace-to-master-0.gif)
 
 ## Before you start
 

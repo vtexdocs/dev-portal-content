@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/search-results-filters-title-html-tag-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-results-filters-title-html-tag-0.png)
 
 It is now possible to define how your Serch Result's filter title will be rendered and analyzed by search mechanisms thanks to the new `filtersTitleHtmlTag`  prop added to the `filter-navigator.v3`  block (from the [Search Result app](https://vtex.io/docs/components/all/vtex.search-result/)).
 

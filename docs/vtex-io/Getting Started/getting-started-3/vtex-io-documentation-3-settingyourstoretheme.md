@@ -40,7 +40,7 @@ vtex init
 
 3. Select the `store` option and confirm that you want to download the theme folder to the destination you just chose:
 
-![VTEX IO CLI-store-theme-selection](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-3-settingyourstoretheme-0.png)
+![VTEX IO CLI-store-theme-selection](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-3-settingyourstoretheme-0.png)
 
 > ℹ️ Once you select the `store` option, VTEX IO CLI will ask you if you want to continue to create the new folder, by typing `y` it will clone a `minimum-boilerplate-theme` to your folder.
 
@@ -58,7 +58,7 @@ cd store
 
 To better understand the app's structure, let's have a closer look at its files and folders:
 
-![Repository tree](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-3-settingyourstoretheme-1.png)
+![Repository tree](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-3-settingyourstoretheme-1.png)
 
 - **`manifest.json`** - App's main file. It stores important metadata, such as the app's *vendor*, name, version, [dependencies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-dependencies/) and [builders](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders/).
 - **`store`** - Folder responsible for defining the store's templates. It's where you configure each page's components and properties.
@@ -78,7 +78,7 @@ You'll need to sync your local files, where your Store Theme app code was copied
 
 > ⚠️ You can run `vtex whoami` in your terminal to make sure that you're logged into the right VTEX account and using the Development workspace you've just created. Otherwise, the link won't work.
 
-![VTEX link example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-3-settingyourstoretheme-2.png)
+![VTEX link example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-3-settingyourstoretheme-2.png)
 
 By successfully running this command in your terminal, your local code is sent to the VTEX IO cloud-native infrastructure and it is reflected in the development workspace you are currently working in.
 
@@ -88,6 +88,6 @@ Navigate to your store's website by accessing `https://{workspaceName}--{account
 
 After logging in, you should already see the new store theme rendered in your store:
 
-![Store Theme](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-3-settingyourstoretheme-3.png)
+![Store Theme](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-3-settingyourstoretheme-3.png)
 
 Now that your store is online and using a default theme code, we can build its identity by configuring the Store Theme app according to your store's needs: it's time to change templates and customize styles!

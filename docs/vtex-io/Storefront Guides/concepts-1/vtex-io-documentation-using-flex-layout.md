@@ -11,11 +11,11 @@ Since [**Flex Layout**](https://developers.vtex.com/vtex-developer-docs/docs/vte
 
 In this recipe, we will learn how to use it in a practical case, building an **About Us** page from scratch just as the one below:
 
-![Screen Shot 2019-08-21 at 5 47 45 PM](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-flex-layout-0.png)
+![Screen Shot 2019-08-21 at 5 47 45 PM](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-flex-layout-0.png)
 
 If we think on how we could divide this page layout, we realize that it could be easily thought of as a "one row with two columns" model:
 
-![Screen Shot 2019-08-21 at 4 05 19 PM](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-using-flex-layout-1.png)
+![Screen Shot 2019-08-21 at 4 05 19 PM](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-flex-layout-1.png)
 
 To achieve the layout shown above, we must use the `flex-layout.row` and `flex-layout.col` blocks, which are going to define each row and column in the page layout and their children blocks.
 

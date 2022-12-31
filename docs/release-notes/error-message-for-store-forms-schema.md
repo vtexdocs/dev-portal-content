@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/error-message-for-store-forms-schema-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/error-message-for-store-forms-schema-0.png)
 
 Error messages were added to the Store Form app in order to warn developers whenever the JSON schema was invalid, i.e. built with an inaccurate structure!
 

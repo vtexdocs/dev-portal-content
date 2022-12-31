@@ -16,7 +16,7 @@ Hence, for a step by step on how to access this information, check the following
 
 2. Access the **GraphQL admin IDE** section of the desired account. You may find it in the admin's side-bar menu:
 
-![adminsidebarmenu](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/checking-your-stores-binding-id-0.png)
+![adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/checking-your-stores-binding-id-0.png)
 
 3. From the dropdown list, choose the `vtex.tenant` app.
 4. Write the following query command in the text box that is displayed:

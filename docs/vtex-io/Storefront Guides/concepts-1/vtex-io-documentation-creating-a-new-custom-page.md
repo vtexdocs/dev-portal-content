@@ -45,7 +45,7 @@ In order to do so, you first must choose one of three template types to host you
 
 Let's suppose we are going to create a simple About Us page for a store. As such the page is not directly connected to any specific product, we should create a custom `Standard` template for it with an image in its left column and a a title and text content in its right column:
 
-![store-product-exp](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-creating-a-new-custom-page-0.png)
+![store-product-exp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-0.png)
 
 1. In your store theme's code, declare a new template within your `blocks` folder or `blocks.jsonc` file.
 
@@ -133,7 +133,7 @@ Once your changes are set up in a Production workspace, you will be able to use 
 2. Click on **Create New**.
 3. Choose the desired URL and any created template. For instance, the About Us page template previously created:
 
-![custom-pages-pages](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-creating-a-new-custom-page-1.png)
+![custom-pages-pages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-1.png)
 
 Notice that a template only sets the page layout, hence any new template becomes available to be set on any page that accepts templates of the same type as the page itself.
 
@@ -145,7 +145,7 @@ Your new page now has a custom layout, thanks to the newly created template, and
 
 You can define your page content performing changes directly to your Store Theme app or using the admin's Site Editor. When using this last one, you can browse to your custom page or simply write its URL in the `Page URL` field. For example:
 
-![custom-pages-siteeditor](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-creating-a-new-custom-page-2.png)
+![custom-pages-siteeditor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-2.png)
 
 ### Making your theme content publicly available
 

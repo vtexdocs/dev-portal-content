@@ -17,7 +17,7 @@ Google One-tap delivers a seamless experience with a small pop-up that can authe
 3. Google checks the user's identity.
 4. The store refreshes itself or redirects the user (if on `/login` page) to the homepage.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/google-one-tap-login-0.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-0.gif)
 
 ## Internal Behaviour
 
@@ -51,7 +51,7 @@ The One-Tap flow requires the store to have Google OAuth login already set up. T
 ## Setting up the Google OAuth 2.0 app
 
 All web store domains must be added to the [*Authorized domains*](https://support.google.com/cloud/answer/6158849#authorized-domains) list on the Google OAuth 2.0 configuration page, inside [Google Developers Console](https://console.developers.google.com/).
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/google-one-tap-login-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-1.png)
 
 > **Note**: We advise clients to add both their website domain and also the `{{accountName}}.myvtex.com` domain, as our restricted `.myvtex.com` domain can be used for testing.
 
@@ -67,7 +67,7 @@ This step does not depend on the previous one, meaning it can be done before ena
 
 As of `vtex.login@2.31.x` there's a new section on the Login submenu of the Site Editor
 
-![one-tap-wiki-1](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/google-one-tap-login-2.gif)
+![one-tap-wiki-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-2.gif)
 
 Under this section, you can enable Google One-tap on their stores and also configure in which side of the page it appears in (*Google One-tap alignment*) and the top margin of the pop-up (*Google One-tap top margin*).
 

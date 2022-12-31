@@ -24,7 +24,7 @@ There are three main situations you should opt for opening an issue:
 - Request a new feature or suggest an idea.
 - Ask questions you had during development.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/contributing-0.png)
 
 Once you open an issue, our team will evaluate your contribution as soon as possible.
 
@@ -32,13 +32,13 @@ Once you open an issue, our team will evaluate your contribution as soon as poss
 
 We use GitHub tags to classify issues between **Questions, Bugs or Enhancements.** This way, you can filter issues by specifying a label and author.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-1.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/contributing-1.png)
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-2.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/contributing-2.png)
 
 You can also change the **sort criteria** for the issues. For example, you can look for the most and least commented issues, the ones with most 👍 and most recently updated.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-3.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/contributing-3.png)
 
 ### Creating a Pull Request
 
@@ -101,7 +101,7 @@ To make the documentation of your custom app public on the Developer Portal, you
 1. Create a `docs/` folder in the app’s root.
 2. Update the app's `manifest.json` file to declare `vtex.docs` as one of the app's builders.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-4.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/contributing-4.png)
 
 3. Inside the `docs/` folder create a `README.md` file.
 
@@ -132,7 +132,7 @@ Under the app's name, you should explain the topic, giving a **brief description
 
 Next, **add media** (either an image of a GIF) with the rendered components, so that users can better understand how the app works in practice. 
 
-![Media Placeholder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-5.png)
+![Media Placeholder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/contributing-5.png)
 
 ## Configuration 
 
@@ -253,7 +253,7 @@ Under the app's name, you should explain the topic, giving a **brief description
 
 Next, you can **add media** (either an image of a GIF) if possible, so that users can better understand how the app works in practice. 
 
-![Media Placeholder](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/contributing-6.png)
+![Media Placeholder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/contributing-6.png)
 
 ## Configuration
 

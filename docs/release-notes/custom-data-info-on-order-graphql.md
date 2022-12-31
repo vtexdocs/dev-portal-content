@@ -6,7 +6,7 @@ hidden: false
 type: "removed"
 ---
 
-![Store Framework](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/custom-data-info-on-order-graphql-0.png)
+![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-data-info-on-order-graphql-0.png)
 
 The browser's Back button no longer works as a modal closing button when configuring the [Modal Layout app](https://vtex.io/docs/components/all/vtex.modal-layout/).  
 

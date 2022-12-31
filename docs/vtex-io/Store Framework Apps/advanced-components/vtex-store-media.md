@@ -20,7 +20,7 @@ updatedAt: "2021-03-31T17:25:38.265Z"
 
 The Media app allows you to display image and video assets using a single block.
 
-![media-list-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-media-0.gif)
+![media-list-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-media-0.gif)
 ## Configuration
 
 1. Add the `store-media` app to your theme's dependencies in the `manifest.json` file:

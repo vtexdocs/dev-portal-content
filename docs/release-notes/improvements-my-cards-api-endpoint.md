@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Commerce APIs](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/improvements-my-cards-api-endpoint-0.png)
+![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/improvements-my-cards-api-endpoint-0.png)
 
 Starting November 18, 2021, there will be critical improvements to the My Cards API endpoint:
 

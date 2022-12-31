@@ -19,7 +19,7 @@ updatedAt: "2021-10-06T20:09:57.389Z"
 
 The VTEX Google Tag Manager app is a first party integration to the [Google Tag Manager solution](https://tagmanager.google.com).
 
-![google-tag-manager-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-google-tag-manager-0.png)
+![google-tag-manager-app](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-google-tag-manager-0.png)
 
 ## Configuration
 
@@ -107,7 +107,7 @@ To persist campaign data across user navigation you must add the variable `Origi
 
 ```
 
-![gif1](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-google-tag-manager-1.gif)
+![gif1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-google-tag-manager-1.gif)
 
 9. Click on `Save`
 
@@ -119,7 +119,7 @@ After [creating the variable `OriginalLocation`](#link para o step1), use the Go
 
 1. Click on the **Variables** section, on **User-Defined Variables** and select one of the  Google Analytics Settings variables.
 
-![img](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-google-tag-manager-2.png)
+![img](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-google-tag-manager-2.png)
 
 2. Click on **Variable Configuration** box and in **More Settings** select **Fields to Set**.
 3. In **Fields to set**, click on `Add Field`.

@@ -44,7 +44,7 @@ Now, no further actions are needed on your part. Once you receive the expected r
 
 Check the following gif of the complete process of overwriting automatic translations of a product:
 
-![catalog](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/catalog-internationalization-0.gif)
+![catalog](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/catalog-internationalization-0.gif)
 
 ## Category
 

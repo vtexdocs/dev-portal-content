@@ -6,13 +6,13 @@ hidden: false
 createdAt: "2020-06-26T14:55:49.118Z"
 updatedAt: "2022-07-02T00:50:33.015Z"
 ---
-![https://img.shields.io/badge/-Deprecated-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummaryprice-0.png)
+![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummaryprice-0.png)
 
 >⚠️ **The Product Summary Price block has been deprecated in favor of the [Product Price](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-price) app**. Although support for this block is still available, we strongly recommend that you update your store theme with the Product Price app to stay up with the component's evolution.
 
 `ProductSummaryPrice` is a block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) responsible for rendering the product's price.
 
-![price-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-productsummaryprice-1.png)
+![price-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummaryprice-1.png)
 
 ### Configuration
 

@@ -14,4 +14,4 @@ Access: https://{workspace}--{account}.myvtex.com/_v/private/assets/v1/linked/{a
 Access: https://{workspace}--{account}.myvtex.com/_v/public/assets/v1/published/{app}@{version}/public/react/[prod|dev]Report.html
 
 Here is an example of the result:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-check-an-apps-bundle-size-on-vtex-io-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-check-an-apps-bundle-size-on-vtex-io-0.png)

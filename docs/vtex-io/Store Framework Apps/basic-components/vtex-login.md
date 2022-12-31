@@ -14,7 +14,7 @@ updatedAt: "2022-12-08T14:42:50.254Z"
 
 The VTEX Login app is responsible for handling user login in your store. 
 
-![login-component-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-login-0.gif)
+![login-component-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-login-0.gif)
 
 ## Configuration
 
@@ -30,7 +30,7 @@ Now, you are able to use all the blocks exported by the Login app. Check out the
 
 | Block name   | Description  |
 | :----------: | :------------------------: |
-| `login` | ![https://img.shields.io/badge/-Mandatory-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-login-1.png) Renders the Login component, as shown in the media above. | 
+| `login` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-login-1.png) Renders the Login component, as shown in the media above. | 
 | `login-content` | Only renders the login form . | 
 
 2. Add the `login` block and its props to your store's header. For example:
@@ -70,9 +70,9 @@ Now, you are able to use all the blocks exported by the Login app. Check out the
 | `accountOptionsButtonBehavior` | `enum` | Expected behavior of the My account button when clicked on. Possible values are: `popover` (opens a popover tab) and `link` (redirects user to the `/account` page). | `popover` |
 | `accountOptionLinks` | `[object]` | Creates a custom link to replace the default one set for the `accountOptionsButtonBehavior`'s `link` value (`/account`). Check out below the available props for the object. | `undefined` |
 | `termsAndConditions` | `string` | Text to be displayed below the login options regarding terms&conditions. | `undefined` |
-| `hasGoogleOneTap` | `boolean` | ![https://img.shields.io/badge/-Beta-red](https://img.shields.io/badge/-Beta-red) Whether the [Google's One-tap sign-up and auto sign-in](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-login-2.png). |  `false`  |
-| `googleOneTapAlignment` | `enum` |  ![https://img.shields.io/badge/-Beta-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-login-3.png) Defines pop-up alignment for the Google One-tap login. Possible values are `Left` and `Right`. | `Right` |
-| `googleOneTapMarginTop`  | `string` | ![https://img.shields.io/badge/-Beta-red](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-login-4.png) Defines the pop-up top margin for the Google One-tap login. The values supported are the same supported by the CSS property `top`. | `3rem` |
+| `hasGoogleOneTap` | `boolean` | ![https://img.shields.io/badge/-Beta-red](https://img.shields.io/badge/-Beta-red) Whether the [Google's One-tap sign-up and auto sign-in](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-login-2.png). |  `false`  |
+| `googleOneTapAlignment` | `enum` |  ![https://img.shields.io/badge/-Beta-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-login-3.png) Defines pop-up alignment for the Google One-tap login. Possible values are `Left` and `Right`. | `Right` |
+| `googleOneTapMarginTop`  | `string` | ![https://img.shields.io/badge/-Beta-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-login-4.png) Defines the pop-up top margin for the Google One-tap login. The values supported are the same supported by the CSS property `top`. | `3rem` |
 | `disabledEmailInputs` | `boolean` | Whether user email editing should be allowed (`true`) or not (`false`). | `false` |
 | `blockOAuthAutoRedirect` | `boolean` | If this prop is `true` and the only active provider is an OAuth, the login won't auto-redirect as usual. Also, the query string `oAuthRedirect` will be disabled. | `false` |
 

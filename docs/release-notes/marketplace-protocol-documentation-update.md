@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-![Integration](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/marketplace-protocol-documentation-update-0.png)
+![Integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/marketplace-protocol-documentation-update-0.png)
 
 We have recently reviewed our Marketplace Protocol Documentation, updating our External Seller and External Marketplace Integration guides. See more details below
 

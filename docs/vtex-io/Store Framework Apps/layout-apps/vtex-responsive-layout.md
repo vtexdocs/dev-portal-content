@@ -10,7 +10,7 @@ updatedAt: "2020-06-23T20:25:09.531Z"
 
 Responsive-layout allows you to declare layout structures that will only be rendered in a specific screen-size breakpoint.
 
-![responsive-layout-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-responsive-layout-0.gif)
+![responsive-layout-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-responsive-layout-0.gif)
 
 There are four blocks defined and exported by this app:
 

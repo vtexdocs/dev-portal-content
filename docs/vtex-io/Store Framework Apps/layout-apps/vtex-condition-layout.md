@@ -12,7 +12,7 @@ updatedAt: "2022-07-19T14:16:44.719Z"
 
 The Condition Layout app allows a component to be rendered in your store if predefined conditions are met.
 
-![Screen-Recording-certo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-0.gif)
+![Screen-Recording-certo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-condition-layout-0.gif)
 
 ## Configuration
 

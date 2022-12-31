@@ -22,6 +22,6 @@ These are some of the features built-in our clients infrastructure:
 - Retry and timeout options;
 - Billing tracking.
 
-![Clients on IO Services](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-clients-0.png)
+![Clients on IO Services](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-clients-0.png)
 
 Learn how to create Clients of your own by accessing [Managing Clients](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-how-to-create-and-use-clients) documentation.

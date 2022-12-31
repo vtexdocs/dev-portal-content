@@ -15,7 +15,7 @@ updatedAt: "2022-06-13T16:06:15.138Z"
 In the B2B scenario, it is common for stores to have personalized prices per customer and complex pricing systems that require external integrations. Pricing Hub is a system developed for the B2B context that works as an intermediary between VTEX and external pricing systems.
 
 In VTEX, B2B stores have the option to use our internal pricing system or an external one. If the store chooses to operate with an external pricing system, Pricing Hub will query an external price calculation API. The external API should then respond with the price for all items in the shopping cart according to its predefined tax rules.
-![Pricing hub protocal diagram](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/pricing-hub-overview-0.png)
+![Pricing hub protocal diagram](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/pricing-hub-overview-0.png)
 
 ## Implementation
 

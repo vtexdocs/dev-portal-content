@@ -20,11 +20,11 @@ Find out how to configure the prompt in your store by following the steps below.
 1. In the desired account's admin, access **CMS** and select the **Site Editor**.
 2. Click on **Store**.
 
-![site-editor-cms](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-enabling-the-stores-pwa-notice-0.png)
+![site-editor-cms](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-the-stores-pwa-notice-0.png)
 
 3. In the **Advanced** tab, click on **Other PWA settings**.
 4. Toggle the **Add to Home Screen** button and select the browsing moment during which you want the notice to be triggered.
 
-![enabling-pwa](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-enabling-the-stores-pwa-notice-1.gif)
+![enabling-pwa](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-the-stores-pwa-notice-1.gif)
 
 5. Save your changes.

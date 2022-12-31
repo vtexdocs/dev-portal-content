@@ -66,7 +66,7 @@ Once you are logged in, follow these steps:
 5. It is recommended that you check the **Display stars in product-rating-summary if there are no reviews** option and uncheck the **Display total reviews number on product-rating-summary block** option, as illustrated below.
 6. Click on the `Save` button.
 
-![e683a71-image2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/installing-the-b2b-store-theme-0.png)
+![e683a71-image2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-the-b2b-store-theme-0.png)
 
 #### Quick Order
 
@@ -152,7 +152,7 @@ When creating the `organizationId` field, you should check the following checkbo
 
 > ⚠️ After creating the new fields, it is mandatory to Publish the CL entity and to Reindex it by clicking the buttons illustrated below. Otherwise, the B2B Store Theme will not be applied correctly.
 >
-> ![0e71b5a-Group\_1\_6](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/installing-the-b2b-store-theme-1.png)
+> ![0e71b5a-Group\_1\_6](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-the-b2b-store-theme-1.png)
 
 ### Install B2B Easy Setup (optional)
 
@@ -462,7 +462,7 @@ After following the steps above, you are ready to install the B2B Store Theme. Y
 
 Finally, your storefront should look like this:
 
-![d6eeb9f-image3](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/installing-the-b2b-store-theme-2.png)
+![d6eeb9f-image3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-the-b2b-store-theme-2.png)
 
 ## Customization
 

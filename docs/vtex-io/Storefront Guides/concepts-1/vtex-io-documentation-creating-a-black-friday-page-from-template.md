@@ -15,7 +15,7 @@ This guide will show you how to implement the Black Friday landing page template
 
 > ℹ️ You can also base on this template to create a new or refreshed homepage for your store website.
 
-![Black Friday landing page template](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-creating-a-black-friday-page-from-template-0.gif)
+![Black Friday landing page template](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-black-friday-page-from-template-0.gif)
 
 ## Step by step
 
@@ -47,7 +47,7 @@ Download the template files available here: [black-friday-template-files 2021.zi
 
 4. Check the code comments within the `/store/blocks/custom-template-blackfriday-lp/custom-template-blackfriday-lp.jsonc` file and add your pre-existing shelves accordingly.
 
-![bf-template](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-creating-a-black-friday-page-from-template-1.png)
+![bf-template](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-black-friday-page-from-template-1.png)
 
 5. Using the terminal, run `vtex link` on your project folder.
 6. Go back to your code and customize the template as you wish.

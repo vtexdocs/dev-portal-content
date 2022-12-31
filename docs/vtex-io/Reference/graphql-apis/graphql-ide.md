@@ -56,7 +56,7 @@ GraphQL ecosystem is growing fast and powerful tools, such as Graph*i*QL, maximi
 
 5. Under the **Store Setup** section, click on **GraphQL IDE**.
 
-![graphql-adminsidebarmenu](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/graphql-ide-0.png)
+![graphql-adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/graphql-ide-0.png)
 
 On the right side of your screen, you'll now see a dropdown menu, containing the list of GraphQL APIs that are installed in the logged VTEX account.
 
@@ -79,7 +79,7 @@ Graph*i*QL allows developers to validate GraphQL APIs by providing functionaliti
 
 Let's now dive into the Graph*i*QL interface and features.
 
-![graphiql](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/graphql-ide-1.png)
+![graphiql](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/graphql-ide-1.png)
 
 Graph*i*QL interface is divided into three main parts: one for writing queries, another one for checking the results, and a third one named *Query Variables*, which is optional and hidden at the bottom of the screen.
 

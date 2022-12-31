@@ -12,7 +12,7 @@ updatedAt: "2022-06-22T16:04:48.125Z"
 
 Product Price app is responsible for exporting blocks related to the product's price, such as list price, selling price and savings.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-price-0.png)
 
 > ℹ️ Currently, **the Product Price is the only app responsible for providing product price blocks for your theme**. Both [Product Summary Price](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-price/) and [Product Price](https://vtex.io/docs/components/all/vtex.store-components/product-price/) blocks, respectively from [Product Summary](https://vtex.io/docs/components/all/vtex.product-summary/) and [Store Components](https://vtex.io/docs/components/all/vtex.store-components/) apps, were deprecated and therefore will no longer be evolved.
 
@@ -168,7 +168,7 @@ For example:
 }
 ```
 
-![9SOSUdfAVa](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-1.gif)
+![9SOSUdfAVa](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-price-1.gif)
 
 ### Step 3 - Editing the block's messages
 
@@ -180,7 +180,7 @@ It is possible, however, to define which message texts a block will render on th
 
 The `markers` prop, in turn, needs an extra configuration in the admin's Site Editor to properly work. When using it, do not forget to access the [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message/) documentation. 
 
-![Product-Price-Site-Editor-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-2.gif)
+![Product-Price-Site-Editor-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-price-2.gif)
 
 In addition to that, keep in mind the message variables for each block since you will need them to edit the desired messages using the admin's Site Editor:
 
@@ -306,7 +306,7 @@ Still, according to the example, products that don't have a measurement unit and
 
 In the gif example above, the block was firstly displaying a `Save $224.40` message. By editing the message exported, it now renders a `You are saving: $224.40 (37%)` message thanks to the changes performed through the admin's Site Editor:
 
-![product-price-edited-img](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-3.png)
+![product-price-edited-img](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-price-3.png)
 
 ## Customization
 

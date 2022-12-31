@@ -39,7 +39,7 @@ This app installs Assembly Options GraphQL as a dependency. Learn more about it 
 
 The app inserts a new menu in the VTEX Admin, which you can access on _Products > Assembly options_.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assembly-options-app-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/assembly-options-app-0.png)
 
 The Assembly Options interface allows you to:
 
@@ -47,37 +47,37 @@ The Assembly Options interface allows you to:
 <details>
 <summary>View a list of existing Assembly Options.</summary>
 
-![Listing](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assembly-options-app-1.gif)
+![Listing](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/assembly-options-app-1.gif)
 </details>
 
 <details id="search">
 <summary>Search for Assembly Options.</summary>
 
-![Search](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assembly-options-app-2.gif)
+![Search](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/assembly-options-app-2.gif)
 </details> 
 
 <details id="filters">
 <summary>Filter Assembly Options by Status.</summary>
 
-![Filter](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assembly-options-app-3.gif)
+![Filter](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/assembly-options-app-3.gif)
 </details>
 
 <details id="creation">
 <summary>Create Assembly Options.</summary>
 
-![Creation2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assembly-options-app-4.gif)
+![Creation2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/assembly-options-app-4.gif)
 </details>
 
 <details id="edition">
 <summary>Edit Assembly Options.</summary>
 
-![Edit](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assembly-options-app-5.gif)
+![Edit](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/assembly-options-app-5.gif)
 </details>
 
 <details id="deletion">
 <summary>Delete Assembly Options.</summary>
 
-![Delete](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/assembly-options-app-6.gif)
+![Delete](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/assembly-options-app-6.gif)
 </details>
 
 For more information on how to use this interface, read our user guide [Assembly Options app](https://help.vtex.com/en/tutorial/assembly-options-app--54mWg37mojrqOgCA79iqqk).

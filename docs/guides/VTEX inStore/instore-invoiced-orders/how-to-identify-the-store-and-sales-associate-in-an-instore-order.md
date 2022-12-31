@@ -20,7 +20,7 @@ To send order data to external systems, such as dashboards and data lakes, we re
 
 When an order is closed in inStore, the ID of the user logged into the application is visible at the top of the order details screen in Admin. In the example below, the user name is `A123456`.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-0.png)
 When the order details are retrieved by [Orders API](https://developers.vtex.com/vtex-developer-docs/reference/orders), the user name is available in the `callCenterOperatorData.userName` field. You can also access the email address of this user in `callCenterOperatorData.email`.
 
 ```json
@@ -33,7 +33,7 @@ When the order details are retrieved by [Orders API](https://developers.vtex.com
 
 If the user logged into the application is shared between salespeople in the same store, it is also possible to include the salesperson's ID in the **Customer information** field.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-1.png)
 When the order details are fetched from the Orders API, this information is available in the `openTextField.value` field.
 
 ```json
@@ -46,7 +46,7 @@ When the order details are fetched from the Orders API, this information is avai
 
 When an order is closed in inStore, the store ID is visible in the **Sales and Marketing** section of the order details screen in Admin. In the example below, the store identifier is `8fc9d8df-5961-11ea-8311-0a43926dcc3d`.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-2.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-2.png)
 When the order details are obtained from the [Orders API](ref:orders-api-overview), this information is available in the `marketingData.utmSource` field.
 
 ```json
@@ -69,7 +69,7 @@ When the order details are obtained from the [Orders API](ref:orders-api-overvie
 ## Query Registration Data
 
 The merchant and store identifier can be used to query the registration data at `https://{accountName}.myvtex.com/admin/vtable`.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-3.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-3.png)
 
 [block:callout]
 {
@@ -90,7 +90,7 @@ To do this search, follow the instructions below:
 
 When you complete step 4, the search filter expression should be in the format `Nome:=:A123456`. This will allow you to find the salesperson in the salesperson listing, as seen in the image below.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-4.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-4.png)
 If you prefer to do this query by API, just use the [Search Documents](https://developers.vtex.com/vtex-developer-docs/reference/search#searchdocuments) endpoint of the [Master Data API - V2](https://developers.vtex.com/reference/master-data-api-v2-overview) to search for the store identifier in the `vendors` data entity.
 
 ### Search by store
@@ -105,5 +105,5 @@ To do this search, follow the instructions below:
 
 When you complete step 4, the search filter expression should be in the format `DocumentId:=: "c2a0b3ee-03f3-11eb-8367-128fa24166a9"`. This will allow you to find the store in the store list, as seen in the image below.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-5.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-5.png)
 If you prefer to do this query by API, just use the [Search Documents](https://developers.vtex.com/vtex-developer-docs/reference/search#searchdocuments) endpoint of the [Master Data API - V2](https://developers.vtex.com/reference/master-data-api-v2-overview) to search for the store identifier in the `stores` data entity.

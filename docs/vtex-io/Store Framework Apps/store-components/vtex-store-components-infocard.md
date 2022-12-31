@@ -8,7 +8,7 @@ updatedAt: "2022-11-22T18:39:25.844Z"
 ---
 The `info-card` component groups information related to a single topic. They often include some text, an image, and a call-to-action button.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-components-infocard-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-infocard-0.png)
 
 ## Configuration
 

@@ -42,7 +42,7 @@ The **Delivery Window Blocker** app enables you to perform the following actions
 
 > ℹ️ Through the Delivery **Window Blocker** app you can access a [shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140) and edit delivery window’s configurations. This can be done by selecting a shipping policy and clicking on <i class="fas fa-pencil-alt"></i> **EDIT SHIPPING POLICY**.
 
-![block_delivery_window_1](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/delivery-window-blocker-app-0.png)
+![block_delivery_window_1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/delivery-window-blocker-app-0.png)
 
 ### Block a delivery window on demand
 
@@ -61,7 +61,7 @@ Blocking a delivery window means it will not be displayed for the customer at ch
 8. Select the `Block window` option.
 9. Click on `BLOCK`.
 
-![block_delivery_window_2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/delivery-window-blocker-app-1.png)
+![block_delivery_window_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/delivery-window-blocker-app-1.png)
 
 ### Set up a recurrent blocking time
 
@@ -78,7 +78,7 @@ To block a delivery window on a weekly basis, do the following:
 6. In the modal, fill in the day and hour during which the delivery window will be blocked.
 7. Click on `CONFIRM`. 
 
-![block_delivery_window_3](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/delivery-window-blocker-app-2.gif)
+![block_delivery_window_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/delivery-window-blocker-app-2.gif)
  
 ### Unblock a delivery window on demand
 
@@ -97,4 +97,4 @@ Unblocking a delivery window means it will be displayed for customers on checkou
 
 Unblocking delivery windows that were set up as recurrent blocking times works in a similar way. The difference is that on step 1 you will select the **Recurrent blocking** tab, and on step 4 you will select `Remove recurrent blocking`.
 
-![block_delivery_window_4](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/delivery-window-blocker-app-3.png)
+![block_delivery_window_4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/delivery-window-blocker-app-3.png)

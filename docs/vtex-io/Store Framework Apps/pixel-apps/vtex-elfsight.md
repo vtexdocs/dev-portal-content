@@ -18,7 +18,7 @@ updatedAt: "2020-07-16T16:18:03.236Z"
 
 Elfsight first party integration app. The [solution](https://elfsight.com/) provides widgets that help website owners to increase sales, engage visitors, collect leads and more.
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-elfsight-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-elfsight-0.png)
 
 ## Configuration 
 
@@ -56,7 +56,7 @@ Elfsight first party integration app. The [solution](https://elfsight.com/) prov
 
 You should get the app ID from the Elfsight admin:
 
-![App Id](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-elfsight-1.png)
+![App Id](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-elfsight-1.png)
 
 
 <!-- DOCS-IGNORE:start -->

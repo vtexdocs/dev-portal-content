@@ -8,18 +8,18 @@ updatedAt: "2022-08-17T19:40:06.760Z"
 ---
 The Yotpo Reviews Integration app is a product review and rating integration with [Yotpo](https://www.yotpo.com/).
 
-![yotpo-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-yotpo-0.png)
+![yotpo-app](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-yotpo-0.png)
 
 ## Configuration
 
 1. [Install](https://vtex.io/docs/recipes/store/installing-an-app) the `yotpo` app in the desired account;
 2. In the admin's account, access **Apps** and then select the **Yotpo Integration** box;
 
-![setup-yotpo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-yotpo-1.png)
+![setup-yotpo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-yotpo-1.png)
 
 3. Once in the app's page, define the app’s configurations in the **setup** section:
 
-![setup-yotpo](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-yotpo-2.png)
+![setup-yotpo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-yotpo-2.png)
 
 - **Yotpo App Key**: Enter the app key that you have received from Yotpo's admin interface.
 - **Use Reference Id**: Check this box if you wish to use the product's reference id rather than its product id to link the product to its reviews.

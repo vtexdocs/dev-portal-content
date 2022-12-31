@@ -14,12 +14,12 @@ The Product Customizer component can be used on the Product Details Page (PDP) t
 
 An attachment is the optional and cost-free customization of a product.
 
-![attachment-product-customization-select](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-0.png)
+![attachment-product-customization-select](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-customizer-0.png)
 *Example of a PDP with the Product Customizer component displaying the product's attachments.*
 
 Product subscriptions facilitate recurring sales by automatically scheduling the purchase of a specific product at the frequency requested by the customer.
 
-![subscription-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-1.gif)
+![subscription-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-customizer-1.gif)
 *Example of a PDP with the Product Customizer component displaying the product subscription.*
 
 ## Before you start
@@ -100,11 +100,11 @@ While building your solution, notice that you can receive inputs from three type
  
 Check the following example where the three attachment types are implemented:
 
-![product-customizer-select](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-2.png)
+![product-customizer-select](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-customizer-2.png)
 
 Check out below how the product attachment displayed above was registered in the Catalog: 
 
-![attachment-product-customizer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-3.png)
+![attachment-product-customizer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-customizer-3.png)
 
 It's worth noting that when an attachment is registered as **required**, all attachment options are automatically made available to shoppers. If an attachment is **not required**, the `Add customization` button is rendered as in the example above, giving shoppers the option to add or not an attachment to their product.
 

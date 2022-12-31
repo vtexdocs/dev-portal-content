@@ -23,7 +23,7 @@ Through your store's [trade policies](https://help.vtex.com/tutorial/what-is-a-s
 4. In the `Currency Code` field, set the international currency code used to display prices;
 5. In the `Culture Info` field, select your store's native country and the website's native language.
 
-![international-currency](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-internationalizing-product-prices-0.png)
+![international-currency](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-internationalizing-product-prices-0.png)
 
 Once your changes are saved, VTEX IO will be able to understand that whenever a user's locale differs from the default one set in the `Culture Info` field, it is dealing with an international user.
 

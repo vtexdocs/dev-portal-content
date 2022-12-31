@@ -7,7 +7,7 @@ type: "improved"
 excerpt: "A new Zendesk's chat button was developed to lazy-load the default and heavier one provided by the solution."
 ---
 
-![VTEX IO App](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/zendesks-chat-button-0.png)
+![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/zendesks-chat-button-0.png)
 
 A new Zendesk's chat button was developed to lazy-load the default and heavier one provided by the solution.
 

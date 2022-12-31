@@ -14,7 +14,7 @@ updatedAt: "2022-02-25T16:57:31.666Z"
 
 The Product Availability app displays text messages regarding the in-stock quantity for products. 
 
-![product-availability](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-availability-0.png)
+![product-availability](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-availability-0.png)
 
 ## Configuration
 

@@ -14,7 +14,7 @@ updatedAt: "2022-11-11T16:13:51.504Z"
 
 The Store Link app provides blocks responsible for displaying links in other theme blocks, such as the Product Summary. 
 
-![image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-link-0.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-link-0.png)
 
 ## Configuration
 

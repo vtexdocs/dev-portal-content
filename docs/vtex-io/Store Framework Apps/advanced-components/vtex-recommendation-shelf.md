@@ -16,7 +16,7 @@ updatedAt: "2022-07-07T13:16:16.542Z"
  
 The Product Recommendation app shows a selection of products using [recommendation strategies](#recommendation-shelf-props). For example, you can use the Product Recommendation to suggest often bought-together products to the one that the user is looking for.
  
-![recommendation-shelf-buy-together](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-recommendation-shelf-0.png)
+![recommendation-shelf-buy-together](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-0.png)
  
 ## Prerequisites
  
@@ -70,18 +70,18 @@ Now, you can use all blocks exported by the `recommendation-shelf` app. Check ou
 
 `recommendation-shelf`
  
-![recommendation-shelf](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-recommendation-shelf-1.png)
+![recommendation-shelf](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-1.png)
  
 
 `recommendation-buy-together`
  
-![recommendation-buy-together](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-recommendation-shelf-2.png)
+![recommendation-buy-together](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-2.png)
  
 
  
 `recommendation-refresh`
 
-![recommendation-refresh](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-recommendation-shelf-3.png)
+![recommendation-refresh](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-3.png)
 
  
 3. Add the `recommendation-shelf` app to your store template. See the example below to know how to add it to a template:

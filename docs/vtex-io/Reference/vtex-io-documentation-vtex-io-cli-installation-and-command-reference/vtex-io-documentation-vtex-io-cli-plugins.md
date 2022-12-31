@@ -21,7 +21,7 @@ Check all commands related to plugins by running the following command.
 vtex plugins
 ```
 
-![vtex-plugins-source](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-plugins-0.png)
+![vtex-plugins-source](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-plugins-0.png)
 
 ## Listing all VTEX plugins
 
@@ -31,7 +31,7 @@ List all plugins available by VTEX by running the following command.
 vtex plugins source
 ```
 
-![vtex-plugins-source](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-plugins-1.png)
+![vtex-plugins-source](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-plugins-1.png)
 
 > ℹ️ If you already have downloaded a plugin, it will be highlighted in green.
 
@@ -51,7 +51,7 @@ Replace the value between curly brackets with the name of the plugin you want to
 
 - For third parties plugins, use the following format: `@{org-name}/{plugin-name}`.
 
-![install-plugin](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-plugins-2.png)
+![install-plugin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-plugins-2.png)
 
 ## Listing installed plugins
 
@@ -61,7 +61,7 @@ List all plugins installed in your machine by running the following command.
 vtex plugins list
 ```
 
-![install-plugin](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-plugins-3.png)
+![install-plugin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-plugins-3.png)
 
 ## Updating installed plugins
 
@@ -71,7 +71,7 @@ Update all plugins installed in your machine by running the following command.
 vtex plugins update
 ```
 
-![update-plugins](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-plugins-4.png)
+![update-plugins](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-plugins-4.png)
 
 ## Uninstalling a plugin
 
@@ -83,4 +83,4 @@ vtex plugins uninstall {pluginName}
 
 > ⚠️ Replace the value between curly brackets with the name of the plugin you want to uninstall. You can run `vtex plugins list` to check which plugins are installed in your machine.
 
-![uninstall-plugins](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-vtex-io-cli-plugins-5.png)
+![uninstall-plugins](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-plugins-5.png)

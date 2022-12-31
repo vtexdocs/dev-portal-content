@@ -7,7 +7,7 @@ hidden: false
 excerpt: "If you have configured your store's ecommerce capabilities and built your storefront, these new and improved guides are sure to help you take your store to production."
 ---
 
-![Store Development](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/new-go-live-documentation-available-0.png)
+![Store Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-go-live-documentation-available-0.png)
 
 Go-live is the process that puts your new VTEX store into production, making it available for customers to access it and make purchases.
 
