@@ -41,10 +41,10 @@ To use the category mapping service, follow the steps below, that will be furthe
 ### Register the connector in VTEX Mapper
 
 After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) to operate a VTEX account, the diagram below illustrates the necessary steps to register the connector in VTEX Mapper.
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-catalog-mapping-0.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-catalog-mapping-0_44.jpg)
 
 1. Use the [Mapper Registration endpoint](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration).
-2. In case the registration is successful, VTEX Mapper returns a unique ID and endpoint to the connector. 
+2. In case the registration is successful, VTEX Mapper returns a unique ID and endpoint to the connector.
 3. Store the ID returned, to be later used in the category tree update action, in VTEX Matcher.
 [block:callout]
 {
@@ -57,13 +57,13 @@ After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs
 ### Send category tree to VTEX Mapper
 
 To send the marketplace’s category tree to VTEX Mapper, follow the steps illustrated in this diagram:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-catalog-mapping-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-catalog-mapping-1_60.jpg)
 
 1. Collect marketplace category tree.
-2. Check if the category tree doesn’t already exist in its repository. 
-a. If it is **not** mapped, store the category tree and the last update’s date. 
-b. If it **is **mapped, check if the category tree has updates. If there are updates, send the full tree to the mapper (step 3). If there are no updates, update the tree’s date, and log informing the tree is updated. 
-3. Assemble the full category tree schema, following the JSON example below. 
+2. Check if the category tree doesn’t already exist in its repository.
+   a. If it is **not** mapped, store the category tree and the last update’s date.
+   b. If it **is** mapped, check if the category tree has updates. If there are updates, send the full tree to the mapper (step 3). If there are no updates, update the tree’s date, and log informing the tree is updated.
+3. Assemble the full category tree schema, following the JSON example below.
 4. Send the category tree through the [Send Category Mapping to VTEX Mapper](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) endpoint. Connectors should send the payload compacted in .gzip format.
 5. If VTEX Mapper receives the category tree successfully, the call’s response will be a 204. Connectors should log the response offered by the Mapper.
 [block:callout]
@@ -73,20 +73,20 @@ b. If it **is **mapped, check if the category tree has updates. If there are upd
   "title": "Processing"
 }
 [/block]
+
 ### Receive the category mapping in VTEX Mapper
 
 VTEX Mapper will send the updated category mapping  through the endpoint defined in the property `mappingEndpoint` during the Mapper app’s registration.
 
-Once receiving the category tree, the connector should store it. This data will be used during the catalog integration flow. Once receiving a notification from VTEX to integrate a product, connectors verify if the VTEX category ID sent from the catalog exists in the mapping sent by the mapper. 
+Once receiving the category tree, the connector should store it. This data will be used during the catalog integration flow. Once receiving a notification from VTEX to integrate a product, connectors verify if the VTEX category ID sent from the catalog exists in the mapping sent by the mapper.
 
-
-### Use the category mapping in the product registration flow 
+### Use the category mapping in the product registration flow
 
 When receiving a VTEX notification to register an SKU in the marketplace, connectors should:
 
-1. [Get SKU information](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku-context) through the `{stockKeepUnit/skuId}` property. 
+1. [Get SKU information](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku-context) through the `{stockKeepUnit/skuId}` property.
 2. Collect value of `categoryId` property, from the call’s response.
 3. Verify if the ID exists in the mapping previously sent by VTEX Mapper.  \
-a) If the ID **exists**, collect the corresponding value in the marketplace.  \
-b) If the ID **does not** exist, generate a log informing the seller that they should perform the category mapping in VTEX. 
+   a) If the ID **exists**, collect the corresponding value in the marketplace.  \
+   b) If the ID **does not** exist, generate a log informing the seller that they should perform the category mapping in VTEX.
 4. With the corresponding ID, register the SKU in the marketplace, following the steps described in the [How to get a new product to offer in the marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-new-products) section.

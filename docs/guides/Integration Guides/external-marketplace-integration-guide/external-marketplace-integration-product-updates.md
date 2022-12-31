@@ -7,7 +7,7 @@ updatedAt: "2022-02-03T20:38:11.391Z"
 ---
 
 This section of the integration guide goes over the process of updating SKUs that are already integrated in the marketplace. The information flows according to the diagram below:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-product-updates-0.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-product-updates-0_10.jpg)
 
 To begin the integration of this process, it is necessary to have a search Endpoint configured, in order to receive notifications.
 
@@ -37,21 +37,22 @@ Fields sent in the notification:
 | PriceModified                           | Identifies that the price  has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                                                                                                               |
 | HasStockKeepingUnitModified             | Identifies that the product/SKU registration data has changed, like name, description, weight, etc                                                                                                                                                                                                                                                                                                                   |
 | HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the trade policy. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-product-updates-1.jpg)
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-product-updates-1_40.jpg)
 
 ## Integration flow
 
 1. Connector validates the VTEX <> Marketplace authentication. In case it has expired, perform the update routine defined in the marketplace’s documentation. Otherwise, connectors should log the error AND put the VTEX notification in a contingency queue.
 2. After receiving the VTEX notification, connectors should:
-a. Check which store the product belongs to, through the “an” parameter.
-b. If the HasStockKeepingUnitModified is defined as true, the product should be registered or updated in the marketplace.
-c. Collect details from every SKU using the [Get details of an SKU associated with a sales channel](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku) endpoint.
-d. Validate if the product is active through the [Get Product by ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-product) endpoint, through the `isActive` property.
-e. Validate if the product is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
-f. Identify whether the SKU conforms to the marketplace’s product registration rules.
-g. Validate if the product’s category is mapped in the marketplace.  
-In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) is complete.
-h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy.
+   a. Check which store the product belongs to, through the “an” parameter.
+   b. If the HasStockKeepingUnitModified is defined as true, the product should be registered or updated in the marketplace.
+   c. Collect details from every SKU using the [Get details of an SKU associated with a sales channel](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku) endpoint.
+   d. Validate if the product is active through the [Get Product by ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-product) endpoint, through the `isActive` property.
+   e. Validate if the product is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
+   f. Identify whether the SKU conforms to the marketplace’s product registration rules.
+   g. Validate if the product’s category is mapped in the marketplace.\
+   In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) is complete.
+   h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy.
 
 If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs) section.
 
@@ -61,24 +62,24 @@ If the IDs between VTEX and the marketplace differ, the connector should store b
 
 To avoid processing gaps due to the big volume of information of the initial load of products, we recommend:
 
-- Using an async messaging architecture, using individual queues by context and store.  
-- Creating mechanisms that respect the marketplace API limit rates. We suggest the standard use of the _Circuit Breaker_ integration.  
-- In case any of the steps listed above presents failures in communication, we suggest using the contingency mechanism of _deadLetters_.
-- Being TotalReader: whenever possible, in the data transformation process, using standard values accepted by the marketplace, in case the information is not filled or sent by VTEX.  
+- Using an async messaging architecture, using individual queues by context and store.
+- Creating mechanisms that respect the marketplace API limit rates. We suggest the standard use of the *Circuit Breaker* integration.
+- In case any of the steps listed above presents failures in communication, we suggest using the contingency mechanism of *deadLetters*.
+- Being TotalReader: whenever possible, in the data transformation process, using standard values accepted by the marketplace, in case the information is not filled or sent by VTEX.
 - In case the marketplace’s processing is in lots - meaning that the connector assembles a group of SKUs, guaranteeing the the limit of records per lot is respected, according to marketplace riles, and sending them to the marketplace at once - it is fundamental to control the lot’s processing, to avoid sending SKU updates without making sure that the product exists in the marketplace.
 - Keeping a states table to know which SKUs have not been integrated with success, attempt date and the response received. This allows the system to use the contingency flow effectively, avoiding infinite loops, and avoiding reaching the request limit.
-[block:callout]
-{
+  \[block:callout]
+  {
   "type": "warning",
   "body": "Make sure to check out our Recommendations for performing the steps above successfully.\nBe mindful to make all validations at once, and before the SKU’s publication in the marketplace’s catalog. In case there’s an error detected, the connector presents the seller a list of actions to correct. This way we can avoid the correct - publish - correct cycle. \n\nIf products do not apply to steps a, b and c, an error log must be filed, and the connector should collect the next items on the list obtained by step 2.",
   "title": "Validations"
-}
-[/block]
+  }
+  \[/block]
 
 ## API Reference
 
 Use the endpoints described below to get SKU, price and inventory details. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. You can also [download our Postman collection](https://www.getpostman.com/collections/95a809929905a50e2b7b) to access the API. The diagram illustrates the endpoints used in the integration:
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-product-updates-2.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-product-updates-2_81.jpg)
 
 [block:callout]
 {

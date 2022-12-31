@@ -26,7 +26,7 @@ The diagram below describes the notification flow, for integrating tracking code
 
 Follow the steps below to integrate them, once receiving the notification. Make sure to review our [Recommendations](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-recommendations) page before you start.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-invoice-tracking-0.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-invoice-tracking-0_29.jpg)
 
 1. VTEX Orders receive tracking and/or invoice data. This information can be inserted via [Place Fulfillment Order API](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) or manually in VTEX Admin. 
 After receiving invoice information, the order status is updated to `invoiced` in VTEX. In this case, it is not possible to cancel the order anymore. 
@@ -65,7 +65,8 @@ Note that:
 
 Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-invoice-tracking-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-invoice-tracking-1_68.jpg)
+
 [block:callout]
 {
   "type": "info",

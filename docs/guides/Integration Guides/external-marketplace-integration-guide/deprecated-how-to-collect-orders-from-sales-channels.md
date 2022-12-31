@@ -17,14 +17,14 @@ Orders in an integration fit into two different categories:
 
 **Paid orders:** the marketplace only makes orders available for the integration once they are paid by the customer.
 
-![MarketplaceConnections](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-0.jpg)
+![MarketplaceConnections](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/deprecated-how-to-collect-orders-from-sales-channels-0_20.jpg)
 
 **Orders to be paid:** the marketplace makes orders that have not been paid by the customer available for the integration.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-1.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/deprecated-how-to-collect-orders-from-sales-channels-1_24.jpg)
 Right after the payment confirmation by the marketplace, the flow goes as the image below describes it:
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-2.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/deprecated-how-to-collect-orders-from-sales-channels-2_27.jpg)
 
 ## How orders reach the connector
 
@@ -32,25 +32,28 @@ A marketplace order can reach the connector by either a:
 
 1. **Notification sent by the marketplace:** when the marketplace informs the connector about the existence of an order, and the connector, after receiving the notification, goes to the marketplace to get order details.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-3.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/deprecated-how-to-collect-orders-from-sales-channels-3_35.jpg)
 
 2. **Polling request made by the connector:** when the connector checks the marketplace from time to time, to collect new orders.
-   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-4.jpg)
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/deprecated-how-to-collect-orders-from-sales-channels-4_38.jpg)
 
 ## Integrating orders
 
 Follow the steps below, to integrate orders from external marketplaces:
 
 1. Collect order details from the endpoint provided by the marketplace.
+
 2. Create a request on the [Place fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) endpoint.
+
 3. [Simulate fulfillment](#fulfillment-simulation), to check if the SKU is available in VTEX.
+
 4. For each SKU retrieved, the connector must call the [Get SKU and Context endpoint](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku-context) and:
 
-    a. Validate if the SKU is active through the `isActive` property.
+   a. Validate if the SKU is active through the `isActive` property.
 
-    b. Validate if the SKU is associated to the sales channel used in the integration through the `salesChannel` property.
+   b. Validate if the SKU is associated to the sales channel used in the integration through the `salesChannel` property.
 
-5. In case step 4 retrieves all SKUs that compose the order with their respective inventory levels and prices, the connector should insert the order through the [Order Placement](https://developers.vtex.com/vtex-rest-api/reference/order-placement) endpoint.  
+5. In case step 4 retrieves all SKUs that compose the order with their respective inventory levels and prices, the connector should insert the order through the [Order Placement](https://developers.vtex.com/vtex-rest-api/reference/order-placement) endpoint.
 
 - In the `marketplaceServicesEndpoint` field, the endpoint will be used by VTEX to inform the connector of the changes in order status, inserting tracking code and invoice. For more information check out [Sending invoice and tracking code to the marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-invoice-tracking).
 
@@ -74,7 +77,7 @@ After VTEX OMS returns `success`, if the IDs between VTEX and the marketplace di
 
 Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token. The diagram illustrates the endpoints used in the integration:
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/deprecated-how-to-collect-orders-from-sales-channels-5.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/deprecated-how-to-collect-orders-from-sales-channels-5_77.jpg)
 
 [block:callout]
 {
@@ -144,80 +147,71 @@ Use the request example below to authorize dispatch. Check out our [Authorize Di
   ]
 }
 [/block]
+
 ## Scenario 1: orders with price divergence in items between marketplace and VTEX
-When to perform: after attempting to integrate an order in VTEX platform, the process  returns an error `FMT007` - signaling price divergence. 
+
+When to perform: after attempting to integrate an order in VTEX platform, the process  returns an error `FMT007` - signaling price divergence.
 
 Connectors should:
-
-
 
 1. In case the call is successful (200 OK), signaling the creation of prive divergence rule, the order should be queued in VTEX.
 2. In case the call returns a bad request (400), signaling that the order could not be inserted for infringing price divergence rules, file an error log, following the error code x.
 3. In case the call returns an unauthorized request (500), signaling that the price divergence rule failed due to error in system communication, the order should be queued on the connector’s flow to perform a retry.
 
-
 ## Scenario 2: inventory level divergence
 
-When to perform: after attempting to integrate an order in VTEX platform, the process  returns an error `ORDER027` - signaling inventory error. 
+When to perform: after attempting to integrate an order in VTEX platform, the process  returns an error `ORDER027` - signaling inventory error.
 
 Connectors should:
 
-
-
 1. Generate an error log, according to the item x.
 2. Validate if the order status in the marketplace was altered to `canceled`. If so, generate the error log message x, and remove the order from the retry queue.
-3. If the order was not canceled, submit the order to be reprocessed. 
+3. If the order was not canceled, submit the order to be reprocessed.
 4. In case the call is successful (200 OK), signaling the creation of the order, connectors should log the operation according to x.
 5. In case the call returns a bad request (400), signaling that the order could not be inserted for infringing stock rules, file an error log, following the error code x.
 6. In case the call returns an server error (500), signaling that the order creation failed due to error in system communication, the order should be queued on the connector’s flow to perform a retry.
 
-
 ## Scenario 3: SLA errors - no carriers to deliver the order
 
-When to perform: after attempting to integrate an order in VTEX platform, the process  returns an error `ORDER027` - signaling that there are no carriers to attend that order. 
+When to perform: after attempting to integrate an order in VTEX platform, the process  returns an error `ORDER027` - signaling that there are no carriers to attend that order.
 
 Connectors should:
 
-
-
 1. Generate an error log, according to the item x.
 2. Validate if the order status in the marketplace was altered to `canceled`. If so, generate the error log message x, and remove the order from the retry queue.
-3. If the order was not canceled, submit the order to be reprocessed. 
+3. If the order was not canceled, submit the order to be reprocessed.
 4. In case the call is successful (200 OK), signaling the creation of the order, connectors should log the operation according to x.
 5. In case the call returns a bad request (400), signaling that the order could not be inserted for infringing carriers’ rules, file an[ error log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs), following the error code x.
 6. In case the call returns a server error (500), signaling that the order creation failed due to error in system communication, the order should be queued on the connector’s flow to perform a retry.
 
-
 ## Scenario 4: SLA errors - no pickup points to attend the order
-When to perform: after attempting to integrate an order in VTEX platform, the process  returns an error `ORDER027` - signaling that there are no pickup points for the end customer to retrieve their order. 
+
+When to perform: after attempting to integrate an order in VTEX platform, the process  returns an error `ORDER027` - signaling that there are no pickup points for the end customer to retrieve their order.
 
 Connectors should:
 
-
-
 1. Generate an error log, according to the item x.
 2. Validate if the order status in the marketplace was altered to `canceled`. If so, generate the error log message x, and remove the order from the retry queue.
-3. If the order was not canceled, submit the order to be reprocessed. 
+3. If the order was not canceled, submit the order to be reprocessed.
 4. In case the call is successful (200 OK), signaling the creation of the order, connectors should log the operation according to x.
 5. In case the call returns a bad request (400), signaling that the order could not be inserted for infringing pickup points’ rules, file an [error log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs), following the error code x.
 6. In case the call returns an unauthorized request (500), signaling that the order creation failed due to error in system communication, the order should be queued on the connector’s flow to perform a retry.
 
+## Scenario 5: order is canceled by the marketplace
 
-## Scenario 5: order is canceled by the marketplace 
-
-When to perform: when the order is canceled by the marketplace. 
+When to perform: when the order is canceled by the marketplace.
 
 Connectors should:
 
+1. Verify if the order exists in the VTEX platform, by either:
+   a. Checking the order ID relation between VTEX and the marketplace in their environment.
+   b. Checking if the order exists through the [Get Order](https://developers.vtex.com/vtex-rest-api/reference/getorder) endpoint.
 
+2. Validate the order status.
 
-1. Verify if the order exists in the VTEX platform, by either: 
-a. Checking the order ID relation between VTEX and the marketplace in their environment.   
-b. Checking if the order exists through the [Get Order](https://developers.vtex.com/vtex-rest-api/reference/getorder) endpoint. 
-
-2. Validate the order status. 
 3. If the order exists in VTEX, call the [Cancel Order](https://developers.vtex.com/vtex-rest-api/reference/cancelorder) endpoint.
-4. If the order exists in VTEX, and the order status is `invoiced`, call the [Order Invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification) endpoint. 
+4. If the order exists in VTEX, and the order status is `invoiced`, call the [Order Invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification) endpoint.
+
 5. In case the call is successful (200 OK), signaling the cancelling of the order, connectors should log the operation according to x.
 6. In case the call returns a bad request (400), signaling that the order could not be canceled, file an [error log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs), following the error code x.
 7. In case the call returns an unauthorized request (500), signaling that the order cancelling failed due to error in system communication, the order should be queued on the connector’s flow to perform a retry.

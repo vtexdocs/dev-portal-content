@@ -216,7 +216,8 @@ You can remove [Offer Management](https://help.vtex.com/tutorial/anuncios-enviad
 
 When the configuration _AllowFranchiseAccounts_ is configured, the component becomes a toggle indicating whether [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) are permitted.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-app-template-0.png)
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-app-template-0_219.png)
 
 You can remove the configuration by performing the following actions:
 
@@ -242,7 +243,7 @@ You can remove the configuration by performing the following actions:
 CustomConfigs is also where connectors can add their custom fields and most of the app’s development will be made, in case it is necessary to add extra fields like input field for the marketplace’s token, or a button to activate a connector’s new feature, for example. To add custom fields in the App:
 
 1. In the folder `react/areas/configArea/customConfigs`, create a file with the field’s **name** and **.tsx** extension.
-Ex. _email.tsx_, _token.tsx_.
+   Ex. *email.tsx*, *token.tsx*.
 
 2. In the file, add the following **code**, replacing the `ExampleComponent` field with the name you wish to give it.
 
@@ -321,12 +322,12 @@ Here’s an example code for adding an input field:
 
 The example above creates an input field called `ExampleComponent`. It uses an extra property, or the `setConfig`, used in this case within the `onChange` property of the Input component. This updates the `email` field in the config, whenever the seller types something within the field. This is how it is rendered in the UI:
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-app-template-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-app-template-1_324.png)
 
 6. To finalize the new field’s inclusion, add the new field within the **CustomConfigsArea**. To do that:
 
-- In the `react/areas/configArea/customConfigs/index.tsx` field, add an **import** to the new component developed.  
-Following the example above: _import ExampleComponent from './example'_
+- In the `react/areas/configArea/customConfigs/index.tsx` field, add an **import** to the new component developed.
+  Following the example above: *import ExampleComponent from './example'*
 - Add the component within the ` ` of `CustomConfigArea`.
 
 [block:code]
@@ -341,11 +342,11 @@ Following the example above: _import ExampleComponent from './example'_
 }
 [/block]
 
-Note that the `CustomConfigArea` in the template does not include `intl`, `config` and `setConfig`. They must be added, like in the example above, depending on which properties are needed. To add more properties, repeat step 3.  
+Note that the `CustomConfigArea` in the template does not include `intl`, `config` and `setConfig`. They must be added, like in the example above, depending on which properties are needed. To add more properties, repeat step 3.
 
 1. If other components are necessary, add them in the `return` object.
 
-The order of components within the `return` affects the order in which components are rendered in the app.  
+The order of components within the `return` affects the order in which components are rendered in the app.
 
 ## Step 3 - Translating a component
 
@@ -385,23 +386,23 @@ To illustrate with an example, let’s suppose we have the following component:
 
 In this case, we have an Input component, type “text”, and its label will be translated according to the VTEX Admin’s locale. If we do not add the id `"admin/app.test.title"` in the `messages` folder, this is what is rendered in the UI:
 
-![Template App 2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-app-template-2.png)
+![Template App 2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-app-template-2_388.png)
 
 Since the id does not exist in any `messages` file, it renders the id itself as a response.
 
 To add the id to the file, we add the code: `“admin/app.test.title”: “Teste no en.json”`. Once the id is rendered in all files, the component will then render:
 
-![Template App 3](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/external-marketplace-integration-app-template-3.png)
+![Template App 3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/external-marketplace-integration-guide/external-marketplace-integration-app-template-3_394.png)
 
 ## Step 4 - Testing the app locally
 
 1. With the app already configured, open a CLI in the project’s **root**.
-2. Login into a test account using the command: `vtex login {{account}}`. Substitute {{account}} by the test account’s _accountName_.
-3. Once logged into the account, use the command `vtex use {{workspace}}` to access a development workspace to link the app. Substitute  _{{workspace}}_ by any name you choose.
+2. Login into a test account using the command: `vtex login {{account}}`. Substitute {{account}} by the test account’s *accountName*.
+3. Once logged into the account, use the command `vtex use {{workspace}}` to access a development workspace to link the app. Substitute  *{{workspace}}* by any name you choose.
 4. Use the command `vtex setup` to adjust IO types and variables based on the values set in the app’s configuration.
 5. Use the command `vtex link` to link the app so it operates on VTEX IO’s infrastructure.
 6. Access the following address:
-`https://{{workspace}}--{{account}}.myvtex.com/admin/{{appVendor}}/{{appName}}` substituting the placeholders for the chosen values in the previous steps.
+   `https://{{workspace}}--{{account}}.myvtex.com/admin/{{appVendor}}/{{appName}}` substituting the placeholders for the chosen values in the previous steps.
 
 ### Collecting the app’s configurations
 
