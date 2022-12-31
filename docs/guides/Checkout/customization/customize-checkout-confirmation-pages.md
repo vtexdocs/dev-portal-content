@@ -10,14 +10,15 @@ All order confirmation information at checkout is available on the Placed Orders
 
 Order Placed page example:
 
-![Página de confirmação de pedido (Order Placed)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/customize-checkout-confirmation-pages-0.png)
+![Página de confirmação de pedido (Order Placed)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-0_13.png)
 
 In the Checkout section, located in the Admin VTEX side menu, you can access one or more websites (stores) registered in your account and perform checkout settings, including UI customization.
 
-By clicking on the `blue gear` button of the chosen website, and selecting the **Code** tab, you will have access to a list of files and templates, where you can edit or import the HTML information. 
->ℹ️ The same files shown in the Code tab are publicly available in the route https://{accountName}.myvtex.com/files/"
-}
-[/block]
+By clicking on the `blue gear` button of the chosen website, and selecting the **Code** tab, you will have access to a list of files and templates, where you can edit or import the HTML information.
+
+> ℹ️ The same files shown in the Code tab are publicly available in the route https\://{accountName}.myvtex.com/files/"
+> }
+> [/block]
 
 ## Edit Information
 
@@ -29,16 +30,16 @@ To edit Checkout confirmation UI information, access the following templates:
 - **checkout-confirmation-top**
 
 Code tab view:
-![Checkout confirmation information codes section](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/customize-checkout-confirmation-pages-1.png)
+![Checkout confirmation information codes section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-1_32.png)
 
 [block:callout]
 {
-  "type": "warning",
-  "body": "It is important to note that any customization performed on the templates will be applied to both pages at the same time (Order Placed and Order Confirmation)."
+"type": "warning",
+"body": "It is important to note that any customization performed on the templates will be applied to both pages at the same time (Order Placed and Order Confirmation)."
 }
 [/block]
 Template areas on the page:
-![Página de confirmação de pedido com imports de HTML](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/customize-checkout-confirmation-pages-2.png)
+![Página de confirmação de pedido com imports de HTML](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-2_41.png)
 
 ## Customizing styles
 
@@ -46,17 +47,17 @@ You can also edit the Checkout Confirmation interface via CSS classes. Your styl
 
 CSS class areas on the page:
 
-![Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/customize-checkout-confirmation-pages-3.png)
+![Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-3_49.png)
 
 To customize the Checkout Confirmation styles, use the following classes:
-[block:code]
+\[block:code]
 {
-  "codes": [
-    {
-      "code": ".cconf-alert // Confirmation alert\n.cconf-client-email // Element that carries customer's email\n.cconf-address // Card with order address\n.cconf-payment // Card with payment method\n.cconf-summary // Card with order summary\n.cconf-product-table // Table with product's orders\n.cconf-product // Table's line with order\n.cconf-continue-button // Button leading back to the store",
-      "language": "css"
-    }
-  ]
+"codes": \[
+{
+"code": ".cconf-alert // Confirmation alert\n.cconf-client-email // Element that carries customer's email\n.cconf-address // Card with order address\n.cconf-payment // Card with payment method\n.cconf-summary // Card with order summary\n.cconf-product-table // Table with product's orders\n.cconf-product // Table's line with order\n.cconf-continue-button // Button leading back to the store",
+"language": "css"
+}
+]
 }
 [/block]
 
