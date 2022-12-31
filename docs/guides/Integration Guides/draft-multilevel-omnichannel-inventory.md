@@ -28,7 +28,7 @@ When a store sells its products in a marketplace, we have a one-level relationsh
 
 Stores that have white label sellers and franchises are marketplaces to those accounts. But they can also be connected to external marketplaces, becoming sellers themselves. In this case, we have a three level architecture, as illustrated in the image below.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/draft-multilevel-omnichannel-inventory-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/draft-multilevel-omnichannel-inventory-0_31.png)
 
 - **Marketplace (level 1):** storefront where the product is sold and order is placed.
 - **Direct seller (level 2):** main account, integrated to the marketplace level 1. Serves as a marketplace for white label sellers, franchise accounts and physical stores connected to it.
@@ -84,7 +84,7 @@ Therefore, chain orders in direct seller have characteristics that come from bot
 Check out the order flow for chain orders in the image below:
 
 ​
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/draft-multilevel-omnichannel-inventory-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/draft-multilevel-omnichannel-inventory-1_87.png)
 The order flow seen by the level 2 store in a Multilevel Omnichannel Inventory is similar to the marketplace order flow, except for receiving the payment for orders. In the Payment pending stage, instead of the chain receiving payment directly from the gateway, the marketplace informs the chain it has received the payment confirmation.
 
 ## Initial setup
@@ -109,7 +109,7 @@ https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{a
 
 - **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data)) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
 
-![Chain Order Flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/draft-multilevel-omnichannel-inventory-2.png)
+![Chain Order Flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/draft-multilevel-omnichannel-inventory-2_112.png)
 
 ## API Integration
 
