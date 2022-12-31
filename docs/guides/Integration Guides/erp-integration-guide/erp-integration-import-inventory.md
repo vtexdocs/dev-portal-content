@@ -14,7 +14,7 @@ The Logistics module is the service responsible for the inventory and shipping i
 
 A basic concept here is that of a **logistics route**, the path connecting your store to the customer. For an order to be placed in a store, the desired item should have stock available in at least one [warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) connected through a [loading dock](https://help.vtex.com/en/tutorial/loading-dock--5DY8xHEjOLYDVL41Urd5qj) to a freight [carrier](https://help.vtex.com/en/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE) that delivers to the customer's address. The image below illustrates these concepts.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-import-inventory-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/erp-integration-guide/erp-integration-import-inventory-0_17.png)
 
 If you would like an introduction to our Logistics module, check out the [Logistics overview](https://help.vtex.com/en/tutorial/logistics--53udnvI5eBy8DKo8FOjMoP) in our Help Center.
 
@@ -28,7 +28,7 @@ If you have a small quantity of warehouses to manage, this can be done with the 
 
 To update an SKU inventory, you should use the [Update Inventory By SKU and Warehouse](https://developers.vtex.com/vtex-rest-api/reference/updateinventorybyskuandwarehouse) endpoint, from the Logistics API.
 
->ℹ️ You can find the `warehouseId` for each Warehouse using the [List All Warehouses](https://developers.vtex.com/vtex-rest-api/reference/allwarehouses) endpoint.
+> ℹ️ You can find the `warehouseId` for each Warehouse using the [List All Warehouses](https://developers.vtex.com/vtex-rest-api/reference/allwarehouses) endpoint.
 
 You should set the total quantity of items in stock for each SKU. In between steps, you can use the [List Inventory By SKU](https://developers.vtex.com/vtex-rest-api/reference/inventorybysku) endpoint or see how you can [Manage inventory](https://help.vtex.com/pt/tutorial/gerenciar-itens-em-estoque--tutorials_139) from your Admin panel.
 

@@ -14,11 +14,11 @@ When an order is processed in an external fulfillment platform such as an ERP or
 
 During handling an order can be [changed](https://help.vtex.com/tutorial/change-making-changes-to-an-order--3d1XLIgPQcwaKGyMiWaYog?locale=en), [cancelled](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/4ts2ItvjYo8wm5gg76miS3) or [invoiced](https://help.vtex.com/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/2WgQrlHTyVo4hLjhUs1LMT). These events should be notified as illustrated in the diagram below.
 
-![Order processing flowchart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-set-up-order-processing-0.png)
+![Order processing flowchart](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/erp-integration-guide/erp-integration-set-up-order-processing-0_17.png)
 
 If your freight carrier is integrated with VTEX, all you need to do is inform its identifier and tracking number when invoicing the order and order tracking information will be set up. Otherwise you should add the order tracking updates you want customers to see separately, as seen in the diagram below.
 
-![Order tracking flowchart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-set-up-order-processing-1.png)
+![Order tracking flowchart](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/erp-integration-guide/erp-integration-set-up-order-processing-1_21.png)
 
 ## Change order
 
@@ -36,7 +36,7 @@ To learn how to implement this in your integration, check the [Change seller int
 
 The [Cancel order](https://developers.vtex.com/vtex-rest-api/reference/cancelorder) endpoint in the Orders API allows you to cancel an order. Optionally, you can add more information by creating a note in the order timeline using the [Create note](https://developers.vtex.com/vtex-rest-api/reference/newnote) endpoint in the VTEX DO API.
 
-The order cancellation can be confirmed through the orders feed 
+The order cancellation can be confirmed through the orders feed.
 
 [block:callout]
 {
@@ -44,6 +44,7 @@ The order cancellation can be confirmed through the orders feed
   "body": "Keep in mind that the OMS [order flow](https://help.vtex.com/tutorial/order-flow-on-the-oms--tutorials_196) does not allow an order to be cancelled after it has been invoiced and that order cancellations cannot be reversed."
 }
 [/block]
+
 ## Invoice order
 
 The [Order Invoice Notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification) endpoint in the Orders API allows you to notify VTEX that you are ready to ship the order and add invoice information to the order.
@@ -53,15 +54,14 @@ The [Order Invoice Notification](https://developers.vtex.com/vtex-rest-api/refer
   "body": "Note that invoice information includes tracking number and URL. However this is not required to send the invoice to VTEX. It may be added later."
 }
 [/block]
+
 ## Order tracking
 
 Order tracking information is directly related to an order's invoice. An order's tracking number and URL may be sent to VTEX when [first invoicing an order](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification), or later, with the [Update order's partial invoice API request](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber).
 
-
 ### Tracking messages
 
 Once an order was invoiced and has their tracking number and URL, if the designated carrier is integrated with VTEX, VTEX can log tracking messages and send them to your customers. If your freight carrier is not integrated with VTEX, you should add the tracking messages using the [Update order tracking status](https://developers.vtex.com/vtex-rest-api/reference/updatetrackingstatus) endpoint of the Orders API.
-
 
 ## Wrapping up
 

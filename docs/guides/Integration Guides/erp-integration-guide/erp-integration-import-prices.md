@@ -16,20 +16,20 @@ As mentioned in the [Import products](https://developers.vtex.com/docs/erp-integ
 
 It’s also important to understand our [Pricing system architecture](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/7GptzvlPDVM11ojEjywIQx), based on three basic concepts:
 
-  - **Prices**: the amount of money for which SKUs are listed for sale
-  - **Price Tables**: a container that stores prices that should be applied in a given context
-  - **Price Table Context**: conditions for application of a price table, such as a trade policy
+- **Prices**: the amount of money for which SKUs are listed for sale
+- **Price Tables**: a container that stores prices that should be applied in a given context
+- **Price Table Context**: conditions for application of a price table, such as a trade policy
 
 Also, given a specific Price Table is selected according to the context, there are some definitions that should be known to understand the [computed price](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/7GptzvlPDVM11ojEjywIQx#computed-price):
 
-  - **List price**: value displayed as the suggested retail price proposed by the supplier
-  - **Base price**: reference value for the computed price of an SKU in all contexts
-  - **Computed price**: retail price after applying the [price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) of a specific context
-  - **Fixed price**: fixed value that overrides the computed price for an SKU in a price table
+- **List price**: value displayed as the suggested retail price proposed by the supplier
+- **Base price**: reference value for the computed price of an SKU in all contexts
+- **Computed price**: retail price after applying the [price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) of a specific context
+- **Fixed price**: fixed value that overrides the computed price for an SKU in a price table
 
-![The computed Price is obtained from the application of price rules on a base price](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-import-prices-0.png)
+![The computed Price is obtained from the application of price rules on a base price](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/erp-integration-guide/erp-integration-import-prices-0_30.png)
 
-![A fixed price overrides the computed price for an SKU in a price table](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/erp-integration-import-prices-1.png)
+![A fixed price overrides the computed price for an SKU in a price table](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/erp-integration-guide/erp-integration-import-prices-1_32.png)
 
 So if you decide not to use price rules to compute your prices in VTEX, the way to do it is to send a single **base price** for each SKU sent by your ERP and set multiple **fixed prices** as needed to differentiate the value charged for each trade policy. If you would like a conceptual overview of our Pricing module, check out the [beginner track](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP) in our Help Center.
 
@@ -39,7 +39,7 @@ To set the base price for an SKU, you should use the [Create/Edit Price](https:/
 
 You should set a base price for each SKU. In between steps, you can use the [Get Price](https://developers.vtex.com/vtex-rest-api/reference/getprice) endpoint or visit the *Products > Prices > Price list* section of your Admin panel to check on your progress.
 
->ℹ️ In the same [Create/Edit Price](https://developers.vtex.com/vtex-rest-api/reference/getprice) request, you may optionally set a list price. Additionally, you may set either a cost price or a markup value. By defining either one of them, the other will be calculated to conform to the formula `basePrice = costPrice * (1 + markup)`.
+> ℹ️ In the same [Create/Edit Price](https://developers.vtex.com/vtex-rest-api/reference/getprice) request, you may optionally set a list price. Additionally, you may set either a cost price or a markup value. By defining either one of them, the other will be calculated to conform to the formula `basePrice = costPrice * (1 + markup)`.
 
 ## Set fixed prices for specific contexts
 
@@ -54,7 +54,7 @@ You should set a fixed price for each price table / SKU combination that needs t
 }
 [/block]
 
->ℹ️ Keep in mind that [price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) might be a better option than fixed prices if you are consistently applying the same criteria for SKUs in the same category, brand or markup range.
+> ℹ️ Keep in mind that [price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) might be a better option than fixed prices if you are consistently applying the same criteria for SKUs in the same category, brand or markup range.
 
 ## Wrapping up
 
