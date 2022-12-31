@@ -10,7 +10,7 @@ The category tree is the backbone of the Catalog, so it needs to be carefully pl
 
 We strongly recommend starting to work on the category tree by creating a table similar to this one:
 
-![Category tree table example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/categories-0.PNG)
+![Category tree table example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/catalog-integration/categories-0_13.PNG)
 
 The idea behind this template is to allow easy visualization of how the tree is organized and how the specifications are being presented.
 

@@ -36,7 +36,7 @@ VTEX Catalog architecture also includes specifications, which are a category’s
 Such specifications are, for example, SKU voltage, size, or color.
 
 An example of a VTEX Catalog architecture blueprint is found below:
-![VTEX Catalog architecture example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/catalog-integration-0.png)
+![VTEX Catalog architecture example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/catalog-integration-0_39.png)
 
 ## Integration flow
 

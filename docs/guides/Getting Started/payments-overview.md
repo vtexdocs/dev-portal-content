@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-04-28T21:34:56.911Z"
 updatedAt: "2022-09-29T21:05:13.444Z"
 ---
+
 [block:html]
 {
   "html": "<style>\n    .markdown-body .callout[theme=\"📣\"] {\n    --icon: \"\\f0a1\";\n    --icon-color: #142032;\n    --border: #142032;\n    --background: #f8f7fc;\n    --text: #4a596b;\n    }\n  </style>\n  <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n    <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n      <p>\n      Tell us about your experience with this article by filling out <button style=\"background-color:transparent;color:#f71963;text-decoration:underline;border:none;padding:0;cursor:pointer;font-size: var(--markdown-font-size,14px);\" onclick=\"closeModal()\">this form.</button>\n      </p>\n  </blockquote>"
@@ -61,8 +62,8 @@ Payment providers can implement their integrations using our [Payment Provider P
 Below there are the steps you usually need to follow to implement an integration:
 
 1. If your integration supports credit, debit or co-branded cards, before start developing, you have to assure that your payment connector follows one of these conditions:
-    - The connector is hosted in a secure environment that follows the [PCI - DSS security standards](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-pci-dss-compliance). An Attestation of Compliance (AOC) is required in this case.
-    - The connector is developed by using [Secure Proxy](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-secure-proxy), where it receives tokens instead of sensitive data related to the card transaction, and the Gateway acts as a proxy to communicate with the acquirer.
+   - The connector is hosted in a secure environment that follows the [PCI - DSS security standards](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-pci-dss-compliance). An Attestation of Compliance (AOC) is required in this case.
+   - The connector is developed by using [Secure Proxy](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-secure-proxy), where it receives tokens instead of sensitive data related to the card transaction, and the Gateway acts as a proxy to communicate with the acquirer.
 2. Implement your payment connector according to our [Payment Provider Protocol](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-protocol). This includes all the required [endpoints](https://developers.vtex.com/vtex-rest-api/reference/payment-provider-protocol-api-overview). All the payment methods supported by your integration will have to be listed in the response of the [List Payment Provider Manifest](https://developers.vtex.com/vtex-developer-docs/reference/manifest-1) endpoint. Also, for each payment method, you will have to implement a specific behavior for the [Create Payment](https://developers.vtex.com/vtex-developer-docs/reference/createpayment) endpoint.
 3. Install your connector in a store and perform the [homologation step](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-homologation). Here you will test each endpoint of your connector using the [Payment Provider Test Suite app](https://apps.vtex.com/vtex-payment-provider-test-suite/p).
 4. After your connector passes all the tests, [open a ticket](https://help.vtex.com/en/support) so our team can carry out the homologation process.
@@ -78,6 +79,6 @@ When developing a payment integration, you might need to add specific features. 
 - [Cardholder document configuration](https://developers.vtex.com/vtex-rest-api/docs/cardholder-document-configuration)
 - [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/vtex-rest-api/docs/layout-development-guide-for-payment-methods-in-smart-checkout-vtex)
 
-![Payment layout customization example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-overview-0.gif)
+![Payment layout customization example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/payments-overview-0_81.gif)
 
-![Payment App example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/payments-overview-1.gif)
+![Payment App example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/payments-overview-1_83.gif)

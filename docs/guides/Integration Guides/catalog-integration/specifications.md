@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2021-12-14T13:38:45.386Z"
 updatedAt: "2022-02-03T20:15:19.310Z"
 ---
+
 Specifications are additional properties that can be added to your store's products or SKUs. A specification is used to create site browsing filters and to differentiate SKUs and products within the product page.
 
 Here we take a look at some of the integration aspects of specifications, but we recommend you also check this detailed step by step guide on [How to create a specification](https://developers.vtex.com/vtex-rest-api/docs/how-to-create-a-specification).
@@ -321,6 +322,7 @@ Body:
   "body": "If the `CategoryId` field is null, the field will be created in the root category."
 }
 [/block]
+
 Response:
 
 ```json
@@ -350,7 +352,7 @@ After creating the specification fields, if the `FieldTypeId` is `5`, `6` or `7`
 
 Those values will be shown on product register page like this one:
 
-![Product register page example with specification](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/specifications-0.png)
+![Product register page example with specification](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/catalog-integration/specifications-0_353.png)
 
 ### Specification values data model
 
