@@ -10,9 +10,7 @@ To enhance security for outgoing email and improve deliverability, the [DKIM](ht
 
 This article explains how to use the Message Center API to generate DKIM keys that can be stored in your DNS provider, so that all transactional emails sent by VTEX can be recognized as legitimate.
 
-> 📘
->
-> These instructions only apply if the [sender](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/42LVaxtFb2VHX9xTZU58qC) is set up using VTEX mail servers. If you are using your own SMTP provider, you need to configure DKIM in your mail server.
+> ℹ️ These instructions only apply if the [sender](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/42LVaxtFb2VHX9xTZU58qC) is set up using VTEX mail servers. If you are using your own SMTP provider, you need to configure DKIM in your mail server.
 
 ## DKIM endpoint
 
@@ -55,9 +53,7 @@ After clicking on ✅**Test** button, you should receive an e-mail from the VTEX
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/api-guides/setting-up-dkim-for-transactional-emails-2_55.png)
 
-> 🚧
->
-> If you don't receive any messages, review your sender configuration and try again.
+> ⚠️ If you don't receive any messages, review your sender configuration and try again.
 
 Once you have correctly set up a sender in Message Center using VTEX mail servers, you should get a response similar to the one below from the DKIM endpoint:
 
