@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2021-05-20T19:03:41.334Z"
 updatedAt: "2022-02-03T13:51:02.316Z"
 ---
+
 The Promotion Alerts is a feature that sets alarms to trigger actions when certain products are sold with undesired prices and promotions. It will allow you to set conditions that check if the prices and the promotions are correct. If not, the system will also generate an alert with information about the product sold at unexpected prices.
 
 This guide will describe all the steps to [create](#creating-a-promotion-alert), [update](#updating-a-promotion-alert), and [delete](#deleting-a-promotion-alert) a Promotion Alert.
@@ -57,7 +58,7 @@ For sending emails
 }
 [/block]
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/using-policy-engine-api-on-promotion-alerts-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Promotions/using-policy-engine-api-on-promotion-alerts-0_60.png)
 For deactivating the promotions
 [block:code]
 {
