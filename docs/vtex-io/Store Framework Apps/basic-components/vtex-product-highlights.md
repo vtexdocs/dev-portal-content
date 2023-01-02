@@ -177,26 +177,3 @@ To apply CSS customization in this and other blocks, follow the instructions giv
 | `data-highlight-id`   |
 | `data-highlight-type` |
 
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/igor-becker-73b7901a3/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-highlights-1.png">💻</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->
