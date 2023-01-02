@@ -188,7 +188,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/igor-becker-73b7901a3/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-highlights-1.png">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/igor-becker-73b7901a3/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-highlights-1.png"></img></a></td>
   </tr>
 </table>
 
