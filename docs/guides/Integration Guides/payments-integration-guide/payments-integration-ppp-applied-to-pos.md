@@ -18,6 +18,13 @@ For payment partners to integrate their solutions for payments using a POS, ther
 - If needed for testing, have a device with the [inStore app installed](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh).
 - Developers might want to create their Payment App to identify the POS. This app will also have to be installed in the store.
 
+[block:callout]
+{
+  "type": "warning",
+  "body": "To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites)."
+}
+[/block]
+
 ## Payment connector pre-requisites
 
 There are some steps needed for the connector to be able to process payments in the physical world, which are described below:
