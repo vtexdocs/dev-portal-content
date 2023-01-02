@@ -11,3 +11,5 @@ This resource enables us to increase the range of payment methods and partner op
 It is important to mention that integration is only possible if the store or the partner fulfills some criteria. 
 
 Our protocol is composed of nine endpoints, all public and documented in the Developer Portal. To check more details about each one of them, go to the [Payment Provider Protocol API overview page](https://developers.vtex.com/vtex-developer-docs/reference/payment-provider-protocol-api-overview). More information about the integration steps can be found in the [correspondent Help Center article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m).
+
+>⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
