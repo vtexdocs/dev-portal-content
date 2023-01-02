@@ -12,7 +12,15 @@ updatedAt: "2022-05-19T17:46:05.176Z"
   "body": "This feature is in beta, which means that we are working to improve it. We do not recommend the use of this Beta version of PPF for connectors related to stores with a rollout date close (less than 3 months)."
 }
 [/block]
+
 Payment Provider Framework (PPF) is an alternative way to develop payment connectors for your integration through VTEX IO. Since the development is based on a boilerplate of an IO app, a lot of the work is already done to implement the needed feature including the [API routes](https://developers.vtex.com/vtex-rest-api/reference/payment-provider-protocol-api-overview), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-secure-proxy). With PPF, developers also do not need to worry about hosting the connector since it is hosted on the IO infrastructure.
+
+[block:callout]
+{
+  "type": "warning",
+  "body": "To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites)."
+}
+[/block]
 
 ## Getting started
 
@@ -86,7 +94,7 @@ class YourPaymentConnector extends PaymentProvider {
 }
 ```
 
-Typescript should automatically check for typing errors, but if you need, you can check the requests and responses signatures from the [Payment Flow endpoints in our API Reference](https://developers.vtex.com/vtex-developer-docs/reference/payment-flow).
+Typescript should automatically check for typing errors, but if you need, you can check the requests and responses signatures from the [Payment Flow endpoints in our API Reference](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/payment-methods).
 
 ### Payment Provider builder
 
