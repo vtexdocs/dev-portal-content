@@ -81,4 +81,4 @@ When developing a payment integration, you might need to add specific features. 
 
 ![Payment layout customization example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/payments-overview-0_81.gif)
 
-![Payment App example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/payments-overview-1_83.gif)
+![Payment App example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/payments-overview-1_83.gif)
