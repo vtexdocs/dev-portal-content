@@ -378,7 +378,7 @@ Text link
 </td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>
 Name of brand
 </td></tr><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Title used by html tag
+  Title used by html tag</td>
 </td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a></td><td>
 Description used by html tag
 </td></tr><tr><td colspan="2" valign="top"><strong>active</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>
