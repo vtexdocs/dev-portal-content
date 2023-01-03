@@ -52,7 +52,7 @@ To customize the Checkout Confirmation styles, use the following classes:
 
 [block:code]
 {
-"codes": \[
+"codes": [
 {
 "code": ".cconf-alert // Confirmation alert\n.cconf-client-email // Element that carries customer's email\n.cconf-address // Card with order address\n.cconf-payment // Card with payment method\n.cconf-summary // Card with order summary\n.cconf-product-table // Table with product's orders\n.cconf-product // Table's line with order\n.cconf-continue-button // Button leading back to the store",
 "language": "css"
