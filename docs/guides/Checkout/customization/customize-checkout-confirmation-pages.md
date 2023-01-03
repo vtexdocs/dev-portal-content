@@ -16,9 +16,7 @@ In the Checkout section, located in the Admin VTEX side menu, you can access one
 
 By clicking on the `blue gear` button of the chosen website, and selecting the **Code** tab, you will have access to a list of files and templates, where you can edit or import the HTML information.
 
-> ℹ️ The same files shown in the Code tab are publicly available in the route https\://{accountName}.myvtex.com/files/"
-> }
-> [/block]
+> ℹ️ The same files shown in the Code tab are publicly available in the route `https://{accountName}.myvtex.com/files/`.
 
 ## Edit Information
 
@@ -38,6 +36,7 @@ Code tab view:
 "body": "It is important to note that any customization performed on the templates will be applied to both pages at the same time (Order Placed and Order Confirmation)."
 }
 [/block]
+
 Template areas on the page:
 ![Página de confirmação de pedido com imports de HTML](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-2_41.png)
 
@@ -50,7 +49,8 @@ CSS class areas on the page:
 ![Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-3_49.png)
 
 To customize the Checkout Confirmation styles, use the following classes:
-\[block:code]
+
+[block:code]
 {
 "codes": \[
 {
