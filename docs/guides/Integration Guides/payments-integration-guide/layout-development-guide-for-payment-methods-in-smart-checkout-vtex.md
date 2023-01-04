@@ -175,5 +175,7 @@ See below an example of layout and language switching ([Brastemp](http://loja.br
 ### Reference Links
 
 [GitHub - Payment Mocker - HTML](https://github.com/vtex/payment-mocker/blob/master/src/partials/payment.html)
+
 [GitHub - Payment Mocker - CSS](https://github.com/vtex/payment-mocker/blob/master/src/assets/css/less/style.less)
+
 [GitHub - Payment Mocker - Internationalization](https://github.com/vtex/payment-mocker/tree/master/src/i18n)
