@@ -11,3 +11,11 @@ The [Seller Portal](https://help.vtex.com/en/tutorial/seller-portal-primeiros-pa
 That selection is possible because Seller Portal is actually a VTEX IO app. All pages available on the Seller Portal are declared in an Edition App, built using VTEX IO. This means that all sellers added to the marketplace’s Seller Portal, will see the same experience, which is defined in the edition app.
 
 In this guide, we will go over some key concepts around the Edition App’s architecture and point out how marketplaces can configure their own Edition App, to create a customized Seller Portal.
+
+## App sponsor
+
+Every Seller Portal account is created from a VTEX IO Edition App, which is defined by its **sponsor**. The sponsor is the entity responsible for defining which pages will be included in that edition. In the code, they are defined as the app’s vendor. The `vendor` field represents the sponsor and the `name` field, the seller’s edition app.
+
+> ℹ️ It is not possible to create edition apps without a VTEX account as the sponsor.
+
+Two entities can become an Edition app’s sponsor: VTEX or a VTEX marketplace.
