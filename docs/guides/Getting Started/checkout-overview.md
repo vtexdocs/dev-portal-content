@@ -139,7 +139,7 @@ At VTEX checkout, some features are activated through apps. See the links below 
 <br>
 Hotjar heatmap example:
 
-![](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Checkout/Hotjar_example_Dev_Guide_1.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Hotjar_example_Dev_Guide_1.png)
 
 <br>
 
