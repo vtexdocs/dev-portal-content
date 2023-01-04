@@ -79,10 +79,9 @@ To configure your Edition app, follow these steps:
 
 If you don't have VTEX Toolbelt installed, you can also clone it manually:
 
-```sh
-git clone https://github.com/vtex/edition-hello edition-hello
-cd edition-hello
-```
+ `git clone https://github.com/vtex/edition-hello edition-hello`
+
+ `cd edition-hello`
 
 ### Defining the Manifest
 
