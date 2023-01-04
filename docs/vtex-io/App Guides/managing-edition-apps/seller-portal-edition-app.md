@@ -60,7 +60,7 @@ Once VTEX’s edition is declared as a dependency, you can add your own desired 
   "dependencies": {
     "vtex.edition-seller": "0.x"
   },
-  }
+}
 ```
 
 Every **Edition App** has a **dependency** declared, which imports pages from another edition app.
