@@ -16,13 +16,6 @@ In this guide, we will go over some key concepts around the Edition App’s arch
 
 Every Seller Portal account is created from a VTEX IO Edition App, which is defined by its **sponsor**. The sponsor is the entity responsible for defining which pages will be included in that edition. In the code, they are defined as the app’s vendor. The `vendor` field represents the sponsor and the `name` field, the seller’s edition app.
 
-<!-- ```json
-{
-  "vendor": "vtex",
-  "name": "edition-seller",
-}
-``` -->
-
 > ℹ️ It is not possible to create edition apps without a VTEX account as the sponsor.
 
 Two entities can become an Edition app’s sponsor: VTEX or a VTEX marketplace.
@@ -54,14 +47,6 @@ The edition app sponsored by the marketplace should become the app’s sponsor a
 Making VTEX’s edition app a `dependency` automatically includes all of VTEX’s default pages, updates and bug fixes. In this way, you don’t have to manually include all apps in the default experience, they can just import what is in VTEX’s edition.
 
 Once VTEX’s edition is declared as a dependency, you can add your own desired pages in the edition/apps.json file.
-
-<!-- ```json
-{
-  "dependencies": {
-    "vtex.edition-seller": "0.x"
-  },
-}
-``` -->
 
 Every **Edition App** has a **dependency** declared, which imports pages from another edition app.
 
@@ -103,26 +88,9 @@ After cloning the repository, follow the instructions below to configure your ap
 
 After configuring your manifest, you can specify apps to be installed in the sub-accounts that have this edition configured. You do that through the `edition/apps.json` file, adding an entry to the object under the `apps` key in the format:
 
-<!-- ```json
-{
-  "<vendor>.<name>": {
-    "major": "<desired major>",
-    "settings": "<initial settings>"
-  },
-}
-``` -->
-
 The settings are optional and can be omitted, but they will define the initial settings that should be configured for the app when it is installed through the current edition.
 
 E.g.: The contents of the `apps.json` file could be:
-
-<!-- ```json
-{
-  "apps": {
-    "vtex.node-getting-started": { "major": 0 }
-  }
-}
-``` -->
 
 ### Testing
 
@@ -152,43 +120,9 @@ The **MKPSeller** has created an edition app, based on our default, **vtex.editi
 
 They declare the default edition that VTEX has sponsored, or vtex.edition-seller as a dependency on their app’s code. This action automatically imports all the default Seller Portal apps to their edition app
 
-<!-- ```json
-{
- "vendor": "mkpseller",
- "name": "edition-seller",
- "version": "0.1.0",
- "title": "MKP Seller edition apps",
- "description": "VTEX IO edition for seller accounts",
- "builders": {
-   "edition": "0.x"
- },
- "dependencies": {
-   "vtex.edition-seller": "0.x"
- },
- "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
-}
-``` -->
-
 Meanwhile, **Cosmetics2** also wants to create an edition app, copying **MKPseller’s** edition, since they came to the conclusion that **MKPseller's** edition fits all their needs.
 
 Instead of creating an edition app and manually adding the desired custom pages one by one, they can simply create their app, and declare **MKPSeller's** edition as a dependency.
-
-<!-- ```json
-{
- "vendor": "cosmetics2",
- "name": "edition-seller",
- "version": "0.1.0",
- "title": "Cosmetics2 edition apps",
- "description": "VTEX IO edition for seller accounts",
- "builders": {
-   "edition": "0.x"
- },
- "dependencies": {
-   "mkpseller.edition-seller": "0.x"
- },
- "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
-}
-``` -->
 
 For the dependency to work, **MKPSeller** must be **Cosmetics2** app’s sponsor. This means that **Cosmetics2** has an edition belonging to **MKPSeller** associated to it.
 
