@@ -150,18 +150,6 @@ To do so, check out the example below:
 
 <br>
 
-<!-- [block:code]
-{
-  "codes": [
-
-    {
-      "code": "  \"header-layout.desktop\": {\n    \"children\": [\n+     \"affiliate-url-monitoring\",\n      \"flex-layout.row#1-desktop\",\n      \"flex-layout.row#3-desktop\",\n    ]\n  },\n\n    \"header-layout.mobile\": {\n    \"children\": [\n+     \"affiliate-url-monitoring\",\n      \"flex-layout.row#1-desktop\",\n    ]\n  }",
-      "language": "json"
-    }
-
-  ]
-}
-[/block] -->
 
 <br>
 
@@ -251,50 +239,17 @@ To customize these pages, follow the steps below:
 <br>
 
 **store.affiliates**
-<!-- [block:code]
-{
-  "codes": [
 
-    {
-      "code": "{\n  \"store.affiliates\": {\n    \"blocks\": [\"affiliate-validator\"]\n  },\n\n  \"affiliate-validator\": {\n    \"props\": {\n      \"Valid\": \"affiliate-template\",\n      \"Invalid\": \"affiliate-invalid-template\"\n    }\n  },\n\n    \"affiliate-template\": {\n    \"children\": [\n      \"affiliate-store-name\",\n      \"flex-layout.row#banner\",\n      \"affiliate-profile-button\",\n      \"search-result-layout.customQuery#affiliate\"\n    ]\n  },\n\n  \"flex-layout.row#banner\": {\n    \"children\": [\"image#affiliate-banner\"]\n  },\n\n  \"image#affiliate-banner\": {\n    \"props\": {\n      \"src\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/VTEX_Logo.svg/400px-VTEX_Logo.svg.png\"\n    }\n  },\n\n  \"search-result-layout.customQuery#affiliate\": {\n    \"props\": {\n      \"querySchema\": {\n        \"skusFilter\": \"ALL_AVAILABLE\",\n        \"simulationBehavior\": \"default\",\n        \"queryField\": \"137\",\n        \"mapField\": \"productClusterIds\",\n        \"facetsBehavior\": \"Dynamic\"\n      }\n    },\n    \"blocks\": [\n      \"search-result-layout.desktop\",\n      \"search-result-layout.mobile\",\n      \"search-not-found-layout\"\n    ]\n  }, \n\n  \"affiliate-invalid-template\": {\n    \"children\": [\"rich-text#invalid-affiliate\"]\n  },\n\n  \"rich-text#invalid-affiliate\": {\n    \"props\": {\n      \"textAlignment\": \"CENTER\",\n      \"textPosition\": \"CENTER\",\n      \"text\": \"**Affiliate does not exist or has not been approved**\",\n      \"font\": \"t-heading-1\"\n    }\n  }\n\n\n}",
-      "language": "json"
-    }
-
-  ]
-}
-[/block] -->
 
 <br>
 
 **store.affiliates-profile**
-<!-- [block:code]
-{
-  "codes": [
 
-    {
-      "code": "{\n  \"store.affiliates-profile\": {\n    \"children\": [\"affiliate-profile\"]\n  },\n\n  \"affiliate-profile\": {\n    \"children\": [\"affiliate-profile-topbar\", \"affiliate-profile-validator\"]\n  },\n\n  \"affiliate-profile-validator\": {\n    \"props\": {\n      \"Valid\": \"flex-layout.row#profile\",\n      \"Invalid\": \"rich-text#profileerror\"\n    }\n  },\n\n  \"rich-text#profileerror\": {\n    \"props\": {\n      \"text\": \"### Faça o login com a conta correta do afiliado para acessar as informações\",\n      \"textAlignment\": \"CENTER\",\n      \"textPosition\": \"CENTER\"\n    }\n  },\n\n  \"flex-layout.row#profile\": {\n    \"children\": [\"flex-layout.col#profile\"]\n  },\n\n  \"flex-layout.col#profile\": {\n    \"children\": [\n      \"affiliate-profile-title\",\n      \"affiliate-profile-totalizer\",\n      \"affiliate-profile-table\"\n    ]\n  },\n\n}",
-      "language": "json"
-    }
-
-  ]
-}
-[/block] -->
 
 <br>
 
 **store.affiliate-form**
-<!-- [block:code]
-{
-  "codes": [
 
-    {
-      "code": "{\n  \"store.affiliate-form\": {\n    \"children\": [\"affiliate-form\"]\n  }\n}",
-      "language": "json"
-    }
-
-  ]
-}
-[/block] -->
 
 <br>
 
