@@ -87,9 +87,6 @@ If you don't have VTEX Toolbelt installed, you can also clone it manually:
 
 After cloning the repository, follow the instructions below to configure your app:
 
-1. In the `manifest.json`, change the `name` to your preferred choice.
-By standard, VTEX adopts the `edition-seller-` prefix in all edition apps.
-2. Change the `vendor` field to your store’s account name, to become the app’s sponsor`.
-Make sure you request through VTEX Support that your store is enabled to become the app’s sponsor.
-3. Set the appropriate parent edition in the `dependencies` field.
-The dependency must be published by the vendor's sponsor.
+1. In the `manifest.json`, change the `name` to your preferred choice. By standard, VTEX adopts the `edition-seller-` prefix in all edition apps.
+2. Change the `vendor` field to your store’s account name, to become the app’s sponsor`. Make sure you request through VTEX Support that your store is enabled to become the app’s sponsor.
+3. Set the appropriate parent edition in the `dependencies` field. The dependency must be published by the vendor's sponsor.
