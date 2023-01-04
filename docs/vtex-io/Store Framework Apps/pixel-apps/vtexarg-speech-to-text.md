@@ -75,7 +75,7 @@ Thanks goes to these wonderful people:
 [Fabricio Vagliente](https://github.com/Favri)
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-speech-to-text-1.png">💻</a></td>
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-speech-to-text-1.png"></img></a></td>
   </tr>
 </table>
 

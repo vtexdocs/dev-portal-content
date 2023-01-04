@@ -248,8 +248,8 @@ Thanks goes out to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/LucasCastroAcctGlobal"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-1.png">💻</a></td>
-    <td align="center"><a href="https://github.com/vini-lima-acct"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-2.png">💻</a></td>
+    <td align="center"><a href="https://github.com/LucasCastroAcctGlobal"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-1.png"></img></a></td>
+    <td align="center"><a href="https://github.com/vini-lima-acct"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-2.png"></img></a></td>
   </tr>
 </table>
 

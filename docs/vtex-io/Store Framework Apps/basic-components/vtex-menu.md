@@ -218,7 +218,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="http://giovanapereira.com.br/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-menu-1.png">💻</a></td></tr></table>
+<table><tr><td align="center"><a href="http://giovanapereira.com.br/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-menu-1.png"></img></a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

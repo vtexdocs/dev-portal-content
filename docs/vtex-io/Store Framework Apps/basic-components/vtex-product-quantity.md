@@ -99,7 +99,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/regis-samurai"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-quantity-1.png">💻</a></td>
+    <td align="center"><a href="https://github.com/regis-samurai"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-quantity-1.png"></img></a></td>
   </tr>
 </table>
 

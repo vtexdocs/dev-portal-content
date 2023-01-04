@@ -68,8 +68,8 @@ To apply CSS customizations in this and other blocks, follow the instructions gi
 Thanks goes to these wonderful people:
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/germanBonacchi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-quantity-on-cart-1.png">💻</a></td>
-    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-quantity-on-cart-2.png">💻</a></td>
+    <td align="center"><a href="https://github.com/germanBonacchi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-quantity-on-cart-1.png"></img></a></td>
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-quantity-on-cart-2.png"></img></a></td>
   </tr>
 </table>
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

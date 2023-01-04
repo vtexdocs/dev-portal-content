@@ -177,9 +177,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Radu1749"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-0.png">💻</a></td>
-    <td align="center"><a href="https://github.com/rayra-alencar"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-1.png">💻</a></td>
-    <td align="center"><a href="https://github.com/renanguerraa1"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-2.png">💻</a></td>
+    <td align="center"><a href="https://github.com/Radu1749"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-0.png"></img></a></td>
+    <td align="center"><a href="https://github.com/rayra-alencar"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-1.png"></img></a></td>
+    <td align="center"><a href="https://github.com/renanguerraa1"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-2.png"></img></a></td>
   </tr>
 </table>
 
