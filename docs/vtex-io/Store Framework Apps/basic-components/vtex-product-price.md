@@ -379,10 +379,10 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-4.png">💻</a></td>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-5.png">💻</a></td>
-    <td align="center"><a href="https://github.com/Git-the-Sanz"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-6.png">💻</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/renan-guerra-ba91aa17b/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-7.png">💻</a></td>
+    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-4.png"></img></a></td>
+    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-5.png"></img></a></td>
+    <td align="center"><a href="https://github.com/Git-the-Sanz"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-6.png"></img></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/renan-guerra-ba91aa17b/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-7.png"></img></a></td>
   </tr>
 </table>
 
