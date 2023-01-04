@@ -144,4 +144,4 @@ Hotjar heatmap example:
 <br>
 
 Product review example:
-![](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Checkout/Product_review_example_Dev_Guide_1.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Product_review_example_Dev_Guide_1.png)
