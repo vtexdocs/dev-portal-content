@@ -92,7 +92,7 @@ In your store, you can perform various actions related to the shopping cart, inc
 <br>
 Minicart view:
 <br>
-![minicart-v2-gif](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Checkout/Minicart_Dev_Guide_1.gif)
+![minicart-v2-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Minicart_Dev_Guide_1.gif)
 <br>
 <br>
 reCAPTCHA view:
