@@ -56,9 +56,11 @@ Making VTEX’s edition app a `dependency` automatically includes all of VTEX’
 Once VTEX’s edition is declared as a dependency, you can add your own desired pages in the edition/apps.json file.
 
 ```json
-"dependencies": {
+{
+  "dependencies": {
     "vtex.edition-seller": "0.x"
   },
+  }
 ```
 
 Every **Edition App** has a **dependency** declared, which imports pages from another edition app.
@@ -103,9 +105,11 @@ After cloning the repository, follow the instructions below to configure your ap
 After configuring your manifest, you can specify apps to be installed in the sub-accounts that have this edition configured. You do that through the `edition/apps.json` file, adding an entry to the object under the `apps` key in the format:
 
 ```json
-"<vendor>.<name>": {
-  "major": "<desired major>",
-  "settings": "<initial settings>"
+{
+  "<vendor>.<name>": {
+    "major": "<desired major>",
+    "settings": "<initial settings>"
+  },
 }
 ```
 
