@@ -20,11 +20,10 @@ Every Seller Portal account is created from a VTEX IO Edition App, which is defi
 {
   "vendor": "vtex",
   "name": "edition-seller",
-  //...
 }
 ```
 
->ℹ️ It is not possible to create edition apps without a VTEX account as the sponsor.
+> ℹ️ It is not possible to create edition apps without a VTEX account as the sponsor.
 
 Two entities can become an Edition app’s sponsor: VTEX or a VTEX marketplace.
 
@@ -32,8 +31,8 @@ Two entities can become an Edition app’s sponsor: VTEX or a VTEX marketplace.
 
 In default Seller Portal environments, VTEX is the sponsor of the edition. This means that VTEX is responsible for:
 
-- Selecting which pages would be included in Seller Portal’s default environment.
-- Creating the edition app that will become the default Seller Portal.
+* Selecting which pages would be included in Seller Portal’s default environment.
+* Creating the edition app that will become the default Seller Portal.
 
 VTEX has therefore defined its own edition for the Seller Portal, which includes the default pages that come within an account.
 
@@ -43,12 +42,12 @@ It is also possible for marketplaces to create their own custom editions of Sell
 
 Marketplaces that choose to be sponsors of their own edition app usually want:
 
-- To have all the default pages that come with VTEX’s Seller Portal edition included for their sellers, in an easy and quick way.
-- To automatically add specific pages that are not included in VTEX’s default edition, to all their sellers using Seller Portal.
+* To have all the default pages that come with VTEX’s Seller Portal edition included for their sellers, in an easy and quick way.
+* To automatically add specific pages that are not included in VTEX’s default edition, to all their sellers using Seller Portal.
 
 The edition app sponsored by the marketplace should become the app’s sponsor and add VTEX’s edition as a “dependency” field. We will go over the step by step process of building your app in the [Configuring your Edition App](#configuring-your-edition-app) section of this article.
 
->ℹ️ To sponsor an app, please open a ticket to VTEX Support, so your account can be enabled as a sponsor.
+> ℹ️ To sponsor an app, please open a ticket to VTEX Support, so your account can be enabled as a sponsor.
 
 ### App dependencies
 
@@ -105,8 +104,8 @@ After configuring your manifest, you can specify apps to be installed in the sub
 
 ```json
 "<vendor>.<name>": {
-  "major": <desired major>,
-  "settings": <initial settings>
+  "major": "<desired major>",
+  "settings": "<initial settings>"
 }
 ```
 
@@ -146,7 +145,7 @@ In the example below we guide you through the architecture that enables this sce
 
 We have two market places: The **MKPSeller** and the **Cosmetics2**. They are both part of the same holding, but they're different marketplace accounts.
 
-The **MKPSeller** has created an edition app, based on our default, **vtex.edition-seller**, and added other custom pages they wish to provide for their sellers. They called the edition they sponsored the `mkpseller.edition-seller`.
+The **MKPSeller** has created an edition app, based on our default, **vtex.edition-seller**, and added other custom pages they wish to provide for their sellers. They called the edition they sponsored the `mkpseller.edition-seller` .
 
 They declare the default edition that VTEX has sponsored, or vtex.edition-seller as a dependency on their app’s code. This action automatically imports all the default Seller Portal apps to their edition app
 
@@ -190,12 +189,12 @@ Instead of creating an edition app and manually adding the desired custom pages 
 
 For the dependency to work, **MKPSeller** must be **Cosmetics2** app’s sponsor. This means that **Cosmetics2** has an edition belonging to **MKPSeller** associated to it.
 
->ℹ️ To know which edition is associated with an account, on VTEX Toolbelt, run `vtex edition get`.
+> ℹ️ To know which edition is associated with an account, on VTEX Toolbelt, run `vtex edition get` .
 
-This way, **Cosmetics2** edition app will include everything declared in `mkpseller.edition-seller`. This means including:
+This way, **Cosmetics2** edition app will include everything declared in `mkpseller.edition-seller` . This means including:
 
-- VTEX’s default apps, since they were declared as a dependency.
-- The custom pages added by **MKPSeller**, since they created their custom edition.
+* VTEX’s default apps, since they were declared as a dependency.
+* The custom pages added by **MKPSeller**, since they created their custom edition.
 
 Summing it up, to declare VTEX or another marketplace’s **Edition app** as a **dependency**, this dependency’s owner must be the app’s **sponsor**.
 
@@ -203,6 +202,6 @@ Summing it up, to declare VTEX or another marketplace’s **Edition app** as a *
 
 The current multiple marketplace architecture has some limitations:
 
-- The apps included in an edition can only belong to the same sponsor, or to VTEX. E.g. MKPSeller cannot add apps from Cosmetics2's edition.
-- An edition cannot have more than one sponsor.
-- For this architecture to work, we can only include an edition as a dependency if it belongs to the same app vendor, or to the vendor’s sponsor.
+* The apps included in an edition can only belong to the same sponsor, or to VTEX. E.g. MKPSeller cannot add apps from Cosmetics2's edition.
+* An edition cannot have more than one sponsor.
+* For this architecture to work, we can only include an edition as a dependency if it belongs to the same app vendor, or to the vendor’s sponsor.
