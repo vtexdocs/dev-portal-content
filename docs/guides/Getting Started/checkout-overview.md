@@ -98,7 +98,7 @@ Minicart view:
 reCAPTCHA view:
 <br>     
 
-![](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Checkout/reCAPTCHA_Dev_Guide_1.gif)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/reCAPTCHA_Dev_Guide_1.gif)
 
 ## Getting information and simulating delivery logistics
 
