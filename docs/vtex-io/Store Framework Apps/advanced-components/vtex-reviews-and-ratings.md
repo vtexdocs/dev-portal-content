@@ -173,10 +173,10 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-4.png">💻</a></td>
-    <td align="center"><a href="https://juliomoreira.pro"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-5.png">💻</a></td>
-    <td align="center"><a href="https://github.com/btalma"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-6.png">💻</a></td>
-    <td align="center"><a href="https://github.com/arturo777"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-7.png">💻</a></td>
+    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-4.png"></img></a></td>
+    <td align="center"><a href="https://juliomoreira.pro"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-5.png"></img></a></td>
+    <td align="center"><a href="https://github.com/btalma"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-6.png"></img></a></td>
+    <td align="center"><a href="https://github.com/arturo777"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-7.png"></img></a></td>
   </tr>
 </table>
 

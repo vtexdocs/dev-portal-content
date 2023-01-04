@@ -111,9 +111,9 @@ To apply CSS customizations in this and other blocks, follow the [Using CSS Hand
 Thanks goes to these wonderful people:
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/germanBonacchi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-6.png">💻</a></td>
-    <td align="center"><a href="https://github.com/arielabaruffaldi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-7.png">💻</a></td>
-    <td align="center"><a href="https://github.com/GuidoSdo"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-8.png">💻</a></td>
+    <td align="center"><a href="https://github.com/germanBonacchi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-6.png"></img></a></td>
+    <td align="center"><a href="https://github.com/arielabaruffaldi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-7.png"></img></a></td>
+    <td align="center"><a href="https://github.com/GuidoSdo"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-8.png"></img></a></td>
   </tr>
 </table>
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

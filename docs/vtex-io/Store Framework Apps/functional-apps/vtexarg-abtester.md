@@ -94,7 +94,7 @@ Thanks goes to these wonderful people:
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-abtester-1.png">💻</a></td>
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-abtester-1.png"></img></a></td>
   </tr>
 </table>
 

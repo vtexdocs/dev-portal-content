@@ -89,8 +89,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/sahanljc"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-shelf-3.png">💻</a></td>
-    <td align="center"><a href="https://github.com/lucaspacheco-acct"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-shelf-4.png">💻</a></td>
+    <td align="center"><a href="https://github.com/sahanljc"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-shelf-3.png"></img></a></td>
+    <td align="center"><a href="https://github.com/lucaspacheco-acct"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-shelf-4.png"></img></a></td>
   </tr>
 </table>
 

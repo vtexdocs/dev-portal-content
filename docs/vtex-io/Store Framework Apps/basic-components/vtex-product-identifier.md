@@ -68,7 +68,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://carafizi.com/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-identifier-2.png">💻</a></td>
+    <td align="center"><a href="http://carafizi.com/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-identifier-2.png"></img></a></td>
   </tr>
 </table>
 

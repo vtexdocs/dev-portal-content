@@ -146,27 +146,27 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/hapoza"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-1.png">💻</a></td>
-    <td align="center"><a href="https://github.com/JNussens"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-2.png">💻</a></td>
-    <td align="center"><a href="https://github.com/lucasayb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-3.png">💻</a></td>
-    <td align="center"><a href="https://t.co/LTjWBxRnqE"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-4.png">💻</a></td>
-    <td align="center"><a href="https://github.com/Erislandio"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-5.png">💻</a></td>
-    <td align="center"><a href="https://github.com/BeatrizMiranda"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-6.png">💻</a></td>
-    <td align="center"><a href="https://github.com/Jayendra88"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-7.png">💻</a></td>
+    <td align="center"><a href="https://github.com/hapoza"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-1.png"></img></a></td>
+    <td align="center"><a href="https://github.com/JNussens"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-2.png"></img></a></td>
+    <td align="center"><a href="https://github.com/lucasayb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-3.png"></img></a></td>
+    <td align="center"><a href="https://t.co/LTjWBxRnqE"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-4.png"></img></a></td>
+    <td align="center"><a href="https://github.com/Erislandio"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-5.png"></img></a></td>
+    <td align="center"><a href="https://github.com/BeatrizMiranda"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-6.png"></img></a></td>
+    <td align="center"><a href="https://github.com/Jayendra88"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-7.png"></img></a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/pgrimaud"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-8.png">📖</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/igorpoubel"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-9.png">💻</a></td>
-    <td align="center"><a href="http://www.hugoccosta.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-10.png">💻</a></td>
-    <td align="center"><a href="https://github.com/MatheusR42"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-11.png">📖</a></td>
-    <td align="center"><a href="https://github.com/LuisaFCorrea"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-12.png">💻</a></td>
-    <td align="center"><a href="https://github.com/pmarignan"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-13.png">💻</a></td>
-    <td align="center"><a href="https://github.com/rcmuniz1994"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-14.png">💻</a></td>
+    <td align="center"><a href="https://github.com/pgrimaud"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-8.png"></img></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/igorpoubel"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-9.png"></img></a></td>
+    <td align="center"><a href="http://www.hugoccosta.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-10.png"></img></a></td>
+    <td align="center"><a href="https://github.com/MatheusR42"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-11.png"></img></a></td>
+    <td align="center"><a href="https://github.com/LuisaFCorrea"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-12.png"></img></a></td>
+    <td align="center"><a href="https://github.com/pmarignan"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-13.png"></img></a></td>
+    <td align="center"><a href="https://github.com/rcmuniz1994"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-14.png"></img></a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/ovio224"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-15.png">💻</a></td>
-    <td align="center"><a href="https://github.com/LucasCastroJussi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-16.png">💻</a></td>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-17.png">💻</a></td>
+    <td align="center"><a href="https://github.com/ovio224"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-15.png"></img></a></td>
+    <td align="center"><a href="https://github.com/LucasCastroJussi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-16.png"></img></a></td>
+    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-17.png"></img></a></td>
   </tr>
 </table>
 

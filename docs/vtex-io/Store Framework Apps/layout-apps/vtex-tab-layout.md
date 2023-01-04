@@ -242,9 +242,9 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/JNussens"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-6.png">💻</a></td>
-    <td align="center"><a href="https://github.com/lucasayb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-7.png">💻</a></td>
-    <td align="center"><a href="https://acct.global/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-8.png">💻</a></td>
+    <td align="center"><a href="https://github.com/JNussens"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-6.png"></img></a></td>
+    <td align="center"><a href="https://github.com/lucasayb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-7.png"></img></a></td>
+    <td align="center"><a href="https://acct.global/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-tab-layout-8.png"></img></a></td>
   </tr>
 </table>
 
