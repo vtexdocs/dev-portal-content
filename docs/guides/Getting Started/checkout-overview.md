@@ -32,7 +32,7 @@ Smart Checkout - Payment layout customization example:
 
 The architecture of VTEX Checkout is organized in such a way that the main data structure is the `orderForm` object. It is composed of several sections and fields that allow you to have control over all the important information of a purchase order. See the links below for useful information and endpoints related to the `orderForm` object.
 
-* [OrderForm overview](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields)
+* [OrderForm overview](https://developers.vtex.com/docs/guides/orderform-fields)
 * [Set a discount using the Checkout API](https://developers.vtex.com/vtex-rest-api/docs/set-a-discount-using-the-checkout-api)
 * [Enabling the orderForm optimization - Store Framework only](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-enabling-order-form-optimization)
 * [GET- Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration)
