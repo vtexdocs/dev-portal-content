@@ -203,8 +203,8 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/raissacmp"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-1.png">📖</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/samuel-rodrigues-48638618b/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-2.png">💻</a></td>
+    <td align="center"><a href="https://github.com/raissacmp"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-1.png"></img></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/samuel-rodrigues-48638618b/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-2.png"></img></a></td>
   </tr>
 </table>
 
