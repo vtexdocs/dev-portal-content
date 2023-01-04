@@ -26,7 +26,7 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 * [Change payment method names in Checkout](https://developers.vtex.com/vtex-rest-api/docs/change-payment-method-names-in-checkout)<br>
 Smart Checkout - Payment layout customization example:
 
-![Layout Dev Guide - Guide](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Checkout/Layout_Dev_Guide_29.gif)
+![Layout Dev Guide - Guide](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Layout_Dev_Guide_29.gif)
 
 ## Understanding Checkout data structures
 
