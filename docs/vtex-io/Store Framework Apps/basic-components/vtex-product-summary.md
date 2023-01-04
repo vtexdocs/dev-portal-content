@@ -112,8 +112,8 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-4.png">💻</a></td>
-    <td align="center"><a href="http://imdanielpiva.me"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-5.png">💻</a></td>
+    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-4.png"></img></a></td>
+    <td align="center"><a href="http://imdanielpiva.me"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-summary-5.png"></img></a></td>
   </tr>
 </table>
 
