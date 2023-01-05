@@ -10,11 +10,11 @@ Load testing is the practice of determining whether a service is able to handle 
 VTEX engineers load test the platform regularly to ensure it matches the expectations for heavy load. Therefore, you do not need to load test the VTEX platform on your own.
 
 However, if you still feel the need to load test specific scenarios, we recommend you follow some principles in order to guarantee a safe test and meaningful results:
-- [Simulate real user behavior]()
-- [Ensure your test is not the bottleneck]()
-- [Understand how to interpret results from the test]()
+- [Simulate real user behavior](#simulate-real-user-behavior)
+- [Ensure your test is not the bottleneck](#ensure-your-test-is-not-the-bottleneck)
+- [Understand how to interpret results from the test](#understand-how-to-interpret-results-from-the-test)
 
-These principles are especially relevant when your test includes services that integrate or interact with the VTEX platform, such as Google Tag Manager or Facebook Pixel. Below you can learn more about them, as well as [How VTEX protects the platform against traffic attacks]() and [Schedule a load test]().
+These principles are especially relevant when your test includes services that integrate or interact with the VTEX platform, such as Google Tag Manager or Facebook Pixel. Below you can learn more about them, as well as [How VTEX protects the platform against traffic attacks](#how-vtex-protects-the-platform-against-traffic-attacks) and [Schedule a load test](#schedule-a-load-test).
 
 ## Simulate real user behavior
 
@@ -46,7 +46,7 @@ Make sure your load test is spreading requests randomly over time. Also make sur
 
 Configuring a spread of requests will allow the VTEX platform to smoothly scale up the services according to the new demand for resources. 
 
-To learn more about different behaviors you may encounter in case the increase of requests is too sudden, see [How VTEX protects the platform against traffic attacks]() below. 
+To learn more about different behaviors you may encounter in case the increase of requests is too sudden, see [How VTEX protects the platform against traffic attacks](#how-vtex-protects-the-platform-against-traffic-attacks) below. 
 
 ## Ensure your test is not the bottleneck
 
