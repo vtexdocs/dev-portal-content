@@ -17,7 +17,7 @@ The protocol has the following features:
 - Processing of synchronous and asynchronous risk analysis.
 - Webhook for status notification.
 
-You can find references to the protocol API [here](https://developers.vtex.com/vtex-rest-api/reference/antifraud-flow).
+You can find references to the protocol API [here](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/pre-analysis).
 
 ## Concepts
 
@@ -37,7 +37,7 @@ The first step is the commercial contact with VTEX, which should be done through
 
 ### 2. Implementing the protocol
 
-Before setting up the VTEX environment, the provider must implement the back-end service required to process the antifraud (API). More information about the protocol API [here](https://developers.vtex.com/vtex-rest-api/reference/antifraud-flow).
+Before setting up the VTEX environment, the provider must implement the back-end service required to process the antifraud (API). More information about the protocol API [here](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/pre-analysis).
 
 ### 3. Antifraud Provider Administration Panel
 
@@ -68,7 +68,7 @@ When you access the environment through the link described in the previous item,
 }
 [/block]
 
-After completing the fields correctly, the system will check the approved transactions through a call to the ***/transactions*** endpoint of your provider. See the API reference [here](https://developers.vtex.com/vtex-rest-api/reference/antifraud-flow).
+After completing the fields correctly, the system will check the approved transactions through a call to the ***/transactions*** endpoint of your provider. See the API reference [here](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/pre-analysis).
 
 The tests that should be done in your integration before sending it to VTEX evaluation are displayed in the next module. You can select which tests you want to run, but for your integration to go through the analysis of our team, **all tests need to be done**. Therefore, we recommend that all of them remain selected.
  
