@@ -5,30 +5,30 @@ hidden: false
 createdAt: "2021-10-25T23:13:41.287Z"
 updatedAt: "2022-10-27T18:56:50.737Z"
 ---
-There are different ways of using VTEX APIs to handle shopping carts and checkout in order to place orders. For instance, you can use API requests to [create](https://developers.vtex.com/vtex-rest-api/reference/createanewcart) and [manage](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments) shopping carts on the VTEX platform, so as to place an order from that information later, or directly place an order with a single request containing all cart data.
->ℹ️ The main data structure used in VTEX Checkout is the `orderForm`. It contains every piece of information pertinent to a shopping cart, including logistics, payment, products and customer profile, for instance. Learn more in the [orderForm documentation.](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields)
+There are different ways of using VTEX APIs to handle shopping carts and checkout in order to place orders. For instance, you can use API requests to [create](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) and [manage](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) shopping carts on the VTEX platform, so as to place an order from that information later, or directly place an order with a single request containing all cart data.
+>ℹ️ The main data structure used in VTEX Checkout is the `orderForm`. It contains every piece of information pertinent to a shopping cart, including logistics, payment, products and customer profile, for instance. Learn more in the [orderForm documentation.](https://developers.vtex.com/docs/guides/orderform-fields)
 
 For this tutorial, we chose one of the more objective ways to understand and use our APIs to place a regular order (placed, paid, and delivered under the liability of a single account). To do this, we will follow these steps:
 
-1. [Simulate a cart](doc:create-a-regular-order-using-the-checkout-api#1-simulate-a-cart);
+1. [Simulate a cart](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#1-simulate-a-cart);
     Find out what delivery and payment options are available.
 
-2. [Check if the customer already exists in your database](doc:create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database);
+2. [Check if the customer already exists in your database](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database);
     An order needs the shopper’s email address to be placed.
 
-3. [Assemble a cart](doc:create-a-regular-order-using-the-checkout-api#3-assemble-a-cart);
+3. [Assemble a cart](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#3-assemble-a-cart);
     Put together all order information in the correct format.
 
-4. [Place the order](doc:create-a-regular-order-using-the-checkout-api#4-place-the-order);
+4. [Place the order](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#4-place-the-order);
     Creating the order on the VTEX platform.
 
-5. [Send payment information](doc:create-a-regular-order-using-the-checkout-api#5-send-payment-information);
+5. [Send payment information](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#5-send-payment-information);
     Let VTEX know you have information to resolve payment.
 
-6. [Request order processing](doc:create-a-regular-order-using-the-checkout-api#6-request-order-processing).
+6. [Request order processing](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#6-request-order-processing).
     The payments module can now process the transaction.
 
-And by the end of this process you may [check the result.](doc:create-a-regular-order-using-the-checkout-api#checking-the-result)
+And by the end of this process you may [check the result.](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#checking-the-result)
 [block:callout]
 {
   "type": "warning",
@@ -40,7 +40,7 @@ And by the end of this process you may [check the result.](doc:create-a-regular-
 
 The very first thing that you should do is to check if your store is able to fulfill the cart. A simulation request is how your system will know which delivery and payment options are available for a given combination of items in a cart.
 
-In order to do so, use the [Cart simulation](https://developers.vtex.com/vtex-rest-api/reference/cartsimulation) API request.
+In order to do so, use the [Cart simulation](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation) API request.
 
 From the response content, you will be mostly using the information in `items`, `logisticsInfo` and `paymentData`. More information about each of them will be provided in the next steps.
 
@@ -50,15 +50,15 @@ Whenever you attempt to place an order, you must provide an email address to ide
 
 Therefore, it is a good idea to verify if a given email address is already linked to a customer of yours, so you can avoid any permission issues and retrieve any stored information.
 
-To check an email address for existing profiles, just send use the [Get client by email](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments#getclientprofilebyemail) API request.
+To check an email address for existing profiles, just send use the [Get client by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles) API request.
 
 If the response to this request returns any content, it means that you already have this customer’s information on your store’s data base. In this case, you can use that information in the next steps without having to ask the shopper to provide it to you again.
 
 ## 3. Assemble a cart
 
-Assembling a cart from an API point of view means getting all order information into the appropriate data structure, the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields).
+Assembling a cart from an API point of view means getting all order information into the appropriate data structure, the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields).
 
-An [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) may include many elements, but for a simple order, we can focus on the main five. The overall structure will be similar to this:
+An [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) may include many elements, but for a simple order, we can focus on the main five. The overall structure will be similar to this:
 
 ```json
 "items": [],
@@ -70,7 +70,7 @@ An [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fie
 "paymentData": {}
 ```
 
->ℹ️ Note that we are assembling this data structure to be sent as the request body in the next step. Below, we discuss these sections briefly, but you can learn more about each field in the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
+>ℹ️ Note that we are assembling this data structure to be sent as the request body in the next step. Below, we discuss these sections briefly, but you can learn more about each field in the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 ### items
 
@@ -91,7 +91,7 @@ Then, build a block with the following structure:
 ]
 ```
 
->ℹ️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
+>ℹ️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 ### clientProfileData
 
@@ -114,7 +114,7 @@ This object contains information about the shopper. Consider this format for new
 }
 ```
 
-For [customers already in your database](doc:create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database), sending only the email address is enough to register the order to the shopper’s existing account.
+For [customers already in your database](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database), sending only the email address is enough to register the order to the shopper’s existing account.
 
 ```json
 "clientProfileData": {
@@ -147,7 +147,7 @@ This object contains shipping address information.
 }
 ```
 
-For [customers already in your data base](doc:create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database), it is enough to send this object only with an `addressId`, which you may get from [step two](doc:create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database).
+For [customers already in your data base](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database), it is enough to send this object only with an `addressId`, which you may get from [step two](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database).
 
 ```json
 "shippingAddress": {
@@ -173,10 +173,10 @@ This is an array that contains logistics information for each item in the `items
 }
 ```
 
-The `selectedSla` field indicates the selected delivery option. You can choose an `id` value, from among the options in the `slas` array obtained in the [Cart simulation step](doc:create-a-regular-order-using-the-checkout-api#1-simulate-a-cart). The corresponding `price` can also be found in the simulation response data, in the same object.
+The `selectedSla` field indicates the selected delivery option. You can choose an `id` value, from among the options in the `slas` array obtained in the [Cart simulation step](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#1-simulate-a-cart). The corresponding `price` can also be found in the simulation response data, in the same object.
 
 The `logisticsInfo` array should contain a number of objects equal to the number of objects in the `items` array. The `itemIndex` of a `logisticsInfo` object indicates to which item of the array `items` that information is referring. The object referring to the first item in `items` will contain an `itemIndex` of `0` and so on.
->ℹ️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
+>ℹ️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 ### paymentData
 
@@ -196,9 +196,9 @@ This object informs the payment method and installment options (if available) se
 ```
 
 Note that the `value` field corresponds to the full value to be payed by the shopper, whereas the `referenceValue` is the base number over which interests apply. If no interest apply to the order, they should be equal.
->ℹ️ For this example, we are considering a single payment method, with a single installment and no interest. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
+>ℹ️ For this example, we are considering a single payment method, with a single installment and no interest. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
-Use the options and information from the [simulation](doc:create-a-regular-order-using-the-checkout-api#1-simulate-a-cart) response data to assemble your own `paymentData`.
+Use the options and information from the [simulation](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#1-simulate-a-cart) response data to assemble your own `paymentData`.
 
 ## 4. Place the order
 
@@ -319,9 +319,9 @@ If the delivery method is pickup point, add the information <code>"selectedDeliv
     }
 ```
 
->ℹ️ This exemplifies a fairly simple fictitious shopping cart. The `orderForm` is actually highly customizable. Learn more about all possibilities in the [Place order API request documentation.](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
+>ℹ️ This exemplifies a fairly simple fictitious shopping cart. The `orderForm` is actually highly customizable. Learn more about all possibilities in the [orderForm documentation.](https://developers.vtex.com/docs/guides/orderform-fields)
 
-This `orderForm` can now be sent as the body in the [Place order API request.](https://developers.vtex.com/vtex-rest-api/reference/placeorder)
+This `orderForm` can now be sent as the body in the [Place order API request.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 If you get a status `201 Created` response, take note of four pieces of information from its response content:
 
@@ -334,7 +334,7 @@ If you get a status `201 Created` response, take note of four pieces of informat
 
 ## 5. Send payment information
 
-With the `orderId` and `transactionId` values in hand, you must now inform VTEX of the payment data that should be used to resolve the order payment. To do this, use the [Send payment information API request](https://developers.vtex.com/vtex-rest-api/reference/2sendpaymentspublic). Note that there is also an alternative [private request for sending payment information](https://developers.vtex.com/vtex-rest-api/reference/2sendpaymentswithsavedcreditcard), that can be used to send saved credit card data.
+With the `orderId` and `transactionId` values in hand, you must now inform VTEX of the payment data that should be used to resolve the order payment. To do this, use the [Send payment information API request](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments). Note that there is also an alternative [private request for sending payment information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/payments), that can be used to send saved credit card data.
 
 The information you send in this step’s request body should be based on the `paymentData` section of your `orderForm`.
 
@@ -370,11 +370,11 @@ For most cases, it will look like the following:
 
 >ℹ️ In the `fields` object, you can send an `addressId` to use an existing address or a new `address` object.
 
->❗ Make sure that all value-related fields match the information sent in [step four](doc:create-a-regular-order-using-the-checkout-api#4-place-the-order), when placing the order.
+>❗ Make sure that all value-related fields match the information sent in [step four](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#4-place-the-order), when placing the order.
 
 ## 6. Request order processing
 
-Finally, you must request the processing of the order with the [Process order API request](https://developers.vtex.com/vtex-rest-api/reference/processorder).
+Finally, you must request the processing of the order with the [Process order API request](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-).
 
 At this point, if everything is ok with the payment, the order should be placed. Otherwise, you should get a `status 500` error.
 [block:callout]
@@ -388,4 +388,4 @@ At this point, if everything is ok with the payment, the order should be placed.
 
 You should be able to verify your order was in fact placed in the [Order management module](https://help.vtex.com/en/tutorial/orders-list--tutorials_200#) in VTEX Admin.
 
-You can also use the API requests [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder) and [List orders](https://developers.vtex.com/vtex-rest-api/reference/listorders) for this purpose.
+You can also use the API requests [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) and [List orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) for this purpose.
