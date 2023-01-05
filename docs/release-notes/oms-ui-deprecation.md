@@ -1,5 +1,5 @@
 ---
-slug: "official-new-orders-module-interface"
+slug: "oms-ui-deprecation"
 title: "Official new orders module interface"
 createdAt: 2023-01-05T18:38:53.000Z
 hidden: false
