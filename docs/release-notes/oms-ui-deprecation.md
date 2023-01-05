@@ -4,6 +4,7 @@ title: "Official new orders module interface"
 createdAt: 2023-01-31T17:13:29.000Z
 hidden: false
 type: "improved"
+excerpt: 'From February 1st, 2023, all VTEX stores will have the redesigned version of VTEX Admin module All orders.'
 ---
 
 From February 1st, 2023, all VTEX stores will have the redesigned version of VTEX Admin module **All orders**, which includes the pages **Order List** and **Order Details**. The version was in beta stage and will now be the new standard for all accounts, and stores will not be able to return to the previous version. 
