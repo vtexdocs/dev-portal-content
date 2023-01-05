@@ -26,7 +26,7 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 * [Change payment method names in Checkout](https://developers.vtex.com/vtex-rest-api/docs/change-payment-method-names-in-checkout)<br>
 Smart Checkout - Payment layout customization example:
 
-![Layout Dev Guide - Guide](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/4767f4f-Layout_Dev_Guide_-_Guide_29.gif)
+![Layout Dev Guide - Guide](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Layout_Dev_Guide_29.gif)
 
 ## Understanding Checkout data structures
 
@@ -92,13 +92,13 @@ In your store, you can perform various actions related to the shopping cart, inc
 <br>
 Minicart view:
 <br>
-![minicart-v2-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/52087100/73321194-7f477e80-4220-11ea-844b-f24d1c10363c_114.gif)
+![minicart-v2-gif](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Minicart_Dev_Guide_1.gif)
 <br>
 <br>
 reCAPTCHA view:
 <br>     
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/5d0eb13-newCaptchaAnchor_104.gif)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/reCAPTCHA_Dev_Guide_1.gif)
 
 ## Getting information and simulating delivery logistics
 
@@ -139,9 +139,9 @@ At VTEX checkout, some features are activated through apps. See the links below 
 <br>
 Hotjar heatmap example:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/df6d1e8-Hotjar_heatmap_example_147.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Hotjar_example_Dev_Guide_1.png)
 
 <br>
 
 Product review example:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/ac54295-Shop-for-Soft-Clean-Silky-Hydrating-Lotion-by-Estee-Lauder-Shoppers-Drug-Mart-copy-1009x1024_150.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Product_review_example_Dev_Guide_1.png)
