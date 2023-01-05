@@ -8,12 +8,14 @@ updatedAt: "2022-08-16T18:08:37.001Z"
 VTEX performs integrations with external vendors through secure HTTPS connections, using the TLS 1.2 protocol.
 
 For services performed in the Checkout module, where there is an exchange of data with sellers that are not part of VTEX (external fulfillment), the following ciphers are supported for the external seller, so that the flow of information occurs correctly.
+
 [block:callout]
 {
   "type": "warning",
   "body": "TLS 1.0 and 1.1 integration protocols are not supported by VTEX."
 }
 [/block]
+
 | Cipher Suite Name (IANA)      | Name (OpenSSL)      |
 | ---------- | ---------- |
 |   TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384  |   ECDHE-RSA-AES256-SHA384    |
