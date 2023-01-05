@@ -1,7 +1,7 @@
 ---
-slug: "official-new-orders-module-interface"
+slug: "oms-ui-deprecation"
 title: "Official new orders module interface"
-createdAt: 2023-01-31T17:13:29.000Z
+createdAt: 2023-01-05T18:38:53.000Z
 hidden: false
 type: "improved"
 excerpt: 'From February 1st, 2023, all VTEX stores will have the redesigned version of VTEX Admin module All orders.'
