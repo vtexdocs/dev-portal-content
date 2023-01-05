@@ -20,7 +20,7 @@ The articles in this subsection will present the necessary steps to make payment
     "h-1": "Description",
     "0-0": "[Setting up the type of interest rate](https://developers.vtex.com/vtex-rest-api/docs/setting-up-the-type-of-interest-rate)",
     "1-0": "[Setting up Merchant ID  in Apple Pay](https://developers.vtex.com/vtex-rest-api/docs/setting-up-merchant-id-in-apple-pay)",
-    "0-1": "How to identifying the payment method`s ID and setting up the interest rate type using API.",
+    "0-1": "How to identify the payment methods' ID and setting up the interest rate type using API.",
     "1-1": "How to setting Merchand ID in Apple Pay.",
     "2-0": "[Cardholder document configuration](https://developers.vtex.com/vtex-rest-api/docs/cardholder-document-configuration)",
     "2-1": "How to configure cardholder document field display at checkout."
