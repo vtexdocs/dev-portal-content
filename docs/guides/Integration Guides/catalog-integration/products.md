@@ -9,148 +9,29 @@ Learn more about [products in VTEX catalog](https://help.vtex.com/en/tracks/cata
 
 ## Data Model
 
-| **Field**
-    | **Description**
-    | **Required**
-    | **Format**
-    | **Default**
-    |
+| **Field**   | **Description**    | **Required**    | **Format**    | **Default** |
 |---|---|---|---|---|
-| Id
-    | Product ID. If not provided, it will be generated automatically (sequence)
-    | No
-    | Integer
-    | AutoIncrement
-    |
-| Name
-    | Product name
-    | Yes
-    | String (150)
-    | -
-    |
-| DepartmentId
-    | Department ID according to the product's category. This field should not be provided during product creation.
-    | No
-    | String
-    | -
-    |
-| CategoryId
-    | Category ID associated with this product.
-    | Yes
-    | Integer
-    | -
-    |
-| BrandId
-    | Brand ID associated with this product
-    | Yes
-    | Integer
-    | null
-    |
-| LinkId
-    | String to be used to build the product URL. If it not informed, it will be generated automatically according to product's name replacing spaces and special characters with hyphens (`-`)
-    | No
-    | String(255)
-    | Product Name
-    |
-| RefId
-    | Product reference code
-    | No
-    | String(200)
-    | null
-    |
-| IsVisible
-    | Show/Hide product in search result and product page but can be added into shopping cart. Usually applicable for gifts.
-    | No
-    | Boolean (true/false)
-    | false
-    |
-| Description
-    | Product description
-    | No
-    | String
-    | null
-    |
-| DescriptionShort
-    | Product short description. This information is presented by:
-
-Store Framework:  $product.DescriptionShort control
-
-Classic CMS:
-
-And can be displayed on both the product page and the shelf.
-
-    | No
-    | String
-    | null
-    |
-| ReleaseDate
-    | Used to assist in the ordering of the search result of the site. Using the O=OrderByReleaseDateDESC query string, you can pull this value and show the display order by release date. This attribute is also used as a condition for dynamic collections.
-    | No
-    | DateTime
-    | null
-    |
-| KeyWords
-    | Store Framework: Deprecated
-
-Classic CMS: Synonyms of terms related to product. "Television", for example, can have a substitute word like "TV". This field is important to make your searches more comprehensive.
-    | No
-    | String
-    | null
-    |
-| Title
-    | Product title tag. It is displayed in the browser tab and corresponds to the title of the product page. This field is important for SEO.
-    | No
-    | String (150)
-    | null
-    |
-| IsActive
-    | Activate/Inactivate  product
-    | No
-    | Boolean (true/false)
-    | false
-    |
-| TaxCode
-    | Product fiscal number. Usually used for tax calculation.
-    | No
-    | String (50)
-    | null
-    |
-| MetaTagDescription
-    | Brief description of the product for SEO. It's recommended that you don't exceed 150 characters.
-    | No
-    | String
-    | null
-    |
-| SupplierId
-    | Deprecated
-    | No
-    | Integer
-    | null
-    |
-| ShowWithoutStock
-    | If true, activates "Notify Me" form when the product is out of stock.
-    | No
-    | Boolean (true/false)
-    | false
-    |
-| AdWordsRemarketingCode
-    | Deprecated
-    | No
-    | String
-    | null
-    |
-| LomadeeCampaignCode
-    | Deprecated
-    | No
-    | String
-    | null
-    |
-| Score
-    | Value used to set the priority on the search result page.
-    | No
-    | Integer
-    | null
-    |
+| Id    | Product ID. If not provided, it will be generated automatically (sequence)    | No    | Integer    | AutoIncrement    |
+| Name    | Product name    | Yes    | String (150)    | -    |
+| DepartmentId    | Department ID according to the product's category. This field should not be provided during product creation.    | No    | String    | -    |
+| CategoryId    | Category ID associated with this product.    | Yes    | Integer    | -    |
+| BrandId    | Brand ID associated with this product    | Yes    | Integer    | null    |
+| LinkId    | String to be used to build the product URL. If it not informed, it will be generated automatically according to product's name replacing spaces and special characters with hyphens (`-`)    | No    | String(255)    | Product Name    |
+| RefId    | Product reference code    | No    | String(200)    | null    |
+| IsVisible    | Show/Hide product in search result and product page but can be added into shopping cart. Usually applicable for gifts.    | No    | Boolean (true/false)    | false    |
+| Description    | Product description    | No    | String    | null    |
+| DescriptionShort    | Product short description. This information is presented by the `$product.DescriptionShort` control and can be displayed on both the product page and the shelf.    | No    | String    | null    |
+| ReleaseDate    | Used to assist in the ordering of the search result of the site. Using the O=OrderByReleaseDateDESC query string, you can pull this value and show the display order by release date. This attribute is also used as a condition for dynamic collections.    | No    | DateTime    | null    |
+| KeyWords    | Store Framework: Deprecated. Legacy CMS Portal: Synonyms of terms related to product. "Television", for example, can have a substitute word like "TV". This field is important to make your searches more comprehensive.    | No    | String    | null    |
+| Title    | Product title tag. It is displayed in the browser tab and corresponds to the title of the product page. This field is important for SEO.    | No    | String (150)    | null    |
+| IsActive    | Activate/Inactivate  product    | No    | Boolean (true/false)    | false    |
+| TaxCode    | Product fiscal number. Usually used for tax calculation.    | No    | String (50)    | null    |
+| MetaTagDescription    | Brief description of the product for SEO. It's recommended that you don't exceed 150 characters.    | No    | String    | null    |
+| SupplierId    | Deprecated    | No    | Integer    | null    |
+| ShowWithoutStock    | If true, activates "Notify Me" form when the product is out of stock.    | No    | oolean (true/false)    | false    |
+| AdWordsRemarketingCode    | Deprecated    | No    | String    | null    |
+| LomadeeCampaignCode    | Deprecated    | No    | String    | null    |
+| Score    | Value used to set the priority on the search result page.    | No    | Integer    | null    |
 
 ## API integration
 
