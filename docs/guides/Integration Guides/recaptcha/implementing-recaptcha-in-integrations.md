@@ -21,7 +21,7 @@ In order to have your implementation validate users with reCAPTCHA, they should 
 [/block]
 ## Getting the reCAPTCHA key
 
-There are two different ways of placing orders via API. It can be done through the [orderForm transaction endpoint](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorderfromexistingorderform) or the [Place order endpoint](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder).
+There are two different ways of placing orders via API. It can be done through the [orderForm transaction endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) or the [Place order endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders).
 
 The first is based on a pre-existing `orderForm`, while the latter requires passing all of the order’s information on the request body. Because of that difference, different integrations must use different methods to obtain the reCAPTCHA key.
 
@@ -30,7 +30,7 @@ The first is based on a pre-existing `orderForm`, while the latter requires pass
 
 This method of creating orders is based on existing `orderForm`, meaning a payment method has already been selected and VTEX already knows if reCAPTCHA validation is needed.
 
-Whenever reCAPTCHA validation applies, according to your `recaptchaValidation` [configuration](https://developers.vtex.com/vtex-rest-api/reference/configuration#updateorderformconfiguration), the Checkout API should respond with a `recaptchaKey` field similar to this:
+Whenever reCAPTCHA validation applies, according to your `recaptchaValidation` [configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm), the Checkout API should respond with a `recaptchaKey` field similar to this:
 
 ```json
 {
@@ -68,7 +68,7 @@ Since reCAPTCHA application may vary according to payment method, we recommend t
 
 ## Final validation
 
-After the shopper successfully solves the validation, the integration should receive a response token. This token should be included in the API request that places the order, along with the `recaptchaKey`, be it with the [orderForm transaction endpoint](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorderfromexistingorderform) or the [Place order endpoint](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder). The example below works for both cases.
+After the shopper successfully solves the validation, the integration should receive a response token. This token should be included in the API request that places the order, along with the `recaptchaKey`, be it with the [orderForm transaction endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) or the [Place order endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders). The example below works for both cases.
 
 ```json
 {
@@ -95,7 +95,7 @@ If validation fails (`status 403`), the API returns the same error `CHK0082` as 
 
 In case of internal error (`status 500`), the widget has to be displayed again. The `recaptchaKey` that was used the first time may be used this time.
 
-If validation with the [Place order endpoint](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder) fails (`status 403`), the API returns the same error `CHK0082` as mentioned above. Note that the `recaptchaKey` returned in the error may be different than the one used previously. Be sure to use the latest one received.
+If validation with the [Place order endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) fails (`status 403`), the API returns the same error `CHK0082` as mentioned above. Note that the `recaptchaKey` returned in the error may be different than the one used previously. Be sure to use the latest one received.
 [block:callout]
 {
   "type": "warning",
