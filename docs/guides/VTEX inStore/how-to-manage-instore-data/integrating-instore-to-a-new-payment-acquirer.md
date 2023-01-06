@@ -12,7 +12,7 @@ This article aims to explain how the inStore app configures AppLinking for `paym
 ## Setting fields
 
 All acquirers must have:
-[block:parameters]
+```json
 {
   "data": {
     "h-0": "Field name",
@@ -34,9 +34,10 @@ All acquirers must have:
   "cols": 3,
   "rows": 4
 }
-[/block]
+```
+
 If necessary, inStore can send additional information. Example with the sub-acquirer **Cappta**:
-[block:parameters]
+```json
 {
   "data": {
     "0-0": "`authKey`",
@@ -58,14 +59,14 @@ If necessary, inStore can send additional information. Example with the sub-acqu
   "cols": 3,
   "rows": 4
 }
-[/block]
+```
 
-[block:callout]
+```json
 {
   "type": "info",
   "body": "To create any extra configuration, you need to send an email to the inStore team (instoredevs@vtex.com.br) informing the additional information the app needs to complete the transaction. With that, we will create a form on the **Payments** module so that customers can configure their acquirer."
 }
-[/block]
+```
 
 ## Sending URI and response URI for each action
 
@@ -150,12 +151,7 @@ Final URI that the payment app will receive to perform the refund action with th
 super-acquirer://payment-reversal?acquirerAuthorizationCode=86273634-3a05-4f0a-a430-f55ed3f21eab&acquirerId=954090369&transactionId=1093019039&paymentId=1093019888&acquirerTid=1093019888&administrativeCode=11010103033&sellerName=instoreqa&autoConfirm=True&scheme=instore&urlCallback=instore://payment-reversal
 ```
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Not all parameters will be used by all payment acquirers/apps. Example: <code>transactionId</code>. This parameter is the ID of a transaction in VTEX that identifies all payments of a complete order on VTEX PCI Gateway. A transaction can contain multiple payments, such as when an order is paid with multiple credit or debit cards."
-}
-[/block]
+>⚠️ Not all parameters will be used by all payment acquirers/apps. Example: <code>transactionId</code>. This parameter is the ID of a transaction in VTEX that identifies all payments of a complete order on VTEX PCI Gateway. A transaction can contain multiple payments, such as when an order is paid with multiple credit or debit cards.
 
 ## Examples of response URIs for each action
 
@@ -169,7 +165,7 @@ Failed:  instore://payment?responsecode=110&reason=card+refused+by+acquirer&paym
 ```
 
 Response Parameters:
-[block:parameters]
+```json
 {
   "data": {
     "h-0": "Field name",
@@ -224,9 +220,9 @@ Response Parameters:
   "cols": 3,
   "rows": 15
 }
-[/block]
+```
 
-### - Example for the `payment-reversal` action (refund)
+### Example for the `payment-reversal` action (refund)
 
 URI:
 
@@ -236,7 +232,7 @@ Failed:  instore://payment-reversal?responsecode=110&reason=card+refused+by+acqu
 ```
 
 Response parameters:
-[block:parameters]
+```json
 {
   "data": {
     "h-0": "Field name",
@@ -276,19 +272,16 @@ Response parameters:
   "cols": 3,
   "rows": 10
 }
-[/block]
+```
 
 ## Setting up inStore connector in VTEX Payments module
 
 For the integration to work, the customer must set up the inStore connector on the **Payments** module (our payment backend). In this connector, the customer must choose in the field **Acquirer** which acquirer or app will receive the payment. This registration must contain all the information necessary for the acquirer to carry out the transaction. Example: Acquirer Id, Token, etc.).
 
 AppLinking integration doesn't include other dependencies, since communication between the inStore application and the payment application happens with specific URIs containing all the configuration and payment parameters required for the action.
-[block:callout]
-{
-  "type": "warning",
-  "body": "On Android, all communication must happen with a new <code>Intent</code>. This means that you should not send the response as a callback from the initial <code>Intent</code> call. Instead, send a new <code>Intent</code> to the inStore application with the previous response."
-}
-[/block]
+
+>⚠️ On Android, all communication must happen with a new <code>Intent</code>. This means that you should not send the response as a callback from the initial <code>Intent</code> call. Instead, send a new <code>Intent</code> to the inStore application with the previous response.
+
 To configure the inStore connector, follow the steps below:
 
 1. Access the **Payments** module.
