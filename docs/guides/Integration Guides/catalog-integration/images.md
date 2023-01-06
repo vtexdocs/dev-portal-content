@@ -5,61 +5,22 @@ hidden: false
 createdAt: "2021-12-14T14:21:31.352Z"
 updatedAt: "2022-02-04T21:29:02.633Z"
 ---
+
 Product images are associated with SKUs.
 
 To learn more, see this article about [Best practices with catalog images](https://help.vtex.com/en/tutorial/best-practices-for-using-images-in-the-catalog--738K2yfq5U86kUI2k4AQIk). It may also be helpful to [compress the images](https://help.vtex.com/en/tutorial/how-the-automatic-compacting-of-images-works) you use in your store.
 
 ## Data Model
 
-| **Field**
-    | **Description**
-    | **Required**
-    | **Type**
-    | **Default**
-    |
+| **Field**    | **Description**    | **Required**    | **Type**   | **Default**    |
 |---|---|---|---|---|
-| Id
-    | ID of `SkuImage` (`SkuFileId`). This is the ID that is used to delete/update it.
-    | No
-    | Integer
-    | AutoIncrement
-    |
-| ArchiveId
-    | Unique identifier of the Image file.
-    | No
-    | Integer
-    | -
-    |
-| SkuId
-    | ID of SKU
-    | Yes
-    | Integer
-    | null
-    |
-| Name
-    | Name of SKU’s file
-    | No*
-    | String
-    | null
-    |
-| IsMain
-    | Set the image as the main image for the product.
-    | No
-    | Boolean (true/false)
-    | null
-    |
-| Label
-    | Image label
-    | No
-    | String
-    | false
-    |
-| Url
-    | External image URL
-    | Yes
-    | String
-    | -
-    |
+| Id    | ID of `SkuImage` (`SkuFileId`). This is the ID that is used to delete/update it.   | No    | Integer    | AutoIncrement    |
+| ArchiveId    | Unique identifier of the Image file.    | No    | Integer    | -    |
+| SkuId    | ID of SKU    | Yes    | Integer    | null    |
+| Name    | Name of SKU’s file    | No*   | String    | null    |
+| IsMain    | Set the image as the main image for the product.    | No    | Boolean (true/false)    | null    |
+| Label    | Image label    | No    | String    | false    |
+| Url    | External image URL   | Yes    | String    | -    |
 
 ## API implementation
 
