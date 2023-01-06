@@ -1,6 +1,6 @@
 # Change chain orders in external marketplaces
 
-> ℹ️ This feature works exclusively for VTEX stores with **Multilevel Omnichannel Inventory** chain orders made in external marketplaces. The external marketplace must be responsible for the payment and be able to support the [Change order](https://developers.vtex.com/vtex-rest-api/docs/change-order) feature.
+>ℹ️ This feature works exclusively for VTEX stores with **Multilevel Omnichannel Inventory** chain orders made in external marketplaces. The external marketplace must be responsible for the payment and be able to support the [Change order](https://developers.vtex.com/vtex-rest-api/docs/change-order) feature.
 
 <br>
 
@@ -27,7 +27,7 @@ This article is suitable for both cases.
 
 <br>
 
-> ❗The external marketplace must be responsible for the payment process, otherwise the change order in Multilevel Omnichannel Inventory chain orders in external marketplaces operations will be blocked by the Order Management System (OMS).
+>❗The external marketplace must be responsible for the payment process, otherwise the change order in Multilevel Omnichannel Inventory chain orders in external marketplaces operations will be blocked by the Order Management System (OMS).
 
 
 
@@ -46,7 +46,7 @@ The feature is implemented as follows:
 
 <br>
 
-> ⚠️ We have considered the `OrderGroup` to build the endpoint because it follows the [Multilevel Omnichannel Inventory](https://developers.vtex.com/vtex-rest-api/docs/multilevel-omnichannel-inventory) communication standards.
+>⚠️ We have considered the `OrderGroup` to build the endpoint because it follows the [Multilevel Omnichannel Inventory](https://developers.vtex.com/vtex-rest-api/docs/multilevel-omnichannel-inventory) communication standards.
 
 
 <br>
