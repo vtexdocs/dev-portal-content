@@ -10,7 +10,7 @@ The manual prices feature allows inStore sales associates to change prices direc
 
 ## Configuration
 
-To make this feature available to sales associates using inStore, it is necessary to enable it using the Checkout API. You must place a request to the endpoint <span class="pg-type type-post">post</span>[Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration), setting the `allowManualPrice` property to `true`.
+To make this feature available to sales associates using inStore, it is necessary to enable it using the Checkout API. You must place a request to the [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) endpoint, setting the `allowManualPrice` property to `true`.
 
 > ❗ This configuration also changes the behavior of the ecommerce, allowing any user with a role that contains the **Telesales** resource to insert manual prices in the ecommerce shopping cart, as described in the [Telesales features](https://help.vtex.com/en/tutorial/telesales-features--UqhiccIRIK2KD0OqkzJaS#manual-pricing) article on VTEX Help Center.
 
