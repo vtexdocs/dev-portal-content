@@ -12,7 +12,7 @@ The image below shows how the process occurs, in more detail:
 
 <br>
 
-https://raw.githubusercontent.com/vtexdocs/dev-portal-content/fixing-API-Guides/docs/guides/Integration%20Guides/change%20chain%20orders%20in%20multilevel%20omnichannel%20inventory%20%20marketplace.jpg
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/fixing-API-Guides/docs/guides/Integration%20Guides/change%20chain%20orders%20in%20multilevel%20omnichannel%20inventory%20%20marketplace.jpg)
 
 <br>
 
