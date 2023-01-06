@@ -18,7 +18,7 @@ window.INSTORE_CONFIG = {
 }
 ```
 
-> ❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
+>❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
 
 After making changes in the code, make sure you press the `Save` button.
 
@@ -29,6 +29,7 @@ Once you reload inStore, whenever a sales associate prints an order, the text yo
 Before adding extra text, the printout of the order summary has the following format:
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/add-extra-text-to-the-order-print-0_34.png)
+
 In the example below, we changed the `checkout-instore-custom.js` file by inserting the following extra text:
 
 ```js
