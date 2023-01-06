@@ -9,7 +9,7 @@ The Checkout module handles customer purchase data.
 
 Checkout adds different data needed to create an order: client profile data, address, shipping, items data, and others.
 
-The OrderForm is the structure that contains this clustered data. It consists of several sections, each with useful information that can be accessed, manipulated, and (possibly) changed. To learn more, refer to the [OrderForm documentation](https://developers.vtex.com/vtex-rest-api/reference/checkout-api-overview#orderform-fields).
+The OrderForm is the structure that contains this clustered data. It consists of several sections, each with useful information that can be accessed, manipulated, and (possibly) changed. To learn more, refer to the [OrderForm documentation](https://developers.vtex.com/docs/guides/orderform-fields).
 
 ## Behavior of successive API requests
 
@@ -100,7 +100,7 @@ This makes it possible to update this section by sending new information, making
 
 Warning: you must send the attachment completely. See examples.
 
-Check the [OrderForm documentation](./checkout/order-form.md) to find out which sections there are.
+Check the [OrderForm documentation](https://developers.vtex.com/docs/guides/orderform-fields) to find out which sections there are.
 
 Do not forget to use `getOrderForm` first.
 
@@ -151,7 +151,7 @@ vtexjs.checkout
 
 #### Change openTextField
 
-The openTextField is a field for comments. Check the [OrderForm documentation](./checkout/order-form.md) for more details on it.
+The openTextField is a field for comments. Check the [OrderForm documentation](https://developers.vtex.com/docs/guides/orderform-fields) for more details on it.
 
 ```js
 vtexjs.checkout
@@ -221,7 +221,7 @@ Updates items in the orderForm.
 
 An item is identified by its `index` property. In the orderForm, this property can be obtained by looking at the index of the item in the Array of items.
 
-Check the [OrderForm documentation](./checkout/order-form.md) to learn more about what makes up the item object.
+Check the [OrderForm documentation](https://developers.vtex.com/docs/guides/orderform-fields) to learn more about what makes up the item object.
 
 Properties that are not sent will be kept unchanged, as well as items that are in the orderForm but have not been sent.
 
@@ -634,7 +634,7 @@ vtexjs.checkout.getAddressInformation(address).done(function(result) {
 
 Performs the partial user login using email.
 
-The information will likely come masked and you will not be able to edit it if the user already exists. For this, it’s necessary to authenticate with VTEX ID. Make sure of this with the orderForm’s canEditData property. Check the [OrderForm documentation](./checkout/order-form.md).
+The information will likely come masked and you will not be able to edit it if the user already exists. For this, it’s necessary to authenticate with VTEX ID. Make sure of this with the orderForm’s canEditData property. Check the [OrderForm documentation](https://developers.vtex.com/docs/guides/orderform-fields).
 
 Do not forget to use getOrderForm first.
 
