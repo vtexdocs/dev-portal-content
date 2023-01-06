@@ -14,7 +14,9 @@ To include them, you must use the `customData` field in the `orderForm`. The pur
 To work with this field, you must use VTEX’s Checkout API. Three steps are required:
 
 1. [Creating apps and fields through the configuration request](#creating-apps-and-fields-through-the-configuration-request).
+
 2. [Using the API to record/update/query the data (via `orderForm` and `placeOrder`)](#using-the-api-to-recordupdatequery-the-data).
+
 3. [Finding the desired data in the created order](#finding-the-desired-data-in-the-created-order).
 
 ## Creating apps and fields through the configuration request
@@ -73,7 +75,7 @@ In the body you must pass the `{{appFieldValue}}`, which is the value to be sent
 
 ## Finding the desired data in the created order
 
-Finally, it is necessary to implement access to the data saved in the orderForm’s extra fields. To do this, use the [Get Order API](https://developers.vtex.com/reference/orders#getorder), appending the order ID to the URL.
+Finally, it is necessary to implement access to the data saved in the orderForm’s extra fields. To do this, use the [Get Order API](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-), appending the order ID to the URL.
 
 The fields and their respective values will be inside the `customData` object.
 [block:callout]
