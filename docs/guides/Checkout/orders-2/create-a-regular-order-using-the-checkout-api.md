@@ -22,7 +22,7 @@ For this tutorial, we chose one of the more objective ways to understand and use
 4. [Place the order](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#4-place-the-order).
     Creating the order on the VTEX platform.
 
-5. [Send payment information](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#5-send-payment-information);
+5. [Send payment information](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#5-send-payment-information).
     Let VTEX know you have information to resolve payment.
 
 6. [Request order processing](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#6-request-order-processing).
