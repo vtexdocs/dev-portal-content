@@ -7,7 +7,7 @@ updatedAt: "2022-10-21T14:37:25.133Z"
 ---
 This section contains articles about features available on Checkout. Here you will find the following articles:
 
-- [Enable the Manual Price](doc:enable-the-manual-price)
-- [Enable the Save user data opt-in](doc:enable-the-save-user-data-opt-in)
-- [Enable the Region for SKUs](doc:enable-the-region-for-skus)
-- [Configure the Global Checkout](doc:configure-the-global-checkout)
+- [Enable the Manual Price](https://developers.vtex.com/docs/guides/enable-the-manual-price)
+- [Enable the Save user data opt-in](https://developers.vtex.com/docs/guides/enable-the-save-user-data-opt-in)
+- [Enable the Region for SKUs](https://developers.vtex.com/docs/guides/enable-the-region-for-skus)
+- [Configure the Global Checkout](https://developers.vtex.com/docs/guides/configure-the-global-checkout)
