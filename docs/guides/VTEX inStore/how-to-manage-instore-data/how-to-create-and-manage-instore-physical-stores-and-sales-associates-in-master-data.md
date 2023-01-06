@@ -5,15 +5,16 @@ hidden: false
 createdAt: "2021-08-04T20:29:56.258Z"
 updatedAt: "2022-02-24T20:44:34.927Z"
 ---
+
 inStore is VTEX’s core product for Unified Commerce operations. It allows your store to deliver a real omnichannel experience by seamlessly integrating your online and in-store channels and having your clients in the core of your business.
 
-When setting inStore in your business, you might need to add physical stores and sales associates to the system, as well as managing existing stores and sales associates. You can do this by using VTable, as described in [this article](https://help.vtex.com/en/tracks/instore-setting-up--zav76TFEZlAjnyBVL5tRc/5PSjRstg7UU4lOm0s8aqKN), or you can use the [Master Data API - V2](https://developers.vtex.com/vtex-developer-docs/reference/documents), as described below.
+When setting inStore in your business, you might need to add physical stores and sales associates to the system, as well as managing existing stores and sales associates. You can do this by using VTable, as described in [this article](https://help.vtex.com/en/tracks/instore-setting-up--zav76TFEZlAjnyBVL5tRc/5PSjRstg7UU4lOm0s8aqKN), or you can use the [Master Data API - V2]([https://developers.vtex.com/vtex-developer-docs/reference/documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents)), as described below.
 
 ## Stores
 
 ### Create a store
 
-If you want to create a new physical store on inStore, you should use the [Create or update entire document](https://developers.vtex.com/vtex-developer-docs/reference/createorupdateentiredocument) endpoint with the params listed below.
+If you want to create a new physical store on inStore, you should use the [Create new document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents) or the [Update entire document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-) endpoints with the params listed below.
 
 | **Param** | **Value**|
 |---|---|
@@ -39,7 +40,8 @@ The request body should have the following properties:
 | `complement` | string | Complementary information to the store’s address |
 
 Request body example:
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -48,9 +50,11 @@ Request body example:
     }
   ]
 }
-[/block]
+```
+
 When the request is successful, the response is a `json` schema including a new `DocumentId` attribute, which represents the store ID number:
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -59,7 +63,7 @@ When the request is successful, the response is a `json` schema including a new 
     }
   ]
 }
-[/block]
+```
 
 ### Update store information
 
@@ -70,7 +74,8 @@ To update store information, you can use the same request you would use to [Crea
 | `id` | string | Store `DocumentId` value, which represents the store ID number |
 
 Request body example (changing the `mobileNumber`):
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -79,9 +84,11 @@ Request body example (changing the `mobileNumber`):
     }
   ]
 }
-[/block]
+```
+
 Response body example:  
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -90,11 +97,11 @@ Response body example:
     }
   ]
 }
-[/block]
+```
 
 ### Find a store
 
-In case you need to find an existing physical store to check their ID or other information, you should use the [Search documents](https://developers.vtex.com/vtex-developer-docs/reference/searchdocuments) endpoint. You can use any other query params you want in this request.
+In case you need to find an existing physical store to check their ID or other information, you should use the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) endpoint. You can use any other query params you want in this request.
 
 | **Param** | **Value** |
 |---|---|
@@ -103,7 +110,7 @@ In case you need to find an existing physical store to check their ID or other i
 
 ### Delete a store
 
-In order to delete a physical store and remove its data in Master Data, you should use the [Delete document](https://developers.vtex.com/vtex-developer-docs/reference/deletedocument) endpoint.
+In order to delete a physical store and remove its data in Master Data, you should use the [Delete document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-) endpoint.
 
 | **Param** | **Value** |
 |---|---|
@@ -114,7 +121,7 @@ In order to delete a physical store and remove its data in Master Data, you shou
 
 ### Create a sales associate
 
-If you want to create a new sales associate on inStore, you should use the [Create or update entire document](https://developers.vtex.com/vtex-developer-docs/reference/createorupdateentiredocument) endpoint. Using this request, you will give the sales associate access to inStore and automatically give them the inStore Sales Person role in your account.
+If you want to create a new sales associate on inStore, you should use the [Create new document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents) or the [Update entire document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-) endpoints. Using this request, you will give the sales associate access to inStore and automatically give them the inStore Sales Person role in your account.
 
 | **Param** | **Value**|
 |---|---|
@@ -131,7 +138,8 @@ The request body should have the following properties:
 | `store` | string | Store `DocumentId` value, which represents the store ID number |
 
 Request body example:
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -140,9 +148,11 @@ Request body example:
     }
   ]
 }
-[/block]
+```
+
 When the request is successful, the response is a `json` including a new `DocumentId` attribute, which represents the sales associate ID number:
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -151,7 +161,7 @@ When the request is successful, the response is a `json` including a new `Docume
     }
   ]
 }
-[/block]
+```
 
 ### Update sales associate information
 
@@ -162,7 +172,8 @@ To update sales associate information, you can use the same request you would us
 | `id` | string | Sales associate `DocumentId` value, which represents the sales associate ID number |
 
 Request body example:
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -171,9 +182,11 @@ Request body example:
     }
   ]
 }
-[/block]
+```
+
 Response body example:
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -182,11 +195,11 @@ Response body example:
     }
   ]
 }
-[/block]
+```
 
 ### Find a sales associate
 
-In case you need to find an existing sales associate to check their ID or other information, you should use the [Search documents](https://developers.vtex.com/vtex-developer-docs/reference/searchdocuments) endpoint. You can use any other query params you want in this request. The response body will contain information about the sales associate and the store they are associated with.
+In case you need to find an existing sales associate to check their ID or other information, you should use the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) endpoint. You can use any other query params you want in this request. The response body will contain information about the sales associate and the store they are associated with.
 
 | **Param** | **Value** |
 |---|---|
@@ -195,7 +208,7 @@ In case you need to find an existing sales associate to check their ID or other 
 
 ### Delete a sales associate
 
-In order to delete a sales associate and remove their data in Master Data, you should use the [Delete document](https://developers.vtex.com/vtex-developer-docs/reference/deletedocument) endpoint.
+In order to delete a sales associate and remove their data in Master Data, you should use the [Delete document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-) endpoint.
 
 | **Param** | **Value** |
 |---|---|
