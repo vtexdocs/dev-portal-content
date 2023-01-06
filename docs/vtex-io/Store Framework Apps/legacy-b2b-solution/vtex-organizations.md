@@ -10,32 +10,33 @@ This application allows you to create organization and manage users under that o
 
 ## Usage
 
-Install this app in your workspace
+1. Install this app in your workspace by running this CLI command:
 
-```js
-vtex install vtex.organizations@1.x
-```
+	```js
+	vtex install vtex.organizations@1.x
+	```
 
-> ### Link application to development workspace
-> - clone the application to your working environment and checkout to the correct branch (i.e: `dev-master`)
-> - link this app to your workspace (`vtex link --verbose`)
+2. Link the application to your development workspace, as follows:
+
+   Clone the application to your working environment and checkout to the correct branch (i.e: `dev-master`).
+
+   Link this app to your workspace (`vtex link --verbose`).
 
 ## Prerequisites
 
-In order to run this application following master data schemas and indices should be created. 
-Use `MASTER DATA API - V2` in vtex api documentation to create those schemas (https://developers.vtex.com/reference#master-data-api-v2-overview)
+In order to run this application, you must create the following Master Data schemas and indices using [MASTER DATA API - V2](https://developers.vtex.com/reference#master-data-api-v2-overview).
 
-These schemas are shared among several applications `vtex.admin-organizations`, `vtex.auth-challenge` and `vtex.organizations`, therefore if you have already created these schemas and indices you can ignore this step
+These schemas are shared among several applications: `vtex.admin-organizations`, `vtex.auth-challenge` and `vtex.organizations`. Therefore, if you have already created these schemas and indices you can ignore this step.
 
 ### Master data schemas
 
-<details><summary>BusinessPermission</summary>
+<details>
+	<summary>BusinessPermission</summary>
 
-``` 
+	Data Entity Name: BusinessPermission
+	Schema Name: business-permission-schema-v1
 
-Data Entity Name: BusinessPermission
-Schema Name: business-permission-schema-v1
-
+```json
 {
 	"properties": {
 		"name": {
@@ -77,13 +78,14 @@ Schema Name: business-permission-schema-v1
 ```
 </details>
 
-<details><summary>BusinessRole</summary>
+<details>
 
-``` 
+<summary>BusinessRole</summary>
 
 Data Entity Name: BusinessRole
 Schema Name: business-role-schema-v1
 
+```json
 {
 	"properties": {
 		"name": {
@@ -132,17 +134,17 @@ Schema Name: business-role-schema-v1
 		]
 	}
 }
-
 ```
 </details>
 
-<details><summary>BusinessOrganization</summary>
+<details>
 
-``` 
+<summary>BusinessOrganization</summary>
 
 Data Entity Name: BusinessOrganization
 Schema Name: business-organization-schema-v1
 
+```json
 {
 	"properties": {
 		"name": {
@@ -197,17 +199,18 @@ Schema Name: business-organization-schema-v1
 		]
 	}
 }
-
 ```
+
 </details>
 
-<details><summary>UserOrganization</summary>
+<details>
 
-``` 
+<summary>UserOrganization</summary>
 
 Data Entity Name: UserOrganization
 Schema Name: user-organization-schema-v1
 
+```json
 {
 	"properties": {
 		"email": {
@@ -303,41 +306,34 @@ Schema Name: user-organization-schema-v1
 		}
 	]
 }
-
 ```
+
 </details>
 
-### Changes to existing **CL** table
-We need to add two fields to existing **CL** master data table. 
-```
-isOrgAdmin: Boolean 
-organizationId: VarChar 100
-```
-After creating the fields change settings of that fields with edit field feature.
+### Changes to existing CL table
+
+You must add two fields to existing **CL** Master Data table:
+
+|Field name|Type|Settings|
+|-|-|-|
+|`isOrgAdmin`|Boolean|Make readable without credential, Is searchable, Is filterable |
+|`organizationId`|VarChar 100|Is nullable, Make readable without credential, Allow editing without credential, Allow filter without credential, Is searchable, Is filterable |
+
+After creating the fields, change their settings by using the `Edit field` option.
 You can update the field settings as shown in the image below. 
 
-<a href="https://drive.google.com/uc?export=view&id=1IzMTKBpB4A9snERILSQJ-DQd1Zp758wE">View Image</a>
-
->**_NOTE:_** **isOrgAdmin** field should check following checkboxes 
-> **Make readable without credential**, 
-> **Is searchable**, 
-> **Is filterable**, 
-
-> **organizationId** field should check following checkboxes 
-> **Is nullable**, 
-> **Make readable without credential**, 
-> **Allow editing without credential**, 
-> **Allow filter without credential**, 
-> **Is searchable**, 
-> **Is filterable**, 
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store%20Framework/legacy-b2b-solution/vtex-organizations-1.png)
 
 Dont forget to `save` and `reindex` `CL` table once you add all the fields. 
 
-### [Deprecated] removed master data collections and schemas
->Data Entity Name: **Persona**, Schema Name: **persona-schema-v1**
+### Deprecated Master Data collections and schemas
 
->Data Entity Name: **OrgAssignment**, Schema Name: **organization-assignment-schema-v1**
+| Data Entity Name | Schema Name |
+|-|-|
+|Persona|persona-schema-v1|
+|OrgAssignment|organization-assignment-schema-v1|
 
-## Important
 
-> **_NOTE:_**  create `Manager` role with required permissions using `vtex.admin-organizations` application (https://github.com/vtex/admin-organizations)
+## Add Required roles
+
+It is necessary to create the Manager role with required permissions using the [Admin Organizations](https://github.com/vtex/admin-organizations) app.
