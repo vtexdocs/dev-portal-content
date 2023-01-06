@@ -1,23 +1,23 @@
 # Dev-portal-content
 
-Welcome to our [Developer Portal](https://developers.vtex.com) content repository! Here you will find the files for all guides included in that documentation portal. It is managed by the [Tech Writing team at VTEX](https://github.com/vtexdocs/dev-portal-content/graphs/contributors), with lots of love, sweat and PRs.
+Welcome to the [VTEX Developer Portal](https://developers.vtex.com) content repository! Here you will find the files for all guides included in that documentation portal. It is managed by the [Tech Writing team at VTEX](https://github.com/vtexdocs/dev-portal-content/graphs/contributors), with lots of love, sweat and PRs.
 
 
-Learn how to [contribute with documentation](#contributing-with-developer-portal-documentation), [manage content](#managing-content) and [fix errors](#fixing-errors) in this repository.
+We're so glad you're here! It means you care about sharing knowledge through documentation ❤️ 📝. So come along, get comfy and learn how to [contribute with documentation](#contributing-with-developer-portal-documentation), [manage content](#managing-content) and [fix errors](#fixing-errors) in this repository.
 
 ## Why have we changed platforms from Readme to our custom built Developer Portal?
 - Faster navigation
 - More control over the search
 - Create an interface completely controlled by us
 - Managing content in Github
-- High efficiency: we saved a considerable amount of our monthyly budget. 
+- High efficiency: we saved a considerable amount of our monthly budget. 
 
-## Dev Portal repositories
+## Developer Portal repositories
 We have created a new organization in Github to host our documentation: [vtexdocs](https://github.com/vtexdocs).
 
 You can find all repositories included in it, [here](https://github.com/vtex/education-tools#education-teams-repositories).
 
-They each serve a different purpose, and will be mentioned in the FAQ below, depending on which action we need to perform.
+They each serve a different purpose, and will be mentioned in the FAQ below, depending on which action you wish to perform.
 
 ### In this repository
 
@@ -25,22 +25,22 @@ You will find the following folders in this repository:
 
 - **.github**: stores workflows configured for this repository.
 - **docs**: where the markdown files of all our docs are stored. They are categorized into:
-  - **guides**: all guides that are not API Reference.
-  - **legacy-cms**: 
-  - **release-notes**: release notes included in our changelog.
-  - **vtex-io**: 
-- **docs-utils**: 
-- **images**
-- **readme-api-md**
+  - **guides**: all API guides.
+  - **release-notes**: release notes included in our [changelog](https://developers.vtex.com/updates/release-notes).
+  - **vtex-io**: all VTEX IO guides.
+- **docs-utils**: scripts used to import documentation from Readme. 
+- **images**: stores images imported from Readme. 
+- **readme-api-md**: stores API Reference's markdown imported from Readme/
+- **.gitignore**: stores files that should be ignored by Github.
 
-- [Images](/)
 
 
 ## Contributing with Developer Portal documentation
+We're so glad you're here! Thanks for being interested 
 
 ### How can I add new articles or release notes?
   1. Open a branch in the [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository.
-  2. Add a new file in the desired folder, following our [template](/docs/guides/guide_template.md). 
+  2. Add a new file in the [desired folder](#in-this-repository), following our [template](/docs/guides/guide_template.md). 
   3. Add your content in markdown.
   4. Add images in the chosen guide’s folder, if you wish.
   5. To determine the left navigation's order, follow [these](#what-determines-the-left-navigations-order-and-organization) instructions.
@@ -273,7 +273,7 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 >❗ Danger type callout
 ```
 
-## How can I add/fix images in an article?
+### How can I add/fix images in an article?
 1. Access the [dev-portal-content/docs/guides](https://github.com/vtexdocs/dev-portal-content/tree/main/docs/guides) folder.
 2. Upload the images you wish to include in your guide in the same folder your article is located.
 3. Access the file in Github web.
