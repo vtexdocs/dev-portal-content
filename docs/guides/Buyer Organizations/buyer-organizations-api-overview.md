@@ -11,18 +11,28 @@ The Buyer Organizations API allows you to manage Buyer Organizations and their a
 ## Index
 
 ### Buyer Organizations
-<span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/create-buyer-organization" target="_blank">Create Buyer Organization</a>
-<span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/retrieve-buyer-organization-creation-status" target="_blank">Retrieve Buyer Organization creation status</a>
-<span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/retrieve-buyer-organizations-by-user-email" target="_blank">Retrieve Buyer Organizations by User Email</a>
-<span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/retrieve-buyer-organization-by-organization-email" target="_blank">Retrieve Buyer Organizations by Organization Email</a>
-<span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/generate-buyer-organization-tenant-name" target="_blank">Generate Buyer Organization Tenant Name</a>
-<span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/integrate-buyer-organization-with-punchout2go" target="_blank">Integrate Buyer Organization with PunchOut2Go</a>
+`POST` [Create Buyer Organization](https://developers.vtex.com/vtex-rest-api/reference/create-buyer-organization)
+
+`GET` [Retrieve Buyer Organization creation status](https://developers.vtex.com/vtex-rest-api/reference/retrieve-buyer-organization-creation-status)
+
+`GET` [Retrieve Buyer Organizations by User Email](https://developers.vtex.com/vtex-rest-api/reference/retrieve-buyer-organizations-by-user-email)
+
+`GET` [Retrieve Buyer Organizations by Organization Email](https://developers.vtex.com/vtex-rest-api/reference/retrieve-buyer-organization-by-organization-email)
+
+`POST` [Generate Buyer Organization Tenant Name](https://developers.vtex.com/vtex-rest-api/reference/generate-buyer-organization-tenant-name)
+
+`POST` [Integrate Buyer Organization with PunchOut2Go](https://developers.vtex.com/vtex-rest-api/reference/integrate-buyer-organization-with-punchout2go)
 
 ### Users
-<span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/create-new-buyer-organization-user" target="_blank">Create New Buyer Organization User</a>
-<span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/list-buyer-organization-users" target="_blank">List Buyer Organization users</a>
-<span class="APIMethod APIMethod_fixedWidth APIMethod_put">put</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/update-buyer-organization-user-information" target="_blank">Update Buyer Organization User information</a>
-<span class="APIMethod APIMethod_fixedWidth APIMethod_delete">delete</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/delete-buyer-organization-user" target="_blank">Delete Buyer Organization User</a>
+
+`POST` [Create New Buyer Organization User](https://developers.vtex.com/vtex-rest-api/reference/create-new-buyer-organization-user)
+
+`GET` [List Buyer Organization users](https://developers.vtex.com/vtex-rest-api/reference/list-buyer-organization-users)
+
+`PUT` [Update Buyer Organization User information](https://developers.vtex.com/vtex-rest-api/reference/update-buyer-organization-user-information)
+
+`DELETE` [Delete Buyer Organization User](https://developers.vtex.com/vtex-rest-api/reference/delete-buyer-organization-user)
 
 ### Health Check
-<span class="APIMethod APIMethod_fixedWidth APIMethod_get">get</span> <a href="https://developers.vtex.com/vtex-rest-api/reference/buyer-organizations-health-check" target="_blank">Health Check</a>
+
+`GET` [Health Check](https://developers.vtex.com/vtex-rest-api/reference/buyer-organizations-health-check)
