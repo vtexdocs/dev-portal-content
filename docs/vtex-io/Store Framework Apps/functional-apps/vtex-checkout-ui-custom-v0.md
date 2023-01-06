@@ -12,7 +12,7 @@ The Checkout UI Custom app is responsible for customizing your store's Checkout 
 
 ## Configuration
 
-1. Using your terminal and the [VTEX IO Toolbelt](https://vtex.io/docs/recipes/development/vtex-io-cli-installment-and-command-reference), log into the desired VTEX account.
+1. Using your terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into the desired VTEX account.
 2. Run `vtex install vtex.checkout-ui-custom` on the account you're working on.
 3. Access your VTEX account's admin.
 4. Access **Store Setup** and then **Checkout UI Custom**.
@@ -22,13 +22,13 @@ The Checkout UI Custom app is responsible for customizing your store's Checkout 
 
 ## Modus Operandi
 
-If you access your VTEX account's admin using a [Development workspace](https://vtex.io/docs/concepts/workspace/) and publish your changes, the configurations performed using the app will only be applied into the workspace you are working in and not in your store Checkout.
+If you access your VTEX account's admin using a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) and publish your changes, the configurations performed using the app will only be applied into the workspace you are working in and not in your store Checkout.
 
 However, notice the following: **you should not perform any changes in your account's Master workspace to make your Checkout UI configurations publicly available**. Instead, you should use a Development workspace and the **History** tab displayed on the admin app.
 
 The `History` tab enables you to load app change history and, therefore, helps your checkout UI coding by reusing configurations performed in previous workspaces.
 
-Let's assume you were working in a [Development workspace](https://vtex.io/docs/recipes/development/creating-a-development-workspace) called `testredcolor`, and now want your changes to be public. According to how workspaces work in the platform, your changes first need to be applied in a [Production workspace](https://vtex.io/docs/recipes/development/creating-a-production-workspace) that, in turn, will be [promoted to Master](https://vtex.io/docs/recipes/development/promoting-a-workspace-to-master) later.
+Let's assume you were working in a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) called `testredcolor`, and now want your changes to be public. According to how workspaces work in the platform, your changes first need to be applied in a [Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) that, in turn, will be [promoted to Master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master) later.
 
 For this purpose, you can access the `History` tab using the desired Production workspace, load your last changes from `testredcolor` and then click on `Publish`, copying your configurations to the Production workspace you are currently working in.
 
