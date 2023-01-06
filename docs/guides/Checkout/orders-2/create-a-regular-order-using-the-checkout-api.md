@@ -197,6 +197,7 @@ This object informs the payment method and installment options (if available) se
 ```
 
 Note that the `value` field corresponds to the full value to be payed by the shopper, whereas the `referenceValue` is the base number over which interests apply. If no interest apply to the order, they should be equal.
+
 >ℹ️ For this example, we are considering a single payment method, with a single installment and no interest. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 Use the options and information from the [simulation](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#1-simulate-a-cart) response data to assemble your own `paymentData`.
