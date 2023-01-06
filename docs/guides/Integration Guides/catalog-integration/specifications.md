@@ -13,50 +13,27 @@ Here we take a look at some of the integration aspects of specifications, but we
 ## Groups
 
 To create specifications, it is necessary to register the groups. Groups are specification groupers, for example, we can create a group named Technical Specifications, and in it we can insert specifications referring to the product's technical data, such as material, voltage, dimensions, etc.
+
 [block:callout]
 {
   "type": "warning",
   "body": "The groups and fields created will be valid for its registration category and for all child categories. For example, if a field is created in the root category, it will be available in all store categories."
 }
 [/block]
+
 Usually just one group is created at root level and all the specification fields are associated with this group.
 
 ### Groups data model
 
-<table>
-    <tr>
-        <td><strong>Field</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Required</strong></td>
-        <td><strong>Format</strong></td>
-        <td><strong>Default</strong></td>
-    </tr>
-    <tr>
-        <td>Name</td>
-        <td>Group's Name</td>
-        <td>Yes</td>
-        <td>String (150)</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td>CategoryId</td>
-        <td>Category where this group is associated</td>
-        <td>No</td>
-        <td>Integer</td>
-        <td>null</td>
-    </tr>
-    <tr>
-        <td>Position</td>
-        <td>Store Framework - Deprecated. Classic CMS -</td>
-        <td>No</td>
-        <td>Integer</td>
-        <td>null</td>
-    </tr>
-</table>
+| Field | Description | Required | Format | Default |
+|---|---|---|---|---|
+| Name | Group's Name | Yes | String (150) | - |
+| CategoryId | Category where this group is associated | No | Integer | null |
+| Position | Store Framework - Deprecated. Classic CMS - | No | Integer | null |
 
 ### API integration
 
-The [Create specification group API request](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-specification-group) may be used to create your groups.
+The [Create specification group API request](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/specificationgroup) may be used to create your groups.
 
 [block:callout]
 {
@@ -123,44 +100,16 @@ When registering fields, it is necessary to specify the type of values accepted 
 
 Fields as **dropdown**, **radio** or **checkbox** can be used as filters on the search navigation menu.
 
-<table>
-    <tr>
-        <td>Type</td>
-        <td>ID</td>
-    </tr>
-    <tr>
-        <td>Text</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Long Text (Textarea)</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>Number</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>Dropdown</td>
-        <td>5</td>
-    </tr>
-    <tr>
-        <td>Radio</td>
-        <td>6</td>
-    </tr>
-    <tr>
-        <td>CheckBox</td>
-        <td>7</td>
-    </tr>
-    <tr>
-        <td>Indexed Text</td>
-        <td>8</td>
-    </tr>
-    <tr>
-        <td>Long Indexed Text</td>
-        <td>9</td>
-    </tr>
-</table>
+| Type | ID |
+|---|---|
+| Text | 1 |
+| Long Text (Textarea) | 2 |
+| Number | 4 |
+| Dropdown | 5 |
+| Radio | 6 |
+| CheckBox | 7 |
+| Indexed Text | 8 |
+| Long Indexed Text | 9 |
 
 [block:callout]
 {
@@ -168,129 +117,28 @@ Fields as **dropdown**, **radio** or **checkbox** can be used as filters on the 
   "body": "For SKU fields (IsStockKeepingUnit = true) the only types of fields available are Dropdown and Radio, IDs 5 and 6 respectively."
 }
 [/block]
-For more details about each field, you can access the  [Setting up the specification type](https://help.vtex.com/tutorial/configurando-tipo-de-campo-de-categoria?locale=en) documentation.
+
+For more details about each field, you can access the  [Adding product specifications or fields](https://help.vtex.com/en/tutorial/adding-specifications-or-product-fields--tutorials_106#product-field-types) or the [Adding SKU specifications or fields](https://help.vtex.com/en/tutorial/adding-sku-specifications-or-fields--tutorials_119#sku-field-types) documentation.
 
 ### Specification data model
 
-<table>
-    <tr>
-        <td><strong>Field</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Required</strong></td>
-        <td><strong>Format</strong></td>
-        <td><strong>Default</strong></td>
-    </tr>
-    <tr>
-        <td>FieldTypeId</td>
-        <td>Specification Field Type Id (FieldType Table)</td>
-        <td>Yes</td>
-        <td>Integer</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td>CategoryId</td>
-        <td>CategoryId associated with this field</td>
-        <td>No</td>
-        <td>Integer</td>
-        <td>null</td>
-    </tr>
-    <tr>
-        <td>FieldGroupId</td>
-        <td>GroupId associated with this field</td>
-        <td>Yes</td>
-        <td>Integer</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td>Name</td>
-        <td>Field name</td>
-        <td>Yes</td>
-        <td>String (150)</td>
-        <td>null</td>
-    </tr>
-    <tr>
-        <td>Description</td>
-        <td>Deprecated</td>
-        <td>No</td>
-        <td>String</td>
-        <td>null</td>
-    </tr>
-    <tr>
-        <td>Position</td>
-        <td>Store Framework - Deprecated. Classic CMS - This position number is used in ordering the fields both in the
-                navigation menu and in the field listing on the product page</td>
-        <td>No</td>
-        <td>Integer</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>IsFilter</td>
-        <td>Store Framework - Deprecated. Classic CMS - To allow the specification field to be used as a facet (filter)
-                on the search navigation bar.</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>IsRequired</td>
-        <td>To make the specification field required</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>IsOnProductDetails</td>
-        <td>Store Framework - Deprecated. Classic CMS -If field is visible on the Product page</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>IsStockKeepingUnit</td>
-        <td>If true, it will be added as a SKU specification field. If false, it will be added as a product
-            specification field.</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>IsWizard</td>
-        <td>Deprecated</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>IsActive</td>
-        <td>Enable/Disable field</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>IsTopMenuLinkActive</td>
-        <td>Store Framework - Deprecated. Classic CMS - To make the specification field visible in the store's upper
-                menu</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>IsSideMenuLinkActive</td>
-        <td>Store Framework - Deprecated. Classic CMS - To make the specification field clickable in the search
-                navigation bar</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>DefaultValue</td>
-        <td></td>
-        <td>No</td>
-        <td>String</td>
-        <td>null</td>
-    </tr>
-</table>
+| Field | Description | Required | Format | Default |
+|---|---|---|---|---|
+| FieldTypeId | Specification Field Type Id (FieldType Table). | Yes | Integer | - |
+| CategoryId | CategoryId associated with this field. | No | Integer | null |
+| FieldGroupId | GroupId associated with this field. | Yes | Integer | - |
+| Name | Field name. | Yes | String (150) | null |
+| Description | Deprecated. | No | String | null |
+| Position | Store Framework - Deprecated. Classic CMS - This position number is used in ordering the fields both in the navigation menu and in the field listing on the product page. | No | Integer | 0 |
+| IsFilter | Store Framework - Deprecated. Classic CMS - To allow the specification field to be used as a facet (filter) on the search navigation bar. | No | Boolean (true/false) | false |
+| IsRequired | To make the specification field required. | No | Boolean (true/false) | false |
+| IsOnProductDetails | Store Framework - Deprecated. Classic CMS -If field is visible on the Product page. | No | Boolean (true/false) | false |
+| IsStockKeepingUnit | If true, it will be added as a SKU specification field. If false, it will be added as a product             specification field. | No | Boolean (true/false) | false |
+| IsWizard | Deprecated. | No | Boolean (true/false) | false |
+| IsActive | Enable/Disable field. | No | Boolean (true/false) | false |
+| IsTopMenuLinkActive | Store Framework - Deprecated. Classic CMS - To make the specification field visible in the store's upper menu. | No | Boolean (true/false) | false |
+| IsSideMenuLinkActive | Store Framework - Deprecated. Classic CMS - To make the specification field clickable in the search navigation bar | No | Boolean (true/false) | false |
+| DefaultValue | Specification default value. | No | String | null |
 
 ### API integration
 
@@ -356,50 +204,13 @@ Those values will be shown on product register page like this one:
 
 ### Specification values data model
 
-<table>
-    <tr>
-        <td><strong>Field</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Required</strong></td>
-        <td><strong>Format</strong></td>
-        <td><strong>Default</strong></td>
-    </tr>
-    <tr>
-        <td>FieldId</td>
-        <td>FieldId associated with this fieldvalue</td>
-        <td>Yes</td>
-        <td>Integer</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td>Name</td>
-        <td>Name of field value</td>
-        <td>Yes</td>
-        <td>String (150)</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td>Text</td>
-        <td>Deprecated</td>
-        <td>No</td>
-        <td>String</td>
-        <td>null</td>
-    </tr>
-    <tr>
-        <td>IsActive</td>
-        <td>Enable/Disable field value</td>
-        <td>No</td>
-        <td>Boolean (true/false)</td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td>Position</td>
-        <td>The position of the value to be shown on product registration page (/admin/Site/Produto.aspx)</td>
-        <td>No</td>
-        <td>Integer</td>
-        <td>0</td>
-    </tr>
-</table>
+| Field | Description | Required | Format | Default |
+|---|---|---|---|---|
+| FieldId | FieldId associated with this fieldvalue | Yes | Integer | - |
+| Name | Name of field value | Yes | String (150) | - |
+| Text | Deprecated | No | String | null |
+| IsActive | Enable/Disable field value | No | Boolean (true/false) | false |
+| Position | The position of the value to be shown on product registration page (/admin/Site/Produto.aspx) | No | Integer | 0 |
 
 ### API integration
 
