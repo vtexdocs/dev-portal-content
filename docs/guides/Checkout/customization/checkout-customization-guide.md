@@ -72,7 +72,7 @@ In addition to Admin VTEX, you can use two apps to customize your store’s Chec
 
 ### Checkout UI Settings app
 
-The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install). This app, if compared to the [Admin VTEX](https://docs.google.com/document/d/15oDUQtf4Tywt0aLhp6fhQsuw7P-ieI6WS4Qz1wJJEWY/edit#heading=h.29eil9ypzyao) method, offers the possibility to:
+The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install). This app, if compared to the [Admin VTEX](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings) method, offers the possibility to:
 
 - Perform A/B Testing
 - Easily track all changes made to the UI (through app versions)
