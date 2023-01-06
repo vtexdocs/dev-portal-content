@@ -19,7 +19,7 @@ For this tutorial, we chose one of the more objective ways to understand and use
 3. [Assemble a cart](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#3-assemble-a-cart).
     Put together all order information in the correct format.
 
-4. [Place the order](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#4-place-the-order);
+4. [Place the order](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#4-place-the-order).
     Creating the order on the VTEX platform.
 
 5. [Send payment information](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#5-send-payment-information);
