@@ -18,9 +18,9 @@ To comply with GDPR (General Data Protection Regulation - Europe) and LGPD - Lei
 
 To use the **Save user data opt-in** functionality in your store, you must first enable it. Then, follow the settings below:
 
-1. Make a `GET` request using the endpoint [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/configuration).
-2. Make a `POST` request using the endpoint [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) with the same data obtained in the GET request, just modifying the value of the `savePersonalDataAsOptIn` parameter from `null` to `true`.
-3. Make a new `GET` request using the endpoint [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) to confirm activation. This will be indicated by the presence of the `savePaymentData` and `savePersonalData` fields under the `clientPreferencesData` object in the `orderForm`.
+1. Make a `GET` request using the endpoint [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm).
+2. Make a `POST` request using the endpoint [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) with the same data obtained in the GET request, just modifying the value of the `savePersonalDataAsOptIn` parameter from `null` to `true`.
+3. Make a new `GET` request using the endpoint [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm) to confirm activation. This will be indicated by the presence of the `savePaymentData` and `savePersonalData` fields under the `clientPreferencesData` object in the `orderForm`.
 
 ![savePersonalData](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/features/enable-the-save-user-data-opt-in-0_24.PNG)
 
