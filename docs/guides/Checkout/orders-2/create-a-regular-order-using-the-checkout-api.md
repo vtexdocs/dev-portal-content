@@ -13,7 +13,7 @@ For this tutorial, we chose one of the more objective ways to understand and use
 1. [Simulate a cart](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#1-simulate-a-cart).
     Find out what delivery and payment options are available.
 
-2. [Check if the customer already exists in your database](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database);
+2. [Check if the customer already exists in your database](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#2-check-if-a-customer-already-exists-in-your-database).
     An order needs the shopper’s email address to be placed.
 
 3. [Assemble a cart](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#3-assemble-a-cart);
