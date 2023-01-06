@@ -14,8 +14,14 @@ B2B Easy Set Up is an app that helps you quickly get your store configured for B
 2. [Log in to your account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-1---logging-in-to-your-vtex-account) with `vtex login {accountName}`.
 3. [Create a new workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-2---creating-your-own-workspace) with `vtex use easysetupworkspace`.
 4. [Install the app on your store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) with `vtex install vtex.easy-setup`.
->❗ We strongly advise that you do **not run Easy Setup on a production environment**. It will make **irreversible changes** and may delete some previous configurations on your store.
-
+  
+[block:callout]
+{
+  "type": "danger",
+  "body": "We strongly advise that you **do not run Easy Setup on a production environment**. It will make **irreversible changes** and may delete some previous configurations on your store.",
+}
+[/block]
+  
 ## Store configuration
 
 Now that the Easy Setup app is installed in your store, proceed to operate the app on the Admin.
@@ -24,19 +30,33 @@ Now that the Easy Setup app is installed in your store, proceed to operate the a
 
 2. On the right side of the screen, select which resources you want to apply on your store. If you want to configure all the options, select **All Resources**.
 
-   > ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, you must not select the **Organizations** resource. Otherwise this will alter the user profile Master Data schema and prevent the B2B Suite apps from creating users.
+[block:callout]
+{
+  "type": "warning",
+  "body": "If you are using the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, you must not select the **Organizations** resource. Otherwise this will alter the user profile Master Data schema and prevent the B2B Suite apps from creating users.",
+}
+[/block]
+
 
 3. Click on the `Start Easy Setup` button.
    ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-b2b-easy-set-up-0.PNG)
 
 4. Click on the `I Understand` button that will appear in the **Are you sure you want to proceed?** dialog.
->❗ Once you click `I Understand`, this step is irreversible.
+
+[block:callout]
+{
+  "type": "danger",
+  "body": "Once you click `I Understand`, this step is irreversible.",
+}
+[/block]
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-b2b-easy-set-up-1.PNG)
-5. Wait a few seconds for the setup to complete.
 
-6. When the configuration is complete, you will receive a positive feedback on the screen.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-b2b-easy-set-up-2.PNG)
+Wait a few seconds for the setup to complete.
+
+When the configuration is complete, you will receive a positive feedback on the screen.
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-b2b-easy-set-up-2.PNG)
 
 [block:callout]
 {
@@ -44,6 +64,7 @@ Now that the Easy Setup app is installed in your store, proceed to operate the a
   "body": "If you get an error message for some of the resources, try again this time only selecting the troublesome resources. If the error persists, [contact support](https://support.vtex.com/hc/en-us/requests)."
 }
 [/block]
+
 Check out the [Resources](https://developers.vtex.com/vtex-developer-docs/docs/installing-b2b-easy-set-up#resources) section below for details on the sample data used by the app in the initial setup.
 
 ## Resources
@@ -188,6 +209,7 @@ This resource creates an assortment of products and SKUs and sets their specific
           <li>SKU Name: L (880042)</li>
           <li>SKU Name: XL (880043)</li>
         </ul>
+      </ul>
     </details>
     <details>
       <summary>Category: Food and beverage (9282)</summary>
