@@ -7,11 +7,12 @@ updatedAt: "2021-08-17T20:24:18.657Z"
 ---
 
 This article aims to explain how the inStore app configures AppLinking for `payment` and `payment-reversal` actions with the acquirers' apps.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/integrating-instore-to-a-new-payment-acquirer-0.png)
+![integrating-instore-to-a-new-payment-acquirer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/integrating-instore-to-a-new-payment-acquirer-0.png)
 
 ## Setting fields
 
 All acquirers must have:
+
 ```json
 {
   "data": {
@@ -61,12 +62,7 @@ If necessary, inStore can send additional information. Example with the sub-acqu
 }
 ```
 
-```json
-{
-  "type": "info",
-  "body": "To create any extra configuration, you need to send an email to the inStore team (instoredevs@vtex.com.br) informing the additional information the app needs to complete the transaction. With that, we will create a form on the **Payments** module so that customers can configure their acquirer."
-}
-```
+>ℹ️ To create any extra configuration, you need to send an email to the inStore team (instoredevs@vtex.com.br) informing the additional information the app needs to complete the transaction. With that, we will create a form on the **Payments** module so that customers can configure their acquirer.
 
 ## Sending URI and response URI for each action
 
@@ -165,6 +161,7 @@ Failed:  instore://payment?responsecode=110&reason=card+refused+by+acquirer&paym
 ```
 
 Response Parameters:
+
 ```json
 {
   "data": {
@@ -232,6 +229,7 @@ Failed:  instore://payment-reversal?responsecode=110&reason=card+refused+by+acqu
 ```
 
 Response parameters:
+
 ```json
 {
   "data": {
