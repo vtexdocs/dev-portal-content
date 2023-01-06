@@ -7,10 +7,11 @@ updatedAt: '2022-02-04T21:24:41.963Z'
 ---
 
 SKU specifications are necessary to be able to choose the SKU, that is, the variation of the product. Example: Color, Size, Voltage. The SKU Selector can be found in the search result or on the product page.
+
 [block:callout]
 {
 "type": "info",
-"body": "If you wish to implement color variation in your products, we recommend you do not use SKU specifications. Instead, see this tutorial about [How to implement product color variation](https://developers.vtex.com/vtex-rest-api/docs/how-to-implement-product-color-variation)."
+"body": "If you wish to implement color variation in your products, we recommend you do not use SKU specifications. Instead, see this tutorial about [How to implement product color variation](https://developers.vtex.com/docs/guides/how-to-implement-product-color-variation)."
 }
 [/block]
 
@@ -23,43 +24,13 @@ SKU specifications are necessary to be able to choose the SKU, that is, the vari
 
 ## Data Model
 
-| **Field**
-| **Description**
-| **Required**
-| **Type**
-| **Default**
-|
+| **Field** | **Description** | **Required** | **Type** | **Default**|
 |---|---|---|---|---|
-| Id
-| ID of Specification. This ID is used to delete/update the specification
-| No
-| Integer
-| AutoIncrement
-|
-| SkuId
-| ID of SKU
-| Yes
-| Integer
-| -
-|
-| FieldId
-| Field ID
-| Yes
-| Integer
-| -
-|
-| FieldValueId
-| ID of FieldValue. Required only for FieldTypeId 5,6,7
-| No
-| Integer
-| null
-|
-| Text
-| Value of specification. Only for FieldTypeId different from 5,6,7
-| No
-| String
-| null
-|
+| Id | ID of Specification. This ID is used to delete/update the specification | No | Integer | AutoIncrement |
+| SkuId | ID of SKU | Yes | Integer | - |
+| FieldId | Field ID | Yes| Integer | - |
+| FieldValueId | ID of FieldValue. Required only for FieldTypeId 5,6,7 | No | Integer | null |
+| Text | Value of specification. Only for FieldTypeId different from 5,6,7 | No | String | null |
 
 ## Implementation
 
@@ -109,8 +80,8 @@ Status: 200 OK
 
 ### Remove an SKU Specification
 
-To remove a specification from an SKU, use the [Delete SKU specification API endpoint](https://developers.vtex.com/vtex-rest-api/reference/delete_api-catalog-pvt-stockkeepingunit-skuid-specification-specificationid).
+To remove a specification from an SKU, use the [Delete SKU specification API endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/stockkeepingunit/-skuId-/specification/-specificationId-).
 
 ### Remove all specifications of specific SKU
 
-To remove all specifications of one SKU, use the [Delete all SKU specifications endpoint](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-delete-sku-specification)
+To remove all specifications of one SKU, use the [Delete all SKU specifications endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/stockkeepingunit/-skuId-/specification)
