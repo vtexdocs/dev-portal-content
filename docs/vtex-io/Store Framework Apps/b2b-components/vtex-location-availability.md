@@ -7,21 +7,19 @@ createdAt: "2020-09-02T15:29:28.176Z"
 updatedAt: "2022-11-22T16:02:14.171Z"
 ---
 
-This app provides availability and shipping information based on the user's location, if available at the session, to have a more accurate result, even without authentication. We recommend using this app along with `vtex.shopper-location`; you can find more information about this app [here](https://github.com/vtex-apps/shopper-location).
-
-![Shelf](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/b2b-components/images/shelf.png)
+This app provides availability and shipping information based on the user's location, if available at the session, to have a more accurate result, even without authentication. We recommend using this app along with (Shopper Location)[https://developers.vtex.com/docs/guides/vtex-shopper-location].
 
 ## Configuration
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the Location Availability app by running `vtex install vtex.location-availability@0.x`.
+1. Using [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the Location Availability app by running `vtex install vtex.location-availability@0.x`.
 2. Open your store's Store Theme app directory in your code editor.
 3. Add the Location Availability app as a `peerDependency` in the `manifest.json` file:
 
-```diff
- "peerDependencies": {
-+  "vtex.location-availability": "0.x"
- }
-```
+  ```diff
+  "peerDependencies": {
+  +  "vtex.location-availability": "0.x"
+  }
+  ```
 
 Now, you are able to use the blocks exported by the `location-availability` app:
 
@@ -66,17 +64,17 @@ This block summarizes a product's availability and is best used on product shelv
 
 These blocks provide more detailed availability information and are designed for use on the PDP (product details page). Each block's information will automatically update if either the user's location or the selected SKU are changed.
 
-**`location-context`**: This block provides the location and availability data which the other blocks display. If you wish to use any of the following blocks, this block must be set as their parent (see example below).
+- **`location-context`**: This block provides the location and availability data which the other blocks display. If you wish to use any of the following blocks, this block must be set as their parent (see example below).
 
-**`product-location-availability-header`**: This block displays a header for the availability section, i.e. "Availability for 90210:". It can be configured to style the postal code as a link, if you wish to use this block as a trigger for the `ChangeLocation` modal from `vtex.shopper-location`.
+- **`product-location-availability-header`**: This block displays a header for the availability section, i.e. "Availability for 90210:". It can be configured to style the postal code as a link, if you wish to use this block as a trigger for the `ChangeLocation` modal from `vtex.shopper-location`.
 
 | Prop name     | Type      | Description                            | Default value |
 | ------------- | --------- | -------------------------------------- | ------------- |
 | `styleAsLink` | `boolean` | Style the user's postal code as a link | `false`       |
 
-**`product-location-shipping-options`**: This block displays the available shipping options for the selected SKU based on the user's current location.
+- **`product-location-shipping-options`**: This block displays the available shipping options for the selected SKU based on the user's current location.
 
-**`product-location-pickup-options`**: This block displays the stores which have availability for the selected SKU and that are nearby the user's current location. If more than 3 stores meet this criteria, a "See All Stores" button is also rendered which opens the full list of stores in a modal window when clicked.
+- **`product-location-pickup-options`**: This block displays the stores which have availability for the selected SKU and that are nearby the user's current location. If more than 3 stores meet this criteria, a "See All Stores" button is also rendered which opens the full list of stores in a modal window when clicked.
 
 **Example**
 
@@ -129,11 +127,11 @@ These blocks provide more detailed availability information and are designed for
 
 The above JSON will render an availability section that looks like this:
 
-![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/b2b-components/images/availability-example.png)
+![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store%20Framework%20Apps/b2b-components/images/availability-example.png)
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles                |
 | -------------------------- |
