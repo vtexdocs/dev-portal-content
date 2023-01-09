@@ -9,12 +9,11 @@ updatedAt: "2022-03-21T17:10:43.606Z"
 
 The **Order Configuration** app, designed for B2B scenarios, displays a form responsible for collecting order data in a modal.
 
-![order-configuration-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-configuration-0.gif)
-
+![order-configuration-gif](https://user-images.githubusercontent.com/52087100/91925199-e5125200-ecaa-11ea-8734-f98921ddb384.gif)
 
 Once the form is submitted, the order data collected will be available at Master Data and saved in the current VTEX session.
 
-> ℹ This app can be used to enable customization of all kinds of behaviors, such as custom prices, custom products, etc. Keep in mind the Order Configuration app does not offer these functionalities, it only enables other apps to do so.
+>ℹ This app can be used to enable customization of all kinds of behaviors, such as custom prices, custom products, etc. Keep in mind the Order Configuration app does not offer these functionalities, it only enables other apps to do so.
 
 Follow the steps below to install and set up the **Order Configuration** app in your store.
 
@@ -131,7 +130,7 @@ Then, declare the `order-config#header` block and its children blocks: `order-co
 }
 ```
 
-> ℹ If the `order-config.form` block does not have any children configured, a default form will be rendered automatically based on the [React Hook Form JSON Schema](https://github.com/vtex/react-hook-form-jsonschema) library. To declare children blocks according to your business needs, check out the [Advanced configuration](#advanced-configuration) section below.
+>ℹ If the `order-config.form` block does not have any children configured, a default form will be rendered automatically based on the [React Hook Form JSON Schema](https://github.com/vtex/react-hook-form-jsonschema) library. To declare children blocks according to your business needs, check out the [Advanced configuration](#advanced-configuration) section below.
 
 ### Step 3: Create `main` schema in Master Data
 
@@ -170,15 +169,15 @@ The schema should contain all the data that you added in the form above, otherwi
 }
 ```
 
-Refer to [Master Data API - v2 documentation](https://developers.vtex.com/vtex-rest-api/reference/schemas#saveschemabyname) for more details.
+Refer to [Master Data API - v2 documentation](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) for more details.
 
 ### Step 4: Update orderForm configuration
 
 It is also necessary to configure a new app in the `orderForm`.
 
-First, place a `GET` [Get orderForm configuration](https://developers.vtex.com/vtex-developer-docs/reference/getorderformconfiguration) request to retrieve the current `orderForm` settings before updating them. By doing so you ensure that you will only change the properties you want in the next step.
+First, place a `GET` [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm) request to retrieve the current `orderForm` settings before updating them. By doing so you ensure that you will only change the properties you want in the next step.
 
-Then, place a `POST` [Update orderForm configuration](https://developers.vtex.com/vtex-developer-docs/reference/updateorderformconfiguration) request, setting the following object inside the `apps` object in the request body:
+Then, place a `POST` [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) request, setting the following object inside the `apps` object in the request body:
 
 ```json
         {
@@ -230,7 +229,7 @@ Then, place a `POST` [Update orderForm configuration](https://developers.vtex.co
 }
 ```
 
-You can refer to [Checkout API documentation](https://developers.vtex.com/vtex-developer-docs/reference/updateorderformconfiguration) for more information.
+You can refer to [Checkout API documentation](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) for more information.
 
 
 ### Advanced configuration
@@ -370,7 +369,7 @@ The `options` object contains the following props:
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles |
 | ----------- |
