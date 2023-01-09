@@ -30,7 +30,7 @@ If you want to show these details in another way, you will have to get a layout 
 
 ### The parameters *Months* and *Percentile*
 
-To allow more flexibility in showing values in the product page, you can use the **_Months _**parameter to define the number of months to be taken into account by the control.
+To allow more flexibility in showing values in the product page, you can use the **Months** parameter to define the number of months to be taken into account by the control.
 
 If the parameter is "6", for example, the control will show the lowest amount invoiced for the item in each of the last six months.
 
