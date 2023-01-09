@@ -6,13 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:16.745Z"
 updatedAt: "2022-09-23T18:04:06.851Z"
 ---
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
 
 This is a Trustpilot first-party integration app. The [solution](https://www.trustpilot.com/) provides a review platform for your store.
 
@@ -42,7 +35,6 @@ The `trustpilot` app also enables Truspilot's widget component to be added to yo
 6. Save your changes;
 7. Access your store's website using the Developer workspace to check out the new component. If no more changes are desired, repeat the steps above in a [Production workspace](https://vtex.io/docs/recipes/development/creating-a-production-workspace/) and then [promote it to Master](https://vtex.io/docs/recipes/development/promoting-a-workspace-to-master).
 
-
 > ℹ️ _The integration key must be provided by Trustpilot._
 
 The `trustpilot` app also enables Truspilot's widgets to be added to your store theme by inserting the `shop-review-badge` interface in your layout and then using the `trustpilot-widget` block in a template of your choosing.
@@ -50,7 +42,6 @@ The `trustpilot` app also enables Truspilot's widgets to be added to your store 
 | Interface           | Block               | Description                             |
 | ------------------- | ------------------- | --------------------------------------- |
 | `shop-review-badge` | `trustpilot-widget` | Adds a Trustpilot widget in your store. |
-
 
 ## Block without badge
 
@@ -61,6 +52,7 @@ To use widget without `shop-review-badge` to landing pages, for example, you can
 +   "vtex.trustpilot": "1.x"
  }
 ```
+
 ## `trustpilot-widget` as props
 
 ```json
@@ -89,21 +81,3 @@ To use widget without `shop-review-badge` to landing pages, for example, you can
 |  `tag`  | `string` | Change tag of template. More info [here](https://support.trustpilot.com/hc/en-us/articles/203840856-Tag-your-service-reviews) |  `undefined`   |
 |  `businessUnitId`  | `string` | Set your business code  |  `undefined`  |
 |  `templateId`  | `string` | Set your template ID  | `5419b6a8b0d04a076446a9ad`  |
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

@@ -6,11 +6,8 @@ hidden: false
 createdAt: "2020-06-03T15:19:47.985Z"
 updatedAt: "2022-09-14T12:37:24.494Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/layout-apps/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Slider Layout is a flexible solution for building sliders of blocks within VTEX Store Framework, such as a carousel component. 
+Slider Layout is a flexible solution for building sliders of blocks within VTEX Store Framework, such as a carousel component.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-slider-layout-0.png)
 
@@ -26,7 +23,7 @@ To do so, you must go to your store’s Admin, click **Store Setup > CMS > Site 
 
 > For more information about managing your page content, access [Managing page and template content](https://help.vtex.com/en/tutorial/managing-page-and-template-content--3tMbx6HXy4Fy5r9EhboG37).
 
-With everything set up, Google Analytics is now able to track your internal promotions and generate reports of its views, clicks, click-through rate, conversions, and revenue. 
+With everything set up, Google Analytics is now able to track your internal promotions and generate reports of its views, clicks, click-through rate, conversions, and revenue.
 
 ## Configuration
 
@@ -98,29 +95,29 @@ Now, you are able to use all blocks exported by the `slider-layout` app. Check o
 - **`itemsPerPage` object**
 
 | Prop name | Type | Description | Default value |
-| ------- | ------ | -------- | ------------- | 
-| `desktop` | `number` | Number of slides to be shown on desktop devices. |  `5` | 
-| `tablet` | `number` |  Number of slides to be shown on tablet devices. | `3` | 
-| `phone` | `number` |  Number of slides to be shown on phone devices.   | `1` | 
+| ------- | ------ | -------- | ------------- |
+| `desktop` | `number` | Number of slides to be shown on desktop devices. |  `5` |
+| `tablet` | `number` |  Number of slides to be shown on tablet devices. | `3` |
+| `phone` | `number` |  Number of slides to be shown on phone devices.   | `1` |
 
 - **`slideTransition` object**
 
 | Prop name | Type | Description | Default value |
-| ------- | ------ | -------- | ------------- | 
-| `speed` | `number` | Transition speed (in `ms`).  |  `400` | 
-| `delay` | `number` |  Delay between slides transition (in `ms`).  | `0` | 
-| `timing` | `string` | Timing function. | `''` | 
+| ------- | ------ | -------- | ------------- |
+| `speed` | `number` | Transition speed (in `ms`).  |  `400` |
+| `delay` | `number` |  Delay between slides transition (in `ms`).  | `0` |
+| `timing` | `string` | Timing function. | `''` |
 
 - **`autoplay` object**
 
 | Prop name | Type | Description | Default value |
-| ------- | ------ | -------- | ------------- | 
-| `timeout` | `number` |  Timeout (in `ms`) between each slide. |  `undefined` | 
+| ------- | ------ | -------- | ------------- |
+| `timeout` | `number` |  Timeout (in `ms`) between each slide. |  `undefined` |
 | `stopOnHover` | `boolean` |  Whether the auto play should stop when users are hovering the slider (`true`) or not (`false`). | `undefined` |
 
 ## Advanced configurations
 
-The `slider-layout-group` block is responsible for synchronizing the slides rendered by each one of the `slider-layout` blocks declared in it. 
+The `slider-layout-group` block is responsible for synchronizing the slides rendered by each one of the `slider-layout` blocks declared in it.
 
 The `slider-layout-group`  therefore does not render any specific component on your store's UI. In turn, it is a logical block that only expects to receive a `children` block list containing the desired `slider-layout` blocks to be rendered. For example:
 
@@ -163,20 +160,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `sliderRightArrow`        |
 | `sliderTrackContainer`    |
 | `sliderTrack`             |
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

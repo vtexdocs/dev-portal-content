@@ -5,18 +5,6 @@ hidden: true
 createdAt: "2021-10-04T13:37:00.677Z"
 updatedAt: "2021-10-25T14:03:06.461Z"
 ---
->📢 **Disclaimer:** Don't fork this project; use, contribute, or open issue with your feature request.
-
-## Table of Contents
-
-- [Usage](#usage)
-  - [Styles API](#styles-api)
-- [Components Specs](#components-specs)
-- [Creating a new component](#creating-a-new-component)
-  - [Project structure](#project-structure)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [Tests](#tests)
 
 ## Usage
 
@@ -135,53 +123,3 @@ To execute our tests go to `react/` folder and run `yarn test`
 ### Travis CI
 
 [![Build Status](https://api.travis-ci.org/vtex-apps/store-components.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-vtex-store-components-0.png)
-
-<!-- DOCS-IGNORE:start -->
-## Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/hapoza"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-1.png"></img></a></td>
-    <td align="center"><a href="https://github.com/JNussens"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-2.png"></img></a></td>
-    <td align="center"><a href="https://github.com/lucasayb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-3.png"></img></a></td>
-    <td align="center"><a href="https://t.co/LTjWBxRnqE"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-4.png"></img></a></td>
-    <td align="center"><a href="https://github.com/Erislandio"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-5.png"></img></a></td>
-    <td align="center"><a href="https://github.com/BeatrizMiranda"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-6.png"></img></a></td>
-    <td align="center"><a href="https://github.com/Jayendra88"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-7.png"></img></a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/pgrimaud"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-8.png"></img></a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/igorpoubel"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-9.png"></img></a></td>
-    <td align="center"><a href="http://www.hugoccosta.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-10.png"></img></a></td>
-    <td align="center"><a href="https://github.com/MatheusR42"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-11.png"></img></a></td>
-    <td align="center"><a href="https://github.com/LuisaFCorrea"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-12.png"></img></a></td>
-    <td align="center"><a href="https://github.com/pmarignan"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-13.png"></img></a></td>
-    <td align="center"><a href="https://github.com/rcmuniz1994"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-14.png"></img></a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/ovio224"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-15.png"></img></a></td>
-    <td align="center"><a href="https://github.com/LucasCastroJussi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-16.png"></img></a></td>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/test-vtex-store-components-17.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-<!-- DOCS-IGNORE:end -->
-
-**Upcoming documentation:**
-
- - [Render logo as amp-img if in AMP page](https://github.com/vtex-apps/store-components/pull/580)
- - [Update CSS handles on ProductSpecification](https://github.com/vtex-apps/store-components/pull/599)
-
- - [Including classes on searchBar to identify when is open and/or filled](https://github.com/vtex-apps/store-components/pull/792)

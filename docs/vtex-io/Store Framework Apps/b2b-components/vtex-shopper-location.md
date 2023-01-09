@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-09-03T21:01:54.967Z"
 updatedAt: "2022-11-11T12:33:47.603Z"
 ---
+
 This app attempts to determine the user's location if not already known, first by requesting permission to use their browser's geolocation feature, then by looking up their location based on their IP address as a fallback. The location is stored in the `shippingData` section of the `orderForm` and can then be used by other apps, such as [Location Availability](https://github.com/vtex-apps/location-availability).
 
 A block is also provided which renders a form allowing the user to manually change their location.
@@ -192,17 +193,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `storeListContainer`              |
 | `storeListItems`                  |
 | `storeListItem`                   |
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

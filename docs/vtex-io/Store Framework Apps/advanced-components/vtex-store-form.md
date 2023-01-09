@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:10.904Z"
 updatedAt: "2022-07-22T12:00:24.795Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Store Form app provides blocks responsible for displaying an user form connected to [**Master Data**](https://help.vtex.com/tutorial/what-is-master-data--4otjBnR27u4WUIciQsmkAw?locale=en) through a [JSON schema](https://json-schema.org/understanding-json-schema/index.html).
 
@@ -16,7 +13,7 @@ The Store Form app provides blocks responsible for displaying an user form conne
 
 ## Configuration
 
-> ⚠️ Before configuring the Store Form block in your theme, make sure you've already configure a <strong>JSON schema in Master Data</strong>, otherwise the client form won't be properly saved. To more info, access the recipe on [Creating forms for your store users](https://vtex.io/docs/recipes/templates/creating-a-native-form-for-your-store-users/).
+> ⚠️ Before configuring the Store Form block in your theme, make sure you've already configure a **JSON schema in Master Data**, otherwise the client form won't be properly saved. To more info, access the recipe on [Creating forms for your store users](https://vtex.io/docs/recipes/templates/creating-a-native-form-for-your-store-users/).
 
 1. Add `store-form` app to your theme's dependencies in the `manifest.json`, for example:
 
@@ -58,7 +55,7 @@ In the example below, the form block is contained in a Flex Layout row:
  },
 ```
 
-3.  Then, declare the `form` block. Bear in mind to specify which `entity` and `schema` from Master Data should be fetched to build the block.
+3. Then, declare the `form` block. Bear in mind to specify which `entity` and `schema` from Master Data should be fetched to build the block.
 
 ```JSON
 {
@@ -157,7 +154,7 @@ In the example below, the form block is contained in a Flex Layout row:
 
 | Prop name   | Type                                 | Description                                                                                                                                                                                                                                      | Default Value |
 | ----------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `placeholder`   | `string`    |  Placeholder for the textarea input.	 | `undefined`              |
+| `placeholder`   | `string`    |  Placeholder for the textarea input.  | `undefined`              |
 
 ### `form-input.text` props
 
@@ -166,7 +163,7 @@ In the example below, the form block is contained in a Flex Layout row:
 | `pointer`   | `string`    | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) JSON schema pointer i.e. the JSON schema path  (for example: #/properties/firstName) in which the form block inputs should be validated against. | `undefined`              |
 | `inputType` | `enum` | Defines which type of a text field should be rendered: <br>`input`: renders a normal text field.<br>`hidden`: does not render any text field. It should be used in scenarios in which you want to pre-define a field value to be submitted to the form but that shouldn't be visible (and therefore editable) to users. <br>`password`: renders a password text field.                 | `input`           |
 | `label` | `string` |  ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Field's name when rendered | Property's title  |
-| `placeholder`   | `string`    |  Placeholder for the text input.	 | `undefined`              |
+| `placeholder`   | `string`    |  Placeholder for the text input.  | `undefined`              |
 
 ### `form-field-group` props
 
@@ -199,15 +196,15 @@ const UISchema = {
 
 Where `childName` should be replaced for the desired sub-property name and the  `UIType` should be replaced for one of the following values:
 
-  - `default`: will consider the `form-field-group` own logic (e.g. using the [React Hook Form JSON Schema](https://github.com/vtex/react-hook-form-jsonschema) library) for block's rendering;
-  - `radio`: the sub-property will be rendered as a `form-input.radiogroup` block.
-  - `select`: the sub-property will be rendered as a `form-input.dropdown` block.
-  - `input`: the sub-property will be rendered as a `form-input.text` block with `inputType` set to `input`.
-  - `hidden`:  the sub-property will be rendered as a `form-input.text` block with `inputType` set to `hidden`.
-  - `password`: the sub-property will be rendered as a `form-input.text` block with `inputType` set to `password`.
-  - `textArea`: the sub-property will be rendered as a `form-input.textarea` block.
-  - `checkbox`: the sub-property will be rendered as a`form-input.checkbox` block.
-  - `upload`: the sub-property will be rendered as a`form-input.upload` block.
+- `default`: will consider the `form-field-group` own logic (e.g. using the [React Hook Form JSON Schema](https://github.com/vtex/react-hook-form-jsonschema) library) for block's rendering;
+- `radio`: the sub-property will be rendered as a `form-input.radiogroup` block.
+- `select`: the sub-property will be rendered as a `form-input.dropdown` block.
+- `input`: the sub-property will be rendered as a `form-input.text` block with `inputType` set to `input`.
+- `hidden`:  the sub-property will be rendered as a `form-input.text` block with `inputType` set to `hidden`.
+- `password`: the sub-property will be rendered as a `form-input.text` block with `inputType` set to `password`.
+- `textArea`: the sub-property will be rendered as a `form-input.textarea` block.
+- `checkbox`: the sub-property will be rendered as a`form-input.checkbox` block.
+- `upload`: the sub-property will be rendered as a`form-input.upload` block.
 
 ## Modus operandi
 
@@ -230,24 +227,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `formSubmitButton` |
 | `formErrorServer` |
 | `formErrorUserInput` |
-
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/doruradu"><img src="https://avatars1.githubusercontent.com/u/42587916?v=4" width="100px;" alt=""/><br /><sub><b>doruradu</b></sub></a><br /><a href="https://github.com/vtex-apps/store-form/commits?author=doruradu" title="Code"></a></td>
-    <td align="center"><a href="https://github.com/LEduard0"><img src="https://avatars0.githubusercontent.com/u/50236503?v=4" width="100px;" alt=""/><br /><sub><b>Luiz Eduardo</b></sub></a><br /><a href="https://github.com/vtex-apps/store-form/commits?author=LEduard0" title="Code"></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!

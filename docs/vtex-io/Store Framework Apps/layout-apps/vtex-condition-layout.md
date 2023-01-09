@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:17.916Z"
 updatedAt: "2022-07-19T14:16:44.719Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/layout-apps/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Condition Layout app allows a component to be rendered in your store if predefined conditions are met.
 
@@ -72,7 +69,7 @@ Or the `condition-layout.category` block, for example:
 
 Now it is time to configure the `condition-layout.product` block!
 
-**Use the block's props to define your layout condition**. You can also declare as the children the `condition-layout.product`'s children some blocks of your choosing to be rendered if the condition is met. 
+**Use the block's props to define your layout condition**. You can also declare as the children the `condition-layout.product`'s children some blocks of your choosing to be rendered if the condition is met.
 
 For example:
 
@@ -149,6 +146,7 @@ Or for `condition-layout.category`:
  +   }
  + }
  ```
+
 Or for `condition-layout.telemarketing`:
 
 ```diff
@@ -204,7 +202,7 @@ Possible values for the `condition-layout.product`'s `subject` prop:
 | `isProductAvailable`                  | Whether the product is available (`true`) or not (`false`).  | No arguments are expected. |
 | `hasMoreSellersThan`                  | Whether the quantity of sellers for the product is more than argument passed.  | `{ quantity: number }`|
 
-Possible values for the` condition-layout.binding`'s `subject` prop:
+Possible values for the`condition-layout.binding`'s `subject` prop:
 
 | Subject | Description | Arguments |
 | -------- | ------------ | ---------- |
@@ -217,7 +215,7 @@ Possible values for the `condition-layout.category`'s `subject` prop:
 | `category`               | Category's IDs currently displayed on the UI.    | `{ ids: string[] }` |
 | `department`             | Department's IDs currently displayed on the UI.  | `{ ids: string[] }` |
 
-Possible values for the` condition-layout.telemarketing`'s `subject` prop:
+Possible values for the`condition-layout.telemarketing`'s `subject` prop:
 
 | Subject | Description | Arguments |
 | -------- | ------------ | ---------- |
@@ -236,28 +234,3 @@ Lastly, the `matchType` prop has the responsibility for deciding the necessary n
 The Condition Layout merely establishes a logic to render other blocks. Therefore, the app doesn't have CSS Handles for its specific customization.
 
 Instead, you should use its child block's Handles.
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes out to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/LucasCastroAcctGlobal"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-1.png"></img></a></td>
-    <td align="center"><a href="https://github.com/vini-lima-acct"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-condition-layout-2.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

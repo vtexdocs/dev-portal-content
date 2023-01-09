@@ -82,23 +82,3 @@ If you want to insert other contents, make sure of include the class `.v-custom-
 ## For VTEX Developers
 
 When developing a new version of Checkout UI Custom, take care to compile the checkout files prior to opening a PR and/or publishing a new version of the app. This can be done by running `yarn app` in your CLI, inside the app's `/checkout-ui-custom/` subfolder.
-
-#
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-<!-- DOCS-IGNORE:end -->

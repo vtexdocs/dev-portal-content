@@ -6,13 +6,6 @@ hidden: false
 createdAt: "2021-07-28T18:23:47.807Z"
 updatedAt: "2022-08-30T13:04:37.639Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/vtex-my-account/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-## Description
 
 This VTEX IO app extends the [MyAccount](https://github.com/vtex-apps/my-account) app to add authentication-related menu options (`Authentication` tab). It is installed by default in every VTEX account. Just like `MyAccount`, this can be used in either `IO` or `Portal` stores.
 
@@ -137,20 +130,3 @@ https://`{{accountName}}`.vtexcommercestable.com.br/\_secure/account#/authentica
 | `loginSession_fullAddress`          |
 | `loginSession_firstAccess`          |
 
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

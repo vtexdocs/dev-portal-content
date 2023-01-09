@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2020-08-28T17:56:14.433Z"
 updatedAt: "2021-08-27T00:05:10.919Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
 
 The Product Specifications app provides blocks to render product specification data.
 
@@ -191,28 +186,3 @@ To apply CSS customization in this and other blocks, follow the instructions giv
 | `specificationValue`        |
 | `specificationValue--first` |
 | `specificationValue--last`  |
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/raissacmp"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-1.png"></img></a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/samuel-rodrigues-48638618b/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-specifications-2.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

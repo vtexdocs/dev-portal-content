@@ -6,58 +6,51 @@ hidden: true
 createdAt: "2020-06-03T15:19:30.034Z"
 updatedAt: "2022-07-07T13:16:16.542Z"
 ---
-> ⚠️ **Warning**
->
-> This app is on alpha version, which means we are working to improve it and it is not possible to add other accounts for tests. If you have any questions, please contact [our Support](https://support.vtex.com/hc/en-us/requests).
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
- 
+> ⚠️ This app is on alpha version, which means we are working to improve it and it is not possible to add other accounts for tests. If you have any questions, please contact [our Support](https://support.vtex.com/hc/en-us/requests).
+
 The Product Recommendation app shows a selection of products using [recommendation strategies](#recommendation-shelf-props). For example, you can use the Product Recommendation to suggest often bought-together products to the one that the user is looking for.
- 
+
 ![recommendation-shelf-buy-together](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-0.png)
- 
+
 ## Prerequisites
- 
+
 > ℹ️ The Product Recommendation app does not fetch user data for itself. However, most recommendation strategies require user navigation data to provide relevant suggestions to users. Hence, before proceeding any further, make sure you have an app capable of tracking user navigation installed on your VTEX account.
- 
+
 Make sure you have the Biggy pixel app installed on your VTEX account or install it by the following steps:
- 
+
 1. Open a [Support ticket](https://support.vtex.com/hc/en-us/requests) about your interest in installing the Recommendations Shelf and Biggy Pixel apps. You should expect an App Key as a response. Save it for the 6th step of this tutorial.
 2. Using your terminal, install the `biggy.pixel` app by running the following command:
- 
-```
+
+```sh
 vtex install biggy.pixel
 ```
- 
+
 3. Access your VTEX account by the Admin.
 4. Using the Admin's sidebar, access the **Apps** section and select the **Biggy Pixel** app.
 5. Click on **Settings**.
 6. In the `apiKey` field, enter the App Key provided by the VTEX team.
 7. Save your changes.
- 
+
 ## Configuration
- 
+
 1. Using your terminal, install the `recommendation-resolver` app on your account. This app will solve the recommendation queries of your store shelves.
- 
-```
+
+```sh
 vtex install vtex.recommendation-resolver
 ```
- 
+
 2. Add the `recommendation-shelf` app to your theme's dependencies on the `manifest.json`:
- 
- 
+
 ```diff
   "dependencies": {
 +   "vtex.recommendation-shelf": "1.x"
   }
 ```
- 
+
 Now, you can use all blocks exported by the `recommendation-shelf` app. Check out the complete list below:
 \
 &nbsp;
-
 
 | Block name     | Description                                     |
 | -------------- | ----------------------------------------------- |
@@ -69,23 +62,19 @@ Now, you can use all blocks exported by the `recommendation-shelf` app. Check ou
 &nbsp;
 
 `recommendation-shelf`
- 
+
 ![recommendation-shelf](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-1.png)
- 
 
 `recommendation-buy-together`
- 
-![recommendation-buy-together](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-2.png)
- 
 
- 
+![recommendation-buy-together](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-2.png)
+
 `recommendation-refresh`
 
 ![recommendation-refresh](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-recommendation-shelf-3.png)
 
- 
 3. Add the `recommendation-shelf` app to your store template. See the example below to know how to add it to a template:
- 
+
 ```json
   "store.home": {
     "blocks": [
@@ -96,9 +85,9 @@ Now, you can use all blocks exported by the `recommendation-shelf` app. Check ou
     "children": ["recommendation-shelf"]
   }
 ```
- 
+
 > ℹ️ You can add the `recommendation-shelf` in any store template desired, such as the `store.home` or `store.product`. You can also add the `recommendation-buy-together` and `recommendation-refresh` blocks if desired. For example:
- 
+
 ```json
   "store.product": {
     "blocks": [
@@ -109,7 +98,7 @@ Now, you can use all blocks exported by the `recommendation-shelf` app. Check ou
     "children": ["recommendation-buy-together"]
   }
 ```
- 
+
 ```json
   "store.home": {
     "blocks": [
@@ -120,12 +109,13 @@ Now, you can use all blocks exported by the `recommendation-shelf` app. Check ou
     "children": ["recommendation-refresh"]
   }
 ```
- 
+
 ## Setting up the `recommendation-shelf`
- 
-To configure the `recommendation-shelf` you will need to add props to it. Check the following tables to know what props that the app includes and how to configure them. 
- 
+
+To configure the `recommendation-shelf` you will need to add props to it. Check the following tables to know what props that the app includes and how to configure them.
+
 ### `recommendation-shelf` props
+
 \
 &nbsp;
 
@@ -139,28 +129,29 @@ To configure the `recommendation-shelf` you will need to add props to it. Check 
 &nbsp;
 
 ### `strategy` and `secondaryStrategy` props
+
 \
 &nbsp;
 
-| Strategy         | Description                                                                    | 
-| ------------------------- | ------------------------------------------------------------------------------ | 
+| Strategy         | Description                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------ |
 | `BEST_SELLERS`            | Fetches and displays the best seller products.          |
-| `MOST_POPULAR`            | Fetches and displays the most popular products. | 
+| `MOST_POPULAR`            | Fetches and displays the most popular products. |
 | `PRICE_REDUCTION`         | Fetches and displays products with reduced prices. |
-| `NEW_RELEASES`            | Fetches and displays the latest released products.       | 
-| `NAVIGATION_HISTORY`      | Fetches and displays products based on the user's navigation history.                        | 
-| `SIMILAR_PRODUCTS`        | Fetches and displays recommendations based on the similarity of products on the currently displayed product. This prop only works in the theme template `store.product` and `store.search`. | 
-| `BEST_CHOICE`             | Fetches and displays the most visited and ordered products based on the similarity of products on the currently displayed product page. This prop only works in the theme template `store.product` and `store.search`. | 
-| `BOUGHT_TOGETHER`         | Fetches and displays recommendations for products often bought together based on the similarity of products on the currently displayed product page. This prop only works in the theme template `store.product` and `store.search`. | 
+| `NEW_RELEASES`            | Fetches and displays the latest released products.       |
+| `NAVIGATION_HISTORY`      | Fetches and displays products based on the user's navigation history.                        |
+| `SIMILAR_PRODUCTS`        | Fetches and displays recommendations based on the similarity of products on the currently displayed product. This prop only works in the theme template `store.product` and `store.search`. |
+| `BEST_CHOICE`             | Fetches and displays the most visited and ordered products based on the similarity of products on the currently displayed product page. This prop only works in the theme template `store.product` and `store.search`. |
+| `BOUGHT_TOGETHER`         | Fetches and displays recommendations for products often bought together based on the similarity of products on the currently displayed product page. This prop only works in the theme template `store.product` and `store.search`. |
 | `RECOMMENDATION_HISTORY` | Fetches and displays the most relevant products based on a specific customer history.   |
-| `CART_HISTORY`           | Fetches and displays products based on the user's cart history.         | 
+| `CART_HISTORY`           | Fetches and displays products based on the user's cart history.         |
 | `ORDER_HISTORY`          | Fetches and displays products based on the user's order history.        |
 
 \
 &nbsp;
 
 See the example below to know how to add it to your template:
- 
+
 ```json
 {
   "store.home": {
@@ -178,8 +169,7 @@ See the example below to know how to add it to your template:
   }
 }
 ```
- 
- 
+
 For each `strategy` and `secondaryStrategy`, you can apply props to specific pages. The possible page types are in the table below:
 
 \
@@ -192,22 +182,24 @@ For each `strategy` and `secondaryStrategy`, you can apply props to specific pag
 | `PDP`         | Recommendations are displayed on the Product Description Page. This context uses the product information as a param to select the recommended products. | `BEST_SELLERS`, `MOST_POPULAR`, `PRICE_REDUCTION`, `NEW_RELEASES`, `NAVIGATION_HISTORY`, `RECOMMENDATION_HISTORY`, `ORDER_HISTORY`, `SIMILAR_PRODUCTS`, `BEST_CHOICE`, `BOUGHT_TOGETHER`, `RECOMMENDATION_HISTORY`  |
 | `CART`            | Recommendations are displayed on the Cart page. This context uses the product category in the cart as a param to select the recommended products.      | `CART_HISTORY`, `SIMILAR_PRODUCTS`|
 | `OTHERS`      | Recommendations are displayed on the other store pages, such as My Account. This context will return the store data or user’s navigation history.                        | `BEST_SELLERS`, `MOST_POPULAR`, `PRICE_REDUCTION`, `NEW_RELEASES`, `NAVIGATION_HISTORY`, `RECOMMENDATION_HISTORY`, `ORDER_HISTORY`|
- 
+
 \
 &nbsp;
   
 ### `recommendation` props
+
 \
 &nbsp;
 
 | Prop name            | Type      | Description                                                                      | Default value |
 | -------------------- | --------- | -------------------------------------------------------------------------------- | ----- |
 | `count`              | `object`  | Defines the total and the minimum number of recommendations that should be fetched. | `{"minimum": 5, "recommendations": 20}` |
- 
+
 \
 &nbsp;
 
 ### `count` object
+
 \
 &nbsp;
 
@@ -215,12 +207,12 @@ For each `strategy` and `secondaryStrategy`, you can apply props to specific pag
 | ----------------- | --------- | -------------------------------------------------------------- | ------------- |
 | `minimum`         | `number`  | Defines the minimum recommendations that should be fetched.   | `5`             |
 | `recommendations` | `number`  | Defines the total number of recommendations that should be fetched. | `20`           |
- 
+
 \
 &nbsp;
 
 See the example below to know how to add it to your template:
- 
+
 ```json
 {
   "store.home": {
@@ -243,10 +235,11 @@ See the example below to know how to add it to your template:
   }
 }
 ```
+
 ## Setting up the `recommendation-buy-together`
- 
+
 To configure the `recommendation-buy-together` you will need to add props to it. Check the following tables to know what props that the app allows and how to configure them.
- 
+
 ### `recommendation-buy-together` props
 
 > ℹ️ The only possible value for `strategy` is `BOUGHT_TOGETHER`.
@@ -261,6 +254,7 @@ To configure the `recommendation-buy-together` you will need to add props to it.
 &nbsp;
 
 ### `recommendation` object
+
 \
 &nbsp;
 
@@ -270,8 +264,9 @@ To configure the `recommendation-buy-together` you will need to add props to it.
 
 \
 &nbsp;
- 
+
 ### `count` object
+
 \
 &nbsp;
 
@@ -282,13 +277,13 @@ To configure the `recommendation-buy-together` you will need to add props to it.
 
 \
 &nbsp;
- 
 
 ## Setting up the `recommendation-refresh`
- 
+
 To configure the `recommendation-refresh` you will need to add props to it. Check the following tables to know what props that the app allows and how to configure them.
- 
+
 ### `recommendation-refresh` props
+
 \
 &nbsp;
 
@@ -299,19 +294,21 @@ To configure the `recommendation-refresh` you will need to add props to it. Chec
 | `recommendation`     | `object`  | Settings for the recommendation shelf.  | `undefined` |
 
 ### `strategy` and `secondaryStrategy` props for `recommendation-refresh`
+
 \
 &nbsp;
 
-| Strategy         | Description                                                                    | 
-| ------------------------- | ------------------------------------------------------------------------------ | 
+| Strategy         | Description                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------ |
 | `RECOMMENDATION_HISTORY` | Fetches and displays products based on the user's navigation history.   |
-| `CART_HISTORY`           | Fetches and displays products based on the user's cart history.         | 
+| `CART_HISTORY`           | Fetches and displays products based on the user's cart history.         |
 | `ORDER_HISTORY`          | Fetches and displays products based on the user's order history.        |  
 
 \
 &nbsp;
 
 ### `recommendation` object
+
 \
 &nbsp;
 
@@ -322,7 +319,8 @@ To configure the `recommendation-refresh` you will need to add props to it. Chec
 \
 &nbsp;
 
-### `count` object:
+### `count` object
+
 \
 &nbsp;
 
@@ -333,21 +331,21 @@ To configure the `recommendation-refresh` you will need to add props to it. Chec
 
 \
 &nbsp;
- 
+
 ## Advanced configuration
- 
+
 You can customize the blocks `recommendation-shelf`, `recommendation-refresh`, and `recommendation-buy-together`by adding the `shelf-components` app to your theme's dependencies on the `manifest.json` file:
- 
+
 ```diff
   "dependencies": {
 +   "vtex.shelf-components": "0.x"
   }
 ```
- 
+
 Now it is possible to customize these blocks, building their components by using its children blocks `default-shelf`, `refresh-shelf`, and `buy-together`, respectively.
- 
+
 Below, you can find an implementation example for each one of them. If needed, use these blocks in your store theme code and make the desired changes according to your needs:
- 
+
 ```json
   "store.home": {
     "blocks": [
@@ -393,7 +391,7 @@ Below, you can find an implementation example for each one of them. If needed, u
     }
   }
 ```
- 
+
 ```json
   "store.home": {
     "blocks": [
@@ -420,7 +418,7 @@ Below, you can find an implementation example for each one of them. If needed, u
     ]
   }
 ```
- 
+
 ```json
   "store.product": {
     "blocks": [
@@ -490,25 +488,7 @@ Below, you can find an implementation example for each one of them. If needed, u
     ]
   }
 ```
- 
- 
+
 ## Customization
- 
+
 No CSS Handles are available yet for the app customization.
- 
-<!-- DOCS-IGNORE:start -->
-## Contributors ✨
- 
-Thanks goes to these wonderful people:
- 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
- 
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
- 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
- 
-<!-- DOCS-IGNORE:end -->

@@ -7,16 +7,6 @@ updatedAt: "2021-10-06T20:09:57.389Z"
 ---
 📢 Use this project, [contribute](https://github.com/vtex-apps/google-tag-manager) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
-# Google Tag Manager
-
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
 The VTEX Google Tag Manager app is a first party integration to the [Google Tag Manager solution](https://tagmanager.google.com).
 
 ![google-tag-manager-app](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-google-tag-manager-0.png)
@@ -131,18 +121,3 @@ After [creating the variable `OriginalLocation`](#link para o step1), use the Go
 #### Step 3 - Publishing your changes
 
 Once you have set up the Google Analytics variables and tags, follow Google's official guide on [how to submit and publish your store’s container changes](https://support.google.com/tagmanager/answer/6107163).
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

@@ -6,21 +6,14 @@ hidden: false
 createdAt: "2020-06-03T15:19:11.071Z"
 updatedAt: "2021-03-10T19:35:11.404Z"
 ---
-# VTEX Product Kit 
 
 ![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-kit-0.png)
 
 > ⚠️ ***The Product Kit app has been deprecated.** Although support for this app is still granted by VTEX, we strongly recommend you to update your store theme in order to keep up with the framework's evolution!*
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/deprecated/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 ## Description
 
 The VTEX product kit app shows two or more products as a kit. Usually these products are sold together and offer a discount. This app is used by store theme.
-
-📢 **Disclaimer:** Don't fork this project, use, contribute, or open issue with your feature request.
 
 ## Release schedule
 
@@ -160,7 +153,7 @@ You can check if others are passing through similar issues [here](https://github
 
 ## Contributing
 
-Check it out [how to contribute](https://github.com/vtex-apps/awesome-io#contributing) with this project. 
+Check it out [how to contribute](https://github.com/vtex-apps/awesome-io#contributing) with this project.
 
 ## Tests
 
@@ -170,16 +163,3 @@ To execute our tests go to `react/` folder and run `yarn test`
 
 [![Build Status](https://travis-ci.org/vtex-apps/product-kit.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-kit-1.png)
 [![Coverage Status](https://coveralls.io/repos/github/vtex-apps/product-kit/badge.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-kit-2.png)
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:47.724Z"
 updatedAt: "2022-06-13T17:20:27.990Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This component allows you to have a sliding drawer for your menus. This is specially handy for mobile layouts.
 
@@ -167,26 +164,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `closeIconContainer`     |
 | `closeIconButton`        |
 | `childrenContainer`      |
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/Radu1749"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-0.png"></img></a></td>
-    <td align="center"><a href="https://github.com/rayra-alencar"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-1.png"></img></a></td>
-    <td align="center"><a href="https://github.com/renanguerraa1"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-drawer-2.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!

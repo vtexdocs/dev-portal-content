@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2021-11-24T19:09:10.931Z"
 updatedAt: "2022-03-15T18:24:10.878Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
 
 The **Product Highlight by VTEX Segment** app allows shoppers to select a Whitelabel Seller available in their region, and it filters the product listing results accordingly. The app also uses a badge to highlight products of Whitelabel Sellers that are available in the shopper's region.
 
@@ -26,9 +21,10 @@ Before configuring the **Product Highlight by VTEX Segment** app, make sure to c
 
 ---
 
-## Configuration 
+## Configuration
 
 To configure the **Product Highlight by VTEX Segment** app, you'll need to:
+
 1. Set up the default configurations of the **Product Highlight by VTEX Segment** app via the VTEX Admin.
 2. Add the **Product Highlight by VTEX Segment** to the store theme.
 
@@ -38,9 +34,11 @@ By the end of these steps, you'll have your store products highlighted according
 
 1. Open the terminal and log in to the desired VTEX account using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 2. Install the `vtexarg.product-highlight-by-vtex-segment` app on your account.
+
    ```sh
    vtex install vtexarg.product-highlight-by-vtex-segment
    ```
+
 3. Open the VTEX Admin.
 4. Go to **Account Settings > Apps > My apps**.
 5. Look for the **Product Highlight by VTEX Segment** app and click on **Settings**.
@@ -57,6 +55,7 @@ By the end of these steps, you'll have your store products highlighted according
 
 1. Open your store theme in any code editor of your choice.
 2. Open the `manifest.json` file and add the `vtexarg.product-highlight-by-vtex-segment` app as a peer dependency of your theme:
+
     ```diff
     "peerDependencies": {
        ...
@@ -64,6 +63,7 @@ By the end of these steps, you'll have your store products highlighted according
        ...
     }
     ```
+
 3. Add the `product-highlight-by-vtex-segment` block to any child of the `store.product` template (Product Details Page template). For example:
 
     ```diff
@@ -86,7 +86,7 @@ By the end of these steps, you'll have your store products highlighted according
 
 Now, see the [Customization](#customization) section to add custom styles to your component.
 
-After [linking your store theme app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) in a development workspace, you'll be able to select a Whitelabel Seller available in your region from a dropdown menu list. 
+After [linking your store theme app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) in a development workspace, you'll be able to select a Whitelabel Seller available in your region from a dropdown menu list.
 
 ![Select Whitelabel Seller](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-4.png)
 
@@ -99,30 +99,6 @@ You'll then be able to see the chosen badge in the product cards of the selected
 To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles |
-| ----------- | 
-| `productHighlightByVtexSegmentContainer` | 
-| `imageOfHighlight` | 
-
----
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/germanBonacchi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-6.png"></img></a></td>
-    <td align="center"><a href="https://github.com/arielabaruffaldi"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-7.png"></img></a></td>
-    <td align="center"><a href="https://github.com/GuidoSdo"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtexarg-product-highlight-by-vtex-segment-8.png"></img></a></td>
-  </tr>
-</table>
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->
+| ----------- |
+| `productHighlightByVtexSegmentContainer` |
+| `imageOfHighlight` |

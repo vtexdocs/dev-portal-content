@@ -159,32 +159,3 @@ In order to see how to use the graphQL queries and mutations you can go through 
 ![reviews-and-ratings-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/public/metadata/images/screenshots/graphQL_docs.png)
 
 You will see the list of all available queries and mutations, including schemas and variable descriptions.
-
-
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-4.png"></img></a></td>
-    <td align="center"><a href="https://juliomoreira.pro"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-5.png"></img></a></td>
-    <td align="center"><a href="https://github.com/btalma"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-6.png"></img></a></td>
-    <td align="center"><a href="https://github.com/arturo777"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-reviews-and-ratings-7.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-<!-- DOCS-IGNORE:end -->

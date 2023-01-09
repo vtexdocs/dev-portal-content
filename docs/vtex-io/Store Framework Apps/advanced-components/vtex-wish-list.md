@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:09.963Z"
 updatedAt: "2022-11-23T14:55:16.485Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Wishlist app, designed for **B2C** stores, adds a heart icon to shelves and product detail pages, so users can add the desired products to a Wishlist.
 
@@ -170,29 +165,33 @@ If you want to configure the layout without the `slider-layout` dependency, you 
 
 There are couple URLs to read, search and modify data for the app:
 
-To read the schema of the wishlist app: 
-````
+To read the schema of the wishlist app:
+
+```
 curl --request GET \ 
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/schemas/wishlist' \
      --header 'VtexIdClientAutCookie: {authToken}' \
-````
+```
 
-To GET all the wishlist data: 
-````
+To GET all the wishlist data:
+
+```
 curl --request GET \
      --url 'https://{environment}--{accountName}.myvtex.com/_v/wishlist/export-lists' \
      --header 'VtexIdClientAutCookie: {authToken}' \
-````
+```
 
-To search wishlist by user email: 
-````
+To search wishlist by user email:
+
+```
 curl --request GET \
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/search?' \
      --header 'VtexIdClientAutCookie: {authToken}' \
-````
+```
 
-To PATCH a wishlist to the MasterData: 
-````
+To PATCH a wishlist to the MasterData:
+
+```
 curl --request PATCH \
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/documents' \
      --header 'VtexIdClientAutCookie: {authToken}' \
@@ -206,18 +205,21 @@ curl --request PATCH \
             "IsPublic",
         ]
      '
-````
+```
 
-To DELETE a wishlist from the MasterData:: 
-````
+To DELETE a wishlist from the MasterData::
+
+```
 curl --request DELETE \
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/documents/{documentId}' \
      --header 'VtexIdClientAutCookie: {authToken}' \
-````
+```
+
 ## Custom toast URL
+
 Change the link of toast message
 
-```` json
+``` json
 {
   "add-to-list-btn#myButton": {
     "props": {
@@ -225,15 +227,17 @@ Change the link of toast message
     }
   }
 }
-````
+```
+
 | Prop name |   Type   |                         Description                         | Default value |
 | :-------: | :------: | :---------------------------------------------------------: | :-----------: |
 |  `toastURL`  | `string` | Change the link of toast message |  `/account/#wishlist'`   |
 
 ## Custom View Wishlist Empty
+
 Show custom view in case there are no added products.
 
-````diff
+```diff
 {
   "list-context.wishlist": {
 +    "blocks": ["wishlist-empty-list", "product-summary.shelf#wishlist"],
@@ -256,9 +260,10 @@ Show custom view in case there are no added products.
     }
   },
 }
-````
+```
 
 #### `list-context.wishlist` props
+
 | Prop name |   Type   |                         Description                         | Default value |
 | :-------: | :------: | :---------------------------------------------------------: | :-----------: |
 |  `showViewEmptyList`  | `boolean` | Show custom view in case there are no added products. |  `false`   |
@@ -284,21 +289,3 @@ In order to apply CSS customizations to this and other blocks, follow the instru
 | `wishlistIcon`          |
 | `wishlistIconContainer` |
 | `emptyMessage`          |
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

@@ -6,14 +6,15 @@ hidden: false
 createdAt: "2020-06-03T15:19:21.967Z"
 updatedAt: "2022-03-08T16:15:36.572Z"
 ---
-The Header app is responsible for displaying a **navigation bar** fixed on a store's page upper side. 
+
+The Header app is responsible for displaying a **navigation bar** fixed on a store's page upper side.
 Other blocks that are important for user navigation are found in the Header, for example the store's [logo](https://vtex.io/docs/components/all/vtex.store-components/logo), the [minicart](https://vtex.io/docs/components/all/vtex.minicart/), user [login](https://vtex.io/docs/components/all/vtex.login/) and [search bar](https://vtex.io/docs/components/all/vtex.store-components/search-bar).
 
-![header](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-header-0.png) 
+![header](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-header-0.png)
 
 ## Configuration
 
-1. Add the `store-header` app to your theme's dependencies in `manifest.json`: 
+1. Add the `store-header` app to your theme's dependencies in `manifest.json`:
 
 ```json
   dependencies: {
@@ -23,14 +24,14 @@ Other blocks that are important for user navigation are found in the Header, for
 
 Now, you are able to use all blocks exported by the `store-header` app. Check out the full list below:
 
-| Block name | Description | 
-| --------  | ------------ | 
-| `header-layout.desktop` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-header-1.png) Defines the Header layout for desktop device through `header-row` blocks. | 
+| Block name | Description |
+| --------  | ------------ |
+| `header-layout.desktop` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-header-1.png) Defines the Header layout for desktop device through `header-row` blocks. |
 | `header-layout.mobile`| Defines the Header layout for mobile device through `header-row` blocks. |
 | `header-row` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-header-2.png) Create Header lines according to your store needs. |  
-| `header-border` | Adds a `1px` margin to a Header row. | 
-| `header-force-center` | Centralizes its children blocks in a Header row. | 
-| `header-spacer` | Adds spacing between blocks throughout a Header row. | 
+| `header-border` | Adds a `1px` margin to a Header row. |
+| `header-force-center` | Centralizes its children blocks in a Header row. |
+| `header-spacer` | Adds spacing between blocks throughout a Header row. |
 
 2. Declare the two `header-layout` blocks, allowing you to define how the Header should be displayed for both mobile and desktop:
 
@@ -46,8 +47,7 @@ Now, you are able to use all blocks exported by the `store-header` app. Check ou
 
 > ℹ️ *The Header does not need to be declared in a specific template of your theme, once the app is defined as default store interface element in the `interfaces.json` file. This means that Store Framework will reproduce the configurations defined in the file you just created for all store templates behind the scenes. If you want to apply different configurations to each store template, check the **advanced configurations** section below.*
 
-
-4. Configure both `header-layout.desktop` and `header-layout.mobile`, declaring `header-row` to create Header lines according to your store needs. 
+4. Configure both `header-layout.desktop` and `header-layout.mobile`, declaring `header-row` to create Header lines according to your store needs.
 
 ```json
 {
@@ -82,7 +82,7 @@ Now, you are able to use all blocks exported by the `store-header` app. Check ou
 },
 ```
 
-- `header-row` props: 
+- `header-row` props:
 
 | Prop name  | Type      | Description                                                                                       | Default value |
 | ---------- | --------- | ------------------------------------------------------------------------------------ | ------------- |
@@ -93,7 +93,7 @@ Now, you are able to use all blocks exported by the `store-header` app. Check ou
 
 > ⚠️ ***Repeat step 4 for any other `header-rows` you may have in the `header-layout.desktop`**. Remember to declare the desired blocks for each row, as we declared the Telemarketing block for the `header-row#1-desktop`, and properly configure all blocks using props. Once it is all finished, **redo steps 3 and 4 to define your `header-layout.mobile` as well***.
 
-Three blocks can be added as `header-row`'s children in order to customize your Header row layout: `header-border`, `header-force-center` and `header-spacer`. 
+Three blocks can be added as `header-row`'s children in order to customize your Header row layout: `header-border`, `header-force-center` and `header-spacer`.
 
 - **`header-border`**:
 
@@ -122,7 +122,7 @@ When declared, the `header-border` block adds a `1px` margin to your store's Hea
 
 - **`header-force-center`**
 
-When passed on, the `header-force-center` centralizes its children blocks in a Header row, for example: 
+When passed on, the `header-force-center` centralizes its children blocks in a Header row, for example:
 
 ```json
 "header-row#4-desktop": {
@@ -153,7 +153,7 @@ When passed on, the `header-force-center` centralizes its children blocks in a H
 
 ![header-force-center](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-header-3.png)
 
-- **`header-spacer`**: 
+- **`header-spacer`**:
 
 The `header-spacer` is tasked with adding spacing between blocks throughout the Header rows. For example:
 
@@ -171,46 +171,33 @@ The `header-spacer` is tasked with adding spacing between blocks throughout the 
 },
 ```
 
-In practice, it will make all blocks declared before it position themselves to the left on the screen, whereas blocks that are declared after will be positioned to the right. Considering that the Menus were properly declared and configured in the theme code, we would have the following: 
+In practice, it will make all blocks declared before it position themselves to the left on the screen, whereas blocks that are declared after will be positioned to the right. Considering that the Menus were properly declared and configured in the theme code, we would have the following:
 
 ![header-spacer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-header-4.png)
 
 ### Advanced configuration
 
-Automatic behind the scenes Header reproduction in every store template is only possible because it is defined as default store interface elements in the `interfaces.json` file from Store Theme. 
+Automatic behind the scenes Header reproduction in every store template is only possible because it is defined as default store interface elements in the `interfaces.json` file from Store Theme.
 
 This definition in `interfaces.json` enables Store Framework to identify the Header block declared just once in a `blocks.jsonc` file and reproduce it as default for all other templates.
 
-To overwrite this automatic duplication in `interfaces.json` and use new configurations in different templates, refer to the step-by-step of the following recipe: [Customizing the Header and Footer](https://vtex.io/docs/recipes/layout/customizing-the-header-and-footer-blocks-by-page). 
+To overwrite this automatic duplication in `interfaces.json` and use new configurations in different templates, refer to the step-by-step of the following recipe: [Customizing the Header and Footer](https://vtex.io/docs/recipes/layout/customizing-the-header-and-footer-blocks-by-page).
 
 ## Customization
 
-In order to apply CSS customizations in these and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization). 
-| CSS Handles          | 
+In order to apply CSS customizations in these and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+| CSS Handles          |
 ---------------------- |
-| `container`          |                       
-| `leanMode`           |                        
-| `topMenuContainer`   | 
-| `topMenuLogo`        |              
-| `topMenuSearchBar`   |     
-| `topMenuIcons`       |             
-| `topMenuCollapsible` |   
-| `forceCenter`        |   
-| `forceCenterInnerContainer` |   
-| `headerBorder` | 
-| `headerSpacer` | 
-| `headerStickyRow` | 
+| `container`          |
+| `leanMode`           |
+| `topMenuContainer`   |
+| `topMenuLogo`        |
+| `topMenuSearchBar`   |
+| `topMenuIcons`       |
+| `topMenuCollapsible` |
+| `forceCenter`        |
+| `forceCenterInnerContainer` |
+| `headerBorder` |
+| `headerSpacer` |
+| `headerStickyRow` |
 | `headerRowContentContainer` |
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

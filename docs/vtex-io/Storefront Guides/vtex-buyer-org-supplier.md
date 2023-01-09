@@ -6,12 +6,6 @@ hidden: true
 createdAt: "2021-10-07T18:58:23.596Z"
 updatedAt: "2022-02-04T20:56:01.083Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Storefront Guides/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
-
 
 The Buyer Organization Supplier app is responsible for storing Buyer Organization data in the Profile System. This app provides an endpoint that receives a [Buyer Organization](https://github.com/vtex-apps/buyer-org-supplier/blob/ec15a9b202f48c4ab94095b02348e70eebde5583/node/typings/buyerOrgService.d.ts) and adds a new user in the Profile System with the given data.
 
@@ -26,7 +20,6 @@ If you want to customize the data that will be stored in the Profile System, fol
 
 4. Create a fork of the repository.
 5. [Publish the app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-publishing-an-app).
-
 
 ## Installation
 
@@ -47,21 +40,3 @@ Follow the steps below to install the app.
         "{vendor}.buyer-org-supplier":  "0.x"
     }
     ```
-
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->
-
-----

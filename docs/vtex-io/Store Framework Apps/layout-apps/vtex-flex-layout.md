@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T15:19:18.642Z"
 updatedAt: "2022-09-01T17:03:52.331Z"
 ---
+
 Flex Layout is a **layout structure** built within VTEX IO store framework. It allows the construction of complex custom layouts using the concept of **rows** and **columns**, setting the desired structure and positioning of blocks in a given page.
 
 ![Screen Shot 2019-08-21 at 4 05 19 PM](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-flex-layout-0.png)
@@ -80,7 +81,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `flexCol`        |
 | `flexRowContent` |
 | `flexRow`        |
-
-## Contributors ✨
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!

@@ -10,12 +10,6 @@ updatedAt: "2020-10-27T18:04:29.041Z"
 
 # Blueknow app
 
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
-
 Blueknow first party app
 
 ## Configuration
@@ -37,18 +31,3 @@ It is possible to install in your store either by using App Store or the VTEX IO
 4. Click on **Save**.
 
 <!-- Remember to also **showcase any necessary disclaimer** related to the app in this section, such as the different behavior it may display during its configuration. -->
-
-<!-- DOCS-IGNORE:start -->
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-<!-- DOCS-IGNORE:end -->

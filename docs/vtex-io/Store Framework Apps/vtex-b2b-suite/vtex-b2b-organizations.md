@@ -6,15 +6,8 @@ hidden: false
 createdAt: "2021-10-26T13:12:33.521Z"
 updatedAt: "2022-12-08T18:41:35.402Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
-
-> 9 The **B2B Organizations** app is part of VTEXs [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
+> ℹ️ The **B2B Organizations** app is part of VTEXs [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
 In the B2B model, sales goals go beyond a high order conversion rate. They include simplifying the relationship between companies, reducing costs, and increasing performance by providing the customer with the best possible shopping experience.
 
@@ -562,26 +555,3 @@ If users click `Manage organization`, they can access the **My Organization** pa
 In case impersonation is currently active, this block will also show the email of the user being impersonated, as well as a `Stop impersonation` button:
 
 ![22-user-widget-impersonation](https://user-images.githubusercontent.com/77292838/159766784-6bce63af-9cc6-4ac4-bc59-460b74722dbe.png)
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors (
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->
-
-
-**Upcoming documentation:**
-
- - [[B2BORG-96] Fix duplicate check](https://github.com/vtex-apps/b2b-organizations/pull/29)

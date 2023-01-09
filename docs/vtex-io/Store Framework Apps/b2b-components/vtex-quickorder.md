@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:15.869Z"
 updatedAt: "2022-12-13T22:23:30.600Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/b2b-components/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Quickorder app, designed for **B2B scenarios**, creates a custom page in your store aimed at purchases in bulk, offering tools such as uploading a spreadsheet to make bulk orders more agile.
 
@@ -277,20 +272,3 @@ In order to apply CSS customizations to this and other blocks, follow the instru
 | `title`                      |
 | `customOptionButton`         |
 
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

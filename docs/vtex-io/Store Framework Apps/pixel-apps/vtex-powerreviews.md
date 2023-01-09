@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:08.947Z"
 updatedAt: "2022-07-15T18:57:50.604Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The PowerReviews app provides a way to bring your PowerReviews content into your VTEX store. The app also implements the PowerReviews Checkout Beacon during checkout, sending customer purchase data to the PowerReviews platform.
 
@@ -90,17 +85,3 @@ An example of the blocks above in use:
    ]
  }
 ```
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!

@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2020-09-04T13:52:27.742Z"
 updatedAt: "2022-02-04T15:02:40.482Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
 
 The Product Highlights app provides blocks to display highlight badges on products according to the collection or promotion they are linked to.
 
@@ -122,7 +117,7 @@ According to your desire, copy one of the examples stated below and paste it in 
 
 | Prop name | Type     | Description                                                                 | Default value |
 | --------- | -------- | --------------------------------------------------------------------------- | ------------- |
-| `type`    | `enum`   | Desired type of product highlight to be displayed. Possible values are: `collection`, `promotion`, and `teaser`. `collection` highlights the product's collection therefore it must be be used in conjuction with the [Collection Highlight](https://help.vtex.com/en/tutorial/collection-highlight-control--1tGdb2ndjqy6yWsk2YwKMu?locale=en) feature. `promotion` and `teaser` should be used when the product is configured with a [promotion with highlights](https://help.vtex.com/en/tutorial/configuring-promotions-with-a-highlightflag--tutorials_2295?locale=en), but notice the following: `teaser` must only be used when the promotion presents restrictions. `promotion`, in turn, when it does not. ⚠️*Be aware that nominal promotions will only be displayed in the cart, not on the shelf or product page.*| `collection`  |
+| `type`    | `enum`   | Desired type of product highlight to be displayed. Possible values are: `collection`, `promotion`, and `teaser`. `collection` highlights the product's collection therefore it must be be used in conjuction with the [Collection Highlight](https://help.vtex.com/en/tutorial/collection-highlight-control--1tGdb2ndjqy6yWsk2YwKMu?locale=en) feature. `promotion` and `teaser` should be used when the product is configured with a [promotion with highlights](https://help.vtex.com/en/tutorial/configuring-promotions-with-a-highlightflag--tutorials_2295?locale=en), but notice the following: `teaser` must only be used when the promotion presents restrictions. `promotion`, in turn, when it does not. ⚠️_Be aware that nominal promotions will only be displayed in the cart, not on the shelf or product page._| `collection`  |
 | `filter`  | `object` | Defines the highlights that should and should not be displayed by the block. | `undefined`   |
 
 > ⚠️  
@@ -176,4 +171,3 @@ To apply CSS customization in this and other blocks, follow the instructions giv
 | `data-highlight-name` |
 | `data-highlight-id`   |
 | `data-highlight-type` |
-

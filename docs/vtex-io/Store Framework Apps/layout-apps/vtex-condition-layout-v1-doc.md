@@ -6,9 +6,6 @@ hidden: true
 createdAt: "2020-10-26T15:24:19.885Z"
 updatedAt: "2022-07-19T14:16:44.931Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > ⚠️ ***Condition Layout app v1 has been deprecated in favor of Condition Layout app v2**. Although support for the former version is still granted, we strongly recommend you to access the [Migration Guide](https://github.com/vtex-apps/condition-layout/tree/master/docs/MIGRATION-GUIDE.md) and update your store theme with the app's newest version in order to keep up with the components' evolution.*
 
@@ -131,8 +128,8 @@ If users interact with a product whose ID is not equal to 12, the block that is 
 | Prop name | Type | Description | Default value |
 | --------- | --------------- | ----- | ---------------------|
 | `subject` | `string` | A subject is a similar data fetched from a given context. When passed as a value to this prop, the subject will be used to identify which data is needed from the UI to validate the value chosen in the  `object` prop. Check below the possible value for the subject prop provided by the product context. | `undefined` |
-| `verb` | `enum` | The condition validator. It directly depends on the subject chosen for the `subject` prop. For `value` type subjects, possible `verb`values are `is` or `is-not` (checking, respectively, for equality or inequality between the subject's value and the object prop's value). For  `array` type subjects, possible values are `contains` and `does-not-contain` (checking, respectively, if the subject's array contains or does not contain the object prop's value). | `is` (for `value` type subjects) and `contains` (for `array` type subjects). | 
-| `object` | `string` | Value that you want to be matched when comparing to the data fetched in the `subject` prop in order to render the predefined layout. | `undefined` | 
+| `verb` | `enum` | The condition validator. It directly depends on the subject chosen for the `subject` prop. For `value` type subjects, possible `verb`values are `is` or `is-not` (checking, respectively, for equality or inequality between the subject's value and the object prop's value). For  `array` type subjects, possible values are `contains` and `does-not-contain` (checking, respectively, if the subject's array contains or does not contain the object prop's value). | `is` (for `value` type subjects) and `contains` (for `array` type subjects). |
+| `object` | `string` | Value that you want to be matched when comparing to the data fetched in the `subject` prop in order to render the predefined layout. | `undefined` |
 
 - Possible `subject` prop's values provided by the product context:
 
@@ -145,7 +142,7 @@ If users interact with a product whose ID is not equal to 12, the block that is 
 | `productClusters` | `array` | List of product clusters on the UI. |
 | `categoryTree` | `array` | List of categories on the UI. |
 | `specificationProperties` | `array` | List of product specifications. |
-| `areAllVariationsSelected` | `value` | Whether all product variations available on the page were selected by the user (`true`) or not (`false`). | 
+| `areAllVariationsSelected` | `value` | Whether all product variations available on the page were selected by the user (`true`) or not (`false`). |
 
 > ℹ️ *Since the Condition Layout can only be used with product contexts, only the subjects listed above are needed for the proper functioning of the `condition` block. Remember to choose the subject's value according to the value passed to the `object` prop*.
 
@@ -155,7 +152,7 @@ In practice, the Condition Layout does not render a block on its own. **The app 
 
 The `condition.{context}` block is the one that does your store's actual Layout logic and, using the `conditions` and `match` props to set the conditions that blocks must meet to be rendered or not.
 
-The `conditions` prop object has 3 other props, namely `subject`, `verb` and `object`, that together define the condition that must be met and how it is going to be validated: the `object` prop from `conditions` compares its value with the values fetched by the subject passed to the `subject` prop. The criteria used for this comparison stems from the value passed in the `verb`. The result being to define whether the condition put forth by the `condition` block and its props is acuatlly valid or not. 
+The `conditions` prop object has 3 other props, namely `subject`, `verb` and `object`, that together define the condition that must be met and how it is going to be validated: the `object` prop from `conditions` compares its value with the values fetched by the subject passed to the `subject` prop. The criteria used for this comparison stems from the value passed in the `verb`. The result being to define whether the condition put forth by the `condition` block and its props is acuatlly valid or not.
 
 Lastly, the `match` prop decides the necessary number of valid conditions (defined in `condition.{context}` blocks) for the layout rendering to actually occur.
 
@@ -164,26 +161,3 @@ Lastly, the `match` prop decides the necessary number of valid conditions (defin
 The Condition Layout merely establishes a logic to render other blocks. Therefore, the app doesn't have CSS Handles for its specific customization.
 
 Instead, you should use the Handles of the child blocks chosen for rendering.
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes out to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/LucasCastroAcctGlobal"><img src="https://avatars0.githubusercontent.com/u/55210107?v=4" width="100px;" alt=""/><br /><sub><b>LucasCastroAcctGlobal</b></sub></a><br /><a href="https://github.com/vtex-apps/condition-layout/commits?author=LucasCastroAcctGlobal" title="Code"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

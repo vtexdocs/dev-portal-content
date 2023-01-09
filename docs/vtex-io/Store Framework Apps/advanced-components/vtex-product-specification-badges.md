@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:25.390Z"
 updatedAt: "2021-07-13T20:27:30.382Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Use this component to show badges based on your product specifications inside your product page.
 
@@ -263,16 +260,3 @@ Example: with the specification `On Sale: true` the badge will also have the cla
 
 Note: each badge receives a class `badgeText` with its specification value slug appended to it.
 Example: with the specification `Nationality: Brazilian` the badge will also have the class `badgeText--brazilian`.
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

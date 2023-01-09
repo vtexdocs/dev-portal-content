@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T15:19:30.725Z"
 updatedAt: "2022-09-14T13:27:01.333Z"
 ---
+
 The VTEX BreadCrumb is a navigation scheme that shows a user's browsing history up to their current location in your store.
 
 ![img2-breadcrumb](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-breadcrumb-0.png)
@@ -22,7 +23,7 @@ The VTEX BreadCrumb is a navigation scheme that shows a user's browsing history 
 
 2. Add the `breadcrumb` block to the Product template. For example:
 
-```
+```json
  "breadcrumb": {
     "props": {
       "showOnMobile": true
@@ -31,7 +32,7 @@ The VTEX BreadCrumb is a navigation scheme that shows a user's browsing history 
 ```
 
 | Prop name    | Type            | Description    | Default value                                                                                                                               |
-| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | `showOnMobile`        | `Boolean`       | It determines whether Breadcrumb should also be displayed on mobile          | `false`              |
 | `homeIconSize`  | `Number`        | Controls the `size` property of [`IconHome`](https://github.com/vtex-apps/store-icons#icons)                                                                                                      | `26` |
 | `caretIconSize` | `Number`        | Controls the `size` property of [`IconCaret`](https://github.com/vtex-apps/store-icons#icons)                                                                                                     | `8` |
@@ -48,7 +49,7 @@ categories = ['eletronics', 'eletronics-computers']
 
 3. Add the `breadcrumb.search` block to the Search template. For example:
 
-```
+```json
  "breadcrumb.search": {
     "props": {
       "showOnMobile": true
@@ -57,34 +58,20 @@ categories = ['eletronics', 'eletronics-computers']
 ```
 
 | Prop name    | Type            | Description    | Default value                                                                                                                               |
-| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | `showOnMobile`        | `Boolean`       | It determines whether Breadcrumb should also be displayed on mobile          | `false`              |
 | `homeIconSize`  | `Number`        | Controls the `size` property of [`IconHome`](https://github.com/vtex-apps/store-icons#icons)                                                                                                      | `26` |
 | `caretIconSize` | `Number`        | Controls the `size` property of [`IconCaret`](https://github.com/vtex-apps/store-icons#icons)                                                                                                     | `8` |
-> ℹ️ *The `breadcrumb.search` block is specific for the Breadcrumb inside the search result page.* 
+> ℹ️ *The `breadcrumb.search` block is specific for the Breadcrumb inside the search result page.*
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization). 
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
 
 | CSS Handles |
-| ----------- | 
-| `container` | 
-| `link`      | 
-| `arrow`     | 
-| `homeLink`  | 
+| ----------- |
+| `container` |
+| `link`      |
+| `arrow`     |
+| `homeLink`  |
 | `termArrow` |
-
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

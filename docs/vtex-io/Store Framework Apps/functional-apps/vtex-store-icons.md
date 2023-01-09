@@ -8,14 +8,6 @@ updatedAt: "2020-10-05T18:52:00.018Z"
 ---
 📢 Use this project, [contribute](https://github.com/vtex-apps/store-icons) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/functional-apps/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-# Store Icons
-
 [![Build Status](https://travis-ci.org/vtex-apps/store-icons.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-icons-0.png)
 
 All Store icons components.
@@ -245,17 +237,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | 'fullscreenIcon'     |
 | 'volumeOnIcon'       |
 | 'volumeOffIcon'      |
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

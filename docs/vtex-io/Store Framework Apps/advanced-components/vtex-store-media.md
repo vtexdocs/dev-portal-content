@@ -10,14 +10,6 @@ updatedAt: "2021-03-31T17:25:38.265Z"
 
 # Store Media
 
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
-
 The Media app allows you to display image and video assets using a single block.
 
 ![media-list-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-media-0.gif)
@@ -126,20 +118,3 @@ Just like they do with props, all blocks from this app inherits all of `image` a
 
 Keep in mind that, for instance, applying CSS customizations to CSS Handles that came from `image` won't have any effect if the `mediaType` is set to `video` or if the `mediaType` is set to `imageOrVideo` and the `src` was identified as a video.
 
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

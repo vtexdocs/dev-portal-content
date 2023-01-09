@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-05-28T17:11:48.473Z"
 updatedAt: "2022-10-18T20:59:10.400Z"
 ---
+
 The Availability Notify component is responsible for showing a subscription form when a product SKU is not available. The form lets customers subscribe to get notified when that item gets restocked.
 
 ![store-notifier](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-availability-notify-0.png)
@@ -111,24 +112,3 @@ In order to apply CSS customizations to this and other blocks, follow the instru
 | `submit`           |
 | `sucess`           |
 | `error`            |
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-<!-- DOCS-IGNORE:end -->

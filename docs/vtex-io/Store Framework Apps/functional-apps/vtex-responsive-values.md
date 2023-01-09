@@ -6,17 +6,12 @@ hidden: false
 createdAt: "2020-06-03T15:19:17.689Z"
 updatedAt: "2021-05-24T19:48:59.780Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/functional-apps/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Utility for using props that accept different values for different devices or media queries.
 
 For example, a given prop could accept both just a number...
 
-```js
+```json
 props: {
   quantity: 1,
 }
@@ -99,17 +94,3 @@ There are some things to keep in mind when using media queries:
 Props that use this hook accept either a value by itself, or an object with the following options: `phone` and `tablet` separately (or just `mobile` for both), `desktop` and generic media queries.
 
 If there is any missing device, it will fallback to the next largest one. For example, if only the values of `phone` and `desktop` are passed, `tablet` devices will receive the value from `desktop`. Media queries have no fallback behavior.
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

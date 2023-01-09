@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-11-06T17:17:42.622Z"
 updatedAt: "2022-07-02T00:50:33.286Z"
 ---
+
 The Product Summary Shelf is the main block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary). It includes the child blocks required to display the Product Summary component in your store.
 
 ![](https://user-images.githubusercontent.com/40380674/96649443-7d21d480-1307-11eb-9100-534fa9e70ca6.png))
@@ -45,8 +46,8 @@ The Product Summary Shelf is the main block exported by the [Product Summary app
 }
 ```
 
-> ⚠️ 
-> 
+> ⚠️
+>
 > Remember to define the other Product Summary blocks in your theme as well, otherwise the component will not be displayed.
 
 | Prop name        | Type          | Description                | Default value  |
@@ -59,20 +60,3 @@ The Product Summary Shelf is the main block exported by the [Product Summary app
 The Product Summary Shelf merely establishes the block structure to render the Product Summary component. Therefore, this block doesn't have CSS Handles for its specific customization.
 
 Instead, you should use its child block's Handles.
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

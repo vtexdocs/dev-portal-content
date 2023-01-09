@@ -6,9 +6,7 @@ hidden: false
 createdAt: "2020-06-03T15:19:51.305Z"
 updatedAt: "2021-10-13T18:37:48.020Z"
 ---
-> 🚧 WARNING
-> 
-> This app is now supported by ACCT. For more information and support, email `support@acct.global`.
+> ⚠️ This app is now supported by ACCT. For more information and support, email `support@acct.global`.
 
 Flixmedia first party integration app. The [solution](https://flixmedia.eu/) enhances your website content, capturing retail partners, engaging shoppers, and increasing sale rates.
 
@@ -16,7 +14,7 @@ Flixmedia first party integration app. The [solution](https://flixmedia.eu/) enh
 
 ### Step 1 - Installing the Flixmedia app
 
-#### Using VTEX App Store 
+#### Using VTEX App Store
 
 1. Access the Apps section in your account's admin page.
 2. Look for the Flixmedia app.
@@ -36,7 +34,7 @@ In your terminal, log into your VTEX account and [install](https://vtex.io/docs/
 
 ![flixmedia-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-flixmedia-0.gif)
 
-### Step 3 - Updating your store theme 
+### Step 3 - Updating your store theme
 
 1. Add the Flixmedia app to your theme's dependencies in the `manifest.json` file:
 
@@ -61,18 +59,3 @@ In your terminal, log into your VTEX account and [install](https://vtex.io/docs/
 ## Customization
 
 No CSS Handles are available yet for the app customization.
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

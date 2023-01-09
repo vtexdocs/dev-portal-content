@@ -6,13 +6,6 @@ hidden: false
 createdAt: "2022-02-22T19:40:11.665Z"
 updatedAt: "2022-07-06T13:02:46.476Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
 
 The **B2B Suite** is a collection of VTEX IO apps that allow stores to manage organizations, storefront roles and permissions and checkout settings for B2B commerce relationships.
 
@@ -62,21 +55,3 @@ If you are getting some alerts on B2B apps regarding a schema issue, please foll
   ![Alt text](https://raw.githubusercontent.com/vtex-apps/b2b-suite/main/docs/assets/schema-6.png "Sixth step")
 7) You should click on Publish button to make the changes valid:
    ![Alt text](https://raw.githubusercontent.com/vtex-apps/b2b-suite/main/docs/assets/schema-7.png "Seventh step")
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

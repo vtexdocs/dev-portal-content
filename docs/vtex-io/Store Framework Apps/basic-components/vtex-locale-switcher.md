@@ -33,7 +33,7 @@ The Locale Switcher app provides a component capable of changing the current lan
 },
 ```
 
-3. Open a ticket to our support team in order to adjust your store's binding with the desired languages. 
+3. Open a ticket to our support team in order to adjust your store's binding with the desired languages.
 
 > ⚠️ ***Caution:** The third step is mandatory. If no ticket is opened requiring the desired languages, the selection list may not appear on the Locale Switcher component.*
 
@@ -50,16 +50,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `listElement`       |
 | `localeIdText`      |
 | `relativeContainer` |
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

@@ -6,13 +6,10 @@ hidden: false
 createdAt: "2020-06-03T15:19:30.796Z"
 updatedAt: "2021-04-29T13:29:19.890Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/legacy-b2b-solution/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Used in B2B environments, the Challenge block is a non-rendered block responsible for checking if a user is allowed to access the store's content. 
+Used in B2B environments, the Challenge block is a non-rendered block responsible for checking if a user is allowed to access the store's content.
 
-> ℹ️ This check is made according to the Condition Rule specified in the Trade Policy configuration, one of the steps needed to [**configure a B2B environment in VTEX IO**](https://vtex.io/docs/recipes/store/configuring-a-b2b-environment). 
+> ℹ️ This check is made according to the Condition Rule specified in the Trade Policy configuration, one of the steps needed to [**configure a B2B environment in VTEX IO**](https://vtex.io/docs/recipes/store/configuring-a-b2b-environment).
 
 ## Configuration
 
@@ -54,31 +51,14 @@ Used in B2B environments, the Challenge block is a non-rendered block responsibl
 },
 ```
 
-| Prop name          | Type |    Description   | Default value | 
-| ------------------------ | ------------- | --------------------- | ----------- | 
+| Prop name          | Type |    Description   | Default value |
+| ------------------------ | ------------- | --------------------- | ----------- |
 | `redirectPath`             | `string` | Path to which the not logged in user will be redirected      |  `/login`          | Path to which the not logged in user will be redirected                     |
 | `forbiddenRedirectPath`    | `string`    | Path to which the logged in user will be redirected if not allowed access according to the Condition Rule         |   `/login`      |
-| `defaultContentVisibility` |   `enum`  |  Whether the store's content should be visible (`visible`) or hidden (`hidden`) while the Challenge block is verifying the user's access permission | `visible` | 
- 
+| `defaultContentVisibility` |   `enum`  |  Whether the store's content should be visible (`visible`) or hidden (`hidden`) while the Challenge block is verifying the user's access permission | `visible` |
+
 > ⚠️ Using `hidden` as the `defaultContentVisibility` value result in the entire page's content being rendered on the client side (in a scenario in which the check concludes that the user has permission to access the store). The page will not be Server Side Rendered (SSR) due to the fact that this verification process is user-based, making it impossible to cache.
 
 ## Customization
 
 No CSS Handles are available for the app customization.
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

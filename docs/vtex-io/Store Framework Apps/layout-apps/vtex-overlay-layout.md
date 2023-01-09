@@ -8,17 +8,11 @@ updatedAt: "2020-10-06T13:51:03.943Z"
 ---
 📢 Use this project, [contribute](https://github.com/vtex-apps/overlay-layout) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
-# Overlay Layout
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/layout-apps/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 The Overlay Layout app provides blocks that help you create a Dropdown, Select or a Tooltip component.
 
 ![overlay-layout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-overlay-layout-0.gif)
 
-*Example of a [Locale Switcher](https://vtex.io/docs/components/all/vtex.locale-switcher@0.5.5) using the Overlay Layout*. 
+*Example of a [Locale Switcher](https://vtex.io/docs/components/all/vtex.locale-switcher@0.5.5) using the Overlay Layout*.
 
 ## Configuration
 
@@ -32,14 +26,14 @@ The Overlay Layout app provides blocks that help you create a Dropdown, Select o
 }
 ```
 
-Now you can use the two blocks exported by the app: 
+Now you can use the two blocks exported by the app:
 
 Block name | Description |
 | --------------------| -------- |
 | `overlay-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-overlay-layout-1.png) Declares a renderable children block responsible for triggering the `overlay-layout` content. |
 | `overlay-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-overlay-layout-2.png) Declares a renderable children block responsible for building the   |
 
-2.  In any desired theme template, add the `overlay-trigger` and then declare it using a block of your choosing and the `overlay-layout`:
+2. In any desired theme template, add the `overlay-trigger` and then declare it using a block of your choosing and the `overlay-layout`:
 
 ```jsonc
 {
@@ -85,7 +79,7 @@ Block name | Description |
 }
 ```
 
-*The* `overlay-layout` *defines which block will be rendered in order to build the Overlay Layout content. This means that you will have to pass to it a children block to be rendered.* 
+*The* `overlay-layout` *defines which block will be rendered in order to build the Overlay Layout content. This means that you will have to pass to it a children block to be rendered.*
 
 ### `overlay-layout` props
 
@@ -117,14 +111,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `popper` |
 | `popperArrow` |
 | `trigger` |
-
-## Contributors ✨
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!

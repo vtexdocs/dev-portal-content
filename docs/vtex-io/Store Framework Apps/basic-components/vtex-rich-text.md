@@ -12,7 +12,7 @@ The Rich Text block converts texts written in Markdown to HTML and displays it i
 
 For example, the text `[Help](https://developers.vtex.com/vtex-developer-docs/docs/welcome).\n**Be Bold!**\n*This is italic*` is converted to:
 
-```
+```html
 <div>
       <p>
         <a href="https://developers.vtex.com/vtex-developer-docs/docs/welcome">
@@ -81,7 +81,6 @@ Please refer to the [Markdown Documentation](https://www.markdownguide.org/cheat
 | Center | 'CENTER' | Text alignment will be to the center. |
 | Right | 'RIGHT' | Text alignment will be to the right. |
 
-
 ## Customization
 
 To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
@@ -111,18 +110,3 @@ To apply CSS customizations in this and other blocks, follow the [Using CSS hand
 | `tableTh` |
 | `tableTr` |
 | `wrapper` |
-
-<!-- DOCS-IGNORE:start -->
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-<!-- DOCS-IGNORE:end -->

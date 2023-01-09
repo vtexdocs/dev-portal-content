@@ -6,13 +6,6 @@ hidden: false
 createdAt: "2022-07-05T14:29:52.628Z"
 updatedAt: "2022-12-15T14:22:59.351Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
 
 An app integrating PayPal Checkout with Smart Payment Buttons with a VTEX IO store. This allows a store to place PayPal's Smart Buttons in the VTEX cart, offering a quick checkout via the familiar PayPal experience. The app also makes PayPal available within VTEX's native checkout. This app utilizes VTEX's Payment Provider Framework SDK.
 
@@ -103,20 +96,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `payPalProcessingModal`          |
 | `payPalPayLaterMessageContainer` |
 
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

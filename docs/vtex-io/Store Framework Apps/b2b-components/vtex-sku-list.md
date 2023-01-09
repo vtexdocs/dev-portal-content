@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:30.003Z"
 updatedAt: "2022-06-09T16:53:53.438Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/b2b-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
 
 The SKU List app is an essential B2B feature responsible for rendering a SKU list in the product details page.
 
@@ -33,20 +28,20 @@ Now, you are able to use all blocks exported by the `sku-list` app. Check out th
 | `sku-list` | Top level block in which you will declare as `children` the SKU List layout blocks according to devices (`sku-content.desktop` and the `sku-content.mobile` blocks).   |
 | `sku-content.desktop` | Defines the SKU List layout for desktop devices. |
 | `sku-content.mobile` | Defines the SKU List layout for mobile devices. |
-| `sku-name`  | Renders the SKU name. | 
-| `sku-image` | Renders the SKU image. | 
-| `sku-seller` | Renders the SKU sellers (if it has any). It uses the `seller-name`, `seller-inventory` and `seller-price` blocks as children in order to display seller data. | 
+| `sku-name`  | Renders the SKU name. |
+| `sku-image` | Renders the SKU image. |
+| `sku-seller` | Renders the SKU sellers (if it has any). It uses the `seller-name`, `seller-inventory` and `seller-price` blocks as children in order to display seller data. |
 | `seller-name` | Renders the SKU seller name. |  
 | `seller-inventory` | Renders the SKU inventory per seller. |
-| `seller-price` | Renders the SKU price per seller. | 
-| `sku-price` | Renders the SKU price. | 
-| `sku-inventory` | Renders the SKU inventory. | 
-| `sku-quantity-selector` | Renders a quantity selector. | 
-| `item-quantity` | Renders the SKU inventory. | 
-| `sku-buy-button` | Renders a Buy Button to add a given SKU to the minicart. | 
-| `item-buy-button` | Renders a Buy Button to add a given Product to the minicart. | 
-| `sku-specifications` | Renders the SKU specifications. | 
-| `sku-highlights` | Renders a highlight disclaimer for a specific SKU. | 
+| `seller-price` | Renders the SKU price per seller. |
+| `sku-price` | Renders the SKU price. |
+| `sku-inventory` | Renders the SKU inventory. |
+| `sku-quantity-selector` | Renders a quantity selector. |
+| `item-quantity` | Renders the SKU inventory. |
+| `sku-buy-button` | Renders a Buy Button to add a given SKU to the minicart. |
+| `item-buy-button` | Renders a Buy Button to add a given Product to the minicart. |
+| `sku-specifications` | Renders the SKU specifications. |
+| `sku-highlights` | Renders a highlight disclaimer for a specific SKU. |
 
 2. In the product template (`store.product`), use the following block structure in order to rebuild the Product Details Page now including the `sku-list` blocks:
 
@@ -329,8 +324,8 @@ Now, you are able to use all blocks exported by the `sku-list` app. Check out th
 
 In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
 
-| CSS Handles | 
-| ----------------------------------------- | 
+| CSS Handles |
+| ----------------------------------------- |
 | `availableQuantityContainer`              |
 | `buttonDataContainer`                     |
 | `buttonItemsPrice`                        |
@@ -381,20 +376,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `specificationsTableSpecificationHeading` |
 | `specificationsTabsContainer`             |
 | `specificationsTitle`                     |
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

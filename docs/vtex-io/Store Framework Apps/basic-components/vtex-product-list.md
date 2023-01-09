@@ -6,11 +6,8 @@ hidden: false
 createdAt: "2020-06-03T15:19:16.041Z"
 updatedAt: "2022-07-27T14:36:38.486Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-The Product List component displays all items in the user's cart and informs the user when some of them are unavailable. 
+The Product List component displays all items in the user's cart and informs the user when some of them are unavailable.
 
 > ⚠️ Currently, the Product List only works with the [Minicart v2](https://vtex.io/docs/components/all/vtex.minicart/).
 
@@ -256,16 +253,16 @@ Therefore, in order to customize the `product-list` configuration, you can simpl
 | `product-list` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-list-1.png)  Top level block that must be declared in the `minicart-product-list` block to render a default detailed list with all products added to the shopping cart.   |
 | `product-list-content-desktop` | Creates the product list layout for desktop devices.  |
 | `product-list-content-mobile` | Creates the product list layout for mobile devices. |
-| `message` | Renders a message text about the product availability. | 
-| `product-name` | Renders the product names. | 
-| `product-reference` | Renders the product reference information. | 
-| `price` | Renders the product prices. | 
-| `unit-price` | Renders the price for each product unit added to the cart. | 
-| `product-list-image` | Renders the product images. | 
-| `product-brand` | Renders the product brands. | 
-| `product-variations` | Renders the product variations. | 
-| `product-quantity-label` | Renders a product label that displays a sua quantidade de unidades added to the cart. | 
-| `quantity-selector` | Renders a selector that allows users to add a chosen number of a product in their cart. | 
+| `message` | Renders a message text about the product availability. |
+| `product-name` | Renders the product names. |
+| `product-reference` | Renders the product reference information. |
+| `price` | Renders the product prices. |
+| `unit-price` | Renders the price for each product unit added to the cart. |
+| `product-list-image` | Renders the product images. |
+| `product-brand` | Renders the product brands. |
+| `product-variations` | Renders the product variations. |
+| `product-quantity-label` | Renders a product label that displays a sua quantidade de unidades added to the cart. |
+| `quantity-selector` | Renders a selector that allows users to add a chosen number of a product in their cart. |
 | `remove-button` | Renders a button that allows users to remove a product from the list. |  
 
 ### `product-list` props
@@ -287,7 +284,7 @@ Therefore, in order to customize the `product-list` configuration, you can simpl
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `textAlign`            | `string`    | Product price position on the list.  | `left`    |
-| `showListPrice` | `boolean`  | Whether the product prices should be displayed on the list (`true`) or not (`false`). | `true` | 
+| `showListPrice` | `boolean`  | Whether the product prices should be displayed on the list (`true`) or not (`false`). | `true` |
 
 ### `unit-price` props
 
@@ -316,7 +313,7 @@ Therefore, in order to customize the `product-list` configuration, you can simpl
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `variation`   | `enum`    | Variation for the button visual proeminence based on the [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms/Button). Possible values are: `primary`, `secondary`, `tertiary`, `inverted-tertiary`, `danger` and `danger-tertiary`. | `danger`    |
-| `displayMode` | `enum`  | Defines how the remove button should be displayed. Possible values are: `icon-button` (to render an icon button) and `text-button` (to render a text message button). If you desire to [create a modal in the remove button](https://vtex.io/docs/recipes/templates/creating-modals-using-icons/), use the `icon-button` value. | `icon-button` | 
+| `displayMode` | `enum`  | Defines how the remove button should be displayed. Possible values are: `icon-button` (to render an icon button) and `text-button` (to render a text message button). If you desire to [create a modal in the remove button](https://vtex.io/docs/recipes/templates/creating-modals-using-icons/), use the `icon-button` value. | `icon-button` |
 
 ### `quantity-selector` props
 
@@ -367,20 +364,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `unitListPrice`                      |
 | `unitPriceMeasurementUnit`           |
 | `unitPricePerUnitCurrency`           |
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

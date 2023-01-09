@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:51.303Z"
 updatedAt: "2022-10-25T14:29:48.794Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Search Result app is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/vtex-developer-docs/reference/search-api-overview) and displaying it to users.
 
@@ -20,9 +17,9 @@ The app exports all store blocks expected in a search results page, such as the 
 
 To configure the VTEX Search Result, check the sections below.
 
-### Adding the Search Result app to your theme's dependencies 
+### Adding the Search Result app to your theme's dependencies
 
-In your theme's `manifest.json`, add the Search Result app as a dependency: 
+In your theme's `manifest.json`, add the Search Result app as a dependency:
 
 ```json
   "dependencies": {
@@ -33,6 +30,7 @@ In your theme's `manifest.json`, add the Search Result app as a dependency:
 Now, you can use all the blocks exported by the `search-result` app. Check out the full list below:
 
 #### `search-result` blocks
+
 | Block name   | Description  |
 | -------- | ------------------------ |
 | `search-result-layout`     |  ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Enables you to build the search result page using its three children blocks: `search-result-layout desktop`, `search-result-layout.mobile`, and `search-not-found-layout` . It must be used in the `store.search` template since it uses the context provided by the VTEX Search API.                                                                                 |
@@ -41,27 +39,26 @@ Now, you can use all the blocks exported by the `search-result` app. Check out t
 | `search-result-layout.mobile`   | Builds the search result page structure for mobile mode.  If the `search-result-layout.mobile` is not provided, the `search-result-layout.desktop` will be used instead.                                                                                                            |
 | `search-layout-switcher`       | Enables mobile users to switch between the available layout modes.                                                                                              |
 | `search-not-found-layout`   | Builds the whole search result page structure for scenarios in which no result was fetched. It is rendered whenever users search for a term that doesn't return a product. |                                                      |
-| `gallery`  | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Displays the gallery with all the products found in the search.  |                    |                                         
-| `gallery-layout-switcher` | Logical block that allows users to switch between the available `gallery`'s layouts. To know how to build your search results with multiple layouts, access the [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).  |                           |                                     
-| `gallery-layout-option` | Defines how each layout option should be rendered for users. To know how to build your search results with multiple layouts, access the [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).  | 
-| `not-found` | Contains a text and a description for the page that was not found in the search. It must be declared as a child of `search-not-found-layout`.  | 
+| `gallery`  | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Displays the gallery with all the products found in the search.  |                    |
+| `gallery-layout-switcher` | Logical block that allows users to switch between the available `gallery`'s layouts. To know how to build your search results with multiple layouts, access the [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).  |                           |
+| `gallery-layout-option` | Defines how each layout option should be rendered for users. To know how to build your search results with multiple layouts, access the [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).  |
+| `not-found` | Contains a text and a description for the page that was not found in the search. It must be declared as a child of `search-not-found-layout`.  |
 | `search-content`          | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Decides, behind the scenes, which block will be displayed: either the `gallery` block (if products are found) or the `not-found` block (if the selected filters lead to an empty search results page). This means that both `gallery` and `not-found` must be declared as `search-content` children.                    |
 | `store.not-found#search`    | When configured, it displays a `404` error message whenever the server cannot return what the browser request was or when it is configured not to handle that request.  |  
-| `search-products-count-per-page` | Displays the total number of products being displayed on the search results page. | 
+| `search-products-count-per-page` | Displays the total number of products being displayed on the search results page. |
 | `search-products-progress-bar` | Displays a progress bar of products being displayed on the search results page. |
-| `order-by.v2`            | Allows users to choose the product ordination on the search results page.  | 
-| `filter-navigator.v3`        | Allows users to apply different filters to the search. On mobile, renders a button that, when clicked on, displays all available filters in a sidebar. | 
-| `total-products.v2`        | Displays the total amount of products found for that search. | 
+| `order-by.v2`            | Allows users to choose the product ordination on the search results page.  |
+| `filter-navigator.v3`        | Allows users to apply different filters to the search. On mobile, renders a button that, when clicked on, displays all available filters in a sidebar. |
+| `total-products.v2`        | Displays the total amount of products found for that search. |
 | `search-title.v2`         | Displays a title for the search that was done. |                                                                                              |
 | `search-fetch-more`         | Displays the **Show More** button. This button is not rendered when the user is on the last page. |                                                                                              |
 | `search-fetch-previous`         | Displays the **Show Previous** button. This button is not rendered when the user is on the first page. |                                                                                              |
 | `search-products-count-per-page`         | Displays the number of products currently on the page. |                                                                                              |
-| `sidebar-close-button`         | Displays an `X` button on the filter sidebar on mobile. |                                                                                       
-
+| `sidebar-close-button`         | Displays an `X` button on the filter sidebar on mobile. |
 
 ### Adding the Search Result to page templates
 
-The Search Result app data usually is displayed on search pages (`store.search`), but it can also be added on any other page. 
+The Search Result app data usually is displayed on search pages (`store.search`), but it can also be added on any other page.
 
 When added to the search page, the block used must be the `search-result-layout`, since it fetches data provided by the template's current search context. If you want to add the app to another page, use the [`search-result-layout.customQuery` block](#search-result-blocks).
 
@@ -93,7 +90,7 @@ You need to define how the search results will be fetched before declaring the b
 
 You should define these results through a custom query on the home page. On the search template, you must use the already provided context.
 
-If you use `search-result-layout`, the blocks will define the fetched data from the `context`. If what you are using is `search-result-layout.customQuery`, the props should be sent through the `querySchema` to configure the custom query. 
+If you use `search-result-layout`, the blocks will define the fetched data from the `context`. If what you are using is `search-result-layout.customQuery`, the props should be sent through the `querySchema` to configure the custom query.
 
 Using `search-result-layout`
 
@@ -132,13 +129,15 @@ Using `search-result-layout.customQuery`
   }
 }
 ```
+
 Check all props to configure your search data int the table below:
 
 ### The `context` and `querySchema` props
+
 | Prop name              | Type             | Description                                                                                                                                                                                           | Default value     |
 | ---------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `queryField` | `string` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Search URL's query string to define which results should be fetched in the custom query. For example: `Blue`. This prop only works if the `mapField` prop is declared as well.  | `undefined` | 
-| `mapField` | `string` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Search URL's `map` parameter to define which results should be fetched in the custom query, for example `specificationFilter_100`. This prop only works if the `queryField` prop is declared as well. | `undefined` | 
+| `queryField` | `string` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Search URL's query string to define which results should be fetched in the custom query. For example: `Blue`. This prop only works if the `mapField` prop is declared as well.  | `undefined` |
+| `mapField` | `string` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Search URL's `map` parameter to define which results should be fetched in the custom query, for example `specificationFilter_100`. This prop only works if the `queryField` prop is declared as well. | `undefined` |
 | `maxItemsPerPage`      | `number`         | Maximum number of items per search page. The maximum value of this prop is `50`. If a larger number is added, the query will fail.                 | `10`                |
 | `orderByField`         | `enum`           | Decides which order products must follow when displayed. The possible values are named after the order type: `OrderByTopSaleDESC` (it considers the number of sold units of the product), `OrderByReleaseDateDESC`, `OrderByBestDiscountDESC`, `OrderByPriceDESC`, `OrderByPriceASC`, `OrderByNameASC`, `OrderByNameDESC` or `OrderByScoreDESC` ([relevance Score](https://help.vtex.com/en/tutorial/how-does-the-score-field-work--1BUZC0mBYEEIUgeQYAKcae)). `ASC` and `DESC` stand for ascending order and descending order, respectively.  | `OrderByScoreDESC`    |
 | `hideUnavailableItems` | `boolean`     | Whether the search result should hide unavailable items (`true`) or not (`false`).     | `false`           |
@@ -158,7 +157,7 @@ You must define the query for the following search pages:
 - Brand
 - Department
 - Category
-- Subcategory 
+- Subcategory
 
 This allows you to define custom behaviors for each of your store's search pages. For example:
 
@@ -212,12 +211,10 @@ This allows you to define custom behaviors for each of your store's search pages
 }
 ```
 
-
-
 ### Defining your search results page layouts and behavior
 
-Now you can structure the `search-result-layout` or the `search-result-layout.customQuery` blocks. They both necessarily require the `search-result-layout.desktop` as a child. But you can also provide others, such as the `search-result-layout.mobile` and the `search-not-found-layout` props. 
- 
+Now you can structure the `search-result-layout` or the `search-result-layout.customQuery` blocks. They both necessarily require the `search-result-layout.desktop` as a child. But you can also provide others, such as the `search-result-layout.mobile` and the `search-not-found-layout` props.
+
 According to your store's scenario, structure the `search-result-layout` or the `search-result-layout.customQuery`, by declaring their children and then configuring them using the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout) blocks and their props. For example:
 
 ```json
@@ -246,15 +243,14 @@ According to your store's scenario, structure the `search-result-layout` or the 
 
 | Prop name           | Type           | Description                                                                                                                          | Default value     |
 | ------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| `hiddenFacets`      | `object` | Indicates which filters should be hidden. The possible values are in [this table](#the-hiddenfacets-object).                | `undefined`              
+| `hiddenFacets`      | `object` | Indicates which filters should be hidden. The possible values are in [this table](#the-hiddenfacets-object).                | `undefined`
 | `showFacetQuantity` | `boolean`      | Whether the resulting amount in each filter should appear beside its name on the `filter-navigator.v3` block as (`true`) or (`false`)      | `false`           |
 | `blockClass`        | `string`       | Unique block ID to be used in [CSS customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization#using-the-blockclass-property)                                                                                    | `undefined`              |
-| `trackingId` | `string` | ID to be used in Google Analytics to track store metrics based on the Search Result block. |  `Search result` | 
+| `trackingId` | `string` | ID to be used in Google Analytics to track store metrics based on the Search Result block. |  `Search result` |
 | `mobileLayout`      | `object` | Controls how the search results page will be displayed to users using the mobile layout. The possible values are in [this table](#the-mobilelayout-object).                                                                                                               | `undefined`              |
-| `defaultGalleryLayout` | `string` | Name of the gallery layout to be used by default in the search results page. This prop is required when several layouts are explicitly defined by the `gallery` block. This prop's value must match the layout name defined in the `name` prop from `layouts` object. |  `undefined` | 
-| `thresholdForFacetSearch` | `number` | The minimum number of facets must be displayed on the interface for a search bar to be displayed. If you declare `0`, the search bar will always be displayed. |  `undefined` | 
-| `preventRouteChange` | `boolean` | Keeps page customizations even when the user applies new filters on it. This prop will merely change the URL’s query string instead of the entire URL; therefore, it prevents a full page reload whenever filters are applied. |  `false` | 
-
+| `defaultGalleryLayout` | `string` | Name of the gallery layout to be used by default in the search results page. This prop is required when several layouts are explicitly defined by the `gallery` block. This prop's value must match the layout name defined in the `name` prop from `layouts` object. |  `undefined` |
+| `thresholdForFacetSearch` | `number` | The minimum number of facets must be displayed on the interface for a search bar to be displayed. If you declare `0`, the search bar will always be displayed. |  `undefined` |
+| `preventRouteChange` | `boolean` | Keeps page customizations even when the user applies new filters on it. This prop will merely change the URL’s query string instead of the entire URL; therefore, it prevents a full page reload whenever filters are applied. |  `false` |
 
 #### The `mobileLayout` object
 
@@ -262,7 +258,6 @@ According to your store's scenario, structure the `search-result-layout` or the 
 | --------- | ------ | --------------------------------------------------------------------- | ------------- |
 | `mode1`   | `enum` | Defines the default layout for the mobile search results page. Possible values are: `normal`, `small` or `inline`.  | `normal`      |
 | `mode2`   | `enum` | Defines which layout will be set for the mobile search results page when users click on the layout selector button. Possible values also are `normal`, `small`, or `inline`. | `small`       |
-
 
 #### The `hiddenFacets` object
 
@@ -290,13 +285,13 @@ According to your store's scenario, structure the `search-result-layout` or the 
 
 With the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout) app and the other blocks also exported by the Search Results app, such as the `gallery`, it's time for you to build your search results page!
 
-Find below the available blocks to build your store's search results page and their existing props as well. 
+Find below the available blocks to build your store's search results page and their existing props as well.
 
 #### The `gallery` block
 
 The `gallery` block defines how fetched items should be displayed on the store's search results page.
 
-When declared with no props, it expects the [`product-summary.shelf`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) as a child and consequently the block structure inherited from it. 
+When declared with no props, it expects the [`product-summary.shelf`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) as a child and consequently the block structure inherited from it.
 
 However, it is possible to use the `layouts` prop to provide several layouts to the page, allowing your store to have different arrangements of items according to what best fits your users' needs.
 
@@ -309,11 +304,11 @@ To understand how to build your search results with multiple layouts using the `
 | Prop name | Type                      | Description                                                    | Default value   |
 | :---------: | :---------------------: | :--------------------------------------------------------------| :-------------: |
 | `layouts`  | `object` | List of layouts used to arrange and display the items on the search results page. If no value is provided, the `gallery` block must receive a `product-summary-shelf` block instead as a child. Check [this table](#the-layouts-object) for props of this block. | `undefined`  |
-| `undefined` | `block` | Defines which blocks should be rendered per layout. The prop name is not `undefined`, you must include the value passed on the `component` prop. This prop's value must match the block name of your choosing to be rendered in that specific layout. | `undefined` | 
-| `customSummaryInterval` | `number` |  Defines the item interval at which the **Gallery** should render a custom `product-summary` block. For example, declaring `5` would render a custom block at every four items rendered, as shown [on this image](https://user-images.githubusercontent.com/1207017/101687291-0cff1780-3a49-11eb-9c00-678b70001c8a.jpg). It is important to know that this prop doesn't support `layouts` yet. | `undefined` | 
-| `CustomSummary` | `block` |  Defines a block to be rendered according to the interval defined by the `customSummaryInterval` prop. | `undefined` | 
+| `undefined` | `block` | Defines which blocks should be rendered per layout. The prop name is not `undefined`, you must include the value passed on the `component` prop. This prop's value must match the block name of your choosing to be rendered in that specific layout. | `undefined` |
+| `customSummaryInterval` | `number` |  Defines the item interval at which the **Gallery** should render a custom `product-summary` block. For example, declaring `5` would render a custom block at every four items rendered, as shown [on this image](https://user-images.githubusercontent.com/1207017/101687291-0cff1780-3a49-11eb-9c00-678b70001c8a.jpg). It is important to know that this prop doesn't support `layouts` yet. | `undefined` |
+| `CustomSummary` | `block` |  Defines a block to be rendered according to the interval defined by the `customSummaryInterval` prop. | `undefined` |
 
-##### The `layouts` object 
+##### The `layouts` object
 
 | Prop name   | Type     | Description                                                             | Default value   |
 | :---------: | :------: | :---------------------------------------------------------------------: | :-------------: |
@@ -333,14 +328,13 @@ For `PreferredSKUEnum`:
 
 ⚠️ There's a way to select which SKU should take preference over this prop. You can create a Product (field) specification and per product assign the value of the desired SKU to be initially selected. Keep in mind that If the specification doesn't exist or if the value is empty, it will use the `preferredSKU` prop as fallback. You can read more about it, and how to implement it in [Recipes](https://vtex.io/docs/recipes/all)
 
-
 ##### The `itemsPerRow` object
   
 | Prop name | Type     | Description | Default value   |
-| :-------: | :------: | :--------:  | :-------------: | 
-| `desktop` | `number` | Number of slides to be shown on desktop devices. |  `undefined` | 
-| `tablet` | `number` | Number of slides to be shown on tablet devices. | `undefined` | 
-| `phone` | `number` |  Number of slides to be shown on phone devices.   | `undefined` | 
+| :-------: | :------: | :--------:  | :-------------: |
+| `desktop` | `number` | Number of slides to be shown on desktop devices. |  `undefined` |
+| `tablet` | `number` | Number of slides to be shown on tablet devices. | `undefined` |
+| `phone` | `number` |  Number of slides to be shown on phone devices.   | `undefined` |
 
 ##### Example of a `gallery` block
 
@@ -377,7 +371,7 @@ For `PreferredSKUEnum`:
 
 #### The `gallery-layout-switcher` block
 
-The `gallery-layout-switcher` block is a logical block that allows users to switch between the available `gallery`'s layouts. 
+The `gallery-layout-switcher` block is a logical block that allows users to switch between the available `gallery`'s layouts.
 
 It receives no props and expects [the `gallery-layout-option` block](#the-gallery-layout-option-block) as a child. It's essential to define the options in the same order as the layouts so that the accessibility features can work properly.
 
@@ -459,12 +453,12 @@ This block renders a filter selector for the fetched results.
 | `facetOrdering` | `array` | Array of objects (see below) that applies custom sorting rules for filters. The default behavior sorts descending the items by quantity. | `undefined` |
 | `showQuantityBadgeOnMobile` | `boolean` | Displays a badge for mobile users indicating how many active filters there are. | `false` |
 
-- **`facetOrdering` object:** 
+- **`facetOrdering` object:**
   
 | Prop name | Type     | Description | Default value   |
-| :-------: | :------: | :--------:  | :-------------: | 
-| `key` | `string` | Facets key that will be sorted. Possible values are `category-1`, `category-2`, `category-3` (for department, category and subcategory), `brand` or a product specification name. |  `undefined` | 
-| `orderBy` | `enum` | Field from facets that should be used when sorting the entries. Possible values are `name` and `quantity`. | `undefined` | 
+| :-------: | :------: | :--------:  | :-------------: |
+| `key` | `string` | Facets key that will be sorted. Possible values are `category-1`, `category-2`, `category-3` (for department, category and subcategory), `brand` or a product specification name. |  `undefined` |
+| `orderBy` | `enum` | Field from facets that should be used when sorting the entries. Possible values are `name` and `quantity`. | `undefined` |
 | `order` | `enum` | Whether the filter should be sorted by ascending (`ASC`) or descending (`DESC`) order. | `ASC` |
 
 For example:
@@ -487,12 +481,12 @@ For example:
 
 > ⚠️ The `facetOrdering` prop will conflict with the `enableFiltersFetchOptimization` flag on `vtex.store`, since it returns only the top filter values ordered by count. In order to achieve the desired outcome with `facetOrdering`, it is necessary to set `enableFiltersFetchOptimization` as `false` on `vtex.store` Admin settings.
 
-
 #### The `order-by` block
 
 The `order-by` block renders a dropdown button with [sorting options](#the-sorting-options-for-the-order-by-block) to display the fetched results. Check the block props in the table below.
 
 ##### The `order-by` props
+
 | Prop name       | Type            | Description                 | Default value |
 | --------------- | --------------- | --------------------------- | ------------- |
 | `specificationOptions` | `[object]` | Indicates which sorting options by specification will be displayed. This only works for stores using `vtex.search-resolver@1.x` | `undefined` |
@@ -519,7 +513,6 @@ The `order-by` block renders a dropdown button with [sorting options](#the-sorti
 | Name Descending          | `"OrderByNameDESC"`         |
 | Collection               | `"OrderByCollection"`         |
 
-
 #### The `search-fetch-more` block
 
 The `search-fetch-more` block renders a **Show More** button used to load the results of the next search results page. Check the block props in the table below.
@@ -527,17 +520,19 @@ The `search-fetch-more` block renders a **Show More** button used to load the re
 > ℹ️ This block is not rendered if there is no next page.
 
 ##### The `search-fetch-more` prop
+
 | Prop name       | Type            | Description                           | Default value |
 | --------------- | --------------- | ------------------------------------- | ------------- |
 | `htmlElementForButton` | `enum` | Which HTML element will be displayed for `Show more` button component. Possible values are: `a` (displays a `<a>` element with `href` and `rel` attributes)  or `button` (displays a `<button>` element without `href` and `rel` attributes). | `button` |
 
 #### The `search-fetch-previous` block
 
-The `search-fetch-previous` block renders a `Show Previous` button used to load the results of the previous search results page. 
+The `search-fetch-previous` block renders a `Show Previous` button used to load the results of the previous search results page.
 
 > ℹ️ This block is not rendered if there is no previous page.
 
 ##### The `search-fetch-previous` prop
+
 | Prop name       | Type            | Description        | Default value |
 | --------------- | --------------- | ------------------ | ------------- |
 | `htmlElementForButton` | `enum` | Which HTML element will be displayed for `Show previous` button component. Possible values are: `a` (displays a `<a>` element with `href` and `rel` attributes)  or `button` (displays a `<button>` element without `href` and `rel` attributes). | `button` |
@@ -555,6 +550,7 @@ The `search-products-progress-bar` block shows a progress bar of search results.
 The `sidebar-close-button` block is the `Close` button rendered on the top right of the mobile filter sidebar.
 
 ##### The `sidebar-close-button` props
+
 | Prop name       | Type            | Description      | Default value |
 | --------------- | --------------- | ---------------- | ------------- |
 | `size` | `number` | Size of the button icon. | `30`       |
@@ -669,30 +665,3 @@ To apply CSS customization in this and other blocks, follow the instructions giv
 | `switch`                              |
 | `totalProductsMessage`                |
 | `totalProducts`                       |
-
-
-<!-- ## Contributors ✨
-
-Thanks goes out to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- <table>
-  <tr>
-    <td align="center"><a href="https://github.com/grupo-exito-ecommerce"><img src="https://avatars2.githubusercontent.com/u/46934781?v=4?s=100" width="100px;" alt=""/><br /><sub><b>grupo-exito-ecommerce</b></sub></a><br /><a href="https://github.com/vtex-apps/search-result/commits?author=grupo-exito-ecommerce" title="Code"></a></td>
-    <td align="center"><a href="https://github.com/ygorneves10"><img src="https://avatars1.githubusercontent.com/u/39542011?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ygor Neves</b></sub></a><br /><a href="https://github.com/vtex-apps/search-result/commits?author=ygorneves10" title="Code"></a></td>
-    <td align="center"><a href="https://github.com/marcosewbank"><img src="https://avatars3.githubusercontent.com/u/27689698?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marcos André Suarez Ewbank</b></sub></a><br /><a href="https://github.com/vtex-apps/search-result/commits?author=marcosewbank" title="Code"></a></td>
-    <td align="center"><a href="https://github.com/BeatrizMiranda"><img src="https://avatars2.githubusercontent.com/u/28959326?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Beatriz Miranda</b></sub></a><br /><a href="https://github.com/vtex-apps/search-result/commits?author=BeatrizMiranda" title="Code"></a></td>
-    <td align="center"><a href="https://github.com/felipeireslan"><img src="https://avatars3.githubusercontent.com/u/47363947?v=4?s=100" width="100px;" alt=""/><br /><sub><b>felipeireslan</b></sub></a><br /><a href="https://github.com/vtex-apps/search-result/commits?author=felipeireslan" title="Code"></a></td>
-    <td align="center"><a href="https://juliomoreira.pro"><img src="https://avatars2.githubusercontent.com/u/1207017?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julio Moreira</b></sub></a><br /><a href="https://github.com/vtex-apps/search-result/commits?author=juliomoreira" title="Code"></a></td>
-    <td align="center"><a href="https://github.com/anto90fg"><img src="https://avatars.githubusercontent.com/u/73878310?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Cervelione</b></sub></a><br /><a href="https://github.com/vtex-apps/search-result/commits?author=anto90fg" title="Code"></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END 
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome! -->

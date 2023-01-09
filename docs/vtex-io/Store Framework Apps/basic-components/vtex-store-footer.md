@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2020-06-03T15:19:35.578Z"
 updatedAt: "2022-09-29T17:56:01.992Z"
 ---
+
 Footer is a store component that shows information about the store such as address, social networks and payment methods. Furthermore, it is possible to add hyperlinks for privacy policy, FAQ, benefits and attendance. This app is used by store theme.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-footer-0.png)
@@ -95,10 +96,9 @@ SocialNetwork
 | --------- | ------------- | -------------- |
 | `showInColor` | `boolean` | Whether the icons are colored or not |
 
-
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization). 
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
 
 `footer-layout`:
 
@@ -132,15 +132,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `poweredBy` |
 | `poweredByImage` |
 | `poweredByLink` |
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

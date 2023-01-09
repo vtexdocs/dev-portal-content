@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:31.995Z"
 updatedAt: "2022-12-12T14:10:01.827Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Product Customizer component can be used on the Product Details Page (PDP) to display [attachments](https://help.vtex.com/tutorial/o-que-e-um-anexo--aGICk0RVbqKg6GYmQcWUm) and/or a [subscription form](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453).
 
@@ -164,26 +161,3 @@ To apply CSS customizations in this and other blocks, follow the [Using CSS Hand
 | `productAssemblyOptionItemImage` |
 | `productAssemblyOptionItemName` |
 | `textInputValue` |
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/leoWorkingGood"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-customizer-4.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

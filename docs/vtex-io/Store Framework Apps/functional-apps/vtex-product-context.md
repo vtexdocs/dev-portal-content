@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:15.716Z"
 updatedAt: "2021-08-18T22:07:13.639Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/functional-apps/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Product Context app is responsible for providing data regarding a certain product to all of its children blocks.
 
@@ -93,27 +90,3 @@ The function is capable of performing the following `actions`:
 - `SET_LOADING_ITEM`: Sets the value if a selected item is loading or not.
 
 > ℹ️ *To have the full type definition in your development environment, be sure to run `vtex setup` in your project to install all TypeScript types exported by this app.*
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/sahanljc"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-context-0.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-<!-- DOCS-IGNORE:end -->

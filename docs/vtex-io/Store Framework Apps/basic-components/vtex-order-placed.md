@@ -6,40 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:33.374Z"
 updatedAt: "2022-03-17T19:30:39.410Z"
 ---
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
-
-<!-- code_chunk_output -->
-
-- [Configuration](#configuration)
-- [Blocks](#blocks)
-  - [`order-placed`](#order-placed-1)
-  - [`op-section`](#op-section)
-  - [`op-header`](#op-header)
-  - [`op-footer`](#op-footer)
-  - [`op-confirmation-icon`](#op-confirmation-icon)
-  - [`op-confirmation-title`](#op-confirmation-title)
-  - [`op-confirmation-message`](#op-confirmation-message)
-  - [`op-print-button`](#op-print-button)
-  - [`op-notices`](#op-notices)
-  - [`op-summary-section`](#op-summary-section)
-  - [`op-bank-invoice-section`](#op-bank-invoice-section)
-  - [`op-order`](#op-order)
-  - [`op-order-number`](#op-order-number)
-  - [`op-order-datetime`](#op-order-datetime)
-  - [`op-order-seller`](#op-order-seller)
-  - [`op-order-split-notice`](#op-order-split-notice)
-  - [`op-order-customer`](#op-order-customer)
-  - [`op-order-options`](#op-order-options)
-  - [`op-order-payment`](#op-order-payment)
-  - [`op-order-delivery-packages`](#op-order-delivery-packages)
-  - [`op-order-pickup-packages`](#op-order-pickup-packages)
-  - [`op-order-total`](#op-order-total)
-- [API](#api)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [Contributors ✨](#contributors)
-
-<!-- /code_chunk_output -->
 
 ## Configuration
 
@@ -725,25 +691,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 ## Contributing
 
 Check it out [how to contribute](https://github.com/vtex-apps/awesome-io#contributing) with this project.
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/gustavopvasconcellos"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-17.png"></img></a></td>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-18.png"></img></a></td>
-    <td align="center"><a href="https://github.com/claudiu-iviteb"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-order-placed-19.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

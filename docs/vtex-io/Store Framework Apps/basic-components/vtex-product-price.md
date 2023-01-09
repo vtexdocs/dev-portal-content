@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:16.935Z"
 updatedAt: "2022-06-22T16:04:48.125Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Product Price app is responsible for exporting blocks related to the product's price, such as list price, selling price and savings.
 
@@ -368,29 +365,3 @@ To apply CSS customization in this and other blocks, follow the instructions giv
 | `spotPrice--isUnavailable` |
 | `taxPercentage` |
 
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://razvanudrea.com"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-4.png"></img></a></td>
-    <td align="center"><a href="https://github.com/khrizzcristian"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-5.png"></img></a></td>
-    <td align="center"><a href="https://github.com/Git-the-Sanz"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-6.png"></img></a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/renan-guerra-ba91aa17b/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-product-price-7.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

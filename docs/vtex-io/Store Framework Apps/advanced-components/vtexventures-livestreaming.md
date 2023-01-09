@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2021-05-13T18:20:06.128Z"
 updatedAt: "2022-10-13T22:39:05.115Z"
 ---
+
 The Live Shopping app allows businesses to broadcast live on the store website, increasing selling rates, enhancing user experience, and boosting customer interaction simultaneously and in real-time.
 
 The app works on both devices, desktop, and mobile.
@@ -241,16 +242,3 @@ To apply CSS customizations in this and other blocks, follow the instructions gi
 | `viewersContainer`                |
 | `wordsContent`                    |
 
-## Contributors ✨
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->

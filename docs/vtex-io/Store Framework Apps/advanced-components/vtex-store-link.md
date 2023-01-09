@@ -6,13 +6,8 @@ hidden: false
 createdAt: "2020-06-03T15:19:30.090Z"
 updatedAt: "2022-11-11T16:13:51.504Z"
 ---
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/advanced-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
 
-The Store Link app provides blocks responsible for displaying links in other theme blocks, such as the Product Summary. 
+The Store Link app provides blocks responsible for displaying links in other theme blocks, such as the Product Summary.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-link-0.png)
 
@@ -84,7 +79,6 @@ All blocks exported by `store-link` share the same props:
 
 When creating an URL link using the `href` prop, you can create hypotheticals query string values, as shown in the example below:
 
-
 ```json
 {
   "link#foo": {
@@ -137,27 +131,3 @@ To apply CSS customizations in this and other blocks, follow the [Using CSS hand
 | `childrenContainer` |
 | `label`             |
 | `link`              |
-
-<!-- DOCS-IGNORE:start -->
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/anto90fg"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-store-link-1.png"></img></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-<!-- DOCS-IGNORE:end -->
