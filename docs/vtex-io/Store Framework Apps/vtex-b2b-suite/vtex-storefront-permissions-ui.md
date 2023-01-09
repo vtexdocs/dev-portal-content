@@ -12,7 +12,7 @@ updatedAt: "2022-11-14T14:14:48.952Z"
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-**Storefront Permissions UI** provides an interface for the [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) app, which is part of VTEX’s [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships.
+**Storefront Permissions UI** provides an interface for the [Storefront Permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions) app, which is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships.
 
 B2B customers often play distinct roles within their organization, such as professional buyer, manager, or supervisor. Each role is associated with a different set of permissions, depending on the actions the user needs to perform.
 
@@ -21,7 +21,7 @@ This app communicates with the backstage **Storefront Permissions** app and prov
 * [Roles management](#roles-management): allow VTEX Admin users to manage B2B roles and associated app permissions through an interface.
 * [Theme blocks configuration](#theme-blocks-configuration): enable conditional theme blocks so that only users with the required permissions can access determined parts of the content in your storefront.
 
-We recommend that you use it alongside the other apps in the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) for all functionalities to work as expected.
+We recommend that you use it alongside the other apps in the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) for all functionalities to work as expected.
 
 
 ## Before you start
@@ -35,7 +35,7 @@ You can install the app by running `vtex install vtex.storefront-permissions-ui`
 
 After this command, the app will be installed in your VTEX Admin, and you can access it on **Account Settings** > **Storefront Permissions**.
 
-> ℹ Installing **Storefront Permissions UI** has the effect of automatically installing the [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) app as a dependency, in case it is not already installed.
+> ℹ Installing **Storefront Permissions UI** has the effect of automatically installing the [Storefront Permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions) app as a dependency, in case it is not already installed.
 
 ## Roles management
 
@@ -45,14 +45,14 @@ To manage roles and their respective app permissions using the Storefront Permis
 2. Click on one of the [available storefront roles](#available-storefront-roles).
 3. Click on one of the listed apps.
 
-    > ℹ Only apps that are integrated with **Storefront Permissions** will be on the list – check our [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions#advanced-app-integration-optional) documentation for more information.
+    > ℹ Only apps that are integrated with **Storefront Permissions** will be on the list – check our [Storefront Permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions#advanced-app-integration-optional) documentation for more information.
 
 4. Select which permissions you want to enable for the role, as illustrated below.
 5. Once you are done, click on `Save`.
 
 ![storefront-permissions-ui](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-storefront-permissions-ui-0.gif)
 
-After associating roles with the desired permissions, you may then assign roles to users. To learn more about this, read our [B2B Organizations documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#users).
+After associating roles with the desired permissions, you may then assign roles to users. To learn more about this, read our [B2B Organizations documentation](https://developers.vtex.com/docs/guides/vtex-b2b-organizations#users).
 
 
 ### Available storefront roles
