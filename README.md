@@ -57,7 +57,7 @@ We're so glad you're here! Thanks for being interested
  - Images must be saved in the repository. To add it to your markdown, mention its path in the desired place of your guide's body.
  - Ask Bruno to run the portal's build.
 
-### How can I deal with page slugs?**
+### How can I deal with page slugs?
     
 The slugs used previously in our old Dev Portal were mostly maintained. You shouldn't have to worry about previous slugs.  
 
@@ -70,7 +70,7 @@ In the articles file, we included the header below. Add in the slug column the e
 
 ### What determines the left navigation's order and organization?
     
-The /developer-portal-content repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal in the order that you choose for the left navigation, other PRs must be made. 
+The `/developer-portal-content repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal in the order that you choose for the left navigation, other PRs must be made. 
 
 The portal's navigation comes from the navigation [file](https://github.com/vtexdocs/devportal/blob/main/public/navigation.json). It is a json object listing the navigation and hierarchy of all contents in Developer Portal.
 
