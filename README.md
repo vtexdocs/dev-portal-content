@@ -46,7 +46,7 @@ We're so glad you're here! Thanks for being interested
   5. To determine the left navigation's order, follow [these](#what-determines-the-left-navigations-order-and-organization) instructions.
   6. Submit your PR for review. 
     
-*The /developer-portal-content repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal, our Tech Writing team leaders must run the portal's build.* 
+*The `/developer-portal-content` repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal, our Tech Writing team leaders must run the portal's build.* 
     
 >⚠️ Note that we have a limitation of PRs by hour, so we have to accumulate the day's PRs to be all approved and merged by our Tech Writing team leaders. This means that if you want a content to be published, submit your PR for review with at least 2 days in advance from the desired publication date!
         
@@ -70,7 +70,7 @@ In the articles file, we included the header below. Add in the slug column the e
 
 ### What determines the left navigation's order and organization?
     
-The `/developer-portal-content repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal in the order that you choose for the left navigation, other PRs must be made. 
+The `/developer-portal-content` repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal in the order that you choose for the left navigation, other PRs must be made. 
 
 The portal's navigation comes from the navigation [file](https://github.com/vtexdocs/devportal/blob/main/public/navigation.json). It is a json object listing the navigation and hierarchy of all contents in Developer Portal.
 
@@ -301,7 +301,7 @@ Follow this format in your PR:
 
 ### API Reference: what about the /openapi-schemas repository?
 
-All API Reference is still documented and managed through our usual repository. Nothing's changed here. There is a 5 minute cache between PRs in the /openapi-schemas repository and the Dev Portal, but it should be rendered automatically.
+All API Reference is still documented and managed through our usual repository. Nothing's changed here. There is a 5 minute cache between PRs in the `/openapi-schemas` repository and the Dev Portal, but it should be rendered automatically.
 
 
 ### How can I update docs from IO apps that already have a readme file in the app's repository?
