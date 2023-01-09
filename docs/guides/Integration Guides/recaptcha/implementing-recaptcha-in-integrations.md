@@ -6,19 +6,11 @@ createdAt: "2021-08-03T21:56:05.910Z"
 updatedAt: "2022-09-05T16:48:05.147Z"
 ---
 In order to have your implementation validate users with reCAPTCHA, they should first obtain the appropriate key from VTEX’s Checkout API and then use that key to display the actual reCAPTCHA widget on their UI. Once the shopper correctly solves the validation, the integration receives a token that should be sent in the request that places the order.
-[block:callout]
-{
-  "type": "warning",
-  "body": "You must have a [Beta environment](https://help.vtex.com/pt/tutorial/acessar-o-ambiente-beta-pelo-dominio-myvtex-com--3BHM289568gcSwk2O80Asu) and use [Checkout V6](https://help.vtex.com/pt/tutorial/ativar-o-checkout-v6--7qVqv3ptRvpVVplrvg8ruH) to test the feature."
-}
-[/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "In order to simulate an untrustworthy session, try accessing the shopping cart’s link through an anonymous browser window. reCAPTCHA validation will probably be required."
-}
-[/block]
+>⚠️ You must have a [Beta environment](https://help.vtex.com/pt/tutorial/acessar-o-ambiente-beta-pelo-dominio-myvtex-com--3BHM289568gcSwk2O80Asu) and use [Checkout V6](https://help.vtex.com/pt/tutorial/ativar-o-checkout-v6--7qVqv3ptRvpVVplrvg8ruH) to test the feature.
+
+>ℹ️ In order to simulate an untrustworthy session, try accessing the shopping cart’s link through an anonymous browser window. reCAPTCHA validation will probably be required.
+
 ## Getting the reCAPTCHA key
 
 There are two different ways of placing orders via API. It can be done through the [orderForm transaction endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) or the [Place order endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders).
@@ -96,9 +88,5 @@ If validation fails (`status 403`), the API returns the same error `CHK0082` as 
 In case of internal error (`status 500`), the widget has to be displayed again. The `recaptchaKey` that was used the first time may be used this time.
 
 If validation with the [Place order endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) fails (`status 403`), the API returns the same error `CHK0082` as mentioned above. Note that the `recaptchaKey` returned in the error may be different than the one used previously. Be sure to use the latest one received.
-[block:callout]
-{
-  "type": "warning",
-  "body": "If you are implementing a headless checkout in your store or even carrying out order creation tests via API, reCAPTCHA in active mode can block order completion requesting the reCAPTCHA validation key that is not possible to generate only via API, its only possible to generate displaying the reCAPTCHA widget.\n \nTo bypass the reCAPTCHA key validation and be able to create the order via API without having to display the widget and solve the reCAPTCHA, the authentication keys (appKey and appToken) used to create the orders need to have the [\"Shopping cart full access\"](https://help.vtex.com/en/tutorial/perfis-de-acesso--7HKK5Uau2H6wxE1rH5oRbc#) role assigned."
-}
-[/block]
+
+>⚠️ If you are implementing a headless checkout in your store or even carrying out order creation tests via API, reCAPTCHA in active mode can block order completion requesting the reCAPTCHA validation key that is not possible to generate only via API, its only possible to generate displaying the reCAPTCHA widget.\n \nTo bypass the reCAPTCHA key validation and be able to create the order via API without having to display the widget and solve the reCAPTCHA, the authentication keys (appKey and appToken) used to create the orders need to have the [\"Shopping cart full access\"](https://help.vtex.com/en/tutorial/perfis-de-acesso--7HKK5Uau2H6wxE1rH5oRbc#) role assigned.
