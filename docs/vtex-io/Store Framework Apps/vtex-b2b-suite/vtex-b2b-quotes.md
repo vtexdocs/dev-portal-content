@@ -7,25 +7,25 @@ createdAt: "2021-10-19T20:10:51.309Z"
 updatedAt: "2022-12-02T14:51:23.888Z"
 ---
 
-> ℹ The **B2B Quotes & Carts** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
+>ℹ The **B2B Quotes & Carts** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
 The B2B shopping experience frequently requires the possibility for customers to request quotes and negotiate prices with sales representatives.
 
-The **B2B Quotes & Carts** app allows customers who are part of [B2B Organizations](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations) to request a quote for a shopping cart and save it for future use – including its items, product quantities and prices. This enables price negotiations between them and the store’s sales representatives, as well as order approval flows within their organization.
+The **B2B Quotes & Carts** app allows customers who are part of [B2B Organizations](https://developers.vtex.com/docs/guides/vtex-b2b-organizations) to request a quote for a shopping cart and save it for future use – including its items, product quantities and prices. This enables price negotiations between them and the store’s sales representatives, as well as order approval flows within their organization.
 
 ## Before you start
 
-First, make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
+First, make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
 
-Note that installing **B2B Quotes & Carts** will also result in [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) being installed as a dependency app – it allows you to grant specific storefront roles for B2B users in an organization. This is especially useful for organizations with multiple users who have different responsibilities, such as placing orders, approving orders or managing the organization users. See the [Storefront Permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions) app documentation for information on the available roles and how to customize their permissions (optional).
+Note that installing **B2B Quotes & Carts** will also result in [Storefront Permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions) being installed as a dependency app – it allows you to grant specific storefront roles for B2B users in an organization. This is especially useful for organizations with multiple users who have different responsibilities, such as placing orders, approving orders or managing the organization users. See the [Storefront Permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions) app documentation for information on the available roles and how to customize their permissions (optional).
 
-If you want to be able to manage roles and permissions on the VTEX Admin, you must install [Storefront Permissions UI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions-ui) as well.
+If you want to be able to manage roles and permissions on the VTEX Admin, you must install [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui) as well.
 
-Along with this app, we recommend installing [B2B Checkout Settings](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-checkout-settings), which includes quotes-related functionalities to checkout. For example, it allows you to add a `Create a Quote` button to the checkout’s shopping cart page, as well as “lock” the checkout if a quote is in use, preventing the cart contents from being changed until the order is placed.
+Along with this app, we recommend installing [B2B Checkout Settings](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings), which includes quotes-related functionalities to checkout. For example, it allows you to add a `Create a Quote` button to the checkout’s shopping cart page, as well as “lock” the checkout if a quote is in use, preventing the cart contents from being changed until the order is placed.
 
 ## Installation
 
-You can install the **B2B Quotes & Carts** app by running `vtex install vtex.b2b-quotes` in your terminal, using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+You can install the **B2B Quotes & Carts** app by running `vtex install vtex.b2b-quotes` in your terminal, using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
 ## How the app works
 
@@ -49,7 +49,7 @@ The ability to use these resources depends on having the required [storefront pe
 | **Edit My Organization's Quotes and Carts**   | Sales Manager                                                                                                                            |
 | **Edit All Quotes and Carts**                 | Store Admin<br>Sales Admin                                                                                                               |
 
-If you want to be able to manage roles and permissions for **B2B Quotes & Carts** on the VTEX Admin, you must install [Storefront Permissions UI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions-ui) and refer to its documentation.
+If you want to be able to manage roles and permissions for **B2B Quotes & Carts** on the VTEX Admin, you must install [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui) and refer to its documentation.
 
 ### My Quotes
 
@@ -64,14 +64,14 @@ To access **My Quotes**, customers or sales users must follow the instructions b
 
 ![my-quotes](https://user-images.githubusercontent.com/77292838/161637102-66a15213-e70d-421a-9e90-5a68ddc25825.png)
 
-> ℹ Quotes and saved carts are shown together in the same table. The differences are the following:
-> _ Only quotes can have a status of **Pending** or **Revised**.
-> _ Sales users are not notified when saved carts are created. \* It is possible to edit a saved cart such that it becomes a quote, as explained in [Quote Details](#quote-details).
+>ℹ Quotes and saved carts are shown together in the same table. The differences are the following:
+  > - Only quotes can have a status of **Pending** or **Revised**.
+  > - Sales users are not notified when saved carts are created. \* It is possible to edit a saved cart such that it becomes a quote, as explained in [Quote Details](#quote-details).
 
 In this page, it is possible to use the following resources:
 
 - **Search bar**: allows you to look up specific quotes or saved carts by name.
-- **Filters**: allows you to filter the displayed quotes or saved carts by _Status_, _Organization \_or \_Cost Center._ The two last options are available under `More`.
+- **Filters**: allows you to filter the displayed quotes or saved carts by _Status_, _Organization_ or _Cost Center._ The two last options are available under `More`.
 - **New quote**: allows you to create a quote or saved cart by clicking on the `New Quote` button. See more details on this in the [Creating a quote or saved cart](#creating-a-quote-or-saved-cart) section.
 
 The list of quotes and saved carts displays the following information:
@@ -109,7 +109,7 @@ In order to create a quote or saved cart, it is necessary to have the **Create Q
 1. Fill in the shopping cart with the desired products.
 2. Take one of the following actions to create a quote or saved cart:
 
-   - Clicking the `Create a Quote` button during checkout, provided that **B2B Checkout Settings** is installed and this button is enabled in the app’s [configuration](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-checkout-settings#configuration).
+   - Clicking the `Create a Quote` button during checkout, provided that **B2B Checkout Settings** is installed and this button is enabled in the app’s [configuration](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings#configuration).
    - Navigating to the `/b2b-quotes/create` route.
    - Clicking the `+ New` button on the **My Quotes** page.
 
@@ -192,7 +192,7 @@ This will have the effect of setting the quote’s status to **Ready** and notif
 
 ![quote-details-edit](https://user-images.githubusercontent.com/77292838/161637108-aeaeef58-296f-407a-9c00-b5ffe9d509fb.png)
 
-> ℹ To take discounts into consideration, the **B2B Quotes and Carts** app is integrated with the [Order Authorization](https://help.vtex.com/en/tutorial/how-order-authorization-works--3MBK6CmKHAuUjMBieDU0pn) system. If there is a manual discount rule that will automatically deny a discount above a certain percent, **B2B Quotes and Carts** will not allow a discount above this amount to be applied.
+>ℹ To take discounts into consideration, the **B2B Quotes and Carts** app is integrated with the [Order Authorization](https://help.vtex.com/en/tutorial/how-order-authorization-works--3MBK6CmKHAuUjMBieDU0pn) system. If there is a manual discount rule that will automatically deny a discount above a certain percent, **B2B Quotes and Carts** will not allow a discount above this amount to be applied.
 
 #### Requesting additional adjustments to a quote
 
@@ -212,7 +212,7 @@ Users with the **Place Orders from Quotes and Carts** [permission](#storefront-p
 
 They can do this by clicking the `Use Quote` button on the quote details page. The user will be redirected to checkout with the contents of the quote or saved cart added to their current cart. Anything that was previously in the user’s cart will be cleared.
 
-If the [B2B Checkout Settings](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-checkout-settings) app is installed, the checkout will be in a “locked” state until the order is placed, meaning that product quantities cannot be changed, and products cannot be added or removed. If there are not enough items in stock to meet the quantity specified in the quote or saved cart, the amount will be automatically adjusted. If a given product has no availability, checkout will allow it to be removed from the cart.
+If the [B2B Checkout Settings](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings) app is installed, the checkout will be in a “locked” state until the order is placed, meaning that product quantities cannot be changed, and products cannot be added or removed. If there are not enough items in stock to meet the quantity specified in the quote or saved cart, the amount will be automatically adjusted. If a given product has no availability, checkout will allow it to be removed from the cart.
 
 Once the order has been placed, the quote or saved cart’s status will automatically change to **Placed**, after which point it cannot be used again.
 
@@ -247,4 +247,3 @@ Make sure you click on `Save Settings` after any changes.
 Note that users with [storefront permissions](#storefront-permissions) to edit quotes will be able to adjust the expiration dates of individual quotes as needed.
 
 ![app-configuration](https://user-images.githubusercontent.com/6306265/163218059-903cfbcf-0077-45d2-9457-19ee0ba4d5c8.png)
-
