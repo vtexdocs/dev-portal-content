@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.718Z"
 
 In some situations, especially in B2B accounts, you may want to present custom search results for each of your customers. To this end, this tutorial will guide you on how to segment the search result page of your store.
 
-> ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, the configuration described in this guide is not necessary, because the [B2B Organizations](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations) app allows product collections to be assigned to organizations.
+> ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, the configuration described in this guide is not necessary, because the [B2B Organizations](https://developers.vtex.com/docs/guides/vtex-b2b-organizations) app allows product collections to be assigned to organizations.
 
 Take the following example in which different results for the same search are obtained based on the customer's email.
 
