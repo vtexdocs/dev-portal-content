@@ -12,7 +12,7 @@ updatedAt: "2022-12-09T21:28:45.069Z"
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-> ℹ The **Storefront Permissions** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution, which is a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
+> ℹ The **Storefront Permissions** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, which is a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
 When navigating a B2B store as a customer, it is common for a main user from an organization to have other people under their structure, each with their own information and access privileges.
 
@@ -38,11 +38,11 @@ In the following table, you can see the available storefront roles, their key us
 
 ## How it works
 
-**Storefront Permissions** communicates automatically with other [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) apps, such as [B2B Organizations](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations), where it enables different organization management capabilities depending on each user’s role.
+**Storefront Permissions** communicates automatically with other [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) apps, such as [B2B Organizations](https://developers.vtex.com/docs/guides/vtex-b2b-organizations), where it enables different organization management capabilities depending on each user’s role.
 
 It also allows you to configure available permissions when developing your own app, associate them with the predefined roles, and have these permissions checked by other applications – if you perform the steps described in the [Advanced app integration](#advanced-app-integration-optional) section.
 
-The **Storefront Permissions** app does not contain an interface – it operates “backstage”, storing the predefined roles and serving as a bridge to communicate with other apps in order to check user permissions. If you would like to manage roles and app permissions using the VTEX Admin interface, you must also install the [Storefront Permissions UI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions-ui) app. As an optional feature, you can install the [Admin Customers](https://developers.vtex.com/vtex-developer-docs/docs/vtex-admin-customers) app for additional customer management capabilities.
+The **Storefront Permissions** app does not contain an interface – it operates “backstage”, storing the predefined roles and serving as a bridge to communicate with other apps in order to check user permissions. If you would like to manage roles and app permissions using the VTEX Admin interface, you must also install the [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui) app. As an optional feature, you can install the [Admin Customers](https://developers.vtex.com/vtex-developer-docs/docs/vtex-admin-customers) app for additional customer management capabilities.
 
 
 ## Before you start
@@ -127,14 +127,14 @@ If you would like to develop your own app and integrate it with **Storefront Per
     Therefore, in a [custom storefront component’s code](https://github.com/vtex-apps/b2b-organizations/blob/366a28add226eac5d9b104bb13a9f2cd1d574f02/react/components/CostCenterDetails.tsx) in TypeScript, whenever referring to this feature, it uses `create-cost-center-organization`.
 
 
-Once you are done developing and installing your own app, if you have [Storefront Permissions UI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions-ui), the features of your app associated with each role will be automatically loaded on the **Storefront Permissions** page. For more details on this, read our documentation on the [Storefront Permissions UI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions-ui) app.
+Once you are done developing and installing your own app, if you have [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui), the features of your app associated with each role will be automatically loaded on the **Storefront Permissions** page. For more details on this, read our documentation on the [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui) app.
 
 
 ### GraphQL queries
 
 Now that your app is integrated, you can write a GraphQL query on your app to check the current user's permission within the context of your app.
 
-First, you need to associate your test user to a Role containing your app's permission by following the [B2B Organizations documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#users).
+First, you need to associate your test user to a Role containing your app's permission by following the [B2B Organizations documentation](https://developers.vtex.com/docs/guides/vtex-b2b-organizations#users).
 
 It is not necessary to declare your app name nor user credentials, the query will take care of these details.
 
@@ -211,7 +211,7 @@ Sample response:
 
 #### checkImpersonation
 
-This query allows you to check if the current user is [impersonating](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#impersonate-users) another user, and retrieve information on the impersonated user.
+This query allows you to check if the current user is [impersonating](https://developers.vtex.com/docs/guides/vtex-b2b-organizations#impersonate-users) another user, and retrieve information on the impersonated user.
 
 Sample query:
 
@@ -279,7 +279,7 @@ Sample response:
 
 #### impersonateUser
 
-Using this mutation, you can inform the `userId` to [impersonate an user](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-organizations#impersonate-users). To remove impersonation, send an empty `userId` instead.
+Using this mutation, you can inform the `userId` to [impersonate an user](https://developers.vtex.com/docs/guides/vtex-b2b-organizations#impersonate-users). To remove impersonation, send an empty `userId` instead.
 
 Sample mutation:
 
