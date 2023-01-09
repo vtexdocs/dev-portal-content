@@ -9,7 +9,7 @@ updatedAt: "2022-09-21T16:35:08.727Z"
 
 The Order Quote app provides **B2B** capabilities to save a shopping cart (its items, product quantities and prices) for further use.
 
-> ⚠️ The Order Quote app is not compatible with the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B Quotes & Carts](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-quotes) documentation instead.
+> ⚠️ The Order Quote app is not compatible with the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B Quotes & Carts](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-quotes) documentation instead.
 
 The user can also print the quotation information containing the cart information along with expiration date which is defined at **Admin > Apps**.
 
