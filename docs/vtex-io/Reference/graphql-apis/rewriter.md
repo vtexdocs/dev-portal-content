@@ -248,8 +248,7 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="2" align="right" valign="top">paths</td>
             <td valign="top">[String!]!</td>
-            <td>
-                The paths of the routes to be deleted.</td>
+            <td>The paths of the routes to be deleted.</td>
         </tr>
         <tr>
             <td colspan="2" align="right" valign="top">locators</td>

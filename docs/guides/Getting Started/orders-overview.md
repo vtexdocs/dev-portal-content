@@ -6,11 +6,8 @@ createdAt: "2020-09-21T22:46:46.589Z"
 updatedAt: "2022-10-04T15:07:06.478Z"
 ---
 
-[block:html]
-{
-  "html": "<style>\n    .markdown-body .callout[theme=\"📣\"] {\n    --icon: \"\\f0a1\";\n    --icon-color: #142032;\n    --border: #142032;\n    --background: #f8f7fc;\n    --text: #4a596b;\n    }\n  </style>\n  <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n    <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n      <p>\n      Tell us about your experience with this article by filling out <button style=\"background-color:transparent;color:#f71963;text-decoration:underline;border:none;padding:0;cursor:pointer;font-size: var(--markdown-font-size,14px);\" onclick=\"closeModal()\">this form.</button>\n      </p>\n  </blockquote>"
-}
-[/block]
+> **Help us improve our documentation!** Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
+
 This overview article goes over VTEX’s Order Management System (OMS), including relevant links from our developer documentation about this topic. In the following sections you will find information about setting up and managing your orders, creating order integrations with external partners and making optional configurations.
 
 [block:html]

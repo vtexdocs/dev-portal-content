@@ -19,7 +19,7 @@ This is a first party integration app for Google Customer Reviews, a free servic
 > ℹ️ *By installing the Google Customer Reviews, you will have access to the `google-customer-review-badge` block, which displays the Google Customer Reviews badge on your store's UI. To know how to set it up, check out the **Advanced Configuration** section below.*
 
 2. In your account's admin, open the **Apps** section and select the **Google Customer Reviews** box.
-3. Click on the settings icon and add your **Merchant Center ID**. You can get this value from the [Google Merchant Center](<https://www.google.com/retail/solutions/merchant-center/>.
+3. Click on the settings icon and add your **Merchant Center ID**. You can get this value from the [Google Merchant Center](https://www.google.com/retail/solutions/merchant-center/).
 4. Save your changes.
 
 ### Advanced Configuration

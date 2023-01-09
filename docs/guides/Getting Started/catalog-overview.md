@@ -5,14 +5,10 @@ hidden: false
 createdAt: "2021-03-26T15:35:50.014Z"
 updatedAt: "2022-09-27T21:01:32.508Z"
 ---
-[block:html]
-{
-  "html": "<style>\n    .markdown-body .callout[theme=\"📣\"] {\n    --icon: \"\\f0a1\";\n    --icon-color: #142032;\n    --border: #142032;\n    --background: #f8f7fc;\n    --text: #4a596b;\n    }\n  </style>\n  <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n    <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n      <p>\n      Tell us about your experience with this article by filling out <a href="https://forms.gle/fQoELRA1yfKDqmAb8">this form</a>!\n      </p>\n  </blockquote>"
-}
-[/block]
-Catalog is your store's administration module for configuring the features related to your ecommerce products to make them available for customers on your website. This overview article goes over what you can accomplish with the VTEX Catalog, including relevant links to our developer documentation about this topic.
 
-<br>
+> **Help us improve our documentation!** Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
+
+Catalog is your store's administration module for configuring the features related to your ecommerce products to make them available for customers on your website. This overview article goes over what you can accomplish with the VTEX Catalog, including relevant links to our developer documentation about this topic.
 
 ## Understanding Catalog architecture
 

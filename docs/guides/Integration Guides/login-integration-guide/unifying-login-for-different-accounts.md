@@ -13,12 +13,9 @@ In this guide, you will learn how to unify login for different VTEX accounts. Th
 ## Implementation
 
 To unify login for different accounts, you must choose one account that will be the **primary account**. This means it will be the [OAuth identity provider](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-webstore-oauth2#oauth2). Other accounts will be able to use the **primary account’s** login by acting as the service provider in the [OAuth flow of information](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-webstore-oauth2#oauth2). These are referred to as **secondary accounts** in this tutorial.
-[block:callout]
-{
-  "type": "info",
-  "body": "Learn more with the [OAuth specification document](https://www.rfc-editor.org/rfc/rfc6749) and [Store OAuth 2.0 integration guide](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-webstore-oauth2)."
-}
-[/block]
+
+> ℹ️ Learn more with the [OAuth specification document](https://www.rfc-editor.org/rfc/rfc6749) and [Store OAuth 2.0 integration guide](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-webstore-oauth2).
+
 To implement this connection, you must:
 
 - [Set up OAuth Provider in primary account](#set-up-oauth-provider-in-primary-account)
@@ -94,12 +91,8 @@ Now that you have setup an OAuth identity provider in your **primary account** a
 | **URL**                                                                                                                 | `https://{primaryAccountHost}/api/io/_v/oauth2/auth` |
 | Custom query string parameter                                                                                           | `response_type`: `code`                              |
 | **Callback Request Information** authorization code query string parameter key                                          | `code`                                               |
-| \[block:callout]                                                                                                        |                                                      |
-| {                                                                                                                       |                                                      |
-| "type": "info",                                                                                                         |                                                      |
-| "body": "The **URL** above requires your account host. Learn more about how to set your [account host](#account-host)." |                                                      |
-| }                                                                                                                       |                                                      |
-| \[/block]                                                                                                               |                                                      |
+
+> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
 
 #### 3. Access Token Exchange
 
@@ -111,12 +104,8 @@ Now that you have setup an OAuth identity provider in your **primary account** a
 | Custom request query string parameter                                                                                   | `grant_type`: `authorization_code`                    |
 | Response **access token** parameter key                                                                                 | `access_token`                                        |
 | Response **expires in** parameter key                                                                                   | `expires_in`                                          |
-| \[block:callout]                                                                                                        |                                                       |
-| {                                                                                                                       |                                                       |
-| "type": "info",                                                                                                         |                                                       |
-| "body": "The **URL** above requires your account host. Learn more about how to set your [account host](#account-host)." |                                                       |
-| }                                                                                                                       |                                                       |
-| \[/block]                                                                                                               |                                                       |
+
+> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
 
 #### 4. Get User Info
 
@@ -127,12 +116,8 @@ Now that you have setup an OAuth identity provider in your **primary account** a
 | Response **User e-mail** parameter key                                                                                  | e-mail                                                    |
 | Response **User ID** parameter key                                                                                      | userId                                                    |
 | Response **User name** parameter key                                                                                    | username                                                  |
-| \[block:callout]                                                                                                        |                                                           |
-| {                                                                                                                       |                                                           |
-| "type": "info",                                                                                                         |                                                           |
-| "body": "The **URL** above requires your account host. Learn more about how to set your [account host](#account-host)." |                                                           |
-| }                                                                                                                       |                                                           |
-| \[/block]                                                                                                               |                                                           |
+
+> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
 
 #### Account host
 
