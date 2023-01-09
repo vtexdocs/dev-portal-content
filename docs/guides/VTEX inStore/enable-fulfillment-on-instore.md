@@ -5,6 +5,7 @@ hidden: true
 createdAt: "2021-09-16T17:23:14.801Z"
 updatedAt: "2022-02-24T20:45:25.026Z"
 ---
+
 **Fulfillment** is an inStore module where the physical store fulfillment operators or sales associates can see orders to be picked up and to be shipped from the store. It allows picking, packing, invoicing and preparation for shipping or pick up and enables staff to check every order and their respective changes in status.
 
 Follow the instructions below to enable **Fulfillment** on inStore.
@@ -13,9 +14,9 @@ Follow the instructions below to enable **Fulfillment** on inStore.
 
 Before you start the **Fulfillment** setup itself, you must:
 
-1. [Install VTEX IO’s CLI in your machine.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference)
-2. [Set up a development environment.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio)
-3. [Install inStore in your VTEX account.](https://help.vtex.com/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/4L5SoLxE8O3YkxF7FKymrO)
+1. [Install VTEX IO’s CLI in your machine.](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference)
+2. [Set up a development environment.](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio)
+3. [Install inStore in your VTEX account.](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/4L5SoLxE8O3YkxF7FKymrO)
 4. [Have at least one enabled seller.](https://help.vtex.com/en/tutorial/adding-a-seller--tutorials_392)
 
 Make sure you meet all the requirements above before you proceed with the installation.
@@ -26,9 +27,10 @@ Make sure you meet all the requirements above before you proceed with the instal
 
 The first step in the installation process is to enable the **Fulfillment** tab on the inStore menu. Follow the instructions below to do so.
 
-1. Open the `checkout-instore-custom.js` file. To learn where to find this file, read our guide [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore#javascript-customizations).
+1. Open the `checkout-instore-custom.js` file. To learn where to find this file, read our guide [How to customize inStore](https://developers.vtex.com/docs/guides/how-to-customize-instore#javascript-customizations).
 2. Inside the `window.INSTORE_CONFIG` object, you must insert the following properties:
-[block:parameters]
+
+```json
 {
   "data": {
     "0-0": "`fulfillment`",
@@ -71,11 +73,11 @@ The first step in the installation process is to enable the **Fulfillment** tab 
   "cols": 3,
   "rows": 11
 }
-[/block]
+```
 
 #### Example code
 
-[block:code]
+```json
 {
   "codes": [
     {
@@ -84,7 +86,7 @@ The first step in the installation process is to enable the **Fulfillment** tab 
     }
   ]
 }
-[/block]
+```
 
 ### Step 2 - Install the Picking app
 
@@ -94,12 +96,7 @@ In both the main account (marketplace) and franchise account (seller), you must 
 vtex install vtex.picking-app@2.x
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "If you need to list the franchise accounts associated with the main account, use the following License Manager API request: `GET https://licensemanager.vtex.com.br/api/license-manager/pvt/accounts/{{accountName}}?childAccounts=true`\n\nThe franchise accounts will be listed in the `childAccounts` object."
-}
-[/block]
+>ℹ️ If you need to list the franchise accounts associated with the main account, use the following License Manager API request: `GET https://licensemanager.vtex.com.br/api/license-manager/pvt/accounts/{{accountName}}?childAccounts=true`\n\nThe franchise accounts will be listed in the `childAccounts` object.
 
 ### Step 3 - Install the Invoice Notifier app
 
@@ -122,22 +119,12 @@ vtex install vtex.invoice-notifier
    - **Provide a token that will be passed in the request**: insert a token to be used in the request to the external endpoint. This field is optional. Keep in mind this token must be previously set in the external infrastructure you want to notify, if you opt to use it.
 
 5. Click on `Save`.
-[block:callout]
-{
-  "type": "info",
-  "body": "If you do not have an ERP system and you want to test the invoicing process, you can install the **Invoicer Mock** app in the franchise account to simulate an ERP invoicer.\n\nRun the `vtex install vtex.invoicer-mock` command via CLI to install **Invoicer Mock** and follow the other instructions listed in this section.\n\nKeep in mind that in this case you must set `https://{accountName}.myvtex.com/_v/mock/invoice` as the **URL to notify**. It is not necessary to provide a token.",
-  "title": "Testing the invoicing process without an ERP system"
-}
-[/block]
+
+>ℹ️ If you do not have an ERP system and you want to test the invoicing process, you can install the **Invoicer Mock** app in the franchise account to simulate an ERP invoicer.\n\nRun the `vtex install vtex.invoicer-mock` command via CLI to install **Invoicer Mock** and follow the other instructions listed in this section.\n\nKeep in mind that in this case you must set `https://{accountName}.myvtex.com/_v/mock/invoice` as the **URL to notify**. It is not necessary to provide a token.
 
 ### Step 4 - Set a **Message Center** template for pick up orders [optional]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "This is a mandatory step only if you want to allow pick up orders."
-}
-[/block]
+>ℹ️ This is a mandatory step only if you want to allow pick up orders.
 
 In the main account (marketplace), make sure you configure the **Message Center** email template to notify clients when their orders are ready to be picked up at the selected store. Follow the instructions below to do so.
 
@@ -145,29 +132,24 @@ In the main account (marketplace), make sure you configure the **Message Center*
 2. Click on **Templates** to view all existing email templates.
 3. Click on `New template` to create a new email template.
 4. Name your template `Order ready for pickup in store` or `order-ready-for-pickup-in-store`, as illustrated below. It is important to use one of these exact names for the email to be sent automatically when orders are ready to be picked up.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-fulfillment-on-instore-0.gif)
+   ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-fulfillment-on-instore-0.gif)
 5. Enable the **Enable e-mail sending?** option, as shown above.
 6. Fill in the template fields and write the HTML code for your template. To learn more about how to do this, read [our articles in the Templates category](https://help.vtex.com/en/subcategory/templates--4D5LrWwlHGmOWMomOaaGee). Make sure you use the `{{clientProfileData.email}}` tag in the **To** field, to indicate clients’ respective emails.
 7. Click `Save` when you are done.
 
 #### Example template
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-fulfillment-on-instore-1.png)
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/enable-fulfillment-on-instore-1.png)
 
 ### Step 5 - Set the seller’s origin address [optional]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "This is a mandatory step only if you want to enable the [Ship from Store](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/50GAmxxFsJoLWqcnMysWdl) strategy using VTEX Log."
-}
-[/block]
+>ℹ️ This is a mandatory step only if you want to enable the [Ship from Store](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/50GAmxxFsJoLWqcnMysWdl) strategy using VTEX Log.
 
 In this step, you must register the physical store’s origin address using the Logistics API. To do so, you can make a `POST` call to this endpoint: `https://portal.vtexcommercestable.com.br/api/logistics/pvt/configuration/originaddress?an={accountName}` .
 
 Below you can find an example of what the body of this request should look like. Make sure you replace `{accountName}` with the franchise account name and the `null` values with the respective store address information.
 
-[block:code]
+```json
 {
   "codes": [
     {
@@ -176,16 +158,12 @@ Below you can find an example of what the body of this request should look like.
     }
   ]
 }
-[/block]
+```
 
 ### Step 6 - Install the carrier apps [optional]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "This is a mandatory step only if you want to enable the Ship from Store strategy with an integrated carrier."
-}
-[/block]
+>ℹ️ This is a mandatory step only if you want to enable the Ship from Store strategy with an integrated carrier.
+
 In both the main account (marketplace) and franchise account (seller), you must install the carrier apps via CLI, using the following commands.
 
 ```
@@ -199,16 +177,11 @@ If your carrier is integrated to **VTEX Log**, you must also install the Carrier
 vtex install vtex.carrier-tracking
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "In case you have previously installed the apps, make sure they are updated by running the `vtex update` command on the CLI."
-}
-[/block]
+>ℹ️ In case you have previously installed the apps, make sure they are updated by running the `vtex update` command on the CLI.
 
 ### Step 7 - Configure a printer
 
-Follow the steps detailed in the [Set up the order summary printing](https://developers.vtex.com/vtex-rest-api/docs/set-up-the-order-summary-printing) guide to configure a printer.
+Follow the steps detailed in the [Set up the order summary printing](https://developers.vtex.com/docs/guides/set-up-the-order-summary-printing) guide to configure a printer.
 
 ## Testing the module
 
