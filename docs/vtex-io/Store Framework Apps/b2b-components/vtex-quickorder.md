@@ -7,14 +7,14 @@ createdAt: "2020-06-03T15:19:15.869Z"
 updatedAt: "2022-12-13T22:23:30.600Z"
 ---
 
-The Quickorder app, designed for **B2B scenarios**, creates a custom page in your store aimed at purchases in bulk, offering tools such as uploading a spreadsheet to make bulk orders more agile.
+The Quickorder app, designed for B2B scenarios, creates a custom page in your store aimed at purchases in bulk, offering tools such as uploading a spreadsheet to make bulk orders more agile.
 
-![quick-order](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-quickorder-0.png)
-_Example of a quick order page without customization_
+Example of a quick order page:
+![quick-order](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/RawQuickorder.png)
 
 ## Configuration
 
-1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the Quickorder app by running `vtex install vtex.quickorder@3.x` in your terminal.
+1. Using [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the Quickorder app by running `vtex install vtex.quickorder@3.x` in your terminal.
 2. Open your store's Store Theme app directory in your code editor.
 3. Add the Quickorder app as a `peerDependency` in the `manifest.json` file:
 
@@ -191,22 +191,22 @@ The **Copy/Paste SKU** option allows user to paste a list of desired SKUs in a t
 
 For example:
 
-![Copy & Paste](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-quickorder-1.gif)
+![Copy & Paste](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/Copy-n-Paste.gif)
 
-> ℹ Remember that you need to validate the list after pasting it. Validating the Reference IDs will let you know if the selected SKUs are in fact available for purchase.
+>ℹ Remember that you need to validate the list after pasting it. Validating the Reference IDs will let you know if the selected SKUs are in fact available for purchase.
 
 ### Upload (`quickorder-upload` block)
 
 Another possible option that replaces the **Copy/Paste SKU** option is to upload a spreadsheet containing two columns (SKU and Quantity) to the **Upload** component (`quickorder-upload` block).
 
-![Spreadsheet](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-quickorder-2.png)
+![Spreadsheet](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/Spreadsheet.png)
 
 The spreadsheet will work in the same way as the list pasted using the **Copy/Paste SKU** option, as follows:
 
 - `SKU` column: SKU Reference ID (be aware that this is not the SKU ID displayed in your admin's Catalog).
 - `Quantity` column: SKU quantity you wish to add to the cart.
 
-> ℹ Once uploaded, the spreadsheet is then validated. Based on the filled in SKU reference IDs, **Quickorder** will confirm whether the SKUs are in fact available for purchase.
+>ℹ Once uploaded, the spreadsheet is then validated. Based on the filled in SKU reference IDs, **Quickorder** will confirm whether the SKUs are in fact available for purchase.
 
 ### Custom Search Bar (`quickorder-autocomplete` block)
 
@@ -214,7 +214,7 @@ The **Custom Search Bar** component works as a custom search bar. Simply add the
 
 Remember to add each selected item to the cart by clicking on `Add`.
 
-![One by One](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-quickorder-3.gif)
+![One by One](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/One-by-One.gif)
 
 This option does not require any validation, since selecting the SKUs using a search bar already ensures that they are available to purchase.
 
@@ -222,9 +222,9 @@ This option does not require any validation, since selecting the SKUs using a se
 
 The **Categories** component allows users to choose their desired SKUs and respective quantities using the store's categories tree, adding all the selected options to the cart at once.
 
-![Category](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-quickorder-4.gif)
+![Category](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/Category.gif)
 
-> ⚠ This option is only recommended if you have less than 50 SKUs for each category in your Catalog. Otherwise, the component will take too long to load and will negatively affect your store's user experience.
+>⚠ This option is only recommended if you have less than 50 SKUs for each category in your Catalog. Otherwise, the component will take too long to load and will negatively affect your store's user experience.
 
 This scenario also does not require validating the SKUs that you've added to the cart, since selecting them directly from the store's categories tree ensures their availability.
 
