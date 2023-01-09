@@ -5,20 +5,8 @@ hidden: true
 createdAt: "2021-10-19T17:54:09.606Z"
 updatedAt: "2021-10-25T20:15:31.016Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/tawk-to) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
-
-[block:callout]
-{
-  "type": "info",
-  "body": "This feature is in beta, which means that we are working to improve it. If you have any questions, please contact [our Support](https://support.vtex.com/hc/en-us/requests)."
-}
-[/block]
+> ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact [our Support](https://support.vtex.com/hc/en-us/requests).
 
 Regionalization is a feature of [VTEX Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG#) that allows store administrators to optimize search results according to the availability of sellers in a customer's region. To learn how to install and configure VTEX Intelligent Search in your store, read our [Search app article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search).
 
@@ -88,17 +76,3 @@ Set the `hideUnavailableItems` prop to `true` on the `autocomplete-result-list.v
 ## Indexing
 
 After finishing the configuration, you need to initiate the indexing of the store's Catalog with the Intelligent Search. For this, use the [Integration Settings](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) functionality.
-
-## Contributors ✨
-
-Thanks goes to these wonderful people:
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-<!-- DOCS-IGNORE:end -->
