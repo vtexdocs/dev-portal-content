@@ -54,7 +54,6 @@ This resource creates some users with `priceTables` data.
 
 <details>
   <summary>View Sample Data</summary>
-  <hr/>
   <ul>
     <li>Email: <code>john@email.com</code></li>
     <ul>
@@ -71,7 +70,6 @@ This resource creates some users with `priceTables` data.
       <li>PriceTable: silver</li>
     </ul>
   </ul>
-  <hr/>
 </details>
 
 ### Brands
@@ -80,11 +78,9 @@ This resource creates one brand.
 
 <details>
   <summary>View Sample Data</summary>
-  <hr/>
   <ul>
     <li>Name: Brand (9280)</li>
   </ul>
-  <hr/>
 </details>
 
 ### Categories
@@ -93,7 +89,6 @@ This resource creates seven categories.
 
 <details>
   <summary>View Sample Data</summary>
-  <hr/>
   <ul>
     <li>Name: Apparel (9281)</li>
     <li>Name: Food and beverage (9282)</li>
@@ -103,7 +98,6 @@ This resource creates seven categories.
     <li>Name: Computer & Software (9286)</li>
     <li>Name: Power tools (9287)</li>
   </ul>
-  <hr/>
 </details>
 
 ### Collections
@@ -112,13 +106,11 @@ This resource creates a collection with all products.
 
 <details>
   <summary>View Sample Data</summary>
-  <hr/>
   <ul>
     <li>Name: All</li>
     <li>Type: Inclusive</li>
     <li>BrandId: 9280 (Brand)</li>
   </ul>
-  <hr/>
 </details>
 
 ### Fields
@@ -127,7 +119,6 @@ This resource creates a group with two fields containing a variety of field valu
 
 <details>
   <summary>View Sample Data</summary>
-  <hr />
   <ul>
     <li>Group: Specifications</li>
     <br />
@@ -143,7 +134,6 @@ This resource creates a group with two fields containing a variety of field valu
       <li>Field Values: 8, 8.5, 9, 9.5 and 10</li>
     </ul>
   </ul>
-  <hr />
 </details>
 
 ### Products
@@ -151,7 +141,6 @@ This resource creates a group with two fields containing a variety of field valu
 This resource creates an assortment of products and SKUs and sets their specifications, images and attachments (related to customizations and subscriptions).
 
 <details>
-  <hr />
   <summary>View Sample Data</summary>
   <ul>
     <details>
@@ -233,6 +222,7 @@ This resource creates an assortment of products and SKUs and sets their specific
           <li>SKU Kit: _same name_ (880390)</li>
           <li>SKU Components: 10un of Navel Oranges Grown Large Fresh</li>
         </ul>
+      </ul>
     </details>
     <details>
       <summary>Category: Sporting (9283)</summary>
@@ -272,6 +262,7 @@ This resource creates an assortment of products and SKUs and sets their specific
           <li>SKU Name: 9.5 (880083)</li>
           <li>SKU Name: 10 (880084)</li>
         </ul>
+      </ul>
     </details>
     <details>
       <summary>Category: Agribusiness (9284)</summary>
@@ -305,6 +296,7 @@ This resource creates an assortment of products and SKUs and sets their specific
         <ul>
           <li>SKU Name: _same name_ (880380)</li>
         </ul>
+      </ul>
     </details>
     <details>
       <summary>Category: Home Appliance (9285)</summary>
@@ -335,6 +327,7 @@ This resource creates an assortment of products and SKUs and sets their specific
         <ul>
           <li>SKU Name: _same name_ (880250)</li>
         </ul>
+      </ul>
     </details>
     <details>
       <summary>Category: Computer & Software (9286)</summary>
@@ -378,6 +371,7 @@ This resource creates an assortment of products and SKUs and sets their specific
           <li>1un of Acer Aspire Z24-890-UA91 AIO Desktop - Windows 10 (880015)</li>
           <li>1un of Acer Aspire TC-885-UA92 Desktop - Windows 10 (880017)</li>
         </ul>
+      </ul>
     </details>
     <details>
       <summary>Category: Power tools (9287)</summary>
@@ -412,35 +406,36 @@ This resource creates an assortment of products and SKUs and sets their specific
         <ul>
           <li>SKU Name: _same name_ (880140)</li>
         </ul>
+      </ul>
     </details>
   </ul>
   </ul>
-  <hr />
+
 </details>
 
 #### Attachments
 
 ##### Customization
 
-<details><hr/>
+<details>
   <summary>View Sample Data</summary>
     <ul>
-    <li>Name: T-Shirt Customization (T-Shirt Name - 15 characters)</li>
-    <li>Products: adidas Men's Performance Polo - Blast Blue (880001)</li>
+      <li>Name: T-Shirt Customization (T-Shirt Name - 15 characters)</li>
+      <li>Products: adidas Men's Performance Polo - Blast Blue (880001)</li>
     </ul>
-<hr/></details>
+</details>
 
 ##### Subscriptions
 
 It is mandatory to [follow these additional steps](https://help.vtex.com/tutorial/como-configurar-assinatura-v2--1FA9dfE7vJqxBna9Nft5Sj#2-how-to-install-the-subscription-app) if you want to enable subscriptions.
 
-<details><hr/>
+<details>
   <summary>View Sample Data</summary>
     <ul>
     <li>Name: Subscription</li>
     <li>Products: All from category Food and beverage (9282)</li>
     </ul>
-<hr/></details>
+</details>
 
 ### Prices
 
@@ -448,14 +443,14 @@ This resource sets sample prices and price tables.
 
 #### Most products
 
-<details><hr/>
+<details>
   <summary>View Sample Data</summary>
     <ul>
       <li>ListPrice: 30.00</li>
       <li>BasePrice: between 50.00 and 2000.00</li>
       <li>Markup: 0%</li>
     </ul>
-    <hr/></details>
+    </details>
 
 #### Quantity prices
 
@@ -479,7 +474,7 @@ This resource sets sample prices and price tables.
 
 #### Price Tables
 
-<details><hr/>
+<details>
   <summary>View Sample Data</summary>
     <ul>
       <li>Name: silver</li>
@@ -497,13 +492,13 @@ This resource sets sample prices and price tables.
         <li>Percentual Modifier: -15%</li>
       </ul>
     </ul>
-    <hr/></details>
+</details>
 
 ### Payments
 
 This resource sets 3 affiliations (Promissory, Test and CreditControlV2), the custom payment Promissories and the payment condition using them, the VISA credit card condition and the Customer Credit condition.
 
-<details><hr/>
+<details>
   <summary>View Sample Data</summary>
     <ul>
       <li>Affiliation: Promissory</li>
@@ -526,13 +521,13 @@ This resource sets 3 affiliations (Promissory, Test and CreditControlV2), the cu
         <li>15, 30 and 45 days (1.5% interest)</li>
       </ul>
     </ul>
-<hr/></details>
+</details>
 
 ### Benefits
 
 This resource sets a Progressive Discount promotion.
 
-<details><hr/>
+<details>
   <summary>View Sample Data</summary>
     <ul>
       <li>Name: Progressive Discount</li>
@@ -552,13 +547,13 @@ This resource sets a Progressive Discount promotion.
         <li>Discount: 35%</li>
       </ul>
     </ul>
-    <hr/></details>
+</details>
 
 ### Taxes
 
 This resource sets VAT and ICMS taxes.
 
-<details><hr/>
+<details>
   <summary>View Sample Data</summary>
     <ul>
       <li>Name: VAT</li><ul>
@@ -575,14 +570,13 @@ This resource sets VAT and ICMS taxes.
       <li>Category: Agribusiness (9284)</li>
       <li>Tax: 12%</li></ul>
     </ul>
-    <hr/></details>
+</details>
 
 ### Logistics
 
 This resource updates the **Logistics** module using sample docks, warehouse and carrier.
 
 <details>
-  <hr />
   <summary>View Sample Data</summary>
   <ul>
     <li>Freight Values:</li>
@@ -616,7 +610,6 @@ This resource updates the **Logistics** module using sample docks, warehouse and
         <li>Main Dock (2)</li>
       </ul>
     </ul>
-    <hr />
 </details>
 
 ### Organizations
