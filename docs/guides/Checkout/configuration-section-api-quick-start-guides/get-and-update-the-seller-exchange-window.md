@@ -45,7 +45,8 @@ To update the seller's exchange window (in days), you need to use a similar requ
 `https://{accountName}.{environment.com.br}/api/checkout/pvt/configuration/window-to-change-seller`
 
 See a request body example below (10 days):
-[block:code]
+
+```json
 {
   "codes": [
     {
