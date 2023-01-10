@@ -5,6 +5,7 @@ hidden: true
 createdAt: "2022-12-09T18:51:21.877Z"
 updatedAt: "2022-12-12T13:58:26.358Z"
 ---
+
 The orderForm is the main object processed by VTEX checkout, and one of the most important data structures in the architecture of every VTEX store. It stores a lot of contextual information about the order which is important to the processing of the order: order items, client's personal data, delivery address, freight information, etc.
 
 This guide will describe how to update settings applied currently to every orderForm in a specific account.
