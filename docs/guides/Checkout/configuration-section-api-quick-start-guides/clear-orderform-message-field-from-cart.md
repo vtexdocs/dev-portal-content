@@ -54,7 +54,7 @@ The following errors may appear as a message in the response body.
 
 - **Message error example (code ORD002)**: `"Carrinho inválido"` (*Invalid Cart*). This message indicates that the `orderFormId` used in the request does not exist or is incorrect.
 
-[block:code]
+```json
 {
   "codes": [
     {
