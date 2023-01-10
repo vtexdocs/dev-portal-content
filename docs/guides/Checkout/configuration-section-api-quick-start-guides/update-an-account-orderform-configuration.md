@@ -10,12 +10,8 @@ The orderForm is the main object processed by VTEX checkout, and one of the most
 
 This guide will describe how to update settings applied currently to every orderForm in a specific account.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Always retrieve the current orderForm configuration before performing an update to ensure that you are modifying only the properties you want. Otherwise, old values can be overwritten. To get the current orderForm configuration for a specific account, check the [Get orderForm configuration Dev. Guide](https://developers.vtex.com/vtex-rest-api/docs/get-orderform-configuration)."
-}
-[/block]
+>⚠️ Always retrieve the current orderForm configuration before performing an update to ensure that you are modifying only the properties you want. Otherwise, old values can be overwritten. To get the current orderForm configuration for a specific account, check the [Get orderForm configuration Dev. Guide](https://developers.vtex.com/vtex-rest-api/docs/get-orderform-configuration).
+
 ## Updating an account's orderForm configuration
 
 To update an account orderForm configuration, you need to use the [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) endpoint. In this request, you must send the `accountname` through the URL address, as shown by the example below:
@@ -52,13 +48,18 @@ See a request body example below:
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n     \"paymentConfiguration\": {\n          \"requiresAuthenticationForPreAuthorizedPaymentOption\": true\n     },\n     \"recaptchaValidation\": \"vtexCriteria\",\n     \"minimumValueAccumulated\": 5,\n     \"maxNumberOfWhiteLabelSellers\": 2,\n     \"maskFirstPurchaseData\": false,\n     \"decimalDigitsPrecision\": 2,\n     \"minimumQuantityAccumulatedForItems\": 8\n}",
-      "language": "json"
-    }
-  ]
+     "paymentConfiguration": {
+          "requiresAuthenticationForPreAuthorizedPaymentOption": true
+     },
+     "recaptchaValidation": "vtexCriteria",
+     "minimumValueAccumulated": 5,
+     "maxNumberOfWhiteLabelSellers": 2,
+     "maskFirstPurchaseData": false,
+     "decimalDigitsPrecision": 2,
+     "minimumQuantityAccumulatedForItems": 8
 }
+```
+
 After sending the request, the endpoint will return `code 204 (No Content)` and an empty response body. 
 
 To confirm that the new orderForm settings have been applied to your account, access the [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) endpoint again.
@@ -72,23 +73,23 @@ The following errors may appear as a message in the response body.
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD062\",\n        \"message\": \"Unauthorized\",\n        \"exception\": null\n    },\n    \"operationId\": \"8ec4b686-435f-42ab-8cfd-89306f888c3c\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "ORD062",
+        "message": "Unauthorized",
+        "exception": null
+    },
+    "operationId": "8ec4b686-435f-42ab-8cfd-89306f888c3c"
 }
+```
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
 
 ```json
-{
-  "codes": [
-    {
-      "code": "<body>\n\t<h1>404 Not Found</h1>\n\t<p>The requested URL was not found on this server.</p>\n</body>",
-      "language": "json"
-    }
-  ]
-}
+<body>
+	<h1>404 Not Found</h1>
+	<p>The requested URL was not found on this server.</p>
+</body>
+```
