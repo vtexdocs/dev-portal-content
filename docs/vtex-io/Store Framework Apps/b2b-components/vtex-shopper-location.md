@@ -31,88 +31,88 @@ This app also supports white label sellers selection, allowing shoppers to selec
 
   - Add the following as dependencies in your theme's manifest.json file, if not already present:
 
-  ```json
-      "vtex.store-components": "3.x",
-      "vtex.modal-layout": "0.x",
-      "vtex.shopper-location": "1.x"
-  ```
+```json
+    "vtex.store-components": "3.x",
+    "vtex.modal-layout": "0.x",
+    "vtex.shopper-location": "1.x"
+```
 
    - In one of the JSON files in your theme's `store` folder, define the `shopper-location` block and its children, adjusting the props as needed:
 
-  ```json
-  "shopper-location": {
-      "children": ["modal-trigger#address"],
-      "props": {
-        "autofill": ["city", "country", "neighborhood", "number", "postalCode", "state", "street"]
-      }
-    },
-    "modal-trigger#address": {
-      "children": ["user-address", "modal-layout#address"]
-    },
-    "user-address": {
-      "props": {
-        "variation": "bar",
-        "showStreet": false,
-        "showCityAndState": true,
-        "showPostalCode": true,
-        "showPrefix": false,
-        "showIfEmpty": true
-      }
-    },
-    "modal-layout#address": {
-      "children": ["modal-header#address", "modal-content#address"]
-    },
-    "modal-header#address": {
-      "children": ["flex-layout.col#address-header"]
-    },
-    "flex-layout.col#address-header": {
-      "children": ["rich-text#address-header"],
-      "props": {
-        "paddingLeft": 5
-      }
-    },
-    "rich-text#address-header": {
-      "props": {
-        "text": "### Change Location"
-      }
-    },
-    "modal-content#address": {
-      "children": ["change-location"]
-    },
-    "change-location": {
-      "props":{
-        "postalCode": "first",
-        "autocomplete": true,
-        "notRequired": ["street", "number", "city", "state"],
-        "hideFields": ["complement", "neighborhood", "receiverName", "reference"]
-      }
-    },
-  ```
+```json
+"shopper-location": {
+    "children": ["modal-trigger#address"],
+    "props": {
+      "autofill": ["city", "country", "neighborhood", "number", "postalCode", "state", "street"]
+    }
+  },
+  "modal-trigger#address": {
+    "children": ["user-address", "modal-layout#address"]
+  },
+  "user-address": {
+    "props": {
+      "variation": "bar",
+      "showStreet": false,
+      "showCityAndState": true,
+      "showPostalCode": true,
+      "showPrefix": false,
+      "showIfEmpty": true
+    }
+  },
+  "modal-layout#address": {
+    "children": ["modal-header#address", "modal-content#address"]
+  },
+  "modal-header#address": {
+    "children": ["flex-layout.col#address-header"]
+  },
+  "flex-layout.col#address-header": {
+    "children": ["rich-text#address-header"],
+    "props": {
+      "paddingLeft": 5
+    }
+  },
+  "rich-text#address-header": {
+    "props": {
+      "text": "### Change Location"
+    }
+  },
+  "modal-content#address": {
+    "children": ["change-location"]
+  },
+  "change-location": {
+    "props":{
+      "postalCode": "first",
+      "autocomplete": true,
+      "notRequired": ["street", "number", "city", "state"],
+      "hideFields": ["complement", "neighborhood", "receiverName", "reference"]
+    }
+  },
+```
 
    - Also in one of the JSON files, place the `shopper-location` block in your layout. For example, to place the block in the header:
 
-  ```json
-  "flex-layout.row#header-desktop": {
-      "props": {
-        "blockClass": "main-header",
-        "horizontalAlign": "center",
-        "verticalAlign": "center",
-        "preventHorizontalStretch": true,
-        "preventVerticalStretch": true,
-        "fullWidth": true
-      },
-      "children": [
-        "flex-layout.col#logo-desktop",
-        "flex-layout.col#category-menu",
-        "flex-layout.col#spacer",
-        "shopper-location",
-        "search-bar",
-        "locale-switcher",
-        "login",
-        "minicart.v2"
-      ]
+```json
+"flex-layout.row#header-desktop": {
+    "props": {
+      "blockClass": "main-header",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
     },
-  ```
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#category-menu",
+      "flex-layout.col#spacer",
+      "shopper-location",
+      "search-bar",
+      "locale-switcher",
+      "login",
+      "minicart.v2"
+    ]
+  },
+```
 
 ### Client Redirect
 
