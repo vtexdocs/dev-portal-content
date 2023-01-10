@@ -68,7 +68,7 @@ The following errors may appear as a message in the response body.
 
 - **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
 
-[block:code]
+```json
 {
   "codes": [
     {
