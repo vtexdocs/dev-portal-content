@@ -436,7 +436,7 @@ If you want to view or edit any of these templates, follow the steps below.
 
 The **B2B Organizations** app stores information about organization requests, organizations, and cost centers in [Master Data v2](https://help.vtex.com/pt/tutorial/master-data-v2--3JJ1mlzuo88w22gO0gy0QS).
 
-This means that it is possible for store administrators or developers to fetch this information using the [Master Data API v2](https://developers.vtex.com/reference/master-data-api-v2-overview), by using their **data entity name** as the value for the `data_entity_name` parameter.
+This means that it is possible for store administrators or developers to fetch this information using the [Master Data API v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview), by using their **data entity name** as the value for the `data_entity_name` parameter.
 
 You can see the data entity names in the table below.
 
