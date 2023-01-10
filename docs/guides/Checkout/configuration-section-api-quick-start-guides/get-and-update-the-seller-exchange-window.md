@@ -15,7 +15,6 @@ In this situation, VTEX allows the marketplace to have a period of time (window)
   "type": "warning",
   "body": "The default window for the change seller is <strong>2 days</strong>. However, you can modify the value for up to a maximum period of <strong>30 days</strong>."
 }
-[/block]
 This guide describes how to get a seller's current exchange window or update this value in a marketplace on your account.
 
 ## Getting the current window to change seller
