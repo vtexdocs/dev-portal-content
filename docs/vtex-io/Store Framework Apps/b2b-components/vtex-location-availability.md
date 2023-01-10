@@ -7,7 +7,7 @@ createdAt: "2020-09-02T15:29:28.176Z"
 updatedAt: "2022-11-22T16:02:14.171Z"
 ---
 
-This app provides availability and shipping information based on the user's location, if available at the session, to have a more accurate result, even without authentication. We recommend using this app along with (Shopper Location)[https://developers.vtex.com/docs/guides/vtex-shopper-location].
+This app provides availability and shipping information based on the user's location, if available at the session, to have a more accurate result, even without authentication. We recommend using this app along with [Shopper Location](https://developers.vtex.com/docs/guides/vtex-shopper-location).
 
 ## Configuration
 
@@ -127,7 +127,7 @@ These blocks provide more detailed availability information and are designed for
 
 The above JSON will render an availability section that looks like this:
 
-![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store%20Framework%20Apps/b2b-components/images/availability-example.png)
+![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store%20Framework%20Apps/b2b-components/availability-example.png)
 
 ## Customization
 
