@@ -88,4 +88,3 @@ The following errors may appear as a message in the response body.
     }
   ]
 }
-[/block]
