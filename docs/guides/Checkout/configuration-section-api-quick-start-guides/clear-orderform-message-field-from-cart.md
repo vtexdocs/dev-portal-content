@@ -19,7 +19,6 @@ Additionally, you need to send the request body containing only two curly bracke
     }
   ]
 }
-[/block]
 
 After sending the request, the endpoint will return the response body containing the shopping cart information and the `messages` field empty, as shown in the example below:
 
