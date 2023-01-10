@@ -10,7 +10,7 @@ To remove all messages from the orderForm `messages` field of the shopping cart,
 
 Additionally, you need to send the request body containing only two curly brackets, as shown below:
 
-[block:code]
+```json
 {
   "codes": [
     {
