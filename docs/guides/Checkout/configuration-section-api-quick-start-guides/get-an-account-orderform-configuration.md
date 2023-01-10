@@ -51,7 +51,6 @@ After sending the request, the endpoint will return the response body containing
     }
   ]
 }
-[/block]
 If you need to update any of your account's orderForm settings, access the [Update an account's orderForm configuration Dev. Guide](https://developers.vtex.com/vtex-rest-api/docs/update-an-account-orderform-configuration).
 
 ## Error codes
