@@ -1,6 +1,6 @@
 ---
 title: "test guide publishing"
-slug: "test-guide-publishing"
+slug: "test-guide-publishing-dois"
 hidden: false
 createdAt: "2023-01-10T19:01:50.014Z"
 updatedAt: "2023-01-10T19:01:50.014Z"
