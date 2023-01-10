@@ -5,6 +5,7 @@ hidden: true
 createdAt: "2022-12-12T21:19:51.360Z"
 updatedAt: "2022-12-12T21:36:31.439Z"
 ---
+
 [Marketplace](https://help.vtex.com/en/tutorial/integrating-with-marketplace) is the platform where products from different sellers can be offered to customers in one place. After the customer completes a purchase and the order is created, there may be scenarios in which the original seller of the product needs to be modified, for example, when their cancels the order due to an internal unavailability of product fulfillment.
 
 In this situation, VTEX allows the marketplace to have a period of time (window), after the customer completes the purchase, to change sellers and thus avoid an order cancellation. For more information on the process of switching sellers, access the guides in the [Help Center](https://help.vtex.com/en/tutorial/change-seller--5TBAwO2kOAMw44uyaaQMQO) and the [Developer Portal](https://developers.vtex.com/vtex-rest-api/docs/change-seller).
