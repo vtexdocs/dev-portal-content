@@ -56,7 +56,7 @@ To create a  new list on the site, click on the link “My List” (which normal
 
 ## Create a list
 
-- __Tipo de lista__:Types of list registered by the store owner on the platform;**
+- __Tipo de lista__:Types of list registered by the store owner on the platform.
 - __Nome da lista__:The name of the list is defined by the user when it is created. It depends a lot on the type of list chosen, but normally it is the user’s own name, since it is often used for events like weddings, birthdays, bridal showers and baby showers.
 - **URL da lista:** The link to be used to publicize your list. In this field, just insert the final part of the list address, after the last slash. The default is http://www.sualoja.com.br/list/ + the value you enter in this field.
 - **Quem pode ver esta lista?:** The options for who can see this list vary according to the store owner’s configurations. If it is configured for “_Criador da lista decide_”, you can decide between the options “_somente os participantes desta Lista_” and “_qualquer pessoa_” (only list participants, or anyone). Only the first option will appear if the list visibility is defined as “_Privada_” (Private), and only the second if it is defined as “_Pública_” (Public). The “_Criador da lista decide_” option is important for the user, for example in a wedding gift list, since the couple will want to restrict access to themselves only, while they are choosing the products and managing the list, and open the list for anyone to have access when it is complete.
@@ -83,7 +83,7 @@ _To add a new participant, click on the link “incluir participante”. The lim
 - Endereço comercial
 - Quem receberá
 
-_Caso o usuário já tenha cadastro na loja, o endereço aparecerá automaticamente, mas ele terá a opção de modificar o endereço ou cadastrar um novo endereço e usar esse novo. Para isso existem os links “Modificar endereço selecionado” e “Entregar em outro endereço”, respectivamente._
+_If the user is already registered in the store, the address will appear automatically, but they will have the option to modify the address or register a new address and use this new one. For this, there are links “Modify selected address” and “Deliver to another address”, respectively._
 
 ## Regulations
 
@@ -121,7 +121,7 @@ This will delete the list. On clicking, a popup will appear to confirm the reque
 
 After creating a list, you can add products by browsing the site and clicking on the button “Adicionar produtos às suas Listas”. This button’s function depends on the use of the control `&lt;vtex.cmc:GiftListInsertSkuV2 /&gt;` inside your product template page.
 
-_There is a limit to the number of associations of **300** SKUs per list. _
+_There is a limit to the number of associations of **300** SKUs per list._
 
 ##### **Special features of a List – Gift Card**
 
