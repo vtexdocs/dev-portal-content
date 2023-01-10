@@ -44,13 +44,68 @@ After sending the request, the endpoint will return the response body containing
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"paymentConfiguration\": {\n        \"requiresAuthenticationForPreAuthorizedPaymentOption\": false,\n        \"allowInstallmentsMerge\": null,\n        \"blockPaymentSession\": null,\n        \"paymentSystemToCheckFirstInstallment\": null,\n        \"defaultPaymentSystemToApplyOnUserOrderForm\": null\n    },\n    \"taxConfiguration\": null,\n    \"minimumQuantityAccumulatedForItems\": 1,\n    \"decimalDigitsPrecision\": 2,\n    \"minimumValueAccumulated\": 0,\n    \"apps\": [\n        {\n            \"fields\": [\n                \"cart-extra-context\",\n                \"cart-type\"\n            ],\n            \"id\": \"cart-extra-context\",\n            \"major\": 1\n        },\n        {\n            \"fields\": [\n                \"orderIdMarketplace\",\n                \"paymentIdMarketplace\"\n            ],\n            \"id\": \"marketplace-integration\",\n            \"major\": 1\n        },\n        {\n            \"fields\": [\n                \"marketplacePaymentMethod\"\n            ],\n            \"id\": \"cn-centauro-integration\",\n            \"major\": 1\n        },\n        {\n            \"fields\": [\n                \"quantity\",\n                \"deadlines_1\",              \n                \"interestRate\"\n            ],\n            \"id\": \"customer-credit\",\n            \"major\": 1\n        },\n        {\n            \"fields\": [\n                \"affiliateId\"\n            ],\n            \"id\": \"affiliates\",\n            \"major\": 1\n        }\n    ],\n    \"allowMultipleDeliveries\": false,\n    \"allowManualPrice\": true,\n    \"savePersonalDataAsOptIn\": false,\n    \"maxNumberOfWhiteLabelSellers\": null,\n    \"maskFirstPurchaseData\": null,\n    \"recaptchaValidation\": null,\n    \"maskStateOnAddress\": null\n}\n",
-      "language": "json"
-    }
-  ]
+    "paymentConfiguration": {
+        "requiresAuthenticationForPreAuthorizedPaymentOption": false,
+        "allowInstallmentsMerge": null,
+        "blockPaymentSession": null,
+        "paymentSystemToCheckFirstInstallment": null,
+        "defaultPaymentSystemToApplyOnUserOrderForm": null
+    },
+    "taxConfiguration": null,
+    "minimumQuantityAccumulatedForItems": 1,
+    "decimalDigitsPrecision": 2,
+    "minimumValueAccumulated": 0,
+    "apps": [
+        {
+            "fields": [
+                "cart-extra-context",
+                "cart-type"
+            ],
+            "id": "cart-extra-context",
+            "major": 1
+        },
+        {
+            "fields": [
+                "orderIdMarketplace",
+                "paymentIdMarketplace"
+            ],
+            "id": "marketplace-integration",
+            "major": 1
+        },
+        {
+            "fields": [
+                "marketplacePaymentMethod"
+            ],
+            "id": "cn-centauro-integration",
+            "major": 1
+        },
+        {
+            "fields": [
+                "quantity",
+                "deadlines_1",              
+                "interestRate"
+            ],
+            "id": "customer-credit",
+            "major": 1
+        },
+        {
+            "fields": [
+                "affiliateId"
+            ],
+            "id": "affiliates",
+            "major": 1
+        }
+    ],
+    "allowMultipleDeliveries": false,
+    "allowManualPrice": true,
+    "savePersonalDataAsOptIn": false,
+    "maxNumberOfWhiteLabelSellers": null,
+    "maskFirstPurchaseData": null,
+    "recaptchaValidation": null,
+    "maskStateOnAddress": null
 }
+```
+
 If you need to update any of your account's orderForm settings, access the [Update an account's orderForm configuration Dev. Guide](https://developers.vtex.com/vtex-rest-api/docs/update-an-account-orderform-configuration).
 
 ## Error codes
@@ -62,23 +117,24 @@ The following errors may appear as a message in the response body.
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD062\",\n        \"message\": \"Unauthorized\",\n        \"exception\": null\n    },\n    \"operationId\": \"8ec4b686-435f-42ab-8cfd-89306f888c3c\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "ORD062",
+        "message": "Unauthorized",
+        "exception": null
+    },
+    "operationId": "8ec4b686-435f-42ab-8cfd-89306f888c3c"
 }
+```
+
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
 
 ```json
-{
-  "codes": [
-    {
-      "code": "<body>\n\t<h1>404 Not Found</h1>\n\t<p>The requested URL was not found on this server.</p>\n</body>",
-      "language": "json"
-    }
-  ]
-}
+<body>
+	<h1>404 Not Found</h1>
+	<p>The requested URL was not found on this server.</p>
+</body>
+```
