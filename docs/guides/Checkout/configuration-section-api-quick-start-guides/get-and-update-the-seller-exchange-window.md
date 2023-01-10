@@ -10,11 +10,9 @@ updatedAt: "2022-12-12T21:36:31.439Z"
 
 In this situation, VTEX allows the marketplace to have a period of time (window), after the customer completes the purchase, to change sellers and thus avoid an order cancellation. For more information on the process of switching sellers, access the guides in the [Help Center](https://help.vtex.com/en/tutorial/change-seller--5TBAwO2kOAMw44uyaaQMQO) and the [Developer Portal](https://developers.vtex.com/vtex-rest-api/docs/change-seller).
 
-```json
-{
-  "type": "warning",
-  "body": "The default window for the change seller is <strong>2 days</strong>. However, you can modify the value for up to a maximum period of <strong>30 days</strong>."
-}
+>⚠️ The default window for the change seller is <strong>2 days</strong>. However, you can modify the value for up to a maximum period of <strong>30 days</strong>.
+
+
 This guide describes how to get a seller's current exchange window or update this value in a marketplace on your account.
 
 ## Getting the current window to change seller
@@ -28,14 +26,9 @@ To get the window to change seller in a marketplace, you need to use the [Get wi
 After sending the request, the endpoint will return the response body showing the maximum current period of time (days after the customer's purchase) allowed to perform the seller exchange:
 
 ```json
-{
-  "codes": [
-    {
-      "code": "\"4\"",
-      "language": "json"
-    }
-  ]
-}
+"4"
+```
+
 ## Updating the window to change seller
 
 To update the seller's exchange window (in days), you need to use a similar request of the **Get window to change seller**, but as a **POST** request ([Update window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller)), as shown by the example below:
@@ -48,13 +41,10 @@ See a request body example below (10 days):
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"waitingTime\": 10\n    }\n",
-      "language": "json"
+    "waitingTime": 10
     }
-  ]
-}
+```    
+    
 After sending the request, the endpoint will return `code 201 (Created)` and an empty response body. 
 
 To confirm that the new window to change seller have been applied to your account, access the [Get window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller) endpoint again as a **GET** request.
@@ -68,23 +58,23 @@ The following errors may appear as a message in the response body.
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD062\",\n        \"message\": \"Unauthorized\",\n        \"exception\": null\n    },\n    \"operationId\": \"8ec4b686-435f-42ab-8cfd-89306f888c3c\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "ORD062",
+        "message": "Unauthorized",
+        "exception": null
+    },
+    "operationId": "8ec4b686-435f-42ab-8cfd-89306f888c3c"
 }
+```
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
 
 ```json
-{
-  "codes": [
-    {
-      "code": "<body>\n\t<h1>404 Not Found</h1>\n\t<p>The requested URL was not found on this server.</p>\n</body>",
-      "language": "json"
-    }
-  ]
-}
+<body>
+	<h1>404 Not Found</h1>
+	<p>The requested URL was not found on this server.</p>
+</body>
+```
