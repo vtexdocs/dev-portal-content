@@ -15,9 +15,4 @@ updatedAt: "2023-01-10T19:01:50.014Z"
 
 ## Teste com n e sem espaçamento
 
-[block:html]
-{
-"html":
-"<div class=\"doc-type\">\n <div class=\"column1\">\n <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n d=\"M18 17H20C20.552 17 21 17.448 21 18V20C21 20.552 20.552 21 20 21H18C17.448 21 17 20.552 17 20V18C17 17.448 17.448 17 18 17Z\"\n stroke=\"#F71963\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n d=\"M4 3H6C6.552 3 7 3.448 7 4V6C7 6.552 6.552 7 6 7H4C3.448 7 3 6.552 3 6V4C3 3.448 3.448 3 4 3Z\"\n stroke=\"#F71963\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n d=\"M11 10H13C13.552 10 14 10.448 14 11V13C14 13.552 13.552 14 13 14H11C10.448 14 10 13.552 10 13V11C10 10.448 10.448 10 11 10Z\"\n stroke=\"#F71963\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n <path d=\"M11 5H19C20.105 5 21 5.895 21 7V10C21 11.105 20.105 12 19 12H17\" stroke=\"#323232\"\n stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n <path d=\"M13 19H5C3.895 19 3 18.105 3 17V14C3 12.895 3.895 12 5 12H7\" stroke=\"#323232\" stroke-width=\"1.5\"\n stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n </svg>\n </div>\n <div class=\"column2\">\n <p>Teste com n e sem espaçamento.</p>\n <ul class=\"row3\">\n <li><a class=\"vtex-section-option\" href=\"https://developers.vtex.com/vtex-rest-api/docs/erp-integration-guide\">Back office\n (ERP/PIM/WMS)</a></li>\n <li><a class=\"vtex-section-option\" href=\"https://developers.vtex.com/vtex-rest-api/docs/erp-integration-import-inventory">Import inventory</a>\n </li>\n </ul>\n </div>\n </div>"
-}
-[/block]
+> TESTANDO
