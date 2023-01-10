@@ -11,26 +11,16 @@ To remove all messages from the orderForm `messages` field of the shopping cart,
 Additionally, you need to send the request body containing only two curly brackets, as shown below:
 
 ```json
-{
-  "codes": [
-    {
-      "code": "{}",
-      "language": "json"
-    }
-  ]
-}
+{}
+```
 
 After sending the request, the endpoint will return the response body containing the shopping cart information and the `messages` field empty, as shown in the example below:
 
 ```json
-{
-  "codes": [
-    {
-      "code": "{...\n\"messages\": [],\n...}",
-      "language": "json"
-    }
-  ]
-}
+
+"messages": [],
+
+```
 
 >ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
 
@@ -44,36 +34,37 @@ The following errors may appear as a message in the response body.
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"001\",\n        \"message\": \"Bad request\",\n        \"exception\": null\n    },\n    \"operationId\": \"91b68251-1a60-4716-b846-c7c9c31fa565\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "001",
+        "message": "Bad request",
+        "exception": null
+    },
+    "operationId": "91b68251-1a60-4716-b846-c7c9c31fa565"
 }
+```
 
 - **Message error example (code ORD002)**: `"Carrinho inválido"` (*Invalid Cart*). This message indicates that the `orderFormId` used in the request does not exist or is incorrect.
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD002\",\n        \"message\": \"Carrinho inválido\",\n        \"exception\": null\n    },\n    \"operationId\": \"5d37a185-bfe6-4686-9d92-aac9482cc63d\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "ORD002",
+        "message": "Carrinho inválido",
+        "exception": null
+    },
+    "operationId": "5d37a185-bfe6-4686-9d92-aac9482cc63d"
 }
+```
 
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
 
 ```json
-{
-  "codes": [
-    {
-      "code": "<body>\n\t<h1>404 Not Found</h1>\n\t<p>The requested URL was not found on this server.</p>\n</body>",
-      "language": "json"
-    }
-  ]
-}
+<body>
+	<h1>404 Not Found</h1>
+	<p>The requested URL was not found on this server.</p>
+</body>
+```
