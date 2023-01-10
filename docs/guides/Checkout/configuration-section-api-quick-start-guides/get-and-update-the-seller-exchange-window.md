@@ -35,7 +35,6 @@ After sending the request, the endpoint will return the response body showing th
     }
   ]
 }
-[/block]
 ## Updating the window to change seller
 
 To update the seller's exchange window (in days), you need to use a similar request of the **Get window to change seller**, but as a **POST** request ([Update window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller)), as shown by the example below:
