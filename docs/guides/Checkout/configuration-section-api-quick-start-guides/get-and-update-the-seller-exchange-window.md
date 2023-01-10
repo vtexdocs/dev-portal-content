@@ -55,7 +55,6 @@ See a request body example below (10 days):
     }
   ]
 }
-[/block]
 After sending the request, the endpoint will return `code 201 (Created)` and an empty response body. 
 
 To confirm that the new window to change seller have been applied to your account, access the [Get window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller) endpoint again as a **GET** request.
