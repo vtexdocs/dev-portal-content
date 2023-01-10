@@ -1,7 +1,7 @@
 ---
 title: "Marketing guidelines"
 slug: "vtex-io-documentation-business-guidelines-marketing-assets"
-excerpt: "vtex.io-documentation@0.88.24"
+excerpt: "Learn how to prepare the App Page used to promote your app at the VTEX App Store"
 hidden: false
 createdAt: "2021-07-22T14:20:05.553Z"
 updatedAt: "2022-12-13T20:17:44.747Z"
