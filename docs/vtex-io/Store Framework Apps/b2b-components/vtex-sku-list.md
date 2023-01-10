@@ -9,39 +9,39 @@ updatedAt: "2022-06-09T16:53:53.438Z"
 
 The SKU List app is an essential B2B feature responsible for rendering a SKU list in the product details page.
 
-![sku-list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-sku-list-0.png)
+![sku-list](https://user-images.githubusercontent.com/52087100/85888338-c762d100-b7bf-11ea-9ca0-c808ef9641ea.png)
 
 ## Configuration
 
 1. Add the `vtex.sku-list` app to your theme's dependencies in the `manifest.json`, for example:
 
-```diff
-  "dependencies": {
-+   "vtex.sku-list": "1.x"
-  }
-```
+    ```diff
+      "dependencies": {
+    +   "vtex.sku-list": "1.x"
+      }
+    ```
 
-Now, you are able to use all blocks exported by the `sku-list` app. Check out the full list below:
+    Now, you are able to use all blocks exported by the `sku-list` app. Check out the full list below:
 
-| Block name     | Description                                     |
-| -------------- | ----------------------------------------------- |
-| `sku-list` | Top level block in which you will declare as `children` the SKU List layout blocks according to devices (`sku-content.desktop` and the `sku-content.mobile` blocks).   |
-| `sku-content.desktop` | Defines the SKU List layout for desktop devices. |
-| `sku-content.mobile` | Defines the SKU List layout for mobile devices. |
-| `sku-name`  | Renders the SKU name. |
-| `sku-image` | Renders the SKU image. |
-| `sku-seller` | Renders the SKU sellers (if it has any). It uses the `seller-name`, `seller-inventory` and `seller-price` blocks as children in order to display seller data. |
-| `seller-name` | Renders the SKU seller name. |  
-| `seller-inventory` | Renders the SKU inventory per seller. |
-| `seller-price` | Renders the SKU price per seller. |
-| `sku-price` | Renders the SKU price. |
-| `sku-inventory` | Renders the SKU inventory. |
-| `sku-quantity-selector` | Renders a quantity selector. |
-| `item-quantity` | Renders the SKU inventory. |
-| `sku-buy-button` | Renders a Buy Button to add a given SKU to the minicart. |
-| `item-buy-button` | Renders a Buy Button to add a given Product to the minicart. |
-| `sku-specifications` | Renders the SKU specifications. |
-| `sku-highlights` | Renders a highlight disclaimer for a specific SKU. |
+    | Block name     | Description                                     |
+    | -------------- | ----------------------------------------------- |
+    | `sku-list` | Top level block in which you will declare as `children` the SKU List layout blocks according to devices (`sku-content.desktop` and the `sku-content.mobile` blocks).   |
+    | `sku-content.desktop` | Defines the SKU List layout for desktop devices. |
+    | `sku-content.mobile` | Defines the SKU List layout for mobile devices. |
+    | `sku-name`  | Renders the SKU name. |
+    | `sku-image` | Renders the SKU image. |
+    | `sku-seller` | Renders the SKU sellers (if it has any). It uses the `seller-name`, `seller-inventory` and `seller-price` blocks as children in order to display seller data. |
+    | `seller-name` | Renders the SKU seller name. |  
+    | `seller-inventory` | Renders the SKU inventory per seller. |
+    | `seller-price` | Renders the SKU price per seller. |
+    | `sku-price` | Renders the SKU price. |
+    | `sku-inventory` | Renders the SKU inventory. |
+    | `sku-quantity-selector` | Renders a quantity selector. |
+    | `item-quantity` | Renders the SKU inventory. |
+    | `sku-buy-button` | Renders a Buy Button to add a given SKU to the minicart. |
+    | `item-buy-button` | Renders a Buy Button to add a given Product to the minicart. |
+    | `sku-specifications` | Renders the SKU specifications. |
+    | `sku-highlights` | Renders a highlight disclaimer for a specific SKU. |
 
 2. In the product template (`store.product`), use the following block structure in order to rebuild the Product Details Page now including the `sku-list` blocks:
 
@@ -322,7 +322,7 @@ Now, you are able to use all blocks exported by the `sku-list` app. Check out th
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles |
 | ----------------------------------------- |
