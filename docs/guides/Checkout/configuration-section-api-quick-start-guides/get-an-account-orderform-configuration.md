@@ -41,7 +41,8 @@ To get an account orderForm configuration, you need to use the [Get orderForm co
 `https://{accountName}.{environment.com.br}/api/checkout/pvt/configuration/orderForm`
 
 After sending the request, the endpoint will return the response body containing the current account orderForm configuration, as shown in the example below:
-[block:code]
+
+```json
 {
   "codes": [
     {
