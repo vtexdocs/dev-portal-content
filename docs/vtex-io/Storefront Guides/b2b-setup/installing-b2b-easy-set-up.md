@@ -303,7 +303,7 @@ This resource creates an assortment of products and SKUs and sets their specific
       <ul>
         <li>Product Name: Weber 45010001 Spirit II E-310 3-Burner Liquid Propane Grill, Black (880021)</li>
         <ul>
-          <li>SKU Name: _same name_ (880210)
+          <li>SKU Name: _same name_ (880210)</li>
         </ul>
         <br />
         <li>Product Name: iRobot Roomba 675 Robot Vacuum-Wi-Fi Connectivity, Works with Alexa, Good for Pet Hair,
