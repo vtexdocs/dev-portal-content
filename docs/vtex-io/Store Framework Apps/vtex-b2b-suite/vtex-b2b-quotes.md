@@ -65,8 +65,8 @@ To access **My Quotes**, customers or sales users must follow the instructions b
 ![my-quotes](https://user-images.githubusercontent.com/77292838/161637102-66a15213-e70d-421a-9e90-5a68ddc25825.png)
 
 >ℹ Quotes and saved carts are shown together in the same table. The differences are the following:
-  > - Only quotes can have a status of **Pending** or **Revised**.
-  > - Sales users are not notified when saved carts are created. \* It is possible to edit a saved cart such that it becomes a quote, as explained in [Quote Details](#quote-details).
+> - Only quotes can have a status of **Pending** or **Revised**.
+> - Sales users are not notified when saved carts are created. It is possible to edit a saved cart such that it becomes a quote, as explained in [Quote Details](#quote-details).
 
 In this page, it is possible to use the following resources:
 
