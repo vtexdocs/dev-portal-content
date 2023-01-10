@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2021-07-20T17:06:30.143Z"
 updatedAt: "2022-12-09T21:28:45.069Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/vtex-b2b-suite/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > ℹ The **Storefront Permissions** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, which is a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
