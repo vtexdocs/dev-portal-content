@@ -5,11 +5,11 @@ hidden: false
 createdAt: "2021-08-02T20:48:26.061Z"
 updatedAt: "2022-07-13T14:50:53.504Z"
 ---
-Once you have installed either the [B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme) or the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) (when using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution), you can customize the theme according to your store’s business needs. To do so, follow the steps described below. 
+Once you have installed either the [B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme) or the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) (when using the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution), you can customize the theme according to your store’s business needs. To do so, follow the steps described below. 
 [block:callout]
 {
   "type": "warning",
-  "body": "Do not proceed with these instructions if you haven't installed the [B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme) or the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) (if using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution), or the customization will not work."
+  "body": "Do not proceed with these instructions if you haven't installed the [B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme) or the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) (if using the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution), or the customization will not work."
 }
 [/block]
 ## Step 1. Clone the boilerplate repository
@@ -22,7 +22,7 @@ First of all, you must clone the theme's boilerplate repository to your local fi
 git clone https://github.com/vtex-apps/b2b-store-theme
 ```
 
-### B2B New Store Theme (compatible with the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite))
+### B2B New Store Theme (compatible with the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite))
 
 ```
 git clone https://github.com/vtex-apps/b2b-newstore-theme

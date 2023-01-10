@@ -15,7 +15,7 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 * [Checkout customization guide](https://developers.vtex.com/vtex-rest-api/docs/checkout-customization-guide)
 * [Checkout UI Custom App](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-custom-v0)
 * [Checkout UI Settings App](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings)
-* [Checkout Settings (B2B)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-checkout-settings)
+* [Checkout Settings (B2B)](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings)
 * [Customizing the Header and Footer blocks by page](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page)
 * [Customize checkout confirmation pages](https://developers.vtex.com/vtex-rest-api/docs/customize-checkout-confirmation-pages)
 * [Enable an Observation field on the Checkout page](https://developers.vtex.com/vtex-rest-api/docs/enable-an-observation-field-on-the-checkout-page)

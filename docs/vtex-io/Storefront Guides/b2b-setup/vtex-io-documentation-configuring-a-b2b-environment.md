@@ -13,7 +13,7 @@ In other words, B2B stores only sell their products to other businesses. Because
 
 Follow the step by step below and learn how to make your store's content available only to users of other customer stores.
 
-> ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite), keep in mind that none of the steps described in this article are compatible with that solution, since B2B Suite provides an alternative solution for access control on B2B stores by using [Storefront Permissions UI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions-ui). Following the instructions in this guide can cause issues with the B2B Suite implementation.
+> ⚠️ If you are using the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite), keep in mind that none of the steps described in this article are compatible with that solution, since B2B Suite provides an alternative solution for access control on B2B stores by using [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui). Following the instructions in this guide can cause issues with the B2B Suite implementation.
 
 ## Step by step
 

@@ -141,5 +141,5 @@ VTEX allows stores to integrate with external identity providers to provide sing
 ## Shopper authentication for B2B stores
 
 VTEX stores have access to different B2B solutions. See the articles below to learn more about authentication in the context of these different solutions:
-- **B2B Suite** - [Storefront permissions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-storefront-permissions)
+- **B2B Suite** - [Storefront permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions)
 - **Legacy B2B solution** - [Configuring a B2B environment](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-configuring-a-b2b-environment)
