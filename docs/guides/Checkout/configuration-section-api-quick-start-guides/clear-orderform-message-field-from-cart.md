@@ -42,7 +42,7 @@ The following errors may appear as a message in the response body.
 
 - **Message error example (code 001)**: `"Bad Request"`. This message indicates that information other than `{}` was sent in the request body.
 
-[block:code]
+```json
 {
   "codes": [
     {
