@@ -26,7 +26,8 @@ To get the window to change seller in a marketplace, you need to use the [Get wi
 `https://{accountName}.{environment.com.br}/api/checkout/pvt/configuration/window-to-change-seller`
 
 After sending the request, the endpoint will return the response body showing the maximum current period of time (days after the customer's purchase) allowed to perform the seller exchange:
-[block:code]
+
+```json
 {
   "codes": [
     {
