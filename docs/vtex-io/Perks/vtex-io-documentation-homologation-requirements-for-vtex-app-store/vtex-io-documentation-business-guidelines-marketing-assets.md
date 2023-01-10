@@ -372,8 +372,7 @@ The overview is the description of the app and should be an engaging message tha
       style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
       <p>✔️</p>
       <p>Offer an exclusive payment method to selected clients. With Customer Credit, you grant credit, determine
-        limits, and manage invoices.
-      </p>
+        limits, and manage invoices.</p>
     </div>
     <br/>
     <div
@@ -395,8 +394,7 @@ The overview is the description of the app and should be an engaging message tha
       style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
       <p>✔️</p>
       <p>Interact with customers in real-time by generating personalized experiences through real-time chat and
-        interactive like button.
-      </p>
+        interactive like button.</p>
     </div>
     <br/>
     <div
