@@ -48,7 +48,8 @@ Additionally, you can send one or more of the configuration  information below t
 - `recaptchaValidation`: configures reCAPTCHA validation status for the account.
 
 See a request body example below:
-[block:code]
+
+```json
 {
   "codes": [
     {
