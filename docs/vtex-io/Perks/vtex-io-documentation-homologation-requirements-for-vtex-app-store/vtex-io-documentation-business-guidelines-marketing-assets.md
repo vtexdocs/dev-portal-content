@@ -275,12 +275,12 @@ The headline should describe the value proposition of your app in a concise sent
   <section style="display:flex, justify-content:flex-start">
   <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
     <p>✔️</p>
-    <p><i>Set</i> shipping address based on user browser's or IP Geolocation.</p>
+    <p>Set shipping address based on user browser's or IP Geolocation.</p>
   </div>
   <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
-    <p>This app <i>attempts to determine</i> the users' location and set their shipping address.</p>
+    <p>This app attempts to determine the users' location and set their shipping address.</p>
   </div>
 </section>
 <br/>
@@ -304,7 +304,7 @@ The headline should describe the value proposition of your app in a concise sent
   <br/>
   <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
    <p>❌</p>
-    <p><i>Google Tag Manager</i> is the app to integrate your store with Google's navigation and conversion tracking platform.</p>
+    <p>Google Tag Manager is the app to integrate your store with Google's navigation and conversion tracking platform.</p>
   </div>
 </section>
 <br/>
@@ -349,7 +349,8 @@ The overview is the description of the app and should be an engaging message tha
     <div
       style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
       <p>✔️</p>
-      <p>With The Live Shopping app, <i>create</i> live stream events on your store's website, promote product collections, increase sales, and enhance user experience simultaneously while interacting via live chat.</p>
+      <p>With The Live Shopping app, create live stream events on your store's website, promote product
+        collections, increase sales, and enhance user experience simultaneously while interacting via live chat.</p>
     </div>
     <br/>
     <div
@@ -370,7 +371,8 @@ The overview is the description of the app and should be an engaging message tha
     <div
       style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
       <p>✔️</p>
-      <p>Offer an exclusive payment method to selected clients. With Customer Credit, you grant credit, determine limits, and manage invoices.
+      <p>Offer an exclusive payment method to selected clients. With Customer Credit, you grant credit, determine
+        limits, and manage invoices.
       </p>
     </div>
     <br/>
@@ -392,14 +394,16 @@ The overview is the description of the app and should be an engaging message tha
     <div
       style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
       <p>✔️</p>
-      <p>Interact with customers in real-time by generating personalized experiences through real-time chat and interactive like button.
+      <p>Interact with customers in real-time by generating personalized experiences through real-time chat and
+        interactive like button.
       </p>
     </div>
     <br/>
     <div
       style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
       <p>❌</p>
-      <p>Interact with customers by managing the event’s live chat in the events list clicking on the desired live event’s arrow button.</p>
+      <p>Interact with customers by managing the event’s live chat in the events list clicking on the desired live
+        event’s arrow button.</p>
     </div>
   </section>
   <br/>
@@ -430,13 +434,15 @@ In `features`, provide a list of your app's main features.
       <p>✔️</p>
       <p>- Stream & Sell with the VTEX Live Shopping app. No need to hire a separate streaming platform.</p>
       <p>- Highlight products in the live stream to increase sales.</p>
-      <p>- Add to cart alert: Show which products are trending and encourage the audience to add these products to their shopping cart.</p>
+      <p>- Add to cart alert: Show which products are trending and encourage the audience to add these products to their
+        shopping cart.</p>
     </div>
     <br/>
     <div
       style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
       <p>❌</p>
-      <p>Stream and sell with the VTEX Live Shopping app without hiring a separate streaming platform. Also, highlight products during the live stream to increase sales.</p>
+      <p>Stream and sell with the VTEX Live Shopping app without hiring a separate streaming platform. Also, highlight
+        products during the live stream to increase sales.</p>
     </div>
   </section>
   <br/>
