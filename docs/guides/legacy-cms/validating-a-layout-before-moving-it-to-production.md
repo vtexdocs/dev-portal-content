@@ -31,7 +31,7 @@ To find the `LID`, simply access the layout in the CMS module Admin. It's in the
 To access the store page with the new layout, you must enter a question mark at the end of the URL and then the `LID` parameter.
 
 For example:
-`{AccountName}.vtexcommercestable.com.br**?lid=3536da96-963c-4844-bf52-cc978113be09**`
+`{AccountName}.vtexcommercestable.com.br?lid=3536da96-963c-4844-bf52-cc978113be09`
 
 ## Testing changes using the Web Site ID (WID)
 
