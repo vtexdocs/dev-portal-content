@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:48.350Z"
 updatedAt: "2020-11-10T14:41:34.438Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/iubenda) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 This is a Iubenda first party integration app. The [solution](https://www.iubenda.com/en/?utm_source=adwords&utm_medium=ppc&utm_campaign=aw_brand_global_exact&utm_term=iubenda&utm_content=336331123145&gclid=EAIaIQobChMI38Tz0Jqg6QIVlwyRCh3KoQtkEAAYASAAEgKtK_D_BwE) is integrated with the IAB TCF and US Privacy Framework and it is responsible for managing consent preferences for the ePrivacy, GDPR, and CCPAntegrated.
 

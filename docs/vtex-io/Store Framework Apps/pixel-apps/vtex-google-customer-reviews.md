@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:30.807Z"
 updatedAt: "2021-01-14T16:09:37.659Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/google-customer-reviews) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 This is a first party integration app for Google Customer Reviews, a free service that enables Google to collect valuable feedback from customers who’ve made a purchase on your site.
 

@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-07-16T16:18:03.236Z"
 updatedAt: "2020-07-16T16:18:03.236Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/elfsight) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 Elfsight first party integration app. The [solution](https://elfsight.com/) provides widgets that help website owners to increase sales, engage visitors, collect leads and more.
 

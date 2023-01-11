@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:30.629Z"
 updatedAt: "2020-10-05T18:52:00.018Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/store-icons) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
-
-[![Build Status](https://travis-ci.org/vtex-apps/store-icons.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-icons-0.png)
 
 All Store icons components.
 

@@ -6,13 +6,8 @@ hidden: false
 createdAt: "2020-06-03T15:19:16.075Z"
 updatedAt: "2022-08-01T16:08:12.306Z"
 ---
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/#contributors)
-
-## Description
 
 This is a Bazaarvoice first party integration app that is responsible for showing the components related to Bazaarvoice Reviews in your store.
-
-📢 **Disclaimer:** Don't fork this project; use, contribute, or open issue with your feature request.
 
 ## Release schedule
 

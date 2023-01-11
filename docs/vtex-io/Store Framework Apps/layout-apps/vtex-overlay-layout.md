@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:10.720Z"
 updatedAt: "2020-10-06T13:51:03.943Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/overlay-layout) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 The Overlay Layout app provides blocks that help you create a Dropdown, Select or a Tooltip component.
 

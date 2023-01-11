@@ -5,7 +5,6 @@ hidden: true
 createdAt: "2021-10-06T18:18:03.895Z"
 updatedAt: "2021-10-06T20:09:57.389Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/google-tag-manager) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 The VTEX Google Tag Manager app is a first party integration to the [Google Tag Manager solution](https://tagmanager.google.com).
 

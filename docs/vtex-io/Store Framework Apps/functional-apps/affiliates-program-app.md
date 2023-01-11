@@ -1,34 +1,23 @@
 ---
-title: "Affiliates Program app"
+title: "Affiliates Program"
 slug: "affiliates-program-app"
 excerpt: "vtex.affiliates@1.3.1"
 hidden: false
 createdAt: "2022-10-14T17:02:14.091Z"
 updatedAt: "2022-11-07T22:59:36.234Z"
 ---
-[block:callout]
-{
-  "type": "info",
-  "body": "For the **Affiliates Program app**, an affiliate is different from the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0). In the app's context, an affiliate is anyone who associates with a VTEX store to promote sales while receiving a commission."
-}
-[/block]
-<br>
+
+> ℹ️ For the **Affiliates Program app**, an affiliate is different from the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0). In the app's context, an affiliate is anyone who associates with a VTEX store to promote sales while receiving a commission.
 
 The [Affiliates Program app](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ) creates a specific URL of your VTEX store for each of your affiliates, and every URL is targeted with a parameter that identifies the affiliate. When an affiliate shares their URL with shoppers, and they buy something through that link, the affiliate earns a commission over sales.
 
 The image below is an example of an affiliate’s page to be shared with shoppers:
 
-<br>
-
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-0.png)
-<br>
 
 The app also creates a profile page for the affiliate to keep track of orders and commissions, as you will see in the next section. Affiliates do not need access to your VTEX store Admin in order to access their profile page, which looks like the following image:
 
-<br>
-
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-1.png)
-<br>
 
 The **Affiliates Program app’s** main characteristics and behavior are the following:
 
@@ -37,33 +26,23 @@ The **Affiliates Program app’s** main characteristics and behavior are the fol
 * The merchant using a VTEX store configures a default affiliates’ commission percentage over all products. It is possible to configure a specific commission for an SKU, and that configuration is prioritized over the default value.
 * The [affiliates’ URLs can be customized](#affiliates-pages-customization) to show specific products and guide the customer’s user experience.
 
-<br>
-
 ### Affiliates Program in VTEX Admin
 
 After installing and configuring the app, you will find three pages in your VTEX Admin:
 
 * [Affiliate Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#affiliate-management): allows you to add new affiliates and manage the existing ones. You can add a new affiliate by clicking on the button `Add affiliate` and filling out the form.
 
-<br>
-
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-2.png)
-
-<br>
 
 * [Orders Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#order-management): provides information about affiliates’ orders. The page enables you to filter data in multiple ways and export it via email.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-3.png)
-<br>
 
 * [Commissions Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#commission-management): allows you to manage affiliates’ commissions and import information using files with . CSV or . XLSX extension.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-4.png)
-<br>
 
 ## Compatibility
 
 The Affiliates Program app is compatible only with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), so make sure you fit the criteria. Stores using [Legacy CMS](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS](https://faststore.dev/tutorials/cms/0#vtex-headless-cms) are not compatible.
-
-<br>
 
 ## Installation
 
@@ -80,11 +59,7 @@ The app settings will appear in your VTEX Admin under _Other > Affiliates_, and 
 
 > If using the [New VTEX Admin](https://content.vtex.com/join-new-admin-beta-program-en/), you will find the app settings under _Apps > Affiliates_.
 
-<br>
-
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-5.png)
-
-<br>
 
 In **Settings**, you will define for how long the lead will be valid and set a default commission percentage. To do so, follow the steps below:
 
@@ -95,7 +70,6 @@ In **Settings**, you will define for how long the lead will be valid and set a d
   "body": "Every affiliate has its own unique identification code, which is the `Affiliate ID` . When a shopper buys something through the affiliate's URL, the `Affiliate ID` is linked to the shopper for the period configured in this step - 60 days by default. If within the lead duration that shopper makes a second purchase, whether by accessing the store in an organic way, or through another affiliate's URL, the `Affiliate ID` of the first affiliate is prioritized and ensures commission. Note that the `Affiliate ID` for the app's context is not the `Affiliate ID` in the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0)."
 }
 [/block]
-<br>
 
 2. Fill in the **Default value to be used for sku commission** field with the percentual you want to set to determine the affiliates’ commission over sales. Use numbers only, decimals are not allowed.
 3. Click on `SAVE`.
@@ -103,19 +77,13 @@ In **Settings**, you will define for how long the lead will be valid and set a d
   The following message will be displayed:
   > _Your information was submitted successfully._
 
-<br>
-
 ## Configuration
 
 You will need to access your VTEX store’s code to set up the app and the affiliate’s URL, as shown in the following sections.
 
-<br>
-
 ### Set up the Affiliates Program app
 
 Open your store's **Store Theme** app directory in your code editor and add the Affiliates Program app to your theme's `manifest.json` file inside `peerDependencies` , as shown below:
-
-<br>
 
 [block:code]
 {
@@ -130,8 +98,6 @@ Open your store's **Store Theme** app directory in your code editor and add the 
 }
 [/block]
 
-<br>
-
 When you add the Affiliates Program app as a dependency, the app exports theme blocks used to create pages on the storefront: `affiliate` , `affiliate-profile` , and `affiliate-form` . These pages will be available with a default layout:
 
 * **Affiliate’s page:** the page the affiliate sends to shoppers based on your VTEX store storefront. The URL is `{storeName.com}/affiliates/{affiliateSlug}`.
@@ -140,22 +106,14 @@ When you add the Affiliates Program app as a dependency, the app exports theme b
 
 To access the first two pages, you will have to configure an affiliate to be able to replace `{affiliateSlug}` with a valid slug.
 
-<br>
-
 ### Set up a shareable URL
 
 For the affiliate to be able to share their URL, you will need to add the `affiliate-url-monitoring` block into the header of your theme. That block seeks parameters with a valid affiliate slug to add the affiliate’s information to the purchase.
 
 To do so, check out the example below:
 
-<br>
-
-
-<br>
-
 After that, the affiliate will share a URL with the parameter **targeting** with their slug as value so that the affiliate’s information is associated with the sale. See an example in the table below:
 
-<br>
 [block:parameters]
 {
   "data": {
@@ -178,11 +136,7 @@ It is possible to change the parameter property used for the affiliate to share 
 
 > If using the [New VTEX Admin](https://content.vtex.com/join-new-admin-beta-program-en/), go to _Storefront > Site Editor > Blocks > Affiliate Monitoring_.
 
-<br>
-
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-6.png)
-
-<br>
 
 ## Advanced configurations
 
@@ -192,13 +146,9 @@ You can customize the appearance and content of the affiliate’s page - `{store
 * [Props](#props)
 * [CSS customization](#css-customization)
 
-<br>
-
 ### Affiliate’s pages customization
 
 The default implementation of the affiliate’s page is the following:
-
-<br>
 
 [block:parameters]
 {
@@ -219,8 +169,6 @@ The default implementation of the affiliate’s page is the following:
 }
 [/block]
 
-<br>
-
 To customize these pages, follow the steps below:
 
 1. Open your store's **Store Theme** app directory in your code editor.
@@ -236,30 +184,17 @@ To customize these pages, follow the steps below:
 7. Repeat steps 4 to 6 for each of the three blocks.
 8. Deploy the changes.
 
-<br>
-
 **store.affiliates**
-
-
-<br>
 
 **store.affiliates-profile**
 
-
-<br>
-
 **store.affiliate-form**
-
-
-<br>
 
 ### Props
 
 You will have to configure two specific component types with props for them to work correctly.
 
 `affiliate-validator` and `affiliate-profile-validator props`
-
-<br>
 
 [block:parameters]
 {
@@ -284,8 +219,6 @@ You will have to configure two specific component types with props for them to w
 }
 [/block]
 
-<br>
-
 `affiliate_url_monitoring` props
 [block:parameters]
 {
@@ -305,13 +238,10 @@ You will have to configure two specific component types with props for them to w
   "rows": 1
 }
 [/block]
-<br>
 
 ### CSS customization
 
 If you wish to apply CSS customizations to the Affiliates Program app blocks, check out [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
-
-<br>
 
 [block:parameters]
 {
@@ -328,8 +258,6 @@ If you wish to apply CSS customizations to the Affiliates Program app blocks, ch
 }
 [/block]
 
-<br>
-
 ## Email templates
 
 The Affiliates Program app allows your VTEX store to export spreadsheets with information about the affiliates' orders and commissions. Exported spreadsheets will be sent via email to the VTEX Admin [user](https://help.vtex.com/tutorial/managing-users--tutorials_512).
@@ -338,8 +266,6 @@ For this configuration, you need to create two email templates on the [Message C
 
 * Affiliate Orders Export Template
 * Commissions By Sku Export Template
-
-<br>
 
 To create a new custom email template, follow the steps below:
 
@@ -357,15 +283,9 @@ To create a new custom email template, follow the steps below:
 
 8. Click on `Save`.
 
-<br>
-
 After creating the _Affiliate Orders Export Template_, repeat the process to create the _Commissions By Sku Export Template_. Use the image below as an example for step 4. On step 5, copy the **Commissions By Sku Export Template** code, which can be found at the end of this section.
 
-<br>
-
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-8.jpg)
-
-<br>
 
 **Affiliate Orders Export Template**
 [block:code]

@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-09-30T16:55:25.857Z"
 updatedAt: "2020-09-30T16:55:25.857Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/CHANGEME) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
-
-Kelkoo first party app
 
 ## Configuration
 

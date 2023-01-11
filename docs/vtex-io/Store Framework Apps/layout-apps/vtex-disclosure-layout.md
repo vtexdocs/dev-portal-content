@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-08-28T17:52:57.565Z"
 updatedAt: "2020-09-15T20:55:00.326Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/disclosure-layout) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 The Disclosure Layout is an app responsible for creating a layout structure based on disclosure indicators.
 

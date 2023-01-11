@@ -1,5 +1,5 @@
 ---
-title: "Catalog Images app"
+title: "Catalog Images"
 slug: "vtex-catalog-images"
 excerpt: "vtex.catalog-images@0.3.0"
 hidden: false
