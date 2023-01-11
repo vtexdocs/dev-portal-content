@@ -106,7 +106,6 @@ You can list shipping policies, deactivate, reactivate, update or delete them.
 - [PUT - Update shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/shipping-policies/-id-)
 - [DELETE - Delete shipping policies by ID](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/shipping-policies/-id-)
 
-<br>
 
 ### Loading dock
 
