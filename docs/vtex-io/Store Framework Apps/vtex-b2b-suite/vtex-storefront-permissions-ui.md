@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2021-08-12T01:05:10.534Z"
 updatedAt: "2022-11-14T14:14:48.952Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/vtex-b2b-suite/#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 **Storefront Permissions UI** provides an interface for the [Storefront Permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions) app, which is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships.
 
