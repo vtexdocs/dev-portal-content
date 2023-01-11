@@ -251,7 +251,6 @@ Service Level Agreement (SLA) refers to the order’s fulfillment conditions pre
 
 [Carriers](https://help.vtex.com/en/tutorial/transportadoras-na-vtex--7u9duMD5UQa2QQwukAWMcE), or couriers, are the companies responsible for delivering orders, and their operating profiles are configured in your [shipping policies](https://help.vtex.com/pt/tutorial/shipping-policy--tutorials_140). The service contract details with carriers, like shipping ZIP code ranges and packages weight limits, are configured via [shipping rate template](https://help.vtex.com/en/tutorial/shipping-rate-template--tutorials_127).
 
-<br>
 
 ### Freight values
 
