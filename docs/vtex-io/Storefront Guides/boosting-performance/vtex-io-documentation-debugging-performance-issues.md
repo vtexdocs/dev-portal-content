@@ -17,7 +17,7 @@ With that in mind, the following [section](#step-by-step) intends to guide you w
 
 > ⚠️ The practices presented in this doc are intended to guide you when debugging your store's performance, they do not provide definitive solutions. For information on how to improve performance, [folow this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance).
 
-# Step by step
+## Step by step
 
 Before proceeding any further, we recommend that you run [Lighthouse](https://developers.google.com/speed/pagespeed/insights/) using the following URL pattern `https://{account}.myvtex.com/?workspace={workspace}`, given the production workspace you're currently working, and take note of your store's performance. You can also analyze the store in production. In this case, please consider the URL available to end-users.
 
@@ -25,7 +25,7 @@ Before proceeding any further, we recommend that you run [Lighthouse](https://de
 
 Also, when running Lighthouse, consider analyzing pages from different contexts separately. For example, run specific audits for the Home, Search, Category, and Product pages.
 
-## Step 1: Testing the server-side rendering
+### Step 1: Testing the server-side rendering
 
 Most websites use JavaScript to support a dynamic and interactive user experience.
 
@@ -43,13 +43,13 @@ Adopting this practice will help you implement progressive improvements. That is
 
 When performing this test, your store will probably not function the same way as planned. However, its core functionalities may work as expected. Take the following subsections as a reference:
 
-### Undesired behaviors
+#### Undesired behaviors
 
 - The page does not render anything.
 - Instead of updating only the different content, the page is fully refreshed when navigating to another page.
 - Misplaced layout.
 
-### Expected behaviors
+#### Expected behaviors
 
 - Simpler design.
 - Animations and interactive menus do not work.
@@ -57,7 +57,7 @@ When performing this test, your store will probably not function the same way as
 
 > ℹ️ Before Google crawlers incorporated and improved the indexing of JavaScript content and links capability, SEO used to be a common concern for websites based on JavaScript. Even though this issue has been addressed, be aware that other search engines might not have this feature yet.
 
-## Step 2: Checking the effect of third-party apps
+### Step 2: Checking the effect of third-party apps
 
 One of the first actions to debug performance issues is to test the desired page without [Pixel apps](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-pixel-app).
 
@@ -73,7 +73,7 @@ Take the following example:
 
 ![pixelapps](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-debugging-performance-issues-0.png)
 
-## Step 3: Checking an app's bundle size
+### Step 3: Checking an app's bundle size
 
 If you are building a custom React component, you can get a glimpse of your app's performance by analyzing its bundle size.
 
@@ -97,7 +97,7 @@ From the given example, we have the name of the bundle (`vendors~Pickup.js`) fol
 
 By knowing that, it's possible to take targeted actions to reduce your app's bundle size. Possible solutions are: code-splitting, fetching bundles asynchronously, and replacing a large dependency with a more minimalistic and specialized solution.
 
-## Step 4: Identifying heavy scripts
+### Step 4: Identifying heavy scripts
 
 Use [SpeedCurve](https://speedcurve.com/) or any other tool of your preference to detect your website's heaviest scripts, and consider:
 
@@ -105,7 +105,7 @@ Use [SpeedCurve](https://speedcurve.com/) or any other tool of your preference t
 - Replacing them with lighter and similar scripts.
 - Implementing alternative loading solutions with a lower negative impact on performance.
 
-## Step 5: Enabling performance settings
+### Step 5: Enabling performance settings
 
 To help you guarantee the success of your brand's online presence, we provide a series of performance settings, which can be enabled at your stores's admin, under *Store Setup > CMS > Store > Advanced*.
 
@@ -115,7 +115,7 @@ To help you guarantee the success of your brand's online presence, we provide a 
 
 We recommend that you gradually enable the available features and measure their impact using Lighthouse and other tools.
 
-## Step 6: Testing the critical CSS
+### Step 6: Testing the critical CSS
 
 VTEX IO offers the option of [enabling critical CSS optimization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance#optimizing-critical-css) in home pages, product pages, and product listing pages. This feature allows the browser to find the minimum CSS code blocks needed to display the page's critical content first. Meanwhile, the remainder CSS code is loaded asynchronously.
 
@@ -130,7 +130,7 @@ Hence, after enabling the critical CSS optimization, check if your pages are bei
 1. Make sure your pages are server-side rendered (Step 1)
 2. Look for the style tag `<style id="critical" type="text/css">` inside the `<head>` tag of the corresponding pages.
 
-## Step 7: Using the Lighthouse Scoring Calculator
+### Step 7: Using the Lighthouse Scoring Calculator
 
 With the performance features enabled, as proposed in Step 5, reproduce your scores in the [Lighthouse Scoring Calculator](https://googlechrome.github.io/lighthouse/scorecalc/#version=6) to identify which metrics have the greatest potential for improvement.
 

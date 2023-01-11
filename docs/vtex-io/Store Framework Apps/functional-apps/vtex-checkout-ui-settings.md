@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:09.589Z"
 updatedAt: "2022-05-20T00:24:43.708Z"
 ---
-# Checkout UI Settings
 
 The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install).
 

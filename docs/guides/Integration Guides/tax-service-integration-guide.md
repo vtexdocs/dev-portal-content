@@ -5,7 +5,6 @@ hidden: false
 createdAt: "2020-09-01T15:18:16.404Z"
 updatedAt: "2020-09-10T14:59:17.070Z"
 ---
-# Tax Protocol
 
 Protocol that defines how to build an integration of an external tax provider to VTEX.
 [block:api-header]

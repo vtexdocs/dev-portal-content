@@ -75,7 +75,7 @@ The merchant and store identifier can be used to query the registration data at 
 
 ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-3.png)
 
->ℹ️ The instructions below explain how to perform these queries using the identifiers that appear in an order. If necessary, however, you can search using any field in the store and vendor master data.
+> ℹ️️ The instructions below explain how to perform these queries using the identifiers that appear in an order. If necessary, however, you can search using any field in the store and vendor master data.
 
 ### Search by seller
 

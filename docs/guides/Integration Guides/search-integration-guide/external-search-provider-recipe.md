@@ -1,11 +1,10 @@
 ---
-title: "Recipe"
+title: "Implementing a Custom Search Resolver App"
 slug: "external-search-provider-recipe"
 hidden: false
 createdAt: "2020-09-11T16:53:56.507Z"
 updatedAt: "2020-10-30T20:45:34.170Z"
 ---
-## Implementing a Custom Search Resolver App
 
 Supposing you want to integrate another search provider into VTEX, here are the steps you should follow to create an app that follows the VTEX Search Protocol:
 
@@ -14,21 +13,21 @@ Supposing you want to integrate another search provider into VTEX, here are the 
 3. Change the `vendor` field on the app's `manifest.json` to map the account you're using.
 4. Start changing the queries' resolvers implementations to retrieve and return the data from the external search engine you're integrating.
 
-# Client
+## Client
 
 In VTEX IO, we have the concept of clients to abstract calling other services in a centralized class. If you've cloned the search resolver listed above, you will see that it grabs data by using the following client: [https://github.com/vtex-apps/search-resolver/blob/v1.x/node/clients/biggy-search.ts](https://github.com/vtex-apps/search-resolver/blob/v1.x/node/clients/biggy-search.ts). Change the implementation of this client to fetch data from the search provider that you want to integrate with.
 
-# Resolvers
+## Resolvers
 
 The main resolver file that you need to change is this [https://github.com/vtex-apps/search-resolver/blob/v1.x/node/resolvers/search/index.ts](https://github.com/vtex-apps/search-resolver/blob/v1.x/node/resolvers/search/index.ts). You can look for occurrences of `biggySearch` and change the data treatment to get the wanted behavior. Remember that you may want to leave some resolvers untouched and continue grabbing data from VTEX Catalog's APIs.
 
-## Tips on Working with the Example
+### Tips on Working with the Example
 
 - Entries and files with `BiggySearchClient` should be modified and renamed accordingly to the search engine to be integrated.
 - The main file to look at is `node/resolvers/search/index.ts`, where is implemented resolvers for search-related queries. It's important to notice that some resolvers **will not be modified** since they're connecting directly to VTEX APIs. This will be addressed on future releases of VTEX Search Protocol. You can find a list of all the queries to change the implementation in the specification section of this document.
 - It's important to adapt the Typescript types into the code, because they're specific to VTEX Search.
 
-# Troubleshooting
+## Troubleshooting
 
 In case of any "Unknown errors", check if the version on `node/package.json` for the dependency `vtex.search-graphql` is up to date with the [latest version for the vtex.search-graphql app](https://github.com/vtex-apps/search-graphql/blob/master/manifest.json#L4). After changing the version on the URL, you need to run `yarn` inside the **node** folder before running `vtex link` again.
 [block:html]

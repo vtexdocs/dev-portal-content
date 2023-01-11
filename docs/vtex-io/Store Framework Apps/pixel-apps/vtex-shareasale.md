@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:20:20.925Z"
 updatedAt: "2020-06-03T15:20:20.925Z"
 ---
-# Shareasale
-
-VTEX Shareasale first-party app
 
 ## How to install
 

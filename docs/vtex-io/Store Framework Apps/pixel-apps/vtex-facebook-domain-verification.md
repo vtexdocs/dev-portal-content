@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-09-21T15:03:40.709Z"
 updatedAt: "2020-09-21T15:03:40.709Z"
 ---
-# Facebook Domain Verification
 
 This app sets the meta-tag containing the verification code into the `<head>` section of your website's homepage.
 
@@ -23,7 +22,7 @@ It is possible to install this app in your store either by using App Store or th
 3. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your verification code.
 4. Click on **Save**.
 
->ℹ️ Access the [Facebook Business Settings](https://business.facebook.com/settings/owned-domains/) and login to you account in order to find out what is your domain verification code is. Click on the Meta-tag Verification tag and copy only the code inside the content attribute.
+> ℹ️️ Access the [Facebook Business Settings](https://business.facebook.com/settings/owned-domains/) and login to you account in order to find out what is your domain verification code is. Click on the Meta-tag Verification tag and copy only the code inside the content attribute.
 
 ### Using VTEX IO Toolbelt
 
@@ -32,4 +31,4 @@ It is possible to install this app in your store either by using App Store or th
 3. Fill in the domain verification code.
 4. Click on **Save**.
 
->ℹ️ Access the [Facebook Business Settings](https://business.facebook.com/settings/owned-domains/) and login to you account in order to find out what is your domain verification code is. Click on the Meta-tag Verification tag and copy only the code inside the content attribute.
+> ℹ️️ Access the [Facebook Business Settings](https://business.facebook.com/settings/owned-domains/) and login to you account in order to find out what is your domain verification code is. Click on the Meta-tag Verification tag and copy only the code inside the content attribute.

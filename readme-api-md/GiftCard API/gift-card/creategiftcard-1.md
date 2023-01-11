@@ -12,7 +12,7 @@ updatedAt: "2022-11-01T14:16:19.655Z"
 - The field `userProfileId` should be filled with a value that identifies the client. It is the ID itself.
 - The field `expiringDate` should be filled in ISO 8601 format `YYYY-MM-DDThh:mm:ss.fff`
 
->ℹ️ The `redemptionCode` field for a Gift Card is auto-generated on creation and cannot be set to an arbitrary value.
+> ℹ️️ The `redemptionCode` field for a Gift Card is auto-generated on creation and cannot be set to an arbitrary value.
 
 ## Response body has the following properties
 

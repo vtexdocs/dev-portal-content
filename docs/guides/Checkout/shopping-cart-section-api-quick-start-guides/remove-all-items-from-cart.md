@@ -25,7 +25,7 @@ See below an example of item details contained in a shopping cart:
 }
 [/block]
 
->ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+> ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
 
 ## Removing all items from the shopping cart 
 

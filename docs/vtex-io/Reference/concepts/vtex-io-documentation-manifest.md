@@ -11,7 +11,7 @@ The `manifest.json` file is the first communication point with VTEX IO, holding 
 
 Hence, keep in mind that every IO app must have a `manifest.json` file on its root folder.
 
-# Manifest fields summary
+## Manifest fields summary
 
 Check the following snippet, which shows a manifest example and its supported fields.
 
@@ -44,7 +44,7 @@ Click on each field to learn more about it.
 
 For a real example of a `manifest.json` file, check [this file](https://github.com/vtex-apps/wordpress-integration/blob/d3ca9bd43b8d6797f162519d7b8a31ec755bd47d/manifest.json).
 
-## name
+### name
 
 The app name. It should concisely express the app's purpose.
 
@@ -52,7 +52,7 @@ On the VTEX IO platform, apps' names are [kebab case](https://en.wiktionary.org/
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## vendor
+### vendor
 
 The app owner. That is, the VTEX account responsible for the app development, maintenance, and distribution.
 
@@ -60,25 +60,25 @@ If the app is to-be sold on VTEX App Store, the vendor is the one to profit from
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## version
+### version
 
 The app version, according to the [Semantic Versioning 2.0.0](https://semver.org/).
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## title
+### title
 
 The app distribution name. This name is the one used in the Apps section from the Administrative Panel and in the VTEX App Store.
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## description
+### description
 
 A brief description explaining the app's purpose.
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## builders
+### builders
 
 The list of builders used by the app. A builder is an abstraction to configure other IO services, such as `node`, `dotnet`, `react`, etc. It acts as an API service, responsible for processing and interpreting a directory from the app. Hence, it’s possible to use as many builders as you want in one single app.
 
@@ -96,13 +96,13 @@ And create a `react` folder inside the app, placing there the component files. E
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## scripts
+### scripts
 
 The list of scripts the app runs.
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## dependencies
+### dependencies
 
 The list of other VTEX IO apps that the app relies on to properly work.
 
@@ -118,7 +118,7 @@ The most recurrent use of VTEX IO apps as dependencies are for:
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## peerDependencies
+### peerDependencies
 
 The list of other apps that the app relies on to properly work. However, unlike regular dependencies, peer dependencies are not automatically installed in an account. Hence, these are mostly used in cases an app relies on paid apps or a specific version of an app.
 
@@ -126,7 +126,7 @@ The list of other apps that the app relies on to properly work. However, unlike 
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## policies
+### policies
 
 The list of policies, responsible for granting permissions to the app in case it needs access to external services or specific data from other sources, such as external APIs.
 
@@ -134,7 +134,7 @@ The list of policies, responsible for granting permissions to the app in case it
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## settingsSchema
+### settingsSchema
 
 The layout settings of the app, displayed in the VTEX Admin.
 
@@ -172,7 +172,7 @@ will generate the following form once that app is installed:
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 
-## [DEPRECATED] credentialType
+### [DEPRECATED] credentialType
 
 **Deprecated field.**
 

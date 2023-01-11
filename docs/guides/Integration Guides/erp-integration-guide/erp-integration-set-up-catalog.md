@@ -111,7 +111,7 @@ Go through each of the Specification Groups you created previously and add the f
 }
 [/block]
 
->ℹ️ For more details, see our [Catalog specifications integration guide](https://developers.vtex.com/vtex-rest-api/docs/specifications).
+> ℹ️️ For more details, see our [Catalog specifications integration guide](https://developers.vtex.com/vtex-rest-api/docs/specifications).
 
 ## Create Specification Values
 

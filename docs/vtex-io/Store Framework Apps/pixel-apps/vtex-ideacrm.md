@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:31.602Z"
 updatedAt: "2020-06-23T20:45:10.949Z"
 ---
-# ideacrm
-
-VTEX Idea CRM first-party app
 
 ## How to install
 

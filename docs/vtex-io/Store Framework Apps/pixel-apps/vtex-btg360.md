@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-07-03T14:59:47.729Z"
 updatedAt: "2020-10-06T20:06:22.306Z"
 ---
-# BTG360
 
 BTG 360 uses behavioral targert technology so you can achieve even more assertive results
 with email marketing campaigns based on browsing and / or purchasing behavior of each

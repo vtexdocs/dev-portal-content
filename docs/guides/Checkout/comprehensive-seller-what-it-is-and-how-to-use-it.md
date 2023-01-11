@@ -39,4 +39,4 @@ When there is still no user location information, the seller selection heuristic
 
 This happens both in the shop window and in the cart and aims to prevent the customer from seeing products from sellers that they will not actually be able to deliver to their address.
 
->ℹ️ Even if the customer's location was captured in the shop window stage and stored in the `regionId` field of the Session API, this information is not used in the cart. Therefore, upon reaching the cart, the customer will again see only the information from the main seller and the comprehensive sellers. The remaining sellers are only eligible after the customer informs the delivery zip code.
+> ℹ️️ Even if the customer's location was captured in the shop window stage and stored in the `regionId` field of the Session API, this information is not used in the cart. Therefore, upon reaching the cart, the customer will again see only the information from the main seller and the comprehensive sellers. The remaining sellers are only eligible after the customer informs the delivery zip code.

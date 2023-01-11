@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:32.559Z"
 updatedAt: "2020-06-03T15:19:32.559Z"
 ---
-# Lucky Orange
-
-Lucky Orange first-party app.
 
 ## How to install
 

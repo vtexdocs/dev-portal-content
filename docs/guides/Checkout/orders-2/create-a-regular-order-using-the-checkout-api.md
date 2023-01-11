@@ -6,7 +6,7 @@ createdAt: "2021-10-25T23:13:41.287Z"
 updatedAt: "2022-10-27T18:56:50.737Z"
 ---
 There are different ways of using VTEX APIs to handle shopping carts and checkout in order to place orders. For instance, you can use API requests to [create](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) and [manage](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) shopping carts on the VTEX platform, so as to place an order from that information later, or directly place an order with a single request containing all cart data.
->ℹ️ The main data structure used in VTEX Checkout is the `orderForm`. It contains every piece of information pertinent to a shopping cart, including logistics, payment, products and customer profile, for instance. Learn more in the [orderForm documentation.](https://developers.vtex.com/docs/guides/orderform-fields)
+> ℹ️️ The main data structure used in VTEX Checkout is the `orderForm`. It contains every piece of information pertinent to a shopping cart, including logistics, payment, products and customer profile, for instance. Learn more in the [orderForm documentation.](https://developers.vtex.com/docs/guides/orderform-fields)
 
 For this tutorial, we chose one of the more objective ways to understand and use our APIs to place a regular order (placed, paid, and delivered under the liability of a single account). To do this, we will follow these steps:
 
@@ -70,7 +70,7 @@ An [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) may inc
 "paymentData": {}
 ```
 
->ℹ️ Note that we are assembling this data structure to be sent as the request body in the next step. Below, we discuss these sections briefly, but you can learn more about each field in the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
+> ℹ️️ Note that we are assembling this data structure to be sent as the request body in the next step. Below, we discuss these sections briefly, but you can learn more about each field in the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 ### items
 
@@ -91,7 +91,7 @@ Then, build a block with the following structure:
 ]
 ```
 
->ℹ️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
+> ℹ️️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 ### clientProfileData
 
@@ -177,7 +177,7 @@ The `selectedSla` field indicates the selected delivery option. You can choose a
 
 The `logisticsInfo` array should contain a number of objects equal to the number of objects in the `items` array. The `itemIndex` of a `logisticsInfo` object indicates to which item of the array `items` that information is referring. The object referring to the first item in `items` will contain an `itemIndex` of `0` and so on.
 
->ℹ️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
+> ℹ️️ For this example, we are considering a single item in the cart. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 ### paymentData
 
@@ -198,7 +198,7 @@ This object informs the payment method and installment options (if available) se
 
 Note that the `value` field corresponds to the full value to be payed by the shopper, whereas the `referenceValue` is the base number over which interests apply. If no interest apply to the order, they should be equal.
 
->ℹ️ For this example, we are considering a single payment method, with a single installment and no interest. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
+> ℹ️️ For this example, we are considering a single payment method, with a single installment and no interest. To learn more and explore more complex examples see the [Place order API request documentation.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
 Use the options and information from the [simulation](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#1-simulate-a-cart) response data to assemble your own `paymentData`.
 
@@ -321,7 +321,7 @@ If the delivery method is pickup point, add the information <code>"selectedDeliv
     }
 ```
 
->ℹ️ This exemplifies a fairly simple fictitious shopping cart. The `orderForm` is actually highly customizable. Learn more about all possibilities in the [orderForm documentation.](https://developers.vtex.com/docs/guides/orderform-fields)
+> ℹ️️ This exemplifies a fairly simple fictitious shopping cart. The `orderForm` is actually highly customizable. Learn more about all possibilities in the [orderForm documentation.](https://developers.vtex.com/docs/guides/orderform-fields)
 
 This `orderForm` can now be sent as the body in the [Place order API request.](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 
@@ -370,7 +370,7 @@ For most cases, it will look like the following:
 ]
 ```
 
->ℹ️ In the `fields` object, you can send an `addressId` to use an existing address or a new `address` object.
+> ℹ️️ In the `fields` object, you can send an `addressId` to use an existing address or a new `address` object.
 
 >❗ Make sure that all value-related fields match the information sent in [step four](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#4-place-the-order), when placing the order.
 

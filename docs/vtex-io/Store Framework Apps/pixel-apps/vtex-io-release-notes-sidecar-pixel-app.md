@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-06-18T16:55:23.187Z"
 updatedAt: "2021-02-01T18:47:46.198Z"
 ---
-# Sidecar pixel app
 
 Integrate your store with the [Sidecar solution](https://hello.getsidecar.com/) by simply using the VTEX IO Sidecar pixel app.
 

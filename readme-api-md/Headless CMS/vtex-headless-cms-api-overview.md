@@ -6,7 +6,7 @@ createdAt: "2022-06-24T21:16:12.495Z"
 updatedAt: "2022-06-24T21:35:59.504Z"
 ---
 The **VTEX Headless CMS** is a no-code management system used to create, edit, and publish web pages. It delivers content data to headless applications by keeping the storefront content as structured data in a layer decoupled from the frontend.
->ℹ️ The **VTEX Headless CMS** is only available for stores developed with **FastStore**.
+> ℹ️️ The **VTEX Headless CMS** is only available for stores developed with **FastStore**.
 
 ## Pages
 

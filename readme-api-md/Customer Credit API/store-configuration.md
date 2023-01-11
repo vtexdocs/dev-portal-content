@@ -25,4 +25,4 @@ In the example above, this is what the `notificationsSettings` object would look
 }
 [/block]
 
->ℹ️ As mentioned before, the `notificationSettings` field is optional. If you do not wish to set any e-mail notification triggers for either `daysPrior` or `daysAfter`, just fill in the corresponding parameter with an empty array (`[]`).
+> ℹ️️ As mentioned before, the `notificationSettings` field is optional. If you do not wish to set any e-mail notification triggers for either `daysPrior` or `daysAfter`, just fill in the corresponding parameter with an empty array (`[]`).

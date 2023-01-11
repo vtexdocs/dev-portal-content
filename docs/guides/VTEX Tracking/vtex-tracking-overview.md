@@ -22,14 +22,14 @@ This API is only available in our Brazilian operation, for VTEX Tracking custome
 }
 [/block]
 
-# Index
+## Index
 
-## Authentication
+### Authentication
 
 *Acquire the mandatory authentication to access the VTEX Tracking endpoints.*
 <span class="api pg-type type-post">post</span> [Asynchronous Login](https://developers.vtex.com/vtex-developer-docs/reference/vtex-tracking-api-authentication)
 
-## Delivery Services
+### Delivery Services
 
 *Operate all VTEX Tracking Delivery Services funcionalities*
 <span class="api pg-type type-post">post</span> [Post Delivery Service](https://developers.vtex.com/vtex-rest-api/reference/post-delivery-service)

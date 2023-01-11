@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-10-27T18:04:29.041Z"
 updatedAt: "2020-10-27T18:04:29.041Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/CHANGEME) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
-
-# Blueknow app
 
 Blueknow first party app
 

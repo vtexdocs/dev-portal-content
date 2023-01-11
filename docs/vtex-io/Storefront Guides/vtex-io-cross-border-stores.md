@@ -22,7 +22,8 @@ Considering the cross-border business model, it's possible for a single VTEX acc
   "body": "To set up a multidomain environment, please open a [ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) expressing your desire to become a cross-border store."
 }
 [/block]
-# Essential concepts
+
+## Essential concepts
 
 To better understand what's behind a VTEX cross-border multistore, it's essential to comprehend the following two key concepts: **bindings** and **[trade policies](https://help.vtex.com/en/tutorial/what-is-a-sales-policy--563tbcL0TYKEKeOY4IAgAE)**.
 

@@ -96,7 +96,7 @@ In both the main account (marketplace) and franchise account (seller), you must 
 vtex install vtex.picking-app@2.x
 ```
 
->ℹ️ If you need to list the franchise accounts associated with the main account, use the following License Manager API request: `GET https://licensemanager.vtex.com.br/api/license-manager/pvt/accounts/{{accountName}}?childAccounts=true`\n\nThe franchise accounts will be listed in the `childAccounts` object.
+> ℹ️️ If you need to list the franchise accounts associated with the main account, use the following License Manager API request: `GET https://licensemanager.vtex.com.br/api/license-manager/pvt/accounts/{{accountName}}?childAccounts=true`\n\nThe franchise accounts will be listed in the `childAccounts` object.
 
 ### Step 3 - Install the Invoice Notifier app
 
@@ -120,11 +120,11 @@ vtex install vtex.invoice-notifier
 
 5. Click on `Save`.
 
->ℹ️ If you do not have an ERP system and you want to test the invoicing process, you can install the **Invoicer Mock** app in the franchise account to simulate an ERP invoicer.\n\nRun the `vtex install vtex.invoicer-mock` command via CLI to install **Invoicer Mock** and follow the other instructions listed in this section.\n\nKeep in mind that in this case you must set `https://{accountName}.myvtex.com/_v/mock/invoice` as the **URL to notify**. It is not necessary to provide a token.
+> ℹ️️ If you do not have an ERP system and you want to test the invoicing process, you can install the **Invoicer Mock** app in the franchise account to simulate an ERP invoicer.\n\nRun the `vtex install vtex.invoicer-mock` command via CLI to install **Invoicer Mock** and follow the other instructions listed in this section.\n\nKeep in mind that in this case you must set `https://{accountName}.myvtex.com/_v/mock/invoice` as the **URL to notify**. It is not necessary to provide a token.
 
 ### Step 4 - Set a **Message Center** template for pick up orders [optional]
 
->ℹ️ This is a mandatory step only if you want to allow pick up orders.
+> ℹ️️ This is a mandatory step only if you want to allow pick up orders.
 
 In the main account (marketplace), make sure you configure the **Message Center** email template to notify clients when their orders are ready to be picked up at the selected store. Follow the instructions below to do so.
 
@@ -143,7 +143,7 @@ In the main account (marketplace), make sure you configure the **Message Center*
 
 ### Step 5 - Set the seller’s origin address [optional]
 
->ℹ️ This is a mandatory step only if you want to enable the [Ship from Store](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/50GAmxxFsJoLWqcnMysWdl) strategy using VTEX Log.
+> ℹ️️ This is a mandatory step only if you want to enable the [Ship from Store](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/50GAmxxFsJoLWqcnMysWdl) strategy using VTEX Log.
 
 In this step, you must register the physical store’s origin address using the Logistics API. To do so, you can make a `POST` call to this endpoint: `https://portal.vtexcommercestable.com.br/api/logistics/pvt/configuration/originaddress?an={accountName}` .
 
@@ -162,7 +162,7 @@ Below you can find an example of what the body of this request should look like.
 
 ### Step 6 - Install the carrier apps [optional]
 
->ℹ️ This is a mandatory step only if you want to enable the Ship from Store strategy with an integrated carrier.
+> ℹ️️ This is a mandatory step only if you want to enable the Ship from Store strategy with an integrated carrier.
 
 In both the main account (marketplace) and franchise account (seller), you must install the carrier apps via CLI, using the following commands.
 
@@ -177,7 +177,7 @@ If your carrier is integrated to **VTEX Log**, you must also install the Carrier
 vtex install vtex.carrier-tracking
 ```
 
->ℹ️ In case you have previously installed the apps, make sure they are updated by running the `vtex update` command on the CLI.
+> ℹ️️ In case you have previously installed the apps, make sure they are updated by running the `vtex update` command on the CLI.
 
 ### Step 7 - Configure a printer
 

@@ -148,10 +148,10 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `writeReviewContainer`    |
 | `writeReviewButton`       |
 
-# Rest APIs
+## Rest APIs
 In order to see how to use the list of REST APIs go to [Reviews and Ratings API overview](https://developers.vtex.com/vtex-rest-api/reference/reviews-and-ratings-api-overview).
 
-# GraphQL IDE
+## GraphQL IDE
 In order to see how to use the graphQL queries and mutations you can go through the next steps:
 1. Open the Admin [GraphQL IDE app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-admin-graphql-ide). 
 2. Select vtex.reviews-and-ratings app.

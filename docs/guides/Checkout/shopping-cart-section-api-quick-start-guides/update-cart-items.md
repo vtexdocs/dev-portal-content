@@ -8,7 +8,7 @@ updatedAt: "2022-11-17T12:54:09.270Z"
 The shopping cart is where the information on the products chosen by the customer while browsing a store is gathered. This data may include item prices, shipping value, payment, and delivery methods, among others.
 
 This guide will describe how to modify the quantity of an item in the cart or remove it by the API.
->ℹ️ To remove all items from the cart at the same time, use the [Remove all items](https://developers.vtex.com/vtex-rest-api/reference/removeallitems) endpoint.
+> ℹ️️ To remove all items from the cart at the same time, use the [Remove all items](https://developers.vtex.com/vtex-rest-api/reference/removeallitems) endpoint.
 
 ## Getting shopping cart information
 
@@ -47,7 +47,7 @@ After sending the request, the endpoint will return the response body with the s
 }
 [/block]
 
->ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
+> ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview."
 }
 [/block]
 ## Removing shopping cart items

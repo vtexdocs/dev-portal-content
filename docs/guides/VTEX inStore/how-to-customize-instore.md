@@ -21,7 +21,7 @@ You can perform JavaScript customizations on the  `checkout-instore-custom.js` f
 4. Click on the **Code** tab and finally on the `checkout-instore-custom.js` file, which is in the **Files** list on the right-hand side of the screen, as illustrated in the image below.
    ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/VTEX%20inStore/how-to-customize-instore/inStore_Customizations_-_2_-_EN.png)
 
->ℹ️ If you want to access the `checkout-instore-custom.js` file directly, you can enter the following URL in your browser: `https://{{AccountName}}.myvtex.com/admin/portal#/sites/default/code/files/checkout-instore-custom.js`. Make sure you replace `{{AccountName}}` with your VTEX account name.
+> ℹ️️ If you want to access the `checkout-instore-custom.js` file directly, you can enter the following URL in your browser: `https://{{AccountName}}.myvtex.com/admin/portal#/sites/default/code/files/checkout-instore-custom.js`. Make sure you replace `{{AccountName}}` with your VTEX account name.
 
 ### Edit the JavaScript file
 

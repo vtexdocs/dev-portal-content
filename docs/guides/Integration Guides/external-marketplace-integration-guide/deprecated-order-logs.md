@@ -55,7 +55,7 @@ The messages contained in logs should follow the standard defined below, allowin
 7. **Business message**: in case of errors, message explaining the error under the business contexto, with guidance on how to solve the problem.
 8. **Status**: should include the statuses of success, error, warning and pending.
 
-# Log messages
+## Log messages
 
 Each step of the catalog integration requires a specific set of Log messages. The table describes all messages, for each scenario within the integration.
 <table>

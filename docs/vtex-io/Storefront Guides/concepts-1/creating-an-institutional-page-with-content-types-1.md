@@ -69,7 +69,7 @@ To create an institutional page, follow these tutorial.
       }
 ```
 
->ℹ️ These fields are the structure of your page. Complete them based on what was defined in step one of this tutorial.
+> ℹ️️ These fields are the structure of your page. Complete them based on what was defined in step one of this tutorial.
 
 5. After defining the sections, save them. If you want to view the draft, go to the repository for testing. 6. Go to the store to view the final version of your page.
 

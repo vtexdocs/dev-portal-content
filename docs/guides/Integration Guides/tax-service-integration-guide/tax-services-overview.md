@@ -9,15 +9,11 @@ Selling products online is subject to different types of taxes that may vary acc
 
 For such cases, it is possible to build an integration that allows a store to send Checkout information to an external tax calculation API. The external API should then respond with the appropriate taxes and values that apply to the purchase.
 
-
 <img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-services-overview-0.svg"/>
 
-
-# Implementation
+## Implementation
 
 Access the [specification](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-specification) and [recipe](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-recipe) to learn more about Tax Service integration and how to implement it.
-
-
 
 [block:html]
 {

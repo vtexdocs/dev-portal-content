@@ -29,7 +29,7 @@ After sending the request, the endpoint will return the response body containing
 }
 [/block]
 
->ℹ️ Fields that were not registered in the customer’s profile will be displayed as `null`.
+> ℹ️️ Fields that were not registered in the customer’s profile will be displayed as `null`.
 
 ## Error codes
 

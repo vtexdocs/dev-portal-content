@@ -13,7 +13,7 @@ The **Order Configuration** app, designed for B2B scenarios, displays a form res
 
 Once the form is submitted, the order data collected will be available at Master Data and saved in the current VTEX session.
 
->ℹ This app can be used to enable customization of all kinds of behaviors, such as custom prices, custom products, etc. Keep in mind the Order Configuration app does not offer these functionalities, it only enables other apps to do so.
+> ℹ️ This app can be used to enable customization of all kinds of behaviors, such as custom prices, custom products, etc. Keep in mind the Order Configuration app does not offer these functionalities, it only enables other apps to do so.
 
 Follow the steps below to install and set up the **Order Configuration** app in your store.
 
@@ -130,7 +130,7 @@ Then, declare the `order-config#header` block and its children blocks: `order-co
 }
 ```
 
->ℹ If the `order-config.form` block does not have any children configured, a default form will be rendered automatically based on the [React Hook Form JSON Schema](https://github.com/vtex/react-hook-form-jsonschema) library. To declare children blocks according to your business needs, check out the [Advanced configuration](#advanced-configuration) section below.
+> ℹ️ If the `order-config.form` block does not have any children configured, a default form will be rendered automatically based on the [React Hook Form JSON Schema](https://github.com/vtex/react-hook-form-jsonschema) library. To declare children blocks according to your business needs, check out the [Advanced configuration](#advanced-configuration) section below.
 
 ### Step 3: Create `main` schema in Master Data
 

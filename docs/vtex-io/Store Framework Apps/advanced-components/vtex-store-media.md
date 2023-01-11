@@ -6,13 +6,11 @@ hidden: false
 createdAt: "2021-01-22T13:03:07.471Z"
 updatedAt: "2021-03-31T17:25:38.265Z"
 ---
-📢 Use this project, [contribute](https://github.com/vtex-apps/store-media) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
-
-# Store Media
 
 The Media app allows you to display image and video assets using a single block.
 
 ![media-list-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-media-0.gif)
+
 ## Configuration
 
 1. Add the `store-media` app to your theme's dependencies in the `manifest.json` file:

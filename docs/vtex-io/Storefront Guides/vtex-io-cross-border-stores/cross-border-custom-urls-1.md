@@ -13,15 +13,12 @@ As each store of a VTEX account in a multidomain environment is independent, con
 
 Moreover, cross-border stores that share the same catalog can also have their catalog URLs translated into other languages. In the following section, we present this feature.
 
-# Translatable URLs
+## Translatable URLs
 
 [Rewriter](https://developers.vtex.com/docs/rewriter) is the VTEX IO app responsible for managing product, search, and navigation routes - client-side defined routes related to VTEX IO custom paths and pre-defined templates, such as [department](https://github.com/vtex-apps/store/blob/master/store/routes.json#L27), [brand](https://github.com/vtex-apps/store/blob/master/store/routes.json#L21), and [category](https://github.com/vtex-apps/store/blob/master/store/routes.json#L33) routes.
-[block:callout]
-{
-  "type": "info",
-  "body": "To learn more about Routes in VTEX IO, please follow [this link](https://developers.vtex.com/docs/routes)."
-}
-[/block]
+
+> ℹ️ To learn more about Routes in VTEX IO, please follow [this link](https://developers.vtex.com/docs/routes).
+
 The main objective of this app is to make it possible to render requested pages based on shorter rewritten URLs. For example, a route such as `http://{storename}.com/_v/segment/routing/vtex.store@2.x/product/3/blouse/p` can be understood by its canonical `http://{storename}.com/blouse/p`.
 
 Notice that the canonical path is a unique string that contains the route's shortest absolute path. Its usage allows not only more friendly URLs but also better SEO ranking.
@@ -33,16 +30,12 @@ Since every route stored in the Rewriter app carries additional related data, su
 That means cross-border stores can also have their catalog URLs translated into other languages. For example, a cross-border store that operates in the USA and Argentina, sharing the same catalog, could have two different slugs for the same product: one in English and the other in Spanish.
 
 Hence, a product registered under the `yellow-dress` slug, for example, as in `http://{storename}.com/us/yellow-dress/p`, could have its slug translated to `vestido-amarillo`, as in `http://{storename}.com/ar/vestido-amarillo/p`.
+
 >❗ Keep in mind that catalog URLs translations are accepted for each `binding`, not for a single multi-language store.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "To learn how to translate a catalog URL, please follow this [guide](https://developers.vtex.com/docs/catalog-internationalization).",
-  "title": ""
-}
-[/block]
-By sending the desired URL translation via the right GraphQL mutation to the Catalog API, an alias of the main route is automatically created in the Rewriter app. 
+> ℹ️ To learn how to translate a catalog URL, please follow this [guide](https://developers.vtex.com/docs/catalog-internationalization).
+
+By sending the desired URL translation via the right GraphQL mutation to the Catalog API, an alias of the main route is automatically created in the Rewriter app.
 
 These aliases are stored in the `resolveAs` field of its related internal route.
 

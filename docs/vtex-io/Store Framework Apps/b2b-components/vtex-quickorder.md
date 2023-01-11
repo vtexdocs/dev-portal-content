@@ -193,7 +193,7 @@ For example:
 
 ![Copy & Paste](https://raw.githubusercontent.com/vtex-apps/quickorder/master/docs/image/Copy-n-Paste.gif)
 
->ℹ Remember that you need to validate the list after pasting it. Validating the Reference IDs will let you know if the selected SKUs are in fact available for purchase.
+> ℹ️ Remember that you need to validate the list after pasting it. Validating the Reference IDs will let you know if the selected SKUs are in fact available for purchase.
 
 ### Upload (`quickorder-upload` block)
 
@@ -206,7 +206,7 @@ The spreadsheet will work in the same way as the list pasted using the **Copy/Pa
 - `SKU` column: SKU Reference ID (be aware that this is not the SKU ID displayed in your admin's Catalog).
 - `Quantity` column: SKU quantity you wish to add to the cart.
 
->ℹ Once uploaded, the spreadsheet is then validated. Based on the filled in SKU reference IDs, **Quickorder** will confirm whether the SKUs are in fact available for purchase.
+> ℹ️ Once uploaded, the spreadsheet is then validated. Based on the filled in SKU reference IDs, **Quickorder** will confirm whether the SKUs are in fact available for purchase.
 
 ### Custom Search Bar (`quickorder-autocomplete` block)
 

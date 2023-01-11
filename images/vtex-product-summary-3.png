@@ -610,7 +610,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div></div>
 <p>According to the example above, products with measurement unit and unit multiplier would be rendered as follows:</p>
 <p><button aria-label="Copy Code" class="rdmd-code-copy fa"></button><code class="rdmd-code lang- theme-light" data-lang="" name="">$24.00 / 2 oz</code></p>
-<blockquote class="callout callout_info" theme="ℹ️"><h3 class="callout-heading"><span class="callout-icon">ℹ️</span><p><em>Notice that the measurement unit and unit multiplier would be properly rendered alongside their price</em></p></h3></blockquote>
+<blockquote class="callout callout_info" theme="ℹ️"><h3 class="callout-heading"><span class="callout-icon"> ℹ️️</span><p><em>Notice that the measurement unit and unit multiplier would be properly rendered alongside their price</em></p></h3></blockquote>
 <p>Still, according to the example, products that don&#x27;t have a measurement unit and a unit multiplier will render only their price:</p>
 <p><button aria-label="Copy Code" class="rdmd-code-copy fa"></button><code class="rdmd-code lang- theme-light" data-lang="" name="">$24.00</code></p>
 <ul>

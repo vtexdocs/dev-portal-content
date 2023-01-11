@@ -1,12 +1,10 @@
 ---
-title: "Overview"
+title: "VTEX Search Protocol"
 slug: "external-search-provider-overview"
 hidden: false
 createdAt: "2020-09-11T16:46:12.406Z"
 updatedAt: "2020-10-30T20:44:33.600Z"
 ---
-
-# What is the VTEX Search Protocol
 
 A search engine is a crucial part of e-commerce. It can drive more sales if the search results are good and it can worsen the user experience if they are bad.
 

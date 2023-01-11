@@ -62,7 +62,7 @@ If necessary, inStore can send additional information. Example with the sub-acqu
 }
 ```
 
->ℹ️ To create any extra configuration, you need to send an email to the inStore team (instoredevs@vtex.com.br) informing the additional information the app needs to complete the transaction. With that, we will create a form on the **Payments** module so that customers can configure their acquirer.
+> ℹ️️ To create any extra configuration, you need to send an email to the inStore team (instoredevs@vtex.com.br) informing the additional information the app needs to complete the transaction. With that, we will create a form on the **Payments** module so that customers can configure their acquirer.
 
 ## Sending URI and response URI for each action
 

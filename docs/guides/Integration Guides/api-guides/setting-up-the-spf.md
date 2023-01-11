@@ -64,7 +64,7 @@ To consult the verification, you need to:
 2. Select **TXT** as **Type**.
 3. Click on **Dig**.
 
->ℹ️ The modifications are impacted by the domain propagation time. This can take between 24 or 48 hours to reflect the changes.
+> ℹ️️ The modifications are impacted by the domain propagation time. This can take between 24 or 48 hours to reflect the changes.
 
 Here is a [consult example using the VTEX domain](https://www.digwebinterface.com/?hostnames=vtex.com&type=TXT&ns=resolver&useresolver=8.8.4.4&nameservers=):
 

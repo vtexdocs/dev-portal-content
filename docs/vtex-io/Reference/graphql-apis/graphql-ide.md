@@ -6,8 +6,6 @@ createdAt: "2021-03-25T17:12:53.428Z"
 updatedAt: "2021-10-26T23:27:34.148Z"
 ---
 
-# Introduction
-
 VTEX IO APIs are built with [GraphQL](https://graphql.org/) - a query language and a server-side runtime for fulfilling those queries with existing data.
 
 Instead of working with server-defined endpoints that return fixed data structures as in  REST APIs, GraphQL allows developers to send queries containing the specific data that needs to be fetched over a single endpoint through a `POST` `HTTP` request.
@@ -22,7 +20,7 @@ Some of the advantages of working with GraphQL are:
 
 This way, by adopting GraphQL, VTEX IO provides more flexibility and efficiency.
 
-# GraphQL basics
+## GraphQL basics
 
 Now that you know why VTEX IO uses GraphQL and its main advantages, let's explore some GraphQL basics.
 
@@ -40,7 +38,7 @@ Thus, whenever a GraphQL query is performed, the resolver functions related to t
 
 GraphQL ecosystem is growing fast and powerful tools, such as Graph*i*QL, maximizes developer experience. In the next sections, you'll learn how to install GraphQL IDE in your VTEX account, and how to execute GraphQL queries and mutations with Graph*i*QL.
 
-# Installing GraphQL IDE
+## Installing GraphQL IDE
 
 1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your VTEX account.
 
@@ -66,7 +64,7 @@ Now, everything is set up and you're ready to use Graph*i*QL.
 
 > ℹ️ If you're not used to Graph*i*QL, check the following section to learn more about it.
 
-# Using Graph*i*QL
+## Using Graph*i*QL
 
 [Graph*i*QL](https://github.com/graphql/graphiql) is an open-source tool for writing, validating, and testing GraphQL queries.
 

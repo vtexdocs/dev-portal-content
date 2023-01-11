@@ -1,8 +1,8 @@
-# Change chain orders in external marketplaces
+---
+title: "Change chain orders in external marketplaces"
+---
 
->ℹ️ This feature works exclusively for VTEX stores with **Multilevel Omnichannel Inventory** chain orders made in external marketplaces. The external marketplace must be responsible for the payment and be able to support the [Change order](https://developers.vtex.com/vtex-rest-api/docs/change-order) feature.
-
-<br>
+> ℹ️️ This feature works exclusively for VTEX stores with **Multilevel Omnichannel Inventory** chain orders made in external marketplaces. The external marketplace must be responsible for the payment and be able to support the [Change order](https://developers.vtex.com/vtex-rest-api/docs/change-order) feature.
 
 [Multilevel Omnichannel Inventory](https://developers.vtex.com/vtex-rest-api/docs/multilevel-omnichannel-inventory) is the VTEX setting that allows franchise accounts or white label sellers' inventory to be sold in marketplaces connected to the main account. This article explains how to use the [Change order](https://developers.vtex.com/vtex-rest-api/docs/change-order) while performing Multilevel Omnichannel Inventory operations in [external marketplaces](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide).                                                                  
 
@@ -10,11 +10,7 @@ By configuring this feature, your VTEX store will be able to have orders' items 
 
 The image below shows how the process occurs, in more detail:
 
-<br>
-
 ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/fixing-API-Guides/docs/guides/Integration%20Guides/change%20chain%20orders%20in%20multilevel%20omnichannel%20inventory%20%20marketplace.jpg)
-
-<br>
 
 ## Implementators
 
@@ -25,13 +21,7 @@ The integration can be implemented by:
 
 This article is suitable for both cases.
 
-<br>
-
 >❗The external marketplace must be responsible for the payment process, otherwise the change order in Multilevel Omnichannel Inventory chain orders in external marketplaces operations will be blocked by the Order Management System (OMS).
-
-
-
-<br>
 
 ## Implementation steps
 
@@ -44,27 +34,17 @@ The feature is implemented as follows:
 2. The external marketplace informs the base URL to VTEX's Order Management System (OMS) when a new order is placed in the external marketplace, by using the `marketplaceServicesEndpoint` field in the [Order placement](https://developers.vtex.com/vtex-rest-api/reference/order-placement) API.
 3. When an order is changed in the external marketplace, the OMS uses the base URL informed through `marketplaceServicesEndpoint` and concatenates it with `/pvt/orders/{orderGroup}/changes`, so that the endpoint created in step 1 receives notifications about order changes.
 
-<br>
-
 >⚠️ We have considered the `OrderGroup` to build the endpoint because it follows the [Multilevel Omnichannel Inventory](https://developers.vtex.com/vtex-rest-api/docs/multilevel-omnichannel-inventory) communication standards.
-
-
-<br>
 
 ## Expected payloads
 
 The endpoint created will have a request body and a response body, as shown in the next sections.
 
-<br>
-
 ### Request body
 
 The payload sent to the external marketplace follows the same structure used in the [Register change on order](https://developers.vtex.com/vtex-rest-api/reference/registerchange) API. You have an example below:
 
-<br>
-
-
-```
+```json
 {
     "reason": "Some text about the change. E.g: Add item XPTO",
     "discountValue": 0,
@@ -82,10 +62,6 @@ The payload sent to the external marketplace follows the same structure used in 
 }
 ```
 
-
-<br>
-
-
 | **Field** | **Type** | **Description** |
 |:----------:|:----------:|:----------|
 | reason | string | Text explaining why there was a change in the order. This information may be shown to the shopper in the storefront or transactional emails. |
@@ -99,17 +75,11 @@ The payload sent to the external marketplace follows the same structure used in 
 | measurementUnit | string | Item's measurement unit. |
 | itemsRemoved | array of objects | List of items that should be removed from the order. Has the same fields of `itemsAdded`. |
 
-<br>
-
 ### Response body
 
 The request returns two types of responses:
 
-
-
 * **Response 200 OK:** confirmation and payload as the following example:
-
-<br>
 
 ```
 {
@@ -117,17 +87,9 @@ The request returns two types of responses:
 "receipt": "61d49ff5-eee4-4093-aba1-1560435dedb0"
 }
 ```
-
-
-<br>
-
 | Field | Type | Description |
 |:---:|:---:|:---|
 | orderId | string | Order ID is a unique code that identifies an order. |
 | receipt | string | Hash for transaction identification or any string that uniquely identifies the transaction. |
 
-<br>
-
 - **Response 500 error:** message of failure and there is no payload.
-
-<br>

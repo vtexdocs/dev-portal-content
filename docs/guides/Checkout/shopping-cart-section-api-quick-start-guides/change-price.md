@@ -8,7 +8,7 @@ updatedAt: "2022-11-17T12:38:07.532Z"
 The shopping cart is where the information on the products chosen by the customer while browsing a store is gathered. This data may include item prices, shipping value, payment, and delivery methods, among others.
 
 This guide will describe how to change the price of an SKU (item) in a cart by the API.
->ℹ️ Before starting to manually change prices on an item, make sure the [Manual Price](https://developers.vtex.com/vtex-rest-api/docs/enable-the-manual-price) feature is already enabled in your store.
+> ℹ️️ Before starting to manually change prices on an item, make sure the [Manual Price](https://developers.vtex.com/vtex-rest-api/docs/enable-the-manual-price) feature is already enabled in your store.
 
 ## Getting and accessing shopping cart information
 
@@ -26,7 +26,7 @@ Below is an example of pricing details for items contained in a shopping cart:
 }
 [/block]
 
->ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+> ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
 
 ## Changing the price of a shopping cart item
 

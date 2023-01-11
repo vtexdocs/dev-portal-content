@@ -15,7 +15,7 @@ For carriers to integrate with VTEX Log's Hub, our main system, it is necessary 
 
 For the integration, carriers should develop VTEX IO apps for the [Notification](https://github.com/vtex-apps/carrier-hubs-examples/tree/main/carrier-notifier-example/docs), [Tracking](https://github.com/vtex-apps/carrier-hubs-examples/tree/main/carrier-tracking-example) and [Label](https://github.com/vtex-apps/label-emitter-example)  steps.
 
-# Index
+## Index
 
 <span class="api pg-type type-post">post</span> [Notify Carrier with App](ref:notifycarrierwithapp)
 <span class="api pg-type type-post">post</span> [Tracking Events with App](ref:trackingevents)

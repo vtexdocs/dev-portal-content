@@ -15,7 +15,7 @@ Google One-tap delivers a seamless experience with a small pop-up that can authe
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-0.gif)
 
-## Internal Behaviour
+## Behavior
 
 In VTEX stores, the One-tap flow is implemented by the `vtex.login` app. A more complete description of how that is done goes as follows:
 
@@ -31,7 +31,7 @@ In VTEX stores, the One-tap flow is implemented by the `vtex.login` app. A more 
 >
 > <a name="bottom_note_2"></a>**2**: If the user has already signed-up using One-tap once and is on the `/login` page, the One-tap `auto_select` option is turned on and the user is automatically signed-in and redirected.
 
-# Setup
+## Setup
 
 There are a few steps required to correctly configure One-tap in a store:
 

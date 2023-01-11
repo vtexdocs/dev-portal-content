@@ -7,7 +7,7 @@ createdAt: "2021-11-10T15:03:55.029Z"
 updatedAt: "2022-09-15T21:01:11.033Z"
 ---
 
->ℹ The **B2B Checkout Settings** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
+> ℹ️ The **B2B Checkout Settings** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
 In B2B commerce, it is often necessary to provide customized options during checkout, such as:
 
@@ -42,7 +42,7 @@ Considering B2B stores often need similar customizations, **B2B Checkout Setting
 Once **B2B Checkout Settings** is installed in your account, every script contained in its [`checkout-ui-custom` folder](https://github.com/vtex-apps/b2b-checkout-settings/tree/master/checkout-ui-custom) will be automatically linked to your store. The app will customize your checkout page with the functionalities described below. You will also be able to [configure](#configuration) the app on **Store Setup** > **B2B Checkout Settings**.
 
 
->ℹ The behavior of the checkout page in VTEX stores is customizable through JavaScript code. In case you need additional customization, we recommend that you use [Checkout UI Custom](https://apps.vtex.com/vtex-checkout-ui-custom/p) if you prefer using the VTEX Admin interface or [Checkout UI Settings](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) if you prefer a code-only option.
+> ℹ️ The behavior of the checkout page in VTEX stores is customizable through JavaScript code. In case you need additional customization, we recommend that you use [Checkout UI Custom](https://apps.vtex.com/vtex-checkout-ui-custom/p) if you prefer using the VTEX Admin interface or [Checkout UI Settings](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) if you prefer a code-only option.
 
 
 ### Restricted access to checkout

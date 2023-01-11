@@ -9,11 +9,11 @@ Through the Session Manager you may track relevant information about the client'
 
 For more of a practical approach, check our [Help Center article](https://help.vtex.com/tutorial/using-session-manager-to-track-browsing-sessions-in-vtex-stores--1pA0tqsD4BFnJYhQ7ORQBd).
 
-# List of endpoints:
+## List of endpoints
 
-* [**Sessions**](https://developers.vtex.com/reference/sessions)
-	- [Create new session](https://developers.vtex.com/reference/sessions#createnewsession)
-	- [Get Session](https://developers.vtex.com/reference/sessions#getsession)
-	- [Edit session](https://developers.vtex.com/reference/sessions#editsession)
-* [**Segment**](https://developers.vtex.com/reference/segment)
-	- [Get segment](https://developers.vtex.com/reference/segment#getsegment)
+- [**Sessions**](https://developers.vtex.com/reference/sessions)
+  - [Create new session](https://developers.vtex.com/reference/sessions#createnewsession)
+  - [Get Session](https://developers.vtex.com/reference/sessions#getsession)
+  - [Edit session](https://developers.vtex.com/reference/sessions#editsession)
+- [**Segment**](https://developers.vtex.com/reference/segment)
+  - [Get segment](https://developers.vtex.com/reference/segment#getsegment)

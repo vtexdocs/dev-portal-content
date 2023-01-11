@@ -6,11 +6,10 @@ hidden: false
 createdAt: "2020-06-03T15:19:16.096Z"
 updatedAt: "2020-06-23T20:27:17.252Z"
 ---
-# VTEX Stack Layout
 
 Use this layout component to show blocks on top of other blocks.
 
-<img width="306" alt="Screen Shot 2019-12-05 at 15 52 28" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-stack-layout-0.png"/>
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-stack-layout-0.png)
 
 Each children passed to `stack-layout` will receive an increasingly higher value of `zIndex`.
 

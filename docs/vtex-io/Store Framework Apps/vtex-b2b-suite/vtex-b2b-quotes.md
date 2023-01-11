@@ -7,7 +7,7 @@ createdAt: "2021-10-19T20:10:51.309Z"
 updatedAt: "2022-12-02T14:51:23.888Z"
 ---
 
->ℹ The **B2B Quotes & Carts** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
+> ℹ️ The **B2B Quotes & Carts** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
 The B2B shopping experience frequently requires the possibility for customers to request quotes and negotiate prices with sales representatives.
 
@@ -64,7 +64,7 @@ To access **My Quotes**, customers or sales users must follow the instructions b
 
 ![my-quotes](https://user-images.githubusercontent.com/77292838/161637102-66a15213-e70d-421a-9e90-5a68ddc25825.png)
 
->ℹ Quotes and saved carts are shown together in the same table. The differences are the following:
+> ℹ️ Quotes and saved carts are shown together in the same table. The differences are the following:
 > - Only quotes can have a status of **Pending** or **Revised**.
 > - Sales users are not notified when saved carts are created. It is possible to edit a saved cart such that it becomes a quote, as explained in [Quote Details](#quote-details).
 
@@ -192,7 +192,7 @@ This will have the effect of setting the quote’s status to **Ready** and notif
 
 ![quote-details-edit](https://user-images.githubusercontent.com/77292838/161637108-aeaeef58-296f-407a-9c00-b5ffe9d509fb.png)
 
->ℹ To take discounts into consideration, the **B2B Quotes and Carts** app is integrated with the [Order Authorization](https://help.vtex.com/en/tutorial/how-order-authorization-works--3MBK6CmKHAuUjMBieDU0pn) system. If there is a manual discount rule that will automatically deny a discount above a certain percent, **B2B Quotes and Carts** will not allow a discount above this amount to be applied.
+> ℹ️ To take discounts into consideration, the **B2B Quotes and Carts** app is integrated with the [Order Authorization](https://help.vtex.com/en/tutorial/how-order-authorization-works--3MBK6CmKHAuUjMBieDU0pn) system. If there is a manual discount rule that will automatically deny a discount above a certain percent, **B2B Quotes and Carts** will not allow a discount above this amount to be applied.
 
 #### Requesting additional adjustments to a quote
 

@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:48.155Z"
 updatedAt: "2020-09-23T19:28:51.054Z"
 ---
-# smarthint
-
-VTEX SmartHint first-party app
 
 ## How to install
 

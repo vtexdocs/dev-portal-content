@@ -6,7 +6,7 @@ createdAt: "2020-01-02T04:28:35.508Z"
 updatedAt: "2022-06-15T20:47:28.940Z"
 ---
 
->ℹ️ Check the new [Payments onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/payments-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Payments and is organized by focusing on the developer's journey.
+> ℹ️️ Check the new [Payments onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/payments-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Payments and is organized by focusing on the developer's journey.
 
 The Gift Card Hub API allows interactions with all Gift Card providers registered to a store from a single point.
 

@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-06-30T15:33:52.181Z"
 updatedAt: "2020-06-30T15:33:52.181Z"
 ---
-# Bluecore
 
 VTEX Bluecore first-party app
 

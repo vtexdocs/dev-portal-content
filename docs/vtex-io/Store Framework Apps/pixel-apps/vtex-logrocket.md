@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:09.791Z"
 updatedAt: "2020-06-03T15:19:09.791Z"
 ---
-# LogRocket
-
-VTEX LogRocket first-party app
 
 ## How to install
 

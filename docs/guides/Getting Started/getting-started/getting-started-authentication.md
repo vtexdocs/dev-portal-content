@@ -11,7 +11,7 @@ In this article, you can learn about all authentication aspects relevant to deve
 - [Single Sign On integration](#single-sign-on-integration)
 - [Shopper authentication for B2B stores](#shopper-authentication-for-b2b-stores)
 
->ℹ️ See this related content:\n- Authorization: [Users](https://help.vtex.com/en/subcategory/users--63DHe3VQEEE6Uuua8gIs2M), [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [License Manager Resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)\n- Accounting: [Audit](https://help.vtex.com/en/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA)
+> ℹ️️ See this related content:\n- Authorization: [Users](https://help.vtex.com/en/subcategory/users--63DHe3VQEEE6Uuua8gIs2M), [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [License Manager Resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)\n- Accounting: [Audit](https://help.vtex.com/en/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA)
 
 ## Machine authentication
 
@@ -24,7 +24,7 @@ There are different contexts in which machine authentication is required in the 
 | Self-hosted backend request to VTEX APIs | [Application keys](#application-keys) |
 | Self-hosted frontend request to VTEX APIs | [User token](#user-token) |
 
->ℹ️ The authentication methods in the table above are indicated but are not the only alternative for these use cases. Learn more about each method and how to use them below.
+> ℹ️️ The authentication methods in the table above are indicated but are not the only alternative for these use cases. Learn more about each method and how to use them below.
 
 ### Application keys
 
@@ -59,7 +59,7 @@ curl --location --request GET 'https://apiexamples.vtexcommercebeta.com.br/api/o
 --header 'Content-Type: application/json'
 ```
 
->ℹ️ According to the [W3C definition of Message Headers in HTTP requests](https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2), header names are case-insensitive. `X-VTEX-API-AppKey`, `x-vtex-api-appkey` or any other variation in the authentication headers will work the same way.
+> ℹ️️ According to the [W3C definition of Message Headers in HTTP requests](https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2), header names are case-insensitive. `X-VTEX-API-AppKey`, `x-vtex-api-appkey` or any other variation in the authentication headers will work the same way.
 
 ### User token
 
@@ -121,7 +121,7 @@ We recommend using the VTEX IO [clients package](https://github.com/vtex/io-clie
 }
 [/block]
 The tokens shown above are available via the VTEX IO context and are associated with different permissions. See the table below to learn about each token.
->ℹ️ You can import the context in your app like this:\n```ts\nimport { IOContext } as ctx from '@vtex/api'\n```
+> ℹ️️ You can import the context in your app like this:\n```ts\nimport { IOContext } as ctx from '@vtex/api'\n```
 
 | **Token**                | **`authMethod`** | **Via context**         | **Description**                                                                                                                              | **Permissions**                                                                                                                                                                                                                                                                                                                          |
 |--------------------------|------------------|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

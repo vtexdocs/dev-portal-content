@@ -138,7 +138,7 @@ Check the request body example below to see all requirements and read their desc
 }
 [/block]
 
->ℹ️ This request is only valid to one specification at a time. To register multiple values to one specification, you will need to create a request for each one of the values.
+> ℹ️️ This request is only valid to one specification at a time. To register multiple values to one specification, you will need to create a request for each one of the values.
 
 ## Associating a Specification 
 

@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:09.633Z"
 updatedAt: "2020-06-03T15:19:09.634Z"
 ---
-# Google Adwords
-
-VTEX Google Adwords first-party app
 
 ## How to install
 

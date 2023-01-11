@@ -12,4 +12,4 @@ If you are a developer using our [toolbelt](doc:vtex-io-documentation-toolbelt) 
 
 **No need to worry!** This is a new app our team has installed in all VTEX accounts to improve our capacity to monitor app installations and updates. Basically, it uses VTEX IO events to notify our internal services every time an app is installed or updated in a store.
 
->ℹ️ We plan to use this new capability to allow our infrastructure to automatically identify and solve issues that arise from app installations and updates. Stay tuned for more on this topic!
+> ℹ️️ We plan to use this new capability to allow our infrastructure to automatically identify and solve issues that arise from app installations and updates. Stay tuned for more on this topic!

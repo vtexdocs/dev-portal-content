@@ -8,7 +8,7 @@ updatedAt: "2022-11-17T13:00:19.482Z"
 The shopping cart is where the information on the products chosen by the customer while browsing a store is gathered. This data may include item prices, shipping value, payment, and delivery methods, among others.
 
 This guide will describe how to add coupons to the shopping cart by the API.
->ℹ️ Before adding the coupon code to the cart, call the [Get all coupons](https://developers.vtex.com/vtex-rest-api/reference/getall) endpoint to confirm that it is active in your store. If necessary, you can [create a new coupon](https://developers.vtex.com/vtex-rest-api/docs/creating-and-managing-coupons-with-promotions-api).
+> ℹ️️ Before adding the coupon code to the cart, call the [Get all coupons](https://developers.vtex.com/vtex-rest-api/reference/getall) endpoint to confirm that it is active in your store. If necessary, you can [create a new coupon](https://developers.vtex.com/vtex-rest-api/docs/creating-and-managing-coupons-with-promotions-api).
 
 ## Getting shopping cart information
 
@@ -43,7 +43,7 @@ After sending the request, the endpoint will return the response body containing
 }
 [/block]
 
->ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+> ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
 
 ## Error codes
 

@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:17.355Z"
 updatedAt: "2020-11-10T14:39:54.650Z"
 ---
-# Hotjar
 
 Open the VTEX APP Store and install the app on your store.
 

@@ -6,9 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:18.784Z"
 updatedAt: "2020-06-03T15:19:18.784Z"
 ---
-# Zopim
-
-VTEX Zopim first-party app
 
 ## How to install
 

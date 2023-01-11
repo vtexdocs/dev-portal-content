@@ -15,7 +15,7 @@ Shopper Location also supports redirecting a user to a URL based off their locat
 
 This app also supports white label sellers selection, allowing shoppers to select one or more sellers available in their location. Shoppers will then be able to search and view products from those select sellers. See the [Region Seller Selection](#region-seller-selection) section.
 
->ℹ The Google Geolocation API key in your **Inventory & Shipping** settings is required for the geolocation feature.
+> ℹ️ The Google Geolocation API key in your **Inventory & Shipping** settings is required for the geolocation feature.
 
 >⚠️ To use the IP lookup fallback, you must have an API key for https://ip-geolocation.whoisxmlapi.com.
 
@@ -23,7 +23,7 @@ This app also supports white label sellers selection, allowing shoppers to selec
 
 1. Using [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install `vtex.shopper-location` in the desired account.
 
-2. In your account's admin dashboard, go to **Apps > My Apps`** and click the `Settings` button for Shopper Location.
+2. In your account's admin dashboard, go to **Apps > My Apps** and click the `Settings` button for Shopper Location.
 
 3. Enter your API key for https://ip-geolocation.whoisxmlapi.com in the provided field and click `Save`. If you plan to use the `Client Redirect` feature, it is also configured here.
 
@@ -32,9 +32,9 @@ This app also supports white label sellers selection, allowing shoppers to selec
   - Add the following as dependencies in your theme's manifest.json file, if not already present:
 
 ```json
-    "vtex.store-components": "3.x",
-    "vtex.modal-layout": "0.x",
-    "vtex.shopper-location": "1.x"
+  "vtex.store-components": "3.x",
+  "vtex.modal-layout": "0.x",
+  "vtex.shopper-location": "1.x"
 ```
 
    - In one of the JSON files in your theme's `store` folder, define the `shopper-location` block and its children, adjusting the props as needed:
@@ -126,7 +126,7 @@ Additionally, there is an `Automatic Redirect` option, that will redirect the us
 
 Allow users to select one or more sellers serving their location from a list of options and display only products carried by those sellers in the search results.
 
->ℹ️ For this feature to work properly, the item cannot have inventory in seller "1". If there's stock in seller "1", then the item will always appear in the search results, regardless of inventory in whichever sellers are selected.
+> ℹ️️ For this feature to work properly, the item cannot have inventory in seller "1". If there's stock in seller "1", then the item will always appear in the search results, regardless of inventory in whichever sellers are selected.
 
 Add the `region-sellers` block as a child of the `shopper-location` block to get started:
 
