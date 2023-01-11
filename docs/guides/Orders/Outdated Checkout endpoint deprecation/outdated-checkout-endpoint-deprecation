@@ -70,7 +70,6 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 | major | string | An internal system's code of VTEX's modules communication. | Yes |
 | url | string | URL that used to be notified by the legacy look, which has been deactivated. | Yes |
 
-<br>
 
 ### Outdated Checkout endpoint properties descriptions
 
