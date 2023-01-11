@@ -87,7 +87,6 @@ Configuring your shipping strategy means setting up a shipping policy, a loading
 - [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses)
 - [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
 
-<br>
 
 ## Managing Shipping Strategy
 
