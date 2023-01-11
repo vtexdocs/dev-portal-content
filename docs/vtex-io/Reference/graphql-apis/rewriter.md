@@ -330,7 +330,6 @@ Rewriter includes functionalities to:
 
 
 ## Internal
-
 <table>
     <thead>
         <tr>
