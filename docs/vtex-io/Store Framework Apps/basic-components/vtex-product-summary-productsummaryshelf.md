@@ -46,9 +46,7 @@ The Product Summary Shelf is the main block exported by the [Product Summary app
 }
 ```
 
-> ⚠️
->
-> Remember to define the other Product Summary blocks in your theme as well, otherwise the component will not be displayed.
+> ⚠️ Remember to define the other Product Summary blocks in your theme as well, otherwise the component will not be displayed.
 
 | Prop name        | Type          | Description                | Default value  |
 | :--------------: | :---------: | :--------------------------: | :------------: |

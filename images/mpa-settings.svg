@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+      <g id="mpa-settings">
+        <path d="M3.79999 4.73334V1" stroke="#000000" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M3.79999 15V13.1334" stroke="#000000" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M12.2 11.2667V15" stroke="#000000" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M12.2 1V2.86667" stroke="#000000" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M3.8 13.1333C5.3464 13.1333 6.60001 11.8797 6.60001 10.3333C6.60001 8.78695 5.3464 7.53334 3.8 7.53334C2.2536 7.53334 1 8.78695 1 10.3333C1 11.8797 2.2536 13.1333 3.8 13.1333Z" stroke="#000000" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M12.2 8.46668C13.7464 8.46668 15 7.21307 15 5.66667C15 4.12027 13.7464 2.86667 12.2 2.86667C10.6536 2.86667 9.40002 4.12027 9.40002 5.66667C9.40002 7.21307 10.6536 8.46668 12.2 8.46668Z" stroke="#000000" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      </g>
+    </svg>

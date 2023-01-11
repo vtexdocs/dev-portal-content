@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+      <g id="mpa-store">
+        <path d="M12.6667 1H3.33333L1 5.2C1 6.48893 2.0444 7.53333 3.33333 7.53333C4.62227 7.53333 5.66667 6.48893 5.66667 5.2C5.66667 6.48893 6.71107 7.53333 8 7.53333C9.28893 7.53333 10.3333 6.48893 10.3333 5.2C10.3333 6.48893 11.3777 7.53333 12.6667 7.53333C13.9556 7.53333 15 6.48893 15 5.2L12.6667 1Z" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M13.25 9.75V15H2.75V9.75" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M6.59999 15V11.2667H9.39999V15" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      </g>
+    </svg>

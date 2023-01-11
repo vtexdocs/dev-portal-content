@@ -6,11 +6,6 @@ hidden: false
 createdAt: "2020-06-03T15:19:15.904Z"
 updatedAt: "2022-12-06T17:06:12.798Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 VTEX Menu is a store component responsible for displaying a bar containing links and drop-down sub-menus.
 

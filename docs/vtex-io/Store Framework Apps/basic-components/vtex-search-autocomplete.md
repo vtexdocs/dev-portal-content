@@ -6,7 +6,6 @@ hidden: false
 createdAt: "2021-02-23T17:09:08.552Z"
 updatedAt: "2022-09-15T11:39:24.420Z"
 ---
-## Description
 
 `Autocomplete` is an alternative for the default VTEX autocomplete. It includes:
 

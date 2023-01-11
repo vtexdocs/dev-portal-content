@@ -11,9 +11,7 @@ The **Quantity on Cart** app allows you to display a message to your customers i
 
 ![app-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-quantity-on-cart-0.gif)
 
-> ⚠️
->
-> The Quantity On Cart app does not work with promotions scenarios such as [Buy Together](https://help.vtex.com/en/tutorial/buy-together--tutorials_323) and [Buy One Get One](https://help.vtex.com/en/tutorial/buy-one-get-one--tutorials_322).
+> ⚠️ The Quantity On Cart app does not work with promotions scenarios such as [Buy Together](https://help.vtex.com/en/tutorial/buy-together--tutorials_323) and [Buy One Get One](https://help.vtex.com/en/tutorial/buy-one-get-one--tutorials_322).
 
 ## Configuration
 

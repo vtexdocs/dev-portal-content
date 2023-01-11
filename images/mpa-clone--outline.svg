@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+      <g id="mpa-clone--outline">
+        <path d="M5.20004 5.2L5.20004 3C5.20004 1.89543 6.09547 0.999997 7.20004 0.999997H13C14.1046 0.999997 15 1.89543 15 3V8.80001C15 9.90457 14.1046 10.8 13 10.8H10.8" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
+      <path d="M1 7.19999L1 13C1 14.1046 1.89543 15 3 15H8.79997C9.90454 15 10.8 14.1046 10.8 13V7.19999C10.8 6.09542 9.90454 5.19999 8.79997 5.19999H3C1.89543 5.19999 1 6.09542 1 7.19999Z" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
+      </g>
+    </svg>

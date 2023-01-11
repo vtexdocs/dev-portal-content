@@ -6,13 +6,8 @@ hidden: false
 createdAt: "2020-06-03T15:19:31.201Z"
 updatedAt: "2022-07-28T16:16:38.228Z"
 ---
-<!-- ALL-CONTRIBUTORS-BADGE: START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/basic-components/#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE: END -->
 
-> ⚠️
->
-> **Minicart v1 block has been deprecated in favor of Minicart v2** which can be customized using the blocks defined by [Product List](https://vtex.io/docs/app/vtex.product-list) and [Checkout Summary](https://vtex.io/docs/app/vtex.checkout-summary). If you’re still using the former version, you can find its documentation here: [Minicart v1 documentation](https://github.com/vtex-apps/minicart/blob/383d7bbd3295f06d1b5854a0add561a872e1515c/docs/README.md)
+> ⚠️ **Minicart v1 block has been deprecated in favor of Minicart v2** which can be customized using the blocks defined by [Product List](https://vtex.io/docs/app/vtex.product-list) and [Checkout Summary](https://vtex.io/docs/app/vtex.checkout-summary). If you’re still using the former version, you can find its documentation here: [Minicart v1 documentation](https://github.com/vtex-apps/minicart/blob/383d7bbd3295f06d1b5854a0add561a872e1515c/docs/README.md)
 
 The VTEX Minicart is a block that displays a summary list of all items added by customers in their shopping cart. Its data is fetched from the Checkout OrderForm API.
 
@@ -46,9 +41,7 @@ The VTEX Minicart is a block that displays a summary list of all items added by 
  },
 ```
 
-> ⚠️
->
-> **The Minicart v2 will only effectively function if the store uses the** [**Add To Cart Button**](https://vtex.io/docs/components/content-blocks/vtex.add-to-cart-button/) **instead of the** [**Buy Button**](https://vtex.io/docs/components/content-blocks/vtex.store-components/buybutton/) in blocks such as the Shelf and the Product Details Page. This is because Minicart v2 was built based on an indirect dependency with the Add To Cart button. That means that any other shopping buttons, as the Buy Button, are unable to render Minicart v2, even if it was correctly configured in the code.
+> ⚠️ **The Minicart v2 will only effectively function if the store uses the** [**Add To Cart Button**](https://vtex.io/docs/components/content-blocks/vtex.add-to-cart-button/) **instead of the** [**Buy Button**](https://vtex.io/docs/components/content-blocks/vtex.store-components/buybutton/) in blocks such as the Shelf and the Product Details Page. This is because Minicart v2 was built based on an indirect dependency with the Add To Cart button. That means that any other shopping buttons, as the Buy Button, are unable to render Minicart v2, even if it was correctly configured in the code.
 
 | Prop name              | Type                      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+      <g id="hpa-telemarketing">
+        <path d="M14 10V7C14 3.68629 11.3137 1 8 1V1C4.68629 1 2 3.68629 2 7V10" stroke="#000000" stroke-width="1.5"></path>
+      <path d="M14 10V10C14 12.2091 12.2091 14 10 14H8" stroke="#000000" stroke-width="1.5"></path>
+      <rect y="7" width="3" height="5" rx="1" fill="#000000"></rect>
+      <rect x="11" y="12" width="4" height="5" rx="2" transform="rotate(90 11 12)" fill="#000000"></rect>
+      <rect x="13" y="7" width="3" height="5" rx="1" fill="#000000"></rect>
+      </g>
+    </svg>

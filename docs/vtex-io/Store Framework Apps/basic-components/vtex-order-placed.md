@@ -7,11 +7,9 @@ createdAt: "2020-06-03T15:19:33.374Z"
 updatedAt: "2022-03-17T19:30:39.410Z"
 ---
 
-## Configuration
-
 The `order-placed` app comes already installed on all stores and with it, it's possible to build your own page with the blocks exported by the app.
 
-After defining a `order-placed` block inside your `store/blocks` directory or in your `blocks.json` file, the page can be constructed with [blocks](#blocks) and customized with [css handles](#css-handles).
+After defining a `order-placed` block inside your `store/blocks` directory or in your `blocks.json` file, the page can be constructed with [blocks](#blocks) and customized with [CSS handles](#css-handles).
 
 _Note: this is the default `order-placed` layout implementation._
 

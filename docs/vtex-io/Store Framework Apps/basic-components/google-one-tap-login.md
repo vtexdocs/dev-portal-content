@@ -6,10 +6,6 @@ createdAt: "2020-07-30T19:58:25.203Z"
 updatedAt: "2020-07-30T20:02:10.211Z"
 ---
 
-# Overview
-
-## User Experience
-
 Google One-tap delivers a seamless experience with a small pop-up that can authenticate a user with a streamlined interface. The customer should be able to use this feature as follows:
 
 1. Google One-tap pop-up is presented. [[1]](#bottom_note_1)
