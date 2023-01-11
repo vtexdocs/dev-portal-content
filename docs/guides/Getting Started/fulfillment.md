@@ -118,7 +118,6 @@ You can list loading docks, deactivate, reactivate, update or delete them.
 - [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks)
 - [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/activation)
 
-<br>
 
 ### Warehouse
 
