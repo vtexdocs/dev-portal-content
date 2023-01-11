@@ -409,8 +409,6 @@ This resource creates an assortment of products and SKUs and sets their specific
       </ul>
     </details>
   </ul>
-  </ul>
-
 </details>
 
 #### Attachments
@@ -450,7 +448,7 @@ This resource sets sample prices and price tables.
       <li>BasePrice: between 50.00 and 2000.00</li>
       <li>Markup: 0%</li>
     </ul>
-    </details>
+</details>
 
 #### Quantity prices
 
