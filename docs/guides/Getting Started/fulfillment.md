@@ -16,7 +16,6 @@ updatedAt: "2023-01-11T13:13:50.000Z"
 
 This overview article goes over what you can accomplish with VTEX logistics’ capabilities, like the registration and control of your inventory, shipping rates management, items availability control, tracking deliveries, and more.
 
-<br>
 
 ## Importing inventory from an ERP or Back office
 
