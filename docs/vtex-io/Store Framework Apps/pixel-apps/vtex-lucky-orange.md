@@ -11,4 +11,4 @@ updatedAt: "2020-06-03T15:19:32.559Z"
 
 Open the VTEX App Store and install this app on your store.
 
-Now, open the app settings on your admin and fill your Lucky Orange`s Site ID.
+Now, open the app settings on your admin and fill your Lucky Orange's Site ID.
