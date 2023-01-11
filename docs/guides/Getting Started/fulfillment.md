@@ -79,7 +79,6 @@ Configuring your shipping strategy means setting up a shipping policy, a loading
 - [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks)
 - [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/activation)
 
-<br>
 
 ### 3. Warehouse
 
