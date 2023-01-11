@@ -333,16 +333,11 @@ In `features`, provide a list of your app's main features.
 <details>
   <summary><b>Show example</b></summary>
   <section>
-    <div>
-      <p>✔️</p>
-      <p>- Stream & Sell with the VTEX Live Shopping app. No need to hire a separate streaming platform.</p>
-      <p>- Highlight products in the live stream to increase sales.</p>
-      <p>- Add to cart alert: Show which products are trending and encourage the audience to add these products to their shopping cart.</p>
-    </div>
-    <div>
-      <p>❌</p>
-      <p>Stream and sell with the VTEX Live Shopping app without hiring a separate streaming platform. Also, highlight products during the live stream to increase sales.</p>
-    </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|<ul><li>Stream & Sell with the VTEX Live Shopping app. No need to hire a separate streaming platform.</li><li>Highlight products in the live stream to increase sales.</li><li>Add to cart alert: Show which products are trending and encourage the audience to add these products to their shopping cart.</li></ul>|Stream and sell with the VTEX Live Shopping app without hiring a separate streaming platform. Also, highlight products during the live stream to increase sales.|
+
   </section>
 </details>
 
