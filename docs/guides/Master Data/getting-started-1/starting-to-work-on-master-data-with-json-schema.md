@@ -2,6 +2,7 @@
 title: "Starting to work on Master Data v2 with JSON Schemas"
 slug: "starting-to-work-on-master-data-with-json-schema"
 hidden: false
+excerpt: "Learn more about how to set up your JSON schemas"
 createdAt: "2022-07-05T19:36:42.104Z"
 updatedAt: "2022-08-03T13:10:23.602Z"
 ---
@@ -14,7 +15,7 @@ Use the following API requests to manage your Master Data schemas:
 - [Get schemas by name](https://developers.vtex.com/vtex-rest-api/reference/getschemabyname)
 - [Save schema by name](https://developers.vtex.com/vtex-rest-api/reference/saveschemabyname)
 
-Below you can learn more about how to set up your JSON schemas, and some Master Data features you can use with them
+Below you can learn more about how to set up your JSON schemas, and some Master Data features you can use with them.
 
 ## Configuring a JSON Schema
 
@@ -36,7 +37,7 @@ Example:
 }
 ```
 
-The schema above defines the basic format of an SKU. In this case, only the `name` property. We also define this field as mandatory by adding the field name into the `required array.
+The schema above defines the basic format of an SKU. In this case, only the `name` property. We also define this field as mandatory by adding the field name into the required array.
 
 This JSON Schema validates the following JSON:
 
@@ -48,19 +49,19 @@ This JSON Schema validates the following JSON:
 
 You can add these examples to [JSON Schema Validator](http://www.jsonschemavalidator.net/). If you change the JSON example in the validator to an integer, you will receive an error message, like in the example below.
 
-changing the name to an integer:
+- Changing the name to an integer:
 
-```json
-{
-  "name": 1
-}
-```
+  ```json
+  {
+    "name": 1
+  }
+  ```
 
-Error message:
+- Error message:
 
-```sh
-Invalid type. Expected String but got Integer.
-```
+  ```sh
+  Invalid type. Expected String but got Integer.
+  ```
 
 The JSON Schema validates only the fields configured in properties. The exceeding fields will be maintained without validation. To preserve only the fields configured in the JSON schema, see the `additionalProperties` property information in [external documentation about JSON schema](https://json-schema.org/understanding-json-schema/reference/object.html#properties).
 
