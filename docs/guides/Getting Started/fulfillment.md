@@ -246,7 +246,6 @@ Service Level Agreement (SLA) refers to the order’s fulfillment conditions pre
 
 * POST - [Calculate SLA](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/shipping/calculate)
 
-<br>
 
 ## Optimizing fulfillment process with carriers
 
