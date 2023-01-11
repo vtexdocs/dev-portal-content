@@ -259,7 +259,6 @@ Create carriers’ freight values and retrieve information about them.
 * [POST - Create/update freight values](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/freights/-carrierId-/values/update)
 * [GET - List freight values](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/freights/-carrierId-/-cep-/values)
 
-<br>
 
 ### VTEX Shipping Network (independent App)
 
