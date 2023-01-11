@@ -609,9 +609,7 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="2" valign="top"><strong>endDate</strong></td>
             <td valign="top">String</td>
-            <td>The date a route stops being valid.
-                <br>
-                <em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em>
+            <td>The date a route stops being valid.<br><em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em>
             </td>
         </tr>
         <tr>
@@ -627,7 +625,7 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="2" valign="top"><strong>resolveAs</strong></td>
             <td valign="top">String</td>
-            <td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.<br><em>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</em></td>
+            <td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field. <br><em>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</em></td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>origin</strong></td>
