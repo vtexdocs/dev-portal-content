@@ -172,7 +172,6 @@ VTEX offers different solutions for your logistic process according to your busi
 - [DELETE - Delete polygon](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/geoshape/-polygonName-)
 
 
-<br>
 
 ### Reservations
 
