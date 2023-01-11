@@ -135,7 +135,6 @@ You can list warehouses, deactivate, reactivate, update or delete them.
 
 Once you have your Shipping strategy set up, you will need to manage the items available for sales, which compose your [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139). In VTEX, inventory is the relationship between your stored products and their availability for sales. 
 
-<br>
 
 ### Inventory
 
