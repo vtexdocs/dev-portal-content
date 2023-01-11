@@ -282,7 +282,6 @@ The endpoint below updates tracking events for pending deliveries using a list o
 
 * [POST - Tracking Events with App](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
 
-<br>
 
 ### VTEX Tracking (independent App)
 
