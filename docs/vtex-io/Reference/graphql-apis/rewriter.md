@@ -468,49 +468,45 @@ Rewriter includes functionalities to:
 ## Redirect
 
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="1" valign="top"><strong>from</strong></td>
-<td valign="top">String!</td>
-<td>The original route path.</td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>to</strong></td>
-<td valign="top">String!</td>
-<td>The route redirect path.</td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>endDate</strong></td>
-<td valign="top">String</td>
-<td>The date a redirect route stops being valid.
-<br>
-<em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>type</strong></td>
-<td valign="top"><a href="#redirecttypes">RedirectTypes</a>!</td>
-<td>The route type: temporary or permanent.</td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>binding</strong></td>
-<td valign="top">String!</td>
-<td>The id of the <em>binding</em> which the route is available.
-<br>
-<em>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</em></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>origin</strong></td>
-<td valign="top">String</td>
-<td>A string that defines the origin of the route, for example: <code>user-canonical</code></td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="1" valign="top"><strong>from</strong></td>
+            <td valign="top">String!</td>
+            <td>The original route path.</td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>to</strong></td>
+            <td valign="top">String!</td>
+            <td>The route redirect path.</td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>endDate</strong></td>
+            <td valign="top">String</td>
+            <td>The date a redirect route stops being valid. <br> <em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em> </td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>type</strong></td>
+            <td valign="top"><a href="#redirecttypes">RedirectTypes</a>!</td>
+            <td>The route type: temporary or permanent.</td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>binding</strong></td>
+            <td valign="top">String!</td>
+            <td>The id of the <em>binding</em> which the route is available. <br> <em>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</em></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>origin</strong></td>
+            <td valign="top">String</td>
+            <td>A string that defines the origin of the route, for example: <code>user-canonical</code></td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#queryredirect">QueryRedirect</a> 🔼</div>
