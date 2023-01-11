@@ -2,6 +2,7 @@
 title: "Installing B2B Easy Set Up"
 slug: "installing-b2b-easy-set-up"
 hidden: false
+excerpt: Use the B2B Easy Set Up to quickly get your store configured for B2B ecommerce.
 createdAt: "2021-07-28T20:53:10.893Z"
 updatedAt: "2022-07-19T17:44:04.867Z"
 ---
@@ -409,6 +410,8 @@ This resource creates an assortment of products and SKUs and sets their specific
       </ul>
     </details>
   </ul>
+  </ul>
+
 </details>
 
 #### Attachments
@@ -458,7 +461,8 @@ This resource sets sample prices and price tables.
       <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill / Driver with 30-Piece Accessories (LD120VA) (880100)</li>
       <li>ListPrice: null</li>
       <li>BasePrice: 100.00</li>
-      <li>FixedPrices:</li><ul>
+      <li>FixedPrices:</li>
+      <ul>
       <li>Minimum Quantity: 1</li>
       <li>Value: 100.00</li>
       <li>Minimum Quantity: 10</li>
@@ -466,7 +470,8 @@ This resource sets sample prices and price tables.
       <li>Minimum Quantity: 50</li>
       <li>Value: 80.00</li>
       <li>Minimum Quantity: 100</li>
-      <li>Value: 70.00</li></ul>
+      <li>Value: 70.00</li>
+      </ul>
     </ul>
 </details>
 
@@ -586,7 +591,6 @@ This resource updates the **Logistics** module using sample docks, warehouse and
       <li>ZipCodeStart: 0</li>
       <li>ZipCodeEnd: 99999999</li>
     </ul>
-    <br />
     <li>Docks:</li>
     <ul>
       <li>Name: Doca Principal (1)</li>
@@ -598,7 +602,6 @@ This resource updates the **Logistics** module using sample docks, warehouse and
         <li>Country: USA</li>
       </ul>
     </ul>
-    <br />
     <li>Warehouse:</li>
     <ul>
       <li>Name: Estoque (1_1)</li>
@@ -608,6 +611,7 @@ This resource updates the **Logistics** module using sample docks, warehouse and
         <li>Main Dock (2)</li>
       </ul>
     </ul>
+  </ul>
 </details>
 
 ### Organizations
