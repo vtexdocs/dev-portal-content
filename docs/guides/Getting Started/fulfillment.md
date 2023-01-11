@@ -96,7 +96,6 @@ Manage your [Shipping strategy](https://help.vtex.com/en/tutorial/shipping-strat
 
 **In Redesigned VTEX Admin:** Shipping > Shipping Strategy > Shipping Policies/Loading Docks/Warehouses
 
-<br>
 
 ### Shipping policy
 
