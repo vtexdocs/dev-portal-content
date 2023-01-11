@@ -442,27 +442,25 @@ Rewriter includes functionalities to:
 ## RoutesByBinding
 
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="1" valign="top"><strong>binding</strong></td>
-<td valign="top">String!</td>
-<td>The id of the <em>binding</em> which the route is available.
-<br>
-<em>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</em></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>route</strong></td>
-<td valign="top">String!</td>
-<td>Returns the route path.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="1" valign="top"><strong>binding</strong></td>
+            <td valign="top">String!</td>
+            <td>The id of the <em>binding</em> which the route is available. <br> <em>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</em></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>route</strong></td>
+            <td valign="top">String!</td>
+            <td>Returns the route path.</td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#queryinternal">QueryInternal</a> 🔼</div>
