@@ -558,7 +558,7 @@ Rewriter includes functionalities to:
         <tr>
             <td valign="top"><strong>type</strong></td>
             <td valign="top">String!</td>
-            <td>The route entity type, which can be: <code>department</code>, <code>category</code>, <code>subcategory</code>, <code>brand</code> , etc</td></td>
+            <td>The route entity type, which can be: <code>department</code>, <code>category</code>, <code>subcategory</code>, <code>brand</code> , etc</td>
         </tr>
     </tbody>
 </table>
