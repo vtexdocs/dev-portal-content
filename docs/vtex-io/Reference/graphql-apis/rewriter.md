@@ -388,15 +388,12 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="1" valign="top"><strong>routesVersion</strong></td>
             <td valign="top">Float</td>
-            <td>The current routes version.
-                <br>
-                <i>Keep in mind: If the <code>routesVersion</code> value is <code>null</code> or different from the current version, the route is not currently available in the store.</i>
-            </td>
+            <td>The current routes version.<br><i>Keep in mind: If the <code>routesVersion</code> value is <code>null</code> or different from the current version, the route is not currently available in the store.</i></td>
         </tr>
         <tr>
             <td colspan="1" valign="top"><strong>resolveAs</strong></td>
             <td valign="top">String</td>
-            <td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.<br><i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
+            <td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field <br><i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
         </tr>
         <tr>
             <td colspan="1" valign="top"><strong>origin</strong></td>
