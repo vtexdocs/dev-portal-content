@@ -12,7 +12,7 @@ updatedAt: "2023-01-11T13:13:50.000Z"
 }
 [/block]
 
-[Fulfillment](https://help.vtex.com/en/tutorial/logistica--53udnvI5eBy8DKo8FOjMoP) is the process of storing merchandise and receiving, managing, packing and shipping orders. It starts when a shopper buys a product and ends when the life cycle of the order is complete with the shopper receiving the purchase.
+[Fulfillment](https://help.vtex.com/en/tutorial/fulfillment-logistics-vtex--53udnvI5eBy8DKo8FOjMoP) is the process of storing merchandise and receiving, managing, packing and shipping orders. It starts when a shopper buys a product and ends when the life cycle of the order is complete with the shopper receiving the purchase.
 
 This overview article goes over what you can accomplish with VTEX logistics’ capabilities, like the registration and control of your inventory, shipping rates management, items availability control, tracking deliveries, and more.
 
