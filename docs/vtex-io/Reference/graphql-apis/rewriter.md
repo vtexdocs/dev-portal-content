@@ -5,7 +5,6 @@ hidden: false
 createdAt: "2020-08-31T17:21:31.944Z"
 updatedAt: "2021-08-31T23:51:49.853Z"
 ---
-
 Rewriter is the VTEX IO app responsible for managing the following three main types of [routes](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-routes): product, search, and navigation routes.
 
 The first two are first-class entities in Rewriter, meaning Rewriter identifies these routes and directly forwards them to the rendering pipeline.
