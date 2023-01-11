@@ -224,7 +224,6 @@ The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEA
 
 **In Redesigned VTEX Admin:** Shipping > Pickup Points
 
-<br>
 
 ## Calculating shipping estimate time
 
