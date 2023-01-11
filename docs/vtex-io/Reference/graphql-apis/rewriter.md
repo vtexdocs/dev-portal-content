@@ -609,8 +609,7 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="2" valign="top"><strong>endDate</strong></td>
             <td valign="top">String</td>
-            <td>The date a route stops being valid.<br><em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em>
-            </td>
+            <td>The date a route stops being valid.<br><em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em></td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>imagePath</strong></td>
@@ -666,9 +665,7 @@ Rewriter includes functionalities to:
 <tr>
 <td colspan="2" valign="top"><strong>endDate</strong></td>
 <td valign="top">String</td>
-<td>The date a route stops being valid.
-<br>
-<em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em></td>
+<td>The date a route stops being valid.<br><em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>type</strong></td>
