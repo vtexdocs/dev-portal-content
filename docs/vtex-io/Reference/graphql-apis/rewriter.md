@@ -516,25 +516,25 @@ Rewriter includes functionalities to:
 ## ListRedirectsResponse
 
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>routes</strong></td>
-<td valign="top">[<a href="#redirect">Redirect</a>!]</td>
-<td>Returns the demanded information from the <em>Redirect</em> object for each route.</td>
-</tr>
-<tr>
-<td valign="top"><strong>next</strong></td>
-<td valign="top">String</td>
-<td>Returns a string to be used as the <em>next</em> argument of the succeeding <em>listInternals</em> query to fetch more data.<br>When <em>next</em> returns <em>null</em>, all data have already been fetched.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>routes</strong></td>
+            <td valign="top">[<a href="#redirect">Redirect</a>!]</td>
+            <td>Returns the demanded information from the <em>Redirect</em> object for each route.</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>next</strong></td>
+            <td valign="top">String</td>
+            <td>Returns a string to be used as the <em>next</em> argument of the succeeding <em>listInternals</em> query to fetch more data.<br>When <em>next</em> returns <em>null</em>, all data have already been fetched. </td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#queryredirect">QueryRedirect</a> 🔼</div>
@@ -542,25 +542,25 @@ Rewriter includes functionalities to:
 ## EntityLocator
 
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>id</strong></td>
-<td valign="top">String!</td>
-<td>The entity type id. For example, a deparment id.</td>
-</tr>
-<tr>
-<td valign="top"><strong>type</strong></td>
-<td valign="top">String!</td>
-<td>The route entity type, which can be: <code>department</code>, <code>category</code>, <code>subcategory</code>, <code>brand</code> , etc</td></td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>id</strong></td>
+            <td valign="top">String!</td>
+            <td>The entity type id. For example, a deparment id.</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>type</strong></td>
+            <td valign="top">String!</td>
+            <td>The route entity type, which can be: <code>department</code>, <code>category</code>, <code>subcategory</code>, <code>brand</code> , etc</td></td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#queryinternal">QueryInternal</a> 🔼</div>
@@ -568,82 +568,78 @@ Rewriter includes functionalities to:
 ## InternalInput
 
 <table>
-<thead>
-<tr>
-<th colspan="2" align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>from</strong></td>
-<td valign="top">String!</td>
-<td>The route path.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>declarer</strong></td>
-<td valign="top">String!</td>
-<td>The app that originally defined the route in a <code>routes.json</code> file.
-<br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>type</strong></td>
-<td valign="top">String!</td>
-<td>The route entity type, which can be: <code>department</code>, <code>category</code>, <code>subcategory</code>, <code>brand</code> , etc</td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top">String!</td>
-<td>The entity type id. For example, a deparment id.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>query</strong></td>
-<td valign="top">JSON</td>
-<td>The query string parameters of a route.</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>binding</strong></td>
-<td valign="top">String</td>
-<td>The id of the <em>binding</em> which the route is available.
-<br>
-<em>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</em></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>endDate</strong></td>
-<td valign="top">String</td>
-<td>The date a route stops being valid.
-<br>
-<em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>imagePath</strong></td>
-<td valign="top">String</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>imageTitle</strong></td>
-<td valign="top">String</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>resolveAs</strong></td>
-<td valign="top">String</td>
-<td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.
-<br>
-<em>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</em></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>origin</strong></td>
-<td valign="top">String</td>
-<td>A string that defines the origin of the route, for example: <code>user-canonical</code></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>disableSitemapEntry</strong></td>
-<td valign="top">Boolean</td>
-<td>The boolean value that indicates if a route is included (<code>False</code>) or not (<code>True</code>) in the store's sitemap.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th colspan="2" align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>from</strong></td>
+            <td valign="top">String!</td>
+            <td>The route path.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>declarer</strong></td>
+            <td valign="top">String!</td>
+            <td>The app that originally defined the route in a <code>routes.json</code> file. <br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>type</strong></td>
+            <td valign="top">String!</td>
+            <td>The route entity type, which can be: <code>department</code>, <code>category</code>, <code>subcategory</code>, <code>brand</code> , etc</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>id</strong></td>
+            <td valign="top">String!</td>
+            <td>The entity type id. For example, a deparment id.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>query</strong></td>
+            <td valign="top">JSON</td>
+            <td>The query string parameters of a route.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>binding</strong></td>
+            <td valign="top">String</td>
+            <td>The id of the <em>binding</em> which the route is available.<br><em>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</em></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>endDate</strong></td>
+            <td valign="top">String</td>
+            <td>The date a route stops being valid.
+                <br>
+                <em>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</em>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>imagePath</strong></td>
+            <td valign="top">String</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>imageTitle</strong></td>
+            <td valign="top">String</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>resolveAs</strong></td>
+            <td valign="top">String</td>
+            <td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.<br><em>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</em></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>origin</strong></td>
+            <td valign="top">String</td>
+            <td>A string that defines the origin of the route, for example: <code>user-canonical</code></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>disableSitemapEntry</strong></td>
+            <td valign="top">Boolean</td>
+            <td>The boolean value that indicates if a route is included (<code>False</code>) or not (<code>True</code>) in the store's sitemap.</td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#mutateinternal">MutateInternal</a> 🔼</div>
@@ -684,9 +680,7 @@ Rewriter includes functionalities to:
 <tr>
 <td colspan="2" valign="top"><strong>binding</strong></td>
 <td valign="top">String</td>
-<td>The id of the <em>binding</em> which the route is available.
-<br>
-<em>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</em></td>
+<td>The id of the <em>binding</em> which the route is available.<br><em>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</em></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>origin</strong></td>
