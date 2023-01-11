@@ -194,7 +194,6 @@ VTEX offers different solutions for your logistic process according to your busi
 * [GET - Search capacity reservations in time range](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames)
 * [GET - Get capacity reservation usage by window](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames/-windowDay-F-windowStartTime-T-windowEndTime-)
 
-<br>
 
 ### Holidays
 
