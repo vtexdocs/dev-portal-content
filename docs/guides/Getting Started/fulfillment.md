@@ -26,7 +26,6 @@ If your store has an ERP integration or another integration for inventory manage
 
 >ℹ️ If you wish to customize the fulfillment capabilities in the storefront, see the [Checkout guide](https://developers.vtex.com/docs/guides/checkout-overview) overview.
 
-<br>
 
 ## Understanding fulfillment process
 
