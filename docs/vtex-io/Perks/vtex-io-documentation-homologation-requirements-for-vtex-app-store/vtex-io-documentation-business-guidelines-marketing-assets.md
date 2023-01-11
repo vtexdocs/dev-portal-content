@@ -60,7 +60,9 @@ Your app icon is one of the first elements of your app that developers and merch
 
 <details>
   <summary><b>Show example</b></summary>
-  <img src="https://user-images.githubusercontent.com/67270558/126643069-18ead453-ce79-44d6-847b-e9e4f1a378c4.png" alt="Icon with size description required for the App Store"/>
+
+  ![Icon with size description required for the App Store](https://user-images.githubusercontent.com/67270558/126643069-18ead453-ce79-44d6-847b-e9e4f1a378c4.png)
+
 </details>
 
 ### Screenshots
@@ -123,14 +125,11 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Live Shopping</p>
-  </div>
-  <div>
-    <p>❌</p>
-    <p>Live Shopping - The app that allows you to live stream events on your store's website.</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Live Shopping|Live Shopping - The app that allows you to live stream events on your store's website.|
+
 </section>
 </details>
 
@@ -139,14 +138,11 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Live Shopping</p>
-  </div>
-  <div>
-    <p>❌</p>
-    <p>Live shopping</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Live Shopping|Live shopping|
+
 </section>
 </details>
 
@@ -155,14 +151,11 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Reviews & Ratings</p>
-  </div>
-  <div>
-   <p>❌</p>
-   <p>Reviews and Ratings</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Reviews & Ratings|Reviews and Ratings|
+
 </section>
 </details>
 
@@ -171,14 +164,11 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Abandoned Cart</p>
-  </div>
-  <div>
-   <p>❌</p>
-   <p>VTEX Abandoned Cart</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Abandoned Cart|VTEX Abandoned Cart|
+
 </section>
 </details>
 
@@ -187,14 +177,11 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Social Selling</p>
-  </div>
-  <div>
-   <p>❌</p>
-   <p>Social Selling</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Social Selling|Social Selling!|
+
 </section>
 </details>
 
@@ -203,14 +190,11 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Google Tag Manager</p>
-  </div>
-  <div>
-   <p>❌</p>
-   <p>Google Tag Manager 2.x</p>
-  </div>
+  
+|✅ Do|❌ Don't|
+|-----|-------|
+|Google Tag Manager|Google Tag Manager 2.x|
+
 </section>
 </details>
 
@@ -229,18 +213,11 @@ The headline should describe the value proposition of your app in a concise sent
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Engage with customers through live broadcasts, real-time chat, and product promotion.</p>
-   <hr/>
-    <p>Create live broadcasts on your store, increase sales and boost customer interaction in real-time.</p>
-  </div>
-  <div>
-   <p>❌</p>
-    <p>Live broadcasts with customers.</p>
-    <hr/>
-    <p>Create Live streaming and sell more.</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+| <ul><li>Engage with customers through live broadcasts, real-time chat, and product promotion.</li><li>Create live broadcasts on your store, increase sales and boost customer interaction in real-time.</li></ul>| <ul><li>Live broadcasts with customers.</li><li>Create Live streaming and sell more.</li></ul>|
+
 </section>
 </details>
 
@@ -248,14 +225,11 @@ The headline should describe the value proposition of your app in a concise sent
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p><i>Set</i> shipping address based on user browser's or IP Geolocation.</p>
-  </div>
-  <div>
-   <p>❌</p>
-    <p>This app <i>attempts to determine</i> the users' location and set their shipping address.</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|*Set* shipping address based on user browser's or IP Geolocation.|This app *attempts to determine* the users' location and set their shipping address.|
+
 </section>
 </details>
 
@@ -269,14 +243,11 @@ The headline should describe the value proposition of your app in a concise sent
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Integrate your store with Google's navigation and conversion tracking platform.</p>
-  </div>
-  <div>
-   <p>❌</p>
-    <p><i>Google Tag Manager</i> is the app to integrate your store with Google's navigation and conversion tracking platform.</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Integrate your store with Google's navigation and conversion tracking platform.|*Google Tag Manager* is the app to integrate your store with Google's navigation and conversion tracking platform.|
+
 </section>
 </details>
 
@@ -294,14 +265,11 @@ The overview is the description of the app and should be an engaging message tha
 <details>
     <summary><b>Show example</b></summary>
   <section>
-  <div>
-    <p>✔️</p>
-    <p>Integrate with WordPress to bring blog data to your VTEX IO store and create a blog "homepage", category pages, and blog post pages.</p>
-  </div>
-  <div>
-    <p>❌</p>
-    <p>The Wordpress Integration app provides a way to bring in blog data from the Wordpress API and create a blog homepage, category pages, and blog post pages on your store, using your existing store header, footer, and styling.</p>
-  </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Integrate with WordPress to bring blog data to your VTEX IO store and create a blog "homepage", category pages, and blog post pages.|The Wordpress Integration app provides a way to bring in blog data from the Wordpress API and create a blog homepage, category pages, and blog post pages on your store, using your existing store header, footer, and styling.|
+
 </section>
 </details>
 
@@ -312,14 +280,11 @@ The overview is the description of the app and should be an engaging message tha
 <details>
   <summary><b>Show example</b></summary>
   <section>
-    <div>
-      <p>✔️</p>
-      <p>With The Live Shopping app, <i>create</i> live stream events on your store's website, promote product collections, increase sales, and enhance user experience simultaneously while interacting via live chat.</p>
-    </div>
-    <div>
-      <p>❌</p>
-      <p>Live shopping is an app to stream live events on your store in real-time.</p>
-    </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|With The Live Shopping app, *create* live stream events on your store's website, promote product collections, increase sales, and enhance user experience simultaneously while interacting via live chat.|Live shopping is an app to stream live events on your store in real-time.|
+
   </section>
 </details>
 
@@ -328,14 +293,11 @@ The overview is the description of the app and should be an engaging message tha
 <details>
   <summary><b>Show example</b></summary>
   <section>
-    <div>
-      <p>✔️</p>
-      <p>Offer an exclusive payment method to selected clients. With Customer Credit, you grant credit, determine limits, and manage invoices.</p>
-    </div>
-    <div>
-      <p>❌</p>
-      <p>With Customer Credit, the credit will be granted, limits determined, and invoices will be managed.</p>
-    </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Offer an exclusive payment method to selected clients. With Customer Credit, you grant credit, determine limits, and manage invoices.|With Customer Credit, the credit will be granted, limits determined, and invoices will be managed.|
+
   </section>
 </details>
 
@@ -344,14 +306,11 @@ The overview is the description of the app and should be an engaging message tha
 <details>
   <summary><b>Show example</b></summary>
   <section>
-    <div>
-      <p>✔️</p>
-      <p>Interact with customers in real-time by generating personalized experiences through real-time chat and interactive like button.</p>
-    </div>
-    <div>
-      <p>❌</p>
-      <p>Interact with customers by managing the event’s live chat in the events list clicking on the desired live event’s arrow button.</p>
-    </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|Interact with customers in real-time by generating personalized experiences through real-time chat and interactive like button.|Interact with customers by managing the event’s live chat in the events list clicking on the desired live event’s arrow button.|
+
   </section>
 </details>
 
@@ -415,25 +374,11 @@ Use this field to provide more specific details about the app. For example, is y
 <details>
   <summary><b>Show example</b></summary>
   <section>
-    <div>
-      <p>✔️</p>
-      <p>This application is only being made available in a Beta version.</p>
-      <hr/>
-      <p>If you do not have the integration done yet, you will need to complete the integration form.</p>
-      <hr/>
-      <p>We have three different plans that adjust to your content and commercial needs to have the most competitive rates.</p>
-    </div>
-    <br/>
-    <div>
-      <p>❌</p>
-      <p>Simpler logistical operation and a reduction in logistical costs.</p>
-      <hr/>
-      <p>Automatic messages (after-sales)</p>
-      <hr/>
-      <p>Real-time metrics: After the end of the event, review quality KPIs such as likes, comments, and shares, as well as performance KPIs such as sales and average product value (AOV).</p>
-      <br/>
-      <h6>These describe the features of apps. Therefore, they should be in the feature section.</h6>
-    </div>
+
+|✅ Do|❌ Don't|
+|-----|-------|
+|<ul><li>This application is only being made available in a Beta version.</li> <li>If you do not have the integration done yet, you will need to complete the integration form.</li><li>We have three different plans that adjust to your content and commercial needs to have the most competitive rates.</li></ul>|<ul> <li>Simpler logistical operation and a reduction in logistical costs.</li> <li>Automatic messages (after-sales)</li> <li>Real-time metrics: After the end of the event, review quality KPIs such as likes, comments, and shares, as well as performance KPIs such as sales and average product value (AOV).</li></ul> These describe the features of apps. Therefore, they should be in the feature section.|
+
   </section>
 </details>
 
