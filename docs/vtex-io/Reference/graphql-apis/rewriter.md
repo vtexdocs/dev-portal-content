@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-08-31T17:21:31.944Z"
 updatedAt: "2021-08-31T23:51:49.853Z"
 ---
+
 Rewriter is the VTEX IO app responsible for managing the following three main types of [routes](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-routes): product, search, and navigation routes.
 
 The first two are first-class entities in Rewriter, meaning Rewriter identifies these routes and directly forwards them to the rendering pipeline.
@@ -300,7 +301,8 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="2" align="right" valign="top">path</td>
             <td valign="top">String!</td>
-            <td>The path of the route to be deleted.</td>
+            <td>
+                The path of the route to be deleted.</td>
         </tr>
         <tr>
             <td colspan="2" align="right" valign="top">locator</td>
@@ -332,83 +334,83 @@ Rewriter includes functionalities to:
 ## Internal
 
 <table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="1" valign="top"><strong>from</strong></td>
-<td valign="top">String!</td>
-<td>The route path.</td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>declarer</strong></td>
-<td valign="top">String!</td>
-<td>The app that originally defined the route in a <code>routes.json</code> file.
-<br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>type</strong></td>
-<td valign="top">String!</td>
-<td>The route entity type defined in the <code>declarer</code> app, which can be: <code>department</code>, <code>category</code>, <code>subcategory</code>, <code>brand</code> , etc.</td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>id</strong></td>
-<td valign="top">String!</td>
-<td>The entity type id. For example, a deparment id.</td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>query</strong></td>
-<td valign="top">JSON</td>
-<td>The query string parameters of a route.</td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>binding</strong></td>
-<td valign="top">String!</td>
-<td>The id of the <i>binding</i> which the route is available.<br><i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>endDate</strong></td>
-<td valign="top">String</td>
-<td>The date a route stops being valid.<br><i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>imagePath</strong></td>
-<td valign="top">String</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>imageTitle</strong></td>
-<td valign="top">String</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>routesVersion</strong></td>
-<td valign="top">Float</td>
-<td>The current routes version. 
-<br>
-<i>Keep in mind: If the <code>routesVersion</code> value is <code>null</code> or different from the current version, the route is not currently available in the store.</i></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>resolveAs</strong></td>
-<td valign="top">String</td>
-<td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.<br><i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>origin</strong></td>
-<td valign="top">String</td>
-<td>A string that defines the origin of the route, for example: <code>user-canonical</code></td>
-</tr>
-<tr>
-<td colspan="1" valign="top"><strong>disableSitemapEntry</strong></td>
-<td valign="top">Boolean</td>
-<td>The boolean value that indicates if a route is included (<code>False</code>) or not (<code>True</code>) in the store's sitemap.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="1" valign="top"><strong>from</strong></td>
+            <td valign="top">String!</td>
+            <td>The route path.</td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>declarer</strong></td>
+            <td valign="top">String!</td>
+            <td>The app that originally defined the route in a <code>routes.json</code> file. <br>For VTEX IO pre-defined routes, the <code>declarer</code> value is <code>vtex.store@2.x.</code></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>type</strong></td>
+            <td valign="top">String!</td>
+            <td>The route entity type defined in the <code>declarer</code> app, which can be: <code>department</code>, <code>category</code>, <code>subcategory</code>, <code>brand</code> , etc.</td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>id</strong></td>
+            <td valign="top">String!</td>
+            <td>The entity type id. For example, a deparment id.</td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>query</strong></td>
+            <td valign="top">JSON</td>
+            <td>The query string parameters of a route.</td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>binding</strong></td>
+            <td valign="top">String!</td>
+            <td>The id of the <i>binding</i> which the route is available.<br><i>Keep in mind: Every store has a binding id related to its store locale. Hence, cross-border stores always have more than one binding, while accounts with a single storefront have only one binding id.</i></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>endDate</strong></td>
+            <td valign="top">String</td>
+            <td>The date a route stops being valid.<br><i>Keep in mind: The <code>endDate</code> value for permanent routes is <code>null</code>.</i></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>imagePath</strong></td>
+            <td valign="top">String</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>imageTitle</strong></td>
+            <td valign="top">String</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>routesVersion</strong></td>
+            <td valign="top">Float</td>
+            <td>The current routes version.
+                <br>
+                <i>Keep in mind: If the <code>routesVersion</code> value is <code>null</code> or different from the current version, the route is not currently available in the store.</i>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>resolveAs</strong></td>
+            <td valign="top">String</td>
+            <td>Alias paths of a route, meaning that the route will resolve the paths defined in the <code>resolveAs</code> field.<br><i>Keep in mind: The <code>resolveAs</code> parameter must always be defined in the catalog's default language.</i></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>origin</strong></td>
+            <td valign="top">String</td>
+            <td>A string that defines the origin of the route, for example: <code>user-canonical</code></td>
+        </tr>
+        <tr>
+            <td colspan="1" valign="top"><strong>disableSitemapEntry</strong></td>
+            <td valign="top">Boolean</td>
+            <td>The boolean value that indicates if a route is included (<code>False</code>) or not (<code>True</code>) in the store's sitemap.</td>
+        </tr>
+    </tbody>
 </table>
 
 <div style="text-align: right"><a href="#queryinternal">QueryInternal</a> 🔼</div>
