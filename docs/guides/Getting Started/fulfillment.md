@@ -160,7 +160,6 @@ VTEX offers different solutions for your logistic process according to your busi
 
 **In Redesigned VTEX Admin:** Store Settings > Shipping > Settings/Geolocation Shipping/Holidays
 
-<br>
 
 ### Geolocation shipping (polygons)
 
