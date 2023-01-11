@@ -300,8 +300,7 @@ Rewriter includes functionalities to:
         <tr>
             <td colspan="2" align="right" valign="top">path</td>
             <td valign="top">String!</td>
-            <td>
-                The path of the route to be deleted.</td>
+            <td>The path of the route to be deleted.</td>
         </tr>
         <tr>
             <td colspan="2" align="right" valign="top">locator</td>
