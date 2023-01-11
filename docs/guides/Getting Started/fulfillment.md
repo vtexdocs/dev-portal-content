@@ -130,7 +130,6 @@ You can list warehouses, deactivate, reactivate, update or delete them.
 - [DELETE - Remove warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/warehouses/-warehouseId-)
 - [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses)
 
-<br>
 
 ## Managing inventory
 
