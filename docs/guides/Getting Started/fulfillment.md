@@ -183,7 +183,6 @@ VTEX offers different solutions for your logistic process according to your busi
 * [POST - Acknowledgment reservation](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/inventory/reservations/-reservationId-/acknowledge)
 * [POST - Cancel reservation](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/inventory/reservations/-reservationId-/cancel)
 
-<br>
 
 ### Scheduled delivery
 
