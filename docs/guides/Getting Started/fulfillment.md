@@ -204,7 +204,6 @@ The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEA
 * [GET - List all holidays](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/holidays)
 * [DELETE - Delete holiday](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/holidays/-holidayId-)
 
-<br>
 
 ### Pickup points
 
