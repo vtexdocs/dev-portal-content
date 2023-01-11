@@ -51,7 +51,6 @@ The following image shows how these entities connect to each other:
 
 ![fulfillment_image_2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/fulfillment_image_2.svg)
 
-<br>
 
 ## Setting up shipping strategy (mandatory)
 
