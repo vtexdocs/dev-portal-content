@@ -122,12 +122,12 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Live Shopping</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
     <p>❌</p>
     <p>Live Shopping - The app that allows you to live stream events on your store's website.</p>
   </div>
@@ -138,12 +138,12 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Live Shopping</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
     <p>❌</p>
     <p>Live shopping</p>
   </div>
@@ -154,12 +154,12 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Reviews & Ratings</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
    <p>❌</p>
    <p>Reviews and Ratings</p>
   </div>
@@ -170,12 +170,12 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Abandoned Cart</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
    <p>❌</p>
    <p>VTEX Abandoned Cart</p>
   </div>
@@ -186,12 +186,12 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Social Selling</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
    <p>❌</p>
    <p>Social Selling</p>
   </div>
@@ -202,12 +202,12 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Google Tag Manager</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
    <p>❌</p>
    <p>Google Tag Manager 2.x</p>
   </div>
@@ -228,14 +228,14 @@ The headline should describe the value proposition of your app in a concise sent
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Engage with customers through live broadcasts, real-time chat, and product promotion.</p>
    <hr/>
     <p>Create live broadcasts on your store, increase sales and boost customer interaction in real-time.</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
    <p>❌</p>
     <p>Live broadcasts with customers.</p>
     <hr/>
@@ -247,12 +247,12 @@ The headline should describe the value proposition of your app in a concise sent
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p><i>Set</i> shipping address based on user browser's or IP Geolocation.</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
    <p>❌</p>
     <p>This app <i>attempts to determine</i> the users' location and set their shipping address.</p>
   </div>
@@ -268,12 +268,12 @@ The headline should describe the value proposition of your app in a concise sent
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Integrate your store with Google's navigation and conversion tracking platform.</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
    <p>❌</p>
     <p><i>Google Tag Manager</i> is the app to integrate your store with Google's navigation and conversion tracking platform.</p>
   </div>
@@ -293,12 +293,12 @@ The overview is the description of the app and should be an engaging message tha
 
 <details>
     <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-  <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+  <div>
     <p>✔️</p>
     <p>Integrate with WordPress to bring blog data to your VTEX IO store and create a blog "homepage", category pages, and blog post pages.</p>
   </div>
-  <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <div>
     <p>❌</p>
     <p>The Wordpress Integration app provides a way to bring in blog data from the Wordpress API and create a blog homepage, category pages, and blog post pages on your store, using your existing store header, footer, and styling.</p>
   </div>
@@ -311,12 +311,12 @@ The overview is the description of the app and should be an engaging message tha
 
 <details>
   <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-    <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+    <div>
       <p>✔️</p>
       <p>With The Live Shopping app, <i>create</i> live stream events on your store's website, promote product collections, increase sales, and enhance user experience simultaneously while interacting via live chat.</p>
     </div>
-    <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+    <div>
       <p>❌</p>
       <p>Live shopping is an app to stream live events on your store in real-time.</p>
     </div>
@@ -327,12 +327,12 @@ The overview is the description of the app and should be an engaging message tha
 
 <details>
   <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-    <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+    <div>
       <p>✔️</p>
       <p>Offer an exclusive payment method to selected clients. With Customer Credit, you grant credit, determine limits, and manage invoices.</p>
     </div>
-    <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+    <div>
       <p>❌</p>
       <p>With Customer Credit, the credit will be granted, limits determined, and invoices will be managed.</p>
     </div>
@@ -343,12 +343,12 @@ The overview is the description of the app and should be an engaging message tha
 
 <details>
   <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-    <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+    <div>
       <p>✔️</p>
       <p>Interact with customers in real-time by generating personalized experiences through real-time chat and interactive like button.</p>
     </div>
-    <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+    <div>
       <p>❌</p>
       <p>Interact with customers by managing the event’s live chat in the events list clicking on the desired live event’s arrow button.</p>
     </div>
@@ -373,14 +373,14 @@ In `features`, provide a list of your app's main features.
 
 <details>
   <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-    <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+    <div>
       <p>✔️</p>
       <p>- Stream & Sell with the VTEX Live Shopping app. No need to hire a separate streaming platform.</p>
       <p>- Highlight products in the live stream to increase sales.</p>
       <p>- Add to cart alert: Show which products are trending and encourage the audience to add these products to their shopping cart.</p>
     </div>
-    <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+    <div>
       <p>❌</p>
       <p>Stream and sell with the VTEX Live Shopping app without hiring a separate streaming platform. Also, highlight products during the live stream to increase sales.</p>
     </div>
@@ -414,8 +414,8 @@ Use this field to provide more specific details about the app. For example, is y
 
 <details>
   <summary><b>Show example</b></summary>
-  <section style="display:flex, justify-content:flex-start">
-    <div style="border:1px solid green, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+  <section>
+    <div>
       <p>✔️</p>
       <p>This application is only being made available in a Beta version.</p>
       <hr/>
@@ -424,7 +424,7 @@ Use this field to provide more specific details about the app. For example, is y
       <p>We have three different plans that adjust to your content and commercial needs to have the most competitive rates.</p>
     </div>
     <br/>
-    <div style="border:1px solid red, border-radius:10px, box-shadow:10px 5px 5px #E4E4E4, width:200px, padding:10px, margin-left:30px">
+    <div>
       <p>❌</p>
       <p>Simpler logistical operation and a reduction in logistical costs.</p>
       <hr/>
