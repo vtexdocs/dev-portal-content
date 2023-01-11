@@ -468,7 +468,7 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 
 ### Outdated Checkout endpoint response body
 
-```
+```json
 {
     "orderId": "1268540501456-01",
     "orderGroup": "1268540501456",
