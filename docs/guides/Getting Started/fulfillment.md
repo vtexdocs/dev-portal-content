@@ -239,7 +239,6 @@ The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEA
 
 When the shopper enters their address at checkout, the VTEX platform analyzes the order fulfillment conditions and displays the available shipping options to the shopper.
 
-<br>
 
 ### SLA
 
