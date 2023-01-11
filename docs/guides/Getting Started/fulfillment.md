@@ -151,7 +151,6 @@ You can update your inventory or retrieve information about it.
 
 **In Redesigned VTEX Admin:** Catalog > Inventory > Inventory Management
 
-<br>
 
 ## Setting up shipping configurations (Optional)
 
