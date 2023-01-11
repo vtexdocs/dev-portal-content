@@ -76,7 +76,7 @@ export default HelloWorld
 
 >⚠️ Note that in the example above we use the `FormattedMessage` component by associating it to the `"store/my-app.hello"` ID, which we created for our example. Since each ID has to be linked to a single string only, it is necessary to define the `FormattedMessage` component in this folder as many times as necessary in accordance with the translatable strings.
 
-> ℹ️ When creating an `id`, consider using the `store/` or `admin/` prefixes (depending on your app's functionality) followed by the app name (< code>my-app`) and, finally, a short word that can identify this string. For example,`store/my-app.hello`.
+> ℹ️ When creating an `id`, consider using the `store/` or `admin/` prefixes (depending on your app's functionality) followed by the app name (`my-app`) and, finally, a short word that can identify this string. For example,`store/my-app.hello`.
 
 2. In your app's root directory, create a `messages` folder.
 3. In the newly created folder, create a new `.json` file named using the ISO code for the desired language. For example: `pt`, `en`, `fr`.
