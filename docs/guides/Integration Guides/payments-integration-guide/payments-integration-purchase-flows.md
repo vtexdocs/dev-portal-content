@@ -23,12 +23,8 @@ The Redirect purchase flow is used when customers confirm the payment option in 
 This option is used when the partner needs a specific interaction with the customer that is not provided by the standard SmartCheckout template.
 
 Some examples include: displaying a QR code for payment, filling in an application form, logging in to an external website.
-[block:callout]
-{
-  "type": "warning",
-  "body": "For the connector that will use Redirect, there is no need to pass all the Test Suit tests, only the Redirect one."
-}
-[/block]
+
+>⚠️ For the connector that will use Redirect, there is no need to pass all the Test Suit tests, only the Redirect one.
 
 ![Payment Redirect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-purchase-flows-0_33.png)
 The sequence of events in a Redirect payment flow occurs as described in the following steps:
@@ -49,7 +45,7 @@ The sequence of events in a Redirect payment flow occurs as described in the fol
 
 The Payment App purchase flow is a flexible option used to allow customers to go through a custom payment experience without leaving the store.
 
-This model applies to a large variety of payment methods thanks to its interaction with the Checkout API. However, Payment Apps must be developed and deployed using [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/what-is-vtex-io). For more information, check our [Payment App guide](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-app).
+This model applies to a large variety of payment methods thanks to its interaction with the Checkout API. However, Payment Apps must be developed and deployed using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io). For more information, check our [Payment App guide](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-app).
 
 ## Operations in the payment flow
 
@@ -65,7 +61,7 @@ When a customer completes a purchase, this triggers the creation of a new paymen
 
 As soon as the purchase is complete, the Payments Gateway sends a [POST Create Payment](https://developers.vtex.com/vtex-rest-api/reference/createpayment) request to the provider.
 
-The payload is quite big, as it contains information such as the items in the cart, billing address, the order ID, payment methods, callbackURL, and others. More information about the endpoints and their payloads will be available in the [Implementing a Payment Provider](ref:payments-integration-implementing-a-payment-provider) section.
+The payload is quite big, as it contains information such as the items in the cart, billing address, the order ID, payment methods, callbackURL, and others. More information about the endpoints and their payloads will be available in the [Implementing a Payment Provider](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider) article.
 
 After that, the provider should respond to the request. If the payment cannot be processed right the way, the transaction status changes to `undefined`. That does not mean that the payment was canceled or denied, it is just being evaluated.
 
@@ -113,25 +109,25 @@ In this case, there are two scenarios:
 
 #### Payment approved and settled
 
-When a payment is approved and already settled but canceled after that, VTEX makes the call [POST Refund Payment](https://developers.vtex.com/reference/refundpayment) to the payment provider. Also, the Payment Provider Protocol accepts partial refunds when necessary.
+When a payment is approved and already settled but canceled after that, VTEX makes the call [POST Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) to the payment provider. Also, the Payment Provider Protocol accepts partial refunds when necessary.
 
 Regardless of the provider's response, VTEX will end the transaction with the status `canceled`.
 
 #### Payment approved but not settled
 
-When a payment is approved but canceled before being settled, VTEX makes the call [POST Cancel Payment](https://developers.vtex.com/vtex-rest-api/reference/cancelpayment) to the payment provider.
+When a payment is approved but canceled before being settled, VTEX makes the call [POST Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations) to the payment provider.
 
 Regardless of the provider's response, VTEX will end the transaction with the status `canceled`.
 
 #### Payment not approved
 
-VTEX sends the [POST Cancel Payment](https://developers.vtex.com/reference/cancelpayment) request to the payment provider once there is no need to refund a payment that was not settled.
+VTEX sends the [POST Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations) request to the payment provider once there is no need to refund a payment that was not settled.
 
 If the provider does not authorize the payment cancellation and returns a response with an `undefined` status, the flow will run asynchronously for a day. If the provider does not respond after this period, the payment will be canceled.
 
 ### Settlement
 
-Once the gateway authorizes the payment, VTEX sends the [POST Settle Payment](https://developers.vtex.com/reference/settlepayment) request to the provider. If the provider does not authorize the settlement right the way, the request will keep running asynchronously for a day.
+Once the gateway authorizes the payment, VTEX sends the [POST Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements) request to the provider. If the provider does not authorize the settlement right the way, the request will keep running asynchronously for a day.
 
 During this period, when the provider responds to the call authorizing the settlement, VTEX’s platform changes the transaction status to `finished` and completes the flow.
 
@@ -145,8 +141,8 @@ When using asynchronous communication, VTEX will wait for a longer period of tim
 
 Depending on the payment method selected, three endpoints in the payment flow might use synchronous or asynchronous communication:
 
-- [POST Create Payment](https://developers.vtex.com/reference/createpayment)
-- [POST Cancel Payment](https://developers.vtex.com/reference/cancelpayment)
-- [POST Settle Payment](https://developers.vtex.com/reference/settlepayment)
+- [POST Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments)
+- [POST Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations)
+- [POST Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements)
 
 Since the selection of payment method depends on the customer, **your provider must be prepared to receive multiple repeated requests** in those endpoints.
