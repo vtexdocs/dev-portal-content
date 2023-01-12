@@ -22,7 +22,7 @@ The Tab Layout app provides you the needed structure to create different layouts
  }
 ```
 
-Now, you are able to use all the blocks exported by the `tab-layou` app. Check out the full list below:
+Now, you are able to use all the blocks exported by the `tab-layout` app. Check out the full list below:
 
 | Block name   | Description                |
 | :----------: | :------------------------: |
