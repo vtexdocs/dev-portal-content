@@ -13,5 +13,7 @@ VTEX allows anti-fraud providers and merchants to have the autonomy to decide wh
 On the [GET Antifraud Manifest](https://developers.vtex.com/vtex-rest-api/reference/manifest) endpoint, the `cardholderDocument` field, which indicates the requirement of card holder document in card transactions has been added. The field has three possible values: `required`, `optional`, or `unused`.
 
 Learn More:
+
 [Cardholder Document Configuration - Dev. Portal](https://developers.vtex.com/vtex-rest-api/docs/cardholder-document-configuration)
+
 [Cardholder Document Configuration - Help Center](https://help.vtex.com/en/tutorial/antifraud-provider--4aZtmdpgFikcsQomWyqAOq#cardholder-document-configuration)
