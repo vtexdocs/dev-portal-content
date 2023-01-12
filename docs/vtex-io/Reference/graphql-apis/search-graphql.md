@@ -600,7 +600,7 @@ Total number of products.
 </td></tr><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td>
 Title used in the title's tag.
 </td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a></td><td>
-String to be used in the <code><meta name="description"...</code> tag.
+String to be used in the <code><meta name="description"></code> tag.
 </td></tr><tr><td colspan="2" valign="top"><strong>breadcrumb</strong> ⚠️</td><td valign="top">[<a href="#searchbreadcrumb">SearchBreadcrumb</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>
 Use the `breadcrumb` from the `facets` query instead.
 </blockquote></td></tr><tr><td colspan="2" valign="top"><strong>canonical</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>suggestion</strong> ⚠️</td><td valign="top"><a href="#searchsuggestions">SearchSuggestions</a></td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>
