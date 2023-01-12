@@ -90,7 +90,7 @@ The communication between stores and shoppers about subscription orders happens 
 
 ## Enabling manual prices
 
-When using **Subscriptions**, stores might need to configure prices manually. By [enabling the Manual Price feature for Subscriptions](https://developers.vtex.com/docs/guides/enabling-manual-prices-for-subscriptions-v3#setting-a-manual-price-in-a-subscription-item),** **merchants can apply a manual price on each subscription item, overriding the current price, and maintain the same manual price for future recurrent orders from a given subscription.
+When using **Subscriptions**, stores might need to configure prices manually. By [enabling the Manual Price feature for Subscriptions](https://developers.vtex.com/docs/guides/enabling-manual-prices-for-subscriptions-v3#setting-a-manual-price-in-a-subscription-item), merchants can apply a manual price on each subscription item, overriding the current price, and maintain the same manual price for future recurrent orders from a given subscription.
 
 ## Simulating prices
 
