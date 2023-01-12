@@ -127,7 +127,7 @@ These blocks provide more detailed availability information and are designed for
 
 The above JSON will render an availability section that looks like this:
 
-![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store%20Framework%20Apps/b2b-components/images/availability-example.png)
+![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store%20Framework%20Apps/b2b-components/availability-example.png)
 
 ## Customization
 
