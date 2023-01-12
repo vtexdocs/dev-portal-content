@@ -5,6 +5,7 @@ hidden: true
 createdAt: "2022-04-22T20:23:26.568Z"
 updatedAt: "2022-05-25T18:13:24.057Z"
 ---
+
 This app exports a GraphQL schema for search results on VTEX Stores.
 
 The default implementation for this schema is on [vtex.search-resolver](https://github.com/vtex-apps/search-resolver) app.
@@ -134,200 +135,45 @@ To resolve this query, you need to have a app that implements the schema declare
 </details>
 
 ## Query
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>product</strong></td><td valign="top"><a href="#product">Product</a></td><td>
-Returns a specified product
-</td></tr><tr><td colspan="2" align="right" valign="top">slug</td><td valign="top"><a href="#string">String</a></td><td>
-Product slug
-</td></tr><tr><td colspan="2" align="right" valign="top">identifier</td><td valign="top"><a href="#productuniqueidentifier">ProductUniqueIdentifier</a></td><td>
-Product identifier
-</td></tr><tr><td colspan="2" align="right" valign="top">regionId</td><td valign="top"><a href="#string">String</a></td><td>
-Seller id encoded with base64 according to this format SW#{sellerId}
-</td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#int">Int</a></td><td>
-Trade Policy
-</td></tr><tr><td colspan="2" valign="top"><strong>banners</strong></td><td valign="top"><a href="#banners">Banners</a></td><td>
-Lists the banners registered for a given query. Check the <a href="https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4ViKEivLJtJsvpaW0aqIQ5">configuring banners documentation</a> for a full explanation of the banner feature.
-</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>
-Search term. It can contain any character.
-</td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>product</strong></td><td valign="top"><a href="#product">Product</a></td><td>Returns a specified product</td></tr><tr><td colspan="2" align="right" valign="top">slug</td><td valign="top"><a href="#string">String</a></td><td>Product slug</td></tr><tr><td colspan="2" align="right" valign="top">identifier</td><td valign="top"><a href="#productuniqueidentifier">ProductUniqueIdentifier</a></td><td>Product identifier</td></tr><tr><td colspan="2" align="right" valign="top">regionId</td><td valign="top"><a href="#string">String</a></td><td>Seller id encoded with base64 according to this format SW#{sellerId}</td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#int">Int</a></td><td>Trade Policy</td></tr><tr><td colspan="2" valign="top"><strong>banners</strong></td><td valign="top"><a href="#banners">Banners</a></td><td>
+Lists the banners registered for a given query. Check the <a href="https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4ViKEivLJtJsvpaW0aqIQ5">configuring banners documentation</a> for a full explanation of the banner feature.</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>Search term. It can contain any character.</td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
+
 List of the selected facets
 
 The order in which the terms appear is not relevant to the search.
 
 You can also repeat the same <code>facetKey</code> several times for different values.
-</td></tr><tr><td colspan="2" valign="top"><strong>correction</strong></td><td valign="top"><a href="#correction">Correction</a></td><td>
-Tries to correct a misspelled term from the search.
-</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>
-Search term. It can contain any character.
-</td></tr><tr><td colspan="2" valign="top"><strong>searchSuggestions</strong></td><td valign="top"><a href="#searchsuggestions">SearchSuggestions</a></td><td>
+</td></tr><tr><td colspan="2" valign="top"><strong>correction</strong></td><td valign="top"><a href="#correction">Correction</a></td><td>Tries to correct a misspelled term from the search.</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>Search term. It can contain any character.</td></tr><tr><td colspan="2" valign="top"><strong>searchSuggestions</strong></td><td valign="top"><a href="#searchsuggestions">SearchSuggestions</a></td><td>
+
 Lists suggested terms similar to the search term.
-</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a>!</td><td>
-Search term. It can contain any character.
-</td></tr><tr><td colspan="2" valign="top"><strong>productSearch</strong></td><td valign="top"><a href="#productsearch">ProductSearch</a></td><td>
-Lists the products for a given query.
-</td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>fullText</code> instead.
-</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>
-Search term. It can contain any character.
-</td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
-</td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
+</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a>!</td><td>Search term. It can contain any character.</td></tr><tr><td colspan="2" valign="top"><strong>productSearch</strong></td><td valign="top"><a href="#productsearch">ProductSearch</a></td><td>Lists the products for a given query.</td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td><b>Deprecated</b>. Use <code>fullText</code> instead.</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>Search term. It can contain any character.</td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td><b>Deprecated</b>. Use <code>selectedFacets</code> instead.</td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
+
 List of the selected facets
 
 The order in which the terms appear is not relevant to the search.
 
 You can also repeat the same <code>facetKey</code> several times for different values.
-</td></tr><tr><td colspan="2" align="right" valign="top">category</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
-</td></tr><tr><td colspan="2" align="right" valign="top">specificationFilters</td><td valign="top">[<a href="#string">String</a>]</td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
-</td></tr><tr><td colspan="2" align="right" valign="top">priceRange</td><td valign="top"><a href="#string">String</a></td><td>
-Filter by price range. e.g.: {a} TO {b} - {a} is the minimum price "from" and {b} is the highest price "to"
-</td></tr><tr><td colspan="2" align="right" valign="top">collection</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
-</td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#string">String</a></td><td>
-Filter by availability at a specific sales channel. e.g.: salesChannel:4 if want filter by available products for the sales channel 4
-</td></tr><tr><td colspan="2" align="right" valign="top">orderBy</td><td valign="top"><a href="#string">String</a></td><td>
-Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC
-If you want to sort by a specification, use the format {specification key}:{asc|desc}. For example: "pricePerUnit:asc" or "size:desc" (this only works on <code>vtex.search-resolver@1.x</code>)
-</td></tr><tr><td colspan="2" align="right" valign="top">from</td><td valign="top"><a href="#int">Int</a></td><td>
-Pagination item start
-</td></tr><tr><td colspan="2" align="right" valign="top">to</td><td valign="top"><a href="#int">Int</a></td><td>
-Pagination item end
-</td></tr><tr><td colspan="2" align="right" valign="top">hideUnavailableItems</td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel. Will override any given salesChannel arg
-</td></tr><tr><td colspan="2" align="right" valign="top">simulationBehavior</td><td valign="top"><a href="#simulationbehavior">SimulationBehavior</a></td><td>
-If you want faster searches and do not care about most up to date prices and promotions, use skip value.
-</td></tr><tr><td colspan="2" align="right" valign="top">productOriginVtex</td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-Each search engine has its own database, but this database might not have all the product information like <code>clusterHighlights</code> or <code>productClusters</code>.
-As an alternative, the search engine may use the VTEX API to complete this information by setting this field to true.
-</td></tr><tr><td colspan="2" align="right" valign="top">operator</td><td valign="top"><a href="#operator">Operator</a></td><td>
-Indicates how the search-engine will deal with the fullText if there is more than one word. Set <code>and</code> if the returned products must have all the words in its metadata or <code>or</code> otherwise.
-</td></tr><tr><td colspan="2" align="right" valign="top">fuzzy</td><td valign="top"><a href="#string">String</a></td><td>
-Indicates how the search engine will correct misspelled words by using fuzzy logic.
-It can be a number representing the max number of misspelled letters, or the string <code>auto</code> suggesting that the search-engine should set this value by itself.
-</td></tr><tr><td colspan="2" align="right" valign="top">searchState</td><td valign="top"><a href="#string">String</a></td><td>
-As fuzzy and operator, it controls the search state, but it is for general purposes. This field allows the search engines to apply features that are not handled by the other fields.
-The possible values in this field are defined by each search engine.
-</td></tr><tr><td colspan="2" align="right" valign="top">options</td><td valign="top"><a href="#options">Options</a></td><td>
-Search options that customize the search result.
-</td></tr><tr><td colspan="2" valign="top"><strong>searchMetadata</strong></td><td valign="top"><a href="#searchmetadata">SearchMetadata</a></td><td></td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td>
-Terms that is used in search e.g.: eletronics/samsung
-</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>
-Text inputted by the user as the search term
-</td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td>
-Defines terms types: Brand, Category, Department e.g.: c,b
-</td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
+</td></tr><tr><td colspan="2" align="right" valign="top">category</td><td valign="top"><a href="#string">String</a></td><td><b>Deprecated</b>. Use <code>selectedFacets</code> instead.
+</td></tr><tr><td colspan="2" align="right" valign="top">specificationFilters</td><td valign="top">[<a href="#string">String</a>]</td><td><b>Deprecated</b>. Use <code>selectedFacets</code> instead.</td></tr><tr><td colspan="2" align="right" valign="top">priceRange</td><td valign="top"><a href="#string">String</a></td><td>Filter by price range. e.g.: {a} TO {b} - {a} is the minimum price "from" and {b} is the highest price "to"</td></tr><tr><td colspan="2" align="right" valign="top">collection</td><td valign="top"><a href="#string">String</a></td><td><b>Deprecated</b>. Use <code>selectedFacets</code> instead.</td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#string">String</a></td><td>Filter by availability at a specific sales channel. e.g.: salesChannel:4 if want filter by available products for the sales channel 4</td></tr><tr><td colspan="2" align="right" valign="top">orderBy</td><td valign="top"><a href="#string">String</a></td><td>Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC. If you want to sort by a specification, use the format {specification key}:{asc|desc}. For example: "pricePerUnit:asc" or "size:desc" (this only works on <code>vtex.search-resolver@1.x</code>)</td></tr><tr><td colspan="2" align="right" valign="top">from</td><td valign="top"><a href="#int">Int</a></td><td>Pagination item start</td></tr><tr><td colspan="2" align="right" valign="top">to</td><td valign="top"><a href="#int">Int</a></td><td>Pagination item end</td></tr><tr><td colspan="2" align="right" valign="top">hideUnavailableItems</td><td valign="top"><a href="#boolean">Boolean</a></td><td>If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel. Will override any given salesChannel arg</td></tr><tr><td colspan="2" align="right" valign="top">simulationBehavior</td><td valign="top"><a href="#simulationbehavior">SimulationBehavior</a></td><td>If you want faster searches and do not care about most up to date prices and promotions, use skip value.</td></tr><tr><td colspan="2" align="right" valign="top">productOriginVtex</td><td valign="top"><a href="#boolean">Boolean</a></td><td>Each search engine has its own database, but this database might not have all the product information like <code>clusterHighlights</code> or <code>productClusters</code>.As an alternative, the search engine may use the VTEX API to complete this information by setting this field to true.</td></tr><tr><td colspan="2" align="right" valign="top">operator</td><td valign="top"><a href="#operator">Operator</a></td><td>Indicates how the search-engine will deal with the fullText if there is more than one word. Set <code>and</code> if the returned products must have all the words in its metadata or <code>or</code> otherwise.</td></tr><tr><td colspan="2" align="right" valign="top">fuzzy</td><td valign="top"><a href="#string">String</a></td><td>Indicates how the search engine will correct misspelled words by using fuzzy logic. It can be a number representing the max number of misspelled letters, or the string <code>auto</code> suggesting that the search-engine should set this value by itself.</td></tr><tr><td colspan="2" align="right" valign="top">searchState</td><td valign="top"><a href="#string">String</a></td><td>As fuzzy and operator, it controls the search state, but it is for general purposes. This field allows the search engines to apply features that are not handled by the other fields. The possible values in this field are defined by each search engine.</td></tr><tr><td colspan="2" align="right" valign="top">options</td><td valign="top"><a href="#options">Options</a></td><td>Search options that customize the search result.</td></tr><tr><td colspan="2" valign="top"><strong>searchMetadata</strong></td><td valign="top"><a href="#searchmetadata">SearchMetadata</a></td><td></td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td>Terms that is used in search e.g.: eletronics/samsung</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>Text inputted by the user as the search term</td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td>Defines terms types: Brand, Category, Department e.g.: c,b</td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
+
+List of the selected facets
+
+The order in which the terms appear is not relevant to the search.
+
+You can also repeat the same <code>facetKey</code> several times for different values.</td></tr><tr><td colspan="2" valign="top"><strong>products</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td>Returns products list filtered and ordered</td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td>Terms that is used in search e.g.: eletronics/samsung</td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td>Defines terms types: Brand, Category, Department e.g.: c,b</td></tr><tr><td colspan="2" align="right" valign="top">category</td><td valign="top"><a href="#string">String</a></td><td>Filter by category. {a}/{b} - {a} and {b} are categoryIds</td></tr><tr><td colspan="2" align="right" valign="top">specificationFilters</td><td valign="top">[<a href="#string">String</a>]</td><td>Array of product specification. specificationFilter_{a}:{b} - {a} is the specificationId, {b} = specification value</td></tr><tr><td colspan="2" align="right" valign="top">priceRange</td><td valign="top"><a href="#string">String</a></td><td>Filter by price range. e.g.: {a} TO {b} - {a} is the minimum price "from" and {b} is the highest price "to"</td></tr><tr><td colspan="2" align="right" valign="top">collection</td><td valign="top"><a href="#string">String</a></td><td>Filter by collection. where collection also know as productClusterId</td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#string">String</a></td><td>Filter by availability at a specific sales channel. e.g.: salesChannel:4 if want filter by available products for the sales channel 4</td></tr><tr><td colspan="2" align="right" valign="top">orderBy</td><td valign="top"><a href="#string">String</a></td><td>Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC</td></tr><tr><td colspan="2" align="right" valign="top">from</td><td valign="top"><a href="#int">Int</a></td><td>Pagination item start</td></tr><tr><td colspan="2" align="right" valign="top">to</td><td valign="top"><a href="#int">Int</a></td><td>Pagination item end
+</td></tr><tr><td colspan="2" align="right" valign="top">hideUnavailableItems</td><td valign="top"><a href="#boolean">Boolean</a></td><td>If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel. Will override any given salesChannel arg</td></tr><tr><td colspan="2" align="right" valign="top">simulationBehavior</td><td valign="top"><a href="#simulationbehavior">SimulationBehavior</a></td><td>If you want faster searches and do not care about most up to date prices and promotions, use skip value.
+</td></tr><tr><td colspan="2" valign="top"><strong>productRecommendations</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td></td></tr><tr><td colspan="2" align="right" valign="top">identifier</td><td valign="top"><a href="#productuniqueidentifier">ProductUniqueIdentifier</a></td><td></td></tr><tr><td colspan="2" align="right" valign="top">type</td><td valign="top"><a href="#crossselinginputenum">CrossSelingInputEnum</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>productsByIdentifier</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td></td></tr><tr><td colspan="2" align="right" valign="top">field</td><td valign="top"><a href="#productuniqueidentifierfield">ProductUniqueIdentifierField</a>!</td><td></td></tr><tr><td colspan="2" align="right" valign="top">values</td><td valign="top">[<a href="#id">ID</a>!]</td><td></td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#string">String</a></td><td>Filter by availability at a specific sales channel.</td></tr><tr><td colspan="2" valign="top"><strong>facets</strong></td><td valign="top"><a href="#facets">Facets</a></td><td>Returns facets category</td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td><b>Deprecated</b>. Use <code>fullText</code> instead.</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>Search term. It can contain any character.</td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td><b>Deprecated</b>. Use <code>selectedFacets</code> instead.</td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
+
 List of the selected facets
 
 The order in which the terms appear is not relevant to the search.
 
 You can also repeat the same <code>facetKey</code> several times for different values.
-</td></tr><tr><td colspan="2" valign="top"><strong>products</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td>
-Returns products list filtered and ordered
-</td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td>
-Terms that is used in search e.g.: eletronics/samsung
-</td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td>
-Defines terms types: Brand, Category, Department e.g.: c,b
-</td></tr><tr><td colspan="2" align="right" valign="top">category</td><td valign="top"><a href="#string">String</a></td><td>
-Filter by category. {a}/{b} - {a} and {b} are categoryIds
-</td></tr><tr><td colspan="2" align="right" valign="top">specificationFilters</td><td valign="top">[<a href="#string">String</a>]</td><td>
-Array of product specification. specificationFilter_{a}:{b} - {a} is the specificationId, {b} = specification value
-</td></tr><tr><td colspan="2" align="right" valign="top">priceRange</td><td valign="top"><a href="#string">String</a></td><td>
-Filter by price range. e.g.: {a} TO {b} - {a} is the minimum price "from" and {b} is the highest price "to"
-</td></tr><tr><td colspan="2" align="right" valign="top">collection</td><td valign="top"><a href="#string">String</a></td><td>
-Filter by collection. where collection also know as productClusterId
-</td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#string">String</a></td><td>
-Filter by availability at a specific sales channel. e.g.: salesChannel:4 if want filter by available products for the sales channel 4
-</td></tr><tr><td colspan="2" align="right" valign="top">orderBy</td><td valign="top"><a href="#string">String</a></td><td>
-Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC
-</td></tr><tr><td colspan="2" align="right" valign="top">from</td><td valign="top"><a href="#int">Int</a></td><td>
-Pagination item start
-</td></tr><tr><td colspan="2" align="right" valign="top">to</td><td valign="top"><a href="#int">Int</a></td><td>
-Pagination item end
-</td></tr><tr><td colspan="2" align="right" valign="top">hideUnavailableItems</td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel. Will override any given salesChannel arg
-</td></tr><tr><td colspan="2" align="right" valign="top">simulationBehavior</td><td valign="top"><a href="#simulationbehavior">SimulationBehavior</a></td><td>
-If you want faster searches and do not care about most up to date prices and promotions, use skip value.
-</td></tr><tr><td colspan="2" valign="top"><strong>productRecommendations</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td></td></tr><tr><td colspan="2" align="right" valign="top">identifier</td><td valign="top"><a href="#productuniqueidentifier">ProductUniqueIdentifier</a></td><td></td></tr><tr><td colspan="2" align="right" valign="top">type</td><td valign="top"><a href="#crossselinginputenum">CrossSelingInputEnum</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>productsByIdentifier</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td></td></tr><tr><td colspan="2" align="right" valign="top">field</td><td valign="top"><a href="#productuniqueidentifierfield">ProductUniqueIdentifierField</a>!</td><td></td></tr><tr><td colspan="2" align="right" valign="top">values</td><td valign="top">[<a href="#id">ID</a>!]</td><td></td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#string">String</a></td><td>
-Filter by availability at a specific sales channel.
-</td></tr><tr><td colspan="2" valign="top"><strong>facets</strong></td><td valign="top"><a href="#facets">Facets</a></td><td>
-Returns facets category
-</td></tr><tr><td colspan="2" align="right" valign="top">query</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>fullText</code> instead.
-</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a></td><td>
-Search term. It can contain any character.
-</td></tr><tr><td colspan="2" align="right" valign="top">map</td><td valign="top"><a href="#string">String</a></td><td>
-<b>Deprecated</b>. Use <code>selectedFacets</code> instead.
-</td></tr><tr><td colspan="2" align="right" valign="top">selectedFacets</td><td valign="top">[<a href="#selectedfacetinput">SelectedFacetInput</a>]</td><td>
-List of the selected facets
-
-The order in which the terms appear is not relevant to the search.
-
-You can also repeat the same <code>facetKey</code> several times for different values.
-</td></tr><tr><td colspan="2" align="right" valign="top">hideUnavailableItems</td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel.
-</td></tr><tr><td colspan="2" align="right" valign="top">removeHiddenFacets</td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-If true, remove hidden facets from the result.
-</td></tr><tr><td colspan="2" align="right" valign="top">behavior</td><td valign="top"><a href="#string">String</a></td><td>
-If Static, ignores SpecificationFilters received on the map and query when returning
-the facets available, which makes the facets never change.
-</td></tr><tr><td colspan="2" align="right" valign="top">operator</td><td valign="top"><a href="#operator">Operator</a></td><td>
-Indicates how the search-engine will deal with the fullText if there is more than one word. Set <code>and</code> if the returned products must have all the words in its metadata or <code>or</code> otherwise.
-</td></tr><tr><td colspan="2" align="right" valign="top">fuzzy</td><td valign="top"><a href="#string">String</a></td><td>
-Indicates how the search engine will correct misspelled words by using fuzzy logic.
-It can be a number representing the max number of misspelled letters, or the string <code>auto</code> suggesting that the search-engine should set this value by itself.
-</td></tr><tr><td colspan="2" align="right" valign="top">searchState</td><td valign="top"><a href="#string">String</a></td><td>
-As fuzzy and operator, it controls the search state, but it is for general purposes. This field allows the search engines to apply features that are not handled by the other fields.
-The possible values in this field are defined by each search engine.
-</td></tr><tr><td colspan="2" align="right" valign="top">from</td><td valign="top"><a href="#int">Int</a></td><td>
-Pagination item start
-</td></tr><tr><td colspan="2" align="right" valign="top">to</td><td valign="top"><a href="#int">Int</a></td><td>
-Pagination item end
-</td></tr><tr><td colspan="2" align="right" valign="top">categoryTreeBehavior</td><td valign="top"><a href="#categorytreebehavior">CategoryTreeBehavior</a></td><td>
-Determines the behavior of the category tree
-</td></tr><tr><td colspan="2" align="right" valign="top">initialAttributes</td><td valign="top"><a href="#string">String</a></td><td>
-Initial attributes (based on the <code>initialMap</code> parameter)
-</td></tr><tr><td colspan="2" valign="top"><strong>autocomplete</strong></td><td valign="top"><a href="#suggestions">Suggestions</a></td><td>
-Get auto complete suggestions in search
-</td></tr><tr><td colspan="2" align="right" valign="top">maxRows</td><td valign="top"><a href="#int">Int</a></td><td>
-Number of items that is returned
-</td></tr><tr><td colspan="2" align="right" valign="top">searchTerm</td><td valign="top"><a href="#string">String</a></td><td>
-Terms that is used in search e.g.: iphone
-</td></tr><tr><td colspan="2" valign="top"><strong>topSearches</strong></td><td valign="top"><a href="#searchsuggestions">SearchSuggestions</a></td><td>
-Get list of the 10 most searched terms
-</td></tr><tr><td colspan="2" valign="top"><strong>autocompleteSearchSuggestions</strong></td><td valign="top"><a href="#searchsuggestions">SearchSuggestions</a></td><td>
-Lists the suggested terms and attributes similar to the search term.
-</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a>!</td><td>
-Search term. It can contain any character.
-</td></tr><tr><td colspan="2" valign="top"><strong>productSuggestions</strong></td><td valign="top"><a href="#productsuggestions">ProductSuggestions</a></td><td>
-Get product suggestions
-</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a>!</td><td>
-Text inputted by the user as the search term
-</td></tr><tr><td colspan="2" align="right" valign="top">facetKey</td><td valign="top"><a href="#string">String</a></td><td>
-Selected facet key
-</td></tr><tr><td colspan="2" align="right" valign="top">facetValue</td><td valign="top"><a href="#string">String</a></td><td>
-Selected facet value
-</td></tr><tr><td colspan="2" align="right" valign="top">productOriginVtex</td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-Each search engine has its own database, but this database might not have all the product information like <code>clusterHighlights</code> or <code>productClusters</code>.
-As an alternative, the search engine may use the VTEX API to complete this information by setting this field to true.
-</td></tr><tr><td colspan="2" align="right" valign="top">simulationBehavior</td><td valign="top"><a href="#simulationbehavior">SimulationBehavior</a></td><td>
-If you want faster searches and do not care about most up to date prices and promotions, use skip value.
-</td></tr><tr><td colspan="2" align="right" valign="top">hideUnavailableItems</td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel
-</td></tr><tr><td colspan="2" align="right" valign="top">regionId</td><td valign="top"><a href="#string">String</a></td><td>
-Seller id encoded with base64 according to this format SW#{sellerId}
-</td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#int">Int</a></td><td>
-Sales Channel related to the region ID
-</td></tr><tr><td colspan="2" align="right" valign="top">orderBy</td><td valign="top"><a href="#string">String</a></td><td>
-Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC
-If you want to sort by a specification, use the format {specification key}:{asc|desc}. For example: "pricePerUnit:asc" or "size:desc" (this only works on <code>vtex.search-resolver@1.x</code>)
-</td></tr><tr><td colspan="2" valign="top"><strong>searchURLsCount</strong></td><td valign="top">[<a href="#searchurlstats">SearchURLStats</a>]</td><td>
-Get search urls access stats count
-</td></tr><tr><td colspan="2" align="right" valign="top">limit</td><td valign="top"><a href="#int">Int</a></td><td>
-Number of items that is returned
-</td></tr><tr><td colspan="2" align="right" valign="top">sort</td><td valign="top"><a href="#sort">SORT</a></td><td>
-Sorting strategy, asc: ascending, desc: descending
-</td></tr></tbody></table>
+</td></tr><tr><td colspan="2" align="right" valign="top">hideUnavailableItems</td><td valign="top"><a href="#boolean">Boolean</a></td><td>If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel.</td></tr><tr><td colspan="2" align="right" valign="top">removeHiddenFacets</td><td valign="top"><a href="#boolean">Boolean</a></td><td>
+If true, remove hidden facets from the result.</td></tr><tr><td colspan="2" align="right" valign="top">behavior</td><td valign="top"><a href="#string">String</a></td><td>If Static, ignores SpecificationFilters received on the map and query when returning the facets available, which makes the facets never change.</td></tr><tr><td colspan="2" align="right" valign="top">operator</td><td valign="top"><a href="#operator">Operator</a></td><td>Indicates how the search-engine will deal with the fullText if there is more than one word. Set <code>and</code> if the returned products must have all the words in its metadata or <code>or</code> otherwise.</td></tr><tr><td colspan="2" align="right" valign="top">fuzzy</td><td valign="top"><a href="#string">String</a></td><td>Indicates how the search engine will correct misspelled words by using fuzzy logic. It can be a number representing the max number of misspelled letters, or the string <code>auto</code> suggesting that the search-engine should set this value by itself.</td></tr><tr><td colspan="2" align="right" valign="top">searchState</td><td valign="top"><a href="#string">String</a></td><td>As fuzzy and operator, it controls the search state, but it is for general purposes. This field allows the search engines to apply features that are not handled by the other fields. The possible values in this field are defined by each search engine.</td></tr><tr><td colspan="2" align="right" valign="top">from</td><td valign="top"><a href="#int">Int</a></td><td>Pagination item start</td></tr><tr><td colspan="2" align="right" valign="top">to</td><td valign="top"><a href="#int">Int</a></td><td>Pagination item end</td></tr><tr><td colspan="2" align="right" valign="top">categoryTreeBehavior</td><td valign="top"><a href="#categorytreebehavior">CategoryTreeBehavior</a></td><td>Determines the behavior of the category tree</td></tr><tr><td colspan="2" align="right" valign="top">initialAttributes</td><td valign="top"><a href="#string">String</a></td><td>Initial attributes (based on the <code>initialMap</code> parameter)</td></tr><tr><td colspan="2" valign="top"><strong>autocomplete</strong></td><td valign="top"><a href="#suggestions">Suggestions</a></td><td>Get auto complete suggestions in search</td></tr><tr><td colspan="2" align="right" valign="top">maxRows</td><td valign="top"><a href="#int">Int</a></td><td>Number of items that is returned</td></tr><tr><td colspan="2" align="right" valign="top">searchTerm</td><td valign="top"><a href="#string">String</a></td><td>Terms that is used in search e.g.: iphone</td></tr><tr><td colspan="2" valign="top"><strong>topSearches</strong></td><td valign="top"><a href="#searchsuggestions">SearchSuggestions</a></td><td>Get list of the 10 most searched terms</td></tr><tr><td colspan="2" valign="top"><strong>autocompleteSearchSuggestions</strong></td><td valign="top"><a href="#searchsuggestions">SearchSuggestions</a></td><td>Lists the suggested terms and attributes similar to the search term.</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a>!</td><td>Search term. It can contain any character.</td></tr><tr><td colspan="2" valign="top"><strong>productSuggestions</strong></td><td valign="top"><a href="#productsuggestions">ProductSuggestions</a></td><td>Get product suggestions</td></tr><tr><td colspan="2" align="right" valign="top">fullText</td><td valign="top"><a href="#string">String</a>!</td><td>Text inputted by the user as the search term</td></tr><tr><td colspan="2" align="right" valign="top">facetKey</td><td valign="top"><a href="#string">String</a></td><td>Selected facet key
+</td></tr><tr><td colspan="2" align="right" valign="top">facetValue</td><td valign="top"><a href="#string">String</a></td><td>Selected facet value
+</td></tr><tr><td colspan="2" align="right" valign="top">productOriginVtex</td><td valign="top"><a href="#boolean">Boolean</a></td><td>Each search engine has its own database, but this database might not have all the product information like <code>clusterHighlights</code> or <code>productClusters</code>. As an alternative, the search engine may use the VTEX API to complete this information by setting this field to true.</td></tr><tr><td colspan="2" align="right" valign="top">simulationBehavior</td><td valign="top"><a href="#simulationbehavior">SimulationBehavior</a></td><td>If you want faster searches and do not care about most up to date prices and promotions, use skip value.</td></tr><tr><td colspan="2" align="right" valign="top">hideUnavailableItems</td><td valign="top"><a href="#boolean">Boolean</a></td><td>If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel</td></tr><tr><td colspan="2" align="right" valign="top">regionId</td><td valign="top"><a href="#string">String</a></td><td>Seller id encoded with base64 according to this format SW#{sellerId}</td></tr><tr><td colspan="2" align="right" valign="top">salesChannel</td><td valign="top"><a href="#int">Int</a></td><td>Sales Channel related to the region ID</td></tr><tr><td colspan="2" align="right" valign="top">orderBy</td><td valign="top"><a href="#string">String</a></td><td>Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC. If you want to sort by a specification, use the format {specification key}:{asc|desc}. For example: "pricePerUnit:asc" or "size:desc" (this only works on <code>vtex.search-resolver@1.x</code>)</td></tr><tr><td colspan="2" valign="top"><strong>searchURLsCount</strong></td><td valign="top">[<a href="#searchurlstats">SearchURLStats</a>]</td><td>Get search urls access stats count
+</td></tr><tr><td colspan="2" align="right" valign="top">limit</td><td valign="top"><a href="#int">Int</a></td><td>Number of items that is returned</td></tr><tr><td colspan="2" align="right" valign="top">sort</td><td valign="top"><a href="#sort">SORT</a></td><td>Sorting strategy, asc: ascending, desc: descending</td></tr></tbody></table>
 
 ## Objects
 ### AssemblyOption
