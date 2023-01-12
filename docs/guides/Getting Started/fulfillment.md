@@ -6,16 +6,11 @@ createdAt: "2023-01-11T13:13:50.000Z"
 updatedAt: "2023-01-11T13:13:50.000Z"
 ---
 
-[block:html]
-{
-"html": "<style>\n .markdown-body .callout[theme=\"📣\"] {\n --icon: \"\\f0a1\";\n --icon-color: #142032;\n --border: #142032;\n --background: #f8f7fc;\n --text: #4a596b;\n }\n </style>\n <blockquote class=\"callout callout_loudspeaker\" theme=\"📣\">\n <h3 class=\"callout-heading\"><span class=\"callout-icon\">📣</span>Help us improve our documentation! </h3>\n <p>\n Tell us about your experience with this article by filling out <a href="https://forms.gle/fQoELRA1yfKDqmAb8">this form</a>!\n </p>\n </blockquote>"
-}
-[/block]
+> Help us improve our documentation! Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8)!"
 
 [Fulfillment](https://help.vtex.com/en/tutorial/fulfillment-logistics-vtex--53udnvI5eBy8DKo8FOjMoP) is the process of storing merchandise and receiving, managing, packing and shipping orders. It starts when a shopper buys a product and ends when the life cycle of the order is complete with the shopper receiving the purchase.
 
 This overview article goes over what you can accomplish with VTEX logistics’ capabilities, like the registration and control of your inventory, shipping rates management, items availability control, tracking deliveries, and more.
-
 
 ## Importing inventory from an ERP or Back office
 
@@ -25,7 +20,6 @@ If your store has an ERP integration or another integration for inventory manage
 * [Import inventory](https://developers.vtex.com/docs/guides/erp-integration-import-inventory)
 
 >ℹ️ If you wish to customize the fulfillment capabilities in the storefront, see the [Checkout guide](https://developers.vtex.com/docs/guides/checkout-overview) overview.
-
 
 ## Understanding fulfillment process
 
@@ -43,14 +37,13 @@ The following image summarizes the fulfillment process:
 
 In VTEX, there are specific terms to identify the entities involved in order fulfillment, which can be checked in our [Logistics Glossary](https://help.vtex.com/en/tutorial/logistics-glossary--16DSSiXn548rsidi0A8Hby). A important concept is [Shipping strategy](https://help.vtex.com/en/tutorial/shipping-strategy--58vLBDbjYVQzJ6rRc5QNz3), defined as the relationship between the following entities:
 
-- [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140): also called trade policy, is a set of rules that define the shipping conditions, including carrier’s working hours, delivery time frames, shipping rates, and more.
-- [Loading dock](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW): entity that links your products to a shipping policy.
-- [Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb): location where your products are stored.
+* [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140): also called trade policy, is a set of rules that define the shipping conditions, including carrier’s working hours, delivery time frames, shipping rates, and more.
+* [Loading dock](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW): entity that links your products to a shipping policy.
+* [Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb): location where your products are stored.
 
 The following image shows how these entities connect to each other:
 
 ![fulfillment_image_2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/fulfillment_image_2.svg)
-
 
 ## Setting up shipping strategy (mandatory)
 
@@ -64,29 +57,25 @@ Configuring your shipping strategy means setting up a shipping policy, a loading
 
 **In Redesigned VTEX Admin:** Shipping > Shipping Strategy > Shipping Policies/Loading Docks/Warehouses
 
-
 ### 1. Shipping policy
 
 [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140), or trade policy, is defines the shipping conditions offered to the shopper at checkout, including costs and deadlines. This shipping policy set of rules includes carriers working hours, shipping capacity, and more.
 
-- [POST - Create shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/shipping-policies)
-
+* [POST - Create shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/shipping-policies)
 
 ### 2. Loading dock
 
 [Loading dock](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW) connects the warehouse to the shipping policy. The loading dock corresponds to a physical location from where products will be shipped. By default, when you create a new loading dock, it is generated as activated.
 
-- [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks)
-- [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/activation)
-
+* [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks)
+* [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/activation)
 
 ### 3. Warehouse
 
 [Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) is the physical location where you store your products. The items sold go from the warehouse to the loading dock for the carriers to deliver them. By default, when you create a new warehouse, it is generated as activated.
 
-- [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses)
-- [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
-
+* [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses)
+* [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
 
 ## Managing Shipping Strategy
 
@@ -96,61 +85,55 @@ Manage your [Shipping strategy](https://help.vtex.com/en/tutorial/shipping-strat
 
 **In Redesigned VTEX Admin:** Shipping > Shipping Strategy > Shipping Policies/Loading Docks/Warehouses
 
-
 ### Shipping policy
 
 You can list shipping policies, deactivate, reactivate, update or delete them.
 
-- [GET - List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/shipping-policies)
-- [GET - Retrieve shipping policy by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/shipping-policies/-id-)
-- [PUT - Update shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/shipping-policies/-id-)
-- [DELETE - Delete shipping policies by ID](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/shipping-policies/-id-)
-
+* [GET - List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/shipping-policies)
+* [GET - Retrieve shipping policy by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/shipping-policies/-id-)
+* [PUT - Update shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/shipping-policies/-id-)
+* [DELETE - Delete shipping policies by ID](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/shipping-policies/-id-)
 
 ### Loading dock
 
 You can list loading docks, deactivate, reactivate, update or delete them.
 
-- [GET - List all docks](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/docks)
-- [GET - List dock by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/docks/-dockId-)
-- [POST - Deactivate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/deactivation)
-- [DELETE - Delete dock](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/docks/-dockId-)
-- [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks)
-- [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/activation)
-
+* [GET - List all docks](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/docks)
+* [GET - List dock by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/docks/-dockId-)
+* [POST - Deactivate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/deactivation)
+* [DELETE - Delete dock](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/docks/-dockId-)
+* [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks)
+* [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/activation)
 
 ### Warehouse
 
 You can list warehouses, deactivate, reactivate, update or delete them.
 
-- [GET - List all warehouses](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/warehouses)
-- [GET - List warehouse by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/warehouses/-warehouseId-)
-- [POST - Deactivate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/deactivation)
-- [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
-- [DELETE - Remove warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/warehouses/-warehouseId-)
-- [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses)
-
+* [GET - List all warehouses](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/warehouses)
+* [GET - List warehouse by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/warehouses/-warehouseId-)
+* [POST - Deactivate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/deactivation)
+* [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
+* [DELETE - Remove warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/warehouses/-warehouseId-)
+* [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses)
 
 ## Managing inventory
 
-Once you have your Shipping strategy set up, you will need to manage the items available for sales, which compose your [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139). In VTEX, inventory is the relationship between your stored products and their availability for sales. 
-
+Once you have your Shipping strategy set up, you will need to manage the items available for sales, which compose your [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139). In VTEX, inventory is the relationship between your stored products and their availability for sales.
 
 ### Inventory
 
 You can update your inventory or retrieve information about it.
 
-- [PUT - Update inventory by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-)
-- [GET - List inventory by SKU](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/skus/-skuId-)
-- [GET - List inventory per warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-)
-- [GET - List inventory per dock](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/docks/-dockId-)
-- [GET - List inventory per dock and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-)
-- [GET - List inventory with dispatched reservations](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched)
+* [PUT - Update inventory by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-)
+* [GET - List inventory by SKU](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/skus/-skuId-)
+* [GET - List inventory per warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-)
+* [GET - List inventory per dock](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/docks/-dockId-)
+* [GET - List inventory per dock and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-)
+* [GET - List inventory with dispatched reservations](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched)
 
 **In VTEX Admin:** Orders > Inventory & Shipping > Inventory Management
 
 **In Redesigned VTEX Admin:** Catalog > Inventory > Inventory Management
-
 
 ## Setting up shipping configurations (Optional)
 
@@ -160,17 +143,14 @@ VTEX offers different solutions for your logistic process according to your busi
 
 **In Redesigned VTEX Admin:** Store Settings > Shipping > Settings/Geolocation Shipping/Holidays
 
-
 ### Geolocation shipping (polygons)
 
-[Geolocation shipping](https://help.vtex.com/en/tutorial/gerenciar-geolocalizacao--tutorials_138) is the registration of shipping locations using polygons to delimitate areas, usually for delivering in rural and industrial areas. 
+[Geolocation shipping](https://help.vtex.com/en/tutorial/gerenciar-geolocalizacao--tutorials_138) is the registration of shipping locations using polygons to delimitate areas, usually for delivering in rural and industrial areas.
 
-- [PUT - Create/update polygon](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/configuration/geoshape)
-- [GET - List paged polygons](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/geoshape)
-- [GET - List polygon by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/geoshape/-polygonName-)
-- [DELETE - Delete polygon](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/geoshape/-polygonName-)
-
-
+* [PUT - Create/update polygon](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/configuration/geoshape)
+* [GET - List paged polygons](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/geoshape)
+* [GET - List polygon by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/geoshape/-polygonName-)
+* [DELETE - Delete polygon](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/geoshape/-polygonName-)
 
 ### Reservations
 
@@ -183,7 +163,6 @@ VTEX offers different solutions for your logistic process according to your busi
 * [POST - Acknowledgment reservation](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/inventory/reservations/-reservationId-/acknowledge)
 * [POST - Cancel reservation](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/inventory/reservations/-reservationId-/cancel)
 
-
 ### Scheduled delivery
 
 [Scheduled delivery](https://help.vtex.com/en/tutorial/scheduled-delivery--22g3HAVCGLFiU7xugShOBi) allows you to set delivery time frames for shoppers to choose the day and time to receive the order.
@@ -194,7 +173,6 @@ VTEX offers different solutions for your logistic process according to your busi
 * [GET - Search capacity reservations in time range](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames)
 * [GET - Get capacity reservation usage by window](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames/-windowDay-F-windowStartTime-T-windowEndTime-)
 
-
 ### Holidays
 
 The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEAoyAmcwsuiO6Yk) feature allows you to configure days that should not be considered valid for delivery so that VTEX platform considers those days when calculating the shipping estimated time.
@@ -203,7 +181,6 @@ The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEA
 * [GET - List holiday by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/holidays/-holidayId-)
 * [GET - List all holidays](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/holidays)
 * [DELETE - Delete holiday](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/holidays/-holidayId-)
-
 
 ### Pickup points
 
@@ -219,11 +196,9 @@ The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEA
 
 **In Redesigned VTEX Admin:** Shipping > Pickup Points
 
-
 ## Calculating shipping estimate time
 
 When the shopper enters their address at checkout, the VTEX platform analyzes the order fulfillment conditions and displays the available shipping options to the shopper.
-
 
 ### SLA
 
@@ -231,11 +206,9 @@ Service Level Agreement (SLA) refers to the order’s fulfillment conditions pre
 
 * POST - [Calculate SLA](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/shipping/calculate)
 
-
 ## Optimizing fulfillment process with carriers
 
 [Carriers](https://help.vtex.com/en/tutorial/transportadoras-na-vtex--7u9duMD5UQa2QQwukAWMcE), or couriers, are the companies responsible for delivering orders, and their operating profiles are configured in your [shipping policies](https://help.vtex.com/pt/tutorial/shipping-policy--tutorials_140). The service contract details with carriers, like shipping ZIP code ranges and packages weight limits, are configured via [shipping rate template](https://help.vtex.com/en/tutorial/shipping-rate-template--tutorials_127).
-
 
 ### Freight values
 
@@ -243,7 +216,6 @@ Create carriers’ freight values and retrieve information about them.
 
 * [POST - Create/update freight values](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/freights/-carrierId-/values/update)
 * [GET - List freight values](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/freights/-carrierId-/-cep-/values)
-
 
 ### VTEX Shipping Network (independent App)
 
@@ -261,12 +233,11 @@ The endpoint below notifies the carrier of the dispatched package information, i
 
 * [POST - Notify Carrier with App](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/-app_name-/v-app_version-/-account-/-workspace-/notify)
 
-#### Tracking 
+#### Tracking
 
 The endpoint below updates tracking events for pending deliveries using a list of tracking codes.
 
 * [POST - Tracking Events with App](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
-
 
 ### VTEX Tracking (independent App)
 
@@ -282,7 +253,3 @@ The endpoint below updates tracking events for pending deliveries using a list o
 * [POST - Post Delivery Service With Route Scheduling](https://developers.vtex.com/docs/api-reference/tracking#post-/services/routes)
 * [GET - Get Delivery Services List by Route](https://developers.vtex.com/docs/api-reference/tracking#get-/services/routes)
 * [GET - Get Delivery Service by Invoice](https://developers.vtex.com/docs/api-reference/tracking#get-/services/invoice)
-
-
-
-
