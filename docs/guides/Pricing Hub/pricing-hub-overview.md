@@ -1,21 +1,18 @@
 ---
 title: "Pricing Hub - Overview"
 slug: "pricing-hub-overview"
-hidden: true
+hidden: false
 createdAt: "2021-10-25T18:44:02.713Z"
 updatedAt: "2022-06-13T16:06:15.138Z"
 ---
 
-[block:callout]
-{
-  "type": "info",
-  "body": "This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://support.vtex.com/hc/en-us/requests)."
-}
-[/block]
+>ℹ️ This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://support.vtex.com/hc/en-us/requests).
+
 In the B2B scenario, it is common for stores to have personalized prices per customer and complex pricing systems that require external integrations. Pricing Hub is a system developed for the B2B context that works as an intermediary between VTEX and external pricing systems.
 
 In VTEX, B2B stores have the option to use our internal pricing system or an external one. If the store chooses to operate with an external pricing system, Pricing Hub will query an external price calculation API. The external API should then respond with the price for all items in the shopping cart according to its predefined tax rules.
-![Pricing hub protocal diagram](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/pricing-hub-overview-0.png)
+
+![Pricing hub protocal diagram](https://user-images.githubusercontent.com/77292838/211634260-e4f7a516-91df-416e-ab43-d9c79d56bc91.png)
 
 ## Implementation
 
@@ -32,14 +29,10 @@ See below all the specifications of the request and the response expected when c
 
 ### Price calculation request
 
-The external prices calculation tool must provide an endpoint that will receive a `POST` [Get Prices](https://developers.vtex.com/vtex-rest-api/reference/post_api-pricing-hub-prices) request. This route retrieves and applies prices for the items that are passed in the request. Pricing Hub will select the pricing method that will be used for each item and will fetch their respective price from the selected pricing method.
-[block:callout]
-{
-  "type": "warning",
-  "title": "Warning",
-  "body": "Responses from Pricing Hub tend to have a greater delay when compared to other VTEX systems. That is expected, however, due to the complexity of its nested requests. The timeout for this request is 900 milliseconds."
-}
-[/block]
+The external prices calculation tool must provide an endpoint that will receive a `POST` [Get Prices](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/api/pricing-hub/prices) request. This route retrieves and applies prices for the items that are passed in the request. Pricing Hub will select the pricing method that will be used for each item and will fetch their respective price from the selected pricing method.
+
+>⚠️ Responses from Pricing Hub tend to have a greater delay when compared to other VTEX systems. That is expected, however, due to the complexity of its nested requests. The timeout for this request is 900 milliseconds.
+
 In this request, Pricing Hub provides a body in a specific format, exemplified below. This means that either the endpoint must be prepared to receive this body format, or the app must contain a parser to adapt it to the correct format.
 
 #### Request body example
@@ -106,5 +99,5 @@ The response should have the following properties:
 
 ## Index - Pricing Hub API
 
-<span class="APIMethod APIMethod_fixedWidth APIMethod_post" data-testid="http-method">post</span> [Get Prices](https://developers.vtex.com/vtex-rest-api/reference/post_api-pricing-hub-prices)
-<span class="APIMethod APIMethod_fixedWidth APIMethod_put" data-testid="http-method">put</span> [Configure External Price Source](https://developers.vtex.com/vtex-rest-api/reference/configexternalpricesource)
+`POST` [Get Prices](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/api/pricing-hub/prices)
+`PUT` [Configure External Price Source](https://developers.vtex.com/docs/api-reference/pricing-hub#put-/config)
