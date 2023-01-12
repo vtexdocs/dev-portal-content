@@ -6,7 +6,7 @@ createdAt: "2023-01-11T13:13:50.000Z"
 updatedAt: "2023-01-11T13:13:50.000Z"
 ---
 
-> Help us improve our documentation! Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8)!"
+> Help us improve our documentation! Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8)!
 
 [Fulfillment](https://help.vtex.com/en/tutorial/fulfillment-logistics-vtex--53udnvI5eBy8DKo8FOjMoP) is the process of storing merchandise and receiving, managing, packing and shipping orders. It starts when a shopper buys a product and ends when the life cycle of the order is complete with the shopper receiving the purchase.
 

@@ -14,7 +14,7 @@ updatedAt: "2023-01-11T18:18:00.000Z"
 
 **Subscriptions** is an app developed by VTEX to facilitate recurring sales for a store. It works as an automatic scheduler, executing a repurchase at the frequency requested by the shopper.
 
-To enable **Subscriptions** for shoppers, merchants have to [create subscription plans](https://help.vtex.com/en/tutorial/creating-a-subscription-plan--1qGRoFczm98Wgt81f9mUqC) to associate the products valid for subscriptions and the frequencies available for recurrent orders. 
+To enable **Subscriptions** for shoppers, merchants have to [create subscription plans](https://help.vtex.com/en/tutorial/creating-a-subscription-plan--1qGRoFczm98Wgt81f9mUqC) to associate the products valid for subscriptions and the frequencies available for recurrent orders.
 
 Once the [Subscriptions module is configured](#setting-up-subscriptions-mandatory), the merchant can generate, edit and manage shoppers’ recurrent orders, and [create subscription promotions](https://help.vtex.com/tutorial/creating-a-subscription-promotion--3ROT13HYNeUIv0plDqgNed).
 
@@ -44,7 +44,7 @@ We highly recommend creating subscription plans in the **Subscriptions** module 
 
 ## Managing Subscriptions
 
-In this section, you will find content about controlling and editing the **Subscriptions **settings of your store, and about updating, retrieving data and removing subscription orders.
+In this section, you will find content about controlling and editing the **Subscriptions** settings of your store, and about updating, retrieving data and removing subscription orders.
 
 ### Settings
 

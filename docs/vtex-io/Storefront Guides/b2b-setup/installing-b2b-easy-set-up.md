@@ -142,276 +142,280 @@ This resource creates a group with two fields containing a variety of field valu
 This resource creates an assortment of products and SKUs and sets their specifications, images and attachments (related to customizations and subscriptions).
 
 <details>
-  <summary>View Sample Data</summary>
-  <ul>
-    <details>
-      <summary>Category: Apparel (9281)</summary>
-      <ul>
-        <li>Product Name: adidas Men's Performance Polo - Blast Blue (880001)</li>
-        <ul>
-          <li>SKU Name: S (880010)</li>
-          <li>SKU Name: M (880011)</li>
-          <li>SKU Name: L (880012)</li>
-          <li>SKU Name: XL (880013)</li>
-        </ul>
-        <br />
-        <li>Product Name: adidas Men's Performance Polo - Green Night (880002)</li>
-        <ul>
-          <li>SKU Name: S (880020)</li>
-          <li>SKU Name: M (880021)</li>
-          <li>SKU Name: L (880022)</li>
-          <li>SKU Name: XL (880023)</li>
-        </ul>
-        <br />
-        <li>Product Name: adidas Women's Microdot Polo - Night Indigo (880003)</li>
-        <ul>
-          <li>SKU Name: S (880030)</li>
-          <li>SKU Name: M (880031)</li>
-          <li>SKU Name: L (880032)</li>
-          <li>SKU Name: XL (880033)</li>
-        </ul>
-        <br />
-        <li>Product Name: adidas Women's Microdot Polo - True Pink (880004)</li>
-        <ul>
-          <li>SKU Name: S (880040)</li>
-          <li>SKU Name: M (880041)</li>
-          <li>SKU Name: L (880042)</li>
-          <li>SKU Name: XL (880043)</li>
-        </ul>
-      </ul>
-    </details>
-    <details>
-      <summary>Category: Food and beverage (9282)</summary>
-      <ul>
-        <li>Product Name: Yellow Onions (10 lbs.) (880026)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880260)</li>
-        </ul>
-        <br />
-        <li>Product Name: Cauliflower Fresh (880027)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880270)</li>
-        </ul>
-        <br />
-        <li>Product Name: Asparagus Green Conventional (880028)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880280)</li>
-        </ul>
-        <br />
-        <li>Product Name: Fresh Hass Avocadoes (880029)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880290)</li>
-        </ul>
-        <br />
-        <li>Product Name: Fresh Coconuts (880030)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880300)</li>
-        </ul>
-        <br />
-        <li>Product Name: Whole Watermelon Mini Fresh (880031)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880310)</li>
-        </ul>
-        <br />
-        <li>Product Name: Navel Oranges Grown Large Fresh (880032)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880320)</li>
-        </ul>
-        <br />
-        <li>Product Name: Navel Oranges Grown Large Fresh, Pack of 10 (880039)</li>
-        <ul>
-          <li>SKU Kit: _same name_ (880390)</li>
-          <li>SKU Components: 10un of Navel Oranges Grown Large Fresh</li>
-        </ul>
-      </ul>
-    </details>
-    <details>
-      <summary>Category: Sporting (9283)</summary>
-      <ul>
-        <li>Product Name: Nike Men's Roshe G Spikeless Golf Shoes (880005)</li>
-        <ul>
-          <li>SKU Name: 8 (880050)</li>
-          <li>SKU Name: 8.5 (880051)</li>
-          <li>SKU Name: 9 (880052)</li>
-          <li>SKU Name: 9.5 (880053)</li>
-          <li>SKU Name: 10 (880054)</li>
-        </ul>
-        <br />
-        <li>Product Name: Nike Men's Air Max 1 G Spikeless Golf Shoes (880006)</li>
-        <ul>
-          <li>SKU Name: 8 (880060)</li>
-          <li>SKU Name: 8.5 (880061)</li>
-          <li>SKU Name: 9 (880062)</li>
-          <li>SKU Name: 9.5 (880063)</li>
-          <li>SKU Name: 10 (880064)</li>
-        </ul>
-        <br />
-        <li>Product Name: Nike Air Max 270 G Spikeless Golf Shoes (880007)</li>
-        <ul>
-          <li>SKU Name: 8 (880070)</li>
-          <li>SKU Name: 8.5 (880071)</li>
-          <li>SKU Name: 9 (880072)</li>
-          <li>SKU Name: 9.5 (880073)</li>
-          <li>SKU Name: 10 (880074)</li>
-        </ul>
-        <br />
-        <li>Product Name: Skechers Women's Go Golf Drive 4 Dogs At Play Spikeless Golf Shoes (880008)</li>
-        <ul>
-          <li>SKU Name: 8 (880080)</li>
-          <li>SKU Name: 8.5 (880081)</li>
-          <li>SKU Name: 9 (880082)</li>
-          <li>SKU Name: 9.5 (880083)</li>
-          <li>SKU Name: 10 (880084)</li>
-        </ul>
-      </ul>
-    </details>
-    <details>
-      <summary>Category: Agribusiness (9284)</summary>
-      <ul>
-        <li>Product Name: 2020 APACHE AS1040 (880033)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880330)</li>
-        </ul>
-        <br />
-        <li>Product Name: 2 POST CANOPY (880034)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880340)</li>
-        </ul>
-        <br />
-        <li>Product Name: 2020 AMACSA PH390 (880035)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880350)</li>
-        </ul>
-        <br />
-        <li>Product Name: Faceplate Combine Snout (880036)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880360)</li>
-        </ul>
-        <br />
-        <li>Product Name: 2016 MK MARTIN ENT MKGB788 Blades/Box Scraper (880037)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880370)</li>
-        </ul>
-        <br />
-        <li>Product Name: 1998 JOHN DEERE 8400T (880038)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880380)</li>
-        </ul>
-      </ul>
-    </details>
-    <details>
-      <summary>Category: Home Appliance (9285)</summary>
-      <ul>
-        <li>Product Name: Weber 45010001 Spirit II E-310 3-Burner Liquid Propane Grill, Black (880021)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880210)</li>
-        </ul>
-        <br />
-        <li>Product Name: iRobot Roomba 675 Robot Vacuum-Wi-Fi Connectivity, Works with Alexa, Good for Pet Hair,
-          Carpets, Hard Floors, Self-Charging (880022)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880220)</li>
-        </ul>
-        <br />
-        <li>Product Name: ALROCKET Dehumidifier 35oz(1000ml) Small Dehumidifier for 2100 Cubic Feet (260 sq ft) Portable
-          and Compact Ultra Quiet (880023)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880230)</li>
-        </ul>
-        <br />
-        <li>Product Name: McCulloch MC1375 Canister Steam Cleaner with 20 Accessories (880024)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880240)</li>
-        </ul>
-        <br />
-        <li>Product Name: Cuisinart GR-4N 5-in-1 Griddler (880025)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880250)</li>
-        </ul>
-      </ul>
-    </details>
-    <details>
-      <summary>Category: Computer & Software (9286)</summary>
-      <ul>
-        <li>Product Name: Acer Aspire Z24-890-UA91 AIO Desktop - Windows 10 (880015)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880150)</li>
-        </ul>
-        <br />
-        <li>Product Name: Lenovo IdeaCentre AIO 3 - Windows 10 (880016)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880160)</li>
-        </ul>
-        <br />
-        <li>Product Name: Acer Aspire TC-885-UA92 Desktop - Windows 10 (880017)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880170)</li>
-        </ul>
-        <br />
-        <li>Product Name: CYBERPOWERPC Gamer Xtreme VR Gaming PC - Windows 10 (880018)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880180)</li>
-        </ul>
-        <br />
-        <li>Product Name: Acer Aspire 5 Slim Laptop - Windows 10 (880019)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880190)</li>
-        </ul>
-        <br />
-        <li>Product Name: Jumper EZbook X3 Windows 10 Laptop (880020)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880200)</li>
-        </ul>
-        <br />
-        <li>Product Name: Acer Aspire z24 890 + Acer Aspire ATC 885 (880040)</li>
-        <ul>
-          <li>SKU Kit: _same name_ (880400)</li>
-        </ul>
-        <li>SkuComponents:</li>
-        <ul>
-          <li>1un of Acer Aspire Z24-890-UA91 AIO Desktop - Windows 10 (880015)</li>
-          <li>1un of Acer Aspire TC-885-UA92 Desktop - Windows 10 (880017)</li>
-        </ul>
-      </ul>
-    </details>
-    <details>
-      <summary>Category: Power tools (9287)</summary>
-      <ul>
-        <li>Product Name: BLACK+DECKER 20V MAX Drill & Home Tool Kit, 68 Piece (LDX120PK),Black/Orange (880009)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880090)</li>
-        </ul>
-        <br />
-        <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill / Driver with 30-Piece Accessories (LD120VA) (880010)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880100)</li>
-        </ul>
-        <br />
-        <li>Product Name: BLACK+DECKER 20V Max Cordless Chainsaw, 10-Inch, Tool Only (LCS1020B) (880011)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880110)</li>
-        </ul>
-        <br />
-        <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill Combo Kit, 2-Tool (BD2KITCDDI),Black/Orange Impact Combo
-          Kit (880012)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880120)</li>
-        </ul>
-        <br />
-        <li>Product Name: BLACK+DECKER 20V MAX 5-1/2-Inch Cordless Circular Saw, Tool Only (BDCCS20B) (880013)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880130)</li>
-        </ul>
-        <br />
-        <li>Product Name: BLACK+DECKER 20V MAX 5-1/2-Inch Cordless Circular Saw (BDCCS20C) (880014)</li>
-        <ul>
-          <li>SKU Name: _same name_ (880140)</li>
-        </ul>
-      </ul>
-    </details>
-  </ul>
-  </ul>
-
+    <summary>View Sample Data</summary>
+    <ul>
+        <details>
+            <summary>Category: Apparel (9281)</summary>
+            <ul>
+                <li>Product Name: adidas Men's Performance Polo - Blast Blue (880001)</li>
+                <ul>
+                    <li>SKU Name: S (880010)</li>
+                    <li>SKU Name: M (880011)</li>
+                    <li>SKU Name: L (880012)</li>
+                    <li>SKU Name: XL (880013)</li>
+                </ul>
+                <br />
+                <li>Product Name: adidas Men's Performance Polo - Green Night (880002)</li>
+                <ul>
+                    <li>SKU Name: S (880020)</li>
+                    <li>SKU Name: M (880021)</li>
+                    <li>SKU Name: L (880022)</li>
+                    <li>SKU Name: XL (880023)</li>
+                </ul>
+                <br />
+                <li>Product Name: adidas Women's Microdot Polo - Night Indigo (880003)</li>
+                <ul>
+                    <li>SKU Name: S (880030)</li>
+                    <li>SKU Name: M (880031)</li>
+                    <li>SKU Name: L (880032)</li>
+                    <li>SKU Name: XL (880033)</li>
+                </ul>
+                <br />
+                <li>Product Name: adidas Women's Microdot Polo - True Pink (880004)</li>
+                <ul>
+                    <li>SKU Name: S (880040)</li>
+                    <li>SKU Name: M (880041)</li>
+                    <li>SKU Name: L (880042)</li>
+                    <li>SKU Name: XL (880043)</li>
+                </ul>
+            </ul>
+        </details>
+        <details>
+            <summary>Category: Food and beverage (9282)</summary>
+            <ul>
+                <li>Product Name: Yellow Onions (10 lbs.) (880026)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880260)</li>
+                </ul>
+                <br />
+                <li>Product Name: Cauliflower Fresh (880027)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880270)</li>
+                </ul>
+                <br />
+                <li>Product Name: Asparagus Green Conventional (880028)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880280)</li>
+                </ul>
+                <br />
+                <li>Product Name: Fresh Hass Avocadoes (880029)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880290)</li>
+                </ul>
+                <br />
+                <li>Product Name: Fresh Coconuts (880030)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880300)</li>
+                </ul>
+                <br />
+                <li>Product Name: Whole Watermelon Mini Fresh (880031)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880310)</li>
+                </ul>
+                <br />
+                <li>Product Name: Navel Oranges Grown Large Fresh (880032)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880320)</li>
+                </ul>
+                <br />
+                <li>Product Name: Navel Oranges Grown Large Fresh, Pack of 10 (880039)</li>
+                <ul>
+                    <li>SKU Kit: _same name_ (880390)</li>
+                    <li>SKU Components: 10un of Navel Oranges Grown Large Fresh</li>
+                </ul>
+            </ul>
+        </details>
+        <details>
+            <summary>Category: Sporting (9283)</summary>
+            <ul>
+                <li>Product Name: Nike Men's Roshe G Spikeless Golf Shoes (880005)</li>
+                <ul>
+                    <li>SKU Name: 8 (880050)</li>
+                    <li>SKU Name: 8.5 (880051)</li>
+                    <li>SKU Name: 9 (880052)</li>
+                    <li>SKU Name: 9.5 (880053)</li>
+                    <li>SKU Name: 10 (880054)</li>
+                </ul>
+                <br />
+                <li>Product Name: Nike Men's Air Max 1 G Spikeless Golf Shoes (880006)</li>
+                <ul>
+                    <li>SKU Name: 8 (880060)</li>
+                    <li>SKU Name: 8.5 (880061)</li>
+                    <li>SKU Name: 9 (880062)</li>
+                    <li>SKU Name: 9.5 (880063)</li>
+                    <li>SKU Name: 10 (880064)</li>
+                </ul>
+                <br />
+                <li>Product Name: Nike Air Max 270 G Spikeless Golf Shoes (880007)</li>
+                <ul>
+                    <li>SKU Name: 8 (880070)</li>
+                    <li>SKU Name: 8.5 (880071)</li>
+                    <li>SKU Name: 9 (880072)</li>
+                    <li>SKU Name: 9.5 (880073)</li>
+                    <li>SKU Name: 10 (880074)</li>
+                </ul>
+                <br />
+                <li>Product Name: Skechers Women's Go Golf Drive 4 Dogs At Play Spikeless Golf Shoes (880008)</li>
+                <ul>
+                    <li>SKU Name: 8 (880080)</li>
+                    <li>SKU Name: 8.5 (880081)</li>
+                    <li>SKU Name: 9 (880082)</li>
+                    <li>SKU Name: 9.5 (880083)</li>
+                    <li>SKU Name: 10 (880084)</li>
+                </ul>
+            </ul>
+        </details>
+        <details>
+            <summary>Category: Agribusiness (9284)</summary>
+            <ul>
+                <li>Product Name: 2020 APACHE AS1040 (880033)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880330)</li>
+                </ul>
+                <br />
+                <li>Product Name: 2 POST CANOPY (880034)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880340)</li>
+                </ul>
+                <br />
+                <li>Product Name: 2020 AMACSA PH390 (880035)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880350)</li>
+                </ul>
+                <br />
+                <li>Product Name: Faceplate Combine Snout (880036)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880360)</li>
+                </ul>
+                <br />
+                <li>Product Name: 2016 MK MARTIN ENT MKGB788 Blades/Box Scraper (880037)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880370)</li>
+                </ul>
+                <br />
+                <li>Product Name: 1998 JOHN DEERE 8400T (880038)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880380)</li>
+                </ul>
+            </ul>
+        </details>
+        <details>
+            <summary>Category: Home Appliance (9285)</summary>
+            <ul>
+                <li>Product Name: Weber 45010001 Spirit II E-310 3-Burner Liquid Propane Grill, Black (880021)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880210)</li>
+                </ul>
+                <br />
+                <li>Product Name: iRobot Roomba 675 Robot Vacuum-Wi-Fi Connectivity, Works with Alexa, Good for Pet
+                    Hair,
+                    Carpets, Hard Floors, Self-Charging (880022)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880220)</li>
+                </ul>
+                <br />
+                <li>Product Name: ALROCKET Dehumidifier 35oz(1000ml) Small Dehumidifier for 2100 Cubic Feet (260 sq ft)
+                    Portable
+                    and Compact Ultra Quiet (880023)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880230)</li>
+                </ul>
+                <br />
+                <li>Product Name: McCulloch MC1375 Canister Steam Cleaner with 20 Accessories (880024)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880240)</li>
+                </ul>
+                <br />
+                <li>Product Name: Cuisinart GR-4N 5-in-1 Griddler (880025)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880250)</li>
+                </ul>
+            </ul>
+        </details>
+        <details>
+            <summary>Category: Computer & Software (9286)</summary>
+            <ul>
+                <li>Product Name: Acer Aspire Z24-890-UA91 AIO Desktop - Windows 10 (880015)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880150)</li>
+                </ul>
+                <br />
+                <li>Product Name: Lenovo IdeaCentre AIO 3 - Windows 10 (880016)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880160)</li>
+                </ul>
+                <br />
+                <li>Product Name: Acer Aspire TC-885-UA92 Desktop - Windows 10 (880017)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880170)</li>
+                </ul>
+                <br />
+                <li>Product Name: CYBERPOWERPC Gamer Xtreme VR Gaming PC - Windows 10 (880018)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880180)</li>
+                </ul>
+                <br />
+                <li>Product Name: Acer Aspire 5 Slim Laptop - Windows 10 (880019)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880190)</li>
+                </ul>
+                <br />
+                <li>Product Name: Jumper EZbook X3 Windows 10 Laptop (880020)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880200)</li>
+                </ul>
+                <br />
+                <li>Product Name: Acer Aspire z24 890 + Acer Aspire ATC 885 (880040)</li>
+                <ul>
+                    <li>SKU Kit: _same name_ (880400)</li>
+                </ul>
+                <li>SkuComponents:</li>
+                <ul>
+                    <li>1un of Acer Aspire Z24-890-UA91 AIO Desktop - Windows 10 (880015)</li>
+                    <li>1un of Acer Aspire TC-885-UA92 Desktop - Windows 10 (880017)</li>
+                </ul>
+            </ul>
+        </details>
+        <details>
+            <summary>Category: Power tools (9287)</summary>
+            <ul>
+                <li>Product Name: BLACK+DECKER 20V MAX Drill & Home Tool Kit, 68 Piece (LDX120PK),Black/Orange (880009)
+                </li>
+                <ul>
+                    <li>SKU Name: _same name_ (880090)</li>
+                </ul>
+                <br />
+                <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill / Driver with 30-Piece Accessories (LD120VA)
+                    (880010)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880100)</li>
+                </ul>
+                <br />
+                <li>Product Name: BLACK+DECKER 20V Max Cordless Chainsaw, 10-Inch, Tool Only (LCS1020B) (880011)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880110)</li>
+                </ul>
+                <br />
+                <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill Combo Kit, 2-Tool (BD2KITCDDI),Black/Orange Impact
+                    Combo
+                    Kit (880012)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880120)</li>
+                </ul>
+                <br />
+                <li>Product Name: BLACK+DECKER 20V MAX 5-1/2-Inch Cordless Circular Saw, Tool Only (BDCCS20B) (880013)
+                </li>
+                <ul>
+                    <li>SKU Name: _same name_ (880130)</li>
+                </ul>
+                <br />
+                <li>Product Name: BLACK+DECKER 20V MAX 5-1/2-Inch Cordless Circular Saw (BDCCS20C) (880014)</li>
+                <ul>
+                    <li>SKU Name: _same name_ (880140)</li>
+                </ul>
+            </ul>
+        </details>
+    </ul>
 </details>
 
 #### Attachments
