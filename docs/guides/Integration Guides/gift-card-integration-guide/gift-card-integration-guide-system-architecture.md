@@ -10,13 +10,8 @@ Our Gift Card system provides stores with the flexibility to plug in multiple gi
 ![Gift Card Hub](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/gift-card-integration-guide/gift-card-integration-guide-system-architecture-0_10.png)
 
 This article presents an overview of this architecture, so you understand its building blocks and how they interact with each other. We will also explain the purpose of the [Gift Card API](https://developers.vtex.com/docs/api-reference/giftcard-api#overview) and the [Gift Card Hub API](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#overview) and how they should be used.
-[block:callout]
-{
-  "type": "info",
-  "title": "Our native gift card provider is available to all stores",
-  "body": "If you do not need to integrate an external solution, remember you can [set up and manage gift cards](https://help.vtex.com/tutorial/gift-card--tutorials_995) natively in your admin panel or using our [Gift Card API](https://developers.vtex.com/docs/api-reference/giftcard-api#overview)."
-}
-[/block]
+
+>ℹ️ If you do not need to integrate an external solution, remember you can [set up and manage gift cards](https://help.vtex.com/tutorial/gift-card--tutorials_995) natively in your admin panel or using our [Gift Card API](https://developers.vtex.com/docs/api-reference/giftcard-api#overview).
 
 ## Gift Card Hub
 
@@ -29,10 +24,5 @@ This is the protocol defining the communication standards gift card providers mu
 ## VTEX Gift Card Provider
 
 Our native gift card provider is bundled into your VTEX store, and [Gift Card API](https://developers.vtex.com/docs/api-reference/giftcard-api#overview) is the implementation of the Gift Card Provider Protocol for it. It can be used to manage VTEX gift cards directly - although Gift Card Hub API provides the same functionality in a more generic abstraction layer.
-[block:callout]
-{
-  "type": "warning",
-  "body": "The `VtexGiftCard` provider was built from a legacy system, created before our Gift Card system architecture evolved to the Gift Card Hub model. As such, it should not be considered a reference implementation of the Gift Card Provider Protocol.",
-  "title": "Our native gift card provider does not fully implement our protocol"
-}
-[/block]
+
+>⚠️ "The `VtexGiftCard` provider was built from a legacy system, created before our Gift Card system architecture evolved to the Gift Card Hub model. As such, it should not be considered a reference implementation of the Gift Card Provider Protocol.
