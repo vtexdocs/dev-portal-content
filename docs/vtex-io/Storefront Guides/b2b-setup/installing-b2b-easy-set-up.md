@@ -379,14 +379,12 @@ This resource creates an assortment of products and SKUs and sets their specific
         <details>
             <summary>Category: Power tools (9287)</summary>
             <ul>
-                <li>Product Name: BLACK+DECKER 20V MAX Drill & Home Tool Kit, 68 Piece (LDX120PK),Black/Orange (880009)
-                </li>
+                <li>Product Name: BLACK+DECKER 20V MAX Drill & Home Tool Kit, 68 Piece (LDX120PK),Black/Orange (880009)</li>
                 <ul>
                     <li>SKU Name: _same name_ (880090)</li>
                 </ul>
                 <br />
-                <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill / Driver with 30-Piece Accessories (LD120VA)
-                    (880010)</li>
+                <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill / Driver with 30-Piece Accessories (LD120VA) (880010)</li>
                 <ul>
                     <li>SKU Name: _same name_ (880100)</li>
                 </ul>
@@ -396,15 +394,12 @@ This resource creates an assortment of products and SKUs and sets their specific
                     <li>SKU Name: _same name_ (880110)</li>
                 </ul>
                 <br />
-                <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill Combo Kit, 2-Tool (BD2KITCDDI),Black/Orange Impact
-                    Combo
-                    Kit (880012)</li>
+                <li>Product Name: BLACK+DECKER 20V MAX Cordless Drill Combo Kit, 2-Tool (BD2KITCDDI),Black/Orange Impact Combo Kit (880012)</li>
                 <ul>
                     <li>SKU Name: _same name_ (880120)</li>
                 </ul>
                 <br />
-                <li>Product Name: BLACK+DECKER 20V MAX 5-1/2-Inch Cordless Circular Saw, Tool Only (BDCCS20B) (880013)
-                </li>
+                <li>Product Name: BLACK+DECKER 20V MAX 5-1/2-Inch Cordless Circular Saw, Tool Only (BDCCS20B) (880013)</li>
                 <ul>
                     <li>SKU Name: _same name_ (880130)</li>
                 </ul>
