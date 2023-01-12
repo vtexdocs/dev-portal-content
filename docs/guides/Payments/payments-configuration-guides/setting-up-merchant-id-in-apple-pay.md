@@ -6,7 +6,7 @@ createdAt: "2022-01-27T15:02:19.691Z"
 updatedAt: "2022-01-27T19:29:46.835Z"
 ---
 
-In order for your store to begin receiving payments with **Apple Pay**, you will need to set **Merchant ID** in your [Apple developer account](developer.apple.com).
+In order for your store to begin receiving payments with **Apple Pay**, you will need to set **Merchant ID** in your [Apple developer account](https://developer.apple.com/).
 
 ## Creating the Merchand ID
 
@@ -99,7 +99,7 @@ The next step is to link the domains used by your store to the Merchant ID that 
 
 Firstly, you need to validate each of the desired URLs. Once this step is correctly completed, Apple's own system will create a `.txt` file and point to which domain this document should be linked to.
 
-Lastly, you need to import this file to VTEX's system through Postman - an [API](https://help.vtex.com/en/tutorial/introduction-to-vtex-apis--3SjAqQ0BeUqu2ge8AiIkmW) management tool.
+Lastly, you need to import this file to VTEX's system through Postman - an [API](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis) management tool.
 
 [block:callout]
 {
