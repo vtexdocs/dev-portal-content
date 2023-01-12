@@ -58,25 +58,14 @@ Also, a credit card made exclusively for a store. The difference between a priva
 
 ### Instant Payments (Pix/Brazil)
 
-Pix is the instant payments ecosystem implementation led by the Central Bank of Brazil (BCB) to enable online money transfers with reduced costs, increased safety and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account, without the need for intermediaries, resulting in lower transaction costs. For more information, refer to [Pix: Instant Payments in Brazil](doc:pix-instant-payments-in-brazil). 
+Pix is the instant payments ecosystem implementation led by the Central Bank of Brazil (BCB) to enable online money transfers with reduced costs, increased safety and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account, without the need for intermediaries, resulting in lower transaction costs. For more information, refer to [Pix: Instant Payments in Brazil](https://developers.vtex.com/docs/guides/payments-integration-pix-instant-payments-in-brazil). 
 
 ### Bank Invoice (Boleto Bancário/Brazil)
 
 The “boleto bancário” is a popular payment method in Brazil. It consists of an official voucher that a customer can pay in cash at more than 200 thousand payment locations such as banks, post offices, and supermarkets. It can also be paid electronically through internet banking. For more information, refer to [Bank Invoice payment flow](https://help.vtex.com/en/tutorial/boleto-bancario-registrado-fluxo-basico-de-um-pagamento--1WlPkeueWQiykUwW8mcM4S#).
 
 Even though the payment facilities, its disbursement can take two commercial days to be computed.
-[block:callout]
-{
-  "type": "info",
-  "title": "Boleto bancário",
-  "body": "In VTEX's APIs, this payment method is registered as “bank invoice”."
-}
-[/block]
 
-[block:callout]
-{
-  "type": "info",
-  "title": "Payment conditions",
-  "body": "For every payment method, there is a payment condition. You can learn how these terms work in VTEX checking our [101 Payments module track](https://help.vtex.com/en/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3)."
-}
-[/block]
+>ℹ️ In VTEX's APIs, this payment method is registered as “bank invoice”.
+
+>ℹ️ For every payment method, there is a payment condition. You can learn how these terms work in VTEX checking our [101 Payments module track](https://help.vtex.com/en/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3).
