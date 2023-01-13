@@ -423,9 +423,7 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 | allowChangeSeller | boolean | When set as `true`, it is possible to use the Change Seller feature in the order, and when set as `false`, it is not possible. |
 | orderFormCreationDate | string | Date of when the orderForm was created with the format `yyyy-mm-ddThh:mm:ss.{zone}Z`. |
 
-
-
-
+### Outdated Checkout endpoint response body
 
 [block:code]
 {
