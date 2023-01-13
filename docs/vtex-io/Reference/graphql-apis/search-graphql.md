@@ -2356,7 +2356,7 @@ Discount object
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>itemMetadata</strong></td>
-            <td valign="top"><a href="#itemmetadata">ItemMetadata<a></td>
+            <td valign="top"><a href="#itemmetadata">ItemMetadata</a></td>
             <td></td>
         </tr>
         <tr>
