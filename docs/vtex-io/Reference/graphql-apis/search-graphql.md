@@ -715,8 +715,7 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" valign="top"><strong>cacheId</strong></td>
             <td valign="top"><a href="#id">ID</a></td>
-            <td>
-                slug is used as cacheId</td>
+            <td>slug is used as cacheId</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>id</strong></td>
