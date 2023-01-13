@@ -10,6 +10,10 @@ Both the Outdated Checkout endpoint and the Order Management System (OMS) endpoi
 
 Beginning June 25, 2023, the Outdated Checkout endpoint will be deprecated and all integrations that use this route will have to migrate to OMS endpoints, as indicated in the following table:
 
+| **From Checkout endpoint** | **To OMS endpoints** |
+|---|---|
+|  Outdated Checkout endpoint GET - `api/checkout/pub/orders` | <ul><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders">Retrieve user's orders</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders</code></li><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders/-orderId-">Retrieve user order details</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders/{orderId}</code></li></ul>
+
 | **Fields** | **Type** | **Description** |
 |:---:|:---:|:---|
 | orderId | string | Order ID is a unique code that identifies an order. |
