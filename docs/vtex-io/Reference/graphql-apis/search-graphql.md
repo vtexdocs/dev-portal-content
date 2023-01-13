@@ -621,56 +621,22 @@ To resolve this query, you need to have a app that implements the schema declare
 
 ### Banners
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>banners</strong></td><td valign="top">[<a href="#searchbanner">SearchBanner</a>]</td><td>
-List of banners.
-</td></tr></tbody></table>
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>banners</strong></td><td valign="top">[<a href="#searchbanner">SearchBanner</a>]</td><td>List of banners.</td></tr></tbody></table>
 
 ### Benefit
 
  Benefit of a Product
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>featured</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>
- Flag which indicates if the benefit is featured or not
-</td></tr><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#string">String</a></td><td>
- Id of the product which the benefit is associated
-</td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>
- Name of the benefit
-</td></tr><tr><td colspan="2" valign="top"><strong>items</strong></td><td valign="top">[<a href="#benefititem">BenefitItem</a>]</td><td>
- Items of the benefit
-</td></tr><tr><td colspan="2" valign="top"><strong>teaserType</strong></td><td valign="top"><a href="#string">String</a></td><td>
- Type of benefit
-</td></tr></tbody></table>
+
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>featured</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td> Flag which indicates if the benefit is featured or not</td></tr><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#string">String</a></td><td> Id of the product which the benefit is associated</td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td> Name of the benefit</td></tr><tr><td colspan="2" valign="top"><strong>items</strong></td><td valign="top">[<a href="#benefititem">BenefitItem</a>]<td><td> Items of the benefit</td></tr><tr><td colspan="2" valign="top"><strong>teaserType</strong></td><td valign="top"><a href="#string">String</a></td><td> Type of benefit</td></tr></tbody></table>
 
 ### BenefitItem
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>benefitProduct</strong></td><td valign="top"><a href="#product">Product</a></td><td>
- Product itself
-</td></tr><tr><td colspan="2" valign="top"><strong>benefitSKUIds</strong></td><td valign="top">[<a href="#string">String</a>]</td><td>
- IDs of the SKU Items that are taking part in the benefit
-</td></tr><tr><td colspan="2" valign="top"><strong>discount</strong></td><td valign="top"><a href="#float">Float</a></td><td>
- Discount applied to the benefit product
-</td></tr><tr><td colspan="2" valign="top"><strong>minQuantity</strong></td><td valign="top"><a href="#int">Int</a></td><td>
- Minimum quantity of the benefit product that is required to validate the benefit
-</td></tr></tbody></table>
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>benefitProduct</strong></td><td valign="top"><a href="#product">Product</a></td><td> Product itself</td></tr><tr><td colspan="2" valign="top"><strong>benefitSKUIds</strong></td><td valign="top">[<a href="#string">String</a>]</td><td> IDs of the SKU Items that are taking part in the benefit</td></tr><tr><td colspan="2" valign="top"><strong>discount</strong></td><td valign="top"><a href="#float">Float</a></td><td> Discount applied to the benefit product</td></tr><tr><td colspan="2" valign="top"><strong>minQuantity</strong></td><td valign="top"><a href="#int">Int</a></td><td> Minimum quantity of the benefit product that is required to validate the benefit</td></tr></tbody></table>
 
 ### Brand
 
 <table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>cacheId</strong></td><td valign="top"><a href="#id">ID</a></td><td>
-slug is used as cacheId
-</td></tr><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#int">Int</a></td><td>
-Brand id
-</td></tr><tr><td colspan="2" valign="top"><strong>imageUrl</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Brand logo
-</td></tr><tr><td colspan="2" valign="top"><strong>slug</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Text link
-</td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Name of brand
-</td></tr><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td>
-  Title used by html tag</td>
-</td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Description used by html tag
-</td></tr><tr><td colspan="2" valign="top"><strong>active</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-Brand is active
-</td></tr></tbody></table>
+slug is used as cacheId</td></tr><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#int">Int</a></td><td>Brand id</td></tr><tr><td colspan="2" valign="top"><strong>imageUrl</strong></td><td valign="top"><a href="#string">String</a></td><td>Brand logo</td></tr><tr><td colspan="2" valign="top"><strong>slug</strong></td><td valign="top"><a href="#string">String</a></td><td>Text link</td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>Name of brand</td></tr><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td>  Title used by html tag</td></td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a><td><td>Description used by html tag</td></tr><tr><td colspan="2" valign="top"><strong>active</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Brand is active</td></tr></tbody></table>
 
 ### BrandFacet
 
@@ -684,25 +650,7 @@ Contains slugified links according to the store structure. /:department/d, /:cat
 
 ### Category
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>cacheId</strong></td><td valign="top"><a href="#id">ID</a></td><td>
- id is used as cacheId
-</td></tr><tr><td colspan="2" valign="top"><strong>href</strong></td><td valign="top"><a href="#string">String</a></td><td>
- URI of category
-</td></tr><tr><td colspan="2" valign="top"><strong>slug</strong></td><td valign="top"><a href="#string">String</a></td><td>
- Category text link
-</td></tr><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#int">Int</a></td><td>
- Category ID
-</td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>
- Category name
-</td></tr><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td>
- Title used by html tag
-</td></tr><tr><td colspan="2" valign="top"><strong>hasChildren</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>
- Description used by html tag
-</td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a></td><td>
- Has children categories
-</td></tr><tr><td colspan="2" valign="top"><strong>children</strong></td><td valign="top">[<a href="#category">Category</a>]</td><td>
- Categories children
-</td></tr></tbody></table>
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>cacheId</strong></td><td valign="top"><a href="#id">ID</a></td><td> id is used as cacheId</td></tr><tr><td colspan="2" valign="top"><strong>href</strong></td><td valign="top"><a href="#string">String</a></td><td> URI of category</td></tr><tr><td colspan="2" valign="top"><strong>slug</strong></td><td valign="top"><a href="#string">String</a></td><td> Category text link</td></tr><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#int">Int</a></td><td> Category ID</td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td> Category name</td></tr><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td> Title used by html tag</td></tr><tr><td colspan="2" valign="top"><strong>hasChildren</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td> Description used by html tag</td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a><td><td> Has children categories</td></tr><tr><td colspan="2" valign="top"><strong>children</strong></td><td valign="top">[<a href="#category">Category</a>]</td><td> Categories children</td></tr></tbody></table>
 
 ### ClusterHighlight
 
@@ -735,9 +683,8 @@ Contains slugified links according to the store structure. /:department/d, /:cat
 ### Discount
 
 Discount object
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Discount name
-</td></tr></tbody></table>
+
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>Discount name</td></tr></tbody></table>
 
 ### DomainValues
 
@@ -753,25 +700,7 @@ Discount name
 
 ### Facets
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>departments</strong> ⚠️</td><td valign="top">[<a href="#departmentfacet">DepartmentFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>
-Use the <code>facets</code> instead.
-</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>brands</strong> ⚠️</td><td valign="top">[<a href="#brandfacet">BrandFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>
-Use the <code>facets</code> instead.
-</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>specificationFilters</strong></td><td valign="top">[<a href="#filterfacets">FilterFacets</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>categoriesTrees</strong> ⚠️</td><td valign="top">[<a href="#categoriestreefacet">CategoriesTreeFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>
-Use the <code>facets</code> instead.
-</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>priceRanges</strong></td><td valign="top">[<a href="#pricerangesfacet">PriceRangesFacet</a>]</td><td>
-Price range for the given query.
-</td></tr><tr><td colspan="2" valign="top"><strong>recordsFiltered</strong> ⚠️</td><td valign="top"><a href="#int">Int</a></td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>
-Use the recordsFiltered from the <code>productSearch</code> instead.
-</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>queryArgs</strong></td><td valign="top"><a href="#queryargs">QueryArgs</a></td><td>
-Info about the searched query.
-</td></tr><tr><td colspan="2" valign="top"><strong>facets</strong></td><td valign="top">[<a href="#facet">Facet</a>]</td><td>
-List of facets.
-</td></tr><tr><td colspan="2" valign="top"><strong>sampling</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-Indicates whether there was sampling in the aggregation of facets or not. In search results that have many products, only the first 30000 will be aggregated to avoid performance issues.
-</td></tr><tr><td colspan="2" valign="top"><strong>breadcrumb</strong></td><td valign="top">[<a href="#searchbreadcrumb">SearchBreadcrumb</a>]</td><td>
-Generated breadcrumb for the given query.
-</td></tr></tbody></table>
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>departments</strong> ⚠️</td><td valign="top">[<a href="#departmentfacet">DepartmentFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>brands</strong> ⚠️</td><td valign="top">[<a href="#brandfacet">BrandFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>specificationFilters</strong></td><td valign="top">[<a href="#filterfacets">FilterFacets</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>categoriesTrees</strong> ⚠️</td><tdvalign="top">[<a href="#categoriestreefacet">CategoriesTreeFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>priceRanges</strong></td><td valign="top">[<a href="#pricerangesfacet">PriceRangesFacet</a>]</td><td>Price range for the given query.</td></tr><tr><td colspan="2" valign="top"><strong>recordsFiltered</strong> ⚠️</td><td valign="top"><a href="#int">Int</a><td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the recordsFiltered from the <code>productSearch</code> instead.</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>queryArgs</strong></td><td valign="top"><a href="#queryargs">QueryArgs</a></td><td>Info about the searched query.</td></tr><tr><td colspan="2" valign="top"><strong>facets</strong></td><td valign="top">[<a href="#facet">Facet</a>]</td><td>List of facets.</td></tr><tr><td colspan="2" valign="top"><strong>sampling</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Indicates whether there was sampling in the aggregation of facets or not. In search results that have many products, only the first30000 will be aggregated to avoid performance issues.</td></tr><tr><td colspan="2" valign="top"><strong>breadcrumb</strong></td><td valign="top">[<a href="#searchbreadcrumb">SearchBreadcrumb</a>]</td><td>Generated breadcrumb for the given query.</td></tr></tbody></table>
 
 ### FilterFacet
 
@@ -853,59 +782,7 @@ List of gifts associated with the product
 
 ### Product
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>brand</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Brand of the product
-</td></tr><tr><td colspan="2" valign="top"><strong>brandId</strong></td><td valign="top"><a href="#int">Int</a></td><td>
-Id of the brand of the product
-</td></tr><tr><td colspan="2" valign="top"><strong>cacheId</strong></td><td valign="top"><a href="#id">ID</a></td><td>
-linkText is used as cacheId
-</td></tr><tr><td colspan="2" valign="top"><strong>categoryId</strong></td><td valign="top"><a href="#id">ID</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>categories</strong> ⚠️</td><td valign="top">[<a href="#string">String</a>]</td><td>
-Categories of the product
-<p>⚠️ <strong>DEPRECATED</strong></p><blockquote>
-Use 'categoryTree' field for internationalization support
-</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>categoryTree</strong></td><td valign="top">[<a href="#category">Category</a>]</td><td>
-Product's categories
-</td></tr><tr><td colspan="2" valign="top"><strong>clusterHighlights</strong></td><td valign="top">[<a href="#clusterhighlight">ClusterHighlight</a>]</td><td>
-List of related products
-</td></tr><tr><td colspan="2" valign="top"><strong>productClusters</strong></td><td valign="top">[<a href="#productclusters">ProductClusters</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>description</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Product description
-</td></tr><tr><td colspan="2" valign="top"><strong>items</strong></td><td valign="top">[<a href="#sku">SKU</a>]</td><td>
-SKU objects of the product
-</td></tr><tr><td colspan="2" align="right" valign="top">filter</td><td valign="top"><a href="#itemsfilter">ItemsFilter</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>skuSpecifications</strong></td><td valign="top">[<a href="#skuspecification">SkuSpecification</a>]</td><td>
-List of SKU Specifications
-</td></tr><tr><td colspan="2" valign="top"><strong>link</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Product URL
-</td></tr><tr><td colspan="2" valign="top"><strong>linkText</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Product slug
-</td></tr><tr><td colspan="2" valign="top"><strong>productId</strong></td><td valign="top"><a href="#id">ID</a></td><td>
-Product ID
-</td></tr><tr><td colspan="2" valign="top"><strong>productName</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Product name
-</td></tr><tr><td colspan="2" valign="top"><strong>properties</strong></td><td valign="top">[<a href="#property">Property</a>]</td><td>
-Array of product properties
-</td></tr><tr><td colspan="2" valign="top"><strong>propertyGroups</strong></td><td valign="top">[<a href="#propertygroup">PropertyGroup</a>]</td><td>
-Array of product properties
-</td></tr><tr><td colspan="2" valign="top"><strong>productReference</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Product reference
-</td></tr><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Title used by html tag
-</td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Description used by html tag
-</td></tr><tr><td colspan="2" valign="top"><strong>recommendations</strong></td><td valign="top"><a href="#recommendation">Recommendation</a></td><td>
-Related Products
-</td></tr><tr><td colspan="2" valign="top"><strong>jsonSpecifications</strong></td><td valign="top"><a href="#string">String</a></td><td>
-JSON specification of the product
-</td></tr><tr><td colspan="2" valign="top"><strong>benefits</strong></td><td valign="top">[<a href="#benefit">Benefit</a>]</td><td>
-List of benefits associated with this product
-</td></tr><tr><td colspan="2" valign="top"><strong>itemMetadata</strong></td><td valign="top"><a href="#itemmetadata">ItemMetadata</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>specificationGroups</strong></td><td valign="top">[<a href="#specificationgroup">SpecificationGroup</a>]</td><td>
-Array of product SpecificationGroup
-</td></tr><tr><td colspan="2" valign="top"><strong>priceRange</strong></td><td valign="top"><a href="#productpricerange">ProductPriceRange</a></td><td>
-Returns highest and lowest prices for available SKUs in product.
-</td></tr><tr><td colspan="2" valign="top"><strong>releaseDate</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Product Release Date, for list ordering and product cluster highlight
-</td></tr><tr><td colspan="2" valign="top"><strong>selectedProperties</strong></td><td valign="top">[<a href="#selectedproperty">SelectedProperty</a>]</td><td>
-Product properties that will be selected by default. e.g: {key: "Color", value: "Blue"}
-</td></tr></tbody></table>
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>brand</strong></td><td valign="top"><a href="#string">String</a></td><td>Brand of the product</td></tr><tr><td colspan="2" valign="top"><strong>brandId</strong></td><td valign="top"><a href="#int">Int</a></td><td>Id of the brand of the product</td></tr><tr><td colspan="2" valign="top"><strong>cacheId</strong></td><td valign="top"><a href="#id">ID</a></td><td>linkText is used as cacheId</td></tr><tr><td colspan="2" valign="top"><strong>categoryId</strong></td><td valign="top"><a href="#id">ID</a></td><td></td><tr><tr><td colspan="2" valign="top"><strong>categories</strong> ⚠️</td><td valign="top">[<a href="#string">String</a>]</td><td>Categories of the product<p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use 'categoryTree' field for internationalization support</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>categoryTree</strong></td><td valign="top">[<a href="#category">Category</a>]</td><td>Product's categories</td></tr><tr><td colspan="2" valign="top"><strong>clusterHighlights</strong></td><td valign="top">[<a href="#clusterhighlight">ClusterHighlight</a>]</td><td>List of related products</td></tr><tr><td colspan="2" valign="top"><strong>productClusters</strong></td><td valign="top">[<a href="#productclusters">ProductClusters</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>description</strong></td><tdvalign="top"><a href="#string">String</a></td><td>Product description</td></tr><tr><td colspan="2" valign="top"><strong>items</strong></td><td valign="top">[<a href="#sku">SKU</a>]</td><td>SKU objects of the product</td></tr><tr><td colspan="2" align="right" valign="top">filter</td><td valign="top"><a href="#itemsfilter">ItemsFilter</a></td><td><td></tr><tr><td colspan="2" valign="top"><strong>skuSpecifications</strong></td><td valign="top">[<a href="#skuspecification">SkuSpecification</a>]</td><td>List of SKU Specifications</td></tr><tr><td colspan="2" valign="top"><strong>link</strong></td><td valign="top"><a href="#string">String</a></td><td>Product URL</td></tr><tr><td colspan="2" valign="top"><strong>linkText</strong></td><td valign="top"><a href="#string">String</a></td><td>Product slug</td></tr><tr><td colspan="2" valign="top"><strong>productId</strong></td><td valign="top"><a href="#id">ID</a></td><td>Product ID</td></tr><tr><td colspan="2" valign="top"><strong>productName</strong></td><td valign="top"><a href="#string">String</a></td><td>Product name</td></tr><tr><td colspan="2" valign="top"><strong>properties</strong></td><td valign="top">[<a href="#property">Property</a>]</td><td>Array of product properties</td></tr><tr><td colspan="2" valign="top"><strong>propertyGroups</strong></td><td valign="top">[<a href="#propertygroup">PropertyGroup</a>]</td><td>Array of product properties</td></tr><tr><td colspan="2" valign="top"><strong>productReference</strong></td><td valign="top"><a href="#string">String</a></td><td>Product reference</td></tr><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td>Title used by html tag</td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a><td><td>Description used by html tag</td></tr><tr><td colspan="2" valign="top"><strong>recommendations</strong></td><td valign="top"><a href="#recommendation">Recommendation</a></td><td>Related Products</td></tr><tr><td colspan="2" valign="top"><strong>jsonSpecifications</strong></td><td valign="top"><a href="#string">String</a><td><td>JSON specification of the product</td></tr><tr><td colspan="2" valign="top"><strong>benefits</strong></td><td valign="top">[<a href="#benefit">Benefit</a>]</td><td>List of benefits associated with this product</td></tr><tr><td colspan="2" valign="top"><strong>itemMetadata</strong></td><td valign="top"><a href="#itemmetadata">ItemMetadata<a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>specificationGroups</strong></td><td valign="top">[<a href="#specificationgroup">SpecificationGroup</a>]</td><td>Array of product SpecificationGroup</td></tr><tr><td colspan="2" valign="top"><strong>priceRange</strong></td><td valign="top"><a href="#productpricerange">ProductPriceRange</a></td><td>Returns highest and lowest prices for available SKUs in product.</td></tr><tr><td colspan="2" valign="top"><strong>releaseDate</strong></td><td valign="top"><a href="#string">String</a></td><td>Product Release Date, for list ordering and product cluster highlight</td></tr><tr><td colspan="2" valign="top"><strong>selectedProperties</strong></td><td valign="top">[<a href="#selectedproperty">SelectedProperty</a>]</td><td>Product properties that will be selected by default. e.g: {key: "Color", value: "Blue"}</td></tr></tbody></table>
 
 ### ProductClusters
 
@@ -999,14 +876,7 @@ Product properties that will be selected by default. e.g: {key: "Color", value: 
 ### ProductSuggestions
 
 <table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>count</strong></td><td valign="top"><a href="#int">Int</a>!</td><td>
-Number of suggested products
-</td></tr><tr><td colspan="2" valign="top"><strong>products</strong></td><td valign="top">[<a href="#product">Product</a>]!</td><td>
-Suggested products
-</td></tr><tr><td colspan="2" valign="top"><strong>misspelled</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-If the term is misspelled or not
-</td></tr><tr><td colspan="2" valign="top"><strong>operator</strong></td><td valign="top"><a href="#operator">Operator</a></td><td>
-Indicates how the search-engine will deal with the fullText if there is more than one word. Set <code>and</code> if the returned products must have all the words in its metadata or <code>or</code> otherwise.
-</td></tr></tbody></table>
+Number of suggested products </td></tr><tr><td colspan="2" valign="top"><strong>products</strong></td><td valign="top">[<a href="#product">Product</a>]!</td><td> Suggested products </td></tr><tr><td colspan="2" valign="top"><strong>misspelled</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td> If the term is misspelled or not </td></tr><tr><td colspan="2" valign="top"><strong>operator</strong></td><td valign="top"><a href="#operator">Operator</a></td><td> Indicates how the search-engine will deal with the fullText if there is more than one word. Set <code>and</code> if the returned products must have all the words in its metadata or <code>or</code> otherwise. </td></tr></tbody></table>
 
 ### Property
 
@@ -1059,8 +929,8 @@ Indicates how the search-engine will deal with the fullText if there is more tha
 ### SearchCorrection
 
 Object that indicates if the term was misspelled and suggests a possible correction.
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>text</strong></td><td valign="top"><a href="#string">String</a></td><td>The corrected term. If the API was not able to correct the term, it will show the original search term.
-</td></tr><tr><td colspan="2" valign="top"><strong>highlighted</strong></td><td valign="top"><a href="#string">String</a></td><td>The same as <code>text</code>, but it highlights the corrected word. Useful when there is more than one word.</td></tr><tr><td colspan="2" valign="top"><strong>misspelled</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Whether the term was misspelled (<code>true</code>) or not (<code>false</code>).</td></tr><tr><td colspan="2" valign="top"><strong>correction</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Whether the API was able to suggest a correction (<code>true</code>) or not (<code>false</code>).</td></tr></tbody></table>
+
+<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description<th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>text</strong></td><td valign="top"><a href="#string">String</a></td><td>The corrected term. If the API was not able to correct the term, it will show the original search term.</td></tr><tr><td colspan="2" valign="top"><strong>highlighted</strong></td><td valign="top"><a href="#string">String</a></td><td>The same as <code>text</code>, but it highlights the corrected word. Useful when there is more than one word.</td></tr><tr><td colspan="2" valign="top"><strong>misspelled</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Whether the term was misspelled (<code>true</code>) or not (<code>false</code>).</td></tr><tr><td colspan="2" valign="top"><strong>correction</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Whether the API was able to suggest a correction (<code>true</code>) or not (<code>false</code>).</td></tr></tbody></table>
 
 ### SearchMetadata
 
