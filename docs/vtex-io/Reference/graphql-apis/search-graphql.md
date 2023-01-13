@@ -3538,6 +3538,7 @@ Object that indicates if the term was misspelled and suggests a possible correct
             <td colspan="2" valign="top"><strong>key</strong></td>
             <td valign="top"><a href="#string">String</a></td>
             <td>A key for the selected facet.</td>
+        </tr>
         <tr>
             <td colspan="2" valign="top"><strong>value</strong></td>
             <td valign="top"><a href="#string">String</a></td>
