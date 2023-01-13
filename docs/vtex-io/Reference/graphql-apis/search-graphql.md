@@ -2485,8 +2485,7 @@ Discount object
         <tr>
             <td colspan="2" valign="top"><strong>count</strong></td>
             <td valign="top"><a href="#int">Int</a>!</td>
-            <td>
-                Number of suggested products </td>
+            <td>Number of suggested products </td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>products</strong></td>
@@ -2808,10 +2807,7 @@ Discount object
         <tr>
             <td colspan="2" valign="top"><strong>attachments</strong> ⚠️</td>
             <td valign="top">[<a href="#attachment">Attachment</a>]</td>
-            <td>
-                <p>⚠️ <strong>DEPRECATED</strong></p>
-                <blockquote>Use itemMetaData instead</blockquote>
-            </td>
+            <td><p>⚠️ <strong>DEPRECATED</strong></p> <blockquote>Use itemMetaData instead</blockquote></td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>estimatedDateArrival</strong></td>
@@ -3291,9 +3287,7 @@ Object that indicates if the term was misspelled and suggests a possible correct
         <tr>
             <td colspan="2" valign="top"><strong>cacheId</strong></td>
             <td valign="top"><a href="#id">ID</a></td>
-            <td>
-                searchTerm from Query autocomplete is used as cacheId
-            </td>
+            <td>searchTerm from Query autocomplete is used as cacheId</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>itemsReturned</strong></td>
@@ -3503,10 +3497,7 @@ Object that indicates if the term was misspelled and suggests a possible correct
         <tr>
             <td colspan="2" valign="top"><strong>allowRedirect</strong></td>
             <td valign="top"><a href="#boolean">Boolean</a></td>
-            <td>
-                If the search has a redirect enabled, this allows (<code>true</code>) or not (<code>false</code>) the
-                redirect to be used.
-            </td>
+            <td>If the search has a redirect enabled, this allows (<code>true</code>) or not (<code>false</code>) the redirect to be used.</td>
         </tr>
     </tbody>
 </table>
@@ -3536,47 +3527,16 @@ Object that indicates if the term was misspelled and suggests a possible correct
 </table>
 
 ### SelectedFacetInput
+<table><thead><tr><th colspan="2" align="left">Field</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>key</strong></td><td valign="top"><a href="#string">String</a></td><td>A key for the selected facet.</td><tr><td colspan="2" valign="top"><strong>value</strong></td><td valign="top"><a href="#string">String</a></td><td>Facet value.</td></tr></tbody></table>
 
-<table>
-    <thead>
-        <tr>
-            <th colspan="2" align="left">Field</th>
-            <th align="left">Type</th>
-            <th align="left">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="2" valign="top"><strong>key</strong></td>
-            <td valign="top"><a href="#string">String</a></td>
-            <td>
+#### General filters
 
-                # Facet key
+The `key` parameter also allows the following general filters.
 
-                A key for the selected facet.
-
-                ## General filters
-
-                The `key` parameter also allows the following general filters.
-
-                | `facetKey` | Description |
-                | --------------- |
-                -------------------------------------------------------------------------------------------------------------------------------------
-                |
-                | `category-${n}` | Filter the search by category, where `n` represents the category tree level (1 =
-                department, 2 = category, 3 = subcategory, and so on) |
-                | `region-id` | Filter the search by a region id (aka regionalization). The value is the region id |
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" valign="top"><strong>value</strong></td>
-            <td valign="top"><a href="#string">String</a></td>
-            <td>
-                Facet value.
-            </td>
-        </tr>
-    </tbody>
-</table>
+| `facetKey`      | Description                                                                                                                           |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `category-${n}` | Filter the search by category, where `n` represents the category tree level (1 = department, 2 = category, 3 = subcategory, and so on) |
+| `region-id`     | Filter the search by a region id (aka regionalization). The value is the region id                                                    |
 
 ## Enums
 
