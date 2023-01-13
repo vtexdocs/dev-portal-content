@@ -43,7 +43,7 @@ To obtain the orderForm, the implementation must use the following request:
 [block:callout]
 {
   "type": "info",
-  "body": "The `disableAutoCompletion=true´ parameter is necessary to ensure that the requested orderForm won’t be recalculated but delivered exactly as it was at the time of the request."
+  "body": "The `disableAutoCompletion=true` parameter is necessary to ensure that the requested orderForm won’t be recalculated but delivered exactly as it was at the time of the request."
 }
 [/block]
 
