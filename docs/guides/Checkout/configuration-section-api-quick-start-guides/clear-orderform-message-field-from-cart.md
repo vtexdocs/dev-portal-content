@@ -1,3 +1,10 @@
+---
+title: "Clear orderForm message field from cart"
+slug: "clear-orderform-message-field-from-cart"
+hidden: false
+createdAt: "2023-01-13T09:00:00.051Z"
+updatedAt: "2023-01-13T10:00:00.334Z"
+---
 The orderForm is the main object processed by VTEX checkout, and one of the most important data structures in the architecture of every VTEX store. It stores a lot of contextual information about the order which is important to the processing of the order: order items, client's personal data, delivery address, freight information, among others.
 
 This guide will describe how to remove all messages from the `messages` field of the orderForm, leaving it empty.
