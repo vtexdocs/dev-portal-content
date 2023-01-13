@@ -67,7 +67,7 @@ The `/document` API goes directly to the Storage service whereas the `/search` A
   "body": "The necessity of eventual consistency for the `/search` API is that indexing the Documents in the Search Engine is a costly operation (even more when the amount of Documents is too large), so it happens asynchronously from the direct access of the Documents using the `/document` API."
 }
 [/block]
-A more detailed explanation of the update process in the Search Engine can be found in the article [Schema Lifecycle](doc:master-data-schema-lifecycle).
+A more detailed explanation of the update process in the Search Engine can be found in the article [Schema Lifecycle](/docs/guides/master-data-schema-lifecycle).
 
 ## Consistency level
 

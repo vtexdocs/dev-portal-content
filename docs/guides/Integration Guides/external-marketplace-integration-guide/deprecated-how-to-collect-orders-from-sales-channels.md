@@ -61,7 +61,7 @@ Follow the steps below, to integrate orders from external marketplaces:
 7. Check the [Recommendations](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-recommendations) page to follow integration best practices.
 8. Check out the [Order logs](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) page to create appropriate error messages.
 
-If all validations pass, the order is sent to VTEX and the operation is logged according to information described in the [Order logs](doc:order-logs).
+If all validations pass, the order is sent to VTEX and the operation is logged according to information described in the [Order logs](/docs/guides/order-logs).
 
 After VTEX OMS returns `success`, if the IDs between VTEX and the marketplace differ, the connector should store the mapping of the order (VTEX ID and Marketplace ID). This information will be used for[ order status update operations](link).
 

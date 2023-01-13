@@ -5,7 +5,7 @@ hidden: true
 createdAt: "2020-10-08T13:26:34.527Z"
 updatedAt: "2020-10-08T13:26:34.527Z"
 ---
-## Introduction
+
 VTEX IO powers big e-commerce operations, and for most of that it's necessary to **run code on a server**. Services are how we run **Node.js or .NET** code on VTEX IO infrastructure, backed by API abstractions to improve developer experience.
 
 Services can export **HTTP Routes**, **GraphQL resolvers** or **event handlers.**
@@ -35,7 +35,7 @@ This is the `node/service.json` from [vtex.service-example](https://github.co
   "body": "After defining these configs, it's possible to export handler functions on node/index.ts file."
 }
 [/block]
-Most of the fields on the service.json are optional, and default values will be used by the platform. 
+Most of the fields on the service.json are optional, and default values will be used by the platform.
 [block:parameters]
 {
   "data": {
@@ -72,9 +72,4 @@ Most of the fields on the service.json are optional, and default values will be 
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "It´s also possible to export GraphQL services, using the graphql builder. You can check vtex.graphql-example to see how it's done."
-}
-[/block]
+> ℹ️ It's also possible to export GraphQL services, using the graphql builder. You can check vtex.graphql-example to see how it's done.

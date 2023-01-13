@@ -8,7 +8,7 @@ updatedAt: "2022-03-09T16:31:39.613Z"
 
 > ℹ️ You can check the demo videos of Payment App on our Office Hours through these links in [English](https://youtu.be/nrZOZ7LMtLE?t=3119) and [Portuguese](https://youtu.be/YJ0qSgYiN8c?t=1064).
 
-A Payment App is a special type of app built-in [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/what-is-vtex-io) which allows developers to create custom payment experiences on the checkout page, without redirecting customers to an external website.
+A Payment App is a special type of app built-in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) which allows developers to create custom payment experiences on the checkout page, without redirecting customers to an external website.
 
 In terms of programming, a Payment App is defined as a class in TypeScript that extends from [React’s Component](https://reactjs.org/docs/react-component.html). You can configure a payment method to use a specific Payment App, and this app is instantiated by the Checkout UI when the payment method is selected in the purchase.
 
@@ -88,7 +88,7 @@ git clone https://github.com/vtex-apps/example-payment-authorization-app.git
 vtex link
 ```
 
-Once you [link the app](https://vtex.io/docs/recipes/development/linking-an-app/), your local computer files will sync to our cloud development environment. It means that any change done locally in the code you are working on will be sent to the cloud and reflected in the workspace.
+Once you [link the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app), your local computer files will sync to our cloud development environment. It means that any change done locally in the code you are working on will be sent to the cloud and reflected in the workspace.
 
 ### Step 3: Testing a Payment App flow
 
@@ -189,7 +189,7 @@ When the customer adds the credit card information and clicks on the Checkout bu
 
 The card issuer will, in turn, analyze the fraud context of that purchase (the score, probability), also called [Risk-based Authentication](https://3dsecure2.com/frictionless-flow/#what-is-risk-based-authentication). The score will be a result of a series of risk-based elements which can include the value of the purchase, transactional history, device information, among others. If this analysis returns as a score for high fraud risk, the provider can choose to call the 3DS2 challenge asking the customer to proceed with the Strong Authentication method (i.e.: approve the payment in the bank app). If it falls in a score for low fraud risk, the provider will not call the challenge.
 
-If the acquirer decides that it must perform the Strong Authentication for any payment, it must return to VTEX, in the response body of the [Create Payment](ref:createpayment) route, his `status` as `undefined` and his Payment App information in the `paymentAppData` field.
+If the acquirer decides that it must perform the Strong Authentication for any payment, it must return to VTEX, in the response body of the [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) route, his `status` as `undefined` and his Payment App information in the `paymentAppData` field.
 
 The `status` returned as `undefined` indicates to our Gateway that the payment has not yet been authorized or denied. There may be several reasons for this, with Strong Authentication being one of them. What will make the Payment App, which runs 3DS2, be called is the `paymentAppData` field in the response.
 

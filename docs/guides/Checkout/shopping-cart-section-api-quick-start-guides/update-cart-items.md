@@ -52,7 +52,7 @@ After sending the request, the endpoint will return the response body with the s
 [/block]
 ## Removing shopping cart items
 
-To remove an item from the cart you must use the same endpoint and parameters as in the previous section ([Updating shopping cart items quantity](doc:update-cart-items#updating-shopping-cart-items-quantity)). However, the `quantity` value to be sent in the request body must be `0`. See a request body example below:
+To remove an item from the cart you must use the same endpoint and parameters as in the previous section ([Updating shopping cart items quantity](/docs/guides/update-cart-items#updating-shopping-cart-items-quantity)). However, the `quantity` value to be sent in the request body must be `0`. See a request body example below:
 [block:code]
 {
   "codes": [

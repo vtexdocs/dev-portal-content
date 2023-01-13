@@ -37,8 +37,8 @@ Master Data V2 has the `/schema` and `/indices` APIs and allows users to create 
 ## API Summary
 
 The endpoints in the Master Data API are:
-- [Schemas](ref:schemas): Allows to create and read Schemas for a Data Entity. The use of Schemas enables searches with custom Fields and to add rules when managing Documents. More information about Schemas can also be found in the article [Schema Lifecycle](doc:master-data-schema-lifecycle).
-- [Indices](ref:indices): Indices are shortcuts to Documents that enable fast access using other Fields beyond the Document `id`. More information about Indices can be found in the article [Components](doc:master-data-components).
+- [Schemas](ref:schemas): Allows to create and read Schemas for a Data Entity. The use of Schemas enables searches with custom Fields and to add rules when managing Documents. More information about Schemas can also be found in the article [Schema Lifecycle](/docs/guides/master-data-schema-lifecycle).
+- [Indices](ref:indices): Indices are shortcuts to Documents that enable fast access using other Fields beyond the Document `id`. More information about Indices can be found in the article [Components](/docs/guides/master-data-components).
 - [Documents](ref:documents): This is the API to manage Documents directly, accessing them individually through their `id`.
 - [Search](ref:search): Allows the retrieval of many Documents with a variety of parameters, including Schemas and indexed Fields.
 - [Scroll](ref:scroll): Allows the retrieval of a very large amount of Documents.

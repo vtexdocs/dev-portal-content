@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2019-12-18T20:03:10.002Z"
 updatedAt: "2021-04-20T14:25:54.637Z"
 ---
-VTEX Master Data is an easy-to-use, secure, fast, scalable and extensible repository. It allows you to create your own entities, store data and consult directly from the storefront or use it to store info for some external integrations. More information can also be found in the [Master Data section](doc:master-data-introduction) of our API Guide.
+VTEX Master Data is an easy-to-use, secure, fast, scalable and extensible repository. It allows you to create your own entities, store data and consult directly from the storefront or use it to store info for some external integrations. More information can also be found in the [Master Data section](/docs/guides/master-data-introduction) of our API Guide.
 
 There are internal VTEX modules that use VTEX Master Data as a data repository.
 

@@ -11,14 +11,14 @@ In this article, we share a few tips to help you update an [SKU Specification](h
 
 ### SKU and its Specification
 
-First, you need to select an SKU and its Specification to update. If you don’t know the Specifications of the SKU, use the [Get SKU Specifications](ref:catalog-api-get-sku-specification) endpoint. It will retrieve all Specifications indexed on the SKU.
+First, you need to select an SKU and its Specification to update. If you don’t know the Specifications of the SKU, use the [Get SKU Specifications](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/specification) endpoint. It will retrieve all Specifications indexed on the SKU.
 
 In the example below, we show what the response would look like if your SKU had two specifications to fill in:
 
 - Color (`"FieldId": 271`)
 - Size (`"FieldId": 40`)
 
-If needed, you would be able to get more information about each specification using the [Get Specification Field](ref:catalog-api-get-specification-field) endpoint.
+If needed, you would be able to get more information about each specification using the [Get Specification Field](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/fieldGet/-fieldId-) endpoint.
 
 ```json
 [
@@ -43,7 +43,7 @@ If needed, you would be able to get more information about each specification us
 
 ### Knowing the `FieldValueId`
 
-After selecting the one Specification to update, use the [Get Specifications Values By Field Id](ref:catalog-api-get-specification-field-value-fieldid) endpoint. It allows you to know all the possible values from this Specification as you can only update the `FieldValueId` from an SKU Specification.
+After selecting the one Specification to update, use the [Get Specifications Values By Field Id](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/fieldvalue/-fieldId-) endpoint. It allows you to know all the possible values from this Specification as you can only update the `FieldValueId` from an SKU Specification.
 
 In the example below, we show what the response would look like if your specification had three possible values:
 
@@ -76,5 +76,5 @@ In the example below, we show what the response would look like if your specific
 
 ### Updating the SKU Specification `FieldValueId`
 
-Finally, use the [Update SKU Specification](ref:put_api-catalog-pvt-stockkeepingunit-skuid-specification) endpoint to change the `FieldValueId` from the SKU Specification to the desired new value.
+Finally, use the [Update SKU Specification](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-/specification) endpoint to change the `FieldValueId` from the SKU Specification to the desired new value.
 > ⚠️ SKU Specifications can only have the `FieldType` as `5`(Combo) or `6`(Radio). You cannot change the `Text` field without updating the `FieldValueId`. After this update, the `Text` field will be automatically modified.

@@ -66,7 +66,7 @@ When implementing an ecommerce project, it may be necessary to import customer d
 
 Unlike the processes shown in the image above, this import does not require a specific order relative to other processes.
 
-See the [Import customer data integration guide](doc:import-customer-data) to learn how to perform this process using [Master Data v2](https://help.vtex.com/en/tutorial/master-data-v2--3JJ1mlzuo88w22gO0gy0QS#).
+See the [Import customer data integration guide](/docs/guides/import-customer-data) to learn how to perform this process using [Master Data v2](https://help.vtex.com/en/tutorial/master-data-v2--3JJ1mlzuo88w22gO0gy0QS#).
 
 ### Middleware setup
 [block:html]
