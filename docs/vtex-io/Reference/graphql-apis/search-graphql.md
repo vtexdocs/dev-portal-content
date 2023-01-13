@@ -2287,8 +2287,7 @@ Discount object
         <tr>
             <td colspan="2" align="right" valign="top">filter</td>
             <td valign="top"><a href="#itemsfilter">ItemsFilter</a></td>
-            <td>
-            <td>
+            <td></td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>skuSpecifications</strong></td>
