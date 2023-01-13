@@ -3,9 +3,36 @@ title: "Unofficial Checkout API deprecation"
 slug: "unofficial-checkout-api-deprecation"
 hidden: true
 createdAt: "2022-12-08T22:14:43.582Z"
-updatedAt: "2022-12-09T14:38:18.249Z"
+updatedAt: "2023-01-13T13:52:21.000"
 ---
-| **Fields** | **Type** | **Description** |
+
+Both the Outdated Checkout endpoint and the Order Management System (OMS) endpoints in the table below allow you to obtain order fulfillment information, order management data, seller identification and more.
+
+Beginning June 25, 2023, the Outdated Checkout endpoint will be deprecated and all integrations that use this route will have to migrate to OMS endpoints, as indicated in the following table:
+
+| **From Checkout endpoint** | **To OMS endpoints** |
+|---|---|
+|  Outdated Checkout endpoint GET - `api/checkout/pub/orders` | <ul><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders">Retrieve user's orders</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders</code></li><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders/-orderId-">Retrieve user order details</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders/{orderId}</code></li></ul>
+
+## Why are we doing this
+
+The Outdated Checkout endpoint is an old route that will be discontinued. Using the OMS endpoints ensure that your store is using the latest and most performant VTEX solution. Some of the benefits of migrating to the VTEX OMS endpoints are:
+
+* Faster order search
+* Reduction in order integration errors
+* Option to paginate orders data
+
+Having a unified service across all VTEX stores also helps us accelerate the pace of new solutions and product releases to improve your business.
+
+## What are the differences
+
+The table below shows the Outdated Checkout endpoint fields that do not exist on OMS endpoints, and most of them will be permanently deprecated. Except for the fields in the table, all of the other Outdated Checkout endpoint fields can be found on VTEX OMS endpoints.
+
+If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated Checkout endpoint response body](#outdated-checkout-endpoint-response-body).
+
+### Outdated Checkout endpoint properties descriptions
+
+| **Field** | **Type** | **Description** |
 |:---:|:---:|:---|
 | orderId | string | Order ID is a unique code that identifies an order. |
 | orderGroup | string | Order's group ID. |
@@ -278,14 +305,14 @@ updatedAt: "2022-12-09T14:38:18.249Z"
 | giftRegistryData | object | Information about gift list, when it applies. |
 | giftRegistryId | string | Gift list item registry ID. |
 | giftRegistryType | string | Gift list item's type. |
-| giftRegistryTypeName	 | string | Gift list item's type name. |
+| giftRegistryTypeName | string | Gift list item's type name. |
 | addressId | string | Address's ID for shipping the gift list item.  |
 | description | string | Gift list item's description. |
 | marketingData | object | Information about promotions and marketing. For example, coupon tracking information and internal or external UTMs. |
 | attachmentId | string | Attachment's ID.  |
 | coupon | string | Coupon's code information. |
-| marketingTags	 | array | Marketing tags information. This field can be used to register campaign data or informative tags regarding promotions. |
-| utmCampaign	 | string | Value of the `utm_campaign` parameter of the URL that led to the request. |
+| marketingTags | array | Marketing tags information. This field can be used to register campaign data or informative tags regarding promotions. |
+| utmCampaign | string | Value of the `utm_campaign` parameter of the URL that led to the request. |
 | utmMedium | string | Value of the `utm_medium` parameter of the URL that led to the request. |
 | utmSource | string | Value of the `utm_source` parameter of the URL that led to the request. |
 | utmiCampaign         | string | Internal UTM value `utmi_cp`. |
@@ -396,9 +423,7 @@ updatedAt: "2022-12-09T14:38:18.249Z"
 | allowChangeSeller | boolean | When set as `true`, it is possible to use the Change Seller feature in the order, and when set as `false`, it is not possible. |
 | orderFormCreationDate | string | Date of when the orderForm was created with the format `yyyy-mm-ddThh:mm:ss.{zone}Z`. |
 
-
-
-
+### Outdated Checkout endpoint response body
 
 [block:code]
 {
