@@ -744,8 +744,7 @@ To resolve this query, you need to have a app that implements the schema declare
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>metaTagDescription</strong></td>
-            <td valign="top"><a href="#string">String</a>
-            <td>
+            <td valign="top"><a href="#string">String</a></td>
             <td>Description used by html tag</td>
         </tr>
         <tr>
