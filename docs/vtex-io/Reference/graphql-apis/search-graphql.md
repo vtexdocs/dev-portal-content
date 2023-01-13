@@ -2253,7 +2253,7 @@ Discount object
             <td colspan="2" valign="top"><strong>categoryId</strong></td>
             <td valign="top"><a href="#id">ID</a></td>
             <td></td>
-        <tr>
+        </tr>
         <tr>
             <td colspan="2" valign="top"><strong>categories</strong> ⚠️</td>
             <td valign="top">[<a href="#string">String</a>]</td>
