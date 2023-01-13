@@ -284,8 +284,8 @@ updatedAt: "2022-12-09T14:38:18.249Z"
 | marketingData | object | Information about promotions and marketing. For example, coupon tracking information and internal or external UTMs. |
 | attachmentId | string | Attachment's ID.  |
 | coupon | string | Coupon's code information. |
-| marketingTags	 | array | Marketing tags information. This field can be used to register campaign data or informative tags regarding promotions. |
-| utmCampaign	 | string | Value of the `utm_campaign` parameter of the URL that led to the request. |
+| marketingTags | array | Marketing tags information. This field can be used to register campaign data or informative tags regarding promotions. |
+| utmCampaign | string | Value of the `utm_campaign` parameter of the URL that led to the request. |
 | utmMedium | string | Value of the `utm_medium` parameter of the URL that led to the request. |
 | utmSource | string | Value of the `utm_source` parameter of the URL that led to the request. |
 | utmiCampaign         | string | Internal UTM value `utmi_cp`. |
