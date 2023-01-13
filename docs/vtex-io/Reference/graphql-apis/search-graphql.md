@@ -669,7 +669,7 @@ Product properties that will be selected by default. e.g: {key: "Color", value: 
         <tr>
             <td colspan="2" valign="top"><strong>metaTagDescription</strong></td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>String to be used in the <code><meta name="description"...</code> tag.</td>
+            <td>String to be used in the <code>&lt;meta name="description"...</code> tag.</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>breadcrumb</strong> ⚠️</td>
