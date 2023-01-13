@@ -278,7 +278,7 @@ updatedAt: "2022-12-09T14:38:18.249Z"
 | giftRegistryData | object | Information about gift list, when it applies. |
 | giftRegistryId | string | Gift list item registry ID. |
 | giftRegistryType | string | Gift list item's type. |
-| giftRegistryTypeName	 | string | Gift list item's type name. |
+| giftRegistryTypeName | string | Gift list item's type name. |
 | addressId | string | Address's ID for shipping the gift list item.  |
 | description | string | Gift list item's description. |
 | marketingData | object | Information about promotions and marketing. For example, coupon tracking information and internal or external UTMs. |
