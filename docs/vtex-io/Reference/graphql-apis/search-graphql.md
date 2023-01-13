@@ -627,7 +627,43 @@ To resolve this query, you need to have a app that implements the schema declare
 
  Benefit of a Product
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>featured</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td> Flag which indicates if the benefit is featured or not</td></tr><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#string">String</a></td><td> Id of the product which the benefit is associated</td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td> Name of the benefit</td></tr><tr><td colspan="2" valign="top"><strong>items</strong></td><td valign="top">[<a href="#benefititem">BenefitItem</a>]<td><td> Items of the benefit</td></tr><tr><td colspan="2" valign="top"><strong>teaserType</strong></td><td valign="top"><a href="#string">String</a></td><td> Type of benefit</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>featured</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td> Flag which indicates if the benefit is featured or not</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>id</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td> Id of the product which the benefit is associated</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>Name of the benefit</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>items</strong></td>
+            <td valign="top">[<a href="#benefititem">BenefitItem</a>]</td>
+            <td> Items of the benefit</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>teaserType</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td> Type of benefit</td>
+        </tr>
+    </tbody>
+</table>
 
 ### BenefitItem
 
