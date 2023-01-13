@@ -924,8 +924,7 @@ To resolve this query, you need to have a app that implements the schema declare
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>metaTagDescription</strong></td>
-            <td valign="top"><a href="#string">String</a>
-            <td>
+            <td valign="top"><a href="#string">String</a></td>
             <td>Has children categories</td>
         </tr>
         <tr>
@@ -2339,8 +2338,7 @@ Discount object
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>metaTagDescription</strong></td>
-            <td valign="top"><a href="#string">String</a>
-            <td>
+            <td valign="top"><a href="#string">String</a></td>
             <td>Description used by html tag</td>
         </tr>
         <tr>
@@ -2350,8 +2348,7 @@ Discount object
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>jsonSpecifications</strong></td>
-            <td valign="top"><a href="#string">String</a>
-            <td>
+            <td valign="top"><a href="#string">String</a></td>
             <td>JSON specification of the product</td>
         </tr>
         <tr>
@@ -2434,8 +2431,7 @@ Discount object
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>canonical</strong></td>
-            <td valign="top"><a href="#string">String</a>
-            <td>
+            <td valign="top"><a href="#string">String</a></td>
             <td></td>
         </tr>
         <tr>
