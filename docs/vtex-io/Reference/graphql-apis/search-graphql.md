@@ -3524,7 +3524,27 @@ Object that indicates if the term was misspelled and suggests a possible correct
 </table>
 
 ### SelectedFacetInput
-<table><thead><tr><th colspan="2" align="left">Field</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>key</strong></td><td valign="top"><a href="#string">String</a></td><td>A key for the selected facet.</td><tr><td colspan="2" valign="top"><strong>value</strong></td><td valign="top"><a href="#string">String</a></td><td>Facet value.</td></tr></tbody></table>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>key</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>A key for the selected facet.</td>
+        <tr>
+            <td colspan="2" valign="top"><strong>value</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>Facet value.</td>
+        </tr>
+    </tbody>
+</table>
 
 #### General filters
 
