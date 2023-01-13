@@ -740,7 +740,7 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" valign="top"><strong>titleTag</strong></td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Title used by html tag</td></td>
+            <td>Title used by html tag</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>metaTagDescription</strong></td>
