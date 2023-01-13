@@ -5,6 +5,11 @@ hidden: true
 createdAt: "2022-12-08T22:14:43.582Z"
 updatedAt: "2022-12-09T14:38:18.249Z"
 ---
+
+Both the Outdated Checkout endpoint and the Order Management System (OMS) endpoints in the table below allow you to obtain order fulfillment information, order management data, seller identification and more.
+
+Beginning June 25, 2023, the Outdated Checkout endpoint will be deprecated and all integrations that use this route will have to migrate to OMS endpoints, as indicated in the following table:
+
 | **Fields** | **Type** | **Description** |
 |:---:|:---:|:---|
 | orderId | string | Order ID is a unique code that identifies an order. |
