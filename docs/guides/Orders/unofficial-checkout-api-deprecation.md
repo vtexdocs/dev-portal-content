@@ -30,6 +30,8 @@ The table below shows the Outdated Checkout endpoint fields that do not exist on
 
 If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated Checkout endpoint response body](http://link)
 
+### Outdated Checkout endpoint properties descriptions
+
 | **Field** | **Type** | **Description** |
 |:---:|:---:|:---|
 | orderId | string | Order ID is a unique code that identifies an order. |
