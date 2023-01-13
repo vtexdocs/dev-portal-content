@@ -2464,7 +2464,7 @@ Discount object
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>redirect</strong></td>
-            <td valign="top"><a href="#string">String</a><td>
+            <td valign="top"><a href="#string">String</a></td>
             <td>Returns the redirect URL set for the given query.</td>
         </tr>
     </tbody>
