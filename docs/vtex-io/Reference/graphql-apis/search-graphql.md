@@ -2472,218 +2472,1406 @@ Discount object
 
 ### ProductSuggestions
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>count</strong></td><td valign="top"><a href="#int">Int</a>!</td><td>
-Number of suggested products </td></tr><tr><td colspan="2" valign="top"><strong>products</strong></td><td valign="top">[<a href="#product">Product</a>]!</td><td>Suggested products </td></tr><tr><td colspan="2" valign="top"><strong>misspelled</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>If the term is misspelled or not </td></tr><tr><td colspan="2" valign="top"><strong>operator</strong></td><td valign="top"><a href="#operator">Operator</a></td><td>Indicates how the search-engine will deal with the fullText if there is more than one word. Set <code>and</code> if the returned products must have all the words in its metadata or <code>or</code> otherwise. </td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>count</strong></td>
+            <td valign="top"><a href="#int">Int</a>!</td>
+            <td>
+                Number of suggested products </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>products</strong></td>
+            <td valign="top">[<a href="#product">Product</a>]!</td>
+            <td>Suggested products </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>misspelled</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td>If the term is misspelled or not </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>operator</strong></td>
+            <td valign="top"><a href="#operator">Operator</a></td>
+            <td>Indicates how the search-engine will deal with the fullText if there is more than one word. Set
+                <code>and</code> if the returned products must have all the words in its metadata or <code>or</code>
+                otherwise. </td>
+        </tr>
+    </tbody>
+</table>
 
 ### Property
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>originalName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>values</strong></td><td valign="top">[<a href="#string">String</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>originalName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>values</strong></td>
+            <td valign="top">[<a href="#string">String</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### PropertyGroup
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>properties</strong></td><td valign="top">[<a href="#string">String</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>properties</strong></td>
+            <td valign="top">[<a href="#string">String</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### QueryArgs
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>map</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>query</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>selectedFacets</strong></td><td valign="top">[<a href="#selectedfacet">SelectedFacet</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>map</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>query</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>selectedFacets</strong></td>
+            <td valign="top">[<a href="#selectedfacet">SelectedFacet</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Range
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>from</strong></td><td valign="top"><a href="#float">Float</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>to</strong></td><td valign="top"><a href="#float">Float</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>from</strong></td>
+            <td valign="top"><a href="#float">Float</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>to</strong></td>
+            <td valign="top"><a href="#float">Float</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Recommendation
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>buy</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>view</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>similars</strong></td><td valign="top">[<a href="#product">Product</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>buy</strong></td>
+            <td valign="top">[<a href="#product">Product</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>view</strong></td>
+            <td valign="top">[<a href="#product">Product</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>similars</strong></td>
+            <td valign="top">[<a href="#product">Product</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Reference
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>Key</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>Value</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>Key</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>Value</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Region
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>IsPersisted</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>IsRemoved</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>Id</strong></td><td valign="top"><a href="#id">ID</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>Name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>CountryCode</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>ZipCode</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>CultureInfoName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>IsPersisted</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>IsRemoved</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>Id</strong></td>
+            <td valign="top"><a href="#id">ID</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>Name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>CountryCode</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>ZipCode</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>CultureInfoName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SKU
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>itemId</strong></td><td valign="top"><a href="#id">ID</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>nameComplete</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>complementName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>ean</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>referenceId</strong></td><td valign="top">[<a href="#reference">Reference</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>measurementUnit</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>unitMultiplier</strong></td><td valign="top"><a href="#float">Float</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>kitItems</strong></td><td valign="top">[<a href="#kititem">KitItem</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>images</strong></td><td valign="top">[<a href="#image">Image</a>]</td><td></td></tr><tr><td colspan="2" align="right" valign="top">quantity</td><td valign="top"><a href="#int">Int</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>videos</strong></td><td valign="top">[<a href="#video">Video</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>sellers</strong></td><td valign="top">[<a href="#seller">Seller</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>variations</strong></td><td valign="top">[<a href="#property">Property</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>attachments</strong> ⚠️</td><td valign="top">[<a href="#attachment">Attachment</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use itemMetaData instead</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>estimatedDateArrival</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>itemId</strong></td>
+            <td valign="top"><a href="#id">ID</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>nameComplete</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>complementName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>ean</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>referenceId</strong></td>
+            <td valign="top">[<a href="#reference">Reference</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>measurementUnit</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>unitMultiplier</strong></td>
+            <td valign="top"><a href="#float">Float</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>kitItems</strong></td>
+            <td valign="top">[<a href="#kititem">KitItem</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>images</strong></td>
+            <td valign="top">[<a href="#image">Image</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" valign="top">quantity</td>
+            <td valign="top"><a href="#int">Int</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>videos</strong></td>
+            <td valign="top">[<a href="#video">Video</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>sellers</strong></td>
+            <td valign="top">[<a href="#seller">Seller</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>variations</strong></td>
+            <td valign="top">[<a href="#property">Property</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>attachments</strong> ⚠️</td>
+            <td valign="top">[<a href="#attachment">Attachment</a>]</td>
+            <td>
+                <p>⚠️ <strong>DEPRECATED</strong></p>
+                <blockquote>Use itemMetaData instead</blockquote>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>estimatedDateArrival</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SKUSpecificationField
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>originalName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>originalName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SKUSpecificationValue
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>originalName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>originalName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SearchBanner
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#string">String</a></td><td>Banner ID.</td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>Banner name.</td></tr><tr><td colspan="2" valign="top"><strong>area</strong></td><td valign="top"><a href="#string">String</a></td><td>Banner area.</td></tr><tr><td colspan="2" valign="top"><strong>html</strong></td><td valign="top"><a href="#string">String</a></td><td>Banner HTML.</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>id</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>Banner ID.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>Banner name.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>area</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>Banner area.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>html</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>Banner HTML.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### SearchBreadcrumb
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td>Human-readable format of the facet key.</td></tr><tr><td colspan="2" valign="top"><strong>href</strong></td><td valign="top"><a href="#string">String</a></td><td>Query link.</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>Human-readable format of the facet key.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>href</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>Query link.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### SearchCorrection
 
 Object that indicates if the term was misspelled and suggests a possible correction.
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description<th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>text</strong></td><td valign="top"><a href="#string">String</a></td><td>The corrected term. If the API was not able to correct the term, it will show the original search term.</td></tr><tr><td colspan="2" valign="top"><strong>highlighted</strong></td><td valign="top"><a href="#string">String</a></td><td>The same as <code>text</code>, but it highlights the corrected word. Useful when there is more than one word.</td></tr><tr><td colspan="2" valign="top"><strong>misspelled</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Whether the term was misspelled (<code>true</code>) or not (<code>false</code>).</td></tr><tr><td colspan="2" valign="top"><strong>correction</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Whether the API was able to suggest a correction (<code>true</code>) or not (<code>false</code>).</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description
+            <th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>text</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>The corrected term. If the API was not able to correct the term, it will show the original search term.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>highlighted</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>The same as <code>text</code>, but it highlights the corrected word. Useful when there is more than one
+                word.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>misspelled</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td>Whether the term was misspelled (<code>true</code>) or not (<code>false</code>).</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>correction</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td>Whether the API was able to suggest a correction (<code>true</code>) or not (<code>false</code>).</td>
+        </tr>
+    </tbody>
+</table>
 
 ### SearchMetadata
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>titleTag</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>metaTagDescription</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>titleTag</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>metaTagDescription</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SearchSuggestion
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>term</strong></td><td valign="top"><a href="#string">String</a>!</td><td>Search term.</td></tr><tr><td colspan="2" valign="top"><strong>count</strong></td><td valign="top"><a href="#int">Int</a>!</td><td>Number of times the term was searched.</td></tr><tr><td colspan="2" valign="top"><strong>attributes</strong></td><td valign="top">[<a href="#searchsuggestionattribute">SearchSuggestionAttribute</a>]</td><td>List of facets in which the term can be searched.</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>term</strong></td>
+            <td valign="top"><a href="#string">String</a>!</td>
+            <td>Search term.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>count</strong></td>
+            <td valign="top"><a href="#int">Int</a>!</td>
+            <td>Number of times the term was searched.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>attributes</strong></td>
+            <td valign="top">[<a href="#searchsuggestionattribute">SearchSuggestionAttribute</a>]</td>
+            <td>List of facets in which the term can be searched.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### SearchSuggestionAttribute
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>key</strong></td><td valign="top"><a href="#string">String</a>!</td><td>Facet key.</td></tr><tr><td colspan="2" valign="top"><strong>value</strong></td><td valign="top"><a href="#string">String</a>!</td><td>Facet value.</td></tr><tr><td colspan="2" valign="top"><strong>labelValue</strong></td><td valign="top"><a href="#string">String</a>!</td><td>Human-readable format of the facet key.</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>key</strong></td>
+            <td valign="top"><a href="#string">String</a>!</td>
+            <td>Facet key.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>value</strong></td>
+            <td valign="top"><a href="#string">String</a>!</td>
+            <td>Facet value.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>labelValue</strong></td>
+            <td valign="top"><a href="#string">String</a>!</td>
+            <td>Human-readable format of the facet key.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### SearchSuggestions
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>searches</strong></td><td valign="top">[<a href="#searchsuggestion">SearchSuggestion</a>]</td><td>A list of search suggestions.</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>searches</strong></td>
+            <td valign="top">[<a href="#searchsuggestion">SearchSuggestion</a>]</td>
+            <td>A list of search suggestions.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### SearchURLStats
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>path</strong></td><td valign="top"><a href="#string">String</a>!</td><td></td></tr><tr><td colspan="2" valign="top"><strong>count</strong></td><td valign="top"><a href="#int">Int</a>!</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>path</strong></td>
+            <td valign="top"><a href="#string">String</a>!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>count</strong></td>
+            <td valign="top"><a href="#int">Int</a>!</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SelectedFacet
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>key</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>value</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>key</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>value</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SelectedProperty
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>key</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>value</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>key</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>value</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Seller
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>sellerId</strong></td><td valign="top"><a href="#id">ID</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>sellerName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>addToCartLink</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>sellerDefault</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>commertialOffer</strong></td><td valign="top"><a href="#offer">Offer</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>sellerId</strong></td>
+            <td valign="top"><a href="#id">ID</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>sellerName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>addToCartLink</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>sellerDefault</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>commertialOffer</strong></td>
+            <td valign="top"><a href="#offer">Offer</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SkuSpecification
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>field</strong></td><td valign="top"><a href="#skuspecificationfield">SKUSpecificationField</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>values</strong></td><td valign="top">[<a href="#skuspecificationvalue">SKUSpecificationValue</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>field</strong></td>
+            <td valign="top"><a href="#skuspecificationfield">SKUSpecificationField</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>values</strong></td>
+            <td valign="top">[<a href="#skuspecificationvalue">SKUSpecificationValue</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SpecificationGroup
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>originalName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>specifications</strong></td><td valign="top">[<a href="#specificationgroupproperty">SpecificationGroupProperty</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>originalName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>specifications</strong></td>
+            <td valign="top">[<a href="#specificationgroupproperty">SpecificationGroupProperty</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SpecificationGroupProperty
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>originalName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>values</strong></td><td valign="top">[<a href="#string">String</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>originalName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>values</strong></td>
+            <td valign="top">[<a href="#string">String</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Suggestions
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>cacheId</strong></td><td valign="top"><a href="#id">ID</a></td><td>
- searchTerm from Query autocomplete is used as cacheId
-</td></tr><tr><td colspan="2" valign="top"><strong>itemsReturned</strong></td><td valign="top">[<a href="#items">Items</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>cacheId</strong></td>
+            <td valign="top"><a href="#id">ID</a></td>
+            <td>
+                searchTerm from Query autocomplete is used as cacheId
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>itemsReturned</strong></td>
+            <td valign="top">[<a href="#items">Items</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Teaser
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>conditions</strong></td><td valign="top"><a href="#teasercondition">TeaserCondition</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>effects</strong></td><td valign="top"><a href="#teasereffects">TeaserEffects</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>conditions</strong></td>
+            <td valign="top"><a href="#teasercondition">TeaserCondition</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>effects</strong></td>
+            <td valign="top"><a href="#teasereffects">TeaserEffects</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### TeaserCondition
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>minimumQuantity</strong></td><td valign="top"><a href="#int">Int</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>parameters</strong></td><td valign="top">[<a href="#teaservalue">TeaserValue</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>minimumQuantity</strong></td>
+            <td valign="top"><a href="#int">Int</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>parameters</strong></td>
+            <td valign="top">[<a href="#teaservalue">TeaserValue</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### TeaserEffects
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>parameters</strong></td><td valign="top">[<a href="#teaservalue">TeaserValue</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>parameters</strong></td>
+            <td valign="top">[<a href="#teaservalue">TeaserValue</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### TeaserValue
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>value</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>name</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>value</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Video
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>videoUrl</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>videoUrl</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### productSpecification
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>fieldName</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>fieldValues</strong></td><td valign="top">[<a href="#string">String</a>]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>fieldName</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>fieldValues</strong></td>
+            <td valign="top">[<a href="#string">String</a>]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## Inputs
 
 ### AssemblyOptionInput
 
-<table><thead><tr><th colspan="2" align="left">Field</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#id">ID</a>!</td><td></td></tr><tr><td colspan="2" valign="top"><strong>quantity</strong></td><td valign="top"><a href="#int">Int</a>!</td><td></td></tr><tr><td colspan="2" valign="top"><strong>assemblyId</strong></td><td valign="top"><a href="#string">String</a>!</td><td></td></tr><tr><td colspan="2" valign="top"><strong>seller</strong></td><td valign="top"><a href="#string">String</a>!</td><td></td></tr><tr><td colspan="2" valign="top"><strong>options</strong></td><td valign="top">[<a href="#assemblyoptioninput">AssemblyOptionInput</a>!]</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>id</strong></td>
+            <td valign="top"><a href="#id">ID</a>!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>quantity</strong></td>
+            <td valign="top"><a href="#int">Int</a>!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>assemblyId</strong></td>
+            <td valign="top"><a href="#string">String</a>!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>seller</strong></td>
+            <td valign="top"><a href="#string">String</a>!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>options</strong></td>
+            <td valign="top">[<a href="#assemblyoptioninput">AssemblyOptionInput</a>!]</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Options
 
-<table><thead><tr><th colspan="2" align="left">Field</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>allowRedirect</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>
-If the search has a redirect enabled, this allows (<code>true</code>) or not (<code>false</code>) the redirect to be used.
-</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>allowRedirect</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td>
+                If the search has a redirect enabled, this allows (<code>true</code>) or not (<code>false</code>) the
+                redirect to be used.
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ### ProductUniqueIdentifier
 
-<table><thead><tr><th colspan="2" align="left">Field</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>field</strong></td><td valign="top"><a href="#productuniqueidentifierfield">ProductUniqueIdentifierField</a>!</td><td></td></tr><tr><td colspan="2" valign="top"><strong>value</strong></td><td valign="top"><a href="#id">ID</a>!</td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>field</strong></td>
+            <td valign="top"><a href="#productuniqueidentifierfield">ProductUniqueIdentifierField</a>!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>value</strong></td>
+            <td valign="top"><a href="#id">ID</a>!</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SelectedFacetInput
 
-<table><thead><tr><th colspan="2" align="left">Field</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>key</strong></td><td valign="top"><a href="#string">String</a></td><td>
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" align="left">Field</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>key</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>
 
-# Facet key
+                # Facet key
 
-A key for the selected facet.
+                A key for the selected facet.
 
-## General filters
+                ## General filters
 
-  The `key` parameter also allows the following general filters.
+                The `key` parameter also allows the following general filters.
 
-  | `facetKey`      | Description                                                                                                                           |
-  | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-  | `category-${n}` | Filter the search by category, where `n` represents the category tree level (1 = department, 2 = category, 3 = subcategory, and so on) |
-  | `region-id`     | Filter the search by a region id (aka regionalization). The value is the region id                                                    |
-</td></tr><tr><td colspan="2" valign="top"><strong>value</strong></td><td valign="top"><a href="#string">String</a></td><td>
-Facet value.
-</td></tr></tbody></table>
+                | `facetKey` | Description |
+                | --------------- |
+                -------------------------------------------------------------------------------------------------------------------------------------
+                |
+                | `category-${n}` | Filter the search by category, where `n` represents the category tree level (1 =
+                department, 2 = category, 3 = subcategory, and so on) |
+                | `region-id` | Filter the search by a region id (aka regionalization). The value is the region id |
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>value</strong></td>
+            <td valign="top"><a href="#string">String</a></td>
+            <td>
+                Facet value.
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## Enums
 
 ### CategoryTreeBehavior
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>default</strong></td><td>Uses the default value set by the search provider</td></tr><tr><td valign="top"><strong>show</strong></td><td>Show the category tree when it is possible</td></tr><tr><td valign="top"><strong>hide</strong></td><td>Hide the category tree in any situation</td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>default</strong></td>
+            <td>Uses the default value set by the search provider</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>show</strong></td>
+            <td>Show the category tree when it is possible</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>hide</strong></td>
+            <td>Hide the category tree in any situation</td>
+        </tr>
+    </tbody>
+</table>
 
 ### CrossSelingInputEnum
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>buy</strong></td><td></td></tr><tr><td valign="top"><strong>similars</strong></td><td></td></tr><tr><td valign="top"><strong>view</strong></td><td></td></tr><tr><td valign="top"><strong>viewAndBought</strong></td><td></td></tr><tr><td valign="top"><strong>accessories</strong></td><td></td></tr><tr><td valign="top"><strong>suggestions</strong></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>buy</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>similars</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>view</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>viewAndBought</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>accessories</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>suggestions</strong></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### FilterType
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>TEXT</strong></td><td></td></tr><tr><td valign="top"><strong>NUMBER</strong></td><td></td></tr><tr><td valign="top"><strong>CATEGORYTREE</strong></td><td></td></tr><tr><td valign="top"><strong>BRAND</strong></td><td></td></tr><tr><td valign="top"><strong>PRICERANGE</strong></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>TEXT</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>NUMBER</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>CATEGORYTREE</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>BRAND</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>PRICERANGE</strong></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### InputValueType
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>TEXT</strong></td><td></td></tr><tr><td valign="top"><strong>BOOLEAN</strong></td><td></td></tr><tr><td valign="top"><strong>OPTIONS</strong></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>TEXT</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>BOOLEAN</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>OPTIONS</strong></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### InstallmentsCriteria
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>MAX_WITHOUT_INTEREST</strong></td><td></td></tr><tr><td valign="top"><strong>MAX_WITH_INTEREST</strong></td><td></td></tr><tr><td valign="top"><strong>MAX</strong></td><td></td></tr><tr><td valign="top"><strong>MIN</strong></td><td></td></tr><tr><td valign="top"><strong>ALL</strong></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>MAX_WITHOUT_INTEREST</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>MAX_WITH_INTEREST</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>MAX</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>MIN</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>ALL</strong></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### ItemsFilter
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>ALL</strong></td><td>Returns all items, same as no filter.</td></tr><tr><td valign="top"><strong>FIRST_AVAILABLE</strong></td><td>Returns only the first available item. Returns first if no item is available.</td></tr><tr><td valign="top"><strong>ALL_AVAILABLE</strong></td><td>Returns all available items. Returns first if no item is available.</td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>ALL</strong></td>
+            <td>Returns all items, same as no filter.</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>FIRST_AVAILABLE</strong></td>
+            <td>Returns only the first available item. Returns first if no item is available.</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>ALL_AVAILABLE</strong></td>
+            <td>Returns all available items. Returns first if no item is available.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### Operator
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>and</strong></td><td></td></tr><tr><td valign="top"><strong>or</strong></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>and</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>or</strong></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### PageEntityIdentifier
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>brand</strong></td><td></td></tr><tr><td valign="top"><strong>department</strong></td><td></td></tr><tr><td valign="top"><strong>category</strong></td><td></td></tr><tr><td valign="top"><strong>subcategory</strong></td><td></td></tr><tr><td valign="top"><strong>search</strong></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>brand</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>department</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>category</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>subcategory</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>search</strong></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### ProductUniqueIdentifierField
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>id</strong></td><td></td></tr><tr><td valign="top"><strong>slug</strong></td><td></td></tr><tr><td valign="top"><strong>ean</strong></td><td></td></tr><tr><td valign="top"><strong>reference</strong></td><td></td></tr><tr><td valign="top"><strong>sku</strong></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>id</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>slug</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>ean</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>reference</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>sku</strong></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SORT
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>ASC</strong></td><td></td></tr><tr><td valign="top"><strong>DESC</strong></td><td></td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>ASC</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>DESC</strong></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ### SimulationBehavior
 
-<table><thead><th align="left">Value</th><th align="left">Description</th></thead><tbody><tr><td valign="top"><strong>default</strong></td><td>Does simulation on catalog as usual</td></tr><tr><td valign="top"><strong>only1P</strong></td><td>Does simulation on catalog only for seller 1P</td></tr><tr><td valign="top"><strong>skip</strong></td><td>Calls catalog passing a parameter to not simulate each SKU and get its most up to date price.</td></tr><tr><td valign="top"><strong>async</strong></td><td>Does the simulation on the client side</td></tr></tbody></table>
+<table>
+    <thead>
+        <th align="left">Value</th>
+        <th align="left">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top"><strong>default</strong></td>
+            <td>Does simulation on catalog as usual</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>only1P</strong></td>
+            <td>Does simulation on catalog only for seller 1P</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>skip</strong></td>
+            <td>Calls catalog passing a parameter to not simulate each SKU and get its most up to date price.</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>async</strong></td>
+            <td>Does the simulation on the client side</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Scalars
 
