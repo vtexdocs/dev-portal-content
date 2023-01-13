@@ -38,4 +38,4 @@ The [Documents API](ref:documents) retrieves documents directly from the Storage
 
 The Search Engine is a service that handles filters and aggregations. This service allows Documents to be searchable and is responsible to make the searches. The [Search](ref:search-1) and [Scroll](ref:scroll-1) APIs go to the Search Engine service and can retrieve many Documents at once.
 
-When any data in the Storage is updated, a message is sent to Master Data Worker to execute triggers and to send the latest version of the Documents to the Search Engine, so the updated Documents become searchable. More details about this process can be found in the [Consistency Level](doc:master-data-consistency-level) article.
+When any data in the Storage is updated, a message is sent to Master Data Worker to execute triggers and to send the latest version of the Documents to the Search Engine, so the updated Documents become searchable. More details about this process can be found in the [Consistency Level](/docs/guides/master-data-consistency-level) article.

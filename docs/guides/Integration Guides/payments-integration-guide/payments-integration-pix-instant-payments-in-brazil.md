@@ -23,7 +23,7 @@ In this step, we’ll explain how to extend your Payment Provider Protocol imple
 [block:callout]
 {
   "type": "warning",
-  "body": "This tutorial assumes you are already a [VTEX Partner](http://vtex.com/br-pt/partner) and understand how the [Payment Provider Protocol](doc:payment-provider-protocol) works.",
+  "body": "This tutorial assumes you are already a [VTEX Partner](http://vtex.com/br-pt/partner) and understand how the [Payment Provider Protocol](/docs/guides/payment-provider-protocol) works.",
   "title": "Are you ready for a Payment Provider implementation?"
 }
 [/block]

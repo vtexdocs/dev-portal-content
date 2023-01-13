@@ -13,7 +13,7 @@ updatedAt: "2022-06-10T16:10:11.654Z"
 }
 [/block]
 ## Authentication/authorization
-When sending a request to our APIs, you must inform in the headers a X-VTEX-API-AppKey + X-VTEX-API-AppToken pair or a VtexIdclientAutCookie (the connector’s app token, if using our [App Template](doc:external-marketplace-integration-app-template)) that has access to the specified account.
+When sending a request to our APIs, you must inform in the headers a X-VTEX-API-AppKey + X-VTEX-API-AppToken pair or a VtexIdclientAutCookie (the connector’s app token, if using our [App Template](/docs/guides/external-marketplace-integration-app-template)) that has access to the specified account.
 
 
 ## API Reference: New order Integration

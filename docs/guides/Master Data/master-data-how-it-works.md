@@ -10,8 +10,8 @@ updatedAt: "2021-04-19T22:49:05.587Z"
 ---
 This section contains articles about the Master Data fundamentals and how they work. Here you will find the following articles:
 
-- [Components](doc:master-data-components)
-- [Architecture](doc:master-data-architecture)
-- [API](doc:master-data-api)
-- [Consistency Level](doc:master-data-consistency-level)
-- [Schema Lifecycle](doc:master-data-schema-lifecycle)
+- [Components](/docs/guides/master-data-components)
+- [Architecture](/docs/guides/master-data-architecture)
+- [API](/docs/guides/master-data-api)
+- [Consistency Level](/docs/guides/master-data-consistency-level)
+- [Schema Lifecycle](/docs/guides/master-data-schema-lifecycle)

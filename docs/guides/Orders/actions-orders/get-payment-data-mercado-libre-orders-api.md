@@ -11,7 +11,7 @@ This article explains where our [native Mercado Libre connector](https://help.vt
 
 ## Understanding customData
 
-Checkout API allows integrators to [create customizable fields in the shopping cart](doc:creating-customizable-fields-in-the-cart-with-checkout-api) through the `customData` object. Their middleware can create extra fields in the orderForm and set the value of each of these fields when placing an order, so that this additional information can be retrieved when fetching order details with Orders API.
+Checkout API allows integrators to [create customizable fields in the shopping cart](/docs/guides/creating-customizable-fields-in-the-cart-with-checkout-api) through the `customData` object. Their middleware can create extra fields in the orderForm and set the value of each of these fields when placing an order, so that this additional information can be retrieved when fetching order details with Orders API.
 
 ## Custom fields created by Mercado Libre connector
 
