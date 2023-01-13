@@ -11,13 +11,8 @@ If you use synchronous tax service integration, you might find some limitations:
 - There is no retry in case of timeout.
 - If the external service that responds to the request times out constantly, the store will not be able to finish the order.
 - If this integration is active, it applies to all stores in that account.
-[block:callout]
-{
-  "type": "warning",
-  "body": "For stores in which there are often up to hundreds of items in a cart, like some B2B operations, this flow can become inefficient and expensive. In this case, consider using asynchronous integration.",
-  "title": ""
-}
-[/block]
+
+> ⚠️ For stores in which there are often up to hundreds of items in a cart, like some B2B operations, this flow can become inefficient and expensive. In this case, consider using asynchronous integration.
 
 ## Asynchronous integration
 
@@ -29,7 +24,7 @@ Instead of calling the external tax service API for each item added to the cart,
 
 ### Implementing asynchronous integration
 
-To use asynchronous integration, Checkout can not be configured to handle the External Tax Services. This configuration should only be done for synchronous integration. To use asynchronous integration, make sure that the response from the [Checkout Configuration API](https://developers.vtex.com/reference/configuration) has the `taxConfiguration` object with the value ´null´. If not, use the Checkout Configuration UPDATE request to make it `null`.
+To use asynchronous integration, Checkout can not be configured to handle the External Tax Services. This configuration should only be done for synchronous integration. To use asynchronous integration, make sure that the response from the [Checkout Configuration API](https://developers.vtex.com/reference/configuration) has the `taxConfiguration` object with the value `null`. If not, use the Checkout Configuration UPDATE request to make it `null`.
 
 The asynchronous call to the tax engine does not require any configuration. It must be implemented by the store, as described in this [recipe](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-recipe). It is usually triggered by an event or button in the checkout UI.
 
@@ -52,12 +47,7 @@ To obtain the orderForm, the implementation must use the following request:
 }
 [/block]
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Although the route is public (`/pub`), it is necessary to use credentials (`appKey` and `appToken`) with permission to access the cart data to obtain the unmasked data."
-}
-[/block]
+> ⚠️ Although the route is public (`/pub`), it is necessary to use credentials (`appKey` and `appToken`) with permission to access the cart data to obtain the unmasked data.
 
 #### Calculating taxes and sending the response
 
@@ -175,12 +165,7 @@ Note that the tax engine response includes, in addition to the taxes, the minica
 }
 [/block]
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "If the system takes too long to review the tax after changes to the cart, it will not be possible to complete the order."
-}
-[/block]
+> ⚠️ If the system takes too long to review the tax after changes to the cart, it will not be possible to complete the order.
 
 #### Example of order object
 
