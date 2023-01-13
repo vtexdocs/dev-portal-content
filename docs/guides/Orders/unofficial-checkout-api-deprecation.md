@@ -14,7 +14,23 @@ Beginning June 25, 2023, the Outdated Checkout endpoint will be deprecated and a
 |---|---|
 |  Outdated Checkout endpoint GET - `api/checkout/pub/orders` | <ul><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders">Retrieve user's orders</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders</code></li><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders/-orderId-">Retrieve user order details</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders/{orderId}</code></li></ul>
 
-| **Fields** | **Type** | **Description** |
+## Why are we doing this
+
+The Outdated Checkout endpoint is an old route that will be discontinued. Using the OMS endpoints ensure that your store is using the latest and most performant VTEX solution. Some of the benefits of migrating to the VTEX OMS endpoints are:
+
+* Faster order search
+* Reduction in order integration errors
+* Option to paginate orders data
+
+Having a unified service across all VTEX stores also helps us accelerate the pace of new solutions and product releases to improve your business.
+
+## What are the differences
+
+The table below shows the Outdated Checkout endpoint fields that do not exist on OMS endpoints, and most of them will be permanently deprecated. Except for the fields in the table, all of the other Outdated Checkout endpoint fields can be found on VTEX OMS endpoints.
+
+If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated Checkout endpoint response body](http://link)
+
+| **Field** | **Type** | **Description** |
 |:---:|:---:|:---|
 | orderId | string | Order ID is a unique code that identifies an order. |
 | orderGroup | string | Order's group ID. |
