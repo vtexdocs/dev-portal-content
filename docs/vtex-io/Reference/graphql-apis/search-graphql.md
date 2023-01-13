@@ -700,7 +700,69 @@ Discount object
 
 ### Facets
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>departments</strong> ⚠️</td><td valign="top">[<a href="#departmentfacet">DepartmentFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>brands</strong> ⚠️</td><td valign="top">[<a href="#brandfacet">BrandFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>specificationFilters</strong></td><td valign="top">[<a href="#filterfacets">FilterFacets</a>]</td><td></td></tr><tr><td colspan="2" valign="top"><strong>categoriesTrees</strong> ⚠️</td><tdvalign="top">[<a href="#categoriestreefacet">CategoriesTreeFacet</a>]</td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>priceRanges</strong></td><td valign="top">[<a href="#pricerangesfacet">PriceRangesFacet</a>]</td><td>Price range for the given query.</td></tr><tr><td colspan="2" valign="top"><strong>recordsFiltered</strong> ⚠️</td><td valign="top"><a href="#int">Int</a><td><td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the recordsFiltered from the <code>productSearch</code> instead.</blockquote></td></tr><tr><td colspan="2" valign="top"><strong>queryArgs</strong></td><td valign="top"><a href="#queryargs">QueryArgs</a></td><td>Info about the searched query.</td></tr><tr><td colspan="2" valign="top"><strong>facets</strong></td><td valign="top">[<a href="#facet">Facet</a>]</td><td>List of facets.</td></tr><tr><td colspan="2" valign="top"><strong>sampling</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td>Indicates whether there was sampling in the aggregation of facets or not. In search results that have many products, only the first30000 will be aggregated to avoid performance issues.</td></tr><tr><td colspan="2" valign="top"><strong>breadcrumb</strong></td><td valign="top">[<a href="#searchbreadcrumb">SearchBreadcrumb</a>]</td><td>Generated breadcrumb for the given query.</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Field</th>
+            <th align="right">Argument</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" valign="top"><strong>departments</strong> ⚠️</td>
+            <td valign="top">[<a href="#departmentfacet">DepartmentFacet</a>]</td>
+            <td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>brands</strong> ⚠️</td>
+            <td valign="top">[<a href="#brandfacet">BrandFacet</a>]</td>
+            <td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>specificationFilters</strong></td>
+            <td valign="top">[<a href="#filterfacets">FilterFacets</a>]</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>categoriesTrees</strong> ⚠️</td>
+            <tdvalign="top">[<a href="#categoriestreefacet">CategoriesTreeFacet</a>]</td>
+                <td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>facets</code> instead.</blockquote></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>priceRanges</strong></td>
+            <td valign="top">[<a href="#pricerangesfacet">PriceRangesFacet</a>]</td>
+            <td>Price range for the given query.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>recordsFiltered</strong> ⚠️</td>
+            <td valign="top"><a href="#int">Int</a>
+            <td>
+            <td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the recordsFiltered from the <code>productSearch</code> instead.</blockquote></td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>queryArgs</strong></td>
+            <td valign="top"><a href="#queryargs">QueryArgs</a></td>
+            <td>Info about the searched query.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>facets</strong></td>
+            <td valign="top">[<a href="#facet">Facet</a>]</td>
+            <td>List of facets.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>sampling</strong></td>
+            <td valign="top"><a href="#boolean">Boolean</a></td>
+            <td>Indicates whether there was sampling in the aggregation of facets or not. In search results that have many products, only the first30000 will be aggregated to avoid performance issues.</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top"><strong>breadcrumb</strong></td>
+            <td valign="top">[<a href="#searchbreadcrumb">SearchBreadcrumb</a>]</td>
+            <td>Generated breadcrumb for the given query.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### FilterFacet
 
