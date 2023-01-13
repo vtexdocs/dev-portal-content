@@ -28,7 +28,7 @@ Having a unified service across all VTEX stores also helps us accelerate the pac
 
 The table below shows the Outdated Checkout endpoint fields that do not exist on OMS endpoints, and most of them will be permanently deprecated. Except for the fields in the table, all of the other Outdated Checkout endpoint fields can be found on VTEX OMS endpoints.
 
-If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated Checkout endpoint response body](http://link)
+If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated Checkout endpoint response body](#outdated-checkout-endpoint-response-body).
 
 ### Outdated Checkout endpoint properties descriptions
 
