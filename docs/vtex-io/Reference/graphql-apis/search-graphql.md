@@ -2944,14 +2944,12 @@ Object that indicates if the term was misspelled and suggests a possible correct
         <tr>
             <td colspan="2" valign="top"><strong>text</strong></td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>The corrected term. If the API was not able to correct the term, it will show the original search term.
-            </td>
+            <td>The corrected term. If the API was not able to correct the term, it will show the original search term.</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>highlighted</strong></td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>The same as <code>text</code>, but it highlights the corrected word. Useful when there is more than one
-                word.</td>
+            <td>The same as <code>text</code>, but it highlights the corrected word. Useful when there is more than one word.</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>misspelled</strong></td>
