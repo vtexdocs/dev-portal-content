@@ -2459,7 +2459,7 @@ Discount object
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>banners</strong> ⚠️</td>
-            <td valign="top">[<a href="#searchbanner">SearchBanner</a></td>
+            <td valign="top">[<a href="#searchbanner">SearchBanner</a>]</td>
             <td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the <code>banners</code> query instead.</blockquote></td>
         </tr>
         <tr>
