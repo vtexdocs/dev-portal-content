@@ -2937,8 +2937,7 @@ Object that indicates if the term was misspelled and suggests a possible correct
             <th align="left">Field</th>
             <th align="right">Argument</th>
             <th align="left">Type</th>
-            <th align="left">Description
-            <th>
+            <th align="left">Description</th>
         </tr>
     </thead>
     <tbody>
