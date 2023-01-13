@@ -1376,8 +1376,7 @@ Discount object
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>recordsFiltered</strong> ⚠️</td>
-            <td valign="top"><a href="#int">Int</a>
-            <td>
+            <td valign="top"><a href="#int">Int</a></td>
             <td><p>⚠️ <strong>DEPRECATED</strong></p><blockquote>Use the recordsFiltered from the <code>productSearch</code> instead.</blockquote></td>
         </tr>
         <tr>
