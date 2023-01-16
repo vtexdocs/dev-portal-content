@@ -34,7 +34,7 @@ The marketplace must follow the steps below to activate the B2B Seller Price:
 2. Enable the use of external prices by the seller through the `PUT` [Configure External Price Source](https://developers.vtex.com/docs/api-reference/pricing-hub#put-/config) of the Pricing Hub API.
 3. Allow VTEX to share customers’ email addresses with the seller. To do so, it is necessary to set `'AllowEmailSharing'` as the value for the TrustPolicy field in the `POST` [Create Seller](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers) or `PUT` [Update Seller](https://developers.vtex.com/docs/api-reference/marketplace-apis#patch-/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-) endpoints.
 
-> Make sure to manage the relationship between the marketplace’s catalog and the sellers’ catalogs in the Received SKUs page. Read the article on [Cataloging received SKUs](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396) for more information on this process.
+>ℹ️ Make sure to manage the relationship between the marketplace’s catalog and the sellers’ catalogs on the Received SKUs page. Read the article on [Cataloging received SKUs](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396) for more information on this process.
 
 ### Seller
 
