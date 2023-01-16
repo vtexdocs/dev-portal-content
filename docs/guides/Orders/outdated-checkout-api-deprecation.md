@@ -1,5 +1,5 @@
 ---
-title: "Unofficial Checkout API deprecation"
+title: "Outdated Checkout API deprecation"
 slug: "unofficial-checkout-api-deprecation"
 hidden: true
 createdAt: "2022-12-08T22:14:43.582Z"
