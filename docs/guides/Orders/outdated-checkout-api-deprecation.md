@@ -18,7 +18,7 @@ Beginning June 25, 2023, the Outdated Checkout endpoint will be deprecated and a
 
 The Outdated Checkout endpoint is an old route that will be discontinued. Using the OMS endpoints ensure that your store is using the latest and most performant VTEX solution. Some of the benefits of migrating to the VTEX OMS endpoints are:
 
-* Faster order search
+* Faster order retrieve
 * Reduction in order integration errors
 * Option to paginate orders data
 
