@@ -22,7 +22,7 @@ Below you can learn more about some of the Profile System’s features and how t
 
 >❗ When implementing your integration:
 >
-> Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/vtex-rest-api/docs/adaptations-and-limitations) that impact other integrations.
+> Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-compliant-account) that impact other integrations.
 >
 > Note that, at the moment, Master Data triggers are not supported by the PII compliant Profile System.
 
