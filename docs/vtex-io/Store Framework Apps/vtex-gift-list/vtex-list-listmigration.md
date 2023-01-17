@@ -20,7 +20,7 @@ It is important to take a look at the following details to execute this process:
 
 ## Migration Process
 
-The migration process will use different APIs, to extract data from the native feature, and insert data into the **Gift List app**. Between the two actions, is necessary to treat the extracted data, to model it for the data structure on the app.
+The migration process will use different APIs to extract data from the native feature and insert data into the **Gift List app**. Between the two actions, it is necessary to treat the extracted data to model it for the data structure on the app.
 
 The data extraction will be made with the following endpoint:
 `[host]/api/addon/pvt/giftlist/get/[list-id]`. 
