@@ -14,4 +14,4 @@ Beginning June 25, 2023, there is an Outdated Checkout endpoint that will be dep
 
 The Outdated Checkout endpoint is an old endpoint that will be discontinued. Using the OMS endpoints ensures that your store is using the latest and most performant VTEX solution.
 
-To know more about the benefits of this change and for technical information, see [Outdated Checkout endpoint deprecation](https://developers.vtex.com/docs/guides/unofficial-checkout-api-deprecation).
+To know more about the benefits of this change and for technical information, see [Outdated Checkout endpoint deprecation](https://developers.vtex.com/docs/guides/outdated-checkout-api-deprecation).
