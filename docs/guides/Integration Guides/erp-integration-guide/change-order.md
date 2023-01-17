@@ -8,26 +8,21 @@ updatedAt: "2022-04-13T17:36:48.363Z"
 
 Change order is a feature that allows your store to modify the items or prices of an order. With this feature, the store can handle eventual changes in orders motivated by customer mistakes, product unavailability, and the inclusion of discounts, among other things. Learn more about how it works and its restrictions in the article [Changing items from a completed order](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190#).
 
-> ℹ️️ Learn more about [Order replacement](https://help.vtex.com/en/tutorial/order-replacement--2IK9mwQjBKseQmE8K8saO8#) and how to enable your customers to easily request order changes.
+> Learn more about [Order replacement](https://help.vtex.com/en/tutorial/order-replacement--2IK9mwQjBKseQmE8K8saO8#) and how to enable your customers to easily request order changes.
 
 ## Implementation
 
-The [Register change on order](https://developers.vtex.com/vtex-rest-api/reference/registerchange) endpoint in the Orders API allows you to create a discount, change an item or increase the price of an order.
+The [Register change on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) endpoint in the Orders API allows you to create a discount, change an item or increase the price of an order.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "When removing or adding items to an order, the inventory of the affected SKUs is not updated automatically - you should update it [using the Logistics API](https://developers.vtex.com/vtex-rest-api/reference/updateinventorybyskuandwarehouse)."
-}
-[/block]
+>⚠️ When removing or adding items to an order, the inventory of the affected SKUs is not updated automatically - you should update it [using the Logistics API](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-).
 
-Changes made this way can be confirmed by the `changesAttachment` field in the response of the [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder) endpoint. Alternatively, you may search for the order in the *Orders > Orders management > All orders* section of your Admin panel and see the item change history in the order details.
+Changes made this way can be confirmed by the `changesAttachment` field in the response of the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint. Alternatively, you may search for the order in the *Orders > Orders management > All orders* section of your Admin panel and see the item change history in the order details.
 
 >❗ Increasing the price of an order is only available for credit card purchases. The connector must also be able to handle purchases without the CVV, as well as duplicated sequences.
 
 ### Errors
 
-See below what API errors can be returned when attempting to [change an order via API](https://developers.vtex.com/vtex-rest-api/reference/registerchange) and how to avoid or work around them.
+See below what API errors can be returned when attempting to [change an order via API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
 
 #### Request errors
 
