@@ -1,17 +1,16 @@
 ---
-title: "PII-compliant accounts"
-slug: "pii-compliant-accounts"
+title: "PII platform version"
+slug: "pii-platform-version"
 hidden: true
 createdAt: "2022-02-22T22:27:02.330Z"
 updatedAt: "2022-11-18T18:34:36.446Z"
 ---
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
 
-This integration allows stores to manage shoppers’ Personal Identifiable Information (PII) in compliance with data privacy regulations such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/). This means that:
+The VTEX platform allows stores to manage shoppers’ Personal Identifiable Information (PII) in compliance with data privacy regulations such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/). This means that:
 - PII is hidden by default.
 - Each PII retrieval is an auditable event.
 - Data at rest is stored in the region or country selected by the store.
-
 
 ## Parties' responsibilities
 
@@ -27,6 +26,6 @@ VTEX will isolate all fields that are mapped as sensitive and protect them. Ther
 [/block]
 ## Integration
 
-In order to implement these features in your store, you must make some commerce features adaptations, according to the guide [Changes and limitations of PII-compliant accounts](https://developers.vtex.com/vtex-rest-api/docs/adaptations-and-limitations).
+In order to implement these features in your store, you must make some commerce features adaptations, according to the guide [Changes and limitations of the PII platform version](https://developers.vtex.com/vtex-rest-api/docs/adaptations-and-limitations).
 
-And to learn how to manage shopper data in a PII-compliant way, see our [Profile System guide](https://developers.vtex.com/vtex-rest-api/docs/profile-system).
+And to learn how to manage shopper data, see our [Profile System guide](https://developers.vtex.com/vtex-rest-api/docs/profile-system).
