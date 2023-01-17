@@ -14,7 +14,7 @@ In the table below, you will find every API request needed for each step of the 
 | Step | API Request | Request Target |
 |---|---|---|
 | [Catalog Notification](#catalog-notification) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-developer-docs/reference/catalog-api-get-seller-sku-notification">Change Notification</a>| ➡ Marketplace |
-| [Catalog Registration](#catalog-registration) | <span class="api pg-type type-put">put</span><a href="https://developers.vtex.com/vtex-rest-api/reference/manage-suggestions ">Send SKU Suggestion</a> | ➡ Marketplace |
+| [Catalog Registration](#catalog-registration) | <span class="api pg-type type-put">put</span><a href="https://developers.vtex.com/docs/guides/marketplace-api#manage-suggestions">Send SKU Suggestion</a> | ➡ Marketplace |
 | [Catalog and Storefront Update](#catalog-update) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment Simulation</a>  | ⬅ Seller |
 | [Order Placement](#order-placement) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/order-placement">Order Placement</a>  | ⬅ Seller |
 | [Order Dispatching](#order-dispatching) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/authorize-fulfillment">Authorize Fulfillment</a>  | ⬅ Seller |
@@ -61,7 +61,7 @@ When the marketplace responds to the Change Notification request with status 404
 }
 [/block]
 
-The SKU offer is sent through the <span class="pg-type type-put">put</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/manage-suggestions">Send SKU Suggestion</a></span> API request. In this request, the seller informs mandatory information about the SKU, such as the product and SKU name, the seller ID, and the image URL.
+The SKU offer is sent through the <span class="pg-type type-put">put</span><span class="api"><a href="https://developers.vtex.com/docs/guides/marketplace-api#manage-suggestions">Send SKU Suggestion</a></span> API request. In this request, the seller informs mandatory information about the SKU, such as the product and SKU name, the seller ID, and the image URL.
 
 [block:callout]
 {
