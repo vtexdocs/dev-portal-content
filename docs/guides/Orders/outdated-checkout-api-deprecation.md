@@ -1,5 +1,5 @@
 ---
-title: "Unofficial Checkout API deprecation"
+title: "Outdated Checkout API deprecation"
 slug: "unofficial-checkout-api-deprecation"
 hidden: true
 createdAt: "2022-12-08T22:14:43.582Z"
@@ -18,7 +18,7 @@ Beginning June 25, 2023, the Outdated Checkout endpoint will be deprecated and a
 
 The Outdated Checkout endpoint is an old route that will be discontinued. Using the OMS endpoints ensure that your store is using the latest and most performant VTEX solution. Some of the benefits of migrating to the VTEX OMS endpoints are:
 
-* Faster order search
+* Faster order retrieve
 * Reduction in order integration errors
 * Option to paginate orders data
 
@@ -29,6 +29,43 @@ Having a unified service across all VTEX stores also helps us accelerate the pac
 The table below shows the Outdated Checkout endpoint fields that do not exist on OMS endpoints, and most of them will be permanently deprecated. Except for the fields in the table, all of the other Outdated Checkout endpoint fields can be found on VTEX OMS endpoints.
 
 If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated Checkout endpoint response body](#outdated-checkout-endpoint-response-body).
+
+| **Missing Field** | **Type** | **Description** | **Will be deprecated** |
+|:---:|:---:|:---:|:---|
+| storeId | string | ID of purchases made in the GoCommerce context. | Yes |
+| productRefId | string | Product Ref ID. | Yes |
+| modalType | string | Links an unusual type of product to a carrier specialized in delivering it. For more information see How the modal works and Setting up modal for carriers. | Yes |
+| manualPriceAppliedBy | string | User ID or appKey used to make the change. This field must not be displayed to the shopper. | Yes |
+| productCategoryIds | string | Item's category path composed of category IDs. In OMS endpoints this field corresponds to `productCategories`. | Yes |
+| sellerChain | array | Sellers involved in the chain. The list should contain only one seller, unless it is a Multilevel Omnichannel Inventory order. | Yes |
+| attachmentOfferings | array of objects | Object with the properties of the content declared in the field `attachments`. | No |
+| name (items > attachmentOfferings > name) | string | Name of the attachment. | No |
+| required (items > attachmentOfferings > required) | boolean | If the attachment is required or not. | No |
+| schema (items > attachmentOfferings > schema) | object | Object with the schema of the content declared in the field `attachmentOfferings`. | No |
+| availability | string | Availability to fulfill the order with the item. This field is being removed because it is related to the shopping cart. | Yes |
+| manufacturerCode | string | Provided by the manufacturers to identify their product. This field should be completed if the item has a specific manufacturer’s code. | Yes |
+| profileCompleteOnLoading | boolean | When set as `true`, the order was made by a recurrent customer, and when set as `false`, it was not. | Yes |
+| profileErrorOnLoading | boolean | When set as `true`, this field indicates a profile error on loading, and when set as `false`, no errors were found. If there are errors, check the store's customer profiles in Master Data. This field doesn't have to be displayed to the shopper. | Yes |
+| teaser | array | List with promotions and taxes teasers. | No |
+| selectedDeliveryChannel | string | Delivery channel selected by the customer, like `delivery` or `pickup-in-point`. This field is being removed and the information it retrieves can be found in the `deliveryChannel`. | Yes |
+| kitItemDetails | array of objects | Information about kits, if there are any. | No |
+| availableDeliveryWindows | array | Available delivery window information, if it applies to the item.This field is being removed because it is related to the shopping cart. | Yes |
+| pickupDistance | number | Distance in kilometers between the pickup point and the customer's address. The distance is measured as a straight line. | No |
+| deliveryChannels | array of objects | Contains the delivery channels associated with the trade policy. Structure: `{id: delivery} and/or {id: pickup-in-point}`. | No |
+| availableAddresses | array of objects | Information about available adresses.This field is being removed because it is related to the shopping cart. | Yes |
+| pickupPoints | array of objects | Detailed information about pickup points in the shopping cart. This field is being removed because it is related to the shopping cart; the pickup point option of the order was already selected. | Yes |
+| businessHours | array of objects | Information about the pickup point's business hours. | Yes |
+| DayOfWeek | integer | Day of the week of the business hour, with `0`: corresponding to Sunday, `1` to Monday, `2` to Tuesday, and so on. | Yes |
+| OpeningTime | string | Starting time of the business hour, with the format `hh:mm:ss`. | Yes |
+| ClosingTime | string | Closing time of the business hour, with the format `hh:mm:ss`. | Yes |
+| sharedTransaction | boolean | When set as `true`, this field indicates it was a shared transaction, and when set as `false`, it means it was not.This field does not reflect on the shopper experience since it is about the store's internal financial matters. | Yes |
+| clientPreferencesData | object | Information about customer's preferences. | No |
+| locale (clientPreferencesData > locale) | string | Customer's prefered language while accessing the store. | No |
+| optinNewsLetter (clientPreferencesData >optinNewsLetter)  | boolean | When set as `true`, this field indicates the customer opted to receive the newsletters, and when set as `false`, it means they did not accept to receive the newsletters. This field isn't displayed to the shopper since it is about the store's internal matters. | Yes |
+| saveUserData | boolean | When this field is set as `true`, it means the customers agree to have their data stored, and when set as `false`, the customer did not allow to store their data. This field isn't displayed to the shopper since it is about the store's internal matters. | Yes |
+| hooksData | object | Information about a legacy hook.This field has been deactivated. | Yes |
+| major | string | An internal system's code of VTEX's modules communication. | Yes |
+| url | string | URL that used to be notified by the legacy look, which has been deactivated. | Yes |
 
 ### Outdated Checkout endpoint properties descriptions
 
