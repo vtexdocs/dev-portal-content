@@ -31,6 +31,6 @@ Native lists have diverse types of configuration, and the data structure can var
 
 It can be made by GraphQL routes. All managing methods for MD v2 are available on our GraphQL layer, where they can be manipulated. The entity related to the app is ``vtex.list-graphql@3.5.0``. For more information, you can access the [following documentation](https://developers.vtex.com/docs/guides/graphql-ide).
 
-> Gift List App has no responsability about the success on migration process, since it is related to two different products.
+> Gift List App has no responsibility for the success of the migration process since it is related to two different products.
 
 For further information, please access our [Support Page](https://help.vtex.com/en/faq/como-funciona-o-suporte-da-vtex--3kACEfni4m8Yxa1vnf2ebe).
