@@ -7,14 +7,12 @@ updatedAt: '2022-02-07T20:48:00.755Z'
 ---
 
 This API will create promotion alarms when selling products with undesired prices and promotions. It will create conditions that will check if the prices and the promotions are correct. If not, the system will alarm the store with information about the product sold at unexpected prices.
-[block:api-header]
-{
-"title": "Index"
-}
-[/block]
-<span class="api pg-type type-get">get</span> [Get Policy List](SkuServiceTypeId)
-<span class="api pg-type type-post">post</span> [Evaluate Policies](https://developers.vtex.com/vtex-rest-api/reference/policy_evaluate)
-<span class="api pg-type type-get">get</span> [Get Policy by ID](https://developers.vtex.com/vtex-rest-api/reference/policy_get)
-<span class="api pg-type type-post">post</span> [Create Policy](https://developers.vtex.com/vtex-rest-api/reference/policy_createorupdate)
-<span class="api pg-type type-put">put</span> [Update Policy](https://developers.vtex.com/vtex-rest-api/reference/put_api-policy-engine-policies-id)
-<span class="api pg-type type-delete">delete</span> [Delete Policy by ID](https://developers.vtex.com/vtex-rest-api/reference/policy_delete)
+
+## Index
+
+`GET` [Get Policy List](https://developers.vtex.com/docs/api-reference/policies-system-api#get-/api/policy-engine/policies)
+`POST` [Evaluate Policies](https://developers.vtex.com/docs/api-reference/policies-system-api#post-/api/policy-engine/evaluate)
+`GET` [Get Policy by ID](https://developers.vtex.com/docs/api-reference/policies-system-api#get-/api/policy-engine/policies/-id-)
+`POST` [Create Policy](https://developers.vtex.com/docs/api-reference/policies-system-api#post-/api/policy-engine/policies/-id-)
+`PUT` [Update Policy](https://developers.vtex.com/docs/api-reference/policies-system-api#put-/api/policy-engine/policies/-id-)
+`DELETE` [Delete Policy by ID](https://developers.vtex.com/docs/api-reference/policies-system-api#delete-/api/policy-engine/policies/-id-)
