@@ -25,7 +25,7 @@ The migration process will use different APIs to extract data from the native fe
 The data extraction will be made with the following endpoint:
 `[host]/api/addon/pvt/giftlist/get/[list-id]`. 
 
-``list-id`` is an integer number, that represents the list creation sequence, starting with the number 1. For example, for a store with 170 lists created on the native method, there will be lists with ``list-ids`` in a range between 1 and 170.
+``list-id`` is an integer number representing the list creation sequence, starting with the number 1. For example, for a store with 170 lists created on the native method, there will be lists with ``list-ids`` between 1 and 170.
 
 Native lists have diverse types of configuration, and the data structure can vary. Because of that, it is important to treat this data to adapt it to the data structure on the native app. Treating the extracted data, we can insert it into the app feature data structure. 
 
