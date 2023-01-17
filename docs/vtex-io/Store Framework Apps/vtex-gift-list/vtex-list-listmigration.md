@@ -7,7 +7,7 @@ createdAt: "2023-01-16T00:32:17.866Z"
 updatedAt: "2023-01-16T00:32:17.866Z"
 ---
 
-VTEX has a native feature for list management, that can be verified on the [following document](https://help.vtex.com/en/subcategory/list-types--6aeeWirCBUwwCmeIWOgIWs). However, this feature works only for CMS stores, making it impossible to use for IO and Faststore stores.
+VTEX has a native feature for list management that can be verified on the [following document](https://help.vtex.com/en/subcategory/list-types--6aeeWirCBUwwCmeIWOgIWs). However, this feature works only for CMS stores, making it impossible to use for IO and Faststore stores.
 
 **Gift List app** was made to fill this gap, allowing all types of stores to work with lists. Because of that, a common demand is related to the migration of lists, from the native feature to the new app feature.
 
