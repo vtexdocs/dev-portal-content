@@ -20,7 +20,11 @@ Below you can learn more about some of the Profile System’s features and how t
 }
 [/block]
 
->❗ When implementing your integration:\n- Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/vtex-rest-api/docs/adaptations-and-limitations) that impact other integrations.\n- Note that, at the moment, Master Data triggers are not supported by the PII compliant Profile System.
+>❗ When implementing your integration:
+>
+> Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-compliant-account) that impact other integrations.
+>
+> Note that, at the moment, Master Data triggers are not supported by the PII compliant Profile System.
 
 ## Permission
 
@@ -31,6 +35,7 @@ To use the Profile System features, ensure you have the appropriate [License Man
 | Profile System | Documents | Get Item | Get items in Profile System entities |
 | Profile System | Documents | Save and Update Item | Edit items from Profile System. |
 | Profile System | Documents | Delete Item | Delete items from Profile System. |
+
 [block:callout]
 {
   "type": "info",
