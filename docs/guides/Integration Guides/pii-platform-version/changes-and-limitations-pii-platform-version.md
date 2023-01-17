@@ -1,13 +1,13 @@
 ---
-title: "Changes and limitations of PII-compliant accounts"
-slug: "changes-and-limitations-pii-compliant-account"
+title: "Changes and limitations of the PII platform version"
+slug: "changes-and-limitations-pii-platform-version"
 hidden: true
 createdAt: "2022-02-22T22:29:28.541Z"
 updatedAt: "2022-12-09T14:49:14.969Z"
 ---
-Some commerce features of the VTEX platform are not available for PII-compliant accounts at the moment. There are also features that require adaptations when implemented by the store.
+Some commerce features of the VTEX platform are not available for PII platform version accounts at the moment. There are also features that require adaptations when implemented by the store.
 
-In order to integrate with the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and manage your customers’ information in [compliance with data privacy laws](https://developers.vtex.com/vtex-rest-api/docs/data-privacy), see in this article the changes and limitations you must make.
+In this guide you can learn about the changes and limitations you must be aware when managing your customers' information with the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system).
 
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
 
@@ -15,7 +15,7 @@ In order to integrate with the [Profile System](https://developers.vtex.com/vtex
 
 ### OMS 
 
-There are no longer restrictions to the use of these OMS features for PII compliants:
+There are no longer restrictions to the use of these OMS features for PII platform version accounts:
 - VTEX DO
 - Conversation tracker
 - Shipping notifications
@@ -26,7 +26,7 @@ However, API requests to `/do`, `/conversationtracker`, and `shipping-tracker` p
 
 In order to use order management APIs, you should adapt your integrations to use new endpoints, for features you may already have implemented in your store, such as retrieving order information or notifying invoices. See the table below to know which endpoints need adaptation and where to find the new reference.
 
-| **Feature**                | **Previous endpoint**                                                                                                                                         | **New endpoint (PII compliant)**                                                                                                                                        | **Payload changed** |
+| **Feature**                | **Previous endpoint**                                                                                                                                         | **New endpoint (PII platform version)**                                                                                                                                        | **Payload changed** |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | Get order                  | `GET` [/api/oms/orders/{orderId}](https://developers.vtex.com/vtex-rest-api/reference/getorder)                                                               | `GET` [/api/orders/pvt/document/{orderId}](https://developers.vtex.com/vtex-rest-api/reference/getorderpiicompliant)                                                    | No                  |
 | List orders                | `GET` [/api/oms/pvt/orders](https://developers.vtex.com/vtex-rest-api/reference/listorders)                                                                   | `POST` [/api/orders/extendsearch/orders](https://developers.vtex.com/vtex-rest-api/reference/listorderspiicompliant)                                                    | Yes                 |
@@ -58,7 +58,7 @@ Note that **Master Data** features may be impacted in the following three aspect
 
 #### Triggers
 
-At the moment, triggers are not supported by the PII compliant Profile System.
+At the moment, triggers are not supported by the PII platform version Profile System.
 
 #### Orders Index 
 
@@ -84,7 +84,7 @@ VTEX’s Order Management System is impacted by in a few different features. See
 
 #### Subscriptions
 
-Subscriptions are not available for PII-compliant accounts at this moment.
+Subscriptions are not available for PII platform version accounts at this moment.
 
 #### Call center
 
@@ -115,7 +115,7 @@ When you edit an email template on the **Message Center** Admin interface, you c
 
 ### Gift card
 
-The [gift card](https://help.vtex.com/en/subcategory/gift-card--3qWeS7abxCyC0G0GMq42gA#) feature is not supported for PII-compliant accounts yet.
+The [gift card](https://help.vtex.com/en/subcategory/gift-card--3qWeS7abxCyC0G0GMq42gA#) feature is not supported for PII platform version accounts yet.
 
 ### Credit control
 
