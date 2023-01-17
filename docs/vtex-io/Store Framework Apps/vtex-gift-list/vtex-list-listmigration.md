@@ -15,7 +15,7 @@ It is important to take a look at the following details to execute this process:
 
 - The access page for lists will change. On the native feature, the access occurs by the `/giftlist` path. On the new feature, the access occurs by the home page subaccount where the app was installed;
 - Both features work with a giftcard system to transfer purchase values to the guests for the list owner. Credits that a client receives in the native feature are valid for the app feature;
-- Is necessary to migrate pieces of information related to gift lists, as list owners and items linked with each list;
+- It is necessary to migrate pieces of information related to gift lists, as list owners and items linked with each list;
 - The credits transaction history isn't kept on the native feature. Because of that, isn't possible to migrate this data for the app feature.
 
 ## Migration Process
