@@ -11,7 +11,7 @@ VTEX has a native feature for list management, that can be verified on the [foll
 
 **Gift List app** was made to fill this gap, allowing all types of stores to work with lists. Because of that, a common demand is related to the migration of lists, from the native feature to the new app feature.
 
-Is important to take a look at the following details to execute this process:
+It is important to take a look at the following details to execute this process:
 
 - The access page for lists will change. On the native feature, the access occurs by the `/giftlist` path. On the new feature, the access occurs by the home page subaccount where the app was installed;
 - Both features work with a giftcard system to transfer purchase values to the guests for the list owner. Credits that a client receives in the native feature are valid for the app feature;
