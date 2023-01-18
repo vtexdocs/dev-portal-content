@@ -7,7 +7,7 @@ updatedAt: "2022-12-09T14:49:14.969Z"
 ---
 Some commerce features of the VTEX platform are not available for PII platform version accounts at the moment. There are also features that require adaptations when implemented by the store.
 
-In this guide you can learn about the changes and limitations you must be aware when managing your customers' information with the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system).
+In this guide, you can learn about the changes and limitations you must be aware of when managing your customers' information with the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system).
 
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
 
