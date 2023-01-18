@@ -16,13 +16,15 @@ SafeData is an app that provides an easy-to-use, configurable middleware to retr
 
 SafeData allows anonymous users to create documents in Master Data [data entities](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities). This is useful for some scenarios, such as registering newsletter subscriptions.
 
-However, it was previously not possible to prevent this behavior for Master Data v1 data entities `CL` and `AD`. Now you can choose to allow or block the anonymous creation of documents via SafeData for each entity you wish, including `CL` and `AD`, by setting the flag **Allow creating objects anonymously**.
+However, it was previously not possible to prevent this behavior for Master Data v1 data entities `CL` and `AD`. Now you will be able to choose to allow or block the anonymous creation of documents via SafeData for each entity you wish, including `CL` and `AD`, by setting the flag **Allow creating objects anonymously**.
 
 ## What needs to be done?
 
-Starting january 23, 2023, SafeData will, by default, block the anonymous creation of Master Data documents for Master Data v1 [data entities](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) `CL` and `AD`. So if your store uses SafeData to create documents anonymously in the data entities `CL` or `AD`, you must change your app settings in the admin panel to allow this behavior. Otherwise, documents will not be created anonymously and you will get integration errors.  
+Starting january 23, 2023, SafeData will, by default, block the anonymous creation of Master Data documents for Master Data v1 [data entities](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) `CL` and `AD`.
 
-To allow this behavior, follow these steps:
+The previous behavior for `CL` and `AD` was to allow the anonymous creation of documents. Therefore, stores that wish to keep this behavior,  must actively set the flag in the app settings to keep the current behavior. Otherwise, documents will not be created anonymously and you will get integration errors.  
+
+To set this flag, follow these steps:
 
 1. Open the VTEX Admin panel.
 2. Go to **ACCOUNT SETTINGS** > **Apps** > **My Apps**.
