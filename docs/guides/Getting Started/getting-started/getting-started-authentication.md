@@ -19,8 +19,8 @@ There are different contexts in which machine authentication is required in the 
 
 | **Use case** | **Indicated authentication methods** |
 | ----- | ----- |
-| Backend VTEX IO app | [User token](#app-authentication) via VTEX IO context, or, if needed, [app authentication token](#app-authentication) via VTEX IO context |
-| Frontend VTEX IO app | [User token](#app-authentication) via VTEX IO context |
+| Backend VTEX IO app | [User token](#user-token) via VTEX IO context, or, if needed, [app authentication token](#app-authentication) via VTEX IO context |
+| Frontend VTEX IO app | [User token](#user-token) via VTEX IO context |
 | Self-hosted backend request to VTEX APIs | [Application keys](#application-keys) |
 | Self-hosted frontend request to VTEX APIs | [User token](#user-token) |
 
