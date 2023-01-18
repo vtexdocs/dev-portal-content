@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-SafeData is an app that provides an easy-to-use, configurable middleware to retrieve and save information to Master Data V1 and V2. VTEX is improving the way you control the creation of documents with SafeData.
+SafeData is an app that provides an easy-to-use, configurable middleware to retrieve and save information to Master Data V1 and V2. As of January 23, 2023, VTEX is improving the way you control the creation of documents with SafeData.
 
 >❗ If your store uses SafeData to anonymously create Master Data documents in the data entities `CL` or `AD`, make sure to read the changes described below and make the necessary adaptations. Otherwise, SafeData might cease to work correctly in your store.
 
@@ -20,7 +20,7 @@ However, it was previously not possible to prevent this behavior for Master Data
 
 ## What needs to be done?
 
-By default, SafeData now blocks the anonymous creation of Master Data documents for Master Data v1 [data entities](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) `CL` and `AD`. So if your store uses SafeData to create documents anonymously in the data entities `CL` or `AD`, you must change your app settings in the admin panel to allow this behavior. Otherwise, documents will not be created anonymously and you will get integration errors.  
+Starting january 23, 2023, SafeData will, by default, block the anonymous creation of Master Data documents for Master Data v1 [data entities](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) `CL` and `AD`. So if your store uses SafeData to create documents anonymously in the data entities `CL` or `AD`, you must change your app settings in the admin panel to allow this behavior. Otherwise, documents will not be created anonymously and you will get integration errors.  
 
 To allow this behavior, follow these steps:
 
