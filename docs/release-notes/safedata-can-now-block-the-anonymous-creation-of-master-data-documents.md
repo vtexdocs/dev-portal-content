@@ -1,6 +1,6 @@
 ---
-slug: "add-to-cart-button-performance"
-title: "Add to cart button performance"
+slug: "safedata-can-now-block-the-anonymous-creation-of-master-data-documents"
+title: "SafeData can now block the anonymous creation of Master Data documents"
 createdAt: 2023-01-18T16:53:15.322Z
 hidden: false
 type: "improved"
