@@ -184,7 +184,7 @@ You can use the [Get SKU File](https://developers.vtex.com/docs/api-reference/ca
 6. Click on the *Images* tab to open the corresponding panel;
 7. You should now be able to see the SKU Images you added to that SKU.
 
-> See more details on our [Catalog images integration guide](https://developers.vtex.com/docs/guides/products).
+>ℹ️ See more details on our [Catalog images integration guide](https://developers.vtex.com/docs/guides/products).
 
 ## Wrapping up
 

@@ -25,7 +25,7 @@ In the end, the goal is to make navigation easier for your customers and to impr
 
 To create your Category Tree, you should use the [Create Category](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/category) endpoint in the Catalog API. 
 
-Start by creating your Departments, then your Categories, then your Subcategories. In between steps, you can use the [Get Category Tree](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/category/tree/-categoryLevels-) endpoint or visit the *Products > Catalog > Categories* section of your Admin panel to check on your progress. 
+Start by creating your Departments, then your Categories, then your Subcategories. In between steps, you can use the [Get Category Tree](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/category/tree/-categoryLevels-) endpoint or visit the **Products > Catalog > Categories** section of your Admin panel to check on your progress. 
 
 
 ### Category migration from ERPs
@@ -40,7 +40,7 @@ If you find yourself in that situation, we recommend creating an inactive mock c
 
 To add a new Brand to your catalog, you should use the [Create Brand](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/brand) endpoint in the Catalog API. 
 
-Adding Brands to your catalog allows you to filter products in your storefront using this attribute. Brands need to be created before you can associate products with them, so it's a good idea to do this when setting up your catalog. You can use the [Get Brand List](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/list) endpoint or visit the *Products > Catalog > Brands section* of your Admin panel to check on your progress.
+Adding Brands to your catalog allows you to filter products in your storefront using this attribute. Brands need to be created before you can associate products with them, so it's a good idea to do this when setting up your catalog. You can use the [Get Brand List](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/list) endpoint or visit the **Products > Catalog > Brands section** of your Admin panel to check on your progress.
 
 >⚠️ If your backend does not have brand information, you can perform the same process mentioned above for [category migration](https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#category-migration-from-erps), by creating an inactive mock brand, used exclusively for migration. The products' information can later be manually enriched.
 
@@ -52,7 +52,7 @@ To add Specification Groups to a category, you should use the [Create Specificat
 
 > Specification Fields are always grouped into Specification Groups. Because of that, you will need to create at least one Specification Group for each category that will need extra information to fully describe the Products or SKUs it contains.
 
-Start creating Specification groups at the Departments level, then at the Categories level and finally at the Subcategories level. You can use the [List Specifications Groups by Category](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/specification/groupbycategory/-categoryId-) endpoint to check on your progress or visit the Specifications Group list for the category you're interested in by accessing the *Products > Catalog > Categories* section of your Admin panel.
+Start creating Specification groups at the Departments level, then at the Categories level and finally at the Subcategories level. You can use the [List Specifications Groups by Category](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/specification/groupbycategory/-categoryId-) endpoint to check on your progress or visit the Specifications Group list for the category you're interested in by accessing the **Products > Catalog > Categories** section of your Admin panel.
 
 >⚠️ Keep in mind that Specification Groups in a category are recursively applied to all its children in the Category Tree. If a field is not used by all children of a category, it should not be associated with one of its Specification Groups.
 

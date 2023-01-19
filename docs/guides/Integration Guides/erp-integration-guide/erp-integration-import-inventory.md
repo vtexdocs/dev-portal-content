@@ -30,7 +30,7 @@ To update an SKU inventory, you should use the [Update Inventory By SKU and Ware
 
 > ℹ️ You can find the `warehouseId` for each Warehouse using the [List All Warehouses](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/warehouses) endpoint.
 
-You should set the total quantity of items in stock for each SKU. In between steps, you can use the [List Inventory By SKU](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/skus/-skuId-) endpoint or see how you can [Manage inventory](https://help.vtex.com/pt/tutorial/gerenciar-itens-em-estoque--tutorials_139) from your Admin panel.
+You should set the total quantity of items in stock for each SKU. In between steps, you can use the [List Inventory By SKU](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/skus/-skuId-) endpoint or see how you can [Manage inventory](https://help.vtex.com/en/tutorial/managing-stock-items--tutorials_139) from your Admin panel.
 
 ## Wrapping up
 
