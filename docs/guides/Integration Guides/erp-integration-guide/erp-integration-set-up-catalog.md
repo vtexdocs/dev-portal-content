@@ -52,7 +52,7 @@ To add Specification Groups to a category, you should use the [Create Specificat
 
 > Specification Fields are always grouped into Specification Groups. Because of that, you will need to create at least one Specification Group for each category that will need extra information to fully describe the Products or SKUs it contains.
 
-Start creating Specification groups at the Departments level, then at the Categories level and finally at the Subcategories level. You can use the [List Specifications Groups by Category](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/specification/groupbycategory/-categoryId-) endpoint to check on your progress or visit the Specifications Group list for the category you're interested in by accessing the *Products > Catalog > Categories* section of your Admin panel.
+Start creating Specification groups at the Departments level, then at the Categories level and finally at the Subcategories level. You can use the [List Specifications Groups by Category](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/specification/groupbycategory/-categoryId-) endpoint to check on your progress or visit the Specifications Group list for the category you're interested in by accessing the **Products > Catalog > Categories** section of your Admin panel.
 
 >⚠️ Keep in mind that Specification Groups in a category are recursively applied to all its children in the Category Tree. If a field is not used by all children of a category, it should not be associated with one of its Specification Groups.
 
