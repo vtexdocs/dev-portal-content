@@ -10,7 +10,7 @@ In this step, you will send the number of products you currently have in stock t
 
 ## Before you start
 
-The Logistics module is the service responsible for the inventory and shipping information for your store. This includes the definition of [logistics routes](https://help.vtex.com/tracks/logistics-101--13TFDwDttPl9ki9OXQhyjx/1xo0jmMDcnAUU5ZOavdQ7M), [shipping rates](https://help.vtex.com/tracks/logistics-101--13TFDwDttPl9ki9OXQhyjx/2Pj1gKR80QIuUhc0orMraD), [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R#) and, of course, inventory management.
+The Logistics module is the service responsible for the inventory and shipping information for your store. This includes the definition of [shipping strategies](https://help.vtex.com/en/tracks/logistics-101--13TFDwDttPl9ki9OXQhyjx/4IPeNztIXsZI4oA5TyES9N), [shipping rates](https://help.vtex.com/en/tracks/logistics-101--13TFDwDttPl9ki9OXQhyjx/3by48jFhzpZEseYFpH9uVt), [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R#) and, of course, inventory management.
 
 A basic concept here is that of a **logistics route**, the path connecting your store to the customer. For an order to be placed in a store, the desired item should have stock available in at least one [warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) connected through a [loading dock](https://help.vtex.com/en/tutorial/loading-dock--5DY8xHEjOLYDVL41Urd5qj) to a freight [carrier](https://help.vtex.com/en/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE) that delivers to the customer's address. The image below illustrates these concepts.
 
