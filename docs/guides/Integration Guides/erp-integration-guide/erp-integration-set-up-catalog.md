@@ -40,7 +40,7 @@ If you find yourself in that situation, we recommend creating an inactive mock c
 
 To add a new Brand to your catalog, you should use the [Create Brand](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/brand) endpoint in the Catalog API. 
 
-Adding Brands to your catalog allows you to filter products in your storefront using this attribute. Brands need to be created before you can associate products with them, so it's a good idea to do this when setting up your catalog. You can use the [Get Brand List](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/list) endpoint or visit the *Products > Catalog > Brands section* of your Admin panel to check on your progress.
+Adding Brands to your catalog allows you to filter products in your storefront using this attribute. Brands need to be created before you can associate products with them, so it's a good idea to do this when setting up your catalog. You can use the [Get Brand List](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/list) endpoint or visit the **Products > Catalog > Brands section** of your Admin panel to check on your progress.
 
 >⚠️ If your backend does not have brand information, you can perform the same process mentioned above for [category migration](https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#category-migration-from-erps), by creating an inactive mock brand, used exclusively for migration. The products' information can later be manually enriched.
 
