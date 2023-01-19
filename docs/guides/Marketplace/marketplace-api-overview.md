@@ -54,14 +54,7 @@ Allows marketplaces to configure rules for automatically and manually approving 
 `PUT`[Save Account's Approval Settings](https://developers.vtex.com/vtex-rest-api/reference/saveaccountconfig)
 `GET`[Get Seller's Approval Settings](https://developers.vtex.com/vtex-rest-api/reference/getselleraccountconfig)
 `PUT`[Save Seller's Approval Settings](https://developers.vtex.com/vtex-rest-api/reference/putselleraccountconfig)
-`PUT`[Activate autoApprove Setting for a Seller](https://developers.vtex.com/vtex-rest-api/reference/saveautoapproveforaccountseller)  
-
-### Review Received SKUs
-
-Allows marketplace operators to request sellers to review the sent SKUs that were either refused or pending approval. Thus, marketplace operators can point out the exact fields that need sellers’ review.
-
-`GET`[Get SKU’s review information](https://developers.vtex.com/vtex-rest-api/reference/getreview)  
-`PUT`[Request SKU review from seller](https://developers.vtex.com/vtex-rest-api/reference/putreview)  
+`PUT`[Activate autoApprove Setting for a Seller](https://developers.vtex.com/vtex-rest-api/reference/saveautoapproveforaccountseller)
 
 ### Matched Offers
 
