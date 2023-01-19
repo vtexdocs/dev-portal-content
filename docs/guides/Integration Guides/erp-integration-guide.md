@@ -33,7 +33,7 @@ Each operation has its specific needs and we do not recommend any particular sof
 
 For a complete back-office integration, you should use our APIs to send your Products, Pricing, and Inventory to VTEX and to receive your Orders from VTEX. In order to provide more detail on this data flow, this overview is split into the initial setup and the ongoing integration flow.
 
-> Check the new [Catalog onboarding guide](https://developers.vtex.com/docs/guides/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Catalog and is organized by focusing on the developer's journey.
+>ℹ️ Check the new [Catalog onboarding guide](https://developers.vtex.com/docs/guides/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Catalog and is organized by focusing on the developer's journey.
 
 ## Initial setup
 
