@@ -6,7 +6,7 @@ createdAt: "2020-03-11T20:58:11.386Z"
 updatedAt: "2022-09-22T14:51:08.009Z"
 ---
 
-> This guide refers mostly to ERPs. But keep in mind that integrating PIMs and WMSs basically follows the same principles and the content will point out whenever that is not the case."
+>ℹ️ This guide refers mostly to ERPs. But keep in mind that integrating PIMs and WMSs basically follows the same principles and the content will point out whenever that is not the case."
 
 An ecommerce operation may use a range of software to better manage its resources and information. In this guide, we take a look at the best ways to integrate these systems with your VTEX store. This allows your store to optimize operations by creating efficient communications between VTEX and other software.
 
