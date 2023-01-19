@@ -36,7 +36,7 @@ Learn more about how to configure filtering options in this [Feed API guide](htt
 
 > The orders feed is unique to each `appKey` / `appToken` so that it can be configured and used by different applications with no interference between them.
 
->⚠️ The feed configuration does not perform any validation on the values inserted. Make sure the elements in the `filter.status` array follow the spelling of the [OMS workflow strings](https://help.vtex.com/tutorial/from-to-for-order-status--frequentlyAskedQuestions_773) exactly.
+>⚠️ The feed configuration does not perform any validation on the values inserted. Make sure the elements in the `filter.status` array follow the spelling of the [OMS workflow strings](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196?&utm_source=autocomplete) exactly.
 
 ## Get feed items
 
