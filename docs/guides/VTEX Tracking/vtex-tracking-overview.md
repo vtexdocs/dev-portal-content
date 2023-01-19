@@ -18,15 +18,16 @@ This API is only available in our Brazilian operation, for VTEX Tracking custome
 
 Acquire the mandatory authentication to access the VTEX Tracking endpoints.
 
-`POST` [Asynchronous Login](https://developers.vtex.com/vtex-developer-docs/reference/vtex-tracking-api-authentication)
+`POST` [Asynchronous Login](https://developers.vtex.com/docs/api-reference/tracking#post-/auth)
 
 ### Delivery Services
 
 Operate all VTEX Tracking Delivery Services funcionalities.
 
-`POST` [Post Delivery Service](https://developers.vtex.com/vtex-rest-api/reference/post-delivery-service)
-`GET` [Get Delivery Services List](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list)
-`GET` [Get Delivery Service by ID](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-by-id)
-`POST` [Post Delivery Service With Route Scheduling](https://developers.vtex.com/vtex-rest-api/reference/post-delivery-service-route-scheduling)
-`GET` [Get Delivery Services List by Route](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list-by-route)
-`GET` [Get Delivery Service by Invoice](https://developers.vtex.com/vtex-rest-api/reference/get-delivery-service-list-by-invoice)
+`PUT` [Remove Packing List](https://developers.vtex.com/docs/api-reference/tracking#put-/services)
+`POST` [Post Delivery Service](https://developers.vtex.com/docs/api-reference/tracking#post-/services)
+`GET` [Get Delivery Services List](https://developers.vtex.com/docs/api-reference/tracking#get-/services)
+`GET` [Get Delivery Service by ID](https://developers.vtex.com/docs/api-reference/tracking#get-/services/-idDeliveryService-)
+`POST` [Post Delivery Service With Route Scheduling](https://developers.vtex.com/docs/api-reference/tracking#post-/services/routes)
+`GET` [Get Delivery Services List by Route](https://developers.vtex.com/docs/api-reference/tracking#get-/services/routes)
+`GET` [Get Delivery Service by Invoice](https://developers.vtex.com/docs/api-reference/tracking#get-/services/invoice)
