@@ -25,7 +25,7 @@ In the end, the goal is to make navigation easier for your customers and to impr
 
 To create your Category Tree, you should use the [Create Category](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/category) endpoint in the Catalog API. 
 
-Start by creating your Departments, then your Categories, then your Subcategories. In between steps, you can use the [Get Category Tree](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/category/tree/-categoryLevels-) endpoint or visit the *Products > Catalog > Categories* section of your Admin panel to check on your progress. 
+Start by creating your Departments, then your Categories, then your Subcategories. In between steps, you can use the [Get Category Tree](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/category/tree/-categoryLevels-) endpoint or visit the **Products > Catalog > Categories** section of your Admin panel to check on your progress. 
 
 
 ### Category migration from ERPs
