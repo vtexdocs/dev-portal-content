@@ -369,7 +369,7 @@ The event captured by the frontend will start the conversions API in the backend
 {
   "codes": [
     {
-      "code": "var myHeaders = new Headers();\nmyHeaders.append(\"Content-Type\", \"application/json\");\n\nvar raw = JSON.stringify({\n  \"eventName\": \"PageView\",\n  \"eventId\": \"{{eventId}}\",\n  \"eventSourceURL\": \"{{host}}\",\n  \"userAgent\": \"{{User-agent}}\",\n  \"fbpCookie\": \"{{fbpCookie}}\"\n});\n\nvar requestOptions = {\n  method: 'POST',\n  headers: myHeaders,\n  body: raw,\n  redirect: 'follow'\n};\n\nfetch(\"{{host}}/api/io/_v/facebook-fbe/event\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));",
+      "code": "var myHeaders = new Headers();\nmyHeaders.append(\"Content-Type\", \"application/json\");\n\nvar raw = JSON.stringify({\n  \"eventName\": \"PageView\",\n  \"eventId\": \"{{eventId}}\",\n  \"eventSourceURL\": \"{{host}}\",\n  \"userAgent\": \"{{User-agent}}\",\n  \"fbpCookie\": \"{{fbpCookie}}\"\n});\n\nvar requestOptions = {\n  method: 'POST',\n  headers: myHeaders,\n  body: raw,\n  redirect: 'follow'\n};\n\nfetch(\"/api/io/_v/facebook-capi/event\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));",
       "language": "text",
       "name": "javacript"
     }
