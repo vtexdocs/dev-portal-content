@@ -12,7 +12,7 @@ Beginning June 25, 2023, the Outdated Checkout endpoint will be deprecated and a
 
 | **From Checkout endpoint** | **To OMS endpoints** |
 |---|---|
-|  Outdated Checkout endpoint GET - `api/checkout/pub/orders` | <ul><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders">Retrieve user's orders</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders</code></li><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders/-orderId-">Retrieve user order details</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders/{orderId}</code></li></ul>
+| Outdated Checkout endpoint GET - `api/checkout/pub/orders` | <ul><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders">Retrieve user's orders</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders</code></li><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders/-orderId-">Retrieve user order details</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders/{orderId}</code></li></ul>
 
 > For integrations built with GraphQL that use the Outdated Checkout endpoint, instead of using the `orders` query provided by the `vtex.store-graphql` app, now they will have to use the `orders` query provided by the `vtex.orders-graphql` app. For more information about GraphQL APIs, see this [Overview](https://developers.vtex.com/docs/guides/graphql-ide). In the next sections, you will find a [GraphQL orders query example](#graphql-orders-query-example).
 
