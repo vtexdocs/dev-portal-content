@@ -49,9 +49,9 @@ Profile System documents have a defined TTL, which means Time To Live. This mean
 You may set a document's TTL, with the query parameter `ttl` allowed for requests that create or update documents.
 
 
-## Alternate keys
+## Alternative keys
 
-Shopper profiles and addresses are accessible via API by a unique `profileId`. However, it is also possible to use alternate keys. Currently, there are two allowed alternate keys:
+Shopper profiles and addresses are accessible via API by a unique `profileId`. However, it is also possible to use alternative keys. Currently, there are two allowed alternative keys:
 - `email`
 - `document`
 [block:callout]
@@ -60,7 +60,7 @@ Shopper profiles and addresses are accessible via API by a unique `profileId`. H
   "body": "Note that, in this context, the `document` field means the document number registered by the store customer."
 }
 [/block]
-To do this, you must replace the `profileId` path parameter with the key of your choice and send the name of the field that will be used in the query parameter `alternateKey`.
+To do this, you must replace the `profileId` path parameter with the key of your choice and send the name of the field that will be used in the query parameter `alternativeKey`.
 
 
 ## Masked data
