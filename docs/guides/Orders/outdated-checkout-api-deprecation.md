@@ -475,7 +475,7 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 }
 [/block]
 
-### GraphQL query example
+### GraphQL orders query example
 
 ```
 query orders($options: OrdersOptionsInput!) {
