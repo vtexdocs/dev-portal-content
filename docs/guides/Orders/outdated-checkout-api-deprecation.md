@@ -474,3 +474,29 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
   ]
 }
 [/block]
+
+### GraphQL query example
+
+```
+query orders($options: OrdersOptionsInput!) {
+  orders(options: $options) @context(provider: "vtex.orders-graphql") {
+    list {
+      orderId
+      clientName
+      clientEmail
+      status
+      origin
+      creationDate
+      totalItems
+      totalValue
+      currencyCode
+    }
+    total
+    currencies {
+      currencyCode
+      quantity
+      value
+    }
+  }
+}
+```
