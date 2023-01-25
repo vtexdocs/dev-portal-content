@@ -6,7 +6,7 @@ createdAt: "2022-10-14T21:11:36.747Z"
 updatedAt: "2022-11-02T14:39:45.843Z"
 ---
 
-To present great search results to your customer, it is essential to understand how they search for products in your store. You can use the [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference/intelligent-search-api-overview), as detailed in the following sections, to gather [the most popular search terms](#get-the-most-searched-terms) and [autocomplete suggestions](#get-autocomplete-suggested-terms-and-similar-attributes).
+To present an efficient search result to your customer, it is essential to understand how they search for products in your store. You can use the [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference/intelligent-search-api-overview), as detailed in the following sections, to gather [the most popular search terms](#get-the-most-searched-terms) and [autocomplete suggestions](#get-autocomplete-suggested-terms-and-similar-attributes).
 
 ## Get the most searched terms
 
