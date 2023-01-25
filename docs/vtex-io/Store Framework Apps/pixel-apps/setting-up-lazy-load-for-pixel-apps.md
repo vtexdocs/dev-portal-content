@@ -94,4 +94,4 @@ Example of how to do the lazy load:
 | true | always | false | A specific app loads itself lazily. |
 | true | always | true | A specific app loads itself lazily, and all others load lazily by render. |
 
-> ℹ️ Lazy loading is one of many actions you can take to optimize performance. To know more about other possible practices, check our [guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance#lazy-loading-page-metadata).
+> ℹ️ Lazy loading is one of many actions you can take to optimize performance. To know more about other possible practices, check [Best practices for optimizing performance](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance#lazy-loading-page-metadata).
