@@ -17,7 +17,7 @@ Lazy Load for pixel apps consists of delaying the injection of the pixel script 
 
 The setup consists of enabling the `experimentalLazyLoadAllPixels` setting on the `vtex.store` app and then enabling the `experimentalLazyLoad` setting for each pixel app.
 
-> ℹ️ All ecommerce stores build on VTEX IO use `vtex.store`. To get more information about this app, check our [repository](https://github.com/vtex-apps/store).
+> ℹ️ All ecommerce stores built on VTEX IO use `vtex.store`. To learn more, check the [ vtex.store app repository](https://github.com/vtex-apps/store).
 
 | Setting | Description | Apply to | Values |
 | ------- | ----------- | -------- | ------ |
