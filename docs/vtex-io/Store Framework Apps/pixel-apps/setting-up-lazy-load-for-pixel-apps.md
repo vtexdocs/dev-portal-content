@@ -9,13 +9,15 @@ updatedAt: "2023-01-18T15:28:45.242Z"
 
 Lazy Load for pixel apps consists of delaying the injection of the pixel script snippet via render-server or by the app itself. For more information about pixel apps, read this [doc](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-pixel-app).
 
-> :warning: This feature is in beta. Lazily loading pixel apps can cause misbehavior on all pixel apps. So, after setup, make sure that all pixel apps are working properly.
+> :warning: This feature is in beta. Lazily loading pixel apps can cause misbehavior on all pixel apps. So, after setup, ensure all pixel apps are working properly.
 >
-> To set this up, you will need to have access to a VTEX account and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+> To set this up, you must have access to a VTEX account and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
 ## Setting up the Lazy Load on an account
 
 The setup consists of enabling the `experimentalLazyLoadAllPixels` setting on the `vtex.store` app and then enabling the `experimentalLazyLoad` setting for each pixel app.
+
+> ℹ️ All ecommerce stores build on VTEX IO use `vtex.store`. To get more information about this app, check our [repository](https://github.com/vtex-apps/store).
 
 | Setting | Description | Apply to | Values |
 | ------- | ----------- | -------- | ------ |
@@ -38,9 +40,9 @@ vtex settings set vtex.store experimentalLazyLoadAllPixels true
 
 ## Making the Pixel App load itself lazily
 
-To make the pixel app load itself lazily, you need to add the `experimentalLazyLoad` property on the app [settingsSchema](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-4-configuringyourappsettings). By doing this, the `vtex.pixel-server` app will create a local setting `experimentalHasOwnLazyLoad` with value `true`.
+To make the pixel app load itself lazily, you must add the `experimentalLazyLoad` property on the app [settingsSchema](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-4-configuringyourappsettings). By doing this, the `vtex.pixel-server` app will create a local setting `experimentalHasOwnLazyLoad` with value `true`.
 
-> :warning: Do not add the `experimentalHasOwnLazyLoad` setting on the app `settingsSchema` nor set it via VTEX IO CLI. This is an internal setting.
+> :warning: Do not add the `experimentalHasOwnLazyLoad` setting on the app `settingsSchema`, nor set it via VTEX IO CLI. This is an internal setting.
 
 The pixel app can access the `experimentalLazyLoad` [setting](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-5-writingtheheaderandbodyscripts) like in this code example:
 
