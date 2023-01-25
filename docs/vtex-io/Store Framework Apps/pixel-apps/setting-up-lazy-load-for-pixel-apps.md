@@ -7,7 +7,7 @@ updatedAt: "2023-01-18T15:28:45.242Z"
 ---
 # Setting up Lazy Load for pixel apps
 
-Lazy Load for pixel apps consists of delaying the injection of the pixel script snippet via render-server or by the app itself. For more information about pixel apps, read this [doc](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-pixel-app).
+Lazy Load for pixel apps consists of delaying the injection of the pixel script snippet via render-server or by the app itself. For more information about pixel apps, read this [doc](https://developers.vtex.com/docs/guides/vtex-io-documentation-pixel-app).
 
 > :warning: This feature is in beta. Lazily loading pixel apps can cause misbehavior on all pixel apps. So, after setup, ensure all pixel apps are working properly.
 >
@@ -17,7 +17,7 @@ Lazy Load for pixel apps consists of delaying the injection of the pixel script 
 
 The setup consists of enabling the `experimentalLazyLoadAllPixels` setting on the `vtex.store` app and then enabling the `experimentalLazyLoad` setting for each pixel app.
 
-> ℹ️ All ecommerce stores built on VTEX IO use `vtex.store`. To learn more, check the [ vtex.store app repository](https://github.com/vtex-apps/store).
+> ℹ️ All ecommerce stores built on VTEX IO use `vtex.store`. To learn more, check the [vtex.store app repository](https://github.com/vtex-apps/store).
 
 | Setting | Description | Apply to | Values |
 | ------- | ----------- | -------- | ------ |
@@ -44,7 +44,7 @@ To make the pixel app load itself lazily, you must add the `experimentalLazyLoad
 
 > :warning: Do not add the `experimentalHasOwnLazyLoad` setting on the app `settingsSchema`, nor set it via VTEX IO CLI. This is an internal setting.
 
-The pixel app can access the `experimentalLazyLoad` [setting](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-5-writingtheheaderandbodyscripts) like in this code example:
+The pixel app can access the `experimentalLazyLoad` [setting](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringyourappsettings) like in this code example:
 
 ```js
 const experimentalLazyLoad = "{{settings.experimentalLazyLoad}}"
