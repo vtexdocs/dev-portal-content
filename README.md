@@ -10,7 +10,7 @@ We're so glad you're here! It means you care about sharing knowledge through doc
 - More control over the search
 - Create an interface completely controlled by us
 - Managing content in Github
-- High efficiency: we saved a considerable amount of our monthly budget. 
+- High efficiency: we saved a considerable amount of our monthly budget.
 
 ## Developer Portal repositories
 
