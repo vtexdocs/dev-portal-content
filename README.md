@@ -275,7 +275,7 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 
 ### How can I hide articles from search engines?
 
-When you publish an article in Developer Portal and wish that only those with the link can access it, you can hide it from searching engines. To do so, when creating the article, fill in the header with the value `hidden: true`.
+When you publish an article in Developer Portal and wish that only those with the link can access it, you can hide it from search engines. To do so, when creating the article, fill in the header with the value `hidden: true`.
 
 ```jsx
 ---
