@@ -59,12 +59,12 @@ We're so glad you're here! Thanks for being interested.
  - Ask team leaders to run the portal's build.
 
 ### How can I deal with page slugs?
-    
+
 The slugs used previously in our old Dev Portal were mostly maintained. You shouldn't have to worry about previous slugs.  
 
 For new content, an article's title will become the page's slug always. **Do not create a slug that is different than the title, the portal will not interpret it otherwise.**
 
->For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title. 
+> For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title.
 
 In the articles file, we included the header below. Add in the slug column the exact title, between dashes.
 
