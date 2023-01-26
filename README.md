@@ -16,7 +16,7 @@ We're so glad you're here! It means you care about sharing knowledge through doc
 
 We have created a new organization in Github to host our documentation: [vtexdocs](https://github.com/vtexdocs).
 
-You can find all repositories included in it, [here](https://github.com/vtex/education-tools#education-teams-repositories).
+You can find all repositories included in it, [here](https://github.com/vtex/education-tools).
 
 They each serve a different purpose, and will be mentioned in the FAQ below, depending on which action you wish to perform.
 
