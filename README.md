@@ -55,7 +55,7 @@ We're so glad you're here! Thanks for being interested.
  - Make sure you have a unique slug.
  - Make sure your slug is the exact copy of your title.
  - Images must be saved in the repository. To add it to your markdown, mention its path in the desired place of your guide's body.
- - Ask Bruno to run the portal's build.
+ - Ask team leaders to run the portal's build.
 
 ### How can I deal with page slugs?
     
@@ -322,10 +322,19 @@ This error means that there is a <code>`</code> loose somewhere in the document
 
 This error should already be fixed. Check the log's age to see if it is still valid.
 
-### What causes 404 errors?
+### 404 erros
+
+**What causes 404 errors?**
 - Broken callouts
 - Broken images
 - Missing closing tags in HTML
 - Links mentioned in other articles containing previous Dev Portal slugs, or mentions to headings
 - Redirects not made from older URLs
 - Content does not exist in /dev-portal-content, only on Readme
+
+**404 automatic checker in files**
+We have embedded a Github action called [check-links.yml](https://github.com/vtexdocs/dev-portal-content/blob/main/.github/workflows/check-links.yml) to review all URLs mentioned in a file, and checking if they return 404 errors. If there's a link experiencing the 404 error in your file, you must fix it so the branch can be merged. 
+
+To identify the broken link:
+The broken link will appear in red in your code editor tool (VSCode), and you can learn more about it by clicking on `Details`. 
+

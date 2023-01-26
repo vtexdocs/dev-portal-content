@@ -26,7 +26,7 @@ Also, there are cases in which an order can receive the same status twice in reg
 
 ## 4. Feed or Hook, which should I use?
 
-See our [Feed v3 API guide](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1).
+See our [Feed v3 API guide](https://developers.vtex.com/docs/guides/orders-feed).
 
 ## 5. Order is locked in `Ready for Handling`. What do I do?
 
