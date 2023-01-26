@@ -281,6 +281,12 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 5. Save the URL.
 6. Mention the URL in your markdown.
 
+### How can I hide articles from search engines?
+
+When you publish an article in Developer Portal and wish only those with the link can access it, you can hide it from searching engines. To do so, when creating the article, fill in the header with the value `hidden: true`.
+
+>️️ℹ️  Be aware that this will hide your article not only in Developer Portal searchs, but also in other sites, like Google.
+
 ## Managing content
 
 ### How can I create a redirect?
