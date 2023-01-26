@@ -331,6 +331,7 @@ This error should already be fixed. Check the log's age to see if it is still va
 ### 404 erros
 
 **What causes 404 errors?**
+
 - Broken callouts
 - Broken images
 - Missing closing tags in HTML
