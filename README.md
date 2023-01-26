@@ -191,13 +191,12 @@ The excerpt below represents the first articles of the API Guides section, for i
         },
 ```
 
-
 To add the created content in the left navigation:
 
 1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
-    
+
     > ⚠️ **Before you start adding commits, read the repository's [readme](http://readme.md) file!** Commits must be done in a certain format for your PR to be approved.
-    
+
 2. In the [navigation.json](https://github.com/vtexdocs/devportal/blob/main/public/navigation.json) file, locate where you want the new content to appear. (Yes, it is a long document, be patient!)
 3. Copy the structure below, and replace the values for your desired content.
 
