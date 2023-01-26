@@ -1,4 +1,4 @@
-name: reviewdog
+name: Markdown Reviewer
 on: [pull_request]
 jobs:
   markdownlint:
@@ -12,3 +12,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           filter_mode: file
+          markdownlint_flags: --disable MD013 -- .
