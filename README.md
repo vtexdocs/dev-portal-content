@@ -68,14 +68,13 @@ For new content, an article's title will become the page's slug always. **Do not
 
 In the articles file, we included the header below. Add in the slug column the exact title, between dashes.
 
-
 ### What determines the left navigation's order and organization?
-    
-The `/developer-portal-content` repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal in the order that you choose for the left navigation, other PRs must be made. 
+
+The `/developer-portal-content` repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal in the order that you choose for the left navigation, other PRs must be made.
 
 The portal's navigation comes from the navigation [file](https://github.com/vtexdocs/devportal/blob/main/public/navigation.json). It is a json object listing the navigation and hierarchy of all contents in Developer Portal.
 
-The excerpt below represents the first articles of the API Guides section, for instance. 
+The excerpt below represents the first articles of the API Guides section, for instance.
 
 ```jsx
 {
