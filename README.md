@@ -40,12 +40,12 @@ We're so glad you're here! Thanks for being interested.
 
 ### How can I add new articles or release notes?
 
-  1. Open a branch in the [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository.
-  2. Add a new file in the [desired folder](#in-this-repository), following our [template](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guide_template.md).
-  3. Add your content in markdown.
-  4. Add images in the chosen guide’s folder, if you wish.
-  5. To determine the left navigation's order, follow [these](#what-determines-the-left-navigations-order-and-organization) instructions.
-  6. Submit your PR for review.
+1. Open a branch in the [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository.
+2. Add a new file in the [desired folder](#in-this-repository), following our [template](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guide_template.md).
+3. Add your content in markdown.
+4. Add images in the chosen guide’s folder, if you wish.
+5. To determine the left navigation's order, follow [these](#what-determines-the-left-navigations-order-and-organization) instructions.
+6. Submit your PR for review.
 
 *The `/developer-portal-content` repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal, our Tech Writing team leaders must run the portal's build.*
 
