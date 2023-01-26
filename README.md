@@ -34,12 +34,12 @@ You will find the following folders in this repository:
 - **readme-api-md**: stores API Reference's markdown imported from Readme/
 - **.gitignore**: stores files that should be ignored by Github.
 
-
-
 ## Contributing with Developer Portal documentation
-We're so glad you're here! Thanks for being interested. 
+
+We're so glad you're here! Thanks for being interested.
 
 ### How can I add new articles or release notes?
+
   1. Open a branch in the [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository.
   2. Add a new file in the [desired folder](#in-this-repository), following our [template](/docs/guide_template.md). 
   3. Add your content in markdown.
