@@ -5,6 +5,7 @@ Welcome to the [VTEX Developer Portal](https://developers.vtex.com) content repo
 We're so glad you're here! It means you care about sharing knowledge through documentation ❤️ 📝. So come along, get comfy and learn how to [contribute with documentation](#contributing-with-developer-portal-documentation), [manage content](#managing-content) and [fix errors](#fixing-errors) in this repository.
 
 ## Why have we changed platforms from Readme to our custom built Developer Portal?
+
 - Faster navigation
 - More control over the search
 - Create an interface completely controlled by us
