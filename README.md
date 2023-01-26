@@ -293,9 +293,9 @@ updatedAt: "2022-10-04T14:36:08.692Z"
 
 ### How can I create a redirect?
 
-Open a PR in this [repository](https://github.com/vtexdocs/devportal/blob/07519dab0c357cb107342cf21bc86ae107cce603/next.config.js#L36). 
+Open a PR in this [repository](https://github.com/vtexdocs/devportal/blob/07519dab0c357cb107342cf21bc86ae107cce603/next.config.js#L36).
 
-Netlify will generate a preview link for you to test the redirect. 
+Netlify will generate a preview link for you to test the redirect.
 
 Follow this format in your PR:
 
