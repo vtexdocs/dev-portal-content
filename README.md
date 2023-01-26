@@ -2,7 +2,6 @@
 
 Welcome to the [VTEX Developer Portal](https://developers.vtex.com) content repository! Here you will find the files for all guides included in that documentation portal. It is managed by the [Tech Writing team at VTEX](https://github.com/vtexdocs/dev-portal-content/graphs/contributors), with lots of love, sweat and PRs.
 
-
 We're so glad you're here! It means you care about sharing knowledge through documentation ❤️ 📝. So come along, get comfy and learn how to [contribute with documentation](#contributing-with-developer-portal-documentation), [manage content](#managing-content) and [fix errors](#fixing-errors) in this repository.
 
 ## Why have we changed platforms from Readme to our custom built Developer Portal?
