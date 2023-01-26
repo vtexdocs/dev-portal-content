@@ -217,15 +217,7 @@ To add the created content in the left navigation:
 > By opening a PR, a bot will present a preview for you to test the navigation. With each commit, the preview will be updated.
 
 6. Test your navigation through the preview.
-7. Send the PR in #dev-portal-pr channel for approval. 
-
-
-
-
-
-
-
-
+7. Send the PR in #dev-portal-pr channel for approval.
 
 ### How can I add different colored callouts?
 
