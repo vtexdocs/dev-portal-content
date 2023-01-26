@@ -274,6 +274,7 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 ```
 
 ### How can I add/fix images in an article?
+
 1. Access the [dev-portal-content/docs/guides](https://github.com/vtexdocs/dev-portal-content/tree/main/docs/guides) folder.
 2. Upload the images you wish to include in your guide in the same folder your article is located.
 3. Access the file in Github web.
