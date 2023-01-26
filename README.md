@@ -30,7 +30,7 @@ You will find the following folders in this repository:
   - **release-notes**: release notes included in our [changelog](https://developers.vtex.com/updates/release-notes).
   - **vtex-io**: all VTEX IO guides.
 - **docs-utils**: scripts used to import documentation from Readme. 
-- **images**: stores images imported from Readme. 
+- **images**: stores images imported from Readme.
 - **readme-api-md**: stores API Reference's markdown imported from Readme/
 - **.gitignore**: stores files that should be ignored by Github.
 
