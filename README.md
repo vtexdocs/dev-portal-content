@@ -323,8 +323,7 @@ All docs should be included in the /dev-portal-content repository. If the readme
 
 This error means that there is a <code>`</code> loose somewhere in the document. The system reads it as an inline code block.
 
-
-### How can I fix the error type** `Cannot read properties of undefined (reading 'children')`  **in #dev-portal-logs?
+### How can I fix the error type in #dev-portal-logs?
 
 This error should already be fixed. Check the log's age to see if it is still valid.
 
