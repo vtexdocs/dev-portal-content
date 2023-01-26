@@ -339,8 +339,7 @@ This error should already be fixed. Check the log's age to see if it is still va
 - Content does not exist in /dev-portal-content, only on Readme
 
 **404 automatic checker in files**
-We have embedded a Github action called [check-links.yml](https://github.com/vtexdocs/dev-portal-content/blob/main/.github/workflows/check-links.yml) to review all URLs mentioned in a file, and checking if they return 404 errors. If there's a link experiencing the 404 error in your file, you must fix it so the branch can be merged. 
+We have embedded a Github action called [check-links.yml](https://github.com/vtexdocs/dev-portal-content/blob/main/.github/workflows/check-links.yml) to review all URLs mentioned in a file, and checking if they return 404 errors. If there's a link experiencing the 404 error in your file, you must fix it so the branch can be merged.
 
 To identify the broken link:
-The broken link will appear in red in your code editor tool (VSCode), and you can learn more about it by clicking on `Details`. 
-
+The broken link will appear in red in your code editor tool (VSCode), and you can learn more about it by clicking on `Details`.
