@@ -275,7 +275,9 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 
 ### How can I hide articles from search engines?
 
-When you publish an article in Developer Portal and wish that only those with the link can access it, you can hide it from search engines. This is useful for products in Beta that need documentation for specific clients, instead of publicly available docs, for example. To do so, when creating the article, fill in the header with the value `hidden: true`.
+When you publish an article in Developer Portal and wish that only those with the link can access it, you can hide it from search engines. This is useful for products in Beta that need documentation for specific clients, instead of publicly available docs, for example.
+
+To do so, when creating the article fill in the header with the value `hidden: true`. You can keep the article out of the navigation bar by not making any changes in `navigation.json`.
 
 ```jsx
 ---
