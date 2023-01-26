@@ -278,7 +278,17 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 
 When you publish an article in Developer Portal and wish only those with the link can access it, you can hide it from searching engines. To do so, when creating the article, fill in the header with the value `hidden: true`.
 
->️️ℹ️  Be aware that this will hide your article not only in Developer Portal searchs, but also in other sites, like Google.
+```jsx
+---
+title: "Orders v2"
+slug: "orders-getting-started"
+hidden: true
+createdAt: "2022-09-27T20:34:46.354Z"
+updatedAt: "2022-10-04T14:36:08.692Z"
+---
+```
+
+>️ Be aware that this will hide your article not only in Developer Portal searchs, but also in other sites, like Google.
 
 ## Managing content
 
