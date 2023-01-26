@@ -289,7 +289,7 @@ updatedAt: "2022-10-04T14:36:08.692Z"
 ---
 ```
 
->️ Be aware that this will hide your article not only in Developer Portal searchs, but also in other sites, like Google.
+>️ Be aware that this will hide your article not only in Developer Portal searches, but also in other sites, like Google.
 
 ## Managing content
 
