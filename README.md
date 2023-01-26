@@ -309,13 +309,9 @@ Follow this format in your PR:
 
 All API Reference is still documented and managed through our usual repository. Nothing's changed here. There is a 5 minute cache between PRs in the `/openapi-schemas` repository and the Dev Portal, but it should be rendered automatically.
 
-
 ### How can I update docs from IO apps that already have a readme file in the app's repository?
 
 All docs should be included in the /dev-portal-content repository. If the readme is not yet included, create a new file, and copy and paste the text.
-
-
-
 
 ## Fixing errors
 
