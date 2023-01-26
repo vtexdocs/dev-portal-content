@@ -53,10 +53,10 @@ We're so glad you're here! Thanks for being interested.
 
 ### How can I make sure my content will be visible and rendered correctly?
 
- - Make sure you have a unique slug.
- - Make sure your slug is the exact copy of your title.
- - Images must be saved in the repository. To add it to your markdown, mention its path in the desired place of your guide's body.
- - Ask team leaders to run the portal's build.
+- Make sure you have a unique slug.
+- Make sure your slug is the exact copy of your title.
+- Images must be saved in the repository. To add it to your markdown, mention its path in the desired place of your guide's body.
+- Ask team leaders to run the portal's build.
 
 ### How can I deal with page slugs?
 
