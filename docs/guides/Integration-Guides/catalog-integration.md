@@ -53,7 +53,7 @@ Catalog integration must follow a specific workflow. The registers are related t
 
 VTEX provides three different ways to register products to a catalog:
 
-1. **API Integration:** the collection with all methods can be found at the following link: [Catalog API Overview](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-overview).
+1. **API Integration:** the collection with all methods can be found at the following link: [Catalog API Overview](https://developers.vtex.com/docs/api-reference/catalog-api#overview).
 2. **Spreadsheets:** there are two possible ways to import a spreadsheet with your  Catalog information.  They are:
    a. **Google Drive Import:** import the Catalog from a single Google Drive file. See the [google-import app details](https://github.com/vtex-apps/google-import)
    b. **Classic Method:** import the Catalog using multiple files (product, SKU, specification, image)
