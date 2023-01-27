@@ -20,9 +20,9 @@ Our platform orchestrates data through multiple channels and sources to remove b
 
 ## Flexible, extensible platform
 
-Our core commerce capabilities, provided by over 70 shared microservices, are available for flexible customization through our <a href="https://developers.vtex.com/docs/getting-started-platform-overview#section-list-of-rest-apis" target="_blank">REST APIs</a>. This allows our clients to integrate third-party solutions to a single platform for all experiences.
+Our core commerce capabilities, provided by over 70 shared microservices, are available for flexible customization through our <a href="https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis" target="_blank">REST APIs</a>. This allows our clients to integrate third-party solutions to a single platform for all experiences.
 
-If you need to extend our platform to address specific business needs, we have you covered with our serverless development platform [VTEX IO](https://developers.vtex.com/docs/getting-started-platform-overview#section-low-code-development-platform) and scalable data service [Master Data](https://developers.vtex.com/reference/master-data-api-v2-overview).
+If you need to extend our platform to address specific business needs, we have you covered with our serverless development platform [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and scalable data service [Master Data](https://developers.vtex.com/docs/guides/master-data-api).
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/getting-started/getting-started-platform-overview-1_27.png)
 
