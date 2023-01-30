@@ -10,7 +10,7 @@ VTEX keeps track of users’ sessions within apps by keeping session information
 
 This guide covers the basics of how to identify session changes from a specific namespace  and react to them.
 
-> ℹ️ Learn more about the [Session manager](https://help.vtex.com/tutorial/using-session-manager-to-track-browsing-sessions-in-vtex-stores--1pA0tqsD4BFnJYhQ7ORQBd) and check the [Session manager API reference](https://developers.vtex.com/vtex-rest-api/reference/session-manager-api-overview).
+> ℹ️ Learn more about the [Session manager](https://help.vtex.com/tutorial/using-session-manager-to-track-browsing-sessions-in-vtex-stores--1pA0tqsD4BFnJYhQ7ORQBd) and check the [Session manager API reference](https://developers.vtex.com/vtex-rest-api/api-reference/session-manager-api#overview).
 
 To see a real application of session management, see the [Cart cleanup guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-cleaning-cart-data-on-log-out).
 

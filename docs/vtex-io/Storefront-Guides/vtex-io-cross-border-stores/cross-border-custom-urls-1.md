@@ -9,15 +9,15 @@ If you're familiar with the [multidomain](https://help.vtex.com/en/tutorial/crea
 
 However, each one of these local stores can also have the necessity for translations into multiple languages. For example, a Canadian store binding may need a French or an English version of its website.
 
-As each store of a VTEX account in a multidomain environment is independent, content internationalization, as presented in the [Multi-Language stores](https://developers.vtex.com/docs/multi-language-stores-2) guide, is handled mostly the same way as for a VTEX account with a single store.
+As each store of a VTEX account in a multidomain environment is independent, content internationalization, as presented in the [Multi-Language stores](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores) guide, is handled mostly the same way as for a VTEX account with a single store.
 
 Moreover, cross-border stores that share the same catalog can also have their catalog URLs translated into other languages. In the following section, we present this feature.
 
 ## Translatable URLs
 
-[Rewriter](https://developers.vtex.com/docs/rewriter) is the VTEX IO app responsible for managing product, search, and navigation routes - client-side defined routes related to VTEX IO custom paths and pre-defined templates, such as [department](https://github.com/vtex-apps/store/blob/master/store/routes.json#L27), [brand](https://github.com/vtex-apps/store/blob/master/store/routes.json#L21), and [category](https://github.com/vtex-apps/store/blob/master/store/routes.json#L33) routes.
+[Rewriter](https://developers.vtex.com/docs/guides/rewriter) is the VTEX IO app responsible for managing product, search, and navigation routes - client-side defined routes related to VTEX IO custom paths and pre-defined templates, such as [department](https://github.com/vtex-apps/store/blob/master/store/routes.json#L27), [brand](https://github.com/vtex-apps/store/blob/master/store/routes.json#L21), and [category](https://github.com/vtex-apps/store/blob/master/store/routes.json#L33) routes.
 
-> ℹ️ To learn more about Routes in VTEX IO, please follow [this link](https://developers.vtex.com/docs/routes).
+> ℹ️ To learn more about Routes in VTEX IO, please follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes).
 
 The main objective of this app is to make it possible to render requested pages based on shorter rewritten URLs. For example, a route such as `http://{storename}.com/_v/segment/routing/vtex.store@2.x/product/3/blouse/p` can be understood by its canonical `http://{storename}.com/blouse/p`.
 
@@ -33,7 +33,7 @@ Hence, a product registered under the `yellow-dress` slug, for example, as in `h
 
 >❗ Keep in mind that catalog URLs translations are accepted for each `binding`, not for a single multi-language store.
 
-> ℹ️ To learn how to translate a catalog URL, please follow this [guide](https://developers.vtex.com/docs/catalog-internationalization).
+> ℹ️ To learn how to translate a catalog URL, please follow this [guide](https://developers.vtex.com/docs/guides/catalog-internationalization).
 
 By sending the desired URL translation via the right GraphQL mutation to the Catalog API, an alias of the main route is automatically created in the Rewriter app.
 

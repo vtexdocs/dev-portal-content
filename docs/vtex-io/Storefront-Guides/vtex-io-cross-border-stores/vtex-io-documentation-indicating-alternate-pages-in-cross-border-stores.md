@@ -85,6 +85,6 @@ mutation saveInternal($args: InternalInput!) {
 - Replace the `from`, `declarer`, `type`, `id`, and `binding` values with the information obtained in step 4.
 - Regarding the `alternates` field, fill in the `binding` and `path` values according to the alternate landing page's data.
 
-> ⚠️ If you don't know the `binding` values of your stores, follow [this step by step on checking your account's `binding` ids](https://developers.vtex.com/docs/checking-your-stores-binding-id).
+> ⚠️ If you don't know the `binding` values of your stores, follow [this step by step on checking your account's `binding` ids](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id).
 
 Once you perform these changes, remember to repeat the process from step 4 as many times as the number of existing versions of that landing page, using each `alternate` page as the `path`.

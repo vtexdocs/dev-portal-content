@@ -87,7 +87,7 @@ According to the following example and the following explanations, fill in the *
 - `linkId`: the `textLink` (unless your store is a cross-border one, it must **not** be translated).
 - `locale`: target translation locale.
 
-> ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the category URL. Hence, an alias with the translated URL slug of this category will be automatically created in the [Rewriter](https://developers.vtex.com/docs/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a category registered under the `eletronics` slug as in `http://{storename}.com/us/eletronics/d`, could have its slug translated to `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
+> ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the category URL. Hence, an alias with the translated URL slug of this category will be automatically created in the [Rewriter](https://developers.vtex.com/docs/guides/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a category registered under the `eletronics` slug as in `http://{storename}.com/us/eletronics/d`, could have its slug translated to `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
 
 ## Brand
 
@@ -169,7 +169,7 @@ According to the following example and the following explanations, fill in the *
 - `linkId`: the `textLink` (unless your store is a cross-border one, it must **not** be translated).
 - `locale`: target translation locale.
 
-> ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the product URL. Hence, an alias with the translated URL slug of this product will be automatically created in the [Rewriter](https://developers.vtex.com/docs/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a product registered under the `blue-top-retro-camera` slug as in `http://{storename}.com/us/blue-top-retro-camera/p`, could have its slug translated to `camera-retro-azul` for the `pt-BR` binding, as in `http://{storename}.com/br/camera-retro-azul/p`.
+> ℹ️ If your store is a cross-border one, keep in mind that the `linkId` is the slug used to build the product URL. Hence, an alias with the translated URL slug of this product will be automatically created in the [Rewriter](https://developers.vtex.com/docs/guides/rewriter) app for the binding associated to the target locale. The alias is stored in the `resolveAs` field of its related internal route in the Rewriter app. For example: a product registered under the `blue-top-retro-camera` slug as in `http://{storename}.com/us/blue-top-retro-camera/p`, could have its slug translated to `camera-retro-azul` for the `pt-BR` binding, as in `http://{storename}.com/br/camera-retro-azul/p`.
 
 ## SKU
 

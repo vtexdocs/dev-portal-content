@@ -35,7 +35,7 @@ Hence, keep in mind that every VTEX store has a unique `binding` used as an iden
 [block:callout]
 {
   "type": "info",
-  "body": "To check the `binding` value of your stores, follow [this guide](https://developers.vtex.com/docs/checking-your-stores-binding-id)"
+  "body": "To check the `binding` value of your stores, follow [this guide](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id)"
 }
 [/block]
 Once the binding concept is familiar, it's possible to advance to trade policies.

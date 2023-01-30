@@ -44,7 +44,7 @@ Learn below how to set your store up to decrease page response time with asynchr
 }  
 ```
 
-3. Add the `priceBehavior` prop to your [`product-summary.shelf`](https://developers.vtex.com/docs/guides/vtex-product-summary/product-summary-shelf/) block and set its value to `async`:
+3. Add the `priceBehavior` prop to your [`product-summary.shelf`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryshelf) block and set its value to `async`:
 
 ```diff
 "product-summary.shelf": {

@@ -18,7 +18,7 @@ Find out how to configure the `markers` prop in the step-by-step below.
 
 ## Step by step
 
-> ℹ️ Before going through the steps, make sure that the block in which you are working accepts the `markers` prop. You can check this in its <a href="https://developers.vtex.com/docs/guides/overview-5/">documentation</a>.
+> ℹ️ Before going through the steps, make sure that the block in which you are working accepts the `markers` prop. You can check this in its <a href="https://developers.vtex.com/docs/vtex-io-apps/">documentation</a>.
 
 1. Using your terminal and [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired VTEX in a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/).
 2. Access the directory where your store's theme is stored and open it using your code editor.

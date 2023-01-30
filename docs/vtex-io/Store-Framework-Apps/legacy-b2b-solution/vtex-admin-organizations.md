@@ -19,7 +19,7 @@ vtex install vtex.admin-organizations@1.x
 ### Prerequisites
 
 In order to run this application, you must create the following Master Data schemas.
-Use `MASTER DATA API - V2` in [VTEX API documentation](https://developers.vtex.com/reference#master-data-api-v2-overview) to create those schemas.
+Use `MASTER DATA API - V2` in [VTEX API documentation](https://developers.vtex.com/api-reference/master-data-api-v2#overview) to create those schemas.
 
 These schemas are shared among several applications `admin-organizations`, `organizations-challenge` and `organizations`. Therefore, if you have already created these schemas before, you can ignore this step.
 

@@ -34,13 +34,13 @@ Example:
 
 _Account Name: sellerstore_
 _User: Carol Danvers_
-_Email: caroldanvers@sellerstore.com_
+_Email:_ `caroldanvers@sellerstore.com`
 
 | Region                  | Email                     | Monthly Fee |
 |-------------------------|---------------------------|-------------|
-| Brazil                  | sales-ops-br@vtex.com.br  | R$750,00    |
-| Europe                  | sales-operations@vtex.com | EUR 250     |
-| United States and LatAm | sales-operations@vtex.com | 250 USD     |
+| Brazil                  | `sales-ops-br@vtex.com.br`  | R$750,00    |
+| Europe                  | `sales-operations@vtex.com` | EUR 250     |
+| United States and LatAm | `sales-operations@vtex.com` | 250 USD     |
 
 ### Configure payment settings
 

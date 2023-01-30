@@ -23,7 +23,7 @@ This application allows you to create organization and manage users under that o
 
 ## Prerequisites
 
-In order to run this application, you must create the following Master Data schemas and indices using [MASTER DATA API - V2](https://developers.vtex.com/reference#master-data-api-v2-overview).
+In order to run this application, you must create the following Master Data schemas and indices using [MASTER DATA API - V2](https://developers.vtex.com/api-reference/master-data-api-v2#overview).
 
 These schemas are shared among several applications: `vtex.admin-organizations`, `vtex.auth-challenge` and `vtex.organizations`. Therefore, if you have already created these schemas and indices you can ignore this step.
 

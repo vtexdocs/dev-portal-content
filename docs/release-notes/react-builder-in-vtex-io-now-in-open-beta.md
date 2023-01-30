@@ -8,7 +8,7 @@ type: "added"
 
 ![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/react-builder-in-vtex-io-now-in-open-beta-0.png)
 
-Before, developers interested in creating custom components in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) using the [VTEX Store Framework](https://developers.vtex.com/docs/guides/what-is-store-framework) had to request VTEX authorization. They had to fill in an application form sharing their project's details and wait for our approval to use the React [builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
+Before, developers interested in creating custom components in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) using the [VTEX Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) had to request VTEX authorization. They had to fill in an application form sharing their project's details and wait for our approval to use the React [builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
 This is no longer required, as **we officially move our React builder to open beta status**. You can take advantage of this autonomy to further customize and improve your storefront experience using the [React](https://reactjs.org/) technology.
 

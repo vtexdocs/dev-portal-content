@@ -163,7 +163,7 @@ If you are setting up a new store, you can follow the instructions in [this guid
 
 If you have [installed B2B Easy Setup](https://developers.vtex.com/vtex-rest-api/docs/installing-b2b-easy-set-up) and selected **Organizations** resources, you can skip this step, because the required Master Data schemas will already have been created and you should have all **Permissions** and **Roles** ready.
 
-If you have opted not to install B2B Easy Setup, you need to use the **[Save schema by name](https://developers.vtex.com/vtex-rest-api/reference/schemas#saveschemabyname)** endpoint of the **Master Data API - V2** to create the following schemas.
+If you have opted not to install B2B Easy Setup, you need to use the **[Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-)** endpoint of the **Master Data API - V2** to create the following schemas.
 
 - [`BusinessPermission schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#businesspermission-schema)
 - [`BusinessRole schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#businessrole-schema)

@@ -91,7 +91,7 @@ For example, if you want to **develop React components** on an app, you should u
 
 And create a `react` folder inside the app, placing there the component files. Each builder has its own set of rules and validation process.
 
-> ℹ️ Follow this [link](https://developers.vtex.com/docs/vtex-io-documentation-builders) to learn more about Builders.
+> ℹ️ Follow this [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) to learn more about Builders.
 
 <div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
 

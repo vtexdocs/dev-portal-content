@@ -84,4 +84,4 @@ So far, we've talked about app messages - text messages exported from a storefro
 
 Every data from the Catalog API, such as a product name and a product description, is already set as translatable. Therefore, it's possible to overwrite an automatic translation of the catalog by sending the appropriate GraphQL query either to the Catalog API or to the Messages app.
 
-> ℹ️ To learn how to overwrite a catalog message through the Catalog API, please follow this [guide](https://developers.vtex.com/docs/catalog-internationalization).
+> ℹ️ To learn how to overwrite a catalog message through the Catalog API, please follow this [guide](https://developers.vtex.com/docs/guides/catalog-internationalization).

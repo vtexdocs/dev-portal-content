@@ -16,7 +16,7 @@ Finally, you may want to remove your landing page from the *default binding*. Fo
 Before proceeding any further with this step-by-step:
 
 - Create your custom landing pages as presented in [this](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) guide.
-- [Check your account's binding ids](https://developers.vtex.com/docs/checking-your-stores-binding-id) and keep the returned data with you.
+- [Check your account's binding ids](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id) and keep the returned data with you.
 
 It's also worth noting that **this technique only works if the custom pages were created via the CMS** rather than the Store Theme.
 

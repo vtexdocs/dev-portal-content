@@ -174,7 +174,7 @@ If the problem persists, check the following instructions.
   <summary><code>Error: Cannot find module 'vtex'</code></summary>
   <br>
 
-This error is related to [plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-vtex-io-cli-plugins) detached from the VTEX IO's CLI base code.
+This error is related to [plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) detached from the VTEX IO's CLI base code.
 
 Even though plugins are decoupled from VTEX IO's CLI, they rely on the CLI functionalities. Therefore, this error signalizes that these plugins are failing to access VTEX IO's CLI functionalities.
 
