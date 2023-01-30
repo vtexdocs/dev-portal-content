@@ -5,7 +5,6 @@ hidden: false
 createdAt: "2023-01-18T15:28:45.242Z"
 updatedAt: "2023-01-18T15:28:45.242Z"
 ---
-# Setting up Lazy Load for pixel apps
 
 Lazy Load for pixel apps consists of delaying the injection of the pixel script snippet via render-server or by the app itself. For more information about pixel apps, read this [doc](https://developers.vtex.com/docs/guides/vtex-io-documentation-pixel-app).
 
