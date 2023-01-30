@@ -1,7 +1,6 @@
 ---
 title: "Admin Organizations"
 slug: "vtex-admin-organizations"
-excerpt: "vtex.admin-organizations@1.1.0"
 hidden: false
 createdAt: "2020-06-03T15:19:29.881Z"
 updatedAt: "2020-12-11T11:57:26.752Z"

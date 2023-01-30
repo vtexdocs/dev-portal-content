@@ -1,7 +1,6 @@
 ---
 title: "2. Cloning the boilerplate repository"
 slug: "vtex-io-documentation-3-cloningtheboilerplaterepository"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:23.086Z"
 updatedAt: "2022-12-13T20:17:44.175Z"

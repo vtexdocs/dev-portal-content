@@ -1,7 +1,6 @@
 ---
 title: "Info Card"
 slug: "vtex-store-components-infocard"
-excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.421Z"
 updatedAt: "2022-11-22T18:39:25.844Z"

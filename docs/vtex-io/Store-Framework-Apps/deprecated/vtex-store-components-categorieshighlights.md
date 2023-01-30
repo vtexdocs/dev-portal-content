@@ -1,7 +1,6 @@
 ---
 title: "Categories Highlights"
 slug: "vtex-store-components-categorieshighlights"
-excerpt: "vtex.store-components@3.132.2"
 hidden: false
 createdAt: "2020-06-03T16:04:30.355Z"
 updatedAt: "2021-11-03T14:49:38.636Z"

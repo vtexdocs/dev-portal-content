@@ -1,7 +1,6 @@
 ---
 title: "Lucky Orange"
 slug: "vtex-lucky-orange"
-excerpt: "vtex.lucky-orange@1.0.1"
 hidden: false
 createdAt: "2020-06-03T15:19:32.559Z"
 updatedAt: "2020-06-03T15:19:32.559Z"

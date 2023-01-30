@@ -1,7 +1,6 @@
 ---
 title: "Menu"
 slug: "vtex-menu"
-excerpt: "vtex.menu@2.34.26"
 hidden: false
 createdAt: "2020-06-03T15:19:15.904Z"
 updatedAt: "2022-12-06T17:06:12.798Z"

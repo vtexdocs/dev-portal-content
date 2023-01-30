@@ -1,7 +1,6 @@
 ---
 title: "Developing an app"
 slug: "vtex-io-documentation-developing-an-app"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-03-04T20:09:05.300Z"
 updatedAt: "2022-12-13T20:17:44.583Z"

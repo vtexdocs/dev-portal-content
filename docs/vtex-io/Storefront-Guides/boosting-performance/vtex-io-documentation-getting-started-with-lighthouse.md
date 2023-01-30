@@ -1,7 +1,6 @@
 ---
 title: "Getting started with Lighthouse performance audit"
 slug: "vtex-io-documentation-getting-started-with-lighthouse"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-07T18:18:24.258Z"
 updatedAt: "2022-12-13T20:17:44.161Z"

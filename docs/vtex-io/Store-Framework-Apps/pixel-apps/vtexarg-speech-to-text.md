@@ -1,7 +1,6 @@
 ---
 title: "Speech to Text Search"
 slug: "vtexarg-speech-to-text"
-excerpt: "vtexarg.speech-to-text@1.0.10"
 hidden: false
 createdAt: "2021-07-28T15:17:51.703Z"
 updatedAt: "2022-11-03T17:57:01.905Z"

@@ -1,7 +1,6 @@
 ---
 title: "SKU Selector"
 slug: "vtex-store-components-skuselector"
-excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.364Z"
 updatedAt: "2022-11-22T18:39:23.224Z"

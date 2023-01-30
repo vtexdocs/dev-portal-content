@@ -1,7 +1,6 @@
 ---
 title: "VTEX IO CLI"
 slug: "vtex-io-documentation-toolbelt"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.236Z"
 updatedAt: "2022-12-13T20:17:44.400Z"

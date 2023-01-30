@@ -1,7 +1,6 @@
 ---
 title: "PowerReviews"
 slug: "vtex-powerreviews"
-excerpt: "vtex.powerreviews@2.4.0"
 hidden: false
 createdAt: "2020-06-03T15:19:08.947Z"
 updatedAt: "2022-07-15T18:57:50.604Z"

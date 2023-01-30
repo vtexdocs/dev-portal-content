@@ -1,7 +1,6 @@
 ---
 title: "Store Drawer"
 slug: "vtex-store-drawer"
-excerpt: "vtex.store-drawer@0.16.2"
 hidden: false
 createdAt: "2020-06-03T15:19:47.724Z"
 updatedAt: "2022-06-13T17:20:27.990Z"

@@ -1,7 +1,6 @@
 ---
 title: "Facebook Business Extension"
 slug: "vtex-facebook-fbe"
-excerpt: "vtex.facebook-fbe@1.7.2"
 hidden: false
 createdAt: "2021-05-27T19:18:44.566Z"
 updatedAt: "2022-12-14T20:30:07.485Z"

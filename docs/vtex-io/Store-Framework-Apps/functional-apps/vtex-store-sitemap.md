@@ -1,7 +1,6 @@
 ---
 title: "Store Sitemap"
 slug: "vtex-store-sitemap"
-excerpt: "vtex.store-sitemap@2.14.0"
 hidden: false
 createdAt: "2020-06-03T15:19:35.206Z"
 updatedAt: "2022-08-12T20:16:11.281Z"

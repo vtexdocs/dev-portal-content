@@ -1,7 +1,6 @@
 ---
 title: "Share List"
 slug: "vtex-list-sharelist"
-excerpt: "vtex.list@3.6.2"
 hidden: false
 createdAt: "2022-09-16T00:32:17.848Z"
 updatedAt: "2022-12-01T16:44:24.336Z"

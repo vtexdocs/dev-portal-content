@@ -1,7 +1,6 @@
 ---
 title: "Creating modals using icons"
 slug: "vtex-io-documentation-creating-modals-using-icons"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-18T15:04:52.686Z"
 updatedAt: "2022-12-13T20:17:44.107Z"

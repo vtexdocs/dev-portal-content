@@ -1,7 +1,6 @@
 ---
 title: "Deploying the app's stable version"
 slug: "vtex-io-documentation-deploying-the-app-stable-version"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-06-20T15:38:45.024Z"
 updatedAt: "2022-12-13T20:17:44.365Z"

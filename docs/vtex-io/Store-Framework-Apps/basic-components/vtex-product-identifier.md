@@ -1,7 +1,6 @@
 ---
 title: "Product Identifier"
 slug: "vtex-product-identifier"
-excerpt: "vtex.product-identifier@0.4.1"
 hidden: false
 createdAt: "2020-06-03T15:19:25.494Z"
 updatedAt: "2022-08-18T10:57:35.113Z"

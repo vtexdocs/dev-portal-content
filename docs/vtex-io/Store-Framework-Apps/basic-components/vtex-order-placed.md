@@ -1,7 +1,6 @@
 ---
 title: "Order Placed"
 slug: "vtex-order-placed"
-excerpt: "vtex.order-placed@2.16.0"
 hidden: false
 createdAt: "2020-06-03T15:19:33.374Z"
 updatedAt: "2022-03-17T19:30:39.410Z"

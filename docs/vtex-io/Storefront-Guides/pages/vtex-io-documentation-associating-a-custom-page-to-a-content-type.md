@@ -1,7 +1,6 @@
 ---
 title: "Associating a custom page to a content type"
 slug: "vtex-io-documentation-associating-a-custom-page-to-a-content-type"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-25T15:03:25.441Z"
 updatedAt: "2022-12-13T20:17:44.124Z"

@@ -1,7 +1,6 @@
 ---
 title: "Order Configuration"
 slug: "vtex-order-configuration"
-excerpt: "vtex.order-configuration@3.3.1"
 hidden: false
 createdAt: "2020-08-07T17:26:01.522Z"
 updatedAt: "2022-03-21T17:10:43.606Z"

@@ -1,7 +1,6 @@
 ---
 title: "CyberSource Fingerprint"
 slug: "vtex-cybersource-fingerprint"
-excerpt: "vtex.cybersource-fingerprint@1.0.2"
 hidden: false
 createdAt: "2020-06-03T15:19:20.934Z"
 updatedAt: "2020-06-03T15:19:20.934Z"

@@ -1,7 +1,6 @@
 ---
 title: "Building a Product Details Page"
 slug: "vtex-io-documentation-building-a-product-details-page"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.244Z"
 updatedAt: "2022-12-13T20:17:44.056Z"

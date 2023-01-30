@@ -1,7 +1,6 @@
 ---
 title: "Slider"
 slug: "vtex-store-components-slider"
-excerpt: "vtex.store-components@3.132.2"
 hidden: false
 createdAt: "2020-06-03T16:04:30.371Z"
 updatedAt: "2021-12-30T14:00:48.284Z"

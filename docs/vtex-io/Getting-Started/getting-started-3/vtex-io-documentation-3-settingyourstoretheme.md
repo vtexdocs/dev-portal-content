@@ -1,7 +1,6 @@
 ---
 title: "3. Setting your store's theme"
 slug: "vtex-io-documentation-3-settingyourstoretheme"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.903Z"
 updatedAt: "2022-12-13T20:17:44.902Z"

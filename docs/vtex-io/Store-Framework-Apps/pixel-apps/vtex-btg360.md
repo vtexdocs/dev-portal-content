@@ -1,7 +1,6 @@
 ---
 title: "BTG360"
 slug: "vtex-btg360"
-excerpt: "vtex.btg360@1.1.0"
 hidden: false
 createdAt: "2020-07-03T14:59:47.729Z"
 updatedAt: "2020-10-06T20:06:22.306Z"

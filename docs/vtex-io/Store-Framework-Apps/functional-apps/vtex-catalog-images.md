@@ -1,7 +1,6 @@
 ---
 title: "Catalog Images"
 slug: "vtex-catalog-images"
-excerpt: "vtex.catalog-images@0.3.0"
 hidden: false
 createdAt: "2022-10-21T16:59:43.420Z"
 updatedAt: "2022-10-21T16:59:43.420Z"

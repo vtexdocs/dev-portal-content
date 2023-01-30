@@ -1,7 +1,6 @@
 ---
 title: "Gradient Collapse"
 slug: "vtex-store-components-gradientcollapse"
-excerpt: "vtex.store-components@3.132.2"
 hidden: false
 createdAt: "2020-06-03T16:04:30.346Z"
 updatedAt: "2022-01-04T23:11:39.554Z"

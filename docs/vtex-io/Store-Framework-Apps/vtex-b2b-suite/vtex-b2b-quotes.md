@@ -1,7 +1,6 @@
 ---
 title: "B2B Quotes & Carts"
 slug: "vtex-b2b-quotes"
-excerpt: "vtex.b2b-quotes@1.5.2"
 hidden: false
 createdAt: "2021-10-19T20:10:51.309Z"
 updatedAt: "2022-12-02T14:51:23.888Z"

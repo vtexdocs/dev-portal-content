@@ -1,7 +1,6 @@
 ---
 title: "4. Writing the header and body scripts"
 slug: "vtex-io-documentation-5-writingtheheaderandbodyscripts"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:23.999Z"
 updatedAt: "2022-12-13T20:17:44.369Z"

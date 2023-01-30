@@ -1,7 +1,6 @@
 ---
 title: "Going live"
 slug: "vtex-io-documentation-going-live"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-11-07T14:35:53.947Z"
 updatedAt: "2022-12-13T20:17:44.665Z"

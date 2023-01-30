@@ -1,7 +1,6 @@
 ---
 title: "Using the Markers prop to customize a block's message"
 slug: "vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:45.317Z"
 updatedAt: "2022-12-13T20:17:44.379Z"

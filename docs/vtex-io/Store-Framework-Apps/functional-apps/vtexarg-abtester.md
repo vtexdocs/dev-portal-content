@@ -1,7 +1,6 @@
 ---
 title: "AB Tester"
 slug: "vtexarg-abtester"
-excerpt: "vtexarg.abtester@1.0.12"
 hidden: false
 createdAt: "2021-10-21T15:14:07.237Z"
 updatedAt: "2022-07-21T17:37:37.156Z"

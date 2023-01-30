@@ -1,7 +1,6 @@
 ---
 title: "Suiteshare"
 slug: "vtex-suite-share"
-excerpt: "vtex.suite-share@1.0.3"
 hidden: false
 createdAt: "2021-05-20T20:08:05.036Z"
 updatedAt: "2021-06-11T16:37:40.273Z"

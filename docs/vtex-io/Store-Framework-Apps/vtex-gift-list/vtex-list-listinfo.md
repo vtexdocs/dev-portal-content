@@ -1,7 +1,6 @@
 ---
 title: "List Info"
 slug: "vtex-list-listinfo"
-excerpt: "vtex.list@3.6.2"
 hidden: false
 createdAt: "2022-09-16T00:32:17.866Z"
 updatedAt: "2022-12-01T16:44:24.318Z"

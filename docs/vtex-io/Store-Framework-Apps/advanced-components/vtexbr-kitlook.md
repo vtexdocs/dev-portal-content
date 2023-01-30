@@ -1,7 +1,6 @@
 ---
 title: "Kit Look"
 slug: "vtexbr-kitlook"
-excerpt: "vtexbr.kitlook@5.6.1"
 hidden: false
 createdAt: "2021-10-07T18:46:15.904Z"
 updatedAt: "2022-12-06T12:19:29.650Z"

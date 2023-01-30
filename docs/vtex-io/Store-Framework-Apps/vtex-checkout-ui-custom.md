@@ -1,7 +1,6 @@
 ---
 title: "Checkout UI Custom Upload Prescription"
 slug: "vtex-checkout-ui-custom"
-excerpt: "vtex.checkout-ui-custom@1.0.1-hkignore.3"
 hidden: true
 createdAt: "2020-08-17T17:45:05.312Z"
 updatedAt: "2022-08-05T17:29:34.165Z"

@@ -1,7 +1,6 @@
 ---
 title: "B2B setup"
 slug: "b2b-setup"
-excerpt: "vtex.io-documentation@0.35.6"
 hidden: false
 createdAt: "2020-06-18T19:08:54.724Z"
 updatedAt: "2021-10-05T20:08:58.863Z"

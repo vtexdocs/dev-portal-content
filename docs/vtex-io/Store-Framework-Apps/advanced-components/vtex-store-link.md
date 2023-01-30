@@ -1,7 +1,6 @@
 ---
 title: "Store Link"
 slug: "vtex-store-link"
-excerpt: "vtex.store-link@0.9.2"
 hidden: false
 createdAt: "2020-06-03T15:19:30.090Z"
 updatedAt: "2022-11-11T16:13:51.504Z"

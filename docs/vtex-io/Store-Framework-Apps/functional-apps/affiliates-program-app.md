@@ -1,7 +1,6 @@
 ---
 title: "Affiliates Program"
 slug: "affiliates-program-app"
-excerpt: "vtex.affiliates@1.3.1"
 hidden: false
 createdAt: "2022-10-14T17:02:14.091Z"
 updatedAt: "2022-11-07T22:59:36.234Z"

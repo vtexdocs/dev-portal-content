@@ -1,7 +1,6 @@
 ---
 title: "Reviews and Ratings"
 slug: "vtex-reviews-and-ratings"
-excerpt: "vtex.reviews-and-ratings@3.12.1"
 hidden: false
 createdAt: "2020-06-03T15:19:19.070Z"
 updatedAt: "2022-12-05T12:45:09.103Z"

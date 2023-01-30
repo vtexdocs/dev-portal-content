@@ -1,7 +1,6 @@
 ---
 title: "Quickorder"
 slug: "vtex-quickorder"
-excerpt: "vtex.quickorder@3.12.4"
 hidden: false
 createdAt: "2020-06-03T15:19:15.869Z"
 updatedAt: "2022-12-13T22:23:30.600Z"

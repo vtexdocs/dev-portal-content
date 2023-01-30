@@ -1,7 +1,6 @@
 ---
 title: "Deactivating the VTEX IO native service worker"
 slug: "vtex-io-documentation-deactivating-the-vtex-io-native-service-worker"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-07-16T18:56:22.303Z"
 updatedAt: "2022-12-13T20:17:44.052Z"

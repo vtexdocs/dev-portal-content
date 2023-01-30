@@ -1,7 +1,6 @@
 ---
 title: "Shopper Location"
 slug: "vtex-shopper-location"
-excerpt: "vtex.shopper-location@1.6.3"
 hidden: false
 createdAt: "2020-09-03T21:01:54.967Z"
 updatedAt: "2022-11-11T12:33:47.603Z"

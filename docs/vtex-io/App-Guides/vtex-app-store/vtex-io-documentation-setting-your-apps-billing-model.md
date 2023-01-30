@@ -1,7 +1,6 @@
 ---
 title: "Setting your app's billing model"
 slug: "vtex-io-documentation-setting-your-apps-billing-model"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-31T16:50:10.042Z"
 updatedAt: "2022-12-13T20:17:44.838Z"

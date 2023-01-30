@@ -1,7 +1,6 @@
 ---
 title: "My Account Commons"
 slug: "vtex-my-account-commons"
-excerpt: "vtex.my-account-commons@1.5.2"
 hidden: false
 createdAt: "2020-06-03T15:19:30.129Z"
 updatedAt: "2020-09-10T20:04:22.179Z"

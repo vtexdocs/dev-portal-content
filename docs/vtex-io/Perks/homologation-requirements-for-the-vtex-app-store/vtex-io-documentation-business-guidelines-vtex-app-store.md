@@ -1,7 +1,6 @@
 ---
 title: "Business guidelines"
 slug: "vtex-io-documentation-business-guidelines-vtex-app-store"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: true
 createdAt: "2021-07-21T21:13:45.252Z"
 updatedAt: "2022-12-13T20:17:44.194Z"

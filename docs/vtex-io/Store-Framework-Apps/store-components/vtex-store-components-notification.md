@@ -1,7 +1,6 @@
 ---
 title: "Notification"
 slug: "vtex-store-components-notification"
-excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.371Z"
 updatedAt: "2022-11-22T18:39:23.075Z"

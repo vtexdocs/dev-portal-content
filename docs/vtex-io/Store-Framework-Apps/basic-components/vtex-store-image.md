@@ -1,7 +1,6 @@
 ---
 title: "Store Image"
 slug: "vtex-store-image"
-excerpt: "vtex.store-image@0.15.0"
 hidden: false
 createdAt: "2020-06-03T15:19:10.796Z"
 updatedAt: "2022-09-08T19:10:41.275Z"

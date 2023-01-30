@@ -1,7 +1,6 @@
 ---
 title: "Wishlist"
 slug: "vtex-wish-list"
-excerpt: "vtex.wish-list@1.15.4"
 hidden: false
 createdAt: "2020-06-03T15:19:09.963Z"
 updatedAt: "2022-11-23T14:55:16.485Z"

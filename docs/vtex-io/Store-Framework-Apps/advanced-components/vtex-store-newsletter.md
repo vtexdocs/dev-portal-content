@@ -1,7 +1,6 @@
 ---
 title: "Store Newsletter"
 slug: "vtex-store-newsletter"
-excerpt: "vtex.store-newsletter@1.3.0"
 hidden: false
 createdAt: "2020-10-30T13:37:40.344Z"
 updatedAt: "2021-03-25T19:36:37.526Z"

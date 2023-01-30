@@ -1,7 +1,6 @@
 ---
 title: "Product List"
 slug: "vtex-product-list"
-excerpt: "vtex.product-list@0.35.1"
 hidden: false
 createdAt: "2020-06-03T15:19:16.041Z"
 updatedAt: "2022-07-27T14:36:38.486Z"

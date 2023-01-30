@@ -1,7 +1,6 @@
 ---
 title: "Store Locator"
 slug: "vtex-store-locator"
-excerpt: "vtex.store-locator@0.10.14"
 hidden: false
 createdAt: "2020-09-29T19:28:07.531Z"
 updatedAt: "2022-10-07T13:56:32.252Z"

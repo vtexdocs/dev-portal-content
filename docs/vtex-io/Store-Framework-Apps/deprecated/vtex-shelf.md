@@ -1,7 +1,6 @@
 ---
 title: "Shelf"
 slug: "vtex-shelf"
-excerpt: "vtex.shelf@1.47.2"
 hidden: false
 createdAt: "2020-06-03T15:19:31.603Z"
 updatedAt: "2022-02-01T21:09:11.415Z"

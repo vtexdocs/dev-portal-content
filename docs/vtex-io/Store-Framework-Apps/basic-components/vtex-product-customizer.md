@@ -1,7 +1,6 @@
 ---
 title: "Product Customizer"
 slug: "vtex-product-customizer"
-excerpt: "vtex.product-customizer@2.11.4"
 hidden: false
 createdAt: "2020-06-03T15:19:31.995Z"
 updatedAt: "2022-12-12T14:10:01.827Z"

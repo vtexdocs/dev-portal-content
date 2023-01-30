@@ -1,7 +1,6 @@
 ---
 title: "Customizing the Header and Footer blocks by page"
 slug: "vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.275Z"
 updatedAt: "2022-12-13T20:17:44.048Z"

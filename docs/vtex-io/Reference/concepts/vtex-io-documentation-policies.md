@@ -1,7 +1,6 @@
 ---
 title: "Policies"
 slug: "vtex-io-documentation-policies"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-07-16T20:35:02.107Z"
 updatedAt: "2022-12-13T20:17:44.172Z"

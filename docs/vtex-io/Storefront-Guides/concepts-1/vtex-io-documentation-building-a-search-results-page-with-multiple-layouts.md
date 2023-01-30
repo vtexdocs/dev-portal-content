@@ -1,7 +1,6 @@
 ---
 title: "Building a search results page with multiple layouts"
 slug: "vtex-io-documentation-building-a-search-results-page-with-multiple-layouts"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-01-15T12:20:54.182Z"
 updatedAt: "2022-12-13T20:17:44.097Z"

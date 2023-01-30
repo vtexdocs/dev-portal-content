@@ -1,7 +1,6 @@
 ---
 title: "List Migration"
 slug: "vtex-list-listmigration"
-excerpt: "vtex.list@3.6.2"
 hidden: false
 createdAt: "2023-01-16T00:32:17.866Z"
 updatedAt: "2023-01-16T00:32:17.866Z"

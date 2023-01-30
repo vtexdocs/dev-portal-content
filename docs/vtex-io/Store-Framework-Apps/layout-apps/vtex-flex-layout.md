@@ -1,7 +1,6 @@
 ---
 title: "Flex Layout"
 slug: "vtex-flex-layout"
-excerpt: "vtex.flex-layout@0.20.1"
 hidden: false
 createdAt: "2020-06-03T15:19:18.642Z"
 updatedAt: "2022-09-01T17:03:52.331Z"

@@ -1,7 +1,6 @@
 ---
 title: "B2B Organizations"
 slug: "vtex-b2b-organizations"
-excerpt: "vtex.b2b-organizations@1.17.0"
 hidden: false
 createdAt: "2021-10-26T13:12:33.521Z"
 updatedAt: "2022-12-08T18:41:35.402Z"

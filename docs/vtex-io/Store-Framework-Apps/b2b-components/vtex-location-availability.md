@@ -1,7 +1,6 @@
 ---
 title: "Location Availability"
 slug: "vtex-location-availability"
-excerpt: "vtex.location-availability@0.5.7"
 hidden: false
 createdAt: "2020-09-02T15:29:28.176Z"
 updatedAt: "2022-11-22T16:02:14.171Z"

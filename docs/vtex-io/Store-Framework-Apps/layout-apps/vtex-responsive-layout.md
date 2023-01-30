@@ -1,7 +1,6 @@
 ---
 title: "Responsive Layout"
 slug: "vtex-responsive-layout"
-excerpt: "vtex.responsive-layout@0.1.3"
 hidden: false
 createdAt: "2020-06-03T15:19:31.983Z"
 updatedAt: "2020-06-23T20:25:09.531Z"

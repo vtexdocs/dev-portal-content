@@ -1,7 +1,6 @@
 ---
 title: "Product Summary SKU Selector"
 slug: "vtex-product-summary-productsummaryskuselector"
-excerpt: "vtex.product-summary@2.80.1-perftest.1"
 hidden: false
 createdAt: "2020-06-09T14:48:52.836Z"
 updatedAt: "2022-07-02T00:50:32.998Z"

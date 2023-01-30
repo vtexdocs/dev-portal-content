@@ -1,7 +1,6 @@
 ---
 title: "B2B Orders History"
 slug: "vtex-b2b-orders-history"
-excerpt: "vtex.b2b-orders-history@0.0.7"
 hidden: false
 createdAt: "2022-03-29T04:30:06.314Z"
 updatedAt: "2022-08-16T16:18:50.580Z"

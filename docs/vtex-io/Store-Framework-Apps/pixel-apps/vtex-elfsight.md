@@ -1,7 +1,6 @@
 ---
 title: "Elfsight"
 slug: "vtex-elfsight"
-excerpt: "vtex.elfsight@1.0.0"
 hidden: false
 createdAt: "2020-07-16T16:18:03.236Z"
 updatedAt: "2020-07-16T16:18:03.236Z"

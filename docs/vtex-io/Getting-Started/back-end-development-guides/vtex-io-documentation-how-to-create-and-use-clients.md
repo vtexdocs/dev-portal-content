@@ -1,7 +1,6 @@
 ---
 title: "Managing Clients"
 slug: "vtex-io-documentation-how-to-create-and-use-clients"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-02-16T13:52:17.247Z"
 updatedAt: "2022-12-13T20:17:44.776Z"

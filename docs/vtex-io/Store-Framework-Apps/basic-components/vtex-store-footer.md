@@ -1,7 +1,6 @@
 ---
 title: "Footer"
 slug: "vtex-store-footer"
-excerpt: "vtex.store-footer@2.26.0"
 hidden: false
 createdAt: "2020-06-03T15:19:35.578Z"
 updatedAt: "2022-09-29T17:56:01.992Z"

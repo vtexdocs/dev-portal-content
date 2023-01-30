@@ -1,7 +1,6 @@
 ---
 title: "Quantity On Cart"
 slug: "vtexarg-quantity-on-cart"
-excerpt: "vtexarg.quantity-on-cart@2.2.8"
 hidden: false
 createdAt: "2022-04-25T13:13:25.281Z"
 updatedAt: "2022-04-25T13:13:25.281Z"

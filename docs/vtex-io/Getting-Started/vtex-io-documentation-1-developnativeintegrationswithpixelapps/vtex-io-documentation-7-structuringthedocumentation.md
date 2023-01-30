@@ -1,7 +1,6 @@
 ---
 title: "6. Structuring the documentation"
 slug: "vtex-io-documentation-7-structuringthedocumentation"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:22.848Z"
 updatedAt: "2022-12-13T20:17:44.605Z"

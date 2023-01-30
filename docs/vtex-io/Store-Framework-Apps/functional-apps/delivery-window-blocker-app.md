@@ -1,7 +1,6 @@
 ---
 title: "Delivery Window Blocker"
 slug: "delivery-window-blocker-app"
-excerpt: "vtex.delivery-window-blocker@2.2.1"
 hidden: false
 createdAt: "2022-07-13T18:41:39.206Z"
 updatedAt: "2022-07-13T18:41:39.206Z"

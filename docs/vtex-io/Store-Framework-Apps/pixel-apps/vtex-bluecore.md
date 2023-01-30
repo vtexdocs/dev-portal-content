@@ -1,7 +1,6 @@
 ---
 title: "Bluecore"
 slug: "vtex-bluecore"
-excerpt: "vtex.bluecore@1.1.2"
 hidden: false
 createdAt: "2020-06-30T15:33:52.181Z"
 updatedAt: "2020-06-30T15:33:52.181Z"

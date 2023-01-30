@@ -1,7 +1,6 @@
 ---
 title: "Availability Notify"
 slug: "vtex-availability-notify"
-excerpt: "vtex.availability-notify@1.8.8"
 hidden: false
 createdAt: "2021-05-28T17:11:48.473Z"
 updatedAt: "2022-10-18T20:59:10.400Z"

@@ -1,7 +1,6 @@
 ---
 title: "Badges"
 slug: "vtex-badges"
-excerpt: "vtex.badges@3.10.0"
 hidden: false
 createdAt: "2022-07-04T19:51:14.430Z"
 updatedAt: "2022-11-22T20:29:21.028Z"

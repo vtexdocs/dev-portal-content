@@ -1,7 +1,6 @@
 ---
 title: "Disabling automatic translation"
 slug: "vtex-io-documentation-disabling-automatic-translation"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-01-11T17:01:24.365Z"
 updatedAt: "2022-12-13T20:17:44.768Z"

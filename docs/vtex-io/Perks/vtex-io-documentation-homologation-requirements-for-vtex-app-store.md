@@ -1,7 +1,6 @@
 ---
 title: "App Store Guidelines"
 slug: "vtex-io-documentation-homologation-requirements-for-vtex-app-store"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-07-21T20:34:51.715Z"
 updatedAt: "2022-12-13T20:17:44.238Z"

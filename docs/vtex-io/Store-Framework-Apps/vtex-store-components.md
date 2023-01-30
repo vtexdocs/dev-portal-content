@@ -1,7 +1,6 @@
 ---
 title: "VTEX Store Components"
 slug: "vtex-store-components"
-excerpt: "vtex.store-components@3.163.4"
 hidden: true
 createdAt: "2020-06-03T15:19:50.043Z"
 updatedAt: "2022-11-22T18:39:22.812Z"

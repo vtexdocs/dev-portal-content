@@ -1,7 +1,6 @@
 ---
 title: "Using VTEX IO's CLI"
 slug: "vtex-io-documentation-vtex-io-cli-usage"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-04T22:02:14.084Z"
 updatedAt: "2022-12-13T20:17:44.738Z"

@@ -1,7 +1,6 @@
 ---
 title: "Migrating your storefront from Legacy CMS Portal to Store Framework"
 slug: "vtex-io-documentation-migrating-storefront-from-legacy-to-io"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-10-25T18:41:04.323Z"
 updatedAt: "2022-12-13T20:17:44.182Z"

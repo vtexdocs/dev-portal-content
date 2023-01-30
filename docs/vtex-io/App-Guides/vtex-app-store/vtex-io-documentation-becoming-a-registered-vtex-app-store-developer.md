@@ -1,7 +1,6 @@
 ---
 title: "Becoming a registered VTEX App Store developer"
 slug: "vtex-io-documentation-becoming-a-registered-vtex-app-store-developer"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-11-12T20:06:26.255Z"
 updatedAt: "2022-12-13T20:17:44.104Z"

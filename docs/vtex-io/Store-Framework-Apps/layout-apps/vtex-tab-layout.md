@@ -1,7 +1,6 @@
 ---
 title: "Tab Layout"
 slug: "vtex-tab-layout"
-excerpt: "vtex.tab-layout@0.4.4"
 hidden: false
 createdAt: "2020-06-03T15:19:35.560Z"
 updatedAt: "2022-02-24T13:00:12.534Z"

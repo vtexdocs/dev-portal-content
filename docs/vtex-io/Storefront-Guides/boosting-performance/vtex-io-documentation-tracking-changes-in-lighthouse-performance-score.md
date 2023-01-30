@@ -1,7 +1,6 @@
 ---
 title: "Tracking changes in Lighthouse performance score"
 slug: "vtex-io-documentation-tracking-changes-in-lighthouse-performance-score"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-07T18:18:24.559Z"
 updatedAt: "2022-12-13T20:17:44.828Z"

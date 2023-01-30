@@ -1,7 +1,6 @@
 ---
 title: "Improving filter navigator experience"
 slug: "vtex-io-documentation-improving-filter-navigator-experience"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-08T19:44:50.866Z"
 updatedAt: "2022-12-13T20:17:44.152Z"

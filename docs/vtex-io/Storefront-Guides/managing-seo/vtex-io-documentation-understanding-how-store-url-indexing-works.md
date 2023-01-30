@@ -1,7 +1,6 @@
 ---
 title: "Understanding how store URL indexing works"
 slug: "vtex-io-documentation-understanding-how-store-url-indexing-works"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: true
 createdAt: "2020-06-03T16:02:44.299Z"
 updatedAt: "2022-12-13T20:17:44.212Z"

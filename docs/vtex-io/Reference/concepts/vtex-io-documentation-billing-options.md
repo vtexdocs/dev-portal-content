@@ -1,7 +1,6 @@
 ---
 title: "Billing Options"
 slug: "vtex-io-documentation-billing-options"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-14T16:55:05.983Z"
 updatedAt: "2022-12-13T20:17:44.507Z"

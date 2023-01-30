@@ -1,7 +1,6 @@
 ---
 title: "Sidecar pixel app"
 slug: "vtex-io-release-notes-sidecar-pixel-app"
-excerpt: "vtex.io-release-notes@0.28.2"
 hidden: false
 createdAt: "2020-06-18T16:55:23.187Z"
 updatedAt: "2021-02-01T18:47:46.198Z"

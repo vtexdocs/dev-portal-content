@@ -1,7 +1,6 @@
 ---
 title: "Search Result"
 slug: "vtex-search-result"
-excerpt: "vtex.search-result@3.118.20"
 hidden: false
 createdAt: "2020-06-03T15:19:51.303Z"
 updatedAt: "2022-10-25T14:29:48.794Z"

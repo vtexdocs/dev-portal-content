@@ -1,7 +1,6 @@
 ---
 title: "Slider Layout"
 slug: "vtex-slider-layout"
-excerpt: "vtex.slider-layout@0.23.0"
 hidden: false
 createdAt: "2020-06-03T15:19:47.985Z"
 updatedAt: "2022-09-14T12:37:24.494Z"

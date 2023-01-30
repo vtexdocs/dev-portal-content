@@ -1,7 +1,6 @@
 ---
 title: "A/B testing Legacy and IO store versions"
 slug: "vtex-io-documentation-performing-ab-testing-between-legacy-and-io"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-04-04T18:23:34.122Z"
 updatedAt: "2022-12-13T20:17:44.777Z"

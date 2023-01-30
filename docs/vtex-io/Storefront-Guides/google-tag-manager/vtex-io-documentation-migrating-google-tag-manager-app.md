@@ -1,7 +1,6 @@
 ---
 title: "Migrating Google Tag Manager app from major 2.x to major 3.x"
 slug: "vtex-io-documentation-migrating-google-tag-manager-app"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-27T17:53:23.675Z"
 updatedAt: "2022-12-13T20:17:44.057Z"

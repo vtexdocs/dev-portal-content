@@ -1,7 +1,6 @@
 ---
 title: "Similar Products Variants"
 slug: "vtex-similar-products-variants"
-excerpt: "vtex.similar-products-variants@0.1.0"
 hidden: false
 createdAt: "2022-01-03T19:40:43.357Z"
 updatedAt: "2022-01-03T20:02:34.361Z"

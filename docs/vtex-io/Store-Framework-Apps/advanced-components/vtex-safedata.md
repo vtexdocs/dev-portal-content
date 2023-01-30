@@ -1,7 +1,6 @@
 ---
 title: "Querying personal MasterData Information with SafeData"
 slug: "vtex-safedata"
-excerpt: "vtex.safedata@1.0.1"
 hidden: false
 createdAt: "2021-06-01T18:05:47.887Z"
 updatedAt: "2022-09-15T20:59:44.867Z"

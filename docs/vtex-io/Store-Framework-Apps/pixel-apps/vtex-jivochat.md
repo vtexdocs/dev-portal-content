@@ -1,7 +1,6 @@
 ---
 title: "JivoChat"
 slug: "vtex-jivochat"
-excerpt: "vtex.jivochat@1.0.4"
 hidden: false
 createdAt: "2020-06-03T15:19:46.456Z"
 updatedAt: "2020-09-23T15:45:38.828Z"

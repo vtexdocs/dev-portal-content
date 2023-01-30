@@ -1,7 +1,6 @@
 ---
 title: "Contributing with new CSS Handles"
 slug: "vtex-io-documentation-contributing-with-new-css-handles"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.292Z"
 updatedAt: "2022-12-13T20:17:44.236Z"

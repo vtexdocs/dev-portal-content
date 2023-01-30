@@ -1,7 +1,6 @@
 ---
 title: "Linking URLs in banners using Site Editor"
 slug: "vtex-io-documentation-linking-urls-in-banners-using-site-editor"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: true
 createdAt: "2020-06-03T16:02:44.488Z"
 updatedAt: "2022-12-13T20:17:44.655Z"

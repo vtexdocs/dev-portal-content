@@ -1,7 +1,6 @@
 ---
 title: "Managing plugins"
 slug: "vtex-io-documentation-vtex-io-cli-plugins"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-20T14:59:19.813Z"
 updatedAt: "2022-12-13T20:17:44.761Z"

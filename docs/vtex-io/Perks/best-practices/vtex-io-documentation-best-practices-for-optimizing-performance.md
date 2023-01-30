@@ -1,7 +1,6 @@
 ---
 title: "Optimizing performance"
 slug: "vtex-io-documentation-best-practices-for-optimizing-performance"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-11T12:55:53.602Z"
 updatedAt: "2022-12-13T20:17:44.632Z"

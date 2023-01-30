@@ -1,7 +1,6 @@
 ---
 title: "Challenge Trade Policy Condition"
 slug: "vtex-challenge-tp-condition"
-excerpt: "vtex.challenge-tp-condition@0.6.0"
 hidden: false
 createdAt: "2020-06-03T15:19:30.796Z"
 updatedAt: "2021-04-29T13:29:19.890Z"

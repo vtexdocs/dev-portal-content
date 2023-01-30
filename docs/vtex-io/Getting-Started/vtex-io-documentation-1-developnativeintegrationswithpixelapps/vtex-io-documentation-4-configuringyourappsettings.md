@@ -1,7 +1,6 @@
 ---
 title: "3. Configuring your app settings"
 slug: "vtex-io-documentation-4-configuringyourappsettings"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:23.222Z"
 updatedAt: "2022-12-13T20:17:44.408Z"

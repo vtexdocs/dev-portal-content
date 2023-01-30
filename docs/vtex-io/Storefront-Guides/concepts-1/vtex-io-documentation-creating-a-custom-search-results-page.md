@@ -1,7 +1,6 @@
 ---
 title: "Creating a custom search results page"
 slug: "vtex-io-documentation-creating-a-custom-search-results-page"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-08-11T07:03:17.934Z"
 updatedAt: "2022-12-13T20:17:44.158Z"

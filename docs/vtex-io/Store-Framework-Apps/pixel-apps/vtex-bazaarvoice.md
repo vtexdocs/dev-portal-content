@@ -1,7 +1,6 @@
 ---
 title: "Bazaarvoice"
 slug: "vtex-bazaarvoice"
-excerpt: "vtex.bazaarvoice@2.2.6"
 hidden: false
 createdAt: "2020-06-03T15:19:16.075Z"
 updatedAt: "2022-08-01T16:08:12.306Z"

@@ -1,7 +1,6 @@
 ---
 title: "Safely enabling performance settings"
 slug: "vtex-io-documentation-safely-enabling-performance-settings"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-11T12:55:23.952Z"
 updatedAt: "2022-12-13T20:17:44.058Z"

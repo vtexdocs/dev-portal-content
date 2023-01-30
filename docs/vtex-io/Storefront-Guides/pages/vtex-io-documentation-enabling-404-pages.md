@@ -1,7 +1,6 @@
 ---
 title: "Enabling 404 pages"
 slug: "vtex-io-documentation-enabling-404-pages"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.190Z"
 updatedAt: "2022-12-13T20:17:44.467Z"

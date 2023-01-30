@@ -1,7 +1,6 @@
 ---
 title: "Alexa Certify"
 slug: "vtex-alexa-certify-code"
-excerpt: "vtex.alexa-certify-code@1.0.0"
 hidden: false
 createdAt: "2020-06-03T15:19:35.012Z"
 updatedAt: "2020-06-03T15:19:35.012Z"

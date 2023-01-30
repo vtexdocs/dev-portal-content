@@ -1,7 +1,6 @@
 ---
 title: "TikTok for Business"
 slug: "vtex-tiktok-tbp"
-excerpt: "vtex.tiktok-tbp@1.0.3"
 hidden: true
 createdAt: "2022-04-14T23:18:52.504Z"
 updatedAt: "2022-04-14T23:33:54.306Z"

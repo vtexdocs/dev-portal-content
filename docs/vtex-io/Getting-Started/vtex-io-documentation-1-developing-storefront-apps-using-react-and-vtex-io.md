@@ -1,7 +1,6 @@
 ---
 title: "Storefront apps"
 slug: "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.339Z"
 updatedAt: "2022-12-13T20:17:45.041Z"

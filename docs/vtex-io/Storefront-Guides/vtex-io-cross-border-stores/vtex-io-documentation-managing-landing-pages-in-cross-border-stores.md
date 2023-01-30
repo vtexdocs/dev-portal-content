@@ -1,7 +1,6 @@
 ---
 title: "Managing landing pages in cross-border stores"
 slug: "vtex-io-documentation-managing-landing-pages-in-cross-border-stores"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-05T13:01:54.912Z"
 updatedAt: "2022-12-13T20:17:44.059Z"

@@ -1,7 +1,6 @@
 ---
 title: "Go Back To List"
 slug: "vtex-list-gobacktolist"
-excerpt: "vtex.list@3.6.2"
 hidden: false
 createdAt: "2022-09-16T00:32:17.827Z"
 updatedAt: "2022-12-01T16:44:24.218Z"

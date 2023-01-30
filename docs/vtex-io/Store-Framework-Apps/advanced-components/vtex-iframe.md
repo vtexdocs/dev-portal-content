@@ -1,7 +1,6 @@
 ---
 title: "Iframe"
 slug: "vtex-iframe"
-excerpt: "vtex.iframe@0.5.0"
 hidden: false
 createdAt: "2020-06-03T15:19:18.838Z"
 updatedAt: "2022-03-10T18:31:22.068Z"

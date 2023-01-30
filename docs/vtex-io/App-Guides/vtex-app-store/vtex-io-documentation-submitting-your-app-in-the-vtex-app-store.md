@@ -1,7 +1,6 @@
 ---
 title: "Submitting your app to the VTEX App Store"
 slug: "vtex-io-documentation-submitting-your-app-in-the-vtex-app-store"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-11T19:35:00.561Z"
 updatedAt: "2022-12-13T20:17:44.608Z"

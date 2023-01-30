@@ -1,7 +1,6 @@
 ---
 title: "Cookiebot"
 slug: "vtex-cookiebot"
-excerpt: "vtex.cookiebot@2.0.7"
 hidden: false
 createdAt: "2020-06-03T15:19:30.787Z"
 updatedAt: "2021-09-28T13:22:41.852Z"

@@ -1,7 +1,6 @@
 ---
 title: "Installing Google Tag Manager"
 slug: "vtex-io-documentation-installing-google-tag-manager"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-02-01T13:34:01.638Z"
 updatedAt: "2022-12-13T20:17:44.697Z"

@@ -1,7 +1,6 @@
 ---
 title: "5. Defining styles"
 slug: "vtex-io-documentation-5-definingstyles"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-08-11T07:03:18.383Z"
 updatedAt: "2022-12-13T20:17:44.175Z"

@@ -1,7 +1,6 @@
 ---
 title: "Overwriting the Messages app"
 slug: "vtex-io-documentation-overwriting-the-messages-app"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-01T19:49:09.322Z"
 updatedAt: "2022-12-13T20:17:44.427Z"

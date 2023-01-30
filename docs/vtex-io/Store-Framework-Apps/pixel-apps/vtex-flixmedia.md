@@ -1,7 +1,6 @@
 ---
 title: "Flixmedia"
 slug: "vtex-flixmedia"
-excerpt: "vtex.flixmedia@0.1.9"
 hidden: false
 createdAt: "2020-06-03T15:19:51.305Z"
 updatedAt: "2021-10-13T18:37:48.020Z"

@@ -22,7 +22,7 @@ When an order is closed in inStore, the ID of the user logged into the applicati
 
 ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/how-to-identify-the-store-and-sales-associate-in-an-instore-order-0.png)
 
-When the order details are retrieved by [Orders API](https://developers.vtex.com/vtex-developer-docs/reference/orders), the user name is available in the `callCenterOperatorData.userName` field. You can also access the email address of this user in `callCenterOperatorData.email`.
+When the order details are retrieved by [Orders API](https://developers.vtex.com/docs/api-reference/orders-api#overview), the user name is available in the `callCenterOperatorData.userName` field. You can also access the email address of this user in `callCenterOperatorData.email`.
 
 ```json
 "callCenterOperatorData": {

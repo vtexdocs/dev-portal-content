@@ -1,7 +1,6 @@
 ---
 title: "Wrappers"
 slug: "vtex-gift-list-wrappers"
-excerpt: "vtex.list@3.1.0"
 hidden: false
 createdAt: "2022-09-20T22:32:12.493Z"
 updatedAt: "2022-09-20T22:32:12.493Z"

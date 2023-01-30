@@ -1,7 +1,6 @@
 ---
 title: "B2B Checkout Settings"
 slug: "vtex-b2b-checkout-settings"
-excerpt: "vtex.b2b-checkout-settings@1.4.3"
 hidden: false
 createdAt: "2021-11-10T15:03:55.029Z"
 updatedAt: "2022-09-15T21:01:11.033Z"

@@ -1,7 +1,6 @@
 ---
 title: "Animation"
 slug: "vtex-store-components-animation"
-excerpt: "vtex.store-components@3.132.2"
 hidden: false
 createdAt: "2020-06-03T16:04:30.416Z"
 updatedAt: "2021-10-25T14:24:44.297Z"

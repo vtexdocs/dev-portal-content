@@ -1,7 +1,6 @@
 ---
 title: "Checkout UI Custom"
 slug: "vtex-checkout-ui-custom-v0"
-excerpt: "vtex.checkout-ui-custom@0.8.28"
 hidden: false
 createdAt: "2021-09-22T14:09:53.267Z"
 updatedAt: "2022-11-18T19:53:13.110Z"

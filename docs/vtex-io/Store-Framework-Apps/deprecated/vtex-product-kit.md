@@ -1,7 +1,6 @@
 ---
 title: "VTEX Product Kit"
 slug: "vtex-product-kit"
-excerpt: "vtex.product-kit@1.10.2"
 hidden: false
 createdAt: "2020-06-03T15:19:11.071Z"
 updatedAt: "2021-03-10T19:35:11.404Z"

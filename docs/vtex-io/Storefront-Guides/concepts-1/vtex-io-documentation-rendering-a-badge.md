@@ -1,7 +1,6 @@
 ---
 title: "Rendering a badge on top of a product"
 slug: "vtex-io-documentation-rendering-a-badge"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-12-29T19:51:43.371Z"
 updatedAt: "2022-12-13T20:17:44.260Z"

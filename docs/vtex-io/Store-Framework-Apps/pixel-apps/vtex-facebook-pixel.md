@@ -1,7 +1,6 @@
 ---
 title: "Facebook pixel"
 slug: "vtex-facebook-pixel"
-excerpt: "vtex.facebook-pixel@2.2.2"
 hidden: false
 createdAt: "2020-06-03T15:19:31.529Z"
 updatedAt: "2021-10-28T20:06:32.118Z"

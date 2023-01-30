@@ -1,7 +1,6 @@
 ---
 title: "Creating robots files for cross-border stores"
 slug: "vtex-io-documentation-creating-robots-files-for-cross-border-stores"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-15T12:24:38.963Z"
 updatedAt: "2022-12-13T20:17:44.124Z"

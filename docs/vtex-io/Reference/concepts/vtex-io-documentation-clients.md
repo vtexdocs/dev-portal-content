@@ -1,7 +1,6 @@
 ---
 title: "Clients"
 slug: "vtex-io-documentation-clients"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-02-16T13:52:17.234Z"
 updatedAt: "2022-12-13T20:17:43.979Z"

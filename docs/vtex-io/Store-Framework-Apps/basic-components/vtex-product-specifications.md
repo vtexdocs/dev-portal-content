@@ -1,7 +1,6 @@
 ---
 title: "Product Specifications"
 slug: "vtex-product-specifications"
-excerpt: "vtex.product-specifications@1.1.1"
 hidden: false
 createdAt: "2020-08-28T17:56:14.433Z"
 updatedAt: "2021-08-27T00:05:10.919Z"

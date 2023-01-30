@@ -1,7 +1,6 @@
 ---
 title: "Discount Badge"
 slug: "vtex-store-components-discountbadge"
-excerpt: "vtex.store-components@3.132.2"
 hidden: false
 createdAt: "2020-06-03T16:04:30.348Z"
 updatedAt: "2021-10-25T14:49:23.936Z"

@@ -1,7 +1,6 @@
 ---
 title: "Cookie Script"
 slug: "vtex-cookie-script"
-excerpt: "vtex.cookie-script@0.1.9"
 hidden: false
 createdAt: "2020-07-03T17:34:56.652Z"
 updatedAt: "2022-08-11T10:02:19.333Z"

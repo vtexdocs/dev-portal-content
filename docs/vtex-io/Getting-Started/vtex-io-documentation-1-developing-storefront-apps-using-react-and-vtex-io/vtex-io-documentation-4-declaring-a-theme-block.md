@@ -1,7 +1,6 @@
 ---
 title: "3. Declaring a theme block"
 slug: "vtex-io-documentation-4-declaring-a-theme-block"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.073Z"
 updatedAt: "2022-12-13T20:17:44.349Z"

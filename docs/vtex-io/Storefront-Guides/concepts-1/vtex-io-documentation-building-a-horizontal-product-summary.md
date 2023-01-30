@@ -1,7 +1,6 @@
 ---
 title: "Building a horizontal Product Summary"
 slug: "vtex-io-documentation-building-a-horizontal-product-summary"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-12-15T16:28:08.220Z"
 updatedAt: "2022-12-13T20:17:44.651Z"

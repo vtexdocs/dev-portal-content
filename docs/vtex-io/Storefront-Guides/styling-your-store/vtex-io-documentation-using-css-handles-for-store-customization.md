@@ -1,7 +1,6 @@
 ---
 title: "Using CSS Handles for store customization"
 slug: "vtex-io-documentation-using-css-handles-for-store-customization"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:45.024Z"
 updatedAt: "2022-12-13T20:17:44.398Z"

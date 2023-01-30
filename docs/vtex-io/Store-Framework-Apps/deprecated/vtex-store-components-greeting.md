@@ -1,7 +1,6 @@
 ---
 title: "Greeting"
 slug: "vtex-store-components-greeting"
-excerpt: "vtex.store-components@3.132.2"
 hidden: false
 createdAt: "2020-06-03T16:04:30.408Z"
 updatedAt: "2021-10-25T15:16:30.248Z"

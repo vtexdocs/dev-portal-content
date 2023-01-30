@@ -1,7 +1,6 @@
 ---
 title: "Routes"
 slug: "vtex-io-documentation-routes"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-07-16T19:36:59.239Z"
 updatedAt: "2022-12-13T20:17:44.554Z"

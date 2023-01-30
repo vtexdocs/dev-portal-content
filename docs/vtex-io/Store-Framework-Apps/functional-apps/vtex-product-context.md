@@ -1,7 +1,6 @@
 ---
 title: "Product Context"
 slug: "vtex-product-context"
-excerpt: "vtex.product-context@0.11.0-hkignore.0"
 hidden: false
 createdAt: "2020-06-03T15:19:15.716Z"
 updatedAt: "2021-08-18T22:07:13.639Z"

@@ -9,7 +9,7 @@ The information contained in ecommerce invoices may vary according to business l
 
 VTEX stores this data during checkout and makes it available to sellers integrated with different types of marketplaces.
 
-It is possible to see who the marketplace is by checking the order object with the [Get order API request](https://developers.vtex.com/vtex-developer-docs/reference/orders#getorder), in the `affiliateId` field, like in the example below.
+It is possible to see who the marketplace is by checking the order object with the [Get order API request](https://developers.vtex.com/docs/api-reference/orders-api#overview#getorder), in the `affiliateId` field, like in the example below.
 
 ```json
 {

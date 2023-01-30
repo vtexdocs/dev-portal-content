@@ -1,7 +1,6 @@
 ---
 title: "Product Specification Badges"
 slug: "vtex-product-summary-productsummaryspecificationbadges"
-excerpt: "vtex.product-summary@2.80.1-perftest.1"
 hidden: false
 createdAt: "2020-06-09T14:48:53.569Z"
 updatedAt: "2022-07-02T00:50:32.880Z"

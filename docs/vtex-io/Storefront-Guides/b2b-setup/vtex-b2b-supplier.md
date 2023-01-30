@@ -1,7 +1,6 @@
 ---
 title: "B2B Supplier"
 slug: "vtex-b2b-supplier"
-excerpt: "vtex.b2b-supplier@2.2.0"
 hidden: true
 createdAt: "2021-10-06T16:52:02.214Z"
 updatedAt: "2022-04-26T20:10:07.224Z"

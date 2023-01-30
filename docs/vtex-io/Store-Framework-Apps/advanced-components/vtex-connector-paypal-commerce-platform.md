@@ -1,7 +1,6 @@
 ---
 title: "PayPal Checkout with Smart Payment Buttons"
 slug: "vtex-connector-paypal-commerce-platform"
-excerpt: "vtex.connector-paypal-commerce-platform@0.10.3"
 hidden: false
 createdAt: "2022-07-05T14:29:52.628Z"
 updatedAt: "2022-12-15T14:22:59.351Z"

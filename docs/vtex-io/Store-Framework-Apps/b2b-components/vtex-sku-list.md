@@ -1,7 +1,6 @@
 ---
 title: "SKU List"
 slug: "vtex-sku-list"
-excerpt: "vtex.sku-list@1.3.0"
 hidden: false
 createdAt: "2020-06-03T15:19:30.003Z"
 updatedAt: "2022-06-09T16:53:53.438Z"

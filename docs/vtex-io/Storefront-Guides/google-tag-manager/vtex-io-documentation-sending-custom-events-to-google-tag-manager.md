@@ -1,7 +1,6 @@
 ---
 title: "Sending custom events to Google Tag Manager"
 slug: "vtex-io-documentation-sending-custom-events-to-google-tag-manager"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-06-09T15:48:58.064Z"
 updatedAt: "2022-12-13T20:17:43.891Z"

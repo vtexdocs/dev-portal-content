@@ -1,7 +1,6 @@
 ---
 title: "Video"
 slug: "vtex-store-video"
-excerpt: "vtex.store-video@1.4.3"
 hidden: false
 createdAt: "2020-10-05T19:26:27.897Z"
 updatedAt: "2021-12-08T18:22:55.061Z"

@@ -1,7 +1,6 @@
 ---
 title: "Setting up Google Analytics search tracking"
 slug: "vtex-io-documentation-setting-up-google-analytics-search-tracking"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: true
 createdAt: "2020-06-03T16:02:44.339Z"
 updatedAt: "2022-12-13T20:17:44.299Z"

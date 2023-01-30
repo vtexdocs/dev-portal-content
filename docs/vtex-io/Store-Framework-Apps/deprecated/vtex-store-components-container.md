@@ -1,7 +1,6 @@
 ---
 title: "Container"
 slug: "vtex-store-components-container"
-excerpt: "vtex.store-components@3.132.1"
 hidden: false
 createdAt: "2020-06-03T16:04:30.345Z"
 updatedAt: "2021-10-25T14:42:59.544Z"

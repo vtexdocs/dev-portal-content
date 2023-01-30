@@ -1,7 +1,6 @@
 ---
 title: "Store Form"
 slug: "vtex-store-form"
-excerpt: "vtex.store-form@0.8.0"
 hidden: false
 createdAt: "2020-06-03T15:19:10.904Z"
 updatedAt: "2022-07-22T12:00:24.795Z"

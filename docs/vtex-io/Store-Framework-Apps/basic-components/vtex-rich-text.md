@@ -1,7 +1,6 @@
 ---
 title: "Rich Text"
 slug: "vtex-rich-text"
-excerpt: "vtex.rich-text@0.15.1"
 hidden: false
 createdAt: "2020-06-03T15:19:30.149Z"
 updatedAt: "2022-02-24T13:01:33.578Z"

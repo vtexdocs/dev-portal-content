@@ -1,7 +1,6 @@
 ---
 title: "2. Configuring your account"
 slug: "vtex-io-documentation-2-prerequesites"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-08-11T07:03:18.428Z"
 updatedAt: "2022-12-13T20:17:46.410Z"

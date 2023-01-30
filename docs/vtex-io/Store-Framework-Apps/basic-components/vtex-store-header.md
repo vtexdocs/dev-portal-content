@@ -1,7 +1,6 @@
 ---
 title: "Header"
 slug: "vtex-store-header"
-excerpt: "vtex.store-header@2.28.0"
 hidden: false
 createdAt: "2020-06-03T15:19:21.967Z"
 updatedAt: "2022-03-08T16:15:36.572Z"
