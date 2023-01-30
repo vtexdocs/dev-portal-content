@@ -42,14 +42,30 @@ We're so glad you're here! Thanks for being interested.
 
 1. Open a branch in the [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository.
 2. Add a new file in the [desired folder](#in-this-repository), following our [template](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guide_template.md).
-3. Add your content in markdown.
-4. Add images in the chosen guide’s folder, if you wish.
-5. To determine the left navigation's order, follow [these](#what-determines-the-left-navigations-order-and-organization) instructions.
-6. Submit your PR for review.
+3. Complete the [frontmatter](#what-information-goes-in-the-frontmatter).
+   > The `excerpt` field is mandatory for release notes.
+4. Add your content in markdown.
+5. Add images in the chosen guide’s folder, if you wish.
+6. To determine the left navigation's order, follow [these](#what-determines-the-left-navigations-order-and-organization) instructions.
+7. Submit your PR for review.
 
 *The `/developer-portal-content` repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal, our Tech Writing team leaders must run the portal's build.*
 
 >⚠️ Note that we have a limitation of PRs by hour, so we have to accumulate the day's PRs to be all approved and merged by our Tech Writing team leaders. This means that if you want a content to be published, submit your PR for review with at least 2 days in advance from the desired publication date!
+
+### What information goes in the frontmatter?
+
+The frontmatter is the table with metadata about the article you're adding. It contains the following fields:
+
+- **title:** article's title, should match the slug. 
+- **slug:** slug to the article's link, should match the title.
+- **excerpt:** brief description of release notes and guides, like a synopsis or TLDR. 
+  - *Release notes:* it is rendered as a synopsis of the release note, that is readable when the user clicks on the ▶️ collapsible button next to the release's title, in our [changelog UI](https://developers.vtex.com/updates/release-notes). This field is mandatory for release notes! Character limit: 400. 
+  - *Guides*: it is rendered as the greyed-out sentence at the bottom of the title, with a brief TLDR for that article. Character limit: 120.
+- **hidden:** boolean that makes the article not discoverable by search engines and our internal search. Know more in [How can I hide articles from search engines](#how-can-i-hide-articles-from-search-engines)
+- **createdAt:** creation date, automatically filled in.
+- **updatedAt:** update date, automatically filled in.
+- **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled in when there's a recommended reading sequence for the articles you are managing. It should be filled with the slug of the chosen article. Example `seeAlso: - "/docs/guides/vtex-io-documentation-2-prerequesites"`	
 
 ### How can I make sure my content will be visible and rendered correctly?
 
