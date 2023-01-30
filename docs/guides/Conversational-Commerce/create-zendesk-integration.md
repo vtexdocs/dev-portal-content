@@ -26,7 +26,7 @@ After gathering this information, follow the steps below:
 
 3. Once you created the webhook, you must create two triggers to activate the webhook. To create a trigger check this [documentation](https://support.zendesk.com/hc/en-us/articles/4408886797466). Create the first trigger with the following information:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Conversational%20Commerce/create-zendesk-integration-0_29.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/create-zendesk-integration-0.png)
 
 - **Trigger name:** VTEX Chatbot - Incoming Live Agent Comment
 - **Category:** `Notifications`
@@ -55,7 +55,7 @@ After gathering this information, follow the steps below:
 
 6. [Create another trigger](https://support.zendesk.com/hc/en-us/articles/4408886797466) that will be activated when a support agent resolves a ticket. Fill the trigger form with the following information:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Conversational%20Commerce/create-zendesk-integration-1_58.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/create-zendesk-integration-1.png)
 
 - **Conditions:**
   - Meet ALL of the following conditions

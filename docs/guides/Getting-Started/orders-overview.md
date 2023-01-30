@@ -32,25 +32,25 @@ The order flow describes the status, possibilities, and actions throughout the l
 
 The order flow visible to the store responsible for the sale only.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/orders-overview-0_37.jpg)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-0.jpg)
 
 ### Seller flow
 
 The order flow visible to the store responsible for handling the order.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/orders-overview-1_43.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-1.png)
 
 ### Complete flow
 
 The order flow visible to the store responsible for the order's sale and delivery. In this case, the store acts both as a seller and marketplace.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/orders-overview-2_49.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-2.png)
 
 ### Chain flow
 
 The order flow visible to the store that acts as an intermediary between the marketplace and the seller. This flow is similar to the marketplace flow. However, the payment is made only in the marketplace, not in the store that acts as a chain. This flow occurs in [Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) sales scenarios.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/orders-overview-3_55.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-3.png)
 
 ## Creating an order integration
 

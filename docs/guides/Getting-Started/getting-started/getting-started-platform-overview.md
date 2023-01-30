@@ -16,7 +16,7 @@ Below you'll find the main technical aspects of our platform and see how everyth
 ## Data orchestration
 
 Our platform orchestrates data through multiple channels and sources to remove barriers and enable more possibilities. <a href="https://vtex.com/us-en/digital-commerce/" target="_blank">E-commerce</a>, <a href="https://vtex.com/us-en/instore/" target="_blank">Brick-and-mortar</a>,  <a href="https://vtex.com/us-en/marketplace/" target="_blank">Marketplace</a>, <a href="https://vtex.com/us-en/b2b/" target="_blank">B2B</a>... You name it, we enable it. That is why we are a unified commerce platform for unified businesses.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/getting-started/getting-started-platform-overview-0_19.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-platform-overview-0.png)
 
 ## Flexible, extensible platform
 
@@ -24,19 +24,19 @@ Our core commerce capabilities, provided by over 70 shared microservices, are av
 
 If you need to extend our platform to address specific business needs, we have you covered with our serverless development platform [VTEX IO](https://developers.vtex.com/docs/getting-started-platform-overview#section-low-code-development-platform) and scalable data service [Master Data](https://developers.vtex.com/reference/master-data-api-v2-overview).
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/getting-started/getting-started-platform-overview-1_27.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-platform-overview-1.png)
 
 ## Autoscaling cloud
 
 In global commerce, scalability is a must for serious businesses: down-time means money left on the table. With cloud-based platform you can scale your business and forget the servers, leveraging our fully managed, auto-scalable infrastructure to keep orders coming even when customer demand reaches an all-time high. In Black Friday 2019, for instance, over [1 million orders](https://vtex.com/us-en/one-million-orders/) were placed in VTEX stores in a single day. All of them went through without a hiccup.
 
 No need to take our word for it - see what [Amazon](https://aws.amazon.com/retail/partner-solutions/?partner-solutions-cards.sort-by=item.additionalFields.partnerName&partner-solutions-cards.sort-order=asc&partner-solutions-cards.q=vtex&partner-solutions-cards.q_operator=AND#Find_AWS_Retail_Competency_Partners) has to say about us. The **AWS Retail Competency Partners** undergo rigorous validation by AWS to ensure alignment to AWS best practices for building secure, high-performing, resilient and efficient cloud infrastructure for industry applications – to give customers an increased confidence when making decisions.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/getting-started/getting-started-platform-overview-2_34.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-platform-overview-2.png)
 
 ## Multi-tenant architecture
 
 As a true multi-tenant cloud platform, all our clients take advantage of the same infrastructure and services, while keeping their data isolated and invisible to other tenants. No need to worry about data governance: we are fully [GDPR compliant](https://compliance.vtex.com/gdpr/).
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/getting-started/getting-started-platform-overview-3_39.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-platform-overview-3.png)
 
 ## VTEX IO
 
@@ -53,4 +53,4 @@ With VTEX IO, you can build:
 
 Check out our [App Store](https://apps.vtex.com) and documentation.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/getting-started/getting-started-platform-overview-4_56.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-platform-overview-4.png)

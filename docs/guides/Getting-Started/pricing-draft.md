@@ -17,7 +17,7 @@ The Prices module, also called Pricing, is a system responsible for the creation
 
 **Prices** represent your SKU sales value information. In VTEX, these prices are stored in **price tables.** In turn, these price tables can be applied to different **contexts**, like trade policies. These concepts are related as shown in the image below. Learn more about VTEX's pricing architecture in our [Pricing system architecture](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/7GptzvlPDVM11ojEjywIQx) article.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting%20Started/pricing-draft-0_20.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/pricing-draft-0.png)
 
 [block:html]
 {

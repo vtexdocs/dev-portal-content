@@ -30,7 +30,7 @@ To display document and phone typing options different from those used by the st
 }
 [/block]
 6. Click on `Save`.
-   ![Document and Phone field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/features/configure-the-global-checkout-0_32.png)
+   ![Document and Phone field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/configure-the-global-checkout-0.png)
 
 After saving this configuration, two new buttons will be shown in your Checkout:
 
