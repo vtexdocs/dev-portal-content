@@ -1,7 +1,6 @@
 ---
 title: "Zendesk Chat"
 slug: "vtex-zendesk-chat"
-excerpt: "vtex.zendesk-chat@1.4.2-hkignore.0"
 hidden: false
 createdAt: "2020-06-03T15:19:15.811Z"
 updatedAt: "2022-07-07T06:06:40.232Z"

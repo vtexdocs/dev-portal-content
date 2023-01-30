@@ -1,7 +1,6 @@
 ---
 title: "Abandoned Cart Service"
 slug: "vtex-abandoned-cart-service"
-excerpt: "vtex.abandoned-cart-service@3.1.4"
 hidden: false
 createdAt: "2022-08-05T15:20:02.558Z"
 updatedAt: "2022-08-10T21:32:18.857Z"

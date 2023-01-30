@@ -1,7 +1,6 @@
 ---
 title: "Curbside Pickup"
 slug: "vtex-curbside-pickup"
-excerpt: "vtex.curbside-pickup@0.3.9"
 hidden: false
 createdAt: "2020-07-07T13:45:04.134Z"
 updatedAt: "2022-10-04T02:07:18.225Z"

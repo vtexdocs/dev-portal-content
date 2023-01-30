@@ -1,7 +1,6 @@
 ---
 title: "Breadcrumb"
 slug: "vtex-breadcrumb"
-excerpt: "vtex.breadcrumb@1.9.5-hkignore.3.auc"
 hidden: false
 createdAt: "2020-06-03T15:19:30.725Z"
 updatedAt: "2022-09-14T13:27:01.333Z"

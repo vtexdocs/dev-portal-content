@@ -1,7 +1,6 @@
 ---
 title: "Hotjar"
 slug: "vtex-hotjar"
-excerpt: "vtex.hotjar@0.1.6"
 hidden: false
 createdAt: "2020-06-03T15:19:17.355Z"
 updatedAt: "2020-11-10T14:39:54.650Z"

@@ -1,7 +1,6 @@
 ---
 title: "Tawk.to"
 slug: "vtex-tawk-to"
-excerpt: "vtex.tawk-to@0.2.4"
 hidden: false
 createdAt: "2020-07-03T17:54:46.365Z"
 updatedAt: "2022-07-13T12:50:36.404Z"

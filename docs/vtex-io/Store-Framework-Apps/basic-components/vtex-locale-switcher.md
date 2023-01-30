@@ -1,7 +1,6 @@
 ---
 title: "Locale Switcher"
 slug: "vtex-locale-switcher"
-excerpt: "vtex.locale-switcher@0.5.6"
 hidden: false
 createdAt: "2020-06-03T15:19:32.977Z"
 updatedAt: "2021-07-16T16:19:13.912Z"

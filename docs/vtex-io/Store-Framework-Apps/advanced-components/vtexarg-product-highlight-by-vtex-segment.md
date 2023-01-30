@@ -1,7 +1,6 @@
 ---
 title: "Product Highlight by VTEX Segment"
 slug: "vtexarg-product-highlight-by-vtex-segment"
-excerpt: "vtexarg.product-highlight-by-vtex-segment@0.3.2"
 hidden: false
 createdAt: "2021-11-24T19:09:10.931Z"
 updatedAt: "2022-03-15T18:24:10.878Z"

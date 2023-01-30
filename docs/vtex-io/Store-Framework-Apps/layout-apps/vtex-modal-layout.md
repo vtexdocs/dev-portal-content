@@ -1,7 +1,6 @@
 ---
 title: "Modal Layout"
 slug: "vtex-modal-layout"
-excerpt: "vtex.modal-layout@0.13.1-hkignore.0"
 hidden: false
 createdAt: "2020-06-03T15:19:30.918Z"
 updatedAt: "2022-04-11T08:02:58.274Z"

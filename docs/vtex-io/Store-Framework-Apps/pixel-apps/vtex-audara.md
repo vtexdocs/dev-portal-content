@@ -1,7 +1,6 @@
 ---
 title: "Audara"
 slug: "vtex-audara"
-excerpt: "vtex.audara@1.0.3"
 hidden: false
 createdAt: "2020-06-03T15:19:31.413Z"
 updatedAt: "2020-06-03T15:19:31.413Z"

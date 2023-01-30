@@ -1,7 +1,6 @@
 ---
 title: "Zopim"
 slug: "vtex-zopim"
-excerpt: "vtex.zopim@1.2.3"
 hidden: false
 createdAt: "2020-06-03T15:19:18.784Z"
 updatedAt: "2020-06-03T15:19:18.784Z"

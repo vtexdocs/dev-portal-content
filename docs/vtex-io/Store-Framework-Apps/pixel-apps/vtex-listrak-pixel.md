@@ -1,7 +1,6 @@
 ---
 title: "Listrak"
 slug: "vtex-listrak-pixel"
-excerpt: "vtex.listrak-pixel@2.3.0"
 hidden: false
 createdAt: "2020-06-03T15:20:18.786Z"
 updatedAt: "2022-10-03T18:26:48.050Z"

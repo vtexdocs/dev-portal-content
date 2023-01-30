@@ -1,7 +1,6 @@
 ---
 title: "Disclosure Layout"
 slug: "vtex-disclosure-layout"
-excerpt: "vtex.disclosure-layout@1.0.3"
 hidden: false
 createdAt: "2020-08-28T17:52:57.565Z"
 updatedAt: "2020-09-15T20:55:00.326Z"

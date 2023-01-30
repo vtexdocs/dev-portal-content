@@ -1,7 +1,6 @@
 ---
 title: "List Items Order By"
 slug: "vtex-gift-list-listitemsorderby"
-excerpt: "vtex.list@3.4.0"
 hidden: false
 createdAt: "2022-09-29T00:01:36.992Z"
 updatedAt: "2022-09-29T00:01:36.992Z"

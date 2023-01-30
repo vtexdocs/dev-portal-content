@@ -1,7 +1,6 @@
 ---
 title: "VTEX Sticky Layout"
 slug: "vtex-sticky-layout"
-excerpt: "vtex.sticky-layout@0.3.5-hkignore.ibk0"
 hidden: false
 createdAt: "2020-06-03T15:19:18.052Z"
 updatedAt: "2022-05-02T08:51:37.588Z"

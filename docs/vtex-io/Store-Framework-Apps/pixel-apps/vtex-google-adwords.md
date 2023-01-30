@@ -1,7 +1,6 @@
 ---
 title: "Google Adwords"
 slug: "vtex-google-adwords"
-excerpt: "vtex.google-adwords@1.3.2"
 hidden: false
 createdAt: "2020-06-03T15:19:09.633Z"
 updatedAt: "2020-06-03T15:19:09.634Z"

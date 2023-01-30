@@ -1,7 +1,6 @@
 ---
 title: "Wordpress Integration"
 slug: "vtex-wordpress-integration"
-excerpt: "vtex.wordpress-integration@2.22.0"
 hidden: false
 createdAt: "2020-06-03T15:19:10.536Z"
 updatedAt: "2022-12-15T16:50:19.073Z"

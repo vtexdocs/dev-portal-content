@@ -1,7 +1,6 @@
 ---
 title: "Yotpo Reviews Integration"
 slug: "vtex-yotpo"
-excerpt: "vtex.yotpo@1.2.1"
 hidden: false
 createdAt: "2020-06-03T15:19:16.340Z"
 updatedAt: "2022-08-17T19:40:06.760Z"

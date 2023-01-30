@@ -1,7 +1,6 @@
 ---
 title: "VTEX Telemarketing"
 slug: "vtex-telemarketing"
-excerpt: "vtex.telemarketing@2.11.1"
 hidden: false
 createdAt: "2020-06-03T15:20:24.277Z"
 updatedAt: "2022-10-25T16:30:05.018Z"

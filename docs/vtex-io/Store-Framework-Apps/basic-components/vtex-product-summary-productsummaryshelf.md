@@ -1,7 +1,6 @@
 ---
 title: "Product Summary Shelf"
 slug: "vtex-product-summary-productsummaryshelf"
-excerpt: "vtex.product-summary@2.80.1-perftest.1"
 hidden: false
 createdAt: "2020-11-06T17:17:42.622Z"
 updatedAt: "2022-07-02T00:50:33.286Z"

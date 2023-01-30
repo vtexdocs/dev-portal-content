@@ -1,7 +1,6 @@
 ---
 title: "Google Customer Reviews"
 slug: "vtex-google-customer-reviews"
-excerpt: "vtex.google-customer-reviews@1.1.1"
 hidden: false
 createdAt: "2020-06-03T15:19:30.807Z"
 updatedAt: "2021-01-14T16:09:37.659Z"

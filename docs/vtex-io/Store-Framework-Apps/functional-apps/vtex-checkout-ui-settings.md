@@ -1,7 +1,6 @@
 ---
 title: "Checkout UI Settings"
 slug: "vtex-checkout-ui-settings"
-excerpt: "vtex.checkout-ui-settings@0.1.0"
 hidden: false
 createdAt: "2020-06-03T15:19:09.589Z"
 updatedAt: "2022-05-20T00:24:43.708Z"

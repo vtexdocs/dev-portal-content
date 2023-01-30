@@ -1,7 +1,6 @@
 ---
 title: "Stack Layout"
 slug: "vtex-stack-layout"
-excerpt: "vtex.stack-layout@0.1.0"
 hidden: false
 createdAt: "2020-06-03T15:19:16.096Z"
 updatedAt: "2020-06-23T20:27:17.252Z"

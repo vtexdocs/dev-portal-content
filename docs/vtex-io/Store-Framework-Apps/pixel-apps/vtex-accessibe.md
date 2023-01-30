@@ -1,7 +1,6 @@
 ---
 title: "accessiBe"
 slug: "vtex-accessibe"
-excerpt: "vtex.accessibe@1.0.9"
 hidden: false
 createdAt: "2020-06-03T15:19:11.693Z"
 updatedAt: "2022-08-02T18:39:22.041Z"

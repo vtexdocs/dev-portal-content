@@ -1,7 +1,6 @@
 ---
 title: "Product Price"
 slug: "vtex-product-price"
-excerpt: "vtex.product-price@1.29.0"
 hidden: false
 createdAt: "2020-06-03T15:19:16.935Z"
 updatedAt: "2022-06-22T16:04:48.125Z"

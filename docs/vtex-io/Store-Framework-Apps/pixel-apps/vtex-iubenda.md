@@ -1,7 +1,6 @@
 ---
 title: "Iubenda"
 slug: "vtex-iubenda"
-excerpt: "vtex.iubenda@0.3.2"
 hidden: false
 createdAt: "2020-06-03T15:19:48.350Z"
 updatedAt: "2020-11-10T14:41:34.438Z"

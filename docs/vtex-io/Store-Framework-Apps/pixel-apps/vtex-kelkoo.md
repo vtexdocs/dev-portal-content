@@ -1,7 +1,6 @@
 ---
 title: "Kelkoo app"
 slug: "vtex-kelkoo"
-excerpt: "vtex.kelkoo@1.0.0"
 hidden: false
 createdAt: "2020-09-30T16:55:25.857Z"
 updatedAt: "2020-09-30T16:55:25.857Z"

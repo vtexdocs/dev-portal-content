@@ -1,7 +1,6 @@
 ---
 title: "Blueknow app"
 slug: "vtex-blueknow"
-excerpt: "vtex.blueknow@1.0.0"
 hidden: false
 createdAt: "2020-10-27T18:04:29.041Z"
 updatedAt: "2020-10-27T18:04:29.041Z"

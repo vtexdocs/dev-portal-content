@@ -1,7 +1,6 @@
 ---
 title: "LogRocket"
 slug: "vtex-logrocket"
-excerpt: "vtex.logrocket@1.0.1"
 hidden: false
 createdAt: "2020-06-03T15:19:09.791Z"
 updatedAt: "2020-06-03T15:19:09.791Z"

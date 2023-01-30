@@ -1,7 +1,6 @@
 ---
 title: "Product Quantity"
 slug: "vtex-product-quantity"
-excerpt: "vtex.product-quantity@1.8.1"
 hidden: false
 createdAt: "2020-06-03T15:19:10.308Z"
 updatedAt: "2022-06-22T14:56:14.269Z"

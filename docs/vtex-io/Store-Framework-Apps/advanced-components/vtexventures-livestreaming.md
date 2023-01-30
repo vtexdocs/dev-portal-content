@@ -1,7 +1,6 @@
 ---
 title: "Live Shopping"
 slug: "vtexventures-livestreaming"
-excerpt: "vtexventures.livestreaming@3.4.8"
 hidden: false
 createdAt: "2021-05-13T18:20:06.128Z"
 updatedAt: "2022-10-13T22:39:05.115Z"

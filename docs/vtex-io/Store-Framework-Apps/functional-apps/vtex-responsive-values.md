@@ -1,7 +1,6 @@
 ---
 title: "Responsive Values"
 slug: "vtex-responsive-values"
-excerpt: "vtex.responsive-values@0.4.2"
 hidden: false
 createdAt: "2020-06-03T15:19:17.689Z"
 updatedAt: "2021-05-24T19:48:59.780Z"

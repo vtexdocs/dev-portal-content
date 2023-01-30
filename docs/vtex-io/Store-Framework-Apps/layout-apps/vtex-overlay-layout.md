@@ -1,7 +1,6 @@
 ---
 title: "Overlay Layout"
 slug: "vtex-overlay-layout"
-excerpt: "vtex.overlay-layout@0.1.3"
 hidden: false
 createdAt: "2020-06-03T15:19:10.720Z"
 updatedAt: "2020-10-06T13:51:03.943Z"

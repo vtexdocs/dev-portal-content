@@ -1,7 +1,6 @@
 ---
 title: "Login"
 slug: "vtex-login"
-excerpt: "vtex.login@2.56.0"
 hidden: false
 createdAt: "2020-06-03T15:19:20.242Z"
 updatedAt: "2022-12-08T14:42:50.254Z"

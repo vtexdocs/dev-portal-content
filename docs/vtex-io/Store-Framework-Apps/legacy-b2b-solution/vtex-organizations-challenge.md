@@ -1,7 +1,6 @@
 ---
 title: "Organizations Challenge"
 slug: "vtex-organizations-challenge"
-excerpt: "vtex.organizations-challenge@1.2.2"
 hidden: false
 createdAt: "2020-06-03T15:19:10.972Z"
 updatedAt: "2021-11-18T19:27:08.494Z"

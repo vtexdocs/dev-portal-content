@@ -1,7 +1,6 @@
 ---
 title: "Product Summary SKU Name"
 slug: "vtex-product-summary-productsummaryskuname"
-excerpt: "vtex.product-summary@2.80.1-perftest.1"
 hidden: false
 createdAt: "2020-09-24T16:36:08.010Z"
 updatedAt: "2022-07-02T00:50:32.861Z"

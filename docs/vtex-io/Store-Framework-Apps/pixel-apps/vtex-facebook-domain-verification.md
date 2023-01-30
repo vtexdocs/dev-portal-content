@@ -1,7 +1,6 @@
 ---
 title: "Facebook Domain Verification"
 slug: "vtex-facebook-domain-verification"
-excerpt: "vtex.facebook-domain-verification@1.0.1"
 hidden: false
 createdAt: "2020-09-21T15:03:40.709Z"
 updatedAt: "2020-09-21T15:03:40.709Z"

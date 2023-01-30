@@ -1,7 +1,6 @@
 ---
 title: "Trustpilot"
 slug: "vtex-trustpilot"
-excerpt: "vtex.trustpilot@2.2.0"
 hidden: false
 createdAt: "2020-06-03T15:19:16.745Z"
 updatedAt: "2022-09-23T18:04:06.851Z"

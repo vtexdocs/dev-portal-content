@@ -1,7 +1,6 @@
 ---
 title: "Product Summary Price"
 slug: "vtex-product-summary-productsummaryprice"
-excerpt: "vtex.product-summary@2.80.1-perftest.1"
 hidden: false
 createdAt: "2020-06-26T14:55:49.118Z"
 updatedAt: "2022-07-02T00:50:33.015Z"
