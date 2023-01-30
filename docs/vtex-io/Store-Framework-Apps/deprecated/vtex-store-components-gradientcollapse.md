@@ -9,7 +9,7 @@ updatedAt: "2022-01-04T23:11:39.554Z"
 
 >⚠️ **Warning**
 >
-> **The Gradient Collapse block has been deprecated in favor of the [Disclosure Layout app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-disclosure-layout).** Although support for this block is still granted, we strongly recommend you to update your store theme with the Disclosure Layout app.
+> **The Gradient Collapse block has been deprecated in favor of the [Disclosure Layout app](https://developers.vtex.com/docs/guides/vtex-disclosure-layout).** Although support for this block is still granted, we strongly recommend you to update your store theme with the Disclosure Layout app.
 
 `GradientCollapse` is a VTEX component that hides part of the children when it is bigger than the `collapseHeight` giving the user the _show more_ or _show less_ options. This Component can be imported and used by any VTEX app.
 

@@ -134,7 +134,7 @@ Also, keep in mind that the **Checkout** doesn't natively display the customized
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles | 
 | ---------- | 

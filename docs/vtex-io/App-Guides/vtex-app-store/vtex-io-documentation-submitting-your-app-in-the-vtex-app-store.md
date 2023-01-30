@@ -14,29 +14,29 @@ To share your solutions in the VTEX App Store, you must follow our homologation 
 
 ## Before you start
 
-Before submitting your app to the VTEX App Store, you must be a registered VTEX App Store developer. For more information, check [this guide.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer)
+Before submitting your app to the VTEX App Store, you must be a registered VTEX App Store developer. For more information, check [this guide.](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer)
 
 ## Step by step
 
 ### Step 1 - Checking out our business, design and engineering guidelines
 
-To submit and publish your app on VTEX App Store, you must follow our business, design and engineering guidelines. These guidelines guarantee the standard of quality, viability and usability of all apps made available to our tenants through the VTEX App Store, so it is important that you are aware of them before submitting your extension for the homologation process. You can check in [Business guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-vtex-app-store), [Design guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-design-guidelines), [Engineering guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-engineering-guidelines).
+To submit and publish your app on VTEX App Store, you must follow our business, design and engineering guidelines. These guidelines guarantee the standard of quality, viability and usability of all apps made available to our tenants through the VTEX App Store, so it is important that you are aware of them before submitting your extension for the homologation process. You can check in [Business guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-vtex-app-store), [Design guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines), [Engineering guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines).
 
 ### Step 2 - Sending the app data for validation
 
 Once you've configured the app assets, it is time to submit the app's data for evaluation by the app store development team. First of all, you'll need to meet the following prerequisites:
 
 - Have a [**GitHub**](https://github.com/) account (since your project evaluation during the homologation process is made through Pull Requests).
-- [Publish your app on the VTEX IO development platform](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-publishing-an-app/). Remember to publish the app in the VTEX account in which you are working and in a [workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace/) that can be tested by the team.
-- [Deploy your app on the VTEX IO development platform](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version).
+- [Publish your app on the VTEX IO development platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/). Remember to publish the app in the VTEX account in which you are working and in a [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/) that can be tested by the team.
+- [Deploy your app on the VTEX IO development platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version).
 
 With the first two prerequisites met, you're ready to send you app through to VTEX's homologation process:
 
-1. Using your CLI, [log into the VTEX account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/#command-reference) in which the app was published.
+1. Using your CLI, [log into the VTEX account](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/#command-reference) in which the app was published.
 2. Access the folder containing your app.
-3. Run `vtex plugins add submit` plugin in the [VTEX CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+3. Run `vtex plugins add submit` plugin in the [VTEX CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
-> ⚠️ The `vtex plugins add submit` plugin will only work if the VTEX IO CLI is updated to version 3.x that has a plugin-based architecture. Check out the [Updating VTEX IO'S CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-update) and [Managing plugins documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) for more information.
+> ⚠️ The `vtex plugins add submit` plugin will only work if the VTEX IO CLI is updated to version 3.x that has a plugin-based architecture. Check out the [Updating VTEX IO'S CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-update) and [Managing plugins documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) for more information.
 
 4. Then, run `vtex submit`. You can also specify which version your want to submit by running `vtex submit {vendor}.{name}@{version}`.
 
@@ -62,7 +62,7 @@ Therefore, the **3 main criteria** taken into account by the VTEX product team a
 - **UX**  - Whether the app offers a good user experience, following VTEX Styleguide rules.
 - **Security and performance**  - Whether the app's performance is safe and efficient.
 
-You can find more details on how these criteria will be assessed in our [Homologation requirements for the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store).
+You can find more details on how these criteria will be assessed in our [Homologation requirements for the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store).
 
 When an app fulfills the above-mentioned criteria, the PR will be approved and your new app version is ready to be released and made available in the VTEX app store.
 
@@ -70,7 +70,7 @@ Notice the following: once everything is approved, a product (which effectively 
 
 ## Related resources
 
-- [App monetization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-app-monetization)
-- [Marketing guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-marketing-assets)
-- [User experience guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-design-guidelines)
-- [Engineering guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-engineering-guidelines)
+- [App monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization)
+- [Marketing guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets)
+- [User experience guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines)
+- [Engineering guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines)

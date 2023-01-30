@@ -14,7 +14,7 @@ Intelligent Search is a [VTEX IO](https://vtex.com/us-en/store-framework/) alter
 
 ### Search
 
-The [VTEX Search app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search) is responsible for handling the new [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) solution in IO stores by providing new UI components that enhance the search experience, such as the autocomplete feature.
+The [VTEX Search app](https://developers.vtex.com/docs/guides/vtex-search) is responsible for handling the new [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) solution in IO stores by providing new UI components that enhance the search experience, such as the autocomplete feature.
 
 ![Search app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-0_21.gif)
 
@@ -26,33 +26,33 @@ The [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference
 
 ### Search Result
 
-[VTEX Search Result app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/vtex-developer-docs/reference/search-api-overview) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
+[VTEX Search Result app](https://developers.vtex.com/docs/guides/vtex-search-result) is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/vtex-developer-docs/reference/search-api-overview) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
 
 ![Search Result](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-1_33.png)
 
 ### Search Bar
 
-The [Search Bar component](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-searchbar) shows a search bar with autocomplete options and displays the matching products.
+The [Search Bar component](https://developers.vtex.com/docs/guides/vtex-store-components-searchbar) shows a search bar with autocomplete options and displays the matching products.
 
 ![Search Bar](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-2_39.png)
 
 ### Autocomplete
 
-The [Autocomplete](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-autocomplete) is an alternative for the default VTEX autocomplete. The functionality displays previous search results based on current and previous searches. These results are presented in four different lists, which can be together or separated, depending on the customer's interaction.
+The [Autocomplete](https://developers.vtex.com/docs/guides/vtex-search-autocomplete) is an alternative for the default VTEX autocomplete. The functionality displays previous search results based on current and previous searches. These results are presented in four different lists, which can be together or separated, depending on the customer's interaction.
 
 ![Autocomplete](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-3_45.png)
 
 ### Banners
 
-[Banners](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-banner) are the functionality responsible for displaying banners as promotional actions on the customer's search result page. This process is done by associating the words and filters selected when searching for these banners.
+[Banners](https://developers.vtex.com/docs/guides/vtex-search-banner) are the functionality responsible for displaying banners as promotional actions on the customer's search result page. This process is done by associating the words and filters selected when searching for these banners.
 
 ### Suggestions
 
-[Suggestions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-suggestions) is a component used to suggest search terms similar to the current query.
+[Suggestions](https://developers.vtex.com/docs/guides/vtex-search-suggestions) is a component used to suggest search terms similar to the current query.
 
 ### DidYouMean
 
-[DidYouMean](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-didyoumean) is a component used to suggest a possible misspelling correction to the current query.
+[DidYouMean](https://developers.vtex.com/docs/guides/vtex-search-didyoumean) is a component used to suggest a possible misspelling correction to the current query.
 
 ## Search Control
 
@@ -62,9 +62,9 @@ The [Search Control](https://developers.vtex.com/vtex-rest-api/docs/search-contr
 
 You can provide your customers with a more customized experience navigating the search result. You may want to present custom search results for each customer or even engage your users with specific products through an URL.
 
-- [Segmenting the search result](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-segmenting-the-search-result)
-- [Building a search results page with multiple layouts](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts)
-- [Creating a custom search results page](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-custom-search-results-page)
+- [Segmenting the search result](https://developers.vtex.com/docs/guides/vtex-io-documentation-segmenting-the-search-result)
+- [Building a search results page with multiple layouts](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts)
+- [Creating a custom search results page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-custom-search-results-page)
 
 ![Segmenting the search result](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-4_71.gif)
 
@@ -81,9 +81,9 @@ The [Search Protocol](https://developers.vtex.com/vtex-rest-api/docs/search-inte
 
 You can integrate your store's search to some Google features, such as the Google Chrome language processing and Google Analytics. These integrations can help retailers analyze user queries, measure the store's main searched terms, and create a more accessible environment for customers.
 
-- [Search Console](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-search-console)
-- [Setting up Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking)
-- [Speech to Text Search](https://developers.vtex.com/vtex-developer-docs/docs/vtexarg-speech-to-text)
+- [Search Console](https://developers.vtex.com/docs/guides/vtex-google-search-console)
+- [Setting up Google Analytics search tracking](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking)
+- [Speech to Text Search](https://developers.vtex.com/docs/guides/vtexarg-speech-to-text)
 
 ## Consulting search information using Legacy Search
 

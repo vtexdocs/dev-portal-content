@@ -54,7 +54,7 @@ The minimum information needed to define a provider includes:
     "0-1": "string",
     "3-0": "`oauthProvider`",
     "3-1": "string",
-    "3-2": "[Webstore login provider](https://developers.vtex.com/docs/login-integration-guide-webstore-oauth2) identifier in VTEX ID, used to identify users in loyalty programs",
+    "3-2": "[Webstore login provider](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2) identifier in VTEX ID, used to identify users in loyalty programs",
     "4-0": "`preAuthEnabled`",
     "4-1": "bool",
     "5-0": "`cancelEnabled`",

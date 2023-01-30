@@ -11,13 +11,13 @@ To handle this situation, follow the steps below to migrate template settings.
 
 ## Before you start
 
-1. Install the [VTEX IO CLI.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install)
+1. Install the [VTEX IO CLI.](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install)
 2. Install the GraphQL IDE by running the following command: `vtex install vtex.admin-graphql-ide@3.x`.
 
 ## Step by step
 
 1. Open the terminal and log in to your account.
-2. Change to the **production workspace** containing your latest changes and [publish](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your store theme app.
+2. Change to the **production workspace** containing your latest changes and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your store theme app.
 3. Create a new production workspace by running the following command:
 
   - _Replace the values between curly braces according to your scenario._
@@ -49,4 +49,4 @@ To handle this situation, follow the steps below to migrate template settings.
 
 8. Replace the values between curly braces according to your scenario and press the play button.
 9. Open the VTEX Admin using the workspace created in the previous steps and validate the CMS's content, routes, pages, and redirects.
-10. Once you validate your data, [promote your workspace to master](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-promoting-a-workspace-to-master/).
+10. Once you validate your data, [promote your workspace to master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/).

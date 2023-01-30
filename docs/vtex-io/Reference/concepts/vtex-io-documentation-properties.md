@@ -33,4 +33,4 @@ The list of properties a JSON accepts are separated by comma (`,`), and the valu
 There are two other types also used by the Store Framework blocks properties:
 
 - `enum` - A prop of the `enum` type has its value between quotation marks and predefined by the React component to which the correspondent block.
-- `block` - A prop of the type `block` has its value quotes, being it the name of a block and its app's version. This property will be responsible for rendering the block as its value. E.g.: `icon-cart` (from the [Store Icons](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-icons) app).
+- `block` - A prop of the type `block` has its value quotes, being it the name of a block and its app's version. This property will be responsible for rendering the block as its value. E.g.: `icon-cart` (from the [Store Icons](https://developers.vtex.com/docs/guides/vtex-store-icons) app).

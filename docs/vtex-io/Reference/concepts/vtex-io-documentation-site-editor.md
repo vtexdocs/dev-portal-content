@@ -6,7 +6,7 @@ createdAt: "2021-06-17T21:47:35.963Z"
 updatedAt: "2022-12-13T20:17:44.208Z"
 ---
 
-Site Editor works as a [CMS](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-cms) specially designed for [Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-store-framework) users.
+Site Editor works as a [CMS](https://developers.vtex.com/docs/guides/vtex-io-documentation-cms) specially designed for [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) users.
 
 ![site-editor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-site-editor-0.png)
 

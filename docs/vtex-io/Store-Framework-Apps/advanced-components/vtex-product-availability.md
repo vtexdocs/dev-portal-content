@@ -20,7 +20,7 @@ The Product Availability app displays text messages regarding the in-stock quant
  }
 ```
 
-2. Add the `product-availability` block to the desired theme block whose data is fetched from the [Product Context](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-context), such as the [Minicart](https://developers.vtex.com/vtex-developer-docs/docs/vtex-minicart). For example:
+2. Add the `product-availability` block to the desired theme block whose data is fetched from the [Product Context](https://developers.vtex.com/docs/guides/vtex-product-context), such as the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart). For example:
 
 ```json
 "product-availability": {
@@ -40,7 +40,7 @@ The Product Availability app displays text messages regarding the in-stock quant
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles |
 | ----------- | 

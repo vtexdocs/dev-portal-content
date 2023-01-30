@@ -10,7 +10,7 @@ This guide shows the steps to change the appearance of the Authentication tab in
 [block:callout]
 {
   "type": "warning",
-  "body": "This guide is for stores that do not use VTEX IO, making the customization through CMS. If your store is a VTEX IO store, check the [My Authentication Customization Guide using IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-my-authentication) article."
+  "body": "This guide is for stores that do not use VTEX IO, making the customization through CMS. If your store is a VTEX IO store, check the [My Authentication Customization Guide using IO](https://developers.vtex.com/docs/guides/vtex-io-my-authentication) article."
 }
 [/block]
 To customize the appearance of My Authentication components, first you have to create your own CSS file with the desired customization settings. Below you can find the list of CSS handles and a CSS file example.

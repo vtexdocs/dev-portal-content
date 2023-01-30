@@ -17,8 +17,8 @@ Before using the Organizations Challenge app, please make sure you meet the foll
 
 Before starting with the B2B Store Theme setup itself, you must:
 
-1. [Set up a workspace to develop in VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio) on your machine.
-2. Follow [these instructions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-prerequesites) to make sure you meet all the prerequisites to develop using Store Framework.
+1. [Set up a workspace to develop in VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio) on your machine.
+2. Follow [these instructions](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-prerequesites) to make sure you meet all the prerequisites to develop using Store Framework.
 3. Make sure your store’s catalog is integrated with VTEX Intelligent Search, as described in [this article](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V).
 
 
@@ -46,17 +46,17 @@ Run the command `vtex install vtex.organizations@1.x` on the CLI to install it o
 
 You must have the following Master Data schemas configured:
 
-* [`BusinessPermission schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businesspermission-schema)
-* [`BusinessRole schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businessrole-schema)
-* [`BusinessOrganization schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businessorganization-schema)
-* [`UserOrganization schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#userorganization-schema)
+* [`BusinessPermission schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#businesspermission-schema)
+* [`BusinessRole schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#businessrole-schema)
+* [`BusinessOrganization schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#businessorganization-schema)
+* [`UserOrganization schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#userorganization-schema)
 
-Learn more about how to create these schemas in the [Create Master Data schemas](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#create-master-data-schemas) section of our guide on [Installing the B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme).
+Learn more about how to create these schemas in the [Create Master Data schemas](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#create-master-data-schemas) section of our guide on [Installing the B2B Store Theme](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme).
 
 
 ### Create Master Data fields
 
-You need to have the `isOrgAdmin` and `organizationId` fields configured in Master Data. Learn more about how to create this field in the [Create fields in Master Data](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#create-fields-in-master-data) section of our guide on [Installing the B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme).
+You need to have the `isOrgAdmin` and `organizationId` fields configured in Master Data. Learn more about how to create this field in the [Create fields in Master Data](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#create-fields-in-master-data) section of our guide on [Installing the B2B Store Theme](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme).
 
 
 ## Installation
@@ -192,7 +192,7 @@ If you perform any changes, make sure you click on `Apply`.
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 You can create a file called `vtex.challenge-permission.css` inside the `styles/css` folder to add your custom styles.
 

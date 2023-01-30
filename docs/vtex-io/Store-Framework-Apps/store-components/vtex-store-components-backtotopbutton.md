@@ -59,7 +59,7 @@ _Back To Top Button rendered as a caret icon_
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles                |
 | -------------------------- |

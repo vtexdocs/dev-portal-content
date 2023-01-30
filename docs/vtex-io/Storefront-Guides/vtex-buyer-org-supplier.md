@@ -18,7 +18,7 @@ If you want to customize the data that will be stored in the Profile System, fol
     >⚠️ Do not change the `path` in the `service.json` file, or the Buyer Organization sign up process will fail.
 
 4. Create a fork of the repository.
-5. [Publish the app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-publishing-an-app).
+5. [Publish the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).
 
 ## Installation
 

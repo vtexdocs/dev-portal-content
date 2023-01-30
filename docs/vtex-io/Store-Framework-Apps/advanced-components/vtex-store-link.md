@@ -123,7 +123,7 @@ In the example above, `Design` is the specification group name and `Dimensions` 
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide. All blocks have the same handles.
+To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide. All blocks have the same handles.
 
 | CSS Handles         |
 | ------------------- |

@@ -8,7 +8,7 @@ updatedAt: "2021-03-03T22:51:55.095Z"
 
 ## I don't see my changes
 
-> ℹ️ Once you [link your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app), you should see all your changes live at `https://{workspace}-{account}.myvtex.com`. If your theme changes are not reflecting on your store workspace, check the following workarounds to fix your scenario.
+> ℹ️ Once you [link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app), you should see all your changes live at `https://{workspace}-{account}.myvtex.com`. If your theme changes are not reflecting on your store workspace, check the following workarounds to fix your scenario.
 
 <details>
 <summary>My workspace does not reflect changes in Typescript types</summary>

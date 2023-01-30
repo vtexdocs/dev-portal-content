@@ -28,9 +28,9 @@ An integration app created from our App Template already includes:
 
 ## Before you start
 
-The Template App runs in [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/overview-3). Before you begin creating your app from our template, make sure to:
+The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/overview-3). Before you begin creating your app from our template, make sure to:
 
-- [Prep the basic setup for your environment](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio).
+- [Prep the basic setup for your environment](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio).
 - [Install VTEX IO’s Toolbelt](https://learn.vtex.com/page/setting-up-your-environment).
 - Have your VTEX Partner account in hand for step 2.
 
@@ -45,7 +45,7 @@ The Template App runs in [VTEX IO](https://developers.vtex.com/vtex-developer-do
 ## Step 1 - Creating your repository from the template
 
 1. Access the [Template App’s repository](https://github.com/vtex/mkp-app-template).
-2. Don't forget to request the use of the builders necessary for the development of the app. Read the article [Filling the Application form for development](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-filling-the-application-form-for-development) and request the builders: admin, docs, graphql, messages, node and react.
+2. Don't forget to request the use of the builders necessary for the development of the app. Read the article [Filling the Application form for development](https://developers.vtex.com/docs/guides/vtex-io-documentation-filling-the-application-form-for-development) and request the builders: admin, docs, graphql, messages, node and react.
 3. Click on `Use this template`.
 4. Add a **name** to your repository.
 5. Select the `Private` option.
@@ -63,7 +63,7 @@ Follow the list below to substitute placeholders properly. Once placeholders are
 [block:callout]
 {
   "type": "info",
-  "body": "Placeholders within the `manifest.json` file must follow the rules described in [Manifest Fields Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest).",
+  "body": "Placeholders within the `manifest.json` file must follow the rules described in [Manifest Fields Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).",
   "title": "Manifest file"
 }
 [/block]
@@ -139,7 +139,7 @@ To receive notifications from VTEX, the seller needs to implement specific API r
 
 To receive product update notifications and product variations (including stock, price and trade policy), you must implement the POST `{{connectorEndpoint}}/catalog/notification` route.
 
-This notification follows the format of our VTEX [Broadcaster Adapter](https://developers.vtex.com/vtex-developer-docs/docs/vtex-broadcaster#sku-data).
+This notification follows the format of our VTEX [Broadcaster Adapter](https://developers.vtex.com/docs/guides/vtex-broadcaster#sku-data).
 
 ##### Store configuration notification
 
@@ -350,7 +350,7 @@ The order of components within the `return` affects the order in which component
 
 ## Step 3 - Translating a component
 
-The app’s internationalization is made using the `intl` library in the `messages` builder, declared in the `manifest.json`. This builder’s addition comes in the Template App as default and does not need to be altered. It is only necessary to add translations for new inserted fields. Check out [Translating the component](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-8-translating-the-component) to know more.
+The app’s internationalization is made using the `intl` library in the `messages` builder, declared in the `manifest.json`. This builder’s addition comes in the Template App as default and does not need to be altered. It is only necessary to add translations for new inserted fields. Check out [Translating the component](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) to know more.
 
 The `intl` library gets what locale is being used in the VTEX Admin’s context and searches in the `messages` file the corresponding translated text in the `{messageId}`. In case the VTEX Admin is using a language that is not translated in the app, the library will search the id of a language mapped in the app, and automatically translate it to the Admin’s locale.
 
@@ -465,4 +465,4 @@ Once the app is configured, it is possible to recover the seller’s configurati
 
 ## Step 5 - Publishing the app in the VTEX App Store
 
-Once all steps are completed, you must publish the app in VTEX’s App Store, so it is available for clients to install it in their accounts. Follow the instructions on [Submitting your app in the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store) for this step.
+Once all steps are completed, you must publish the app in VTEX’s App Store, so it is available for clients to install it in their accounts. Follow the instructions on [Submitting your app in the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store) for this step.

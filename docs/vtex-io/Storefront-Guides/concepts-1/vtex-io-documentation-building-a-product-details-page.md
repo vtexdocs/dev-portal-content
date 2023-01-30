@@ -49,7 +49,7 @@ The PDP is defined within the `store.product` block in the Store Theme app, and 
 
 <h2>Before you start</h2>
 
-To build a responsive PDP, the [`flex-layout`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout) will be used. Hence, knowledge of how to use the `flex-layout` block is strongly recommended. For more information, please refer to [this](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) guide.
+To build a responsive PDP, the [`flex-layout`](https://developers.vtex.com/docs/guides/vtex-flex-layout) will be used. Hence, knowledge of how to use the `flex-layout` block is strongly recommended. For more information, please refer to [this](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout) guide.
 
 ## Practical example
 
@@ -149,11 +149,11 @@ Consider the following example of a Product Details Page built with the `store.p
 
 From the code sample, notice that the `store.product` child dependencies define five blocks, the first two being `flex-layout.row`.
 
-> ⚠️ Keep in mind that the `flex-layout` block may suffer modifications if you are on mobile mode. Please refer to the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) document for more information.
+> ⚠️ Keep in mind that the `flex-layout` block may suffer modifications if you are on mobile mode. Please refer to the [Flex Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout) document for more information.
 
 ### Flex layout first row
 
-In the first row of the `flex-layout` block, the [`breadcrumb`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-breadcrumb/) block is rendered as in the following:
+In the first row of the `flex-layout` block, the [`breadcrumb`](https://developers.vtex.com/docs/guides/vtex-breadcrumb/) block is rendered as in the following:
 
 ![First row](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-product-details-page-1.png)
 
@@ -232,7 +232,7 @@ To customize the `flex-layout.col#product-image` and `flex-layout.col#right-col`
 
 #### Left column
 
-The left column of the second row contains the [`product-images`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productimages) block since this was the first `flex-layout.col` block to be declared.
+The left column of the second row contains the [`product-images`](https://developers.vtex.com/docs/guides/vtex-store-components-productimages) block since this was the first `flex-layout.col` block to be declared.
 
 ![Left column](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-product-details-page-2.png).
 
@@ -242,19 +242,19 @@ The right column of the second row presents the price, buy button, and other rel
 
 ![Right column](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-product-details-page-3.png)
 
-- [`product-name`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productname): displays the product name, along with its SKU name, if desired.
-- [`product-price`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productprice): displays a properly formatted selling price. You can set it to show the list price (if it's different), installments, etc. Check out below an example of a Product Price displaying both the sale and the list price:
+- [`product-name`](https://developers.vtex.com/docs/guides/vtex-store-components-productname): displays the product name, along with its SKU name, if desired.
+- [`product-price`](https://developers.vtex.com/docs/guides/vtex-store-components-productprice): displays a properly formatted selling price. You can set it to show the list price (if it's different), installments, etc. Check out below an example of a Product Price displaying both the sale and the list price:
 - `product-separator`: renders a line separator.
-- [`product-quantity`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-quantity): displays a quantity selector that allows shoppers to choose how many items they want to add to the cart.
-- [`product-identifier`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-identifier): displays the product identification number. It accepts different props, such as the label to display before/in front of the identifier.
-- [`sku-selector`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-skuselector): allows the user to choose his desired SKU, automatically hiding impossible combinations or indicating combinations that are currently unavailable.
+- [`product-quantity`](https://developers.vtex.com/docs/guides/vtex-product-quantity): displays a quantity selector that allows shoppers to choose how many items they want to add to the cart.
+- [`product-identifier`](https://developers.vtex.com/docs/guides/vtex-product-identifier): displays the product identification number. It accepts different props, such as the label to display before/in front of the identifier.
+- [`sku-selector`](https://developers.vtex.com/docs/guides/vtex-store-components-skuselector): allows the user to choose his desired SKU, automatically hiding impossible combinations or indicating combinations that are currently unavailable.
 - [`buy-button`](https://github.com/vtex-apps/store-components/tree/master/react/components/BuyButton): adds an item to the cart. You can customize it to show a successful message, redirect users to the cart page, etc.
-- [`shipping-simulator`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-shippingsimulator): allows users to fill in their postal code to then display the available shipping options and their respective prices for that cart.
-- [`share`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-share): allows product sharing on social media. You can customize its props to control which options will be shown to the user.
+- [`shipping-simulator`](https://developers.vtex.com/docs/guides/vtex-store-components-shippingsimulator): allows users to fill in their postal code to then display the available shipping options and their respective prices for that cart.
+- [`share`](https://developers.vtex.com/docs/guides/vtex-store-components-share): allows product sharing on social media. You can customize its props to control which options will be shown to the user.
 
 ### Related products
 
-After the `flex-layout` rows, we declared the `shelf.relatedProducts` block in our `store.product` block. This block is a [Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf/) that displays products related to the one shoppers are browsing. These products are defined through the Catalog in the Admin.
+After the `flex-layout` rows, we declared the `shelf.relatedProducts` block in our `store.product` block. This block is a [Shelf](https://developers.vtex.com/docs/guides/vtex-shelf/) that displays products related to the one shoppers are browsing. These products are defined through the Catalog in the Admin.
 
 ```json
 "shelf.relatedProducts": {

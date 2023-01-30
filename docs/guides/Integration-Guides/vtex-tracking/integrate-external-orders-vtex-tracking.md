@@ -23,7 +23,7 @@ Since the actual fulfillment and tracking only happens for invoiced orders, exte
 [block:callout]
 {
   "type": "info",
-  "body": "Make sure you have [API authentication credentials](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) in order to use the APIs listed below."
+  "body": "Make sure you have [API authentication credentials](https://developers.vtex.com/docs/guides/getting-started-authentication) in order to use the APIs listed below."
 }
 [/block]
 ## 1. Place order

@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-09-01T16:35:02.523Z"
 updatedAt: "2022-02-11T15:38:54.137Z"
 ---
-Below, we are going to go over tax service integration works, and if you want to know more about how to implement a client to connect your tax calculation provider to VTEX’s APIs, this [recipe](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-recipe) and [example](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-reference-implementation) might help you.
+Below, we are going to go over tax service integration works, and if you want to know more about how to implement a client to connect your tax calculation provider to VTEX’s APIs, this [recipe](https://developers.vtex.com/docs/guides/tax-services-recipe) and [example](https://developers.vtex.com/docs/guides/tax-services-reference-implementation) might help you.
 
 ## How it works
 

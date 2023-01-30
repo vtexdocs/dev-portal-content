@@ -9,7 +9,7 @@ updatedAt: "2021-10-25T14:49:23.936Z"
 
 >⚠️ **Warning**
 >
-> **The Discount Badge block has been deprecated in favor of the [Product Price app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-price).** Although support for this block is still granted, we strongly recommend you to update your store theme with the Product Price's blocks in order to keep up with the component's evolution.
+> **The Discount Badge block has been deprecated in favor of the [Product Price app](https://developers.vtex.com/docs/guides/vtex-product-price).** Although support for this block is still granted, we strongly recommend you to update your store theme with the Product Price's blocks in order to keep up with the component's evolution.
 
 `Discount Badge` is a VTEX component that shows a discount of a product. This component can be imported and used by any VTEX App.
 

@@ -13,7 +13,7 @@ For example, a delivery window blocked by the app will not be automatically unbl
 
 ## Installation
 
-You can install the **Delivery Window Blocker** app using [VTEX App Store](https://apps.vtex.com/vtex-delivery-window-blocker/p) or [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference). Once installed, the app settings will appear in your VTEX Admin, under **Orders > Inventory & shipping**. 
+You can install the **Delivery Window Blocker** app using [VTEX App Store](https://apps.vtex.com/vtex-delivery-window-blocker/p) or [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference). Once installed, the app settings will appear in your VTEX Admin, under **Orders > Inventory & shipping**. 
 
 > If using the [New VTEX Admin](https://content.vtex.com/join-new-admin-beta-program-en/), you will find them under **Apps > Installed Apps**.
 

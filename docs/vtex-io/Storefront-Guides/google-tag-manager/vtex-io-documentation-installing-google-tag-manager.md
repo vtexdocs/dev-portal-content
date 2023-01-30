@@ -33,7 +33,7 @@ If you do not have an account for a Google product, create one at [Creating your
 
 > ℹ️ To find your store’s **GTM ID**, first, you need a container to the Tag Manager account. If you do not have one follow the [create a new account and container tutorial](https://support.google.com/tagmanager/answer/6103696?hl=en#install) and after find the GTM ID in The `Container ID` column of the container.
 
-Once you have installed the app, go to [Setting up Google Tag Manager documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-tag-manager) and learn how to set up the variables, triggers, and tags necessaries for the app to work.
+Once you have installed the app, go to [Setting up Google Tag Manager documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager) and learn how to set up the variables, triggers, and tags necessaries for the app to work.
 
 ## Restrictions
 
@@ -43,7 +43,7 @@ By default, the HTML ID is blocked, which automatically blocklists all the tags,
 
 ![restrictions](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-installing-google-tag-manager-1.png)
 
-Most of the widely used Custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs a Custom HTML for one of those cases, the integration can either be done by transforming the tags into a [VTEX IO Pixel App](https://developers.vtex.com/vtex-developer-docs/docs/pixel-apps) or by removing this restriction.
+Most of the widely used Custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs a Custom HTML for one of those cases, the integration can either be done by transforming the tags into a [VTEX IO Pixel App](https://developers.vtex.com/docs/guides/pixel-apps) or by removing this restriction.
 Check out below the full list of tags and variables that are blocked, by default, in VTEX IO Google Tag Manager solution below:
 
 **Blocked tags**
@@ -62,4 +62,4 @@ Check out a list with all the GTM available tags on [the Google Developer Guide]
 
 ## Next Step
 
-- [Setting up Google Tag Manager documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-tag-manager)
+- [Setting up Google Tag Manager documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager)

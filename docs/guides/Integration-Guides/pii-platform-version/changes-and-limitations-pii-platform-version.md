@@ -43,7 +43,7 @@ If you are integrated to Master Data API to get any of this data (CL, AD, BK ent
 
 ### Checkout
 
-[Checkout](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) endpoints that deal with getting order information keep the same paths but with different behaviors. Contracts are the same for masked data, but for complete data you must include the query parameter: `reason`. Learn more about [retrieving unmasked data](https://developers.vtex.com/vtex-rest-api/docs/profile-system#masked-data).
+[Checkout](https://developers.vtex.com/docs/guides/orderform-fields) endpoints that deal with getting order information keep the same paths but with different behaviors. Contracts are the same for masked data, but for complete data you must include the query parameter: `reason`. Learn more about [retrieving unmasked data](https://developers.vtex.com/vtex-rest-api/docs/profile-system#masked-data).
 
 ### Payments
 

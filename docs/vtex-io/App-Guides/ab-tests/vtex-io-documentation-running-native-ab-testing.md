@@ -10,7 +10,7 @@ An A/B test compares traffic between two workspaces: the master and a production
 
 For example, suppose you want to update your store's landing page. To confirm the beneficial results of your changes, you can run an A/B test and base your decisions on quantitative metrics.
 
-To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/vtex-developer-docs/docs/vtexarg-abtester). For more information, please refer to the following sections.
+To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/docs/guides/vtexarg-abtester). For more information, please refer to the following sections.
 
 ![ab-testing](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-running-native-ab-testing-0.png)
 
@@ -18,7 +18,7 @@ To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app
 
 The A/B Tester app allows you to run A/B tests via Admin. To use the app, first you need to install it in your account:
 
-1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account.
+1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account.
 
 2. Install the A/B Tester app in the `master` workspace to enable A/B testing on your store website by running:
 
@@ -37,19 +37,19 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
   
 5. Type `y` to confirm the installation.
 6. Now, access the Admin and go to Installed Apps > AB Tester.
-7. Create A/B tests, compare and finish tests, referring to the [A/B Tester Admin app documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtexarg-abtester#usage).
+7. Create A/B tests, compare and finish tests, referring to the [A/B Tester Admin app documentation](https://developers.vtex.com/docs/guides/vtexarg-abtester#usage).
 
 ## Running A/B tests via the VTEX IO CLI
 
 ### Step 1 - Enabling A/B testing
 
-1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account:
+1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account:
 
   ```sh
   vtex login {accountName}
   ```
 
-2. [Create and switch to a Production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace) by running the following command:
+2. [Create and switch to a Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) by running the following command:
 
   ```sh
   vtex use {workspaceName} --production
@@ -57,7 +57,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
 
 3. Perform the changes you want to test in the production workspace you are using. For example, install or edit an app.
 
-  > ⚠️ If your store uses the [Checkout UI Custom](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-custom-v0) app, you must first publish its configurations on your new production workspace. Otherwise, you might experience undesired consequences, such as losing the Checkout custom Javascript code and styles.
+  > ⚠️ If your store uses the [Checkout UI Custom](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0) app, you must first publish its configurations on your new production workspace. Otherwise, you might experience undesired consequences, such as losing the Checkout custom Javascript code and styles.
 
 4. Switch to the master workspace.
 

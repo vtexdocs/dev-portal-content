@@ -6,7 +6,7 @@ createdAt: "2021-10-27T17:53:23.675Z"
 updatedAt: "2022-12-13T20:17:44.057Z"
 ---
 
-Version 3.x of [VTEX’s Google Tag Manager (GTM) app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager) tracks the entire user’s journey through the store, from viewing a product to purchasing it, via events triggered by the variable `ecommerceV2`.
+Version 3.x of [VTEX’s Google Tag Manager (GTM) app](https://developers.vtex.com/docs/guides/vtex-google-tag-manager) tracks the entire user’s journey through the store, from viewing a product to purchasing it, via events triggered by the variable `ecommerceV2`.
 
 New and rearranged properties were added to the product schema to represent on the events and to track the user's journey and keep product information consistent across all areas of the store.
 
@@ -33,7 +33,7 @@ Follow the steps below to update the GTM container and fetch the data from the `
 
 For Google Analytics (GA) to read the data from the variable `ecommerceV2`, you will need a GA variable for the store’s checkout responsible for tracking the Checkout and Order Placed pages.
 
-Create the store's checkout variable by following the step **For the store’s checkout** in the [Setting up Google Tag Manager documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-tag-manager#creating-variables).
+Create the store's checkout variable by following the step **For the store’s checkout** in the [Setting up Google Tag Manager documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager#creating-variables).
 
 ## Step by step
 
@@ -72,7 +72,7 @@ After installing the Google Tag Manager app 3.x major, you must update the app's
 
 #### Product schema
 
-To make the product information consistent across all store areas and help capture the entire user's journey on the store, [Google Tag Manager 3.x.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) includes Enhanced Ecommerce properties to the product data schema as events. These properties enable stores to provide additional information, such as product printing, promotion, and sales data.
+To make the product information consistent across all store areas and help capture the entire user's journey on the store, [Google Tag Manager 3.x.](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app) includes Enhanced Ecommerce properties to the product data schema as events. These properties enable stores to provide additional information, such as product printing, promotion, and sales data.
 
 | Prop name  | Description                                                                 |
 | ---------- | --------------------------------------------------------------------------- |
@@ -93,5 +93,5 @@ For more information about custom dimensions and Enhanced Ecommerce, refer to [C
 
 ## Related Resources
 
-- [VTEX Google Tag Manager (GTM) app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager)
-- [Setting up Google Tag Manager](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-tag-manager)
+- [VTEX Google Tag Manager (GTM) app](https://developers.vtex.com/docs/guides/vtex-google-tag-manager)
+- [Setting up Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager)

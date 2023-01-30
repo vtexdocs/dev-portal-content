@@ -15,7 +15,7 @@ In the following step by step, you'll learn how to make your Pixel app read the 
 
 1. Open the `manifest.json` file.
 2. Change the  `vendor` field value (`vtex`) to the name of the VTEX account in which you are working.
-3. Change the `name` and `title` field values with the name you wish to give your app. Please refer to our [app-naming guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-filling-the-application-form-for-development/#guidelines).
+3. Change the `name` and `title` field values with the name you wish to give your app. Please refer to our [app-naming guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-filling-the-application-form-for-development/#guidelines).
 4. Declare the `settingsSchema` field. This field will be used to receive the user identification information.
 5. Inside the `settingsSchema` object, declare a JSON Schema containing the following fields:
 

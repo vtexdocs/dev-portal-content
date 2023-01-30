@@ -16,7 +16,7 @@ vtex help
 
 ![VTEX command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-0.png)
 
-> ℹ️ Check the [Command Reference](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference) for more details.
+> ℹ️ Check the [Command Reference](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference) for more details.
 
 ## Logging into your VTEX account
 
@@ -78,7 +78,7 @@ vtex install {appvendor}.{appname}@{appversion}
 
 > ⚠️ Replace the value between curly braces according to your scenario.
 
-If you try to install an app that has [Billing Options](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options), you first need to access the [VTEX App Store](https://apps.vtex.com/) and agree to the app's terms and conditions.
+If you try to install an app that has [Billing Options](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options), you first need to access the [VTEX App Store](https://apps.vtex.com/) and agree to the app's terms and conditions.
 
 ![Billing Options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-4.png)
 
@@ -124,13 +124,13 @@ vtex list
 
 Installed apps are classified as in the following:
 
-1. Apps automatically installed by your account's [Edition App](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-edition-app).
+1. Apps automatically installed by your account's [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
 2. Apps manually installed on the current workspace.
 3. Apps linked to the current workspace.
 
 ## Authenticating API requests
 
-You can use the VTEX IO CLI to generate a unique and temporary [user token](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#user-token), which can be useful when running tests with VTEX APIs.
+You can use the VTEX IO CLI to generate a unique and temporary [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token), which can be useful when running tests with VTEX APIs.
 
 To do this, run the following command:
 
@@ -138,9 +138,9 @@ To do this, run the following command:
 vtex local token
 ```
 
-The token will be automatically copied to the clipboard and can authenticate requests for 24h. Learn more about [user tokens](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#user-token).
+The token will be automatically copied to the clipboard and can authenticate requests for 24h. Learn more about [user tokens](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token).
 
-> ⚠️ The authentication of VTEX IO apps operations does not require this token. If you are developing VTEX IO apps, see the guide [App authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#app-authentication).
+> ⚠️ The authentication of VTEX IO apps operations does not require this token. If you are developing VTEX IO apps, see the guide [App authentication](https://developers.vtex.com/docs/guides/getting-started-authentication#app-authentication).
 
 ## Learning more about a command
 

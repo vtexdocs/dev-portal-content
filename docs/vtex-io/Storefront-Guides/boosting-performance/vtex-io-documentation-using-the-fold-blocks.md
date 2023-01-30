@@ -17,7 +17,7 @@ The `__fold__.experimentalLazyAssets`, an optional block, defines which componen
 
 - **Optimizing performance**
 
-The blocks `__fold__` and `__fold__.experimentalLazyAssets` requires manual optimization of your store's page. However, there are features in the Admin that enable page performance. For further details, see the [Optimizing performance](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance#enabling-store-settings) guide.
+The blocks `__fold__` and `__fold__.experimentalLazyAssets` requires manual optimization of your store's page. However, there are features in the Admin that enable page performance. For further details, see the [Optimizing performance](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance#enabling-store-settings) guide.
 
 - **Blocks configuration**
 
@@ -68,7 +68,7 @@ In the example above, both the Carousel and the Shelf will be displayed with the
 
 ## Optional: Adding the `__fold__.experimentalLazyAssets` block
 
-> ⚠️ The `__fold__.experimentalLazyAssets` block is experimental, which means it may cause side-effects, such as failing to render an interactive component in the storefront, such as the Carousel, and should be used with caution. If you are working in scenarios that you need to [lazy load images and products data in a slider](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance#lazy-loading-images-and-products-data-in-a-slider) we recommend [building a carousel using Slider Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-carousel-using-slider-layout).
+> ⚠️ The `__fold__.experimentalLazyAssets` block is experimental, which means it may cause side-effects, such as failing to render an interactive component in the storefront, such as the Carousel, and should be used with caution. If you are working in scenarios that you need to [lazy load images and products data in a slider](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance#lazy-loading-images-and-products-data-in-a-slider) we recommend [building a carousel using Slider Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout).
 
 In the template's block list, add the `__fold__.experimentalLazyAssets` above the blocks whose loading will be static until the user's first interaction. We recommend that you add the `__fold__.experimentalLazyAssets` block to your store's home page (`store.home` theme template) for better results. For example:
 

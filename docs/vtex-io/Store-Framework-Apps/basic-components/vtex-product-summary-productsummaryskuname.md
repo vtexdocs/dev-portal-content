@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-09-24T16:36:08.010Z"
 updatedAt: "2022-07-02T00:50:32.861Z"
 ---
-Product Summary SKU Name is a block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) responsible for rendering the selected SKU's name.
+Product Summary SKU Name is a block exported by the [Product Summary app](https://developers.vtex.com/docs/guides/vtex-product-summary) responsible for rendering the selected SKU's name.
 
 ## Configuration
 
@@ -34,7 +34,7 @@ Product Summary SKU Name is a block exported by the [Product Summary app](https:
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles        |
 | ------------------ |

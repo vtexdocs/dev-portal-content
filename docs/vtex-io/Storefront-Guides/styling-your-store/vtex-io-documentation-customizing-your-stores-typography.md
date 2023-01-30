@@ -22,14 +22,14 @@ builders{
 }
 ```
 
-In the following, check the [best practices of CSS handles](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization#best-practices) to review and update every CSS customization for your store elements.
+In the following, check the [best practices of CSS handles](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization#best-practices) to review and update every CSS customization for your store elements.
 
 ## Step by step
 
 ### Using store theme CSS files
 
 1. Open your store theme directory using a code editor of your preference.
-2. Create a new folder inside the `assets` directory called `fonts`. Make sure your app have the [assets builder in its manifest](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-the-assets-builder/).
+2. Create a new folder inside the `assets` directory called `fonts`. Make sure your app have the [assets builder in its manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder/).
 3. Add the font files inside this folder (`assets/fonts/`).
 
 >⚠️  The font files must be in the following file extensions: `.ttf` or `.woff`.

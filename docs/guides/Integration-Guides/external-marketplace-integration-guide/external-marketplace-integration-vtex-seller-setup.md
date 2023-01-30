@@ -110,7 +110,7 @@ Once the affiliate is created, take note of the affiliate ID before you move on 
 
 ## Set up API authentication credentials
 
-To allow the external marketplace connector to authenticate and interact  with your account through API calls, you will need to [create an appKey / appToken](https://developers.vtex.com/docs/getting-started-authentication#creating-the-appkey-and-apptoken) with the **IntegrationProfile - Fulfillment Gateway Oms** [role](https://help.vtex.com/en/tutorial/access-profiles--7HKK5Uau2H6wxE1rH5oRbc#integrationprofile-fulfillment-gateway-oms) or equivalent.
+To allow the external marketplace connector to authenticate and interact  with your account through API calls, you will need to [create an appKey / appToken](https://developers.vtex.com/docs/guides/getting-started-authentication#creating-the-appkey-and-apptoken) with the **IntegrationProfile - Fulfillment Gateway Oms** [role](https://help.vtex.com/en/tutorial/access-profiles--7HKK5Uau2H6wxE1rH5oRbc#integrationprofile-fulfillment-gateway-oms) or equivalent.
 
 Once the authentication credentials are created, take note of the appKey / appToken pair so you can share it with the external marketplace.
 [block:callout]

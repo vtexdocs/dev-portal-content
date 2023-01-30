@@ -56,13 +56,13 @@ The following tutorial will guide you through the steps required to implement a 
 - How to run and test your Payment App.
 - Information about the deployment process.
 
-To proceed with the following steps, you will be using the [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io) development platform.
+To proceed with the following steps, you will be using the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) development platform.
 > ⚠️ If you are implementing a new payment method in your Payment App, please contact the [VTEX Support Team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support) to add it to the VTEX backend.
 
 ### Step 1: Setting up the development environment
 
-1. Using your computer system terminal, [install the VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) (Command Line Interface).
-2. After installing VTEX IO CLI, check the documentation [Creating a Development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace) to create a workspace and start developing the Payment App.
+1. Using your computer system terminal, [install the VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) (Command Line Interface).
+2. After installing VTEX IO CLI, check the documentation [Creating a Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) to create a workspace and start developing the Payment App.
 3. When you finish creating the workspace, jump to the next section.
 
 ### Step 2: Developing your Payment App
@@ -79,7 +79,7 @@ git clone https://github.com/vtex-apps/example-payment-authorization-app.git
 ```
 
 2. After cloning the repository, use a code editor of your choice to open the project locally.
-3. Open the `manifest.json` file and update its content according to your scenario. If you need more information about the required fields, access our [Manifest documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest). The value set in the `name` field will be the unique identifier for this app and must be the exact name that corresponds to the response of your connector (`appname` property of `paymentAppData` field in the response body of the Create Payment endpoint). The `billingOptions` field is also required and set with the property `type` as `free`. More information about the `billingOptions` field can be found in the [Billing Options article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options).
+3. Open the `manifest.json` file and update its content according to your scenario. If you need more information about the required fields, access our [Manifest documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest). The value set in the `name` field will be the unique identifier for this app and must be the exact name that corresponds to the response of your connector (`appname` property of `paymentAppData` field in the response body of the Create Payment endpoint). The `billingOptions` field is also required and set with the property `type` as `free`. More information about the `billingOptions` field can be found in the [Billing Options article](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
 4. After finishing the update, open the `pages/pages.json` file and replace `example-payment-auth-app` with the app `name` set in `manifest.json`. The `pages.json` file is responsible for creating the routes for your application. So it is necessary to make this configuration for the VTEX system to find and display the app at checkout. Also, the `"component"` field having the `"index"` value indicates that the `index.js` file in the `react` folder is the file with the component that will be instantiated at checkout.
 > ⚠️ Replace only the last part of the path in the `pages.json` file for the name of your app. In this case, the `example-payment-auth-app` part.  Do not change the beginning of the path `checkout/transactions/`, since the checkout uses it to identify a payment application.\n\nAlso, if you are using the **Test Connector** to make internal tests with your app, you have to keep the original name of the app that came from the repository in the `pages.json` file, since it will be the reference for this connector to open the Payment App in the checkout.
 5. Using your terminal, go to the app directory and run the following command:
@@ -138,7 +138,7 @@ In this example, there are two fields for illustration. The first field (`"timeT
 
 When the Payment App finishes its operation, it has to inform the Checkout UI that it should be closed and then check if the transaction is approved or not. If the transaction is `approved` or `undefined`, the Checkout UI will redirect the user to the Order Placed page; otherwise, it will show a warning pop-up and then take the user back to the payment options.
 
-To perform these steps, the Checkout UI listens to the `transactionValidation.vtex` event that is triggered by the Payment App using the [browser’s native event handling engine](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) during the validation step. When this event is triggered, the Checkout UI will close the Payment App and check the transaction status from the Gateway. The following [example method](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.js#L28) can be used by the Payment App to trigger the event:
+To perform these steps, the Checkout UI listens to the `transactionValidation.vtex` event that is triggered by the Payment App using the [browser’s native event handling engine](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) during the validation step. When this event is triggered, the Checkout UI will close the Payment App and check the transaction status from the Gateway. The following [example method](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.tsx#L45) can be used by the Payment App to trigger the event:
 
 ```js
 respondTransaction = () => {
@@ -164,8 +164,8 @@ js.onload = {{callback-onload}}
 head.appendChild(js)
 ```
 
-There is an example of script injection [here](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.js#L70) that inserts Google Recaptcha to a Payment App.
-> ℹ️ Keep in mind that if the external `js` script handles DOM manipulation, you should use [React's Ref](https://reactjs.org/docs/refs-and-the-dom.html) to create a `div` container and hand it over to the library. You can find an [example here](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.js#L12).
+There is an example of script injection [here](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.tsx#L89) that inserts Google Recaptcha to a Payment App.
+> ℹ️ Keep in mind that if the external `js` script handles DOM manipulation, you should use [React's Ref](https://reactjs.org/docs/refs-and-the-dom.html) to create a `div` container and hand it over to the library. You can find an [example here](https://github.com/vtex-apps/example-payment-authorization-app/blob/master/react/index.tsx#L106).
 
 ## Payment App Scenarios
 

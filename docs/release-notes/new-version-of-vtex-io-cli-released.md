@@ -8,7 +8,7 @@ type: "improved"
 
 ![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-version-of-vtex-io-cli-released-0.png)
 
-[VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) has changed its version 3 to enhance developers' productivity and experience. To allow this evolution, we adapted VTEX IO CLI to a plugin-based architecture, added a new color scheme, and included a more comprehensive command description. Also, VTEX IO CLI is now available on multiple platforms.
+[VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) has changed its version 3 to enhance developers' productivity and experience. To allow this evolution, we adapted VTEX IO CLI to a plugin-based architecture, added a new color scheme, and included a more comprehensive command description. Also, VTEX IO CLI is now available on multiple platforms.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-version-of-vtex-io-cli-released-1.png)
 
 ## What has changed?
@@ -35,4 +35,4 @@ You can start using VTEX IO CLI straight away. To update the CLI, run the follow
 yarn global add vtex
 ```
 
-For more information, check out the [VTEX IO CLI documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+For more information, check out the [VTEX IO CLI documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).

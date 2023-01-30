@@ -9,7 +9,7 @@ updatedAt: "2021-12-30T14:00:48.284Z"
 
 >⚠️ **Warning**
 >
-> **The Slider component has been deprecated in favor of the [Slider Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-slider-layout) app**. Although support for this component is still given, it's strongly recommended that you update your store theme with the Slider Layout's blocks in order to keep up with the component's evolution.
+> **The Slider component has been deprecated in favor of the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-slider-layout) app**. Although support for this component is still given, it's strongly recommended that you update your store theme with the Slider Layout's blocks in order to keep up with the component's evolution.
 
 `Slider` is a VTEX component that allows to show a collection of children components through a slide. To accomplish that, an external library called [react-slick](https://github.com/akiran/react-slick) is used.
 This component can be imported and used by any VTEX app.

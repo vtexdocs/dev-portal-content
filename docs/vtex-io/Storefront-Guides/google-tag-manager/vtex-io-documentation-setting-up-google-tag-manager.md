@@ -6,9 +6,9 @@ createdAt: "2020-06-03T16:02:44.272Z"
 updatedAt: "2022-12-13T20:17:44.813Z"
 ---
 
-Once you have installed the [VTEX IO Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/google-tag-manager), set it up in your store by configuring all the necessary variables, triggers, and tags.
+Once you have installed the [VTEX IO Google Tag Manager app](https://developers.vtex.com/docs/guides/google-tag-manager), set it up in your store by configuring all the necessary variables, triggers, and tags.
 
-> ⚠️ If you are using the Google Tag Manager 2.x., **we strongly recommend migrating to the major 3.x.** Google Tag Manager 3.x tracks the entire user’s journey through the store, from viewing a product to purchasing it. Refer to [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) and follow the step-by-step.
+> ⚠️ If you are using the Google Tag Manager 2.x., **we strongly recommend migrating to the major 3.x.** Google Tag Manager 3.x tracks the entire user’s journey through the store, from viewing a product to purchasing it. Refer to [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app) and follow the step-by-step.
 
 ## Before you start
 
@@ -25,7 +25,7 @@ Once you have installed the [VTEX IO Google Tag Manager app](https://developers.
 
 GTM components trigger these events, allowing you to measure your store's data through. If you are not familiar with the GTM components, **we strongly recommend** checking the [Google Tag Manager documentation](https://support.google.com/tagmanager/answer/6103657?hl=en) before starting the setup.
 
-> ℹ To track the events related to the search use on your site in Google Analytics, learn how to [set up Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking) in your VTEX IO store.
+> ℹ To track the events related to the search use on your site in Google Analytics, learn how to [set up Google Analytics search tracking](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking) in your VTEX IO store.
 
 Follow the steps below to create all necessary GTM components for your store.
 
@@ -271,7 +271,7 @@ Once you have set up the Google Analytics variables, triggers, and tags, follow 
 
 ### (Optional) Advanced configurations with Enhanced Ecommerce
 
-To make the product information consistent across all store areas and help capture the entire user's journey on the store, [Google Tag Manager 3.x.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app) includes Enhanced Ecommerce properties to the product data schema as events. These properties enable stores to provide additional information, such as product printing, promotion, and sales data.
+To make the product information consistent across all store areas and help capture the entire user's journey on the store, [Google Tag Manager 3.x.](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app) includes Enhanced Ecommerce properties to the product data schema as events. These properties enable stores to provide additional information, such as product printing, promotion, and sales data.
 
 | Prop name  | Description                                                                 |
 | ---------- | --------------------------------------------------------------------------- |
@@ -292,6 +292,6 @@ For more information about custom dimensions and Enhanced Ecommerce, refer to [C
 
 ## Related resources
 
-- [Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/google-tag-manager)
-- [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app)
-- [Setting up Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking)
+- [Google Tag Manager app](https://developers.vtex.com/docs/guides/google-tag-manager)
+- [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app)
+- [Setting up Google Analytics search tracking](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking)

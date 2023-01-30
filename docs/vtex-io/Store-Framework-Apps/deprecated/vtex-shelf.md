@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:31.603Z"
 updatedAt: "2022-02-01T21:09:11.415Z"
 ---
 
->⚠️ Aiming to display a flexible product list, the `shelf` and `shelf.relatedProducts` block is deprecated and is now configured using the [Product Summary List](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) and the [Slider Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-slider-layout) blocks. To learn how to configure it, access [Building a Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-shelf).
+>⚠️ Aiming to display a flexible product list, the `shelf` and `shelf.relatedProducts` block is deprecated and is now configured using the [Product Summary List](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/docs/guides/vtex-product-summary) and the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-slider-layout) blocks. To learn how to configure it, access [Building a Shelf](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-shelf).
 
 The Shelf app displays a list of products on your store pages, helping you build your shop window and work on your store's visual merchandising.
 
@@ -61,11 +61,11 @@ Now, you can use all the blocks exported by the `shelf` app. Check out the compl
 | `gap`             | `enum`    | Gap between items being displayed. Possible values are: `ph0`, `ph3`,`ph5`, or `ph7`.   | `ph3`         |
 | `minItemsPerPage` | `number`  | Minimum number of items per shelf slides. This prop can be used to control how many items will be displayed on the related product shelf even in the smallest screen size. Its value can be a float,  which means that you can choose a multiple of `0.5` to indicate that you want to show a *peek* of the next slide on the shelf. | `1`   |
 | `itemsPerPage`    | `number`  | Maximum number of items per shelf slides. This prop can be used to control how many items will be displayed on the related product shelf even in the biggest screen size. Its value can be a float, which means that you can choose a multiple of `0.5` to indicate that you want to show a *peek* of the next slide on the Shelf.   | `5`   |
-| `summary`         | `object`  | Schema declaring the desired related product shelf's items. This prop object must contain the [`product-summary.shelf` block's props](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary#configuration).   | `undefined` |
+| `summary`         | `object`  | Schema declaring the desired related product shelf's items. This prop object must contain the [`product-summary.shelf` block's props](https://developers.vtex.com/docs/guides/vtex-product-summary#configuration).   | `undefined` |
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles               |
 | ------------------------- |
@@ -73,4 +73,4 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 
 >⚠️ Warning
 >
-> The CSS Handles list above refers to the `shelf.relatedProducts` block. Since the `shelf` block is deprecated, your traditional shelf customization must be done using the CSS Handles available for the [Product Summary List](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) and the [Slider Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-slider-layout) blocks.
+> The CSS Handles list above refers to the `shelf.relatedProducts` block. Since the `shelf` block is deprecated, your traditional shelf customization must be done using the CSS Handles available for the [Product Summary List](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/docs/guides/vtex-product-summary) and the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-slider-layout) blocks.

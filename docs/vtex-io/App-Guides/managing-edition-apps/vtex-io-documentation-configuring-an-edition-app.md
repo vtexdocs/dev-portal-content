@@ -5,17 +5,17 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.714Z"
 updatedAt: "2022-12-13T20:17:44.546Z"
 ---
-The hierarchical relationship between a [Sponsor Account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-sponsor-account/) and its children, established by an [Edition app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-edition-app/), creates uniformity throughout an account family.
+The hierarchical relationship between a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account/) and its children, established by an [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app/), creates uniformity throughout an account family.
 
 Hence, it can be advantageous for **complex account families** under the same brand or holding to have its own Edition App.
 
-Once you [enable the Sponsor Account behavior](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-becoming-a-sponsor-account) in one of your accounts, follow the steps below to create your own Edition app and install it on your child accounts.
+Once you [enable the Sponsor Account behavior](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-sponsor-account) in one of your accounts, follow the steps below to create your own Edition app and install it on your child accounts.
 
 ## Step by step
 
 ### Step 1 - Creating an Edition app
 
-1. Using your terminal and [VTEX IO's CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your Sponsor Account.
+1. Using your terminal and [VTEX IO's CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your Sponsor Account.
 2. Run the `vtex init` command.
 3. Choose the `edition app` option. This will create a boilerplate repository in your local files.
 4. Navigate to the `edition-app` folder and open the `manifest.json` file. It should look something like this:
@@ -50,7 +50,7 @@ Once you [enable the Sponsor Account behavior](https://developers.vtex.com/vtex-
 > ℹ️ Notice that the Edition App being developed extends its dependency, inheriting all its apps and configurations.
 
 - If your store was built with [VTEX legacy CMS](https://help.vtex.com/tutorial/o-que-e-o-cms--EmO8u2WBj2W4MUQCS8262) and this is your first Edition App, keep it as `"vtex.edition-business": "0.x"`.
-- If your store was built with the [Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-store-framework) and this is your first Edition App, change it to `"vtex.edition-store": "5.x"`.
+- If your store was built with the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) and this is your first Edition App, change it to `"vtex.edition-store": "5.x"`.
 - If you have more complex inheritance needs, change it to an Edition App you have previously developed. The dependency's `vendor` must be the same one of the Edition App being developed.
 
 >⚠️ Every Edition app must declare a dependency and only a single Edition App can be declared as a dependency.
@@ -94,7 +94,7 @@ The new Edition App will consist of the union of apps and configurations inherit
 
 ### Step 4 - Deploying the Edition App
 
-Once you are sure of all the changes performed, **[publish and deploy](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-publishing-an-app)** your Edition App.
+Once you are sure of all the changes performed, **[publish and deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app)** your Edition App.
 
 ### Step 5 - Installing the Edition App on a child account
 
@@ -102,4 +102,4 @@ Once you are sure of all the changes performed, **[publish and deploy](https://d
 
 Once you receive a successful reply from the support ticket, you'll start to have child accounts sponsored by the account you just used to develop and release your new Edition App.
 
-> ℹ️ Notice that, from the child accounts' point of view, the apps specified by the Sponsor Account are immutable. That means child accounts aren't able to perform changes nor uninstall apps installed by a Sponsor Account. Hence, if you need to modify any app or configuration of your Edition App, you'll have to **launch a new version** bearing these changes. In this case, check our documentation on [updating Edition apps](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-updating-edition-apps).
+> ℹ️ Notice that, from the child accounts' point of view, the apps specified by the Sponsor Account are immutable. That means child accounts aren't able to perform changes nor uninstall apps installed by a Sponsor Account. Hence, if you need to modify any app or configuration of your Edition App, you'll have to **launch a new version** bearing these changes. In this case, check our documentation on [updating Edition apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-updating-edition-apps).

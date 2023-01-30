@@ -14,7 +14,7 @@ The app records the notification request and monitors inventory updates. This wa
 
 ## Configuration
 
-1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the Availability Notify app in the desired VTEX account by running `vtex install vtex.availability-notify` in your terminal.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the Availability Notify app in the desired VTEX account by running `vtex install vtex.availability-notify` in your terminal.
 
 2. Open your store’s Store Theme app directory in your code editor.
 
@@ -22,7 +22,7 @@ The app records the notification request and monitors inventory updates. This wa
 
 >⚠️ Warning
 >
-> Due to changes in its peer dependencies you will need to release a new major version. Check the documentation on [How to migrate CMS settings after a theme major update](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-cms-settings-after-major-update).
+> Due to changes in its peer dependencies you will need to release a new major version. Check the documentation on [How to migrate CMS settings after a theme major update](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update).
 
 ```json
   "peerDependencies": {
@@ -61,7 +61,7 @@ After making the desired settings in the app, set up its template according to y
 
 This app needs to also be installed on the seller account
 
-1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the Availability Notify app in the desired VTEX SELLER account through the app store
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the Availability Notify app in the desired VTEX SELLER account through the app store
 2. In the app configuration enter the name of the marketplace to notify when there are any inventory changes
 
 This will forward the inventory change to the MARKETPLACE and then trigger the `Back In Stock` email to the subscribed users of that product. 

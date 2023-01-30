@@ -43,7 +43,7 @@ Read the description of each property before applying customizations:
     "1-1": "boolean",
     "2-1": "string",
     "0-2": "Always show the option to log in using email and password. By default, this option is set to `true`. Set to `false` to hide email and password form.",
-    "1-2": "Always show the option to log in via SAML [if it is configured on VTEX ID](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-admin-saml2). By default, this option is set to `true`. Set to `false` to hide the option to log in via SAML.",
+    "1-2": "Always show the option to log in via SAML [if it is configured on VTEX ID](https://developers.vtex.com/docs/guides/login-integration-guide-admin-saml2). By default, this option is set to `true`. Set to `false` to hide the option to log in via SAML.",
     "2-2": "Always show the option to log in with either Google or Facebook, if the option is configured on VTEX ID.\n\nBy default, this option is set as `undefined`, that is, set not to show on the login page.\n\nSet it to a valid OAuth provider to VTEX ID knowledge and this login option will appear if there is no SAML login configured on VTEX ID and if the `showSaml` option is set to `false `also.",
     "0-3": "`true` or `false`",
     "1-3": "`true` or `false`",

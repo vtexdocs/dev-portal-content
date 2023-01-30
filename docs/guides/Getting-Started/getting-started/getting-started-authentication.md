@@ -79,7 +79,7 @@ Developers working with VTEX may generate authentication tokens without having t
 
 #### Generating tokens with the VTEX IO CLI
 
-1. Make sure you have the [VTEX IO CLI installed](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install).
+1. Make sure you have the [VTEX IO CLI installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 2. Log in to VTEX by running this command on your terminal:
     ```
     vtex login {accountName}
@@ -103,7 +103,7 @@ To do this, use the [Generate authentication token endpoint](https://developers.
 [/block]
 ### App authentication
 
-In general, when developing [VTEX IO apps](https://developers.vtex.com/vtex-developer-docs/docs/overview-3), you will not need to send requests to VTEX APIs because these platform features are available through [clients](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-clients). Hence, you will most likely not need to use [application keys](#application-keys) in your app.
+In general, when developing [VTEX IO apps](https://developers.vtex.com/docs/guides/overview-3), you will not need to send requests to VTEX APIs because these platform features are available through [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). Hence, you will most likely not need to use [application keys](#application-keys) in your app.
 
 #### Authenticating VTEX IO client operations
 
@@ -125,16 +125,16 @@ The tokens shown above are available via the VTEX IO context and are associated 
 
 | **Token**                | **`authMethod`** | **Via context**         | **Description**                                                                                                                              | **Permissions**                                                                                                                                                                                                                                                                                                                          |
 |--------------------------|------------------|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| App authentication token | `AUTH_TOKEN`     | `ctx.authToken`          | Every VTEX IO app has its own rotating authentication token. We recommend you avoid using this app token whenever user tokens are available. | Developers must declare precisely what actions are allowed for the app they are building. You must do this by editing the [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies) in your app's [manifest](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest). |
+| App authentication token | `AUTH_TOKEN`     | `ctx.authToken`          | Every VTEX IO app has its own rotating authentication token. We recommend you avoid using this app token whenever user tokens are available. | Developers must declare precisely what actions are allowed for the app they are building. You must do this by editing the [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in your app's [manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest). |
 | Store user token         | `STORE_TOKEN`    | `ctx.storeUserAuthToken` | [User token](#user-token) with store scope.                                                                                                  | Shopper permissions.                                                                                                                                                                                                                                                                                                                     |
 | Admin user token         | `ADMIN_TOKEN`    | `ctx.adminUserAuthToken` | [User token](#user-token) with Admin scope.                                                                                                  | Administrative permissions as defined by [License Manager roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) associated with the logged in user.                                                                                                                                                                    |
->❗ Authenticate your apps' actions with user tokens whenever possible. Currently, app authentication tokens are not subject to [License Manager permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). We recommend that you consider this when defining your app's architecture and configuring [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies).
+>❗ Authenticate your apps' actions with user tokens whenever possible. Currently, app authentication tokens are not subject to [License Manager permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). We recommend that you consider this when defining your app's architecture and configuring [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies).
 
 ## Single sign on integrations
 
 VTEX allows stores to integrate with external identity providers to provide single sign on (SSO) experiences to shoppers and Administrative users. You can learn more about this in the article [Login (SSO)](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide) and below you can find more information on these and other SSO use cases:
-- [Store SSO with OAuth 2.0](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-webstore-oauth2)
-- [Admin SSO with SAML 2.0](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-admin-saml2)
+- [Store SSO with OAuth 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2)
+- [Admin SSO with SAML 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-admin-saml2)
 - [Use your VTEX account as an OAuth provider](https://github.com/vtex/oauth-provider)
 - [Unifying login for different accounts](https://developers.vtex.com/vtex-rest-api/docs/unifying-login-for-different-accounts)
 
@@ -142,4 +142,4 @@ VTEX allows stores to integrate with external identity providers to provide sing
 
 VTEX stores have access to different B2B solutions. See the articles below to learn more about authentication in the context of these different solutions:
 - **B2B Suite** - [Storefront permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions)
-- **Legacy B2B solution** - [Configuring a B2B environment](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-configuring-a-b2b-environment)
+- **Legacy B2B solution** - [Configuring a B2B environment](https://developers.vtex.com/docs/guides/vtex-io-documentation-configuring-a-b2b-environment)

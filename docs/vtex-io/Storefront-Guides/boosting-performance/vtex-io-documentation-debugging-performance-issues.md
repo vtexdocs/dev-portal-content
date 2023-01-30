@@ -14,7 +14,7 @@ Keeping an eye on how your store's website performs is essential for delivering 
 
 With that in mind, the following [section](#step-by-step) intends to guide you when debugging performance issues, aiming for high scores in Lighthouse audits.
 
-> ⚠️ The practices presented in this doc are intended to guide you when debugging your store's performance, they do not provide definitive solutions. For information on how to improve performance, [folow this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance).
+> ⚠️ The practices presented in this doc are intended to guide you when debugging your store's performance, they do not provide definitive solutions. For information on how to improve performance, [folow this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance).
 
 ## Step by step
 
@@ -58,7 +58,7 @@ When performing this test, your store will probably not function the same way as
 
 ### Step 2: Checking the effect of third-party apps
 
-One of the first actions to debug performance issues is to test the desired page without [Pixel apps](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-pixel-app).
+One of the first actions to debug performance issues is to test the desired page without [Pixel apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-pixel-app).
 
 > ℹ️ Pixel apps are applications that integrate a third-party solution into your store's website.
 
@@ -108,17 +108,17 @@ Use [SpeedCurve](https://speedcurve.com/) or any other tool of your preference t
 
 To help you guarantee the success of your brand's online presence, we provide a series of performance settings, which can be enabled at your stores's admin, under *Store Setup > CMS > Store > Advanced*.
 
-> ℹ️ Follow [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance) to learn about the currently available performance settings.
+> ℹ️ Follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance) to learn about the currently available performance settings.
 
-> ℹ️ Follow [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-safely-enabling-performance-settings) to learn how to safely enable performance settings.
+> ℹ️ Follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-safely-enabling-performance-settings) to learn how to safely enable performance settings.
 
 We recommend that you gradually enable the available features and measure their impact using Lighthouse and other tools.
 
 ### Step 6: Testing the critical CSS
 
-VTEX IO offers the option of [enabling critical CSS optimization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance#optimizing-critical-css) in home pages, product pages, and product listing pages. This feature allows the browser to find the minimum CSS code blocks needed to display the page's critical content first. Meanwhile, the remainder CSS code is loaded asynchronously.
+VTEX IO offers the option of [enabling critical CSS optimization](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance#optimizing-critical-css) in home pages, product pages, and product listing pages. This feature allows the browser to find the minimum CSS code blocks needed to display the page's critical content first. Meanwhile, the remainder CSS code is loaded asynchronously.
 
-> ℹ️ Critical, also known as above-the-fold, refers to the portion of a web page a user sees when first loading a page. Notice that, for a good user experience, the critical content needs to be loaded quickly. Follow [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance#optimizing-critical-css) to learn how to optimize critical CSS.
+> ℹ️ Critical, also known as above-the-fold, refers to the portion of a web page a user sees when first loading a page. Notice that, for a good user experience, the critical content needs to be loaded quickly. Follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance#optimizing-critical-css) to learn how to optimize critical CSS.
 
 Critical CSS optimization requires that the page is server-side rendered and that CSS concatenation is enabled. Also, the process of optimizing CSS for each page can take some time and varies depending on the page and viewport size.
 
@@ -142,6 +142,6 @@ With the performance features enabled, as proposed in Step 5, reproduce your sco
 2. If [First Contentful Paint (FCP)](https://web.dev/fcp/) is high, consider prioritizing the above-the-fold content by bringing, at first, only the necessary assets to render that part of the page.
 3. If [Largest Contentful Paint (LCP)](https://web.dev/lcp/) is high, consider centering most of the page content on one or fewer elements, such as a banner, and having that part rendered with priority (e.g., loading the main image first).
 
-> ℹ️ Follow [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-getting-started-with-lighthouse) to learn more about Lighthouse metrics.
+> ℹ️ Follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-getting-started-with-lighthouse) to learn more about Lighthouse metrics.
 
-> ℹ️ Follow [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-tracking-changes-in-lighthouse-performance-score) to learn more about how to track changes in Lighthouse performance scores using the Lighhouse Scoring Calculator.
+> ℹ️ Follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-tracking-changes-in-lighthouse-performance-score) to learn more about how to track changes in Lighthouse performance scores using the Lighhouse Scoring Calculator.

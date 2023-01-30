@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-05-03T20:44:31.064Z"
 updatedAt: "2022-05-03T20:49:49.530Z"
 ---
-Reviews & Ratings is a [VTEX IO native solution](https://developers.vtex.com/vtex-developer-docs/docs/vtex-reviews-and-ratings) that allows shoppers to submit reviews and ratings for products, as well as see them while navigating the store.
+Reviews & Ratings is a [VTEX IO native solution](https://developers.vtex.com/docs/guides/vtex-reviews-and-ratings) that allows shoppers to submit reviews and ratings for products, as well as see them while navigating the store.
 
 ## Rating
 

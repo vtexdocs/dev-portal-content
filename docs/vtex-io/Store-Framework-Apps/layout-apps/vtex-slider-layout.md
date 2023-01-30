@@ -10,7 +10,7 @@ Slider Layout is a flexible solution for building sliders of blocks within VTEX 
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-slider-layout-0.png)
 
->*In order to use the Slider Layout as a substitute to the [Carousel app](https://github.com/vtex-apps/carousel), check out the [Building a Carousel through lists and Slider Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-carousel-using-slider-layout) documentation.*
+>*In order to use the Slider Layout as a substitute to the [Carousel app](https://github.com/vtex-apps/carousel), check out the [Building a Carousel through lists and Slider Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout) documentation.*
 
 ## Integration with Google Analytics Enhanced Ecommerce
 

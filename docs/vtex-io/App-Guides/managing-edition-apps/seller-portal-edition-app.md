@@ -73,7 +73,7 @@ To configure your Edition app, follow these steps:
 
 ### Cloning the repository
 
-1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired VTEX account.
+1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired VTEX account.
 2. To clone this repository run `vtex init`.
 3. Choose the `edition app` option.
 

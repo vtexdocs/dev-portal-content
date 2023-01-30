@@ -39,8 +39,8 @@ Now, you can use all the blocks exported by the `search-result` app. Check out t
 | `search-layout-switcher`       | Enables mobile users to switch between the available layout modes.                                                                                              |
 | `search-not-found-layout`   | Builds the whole search result page structure for scenarios in which no result was fetched. It is rendered whenever users search for a term that doesn't return a product. |                                                      |
 | `gallery`  | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Displays the gallery with all the products found in the search.  |                    |
-| `gallery-layout-switcher` | Logical block that allows users to switch between the available `gallery`'s layouts. To know how to build your search results with multiple layouts, access the [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).  |                           |
-| `gallery-layout-option` | Defines how each layout option should be rendered for users. To know how to build your search results with multiple layouts, access the [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).  |
+| `gallery-layout-switcher` | Logical block that allows users to switch between the available `gallery`'s layouts. To know how to build your search results with multiple layouts, access the [documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).  |                           |
+| `gallery-layout-option` | Defines how each layout option should be rendered for users. To know how to build your search results with multiple layouts, access the [documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).  |
 | `not-found` | Contains a text and a description for the page that was not found in the search. It must be declared as a child of `search-not-found-layout`.  |
 | `search-content`          | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Decides, behind the scenes, which block will be displayed: either the `gallery` block (if products are found) or the `not-found` block (if the selected filters lead to an empty search results page). This means that both `gallery` and `not-found` must be declared as `search-content` children.                    |
 | `store.not-found#search`    | When configured, it displays a `404` error message whenever the server cannot return what the browser request was or when it is configured not to handle that request.  |  
@@ -214,7 +214,7 @@ This allows you to define custom behaviors for each of your store's search pages
 
 Now you can structure the `search-result-layout` or the `search-result-layout.customQuery` blocks. They both necessarily require the `search-result-layout.desktop` as a child. But you can also provide others, such as the `search-result-layout.mobile` and the `search-not-found-layout` props.
 
-According to your store's scenario, structure the `search-result-layout` or the `search-result-layout.customQuery`, by declaring their children and then configuring them using the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout) blocks and their props. For example:
+According to your store's scenario, structure the `search-result-layout` or the `search-result-layout.customQuery`, by declaring their children and then configuring them using the [Flex Layout](https://developers.vtex.com/docs/guides/vtex-flex-layout) blocks and their props. For example:
 
 ```json
 {
@@ -244,7 +244,7 @@ According to your store's scenario, structure the `search-result-layout` or the 
 | ------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
 | `hiddenFacets`      | `object` | Indicates which filters should be hidden. The possible values are in [this table](#the-hiddenfacets-object).                | `undefined`
 | `showFacetQuantity` | `boolean`      | Whether the resulting amount in each filter should appear beside its name on the `filter-navigator.v3` block as (`true`) or (`false`)      | `false`           |
-| `blockClass`        | `string`       | Unique block ID to be used in [CSS customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization#using-the-blockclass-property)                                                                                    | `undefined`              |
+| `blockClass`        | `string`       | Unique block ID to be used in [CSS customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization#using-the-blockclass-property)                                                                                    | `undefined`              |
 | `trackingId` | `string` | ID to be used in Google Analytics to track store metrics based on the Search Result block. |  `Search result` |
 | `mobileLayout`      | `object` | Controls how the search results page will be displayed to users using the mobile layout. The possible values are in [this table](#the-mobilelayout-object).                                                                                                               | `undefined`              |
 | `defaultGalleryLayout` | `string` | Name of the gallery layout to be used by default in the search results page. This prop is required when several layouts are explicitly defined by the `gallery` block. This prop's value must match the layout name defined in the `name` prop from `layouts` object. |  `undefined` |
@@ -282,7 +282,7 @@ According to your store's scenario, structure the `search-result-layout` or the 
 
 ### Using the Flex Layout to build your search results page
 
-With the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout) app and the other blocks also exported by the Search Results app, such as the `gallery`, it's time for you to build your search results page!
+With the [Flex Layout](https://developers.vtex.com/docs/guides/vtex-flex-layout) app and the other blocks also exported by the Search Results app, such as the `gallery`, it's time for you to build your search results page!
 
 Find below the available blocks to build your store's search results page and their existing props as well.
 
@@ -290,13 +290,13 @@ Find below the available blocks to build your store's search results page and th
 
 The `gallery` block defines how fetched items should be displayed on the store's search results page.
 
-When declared with no props, it expects the [`product-summary.shelf`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) as a child and consequently the block structure inherited from it.
+When declared with no props, it expects the [`product-summary.shelf`](https://developers.vtex.com/docs/guides/vtex-product-summary) as a child and consequently the block structure inherited from it.
 
 However, it is possible to use the `layouts` prop to provide several layouts to the page, allowing your store to have different arrangements of items according to what best fits your users' needs.
 
 In a scenario where multiple layouts are provided, your store users will be able to shift between them according to their needs using the `gallery-layout-switcher` block, described in [the table below](#the-gallery-layout-switcher-props). The `gallery` will then render the component provided by the currently selected layout.
 
-To understand how to build your search results with multiple layouts using the `layouts` prop, access the [**documentation**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).
+To understand how to build your search results with multiple layouts using the `layouts` prop, access the [**documentation**](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).
 
 ##### The `gallery-layout-switcher` props
 
@@ -431,7 +431,7 @@ This block renders a filter selector for the fetched results.
 | Prop name | Type                      | Description                                                                                       | Default value |
 | --------- | ------------------------- | ------------------------------------------------------------------------------------------------- | ------------- |
 | `categoryFiltersMode`  | `enum` | Whether the category filters should use the `href` attribute with the category pages' URLs (`href`) or not (`default`). By default, the filters use HTML divs with `role="link"`. You may change this behavior by setting this prop's value to `href`, thereby creating a link building to improve the SEO ranking of your category pages. | `default`  |
-| `layout`  | `enum` | Whether the **Filter Navigator** layout should be responsive (`responsive`) or not (`desktop`). You may use `desktop` when the **Filter Navigator** is configured to display in a [drawer](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-drawer). | `responsive`  |
+| `layout`  | `enum` | Whether the **Filter Navigator** layout should be responsive (`responsive`) or not (`desktop`). You may use `desktop` when the **Filter Navigator** is configured to display in a [drawer](https://developers.vtex.com/docs/guides/vtex-store-drawer). | `responsive`  |
 | `maxItemsDepartment` | `number`                 | Maximum number of departments to be displayed before the **See More** button is triggered.          | `8`             |
 | `maxItemsCategory`   | `number`                 | Maximum number of category items to be displayed before the **See More** button is triggered.     | `8`             |
 | `initiallyCollapsed` | `boolean` | Makes the search filters start out collapsed (`true`) or open (`false`). | `false` |
@@ -557,7 +557,7 @@ The `sidebar-close-button` block is the `Close` button rendered on the top right
 
 ## Customization
 
-To apply CSS customization in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).
+To apply CSS customization in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).
 
 | CSS handles                           |
 | ------------------------------------- |

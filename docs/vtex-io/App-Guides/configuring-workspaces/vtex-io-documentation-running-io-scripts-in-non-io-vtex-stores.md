@@ -34,15 +34,15 @@ git clone https://github.com/vtex-apps/app-scripts-example
 4. In the `/scripts` folder, delete the example files and save your own `.ts` scripts.
 5. In the `/scripts` folder, open the `loader.json` file, and edit it by declaring in which page each script must be executed following the instructions provided in the [Configuring the `loader.json` file](#configuring-the-loaderjson-file) section.
 6. Open the admin of the account you're using to develop your app, and follow the instructions provided in the [Importing scripts](#importing-scripts) section, considering a development workspace.
-7. Once everything is set up, use the terminal and the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/) to log in to the VTEX Account that you are using to develop your VTEX IO *Scripts App*.
+7. Once everything is set up, use the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/) to log in to the VTEX Account that you are using to develop your VTEX IO *Scripts App*.
 8. Run `vtex use {workspace}` to use a developer environment.
 
 >⚠️ Remember to replace the values between the curly brackets according to your scenario.
 
 9. Run `cd app-scripts-example` to go to the local app directory.
-10. Run `vtex link` to [link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) your new app to your development workspace.
+10. Run `vtex link` to [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) your new app to your development workspace.
 11. Check the pages for which you implemented your scripts.
-12. Once you're happy with the changes, update your *Scripts app* `docs/README.md` file as instructed in [Documenting your app](#documenting-your-app). Therefore, follow our documentation on [making your new app version publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available/) to run your app on master.
+12. Once you're happy with the changes, update your *Scripts app* `docs/README.md` file as instructed in [Documenting your app](#documenting-your-app). Therefore, follow our documentation on [making your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available/) to run your app on master.
 
 ## Step 2 - Implementing your scripts in the desired account
 

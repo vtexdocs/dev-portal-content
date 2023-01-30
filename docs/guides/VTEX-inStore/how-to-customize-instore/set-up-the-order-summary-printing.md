@@ -53,6 +53,6 @@ The next step is to configure the printer on inStore. Make sure you follow the i
 [block:callout]
 {
   "type": "info",
-  "body": "To connect a printer to the inStore system, it is necessary to have a pair of VTEX credentials (AppKey and AppToken) with the appropriate access permissions. Read this [Authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) guide to learn more about these credentials.\n\nWe recommend that the role linked to these credentials is `inStore Sales Person`. However, a profile with access to more Admin modules, such as `Admin Super`, can also be used."
+  "body": "To connect a printer to the inStore system, it is necessary to have a pair of VTEX credentials (AppKey and AppToken) with the appropriate access permissions. Read this [Authentication](https://developers.vtex.com/docs/guides/getting-started-authentication) guide to learn more about these credentials.\n\nWe recommend that the role linked to these credentials is `inStore Sales Person`. However, a profile with access to more Admin modules, such as `Admin Super`, can also be used."
 }
 [/block]

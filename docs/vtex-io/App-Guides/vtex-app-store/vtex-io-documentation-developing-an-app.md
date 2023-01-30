@@ -8,11 +8,11 @@ updatedAt: "2022-12-13T20:17:44.583Z"
 
 In this guide, you will learn how to develop an app using the VTEX IO platform. You will be presented with some core concepts of the platform and guided through the necessary steps to have a running application in VTEX IO.
 
-[VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io) is a cloud-native development platform that allows you to develop web storefronts, custom admin apps, and backend integrations for VTEX.
+[VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is a cloud-native development platform that allows you to develop web storefronts, custom admin apps, and backend integrations for VTEX.
 
 ## Before you start
 
-Make sure to install the [VTEX IO CLI (Command Line Interface) in your machine](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install).
+Make sure to install the [VTEX IO CLI (Command Line Interface) in your machine](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 
 Any development in VTEX IO begins and ends with our CLI (Command Line Interface). VTEX IO's CLI allows you to perform any action necessary to your app development process, such as linking local files to the VTEX platform, managing workspaces, and releasing new app versions.
 
@@ -24,14 +24,14 @@ When developing an app in VTEX IO, you can start one from scratch or use one of 
 
 | Boilerplate name | Description |
 | ---------------------- | ---------------- |
-| `graphql-example` | Implements a [VTEX IO service with GraphQL resolvers](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-service-configuration-apps#if-you-are-developing-a-graphql-app). |
+| `graphql-example` | Implements a [VTEX IO service with GraphQL resolvers](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps#if-you-are-developing-a-graphql-app). |
 | `payment-provider-example` | Implements a [Payment-Provider protocol](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-protocol) |
 | `admin-example` | Implements an admin app that adds a menu button to the admin sidebar and navigation via parameter example. |
 | `store` | Implements the basic structure of a VTEX Store Framework storefront. |
-| `service-example` | Implements a [VTEX IO service](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-service-configuration-apps) with HTTP route handlers. |
+| `service-example` | Implements a [VTEX IO service](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps) with HTTP route handlers. |
 | `render-guide` | Guide repository for an app with all common patterns in app development, such as pagination and editing entities. |
-| `edition app` | Creates an an [Edition app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-edition-app). |
-| `react-guide` | Creates a frontend app with React. See… [react app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io). |
+| `edition app` | Creates an an [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app). |
+| `react-guide` | Creates a frontend app with React. See… [react app](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io). |
 | `checkout-ui-settings` | Guide repository for the Checkout UI Settings app, responsible for A/B testing in your store's scripts, in addition to the possibility of quick rollbacks for old scripts, i.e., scripts of older Checkout UI Settings app's versions. |
 | `service-worker-example` | Guide repository for apps that enable service-worker builder to expose Service Worker. |
 | `admin-ui-example` | Guide repository for Admin apps for the admin v4 with the admin-ui design system. |
@@ -56,11 +56,11 @@ vtex init
 
 Once you have [cloned the boilerplate repository](#cloning-the-boilerplate-repository-to-your-local-files) into your local files, let's learn how to make it your own by editing the **`manifest.json`** file.
 
-> ℹ️ The `manifest.json` file saves essential information about a VTEX IO app, such as its name, version, vendor, description, dependencies, etc. It is the core communication of your app with the VTEX IO platform.  For more information, see the [Manifest article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest).
+> ℹ️ The `manifest.json` file saves essential information about a VTEX IO app, such as its name, version, vendor, description, dependencies, etc. It is the core communication of your app with the VTEX IO platform.  For more information, see the [Manifest article](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 1. Open the boilerplate project you started in [the previous step](#cloning-the-boilerplate-repository-to-your-local-files) in any code editor of your choice.
 
-2. Open the `manifest.json` file and look at the primary information that it provides, such as in the [Manifest article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest).
+2. Open the `manifest.json` file and look at the primary information that it provides, such as in the [Manifest article](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 3. Change the following fields according to your scenario:
 
@@ -76,9 +76,9 @@ Once you have [cloned the boilerplate repository](#cloning-the-boilerplate-repos
 
 4. Go to the **`builders`** prop and add the ones that make sense for your app project.
 
-> ℹ️  A Builder defines the nature of an app. If you are developing a frontend app, you'll probably want to use the `react` builder. Instead, if you're developing a backend integration, you'll probably want to use the `node` or `dotnet` builder. In summary, a builder is responsible for processing, validating, and forwarding a given block of code to a runtime or a framework capable of executing it. Notice that an app can have as many builders as you want. That allows bundling front and backend development and delivering your solution with just one package. Please refer to the [Builders article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders) for more information.
+> ℹ️  A Builder defines the nature of an app. If you are developing a frontend app, you'll probably want to use the `react` builder. Instead, if you're developing a backend integration, you'll probably want to use the `node` or `dotnet` builder. In summary, a builder is responsible for processing, validating, and forwarding a given block of code to a runtime or a framework capable of executing it. Notice that an app can have as many builders as you want. That allows bundling front and backend development and delivering your solution with just one package. Please refer to the [Builders article](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) for more information.
 
-5. Install the [dependencies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-dependencies) and [peer dependencies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-peerdependencies) necessary for your app to properly work by relying on VTEX IO apps and other apps, respectively.
+5. Install the [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies) and [peer dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-peerdependencies) necessary for your app to properly work by relying on VTEX IO apps and other apps, respectively.
 
 6. Save your changes.
 
@@ -92,7 +92,7 @@ In this step, you will create a  a development workspace to perform the necessar
 
 This step will guarantee that your VTEX account is in sync with the VTEX IO development platform and allow you to manage the development and publishing of the app.
 
-1. Once installed the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install), log in to your VTEX account with the following command:
+1. Once installed the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install), log in to your VTEX account with the following command:
 
 ```sh
 vtex login {accountName}
@@ -108,12 +108,12 @@ vtex login {accountName}
 
 #### Creating a development workspace
 
-When using VTEX IO, any development must happen in a [workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace).
+When using VTEX IO, any development must happen in a [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace).
 
 > ℹ️ **Workspaces** are environments isolated from one another. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your app’s live version or other developers' work.
-> Refer to the [Workspace article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace) for more information.
+> Refer to the [Workspace article](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) for more information.
 
-To start developing, you have to create a [Development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace) in your VTEX account. When you log in, you automatically use the Master workspace, which means you are in the version available to the end-user.
+To start developing, you have to create a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) in your VTEX account. When you log in, you automatically use the Master workspace, which means you are in the version available to the end-user.
 
 1. Run the `vtex use` command in your terminal as shown below:
 
@@ -149,53 +149,53 @@ After that, every change can be seen in your browser in real-time, and you can a
 
 Now that you have created your app and it is already live in your development workspace, here are some options of what you can do next:
 
-- [Manage application logs](https://developers.vtex.com/vtex-developer-docs/docs/managing-application-logs): keep track of errors, warnings, and informative events with VTEX IO logging service.
+- [Manage application logs](https://developers.vtex.com/docs/guides/managing-application-logs): keep track of errors, warnings, and informative events with VTEX IO logging service.
 
-- [Run A/B tests](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-running-native-ab-testing): Optimize your store's conversion rates by running A/B tests.
+- [Run A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing): Optimize your store's conversion rates by running A/B tests.
 
-- [Release a new app version](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-releasing-a-new-app-version): Release a new app version If you’re sure about all the code changes that you’ve done to your app in a development workspace.
+- [Release a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version): Release a new app version If you’re sure about all the code changes that you’ve done to your app in a development workspace.
 
-- [Create a Production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace): Create a Production workspace to test in a user traffic environment the changes you performed in a development workspace Once you are sure of your changes performed in the Development workspace with traffic.
+- [Create a Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace): Create a Production workspace to test in a user traffic environment the changes you performed in a development workspace Once you are sure of your changes performed in the Development workspace with traffic.
 
-- [Promote a workspace to Master](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-promoting-a-workspace-to-master): Promoting a workspace to Master marks the final step to make an app publicly available to end-users.
+- [Promote a workspace to Master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master): Promoting a workspace to Master marks the final step to make an app publicly available to end-users.
 
 ### Developing for the VTEX App Store
 
 If you are developing an app that will be distributed to the [VTEX App Store](https://apps.vtex.com/) make sure to check the following guidelines:
 
-- [Engineering Guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-engineering-guidelines) - The Engineering guidelines are your go-to guides to learn the coding standards to develop an app using the VTEX IO infrastructure, such as scalability, performance, security and data privacy.
+- [Engineering Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines) - The Engineering guidelines are your go-to guides to learn the coding standards to develop an app using the VTEX IO infrastructure, such as scalability, performance, security and data privacy.
 
-- [User experience guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-design-guidelines) -  Learn how you can design an app to meet the VTEX App Store requirements.
+- [User experience guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines) -  Learn how you can design an app to meet the VTEX App Store requirements.
 
 - Business Guidelines -  The Business Guidelines are divided in two:
-  - [App monetization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-app-monetization): Learn the types of business models for your app.
+  - [App monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization): Learn the types of business models for your app.
 
-  - [Marketing assets](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-marketing-assets): Learn how to prepare the assets to market the app in the VTEX App Store.
+  - [Marketing assets](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets): Learn how to prepare the assets to market the app in the VTEX App Store.
 
 ## Related Articles
 
 ### Concepts
 
-- [Manifest](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest#vendor)
+- [Manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#vendor)
 
-- [Builders](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders)
+- [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders)
 
-- [Dependencies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-dependencies)
+- [Dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies)
 
-- [Workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace/)
+- [Workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/)
 
 ### Tutorials
 
-- [Developing Storefront apps](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io)
+- [Developing Storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io)
 
-- [Developing Pixel Apps](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-1-developnativeintegrationswithpixelapps)
+- [Developing Pixel Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps)
 
 ### Guides
 
-- [Installing the VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install)
+- [Installing the VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install)
 
-- [Linking an app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app)
+- [Linking an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app)
 
-- [Service](https://developers.vtex.com/vtex-developer-docs/docs/back-end-development-guides)
+- [Service](https://developers.vtex.com/docs/guides/back-end-development-guides)
 
 - [Developing services on VTEX IO](https://learn.vtex.com/docs/course-service-course-lang-en)

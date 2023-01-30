@@ -6,7 +6,7 @@ createdAt: "2020-06-03T16:02:44.331Z"
 updatedAt: "2022-12-13T20:17:44.874Z"
 ---
 
-Since [**Flex Layout**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout) is a structure that allows the construction of custom layouts according to the concept of **rows** and **columns**, it basically can be used to build any desired store page.
+Since [**Flex Layout**](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout) is a structure that allows the construction of custom layouts according to the concept of **rows** and **columns**, it basically can be used to build any desired store page.
 
 In this recipe, we will learn how to use it in a practical case, building an **About Us** page from scratch just as the one below:
 
@@ -84,7 +84,7 @@ Let's define our `flex-layout.col#text-about-us` block:
 
 > ℹ *The `flex-layout.col#text-about-us` block is going to display its child dependencies in an interface, from top to bottom, one after the other.*
 
-The `preventVerticalStretch` prop prevents the column from occupying 100% of its parent's height when set as `true`. You can use other custom row props, which can be found in the [Flex Layout documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout/).
+The `preventVerticalStretch` prop prevents the column from occupying 100% of its parent's height when set as `true`. You can use other custom row props, which can be found in the [Flex Layout documentation](https://developers.vtex.com/docs/guides/vtex-flex-layout/).
 
 ### Final results
 

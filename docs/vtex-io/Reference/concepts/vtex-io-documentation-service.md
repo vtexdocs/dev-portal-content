@@ -7,7 +7,7 @@ updatedAt: "2022-12-13T20:17:44.904Z"
 ---
 A service is a piece of code used to run .NET and Node.js on VTEX servers. This way, services allow VTEX IO apps to export HTTP routes, GraphQL resolvers, and event handlers to the server.
 
-By setting the `node` or `dotnet` [builders](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders) in your app's [`manifest.json`](https://developers.vtex.com/vtex-developer-docs/docs/manifest) file, VTEX IO apps can export services just like themes and store blocks.
+By setting the `node` or `dotnet` [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) in your app's [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file, VTEX IO apps can export services just like themes and store blocks.
 
 > ℹ️ It's also possible to export GraphQL services, using the `graphql` builder. Check the [vtex.graphql-example](https://github.com/vtex-apps/graphql-example) app to see how it's done.
 

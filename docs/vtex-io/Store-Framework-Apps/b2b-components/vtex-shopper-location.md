@@ -20,7 +20,7 @@ This app also supports white label sellers selection, allowing shoppers to selec
 
 ## Configuration
 
-1. Using [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install `vtex.shopper-location` in the desired account.
+1. Using [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install `vtex.shopper-location` in the desired account.
 
 2. In your account's admin dashboard, go to **Apps > My Apps** and click the `Settings` button for Shopper Location.
 

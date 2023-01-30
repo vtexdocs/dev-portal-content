@@ -9,12 +9,12 @@ The Rich Text block converts texts written in Markdown to HTML and displays it i
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-rich-text-0.png)
 
-For example, the text `[Help](https://developers.vtex.com/vtex-developer-docs/docs/welcome).\n**Be Bold!**\n*This is italic*` is converted to:
+For example, the text `[Help](https://developers.vtex.com/docs/guides/welcome).\n**Be Bold!**\n*This is italic*` is converted to:
 
 ```html
 <div>
       <p>
-        <a href="https://developers.vtex.com/vtex-developer-docs/docs/welcome">
+        <a href="https://developers.vtex.com/docs/guides/welcome">
          Help
         </a>
         <br />
@@ -47,7 +47,7 @@ Please refer to the [Markdown Documentation](https://www.markdownguide.org/cheat
   "props": {
     "textAlignment": "CENTER",
     "textPosition": "CENTER",
-    "text": "Visit our [help](https://developers.vtex.com/vtex-developer-docs/docs/welcome) section.\n**Be Bold!**\n*This is italic*",
+    "text": "Visit our [help](https://developers.vtex.com/docs/guides/welcome) section.\n**Be Bold!**\n*This is italic*",
     "textColor": "c-on-emphasis",
     "font": "t-heading-5",
     "blockClass": "help-message"
@@ -82,7 +82,7 @@ Please refer to the [Markdown Documentation](https://www.markdownguide.org/cheat
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handle |
 | --- |

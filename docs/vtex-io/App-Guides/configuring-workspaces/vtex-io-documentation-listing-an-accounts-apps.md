@@ -10,7 +10,7 @@ While developing in an account, we should be aware of all its installed or linke
 
 ## Step by step
 
-1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installment-and-command-reference#command-reference), log into the desired account;
+1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into the desired account;
 2. Once logged in, run the following command:
 
 ```sh

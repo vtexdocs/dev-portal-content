@@ -40,7 +40,7 @@ To use the category mapping service, follow the steps below, that will be furthe
 
 ### Register the connector in VTEX Mapper
 
-After obtaining the [access keys](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) to operate a VTEX account, the diagram below illustrates the necessary steps to register the connector in VTEX Mapper.
+After obtaining the [access keys](https://developers.vtex.com/docs/guides/getting-started-authentication) to operate a VTEX account, the diagram below illustrates the necessary steps to register the connector in VTEX Mapper.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-integration-catalog-mapping-0.jpg)
 
 1. Use the [Mapper Registration endpoint](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration).

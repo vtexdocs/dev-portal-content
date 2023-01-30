@@ -22,9 +22,9 @@ The decision between private or public must be made even before the application 
 
 Depending on what is chosen, some settings must be made in the `manifest.json` file of the app before its distribution takes place in order to define who can use the app, as well as whether its use will be free or not.
 
-Access the documentation on [Billing Options](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options/) and follow the instructions to perform the needed settings according to the desired scenario for your app distribution.
+Access the documentation on [Billing Options](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options/) and follow the instructions to perform the needed settings according to the desired scenario for your app distribution.
 
-> ℹ️ Remember that [linking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) the app you are working on will not suffice: you will also need to release it, publish it, have it installed in a production workspace for testing and, finally, validate it for *deploy* - as we shall see below.
+> ℹ️ Remember that [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the app you are working on will not suffice: you will also need to release it, publish it, have it installed in a production workspace for testing and, finally, validate it for *deploy* - as we shall see below.
 
 ## Step 2 - Releasing a new version
 
@@ -88,7 +88,7 @@ vtex install appVendor.appName@appVersion
 
 It is finally time to validate your release candidate version!
 
-We strongly recommend you to firstly run a [native A/B test](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-running-native-ab-testing) between the new production workspace and your store's Master workspace in order to check your app stability.
+We strongly recommend you to firstly run a [native A/B test](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) between the new production workspace and your store's Master workspace in order to check your app stability.
 
 >⚠️ If you are working with a beta version and all its settings have already been properly tested, return to the second step of this article to release the stable version of your app.
 
@@ -120,7 +120,7 @@ It is also possible to add your brand new Pixel app in the catalog of the **VTEX
 
 The [VTEX App Store](https://extensions.vtex.com/) is a marketplace for plug&play solutions, and it can be used by any VTEX account interested in making its solutions available to other VTEX accounts as well.
 
-To make your new Pixel app part of our App Store, check out the documentation [Submitting an app in the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store/).
+To make your new Pixel app part of our App Store, check out the documentation [Submitting an app in the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store/).
 
 ---
 
@@ -128,4 +128,4 @@ To make your new Pixel app part of our App Store, check out the documentation [S
 
 Throughout this track, you have learned all the necessary steps to develop from scratch a native integration between your VTEX store and third party solutions using the VTEX IO platform.
 
-To understand more about the platform's development possibilities, don't forget to access the rest of our [**documentation**](https://developers.vtex.com/vtex-developer-docs/docs)!
+To understand more about the platform's development possibilities, don't forget to access the rest of our [**documentation**](https://developers.vtex.com/docs/guides)!

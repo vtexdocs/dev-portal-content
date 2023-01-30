@@ -121,7 +121,7 @@ After creating the specification, you need to add value - or values - to it. You
 [block:callout]
 {
   "type": "warning",
-  "body": "You can only create specification values for the Combo and Radio specification types. To add value to the other specification types, check the section of [Associating a Specification to a Product](https://developers.vtex.com/vtex-developer-docs/docs/how-to-create-a-specification#to-a-product) of this guide."
+  "body": "You can only create specification values for the Combo and Radio specification types. To add value to the other specification types, check the section of [Associating a Specification to a Product](https://developers.vtex.com/docs/guides/how-to-create-a-specification#to-a-product) of this guide."
 }
 [/block]
 Use the [Create Specification Value](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-specification-value) endpoint to create the specification value. You need to add the `FieldId` in the request body. To get the ID of the specification you created, use the [Get Specifications By Category ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-specification-category) endpoint.

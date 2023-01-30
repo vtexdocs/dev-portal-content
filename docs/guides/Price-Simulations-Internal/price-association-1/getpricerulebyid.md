@@ -71,20 +71,12 @@ updatedAt: "2021-02-03T20:48:37.681Z"
 
 ## Request examples and their responses
 
----
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"id\": \"25cacc61-a66e-11ea-8343-0a541e315519\",\n    \"orderType\": \"res\",\n    \"state\": \"RJ\",\n    \"pricetable\": \"ale2\",\n    \"email\": null\n}",
-      "language": "curl",
-      "name": "200 - OK"
-    },
-    {
-      "code": "<!doctype html>\n<html>\n\n<head>\n\t<script>\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName[s](0), j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-MB9QMPT');\n\t</script>\n\t<title>VTEX ID Authentication</title>\n\t<meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\">\n\t<link rel=\"stylesheet\" href=\"//io.vtex.com.br/front-libs/intlTelInput/intlTelInput.css?x=1\">\n</head>\n\n<body>\n\t<script src=\"//io.vtex.com.br/front-libs/jquery/2.1.3/jquery.min.js\"></script>\n\t<script src=\"//io.vtex.com.br/front-libs/intlTelInput/intlTelInput.js\"></script>\n\t<script>\n\t\twindow.vtex = {};window.vtex.conciergeData = {\"accountName\":\"b2bstore\",\"environment\":\"stable\"};\n\t</script>\n\t<script src=\"//io.vtex.com.br/vtex-id-ui/3.20.1/vtexid.min.js\"></script>\n\t<script>\n\t\t$(function(){vtexid.start({returnUrl: vtexid.getReturnUrl()|| vtexid.getRedirectUrl() || \"/\",canClose: false});});\n\t</script>\n</body>\n\n</html>",
-      "language": "curl",
-      "name": "200 - OK"
-    }
-  ]
+  "id":1,
+  "orderType": "Resale",
+  "state": "ES",
+  "pricetable": "pricetable1",
+  "email": "email@email.com"
 }
-[/block]
+```

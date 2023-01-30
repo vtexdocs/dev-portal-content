@@ -6,7 +6,7 @@ createdAt: "2020-06-03T16:02:44.330Z"
 updatedAt: "2022-12-13T20:17:44.730Z"
 ---
 
-By default, the [SKU selector](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-skuselector) component uses **thumbnail images of SKU** when rendered.
+By default, the [SKU selector](https://developers.vtex.com/docs/guides/vtex-store-components-skuselector) component uses **thumbnail images of SKU** when rendered.
 
 ![sku-selector-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-0.png)
 

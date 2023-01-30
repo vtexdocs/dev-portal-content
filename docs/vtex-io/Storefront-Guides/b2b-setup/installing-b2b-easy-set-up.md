@@ -11,10 +11,10 @@ B2B Easy Set Up is an app that helps you quickly get your store configured for B
 
 ## Installation
 
-1. Download and install the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
-2. [Log in to your account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-1---logging-in-to-your-vtex-account) with `vtex login {accountName}`.
-3. [Create a new workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-2---creating-your-own-workspace) with `vtex use easysetupworkspace`.
-4. [Install the app on your store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) with `vtex install vtex.easy-setup`.
+1. Download and install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+2. [Log in to your account](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-1---logging-in-to-your-vtex-account) with `vtex login {accountName}`.
+3. [Create a new workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio#step-2---creating-your-own-workspace) with `vtex use easysetupworkspace`.
+4. [Install the app on your store](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) with `vtex install vtex.easy-setup`.
   
 >❗ We strongly advise that you **do not run Easy Setup on a production environment**. It will make **irreversible changes** and may delete some previous configurations on your store.
   
@@ -43,9 +43,9 @@ When the configuration is complete, you will receive a positive feedback on the 
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-b2b-easy-set-up-2.PNG)
 
-> ℹ️️ If you get an error message for some of the resources, try again this time only selecting the troublesome resources. If the error persists, [contact support](https://support.vtex.com/hc/en-us/requests).
+> ℹ️️ If you get an error message for some of the resources, try again this time only selecting the troublesome resources. If the error persists, [contact support](https://support.vtex.com/hc/en-us).
 
-Check out the [Resources](https://developers.vtex.com/vtex-developer-docs/docs/installing-b2b-easy-set-up#resources) section below for details on the sample data used by the app in the initial setup.
+Check out the [Resources](https://developers.vtex.com/docs/guides/installing-b2b-easy-set-up#resources) section below for details on the sample data used by the app in the initial setup.
 
 ## Resources
 
@@ -615,4 +615,4 @@ This resource updates the **Logistics** module using sample docks, warehouse and
 
 ### Organizations
 
-This resource creates Master Data schemas that are necessary to set up **Roles and Permissions** in your store's Admin, as described in [this guide](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#create-master-data-schemas).
+This resource creates Master Data schemas that are necessary to set up **Roles and Permissions** in your store's Admin, as described in [this guide](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#create-master-data-schemas).

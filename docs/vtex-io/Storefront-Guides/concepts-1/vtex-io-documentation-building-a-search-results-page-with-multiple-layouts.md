@@ -13,11 +13,11 @@ Your results presentation on the search results page doesn't need to be always t
 
 The flexibility to offer multiple layouts, which can help the sales tax rates by enhancing the shopping experience, is at hands! Check out the step-by-step section below.
 
-> ⚠️ To obtain successful results with this recipe, it is strongly recommended to understand previously how the [Flex Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout) and the [Search Result](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) apps work. We also advise you to go through the [Building a Horizontal Product Summary recipe](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-horizontal-product-summary) to achieve similar results on your search results page.
+> ⚠️ To obtain successful results with this recipe, it is strongly recommended to understand previously how the [Flex Layout](https://developers.vtex.com/docs/guides/vtex-flex-layout) and the [Search Result](https://developers.vtex.com/docs/guides/vtex-search-result) apps work. We also advise you to go through the [Building a Horizontal Product Summary recipe](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-horizontal-product-summary) to achieve similar results on your search results page.
 
 ## Step by step
 
-1. Implement the Search Result app in your Store Theme according to the instructions in the [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result/).
+1. Implement the Search Result app in your Store Theme according to the instructions in the [documentation](https://developers.vtex.com/docs/guides/vtex-search-result/).
 2. Declare the `gallery` block responsible for structuring the page layout, use its `layouts` prop to define the desired layouts for the search results page. For example:
 
 ```json
@@ -148,7 +148,7 @@ Once you define the `list` and `grid` layouts, declare which blocks you should u
 }
 ```
 
-> ℹ️ As seen above, each `gallery-layout-option` block receives the `name` prop with the name of the layout it corresponds to - this is a **mandatory** prop. In addition to this, you can also declare other blocks as its children and customize the selected layout option using the `galleryLayoutOptionButton--selected` [CSS Handle](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization/).
+> ℹ️ As seen above, each `gallery-layout-option` block receives the `name` prop with the name of the layout it corresponds to - this is a **mandatory** prop. In addition to this, you can also declare other blocks as its children and customize the selected layout option using the `galleryLayoutOptionButton--selected` [CSS Handle](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization/).
 
 5. Add the `gallery-layout-switcher` block as a child of the `search-result-layout.mobile` and `search-result-layout.desktop` blocks to display the switcher button on the page for both devices (mobile and desktop). For example:
 
@@ -173,4 +173,4 @@ Once you define the `list` and `grid` layouts, declare which blocks you should u
 }
 ```
 
-6. [Deploy your theme changes](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public).
+6. [Deploy your theme changes](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).

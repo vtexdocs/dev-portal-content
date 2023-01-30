@@ -66,11 +66,11 @@ Check out a list with all the GTM available tags on the [Google Developer Guide]
 
 ### Persisting campaign data across user navigation
 
-VTEX IO’s page routing system requires a special configuration in the Google Tag Manager container to maintain the [Google Tag Manager (GTM)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager)  session identifier. Without the configuration, the GTM detects that the campaign data is no longer in the URL and It creates a new session without the data, leading to inconsistent Google Analytics (GA) campaign data.
+VTEX IO’s page routing system requires a special configuration in the Google Tag Manager container to maintain the [Google Tag Manager (GTM)](https://developers.vtex.com/docs/guides/vtex-google-tag-manager)  session identifier. Without the configuration, the GTM detects that the campaign data is no longer in the URL and It creates a new session without the data, leading to inconsistent Google Analytics (GA) campaign data.
 
 To persist campaign data across user navigation you must add the variable `OriginalLocation` to your GTM container and configure your store’s Google Analytics tags to persist campaign data correctly and prevent GTM from creating additional sessions when a user navigates the website. Follow the step-by-step below to add the variable and persist the campaign data during user navigation.
 
-> ⚠️ *The variable, `OriginalLocation`, is already available by the VTEX app (versions 2.x or 3.x). If you have another Google Tag Manager app installed, we strongly recommend using [The VTEX Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-google-tag-manager#configuration) to use the variable.*
+> ⚠️ *The variable, `OriginalLocation`, is already available by the VTEX app (versions 2.x or 3.x). If you have another Google Tag Manager app installed, we strongly recommend using [The VTEX Google Tag Manager app](https://developers.vtex.com/docs/guides/vtex-google-tag-manager#configuration) to use the variable.*
 
 ### Step-by-step
 

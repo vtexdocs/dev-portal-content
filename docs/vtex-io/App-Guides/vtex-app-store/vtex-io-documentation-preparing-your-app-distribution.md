@@ -8,25 +8,25 @@ updatedAt: "2022-12-13T20:17:44.658Z"
 
 This guide will teach you how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution.
 
-Notice that every app goes through a homologation process before being available at the VTEX App Store. During this process, our team ensures the apps follow the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Hence, be sure to review these guidelines while you develop and prepare your app for distribution.
+Notice that every app goes through a homologation process before being available at the VTEX App Store. During this process, our team ensures the apps follow the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Hence, be sure to review these guidelines while you develop and prepare your app for distribution.
 
 ## Before you start
 
 Before proceeding, make sure you have already:
 
-1. Developed your app. Please refer to the [Developing an app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app) guide for more information.
+1. Developed your app. Please refer to the [Developing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app) guide for more information.
 
-2. Registered as [VTEX App Store developer](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer).
+2. Registered as [VTEX App Store developer](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer).
 
 ## Step by step
 
 ### Step 1 - Preparing your app billing options
 
-After developing your app, you must establish whether your app will be charged or not and whether it will be public or private on the VTEX IO platform. To set up these options, please refer to the [Setting your app's billing model](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-your-apps-billing-model) guide. Also, check the [App Monetization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-app-monetization) guidelines for more information on this topic.
+After developing your app, you must establish whether your app will be charged or not and whether it will be public or private on the VTEX IO platform. To set up these options, please refer to the [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model) guide. Also, check the [App Monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization) guidelines for more information on this topic.
 
 ### Step 2 - Setting the `public` folder
 
-After establishing your app's billing model, you must set up the marketing assets (e.g., icons, images, and descriptions) that will compose your app's page on the VTEX App Store. During this step, please refer to our [Marketing](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-business-guidelines-marketing-assets) guidelines.
+After establishing your app's billing model, you must set up the marketing assets (e.g., icons, images, and descriptions) that will compose your app's page on the VTEX App Store. During this step, please refer to our [Marketing](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets) guidelines.
 
 ![App Page on the VTEX App Store](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-preparing-your-app-distribution-0.gif)
 
@@ -129,6 +129,6 @@ The files in this folder must be available in English, Spanish, and Portuguese i
 
 ### Step 3 - Publishing and deploying your app on the VTEX IO development platform
 
-If you are comfortable with your new app and marketing content, follow the [Making your new app version publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available) guide to deploy your changes.
+If you are comfortable with your new app and marketing content, follow the [Making your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide to deploy your changes.
 
-After deploying your app's latest version, follow the [Submitting your app to the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store) guide.
+After deploying your app's latest version, follow the [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store) guide.

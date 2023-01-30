@@ -13,10 +13,10 @@ updatedAt: "2022-10-21T13:19:52.868Z"
 All VTEX stores have a native Checkout UI ready to be used from the beginning of their operations on the platform. However, if the merchant wants to change some features on this UI, VTEX also offers the option of customizing the Checkout. See the links below for useful information and apps to customize your store’s Checkout UI.
 
 * [Checkout customization guide](https://developers.vtex.com/vtex-rest-api/docs/checkout-customization-guide)
-* [Checkout UI Custom App](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-custom-v0)
-* [Checkout UI Settings App](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings)
+* [Checkout UI Custom App](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0)
+* [Checkout UI Settings App](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings)
 * [Checkout Settings (B2B)](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings)
-* [Customizing the Header and Footer blocks by page](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page)
+* [Customizing the Header and Footer blocks by page](https://developers.vtex.com/docs/guides/vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page)
 * [Customize checkout confirmation pages](https://developers.vtex.com/vtex-rest-api/docs/customize-checkout-confirmation-pages)
 * [Enable an Observation field on the Checkout page](https://developers.vtex.com/vtex-rest-api/docs/enable-an-observation-field-on-the-checkout-page)
 * [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/vtex-rest-api/docs/layout-development-guide-for-payment-methods-in-smart-checkout-vtex)
@@ -32,7 +32,7 @@ The architecture of VTEX Checkout is organized in such a way that the main data 
 
 * [OrderForm overview](https://developers.vtex.com/docs/guides/orderform-fields)
 * [Set a discount using the Checkout API](https://developers.vtex.com/vtex-rest-api/docs/set-a-discount-using-the-checkout-api)
-* [Enabling the orderForm optimization - Store Framework only](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-enabling-order-form-optimization)
+* [Enabling the orderForm optimization - Store Framework only](https://developers.vtex.com/docs/guides/vtex-io-documentation-enabling-order-form-optimization)
 * [GET- Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration)
 * [POST - Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration)
 * [POST - Clear orderForm messages](https://developers.vtex.com/vtex-rest-api/reference/clearorderformmessages)
@@ -69,8 +69,8 @@ In the marketplace context, you can check the seller's database to find out whic
 
 In your store, you can perform various actions related to the shopping cart, including adding security items, simulating carts, modifying item quantities, etc. See the links below for useful information and endpoints related to the handle the shopping cart in your store.
 
-* [Minicart - Configuration & Customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-minicart)
-* [ADD TO CART Button](https://developers.vtex.com/vtex-developer-docs/docs/vtex-add-to-cart-button#configuration)
+* [Minicart - Configuration & Customization](https://developers.vtex.com/docs/guides/vtex-minicart)
+* [ADD TO CART Button](https://developers.vtex.com/docs/guides/vtex-add-to-cart-button#configuration)
 * [reCAPTCHA](https://developers.vtex.com/vtex-rest-api/docs/recaptcha)
 * [Implementing reCAPTCHA in integrations](https://developers.vtex.com/vtex-rest-api/docs/implementing-recaptcha-in-integrations)
 * [Enable the Manual Price](https://developers.vtex.com/vtex-rest-api/docs/enable-the-manual-price)
@@ -130,10 +130,10 @@ When your store sells products to many regions or has stocks in different locati
 
 At VTEX checkout, some features are activated through apps. See the links below to access information about the apps available for your store's checkout.
 
-* [Setting up Google Tag Manager](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-tag-manager#creating-variables)
-* [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-migrating-google-tag-manager-app#before-you-start)
-* [Hotjar App - Website Heatmaps & Behavior Analytics Tools](https://developers.vtex.com/vtex-developer-docs/docs/vtex-hotjar)
-* [PowerReviews App - UGC (User Generated Content) Ratings & Reviews Tool](https://developers.vtex.com/vtex-developer-docs/docs/vtex-powerreviews)
+* [Setting up Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager#creating-variables)
+* [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app#before-you-start)
+* [Hotjar App - Website Heatmaps & Behavior Analytics Tools](https://developers.vtex.com/docs/guides/vtex-hotjar)
+* [PowerReviews App - UGC (User Generated Content) Ratings & Reviews Tool](https://developers.vtex.com/docs/guides/vtex-powerreviews)
 <br>
 Hotjar heatmap example:
 

@@ -20,12 +20,12 @@ We recommend that you use it alongside the other apps in the [B2B Suite](https:/
 
 ## Before you start
 
-Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
+Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
 
 
 ## Installation
 
-You can install the app by running `vtex install vtex.storefront-permissions-ui` in your terminal, using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+You can install the app by running `vtex install vtex.storefront-permissions-ui` in your terminal, using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
 After this command, the app will be installed in your VTEX Admin, and you can access it on **Account Settings** > **Storefront Permissions**.
 
@@ -69,7 +69,7 @@ In the following table, you can see the available storefront roles, their key us
 
 If you only want users with roles that have the required permissions to be able to access determined parts of the content in your storefront, you can also configure conditional blocks in your store’s theme. These types of blocks allow you to validate information in order to display or hide content in your storefront.
 
-In case you need more information on how to start building your own theme, read our [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-1-basicsetup) before you proceed.
+In case you need more information on how to start building your own theme, read our [documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-basicsetup) before you proceed.
 
 If you are experienced in developing and customizing your store’s theme, follow the steps below to declare the conditional blocks enabled by **Storefront Permissions UI**.
 

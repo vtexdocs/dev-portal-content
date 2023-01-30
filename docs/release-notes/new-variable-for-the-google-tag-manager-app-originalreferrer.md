@@ -18,4 +18,4 @@ With the variable `originalReferrer`, Google Analytics can identify and maintain
 
 ## What needs to be done?
 
-Go to the [Setting up Google Tag Manager documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-tag-manager#creating-the-original-location-and-original-referrer-variables) and see how you can create the variable `originalReferrer`.
+Go to the [Setting up Google Tag Manager documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager#creating-the-original-location-and-original-referrer-variables) and see how you can create the variable `originalReferrer`.

@@ -6,11 +6,11 @@ createdAt: "2022-10-21T16:59:43.420Z"
 updatedAt: "2022-10-21T16:59:43.420Z"
 ---
 
-The Catalog Images app provides REST and [GraphQL](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-7-consuming-data#understanding-graphql) APIs for users to save or delete catalog images on File Manager without overriding images with the same name.
+The Catalog Images app provides REST and [GraphQL](https://developers.vtex.com/docs/guides/vtex-io-documentation-7-consuming-data#understanding-graphql) APIs for users to save or delete catalog images on File Manager without overriding images with the same name.
 
 ## Installation
 
-Using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your desired account and workspace and run the following command to install the Catalog Images app:
+Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your desired account and workspace and run the following command to install the Catalog Images app:
 
 ```
 vtex install vtex.catalog-images@0.x 
@@ -21,7 +21,7 @@ Once the installation is confirmed, you can use the Catalog Images app's resourc
 
 ## Authentication
 
-First, you must have an appKey and appToken to use as authentication headers in this application’s requests. Read [Authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) for more information on how to obtain these credentials.
+First, you must have an appKey and appToken to use as authentication headers in this application’s requests. Read [Authentication](https://developers.vtex.com/docs/guides/getting-started-authentication) for more information on how to obtain these credentials.
 
 Using your appKey and appToken, make the following API request to obtain a local token, which is required by the app. Replace `{{accountName}}` with your VTEX account name and `{{my_appkey}}` and `{{my_apptoken}}` with their respective values.
 

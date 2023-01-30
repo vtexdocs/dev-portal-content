@@ -12,7 +12,7 @@ This guide covers the basics of how to identify session changes from a specific 
 
 > ℹ️ Learn more about the [Session manager](https://help.vtex.com/tutorial/using-session-manager-to-track-browsing-sessions-in-vtex-stores--1pA0tqsD4BFnJYhQ7ORQBd) and check the [Session manager API reference](https://developers.vtex.com/vtex-rest-api/reference/session-manager-api-overview).
 
-To see a real application of session management, see the [Cart cleanup guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-cleaning-cart-data-on-log-out).
+To see a real application of session management, see the [Cart cleanup guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-cleaning-cart-data-on-log-out).
 
 ## Session manager API
 
@@ -27,7 +27,7 @@ This will show the session available for your navigation.
 
 ### Bootstrapping
 
-> ⚠️ The [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) already has a list of templates you can use to start any project, such as Services, Admin apps, React Apps, among others. If you already have an App and only want to include this feature, skip this and go to the next step.
+> ⚠️ The [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) already has a list of templates you can use to start any project, such as Services, Admin apps, React Apps, among others. If you already have an App and only want to include this feature, skip this and go to the next step.
 
 1. Open your terminal after installing our CLI, navigate to your preferred folder, and type `vtex init.`
    You will see the following options:
@@ -47,7 +47,7 @@ This will show the session available for your navigation.
 
 That's it for your bootstrap, it should be running.
 
-> ℹ️ If you are not familiar with VTEX IO **workspaces**, please take a minute to read the [Basic development setup guide for VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basic-development-setup-in-vtex-io).
+> ℹ️ If you are not familiar with VTEX IO **workspaces**, please take a minute to read the [Basic development setup guide for VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basic-development-setup-in-vtex-io).
 
 ### Configuring vtex.session
 

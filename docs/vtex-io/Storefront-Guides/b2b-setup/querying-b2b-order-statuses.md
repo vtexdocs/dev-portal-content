@@ -10,7 +10,7 @@ In a B2B business model, your company and your partners may need to share select
 
 For these scenarios, we recommend that you install and set up the [B2B Orders app](#installing-the-b2b-orders-app) in your VTEX account. By communicating with your Enterprise Resource Planning (ERP), this app allows your business’ customers to securely check their order status at any time they want.
 
-> ⚠️ The B2B Orders app is not compatible with the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B Orders History](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-orders-history) documentation instead.
+> ⚠️ The B2B Orders app is not compatible with the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B Orders History](https://developers.vtex.com/docs/guides/vtex-b2b-orders-history) documentation instead.
 
 Check the following sections for information on the [ERP API requirements](#erp-api-requirements) and on how to [install the B2B Orders app](#installing-the-b2b-orders-app) in your store.
 
@@ -271,7 +271,7 @@ By exposing the `GET` `api/v1/arquivospedido?pedidoErpId={pedidoErpId}&revendaId
 
 Follow the steps below to install the B2B Orders app.
 
-1. Using the terminal and the [Toolbelt](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), [install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the B2B Orders app in the desired workspace by running `vtex install vtex.omnichannel-order-status`.
+1. Using the terminal and the [Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the B2B Orders app in the desired workspace by running `vtex install vtex.omnichannel-order-status`.
 2. In your browser, access your account's admin as in `https://{workspace}--{account}.myvtex.com/admin`. ️Remember to replace `{workspace}` and `{account}` with the workspace and account you are using.
 3. Under **Account Settings**, go to \*\*Apps \*\*> **My apps**.
 4. Look for the **B2B Order** app.

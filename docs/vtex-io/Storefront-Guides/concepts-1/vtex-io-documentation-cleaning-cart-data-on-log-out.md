@@ -6,11 +6,11 @@ createdAt: "2022-04-27T13:50:39.980Z"
 updatedAt: "2022-12-13T20:17:44.280Z"
 ---
 
-The VTEX shopping cart default behavior is to keep the cart alive until an order is placed. When this happens, a new cart is created. If a business rule requires a new cart every time a user logs out, we can use the [Session Watcher](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-collecting-user-session-data) to clear cart information.
+The VTEX shopping cart default behavior is to keep the cart alive until an order is placed. When this happens, a new cart is created. If a business rule requires a new cart every time a user logs out, we can use the [Session Watcher](https://developers.vtex.com/docs/guides/vtex-io-documentation-collecting-user-session-data) to clear cart information.
 
 > ℹ️ It is not possible to get a brand new cart, but we can repurpose the current cart by removing any existing information on it.
 
-This document will guide you on how to use the [Session Watcher app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-collecting-user-session-data) to clean up an existing cart during logout.
+This document will guide you on how to use the [Session Watcher app](https://developers.vtex.com/docs/guides/vtex-io-documentation-collecting-user-session-data) to clean up an existing cart during logout.
 
 ## Clients
 

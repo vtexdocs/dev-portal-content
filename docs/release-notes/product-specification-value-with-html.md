@@ -8,6 +8,6 @@ type: "improved"
 
 ![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/product-specification-value-with-html-0.png)
 
-The product specification value, rendered by the [Product Specification app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-specifications), now processes HTML code, enabling a better migration from CMS to the VTEX IO platform!
+The product specification value, rendered by the [Product Specification app](https://developers.vtex.com/docs/guides/vtex-product-specifications), now processes HTML code, enabling a better migration from CMS to the VTEX IO platform!
 
 > ℹ️ This release is possible thanks to [Samuel Rodrigues](https://github.com/SamuelRodriguess)! Cheers!"

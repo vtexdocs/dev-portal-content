@@ -166,7 +166,7 @@ vtex
 
 ### Troubleshooting
 
-If VTEX IO's CLI is not behaving as expected, run `vtex --version` to make sure you're using the [latest version](https://github.com/vtex/toolbelt/blob/3.x/CHANGELOG.md) available. If not, consider [updating](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-update) it.
+If VTEX IO's CLI is not behaving as expected, run `vtex --version` to make sure you're using the [latest version](https://github.com/vtex/toolbelt/blob/3.x/CHANGELOG.md) available. If not, consider [updating](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-update) it.
 
 If the problem persists, check the following instructions.
 
@@ -174,7 +174,7 @@ If the problem persists, check the following instructions.
   <summary><code>Error: Cannot find module 'vtex'</code></summary>
   <br>
 
-This error is related to [plugins](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-vtex-io-cli-plugins) detached from the VTEX IO's CLI base code.
+This error is related to [plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-vtex-io-cli-plugins) detached from the VTEX IO's CLI base code.
 
 Even though plugins are decoupled from VTEX IO's CLI, they rely on the CLI functionalities. Therefore, this error signalizes that these plugins are failing to access VTEX IO's CLI functionalities.
 

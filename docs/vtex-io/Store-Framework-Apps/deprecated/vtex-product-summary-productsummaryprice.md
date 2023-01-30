@@ -7,9 +7,9 @@ updatedAt: "2022-07-02T00:50:33.015Z"
 ---
 ![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummaryprice-0.png)
 
->⚠️ **The Product Summary Price block has been deprecated in favor of the [Product Price](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-price) app**. Although support for this block is still available, we strongly recommend that you update your store theme with the Product Price app to stay up with the component's evolution.
+>⚠️ **The Product Summary Price block has been deprecated in favor of the [Product Price](https://developers.vtex.com/docs/guides/vtex-product-price) app**. Although support for this block is still available, we strongly recommend that you update your store theme with the Product Price app to stay up with the component's evolution.
 
-`ProductSummaryPrice` is a block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) responsible for rendering the product's price.
+`ProductSummaryPrice` is a block exported by the [Product Summary app](https://developers.vtex.com/docs/guides/vtex-product-summary) responsible for rendering the product's price.
 
 ![price-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummaryprice-1.png)
 
@@ -53,7 +53,7 @@ updatedAt: "2022-07-02T00:50:33.015Z"
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles           |
 | ------------------- |

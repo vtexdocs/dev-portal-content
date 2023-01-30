@@ -20,13 +20,13 @@ Here is a step-by-step guide to this configuration.
 
 1. Create the fields you need in the CRM. This step is only necessary if you want an extra field in addition to those already in your CRM. If this is the case, [access our manual for the maintenance of data entities](https://help.vtex.com/tutorial/how-can-i-create-field-in-master-data).
 2. Create these fields in the HTML of the page determined by the store. The big change here is that a control is no longer used for this, instead, you use an HTML code created by the store or by the agency.
-3. Send the information via [SafeData API](https://developers.vtex.com/vtex-developer-docs/docs/vtex-safedata). See more details below.
+3. Send the information via [SafeData API](https://developers.vtex.com/docs/guides/vtex-safedata). See more details below.
 
 ## Using SafeData to send newsletter information
 
-[SafeData](https://developers.vtex.com/vtex-developer-docs/docs/vtex-safedata) provides a middleware to retrieve and save Master Data (v1 e v2) information directly from the frontend. Learn more with the [SafeData guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-safedata).
+[SafeData](https://developers.vtex.com/docs/guides/vtex-safedata) provides a middleware to retrieve and save Master Data (v1 e v2) information directly from the frontend. Learn more with the [SafeData guide](https://developers.vtex.com/docs/guides/vtex-safedata).
 
-Once you [install the SafeData app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-safedata#getting-started), some endpoints will become available to you, that is very similar to Master Data endpoints. Use a request like the example below to update a user profile to opt-in to the newsletter:
+Once you [install the SafeData app](https://developers.vtex.com/docs/guides/vtex-safedata#getting-started), some endpoints will become available to you, that is very similar to Master Data endpoints. Use a request like the example below to update a user profile to opt-in to the newsletter:
 
 Method
 ```

@@ -45,7 +45,7 @@ The app works on both devices, desktop, and mobile.
   },
 ```
 
-6. [Deploy your changes](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version).
+6. [Deploy your changes](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version).
 
 Once you have deployed your changes, check out the [app's overview on VTEX Admin](#apps-overview-on-vtex-admin) and set up the app on your store's by following the instructions on the [Configuration section below.](#configuration)
 

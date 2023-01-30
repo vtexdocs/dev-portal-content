@@ -25,7 +25,7 @@ Now, follow the [app’s configuration below](#configuration) to show the simila
 
 ## Configuration
 
-1. Using [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the app by running the following:
+1. Using [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the app by running the following:
 
 ```bash
 vtex install vtex.similar-products-variants

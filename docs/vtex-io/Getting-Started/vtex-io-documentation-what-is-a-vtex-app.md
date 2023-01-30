@@ -29,14 +29,14 @@ You can use VTEX Apps to:
 - Connect to VTEX Commerce APIs and integrate with VTEX modules.
 - Integrate third-party solutions to the VTEX IO platform.
 - Extend the native VTEX admin.
-- Enhance storefront components with the [VTEX Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-store-framework).
+- Enhance storefront components with the [VTEX Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework).
 - Speed up connections with Storefront and Admin apps.
 
 ## Developing apps
 
-As a developer, you can develop your own VTEX Apps. VTEX Apps are built and deployed to the VTEX platform with [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io). Hence, by learning VTEX IO, you can create unique digital commerce experiences.
+As a developer, you can develop your own VTEX Apps. VTEX Apps are built and deployed to the VTEX platform with [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io). Hence, by learning VTEX IO, you can create unique digital commerce experiences.
 
-Notice that, besides developing custom solutions for the VTEX ecosystem, you can also publish and share your apps with VTEX merchants on the VTEX App Store, helping them leverage their business. Check out [how to become a registered VTEX App Store developer.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer)
+Notice that, besides developing custom solutions for the VTEX ecosystem, you can also publish and share your apps with VTEX merchants on the VTEX App Store, helping them leverage their business. Check out [how to become a registered VTEX App Store developer.](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer)
 
 ### Types of apps
 
@@ -58,13 +58,13 @@ A VTEX App can also be characterized as:
 
 - [VTEX App Store](https://apps.vtex.com/)
 
-- [Concepts](https://developers.vtex.com/vtex-developer-docs/docs/concepts): VTEX IO concepts.
-- [Developing an app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app): Steps and tools you need to create your app.
+- [Concepts](https://developers.vtex.com/docs/guides/concepts): VTEX IO concepts.
+- [Developing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app): Steps and tools you need to create your app.
 
-- [Preparing your app for distribution](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-preparing-your-app-distribution): Basic requirements to meet before submitting your app to the review process.
+- [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution): Basic requirements to meet before submitting your app to the review process.
 
-- [Best Practices](https://developers.vtex.com/vtex-developer-docs/docs/best-practices): Achieve better results by following VTEX developer's recommendations.
+- [Best Practices](https://developers.vtex.com/docs/guides/best-practices): Achieve better results by following VTEX developer's recommendations.
 
-- [User experience Guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store): Ensure that your app complies with the Business, Design and Engineering guidelines.
+- [User experience Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store): Ensure that your app complies with the Business, Design and Engineering guidelines.
 
-- [Submitting your app to the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store): Submit your app to the VTEX App Store review process.
+- [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store): Submit your app to the VTEX App Store review process.

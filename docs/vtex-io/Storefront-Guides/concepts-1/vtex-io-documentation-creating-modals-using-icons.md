@@ -11,13 +11,13 @@ Let's look at the following scenario: ready to proceed to checkout, a user brows
 
 To your business, it's advantageous to trigger a popup window in this removal icon, requiring user confirmation to complete the action. In a lot of cases, the modal will contribute to an increase in conversion rate.
 
-To build modals in such a scenario using Store Framework, we'll use the [Modal Layout](https://developers.vtex.com/vtex-developer-docs/docs/vtex-modal-layout) block and the icons exported by the [Store Icons](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-icons) app.
+To build modals in such a scenario using Store Framework, we'll use the [Modal Layout](https://developers.vtex.com/docs/guides/vtex-modal-layout) block and the icons exported by the [Store Icons](https://developers.vtex.com/docs/guides/vtex-store-icons) app.
 
 ## Step by step
 
-For this step, we'll take the example given above: let's add a modal to the icon used by the [Minicart](https://developers.vtex.com/vtex-developer-docs/docs/vtex-minicart) to remove product list items.
+For this step, we'll take the example given above: let's add a modal to the icon used by the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart) to remove product list items.
 
-1. Using a [development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace/), open you store's theme using any code editor;
+1. Using a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/), open you store's theme using any code editor;
 2. In the `blocks.json` folder, look for the block responsible for rendering the desired icon. In our example, the minicart icon is the removal one and the block responsible for rendering it is called `remove-button`:
 
 ```json
@@ -53,7 +53,7 @@ For this step, we'll take the example given above: let's add a modal to the icon
 
 >⚠️Looking at our example, the icon we wish to use to trigger the modal is the one for removal. We therefore add the `icon-delete` (exported by the Store Icons app) to the list of `modal-trigger` children. Choose the icon according to your store's scenario.
 
-5. Then, declare the `modal-layout` block along with the `modal-actions` block as a child of the first. You can also declare other blocks you may want to have rendered in the modal, such as a [Rich Text](https://developers.vtex.com/vtex-developer-docs/docs/vtex-rich-text/). For example:
+5. Then, declare the `modal-layout` block along with the `modal-actions` block as a child of the first. You can also declare other blocks you may want to have rendered in the modal, such as a [Rich Text](https://developers.vtex.com/docs/guides/vtex-rich-text/). For example:
 
 ```json
   "modal-layout#confirmation-modal": {
@@ -74,4 +74,4 @@ For this step, we'll take the example given above: let's add a modal to the icon
   },
 ```
 
-7. Once you're happy with the changes, follow our documentation on [making your theme content public](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public/) to make your configurations available to end users.
+7. Once you're happy with the changes, follow our documentation on [making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/) to make your configurations available to end users.

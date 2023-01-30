@@ -34,7 +34,7 @@ Click on the `Try It` button to send the request right from the browser and see 
 
 ## Authentication
 
-To make requests to VTEX APIs you will need to input certain variables to the request's Header. [Read more about it here.](https://developers.vtex.com/docs/getting-started-authentication)
+To make requests to VTEX APIs you will need to input certain variables to the request's Header. [Read more about it here.](https://developers.vtex.com/docs/guides/getting-started-authentication)
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/get-to-know-vtex-apis-6.png)
 
 ## Response

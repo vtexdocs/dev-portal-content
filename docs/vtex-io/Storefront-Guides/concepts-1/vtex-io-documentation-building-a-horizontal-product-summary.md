@@ -6,11 +6,11 @@ createdAt: "2020-12-15T16:28:08.220Z"
 updatedAt: "2022-12-13T20:17:44.651Z"
 ---
 
-The [Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) is a VTEX native app responsible for displaying important product data in your store's components, such as the Shelf and the Minicart.
+The [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary) is a VTEX native app responsible for displaying important product data in your store's components, such as the Shelf and the Minicart.
 
 ![product-summary-vertical](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-horizontal-product-summary-0.png)
 
-Thanks to the [Flex Layout app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout), it is possible to customize the default presentation showed above and thereby display the Product Summary blocks in a **horizontal alignment** to your users:
+Thanks to the [Flex Layout app](https://developers.vtex.com/docs/guides/vtex-flex-layout), it is possible to customize the default presentation showed above and thereby display the Product Summary blocks in a **horizontal alignment** to your users:
 
 ![horizontal-product-summary](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-horizontal-product-summary-1.png)
 
@@ -18,7 +18,7 @@ Learn in the instructions below how to use the powerful combination between the 
 
 ## Step by step
 
-> ℹ️ This recipe requires previous understanding of the [Flex Layout app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-flex-layout). It is strongly advised that you read the app documentation before performing the steps below!
+> ℹ️ This recipe requires previous understanding of the [Flex Layout app](https://developers.vtex.com/docs/guides/vtex-flex-layout). It is strongly advised that you read the app documentation before performing the steps below!
 
 1. Make sure the Flex Layout app has been declared as a theme's dependency in the `manifest.json` file:
 
@@ -51,7 +51,7 @@ Learn in the instructions below how to use the powerful combination between the 
 },
 ```
 
-4. Add the [`product-summary-image` block](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryimage) to the `flex-layout.col#product-image`'s children list and then declare it as desired:
+4. Add the [`product-summary-image` block](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryimage) to the `flex-layout.col#product-image`'s children list and then declare it as desired:
 
 ```json
 "flex-layout.col#product-image": {
@@ -109,4 +109,4 @@ Learn in the instructions below how to use the powerful combination between the 
 }
 ```
 
-6. [Deploy your changes](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public/).
+6. [Deploy your changes](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/).

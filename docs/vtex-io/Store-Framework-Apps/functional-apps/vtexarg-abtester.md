@@ -18,7 +18,7 @@ In the following, you'll learn how to install and use the A/B Tester app.
 
 Take the following steps to install the AB Tester app on your VTEX Admin.
 
-1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired VTEX account.
+1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired VTEX account.
 2. Install the A/B Tester app in the `master` workspace to enable A/B testing on your store website by running:
 
     ```sh
@@ -42,7 +42,7 @@ After installing the AB Tester app, you'll be able to:
 
 ### Creating an A/B test
 
-In the following step by step, you will learn how to set up a new A/B test. Notice that, before proceeding any further, you must already have a [production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace) containing the changes you want to evaluate.
+In the following step by step, you will learn how to set up a new A/B test. Notice that, before proceeding any further, you must already have a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) containing the changes you want to evaluate.
 
 1. Access the VTEX Admin.
 2. Go to **Others > AB Tester**.
@@ -78,4 +78,4 @@ Although automatic, an A/B test will not end by itself. Take the following steps
 
 ## Related Resources
 
-- [Running native A/B tests](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-running-native-ab-testing)
+- [Running native A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing)

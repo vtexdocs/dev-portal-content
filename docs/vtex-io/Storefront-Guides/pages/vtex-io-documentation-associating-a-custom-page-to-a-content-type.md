@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-11-25T15:03:25.441Z"
 updatedAt: "2022-12-13T20:17:44.124Z"
 ---
-In general, the assets of [custom landing pages](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-new-custom-page) are tied to a store URL. However, in some situations, you may want to have those assets associated with a **content type** instead. Content types indicate the nature of a page. For instance, Product Listing Pages (PLPs) and Product Detail Pages (PDPs) are examples of content types.
+In general, the assets of [custom landing pages](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) are tied to a store URL. However, in some situations, you may want to have those assets associated with a **content type** instead. Content types indicate the nature of a page. For instance, Product Listing Pages (PLPs) and Product Detail Pages (PDPs) are examples of content types.
 
 You can create your own content types to manage your website content more easily. For example, you can create a content type named "Store Finder" for the web pages of your site that indicate the cities where your store is located. To associate the assets of these pages with this content type, you need to set up an id value for this content type and use it as a variable in your route paths.
 
@@ -40,7 +40,7 @@ For each page that you want to customize based on your new content type, repeat 
 
 ## URL guidelines
 
-To associate the assets of a [custom landing page](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-new-custom-page) to a content type, you must note the following when creating your page's URL:
+To associate the assets of a [custom landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) to a content type, you must note the following when creating your page's URL:
 
 - Any parameter named `{entity}_id` is recognized as a content type. For example, `finder_id` creates the `${finder}` content type.
 

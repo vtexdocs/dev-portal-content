@@ -152,7 +152,7 @@ In order to see how to use the list of REST APIs go to [Reviews and Ratings API 
 
 ## GraphQL IDE
 In order to see how to use the graphQL queries and mutations you can go through the next steps:
-1. Open the Admin [GraphQL IDE app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-admin-graphql-ide). 
+1. Open the Admin [GraphQL IDE app](https://developers.vtex.com/docs/guides/vtex-admin-graphql-ide). 
 2. Select vtex.reviews-and-ratings app.
 3. Click on `docs` at the top right corner.
 ![reviews-and-ratings-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/public/metadata/images/screenshots/graphQL_docs.png)

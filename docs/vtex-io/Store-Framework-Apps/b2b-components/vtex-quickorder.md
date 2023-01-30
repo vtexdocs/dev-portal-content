@@ -13,7 +13,7 @@ Example of a quick order page:
 
 ## Configuration
 
-1. Using [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the Quickorder app by running `vtex install vtex.quickorder@3.x` in your terminal.
+1. Using [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the Quickorder app by running `vtex install vtex.quickorder@3.x` in your terminal.
 2. Open your store's Store Theme app directory in your code editor.
 3. Add the Quickorder app as a `peerDependency` in the `manifest.json` file:
 
@@ -229,7 +229,7 @@ This scenario also does not require validating the SKUs that you've added to the
 
 ## Customization
 
-In order to apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+In order to apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles                  |
 | ---------------------------- |

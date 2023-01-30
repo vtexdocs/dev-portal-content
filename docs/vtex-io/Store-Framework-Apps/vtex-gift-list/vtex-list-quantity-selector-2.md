@@ -37,7 +37,7 @@ The quantity selector is made up of three blocks `quantity-selector-minicart`, `
 
 ## Customization - "quantity-selector-minicart"
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles |
 | --- |
@@ -48,7 +48,7 @@ To apply CSS customizations in this and other blocks, follow the [Using CSS hand
 
 ## Customization - "quantity-selector-shelf-guest"
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles |
 | --- |
@@ -58,7 +58,7 @@ To apply CSS customizations in this and other blocks, follow the [Using CSS hand
 
 ## Customization - "quantity-selector-shelf-owner-list"
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles |
 | --- |

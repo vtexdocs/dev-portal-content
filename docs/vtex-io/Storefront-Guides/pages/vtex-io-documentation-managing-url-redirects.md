@@ -12,8 +12,8 @@ Check the following sections to learn how to [create](#creating-url-redirects), 
 
 ## Before you start
 
-1. [Install the VTEX IO Command-Line Interface (CLI)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
-2. [Install the `redirects` plugin for the VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins#installing-a-plugin):
+1. [Install the VTEX IO Command-Line Interface (CLI)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+2. [Install the `redirects` plugin for the VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins#installing-a-plugin):
 
   ```sh
   vtex plugins install redirects

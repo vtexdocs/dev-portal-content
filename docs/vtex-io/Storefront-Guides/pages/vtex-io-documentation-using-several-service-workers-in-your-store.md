@@ -60,13 +60,13 @@ function exampleSWInstall() {
 export default 
 ```
 
-7. [Link your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app).
+7. [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app).
 8. Open the store website on your browser and inspect it.
 9. In the `Console` tab, check if a message similar to `[service-worker-example] Install of service worker` is displayed. If positive, the app's service worker development was successful.
 
 > ℹ️ The message's `service-worker-example` text string should be replaced by your app's own name.
 
-10. [Deploy your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-10-making-your-app-publicly-available#validating-the-deploy) when satisfied with the changes performed.
+10. [Deploy your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#validating-the-deploy) when satisfied with the changes performed.
 
 The app's service worker will then be automatically fetched and bundled with others exported by your VTEX account's installed apps as well, provided they are also using the Service Worker builder.
 

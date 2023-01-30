@@ -22,7 +22,7 @@ In the **UI display** column below, you can see where the elements you can hide 
     "h-2": "UI display",
     "0-0": "`print-details`",
     "0-1": "The class you can use to style the `Print order` and the `Reprint receipt` buttons.",
-    "0-2": "![print-order](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/faaeea5-Group_1_25.png)\n\n![reprint-receipt](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/hide-print-order-and-reprint-receipt-buttons-0.png)"
+    "0-2": "![print-order](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-inStore/how-to-customize-instore/faaeea5-Group_1_25.png)\n\n![reprint-receipt](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/hide-print-order-and-reprint-receipt-buttons-0.png)"
   },
   "cols": 3,
   "rows": 1

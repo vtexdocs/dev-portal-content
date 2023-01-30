@@ -11,7 +11,7 @@ Refer to the following guidelines to guarantee the quality and usability of your
 >
 ## Scalability and performance
 
-Use the [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/what-is-vtex-io) infrastructure to build and deploy your extensions. The VTEX IO development platform uses cloud computing to ensure that your app runs without bottlenecks 24/7.
+Use the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) infrastructure to build and deploy your extensions. The VTEX IO development platform uses cloud computing to ensure that your app runs without bottlenecks 24/7.
 
 ### Dos and Don'ts
 
@@ -19,7 +19,7 @@ Use the [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/what-is-v
 
 - Remember that when you offer your app on the VTEX App Store, your app becomes available to brands of all sizes across different time zones and business calendars. In this context, relying on a manual system with on-demand scalability can become a huge risk in terms of performance.
 
-> ℹ️ During the [homologation process](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store), a series of load tests are performed under different conditions to ensure that your application is scalable. This includes, for example, testing the response time of your APIs at request levels similar to those experienced on Black Friday. At any sign of a crash or failure to respond, your app will fail for performance issues.
+> ℹ️ During the [homologation process](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store), a series of load tests are performed under different conditions to ensure that your application is scalable. This includes, for example, testing the response time of your APIs at request levels similar to those experienced on Black Friday. At any sign of a crash or failure to respond, your app will fail for performance issues.
 
 ## Security and data privacy
 
@@ -66,7 +66,7 @@ We value clear, well-formatted and easy-to-read codes. Therefore, please follow 
 
 ### VTEX builders
 
-[Builders](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders) work as an API responsible for configuring other IO services in your app.
+[Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) work as an API responsible for configuring other IO services in your app.
 For developing and publishing apps for the VTEX App Store, the following builders must be up-to-date in your app's code:
 
 - Node builder - version 6.x
@@ -94,7 +94,7 @@ At the authentication level, take the following requirements
 
 - Use user authentication or an app token to communicate with other VTEX services instead of a key pair.
 
-- Never import other libraries to handle external HTTP requests. It is mandatory to use the [VTEX IO clients](https://developers.vtex.com/vtex-developer-docs/docs/how-to-use-and-create-clients-on-vtex-io) for this type of communication.
+- Never import other libraries to handle external HTTP requests. It is mandatory to use the [VTEX IO clients](https://developers.vtex.com/docs/guides/how-to-use-and-create-clients-on-vtex-io) for this type of communication.
 
 ## Plug&Play
 
@@ -114,7 +114,7 @@ Every app in the VTEX App Store must:
 
 ## Documentation
 
-While [developing your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app) and [preparing the app for distribution](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-preparing-your-app-distribution), make sure to provide official documentation that supports future users in implementing and understanding your app.
+While [developing your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app) and [preparing the app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution), make sure to provide official documentation that supports future users in implementing and understanding your app.
 
 The app documentation should include:
 

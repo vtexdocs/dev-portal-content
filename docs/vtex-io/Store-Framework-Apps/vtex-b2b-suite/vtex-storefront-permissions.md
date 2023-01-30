@@ -36,19 +36,19 @@ In the following table, you can see the available storefront roles, their key us
 
 It also allows you to configure available permissions when developing your own app, associate them with the predefined roles, and have these permissions checked by other applications – if you perform the steps described in the [Advanced app integration](#advanced-app-integration-optional) section.
 
-The **Storefront Permissions** app does not contain an interface – it operates “backstage”, storing the predefined roles and serving as a bridge to communicate with other apps in order to check user permissions. If you would like to manage roles and app permissions using the VTEX Admin interface, you must also install the [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui) app. As an optional feature, you can install the [Admin Customers](https://developers.vtex.com/vtex-developer-docs/docs/vtex-admin-customers) app for additional customer management capabilities.
+The **Storefront Permissions** app does not contain an interface – it operates “backstage”, storing the predefined roles and serving as a bridge to communicate with other apps in order to check user permissions. If you would like to manage roles and app permissions using the VTEX Admin interface, you must also install the [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui) app. As an optional feature, you can install the [Admin Customers](https://developers.vtex.com/docs/guides/vtex-admin-customers) app for additional customer management capabilities.
 
 
 ## Before you start
 
-Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
+Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
 
-If you opt to develop your own app and [integrate](#advanced-app-integration-optional) it with **Storefront Permissions**, read our documentation on [Developing an app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app).
+If you opt to develop your own app and [integrate](#advanced-app-integration-optional) it with **Storefront Permissions**, read our documentation on [Developing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app).
 
 
 ## Installation
 
-You can install the app by running `vtex install vtex.storefront-permissions` in your terminal, using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+You can install the app by running `vtex install vtex.storefront-permissions` in your terminal, using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
 
 ## Advanced app integration [optional]
@@ -103,10 +103,10 @@ If you would like to develop your own app and integrate it with **Storefront Per
     | `features` | array of objects | List of features related to your app – the functionalities of your app that you want to set permissions for users to be able to access or not. |
     |  ⤷  | object | Object containing information about each feature of your app. |
     |    ⤷ `label` | string | Name or description of the feature. |
-    |    ⤷ `value` | string | Identifier key you want to use for the feature, as used in your app’s [custom storefront components](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-custom-storefront-components). Do not use space or special characters in this field. |
+    |    ⤷ `value` | string | Identifier key you want to use for the feature, as used in your app’s [custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components). Do not use space or special characters in this field. |
     |    ⤷ `roles` | array of strings | List with the keys for all the roles you want to associate with the permission to use the feature by default. You can find more information about each role and its key in the [Available Storefront Roles section](#available-storefront-roles) of this documentation. |
 
-5. Make sure you refer to the `value` – the identifier key – for each feature you want to set permissions for in your [custom storefront components](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-custom-storefront-components)’ code, when developing your app.
+5. Make sure you refer to the `value` – the identifier key – for each feature you want to set permissions for in your [custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components)’ code, when developing your app.
 
     Example: in the B2B Organizations app, one of the permissions created is represented by the following object.
 

@@ -28,7 +28,7 @@ For this scenario, check the following step by step.
 
 ## Step by Step
 
-Using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) and the terminal, log in to the account correspondent to the `vendor` of the app going to be deprecated and run the following command:
+Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) and the terminal, log in to the account correspondent to the `vendor` of the app going to be deprecated and run the following command:
 
 ```sh
 vtex deprecate {appvendor}.{appname}@{appversion}

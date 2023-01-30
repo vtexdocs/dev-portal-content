@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-06-09T14:48:52.814Z"
 updatedAt: "2022-07-02T00:50:32.983Z"
 ---
-Product Summary Attachment is the block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) responsible for rendering the [attachment](https://help.vtex.com/en/tutorial/o-que-e-um-anexo--aGICk0RVbqKg6GYmQcWUm) options available for a product.
+Product Summary Attachment is the block exported by the [Product Summary app](https://developers.vtex.com/docs/guides/vtex-product-summary) responsible for rendering the [attachment](https://help.vtex.com/en/tutorial/o-que-e-um-anexo--aGICk0RVbqKg6GYmQcWUm) options available for a product.
 
 ![att-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummaryattachmentlist-0.png)
 
@@ -39,7 +39,7 @@ After adding the `product-summary-attachment-list` block to your store theme, us
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles  |
 | ------------ |

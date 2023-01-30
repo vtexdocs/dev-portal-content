@@ -372,7 +372,7 @@ Now that you have a new connector ready to be used, you can test it entirely in 
 [/block]
 A prerequisite for this procedure is to have products for sale at your store for testing. To place an order with your new connector:
 
-1. Launch a beta version of your connector. E.g.: `vtex.payment-provider-test@0.1.0-beta`. If you need, check the [Making your app publicly available article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
+1. Launch a beta version of your connector. E.g.: `vtex.payment-provider-test@0.1.0-beta`. If you need, check the [Making your app publicly available article](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
 2. Install the beta version on `master` workspace. Wait for around 1 hour.
 3. Go to `https://{account}.myvtex.com/admin/pci-gateway/#/affiliations/{connector-name}/`. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
    ![Payment affiliation configuration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-framework-0.png)
@@ -395,10 +395,10 @@ A prerequisite for this procedure is to have products for sale at your store for
 [block:callout]
 {
   "type": "warning",
-  "body": "If you want to make your connector available to all accounts, make sure to have the `billingOptions` field in your manifest with the value `free`. More information about this field can be found in the [Billing Options article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options)."
+  "body": "If you want to make your connector available to all accounts, make sure to have the `billingOptions` field in your manifest with the value `free`. More information about this field can be found in the [Billing Options article](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options)."
 }
 [/block]
-The publication process is made via the [app store](https://apps.vtex.com/). More info on how to do that can be found in the [Submitting your app to the VTEX App Store article](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
+The publication process is made via the [app store](https://apps.vtex.com/). More info on how to do that can be found in the [Submitting your app to the VTEX App Store article](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
 
 After that, you need to [open a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en) informing them that the integration was completed. However, before opening the ticket, make sure you have the following information:
 

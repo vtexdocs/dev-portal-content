@@ -7,7 +7,7 @@ updatedAt: "2022-12-13T20:17:45.061Z"
 ---
 For development, an app can be linked to a **development workspace** so that any local code change can be automatically synced and made available in that corresponding workspace.
 
->⚠️ Linking an app to a [production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace) is not possible.
+>⚠️ Linking an app to a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) is not possible.
 
 ## Step by step
 
@@ -39,4 +39,4 @@ Once your local files are uploaded and synced to your development environment, y
 
 Notice that the synced app will only be available within the specified development workspace.
 
-If you are comfortable with your changes and want to make your changes publicly available, please refer to [this](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available) guide.
+If you are comfortable with your changes and want to make your changes publicly available, please refer to [this](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide.

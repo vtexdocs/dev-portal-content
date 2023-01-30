@@ -18,9 +18,9 @@ Find out how to configure the `markers` prop in the step-by-step below.
 
 ## Step by step
 
-> ℹ️ Before going through the steps, make sure that the block in which you are working accepts the `markers` prop. You can check this in its <a href="https://developers.vtex.com/vtex-developer-docs/docs/overview-5/">documentation</a>.
+> ℹ️ Before going through the steps, make sure that the block in which you are working accepts the `markers` prop. You can check this in its <a href="https://developers.vtex.com/docs/guides/overview-5/">documentation</a>.
 
-1. Using your terminal and [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired VTEX in a [Development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace/).
+1. Using your terminal and [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired VTEX in a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/).
 2. Access the directory where your store's theme is stored and open it using your code editor.
 3. Once the theme's code is open, add the `markers` prop to the desired block and give it a unique value. For example:
 
@@ -34,7 +34,7 @@ Find out how to configure the `markers` prop in the step-by-step below.
 },
 ```
 
-4. Save your changes and [link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) the app.
+4. Save your changes and [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app/) the app.
 5. Using the Developer workspace you were previously working in, access the admin of the VTEX account in which your are working (`{workspaceName}--{accountName}.myvtex.com/admin`).
 6. Then, open the admin's Site Editor in the CMS module.
 7. Select the block in which the `markers` prop was added during step 3;
@@ -52,6 +52,6 @@ Find out how to configure the `markers` prop in the step-by-step below.
 ![product-price-markers-inspect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message-1.png)
 *Notice that the message's HTML element is wrapped in a new `span` with its own unique selector: `<span class="vtex-product-price-1-x-savings-discount">`.*
 
-If you are happy with the changes to your store theme, make your new theme content public. Up until this point, only you could see the changes performed using the `markers` prop in your Development workspace. Access our documentation on [Making your theme content publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public/) and follow the steps detailed there.
+If you are happy with the changes to your store theme, make your new theme content public. Up until this point, only you could see the changes performed using the `markers` prop in your Development workspace. Access our documentation on [Making your theme content publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/) and follow the steps detailed there.
 
-Once your changes are publicly available, meaning they are reflected in your store's Master workspace, you will be able to use the new identifier created for the HTML element and customize it at will. Access the recipe on [customizing your store using CSS Handles](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization/) for more on this customization topic.
+Once your changes are publicly available, meaning they are reflected in your store's Master workspace, you will be able to use the new identifier created for the HTML element and customize it at will. Access the recipe on [customizing your store using CSS Handles](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization/) for more on this customization topic.

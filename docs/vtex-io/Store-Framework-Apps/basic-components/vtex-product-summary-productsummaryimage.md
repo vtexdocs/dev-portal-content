@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-06-09T14:48:52.826Z"
 updatedAt: "2022-07-02T00:50:33.284Z"
 ---
-`product-summary-image` is a block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) that renders the product's image.
+`product-summary-image` is a block exported by the [Product Summary app](https://developers.vtex.com/docs/guides/vtex-product-summary) that renders the product's image.
 
 ![foto-product-summary-image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummaryimage-0.png)
 
@@ -113,7 +113,7 @@ The `width`, `height`, `aspectRatio` and `maxHeight` props use the [responsive v
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles |
 | :----------:|

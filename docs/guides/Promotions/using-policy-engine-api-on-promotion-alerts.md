@@ -12,7 +12,7 @@ This guide will describe all the steps to [create](#creating-a-promotion-alert),
 
 ## Creating a Promotion Alert
 
-To create a new promotion alert, you should use the [Create Policy](https://developers.vtex.com/vtex-rest-api/reference/policy#policy_createorupdate) endpoint. Let us take a scenario: you want to be alert on Slack if products from the brand *Easy Cosmetics* are sold with a discount greater than 40%. To do so, you should create conditions to check unusual prices or promotions.
+To create a new promotion alert, you should use the [Create Policy](https://developers.vtex.com/docs/api-reference/policies-system-api#post-/api/policy-engine/policies/-id-) endpoint. Let us take a scenario: you want to be alert on Slack if products from the brand *Easy Cosmetics* are sold with a discount greater than 40%. To do so, you should create conditions to check unusual prices or promotions.
 
 ### Setting up the `actions`
 

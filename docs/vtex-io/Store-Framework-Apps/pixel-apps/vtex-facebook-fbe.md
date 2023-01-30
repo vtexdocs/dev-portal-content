@@ -377,7 +377,7 @@ The event captured by the frontend will start the conversions API in the backend
 [/block]
 Recommendations: 
 
-- Make sure to use `/api/io` in the URL to proxy the app on [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io).
+- Make sure to use `/api/io` in the URL to proxy the app on [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
 - The parameter `eventID` sent on the front-end and back-end must be exactly the same to promote a correct deduplication between browser and server events.
 
 ## Disconnecting from FBE

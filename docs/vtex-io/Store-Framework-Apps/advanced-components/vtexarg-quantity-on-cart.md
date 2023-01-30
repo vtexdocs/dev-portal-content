@@ -6,7 +6,7 @@ createdAt: "2022-04-25T13:13:25.281Z"
 updatedAt: "2022-04-25T13:13:25.281Z"
 ---
 
-The **Quantity on Cart** app allows you to display a message to your customers informing how many units of a product they have added to the cart. This message can be displayed in a [Shelf](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-shelf) or in a product page.
+The **Quantity on Cart** app allows you to display a message to your customers informing how many units of a product they have added to the cart. This message can be displayed in a [Shelf](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-shelf) or in a product page.
 
 ![app-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-quantity-on-cart-0.gif)
 
@@ -30,7 +30,7 @@ vtex install vtexarg.quantity-on-cart
 }
 ```
 
-5. Add the `quantity-on-cart` block to other theme block using a product context since the `quantity-on-cart` block handles product data, such as the `store.product`or the [`product-summary.shelf`](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary-productsummaryshelf#configuration). For the example below, we have added to the `product-summary.shelf`:
+5. Add the `quantity-on-cart` block to other theme block using a product context since the `quantity-on-cart` block handles product data, such as the `store.product`or the [`product-summary.shelf`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryshelf#configuration). For the example below, we have added to the `product-summary.shelf`:
 
 ```json
   {
@@ -52,7 +52,7 @@ After step 5, no further configuration is needed, and the app is ready to use in
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+To apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles |
 | ----------- |

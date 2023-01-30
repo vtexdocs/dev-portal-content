@@ -15,7 +15,7 @@ Finally, you may want to remove your landing page from the *default binding*. Fo
 
 Before proceeding any further with this step-by-step:
 
-- Create your custom landing pages as presented in [this](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-new-custom-page) guide.
+- Create your custom landing pages as presented in [this](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) guide.
 - [Check your account's binding ids](https://developers.vtex.com/docs/checking-your-stores-binding-id) and keep the returned data with you.
 
 It's also worth noting that **this technique only works if the custom pages were created via the CMS** rather than the Store Theme.
@@ -137,10 +137,10 @@ Once you run this mutation, you'll remove the page related to the specified `{UR
 
 ## Next steps
 
-- [Indicating alternate versions of localized pages in cross border stores](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores)
+- [Indicating alternate versions of localized pages in cross border stores](https://developers.vtex.com/docs/guides/vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores)
 
 ## Related resources
 
 - [Binding](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W?&utm_source=autocomplete)
-- [Creating a new custom page](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-new-custom-page)
-- [Cross-border stores](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-cross-border-stores)
+- [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page)
+- [Cross-border stores](https://developers.vtex.com/docs/guides/vtex-io-cross-border-stores)

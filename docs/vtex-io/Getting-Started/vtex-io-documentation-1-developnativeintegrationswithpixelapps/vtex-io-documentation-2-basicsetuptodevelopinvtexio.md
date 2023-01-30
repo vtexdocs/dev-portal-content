@@ -18,7 +18,7 @@ In this part of the tutorial, you will:
 
 Any development in VTEX IO begins and ends with the **VTEX IO CLI**, which works as a communication gateway between your store and the VTEX IO development platform. With VTEX IO’s CLI, you can use the terminal to log in to your VTEX account, manage workspaces, develop apps, and install new ones.
 
-1. Install the VTEX IO CLI on your machine by following [this guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install).
+1. Install the VTEX IO CLI on your machine by following [this guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 2. Check if the installation was successful by running `vtex`.
 
 ### Step 2 - Logging in to your VTEX account
@@ -39,7 +39,7 @@ After installing the VTEX IO CLI in your machine, take the following steps to lo
 
 ### Step 2 - Creating a development workspace
 
-When developing with VTEX IO, you'll use different [**workspaces**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace/). Workspaces are environments isolated from one another. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your store's live version or other developers' work.
+When developing with VTEX IO, you'll use different [**workspaces**](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/). Workspaces are environments isolated from one another. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your store's live version or other developers' work.
 
 When you log in to a VTEX account using the VTEX IO CLI, you are automatically in the **master** workspace, which is the version of your store available to end-users. Hence, to avoid changing your store's live version, you must create a **development workspace**.
 

@@ -63,8 +63,8 @@ We recommend you consider your desired data structure in this context before sta
 
 To create a [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) app, follow these steps:
 
-1. Use the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) command `vtex init` to copy the [service-example](https://github.com/vtex-apps/service-example) boilerplate files to your computer.
-2. Add the Master Data builder to your [manifest file](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-manifest).
+1. Use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) command `vtex init` to copy the [service-example](https://github.com/vtex-apps/service-example) boilerplate files to your computer.
+2. Add the Master Data builder to your [manifest file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 ```json
     …
@@ -72,7 +72,7 @@ To create a [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u
     …
 ```
 
-3. Add the following [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies) to your app’s `manifest.json` file:
+3. Add the following [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) to your app’s `manifest.json` file:
 
 ```json
 [{

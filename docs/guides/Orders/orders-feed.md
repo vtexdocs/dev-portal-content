@@ -186,7 +186,7 @@ You should validate the events of the configured expression before implementing 
 
 - [The API endpoint for JSONata Testing](https://developers.vtex.com/vtex-rest-api/reference/testjsonataexpression);
 - [JSONata Exerciser](https://try.jsonata.org/) which tests the expression against a real JSON file. To perform this test copy the order to JSONata Exerciser and simulate different expressions and requests. Use an order extracted from the [Get Order API endpoint](https://developers.vtex.com/vtex-rest-api/reference/getorder).
-- Configure a test feed or hook with a test [appkey](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication) and validate that the events meet what was expected.
+- Configure a test feed or hook with a test [appkey](https://developers.vtex.com/docs/guides/getting-started-authentication) and validate that the events meet what was expected.
 
 ##### `disableSingleFire`
 
@@ -288,7 +288,7 @@ The Orders Feed can be useful in lots of different ways. For instance, say you w
 
 ![feedFlow-min](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-feed-0.png)
 
-Access this [backoffice order integration guide](https://developers.vtex.com/vtex-developer-docs/docs/erp-integration-set-up-order-integration) to learn more about how you can integrate VTEX’s order Feed with an ERP.
+Access this [backoffice order integration guide](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) to learn more about how you can integrate VTEX’s order Feed with an ERP.
 
 ## Hook
 
@@ -422,4 +422,4 @@ Therefore we recommend the Hook for larger and more complex operations, which te
 
 On the other hand, the Feed requires active retriving and commiting items in the queue. This means the integration has control over how many order updates it receives, knowing how much data it needs to be able to handle at any given time. Because of this it is less likely that the integration crashes or misses updates on the queue.
 
-To learn more, see this guide on [order integration with ERP](https://developers.vtex.com/vtex-developer-docs/docs/erp-integration-set-up-order-integration) and the API reference for the [Feed v3](https://developers.vtex.com/vtex-rest-api/reference/feed-v3) and the [Hook](https://developers.vtex.com/vtex-rest-api/reference/order-hook-1).
+To learn more, see this guide on [order integration with ERP](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) and the API reference for the [Feed v3](https://developers.vtex.com/vtex-rest-api/reference/feed-v3) and the [Hook](https://developers.vtex.com/vtex-rest-api/reference/order-hook-1).

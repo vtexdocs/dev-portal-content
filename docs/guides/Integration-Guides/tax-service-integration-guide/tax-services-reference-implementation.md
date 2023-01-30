@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-09-01T16:37:40.098Z"
 updatedAt: "2021-02-09T15:29:07.345Z"
 ---
-This is an example of the implementation described in this [recipe](https://developers.vtex.com/vtex-developer-docs/docs/tax-services-recipe).
+This is an example of the implementation described in this [recipe](https://developers.vtex.com/docs/guides/tax-services-recipe).
 [block:parameters]
 {
   "data": {

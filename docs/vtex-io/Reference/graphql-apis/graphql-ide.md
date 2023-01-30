@@ -40,7 +40,7 @@ GraphQL ecosystem is growing fast and powerful tools, such as Graph*i*QL, maximi
 
 ## Installing GraphQL IDE
 
-1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your VTEX account.
+1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your VTEX account.
 
 2. Run `vtex use {workspaceName} --production` to use a production workspace or [create a production workspace](https://vtex.io/docs/recipes/development/creating-a-production-workspace/) from scratch.
 

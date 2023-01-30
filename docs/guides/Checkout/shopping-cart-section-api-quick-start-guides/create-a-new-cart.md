@@ -25,7 +25,7 @@ After making the call, the endpoint will return the response body containing the
 }
 [/block]
 
-> ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+> ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 
 ## Accessing shopping cart information
 

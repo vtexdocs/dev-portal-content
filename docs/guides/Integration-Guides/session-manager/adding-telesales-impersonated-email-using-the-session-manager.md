@@ -41,7 +41,7 @@ yarn global add vtex
 [block:callout]
 {
   "type": "info",
-  "body": "Learn more about [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference)."
+  "body": "Learn more about [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference)."
 }
 [/block]
 Once the CLI is installed, log into your store by running the command:

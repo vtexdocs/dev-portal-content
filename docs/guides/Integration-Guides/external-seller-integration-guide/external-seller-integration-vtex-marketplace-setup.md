@@ -51,6 +51,6 @@ Check out the Help Center documentation to get the complete explanation on how t
 
 Every private API request to the VTEX system requires authentication through a pair of appKey and appToken. So you will need to create these credentials before you can start building the integration.
 
-Read the [Authentication guide](https://developers.vtex.com/docs/getting-started-authentication#section-creating-the-appkey-and-apptoken) to learn how to create and use the appKey and appToken.
+Read the [Authentication guide](https://developers.vtex.com/docs/guides/getting-started-authentication#section-creating-the-appkey-and-apptoken) to learn how to create and use the appKey and appToken.
 
 Once the authentication credentials are created, keep the appKey / appToken pair stored in a safe place until you can securely share it with the external seller.

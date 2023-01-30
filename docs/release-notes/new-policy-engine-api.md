@@ -14,6 +14,6 @@ The [Policy Engine API](https://developers.vtex.com/vtex-rest-api/reference/poli
 - get [Get Policy List](https://developers.vtex.com/vtex-rest-api/reference/policy#policy_list)
 - post [Evaluate Policies](https://developers.vtex.com/vtex-rest-api/reference/policy#policy_evaluate)
 - get [Get Policy by ID](https://developers.vtex.com/vtex-rest-api/reference/policy#policy_get)
-- post [Create Policy](https://developers.vtex.com/vtex-rest-api/reference/policy#policy_createorupdate)
+- post [Create Policy](https://developers.vtex.com/docs/api-reference/policies-system-api#post-/api/policy-engine/policies/-id-)
 - put [Update Policy](https://developers.vtex.com/vtex-rest-api/reference/policy#put_api-policy-engine-policies-id)
 - delete [Delete Policy by ID](https://developers.vtex.com/vtex-rest-api/reference/policy#policy_delete)

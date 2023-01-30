@@ -7,20 +7,20 @@ updatedAt: "2022-12-13T20:17:44.058Z"
 ---
 We understand that *site performance* is a common concern among e-commerce stores since it directly impacts the number of visited pages, sales conversion rate, user session time, bounce rate, and more.
 
-Thus, to help you guarantee the success of your brand's online presence, we'll teach you, in the following step by step, how to test and implement our [recommendations for optimizing your store's performance](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance).
+Thus, to help you guarantee the success of your brand's online presence, we'll teach you, in the following step by step, how to test and implement our [recommendations for optimizing your store's performance](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance).
 
 ## Step by step
 
 ## Step 1: Applying changes on a production workspace
 
-1. Using the terminal and the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired account by running `vtex login {account}`.
-2. Run the command `vtex use {productionWorkspace}` to create and use a **new** [Production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace/).
+1. Using the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired account by running `vtex login {account}`.
+2. Run the command `vtex use {productionWorkspace}` to create and use a **new** [Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/).
 
 >⚠️ Remember to replace the values between the curly braces according to your scenario.
 
 3. Using your browser, access the account's admin relative to that workspace.
 4. From the account's admin panel, go to *Store Setup > CMS > Store > Advanced*.
-5. Now, considering our documentation on [Best practices for optimizing performance](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance), activate the desired features, and save the changes.
+5. Now, considering our documentation on [Best practices for optimizing performance](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance), activate the desired features, and save the changes.
 6. Access your store in the current workspace that you're working in and check if the performance improvements were applied.
 
 > ℹ️ Keep in mind that it might take some time before some changes are applied.

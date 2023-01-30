@@ -66,7 +66,7 @@ Follow the instructions below to display the user widget.
      },
    ```
 
-4. Publish and install the modified store theme. You can follow our documentation on [Making your theme content public](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public) to do so.
+4. Publish and install the modified store theme. You can follow our documentation on [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public) to do so.
 
 ## Configuration
 
@@ -83,7 +83,7 @@ If we have more than one associated organization:
 
 ## Customization
 
-In order to apply CSS customizations in this and other apps, follow the instructions on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other apps, follow the instructions on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 CSS handles are available for the **Organization Request Form** component and the **User Widget** component.
 
@@ -178,7 +178,7 @@ The **B2B Organizations** app adds the following functionalities and components 
 </tbody>
 </table>
 
-> ℹ️ This app can also be used together with [B2B Quotes](https://developers.vtex.com/vtex-developer-docs/docs/vtex-orderquote), allowing order quotes to be managed at the organization level. Please read our B2B Quotes documentation for more details.
+> ℹ️ This app can also be used together with [B2B Quotes](https://developers.vtex.com/docs/guides/vtex-orderquote), allowing order quotes to be managed at the organization level. Please read our B2B Quotes documentation for more details.
 
 ### VTEX Admin
 

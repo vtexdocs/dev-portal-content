@@ -40,7 +40,7 @@ Keep it simple. Components with several functionalities tend to mislead users on
 
 ### Native-first
 
-Before developing a custom component from scratch, make sure VTEX does not already offer the same feature natively through the [Store Framework's native components](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components).
+Before developing a custom component from scratch, make sure VTEX does not already offer the same feature natively through the [Store Framework's native components](https://developers.vtex.com/docs/guides/vtex-store-components).
 
 Create your component importing and combining native components in order to achieve a better result. For example:
 
@@ -64,7 +64,7 @@ function Shelf({ title }: Props) {
 export default Shelf
 ```
 
-> ℹ️ Notice how the Store Framework solution counts on specific apps for [integrations with 3rd solutions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-accessibe) and [layout structuring](https://developers.vtex.com/vtex-developer-docs/docs/vtex-condition-layout), besides having template components that play a particular role once rendered to the final users, such as the [Product Identifier app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-identifier). When developing your storefront component, keep in mind that segmentation is the key to a light code and successful component!
+> ℹ️ Notice how the Store Framework solution counts on specific apps for [integrations with 3rd solutions](https://developers.vtex.com/docs/guides/vtex-accessibe) and [layout structuring](https://developers.vtex.com/docs/guides/vtex-condition-layout), besides having template components that play a particular role once rendered to the final users, such as the [Product Identifier app](https://developers.vtex.com/docs/guides/vtex-product-identifier). When developing your storefront component, keep in mind that segmentation is the key to a light code and successful component!
 
 ## Flexibility and scalability
 
@@ -129,21 +129,21 @@ Instead of creating specific props to attend to devices' typical scenarios, leve
 
 ### Slots
 
-Slots enable you to render components through props instead of declaring an array of blocks in the Store Theme. Its simplicity removes the need for the `allowed` property in the [interface](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-interfaces) file and enlights your code, increasing the flexibility when developing a new storefront component.
+Slots enable you to render components through props instead of declaring an array of blocks in the Store Theme. Its simplicity removes the need for the `allowed` property in the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interfaces) file and enlights your code, increasing the flexibility when developing a new storefront component.
 
-You can learn more about Slots [here](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-slots).
+You can learn more about Slots [here](https://developers.vtex.com/docs/guides/vtex-io-documentation-slots).
 
 |✅ Do|❌ Don't|
 |-----|--|
 | ![best-practices-for-storefront-component-development-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-4.png)|![best-practices-for-storefront-component-development-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-3.png)|
 
-> ℹ️ When not using Slots, prefer to use the `children` [composition](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-composition).
+> ℹ️ When not using Slots, prefer to use the `children` [composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition).
 
 ## Performance
 
 In digital, the store's website performance plays an essential role in user-experience, directly impacting sales conversion rate and user session time, among other important metrics.
 
-In addition to the practices listed below, do not forget to access our documentation on [optimizing performance](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance) to enable advanced configurations and boost your store's website performance.
+In addition to the practices listed below, do not forget to access our documentation on [optimizing performance](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance) to enable advanced configurations and boost your store's website performance.
 
 ### NPM libraries
 
@@ -165,15 +165,15 @@ The Dispatcher and State patterns, as well as the useMemo feature, are powerful 
 
 The usage of media in storefront components can be tricky if you are not critically thinking about performance.
 
-When [uploading the desired media assets to the VTEX File Server](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-the-assets-builder), clearly define height and width parameters to avoid data over-fetching and resizing on the client-side. This way, you can set up your component to request media assets according to the needed size per breaking point.
+When [uploading the desired media assets to the VTEX File Server](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder), clearly define height and width parameters to avoid data over-fetching and resizing on the client-side. This way, you can set up your component to request media assets according to the needed size per breaking point.
 
 ### Rendering
 
 Performance can be optimized during the component rendering as well.
 
-When declaring the block's [interface](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-interfaces), set the `Hydration` attribute and pass `on-view` as its value to only load and properly render your component once users find it on the interface.
+When declaring the block's [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interfaces), set the `Hydration` attribute and pass `on-view` as its value to only load and properly render your component once users find it on the interface.
 
-The [Footer](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-footer) is a good example of a Store Framework's native component that counts on this attribute to be rendered optimizing store performance!
+The [Footer](https://developers.vtex.com/docs/guides/vtex-store-footer) is a good example of a Store Framework's native component that counts on this attribute to be rendered optimizing store performance!
 
 > ℹ️ The default value for `Hydration` is `always`, meaning that the component will be loaded and rendered as expected, regardless of the user's view.
 
@@ -195,7 +195,7 @@ In terms of content internationalization, be cautious with string text translati
 
 Be aware that internationalization can mean more than string text translations! Take care of interpolation, pluralization, price and percentage formatting, among other discrepancies that may come into your way once borders are crossed.
 
-Read the [Translating the component](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-8-translating-the-component) article and the [multi-language store documentations](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-multi-language-stores) to understand how you can make these adjustments in your component!
+Read the [Translating the component](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) article and the [multi-language store documentations](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores) to understand how you can make these adjustments in your component!
 
 ## Styling
 
@@ -207,7 +207,7 @@ Understand both tools' particularities to make the best decision for your compon
 
 Also, do not forget to make CSS Handles available for your component users if its distribution is a goal. Through Handles, future users will be able to style your storefront component as desired, according to their own specific needs.
 
-Check out the documentation on [Defining styles](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-5-defining-styles) to learn about Tachyons, CSS Modules and CSS Handles, as well as their use cases.
+Check out the documentation on [Defining styles](https://developers.vtex.com/docs/guides/vtex-io-documentation-5-defining-styles) to learn about Tachyons, CSS Modules and CSS Handles, as well as their use cases.
 
 Another good styling tip is to be careful with the breakpoints on the screen according to devices. Remember to set the component style for every possible scenario on the interface!
 

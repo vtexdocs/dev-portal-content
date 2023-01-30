@@ -10,7 +10,7 @@ The following steps show how to install the **Affirm Payment App** in your VTEX 
 [block:callout]
 {
   "type": "warning",
-  "body": "Before performing these steps, make sure you have already installed VTEX IO on your pc by checking [Installing VTEX IO's CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) documentation."
+  "body": "Before performing these steps, make sure you have already installed VTEX IO on your pc by checking [Installing VTEX IO's CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) documentation."
 }
 [/block]
 1. Access the **CMD** on your computer.

@@ -16,7 +16,7 @@ The user can also print the quotation information containing the cart informatio
 
 ## Configuration
 
-1. Using [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the Order Quote app by running `vtex install vtex.orderquote@1.x`.
+1. Using [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the Order Quote app by running `vtex install vtex.orderquote@1.x`.
 2. Head over to your VTEX account's admin and access the **Apps** section.
 3. Select the **Order Quote** app and click on **Settings**.
 4. Fill out the **Lifespan** and **Store logo URL** fields.

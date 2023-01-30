@@ -22,7 +22,7 @@ In your VTEX account's admin, perform the following actions:
 
 1. Access the **Apps** section and then **My Apps**.
 2. Select the **Curbside Pickup** app box.
-3. Enter your [app key and token](https://developers.vtex.com/docs/getting-started-authentication#creating-the-appkey-and-apptoken) in the `App Key` and `App Token` fields.
+3. Enter your [app key and token](https://developers.vtex.com/docs/guides/getting-started-authentication#creating-the-appkey-and-apptoken) in the `App Key` and `App Token` fields.
 
 ![curbside-pickup-admin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-curbside-pickup-1.png)
 

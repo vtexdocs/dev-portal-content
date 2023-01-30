@@ -223,4 +223,4 @@ This metric is mostly affected by images, ads, embeds, and iframes without pre-d
 
 ***
 
-If you want to learn more, check our [best practices for optimizing performance.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-best-practices-for-optimizing-performance)
+If you want to learn more, check our [best practices for optimizing performance.](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance)

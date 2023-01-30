@@ -6,13 +6,13 @@ createdAt: "2021-04-29T19:53:39.297Z"
 updatedAt: "2022-04-08T20:16:01.460Z"
 ---
 
-[VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/what-is-vtex-io) is a cloud-native platform that allows VTEX’s clients and partners to develop apps that integrate seamlessly with our ecosystem. This means that once a carrier creates an app on VTEX IO, the app can be made available to any given VTEX store. The store then can simply install it in order to integrate with that carrier’s service.
+[VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is a cloud-native platform that allows VTEX’s clients and partners to develop apps that integrate seamlessly with our ecosystem. This means that once a carrier creates an app on VTEX IO, the app can be made available to any given VTEX store. The store then can simply install it in order to integrate with that carrier’s service.
 
 ## VTEX IO CLI and the development environment
 
 VTEX has its own CLI (command line interface), which enables you to perform different tasks required throughout the development process on VTEX IO. For example, it allows you to log in to your VTEX account, link your local files to the platform, or even publish and deprecate apps.
 
-To install VTEX's CLI, you must first have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed. See the [VTEX IO CLI documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to learn more about how to install it.
+To install VTEX's CLI, you must first have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed. See the [VTEX IO CLI documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to learn more about how to install it.
 
 ## Developing
 
@@ -24,7 +24,7 @@ When developing carrier apps in VTEX IO, you can start by cloning one of the boi
   "body": "To develop on VTEX IO, a user must have Admin or VTEX IO Developer permission. See this article for more information on accounts and permissions."
 }
 [/block]
-We recommend that you create a new workspace for development. Each workspace works as a separate version of the account in which you can develop your app and test it. To learn more, access our [workspace documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace).
+We recommend that you create a new workspace for development. Each workspace works as a separate version of the account in which you can develop your app and test it. To learn more, access our [workspace documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace).
 
 ### Manifest
 
@@ -32,9 +32,9 @@ The `manifest.json` file contained in the boilerplate repository holds important
 
 After you clone the repository, you should update your app’s `manifest.json` file with its basic information.
 
-You should be mindful of the `billingOptions` field. This field is used to define an app’s distribution on the platform and structure its pricing data, allowing the application usage to be public and, in some scenarios, even monetized. To know more about this field’s structure and how to fill it, see the [Billing Options documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-billing-options).
+You should be mindful of the `billingOptions` field. This field is used to define an app’s distribution on the platform and structure its pricing data, allowing the application usage to be public and, in some scenarios, even monetized. To know more about this field’s structure and how to fill it, see the [Billing Options documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
 
-To learn more about what information other fields must contain, see the [Manifest documentation](https://developers.vtex.com/vtex-developer-docs/docs/manifest).
+To learn more about what information other fields must contain, see the [Manifest documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 Below is an example of how some important fields could be filled in the `manifest.json` of a tracking app for an account named `Example Carrier`:
 
@@ -149,7 +149,7 @@ During development, you may need to test these endpoints, but keep in mind that 
 
 When you are done developing your app and have promoted it to the master workspace, it is ready to be published.
 
-To do so, you may follow the steps described in this tutorial on [how to make your new app version publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available).
+To do so, you may follow the steps described in this tutorial on [how to make your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
 [block:callout]
 {
   "type": "info",

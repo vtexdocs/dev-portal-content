@@ -35,11 +35,11 @@ You are now able to use all of the blocks exported by the `search` app. Check th
 | `did-you-mean`                | Helps users with possible misspelling corrections for the current search query.             |
 | `search-suggestions`          | Renders a list of similar search terms for the current search query.          |
 
-> ℹ️ The blocks `search-banner`, `did-you-mean` and `search-suggestions` require you to have [Search Result app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result) version `3.x` or higher installed in your theme.
+> ℹ️ The blocks `search-banner`, `did-you-mean` and `search-suggestions` require you to have [Search Result app](https://developers.vtex.com/docs/guides/vtex-search-result) version `3.x` or higher installed in your theme.
 
 ### Add the Search's blocks into the theme
 
-First, declare the `autocomplete-result-list.v2` block as a child block of the [`search-bar` block](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-searchbar), exported by the Store Components app, for example:
+First, declare the `autocomplete-result-list.v2` block as a child block of the [`search-bar` block](https://developers.vtex.com/docs/guides/vtex-store-components-searchbar), exported by the Store Components app, for example:
 
 ```json
 {
@@ -67,7 +67,7 @@ First, declare the `autocomplete-result-list.v2` block as a child block of the [
 | `historyFirst`                | `boolean`               | Defines whether the search history list should be prioritized over the other lists (`true`) or not (`false`).                                                          | `false`       |
 | `customBreakpoints`           | `object`                | Defines a maximum number of suggested products by breakpoints. Possible values are `md`, `lg` or `xlg`.                                                           | -             |
 | `simulationBehavior`          | `"skip"` or `"default"` | If you want faster searches and do not care about most up to date prices and promotions, use `"skip"` value.     | `default`     |
-| `HorizontalProductSummary`          | `product-summary` block | By default, the mobile autocomplete uses the `CustomListItem` component to render the suggested products with a horizontal layout. But if you send a `product-summary` block here, it will render your customized Product Summary component. Read our documentation of [how to build a horizontal Product Summary](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-building-a-horizontal-product-summary) component.                            | `undefined`     |
+| `HorizontalProductSummary`          | `product-summary` block | By default, the mobile autocomplete uses the `CustomListItem` component to render the suggested products with a horizontal layout. But if you send a `product-summary` block here, it will render your customized Product Summary component. Read our documentation of [how to build a horizontal Product Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-horizontal-product-summary) component.                            | `undefined`     |
 
 ##### The `customBreakpoints` object
 
@@ -144,7 +144,7 @@ Once added, these can be declared using their respective props for their configu
 | Prop name             | Type     | Description                                                                                                                      | Default value |
 | --------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `area`                | `string` | Area of ​​the store where the banner will be displayed. It needs to match the predefined area value in the banner setup.         | `undefined`   |
-| `blockClass`          | `string` | Unique block ID to be used in [CSS customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) | `undefined`   |
+| `blockClass`          | `string` | Unique block ID to be used in [CSS customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) | `undefined`   |
 | `horizontalAlignment` | `string` | Defines the banner horizontal alignment. Possible values are `left`, `center` or `right`.                                        | `center`      |
 
 ## Modus Operandi
@@ -153,11 +153,11 @@ The Search app is responsible for offering blocks that when rendered as componen
 
 These components use `_q` as the query-string for the search term, meaning that if you wish to track the searches of your users in these components you'll need to add the `_q` query-string to the store's Google Analytics.
 
-Find out how to do this by accessing our [Google Analytics search tracking](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-up-google-analytics-search-tracking) documentation.
+Find out how to do this by accessing our [Google Analytics search tracking](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking) documentation.
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles             |
 | ----------------------- |

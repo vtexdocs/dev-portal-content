@@ -12,9 +12,9 @@ With the app template already copied, we will now create a **new theme block**. 
 
 ## Before you start
 
-1. It is important that you are already familiar with VTEX Store Framework and fully understand what a block, store theme, and template are. If you are not familiar with these concepts or want to refresh them a little before working with the settings, check [**Build stores with Store Framework**](https://developers.vtex.com/vtex-developer-docs/docs/getting-started-3).
+1. It is important that you are already familiar with VTEX Store Framework and fully understand what a block, store theme, and template are. If you are not familiar with these concepts or want to refresh them a little before working with the settings, check [**Build stores with Store Framework**](https://developers.vtex.com/docs/guides/getting-started-3).
 
-2. When creating a storefront component, follow the best practices regarding tooling, features, flexibility, scalability, performance, accessibility, internationalization, and styling, to be adopted when creating your storefront component. Check [**Developing custom storefront components**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-custom-storefront-components) for more information.
+2. When creating a storefront component, follow the best practices regarding tooling, features, flexibility, scalability, performance, accessibility, internationalization, and styling, to be adopted when creating your storefront component. Check [**Developing custom storefront components**](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components) for more information.
 
 ## Understanding interfaces
 
@@ -24,7 +24,7 @@ In the same way that an API uses parameters to define how the conversation with 
 
 **The interfaces, using their keys, define a block's behavior when implementing and rendering in a store theme**.
 
-This means that, for each theme block exported by your app, you will need to define an [interface](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-interface), linking the block to a React component of your choice.
+This means that, for each theme block exported by your app, you will need to define an [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface), linking the block to a React component of your choice.
 
 The following table shows some possible keys that could be added to your block's interface, as well as their respective descriptions:
 
@@ -45,7 +45,7 @@ The only mandatory key that needs to be declared in a block interface is `compon
 
 ## Declaring an interface
 
-We declare the interface of one or more blocks in the app's `interfaces.json` file, used by [Store Builder](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-builders/) to correctly build your website's *front-end*.
+We declare the interface of one or more blocks in the app's `interfaces.json` file, used by [Store Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/) to correctly build your website's *front-end*.
 
 For this example, we will create an interface for a basic block called `hello-world` (based on the React `HelloWorld` component).
 
@@ -63,7 +63,7 @@ const HelloWorld = () => <div>Hello, World!</div>
 export default HelloWorld
 ```
 
-> ℹ️ Be sure to check out the [React solution](https://reactjs.org/docs/getting-started.html) and [Developing custom storefront components](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-custom-storefront-components) documentation to better understand how components work.
+> ℹ️ Be sure to check out the [React solution](https://reactjs.org/docs/getting-started.html) and [Developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components) documentation to better understand how components work.
 
 4. On the first level of your app's folders create a new folder called `store`.
 5. In the `store` folder, add a new file called `interfaces.json`.
@@ -107,7 +107,7 @@ We will now implement the new block you created.
 
 If the VTEX account you are working on already has the Store Theme app for VTEX Store Framework installed, follow the instructions below from step 2. If your account does not yet have the Store Theme app installed, follow the instructions from step 1:
 
-1. Read carefully [step 3 in the Build stores with Store Framework section](https://developers.vtex.com/vtex-developer-docs/docs/getting-started-3) and follow the steps detailed in the article. Once you are done, you will have implemented the standard theme for the VTEX Store Framework and will be ready to test your new block.
+1. Read carefully [step 3 in the Build stores with Store Framework section](https://developers.vtex.com/docs/guides/getting-started-3) and follow the steps detailed in the article. Once you are done, you will have implemented the standard theme for the VTEX Store Framework and will be ready to test your new block.
 2. Open the Store Theme app folder in your local files using the code editor of your choice.
 3. In the Store Theme `manifest.json` file, add the front app you are developing as a dependency in `dependencies`. For example:
 
@@ -136,7 +136,7 @@ If the VTEX account you are working on already has the Store Theme app for VTEX 
 }
 ```
 
-5. [Link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) the store's theme with the VTEX IO platform to verify the results:
+5. [Link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the store's theme with the VTEX IO platform to verify the results:
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-4-declaring-a-theme-block-0.png)
 

@@ -77,9 +77,9 @@ If this route is already declared, the redirect will be ignored.
 
 > ℹ️ The Search Results and Product Details pages have different indexing processes. This can lead to differences in the price.
 
-1. [Reindex](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-understanding-how-store-url-indexing-works) the products presenting inconsistencies.
+1. [Reindex](https://developers.vtex.com/docs/guides/vtex-io-documentation-understanding-how-store-url-indexing-works) the products presenting inconsistencies.
 
-2. Check out the value declared for the [Search Result](https://developers.vtex.com/vtex-developer-docs/docs/vtex-search-result)'s `simulationBehavior` prop. If set as `skip`, change it to `default`.
+2. Check out the value declared for the [Search Result](https://developers.vtex.com/docs/guides/vtex-search-result)'s `simulationBehavior` prop. If set as `skip`, change it to `default`.
 
 > ℹ️ When the `simulationBehavior` is set as `skip`, the Search Results page displays the cold price based on the user cache. In order to fetch and display the latest price registered in the catalog, change it to `default`.
 </details>

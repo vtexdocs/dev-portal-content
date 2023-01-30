@@ -30,7 +30,7 @@ Shoppers can create a subscription during checkout or on their [My Account](http
 
 ## Setting up Subscriptions (mandatory)
 
-To install the Subscriptions module, merchants have to contact [our Support](https://support.vtex.com/hc/en-us/requests). After that, they have to follow the configuration steps described in [How to configure Subscriptions in your store](https://help.vtex.com/en/tutorial/how-to-configure-subscriptions-in-your-store--1FA9dfE7vJqxBna9Nft5Sj).
+To install the Subscriptions module, merchants have to contact [our Support](https://support.vtex.com/hc/en-us). After that, they have to follow the configuration steps described in [How to configure Subscriptions in your store](https://help.vtex.com/en/tutorial/how-to-configure-subscriptions-in-your-store--1FA9dfE7vJqxBna9Nft5Sj).
 
 After the installation, merchants have to [create subscription plans](https://help.vtex.com/en/tutorial/creating-a-subscription-plan--1qGRoFczm98Wgt81f9mUqC) to associate the products valid for subscriptions and the frequencies available for recurrent orders.
 

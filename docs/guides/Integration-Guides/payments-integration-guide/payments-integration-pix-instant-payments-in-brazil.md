@@ -162,45 +162,49 @@ The request goes like this:
 As a result, we expect the following response:
 >❗ Have in mind that, by default, the QRCode **must** have five minutes (300 seconds) expiration time. Also, the partner **must** respect the callback time (20 seconds).
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"paymentId\": \"F5C1A4E20D3B4E07B7E871F5B5BC9F91\",\n  \"status\": \"undefined\",\n  \"tid\": \"TID1578324421\",\n  \"authorizationId\": null,\n  \"nsu\": null,\n  \"code\": \"APP123\",\n  \"paymentAppData\": {\n    \"payload\": \"{\\\"code\\\":\\\"https://bacen.pix/pix/code\\\",\\\"qrCodeBase64Image\\\":\\\"iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAABQGlDQ1BJQ0MgUHJvZmlsZQAAKJFjYGDiSSwoyGFhYGDIzSspCnJ3UoiIjFJgf8LAxSDMwMkgwiCZmFxc4BgQ4ANUwgCjUcG3awyMIPqyLsgspwWXFu+Xeyundb6w0WL33C5M9SiAKyW1OBlI/wHihOSCohIGBsYYIFu5vKQAxG4AskWKgI4CsqeA2OkQ9goQOwnC3gNWExLkDGRfALIFkjMSU4DsB0C2ThKSeDoSG2ovCLAZGZkbhBNwKKmgJLWiBEQ75xdUFmWmZ5QoOAJDJ1XBMy9ZT0fByMDIgIEBFNYQ1Z9vgMOQUYwDIZapzMBgmQEUfIQQSxNmYNiZzsDAU4UQU5/PwMBrxMBw5GJBYlEi3AGM31iK04yNIGzu7QwMrNP+//8M9Ca7JgPD3+v////e/v//32UMDMy3GBgOfAMA4+RdqZ9YRkcAAABWZVhJZk1NACoAAAAIAAGHaQAEAAAAAQAAABoAAAAAAAOShgAHAAAAEgAAAESgAgAEAAAAAQAAAAKgAwAEAAAAAQAAAAIAAAAAQVNDSUkAAABTY3JlZW5zaG900Fpo3gAAAdJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MjwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlVzZXJDb21tZW50PlNjcmVlbnNob3Q8L2V4aWY6VXNlckNvbW1lbnQ+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4yPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cl89Cn4AAAASSURBVAgdY/wPBAxAwAQiQAAAPfgEAIAu9DkAAAAASUVORK5CYII=\\\"}\"\n  },\n  \"message\": \"The customer needs to finish the payment flow\",\n  \"delayToAutoSettle\": 1209600,\n  \"delayToAutoSettleAfterAntifraud\": 120,\n  \"delayToCancel\": 300\n}",
-      "language": "curl",
-      "name": "200 OK"
-    }
-  ]
+  "paymentId": "F5C1A4E20D3B4E07B7E871F5B5BC9F91",
+  "status": "undefined",
+  "tid": "TID1578324421",
+  "authorizationId": null,
+  "nsu": null,
+  "code": "APP123",
+  "paymentAppData": {
+    "payload": "{\"code\":\"https://bacen.pix/pix/code\",\"qrCodeBase64Image\":\"iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAABQGlDQ1BJQ0MgUHJvZmlsZQAAKJFjYGDiSSwoyGFhYGDIzSspCnJ3UoiIjFJgf8LAxSDMwMkgwiCZmFxc4BgQ4ANUwgCjUcG3awyMIPqyLsgspwWXFu+Xeyundb6w0WL33C5M9SiAKyW1OBlI/wHihOSCohIGBsYYIFu5vKQAxG4AskWKgI4CsqeA2OkQ9goQOwnC3gNWExLkDGRfALIFkjMSU4DsB0C2ThKSeDoSG2ovCLAZGZkbhBNwKKmgJLWiBEQ75xdUFmWmZ5QoOAJDJ1XBMy9ZT0fByMDIgIEBFNYQ1Z9vgMOQUYwDIZapzMBgmQEUfIQQSxNmYNiZzsDAU4UQU5/PwMBrxMBw5GJBYlEi3AGM31iK04yNIGzu7QwMrNP+//8M9Ca7JgPD3+v////e/v//32UMDMy3GBgOfAMA4+RdqZ9YRkcAAABWZVhJZk1NACoAAAAIAAGHaQAEAAAAAQAAABoAAAAAAAOShgAHAAAAEgAAAESgAgAEAAAAAQAAAAKgAwAEAAAAAQAAAAIAAAAAQVNDSUkAAABTY3JlZW5zaG900Fpo3gAAAdJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MjwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlVzZXJDb21tZW50PlNjcmVlbnNob3Q8L2V4aWY6VXNlckNvbW1lbnQ+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4yPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cl89Cn4AAAASSURBVAgdY/wPBAxAwAQiQAAAPfgEAIAu9DkAAAAASUVORK5CYII=\"}"
+  },
+  "message": "The customer needs to finish the payment flow",
+  "delayToAutoSettle": 1209600,
+  "delayToAutoSettleAfterAntifraud": 120,
+  "delayToCancel": 300
 }
-[/block]
+```
+
 The complete documentation is [here](https://developers.vtex.com/vtex-developer-docs/reference/createpayment).
 
 ### Cancel a Payment
 
 To cancel a payment, you must already have created one. To do so, you’ll make an API call using the route <span class="api pg-type type-post">POST</span>[Cancel Payment](https://developers.vtex.com/vtex-developer-docs/reference/cancelpayment):
-[block:code]
+
+```curl
 {
-  "codes": [
-    {
-      "code": "{\n    \"paymentId\": \"F5C1A4E20D3B4E07B7E871F5B5BC9F91\",\n    \"requestId\": \"1234\"\n}",
-      "language": "curl",
-      "name": "Success"
-    }
-  ]
+    "paymentId": "F5C1A4E20D3B4E07B7E871F5B5BC9F91",
+    "requestId": "1234"
 }
-[/block]
+```
+
 After the provider realizes the payment cancelation, we expect is a response like this:
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"paymentId\": \"F5C1A4E20D3B4E07B7E871F5B5BC9F91\",\n    \"message\": \"Successfully cancelled\",\n    \"code\": null,\n    \"cancellationId\": \"1457BD07E6\",\n    \"requestId\": \"1234\"\n}",
-      "language": "curl",
-      "name": "200 OK"
-    }
-  ]
+    "paymentId": "F5C1A4E20D3B4E07B7E871F5B5BC9F91",
+    "message": "Successfully cancelled",
+    "code": null,
+    "cancellationId": "1457BD07E6",
+    "requestId": "1234"
 }
-[/block]
+```
+
 See the [complete documentation](https://developers.vtex.com/vtex-developer-docs/reference/cancelpayment) for more details.
 
 ### Capture Payment

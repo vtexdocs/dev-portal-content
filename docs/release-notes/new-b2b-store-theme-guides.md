@@ -10,4 +10,4 @@ type: "added"
 
 We have added documentation explaning how to use the B2B Store Theme, a front-end template to help your store get started with VTEX’s core features for businesses selling to other businesses.
 
-Check our new guides on [Installing the B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme) and [Customizing the B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/customizing-the-b2b-store-theme) to learn more.
+Check our new guides on [Installing the B2B Store Theme](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme) and [Customizing the B2B Store Theme](https://developers.vtex.com/docs/guides/customizing-the-b2b-store-theme) to learn more.

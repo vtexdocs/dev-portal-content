@@ -9,9 +9,9 @@ updatedAt: "2022-07-02T00:50:32.906Z"
 
 > ⚠️ 
 > 
-> The Product Summary Brand block has been deprecated in favor of the [Product Brand](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productbrand) app from the [Store Components](https://developers.vtex.com/vtex-developer-docs/docs/store-components) collection. Although support for this block is still granted, we strongly recommend updating your store theme with the Product Brand block.
+> The Product Summary Brand block has been deprecated in favor of the [Product Brand](https://developers.vtex.com/docs/guides/vtex-store-components-productbrand) app from the [Store Components](https://developers.vtex.com/docs/guides/store-components) collection. Although support for this block is still granted, we strongly recommend updating your store theme with the Product Brand block.
 
-Product Summary Brand is a block exported by the [Product Summary app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-summary) responsible for rendering the brand of the product.
+Product Summary Brand is a block exported by the [Product Summary app](https://developers.vtex.com/docs/guides/vtex-product-summary) responsible for rendering the brand of the product.
 
 ![product-brand](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummarybrand-1.png)
 

@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T20:17:44.761Z"
 
 VTEX IO CLI 3.x has a plug-in architecture that makes it more flexible and extensible to inject new commands and functionalities. This way, you can go beyond VTEX IO's CLI default commands and add specific plugins to achieve a more comprehensive experience.
 
-Check the [Command Reference](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-command-reference#plugins) for a detailed description of all plugins developed by VTEX.
+Check the [Command Reference](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#plugins) for a detailed description of all plugins developed by VTEX.
 
 > ℹ️ The following plugins are native to VTEX IO'S CLI. Therefore, you do not need to install them:  `abtest`, `autoupdate`, `deploy`, `deps`, `edition`, `plugins`, `whoami`, `workspace`.
 

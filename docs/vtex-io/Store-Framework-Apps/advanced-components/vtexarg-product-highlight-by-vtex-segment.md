@@ -31,7 +31,7 @@ By the end of these steps, you'll have your store products highlighted according
 
 ## Setting up the Product Highlights app
 
-1. Open the terminal and log in to the desired VTEX account using the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+1. Open the terminal and log in to the desired VTEX account using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 2. Install the `vtexarg.product-highlight-by-vtex-segment` app on your account.
 
    ```sh
@@ -85,7 +85,7 @@ By the end of these steps, you'll have your store products highlighted according
 
 Now, see the [Customization](#customization) section to add custom styles to your component.
 
-After [linking your store theme app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) in a development workspace, you'll be able to select a Whitelabel Seller available in your region from a dropdown menu list.
+After [linking your store theme app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) in a development workspace, you'll be able to select a Whitelabel Seller available in your region from a dropdown menu list.
 
 ![Select Whitelabel Seller](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-4.png)
 
@@ -95,7 +95,7 @@ You'll then be able to see the chosen badge in the product cards of the selected
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization) guide.
+To apply CSS customizations in this and other blocks, follow the [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) guide.
 
 | CSS Handles |
 | ----------- |

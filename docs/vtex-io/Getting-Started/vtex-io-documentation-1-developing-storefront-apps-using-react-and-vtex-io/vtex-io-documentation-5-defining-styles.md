@@ -92,7 +92,7 @@ export default function MyButton() {
 
 > ℹ️ Remember that the name of the created classes will depend on the *import* model you made (step 3 or step 4 in this section).
 
-6. Save the changes you made and [link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) your app.
+6. Save the changes you made and [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app/) your app.
 
 When rendered and inspected, the component will now have the following HTML structure if you chose to follow the *import* model shown in step 3:
 
@@ -207,4 +207,4 @@ class ExampleComponent extends Component {
 
 After saving your changes, your app will be able to not only export a predefined style according to the CSS classes you set up but also export *CSS Handles*, giving your users more customization flexibility.
 
-> ℹ️ For more details on how *CSS Handles* can be used to define styles, access the documentation for [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+> ℹ️ For more details on how *CSS Handles* can be used to define styles, access the documentation for [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).

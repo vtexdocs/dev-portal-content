@@ -81,4 +81,4 @@ The `slots` composition, in turn, allows you to declare child blocks using regul
 
 *The `icon-caret#point-up` has `slots` composition, thereby it is declared as a prop in the `hello-world` block. Notice that the prop name can be any of your choosing and is usually defined by the block in which it is declared.*
 
-Check out the complete documentation for slots [here](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-slots/)!
+Check out the complete documentation for slots [here](https://developers.vtex.com/docs/guides/vtex-io-documentation-slots/)!

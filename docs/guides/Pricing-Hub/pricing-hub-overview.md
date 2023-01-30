@@ -6,7 +6,7 @@ createdAt: "2021-10-25T18:44:02.713Z"
 updatedAt: "2022-06-13T16:06:15.138Z"
 ---
 
->ℹ️ This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://support.vtex.com/hc/en-us/requests).
+>ℹ️ This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://support.vtex.com/hc/en-us).
 
 In the B2B scenario, it is common for stores to have personalized prices per customer and complex pricing systems that require external integrations. Pricing Hub is a system developed for the B2B context that works as an intermediary between VTEX and external pricing systems.
 

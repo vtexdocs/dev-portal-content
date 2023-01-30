@@ -66,13 +66,13 @@ In addition to Admin VTEX, you can use two apps to customize your store’s Chec
 [block:callout]
 {
 "type": "warning",
-"body": "If you want to use the Checkout UI Settings app, any script changes made through it will override HTML, CSS, and JS information made through [Admin VTEX](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings)."
+"body": "If you want to use the Checkout UI Settings app, any script changes made through it will override HTML, CSS, and JS information made through [Admin VTEX](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings)."
 }
 [/block]
 
 ### Checkout UI Settings app
 
-The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install). This app, if compared to the [Admin VTEX](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings) method, offers the possibility to:
+The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install). This app, if compared to the [Admin VTEX](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) method, offers the possibility to:
 
 - Perform A/B Testing
 - Easily track all changes made to the UI (through app versions)
@@ -84,10 +84,10 @@ The Checkout UI Settings app allows you to customize your store's through the te
 "body": "It is highly recommended that you have prior experience using IO apps (VTEX Store Framework) before choosing this checkout UI configuration option."
 }
 [/block]
-For more information, access the [Checkout UI Settings Guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings).
+For more information, access the [Checkout UI Settings Guide](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings).
 
 ### Checkout UI Custom app
 
-The Checkout UI Custom app can be used to quickly apply pre-defined customization options (e.g. show items unit price, text size, colors) that have already been approved by VTEX. For more information, access the [Checkout UI Custom Guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-custom-v0).
+The Checkout UI Custom app can be used to quickly apply pre-defined customization options (e.g. show items unit price, text size, colors) that have already been approved by VTEX. For more information, access the [Checkout UI Custom Guide](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0).
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/checkout-customization-guide-2.PNG)

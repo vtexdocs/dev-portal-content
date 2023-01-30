@@ -15,7 +15,7 @@ Learn how to install and configure the app on the following sections.
 
 ## Installing Cookie Script app
 
-It is possible to install the Cookie Script in your store either by using [App Store](https://apps.vtex.com/vtex-cookie-script/p) or the [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+It is possible to install the Cookie Script in your store either by using [App Store](https://apps.vtex.com/vtex-cookie-script/p) or the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
 
   ### Using VTEX App Store

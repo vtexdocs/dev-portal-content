@@ -10,7 +10,7 @@ This app provides availability and shipping information based on the user's loca
 
 ## Configuration
 
-1. Using [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the Location Availability app by running `vtex install vtex.location-availability@0.x`.
+1. Using [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the Location Availability app by running `vtex install vtex.location-availability@0.x`.
 2. Open your store's Store Theme app directory in your code editor.
 3. Add the Location Availability app as a `peerDependency` in the `manifest.json` file:
 
@@ -126,7 +126,7 @@ These blocks provide more detailed availability information and are designed for
 
 The above JSON will render an availability section that looks like this:
 
-![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store%20Framework%20Apps/b2b-components/availability-example.png)
+![Availability example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store-Framework-Apps/b2b-components/availability-example.png)
 
 ## Customization
 

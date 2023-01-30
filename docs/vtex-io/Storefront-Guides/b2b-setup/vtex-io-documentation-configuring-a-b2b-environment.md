@@ -20,7 +20,7 @@ Follow the step by step below and learn how to make your store's content availab
 
 The key element that ensures the security of the displayed content is the **Challenge Trade Policy** block, responsible for checking if the store's user is allowed to browse the B2B environment.
 
-Check out the [Challenge Trade Policy documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-challenge-tp-condition/) to configure it correctly in your store and proceed to the next steps.
+Check out the [Challenge Trade Policy documentation](https://developers.vtex.com/docs/guides/vtex-challenge-tp-condition/) to configure it correctly in your store and proceed to the next steps.
 
 ### Step 2 - Defining the Condition Rule
 

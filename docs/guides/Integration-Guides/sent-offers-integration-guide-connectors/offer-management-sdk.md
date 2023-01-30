@@ -85,7 +85,7 @@ This section is organized as below:
 [/block]
 ### Authentication
 
-Authentication in Offer Management works as in VTEX REST APIs, as it can be seen in [Authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication). Through the `SentOffersCredentials` class, the connector can send information about AppKey, AppToken and VTEX IO token.
+Authentication in Offer Management works as in VTEX REST APIs, as it can be seen in [Authentication](https://developers.vtex.com/docs/guides/getting-started-authentication). Through the `SentOffersCredentials` class, the connector can send information about AppKey, AppToken and VTEX IO token.
 
 ### Create feed
 

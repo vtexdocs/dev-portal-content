@@ -4,12 +4,12 @@ slug: "new-affiliates-program-app"
 type: "added"
 createdAt: "2022-10-14T17:02:16.829Z"
 hidden: false
-excerpt: "We have launched the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate."
+excerpt: "We have launched the [Affiliates Program app](https://developers.vtex.com/docs/guides/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate."
 ---
 
 ![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-affiliates-program-app-0.png)
 
-We have launched the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate.
+We have launched the [Affiliates Program app](https://developers.vtex.com/docs/guides/affiliates-program-app), unlocking a new partnership model between VTEX stores and associates who promote sales in exchange for commission. Anyone registered and approved by your store can become an affiliate.
 
 > ℹ️ For the **Affiliates Program app**, an affiliate is different from the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0). In the app’s context, an affiliate is anyone who associates with a VTEX store to promote sales while receiving a commission.
 
@@ -21,7 +21,7 @@ The app also provides a profile page and dashboard for the affiliates to keep tr
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-affiliates-program-app-1.png)
 
-After [installing the app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app#installation) in your VTEX store, three new pages will be available in VTEX Admin, under *Other > Affiliates*:
+After [installing the app](https://developers.vtex.com/docs/guides/affiliates-program-app#installation) in your VTEX store, three new pages will be available in VTEX Admin, under *Other > Affiliates*:
 
 - Affiliate Management
 - Orders Management
@@ -33,4 +33,4 @@ On these pages, you can manage everything related to your affiliates, making use
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-affiliates-program-app-2.gif)
 
-The app is available on [VTEX App Store](https://apps.vtex.com/vtex-affiliates/p) and you can find more information in the [Affiliates Program app](https://developers.vtex.com/vtex-developer-docs/docs/affiliates-program-app) guide.
+The app is available on [VTEX App Store](https://apps.vtex.com/vtex-affiliates/p) and you can find more information in the [Affiliates Program app](https://developers.vtex.com/docs/guides/affiliates-program-app) guide.

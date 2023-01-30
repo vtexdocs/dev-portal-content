@@ -55,5 +55,5 @@ interface SearchSegmentInput {
 }
 ```
 
-6. [Create a development workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-development-workspace) and [link your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app) to test if your segmentation rules are working as expected.
-7. Once you finish your tests, follow all the necessary steps to [make your app publicly available](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available) before promoting it to master.
+6. [Create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and [link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to test if your segmentation rules are working as expected.
+7. Once you finish your tests, follow all the necessary steps to [make your app publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) before promoting it to master.

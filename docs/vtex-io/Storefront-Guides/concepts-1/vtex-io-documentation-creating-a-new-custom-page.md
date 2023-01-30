@@ -102,7 +102,7 @@ Let's suppose we are going to create a simple About Us page for a store. As such
 }
 ```
 
-To learn more about how the Flex Layout works, access its [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-flex-layout).
+To learn more about how the Flex Layout works, access its [documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout).
 
 ### Creating the new page's path
 
@@ -120,11 +120,11 @@ Now that your page layout has been defined in the store theme code, the next ste
 ```
 
 3. Save your files.
-4. [Link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/) the theme to a Development workspace. You will be able to access and see your new page live through your workspace, using the following format: `{workspaceName}--{accountName}.myvtex.com/{pathName}`.
+4. [Link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app/) the theme to a Development workspace. You will be able to access and see your new page live through your workspace, using the following format: `{workspaceName}--{accountName}.myvtex.com/{pathName}`.
 
 #### Using the account admin
 
-If you prefer to set the new page path using account admin, you must first must [release](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-releasing-a-new-app-version) your changes regarding template creation and [install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the new version of your store theme in a [production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace).
+If you prefer to set the new page path using account admin, you must first must [release](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) your changes regarding template creation and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the new version of your store theme in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace).
 
 Once your changes are set up in a Production workspace, you will be able to use the admin's CMS to create the page's path:
 
@@ -148,4 +148,4 @@ You can define your page content performing changes directly to your Store Theme
 
 ### Making your theme content publicly available
 
-If you are happy with the changes to your store theme, make your new theme content public. Up until this point, the changes were performed in your development workspace. Access our documentation on [**making your theme content publicly available**](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-theme-content-public/) and follow the steps detailed there.
+If you are happy with the changes to your store theme, make your new theme content public. Up until this point, the changes were performed in your development workspace. Access our documentation on [**making your theme content publicly available**](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/) and follow the steps detailed there.

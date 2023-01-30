@@ -106,7 +106,7 @@ You can manage if you want to include product, navigation and/or apps routes in 
 
 #### Enabling custom routes
 
-If you have [custom pages](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-new-custom-page) configured in a `routes.json` file and want them to be included in your store's sitemap, add `isSitemapEntry=true` as a prop of the routes you want to include in the sitemap. Take the following example:
+If you have [custom pages](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) configured in a `routes.json` file and want them to be included in your store's sitemap, add `isSitemapEntry=true` as a prop of the routes you want to include in the sitemap. Take the following example:
 
 ```
 {
@@ -131,7 +131,7 @@ For implementation details, check the following step by step.
 >
 > We recommend that you use a pre-created XML file. Otherwise, for every request, the XML file will be built from scratch, consuming more time to complete the task.
 
-2. [Publish](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-publishing-an-app) and install your app in a production workspace.
+2. [Publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) and install your app in a production workspace.
 
 3. Now, to make your index available in the sitemap root file (`/sitemap.xml`), access your account's admin, relative to the workspace you're working on, and select the GraphQL IDE.
 

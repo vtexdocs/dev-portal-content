@@ -6,11 +6,11 @@ createdAt: "2022-02-16T13:52:17.247Z"
 updatedAt: "2022-12-13T20:17:44.776Z"
 ---
 
-In this guide, you will learn how to create [clients](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-clients) and how to use them in your implementations.
+In this guide, you will learn how to create [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) and how to use them in your implementations.
 
 ## Before you start
 
-- Being familiar with the [concept of Clients](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-clients)
+- Being familiar with the [concept of Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients)
 
 So, what to do with *clients*? You **create them**, extending some base code. IO Node Services already ship with some **default clients**, mostly to our internal services, that you may use right away. Check them [here](https://github.com/vtex/node-vtex-api/blob/ccf4d8f8d3208007c4bfd558baf979df8d825af8/src/clients/IOClients.ts).
 

@@ -5,13 +5,13 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.266Z"
 updatedAt: "2022-12-13T20:17:44.248Z"
 ---
-[Workspaces](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-workspace/) in development mode can [link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-linking-an-app/), [publish](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-publishing-an-app/) and [install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app/) apps. These workspaces enjoy **greater development freedom**, since **they do not handle traffic** from any user except yourself.
+[Workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/) in development mode can [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app/), [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/) and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) apps. These workspaces enjoy **greater development freedom**, since **they do not handle traffic** from any user except yourself.
 
-Because development workspace do not have any level of user traffic, you should use them whenever you want to perform changes in your code. But notice: they cannot be [promoted to Master](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-promoting-a-workspace-to-master/) nor used for [A/B testing](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-running-native-ab-testing/) - only [Production workspaces](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace/) can.
+Because development workspace do not have any level of user traffic, you should use them whenever you want to perform changes in your code. But notice: they cannot be [promoted to Master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/) nor used for [A/B testing](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing/) - only [Production workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace/) can.
 
 ## Step by step
 
-1. [Log into](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installment-and-command-reference#command-reference) the desired VTEX account;
+1. [Log into](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) the desired VTEX account;
 2. Run the following command:
   
 ```sh
@@ -34,8 +34,8 @@ Currently, no service is responsible for automatically deleting unused workspace
 
 ## Next Step
 
-Once you are sure of the changes performed in the Development workspace, it is time to [create a Production workspace](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-creating-a-production-workspace) to test your changes with some user traffic.
+Once you are sure of the changes performed in the Development workspace, it is time to [create a Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) to test your changes with some user traffic.
 
 > ⚠️ **The Production workspace will not inherit the changes performed in the Development workspace**. All changes performed in the Development workspace will need to be replicated in the new Production workspace.
 
-Creating a Development workspace is one of the steps to making your code's new version public, meaning that it will become available to your end-users. For more details on the next steps and to better understand the complete flow, access the recipe on [making your new app version publicly available.](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-making-your-new-app-version-publicly-available)
+Creating a Development workspace is one of the steps to making your code's new version public, meaning that it will become available to your end-users. For more details on the next steps and to better understand the complete flow, access the recipe on [making your new app version publicly available.](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available)

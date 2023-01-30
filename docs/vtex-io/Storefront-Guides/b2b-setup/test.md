@@ -8,7 +8,7 @@ updatedAt: "2022-07-08T19:04:35.975Z"
 
 B2B Store Theme is a front-end template to help your store get started with VTEX’s core features for businesses selling to other businesses.
 
-> ⚠️ The B2B Store Theme is not compatible with the [B2B Suite](https://developers.vtex.com/vtex-developer-docs/docs/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) documentation.
+> ⚠️ The B2B Store Theme is not compatible with the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) documentation.
 
 ## Prerequisites
 
@@ -16,23 +16,23 @@ B2B Store Theme is a front-end template to help your store get started with VTEX
 
 Before starting with the B2B Store Theme setup itself, you must:
 
-1. [Set up a workspace to develop in VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-basicsetuptodevelopinvtexio) on your machine.
-2. Follow [these instructions](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-2-prerequesites) to make sure you meet all the prerequisites to develop using Store Framework.
+1. [Set up a workspace to develop in VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio) on your machine.
+2. Follow [these instructions](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-prerequesites) to make sure you meet all the prerequisites to develop using Store Framework.
 3. Make sure your store’s catalog is integrated with VTEX Intelligent Search, as described in [this article](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V).
 
 ### Install required B2B apps
 
 Now you must install the required apps listed below. They are mandatory for the B2B Store Theme to work properly.
 
-- [Wishlist](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#wishlist)
-- [Reviews and Ratings](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#reviews-and-ratings)
-- [Quick Order](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#quick-order)
-- [Location Availability](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#location-availability)
-- [Shopper Location](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#shopper-location)
-- [Order Quote](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#order-quote)
-- [Wordpress Integration](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#wordpress-integration)
-- [Admin Organizations](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#admin-organizations)
-- [Organizations](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#organizations)
+- [Wishlist](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#wishlist)
+- [Reviews and Ratings](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#reviews-and-ratings)
+- [Quick Order](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#quick-order)
+- [Location Availability](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#location-availability)
+- [Shopper Location](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#shopper-location)
+- [Order Quote](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#order-quote)
+- [Wordpress Integration](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#wordpress-integration)
+- [Admin Organizations](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#admin-organizations)
+- [Organizations](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#organizations)
 
 #### Wishlist
 
@@ -176,10 +176,10 @@ If you have [installed B2B Easy Setup](https://developers.vtex.com/vtex-rest-api
 
 If you have opted not to install B2B Easy Setup, you need to use the **[Save schema by name](https://developers.vtex.com/vtex-rest-api/reference/schemas#saveschemabyname)** endpoint of the **Master Data API - V2** to create the following schemas.
 
-- [`BusinessPermission schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businesspermission-schema)
-- [`BusinessRole schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businessrole-schema)
-- [`BusinessOrganization schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#businessorganization-schema)
-- [`UserOrganization schema`](https://developers.vtex.com/vtex-developer-docs/docs/installing-the-b2b-store-theme#userorganization-schema)
+- [`BusinessPermission schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#businesspermission-schema)
+- [`BusinessRole schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#businessrole-schema)
+- [`BusinessOrganization schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#businessorganization-schema)
+- [`UserOrganization schema`](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme#userorganization-schema)
 
 #### `BusinessPermission` schema
 
@@ -306,4 +306,4 @@ Finally, your storefront should look like this:
 
 ## Customization
 
-After installing the B2B Store Theme, you can customize it according to your store’s business needs. Check our guide on [Customizing the B2B Store Theme](https://developers.vtex.com/vtex-developer-docs/docs/customizing-the-b2b-store-theme) for more information.
+After installing the B2B Store Theme, you can customize it according to your store’s business needs. Check our guide on [Customizing the B2B Store Theme](https://developers.vtex.com/docs/guides/customizing-the-b2b-store-theme) for more information.
