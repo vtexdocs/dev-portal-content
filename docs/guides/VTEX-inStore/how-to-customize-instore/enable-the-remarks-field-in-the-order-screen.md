@@ -32,9 +32,9 @@ To enable the **Observation** field, you must set the following properties insid
 "1-1": "string",
 "2-1": "string",
 "h-0": "Name",
-"0-3": "![cartObservation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/enable-the-remarks-field-in-the-order-screen-0_35.png)",
-"1-3": "![cartObservationTitle](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/enable-the-remarks-field-in-the-order-screen-1_36.png)",
-"2-3": "![observationNote](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/enable-the-remarks-field-in-the-order-screen-2_37.png)",
+"0-3": "![cartObservation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-the-remarks-field-in-the-order-screen-0.png)",
+"1-3": "![cartObservationTitle](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-the-remarks-field-in-the-order-screen-1.png)",
+"2-3": "![observationNote](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-the-remarks-field-in-the-order-screen-2.png)",
 "h-3": "UI display"
 },
 "cols": 4,

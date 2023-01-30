@@ -28,7 +28,7 @@ Once you reload inStore, whenever a sales associate prints an order, the text yo
 
 Before adding extra text, the printout of the order summary has the following format:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/add-extra-text-to-the-order-print-0_34.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/add-extra-text-to-the-order-print-0.png)
 
 In the example below, we changed the `checkout-instore-custom.js` file by inserting the following extra text:
 
@@ -40,4 +40,4 @@ window.INSTORE_CONFIG = {
 
 Now, whenever an order summary is printed, we will get the following result:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/add-extra-text-to-the-order-print-1_48.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/add-extra-text-to-the-order-print-1.png)

@@ -70,4 +70,4 @@ If you want to change inStore's language to English, for example, replace the `p
 ## Check out your changes
 
 To see the reflected changes on inStore, enter the menu and click the `Reset app local data` button, as shown in the image below.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/change-instore-language-0_73.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-customize-instore/change-instore-language-0.png)

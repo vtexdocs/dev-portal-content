@@ -23,8 +23,8 @@ In the **UI display** column below, you can see where the elements you can hide 
 "1-0": "`cancel-order`",
 "0-1": "The ID selector you can use to style the `Cancel full order` button. This button enables total cancellation of orders.",
 "1-1": "The ID selector you can use to style the `Cancel order of this package` button. This button enables partial cancellation of orders, which means you can cancel individual packages.",
-"0-2": "![cancel-full-order](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/hide-cancellation-buttons-0_26.png)",
-"1-2": "![cancel-order-package](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20inStore/how-to-customize-instore/hide-cancellation-buttons-1_27.png)"
+"0-2": "![cancel-full-order](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/hide-cancellation-buttons-0.png)",
+"1-2": "![cancel-order-package](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/hide-cancellation-buttons-1.png)"
 },
 "cols": 3,
 "rows": 2
