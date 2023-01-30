@@ -9,7 +9,7 @@ updatedAt: "2023-01-18T15:28:45.242Z"
 
 Lazy Load for pixel apps consists of delaying the injection of the pixel script snippet via render-server or by the app itself. For more information about pixel apps, read this [doc](https://developers.vtex.com/docs/guides/vtex-io-documentation-pixel-app).
 
-> :warning: This feature is in beta. Lazily loading pixel apps can cause misbehavior on all pixel apps. So, after setup, ensure all pixel apps are working properly.
+> ⚠️ This feature is in beta. Lazily loading pixel apps can cause misbehavior on all pixel apps. So, after setup, ensure all pixel apps are working properly.
 >
 > To set this up, you must have access to a VTEX account and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
