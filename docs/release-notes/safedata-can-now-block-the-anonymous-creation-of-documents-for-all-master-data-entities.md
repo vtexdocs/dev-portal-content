@@ -4,8 +4,11 @@ title: "SafeData can now block the anonymous creation of documents for all Maste
 createdAt: 2023-01-18T16:53:15.322Z
 updatedAt: 2023-01-19T19:08:15.322Z
 hidden: false
+excerpt: As of January 30, 2023, VTEX is improving the way you control the anonymous creation of documents with SafeData.
 type: "improved"
 ---
+
+![Master Data](https://img.shields.io/badge/Master%20Data-blue)![Apps](https://img.shields.io/badge/Apps-pink)
 
 SafeData is an app that provides an easy-to-use, configurable middleware to retrieve and save information to Master Data V1 and V2. As of January 30, 2023, VTEX is improving the way you control the creation of documents with SafeData.
 
