@@ -1,7 +1,6 @@
 ---
 title: "Icon Pack list"
 slug: "vtex-store-icons-iconpack"
-excerpt: "vtex.store-icons@0.18.0"
 hidden: false
 createdAt: "2020-09-23T16:25:14.423Z"
 updatedAt: "2020-10-05T18:52:00.091Z"

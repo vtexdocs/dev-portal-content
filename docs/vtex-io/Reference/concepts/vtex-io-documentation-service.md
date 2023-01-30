@@ -1,7 +1,6 @@
 ---
 title: "Service"
 slug: "vtex-io-documentation-service"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-06T14:55:45.779Z"
 updatedAt: "2022-12-13T20:17:44.904Z"

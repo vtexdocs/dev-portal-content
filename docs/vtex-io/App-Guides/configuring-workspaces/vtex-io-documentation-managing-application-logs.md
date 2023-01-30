@@ -1,7 +1,6 @@
 ---
 title: "Managing application logs"
 slug: "vtex-io-documentation-managing-application-logs"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-22T21:29:09.307Z"
 updatedAt: "2022-12-13T20:17:44.453Z"

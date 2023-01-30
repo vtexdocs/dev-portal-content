@@ -1,7 +1,6 @@
 ---
 title: "Manifest"
 slug: "vtex-io-documentation-manifest"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-22T21:29:09.380Z"
 updatedAt: "2022-12-13T20:17:44.879Z"

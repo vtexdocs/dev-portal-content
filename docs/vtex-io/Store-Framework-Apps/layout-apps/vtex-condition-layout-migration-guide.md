@@ -1,7 +1,6 @@
 ---
 title: "Migration guide"
 slug: "vtex-condition-layout-migration-guide"
-excerpt: "vtex.condition-layout@2.6.0"
 hidden: true
 createdAt: "2020-10-26T15:24:19.609Z"
 updatedAt: "2022-07-19T14:16:44.889Z"

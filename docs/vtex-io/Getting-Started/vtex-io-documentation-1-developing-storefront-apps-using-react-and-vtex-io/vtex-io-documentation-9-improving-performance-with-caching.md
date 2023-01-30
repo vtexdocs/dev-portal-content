@@ -1,7 +1,6 @@
 ---
 title: "8. Improving performance with caching"
 slug: "vtex-io-documentation-9-improving-performance-with-caching"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.052Z"
 updatedAt: "2022-12-13T20:17:44.240Z"

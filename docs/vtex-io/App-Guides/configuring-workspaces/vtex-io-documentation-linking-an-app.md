@@ -1,7 +1,6 @@
 ---
 title: "Linking an app"
 slug: "vtex-io-documentation-linking-an-app"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.237Z"
 updatedAt: "2022-12-13T20:17:45.061Z"

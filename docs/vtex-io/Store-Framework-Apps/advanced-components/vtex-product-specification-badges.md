@@ -1,7 +1,6 @@
 ---
 title: "VTEX Product Specification Badges"
 slug: "vtex-product-specification-badges"
-excerpt: "vtex.product-specification-badges@0.4.0"
 hidden: false
 createdAt: "2020-06-03T15:19:25.390Z"
 updatedAt: "2021-07-13T20:27:30.382Z"

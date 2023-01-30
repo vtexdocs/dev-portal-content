@@ -1,7 +1,6 @@
 ---
 title: "Creating a Development workspace for a Legacy CMS store"
 slug: "vtex-io-documentation-creating-development-workspace-for-cms-legacy"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-04-04T18:23:34.097Z"
 updatedAt: "2022-12-13T20:17:44.023Z"

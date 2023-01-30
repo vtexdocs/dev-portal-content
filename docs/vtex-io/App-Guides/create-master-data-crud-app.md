@@ -1,7 +1,6 @@
 ---
 title: "Creating a Master Data CRUD app"
 slug: "create-master-data-crud-app"
-excerpt: "vtex.io-documentation@0.88.9"
 hidden: false
 createdAt: "2022-10-13T18:45:34.059Z"
 updatedAt: "2022-10-17T13:53:29.359Z"

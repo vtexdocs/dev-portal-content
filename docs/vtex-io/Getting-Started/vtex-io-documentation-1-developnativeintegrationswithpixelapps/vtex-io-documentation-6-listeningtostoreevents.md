@@ -1,7 +1,6 @@
 ---
 title: "5. Listening to store events"
 slug: "vtex-io-documentation-6-listeningtostoreevents"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-03T18:19:23.235Z"
 updatedAt: "2022-12-13T20:17:44.943Z"

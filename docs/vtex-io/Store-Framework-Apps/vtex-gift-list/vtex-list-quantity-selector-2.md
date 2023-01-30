@@ -1,7 +1,5 @@
 ---
 title: "Quantity Selector"
-slug: "vtex-list-quantity-selector-2"
-excerpt: "vtex.list@3.1.0"
 hidden: false
 createdAt: "2022-09-16T12:16:38.317Z"
 updatedAt: "2022-09-21T13:14:31.287Z"

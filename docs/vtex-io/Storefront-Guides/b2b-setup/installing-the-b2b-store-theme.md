@@ -1,7 +1,6 @@
 ---
 title: "B2B Store Theme"
 slug: "installing-the-b2b-store-theme"
-excerpt: "vtex.b2b-store-theme@2.13.1"
 hidden: false
 createdAt: "2022-07-18T20:12:55.205Z"
 updatedAt: "2022-07-18T20:12:55.205Z"

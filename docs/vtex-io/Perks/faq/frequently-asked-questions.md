@@ -1,7 +1,6 @@
 ---
 title: "Store Framework"
 slug: "frequently-asked-questions"
-excerpt: "vtex.io-documentation@0.38.1"
 hidden: true
 createdAt: "2020-06-23T23:27:32.590Z"
 updatedAt: "2021-03-17T13:14:04.164Z"

@@ -1,7 +1,6 @@
 ---
 title: "Product Gifts"
 slug: "vtex-product-gifts"
-excerpt: "vtex.product-gifts@0.4.0"
 hidden: false
 createdAt: "2020-06-03T15:19:16.346Z"
 updatedAt: "2022-06-09T17:19:17.708Z"

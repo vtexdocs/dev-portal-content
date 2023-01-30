@@ -1,7 +1,6 @@
 ---
 title: "Installing apps on live stores"
 slug: "vtex-io-documentation-installing-apps-in-live-stores-best-practices"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.252Z"
 updatedAt: "2022-12-13T20:17:44.589Z"

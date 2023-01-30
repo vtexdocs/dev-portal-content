@@ -1,7 +1,6 @@
 ---
 title: "User Experience guidelines"
 slug: "vtex-io-documentation-design-guidelines"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-07-22T14:20:04.371Z"
 updatedAt: "2022-12-13T20:17:45.071Z"

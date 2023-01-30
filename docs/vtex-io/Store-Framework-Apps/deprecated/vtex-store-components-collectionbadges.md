@@ -1,7 +1,6 @@
 ---
 title: "Collection Badges"
 slug: "vtex-store-components-collectionbadges"
-excerpt: "vtex.store-components@3.132.2"
 hidden: false
 createdAt: "2020-06-03T16:04:30.346Z"
 updatedAt: "2021-10-25T14:50:59.973Z"

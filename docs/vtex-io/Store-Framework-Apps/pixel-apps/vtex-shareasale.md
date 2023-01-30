@@ -1,7 +1,6 @@
 ---
 title: "Shareasale"
 slug: "vtex-shareasale"
-excerpt: "vtex.shareasale@1.0.3"
 hidden: false
 createdAt: "2020-06-03T15:20:20.925Z"
 updatedAt: "2020-06-03T15:20:20.925Z"

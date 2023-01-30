@@ -1,7 +1,6 @@
 ---
 title: "Product Summary Quantity"
 slug: "vtex-list-quantity-selector"
-excerpt: "vtex.list@2.5.1"
 hidden: true
 createdAt: "2022-09-16T00:32:17.840Z"
 updatedAt: "2022-09-16T00:32:17.840Z"

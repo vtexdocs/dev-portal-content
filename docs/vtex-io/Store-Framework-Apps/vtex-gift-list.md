@@ -1,7 +1,6 @@
 ---
 title: "Gift List"
 slug: "vtex-gift-list"
-excerpt: "vtex.list@3.1.0"
 hidden: false
 createdAt: "2022-07-08T07:17:48.371Z"
 updatedAt: "2022-10-27T19:47:24.537Z"

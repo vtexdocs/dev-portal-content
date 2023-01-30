@@ -1,7 +1,6 @@
 ---
 title: "B2B Suite"
 slug: "vtex-b2b-suite"
-excerpt: "vtex.b2b-suite@0.1.3"
 hidden: false
 createdAt: "2022-02-22T19:40:11.665Z"
 updatedAt: "2022-07-06T13:02:46.476Z"

@@ -1,7 +1,6 @@
 ---
 title: "6. Building your own store theme"
 slug: "vtex-io-documentation-6-buildingyourownstoretheme"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-08-11T07:03:17.864Z"
 updatedAt: "2022-12-13T20:17:44.531Z"

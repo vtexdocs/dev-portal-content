@@ -1,7 +1,6 @@
 ---
 title: "Slots"
 slug: "vtex-io-documentation-slots"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-21T17:35:29.193Z"
 updatedAt: "2022-12-13T20:17:44.635Z"

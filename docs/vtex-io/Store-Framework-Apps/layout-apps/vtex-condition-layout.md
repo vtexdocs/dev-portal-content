@@ -1,7 +1,6 @@
 ---
 title: "Condition Layout"
 slug: "vtex-condition-layout"
-excerpt: "vtex.condition-layout@2.6.0"
 hidden: false
 createdAt: "2020-06-03T15:19:17.916Z"
 updatedAt: "2022-07-19T14:16:44.719Z"

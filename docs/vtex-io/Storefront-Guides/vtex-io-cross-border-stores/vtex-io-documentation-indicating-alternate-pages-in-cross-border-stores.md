@@ -1,7 +1,6 @@
 ---
 title: "Indicating alternate versions of localized pages in cross border stores"
 slug: "vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-23T14:49:49.171Z"
 updatedAt: "2022-12-13T20:17:44.702Z"

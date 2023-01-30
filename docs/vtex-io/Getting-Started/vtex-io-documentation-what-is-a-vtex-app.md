@@ -1,7 +1,6 @@
 ---
 title: "What is a VTEX App"
 slug: "vtex-io-documentation-what-is-a-vtex-app"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-01-18T17:20:04.667Z"
 updatedAt: "2022-12-13T20:17:44.128Z"

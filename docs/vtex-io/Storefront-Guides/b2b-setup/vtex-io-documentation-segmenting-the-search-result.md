@@ -1,7 +1,6 @@
 ---
 title: "Segmenting the search result"
 slug: "vtex-io-documentation-segmenting-the-search-result"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-12-29T16:02:23.423Z"
 updatedAt: "2022-12-13T20:17:44.718Z"

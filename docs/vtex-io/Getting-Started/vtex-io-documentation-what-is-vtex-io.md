@@ -1,7 +1,6 @@
 ---
 title: "What is VTEX IO"
 slug: "vtex-io-documentation-what-is-vtex-io"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-26T15:56:56.646Z"
 updatedAt: "2022-12-13T20:17:44.804Z"

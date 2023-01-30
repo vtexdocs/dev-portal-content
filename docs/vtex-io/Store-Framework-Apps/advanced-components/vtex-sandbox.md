@@ -1,7 +1,6 @@
 ---
 title: "VTEX IO Sandbox Component"
 slug: "vtex-sandbox"
-excerpt: "vtex.sandbox@0.5.1"
 hidden: false
 createdAt: "2020-06-03T15:19:48.424Z"
 updatedAt: "2021-05-17T18:10:54.116Z"

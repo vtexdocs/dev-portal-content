@@ -1,7 +1,6 @@
 ---
 title: "Site Editor"
 slug: "vtex-io-documentation-site-editor"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-06-17T21:47:35.963Z"
 updatedAt: "2022-12-13T20:17:44.208Z"

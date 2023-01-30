@@ -1,7 +1,6 @@
 ---
 title: "Creating a Development workspace"
 slug: "vtex-io-documentation-creating-a-development-workspace"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.266Z"
 updatedAt: "2022-12-13T20:17:44.248Z"

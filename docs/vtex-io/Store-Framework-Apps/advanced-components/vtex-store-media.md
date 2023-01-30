@@ -1,7 +1,6 @@
 ---
 title: "Store Media"
 slug: "vtex-store-media"
-excerpt: "vtex.store-media@0.3.0"
 hidden: false
 createdAt: "2021-01-22T13:03:07.471Z"
 updatedAt: "2021-03-31T17:25:38.265Z"

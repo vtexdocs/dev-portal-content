@@ -1,7 +1,6 @@
 ---
 title: "1. Setting up your development environment"
 slug: "vtex-io-documentation-2-basic-development-setup-in-vtex-io"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-25T20:58:43.721Z"
 updatedAt: "2022-12-13T20:17:44.103Z"

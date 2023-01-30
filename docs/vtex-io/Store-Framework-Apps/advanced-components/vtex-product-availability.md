@@ -1,7 +1,6 @@
 ---
 title: "Product Availability"
 slug: "vtex-product-availability"
-excerpt: "vtex.product-availability@0.3.1"
 hidden: false
 createdAt: "2020-06-03T15:19:17.857Z"
 updatedAt: "2022-02-25T16:57:31.666Z"

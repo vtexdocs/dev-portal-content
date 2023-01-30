@@ -1,7 +1,6 @@
 ---
 title: "Product Comparison"
 slug: "vtex-product-comparison"
-excerpt: "vtex.product-comparison@0.17.0"
 hidden: false
 createdAt: "2020-11-06T16:27:23.648Z"
 updatedAt: "2022-06-15T17:27:43.318Z"

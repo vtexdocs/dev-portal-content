@@ -1,7 +1,6 @@
 ---
 title: "Cleaning cart data on log out"
 slug: "vtex-io-documentation-cleaning-cart-data-on-log-out"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-04-27T13:50:39.980Z"
 updatedAt: "2022-12-13T20:17:44.280Z"

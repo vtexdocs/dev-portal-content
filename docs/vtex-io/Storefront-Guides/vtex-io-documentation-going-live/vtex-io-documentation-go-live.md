@@ -1,7 +1,6 @@
 ---
 title: "Going live with a new store"
 slug: "vtex-io-documentation-go-live"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-11-07T14:35:54.261Z"
 updatedAt: "2022-12-13T20:17:44.714Z"

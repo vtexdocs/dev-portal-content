@@ -1,7 +1,6 @@
 ---
 title: "Customizing your store's icons"
 slug: "vtex-io-documentation-customizing-your-stores-icons"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.699Z"
 updatedAt: "2022-12-13T20:17:44.425Z"

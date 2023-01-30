@@ -1,7 +1,6 @@
 ---
 title: "Buyer Organization Supplier"
 slug: "vtex-buyer-org-supplier"
-excerpt: "vtex.buyer-org-supplier@0.6.1"
 hidden: true
 createdAt: "2021-10-07T18:58:23.596Z"
 updatedAt: "2022-02-04T20:56:01.083Z"

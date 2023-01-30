@@ -1,7 +1,6 @@
 ---
 title: "Storefront"
 slug: "getting-started-3"
-excerpt: "vtex.io-documentation@0.35.6"
 hidden: false
 createdAt: "2020-06-18T18:51:40.292Z"
 updatedAt: "2022-06-23T13:45:58.727Z"

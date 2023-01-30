@@ -1,7 +1,6 @@
 ---
 title: "Seller Selector"
 slug: "vtex-seller-selector"
-excerpt: "vtex.seller-selector@0.4.0"
 hidden: false
 createdAt: "2020-06-03T15:19:50.046Z"
 updatedAt: "2022-02-09T19:12:58.545Z"

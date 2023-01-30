@@ -1,7 +1,6 @@
 ---
 title: "Deprecating an app"
 slug: "vtex-io-documentation-deprecating-an-app"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-02T21:04:56.062Z"
 updatedAt: "2022-12-13T20:17:44.894Z"

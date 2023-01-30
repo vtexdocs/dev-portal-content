@@ -1,7 +1,6 @@
 ---
 title: "Running IO scripts in non-IO VTEX stores"
 slug: "vtex-io-documentation-running-io-scripts-in-non-io-vtex-stores"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-26T21:04:47.465Z"
 updatedAt: "2022-12-13T20:17:44.117Z"

@@ -1,7 +1,6 @@
 ---
 title: "Using events to trigger side effects on store components"
 slug: "vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-10-26T10:30:54.362Z"
 updatedAt: "2022-12-13T20:17:44.413Z"

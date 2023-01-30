@@ -1,7 +1,6 @@
 ---
 title: "Product Recommendation"
 slug: "vtex-recommendation-shelf"
-excerpt: "vtex.recommendation-shelf@1.7.1"
 hidden: true
 createdAt: "2020-06-03T15:19:30.034Z"
 updatedAt: "2022-07-07T13:16:16.542Z"

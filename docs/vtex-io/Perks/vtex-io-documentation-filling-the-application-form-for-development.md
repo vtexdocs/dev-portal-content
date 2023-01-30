@@ -1,7 +1,6 @@
 ---
 title: "Filling the Application form for development"
 slug: "vtex-io-documentation-filling-the-application-form-for-development"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: true
 createdAt: "2020-06-03T16:02:44.275Z"
 updatedAt: "2022-12-13T20:17:44.127Z"

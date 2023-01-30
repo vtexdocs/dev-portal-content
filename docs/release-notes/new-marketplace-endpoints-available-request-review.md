@@ -14,5 +14,5 @@ Check out the API Reference for the new endpoints:
 
 - [Get SKU’s review information](https://developers.vtex.com/vtex-developer-docs/reference/review-received-skus#get-sku-review-information)
 - [Request Review of Received SKUs](https://developers.vtex.com/vtex-developer-docs/reference/review-received-skus#request-sku-review)
-- [Get Matched Offer's Data by Product ID](https://developers.vtex.com/vtex-developer-docs/reference/matched-offers#marketplace-api-get-matched-offers-productid)
+- [Get Matched Offer's Data by Product ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/-accountName-.-environment-.com.br/api/offer-manager/pvt/product/-productId-)
 - [Get Matched Offer's Data by SKU ID](https://developers.vtex.com/vtex-developer-docs/reference/matched-offers#marketplace-api-get-matched-offers-skuid)

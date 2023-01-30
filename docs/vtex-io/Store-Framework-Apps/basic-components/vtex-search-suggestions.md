@@ -1,7 +1,6 @@
 ---
 title: "Suggestions"
 slug: "vtex-search-suggestions"
-excerpt: "vtex.search@2.14.0"
 hidden: false
 createdAt: "2021-02-23T17:09:08.541Z"
 updatedAt: "2022-09-15T11:39:25.159Z"

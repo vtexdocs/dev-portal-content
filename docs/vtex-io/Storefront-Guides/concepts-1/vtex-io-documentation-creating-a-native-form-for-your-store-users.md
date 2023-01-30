@@ -1,7 +1,6 @@
 ---
 title: "Creating a native form for your store users"
 slug: "vtex-io-documentation-creating-a-native-form-for-your-store-users"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.837Z"
 updatedAt: "2022-12-13T20:17:45.509Z"
@@ -36,9 +35,9 @@ To that end, we will use the admin's Master Data legacy interface:
 
 1. Access the VTEX account's admin in which you are working and access its Master Data section;
 2. [Create all required fields](https://help.vtex.com/tutorial/how-can-i-create-field-in-master-data--frequentlyAskedQuestions_1829?locale=en) in the desired Data Entity. If you do not need to add any extra fields, please move on to step 5 to create your schema;
-3. Run the [`Get Schemas` API](https://developers.vtex.com/reference/schemas#getschemas), replacing the `data_entity_name` value with `CL`;
+3. Run the [`Get Schemas` API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas), replacing the `data_entity_name` value with `CL`;
 4. In the response, look for the schema named `mdv1`. This schema is automatically created based on the Master Data v1 existing fields. Find the fields added in step 2 and copy the structures in which these are displayed to the `mdv1` schema. This will help you in the next step when you'll create another JSON Schema for the form including those fields as properties;
-5. Send a request to Master Data's [`Save Schema by name`](https://developers.vtex.com/reference/schemas#saveschemabyname) API, copying the following example in the request's body and using it as a default when making any required changes to the properties (according to your store’s scenario):
+5. Send a request to Master Data's [`Save Schema by name`](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) API, copying the following example in the request's body and using it as a default when making any required changes to the properties (according to your store’s scenario):
   
 ```json
 {
@@ -134,7 +133,7 @@ Once the API was executed successfully, the JSON Schema is ready and you can alr
 
 #### Using Master Data v2
 
-When using Master Data v2, you will not need to previously create any field. Simply send a request to the Master Data [`Save Schema by name`](https://developers.vtex.com/reference/schemas#saveschemabyname) API, copying the following example in the request's body and using it as a default when making any required changes to the properties (according to your store’s scenario):
+When using Master Data v2, you will not need to previously create any field. Simply send a request to the Master Data [`Save Schema by name`](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) API, copying the following example in the request's body and using it as a default when making any required changes to the properties (according to your store’s scenario):
 
 ```json
 {

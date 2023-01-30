@@ -1,7 +1,6 @@
 ---
 title: "Displaying asynchronous prices"
 slug: "vtex-io-documentation-displaying-asynchronous-prices"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-11-23T13:33:26.379Z"
 updatedAt: "2022-12-13T20:17:45.051Z"

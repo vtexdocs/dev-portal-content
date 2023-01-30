@@ -1,7 +1,6 @@
 ---
 title: "Assembly Options"
 slug: "assembly-options-app"
-excerpt: "vtex.admin-assembly-options@2.0.3"
 hidden: false
 createdAt: "2022-06-23T14:21:02.843Z"
 updatedAt: "2022-06-23T14:21:02.843Z"

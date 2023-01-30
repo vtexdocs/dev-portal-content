@@ -1,7 +1,6 @@
 ---
 title: "Releasing a new app version"
 slug: "vtex-io-documentation-releasing-a-new-app-version"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.609Z"
 updatedAt: "2022-12-13T20:17:44.577Z"

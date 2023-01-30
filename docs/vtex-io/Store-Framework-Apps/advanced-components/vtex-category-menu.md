@@ -1,7 +1,6 @@
 ---
 title: "Category Menu"
 slug: "vtex-category-menu"
-excerpt: "vtex.category-menu@2.17.1"
 hidden: false
 createdAt: "2020-06-03T15:20:19.857Z"
 updatedAt: "2022-03-17T19:52:52.367Z"

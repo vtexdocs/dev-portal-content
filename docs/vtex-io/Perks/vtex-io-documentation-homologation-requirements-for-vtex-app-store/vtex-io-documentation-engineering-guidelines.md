@@ -1,7 +1,6 @@
 ---
 title: "Engineering best practices"
 slug: "vtex-io-documentation-engineering-guidelines"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-07-22T14:20:04.345Z"
 updatedAt: "2022-12-13T20:17:44.370Z"

@@ -1,7 +1,6 @@
 ---
 title: "Migrating CMS settings after a theme major update"
 slug: "vtex-io-documentation-migrating-cms-settings-after-major-update"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-22T20:44:01.218Z"
 updatedAt: "2022-12-13T20:17:44.742Z"

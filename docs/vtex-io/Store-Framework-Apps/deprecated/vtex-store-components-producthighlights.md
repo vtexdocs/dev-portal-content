@@ -1,7 +1,6 @@
 ---
 title: "Product Highlights"
 slug: "vtex-store-components-producthighlights"
-excerpt: "vtex.store-components@3.163.4"
 hidden: false
 createdAt: "2020-06-03T16:04:30.385Z"
 updatedAt: "2022-11-22T18:39:23.175Z"

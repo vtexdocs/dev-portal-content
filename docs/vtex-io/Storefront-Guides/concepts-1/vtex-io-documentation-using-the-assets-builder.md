@@ -1,7 +1,6 @@
 ---
 title: "Using the Assets Builder"
 slug: "vtex-io-documentation-using-the-assets-builder"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.305Z"
 updatedAt: "2022-12-13T20:17:44.494Z"

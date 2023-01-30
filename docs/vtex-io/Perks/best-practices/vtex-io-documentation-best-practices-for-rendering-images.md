@@ -1,7 +1,6 @@
 ---
 title: "Rendering images"
 slug: "vtex-io-documentation-best-practices-for-rendering-images"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.306Z"
 updatedAt: "2022-12-13T20:17:44.629Z"

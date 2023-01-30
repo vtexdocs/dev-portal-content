@@ -1,7 +1,6 @@
 ---
 title: "Developing custom storefront components"
 slug: "vtex-io-documentation-developing-custom-storefront-components"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-03-12T13:21:31.408Z"
 updatedAt: "2022-12-13T20:17:44.389Z"

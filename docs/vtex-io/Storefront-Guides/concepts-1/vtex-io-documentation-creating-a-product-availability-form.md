@@ -1,7 +1,7 @@
 ---
 title: "Creating a product availability form"
 slug: "vtex-io-documentation-creating-a-product-availability-form"
-excerpt: "vtex.io-documentation@0.88.24"
+excerpt: "Learn how to create a product availability form with this step-by-step guide."
 hidden: false
 createdAt: "2021-08-11T18:17:38.105Z"
 updatedAt: "2022-12-13T20:17:44.755Z"
@@ -41,9 +41,9 @@ The JSON schema will be responsible for telling your form fields which data they
 
 In addition to that, the schema will also be responsible for saving all user data fetched from the form in the Master Data's Entity  `AS` created in the previous step.
 
-1. Using a tool of your preference,  run the  Master Data's [Get Schemas](https://developers.vtex.com/reference/schemas#getschemas) API, replacing the  `data_entity_name`  value with `AS`;
+1. Using a tool of your preference,  run the  Master Data's [Get Schemas](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas) API, replacing the  `data_entity_name`  value with `AS`;
 2. In the response, look for fields added previously to the entity and copy the structures in which these are being displayed. This will help you to create another JSON Schema for the form, including those fields now as properties;
-3. Run the Master Data's  [Save Schema by name](https://developers.vtex.com/reference/schemas#saveschemabyname)  API, pasting the schema structure copied in the second step in the request's body. Remember that this schema structure is using the entity fields, and you should replace them for the schema's properties as stated in the example below:
+3. Run the Master Data's  [Save Schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-)  API, pasting the schema structure copied in the second step in the request's body. Remember that this schema structure is using the entity fields, and you should replace them for the schema's properties as stated in the example below:
 
 ```JSON
 {

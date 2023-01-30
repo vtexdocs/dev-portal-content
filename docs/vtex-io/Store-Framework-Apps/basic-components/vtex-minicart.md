@@ -1,7 +1,6 @@
 ---
 title: "Minicart"
 slug: "vtex-minicart"
-excerpt: "vtex.minicart@2.63.5"
 hidden: false
 createdAt: "2020-06-03T15:19:31.201Z"
 updatedAt: "2022-07-28T16:16:38.228Z"

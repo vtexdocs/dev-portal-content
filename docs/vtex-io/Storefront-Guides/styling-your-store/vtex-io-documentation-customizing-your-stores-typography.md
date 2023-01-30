@@ -1,7 +1,6 @@
 ---
 title: "Customizing your store’s typography"
 slug: "vtex-io-documentation-customizing-your-stores-typography"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-18T15:04:52.500Z"
 updatedAt: "2022-12-13T20:17:44.827Z"

@@ -1,7 +1,6 @@
 ---
 title: "Creating a Black Friday page from template"
 slug: "vtex-io-documentation-creating-a-black-friday-page-from-template"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-14T16:05:41.336Z"
 updatedAt: "2022-12-13T20:17:45.036Z"

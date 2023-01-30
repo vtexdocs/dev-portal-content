@@ -1,7 +1,6 @@
 ---
 title: "Building a Shelf"
 slug: "vtex-io-documentation-building-a-shelf"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-28T00:08:33.278Z"
 updatedAt: "2022-12-13T20:17:44.565Z"
