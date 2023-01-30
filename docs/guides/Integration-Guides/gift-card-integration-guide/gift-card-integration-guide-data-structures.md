@@ -17,7 +17,7 @@ The minimum information needed to define a provider includes:
 - `id`: the provider identifier in the context of Gift Card Hub API
 - `caption`: the name seen by shoppers in the store checkout
 - `serviceUrl`: the base URL that should be prepended to all provider endpoints
-  ![The name seen by shoppers in the store checkout is set by the caption parameter (e.g. My Gift Card Provider)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/gift-card-integration-guide/gift-card-integration-guide-data-structures-0_20.png)
+  ![The name seen by shoppers in the store checkout is set by the caption parameter (e.g. My Gift Card Provider)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/gift-card-integration-guide-data-structures-0.png)
   Below you will find an example of the gift card provider data structure and more details on the usage of each parameter. Parameters that were not mentioned in our short description above can usually be set to the values in the example.
 
 ```json
@@ -194,7 +194,7 @@ Some fields are shown in the order details page when gift cards are used to pay 
 - Gift Card Issuer: `provider`
 
 The image below illustrates how these might be presented in a specific order.
-![Gift card fields seen in the order details page: redemptionCode, relationName, caption, provider](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/gift-card-integration-guide/gift-card-integration-guide-data-structures-1_190.png)
+![Gift card fields seen in the order details page: redemptionCode, relationName, caption, provider](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/gift-card-integration-guide-data-structures-1.png)
 
 ## Transactions
 

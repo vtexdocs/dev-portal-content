@@ -68,4 +68,4 @@ To consult the verification, you need to:
 
 Here is a [consult example using the VTEX domain](https://www.digwebinterface.com/?hostnames=vtex.com&type=TXT&ns=resolver&useresolver=8.8.4.4&nameservers=):
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/api-guides/setting-up-the-spf-0_70.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-the-spf-0.png)

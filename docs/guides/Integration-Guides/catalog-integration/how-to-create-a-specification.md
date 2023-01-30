@@ -15,7 +15,7 @@ This guide will describe all the steps to create a specification for a product o
 3. Create a specification value
 4. Associating a specification to a product or to an SKU*
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/catalog-integration/how-to-create-a-specification-0_18.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-create-a-specification-0.png)
 
 ## Creating a Specification Group
 

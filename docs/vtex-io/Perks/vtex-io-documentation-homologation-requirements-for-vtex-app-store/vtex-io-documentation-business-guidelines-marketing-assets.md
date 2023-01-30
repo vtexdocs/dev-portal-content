@@ -32,7 +32,7 @@ Choose to favor the Serious and Authority tones. We understand that they capture
 |Serious|Speak firmly, respectfully, and honestly - always with a more serious tone than playful.|
 |Authority|Speak with mastery, proficiency, and expertise.|
 
-To see more about VTEX’s tone and voice, go to [UX Writing Guidelines](https://uxwriting.vtex.com/docs/principles/goals-principles/#tone-and-voice) and [VTEX Brand Guide](https://brand.vtex.com/brand/voiceandtone) pages.
+To see more about VTEX’s tone and voice, go to [UX Writing Guidelines](https://uxwriting.vtex.com/docs/principles/goals-principles/#tone-and-voice) and [VTEX Brand Guide](https://brand.vtex.com/voice-and-tone/) pages.
 
 ## Images
 

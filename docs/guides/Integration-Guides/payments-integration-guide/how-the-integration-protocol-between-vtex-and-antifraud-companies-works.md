@@ -43,14 +43,14 @@ Before setting up the VTEX environment, the provider must implement the back-end
 
 After receiving the access data and deploying the backend, the provider can access the approval tool through VTEX Admin. To do this, you must install the Antifraud Provider App from the Apps menu:
  
-![Apps Image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-0_46.png)
+![Apps Image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-0.png)
 
 Click on the installed app or access `https://{{AccountName}}.myvtex.com/admin/antifraud-provider`, replacing `{{AccountName}}` with the name of your account on the platform. In this environment, you can register the provider back-end configuration data and perform integration tests.
-![gatewayio](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-1_49.png)
+![gatewayio](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-1.png)
 
 ### 4. Initial settings
 
-![Antifraud test suite](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-2_53.png)
+![Antifraud test suite](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-2.png)
 When you access the environment through the link described in the previous item, you will see a form. Fill in the fields as indicated below:
 
 - **Connector Name**: fill in with the name you want to give to your connector within VTEX. This field can be edited whenever necessary.
@@ -72,7 +72,7 @@ After completing the fields correctly, the system will check the approved transa
 
 The tests that should be done in your integration before sending it to VTEX evaluation are displayed in the next module. You can select which tests you want to run, but for your integration to go through the analysis of our team, **all tests need to be done**. Therefore, we recommend that all of them remain selected.
  
-![Antifraud test suite2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-3_75.png)
+![Antifraud test suite2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-3.png)
 
 ### 5. Testing
 
@@ -103,11 +103,11 @@ For each Antifraud Provider Protocol test, we send a specific ID end to return t
 
 After running the tests, the system returns the results, both positive and negative. The system also provides information on the expected results for each test. Thus, you have more visibility of what should be corrected in case of error.
  
-![Antifraud test suite3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-4_107.png)
+![Antifraud test suite3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-4.png)
  
 To visualize in detail each action performed by the integration (and thus to identify possible errors), just click on the **Show logs** link. A list of the complete information about the events that happened during the test will be displayed below the results.
  
-![Antifraud test suite4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-5_111.png)
+![Antifraud test suite4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-5.png)
  
 When your integration has successfully passed all tests, please open a ticket in our [VTEX support](https://help.vtex.com/pt/support "VTEX Help"). However, before opening the ticket, make sure you have the following information:
 
@@ -134,7 +134,7 @@ Once the integration with your antifraud is approved, a connector will be made a
 
 An example of how the antifraud settings screen will look for the VTEX store:
  
-![gateway affiliations screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-6_138.png)
+![gateway affiliations screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-6.png)
  
 These keys should be made available by you and will serve to identify the store that hired and is using your antifraud service.
 

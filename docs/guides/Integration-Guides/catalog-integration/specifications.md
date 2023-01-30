@@ -200,7 +200,7 @@ After creating the specification fields, if the `FieldTypeId` is `5`, `6` or `7`
 
 Those values will be shown on product register page like this one:
 
-![Product register page example with specification](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/catalog-integration/specifications-0_353.png)
+![Product register page example with specification](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/specifications-0.png)
 
 ### Specification values data model
 

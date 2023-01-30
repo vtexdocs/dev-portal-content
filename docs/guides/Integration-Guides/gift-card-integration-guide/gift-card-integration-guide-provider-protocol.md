@@ -57,7 +57,7 @@ Buy some product, you should see the mock gift card there
 
 ## Where each route is called
 
-![GiftCard](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/gift-card-integration-guide/gift-card-integration-guide-provider-protocol-0_56.png)
+![GiftCard](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/gift-card-integration-guide-provider-protocol-0.png)
 This is what is needed to make Gift Card available in checkout:
 
 ### List cards
