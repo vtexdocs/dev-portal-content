@@ -21,13 +21,13 @@ Considering that you want to download the app through the Admin, proceed as foll
 3. Click on **Apps** then **App Store**.
 4. Now look for **Payment Provider Test Suite** in the search bar.
 5. Click **Install**.
-   ![Test\_suite\_1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-provider-homologation-0_24.png)
+   ![Test\_suite\_1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-0.png)
 6. After that, you will be redirected to the VTEX App Store. Click the **GET APP** button at the top right corner of the page.
-   ![Test\_suite\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-provider-homologation-1_26.png)
+   ![Test\_suite\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-1.png)
 7. Then, on the popup screen, type your account's name - with lowercase and no space in between - and click the **CONFIRM** button.
-   ![Test\_suite\_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-provider-homologation-2_28.png)
+   ![Test\_suite\_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-2.png)
 8. Click **INSTALL** to complete the installation process.
-   ![Test\_suite\_4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-provider-homologation-3_30.png)
+   ![Test\_suite\_4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-3.png)
    After that, the Test Suite app will be installed in your Admin.
 
 ## Run the tests

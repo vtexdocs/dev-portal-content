@@ -58,7 +58,7 @@ For sending emails
 }
 [/block]
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Promotions/using-policy-engine-api-on-promotion-alerts-0_60.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/using-policy-engine-api-on-promotion-alerts-0.png)
 For deactivating the promotions
 [block:code]
 {

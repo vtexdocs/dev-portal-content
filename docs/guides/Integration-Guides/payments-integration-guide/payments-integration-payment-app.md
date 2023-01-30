@@ -19,7 +19,7 @@ The main reasons why someone would choose to build a Payment App over a standard
 - Measure conversions by analytics tools for customized flows.
 
 As you can see below, the Payment App is displayed as a modal window when the customer clicks on the **Buy now** button:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-app-0_27.gif)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-app-0.gif)
 This tutorial will guide you through the steps required to develop, test, and set up a Payment App in your store. The sections of this tutorial are:
 
 - [Understanding the Payment App flow](#understanding-the-payment-app-flow): An explanation of what a Payment App is, its behavior, and usage.
@@ -29,7 +29,7 @@ This tutorial will guide you through the steps required to develop, test, and se
 ## Understanding the Payment App flow
 
 Our Payment App model applies to a large variety of payment methods thanks to its interaction with the Checkout API, as shown in the following sequence diagram:
-![Payment App flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-app-1_37.png)
+![Payment App flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-app-1.png)
 Below is described the flow in the same order of the sequence diagram (steps from 1 to 4 are the same for every payment flow; steps unique to the Payment App flow are from 5 onwards):
 
 1. Checkout UI sends a Start Transaction request to the Checkout API.
@@ -201,4 +201,4 @@ After finishing the interaction with the Payment App, the app closes and redirec
 
 The following image shows how the 3DS2 is displayed to customers:
 
-![Payment App 3DS2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-payment-app-2_233.png)
+![Payment App 3DS2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-app-2.png)

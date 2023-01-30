@@ -15,16 +15,16 @@ To apply VTEX Admin filters via API, follow the steps below:
 1. Access your VTEX Admin in **Orders > Order Management > All Orders**.
 2. Click on the filters icon.
 
-![filter\_icon\_step\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Orders/actions-orders/using-orders-management-filters-in-api-0_18.jpg)
+![filter\_icon\_step\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/using-orders-management-filters-in-api-0.jpg)
 
 3. Select the filter you want to apply and click `Confirm`. You can combine multiple filters.
 
-![filter\_type\_step\_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Orders/actions-orders/using-orders-management-filters-in-api-1_22.jpg)
+![filter\_type\_step\_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/using-orders-management-filters-in-api-1.jpg)
 
 4. After selecting the filters, copy the URL generated in your browser.
 5. Using an [URL decoder](http://meyerweb.com/eric/tools/dencoder/) tool, decode the URL so that It will look like the following example:
 
-![decode\_print](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Orders/actions-orders/using-orders-management-filters-in-api-2_27.jpg)
+![decode\_print](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/using-orders-management-filters-in-api-2.jpg)
 
 6. Copy only the URL extension after the question mark `?`.
 

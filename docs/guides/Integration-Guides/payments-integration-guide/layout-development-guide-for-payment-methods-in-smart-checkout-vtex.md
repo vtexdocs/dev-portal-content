@@ -111,7 +111,7 @@ In addition to localizing the texts, images should be altered to better suit eac
 Follow these steps to create your layout:
 
 1. Download the repository to your local machine (either through the Github clone or by downloading the repository from the download option).
-   ![vtex\_payment\_mocker](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-0_111.png)
+   ![vtex\_payment\_mocker](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-0.png)
 
 2. Install the [NodeJS](https://nodejs.org/en/).
 
@@ -168,9 +168,9 @@ See below an example of layout and language switching ([Brastemp](http://loja.br
 }
 [/block]
 
-![layout junto](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-1_168.png)
+![layout junto](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-1.png)
 
-![layout\_gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-2_170.gif)
+![layout\_gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-2.gif)
 
 ### Reference Links
 

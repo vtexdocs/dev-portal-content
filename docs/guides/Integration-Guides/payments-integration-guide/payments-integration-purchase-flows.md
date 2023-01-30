@@ -26,7 +26,7 @@ Some examples include: displaying a QR code for payment, filling in an applicati
 
 >⚠️ For the connector that will use Redirect, there is no need to pass all the Test Suit tests, only the Redirect one.
 
-![Payment Redirect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration%20Guides/payments-integration-guide/payments-integration-purchase-flows-0_33.png)
+![Payment Redirect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-purchase-flows-0.png)
 The sequence of events in a Redirect payment flow occurs as described in the following steps:
 
 1. The customer clicks on **Finish Payment** in the Checkout.
