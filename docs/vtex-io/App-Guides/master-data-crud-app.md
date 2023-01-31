@@ -6,7 +6,7 @@ hidden: true
 createdAt: "2022-10-06T20:46:12.483Z"
 updatedAt: "2022-10-13T18:46:39.963Z"
 ---
-[Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) is a powerful data base solution provided by VTEX to your store. You can use it in any VTEX IO app by connecting to the [Master Data API](https://developers.vtex.com/vtex-rest-api/reference/master-data-api-v2-overview), but this can become a repetitive task.
+[Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) is a powerful data base solution provided by VTEX to your store. You can use it in any VTEX IO app by connecting to the [Master Data API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview), but this can become a repetitive task.
 
 To improve your development experience, you can use the VTEX IO `masterdata` builder to create apps that use [Master Data v2](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) features, such as saving new data and editing or deleting data, among others.
 
@@ -167,7 +167,7 @@ At this point, your app may not recognize the folder created by `vtex setup`, le
 
 You can set more than one data entity in you app. To do so, create one folder inside the `masterdata` folder for each data entity you wish to create. Each must have its own `schema.json` with a valid [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
 
-Your app creates regular Master Data entities, which can be accessed via the [Master Data v2 endpoints](https://developers.vtex.com/vtex-rest-api/reference/master-data-api-v2-overview). The name of the entity created follows this pattern: `{vendor}_{appName}_{entityName}`.
+Your app creates regular Master Data entities, which can be accessed via the [Master Data v2 endpoints](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview). The name of the entity created follows this pattern: `{vendor}_{appName}_{entityName}`.
 
 >❗ Whenever you install or link a different version of your app, the Master Data builder cerates a new schema with the app’s name and version.
 
@@ -181,7 +181,7 @@ Now that your app is set up, you can code Master Data functions, such as saving,
   "body": "You may use Master Data functions in your app’s `resolvers` or `middlewares`  folder."
 }
 [/block]
-Master Data functions are available via global context, with `ctx.clients.{entityName}.{function}()`. Below you can see more details on each function. These functions are equivalent to those performed by [Master Data v2 endpoints](https://developers.vtex.com/vtex-rest-api/reference/master-data-api-v2-overview).
+Master Data functions are available via global context, with `ctx.clients.{entityName}.{function}()`. Below you can see more details on each function. These functions are equivalent to those performed by [Master Data v2 endpoints](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview).
 
 ### Get
 

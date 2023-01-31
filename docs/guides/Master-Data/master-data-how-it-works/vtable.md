@@ -422,6 +422,6 @@ To render an `ObjectControl`, set the field type to **object**. The `ObjectContr
 [block:callout]
 {
   "type": "info",
-  "body": "To learn more, check the [Master Data v2 API documentation](https://developers.vtex.com/reference/master-data-api-v2-overview)."
+  "body": "To learn more, check the [Master Data v2 API documentation](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview)."
 }
 [/block]

@@ -82,7 +82,7 @@ To edit the email template's field, check the documentation on [How to create an
 
 ## Searching and Processing Availability Notify data
 
-This app uses [Master Data V2](https://developers.vtex.com/vtex-rest-api/reference/master-data-api-v2-overview), to search for stored data you should use Master Data API - v2 endpoints with the variables `data_entity_name` and `schema` with the value `notify`.
+This app uses [Master Data V2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview), to search for stored data you should use Master Data API - v2 endpoints with the variables `data_entity_name` and `schema` with the value `notify`.
 
 If you want to run the services manually you can use the two endpoints below: (An authentication token is required)
 

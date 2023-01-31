@@ -224,7 +224,7 @@ When configuring the API to create the JSON Schema, remember to:
 - Replace the `schema_name` value with a name of your choosing. The value defined will be the form's JSON Schema name.
 Once the API was executed successfully, the JSON Schema is ready and you can already create the form in your store's theme.
 
-> ℹ️ Notice that Master Data v2 doesn't have an interface yet, so all actions regarding the user form must be done through <a href="https://developers.vtex.com/reference/master-data-api-v2-overview">APIs</a>.
+> ℹ️ Notice that Master Data v2 doesn't have an interface yet, so all actions regarding the user form must be done through [APIs](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview).
 
 ### Step 2 - Configure the Store Form app
 

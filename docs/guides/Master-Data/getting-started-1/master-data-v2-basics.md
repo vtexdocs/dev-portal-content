@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-07-18T17:19:39.913Z"
 updatedAt: "2022-07-18T19:58:52.998Z"
 ---
-Master Data v2 provides a powerful data base solution for your store, that you can manage via the [Master Data v2 API](https://developers.vtex.com/vtex-rest-api/reference/master-data-api-v2-overview). Below you can learn about some basic features and how to use them.
+Master Data v2 provides a powerful data base solution for your store, that you can manage via the [Master Data v2 API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview). Below you can learn about some basic features and how to use them.
 
 ## Saving documents
 
