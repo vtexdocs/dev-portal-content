@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-11-07T13:08:14.051Z"
 updatedAt: "2022-11-17T23:52:03.334Z"
 ---
-This section contains the quick start guides of the endpoints described in the [Shopping cart section](https://developers.vtex.com/vtex-rest-api/reference/checkout-api-overview#shopping-cart) of the Checkout API Reference.
+This section contains the quick start guides of the endpoints described in the [Shopping cart section](https://developers.vtex.com/docs/guides/checkout-api-overview#shopping-cart) of the Checkout API Reference.
 
 - [Simulate a shopping cart](https://developers.vtex.com/vtex-rest-api/docs/simulate-a-shopping-cart)
 - [Create a new cart](https://developers.vtex.com/vtex-rest-api/docs/create-a-new-cart)
