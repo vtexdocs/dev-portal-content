@@ -98,7 +98,7 @@ const handles = useCssHandles(CSS_HANDLES)
 ```
 
 4. Save your changes;
-5. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installment-and-command-reference/), log in to a VTEX account and use a Development workspace to [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the app you are working on;
+5. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to a VTEX account and use a Development workspace to [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the app you are working on;
 6. Access the account's website through the developer workspace (`{workspaceName}--{accountName}.myvtex.com`) and inpect it to verify if the new class is really being properly rendered, making the HTML element targetable.
 
 Following our example, we would have something like:
@@ -131,7 +131,7 @@ import styles from '../searchResult.css'
 ```
 
 4. Save your changes;
-5. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installment-and-command-reference/), log in to a VTEX account and use a Development workspace to [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the app you are working on;
+5. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to a VTEX account and use a Development workspace to [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the app you are working on;
 6. Access the account's website through the developer workspace (`{workspaceName}--{accountName}.myvtex.com`) and inpect it to verify if the new class is really being properly rendered, making the HTML element targetable.
 
 Following our example, we would have something like:
