@@ -12,7 +12,7 @@ jobs:
       - name: Setup node/npm
         uses: actions/setup-node@v1
         with:
-          node-version: '15'
+          node-version: '16'
       - name: textlint-github-pr-review
         uses: tsuyoshicho/action-textlint@v3
         with:
