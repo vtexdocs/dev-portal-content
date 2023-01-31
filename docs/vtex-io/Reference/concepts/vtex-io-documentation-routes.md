@@ -40,7 +40,7 @@ Rewriter interprets the *canonical path* received from the client request and tr
 
 In VTEX IO, search, product, and some navigation pages with preset paths are already available, such as [home page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L2), [product page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L11), [login page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L8), etc.
 
-However, it's also possible to create [*custom* landing pages](https://developers.vtex.com/docs/vtex-io-documentation-creating-a-new-custom-page).
+However, it's also possible to create [custom landing pages](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page).
 
 In this case, routing is handled by the Store builder, meaning that custom routes are not stored in the Rewriter app and that their paths are directly forwarded to the render server.
 
