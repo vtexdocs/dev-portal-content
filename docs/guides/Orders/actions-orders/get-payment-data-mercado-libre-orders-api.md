@@ -5,13 +5,13 @@ hidden: false
 createdAt: "2020-10-28T23:22:25.245Z"
 updatedAt: "2020-11-25T01:11:12.441Z"
 ---
-When [setting up order integration](https://developers.vtex.com/docs/erp-integration-set-up-order-integration) for your ERP middleware or similar integration, you may need additional payment details from orders placed in external marketplaces. 
+When [setting up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) for your ERP middleware or similar integration, you may need additional payment details from orders placed in external marketplaces. 
 
 This article explains where our [native Mercado Libre connector](https://help.vtex.com/pt/tracks/mercado-libre-integration-set-up--2YfvI3Jxe0CGIKoWIGQEIq/51oWBHvVxSs8eAwLQhSbSd) stores this information in the orderForm data structure and how to fetch this data for your integration.
 
 ## Understanding customData
 
-Checkout API allows integrators to [create customizable fields in the shopping cart](/docs/guides/creating-customizable-fields-in-the-cart-with-checkout-api) through the `customData` object. Their middleware can create extra fields in the orderForm and set the value of each of these fields when placing an order, so that this additional information can be retrieved when fetching order details with Orders API.
+Checkout API allows integrators to [create customizable fields in the shopping cart](https://developers.vtex.com/docs/guides/add-and-handle-custom-information-in-the-order#creating-apps-and-fields-through-the-configuration-request) through the `customData` object. Their middleware can create extra fields in the orderForm and set the value of each of these fields when placing an order, so that this additional information can be retrieved when fetching order details with Orders API.
 
 ## Custom fields created by Mercado Libre connector
 
