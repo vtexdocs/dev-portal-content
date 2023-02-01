@@ -481,6 +481,11 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 #### Query schema example - vtex.orders-graphql
 
 ```jsx
+orders(options: OrdersOptionsInput!): PaginatedOrders
+    @cacheControl(scope: PRIVATE)
+```
+
+```jsx
 query orders($options: OrdersOptionsInput!) {
   orders(options: $options) @context(provider: "vtex.orders-graphql") {
     list {
