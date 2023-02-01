@@ -5,6 +5,9 @@ excerpt: "Learn how to prepare the App Page used to promote your app at the VTEX
 hidden: false
 createdAt: "2021-07-22T14:20:05.553Z"
 updatedAt: "2022-12-13T20:17:44.747Z"
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-design-guidelines"
 ---
 
 Once you have [developed your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.

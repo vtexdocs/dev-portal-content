@@ -4,6 +4,9 @@ slug: "vtex-io-documentation-design-guidelines"
 hidden: false
 createdAt: "2021-07-22T14:20:04.371Z"
 updatedAt: "2022-12-13T20:17:45.071Z"
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-engineering-guidelines"
 ---
 
 Before you begin [developing your App](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app), you must first decide on the UX flows and interfaces that will make it accessible and intuitive to use.

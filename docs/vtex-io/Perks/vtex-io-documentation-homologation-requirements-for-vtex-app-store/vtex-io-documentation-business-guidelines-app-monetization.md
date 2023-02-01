@@ -4,6 +4,9 @@ slug: "vtex-io-documentation-business-guidelines-app-monetization"
 hidden: false
 createdAt: "2021-07-21T21:13:45.298Z"
 updatedAt: "2022-12-13T20:17:44.271Z"
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets"
 ---
 App Store's business models are flexible and, thus, adaptable to different scenarios for marketing your app.
 
