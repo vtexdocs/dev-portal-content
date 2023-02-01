@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-10-05T13:01:54.912Z"
 updatedAt: "2022-12-13T20:17:44.059Z"
 ---
-To meet your store's specific needs, you may want to [create custom landing pages](https://developers.vtex.com/docs/vtex-io-documentation-creating-a-new-custom-page). In a cross-border context, you may also want them to be distinct depending on the locations in which your shop operates.
+To meet your store's specific needs, you may want to [create custom landing pages](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page ). In a cross-border context, you may also want them to be distinct depending on the locations in which your shop operates.
 
 In this case, after creating a custom page, you must link its path to the desired *binding* as presented in the [Linking a landing page to a binding](#linking-a-landing-page-to-a-binding) section.
 

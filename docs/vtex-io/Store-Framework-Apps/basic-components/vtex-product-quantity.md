@@ -25,7 +25,7 @@ You are now able to use all blocks that are exported by the Product Quantity app
 | Block name | Description |
 | --------- | ------------ |
 | `product-quantity` | Displays a quantity selector on the product details page. This block must be declared in the theme's `store.product` page template. |
-| `product-summary-quantity` | Displays a quantity selector on [Product Summary](https://vtex.io/docs/components/all/vtex.product-summary/)'s blocks. This block must be declared as a children of the `product-summary.shelf` block. |
+| `product-summary-quantity` | Displays a quantity selector on [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary/)'s blocks. This block must be declared as a children of the `product-summary.shelf` block. |
 
 2. According to your desired scenario, add the `product-quantity`/`product-summary-quantity` blocks to your theme. For example:
 

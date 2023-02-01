@@ -14,7 +14,7 @@ This guide will describe how to access information for a specific shopping cart 
 
 The first step is to get the `orderFormId` of the shopping cart you want to check. You can obtain this information in the following ways:
 
-1. Creating a new cart using the [Create a new cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart) endpoint. The response body of this request will give you the `orderFormId` for an empty cart. See more information at [Create a new cart Guide](https://dash.readme.com/project/vtex-rest-api/v2.1/docs/create-a-new-cart).
+1. Creating a new cart using the [Create a new cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart) endpoint. The response body of this request will give you the `orderFormId` for an empty cart. See more information at [Create a new cart Guide](https://developers.vtex.com/docs/guides/create-a-new-cart).
 2. Accessing the website where a shopping cart is open (the order has not already been concluded), and following these steps:
    a. Go to the **Dev. Tools** screen (press the `F12` key).
    b. Click the **Application** tab, and under **Cookies**, click the name of the site's URL.

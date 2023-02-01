@@ -8,7 +8,7 @@ type: "added"
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-intelligent-search-api-0.png)
 
-The [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference/intelligent-search-api-overview) allows you to consult information about the user's search in your store and also the terms used for it. It contains the following endpoints:
+The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview) allows you to consult information about the user's search in your store and also the terms used for it. It contains the following endpoints:
 
 - [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches)
 - [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_autocomplete-suggestions)

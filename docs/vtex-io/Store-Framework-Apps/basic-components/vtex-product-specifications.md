@@ -69,7 +69,7 @@ Copy the example stated below and paste it into your theme's desired template, m
 
 > ⚠️ *Notice that the Product Specifications' blocks necessarily need a Product context in order to work properly since they handle product data. Therefore, when declaring them, be sure that they are in a theme template in which this context is available, such as the `store.product`.*
 
-You also can use other blocks to wrap the blocks provided by the Product Specifications app, such as the ones exported by the [Flex Layout app](https://vtex.io/docs/components/all/vtex.flex-layout/). For example:
+You also can use other blocks to wrap the blocks provided by the Product Specifications app, such as the ones exported by the [Flex Layout app](https://developers.vtex.com/docs/guides/vtex-flex-layout/). For example:
 
 ```json
 {

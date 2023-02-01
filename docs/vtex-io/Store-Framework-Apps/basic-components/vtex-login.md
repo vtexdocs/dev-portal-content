@@ -52,7 +52,7 @@ Now, you are able to use all the blocks exported by the Login app. Check out the
 | `passwordPlaceholder` | `string` | Text to be displayed as placeholder to the password input. | `undefined` |
 | `acessCodePlaceholder` | `string` | Text to be displayed as placeholder to the access code input. | `undefined` |
 | `showPasswordVerificationIntoTooltip` | `boolean` | Whether a tooltip responsible for checking the password format should be shown (`true`) or not (`false`). | `true` |
-| `showIconProfile` | `boolean` | Whether the `hpa-profile` icon from [Store Icons](https://vtex.io/docs/components/all/vtex.store-icons/) should be displayed on the Login component (`true`) or not (`false`). | `true` |
+| `showIconProfile` | `boolean` | Whether the `hpa-profile` icon from [Store Icons](https://developers.vtex.com/docs/guides/vtex-store-icons/) should be displayed on the Login component (`true`) or not (`false`). | `true` |
 | `iconLabel` | `string` | Text string to entitle the Login icon. | `undefined` |
 | `hideIconLabel` | `boolean` | Whether the text string defined for the Login icon should be hidden (`true`) or not (`false`). | `false` |
 | `labelClasses` | `[string]` | Login icon's classnames. | `undefined` |

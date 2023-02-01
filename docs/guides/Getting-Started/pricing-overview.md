@@ -24,7 +24,7 @@ The Prices module, also called Pricing, is a system responsible for the creation
 
 There are several actions a VTEX store can perform on prices. In the next sections, you will find the main actions related to a store’s pricing management routine.
 
-Before using our Pricing API Reference, check out our [Pricing v2 - API Reference Overview](https://developers.vtex.com/vtex-rest-api/reference/pricing-api-overview) for more details about rate limits.
+Before using our Pricing API Reference, check out our [Pricing v2 - API Reference Overview](https://developers.vtex.com/docs/api-reference/pricing-api#overview) for more details about rate limits.
 
 > ℹ️️ Pricing v2 is the second generation of our pricing module, and is the only version currently available in VTEX. We have [discontinued Pricing v1](https://help.vtex.com/en/announcements/pricing-v1-module-will-be-discontinued-update-your-store-by-september--46YxKNOCLH2Ykw6a9uyxXB) in 2020 and our documentation refers to Pricing v2.
 

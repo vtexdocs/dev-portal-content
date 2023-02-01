@@ -11,4 +11,4 @@ excerpt: "A new Zendesk's chat button was developed to lazy-load the default and
 
 A new Zendesk's chat button was developed to lazy-load the default and heavier one provided by the solution.
 
-The replacement button, exported by the [Zendesk Chat pixel app](https://vtex.io/docs/components/all/vtex.zendesk-chat/), can add 15 and 30 points to your Lighthouse score for mobile and desktop devices, respectively. And it gets better: you can also customize the button on your account's admin page.
+The replacement button, exported by the [Zendesk Chat pixel app](https://developers.vtex.com/docs/guides/vtex-zendesk-chat/), can add 15 and 30 points to your Lighthouse score for mobile and desktop devices, respectively. And it gets better: you can also customize the button on your account's admin page.

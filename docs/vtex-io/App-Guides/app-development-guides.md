@@ -1,6 +1,6 @@
 ---
 title: "Custom app development guides"
-slug: "overview-3"
+slug: "app-development-guides"
 hidden: false
 excerpt: "Step by step guides on how to solve real-world issues when developing custom VTEX IO apps and back-end integrations."
 createdAt: "2021-03-23T16:31:34.224Z"

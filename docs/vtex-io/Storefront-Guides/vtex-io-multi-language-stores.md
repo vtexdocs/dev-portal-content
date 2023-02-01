@@ -21,7 +21,7 @@ Concerning the front-end content of a store's website, text data can be provided
   "body": "The Catalog API is one of the multiple REST APIs that compose the VTEX Administrative panel. This particular API is responsible for manipulating a store’s sales channels, categories, brands, products, SKUs, and specifications."
 }
 [/block]
-While app messages are specifications from front-end components, catalog messages are external data from the [Catalog API](https://developers.vtex.com/reference/catalog-api-overview).
+While app messages are specifications from front-end components, catalog messages are external data from the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview).
 
 Translations, therefore, must consider the different natures of these two kinds of content. 
 
@@ -33,7 +33,7 @@ As the VTEX IO platform makes use of tailor-made React components for storefront
 
 Similarly to JavaScript functions, React components accept arbitrary arguments as `props`, and return React elements that describe what should be rendered on a page.
 
-> ℹ️ Leveraging the VTEX IO platform, the [VTEX IO Store Framework](https://developers.vtex.com/docs/frequently-asked-questions) solution delivers the needed foundations for any storefront structure, providing high quality, customizable React store blocks so that you can build (in the fastest possible go-to-market time) comprehensive shopping experiences that never get old.
+> ℹ️ Leveraging the VTEX IO platform, the [VTEX IO Store Framework](https://developers.vtex.com/docs/guides/frequently-asked-questions) solution delivers the needed foundations for any storefront structure, providing high quality, customizable React store blocks so that you can build (in the fastest possible go-to-market time) comprehensive shopping experiences that never get old.
 
 Regarding multi-language stores, one of the advantages of using React is the possibility of rendering content translations on the client-side. This way, no refresh or re-render of the page is needed, and a high-performance result is achieved.
 
@@ -59,7 +59,7 @@ At the account level, using the Messages app means overwriting a message importe
 [block:callout]
 {
   "type": "info",
-  "body": "To learn how to overwrite a message from a storefront app, please follow this [guide](https://developers.vtex.com/docs/storefront-content-internationalization)."
+  "body": "To learn how to overwrite a message from a storefront app, please follow this [guide](https://developers.vtex.com/docs/guides/storefront-content-internationalization)."
 }
 [/block]
 To sum it up, with the Messages app it's possible to overwrite an automatic translation with a more specific or representative content of your store, such as a special login message for Spanish speaking users from Argentina.

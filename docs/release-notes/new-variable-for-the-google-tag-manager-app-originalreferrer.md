@@ -12,7 +12,7 @@ We have added the variable `originalReferrer` to the VTEX Google Tag Manager (GT
 
 ## What has changed?
 
-Before, [to persist campaign data throughout a user session](https://developers.vtex.com/vtex-developer-docs/changelog/persist-campaign-data-throughout-a-user-session), you have added the variable `originalLocation` to the VTEX Google Tag Manager app. However, Google Analytics could not identify and maintain correct campaign data when a user came from a Google search, for example, but does not have an explicit `utm_source` in the URL.
+Before, [to persist campaign data throughout a user session](https://developers.vtex.com/updates/release-notes/persist-campaign-data-throughout-a-user-session), you have added the variable `originalLocation` to the VTEX Google Tag Manager app. However, Google Analytics could not identify and maintain correct campaign data when a user came from a Google search, for example, but does not have an explicit `utm_source` in the URL.
 
 With the variable `originalReferrer`, Google Analytics can identify and maintain the campaign data, from the user's first login to a store to their checkout navigation.
 

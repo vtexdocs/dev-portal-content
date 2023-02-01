@@ -10,4 +10,4 @@ type: "added"
 
 A VTEX [**Cookie Script**](https://cookie-script.com/) native integration is now available for stores using **VTEX Store Framework**, making your website cookies comply with GDPR and CCPA.
 
-Learn how to install it in your VTEX account accessing the [Cookie Script app documentation](https://developers.vtex.com/docs/vtex-cookie-script).
+Learn how to install it in your VTEX account accessing the [Cookie Script app documentation](https://developers.vtex.com/docs/guides/vtex-cookie-script).

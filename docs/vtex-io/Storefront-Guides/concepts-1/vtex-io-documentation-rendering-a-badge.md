@@ -6,13 +6,13 @@ createdAt: "2021-12-29T19:51:43.371Z"
 updatedAt: "2022-12-13T20:17:44.260Z"
 ---
 
-To render a badge on top of a [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary) component, for example, product collection on a [Shelf](https://developers.vtex.com/docs/guides/vtex-shelf) block, you combine the [Product Highlights app](https://vtex.io/docs/components/all/vtex.product-highlights@2.2.0/) and [Stack Layout](https://developers.vtex.com/docs/guides/vtex-stack-layout).
+To render a badge on top of a [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary) component, for example, product collection on a [Shelf](https://developers.vtex.com/docs/guides/vtex-shelf) block, you combine the [Product Highlights app](https://developers.vtex.com/docs/guides/vtex-product-highlights/) and [Stack Layout](https://developers.vtex.com/docs/guides/vtex-stack-layout).
 
 ![badge](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-rendering-a-badge-0.png)
 
 ## Before you start
 
-1. Knowledge of how the Product Summary, Product Highlights, Stack Layout, and Product collections work is required for this recipe. If you have any doubts regarding them, we strongly recommend you access their technical documentation: [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary), [Product Highlights](https://vtex.io/docs/components/all/vtex.product-highlights@2.2.0/), [Stack Layout](https://developers.vtex.com/docs/guides/vtex-stack-layout) and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye).
+1. Knowledge of how the Product Summary, Product Highlights, Stack Layout, and Product collections work is required for this recipe. If you have any doubts regarding them, we strongly recommend you access their technical documentation: [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary), [Product Highlights](https://developers.vtex.com/docs/guides/vtex-product-highlights/), [Stack Layout](https://developers.vtex.com/docs/guides/vtex-stack-layout) and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye).
 
 2. Ensure you have already installed [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) on your machine.
 
@@ -100,7 +100,7 @@ Once you have declared the blocks’ props, [link the app](https://developers.vt
 ## Related Articles
 
 - [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary)
-- [Product Highlights](https://vtex.io/docs/components/all/vtex.product-highlights@2.2.0/)
+- [Product Highlights](https://developers.vtex.com/docs/guides/vtex-product-highlights/)
 - [Stack Layout](https://developers.vtex.com/docs/guides/vtex-stack-layout)
 - [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye)
 - [Link an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app)

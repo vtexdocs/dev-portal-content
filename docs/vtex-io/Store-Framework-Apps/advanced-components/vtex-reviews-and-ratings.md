@@ -63,7 +63,7 @@ Once the app is configured, it is time to place the following blocks in your Sto
 
 - `product-rating-summary` - This block can be added to the product page template (`store.product`) and renders the average rating for the product being viewed as well as the number of reviews that have been submitted. If moderation is being used by the account, only approved reviews will count toward these figures.
 
-- `product-rating-inline`: Similar to the previous block (`product-rating-summary`), but intended to be used in [product shelves](https://vtex.io/docs/components/all/vtex.shelf/). The block displays the product's average rating only.
+- `product-rating-inline`: Similar to the previous block (`product-rating-summary`), but intended to be used in [product shelves](https://developers.vtex.com/docs/guides/vtex-shelf/). The block displays the product's average rating only.
 
 ## Modus Operandi
 
@@ -148,7 +148,7 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `writeReviewButton`       |
 
 ## Rest APIs
-In order to see how to use the list of REST APIs go to [Reviews and Ratings API overview](https://developers.vtex.com/vtex-rest-api/reference/reviews-and-ratings-api-overview).
+In order to see how to use the list of REST APIs go to [Reviews and Ratings API overview](https://developers.vtex.com/docs/api-reference/reviews-and-ratings-api#overview).
 
 ## GraphQL IDE
 In order to see how to use the graphQL queries and mutations you can go through the next steps:

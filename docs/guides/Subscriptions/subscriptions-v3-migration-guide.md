@@ -6,7 +6,7 @@ createdAt: "2021-02-04T15:24:59.474Z"
 updatedAt: "2022-08-23T15:46:45.291Z"
 ---
 
-The Subscriptions Module is an app developed by VTEX to facilitate recurring sales in your store. It works as an automatic scheduler, executing a repurchase at the frequency requested by the customer. Check out our article about [how subscriptions work](https://help.vtex.com/en/tutorial/como-funciona-a-assinatura--frequentlyAskedQuestions_4453) and the [Subscriptions V3 API reference](https://developers.vtex.com/vtex-rest-api/reference/subscriptions-api-v3-overview) to know more.
+The Subscriptions Module is an app developed by VTEX to facilitate recurring sales in your store. It works as an automatic scheduler, executing a repurchase at the frequency requested by the customer. Check out our article about [how subscriptions work](https://help.vtex.com/en/tutorial/como-funciona-a-assinatura--frequentlyAskedQuestions_4453) and the [Subscriptions V3 API reference](https://developers.vtex.com/docs/api-reference/subscriptions-api-v3#overview) to know more.
 
 This article explores all the changes the v3 module has brought, compared to the v2, and details the steps needed so your store is fully integrated with the new module.
 
@@ -90,7 +90,7 @@ Below you can see what the equivalent template is, if you wish to customize this
 
 We have standardized our endpoints’ structure, so your developer experience is more consistent. Check out the table below, to compare the changes to all endpoints:
 
-| **Subscriptions v2**                                                       | **[Subscriptions v3](https://developers.vtex.com/vtex-rest-api/reference/subscriptions-api-v3-overview)**                                                                                                                                                                        |
+| **Subscriptions v2**                                                       | **[Subscriptions v3](https://developers.vtex.com/docs/api-reference/subscriptions-api-v3#overview)**                                                                                                                                                                        |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [ALL] /api/rns/subscriptions/*                                             | Deprecated                                                                                                                                                                                  |
 | [GET] /api/rns/subscriptions-group/:groupId:                               | [GET] [/api/rns/pub/subscriptions/:subscriptionId:](https://developers.vtex.com/vtex-developer-docs/reference/subscriptions-1#get_api-rns-pub-subscriptions-id)                             |

@@ -8,7 +8,7 @@ updatedAt: "2022-06-15T20:04:26.040Z"
 [block:callout]
 {
   "type": "info",
-  "body": "Check the new [Search onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/search-onboarding). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Search and is organized by focusing on the developer's journey.",
+  "body": "Check the new [Search onboarding guide](https://developers.vtex.com/docs/guides/search-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Search and is organized by focusing on the developer's journey.",
   "title": "Onboarding guide"
 }
 [/block]

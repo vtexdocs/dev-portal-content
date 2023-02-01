@@ -28,7 +28,7 @@ An integration app created from our App Template already includes:
 
 ## Before you start
 
-The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/overview-3). Before you begin creating your app from our template, make sure to:
+The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io). Before you begin creating your app from our template, make sure to:
 
 - [Prep the basic setup for your environment](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio).
 - [Install VTEX IO’s Toolbelt](https://learn.vtex.com/page/setting-up-your-environment).
