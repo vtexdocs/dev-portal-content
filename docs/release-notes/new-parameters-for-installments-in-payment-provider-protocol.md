@@ -8,9 +8,9 @@ type: "added"
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-parameters-for-installments-in-payment-provider-protocol-0.png)
 
-Our [Payment Provider Protocol](https://developers.vtex.com/reference/payment-provider-protocol-api-overview) was extended to make it easier to include payments in installments in your provider implementation.
+Our [Payment Provider Protocol](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#overview) was extended to make it easier to include payments in installments in your provider implementation.
 
-The post [Create payment](https://developers.vtex.com/reference/payment-flow#createpayment) endpoint now has two new parameters:
+The post [Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) endpoint now has two new parameters:
 
 - `installmentsValue`
 - `installmentsInterestRate`
