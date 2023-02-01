@@ -478,7 +478,7 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 
 ### GraphQL orders query examples
 
-#### Query example - vtex.orders-graphql
+#### Query schema example - vtex.orders-graphql
 
 ```jsx
 query orders($options: OrdersOptionsInput!) {
