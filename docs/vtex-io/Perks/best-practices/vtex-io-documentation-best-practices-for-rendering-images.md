@@ -22,8 +22,8 @@ Store Framework has different solutions for rendering images, each one of them d
 
 In the following, we outlined the main functionalities of each image block so you can identify which solution is the best fit for what you're trying to achieve and avoid performance drops in your store website.
 
-- [**Logo**](https://developers.vtex.com/docs/guides/vtex-store-components/logo) - Renders your brand's logo. It should preferably be used in your store's Header and Footer.
-- [**Infocard**](https://developers.vtex.com/docs/guides/vtex-store-components/infocard) - Renders images in the UI with links and call-to-action buttons that guide the user's flow. Info cards are recommended when you want to render an image directly linked to a call-to-action button.
+- [**Logo**](https://developers.vtex.com/docs/guides/vtex-store-components-logo) - Renders your brand's logo. It should preferably be used in your store's Header and Footer.
+- [**Infocard**](https://developers.vtex.com/docs/guides/vtex-store-components-infocard) - Renders images in the UI with links and call-to-action buttons that guide the user's flow. Info cards are recommended when you want to render an image directly linked to a call-to-action button.
 - [**Rich Text**](https://developers.vtex.com/docs/guides/vtex-rich-text) - Renders markdown texts. Rich texts allow plenty of customization, such as passing an image URL to be rendered. Rich texts are recommended for building text communications that may need to have an image linked to them.
 - [**Product Summary Image**](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryimage) - Renders the product image attached to a product summary information (e.g., name, price). Product summary images must be displayed within other store components, such as the Shelf.
 - [**Image**](https://developers.vtex.com/docs/guides/vtex-store-components-image) - Renders an image without links, buttons, markdown texts, or product summary information attached. It is exclusively responsible for rendering an image of your choosing in your store's theme.
