@@ -548,7 +548,7 @@ query orders($options: OrdersOptionsInput!) {
 }
 ```
 
-**Orders query response**
+**Query response**
 
 ```Jsx
 type PaginatedOrders {
