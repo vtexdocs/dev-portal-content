@@ -103,14 +103,21 @@ updatedAt: '2021-02-03T20:45:46.580Z'
 
 ---
 
-[block:code]
-{
-"codes": [
-{
-"code": "[\n {\n \"id\": \"65b1fc90\",\n \"resell\": null,\n \"pricetable\": \"example4\",\n \"email\": null,\n \"state\": \"RJ\"\n },\n {\n \"id\": \"d5c3cd9f\",\n \"resell\": null,\n \"pricetable\": \"for-email\",\n \"email\": \"api.example@vtex.com.br\",\n \"state\": null\n }\n]",
-"language": "curl",
-"name": "200 - OK"
-}
+```json
+[
+    {
+        "id": "65b1fc90",
+        "resell": null,
+        "pricetable": "example4",
+        "email": null,
+        "state": "RJ"
+    },
+    {
+        "id": "d5c3cd9f",
+        "resell": null,
+        "pricetable": "for-email",
+        "email": "api.example@vtex.com.br",
+        "state": null
+    }
 ]
-}
-[/block]
+```

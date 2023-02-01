@@ -23,7 +23,7 @@ On the other hand, the Feed has been developed specifically to track order updat
 [block:callout]
 {
   "type": "warning",
-  "body": "If you already use an integration based on the List orders API request, you should migrate to using the feed. But keep in mind that this means changing the integration flow. See this [order integration guide](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration) to learn how to implement this change.",
+  "body": "If you already use an integration based on the List orders API request, you should migrate to using the feed. But keep in mind that this means changing the integration flow. See this [order integration guide](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration ) to learn how to implement this change.",
   "title": "Migrate your integration"
 }
 [/block]

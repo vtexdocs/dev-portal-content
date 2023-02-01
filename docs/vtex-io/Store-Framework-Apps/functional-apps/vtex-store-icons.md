@@ -110,53 +110,51 @@ Some components support modifiers. These are props that define the icon type, or
 
 | Component                                                                                    | id       | Type | Orientation | State | Shape                       |
 | -------------------------------------------------------------------------------------------- | -------- | ---- | ----------- | ----- | --------------------------- |
-| [IconSocial](https://github.com/vtex-apps/store-icons/tree/master/react/IconSocial.tsx) | `social` | 🚫   | 🚫          | 🚫    | square \| rounded \| circle |
+| [IconSocial](https://github.com/vtex-apps/store-icons/blob/master/react/IconSocial.tsx) | `social` | 🚫   | 🚫          | 🚫    | square \| rounded \| circle |
 
 #### High Priority Actions
 
 | Component                                                                                                    | id                | Type | Orientation | State | Shape |
 | ------------------------------------------------------------------------------------------------------------ | ----------------- | ---- | ----------- | ----- | ----- |
-| [IconArrowBack](https://github.com/vtex-apps/store-icons/tree/master/react/IconArrowBack.tsx)           | `arrow-back`      | 🚫   | 🚫          | 🚫    | 🚫    |
-| [IconAssistantSales](https://github.com/vtex-apps/store-icons/tree/master/react/IconAssistantSales.tsx) | `assistant-sales` | 🚫   | 🚫          | 🚫    | 🚫    |
-| [IconProfile](https://github.com/vtex-apps/store-icons/tree/master/react/IconProfile.tsx)               | `profile`         | 🚫   | 🚫          | 🚫    | 🚫    |
-| [IconCart](https://github.com/vtex-apps/store-icons/tree/master/react/IconCart.tsx)                     | `cart`            | 🚫   | 🚫          | 🚫    | 🚫    |
-| [IconSearch](https://github.com/vtex-apps/store-icons/tree/master/react/IconSearch.tsx)                 | `search`          | 🚫   | 🚫          | 🚫    | 🚫    |
-| [IconDelete](https://github.com/vtex-apps/store-icons/tree/master/react/IconDelete.tsx)                 | `delete`          | 🚫   | 🚫          | 🚫    | 🚫    |
-| [IconMenu](https://github.com/vtex-apps/store-icons/tree/master/react/IconMenu.tsx)                     | `menu`            | 🚫   | 🚫          | 🚫    | 🚫    |
-| [IconLocationMarker](https://github.com/vtex-apps/store-icons/tree/master/react/IconLocationMarker.tsx) | `location-marker` | 🚫   | 🚫          | 🚫    | 🚫    |
+| [IconArrowBack](https://github.com/vtex-apps/store-icons/blob/master/react/IconArrowBack.tsx)           | `arrow-back`      | 🚫   | 🚫          | 🚫    | 🚫    |
+| [IconAssistantSales](https://github.com/vtex-apps/store-icons/blob/master/react/IconAssistantSales.tsx) | `assistant-sales` | 🚫   | 🚫          | 🚫    | 🚫    |
+| [IconProfile](https://github.com/vtex-apps/store-icons/blob/master/react/IconProfile.tsx)               | `profile`         | 🚫   | 🚫          | 🚫    | 🚫    |
+| [IconCart](https://github.com/vtex-apps/store-icons/blob/master/react/IconCart.tsx)                     | `cart`            | 🚫   | 🚫          | 🚫    | 🚫    |
+| [IconSearch](https://github.com/vtex-apps/store-icons/blob/master/react/IconSearch.tsx)                 | `search`          | 🚫   | 🚫          | 🚫    | 🚫    |
+| [IconDelete](https://github.com/vtex-apps/store-icons/blob/master/react/IconDelete.tsx)                 | `delete`          | 🚫   | 🚫          | 🚫    | 🚫    |
+| [IconMenu](https://github.com/vtex-apps/store-icons/blob/master/react/IconMenu.tsx)                     | `menu`            | 🚫   | 🚫          | 🚫    | 🚫    |
+| [IconLocationMarker](https://github.com/vtex-apps/store-icons/blob/master/react/IconLocationMarker.tsx) | `location-marker` | 🚫   | 🚫          | 🚫    | 🚫    |
 
 #### Medium Priority Actions
 
 | Component                                                                                            | id            | Type                      | Orientation | State     | Shape |
 | ---------------------------------------------------------------------------------------------------- | ------------- | ------------------------- | ----------- | --------- | ----- |
-| [IconEyesight](https://github.com/vtex-apps/store-icons/tree/master/react/IconEyesight.tsx)     | `eyesight`    | filled \| outline         | 🚫          | on \| off | 🚫    |
-| [IconMinus](https://github.com/vtex-apps/store-icons/tree/master/react/IconMinus.tsx)           | `minus`       | filled \| outline \| line | 🚫          | 🚫 brands |
-| [IconPlus](https://github.com/vtex-apps/store-icons/blobrandseact/IconPlus.tsx)                       | `plus`        | filled \| outline \| line | 🚫          | 🚫        | 🚫    | brands |
-| [IconSingleItem](https://github.com/vtex-apps/store-icons/tree/master/react/IconSingleItem.tsx) | `single-item` | 🚫                        | 🚫          | 🚫        | 🚫    |
-| [IconList](https://github.com/vtex-apps/store-icons/tree/master/react/IconList.tsx)             | `list`        | 🚫                        | 🚫          | 🚫        | 🚫    |
-| [IconGallery](https://github.com/vtex-apps/store-icons/tree/master/react/IconGallery.tsx)       | `gallery`     | 🚫                        | 🚫          | 🚫        | 🚫    |
-| [IconRemove](https://github.com/vtex-apps/store-icons/tree/master/react/IconRemove.tsx)         | `remove`      | 🚫                        | 🚫          | 🚫        | 🚫    |
-| [IconSwap](https://github.com/vtex-apps/store-icons/tree/master/react/IconSwap.tsx)             | `swap`        | 🚫                        | 🚫          | 🚫        | 🚫    |
-| [IconHeart](https://github.com/vtex-apps/store-icons/tree/master/react/IconHeart.tsx)           | `heart`       | 🚫                        | 🚫          | 🚫        | 🚫    |
-| [IconGlobe](https://github.com/vtex-apps/store-icons/tree/master/react/IconGlobe.tsx)           | `globe`       | 🚫                        | 🚫          | 🚫        | 🚫    |
-| [IconBookmark](https://github.com/vtex-apps/store-icons/tree/master/react/IconBookmark.tsx)     | `bookmark`    | filled \| outline         | 🚫          | 🚫        | 🚫    |
-| [IconPlay](https://github.com/vtex-apps/store-icons/tree/master/react/IconPlay.tsx)             | `play`        | filled \| outline         | 🚫          | 🚫        | 🚫    |
-| [IconPause](https://github.com/vtex-apps/store-icons/tree/master/react/IconPause.tsx)           | `pause`       | filled \| outline         | 🚫          | 🚫        | 🚫    |
+| [IconEyeSight](https://github.com/vtex-apps/store-icons/blob/master/react/IconEyeSight.tsx)     | `eyesight`    | filled \| outline         | 🚫          | on \| off | 🚫    |
+| [IconMinus](https://github.com/vtex-apps/store-icons/blob/master/react/IconMinus.tsx)           | `minus`       | filled \| outline \| line | 🚫          | 🚫 brands |
+| [IconPlus](https://github.com/vtex-apps/store-icons/blob/master/react/IconPlus.tsx)                       | `plus`        | filled \| outline \| line | 🚫          | 🚫        | 🚫    | brands |
+| [IconSingleGrid](https://github.com/vtex-apps/store-icons/blob/master/react/IconSingleGrid.tsx) | `single-item` | 🚫                        | 🚫          | 🚫        | 🚫    |
+| [IconRemove](https://github.com/vtex-apps/store-icons/blob/master/react/IconRemove.tsx)         | `remove`      | 🚫                        | 🚫          | 🚫        | 🚫    |
+| [IconSwap](https://github.com/vtex-apps/store-icons/blob/master/react/IconSwap.tsx)             | `swap`        | 🚫                        | 🚫          | 🚫        | 🚫    |
+| [IconHeart](https://github.com/vtex-apps/store-icons/blob/master/react/IconHeart.tsx)           | `heart`       | 🚫                        | 🚫          | 🚫        | 🚫    |
+| [IconGlobe](https://github.com/vtex-apps/store-icons/blob/master/react/IconGlobe.tsx)           | `globe`       | 🚫                        | 🚫          | 🚫        | 🚫    |
+| [IconBookmark](https://github.com/vtex-apps/store-icons/blob/master/react/IconBookmark.tsx)     | `bookmark`    | filled \| outline         | 🚫          | 🚫        | 🚫    |
+| [IconPlay](https://github.com/vtex-apps/store-icons/blob/master/react/IconPlay.tsx)             | `play`        | filled \| outline         | 🚫          | 🚫        | 🚫    |
+| [IconPause](https://github.com/vtex-apps/store-icons/blob/master/react/IconPause.tsx)           | `pause`       | filled \| outline         | 🚫          | 🚫        | 🚫    |
 
 #### Navigation
 
 | Component                                                                                  | id      | Type | Orientation                 | State | Shape |
 | ------------------------------------------------------------------------------------------ | ------- | ---- | --------------------------- | ----- | ----- |
-| [IconCaret](https://github.com/vtex-apps/store-icons/tree/master/react/IconCaret.tsx) | `caret` | 🚫   | up \| down \| left \| right | 🚫    | 🚫    | true \| false |
+| [IconCaret](https://github.com/vtex-apps/store-icons/blob/master/react/IconCaret.tsx) | `caret` | 🚫   | up \| down \| left \| right | 🚫    | 🚫    | true \| false |
 
 #### Status Indicators
 
 | Component                                                                                          | id           | Type                      | Orientation | State | Shape |
 | -------------------------------------------------------------------------------------------------- | ------------ | ------------------------- | ----------- | ----- | ----- |
-| [IconClose](https://github.com/vtex-apps/store-icons/tree/master/react/IconClose.tsx)         | `close`      | filled \| outline         | 🚫          | 🚫    | 🚫    |
-| [IconCheck](https://github.com/vtex-apps/store-icons/tree/master/react/IconCheck.tsx)         | `check`      | filled \| outline \| line | 🚫          | 🚫    | 🚫    |
-| [IconVolumeOn](https://github.com/vtex-apps/store-icons/tree/master/react/IconVolumeOn.tsx)   | `volume-on`  | filled \| outline \| line | 🚫          | 🚫    | 🚫    |
-| [IconVolumeOff](https://github.com/vtex-apps/store-icons/tree/master/react/IconVolumeOff.tsx) | `volume-off` | filled \| outline \| line | 🚫          | 🚫    | 🚫    |
+| [IconClose](https://github.com/vtex-apps/store-icons/blob/master/react/IconClose.tsx)         | `close`      | filled \| outline         | 🚫          | 🚫    | 🚫    |
+| [IconCheck](https://github.com/vtex-apps/store-icons/blob/master/react/IconCheck.tsx)         | `check`      | filled \| outline \| line | 🚫          | 🚫    | 🚫    |
+| [IconVolumeOn](https://github.com/vtex-apps/store-icons/blob/master/react/IconVolumeOn.tsx)   | `volume-on`  | filled \| outline \| line | 🚫          | 🚫    | 🚫    |
+| [IconVolumeOff](https://github.com/vtex-apps/store-icons/blob/master/react/IconVolumeOff.tsx) | `volume-off` | filled \| outline \| line | 🚫          | 🚫    | 🚫    |
 
 ## Customize
 

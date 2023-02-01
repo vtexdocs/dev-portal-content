@@ -1,7 +1,7 @@
 ---
 title: "List orders"
 slug: "listorderspiicompliant"
-excerpt: "Retrieve a list of orders according to the filters described below.\n\r\n\r> This endpoint returns masked order data.\n\r\n\r> This should **not** be used for integrations. Use the [orders Feed or hook](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1) for this purpose.\n\r\n\rThis endpoint returns only orders that already have been indexed, which takes aproximately four minutes. Because of this, the data retrieved may present inconsistencies. To get live up to date information and [build order integrations](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration) use the [orders Feed or hook](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1)."
+excerpt: "Retrieve a list of orders according to the filters described below.\n\r\n\r> This endpoint returns masked order data.\n\r\n\r> This should **not** be used for integrations. Use the [orders Feed or hook](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1) for this purpose.\n\r\n\rThis endpoint returns only orders that already have been indexed, which takes aproximately four minutes. Because of this, the data retrieved may present inconsistencies. To get live up to date information and [build order integrations](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration ) use the [orders Feed or hook](https://developers.vtex.com/vtex-rest-api/docs/feed-v3-1)."
 hidden: true
 createdAt: "2022-04-26T15:47:38.589Z"
 updatedAt: "2022-04-29T19:41:50.360Z"

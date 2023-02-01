@@ -29,7 +29,7 @@ This app is fully compatible with IO stores, and partially compatible with Legac
 
 This means legacy stores need to do a few extra steps to optimize their Pixel/Conversions API setup, which is explained in the later topics of this documentation.
 
-This app is fully compatible with the [Facebook Pixel App](https://apps.vtex.com/vtex-facebook-pixel/p). FBE detects if you've selected the same pixel and replaces the Facebook Pixel App with its own Pixel App, that is tailored to work properly with Conversions API.
+This app is fully compatible with the [Facebook Pixel App](https://apps.vtex.com/vtex-facebook-fbe/p). FBE detects if you've selected the same pixel and replaces the Facebook Pixel App with its own Pixel App, that is tailored to work properly with Conversions API.
 
 This app is fully compatible with the [Facebook Connector](https://help.vtex.com/pt/tracks/integracao-com-o-facebook--7h8KvIC4DbRRc8VlyJ8PFc/5OP69kHWKca01wLH0w10jX). When you configure FBE, if you already have the catalog sync configured, the Facebook Connector won't be impacted and will keep working as usual. Otherwise, FBE automatically configures the Facebook Connector to enable Catalog synchronization with Facebook.
 

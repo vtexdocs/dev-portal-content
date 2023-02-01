@@ -9,7 +9,7 @@ VTEX Facebook Pixel first-party app allows you to connect your store to the Face
 
 ## Intalling Facebook pixel app
 
-1. Open the [VTEX App Store](https://apps.vtex.com/vtex-facebook-pixel/p) and install this app on your store, or run the following command on the VTEX IO CLI:
+1. Open the [VTEX App Store](https://apps.vtex.com/vtex-facebook-fbe/p) and install this app on your store, or run the following command on the VTEX IO CLI:
 
 ```
 vtex install vtex.facebook-pixel@2.x
