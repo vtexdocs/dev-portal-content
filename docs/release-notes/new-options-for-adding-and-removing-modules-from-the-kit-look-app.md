@@ -18,4 +18,4 @@ We also added three new components:
 
 These changes do not affect production clients since the  components previously rendered by the Kit Look app are the ones selected by default on the app's settings page.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/ecbe505cda422ac91fb9f6dae1ae1334ed3e69bd/images/new-options-for-adding-and-removing-modules-from-the-kit-look-app-0.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-options-for-adding-and-removing-modules-from-the-kit-look-app-0.png)
