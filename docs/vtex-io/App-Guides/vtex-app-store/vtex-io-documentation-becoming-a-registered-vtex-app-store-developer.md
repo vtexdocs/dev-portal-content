@@ -46,7 +46,7 @@ Follow the steps below to register as a new seller on VTEX App Store:
 4. Select the sales channel you intend to use to connect to the App Store.
 5. Choose an affiliate ID, made up of 3 consonants:
 
-![submitting-seller-1](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/5ea61c09f44af5f2c94d506d0fc664b07f394312/images/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer-1.png)
+![submitting-seller-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer-1.png)
 
 ![submitting-seller-2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/5ea61c09f44af5f2c94d506d0fc664b07f394312/images/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer-2.png)
 
