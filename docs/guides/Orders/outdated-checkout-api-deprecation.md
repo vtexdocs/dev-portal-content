@@ -506,7 +506,7 @@ type Order {
 }
 ```
 
-#### Query schema example - vtex.orders-graphql
+#### Query example - vtex.orders-graphql
 
 ```jsx
 orders(options: OrdersOptionsInput!): PaginatedOrders
