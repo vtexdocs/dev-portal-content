@@ -302,7 +302,7 @@ The Hook is a complement to the Feed, which allows integrations to consume order
 
 ### Configuration
 
-Similarly to the Feed, the Hook can be configured through a POST call to the [Create or update hook configuration](https://developers.vtex.com/vtex-rest-api/reference/order-hook-1#hookconfiguration) endpoint of the Orders API. Here are a couple of example bodies for that request, each with a different type of filter:
+Similarly to the Feed, the Hook can be configured through a POST call to the [Create or update hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) endpoint of the Orders API. Here are a couple of example bodies for that request, each with a different type of filter:
 
 `FromWorkflow`
 
@@ -376,7 +376,7 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
 If configured, the Hook notifies the integration endpoint whenever an order update happens that meets the conditions specified in the `filter`.
 
 If a new event is not correctly notified to the endpoint, the interval for future retries is recalculated based on an internal geometric progression algorithm.
->❗ If the hook has no notifications for three days, your configuration will be removed, and you will have to reconfigure it, using the [Hook configuration API call](https://developers.vtex.com/vtex-rest-api/reference/order-hook-1#hookconfiguration) in order to continue to use it. So it is important to be mindful of the filter configuration you are using. You can check it at any time using the [Get hook configuration](https://developers.vtex.com/vtex-rest-api/reference/order-hook-1#gethookconfiguration) endpoint.
+>❗ If the hook has no notifications for three days, your configuration will be removed, and you will have to reconfigure it, using the [Hook configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) in order to continue to use it. So it is important to be mindful of the filter configuration you are using. You can check it at any time using the [Get hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/hook/config) endpoint.
 
 [block:callout]
 {
@@ -422,4 +422,4 @@ Therefore we recommend the Hook for larger and more complex operations, which te
 
 On the other hand, the Feed requires active retriving and commiting items in the queue. This means the integration has control over how many order updates it receives, knowing how much data it needs to be able to handle at any given time. Because of this it is less likely that the integration crashes or misses updates on the queue.
 
-To learn more, see this guide on [order integration with ERP](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) and the API reference for the [Feed v3](https://developers.vtex.com/vtex-rest-api/reference/feed-v3) and the [Hook](https://developers.vtex.com/vtex-rest-api/reference/order-hook-1).
+To learn more, see this guide on [order integration with ERP](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) and the API reference for the [Feed v3](https://developers.vtex.com/vtex-rest-api/reference/feed-v3) and the [Hook](https://developers.vtex.com/docs/guides/orders-overview#creating-an-order-integration).
