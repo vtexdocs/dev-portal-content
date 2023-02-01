@@ -8,7 +8,7 @@ updatedAt: "2022-06-14T15:14:52.164Z"
 
 In this step-by-step, we teach you how to overwrite an automatic message translation from the Catalog, such as a product name or a product description, with a more specific and representative content of your store.
 
-As a background, catalog messages are translatable text strings related to the catalog of a store, saved as external data in the [Catalog API](https://developers.vtex.com/reference/catalog-api-overview).
+As a background, catalog messages are translatable text strings related to the catalog of a store, saved as external data in the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview).
 
 > ℹ️ The Catalog API is one of the multiple REST APIs that compose the VTEX Administrative panel. This particular API is responsible for manipulating a store’s sales channels, categories, brands, products, SKUs, and specifications.
 
@@ -29,7 +29,7 @@ This is possible via the `catalog-graphql` app, which is the GraphQL interface o
 
 Follow this step by step if you aim to translate text messages from your store's catalog.
 
-1. [Install](https://developers.vtex.com/docs/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
 
 2. Access the **GraphQL admin IDE** section of the desired account. You will find it in the admin's side-bar menu:
 

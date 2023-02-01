@@ -103,7 +103,7 @@ To do this, use the [Generate authentication token endpoint](https://developers.
 [/block]
 ### App authentication
 
-In general, when developing [VTEX IO apps](https://developers.vtex.com/docs/guides/overview-3), you will not need to send requests to VTEX APIs because these platform features are available through [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). Hence, you will most likely not need to use [application keys](#application-keys) in your app.
+In general, when developing [VTEX IO apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app), you will not need to send requests to VTEX APIs because these platform features are available through [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). Hence, you will most likely not need to use [application keys](#application-keys) in your app.
 
 #### Authenticating VTEX IO client operations
 

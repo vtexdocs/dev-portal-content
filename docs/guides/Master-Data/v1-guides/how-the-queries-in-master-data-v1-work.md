@@ -52,7 +52,7 @@ The API call, in this case will be:
 
 The asterisks are indicators for a partial query. In other words, documents with the exact value `maria`, will not be searched for, but only those showing this group of characters somewhere.
 
-The result of this query would give documents with values such as the following in the attributes `Nome` and `Email`: Nome=Maria Joaquina | Email=maria@provider.com.
+The result of this query would give documents with values such as the following in the attributes `Nome` and `Email`: `Nome=Maria Joaquina | Email=maria@provider.com`.
 
 ## Query by indexes
 

@@ -7,7 +7,7 @@ updatedAt: "2022-08-01T20:21:34.453Z"
 ---
 One of the most important actions in massive events such as Black Friday is establishing prices during a limited period of time. Scheduling a price for a specific time range allows you to temporarily optimize a product’s profitability during promotional actions and switch back to the regular price automatically given an end date.
 
-This is possible using [Pricing API](https://developers.vtex.com/vtex-rest-api/reference/pricing-api-overview), more specifically by making a request to `PUT` [Create or Update Base Price or Fixed Prices](https://developers.vtex.com/vtex-rest-api/reference/createupdatepriceorfixedprice).
+This is possible using [Pricing API](https://developers.vtex.com/docs/api-reference/pricing-api#overview), more specifically by making a request to `PUT` [Create or Update Base Price or Fixed Prices](https://developers.vtex.com/vtex-rest-api/reference/createupdatepriceorfixedprice).
 
 In the request body, you should include the `fixedPrices` object containing a `dateRange` object, with `from` and `to` properties. Make sure to check out the [request body example](#request-body-example) and include all properties as specified in the `PUT`  [Create or Update Base Price or Fixed Prices](https://developers.vtex.com/vtex-rest-api/reference/createupdatepriceorfixedprice) documentation.  
 

@@ -8,7 +8,7 @@ updatedAt: "2022-02-24T20:35:52.440Z"
 
 The inStore app allows the use of an **Observation** field, where it's possible to store additional information regarding the order.
 
-The data entered in this field is sent via API to the Order Management System. They populate the `openTextField` field, which can be retrieved later either in the Admin or through an [Orders API](https://developers.vtex.com/vtex-rest-api/docs/orders-api) call.
+The data entered in this field is sent via API to the Order Management System. They populate the `openTextField` field, which can be retrieved later either in the Admin or through an [Orders API](https://developers.vtex.com/docs/api-reference/orders-api#overview) call.
 
 A common example of using the **Observation** field is the case where the store wants to receive an identification number from the sales associate who made the sale, such as the **[sales associate code](https://developers.vtex.com/vtex-rest-api/docs/sales-associate-code)**. In this case, the sales associate has to enter this number in the **Observation** field whenever closing an order.
 

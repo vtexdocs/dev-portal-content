@@ -6,7 +6,7 @@ createdAt: "2020-11-23T14:49:49.171Z"
 updatedAt: "2022-12-13T20:17:44.702Z"
 ---
 
-If you have different versions of a [landing page](https://developers.vtex.com/docs/vtex-io-documentation-creating-a-new-custom-page) for each region your store is present, we recommend that you save them as `alternate` versions.
+If you have different versions of a [landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page ) for each region your store is present, we recommend that you save them as `alternate` versions.
 
 This way, search engines will be aware of the different versions of your page and able to provide the right content to the right audience.
 
@@ -24,7 +24,7 @@ Hence, be aware that you'll need to perform the following step by step for each 
 
 ## Step by step
 
-1. [Install](https://developers.vtex.com/docs/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
 2. In your browser, access your account's admin and go to the GraphQL IDE section.
 3. From the GraphQL IDE dropdown list, choose the `vtex.rewriter` app.
 4. Run the following query to get the internal data related to the specified page `path`.

@@ -6,7 +6,7 @@ createdAt: "2020-06-03T16:02:44.285Z"
 updatedAt: "2022-12-13T20:17:44.776Z"
 ---
 
-> ⚠️ D️ifferent from the previous version, VTEX IO CLI 3.x now has a plugin-based architecture. See [what changed](https://developers.vtex.com/vtex-developer-docs/changelog/new-version-of-vtex-io-cli-released), or follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ⚠️ D️ifferent from the previous version, VTEX IO CLI 3.x now has a plugin-based architecture. See [what changed](https://developers.vtex.com/updates/release-notes/new-version-of-vtex-io-cli-released), or follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 [block:html]
 {
