@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-3-creating-the-new-app"
 hidden: false
 createdAt: "2021-03-25T20:58:43.434Z"
 updatedAt: "2022-12-13T20:17:44.062Z"
+excerpt: "Now that your development environment is set up, let's create our first React app using VTEX IO."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-4-declaring-a-theme-block"
 ---
