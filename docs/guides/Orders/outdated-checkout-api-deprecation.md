@@ -561,3 +561,50 @@ type PaginatedOrders {
   reportRecordsLimit: Int!
 }
 ```
+
+```jsx
+type OrderListing {
+  allowCancellation: Boolean
+  allowEdition: Boolean
+  clientEmail: String
+  clientName: String
+  clientProfileData: ClientProfileData
+  creationDate: String
+  currencyCode: String
+  deliveryChannel: [String]
+  hostname: String
+  isInstore: Boolean
+  items: [OrderItem!]!
+  lastChange: String
+  marketingTags: [String]
+  orderGroup: String
+  orderId: ID!
+  sequence: String
+  orderIsComplete: Boolean
+  origin: String
+  packageAttachment: PackageAttachment!
+  paymentData: PaymentData!
+  paymentIds: [String]
+  paymentNames: [String]
+  pciTransactionId: [String]
+  productIds: [String]
+  sellerIds: [String]
+  sellerNames: [String]
+  sellerOrderId: ID
+  shippingData: ShippingData!
+  shippingEstimatedDateMax: String
+  shippingEstimatedDateMin: String
+  skus: [String]
+  status: String
+  storePreferencesData: StorePreferencesData!
+  subscriptionGroup: String
+  totalItems: Int
+  totalValue: Float
+  totals: [Total!]!
+  transactionIds: [String]
+  value: Float
+  workflowInErrorState: Boolean
+  workflowInRetry: Boolean
+  isAllDelivered: Boolean!
+}
+```
