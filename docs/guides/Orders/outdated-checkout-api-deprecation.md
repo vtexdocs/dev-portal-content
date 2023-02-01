@@ -4,7 +4,7 @@ slug: "unofficial-checkout-api-deprecation"
 hidden: false
 createdAt: "2022-12-08T22:14:43.582Z"
 updatedAt: "2023-02-01T14:45:25.000"
-excerpt: 
+excerpt: Beginning June 25th, 2023, the Outdated Checkout endpoint will be deprecated.
 ---
 
 Both the Outdated Checkout endpoint and the Order Management System (OMS) endpoints in the table below allow you to obtain order fulfillment information, order management data, seller identification and more.
