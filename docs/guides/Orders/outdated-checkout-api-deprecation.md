@@ -478,6 +478,34 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 
 ### GraphQL orders query examples
 
+#### Query example vtex.store-graphql
+
+```jsx
+type Order {
+  allowCancellation: Boolean
+  orderId: String
+  orderGroup: String
+  state: String
+  status: String
+  statusDescription: String
+  value: Float
+  salesChannel: String
+  creationDate: String
+  customData: CustomData
+  lastChange: String
+  timeZoneCreationDate: String
+  timeZoneLastChange: String
+  invoicedDate: String
+  isCompleted: Boolean
+  items: [OrderItem]
+  sellers: [OrderItemSeller]
+  totals: [OrderItemTotal]
+  paymentData: OrderItemPaymentData
+  shippingData: OrderItemShippingData
+  storePreferencesData: StorePreferencesData
+}
+```
+
 #### Query schema example - vtex.orders-graphql
 
 ```jsx
