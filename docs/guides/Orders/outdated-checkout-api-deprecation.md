@@ -1,9 +1,9 @@
 ---
 title: "Outdated Checkout API deprecation"
 slug: "unofficial-checkout-api-deprecation"
-hidden: true
+hidden: false
 createdAt: "2022-12-08T22:14:43.582Z"
-updatedAt: "2023-01-24T19:07:25.000"
+updatedAt: "2023-02-01T14:45:25.000"
 ---
 
 Both the Outdated Checkout endpoint and the Order Management System (OMS) endpoints in the table below allow you to obtain order fulfillment information, order management data, seller identification and more.
