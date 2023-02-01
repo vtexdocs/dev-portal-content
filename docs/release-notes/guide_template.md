@@ -2,8 +2,8 @@
 title: "Filtered searches now available in Badges App"
 slug: "filtered-searches-now-available-in-badges-app"
 hidden: false
-createdAt: "{Creation date as 2022-10-20T17:08:52.219Z}"
-updatedAt: "{Update dates as 2022-10-21T14:33:45.242Z}"
+createdAt: "2023-01-31T17:08:52.219Z"
+updatedAt: "2023-01-31T14:33:45.242Z"
 excerpt: "Now, you can configure the Badges app to filter search results."
 ---
 
