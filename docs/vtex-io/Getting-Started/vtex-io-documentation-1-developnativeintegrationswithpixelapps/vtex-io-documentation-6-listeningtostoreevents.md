@@ -2,6 +2,9 @@
 title: "5. Listening to store events"
 slug: "vtex-io-documentation-6-listeningtostoreevents"
 hidden: false
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-7-structuringthedocumentation"
 createdAt: "2020-11-03T18:19:23.235Z"
 updatedAt: "2022-12-13T20:17:44.943Z"
 ---

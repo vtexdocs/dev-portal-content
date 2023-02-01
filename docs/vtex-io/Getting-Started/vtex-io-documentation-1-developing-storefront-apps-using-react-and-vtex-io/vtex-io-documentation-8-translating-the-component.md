@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-8-translating-the-component"
 hidden: false
 createdAt: "2021-03-25T20:58:43.694Z"
 updatedAt: "2022-12-13T20:17:44.662Z"
+category: "App Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-9-improving-performance-with-caching"
 ---

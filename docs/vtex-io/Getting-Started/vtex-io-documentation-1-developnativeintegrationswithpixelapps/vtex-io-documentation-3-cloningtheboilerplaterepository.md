@@ -2,6 +2,9 @@
 title: "2. Cloning the boilerplate repository"
 slug: "vtex-io-documentation-3-cloningtheboilerplaterepository"
 hidden: false
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-4-configuringyourappsettings"
 createdAt: "2020-11-03T18:19:23.086Z"
 updatedAt: "2022-12-13T20:17:44.175Z"
 ---

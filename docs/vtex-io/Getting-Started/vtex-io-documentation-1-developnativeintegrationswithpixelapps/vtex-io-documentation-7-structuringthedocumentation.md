@@ -2,6 +2,9 @@
 title: "6. Structuring the documentation"
 slug: "vtex-io-documentation-7-structuringthedocumentation"
 hidden: false
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-8-makingyourpixelapppubliclyavailable"
 createdAt: "2020-11-03T18:19:22.848Z"
 updatedAt: "2022-12-13T20:17:44.605Z"
 ---

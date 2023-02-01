@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-2-prerequesites"
 hidden: false
 createdAt: "2020-08-11T07:03:18.428Z"
 updatedAt: "2022-12-13T20:17:46.410Z"
+category: "Storefront Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-3-settingyourstoretheme"
 ---

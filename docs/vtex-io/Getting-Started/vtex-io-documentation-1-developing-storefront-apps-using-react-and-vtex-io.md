@@ -4,6 +4,8 @@ slug: "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-i
 hidden: false
 createdAt: "2021-03-25T20:58:43.339Z"
 updatedAt: "2022-12-13T20:17:45.041Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-2-basic-development-setup-in-vtex-io"
 ---
 This track will show you how to build sophisticated, tailor-made React storefront components using the VTEX IO platform.
 

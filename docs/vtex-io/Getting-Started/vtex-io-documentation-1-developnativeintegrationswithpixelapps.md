@@ -4,6 +4,8 @@ slug: "vtex-io-documentation-1-developnativeintegrationswithpixelapps"
 hidden: false
 createdAt: "2020-11-03T20:20:48.931Z"
 updatedAt: "2022-12-13T20:17:44.772Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio"
 ---
 In this tutorial, you'll learn how to create a custom integration with a third-party solution by developing your own [**Pixel app**](https://developers.vtex.com/docs/guides/vtex-io-documentation-pixel-app).
 

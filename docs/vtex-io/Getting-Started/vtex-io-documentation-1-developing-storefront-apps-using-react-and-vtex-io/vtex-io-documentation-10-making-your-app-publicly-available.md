@@ -2,6 +2,7 @@
 title: "9. Making your app publicly available"
 slug: "vtex-io-documentation-10-making-your-app-publicly-available"
 hidden: false
+category: "App Development"
 createdAt: "2021-03-25T20:58:42.887Z"
 updatedAt: "2022-12-13T20:17:45.027Z"
 ---

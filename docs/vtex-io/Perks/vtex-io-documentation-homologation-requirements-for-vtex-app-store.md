@@ -7,10 +7,35 @@ updatedAt: "2022-12-13T20:17:44.238Z"
 ---
 Before submitting your app to the homologation process and [making it available in the App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#submitting-your-app-to-the-vtex-app-store), you must ensure that your app complies with the following guidelines:
 
-- **Business guidelines**
-  - [App monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization)
-  - [Marketing guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets)
-- [**User experience guidelines**](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines)
-- [**Engineering guidelines**](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines)
+<Flex>
+
+<WhatsNextCard
+title="App monetization"
+description="Learn more about App Store's business models."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Marketing guidelines"
+description="Prepare your app's page to promote your app at the VTEX App Store. "
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="User experience guidelines"
+description="Refer to our recommended practices for designing an IO app."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Engineering guidelines"
+description="Refer to our coding guidelines to guarantee the quality and usability of your IO app."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines"
+linkTitle="See more"
+/>
+</Flex>
 
 These guidelines describe the business, design, and engineering requirements enforced by the VTEX App Store to guarantee the quality, viability, and usability of VTEX apps.

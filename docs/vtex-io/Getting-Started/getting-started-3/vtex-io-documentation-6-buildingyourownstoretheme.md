@@ -2,8 +2,11 @@
 title: "6. Building your own store theme"
 slug: "vtex-io-documentation-6-buildingyourownstoretheme"
 hidden: false
+category: "Storefront Development"
 createdAt: "2020-08-11T07:03:17.864Z"
 updatedAt: "2022-12-13T20:17:44.531Z"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-making-your-theme-content-public"
 ---
 Throughout this track, you understood what *workspace*, *VTEX IO CLI*, *Store Theme* and *blocks* are, in addition to learning how to customize your store’s pages by configuring *templates* and defining *styles*.
 

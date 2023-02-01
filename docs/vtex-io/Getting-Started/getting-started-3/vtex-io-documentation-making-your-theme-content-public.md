@@ -1,7 +1,8 @@
 ---
-title: "Making your theme content public"
+title: "7. Making your theme content public"
 slug: "vtex-io-documentation-making-your-theme-content-public"
 hidden: false
+category: "Storefront Development"
 createdAt: "2020-06-03T16:02:49.869Z"
 updatedAt: "2022-12-13T20:17:44.111Z"
 ---

@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-4-configuringtemplates"
 hidden: false
 createdAt: "2020-06-03T16:02:44.335Z"
 updatedAt: "2022-12-13T20:17:44.526Z"
+category: "Storefront Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-5-definingstyles"
 ---

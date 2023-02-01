@@ -2,6 +2,9 @@
 title: "1. Setting up your development environment"
 slug: "vtex-io-documentation-2-basicsetuptodevelopinvtexio"
 hidden: false
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-3-cloningtheboilerplaterepository"
 createdAt: "2020-06-03T16:02:50.522Z"
 updatedAt: "2022-12-13T20:17:44.579Z"
 ---

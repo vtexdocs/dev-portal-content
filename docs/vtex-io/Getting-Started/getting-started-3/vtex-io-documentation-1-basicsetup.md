@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-1-basicsetup"
 hidden: false
 createdAt: "2020-08-11T07:03:17.968Z"
 updatedAt: "2022-12-13T20:17:44.100Z"
+category: "Storefront Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-2-prerequesites"
 ---

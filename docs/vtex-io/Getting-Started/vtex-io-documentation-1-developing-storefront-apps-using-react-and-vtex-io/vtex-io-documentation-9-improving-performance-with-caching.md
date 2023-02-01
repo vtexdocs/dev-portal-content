@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-9-improving-performance-with-caching"
 hidden: false
 createdAt: "2021-03-25T20:58:43.052Z"
 updatedAt: "2022-12-13T20:17:44.240Z"
+category: "App Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available"
 ---

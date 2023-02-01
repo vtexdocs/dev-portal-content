@@ -2,6 +2,9 @@
 title: "3. Configuring your app settings"
 slug: "vtex-io-documentation-4-configuringyourappsettings"
 hidden: false
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-5-writingtheheaderandbodyscripts"
 createdAt: "2020-11-03T18:19:23.222Z"
 updatedAt: "2022-12-13T20:17:44.408Z"
 ---
