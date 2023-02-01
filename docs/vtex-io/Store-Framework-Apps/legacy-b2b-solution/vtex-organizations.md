@@ -321,7 +321,7 @@ You must add two fields to existing **CL** Master Data table:
 After creating the fields, change their settings by using the `Edit field` option.
 You can update the field settings as shown in the image below. 
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store%20Framework/legacy-b2b-solution/vtex-organizations-1.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-organizations-1.png)
 
 Dont forget to `save` and `reindex` `CL` table once you add all the fields. 
 

@@ -8,7 +8,7 @@ updatedAt: "2022-02-24T20:44:34.927Z"
 
 inStore is VTEX’s core product for Unified Commerce operations. It allows your store to deliver a real omnichannel experience by seamlessly integrating your online and in-store channels and having your clients in the core of your business.
 
-When setting inStore in your business, you might need to add physical stores and sales associates to the system, as well as managing existing stores and sales associates. You can do this by using VTable, as described in [this article](https://help.vtex.com/en/tracks/instore-setting-up--zav76TFEZlAjnyBVL5tRc/5PSjRstg7UU4lOm0s8aqKN), or you can use the [Master Data API - V2]([https://developers.vtex.com/vtex-developer-docs/reference/documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents)), as described below.
+When setting inStore in your business, you might need to add physical stores and sales associates to the system, as well as managing existing stores and sales associates. You can do this by using VTable, as described in [this article](https://help.vtex.com/en/tracks/instore-setting-up--zav76TFEZlAjnyBVL5tRc/5PSjRstg7UU4lOm0s8aqKN), or you can use the [Master Data API - V2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents), as described below.
 
 ## Stores
 

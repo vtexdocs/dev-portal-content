@@ -8,4 +8,4 @@ type: "improved"
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-api-exploration-interface-0.png)
 
-By constantly considering improvements to our developers' experience, we have implemented a revamp of our API exploration interface. Check our [Introduction](https://developers.vtex.com/guides/get-to-know-vtex-apis) guide to know more about the updates for the Rest APIs.
+By constantly considering improvements to our developers' experience, we have implemented a revamp of our API exploration interface. Check our [Introduction](https://developers.vtex.com/docs/guides/get-to-know-vtex-apis) guide to know more about the updates for the Rest APIs.

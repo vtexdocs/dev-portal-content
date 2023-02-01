@@ -16,7 +16,7 @@ The apps available through the [VTEX App Store](https://apps.vtex.com) must be c
 
 - **[VTEX brand manual](https://brand.vtex.com/?_ga=2.86158557.436370270.1649074565-1001456323.1619912759):** The VTEX set of rules or visual guidelines to be followed.
 
-- **[VTEX brand colors](https://brand.vtex.com/identity/color):** The VTEX color brand palette to uniform an app with VTEX standards.
+- **[VTEX brand colors](https://brand.vtex.com/brand-guidelines/):** The VTEX color brand palette to uniform an app with VTEX standards.
 
 - **[VTEX Styleguide for Admin apps](https://styleguide.vtex.com/#/Introduction):** a Design System with a set of reusable patterns, components, and materials for VTEX app development.
 

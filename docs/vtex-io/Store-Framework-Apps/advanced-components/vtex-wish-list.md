@@ -46,7 +46,7 @@ _Example of a wishlist page._
   },
 ```
 
-5. Declare the `add-to-list-btn` block as a child of the [`product-summary.shelf` blocks](https://vtex.io/docs/components/all/vtex.product-summary/) in your theme. For example:
+5. Declare the `add-to-list-btn` block as a child of the [`product-summary.shelf` blocks](https://developers.vtex.com/docs/guides/vtex-product-summary/) in your theme. For example:
 
 ```diff
   "product-summary.shelf": {

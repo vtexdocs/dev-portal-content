@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:18.061Z"
 updatedAt: "2022-07-02T00:50:32.579Z"
 ---
 
-Product Summary is an app responsible for summarizing product information (such as name, price and image) in other store blocks, such as the [Shelf](https://vtex.io/docs/components/all/vtex.shelf/) and the [Minicart](https://vtex.io/docs/components/all/vtex.minicart/).
+Product Summary is an app responsible for summarizing product information (such as name, price and image) in other store blocks, such as the [Shelf](https://developers.vtex.com/docs/guides/vtex-shelf/) and the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart/).
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-0.png)
 
@@ -28,7 +28,7 @@ Now, you are able to use all blocks exported by the `product-summary` app. Check
 | `product-summary.shelf` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-2.png).
 | [`product-summary-attachment-list`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryattachmentlist) | Renders a list for the product [attachments](https://help.vtex.com/tutorial/adding-an-attachment--7zHMUpuoQE4cAskqEUWScU). |
 | [`product-summary-brand`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummarybrand)         | Renders the product brand. |
-| [`product-summary-buy-button`](https://vtex.io/docs/components/all/vtex.product-summary/product-summary-buy-button) | Renders the Buy Button. This block must be configured only if your store uses the [Minicart v1](https://github.com/vtex-apps/minicart/blob/383d7bbd3295f06d1b5854a0add561a872e1515c/docs/README.md). If your store uses the [Minicart v2](https://developers.vtex.com/docs/guides/vtex-minicart), please configure the [**Add To Cart Button**](https://developers.vtex.com/docs/guides/vtex-add-to-cart-button) instead.  |
+| [`product-summary-buy-button`](https://developers.vtex.com/docs/guides/vtex-product-summary/product-summary-buy-button) | Renders the Buy Button. This block must be configured only if your store uses the [Minicart v1](https://github.com/vtex-apps/minicart/blob/383d7bbd3295f06d1b5854a0add561a872e1515c/docs/README.md). If your store uses the [Minicart v2](https://developers.vtex.com/docs/guides/vtex-minicart), please configure the [**Add To Cart Button**](https://developers.vtex.com/docs/guides/vtex-add-to-cart-button) instead.  |
 | [`product-summary-description`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummarydescription) | Renders the product description. |
 | [`product-summary-image`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryimage) | Renders the product image. |
 | [`product-summary-name`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryname) | Renders the product name. |

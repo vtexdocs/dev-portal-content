@@ -7,7 +7,7 @@ updatedAt: "2022-03-08T16:15:36.572Z"
 ---
 
 The Header app is responsible for displaying a **navigation bar** fixed on a store's page upper side.
-Other blocks that are important for user navigation are found in the Header, for example the store's [logo](https://vtex.io/docs/components/all/vtex.store-components/logo), the [minicart](https://vtex.io/docs/components/all/vtex.minicart/), user [login](https://vtex.io/docs/components/all/vtex.login/) and [search bar](https://vtex.io/docs/components/all/vtex.store-components/search-bar).
+Other blocks that are important for user navigation are found in the Header, for example the store's [logo](https://developers.vtex.com/docs/guides/vtex-store-components-logo), the [minicart](https://developers.vtex.com/docs/guides/vtex-minicart/), user [login](https://developers.vtex.com/docs/guides/vtex-login/) and [search bar](https://developers.vtex.com/docs/guides/vtex-store-components-searchbar).
 
 ![header](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-header-0.png)
 
@@ -68,7 +68,7 @@ Now, you are able to use all blocks exported by the `store-header` app. Check ou
 
 > ⚠️ *In the example above, we configured 4 different levels for `header-layout.desktop`. It will thus be possible to replicate the Header displayed above sheltering the telemarketing functionalities (when activated), a notification, links to pages and every other blocks, such as Logo, Menu, etc. **Remember that the number of `header-row`s should meet your business needs**, determining how many Header lines you want to apply to your store.*
 
-5. Configure each of the `header-row`s , applying props and declaring the desired store blocks for each line. To correctly structure your Header, you should check the [documentation](https://vtex.io/docs/components/all) for each of the desired blocks. The most commonly used are [Logo](https://vtex.io/docs/components/all/vtex.store-components/logo), [Minicart](https://vtex.io/docs/components/all/vtex.minicart/) and [Menu](https://vtex.io/docs/components/all/vtex.menu/). In the example below, we will configure the `header-row#1-desktop` as [Telemarketing](https://vtex.io/docs/components/all/vtex.telemarketing/):
+5. Configure each of the `header-row`s , applying props and declaring the desired store blocks for each line. To correctly structure your Header, you should check the [documentation](/docs/vtex-io-apps) for each of the desired blocks. The most commonly used are [Logo](https://developers.vtex.com/docs/guides/vtex-store-components-logo), [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart/) and [Menu](https://developers.vtex.com/docs/guides/vtex-menu/). In the example below, we will configure the `header-row#1-desktop` as [Telemarketing](https://developers.vtex.com/docs/guides/vtex-telemarketing/):
 
 ```json
 "header-row#1-desktop": {

@@ -10,7 +10,7 @@ The Overlay Layout app provides blocks that help you create a Dropdown, Select o
 
 ![overlay-layout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-overlay-layout-0.gif)
 
-*Example of a [Locale Switcher](https://vtex.io/docs/components/all/vtex.locale-switcher@0.5.5) using the Overlay Layout*.
+*Example of a [Locale Switcher](https://developers.vtex.com/docs/guides/vtex-locale-switcher) using the Overlay Layout*.
 
 ## Configuration
 

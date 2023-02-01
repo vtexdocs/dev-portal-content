@@ -47,9 +47,7 @@ b. To collect information about **tracking code**, use the properties:
 6. Marketplace validates and records information, and responds with a success or failure status. 
 7. Connector generates an [Order log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) for each situation.
 
-
 Note that:
-
 
 - An order can have more than one invoice with partial values
 - The tracking code and/or invoice can be filled in at different moments. In this case it is important to understand the flow demanded by the marketplace for sending separate information.
@@ -78,31 +76,144 @@ Use the endpoints described below to perform this step. It is important to note 
 
 Use the request example below to perform the Shopping Cart Simulation. Check out our  [Shopping cart Simulation](https://developers.vtex.com/vtex-rest-api/reference/cartsimulation) API Reference to know more details.
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n\"items\":[\n{...}\n]\n\"ratesAndBenefitsData\":{\n\"rateAndBenefitsIdentifiers\":[]\n\"teaser\":[]\n}\n\"paymentData\":{\n\"installmentOptions\":[...]\n\"paymentSystems\":[...]\n\"payments\":[]\n\"giftCards\":[]\n\"giftCardMessages\":[]\n\"availableAccounts\":[]\n\"availableTokens\":[]\n}\n\"selectableGifts\":[]\n\"marketingData\":NULL\n\"postalCode\":NULL\n\"country\":\"BRA\"\n\"logisticsInfo\":[\n{...}\n]\n\"messages\":[]\n\"purchaseConditions\":{\n\"itemPurchaseConditions\":[...]\n}\n\"pickupPoints\":[]\n\"subscriptionData\":NULL\n\"totals\":[\n{...}\n]\n\"itemMetadata\":NULL\n}",
-      "language": "text",
-      "name": "Shopping Cart Simulation - Request Example"
-    }
-  ]
+"items":[
+{...}
+]
+"ratesAndBenefitsData":{
+"rateAndBenefitsIdentifiers":[]
+"teaser":[]
 }
-[/block]
+"paymentData":{
+"installmentOptions":[...]
+"paymentSystems":[...]
+"payments":[]
+"giftCards":[]
+"giftCardMessages":[]
+"availableAccounts":[]
+"availableTokens":[]
+}
+"selectableGifts":[]
+"marketingData":NULL
+"postalCode":NULL
+"country":"BRA"
+"logisticsInfo":[
+{...}
+]
+"messages":[]
+"purchaseConditions":{
+"itemPurchaseConditions":[...]
+}
+"pickupPoints":[]
+"subscriptionData":NULL
+"totals":[
+{...}
+]
+"itemMetadata":NULL
+}
+```
+
 ### Place fulfillment order
 
 Use the request example below to place fulfillment order. Check out our [Place fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) API Reference to know more details.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "[\n  {\n    \"items\": [\n        {\n            \"id\": \"1\",\n            \"price\": 900,\n            \"quantity\": 1,\n            \"seller\": \"1\"\n        }\n    ],\n    \"isCreatedAsync\": true,\n    \"marketplaceOrderGroup\" : \"794901324\",\n    \"marketplaceOrderId\": \"2630580124\",\n    \"marketplacePaymentValue\": 1100,\n    \"marketplacePaymentReferenceValue\": 1100,\n    \"marketplaceServicesEndpoint\": \"http://skyhubintegration.vtexinternal.com/api/skyhubintegration/commercialcondition?an=grocery1\",\n    \"clientProfileData\": {\n        \"CorporateDocument\": null, //Cnpj\n        \"CorporateName\": null, //nome da empresa\n        \"CorporatePhone\": null, // ddd+telefone\n        \"Document\": \"14310315771\", //cpf\n        \"DocumentType\": null, //se pessoa fisica, colocar CPF, senão CNPJ\n        \"Email\": \"conta@dominio.com.br\",\n        \"FirstName\": \"Nome\",\n        \"IsCorporate\": false, //caso pessoa juridica o valor deve ser true\n        \"LastName\": \"Sobrenome\",\n        \"Phone\": \"41998718616\",\n        \"StateInscription\": null, //inscrição estadual\n        \"TradeName\": null,\n        \"UserProfileId\": null //utilizado somente com pedidos VTEX\n    },\n    \"shippingData\": {\n        \"address\": {\n            \"addressId\": \"Casa\",\n            \"addressType\": \"Residencial\",\n            \"receiverName\": \"Marcelo\",\n            \"city\": \"Curitiba\",\n            \"complement\": null,\n            \"country\": \"BRA\",\n            \"geoCoordinates\": [],\n            \"neighborhood\": \"Novo Mundo\",\n            \"number\": \"4000\",\n            \"postalCode\": \"81020230\",\n            \"reference\": null,\n            \"state\": \"PR\",\n            \"street\": \"Rua Eduardo Carlos Pereira\"\n        },\n        \"logisticsInfo\": [\n            {\n                    \"itemIndex\": 0,\n                    \"price\": 200,\n                    \"selectedDeliveryChannel\":\"delivery\",\n                    \"selectedSla\": null,\n                    \"lockTTL\": \"1d\", //tempo para reserva do estoque do pedido\n                    \"shippingEstimate\":\"1d\" //tempo de entrega do pedido\n            }\n        ],\n        \"selectedAddresses\":[\n          {\n            \"addressType\": \"Residencial\",\n            \"receiverName\": \"Henrique Vianna\",\n            \"addressId\": \"2\",\n            \"postalCode\": \"81020-235\",\n            \"city\": \"Curitiba\",\n            \"state\": \"PR\",\n            \"country\": \"BRA\",\n            \"street\": \"Rua Eduardo Carlos Pereira\",\n            \"number\": \"4125\",\n            \"neighborhood\": \"Portão\",\n            \"complement\": \"\",\n            \"reference\": null,\n            \"geoCoordinates\": [\n                -49.2892059,\n                -25.4826319\n            ]\n        }],\n        \"isFob\": false //se entrega feita pelo lojista coloque false, senão true\n    },\n    \"customData\": {\n\t\t\"customApps\": [{\n\t\t\t\"fields\": {\n\t\t\t\t\"orderIdMarketplace\": \"2630580148\",\n\t\t\t\t\"paymentIdMarketplace\": \"8191598627\"\n\t\t\t},\n\t\t\t\"id\": \"marketplace-integration\",\n\t\t\t\"major\": 1\n\t\t}]\n\t},\n    \"openTextField\": {\n         \"value\": \"{\\\"Phones\\\":[\\\"21998718616\\\"]}\"\n    }\n  }\n]",
-      "language": "text",
-      "name": "Place Fulfillment Order - Request Example"
+
+```json
+[
+  {
+    "items": [
+        {
+            "id": "1",
+            "price": 900,
+            "quantity": 1,
+            "seller": "1"
+        }
+    ],
+    "isCreatedAsync": true,
+    "marketplaceOrderGroup" : "794901324",
+    "marketplaceOrderId": "2630580124",
+    "marketplacePaymentValue": 1100,
+    "marketplacePaymentReferenceValue": 1100,
+    "marketplaceServicesEndpoint": "http://skyhubintegration.vtexinternal.com/api/skyhubintegration/commercialcondition?an=grocery1",
+    "clientProfileData": {
+        "CorporateDocument": null, //Cnpj
+        "CorporateName": null, //nome da empresa
+        "CorporatePhone": null, // ddd+telefone
+        "Document": "14310315771", //cpf
+        "DocumentType": null, //se pessoa fisica, colocar CPF, senão CNPJ
+        "Email": "conta@dominio.com.br",
+        "FirstName": "Nome",
+        "IsCorporate": false, //caso pessoa juridica o valor deve ser true
+        "LastName": "Sobrenome",
+        "Phone": "41998718616",
+        "StateInscription": null, //inscrição estadual
+        "TradeName": null,
+        "UserProfileId": null //utilizado somente com pedidos VTEX
+    },
+    "shippingData": {
+        "address": {
+            "addressId": "Casa",
+            "addressType": "Residencial",
+            "receiverName": "Marcelo",
+            "city": "Curitiba",
+            "complement": null,
+            "country": "BRA",
+            "geoCoordinates": [],
+            "neighborhood": "Novo Mundo",
+            "number": "4000",
+            "postalCode": "81020230",
+            "reference": null,
+            "state": "PR",
+            "street": "Rua Eduardo Carlos Pereira"
+        },
+        "logisticsInfo": [
+            {
+                    "itemIndex": 0,
+                    "price": 200,
+                    "selectedDeliveryChannel":"delivery",
+                    "selectedSla": null,
+                    "lockTTL": "1d", //tempo para reserva do estoque do pedido
+                    "shippingEstimate":"1d" //tempo de entrega do pedido
+            }
+        ],
+        "selectedAddresses":[
+          {
+            "addressType": "Residencial",
+            "receiverName": "Henrique Vianna",
+            "addressId": "2",
+            "postalCode": "81020-235",
+            "city": "Curitiba",
+            "state": "PR",
+            "country": "BRA",
+            "street": "Rua Eduardo Carlos Pereira",
+            "number": "4125",
+            "neighborhood": "Portão",
+            "complement": "",
+            "reference": null,
+            "geoCoordinates": [
+                -49.2892059,
+                -25.4826319
+            ]
+        }],
+        "isFob": false //se entrega feita pelo lojista coloque false, senão true
+    },
+    "customData": {
+		"customApps": [{
+			"fields": {
+				"orderIdMarketplace": "2630580148",
+				"paymentIdMarketplace": "8191598627"
+			},
+			"id": "marketplace-integration",
+			"major": 1
+		}]
+	},
+    "openTextField": {
+         "value": "{\"Phones\":[\"21998718616\"]}"
     }
-  ]
-}
-[/block]
+  }
+]
+```
+
 ### Authorize dispatch
 
 Use the request example below to authorize dispatch. Check out our [Authorize Dispatch](https://developers.vtex.com/vtex-rest-api/reference/authorize-dispatch-for-fulfillment-order)

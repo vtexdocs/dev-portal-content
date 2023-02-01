@@ -141,7 +141,7 @@ In this section, you first must **add the primary instructions** that will allow
 1. Adding the app as a theme dependency in the `manifest.json` file;
 2. Declaring the app's main block in a given theme template or inside another block from the theme.
 
-Remember to add a table with all blocks exported by the app and their descriptions. You can verify an example of it on the [Search Result documentation](https://vtex.io/docs/components/all/vtex.search-result@3.56.1/). 
+Remember to add a table with all blocks exported by the app and their descriptions. You can verify an example of it on the [Search Result documentation](https://developers.vtex.com/docs/guides/vtex-search-result/). 
 
 Next, add the **props table** containing your block's props. 
 
@@ -229,9 +229,9 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 Check out some documentation models that are already live: 
 - [Breadcrumb](https://github.com/vtex-apps/breadcrumb)
 - [Image](https://vtex.io/docs/components/general/vtex.store-components/image)
-- [Condition Layout](https://vtex.io/docs/components/all/vtex.condition-layout@1.1.6/)
+- [Condition Layout](https://developers.vtex.com/docs/guides/vtex-condition-layout/)
 - [Add To Cart Button](https://vtex.io/docs/components/content-blocks/vtex.add-to-cart-button@0.9.0/)
-- [Store Form](https://vtex.io/docs/components/all/vtex.store-form@0.3.4/)
+- [Store Form](https://developers.vtex.com/docs/guides/vtex-store-form/)
 ```
 
 ##### Pixel app README template
