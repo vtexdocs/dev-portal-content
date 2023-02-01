@@ -547,3 +547,17 @@ query orders($options: OrdersOptionsInput!) {
   }
 }
 ```
+
+**Orders query response**
+
+```Jsx
+type PaginatedOrders {
+  currencies: [CurrencyOrderSummary]
+  paging: OrdersPaging!
+  page: Int! @deprecated(reason: "Use `paging` field.")
+  perPage: Int! @deprecated(reason: "Use `paging` field.")
+  total: Int! @deprecated(reason: "Use `paging` field.")
+  list: [OrderListing!]!
+  reportRecordsLimit: Int!
+}
+```
