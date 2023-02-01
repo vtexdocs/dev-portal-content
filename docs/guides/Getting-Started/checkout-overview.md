@@ -4,6 +4,8 @@ slug: "checkout-overview"
 hidden: false
 createdAt: "2020-09-11T23:12:53.108Z"
 updatedAt: "2022-10-21T13:19:52.868Z"
+seeAlso:
+ - "/docs/api-reference/checkout-api#overview"
 ---
 
 > **Help us improve our documentation!** Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
