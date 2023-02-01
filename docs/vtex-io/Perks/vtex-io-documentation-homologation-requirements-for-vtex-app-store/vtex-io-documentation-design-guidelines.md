@@ -1,13 +1,12 @@
 ---
 title: "User Experience guidelines"
 slug: "vtex-io-documentation-design-guidelines"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-07-22T14:20:04.371Z"
 updatedAt: "2022-12-13T20:17:45.071Z"
 ---
 
-Before you begin [developing your App](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app), you must first decide on the UX flows and interfaces that will make it accessible and intuitive to use.
+Before you begin [developing your App](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app), you must first decide on the UX flows and interfaces that will make it accessible and intuitive to use.
 
 Refer to the best practices listed below when designing your app.
 
@@ -75,7 +74,7 @@ The writing of your app's instructions, actions, feedback, and settings must fol
 
 ## Related Articles
 
-- [App Store Guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store)
+- [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store)
 - [VTEX Styleguide](https://styleguide.vtex.com/#/Introduction)
 - [VTEX brand manual](https://brand.vtex.com/?_ga=2.86158557.436370270.1649074565-1001456323.1619912759)
 - [UX Writing guidelines](https://uxwriting.vtex.com/)

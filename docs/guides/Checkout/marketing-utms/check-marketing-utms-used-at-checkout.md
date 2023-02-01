@@ -21,7 +21,7 @@ To make sure the content of the `utm_source` parameter is being sent to the Chec
 3. Go to the **Application** tab.
 4. Open the store's website cookies and look for the **IPS** cookie.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/marketing-utms/check-marketing-utms-used-at-checkout-0_24.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/check-marketing-utms-used-at-checkout-0.PNG)
 
 1. Go to a product page and add it to the cart.
 2. Access the cart.
@@ -29,7 +29,7 @@ To make sure the content of the `utm_source` parameter is being sent to the Chec
 4. In the preview, open the `marketingData` node.
 5. Check the value of the `utmSource` field.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/marketing-utms/check-marketing-utms-used-at-checkout-1_32.PNG)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/check-marketing-utms-used-at-checkout-1.PNG)
 
 The presence of the `utmSource` field with the same value as `utm_source` means that the information was correctly received by Checkout. If the `utmSource` field was empty in the orderForm, it would indicate that the value was not sent to the Checkout.
 

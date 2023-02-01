@@ -12,8 +12,8 @@ It is now possible to add a link to the Product Highlight's string text thanks t
 
 The link allows you to redirect users to a store page of your choice, such as the product collection.
 
-To know further, do not forget to access the [Product Highlights app documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-producthighlights)!
+To know further, do not forget to access the [Product Highlights app documentation](https://developers.vtex.com/docs/guides/vtex-store-components-producthighlights)!
 
-> ⚠️ The Product Highlights app was deprecated and replaced by the [Product Specifications app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-specifications).
+> ⚠️ The Product Highlights app was deprecated and replaced by the [Product Specifications app](https://developers.vtex.com/docs/guides/vtex-product-specifications).
 
 > ℹ️ This release was possible thanks to [proudynyu](https://github.com/proudynyu)! Cheers!

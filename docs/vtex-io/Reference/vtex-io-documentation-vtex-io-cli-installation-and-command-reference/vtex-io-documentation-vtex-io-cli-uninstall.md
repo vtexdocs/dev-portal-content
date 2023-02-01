@@ -1,14 +1,13 @@
 ---
 title: "Uninstalling VTEX IO's CLI"
 slug: "vtex-io-documentation-vtex-io-cli-uninstall"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-10-20T14:59:19.807Z"
 updatedAt: "2022-12-13T20:17:44.708Z"
 ---
 To uninstall VTEX IO's CLI from your system, run the command relative to your operating system or package manager.
 
->⚠️ This will also remove all [plugins](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) from your system.
+>⚠️ This will also remove all [plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) from your system.
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
@@ -51,7 +50,7 @@ curl -L https://vtex.io/vtexcli/uninstall | sh
 
 ### Uninstalling VTEX IO's CLI via NPM
 
-If you have [installed VTEX IO's CLI via NPM](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install), to uninstall it on your machine run the following in your command line:
+If you have [installed VTEX IO's CLI via NPM](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install), to uninstall it on your machine run the following in your command line:
 
 ```sh
   yarn global remove vtex

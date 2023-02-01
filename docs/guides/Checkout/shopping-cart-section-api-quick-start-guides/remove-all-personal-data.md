@@ -26,7 +26,7 @@ See below an example of some personal data contained in a shopping cart:
 }
 [/block]
 
-> ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) overview.
+> ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 
 ## Removing all personal data from the shopping cart 
 

@@ -12,4 +12,4 @@ We are excited to announce The Suiteshare app is here to provide conversational 
 
 > ℹ️ Suiteshare app is only compatible with IO Stores.
 
-Check out the new [Suiteshare app documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-suite-share) and learn how to install it in your VTEX account!
+Check out the new [Suiteshare app documentation](https://developers.vtex.com/docs/guides/vtex-suite-share) and learn how to install it in your VTEX account!

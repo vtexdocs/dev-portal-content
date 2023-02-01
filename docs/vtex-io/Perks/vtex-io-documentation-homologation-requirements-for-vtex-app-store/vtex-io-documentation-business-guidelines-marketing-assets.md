@@ -7,7 +7,7 @@ createdAt: "2021-07-22T14:20:05.553Z"
 updatedAt: "2022-12-13T20:17:44.747Z"
 ---
 
-Once you have [developed your app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.
+Once you have [developed your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.
 
 ![appstore-page-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/153282275-98bab015-81e8-4858-8538-72c9fa33d17e_11.gif)
 
@@ -21,7 +21,7 @@ Note that if we see room for improvement, we’ll reach out to you before listin
 
 Refer to the following sections to improve your App Page and increase its adoption on the VTEX App Store.
 
-> ℹ️ We recommend you follow these best practices while setting up the files that compose the marketing assets of an app. Please refer to [this guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-preparing-your-app-distribution#step-2---setting-the-public-folder) for more information.
+> ℹ️ We recommend you follow these best practices while setting up the files that compose the marketing assets of an app. Please refer to [this guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution#step-2---setting-the-public-folder) for more information.
 
 ## Tone & Voice
 
@@ -32,7 +32,7 @@ Choose to favor the Serious and Authority tones. We understand that they capture
 |Serious|Speak firmly, respectfully, and honestly - always with a more serious tone than playful.|
 |Authority|Speak with mastery, proficiency, and expertise.|
 
-To see more about VTEX’s tone and voice, go to [UX Writing Guidelines](https://uxwriting.vtex.com/docs/principles/goals-principles/#tone-and-voice) and [VTEX Brand Guide](https://brand.vtex.com/brand/voiceandtone) pages.
+To see more about VTEX’s tone and voice, go to [UX Writing Guidelines](https://uxwriting.vtex.com/docs/principles/goals-principles/#tone-and-voice) and [VTEX Brand Guide](https://brand.vtex.com/voice-and-tone/) pages.
 
 ## Images
 
@@ -400,6 +400,6 @@ For each metric declared in the `billingOptions` field (found in the app's manif
 
 ## Related Articles
 
-- [App Store Guidelines](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-homologation-requirements-for-vtex-app-store)
-- [Submitting your app to the VTEX App Store](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store)
-- [Preparing your app for distribution](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-preparing-your-app-distribution)
+- [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store)
+- [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store)
+- [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution)

@@ -9,7 +9,7 @@ excerpt: "You can now easily implement SAML login for your store via the new cus
 
 ![Integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/saml-login-easy-implementation-0.png)
 
-The VTEX platform allows you to implement a custom Single Sign-On (SSO) option to the Admin panel of your store with [SAML 2.0](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-admin-saml2).
+The VTEX platform allows you to implement a custom Single Sign-On (SSO) option to the Admin panel of your store with [SAML 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-admin-saml2).
 
 ## What changed?
 
@@ -17,4 +17,4 @@ You can now easily implement SAML login for your store via the new custom SAML i
 
 ## Implementation
 
-Learn more about SAML and how to set it up with the [SSO SAML guide](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide-admin-saml2).
+Learn more about SAML and how to set it up with the [SSO SAML guide](https://developers.vtex.com/docs/guides/login-integration-guide-admin-saml2).

@@ -14,7 +14,7 @@ This Checkout configuration sets the discount price and links it to a payment me
 
 2. To get the payment method ID, access Settings in the **Payments** module. The ID of the condition you want to use is on the right side of the screen in the **Payments Settings** > **Payments Conditions** section.
 
-![Payment condition](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/discounts/set-a-discount-using-the-checkout-api-0_17.png)
+![Payment condition](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/set-a-discount-using-the-checkout-api-0.png)
 
 3. After updating `paymentSystemToCheckFirstInstallment`, you can run the [Do OrderForm Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) endpoint. Thus, you will be able to verify that the chosen payment method has been updated with the discount in the cash payment option in the `installmentOptions` section, within `paymentData`.
 

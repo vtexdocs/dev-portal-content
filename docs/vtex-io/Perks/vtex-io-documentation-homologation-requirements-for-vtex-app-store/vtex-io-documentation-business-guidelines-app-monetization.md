@@ -1,7 +1,6 @@
 ---
 title: "App monetization"
 slug: "vtex-io-documentation-business-guidelines-app-monetization"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-07-21T21:13:45.298Z"
 updatedAt: "2022-12-13T20:17:44.271Z"
@@ -13,7 +12,7 @@ Currently, there are two models available:
 - [Free distribution](#free-distribution)
 - [Paid distribution](#paid-distribution)
 
-> ℹ️ The business model is defined in the `billingOptions` field of the app's `manifest.json` file. Check out our documentation on [Setting your app's billing model](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-your-apps-billing-model) to learn how to set up the most suitable billing type.
+> ℹ️ The business model is defined in the `billingOptions` field of the app's `manifest.json` file. Check out our documentation on [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model) to learn how to set up the most suitable billing type.
 
 ## Free distribution
 

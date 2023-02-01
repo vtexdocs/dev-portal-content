@@ -1,7 +1,6 @@
 ---
 title: "VTEX Resource Name (VRN)"
 slug: "vtex-io-documentation-vrn"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-07-16T19:23:48.269Z"
 updatedAt: "2022-12-13T20:17:44.842Z"

@@ -14,7 +14,7 @@ We **strongly recommend** that accounts using the deprecated Styles Builder 1. x
 
 [Styles Builder 1.x has been deprecated since December of 2019](https://vtex.io/docs/releases/2019-week-43-44/css-selectors-deprecation/) and now VTEX is ceasing its support in favor of its most recent version.
 
-The Styles Builder’s major 2. x is already available, and It offers better store stability when working with [CSS handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization), avoiding potential breakdowns on store layouts.
+The Styles Builder’s major 2. x is already available, and It offers better store stability when working with [CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization), avoiding potential breakdowns on store layouts.
 
 ## What needs to be done?
 
@@ -27,4 +27,4 @@ builders{
 }
 ```
 
-In the following, check the [best practices of CSS handles](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization#best-practices) to review and update every CSS customization for your store elements.
+In the following, check the [best practices of CSS handles](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization#best-practices) to review and update every CSS customization for your store elements.

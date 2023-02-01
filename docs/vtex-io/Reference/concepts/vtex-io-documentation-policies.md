@@ -1,12 +1,11 @@
 ---
 title: "Policies"
 slug: "vtex-io-documentation-policies"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-07-16T20:35:02.107Z"
 updatedAt: "2022-12-13T20:17:44.172Z"
 ---
-Policies are a set of permissions granted to a resource ([VRN](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vrn))or a [role](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-roles) that allows or forbids them to execute a given set of actions in an account, such as performing a request to the platform.
+Policies are a set of permissions granted to a resource ([VRN](https://developers.vtex.com/docs/guides/vtex-io-documentation-vrn))or a [role](https://developers.vtex.com/docs/guides/vtex-io-documentation-roles) that allows or forbids them to execute a given set of actions in an account, such as performing a request to the platform.
 
 In VTEX IO, there are two kinds of policies, which are role-based and resource-based. Both of them are based on the [AWS's IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html).
 
@@ -50,7 +49,7 @@ The keys that compose a statement are:
 
 > Depending on the resource, there may exist different actions one could perform on it. For RESTful APIs, this could map to HTTP verbs. However, actions are not restricted to it and the service may accept any string as an action.
 
-- `resources` - contains the list of resources expressed by a [VTEX Resource Name (VRN)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vrn) to which the statement refers to.
+- `resources` - contains the list of resources expressed by a [VTEX Resource Name (VRN)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vrn) to which the statement refers to.
 
 You can also optionally state `conditions` to designate that a given statement should only be considered if the context of the request satisfies the set of conditions that have been provided.
 
@@ -89,4 +88,4 @@ The keys that compose this kind of policy are:
 
 - `effect` - describes the effect of allowing (`allow`) or denying (`deny`) a principal to perform a set of actions on a route.
 - `actions` - describes the actions related to a given effect, principal, and route.
-- `principals` - contains the list of principals able to perform requests to a given route or not. Like resources, `principals` are also expressed by a [VTEX Resource Name (VRN)](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vrn).
+- `principals` - contains the list of principals able to perform requests to a given route or not. Like resources, `principals` are also expressed by a [VTEX Resource Name (VRN)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vrn).

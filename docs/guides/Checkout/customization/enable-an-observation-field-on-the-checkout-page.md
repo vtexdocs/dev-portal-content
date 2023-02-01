@@ -10,9 +10,9 @@ You can enable an **Observation** field on the Checkout page and use it to store
 
 The data entered in this field is sent via API to the Order Management System. They populate the `openTextField` field, which can be retrieved later either in the Admin or through an Orders API call.
 
-By default, this field is disabled. To enable it, it is necessary to insert the following rule in the CSS via the APP [Checkout UI Settings](https://developers.vtex.com/vtex-developer-docs/docs/vtex-checkout-ui-settings) or by the Admin.
+By default, this field is disabled. To enable it, it is necessary to insert the following rule in the CSS via the APP [Checkout UI Settings](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) or by the Admin.
 
 `.note { display: block; }`
 
 Checkout code configuration page view in Admin:
-![Observation field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/enable-an-observation-field-on-the-checkout-page-0_17.PNG)
+![Observation field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-an-observation-field-on-the-checkout-page-0.PNG)

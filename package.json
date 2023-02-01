@@ -1,0 +1,13 @@
+{
+  "name": "dev-portal-content",
+  "version": "1.0.0",
+  "description": "content for vtex developer portal",
+  "main": "index.js",
+  "repository": "https://github.com/vtexdocs/dev-portal-content",
+  "author": "Bruno Amui <bruno.amui@vtex.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "textlint": "^13.1.0",
+    "textlint-rule-write-good": "^2.0.0"
+  }
+}

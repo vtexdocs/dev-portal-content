@@ -22,7 +22,7 @@ In order to support our clients' integrations implementation, we have published 
 - [Alternative API requests](https://developers.vtex.com/vtex-rest-api/docs/catalog-integration)
 - [How to implement product color variation](https://developers.vtex.com/vtex-rest-api/docs/catalog-integration)
 
-We have also improved our [Catalog API documentation](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-overview), with more accurate descriptions and new endpoints:
+We have also improved our [Catalog API documentation](https://developers.vtex.com/docs/api-reference/catalog-api#overview), with more accurate descriptions and new endpoints:
 
 - post [Create Category](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-category#catalog-api-post-category)
 - post [Create Brand](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-brand#catalog-api-post-brand)

@@ -40,4 +40,4 @@ All price changes made manually are recorded and the user responsible for the ch
 3. Makes a `GET` request using the endpoint [License Manager - Get User](https://developers.vtex.com/vtex-developer-docs/reference/getuser), filling in with the *user ID* or *appKey*, to obtain the data of the person responsible for the modification.
 
 Example of information available in `manualPriceAppliedBy` property:
-![Manual price](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/features/enable-the-manual-price-0_43.PNG)
+![Manual price](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-the-manual-price-0.PNG)

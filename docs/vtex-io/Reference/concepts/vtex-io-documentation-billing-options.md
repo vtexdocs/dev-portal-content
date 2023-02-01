@@ -1,7 +1,6 @@
 ---
 title: "Billing Options"
 slug: "vtex-io-documentation-billing-options"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-09-14T16:55:05.983Z"
 updatedAt: "2022-12-13T20:17:44.507Z"
@@ -10,7 +9,7 @@ The `billingOptions` field is part of the `manifest.json` file of an app and is 
 
 Please notice that apps without `billingOptions` in the `manifest.json` file are **private**, meaning that they are only visible and available for installation in the account where they were published.
 
-> ℹ️ Setting your app's billing model is a necessary step to distribute your app on the VTEX ecosystem. Without the `billingOptions` definition, the visibility of your app is restricted to the account where it was published. Learn how to configure the `billingOptions` field in [Setting your app's billing model](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-setting-your-apps-billing-model) according to your scenario.
+> ℹ️ Setting your app's billing model is a necessary step to distribute your app on the VTEX ecosystem. Without the `billingOptions` definition, the visibility of your app is restricted to the account where it was published. Learn how to configure the `billingOptions` field in [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model) according to your scenario.
 
 Refer to the following sections to find more details on the properties that comprise the `billingOptions` field.
 
@@ -18,7 +17,7 @@ Refer to the following sections to find more details on the properties that comp
 
 | Property | Type | Description | Valid example |
 | --------- | ----- | --------------- | ------- |
-| `type`  | `enum` | Defines how the app is charged. Possible values are: `free` (app is free of charge), `billable` (app charges according to one of its plans) or `sponsored` (app is meant to be used only by a [Sponsor account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-sponsor-account) and its children). | `free` |
+| `type`  | `enum` | Defines how the app is charged. Possible values are: `free` (app is free of charge), `billable` (app charges according to one of its plans) or `sponsored` (app is meant to be used only by a [Sponsor account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) and its children). | `free` |
 | `support` | `object` | Provides a support request channel between the app’s user and its vendor. To know more, check out the [`support` object](#support-object) section below. | `undefined` |
 | `availableCountries` | `array` | Defines the countries ID (ISO) where the app can be installed and where support is ensured by the vendor. | `["BRA", "USA", "GBR"]` or `["*"]` *(meaning that the app is available in any country)* |
 | `plans` | `array` | **Optional property.** Defines (in an object array) a predefined subscription plan. To know more, check out the [`plans` array](#plans-array) section below. | `undefined` |

@@ -13,7 +13,7 @@ The `ecommerce` variable was fixed to prevent the same ecommerce event from bein
 
 ## Why did we make these changes?
 
-Previously, users of the [VTEX Google Tag Manager app](https://developers.vtex.com/vtex-developer-docs/docs/google-tag-manager) had the same ecommerce event fired several times to Google Analytics, resulting in a financial expense because the large number of events triggered exceeded the monthly free visits of 10 million.
+Previously, users of the [VTEX Google Tag Manager app](https://developers.vtex.com/docs/guides/google-tag-manager) had the same ecommerce event fired several times to Google Analytics, resulting in a financial expense because the large number of events triggered exceeded the monthly free visits of 10 million.
 
 Now, the `ecommerce` variable passes `null` before pushing an ecommerce event to the data layer, as [Google recommends](https://developers.google.com/analytics/devguides/collection/ua/gtm/enhanced-ecommerce#clear-ecommerce#clear-ecommerce), which prevents the same event from triggering in GA and does not exceed the monthly hits of 10 million free visits.
 

@@ -7,7 +7,7 @@ updatedAt: "2022-08-30T23:20:03.471Z"
 ---
 For B2B businesses, it is common to add to the invoice an address that is different from the one registered for delivery, since the location where the product will be received is often different from the billing address.
 
-VTEX Admin allows you to add a second address only in the case of [Pickup Points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R) because there will be only one address for the invoice. For other cases, adding a second address must be done via API, using the [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) object. 
+VTEX Admin allows you to add a second address only in the case of [Pickup Points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R) because there will be only one address for the invoice. For other cases, adding a second address must be done via API, using the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) object. 
 
 The `orderForm` is the main object processed by VTEX Checkout, and one of the most important data structures in VTEX stores' architecture. 
 

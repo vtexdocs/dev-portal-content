@@ -9,7 +9,7 @@ excerpt: "We have released the [Catalog API - Seller Portal](https://developers.
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-catalog-api-available-for-seller-portal-0.png)
 
-> ℹ️ The new Catalog API is part of the [Seller Portal Catalog](https://help.vtex.com/en/tutorial/how-the-seller-portal-catalog-works--7pMB6YOt6YQDQQbzFB4Pxp). This functionality is in the Beta stage and can be discontinued at any moment at VTEX's discretion. VTEX will not be responsible for any instabilities caused by its use or discontinuity. If you have any questions, please contact [our Support Center](https://support.vtex.com/hc/en-us/requests).
+> ℹ️ The new Catalog API is part of the [Seller Portal Catalog](https://help.vtex.com/en/tutorial/how-the-seller-portal-catalog-works--7pMB6YOt6YQDQQbzFB4Pxp). This functionality is in the Beta stage and can be discontinued at any moment at VTEX's discretion. VTEX will not be responsible for any instabilities caused by its use or discontinuity. If you have any questions, please contact [our Support Center](https://support.vtex.com/hc/en-us).
 
 The [Seller Portal](https://help.vtex.com/en/tutorial/how-to-set-up-your-store-on-seller-portal--6w1vBdRH2uuBGmUqgNQjwK) is an edition of the VTEX platform for sellers to connect and sell their products on marketplaces, providing sellers with the essential capabilities for an ecommerce operation.
 

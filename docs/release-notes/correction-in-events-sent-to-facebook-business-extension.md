@@ -9,7 +9,7 @@ excerpt: "We have adjusted the architecture of the Facebook Business Extension a
 
 ![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/correction-in-events-sent-to-facebook-business-extension-0.png)
 
-The [Facebook Business Extension and Conversions API app](https://developers.vtex.com/vtex-developer-docs/docs/vtex-facebook-fbe) is the one-stop shop for merchants to easily connect their stores to Facebook services through the FBE platform.
+The [Facebook Business Extension and Conversions API app](https://developers.vtex.com/docs/guides/vtex-facebook-fbe) is the one-stop shop for merchants to easily connect their stores to Facebook services through the FBE platform.
 
 Through the app, a series of events are sent from VTEX servers to Facebook to track a store's performance.
 

@@ -10,7 +10,7 @@ All order confirmation information at checkout is available on the Placed Orders
 
 Order Placed page example:
 
-![Página de confirmação de pedido (Order Placed)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-0_13.png)
+![Página de confirmação de pedido (Order Placed)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/customize-checkout-confirmation-pages-0.png)
 
 In the Checkout section, located in the Admin VTEX side menu, you can access one or more websites (stores) registered in your account and perform checkout settings, including UI customization.
 
@@ -28,7 +28,7 @@ To edit Checkout confirmation UI information, access the following templates:
 - **checkout-confirmation-top**
 
 Code tab view:
-![Checkout confirmation information codes section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-1_32.png)
+![Checkout confirmation information codes section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/customize-checkout-confirmation-pages-1.png)
 
 [block:callout]
 {
@@ -38,7 +38,7 @@ Code tab view:
 [/block]
 
 Template areas on the page:
-![Página de confirmação de pedido com imports de HTML](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-2_41.png)
+![Página de confirmação de pedido com imports de HTML](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/customize-checkout-confirmation-pages-2.png)
 
 ## Customizing styles
 
@@ -46,7 +46,7 @@ You can also edit the Checkout Confirmation interface via CSS classes. Your styl
 
 CSS class areas on the page:
 
-![Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/customization/customize-checkout-confirmation-pages-3_49.png)
+![Página de OrderPlaced do Checkout Confirmation com classes de customização marcadas.png](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/customize-checkout-confirmation-pages-3.png)
 
 To customize the Checkout Confirmation styles, use the following classes:
 

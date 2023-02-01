@@ -1,7 +1,6 @@
 ---
 title: "Self-service level"
 slug: "vtex-io-documentation-business-guidelines-self-service-level"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: true
 createdAt: "2021-07-22T14:20:04.288Z"
 updatedAt: "2022-12-13T20:17:43.918Z"

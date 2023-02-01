@@ -1,7 +1,6 @@
 ---
 title: "Command reference"
 slug: "vtex-io-documentation-vtex-io-cli-command-reference"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2021-04-04T22:02:14.325Z"
 updatedAt: "2022-12-13T20:17:44.857Z"
@@ -11,7 +10,7 @@ This documentation is a reference for:
 - [VTEX IO CLI default commands](#default-commands)
 - [VTEX plugins commands](#plugins)
 
->⚠️  VTEX IO's CLI 3.x now has a plugin-based architecture. Hence, some commands from the previous versions of VTEX IO's CLI are now available as plugins. They are: `add`, `autoupdate`, `config`, `debug`, `infra`, `lighthouse`, `logs`, `redirects`, `settings`, `submit`, `support`, `test`, `url`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+>⚠️  VTEX IO's CLI 3.x now has a plugin-based architecture. Hence, some commands from the previous versions of VTEX IO's CLI are now available as plugins. They are: `add`, `autoupdate`, `config`, `debug`, `infra`, `lighthouse`, `logs`, `redirects`, `settings`, `submit`, `support`, `test`, `url`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 ## Default commands
 
@@ -59,7 +58,7 @@ Check in the following a brief description of the default commands of VTEX IO's 
 
 ### autoupdate
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-autoupdate`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-autoupdate`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Automatically updates VTEX IO's CLI.
 
@@ -110,7 +109,7 @@ Opens the URL relative to your current workspace and account in a new browser wi
 
 ### deploy
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deploy`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deploy`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Publishes an app as a stable version. Only works for apps previously published as a release candidate version [see vtex publish --help].
 
@@ -176,7 +175,7 @@ Deprecates the specified app, uninstalling and downgrading it to the latest stab
 
 ### deps diff
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Displays the differences between the dependencies of two distinct workspaces. If a single parameter is passed, the specified workspace's dependencies are compared with the master's. If no parameter is passed, the diff is made between the current workspace and master.
 
@@ -203,7 +202,7 @@ Displays the differences between the dependencies of two distinct workspaces. If
 
 ### deps list
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Displays the complete dependency tree of the current workspace.
 
@@ -237,7 +236,7 @@ Displays the complete dependency tree of the current workspace.
 
 ### deps update
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Updates a dependency of the current workspace. If not specified which dependency, it updates all of them.
 
@@ -265,7 +264,7 @@ Updates a dependency of the current workspace. If not specified which dependency
 
 ### edition get
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-edition`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-edition`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Displays the Edition App version installed on the current account.
 
@@ -285,7 +284,7 @@ Displays the Edition App version installed on the current account.
 
 ### edition set
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-edition`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-edition`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Sets the Edition App version for the current account.
 
@@ -732,7 +731,7 @@ Updates all installed apps to the latest (minor or patch) version. Does not upgr
 
 ### whoami
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-whoami`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-whoami`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Prints the current account, workspace, environment, and login details.
 
@@ -752,7 +751,7 @@ Prints the current account, workspace, environment, and login details.
 
 ### workspace abtest finish
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Stops all A/B tests from running on the current account.
 
@@ -766,7 +765,7 @@ Stops all A/B tests from running on the current account.
 
 ### workspace abtest start
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Starts a new A/B test on the current workspace.
 
@@ -780,7 +779,7 @@ Starts a new A/B test on the current workspace.
 
 ### workspace abtest status
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 Displays the results of the active A/B tests.
 
@@ -976,7 +975,7 @@ Creates and switches to a new workspace or simply switches to an existing one.
 
 Check in the following a brief description of the commands available by VTEX plugins. For a detailed description of each command, click on its respective name. After installing the corresponding plugin, you can also access this information in your terminal by adding `--help` or `-h` after the command name.
 
-> ℹ️ Follow this link [this link](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
 
 |Plugin command|Functionality|
 |------------|-------------|

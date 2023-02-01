@@ -1,12 +1,11 @@
 ---
 title: "Store Framework"
 slug: "frequently-asked-questions"
-excerpt: "vtex.io-documentation@0.38.1"
 hidden: true
 createdAt: "2020-06-23T23:27:32.590Z"
 updatedAt: "2021-03-17T13:14:04.164Z"
 ---
-If you already understood [what VTEX Store Framework is](https://developers.vtex.com/vtex-developer-docs/docs/what-is-store-framework), you may want to know more and discover how it can be used, who can use it, how much it costs, what restrictions may be applied, and so on.
+If you already understood [what VTEX Store Framework is](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), you may want to know more and discover how it can be used, who can use it, how much it costs, what restrictions may be applied, and so on.
 
 Don't worry! You're not alone in wanting to know about all the above. The answers to the VTEX Store Framework frequently asked questions are as follows:
 

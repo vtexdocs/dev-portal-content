@@ -1,7 +1,6 @@
 ---
 title: "Clients"
 slug: "vtex-io-documentation-clients"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2022-02-16T13:52:17.234Z"
 updatedAt: "2022-12-13T20:17:43.979Z"
@@ -24,4 +23,4 @@ These are some of the features built-in our clients infrastructure:
 
 ![Clients on IO Services](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-clients-0.png)
 
-Learn how to create Clients of your own by accessing [Managing Clients](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-how-to-create-and-use-clients) documentation.
+Learn how to create Clients of your own by accessing [Managing Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.

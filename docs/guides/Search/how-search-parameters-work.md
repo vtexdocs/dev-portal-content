@@ -10,7 +10,7 @@ updatedAt: "2022-09-15T18:56:45.172Z"
 
 When making a search on VTEX, there are different possibilities of URLs. The URLs of Departments and Categories are made up as follows:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/how-search-parameters-work-0_17.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-0.png)
 
 In the categories tree above, the links are as follows:
 
@@ -20,7 +20,7 @@ In the categories tree above, the links are as follows:
 
 The URL will always be made up with the term entered in the search field:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/how-search-parameters-work-1_25.png)
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-1.png)
 
 `www.store.com/shoes`
 
@@ -35,14 +35,14 @@ The browsing filters also have specific URLs that are defined by certain paramet
 Where:
 
 - **C:\[DepartmentId/CategoryId/SubcategoryId]**: shows products of a specific category, according to the IDs informed for the department, category, and subcategory. This code appears next to category names on **Products**>**Catalog**>**Categories**.
-  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/how-search-parameters-work-2_46.png)
+  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-2.png)
 
 > ℹ️ The category ID can also be found on your editing page, at the end of the URL.
 
 - **B:[BrandId]:** shows products of a specific brand, according to the ID informed. This code is shown at the end of the URL, on the page used for changing the brand, in **Products**>**Catalog**>**Brands**.
-  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/how-search-parameters-work-3_56.png)
+  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-3.png)
 - **H:[CollectionId]**: shows products of a specific collection, according to the ID informed. This code is informed in collection editing, in **Store setup**>**CMS**>**Layout**>**CMS**>**Product Clusters (Collections)**.
-  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/how-search-parameters-work-4_58.png)
+  ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-4.png)
 
 > ⚠️ There are two ways to configure collections, through the CMS or the Collection module (Beta). This article is about how to [configure collections through the CMS](https://help.vtex.com/en/tutorial/adding-collections-cms--2YBy6P6X0NFRpkD2ZBxF6L).
 

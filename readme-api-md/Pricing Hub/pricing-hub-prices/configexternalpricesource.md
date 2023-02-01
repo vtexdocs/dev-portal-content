@@ -10,6 +10,6 @@ This request should only be placed using the master workspace of an account.
 [block:callout]
 {
   "type": "info",
-  "body": "This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://support.vtex.com/hc/en-us/requests)."
+  "body": "This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://support.vtex.com/hc/en-us)."
 }
 [/block]

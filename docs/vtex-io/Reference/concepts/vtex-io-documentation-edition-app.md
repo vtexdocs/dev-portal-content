@@ -1,13 +1,12 @@
 ---
 title: "Edition App"
 slug: "vtex-io-documentation-edition-app"
-excerpt: "vtex.io-documentation@0.88.24"
 hidden: false
 createdAt: "2020-06-03T16:02:44.317Z"
 updatedAt: "2022-12-13T20:17:44.705Z"
 ---
 
-An Edition App consists of a bundle of settings, policies, back-end and front-end apps encapsulated and exported by a [Sponsor Account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-sponsor-account).
+An Edition App consists of a bundle of settings, policies, back-end and front-end apps encapsulated and exported by a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
 
 Its main objective is to facilitate the installation of numerous apps that might be considered essential to set up one specific environment.
 
@@ -17,9 +16,9 @@ For example, consider the following two Edition Apps developed by the `vtex` acc
 
 - The Edition Business (`vtex.edition-business@0.x`) - installs all the necessary apps to build a store with our legacy [CMS](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC).
 
-- The Edition Store (`vtex.edition-store@5.x`) - installs all the necessary apps to develop a store with the [Store Framework](https://developers.vtex.com/vtex-developer-docs/docs/getting-started-3).
+- The Edition Store (`vtex.edition-store@5.x`) - installs all the necessary apps to develop a store with the [Store Framework](https://developers.vtex.com/docs/guides/getting-started-3).
 
-In fact, any VTEX account that meets the [requirements needed to be a Sponsor Account](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-becoming-a-sponsor-account) can develop and release its own Edition Apps.
+In fact, any VTEX account that meets the [requirements needed to be a Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-sponsor-account) can develop and release its own Edition Apps.
 
 Notice that this can be especially useful for complex account families, such as those under the same brand or holding.
 
