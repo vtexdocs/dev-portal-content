@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-10-28T23:22:25.245Z"
 updatedAt: "2020-11-25T01:11:12.441Z"
 ---
-When [setting up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) for your ERP middleware or similar integration, you may need additional payment details from orders placed in external marketplaces. 
+When [setting up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) for your ERP middleware or similar integration, you may need additional payment details from orders placed in external marketplaces.
 
 This article explains where our [native Mercado Libre connector](https://help.vtex.com/pt/tracks/mercado-libre-integration-set-up--2YfvI3Jxe0CGIKoWIGQEIq/51oWBHvVxSs8eAwLQhSbSd) stores this information in the orderForm data structure and how to fetch this data for your integration.
 
