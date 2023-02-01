@@ -481,6 +481,17 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 #### Query vtex.store-graphql
 
 ```jsx
+query {
+  orders @context(provider: "vtex.store-graphql") {
+    isCompleted
+    items {
+      productId
+    }
+  }
+}
+```
+
+```jsx
 type Order {
   allowCancellation: Boolean
   orderId: String
