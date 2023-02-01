@@ -48,7 +48,7 @@ Follow the steps below to register as a new seller on VTEX App Store:
 
 ![submitting-seller-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer-1.png)
 
-![submitting-seller-2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/5ea61c09f44af5f2c94d506d0fc664b07f394312/images/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer-2.png)
+![submitting-seller-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer-2.png)
 
 After submitting the request to be a seller, you can check its `status` until our team approves it. This approval is required in order to complete the next steps and be able to successfully publish your app in the VTEX App Store.
 
