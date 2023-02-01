@@ -476,7 +476,7 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 }
 [/block]
 
-### GraphQL orders queries
+### GraphQL queries
 
 #### Query vtex.store-graphql
 
