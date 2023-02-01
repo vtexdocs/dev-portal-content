@@ -4,6 +4,7 @@ title: "Outdated Checkout endpoint deprecation"
 createdAt: 2023-01-16T14:01:00.322Z
 hidden: false
 type: "deprecated"
+excerpt: The Outdated Checkout endpoint is an old endpoint that will be discontinued after June 25th, 2023.
 ---
 
 Beginning June 25, 2023, there is an Outdated Checkout endpoint that will be deprecated and all integrations that use this route will have to migrate to OMS endpoints, as indicated in the following table:
