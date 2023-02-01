@@ -7,9 +7,7 @@ updatedAt: "2022-07-02T00:50:32.880Z"
 ---
 ![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummaryspecificationbadges-0.png)
 
-> ⚠️ 
->
-> The Product Specification Badges block has been deprecated in favor of the [Product Specifications](https://developers.vtex.com/docs/guides/vtex-product-specifications) app. Although support for this block is still available, we strongly recommend that you update your store theme with the Product Specifications app to stay up with the component's evolution.
+> ⚠️ The Product Specification Badges block has been deprecated in favor of the [VTEX Product Specification Badges](https://developers.vtex.com/docs/guides/vtex-product-specification-badges) app. Although support for this block is still available, we strongly recommend that you update your store theme with the VTEX Product Specification Badges app to stay up with the component's evolution.
 
 Use this component to show badges based on your product specifications inside your product page.
 
