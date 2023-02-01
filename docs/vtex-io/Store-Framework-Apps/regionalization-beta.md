@@ -56,7 +56,7 @@ In Regionalization, you can show to your customer the out of stock products from
 
 #### By API
 
-You can also set the `ShowWithoutStock` attribute in the [Create Product](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-product#post-product) endpoint or in the [Update Product](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-product#catalog-api-put-product) endpoint.
+You can also set the `ShowWithoutStock` attribute in the [Create Product](https://developers.vtex.com/docs/api-reference/catalog-api/#post-/api/catalog/pvt/product) endpoint or in the [Update Product](https://developers.vtex.com/docs/api-reference/catalog-api/#put-/api/catalog/pvt/product/-productId-) endpoint.
 
 ### On VTEX IO
 

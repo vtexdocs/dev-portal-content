@@ -29,4 +29,4 @@ We also added these properties to the following endpoints:
 To learn more about the feature and how to enable it, please refer to the documentation below.
 
 - [Enabling Manual Prices for Subscriptions v3](https://developers.vtex.com/vtex-rest-api/docs/enabling-manual-prices-for-subscriptions-v3) guide.
-- [Subscriptions API v3 reference](https://developers.vtex.com/vtex-rest-api/reference/subscriptions-api-v3-overview).
+- [Subscriptions API v3 reference](https://developers.vtex.com/docs/api-reference/subscriptions-api-v3#overview).

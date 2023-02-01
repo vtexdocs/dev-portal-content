@@ -14,7 +14,7 @@ updatedAt: "2022-06-15T20:47:48.998Z"
 [/block]
 The **Gift Card Provider Protocol** is a set of definitions to help you integrate your Gift Card API into VTEX platform. 
 
-To achieve this, you need to implement a web API (REST) following the specifications from this documentation and configure your provider in your store using [Gift Card Hub API](https://developers.vtex.com/reference/giftcard-hub-api-overview).
+To achieve this, you need to implement a web API (REST) following the specifications from this documentation and configure your provider in your store using [Gift Card Hub API](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#overview).
 
 ## Common parameters in the documentation
 

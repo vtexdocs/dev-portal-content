@@ -15,5 +15,5 @@ The new [Beta Collections module](https://help.vtex.com/announcements/new-beta-c
 - get [Get Collections by search terms](https://developers.vtex.com/vtex-developer-docs/reference/collection-beta#get-collectionsbyseachterms)
 - get [Import Collection file example](https://developers.vtex.com/vtex-developer-docs/reference/collection-beta#get-importfileexample)
 - post [Add products to Collection by imported file](https://developers.vtex.com/vtex-developer-docs/reference/collection-beta#post-addproductsbyimportfile)
-- post [Remove products from Collection by imported file](https://developers.vtex.com/vtex-developer-docs/reference/collection-beta#post-removeproductsbyimportfile)
-- get [Get products from a collection](https://developers.vtex.com/vtex-developer-docs/reference/collection-beta#get-productsfromacollection)
+- post [Remove products from Collection by imported file](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/collection/-collectionId-/stockkeepingunit/importexclude)
+- get [Get products from a collection](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/collection/-collectionId-/products)

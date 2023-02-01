@@ -94,7 +94,7 @@ VTEX provides native connectors that allow our clients to connect to external ma
 *   Dafiti
 *   Wish
 
-In this scenario, marketplace payment method information is stored in the `customData` object in the [`orderForm`](https://developers.vtex.com/vtex-developer-docs/reference/checkout-api-overview) data structure.
+In this scenario, marketplace payment method information is stored in the `customData` object in the [`orderForm`](https://developers.vtex.com/docs/api-reference/checkout-api#overview) data structure.
 
 The following marketplaces are also natively integrated, however, their payment information is not automatically stored in the customData object.
 - Carrefour

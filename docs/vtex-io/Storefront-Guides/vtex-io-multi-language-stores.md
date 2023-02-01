@@ -33,7 +33,7 @@ As the VTEX IO platform makes use of tailor-made React components for storefront
 
 Similarly to JavaScript functions, React components accept arbitrary arguments as `props`, and return React elements that describe what should be rendered on a page.
 
-> ℹ️ Leveraging the VTEX IO platform, the [VTEX IO Store Framework](https://developers.vtex.com/docs/frequently-asked-questions) solution delivers the needed foundations for any storefront structure, providing high quality, customizable React store blocks so that you can build (in the fastest possible go-to-market time) comprehensive shopping experiences that never get old.
+> ℹ️ Leveraging the VTEX IO platform, the [VTEX IO Store Framework](https://developers.vtex.com/docs/guides/frequently-asked-questions) solution delivers the needed foundations for any storefront structure, providing high quality, customizable React store blocks so that you can build (in the fastest possible go-to-market time) comprehensive shopping experiences that never get old.
 
 Regarding multi-language stores, one of the advantages of using React is the possibility of rendering content translations on the client-side. This way, no refresh or re-render of the page is needed, and a high-performance result is achieved.
 

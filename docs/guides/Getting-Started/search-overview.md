@@ -20,7 +20,7 @@ The [VTEX Search app](https://developers.vtex.com/docs/guides/vtex-search) is re
 
 ### Intelligent Search API
 
-The [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference/intelligent-search-api-overview) allows you to consult the information about the user's search in your store and its terms. You can also access information about banners, facets, and suggested terms.
+The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview) allows you to consult the information about the user's search in your store and its terms. You can also access information about banners, facets, and suggested terms.
 
 ## Customizing the search experience of your store
 
