@@ -35,7 +35,7 @@ Now, you are able to use all blocks exported by the `product-summary` app. Check
 | [`product-summary-sku-name`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryskuname) | Renders the selected sku name. |
 | `product-summary-price` | ![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red) Renders the product price. This block has been deprecated in favor of the [Product Price](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-3.png) app. Although support for this block is still available, we strongly recommend that you use the Product Price app. |
 | [`product-summary-sku-selector`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryskuselector) | Renders the SKU Selector block. |
-| [`product-specification-badges`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryspecificationbadges) | Renders badges based on the product specifications. |
+| `product-specification-badges` | ![https://img.shields.io/badge/-Deprecated-red](https://img.shields.io/badge/-Deprecated-red) Renders badges based on the product specifications. This block has been deprecated in favor of the [VTEX Product Specification Badges](https://developers.vtex.com/docs/guides/vtex-product-specification-badges) app. Although support for this block is still available, we strongly recommend that you use the VTEX Product Specification Badges app.|
 
 2. Add the `list-context.product-list` block to a store template of your choice and declare the `product-summary.shelf` in its block list. For example:
 
