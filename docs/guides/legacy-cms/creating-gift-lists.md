@@ -129,4 +129,4 @@ Items purchased from your list will generate a credit that will accrue on a vouc
 
 Learn more about the form of payment worth in the article [Gift Card]([/en/tutorial/how-to-configure-gift-cards](https://help.vtex.com/en/tutorial/gift-card--tutorials_995)). Remembering that the types of lists available for site creation should be pre-built on the platform by the retailer.
 
-**Important Note:** Stores that are marketplace (sell sellers products, other partners in your store) are not eligible to use List Voucher.
+__Important Note:__ Stores that are marketplace (sell sellers products, other partners in your store) are not eligible to use List Voucher.
