@@ -27,7 +27,7 @@ It is an open standard, a product of the OASIS Security Services Technical Commi
 
 ## Authentication flow
 
-![VTEX ID SAML authentication flow.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-0.png)
+![VTEX ID SAML authentication flow.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-admin-saml2-0.png)
 
 ## SAML roles
 
@@ -158,13 +158,13 @@ Once you have [setup your identity provider](#identity-provider-configuration) a
 1. Go to the **Admin panel** > **Account settings** > **Authentication**.
 2. Click the **Admin** tab.
 
-![Admin panel authentication page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide/login-integration-guide-admin-saml2-1.PNG)
+![Admin panel authentication page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-1.PNG)
 
 3. Click `SET UP` in the **My SAML** section.
 4. Fill in the [required information](#required-information) as described above.
-   ![Custom SAML configuration page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide/login-integration-guide-admin-saml2-2.PNG)
+   ![Custom SAML configuration page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-2.PNG)
 5. Upload your metadata XML according to the information provided in [required information](#required-information).
-   ![Custom SAML configuration page (metadata upload section).](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide/login-integration-guide-admin-saml2-3.PNG)
+   ![Custom SAML configuration page (metadata upload section).](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-3.PNG)
 6. You have the option of setting the **Send AuthRequest** toggle. Turning it on means that the attributes `RelayState` and `SAMLRequest` will be sent on the URL when authenticating on the identity provider.
 7. Click `SAVE`
 

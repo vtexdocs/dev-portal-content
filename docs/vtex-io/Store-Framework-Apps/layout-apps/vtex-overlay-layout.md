@@ -51,7 +51,7 @@ Block name | Description |
 | --- | --- | --- | --- |
 | `trigger` | `Enum` | Defines whether the `popover-layout` will be opened by click (`click`) or hover (`hover`).| `click` |
 
-3. Configure the chosen trigger [block](https://vtex.io/docs/apps/all) and declare the `overlay-layout` using its props. For example:
+3. Configure the chosen trigger [block](https://developers.vtex.com/docs/vtex-io-apps) and declare the `overlay-layout` using its props. For example:
 
 ```jsonc
   "rich-text#question": {

@@ -17,7 +17,7 @@ Lists can also be for others to view products and buy them, to give as presents 
 
 To create the html element that gives the customer access to the lists in your store's Home, you must include the code below in your template:
 
-```
+```html
 <a href=“/giftlist”>Listas</a>
 ```
 
@@ -25,7 +25,7 @@ The `/ giftlist` route acts as the Home of the lists for each client. In the `ne
 
 Inside the `new-GiftList` template, there is a subtemplate with the name` new-GiftList-Sidebar-nav`. This subtemplate contains the code snippet below and can be found in the `Sub Templates` section within` HTML Templates` in your CMS:
 
-```
+```html
 <ul class="nav nav-list bs-docs-sidenav giftlist-sidenav">
     <li><a href="/giftlist/"><i class="icon-chevron-right"></i> Buscar uma Lista</a></li>
     <li><a href="/giftlist/create/"><i class="icon-chevron-right"></i> Criar nova Lista</a></li>
@@ -58,6 +58,7 @@ To create a  new list on the site, click on the link “My List” (which normal
 
 - __Tipo de lista__:Types of list registered by the store owner on the platform.
 - __Nome da lista__:The name of the list is defined by the user when it is created. It depends a lot on the type of list chosen, but normally it is the user’s own name, since it is often used for events like weddings, birthdays, bridal showers and baby showers.
+
 - __URL da lista:__ The link to be used to publicize your list. In this field, just insert the final part of the list address, after the last slash. The default is `http://www.sualoja.com.br/list` + the value you enter in this field.
 - __Quem pode ver esta lista?:__ The options for who can see this list vary according to the store owner’s configurations. If it is configured for “_Criador da lista decide_”, you can decide between the options “_somente os participantes desta Lista_” and “_qualquer pessoa_” (only list participants, or anyone). Only the first option will appear if the list visibility is defined as “_Privada_” (Private), and only the second if it is defined as “_Pública_” (Public). The “_Criador da lista decide_” option is important for the user, for example in a wedding gift list, since the couple will want to restrict access to themselves only, while they are choosing the products and managing the list, and open the list for anyone to have access when it is complete.
 - __Upload de imagem:__ This field lets an image to be used to represent the event or personalize the list, such as a photo of the bride and groom, for example.

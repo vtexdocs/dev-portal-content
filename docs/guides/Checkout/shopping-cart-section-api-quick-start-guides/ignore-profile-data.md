@@ -16,16 +16,12 @@ This guide will describe how to disable the automatic inclusion of user profile 
 The first step is to get the `orderFormId` and access the shopping cart information that you want to ignore profile data. For more information, access the [Get cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.
 
 When accessing shopping cart information, make sure that the `clientProfileData` has not been sent to the cart, which is indicated in the example below:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "...\n\"clientProfileData\": null\n...",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+
+```json
+...
+"clientProfileData": null
+...
+```
 
 [block:callout]
 {
@@ -34,16 +30,29 @@ When accessing shopping cart information, make sure that the `clientProfileData`
 }
 [/block]
 Example of a cart containing customer profile data, and in which the request [Ignore profile data](https://developers.vtex.com/vtex-rest-api/reference/ignoreprofiledata) cannot be applied:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "...\n\"clientProfileData\": {\n  \"email\": \"clark.kent@examplemail.com\",\n  \"firstName\": \"Clark\",\n  \"lastName\": \"Kent\",\n  \"document\": \"44444444444\",\n  \"documentType\": \"cpf\",\n  \"phone\": \"+5511123456789\",\n  \"corporateName\": null,\n  \"tradeName\": null,\n  \"corporateDocument\": null,\n  \"stateInscription\": null,\n  \"corporatePhone\": null,\n  \"isCorporate\": false,\n  \"profileCompleteOnLoading\": false,\n  \"profileErrorOnLoading\": false,\n  \"customerClass\": null\n},\n...",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+
+```json
+...
+"clientProfileData": {
+  "email": "clark.kent@examplemail.com",
+  "firstName": "Clark",
+  "lastName": "Kent",
+  "document": "44444444444",
+  "documentType": "cpf",
+  "phone": "+5511123456789",
+  "corporateName": null,
+  "tradeName": null,
+  "corporateDocument": null,
+  "stateInscription": null,
+  "corporatePhone": null,
+  "isCorporate": false,
+  "profileCompleteOnLoading": false,
+  "profileErrorOnLoading": false,
+  "customerClass": null
+},
+...
+```
+
 ## Disabling profile data from the shopping cart
 
 The `orderFormId` information of the shopping cart must be sent through the URL request, as shown by the URL example below:
@@ -94,26 +103,26 @@ The following errors may appear as a message in the response body.
 ### 403 - Forbidden
 
 - **Message error example (code CHK003)**: `"Access Denied"`. The request was sent to a cart that already has `clientProfileData` information. Before processing this request, please delete all client information via the [Remove all personal data](https://developers.vtex.com/vtex-rest-api/docs/remove-all-personal-data) endpoint.
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"CHK003\",\n        \"message\": \"Access Denied\",\n        \"exception\": null\n    },\n    \"operationId\": \"4ae9e8e4-0fd1-469a-99b1-71705cbe036f\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "CHK003",
+        "message": "Access Denied",
+        "exception": null
+    },
+    "operationId": "4ae9e8e4-0fd1-469a-99b1-71705cbe036f"
 }
-[/block]
+```
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`. Check that the URL data is correct.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "<body>\n\t<h1>404 Not Found</h1>\n\t<p>The requested URL was not found on this server.</p>\n</body>",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+
+```html
+<body>
+	<h1>404 Not Found</h1>
+	<p>The requested URL was not found on this server.</p>
+</body>
+```

@@ -17,6 +17,6 @@ To get the invoiced orders that were made through inStore, it is necessary that 
 * The `salesChannel` field with the ID of the business policy used by the sales channel.
 * The field `"isCheckedIn"` with the value `true` for orders placed in the physical store.
 
-From this information, a billing middleware for the physical store integrated with inStore is required to perform this query. You must contract a middleware from VTEX by contacting [our Support](https://support.vtex.com/hc/en-us).
+From this information, a billing middleware for the physical store integrated with inStore is required to perform this query. You must contract a middleware from VTEX by contacting [our Support](https://help.vtex.com/support).
 
 > ℹ️️ To check the order once, you can also use the [List orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) endpoint, but we do not recommend the use for integrations.

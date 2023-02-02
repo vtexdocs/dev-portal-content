@@ -43,7 +43,7 @@ When the configuration is complete, you will receive a positive feedback on the 
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/installing-b2b-easy-set-up-2.PNG)
 
-> ℹ️️ If you get an error message for some of the resources, try again this time only selecting the troublesome resources. If the error persists, [contact support](https://support.vtex.com/hc/en-us).
+> ℹ️️ If you get an error message for some of the resources, try again this time only selecting the troublesome resources. If the error persists, [contact support](https://help.vtex.com/support).
 
 Check out the [Resources](https://developers.vtex.com/docs/guides/installing-b2b-easy-set-up#resources) section below for details on the sample data used by the app in the initial setup.
 

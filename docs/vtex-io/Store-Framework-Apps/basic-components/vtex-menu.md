@@ -205,15 +205,3 @@ In order to apply CSS customizations on this and other blocks, follow the instru
 | `submenuWrapper--isOpen`   |
 | `submenuWrapper`           |
 | `submenu`                  |
-
-## Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<table><tr><td align="center"><a href="http://giovanapereira.com.br/"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-menu-1.png"></img></a></td></tr></table>
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
