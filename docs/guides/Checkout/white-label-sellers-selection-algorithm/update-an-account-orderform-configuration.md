@@ -9,12 +9,8 @@ The orderForm is the main object processed by VTEX checkout, and one of the most
 
 This guide will describe how to update settings applied currently to every orderForm in a specific account.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Always retrieve the current orderForm configuration before performing an update to ensure that you are modifying only the properties you want. Otherwise, old values can be overwritten. To get the current orderForm configuration for a specific account, check the [Get orderForm configuration Dev. Guide](https://developers.vtex.com/vtex-rest-api/docs/get-orderform-configuration)."
-}
-[/block]
+>⚠️ Always retrieve the current orderForm configuration before performing an update to ensure that you are modifying only the properties you want. Otherwise, old values can be overwritten. To get the current orderForm configuration for a specific account, check the [Get orderForm configuration developer's guide](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm).
+
 ## Updating an account's orderForm configuration
 
 To update an account orderForm configuration, you need to use the [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) endpoint. In this request, you must send the `accountname` through the URL address, as shown by the example below:
@@ -48,7 +44,8 @@ Additionally, you can send one or more of the configuration  information below t
 - `recaptchaValidation`: configures reCAPTCHA validation status for the account.
 
 See a request body example below:
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -57,7 +54,8 @@ See a request body example below:
     }
   ]
 }
-[/block]
+```
+
 After sending the request, the endpoint will return `code 204 (No Content)` and an empty response body. 
 
 To confirm that the new orderForm settings have been applied to your account, access the [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) endpoint again.
@@ -69,7 +67,7 @@ The following errors may appear as a message in the response body.
 ### 401 - Unauthorized
 - **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (Application Key and Application Token) used in this request are incorrect or not authorized to access this type of information.
 
-[block:code]
+```json
 {
   "codes": [
     {
@@ -78,11 +76,13 @@ The following errors may appear as a message in the response body.
     }
   ]
 }
-[/block]
+```
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
-[block:code]
+
+```json
 {
   "codes": [
     {
@@ -91,4 +91,4 @@ The following errors may appear as a message in the response body.
     }
   ]
 }
-[/block]
+```
