@@ -12,6 +12,7 @@ updatedAt: "2022-12-01T21:52:29.635Z"
   "title": "Onboarding guide"
 }
 [/block]
-This API let's you search and sort products in the catalog using fulltext, category and brand search terms. 
+
+This API lets you search and sort products in the catalog using fulltext, category and brand search terms. 
 
 Retrieve product data to create custom searches and product shelves.
