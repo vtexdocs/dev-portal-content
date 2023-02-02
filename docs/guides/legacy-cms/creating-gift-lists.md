@@ -58,7 +58,7 @@ To create a  new list on the site, click on the link “My List” (which normal
 
 - __Tipo de lista__:Types of list registered by the store owner on the platform.
 - __Nome da lista__:The name of the list is defined by the user when it is created. It depends a lot on the type of list chosen, but normally it is the user’s own name, since it is often used for events like weddings, birthdays, bridal showers and baby showers.
-- __URL da lista:__ The link to be used to publicize your list. In this field, just insert the final part of the list address, after the last slash. The default is <http://www.sualoja.com.br/list> + the value you enter in this field.
+- __URL da lista:__ The link to be used to publicize your list. In this field, just insert the final part of the list address, after the last slash. The default is `http://www.sualoja.com.br/list` + the value you enter in this field.
 - __Quem pode ver esta lista?:__ The options for who can see this list vary according to the store owner’s configurations. If it is configured for “_Criador da lista decide_”, you can decide between the options “_somente os participantes desta Lista_” and “_qualquer pessoa_” (only list participants, or anyone). Only the first option will appear if the list visibility is defined as “_Privada_” (Private), and only the second if it is defined as “_Pública_” (Public). The “_Criador da lista decide_” option is important for the user, for example in a wedding gift list, since the couple will want to restrict access to themselves only, while they are choosing the products and managing the list, and open the list for anyone to have access when it is complete.
 - __Upload de imagem:__ This field lets an image to be used to represent the event or personalize the list, such as a photo of the bride and groom, for example.
 - __Mensagem:__ Allows the list owner to leave a message for the guests if so desired. There is a limit of 1000 characters (including letters, numbers, spaces and punctuation).
@@ -127,6 +127,6 @@ _There is a limit to the number of associations of **300** SKUs per list._
 
 Items purchased from your list will generate a credit that will accrue on a voucher automatically generated at the time the list is created. This voucher will work as a form of payment, so that the list owner redeems on purchases on the site any items they wish.
 
-Learn more about the form of payment worth in the article [Gift Card]([/en/tutorial/how-to-configure-gift-cards](https://help.vtex.com/en/tutorial/gift-card--tutorials_995)). Remembering that the types of lists available for site creation should be pre-built on the platform by the retailer.
+Learn more about the form of payment worth in the article [Gift Card](https://help.vtex.com/en/tutorial/gift-card--tutorials_995). Remembering that the types of lists available for site creation should be pre-built on the platform by the retailer.
 
 __Important Note:__ Stores that are marketplace (sell sellers products, other partners in your store) are not eligible to use List Voucher.
