@@ -4,6 +4,7 @@ slug: "getting-started"
 hidden: false
 createdAt: "2019-11-26T19:13:15.434Z"
 updatedAt: "2022-09-27T20:40:28.033Z"
+hidePagination: 'previous'
 ---
 Welcome! VTEX is a headless commerce platform that is highly customizable and constantly evolving. 
 
