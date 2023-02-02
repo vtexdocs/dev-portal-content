@@ -1,6 +1,6 @@
 ---
 title: "Broadcaster Adapter"
-slug: "vtex-broadcaster
+slug: "vtex-broadcaster"
 hidden: false
 createdAt: "2022-07-08T07:17:48.371Z"
 updatedAt: "2022-10-27T19:47:24.537Z"
