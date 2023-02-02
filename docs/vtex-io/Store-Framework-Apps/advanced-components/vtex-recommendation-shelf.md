@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:30.034Z"
 updatedAt: "2022-07-07T13:16:16.542Z"
 ---
 
-> ⚠️ This app is on alpha version, which means we are working to improve it and it is not possible to add other accounts for tests. If you have any questions, please contact [our Support](https://support.vtex.com/hc/en-us).
+> ⚠️ This app is on alpha version, which means we are working to improve it and it is not possible to add other accounts for tests. If you have any questions, please contact [our Support](https://help.vtex.com/support).
 
 The Product Recommendation app shows a selection of products using [recommendation strategies](#recommendation-shelf-props). For example, you can use the Product Recommendation to suggest often bought-together products to the one that the user is looking for.
 
@@ -18,7 +18,7 @@ The Product Recommendation app shows a selection of products using [recommendati
 
 Make sure you have the Biggy pixel app installed on your VTEX account or install it by the following steps:
 
-1. Open a [Support ticket](https://support.vtex.com/hc/en-us) about your interest in installing the Recommendations Shelf and Biggy Pixel apps. You should expect an App Key as a response. Save it for the 6th step of this tutorial.
+1. Open a [Support ticket](https://help.vtex.com/support) about your interest in installing the Recommendations Shelf and Biggy Pixel apps. You should expect an App Key as a response. Save it for the 6th step of this tutorial.
 2. Using your terminal, install the `biggy.pixel` app by running the following command:
 
 ```sh

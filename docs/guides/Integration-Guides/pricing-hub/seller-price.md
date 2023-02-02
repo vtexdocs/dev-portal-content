@@ -6,7 +6,7 @@ createdAt: "2021-11-08T16:34:25.542Z"
 updatedAt: "2022-06-13T16:08:09.500Z"
 ---
 
-> This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://support.vtex.com/hc/en-us).
+> This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://help.vtex.com/support).
 
 In B2B commerce, it is often necessary to offer personalized prices. For example, in the commercial relationship between a distributor (seller) and different supermarkets (buyers), there might be specific price deals in place for each supermarket. In this case, the distributor (seller) needs to set specific prices for each customer.
 
@@ -30,7 +30,7 @@ To set up this process, the marketplace and each seller must follow the instruct
 
 The marketplace must follow the steps below to activate the B2B Seller Price:
 
-1. Contact our [Support](https://support.vtex.com/hc/en-us) and open a request to enable Pricing Hub on the marketplace and seller accounts.
+1. Contact our [Support](https://help.vtex.com/support) and open a request to enable Pricing Hub on the marketplace and seller accounts.
 2. Enable the use of external prices by the seller through the `PUT` [Configure External Price Source](https://developers.vtex.com/docs/api-reference/pricing-hub#put-/config) of the Pricing Hub API.
 3. Allow VTEX to share customers’ email addresses with the seller. To do so, it is necessary to set `'AllowEmailSharing'` as the value for the TrustPolicy field in the `POST` [Create Seller](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers) or `PUT` [Update Seller](https://developers.vtex.com/docs/api-reference/marketplace-apis#patch-/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-) endpoints.
 

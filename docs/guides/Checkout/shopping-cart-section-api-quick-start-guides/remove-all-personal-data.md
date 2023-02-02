@@ -15,16 +15,49 @@ The first step is to get the `orderFormId` and access the shopping cart informat
 
 See below an example of some personal data contained in a shopping cart:
 
-[block:code]
-{
-  "codes": [
+```json
+...
+"clientProfileData": {
+     "email": "clark.kent@examplemail.com",
+    "firstName": "Clark",
+    "lastName": "Kent",
+    "document": "44444444444",
+    "documentType": "cpf",
+    "phone": "+5511123456789",
+    "corporateName": null,
+    "tradeName": null,
+    "corporateDocument": null,
+    "stateInscription": null,
+    "corporatePhone": null,
+    "isCorporate": false,
+    "profileCompleteOnLoading": false,
+    "profileErrorOnLoading": false,
+    "customerClass": null
+},
+…
+"availableAddresses": [
     {
-      "code": "...\n\"clientProfileData\": {\n     \"email\": \"clark.kent@examplemail.com\",\n    \"firstName\": \"Clark\",\n    \"lastName\": \"Kent\",\n    \"document\": \"44444444444\",\n    \"documentType\": \"cpf\",\n    \"phone\": \"+5511123456789\",\n    \"corporateName\": null,\n    \"tradeName\": null,\n    \"corporateDocument\": null,\n    \"stateInscription\": null,\n    \"corporatePhone\": null,\n    \"isCorporate\": false,\n    \"profileCompleteOnLoading\": false,\n    \"profileErrorOnLoading\": false,\n    \"customerClass\": null\n},\n…\n\"availableAddresses\": [\n    {\n     \"addressType\": \"residential\",\n     \"receiverName\": \"Clark Kent\",\n     \"addressId\": \"ae3173b32bf64663a81fc42b057be211\",\n     \"isDisposable\": true,\n     \"postalCode\": \"70386060\",\n     \"city\": \"Brasília\",\n     \"state\": \"DF\",\n     \"country\": \"BRA\",\n     \"street\": \"Quadra SQS 116 Bloco F\",\n     \"number\": \"101\",\n     \"neighborhood\": \"Asa Sul\",\n     \"complement\": null,\n     \"reference\": null,\n     \"geoCoordinates\": [\n        -47.925922393798828,\n        -15.832707405090332\n     ]\n    }\n]\n...\n",
-      "language": "json"
+     "addressType": "residential",
+     "receiverName": "Clark Kent",
+     "addressId": "ae3173b32bf64663a81fc42b057be211",
+     "isDisposable": true,
+     "postalCode": "70386060",
+     "city": "Brasília",
+     "state": "DF",
+     "country": "BRA",
+     "street": "Quadra SQS 116 Bloco F",
+     "number": "101",
+     "neighborhood": "Asa Sul",
+     "complement": null,
+     "reference": null,
+     "geoCoordinates": [
+        -47.925922393798828,
+        -15.832707405090332
+     ]
     }
-  ]
-}
-[/block]
+]
+...
+```
 
 > ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 

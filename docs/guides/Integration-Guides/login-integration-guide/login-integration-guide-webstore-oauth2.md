@@ -132,7 +132,7 @@ In order to configure this process, follow the steps below:
 1. Go to the __Admin panel__ > __Account settings__ > __Authentication__.
 2. In the __Webstore__ tab, click `SET UP` in the __My Custom OAuth__ section
 
-![Authentication settings screen with options: Access Key, Password, Facebook, Google and My Custom OAuth.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-0.PNG)
+![Authentication settings screen with options: Access Key, Password, Facebook, Google and My Custom OAuth.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-webstore-oauth2-0.PNG)
 3. [Set provider details](#3.-set-provider-details)
 4. [Configure authorization code requests](#4.-configure-authorization-code-requests)
 5. [Configure access token exchange request](#5.-configure-access-token-exchange)
@@ -157,14 +157,14 @@ When you start the custom OAuth setup, you must fill in the following informatio
 
 >❗ These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret` respectively.
 
-![Provider details section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-1.PNG)
+![Provider details section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-webstore-oauth2-1.PNG)
 Click `NEXT`.
 
 #### 4. Configure authorization code requests
 
 In this step, you must first provide the authorization request __URL__.
 
-![Authorization code section, in the custom OAuth set up interface with the options described in the tutorial](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-2.PNG)
+![Authorization code section, in the custom OAuth set up interface with the options described in the tutorial](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-webstore-oauth2-2.PNG)
 
 [block:callout]
 {
@@ -173,7 +173,7 @@ In this step, you must first provide the authorization request __URL__.
 }
 [/block]
 Then, scroll down to the __Callback Request Information__ section and fill in the __Key__ under which the authorization code will be sent by the __identity provider__ to VTEX.
-![Scrolling further down in the authorization code section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-3.PNG)
+![Scrolling further down in the authorization code section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-webstore-oauth2-3.PNG)
 Click `NEXT`.
 
 #### 5. Configure access token exchange
@@ -182,7 +182,7 @@ In order to configure the __access token__ exchange request, provide:
 
 - The request __URL__
 - __Authorization code key,__ under which VTEX should send the authorization code to the identity provider.
-  ![Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-4.PNG)
+  ![Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-webstore-oauth2-4.PNG)
 
 [block:callout]
 {
@@ -195,7 +195,7 @@ Then, you may scroll down to the __Response Information__ section and inform the
 - __Access token key__
 - __Token duration key__
 
-![Scrolling further down in the Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-5.PNG)
+![Scrolling further down in the Access token exchange section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-webstore-oauth2-5.PNG)
 Click `NEXT`.
 
 #### 6. Configure user information exchange
@@ -207,7 +207,7 @@ Now you must provide information regarding the user information exchange:
 
 Check the __Request Preview__ section to make sure it matches the format expected by the __identity provider.__ Also, note that if you toggle __Send on query string,__ you can edit the access token key under which VTEX will send it to the __identity provider.__
 
-![Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-6.PNG)
+![Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-webstore-oauth2-6.PNG)
 
 [block:callout]
 {
@@ -222,7 +222,7 @@ Scroll down to the __Response Information__ section, and provide the __Keys__ un
 - __User ID key__
 - __User name key__
 
-![Scrolling further down in the Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-7.PNG)
+![Scrolling further down in the Get user info section, in the custom OAuth set up interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-webstore-oauth2-7.PNG)
 To finalize your Custom OAuth configuration, click `FINISH`.
 
 #### Custom parameters

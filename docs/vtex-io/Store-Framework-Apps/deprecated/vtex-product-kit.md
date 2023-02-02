@@ -46,7 +46,7 @@ To configure or customize this app, you need to import it in your dependencies i
   }
 ```
 
-Then, add `product-kit` block into our app theme as we do in our [Store theme app](https://github.com/vtex-apps/store-theme/blob/master/store/blocks.json).
+Then, add `product-kit` block into our app theme as we do in our [Store theme app](https://github.com/vtex-apps/store-theme/blob/master/store/blocks.jsonc).
 
 Now, you can change the behavior of the `product-kit` block. See an example of how to configure:
 
@@ -109,7 +109,7 @@ Through the Storefront you can change the behavior and interface of `ProductKit`
 | `allowSwap`        | `Boolean` | Allow or not the item swap             | true                                       |
 | `allowRemoval`     | `Boolean` | Allow or not the item removal          | true                                       |
 
-Also, you can configure the product summary that is defined on product-kit. See [here](https://github.com/vtex-apps/product-summary/blob/master/README.md#configuration) the Product Summary API.
+Also, you can configure the product summary that is defined on product-kit. See [here](/docs/guides/vtex-product-summary) the Product Summary API.
 
 ### Styles API
 

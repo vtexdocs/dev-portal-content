@@ -11,11 +11,11 @@ This guide explains how to create an integration with the Conversational Commerc
 - **URL:** store's Zendesk account URL, such as `https://{accountName}.zendesk.com`.
 - **Tags:** tags that will be added by VTEX when a new ticket is created by the user.
 - **Email:** email of a Zendesk account that will be used to create the tickets. This email must have permission to create tickets and add comments to it via API. This email will be used in the `from` field in all support emails.
-- **API token**: Zendesk API token that needs to be sent to [VTEX support](https://support.vtex.com/hc/en-us). To generate a token, follow the steps in this [article](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
+- **API token**: Zendesk API token that needs to be sent to [VTEX support](https://help.vtex.com/support). To generate a token, follow the steps in this [article](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
 
 After gathering this information, follow the steps below:
 
-1. [Create a custom field](https://support.zendesk.com/hc/en-us/articles/4408883152794) with the phone number that will be used on WhatsApp Business by the store. You must send its ID to [VTEX support](https://support.vtex.com/hc/en-us).
+1. [Create a custom field](https://support.zendesk.com/hc/en-us/articles/4408883152794) with the phone number that will be used on WhatsApp Business by the store. You must send its ID to [VTEX support](https://help.vtex.com/support).
 2. [Create a webhook](https://support.zendesk.com/hc/en-us/articles/4408839108378-Creating-webhooks-in-Admin-Center) with the following information:
 
 - **URL:** `https://live-agent-handler.vtex.com/webhooks/zendesk`

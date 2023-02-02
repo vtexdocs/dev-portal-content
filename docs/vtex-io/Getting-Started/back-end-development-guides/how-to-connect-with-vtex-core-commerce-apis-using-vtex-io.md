@@ -6,7 +6,7 @@ createdAt: "2020-10-08T02:47:14.995Z"
 updatedAt: "2021-03-25T14:40:29.493Z"
 ---
 ## Context
-A VTEX IO app is a first-class citizen to connect with VTEX Core Commerce API's ([https://developers.vtex.com/reference](https://developers.vtex.com/reference)), and it's very easy to create integrations with our modules.
+A VTEX IO app is a first-class citizen to connect with VTEX Core Commerce API's ([https://developers.vtex.com/docs/api-reference](https://developers.vtex.com/docs/api-reference)), and it's very easy to create integrations with our modules.
 [block:callout]
 {
   "type": "info",

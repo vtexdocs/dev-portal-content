@@ -40,16 +40,28 @@ Additionally, you must send the request body containing the following client inf
       - `isCorporate`: `true`.
 
 After sending the request, the endpoint will return the response body containing the client information in the shopping cart, as shown in the example below:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "...\n\"clientProfileData\": {\n        \"email\": \"customer@examplemail.com\",\n        \"firstName\": \"first-name\",\n        \"lastName\": \"last-name\",\n        \"document\": \"123456789\",\n        \"documentType\": \"cpf\",\n        \"phone\": \"+55110988887777\",\n        \"corporateName\": \"company-name\",\n        \"tradeName\": \"trade-name\",\n        \"corporateDocument\": \"12345678000100\",\n        \"stateInscription\": \"12345678\",\n        \"corporatePhone\": \"+551100988887777\",\n        \"isCorporate\": false,\n        \"profileCompleteOnLoading\": false,\n        \"profileErrorOnLoading\": false,\n        \"customerClass\": null\n    }\n...",
-      "language": "json"
+
+```json
+...
+"clientProfileData": {
+        "email": "customer@examplemail.com",
+        "firstName": "first-name",
+        "lastName": "last-name",
+        "document": "123456789",
+        "documentType": "cpf",
+        "phone": "+55110988887777",
+        "corporateName": "company-name",
+        "tradeName": "trade-name",
+        "corporateDocument": "12345678000100",
+        "stateInscription": "12345678",
+        "corporatePhone": "+551100988887777",
+        "isCorporate": false,
+        "profileCompleteOnLoading": false,
+        "profileErrorOnLoading": false,
+        "customerClass": null
     }
-  ]
-}
-[/block]
+...
+```
 
 > ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 
@@ -60,37 +72,40 @@ The following errors may appear as a message in the response body.
 ### 400 - Bad Request
 
 - **Message error example (code ORD002)**: `"Invalid order form"`. The `orderFormId` information is not valid.
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD002\",\n        \"message\": \"Invalid order form\",\n        \"exception\": null\n    },\n    \"operationId\": \"5d9f54e6-7db4-46d6-bca9-deeb278b8b98\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "ORD002",
+        "message": "Invalid order form",
+        "exception": null
+    },
+    "operationId": "5d9f54e6-7db4-46d6-bca9-deeb278b8b98"
 }
-[/block]
+```
+
 - **Message error example (code ORD007)**: `"The email field in the client profile attachment is invalid"`: this message indicates that the `email` used in the request does not exist or is incorrect.
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD007\",\n        \"message\": \"The email field in the client profile attachment is invalid\",\n        \"exception\": null\n    },\n    \"operationId\": \"37fcbaf6-9245-46b2-8735-f5fb304d1ac2\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "ORD007",
+        "message": "The email field in the client profile attachment is invalid",
+        "exception": null
+    },
+    "operationId": "37fcbaf6-9245-46b2-8735-f5fb304d1ac2"
 }
-[/block]
+```
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "<body>\n\t<h1>404 Not Found</h1>\n\t<p>The requested URL was not found on this server.</p>\n</body>",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+
+```html
+<body>
+	<h1>404 Not Found</h1>
+	<p>The requested URL was not found on this server.</p>
+</body>
+```

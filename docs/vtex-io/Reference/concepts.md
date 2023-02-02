@@ -30,7 +30,7 @@ Declare **dependencies**in your app's *manifest* file to specify which VTEX IO a
 
 An **Edition App**consists of a bundle of settings, policies, back-end and front-end apps encapsulated and exported by a *Sponsor Account.*
 
-## [Interfaces](/docsdocs/guides/vtex-io-documentation-interface)
+## [Interfaces](/docs/guides/vtex-io-documentation-interface)
 
 **Interface**is what links a block to a React component.
 

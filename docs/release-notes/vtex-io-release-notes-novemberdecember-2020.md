@@ -34,7 +34,7 @@ With almost a year gone by, it's time to say goodbye: to better take advantage o
 > ℹ️ All existing documentation will be redirected and automatically migrated to the new platform. No existing link will be lost during this process.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-novemberdecember-2020-1.png)
-Home to our [API documentation](https://developers.vtex.com/reference) and [guides](https://developers.vtex.com/docs) aimed at developers working with integrations and customization, the [**Developer Portal**](https://developers.vtex.com/) - formerly known as Help Center Developer Docs - offers all the necessary resources for VTEX's most advanced users in a single place.
+Home to our [API documentation](/docs/api-reference) and [guides](/docs/guides) aimed at developers working with integrations and customization, the [**Developer Portal**](https://developers.vtex.com/) - formerly known as Help Center Developer Docs - offers all the necessary resources for VTEX's most advanced users in a single place.
 
 Such changes to the VTEX IO documentation mean a lot more than just content redistribution, trust me: they will ensure a **better and greater support for VTEX IO users** and their specific objectives on our platform.
 

@@ -10,7 +10,7 @@ A middleware is a software that acts as a bridge connecting the module that issu
 * Endpoint to receive the orders from VTEX to invoice them.
 * Endpoint to issue the return invoice.
 
-These endpoints must be sent to [our Support](https://support.vtex.com/hc/en-us) for the inStore team to configure them in the store that wants to install the middleware.
+These endpoints must be sent to [our Support](https://help.vtex.com/support) for the inStore team to configure them in the store that wants to install the middleware.
 
 ### Billing endpoints
 

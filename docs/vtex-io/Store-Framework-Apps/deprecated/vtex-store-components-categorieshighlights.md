@@ -19,7 +19,7 @@ Categories Highlights is a banner which shows two or four categories in a highli
 
 ## Usage
 
-You should follow the usage instruction in the main [README](https://github.com/vtex-apps/store-components/blob/master/README.md#usage).
+You should follow the usage instruction in the main [README](/docs/guides/vtex-store-components).
 
 To import it into your code: 
 ```js
