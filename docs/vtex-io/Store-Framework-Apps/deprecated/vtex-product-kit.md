@@ -21,8 +21,6 @@ The VTEX product kit app shows two or more products as a kit. Usually these prod
 |  [1.x]  | **Current Release** |   2018-11-05    |                       |             |         2.x         |
 |  [0.x]  | **Maintenance LTS** |   2018-07-06    |      2018-11-05       | March 2019  |         1.x         |
 
-See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for more information.
-
 ## Table of Contents
 
 - [Usage](#usage)
@@ -149,10 +147,6 @@ Below, we describe the namespaces that are define in the `ProductKit`.
 ## Troubleshooting
 
 You can check if others are passing through similar issues [here](https://github.com/vtex-apps/product-kit/issues). Also feel free to [open issues](https://github.com/vtex-apps/product-kit/issues/new) or contribute with pull requests.
-
-## Contributing
-
-Check it out [how to contribute](https://github.com/vtex-apps/awesome-io#contributing) with this project.
 
 ## Tests
 

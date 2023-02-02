@@ -27,7 +27,7 @@ It is an open standard, a product of the OASIS Security Services Technical Commi
 
 ## Authentication flow
 
-![VTEX ID SAML authentication flow.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-0_29.png)
+![VTEX ID SAML authentication flow.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-0.png)
 
 ## SAML roles
 

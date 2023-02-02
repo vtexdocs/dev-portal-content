@@ -15,8 +15,6 @@ This is a Bazaarvoice first party integration app that is responsible for showin
 |  [1.x]  | **Current Release** |   2019-06-14    |                       |             |         2.x         |
 
 
-See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for more information.
-
 ## Table of Contents
 
 - [Usage](#usage)
@@ -131,10 +129,6 @@ Below, we describe the namespaces that are defined in the bazaarvoice.
 ## Troubleshooting
 
 You can check if others are experiencing similar issues [here](https://github.com/vtex-apps/bazaarvoice/issues). Also, feel free to [open issues](https://github.com/vtex-apps/bazaarvoice/issues/new) or contribute with a pull request.
-
-## Contributing
-
-Take a look at these guidelines: [how to contribute](https://github.com/vtex-apps/awesome-io#contributing).
 
 ## Tests
 

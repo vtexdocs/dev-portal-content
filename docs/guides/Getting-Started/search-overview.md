@@ -26,7 +26,7 @@ The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/inte
 
 ### Search Result
 
-[VTEX Search Result app](https://developers.vtex.com/docs/guides/vtex-search-result) is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/vtex-developer-docs/reference/search-api-overview) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
+[VTEX Search Result app](https://developers.vtex.com/docs/guides/vtex-search-result) is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/docs/api-reference/search-api#overview) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
 
 ![Search Result](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-1_33.png)
 

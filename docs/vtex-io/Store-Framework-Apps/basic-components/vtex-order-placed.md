@@ -684,7 +684,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `totalListItemLabel`         |
 | `totalListItemValue`         |
 | `totalListWrapper`           |
-
-## Contributing
-
-Check it out [how to contribute](https://github.com/vtex-apps/awesome-io#contributing) with this project.

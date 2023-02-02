@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:51.303Z"
 updatedAt: "2022-10-25T14:29:48.794Z"
 ---
 
-The Search Result app is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/vtex-developer-docs/reference/search-api-overview) and displaying it to users.
+The Search Result app is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/docs/api-reference/search-api#overview) and displaying it to users.
 
 The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
 
