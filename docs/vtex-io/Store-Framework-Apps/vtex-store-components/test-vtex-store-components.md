@@ -5,7 +5,6 @@ hidden: true
 createdAt: "2021-10-04T13:37:00.677Z"
 updatedAt: "2021-10-25T14:03:06.461Z"
 ---
-
 ## Usage
 
 This app uses our store builder with the blocks architecture. To know more about Store Builder [click here.](https://help.vtex.com/en/tutorial/understanding-storebuilder-and-stylesbuilder#structuring-and-configuring-our-store-with-object-object)
@@ -77,8 +76,7 @@ Below we have a documentation for each component of this project that explains h
 - [Shipping Simulator](https://developers.vtex.com/docs/guides/vtex-store-components-shippingsimulator)
 - [Notification](https://developers.vtex.com/docs/guides/vtex-store-components-notification)
 
-
-> ⚠️ **The following blocks have been deprecated:** `Animation`, `Categories Highlights`, `Collection Badges`, `Container`, `Discount Badge`, `Gradient Collapse`, `Greeting`, `Slider`. 
+> ⚠️ **The following blocks have been deprecated:** `Animation`, `Categories Highlights`, `Collection Badges`, `Container`, `Discount Badge`, `Gradient Collapse`, `Greeting`, `Slider`.
 > Despite this, support for them is still granted.
 
 ## Creating a new component
@@ -115,7 +113,3 @@ You can check if others are passing through similar issues [here](https://github
 ## Tests
 
 To execute our tests go to `react/` folder and run `yarn test`
-
-### Travis CI
-
-[![Build Status](https://api.travis-ci.org/vtex-apps/store-components.svg?branch=master)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/test-vtex-store-components-0.png)
