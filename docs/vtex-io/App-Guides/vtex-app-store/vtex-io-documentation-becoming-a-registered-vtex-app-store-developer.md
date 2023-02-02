@@ -4,6 +4,9 @@ slug: "vtex-io-documentation-becoming-a-registered-vtex-app-store-developer"
 hidden: false
 createdAt: "2021-11-12T20:06:26.255Z"
 updatedAt: "2022-12-13T20:17:44.104Z"
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store"
 ---
 
 The [**VTEX App Store**](https://apps.vtex.com/) is a marketplace for VTEX IO plug-and-play solutions.
@@ -51,7 +54,3 @@ Follow the steps below to register as a new seller on VTEX App Store:
 ![submitting-seller-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer-1.png)
 
 After submitting the request to be a seller, you can check its `status` until our team approves it. This approval is required in order to complete the next steps and be able to successfully publish your app in the VTEX App Store.
-
-## Next Steps
-
-- [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store)

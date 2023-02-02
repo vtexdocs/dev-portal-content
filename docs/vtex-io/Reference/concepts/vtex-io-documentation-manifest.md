@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-manifest"
 hidden: false
 createdAt: "2020-09-22T21:29:09.380Z"
 updatedAt: "2022-12-13T20:17:44.879Z"
+category: "App Development"
 ---
 
 The `manifest.json` file is the first communication point with VTEX IO, holding important metadata about an app, such as its **name**, **version**, **vendor**, **description**, **dependencies**, etc.

@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-linking-an-app"
 hidden: false
 createdAt: "2020-06-03T16:02:44.237Z"
 updatedAt: "2022-12-13T20:17:45.061Z"
+category: "App Development"
 ---
 For development, an app can be linked to a **development workspace** so that any local code change can be automatically synced and made available in that corresponding workspace.
 

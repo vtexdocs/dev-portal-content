@@ -4,6 +4,7 @@ slug: "vtex-product-highlights"
 hidden: false
 createdAt: "2020-09-04T13:52:27.742Z"
 updatedAt: "2022-02-04T15:02:40.482Z"
+category: "VTEX IO Apps"
 ---
 
 The Product Highlights app provides blocks to display highlight badges on products according to the collection or promotion they are linked to.

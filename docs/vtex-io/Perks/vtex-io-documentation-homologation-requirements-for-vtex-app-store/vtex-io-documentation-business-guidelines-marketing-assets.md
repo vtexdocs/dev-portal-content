@@ -8,6 +8,9 @@ updatedAt: "2022-12-13T20:17:44.747Z"
 category: "App Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-design-guidelines"
+ - "/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store"
+ - "/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store"
+ - "/docs/guides/vtex-io-documentation-preparing-your-app-distribution"
 ---
 
 Once you have [developed your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.
@@ -400,9 +403,3 @@ For example, check out the [video for the Live Shopping app](https://apps.vtex.c
 > ⚠️ Metric descriptios are required only for apps whose pricing is based on one or more metrics. If this is not the case, please do not fill in this field.
 
 For each metric declared in the `billingOptions` field (found in the app's manifest.json file), you must include a simple description of how it works. This description will help the extension buyer understand what each metric does and how it will impact the application billing.
-
-## Related Articles
-
-- [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store)
-- [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store)
-- [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution)

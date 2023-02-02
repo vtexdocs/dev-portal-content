@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-preparing-your-app-distribution"
 hidden: false
 createdAt: "2022-03-04T20:09:05.195Z"
 updatedAt: "2022-12-13T20:17:44.658Z"
+category: "App Development"
 ---
 
 This guide will teach you how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution.

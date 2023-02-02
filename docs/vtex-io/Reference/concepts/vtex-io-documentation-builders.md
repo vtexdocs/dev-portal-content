@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-builders"
 hidden: false
 createdAt: "2020-06-03T16:02:44.727Z"
 updatedAt: "2022-12-13T20:17:44.395Z"
+category: "App Development"
 ---
 A *Builder* is responsible for processing, validating, and forwarding a given block of code to a runtime or a framework capable of executing it.
 

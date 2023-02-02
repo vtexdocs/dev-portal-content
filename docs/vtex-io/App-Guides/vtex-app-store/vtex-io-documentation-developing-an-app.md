@@ -5,6 +5,13 @@ hidden: false
 createdAt: "2022-03-04T20:09:05.300Z"
 updatedAt: "2022-12-13T20:17:44.583Z"
 category: "App Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-manifest#vendor"
+ - "/docs/guides/vtex-io-documentation-builders"
+ - "/docs/guides/vtex-io-documentation-dependencies"
+ - "/docs/guides/vtex-io-documentation-workspace"
+ - "/docs/guides/vtex-io-getting-started"
+ - "docs/guides/app-development-guides"
 ---
 
 In this guide, you will learn how to develop an app using the VTEX IO platform. You will be presented with some core concepts of the platform and guided through the necessary steps to have a running application in VTEX IO.
@@ -172,31 +179,3 @@ If you are developing an app that will be distributed to the [VTEX App Store](ht
   - [App monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization): Learn the types of business models for your app.
 
   - [Marketing assets](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets): Learn how to prepare the assets to market the app in the VTEX App Store.
-
-## Related Articles
-
-### Concepts
-
-- [Manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#vendor)
-
-- [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders)
-
-- [Dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies)
-
-- [Workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/)
-
-### Tutorials
-
-- [Developing Storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io)
-
-- [Developing Pixel Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps)
-
-### Guides
-
-- [Installing the VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install)
-
-- [Linking an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app)
-
-- [Service](https://developers.vtex.com/docs/guides/back-end-development-guides)
-
-- [Developing services on VTEX IO](https://learn.vtex.com/docs/course-service-course-lang-en)

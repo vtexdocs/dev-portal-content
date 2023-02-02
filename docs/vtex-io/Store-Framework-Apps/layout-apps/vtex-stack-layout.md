@@ -4,6 +4,7 @@ slug: "vtex-stack-layout"
 hidden: false
 createdAt: "2020-06-03T15:19:16.096Z"
 updatedAt: "2020-06-23T20:27:17.252Z"
+category: "VTEX IO Apps"
 ---
 
 Use this layout component to show blocks on top of other blocks.

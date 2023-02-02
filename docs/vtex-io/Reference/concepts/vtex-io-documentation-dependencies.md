@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-dependencies"
 hidden: false
 createdAt: "2020-07-21T13:18:17.212Z"
 updatedAt: "2022-12-13T20:17:44.566Z"
+category: "App Development"
 ---
 The dependencies property is a JSON object field (`dependencies`) in the app's `manifest.json` file.  
 

@@ -5,6 +5,7 @@ hidden: false
 excerpt: "Step by step guides on how to solve real-world issues when developing custom VTEX IO apps and back-end integrations."
 createdAt: "2021-03-23T16:31:34.224Z"
 updatedAt: "2022-06-20T16:13:26.684Z"
+category: "App Development"
 ---
 [block:html]
 {

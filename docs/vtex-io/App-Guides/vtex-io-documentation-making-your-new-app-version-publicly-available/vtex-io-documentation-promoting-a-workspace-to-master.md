@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-promoting-a-workspace-to-master"
 hidden: false
 createdAt: "2020-06-03T16:02:44.191Z"
 updatedAt: "2022-12-13T20:17:44.636Z"
+category: "App Development"
 ---
 Promoting a production workspace to Master marks the final step to [making an app publicly available to end-users](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available). After launching your app as a stable version and thoroughly testing it in a production workspace, you can promote your workspace to Master to finally make your new app version publicly available to end-users.
 

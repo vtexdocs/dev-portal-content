@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-workspace"
 hidden: false
 createdAt: "2020-06-03T16:02:44.368Z"
 updatedAt: "2022-12-13T20:17:44.537Z"
+category: "App Development"
 ---
 
 Workspaces are environments isolated from one another. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your store's live version or other developers' work.

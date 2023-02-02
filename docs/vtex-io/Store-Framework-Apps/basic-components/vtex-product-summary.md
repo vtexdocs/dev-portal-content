@@ -4,6 +4,7 @@ slug: "vtex-product-summary"
 hidden: false
 createdAt: "2020-06-03T15:19:18.061Z"
 updatedAt: "2022-07-02T00:50:32.579Z"
+category: "VTEX IO Apps"
 ---
 
 Product Summary is an app responsible for summarizing product information (such as name, price and image) in other store blocks, such as the [Shelf](https://developers.vtex.com/docs/guides/vtex-shelf/) and the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart/).
