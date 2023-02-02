@@ -1,18 +1,21 @@
 ---
 title: "Outdated Checkout API deprecation"
 slug: "unofficial-checkout-api-deprecation"
-hidden: true
+hidden: false
 createdAt: "2022-12-08T22:14:43.582Z"
-updatedAt: "2023-01-13T13:52:21.000"
+updatedAt: "2023-02-01T14:45:25.000"
+excerpt: Beginning June 25th, 2023, the Outdated Checkout endpoint will be deprecated.
 ---
 
 Both the Outdated Checkout endpoint and the Order Management System (OMS) endpoints in the table below allow you to obtain order fulfillment information, order management data, seller identification and more.
 
-Beginning June 25, 2023, the Outdated Checkout endpoint will be deprecated and all integrations that use this route will have to migrate to OMS endpoints, as indicated in the following table:
+Beginning June 25th, 2023, the Outdated Checkout endpoint will be deprecated and all integrations that use this route will have to migrate to OMS endpoints, as indicated in the following table:
 
 | **From Checkout endpoint** | **To OMS endpoints** |
 |---|---|
-|  Outdated Checkout endpoint GET - `api/checkout/pub/orders` | <ul><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders">Retrieve user's orders</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders</code></li><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders/-orderId-">Retrieve user order details</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders/{orderId}</code></li></ul>
+| Outdated Checkout endpoint GET - `https://{accountName}.{environment}.com.br/api/checkout/pub/orders` | <ul><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders">Retrieve user's orders</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders</code></li><li><a href="https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/user/orders/-orderId-">Retrieve user order details</a><br>GET - <code>https://{accountName}.{environment}.com.br/api/oms/user/orders/{orderId}</code></li></ul>
+
+> For integrations built with GraphQL that use the Outdated Checkout endpoint, instead of using the `orders` query provided by the `vtex.store-graphql` app, now they will have to use the `orders` query provided by the `vtex.orders-graphql` app. For more information about GraphQL APIs, see this [Overview](https://developers.vtex.com/docs/guides/graphql-ide). At the end of the article, you will find [GraphQL orders query examples](#graphql-queries).
 
 ## Why are we doing this
 
@@ -462,13 +465,821 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 
 ### Outdated Checkout endpoint response body
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"orderId\": \"1268540501456-01\",\n    \"orderGroup\": \"1268540501456\",\n    \"state\": \"payment-pending\",\n    \"isCheckedIn\": false,\n    \"sellerOrderId\": \"00-1268540501456-01\",\n    \"storeId\": \"store2485\",\n    \"checkedInPickupPointId\": \"storeNameExample_901\",\n    \"value\": 1500,\n    \"items\": [\n        {\n            \"uniqueId\": \"AB1D237A5D92460383B53305AA647BAD\",\n            \"id\": \"14\",\n            \"productId\": \"13\",\n            \"productRefId\": \"\",\n            \"refId\": \"356\",\n            \"ean\": \"dasdsadasdasda\",\n            \"name\": \"Xícara com Imagem Pequena Xicrinha Small\",\n            \"skuName\": \"Xicrinha Small\",\n            \"modalType\": \" \",\n            \"parentItemIndex\": 87,\n            \"parentAssemblyBinding\": \" \",\n            \"assemblies\": [],\n            \"priceValidUntil\": \"2023-10-13T13:48:11Z\",\n            \"tax\": 0,\n            \"price\": 1500,\n            \"listPrice\": 1500,\n            \"manualPrice\": 1400,\n            \"manualPriceAppliedBy\": \" \",\n            \"sellingPrice\": 1000,\n            \"rewardValue\": 0,\n            \"isGift\": false,\n            \"additionalInfo\": {\n                \"dimension\": null,\n                \"brandName\": \"Escola\",\n                \"brandId\": \"2000001\",\n                \"offeringInfo\": null,\n                \"offeringType\": null,\n                \"offeringTypeId\": null\n            },\n            \"preSaleDate\": null,\n            \"productCategoryIds\": \"/2/\",\n            \"productCategories\": {\n                \"2\": \"Uniforme\"\n            },\n            \"quantity\": 1,\n            \"seller\": \"1\",\n            \"sellerChain\": [\n                \"1\"\n            ],\n            \"imageUrl\": \"http://partnerintegrationbra.vteximg.com.br/arquivos/ids/155419-55-55/xicrinha_small.png?v=637885856236700000\",\n            \"detailUrl\": \"/xicara-pequena/p\",\n            \"components\": [],\n            \"bundleItems\": [],\n            \"attachments\": [],\n            \"attachmentOfferings\": [],\n            \"offerings\": [],\n            \"priceTags\": [\n                {\n                    \"name\": \"discount@price-2050d4d9-1116-42d4-8a06-5db9eb677dc8#851f4d9a-bb88-41d2-bca3-65d0f55716b6\",\n                    \"value\": -500,\n                    \"rawValue\": -5.0,\n                    \"isPercentual\": false,\n                    \"identifier\": \"2050d4d9-1116-42d4-8a06-5db9eb677dc8\",\n                    \"owner\": \"partnerintegrationbra\"\n                }\n            ],\n            \"availability\": \"available\",\n            \"measurementUnit\": \"un\",\n            \"unitMultiplier\": 1.0000,\n            \"manufacturerCode\": null,\n            \"priceDefinition\": {\n                \"calculatedSellingPrice\": 1000,\n                \"total\": 1000,\n                \"sellingPrices\": [\n                    {\n                        \"value\": 1000,\n                        \"quantity\": 1\n                    }\n                ]\n            }\n        }\n    ],\n    \"sellers\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"VTEX\",\n            \"logo\": \"\"\n        }\n    ],\n    \"totals\": [\n        {\n            \"id\": \"Items\",\n            \"name\": \"Total dos Itens\",\n            \"value\": 1500\n        },\n        {\n            \"id\": \"Discounts\",\n            \"name\": \"Total dos Descontos\",\n            \"value\": -500\n        },\n        {\n            \"id\": \"Shipping\",\n            \"name\": \"Total do Frete\",\n            \"value\": 500\n        },\n        {\n            \"id\": \"Tax\",\n            \"name\": \"Total da Taxa\",\n            \"value\": 0\n        }\n    ],\n    \"clientProfileData\": {\n        \"email\": \"gabriel.barros@vtex.com.br\",\n        \"firstName\": \"sdfsd\",\n        \"lastName\": \"sdfsdf\",\n        \"document\": \"35234110095\",\n        \"documentType\": \"cpf\",\n        \"phone\": \"+5541998664959\",\n        \"corporateName\": null,\n        \"tradeName\": null,\n        \"corporateDocument\": null,\n        \"stateInscription\": null,\n        \"corporatePhone\": null,\n        \"isCorporate\": false,\n        \"profileCompleteOnLoading\": true,\n        \"profileErrorOnLoading\": false,\n        \"customerClass\": null\n    },\n    \"ratesAndBenefitsData\": {\n        \"rateAndBenefitsIdentifiers\": [\n            {\n                \"id\": \"2050d4d9-1116-42d4-8a06-5db9eb677dc8\",\n                \"name\": \"Promoção Afiliados\",\n                \"featured\": false,\n                \"description\": \"Test teste\",\n                \"matchedParameters\": {\n                    \"paymentMethodId\": \"201\"\n                },\n                \"additionalInfo\": null\n            }\n        ],\n        \"teaser\": []\n    },\n    \"shippingData\": {\n        \"address\": {\n            \"addressType\": \"residential\",\n            \"receiverName\": \"sdfsd sdfsdf\",\n            \"addressId\": \"4983586086510\",\n            \"isDisposable\": false,\n            \"postalCode\": \"80050-350\",\n            \"city\": \"Curitiba\",\n            \"state\": \"PR\",\n            \"country\": \"BRA\",\n            \"street\": \"Avenida São José\",\n            \"number\": \"656453\",\n            \"neighborhood\": \"Cristo Rei\",\n            \"complement\": null,\n            \"reference\": null,\n            \"geoCoordinates\": [\n                -49.243179321289063,\n                -25.435266494750977\n            ]\n        },\n        \"logisticsInfo\": [\n            {\n                \"itemIndex\": 0,\n                \"selectedSla\": \"jatinho\",\n                \"selectedDeliveryChannel\": \"delivery\",\n                \"addressId\": \"4983586086510\",\n                \"slas\": [\n                    {\n                        \"id\": \"jatinho\",\n                        \"deliveryChannel\": \"delivery\",\n                        \"name\": \"jatinho\",\n                        \"deliveryIds\": [\n                            {\n                                \"courierId\": \"jatinho\",\n                                \"warehouseId\": \"1_1\",\n                                \"dockId\": \"1\",\n                                \"courierName\": \"Jatinho\",\n                                \"quantity\": 1,\n                                \"kitItemDetails\": [\n                                    {\n                                        \"itemId\": \"1065\"\n                                    },\n                                    {\n                                        \"warehouseId\": \"517\"\n                                    }\n                                ]\n                            }\n                        ],\n                        \"shippingEstimate\": \"3d\",\n                        \"shippingEstimateDate\": null,\n                        \"lockTTL\": \"26d\",\n                        \"availableDeliveryWindows\": [],\n                        \"deliveryWindow\": null,\n                        \"price\": 500,\n                        \"listPrice\": 500,\n                        \"tax\": 0,\n                        \"pickupStoreInfo\": {\n                            \"isPickupStore\": false,\n                            \"friendlyName\": null,\n                            \"address\": null,\n                            \"additionalInfo\": null,\n                            \"dockId\": null\n                        },\n                        \"pickupPointId\": null,\n                        \"pickupDistance\": 0.0,\n                        \"polygonName\": \"\",\n                        \"transitTime\": \"3d\"\n                    },\n                    {\n                        \"id\": \"Split\",\n                        \"deliveryChannel\": \"delivery\",\n                        \"name\": \"Split\",\n                        \"deliveryIds\": [\n                            {\n                                \"courierId\": \"2\",\n                                \"warehouseId\": \"2_2_2\",\n                                \"dockId\": \"2_2\",\n                                \"courierName\": \"Split\",\n                                \"quantity\": 1,\n                                \"kitItemDetails\": []\n                            }\n                        ],\n                        \"shippingEstimate\": \"3d\",\n                        \"shippingEstimateDate\": null,\n                        \"lockTTL\": \"26d\",\n                        \"availableDeliveryWindows\": [\n                            {\n                                \"startDateUtc\": \"2022-10-17T08:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-17T12:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            }\n                        ],\n                        \"deliveryWindow\": null,\n                        \"price\": 500,\n                        \"listPrice\": 500,\n                        \"tax\": 0,\n                        \"pickupStoreInfo\": {\n                            \"isPickupStore\": false,\n                            \"friendlyName\": null,\n                            \"address\": null,\n                            \"additionalInfo\": null,\n                            \"dockId\": null\n                        },\n                        \"pickupPointId\": null,\n                        \"pickupDistance\": 0.0,\n                        \"polygonName\": \"\",\n                        \"transitTime\": \"3d\"\n                    },\n                    {\n                        \"id\": \"Normal\",\n                        \"deliveryChannel\": \"delivery\",\n                        \"name\": \"Normal\",\n                        \"deliveryIds\": [\n                            {\n                                \"courierId\": \"1\",\n                                \"warehouseId\": \"1_1\",\n                                \"dockId\": \"1\",\n                                \"courierName\": \"Transportadora\",\n                                \"quantity\": 1,\n                                \"kitItemDetails\": []\n                            }\n                        ],\n                        \"shippingEstimate\": \"3d\",\n                        \"shippingEstimateDate\": null,\n                        \"lockTTL\": \"26d\",\n                        \"availableDeliveryWindows\": [\n                            {\n                                \"startDateUtc\": \"2022-10-17T08:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-17T12:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-17T12:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-17T16:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-18T08:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-18T12:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-18T12:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-18T16:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-19T08:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-19T12:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-19T12:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-19T16:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-20T08:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-20T12:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-20T12:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-20T16:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-21T08:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-21T12:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            },\n                            {\n                                \"startDateUtc\": \"2022-10-21T12:00:00+00:00\",\n                                \"endDateUtc\": \"2022-10-21T16:00:59+00:00\",\n                                \"price\": 0,\n                                \"lisPrice\": 0,\n                                \"tax\": 0\n                            }\n                        ],\n                        \"deliveryWindow\": null,\n                        \"price\": 500,\n                        \"listPrice\": 500,\n                        \"tax\": 0,\n                        \"pickupStoreInfo\": {\n                            \"isPickupStore\": false,\n                            \"friendlyName\": null,\n                            \"address\": null,\n                            \"additionalInfo\": null,\n                            \"dockId\": null\n                        },\n                        \"pickupPointId\": null,\n                        \"pickupDistance\": 0.0,\n                        \"polygonName\": \"\",\n                        \"transitTime\": \"3d\"\n                    }\n                ],\n                \"shipsTo\": [\n                    \"BRA\"\n                ],\n                \"itemId\": \"14\",\n                \"deliveryChannels\": [\n                    {\n                        \"id\": \"delivery\"\n                    }\n                ]\n            }\n        ],\n        \"selectedAddresses\": [\n            {\n                \"addressType\": \"residential\",\n                \"receiverName\": \"sdfsd sdfsdf\",\n                \"addressId\": \"4983586086510\",\n                \"isDisposable\": false,\n                \"postalCode\": \"80050-350\",\n                \"city\": \"Curitiba\",\n                \"state\": \"PR\",\n                \"country\": \"BRA\",\n                \"street\": \"Avenida São José\",\n                \"number\": \"656453\",\n                \"neighborhood\": \"Cristo Rei\",\n                \"complement\": null,\n                \"reference\": null,\n                \"geoCoordinates\": [\n                    -49.243179321289063,\n                    -25.435266494750977\n                ]\n            }\n        ],\n        \"availableAddresses\": [\n            {\n                \"addressType\": \"residential\",\n                \"receiverName\": \"sdfsd sdfsdf\",\n                \"addressId\": \"4983586086510\",\n                \"isDisposable\": false,\n                \"postalCode\": \"80050-350\",\n                \"city\": \"Curitiba\",\n                \"state\": \"PR\",\n                \"country\": \"BRA\",\n                \"street\": \"Avenida São José\",\n                \"number\": \"656453\",\n                \"neighborhood\": \"Cristo Rei\",\n                \"complement\": null,\n                \"reference\": null,\n                \"geoCoordinates\": [\n                    -49.243179321289063,\n                    -25.435266494750977\n                ]\n            }\n        ],\n        \"pickupPoints\": []\n    },\n    \"paymentData\": {\n        \"giftCards\": [\n            {\n                \"redemptionCode\": \"HYUO-TEZZ-QFFT-HTFR\",\n                \"provider\": \"TesteFer\",\n                \"value\": 0,\n                \"balance\": 1000,\n                \"name\": null,\n                \"caption\": \"gift card by id\",\n                \"id\": \"123\",\n                \"inUse\": false,\n                \"isSpecialCard\": true,\n                \"groupName\": \"giftCardPaymentGroup\"\n            }\n        ],\n        \"transactions\": [\n            {\n                \"isActive\": true,\n                \"transactionId\": \"E7FE5D0AC86F49FCAEAFE74BD663E1E6\",\n                \"merchantName\": \"PARTNERINTEGRATIONBRA\",\n                \"payments\": [\n                    {\n                        \"id\": \"D73F65660C5C4CF38D2B241991C25314\",\n                        \"paymentSystem\": \"201\",\n                        \"paymentSystemName\": \"Promissoria\",\n                        \"value\": 1500,\n                        \"installments\": 1,\n                        \"connectorResponses\": {\n                            \"Tid\": \"\",\n                            \"ReturnCode\": 34,\n                            \"Message\": \"\",\n                            \"authId\": \"\"\n                        },\n                        \"referenceValue\": 1500,\n                        \"cardHolder\": null,\n                        \"cardNumber\": null,\n                        \"firstDigits\": null,\n                        \"lastDigits\": null,\n                        \"cvv2\": null,\n                        \"expireMonth\": null,\n                        \"expireYear\": null,\n                        \"url\": \"https://paymentMethod.com.br/apiboleto/nameMethod?token=AEDCBCtR3RCTH\",\n                        \"koinUrl\": null,\n                        \"tid\": \"151902\",\n                        \"redemptionCode\": \"HYUO-TEZZ-QFFT-HTFR\",\n                        \"giftCardId\": null,\n                        \"giftCardProvider\": null,\n                        \"giftCardAsDiscount\": null,\n                        \"group\": \"promissory\",\n                        \"dueDate\": null,\n                        \"accountId\": \"7EA64D20BEC47F55AG7F5BC12D4BF0D5\",\n                        \"parentAccountId\": \"f861a86274af4c678c936k93172fdeed\",\n                        \"bankIssuedInvoiceIdentificationNumber\": \"23797770100000019003099260100022107500729050\",\n                        \"bankIssuedInvoiceIdentificationNumberFormatted\": null,\n                        \"bankIssuedInvoiceBarCodeNumber\": null,\n                        \"bankIssuedInvoiceBarCodeType\": \"i25\",\n                        \"billingAddress\": null\n                    }\n                ],\n                \"sharedTransaction\": false\n            }\n        ]\n    },\n    \"clientPreferencesData\": {\n        \"locale\": \"pt-BR\",\n        \"optinNewsLetter\": false\n    },\n    \"commercialConditionData\": null,\n    \"giftRegistryData\": {\n        \"giftRegistryId\": \"154\",  \n        \"giftRegistryType\": \"9\",\n        \"giftRegistryTypeName\": \"Wedding list\",\n        \"addressId\": \"4352357942349\",\n        \"description\": \"Alanna & Hugo\"\n    },\n    \"marketingData\": {\n        \"attachmentId\": \"marketingData\",\n        \"coupon\": null,\n        \"marketingTags\": [],\n        \"utmCampaign\": \"christmas\",\n        \"utmMedium\": null,\n        \"utmSource\": \"fb\",\n        \"utmiCampaign\": \"\",\n        \"utmiPart\": \"\",\n        \"utmipage\": \"\"  \n      },\n    \"storePreferencesData\": {\n        \"countryCode\": \"BRA\",\n        \"saveUserData\": false,\n        \"timeZone\": \"E. South America Standard Time\",\n        \"currencyCode\": \"BRL\",\n        \"currencyLocale\": 1046,\n        \"currencySymbol\": \"R$\",\n        \"currencyFormatInfo\": {\n            \"currencyDecimalDigits\": 2,\n            \"currencyDecimalSeparator\": \",\",\n            \"currencyGroupSeparator\": \".\",\n            \"currencyGroupSize\": 3,\n            \"startsWithCurrencySymbol\": true\n        }\n    },\n    \"openTextField\": {\n        \"value\": \"{\\\"Phones\\\":[\\\"55555555\\\"]}\"\n    },\n    \"invoiceData\": {\n        \"address\": {\n        \"postalCode\": \"******000\",\n        \"city\": \"Rio ** *******\",\n        \"state\": \"RJ\",\n        \"country\": \"BRA\",\n        \"street\": \"Rua *** *****nte\",\n        \"number\": \"***\",\n        \"neighborhood\": \"Bot*****\",\n        \"complement\": \"*** ** *\",\n        \"reference\": null\n         },\n         \"settleInvoices\":[\n            \"24382\",\n            \"41252\"\n         ]  \n     },\n    \"itemMetadata\": {\n        \"items\": [\n            {\n                \"id\": \"14\",\n                \"seller\": \"1\",\n                \"name\": \"Xícara com Imagem Pequena Xicrinha Small\",\n                \"skuName\": \"Xicrinha Small\",\n                \"productId\": \"13\",\n                \"refId\": null,\n                \"ean\": \"dasdsadasdasda\",\n                \"imageUrl\": \"http://partnerintegrationbra.vteximg.com.br/arquivos/ids/155419-55-55/xicrinha_small.png?v=637885856236700000\",\n                \"detailUrl\": \"/xicara-pequena/p\",\n                \"assemblyOptions\": [\n                    {\n                    \"id\": \"\",\n                    \"name\": \"\",\n                    \"required\": false,\n                    \"inputValues\": {},\n                    \"composition\": {\n                        \"minQuantity\": \"\",\n                        \"maxQuantity\": \"\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"taxData\": null,\n    \"customData\":  {\n        \"customApps\": [\n            {\n                \"id\": \"profile\",\n                \"fields\": {\n                    \"age\": \"33\",\n                    \"gender\": \"M\"\n                }\n            }\n        ]\n    },\n    \"hooksData\": {\n        \"major\": \"1\",\n        \"url\": \"\"\n    },\n    \"changeData\": [\n        {\n            \"reason\": \"Aumento peso da Manga em 100grs\",\n            \"discountValue\": 0,\n            \"incrementValue\": 75,\n            \"itemsAdded\": [\n                {\n                    \"id\": \"5042\",\n                    \"name\": \"Manga Tommy 500g\",\n                    \"quantity\": 1,\n                    \"price\": 75,\n                    \"unitMultiplier\": 0.100\n                }\n            ],\n            \"itemsRemoved\": [\n                {\n                    \"id\": \"5030\",\n                    \"name\": \"Morango 300g\",\n                    \"quantity\": 1,\n                    \"price\": 75,\n                    \"unitMultiplier\": 0.100\n                }\n            ],\n            \"receipt\": {\n                \"date\": \"2022-06-29T17:42:08.3431198+00:00\",\n                \"orderId\": \"1243130560385-01\",\n                \"receipt\": \"cce77f10-59f0-4e57-89e8-78ed755505ff\"\n            }\n        }\n    ],\n    \"subscriptionData\": {\n        \"subscriptionGroupId\": \"32586VDS876BFD\",\n        \"subscriptions\": \n        [\n                {\n                        \"executionCount\": 3,\n                        \"priceAtSubscriptionDate\": 84444360.0,\n                        \"itemIndex\": 0,\n                        \"plan\": {\n                                \"validity\": {\n                                        \"begin\": \"2021-08-29T00:00:00\",\n                                        \"end\": \"2024-08-29T00:00:00\"\n                                },\n                                \"frequency\": {\n                                        \"periodicity\": \"DAILY\",\n                                        \"interval\": 15\n                                },\n                                \"type\": \"RECURRING_PAYMENT\"\n                        }\n                }\n        ]\n    },\n    \"merchantContextData\": {\n        \"salesAssociateData\": {\n          \"salesAssociateId\": \"Id72945\"\n        }\n    }        ,\n    \"salesChannel\": \"1\",\n    \"followUpEmail\": \"6eac6fa6521d4cc88f7e03585f1ae69c@ct.vtex.com.br\",\n    \"creationDate\": \"2022-10-13T13:48:36.1056593Z\",\n    \"lastChange\": \"2022-10-13T13:48:42.1418456Z\",\n    \"timeZoneCreationDate\": \"2022-10-13T10:48:36.1056593\",\n    \"timeZoneLastChange\": \"2022-10-13T10:48:42.1418456\",\n    \"isCompleted\": true,\n    \"hostName\": \"partnerintegrationbra\",\n    \"merchantName\": \"merchant123\",\n    \"userType\": \"callCenterOperator\",\n    \"roundingError\": 0,\n    \"allowEdition\": false,\n    \"allowCancellation\": true,\n    \"isUserDataVisible\": true,\n    \"allowChangeSeller\": true,\n    \"orderFormCreationDate\": \"2022-10-13T12:56:47.4031427Z\"\n}",
-      "language": "json"
-    }
-  ]
+    "orderId": "1268540501456-01",
+    "orderGroup": "1268540501456",
+    "state": "payment-pending",
+    "isCheckedIn": false,
+    "sellerOrderId": "00-1268540501456-01",
+    "storeId": "store2485",
+    "checkedInPickupPointId": "storeNameExample_901",
+    "value": 1500,
+    "items": [
+        {
+            "uniqueId": "AB1D237A5D92460383B53305AA647BAD",
+            "id": "14",
+            "productId": "13",
+            "productRefId": "",
+            "refId": "356",
+            "ean": "dasdsadasdasda",
+            "name": "Xícara com Imagem Pequena Xicrinha Small",
+            "skuName": "Xicrinha Small",
+            "modalType": " ",
+            "parentItemIndex": 87,
+            "parentAssemblyBinding": " ",
+            "assemblies": [],
+            "priceValidUntil": "2023-10-13T13:48:11Z",
+            "tax": 0,
+            "price": 1500,
+            "listPrice": 1500,
+            "manualPrice": 1400,
+            "manualPriceAppliedBy": " ",
+            "sellingPrice": 1000,
+            "rewardValue": 0,
+            "isGift": false,
+            "additionalInfo": {
+                "dimension": null,
+                "brandName": "Escola",
+                "brandId": "2000001",
+                "offeringInfo": null,
+                "offeringType": null,
+                "offeringTypeId": null
+            },
+            "preSaleDate": null,
+            "productCategoryIds": "/2/",
+            "productCategories": {
+                "2": "Uniforme"
+            },
+            "quantity": 1,
+            "seller": "1",
+            "sellerChain": [
+                "1"
+            ],
+            "imageUrl": "http://partnerintegrationbra.vteximg.com.br/arquivos/ids/155419-55-55/xicrinha_small.png?v=637885856236700000",
+            "detailUrl": "/xicara-pequena/p",
+            "components": [],
+            "bundleItems": [],
+            "attachments": [],
+            "attachmentOfferings": [
+                {
+                    "name": "vtex.subscription.weekly",
+                    "required": false,
+                    "schema": {
+                        "vtex.subscription.key.frequency": {
+                            "maximumNumberOfCharacters": 7,
+                            "domain": [
+                                "1 week",
+                                " 2 week",
+                                " 3 week",
+                                " 4 week"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "vtex.subscription.daily",
+                    "required": false,
+                    "schema": {
+                        "vtex.subscription.key.frequency": {
+                            "maximumNumberOfCharacters": 5,
+                            "domain": [
+                                "1 day"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "offerings": [],
+            "priceTags": [
+                {
+                    "name": "discount@price-2050d4d9-1116-42d4-8a06-5db9eb677dc8#851f4d9a-bb88-41d2-bca3-65d0f55716b6",
+                    "value": -500,
+                    "rawValue": -5.0,
+                    "isPercentual": false,
+                    "identifier": "2050d4d9-1116-42d4-8a06-5db9eb677dc8",
+                    "owner": "partnerintegrationbra"
+                }
+            ],
+            "availability": "available",
+            "measurementUnit": "un",
+            "unitMultiplier": 1.0000,
+            "manufacturerCode": null,
+            "priceDefinition": {
+                "calculatedSellingPrice": 1000,
+                "total": 1000,
+                "sellingPrices": [
+                    {
+                        "value": 1000,
+                        "quantity": 1
+                    }
+                ]
+            }
+        }
+    ],
+    "sellers": [
+        {
+            "id": "1",
+            "name": "VTEX",
+            "logo": ""
+        }
+    ],
+    "totals": [
+        {
+            "id": "Items",
+            "name": "Total dos Itens",
+            "value": 1500
+        },
+        {
+            "id": "Discounts",
+            "name": "Total dos Descontos",
+            "value": -500
+        },
+        {
+            "id": "Shipping",
+            "name": "Total do Frete",
+            "value": 500
+        },
+        {
+            "id": "Tax",
+            "name": "Total da Taxa",
+            "value": 0
+        }
+    ],
+    "clientProfileData": {
+        "email": "gabriel.barros@vtex.com.br",
+        "firstName": "sdfsd",
+        "lastName": "sdfsdf",
+        "document": "35234110095",
+        "documentType": "cpf",
+        "phone": "+5541998664959",
+        "corporateName": null,
+        "tradeName": null,
+        "corporateDocument": null,
+        "stateInscription": null,
+        "corporatePhone": null,
+        "isCorporate": false,
+        "profileCompleteOnLoading": true,
+        "profileErrorOnLoading": false,
+        "customerClass": null
+    },
+    "ratesAndBenefitsData": {
+        "rateAndBenefitsIdentifiers": [
+            {
+                "id": "2050d4d9-1116-42d4-8a06-5db9eb677dc8",
+                "name": "Promoção Afiliados",
+                "featured": false,
+                "description": "Test teste",
+                "matchedParameters": {
+                    "paymentMethodId": "201"
+                },
+                "additionalInfo": null
+            }
+        ],
+        "teaser": []
+    },
+    "shippingData": {
+        "address": {
+            "addressType": "residential",
+            "receiverName": "sdfsd sdfsdf",
+            "addressId": "4983586086510",
+            "isDisposable": false,
+            "postalCode": "80050-350",
+            "city": "Curitiba",
+            "state": "PR",
+            "country": "BRA",
+            "street": "Avenida São José",
+            "number": "656453",
+            "neighborhood": "Cristo Rei",
+            "complement": null,
+            "reference": null,
+            "geoCoordinates": [
+                -49.243179321289063,
+                -25.435266494750977
+            ]
+        },
+        "logisticsInfo": [
+            {
+                "itemIndex": 0,
+                "selectedSla": "jatinho",
+                "selectedDeliveryChannel": "delivery",
+                "addressId": "4983586086510",
+                "slas": [
+                    {
+                        "id": "jatinho",
+                        "deliveryChannel": "delivery",
+                        "name": "jatinho",
+                        "deliveryIds": [
+                            {
+                                "courierId": "jatinho",
+                                "warehouseId": "1_1",
+                                "dockId": "1",
+                                "courierName": "Jatinho",
+                                "quantity": 1,
+                                "kitItemDetails": [
+                                    {
+                                        "itemId": "1065"
+                                    },
+                                    {
+                                        "warehouseId": "517"
+                                    }
+                                ]
+                            }
+                        ],
+                        "shippingEstimate": "3d",
+                        "shippingEstimateDate": null,
+                        "lockTTL": "26d",
+                        "availableDeliveryWindows": [],
+                        "deliveryWindow": null,
+                        "price": 500,
+                        "listPrice": 500,
+                        "tax": 0,
+                        "pickupStoreInfo": {
+                            "isPickupStore": false,
+                            "friendlyName": null,
+                            "address": null,
+                            "additionalInfo": null,
+                            "dockId": null
+                        },
+                        "pickupPointId": null,
+                        "pickupDistance": 0.0,
+                        "polygonName": "",
+                        "transitTime": "3d"
+                    },
+                    {
+                        "id": "Split",
+                        "deliveryChannel": "delivery",
+                        "name": "Split",
+                        "deliveryIds": [
+                            {
+                                "courierId": "2",
+                                "warehouseId": "2_2_2",
+                                "dockId": "2_2",
+                                "courierName": "Split",
+                                "quantity": 1,
+                                "kitItemDetails": []
+                            }
+                        ],
+                        "shippingEstimate": "3d",
+                        "shippingEstimateDate": null,
+                        "lockTTL": "26d",
+                        "availableDeliveryWindows": [
+                            {
+                                "startDateUtc": "2022-10-17T08:00:00+00:00",
+                                "endDateUtc": "2022-10-17T12:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            }
+                        ],
+                        "deliveryWindow": null,
+                        "price": 500,
+                        "listPrice": 500,
+                        "tax": 0,
+                        "pickupStoreInfo": {
+                            "isPickupStore": false,
+                            "friendlyName": null,
+                            "address": null,
+                            "additionalInfo": null,
+                            "dockId": null
+                        },
+                        "pickupPointId": null,
+                        "pickupDistance": 0.0,
+                        "polygonName": "",
+                        "transitTime": "3d"
+                    },
+                    {
+                        "id": "Normal",
+                        "deliveryChannel": "delivery",
+                        "name": "Normal",
+                        "deliveryIds": [
+                            {
+                                "courierId": "1",
+                                "warehouseId": "1_1",
+                                "dockId": "1",
+                                "courierName": "Transportadora",
+                                "quantity": 1,
+                                "kitItemDetails": []
+                            }
+                        ],
+                        "shippingEstimate": "3d",
+                        "shippingEstimateDate": null,
+                        "lockTTL": "26d",
+                        "availableDeliveryWindows": [
+                            {
+                                "startDateUtc": "2022-10-17T08:00:00+00:00",
+                                "endDateUtc": "2022-10-17T12:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-17T12:00:00+00:00",
+                                "endDateUtc": "2022-10-17T16:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-18T08:00:00+00:00",
+                                "endDateUtc": "2022-10-18T12:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-18T12:00:00+00:00",
+                                "endDateUtc": "2022-10-18T16:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-19T08:00:00+00:00",
+                                "endDateUtc": "2022-10-19T12:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-19T12:00:00+00:00",
+                                "endDateUtc": "2022-10-19T16:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-20T08:00:00+00:00",
+                                "endDateUtc": "2022-10-20T12:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-20T12:00:00+00:00",
+                                "endDateUtc": "2022-10-20T16:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-21T08:00:00+00:00",
+                                "endDateUtc": "2022-10-21T12:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            },
+                            {
+                                "startDateUtc": "2022-10-21T12:00:00+00:00",
+                                "endDateUtc": "2022-10-21T16:00:59+00:00",
+                                "price": 0,
+                                "lisPrice": 0,
+                                "tax": 0
+                            }
+                        ],
+                        "deliveryWindow": null,
+                        "price": 500,
+                        "listPrice": 500,
+                        "tax": 0,
+                        "pickupStoreInfo": {
+                            "isPickupStore": false,
+                            "friendlyName": null,
+                            "address": null,
+                            "additionalInfo": null,
+                            "dockId": null
+                        },
+                        "pickupPointId": null,
+                        "pickupDistance": 0.0,
+                        "polygonName": "",
+                        "transitTime": "3d"
+                    }
+                ],
+                "shipsTo": [
+                    "BRA"
+                ],
+                "itemId": "14",
+                "deliveryChannels": [
+                    {
+                        "id": "delivery"
+                    }
+                ]
+            }
+        ],
+        "selectedAddresses": [
+            {
+                "addressType": "residential",
+                "receiverName": "sdfsd sdfsdf",
+                "addressId": "4983586086510",
+                "isDisposable": false,
+                "postalCode": "80050-350",
+                "city": "Curitiba",
+                "state": "PR",
+                "country": "BRA",
+                "street": "Avenida São José",
+                "number": "656453",
+                "neighborhood": "Cristo Rei",
+                "complement": null,
+                "reference": null,
+                "geoCoordinates": [
+                    -49.243179321289063,
+                    -25.435266494750977
+                ]
+            }
+        ],
+        "availableAddresses": [
+            {
+                "addressType": "residential",
+                "receiverName": "sdfsd sdfsdf",
+                "addressId": "4983586086510",
+                "isDisposable": false,
+                "postalCode": "80050-350",
+                "city": "Curitiba",
+                "state": "PR",
+                "country": "BRA",
+                "street": "Avenida São José",
+                "number": "656453",
+                "neighborhood": "Cristo Rei",
+                "complement": null,
+                "reference": null,
+                "geoCoordinates": [
+                    -49.243179321289063,
+                    -25.435266494750977
+                ]
+            }
+        ],
+        "pickupPoints": []
+    },
+    "paymentData": {
+        "giftCards": [
+            {
+                "redemptionCode": "HYUO-TEZZ-QFFT-HTFR",
+                "provider": "TesteFer",
+                "value": 0,
+                "balance": 1000,
+                "name": null,
+                "caption": "gift card by id",
+                "id": "123",
+                "inUse": false,
+                "isSpecialCard": true,
+                "groupName": "giftCardPaymentGroup"
+            }
+        ],
+        "transactions": [
+            {
+                "isActive": true,
+                "transactionId": "E7FE5D0AC86F49FCAEAFE74BD663E1E6",
+                "merchantName": "PARTNERINTEGRATIONBRA",
+                "payments": [
+                    {
+                        "id": "D73F65660C5C4CF38D2B241991C25314",
+                        "paymentSystem": "201",
+                        "paymentSystemName": "Promissoria",
+                        "value": 1500,
+                        "installments": 1,
+                        "connectorResponses": {
+                            "Tid": "",
+                            "ReturnCode": 34,
+                            "Message": "",
+                            "authId": ""
+                        },
+                        "referenceValue": 1500,
+                        "cardHolder": null,
+                        "cardNumber": null,
+                        "firstDigits": null,
+                        "lastDigits": null,
+                        "cvv2": null,
+                        "expireMonth": null,
+                        "expireYear": null,
+                        "url": "https://paymentMethod.com.br/apiboleto/nameMethod?token=AEDCBCtR3RCTH",
+                        "koinUrl": null,
+                        "tid": "151902",
+                        "redemptionCode": "HYUO-TEZZ-QFFT-HTFR",
+                        "giftCardId": null,
+                        "giftCardProvider": null,
+                        "giftCardAsDiscount": null,
+                        "group": "promissory",
+                        "dueDate": null,
+                        "accountId": "7EA64D20BEC47F55AG7F5BC12D4BF0D5",
+                        "parentAccountId": "f861a86274af4c678c936k93172fdeed",
+                        "bankIssuedInvoiceIdentificationNumber": "23797770100000019003099260100022107500729050",
+                        "bankIssuedInvoiceIdentificationNumberFormatted": null,
+                        "bankIssuedInvoiceBarCodeNumber": null,
+                        "bankIssuedInvoiceBarCodeType": "i25",
+                        "billingAddress": null
+                    }
+                ],
+                "sharedTransaction": false
+            }
+        ]
+    },
+    "clientPreferencesData": {
+        "locale": "pt-BR",
+        "optinNewsLetter": false
+    },
+    "commercialConditionData": null,
+    "giftRegistryData": {
+        "giftRegistryId": "154",  
+        "giftRegistryType": "9",
+        "giftRegistryTypeName": "Wedding list",
+        "addressId": "4352357942349",
+        "description": "Alanna & Hugo"
+    },
+    "marketingData": {
+        "attachmentId": "marketingData",
+        "coupon": null,
+        "marketingTags": [],
+        "utmCampaign": "christmas",
+        "utmMedium": null,
+        "utmSource": "fb",
+        "utmiCampaign": "",
+        "utmiPart": "",
+        "utmipage": ""  
+      },
+    "storePreferencesData": {
+        "countryCode": "BRA",
+        "saveUserData": false,
+        "timeZone": "E. South America Standard Time",
+        "currencyCode": "BRL",
+        "currencyLocale": 1046,
+        "currencySymbol": "R$",
+        "currencyFormatInfo": {
+            "currencyDecimalDigits": 2,
+            "currencyDecimalSeparator": ",",
+            "currencyGroupSeparator": ".",
+            "currencyGroupSize": 3,
+            "startsWithCurrencySymbol": true
+        }
+    },
+    "openTextField": {
+        "value": "{\"Phones\":[\"55555555\"]}"
+    },
+    "invoiceData": {
+        "address": {
+        "postalCode": "******000",
+        "city": "Rio ** *******",
+        "state": "RJ",
+        "country": "BRA",
+        "street": "Rua *** *****nte",
+        "number": "***",
+        "neighborhood": "Bot*****",
+        "complement": "*** ** *",
+        "reference": null
+         },
+         "settleInvoices":[
+            "24382",
+            "41252"
+         ]  
+     },
+    "itemMetadata": {
+        "items": [
+            {
+                "id": "14",
+                "seller": "1",
+                "name": "Xícara com Imagem Pequena Xicrinha Small",
+                "skuName": "Xicrinha Small",
+                "productId": "13",
+                "refId": null,
+                "ean": "dasdsadasdasda",
+                "imageUrl": "http://partnerintegrationbra.vteximg.com.br/arquivos/ids/155419-55-55/xicrinha_small.png?v=637885856236700000",
+                "detailUrl": "/xicara-pequena/p",
+                "assemblyOptions": [
+                    {
+                    "id": "",
+                    "name": "",
+                    "required": false,
+                    "inputValues": {},
+                    "composition": {
+                        "minQuantity": "",
+                        "maxQuantity": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "taxData": null,
+    "customData":  {
+        "customApps": [
+            {
+                "id": "profile",
+                "fields": {
+                    "age": "33",
+                    "gender": "M"
+                }
+            }
+        ]
+    },
+    "hooksData": {
+        "major": "1",
+        "url": ""
+    },
+    "changeData": [
+        {
+            "reason": "Aumento peso da Manga em 100grs",
+            "discountValue": 0,
+            "incrementValue": 75,
+            "itemsAdded": [
+                {
+                    "id": "5042",
+                    "name": "Manga Tommy 500g",
+                    "quantity": 1,
+                    "price": 75,
+                    "unitMultiplier": 0.100
+                }
+            ],
+            "itemsRemoved": [
+                {
+                    "id": "5030",
+                    "name": "Morango 300g",
+                    "quantity": 1,
+                    "price": 75,
+                    "unitMultiplier": 0.100
+                }
+            ],
+            "receipt": {
+                "date": "2022-06-29T17:42:08.3431198+00:00",
+                "orderId": "1243130560385-01",
+                "receipt": "cce77f10-59f0-4e57-89e8-78ed755505ff"
+            }
+        }
+    ],
+    "subscriptionData": {
+        "subscriptionGroupId": "32586VDS876BFD",
+        "subscriptions": 
+        [
+                {
+                        "executionCount": 3,
+                        "priceAtSubscriptionDate": 84444360.0,
+                        "itemIndex": 0,
+                        "plan": {
+                                "validity": {
+                                        "begin": "2021-08-29T00:00:00",
+                                        "end": "2024-08-29T00:00:00"
+                                },
+                                "frequency": {
+                                        "periodicity": "DAILY",
+                                        "interval": 15
+                                },
+                                "type": "RECURRING_PAYMENT"
+                        }
+                }
+        ]
+    },
+    "merchantContextData": {
+        "salesAssociateData": {
+          "salesAssociateId": "Id72945"
+        }
+    }        ,
+    "salesChannel": "1",
+    "followUpEmail": "6eac6fa6521d4cc88f7e03585f1ae69c@ct.vtex.com.br",
+    "creationDate": "2022-10-13T13:48:36.1056593Z",
+    "lastChange": "2022-10-13T13:48:42.1418456Z",
+    "timeZoneCreationDate": "2022-10-13T10:48:36.1056593",
+    "timeZoneLastChange": "2022-10-13T10:48:42.1418456",
+    "isCompleted": true,
+    "hostName": "partnerintegrationbra",
+    "merchantName": "merchant123",
+    "userType": "callCenterOperator",
+    "roundingError": 0,
+    "allowEdition": false,
+    "allowCancellation": true,
+    "isUserDataVisible": true,
+    "allowChangeSeller": true,
+    "orderFormCreationDate": "2022-10-13T12:56:47.4031427Z"
 }
-[/block]
+```
+
+### GraphQL queries
+
+For integrations built with GraphQL, check out the `vtex.store-graphql` and `vtex.orders-graphql` queries below.
+
+#### Query vtex.store-graphql
+
+```jsx
+query {
+  orders @context(provider: "vtex.store-graphql") {
+    isCompleted
+    items {
+      productId
+    }
+  }
+}
+```
+
+```jsx
+type Order {
+  allowCancellation: Boolean
+  orderId: String
+  orderGroup: String
+  state: String
+  status: String
+  statusDescription: String
+  value: Float
+  salesChannel: String
+  creationDate: String
+  customData: CustomData
+  lastChange: String
+  timeZoneCreationDate: String
+  timeZoneLastChange: String
+  invoicedDate: String
+  isCompleted: Boolean
+  items: [OrderItem]
+  sellers: [OrderItemSeller]
+  totals: [OrderItemTotal]
+  paymentData: OrderItemPaymentData
+  shippingData: OrderItemShippingData
+  storePreferencesData: StorePreferencesData
+}
+```
+
+#### Query vtex.orders-graphql
+
+```jsx
+orders(options: OrdersOptionsInput!): PaginatedOrders
+    @cacheControl(scope: PRIVATE)
+```
+
+```jsx
+query orders($options: OrdersOptionsInput!) {
+  orders(options: $options) @context(provider: "vtex.orders-graphql") {
+    list {
+      orderId
+      clientName
+      clientEmail
+      status
+      origin
+      creationDate
+      totalItems
+      totalValue
+      currencyCode
+    }
+    total
+    currencies {
+      currencyCode
+      quantity
+      value
+    }
+  }
+}
+```
+
+**Query response**
+
+```Jsx
+type PaginatedOrders {
+  currencies: [CurrencyOrderSummary]
+  paging: OrdersPaging!
+  page: Int! @deprecated(reason: "Use `paging` field.")
+  perPage: Int! @deprecated(reason: "Use `paging` field.")
+  total: Int! @deprecated(reason: "Use `paging` field.")
+  list: [OrderListing!]!
+  reportRecordsLimit: Int!
+}
+```
+
+```jsx
+type OrderListing {
+  allowCancellation: Boolean
+  allowEdition: Boolean
+  clientEmail: String
+  clientName: String
+  clientProfileData: ClientProfileData
+  creationDate: String
+  currencyCode: String
+  deliveryChannel: [String]
+  hostname: String
+  isInstore: Boolean
+  items: [OrderItem!]!
+  lastChange: String
+  marketingTags: [String]
+  orderGroup: String
+  orderId: ID!
+  sequence: String
+  orderIsComplete: Boolean
+  origin: String
+  packageAttachment: PackageAttachment!
+  paymentData: PaymentData!
+  paymentIds: [String]
+  paymentNames: [String]
+  pciTransactionId: [String]
+  productIds: [String]
+  sellerIds: [String]
+  sellerNames: [String]
+  sellerOrderId: ID
+  shippingData: ShippingData!
+  shippingEstimatedDateMax: String
+  shippingEstimatedDateMin: String
+  skus: [String]
+  status: String
+  storePreferencesData: StorePreferencesData!
+  subscriptionGroup: String
+  totalItems: Int
+  totalValue: Float
+  totals: [Total!]!
+  transactionIds: [String]
+  value: Float
+  workflowInErrorState: Boolean
+  workflowInRetry: Boolean
+  isAllDelivered: Boolean!
+}
+```
