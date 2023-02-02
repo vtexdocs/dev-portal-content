@@ -116,4 +116,3 @@ You can check if others are passing through similar issues [here](https://github
 ## Tests
 
 To execute our tests go to `react/` folder and run `yarn test`
-
