@@ -4,6 +4,11 @@ slug: "vtex-io-documentation-migrating-google-tag-manager-app"
 hidden: false
 createdAt: "2021-10-27T17:53:23.675Z"
 updatedAt: "2022-12-13T20:17:44.057Z"
+category: "Storefront Development"
+excerpt: "Step-by-step to update the Google Tag Manager app to version 3.x."
+seeAlso:
+ - "/docs/guides/vtex-google-tag-manager"
+ - "/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
 ---
 
 Version 3.x of [VTEX’s Google Tag Manager (GTM) app](https://developers.vtex.com/docs/guides/vtex-google-tag-manager) tracks the entire user’s journey through the store, from viewing a product to purchasing it, via events triggered by the variable `ecommerceV2`.
@@ -23,9 +28,7 @@ New and rearranged properties were added to the product schema to represent on t
 | `dimension2`     | New property       |
 | `dimension3`     | New property       |
 
-> ℹ️
->
-> For more details on these properties, go to the section [Product schema](#product-schema)
+> ℹ️ For more details on these properties, go to the section [Product schema](#product-schema)
 
 Follow the steps below to update the GTM container and fetch the data from the `ecommerceV2` variable.
 
@@ -91,7 +94,3 @@ The `dimension1`, `dimension2`, `dimension3` properties are custom dimensions th
 
 For more information about custom dimensions and Enhanced Ecommerce, refer to [Custom dimensions and metrics](https://support.google.com/analytics/answer/2709828?hl=en&ref_topic=2709827#configuration&zippy=%2Cin-this-article) and [Google Enhanced ecommerce official guide](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce#ecommerce-data) respectively.
 
-## Related Resources
-
-- [VTEX Google Tag Manager (GTM) app](https://developers.vtex.com/docs/guides/vtex-google-tag-manager)
-- [Setting up Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager)

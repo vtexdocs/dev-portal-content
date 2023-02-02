@@ -4,6 +4,9 @@ slug: "vtexarg-abtester"
 hidden: false
 createdAt: "2021-10-21T15:14:07.237Z"
 updatedAt: "2022-07-21T17:37:37.156Z"
+category: "VTEX IO Apps"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-running-native-ab-testing"
 ---
 
 The A/B Tester app allows you to list, start and finish A/B tests via the VTEX Admin.
@@ -73,9 +76,3 @@ Although automatic, an A/B test will not end by itself. Take the following steps
 1. Access the VTEX Admin.
 2. Go to **Others > AB Tester** and scroll the horizontal bar until you see a Kebab menu.
 3. Click on the Kebab menu and click on **Finish A/B Test**.
-
----
-
-## Related Resources
-
-- [Running native A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing)

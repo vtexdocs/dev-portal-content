@@ -4,6 +4,7 @@ slug: "vtex-io-cross-border-stores"
 hidden: false
 createdAt: "2020-08-31T17:27:09.759Z"
 updatedAt: "2021-05-04T18:04:25.359Z"
+category: "Storefront Development"
 ---
 A Cross-border store is a special case of a [multistore](https://help.vtex.com/en/tutorial/creating-multi-store-multi-domain--tutorials_510?locale=en).
 

@@ -4,6 +4,11 @@ slug: "vtex-io-documentation-managing-landing-pages-in-cross-border-stores"
 hidden: false
 createdAt: "2020-10-05T13:01:54.912Z"
 updatedAt: "2022-12-13T20:17:44.059Z"
+category: "Storefront Development"
+seeAlso:
+ - "/docs/guides/vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores"
+ - "/docs/guides/vtex-io-documentation-creating-a-new-custom-page"
+ - "/docs/guides/vtex-io-cross-border-stores"
 ---
 To meet your store's specific needs, you may want to [create custom landing pages](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page ). In a cross-border context, you may also want them to be distinct depending on the locations in which your shop operates.
 
@@ -134,13 +139,3 @@ If you don't want to have this landing page in the *default* binding, check the 
   ```
   
 Once you run this mutation, you'll remove the page related to the specified `{URL}` from the `{bindingId}` provided.
-
-## Next steps
-
-- [Indicating alternate versions of localized pages in cross border stores](https://developers.vtex.com/docs/guides/vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores)
-
-## Related resources
-
-- [Binding](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W?&utm_source=autocomplete)
-- [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page)
-- [Cross-border stores](https://developers.vtex.com/docs/guides/vtex-io-cross-border-stores)

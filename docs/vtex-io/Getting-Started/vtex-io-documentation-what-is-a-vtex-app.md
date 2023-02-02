@@ -4,6 +4,12 @@ slug: "vtex-io-documentation-what-is-a-vtex-app"
 hidden: false
 createdAt: "2022-01-18T17:20:04.667Z"
 updatedAt: "2022-12-13T20:17:44.128Z"
+category: "App Development"
+seeAlso:
+ - "/docs/guides/concepts"
+ - "/docs/guides/vtex-io-documentation-developing-an-app"
+ - "/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store"
+ - "docs/guides/vtex-io-getting-started"
 ---
 A VTEX App extends the functionalities of the VTEX platform, helping merchants create comprehensive experiences for different layers of digital commerce, such as:
 
@@ -53,18 +59,3 @@ A VTEX App can also be characterized as:
 - **Public**: Apps published on the VTEX App Store.
 - **Single-account**: Apps designed to run for a single account, i.e., in a single store.
 - **Multi-account**: Apps designed to run in multiple accounts, i.e., different stores. The vendor’s responsibility is to handle account isolation properly in the application layer.
-
-## Related resources
-
-- [VTEX App Store](https://apps.vtex.com/)
-
-- [Concepts](https://developers.vtex.com/docs/guides/concepts): VTEX IO concepts.
-- [Developing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app): Steps and tools you need to create your app.
-
-- [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution): Basic requirements to meet before submitting your app to the review process.
-
-- [Best Practices](https://developers.vtex.com/docs/guides/best-practices): Achieve better results by following VTEX developer's recommendations.
-
-- [User experience Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store): Ensure that your app complies with the Business, Design and Engineering guidelines.
-
-- [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store): Submit your app to the VTEX App Store review process.

@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-setting-up-google-analytics-search-tracking"
 hidden: true
 createdAt: "2020-06-03T16:02:44.339Z"
 updatedAt: "2022-12-13T20:17:44.299Z"
+category: "Storefront Development"
 ---
 
 ## Introduction

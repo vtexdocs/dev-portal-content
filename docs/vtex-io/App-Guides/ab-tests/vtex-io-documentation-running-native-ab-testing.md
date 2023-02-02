@@ -4,6 +4,9 @@ slug: "vtex-io-documentation-running-native-ab-testing"
 hidden: false
 createdAt: "2020-06-03T16:02:44.475Z"
 updatedAt: "2022-12-13T20:17:44.109Z"
+category: "App Development"
+seeAlso:
+ - "/docs/guides/vtexarg-abtester"
 ---
 
 An A/B test compares traffic between two workspaces: the master and a production workspace, and reveals which version is best for your business needs.

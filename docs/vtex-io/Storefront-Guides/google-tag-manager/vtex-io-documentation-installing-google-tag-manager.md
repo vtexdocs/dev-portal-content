@@ -4,6 +4,8 @@ slug: "vtex-io-documentation-installing-google-tag-manager"
 hidden: false
 createdAt: "2022-02-01T13:34:01.638Z"
 updatedAt: "2022-12-13T20:17:44.697Z"
+excerpt: "Step-by-step on how to install the Google Tag Manager app in your VTEX Admin."
+category: "Storefront Development"
 ---
 
 ## Before you start

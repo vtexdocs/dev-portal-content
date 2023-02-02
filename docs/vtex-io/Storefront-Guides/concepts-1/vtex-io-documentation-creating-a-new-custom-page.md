@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-creating-a-new-custom-page"
 hidden: false
 createdAt: "2020-06-03T16:02:44.295Z"
 updatedAt: "2022-12-13T20:17:44.080Z"
+category: "Storefront Development"
 ---
 
 Stores are made up of several different pages, each one having a different layout and content. When creating a store from scratch in VTEX IO, some default pages with predefined URLs are already available to you, such as:

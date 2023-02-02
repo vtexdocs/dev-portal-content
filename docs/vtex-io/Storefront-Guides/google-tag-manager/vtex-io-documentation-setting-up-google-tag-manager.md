@@ -4,6 +4,12 @@ slug: "vtex-io-documentation-setting-up-google-tag-manager"
 hidden: false
 createdAt: "2020-06-03T16:02:44.272Z"
 updatedAt: "2022-12-13T20:17:44.813Z"
+category: "Storefront Development"
+excerpt: "Step-by-step to update the Google Tag Manager app to version 3.x."
+seeAlso:
+ - "/docs/guides/google-tag-manager"
+ - "/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app"
+ - "/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking"
 ---
 
 Once you have installed the [VTEX IO Google Tag Manager app](https://developers.vtex.com/docs/guides/google-tag-manager), set it up in your store by configuring all the necessary variables, triggers, and tags.
@@ -290,8 +296,3 @@ The `dimension1`, `dimension2`, `dimension3` properties are custom dimensions th
 
 For more information about custom dimensions and Enhanced Ecommerce, refer to [Custom dimensions and metrics](https://support.google.com/analytics/answer/2709828?hl=en&ref_topic=2709827#configuration&zippy=%2Cin-this-article) and [Google Enhanced ecommerce official guide](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce#ecommerce-data) respectively.
 
-## Related resources
-
-- [Google Tag Manager app](https://developers.vtex.com/docs/guides/google-tag-manager)
-- [Migrating Google Tag Manager app from major 2.x to major 3.x](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app)
-- [Setting up Google Analytics search tracking](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking)

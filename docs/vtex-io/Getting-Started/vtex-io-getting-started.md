@@ -2,6 +2,7 @@
 title: "Getting Started"
 slug: "vtex-io-getting-started"
 excerpt: "Learning-oriented tutorials aimed to guide you towards developing your first store with the Store Framework and building VTEX IO solutions from scratch."
+category: "App Development"
 hidden: false
 createdAt: "2021-03-22T21:02:10.543Z"
 updatedAt: "2022-01-31T16:32:14.955Z"

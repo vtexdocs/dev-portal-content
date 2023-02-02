@@ -5,6 +5,7 @@ excerpt: "Explore the Concepts section to learn more about the core aspects of t
 hidden: false
 createdAt: "2020-06-18T18:36:59.151Z"
 updatedAt: "2022-02-16T14:50:28.176Z"
+category: "App Development"
 ---
 ## [Billing Options](/docs/guides/vtex-io-documentation-billing-options)
 

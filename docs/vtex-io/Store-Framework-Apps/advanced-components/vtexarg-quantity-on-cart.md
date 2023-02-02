@@ -44,9 +44,7 @@ vtex install vtexarg.quantity-on-cart
 
 After step 5, no further configuration is needed, and the app is ready to use in your store.
 
-> ℹ️
->
-> The displayed message in the Quantity On Cart app is available in three languages: English (EN), Spanish (ES), and Portuguese (PT), and follows the pattern below, which cannot be changed: EN - `You have x units in your shopping cart.` | ES - `Tienes x unidades en el carrito.` | PT - `Você tem x unidades no carrinho.`
+> ℹ️ The displayed message in the Quantity On Cart app is available in three languages: English (EN), Spanish (ES), and Portuguese (PT), and follows the pattern below, which cannot be changed: EN - `You have x units in your shopping cart.` | ES - `Tienes x unidades en el carrito.` | PT - `Você tem x unidades no carrinho.`
 
 ---
 

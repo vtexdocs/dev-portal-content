@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-developing-an-app"
 hidden: false
 createdAt: "2022-03-04T20:09:05.300Z"
 updatedAt: "2022-12-13T20:17:44.583Z"
+category: "App Development"
 ---
 
 In this guide, you will learn how to develop an app using the VTEX IO platform. You will be presented with some core concepts of the platform and guided through the necessary steps to have a running application in VTEX IO.
