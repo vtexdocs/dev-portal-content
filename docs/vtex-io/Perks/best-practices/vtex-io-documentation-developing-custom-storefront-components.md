@@ -129,7 +129,7 @@ Instead of creating specific props to attend to devices' typical scenarios, leve
 
 ### Slots
 
-Slots enable you to render components through props instead of declaring an array of blocks in the Store Theme. Its simplicity removes the need for the `allowed` property in the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interfaces) file and enlights your code, increasing the flexibility when developing a new storefront component.
+Slots enable you to render components through props instead of declaring an array of blocks in the Store Theme. Its simplicity removes the need for the `allowed` property in the [interface](https://developers.vtex.com/docsdocs/guides/vtex-io-documentation-interface) file and enlights your code, increasing the flexibility when developing a new storefront component.
 
 You can learn more about Slots [here](https://developers.vtex.com/docs/guides/vtex-io-documentation-slots).
 
@@ -171,7 +171,7 @@ When [uploading the desired media assets to the VTEX File Server](https://develo
 
 Performance can be optimized during the component rendering as well.
 
-When declaring the block's [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interfaces), set the `Hydration` attribute and pass `on-view` as its value to only load and properly render your component once users find it on the interface.
+When declaring the block's [interface](https://developers.vtex.com/docsdocs/guides/vtex-io-documentation-interface), set the `Hydration` attribute and pass `on-view` as its value to only load and properly render your component once users find it on the interface.
 
 The [Footer](https://developers.vtex.com/docs/guides/vtex-store-footer) is a good example of a Store Framework's native component that counts on this attribute to be rendered optimizing store performance!
 

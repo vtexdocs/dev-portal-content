@@ -31,6 +31,6 @@ Use this token for your next requests until an empty list is returned.
 [block:callout]
 {
   "type": "info",
-  "body": "For more details, see our [documentation for MasterData APIs](https://developers.vtex.com/reference/master-data-api-v1-overview)."
+  "body": "For more details, see our [documentation for MasterData APIs](https://developers.vtex.com/docs/api-reference/masterdata-api#overview)."
 }
 [/block]

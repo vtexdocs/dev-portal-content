@@ -16,7 +16,7 @@ Intelligent Search is a [VTEX IO](https://vtex.com/us-en/store-framework/) alter
 
 The [VTEX Search app](https://developers.vtex.com/docs/guides/vtex-search) is responsible for handling the new [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) solution in IO stores by providing new UI components that enhance the search experience, such as the autocomplete feature.
 
-![Search app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-0_21.gif)
+![Search app](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-0_21.gif)
 
 ### Intelligent Search API
 
@@ -28,19 +28,19 @@ The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/inte
 
 [VTEX Search Result app](https://developers.vtex.com/docs/guides/vtex-search-result) is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/docs/api-reference/search-api#overview) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
 
-![Search Result](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-1_33.png)
+![Search Result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-1_33.png)
 
 ### Search Bar
 
 The [Search Bar component](https://developers.vtex.com/docs/guides/vtex-store-components-searchbar) shows a search bar with autocomplete options and displays the matching products.
 
-![Search Bar](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-2_39.png)
+![Search Bar](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-2_39.png)
 
 ### Autocomplete
 
 The [Autocomplete](https://developers.vtex.com/docs/guides/vtex-search-autocomplete) is an alternative for the default VTEX autocomplete. The functionality displays previous search results based on current and previous searches. These results are presented in four different lists, which can be together or separated, depending on the customer's interaction.
 
-![Autocomplete](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-3_45.png)
+![Autocomplete](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-3_45.png)
 
 ### Banners
 
@@ -66,7 +66,7 @@ You can provide your customers with a more customized experience navigating the 
 - [Building a search results page with multiple layouts](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts)
 - [Creating a custom search results page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-custom-search-results-page)
 
-![Segmenting the search result](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Getting%20Started/search-overview-4_71.gif)
+![Segmenting the search result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-4_71.gif)
 
 ## Integrating an external search provider with VTEX
 
