@@ -4,7 +4,7 @@ slug: "new-catalog-api-available-for-seller-portal"
 type: "added"
 createdAt: "2022-10-20T14:45:00.000Z"
 hidden: false
-excerpt: "We have released the [Catalog API - Seller Portal](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-seller-portal-overview) to enable sellers using Seller Portal to massively create, fetch and edit information concerning products, SKUs, brands and categories."
+excerpt: "We have released the [Catalog API - Seller Portal](https://developers.vtex.com/docs/api-reference/catalog-api-seller-portal#overview) to enable sellers using Seller Portal to massively create, fetch and edit information concerning products, SKUs, brands and categories."
 ---
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-catalog-api-available-for-seller-portal-0.png)
@@ -15,7 +15,7 @@ The [Seller Portal](https://help.vtex.com/en/tutorial/how-to-set-up-your-store-o
 
 Previously, sellers were limited to integrating their catalog manually through the Seller Portal interface.
 
-Now, we have released the [Catalog API - Seller Portal](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-seller-portal-overview) to enable sellers using Seller Portal to massively create, fetch and edit information concerning products, SKUs, brands and categories.
+Now, we have released the [Catalog API - Seller Portal](https://developers.vtex.com/docs/api-reference/catalog-api-seller-portal#overview) to enable sellers using Seller Portal to massively create, fetch and edit information concerning products, SKUs, brands and categories.
 
 The following endpoints are now available:
 

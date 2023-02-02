@@ -14,7 +14,7 @@ There are two ways a VTEX store can offer gift cards to their customers:
 
 To use our native gift card solution, simply set it up as a payment method and your customers will be able to use their gift cards on your store's checkout. These gift cards are created and managed in your store's admin panel.
 
-To integrate with an external gift card provider, however, you must develop a middleware according to our [Gift Card Provider Protocol](https://developers.vtex.com/vtex-rest-api/reference/giftcard-provider-protocol-overview). This tutorial will present the main concepts and guide you through the steps required to complete this integration.
+To integrate with an external gift card provider, however, you must develop a middleware according to our [Gift Card Provider Protocol](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#overview). This tutorial will present the main concepts and guide you through the steps required to complete this integration.
 [block:callout]
 {
   "type": "info",
