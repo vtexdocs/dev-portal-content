@@ -43,7 +43,7 @@ This code renders a list with __three links__:
 
 To find a list on the site, click on the link “My List” and complete one of the filter fields, as shown below. This page can vary, depending on how the site is customized, and can, for instance, be limited simply to the fields “Name”, “Sobrenome” and “Data do Evento”.
 
-- **Tipo de lista:** Selection of type of list according to the registration made by the store owner on the platform, as explained in the article [How to create a type of list](/en/tutorial/creating-a-type-of-list "How to create a type of list"). This field is the only one which, if completed, requires another field to be completed as well, since your site will contain lists of a number of consumers, and if “type of list” returned all the results, a client would have access to your other clients’ lists;
+- **Tipo de lista:** Selection of type of list according to the registration made by the store owner on the platform, as explained in the article [How to create a type of list](http://help.vtex.com/en/tutorial/creating-a-type-of-list). This field is the only one which, if completed, requires another field to be completed as well, since your site will contain lists of a number of consumers, and if “type of list” returned all the results, a client would have access to your other clients’ lists;
 - **Código da lista:** Code provided when you create a list. This field can only be used to filter a list;
 - **Nome:** First name, defined by the owner of the list. Guests or any users searching for a list will normally use the owner’s first name. This field can be used on its own, to filter lists with the first name of the owner, but if the owner has more than one list, they will all be shown;
 - **Sobrenome:** Last name, defined by the owner of the list. This field can be used on its own, to filter lists in the last name of the owner, but if the owner has more than one list, they will all be shown. If used jointly with the first name and type of list fields, a more specific result will be shown;
@@ -127,6 +127,6 @@ _There is a limit to the number of associations of **300** SKUs per list._
 
 Items purchased from your list will generate a credit that will accrue on a voucher automatically generated at the time the list is created. This voucher will work as a form of payment, so that the list owner redeems on purchases on the site any items they wish.
 
-Learn more about the form of payment worth in the article [Gift Card](/en/tutorial/how-to-configure-gift-cards). Remembering that the types of lists available for site creation should be pre-built on the platform by the retailer.
+Learn more about the form of payment worth in the article [Gift Card]([/en/tutorial/how-to-configure-gift-cards](https://help.vtex.com/en/tutorial/gift-card--tutorials_995)). Remembering that the types of lists available for site creation should be pre-built on the platform by the retailer.
 
 **Important Note:** Stores that are marketplace (sell sellers products, other partners in your store) are not eligible to use List Voucher.
