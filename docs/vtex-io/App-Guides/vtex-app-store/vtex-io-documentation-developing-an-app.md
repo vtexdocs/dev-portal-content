@@ -6,7 +6,7 @@ createdAt: "2022-03-04T20:09:05.300Z"
 updatedAt: "2022-12-13T20:17:44.583Z"
 category: "App Development"
 seeAlso:
- - "/docs/guides/vtex-io-documentation-manifest#vendor"
+ - "/docs/guides/vtex-io-documentation-manifest"
  - "/docs/guides/vtex-io-documentation-builders"
  - "/docs/guides/vtex-io-documentation-dependencies"
  - "/docs/guides/vtex-io-documentation-workspace"
