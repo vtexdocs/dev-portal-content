@@ -5,7 +5,7 @@ hidden: false
 createdAt: ""
 updatedAt: ""
 ---
-To assist the customer in the process of filling in data at Checkout and also to select the sellers able to deliver the product in a certain area, it is possible to register postal codes and assign them to addresses in the VTEX database. For more information about deliveries, visit [Inventory &amp; shipping - Overview](https://help.vtex.com/en/tutorial/visao-geral-logistics--tutorials_143).
+To assist the customer in the process of filling in data at Checkout and also to select the sellers able to deliver the product in a certain area, it is possible to register postal codes and assign them to addresses in the VTEX database. For more information about deliveries, visit [Inventory & shipping - Overview](https://help.vtex.com/en/tutorial/visao-geral-logistics--tutorials_143).
 
 This guide describes how to obtain the registered address information for a specific postal code and country.
 
