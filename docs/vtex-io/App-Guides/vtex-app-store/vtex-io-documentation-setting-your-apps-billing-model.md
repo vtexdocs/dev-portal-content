@@ -49,7 +49,7 @@ The first step in making an app public is defining whether the app will be charg
     "type": "free",
     "support": {
         "email": "support@com.br",
-        "url": "https://support.com/hc/requests",
+        "url": "https://support.com/hc/requests"
       },
     "availableCountries" : ["*"]
   }
@@ -68,7 +68,7 @@ The first step in making an app public is defining whether the app will be charg
     "type": "billable",
     "support": {
         "email": "support@com.br",
-        "url": "https://support.com/hc/requests",
+        "url": "https://support.com/hc/requests"
       },
     "availableCountries" : ["*"]
   }
@@ -98,7 +98,7 @@ Establish a subscription plan for your app by setting up the `plan` property and
       "type": "billable",
       "support": {
         "email": "support@com.br",
-        "url": "https://support.com/hc/requests",
+        "url": "https://support.com/hc/requests"
       },
       "availableCountries": ["*"],
       "plans": [{
@@ -319,8 +319,8 @@ If you opted for a variable-charge pricing strategy, you must ensure that your m
 
 ```
 {
- metric_id: {metricId},
- value: {metricAmount},
+  "metric_id": "{metricId}",
+  "value": "{metricAmount}"
 }
 ```
 
