@@ -15,6 +15,8 @@ MyAccount is a canonical app built in all VTEX stores. This app serves as a hub 
 
 The app is responsible for handling customer's personal data such as: profile info, passwords, addresses, orders and credit cards. Orders and credit cards are responsibilities of other two apps that come per default with the MyAccount, respectively, these apps are: `vtex.my-orders-app` and `vtex.my-cards`.
 
+> Be aware that VTEX does not offer support for a customized [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh). For more information, contact the front-end developer responsible for the module.
+
 ## Features
 
 This app provides a few extension points in order to allow apps to customize stores' experience as needed.
