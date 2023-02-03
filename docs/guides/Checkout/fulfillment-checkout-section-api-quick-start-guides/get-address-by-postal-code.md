@@ -43,7 +43,7 @@ The following errors may appear as a message in the response body.
 
 ### 200 - OK
 
-Despite the code `200` (which indicates the success of the request), if there is no registered address in the VTEX database associated with the entered postal code/country, the response body will not contain any address information.
+Despite the code `200` (which indicates the success of the request), if there is no registered address in the VTEX database associated with the entered postal code or country, the response body will not contain any address information.
 
 ```json
 {
