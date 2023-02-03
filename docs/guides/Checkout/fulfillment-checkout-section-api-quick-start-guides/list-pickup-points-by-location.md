@@ -139,7 +139,7 @@ The following errors may appear as a message in the response body.
 
 ### 404 - Not Found
 
-- **Message error example**: `"The requested URL was not found on the server"`. Check that the URL data is correct.
+- `Message error example: "The requested URL was not found on the server"`: check if the URL data is correct.
 
 ```html
 <body>
