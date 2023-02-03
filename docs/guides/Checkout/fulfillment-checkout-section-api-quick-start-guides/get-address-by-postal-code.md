@@ -62,7 +62,7 @@ Despite the code `200` (which indicates the success of the request), if there is
 
 ### 404 - Not Found
 
-- `Message error example: "The requested URL was not found on the server"`. Check that the URL data is correct.
+- `Message error example: "The requested URL was not found on the server"`: check that the URL data is correct.
 
 ```html
 <body>
