@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-09-01T21:32:07.470Z"
 updatedAt: "2022-07-08T17:20:38.546Z"
 ---
-Given the separation of concerns between [marketplace](https://developers.vtex.com/vtex-rest-api/reference/external-marketplace) and seller, creating a custom connector for external systems requires mapping out the equivalent behavior observed in VTEX stores. This step provides an overview of what is expected of each subsystem.
+Given the separation of concerns between [marketplace](https://developers.vtex.com/docs/api-reference/marketplace-protocol#external-marketplace) and seller, creating a custom connector for external systems requires mapping out the equivalent behavior observed in VTEX stores. This step provides an overview of what is expected of each subsystem.
 
 ## Business agreements
 
