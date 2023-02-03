@@ -109,7 +109,7 @@ The following errors may appear as a message in the response body.
 
 ### 400 - Bad Request
 
-- **Message error example (code ORD001)**: `"Input string was not in the correct format"`. This message will appear when the `geoCoordinates` value field is not sent correctly in the URL request.
+- `Message error example (code ORD001): "Input string was not in the correct format"`: this message will appear when the `geoCoordinates` value field is not set correctly in the URL request.
 
 ```json
 {
