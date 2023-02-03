@@ -1151,7 +1151,7 @@ If you wish to see the Outdated Checkout endpoint’s payload, go to [Outdated C
 
 ### GraphQL queries
 
-For integrations built with GraphQL, check out the `vtex.store-graphql` and `vtex.orders-graphql` queries below.
+For integrations built with GraphQL, see below the `orders` query provided by `vtex.store-graphql` and `vtex.orders-graphql`.
 
 #### Query vtex.store-graphql
 
