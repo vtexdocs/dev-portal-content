@@ -123,7 +123,7 @@ The following errors may appear as a message in the response body.
 }
 ```
 
-- **Message error example (code CHK0264)**: `"Pickup not found"`. This message will appear when there are no pickup points near the location informed in this request.
+- `Message error example (code CHK0264): "Pickup not found"`: this message will appear when there are no pickup points near the location informed in this request.
 
 ```json
 {
