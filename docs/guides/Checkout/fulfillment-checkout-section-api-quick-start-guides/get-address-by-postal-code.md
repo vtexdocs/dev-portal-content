@@ -73,7 +73,7 @@ Despite the code `200` (which indicates the success of the request), if there is
 
 ### 500 - Internal Server Error
 
-- `Message error example (code ORD026): "A communication error with Postal Code Service has occurred"`. This message will appear when less than 3 country code digits are entered in the URL request.
+- `Message error example (code ORD026): "A communication error with Postal Code Service has occurred"`: this message will appear when less than three country code digits are entered in the URL request.
 
 ```json
 {
