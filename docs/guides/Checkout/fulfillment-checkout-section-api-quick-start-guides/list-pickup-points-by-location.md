@@ -143,7 +143,7 @@ The following errors may appear as a message in the response body.
 
 ```html
 <body>
-	<h1>404 Not Found</h1>
-	<p>The requested URL was not found on this server.</p>
+ <h1>404 Not Found</h1>
+ <p>The requested URL was not found on this server.</p>
 </body>
 ```
