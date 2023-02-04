@@ -13,7 +13,7 @@ We have unified our VTEX Tracking APIs into a single version, so it's no longer 
 
 Previously, users could access `VTEX Tracking v1` and `VTEX Tracking v1.1` endpoints. The only difference between the two versions, was that `v1.1` retrieved a `pictures` object in delivery service responses. We have now unified both versions, and translated paths to english.
 
-No endpoints were deleted, and no attributes were changed. Check out the updated documentation for the [unified VTEX Tracking APIs](https://developers.vtex.com/vtex-developer-docs/reference/authentication).
+No endpoints were deleted, and no attributes were changed. Check out the updated documentation for the [unified VTEX Tracking APIs](https://developers.vtex.com/docs/api-reference/tracking#overview).
 
 > ⚠️ The previous paths were not deprecated, and are still being maintained by the VTEX Tracking team. If your business' integration was built with the previous `v1` and `v1.1` endpoints, it will still run smoothly. No changes in your integrations should be done during the Black Friday period. We will communicate any updates, and deprecations of endpoints in the future.
 
