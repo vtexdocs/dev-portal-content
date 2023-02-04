@@ -27,7 +27,7 @@ Learn how to integrate the VTEX Catalog with external marketplaces or connectors
 
 - **SKU**: item to be exchanged and sold between seller and marketplace
 
-- ** Sales channel/Trade policy**: product assortment, prices, and logistics configurations attached to a sales channel. Know more about [how to configure a marketplace trade policy](https://help.vtex.com/tutorial/configurando-a-politica-comercial-para-marketplace--tutorials_404).
+- **Sales channel/Trade policy**: product assortment, prices, and logistics configurations attached to a sales channel. Know more about [how to configure a marketplace trade policy](https://help.vtex.com/tutorial/configurando-a-politica-comercial-para-marketplace--tutorials_404).
 
 - **Connector**: party responsible for the integration, being either the marketplace itself, or an integration hub.
 
