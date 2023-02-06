@@ -26,7 +26,7 @@ Whether retailer or end user, I do hope that your checklist for this black week 
 - [CSS Handles](https://vtex.io/docs/releases/2019-week-45-46/css-handles) - The Breadcrumb was not the only one to have been gifted Handles this week. `savingPriceValue` and `savingPriceLabel` also had a lucky week and gained their own CSS Handles.
 - [Search query](https://vtex.io/docs/releases/2019-week-45-46/search-query) - Shall we celebrate search query's independence from the facets query? Even when the latter doesn't return any results, the former renders data fetched by the `productSearch` query, providing users with search results regardless.
 - [Search Result Gallery](https://vtex.io/docs/releases/2019-week-45-46/search-result-gallery) - During the Black Friday week, the e-commerce gods have bestowed the blessing upon the Gallery component, making it responsive and willing to accept different values for (almost) any existing device.
-- [Search Result OrderBy](search-result-orderby) - OrderBy’s new `hiddenOptions` prop does away with the component’s forced exhibitionism. Its options can now either be hidden or displayed according to the retailer’s chosen scenario.
+- [Search Result OrderBy](https://vtex.io/docs/releases/2019-week-45-46/search-result-orderby) - OrderBy’s new `hiddenOptions` prop does away with the component’s forced exhibitionism. Its options can now either be hidden or displayed according to the retailer’s chosen scenario.
 
 ### Notable bug fixes 🐛
 
