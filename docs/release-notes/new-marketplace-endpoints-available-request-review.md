@@ -12,7 +12,9 @@ We have just launched new endpoints in our Marketplace API, that allow marketpla
 
 Check out the API Reference for the new endpoints:
 
-- [Get SKU’s review information](https://developers.vtex.com/vtex-developer-docs/reference/review-received-skus#get-sku-review-information)
-- [Request Review of Received SKUs](https://developers.vtex.com/vtex-developer-docs/reference/review-received-skus#request-sku-review)
-- [Get Matched Offer's Data by Product ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/-accountName-.-environment-.com.br/api/offer-manager/pvt/product/-productId-)
-- [Get Matched Offer's Data by SKU ID](https://developers.vtex.com/vtex-developer-docs/reference/matched-offers#marketplace-api-get-matched-offers-skuid)
+- Get SKU’s review information
+- Request Review of Received SKUs
+- [Get Matched Offer's Data by Product ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/offer-manager/pvt/product/-productId-)
+- [Get Matched Offer's Data by SKU ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/offer-manager/pvt/product/-productId-/sku/-skuId-)
+
+> ℹ The **Get SKU’s review information** and **Request Review of Received SKUs** endpoints are deprecated and were removed from our documentation.
