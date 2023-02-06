@@ -13,4 +13,4 @@ The new Session Client app provides React hooks and GraphQL query and mutation f
 > ℹ️ The Session cookie is natively enabled in all VTEX stores and is responsible for saving data of a specific session of a user browsing in your store.
 
 To know more about the Session Client functionality as well as its installation instructions, access the
-[app documentation](https://developers.vtex.com/docs/guides/vtex-session-client) now!
+[app documentation](https://github.com/vtex-apps/session-client) now!
