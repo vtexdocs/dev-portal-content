@@ -56,7 +56,7 @@ See a request body example below:
 }
 ```
 
-After sending the request, the endpoint will return `code 204 (No Content)` and an empty response body. 
+After sending the request, the endpoint will return `code 204 (No Content)` and an empty response body.
 
 To confirm that the new orderForm settings have been applied to your account, access the [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) endpoint again.
 
