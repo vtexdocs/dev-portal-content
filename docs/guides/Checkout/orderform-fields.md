@@ -695,7 +695,7 @@ An array containing an object for each seller being used in the order.
 
 This object contains shipping information for the order.
 
-**Example:**
+__Example:__
 
 ```json
 {
