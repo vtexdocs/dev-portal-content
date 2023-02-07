@@ -445,7 +445,7 @@ __Example:__
 
 This object contains promotion data such as coupon tracking information and internal or external UTMs.
 
-**Example:** 
+__Example:__
 
 ```json
 {
