@@ -671,7 +671,7 @@ Array containing the data of the item selected as a gift.
 
 An array containing an object for each seller being used in the order.
 
-**Example:**
+__Example:__
 
 ```json
 [
