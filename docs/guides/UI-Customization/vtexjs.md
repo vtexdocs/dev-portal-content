@@ -58,4 +58,5 @@ In order to develop properly, clone the [vtex.js repository](https://github.com/
 ```shell
 sudo grunt
 ```
+
 Now vtex.js can be linked to other repositories for development.
