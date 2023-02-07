@@ -39,7 +39,7 @@ The Checkout module handles customer purchase data.
 
 Checkout adds different data needed to create an order: client profile data, address, shipping, items data, and others.
 
-The `OrderForm` is the structure that contains this clustered data. It consists of several sections, each with useful information that can be accessed, manipulated, and (possibly) changed. To learn more, refer to the [OrderForm documentation](https://developers.vtex.com/vtex-rest-api/reference/checkout-api-overview#orderform-fields).
+The `OrderForm` is the structure that contains this clustered data. It consists of several sections, each with useful information that can be accessed, manipulated, and (possibly) changed. To learn more, refer to the [orderForm documentation](https://developers.vtex.com/docs/guides/orderform-fields).
 
 Check the complete documentation for all methods of this module [here](https://developers.vtex.com/vtex-rest-api/docs/vtexjs-for-checkout).
 
