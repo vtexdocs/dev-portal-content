@@ -140,7 +140,6 @@ __Example:__
 |   corporatePhone         |    String        |   If legal entity, here goes the company phone.        |
 |   isCorporate         |     Boolean       |  It has the value `true` if it's a legal entity.         |
 
-
 ### commercialConditionData
 
 >⚠️ This guide is currently being written and published as content becomes available.
