@@ -21,7 +21,7 @@ This feature renders a form in the checkout that allows the user to upload a fil
 ## Creating the app in the orderForm configuration
 
 1. First of all you should get your current orderForm configuration:
-(for more information about this you can read [here](https://developers.vtex.com/vtex-rest-api/reference/configuration#getorderformconfiguration))
+(for more information about this you can read [here](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm))
 
 Through Postman make a GET request to this endpoint
 `https://{{account}}.myvtex.com/api/checkout/pvt/configuration/orderForm`
