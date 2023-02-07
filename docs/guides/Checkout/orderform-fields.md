@@ -83,7 +83,7 @@ This structure is made of many __sections__.
 
 Object containing preferences from the client who placed the order.
 
-**Example:**
+__Example:__
 
 ```json
 {
