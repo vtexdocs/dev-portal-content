@@ -443,7 +443,7 @@ __Example:__
 
 ### marketingData
 
-This object contains promotion data such as coupon tracking information and internal or external UTMs. 
+This object contains promotion data such as coupon tracking information and internal or external UTMs.
 
 **Example:** 
 
