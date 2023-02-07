@@ -211,7 +211,6 @@ __Example:__
 |    addressId   |    String   |   Address ID.      |
 |    description   |    String   |   Gift registry description.      |
 
-
 ### hooksData
 
 >⚠️ This guide is currently being written and published as content becomes available.
