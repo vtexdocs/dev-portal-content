@@ -886,7 +886,7 @@ __Example:__
 
 It is a string containing the store ID.
 
-**Example:**
+__Example:__
 
 ```json
 {
