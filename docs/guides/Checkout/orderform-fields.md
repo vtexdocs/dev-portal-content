@@ -413,7 +413,7 @@ This is an object containing information pertinent to the order's invoice.
    "neighborhood": "Bot*****",
    "complement": "*** ** *",
    "reference": null
-  	},
+   },
     "settleInvoices":[]  
 }
 ```
