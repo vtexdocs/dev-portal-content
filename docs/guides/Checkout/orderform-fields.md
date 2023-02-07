@@ -614,7 +614,7 @@ __Example:__
 
 Information on rates and benefits that apply to the order.
 
-**Example:** 
+__Example:__
 
 ```json
 {
