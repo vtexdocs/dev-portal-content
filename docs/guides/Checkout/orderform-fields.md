@@ -52,7 +52,7 @@ The object's basic structure is:
 
 This structure is made of many __sections__.
 
->⚠️ Any properties representing monetary values will have **cents** as their units. (e.g. `10390` means **R$103,90** in Brazilian stores). In the following menu, you can find details regarding these sections.
+>⚠️ Any properties representing monetary values will have __cents__ as their units. (e.g. `10390` means __R$103,90__ in Brazilian stores). In the following menu, you can find details regarding these sections.
 
 ## `OrderForm` Sections
 
