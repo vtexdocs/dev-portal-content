@@ -509,7 +509,7 @@ Optional field meant to hold additional information about the order. We recommen
 
 This object contains all payment information inserted for this purchase.
 
-**Example:**
+__Example:__
 
 ```json
 {
