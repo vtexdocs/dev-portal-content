@@ -10,7 +10,7 @@ The orderForm is the main object processed by VTEX checkout, and one of the most
 
 This guide will describe how to update settings applied currently to every orderForm in a specific account.
 
->⚠️ Always retrieve the current orderForm configuration before performing an update to ensure that you are modifying only the properties you want. Otherwise, old values can be overwritten. To get the current orderForm configuration for a specific account, check the [Get orderForm configuration Dev. Guide](https://developers.vtex.com/vtex-rest-api/docs/get-orderform-configuration).
+>⚠️ Always retrieve the current orderForm configuration before performing an update to ensure that you are modifying only the properties you want. Otherwise, old values can be overwritten. To get the current orderForm configuration for a specific account, check the [Get an account's orderForm configuration Dev. Guide](https://developers.vtex.com/docs/guides/get-an-account-orderform-configuration).
 
 ## Updating an account's orderForm configuration
 
@@ -69,7 +69,7 @@ To confirm that the new orderForm settings have been applied to your account, ac
 The following errors may appear as a message in the response body.
 
 ### 401 - Unauthorized
-- **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (Application Key and Application Token) used in this request are incorrect or not authorized to access this type of information.
+- `Message error example (code ORD062): "Unauthorized"`: the credentials (Application Key and Application Token) used in this request are incorrect or not authorized to access this type of information.
 
 ```json
 {
@@ -85,7 +85,7 @@ The following errors may appear as a message in the response body.
 
 ### 404 - Not Found
 
-- **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
+- `Message error example: "The requested URL was not found on the server"`: check that the URL data is correct.
 
 ```json
 <body>
