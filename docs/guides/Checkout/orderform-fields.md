@@ -191,7 +191,7 @@ __Example:__
 
 Object containing the gift registration list data.
 
-**Example:** 
+__Example:__
 
 ```json
 {
