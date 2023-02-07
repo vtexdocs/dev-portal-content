@@ -219,7 +219,7 @@ __Example:__
 
 it is an array containing an object describing every item in the buyer's cart.
 
-**Example:** 
+__Example:__
 
 ```json
 "items": [
