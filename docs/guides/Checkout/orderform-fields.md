@@ -929,7 +929,7 @@ __Example:__
 
 This array contains an object for each totalizer for the purchase. Totalizers contain the sum of values for a specific part of the order (e.g. Total item value, Total shipping value).
 
-**Example:**
+__Example:__
 
 ```json
 [
