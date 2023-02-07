@@ -426,7 +426,7 @@ This is an object containing information pertinent to the order's invoice.
 
 This is an object containing information about the ordering of items within the orderForm.
 
-**Example:** 
+__Example:__
 
 ```json
 {
