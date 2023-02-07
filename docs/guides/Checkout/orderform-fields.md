@@ -146,7 +146,7 @@ __Example:__
 
 ### customData
 
-During the checkout process, some stores need to include data gathered from the client that is not part of our standard `orderForm` format (e.g. gender, cell phone number, age). 
+During the checkout process, some stores need to include data gathered from the client that is not part of our standard `orderForm` format (e.g. gender, cell phone number, age).
 
 To do that you will need to create extra fields in the `orderForm` and those will be located inside the `customData` parameter.
 
