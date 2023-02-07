@@ -106,7 +106,7 @@ If the customer has not yet informed her or his e-mail, much of the data may be 
 
 If the customer's e-mail has not yet been confirmed, several personal data will be censored, that is, some of its parts will be hidden by asterisks to avoid identification.
 
-**Example:** 
+__Example:__
 
 ```json
 {
