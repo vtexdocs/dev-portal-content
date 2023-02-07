@@ -507,7 +507,7 @@ Optional field meant to hold additional information about the order. We recommen
 
 ### paymentData
 
-This object contains all payment information inserted for this purchase. 
+This object contains all payment information inserted for this purchase.
 
 **Example:**
 
