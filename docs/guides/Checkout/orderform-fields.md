@@ -150,7 +150,7 @@ During the checkout process, some stores need to include data gathered from the 
 
 To do that you will need to create extra fields in the `orderForm` and those will be located inside the `customData` parameter.
 
-**Example:** 
+__Example:__
 
 ```json
 "customData": {
