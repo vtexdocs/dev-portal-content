@@ -902,7 +902,7 @@ __Example:__
 
 This object contains data from the store's configuration (stored in VTEX's License Manager).
 
-**Example:**
+__Example:__
 
 ```json
 {
