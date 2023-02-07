@@ -9,7 +9,7 @@ excerpt: "We have created quick-start guides to provide more details on how the 
 
 ![Documentation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-quick-start-guides-for-checkout-0.png)
 
-We have created quick-start guides to provide more details on how the Checkout APIs work and use them. Initially, we are making available the following guides from the [Shopping cart section](https://developers.vtex.com/vtex-rest-api/reference/checkout-api-overview#shopping-cart):
+We have created quick-start guides to provide more details on how the Checkout APIs work and use them. Initially, we are making available the following guides from the [Shopping cart section](https://developers.vtex.com/docs/guides/checkout-api-overview#shopping-cart):
 
 - [Simulate a shopping cart](https://developers.vtex.com/vtex-rest-api/docs/simulate-a-shopping-cart)
 - [Create a new cart](https://developers.vtex.com/vtex-rest-api/docs/create-a-new-cart)
