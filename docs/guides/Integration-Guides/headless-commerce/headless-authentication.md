@@ -19,6 +19,8 @@ This is the flow of shopper authentication for headless VTEX stores:
 2. Your frontend [exchanges the OAuth identity provider access token for a VTEX user token](#exchanging-oauth-identity-provider-access-token-for-vtex-user-token).
 3. Now you can make requests from your frontend to VTEX APIs using the obtained [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token).
 
+RESPONSABILITIES OF VTEX AND THE STORE TO MAKE THIS FLOW WORK
+
 Below you can learn more details on each of these steps.
 
 ### OAuth log in
@@ -48,7 +50,11 @@ Request body:
 }
 ```
 
-- `providerId` must be the same as configured in the [OAuth integration](#oauth-log-in).
+- `providerId` - Identity provider ID as configured in the [OAuth integration setup](#oauth-log-in).
+- `accessToken` - Access token that gets to your frontend as a result of a successful [OAuth login](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests).
+- `duration` - Duration of the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that will be returned. This field is optional and the default is 60.
+
+>ℹ️ Your frontend must be prepared to handle the expiration of the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) after the `duration` period.
 
 Response body:
 ```
@@ -56,6 +62,8 @@ Response body:
 "authToken": "eyJhbGciOiJFUzI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bnQiOiJwerV4aGVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-Jf463lwgLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ"
 }
 ```
+
+- `authToken` - [User token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that can be used to [authenticate API requests](#making-requests-to-vtex-apis).
 
 ### Making requests to VTEX APIs
 
