@@ -8,7 +8,7 @@ updatedAt: "2022-06-17T14:46:06.405Z"
 
 Offer Management is the VTEX feature that gives sellers more visibility around a product’s sending process to external channels, like marketplaces. Offer Management does not reflect what happens to offers after they’re sent to channels and start being sold. Instead, it helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing that they can be sent to the marketplace and synced correctly.
 
-Connectors are responsible for integrating marketplaces to Offer Management, so that sellers can have updated information about their offers, and solve any errors around them. 
+Connectors are responsible for integrating marketplaces to Offer Management, so that sellers can have updated information about their offers, and solve any errors around them.
 
 **This documentation is a guide for connectors to integrate with Offer Management, and become an available channel for sellers to track their offers with.**
 
