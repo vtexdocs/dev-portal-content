@@ -69,6 +69,7 @@ The frontmatter is the table with metadata about the article you're adding. It c
 - **hidePaginationPrevious**: boolean that shows in the article's footer a hyperlink to the previous article listed on the navigation. Mark as `true` to  hide the link to the previous doc on the navigation. 
 - **hidePaginationNext**: boolean that shows in the article's footer a hyperlink to the next article listed on the navigation. Mark as `true` to  hide the link to the following doc on the navigation. 
 
+
 ### How can I make sure my content will be visible and rendered correctly?
 
 - Make sure you have a unique slug.
