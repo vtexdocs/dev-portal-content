@@ -8,7 +8,9 @@ updatedAt: "2022-06-17T14:46:06.405Z"
 
 Offer Management is the VTEX feature that gives sellers more visibility around a product’s sending process to external channels, like marketplaces. Offer Management does not reflect what happens to offers after they’re sent to channels and start being sold. Instead, it helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing that they can be sent to the marketplace and synced correctly.
 
-Connectors are responsible for integrating marketplaces to Offer Management, so that sellers can have updated information about their offers, and solve any errors around them. This documentation is a guide for connectors to integrate with Offer Management.
+Connectors are responsible for integrating marketplaces to Offer Management, so that sellers can have updated information about their offers, and solve any errors around them. 
+
+**This documentation is a guide for connectors to integrate with Offer Management, and become an available channel for sellers to track their offers with.**
 
 Connectors interact with Offer Management in four ways:
 
@@ -35,20 +37,22 @@ The diagram below shows the Offer Management’s interface, which the vendors ac
 
 The first step for connectors to integrate with Offer Management is to create a channel, that represents the marketplace to where sellers will send their offers.
 
-The [Create Channel API](https://developers.vtex.com/vtex-rest-api/reference/createchannel) must be called a single time by the connector for each marketplace. The feedId created by this call will apply to all sellers connected to the given channel, and will be necessary for the next step of the integration flow.
+The [Create Channel API](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels) must be called a single time by the connector for each marketplace. The feedId created by this call will apply to all sellers connected to the given channel, and will be necessary for the next step of the integration flow. 
+
+>⚠️ Note that creating the channel through API is a sensitive step, and does not include public endpoints for retrieving (GET), updating (PUT), or deleting (DELETE) the channel created. If you wish to make any changes of this sort, you can request it through a support ticket with VTEX.
 
 ## 2.  Feed: establishing the connection
 
 > **API Reference:** Activate Feed
 
-After the [channel is created](https://developers.vtex.com/vtex-rest-api/reference/createchannel), the connection between seller and marketplace can be established, through the feed. The channels available for connecting with Offer Management are:
+After the [channel is created](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels), the connection between seller and marketplace can be established, through the feed. The channels available for connecting with Offer Management are:
 
 - Mercado Livre Classic
 - Mercado Livre Premium
 - Netshoes
 - VTEX marketplaces
 
-The feed links the created channel to a seller’s account, so offers and their data can be exchanged. When a connector calls the [Activate Feed](https://developers.vtex.com/vtex-rest-api/reference/create-feed) API, it establishes the relation between a seller and the channel. This endpoint should only be used once, to activate the channel and establish the connection. However, If a feed is deactivated, it can be reactivated for that channel by a second call to the Activate Feed API.
+The feed links the created channel to a seller’s account, so offers and their data can be exchanged. When a connector calls the [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds) API, it establishes the relation between a seller and the channel. This endpoint should only be used once, to activate the channel and establish the connection. However, If a feed is deactivated, it can be reactivated for that channel by a second call to the Activate Feed API.
 
 ### Managing the Feed ID
 
@@ -70,9 +74,9 @@ Both the Marketplace and the seller operate everything that happens to offers by
 
 An interaction is the space where a process around an offer and all the actions within it are recorded. It’s lifecycle is the following:
 
-1. **Open interaction:** connectors [open an interaction](https://developers.vtex.com/vtex-rest-api/reference/open-interaction) to begin adding a process to an offer.
-2. **Create logs:** while open, connectors include in that interaction all the steps that happened to make it come to life, by adding [logs](https://developers.vtex.com/vtex-rest-api/reference/create-log).
-3. **Close interaction:**  the connector [closes the interaction](https://developers.vtex.com/vtex-rest-api/reference/close-interaction), once the process it was trying to accomplish is concluded and there are no more events taking place within it.
+1. **Open interaction:** connectors [open an interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions) to begin adding a process to an offer.
+2. **Create logs:** while open, connectors include in that interaction all the steps that happened to make it come to life, by adding [logs](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs).
+3. **Close interaction:**  the connector [closes the interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close), once the process it was trying to accomplish is concluded and there are no more events taking place within it.
 
 ### Interaction Origins
 
@@ -227,16 +231,17 @@ Note that once the feed is deleted, all offers’ data, errors and their logs wi
 
 ## API Reference
 
-1. [Create Channel](https://developers.vtex.com/vtex-rest-api/reference/createchannel)
-2. [Activate Feed](https://developers.vtex.com/vtex-rest-api/reference/create-feed)
-3. [Update Feed](https://developers.vtex.com/vtex-rest-api/reference/update-feed)
-4. [Get Feed by feedId](https://developers.vtex.com/vtex-rest-api/reference/get-feed-by-feedid)
-5. [Deactivate Feed](https://developers.vtex.com/vtex-rest-api/reference/deactivate-feed)
-6. [Open Interaction](https://developers.vtex.com/vtex-rest-api/reference/open-interaction)
-7. [Get Interaction Data by interactionId](https://developers.vtex.com/vtex-rest-api/reference/get-interaction-data-by-interactionid)
-8. [Close Interaction](https://developers.vtex.com/vtex-rest-api/reference/close-interaction)
-9. [Create Log](https://developers.vtex.com/vtex-rest-api/reference/create-log)
-10. [Get Log Data by logId](https://developers.vtex.com/vtex-rest-api/reference/get-log-data-by-logid)
-11. [Search Interactions and their Logs](https://developers.vtex.com/vtex-rest-api/reference/search-interactions-logs)
-12. [Search Errors](https://developers.vtex.com/vtex-rest-api/reference/search-errors)
-13. [Get Error Code data by errorCodeId](https://developers.vtex.com/vtex-rest-api/reference/get-error-code-data)
+1. [Create Channel](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels)
+2. [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds)
+3. [List Feeds](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds)
+4. [Update Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#put-/api/sent-offers/feeds/-feedId-)
+5. [Get Feed by feedId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-)
+6. [Deactivate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#delete-/api/sent-offers/feeds/-feedId-)
+7. [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions)
+8. [Get Interaction Data by interactionId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-)
+9. [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)
+10. [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)
+11. [Get Log Data by logId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs/-logId-)
+12. [Search Interactions and their Logs](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/search/interactions)
+13. [Search Errors](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/search/errors)
+14. [Get Error Code data by errorCodeId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/error-codes/-errorCodeId-)
