@@ -7,7 +7,17 @@ createdAt: "2020-01-15T18:58:34.632Z"
 updatedAt: "2021-03-26T14:04:17.887Z"
 ---
 
-Let's test a simple `GET` call to see if you receive a `200 OK` response.
+You can use the `TEST METHOD` button in [VTEX API reference](https://developers.vtex.com/docs/api-reference) to test API requests as you read the documentaion. In this tutorial you will learn how to use this feature.
+
+## Trying out a simple GET
+
+>⚠️ The example below is based on the [List orders endpoint](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders), but these instructions apply for any endpoint you wish to try. Feel free to follow along.
+
+To try out an API request follow these steps:
+
+1. Head to the API reference page of the endpoint you wish to test, such as the [List orders endpoint](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders).
+
+![List orders page](./making-your-first-request-1)
 
 Check out the following example, where we use the **Try It** feature in the API Reference of these Developer Docs to try a GET Category request. The `{{appKey}}` and `{{appToken}}` in the image should be replaced by your own appKey and appToken.
 ![API Reference testing feature. Try it yourself!](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-making-your-first-request-0.png)
