@@ -1,6 +1,6 @@
 ---
 title: "Making your first request"
-slug: "getting-started-making-your-first-request"
+slug: "making-your-first-request"
 excerpt: "Learn how to make an API request"
 hidden: false
 createdAt: "2020-01-15T18:58:34.632Z"
@@ -17,7 +17,7 @@ See below the expected response in our `apiexamples` store:
 
 If you get a `401 - Unauthorized` as response, review the authentication steps. Make sure that the right permissions are defined in the roles and that you copied the exact appKey and appToken values into the headers of the request.
 
-If you received a `200 OK` response, congratulations on your first successful request to VTEX APIs!   🎉
+If you received a `200 OK` response, congratulations on your first successful request to VTEX APIs! 🎉
 
 ## Using Postman
 
