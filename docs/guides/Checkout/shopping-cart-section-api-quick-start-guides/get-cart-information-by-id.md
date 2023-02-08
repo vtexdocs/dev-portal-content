@@ -85,8 +85,11 @@ The following error may appear as a message in the response body.
 
 ### 404 - Not Found
 
-- `Message error example: "The requested URL was not found on the server"`: check that the URL data is correct.
+- `Message error example: "The requested URL was not found on the server"`. Check that the URL data is correct.
 
 ```html
-https://developers.vtex.com/docs/guides/orderform-fields
+<body>
+	<h1>404 Not Found</h1>
+	<p>The requested URL was not found on this server.</p>
+</body>
 ```
