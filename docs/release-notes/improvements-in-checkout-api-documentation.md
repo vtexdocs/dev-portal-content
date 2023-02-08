@@ -10,36 +10,36 @@ type: ""
 
 We have made new Checkout endpoints available in our API documentation:
 
-- [New shopping cart](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#newshoppingcart)
-- [Get cart information](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#getcartinformation)
-- [Ignore profile data](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#ignoreprofiledata)
-- [Add client profile](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments#addclientprofile)
-- [Add shipping address](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments#addshippingaddress)
-- [Add client preferences](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments#addclientpreferences)
-- [Add marketing data](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments#addmarketingdata)
-- [Add payment data](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments#addpaymentdata)
-- [Place order](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder)
-- [Place order from existing cart](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorderfromexistingorderform)
+- [Create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm)
+- [Get cart information by ID](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm/-orderFormId-)
+- [Ignore profile data](https://developers.vtex.com/docs/api-reference/checkout-api#patch-/api/checkout/pub/orderForm/-orderFormId-/profile)
+- [Add client profile](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData)
+- [Add shipping address](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData)
+- [Add client preferences](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/clientPreferencesData)
+- [Add marketing data](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/marketingData)
+- [Add payment data](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/paymentData)
+- [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
+- [Place order from existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-)
 
 Also, we have reorganized some of the existing endpoints. The new categories include:
 
-- [Shopping cart](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart)
+- **Shopping cart**
   - Cart simulation
-  - New shopping cart
-  - Get cart information
+  - Create a new cart
+  - Get cart information by ID
   - Remove all items
   - Remove all personal data
   - Update cart items
   - Change price
   - Ignore profile data
 
-- [Cart attachments](https://developers.vtex.com/vtex-rest-api/reference/cart-attachments)
+- **Cart attachments**
   - Add client profile
   - Add shipping address and select delivery option
   - Add client preferences
   - Add marketing data
   - Add payment data
 
-- [Order placement](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1)
+- **Order placement**
   - Place order from existing cart
   - Place order
