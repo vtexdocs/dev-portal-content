@@ -14,7 +14,7 @@ This guide will describe how to access information for a specific shopping cart 
 
 The first step is to get the `orderFormId` of the shopping cart you want to check. You can obtain this information through the [Create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint. The response body of this request will give you the `orderFormId` for an empty cart. See more information at [Create a new cart Guide](https://developers.vtex.com/docs/guides/create-a-new-cart).
 
->⚠️ The `orderFormId` information to be used on VTEX APIs must be obtained only from the [Create a new cart]([https://developers.vtex.com/vtex-rest-api/reference/createanewcart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm)) endpoint. This value cannot be obtained from the Cookies via JavaScript implementation.
+>⚠️ The `orderFormId` information to be used on VTEX APIs must be obtained only from the [Create a new cart]([https://developers.vtex.com/vtex-rest-api/reference/createanewcart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint. This value cannot be obtained from the Cookies via JavaScript implementation.
 
 If you only intend to perform test operations (e.g. in Postman), you can use the following procedure:
 
