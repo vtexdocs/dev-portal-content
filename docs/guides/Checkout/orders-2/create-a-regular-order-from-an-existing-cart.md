@@ -26,7 +26,7 @@ Additionally, you need to send the request body containing the following informa
 - `referenceId`: ID of the orderForm corresponding to the cart in which the order will be created (`orderFormId`).
 - `savePersonalData`: this parameter should be set as "true" if the shopper’s data provided during checkout should be saved for future reference. Default value is "false".
 - `optinNewsLetter`: this parameter should be set as "true" if the shopper opted to receive the newsletter. Default value is "false".
-- `value`: Total value of the order without separating cents. For example, $24.99 is represented by `2499`.
+- `value`: total value of the order without separating cents. For example, $24.99 is represented by `2499`.
 - `referenceValue`: reference value of the order for calculating interest (if applicable). Can be equal to the total value and does not separate cents. For example, $24.99 is represented by `2499`.
 - `interestValue`: interest rate to be used in case it applies.
 
