@@ -38,12 +38,14 @@ If you have set up your OAuth integration and implemented login on your frontend
 To be able to do this, your frontend must exchange the [access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) from the OAuth login for a VTEX [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) via the [Exchange OAuth access token for VTEX credential API request](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/vtexid/audience/webstore/provider/oauth/exchange). See an example below:
 
 Endpoint:
+
 ```
 POST
 https://{accountName}.{environment}.com.br/vtexid/audience/webstore/provider/oauth/exchange
 ```
 
 Request body:
+
 ```
 {
   "providerId": "GoogleID",
@@ -57,6 +59,7 @@ Request body:
 - `duration` - Duration of the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that will be returned. This field is optional and the default is 60.
 
 Response body:
+
 ```
 {
 "authToken": "eyJhbGciOiJFUzI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bnQiOiJwerV4aGVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-Jf463lwgLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ"
@@ -74,6 +77,7 @@ Learn more about [machine authentication in VTEX](https://developers.vtex.com/do
 ## Authentication responsibilities of headless applications
 
 Since your store is not using VTEX's native frontend to authenticate shoppers, there are some things that your application must be prepared to handle:
+
 - Managing login flow with the external identity provider.
 - Making sure that the [OAuth access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) has scope `email` (or another value associated with scope `email`).
 - Keeping the [OAuth access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) in the contexts where it is relevant.
