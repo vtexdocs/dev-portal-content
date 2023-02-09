@@ -74,7 +74,7 @@ Breathe in and relax, because we still have more...
 
 - **[Locale Switcher](https://github.com/vtex-apps/locale-switcher/pull/17)** - Long time no see, Locale Switcher... Previously, the block would disappear when the binding default language was used during navigation. Everything was now solved and the block is always present on the interface.
 
-- **Product Impression event** - The Product Impression Event failed to be triggered in two different scenarios: in incomplete [Search Results product aisles](https://github.com/vtex-apps/search-result/pull/307) and on the [Related Products Shelf](https://github.com/vtex-apps/shelf/pull/211). everything is working as intended now (and everything triggered as it should be).
+- **Product Impression event** - The Product Impression Event failed to be triggered in two different scenarios: in incomplete [Search Results product aisles](https://github.com/vtex-apps/search-result/pull/307) and on the [Related Products Shelf](https://github.com/vtex-apps/shelf/pull/211). Everything is working as intended now (and everything triggered as it should be).
 
 - **[SKU Selector](https://github.com/vtex-apps/product-summary/pull/237)** - Users were being redirected to the SKU page without choosing at least a product specification when on the Shelf or Search Results pages. The new `initialState` prop now comes with the `empty` default value and thus users will only be redirected after choosing specification for the SKU in question.
 
