@@ -184,7 +184,7 @@ __Example:__
 |    customApps |    Array  |  Array containing the apps created by the store.      |
 |    fields |    Object  |  Object that contains the fields created by the store for each app.      |
 |    id   |    String   |   App ID.      |
-|    major   |        |         |
+|    major   |   Integer     |         |
 
 ### giftRegistryData
 
