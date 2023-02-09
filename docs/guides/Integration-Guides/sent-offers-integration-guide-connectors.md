@@ -135,7 +135,7 @@ This result is what allows Offer Management to infer an offer’s status. The ty
 
 ## 4. Logs: registering steps
 
-> **API Reference:** [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)  
+> **API Reference:** [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)
 
 Logs are the granular details of actions that happen within an interaction, organized in a timeline. They are the way an interaction is made visible in Sent Offer’s UI. All micro steps that go through an interaction will be represented through logs.
 
