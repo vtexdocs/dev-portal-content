@@ -12,7 +12,7 @@ Recently, VTEX created the `ListOrders` [License Manager resource](https://help.
 - **OMSViewer:** view orders.
 - **ListOrders:** list orders.
 
-The new `ListOrders` resource was automatically added to all authentications ([roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and appkeys) that use the `OMSViewer` resource. In those cases, nothing needs to be done.
+The new `ListOrders` resource was automatically added to all authentications ([roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [appkeys](https://developers.vtex.com/docs/guides/getting-started-authentication)) that use the `OMSViewer` resource. In those cases, nothing needs to be done.
 
 However, to work as before, in addition to the previous `OMSViewer` resource, accounts with custom IO apps need to add the `ListOrders` resource on their [manifest.json](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file. That way, they will be able to view orders and make [List Orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) requests.
 
