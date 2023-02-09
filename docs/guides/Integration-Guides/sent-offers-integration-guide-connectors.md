@@ -33,7 +33,8 @@ The diagram below shows the Offer Management’s interface, which the vendors ac
 
 ## 1.  Create Channel
 
-> **API Reference:** Create Channel
+> **API Reference:** [Create Channel](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels)
+
 
 The first step for connectors to integrate with Offer Management is to create a channel, that represents the marketplace to where sellers will send their offers.
 
@@ -65,7 +66,7 @@ Ex. “vtex.netshoes”, “anymarket.b2w”, `"vtex.meli-premium"`, `"vtex.meli
 
 ## 3. Interactions: where all processes happen
 
-> **API Reference:** Open Interaction, Close Interaction
+> **API Reference:** [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions), [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)  
 
 Both the Marketplace and the seller operate everything that happens to offers by creating interactions. For every action that happens to an offer, the connector must create an interaction to notify it. The image below shows how interactions appear on the Offer Management's UI.
 ![sent\_offers\_print\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/sent-offers-integration-guide-connectors-1.png)
@@ -135,7 +136,7 @@ This result is what allows Offer Management to infer an offer’s status. The ty
 
 ## 4. Logs: registering steps
 
-> **API Reference:** Create Log
+> **API Reference:** [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)  
 
 Logs are the granular details of actions that happen within an interaction, organized in a timeline. They are the way an interaction is made visible in Sent Offer’s UI. All micro steps that go through an interaction will be represented through logs.
 
@@ -156,7 +157,7 @@ Connectors are responsible for attributing the correct type for each log. Theref
 
 ### Sending offers to the marketplace
 
-> **API Reference:** Activate Feed, Open Interaction, Create Logs, Close Interaction
+> **API Reference:** [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds), [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions), [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs), [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)
 
 Connectors are the agents responsible for sending the seller’s products to their channels. They do that by creating events, since that is the mechanism for reporting all interactions around offers. Consider the following example, in which a seller wants to integrate with Mercado Livre:
 
@@ -174,7 +175,7 @@ Connectors are the agents responsible for sending the seller’s products to the
 
 ### Updating offers through Interactions
 
-> **API Reference:**  Open Interaction, Create Logs, Close Interaction
+> **API Reference:**  [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions), [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs), [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)
 
 **Updates from sellers:** Sellers notify the marketplace of all changes that come from their side, by creating interactions. These are the types of changes that come from sellers:
 
@@ -189,7 +190,7 @@ Connectors are the agents responsible for sending the seller’s products to the
 
 ### Pointing out errors in offers
 
-> **API Reference:** Create Log, Search Errors
+> **API Reference:** [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs), [Search Errors](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/search/errors)
 
 It is the connector's responsibility to identify errors that prevent an offer from being sent to a  marketplace. This log allows the connector to notify the Offer Management that an error has occurred. Connectors point out problems with an offer by creating failure logs. From the information sent through the `errors` attribute, sellers can identify and fix errors on their offers.
 
@@ -223,7 +224,7 @@ It is expected that errors that haven’t been mapped by Offer Management, and a
 
 ### Updating and deleting a Feed
 
-> **API Reference:** Update Feed, Deactivate Feed
+> **API Reference:** [Update Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#put-/api/sent-offers/feeds/-feedId-), [Deactivate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#delete-/api/sent-offers/feeds/-feedId-)
 
 Updating a feed’s information is only possible through API calls. Only the trade policy and affiliate ID can be changed. When a channel integration is uninstalled by the seller, the connector must delete the feed in Offer Management as well. That way, that channel won’t appear in the UI. This action is done by the Delete Feed endpoint.
 
