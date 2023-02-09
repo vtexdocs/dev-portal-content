@@ -933,7 +933,7 @@ __Example:__
 ```json
 [
   {
-    "id": "Items"
+    "id": "Items",
     "name": "Total items"
     "value": 35620
   }, {
