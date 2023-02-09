@@ -24,7 +24,7 @@ Instead of calling the external tax service API for each item added to the cart,
 
 ### Implementing asynchronous integration
 
-To use asynchronous integration, Checkout can not be configured to handle the External Tax Services. This configuration should only be done for synchronous integration. To use asynchronous integration, make sure that the response from the [Checkout Configuration API](https://developers.vtex.com/reference/configuration) has the `taxConfiguration` object with the value `null`. If not, use the Checkout Configuration UPDATE request to make it `null`.
+To use asynchronous integration, Checkout can not be configured to handle the External Tax Services. This configuration should only be done for synchronous integration. To use asynchronous integration, make sure that the response from the [Checkout Configuration API](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) has the `taxConfiguration` object with the value `null`. If not, use the Checkout Configuration UPDATE request to make it `null`.
 
 The asynchronous call to the tax engine does not require any configuration. It must be implemented by the store, as described in this [recipe](https://developers.vtex.com/docs/guides/tax-services-recipe). It is usually triggered by an event or button in the checkout UI.
 
