@@ -65,7 +65,9 @@ The frontmatter is the table with metadata about the article you're adding. It c
 - **hidden:** boolean that makes the article not discoverable by search engines and our internal search. Know more in [How can I hide articles from search engines](#how-can-i-hide-articles-from-search-engines)
 - **createdAt:** creation date, automatically filled in.
 - **updatedAt:** update date, automatically filled in.
-- **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled in when there's a recommended reading sequence for the articles you are managing. It should be filled with the slug of the chosen article. Example `seeAlso: - "/docs/guides/vtex-io-documentation-2-prerequesites"`	
+- **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled in when there's a recommended reading sequence for the articles you are managing. It should be filled with the slug of the chosen article. Example `seeAlso: - "/docs/guides/vtex-io-documentation-2-prerequesites"`
+- **hidePaginationPrevious**: boolean that shows in the article's footer a hyperlink to the previous article listed on the navigation. Mark as `true` to  hide the link to the previous doc on the navigation.
+- **hidePaginationNext**: boolean that shows in the article's footer a hyperlink to the next article listed on the navigation. Mark as `true` to  hide the link to the following doc on the navigation.
 
 ### How can I make sure my content will be visible and rendered correctly?
 
