@@ -53,7 +53,7 @@ After you have [created the channel](#1--create-channel) in Offer Management, th
 - Netshoes
 - VTEX marketplaces
 
-The feed links the created channel to a seller’s account, so offers and their data can be exchanged. When a connector calls the [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds) API, it establishes the relation between a seller and the channel. This endpoint should only be used once, to activate the channel and establish the connection. However, If a feed is deactivated, it can be reactivated for that channel by a second call to the Activate Feed API.
+The feed links the created channel to a seller’s account, so offers and their data can be exchanged. When a connector calls the [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds) API, it establishes the relation between a seller and the channel. This endpoint should only be used once, to activate the channel and establish the connection. However, If a feed is [deactivated](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#delete-/api/sent-offers/feeds/-feedId-), it can be reactivated for that channel by another call to the Activate Feed API.
 
 ### Managing the Feed ID
 
