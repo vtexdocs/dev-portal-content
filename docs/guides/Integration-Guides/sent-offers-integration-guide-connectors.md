@@ -39,7 +39,7 @@ The first step for connectors to integrate with Offer Management is to create a 
 
 The [Create Channel API](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels) must be called a single time by the connector for each marketplace. The feedId created by this call will apply to all sellers connected to the given channel, and will be necessary for the next step of the integration flow.
 
->⚠️ Note that creating the channel through API is a sensitive step, and does not include public endpoints for retrieving (GET), updating (PUT), or deleting (DELETE) the channel created. If you wish to make any changes of this sort, you can request it through a support ticket with VTEX.
+>⚠️ Note that creating the channel through API is a sensitive step, and does not include public endpoints for retrieving (GET), updating (PUT), or deleting (DELETE) the channel created. If you wish to make any changes of this sort, you can request it through a [support](https://support.vtex.com/hc/en-us/requests) ticket with VTEX.
 
 ## 2.  Feed: establishing the connection
 
