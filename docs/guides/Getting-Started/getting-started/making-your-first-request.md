@@ -36,6 +36,9 @@ To try out an API request follow these steps:
 ![application keys and base url fields](./making-your-first-request-2)
 
 9. Click the `TEST METHOD` button. This will send your request to the desired API endpoint.
+10. Check your response below the request.
+
+![request and response](./making-your-first-request-3)
 
 If you get a `401 - Unauthorized` as response, review the [application key and token](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys) and try again. Make sure that the right [permissions](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) are defined in the [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and that you copied the exact key and token values into the headers of the request.
 
@@ -45,10 +48,20 @@ If you received a `200 OK` response, it means you got your a successful request 
 
 >ℹ️ Some API requests may return other status codes in case of success, such as `201 Created` or `204 No Content`.
 
-## Using Postman
+## Exporting API information
+
+You can export API specification or example requests to be used with [Postman](#using-postman) or the API platform of your choice.
+
+### Request examples
+
+As you fill in request parameters in VTEX API reference, as described above in steps 4 to 8, the 
+
+### Downloading API specifications
 
 Our API reference documentation is built using the [Open API 3.0 (OAS 3.0)](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) standard. The OAS 3.0 schemas are available for [download](https://github.com/vtex/openapi-schemas) in our GitHub repository.
 
 ![Download ZIP](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-making-your-first-request-2.png)
+
+### Using postman
 
 You can import our API endpoints to [Postman](https://www.postman.com/product/api-client/) by downloading the JSON schemas you are interested in and following [these instructions](https://learning.postman.com/docs/postman/collections/working-with-openAPI).
