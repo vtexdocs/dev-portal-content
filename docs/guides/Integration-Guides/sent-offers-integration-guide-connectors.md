@@ -14,10 +14,10 @@ Connectors are responsible for integrating marketplaces to Offer Management, so 
 
 Connectors interact with Offer Management in four ways:
 
-1. Creating channel.
-2. Activating feed.
-3. Updating offers, by creating interactions.
-4. Registering all actions in the Offer Management timeline, by creating logs.
+1. [Creating channel](#1--create-channel).
+2. [Activating feed](#2--feed-establishing-the-connection).
+3. [Updating offers](#3-interactions-where-all-processes-happen), by creating interactions.
+4. [Registering all actions in the Offer Management timeline](#4-logs-registering-steps), by creating logs.
 
 [block:callout]
 {
@@ -231,17 +231,17 @@ Note that once the feed is deleted, all offers’ data, errors and their logs wi
 
 ## API Reference
 
-1. [Create Channel](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels)
-2. [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds)
-3. [List Feeds](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds)
-4. [Update Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#put-/api/sent-offers/feeds/-feedId-)
-5. [Get Feed by feedId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-)
-6. [Deactivate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#delete-/api/sent-offers/feeds/-feedId-)
-7. [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions)
-8. [Get Interaction Data by interactionId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-)
-9. [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)
-10. [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)
-11. [Get Log Data by logId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs/-logId-)
-12. [Search Interactions and their Logs](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/search/interactions)
-13. [Search Errors](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/search/errors)
-14. [Get Error Code data by errorCodeId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/error-codes/-errorCodeId-)
+- [Create Channel](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels)
+- [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds)
+- [List Feeds](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds)
+- [Update Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#put-/api/sent-offers/feeds/-feedId-)
+- [Get Feed by feedId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-)
+- [Deactivate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#delete-/api/sent-offers/feeds/-feedId-)
+- [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions)
+- [Get Interaction Data by interactionId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-)
+- [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)
+- [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)
+- [Get Log Data by logId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs/-logId-)
+- [Search Interactions and their Logs](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/search/interactions)
+- [Search Errors](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/search/errors)
+- [Get Error Code data by errorCodeId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#get-/api/sent-offers/error-codes/-errorCodeId-)
