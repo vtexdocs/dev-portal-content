@@ -282,7 +282,7 @@ __Example:__
             "unitMultiplier": 1.0000,
             "manufacturerCode": null,
             "priceDefinition": {
-                “sellingPrice”: [
+                "sellingPrice": [
                     {
                         “quantity”: 1,
                         “value”: 1700
