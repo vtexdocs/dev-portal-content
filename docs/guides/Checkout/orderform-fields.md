@@ -97,7 +97,6 @@ __Example:__
 | locale       | String       | Client's locale. Examples: `"pt-BR"` and `"en-US"`. The method `sendLocale()`, from vtex.js, changes the value of this field.       |
 | optinNewsLetter       | Boolean       | `true` if the client opted to receive newsletters from the store.       |
 
-
 ### clientProfileData
 
 Object containing the data of the customer who placed the order.
