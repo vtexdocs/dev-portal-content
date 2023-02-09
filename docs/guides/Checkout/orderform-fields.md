@@ -94,7 +94,7 @@ __Example:__
 
 | Field     | Type     | Description     |
 | ---------- | ---------- | ---------- |
-| locale       | String       | Client's locale. Examples: "pt-BR" and "en-US". The method `sendLocale()`, from vtex.js, changes the value of this field.       |
+| locale       | String       | Client's locale. Examples: `"pt-BR"` and `"en-US"`. The method `sendLocale()`, from vtex.js, changes the value of this field.       |
 | optinNewsLetter       | Boolean       | `true` if the client opted to receive newsletters from the store.       |
 
 
