@@ -43,7 +43,7 @@ The [Create Channel API](https://developers.vtex.com/docs/api-reference/marketpl
 
 ## 2.  Feed: establishing the connection
 
-> **API Reference:** Activate Feed
+> **API Reference:** [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds)
 
 After you have [created the channel](#1--create-channel) in Offer Management, the connection between seller and marketplace can be established, through the feed. The channels available for connecting with Offer Management are:
 
