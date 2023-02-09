@@ -2,7 +2,7 @@
 title: "New options for adding and removing modules from the Kit Look App"
 slug: "new-options-for-adding-and-removing-modules-from-the-kit-look-app"
 hidden: false
-type: "added"
+type: "improved"
 createdAt: "2023-01-31T23:07:00.000Z"
 updatedAt: "2023-01-31T23:07:00.000Z"
 excerpt: "Now all the Kit Look block modules can be added or removed via the Admin, on the app's settings page."
