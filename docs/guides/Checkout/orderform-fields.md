@@ -936,7 +936,8 @@ __Example:__
     "id": "Items",
     "name": "Total items",
     "value": 35620
-  }, {
+  },
+  {
     "id": "Shipping"
     "name": "Total freight"
     "value": 399
