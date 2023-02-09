@@ -9,5 +9,5 @@ type: "improved"
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-notification-settings-field-in-customer-credit-api-0.png)
 
 You can now schedule a timeline in [Customer Credit API](https://developers.vtex.com/docs/api-reference/customer-credit-api) for pre-payment and post-payment e-mail notifications. Up to three triggers can be set for each timeline using the `notificationsSettings` field of the [\[PUT\] Create or change store configuration](https://developers.vtex.com/docs/api-reference/customer-credit-api#put-/api/creditcontrol/storeconfig) endpoint.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-notification-settings-field-in-customer-credit-api-1.png)
+![pre-payment and post-payment timeline](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-notification-settings-field-in-customer-credit-api-1.png)
 For now the field can only be edited using the [Customer Credit API](https://developers.vtex.com/docs/api-reference/customer-credit-api), but it will be available shortly in the Admin panel.
