@@ -161,7 +161,7 @@ __Example:__
 				"number": "78550693",
 				"street": "Rua Voluntários da Pátria",
 				"complement": "Em frente à Torre Citi",
-				"name": "101 - Delco Autopista,
+				"name": "101 - Delco Autopista",
 				"neighborhood": "Botafogo",
 				"city": "Rio de Janeiro",
 				"state": "RJ"
