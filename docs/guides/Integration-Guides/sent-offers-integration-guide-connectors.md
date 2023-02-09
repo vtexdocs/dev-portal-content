@@ -45,7 +45,7 @@ The [Create Channel API](https://developers.vtex.com/docs/api-reference/marketpl
 
 > **API Reference:** Activate Feed
 
-After the [channel is created](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels), the connection between seller and marketplace can be established, through the feed. The channels available for connecting with Offer Management are:
+After you have [created the channel](#1--create-channel) in Offer Management, the connection between seller and marketplace can be established, through the feed. The channels available for connecting with Offer Management are:
 
 - Mercado Livre Classic
 - Mercado Livre Premium
