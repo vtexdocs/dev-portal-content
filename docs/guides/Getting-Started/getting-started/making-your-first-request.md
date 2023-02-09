@@ -54,7 +54,11 @@ You can export API specification or example requests to be used with [Postman](#
 
 ### Request examples
 
-As you fill in request parameters in VTEX API reference, as described above in steps 4 to 8, the 
+As you fill in request parameters in VTEX API reference, as described above in steps 4 to 8, the request box is automattically updated. You can find this box below the `Base URL` field described above.
+
+![request example](./making-your-first-request-4)
+
+This means you can copy this content to be imported into other software.
 
 ### Downloading API specifications
 
@@ -64,4 +68,6 @@ Our API reference documentation is built using the [Open API 3.0 (OAS 3.0)](http
 
 ### Using postman
 
-You can import our API endpoints to [Postman](https://www.postman.com/product/api-client/) by downloading the JSON schemas you are interested in and following [these instructions](https://learning.postman.com/docs/postman/collections/working-with-openAPI).
+You can import our OAS API specification to [Postman](https://www.postman.com/product/api-client/) by [downloading the JSON schemas](#downloading-api-specifications) you are interested in and following [these instructions](https://learning.postman.com/docs/postman/collections/working-with-openAPI).
+
+If you have copied a `cURL` [request example](#request-examples), you can also [import it into Postman as raw text](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman).
