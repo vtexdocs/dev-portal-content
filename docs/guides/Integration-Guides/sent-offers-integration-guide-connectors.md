@@ -65,7 +65,7 @@ Ex. “vtex.netshoes”, “anymarket.b2w”, `"vtex.meli-premium"`, `"vtex.meli
 
 ## 3. Interactions: where all processes happen
 
-> **API Reference:** [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions), [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)  
+> **API Reference:** [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions), [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)
 
 Both the Marketplace and the seller operate everything that happens to offers by creating interactions. For every action that happens to an offer, the connector must create an interaction to notify it. The image below shows how interactions appear on the Offer Management's UI.
 ![sent\_offers\_print\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/sent-offers-integration-guide-connectors-1.png)
