@@ -34,7 +34,7 @@ The object's basic structure is:
   "marketingData": {},
   "messages": [],
   "openTextField": {},
-  "orderFormId": "426effeba9210",
+  "orderFormId": string,
   "paymentData": {},  
   "ratesAndBenefitsData": {},
   "salesChannel": "1",
