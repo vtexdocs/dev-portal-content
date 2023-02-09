@@ -934,7 +934,7 @@ __Example:__
 [
   {
     "id": "Items",
-    "name": "Total items"
+    "name": "Total items",
     "value": 35620
   }, {
     "id": "Shipping"
