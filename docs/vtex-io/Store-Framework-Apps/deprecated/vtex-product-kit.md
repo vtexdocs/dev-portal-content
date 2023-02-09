@@ -109,7 +109,7 @@ Through the Storefront you can change the behavior and interface of `ProductKit`
 | `allowSwap`        | `Boolean` | Allow or not the item swap             | true                                       |
 | `allowRemoval`     | `Boolean` | Allow or not the item removal          | true                                       |
 
-Also, you can configure the product summary that is defined on product-kit. See [here](/docs/guides/vtex-product-summary) the Product Summary API.
+Also, you can configure the product summary that is defined on product-kit. See [here](https://developers.vtex.com/docs/guides/vtex-product-summary) the Product Summary API.
 
 ### Styles API
 
