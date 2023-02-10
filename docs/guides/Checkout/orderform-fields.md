@@ -283,7 +283,7 @@ __Example:__
             "priceDefinition": {
                 "sellingPrice": [
                     {
-                        “quantity”: 1,
+                        "quantity": 1,
                         “value”: 1700
                     }
                 ],
