@@ -109,7 +109,7 @@ Through the Storefront you can change the behavior and interface of `ProductKit`
 | `allowSwap`        | `Boolean` | Allow or not the item swap             | true                                       |
 | `allowRemoval`     | `Boolean` | Allow or not the item removal          | true                                       |
 
-Also, you can configure the product summary that is defined on product-kit. See [here](/docs/guides/vtex-product-summary) the Product Summary API.
+Also, you can configure the product summary that is defined on product-kit. See [here](https://developers.vtex.com/docs/guides/vtex-product-summary) the Product Summary API.
 
 ### Styles API
 
@@ -135,14 +135,14 @@ To use this CSS API, you must add the `styles` builder and create an app styling
 
 #### CSS namespaces
 
-Below, we describe the namespaces that are define in the `ProductKit`.
+Below, we describe the namespaces that are in the `ProductKit`.
 
 | Class name      | Description                                                                                                | Component Source                                            |
 | --------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `container`     | A wrapper that envolves all the elements of the product kit, responsible for the main margins and paddings | [ProductKitContent](/react/components/ProductKitContent.js) |
-| `listContainer` | The container for the products and final prices                                                            | [index](/react/index.js)                                    |
-| `listDetails`   | The container for the total price of the kit                                                               | [ListDetails](/react/components/ProductKitDetails.js)       |
-| `item`          | The container of one product                                                                               | [ProductKitItem](/react/components/ProductKitItem.js)       |
+| `container`     | A wrapper that envolves all the elements of the product kit, responsible for the main margins and paddings | [ProductKitContent](https://developers.vtex.com/docs/guides/vtex-product-kit) |
+| `listContainer` | The container for the products and final prices                                                            | [index](https://developers.vtex.com/docs/guides/vtex-product-kit)                                    |
+| `listDetails`   | The container for the total price of the kit                                                               | [ListDetails](https://developers.vtex.com/docs/guides/vtex-product-kit)       |
+| `item`          | The container of one product                                                                               | [ProductKitItem](https://developers.vtex.com/docs/guides/vtex-product-kit)       |
 
 ## Troubleshooting
 
