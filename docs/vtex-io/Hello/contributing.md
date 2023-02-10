@@ -86,7 +86,7 @@ Responses to the form are automatically added to our internal backlog and assign
 
 ### Creating a Pull Request
 
-All guides, references, and tutorials from the [VTEX IO Developer Documentation](link) is fetched from the [`io-documentation`](https://github.com/vtex-apps/io-documentation) repository.
+All guides, references, and tutorials from the [VTEX IO Developer Documentation](https://developers.vtex.com/docs/app-development) is fetched from the [`io-documentation`](https://github.com/vtex-apps/io-documentation) repository.
 
 In its turn, the documentation of VTEX IO apps are fetched directly from its corresponding GitHub repository.
 
