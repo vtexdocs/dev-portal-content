@@ -284,7 +284,7 @@ __Example:__
                 "sellingPrice": [
                     {
                         "quantity": 1,
-                        “value”: 1700
+                        "value": 1700
                     }
                 ],
                 “total”: 5100
