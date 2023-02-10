@@ -653,7 +653,6 @@ Array containing the data of the item selected as a gift.
                 ]
    }
  ]
-}
 ```
 
 | Field      | Type      | Description |
