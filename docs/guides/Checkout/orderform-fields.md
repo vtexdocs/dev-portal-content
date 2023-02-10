@@ -295,7 +295,7 @@ __Example:__
 
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
-|    uniqueId |    String  |  This string is the unique identifier for each occurrence of a SKU in an order. Two same SKUs in an order will have different uniqueIds. Obsolete field.     |
+|    uniqueId |    String  |  Obsolete field. This string is the unique identifier for each occurrence of a SKU in an order. Two units of the same SKU in an order will have different uniqueIds.    |
 |    id |    String  |  ID of the item.     |
 |    productId   |    String   |   Product ID.       |
 |    productRefId   |    String   |   Product Ref ID.      |
