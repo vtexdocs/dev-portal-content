@@ -16,7 +16,7 @@ The new `ListOrders` resource was automatically added to all authentications ([r
 
 However, to work as before, in addition to the previous `OMSViewer` resource, accounts with custom IO apps need to add the `ListOrders` resource on their [manifest.json](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file. That way, they will be able to view orders and make [List Orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) requests.
 
-This change will be valid for all accounts starting March 15th, 2023. If you need to make the update, go to the `manifest.json` file of your app project and add the `ListOrders` resource to the [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) field, as shown in the example below:
+This change will be valid for all accounts starting on March 15th, 2023. If you need to make the update, go to the `manifest.json` file of your app project and add the `ListOrders` resource to the [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) field, as shown in the example below:
 
 ```json
 { 
