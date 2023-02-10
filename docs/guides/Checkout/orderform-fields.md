@@ -287,7 +287,7 @@ __Example:__
                         "value": 1700
                     }
                 ],
-                “total”: 5100
+                "total": 5100
             }
         }
     ]
