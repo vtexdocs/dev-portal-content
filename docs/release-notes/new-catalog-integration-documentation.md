@@ -26,7 +26,7 @@ We have also improved our [Catalog API documentation](https://developers.vtex.co
 
 - post [Create Category](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/category)
 - post [Create Brand](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/brand)
-- post [Create Specification](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-specification#catalog-api-post-specification)
+- post [Create Specification](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/specification)
 - post [Create Product](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product)
 - put [Update Product](https://developers.vtex.com/docs/api-reference/catalog-api/#put-/api/catalog/pvt/product/-productId-)
 - post [Create SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit)
