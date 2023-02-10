@@ -14,24 +14,45 @@ Using VTEX APIs this information can be accessed, processed, and even changed on
 VTEX's Checkout API is one of the main interfaces interacting with the `orderForm` object. Most of its operations will return the `orderForm` or part of it.
 
 The object's basic structure is:
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"allowManualPrice\": boolean,\n  \"canEditData\": boolean,\n  \"clientPreferencesData\": {},\n  \"clientProfileData\": {},\n  \"commercialConditionData\": {},\n  \"customData\": {},\n  \"giftRegistryData\": {},\n  \"hooksData\": {},\n  \"ignoreProfileData\": boolean,\n  \"isCheckedIn\": boolean,\n  \"itemMetadata\": {},\n  \"items\": {},\n  \"itemsOrdination\": {},\n  \"loggedIn\": boolean,\n  \"marketingData\": {},\n  \"messages\": [],\n  \"openTextField\": {},\n  \"orderFormId\": \"426effeba9210\",\n  \"paymentData\": {},  \n  \"ratesAndBenefitsData\": {},\n  \"salesChannel\": \"1\",\n  \"selectableGifts\": {},\n  \"sellers\": {},\n  \"shippingData\": {},\n  \"storeId\": {},\n  \"storePreferencesData\": {},\n  \"totalizers\": {},\n  \"userProfileId\": {},\n  \"userType\": {},\n  \"value\": number\n}",
-      "language": "json"
-    }
-  ]
+  "allowManualPrice": boolean,
+  "canEditData": boolean,
+  "clientPreferencesData": {},
+  "clientProfileData": {},
+  "commercialConditionData": {},
+  "customData": {},
+  "giftRegistryData": {},
+  "hooksData": {},
+  "ignoreProfileData": boolean,
+  "isCheckedIn": boolean,
+  "itemMetadata": {},
+  "items": {},
+  "itemsOrdination": {},
+  "loggedIn": boolean,
+  "marketingData": {},
+  "messages": [],
+  "openTextField": {},
+  "orderFormId": string,
+  "paymentData": {},  
+  "ratesAndBenefitsData": {},
+  "salesChannel": "1",
+  "selectableGifts": {},
+  "sellers": {},
+  "shippingData": {},
+  "storeId": {},
+  "storePreferencesData": {},
+  "totalizers": {},
+  "userProfileId": {},
+  "userType": {},
+  "value": number
 }
-[/block]
+```
+
 This structure is made of many __sections__.
-[block:callout]
-{
-  "type": "warning",
-  "body": "Any properties representing monetary values will have **cents** as their units. (e.g. `10390` means **R$103,90** in Brazilian stores)"
-}
-[/block]
-In the following menu, you can find details regarding these sections. 
+
+>⚠️ Any properties representing monetary values will have __cents__ as their units. (e.g. `10390` means __R$103,90__ in Brazilian stores). In the following menu, you can find details regarding these sections.
 
 ## `OrderForm` Sections
 
@@ -62,22 +83,19 @@ In the following menu, you can find details regarding these sections.
 
 Object containing preferences from the client who placed the order.
 
-**Example:**
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"locale\": \"pt-BR\",\n  \"optinNewsLetter\": true\n}",
-      "language": "json"
-    }
-  ]
+  "locale": "pt-BR",
+  "optinNewsLetter": true
 }
-[/block]
+```
+
 | Field     | Type     | Description     |
 | ---------- | ---------- | ---------- |
-| locale       | String       | Client's locale. Examples: "pt-BR" and "en-US". The method `sendLocale()`, from vtex.js, changes the value of this field.       |
+| locale       | String       | Client's locale. Examples: `"pt-BR"` and `"en-US"`. The method `sendLocale()`, from vtex.js, changes the value of this field.       |
 | optinNewsLetter       | Boolean       | `true` if the client opted to receive newsletters from the store.       |
-
 
 ### clientProfileData
 
@@ -87,17 +105,25 @@ If the customer has not yet informed her or his e-mail, much of the data may be 
 
 If the customer's e-mail has not yet been confirmed, several personal data will be censored, that is, some of its parts will be hidden by asterisks to avoid identification.
 
-**Example:** 
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"email\": \"customer@mailprovider.com\",\n  \"firstName\": \"Bre******\",\n  \"lastName\": \"Bar******\",\n  \"document\": \"*1*2*5*5*3*\",\n  \"documentType\": \"cpf\",\n  \"phone\": \"******0879\",\n  \"corporateName\": null,\n  \"tradeName\": null,\n  \"corporateDocument\": null,\n  \"stateInscription\": null,\n  \"corporatePhone\": null,\n  \"isCorporate\": false\n}",
-      "language": "json"
-    }
-  ]
+  "email": "customer@mailprovider.com",
+  "firstName": "Bre******",
+  "lastName": "Bar******",
+  "document": "*1*2*5*5*3*",
+  "documentType": "cpf",
+  "phone": "******0879",
+  "corporateName": null,
+  "tradeName": null,
+  "corporateDocument": null,
+  "stateInscription": null,
+  "corporatePhone": null,
+  "isCorporate": false
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |      email      |    String    |  Customer's email.      |
@@ -113,56 +139,69 @@ If the customer's e-mail has not yet been confirmed, several personal data will 
 |   corporatePhone         |    String        |   If legal entity, here goes the company phone.        |
 |   isCorporate         |     Boolean       |  It has the value `true` if it's a legal entity.         |
 
-
 ### commercialConditionData
-[block:callout]
-{
-  "type": "warning",
-  "title": "Work in progress",
-  "body": "This guide is currently being written and published as content becomes available."
-}
-[/block]
+
+>⚠️ This guide is currently being written and published as content becomes available.
+
 ### customData
 
-During the checkout process, some stores need to include data gathered from the client that is not part of our standard `orderForm` format (e.g. gender, cell phone number, age). 
+During the checkout process, some stores need to include data gathered from the client that is not part of our standard `orderForm` format (e.g. gender, cell phone number, age).
 
-To do that you will need to create extra fields in the `orderForm` and those will be located inside the `customData` parameter
+To do that you will need to create extra fields in the `orderForm` and those will be located inside the `customData` parameter.
 
-**Example:** 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "\"customData\": {\n\t\"attachmentId\": \"customData\",\n\t\"customApps\": [\n\t\t{\n\t\t\t\"fields\": {\n\t\t\t\t\"number\": \"78550693\",\n\t\t\t\t\"street\": \"Rua Voluntários da Pátria\",\n\t\t\t\t\"complement\": \"Em frente à Torre Citi\",\n\t\t\t\t\"name\": \"101 - Delco Autopista,\n\t\t\t\t\"neighborhood\": \"Botafogo\",\n\t\t\t\t\"city\": \"Rio de Janeiro\",\n\t\t\t\t\"state\": \"RJ\"\n\t\t\t},\n\t\t\t\"id\": \"pickupinfo\",\n\t\t\t\"major\": 1\n\t\t},\n\t\t{\n\t\t\t\"fields\": {\n\t\t\t\t\"deliveryEstimate\": \"30\"\n\t\t\t},\n\t\t\t\"id\": \"deliveryinfo\",\n\t\t\t\"major\": 1\n\t\t}\n\t]\n}",
-      "language": "json"
-    }
-  ]
+__Example:__
+
+```json
+"customData": {
+	"attachmentId": "customData",
+	"customApps": [
+		{
+			"fields": {
+				"number": "78550693",
+				"street": "Rua Voluntários da Pátria",
+				"complement": "Em frente à Torre Citi",
+				"name": "101 - Delco Autopista",
+				"neighborhood": "Botafogo",
+				"city": "Rio de Janeiro",
+				"state": "RJ"
+			},
+			"id": "pickupinfo",
+			"major": 1
+		},
+		{
+			"fields": {
+				"deliveryEstimate": "30"
+			},
+			"id": "deliveryinfo",
+			"major": 1
+		}
+	]
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    customApps |    Array  |  Array containing the apps created by the store.      |
 |    fields |    Object  |  Object that contains the fields created by the store for each app.      |
 |    id   |    String   |   App ID.      |
-|    major   |        |         |
-
-
+|    major   |   Integer     |  App major version.         |
 
 ### giftRegistryData
 
 Object containing the gift registration list data.
 
-**Example:** 
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"giftRegistryId\": \"22222\",  \n  \"giftRegistryType\": null,\n  \"giftRegistryTypeName\": null,\n  \"addressId\": null,\n  \"description\": \"gift1\"    \n}",
-      "language": "json"
-    }
-  ]
+  "giftRegistryId": "22222",  
+  "giftRegistryType": null,
+  "giftRegistryTypeName": null,
+  "addressId": null,
+  "description": "gift1"    
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    giftRegistryId |    String  |  Gift registry ID.      |
@@ -171,32 +210,92 @@ Object containing the gift registration list data.
 |    addressId   |    String   |   Address ID.      |
 |    description   |    String   |   Gift registry description.      |
 
-
 ### hooksData
-[block:callout]
-{
-  "type": "warning",
-  "body": "This guide is currently being written and published as content becomes available."
-}
-[/block]
+
+>⚠️ This guide is currently being written and published as content becomes available.
+
 ### items
 
 it is an array containing an object describing every item in the buyer's cart.
 
-**Example:** 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "\"items\": [\n        {\n            \"uniqueId\": \"3B31329E5DDA4A1A81449DD7466D9575\",\n            \"id\": \"4\",\n            \"productId\": \"3\",\n            \"productRefId\": \"\",\n            \"refId\": null,\n            \"ean\": \"978073487962\",\n            \"name\": \"Mild Hair Cleanser 50 ml\",\n            \"skuName\": \"50 ml\",\n            \"modalType\": null,\n            \"parentItemIndex\": null,\n            \"parentAssemblyBinding\": null,\n            \"priceValidUntil\": \"2022-04-07T18:31:11Z\",\n            \"tax\": 0,\n            \"price\": 3190,\n            \"listPrice\": 3190,\n            \"manualPrice\": 1700,\n            \"manualPriceAppliedBy\": \"in542e51-5863-4c34-8i86-ed8fcf597a09\",\n            \"sellingPrice\": 1700,\n            \"rewardValue\": 0,\n            \"isGift\": false,\n            \"additionalInfo\": {\n                \"dimension\": null,\n                \"brandName\": \"VALCOSMETICS\",\n                \"brandId\": \"2000000\",\n                \"offeringInfo\": null,\n                \"offeringType\": null,\n                \"offeringTypeId\": null\n            },\n            \"preSaleDate\": null,\n            \"productCategoryIds\": \"/2/\",\n            \"productCategories\": {\n                \"2\": \"Computers\"\n            },\n            \"quantity\": 3,\n            \"seller\": \"seller1\",\n            \"sellerChain\": [\n                \"seller1\"\n            ],\n            \"imageUrl\": \"http://cosmeticsstore.vteximg.com.br/arquivos/ids/155401-55-55/ID-001-MAIN.jpg?v=637109313796670000\",\n            \"detailUrl\": \"/mild-hair-cleanser/p\",\n            \"bundleItems\": [],\n            \"attachments\": [],\n            \"attachmentOfferings\": [],\n            \"offerings\": [],\n            \"priceTags\": [\n                {\n                    \"name\": \"DISCOUNT@MANUALPRICE\",\n                    \"value\": -4470,\n                    \"rawValue\": -44.7,\n                    \"isPercentual\": false,\n                    \"identifier\": null\n                }\n            ],\n            \"availability\": \"available\",\n            \"measurementUnit\": \"un\",\n            \"unitMultiplier\": 1.0000,\n            \"manufacturerCode\": null,\n            \"priceDefinition\": {\n                “sellingPrice”: [\n                    {\n                        “quantity”: 1,\n                        “value”: 1700\n                    }\n                ],\n                “total”: 5100\n            }\n        }\n    ]",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+__Example:__
+
+```json
+"items": [
+        {
+            "uniqueId": "3B31329E5DDA4A1A81449DD7466D9575",
+            "id": "4",
+            "productId": "3",
+            "productRefId": "",
+            "refId": null,
+            "ean": "978073487962",
+            "name": "Mild Hair Cleanser 50 ml",
+            "skuName": "50 ml",
+            "modalType": null,
+            "parentItemIndex": null,
+            "parentAssemblyBinding": null,
+            "priceValidUntil": "2022-04-07T18:31:11Z",
+            "tax": 0,
+            "price": 3190,
+            "listPrice": 3190,
+            "manualPrice": 1700,
+            "manualPriceAppliedBy": "in542e51-5863-4c34-8i86-ed8fcf597a09",
+            "sellingPrice": 1700,
+            "rewardValue": 0,
+            "isGift": false,
+            "additionalInfo": {
+                "dimension": null,
+                "brandName": "VALCOSMETICS",
+                "brandId": "2000000",
+                "offeringInfo": null,
+                "offeringType": null,
+                "offeringTypeId": null
+            },
+            "preSaleDate": null,
+            "productCategoryIds": "/2/",
+            "productCategories": {
+                "2": "Computers"
+            },
+            "quantity": 3,
+            "seller": "seller1",
+            "sellerChain": [
+                "seller1"
+            ],
+            "imageUrl": "http://cosmeticsstore.vteximg.com.br/arquivos/ids/155401-55-55/ID-001-MAIN.jpg?v=637109313796670000",
+            "detailUrl": "/mild-hair-cleanser/p",
+            "bundleItems": [],
+            "attachments": [],
+            "attachmentOfferings": [],
+            "offerings": [],
+            "priceTags": [
+                {
+                    "name": "DISCOUNT@MANUALPRICE",
+                    "value": -4470,
+                    "rawValue": -44.7,
+                    "isPercentual": false,
+                    "identifier": null
+                }
+            ],
+            "availability": "available",
+            "measurementUnit": "un",
+            "unitMultiplier": 1.0000,
+            "manufacturerCode": null,
+            "priceDefinition": {
+                "sellingPrice": [
+                    {
+                        "quantity": 1,
+                        "value": 1700
+                    }
+                ],
+                "total": 5100
+            }
+        }
+    ]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
-|    uniqueId |    String  |  This string is the unique identifier for each occurrence of a SKU in an order. Two same SKUs in an order will have different uniqueIds. Obsolete field.     |
+|    uniqueId |    String  |  Obsolete field. This string is the unique identifier for each occurrence of a SKU in an order. Two units of the same SKU in an order will have different uniqueIds.    |
 |    id |    String  |  ID of the item.     |
 |    productId   |    String   |   Product ID.       |
 |    productRefId   |    String   |   Product Ref ID.      |
@@ -255,12 +354,8 @@ it is an array containing an object describing every item in the buyer's cart.
 |    sellingPrices  |     Array of objects |   Array of objects, each containing value (in cents) and quantity for the different rounding instances that can be combined to form the correctly rounded total. |
 |    value |    Integer |   Value in cents for that specific rounding. |
 |    quantity |    Integer |   Rounding quantity, meaning how many items are rounded to this value. |
-[block:callout]
-{
-  "type": "warning",
-  "body": "If you use integrations that consume price data, such as checkout or order integrations, note that the field `sellingPrice` may be subject to rounding discrepancies. We recommend retrieving data from the `priceDefinition` data structure instead."
-}
-[/block]
+
+>⚠️ If you use integrations that consume price data, such as checkout or order integrations, note that the field `sellingPrice` may be subject to rounding discrepancies. We recommend retrieving data from the `priceDefinition` data structure instead.
 
 #### items[].priceDefinition
 
@@ -303,16 +398,24 @@ it is an array containing an object describing every item in the buyer's cart.
 ### invoiceData
 
 This is an object containing information pertinent to the order's invoice.
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"address\": {\n   \"postalCode\": \"******000\",\n   \"city\": \"Rio ** *******\",\n   \"state\": \"RJ\",\n   \"country\": \"BRA\",\n   \"street\": \"Rua *** *****nte\",\n   \"number\": \"***\",\n   \"neighborhood\": \"Bot*****\",\n   \"complement\": \"*** ** *\",\n   \"reference\": null\n  \t},\n    \"settleInvoices\":[]  \n}     ",
-      "language": "json"
-    }
-  ]
+   "address": {
+   "postalCode": "******000",
+   "city": "Rio ** *******",
+   "state": "RJ",
+   "country": "BRA",
+   "street": "Rua *** *****nte",
+   "number": "***",
+   "neighborhood": "Bot*****",
+   "complement": "*** ** *",
+   "reference": null
+   },
+    "settleInvoices":[]  
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    address |    Object  |  Address information.      |
@@ -322,17 +425,15 @@ This is an object containing information pertinent to the order's invoice.
 
 This is an object containing information about the ordering of items within the orderForm.
 
-**Example:** 
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"criteria\": \"NAME\",  \n  \"ascending\": true  \n}",
-      "language": "json"
-    }
-  ]
+  "criteria": "NAME",  
+  "ascending": true  
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    criteria  |    String |  Criteria adopted to order the items in the list. The values are: `NAME`, `ADD_TIME` (date information), and `GIFT` (non-gift items are mentioned before gift items).              |
@@ -341,19 +442,24 @@ This is an object containing information about the ordering of items within the 
 
 ### marketingData
 
-This object contains promotion data such as coupon tracking information and internal or external UTMs. 
+This object contains promotion data such as coupon tracking information and internal or external UTMs.
 
-**Example:** 
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"attachmentId\": \"marketingData\",\n  \"coupon\": null,\n  \"marketingTags\": [],\n  \"utmCampaign\": \"christmas\",\n  \"utmMedium\": null,\n  \"utmSource\": \"fb\",\n  \"utmiCampaign\": \"\",\n  \"utmiPart\": \"\",\n  \"utmipage\": \"\"  \n}",
-      "language": "json"
-    }
-  ]
+  "attachmentId": "marketingData",
+  "coupon": null,
+  "marketingTags": [],
+  "utmCampaign": "christmas",
+  "utmMedium": null,
+  "utmSource": "fb",
+  "utmiCampaign": "",
+  "utmiPart": "",
+  "utmipage": ""  
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    attachmentId  |    String |   Attachment ID.     |
@@ -366,36 +472,32 @@ This object contains promotion data such as coupon tracking information and inte
 |    utmiPart  |    String |  Internal UTM value `utmi_pc`.      |
 |    utmipage  |    String |  Internal UTM value `utmi_p`.      |
 
-
 ### messages
 
-This array contains an object for each message generated by our servers while processing the request. 
+This array contains an object for each message generated by our servers while processing the request.
 
-**Example:**
-[block:code]
-{
-  "codes": [
-    {
-      "code": "[\n  {\n    \"code\": null,\n    \"status\": \"error\",\n    \"text\": \"Voucher code AAAA-BBBB-CCCC-DDDD was not found in the system\"\n  }\n]",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+__Example:__
+
+```json
+[
+  {
+    "code": null,
+    "status": "error",
+    "text": "Voucher code AAAA-BBBB-CCCC-DDDD was not found in the system"
+  }
+]
+```
 
 ### openTextField
 
-Optional field meant to hold additional information about the order. We recommend using this field for text, not data formats such as `JSON` even if escaped. For that purpose, see [How to add and handle custom information in the order](https://developers.vtex.com/vtex-rest-api/docs/how-to-add-and-handle-custom-information-in-the-order).
-[block:code]
+Optional field meant to hold additional information about the order. We recommend using this field for text, not data formats such as `JSON` even if escaped. For that purpose, see [Add and handle custom information in the order](https://developers.vtex.com/docs/guides/add-and-handle-custom-information-in-the-order).
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"value\": \"{\\\"Phones\\\":[\\\"55555555\\\"]}\"\n  }",
-      "language": "json"
-    }
-  ]
+    "value": "{\"Phones\":[\"55555555\"]}"
 }
-[/block]
+```
+  
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    value |    String |  Additional information about the order.               |
@@ -403,51 +505,130 @@ Optional field meant to hold additional information about the order. We recommen
 
 ### paymentData
 
-This object contains all payment information inserted for this purchase. 
+This object contains all payment information inserted for this purchase.
 
-**Example:**
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
+  "giftCards": [
     {
-      "code": "{\n  \"giftCards\": [\n    {\n      \"redemptionCode\": \"HYUO-TEZZ-QFFT-HTFR\",\n      \"value\": 500,\n      \"balance\": 500,\n      \"name\": null,\n      \"id\": \"-1390324156495k195pmab4rall3di\",\n      \"inUse\": true,\n      \"isSpecialCard\": false\n    }, {\n      \"redemptionCode\": \"MTHU-WNTD-VXJW-TIDC\",\n      \"value\": 0,\n      \"balance\": 700000,\n      \"name\": \"loyalty-program\",\n      \"id\": \"122\",\n      \"inUse\": false,\n      \"isSpecialCard\": true\n    }\n  ],\n  \"giftCardMessages\": [],\n  \"availableAccounts\": [\n    {\n      \"accountId\": \"71F2775D46BF44B1BF217F828F4E6131\",\n      \"paymentSystem\": \"2\",\n      \"paymentSystemName\": \"Visa\",\n      \"cardNumber\": \"************1111\",\n      \"availableAddresses\": [\"-1363804954758\", \"-1366200971560\"]\n    }\n  ],\n  \"availableTokens\": [],\n  \"installmentOptions\": [\n    {\n      \"paymentSystem\": \"2\",\n      \"value\": 16175,\n      \"installments\": [\n        {\n          \"count\": 1,\n          \"hasInterestRate\": false,\n          \"interestRate\": 0,\n          \"value\": 16175,\n          \"total\": 16175\n        }, {\n          \"count\": 2,\n          \"hasInterestRate\": false,\n          \"interestRate\": 132,\n          \"value\": 4178,\n          \"total\": 16712\n        }\n      ]\n    }\n  ],\n  \"paymentSystems\": [\n    {\n      \"id\": 2,\n      \"name\": \"Visa\",\n      \"groupName\": \"creditCardPaymentGroup\",\n      \"validator\": {\n        \"regex\": \"^4\",\n        \"mask\": \"9999 9999 9999 9999\",\n        \"cardCodeRegex\": \"[^0-9]\",\n        \"cardCodeMask\": \"999\",\n        \"weights\": [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]\n      },\n      \"stringId\": null,\n      \"template\": \"creditCardPaymentGroup-template\",\n      \"requiresDocument\": false,\n      \"selected\": false,\n      \"isCustom\": false,\n      \"description\": null\n    }\n  ],\n  \"payments\": [\n    {\n      \"accountId\": null,\n      \"bin\": null,\n      \"installments\": 2,\n      \"paymentSystem\": \"12\",\n      \"referenceValue\": 16175,\n      \"value\": 16175\n    }\n  ]\n}",
-      "language": "json"
+      "redemptionCode": "HYUO-TEZZ-QFFT-HTFR",
+      "value": 500,
+      "balance": 500,
+      "name": null,
+      "id": "-1390324156495k195pmab4rall3di",
+      "inUse": true,
+      "isSpecialCard": false
+    }, {
+      "redemptionCode": "MTHU-WNTD-VXJW-TIDC",
+      "value": 0,
+      "balance": 700000,
+      "name": "loyalty-program",
+      "id": "122",
+      "inUse": false,
+      "isSpecialCard": true
+    }
+  ],
+  "giftCardMessages": [],
+  "availableAccounts": [
+    {
+      "accountId": "71F2775D46BF44B1BF217F828F4E6131",
+      "paymentSystem": "2",
+      "paymentSystemName": "Visa",
+      "cardNumber": "************1111",
+      "availableAddresses": ["-1363804954758", "-1366200971560"]
+    }
+  ],
+  "availableTokens": [],
+  "installmentOptions": [
+    {
+      "paymentSystem": "2",
+      "value": 16175,
+      "installments": [
+        {
+          "count": 1,
+          "hasInterestRate": false,
+          "interestRate": 0,
+          "value": 16175,
+          "total": 16175
+        }, {
+          "count": 2,
+          "hasInterestRate": false,
+          "interestRate": 132,
+          "value": 4178,
+          "total": 16712
+        }
+      ]
+    }
+  ],
+  "paymentSystems": [
+    {
+      "id": 2,
+      "name": "Visa",
+      "groupName": "creditCardPaymentGroup",
+      "validator": {
+        "regex": "^4",
+        "mask": "9999 9999 9999 9999",
+        "cardCodeRegex": "[^0-9]",
+        "cardCodeMask": "999",
+        "weights": [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+      },
+      "stringId": null,
+      "template": "creditCardPaymentGroup-template",
+      "requiresDocument": false,
+      "selected": false,
+      "isCustom": false,
+      "description": null
+    }
+  ],
+  "payments": [
+    {
+      "accountId": null,
+      "bin": null,
+      "installments": 2,
+      "paymentSystem": "12",
+      "referenceValue": 16175,
+      "value": 16175
     }
   ]
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    giftCards  |    Array  |    Gift cards information.    |
 |    giftCardMessages |    Array  |    Gift cards message information.    |
 |    availableAccounts |    Array  |    Available accounts information.    |
 |    availableTokens  |    Array  |    Available tokes information.    |
-|    installmentOptions  |    Array  | For accurate information on installment options and values, we recommend using the [Cart installment endpoint](https://developers.vtex.com/vtex-rest-api/reference/shopping-cart#getcartinstallments), instead of this field's data. |
+|    installmentOptions  |    Array  | For accurate information on installment options and values, we recommend using the [Cart installments endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm/-orderFormId-/installments), instead of this field's data. |
 |    paymentSystems |    Array  |    Payment systems information.    |
 |    payments  |    Array  |    Payments information.    |
 |    updateStatus    |    String    |    Checkout can not be concluded if value is `"outdated"`.    |
-[block:callout]
-{
-  "type": "warning",
-  "title": "Work in progress",
-  "body": "This guide is currently being written and published as content becomes available."
-}
-[/block]
+
+>⚠️ This guide is currently being written and published as content becomes available.
+
 ### ratesAndBenefitsData
 
 Information on rates and benefits that apply to the order.
 
-**Example:** 
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n\t\"rateAndBenefitsIdentifiers\": [\n    {\n\t\t\t\"items\": {}\n    }\n  ],\n\t\"teaser\":[\n    {\n\t\t\t\"items\": {}\n    }\n\t]\n}\n",
-      "language": "json"
-    }
+   "rateAndBenefitsIdentifiers": [
+     {
+      "items": {}
+     }
+  ],
+   "teaser":[
+     {
+      "items": {}
+     }
   ]
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    rateAndBenefitsIdentifiers    |    Array    |    List with rates and benefits identifiers.    |
@@ -459,16 +640,22 @@ Information on rates and benefits that apply to the order.
 ### selectableGifts
 
 Array containing the data of the item selected as a gift.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "[\n  {\n    \"id\": null,\n    \"availableQuantity\": \"3\",\n    \"availableGifts\": {\n      \"items\": [\n\t\t\t\t\t\t\t\t{},\n        \t\t\t   \"isSelected\": true\n\t\t\t\t\t\t\t ]\n  }\n]",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+
+```json
+ [
+  {
+    "id": null,
+    "availableQuantity": "3",
+    "availableGifts": {
+       "items": [
+                 {},
+                 "isSelected": true
+                ]
+   }
+  }
+ ]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    id    |    String    |    Identification of the selectable gifts list.    |
@@ -481,17 +668,18 @@ Array containing the data of the item selected as a gift.
 
 An array containing an object for each seller being used in the order.
 
-**Example:**
-[block:code]
-{
-  "codes": [
-    {
-      "code": "[\n  {\n    \"id\": \"1\",\n    \"name\": \"meuamigopet\",\n    \"logo\": \"http://portal.vtexcommerce.com.br/arquivos/logo.jpg\"\n  }\n]",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+__Example:__
+
+```json
+[
+  {
+    "id": "1",
+    "name": "meuamigopet",
+    "logo": "http://portal.vtexcommerce.com.br/arquivos/logo.jpg"
+  }
+]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    id  |    String  |   ID of the seller.     |
@@ -503,17 +691,144 @@ An array containing an object for each seller being used in the order.
 
 This object contains shipping information for the order.
 
-**Example:**
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
+  "attachmentId": "shippingData",
+  "address": {
+    "addressType": "residential",
+    "receiverName": "Gui***rme",
+    "addressId": "-1368194386810",
+    "postalCode": "******000",
+    "city": "Rio ** *******",
+    "state": "RJ",
+    "country": "BRA",
+    "street": "Rua *** *****nte",
+    "number": "***",
+    "neighborhood": "Bot*****",
+    "complement": "*** ** *",
+    "reference": null
+  },
+  "availableAddresses": [
     {
-      "code": "{\n  \"attachmentId\": \"shippingData\",\n  \"address\": {\n    \"addressType\": \"residential\",\n    \"receiverName\": \"Gui***rme\",\n    \"addressId\": \"-1368194386810\",\n    \"postalCode\": \"******000\",\n    \"city\": \"Rio ** *******\",\n    \"state\": \"RJ\",\n    \"country\": \"BRA\",\n    \"street\": \"Rua *** *****nte\",\n    \"number\": \"***\",\n    \"neighborhood\": \"Bot*****\",\n    \"complement\": \"*** ** *\",\n    \"reference\": null\n  },\n  \"availableAddresses\": [\n    {\n      \"addressType\": \"residential\",\n      \"receiverName\": \"Gui***rme\",\n      \"addressId\": \"-1368194386810\",\n      \"postalCode\": \"******000\",\n      \"city\": \"Rio ** *******\",\n      \"state\": \"RJ\",\n      \"country\": \"BRA\",\n      \"street\": \"Rua *** *****nte\",\n      \"number\": \"***\",\n      \"neighborhood\": \"Bot*****\",\n      \"complement\": \"*** ** *\",\n      \"reference\": null\n    }\n  ],\n  \"logisticsInfo\": [\n    {\n      \"itemIndex\": 0,\n      \"selectedSla\": \".Transportadora\",\n      \"selectedDeliveryChannel\": \"delivery\",\n      \"addressId\": \"teste\",\n      \"slas\": [\n        {\n          \"id\": \".Transportadora\",\n          \"deliveryChannel\": \"delivery\",\n          \"name\": \".Transportadora\",\n          \"deliveryIds\": [\n            {\n              \"courierId\": \"67\",\n              \"warehouseId\": \"1_1\",\n              \"dockId\": \"1_1_1\",\n              \"courierName\": \"Transportadora\",\n              \"quantity\": 1\n            }\n          ],\n          \"shippingEstimate\": \"3d\",\n          \"shippingEstimateDate\": null,\n          \"lockTTL\": null,\n          \"availableDeliveryWindows\": [],\n          \"deliveryWindow\": null,\n          \"price\": 956,\n          \"tax\": 0\n        }, {\n          \"id\": \"Agendada\",\n          \"name\": \"Agendada\",\n          \"deliveryIds\": [\n            {\n              \"courierId\": \"FA02F72F-FEBD-41A0-AF70-83A77E8C77A0\",\n              \"warehouseId\": \"1_1\",\n              \"dockId\": \"1_1_1\",\n              \"courierName\": \"Entrega agendada\",\n              \"quantity\": 1\n            }\n          ],\n          \"shippingEstimate\": \"90d\",\n          \"shippingEstimateDate\": null,\n          \"lockTTL\": null,\n          \"availableDeliveryWindows\": [\n            {\n              \"startDateUtc\": \"2014-04-21T09:00:00+00:00\",\n              \"endDateUtc\": \"2014-04-21T12:00:00+00:00\",\n              \"listprice\": 1000,\n              \"tax\": 0\n            }, {\n              \"startDateUtc\": \"2014-04-21T13:00:00+00:00\",\n              \"endDateUtc\": \"2014-04-21T17:00:00+00:00\",\n              \"listprice\": 1000,\n              \"tax\": 0\n            }\n          ],\n          \"deliveryWindow \": [\n            {\n              \"startDateUtc\": \"2014-04-21T09:00:00+00:00\",\n              \"endDateUtc\": \"2014-04-21T12:00:00+00:00\",\n              \"listprice\": 1000,\n              \"tax\": 0\n            }, {\n              \"startDateUtc\": \"2014-04-21T13:00:00+00:00\",\n              \"endDateUtc\": \"2014-04-21T17:00:00+00:00\",\n              \"listprice\": 1000,\n              \"tax\": 0\n            }\n          ],          \n          \"price\": 1220,\n          \"tax\": 0,\n          \"pickupStoreInfo\": {\n              \"isPickupStore\": false,\n              \"friendlyName\": null,\n              \"address\": null,\n              \"additionalInfo\": null,\n              \"dockId\": null\n            },\n            \"pickupPointId\": null,\n            \"pickupDistance\": 0,\n            \"polygonName\": null,\n            \"transitTime\": \"3bd\"\n          }\n        ],\n         \"shipsTo\": [\n           \"BRA\",\n           \"COL\",\n           \"USA\"\n        ],\n         \"itemId\": \"2\",\n         \"deliveryChannels\": [\n           {\n             \"id\": \"delivery\"\n           },\n           {\n             \"id\": \"pickup-in-point\"\n           }\n         ]\n       }\n      ],\n  \"selectedAddresses\": []\n}",
-      "language": "json"
+      "addressType": "residential",
+      "receiverName": "Gui***rme",
+      "addressId": "-1368194386810",
+      "postalCode": "******000",
+      "city": "Rio ** *******",
+      "state": "RJ",
+      "country": "BRA",
+      "street": "Rua *** *****nte",
+      "number": "***",
+      "neighborhood": "Bot*****",
+      "complement": "*** ** *",
+      "reference": null
     }
-  ]
+  ],
+  "logisticsInfo": [
+    {
+      "itemIndex": 0,
+      "selectedSla": ".Transportadora",
+      "selectedDeliveryChannel": "delivery",
+      "addressId": "teste",
+      "slas": [
+        {
+          "id": ".Transportadora",
+          "deliveryChannel": "delivery",
+          "name": ".Transportadora",
+          "deliveryIds": [
+            {
+              "courierId": "67",
+              "warehouseId": "1_1",
+              "dockId": "1_1_1",
+              "courierName": "Transportadora",
+              "quantity": 1
+            }
+          ],
+          "shippingEstimate": "3d",
+          "shippingEstimateDate": null,
+          "lockTTL": null,
+          "availableDeliveryWindows": [],
+          "deliveryWindow": null,
+          "price": 956,
+          "tax": 0
+        }, {
+          "id": "Agendada",
+          "name": "Agendada",
+          "deliveryIds": [
+            {
+              "courierId": "FA02F72F-FEBD-41A0-AF70-83A77E8C77A0",
+              "warehouseId": "1_1",
+              "dockId": "1_1_1",
+              "courierName": "Entrega agendada",
+              "quantity": 1
+            }
+          ],
+          "shippingEstimate": "90d",
+          "shippingEstimateDate": null,
+          "lockTTL": null,
+          "availableDeliveryWindows": [
+            {
+              "startDateUtc": "2014-04-21T09:00:00+00:00",
+              "endDateUtc": "2014-04-21T12:00:00+00:00",
+              "listprice": 1000,
+              "tax": 0
+            }, {
+              "startDateUtc": "2014-04-21T13:00:00+00:00",
+              "endDateUtc": "2014-04-21T17:00:00+00:00",
+              "listprice": 1000,
+              "tax": 0
+            }
+          ],
+          "deliveryWindow ": [
+            {
+              "startDateUtc": "2014-04-21T09:00:00+00:00",
+              "endDateUtc": "2014-04-21T12:00:00+00:00",
+              "listprice": 1000,
+              "tax": 0
+            }, {
+              "startDateUtc": "2014-04-21T13:00:00+00:00",
+              "endDateUtc": "2014-04-21T17:00:00+00:00",
+              "listprice": 1000,
+              "tax": 0
+            }
+          ],          
+          "price": 1220,
+          "tax": 0,
+          "pickupStoreInfo": {
+              "isPickupStore": false,
+              "friendlyName": null,
+              "address": null,
+              "additionalInfo": null,
+              "dockId": null
+            },
+            "pickupPointId": null,
+            "pickupDistance": 0,
+            "polygonName": null,
+            "transitTime": "3bd"
+          }
+        ],
+         "shipsTo": [
+           "BRA",
+           "COL",
+           "USA"
+        ],
+         "itemId": "2",
+         "deliveryChannels": [
+           {
+             "id": "delivery"
+           },
+           {
+             "id": "pickup-in-point"
+           }
+         ]
+       }
+      ],
+  "selectedAddresses": []
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    attachmentId  |    String  |   Attachment ID.     |
@@ -567,49 +882,62 @@ This object contains shipping information for the order.
 
 It is a string containing the store ID.
 
-**Example:** 
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"storeId\": \"2\"\n  }",
-      "language": "json"
-    }
-  ]
+    "storeId": "2"
 }
-[/block]
+```
+
 | Field      | Type      | Description |
 | ---------- | ---------- | ---------- |
 |    storeId  |    integer  |   Identification of the store.    |
 
 ### storePreferencesData
 
-This object contains data from the store's configuration (stored in VTEX's License Manager). 
+This object contains data from the store's configuration (stored in VTEX's License Manager).
 
-**Example:**
-[block:code]
+__Example:__
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"countryCode\": \"BRA\",\n  \"saveUserData\": true,\n  \"templateOptions\": {\n    \"toggleCorporate\": false\n  },\n  \"timeZone\": \"E. South America Standard Time\",\n  \"currencyCode\": \"BRL\",\n  \"currencyLocale\": 0,\n  \"currencySymbol\": \"R$\",\n  \"currencyFormatInfo\": {\n    \"currencyDecimalDigits\": 2,\n    \"currencyDecimalSeparator\": \",\",\n    \"currencyGroupSeparator\": \".\",\n    \"currencyGroupSize\": 3,\n    \"startsWithCurrencySymbol\": true\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "countryCode": "BRA",
+  "saveUserData": true,
+  "templateOptions": {
+    "toggleCorporate": false
+  },
+  "timeZone": "E. South America Standard Time",
+  "currencyCode": "BRL",
+  "currencyLocale": 0,
+  "currencySymbol": "R$",
+  "currencyFormatInfo": {
+    "currencyDecimalDigits": 2,
+    "currencyDecimalSeparator": ",",
+    "currencyGroupSeparator": ".",
+    "currencyGroupSize": 3,
+    "startsWithCurrencySymbol": true
+  }
 }
-[/block]
+```
 
 ### totalizers
 
 This array contains an object for each totalizer for the purchase. Totalizers contain the sum of values for a specific part of the order (e.g. Total item value, Total shipping value).
 
-**Example:**
-[block:code]
-{
-  "codes": [
-    {
-      "code": "[\n  {\n    \"id\": \"Items\"\n    \"name\": \"Total items\"\n    \"value\": 35620\n  }, {\n    \"id\": \"Shipping\"\n    \"name\": \"Total freight\"\n    \"value\": 399\n  }\n]",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+__Example:__
+
+```json
+[
+  {
+    "id": "Items",
+    "name": "Total items",
+    "value": 35620
+  },
+  {
+    "id": "Shipping",
+    "name": "Total freight",
+    "value": 399
+  }
+]
+```
