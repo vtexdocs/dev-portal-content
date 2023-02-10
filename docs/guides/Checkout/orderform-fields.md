@@ -642,7 +642,6 @@ __Example:__
 Array containing the data of the item selected as a gift.
 
 ```json
-{
  [
   {
     "id": null,
