@@ -15,7 +15,7 @@ Connectors are responsible for integrating marketplaces to Offer Management, so 
 Connectors interact with Offer Management in four ways:
 
 1. [Creating channel](#1-create-channel).
-2. [Activating feed](#2--feed-establishing-the-connection).
+2. [Activating feed](#2-feed-establishing-the-connection).
 3. [Updating offers](#3-interactions-where-all-processes-happen), by creating interactions.
 4. [Registering all actions in the Offer Management timeline](#4-logs-registering-steps), by creating logs.
 
