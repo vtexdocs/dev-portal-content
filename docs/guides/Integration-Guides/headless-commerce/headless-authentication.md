@@ -17,7 +17,7 @@ This is the flow of shopper authentication for headless VTEX stores:
 
 1. The shopper authenticates themselves in your frontend via an [OAuth integration](#oauth-log-in).
 2. Your frontend [exchanges the OAuth identity provider access token for a VTEX user token](#exchanging-oauth-identity-provider-access-token-for-vtex-user-token).
-3. Now you can make requests from your frontend to VTEX APIs using the obtained [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token).
+3. Now, with the user token previously obtained, your frontend application can make API requests to VTEX and access all the necessary information to perform actions on behalf of the shopper.
 
 Below you can learn more details on each of these steps.
 
