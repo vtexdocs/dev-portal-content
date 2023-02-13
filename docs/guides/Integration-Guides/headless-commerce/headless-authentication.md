@@ -21,7 +21,7 @@ This is the flow of shopper authentication for headless VTEX stores:
 
 Below you can learn more details on each of these steps.
 
->❗ If you are building a headless store, it means you are using a frontend application different from VTEX's native frontend. Because of this, it is important to follow the instructions provided below and be aware of your [application's responsibilities](#authentication-responsibilities-of-headless-applications).
+>❗ Notice that, when building a headless store, you are opting to use a frontend application different from VTEX's native frontend. Hence, you must adhere to the guidelines provided below and be aware of your [application's responsibilities](#authentication-responsibilities-of-headless-applications) in order to ensure a smooth and secure shopping experience for your customers.
 
 ### OAuth log in
 
