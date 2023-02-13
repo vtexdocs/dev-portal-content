@@ -84,4 +84,4 @@ Since your store is not using VTEX's native frontend to authenticate shoppers, t
 - Refreshing tokens and other information when necessary.
 - Keeping track of the expiration time set for the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token).
 - Requiring new login if it was somehow revoked.
-- Repeating the [token exchange](#exchanging-oauth-identity-provider-access-token-for-vtex-user-token) in case the shopper had to login again.
+- Repeating the [token exchange](#exchanging-oauth-identity-provider-access-token-for-vtex-user-token) in case the shopper had to log in again.
