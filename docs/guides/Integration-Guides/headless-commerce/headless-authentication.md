@@ -76,7 +76,7 @@ Learn more about [machine authentication in VTEX](https://developers.vtex.com/do
 
 ## Authentication responsibilities of headless applications
 
-Since your store is not using VTEX's native frontend to authenticate shoppers, there are some things that your application must be prepared to handle:
+Since your store is not using VTEX's native frontend to authenticate shoppers, there are some capabilities that your application must be prepared to handle:
 
 - Managing login flow with the external identity provider.
 - Making sure that the [OAuth access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) has scope `email` (or another value associated with scope `email`).
