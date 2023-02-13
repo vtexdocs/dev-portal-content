@@ -11,7 +11,7 @@ Building a headless ecommerce means setting up communication between your fronte
 
 ## Implementation
 
-This is the flow of shopper authentication for headless VTEX stores:
+To ensure a secure shopping experience, shopper authentication for headless VTEX stores must follow a specific flow, as presented in the following:
 
 ![headless authentication flow](./headless-authentication_1.png)
 
