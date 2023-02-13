@@ -48,27 +48,27 @@ See an example below of how to use the **POST - Exchange OAuth access token for 
 
 - Request body:
 
-    ```json
-    {
-      "providerId": "GoogleID",
-      "accessToken": "dsfDShdgfhDFI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bdg465DATU4GVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-654fgjLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ",
-      "duration": 90
-    }
-    ```
+  ```json
+  {
+    "providerId": "GoogleID",
+    "accessToken": "dsfDShdgfhDFI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bdg465DATU4GVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-654fgjLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ",
+    "duration": 90
+  }
+  ```
 
     `providerId` - Identity provider ID as configured in the [OAuth integration setup](#oauth-log-in).
     `accessToken` - Access token that the frontend application receives after a successful [OAuth login](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests).
-    -- `duration` - Duration of the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that will be returned. This field is optional and the default is 60.
+  - `duration` - Duration of the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that will be returned. This field is optional and the default is 60.
 
 - Response body:
 
-    ```json
-    {
-    "authToken": "eyJhbGciOiJFUzI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bnQiOiJwerV4aGVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-Jf463lwgLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ"
-    }
-    ```
+  ```json
+  {
+  "authToken": "eyJhbGciOiJFUzI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bnQiOiJwerV4aGVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-Jf463lwgLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ"
+  }
+  ```
 
-    - `authToken` - [User token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that can be used to [authenticate API requests](#making-requests-to-vtex-apis).
+  - `authToken` - [User token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that can be used to [authenticate API requests](#making-requests-to-vtex-apis).
 
 ### Making requests to VTEX APIs
 
