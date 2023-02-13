@@ -13,7 +13,7 @@ You can use the `TEST METHOD` button in [VTEX API reference](https://developers.
 
 Each request to VTEX APIs [must be authenticated](https://developers.vtex.com/docs/guides/getting-started-authentication). And to use the Developers Portal `TEST METHOD`, you must use [application keys](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys).
 
-So before going forward with this tutorial, make sure you have a app key and token pair with the right [permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). If you do not have an app key and token pair, learn more about how to [create application keys](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet).
+So before proceeding with this guide, make sure you have a valid pair of `appKey` and `appToken` with the necessary [permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) to execute the requests you want. If you do not have this credential yet, learn more about how to [create application keys](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet).
 
 ## Trying out a simple GET
 
@@ -59,6 +59,8 @@ As you fill in request parameters in VTEX API reference, as described above in s
 ![request example](./making-your-first-request-4.png)
 
 This means you can copy this content to be imported into other software.
+
+### Downloading API specifications
 
 Our API reference documentation is built using the [Open API 3.0 (OAS 3.0)](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) standard. The OAS 3.0 schemas are available for [download](https://github.com/vtex/openapi-schemas) in our GitHub repository.
 
