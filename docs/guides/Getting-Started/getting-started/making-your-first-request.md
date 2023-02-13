@@ -60,8 +60,6 @@ As you fill in request parameters in VTEX API reference, as described above in s
 
 This means you can copy this content to be imported into other software.
 
-### Downloading API specifications
-
 Our API reference documentation is built using the [Open API 3.0 (OAS 3.0)](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) standard. The OAS 3.0 schemas are available for [download](https://github.com/vtex/openapi-schemas) in our GitHub repository.
 
 ![Download ZIP](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-making-your-first-request-2.png)
