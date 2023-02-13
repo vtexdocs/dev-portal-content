@@ -50,7 +50,7 @@ If you received a `200 OK` response, it means you got your a successful request 
 
 ## Using an API testing platform
 
-You can export API specification or example requests to be used with [Postman](#using-postman) or the API platform of your choice.
+You can export an API specification or example request to use with [Postman](#using-postman) or the API platform of your choice.
 
 ### Request examples
 
