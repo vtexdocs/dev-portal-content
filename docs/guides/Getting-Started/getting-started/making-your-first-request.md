@@ -48,7 +48,7 @@ If you received a `200 OK` response, it means you got your a successful request 
 
 >ℹ️ Some API requests may return other status codes in case of success, such as `201 Created` or `204 No Content`.
 
-## Exporting API information
+## Using an API testing platform
 
 You can export API specification or example requests to be used with [Postman](#using-postman) or the API platform of your choice.
 
