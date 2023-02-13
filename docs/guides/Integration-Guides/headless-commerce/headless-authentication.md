@@ -70,7 +70,7 @@ Response body:
 
 ### Making requests to VTEX APIs
 
-Once your frontend has a VTEX user token, it can now use [VTEX APIs](https://developers.vtex.com/docs/api-reference) to manage your store's commerce capabilities, such as product information, shopping cart and checkout.
+Once with a valid VTEX user token, your frontend application can leverage [VTEX APIs](https://developers.vtex.com/docs/api-reference) to manage various commerce capabilities of your store, including product information, shopping cart management, and checkout.
 
 Learn more about [machine authentication in VTEX](https://developers.vtex.com/docs/guides/getting-started-authentication) and [how to use user tokens](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) to authenticate your requests.
 
