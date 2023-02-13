@@ -15,4 +15,4 @@ Thanks to it, stores can now display slides whose elements are centered, allowin
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/slides-positioning-1.png)
 This improvement is extremely useful in Shelves and other components that use the Slider Layout for rendering product data.
 
-For more details on the new prop, access the [Slider Layout documentation](https://vtex.io/docs/app/vtex.slider-layout).
+For more details on the new prop, access the [Slider Layout documentation](https://developers.vtex.com/docs/apps/vtex.slider-layout).

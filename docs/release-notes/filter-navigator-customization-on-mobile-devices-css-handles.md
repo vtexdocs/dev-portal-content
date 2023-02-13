@@ -8,7 +8,7 @@ type: "improved"
 
 ![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/filter-navigator-customization-on-mobile-devices-css-handles-0.png)
 
-New CSS Handles were added to the [Search Result app](https://vtex.io/docs/components/all/vtex.search-result/) to enable the Filter Navigator component customization on mobile devices. Namely:
+New CSS Handles were added to the [Search Result app](https://developers.vtex.com/docs/apps/vtex.search-result/) to enable the Filter Navigator component customization on mobile devices. Namely:
 
 - `accordionFilterContainer`
 - `accordionFilterContent`

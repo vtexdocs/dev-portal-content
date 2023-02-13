@@ -12,4 +12,4 @@ The Product Price component now displays all the available installment options a
 
 Previously, the Product Price component only rendered the largest number of installments, regardless of the payment method.
 
-To know more, do not forget to access the [Product Price app documentation](https://vtex.io/docs/components/all/vtex.product-price/).
+To know more, do not forget to access the [Product Price app documentation](https://developers.vtex.com/docs/apps/vtex.product-price/).

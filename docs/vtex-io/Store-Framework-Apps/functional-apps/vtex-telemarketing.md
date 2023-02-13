@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-06-03T15:20:24.277Z"
 updatedAt: "2022-10-25T16:30:05.018Z"
 ---
+
 The Telemarketing app is a store component that enables a [call center operator](https://help.vtex.com/pt/tutorial/como-criar-um-usuario-de-televendas--frequentlyAskedQuestions_4227) to represent a customer in the store and shop on their behalf.
 
 ![telemarketing](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-telemarketing-0.png)
@@ -50,7 +51,7 @@ The Telemarketing app is a store component that enables a [call center operator]
 
 Once you have added the block to the header, the Telemarketing component is ready to be rendered, since it does not require props.
 
->⚠️ The telemarketing bar is accessed via browser by the following URL, where `{accountName}` should be replaced by the name of your account: `{accountName}.myvtex.com`
+> ⚠️ The telemarketing bar is accessed via browser by the following URL, where `{accountName}` should be replaced by the name of your account: `{accountName}.myvtex.com`
 
 ## Modus Operandi
 
@@ -60,10 +61,10 @@ To understand how the permissions work for your account, including the call cent
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
-| CSS Handles |
-| ---------- |
+| CSS Handles               |
+| ------------------------- |
 | `clientName`              |
 | `clientNameBar`           |
 | `container`               |

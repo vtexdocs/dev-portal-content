@@ -167,7 +167,7 @@ There are couple URLs to read, search and modify data for the app:
 To read the schema of the wishlist app:
 
 ```
-curl --request GET \ 
+curl --request GET \
      --url 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/wishlist/schemas/wishlist' \
      --header 'VtexIdClientAutCookie: {authToken}' \
 ```
@@ -218,7 +218,7 @@ curl --request DELETE \
 
 Change the link of toast message
 
-``` json
+```json
 {
   "add-to-list-btn#myButton": {
     "props": {
@@ -228,9 +228,9 @@ Change the link of toast message
 }
 ```
 
-| Prop name |   Type   |                         Description                         | Default value |
-| :-------: | :------: | :---------------------------------------------------------: | :-----------: |
-|  `toastURL`  | `string` | Change the link of toast message |  `/account/#wishlist'`   |
+| Prop name  |   Type   |           Description            |     Default value     |
+| :--------: | :------: | :------------------------------: | :-------------------: |
+| `toastURL` | `string` | Change the link of toast message | `/account/#wishlist'` |
 
 ## Custom View Wishlist Empty
 
@@ -263,13 +263,13 @@ Show custom view in case there are no added products.
 
 #### `list-context.wishlist` props
 
-| Prop name |   Type   |                         Description                         | Default value |
-| :-------: | :------: | :---------------------------------------------------------: | :-----------: |
-|  `showViewEmptyList`  | `boolean` | Show custom view in case there are no added products. |  `false`   |
+|      Prop name      |   Type    |                      Description                      | Default value |
+| :-----------------: | :-------: | :---------------------------------------------------: | :-----------: |
+| `showViewEmptyList` | `boolean` | Show custom view in case there are no added products. |    `false`    |
 
 ## Customization
 
-In order to apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles             |
 | ----------------------- |

@@ -46,11 +46,11 @@ It's also possible to hide the component label or customize its text. Notice tha
 
 ## Customization
 
-To apply CSS customization in this and other blocks, follow the instructions given in the recipe on [Using  CSS  Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+To apply CSS customization in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
-| CSS Handles |
-| ----------- |
-| `product-identifier`           |
-| `product-identifier__label`    |
-| `product-identifier__separator`|
-| `product-identifier__value`    |
+| CSS Handles                     |
+| ------------------------------- |
+| `product-identifier`            |
+| `product-identifier__label`     |
+| `product-identifier__separator` |
+| `product-identifier__value`     |

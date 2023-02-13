@@ -13,6 +13,6 @@ Thanks to the new `openFiltersMode` prop it is now possible to define how many f
 
 Notice that only one filter can be opened at one time. In the example above, the prop `openFiltersMode` is declared as `one`.
 
-For more details, access the [Search Result app documentation](https://vtex.io/docs/components/all/vtex.search-result/).
+For more details, access the [Search Result app documentation](https://developers.vtex.com/docs/apps/vtex.search-result/).
 
-✨ *We would not be able to deliver this amazing result if it was not for [Felipe Ireslan](https://github.com/felipeireslan) from ACCT! Our sincere thanks, Felipe!*
+✨ _We would not be able to deliver this amazing result if it was not for [Felipe Ireslan](https://github.com/felipeireslan) from ACCT! Our sincere thanks, Felipe!_

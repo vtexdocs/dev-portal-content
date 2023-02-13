@@ -10,4 +10,4 @@ type: "improved"
 
 The Drawer app has gained two new CSS Handles, namely `overlay` and `overlay--visible`, responsible for allowing retailers to customize the overlay structure used by the mobile component.
 
-For further details, access the [practical example recorded on loom](https://www.loom.com/share/d4da3624507e464281caae057496a426), as well as the [Drawer app documentation](https://vtex.io/docs/components/all/vtex.store-drawer/).
+For further details, access the [practical example recorded on loom](https://www.loom.com/share/d4da3624507e464281caae057496a426), as well as the [Drawer app documentation](https://developers.vtex.com/docs/apps/vtex.store-drawer/).

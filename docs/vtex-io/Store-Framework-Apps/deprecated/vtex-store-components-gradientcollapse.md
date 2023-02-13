@@ -5,9 +5,10 @@ hidden: false
 createdAt: "2020-06-03T16:04:30.346Z"
 updatedAt: "2022-01-04T23:11:39.554Z"
 ---
+
 ![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-gradientcollapse-0.png)
 
->⚠️ **Warning**
+> ⚠️ **Warning**
 >
 > **The Gradient Collapse block has been deprecated in favor of the [Disclosure Layout app](https://developers.vtex.com/docs/guides/vtex-disclosure-layout).** Although support for this block is still granted, we strongly recommend you to update your store theme with the Disclosure Layout app.
 
@@ -26,7 +27,7 @@ updatedAt: "2022-01-04T23:11:39.554Z"
 2. Import it into your code:
 
 ```js
-import { GradientCollapse } from 'vtex.store-components'
+import { GradientCollapse } from "vtex.store-components";
 ```
 
 You can use it in your code like a React component with the jsx tag: `<GradientCollapse />`.
@@ -44,7 +45,7 @@ You can use it in your code like a React component with the jsx tag: `<GradientC
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles         |
 | ------------------- |

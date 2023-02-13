@@ -10,4 +10,4 @@ type: "improved"
 
 `:nth-child` selectors with step size, such as `:nth-child(2n)` are now allowed for your store customization with CSS!
 
-For more on customizing your store with CSS and HTML selectors, access [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization/#best-practices).
+For more on customizing your store with CSS and HTML selectors, access [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization#best-practices).

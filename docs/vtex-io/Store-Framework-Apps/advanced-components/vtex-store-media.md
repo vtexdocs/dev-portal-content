@@ -22,9 +22,9 @@ The Media app allows you to display image and video assets using a single block.
 
 Now, you are able to use all blocks exported by the `store-media` app. Check out the full list below:
 
-| Block name                | Description                                                                                                                                                                                                                                               |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `media`                   | This block is capable of displaying a single image or video.                                                                                                                                                                                                 |
+| Block name                | Description                                                                                                                                                                                                                         |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `media`                   | This block is capable of displaying a single image or video.                                                                                                                                                                        |
 | `list-context.media-list` | This block allows you to display a list of images and videos in your store with a higher degree of composability. You can use it along with other `list-context` or `slider-layout` blocks to create different sliders and layouts. |
 
 ### `media` block
@@ -56,10 +56,10 @@ The `list-context.media-list` block acts just like the `list-context.image-list`
 
 `list-context.media-list` accepts both images and videos, so you can mix them inside a single carousel, for example. Images can receive `image` blocks' props and videos can receive `video` blocks' props. If you pass props that don't match the media type, they will be ignored.
 
-| Prop name   | Type | Description                                                                                                                                                                                                                                                                                                                         | Default value  |
-| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `height` | `string  | number` | This value is used for the `max-height` CSS property and **is applied to images only**. | `420` |
-| `mediaList` | [MediaListElement] | List of `MediaListElement` that represents the media to be added to the list context. | `[]` |
+| Prop name   | Type               | Description                                                                           | Default value                                                                           |
+| ----------- | ------------------ | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ----- |
+| `height`    | `string            | number`                                                                               | This value is used for the `max-height` CSS property and **is applied to images only**. | `420` |
+| `mediaList` | [MediaListElement] | List of `MediaListElement` that represents the media to be added to the list context. | `[]`                                                                                    |
 
 - `MediaListElement` object
 
@@ -67,13 +67,12 @@ A `MediaListElement` object has a very similar shape to the props accepted by th
 
 Differently from the `media` component, it does **not** use the `src` prop to receive the assets. For images, it uses the `image` and `mobileImage` props, and, for video, it uses the `video` and `mobileVideo` props.
 
-| Prop name   | Type | Description                                                                                                                                                                                                                                                                                                                         | Default value  |
-| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `image` | `string` | URL to the image to be displayed. | undefined |
-| `mobileImage` | `string` | URL to the image to be displayed when the user is using a mobile device. If it's undefined, `image` will be used instead. | undefined |
-| `video` | `string` | URL to the video to be displayed. | undefined |
-| `mobileVideo` | `string` | URL to the video to be displayed when the user is using a mobile device. If it's undefined, `video` will be used instead. | undefined |
-
+| Prop name     | Type     | Description                                                                                                               | Default value |
+| ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `image`       | `string` | URL to the image to be displayed.                                                                                         | undefined     |
+| `mobileImage` | `string` | URL to the image to be displayed when the user is using a mobile device. If it's undefined, `image` will be used instead. | undefined     |
+| `video`       | `string` | URL to the video to be displayed.                                                                                         | undefined     |
+| `mobileVideo` | `string` | URL to the video to be displayed when the user is using a mobile device. If it's undefined, `video` will be used instead. | undefined     |
 
 **Usage Example**:
 
@@ -109,9 +108,8 @@ Differently from the `media` component, it does **not** use the `src` prop to re
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 Just like they do with props, all blocks from this app inherits all of `image` and `video` blocks' CSS Handles. You can find them in their respective docs.
 
 Keep in mind that, for instance, applying CSS customizations to CSS Handles that came from `image` won't have any effect if the `mediaType` is set to `video` or if the `mediaType` is set to `imageOrVideo` and the `src` was identified as a video.
-

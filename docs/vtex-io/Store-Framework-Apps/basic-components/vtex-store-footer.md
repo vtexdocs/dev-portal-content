@@ -28,28 +28,16 @@ Footer is a store component that shows information about the store such as addre
     "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
   },
   "footer-layout.desktop": {
-    "children": [
-      "flex-layout.row#footer-desktop"
-    ]
+    "children": ["flex-layout.row#footer-desktop"]
   },
   "footer-layout.mobile": {
-    "children": [
-      "flex-layout.row#footer-mobile"
-    ]
+    "children": ["flex-layout.row#footer-mobile"]
   },
   "flex-layout.row#footer-desktop": {
-    "children": [
-      "social-networks",
-      "accepted-payment-methods",
-      "powered-by"
-    ]
+    "children": ["social-networks", "accepted-payment-methods", "powered-by"]
   },
   "flex-layout.row#footer-mobile": {
-    "children": [
-      "social-networks",
-      "accepted-payment-methods",
-      "powered-by"
-    ]
+    "children": ["social-networks", "accepted-payment-methods", "powered-by"]
   },
   "social-networks": {
     "props": {
@@ -69,65 +57,65 @@ Footer is a store component that shows information about the store such as addre
 
 `social-networks`:
 
-| Prop name | Type          | Description    |
-| --------- | ------------- | -------------- |
-| `title` | `string` | Text to show above of list of links |
-| `socialNetworks`   | `Array(SocialNetwork)` | Array of social networks |
-| `showInColor` | `boolean` | Whether the icons are colored or not |
+| Prop name        | Type                   | Description                          |
+| ---------------- | ---------------------- | ------------------------------------ |
+| `title`          | `string`               | Text to show above of list of links  |
+| `socialNetworks` | `Array(SocialNetwork)` | Array of social networks             |
+| `showInColor`    | `boolean`              | Whether the icons are colored or not |
 
 SocialNetwork
 
-| Prop name | Type          | Description    |
-| --------- | ------------- | -------------- |
-| `url`   | `string` | Link to the social network profile |
-| `name`   | `enum` | Possible values: `facebook`, `twitter`, `linkedin`, `youtube`, `pinterest` |
+| Prop name | Type     | Description                                                                |
+| --------- | -------- | -------------------------------------------------------------------------- |
+| `url`     | `string` | Link to the social network profile                                         |
+| `name`    | `enum`   | Possible values: `facebook`, `twitter`, `linkedin`, `youtube`, `pinterest` |
 
 `accepted-payment-methods`:
 
-| Prop name | Type          | Description    |
-| --------- | ------------- | -------------- |
-| `paymentMethods`   | `Array` | Possible values: `mastercard`, `visa`, `diners club` |
-| `showInColor` | `boolean` | Whether the icons are colored or not |
+| Prop name        | Type      | Description                                          |
+| ---------------- | --------- | ---------------------------------------------------- |
+| `paymentMethods` | `Array`   | Possible values: `mastercard`, `visa`, `diners club` |
+| `showInColor`    | `boolean` | Whether the icons are colored or not                 |
 
 `powered-by`:
 
-| Prop name | Type          | Description    |
-| --------- | ------------- | -------------- |
+| Prop name     | Type      | Description                          |
+| ------------- | --------- | ------------------------------------ |
 | `showInColor` | `boolean` | Whether the icons are colored or not |
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 `footer-layout`:
 
-| CSS Handles |
-| --- |
-| `footerLayout` |
+| CSS Handles          |
+| -------------------- |
+| `footerLayout`       |
 | `footerLayoutSpacer` |
 
 `social-networks`:
 
-| CSS Handles |
-| --- |
-| `socialNetworksTitle` |
+| CSS Handles               |
+| ------------------------- |
+| `socialNetworksTitle`     |
 | `socialNetworksContainer` |
-| `socialNetworkWrapper` |
-| `socialNetworkLink` |
-| `socialNetworkImage` |
+| `socialNetworkWrapper`    |
+| `socialNetworkLink`       |
+| `socialNetworkImage`      |
 
 `accepted-payment-methods`:
 
-| CSS Handles |
-| --- |
+| CSS Handles                      |
+| -------------------------------- |
 | `acceptedPaymentMethodContainer` |
-| `paymentMethodIcon` |
-| `paymentMethodIconImage` |
+| `paymentMethodIcon`              |
+| `paymentMethodIconImage`         |
 
 `powered-by`:
 
-| CSS Handles |
-| --- |
-| `poweredBy` |
+| CSS Handles      |
+| ---------------- |
+| `poweredBy`      |
 | `poweredByImage` |
-| `poweredByLink` |
+| `poweredByLink`  |

@@ -14,4 +14,4 @@ The Product Highlights app is here: it allows you to display highlight badges on
 
 In the image above, the product has a `Top Seller` highlight.
 
-To learn how to configure it in your store, access now the [Product Highlights app documentation](https://vtex.io/docs/components/all/vtex.product-highlights/)!
+To learn how to configure it in your store, access now the [Product Highlights app documentation](https://developers.vtex.com/docs/apps/vtex.product-highlights/)!

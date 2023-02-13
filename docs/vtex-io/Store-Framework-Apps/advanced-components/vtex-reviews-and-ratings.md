@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-06-03T15:19:19.070Z"
 updatedAt: "2022-12-05T12:45:09.103Z"
 ---
+
 Reviews & Ratings is a VTEX IO native solution that allows shoppers to submit reviews and ratings for products, as well as see them while navigating the store..
 
 ![reviews-and-ratings-app](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-reviews-and-ratings-0.png)
@@ -74,7 +75,7 @@ To access and use the review moderation admin interface, follow the instructions
 1. Enable the **Require Admin Approval** setting as described above.
 2. In the admin dashboard, navigate to **Catalog > Reviews** using the admin's sidebar.
 3. You may view either **Pending** or **Approved** reviews using the tabs at the top of the page.
-> ⚠️ You can export reviews to XLS files from the **Download** tab, and it is limited to exporting 800 reviews at a time. Please use the date pickers to select the time range of reviews you want to export.
+   > ⚠️ You can export reviews to XLS files from the **Download** tab, and it is limited to exporting 800 reviews at a time. Please use the date pickers to select the time range of reviews you want to export.
 
 > ⚠️ If you have updated to version 3.x after using a prior version of **Reviews and Ratings**, you may see the **Migrate Data** button instead of a list of reviews in the **Catalog > Reviews** page. Clicking this button will migrate all existing review data from the previous storage solution (VBASE) to the new solution (Masterdata V2). Once the migration is finished, the page will automatically refresh, and the list of reviews will become available for you.
 
@@ -84,7 +85,7 @@ Approved reviews may be deleted as well, either individually or in bulk.
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles               |
 | ------------------------- |
@@ -148,13 +149,16 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `writeReviewButton`       |
 
 ## Rest APIs
+
 In order to see how to use the list of REST APIs go to [Reviews and Ratings API overview](https://developers.vtex.com/docs/api-reference/reviews-and-ratings-api#overview).
 
 ## GraphQL IDE
+
 In order to see how to use the graphQL queries and mutations you can go through the next steps:
-1. Open the Admin [GraphQL IDE app](https://developers.vtex.com/docs/guides/vtex-admin-graphql-ide). 
+
+1. Open the Admin [GraphQL IDE app](https://developers.vtex.com/docs/guides/vtex-admin-graphql-ide).
 2. Select vtex.reviews-and-ratings app.
 3. Click on `docs` at the top right corner.
-![reviews-and-ratings-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/public/metadata/images/screenshots/graphQL_docs.png)
+   ![reviews-and-ratings-app](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/public/metadata/images/screenshots/graphQL_docs.png)
 
 You will see the list of all available queries and mutations, including schemas and variable descriptions.

@@ -10,4 +10,4 @@ type: "added"
 
 A VTEX [**OneSignal**](https://onesignal.com/) native integration is now available for stores using **VTEX Store Framework**, providing web push notifications for customer engagement.
 
-Learn how to install it in your VTEX account accessing the [OneSignal app documentation](https://vtex.io/docs/components/all/vtex.onesignal/).
+Learn how to install it in your VTEX account accessing the [OneSignal app documentation](https://developers.vtex.com/docs/apps/vtex.onesignal/).

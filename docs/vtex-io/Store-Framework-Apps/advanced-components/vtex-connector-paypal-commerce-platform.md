@@ -30,7 +30,7 @@ An app integrating PayPal Checkout with Smart Payment Buttons with a VTEX IO sto
 > ⚠️ _Only users with access to the **Payments** section in the VTEX admin (or assigned the **PCI Gateway** role in License Manager) will be able to configure the app._
 
 1. Install this app from the [VTEX App Store](https://apps.vtex.com/vtex-connector-paypal-commerce-platform/p) by clicking `Get App`.
-2. If you wish to use the **Smart Payment Buttons**, install the Checkout Cart app by following its [documentation](https://vtex.io/docs/app/vtex.checkout-cart), **OR** modify your store-theme following the [Customization](#customization) section below. If using Checkout Cart, no store-theme modification is necessary.
+2. If you wish to use the **Smart Payment Buttons**, install the Checkout Cart app by following its [documentation](https://developers.vtex.com/docs/apps/vtex.checkout-cart), **OR** modify your store-theme following the [Customization](#customization) section below. If using Checkout Cart, no store-theme modification is necessary.
 3. In your VTEX admin dashboard, go to `Payments > PayPal`.
 4. Confirm your PayPal account email address. If you don't already have a PayPal account, you will be walked through the steps to create one. If you want to use an email other than your VTEX account's email address, click the `Change` button. Clicking `Change` will also allow you to toggle into `Sandbox Mode` for testing purposes. (Note: If you onboard in Sandbox Mode, you will eventually need to disconnect your sandbox account and perform the onboarding again with a production PayPal account when you are ready to accept live payments.)
 5. Click `Connect` and follow PayPal's prompts to complete the onboarding. This process will grant VTEX permission to process PayPal transactions on your behalf.
@@ -66,7 +66,7 @@ An app integrating PayPal Checkout with Smart Payment Buttons with a VTEX IO sto
 
 ### PayPal Credit Promotional Messaging
 
-To display [PayPal Credit promotional messaging](https://www.paypal.com/merchantapps/appcenter/accelerategrowth/paylatermessaging?locale.x=en_US) on your PDP and/or product shelves, simply modify your store-theme to place the `product-installments` block in the desired location. This block is provided by the core [Product Price](https://vtex.io/docs/app/vtex.product-price) app, so no change to your store-theme's dependencies should be needed. When the PayPal app is installed in the same account, it will automatically fill the `product-installments` block with PayPal's messaging.
+To display [PayPal Credit promotional messaging](https://www.paypal.com/merchantapps/appcenter/accelerategrowth/paylatermessaging?locale.x=en_US) on your PDP and/or product shelves, simply modify your store-theme to place the `product-installments` block in the desired location. This block is provided by the core [Product Price](https://developers.vtex.com/docs/apps/vtex.product-price) app, so no change to your store-theme's dependencies should be needed. When the PayPal app is installed in the same account, it will automatically fill the `product-installments` block with PayPal's messaging.
 
 > ⚠️ Note that promotional messaging will not be displayed if you have chosen to disable the PayPal Credit Smart Payment Button, or if the `product-installments` block is not present in your store-theme.
 
@@ -86,7 +86,7 @@ If your store does not have Checkout Cart installed, or if you wish to display t
 3. Modify the JSON within your store-theme's `store` folder to place the block `"one-click-buy.paypal-checkout-button"` in the desired location. The block accepts no props.
 4. Continue following the [Installation & Onboarding](#configuration) instructions from step 3.
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles                      |
 | -------------------------------- |
@@ -94,4 +94,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `payPalErrorModal`               |
 | `payPalProcessingModal`          |
 | `payPalPayLaterMessageContainer` |
-

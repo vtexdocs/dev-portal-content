@@ -8,6 +8,6 @@ type: "added"
 
 ![VTEX IO App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/kelkoo-pixel-app-0.png)
 
-The more native integrations, the better: get ready for the [Kelkoo](https://www.kelkoogroup.com/) native integration! 
+The more native integrations, the better: get ready for the [Kelkoo](https://www.kelkoogroup.com/) native integration!
 
-The new [pixel app](https://vtex.io/docs/components/all/vtex.kelkoo/) is here to help your store with incremental e-commerce leads!
+The new [pixel app](https://developers.vtex.com/docs/apps/vtex.kelkoo/) is here to help your store with incremental e-commerce leads!

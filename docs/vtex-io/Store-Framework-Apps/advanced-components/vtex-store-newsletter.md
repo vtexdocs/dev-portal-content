@@ -22,15 +22,15 @@ The Store Newsletter app provides a set of blocks that you can use to create a n
 
 Now, you are able to use all blocks exported by the `store-newsletter` app. Check out the full list below:
 
-| Block name                         | Description                                                                                                          |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `newsletter-form`                  | ![mandatory](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-newsletter-1.png) Top level block that provides context to all its children. |
-| `newsletter-input-email`           | ![mandatory](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-newsletter-2.png) Renders an email input in the newsletter form.             |
-| `newsletter-input-name`            | Renders an name input in the newsletter form.                                                                        |
-| `newsletter-input-phone`           | Renders an phone input in the newsletter form.                                                                       |
-| `newsletter-checkbox-confirmation` | Renders a confirmation checkbox in the newsletter form.                                                              |
+| Block name                         | Description                                                                                                                                                                                                                                                 |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `newsletter-form`                  | ![mandatory](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-newsletter-1.png) Top level block that provides context to all its children.                                                                                    |
+| `newsletter-input-email`           | ![mandatory](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-newsletter-2.png) Renders an email input in the newsletter form.                                                                                                |
+| `newsletter-input-name`            | Renders an name input in the newsletter form.                                                                                                                                                                                                               |
+| `newsletter-input-phone`           | Renders an phone input in the newsletter form.                                                                                                                                                                                                              |
+| `newsletter-checkbox-confirmation` | Renders a confirmation checkbox in the newsletter form.                                                                                                                                                                                                     |
 | `newsletter-hidden-field`          | Doesn't render anything, but enables hidden fields on the form to fetch custom data and save them in the store's [Master Data](https://help.vtex.com/en/tutorial/what-is-master-data--4otjBnR27u4WUIciQsmkAw) whenever a user subscribes to the newsletter. |
-| `newsletter-submit`                | ![mandatory](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-newsletter-3.png) Renders a `Submit` button for the newsletter form.         |
+| `newsletter-submit`                | ![mandatory](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-newsletter-3.png) Renders a `Submit` button for the newsletter form.                                                                                            |
 
 2. In the desired store template, such as the `store.home`, add the `newsletter-form` block and its desired children:
 
@@ -88,12 +88,12 @@ Now, you are able to use all blocks exported by the `store-newsletter` app. Chec
 
 ### `newsletter-checkbox-confirmation` props
 
-| Prop name       | Type     | Description                                                                                                                                                                                                                          | Default value                                                                        |
-| --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `checkboxLabel` | `string` | Label for the confirmation checkbox. This prop supports the [ICU Message Format](https://format-message.github.io/icu-message-format-for-translators/), exposing two variables for you to interpolate: `firstLink` and `secondLink`. | `I agree to received this newsletter.` (translated according to the store's locale). |
-| `firstLabelLink`     | `Object` | Configures the `firstLink` variable to be interpolated by the text passed to `checkboxLabel`. checkbox.                                                                                                                              | `undefined`.                                                                         |
-| `secondLabelLink`    | `Object` | Configures the `secondLink` variable to be interpolated by the text passed to `checkboxLabel`. checkbox.                                                                                                                             | `undefined`                                                                          |
-| `classes`         | `CustomCSSClasses` | Used to override default CSS handles. To better understand how this prop works, we recommend reading about it [here](https://github.com/vtex-apps/css-handles#usecustomclasses). Note that this is only useful if you're importing this block as a React component.                                      | `undefined`           |
+| Prop name         | Type               | Description                                                                                                                                                                                                                                                         | Default value                                                                        |
+| ----------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `checkboxLabel`   | `string`           | Label for the confirmation checkbox. This prop supports the [ICU Message Format](https://format-message.github.io/icu-message-format-for-translators/), exposing two variables for you to interpolate: `firstLink` and `secondLink`.                                | `I agree to received this newsletter.` (translated according to the store's locale). |
+| `firstLabelLink`  | `Object`           | Configures the `firstLink` variable to be interpolated by the text passed to `checkboxLabel`. checkbox.                                                                                                                                                             | `undefined`.                                                                         |
+| `secondLabelLink` | `Object`           | Configures the `secondLink` variable to be interpolated by the text passed to `checkboxLabel`. checkbox.                                                                                                                                                            | `undefined`                                                                          |
+| `classes`         | `CustomCSSClasses` | Used to override default CSS handles. To better understand how this prop works, we recommend reading about it [here](https://github.com/vtex-apps/css-handles#usecustomclasses). Note that this is only useful if you're importing this block as a React component. | `undefined`                                                                          |
 
 - `firstLabelLink` and `secondLabelLink` objects:
 
@@ -104,20 +104,20 @@ Now, you are able to use all blocks exported by the `store-newsletter` app. Chec
 
 ### `newsletter-hidden-field` props
 
-| Prop name | Type     | Description                 | Default value |
-| --------- | -------- | --------------------------- | ------------- |
-| `dynamicFields` | `[enum]` | Desired hidden fields responsible for saving the user's custom data on [Master Data](https://help.vtex.com/en/tutorial/what-is-master-data--4otjBnR27u4WUIciQsmkAw) once the newsletter form is submitted. Notice that the name of the fields must be written in an array and represent which user data they save. Possible values are: `bindingUrl` and `bindingId`. *Caution*: To properly save the data, you must also [create the desired filters](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829) in the Master Data's `Client` entity.  | `undefined` |
+| Prop name       | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Default value |
+| --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| `dynamicFields` | `[enum]` | Desired hidden fields responsible for saving the user's custom data on [Master Data](https://help.vtex.com/en/tutorial/what-is-master-data--4otjBnR27u4WUIciQsmkAw) once the newsletter form is submitted. Notice that the name of the fields must be written in an array and represent which user data they save. Possible values are: `bindingUrl` and `bindingId`. _Caution_: To properly save the data, you must also [create the desired filters](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829) in the Master Data's `Client` entity. | `undefined`   |
 
 ### `newsletter-submit` props
 
-| Prop name           | Type     | Description                          | Default value                                             |
-| ------------------- | -------- | ------------------------------------ | --------------------------------------------------------- |
-| `submitButtonLabel` | `string` | Text displayed on the submit button. | `Subscribe` (translated according to the store's locale). |
-| `classes`         | `CustomCSSClasses` | Used to override default CSS handles. To better understand how this prop works, we recommend reading about it [here](https://github.com/vtex-apps/css-handles#usecustomclasses). Note that this is only useful if you're importing this block as a React component.                                      | `undefined`           |
+| Prop name           | Type               | Description                                                                                                                                                                                                                                                         | Default value                                             |
+| ------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| `submitButtonLabel` | `string`           | Text displayed on the submit button.                                                                                                                                                                                                                                | `Subscribe` (translated according to the store's locale). |
+| `classes`           | `CustomCSSClasses` | Used to override default CSS handles. To better understand how this prop works, we recommend reading about it [here](https://github.com/vtex-apps/css-handles#usecustomclasses). Note that this is only useful if you're importing this block as a React component. | `undefined`                                               |
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles                     |
 | ------------------------------- |
@@ -137,4 +137,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `phoneInputContainer`           |
 | `phoneInputContainer--invalid`  |
 | `phoneInputLabel`               |
-

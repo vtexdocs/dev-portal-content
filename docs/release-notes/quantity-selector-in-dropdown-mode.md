@@ -8,5 +8,5 @@ type: "improved"
 
 ![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/quantity-selector-in-dropdown-mode-0.png)
 
-The Quantity Selector block, exported by the [Product Quantity app](https://vtex.io/docs/components/all/vtex.product-quantity/), can now be rendered as a dropdown thanks to its new prop: the `selectorType`!
+The Quantity Selector block, exported by the [Product Quantity app](https://developers.vtex.com/docs/apps/vtex.product-quantity/), can now be rendered as a dropdown thanks to its new prop: the `selectorType`!
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/quantity-selector-in-dropdown-mode-1.png)

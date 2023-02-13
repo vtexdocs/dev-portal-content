@@ -49,7 +49,7 @@ The Video app allows you to display video assets on your store pages.
 | `autoPlay`       | `boolean`            | Whether the video will start automatically after loaded(`true`) or not(`false`). Note that if the value is `true`, the muted property will automatically be setted to `true`.                          | `false`           |
 | `muted`          | `boolean`            | Whether the video will start with the audio on(`false`) or not(`true`).                                                                                                                                | `false`           |
 | `loop`           | `boolean`            | Whether the video will run in a loop(`true`) or not(`false`).                                                                                                                                          | `false`           |
-| `playsInline`           | `boolean`            | Whether the video will play inline(`true`) or not(`false`).                                                                                                                                          | `false`           |
+| `playsInline`    | `boolean`            | Whether the video will play inline(`true`) or not(`false`).                                                                                                                                            | `false`           |
 | `width`          | `number` or `string` | The width of the video exhibition area. It could be as %(`string`) or pixels(`number`).                                                                                                                | `undefined`       |
 | `height`         | `number` or `string` | The height of the video exhibition area. It could be as %(`string`) or pixels(`number`).                                                                                                               | `undefined`       |
 | `PlayIcon`       | `string`             | Video play icon for `custom-vtex` controls.                                                                                                                                                            | `icon-play`       |
@@ -63,7 +63,7 @@ Use the **admin's Site Editor** to manage some props declared in the `video` blo
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles         |
 | ------------------- |
@@ -82,4 +82,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `volumeSlider`      |
 
 > ⚠️ It's required that `controlsType` prop is set as `custom-vtex` in order to have the following CSS Handles properly working: `controlsContainer`, `fullscreenButton`, `playButton`, `trackContainer`, `trackTimer`, `trackBar`, `volumeContainer`, `volumeSlider`, and `volumeButton`.
-

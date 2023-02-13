@@ -5,9 +5,10 @@ hidden: false
 createdAt: "2020-06-03T16:04:30.346Z"
 updatedAt: "2021-10-25T14:50:59.973Z"
 ---
+
 ![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-collectionbadges-0.png)
 
->⚠️ **Warning**
+> ⚠️ **Warning**
 >
 > **The Collection Badges block has been deprecated**. Despite this, support for it is still granted.
 
@@ -21,7 +22,7 @@ You should follow the usage instruction in the main [README](/docs/guides/vtex-s
 To import it into your code:
 
 ```tsx
-import { CollectionBadges } from 'vtex.store-components'
+import { CollectionBadges } from "vtex.store-components";
 ```
 
 You can use it in your code like a React component with the `JSX` tag: `<CollectionBadges>`.
@@ -41,7 +42,7 @@ You can use it in your code like a React component with the `JSX` tag: `<Collect
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles           |
 | --------------------- |

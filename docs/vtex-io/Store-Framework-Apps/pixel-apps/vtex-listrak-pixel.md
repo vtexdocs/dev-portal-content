@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-06-03T15:20:18.786Z"
 updatedAt: "2022-10-03T18:26:48.050Z"
 ---
+
 This app provides pixel integration for Listrak metrics and cart abandonment functionality, and provides related routes and blocks for use in an account's store-theme.
 
 Additionally, if you would like the app to send Order, Product, and Customer data to Listrak, you can create a [Listrak Data Integration](#Listrak-Data-Integration).
@@ -80,10 +81,27 @@ Example - Listrak provides sample template code that looks like this:
   style="width:100%; padding:40px 0;"
 >
   <script type="text/html">
-    <div style="box-sizing:border-box; vertical-align:top; display:inline-block; width:25%; padding:20px;">
-        <a href="@Recommendation.LinkUrl"><img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/@Recommendation.ImageUrl" title="@Recommendation.Title" style="display:block; width:auto; height: 100%; max-height:200px; margin:auto;"/></a>
-        <a href="@Recommendation.LinkUrl" title="@Recommendation.Title" style="display:block; width:100%; font-family:Segoe UI,Roboto,Helvetica Neue,sans-serif; font-size: 15px; font-weight: 500; color:#333;text-decoration:none; text-align:center; padding-top:8px;">@Recommendation.Title</a>
-        <a href="@Recommendation.LinkUrl" title="@Recommendation.Title" style="display:block; width:100%; font-family:Segoe UI,Roboto,Helvetica Neue,sans-serif; font-size: 13px; font-weight: 700; color:#d43e3e; text-decoration:none; text-align:center; padding-top:8px;">$@Recommendation.Price</a>
+    <div
+      style="box-sizing:border-box; vertical-align:top; display:inline-block; width:25%; padding:20px;"
+    >
+      <a href="@Recommendation.LinkUrl"
+        ><img
+          src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Store Framework Apps/pixel-apps/@Recommendation.ImageUrl"
+          title="@Recommendation.Title"
+          style="display:block; width:auto; height: 100%; max-height:200px; margin:auto;"
+      /></a>
+      <a
+        href="@Recommendation.LinkUrl"
+        title="@Recommendation.Title"
+        style="display:block; width:100%; font-family:Segoe UI,Roboto,Helvetica Neue,sans-serif; font-size: 15px; font-weight: 500; color:#333;text-decoration:none; text-align:center; padding-top:8px;"
+        >@Recommendation.Title</a
+      >
+      <a
+        href="@Recommendation.LinkUrl"
+        title="@Recommendation.Title"
+        style="display:block; width:100%; font-family:Segoe UI,Roboto,Helvetica Neue,sans-serif; font-size: 13px; font-weight: 700; color:#d43e3e; text-decoration:none; text-align:center; padding-top:8px;"
+        >$@Recommendation.Price</a
+      >
     </div>
   </script>
 </div>
@@ -110,35 +128,35 @@ To finalize a Listrak integration, custom JS code must be added to checkout in t
 
 ```js
 // Listrak
-$(document).ready(function() {
-  var prevItems = []
-  $(window).on('orderFormUpdated.vtex', function(evt, orderForm) {
-    ;(function() {
-      if (typeof _ltk == 'object') {
-        ltkCode()
+$(document).ready(function () {
+  var prevItems = [];
+  $(window).on("orderFormUpdated.vtex", function (evt, orderForm) {
+    (function () {
+      if (typeof _ltk == "object") {
+        ltkCode();
       } else {
-        ;(function(d) {
+        (function (d) {
           if (document.addEventListener)
-            document.addEventListener('ltkAsyncListener', d)
+            document.addEventListener("ltkAsyncListener", d);
           else {
-            e = document.documentElement
-            e.ltkAsyncProperty = 0
-            e.attachEvent('onpropertychange', function(e) {
-              if (e.propertyName == 'ltkAsyncProperty') {
-                d()
+            e = document.documentElement;
+            e.ltkAsyncProperty = 0;
+            e.attachEvent("onpropertychange", function (e) {
+              if (e.propertyName == "ltkAsyncProperty") {
+                d();
               }
-            })
+            });
           }
-        })(function() {
-          ltkCode()
-        })
+        })(function () {
+          ltkCode();
+        });
       }
       function ltkCode() {
-        _ltk_util.ready(function() {
-          _ltk.SCA.CaptureEmail('client-pre-email')
+        _ltk_util.ready(function () {
+          _ltk.SCA.CaptureEmail("client-pre-email");
           if (JSON.stringify(orderForm.items) != JSON.stringify(prevItems)) {
             if (orderForm.items.length > 0) {
-              orderForm.items.forEach(item => {
+              orderForm.items.forEach((item) => {
                 _ltk.SCA.AddItemWithLinks(
                   item.id,
                   item.quantity,
@@ -146,30 +164,30 @@ $(document).ready(function() {
                   item.name,
                   item.imageUrl,
                   item.detailUrl
-                )
-              })
-              _ltk.SCA.Submit()
+                );
+              });
+              _ltk.SCA.Submit();
             } else {
-              _ltk.SCA.ClearCart()
+              _ltk.SCA.ClearCart();
             }
-            prevItems = orderForm.items
+            prevItems = orderForm.items;
           }
-        })
+        });
       }
-    })()
-  })
-})
-var biJsHost = 'https:' == document.location.protocol ? 'https://' : 'http://'
-;(function(d, s, id, tid, vid) {
+    })();
+  });
+});
+var biJsHost = "https:" == document.location.protocol ? "https://" : "http://";
+(function (d, s, id, tid, vid) {
   var js,
-    ljs = d.getElementsByTagName(s)[0]
-  if (d.getElementById(id)) return
-  js = d.createElement(s)
-  js.id = id
+    ljs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
   js.src =
-    biJsHost + 'cdn.listrakbi.com/scripts/script.js?m=' + tid + '&v=' + vid
-  ljs.parentNode.insertBefore(js, ljs)
-})(document, 'script', 'ltkSDK', 'LISTRAK-MERCHANT-ID', '1')
+    biJsHost + "cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+  ljs.parentNode.insertBefore(js, ljs);
+})(document, "script", "ltkSDK", "LISTRAK-MERCHANT-ID", "1");
 // end Listrak
 ```
 
@@ -199,7 +217,7 @@ There are three possible IPs the app may use to send data to the Listrak API, th
 
 ## Customization
 
-In order to apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles       |
 | ----------------- |
