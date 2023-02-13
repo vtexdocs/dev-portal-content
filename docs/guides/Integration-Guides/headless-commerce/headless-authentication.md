@@ -33,7 +33,7 @@ After you have configured your [OAuth](https://developers.vtex.com/docs/guides/l
 
 ### Exchanging OAuth identity provider access token for VTEX user token
 
-If you have set up your OAuth integration and implemented login on your frontend, users may be able to authenticate themselves, but this is still not enough for your frontend to communicate with VTEX REST APIs.
+If you have set up your OAuth integration and implemented login on your frontend, users may be able to authenticate themselves. However, this alone is not sufficient for your frontend to communicate with VTEX REST APIs. 
 
 To enable this communication, your frontend application must exchange the [access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) from the OAuth login for a VTEX [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). This can be achieved through the [POST - Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/vtexid/audience/webstore/provider/oauth/exchange) API.
 
