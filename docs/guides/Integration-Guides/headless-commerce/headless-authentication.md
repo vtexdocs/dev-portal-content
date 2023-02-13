@@ -17,11 +17,11 @@ To ensure a secure shopping experience, shopper authentication for headless VTEX
 
 1. The shopper authenticates themselves in your frontend via an [OAuth integration](#oauth-log-in).
 2. Your frontend [exchanges the OAuth identity provider access token for a VTEX user token](#exchanging-oauth-identity-provider-access-token-for-vtex-user-token).
-3. Now, with the user token previously obtained, your frontend application can make API requests to VTEX and access all the necessary information to perform actions on behalf of the shopper.
+3. Now, with the [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) previously obtained, your frontend application can make API requests to VTEX and access all the necessary information to perform actions on behalf of the shopper.
 
 Below you can learn more details on each of these steps.
 
->❗ Notice that, when building a headless store, you are opting to use a frontend application different from VTEX's native frontend. Hence, you must adhere to the guidelines provided below and be aware of your [application's responsibilities](#authentication-responsibilities-of-headless-applications) in order to ensure a smooth and secure shopping experience for your customers.
+>❗ Note that, when building a headless store, you are opting to use a frontend application different from VTEX's native frontend. Hence, you must adhere to the guidelines provided below and be aware of your [application's responsibilities](#authentication-responsibilities-of-headless-applications) in order to ensure a smooth and secure shopping experience for your customers.
 
 ### OAuth log in
 
@@ -39,36 +39,36 @@ To enable this communication, your frontend application must exchange the [acces
 
 See an example below of how to use the **POST - Exchange OAuth access token for VTEX credential** API to perform this operation:
 
-Endpoint:
+- Endpoint:
 
-```
-POST
-https://{accountName}.{environment}.com.br/vtexid/audience/webstore/provider/oauth/exchange
-```
+    ```
+    POST
+    https://{accountName}.{environment}.com.br/vtexid/audience/webstore/provider/oauth/exchange
+    ```
 
-Request body:
+- Request body:
 
-```
-{
-  "providerId": "GoogleID",
-  "accessToken": "dsfDShdgfhDFI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bdg465DATU4GVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-654fgjLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ",
-  "duration": 90
-}
-```
+    ```
+    {
+      "providerId": "GoogleID",
+      "accessToken": "dsfDShdgfhDFI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bdg465DATU4GVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-654fgjLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ",
+      "duration": 90
+    }
+    ```
 
-- `providerId` - Identity provider ID as configured in the [OAuth integration setup](#oauth-log-in).
-- `accessToken` - Access token that the frontend application receives after a successful [OAuth login](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests).
-- `duration` - Duration of the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that will be returned. This field is optional and the default is 60.
+    `providerId` - Identity provider ID as configured in the [OAuth integration setup](#oauth-log-in).
+    `accessToken` - Access token that the frontend application receives after a successful [OAuth login](https://developers.vtex.com/docs/guides/l-ogin-integration-guide-webstore-oauth2#relevant-requests).
+    -- `duration` - Duration of the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that will be returned. This field is optional and the default is 60.
 
-Response body:
+- Response body:
 
-```
-{
-"authToken": "eyJhbGciOiJFUzI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bnQiOiJwerV4aGVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-Jf463lwgLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ"
-}
-```
+    ```
+    {
+    "authToken": "eyJhbGciOiJFUzI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bnQiOiJwerV4aGVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-Jf463lwgLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ"
+    }
+    ```
 
-- `authToken` - [User token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that can be used to [authenticate API requests](#making-requests-to-vtex-apis).
+    - `authToken` - [User token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that can be used to [authenticate API requests](#making-requests-to-vtex-apis).
 
 ### Making requests to VTEX APIs
 
