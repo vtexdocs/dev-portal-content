@@ -11,7 +11,7 @@ You can use the `TEST METHOD` button in [VTEX API reference](https://developers.
 
 ## Before starting
 
-Each request to VTEX APIs [must be authenticated](https://developers.vtex.com/docs/guides/getting-started-authentication). And to use the Developers Portal `TEST METHOD`, you must use [application keys](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys).
+Each request to VTEX APIs [must be authenticated](https://developers.vtex.com/docs/guides/getting-started-authentication), either with [application keys](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys) or [user tokens](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). The Developers Portal `TEST METHOD` requires [application keys](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys), meaning a pair of `appKey` and `appToken`.
 
 So before proceeding with this guide, make sure you have a valid pair of `appKey` and `appToken` with the necessary [permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) to execute the requests you want. If you do not have this credential yet, learn more about how to [create application keys](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet).
 
