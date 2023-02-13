@@ -55,7 +55,7 @@ Request body:
 ```
 
 - `providerId` - Identity provider ID as configured in the [OAuth integration setup](#oauth-log-in).
-- `accessToken` - Access token that gets to your frontend as a result of a successful [OAuth login](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests).
+- `accessToken` - Access token that the frontend application receives after a successful [OAuth login](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests).
 - `duration` - Duration of the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) that will be returned. This field is optional and the default is 60.
 
 Response body:
