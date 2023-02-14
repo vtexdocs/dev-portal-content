@@ -10,4 +10,4 @@ type: "improved"
 
 Aiming to strengthen the security of our development process, published apps will now have to wait 7 minutes until they become able to be deployed.
 
-:information-source: *If this timing is not respected, an `Invalid state transition` error will be received from Toolbelt.*
+> ℹ️ If this timing is not respected, an `Invalid state transition` error will be received from VTEX IO CLI.

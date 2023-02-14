@@ -135,7 +135,7 @@ Then, declare the `order-config#header` block and its children blocks: `order-co
 
 You must create a schema named `main` in Master Data, using the `order_configuration` data entity.
 
-You can place a request using the Save schema by name endpoint of the [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) to do so.
+You can place a request using the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint of the Master Data v2 API to do so.
 
 The schema should contain all the data that you added in the form above, otherwise the data will not be persisted.
 

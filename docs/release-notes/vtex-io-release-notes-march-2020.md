@@ -28,9 +28,9 @@ So wash your hands, sing Happy Birthday twice and cast your eyes on this beauty:
 
 ## Improvements ➕
 
-- **`menu-item` block from Menu** - The `menu-item` block is not a child composition, which means that menu items don't require a limited list of potential blocks that can declared as their children anymore - as mentioned in the [January 2020 Release Notes](https://vtex.io/docs/releases/2020-01/README/). Due to this change, `menu-item`s can henceforth declare any other Store Framework block in their array as children, granting more [Menu](https://developers.vtex.com/docs/guides/vtex-menu) customization.
+- **`menu-item` block from Menu** - The `menu-item` block is not a child composition, which means that menu items don't require a limited list of potential blocks that can declared as their children anymore - as mentioned in the [January 2020 Release Notes](https://vtex.io/docs/releases/2020-01/README/). Due to this change, `menu-item`s can henceforth declare any other Store Framework block in their array as children, granting more [Menu](https://developers.vtex.com/docs/apps/vtex.menu) customization.
 
-- **CSS Handles** - New CSS Handles available for the [Search Result](https://developers.vtex.com/docs/guides/vtex-search-result)'s  `filter-navigator` v3 and for the Store Components' [`sku-selector`](https://developers.vtex.com/docs/guides/vtex-store-components-skuselector)! Don't forget to check the CSS Handles table for each documentation!
+- **CSS Handles** - New CSS Handles available for the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result)'s `filter-navigator` v3 and for the Store Components' [`sku-selector`](https://developers.vtex.com/docs/apps/vtex.store-components/SkuSelector)! Don't forget to check the CSS Handles table for each documentation!
 
 - **URL structure** - Most of the `map` parameters were removed from URLs, aiming to empower SEO on the platform. Only the `b` parameter was kept on the `map`, due to potential ambiguities between brands and categories. If previously we had something like `storecomponents.myvtex.com/shirts/t-shirts/green/Womens?map=c,c,c,specificationFilter_149,specificationFilter_151`, now we have `storecomponents.myvtex.com/shirts/t-shirts/for-whom_Womens/color_green`. Now this is what I call an improvement, team!
 
@@ -44,7 +44,7 @@ So wash your hands, sing Happy Birthday twice and cast your eyes on this beauty:
 
 - **Store Form** - While the Store Form was incredible and wonderful before, the JSON Schema compatibility was restricted to [Master Data v2](https://help.vtex.com/tutorial/master-data-v2--3JJ1mlzuo88w22gO0gy0QS). Water under the bridge. Thanks to this release, users can now create JSON Schemas that are compatible with Master Data v1 as well! Check out the [documentation](https://developers.vtex.com/docs/guides/vtex-store-form).
 
-- **Outline-color** - The `outline-color` CSS property was added to your theme's `style.json` file. It means that you can set a unique default value that can be applied throughout the store for the line that is drawn around all components when they are highlighted on the interface. Previously, you could only set the component's customization in focus individually [using Handles](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+- **Outline-color** - The `outline-color` CSS property was added to your theme's `style.json` file. It means that you can set a unique default value that can be applied throughout the store for the line that is drawn around all components when they are highlighted on the interface. Previously, you could only set the component's customization in focus individually [using Handles](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 ## Bug Fixes 🐛
 
@@ -54,6 +54,6 @@ So wash your hands, sing Happy Birthday twice and cast your eyes on this beauty:
 
 - **[`utm_source` on orderForm](https://github.com/vtex-apps/add-to-cart-button/pull/12)** - The expected behavior is for the Add to Cart button to input the `utm_source` data (contained in the user's session) to orderForm, the JSON responsible for storing all the date of an order on the platform. Unfortunately, this was not being done before... but it is now. Cheers!
 
-- **[Specifications Badges](https://github.com/vtex-apps/product-specification-badges/pull/6)** - All the [Specifications Badges](https://vtex.io/docs/app/vtex.product-specification-badges@0.1.0) of a product must be made available to the user... however only the first one configured was being displayed. This fix changes that and now all badges are displayed accordingly.
+- **[Specifications Badges](https://github.com/vtex-apps/product-specification-badges/pull/6)** - All the [Specifications Badges](https://developers.vtex.com/docs/apps/vtex.product-specification-badges) of a product must be made available to the user... however only the first one configured was being displayed. This fix changes that and now all badges are displayed accordingly.
 
 - **[Telemarketing functionality](https://github.com/vtex-apps/store-graphql/pull/451)** - When a Telemarketing user added products to the cart using a client's account and then switched accounts, the Minicart did not reset, meaning that the OrderForm JSON continued to save the information pertaining to the previous account. This has been fixed: the cart is reset and the OrderForm data is cleared every time the Telemarketing user logs out of an account.

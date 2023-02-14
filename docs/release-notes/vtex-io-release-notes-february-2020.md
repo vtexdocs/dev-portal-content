@@ -8,7 +8,7 @@ type: ""
 
 ![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-february-2020-0.png)
 
-I don't know if it was the extra day we had due to the leap year or the Carnival rest (or should I say *party*?), but something is certain: our wonderful development team was truly inspired in February!
+I don't know if it was the extra day we had due to the leap year or the Carnival rest (or should I say _party_?), but something is certain: our wonderful development team was truly inspired in February!
 
 Brace yourselves... This month's VTEX IO Release Notes is here and you'll need to muster all the energy you can to catch up with everything that has been prepared for you. I really do mean it! Just check it out:
 
@@ -24,6 +24,7 @@ Brace yourselves... This month's VTEX IO Release Notes is here and you'll need t
 
 - **Assets Builder** - A brand new Builder to handle assets that are used in your theme's blocks. Magical! Check out the recipe on [how to configure and use it](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder).
 
+
 - **Modal Layout** - The Modal Layout is out and ready for use. Find out how to create modals for your store in its [documentation](https://developers.vtex.com/docs/guides/vtex-modal-layout).
 
 - **Sticky Layout** -  Endless praise to our dev team that delivered not just one, but two new Layouts releases. You are now able to fix elements in place on the interface, thereby making blocks follow user navigation when scrolling thanks to the [Sticky Layout](https://developers.vtex.com/docs/guides/vtex-sticky-layout)!
@@ -35,6 +36,7 @@ Still with us? It gets better...
 - **Components Debugger** - If you thought you had problems decrypting each component's Handles, the dog days are now over because the Components Debugger has landed. Check out the recipe on [using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) and begin using the Components Debugger now.
 
 - **Toolbelt** - A notification is now triggered in your terminal when the `vtex link` command is not running anymore, meaning when your link has died. Can I get an amen? But remember: this new feature is only valid for MAC and Linux at the moment.
+
 
 - **Alexa Certify Code** - Natively integrate with Amazon's [Alexa solution](https://developers.vtex.com/docs/guides/vtex-alexa-certify-code#configuration) now!
 

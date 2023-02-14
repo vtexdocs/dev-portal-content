@@ -41,7 +41,7 @@ vtex settings set vtex.store experimentalLazyLoadAllPixels true
 
 To make the pixel app load itself lazily, you must add the `experimentalLazyLoad` property on the app [settingsSchema](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringyourappsettings). By doing this, the `vtex.pixel-server` app will create a local setting `experimentalHasOwnLazyLoad` with value `true`.
 
-> :warning: Do not add the `experimentalHasOwnLazyLoad` setting on the app `settingsSchema`, nor set it via VTEX IO CLI. This is an internal setting.
+> ⚠️ Do not add the `experimentalHasOwnLazyLoad` setting on the app `settingsSchema`, nor set it via VTEX IO CLI. This is an internal setting.
 
 The pixel app can access the `experimentalLazyLoad` [setting](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringyourappsettings) like in this code example:
 
@@ -57,7 +57,7 @@ Example of how to do the lazy load:
 
   function whatShouldBeLazyLoadHere() { ... }
 
-  if (isLazyLoad) {
+  if (experimentalLazyLoad) {
     function lazyTimeout() {
       setTimeout(whatShouldBeLazyLoadHere, 5000)
       window.removeEventListener('load', lazyTimeout)

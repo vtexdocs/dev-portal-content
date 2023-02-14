@@ -24,16 +24,16 @@ In your theme's `manifest.json`, add the Product Specification app as a dependen
 
 Now, you can use all the blocks exported by the `product-specifications` app. Check out the full list below:
 
-| Block name                    | Description                                                                                                     |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `product-specification-group` | Renders the product specification group.                                                     |
-| `product-specification`       | Renders the product specification. It should be declared as a children of `product-specification-group`. |
-| `product-specification-value` | Renders the product specification value. It should be declared as a children of `product-specification`. It is possible to render with `HTML`. |
+| Block name                    | Description                                                                                                                                                                                                                                                                        |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `product-specification-group` | Renders the product specification group.                                                                                                                                                                                                                                           |
+| `product-specification`       | Renders the product specification. It should be declared as a children of `product-specification-group`.                                                                                                                                                                           |
+| `product-specification-value` | Renders the product specification value. It should be declared as a children of `product-specification`. It is possible to render with `HTML`.                                                                                                                                     |
 | `product-specification-text`  | Mandatory children of `product-specification-group`, `product-specification` and `product-specification-value`. Depending on which block it is declared, the `product-specification-text` renders data regarding a specification group, a specification, or a specification value. |
 
 ### Step 2 - Adding the Product Specifications' blocks to your theme's templates
 
-Copy the example stated below and paste it into your theme's desired template, making the necessary changes according to your desire. Remember to add the `product-specification-group` block to the template's block list if needed.  
+Copy the example stated below and paste it into your theme's desired template, making the necessary changes according to your desire. Remember to add the `product-specification-group` block to the template's block list if needed.
 
 ```json
 {
@@ -67,7 +67,7 @@ Copy the example stated below and paste it into your theme's desired template, m
 }
 ```
 
-> ⚠️ *Notice that the Product Specifications' blocks necessarily need a Product context in order to work properly since they handle product data. Therefore, when declaring them, be sure that they are in a theme template in which this context is available, such as the `store.product`.*
+> ⚠️ _Notice that the Product Specifications' blocks necessarily need a Product context in order to work properly since they handle product data. Therefore, when declaring them, be sure that they are in a theme template in which this context is available, such as the `store.product`._
 
 You also can use other blocks to wrap the blocks provided by the Product Specifications app, such as the ones exported by the [Flex Layout app](https://developers.vtex.com/docs/guides/vtex-flex-layout/). For example:
 
@@ -139,44 +139,44 @@ You also can use other blocks to wrap the blocks provided by the Product Specifi
 
 ### `product-specification-group` props
 
-| Prop name | Type     | Description                                                 | Default value |
-| --------- | -------- | ----------------------------------------------------------- | ------------- |
-| `filter`  | `object` | Filters the specifications that should be displayed by the block. | `undefined`    |
+| Prop name | Type     | Description                                                       | Default value |
+| --------- | -------- | ----------------------------------------------------------------- | ------------- |
+| `filter`  | `object` | Filters the specifications that should be displayed by the block. | `undefined`   |
 
 - **`filter` object:**
 
-| Prop name             | Type       | Description            | Default value |
-| --------------------- | ---------- | --------------------- | ------------- |
-| `specificationGroups` | `[string]` | Array of specification group names to be hidden or shown (according to what is defined in the `type` property) by the `product-specification-group` block. | `undefined`            |
-| `type`       | `enum`     | Whether the specification group names passed to the `specificationGroups` prop should be displayed or hidden on the UI. Possible values are: `hide` (hides specification groups declared in the `specificationGroups` prop) or `show` (only shows the specification groups declared in the `specificationGroups` prop). | `undefined`            |
+| Prop name             | Type       | Description                                                                                                                                                                                                                                                                                                             | Default value |
+| --------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `specificationGroups` | `[string]` | Array of specification group names to be hidden or shown (according to what is defined in the `type` property) by the `product-specification-group` block.                                                                                                                                                              | `undefined`   |
+| `type`                | `enum`     | Whether the specification group names passed to the `specificationGroups` prop should be displayed or hidden on the UI. Possible values are: `hide` (hides specification groups declared in the `specificationGroups` prop) or `show` (only shows the specification groups declared in the `specificationGroups` prop). | `undefined`   |
 
 #### `product-specification-text` props
 
-| Prop name    | Type       | Description             | Default value |
-| ------------ | ---------- | ---------------------------------------------------------------------------------------------------- | ------------- |
-| `blockClass` | `string`   | Block ID of your choosing to be used in [CSS customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization#using-the-blockclass-property).    | `undefined`   |
-| `message`    | `string`   | Defines the block's default text message to be rendered on the UI. You can also define which text message a block will render on the UI using the admin's Site Editor and the `markers` prop.   | `undefined`   |
-| `markers`    | `[string]` | IDs of your choosing to identify the block's rendered text message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message). Notice the following: a block's message can also be customized in the Store Theme source code using the `message` prop. | `[]` |
+| Prop name    | Type       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                       | Default value |
+| ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `blockClass` | `string`   | Block ID of your choosing to be used in [CSS customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization#using-the-blockclass-property).                                                                                                                                                                                                                                               | `undefined`   |
+| `message`    | `string`   | Defines the block's default text message to be rendered on the UI. You can also define which text message a block will render on the UI using the admin's Site Editor and the `markers` prop.                                                                                                                                                                                                                                                     | `undefined`   |
+| `markers`    | `[string]` | IDs of your choosing to identify the block's rendered text message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message). Notice the following: a block's message can also be customized in the Store Theme source code using the `message` prop. | `[]`          |
 
 ### Step 3 - Editing the `product-specification-text`'s messages
 
 As stated in the previous step, the `product-specification-text` uses the [ICU Message Format](https://format-message.github.io/icu-message-format-for-translators/), making it possible to fully edit the block's rendered text messages.
 
-When using the `message` prop, you won't need to perform any advanced configurations: declare the prop directly in your Store Theme app, passing to it the desired text value to be rendered with the block.  
+When using the `message` prop, you won't need to perform any advanced configurations: declare the prop directly in your Store Theme app, passing to it the desired text value to be rendered with the block.
 
 The `markers` prop, in turn, requires you to perform an extra configuration in the admin's Site Editor to properly work. When using this prop, do not forget to check out the block's message variables (shown in the table below) and the [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message) documentation.
 
-| Message variable            | Type      | Description   |
-| ----------------------- | --------- | ----------------- |
-| `groupName`                 | `string`  | Specification group name. |
-| `specificationName`         | `string`  | Speficiation name. |
-| `specificationValue`        | `string`  | Specification value. |
+| Message variable            | Type      | Description                                                            |
+| --------------------------- | --------- | ---------------------------------------------------------------------- |
+| `groupName`                 | `string`  | Specification group name.                                              |
+| `specificationName`         | `string`  | Speficiation name.                                                     |
+| `specificationValue`        | `string`  | Specification value.                                                   |
 | `isFirstSpecificationValue` | `boolean` | Whether it is the first specification value (`true`) or not (`false`). |
 | `isLastSpecificationValue`  | `boolean` | Whether it is the last specification value (`true`) or not (`false`).  |
 
 ## Customization
 
-To apply CSS customization in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+To apply CSS customization in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles                 |
 | --------------------------- |

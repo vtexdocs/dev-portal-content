@@ -11,11 +11,11 @@ Below you can check some guides to help you get started with Master Data.
 
 See Master Data v2 endpoints for managing documents:
 
-- [Create new document](ref:createnewdocument)
-- [Get document](ref:getdocument) 
-- [Update entire document](ref:updateentiredocument) 
-- [Update partial document](ref:updatepartialdocument)
-- [Delete document](ref:deletedocument)
+- [Create new document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents)
+- [Get document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/documents/-id-) 
+- [Update entire document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-) 
+- [Update partial document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#patch-/api/dataentities/-dataEntityName-/documents/-id-)
+- [Delete document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)
 
 ## Customize data entities
 
@@ -28,12 +28,12 @@ See these articles about customizing data entities and schemas:
 
 Below you can see Master Data v2 endpoints for searching documents.
 
-- [Search documents](ref:searchdocuments) 
-- [Scroll documents](ref:scrolldocuments) 
+- [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) 
+- [Scroll documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/scroll) 
 
 ## Working with triggers
 
 A Master Data trigger is an action executed after the insert or update of a given document.
 
 - [Create triggers with Master Data v1](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270)
-- [Setting up triggers in Master Data v2](/docs/guides/setting-up-triggers-in-master-data-v2)
+- [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2)

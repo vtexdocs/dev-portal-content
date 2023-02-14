@@ -46,7 +46,7 @@ Set `Authentication` option to :white_check_mark: `Visible`, then click `Save`.
 
 ### IO Stores
 
-In order to apply CSS customizations to the app, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization) (you don't have to worry about `block` or `blockClass`).
+In order to apply CSS customizations to the app, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) (you don't have to worry about `block` or `blockClass`).
 
 A list of all `CSS Handles` is in [this section](#css-handles-list).
 
@@ -128,4 +128,3 @@ https://`{{accountName}}`.vtexcommercestable.com.br/\_secure/account#/authentica
 | `loginSession_originDetails`        |
 | `loginSession_fullAddress`          |
 | `loginSession_firstAccess`          |
-

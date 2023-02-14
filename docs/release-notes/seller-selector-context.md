@@ -6,7 +6,7 @@ hidden: false
 type: "improved"
 ---
 
-Other VTEX Store Framework apps can now use the context exported by the [Seller Selector app](https://vtex.io/docs/components/all/vtex.seller-selector/) (`SellerContext`) regarding seller data:
+Other VTEX Store Framework apps can now use the context exported by the [Seller Selector app](https://developers.vtex.com/docs/apps/vtex.seller-selector/) (`SellerContext`) regarding seller data:
 
 ```json
 import { SellerContext } from 'vtex.seller-selector'

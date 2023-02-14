@@ -5,12 +5,13 @@ hidden: false
 createdAt: "2022-01-03T19:40:43.357Z"
 updatedAt: "2022-01-03T20:02:34.361Z"
 ---
-The Similar Products Variants app returns similar products related to an SKU so users can select other colors or types of the same product.
 
+The Similar Products Variants app returns similar products related to an SKU so users can select other colors or types of the same product.
 
 ![similar-in-action](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-similar-products-variants-0.png)
 
 ## Before you start
+
 1. Set up similar products in your store’s **Products and SKU.** Access your store’s Admin and go to **Products > Catalog > Products and SKU**.
 2. In **Products and SKU**, in the column **SKU**, click on the desired SKU.
 3. In the field **Similar (Alternative Products)**, type the product name you desire
@@ -22,7 +23,6 @@ The Similar Products Variants app returns similar products related to an SKU so 
 
 Now, follow the [app’s configuration below](#configuration) to show the similar products you have set up.
 
-
 ## Configuration
 
 1. Using [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), install the app by running the following:
@@ -30,6 +30,7 @@ Now, follow the [app’s configuration below](#configuration) to show the simila
 ```bash
 vtex install vtex.similar-products-variants
 ```
+
 2. Add the `vtex.similar-products-variants` app to your theme's dependencies in the `manifest.json`
 
 ```json
@@ -38,8 +39,7 @@ vtex install vtex.similar-products-variants
 }
 ```
 
-3. Add the `similar-products-variants` block to the product template you desire, such as `store.product`, to display a similar product list. 
-
+3. Add the `similar-products-variants` block to the product template you desire, such as `store.product`, to display a similar product list.
 
 ```json
 ...
@@ -77,16 +77,15 @@ vtex install vtex.similar-products-variants
 ...
 ```
 
-| Prop name  | Type | Description                                                                                                 | Default value |
-|--------------|--------|------------------------------------| ------------- |
-| `imageLabel` | String | The identifier of the image thumbnail displayed for each variant.  The identifier is set in the Admin’s Catalog. If the label does not exist or is not defined, the first image is used. | `null`  |
-
+| Prop name    | Type   | Description                                                                                                                                                                             | Default value |
+| ------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `imageLabel` | String | The identifier of the image thumbnail displayed for each variant. The identifier is set in the Admin’s Catalog. If the label does not exist or is not defined, the first image is used. | `null`        |
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+To apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
-| CSS Handles | 
+| CSS Handles |
 | ----------- |
 | `variants`  |
 | `title`     |

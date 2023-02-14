@@ -216,8 +216,8 @@ Renders the confirmation icon.
 | ------------------------- | ------------ |
 | `confirmationIconWrapper` | Icon wrapper |
 
-| Default appearance                                         |
-| ---------------------------------------------------------- |
+| Default appearance                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------- |
 | ![op-confirmation-icon](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-0.png) |
 
 ### `op-confirmation-title`
@@ -234,8 +234,8 @@ Renders the confirmation title.
 | ------------------- | ------------------------------- |
 | `confirmationTitle` | Confirmation title `h4` element |
 
-| Default appearance                                           |
-| ------------------------------------------------------------ |
+| Default appearance                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------- |
 | ![op-confirmation-title](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-1.png) |
 
 ### `op-confirmation-message`
@@ -252,8 +252,8 @@ Renders the confirmation message, containing the clients email.
 | --------------------- | -------------------------------- |
 | `confirmationMessage` | Confirmation message `p` element |
 
-| Default appearance                                               |
-| ---------------------------------------------------------------- |
+| Default appearance                                                                                                      |
+| ----------------------------------------------------------------------------------------------------------------------- |
 | ![op-confirmation-message](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-2.png) |
 
 ### `op-print-button`
@@ -266,8 +266,8 @@ Renders a button that triggers a full page print.
 
 **CSS Handles:**: none.
 
-| Default appearance                 |
-| ---------------------------------- |
+| Default appearance                                                                                       |
+| -------------------------------------------------------------------------------------------------------- |
 | ![op-print](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-3.png) |
 
 ### `op-notices`
@@ -285,8 +285,8 @@ Renders a list of important informations relevant to the currently placed order.
 | `noticesList`    | List `ul` element           |
 | `noticeListItem` | Each list `li` item element |
 
-| Default appearance                     |
-| -------------------------------------- |
+| Default appearance                                                                                         |
+| ---------------------------------------------------------------------------------------------------------- |
 | ![op-notices](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-4.png) |
 
 ### `op-summary-section`
@@ -313,8 +313,8 @@ If a placed order is split between delivery and pickup, renders a summary of all
 | `summaryShippingSLA`   | Wrapper of the shipping SLA information     |
 | `summaryTitle`         | Box `h5` title element                      |
 
-| Default appearance                                     |
-| ------------------------------------------------------ |
+| Default appearance                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------ |
 | ![op-summary-section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-5.png) |
 
 ### `op-bank-invoice-section`
@@ -337,8 +337,8 @@ Renders the bank invoice section if payment method chosen was bank invoice.
 | `bankInvoiceEmbedBackground` | Background of the bank invoice iframe         |
 | `bankInvoiceEmbed`           | Embed of the bank invoice PDF                 |
 
-| Default appearance                                               |
-| ---------------------------------------------------------------- |
+| Default appearance                                                                                                      |
+| ----------------------------------------------------------------------------------------------------------------------- |
 | ![op-bank-invoice-section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-6.png) |
 
 ### `op-order`
@@ -370,8 +370,8 @@ Renders the order id number. Must be placed inside an [`op-order`](#op-order) bl
 | ------------- | ------------------------- |
 | `orderNumber` | Order number `h3` element |
 
-| Default appearance                               |
-| ------------------------------------------------ |
+| Default appearance                                                                                              |
+| --------------------------------------------------------------------------------------------------------------- |
 | ![op-order-number](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-7.png) |
 
 ### `op-order-datetime`
@@ -388,8 +388,8 @@ Renders the date and time an order was placed. Must be placed inside an [`op-ord
 | --------------- | ----------------------------------- |
 | `orderDatetime` | Order date and time `small` element |
 
-| Default appearance                                   |
-| ---------------------------------------------------- |
+| Default appearance                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------- |
 | ![op-order-datetime](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-8.png) |
 
 ### `op-order-seller`
@@ -407,8 +407,8 @@ Renders the seller of an order. Must be placed inside an [`op-order`](#op-order)
 | `orderSoldBy` | Seller phrase `small` element |
 | `orderSeller` | Seller name `span` element    |
 
-| Default appearance                               |
-| ------------------------------------------------ |
+| Default appearance                                                                                              |
+| --------------------------------------------------------------------------------------------------------------- |
 | ![op-order-seller](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-9.png) |
 
 ### `op-order-split-notice`
@@ -425,8 +425,8 @@ Renders a message with the number of packages of an order if the order was split
 | ------------- | ------------------------------ |
 | `splitNotice` | Wrapper of the message element |
 
-| Default appearance                                           |
-| ------------------------------------------------------------ |
+| Default appearance                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------- |
 | ![op-order-split-notice](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-10.png) |
 
 ### `op-order-customer`
@@ -439,8 +439,8 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 
 **CSS Handles:** none.
 
-| Default appearance                                   |
-| ---------------------------------------------------- |
+| Default appearance                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------ |
 | ![op-order-customer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-11.png) |
 
 ### `op-order-options`
@@ -451,10 +451,10 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 
 **Props:**
 
-| Prop name   | Type      | Description                                         | Default value |
-| ----------- | --------- | --------------------------------------------------- | ------------- |
-| `fullWidth` | `boolean` | Make the options wrapper take full horizontal space | `false`       |
-| `myAccountPath` | `string` | The path to redirect a user to their profile page (rendered by the `vtex.my-account` app). | `/account`       |
+| Prop name       | Type      | Description                                                                                | Default value |
+| --------------- | --------- | ------------------------------------------------------------------------------------------ | ------------- |
+| `fullWidth`     | `boolean` | Make the options wrapper take full horizontal space                                        | `false`       |
+| `myAccountPath` | `string`  | The path to redirect a user to their profile page (rendered by the `vtex.my-account` app). | `/account`    |
 
 **CSS Handles:**
 
@@ -462,8 +462,8 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 | --------------------- | ----------------------------- |
 | `orderOptionsWrapper` | Wrapper of the option buttons |
 
-| Default appearance                                 |
-| -------------------------------------------------- |
+| Default appearance                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------- |
 | ![op-order-options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-12.png) |
 
 ### `op-order-payment`
@@ -479,8 +479,8 @@ Renders the customer information. Must be placed inside an [`op-order`](#op-orde
 | `orderPaymentWrapper` | Wrapper of the payment methods list |
 | `orderPaymentItem`    | Wrapper of each payment method item |
 
-| Default appearance                                 |
-| -------------------------------------------------- |
+| Default appearance                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------- |
 | ![op-order-payment](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-13.png) |
 
 ### `op-order-delivery-packages`
@@ -521,8 +521,8 @@ Renders an order delivery packages information and product list. Must be placed 
 | `attachmentContent`       | Attachment's content wrapper                   |
 | `attachmentContentItem`   | Each attachment's content paragraph            |
 
-| Default appearance                                                     |
-| ---------------------------------------------------------------------- |
+| Default appearance                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------- |
 | ![op-order-delivery-packages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-14.png) |
 
 ### `op-order-pickup-packages`
@@ -544,8 +544,8 @@ _Note: Include the same CSS handles as [`op-order-delivery-packages`](#op-order-
 | `packageReceiverName`   | Name of the package's **pickup** receiver                    |
 | `packageAdditionalInfo` | Wrapper of additional information about a **pickup** package |
 
-| Default appearance                                                 |
-| ------------------------------------------------------------------ |
+| Default appearance                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------- |
 | ![op-order-pickup-packages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-15.png) |
 
 ### `op-order-total`
@@ -564,8 +564,8 @@ Renders an order delivery packages information and product list. Must be placed 
 | `totalListItemLabel` | Label of a price item                       |
 | `totalListItemValue` | Value of a price item                       |
 
-| Default appearance                             |
-| ---------------------------------------------- |
+| Default appearance                                                                                              |
+| --------------------------------------------------------------------------------------------------------------- |
 | ![op-order-total](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-order-placed-16.png) |
 
 ## API
@@ -575,24 +575,24 @@ The `order-placed` app exports two hooks to allow customization using the curren
 `useOrderGroup`: used to get the data of the current order group. An order group is the collection of all orders created by an users's purchase.
 
 ```js
-import { useOrderGroup } from 'vtex.order-placed/OrderGroupContext'
+import { useOrderGroup } from "vtex.order-placed/OrderGroupContext";
 
 //...
-const orderGroup = useOrderGroup()
+const orderGroup = useOrderGroup();
 ```
 
 `useOrder`: used to get the data of the current order being accessed in the order loop.
 
 ```js
-import { useOrder } from 'vtex.order-placed/OrderContext'
+import { useOrder } from "vtex.order-placed/OrderContext";
 
 //...
-const order = useOrder()
+const order = useOrder();
 ```
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles                  |
 | ---------------------------- |

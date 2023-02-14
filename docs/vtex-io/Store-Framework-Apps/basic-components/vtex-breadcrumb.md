@@ -30,20 +30,20 @@ The VTEX BreadCrumb is a navigation scheme that shows a user's browsing history 
   },
 ```
 
-| Prop name    | Type            | Description    | Default value                                                                                                                               |
-| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `showOnMobile`        | `Boolean`       | It determines whether Breadcrumb should also be displayed on mobile          | `false`              |
-| `homeIconSize`  | `Number`        | Controls the `size` property of [`IconHome`](https://github.com/vtex-apps/store-icons#icons)                                                                                                      | `26` |
-| `caretIconSize` | `Number`        | Controls the `size` property of [`IconCaret`](https://github.com/vtex-apps/store-icons#icons)                                                                                                     | `8` |
+| Prop name       | Type      | Description                                                                                   | Default value |
+| --------------- | --------- | --------------------------------------------------------------------------------------------- | ------------- |
+| `showOnMobile`  | `Boolean` | It determines whether Breadcrumb should also be displayed on mobile                           | `false`       |
+| `homeIconSize`  | `Number`  | Controls the `size` property of [`IconHome`](https://github.com/vtex-apps/store-icons#icons)  | `26`          |
+| `caretIconSize` | `Number`  | Controls the `size` property of [`IconCaret`](https://github.com/vtex-apps/store-icons#icons) | `8`           |
 
 > ⚠️ The product's categories should appear as an array in one of this two formats:
 
 ```javascript
-categories = ['/Eletronics/', '/Eletronics/Computers']
+categories = ["/Eletronics/", "/Eletronics/Computers"];
 ```
 
 ```javascript
-categories = ['eletronics', 'eletronics-computers']
+categories = ["eletronics", "eletronics-computers"];
 ```
 
 3. Add the `breadcrumb.search` block to the Search template. For example:
@@ -56,16 +56,17 @@ categories = ['eletronics', 'eletronics-computers']
   },
 ```
 
-| Prop name    | Type            | Description    | Default value                                                                                                                               |
-| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `showOnMobile`        | `Boolean`       | It determines whether Breadcrumb should also be displayed on mobile          | `false`              |
-| `homeIconSize`  | `Number`        | Controls the `size` property of [`IconHome`](https://github.com/vtex-apps/store-icons#icons)                                                                                                      | `26` |
-| `caretIconSize` | `Number`        | Controls the `size` property of [`IconCaret`](https://github.com/vtex-apps/store-icons#icons)                                                                                                     | `8` |
-> ℹ️ *The `breadcrumb.search` block is specific for the Breadcrumb inside the search result page.*
+| Prop name       | Type      | Description                                                                                   | Default value |
+| --------------- | --------- | --------------------------------------------------------------------------------------------- | ------------- |
+| `showOnMobile`  | `Boolean` | It determines whether Breadcrumb should also be displayed on mobile                           | `false`       |
+| `homeIconSize`  | `Number`  | Controls the `size` property of [`IconHome`](https://github.com/vtex-apps/store-icons#icons)  | `26`          |
+| `caretIconSize` | `Number`  | Controls the `size` property of [`IconCaret`](https://github.com/vtex-apps/store-icons#icons) | `8`           |
+
+> ℹ️ _The `breadcrumb.search` block is specific for the Breadcrumb inside the search result page._
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles |
 | ----------- |

@@ -19,6 +19,7 @@ Follow the steps below to configure the app on your store theme.
 ### 1. Install the app in your workspace and account.
 
 To do this, you can go to the [Pickup point selector page](https://apps.vtex.com/vtexbr-pickup-selector/p) in the VTEX app store or run this command in your terminal:
+
 ```bash
 vtex install vtexbr.pickup-selector
 ```
@@ -26,6 +27,7 @@ vtex install vtexbr.pickup-selector
 ### 2. Add the app as a theme dependency in the `manifest.json` file.
 
 See an example of how to do this:
+
 ```json
   "peerDependencies": {
     "vtexbr.pickup-selector": "2.x"
@@ -130,23 +132,22 @@ Using the configuration above, the end result would look like this:
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexbr-pickup-selector-0.png)
 
-
 ## Blocks
 
 Check out the full list of exported blocks below:
 
-| Block name                                          | Description                                                                                    |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `pickup-selector`                                   | Main block.                                                                                     |
-| `pickup-selector-zipcode-input`                     | Shows the zipcode input.                                                                        |
+| Block name                                          | Description                                                                                          |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `pickup-selector`                                   | Main block.                                                                                          |
+| `pickup-selector-zipcode-input`                     | Shows the zipcode input.                                                                             |
 | `pickup-selector-search-sla-button`                 | Button used to search the pickup SLA options based on the provided postal code and the selected SKU. |
-| `pickup-selector-sla-list`                          | List that shows the card with the avaiable pickup options.                                      |
-| `pickup-selector-option-card`                       | Card with pickup option information.                                                        |
-| `pickup-selector-option-card-pickup-point-name`     | Pickup point name.                                                                              |
-| `pickup-selector-option-card-pickup-point-address`  | Pickup point address.                                                                           |
-| `pickup-selector-option-card-pickup-point-distance` | Distance to pickup point (in Km).                                                                   |
-| `pickup-selector-option-card-pickup-point-sla`      | Pickup point SLA.                                                                               |
-| `pickup-selector-option-card-add-product-button`    | Button that adds the product to cart and selects the pickup point.                           |
+| `pickup-selector-sla-list`                          | List that shows the card with the avaiable pickup options.                                           |
+| `pickup-selector-option-card`                       | Card with pickup option information.                                                                 |
+| `pickup-selector-option-card-pickup-point-name`     | Pickup point name.                                                                                   |
+| `pickup-selector-option-card-pickup-point-address`  | Pickup point address.                                                                                |
+| `pickup-selector-option-card-pickup-point-distance` | Distance to pickup point (in Km).                                                                    |
+| `pickup-selector-option-card-pickup-point-sla`      | Pickup point SLA.                                                                                    |
+| `pickup-selector-option-card-add-product-button`    | Button that adds the product to cart and selects the pickup point.                                   |
 
 ### Props
 
@@ -154,20 +155,20 @@ Some of these blocks accept props as described below:
 
 #### `pickup-selector-option-card-pickup-point-distance` props
 
-| Prop name        | Type     | Description                                                                                                                                          | Default value |
-| ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| Prop name        | Type     | Description                                                                                                                                           | Default value |
+| ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `distanceSystem` | `string` | This prop is used to calculate the distance displayed by the block, it accepts `metric` (shows distance in Km) and `imperial` (shows distance in Mi). | `metric`      |
 
 #### `pickup-selector-option-card-add-product-button` props
 
-| Prop name            | Type      | Description                                                                                                                                                                                                                                                                                       | Default value |
-| -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| Prop name            | Type      | Description                                                                                                                                                                                                                                                                                             | Default value |
+| -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `customPixelEventId` | `string`  | This prop should only be used with [minicart.v2](https://github.com/vtex-apps/minicart). It defines the ID for the event that is sent by the button upon user interaction. Should be the same ID configured on **minicart.v2** so that the drawer opens on successfully adding the product to the cart. | `undefined`   |
-| `showToastFeedback`  | `boolean` | This prop is a fallback in order to support `minicart.v1`. This will show a toast with feedback on successfully adding the product to the cart.                                                                                                                                                     | `false`       |
+| `showToastFeedback`  | `boolean` | This prop is a fallback in order to support `minicart.v1`. This will show a toast with feedback on successfully adding the product to the cart.                                                                                                                                                         | `false`       |
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles                        |
 | ---------------------------------- |
@@ -181,4 +182,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `searchSlaButtonContainer`         |
 | `selectPickupPointButtonContainer` |
 | `zipcodeInputContainer`            |
-

@@ -56,9 +56,9 @@ There are two different ways to use the icons available here. If you're developi
 Import the desired icon and use it into your code, for example:
 
 ```js
-import { IconMenu } from 'vtex.store-icons'
+import { IconMenu } from "vtex.store-icons";
 
-const YourComponent = (props) => <IconMenu />
+const YourComponent = (props) => <IconMenu />;
 ```
 
 You can see [here](#icon-list) a list of every available icon.
@@ -70,9 +70,9 @@ The API provides a generic icon, The `Icon` component. You can choose from any o
 For example:
 
 ```js
-import { Icon } from 'vtex.store-icons'
+import { Icon } from "vtex.store-icons";
 
-const YourComponent = (props) => <Icon id="hpa-cart" />
+const YourComponent = (props) => <Icon id="hpa-cart" />;
 ```
 
 ⚠️ This component is meant to be used on icons there aren't common throughout the store. Choose [`dedicated`](#dedicated-icon) components whenever possible.
@@ -108,14 +108,14 @@ Some components support modifiers. These are props that define the icon type, or
 
 #### Brand
 
-| Component                                                                                    | id       | Type | Orientation | State | Shape                       |
-| -------------------------------------------------------------------------------------------- | -------- | ---- | ----------- | ----- | --------------------------- |
+| Component                                                                               | id       | Type | Orientation | State | Shape                       |
+| --------------------------------------------------------------------------------------- | -------- | ---- | ----------- | ----- | --------------------------- |
 | [IconSocial](https://github.com/vtex-apps/store-icons/blob/master/react/IconSocial.tsx) | `social` | 🚫   | 🚫          | 🚫    | square \| rounded \| circle |
 
 #### High Priority Actions
 
-| Component                                                                                                    | id                | Type | Orientation | State | Shape |
-| ------------------------------------------------------------------------------------------------------------ | ----------------- | ---- | ----------- | ----- | ----- |
+| Component                                                                                               | id                | Type | Orientation | State | Shape |
+| ------------------------------------------------------------------------------------------------------- | ----------------- | ---- | ----------- | ----- | ----- |
 | [IconArrowBack](https://github.com/vtex-apps/store-icons/blob/master/react/IconArrowBack.tsx)           | `arrow-back`      | 🚫   | 🚫          | 🚫    | 🚫    |
 | [IconAssistantSales](https://github.com/vtex-apps/store-icons/blob/master/react/IconAssistantSales.tsx) | `assistant-sales` | 🚫   | 🚫          | 🚫    | 🚫    |
 | [IconProfile](https://github.com/vtex-apps/store-icons/blob/master/react/IconProfile.tsx)               | `profile`         | 🚫   | 🚫          | 🚫    | 🚫    |
@@ -127,11 +127,11 @@ Some components support modifiers. These are props that define the icon type, or
 
 #### Medium Priority Actions
 
-| Component                                                                                            | id            | Type                      | Orientation | State     | Shape |
-| ---------------------------------------------------------------------------------------------------- | ------------- | ------------------------- | ----------- | --------- | ----- |
+| Component                                                                                       | id            | Type                      | Orientation | State     | Shape |
+| ----------------------------------------------------------------------------------------------- | ------------- | ------------------------- | ----------- | --------- | ----- | ------ |
 | [IconEyeSight](https://github.com/vtex-apps/store-icons/blob/master/react/IconEyeSight.tsx)     | `eyesight`    | filled \| outline         | 🚫          | on \| off | 🚫    |
 | [IconMinus](https://github.com/vtex-apps/store-icons/blob/master/react/IconMinus.tsx)           | `minus`       | filled \| outline \| line | 🚫          | 🚫 brands |
-| [IconPlus](https://github.com/vtex-apps/store-icons/blob/master/react/IconPlus.tsx)                       | `plus`        | filled \| outline \| line | 🚫          | 🚫        | 🚫    | brands |
+| [IconPlus](https://github.com/vtex-apps/store-icons/blob/master/react/IconPlus.tsx)             | `plus`        | filled \| outline \| line | 🚫          | 🚫        | 🚫    | brands |
 | [IconSingleGrid](https://github.com/vtex-apps/store-icons/blob/master/react/IconSingleGrid.tsx) | `single-item` | 🚫                        | 🚫          | 🚫        | 🚫    |
 | [IconRemove](https://github.com/vtex-apps/store-icons/blob/master/react/IconRemove.tsx)         | `remove`      | 🚫                        | 🚫          | 🚫        | 🚫    |
 | [IconSwap](https://github.com/vtex-apps/store-icons/blob/master/react/IconSwap.tsx)             | `swap`        | 🚫                        | 🚫          | 🚫        | 🚫    |
@@ -143,14 +143,14 @@ Some components support modifiers. These are props that define the icon type, or
 
 #### Navigation
 
-| Component                                                                                  | id      | Type | Orientation                 | State | Shape |
-| ------------------------------------------------------------------------------------------ | ------- | ---- | --------------------------- | ----- | ----- |
+| Component                                                                             | id      | Type | Orientation                 | State | Shape |
+| ------------------------------------------------------------------------------------- | ------- | ---- | --------------------------- | ----- | ----- | ------------- |
 | [IconCaret](https://github.com/vtex-apps/store-icons/blob/master/react/IconCaret.tsx) | `caret` | 🚫   | up \| down \| left \| right | 🚫    | 🚫    | true \| false |
 
 #### Status Indicators
 
-| Component                                                                                          | id           | Type                      | Orientation | State | Shape |
-| -------------------------------------------------------------------------------------------------- | ------------ | ------------------------- | ----------- | ----- | ----- |
+| Component                                                                                     | id           | Type                      | Orientation | State | Shape |
+| --------------------------------------------------------------------------------------------- | ------------ | ------------------------- | ----------- | ----- | ----- |
 | [IconClose](https://github.com/vtex-apps/store-icons/blob/master/react/IconClose.tsx)         | `close`      | filled \| outline         | 🚫          | 🚫    | 🚫    |
 | [IconCheck](https://github.com/vtex-apps/store-icons/blob/master/react/IconCheck.tsx)         | `check`      | filled \| outline \| line | 🚫          | 🚫    | 🚫    |
 | [IconVolumeOn](https://github.com/vtex-apps/store-icons/blob/master/react/IconVolumeOn.tsx)   | `volume-on`  | filled \| outline \| line | 🚫          | 🚫    | 🚫    |
@@ -195,7 +195,7 @@ Where the `modifiers` follows the rule:
 
 ## CSS Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles          |
 | -------------------- |

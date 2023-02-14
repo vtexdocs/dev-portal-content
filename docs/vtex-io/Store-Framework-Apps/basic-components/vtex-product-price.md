@@ -23,23 +23,23 @@ In your theme's `manifest.json`, add the Product Price app as a dependency:
   "vtex.product-price": "1.x"
 }
 ```
-  
+
 Now, you can use all the blocks exported by the `product-price` app. Check out the full list below:
 
-| Block name          |  Description |
-| --------------------| -------- |
-| `product-list-price`         | Renders the product list price. If it is equal or lower than the product selling price, this block will not be rendered. |
-| `product-selling-price`      | Renders the product selling price.|
-| `product-spot-price`         | Renders the product spot price (in case it equals the product selling price, the block is not rendered). This block finds the spot price by looking for the cheapest price of all installments options.|
-| `product-installments`      | Renders the product installments. If more than one option is available, the one with the biggest number of installments will be displayed by default. |
-| `product-installments-list` | Renders all the installments of the payment system with the biggest amount of installments options by default. |
-| `product-installments-list-item` | Renders an installments option of the `product-installments-list-item` |
-| `product-price-savings`           | Renders the product price savings, if there is any. It can show the percentage of the discount or the value of the absolute saving. | 
-| `product-spot-price-savings`           | Renders the product spot price savings, if there is any. It can show the percentage of the discount or the value of the absolute saving. | 
-| `product-list-price-range`    | Renders the product list price range. It follows the same logic applied to the `ListPrice`: if its value is equal to the product selling price, this block is not rendered. | 
-| `product-selling-price-range` | The product selling price range. | 
-| `product-seller-name` | Renders the name of the product's seller. |
-| `product-price-suspense` | Renders a fallback component when the price is loading and its children blocks when the price is not loading. This block is extremely useful when the store works with asynchronous prices. |
+| Block name                       | Description                                                                                                                                                                                             |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `product-list-price`             | Renders the product list price. If it is equal or lower than the product selling price, this block will not be rendered.                                                                                |
+| `product-selling-price`          | Renders the product selling price.                                                                                                                                                                      |
+| `product-spot-price`             | Renders the product spot price (in case it equals the product selling price, the block is not rendered). This block finds the spot price by looking for the cheapest price of all installments options. |
+| `product-installments`           | Renders the product installments. If more than one option is available, the one with the biggest number of installments will be displayed by default.                                                   |
+| `product-installments-list`      | Renders all the installments of the payment system with the biggest amount of installments options by default.                                                                                          |
+| `product-installments-list-item` | Renders an installments option of the `product-installments-list-item`                                                                                                                                  |
+| `product-price-savings`          | Renders the product price savings, if there is any. It can show the percentage of the discount or the value of the absolute saving.                                                                     |
+| `product-spot-price-savings`     | Renders the product spot price savings, if there is any. It can show the percentage of the discount or the value of the absolute saving.                                                                |
+| `product-list-price-range`       | Renders the product list price range. It follows the same logic applied to the `ListPrice`: if its value is equal to the product selling price, this block is not rendered.                             |
+| `product-selling-price-range`    | The product selling price range.                                                                                                                                                                        |
+| `product-seller-name`            | Renders the name of the product's seller.                                                                                                                                                               |
+| `product-price-suspense`         | Renders a fallback component when the price is loading and its children blocks when the price is not loading. This block is extremely useful when the store works with asynchronous prices.             |
 
 All blocks listed above use product price data fetched from the store catalog. In order to understand further, please access the [Pricing Module overview](https://help.vtex.com/tracks/precos-101--6f8pwCns3PJHqMvQSugNfP).
 
@@ -68,11 +68,11 @@ For example:
 
 Except for the `product-price-suspense`, every block in this app only has three props in common:
 
-| Prop name          | Type      |  Description | Default value |
-| --------------------| ----------|--------------|---------------|
-| `markers`           |`[string]` | IDs of your choosing to identify the block's rendered message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message). Notice the following: a block's message can also be customized in the Store Theme source code using the `message` prop. |`[]`|
-|  `blockClass`  |  `string`  |  Block  ID  of your choosing to  be  used  in [CSS  customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization#using-the-blockclass-property).  |  `undefined`  |
-|  `message`  |  `string`  |  Defines the block's default text i.e. the block message. You can also define which text message a block will render on the UI using the admin's Site Editor.  |  `undefined`  |
+| Prop name    | Type       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                  | Default value |
+| ------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `markers`    | `[string]` | IDs of your choosing to identify the block's rendered message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message). Notice the following: a block's message can also be customized in the Store Theme source code using the `message` prop. | `[]`          |
+| `blockClass` | `string`   | Block ID of your choosing to be used in [CSS customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization#using-the-blockclass-property).                                                                                                                                                                                                                                          | `undefined`   |
+| `message`    | `string`   | Defines the block's default text i.e. the block message. You can also define which text message a block will render on the UI using the admin's Site Editor.                                                                                                                                                                                                                                                                                 | `undefined`   |
 
 For example:
 
@@ -90,16 +90,16 @@ For example:
 
 The block `product-price-savings` has two additional props:
 
-| Prop name          | Type      |  Description | Default value |
-| --------------------| ----------|--------------|---------------|
-| `percentageStyle` | `locale` or `compact` | Set to `compact` if you want to remove the white space between the number and the percent sign. It uses pattern provided by the current locale as default. | `locale` |
-| `minimumPercentage` | `number` | Set the minimum value for the percentage value display. If not informed, it always appears. Example: `10`, savings under or equal 10% will not show up. | `0` |
+| Prop name           | Type                  | Description                                                                                                                                                | Default value |
+| ------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `percentageStyle`   | `locale` or `compact` | Set to `compact` if you want to remove the white space between the number and the percent sign. It uses pattern provided by the current locale as default. | `locale`      |
+| `minimumPercentage` | `number`              | Set the minimum value for the percentage value display. If not informed, it always appears. Example: `10`, savings under or equal 10% will not show up.    | `0`           |
 
 The following blocks `product-list-price`, `product-selling-price`, `product-spot-price`, `product-spot-price-savings`, `product-price-savings`, `product-list-price-range`, and `product-selling-price-range` have an additional prop:
 
-| Prop name    | Type       | Description                                              | Default value       |
-| :----------: | :--------: | :------------------------------------------------------: | :-----------------: |
-| `alwaysShow`   | `boolean`    | Renders the block even when the product is unavailable. | `false`  |
+|  Prop name   |   Type    |                       Description                       | Default value |
+| :----------: | :-------: | :-----------------------------------------------------: | :-----------: |
+| `alwaysShow` | `boolean` | Renders the block even when the product is unavailable. |    `false`    |
 
 For example:
 
@@ -113,24 +113,23 @@ For example:
 
 The block `product-installments-list` has two additional props:
 
-| Prop name          | Type      |  Description | Default value |
-| --------------------| ----------|--------------|---------------|
-| `paymentSystemName` | `string` | This prop enables you to filter the listed installments options by a certain payment system. If not passed, the installments of the payment system with the biggest amount of installments options will be rendered.  | `undefined` |
-| `installmentsToShow` | `number[]` | Which installments options you want to show the user, in terms of the number of installments. For example, if `[1, 3]` is passed as a value for this prop, only the installments options with `NumberOfInstallments` equal to 1 and 3 will be rendered. If not passed, all options will be rendered. | `undefined` |
+| Prop name            | Type       | Description                                                                                                                                                                                                                                                                                          | Default value |
+| -------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `paymentSystemName`  | `string`   | This prop enables you to filter the listed installments options by a certain payment system. If not passed, the installments of the payment system with the biggest amount of installments options will be rendered.                                                                                 | `undefined`   |
+| `installmentsToShow` | `number[]` | Which installments options you want to show the user, in terms of the number of installments. For example, if `[1, 3]` is passed as a value for this prop, only the installments options with `NumberOfInstallments` equal to 1 and 3 will be rendered. If not passed, all options will be rendered. | `undefined`   |
 
 And the block `product-installments` also has two additional props:
 
-| Prop name          | Type      |  Description | Default value |
-| --------------------| ----------|--------------|---------------|
-| `installmentsCriteria` | `max-quantity` or `max-quantity-without-interest` | When set to `max-quantity`, the block will render the installments plan with the biggest number of installments. When set to `max-quantity-without-interest`, the block will render the installments plan with the biggest number of installments and **zero interest**. Notice that, if this prop is set to `max-quantity-without-interest`, and no installments plan matches the 'without interest' criteria, the component will fallback the default behavior.  | `max-quantity` |
-| `installmentOptionsFilter` | `{ paymentSystemName?: string, installmentsQuantity?: number }` | Allows you to define two filtering rules that will narrow down the possible installments plans the component might render. | `undefined` |
-
+| Prop name                  | Type                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Default value  |
+| -------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `installmentsCriteria`     | `max-quantity` or `max-quantity-without-interest`               | When set to `max-quantity`, the block will render the installments plan with the biggest number of installments. When set to `max-quantity-without-interest`, the block will render the installments plan with the biggest number of installments and **zero interest**. Notice that, if this prop is set to `max-quantity-without-interest`, and no installments plan matches the 'without interest' criteria, the component will fallback the default behavior. | `max-quantity` |
+| `installmentOptionsFilter` | `{ paymentSystemName?: string, installmentsQuantity?: number }` | Allows you to define two filtering rules that will narrow down the possible installments plans the component might render.                                                                                                                                                                                                                                                                                                                                        | `undefined`    |
 
 If you are using the asynchronous price feature, you can take advantage of the `product-price-suspense` and its props:
 
-| Prop name    | Type       | Description                                              | Default value       |
-| :----------: | :--------: | :------------------------------------------------------: | :-----------------: |
-| `Fallback`   | `block`    | Name of the block that will be rendered when the price is loading. | `rich-text#loading`  |
+| Prop name  |  Type   |                            Description                             |    Default value    |
+| :--------: | :-----: | :----------------------------------------------------------------: | :-----------------: |
+| `Fallback` | `block` | Name of the block that will be rendered when the price is loading. | `rich-text#loading` |
 
 For example:
 
@@ -170,11 +169,11 @@ For example:
 
 Every Product Price's block uses the [ICU Message Format](https://format-message.github.io/icu-message-format-for-translators/), making it possible to fully edit the text message and variables displayed by each block.
 
-The variable values are rendered according to the context wrapping the block, meaning that this last one uses product data to render the price accordingly. 
+The variable values are rendered according to the context wrapping the block, meaning that this last one uses product data to render the price accordingly.
 
-It is possible, however, to define which message texts a block will render on the UI using the `message` prop, as explained previously. 
+It is possible, however, to define which message texts a block will render on the UI using the `message` prop, as explained previously.
 
-The `markers` prop, in turn, needs an extra configuration in the admin's Site Editor to properly work. When using it, do not forget to access the [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message/) documentation. 
+The `markers` prop, in turn, needs an extra configuration in the admin's Site Editor to properly work. When using it, do not forget to access the [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message/) documentation.
 
 ![Product-Price-Site-Editor-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-price-2.gif)
 
@@ -182,32 +181,32 @@ In addition to that, keep in mind the message variables for each block since you
 
 - **`product-list-price`**
 
-| Message variable | Type | Description |
-| --- | --- | --- |
-| `listPriceValue` | `string` | List price value. |
-| `listPriceWithTax` | `string` | List price value with tax. |
-| `listPriceWithUnitMultiplier` | `string` | List price multiplied by unit multiplier. |
-| `taxPercentage` | `string` | Tax percentage. |
-| `taxValue` | `string` | Tax value. |
-| `hasMeasurementUnit` | `boolean` | Whether the product has a measurement unit (`true`) or not (`false`). |
-| `measurementUnit` | `string` | Measure unit text. |
-| `hasUnitMultiplier` | `boolean` | Whether the product has a unit multiplier different than 1 (`true`) or not (`false`). |
-| `unitMultiplier` | `string` | Value of the unit multiplier. |
+| Message variable              | Type      | Description                                                                           |
+| ----------------------------- | --------- | ------------------------------------------------------------------------------------- |
+| `listPriceValue`              | `string`  | List price value.                                                                     |
+| `listPriceWithTax`            | `string`  | List price value with tax.                                                            |
+| `listPriceWithUnitMultiplier` | `string`  | List price multiplied by unit multiplier.                                             |
+| `taxPercentage`               | `string`  | Tax percentage.                                                                       |
+| `taxValue`                    | `string`  | Tax value.                                                                            |
+| `hasMeasurementUnit`          | `boolean` | Whether the product has a measurement unit (`true`) or not (`false`).                 |
+| `measurementUnit`             | `string`  | Measure unit text.                                                                    |
+| `hasUnitMultiplier`           | `boolean` | Whether the product has a unit multiplier different than 1 (`true`) or not (`false`). |
+| `unitMultiplier`              | `string`  | Value of the unit multiplier.                                                         |
 
 - **`product-selling-price`**
 
-| Message variable | Type | Description |
-| --- | --- | --- |
-| `sellingPriceValue` | `string` | Selling price value. |
-| `sellingPriceWithTax` | `string` | Selling price with tax. |
-| `sellingPriceWithUnitMultiplier` | `string` | Selling price multiplied by unit multiplier. |
-| `taxPercentage` | `string` | Tax percentage. |
-| `hasListPrice` | `boolean` | Whether the product has a list price (`true`) or not (`false`). |
-| `taxValue` | `string` | Tax value. |
-| `hasMeasurementUnit` | `boolean` | Whether the product has a measurement unit (`true`) or not (`false`). |
-| `measurementUnit` | `string` | Measure unit text. |
-| `hasUnitMultiplier` | `boolean` | Whether the product has a unit multiplier different than 1 (`true`) or not (`false`). |
-| `unitMultiplier` | `string` | Value of the unit multiplier. |
+| Message variable                 | Type      | Description                                                                           |
+| -------------------------------- | --------- | ------------------------------------------------------------------------------------- |
+| `sellingPriceValue`              | `string`  | Selling price value.                                                                  |
+| `sellingPriceWithTax`            | `string`  | Selling price with tax.                                                               |
+| `sellingPriceWithUnitMultiplier` | `string`  | Selling price multiplied by unit multiplier.                                          |
+| `taxPercentage`                  | `string`  | Tax percentage.                                                                       |
+| `hasListPrice`                   | `boolean` | Whether the product has a list price (`true`) or not (`false`).                       |
+| `taxValue`                       | `string`  | Tax value.                                                                            |
+| `hasMeasurementUnit`             | `boolean` | Whether the product has a measurement unit (`true`) or not (`false`).                 |
+| `measurementUnit`                | `string`  | Measure unit text.                                                                    |
+| `hasUnitMultiplier`              | `boolean` | Whether the product has a unit multiplier different than 1 (`true`) or not (`false`). |
+| `unitMultiplier`                 | `string`  | Value of the unit multiplier.                                                         |
 
 You can use the `product-selling-price`'s `sellingPriceWithUnitMultiplier`, `hasMeasurementUnit`, `unitMultiplier`, and `measurementUnit` variables together to render measurement unit and unit multiplier on products that have it.
 
@@ -227,7 +226,7 @@ According to the example above, products with measurement unit and unit multipli
 
 `$24.00 / 2 oz`
 
-> ℹ️ *Notice that the measurement unit and unit multiplier would be properly rendered alongside their price*
+> ℹ️ _Notice that the measurement unit and unit multiplier would be properly rendered alongside their price_
 
 Still, according to the example, products that don't have a measurement unit and a unit multiplier will render only their price:
 
@@ -235,70 +234,70 @@ Still, according to the example, products that don't have a measurement unit and
 
 - **`product-spot-price`**
 
-| Message variable | Type | Description |
-| --- | --- | --- |
+| Message variable | Type     | Description       |
+| ---------------- | -------- | ----------------- |
 | `spotPriceValue` | `string` | Spot price value. |
 
 - **`product-installments` and `product-installments-list-item`**
 
-| Message variables | Type | Description |
-| --- | --- | --- |
-| `spotPriceValue` | `string` | Spot price value. |
-| `installmentsNumber` | `string` | Number of installments. |
-| `installmentValue` | `string` | Value of each installment. |
-| `installmentsTotalValue` | `string` | Total value of installments. |
-| `interestRate` | `string` | Interest rate. |
-| `paymentSystemName` | `string` | Payment System of the installments. |
-| `hasInterest` | `boolean` | Whether the installments have interest (`true`) or not (`false`). |
-| `hasMoreThanOne` | `boolean` | Whether there're more than 1 installments (`true`) or not (`false`). |
+| Message variables        | Type      | Description                                                          |
+| ------------------------ | --------- | -------------------------------------------------------------------- |
+| `spotPriceValue`         | `string`  | Spot price value.                                                    |
+| `installmentsNumber`     | `string`  | Number of installments.                                              |
+| `installmentValue`       | `string`  | Value of each installment.                                           |
+| `installmentsTotalValue` | `string`  | Total value of installments.                                         |
+| `interestRate`           | `string`  | Interest rate.                                                       |
+| `paymentSystemName`      | `string`  | Payment System of the installments.                                  |
+| `hasInterest`            | `boolean` | Whether the installments have interest (`true`) or not (`false`).    |
+| `hasMoreThanOne`         | `boolean` | Whether there're more than 1 installments (`true`) or not (`false`). |
 
 - **`product-price-savings`**
 
-| Message variables | Type | Description |
-| --- | --- | --- |
-| `previousPriceValue` | `string` | Previous price value (list price). |
-| `newPriceValue` | `string` | New price value (selling price). |
-| `savingsValue` | `string` | Difference between previous product price and the new one. |
-| `savingsWithTax` | `string` | Difference between previous product price and the new one with taxes. |
-| `savingsPercentage` | `string` | Percentage of savings. |
+| Message variables    | Type     | Description                                                           |
+| -------------------- | -------- | --------------------------------------------------------------------- |
+| `previousPriceValue` | `string` | Previous price value (list price).                                    |
+| `newPriceValue`      | `string` | New price value (selling price).                                      |
+| `savingsValue`       | `string` | Difference between previous product price and the new one.            |
+| `savingsWithTax`     | `string` | Difference between previous product price and the new one with taxes. |
+| `savingsPercentage`  | `string` | Percentage of savings.                                                |
 
 - **`product-spot-price-savings`**
 
-| Message variables | Type | Description |
-| --- | --- | --- |
-| `previousPriceValue` | `string` | Previous price value (list price). |
-| `newSpotPriceValue` | `string` | New price value (spot price). |
-| `spotPriceSavingsValue` | `string` | Difference between previous product price and the spot price. |
-| `spotPriceSavingsWithTax` | `string` | Difference between previous product price and the spot price with taxes. |
-| `spotPriceSavingsPercentage` | `string` | Percentage of savings. |
- 
+| Message variables            | Type     | Description                                                              |
+| ---------------------------- | -------- | ------------------------------------------------------------------------ |
+| `previousPriceValue`         | `string` | Previous price value (list price).                                       |
+| `newSpotPriceValue`          | `string` | New price value (spot price).                                            |
+| `spotPriceSavingsValue`      | `string` | Difference between previous product price and the spot price.            |
+| `spotPriceSavingsWithTax`    | `string` | Difference between previous product price and the spot price with taxes. |
+| `spotPriceSavingsPercentage` | `string` | Percentage of savings.                                                   |
+
 - **`product-list-price-range`**
 
-| Message variables | Type | Description |
-| --- | --- | --- |
-| `minPriceValue` | `string` | Value of the cheapest list price SKU. |
-| `maxPriceValue` | `string` | Value of the most expensive list price SKU. |
-| `minPriceWithTax` | `string` | Value of the cheapest list price SKU with tax. |
-| `maxPriceWithTax` | `string` | Value of the most expensive list price SKU with tax. |
-| `listPriceValue` | `string` | Value of the list price of the only SKU available. |
+| Message variables  | Type     | Description                                                 |
+| ------------------ | -------- | ----------------------------------------------------------- |
+| `minPriceValue`    | `string` | Value of the cheapest list price SKU.                       |
+| `maxPriceValue`    | `string` | Value of the most expensive list price SKU.                 |
+| `minPriceWithTax`  | `string` | Value of the cheapest list price SKU with tax.              |
+| `maxPriceWithTax`  | `string` | Value of the most expensive list price SKU with tax.        |
+| `listPriceValue`   | `string` | Value of the list price of the only SKU available.          |
 | `listPriceWithTax` | `string` | Value of the list price of the only SKU available with tax. |
 
 - **`product-selling-price-range`**
 
-| Message variables | Type | Description |
-| --- | --- | --- |
-| `minPriceValue` | `string` | Value of the cheapest selling price SKU. |
-| `maxPriceValue` | `string` | Value of the most expensive selling price SKU. |
-| `minPriceWithTax` | `string` | Value of the cheapest selling price SKU with tax. |
-| `maxPriceWithTax` | `string` | Value of the most expensive selling price SKU with tax. |
-| `sellingPriceValue` | `string` | Value of the selling price of the only SKU available. |
+| Message variables     | Type     | Description                                                    |
+| --------------------- | -------- | -------------------------------------------------------------- |
+| `minPriceValue`       | `string` | Value of the cheapest selling price SKU.                       |
+| `maxPriceValue`       | `string` | Value of the most expensive selling price SKU.                 |
+| `minPriceWithTax`     | `string` | Value of the cheapest selling price SKU with tax.              |
+| `maxPriceWithTax`     | `string` | Value of the most expensive selling price SKU with tax.        |
+| `sellingPriceValue`   | `string` | Value of the selling price of the only SKU available.          |
 | `sellingPriceWithTax` | `string` | Value of the selling price of the only SKU available with tax. |
 
 - **`product-seller-name`**
 
-| Message variable | Type | Description |
-| --- | --- | --- |
-| `sellerName` | `string` | The name of the product's seller. |
+| Message variable | Type     | Description                       |
+| ---------------- | -------- | --------------------------------- |
+| `sellerName`     | `string` | The name of the product's seller. |
 
 In the gif example above, the block was firstly displaying a `Save $224.40` message. By editing the message exported, it now renders a `You are saving: $224.40 (37%)` message thanks to the changes performed through the admin's Site Editor:
 
@@ -306,61 +305,60 @@ In the gif example above, the block was firstly displaying a `Save $224.40` mess
 
 ## Customization
 
-To apply CSS customization in this and other blocks, follow the instructions given in the recipe on [Using  CSS  Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+To apply CSS customization in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
-| CSS Handles |
-| ----------- |
-| `installmentValue` |
-| `installmentsListContainer` |
-| `installmentsNumber` |
-| `installmentsTotalValue` |
-| `installments` |
-| `interestRate` |
-| `listPrice'` |
-| `listPrice--isUnavailable` |
-| `listPriceRangeMaxValue` |
-| `listPriceRangeMaxWithTax` |
-| `listPriceRangeMinValue` |
-| `listPriceRangeMinWithTax` |
-| `listPriceRangeUniqueValue` |
-| `listPriceRangeUniqueWithTax` |
-| `listPriceRange` |
-| `listPriceRange--isUnavailable` | 
-| `listPriceValue` |
-| `listPriceWithTax` | 
-| `newPriceValue` |
-| `newSpotPriceValue` | 
-| `paymentSystemName` |
-| `previousPriceValue` |
-| `savingsPercentage` |
-| `savingsValue` |
-| `savingsWithTax` |
-| `savings` |
-| `savings--isUnavailable` | 
-| `sellerName` |
-| `sellerNameContainer` |
+| CSS Handles                            |
+| -------------------------------------- |
+| `installmentValue`                     |
+| `installmentsListContainer`            |
+| `installmentsNumber`                   |
+| `installmentsTotalValue`               |
+| `installments`                         |
+| `interestRate`                         |
+| `listPrice'`                           |
+| `listPrice--isUnavailable`             |
+| `listPriceRangeMaxValue`               |
+| `listPriceRangeMaxWithTax`             |
+| `listPriceRangeMinValue`               |
+| `listPriceRangeMinWithTax`             |
+| `listPriceRangeUniqueValue`            |
+| `listPriceRangeUniqueWithTax`          |
+| `listPriceRange`                       |
+| `listPriceRange--isUnavailable`        |
+| `listPriceValue`                       |
+| `listPriceWithTax`                     |
+| `newPriceValue`                        |
+| `newSpotPriceValue`                    |
+| `paymentSystemName`                    |
+| `previousPriceValue`                   |
+| `savingsPercentage`                    |
+| `savingsValue`                         |
+| `savingsWithTax`                       |
+| `savings`                              |
+| `savings--isUnavailable`               |
+| `sellerName`                           |
+| `sellerNameContainer`                  |
 | `sellerNameContainer--isDefaultSeller` |
-| `sellingPrice--hasListPrice` |
-| `sellingPrice--isUnavailable` |
-| `sellingPriceRangeMaxValue` |
-| `sellingPriceRangeMaxWithTax` |
-| `sellingPriceRangeMinValue` |
-| `sellingPriceRangeMinWithTax` |
-| `sellingPriceRangeUniqueValue` |
-| `sellingPriceRangeUniqueWithTax` |
-| `sellingPriceRange` |
-| `sellingPriceRange--isUnavailable` |
-| `sellingPriceRange--hasListPrice` |
-| `sellingPriceValue` |
-| `sellingPriceWithTax` | 
-| `sellingPrice` |
-| `spotPriceSavingsPercentage` | 
-| `spotPriceSavingsValue` | 
-| `spotPriceSavingsWithTax` | 
-| `spotPriceSavings` |
-| `spotPriceSavings--isUnavailable` | 
-| `spotPriceValue` |
-| `spotPrice` |
-| `spotPrice--isUnavailable` |
-| `taxPercentage` |
-
+| `sellingPrice--hasListPrice`           |
+| `sellingPrice--isUnavailable`          |
+| `sellingPriceRangeMaxValue`            |
+| `sellingPriceRangeMaxWithTax`          |
+| `sellingPriceRangeMinValue`            |
+| `sellingPriceRangeMinWithTax`          |
+| `sellingPriceRangeUniqueValue`         |
+| `sellingPriceRangeUniqueWithTax`       |
+| `sellingPriceRange`                    |
+| `sellingPriceRange--isUnavailable`     |
+| `sellingPriceRange--hasListPrice`      |
+| `sellingPriceValue`                    |
+| `sellingPriceWithTax`                  |
+| `sellingPrice`                         |
+| `spotPriceSavingsPercentage`           |
+| `spotPriceSavingsValue`                |
+| `spotPriceSavingsWithTax`              |
+| `spotPriceSavings`                     |
+| `spotPriceSavings--isUnavailable`      |
+| `spotPriceValue`                       |
+| `spotPrice`                            |
+| `spotPrice--isUnavailable`             |
+| `taxPercentage`                        |

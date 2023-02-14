@@ -5,19 +5,21 @@ hidden: false
 createdAt: "2021-10-07T18:46:15.904Z"
 updatedAt: "2022-12-06T12:19:29.650Z"
 ---
-The Kit Look app displays relevant products to the shopper at the time of purchase, increasing the store's product selling. 
+
+The Kit Look app displays relevant products to the shopper at the time of purchase, increasing the store's product selling.
 
 The customer can choose the items from the kit they want to buy or add the complete kit to the cart if they are interested in the combinations highlighted automatically by the store.
-
 
 ![Kitlook](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexbr-kitlook-0.jpg)
 
 In the following sections, learn how to add the app to your store and configure it.
+
 ## Before you start
 
-Set up the Kit with all the products that will be displayed. To do so, refer to the tutorial [Kit registration](https://help.vtex.com/tutorial/kit-registration--tutorials_215).  
+Set up the Kit with all the products that will be displayed. To do so, refer to the tutorial [Kit registration](https://help.vtex.com/tutorial/kit-registration--tutorials_215).
 
 ## Step-by-step
+
 ### Step 1 - Installing the app
 
 1. Go to the [VTEX App Store](https://apps.vtex.com/vtexbr-kitlook/p) and after logging into your account, click on `GET APP`.
@@ -46,9 +48,9 @@ Furthermore it is possible to select which components the kitlook block should r
 
 ![KitOrder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexbr-kitlook-1.png)
 
-The `kitlook-layout` interface works by alternating the blocks if it detects that the product is a kit. 
+The `kitlook-layout` interface works by alternating the blocks if it detects that the product is a kit.
 
-Therefore, you have to add its interface in your app store theme code. There are two ways to achieve this: Adding the `kitlook-layout` interface in the `interfaces.json` or `product.jsonc`. 
+Therefore, you have to add its interface in your app store theme code. There are two ways to achieve this: Adding the `kitlook-layout` interface in the `interfaces.json` or `product.jsonc`.
 
 Check out the following sections to add the `kitlook-layout` interface.
 
@@ -168,20 +170,19 @@ In the example above, we are reusing the `flex-layout.col#stack` block shared wi
 
 ## Customization
 
-In order to apply CSS customizations in the kitlook block, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in the kitlook block, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
-| CSS Handles           |
-| --------------------- |
-| `kitlookContainer`          |
-| `kitlookBox` |
-| `kitlookImage`    |
-| `kitlookDetails`    |
-| `kitlookName`    |
-| `kitlookDescription`    |
-| `kitlookPrice`    |
-| `kitlookButton`    |
+| CSS Handles          |
+| -------------------- |
+| `kitlookContainer`   |
+| `kitlookBox`         |
+| `kitlookImage`       |
+| `kitlookDetails`     |
+| `kitlookName`        |
+| `kitlookDescription` |
+| `kitlookPrice`       |
+| `kitlookButton`      |
 | `kitlookCheckbox`    |
-
 
 ### Product Summary
 
@@ -208,7 +209,7 @@ If you have any shelves which may display kits you need to replace the `product-
 }
 ```
 
->⚠️ We recommend you do the same for your `gallery` block, so the new layout is used in search results and categories pages.
+> ⚠️ We recommend you do the same for your `gallery` block, so the new layout is used in search results and categories pages.
 
 ```json
 {

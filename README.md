@@ -65,13 +65,15 @@ The frontmatter is the table with metadata about the article you're adding. It c
 - **hidden:** boolean that makes the article not discoverable by search engines and our internal search. Know more in [How can I hide articles from search engines](#how-can-i-hide-articles-from-search-engines)
 - **createdAt:** creation date, automatically filled in.
 - **updatedAt:** update date, automatically filled in.
-- **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled in when there's a recommended reading sequence for the articles you are managing. It should be filled with the slug of the chosen article. Example `seeAlso: - "/docs/guides/vtex-io-documentation-2-prerequesites"`	
+- **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled in when there's a recommended reading sequence for the articles you are managing. It should be filled with the slug of the chosen article. Example `seeAlso: - "/docs/guides/vtex-io-documentation-2-prerequesites"`
+- **hidePaginationPrevious**: boolean that shows in the article's footer a hyperlink to the previous article listed on the navigation. Mark as `true` to  hide the link to the previous doc on the navigation.
+- **hidePaginationNext**: boolean that shows in the article's footer a hyperlink to the next article listed on the navigation. Mark as `true` to  hide the link to the following doc on the navigation.
 
 ### How can I make sure my content will be visible and rendered correctly?
 
 - Make sure you have a unique slug.
 - Make sure your slug is the exact copy of your title.
-- Images must be saved in the repository. To add it to your markdown, mention its path in the desired place of your guide's body.
+- Images must be saved in the repository. To add it to your markdown, see [How to add images to articles](#how-can-i-addfix-images-in-an-article).
 - Ask team leaders to run the portal's build.
 
 ### How can I deal with page slugs?
@@ -288,6 +290,9 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 4. Open the raw version of the uploaded file by opening the image in a new tab.
 5. Save the URL.
 6. Mention the URL in your markdown.
+
+>ℹ️ This repository uses [JSDELIVR](https://www.jsdelivr.com) as a CDN for adding images with files stored in GitHub. Thus, you can also use the image CDN URL instead of going through steps 3 to 5. To do this, format your image URL like so: `https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@{branch}/{path}/{imgFileName}`. For instance, the CDN URL for [this image](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Getting-Started/getting-started/making-your-first-request-1.png) is `https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting-Started/getting-started/making-your-first-request-1.png`.
+Note that we have configured an action that converts images to this CDN automatically, so both methods can be used.
 
 ### How can I hide articles from search engines?
 

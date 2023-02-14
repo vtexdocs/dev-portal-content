@@ -24,6 +24,7 @@ All VTEX stores have a native Checkout UI ready to be used from the beginning of
 * [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/vtex-rest-api/docs/layout-development-guide-for-payment-methods-in-smart-checkout-vtex)
 * [How to setup and use checkout data from client side (vtex.js for Checkout)](https://developers.vtex.com/vtex-rest-api/docs/vtexjs-for-checkout)
 * [Change payment method names in Checkout](https://developers.vtex.com/vtex-rest-api/docs/change-payment-method-names-in-checkout)<br>
+
 Smart Checkout - Payment layout customization example:
 
 ![Layout Dev Guide - Guide](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/Layout_Dev_Guide_29.gif)
@@ -43,7 +44,7 @@ The architecture of VTEX Checkout is organized in such a way that the main data 
 
 To request client data additional to those available in the `orderForm`, stores can create `custom fields`. See the links below for useful information and endpoints related to custom client data.
 
-* [Add and handle custom information in the order](add-and-handle-custom-information-in-the-order)
+* [Add and handle custom information in the order](https://developers.vtex.com/docs/guides/add-and-handle-custom-information-in-the-order)
 * [Custom fields created by Mercado Libre connector](https://developers.vtex.com/vtex-rest-api/docs/get-payment-data-mercado-libre-orders-api#understanding-customdata)
 * [PUT - Set multiple custom field values](https://developers.vtex.com/vtex-rest-api/reference/setmultiplecustomfieldvalues)
 * [PUT - Set single custom field value](https://developers.vtex.com/vtex-rest-api/reference/setsinglecustomfieldvalue)

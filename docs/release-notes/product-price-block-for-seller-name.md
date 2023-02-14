@@ -10,4 +10,4 @@ type: "added"
 
 A new block responsible for displaying the seller name beside the product price was added to the Product Prices app.
 
-Check out now how to configure the `product-seller-name`  block in your store by accessing the [Product Prices app documentation](https://vtex.io/docs/components/all/vtex.product-price/).
+Check out now how to configure the `product-seller-name` block in your store by accessing the [Product Prices app documentation](https://developers.vtex.com/docs/apps/vtex.product-price/).

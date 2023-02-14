@@ -61,7 +61,6 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 
 > ⚠️ The total amount of minutes available will depend on your chosen plan: **Lite**, **Standard**, or **Pro**. All payment details are provided at the moment of installation.
 
-
 ## Configuration
 
 ### Creating new events
@@ -102,7 +101,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 7. Click in **Item** and in **Events (In live)** choose the desired event. Then click on `APPLY`.
 8. If desired, set a start and end date for the component display.
 
-> ℹ️  Use the Site Editor module to configure not only the live event but also texts, images, and banners to be displayed alongside it.
+> ℹ️ Use the Site Editor module to configure not only the live event but also texts, images, and banners to be displayed alongside it.
 
 9. Save your changes.
 
@@ -110,6 +109,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 
 1. In the events list, click on the desired live event's arrow button (in the `Action` column).
 2. In the section, **Layout Type**, choose the type of layout do you want for the Live event:
+
 - Horizontal transmission: Recommended for desktop resolutions.
 - Vertical transmission: Recommended for mobile resolutions.
 
@@ -117,11 +117,11 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 
 1. In the events list, click on the desired live event's arrow button (in the `Action` column).
 2. In the section, **Streaming Studio**, you have two buttons:
+
 - `COPY INVITATION`: click on it and send the live event’s link to a co-host, for example, and they can enter live with you.
 - `ACCESS`: Access the live event studio as the host of it.
 
 When you click on `ACCESS`, a new window will appear redirecting you to the live studio.
-	
 ![access](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexventures-livestreaming-7.png)
 
 In the `Complete my profile` field, type your name and click on `CONTINUE`.
@@ -178,7 +178,7 @@ Once finished, you can request the recording of your event in **Recording the ev
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+To apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles                       |
 | --------------------------------- |
@@ -240,4 +240,3 @@ To apply CSS customizations in this and other blocks, follow the instructions gi
 | `viewers`                         |
 | `viewersContainer`                |
 | `wordsContent`                    |
-

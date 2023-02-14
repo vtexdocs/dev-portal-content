@@ -40,10 +40,10 @@ This means `flex-layout.row#viewone` will appear on the bottom, `flex-layout.row
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization). 
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
-| CSS Handles       |
-| ------------------|
-| `stackContainer`  |
-| `stackItem`       |
-| `stackItem--first`|
+| CSS Handles        |
+| ------------------ |
+| `stackContainer`   |
+| `stackItem`        |
+| `stackItem--first` |

@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-06-03T15:19:16.340Z"
 updatedAt: "2022-08-17T19:40:06.760Z"
 ---
+
 The Yotpo Reviews Integration app is a product review and rating integration with [Yotpo](https://www.yotpo.com/).
 
 ![yotpo-app](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-yotpo-0.png)
@@ -23,7 +24,7 @@ The Yotpo Reviews Integration app is a product review and rating integration wit
 - **Yotpo App Key**: Enter the app key that you have received from Yotpo's admin interface.
 - **Use Reference Id**: Check this box if you wish to use the product's reference id rather than its product id to link the product to its reviews.
 
-> ⚠️ This app fills the standard VTEX review blocks with content using abstract interfaces from `vtex.product-review-interfaces` . 
+> ⚠️ This app fills the standard VTEX review blocks with content using abstract interfaces from `vtex.product-review-interfaces` .
 
 The **VTEX review blocks** are:
 
@@ -41,7 +42,7 @@ This app also includes a pixel integration to send order conversation tracking d
 
 ## Customization
 
-In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 | CSS Handles              |
 | ------------------------ |
