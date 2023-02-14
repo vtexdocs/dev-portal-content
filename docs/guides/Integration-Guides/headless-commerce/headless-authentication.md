@@ -13,7 +13,7 @@ Building a headless ecommerce means setting up communication between your fronte
 
 To ensure a secure shopping experience, shopper authentication for headless VTEX stores must follow a specific flow, as presented in the following:
 
-![headless authentication flow](./headless-authentication_1.png)
+![headless authentication flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/headless-commerce/headless-authentication_1.png)
 
 1. The shopper authenticates themselves in your frontend via an [OAuth integration](#oauth-log-in).
 2. Your frontend [exchanges the OAuth identity provider access token for a VTEX user token](#exchanging-oauth-identity-provider-access-token-for-vtex-user-token).
