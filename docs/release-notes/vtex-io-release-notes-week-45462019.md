@@ -16,17 +16,17 @@ Whether retailer or end user, I do hope that your checklist for this black week 
 
 ### New features 🚀
 
-- [Site Editor](https://vtex.io/docs/releases/2019-week-45-46/site-editor) - They say 1 is few, 2 is good and 3 is a party. If a release for the Site Editor is already incredible, picture 3? Check out the new Topbar, complete with tooltips and new modal texts for the admin section.
+- [Site Editor](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-45-46/site-editor.md) - They say 1 is few, 2 is good and 3 is a party. If a release for the Site Editor is already incredible, picture 3? Check out the new Topbar, complete with tooltips and new modal texts for the admin section.
 
 ### Improvements ➕
 
-- [Platform performance](https://vtex.io/docs/releases/2019-week-45-46/platform-performance) - We always rejoice from performance improvements, and I promise you that this one involving data fetching is legit. Check out the VTEX IO performance improvement for week 45 and 46 of 2019.
-- [Product Specifications](https://vtex.io/docs/releases/2019-week-45-46/product-specifications) - The Product Specifications `visibleSpecifications` and `hiddenSpecifications` props can now be edited using the admin's Site Editor. This Site Editor never tires of being a hero for code-less people, for real...
-- [Breadcrumb](https://vtex.io/docs/releases/2019-week-45-46/breadcrumb) - If you've had a good week, Breadcrumb had a better one! The component gained two new props (`homeIconSize` and `caretIconSize`), new Handles (`homeLink` and `termArrow`) and other improvements.
-- [CSS Handles](https://vtex.io/docs/releases/2019-week-45-46/css-handles) - The Breadcrumb was not the only one to have been gifted Handles this week. `savingPriceValue` and `savingPriceLabel` also had a lucky week and gained their own CSS Handles.
-- [Search query](https://vtex.io/docs/releases/2019-week-45-46/search-query) - Shall we celebrate search query's independence from the facets query? Even when the latter doesn't return any results, the former renders data fetched by the `productSearch` query, providing users with search results regardless.
-- [Search Result Gallery](https://vtex.io/docs/releases/2019-week-45-46/search-result-gallery) - During the Black Friday week, the e-commerce gods have bestowed the blessing upon the Gallery component, making it responsive and willing to accept different values for (almost) any existing device.
-- [Search Result OrderBy](search-result-orderby) - OrderBy’s new `hiddenOptions` prop does away with the component’s forced exhibitionism. Its options can now either be hidden or displayed according to the retailer’s chosen scenario.
+- [Platform performance](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-45-46/platform-performance.md) - We always rejoice from performance improvements, and I promise you that this one involving data fetching is legit. Check out the VTEX IO performance improvement for week 45 and 46 of 2019.
+- [Product Specifications](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-45-46/product-specifications.md) - The Product Specifications `visibleSpecifications` and `hiddenSpecifications` props can now be edited using the admin's Site Editor. This Site Editor never tires of being a hero for code-less people, for real...
+- [Breadcrumb](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-45-46/breadcrumb.md) - If you've had a good week, Breadcrumb had a better one! The component gained two new props (`homeIconSize` and `caretIconSize`), new Handles (`homeLink` and `termArrow`) and other improvements.
+- [CSS Handles](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-45-46/css-handles.md) - The Breadcrumb was not the only one to have been gifted Handles this week. `savingPriceValue` and `savingPriceLabel` also had a lucky week and gained their own CSS Handles.
+- [Search query](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-45-46/search-query.md) - Shall we celebrate search query's independence from the facets query? Even when the latter doesn't return any results, the former renders data fetched by the `productSearch` query, providing users with search results regardless.
+- [Search Result Gallery](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-45-46/search-result-gallery.md) - During the Black Friday week, the e-commerce gods have bestowed the blessing upon the Gallery component, making it responsive and willing to accept different values for (almost) any existing device.
+- [Search Result OrderBy](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-45-46/search-result-orderby.md) - OrderBy’s new `hiddenOptions` prop does away with the component’s forced exhibitionism. Its options can now either be hidden or displayed according to the retailer’s chosen scenario.
 
 ### Notable bug fixes 🐛
 
