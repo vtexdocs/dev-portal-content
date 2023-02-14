@@ -291,7 +291,8 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 5. Save the URL.
 6. Mention the URL in your markdown.
 
->ℹ️ You can also use the image CDN URL instead of going through steps 3 to 5. To do this, format your image URL like so: `https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@{branch}/{path}/{imgFileName}`. For instance, the CDN URL for [this image](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Getting-Started/getting-started/making-your-first-request-1.png) is `https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting-Started/getting-started/making-your-first-request-1.png`.
+>ℹ️ This repository also uses [JSDELIVR](https://www.jsdelivr.com) as a CDN for adding images with files stored in GitHub. Thus, you can also use the image CDN URL instead of going through steps 3 to 5. To do this, format your image URL like so: `https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@{branch}/{path}/{imgFileName}`. For instance, the CDN URL for [this image](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Getting-Started/getting-started/making-your-first-request-1.png) is `https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting-Started/getting-started/making-your-first-request-1.png`.
+Note that we have configured an action that converts images to this CDN automatically, so both methods can be used.
 
 ### How can I hide articles from search engines?
 
