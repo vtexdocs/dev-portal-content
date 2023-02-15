@@ -17,4 +17,4 @@ Before, it was necessary to contact VTEX support in order to change this configu
 Learn more:
 
 - [Configure discounts for orders prepaid in full](https://help.vtex.com/en/tutorial/configurar-desconto-de-preco-a-vista--7Lfcj9Wb5dpYfA2gKkACIt#)
-- [Using Checkout API to set a discount](https://developers.vtex.com/vtex-rest-api/docs/using-checkout-api-to-set-a-discount).
+- [Using Checkout API to set a discount](https://developers.vtex.com/docs/guides/set-a-discount-using-the-checkout-api).
