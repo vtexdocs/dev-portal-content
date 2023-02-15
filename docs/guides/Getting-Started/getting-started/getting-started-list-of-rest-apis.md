@@ -18,6 +18,8 @@ updatedAt: "2022-09-09T17:59:09.868Z"
     "3-0": "[Gift Card API](https://developers.vtex.com/docs/api-reference/giftcard-api#overview)",
     "5-0": "[License Manager API](https://developers.vtex.com/docs/api-reference/license-manager-api#overview)",
     "6-0": "[Logistics API](https://developers.vtex.com/docs/api-reference/logistics-api#overview)",
+    "7-0": "[Marketplace API](https://developers.vtex.com/docs/api-reference/marketplace-apis#overview)",
+    "8-0": "[Marketplace Protocol API](https://developers.vtex.com/docs/api-reference/marketplace-protocol)"
     "8-0": "[Master Data API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview)",
     "9-0": "[Orders API](https://developers.vtex.com/docs/api-reference/orders-api#overview)",
     "10-0": "[Payments Gateway API](https://developers.vtex.com/docs/api-reference/payments-gateway-api#overview)",
@@ -34,6 +36,8 @@ updatedAt: "2022-09-09T17:59:09.868Z"
     "4-1": "Interact with all Gift Card Providers registered to a store from a single point.",
     "5-1": "Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.",
     "6-1": "Manage all store logistics data by accessing warehouses, docks, pick up points, carriers and shipping rates. Get or update the inventory of each SKU.",
+    "7-1": "Enables marketplaces and sellers hosted on VTEX to perform their collaborative operations."
+    "8-1": "Integrate external sellers into a VTEX marketplace as well as external marketplaces into VTEX sellers."
     "8-1": "Manage and retrieve all data entities, applications and records from Master Data database.",
     "9-1": "Receive, process, and manage every order through our APIs.",
     "10-1": "Get payment data and process your transactions.",
@@ -43,10 +47,8 @@ updatedAt: "2022-09-09T17:59:09.868Z"
     "14-1": "Track relevant information about the client's current browsing session and integrate with several VTEX systems using a single call.",
     "15-1": "Manage store's subscription rules to improve the revenue and reduce bounce rate and churn.",
     "16-1": "Manage and retrieve notes or tasks from VTEX Do.",
-    "17-0": "VTEX Tracking",
-    "17-1": "Manage all delivery solutions powered by VTEX Tracking service.",
-    "7-0": "[Marketplace API](https://developers.vtex.com/docs/api-reference/marketplace-apis#overview)",
-    "7-1": "Enables marketplaces and sellers hosted on VTEX to perform their collaborative operations."
+    "17-0": "[VTEX Tracking](https://developers.vtex.com/docs/api-reference/tracking)",
+    "17-1": "Manage all delivery solutions powered by VTEX Tracking service.",,
   },
   "cols": 2,
   "rows": 18
