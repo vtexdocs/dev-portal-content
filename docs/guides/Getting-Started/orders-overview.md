@@ -150,7 +150,7 @@ Every order has a life cycle registered in the form of an [order flow](https://h
 ### Changing an order
 
 Change order is a feature that allows your store to modify the items or prices of an order. This allows you to handle eventual changes motivated by customer mistakes or product unavailability, for example. To know more, see the links below.
-- [Change order](https://deploy-preview-200--elated-hoover-5c29bf.netlify.app/docs/guides/(https://developers.vtex.com/vtex-rest-api/docs/change-order)
+- [Change order](https://developers.vtex.com/docs/guides/change-order)
 - [Register change on order](https://developers.vtex.com/vtex-rest-api/reference/registerchange)
 
 </OverviewCard>
