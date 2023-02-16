@@ -10,12 +10,6 @@ updatedAt: "2022-10-04T15:07:06.478Z"
 
 This overview article goes over VTEX’s Order Management System (OMS), including relevant links from our developer documentation about this topic. In the following sections you will find information about setting up and managing your orders, creating order integrations with external partners and making optional configurations.
 
-[block:html]
-{
-  "html": "<!--- STYLE SHEET -->\n\n<style type=\"text/css\">\n    .doc-type {\n        font-size: 16px;\n        padding: 20px 0;\n        width: 100%;\n    }\n\n    .doc-type ul {\n        border-left: 1px rgb(202, 203, 204) solid;\n        color: #78757a;\n        font-size: 13px;\n        padding-left: 1.5em;\n    }\n\n    .doc-type ol {\n        border-left: 1px rgb(202, 203, 204) solid;\n        color: #78757a;\n        font-size: 13px;\n        padding-left: 2.5em;\n    }\n\n    li .see-more {\n        color: #78757a;\n    }\n\n    .see-more::after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(120, 117, 122)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(120, 117, 122)'></path></svg>\");\n        display: inline-block;\n        margin-left: 6px;\n        text-decoration: none !important;\n    }\n\n    .see-more:hover:after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(20, 32, 50)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(20, 32, 50)'></path></svg>\");\n        margin-left: 8px;\n    }\n\n    .see-more:hover {\n        color: #0a1019;\n    }\n\n    .column1 {\n        display: inline;\n        width: 100%;\n        float: left;\n        width: 40px;\n        margin: 10px 10px 40px 0;\n    }\n\n    .column2 {\n        display: inline;\n        width: 50%;\n    }\n\n    .column2 .section-title {\n        margin-bottom: 0.5rem;\n        text-decoration: none !important;\n        font-size: 18px;\n        font-weight: 400;\n    }\n\n    .row3 {\n        margin-top: 2rem;\n        list-style: none !important;\n        font-size: 16px;\n        display: block;\n        margin-left: 50px;\n    }\n\n    .row3 li a {\n        text-decoration: none !important;\n    }\n\n    .row4 {\n        margin-top: 2rem;\n        font-size: 16px;\n        display: block;\n        margin-left: 50px;\n    }\n\n    .row4 li a {\n        text-decoration: none !important;\n    }\n  \n  .row5 {\n        margin-top: 2rem;\n        list-style: none !important;\n        font-size: 16px;\n        display: block;\n    }\n\n    .row5 li a {\n        text-decoration: none !important;\n    }\n\n    #faq {\n        background: #fff7f9;\n        padding: 20px;\n        border: none;\n        border-radius: 10px;\n        font-size: 16px;\n        color: #142032;\n    }\n</style>"
-}
-[/block]
-
 <OverviewCard icon='Integration'>
 
 ### Importing orders from an ERP or Back office
@@ -61,11 +55,7 @@ The order flow visible to the store that acts as an intermediary between the mar
 
 In the following sections, you will learn how to build order integrations with the Feed and Hook. This is useful when you want to develop an integration between your store’s ERP and the VTEX platform, for example.
 
-[block:html]
-{
-  "html": "<div>\n  \n<blockquote id='faq' >\n     <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"vertical-align: bottom\" >\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n                d=\"M3.495 13.465L4.69 15.029L4.948 16.976C5.091 18.056 5.94 18.906 7.02 19.05L8.972 19.311L10.535 20.505C11.4 21.166 12.599 21.166 13.464 20.505L15.028 19.31H15.026L16.974 19.052C18.054 18.909 18.904 18.06 19.048 16.98L19.308 15.028C19.308 15.029 19.912 14.238 20.503 13.465C21.164 12.6 21.163 11.401 20.503 10.536L19.31 8.971L19.052 7.024C18.909 5.944 18.06 5.094 16.98 4.95L15.027 4.69L13.464 3.496C12.599 2.835 11.4 2.835 10.535 3.496L8.971 4.69H8.973L7.025 4.949C5.945 5.092 5.095 5.941 4.951 7.021L4.69 8.973C4.69 8.972 4.086 9.763 3.495 10.536C2.835 11.4 2.835 12.6 3.495 13.465V13.465Z\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path d=\"M14.803 10.602L11.302 14.103L9.19901 12.002\" stroke=\"#F71963\" stroke-width=\"1.5\"\n                stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n        </svg>\n    <p style=\"display: inline; padding-left: 10px;\">We strongly recommend you to create an order integration using the <a href=\"https://developers.vtex.com/vtex-rest-api/docs/orders-feed\">Orders Feed v3</a>, instead of using the List orders API request or external services. If you already use an integration based on the API request, you should migrate to using the Feed. Keep in mind that this means changing the integration flow. To learn how to implement this change, see the <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration \">Set up order integration</a>.\n  </p>\n</blockquote>\n</div>"
-}
-[/block]
+> We strongly recommend you to create an order integration using the [Orders Feed v3](https://developers.vtex.com/vtex-rest-api/docs/orders-feed), instead of using the List orders API request or external services. If you already use an integration based on the API request, you should migrate to using the Feed. Keep in mind that this means changing the integration flow. To learn how to implement this change, see the [Set up order integration](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration).
 
 <OverviewCard icon='SearchList'>
 
@@ -112,11 +102,7 @@ The action of placing an order involves both the Orders Management module and th
 
 </OverviewCard>
 
-[block:html]
-{
-  "html": "<blockquote id='faq'>\n    <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"vertical-align: bottom\" >\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n                d=\"M3.495 13.465L4.69 15.029L4.948 16.976C5.091 18.056 5.94 18.906 7.02 19.05L8.972 19.311L10.535 20.505C11.4 21.166 12.599 21.166 13.464 20.505L15.028 19.31H15.026L16.974 19.052C18.054 18.909 18.904 18.06 19.048 16.98L19.308 15.028C19.308 15.029 19.912 14.238 20.503 13.465C21.164 12.6 21.163 11.401 20.503 10.536L19.31 8.971L19.052 7.024C18.909 5.944 18.06 5.094 16.98 4.95L15.027 4.69L13.464 3.496C12.599 2.835 11.4 2.835 10.535 3.496L8.971 4.69H8.973L7.025 4.949C5.945 5.092 5.095 5.941 4.951 7.021L4.69 8.973C4.69 8.972 4.086 9.763 3.495 10.536C2.835 11.4 2.835 12.6 3.495 13.465V13.465Z\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path d=\"M14.803 10.602L11.302 14.103L9.19901 12.002\" stroke=\"#F71963\" stroke-width=\"1.5\"\n                stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n        </svg>\n    <p style=\"display: inline; padding-left: 10px;\">The <a href=\"https://developers.vtex.com/docs/guides/orderform-fields\">orderForm</a> is the main object processed by the <a href=\"https://developers.vtex.com/vtex-rest-api/docs/checkout-overview\">Checkout</a> and it stores a lot of contextual information about an order. The orderForm fields will be present in most of OMS's API calls.</p>\n</blockquote>\n"
-}
-[/block]
+> The [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) is the main object processed by the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview) and it stores a lot of contextual information about an order. The orderForm fields will be present in most of OMS's API calls.
 
 <OverviewCard icon='SearchDetails'>
 
@@ -187,14 +173,10 @@ It is possible to choose another seller to fulfill a given order after the origi
 For your payment provider to notify the Order Management System that the payment of a given order is completed, use te endpoint [Send a payment notification](https://developers.vtex.com/vtex-rest-api/reference/sendpaymentnotification).
 
 In case your store receives the payments outside VTEX’s platform, like payments in cash or with promissories, the store must call this endpoint to notify the OMS, so that the order can follow its flow and be fulfilled.
-
-[block:html]
-{
-  "html": "<blockquote id='faq'>\n    <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"vertical-align: bottom\" >\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n                d=\"M3.495 13.465L4.69 15.029L4.948 16.976C5.091 18.056 5.94 18.906 7.02 19.05L8.972 19.311L10.535 20.505C11.4 21.166 12.599 21.166 13.464 20.505L15.028 19.31H15.026L16.974 19.052C18.054 18.909 18.904 18.06 19.048 16.98L19.308 15.028C19.308 15.029 19.912 14.238 20.503 13.465C21.164 12.6 21.163 11.401 20.503 10.536L19.31 8.971L19.052 7.024C18.909 5.944 18.06 5.094 16.98 4.95L15.027 4.69L13.464 3.496C12.599 2.835 11.4 2.835 10.535 3.496L8.971 4.69H8.973L7.025 4.949C5.945 5.092 5.095 5.941 4.951 7.021L4.69 8.973C4.69 8.972 4.086 9.763 3.495 10.536C2.835 11.4 2.835 12.6 3.495 13.465V13.465Z\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path d=\"M14.803 10.602L11.302 14.103L9.19901 12.002\" stroke=\"#F71963\" stroke-width=\"1.5\"\n                stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n        </svg>\n    <p style="display: inline; padding-left: 10px;">The endpoint <a href="https://developers.vtex.com/vtex-rest-api/reference/sendpaymentnotificatio">Send a payment notification</a>  must be called only after the order payment has been approved. The store might not receive the payment if there is an issue with the settlement and the endpoint has already been called.</p>\n</blockquote>\n"
-}
-[/block]
   
 </OverviewCard>
+
+> The endpoint [Send a payment notification](https://developers.vtex.com/vtex-rest-api/reference/sendpaymentnotification) must be called only after the order payment has been approved. The store might not receive the payment if there is an issue with the settlement and the endpoint has already been called.
 
 <OverviewCard icon='Integration'>
 
@@ -230,11 +212,15 @@ In other words, the feature allows VTEX sellers to sell products from its franch
 ## Integrating orders from an external marketplace
 
 A VTEX’s store can act both as a [seller](https://help.vtex.com/en/tutorial/configuring-a-seller-on-vtex-marketplace--6g045OkRSjNpqhkExbQRlP) and a [marketplace](https://help.vtex.com/en/tutorial/configuring-vtex-marketplace--7splyp5MqIyt2Iyz5jsNzb) to another VTEX store or an external partner. If you are an [external marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide) that wishes to integrate with VTEX sellers, see the links below to learn how to develop a custom connector to connect with VTEX's architecture and sellers’ orders.
-[block:html]
-{
-  "html": "<!--- Integrating orders from an external marketplace -->\n\n\n<div class=\"doc-type\"> \n\t<div class=\"column2\">\n\t<p>\n    <ul class=\"row5\">\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-orders\">Order Integration overview</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders\">New Order Integration</a>\n        </li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-update-order-status\">Update Order Status</a>\n      \t</li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-canceled-orders\">How to update a canceled order’s status in VTEX</a></li>\n    </ul>\n  </p>\n</div>\n</div>"
-}
-[/block]
+
+<OverviewCard icon='StoreCart'>
+
+- [Order Integration overview](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-orders)
+- [New Order Integration](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders)
+- [Update Order Status](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-update-order-status)
+- [How to update a canceled order’s status in VTEX](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-canceled-orders)
+
+</OverviewCard>
 
 ## Adding optional configurations
 
