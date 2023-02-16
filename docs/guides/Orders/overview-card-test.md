@@ -83,7 +83,7 @@ You can fetch information related to orders in multiple ways and about specific 
 
 </OverviewCard>
 
-<OverviewCard icon='ChangeCart'>
+<OverviewCard icon='SwitchArrows'>
 
 ## Changing an order status
 
@@ -98,8 +98,8 @@ Every order has a life cycle registered in the form of an order flow, which desc
 ## Changing an order
 
 Change order is a feature that allows your store to modify the items or prices of an order. This allows you to handle eventual changes motivated by customer mistakes or product unavailability, for example. To know more, see the links below.
-- Change order
-- Register change on order
+- [Change order](https://deploy-preview-200--elated-hoover-5c29bf.netlify.app/docs/guides/(https://developers.vtex.com/vtex-rest-api/docs/change-order)
+- [Register change on order](https://developers.vtex.com/vtex-rest-api/reference/registerchange)
 
 </OverviewCard>
 
@@ -109,8 +109,8 @@ Change order is a feature that allows your store to modify the items or prices o
 
 It is possible to choose another seller to fulfill a given order after the original seller canceled it. The period during which this action can be performed is called window to change seller, and you can use the endpoints below for this scenario.
 
-- Get window to change seller
-- Update window to change seller
+- [Get window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller-1)
+- [Update window to change seller](https://developers.vtex.com/vtex-rest-api/reference/updatewindowtochangeseller-1)
 
 </OverviewCard>
 
@@ -132,10 +132,10 @@ When you invoice an order, its status in the order flow changes to Invoiced, whi
 
 In that case, the endpoint Order invoice notification must be called, and instead of having the field `type` value determined as Output, it will be Input.
 
-- Order invoice notification
-- Update order's partial invoice (send tracking number)
-- Adding a second address for invoicing an order
-- Formatting order invoicing time via API
+- [Order invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification)
+- [Update order's partial invoice (send tracking number)](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber)
+- [Adding a second address for invoicing an order](https://developers.vtex.com/vtex-rest-api/docs/adding-a-second-address-to-the-order)
+- [Formatting order invoicing time via API](https://developers.vtex.com/vtex-rest-api/docs/formatting-order-invoicing-time)
 
 </OverviewCard>
 
@@ -153,8 +153,8 @@ If you wish to register a tracking number and URL to an order’s invoice, use t
 
 ## VTEX inStore
 
-- Enable order filter by sales associate
-- Get invoiced orders placed in inStore
+- [Enable order filter by sales associate](https://developers.vtex.com/vtex-rest-api/docs/enable-order-filter-by-sales-associate)
+- [Get invoiced orders placed in inStore](https://developers.vtex.com/vtex-rest-api/docs/get-invoiced-orders-placed-in-instore)
 
 </OverviewCard>
 
@@ -162,14 +162,14 @@ If you wish to register a tracking number and URL to an order’s invoice, use t
 
 ## VTEX DO
 
-- Create Note
-- Get Notes by orderId
-- Retrieve Note
-- Create Task
-- List tasks
-- Retrieve Task
-- Update Task
-- Add Comment on a Task
+- [Create Note](https://developers.vtex.com/vtex-rest-api/reference/newnote)
+- [Get Notes by orderId](https://developers.vtex.com/vtex-rest-api/reference/getnotesbyorderid)
+- [Retrieve Note](https://developers.vtex.com/vtex-rest-api/reference/getnote)
+- [Create Task](https://developers.vtex.com/vtex-rest-api/reference/newtask)
+- [List tasks](https://developers.vtex.com/vtex-rest-api/reference/listtasksbyassignee)
+- [Retrieve Task](https://developers.vtex.com/vtex-rest-api/reference/gettask)
+- [Update Task](https://developers.vtex.com/vtex-rest-api/reference/edittask)
+- [Add Comment on a Task](https://developers.vtex.com/vtex-rest-api/reference/addcomment)
 
 </OverviewCard>
 
@@ -177,7 +177,7 @@ If you wish to register a tracking number and URL to an order’s invoice, use t
 
 ## B2B
 
-- How to add and handle custom information in the order (B2B)
+- [How to add and handle custom information in the order (B2B)](https://developers.vtex.com/vtex-rest-api/docs/how-to-add-and-handle-custom-information-in-the-order)
 
 </OverviewCard>
 
@@ -185,6 +185,6 @@ If you wish to register a tracking number and URL to an order’s invoice, use t
 
 ## Master Data
 
-- Use v2 triggers to interact with orders
+- [Use v2 triggers to interact with orders](https://developers.vtex.com/vtex-rest-api/docs/use-master-data-with-orders)
 
 </OverviewCard>
