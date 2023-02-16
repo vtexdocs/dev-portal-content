@@ -27,4 +27,98 @@ The Orders Feed is a list of order updates, meaning that whenever there is an ev
 
 </OverviewCard>
 
+<OverviewCard icon='Configuration'>
 
+## Hook
+
+The Hook is a complement to the Feed, which allows an integration to consume order updates data by sending items to an URL provided by the user in the Hook configuration.
+
+- [Get hook configuration](https://developers.vtex.com/vtex-rest-api/reference/gethookconfiguration)
+- [Create or update hook configuration](https://developers.vtex.com/vtex-rest-api/reference/hookconfiguration)
+- [Delete hook configuration](https://developers.vtex.com/vtex-rest-api/reference/deletehookconfiguration)
+
+</OverviewCard>
+
+<OverviewCard icon='Cart'>
+
+## Placing an order
+
+The action of placing an order involves both the Orders Management module and the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview), and there are different paths to create orders. For more information about order placement, see the links below.
+
+- [Place order](https://developers.vtex.com/vtex-rest-api/reference/placeorder)
+- [Process order](https://developers.vtex.com/vtex-rest-api/reference/processorder)
+- [Using APIs to place a regular order](https://developers.vtex.com/vtex-rest-api/docs/using-apis-to-place-a-regular-order)
+- [Place order from an existing cart](https://developers.vtex.com/vtex-rest-api/reference/placeorderfromexistingorderform)
+
+</OverviewCard>
+
+<OverviewCard icon='SearchDetails'>
+
+## Retrieving order’s details
+
+You can fetch information related to orders in multiple ways and about specific topics. To know more about retrieving orders’ content, see the links below.
+
+### Orders
+
+- [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder)
+- [List orders](https://developers.vtex.com/vtex-rest-api/reference/listorders)
+
+### Conversation
+
+- [Retrieve order conversation](https://developers.vtex.com/vtex-rest-api/reference/getconversation)
+
+### User
+
+- [Retrieve user's orders](https://developers.vtex.com/vtex-rest-api/reference/userorderslist)
+- [Retrieve user order details](https://developers.vtex.com/vtex-rest-api/reference/userorderdetails)
+
+### Payment
+
+- [Retrieve payment transaction](https://developers.vtex.com/vtex-rest-api/reference/getpaymenttransaction)
+
+### Marketplace
+
+- [Fetching marketplace information with the Orders API](https://developers.vtex.com/vtex-rest-api/docs/get-marketplace-data-orders-api)
+- [Fetching payment details from a Mercado Libre order with Orders API](https://developers.vtex.com/vtex-rest-api/docs/get-payment-data-mercado-libre-orders-api)
+
+</OverviewCard>
+
+<OverviewCard icon='SearchDetails'>
+
+## Changing an order
+
+Change order is a feature that allows your store to modify the items or prices of an order. This allows you to handle eventual changes motivated by customer mistakes or product unavailability, for example. To know more, see the links below.
+- [Start handling order](https://developers.vtex.com/vtex-rest-api/reference/starthandling)
+- [Cancel order](https://developers.vtex.com/vtex-rest-api/reference/cancelorder)
+
+</OverviewCard>
+
+<OverviewCard icon='SearchDetails'>
+
+## Changing seller
+
+It is possible to choose another seller to fulfill a given order after the original seller canceled it. The period during which this action can be performed is called window to change seller, and you can use the endpoints below for this scenario.
+
+
+</OverviewCard>
+
+<OverviewCard icon='SearchDetails'>
+
+## Sending payment notification
+
+For your payment provider to notify the Order Management System that the payment of a given order is completed, use te endpoint Send a payment notification.
+
+In case your store receives the payments outside VTEX’s platform, like payments in cash or with promissories, the store must call this endpoint to notify the OMS, so that the order can follow its flow and be fulfilled.
+
+</OverviewCard>
+
+<OverviewCard icon='SearchDetails'>
+
+## Invoicing an order
+
+When you invoice an order, its status in the order flow changes to Invoiced, which means the order was successfully completed. After an order is invoiced, you can no longer modify it’s status, except when you wish to send a return invoice.
+
+In that case, the endpoint Order invoice notification must be called, and instead of having the field `type` value determined as Output, it will be Input.
+
+
+</OverviewCard>
