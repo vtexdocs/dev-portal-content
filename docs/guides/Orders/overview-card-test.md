@@ -27,7 +27,7 @@ The Orders Feed is a list of order updates, meaning that whenever there is an ev
 
 </OverviewCard>
 
-<OverviewCard icon='Configuration'>
+<OverviewCard icon='FileConfiguration'>
 
 ## Hook
 
@@ -83,26 +83,38 @@ You can fetch information related to orders in multiple ways and about specific 
 
 </OverviewCard>
 
-<OverviewCard icon='SearchDetails'>
+<OverviewCard icon='ChangeCart'>
 
-## Changing an order
+## Changing an order status
 
-Change order is a feature that allows your store to modify the items or prices of an order. This allows you to handle eventual changes motivated by customer mistakes or product unavailability, for example. To know more, see the links below.
+Every order has a life cycle registered in the form of an order flow, which describes the order’s status, possibilities, and updates. For more information, see the following links.
 - [Start handling order](https://developers.vtex.com/vtex-rest-api/reference/starthandling)
 - [Cancel order](https://developers.vtex.com/vtex-rest-api/reference/cancelorder)
 
 </OverviewCard>
 
-<OverviewCard icon='SearchDetails'>
+<OverviewCard icon='ChangeCart'>
+
+## Changing an order
+
+Change order is a feature that allows your store to modify the items or prices of an order. This allows you to handle eventual changes motivated by customer mistakes or product unavailability, for example. To know more, see the links below.
+- Change order
+- Register change on order
+
+</OverviewCard>
+
+<OverviewCard icon='ToStore'>
 
 ## Changing seller
 
 It is possible to choose another seller to fulfill a given order after the original seller canceled it. The period during which this action can be performed is called window to change seller, and you can use the endpoints below for this scenario.
 
+- Get window to change seller
+- Update window to change seller
 
 </OverviewCard>
 
-<OverviewCard icon='SearchDetails'>
+<OverviewCard icon='PaymentHand'>
 
 ## Sending payment notification
 
@@ -112,7 +124,7 @@ In case your store receives the payments outside VTEX’s platform, like payment
 
 </OverviewCard>
 
-<OverviewCard icon='SearchDetails'>
+<OverviewCard icon='Integration'>
 
 ## Invoicing an order
 
@@ -120,5 +132,59 @@ When you invoice an order, its status in the order flow changes to Invoiced, whi
 
 In that case, the endpoint Order invoice notification must be called, and instead of having the field `type` value determined as Output, it will be Input.
 
+- Order invoice notification
+- Update order's partial invoice (send tracking number)
+- Adding a second address for invoicing an order
+- Formatting order invoicing time via API
+
+</OverviewCard>
+
+<OverviewCard icon='GlobeCart'>
+
+## Tracking an order
+
+Every order has a tracking number that allows you to keep track of its status in the order flow. To send a tracking event to an order that already has a tracking number, use the endpoint Update order's partial invoice.
+
+If you wish to register a tracking number and URL to an order’s invoice, use the endpoint Update order's partial invoice.
+
+</OverviewCard>
+
+<OverviewCard icon='StoreCart'>
+
+## VTEX inStore
+
+- Enable order filter by sales associate
+- Get invoiced orders placed in inStore
+
+</OverviewCard>
+
+<OverviewCard icon='List'>
+
+## VTEX DO
+
+- Create Note
+- Get Notes by orderId
+- Retrieve Note
+- Create Task
+- List tasks
+- Retrieve Task
+- Update Task
+- Add Comment on a Task
+
+</OverviewCard>
+
+<OverviewCard icon='Blocks'>
+
+## B2B
+
+- How to add and handle custom information in the order (B2B)
+
+</OverviewCard>
+
+<OverviewCard icon='StoreData'>
+
+## Master Data
+
+- Use v2 triggers to interact with orders
 
 </OverviewCard>
