@@ -10,3 +10,21 @@
   - [FAQ: ERP Integration](https://developers.vtex.com/vtex-rest-api/docs/faq-erp-integration)
 
 </OverviewCard>
+
+<OverviewCard icon='SearchList'>
+
+## Feed v.3
+  
+The Orders Feed is a list of order updates, meaning that whenever there is an event in an order, like an order status update, it will be included as a new item in the Feed.
+  
+- [Feed v3 Guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed)
+- [Get feed configuration](https://developers.vtex.com/vtex-rest-api/reference/getfeedconfiguration)
+- [Create or update feed configuration](https://developers.vtex.com/vtex-rest-api/reference/feedconfiguration)
+- [Delete feed configuration](https://developers.vtex.com/vtex-rest-api/reference/feedconfigurationdelete)
+- [Retrieve feed items](https://developers.vtex.com/vtex-rest-api/reference/getfeedorderstatus1)
+- [Commit feed items](https://developers.vtex.com/vtex-rest-api/reference/commititemfeedorderstatus)
+- [Test JSONata expression](https://developers.vtex.com/vtex-rest-api/reference/testjsonataexpression)
+
+</OverviewCard>
+
+
