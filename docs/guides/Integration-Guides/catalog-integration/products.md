@@ -1,6 +1,6 @@
 ---
-title: "Create a product"
-slug: "create-a-product"
+title: "Products"
+slug: "products"
 hidden: false
 createdAt: "2021-12-14T13:52:49.437Z"
 updatedAt: "2022-02-03T20:10:26.202Z"
