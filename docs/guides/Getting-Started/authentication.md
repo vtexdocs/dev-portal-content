@@ -1,10 +1,11 @@
 ---
-title: "Account management"
-slug: "account-management"
+title: "Authentication"
+slug: "authentication"
 hidden: false
 createdAt: "2022-08-04T21:58:08.802Z"
 updatedAt: "2022-08-04T22:31:48.931Z"
 ---
-Learn more about account management in VTEX with the following guides:
+Get started with VTEX authentication for developers with the following guides:
 
+- [Authentication overview](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication)
 - [Checking which user is currently authenticated](https://developers.vtex.com/vtex-rest-api/docs/checking-which-user-is-currently-authenticated)
