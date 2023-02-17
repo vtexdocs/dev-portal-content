@@ -1,5 +1,5 @@
 ---
-title: "Authentication"
+title: "Authentication overview"
 slug: "getting-started-authentication"
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
