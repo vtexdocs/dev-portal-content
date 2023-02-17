@@ -80,7 +80,7 @@ To create a specification, use the [Create specification API endpoint](https://d
 Consider the following aspects in the request body:
 
 - If you are creating an [SKU specification](#sku-specifications), you need to set `IsStockKeepingUnit` as `true`. If it is a [product specification](#product-specifications), set `IsStockKeepingUnit` as `false`.
-- You will need the `FieldGroupId`, which is the ID of the specification group previously created. You can use the [List Specifications Group by Category](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-specification-group-categoryid) endpoint to get all groups IDs from a category. 
+- You will need the `FieldGroupId`, which is the ID of the specification group previously created. You can use the [List Specifications Group by Category](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-specification-group-categoryid) endpoint to get all groups IDs from a category.
 - The request body for this endpoint also includes the `FieldTypeId` that refers to the type you defined as this specification's type. The available types are:
 
 | Specification Type | ID | Description |
