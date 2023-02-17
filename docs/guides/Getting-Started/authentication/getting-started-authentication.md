@@ -1,6 +1,6 @@
 ---
 title: "Authentication overview"
-slug: "getting-started-authentication"
+slug: "authentication-overview"
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"
