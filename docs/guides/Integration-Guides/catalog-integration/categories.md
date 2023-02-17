@@ -25,7 +25,6 @@ VTEX does not limit the number of categories that can be created. We strongly re
 - **Moving categories**: Although it is possible to move categories to different levels (higher/lower) and/or different departments, this is too risky because of the specifications attached to this category. This action can negatively affect product information, because products can inherit not only the previous specifications but also the new ones. To avoid issues, we recommend following the workaround described in [Deactivating and reorganizing categories](https://help.vtex.com/en/tutorial/deactivating-and-reorganizing-categories--tutorials_264#changing-the-category-tree).
 - **Deleting categories**: You cannot delete a category unless you make a [full cleanup](https://help.vtex.com/en/tutorial/database-maintenance-full-cleanup--34P9LGs7BCIQK6acQom802) of the catalog. This means you cannot delete categories unless you clear the entire catalog.
 
-
 ## Category inheritance
 
 All specifications registered in the upper levels of the hierarchy are inherited by the lower categories. In the example above, we have what we call the root category "level zero". This means that all specs registered at this level (Gender, Simple Color, and Country) will be inherited by level 1.
