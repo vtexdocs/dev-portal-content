@@ -1,6 +1,6 @@
 ---
-title: "Create a brand"
-slug: "create-a-brand"
+title: "Brands"
+slug: "brands"
 hidden: false
 createdAt: "2022-11-30T21:02:15.884Z"
 updatedAt: "2022-11-30T21:02:15.884Z"
