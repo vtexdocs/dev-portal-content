@@ -155,7 +155,6 @@ Use the [Create Specification Value](https://developers.vtex.com/vtex-rest-api/r
 
 You need to add the `FieldId` in the request body. To get the ID of the specification you created, use the [Get Specifications By Category ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-specification-category) endpoint.
 
-
 >⚠️ Use this request for one value of one specification at a time. To register multiple values to one specification, you will need to create a request for each of the values.
 
 See the example request below.
