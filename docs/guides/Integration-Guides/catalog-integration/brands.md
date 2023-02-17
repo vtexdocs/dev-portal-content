@@ -44,7 +44,7 @@ You can edit an existing brand by using the [Update Brand](https://developers.vt
 
 You can get information about all the brands configured in your store by placing a request to one of the following endpoints:
 
-- [Get Brand List](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-brand-list): Full list of brands in your store. This route's response is limited to 20k results. If you need to obtain more results, please use the [Get Brand List per page ](https://developers.vtex.com/vtex-rest-api/reference/brandlistperpage)endpoint instead to get a paginated response.
+- [Get Brand List](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-brand-list): Full list of brands in your store. This route's response is limited to 20k results. If you need to obtain more results, please use the [Get Brand List per page](https://developers.vtex.com/vtex-rest-api/reference/brandlistperpage)endpoint instead to get a paginated response.
 - [Get Brand List per page](https://developers.vtex.com/vtex-rest-api/reference/brandlistperpage): Paginated list of brands in your store.
 
 ## Get brand
