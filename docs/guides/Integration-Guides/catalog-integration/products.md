@@ -7,7 +7,7 @@ updatedAt: "2022-02-03T20:10:26.202Z"
 ---
 A product is a generic definition of an item that is part of your store's Catalog, for instance, a shirt.
 
-Products may vary by model, color, size, among other characteristics. Therefore, it would be possible to have the same product (shirt) in different models, like short or long sleeves, gray or pink color, sizes S, M or L. 
+Products may vary by model, color, size, among other characteristics. Therefore, it would be possible to have the same product (shirt) in different models, like short or long sleeves, gray or pink color, sizes S, M or L.
 
 Each variation, such as a _long sleeve gray size S shirt_, will correspond to a [Stock Keeping Unit (SKU)](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3mJbIqMlz6oKDmyZ2bKJoA), which is the actual item in the inventory that customers can purchase. Before creating SKUs, you must create a product.
 
