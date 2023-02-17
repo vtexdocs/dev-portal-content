@@ -1,6 +1,6 @@
 ---
-title: "Create a category"
-slug: "create-a-category"
+title: "Categories"
+slug: "categories"
 hidden: false
 createdAt: "2022-03-16T18:40:49.494Z"
 updatedAt: "2022-03-16T18:40:49.494Z"
