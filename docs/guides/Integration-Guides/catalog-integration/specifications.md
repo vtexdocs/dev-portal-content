@@ -186,7 +186,7 @@ See the example request below.
 
 >❗ You should activate specification fields, otherwise they will not work.
 
-## Associating a Specification 
+## Associating a Specification
 
 Once you have created a specification, and if needed added a value to it, you will associate the specification with a product or an SKU.
 
