@@ -216,7 +216,7 @@ For the other specification types:
 
 ### To an SKU
 
-To associate a specification with an SKU, use the [Associate SKU Specification](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-sku-specification) endpoint. As informed before, the SKU specification can only be the Combo and Radio types. 
+To associate a specification with an SKU, use the [Associate SKU Specification](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-sku-specification) endpoint. As informed before, the SKU specification can only be the Combo and Radio types.
 
 Check the request body example below to see all requirements and read their descriptions on the [endpoint documentation](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-sku-specification).
 
