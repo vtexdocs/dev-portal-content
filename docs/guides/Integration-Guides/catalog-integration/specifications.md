@@ -96,7 +96,6 @@ Consider the following aspects in the request body:
 
 >⚠️ When creating an SKU Specification, the request only allows two possible types: **Combo** or **Radio**. If you set up other types and `IsStockKeepingUnit` as `true`, the request will return `400 Bad Request` with the error message `Sku Field can be only of the Radio or Combo type`.
 
-
 **Request body example:**
 
 ```json
