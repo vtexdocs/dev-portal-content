@@ -8,7 +8,9 @@ updatedAt: "2022-11-30T21:02:15.884Z"
 
 [Brands](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/7i3sB8fgkqUp5NoH5yJtfh) work as product attributes that help end customers to identify a product and the business behind it.
 
-A product needs to be associated with one brand to exist. Therefore, creating a Brand is a mandatory step when configuring your Catalog. Usually, it is the second step for catalog integration, after creating categories. For more information on Catalog structure and integration flow at VTEX, check our [Catalog overview](https://developers.vtex.com/vtex-rest-api/docs/catalog-overview).
+A product can only be associated with a single brand. Each product needs to be associated with a brand to exist. Therefore, creating a Brand is a mandatory step when configuring your Catalog. Usually, it is the second step for catalog integration, after creating categories. For more information on Catalog structure and integration flow at VTEX, check our [Catalog overview](https://developers.vtex.com/vtex-rest-api/docs/catalog-overview).
+
+## Create a brand
 
 To create a brand, use the [Create Brand](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-brand) endpoint. In this endpoint, the request and the response follow the same structure. See the example below:
 
@@ -29,6 +31,10 @@ To create a brand, use the [Create Brand](https://developers.vtex.com/vtex-rest-
   "LinkId": "orma-carbon"
 }
 ```
+
+>❗ Do not insert empty spaces at the end of the brand name. VTEX interprets that as a new brand, causing duplication.
+
+>❗ You must activate the brand, otherwise the associated products will not be indexed and thereafter will not be displayed on the website.
 
 ## Edit a brand
 
