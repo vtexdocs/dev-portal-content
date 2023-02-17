@@ -188,7 +188,7 @@ See the example request below.
 
 ## Associating a Specification 
 
-Once you have created a specification, and if needed added a value to it, you will associate the specification with a product or an SKU. 
+Once you have created a specification, and if needed added a value to it, you will associate the specification with a product or an SKU.
 
 ### To a Product
 
