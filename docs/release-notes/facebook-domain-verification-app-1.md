@@ -10,4 +10,4 @@ type: "added"
 
 The Facebook Domain Verification adds to your homepage's `<head>` section a meta-tag containing the Facebook verification code, which is used by Facebook for checking your website accountability.
 
-The new app is more than ready to be installed by you: access its documentation [here](https://vtex.io/docs/components/pixel/vtex.facebook-domain-verification/)!
+The new app is more than ready to be installed by you: access its documentation [here](https://developers.vtex.com/docs/apps/vtex.facebook-domain-verification)!
