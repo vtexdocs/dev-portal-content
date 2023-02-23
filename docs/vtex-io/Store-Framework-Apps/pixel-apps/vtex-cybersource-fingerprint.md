@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:20.934Z"
 updatedAt: "2020-06-03T15:19:20.934Z"
 ---
 
-This app setup the CyberSource Fingerprint in the store order placed page following the [official documentation](http://www.braspag.com.br/wp-content/uploads/2016/03/manual-de-integracao-anti-fraude-v1.7.1.pdf).
+This app setup the CyberSource Fingerprint in the store order placed page following the [official documentation](https://braspag.github.io/manual/antifraude?html).
 
 ## Configuration
 

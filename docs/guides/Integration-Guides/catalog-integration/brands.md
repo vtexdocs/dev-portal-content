@@ -2,31 +2,55 @@
 title: "Brands"
 slug: "brands"
 hidden: false
-createdAt: "2021-12-14T13:34:54.585Z"
-updatedAt: "2022-11-30T21:03:16.206Z"
+createdAt: "2022-11-30T21:02:15.884Z"
+updatedAt: "2022-11-30T21:02:15.884Z"
 ---
-Brands are product attributes, just like `Description` and `Name` are also considered to be product attributes or product properties. All products must have an associated brand.
 
-Brand is also a default facet in the search navigation bar.
+[Brands](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/7i3sB8fgkqUp5NoH5yJtfh) work as product attributes that help end customers to identify a product and the business behind it.
 
-To learn more see [Brand on our Help Center](https://help.vtex.com/en/tutorial/what-is-a-brand--QU07yhHoaWcEYseEucOQW)
+A product can only be associated with a single brand. Each product needs to be associated with a brand to exist. Therefore, creating a Brand is a mandatory step when configuring your Catalog. Usually, it is the second step for catalog integration, after creating categories. For more information on Catalog structure and integration flow at VTEX, check our [Catalog overview](https://developers.vtex.com/vtex-rest-api/docs/catalog-overview).
 
-[block:callout]
+## Create a brand
+
+To create a brand, use the [Create Brand](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-brand) endpoint. In this endpoint, the request and the response follow the same structure. See the example below:
+
+**Request and response body example**
+
+```json
 {
-  "type": "warning",
-  "title": "Limitation",
-  "body": "Products can be associated with only one brand."
+  "Id": 2000013,
+  "Name": "Orma Carbon",
+  "Text": "Orma Carbon",
+  "Keywords": "orma",
+  "SiteTitle": "Orma Carbon",
+  "Active": true,
+  "MenuHome": true,
+  "AdWordsRemarketingCode": "",
+  "LomadeeCampaignCode": "",
+  "Score": null,
+  "LinkId": "orma-carbon"
 }
-[/block]
+```
 
-[block:callout]
-{
-  "type": "danger",
-  "title": "Watch out for these pitfalls",
-  "body": "- **Activating Brands:** Don't forget to activate brands, otherwise products will not be indexed and thereafter will not be displayed on the website. \n- **Brands with space characters at the end:** Never insert empty spaces at the end of the brand name. VTEX understands that as a new brand, causing duplication."
-}
-[/block]
+>❗ Do not insert empty spaces at the end of the brand name. VTEX interprets that as a new brand, causing duplication.
 
-## API integration
+>❗ You must activate the brand, otherwise the associated products will not be indexed and thereafter will not be displayed on the website.
 
-To create a new brand, check our [Create a brand](https://developers.vtex.com/vtex-rest-api/docs/create-a-brand) guide.
+## Edit a brand
+
+You can edit an existing brand by using the [Update Brand](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-put-brand) endpoint with the same request body structure as to create a brand. The only non-editable information is the Brand ID.
+
+## Get brand list
+
+You can get information about all the brands configured in your store by placing a request to one of the following endpoints:
+
+- [Get Brand List](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-brand-list): Full list of brands in your store. This route's response is limited to 20k results. If you need to obtain more results, please use the [Get Brand List per page](https://developers.vtex.com/vtex-rest-api/reference/brandlistperpage)endpoint instead to get a paginated response.
+- [Get Brand List per page](https://developers.vtex.com/vtex-rest-api/reference/brandlistperpage): Paginated list of brands in your store.
+
+## Get brand
+
+You can retrieve information about a specific brand by making a request to [Get Brand](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-brand).
+
+## Delete a brand
+
+To delete a brand, use the [Delete Brand](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-delete-brand) endpoint. This action is permanent and cannot be undone.

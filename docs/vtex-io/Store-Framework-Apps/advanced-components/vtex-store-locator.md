@@ -27,7 +27,7 @@ The Store Locator app fetches the Pickup point data in order to display address 
 
 Once installed, the app will generate a new route called `/stores` for your store, listing the retail stores registered in the **Pickup Points** section (under the **Inventory & Shipping** module).
 
-The new page already contains a default template with all blocks exported by the Store Locator app, meaning the `/stores` page is ready to be rendered and no further actions are required. However, you can **customize the new page overwriting the template by creating a brand new one**. To do so, check the [**Advanced configuration**](./README.md#advanced-configuration) section below.
+The new page already contains a default template with all blocks exported by the Store Locator app, meaning the `/stores` page is ready to be rendered and no further actions are required. However, you can **customize the new page overwriting the template by creating a brand new one**. To do so, check the [**Advanced configuration**](#advanced-configuration) section below.
 
 > ℹ️ _This app will also **add a new entry to your store's `/sitemap.xml` file so that all your pickup points are available to search engines** - make sure you already have the `vtex.store-sitemap@2.x` app installed in your VTEX account!_
 

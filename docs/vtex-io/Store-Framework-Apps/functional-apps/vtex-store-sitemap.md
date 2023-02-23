@@ -13,18 +13,16 @@ For more information about generating a sitemap, check the following sections.
 
 ## Before you start
 
-This app is available to stores using `vtex.edition-store@3.x` [Edition App](https://vtex.io/docs/concepts/edition-app/). To check which Edition App is installed on your account, run `vtex edition get`. If it's a different Edition, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to VTEX Support asking for the installation of the `vtex.edition-store@3.x` Edition App.
+This app is available to stores using `vtex.edition-store@3.x` [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app). To check which Edition App is installed on your account, run `vtex edition get`. If it's a different Edition, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to VTEX Support asking for the installation of the `vtex.edition-store@3.x` Edition App.
 
 Before generating your store's sitemap, you might want to adjust if products, navigation, app and/or custom routes will be included in it or not. If that's the case, check the [Advanced Configuration section](#advanced-configuration) for more information.
 
 ## Step by step
 
-1. Using your terminal and the [VTEX IO CLI](https://vtex.io/docs/recipes/development/vtex-io-cli-installation-and-command-reference/), log into your account.
-2. Run `vtex use {workspaceName} --production` to use a production workspace or [create a production workspace](https://vtex.io/docs/recipes/development/creating-a-production-workspace/) from scratch.
+1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into your account.
+2. Run `vtex use {workspaceName} --production` to use a production workspace or [create a production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) from scratch.
 
-> ⚠️ **Warning**
->
-> Remember to replace the values between the curly brackets according to your scenario.
+> ⚠️ Remember to replace the values between the curly brackets according to your scenario.
 
 3. Run `vtex install vtex.store-sitemap@2.x` to install the Sitemap app.
 
@@ -69,11 +67,9 @@ The expected response body is
 
 This means your sitemap will be available in some minutes, after being processed and saved on our database.
 
-> ℹ️ **Info**
->
-> Keep in mind that the time taken to generate a sitemap is proportional to the number of products. For example, the average time to generate a sitemap for a store with 60k products is 30 minutes. For 5k products, the duration should be about 5 minutes.
+> ℹ️ Keep in mind that the time taken to generate a sitemap is proportional to the number of products. For example, the average time to generate a sitemap for a store with 60k products is 30 minutes. For 5k products, the duration should be about 5 minutes.
 
-⚠️ If you attempt to send a new request to the Sitemap API while your store's sitemap generation is already taking place, the following message will be displayed:
+> ⚠️ If you attempt to send a new request to the Sitemap API while your store's sitemap generation is already taking place, the following message will be displayed:
 
 ```
 Sitemap generation already in place
@@ -84,9 +80,7 @@ To make a force restart, add the `force` argument to the query, as in: `generate
 
 10. Check the sitemap generated for the current workspace you are working on by accessing `https://{workspace}--{account}.myvtex.com/sitemap.xml` on your browser. Notice that if your store is a cross-border one, you'll first see an index containing a website's sitemap for each locale.
 
-> ℹ️ **Info**
->
-> Notice that different `.xml` files are generated according to their entity type (product, category, subcategory, user routes, brand and department) and that each `.xml` file supports a maximum of 5k routes.
+> ℹ️ Notice that different `.xml` files are generated according to their entity type (product, category, subcategory, user routes, brand and department) and that each `.xml` file supports a maximum of 5k routes.
 
 11. If you're happy with the results, run `vtex promote` to promote your workspace and to have your sitemap in your master workspace.
 
@@ -127,9 +121,7 @@ For implementation details, check the following step by step.
 
 1. Create or modify your app to respond to the following route `/sitemap/{index-name}.xml` and to return an XML file containing the data that you want the search engine (e.g., Google) to index. Remember to replace the values between the curly brackets according to your scenario.
 
-> ℹ️ **Info**
->
-> We recommend that you use a pre-created XML file. Otherwise, for every request, the XML file will be built from scratch, consuming more time to complete the task.
+> ℹ️ We recommend that you use a pre-created XML file. Otherwise, for every request, the XML file will be built from scratch, consuming more time to complete the task.
 
 2. [Publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) and install your app in a production workspace.
 
@@ -143,9 +135,7 @@ mutation {
 }
 ```
 
-> ℹ️ **Info**
->
-> **If your store is a cross-border one**, keep in mind that the `saveIndex` mutation also accepts the `binding` id as an argument. That means that, by specifying the `binding` id, you can add your new index to the sitemap of the desired binding. If the `binding` id is not specified, the mutation will consider the store's default binding.
+> ℹ️ **If your store is a cross-border one**, keep in mind that the `saveIndex` mutation also accepts the `binding` id as an argument. That means that, by specifying the `binding` id, you can add your new index to the sitemap of the desired binding. If the `binding` id is not specified, the mutation will consider the store's default binding.
 
 5. Check the updated sitemap for the current workspace you are working on by accessing `https://{workspace}--{account}.myvtex.com/sitemap.xml` in your browser.
 
