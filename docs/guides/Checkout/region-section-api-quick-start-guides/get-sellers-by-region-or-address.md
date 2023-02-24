@@ -109,7 +109,7 @@ Despite the code `200` (which indicates the success of the request), if there ar
 }
 ```
 
-- `Message error example (code CHK0127): "País inválido" (invalid country)`. The `country` code was not informed in the request.
+- `Message error example (code CHK0127): "País inválido"` (invalid country): the `country` code was not informed in the request.
 
 ```json
 {
