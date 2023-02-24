@@ -79,7 +79,7 @@ Despite the code `200` (which indicates the success of the request), if there ar
 
 ### 400 - Bad Request
 
-- `Message error example (code 001): "O campo CEP (220500) nos dados de entrega é inválido" (Postal code (220500) in delivery data is invalid)`. The `postalCode` information is not valid.
+- `Message error example (code 001): "O campo CEP (220500) nos dados de entrega é inválido"` (Postal code (220500) in delivery data is invalid): the `postalCode` information is not valid.
 
 ```json
 {
