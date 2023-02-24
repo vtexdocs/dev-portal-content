@@ -93,7 +93,7 @@ Despite the code `200` (which indicates the success of the request), if there ar
 }
 ```
 
-- `Message error example (code CHK0119): "Endereços devem ter código postal ou geocoordenadas" (Addresses must have postal code or geocoordinates)`. This message can be displayed in two situations: 
+- `Message error example (code CHK0119): "Endereços devem ter código postal ou geocoordenadas" (Addresses must have postal code or geocoordinates)`. This message can be displayed in two situations:
       - 1) `postalCode` was not informed in the request, or;
       - 2) `geoCoordinates` information is not valid or was not informed in the request.
 
