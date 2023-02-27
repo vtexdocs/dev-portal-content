@@ -79,9 +79,7 @@ Configuring your shipping strategy means setting up a shipping policy, a loading
 
 Manage your [Shipping strategy](https://help.vtex.com/en/tutorial/shipping-strategy--58vLBDbjYVQzJ6rRc5QNz3) by editing your shipping policies, loading docks, and warehouses.
 
-**In VTEX Admin:** Orders > Inventory & Shipping > Shipping Strategy > Shipping Policies/Loading Docks/Warehouses
-
-**In Redesigned VTEX Admin:** Shipping > Shipping Strategy > Shipping Policies/Loading Docks/Warehouses
+**In VTEX Admin:** Shipping > Shipping Strategy > Shipping Policies/Loading Docks/Warehouses
 
 ### Shipping policy
 
