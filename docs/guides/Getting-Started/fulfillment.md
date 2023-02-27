@@ -147,10 +147,10 @@ VTEX offers different solutions for your logistic process according to your busi
 
 [Geolocation shipping](https://help.vtex.com/en/tutorial/gerenciar-geolocalizacao--tutorials_138) is the registration of shipping locations using polygons to delimitate areas, usually for delivering in rural and industrial areas.
 
-* [PUT - Create/update polygon](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/configuration/geoshape)
-* [GET - List paged polygons](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/geoshape)
-* [GET - List polygon by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/geoshape/-polygonName-)
-* [DELETE - Delete polygon](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/geoshape/-polygonName-)
+* [PUT - Create/update polygon](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/configuration/geoshape)
+* [GET - List paged polygons](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/geoshape)
+* [GET - List polygon by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/geoshape/-polygonName-)
+* [DELETE - Delete polygon](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/api/logistics/pvt/configuration/geoshape/-polygonName-)
 
 ### Reservations
 
