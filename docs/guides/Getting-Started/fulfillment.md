@@ -186,11 +186,11 @@ The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEA
 
 [Pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R) are physical locations from where shoppers can pick up their orders.
 
-* [PUT - Create/Update Pickup Point](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/configuration/pickuppoints/-pickupPointId-)
-* [GET - List all pickup points](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/pickuppoints)
-* [GET - List Pickup Point By ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/pickuppoints/-pickupPointId-)
-* [GET - List paged Pickup Points](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/pickuppoints/_search)
-* [DELETE - Delete Pickup Point](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/pickuppoints/-pickupPointId-)
+* [PUT - Create/Update Pickup Point](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-)
+* [GET - List all pickup points](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/pickuppoints)
+* [GET - List Pickup Point By ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-)
+* [GET - List paged Pickup Points](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/pickuppoints/_search)
+* [DELETE - Delete Pickup Point](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-)
 
 **In VTEX Admin:** Orders > Inventory & Shipping > Pickup Points
 
