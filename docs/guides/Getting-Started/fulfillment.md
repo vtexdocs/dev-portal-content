@@ -37,7 +37,7 @@ The following image summarizes the fulfillment process:
 
 In VTEX, there are specific terms to identify the entities involved in order fulfillment, which can be checked in our [Logistics Glossary](https://help.vtex.com/en/tutorial/logistics-glossary--16DSSiXn548rsidi0A8Hby). A important concept is [Shipping strategy](https://help.vtex.com/en/tutorial/shipping-strategy--58vLBDbjYVQzJ6rRc5QNz3), defined as the relationship between the following entities:
 
-* [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140): also called trade policy, is a set of rules that define the shipping conditions, including carrier’s working hours, delivery time frames, shipping rates, and more.
+* [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140): is a set of rules that define the shipping conditions, including carrier’s working hours, delivery time frames, shipping rates, and more.
 * [Loading dock](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW): entity that links your products to a shipping policy.
 * [Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb): location where your products are stored.
 
