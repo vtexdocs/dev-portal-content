@@ -167,11 +167,11 @@ VTEX offers different solutions for your logistic process according to your busi
 
 [Scheduled delivery](https://help.vtex.com/en/tutorial/scheduled-delivery--22g3HAVCGLFiU7xugShOBi) allows you to set delivery time frames for shoppers to choose the day and time to receive the order.
 
-* [POST - Add blocked delivery windows](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/carriers/-carrierId-/adddayofweekblocked)
-* [GET - Retrieve blocked delivery windows](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/carriers/-carrierId-/getdayofweekblocked)
-* [POST - Remove blocked delivery windows](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/carriers/-carrierId-/removedayofweekblocked)
-* [GET - Search capacity reservations in time range](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames)
-* [GET - Get capacity reservation usage by window](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames/-windowDay-F-windowStartTime-T-windowEndTime-)
+* [POST - Add blocked delivery windows](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/carriers/-carrierId-/adddayofweekblocked)
+* [GET - Retrieve blocked delivery windows](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/carriers/-carrierId-/getdayofweekblocked)
+* [POST - Remove blocked delivery windows](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/carriers/-carrierId-/removedayofweekblocked)
+* [GET - Search capacity reservations in time range](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames)
+* [GET - Get capacity reservation usage by window](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames/-windowDay-F-windowStartTime-T-windowEndTime-)
 
 ### Holidays
 
