@@ -127,9 +127,7 @@ You can update your inventory or retrieve information about it.
 * [GET - List inventory per dock and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-)
 * [GET - List inventory with dispatched reservations](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched)
 
-**In VTEX Admin:** Orders > Inventory & Shipping > Inventory Management
-
-**In Redesigned VTEX Admin:** Catalog > Inventory > Inventory Management
+**In VTEX Admin:** Catalog > Inventory > Inventory Management
 
 ## Setting up shipping configurations (Optional)
 
