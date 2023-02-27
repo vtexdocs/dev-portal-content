@@ -177,10 +177,10 @@ VTEX offers different solutions for your logistic process according to your busi
 
 The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEAoyAmcwsuiO6Yk) feature allows you to configure days that should not be considered valid for delivery so that VTEX platform considers those days when calculating the shipping estimated time.
 
-* [PUT - Create/update holiday](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/configuration/holidays/-holidayId-)
-* [GET - List holiday by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/holidays/-holidayId-)
-* [GET - List all holidays](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/holidays)
-* [DELETE - Delete holiday](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/holidays/-holidayId-)
+* [PUT - Create/update holiday](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/configuration/holidays/-holidayId-)
+* [GET - List holiday by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/holidays/-holidayId-)
+* [GET - List all holidays](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/holidays)
+* [DELETE - Delete holiday](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/api/logistics/pvt/configuration/holidays/-holidayId-)
 
 ### Pickup points
 
