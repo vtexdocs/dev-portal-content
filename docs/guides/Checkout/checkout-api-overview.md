@@ -82,4 +82,4 @@ Allows merchants to place and process orders by creating a new cart or using an 
 
 Allows merchants to obtain a list of sellers serving a specific delivery region.
 
-- [GET - Get sellers by region](https://developers.vtex.com/vtex-rest-api/reference/getsellersbyregion)
+- [GET - Get sellers by region or address](https://developers.vtex.com/vtex-rest-api/reference/getsellersbyregion)
