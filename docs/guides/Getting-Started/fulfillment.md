@@ -98,12 +98,12 @@ You can list shipping policies, deactivate, reactivate, update or delete them.
 
 You can list loading docks, deactivate, reactivate, update or delete them.
 
-* [GET - List all docks](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/docks)
-* [GET - List dock by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/docks/-dockId-)
-* [POST - Deactivate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/deactivation)
-* [DELETE - Delete dock](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/docks/-dockId-)
-* [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks)
-* [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/activation)
+* [GET - List all docks](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/docks)
+* [GET - List dock by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/docks/-dockId-)
+* [POST - Deactivate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/docks/-dockId-/deactivation)
+* [DELETE - Delete dock](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/api/logistics/pvt/configuration/docks/-dockId-)
+* [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/docks)
+* [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/docks/-dockId-/activation)
 
 ### Warehouse
 
