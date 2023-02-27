@@ -28,9 +28,9 @@ Follow the steps below to integrate them, once receiving the notification. Make 
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-integration-invoice-tracking-0.jpg)
 
-1. VTEX Orders receive tracking and/or invoice data. This information can be inserted via [Place Fulfillment Order API](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) or manually in VTEX Admin. 
-After receiving invoice information, the order status is updated to `invoiced` in VTEX. In this case, it is not possible to cancel the order anymore. 
-2. VTEX OMS notifies the connector through the URL informed in [Invoice notification from VTEX](#invoice-notification-from-vtex) by the connector through the property `marketplaceServicesEndpoint`, once the order is inserted in VTEX. 
+1. VTEX Orders receive tracking and/or invoice data. This information can be inserted via [Invoice notification from VTEX](#invoice-notification-from-vtex) or manually in VTEX Admin.
+After receiving invoice information, the order status is updated to invoiced in VTEX. In this case, it is not possible to cancel the order anymore.
+2. VTEX OMS notifies the connector through the URL informed in the [Place Fulfillment Order API](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) by the connector through the property `marketplaceServicesEndpoint`, once the order is inserted in VTEX.
 3. Connector collects information sent through the notification.
 a. To collect information about **invoice**, use the properties:
     - `invoiceNumer`: invoice’s ID code.
