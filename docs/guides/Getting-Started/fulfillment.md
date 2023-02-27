@@ -109,12 +109,12 @@ You can list loading docks, deactivate, reactivate, update or delete them.
 
 You can list warehouses, deactivate, reactivate, update or delete them.
 
-* [GET - List all warehouses](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/warehouses)
-* [GET - List warehouse by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/configuration/warehouses/-warehouseId-)
-* [POST - Deactivate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/deactivation)
-* [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
-* [DELETE - Remove warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/configuration/warehouses/-warehouseId-)
-* [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses)
+* [GET - List all warehouses](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/warehouses)
+* [GET - List warehouse by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/warehouses/-warehouseId-)
+* [POST - Deactivate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses/-warehouseId-/deactivation)
+* [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
+* [DELETE - Remove warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/api/logistics/pvt/configuration/warehouses/-warehouseId-)
+* [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses)
 
 ## Managing inventory
 
