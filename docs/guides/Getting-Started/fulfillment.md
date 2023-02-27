@@ -204,7 +204,7 @@ When the shopper enters their address at checkout, the VTEX platform analyzes th
 
 Service Level Agreement (SLA) refers to the order’s fulfillment conditions presented to the shopper, including shipping type - delivery or pick up -, costs and deadlines.
 
-* POST - [Calculate SLA](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/shipping/calculate)
+* POST - [Calculate SLA](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/shipping/calculate)
 
 ## Optimizing fulfillment process with carriers
 
