@@ -67,7 +67,7 @@ Configuring your shipping strategy means setting up a shipping policy, a loading
 
 [Loading dock](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW) connects the warehouse to the shipping policy. The loading dock corresponds to a physical location from where products will be shipped. By default, when you create a new loading dock, it is generated as activated.
 
-* [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks)
+* [POST - Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/docks)
 * [POST - Activate dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/docks/-dockId-/activation)
 
 ### 3. Warehouse
