@@ -10,7 +10,7 @@ To make sure all items in an order are available for delivery on the VTEX platfo
 
 
 1. Connector collects order information at the marketplace.
-2. Connector sends a [Fulfillment simulation](https://developers.vtex.com/vtex-rest-api/reference/cartsimulation) request to collect updated information about items to check their availability on stock.
+2. Connector sends a [Fulfillment simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/api/checkout/pub/orderForms/simulation) request to collect updated information about items to check their availability on stock.
 3. Connector notifies VTEX about stock in Marketplace through the `StockBalance` property, so that the stock availability is constantly updated.
 4. After receiving the VTEX notification, connectors should validate the following:
 - If the SKU is active, through the `isActive` property, .
