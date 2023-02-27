@@ -89,10 +89,10 @@ Manage your [Shipping strategy](https://help.vtex.com/en/tutorial/shipping-strat
 
 You can list shipping policies, deactivate, reactivate, update or delete them.
 
-* [GET - List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/shipping-policies)
-* [GET - Retrieve shipping policy by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/shipping-policies/-id-)
-* [PUT - Update shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/shipping-policies/-id-)
-* [DELETE - Delete shipping policies by ID](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/logistics/pvt/shipping-policies/-id-)
+* [GET - List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies)
+* [GET - Retrieve shipping policy by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies/-id-)
+* [PUT - Update shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/shipping-policies/-id-)
+* [DELETE - Delete shipping policies by ID](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/api/logistics/pvt/shipping-policies/-id-)
 
 ### Loading dock
 
