@@ -124,12 +124,12 @@ Once you have your Shipping strategy set up, you will need to manage the items a
 
 You can update your inventory or retrieve information about it.
 
-* [PUT - Update inventory by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-)
-* [GET - List inventory by SKU](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/skus/-skuId-)
-* [GET - List inventory per warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-)
-* [GET - List inventory per dock](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/docks/-dockId-)
-* [GET - List inventory per dock and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-)
-* [GET - List inventory with dispatched reservations](https://developers.vtex.com/docs/api-reference/logistics-api#get-/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched)
+* [PUT - Update inventory by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-)
+* [GET - List inventory by SKU](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/skus/-skuId-)
+* [GET - List inventory per warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-)
+* [GET - List inventory per dock](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/items/-skuId-/docks/-dockId-)
+* [GET - List inventory per dock and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-)
+* [GET - List inventory with dispatched reservations](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched)
 
 **In VTEX Admin:** Orders > Inventory & Shipping > Inventory Management
 
