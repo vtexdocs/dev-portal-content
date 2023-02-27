@@ -184,9 +184,7 @@ The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEA
 * [GET - List paged Pickup Points](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/pickuppoints/_search)
 * [DELETE - Delete Pickup Point](https://developers.vtex.com/docs/api-reference/logistics-api#delete-/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-)
 
-**In VTEX Admin:** Orders > Inventory & Shipping > Pickup Points
-
-**In Redesigned VTEX Admin:** Shipping > Pickup Points
+**In VTEX Admin:** Shipping > Pickup Points
 
 ## Calculating shipping estimate time
 
