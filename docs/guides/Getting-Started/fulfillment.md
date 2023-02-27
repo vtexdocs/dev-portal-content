@@ -133,9 +133,7 @@ You can update your inventory or retrieve information about it.
 
 VTEX offers different solutions for your logistic process according to your business needs. You can configure shipping geolocations, work with the reservation, create scheduled delivery windows, define holidays, register pickup points, and more.
 
-**In VTEX Admin:** Orders > Inventory & Shipping > Geolocation Shipping/Delivery capacity/Holidays
-
-**In Redesigned VTEX Admin:** Store Settings > Shipping > Settings/Geolocation Shipping/Holidays
+**In VTEX Admin:** Store Settings > Shipping > Settings/Geolocation Shipping/Holidays
 
 ### Geolocation shipping (polygons)
 
