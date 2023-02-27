@@ -9,7 +9,7 @@ This documentation assumes that you use Master Data V2 and are familiar with JSO
 
 All Master Data V2 interactions occur through API.  We strongly recommend you use Postman and familiarize with our API [documentation](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview).
 
->❗ This feature has been deprecated for all VTEX accounts created after january 2023 and previously existing accounts that did not use it. We do not recommend it for creating orders integrations, due to the inconsistencies that may occur. The preferred way to do this is with the [orders Feed and Hook](https://developers.vtex.com/vtex-rest-api/docs/orders-feed). If your store uses this data entity we recommend that you migrate your integration to the [orders Feed and Hook](https://developers.vtex.com/vtex-rest-api/docs/orders-feed) as soon as possible.
+>❗ Master Data v2 triggers have been deprecated for VTEX accounts created after January 2023 and for all existing accounts that did not implement it before. We do not recommend this feature for creating order integrations due to possible inconsistencies. Instead, refer to the [order's Feed and Hook](https://developers.vtex.com/vtex-rest-api/docs/orders-feed) to implement or migrate your integration in our recommended way.
 
 A trigger is nothing more than configuring a predetermined condition and taking an action (HTTP request or sending an email).
 
