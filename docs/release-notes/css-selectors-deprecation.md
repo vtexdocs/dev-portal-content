@@ -1,6 +1,6 @@
 ---
 title: CSS Selectors deprecation
-excerpt: 'Starting December 18, 2019, **CSS customization will be done exclusively via CSS Handles** (e.g. `.foo`). Selectors based on HTML structure (e.g. `div > div > span[foo="bar"]`) will be blocked for new stores.'
+excerpt: 'Starting December 18, 2019, **CSS customization will be done exclusively via CSS Handles**. Selectors based on HTML structure will be blocked for new stores.'
 createdAt: '11/11/2019'
 ---
 
@@ -10,8 +10,7 @@ Starting December 18, 2019, **CSS customization will be done exclusively via CSS
 
 Previously, many VTEX IO store components didn't have their own **CSS Handles**.
 
-<div class="alert alert-info">
-Handles allow you to select and customize a specific store component using CSS classes.
+> Handles allow you to select and customize a specific store component using CSS classes.
 
 Without Handles, a component's CSS customization was necessarily done based on the HTML structure.
 
