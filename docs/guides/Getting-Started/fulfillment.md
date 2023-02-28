@@ -146,7 +146,7 @@ VTEX offers different solutions for your logistic process according to your busi
 
 ### Reservations
 
-[Reservation](https://help.vtex.com/en/tutorial/how-does-reservation-work--tutorials_92) is the solution that prevents the same item from being sold more than once. After the shopper completes the purchase, the item bought status changes from `Available` to `Reserved` in the [inventory management](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139).
+[Reservation](https://help.vtex.com/en/tutorial/how-does-reservation-work--tutorials_92) is the solution that prevents the same item from being sold more than once. After the shopper completes the purchase, the status of the purchased item changes from `Available` to `Reserved` in the [inventory management](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139).
 
 * [POST - Create reservation](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/inventory/reservationsn)
 * [GET - List reservation by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/reservations/-reservationId-)
