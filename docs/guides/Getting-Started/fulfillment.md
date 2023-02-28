@@ -39,7 +39,7 @@ In VTEX, there are specific terms to identify the entities involved in order ful
 
 * [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140): Set of rules that define the shipping conditions, including carrier’s working hours, delivery time frames, shipping rates, and more.
 * [Loading dock](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW): Entity that links your products to a shipping policy.
-* [Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb): location where your products are stored.
+* [Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb): Location where your products are stored.
 
 The following image shows how these entities connect to each other:
 
