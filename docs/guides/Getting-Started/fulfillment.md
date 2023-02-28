@@ -57,7 +57,7 @@ Configuring your shipping strategy means setting up a shipping policy, a loading
 
 ### 1. Shipping policy
 
-[Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140) defines the shipping conditions offered to the shopper at checkout, including costs and deadlines. This shipping policy set of rules includes carriers working hours, shipping capacity, and more.
+A [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140) defines the shipping conditions offered to the shopper at checkout, including costs and deadlines. This set of rules includes carriers working hours, shipping capacity, and more.
 
 * [POST - Create shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/shipping-policies)
 
