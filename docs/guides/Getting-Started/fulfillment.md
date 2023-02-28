@@ -167,7 +167,7 @@ VTEX offers different solutions for your logistic process according to your busi
 
 ### Holidays
 
-The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEAoyAmcwsuiO6Yk) feature allows you to configure days that should not be considered valid for delivery so that VTEX platform considers those days when calculating the shipping estimated time.
+The [Holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEAoyAmcwsuiO6Yk) feature allows you to configure days that should not be considered valid for delivery, so that the VTEX platform adds those days when calculating the shipping estimated time.
 
 * [PUT - Create/update holiday](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/configuration/holidays/-holidayId-)
 * [GET - List holiday by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/configuration/holidays/-holidayId-)
