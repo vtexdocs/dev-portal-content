@@ -1,11 +1,11 @@
 ---
 title: "SKU Selector component"
-excerpt: "From now on, stores with products that require more than two SKU specifications can show all available specification types and its options using the VTEX's SKU Selector component."
+excerpt: "From now on, stores with products that require more than two SKU specifications can show all available specification types and its options using the SKU Selector component."
 createdAt: "2019-12-12T18:27:49.833Z"
 type: "improved"
 ---
 
-From now on, stores with products that require more than two SKU specifications can show all available specification types and its options using the VTEX's SKU Selector component.
+From now on, stores with products that require more than two SKU specifications can show all available specification types and its options using the SKU Selector component.
 
 ## What has changed
 
