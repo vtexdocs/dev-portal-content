@@ -1,7 +1,7 @@
 ---
 title: Paging the Search Results
 excerpt: "Gain more agility with a URL for each of the loaded search results page!"
-createdAt: "10/11/2019"
+createdAt: "2019-11-10T14:47:00.000Z"
 ---
 
 The Search Results page URL now reflects the exact page loaded by the user. 

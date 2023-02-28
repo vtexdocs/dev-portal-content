@@ -1,7 +1,7 @@
 ---
 title: Pickup Availability
 excerpt: "No more forcing users to log in with their email address. With the User Identifier Extension, you can choose user identifiers at will."
-createdAt: "10/11/2019"
+createdAt: "2019-11-10T14:47:00.000Z"
 ---
 
 In the Product Page, the new Pickup Availability component shows the availability of a product in a brick-and-mortar store's inventory selected by the user. 

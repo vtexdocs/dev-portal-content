@@ -1,7 +1,7 @@
 ---
 title: User Identifier Extension
 excerpt: "No more forcing users to log in with their email address. With the User Identifier Extension, you can choose user identifiers at will."
-createdAt: "10/11/2019"
+createdAt: "2019-11-10T14:47:00.000Z"
 ---
 
 The Login component just gained a new improvement: the User Identifier Extension. Through it, users can now log in using other user identifiers in your store, without these necessarily being their e-mails. 

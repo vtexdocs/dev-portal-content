@@ -1,7 +1,7 @@
 ---
 title: URL field autofill 
 excerpt: "When creating a new page in the admin's Page section, the URL field will automatically propose a path according to the page's chosen title. Isn't it just magical?"
-createdAt: "10/11/2019"
+createdAt: "2019-11-10T14:47:00.000Z"
 ---
 
 The admin's Pages section now allows the `URL` field to autofill when creating a new page for your store. 

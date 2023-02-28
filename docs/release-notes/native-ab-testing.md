@@ -1,7 +1,7 @@
 ---
 title: Native A/B testing
 excerpt: "Run clear and effective A/B tests natively while minimizing store losses from potential drops in conversion."
-createdAt: "2019-07-17"
+createdAt: "2019-07-17T14:47:00.000Z"
 ---
 
 Run clear and effective A/B tests natively while minimizing store losses from potential drops in conversion. 

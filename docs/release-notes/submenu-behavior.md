@@ -1,7 +1,7 @@
 ---
 title: Submenu behavior
 excerpt: "The Menu component’s expanding behavior was improved for mobile."
-createdAt: "2019-07-17"
+createdAt: "2019-07-17T14:47:00.000Z"
 ---
 
 The Menu component’s expanding behavior was improved for mobile.

@@ -1,7 +1,7 @@
 ---
 title: Sidecar pixel app
 excerpt: "Integrate your store with the [Sidecar solution](https://hello.getsidecar.com/) by simply using the VTEX IO Sidecar pixel app."
-createdAt: "2019-07-17"
+createdAt: "2019-07-17T14:47:00.000Z"
 ---
 
 Integrate your store with the [Sidecar solution](https://hello.getsidecar.com/) by simply using the VTEX IO Sidecar pixel app.

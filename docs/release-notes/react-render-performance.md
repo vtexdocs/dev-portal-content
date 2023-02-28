@@ -1,7 +1,7 @@
 ---
 title: React render performance
 excerpt: "The number of rendered components by React can be reduced using hooks, which allows for a better React render performance."
-createdAt: "2019-07-17"
+createdAt: "2019-07-17T14:47:00.000Z"
 ---
 
 The number of rendered components by React can be reduced using hooks, which allows for a better React render performance.

@@ -1,7 +1,7 @@
 ---
 title: Shelf in mobile mode
 excerpt: "Partially display products in Shelf component without breaking the page layout."
-createdAt: "29/08/2019"
+createdAt: "2019-08-29T14:47:00.000Z"
 ---
 
 The Shelf component in mobile mode supports partially displaying your next item to the user, without breaking the layout. 

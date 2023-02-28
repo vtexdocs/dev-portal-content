@@ -1,7 +1,7 @@
 ---
 title: Product Specification Badges
 excerpt: "Specifications can define whether a user will or will not buy a certain SKU. Don't waster time and display them in badges with this new component!"
-createdAt: "10/11/2019"
+createdAt: "2019-11-10T14:47:00.000Z"
 ---
 
 The Product Specification Badges component aims to show badges in the Product page based on the product's [specifications](https://help.vtex.com/tutorial/what-are-fields-or-specifications--2lB4AgibEseceMggKE2k2m).

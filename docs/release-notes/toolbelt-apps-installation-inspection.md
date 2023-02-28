@@ -1,7 +1,7 @@
 ---
 title: Toolbelt apps installation inspection
 excerpt: "Automatically check whether route conflicts can occur in your workspace as a result of installing an app."
-createdAt: "29/08/2019"
+createdAt: "2019-08-29T14:47:00.000Z"
 ---
 
 VTEX IO Toolbelt now inspects if route conflicts can occur in your workspace as a result of installing a new app.

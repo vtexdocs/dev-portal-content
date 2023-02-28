@@ -1,7 +1,7 @@
 ---
 title: Stack Layout
 excerpt: "Components overlapping other components. If this seems like something difficult, that's because you're unfamiliar with Stack Layout."
-createdAt: "10/11/2019"
+createdAt: "2019-11-10T14:47:00.000Z"
 ---
 
 The Stack Layout component allows display blocks to stack on top of others in a easy way.
