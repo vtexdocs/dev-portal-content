@@ -75,7 +75,7 @@ A [Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGp
 * [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses)
 * [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
 
-## Managing Shipping Strategy
+## Managing shipping strategy
 
 Manage your [Shipping strategy](https://help.vtex.com/en/tutorial/shipping-strategy--58vLBDbjYVQzJ6rRc5QNz3) by editing your shipping policies, loading docks, and warehouses.
 
