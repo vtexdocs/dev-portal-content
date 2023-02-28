@@ -27,7 +27,7 @@ If you would like an introduction to our Logistics module, check out the [Logist
 
 The stock availability of an SKU is stored at the warehouse level. Before updating the inventory of an SKU, you must create the warehouses that will hold its stock.
 
-If you have a small quantity of warehouses to manage, this can be done with the [warehouse management](https://help.vtex.com/pt/tutorial/gerenciar-estoque--tutorials_137#) section of your Admin panel. Otherwise, you can use the [Create/Update Warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/logistics/pvt/configuration/warehouses) endpoint of the Logistics API to create them programmatically.
+If you have a small quantity of warehouses to manage, this can be done with the [warehouse management](https://help.vtex.com/en/tutorial/managing-warehouses--tutorials_137) section of your Admin panel. Otherwise, you can use the [Create/Update Warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses) endpoint to create them programmatically.
 
 ## Update SKU Inventory
 
