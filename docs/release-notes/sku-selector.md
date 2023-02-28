@@ -1,7 +1,7 @@
 ---
 title: Sku Selector
 excerpt: "Retailers always want power and control over their blocks. Not that I'm judging them, since they're more than right to want as much flexibility as possible for their stores. Therefore, meeting demand, new SKU Selector props (`initialSelection` and `displayMode`) are now here to get rid of block rigidity."
-createdAt: "12/19/2019"
+createdAt: "2019-12-19T14:47:00.000Z"
 ---
 
 The Sku Selector block was given **two new props**: 

@@ -1,7 +1,7 @@
 ---
 title: Google Analytics `orderPlaced` event
 excerpt: "Make your Google Analytics metrics more reliable with the `orderPlaced` event trigger improvement."
-createdAt: "09/13/2019"
+createdAt: "2019-09-13T14:47:00.000Z"
 ---
 
  Google Analytics `orderPlaced` event is no longer triggered twice when the Order Placed page is reloaded. 

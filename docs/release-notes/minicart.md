@@ -1,7 +1,7 @@
 ---
 title: Minicart
 excerpt: "If there is one thing that a store can always improve upon, it's user experience. The new Minicart `openOnHover` prop is here to make that point."
-createdAt: "12/19/2019"
+createdAt: "2019-12-19T14:47:00.000Z"
 git: "https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-47-48-49-50-51/minicart.md"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Infinite scroll on flexible Search Result page
 excerpt: "No one wants a bad UX, right? Therefore, this deprecation is already deployed and you'll now understand why."
-createdAt: "10/25/2019"
+createdAt: "2019-10-25T14:47:00.000Z"
 ---
 
 The infinite scroll config to fetch more results on flexible search result pages was **deprecated**. From here on out, it will only work on search result pages that do not use Flex Layout. 

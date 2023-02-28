@@ -1,7 +1,7 @@
 ---
 title: SKU Selector
 excerpt: "New SKU Selector props will allow you to define image height and width without needing to resort to CSS customization. Enhanced performance and practicality in a single improvement, a dream come true!"
-createdAt: "10/25/2019"
+createdAt: "2019-10-25T14:47:00.000Z"
 ---
 
 The SKU Selector component gained **two new props** that define the height and width of its images: `imageHeight` e `imageWidth`. 

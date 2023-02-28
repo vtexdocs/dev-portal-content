@@ -1,7 +1,7 @@
 ---
 title: Reviews and Ratings
 excerpt: "Finally! A product review and rating solution to call our own!!! Say goodbye to the old third-party solution you were using and cast your eyes on this new release."
-createdAt: "12/19/2019"
+createdAt: "2019-12-19T14:47:00.000Z"
 git: "https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-47-48-49-50-51/reviews-and-ratings.md"
 ---
 

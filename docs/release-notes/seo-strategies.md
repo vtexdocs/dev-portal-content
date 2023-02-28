@@ -1,7 +1,7 @@
 ---
 title: SEO strategies
 excerpt: "If there is anything as sought after as a stable platform, it's SEO improvement. Therefore, check out our latest SEO releases for your VTEX IO store."
-createdAt: "09/23/2019"
+createdAt: "2019-09-23T14:47:00.000Z"
 ---
 
 Check out our SEO improvements compilation below, which the team has been working on for the past couple of weeks. The goal is to enable your store to attain a higher search engine ranking, thereby boosting web traffic to your site :rocket:

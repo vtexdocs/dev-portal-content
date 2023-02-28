@@ -1,7 +1,7 @@
 ---
 title: Platform performance
 excerpt: "Create a web app with more ease with help from Events' expanding functionalities."
-createdAt: "09/13/2019"
+createdAt: "2019-09-13T14:47:00.000Z"
 ---
 
 Check our latest releases aimed at promoting an  **optimal VTEX IO infra performance**, ensuring a better, faster and stabler platform experience:

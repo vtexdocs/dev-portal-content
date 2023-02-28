@@ -1,7 +1,7 @@
 ---
 title: CSS Handles 
 excerpt: "If you just knew just how much effort our team is putting into making CSS Handles a reality for all store components, you would go to sleep dreaming about CSS Classes. Check out our latest Handles releases! "
-createdAt: "10/25/2019"
+createdAt: "2019-10-25T14:47:00.000Z"
 ---
 
 Some VTEX IO native components received their own CSS Handles to facilitate customization by CSS classes. 

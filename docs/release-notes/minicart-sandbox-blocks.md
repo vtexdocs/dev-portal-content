@@ -1,7 +1,7 @@
 ---
 title: Minicart Sandbox blocks
 excerpt: "You're now able to customize your Minicart footer using Sandbox blocks."
-createdAt: "09/13/2019"
+createdAt: "2019-09-13T14:47:00.000Z"
 ---
 
 Sandbox blocks can now be declared in your store's Minicart and be rendered in the component's lower side.

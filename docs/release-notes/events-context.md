@@ -1,7 +1,7 @@
 ---
 title: Events context
 excerpt: "Create a web app with more ease with help from Events' expanding functionalities."
-createdAt: "09/13/2019"
+createdAt: "2019-09-13T14:47:00.000Z"
 ---
 
 An app's events context now has access to the `node-vtex-api` library's Clients.  

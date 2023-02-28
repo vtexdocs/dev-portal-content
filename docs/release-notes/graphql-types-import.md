@@ -1,7 +1,7 @@
 ---
 title: GraphQL types imports
 excerpt: "Save your precious time while developing! From now on, easily import GraphQL types from one app to another."
-createdAt: "09/26/2019"
+createdAt: "2019-09-26T14:47:00.000Z"
 ---
 
 GraphQL types can now be easily imported from one app to another, as was already the case with React types, by running the `vtex setup` command.

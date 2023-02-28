@@ -1,7 +1,7 @@
 ---
 title: Publish command
 excerpt: "If you take a deep breath, you can catch a whiff the A/B tests in the air. That’s because the Publish command from 01/02/2020 on will change its functionality and more steps will be added to the process of publishing an app on the platform. Everything to say goodbye to potential instabilities and to foster a culture of tests among our beloved devs."
-createdAt: "12/19/2019"
+createdAt: "2019-12-19T14:47:00.000Z"
 git: "https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-47-48-49-50-51/publish-command.md"
 ---
 

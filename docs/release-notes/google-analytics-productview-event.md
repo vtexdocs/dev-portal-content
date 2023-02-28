@@ -1,7 +1,7 @@
 ---
 title: Google Analytics `productView` event
 excerpt: "Get more insight into your store's user behavior by tracking their navigation between SKUs."
-createdAt: "09/13/2019"
+createdAt: "2019-09-13T14:47:00.000Z"
 ---
 
 The GTM `productView` event got a new feature, being able to also track user browsing between SKUs. 

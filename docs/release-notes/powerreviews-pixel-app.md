@@ -1,7 +1,7 @@
 ---
 title: PowerReviews pixel app
 excerpt: "Users are now able to use the Checkout Beacon solution from PowerReviews and have all its functionalities at hand by natively integrating with the platform using the PowerReviews pixel app."
-createdAt: "24/07/2019"
+createdAt: "2019-07-24T14:47:00.000Z"
 ---
 
 Users are now able to use the **Checkout Beacon solution** from PowerReviews and have all its functionalities at hand by natively integrating with the platform using the PowerReviews pixel app.

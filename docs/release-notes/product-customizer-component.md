@@ -1,7 +1,7 @@
 ---
 title: Product Customizer component
 excerpt: "Display product attachments in your product page using the Product Customizer component."
-createdAt: "09/26/2019"
+createdAt: "2019-09-26T14:47:00.000Z"
 ---
 
 The new Product Customizer component allows a product's attachments to be defined by the user in the Product Details Page.

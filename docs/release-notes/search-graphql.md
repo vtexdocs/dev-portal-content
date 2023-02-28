@@ -1,7 +1,7 @@
 ---
 title: Search GraphQL 
 excerpt: "The `store-graphql` morphed into `search-graphql`, which took over responsibility for your store's GraphQL search related queries."
-createdAt: "09/23/2019"
+createdAt: "2019-09-23T14:47:00.000Z"
 ---
 
 The giant `store-graphql` app was segmented and gave way to the new `search-graphql` app. 

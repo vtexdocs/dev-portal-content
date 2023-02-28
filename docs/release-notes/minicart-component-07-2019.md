@@ -1,7 +1,7 @@
 ---
 title: Minicart component
 excerpt: "The minicart component can now display the total cart item quantity and value."
-createdAt: "24/07/2019"
+createdAt: "2019-07-24T14:47:00.000Z"
 ---
 
 Thanks to two new properties, the Minicart component now can display the **total cart item quantity and value**.

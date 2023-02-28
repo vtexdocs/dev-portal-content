@@ -1,7 +1,7 @@
 ---
 title: Color name on SKU Selector 
 excerpt: "Display the name of the SKU color above its image on the SKU Selector."
-createdAt: "09/08/2019"
+createdAt: "2019-09-08T14:47:00.000Z"
 ---
 
 Display the name of the SKU color above its image on the SKU Selector.

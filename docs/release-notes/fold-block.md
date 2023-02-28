@@ -1,7 +1,7 @@
 ---
 title: Fold block
 excerpt: "Can you decide which store's block will be loaded and rendered after the user scroll down? Yes, you can: simply use the Fold block!"
-createdAt: "09/26/2019"
+createdAt: "2019-09-26T14:47:00.000Z"
 ---
 
 A brand new block called **Fold** allows you to determine which store content should be loaded when the user starts scrolling.

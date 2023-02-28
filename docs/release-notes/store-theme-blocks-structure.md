@@ -1,7 +1,7 @@
 ---
 title: Store Theme blocks structure
 excerpt: "The original Store Theme `blocks.json` file now can be split into different folders and files, in addition to also accepting written comments in it."
-createdAt: "24/07/2019"
+createdAt: "2019-07-24T14:47:00.000Z"
 ---
 
 The original Store Theme `blocks.json` file now can be **split into different folders and files**, in addition to also **accepting written comments** in it.

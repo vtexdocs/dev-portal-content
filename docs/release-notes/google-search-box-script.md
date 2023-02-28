@@ -1,7 +1,7 @@
 ---
 title: Google Search Box script
 excerpt: "Effortlessly display a store’s internal search box and watch how page access soars."
-createdAt: "06/09/2019"
+createdAt: "2019-09-06T14:47:00.000Z"
 ---
 
 VTEX IO page headers now contain Google search box script. The new feature allows a store's internal search box to be displayed to the users during Google searches.

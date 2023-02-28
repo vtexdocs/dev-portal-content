@@ -1,7 +1,7 @@
 ---
 title: New Toast component CSS Handle 
 excerpt: "Customize the Toast component with a different style from the rest of the store thanks to its new CSS handle."
-createdAt: "09/26/2019"
+createdAt: "2019-09-26T14:47:00.000Z"
 ---
 
 The Toast component just received a new CSS handle, namely the `vtex-toast-container`. 

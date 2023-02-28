@@ -1,7 +1,7 @@
 ---
 title: Flexible Search Results Page
 excerpt: "Search Results Pages customization just became more powerful with `flex-layout`."
-createdAt: "09/23/2019"
+createdAt: "2019-09-23T14:47:00.000Z"
 ---
 
 The Search Results Page now accepts the `flex-layout` block as child. 

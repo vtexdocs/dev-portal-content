@@ -1,7 +1,7 @@
 ---
 title: Challenge Trade Policy Condition
 excerpt: "This release is so fascinating that you don't even have to be into B2B to rejoice with us: now, you can establish conditional rules to determine whether a user can or cannot access the content of a given trade policy. Awesome, isn't it?"
-createdAt: "12/19/2019"
+createdAt: "2019-12-19T14:47:00.000Z"
 ---
 
 Stores can now **verify user access conditions** to a given trade policy thanks to the new Challenge Trade Policy Condition app.
