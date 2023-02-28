@@ -1,7 +1,7 @@
 ---
 title: Platform performance 
 excerpt: "Overall performance improvements."
-createdAt: "22/08/2019"
+createdAt: "2019-08-22T14:47:00.000Z"
 ---
 
 Check our latest releases to promote an **optimal VTEX IO infra performance**, ensuring a better, faster and more stable platform experience:

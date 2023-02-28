@@ -1,7 +1,7 @@
 ---
 title: Carousel 
 excerpt: "The Carousel component block as we know it makes way for a new Carousel configuration that uses Slider Layout. The more component flexibility, the more customization options available to you."
-createdAt: "11/11/2019"
+createdAt: "2019-11-11T14:47:00.000Z"
 ---
 
 Build a Carousel component in your store using **Slider Layout** and a **list block**. 

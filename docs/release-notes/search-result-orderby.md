@@ -1,7 +1,7 @@
 ---
 title: Search Result OrderBy
 excerpt: "OrderBy’s new `hiddenOptions` prop does away with the component’s forced exhibitionism. Its options can now either be hidden or displayed according to the retailer’s chosen scenario."
-createdAt: "11/25/2019"
+createdAt: "2019-11-25T14:47:00.000Z"
 ---
 
 OrderBy's new `hiddenOptions` prop now allows the component's options to be **hidden** from user view. 

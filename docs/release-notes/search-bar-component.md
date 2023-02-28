@@ -1,7 +1,7 @@
 ---
 title: 'Search Bar component'
 excerpt: "The Search Bar component behavior has improved the search __results preview performance__ with more accurate product results and a more explanatory display message when no results are found."
-createdAt: "2019-07-03"
+createdAt: "2019-07-03T14:47:00.000Z"
 ---
 
 The Search Bar component behavior has improved the search __results preview performance__ with more accurate product results and a more explanatory display message when no results are found.

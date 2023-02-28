@@ -1,7 +1,7 @@
 ---
 title: 'Brand component'
 excerpt: "A new component which shows either the product brand name or product brand logo was released."
-createdAt: "2019-07-03"
+createdAt: "2019-07-03T14:47:00.000Z"
 ---
 
 ## What has changed 

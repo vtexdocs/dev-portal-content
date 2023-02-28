@@ -1,7 +1,7 @@
 ---
 title: A new way to order search results and shelf components
 excerpt: "Our search results and shelf components may be sorted according to new criteria and their default order is by Relevance now"
-createdAt: "31/07/2019"
+createdAt: "2019-07-31T14:47:00.000Z"
 ---
 ## What has changed
 ​Our search results and shelf products may now be sorted by:

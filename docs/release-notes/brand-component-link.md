@@ -1,7 +1,7 @@
 ---
 title: href on brand component
 excerpt: "Our brand component now supports a url that takes the user to the store's brand page."
-createdAt: "31/07/2019"
+createdAt: "2019-07-31T14:47:00.000Z"
 ---
 
 Our brand component now supports a url that takes the user to the store's brand page. The brand component may be placed on the PDP, showing the brand name or icon and can now also hold the link to the store's brand page.

@@ -1,7 +1,7 @@
 ---
 title: CSS Handles
 excerpt: "The Breadcrumb was not the only one to have been gifted Handles this week. `savingPriceValue` and `savingPriceLabel` also had a lucky week and gained their own CSS Handles."
-createdAt: "11/25/2019"
+createdAt: "2019-11-25T14:47:00.000Z"
 ---
 
 This improvement gives two Product Details Page components their own **CSS Handles**. The aforementioned components are `savingPriceValue` and `savingPriceLabel` . 

@@ -1,7 +1,7 @@
 ---
 title: Image thumbnails 
 excerpt: "The Product Images component now allows a product’s thumbnails to be displayed either vertically or horizontally on the page."
-createdAt: "22/08/2019"
+createdAt: "2019-08-22T14:47:00.000Z"
 ---
 
 Thanks to the new `thumbnailsOrientation` prop, the [Product Images](https://github.com/vtex-apps/store-components/blob/master/react/components/ProductImages/README.md) component now allows a product’s thumbnails to be displayed either vertically or horizontally on the page.

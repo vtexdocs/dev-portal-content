@@ -1,7 +1,7 @@
 ---
 title: Custom pages URL 
 excerpt: "The new Filter Navigator's 'preventRouteChange' prop enables custom pages paths to not undergo any more changes when filtered by a user."
-createdAt: "22/08/2019"
+createdAt: "2019-08-22T14:47:00.000Z"
 ---
 
 The new Filter Navigator's `preventRouteChange` prop enables custom pages paths to not undergo any more changes when filtered by a user.

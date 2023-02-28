@@ -1,7 +1,7 @@
 ---
 title: accessiBe first party app 
 excerpt: "Natively integrate using the accessiBe first party app and get access to the accessiBe solution and all its functionalities."
-createdAt: "22/08/2019"
+createdAt: '2019-08-22T18:27:49.833Z'
 ---
 
 Natively integrate using the accessiBe first party app and get access to the **accessiBe solution** and all its functionalities.

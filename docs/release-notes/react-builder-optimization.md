@@ -1,7 +1,7 @@
 ---
 title: 'React builder optimization'
 excerpt: "The React builder optimization improves webpack logic by having more and smaller javascript bundles."
-createdAt: "2019-07-03"
+createdAt: "2019-07-03T14:47:00.000Z"
 ---
 
 ## What has changed

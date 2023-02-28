@@ -1,7 +1,7 @@
 ---
 title: Product Specifications
 excerpt: "The Product Specifications `visibleSpecifications` and `hiddenSpecifications` props can now be edited using the admin's Site Editor. This Site Editor never tires of being a hero for code-less people, for real..."
-createdAt: "11/25/2019"
+createdAt: "2019-11-25T14:47:00.000Z"
 ---
 
 The [Product Specification](https://vtex.io/docs/components/product/vtex.store-components/product-specifications) `visibleSpecifications` and `hiddenSpecifications` props can now be edited through the admin's Site Editor. 

@@ -1,7 +1,7 @@
 ---
 title: Image
 excerpt: "Similar to the Menu, uploading Image component content can also be done using the Site Editor. Am I hearing fireworks?"
-createdAt: "11/11/2019"
+createdAt: "2019-11-11T14:47:00.000Z"
 ---
 
 Uploading content that is used by the Image component can now be done directly through **Site Editor**, in the admin's CMS.

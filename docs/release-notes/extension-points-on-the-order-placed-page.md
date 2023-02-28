@@ -1,7 +1,7 @@
 ---
 title: Extension points on the Order Placed page 
 excerpt: "The Order Placed page can now accept new components to its upper part thanks to the use of extension points."
-createdAt: "22/08/2019"
+createdAt: "2019-08-22T14:47:00.000Z"
 ---
 
 The Order Placed page can now accept new components to its upper part thanks to the use of extension points.

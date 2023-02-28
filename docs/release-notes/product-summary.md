@@ -1,7 +1,7 @@
 ---
 title: Product Summary
 excerpt: "These past two weeks were not special just for the SKU Selector: the Product Summary didn't just gain a blockClass prop, but also a CSS Handle. Now that's rad right?"
-createdAt: "11/11/2019"
+createdAt: "2019-11-11T14:47:00.000Z"
 ---
 
 The Product Summary component now has its own **CSS Handles** and **blockClass**. 

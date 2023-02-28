@@ -1,7 +1,7 @@
 ---
 title: Full category tree for GTM events
 excerpt: "Every Google Enhanced Ecommerce event used by our Tag Manager solution now sends the whole product category tree."
-createdAt: "31/07/2019"
+createdAt: "2019-07-31T14:47:00.000Z"
 ---
 
 Every Google Enhanced Ecommerce event used by our Tag Manager solution now sends the whole product category tree. You can use this new information in your Google Analytics.

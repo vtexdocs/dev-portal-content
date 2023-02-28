@@ -1,7 +1,7 @@
 ---
 title: Search query
 excerpt: "Shall we celebrate search query's independence from the facets query? Even when the latter doesn't return any results, the former renders data fetched by the `productSearch` query, providing users with search results regardless."
-createdAt: "11/25/2019"
+createdAt: "2019-11-25T14:47:00.000Z"
 ---
 
 The `search` query now **returns search results** to users even when the `facets` query doesn't find any. 

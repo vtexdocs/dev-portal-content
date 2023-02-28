@@ -1,7 +1,7 @@
 ---
 title: Minicart component 
 excerpt: "The new Minicart component prop 'linkButtonFinishShopping' redirects the user to any page the retailer wants when clicking the Finish Shopping Button."
-createdAt: "22/08/2019"
+createdAt: "2019-08-22T14:47:00.000Z"
 ---
 
 The new Minicart component prop `linkButtonFinishShopping` redirects the user to any page the retailer wants when clicking the Finish Shopping Button.

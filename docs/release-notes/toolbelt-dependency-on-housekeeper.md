@@ -1,7 +1,7 @@
 ---
 title: 'Toolbelt dependency on Housekeeper '
 excerpt: "In order to decrease inconsistencies between apps updates, [VTEX IO CLI](https://github.com/vtex/toolbelt) now uses the __Housekeeper API__.  "
-createdAt: "2019-07-03"
+createdAt: "2019-07-03T14:47:00.000Z"
 ---
 
 In order to decrease inconsistencies between apps updates, [VTEX IO CLI](https://github.com/vtex/toolbelt) now uses the __Housekeeper API__.  

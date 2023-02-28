@@ -1,7 +1,7 @@
 ---
 title: Bazaarvoice first party app
 excerpt: "Get your hands on a first-party integration with the Bazaarvoice solution."
-createdAt: "09/20/2019"
+createdAt: 2019-09-20T14:47:00.000Z
 ---
 
 Easily integrate your store with the [Bazaarvoice](https://www.bazaarvoice.com/) solution by simply using the VTEX IO Bazaarvoice first party integration app. 

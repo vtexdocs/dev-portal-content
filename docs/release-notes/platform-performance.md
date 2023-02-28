@@ -1,7 +1,7 @@
 ---
 title: Platform performance
 excerpt: "We always rejoice from performance improvements, and I promise you that this one involving data fetching is legit. Check out the VTEX IO performance improvement for week 45 and 46 of 2019."
-createdAt: "11/25/2019"
+createdAt: "2019-11-25T14:47:00.000Z"
 ---
 
 Check the latest releases for week 45 & 46 of 2019 on promoting an **optimal VTEX IO infra performance**, ensuring a better, faster and stabler platform experience:

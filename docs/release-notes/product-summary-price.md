@@ -1,7 +1,7 @@
 ---
 title: Product Summary Price
 excerpt: "Learn how simple can be to build and custom a Product Details Page with our flexible components."
-createdAt: "11/11/2019"
+createdAt: "2019-11-11T14:47:00.000Z"
 ---
 
 The Product Summary Price component gained a **new prop**, `showDiscountValue`, which allows a product's absolute savings to be displayed to users. 

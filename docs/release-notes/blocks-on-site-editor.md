@@ -1,7 +1,7 @@
 ---
 title: Blocks on Site Editor
 excerpt: "We won't deny it... we love it when the Site Editor has a new release. This one's amazing: three more of your store's elements can be edited using the Site Editor's admin: Search Bar placeholder, Minicart Icon Label and Product Description title!"
-createdAt: "12/19/2019"
+createdAt: "2019-12-19T14:47:00.000Z"
 ---
 
 The admin's Site Editor now allows you to edit three more Store Framework elements:

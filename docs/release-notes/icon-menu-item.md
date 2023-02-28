@@ -1,7 +1,7 @@
 ---
 title: "Menu-item component now supports icon"
 excerpt: "​It is now possible to add an icon next to each menu-item text and create customized menus."
-createdAt: "31/07/2019"
+createdAt: "2019-07-31T14:47:00.000Z"
 ---
 
 ## What has changed
