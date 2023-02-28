@@ -70,7 +70,7 @@ A [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials
 
 ### 3. Warehouse
 
-[Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) is the physical location where you store your products. The items sold go from the warehouse to the loading dock for the carriers to deliver them. By default, when you create a new warehouse, it is generated as activated.
+A [Warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) is the physical location where you store your products. The items sold go from the warehouse to the loading dock for the carriers to deliver them. By default, when you create a new warehouse, it is generated as activated.
 
 * [POST - Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses)
 * [POST - Activate warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses/-warehouseId-/activation)
