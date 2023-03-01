@@ -12,9 +12,9 @@ This guide will describe how to access information for a specific shopping cart 
 
 ## Getting shopping cart ID
 
-The first step is to get the `orderFormId` of the shopping cart you want to check. You can obtain this information through the [Create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint. The response body of this request will give you the `orderFormId` for an empty cart. See more information at [Create a new cart Guide](https://developers.vtex.com/docs/guides/create-a-new-cart).
+The first step is to get the `orderFormId` of the shopping cart you want to check. You can obtain this information through the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint. The response body of this request will provide the `orderFormId` of your current cart or, if desired, a new empty cart. See more information at [Get current or create a new cart Guide](https://developers.vtex.com/docs/guides/create-a-new-cart).
 
->⚠️ The `orderFormId` information to be used on VTEX APIs must be obtained only from the [Create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint. This value cannot be obtained from the Cookies via JavaScript implementation.
+>⚠️ The `orderFormId` information to be used on VTEX APIs must be obtained only from the [Get current or create a new cart Guide](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint. This value cannot be obtained from the Cookies via JavaScript implementation.
 
 If you only intend to perform test operations (e.g. in Postman), you can use the following procedure:
 
@@ -85,7 +85,7 @@ The following error may appear as a message in the response body.
 
 ### 404 - Not Found
 
-- `Message error example: "The requested URL was not found on the server"`. Check that the URL data is correct.
+- `Message error example: "The requested URL was not found on the server"`: Check that the URL data is correct.
 
 ```html
 <body>
