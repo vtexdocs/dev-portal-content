@@ -16,7 +16,7 @@ The Checkout API allows you to obtain and configure information about the shoppi
 Allows merchants to simulate, configure and customize shopping cart information.
 
 - [POST - Cart Simulation](https://developers.vtex.com/vtex-rest-api/reference/cartsimulation)
-- [GET - Create a new cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart)
+- [GET - Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm)
 - [GET - Get cart information by ID](https://developers.vtex.com/vtex-rest-api/reference/getcartinformationbyid)
 - [POST - Remove all items](https://developers.vtex.com/vtex-rest-api/reference/removeallitems)
 - [GET - Remove all personal data](https://developers.vtex.com/vtex-rest-api/reference/removeallpersonaldata)
@@ -82,4 +82,4 @@ Allows merchants to place and process orders by creating a new cart or using an 
 
 Allows merchants to obtain a list of sellers serving a specific delivery region.
 
-- [GET - Get sellers by region or address](https://developers.vtex.com/vtex-rest-api/reference/getsellersbyregion)
+- [GET - Get sellers by region or address](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/regions/-regionId-)
