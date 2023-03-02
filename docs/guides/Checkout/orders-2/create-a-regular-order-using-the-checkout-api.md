@@ -283,7 +283,7 @@ Or, for a returning customer, it may be something like this:
     },
     "shippingData": {
         "address": {
-            “addressId”: "666c2e830bd9474ab6f6cc53fb6dd2d2"
+            "addressId": "666c2e830bd9474ab6f6cc53fb6dd2d2"
         },
         "logisticsInfo": [
             {
