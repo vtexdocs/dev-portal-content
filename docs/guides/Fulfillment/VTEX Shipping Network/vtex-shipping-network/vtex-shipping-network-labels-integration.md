@@ -16,7 +16,7 @@ The VTEX Shipping Network module is responsible for integrating your store with 
 2. Tracking
 3. Shipping label creation
 
-The following lifecycle overview of a Package created in the VTEX Shipping Network module (SPN) will provide an overview of these workflows:
+ A Package created in the VTEX Shipping Network module (SPN) has the following lifecycle, including these workflows:
 
 1. The cycle begins when an order is invoiced in the OMS module, which results in SPN creating all of its packages. The new packages will have an `Invoiced` [status](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196).
 2. The Carrier App will then receive a notification request for all packages, and their status will move to `carrier_notified`.
@@ -57,7 +57,7 @@ The [authentication](https://developers.vtex.com/docs/guides/authentication-over
 
 ### Example cURL request
 
-```jsx
+```curl
 curl --location --request POST 'https://portal.vtexcommerce.com.br/api/transportation/deliverylabels/{{orderId}}?an={{accountName}}' \
 --header 'X-VTEX-API-AppToken: {{token}}' \
 --header 'X-VTEX-API-AppKey: {{appKey}}'
