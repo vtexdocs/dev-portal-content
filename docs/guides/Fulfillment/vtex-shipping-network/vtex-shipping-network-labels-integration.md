@@ -80,7 +80,7 @@ The successful response has the following format:
 
 This endpoint can return other status codes in the following scenarios:
 
-| **Status code** | **Message** | **Description** |
+| **Code** | **Message** | **Description** |
 | ---------- | ---------- | ---------- |
 | 400 | `Package {packageId} has an invalid state!` | One or more packages associated with the `orderId` have an invalid status. This might happen if the carrier app has not been notified about the package yet. Retry the operation in a few minutes. |
 | 401 | `Unauthorized` | [Authentication](https://developers.vtex.com/docs/guides/authentication-overview#application-keys) credentials are missing. Make sure to include the headers `X-VTEX-API-AppToken` and `X-VTEX-API-AppKey`. |
