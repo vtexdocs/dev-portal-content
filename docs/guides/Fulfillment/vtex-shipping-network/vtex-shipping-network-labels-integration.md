@@ -25,6 +25,8 @@ The VTEX Shipping Network module is responsible for integrating your store with 
 
 The Package lifecycle ends when it is delivered.
 
+![vtex_shipping_network_label_diagram](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/publish-shipping-label-closed-beta/docs/guides/Fulfillment/vtex-shipping-network/vtex_shipping_network_label_diagram.png)
+
 ## Integration
 
 The endpoint described in this document is responsible for creating the Shipping Labels of all the packages associated with an order. Given an `orderId`, it will provide an URL that when accessed downloads a pdf file containing the Shipping Labels.
