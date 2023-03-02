@@ -31,7 +31,7 @@ The endpoint described in this document is responsible for creating the Shipping
 
 >❗ The URL returned by the API is valid for 5 days from the moment it was requested, and expires after that period. If the file is required after the link has expired, only a new request with the same `orderId` will provide a new valid URL.
 
-Be aware that VTEX Shipping Network only keeps track of Fulfillment orders, therefore, the `orderId` used on the endpoint must have their origin as Fulfillment. All Fulfillment Orders contain a prefix, for example:
+Be aware that VTEX Shipping Network only keeps track of Fulfillment orders, therefore, the `orderId` used on the endpoint must have their [origin as Fulfillment](https://help.vtex.com/en/tutorial/orders-list--tutorials_200#origin). All Fulfillment Orders contain a prefix, for example:
 
 - **Order with prefix:** 00-1307463503290-01
 - **Order without prefix:** 1307463503290-01
