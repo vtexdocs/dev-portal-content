@@ -80,7 +80,7 @@ This endpoint can return other status codes in the following scenarios:
 
 | **Status code** | **Message** | **Description** |
 | ---------- | ---------- | ---------- |
-| 400 | `Package {packageId} has an invalid state!` | One or more packages associated with the `orderId` have an invalid status. This might happen if the carrier app has not being notified about the package yet. Retry the operation in a few minutes. |
+| 400 | `Package {packageId} has an invalid state!` | One or more packages associated with the `orderId` have an invalid status. This might happen if the carrier app has not been notified about the package yet. Retry the operation in a few minutes. |
 | 401 | `Unauthorized` | [Authentication](https://developers.vtex.com/docs/guides/authentication-overview#application-keys) credentials are missing. Make sure to include the headers `X-VTEX-API-AppToken` and `X-VTEX-API-AppKey`. |
 | 403 | `reason: User does not have access to the resources [TransportationAdmin]` | Forbidden response status code indicates that the request has not been completed because it lacks valid authentication credentials for the requested resource. In this case, the header values `X-VTEX-API-AppToken` or `X-VTEX-API-AppKey` are invalid. |
 | 404 | `Not Found` | The `orderId` provided does not belong to any existing order. This might happen if the `orderId` does not contain the correct prefix. |
