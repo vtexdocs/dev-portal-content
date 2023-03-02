@@ -12,7 +12,7 @@ The Store Form app provides blocks responsible for displaying an user form conne
 
 ## Configuration
 
-> ⚠️ Before configuring the Store Form block in your theme, make sure you've already configure a **JSON schema in Master Data**, otherwise the client form won't be properly saved. To more info, access the recipe on [Creating forms for your store users](https://vtex.io/docs/recipes/templates/creating-a-native-form-for-your-store-users/).
+> ⚠️ Before configuring the Store Form block in your theme, make sure you've already configure a **JSON schema in Master Data**, otherwise the client form won't be properly saved. To more info, access the recipe on [Creating forms for your store users](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-native-form-for-your-store-users).
 
 1. Add `store-form` app to your theme's dependencies in the `manifest.json`, for example:
 
