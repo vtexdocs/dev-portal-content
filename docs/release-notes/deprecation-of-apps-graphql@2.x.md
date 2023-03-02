@@ -4,12 +4,12 @@ slug: "deprecation-of-apps-graphql@2.x"
 hidden: false
 createdAt: 2023-03-02T16:18:00.000Z
 type: "deprecated"
-excerpt: "Aiming to improve security practices in our ecosystem, we revised the access authorization policies on our platform and have decided to deprecate version `2.x` of `apps-graphql`. Apps using this dependency must update to version `3.x` until March 10th, 2023."
+excerpt: "Aiming to improve security practices in our ecosystem, we revised the access authorization policies on our platform and have decided to deprecate version `2.x` of `apps-graphql`. Apps using this dependency must update to version `3.x` by March 10th, 2023."
 ---
 
 `apps-graphql` is a GraphQL API module for VTEX IO Apps. It is frequently included as a dependency for apps that have their settings managed via Admin and on front-end applications.
 
-Aiming to improve security practices in our ecosystem, we revised the access authorization policies on our platform and have decided to deprecate version `2.x` of `apps-graphql`. Apps using this dependency must update to version `3.x` until March 10th, 2023.
+Aiming to improve security practices in our ecosystem, we revised the access authorization policies on our platform and have decided to deprecate version `2.x` of `apps-graphql`. Apps using this dependency must update to version `3.x` by March 10th, 2023.
 
 ## What has changed?
 
