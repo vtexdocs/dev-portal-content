@@ -849,7 +849,7 @@ __Example:__
 |    dockId |    String  |   Dock ID.    |
 |    courierName |    String  |   Courier name.   |
 |    quantity |    Integer  |   Quantity.   |
-|    shippingEstimate |    String  |   Shipping estimate. For instance, Three business days will be represented `3bd`.   |
+|    shippingEstimate |    String  | Total shipping estimate time. For instance, three business days is represented as `3bd`. The response for this field can include one of the following values: <ul><li><code>m</code> (minutes)</li><li><code>h</code> (hours)</li><li><code>bd</code> (business days)</li><li><code>d</code> (days)</li></ul> |
 |    shippingEstimateDate |     String  |   Shipping estimate date.  |
 |    lockTTL |     String  |   Estimate date of delivery.  |
 |    availableDeliveryWindows |     String  |   Available shipping date.  | 
