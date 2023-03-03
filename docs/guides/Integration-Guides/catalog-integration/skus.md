@@ -212,7 +212,7 @@ Once the SKU complies with all the aspects listed above, there are two ways that
 
 To manually activate your SKU, follow these steps:
 
-1. [Create the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit), setting `IsActive` as `false `and `ActivateIfPossible` as `false`.
+1. [Create the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit), setting `IsActive` as `false` and `ActivateIfPossible` as `false`.
 2. If the SKU is a kit, [create and associate SKU components](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-sku-kit).
 3. [Create and associate SKU files](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/file).
 4. [Update the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-) as active, setting `IsActive` as `true`.
