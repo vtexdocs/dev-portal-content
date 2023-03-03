@@ -61,7 +61,7 @@ These are errors that are returned when the request is correct but the order can
         <td>The fulfillment order is not in a status that allows changes (<code>handling</code>, <code>waiting for fulfillment</code> and <code>ready-for-invoice</code>).</td>
     </tr>
     <tr>
-        <td><code>Changes are not allowed for chain orders.</code></td>
+        <td><code>It is not allowed to make changes to chain orders</code></td>
         <td>The order has a <code>chain</code> origin.</td>
     </tr>
     <tr>
