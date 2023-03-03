@@ -57,7 +57,7 @@ These are errors that are returned when the request is correct but the order can
     <td><strong> Error</strong></td>
     <td><strong> Description</strong></td>
     <tr>
-        <td><code>Changes are only allowed for orders in the following statuses: handling, waiting-for-fulfillment, or ready-for-invoicing.</code></td>
+        <td><code>It is only allowed to register a change order when the order is in handling: status = handling, waiting for fulfillment or ready for invoicing</code></td>
         <td>The fulfillment order is not in a status that allows changes (<code>handling</code>, <code>waiting for fulfillment</code> and <code>ready-for-invoice</code>).</td>
     </tr>
     <tr>
