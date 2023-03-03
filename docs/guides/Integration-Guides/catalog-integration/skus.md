@@ -16,7 +16,7 @@ To create a new SKU, use the [Create SKU endpoint](https://developers.vtex.com/d
 
 Follow these instructions when creating the request body:
 
-* During SKU creation, don't set `IsActive` as `true`. If you send the request to activate the SKU when creating it, you will receive a `400 Bad Request` error. The value to `IsActive` must always be `false` when sending that request for activation to occur afterwards, as explained in [Activating an SKU](#activating-an-sku).
+* During SKU creation, do not set `IsActive` as `true`. If you send the request to activate the SKU when creating it, you will receive a `400 Bad Request` error. The value to `IsActive` must always be `false` when sending that request for activation to occur afterward, as explained in [Activating an SKU](#activating-an-sku).
 * We suggest you set `ActivateIfPossible` as `true,` unless you plan to have an internal workflow to [manually activate SKUs](#manual-activation).
 * If there is a need to create a new SKU with a specific custom ID, specify the `Id` (integer) in the request. Otherwise, VTEX will generate the ID automatically.
 * Besides the main ID, you must provide at least one of the following alternate IDs in the request body: `RefId` or `EAN`. It is possible to provide both as well.
