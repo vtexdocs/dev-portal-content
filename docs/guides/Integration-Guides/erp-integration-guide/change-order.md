@@ -65,7 +65,7 @@ These are errors that are returned when the request is correct but the order can
         <td>The order has a <code>chain</code> origin.</td>
     </tr>
     <tr>
-        <td><code>Só é permitido registrar uma mudança (change) quando o pedido estiver com o pagamento aprovado - status =  payment-approved</code></td>
+        <td><code>Order changes are only allowed once the payment has been approved (status = payment-approved).</code></td>
         <td>The marketplace order is not on the status <code>payment-approved</code>.</td>
     </tr>
     <tr>
