@@ -114,7 +114,7 @@ Set commissions for different categories of sellers their marketplace.
 
 `GET`[Get Seller Commissions by Category ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-)  
 
-###Sellers  
+### Sellers  
 
 Configure the accounts of sellers who have already accepted the invitation to join their marketplace.  
 
