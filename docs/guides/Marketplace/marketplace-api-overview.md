@@ -46,7 +46,7 @@ Search and filter all versions of suggestions, using specific criteria.
 
 `GET` [Get version by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/-sellerId-/-sellerskuid-/versions/-version-)
 
-#### Match Received SKUs  
+#### Match Received SKUs
 
 Match SKU suggestions received in the marketplace.  
 
