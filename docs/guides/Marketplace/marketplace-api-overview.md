@@ -84,7 +84,7 @@ Offers are seller products and SKUs that were sent to the marketplace, and alrea
 
 ### Seller Invite
 
-Invite sellers to join their marketplace.  
+Invite sellers to join their marketplace.
 
 `POST`[Invite Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis/#post-/seller-register/pvt/seller-leads)  
 
