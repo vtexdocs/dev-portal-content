@@ -162,4 +162,4 @@ Map your sales channels with a seller affiliate.
 
 `POST`[Upsert Sales Channel Mapping](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/sellers/-sellerId-/sales-channel/mapping)  
 
-`GET`[Get Sales Channel Mapping](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers/-sellerId-/sales-channel/mapping)  
+`GET` [Get Sales Channel Mapping](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers/-sellerId-/sales-channel/mapping)
