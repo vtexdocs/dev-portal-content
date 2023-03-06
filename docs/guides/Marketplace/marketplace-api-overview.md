@@ -128,7 +128,7 @@ Configure the accounts of sellers who have already accepted the invitation to jo
 
 ### Offer Management  
 
-Connect to Offer Management and become an available channel for sellers to track their offers.  
+Connect to Offer Management and become an available channel for sellers to track their offers.
 
 `POST`[Create Channel](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/channels)  
 
