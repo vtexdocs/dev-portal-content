@@ -138,7 +138,7 @@ Connect to Offer Management and become an available channel for sellers to track
 
 `PUT` [Update Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#put-/api/sent-offers/feeds/-feedId-)
 
-`GET`[Get Feed by feedId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds/-feedId-)  
+`GET` [Get Feed by feedId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds/-feedId-)
 
 `DELETE`[Deactivate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#delete-/api/sent-offers/feeds/-feedId-)  
 
