@@ -126,7 +126,7 @@ Configure the accounts of sellers who have already accepted the invitation to jo
 
 `GET` [Get Seller data by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers/-sellerId-)
 
-### Offer Management  
+### Offer Management
 
 Connect to Offer Management and become an available channel for sellers to track their offers.
 
