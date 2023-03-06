@@ -54,7 +54,7 @@ Match SKU suggestions received in the marketplace.
 
 `PUT` [Match Multiple Received SKUs](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/matches/action/-actionName-)
 
-#### SKU Approval Settings  
+#### SKU Approval Settings
 
 Allows marketplaces to configure rules for automatically and manually approving SKUs received from sellers.
 
