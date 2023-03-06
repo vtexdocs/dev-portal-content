@@ -82,7 +82,7 @@ Offers are seller products and SKUs that were sent to the marketplace, and alrea
 
 `GET` [Get Matched Offer's Data by Product ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/offer-manager/pvt/product/-productId-)
 
-### Seller Invite  
+### Seller Invite
 
 Invite sellers to join their marketplace.  
 
