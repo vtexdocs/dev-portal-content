@@ -98,7 +98,7 @@ Invite sellers to join their marketplace.
 
 `PUT` [Create Seller From Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/seller-leads/-sellerLeadId-/seller)
 
-`PUT`[Resend Seller Lead Invite](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/seller-leads/-sellerLeadId-/status)  
+`PUT` [Resend Seller Lead Invite](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/seller-leads/-sellerLeadId-/status)
 
 ### Seller Commissions  
 
