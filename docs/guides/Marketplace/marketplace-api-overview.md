@@ -56,7 +56,7 @@ Match SKU suggestions received in the marketplace.
 
 #### SKU Approval Settings  
 
-Allows marketplaces to configure rules for automatically and manually approving SKUs received from sellers.  
+Allows marketplaces to configure rules for automatically and manually approving SKUs received from sellers.
 
 `GET`[Get autoApprove Status in Account Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/autoapproval/toggle)  
 
