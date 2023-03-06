@@ -74,7 +74,7 @@ Allows marketplaces to configure rules for automatically and manually approving 
 
 ### Matched Offers
 
-Offers are seller products and SKUs that were sent to the marketplace, and already have their price and inventory level configured.  
+Offers are seller products and SKUs that were sent to the marketplace, and already have their price and inventory level configured.
 
 `GET`[Get Matched Offers List](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/offer-manager/pvt/offers)  
 
