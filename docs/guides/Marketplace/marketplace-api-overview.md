@@ -16,7 +16,7 @@ The **Marketplace API** enables marketplaces and sellers hosted on VTEX to perfo
 
 Endpoints used by sellers to notify marketplaces that the price or inventory language has changed for one of their SKUs.
 
-`POST` [Notify marketplace of price update](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/notificator/-sellerId-/changenotification/-skuId-/price)  
+`POST` [Notify marketplace of price update](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/notificator/-sellerId-/changenotification/-skuId-/price)
 
 `POST` [Notify marketplace of inventory update](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/notificator/-sellerId-/changenotification/-skuId-/inventory)  
 
