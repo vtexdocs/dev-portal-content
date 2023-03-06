@@ -24,7 +24,7 @@ Endpoints used by sellers to notify marketplaces that the price or inventory lan
 
 #### Get Suggestions
 
-Search and filter all suggestions using specific criteria.  
+Search and filter all suggestions using specific criteria.
 
 `GET` [Get all SKU Suggestions](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions)  
 
