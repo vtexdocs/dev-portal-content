@@ -57,15 +57,15 @@ These are errors that are returned when the request is correct but the order can
     <td><strong> Error</strong></td>
     <td><strong> Description</strong></td>
     <tr>
-        <td><code>Só é permitido registrar mudanças (change) quando o pedido estiver em manuseio: status = handling, waiting for fulfillment or ready for invoicing</code></td>
+        <td><code>It is only allowed to register a change order when the order is in handling: status = handling, waiting for fulfillment or ready for invoicing</code></td>
         <td>The fulfillment order is not in a status that allows changes (<code>handling</code>, <code>waiting for fulfillment</code> and <code>ready-for-invoice</code>).</td>
     </tr>
     <tr>
-        <td><code>Não é permitido fazer changes em pedidos de cadeia</code></td>
+        <td><code>It is not allowed to make changes to chain orders</code></td>
         <td>The order has a <code>chain</code> origin.</td>
     </tr>
     <tr>
-        <td><code>Só é permitido registrar uma mudança (change) quando o pedido estiver com o pagamento aprovado - status =  payment-approved</code></td>
+        <td><code>It is only allowed to register a change in the order when the payment is approved - status = payment-approved</code></td>
         <td>The marketplace order is not on the status <code>payment-approved</code>.</td>
     </tr>
     <tr>
