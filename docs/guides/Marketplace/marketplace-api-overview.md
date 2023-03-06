@@ -30,7 +30,7 @@ Search and filter all suggestions using specific criteria.
 
 `GET` [Get SKU Suggestion by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/-sellerId-/-sellerSkuId-)
 
-#### Manage Suggestions  
+#### Manage Suggestions
 
 Send or delete SKU suggestions from the seller to marketplace.  
 
