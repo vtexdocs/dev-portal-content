@@ -80,11 +80,14 @@ The frontmatter is the table with metadata about the article you're adding. It c
 
 The slugs used previously in our old Dev Portal were mostly maintained. You shouldn't have to worry about previous slugs.  
 
-For new content, an article's title will become the page's slug always. **Do not create a slug that is different than the title, the portal will not interpret it otherwise.**
+- **New guide:** an article's title will become the page's slug always. *Do not create a slug that is different than the title, the portal will not interpret it otherwise.*
+- **API Reference:** the URL structure of the Developer Portal API reference has the endpoint’s path as part of it. It includes /api-reference/{category in API Reference}#{operation}-{endpoint's path}. 
 
-> For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title.
 
-In the articles file, we included the header below. Add in the slug column the exact title, between dashes.
+> For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title.Know how to fill in titles in [frontmatter](#what-information-goes-in-the-frontmatter)
+
+
+
 
 ### What determines the left navigation's order and organization?
 
@@ -236,6 +239,36 @@ To add the created content in the left navigation:
 6. Test your navigation through the preview.
 7. Send the PR in #dev-portal-pr channel for approval.
 
+### How to update the left navigation after changing an endpoint’s path?
+
+The URL structure of the Developer Portal API reference has the endpoint’s path as part of it. For example, the [List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies) endpoint’s URL is `https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies`, and the endpoints path is `/api/logistics/pvt/shipping-policies`.
+
+Therefore, once you change the endpoint’s path, the corresponding URL in the Developer Portal will change as well, and it will be necessary to update the left navigation.
+
+>❗ Currently, it is not possible to create redirects from an endpoint URL to its updated version. If necessary, update the links in the most strategic documentations related to that endpoint, to decrease 404 errors.
+
+To update the left navigation after changing an endpoint’s path follow the steps below:
+
+1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
+    >⚠️ Before you start adding commits, read the repository's readme file. Commits must be done in a certain format for your PR to be approved.
+2. In the [navigation.json](https://github.com/vtexdocs/devportal/blob/main/public/navigation.json) file, locate the old endpoint slug and replace it with the new slug in the `endpoint` field. For example:
+
+```json
+{
+    "name": "Update shipping policy",
+    "slug": "logistics-api",
+    "type": "openapi",
+    "method": "PUT",
+    "origin": "",
+    "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
+    "children": []
+}
+```
+
+3. Open a PR.
+4. Send the PR in #dev-portal-pr channel for approval.
+5. After approval, merge the PR.
+
 ### How can I add different colored callouts?
 
 You can use the following syntax for adding callouts, but prefer the simpler markdown version:
@@ -322,7 +355,7 @@ Netlify will generate a preview link for you to test the redirect.
 
 Follow this format in your PR:
 
-```jsx
+```
 {
         source: '/vtex-rest-api/docs/:slug',
         destination: '/docs/guides/:slug',
