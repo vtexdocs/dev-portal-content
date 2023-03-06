@@ -132,7 +132,7 @@ Connect to Offer Management and become an available channel for sellers to track
 
 `POST`[Create Channel](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/channels)  
 
-`POST`[Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds)  
+`POST` [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds)
 
 `GET` [List Feeds](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds)
 
