@@ -118,7 +118,7 @@ Set commissions for different categories of sellers their marketplace.
 
 Configure the accounts of sellers who have already accepted the invitation to join their marketplace.
 
-`POST`[Configure Seller Account](https://developers.vtex.com/docs/api-reference/marketplace-apis/#post-/seller-register/pvt/sellers)  
+`POST` [Configure Seller Account](https://developers.vtex.com/docs/api-reference/marketplace-apis/#post-/seller-register/pvt/sellers)
 
 `GET`[List Sellers](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers)  
 
