@@ -80,11 +80,14 @@ The frontmatter is the table with metadata about the article you're adding. It c
 
 The slugs used previously in our old Dev Portal were mostly maintained. You shouldn't have to worry about previous slugs.  
 
-For new content, an article's title will become the page's slug always. **Do not create a slug that is different than the title, the portal will not interpret it otherwise.**
+- **New guide:** an article's title will become the page's slug always. *Do not create a slug that is different than the title, the portal will not interpret it otherwise.*
+- **API Reference:** the URL structure of the Developer Portal API reference has the endpoint’s path as part of it. It includes /api-reference/{category in API Reference}#{operation}-{endpoint's path}. 
 
-> For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title.
 
-In the articles file, we included the header below. Add in the slug column the exact title, between dashes.
+> For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title.Know how to fill in titles in [frontmatter](#what-information-goes-in-the-frontmatter)
+
+
+
 
 ### What determines the left navigation's order and organization?
 
@@ -352,7 +355,7 @@ Netlify will generate a preview link for you to test the redirect.
 
 Follow this format in your PR:
 
-```jsx
+```
 {
         source: '/vtex-rest-api/docs/:slug',
         destination: '/docs/guides/:slug',
