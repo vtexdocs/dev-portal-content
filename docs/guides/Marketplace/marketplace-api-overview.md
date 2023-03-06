@@ -108,7 +108,7 @@ Set commissions for different categories of sellers their marketplace.
 
 `GET` [List Seller Commissions by Seller ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers/-sellerId-/commissions)
 
-`PUT`[Upsert Seller Commissions by Category ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-)  
+`PUT` [Upsert Seller Commissions by Category ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-)
 
 `DELETE`[Remove Seller Commissions by Category ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#delete-/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-)  
 
