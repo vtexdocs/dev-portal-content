@@ -48,7 +48,7 @@ Search and filter all versions of suggestions, using specific criteria.
 
 #### Match Received SKUs
 
-Match SKU suggestions received in the marketplace.  
+Match SKU suggestions received in the marketplace.
 
 `PUT` [Match Received SKUs individually](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/-sellerId-/-sellerskuid-/versions/-version-/matches/-matchid-)  
 
