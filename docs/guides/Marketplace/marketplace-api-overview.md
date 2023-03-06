@@ -22,7 +22,7 @@ Endpoints used by sellers to notify marketplaces that the price or inventory lan
 
 ### Suggestions
 
-#### Get Suggestions  
+#### Get Suggestions
 
 Search and filter all suggestions using specific criteria.  
 
