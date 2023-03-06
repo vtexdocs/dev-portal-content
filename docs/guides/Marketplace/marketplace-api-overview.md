@@ -12,7 +12,7 @@ The **Marketplace API** enables marketplaces and sellers hosted on VTEX to perfo
 
 ## Index
 
-### Notification  
+### Notification
 
 Endpoints used by sellers to notify marketplaces that the price or inventory language has changed for one of their SKUs.  
 
