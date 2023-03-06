@@ -102,7 +102,7 @@ Invite sellers to join their marketplace.
 
 ### Seller Commissions
 
-Set commissions for different categories of sellers their marketplace.  
+Set commissions for different categories of sellers their marketplace.
 
 `PUT`[Upsert Seller Commissions in Bulk](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/sellers/-sellerId-/commissions/categories)  
 
