@@ -120,7 +120,7 @@ Configure the accounts of sellers who have already accepted the invitation to jo
 
 `POST` [Configure Seller Account](https://developers.vtex.com/docs/api-reference/marketplace-apis/#post-/seller-register/pvt/sellers)
 
-`GET`[List Sellers](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers)  
+`GET` [List Sellers](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers)
 
 `PATCH`[Update Seller by Seller ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#patch-/seller-register/pvt/sellers/-sellerId-)  
 
