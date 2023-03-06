@@ -72,7 +72,7 @@ Allows marketplaces to configure rules for automatically and manually approving 
 
 `PUT` [Activate autoApprove Setting for a Seller](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration/autoapproval/toggle/seller/-sellerId-)
 
-### Matched Offers  
+### Matched Offers
 
 Offers are seller products and SKUs that were sent to the marketplace, and already have their price and inventory level configured.  
 
