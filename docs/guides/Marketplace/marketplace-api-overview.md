@@ -88,7 +88,7 @@ Invite sellers to join their marketplace.
 
 `POST` [Invite Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis/#post-/seller-register/pvt/seller-leads)
 
-`GET`[List Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/seller-leads)  
+`GET` [List Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/seller-leads)
 
 `PUT`[Accept Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/seller-leads/-sellerLeadId-)  
 
