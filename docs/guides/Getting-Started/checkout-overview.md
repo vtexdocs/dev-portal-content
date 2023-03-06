@@ -64,7 +64,7 @@ Once you already have the client information registered, you can check their pro
 
 In the marketplace context, you can check the seller's database to find out which sellers are available in a given region and configure the exchange of sellers that fulfill a purchase order. See the links below to access endpoints related to seller data.
 
-* [GET - Get sellers by region](https://developers.vtex.com/vtex-rest-api/reference/getsellersbyregion)
+* [GET - Get sellers by region or address](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/regions/-regionId-)
 * [GET - Get window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller)
 * [POST - Update window to change seller](https://developers.vtex.com/vtex-rest-api/reference/updatewindowtochangeseller)
 
@@ -79,7 +79,7 @@ In your store, you can perform various actions related to the shopping cart, inc
 * [Enable the Manual Price](https://developers.vtex.com/vtex-rest-api/docs/enable-the-manual-price)
 * [Check marketing UTMs used at Checkout](https://developers.vtex.com/vtex-rest-api/docs/check-marketing-utms-used-at-checkout)
 * [POST - Cart simulation](https://developers.vtex.com/vtex-rest-api/reference/cartsimulation)
-* [GET - Create a new cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart)
+* [GET - Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm)
 * [GET - Get cart information by ID](https://developers.vtex.com/vtex-rest-api/reference/getcartinformationbyid)
 * [POST - Remove all items](https://developers.vtex.com/vtex-rest-api/reference/removeallitems)
 * [GET - Remove all personal data](https://developers.vtex.com/vtex-rest-api/reference/removeallpersonaldata)
@@ -116,6 +116,7 @@ By verifying addresses, pickup points, and fulfillment simulations, it is possib
 Through APIs it is possible to simulate all the steps in the order process carried out by the client. See the links below for useful information and endpoints related to the flow of an order.
 
 * [Create a regular order using the Checkout API](https://developers.vtex.com/vtex-rest-api/docs/create-a-regular-order-using-the-checkout-api)
+* [Create a regular order from an existing cart](https://developers.vtex.com/docs/guides/create-a-regular-order-from-an-existing-cart)
 * [PUT - Place an order (no cart information available)](https://developers.vtex.com/vtex-rest-api/reference/placeorder)
 * [POST - Place an order from an existing cart](https://developers.vtex.com/vtex-rest-api/reference/placeorderfromexistingorderform)
 * [POST - Process order](https://developers.vtex.com/vtex-rest-api/reference/processorder)
