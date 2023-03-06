@@ -8,7 +8,7 @@ updatedAt: "2022-02-04T13:33:39.092Z"
 
 The **Marketplace API** enables marketplaces and sellers hosted on VTEX to perform their collaborative operations.  
 
->⚠️ The marketplace must [create an appKey and appToken](https://developers.vtex.com/docs/guides/getting-started-authentication) for each non-VTEX seller that will use this API.  
+>⚠️ The marketplace must [create an appKey and appToken](https://developers.vtex.com/docs/guides/getting-started-authentication) for each non-VTEX seller that will use this API.
 
 ## Index  
 
