@@ -38,7 +38,7 @@ Send or delete SKU suggestions from the seller to marketplace.
 
 `DELETE` [Delete SKU Suggestion](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#delete-/suggestions/-sellerId-/-sellerSkuId-)
 
-#### Get Versions  
+#### Get Versions
 
 Search and filter all versions of suggestions, using specific criteria.  
 
