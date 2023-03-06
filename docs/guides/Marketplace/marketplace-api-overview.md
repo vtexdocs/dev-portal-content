@@ -100,7 +100,7 @@ Invite sellers to join their marketplace.
 
 `PUT` [Resend Seller Lead Invite](https://developers.vtex.com/docs/api-reference/marketplace-apis/#put-/seller-register/pvt/seller-leads/-sellerLeadId-/status)
 
-### Seller Commissions  
+### Seller Commissions
 
 Set commissions for different categories of sellers their marketplace.  
 
