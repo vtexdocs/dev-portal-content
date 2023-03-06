@@ -152,7 +152,7 @@ Connect to Offer Management and become an available channel for sellers to track
 
 `GET`[Get Log Data by logId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs/-logId-)  
 
-`GET`[Search Interactions and their Logs](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/search/interactions)  
+`GET` [Search Interactions and their Logs](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/search/interactions)
 
 `GET` [Get Error Code data by errorCodeId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/error-codes/-errorCodeId-)
 
