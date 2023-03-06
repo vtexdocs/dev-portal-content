@@ -148,7 +148,7 @@ Connect to Offer Management and become an available channel for sellers to track
 
 `POST`[Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)  
 
-`POST`[Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)  
+`POST` [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)
 
 `GET` [Get Log Data by logId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs/-logId-)
 
