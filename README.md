@@ -238,7 +238,7 @@ To add the created content in the left navigation:
 
 ### How to update the left navigation after changing an endpoint’s path?
 
-The URL structure of the Developer Portal API reference has the endpoint’s path as part of it. For example, the [List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies) endpoint’s URL is `https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies `, and the endpoints path is `/api/logistics/pvt/shipping-policies`.
+The URL structure of the Developer Portal API reference has the endpoint’s path as part of it. For example, the [List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies) endpoint’s URL is `https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies`, and the endpoints path is `/api/logistics/pvt/shipping-policies`.
 
 Therefore, once you change the endpoint’s path, the corresponding URL in the Developer Portal will change as well, and it will be necessary to update the left navigation.
 
