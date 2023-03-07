@@ -313,6 +313,7 @@ updatedAt: "2022-10-04T14:36:08.692Z"
                 permanent: true,
         },
     ```
+
     Make sure you add specific redirects before more global redirects, otherwise they will have no effect. For now, hashlinks (`#`) are not supported in the source slug.
 3. Open a PR. Netlify will generate a preview link for you to test the redirect.
 4. Send the PR in `#dev-portal-pr` Slack channel for approval.
