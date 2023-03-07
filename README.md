@@ -305,6 +305,7 @@ updatedAt: "2022-10-04T14:36:08.692Z"
 1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
     >⚠️ Before you start adding commits, read the repository's readme file. Commits must be done in a certain format for your PR to be approved.
 2. In line 37 of the [next.config.js](https://github.com/vtexdocs/devportal/blob/07519dab0c357cb107342cf21bc86ae107cce603/next.config.js#L37) file, you will find an array of redirects. Add the one you want to create following this format, replacing `source` and `destination` with the desired slugs:
+
     ```javascript
         {
                 source: '/vtex-rest-api/docs/:slug',
