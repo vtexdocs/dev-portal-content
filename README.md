@@ -4,19 +4,19 @@ Welcome to the [VTEX Developer Portal](https://developers.vtex.com) content repo
 
 We're so glad you're here! It means you care about sharing knowledge through documentation ❤️ 📝. So come along, get comfy and learn how to [contribute with documentation](#contributing-with-developer-portal-documentation), [manage content](#managing-content) and [fix errors](#fixing-errors) in this repository.
 
-## Why have we changed platforms from Readme to our custom built Developer Portal?
+## Why have we changed platforms from [ReadMe](https://readme.com/) to our custom built Developer Portal?
 
-- Faster navigation
-- More control over the search
-- Create an interface completely controlled by us
-- Managing content in Github
+- Faster navigation.
+- More control over the search.
+- Create an interface completely controlled by us.
+- Managing content in GitHub.
 - High efficiency: we saved a considerable amount of our monthly budget.
 
 ## Developer Portal repositories
 
-We have created a new organization in Github to host our documentation: [vtexdocs](https://github.com/vtexdocs).
+We have created a new organization in GitHub to host our documentation: [vtexdocs](https://github.com/vtexdocs).
 
-You can find all repositories included in it `/vtex/education-tools`.
+You can find all repositories included in it in [vtex/education-tools](https://github.com/vtex/education-tools#education-teams-repositories).
 
 They each serve a different purpose, and will be mentioned in the FAQ below, depending on which action you wish to perform.
 
@@ -25,14 +25,14 @@ They each serve a different purpose, and will be mentioned in the FAQ below, dep
 You will find the following folders in this repository:
 
 - **.github**: stores workflows configured for this repository.
-- **docs**: where the markdown files of all our docs are stored. They are categorized into:
-  - **guides**: all API guides.
+- **docs**: stores the markdown files of all our docs. They are categorized into:
+  - **guides**: API guides.
   - **release-notes**: release notes included in our [changelog](https://developers.vtex.com/updates/release-notes).
   - **vtex-io**: all VTEX IO guides.
-- **docs-utils**: scripts used to import documentation from Readme.
-- **images**: stores images imported from Readme.
-- **readme-api-md**: stores API Reference's markdown imported from Readme/
-- **.gitignore**: stores files that should be ignored by Github.
+- **docs-utils**: scripts used to import documentation from ReadMe.
+- **images**: stores images imported from ReadMe.
+- **readme-api-md**: stores API Reference's markdown imported from Readme.
+- **.gitignore**: stores files that should be ignored by GitHub.
 
 ## Contributing with Developer Portal documentation
 
@@ -45,29 +45,29 @@ We're so glad you're here! Thanks for being interested.
 3. Complete the [frontmatter](#what-information-goes-in-the-frontmatter).
    > The `excerpt` field is mandatory for release notes.
 4. Add your content in markdown.
-5. Add images in the chosen guide’s folder, if you wish.
-6. To determine the left navigation's order, follow [these](#what-determines-the-left-navigations-order-and-organization) instructions.
+5. Add images in the chosen guide's folder, if you wish.
+6. To determine the left navigation's order, follow [these instructions](#what-determines-the-left-navigations-order-and-organization).
 7. Submit your PR for review.
 
-*The `/developer-portal-content` repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal, our Tech Writing team leaders must run the portal's build.*
+*The [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal, our Tech Writing team leaders must run the portal's build.*
 
->⚠️ Note that we have a limitation of PRs by hour, so we have to accumulate the day's PRs to be all approved and merged by our Tech Writing team leaders. This means that if you want a content to be published, submit your PR for review with at least 2 days in advance from the desired publication date!
+>⚠️ Note that we have a limitation of PRs by hour, so we have to accumulate the day's PRs to be all approved and merged by our Tech Writing team leaders. This means that if you want your content to be published, you should submit your PR for review with at least 2 days in advance from the desired publication date!
 
 ### What information goes in the frontmatter?
 
 The frontmatter is the table with metadata about the article you're adding. It contains the following fields:
 
-- **title:** article's title, should match the slug. 
-- **slug:** slug to the article's link, should match the title.
-- **excerpt:** brief description of release notes and guides, like a synopsis or TLDR. 
-  - *Release notes:* it is rendered as a synopsis of the release note, that is readable when the user clicks on the ▶️ collapsible button next to the release's title, in our [changelog UI](https://developers.vtex.com/updates/release-notes). This field is mandatory for release notes! Character limit: 400. 
+- **title:** article's title, which should match the slug. 
+- **slug:** slug to the article's link, which should match the title.
+- **excerpt:** brief description of release notes and guides, like a synopsis or TLDR.
+  - *Release notes:* it is rendered as a synopsis of the release notes, readable when the user clicks on the ▶️ collapsible button next to the release's title, in our [changelog UI](https://developers.vtex.com/updates/release-notes). This field is mandatory for release notes! Character limit: 400. 
   - *Guides*: it is rendered as the greyed-out sentence at the bottom of the title, with a brief TLDR for that article. Character limit: 120.
-- **hidden:** boolean that makes the article not discoverable by search engines and our internal search. Know more in [How can I hide articles from search engines](#how-can-i-hide-articles-from-search-engines)
+- **hidden:** boolean that makes the article not discoverable by search engines and our internal search if `true`. Know more in [How can I hide articles from search engines](#how-can-i-hide-articles-from-search-engines).
 - **createdAt:** creation date, automatically filled in.
 - **updatedAt:** update date, automatically filled in.
 - **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled in when there's a recommended reading sequence for the articles you are managing. It should be filled with the slug of the chosen article. Example `seeAlso: - "/docs/guides/vtex-io-documentation-2-prerequesites"`
-- **hidePaginationPrevious**: boolean that shows in the article's footer a hyperlink to the previous article listed on the navigation. Mark as `true` to  hide the link to the previous doc on the navigation.
-- **hidePaginationNext**: boolean that shows in the article's footer a hyperlink to the next article listed on the navigation. Mark as `true` to  hide the link to the following doc on the navigation.
+- **hidePaginationPrevious**: boolean that hides in the article's footer a hyperlink to the previous article listed on the navigation. Mark as `true` to  hide the link to the previous doc on the navigation.
+- **hidePaginationNext**: boolean that hides in the article's footer a hyperlink to the next article listed on the navigation. Mark as `true` to  hide the link to the following doc on the navigation.
 
 ### How can I make sure my content will be visible and rendered correctly?
 
@@ -78,24 +78,22 @@ The frontmatter is the table with metadata about the article you're adding. It c
 
 ### How can I deal with page slugs?
 
-The slugs used previously in our old Dev Portal were mostly maintained. You shouldn't have to worry about previous slugs.  
+The slugs used in our previous version of Developer Portal were mostly maintained. You shouldn't have to worry about previous slugs.
 
 - **New guide:** an article's title will become the page's slug always. *Do not create a slug that is different than the title, the portal will not interpret it otherwise.*
-- **API Reference:** the URL structure of the Developer Portal API reference has the endpoint’s path as part of it. It includes /api-reference/{category in API Reference}#{operation}-{endpoint's path}. 
+- **API Reference:** the URL structure of the Developer Portal API reference has the endpoint's path as part of it. It includes `/api-reference/{category in API Reference}#{operation}-{endpoint's path}`.
 
-
-> For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title.Know how to fill in titles in [frontmatter](#what-information-goes-in-the-frontmatter)
-
-
-
+> For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title. Learn how to fill in titles in [frontmatter](#what-information-goes-in-the-frontmatter).
 
 ### What determines the left navigation's order and organization?
 
-The `/developer-portal-content` repository just stores our documentation, it is not automatically synched to be rendered in the Dev Portal - yet. For now, when a new content is added to it, it is just included in the desired folder. For it to appear in the Developer Portal in the order that you choose for the left navigation, other PRs must be made.
+The [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository just stores our documentation, it is not automatically synched to be rendered in the Developer Portal - yet. For now, when a new content is added to it, it is just included in the desired folder.
+
+For it to appear in the Developer Portal in the order that you choose for the left navigation, you need to create a pull request in the [devportal](https://github.com/vtexdocs/devportal/) repository.
 
 The portal's navigation comes from the navigation [file](https://github.com/vtexdocs/devportal/blob/main/public/navigation.json). It is a json object listing the navigation and hierarchy of all contents in Developer Portal.
 
-The excerpt below represents the first articles of the API Guides section, for instance.
+The excerpt below represents the first articles of the Guides section, for instance.
 
 ```jsx
 {
@@ -158,61 +156,13 @@ The excerpt below represents the first articles of the API Guides section, for i
                 "type": "markdown",
                 "children": []
             },
-            {
-                "name": "Checkout",
-                "slug": "checkout-overview",
-                "origin": "",
-                "type": "markdown",
-                "children": []
-            },
-            {
-                "name": "Payments",
-                "slug": "payments-overview",
-                "origin": "",
-                "type": "markdown",
-                "children": []
-            },
-            {
-                "name": "Search",
-                "slug": "search-overview",
-                "origin": "",
-                "type": "markdown",
-                "children": []
-            },
-            {
-                "name": "Promotions",
-                "slug": "promotions-overview",
-                "origin": "",
-                "type": "markdown",
-                "children": []
-            },
-            {
-                "name": "Pricing",
-                "slug": "pricing-overview",
-                "origin": "",
-                "type": "markdown",
-                "children": []
-            },
-            {
-                "name": "Account management",
-                "slug": "account-management",
-                "origin": "",
-                "type": "markdown",
-                "children": [
-                {
-                    "name": "Checking which user is currently authenticated",
-                    "slug": "checking-which-user-is-currently-authenticated",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
-                }
-                ]
-            }
+            ...
             ]
         },
+...
 ```
 
-To add the created content in the left navigation:
+To add new content in the left navigation:
 
 1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
 
@@ -222,13 +172,13 @@ To add the created content in the left navigation:
 3. Copy the structure below, and replace the values for your desired content.
 
 ```jsx
-{
-                    "name": "Checking which user is currently authenticated",
-                    "slug": "checking-which-user-is-currently-authenticated",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
-}
+    {
+        "name": "Checking which user is currently authenticated",
+        "slug": "checking-which-user-is-currently-authenticated",
+        "origin": "",
+        "type": "markdown",
+        "children": []
+    }
 ```
 
 4. Paste the object in the desired spot.
@@ -237,41 +187,55 @@ To add the created content in the left navigation:
 > By opening a PR, a bot will present a preview for you to test the navigation. With each commit, the preview will be updated.
 
 6. Test your navigation through the preview.
-7. Send the PR in #dev-portal-pr channel for approval.
+7. Send the PR link in the `#dev-portal-pr` Slack channel for approval.
 
-### How to update the left navigation after changing an endpoint’s path?
+### How to update the left navigation after changing an endpoint's path?
 
-The URL structure of the Developer Portal API reference has the endpoint’s path as part of it. For example, the [List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies) endpoint’s URL is `https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies`, and the endpoints path is `/api/logistics/pvt/shipping-policies`.
+The URL structure of the Developer Portal API reference has the endpoint's path as part of it. For example, the [List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies) endpoint's URL is `https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies`, and the endpoints path is `/api/logistics/pvt/shipping-policies`.
 
-Therefore, once you change the endpoint’s path, the corresponding URL in the Developer Portal will change as well, and it will be necessary to update the left navigation.
+Therefore, once you change the endpoint's path, the corresponding URL in the Developer Portal will change as well, and it will be necessary to update the left navigation.
 
 >❗ Currently, it is not possible to create redirects from an endpoint URL to its updated version. If necessary, update the links in the most strategic documentations related to that endpoint, to decrease 404 errors.
 
-To update the left navigation after changing an endpoint’s path follow the steps below:
+To update the left navigation after changing an endpoint's path follow the steps below:
 
 1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
     >⚠️ Before you start adding commits, read the repository's readme file. Commits must be done in a certain format for your PR to be approved.
 2. In the [navigation.json](https://github.com/vtexdocs/devportal/blob/main/public/navigation.json) file, locate the old endpoint slug and replace it with the new slug in the `endpoint` field. For example:
 
-```json
-{
-    "name": "Update shipping policy",
-    "slug": "logistics-api",
-    "type": "openapi",
-    "method": "PUT",
-    "origin": "",
-    "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
-    "children": []
-}
-```
+    ```json
+    {
+        "name": "Update shipping policy",
+        "slug": "logistics-api",
+        "type": "openapi",
+        "method": "PUT",
+        "origin": "",
+        "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
+        "children": []
+    }
+    ```
 
 3. Open a PR.
-4. Send the PR in #dev-portal-pr channel for approval.
+4. Send the PR in `#dev-portal-pr` Slack channel for approval.
 5. After approval, merge the PR.
 
 ### How can I add different colored callouts?
 
-You can use the following syntax for adding callouts, but prefer the simpler markdown version:
+We recommend using a simple markdown syntax to add callouts:
+
+```jsx
+>ℹ️ Information type callout
+```
+
+```jsx
+>⚠️ Warning type callout
+```
+
+```jsx
+>❗ Danger type callout
+```
+
+The following complex syntax is also supported:
 
 ```jsx
 [block:callout]
@@ -303,28 +267,17 @@ You can use the following syntax for adding callouts, but prefer the simpler mar
 [/block]
 ```
 
-```jsx
->ℹ️ Information type callout
-```
-
-```jsx
->⚠️ Warning type callout
-```
-
-```jsx
->❗ Danger type callout
-```
-
 ### How can I add/fix images in an article?
 
 1. Access the [dev-portal-content/docs/guides](https://github.com/vtexdocs/dev-portal-content/tree/main/docs/guides) folder.
 2. Upload the images you wish to include in your guide in the same folder your article is located.
-3. Access the file in Github web.
+3. Access the file in GitHub web.
 4. Open the raw version of the uploaded file by opening the image in a new tab.
 5. Save the URL.
 6. Mention the URL in your markdown.
 
 >ℹ️ This repository uses [JSDELIVR](https://www.jsdelivr.com) as a CDN for adding images with files stored in GitHub. Thus, you can also use the image CDN URL instead of going through steps 3 to 5. To do this, format your image URL like so: `https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@{branch}/{path}/{imgFileName}`. For instance, the CDN URL for [this image](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Getting-Started/getting-started/making-your-first-request-1.png) is `https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting-Started/getting-started/making-your-first-request-1.png`.
+
 Note that we have configured an action that converts images to this CDN automatically, so both methods can be used.
 
 ### How can I hide articles from search engines?
@@ -349,41 +302,42 @@ updatedAt: "2022-10-04T14:36:08.692Z"
 
 ### How can I create a redirect?
 
-Open a PR in this [repository](https://github.com/vtexdocs/devportal/blob/07519dab0c357cb107342cf21bc86ae107cce603/next.config.js#L36).
+1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
+    >⚠️ Before you start adding commits, read the repository's readme file. Commits must be done in a certain format for your PR to be approved.
+2. In line 37 of the [next.config.js](https://github.com/vtexdocs/devportal/blob/07519dab0c357cb107342cf21bc86ae107cce603/next.config.js#L37) file, you will find an array of redirects. Add the one you want to create following this format, replacing `source` and `destination` with the desired slugs:
+    ```javascript
+        {
+                source: '/vtex-rest-api/docs/:slug',
+                destination: '/docs/guides/:slug',
+                permanent: true,
+        },
+    ```
+    Make sure you add specific redirects before more global redirects, otherwise they will have no effect. For now, hashlinks (`#`) are not supported in the source slug.
+3. Open a PR. Netlify will generate a preview link for you to test the redirect.
+4. Send the PR in `#dev-portal-pr` Slack channel for approval.
+5. After approval, merge the PR.
 
-Netlify will generate a preview link for you to test the redirect.
+### API Reference: what about the [openapi-schemas](https://github.com/vtex/openapi-schemas) repository?
 
-Follow this format in your PR:
-
-```
-{
-        source: '/vtex-rest-api/docs/:slug',
-        destination: '/docs/guides/:slug',
-        permanent: true,
-},
-```
-
-### API Reference: what about the /openapi-schemas repository?
-
-All API Reference is still documented and managed through our usual repository. Nothing's changed here. There is a 5 minute cache between PRs in the `/openapi-schemas` repository and the Dev Portal, but it should be rendered automatically.
+All API Reference is still documented and managed through our usual repository, [openapi-schemas](https://github.com/vtex/openapi-schemas). Nothing's changed here. There is a 5 minute cache between merged PRs in the [openapi-schemas](https://github.com/vtex/openapi-schemas) and the Developer Portal, but it should be rendered automatically.
 
 ### How can I update docs from IO apps that already have a readme file in the app's repository?
 
-All docs should be included in the /dev-portal-content repository. If the readme is not yet included, create a new file, and copy and paste the text.
+All docs should be included in the dev-portal-content repository. If their readme.md file is not yet included, create a new file, and copy and paste the text.
 
 ## Fixing errors
 
-### How to fix the error type `Error: There are incorrectly formatted code blocks in this file` in #dev-portal-logs?
+### How to fix the error type `Error: There are incorrectly formatted code blocks in this file` in #dev-portal-logs?
 
-This error means that there is a <code>`</code> loose somewhere in the document. The system reads it as an inline code block.
+This error means that there is a <code>`</code> loose somewhere in the document. The system reads it as an inline code block.
 
-### How can I fix the error type in #dev-portal-logs?
+### How can I fix the error type in `#dev-portal-logs`?
 
 This error should already be fixed. Check the log's age to see if it is still valid.
 
-### 404 erros
+### 404 errors
 
-**What causes 404 errors?**
+#### What causes 404 errors?
 
 - Broken callouts
 - Broken images
@@ -392,8 +346,8 @@ This error should already be fixed. Check the log's age to see if it is still va
 - Redirects not made from older URLs
 - Content does not exist in /dev-portal-content, only on Readme
 
-**404 automatic checker in files**
-We have embedded a Github action called [check-links.yml](https://github.com/vtexdocs/dev-portal-content/blob/main/.github/workflows/check-links.yml) to review all URLs mentioned in a file, and checking if they return 404 errors. If there's a link experiencing the 404 error in your file, you must fix it so the branch can be merged.
+#### 404 automatic checker in files
 
-To identify the broken link:
-The broken link will appear in red in your code editor tool (VSCode), and you can learn more about it by clicking on `Details`.
+We have embedded a GitHub action called [check-links.yml](https://github.com/vtexdocs/dev-portal-content/blob/main/.github/workflows/check-links.yml) to review all URLs mentioned in a file and check if they return 404 errors. If there's a link experiencing the 404 error in your file, you must fix it so the branch can be merged.
+
+Broken links will appear in red in your code editor tool (VSCode), and you can learn more about it by clicking on `Details`.
