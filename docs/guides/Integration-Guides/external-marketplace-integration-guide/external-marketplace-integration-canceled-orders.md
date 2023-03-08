@@ -19,7 +19,7 @@ Follow the steps below, once receiving the notification:
 We suggest that connectors store notifications in a queue by store for processing.
 2. Connectors record the **order integration status**, to validate if the order has been integrated to VTEX, avoiding reprocessing of orders.
 3. **For orders that have been integrated in VTEX:**
-    a.  Connectors should verify the order status in VTEX through the [Get Order API](https://developers.vtex.com/docs/api-reference/orders-api/#get-/api/oms/pvt/orders/-orderId-). 
+    a.  Connectors should verify the order status in VTEX through the [Get Order API](https://developers.vtex.com/docs/api-reference/orders-api/#get-/api/oms/pvt/orders/-orderId-).
 Orders with the `invoiced` status cannot be canceled in VTEX right away. Connectors must first issue a return invoice, through the [Order Invoice Notification API](https://developers.vtex.com/docs/api-reference/orders-api/#post-/api/oms/pvt/orders/-orderId-/invoice), use the `“type”=”input”` parameter in the call, to issue a return invoice.
     b. For orders with statuses other than `invoiced`, call the [Cancel Order API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel). 
   c. VTEX OMS will receive the request and cancel the order. 
