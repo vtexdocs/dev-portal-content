@@ -17,7 +17,7 @@ No additional setting is needed to activate this feature, the OMS is already ope
 > ℹ️ The partial invoices feature is available to all VTEX stores, but the partial settlement in the gateway is in beta. Besides, for partial invoices to trigger partial settlements in the transaction, it is necessary to use a connector with the [Payment Provider Protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m). Legacy connectors do not support the functionality.
 
 - [Register Change on Order](https://developers.vtex.com/vtex-rest-api/reference/registerchange)
-- [Invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification)
+- [Invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice)
 - [Retrieve Payment transaction](https://developers.vtex.com/vtex-rest-api/reference/getpaymenttransaction)
 - [Update order's partial invoice (send tracking number)](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber)
 
