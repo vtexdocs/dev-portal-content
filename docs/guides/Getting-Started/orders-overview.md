@@ -140,6 +140,7 @@ You can fetch information related to orders in multiple ways and about specific 
 ### Changing an order status
 
 Every order has a life cycle registered in the form of an [order flow](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196), which describes the order’s status, possibilities, and updates. For more information, see the following links.
+
 - [Start handling order](https://developers.vtex.com/vtex-rest-api/reference/starthandling)
 - [Cancel order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel)
 
