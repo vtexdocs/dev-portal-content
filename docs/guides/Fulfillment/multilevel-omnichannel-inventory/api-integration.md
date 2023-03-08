@@ -269,7 +269,7 @@ The marketplace must implement the endpoint below, to receive the cancel notific
 
 ## Order Invoice Notification
 
-The marketplace must implement this endpoint for the chain order to inform it about the order invoice. Check out our [Order Invoice Notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification) to know more details.
+The marketplace must implement this endpoint for the chain order to inform it about the order invoice. Check out our [Order Invoice Notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) to know more details.
 
 * Method: POST
 * URL: `{marketplaceServiceEndpoint}/api/oms/pvt/orders/{orderId}/invoice`
