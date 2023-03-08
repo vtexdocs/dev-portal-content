@@ -24,12 +24,7 @@ You can call the [Configure Seller Account](https://developers.vtex.com/docs/api
 
 The article [Configuring a seller](https://help.vtex.com/en/tutorial/configuring-the-seller--tutorials_392) shows the path to create the seller in the Admin and explains the form fields.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "The **Fulfillment Endpoint** field should be filled in with the endpoint that will be implemented for the seller to receive the Fulfillment Simulation requests from the marketplace. This implementation is explained in the next section of this guide."
-}
-[/block]
+>ℹ️ The **Fulfillment Endpoint** field should be filled in with the endpoint that will be implemented for the seller to receive the Fulfillment Simulation requests from the marketplace. This implementation is explained in the next section of this guide.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-vtex-marketplace-setup-0.png)
 
