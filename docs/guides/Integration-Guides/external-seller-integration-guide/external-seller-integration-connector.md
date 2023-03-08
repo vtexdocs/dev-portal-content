@@ -25,13 +25,7 @@ In the table below, you will find every API request needed for each step of the 
 | [Send tracking information](#order-tracking)       | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-">Send tracking information</a>     | ➡ Marketplace  |
 | [Update tracking status](#order-tracking)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking">Update tracking status</a>         | ➡ Marketplace  |
 
-[block:callout]
-{
-  "type": "info",
-  "title": "API Collection",
-  "body": "To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.\n\n[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/external-seller-integration-guide/button_32.svg)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-connector-0.png)"
-}
-[/block]
+>ℹ️ To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.\n\n[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/external-seller-integration-guide/button_32.svg)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-connector-0.png)
 
 Let’s walk through each of the steps in the integration.
 
