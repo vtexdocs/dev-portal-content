@@ -5,13 +5,8 @@ hidden: false
 createdAt: "2022-06-09T21:07:59.637Z"
 updatedAt: "2022-06-09T21:42:27.190Z"
 ---
-[block:callout]
-{
-  "type": "warning",
-  "body": "If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/docs/guides/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/docs/guides/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.",
-  "title": "New method for integrating orders"
-}
-[/block]
+
+>⚠️If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/docs/guides/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/docs/guides/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.
 
 The order flow describes the status, possibilities, and actions throughout the life cycle of an order. With the flow, retailers can also track the mapped order status on the platform. Learn more in [Order flow and status](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196#order-status-details).
 
