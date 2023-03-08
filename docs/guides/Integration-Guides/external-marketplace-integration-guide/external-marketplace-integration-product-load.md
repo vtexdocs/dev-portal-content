@@ -24,7 +24,7 @@ c. Validate if the SKU is associated to the sales channel used in the intgration
 d. Validate if the product is active through the [Get Product by ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-product) endpoint, through the `isActive` property.
 *This step is optional, since the [Get SKU and Context](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku-context) endpoint already delivers the attribute `IsProductActive` for this purpose*.
 e. Identify whether the SKU conforms to the marketplace’s product registration rules.
-f. Validate if the product’s category is mapped in the marketplace.  In case it is not mapped, the marketplace should put the SKU in the approval queue, until the [mapping](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) is complete.
+f. Validate if the product’s category is mapped in the marketplace.  In case it is not mapped, the marketplace should put the SKU in the approval queue, until the [mapping](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-) is complete.
 g. For SKUs sent with price and inventory levels set up, the connector should validate whether the SKU has price and inventory levels with the sales channel configured for the integration. This should be done through the [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) endpoint, without the Postal Code.
 h.  Collect:
         - Inventory level on all available warehouses, through the  `logisticsStockBalance` field.
