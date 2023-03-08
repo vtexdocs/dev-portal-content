@@ -50,6 +50,7 @@ This field is meant to be a three-letter code identifying the marketplace that m
 >⚠️For a given order you should use the same `affiliateId`, `orderId` and `marketplaceOrderId` in steps 2, 3 and 4, as used in this first step when required in the API requests. The `orderId` will be in the response of the [Place fulfillment order request](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders) and it is composed of the `affiliateId` and `marketplaceOrderId` joined by a “-`.
 > Do not use an affiliate that is configured to use the seller's payment methods, or else this request will return a `status 500`. In this case, create a new affiliate without this configuration or use an arbitrary `affiliateId`.
 
+
 ## 2. Authorize dispatch
 
 To move the created order to the next status, use the [Authorize dispatch for fulfillment orders request](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders/-orderId-/fulfill).
