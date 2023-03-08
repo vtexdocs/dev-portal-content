@@ -5,13 +5,9 @@ hidden: false
 createdAt: "2021-09-02T20:44:52.943Z"
 updatedAt: "2022-06-10T16:10:11.654Z"
 ---
-[block:callout]
-{
-  "type": "warning",
-  "body": "If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/docs/guides/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/docs/guides/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.",
-  "title": "New method for integrating orders"
-}
-[/block]
+
+>⚠️ If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/docs/guides/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/docs/guides/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.
+
 ## Authentication/authorization
 When sending a request to our APIs, you must inform in the headers a X-VTEX-API-AppKey + X-VTEX-API-AppToken pair or a VtexIdclientAutCookie (the connector’s app token, if using our [App Template](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-template)) that has access to the specified account.
 
