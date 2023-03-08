@@ -66,13 +66,8 @@ You can view all the affiliations natively connected to VTEX through your VTEX A
 5. Give your affiliation a name.
 6. Enter the contract data sent by the chosen Gateway.
 7. Click on `Save`.
-[block:callout]
-{
-  "type": "warning",
-  "body": "The full list of affiliations is only visible through the VTEX Admin, by following the steps above from steps 1-4. Once you choose the affiliation that will be implemented, you can use our [Insert affiliation](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/affiliations) endpoint to configure it to your account, instead of following steps 5-7. You can check all affiliations implemented to your store through the [Get Affiliations](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/affiliations) endpoint.",
-  "title": "API Integration"
-}
-[/block]
+
+>⚠️The full list of affiliations is only visible through the VTEX Admin, by following the steps above from steps 1-4. Once you choose the affiliation that will be implemented, you can use our [Insert affiliation](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/affiliations) endpoint to configure it to your account, instead of following steps 5-7. You can check all affiliations implemented to your store through the [Get Affiliations](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/affiliations) endpoint.
 
 #### Set up Payment Conditions and Antifraud
 
