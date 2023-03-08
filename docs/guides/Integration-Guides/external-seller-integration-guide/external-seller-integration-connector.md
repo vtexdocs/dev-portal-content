@@ -13,17 +13,17 @@ In the table below, you will find every API request needed for each step of the 
 
 | Step | API Request | Request Target |
 |---|---|---|
-| [Catalog Notification](#catalog-notification) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-developer-docs/reference/catalog-api-get-seller-sku-notification">Change Notification</a>| ➡ Marketplace |
+| [Catalog Notification](#catalog-notification) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-">Change Notification</a>| ➡ Marketplace |
 | [Catalog Registration](#catalog-registration) | <span class="api pg-type type-put">put</span><a href="https://developers.vtex.com/docs/guides/marketplace-api#manage-suggestions">Send SKU Suggestion</a> | ➡ Marketplace |
-| [Catalog and Storefront Update](#catalog-update) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment Simulation</a>  | ⬅ Seller |
-| [Order Placement](#order-placement) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/order-placement">Order Placement</a>  | ⬅ Seller |
-| [Order Dispatching](#order-dispatching) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/authorize-fulfillment">Authorize Fulfillment</a>  | ⬅ Seller |
-| [Order Invoicing and Tracking](#order-invoicing) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/invoicenotification">Order Invoice Notification</a>  | ➡ Marketplace |
-| [Cancellation by the Marketplace](#cancellation-by-the-marketplace) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation">Marketplace Order Cancellation</a> | ⬅ Seller |
-| [Cancellation by the Seller](#cancellation-by-the-seller) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a>  | ➡ Marketplace |
-| [Order invoicing](#order-invoicing)                   | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-invoice">Send invoice</a>                     | ➡ Marketplace  |
-| [Send tracking information](#order-tracking)       | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/send-tracking-information">Send tracking information</a>     | ➡ Marketplace  |
-| [Update tracking status](#order-tracking)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/vtex-rest-api/reference/update-tracking-status">Update tracking status</a>         | ➡ Marketplace  |
+| [Catalog and Storefront Update](#catalog-update) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orderForms/simulationn">Fulfillment Simulation</a>  | ⬅ Seller |
+| [Order Placement](#order-placement) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders">Order Placement</a>  | ⬅ Seller |
+| [Order Dispatching](#order-dispatching) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill">Authorize Fulfillment</a>  | ⬅ Seller |
+| [Order Invoicing and Tracking](#order-invoicing) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice">Order Invoice Notification</a>  | ➡ Marketplace |
+| [Cancellation by the Marketplace](#cancellation-by-the-marketplace) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-orderId-/cancel">Marketplace Order Cancellation</a> | ⬅ Seller |
+| [Cancellation by the Seller](#cancellation-by-the-seller) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/cancel">Cancel Order</a>  | ➡ Marketplace |
+| [Order invoicing](#order-invoicing)                   | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice">Send invoice</a>                     | ➡ Marketplace  |
+| [Send tracking information](#order-tracking)       | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-">Send tracking information</a>     | ➡ Marketplace  |
+| [Update tracking status](#order-tracking)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking">Update tracking status</a>         | ➡ Marketplace  |
 
 [block:callout]
 {
@@ -39,7 +39,7 @@ Let’s walk through each of the steps in the integration.
 
 The seller is responsible for suggesting new SKUs to be sold in the marketplace and also for informing the marketplace about changes in their SKUs that already exist in the marketplace. Both actions start with a catalog notification.
 
-For this notification to happen, the seller must call the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-developer-docs/reference/catalog-api-get-seller-sku-notification">Change Notification</a></span> endpoint, provided by the marketplace.
+For this notification to happen, the seller must call the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-">Change Notification</a></span> endpoint, provided by the marketplace.
 
 If you are authenticated and the request is correctly made, there are two possible responses:
 
@@ -89,7 +89,7 @@ So the seller needs to have an endpoint implemented in order to receive this cal
 
 ### Endpoint implementation
 
-The endpoint that the marketplace will call is the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-developer-docs/reference/fulfillment-simulation">Fulfillment Simulation</a></span> endpoint. The marketplace will send an object containing an array of items. The seller must use this list to get the updated information about the referred SKUs and send them back to the marketplace, following the response format explained in the API Reference.
+The endpoint that the marketplace will call is the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orderForms/simulation">Fulfillment Simulation</a></span> endpoint. The marketplace will send an object containing an array of items. The seller must use this list to get the updated information about the referred SKUs and send them back to the marketplace, following the response format explained in the API Reference.
 
 Be mindful to add `/api` in your endpoint's base url for the call to function properly.
 
@@ -111,7 +111,7 @@ Be mindful to add `/api` in your endpoint's base url for the call to function pr
 
 During the order flow, the marketplace storefront needs to be constantly fetching the updated price and inventory of each SKU in the cart. This is essential to guarantee that the customer will always be presented with the most updated information possible.
 
-As in the [catalog update](#catalog-update) step, this information is provided by the seller through the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-developer-docs/reference/fulfillment-simulation">Fulfillment Simulation</a></span> endpoint. As in that step, the same request format should be expected and the same response format should be returned.
+As in the [catalog update](#catalog-update) step, this information is provided by the seller through the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orderForms/simulation">Fulfillment Simulation</a></span> endpoint. As in that step, the same request format should be expected and the same response format should be returned.
 
 When the Fulfillment Simulation call is applied in the Storefront simulation scenario,  the request from VTEX does not send the paramenters `country` and `postalCode`.
 
@@ -121,7 +121,7 @@ If the seller is processing payments, once the [necessary configurations](https:
 
 You can find your account name in your VTEX environment by accessing **Account Settings > Account Management > Account**, and looking for the `Account Name` field.
 
-This information will be added in the `merchantName` field in the [Storefront Update](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#storefront-update) and [Order Placement](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#order-placement) steps of the integration guide. This is the field that confirms that payments will be done on the seller's side:
+This information will be added in the `merchantName` field in the [Storefront Update](https://developers.vtex.com/docs/guides/external-seller-integration-connector#storefront-update) and [Order Placement](https://developers.vtex.com/docs/guides/external-seller-integration-connector#order-placement) steps of the integration guide. This is the field that confirms that payments will be done on the seller's side:
 
 `"merchantName": "sellerAccountName",`
 
@@ -131,7 +131,7 @@ Once the customer finishes their checkout, the marketplace needs to let the sell
 
 ### Endpoint implementation
 
-The marketplace notifies the seller about a new order through the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-developer-docs/reference/order-placement">Order Placement</a></span> endpoint, which needs to be implemented by the seller.
+The marketplace notifies the seller about a new order through the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders">Order Placement</a></span> endpoint, which needs to be implemented by the seller.
 
 The marketplace will send information such as the items contained in the cart, the client’s profile data, the shipping data, and the payment data. With that, the seller will be able to create the order in their own store.
 
@@ -141,13 +141,13 @@ After the payment is finished and approved, the marketplace sends a request to t
 
 ### Endpoint implementation
 
-This notification is done through a request to the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/authorize-fulfillment">Authorize Fulfillment</a></span> endpoint, which needs to be implemented by the seller.
+This notification is done through a request to the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill">Authorize Fulfillment</a></span> endpoint, which needs to be implemented by the seller.
 
 The body of this request contains only one information: the `marketplaceOrderId`, which identifies the order in the marketplace. The seller should use this ID to trigger the fulfillment process.
 
 ## Order invoicing
 
-Once the fulfillment process is triggered and the invoice is issued by the seller, the invoice data must be sent to the marketplace. The seller sends this information through the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/invoicenotification">Order Invoice Notification</a></span> request.
+Once the fulfillment process is triggered and the invoice is issued by the seller, the invoice data must be sent to the marketplace. The seller sends this information through the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice">Order Invoice Notification</a></span> request.
 
 ## Order tracking
 
@@ -157,7 +157,7 @@ The same endpoint called by the seller to send the invoice is used to send the o
 - Tracking identifier
 - Tracking URL
 
-In this case, the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/invoicenotification">Order Invoice Notification</a></span> should happen once the seller delivers the package to the carrier and receives the tracking data from it.
+In this case, the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice">Order Invoice Notification</a></span> should happen once the seller delivers the package to the carrier and receives the tracking data from it.
 
 ## Cancellation by the marketplace
 
@@ -165,19 +165,19 @@ Order cancellations are never wanted, but they happen in every store. So the sel
 
 ### Endpoint implementation
 
-The <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation">Marketplace Order Cancellation</a></span> endpoint  must be implemented on the seller's side. This call should be made twice: once for the *Evaluate cancellation request* scenario, and a second time to *Confirm cancellation* or *Refuse cancellation*
+The <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-orderId-/cancel">Marketplace Order Cancellation</a></span> endpoint  must be implemented on the seller's side. This call should be made twice: once for the *Evaluate cancellation request* scenario, and a second time to *Confirm cancellation* or *Refuse cancellation*
 
 For the seller to:
 
 - **Evaluate a cancellation request:** it is possible to send an empty body as a response to the cancellation request, meaning that the seller is evaluating whether to proceed with the cancellation or not.
 - **Confirm the cancellation request:** it is possible to confirm the order cancellation by the marketplace by responding to the call with a body including only one information: the `marketplaceOrderId`, which identifies the order in the marketplace. The seller should use this ID to trigger the cancellation of the corresponding order. The seller should then respond with the same `marketplaceOrderId` and also with the `orderId`, which identifies the order in the seller, the date and time of the notification receipt, and a protocol code that confirms the receipt of the request (which may have the value `null`).
-- **Refuse a cancellation request:** it is possible to to [send the Invoice](https://developers.vtex.com/vtex-rest-api/reference/send-invoice), meaning that the cancellation has been denied, and the flow continues to the [Order Invoicing](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#order-invoicing) step, and the ones that follow it.
+- **Refuse a cancellation request:** it is possible to to [send the Invoice](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice), meaning that the cancellation has been denied, and the flow continues to the [Order Invoicing](https://developers.vtex.com/docs/guides/external-seller-integration-connector#order-invoicing) step, and the ones that follow it.
 
 ## Cancellation by the seller
 
-On certain occasions, the seller may also need to cancel the order itself. This might happen, for example, if there’s a problem with the order that prevents the seller from fulfilling it. In this case, the seller must call the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace">Cancel Order</a></span> endpoint.
+On certain occasions, the seller may also need to cancel the order itself. This might happen, for example, if there’s a problem with the order that prevents the seller from fulfilling it. In this case, the seller must call the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/cancel">Cancel Order</a></span> endpoint.
 
-> ⚠️ If the order status is `Invoiced`, the order can only be canceled if—before using the Cancel Order endpoint—the seller sends a return invoice.\n\nTo do this, you must use the Order Invoice Notification endpoint, explained in the [Order invoicing](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#order-invoicing) session. To inform the system that you are sending a return invoice, you must use the value input for the field type of the request body.\n\nAfter doing this, you will be able to send a cancellation request for the invoiced order, by using the endpoint referenced below.
+> ⚠️ If the order status is `Invoiced`, the order can only be canceled if—before using the Cancel Order endpoint—the seller sends a return invoice.\n\nTo do this, you must use the Order Invoice Notification endpoint, explained in the [Order invoicing](https://developers.vtex.com/docs/guides/external-seller-integration-connector#order-invoicing) session. To inform the system that you are sending a return invoice, you must use the value input for the field type of the request body.\n\nAfter doing this, you will be able to send a cancellation request for the invoiced order, by using the endpoint referenced below.
 
 ## Setting payment conditions
 
