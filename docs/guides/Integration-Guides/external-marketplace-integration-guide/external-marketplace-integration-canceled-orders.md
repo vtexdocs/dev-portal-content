@@ -21,7 +21,7 @@ We suggest that connectors store notifications in a queue by store for processin
 3. **For orders that have been integrated in VTEX:**
     a.  Connectors should verify the order status in VTEX through the [Get Order API](https://developers.vtex.com/docs/api-reference/orders-api/#get-/api/oms/pvt/orders/-orderId-). 
 Orders with the `invoiced` status cannot be canceled in VTEX right away. Connectors must first issue a return invoice, through the [Order Invoice Notification API](https://developers.vtex.com/docs/api-reference/orders-api/#post-/api/oms/pvt/orders/-orderId-/invoice), use the `“type”=”input”` parameter in the call, to issue a return invoice.
-    b. For orders with statuses other than `invoiced`, call the [Cancel Order API](https://developers.vtex.com/vtex-rest-api/reference/cancelorder). 
+    b. For orders with statuses other than `invoiced`, call the [Cancel Order API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel). 
   c. VTEX OMS will receive the request and cancel the order. 
   d.VTEX notifies the connector through the endpoint `/pvt/orders/{orderId}/cancel`. 
   e. Connectors receive the notification and respond with 200 and the payload described below.
@@ -53,6 +53,7 @@ Orders with the `invoiced` status cannot be canceled in VTEX right away. Connect
 ## API Reference
 
 Use the endpoints described below to perform this step. It is important to note that when consuming this API, the connector must have a valid VTEX App Key and App Token.
+
 ![MarketplaceConnections Docs - English - Fluxo de chamada das APIs-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-integration-canceled-orders-1.jpg)
 
 [block:callout]
@@ -64,12 +65,12 @@ Use the endpoints described below to perform this step. It is important to note 
 [/block]
 ### Cancel Order
 
-Check out our [Cancel Order](https://developers.vtex.com/vtex-rest-api/reference/cancelorder) API Reference to know more details about this call.
+Check out our [Cancel Order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel) API Reference to know more details about this call.
 
 
 ### Order Invoice Notification
 
-Use the request example below to generate an order invoice. Check out our [Order Invoice Notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification) ​API Reference to know more details.
+Use the request example below to generate an order invoice. Check out our [Order Invoice Notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) ​API Reference to know more details.
 
 [block:code]
 {
@@ -82,6 +83,7 @@ Use the request example below to generate an order invoice. Check out our [Order
   ]
 }
 [/block]
+
 ## Scenario 1: customer cancels order in marketplace
 
 This scenario occurs when the marketplace’s customer cancels an order in the marketplace, and the connector sends the cancellation request to VTEX. 
@@ -90,8 +92,6 @@ When to perform: after receiving the cancellation notification from the marketpl
 
 Connectors should:
 
-
-
 1. Validate if order has been integrated in VTEX.
 2. Validate if order status allows cancellation (all but `invoiced`).
 3. If steps 1 and 2 are attended, call the Cancel Order API.
@@ -99,17 +99,14 @@ Connectors should:
 5. Receive cancelling confirmation from VTEX and respond with `200` status, along with the response received in step 4.
 6. Log status for cancellation action.
 
-
 ## Scenario 2: orders canceled in VTEX
 
 This scenario occurs when VTEX cancels an order, and connectors should update the marketplace.
-
 
 1. VTEX OMS sends Order Cancel notification.
 2. Connector stores VTEX's response to the call.
 3. Receive cancelling confirmation from VTEX and respond with `200` status, along with the response received in step 2.
 4. Log status for cancellation action.
-
 
 ## Scenario 3: orders integrated in VTEX with the “canceled” status 
 
