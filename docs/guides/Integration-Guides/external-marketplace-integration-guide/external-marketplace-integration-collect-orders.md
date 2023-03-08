@@ -460,7 +460,7 @@ To input an order delivered by a seller’s franchise, to allow the Multilevel O
 }
 ```
 
-## Scenario 7: Order delivered by the marketplace (with stock in the seller) 
+## Scenario 7: Order delivered by the marketplace (with stock in the seller)
 
 To input an order delivered by the marketplace with the stock in the seller, in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request, you must do the following:
 
