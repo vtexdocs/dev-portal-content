@@ -8,22 +8,22 @@ updatedAt: "2022-06-10T16:10:11.654Z"
 [block:callout]
 {
   "type": "warning",
-  "body": "If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/vtex-rest-api/docs/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/vtex-rest-api/docs/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.",
+  "body": "If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/docs/guides/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/docs/guides/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.",
   "title": "New method for integrating orders"
 }
 [/block]
 ## Authentication/authorization
-When sending a request to our APIs, you must inform in the headers a X-VTEX-API-AppKey + X-VTEX-API-AppToken pair or a VtexIdclientAutCookie (the connector’s app token, if using our [App Template](/docs/guides/external-marketplace-integration-app-template)) that has access to the specified account.
+When sending a request to our APIs, you must inform in the headers a X-VTEX-API-AppKey + X-VTEX-API-AppToken pair or a VtexIdclientAutCookie (the connector’s app token, if using our [App Template](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-template)) that has access to the specified account.
 
 
 ## API Reference: New order Integration
 
-Use the request example below to Place an order. The description and requirement of each of the fields present in the request body are found in our [API Reference](https://developers.vtex.com/vtex-rest-api/reference/new-order-integration).
+Use the request example below to Place an order. The description and requirement of each of the fields present in the request body are found in our [API Reference](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders).
 
 It’s important to note that although some fields are optional in our API, depending on the order's country of origin or trade policy, they may be mandatory for Checkout/Fulfillment. In such cases, when trying to process the order, we will return the validation error in question to the connector, as well as other possible errors and success notifications.
 
 
-```
+```json
 {
     "marketplaceOrderId": string,
     "connectorName": string,
@@ -134,7 +134,7 @@ Order Processing Result
 #### Response Body
 All API responses and order notifications from our service return the same data contract, as detailed bellow:
 
-```
+```json
 {
 		"accountName": string,
     "success": bool,
@@ -196,12 +196,12 @@ Some fields can return as null in some cases, such as accountName, marketplaceOr
 
 ## Scenario 1: new order, with pending payment
 
-To integrate orders with pending payment, you just need to set the marketplaceOrderStatus field to NEW in the [New Order Integration](ref:new-order-integration) request.
+To integrate orders with pending payment, you just need to set the marketplaceOrderStatus field to NEW in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) request.
 
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -218,7 +218,7 @@ To integrate orders with pending payment, you just need to set the marketplaceOr
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -236,12 +236,12 @@ To integrate orders with pending payment, you just need to set the marketplaceOr
 ```
 
 ## Scenario 2: Approved order, with approved payment
-To integrate orders with approved payment (automatically approving them afterwards) you just need to set the `marketplaceOrderStatus` field to `approved` in the [New Order Integration](ref:new-order-integration) API request.
+To integrate orders with approved payment (automatically approving them afterwards) you just need to set the `marketplaceOrderStatus` field to `approved` in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request.
 
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -259,7 +259,7 @@ To integrate orders with approved payment (automatically approving them afterwar
 
 **Integration:**
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -278,7 +278,7 @@ To integrate orders with approved payment (automatically approving them afterwar
 
 **Approval:**
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -298,12 +298,12 @@ To integrate orders with approved payment (automatically approving them afterwar
 
 ## Scenario 3: order with interest
 
-To integrate orders with additional interest values, you need to fill in the marketplaceInterestValue field, with the desired amount in the [New Order Integration](ref:new-order-integration) API request.
+To integrate orders with additional interest values, you need to fill in the marketplaceInterestValue field, with the desired amount in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request.
 
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -319,7 +319,7 @@ To integrate orders with additional interest values, you need to fill in the mar
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -338,14 +338,15 @@ To integrate orders with additional interest values, you need to fill in the mar
 
 ## Scenario 4: Order with discounts 
 
-To integrate orders with discounts, you need to apply the discount directly in the order in the[New Order Integration](ref:new-order-integration) API request, before sending it to our service. This means:
+To integrate orders with discounts, you need to apply the discount directly in the order in the[New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request, before sending it to our service. This means:
 - If shipping costs $10 for a SKU, but the marketplace is offering a 10% discount on it, the `price` in `logisticsInfo` should be $9 (in integer format, 900).   
 - If the SKU is priced at $100, and the marketplace is offering a 10% discount on it, the `price` of the SKU in `items` should be $90 (in integer format, 9000).  
 - And when the marketplace is offering a discount applied to all shipping or all SKUs in the order, this value should be split between the items, for example:  
   - SKU 1 price: $10, SKU 2 price: $40. Marketplace discount: $10. SKU 1 final `price` in `items` should be $5 (in integer format, 500) and SKU 2 final `price` should be $35 (in integer format, 3500).
 
 ### Response
-```
+
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -361,7 +362,7 @@ To integrate orders with discounts, you need to apply the discount directly in t
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -378,17 +379,15 @@ To integrate orders with discounts, you need to apply the discount directly in t
 }
 ```
 
-
-
 ## Scenario 5: Order delivered by the seller 
 
-To input an order delivered by the seller, you must do the following in the[New Order Integration](ref:new-order-integration) API request:
+To input an order delivered by the seller, you must do the following in the[New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request:
 - Fill the `selectedDeliveryChannel` field with the value `delivery`.  
 - Fill the `selectedSla` field with the name of the seller’s SLA selected to deliver this order. In this case, this field can also be left empty, and Fulfillment’s service will choose an available SLA automatically, if there’s any.
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -404,7 +403,7 @@ To input an order delivered by the seller, you must do the following in the[New 
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "grocery1",
@@ -421,11 +420,9 @@ To input an order delivered by the seller, you must do the following in the[New 
 }
 ```
 
-
-
 ## Scenario 6: Order delivered by seller’s franchise (Multilevel Omnichannel Inventory)
 
-To input an order delivered by a seller’s franchise, to allow the Multilevel Omnichannel Inventory feature, in the [New Order Integration](ref:new-order-integration) API request, you must do the following:
+To input an order delivered by a seller’s franchise, to allow the Multilevel Omnichannel Inventory feature, in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request, you must do the following:
 
 - Fill the `selectedDeliveryChannel` field with the value `delivery`;
 - Fill the `selectedSla` field with the name of the seller’s SLA selected to deliver this order;
@@ -433,7 +430,7 @@ To input an order delivered by a seller’s franchise, to allow the Multilevel O
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -449,7 +446,7 @@ To input an order delivered by a seller’s franchise, to allow the Multilevel O
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -466,11 +463,9 @@ To input an order delivered by a seller’s franchise, to allow the Multilevel O
 }
 ```
 
-
-
 ## Scenario 7: Order delivered by the marketplace (with stock in the seller) 
 
-To input an order delivered by the marketplace with the stock in the seller, in the [New Order Integration](ref:new-order-integration) API request, you must do the following:
+To input an order delivered by the marketplace with the stock in the seller, in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request, you must do the following:
 
 - Fill the `selectedDeliveryChannel` field with the value `delivery`.  
 - Don’t fill the `selectedSla` field.  
@@ -479,7 +474,7 @@ To input an order delivered by the marketplace with the stock in the seller, in 
  
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -495,7 +490,7 @@ To input an order delivered by the marketplace with the stock in the seller, in 
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -514,7 +509,7 @@ To input an order delivered by the marketplace with the stock in the seller, in 
 
 ## Scenario 8: Order delivered by the marketplace (with stock in the marketplace)
 
-To input an order delivered by and with the stock in the marketplace, in the [New Order Integration](ref:new-order-integration) API request, you must do the following:
+To input an order delivered by and with the stock in the marketplace, in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request, you must do the following:
 
 - Fill the `selectedDeliveryChannel` field with the value `delivery`;
 - Don’t fill the `selectedSla` field;
@@ -524,7 +519,7 @@ To input an order delivered by and with the stock in the marketplace, in the [Ne
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -540,7 +535,7 @@ To input an order delivered by and with the stock in the marketplace, in the [Ne
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "grocery1",
@@ -559,8 +554,7 @@ To input an order delivered by and with the stock in the marketplace, in the [Ne
 
 ## Scenario 9: Order with pickup-in-point
 
-
-To input a pickup-in-point order, where the customer’ll be responsible for retrieving the products in a specified store, you must do the following in the [New Order Integration](ref:new-order-integration) API request:
+To input a pickup-in-point order, where the customer’ll be responsible for retrieving the products in a specified store, you must do the following in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request:
 
 - Fill the `selectedDeliveryChannel` field with the value `pickup-in-point`.  
 - Fill the `selectedAddresses` list with the pickup point address, instead of the customers’s, specifying:
@@ -572,7 +566,7 @@ To input a pickup-in-point order, where the customer’ll be responsible for ret
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -588,7 +582,7 @@ To input a pickup-in-point order, where the customer’ll be responsible for ret
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -608,7 +602,7 @@ To input a pickup-in-point order, where the customer’ll be responsible for ret
 
 ## Scenario 10: Order with a franchise pickup-in-point (Multilevel Omnichannel Inventory)
 
-To input a franchise pickup-in-point order, where the customer’ll be responsible for retrieving the products in a specified seller’s franchise store, you must do the following in the [New Order Integration](ref:new-order-integration) API request:
+To input a franchise pickup-in-point order, where the customer’ll be responsible for retrieving the products in a specified seller’s franchise store, you must do the following in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request:
 
 - Fill the `selectedDeliveryChannel` field with the value `pickup-in-point`.  
 - Fill the `selectedAddresses` list with the pickup point address, instead of the customers’s, specifying:
@@ -623,7 +617,7 @@ To input a franchise pickup-in-point order, where the customer’ll be responsib
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -639,7 +633,7 @@ To input a franchise pickup-in-point order, where the customer’ll be responsib
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -658,12 +652,12 @@ To input a franchise pickup-in-point order, where the customer’ll be responsib
 
 
 ## Scenario 11: Order with taxes
-To integrate orders with additional taxes values, in the [New Order Integration](ref:new-order-integration) API request, you need to fill in the taxData field, a list containing all taxes, one per SKU. If you don’t have the value individually by SKU, you can add only one item in the list, using one SKU ID from the order and adding all the taxes in field value.
+To integrate orders with additional taxes values, in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request, you need to fill in the taxData field, a list containing all taxes, one per SKU. If you don’t have the value individually by SKU, you can add only one item in the list, using one SKU ID from the order and adding all the taxes in field value.
 
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -679,7 +673,7 @@ To integrate orders with additional taxes values, in the [New Order Integration]
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
@@ -698,12 +692,12 @@ To integrate orders with additional taxes values, in the [New Order Integration]
 
 
 ## Scenario 12: Order with tracking hints
-To integrate orders with label information, in the [New Order Integration](ref:new-order-integration) API request, you need to fill in the trackingHints field, a list containing all infos related to order label.
+To integrate orders with label information, in the [New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request, you need to fill in the trackingHints field, a list containing all infos related to order label.
 
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": null,
     "accountName": "connections",
@@ -719,7 +713,7 @@ To integrate orders with label information, in the [New Order Integration](ref:n
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
