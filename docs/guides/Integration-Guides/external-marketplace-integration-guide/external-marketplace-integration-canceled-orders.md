@@ -56,13 +56,8 @@ Use the endpoints described below to perform this step. It is important to note 
 
 ![MarketplaceConnections Docs - English - Fluxo de chamada das APIs-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-integration-canceled-orders-1.jpg)
 
-[block:callout]
-{
-  "type": "info",
-  "body": "All parameters in the endpoints below must be declared in the request. In case one of the parameters does not have a value, you must still send it as `null`.",
-  "title": "Request bodies for POST calls"
-}
-[/block]
+>ℹ️ All parameters in the endpoints below must be declared in the request. In case one of the parameters does not have a value, you must still send it as `null`.
+
 ### Cancel Order
 
 Check out our [Cancel Order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel) API Reference to know more details about this call.
