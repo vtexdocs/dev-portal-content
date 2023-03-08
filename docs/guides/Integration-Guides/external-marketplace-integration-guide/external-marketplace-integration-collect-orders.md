@@ -335,7 +335,8 @@ To integrate orders with additional interest values, you need to fill in the mar
 ## Scenario 4: Order with discounts 
 
 To integrate orders with discounts, you need to apply the discount directly in the order in the[New Order Integration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders) API request, before sending it to our service. This means:
-- If shipping costs $10 for a SKU, but the marketplace is offering a 10% discount on it, the `price` in `logisticsInfo` should be $9 (in integer format, 900).   
+
+- If shipping costs $10 for a SKU, but the marketplace is offering a 10% discount on it, the `price` in `logisticsInfo` should be $9 (in integer format, 900).
 - If the SKU is priced at $100, and the marketplace is offering a 10% discount on it, the `price` of the SKU in `items` should be $90 (in integer format, 9000).  
 - And when the marketplace is offering a discount applied to all shipping or all SKUs in the order, this value should be split between the items, for example:  
   - SKU 1 price: $10, SKU 2 price: $40. Marketplace discount: $10. SKU 1 final `price` in `items` should be $5 (in integer format, 500) and SKU 2 final `price` should be $35 (in integer format, 3500).
