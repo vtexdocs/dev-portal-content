@@ -8,26 +8,27 @@ updatedAt: "2022-06-09T21:42:27.190Z"
 [block:callout]
 {
   "type": "warning",
-  "body": "If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/vtex-rest-api/docs/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/vtex-rest-api/docs/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.",
+  "body": "If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/docs/guides/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/docs/guides/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.",
   "title": "New method for integrating orders"
 }
 [/block]
+
 The order flow describes the status, possibilities, and actions throughout the life cycle of an order. With the flow, retailers can also track the mapped order status on the platform. Learn more in [Order flow and status](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196#order-status-details).
 
 It’s important to note that when sending a request to update the order status, if the order is not currently in the correct status at VTEX to advance to the requested one, an error will be returned. That means that the connector has to manage when a status should be updated or not. For example:
 
 - If the order is in the `waiting-for-manual-authorization` status at VTEX, that means the order has a price divergence, and we need to wait for the seller to either reject this order (cancel) or authorize it. Sending an order approval while the order is in this status will fail (with a code `EOI011`) since the seller hasn’t authorized the integration of the order yet.
 - In this case, it’s recommended for the connector to try to approve the order at a later time, after receiving the error from Channel Order API, and keep trying until the seller takes action and the status change.
-- Another option is to use [Order hooks and feeds](https://developers.vtex.com/vtex-rest-api/docs/orders-feed) from our OMS VTEX module. That way the connector can know when the order status was updated and the approval can be sent.
+- Another option is to use [Order hooks and feeds](https://developers.vtex.com/docs/guides/orders-feed) from our OMS VTEX module. That way the connector can know when the order status was updated and the approval can be sent.
 
 ## API Reference: Update order status
 
-Use the request example below to update the status of an order. The description and requirement of each of the fields present in the request body are found in our [Update Order Status](ref:update-order-status) API Reference.
+Use the request example below to update the status of an order. The description and requirement of each of the fields present in the request body are found in our [Update Order Status](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#put-/api/order-integration/orders/status) API Reference.
 
 
 ### Request body
 
-```
+```json
 {
     "marketplaceOrderId": string,
     "connectorName": string,
@@ -47,7 +48,7 @@ Use the request example below to update the status of an order. The description 
 
 ### Response
 
-```
+```json
 {
     "marketplaceOrderId": "123456789",
     "accountName": null,
@@ -63,7 +64,7 @@ Use the request example below to update the status of an order. The description 
 
 ### Notification
 
-```
+```json
 {
   "marketplaceOrderId": "123456789",
   "accountName": "connections",
