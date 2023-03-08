@@ -17,7 +17,7 @@ Connectors must offer an endpoint that allows the integration app to collect and
 
 `{urlBase}/{vtexaccount}/logs/`
 
-For this endpoint the parameters `date` and `status` should be included, following the status described in the [Log messages](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#log-messages) table:
+For this endpoint the parameters `date` and `status` should be included, following the status described in the [Log messages](https://developers.vtex.com/docs/guides/external-marketplace-integration-logs#log-messages) table:
 
 
 ```
@@ -28,7 +28,7 @@ https://{urlBase}/logs/?DateAt=aaaa-mm-dd&status=all https://{urlBase}/logs/?Dat
 The endpoint should return the payload described below, so the list of error messages can be assembled:
 
 
-```
+```json
 { 
 "Messages":[ 
    { 
@@ -44,9 +44,6 @@ The endpoint should return the payload described below, so the list of error mes
     ]
  }
 ```
-
-
- 
 
 
 ## Content of the messages
@@ -67,11 +64,11 @@ The messages contained in logs should follow the standard defined below, allowin
 
 Each step of the catalog integration requires a specific set of Log messages. The list below points out which messages to use for each step, and the table describes all messages.
 
-- [Get product list for an initial load](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-product-load): S1, A1, A2, A3, E1, E2, E3, E4, E5
-- [How to get a new product to offer in the marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-new-products): S1, A1, A2, A3, E1, E2, E3, E4, E5
-- [How to get product updates](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-product-updates): S1, A1, A2, A3, E1, E2, E3, E4, E5
-- [How to keep prices updated](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-price-update): S1, A1, A2, E1, E2, E3
-- [How to keep stock updated](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-stock-update):  S1, A1, A2, A3, E1, E2, E3, E4, E5
+- [Get product list for an initial load](https://developers.vtex.com/docs/guides/external-marketplace-integration-product-load): S1, A1, A2, A3, E1, E2, E3, E4, E5
+- [How to get a new product to offer in the marketplace](https://developers.vtex.com/docs/guides/external-marketplace-integration-new-products): S1, A1, A2, A3, E1, E2, E3, E4, E5
+- [How to get product updates](https://developers.vtex.com/docs/guides/external-marketplace-integration-product-updates): S1, A1, A2, A3, E1, E2, E3, E4, E5
+- [How to keep prices updated](https://developers.vtex.com/docs/guides/external-marketplace-integration-price-update): S1, A1, A2, E1, E2, E3
+- [How to keep stock updated](https://developers.vtex.com/docs/guides/external-marketplace-integration-stock-update):  S1, A1, A2, A3, E1, E2, E3, E4, E5
 
 | Code | Event                                                                                                               | User message                                                                                                                                                                                                                                                                                                                                                                       | Error status | Response |
 |------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------|
