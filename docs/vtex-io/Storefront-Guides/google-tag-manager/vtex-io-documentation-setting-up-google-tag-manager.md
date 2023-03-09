@@ -176,6 +176,8 @@ Repeat the instructions above, now changing the event name for each of the follo
 - `shipping`
 - `pageView`
 
+> ⚠️ To trigger the `promotionClick` event for an image in a store component, you need to include a URL path for that image. To do this, access the **CMS > Site Editor** and select the image within the component. Then, in the editing view, go to **URL** and enter the path you want to use, for example, `/collections/valentines-70-off`.
+
 ### Step 3 - Creating Tags
 
 Tags are tracking code you want to implement on your store. For example, if you want to track a page view and send that data to Google Analytics, you use a tag to do it.
