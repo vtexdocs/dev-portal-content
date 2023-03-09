@@ -30,7 +30,8 @@ You can install the **B2B Organizations** app by running `vtex install vtex.b2b-
 
 To enable the [user widget](#user-widget) in your storefront, this app provides a `b2b-user-widget` block that you can add to the account's store theme. We recommend that you add it to the store header, as shown below.
 
-![01-user-widget-header](https://user-images.githubusercontent.com/77292838/159766647-a8d22a55-61da-4169-a1be-1072a4ca8d73.png)
+ <img src="https://user-images.githubusercontent.com/77292838/159766647-a8d22a55-61da-4169-a1be-1072a4ca8d73.png">
+
 
 Follow the instructions below to display the user widget.
 
@@ -71,10 +72,12 @@ Follow the instructions below to display the user widget.
 ## Configuration
 
 If we have only one associated organization:
-![](https://i.imgur.com/5yXFU6y.png)
+ <img src="https://i.imgur.com/5yXFU6y.png">
+
 
 If we have more than one associated organization:
-![](https://i.imgur.com/ScQtfIz.png)
+ <img src="https://i.imgur.com/ScQtfIz.png">
+
 
 ### `b2b-user-widget`
 | Prop name                  | Type                              | Description                                                                                                             | Default value |
@@ -192,7 +195,8 @@ Once this step is done by the customer, B2B store administrators may review the 
 
 In this page, they can view a list of all the organization requests placed in their store.
 
-![02-organization-requests](https://user-images.githubusercontent.com/77292838/159766650-d989a5bc-a33b-4fee-9e60-76f26567b067.png)
+ <img src="https://user-images.githubusercontent.com/77292838/159766650-d989a5bc-a33b-4fee-9e60-76f26567b067.png" alt="02-organization-requests">
+
 
 Each organization can have a status of **pending**, **approved** or **declined**. Pending requests are the ones that still need review.
 
@@ -202,7 +206,8 @@ To review a request, you must:
 2. Write a comment on the **Add note** field, if necessary.
 3. Click on `Approve` or `Decline`.
 
-![03-manage-organization-request](https://user-images.githubusercontent.com/77292838/159766653-ba4f6d4b-4bda-4856-86a3-0080f8d22e1e.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766653-ba4f6d4b-4bda-4856-86a3-0080f8d22e1e.png" alt="03-manage-organization-request">
+
 
 Upon approval, the request status will change to **Approved** and the organization will be created. The [Organization Admin and the Sales Admins](https://developers.vtex.com/docs/guides/vtex-storefront-permissions#available-storefront-roles) will be notified about this via email. You can learn more about this notification in the [Email templates](#email-templates) section. In addition, the user designated as the Organization Admin will be granted access to the [My Organization](#my-organization) tab on the **My Account** page of your storefront.
 
@@ -217,7 +222,8 @@ The **Organizations** page includes a list of all the organizations created in y
 
 To access the page, go to **Account Settings** > **B2B Organizations & Cost Centers** > **Organizations** in the VTEX Admin (or at `/admin/b2b-organizations/organizations`).
 
-![04-organizations](https://user-images.githubusercontent.com/77292838/159766661-63f7191a-51c4-49d7-a34d-d909456f2692.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766661-63f7191a-51c4-49d7-a34d-d909456f2692.png" alt="04-organizations">
+
 
 You can click `Refetch` to refresh the organizations list on this page, fetching information about recently created organizations.
 
@@ -246,7 +252,8 @@ You can manually create a new organization on the **Organizations** page. Follow
    - **Receiver:** name of the person that will receive orders in the informed address.
 3. Click on `Add`.
 
-![05-add-organization](https://user-images.githubusercontent.com/77292838/159766663-e1b2005a-0c2d-4bec-84ad-612007f17d64.gif)
+<img src="https://user-images.githubusercontent.com/77292838/159766663-e1b2005a-0c2d-4bec-84ad-612007f17d64.gif" alt="05-add-organization">
+
 
 > ℹ️ Additional cost centers and addresses may be added after creating the organization, as explained in the next section of this documentation.
 
@@ -273,13 +280,14 @@ In the top section of the page, you can view the following information:
 - **Status:** status of the organization. You can set it to **Active**, **On Hold** or **Inactive** by selecting from a list.
 - **Created:** date when the organization was created.
 
-![06-organization-name-status](https://user-images.githubusercontent.com/77292838/159766675-bd899388-7537-427d-af37-fc048aaf8636.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766675-bd899388-7537-427d-af37-fc048aaf8636.png" alt="06-organization-name-status">
 
 ##### Cost Centers
 
 In the **Cost Centers** section, you can view all the cost centers associated with the organization. VTEX Admin users can view and manage cost centers for any organization.
 
-![07-cost-centers](https://user-images.githubusercontent.com/77292838/159766678-0fd6c361-e1e6-470b-a9fc-c98b530c05e9.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766678-0fd6c361-e1e6-470b-a9fc-c98b530c05e9.png" alt="07-cost-centers">
+
 
 > ℹ️ Each organization must have at least one cost center.
 
@@ -312,7 +320,8 @@ This will lead you to the **Cost Center Details** page, where you can:
 - Add a new shipping address associated with the cost center.
 - Delete the cost center
 
-![09-cost-center-details](https://user-images.githubusercontent.com/77292838/159766691-4557a032-a38c-4abb-a5a1-29019b833ad2.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766691-4557a032-a38c-4abb-a5a1-29019b833ad2.png" alt="09-cost-center-details">
+
 
 The optional **Business Document** field may be used to store a Tax ID, VAT ID, CNPJ, or similar business identifier. If a Business Document is present in a user's cost center, it will be applied as the `corporateDocument` in the user's profile and therefore attached to any orders placed by the user.
 
@@ -347,7 +356,8 @@ To add a collection, select the collection you want to add from the **Available*
 
 To remove a collection, select the collection you want to remove from the **Assigned to organization** list and click `Remove from org`.
 
-![10-collections](https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif)
+<img src="pic_trulli.jpg" alt="10-collections">
+![](https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif)
 
 ##### Payment Terms
 
@@ -359,7 +369,8 @@ To add a payment term, select the option you want to add from the **Available** 
 
 To remove a payment term, select the option you want to remove from the **Assigned to organization** list and click `Remove from org`.
 
-![11-payment-terms](https://user-images.githubusercontent.com/77292838/159766697-27de2f5b-18b3-4067-a4f1-81da8fb61bc0.gif)
+<img src="https://user-images.githubusercontent.com/77292838/159766697-27de2f5b-18b3-4067-a4f1-81da8fb61bc0.gif" alt="11-payment-terms">
+
 
 > ℹ️ To customize the checkout according to each organization user's role, you need to install and configure [B2B Checkout Settings](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings).
 
@@ -371,13 +382,15 @@ To add a price table, select the option you want to add from the **Available** l
 
 To remove a price table, select the option you want to remove from the **Assigned to organization** list and click `Remove from org`.
 
-![12-price-tables](https://user-images.githubusercontent.com/77292838/159766700-34ebfaaf-f6fa-42b6-85a9-a83dca5505ef.gif)
+<img src="https://user-images.githubusercontent.com/77292838/159766700-34ebfaaf-f6fa-42b6-85a9-a83dca5505ef.gif" alt="12-price-tables">
+
 
 ##### Users
 
 This section presents a list of users associated with the organization, showing their **Email**, their **Role** in the organization and the **Cost Center** they are associated with.
 
-![13-users-list](https://user-images.githubusercontent.com/77292838/159766707-572dd167-e948-4300-b259-1c9cd0b8a341.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766707-572dd167-e948-4300-b259-1c9cd0b8a341.png" alt="13-users-list">
+
 
 To add a new user to the organization, follow these steps:
 
@@ -389,7 +402,7 @@ To add a new user to the organization, follow these steps:
    - **Role:** role the user will have in the storefront. See more details on the available roles in the [Storefront Permissions documentation](https://developers.vtex.com/docs/guides/vtex-storefront-permissions#available-storefront-roles).
 3. Click on `Add`.
 
-![14-add-new-user](https://user-images.githubusercontent.com/77292838/159766710-4e35973c-880d-4e98-8f93-4a6c87d3f4e8.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766710-4e35973c-880d-4e98-8f93-4a6c87d3f4e8.png" alt="14-add-new-user">
 
 Once you add a new user to the organization, if a customer account did not already exist in your store for the provided email address, it will be created.
 
@@ -404,11 +417,11 @@ To edit or remove an existing user, follow these steps:
 
 3. To apply your changes, click `Save`.
 
-![15-edit-user](https://user-images.githubusercontent.com/77292838/159766713-03778c4a-370a-4c13-be4a-8f507cee0a73.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766713-03778c4a-370a-4c13-be4a-8f507cee0a73.png" alt="15-edit-user">
 
 If a user is removed from an organization, their account will continue to exist in the store, but they will no longer be assigned to an organization, a cost center, and a B2B role. Thus, they will no longer have access to details of their organization in the **My Organization** page. Instead, they will have the ability to [request the creation of a new organization](#request-new-organization), if necessary.
 
-> ℹ️ As an optional feature, you can install the [Admin Customers](https://github.com/vtex/admin-customers) app for additional customer management capabilities on the VTEX Admin.
+>ℹ️ As an optional feature, you can install the [Admin Customers](https://github.com/vtex/admin-customers) app for additional customer management capabilities on the VTEX Admin.
 
 #### Email templates
 
@@ -429,7 +442,8 @@ If you want to view or edit any of these templates, follow the steps below.
 4. Make the desired changes in the template. You can learn more about editing **Message Center** templates by reading our documentation on [How to create and edit transactional email templates](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/335JZKUYgvYlGOJgvJYxRO).
 5. Click on `Save`.
 
-![16-templates](https://user-images.githubusercontent.com/77292838/159766714-6b5feaaf-3d81-472e-a713-55d952a1e556.gif)
+<img src="https://user-images.githubusercontent.com/77292838/159766714-6b5feaaf-3d81-472e-a713-55d952a1e556.gif" alt="16-templates">
+
 
 ### Master Data v2
 
@@ -475,7 +489,7 @@ A B2B user who is not already part of an organization can request the creation o
      - **Receiver:** name of the person that will receive orders in the informed address.
 4. Click `Submit`.
 
-![17-organization-request](https://user-images.githubusercontent.com/77292838/159766733-14da23e9-55d6-44e8-8cfc-95d62e3b4ade.gif)
+<img src="https://user-images.githubusercontent.com/77292838/159766733-14da23e9-55d6-44e8-8cfc-95d62e3b4ade.gif" alt="17-organization-request">
 
 After submitting the form, the request will be sent to a queue for review by the B2B store administrator  for more details on this, refer to the [Organization Requests](#organization-requests) section.
 
@@ -494,7 +508,8 @@ To access **My Organization**, follow the instructions below.
 3. Click on **My Account**.
 4. Go to **My Organization** on the sidebar. You will see the page below.
 
-![18-my-organization](https://user-images.githubusercontent.com/77292838/159766773-4d62c3ed-4282-45a9-bf36-d0041684cc50.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766773-4d62c3ed-4282-45a9-bf36-d0041684cc50.png" alt="18-my-organization">
+
 
 On this page, the user with the **Organization Admin** or **Sales Admin** roles may do the following:
 
@@ -513,7 +528,7 @@ In addition, **Organization Admins** can enable specific payment terms for a cos
 
 >⚠️ This section will only be available on the **My Organization** page if [payment terms](#payment-terms) have previously been assigned to the organization by the VTEX Admin users.
 
-![19-payment-terms-cost-center](https://user-images.githubusercontent.com/77292838/159766775-dd0a17bd-8418-401b-a377-7d4c9ed0cf11.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766775-dd0a17bd-8418-401b-a377-7d4c9ed0cf11.png" alt="19-payment-terms-cost-center">
 
 ##### Manage Users
 
@@ -540,13 +555,14 @@ To use impersonation, users with **Sales** roles or the **Organization Admin** r
 1. In the **Users** section of [My Organization](#my-organization), click on <img src="https://user-images.githubusercontent.com/77292838/159766633-dfcb818f-6bd7-4cd0-92dc-9c682fb50d04.png" width="10" alt-text="00-ellipsis"/> in the row of the user they want to impersonate.
 2. Click on **Impersonate User**.
 
-![20-users](https://user-images.githubusercontent.com/77292838/159766777-1ff83458-cad0-46de-82e4-1e3c3e4bb144.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766777-1ff83458-cad0-46de-82e4-1e3c3e4bb144.png" alt="20-users">
 
 #### User widget
 
 To give storefront users visibility into their currently assigned organization, cost center, and role, this app provides a user widget which can be added to the account's store theme:
 
-![21-user-widget](https://user-images.githubusercontent.com/77292838/159766781-8edabb7e-292c-4c8e-a88e-ae937ec7db86.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766781-8edabb7e-292c-4c8e-a88e-ae937ec7db86.png" alt="21-user-widget">
+
 
 > ℹ️ To display the user widget, it is necessary to follow the instructions in the [User widget configuration](#user-widget-configuration) section.
 
@@ -554,4 +570,5 @@ If users click `Manage organization`, they can access the **My Organization** pa
 
 In case impersonation is currently active, this block will also show the email of the user being impersonated, as well as a `Stop impersonation` button:
 
-![22-user-widget-impersonation](https://user-images.githubusercontent.com/77292838/159766784-6bce63af-9cc6-4ac4-bc59-460b74722dbe.png)
+<img src="https://user-images.githubusercontent.com/77292838/159766784-6bce63af-9cc6-4ac4-bc59-460b74722dbe.png" alt="22-user-widget-impersonation">
+
