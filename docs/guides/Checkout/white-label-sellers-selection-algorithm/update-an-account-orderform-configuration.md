@@ -47,12 +47,15 @@ See a request body example below:
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n     \"paymentConfiguration\": {\n          \"requiresAuthenticationForPreAuthorizedPaymentOption\": true\n     },\n     \"recaptchaValidation\": \"vtexCriteria\",\n     \"minimumValueAccumulated\": 5,\n     \"maxNumberOfWhiteLabelSellers\": 2,\n     \"maskFirstPurchaseData\": false,\n     \"decimalDigitsPrecision\": 2,\n     \"minimumQuantityAccumulatedForItems\": 8\n}",
-      "language": "json"
-    }
-  ]
+    "paymentConfiguration": {
+        "requiresAuthenticationForPreAuthorizedPaymentOption": true
+    },
+    "recaptchaValidation": "vtexCriteria",    
+    "minimumValueAccumulated": 5,
+    "maxNumberOfWhiteLabelSellers": 2,
+    "maskFirstPurchaseData": false,
+    "decimalDigitsPrecision": 2,
+    "minimumQuantityAccumulatedForItems": 8    
 }
 ```
 
@@ -69,12 +72,13 @@ The following errors may appear as a message in the response body.
 
 ```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD062\",\n        \"message\": \"Unauthorized\",\n        \"exception\": null\n    },\n    \"operationId\": \"8ec4b686-435f-42ab-8cfd-89306f888c3c\"\n}",
-      "language": "json"
-    }
-  ]
+    "fields": {},
+    "error": {
+        "code": "ORD062",
+        "message": "Unauthorized",
+        "exception": null
+    },
+    "operationId": "8ec4b686-435f-42ab-8cfd-89306f888c3c"
 }
 ```
 
@@ -82,13 +86,9 @@ The following errors may appear as a message in the response body.
 
 - **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
 
-```json
-{
-  "codes": [
-    {
-      "code": "<body>\n\t<h1>404 Not Found</h1>\n\t<p>The requested URL was not found on this server.</p>\n</body>",
-      "language": "json"
-    }
-  ]
-}
+```html
+<body>
+	<h1>404 Not Found</h1>
+	<p>The requested URL was not found on this server.</p>
+</body>
 ```
