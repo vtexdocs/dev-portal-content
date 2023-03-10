@@ -33,8 +33,8 @@ Additionally, you can submit the following information to modify your account's 
 - `decimalDigitsPrecision`: number of price digits.
 - `minimumValueAccumulated`: minimum cart value.
 - `apps`: apps configuration information.
-         - `id`: app ID.
          - `fields`: app fields information.
+         - `id`: app ID.
          - `major`: app major version.
 
 - `allowMultipleDeliveries`: allows the selection of items from several delivery channels in the same purchase.
