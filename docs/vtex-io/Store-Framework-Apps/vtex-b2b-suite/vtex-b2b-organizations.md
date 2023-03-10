@@ -32,7 +32,6 @@ To enable the [user widget](#user-widget) in your storefront, this app provides 
 
  <img src="https://user-images.githubusercontent.com/77292838/159766647-a8d22a55-61da-4169-a1be-1072a4ca8d73.png">
 
-
 Follow the instructions below to display the user widget.
 
 1. Open your store theme app's repository in your local files.
@@ -74,12 +73,11 @@ Follow the instructions below to display the user widget.
 If we have only one associated organization:
  <img src="https://i.imgur.com/5yXFU6y.png">
 
-
 If we have more than one associated organization:
  <img src="https://i.imgur.com/ScQtfIz.png">
 
-
 ### `b2b-user-widget`
+
 | Prop name                  | Type                              | Description                                                                                                             | Default value |
 | -------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `showDropdown`               | `Boolean`                          | controls whether we are viewing the dropdown if we have more than one organization associated with the same email.                  | `true`          |
@@ -197,7 +195,6 @@ In this page, they can view a list of all the organization requests placed in th
 
  <img src="https://user-images.githubusercontent.com/77292838/159766650-d989a5bc-a33b-4fee-9e60-76f26567b067.png" alt="02-organization-requests">
 
-
 Each organization can have a status of **pending**, **approved** or **declined**. Pending requests are the ones that still need review.
 
 To review a request, you must:
@@ -207,7 +204,6 @@ To review a request, you must:
 3. Click on `Approve` or `Decline`.
 
 <img src="https://user-images.githubusercontent.com/77292838/159766653-ba4f6d4b-4bda-4856-86a3-0080f8d22e1e.png" alt="03-manage-organization-request">
-
 
 Upon approval, the request status will change to **Approved** and the organization will be created. The [Organization Admin and the Sales Admins](https://developers.vtex.com/docs/guides/vtex-storefront-permissions#available-storefront-roles) will be notified about this via email. You can learn more about this notification in the [Email templates](#email-templates) section. In addition, the user designated as the Organization Admin will be granted access to the [My Organization](#my-organization) tab on the **My Account** page of your storefront.
 
@@ -223,7 +219,6 @@ The **Organizations** page includes a list of all the organizations created in y
 To access the page, go to **Account Settings** > **B2B Organizations & Cost Centers** > **Organizations** in the VTEX Admin (or at `/admin/b2b-organizations/organizations`).
 
 <img src="https://user-images.githubusercontent.com/77292838/159766661-63f7191a-51c4-49d7-a34d-d909456f2692.png" alt="04-organizations">
-
 
 You can click `Refetch` to refresh the organizations list on this page, fetching information about recently created organizations.
 
@@ -253,7 +248,6 @@ You can manually create a new organization on the **Organizations** page. Follow
 3. Click on `Add`.
 
 <img src="https://user-images.githubusercontent.com/77292838/159766663-e1b2005a-0c2d-4bec-84ad-612007f17d64.gif" alt="05-add-organization">
-
 
 > ℹ️ Additional cost centers and addresses may be added after creating the organization, as explained in the next section of this documentation.
 
@@ -288,7 +282,6 @@ In the **Cost Centers** section, you can view all the cost centers associated wi
 
 <img src="https://user-images.githubusercontent.com/77292838/159766678-0fd6c361-e1e6-470b-a9fc-c98b530c05e9.png" alt="07-cost-centers">
 
-
 > ℹ️ Each organization must have at least one cost center.
 
 By default, each cost center will allow all of the [payment terms](#payment-terms) that have been assigned to the parent organization. However, **Organization Admin** users have the ability to enable or disable individual payment terms at the cost center level. See [Manage Cost Centers](#manage-cost-centers) for more information on this.
@@ -321,7 +314,6 @@ This will lead you to the **Cost Center Details** page, where you can:
 - Delete the cost center
 
 <img src="https://user-images.githubusercontent.com/77292838/159766691-4557a032-a38c-4abb-a5a1-29019b833ad2.png" alt="09-cost-center-details">
-
 
 The optional **Business Document** field may be used to store a Tax ID, VAT ID, CNPJ, or similar business identifier. If a Business Document is present in a user's cost center, it will be applied as the `corporateDocument` in the user's profile and therefore attached to any orders placed by the user.
 
@@ -356,7 +348,7 @@ To add a collection, select the collection you want to add from the **Available*
 
 To remove a collection, select the collection you want to remove from the **Assigned to organization** list and click `Remove from org`.
 
-<img src="pic_trulli.jpg" alt="10-collections">
+<img src="https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif" alt="10-collections">
 ![](https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif)
 
 ##### Payment Terms
@@ -371,7 +363,6 @@ To remove a payment term, select the option you want to remove from the **Assign
 
 <img src="https://user-images.githubusercontent.com/77292838/159766697-27de2f5b-18b3-4067-a4f1-81da8fb61bc0.gif" alt="11-payment-terms">
 
-
 > ℹ️ To customize the checkout according to each organization user's role, you need to install and configure [B2B Checkout Settings](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings).
 
 ##### Price Tables
@@ -384,13 +375,11 @@ To remove a price table, select the option you want to remove from the **Assigne
 
 <img src="https://user-images.githubusercontent.com/77292838/159766700-34ebfaaf-f6fa-42b6-85a9-a83dca5505ef.gif" alt="12-price-tables">
 
-
 ##### Users
 
 This section presents a list of users associated with the organization, showing their **Email**, their **Role** in the organization and the **Cost Center** they are associated with.
 
 <img src="https://user-images.githubusercontent.com/77292838/159766707-572dd167-e948-4300-b259-1c9cd0b8a341.png" alt="13-users-list">
-
 
 To add a new user to the organization, follow these steps:
 
@@ -443,7 +432,6 @@ If you want to view or edit any of these templates, follow the steps below.
 5. Click on `Save`.
 
 <img src="https://user-images.githubusercontent.com/77292838/159766714-6b5feaaf-3d81-472e-a713-55d952a1e556.gif" alt="16-templates">
-
 
 ### Master Data v2
 
@@ -510,7 +498,6 @@ To access **My Organization**, follow the instructions below.
 
 <img src="https://user-images.githubusercontent.com/77292838/159766773-4d62c3ed-4282-45a9-bf36-d0041684cc50.png" alt="18-my-organization">
 
-
 On this page, the user with the **Organization Admin** or **Sales Admin** roles may do the following:
 
 - [Manage Cost Centers](#manage-cost-centers)
@@ -563,7 +550,6 @@ To give storefront users visibility into their currently assigned organization, 
 
 <img src="https://user-images.githubusercontent.com/77292838/159766781-8edabb7e-292c-4c8e-a88e-ae937ec7db86.png" alt="21-user-widget">
 
-
 > ℹ️ To display the user widget, it is necessary to follow the instructions in the [User widget configuration](#user-widget-configuration) section.
 
 If users click `Manage organization`, they can access the **My Organization** page directly.
@@ -571,4 +557,3 @@ If users click `Manage organization`, they can access the **My Organization** pa
 In case impersonation is currently active, this block will also show the email of the user being impersonated, as well as a `Stop impersonation` button:
 
 <img src="https://user-images.githubusercontent.com/77292838/159766784-6bce63af-9cc6-4ac4-bc59-460b74722dbe.png" alt="22-user-widget-impersonation">
-
