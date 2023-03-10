@@ -56,7 +56,24 @@ See a request body example below:
     "maxNumberOfWhiteLabelSellers": 2,
     "maskFirstPurchaseData": false,
     "decimalDigitsPrecision": 2,
-    "minimumQuantityAccumulatedForItems": 8    
+    "minimumQuantityAccumulatedForItems": 8,
+    "apps": [
+        {
+            "fields": [
+                "gender",
+                "age"
+            ],
+            "id": "profile",
+            "major": 1
+        },
+        {
+            "fields": [
+                "address"
+            ],
+            "id": "address",
+            "major": 1
+        }
+  ]
 }
 ```
 
