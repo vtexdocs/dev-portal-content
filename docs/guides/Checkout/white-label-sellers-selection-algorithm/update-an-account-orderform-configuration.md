@@ -18,6 +18,7 @@ To update an account orderForm configuration, you need to use the [Update orderF
 `https://{accountName}.{environment.com.br}/api/checkout/pvt/configuration/orderForm`
 
 Additionally, you can submit the following information to modify your account's orderForm configuration:
+
 - `paymentConfiguration`: payment configuration information.
          - `requiresAuthenticationForPreAuthorizedPaymentOption`: determines whether pre-authorized payments require authentication. This field is mandatory and must be sent in all requests.
          - `allowInstallmentsMerge`: when in a multi-seller purchase scenario, it allows a flexible installment option that considers maximum installments for each seller, according to their respective configuration options.
