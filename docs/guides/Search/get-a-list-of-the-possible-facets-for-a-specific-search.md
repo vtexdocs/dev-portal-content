@@ -52,4 +52,3 @@ All information is synced with the Catalog. Therefore, if a specification is con
   }
 }
 ```
-
