@@ -307,7 +307,7 @@ To create a new cost center, follow the steps below.
    - **Receiver:** name of the person that will receive orders in the informed address.
 3. Click on `Add`.
 
-![08-add-cost-center](https://user-images.githubusercontent.com/77292838/159766680-5eb39381-a7da-4278-b8da-8cc7efe3e90a.gif)
+<img src="https://user-images.githubusercontent.com/77292838/159766680-5eb39381-a7da-4278-b8da-8cc7efe3e90a.gif" alt="08-add-cost-center">
 
 ##### Cost Center Details
 
@@ -356,8 +356,7 @@ To add a collection, select the collection you want to add from the **Available*
 
 To remove a collection, select the collection you want to remove from the **Assigned to organization** list and click `Remove from org`.
 
-<img src="pic_trulli.jpg" alt="10-collections">
-![](https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif)
+<img src="https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif" alt="10-collections">
 
 ##### Payment Terms
 
