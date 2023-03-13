@@ -84,7 +84,7 @@ In our architecture, each stakeholder is responsible for a part of the [order fl
 
 ## Payment conditions & commissioning
 
-In our architecture, the marketplace is usually responsible for defining the payment conditions it will offer and the commission fees they will charge from sellers. If after negotiations, the marketplace decides to process payments, no development is needed from the seller. However, brazilian businesses can process payments, if agreed with the marketplace. Know more in [External seller processing payments](https://developers.vtex.com/vtex-rest-api/docs/external-seller-processing-payments) if that's the case.
+In our architecture, the marketplace is usually responsible for defining the payment conditions it will offer and the commission fees they will charge from sellers. If after negotiations, the marketplace decides to process payments, no development is needed from the seller. However, brazilian businesses can process payments, if agreed with the marketplace. Know more in [External seller processing payments](https://developers.vtex.com/docs/guides/external-seller-processing-payments) if that's the case.
 
 |     Who     |                                    What                                    |
 |:-----------:|:--------------------------------------------------------------------------:|

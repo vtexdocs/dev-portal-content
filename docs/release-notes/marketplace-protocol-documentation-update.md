@@ -19,8 +19,8 @@ For the [External Marketplace integration guide](https://developers.vtex.com/vte
 For the [External Marketplace API Reference](https://developers.vtex.com/vtex-rest-api/reference/external-marketplace), we have improved fields and endpoint descriptions, adding more details around the use of each call.
 
 We also  added the following endpoints, as a part of the [Product and Category Mappings](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-catalog-mapping) section:
-[VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration)
-[Send Category Mapping to VTEX Mapper](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper)
+[VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register)
+[Send Category Mapping to VTEX Mapper](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-)
 
 ## External Seller
 
@@ -31,5 +31,5 @@ For the  [External Seller integration guide](https://developers.vtex.com/vtex-re
 You can also check out our [External Seller API Reference](https://developers.vtex.com/vtex-rest-api/reference/external-seller), where we have improved fields and descriptions in the following endpoints:
 
 - [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation)  
-- [Cancel Order in Marketplace](https://developers.vtex.com/vtex-rest-api/reference/cancel-order-in-marketplace)
-- [Marketplace Order Cancellation](https://developers.vtex.com/vtex-rest-api/reference/marketplace-order-cancellation)
+- [Cancel Order in Marketplace](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/cancel)
+- [Marketplace Order Cancellation](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-orderId-/cancel)

@@ -10,10 +10,10 @@ In this section, you will find the endpoints involved in the VTEX integration be
 [block:parameters]
 {
   "data": {
-    "0-0": "[VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration)",
-    "1-0": "[Send Category Mapping to VTEX Mapper](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper)",
-    "2-0": "[Place fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order)",
-    "3-0": "[Authorize dispatch for fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/authorize-dispatch-for-fulfillment-order)",
+    "0-0": "[VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register)",
+    "1-0": "[Send Category Mapping to VTEX Mapper](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-)",
+    "2-0": "[Place fulfillment order](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders)",
+    "3-0": "[Authorize dispatch for fulfillment order](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders/-orderId-/fulfill)",
     "h-0": "Request",
     "h-1": "From",
     "h-2": "To",

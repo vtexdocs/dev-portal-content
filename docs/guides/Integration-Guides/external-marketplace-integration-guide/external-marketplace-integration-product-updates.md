@@ -52,7 +52,7 @@ Fields sent in the notification:
    e. Validate if the product is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
    f. Identify whether the SKU conforms to the marketplace’s product registration rules.
    g. Validate if the product’s category is mapped in the marketplace.\
-   In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) is complete.
+   In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-) is complete.
    h. Use [Fulfillment Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy.
 
 If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/docs/guides/external-marketplace-integration-logs) section.
