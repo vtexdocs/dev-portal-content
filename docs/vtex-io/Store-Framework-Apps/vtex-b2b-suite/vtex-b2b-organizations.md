@@ -348,8 +348,7 @@ To add a collection, select the collection you want to add from the **Available*
 
 To remove a collection, select the collection you want to remove from the **Assigned to organization** list and click `Remove from org`.
 
-<img src="https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif" alt="10-collections">
-![](https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif)
+<img src="https://user-images.githubusercontent.com/77292838/159766692-aec018f6-d09b-4290-a180-a0e2b7040295.gif"/>
 
 ##### Payment Terms
 
@@ -361,7 +360,7 @@ To add a payment term, select the option you want to add from the **Available** 
 
 To remove a payment term, select the option you want to remove from the **Assigned to organization** list and click `Remove from org`.
 
-<img src="https://user-images.githubusercontent.com/77292838/159766697-27de2f5b-18b3-4067-a4f1-81da8fb61bc0.gif" alt="11-payment-terms">
+<img src="https://user-images.githubusercontent.com/77292838/159766697-27de2f5b-18b3-4067-a4f1-81da8fb61bc0.gif" alt="11-payment-terms"/>
 
 > ℹ️ To customize the checkout according to each organization user's role, you need to install and configure [B2B Checkout Settings](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings).
 
@@ -373,13 +372,13 @@ To add a price table, select the option you want to add from the **Available** l
 
 To remove a price table, select the option you want to remove from the **Assigned to organization** list and click `Remove from org`.
 
-<img src="https://user-images.githubusercontent.com/77292838/159766700-34ebfaaf-f6fa-42b6-85a9-a83dca5505ef.gif" alt="12-price-tables">
+<img src="https://user-images.githubusercontent.com/77292838/159766700-34ebfaaf-f6fa-42b6-85a9-a83dca5505ef.gif" alt="12-price-tables"/>
 
 ##### Users
 
 This section presents a list of users associated with the organization, showing their **Email**, their **Role** in the organization and the **Cost Center** they are associated with.
 
-<img src="https://user-images.githubusercontent.com/77292838/159766707-572dd167-e948-4300-b259-1c9cd0b8a341.png" alt="13-users-list">
+<img src="https://user-images.githubusercontent.com/77292838/159766707-572dd167-e948-4300-b259-1c9cd0b8a341.png" alt="13-users-list"/>
 
 To add a new user to the organization, follow these steps:
 
