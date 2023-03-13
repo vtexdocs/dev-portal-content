@@ -605,4 +605,3 @@ To get a product list for a search term, you must use the [Get list of products 
   "translated": false
 }
 ```
-
