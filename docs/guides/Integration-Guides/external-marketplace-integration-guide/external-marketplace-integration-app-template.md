@@ -18,13 +18,13 @@ An integration app created from our App Template already includes:
   - Field to inform the email that will receive notifications about changes in the affiliate
   - Callback URL used by the VTEX notification system
   - Field for the [sales channel](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) ID
-  - Fields included in the [sales channel form](https://help.vtex.com/en/tutorial/o-que-e-uma-politica-comercial--563tbcL0TYKEKeOY4IAgAE#filling-in-the-fields)
+  - Fields included in the [sales channel form](https://help.vtex.com/en/tutorial/creating-a-trade-policy--563tbcL0TYKEKeOY4IAgAE#filling-in-the-fields)
   - Save Settings button
 - **Custom settings page** containing:
   - Button to activate/deactivate [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl)
 - Complete **search endpoint** to retrieve seller configurations using [AppKey and AppToken](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) generated in the seller’s account, defined by the appVendor.
 - **Feed creation mechanism in [Offer Management](https://help.vtex.com/tutorial/anuncios-enviados-beta--6yg2CBv5Z5AnD0qS0cw2sa)**, that allows the connector to interact with Offer Management for generating logs.
-- **Link to [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration)**, allowing sellers to map their catalog according to the marketplace’s definitions
+- **Link to [VTEX Mapper Registration**](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register), allowing sellers to map their catalog according to the marketplace’s definitions.
 
 ## Before you start
 
@@ -173,7 +173,7 @@ DefaultConfigs is where the mandatory fields for all apps are included. This sec
 - Input field showing the connector's endpoint, for notifying product and order updates occurred in VTEX.
 - Input field for sellers to fill in the email registered as the affiliate.
 - Button leading to the account's Affiliate page.
-- Selection box showing a list of countries, currencies, time zones and other [information](https://help.vtex.com/en/tutorial/o-que-e-uma-politica-comercial--563tbcL0TYKEKeOY4IAgAE) registered in the [sales channels](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) that the seller has set up in their account. This way, sellers can create or edit their sales channel information directly through the Default Configs page.
+- Selection box showing a list of countries, currencies, time zones and other [information](https://help.vtex.com/en/tutorial/creating-a-trade-policy--563tbcL0TYKEKeOY4IAgAE) registered in the [sales channels](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) that the seller has set up in their account. This way, sellers can create or edit their sales channel information directly through the Default Configs page.
 - Field showing the sales channel's name used for the marketplace, with a button leading to the VTEX account's Sales channels page. This becomes available after the initial set up of the fields listed above.
 
 #### CustomConfigs
@@ -182,7 +182,7 @@ The CustomConfigs section is where you find configurations that come as default 
 
 ##### Removing VTEX Mapper
 
-You can remove [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration) from the app, if the integration does not require mapping categories, or the partner already has a solution for mapping catalog architecture. To remove VTEX Mapper, on the `admin/navigation.json`, remove file the object that defines the Mapper endpoint in the Admin:
+You can remove [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register) from the app, if the integration does not require mapping categories, or the partner already has a solution for mapping catalog architecture. To remove VTEX Mapper, on the `admin/navigation.json`, remove file the object that defines the Mapper endpoint in the Admin:
 
 [block:code]
 {
@@ -198,7 +198,7 @@ You can remove [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-
 
 ##### Removing Offer Management
 
-You can remove [Offer Management](https://help.vtex.com/tutorial/anuncios-enviados-beta--6yg2CBv5Z5AnD0qS0cw2sa) from the app, If your integration already includes a solution to generate logs for offers. To remove Offer Management, on the `node/resolvers/saveConfig.ts` file (line 15), remove the feed’s creation in Sent Offers:
+You can remove [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) from the app, If your integration already includes a solution to generate logs for offers. To remove Offer Management, on the `node/resolvers/saveConfig.ts` file (line 15), remove the feed’s creation in Sent Offers:
 
 [block:code]
 {

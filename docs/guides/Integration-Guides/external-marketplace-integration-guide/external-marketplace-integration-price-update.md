@@ -59,7 +59,7 @@ Follow the steps below to maintain prices updated in the marketplace integration
    e. Validate if the product is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
    f. Identify whether the SKU conforms to the marketplace’s product registration rules.
    g. Validate if the product’s category is mapped in the marketplace.\
-   In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) is complete.
+   In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-) is complete.
    h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price is configured in the selected trade policy.
    - To collect the product’s price, use the `price` attribute.
    - To collect the sales price configured for that trade policy, use the attribute `salesprice`.

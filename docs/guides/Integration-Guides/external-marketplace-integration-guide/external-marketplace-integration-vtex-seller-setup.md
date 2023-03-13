@@ -18,7 +18,7 @@ This article explains what must be done to complete each of these configuration 
 
 ## Define channel settings
 
-[Trade policies](https://help.vtex.com/en/tutorial/o-que-e-uma-politica-comercial--563tbcL0TYKEKeOY4IAgAE) are used in VTEX to group catalog, pricing, promotions, inventory, shipping and payments settings for different sales channels. The sections that follow describe where you can use trade policies in each of these modules.
+[Trade policies](https://help.vtex.com/en/tutorial/creating-a-trade-policy--563tbcL0TYKEKeOY4IAgAE) are used in VTEX to group catalog, pricing, promotions, inventory, shipping and payments settings for different sales channels. The sections that follow describe where you can use trade policies in each of these modules.
 
 Once all the channel settings that should be applied to the marketplace are grouped under a single trade policy, take note of the trade policy ID before you move on to the next step.
 [block:callout]

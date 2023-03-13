@@ -11,7 +11,7 @@ This guide will describe how to remove all personal data from a shopping cart by
 
 ## Getting and accessing shopping cart information
 
-The first step is to get the `orderFormId` and access the shopping cart information that you want to remove personal data. For more information, access the [Get cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.
+The first step is to get the `orderFormId` and access the shopping cart information that you want to remove personal data. For more information, access the [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id) guide.
 
 See below an example of some personal data contained in a shopping cart:
 
@@ -61,7 +61,7 @@ See below an example of some personal data contained in a shopping cart:
 
 > ℹ️️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 
-## Removing all personal data from the shopping cart 
+## Removing all personal data from the shopping cart
 
 To remove all personal data from a shopping cart, you can use your browser to create an URL based on the  `orderFormId` value. See an example below:
 
@@ -72,11 +72,4 @@ After accessing the URL created in your browser, you will be redirected to the c
 
 **Important**: The page with the cart without personal information is displayed, because when the URL is accessed, a new orderForm is generated and a new cookie is saved in the browser.
 
-
-
-[block:callout]
-{
-  "type": "warning",
-  "body": "Alternatively, if you are using a backend or similar implementation, it is also possible to create a new cart (without any personal data) using the [Create a new Cart](https://developers.vtex.com/vtex-rest-api/reference/createanewcart) endpoint and adding the same items from the previous cart through the [Update cart items](https://developers.vtex.com/vtex-rest-api/reference/itemsupdate)."
-}
-[/block]
+>⚠️ Alternatively, if you are using a backend or similar implementation, it is also possible to create a new cart (without any personal data) using the [Get current or create a new Cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint and adding the same items from the previous cart through the [Update cart items](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/update).

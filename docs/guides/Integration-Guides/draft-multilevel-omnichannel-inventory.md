@@ -93,7 +93,7 @@ The setup for Multilevel Omnichannel Inventory must be made by the marketplace i
 
 To configure Multilevel Omnichannel Inventory via REST API:
 
-1. The marketplace must call the endpoint [Configure Seller Account](https://developers.vtex.com/vtex-rest-api/reference/upsertsellerrequest).
+1. The marketplace must call the endpoint [Configure Seller Account](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/seller-register/pvt/sellers).
 
 2. Fill the `fulfillmentEndpoint` field with the seller's checkout endpoint, following the example below:
 
@@ -378,7 +378,7 @@ The marketplace must implement the endpoint below, to receive the cancel notific
 
 ### Order Invoice Notification
 
-The marketplace must implement this endpoint for the chain order to inform it about the order invoice. Check out our [Order Invoice Notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification) to know more details.
+The marketplace must implement this endpoint for the chain order to inform it about the order invoice. Check out our [Order Invoice Notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) to know more details.
 
 - Method: POST
 - URL: `{marketplaceServiceEndpoint}/api/oms/pvt/orders/{orderId}/invoice`

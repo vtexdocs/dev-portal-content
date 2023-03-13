@@ -1,0 +1,12 @@
+---
+title: "Endpoint renamed and updated: Get sellers by region"
+slug: "endpoint-renamed-and-updated-get-sellers-by-region"
+hidden: false
+createdAt: ""
+updatedAt: ""
+type: "improved"
+excerpt: "The Get sellers by region endpoint has been renamed and updated, including new query parameters to get a list of white label sellers for a specific location."
+---
+The "Get sellers by region" endpoint has been renamed to "Get sellers by region and address". From now on, in addition to the `regionId` path parameter, you can use three query parameters (`country`, `postal Code` and `geo Coordinates`) to get a list of White label sellers in your store serving a given delivery region or address.
+
+For more information, access the [API Reference](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/regions/-regionId-) or [Quick Start Guide](https://developers.vtex.com/docs/guides/get-sellers-by-region-or-address).

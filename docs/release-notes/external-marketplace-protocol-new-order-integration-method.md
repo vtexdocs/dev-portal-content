@@ -11,7 +11,7 @@ excerpt: "We have released a new method for integrating orders from external mar
 
 We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. For the new method, we have developed two new endpoints:
 
-- <span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> [New Order Integration API Reference](https://developers.vtex.com/vtex-rest-api/reference/new-order-integration)
+- <span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> [New Order Integration API Reference](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders)
 - <span class="APIMethod APIMethod_fixedWidth APIMethod_put">put</span> [Update Order Status API Reference](https://developers.vtex.com/vtex-rest-api/reference/update-order-status)
 
 You can learn more about their implementation and use case scenarios in the following articles:

@@ -17,6 +17,6 @@ The action is performed in the marketplace's management panel. Read the article 
 
 The sellers' SKUs are not added directly to the marketplace's catalog. Instead, there is an approval step for each new SKU, which is done by the marketplace in its management panel.
 
-New SKUs are sent by the seller as suggestions, as explained in the section [External Seller Connector](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector). Each suggestion is approved or denied by the marketplace in the Received SKUs panel, which can be done individually or in bulk.
+New SKUs are sent by the seller as suggestions, as explained in the section [External Seller Connector](https://developers.vtex.com/docs/guides/external-seller-integration-connector). Each suggestion is approved or denied by the marketplace in the Received SKUs panel, which can be done individually or in bulk.
 
 To learn more about how to manage suggestions, read our documentation about [Cataloging received SKUs](https://help.vtex.com/tutorial/manual-sku-cataloging--tutorials_396).
