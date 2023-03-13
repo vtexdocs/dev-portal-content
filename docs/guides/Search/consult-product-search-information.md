@@ -6,7 +6,7 @@ createdAt: "2022-10-14T21:11:36.747Z"
 updatedAt: "2022-11-02T14:39:45.843Z"
 ---
 
-It is essential to understand the products searched in your store to present personalized marketing information to shoppers. You can use the [Intelligent Search API](https://developers.vtex.com/vtex-rest-api/reference/intelligent-search-api-overview), as detailed in the following sections, to gather information about shoppers’ product searches. This way, you can create [synonyms](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) or [banners](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) that include common searches on your store.
+It is essential to understand the products searched in your store to present personalized marketing information to shoppers. You can use the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview), as detailed in the following sections, to gather information about shoppers’ product searches. This way, you can create [synonyms](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) or [banners](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) that include common searches on your store.
 
 
 ## Get a list of suggested terms for a search term
