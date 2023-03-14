@@ -66,7 +66,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 ### Creating new events
 
 1. Open your account Admin using your browser.
-2. In the Store Setup section, access `**Live Shopping**`.
+2. In the Store Setup section, access `Live Shopping`.
 3. Click on `Events`.
 4. Click on the `New` button to schedule a new live shopping on your website.
 
@@ -92,7 +92,7 @@ Once you have [installed the VTEX Live Shopping app](#installation), access your
 
 > ⚠️ The event will take approximately 3 minutes to turn on, i.e., be live.
 
-4. Using the admin sidebar, access `CMS` and then `**Site Editor**`.
+4. Using the admin sidebar, access `CMS` and then `Site Editor`.
 5. Locate the Live Shopping block in your store, according to the template you have declared it, and click on it.
 
 ![site-editor-configs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexventures-livestreaming-6.png)
