@@ -11,6 +11,5 @@ VTEX now offers one of the most popular payment methods in Colombia, the PSE (Pa
 
 Learn more:
 
-[PSE Payment Method - Dev Portal](https://developers.vtex.com/docs/guides/pse-payment-method)
-
-[Configuring the PSE payment method](https://help.vtex.com/en/tutorial/setting-up-payments-with-pse--7dRChubn7TqdEyWrHQEQp6)
+- [PSE Payment Method - Dev Portal](https://developers.vtex.com/docs/guides/pse-payment-method)
+- [Configuring the PSE payment method](https://help.vtex.com/en/tutorial/setting-up-payments-with-pse--7dRChubn7TqdEyWrHQEQp6)
