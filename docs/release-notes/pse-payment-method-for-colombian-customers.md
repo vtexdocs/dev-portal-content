@@ -1,7 +1,7 @@
 ---
 slug: "pse-payment-method-for-colombian-customers"
 title: "PSE: Payment method for Colombian customers"
-excerpt: "Now, you can configure the PSE payment method in your store."
+excerpt: "Now you can configure the PSE payment method in your store."
 createdAt: 2023-03-14T12:00:00.000Z
 hidden: false
 type: "added"
