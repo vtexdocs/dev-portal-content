@@ -59,7 +59,7 @@ _Still with us? I hope so, my friend, because our team wasn't fooling around in 
 
 - **Query strings in the Store Link's URLs** - Say hello to query string attributes in the [Store Link](https://developers.vtex.com/docs/apps/vtex.store-link@0.5.1/) blocks! These are now allowed in the URLs used by the component.
 
-- **Event Configurations** - In the [Release Notes for March](https://vtex.io/docs/releases/2020-03/README/), we announced that the Configurations builder allows you to [develop service configuration apps](https://vtex.io/docs/recipes/development/developing-service-configuration-apps/) mainly through routes. Now, the Builder also works with events, which means that you can use the last one to add configurations in your service app.
+- **Event Configurations** - In the [Release Notes for March](https://vtex.io/docs/releases/2020-03/README/), we announced that the Configurations builder allows you to [develop service configuration apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps) mainly through routes. Now, the Builder also works with events, which means that you can use the last one to add configurations in your service app.
 
 - **`product-spot-price` block** - The [Product Prices app](https://developers.vtex.com/docs/apps/vtex.product-price) just got lucky and gained a new block responsible for rendering the product spot price (the `product-spot-price`) if this price differs from the product selling price.
 
@@ -69,7 +69,7 @@ _Still with us? I hope so, my friend, because our team wasn't fooling around in 
 
 ## Removals ⛔
 
-- **`vtex install` command** - The `vtex install` command underwent changes to improve the installation flow of apps: now, whenever both version's major and minor have been defined through the command, you'll need to also define the desired patch, meaning that commands such as `vtex install vtex.render-server@8.0.x` won't be able to install the app. To know more about how to properly install an app using Toolbelt, check out our documentation on [installing an app](https://vtex.io/docs/recipes/development/installing-an-app/).
+- **`vtex install` command** - The `vtex install` command underwent changes to improve the installation flow of apps: now, whenever both version's major and minor have been defined through the command, you'll need to also define the desired patch, meaning that commands such as `vtex install vtex.render-server@8.0.x` won't be able to install the app. To know more about how to properly install an app using Toolbelt, check out our documentation on [installing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/).
 
 ## Notable bug fixes 🐛
 

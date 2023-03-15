@@ -13,7 +13,7 @@ The Store Locator app fetches the Pickup point data in order to display address 
 
 ## Configuration
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the Store Locator app in your VTEX account by running `vtex install vtex.store-locator` in your terminal.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the Store Locator app in your VTEX account by running `vtex install vtex.store-locator` in your terminal.
 2. In your account's admin page, select **Inventory & Shipping** section and then access **Settings**.
 3. Type in the Google Geolocation API key and save your changes.
 4. Open your Store Theme app directory in your code editor.

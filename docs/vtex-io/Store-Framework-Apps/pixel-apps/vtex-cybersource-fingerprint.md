@@ -10,7 +10,7 @@ This app setup the CyberSource Fingerprint in the store order placed page follow
 
 ## Configuration
 
-1. [Installing the app](https://vtex.io/docs/recipes/store/installing-an-app) running:
+1. [Installing the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) running:
 
 ```sh
 vtex install vtex.cybersource-fingerprint

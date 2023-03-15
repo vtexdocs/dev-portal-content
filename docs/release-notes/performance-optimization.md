@@ -10,4 +10,4 @@ type: "improved"
 
 If there is one thing that everyone dreams about is performance optimization! With that in mind, the VTEX IO team has prepared a bunch of new configs for you, such as *Fetching filters partially* and *Improving download speed with CSS concatenation*.
 
-The best part is that they are just a couple of clicks away from you: check out now the [Improving your store's performance documentation](https://vtex.io/docs/recipes/store-management/improving-your-stores-performance/)!
+The best part is that they are just a couple of clicks away from you: check out now the [Improving your store's performance documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance)!

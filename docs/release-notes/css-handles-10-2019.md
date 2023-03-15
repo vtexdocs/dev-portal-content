@@ -46,4 +46,4 @@ This store customization practice, in addition to being vulnerable, will soon be
 
 **No action** for this release is warranted on your side. This improvement is already available to all VTEX IO native components users. 
 
-For further information, access our documentation on [how to use CSS Handles to customize stores](https://vtex.io/docs/recipes/layout/using-css-handles-for-store-customization).
+For further information, access our documentation on [how to use CSS Handles to customize stores](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).

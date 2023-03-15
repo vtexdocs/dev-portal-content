@@ -23,4 +23,4 @@ For example: the former Carousel only accepted one image per slide. Given its ne
 
 We recommend the use of Slider Layout and lists for new stores as well as for those already live, since bug support for the `carousel` block is winding down as more stores adopt the component's new configuration.
 
-For more on how to adapt your store to this release, access our documentation on [**how to build a carousel component using list blocks and the Slider Layout**](https://vtex.io/docs/recipes/layout/building-a-carousel-through-lists-and-slider-layout).
+For more on how to adapt your store to this release, access our documentation on [**how to build a carousel component using list blocks and the Slider Layout**](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout).

@@ -21,7 +21,7 @@ Flixmedia first party integration app. The [solution](https://flixmedia.eu/) enh
 
 #### Using VTEX IO Toolbelt
 
-In your terminal, log into your VTEX account and [install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.flixmedia@0.x` app.
+In your terminal, log into your VTEX account and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.flixmedia@0.x` app.
 
 > ℹ️ *You can confirm if the app has been properly installed by running `vtex ls`.*
 
@@ -53,7 +53,7 @@ In your terminal, log into your VTEX account and [install](https://vtex.io/docs/
 }
 ```
 
-3. [Deploy your changes](https://vtex.io/docs/recipes/store-management/making-your-theme-content-public/).
+3. [Deploy your changes](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
 
 ## Customization
 

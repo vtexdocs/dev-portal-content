@@ -101,7 +101,7 @@ A Payment App will appear on the checkout screen by following the steps below, a
 
 ### Step 4: Deploying your Payment App
 
-Once you finish the changes, follow our documentation on [Making your new app version publicly available](https://vtex.io/docs/recipes/development/making-your-new-app-version-publicly-available/) to run your app on the **Master** workspace.
+Once you finish the changes, follow our documentation on [Making your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) to run your app on the **Master** workspace.
 
 ## Operational Mode
 

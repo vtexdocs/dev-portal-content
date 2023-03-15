@@ -22,4 +22,4 @@ In addition, you can freely click on a product when navigating through a search 
 
 ## What you need to do
 
-To enable this feature in your store, have the [<code>search-result</code>](https://vtex.io/docs/components/search/vtex.search-result) component version **3.33.0** or higher [installed](https://vtex.io/docs/recipes/store/installing-an-app).
+To enable this feature in your store, have the [<code>search-result</code>](https://vtex.io/docs/components/search/vtex.search-result) component version **3.33.0** or higher [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app).

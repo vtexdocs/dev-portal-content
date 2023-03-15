@@ -14,4 +14,4 @@ By declaring rows e columns, `flex-layout` allows the **construction of complex 
 
 Simply ensure that your store is running [`search-result`](https://vtex.io/docs/components/search/vtex.search-result) app version **3.32.0** or higher.  
 
-Also, do not forget to access our documentation to learn more about [using `flex-layout`](https://vtex.io/docs/recipes/layout/using-flex-layout).
+Also, do not forget to access our documentation to learn more about [using `flex-layout`](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout).

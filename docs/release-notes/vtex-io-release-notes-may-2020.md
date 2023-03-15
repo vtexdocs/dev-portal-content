@@ -40,7 +40,7 @@ Shall we then start reading this Release Notes gem for May?
 
 - **Empty Minicart state** - This one should be a good surprise to users: The Minicart empty state was improved. What was merely a rich text gave way to more user friendly UI, having an empty cart icon.
 
-- `remove-button`**'s new props** - The [Product List](https://vtex.io/docs/components/content-blocks/vtex.product-list/) app's `remove-button` block received two new strategically important props: `displayMode` and `variation`. The first defines whether the block should be displayed as an icon or as a text (allowing you to [create confirmation modals when displayed as an icon](https://vtex.io/docs/recipes/templates/creating-modals-using-icons/)). In turn, the second prop defines the remove button visual prominence when it is displayed as a text based on the [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms/Button).
+- `remove-button`**'s new props** - The [Product List](https://developers.vtex.com/docs/apps/vtex.product-list/) app's `remove-button` block received two new strategically important props: `displayMode` and `variation`. The first defines whether the block should be displayed as an icon or as a text (allowing you to [create confirmation modals when displayed as an icon](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-modals-using-icons)). In turn, the second prop defines the remove button visual prominence when it is displayed as a text based on the [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms/Button).
 
 ## Deprecations ❌
 

@@ -48,7 +48,7 @@ CSS Handles, on the other hand, are guaranteed to be kept working throughout the
 
 ### Published Apps
 
-If your store's theme was previously published, meaning that your store is **already live**, you will **still be able to [link](https://vtex.io/docs/recipes/store/linking-an-app) and [publish](https://vtex.io/docs/recipes/store/publishing-an-app) new versions of your theme, even when using CSS selectors not listed above**.
+If your store's theme was previously published, meaning that your store is **already live**, you will **still be able to [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) new versions of your theme, even when using CSS selectors not listed above**.
 
 This prevents that mature stores which have already been customized without CSS Handles from suddenly not being able to update their theme because of this deprecation.
 
@@ -64,4 +64,4 @@ Although each project scenario can be evaluated individually, it is expected tha
 
 Regardless of whether your app is published or not, **it's essential to review every CSS customization for store elements** to ensure that all deprecated selectors are replaced by CSS Handles.
 
-For more on this topic, access our recipe [Using CSS Handles for store customization](https://vtex.io/docs/recipes/layout/using-css-handles-for-store-customization)
+For more on this topic, access our recipe [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization)

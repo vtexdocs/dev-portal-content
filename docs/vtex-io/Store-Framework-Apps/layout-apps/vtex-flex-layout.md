@@ -69,7 +69,7 @@ The props below support [`responsive-values`](https://github.com/vtex-apps/respo
 - When creating levels, it is necessary to **alternate between rows and columns**. Within a row, you can only place columns, and within columns, only rows.
 - Be mindful about the structure that you set in your flex layout does not only affect your code organization, but also reflects in the way that blocks will be shown and managed through the Site Editor admin. Therefore, it is always important to **take the organization of both code and Site Editor into account when planning to apply the Flex Layout** onto a page.
 
-To better understand Flex Layout's practical operation, you can access the recipe on [Using Flex Layout](https://vtex.io/docs/recipes/templates/using-flex-layout/)
+To better understand Flex Layout's practical operation, you can access the recipe on [Using Flex Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout)
 
 ## Customization
 

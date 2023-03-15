@@ -21,8 +21,8 @@ From January 2, `vtex publish` will become just one of the **three steps** neede
 
 The new process will be as follows:
 
-1. When running the `vtex publish` command in your terminal, a **candidate release version** will be generated. The candidate release will be nothing more than a **test phase**, that is, the new version in probation mode. Because of this state, Housekeeper won't automatically install it on any account. To install it, you must order Toolbelt to [install](https://vtex.io/docs/recipes/store/installing-an-app) the exact version.
-2. After the installation, it is recommended to manually **perform** [**A/B tests**](https://vtex.io/docs/recipes/store/running-native-ab-testing) on the new version, checking and confirming its stability.
+1. When running the `vtex publish` command in your terminal, a **candidate release version** will be generated. The candidate release will be nothing more than a **test phase**, that is, the new version in probation mode. Because of this state, Housekeeper won't automatically install it on any account. To install it, you must order Toolbelt to [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the exact version.
+2. After the installation, it is recommended to manually **perform** [**A/B tests**](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) on the new version, checking and confirming its stability.
 3. Once the necessary testing is completed, the third and last step is to **validate the candidate release** as a version that's ready to become stable on the infrastructure (having the `validated` status) and to be automatically installed by Housekepper. This is achieved using the `vtex validate` command. 
 
 ## Why will this action be taken 
@@ -37,4 +37,4 @@ There are not deleterious app development side effects. The consequence of this 
 
 ## What you need to do
 
-For more on this topic and to better understand the steps related to the publish process, access our recipe on [**Publishing an app**](https://vtex.io/docs/recipes/store/publishing-an-app).
+For more on this topic and to better understand the steps related to the publish process, access our recipe on [**Publishing an app**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).

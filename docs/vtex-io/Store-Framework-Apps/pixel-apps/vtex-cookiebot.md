@@ -12,7 +12,7 @@ This is a Cookiebot first party integration app. The [solution](https://www.cook
 
 ## Configuration
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.cookiebot` app;
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.cookiebot` app;
 2. In your VTEX account's admin, open the **App** section and select the Cookiebot App box;
 3. Fill in your **Domain Group ID**. You can find yours at the [Cookiebot Settings page](https://manage.cookiebot.com/en/manage);
 

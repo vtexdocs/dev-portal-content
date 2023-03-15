@@ -35,4 +35,4 @@ Below, you can check each app's name and their respective **minimum required ver
 - [Telemarketing](https://vtex.io/docs/components/all/vtex.telemarketing/): **2.9.8**
 - [Menu](https://vtex.io/docs/components/all/vtex.menu/): **2.20.2**
 
-Don't forget to have a look at our recipe on [**Using CSS Handle for store customizations**](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization). 
+Don't forget to have a look at our recipe on [**Using CSS Handle for store customizations**](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization). 

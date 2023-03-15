@@ -23,6 +23,6 @@ Differently from other layout components, which only considers the component's w
 
 ## What you need to do
 
-Make sure your store has the `stack-layout` [installed](https://vtex.io/docs/recipes/store/installing-an-app). 
+Make sure your store has the `stack-layout` [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app). 
 
 :eyes: Do not forget to check out the app [documentation](https://vtex.io/docs/app/vtex.stack-layout) for more details on its implementation.

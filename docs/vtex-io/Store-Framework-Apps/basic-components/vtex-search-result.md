@@ -328,7 +328,7 @@ For `PreferredSKUEnum`:
 | Cheapest        | `PRICE_ASC`       | Cheapest SKU in stock found or first SKU without stock.        |
 | Most Expensive  | `PRICE_DESC`      | Most expensive SKU in stock found or first SKU without stock.  |
 
-⚠️ There's a way to select which SKU should take preference over this prop. You can create a Product (field) specification and per product assign the value of the desired SKU to be initially selected. Keep in mind that If the specification doesn't exist or if the value is empty, it will use the `preferredSKU` prop as fallback. You can read more about it, and how to implement it in [Recipes](https://vtex.io/docs/recipes/all)
+⚠️ There's a way to select which SKU should take preference over this prop. You can create a Product (field) specification and per product assign the value of the desired SKU to be initially selected. Keep in mind that If the specification doesn't exist or if the value is empty, it will use the `preferredSKU` prop as fallback. You can read more about it, and how to implement it in [Recipes](https://developers.vtex.com/docs/guides/storefront-implementation)
 
 ##### The `itemsPerRow` object
 

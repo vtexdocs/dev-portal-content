@@ -16,6 +16,6 @@ The new component is a fundamental tool for strengthening **Omnichannel** experi
 
 ## What you need to do
 
-Simply [install](https://vtex.io/docs/recipes/store/installing-an-app) the `pickup-availability` component in your store.
+Simply [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `pickup-availability` component in your store.
 
 :eyes: For more details on its implementation, do not forget to check out its [documentation](https://github.com/vtex-apps/pickup-availability).

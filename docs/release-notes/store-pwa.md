@@ -25,4 +25,4 @@ Wishing to follow their order status, users generally are more inclined to posit
 
 ## What you need to do
 
-To enable this feature in your store, access the recipe [**Enabling the store's PWA notice**](https://vtex.io/docs/recipes/store/enabling-the-stores-pwa-notice).
+To enable this feature in your store, access the recipe [**Enabling the store's PWA notice**](https://developers.vtex.com/docs/guides/vtex-io-documentation-enabling-the-stores-pwa-notice).

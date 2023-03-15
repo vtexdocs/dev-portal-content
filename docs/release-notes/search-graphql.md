@@ -28,7 +28,7 @@ This means that henceforth **all related search queries in** `store-graphql` **w
 
 To send your queries through `search-graphql`, simply read and attentively follow the steps below:
 
-1. [Install](https://vtex.io/docs/recipes/store/installing-an-app) `search-graphql` version **0.2.3** or higher in your store.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) `search-graphql` version **0.2.3** or higher in your store.
 2. Add it as a dependency in your store's `manifest.json`. If your store only uses search related queries such as the above-mentioned, feel free to remove the `store-graphql` app from dependencies.
 3.  If your store needs to use the queries of two apps, have **both** as dependencies in your store's `manifest.json`. In this case, you need to mention in each query (in `@context`) which app should be used, following the example below:
 

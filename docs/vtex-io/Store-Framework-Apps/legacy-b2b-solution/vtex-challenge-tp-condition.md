@@ -8,7 +8,7 @@ updatedAt: "2021-04-29T13:29:19.890Z"
 
 Used in B2B environments, the Challenge block is a non-rendered block responsible for checking if a user is allowed to access the store's content.
 
-> ℹ️ This check is made according to the Condition Rule specified in the Trade Policy configuration, one of the steps needed to [**configure a B2B environment in VTEX IO**](https://vtex.io/docs/recipes/store/configuring-a-b2b-environment).
+> ℹ️ This check is made according to the Condition Rule specified in the Trade Policy configuration, one of the steps needed to [**configure a B2B environment in VTEX IO**](https://developers.vtex.com/docs/guides/vtex-io-documentation-configuring-a-b2b-environment).
 
 ## Configuration
 

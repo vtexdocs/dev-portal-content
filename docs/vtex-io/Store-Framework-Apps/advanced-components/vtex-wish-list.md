@@ -21,7 +21,7 @@ _Example of a wishlist page._
 
 ## Configuration
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the Wishlist app in the desired VTEX account by running `vtex install vtex.wish-list` in your terminal.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the Wishlist app in the desired VTEX account by running `vtex install vtex.wish-list` in your terminal.
 2. Open your store's Store Theme app directory in your code editor.
 3. Add the Wishlist app to your theme's `manifest.json` file inside **peerDependencies** as shown below:
 

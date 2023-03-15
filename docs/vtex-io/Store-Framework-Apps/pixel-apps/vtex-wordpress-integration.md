@@ -12,7 +12,7 @@ The Wordpress Integration app provides a way to bring in blog data from the Word
 
 ### Step 1 - Installing the Wordpress Integration app
 
-Using your terminal and [VTEX IO Toolbelt](https://vtex.io/docs/recipes/development/vtex-io-cli-installation-and-command-reference/#command-reference), log in to the VTEX account you are working on and [install](https://vtex.io/docs/recipes/store/installing-an-app) the `vtex.wordpress-integration@2.x` app.
+Using your terminal and [VTEX IO Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference), log in to the VTEX account you are working on and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.wordpress-integration@2.x` app.
 
 ### Step 2 - Defining the app settings
 
@@ -34,7 +34,7 @@ In your VTEX account's admin, perform the following actions:
 
 ### Step 3 - Creating the blog pages
 
-It is time to create the store pages that will host the blog content. Before performing the following actions, make sure you already are logged into the desired VTEX account and working on a [Developer workspace](https://vtex.io/docs/recipes/development/creating-a-development-workspace/).
+It is time to create the store pages that will host the blog content. Before performing the following actions, make sure you already are logged into the desired VTEX account and working on a [Developer workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
 
 1. Open your Store Theme app in your code editor.
 2. Add the `wordpress-integration` app as a `peerDependency` in your theme's `manifest.json` file:
@@ -264,7 +264,7 @@ To accomplish this, a `customdomainslug` parameter must be added to your blog ro
 
 #### Step 1 - Adding the `customdomainslug` parameter
 
-It is time to create the store pages that will host the blog content. Before performing the following actions, make sure you already are logged into the desired VTEX account and working on a [Developer workspace](https://vtex.io/docs/recipes/development/creating-a-development-workspace/).
+It is time to create the store pages that will host the blog content. Before performing the following actions, make sure you already are logged into the desired VTEX account and working on a [Developer workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
 
 1. In the `store/routes.json` file, add the `customdomainslug` parameter to the paths for the blog's new pages. For example:
 

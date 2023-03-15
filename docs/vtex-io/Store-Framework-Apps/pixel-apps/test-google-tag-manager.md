@@ -25,7 +25,7 @@ It is possible to install the VTEX native GTM app in your store either by using 
 
 ### Using VTEX IO Toolbelt
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.google-tag-manager@2.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.google-tag-manager@2.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
 2. Access the **Apps** section in your account's admin page and look for the Google Tag Manager box. Once you find it, click on the box.
 3. Fill in the `Google Tag Manager` field with your **GTM ID**.
 4. Click on **Save**.

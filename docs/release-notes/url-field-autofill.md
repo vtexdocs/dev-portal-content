@@ -18,4 +18,4 @@ With the autofill feature, the `URL` field becomes more practical and useful for
 
 ## What you need to do 
 
-Make sure you store has the [<code>admin-pages</code>](https://vtex.io/docs/app/vtex.admin-pages) app [installed](https://vtex.io/docs/recipes/store/installing-an-app) on version **4.12.6** or higher.
+Make sure you store has the [<code>admin-pages</code>](https://vtex.io/docs/app/vtex.admin-pages) app [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) on version **4.12.6** or higher.

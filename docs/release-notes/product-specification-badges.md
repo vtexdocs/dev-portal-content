@@ -16,6 +16,6 @@ The specifications allow more of store's SKU details to be displayed. Therefore,
 
 ## What you need to do 
 
-Make sure you already have the `product-specification-badge` [installed](https://vtex.io/docs/recipes/store/installing-an-app) in your store.
+Make sure you already have the `product-specification-badge` [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) in your store.
 
 :eyes: For more details regarding its implementation, do not forget to have a look at its [documentation](https://vtex.io/docs/app/vtex.product-specification-badges). Also, have a look at the [Stack Layout documentation](https://vtex.io/docs/app/vtex.stack-layout) which this feature uses to function. 

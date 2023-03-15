@@ -34,7 +34,7 @@ This release therefore allows for an app's behavior to **become more predictable
 
 ## Side effects
 
-If you're still using indirect dependency blocks, you won't be able to [link](https://vtex.io/docs/recipes/store/linking-an-app) and [publish](https://vtex.io/docs/recipes/store/publishing-an-app) the app in which you are working. Instead, the following error will be displayed:
+If you're still using indirect dependency blocks, you won't be able to [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) the app in which you are working. Instead, the following error will be displayed:
 
 ```
 error: App build failed with message: Error resolving block "store.product":
