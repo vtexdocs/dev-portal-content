@@ -43,8 +43,8 @@ This step-by-step guide will teach you how to upload files to Master Data v1.
     - _Remember to replace the value between curly braces according to your scenario._
 2. Click the **Advanced settings** tab.
 3. Click **Formulários**.
-3. Click **Novo** to create a new form.
-4. In the **Nome** field, enter the name of the _formulário_, which should be the same as the data entity name.
+4. Click **Novo** to create a new form.
+5. In the **Nome** field, enter the name of the _formulário_, which should be the same as the data entity name.
 6. In **Entidade de Dados**, select the data entity you previously created.
 7. In the **Campos de Listagem** tab, select the **Id do Registro** and the data entity you previously created.
 8. Change to the **Schemas de Layout** tab.
