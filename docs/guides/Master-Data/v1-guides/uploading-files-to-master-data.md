@@ -5,29 +5,39 @@ excerpt: 'Learn how to upload files to Master Data v1.'
 hidden: false
 ---
 
-This step-by-step guide will teach you how to upload files to Master Data v1.
+In this guide, you will learn how to upload files to Master Data v1 by following these steps:
+
+- [Step 1 - Creating a new data entity](#step-1---creating-a-new-data-entity): Start by creating a new [data entity](https://help.vtex.com/en/tutorial/creating-data-entity--tutorials_1265) to hold the data you want to upload.
+- [Step 2 - Publishing and indexing the data entity](#step-2---publishing-and-indexing-the-data-entity): After creating the entity, publish and index it to make it available via the [Master Data CRM](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829#crm).
+- [Step 3 - Creating a Master Data form](#step-3---creating-a-master-data-form): Next, create a [form](https://help.vtex.com/en/tutorial/creating-form-in-master-data--tutorials_1047) that will allow you to upload your files.
+- [Step 4 - Uploading the file](#step-4---uploading-the-file): Use the form to upload your files to Master Data v1.
+- [Step 5 - Accessing the file](#step-5---accessing-the-file): Finally, see how to access the files' public URLs.
 
 ## Step by step
 
 ### Step 1 - Creating a new data entity
 
-1. Access the DynamicStorage at `https://{account}.ds.vtexcrm.com.br`.
+In this step, you will create a new [data entity](https://help.vtex.com/en/tutorial/creating-data-entity--tutorials_1265) to represent a collection of files. This entity will include a file-type field dedicated to storing files.
+
+1. Access the [DynamicStorage](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829#dynamic-storage) at `https://{account}.ds.vtexcrm.com.br`.
    - _Remember to replace the value between curly braces according to your scenario._
 2. Click **Data Entities** in the top bar.
 3. Click **Add New**.
 4. In the **Acronym** field, enter a two-letter acronym for the data entity you are creating.
 5. In **Name**, enter the name of the data entity that will store the PDF file (e.g., _Files_, _PDFs_).
-6. Go to the **Fields** tab. In the **Name** field, enter a new name for the field that will store the PDF file in lowercase letters (e.g., _filename_).
+6. Go to the **Fields** tab. In the **Name** field, enter a new name for the field that will store the file in lowercase letters (e.g., _filename_).
 7. In **Display Name**, enter the data entity name chosen in Step 5, but with uppercase in the first letter (e.g., _Files_, _Pdf_).
 8. In the **Type** dropdown menu, select **File**.
 9. Click the "engine icon" ![Engine icon](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/engine-icon.png) on the right side of the **Type** field.
-10. Under the **General settings** section, select the **Make readable without credential** checkbox.
+10. Under the **General settings** section, select the **Make readable without credential** checkbox to make the data saved via this field available without the need for authentication.
 11. On **Custom field type settings**, select the **Max size per file** according to your scenario. This sets the maximum file size that can be uploaded to this field.
 12. Click **Save**.
 
 <video src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/creating-a-new-data-entity.mp4" controls autoplay></video>
 
 ### Step 2 - Publishing and indexing the data entity
+
+As the next step, you will now publish and index your newly created data entity.
 
 1. On the **Data Entities** tab, find the data entity you created in the previous step and click the "blue disk" button ![Save icon](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/save-icon.png) on the left side of the line to publish the entity.
 2. Click **Ok** to continue.
@@ -39,7 +49,9 @@ This step-by-step guide will teach you how to upload files to Master Data v1.
 
 ### Step 3 - Creating a Master Data form
 
-1. After waiting the required time, access the Master Data module at `https://{account}.vtexcrm.com.br`.
+Once your data entity is successfully indexed, you can proceed to create a [form](https://help.vtex.com/en/tutorial/creating-form-in-master-data--tutorials_1047). This form will define how your data entity will be displayed and handled.
+
+1. After waiting the required time, access the [Master Data CRM](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829#crm) at `https://{account}.vtexcrm.com.br`.
     - _Remember to replace the value between curly braces according to your scenario._
 2. Click the **Advanced settings** tab.
 3. Click **Formulários**.
@@ -55,9 +67,11 @@ This step-by-step guide will teach you how to upload files to Master Data v1.
 
 <video src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/creating-a-master-data-form.mp4" controls autoplay></video>
 
-### Step 4 - Uploding the file
+### Step 4 - Uploading the file
 
-Access the Master Data module at `https://{account}.vtexcrm.com.br`. By now, when accessing that URL, you should see a new tab with the name of the form you just created. If that's not the case, reload the page.
+Now, access the [Master Data CRM](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829#crm) at `https://{account}.vtexcrm.com.br` to upload your files.
+
+By now, when accessing the Master Data CRM, you should see a new tab with the name of the form you just created. If that's not the case, reload the page.
 
     - _Remember to replace the value in the curly brackets according to your scenario._
 
@@ -72,10 +86,12 @@ Access the Master Data module at `https://{account}.vtexcrm.com.br`. By now, whe
 
 ### Step 5 - Accessing the file
 
-1. Click the tab with the name of your new form.
+Finally, after uploading your files, you can access and share their URLs by taking the following steps.
+
+1. In the Master Data CRM, click the tab with the name of your new form.
 2. Copy the **Id do Registro** value and save it on a notepad. The **Id do Registro** value has the following pattern: `{acronym}-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX`.
 3. Access the file's public URL. Notice that the file's URL has the following pattern: `https://{account}.vtexcommercestable.com.br/api/dataentities/{acronym}/documents/{idWithouthAcronym}/{fieldName}/attachments/{file}`, where:
     - `acronym` - Two-letter acronym that identifies the data structure
-    - `idWithouthAcronym` - Id of the document, without the acronym, i.e., the `XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX` from the **Id do Registro** value.
+    - `idWithouthAcronym` - Id of the document, without the acronym, i.e., the `XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX` part from the **Id do Registro** value.
     - `fieldName` - Name of the field created in step 6 of **Step 1 - Creating a new data entity**.
     - `file` - Name of the file followed by its extension (e.g., `myfile.pdf`).
