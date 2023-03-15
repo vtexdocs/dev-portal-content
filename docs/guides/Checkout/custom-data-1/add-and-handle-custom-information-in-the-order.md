@@ -142,7 +142,7 @@ See a URL and request body example below:
 
 The following errors may appear as a message in the response body.
 
-**Set single custom field value and Set multiple custom field values endpoints:**
+### Set single custom field value and Set multiple custom field values endpoints
 
 ### 400 - Bad Request
 
