@@ -174,7 +174,7 @@ The following errors may appear as a message in the response body.
 }
 ```
 
-### 404 - Not found
+#### 404 - Not found
 
 - `Message error example (code CHK0090): "App id not found"`: this message indicates that the `appId` parameter used in the request does not exist or is incorrect.
 
