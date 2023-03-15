@@ -65,11 +65,11 @@ After creating the fields, we need to save the data in them. This can be done us
 
 ### **Set single custom field value**
 
-To update a value of a specific custom field, you can use this endpoint by sending the value to be updated (`appFieldValue`) through the request body. The following information must be sent as path parameters in the URL:
+To update a value of a specific custom field, you can use this [endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-/-appFieldName-) by sending the value to be updated (`appFieldValue`) through the request body. The following information must be sent as path parameters in the URL:
 
 - `orderFormId`: ID of the orderForm that will receive the new custom field values.
-- `appId`: ID of the app created through the Update orderForm Configuration endpoint.
-- `appFieldName`: name of the app's field created through the Update orderForm Configuration endpoint.
+- `appId`: ID of the app created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
+- `appFieldName`: name of the app's field created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
 
 See a URL and request body example below:
 
@@ -83,10 +83,10 @@ URl: `https://{accountName}.{environment}.com.br/api/checkout/pub/orderForm/ede8
 
 ### **Set multiple custom field values**
 
-To update values of multiple custom fields at the same time, you can use this endpoint by sending all the values and their respective fields to be updated in the request body (`appFieldValue` and `appFieldName`). The following information must be sent as path parameters in the URL:
+To update values of multiple custom fields at the same time, you can use this [endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-) by sending all the values and their respective fields to be updated in the request body (`appFieldValue` and `appFieldName`). The following information must be sent as path parameters in the URL:
 
 - `orderFormId`: ID of the orderForm that will receive the new custom field values.
-- `appId`: ID of the app created through the Update orderForm Configuration endpoint.
+- `appId`: ID of the app created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
 
 See a URL and request body example below:
 
@@ -131,8 +131,8 @@ The fields and their respective values will be inside the `customData` object.
 To remove the value of a specific custom field, you can use the [Remove single custom field value](https://developers.vtex.com/docs/api-reference/checkout-api#delete-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-/-appFieldName-) endpoint by sending the following information as path parameters in the URL:
 
 - `orderFormId`: ID of the orderForm where the custom field value will be deleted.
-- `appId`: ID of the app created through the Update orderForm Configuration endpoint.
-- `appFieldName`: name of the app's field created through the Update orderForm Configuration endpoint and which will be deleted.
+- `appId`: ID of the app created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
+- `appFieldName`: name of the app's field created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint and which will be deleted.
 
 See a URL and request body example below:
 
