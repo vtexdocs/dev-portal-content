@@ -204,7 +204,7 @@ The following errors may appear as a message in the response body.
 }
 ```
 
-**Update orderForm configuration endpoint:**
+### Update orderForm configuration endpoint
 
 ### 400 - Bad Request
 
