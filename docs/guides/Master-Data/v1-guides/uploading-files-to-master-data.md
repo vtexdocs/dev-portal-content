@@ -28,7 +28,7 @@ In this step, you will create a new [data entity](https://help.vtex.com/en/tutor
 6. Go to the **Fields** tab. In the **Name** field, enter a new name for the field that will store the file in lowercase letters (e.g., _filename_).
 7. In **Display Name**, enter the data entity name chosen in Step 5, but with uppercase in the first letter (e.g., _Files_, _Pdf_).
 8. In the **Type** dropdown menu, select **File**.
-9. Click the "engine icon" ![Engine icon](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/engine-icon.png) on the right side of the **Type** field.
+9. Click the "engine" icon <img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/engine-icon.png" alt="Engine Icon"/> on the right side of the **Type** field.
 10. Under the **General settings** section, select the **Make readable without credential** checkbox to make the data saved via this field available without the need for authentication.
 11. On **Custom field type settings**, select the **Max size per file** according to your scenario. This sets the maximum file size that can be uploaded to this field.
 12. Click **Save**.
@@ -39,9 +39,9 @@ In this step, you will create a new [data entity](https://help.vtex.com/en/tutor
 
 As the next step, you will now publish and index your newly created data entity.
 
-1. On the **Data Entities** tab, find the data entity you created in the previous step and click the "blue disk" button ![Save icon](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/save-icon.png) on the left side of the line to publish the entity.
+1. On the **Data Entities** tab, find the data entity you created in the previous step and click the "blue disk" icon <img alt="Blue-disk Icon" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/save-icon.png" alt="Save Icon"/> on the left side of the line to publish the entity.
 2. Click **Ok** to continue.
-3. Click the "four arrows" ![Arrows icon](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/arrows-icon.png) icon to reindex the data entity.
+3. Click the "four arrows" icon <img alt="Four-arrow Icon" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/arrows-icon.png"/> to reindex the data entity.
 
 > ⚠️ Wait for the data entity to be fully indexed. This action may take anywhere from 30 minutes to 1 hour. During this time, do not make any changes to the data entity or its fields. Note that there is currently no interface to monitor the progress of indexation. Instead, you can periodically check the status of the entity.
 
