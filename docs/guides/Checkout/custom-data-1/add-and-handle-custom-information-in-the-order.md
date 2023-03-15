@@ -144,7 +144,7 @@ The following errors may appear as a message in the response body.
 
 ### Set single custom field value and Set multiple custom field values endpoints
 
-### 400 - Bad Request
+#### 400 - Bad Request
 
 - `Message error example (code ORD002): "Invalid order form"`: this message indicates that the `orderFormId` used in the request does not exist or is incorrect.
 
