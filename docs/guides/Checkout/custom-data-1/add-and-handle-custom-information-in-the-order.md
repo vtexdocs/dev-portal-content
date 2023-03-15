@@ -206,7 +206,7 @@ The following errors may appear as a message in the response body.
 
 ### Update orderForm configuration endpoint
 
-### 400 - Bad Request
+#### 400 - Bad Request
 
 - `Message error example (code CHK0288): "Invalid configuration"`: this message indicates that the mandatory parameters (`paymentConfiguration`, `requiresAuthenticationForPreAuthorizedPaymentOption` and `minimumQuantityAccumulatedForItems`) was not sent in this request.
 
