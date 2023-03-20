@@ -21,6 +21,10 @@ Use the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-
 
 > ℹ️ During the [homologation process](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store), a series of load tests are performed under different conditions to ensure that your application is scalable. This includes, for example, testing the response time of your APIs at request levels similar to those experienced on Black Friday. At any sign of a crash or failure to respond, your app will fail for performance issues.
 
+### Using APIs efficiently
+
+For communication with services, your app should use existing [VTEX IO Clients](https://github.com/vtex/io-clients) whenever possible. Try to avoid unnecessary or excessive API calls. For more information, see our [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.
+
 ## Security and data privacy
 
 To ensure that all points of contact between our retailers, their customers, and other parts of the ecosystem are protected and secure, we test if your app respects regulations on data traffic, usage, and storage worldwide.
@@ -37,13 +41,43 @@ At the development level, we are very strict about each piece of data requested 
 
 Nevertheless, If you identify any security breaches after publishing your app, take the following measures:
 
-1 - Remove your app from the VTEX App Store to avoid further installations of the unstable version.
+1. Remove your app from the VTEX App Store to avoid further installations of the unstable version.
 
-2 - Notify us of the issue by [opening tickets](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) so that we can provide support to retailers operating with this version and guide them on how to remove it from their stores.
+2. Notify us of the issue by [opening tickets](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) so that we can provide support to retailers operating with this version and guide them on how to remove it from their stores.
 
-3 - Fix the security flaw and resubmit your application for homologation.
+3. Fix the security flaw and resubmit your application for homologation.
 
 Once the new version is approved, the app will be available again in the VTEX App Store.
+
+### Hardcoding VTEX appKey/appToken
+
+Having a an appKey/appToken exposed in your code can cause serious security issues, like unwanted access. Instead of using a VTEX appKey/appToken pair, apps should use the existing tokens (`ctx.authToken`,  `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken`). For more information, see [Connecting to VTEX Core Commerce APIs](https://developers.vtex.com/vtex-developer-docs/docs/how-to-connect-with-vtex-core-commerce-apis-using-vtex-io#steps).
+
+### Using app token for a user-initiated action
+
+For user-initiated actions, apps should use either `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken` (as opposed to `ctx.authToken`). For more information, see [Connecting to VTEX Core Commerce APIs](https://developers.vtex.com/vtex-developer-docs/docs/how-to-connect-with-vtex-core-commerce-apis-using-vtex-io#steps).
+
+### Declaring broad policies
+
+Outbound access policies (`outbound-access`) to VTEX resources should follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). In short, you only give access to what is really needed. For instance: the `path` should not be configured as `*`. See an example [here](https://github.com/vtex-apps/store-graphql/blob/684dcbbbd6e9cdbd121afd7802200856cb952d2b/manifest.json#L107-L112) on how it should be done.
+
+### Exposing private information through public routes
+
+Public routes do not require authentication when called from the Frontend, so they should not expose information obtained from calling private APIs, e.g. exposing a list of orders to the Frontend. A common mistake is leaving routes which are meant to only be consumed from the Admin unrestricted. Also, GraphQL APIs are public by default, so the schema shouldn't have queries exposing private information either.
+
+Access to REST APIs should be restricted using [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies#resource-based-policies). Access to GraphQL APIs should be restricted using directives, either [@auth](https://github.com/vtex/node-vtex-api/blob/08ea11d380997f5abf02455487b342caa74b2001/src/service/worker/runtime/graphql/schema/schemaDirectives/Auth.ts#L66-L75) or a custom-made one.
+
+### Violating multi-tenancy
+
+Single-tenant external systems should be used carefully. Data from one tenant should always be isolated from data from another tenant.
+
+### Persisting PII within VTEX
+
+If using Master Data or VBase to store Personal Indentifiable Information (PII), a mechanism should be in place to ensure compliance with the Right to be Forgotten or other similar data-protection practices.
+
+### Sending PII to external service
+
+We should ensure that all PII being shared externally is strictly necessary for the app to work. If you have any questions, reach out our team by [opening a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
 
 ## Coding standards
 
@@ -56,9 +90,9 @@ We value clear, well-formatted and easy-to-read codes. Therefore, please follow 
 - Always use the `import` command instead of `require` to import references into Typescript files.
 - Always use the `const` command instead of `let` or `var` to declare elements in Typescript files.
 - Follow the order below when importing references into Typescripts files:
-    1) External dependencies;
-    2) Other VTEX apps;
-    3) Local modules of your code.
+    1. External dependencies;
+    2. Other VTEX apps;
+    3. Local modules of your code.
 
 - Avoid implementing routes and resolvers directly in the `index.ts` file. Instead, implement the middleware functions in other files and import them into the main file
 
@@ -95,6 +129,20 @@ At the authentication level, take the following requirements
 - Use user authentication or an app token to communicate with other VTEX services instead of a key pair.
 
 - Never import other libraries to handle external HTTP requests. It is mandatory to use the [VTEX IO clients](https://developers.vtex.com/docs/guides/how-to-use-and-create-clients-on-vtex-io) for this type of communication.
+
+## Usability issues
+
+### Implementing i18n incorrectly
+
+Ensure that all messages are [internationalized](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores#storefront-content-internationalization) using the messages builder. Also, i18n keys should start with the domain (store/ for storefront and admin/ for Admin) where they're used, otherwise they won't render properly.
+
+### Declaring routes with collision-prone paths
+
+When declaring [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes), generic paths (e.g. `/_v/orders/`, `/_v/settings`) should be avoided to reduce changes of collision with other apps.
+
+### Creating custom Admin settings form
+
+The Admin settings form of your app should be created using the [settingsSchema](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#settingsschema) structure. If the settings do not follow the settingsSchema structure, your app will not be approved in the homologation process.
 
 ## Plug&Play
 
