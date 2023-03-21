@@ -19,8 +19,8 @@ In this guide, you will learn how to upload files to Master Data v1 by following
 
 In this step, you will create a new [data entity](https://help.vtex.com/en/tutorial/creating-data-entity--tutorials_1265) to represent a collection of files. This entity will include a file-type field dedicated to storing files.
 
-1. Access the [DynamicStorage](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829#dynamic-storage) at `https://{account}.ds.vtexcrm.com.br`.
-   - _Remember to replace the value between curly braces according to your scenario._
+1. Access the [DynamicStorage](https://help.vtex.com/en/tutorial/how-can-i-create-a-field-in-master-data--frequentlyAskedQuestions_1829#dynamic-storage) at `https://{accountName}.ds.vtexcrm.com.br`.
+   - _Remember to replace the value between curly braces with your [account name](https://help.vtex.com/tutorial/what-is-an-account-name--i0mIGLcg3QyEy8OCicEoC)._
 2. Click **Data Entities** in the top bar.
 3. Click **Add New**.
 4. In the **Acronym** field, enter a two-letter acronym for the data entity you are creating.
