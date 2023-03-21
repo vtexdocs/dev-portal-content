@@ -43,7 +43,7 @@ As the next step, you will now publish and index your newly created data entity.
 2. Click **Ok** to continue.
 3. Click the "four arrows" icon <img alt="Four-arrow Icon" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/arrows-icon.png"/> to reindex the data entity.
 
-> ⚠️ Wait for the data entity to be fully indexed. This action may take anywhere from 30 minutes to 1 hour. During this time, do not make any changes to the data entity or its fields. Note that there is currently no interface to monitor the progress of indexation. Instead, you can periodically check the status of the entity.
+> ⚠️ Wait for the data entity to be fully indexed. This may take from 30 minutes to one hour. During this time, do not make any changes to the data entity or its fields. Note that there is currently no interface to monitor the progress of indexation. Instead, you can periodically check the status of the entity.
 
 <video src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/publishing-and-indexing.mp4" controls autoplay></video>
 
