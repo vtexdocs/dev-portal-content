@@ -30,7 +30,7 @@ In this step, you will create a new [data entity](https://help.vtex.com/en/tutor
 8. In the **Type** dropdown menu, select **File**.
 9. Click the "engine" icon <img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/engine-icon.png" alt="Engine Icon"/> on the right side of the **Type** field.
 10. Under the **General settings** section, select the **Make readable without credential** checkbox to make the data saved via this field available without the need for authentication.
-11. On **Custom field type settings**, select the **Max size per file** according to your scenario. This sets the maximum file size that can be uploaded to this field.
+11. On **Custom field type settings**, select the **Max size per file** according to your needs. This sets the maximum file size that can be uploaded to this field.
 12. Click **Save**.
 
 <video src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Master-Data/v1-guides/creating-a-new-data-entity.mp4" controls autoplay></video>
