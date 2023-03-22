@@ -12,7 +12,7 @@ This is a first party integration app for Google Customer Reviews, a free servic
 
 ## Configuration
 
-1. [Install](https://vtex.io/docs/recipes/store/installing-an-app) the `vtex.google-customer-reviews` app in your VTEX account.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.google-customer-reviews` app in your VTEX account.
 
 > ℹ️ *By installing the Google Customer Reviews, you will have access to the `google-customer-review-badge` block, which displays the Google Customer Reviews badge on your store's UI. To know how to set it up, check out the **Advanced Configuration** section below.*
 
@@ -33,7 +33,7 @@ To display the Google Customer Reviews badge in your store, follow the instructi
    },
 ```
 
-> ⚠️ *To be successful in the first step, you will need to update your theme to a new major version. Learn how to perform this update following the instructions given in [this tutorial](https://vtex.io/docs/recipes/development/migrating-CMS-settings-after-major-update/).*
+> ⚠️ To be successful in the first step, you will need to update your theme to a new major version. Learn how to perform this update following the instructions given in [this tutorial](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update/).
 
 2. Add the `google-customer-review-badge` block to your theme's in the desired template. For example:
 
@@ -56,7 +56,7 @@ To display the Google Customer Reviews badge in your store, follow the instructi
    },
 ```
 
-3. [Deploy your theme changes](https://vtex.io/docs/recipes/store-management/making-your-theme-content-public/).
+3. [Deploy your theme changes](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
 
 ## Troubleshooting
 

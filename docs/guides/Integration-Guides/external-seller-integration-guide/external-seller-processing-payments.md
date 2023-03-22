@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2021-08-30T20:30:22.048Z"
 updatedAt: "2022-02-03T13:21:17.263Z"
 ---
-Although in our [marketplace / seller architecture](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-architecture) payments are usually processed by the marketplace, this can also be done by the seller. This decision of where to process payments depends on the commercial conditions they have negotiated with the payment provider.  Therefore, there are two possibilities for processing payments:
+Although in our [marketplace / seller architecture](https://developers.vtex.com/docs/guides/external-marketplace-integration-architecture) payments are usually processed by the marketplace, this can also be done by the seller. This decision of where to process payments depends on the commercial conditions they have negotiated with the payment provider.  Therefore, there are two possibilities for processing payments:
 
 - **Marketplace processing payments:** no development is needed from the seller.
 - **External seller processing payments:** seller should follow the instructions below.
@@ -66,13 +66,8 @@ You can view all the affiliations natively connected to VTEX through your VTEX A
 5. Give your affiliation a name.
 6. Enter the contract data sent by the chosen Gateway.
 7. Click on `Save`.
-[block:callout]
-{
-  "type": "warning",
-  "body": "The full list of affiliations is only visible through the VTEX Admin, by following the steps above from steps 1-4. Once you choose the affiliation that will be implemented, you can use our [Insert affiliation](https://developers.vtex.com/vtex-rest-api/reference/insertaffiliation) endpoint to configure it to your account, instead of following steps 5-7. You can check all affiliations implemented to your store through the [Get Affiliations](https://developers.vtex.com/vtex-rest-api/reference/affiliations) endpoint.",
-  "title": "API Integration"
-}
-[/block]
+
+>⚠️The full list of affiliations is only visible through the VTEX Admin, by following the steps above from steps 1-4. Once you choose the affiliation that will be implemented, you can use our [Insert affiliation](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/affiliations) endpoint to configure it to your account, instead of following steps 5-7. You can check all affiliations implemented to your store through the [Get Affiliations](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/affiliations) endpoint.
 
 #### Set up Payment Conditions and Antifraud
 
@@ -80,12 +75,12 @@ To finalize Payment settings on the seller's side, it is necessary to set up Pay
 
 It is possible to setup payment conditions through your gateway account’s VTEX Admin.  Check [Set up  the payment options](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions) to know how.
 
-If you wish to realize this step through API calls, use [Get Rules](https://developers.vtex.com/vtex-rest-api/reference/rules) > [Insert Rule](https://developers.vtex.com/vtex-rest-api/reference/insertrule) calls.
+If you wish to realize this step through API calls, use [Get Rules](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/rules) > [Insert Rule](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/rules) calls.
 
 The Antifraud can be set up  through your gateway account’s VTEX Admin.  Check [Set up the Antifraud](https://help.vtex.com/tutorial/how-to-configure-the-anti-fraud--tutorials_446) to know how.
 
-To configure it through API, fill in the `antifraud` object in the [Insert Rule](https://developers.vtex.com/vtex-rest-api/reference/insertrule) edpoint.
+To configure it through API, fill in the `antifraud` object in the [Insert Rule](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/rules) endpoint.
 
 ## Wrapping up
 
-Once these steps are done, you can move on to the External Seller Connector section of this guide. To finalize the process it is necessary to [send your Gateway account name to the marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-connector#seller-processing-payments).
+Once these steps are done, you can move on to the External Seller Connector section of this guide. To finalize the process it is necessary to [send your Gateway account name to the marketplace](https://developers.vtex.com/docs/guides/external-seller-integration-connector#seller-processing-payments).

@@ -31,7 +31,7 @@ To try out an API request follow these steps:
 5. Fill in your app token in the `X-VTEX-API-AppToken` field.
 6. Hover your mouse cursor over the `Base URL` field to see the `accountName` and `environment`.
 7. Fill in the `accountName` field with your [VTEX account name](https://help.vtex.com/en/tutorial/what-is-an-account-name--i0mIGLcg3QyEy8OCicEoC).
-8. Fill in the environment. If you do not know which environment to use, try `vtexcommercebeta`.
+8. Fill in the environment. If you do not know which environment to use, try `vtexcommercestable`.
 
     ![application keys and base url fields](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting-Started/getting-started/making-your-first-request-2.png)
 

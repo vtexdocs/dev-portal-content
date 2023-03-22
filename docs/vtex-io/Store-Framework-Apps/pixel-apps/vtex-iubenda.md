@@ -12,7 +12,7 @@ This is a Iubenda first party integration app. The [solution](https://www.iubend
 
 ## Configuration
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.iubenda` app;
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.iubenda` app;
 2. In your VTEX account's admin, open the **App** section and select the Iubenda App box;
 3. Add the Site ID and the Cookie Policy ID in the respective fields;
 4. Save your changes.

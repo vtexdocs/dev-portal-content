@@ -10,7 +10,7 @@ type: "improved"
 
 A new CSS Handle (`swiperBullet--active`) was added to the [Product Images block](https://developers.vtex.com/docs/apps/vtex.store-components/productimages)(from the [Store Components app](https://developers.vtex.com/docs/apps/vtex.store-components/)), enabling the customization of the active slide dot.
 
-This handle is extremely useful for scenarios where the Product Images block is used to build a slider component, such as a [Carousel](https://vtex.io/docs/recipes/templates/building-a-carousel-using-slider-layout).
+This handle is extremely useful for scenarios where the Product Images block is used to build a slider component, such as a [Carousel](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout).
 
 > ℹ️ The slider active dot represents the slide currently being hovered on by users.
 

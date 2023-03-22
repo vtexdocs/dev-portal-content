@@ -51,7 +51,7 @@ To start, create the essential variables to work within GTM: **Data Layer** and 
 2. Click on **Variables.**
 3. In the **User-Defined Variables** box, click on **New.**
 
-![variables-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-0.png)
+![variables-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/gtm-images-update/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-0.webp) 
 
 #### Data Layer Variables
 
@@ -123,7 +123,7 @@ You will create one variable for the storefront - default - and another for the 
 6. Click **Add Field**. Then, type `referrer` in **Field Name** and `{{Original Referrer}}` in the **Value** field.
 7. Click **Add Field**. Then, type `page` in **Field Name** and `{{Page Path}}` in the **Value** field.
 
-![img-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-3.png)
+![img-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/gtm-images-update/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-3.webp)
 
 7. Then, go to **Ecommerce**  and tick the `Enable Enhanced Ecommerce Features` and `Use data layer` boxes.
 8. Save your changes as **Google Analytics**.
@@ -151,7 +151,7 @@ To do this, click on Fields to set and add the `userId` field with its desired v
 Triggers are conditions to when you want your tags to fire. For example, if you want to activate the Google Ads conversion tag when a visitor signs up your store newsletter, you use a trigger to do it.
 To create a trigger, click on Trigger in the left menu and then on New:
 
-![trigger-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-4.png)
+![trigger-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/gtm-images-update/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-4.webp)
 
 #### Custom Events
 
@@ -176,13 +176,15 @@ Repeat the instructions above, now changing the event name for each of the follo
 - `shipping`
 - `pageView`
 
+> ⚠️ To trigger the `promotionClick` event for an image in a store component, you need to include the URL path for that image. To do this, access the **CMS > Site Editor** and select the image within the component. Then, in the editing view, go to **URL** and enter the path you want to use, for example, `/collections/valentines-70-off`.
+
 ### Step 3 - Creating Tags
 
 Tags are tracking code you want to implement on your store. For example, if you want to track a page view and send that data to Google Analytics, you use a tag to do it.
 
 To create a tag, click on Tags in the left menu and then on New:
 
-![tag-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-setting-up-google-tag-manager-5.png)
+![tag-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/gtm-images-update/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-5.webp)
 
 #### Google Analytics - Checkout and Order Placed
 

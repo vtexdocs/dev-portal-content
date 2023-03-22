@@ -271,7 +271,7 @@ It is possible to install in your store either by using App Store or the VTEX IO
 
 ### Using VTEX IO Toolbelt
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.icommkt@0.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.icommkt@0.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
 2. Access the **Apps** section in your account's admin page and look for the NAME OF THE APP box. Once you find it, click on the box.
 3. Fill in the `NAME OF THE APP` field with your **NAME OF THE SETTINGS FIELD**.
 4. Click on **Save**.

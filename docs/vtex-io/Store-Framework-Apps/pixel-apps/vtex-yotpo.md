@@ -12,7 +12,7 @@ The Yotpo Reviews Integration app is a product review and rating integration wit
 
 ## Configuration
 
-1. [Install](https://vtex.io/docs/recipes/store/installing-an-app) the `yotpo` app in the desired account;
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `yotpo` app in the desired account;
 2. In the admin's account, access **Apps** and then select the **Yotpo Integration** box;
 
 ![setup-yotpo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-yotpo-1.png)

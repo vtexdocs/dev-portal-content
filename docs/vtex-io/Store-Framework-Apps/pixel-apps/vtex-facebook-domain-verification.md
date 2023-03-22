@@ -25,7 +25,7 @@ It is possible to install this app in your store either by using App Store or th
 
 ### Using VTEX IO Toolbelt
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.facebook-domain-verification@1.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.facebook-domain-verification@1.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
 2. Access the **Apps** section in your account's admin page and look for the Facebook Domain Verification box. Once you find it, click on the box.
 3. Fill in the domain verification code.
 4. Click on **Save**.

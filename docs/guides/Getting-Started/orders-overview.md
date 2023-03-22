@@ -67,7 +67,7 @@ The Orders Feed is a list of order updates, meaning that whenever there is an ev
 - [Get feed configuration](https://developers.vtex.com/vtex-rest-api/reference/getfeedconfiguration)
 - [Create or update feed configuration](https://developers.vtex.com/vtex-rest-api/reference/feedconfiguration)
 - [Delete feed configuration](https://developers.vtex.com/vtex-rest-api/reference/feedconfigurationdelete)
-- [Retrieve feed items](https://developers.vtex.com/vtex-rest-api/reference/getfeedorderstatus1)
+- [Retrieve feed items](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed)
 - [Commit feed items](https://developers.vtex.com/vtex-rest-api/reference/commititemfeedorderstatus)
 - [Test JSONata expression](https://developers.vtex.com/vtex-rest-api/reference/testjsonataexpression)
 
@@ -140,8 +140,9 @@ You can fetch information related to orders in multiple ways and about specific 
 ### Changing an order status
 
 Every order has a life cycle registered in the form of an [order flow](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196), which describes the order’s status, possibilities, and updates. For more information, see the following links.
+
 - [Start handling order](https://developers.vtex.com/vtex-rest-api/reference/starthandling)
-- [Cancel order](https://developers.vtex.com/vtex-rest-api/reference/cancelorder)
+- [Cancel order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel)
 
 </OverviewCard>
 
@@ -184,9 +185,9 @@ In case your store receives the payments outside VTEX’s platform, like payment
 
 When you [invoice an order](https://help.vtex.com/en/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/2WgQrlHTyVo4hLjhUs1LMT), its status in the [order flow](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196) changes to Invoiced, which means the order was successfully completed. After an order is invoiced, you can no longer modify it’s status, except when you wish to send a return invoice.
 
-In that case, the endpoint [Order invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification) must be called, and instead of having the field `type` value determined as Output, it will be Input.
+In that case, the endpoint [Order invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) must be called, and instead of having the field `type` value determined as Output, it will be Input.
 
-- [Order invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification)
+- [Order invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice)
 - [Update order's partial invoice (send tracking number)](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber)
 - [Adding a second address for invoicing an order](https://developers.vtex.com/vtex-rest-api/docs/adding-a-second-address-to-the-order)
 - [Formatting order invoicing time via API](https://developers.vtex.com/vtex-rest-api/docs/formatting-order-invoicing-time)

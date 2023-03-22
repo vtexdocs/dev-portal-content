@@ -12,7 +12,7 @@ Additionally, if you would like the app to send Order, Product, and Customer dat
 
 ## Configuration
 
-1. [Install](https://vtex.io/docs/recipes/store/installing-an-app) the `listrak-pixel` app in the desired account;
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `listrak-pixel` app in the desired account;
 2. In the account's admin, access **Apps > My Apps** and then select the **Listrak** box;
 3. Once in the app's page, define the app’s configurations in the **Setup** section:
 

@@ -1,5 +1,5 @@
 ---
-title: "Orders"
+title: "Order Placement"
 slug: "orders-2"
 hidden: false
 createdAt: "2022-10-20T17:32:09.976Z"

@@ -28,24 +28,30 @@ To perform this association, VTEX made VTEX Mapper available. It is a tool integ
 
 To use the category mapping service, follow the steps below, that will be further explored in the items that follow:
 
-1. [Register the connector in VTEX Mapper](#register-the-connector-in-vtex-mapper)
-2. [Send category tree to VTEX Mapper](#send-category-tree-to-vtex-mapper)
-3. [Receive the category mapping in VTEX Mapper](#receive-the-category-mapping-in-vtex-mapper)
-4. [Use the category mapping in the product registration flow](#use-the-category-mapping-in-the-product-registration-flow)
+- [Product Mapping](#product-mapping)
+- [Category Mapping](#category-mapping)
+- [VTEX Mapper](#vtex-mapper)
+- [API Reference](#api-reference)
+  - [Register the connector in VTEX Mapper](#register-the-connector-in-vtex-mapper)
+  - [Send category tree to VTEX Mapper](#send-category-tree-to-vtex-mapper)
+  - [Receive the category mapping in VTEX Mapper](#receive-the-category-mapping-in-vtex-mapper)
+  - [Use the category mapping in the product registration flow](#use-the-category-mapping-in-the-product-registration-flow)
 
 ## API Reference
 
-- [VTEX Mapper Registration](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration)
-- [Send Category Mapping to VTEX Mapper](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper)
+- [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register)
+- [Send Category Mapping to VTEX Mapper](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-)
 
 ### Register the connector in VTEX Mapper
 
 After obtaining the [access keys](https://developers.vtex.com/docs/guides/getting-started-authentication) to operate a VTEX account, the diagram below illustrates the necessary steps to register the connector in VTEX Mapper.
+
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-integration-catalog-mapping-0.jpg)
 
-1. Use the [Mapper Registration endpoint](https://developers.vtex.com/vtex-rest-api/reference/vtex-mapper-registration).
+1. Use the [Mapper Registration endpoint](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register).
 2. In case the registration is successful, VTEX Mapper returns a unique ID and endpoint to the connector.
 3. Store the ID returned, to be later used in the category tree update action, in VTEX Matcher.
+
 [block:callout]
 {
   "type": "info",
@@ -57,6 +63,7 @@ After obtaining the [access keys](https://developers.vtex.com/docs/guides/gettin
 ### Send category tree to VTEX Mapper
 
 To send the marketplace’s category tree to VTEX Mapper, follow the steps illustrated in this diagram:
+
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-integration-catalog-mapping-1.jpg)
 
 1. Collect marketplace category tree.
@@ -64,8 +71,9 @@ To send the marketplace’s category tree to VTEX Mapper, follow the steps illus
    a. If it is **not** mapped, store the category tree and the last update’s date.
    b. If it **is** mapped, check if the category tree has updates. If there are updates, send the full tree to the mapper (step 3). If there are no updates, update the tree’s date, and log informing the tree is updated.
 3. Assemble the full category tree schema, following the JSON example below.
-4. Send the category tree through the [Send Category Mapping to VTEX Mapper](https://developers.vtex.com/vtex-rest-api/reference/send-category-mapping-to-vtex-mapper) endpoint. Connectors should send the payload compacted in .gzip format.
+4. Send the category tree through the [Send Category Mapping to VTEX Mapper](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-) endpoint. Connectors should send the payload compacted in .gzip format.
 5. If VTEX Mapper receives the category tree successfully, the call’s response will be a 204. Connectors should log the response offered by the Mapper.
+
 [block:callout]
 {
   "type": "info",
@@ -84,9 +92,9 @@ Once receiving the category tree, the connector should store it. This data will 
 
 When receiving a VTEX notification to register an SKU in the marketplace, connectors should:
 
-1. [Get SKU information](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku-context) through the `{stockKeepUnit/skuId}` property.
+1. [Get SKU information](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-) through the `{stockKeepUnit/skuId}` property.
 2. Collect value of `categoryId` property, from the call’s response.
-3. Verify if the ID exists in the mapping previously sent by VTEX Mapper.  \
-   a) If the ID **exists**, collect the corresponding value in the marketplace.  \
-   b) If the ID **does not** exist, generate a log informing the seller that they should perform the category mapping in VTEX.
-4. With the corresponding ID, register the SKU in the marketplace, following the steps described in the [How to get a new product to offer in the marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-new-products) section.
+3. Verify if the ID exists in the mapping previously sent by VTEX Mapper.
+   a. If the ID **exists**, collect the corresponding value in the marketplace.
+   b. If the ID **does not** exist, generate a log informing the seller that they should perform the category mapping in VTEX.
+4. With the corresponding ID, register the SKU in the marketplace, following the steps described in the [How to get a new product to offer in the marketplace](https://developers.vtex.com/docs/guides/external-marketplace-integration-new-products) section.

@@ -21,66 +21,202 @@ To work with this field, you must use VTEX’s Checkout API. Three steps are req
 
 ## Creating apps and fields through the configuration request
 
-Before populating the `customData` field, you need to use the [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) call to create an app. This app will contain custom fields that will be populated during checkout.
-[block:callout]
-{
-  "type": "warning",
-  "body": "The **Update orderForm configuration** defines settings that apply to all `orderForms` generated in your account. This means that, from the moment you add an app through it, all the store’s orders will contain the extra fields defined in that app. To create an app and its fields, this call only needs to happen once."
-}
-[/block]
-Here is an example of an `app` object sent in the body of the request **Update orderForm configuration**:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "\"apps\": [\n       {\n            \"id\":\"profile\",\n            \"fields\":\n            [\n                \"age\",\n                \"gender\"\n            ]\n        },\n        {\n            \"id\":\"address\",\n            \"fields\":\n            [\n                \"phone2\"\n            ]\n        }\n]",
-      "language": "json"
-    }
+Before populating the `customData` field, you need to use the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) request to create an app. This app will contain custom fields that will be populated during checkout.
+
+>⚠️ The **Update orderForm configuration** defines settings that apply to all `orderForms` generated in your account. This means that, from the moment you add an app through it, all the store’s orders will contain the extra fields defined in that app. To create an app and its fields, this call only needs to happen once. For more information, access the [Update an account’s orderForm configuration developers guide](https://developers.vtex.com/docs/guides/update-an-account-orderform-configuration).
+
+See below a request body example of the **Updater orderForm configuration** endpoint containing an `apps` object:
+
+```json
+...
+"apps": [
+        {
+            "fields": [
+                  "gender",
+                  "age"
+            ],
+            "id": "profile",
+            "major": 1
+        },
+        {
+            "fields": [
+                  "street"
+            ],
+            "id": "address",
+            "major": 1
+        }
   ]
-}
-[/block]
+...
+```
+
 In this case, two applications will be created, which function as groups of fields: one with ID `profile` and one with ID `address`.
 
 The __profile__ app has two fields:
-- `age`
 - `gender`
+- `age`
 
 The __address__ app has only one field:
-- `phone2`
+- `street`
 
 
 ## Using the API to record/update/query the data
 
-After creating the fields, we need to save the data in them. This can be done using one of the following calls: [Set single custom field value](https://developers.vtex.com/vtex-rest-api/reference/setsinglecustomfieldvalue) or [Set multiple custom field values](https://developers.vtex.com/vtex-rest-api/reference/setmultiplecustomfieldvalues).
+After creating the fields, we need to save the data in them. This can be done using one of the following requests: [Set single custom field value](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-/-appFieldName-) or [Set multiple custom field values](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-).
 
-Through these calls, you inform the ID of the app you want to change (in the URL), as well as the names of the fields and the values you want to save in each of these fields (in the body).
+### **Set single custom field value**
 
-See below an example of the JSON that we must pass in the body of this call:
-[block:code]
+To update a value of a specific custom field, you can use this [endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-/-appFieldName-) by sending the value to be updated (`appFieldValue`) through the request body. The following information must be sent as path parameters in the URL:
+
+- `orderFormId`: ID of the orderForm that will receive the new custom field values.
+- `appId`: ID of the app created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
+- `appFieldName`: name of the app's field created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
+
+See a URL and request body example below:
+
+URl: `https://{accountName}.{environment}.com.br/api/checkout/pub/orderForm/ede846222cd44046ba6c638442c3505a/customData/address/street`
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"expectedOrderFormSections\":\n  [\n    \"items\",\n    \"gifts\",\n    \"totalizers\",\n    \"clientProfileData\",\n    \"shippingData\",\n    \"paymentData\",\n    \"sellers\",\n    \"messages\",\n    \"marketingData\",\n    \"clientPreferencesData\",\n    \"storePreferencesData\",\n    \"customData\"\n  ],\n  \"value\":{{appFieldValue}}\n}",
-      "language": "json"
-    }
-  ]
+  "value": "Bourbon Street"
 }
-[/block]
-In the URL of the call, you must pass the following parameters:
-- `{orderFormId}`: ID of the orderForm that will receive the new custom field values.
-- `{appId}`: ID of the app created with the configuration API.
-- `{appFieldName}`: Name of the app's field created through the Update orderForm Configuration endpoint. In the example of the fields created in the previous call, it could be `age`, `gender` or `phone2`.
+```
 
-In the body you must pass the `{{appFieldValue}}`, which is the value to be sent.
+### **Set multiple custom field values**
+
+To update values of multiple custom fields at the same time, you can use this [endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-) by sending all the values and their respective fields to be updated in the request body (`appFieldValue` and `appFieldName`). The following information must be sent as path parameters in the URL:
+
+- `orderFormId`: ID of the orderForm that will receive the new custom field values.
+- `appId`: ID of the app created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
+
+See a URL and request body example below:
+
+URl: `https://{accountName}.{environment}.com.br/api/checkout/pub/orderForm/ede846222cd44046ba6c638442c3505a/customData/address`
+
+```json
+{
+  "street": "Bourbon Street",
+  "number": "78",
+  "postalCode": "11554"
+}
+```
+
+After choosing one of the methods and sending the URL request, the terminal will return the response body containing the updated custom data information, as shown in the example below:
+
+```json
+...
+"customData": {
+        "customApps": [
+            {
+                "fields": {
+                      "street": "Bourbon Street",
+                      "number": "78",
+                      "postalCode": "11554"
+                },
+                "id": "address",
+                "major": 1
+            }
+        ]
+    },
+...
+```
 
 ## Finding the desired data in the created order
 
 Finally, it is necessary to implement access to the data saved in the orderForm’s extra fields. To do this, use the [Get Order API](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-), appending the order ID to the URL.
 
 The fields and their respective values will be inside the `customData` object.
-[block:callout]
+
+## Remove single custom field value
+
+To remove the value of a specific custom field, you can use the [Remove single custom field value](https://developers.vtex.com/docs/api-reference/checkout-api#delete-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-/-appFieldName-) endpoint by sending the following information as path parameters in the URL:
+
+- `orderFormId`: ID of the orderForm where the custom field value will be deleted.
+- `appId`: ID of the app created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
+- `appFieldName`: name of the app's field created through the [Update orderForm Configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint and which will be deleted.
+
+See a URL and request body example below:
+
+`https://{accountName}.{environment}.com.br/api/checkout/pub/orderForm/ede846222cd44046ba6c638442c3505a/customData/address/street`
+
+## Error codes
+
+The following errors may appear as a message in the response body.
+
+### Set single custom field value and Set multiple custom field values endpoints
+
+#### 400 - Bad Request
+
+- `Message error example (code ORD002): "Invalid order form"`: this message indicates that the `orderFormId` used in the request does not exist or is incorrect.
+
+```json
 {
-  "type": "warning",
-  "body": "To remove an app field, access the [Remove single custom field value](https://developers.vtex.com/vtex-rest-api/reference/removesinglecustomfieldvalue) endpoint."
+    "fields": {},
+    "error": {
+        "code": "ORD002",
+        "message": "Invalid order form",
+        "exception": null
+    },
+    "operationId": "f2b8107f-e5d5-4b7c-b719-344d1b05d1fa"
 }
-[/block]
+```
+
+- `Message error example (code CHK0121): "Invalid app fields"`: this message indicates that the `value` was not sent in this request.
+
+```json
+{
+    "fields": {},
+    "error": {
+        "code": "CHK0121",
+        "message": "Invalid app fields",
+        "exception": null
+    },
+    "operationId": "62cf897f-2025-4304-8e25-2104b58d416d"
+}
+```
+
+#### 404 - Not found
+
+- `Message error example (code CHK0090): "App id not found"`: this message indicates that the `appId` parameter used in the request does not exist or is incorrect.
+
+```json
+{
+    "fields": {},
+    "error": {
+        "code": "CHK0090",
+        "message": "App id not found",
+        "exception": null
+    },
+    "operationId": "0926942a-769b-45ec-a7c3-3d733ed76a46"
+}
+```
+
+- `Message error example (code CHK0091): "App key not found for id profile"`: this message indicates that the `appFieldName` parameter used in the request does not exist or is incorrect. This message code is applicable only for the **Set single custom field value** endpoint.
+
+```json
+{
+    "fields": {},
+    "error": {
+        "code": "CHK0091",
+        "message": "App key not found for id profile",
+        "exception": null
+    },
+    "operationId": "6e8191fb-4f2a-41c8-8155-92d2595a96b3"
+}
+```
+
+### Update orderForm configuration endpoint
+
+#### 400 - Bad Request
+
+- `Message error example (code CHK0288): "Invalid configuration"`: this message indicates that the mandatory parameters (`paymentConfiguration`, `requiresAuthenticationForPreAuthorizedPaymentOption` and `minimumQuantityAccumulatedForItems`) was not sent in this request.
+
+```json
+{
+    "fields": {},
+    "error": {
+        "code": "CHK0288",
+        "message": "Invalid configuration",
+        "exception": null
+    },
+    "operationId": "f2b8107f-e5d5-4b7c-b719-344d1b05d1fa"
+}

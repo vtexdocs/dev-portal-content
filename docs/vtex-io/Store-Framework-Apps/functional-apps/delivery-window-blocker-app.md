@@ -29,7 +29,7 @@ Once you are logged in your VTEX App Store’s account, follow these steps:
 
 ### VTEX IO CLI
 
-Using your terminal and [VTEX IO CLI](https://vtex.io/docs/recipes/development/vtex-io-cli-installation-and-command-reference/#command-reference), log in to the account you are working on and [install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.delivery-window-blocker` app.
+Using your terminal and [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference), log in to the account you are working on and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.delivery-window-blocker` app.
 
 ## How it works
 

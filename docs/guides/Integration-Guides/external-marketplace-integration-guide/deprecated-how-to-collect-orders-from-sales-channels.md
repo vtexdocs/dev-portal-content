@@ -43,7 +43,7 @@ Follow the steps below, to integrate orders from external marketplaces:
 
 1. Collect order details from the endpoint provided by the marketplace.
 
-2. Create a request on the [Place fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) endpoint.
+2. Create a request on the [Place fulfillment order](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders) endpoint.
 
 3. [Simulate fulfillment](#fulfillment-simulation), to check if the SKU is available in VTEX.
 
@@ -57,7 +57,7 @@ Follow the steps below, to integrate orders from external marketplaces:
 
 - In the `marketplaceServicesEndpoint` field, the endpoint will be used by VTEX to inform the connector of the changes in order status, inserting tracking code and invoice. For more information check out [Sending invoice and tracking code to the marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-invoice-tracking).
 
-6. In case step 5 returns success and creates the order within the VTEX platform, authorize the dispatch by the seller through the [Authorize dispatch for fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/authorize-dispatch-for-fulfillment-order) endpoint.
+6. In case step 5 returns success and creates the order within the VTEX platform, authorize the dispatch by the seller through the [Authorize dispatch for fulfillment order](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders/-orderId-/fulfill) endpoint.
 7. Check the [Recommendations](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-recommendations) page to follow integration best practices.
 8. Check out the [Order logs](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) page to create appropriate error messages.
 
@@ -158,7 +158,7 @@ Use the request example below to perform the Shopping Cart Simulation. Check out
 
 ### Place fulfillment order
 
-Use the request example below to place fulfillment order. Check out our [Place fulfillment order](https://developers.vtex.com/vtex-rest-api/reference/place-fulfillment-order) API Reference to know more details.
+Use the request example below to place fulfillment order. Check out our [Place fulfillment order](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders) API Reference to know more details.
 
 ```json
 [
@@ -258,7 +258,7 @@ Use the request example below to place fulfillment order. Check out our [Place f
 
 ### Authorize dispatch
 
-Use the request example below to authorize dispatch. Check out our [Authorize Dispatch](https://developers.vtex.com/vtex-rest-api/reference/authorize-dispatch-for-fulfillment-order)
+Use the request example below to authorize dispatch. Check out our [Authorize Dispatch](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders/-orderId-/fulfill)
  API Reference to know more details.
 
 ```json
@@ -330,8 +330,8 @@ Connectors should:
 
 2. Validate the order status.
 
-3. If the order exists in VTEX, call the [Cancel Order](https://developers.vtex.com/vtex-rest-api/reference/cancelorder) endpoint.
-4. If the order exists in VTEX, and the order status is `invoiced`, call the [Order Invoice notification](https://developers.vtex.com/vtex-rest-api/reference/invoicenotification) endpoint.
+3. If the order exists in VTEX, call the [Cancel Order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel) endpoint.
+4. If the order exists in VTEX, and the order status is `invoiced`, call the [Order Invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) endpoint.
 
 5. In case the call is successful (200 OK), signaling the cancelling of the order, connectors should log the operation according to x.
 6. In case the call returns a bad request (400), signaling that the order could not be canceled, file an [error log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs), following the error code x.

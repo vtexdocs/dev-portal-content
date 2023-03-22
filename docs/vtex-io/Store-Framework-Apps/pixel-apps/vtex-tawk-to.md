@@ -23,7 +23,7 @@ It is possible to install in your store either by using App Store or the VTEX IO
 
 ### Using VTEX IO Toolbelt
 
-1. In your terminal, [install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.tawk-to@0.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
+1. In your terminal, [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.tawk-to@0.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
 2. Access the **Apps** section in your account's admin page and look for the Tawk.to box. Once you find it, click on it.
 3. Fill with your tawk.to's **Property ID**.
 4. Click on **Save**.

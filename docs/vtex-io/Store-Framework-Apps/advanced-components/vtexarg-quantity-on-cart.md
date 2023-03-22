@@ -14,7 +14,7 @@ The **Quantity on Cart** app allows you to display a message to your customers i
 
 ## Configuration
 
-1. Open the terminal and use the [VTEX IO CLI](https://vtex.io/docs/recipes/development/vtex-io-cli-installment-and-command-reference) to log into the desired VTEX account.
+1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log into the desired VTEX account.
 2. Run the following command to install the Quantity On Cart app:
 
 ```

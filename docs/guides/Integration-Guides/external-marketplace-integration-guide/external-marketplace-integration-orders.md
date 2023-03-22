@@ -21,6 +21,6 @@ Learn how to integrate Orders in VTEX with external marketplaces. Before you sta
 - **Marketplace/affiliate:** Owns the storefront, responsible for selling the SKU.
 - **SKU:** item to be exchanged and sold between seller and marketplace
 - **Sales channel/Trade policy:** product assortment, prices, and logistics configurations attached to a sales channel.
-- **Connector:** party responsible for the integration, being either the marketplace itself, or an integration hub. Know more about [how to configure a marketplace trade policy](https://help.vtex.com/tutorial/configurando-a-politica-comercial-para-marketplace--tutorials_404).
+- **Connector:** party responsible for the integration, being either the marketplace itself, or an integration hub. Know more about [how to configure a marketplace trade policy](https://help.vtex.com/en/tutorial/configuring-a-marketplace-trade-policy--tutorials_404).
 - **Order Authorization:** order authorization rules are defined by the seller to deal with scenarios of price divergence.
 - **MarketplaceServicesEndpoint:** Endpoint sent by the marketplace to the seller, that will be used to send the invoice and tracking data back to it.

@@ -5,8 +5,41 @@ hidden: false
 createdAt: "2021-10-26T23:00:18.640Z"
 updatedAt: "2022-03-04T21:41:10.287Z"
 ---
-[block:html]
-{
-  "html": "<style>\n    .flexcontainer {\n        display: flex;\n        flex-wrap: wrap;\n        padding-top: 1rem;\n        padding-bottom: 2rem;\n        justify-content: space-between;\n    }\n\n    .flexcontainer-card {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        align-items: flex-start;\n        width: 22rem;\n        margin: 0.5rem;\n        line-height: 1.8;\n    }\n    .see-more {\n        color: rgb(247, 25, 99);\n        text-decoration: none !important;\n    }\n\n    .see-more::after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(247, 25, 99)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(247, 25, 99)'></path></svg>\");\n        display: inline-block;\n        margin-left: 6px;\n        text-decoration: none !important;\n    }\n\n    .see-more:hover:after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(181, 16, 71)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(181, 16, 71)'></path></svg>\");\n        margin-left: 8px;\n    }\n\n    .see-more:hover {\n        color: rgb(181, 16, 71);\n    }\n    .app-description{\n        font-size: 16px;\n    }\n</style>\n\n<p class=\"app-description\">\n\n  The <a href=\"https://apps.vtex.com\"><strong>VTEX App Store</strong></a> is a marketplace for VTEX IO plug-and-play solutions. It can be used by any VTEX partners willing to share their solution with other VTEX users so they can also <strong>leverage their business</strong>.\n</p>\n<br>\n<div class=\"flexcontainer\">\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Becoming a registered VTEX App Store developer</h3>\n                <div>\n                    Become a VTEX App Store Developer and share your own solutions with other VTEX users in the VTEX App Store so they can also leverage their business.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n<div class=\"flexcontainer\">\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Developing an app</h3>\n                <div>\n                    Learn how to how to develop an app using the VTEX IO platform.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n<div class=\"flexcontainer\">\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Preparing your app for distribution</h3>\n                <div>\n                    Learn how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution. \n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n<div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Charging for your app</h3>\n                <div>\n                    Learn how to define who will be able to install your app, if its usage will be charged and, if so, how much it will cost for the interested accounts.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n<div class=\"flexcontainer\">\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Submitting your app</h3>\n                <div>\n                    Learn how to add an app to the VTEX app store with four main steps.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    \n</div>\n"
-}
-[/block]
+
+<Flex>
+
+<WhatsNextCard
+title="Becoming a registered VTEX App Store developer"
+description="Become a VTEX App Store Developer and share your own solutions with other VTEX users in the VTEX App Store."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Developing an app"
+description="Learn how to develop an app to the VTEX App Store."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Preparing your app for distribution"
+description="Learn how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Setting your app's billing model"
+description="Learn how to monetize and define your app audience."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Submitting your app to the VTEX App Store"
+description="Learn how to submit your app for distribution with four main steps."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store"
+linkTitle="See more"
+/>
+</Flex>
