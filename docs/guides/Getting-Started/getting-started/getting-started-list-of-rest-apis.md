@@ -10,7 +10,7 @@ updatedAt: "2022-09-09T17:59:09.868Z"
 | Name | Description |
 |------|-------------|
 | [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) | Manipulate your store’s sales channels, categories, brands, products, SKUs and specifications. |
-| [Catalog API - Seller Portal](https://developers.vtex.com/docs/api-reference/catalog-api-seller-portal) | create, edit and consult products and their variations, brands, and categories in Seller Portal. |
+| [Catalog API - Seller Portal](https://developers.vtex.com/docs/api-reference/catalog-api-seller-portal) | Create, edit and consult products and their variations, brands, and categories in Seller Portal. |
 | [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api#overview) | Access and manipulate items data of a checkout cart. |
 | [CMS API](https://developers.vtex.com/docs/api-reference/cms-api) | Manage VTEX CMS through API.
 | [Customer Credit API](https://developers.vtex.com/docs/api-reference/customer-credit-api#overview) | Enable credit payments on your store and control invoices and credit limits. |
