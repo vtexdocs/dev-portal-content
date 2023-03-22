@@ -66,14 +66,14 @@ linkTitle="See more" />
 
 <WhatsNextCard
 title="Iubenda"
-description="Configure the Iubenda app to manage consent preferences for the ePrivacy, GDPR, and CCPAntegrated.."
+description="Configure the Iubenda app to manage consent preferences for the ePrivacy, GDPR, and CCPA."
 linkTo="https://developers.vtex.com/docs/apps/vtex.iubenda"
 linkTitle="See more" />
 
 <WhatsNextCard
 title="Listrak"
 description="Connect to Listrak and collect metrics, such as cart abandonment rates."
-linkTo="https://developers.vtex.com/docs/apps/vtex.listrak"
+linkTo="https://developers.vtex.com/docs/apps/vtex.listrak-pixel"
 linkTitle="See more" />
 
 <WhatsNextCard
@@ -97,7 +97,7 @@ linkTitle="See more"/>
 <WhatsNextCard
 title="Tawk.to"
 description="Monitor and chat with the visitors of your website from a free customizable page."
-linkTo="https://developers.vtex.com/docs/apps/vtex.talk-to"
+linkTo="https://developers.vtex.com/docs/apps/vtex.tawk-to"
 linkTitle="See more" />
 
 <WhatsNextCard
@@ -121,7 +121,7 @@ linkTitle="See more" />
 <WhatsNextCard
 title="Yotpo Reviews Integration"
 description="Use this integration to present Yotpo reviews and ratings on product pages."
-linkTo="https://developers.vtex.com/docs/apps/vtex.product-summary-yotpo"
+linkTo="https://developers.vtex.com/docs/apps/vtex.yotpo"
 linkTitle="See more"/>
 
 </Flex>
