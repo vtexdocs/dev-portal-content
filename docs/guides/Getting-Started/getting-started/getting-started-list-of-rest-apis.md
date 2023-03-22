@@ -41,4 +41,3 @@ updatedAt: "2022-09-09T17:59:09.868Z"
 | [VTEX Headless CMS API](https://developers.vtex.com/docs/api-reference/headless-cms-api)| Structure a no-code management system for storefront content. |
 | [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api)| Manage tokens from a given app key and app token pair. |
 | [VTEX Shipping Network API](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api) | Set up your app to integrate with VTEX Shipping Network. |
-
