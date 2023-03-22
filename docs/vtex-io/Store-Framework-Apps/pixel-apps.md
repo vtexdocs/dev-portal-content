@@ -5,8 +5,123 @@ hidden: false
 createdAt: "2021-03-17T12:43:04.546Z"
 updatedAt: "2021-10-05T19:35:30.048Z"
 ---
-[block:html]
-{
-  "html": "<style>\n    .flexcontainer {\n        display: flex;\n        flex-wrap: wrap;\n        padding-top: 1rem;\n        padding-bottom: 2rem;\n        justify-content: space-between;\n    }\n\n    .flexcontainer-card {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        align-items: flex-start;\n        width: 22rem;\n        margin: 0.5rem;\n        line-height: 1.8;\n    }\n    .see-more {\n        color: rgb(247, 25, 99);\n        text-decoration: none !important;\n    }\n\n    .see-more::after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(247, 25, 99)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(247, 25, 99)'></path></svg>\");\n        display: inline-block;\n        margin-left: 6px;\n        text-decoration: none !important;\n    }\n\n    .see-more:hover:after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(181, 16, 71)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(181, 16, 71)'></path></svg>\");\n        margin-left: 8px;\n    }\n\n    .see-more:hover {\n        color: rgb(181, 16, 71);\n    }\n.app-description{\n        font-size: 16px;\n    }\n</style>\n\n<p class=\"app-description\">Pixel components are used to collect user data for a third-party of your choosing. Check out some of the already available implementations on our platform.</p>\n\n<div class=\"flexcontainer\">\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Accessibe</h3>\n                <div>\n                    VTEX Accessibe native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-accessibe\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Alexa Certify Code</h3>\n                <div>\n                    VTEX Alexa Certify Code native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-alexa-certify-code\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Audara</h3>\n                <div>\n                    VTEX Audara native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-audara\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Avantlink</h3>\n                <div>\n                    VTEX Avantlink native integration\n                </div>\n            </div><a href=\"https://github.com/vtex-apps/avantlink\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Bazaarvoice</h3>\n                <div>\n                    VTEX Bazaarvoice native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-bazaarvoice\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Bluecore</h3>\n                <div>\n                    VTEX Bluecore native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-bluecore\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Blueknow</h3>\n                <div>\n                    VTEX Blueknow native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-blueknow\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Btg360</h3>\n                <div>\n                    VTEX Btg360 native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-btg360\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Cookiebot</h3>\n                <div>\n                    VTEX Cookiebot native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-cookiebot\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Cookie Script</h3>\n                <div>\n                    VTEX Cookie Script native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-cookie-script\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Criteo</h3>\n                <div>\n                    VTEX Criteo native integration\n                </div>\n            </div><a href=\"https://github.com/vtex-apps/criteo\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n        \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Curbside Pickup</h3>\n                <div>\n                    VTEX Curbside Pickup native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-curbside-pickup\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>CyberSource Fingerprint</h3>\n                <div>\n                    VTEX CyberSource Fingerprint native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-cybersource-fingerprint\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Elfsight</h3>\n                <div>\n                    VTEX Elfsight native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-elfsight\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Facebook Domain Verification</h3>\n                <div>\n                    Adds into the head section of your website's homepage the meta-tag containing the Facebook verification code.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-facebook-domain-verification\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Facebook Pixel</h3>\n                <div>\n                    VTEX Facebook Pixel native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-facebook-pixel\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Flixmedia</h3>\n                <div>\n                    VTEX Flixmedia native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-flixmedia\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Google Adwords</h3>\n                <div>\n                    VTEX Google Adwords native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-google-adwords\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Google Customer Reviews\n                </h3>\n                <div>\n                    VTEX Google Customer Reviews native integration\n\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-google-customer-reviews\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Google Search Console</h3>\n                <div>\n                    VTEX Google Search Console native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-google-search-console\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Google Tag Manager</h3>\n                <div>\n                    VTEX Google Tag Manager native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-google-tag-manager\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Hotjar</h3>\n                <div>\n                    VTEX Hotjar native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-hotjar\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Ideacrm</h3>\n                <div>\n                    VTEX Ideacrm native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-ideacrm\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Iubenda</h3>\n                <div>\n                    VTEX Iubenda native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-iubenda\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>JivoChat</h3>\n                <div>\n                    VTEX JivoChat native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-jivochat\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Kelkoo</h3>\n                <div>\n                    VTEX Kelkoo native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-kelkoo\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Konduto Antifraud</h3>\n                <div>\n                    VTEX Konduto Antifraud native integration\n                </div>\n            </div><a href=\"https://github.com/vtex-apps/konduto-antifraud\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div> <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Listrak</h3>\n                <div>\n                    VTEX Listrak native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-listrak-pixel\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Logrocket</h3>\n                <div>\n                    VTEX Logrocket native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-logrocket\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div> <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Lomadee</h3>\n                <div>\n                    VTEX Lomadee native integration\n                </div>\n            </div><a href=\"https://github.com/vtex-apps/lomadee\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Lucky Orange</h3>\n                <div>\n                    VTEX Lucky Orange native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-lucky-orange\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>OneSignal</h3>\n                <div>\n                    VTEX OneSignal native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-onesignal\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Order Sms Notification</h3>\n                <div>\n                    VTEX Order Sms Notification native integration\n                </div>\n            </div><a href=\"https://github.com/vtex-apps/order-sms-notification\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Powerreviews</h3>\n                <div>\n                    VTEX Powerreviews native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-powerreviews\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Shareasale</h3>\n                <div>\n                    VTEX Shareasale native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-shareasale\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Sidecar Pixel</h3>\n                <div>\n                    VTEX Sidecar Pixel native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-io-release-notes-sidecar-pixel-app\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Smarthint</h3>\n                <div>\n                    VTEX Smarthint native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-smarthint\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Suiteshare</h3>\n                <div>\n                    VTEX Suiteshare native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-suite-share\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Tawk.to</h3>\n                <div>\n                    VTEX Tawk.to native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-tawk-to\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Tradetracker</h3>\n                <div>\n                    VTEX Tradetracker native integration\n                </div>\n            </div><a href=\"https://github.com/vtex-apps/tradetracker\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Trustpilot</h3>\n                <div>\n                    VTEX Trustpilot native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-trustpilot\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Wordpress Integration\n                </h3>\n                <div>\n                    VTEX Wordpress native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-wordpress-integration\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Yotpo</h3>\n                <div>\n                    VTEX Yotpo native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-yotpo\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Zendesk Chat</h3>\n                <div>\n                    VTEX Zendesk Chat native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-zendesk-chat\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Zopim</h3>\n                <div>\n                    VTEX Zopim native integration\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-zopim\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n</div>\n"
-}
-[/block]
+
+
+<Flex>
+
+<WhatsNextCard
+title="accessiBe"
+description="Connect to your accessiBe account to provide users with a custom accessibility experience."
+linkTo="https://developers.vtex.com/docs/apps/vtex.accessibe"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Bazaarvoice"
+description="Use the Bazaarvoice app to collect engage with customers and collect reviews."
+linkTo="https://developers.vtex.com/docs/apps/vtex.bazaarvoice"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Cookiebot"
+description="Make your use of cookies and online tracking compliant with the Cookiebot app."
+linkTo="https://developers.vtex.com/docs/apps/vtex.cookiebot"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Cookie Script"
+description="Use the Cookie Script app to make your website cookies comply with GDPR and CCPA."
+linkTo="https://developers.vtex.com/docs/apps/vtex.cookie-script"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Curbside Pickup"
+description="Connect to your Curbside account to enable shoppers to coordinate pickup orders through email notifications."
+linkTo="https://developers.vtex.com/docs/apps/vtex.curbside-pickup"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Elfsight"
+description="Use the Elfsight app to add widgets to your store and engage visitors."
+linkTo="https://developers.vtex.com/docs/apps/vtex.elfsight"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Facebook Business Extension"
+description="Connect your store to Facebook services through the FBE platform."
+linkTo="https://developers.vtex.com/docs/apps/vtex.facebook-fbe"
+linkTitle="See more"/>
+
+<WhatsNextCard
+title="Facebook pixel"
+description="Connect your store to the Facebook ads services and manage campaigns in real time."
+linkTo="https://developers.vtex.com/docs/apps/vtex.facebook-pixel"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Google Customer Reviews"
+description="Use this free service to collect valuable feedback from shoppers."
+linkTo="https://developers.vtex.com/docs/apps/vtex.google-customer-reviews"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Iubenda"
+description="Configure the Iubenda app to manage consent preferences for the ePrivacy, GDPR, and CCPAntegrated.."
+linkTo="https://developers.vtex.com/docs/apps/vtex.iubenda"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Listrak"
+description="Connect to Listrak and collect metrics, such as cart abandonment rates."
+linkTo="https://developers.vtex.com/docs/apps/vtex.listrak"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="PowerReviews"
+description="Bring your PowerReviews content into your store"
+linkTo="https://developers.vtex.com/docs/apps/vtex.powerreviews"
+linkTitle="See more"/>
+
+<WhatsNextCard
+title="Speech to Text Search"
+description="Use Google Chrome language processing to perform recognition on speech audio data."
+linkTo="https://developers.vtex.com/docs/apps/vtexarg.speech-to-text"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Suiteshare"
+description="Create solutions to attract and capture more customers with the Suiteshare app."
+linkTo="https://developers.vtex.com/docs/apps/vtex.suite-share"
+linkTitle="See more"/>
+
+<WhatsNextCard
+title="Tawk.to"
+description="Monitor and chat with the visitors of your website from a free customizable page."
+linkTo="https://developers.vtex.com/docs/apps/vtex.talk-to"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="TikTok for Business"
+description="Connect your store to TikTok to sync your catalog products with TikTok and more."
+linkTo="https://developers.vtex.com/docs/apps/vtexbr.tiktok-tbp"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Trustpilot"
+description="Connect to Trustpilot, an online review community that connects businesses and consumers through genuine feedback."
+linkTo="https://developers.vtex.com/docs/apps/vtex.trustpilot"
+linkTitle="See more"/>
+
+<WhatsNextCard
+title="Wordpress Integration"
+description="Bring in blog data from the Wordpress API and create a blog on your store."
+linkTo="https://developers.vtex.com/docs/apps/vtex.wordpress-integration"
+linkTitle="See more" />
+
+<WhatsNextCard
+title="Yotpo Reviews Integration"
+description="Use this integration to present Yotpo reviews and ratings on product pages."
+linkTo="https://developers.vtex.com/docs/apps/vtex.product-summary-yotpo"
+linkTitle="See more"/>
+
+</Flex>
