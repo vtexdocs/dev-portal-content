@@ -20,7 +20,7 @@ You can find all repositories included in it in [vtex/education-tools](https://g
 
 They each serve a different purpose, and will be mentioned in the FAQ below, depending on which action you wish to perform.
 
-### In this repository
+## In this repository
 
 You will find the following folders in this repository:
 
@@ -189,6 +189,22 @@ To add new content in the left navigation:
 6. Test your navigation through the preview.
 7. Send the PR link in the `#dev-portal-pr` Slack channel for approval.
 
+
+### How to publish a new API reference and add it to navigation?
+
+After creating a file for a new API reference in [openapi-schemas](https://github.com/vtex/openapi-schemas), follow these steps:
+
+1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
+2. In the `src/pages/api/openapi/[slug].tsx` file, edit `referencePaths` by adding the API schema file name exactly as saved in openapi-schemas and its corresponding slug on Developer Portal. Follow this syntax: `'{schemaFileName}': '{slug}'`. 
+3. Repeat step 2 in the `src/utils/getReferencePaths.ts` file, editing `fileSlugMap` with the same information.
+4. Add the API category and all its endpoints in `public/navigation.json`, following [these instructions](#what-determines-the-left-navigations-order-and-organization) and making sure endpoints are added in [this format](#how-to-update-the-left-navigation-after-changing-an-endpoints-path).
+5. Open a PR with all the changes.
+6. Send the PR in `#dev-portal-pr` Slack channel for approval.
+5. After approval, merge the PR.
+
+>ℹ️ If you have any questions about this process, check out [this example pull request](https://github.com/vtexdocs/devportal/pull/300/files) to publish the Shipping Network API.
+
+
 ### How to update the left navigation after changing an endpoint's path?
 
 The URL structure of the Developer Portal API reference has the endpoint's path as part of it. For example, the [List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies) endpoint's URL is `https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies`, and the endpoints path is `/api/logistics/pvt/shipping-policies`.
@@ -214,6 +230,7 @@ To update the left navigation after changing an endpoint's path follow the steps
         "children": []
     }
     ```
+    >⚠️ Don't change the `slug` field. It should have the same value as the API category slug.
 
 3. Open a PR.
 4. Send the PR in `#dev-portal-pr` Slack channel for approval.
