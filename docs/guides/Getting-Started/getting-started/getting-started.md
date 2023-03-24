@@ -54,7 +54,7 @@ Our API Guides and Reference cover VTEX Core Services, as illustrated in the ima
 
 <OverviewCard icon='Catalog'>
 
-### [Catalog](https://developers.vtex.com/vtex-rest-api/docs/catalog-overview)
+### [Catalog](https://developers.vtex.com/docs/guides/catalog-overview)
 
 Manage your store's categories, brands, products, SKUs and specifications.
 
@@ -62,7 +62,7 @@ Manage your store's categories, brands, products, SKUs and specifications.
 
 <OverviewCard icon='Checkout'>
 
-### [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview)
+### [Checkout](https://developers.vtex.com/docs/guides/checkout-overview)
 
 Manage your store's categories, brands, products, SKUs and specifications.
 
@@ -70,7 +70,7 @@ Manage your store's categories, brands, products, SKUs and specifications.
 
 <OverviewCard icon='Orders'>
 
-### [Orders](https://developers.vtex.com/vtex-rest-api/docs/orders-overview)
+### [Orders](https://developers.vtex.com/docs/guides/orders-overview)
 
 Manage your store's categories, brands, products, SKUs and specifications.
 
@@ -78,7 +78,7 @@ Manage your store's categories, brands, products, SKUs and specifications.
 
 <OverviewCard icon='Fulfillment'>
 
-### [Fulfillment](https://developers.vtex.com/vtex-rest-api/docs/fulfillment-overview)
+### [Fulfillment](https://developers.vtex.com/docs/guides/fulfillment)
 
 Manage all store logistics data by accessing warehouses, docks, pick up points, carriers and shipping rates. Get or update the inventory of each SKU.
 
@@ -87,27 +87,30 @@ Manage all store logistics data by accessing warehouses, docks, pick up points, 
 
 <OverviewCard icon='Payments'>
 
-### [Payments](https://developers.vtex.com/vtex-rest-api/docs/payments-overview)
+### [Payments](https://developers.vtex.com/docs/guides/payments-overview)
 
 Get payment data and process your transactions.
 
 </OverviewCard>
 
+
 <OverviewCard icon='Promotions'>
 
-### [Promotions](https://developers.vtex.com/vtex-rest-api/docs/promotions-overview)
+### [Promotions](https://developers.vtex.com/docs/guides/promotions-overview)
 
 Create and manage promotions and coupons to scale your sales.
 
 </OverviewCard>
 
+
 <OverviewCard icon='Pricing'>
 
-### [Pricing](https://developers.vtex.com/vtex-rest-api/docs/pricing-overview)
+### [Pricing](https://developers.vtex.com/docs/guides/pricing-overview)
 
 Create, read and edit prices for each SKU, sales channel or price table.
 
 </OverviewCard>
+
 
 <OverviewCard icon='AccountManagement'>
 
@@ -117,9 +120,10 @@ Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.
 
 </OverviewCard>
 
+
 <OverviewCard icon='StoreSearch'>
 
-### [Search](https://developers.vtex.com/vtex-rest-api/docs/search-overview)
+### [Search](https://developers.vtex.com/docs/guides/search-overview)
 
 Search and sort products in the catalog using fulltext, category and brand search terms. Retrieve product data to create custom searches and product shelves.
 
@@ -128,7 +132,7 @@ Search and sort products in the catalog using fulltext, category and brand searc
 
 <OverviewCard icon='Subscriptions'>
 
-### [Subscriptions](https://developers.vtex.com/vtex-rest-api/docs/subscriptions-overview)
+### [Subscriptions](https://developers.vtex.com/docs/guides/subscriptionsw)
 
 Manage store's subscription rules to improve the revenue, reduce bounce rate and churn.
 
