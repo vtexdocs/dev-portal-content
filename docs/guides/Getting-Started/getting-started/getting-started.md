@@ -72,7 +72,7 @@ Manage your store's categories, brands, products, SKUs and specifications.
 
 ### [Orders](https://developers.vtex.com/docs/guides/orders-overview)
 
-Manage your store's categories, brands, products, SKUs and specifications.
+Receive, process, and manage every order through our APIs.
 
 </OverviewCard>
 
