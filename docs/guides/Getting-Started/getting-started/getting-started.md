@@ -64,7 +64,7 @@ Manage your store's categories, brands, products, SKUs and specifications.
 
 ### [Checkout](https://developers.vtex.com/docs/guides/checkout-overview)
 
-Manage your store's categories, brands, products, SKUs and specifications.
+Access and manipulate items data of a checkout cart.
 
 </OverviewCard>
 
