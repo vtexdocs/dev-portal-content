@@ -60,6 +60,14 @@ Manage your store's categories, brands, products, SKUs and specifications.
 
 </OverviewCard>
 
+<OverviewCard icon='Checkout'>
+
+### [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview)
+
+Manage your store's categories, brands, products, SKUs and specifications.
+
+</OverviewCard>
+
 <OverviewCard icon='Orders'>
 
 ### [Orders](https://developers.vtex.com/vtex-rest-api/docs/orders-overview)
@@ -68,13 +76,14 @@ Manage your store's categories, brands, products, SKUs and specifications.
 
 </OverviewCard>
 
-<OverviewCard icon='Checkout'>
+<OverviewCard icon='Fulfillment'>
 
-### [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview)
+### [Fulfillment](https://developers.vtex.com/vtex-rest-api/docs/fulfillment-overview)
 
-Manage your store's categories, brands, products, SKUs and specifications.
+Manage all store logistics data by accessing warehouses, docks, pick up points, carriers and shipping rates. Get or update the inventory of each SKU.
 
 </OverviewCard>
+
 
 <OverviewCard icon='Payments'>
 
@@ -113,5 +122,14 @@ Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.
 ### [Search](https://developers.vtex.com/vtex-rest-api/docs/search-overview)
 
 Search and sort products in the catalog using fulltext, category and brand search terms. Retrieve product data to create custom searches and product shelves.
+
+</OverviewCard>
+
+
+<OverviewCard icon='Subscriptions'>
+
+### [Subscriptions](https://developers.vtex.com/vtex-rest-api/docs/subscriptions-overview)
+
+Manage store's subscription rules to improve the revenue, reduce bounce rate and churn.
 
 </OverviewCard>
