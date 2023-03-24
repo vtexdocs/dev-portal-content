@@ -192,7 +192,7 @@ To add new content in the left navigation:
 
 ### How to publish a new API reference and add it to navigation?
 
-After creating a file for a new API reference in [openapi-schemas](https://github.com/vtex/openapi-schemas), follow these steps:
+After creating a file for a new API reference in [openapi-schemas](https://github.com/vtex/openapi-schemas), follow these steps so it shows in Dev Portal's navigation:
 
 1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
 2. In the `src/pages/api/openapi/[slug].tsx` file, edit `referencePaths` by adding the API schema file name exactly as saved in openapi-schemas and its corresponding slug on Developer Portal. Follow this syntax: `'{schemaFileName}': '{slug}'`. 
