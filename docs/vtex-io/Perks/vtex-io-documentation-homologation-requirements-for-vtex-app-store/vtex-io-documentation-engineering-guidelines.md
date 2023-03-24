@@ -23,7 +23,7 @@ Use the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-
 
 ### Using APIs efficiently
 
-For communication with services, your app should use existing [VTEX IO Clients](https://github.com/vtex/io-clients) whenever possible. Try to avoid unnecessary or excessive API calls. For more information, see our [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.
+For communication with services, your app should use existing [VTEX IO Clients](https://github.com/vtex/io-clients) whenever possible. Try to avoid unnecessary or excessive API calls. Excessive API calls can degrade the performance of your app, increasing response times. Unnecessary API calls or lack of proper use of our Clients can lead to security issues. For more information, see our [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.
 
 ## Security and data privacy
 
@@ -61,19 +61,19 @@ For user-initiated actions, apps should use either `ctx.vtex.storeUserAuthToken`
 
 Outbound access policies (`outbound-access`) to VTEX resources should follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). In short, you only give access to what is really needed. For instance: the `path` should not be configured as `*`. See an example [here](https://github.com/vtex-apps/store-graphql/blob/684dcbbbd6e9cdbd121afd7802200856cb952d2b/manifest.json#L107-L112) on how it should be done.
 
-### Exposing private information through public routes
+### Avoid exposing private information through public routes
 
-Public routes do not require authentication when called from the Frontend, so they should not expose information obtained from calling private APIs, e.g. exposing a list of orders to the Frontend. A common mistake is leaving routes which are meant to only be consumed from the Admin unrestricted. Also, GraphQL APIs are public by default, so the schema shouldn't have queries exposing private information either.
+Public routes do not require authentication when called from the Frontend, so they should not expose information obtained from calling private APIs, e.g.: exposing a list of orders to the Frontend. A common mistake is leaving routes which are meant to only be consumed from the Admin unrestricted. Also, GraphQL APIs are public by default, so the schema should not have queries exposing private information either.
 
 Access to REST APIs should be restricted using [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies#resource-based-policies). Access to GraphQL APIs should be restricted using directives, either [@auth](https://github.com/vtex/node-vtex-api/blob/08ea11d380997f5abf02455487b342caa74b2001/src/service/worker/runtime/graphql/schema/schemaDirectives/Auth.ts#L66-L75) or a custom-made one.
 
-### Violating multi-tenancy
+### Isolate data between tenants
 
-Single-tenant external systems should be used carefully. Data from one tenant should always be isolated from data from another tenant.
+Single-tenant external systems should be used carefully. Data from one tenant should always be isolated from data from another tenant to prevent leakage and unwanted access.
 
 ### Persisting PII within VTEX
 
-If using Master Data or VBase to store Personal Indentifiable Information (PII), a mechanism should be in place to ensure compliance with the Right to be Forgotten or other similar data-protection practices.
+If using Master Data or VBase to store Personal Indentifiable Information (PII), a mechanism should be in place to ensure compliance with the [Right to be Forgotten](https://www.gdpreu.org/right-to-be-forgotten/) or other similar data-protection practices.
 
 ### Sending PII to external service
 
@@ -132,17 +132,17 @@ At the authentication level, take the following requirements
 
 ## Usability issues
 
-### Implementing i18n incorrectly
+### Implementing internationalization (i18n) correctly
 
-Ensure that all messages are [internationalized](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores#storefront-content-internationalization) using the messages builder. Also, i18n keys should start with the domain (store/ for storefront and admin/ for Admin) where they're used, otherwise they won't render properly.
+Ensure that all messages are [internationalized](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores#storefront-content-internationalization) using the `messages` builder. Also, i18n keys should start with the domain (`store/` for storefront and `admin/` for Admin) where they are used, otherwise they will not render properly. For more information, see our [reference](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) for translating components.
 
-### Declaring routes with collision-prone paths
+### Avoid declaring routes with collision-prone paths
 
-When declaring [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes), generic paths (e.g. `/_v/orders/`, `/_v/settings`) should be avoided to reduce changes of collision with other apps.
+When declaring [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes), generic paths (e.g.: `/_v/orders/`, `/_v/settings`) should be avoided to reduce changes of collision with other apps.
 
 ### Creating custom Admin settings form
 
-The Admin settings form of your app should be created using the [settingsSchema](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#settingsschema) structure. If the settings do not follow the settingsSchema structure, your app will not be approved in the homologation process.
+We recommend to build the Admin settings form of your app using the [settingsSchema](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#settingsschema) structure, which should cover most cases. We also understand that there are some specific cases where the schema is not enough to build the settings page of the app, which will be assessed by our team in the homologation.
 
 ## Plug&Play
 
