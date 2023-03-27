@@ -25,7 +25,7 @@ You can use the controls listed below on most pages in your store.
 | `<vtex.cmc:welcomeMessage/>` | **Welcome message:** displays a welcome message to anyone accessing your store. To customize this message, go to the **Store Settings > Storefront** module and click on **Settings**. In the Store texts tab, look for the `topbarSaudacao` command in the ID options and select it. In the text box that will appear automatically, you can edit the welcome message and then `Save`. |
 | `<vtex:metaTags/>` | **Meta Tags:** defines the page’s Meta Tags — tags that are useful for search engines to identify your content easily. |
 | `<vtex.cmc:canonicalPage disable="true"/>` | **Disable canonical tag:** if this control is set to `true`, the canonical tag will be disabled on the given page. Using this tag informs search engines about duplicate content and prioritizes them correctly in page tracking. |
-| `<vtex.cmc:departmentLinks/>` | **Department links:** displays links to the first level of categories (departments) created in the Admin. For the category to be listed, the Menu field must be enabled when [creating the category](https://help.vtex.com/en/tutorial/registering-a-category--tutorials_206).     |
+| `<vtex.cmc:departmentLinks/>` | **Department links:** displays links to the first level of categories (departments) created in the Admin. For the category to be listed, the Menu field must be enabled when [creating the category](https://help.vtex.com/en/tutorial/registering-a-category--tutorials_206). |
 | `<vtex.cmc:departmentNavigator/>` | **Department menu:** displays a menu with your store’s departments and categories (1st and 2nd level). To display the link for the complete list, the Menu field must be enabled when [creating categories](https://help.vtex.com/en/tutorial/registering-a-category--tutorials_206). This menu also displays brands with the *[Display in Home menu](https://help.vtex.com/en/tutorial/campos-de-cadastro-de-marca--37Ky7lTbEkiWIAYA80EMyI#)* option enabled and category specifications, such as size and color, for example. This control is indicated to be used as a lateral menu. |
 | `<vtex.cmc:searchTitle/>` | **Page title:** displays the title of department, category, and search pages. |
 | `<vtex.cmc:productQuickView/>` | **QuickView:** this control needs to be added before closing the `</body>` tag in the QuickView page template. It is fundamental for loading the files needed on the page. |
@@ -56,7 +56,7 @@ Example of usage of the **Shelf** control:
 | -------- | ----------- |
 | `<vtex.cmc:ProductGifts />` |	**Display giveaways on the product page:** displays the giveaways attached to the product, if you have configured a Buy One Get One promotion in your store. [See how to configure this type of promotion](https://help.vtex.com/en/tutorial/how-to-set-a-buy-and-win-promotion-gift-for-a-specific-sku--4QlFtwxAju6qOwaCi2YS0G). |
 | `<vtex.cmc:productName/>` |	**Product name:** displays the name of the product. |
-| `<vtex.cmc:brandName/>` |	**Product brand with link:** displays the product brand, with a link to access a list of the brand’s products in your store.
+| `<vtex.cmc:brandName/>` |	**Product brand with link:** displays the product brand, with a link to access a list of the brand’s products in your store. |
 | `<vtex.cmc:ProductImage/>` | **Thumbnail of the main product image:** displays a miniature representation of the main product image. To enable zoom in the image, you need to add the `zoom` attribute to the tag. Example: `<vtex.cmc:ProductImage zoom="on"/>`. |
 | `<vtex.cmc:productReference/>` | **Product reference code:** displays the product’s reference code. |
 | `<vtex.cmc:skuReference/>` |	**SKU reference code:** displays the reference code of the SKU. |
@@ -114,7 +114,7 @@ The `<vtex.cmc:productRichSnippets />` control adds specific tags for informatio
 
 | Control | Examples of usage |
 | ------- | ----------------- |
-| `<vtex.cmc:productRichSnippets showGoogle="1"/>` | In order for the product to be indexed on Google, the control needs to be in the `<body>` tag.
+| `<vtex.cmc:productRichSnippets showGoogle="1"/>` | In order for the product to be indexed on Google, the control needs to be in the `<body>` tag. |
 | `<vtex.cmc:productRichSnippets showFacebook="1" fbAdmins="[fbAdmins]" fbAppId="[fbAppId]"/>` | For Facebook, the control needs to be in the `<head>` tag. `fbAdmins` and `fbAppId` settings are optional. |
 | `<vtex.cmc:productRichSnippets Twitter="[TwitterAccount]"/>` | For Twitter, the control can be added to `<head>` or `<body>` tags. Settings can also be grouped together. |
 
@@ -122,7 +122,7 @@ The `<vtex.cmc:productRichSnippets />` control adds specific tags for informatio
 
 | Control | Description |
 |---------|-------------|
-| `<vtex.cmc:advancedSearchFilter/>` |	**Advanced Search Filter**
+| `<vtex.cmc:advancedSearchFilter/>` |	**Advanced Search Filter** |
 | `<vtex.cmc:singleDepartmentNavigator/>` |	**Department menu:** the available attribute is `keepCurrentPath`. When the attribute is set to `true`, products will be displayed on the page. |
 | `<vtex.cmc:searchNavigator/>` |	**Search menu/filter:** displays a menu with your store’s departments and categories (1st and 2nd level). To display the link for the **complete list**, the **Menu** field must be enabled when [creating categories](https://help.vtex.com/en/tutorial/registering-a-category--tutorials_206). |
 | `<vtex.cmc:miniCart/>` | **Minicart control:** a shopping cart control used in the top menu on all pages — except Checkout and the order confirmation page. This control displays shopping cart information: items, quantities, and prices. |
@@ -167,8 +167,8 @@ For more information, read the tutorial [Shelf template controls](https://develo
 | `<vtex.cmc:stockKeepingUnitSelection/>` | **SKU selection:** deprecated control. Now you need to use `<vtex.cmc:skuSelection/>`. | Product page |
 | `<vtex.cmc:skuRichSelection changeImage="1"/>` | **SKU checkbox selection:** deprecated control.     | Product page |
 | `<vtex.cmc:shippingValue/>` | **Calculate shipping cost and delivery time frame:** deprecated control, because it presents a [known issue](https://help.vtex.com/es/known-issues/a-viewpart-shippingvalue-nao-exibe-prazos-em-horas-corretamente--5hvl9eGxPLZAuNcFAFc9Vb#). | Product page |
-| `<vtex.cmc:stockKeepingUnitService/>`                                  | **SKU services:** deprecated control.       | Product page |
+| `<vtex.cmc:stockKeepingUnitService/>` | **SKU services:** deprecated control.       | Product page |
 | `<vtex.cmc:StockKeepingUnitPriceHistory Months="6" Percentile="100"/>` | **Price history**     | Product page |
-| `<vtex.cmc:evaluationRate/>`    |   **Consumer rating (stars):** deprecated control. It previously displayed the average of star ratings by customers.           | Product page |
+| `<vtex.cmc:evaluationRate/>` |   **Consumer rating (stars):** deprecated control. It previously displayed the average of star ratings by customers. | Product page |
 | `<vtex.cmc:UserReview/>`| **Ratings and comments:** deprecated control. It previously displayed an option to rate products, a form to make comments, results of ratings, and comments made. | Product page |
 | `<vtex.cmc:welcomeMessage/>` | **User login:** deprecated control.  It was responsible for creating the IPI cookie used by the `<vtex.cmc:UserReview/>` control. Without it, when trying to make a review, the login was required in a loop. | Product page |
