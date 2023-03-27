@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-09-08T14:21:08.318Z"
 updatedAt: "2022-09-08T14:21:08.318Z"
 ---
-The controls listed in this article can be used by your store's _front-end_ developer to create the store page layout in the **Storefront > Layout** module.
+The controls listed in this article can be used by your store's *front-end* developer to create the store page layout in the **Storefront > Layout** module.
 
 - [General controls](#general-controls)
 - [Controls for product pages](#controls-for-product-pages)
@@ -21,7 +21,7 @@ You can use the controls listed below on most pages in your store.
 | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<vtex.cmc:breadCrumb/>`                      | **Breadcrumb:** indicates the user's current location on your store's website and the pages they accessed to get to the current one. Works on product, department, category, and search pages.         |
 | `<vtex.cmc:fullTextSearchBox/>`                | **Search control:** displays the search bar in your store. For more information, read [Search Control - fulltextSearchBox](https://developers.vtex.com/docs/guides/search-control-fulltextsearchbox).  |
-| `<vtex.cmc:welcomeMessage/>`                   | **Welcome message:** displays a welcome message to anyone accessing your store. To customize this message, go to the **CMS** module and click on **Settings**. In the Store texts tab, look for the `topbarSaudacao` command in the ID options and select it. In the text box that will appear automatically, you can edit the welcome message and then `Save`.     |
+| `<vtex.cmc:welcomeMessage/>`                   | **Welcome message:** displays a welcome message to anyone accessing your store. To customize this message, go to the **Store Settings > Storefront** module and click on **Settings**. In the Store texts tab, look for the `topbarSaudacao` command in the ID options and select it. In the text box that will appear automatically, you can edit the welcome message and then `Save`.     |
 | `<vtex:metaTags/>`                             | **Meta Tags:** defines the page’s Meta Tags — tags that are useful for search engines to identify your content easily.   |
 | `<vtex.cmc:canonicalPage disable="true"/>`     | **Disable canonical tag:** if this control is set to `true`, the canonical tag will be disabled on the given page. Using this tag informs search engines about duplicate content and prioritizes them correctly in page tracking.        |
 | `<vtex.cmc:departmentLinks/>`                  | **Department links:** displays links to the first level of categories (departments) created in the Admin. For the category to be listed, the Menu field must be enabled when [creating the category](https://help.vtex.com/en/tutorial/registering-a-category--tutorials_206).     |
@@ -41,7 +41,7 @@ See below a description of the attributes of the **Shelf** control `<vtex.cmc:Pr
 | `selectionMode=”batch-buy”` | Non-required attribute that allows to order products in lots.         |
 | `isTrackable`               | When this attribute is set to `true`, this control is trackable.  |
 | `InternalCampaign`          | Name of the internal [campaign audience](https://help.vtex.com/en/tutorial/creating-campaign-audiences--6cnuDZJzIkIeocewAQQK4K). |
-| `InternalPart`              | Internal _ViewPart_ name.   |
+| `InternalPart`              | Internal *ViewPart* name.   |
 
 
 Example of usage of the **Shelf** control:
@@ -86,7 +86,7 @@ Example of usage of the **Shelf** control:
 | `<vtex.cmc:SalesChannelDropList />` |	**Trade policy list:** displays a list of available trade policies. |
 | `<vtex:contentPlaceHolder id="ColecaoQVVT"/>` |	**”People who looked at this item also looked at” shelf:** in the CMS, adds a control of type **Related products**. When editing the element, select `QuemViu_Viu_Tambem` in the `_Tipo` field and create a new shelf template. |
 | `<vtex:contentPlaceHolder id="ColecaoQVCT"/>` |	**“People who looked at this item also purchased” shelf:** in the CMS, adds a control of type **Related products**. When editing the element, select `QuemComprou_Viu_Tambem` in the `_Tipo` field and create a new shelf template. For this control to function correctly, your store needs a high flow of visitors and purchases.  |
-| `<vtex:contentPlaceHolder id="ColecaoQCCT"/>` | **“People who purchased this item also purchased” shelf:** in the CMS, adds a control of type **Related products**. When editing the element, select `QuemComprou_Comprou_Tambem` in the `_Tipo` field and create a new shelf template. |
+| `<vtex:contentPlaceHolder id="ColecaoQCCT"/>` | **People who purchased this item also purchased” shelf:** in the CMS, adds a control of type **Related products**. When editing the element, select `QuemComprou_Comprou_Tambem` in the `_Tipo` field and create a new shelf template. |
 | `<vtex:contentPlaceHolder id="Similares"/>` |	**Similar/Related products:** in the CMS, adds a control of type **Related products**. When editing the element, select `Similar` in the **Tipo** field. |
 | `<vtex:contentPlaceHolder id="Acessorios"/>` |	**Accessories:** in the CMS, adds a control of type **Related products**. When editing the element, select `Acessorios` in the **Tipo** field. |
 | `<vtex:contentPlaceHolder id="Sugestoes"/>` |	**Suggestions:** in the CMS, adds a control of type **Related products**. When editing the element, select `Sugestao` in the **Tipo** field. |
@@ -140,7 +140,7 @@ See below a description of the `<vtex.cmc:searchResult/>` control attributes:
 | `selectionMode=”batch-buy”` | Non-required attribute that allows to order products in lots.                            |
 | `isTrackable`               | When the attribute is set to true, this control is trackable.      |
 | `InternalCampaign`          | Internal campaign audience name.       |
-| `InternalPart`              | Internal _ViewPart_ name.   |
+| `InternalPart`              | Internal *ViewPart* name.   |
 
 Example of usage of search results:
 ```
