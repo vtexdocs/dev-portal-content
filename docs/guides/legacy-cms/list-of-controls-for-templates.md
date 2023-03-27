@@ -15,6 +15,7 @@ The controls listed in this article can be used by your store's *front-end* deve
 - [Deprecated controls](#deprecated-controls)
 
 ## General controls
+
 You can use the controls listed below on most pages in your store.
 
 | Control | Description |
