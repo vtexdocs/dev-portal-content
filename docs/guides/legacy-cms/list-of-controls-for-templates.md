@@ -147,7 +147,7 @@ Example of usage of search results:
 <vtex.cmc:searchResult layout="48e223e6-da80-4610-b3d5-4e5cfaf94f13" itemCount="10" columnCount="4" isTrackable="true" InternalCampaign="Resultado busca landing" InternalPart="Resultado Busca" /> 
 ```
 
-For more information, read the tutorial [Shelf template controls](https://help.vtex.com/en/tutorial/shelf-template-controls--tutorials_550).
+For more information, read the tutorial [Shelf template controls](https://developers.vtex.com/docs/guides/shelf-template-controls).
 
 ## Other controls
 | Control | Description  |
