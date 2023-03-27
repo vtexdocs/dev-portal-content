@@ -46,8 +46,6 @@ See below a description of the attributes of the **Shelf** control `<vtex.cmc:Pr
 
 Example of usage of the **Shelf** control:
 
-
-
 <vtex.cmc:ProductQueryStringReferenceShelf layout="e2ed81f5-6241-4418-a47b-018d7482fcf0" itemCount="3" columnCount="3" showUnavailable="true" isTrackable="true" InternalCampaign="Destaque landing" InternalPart="Prateleira destaque"/>
 
 ```
