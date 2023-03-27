@@ -143,6 +143,7 @@ See below a description of the `<vtex.cmc:searchResult/>` control attributes:
 | `InternalPart`              | Internal *ViewPart* name. |
 
 Example of usage of search results:
+
 ```
 <vtex.cmc:searchResult layout="48e223e6-da80-4610-b3d5-4e5cfaf94f13" itemCount="10" columnCount="4" isTrackable="true" InternalCampaign="Resultado busca landing" InternalPart="Resultado Busca" /> 
 ```
