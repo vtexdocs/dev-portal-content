@@ -128,7 +128,6 @@ The `<vtex.cmc:productRichSnippets />` control adds specific tags for informatio
 | `<vtex.cmc:AmountItemsInCart>` | **Number of items in the shopping cart:** displays basic information about the shopping cart. It is required to use this control if you use the `<vtex.cmc:BuyInPage/>` control. You can use it for [KitLook](https://help.vtex.com/en/tutorial/how-to-assemble-a-look-kit--tutorials_266) cases, for example. |
 | `<vtex.cmc:searchResult/>` | Product search result. See below the attributes of this control. |
 
-
 See below a description of the `<vtex.cmc:searchResult/>` control attributes:
 
 | Tag attribute | Description |
