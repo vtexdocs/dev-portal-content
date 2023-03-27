@@ -1,6 +1,6 @@
 ---
-title: "Creating app service paths"
-slug: "creating-app-service-paths"
+title: "Service path patterns"
+slug: "service-path-patterns"
 hidden: false
 ---
 
