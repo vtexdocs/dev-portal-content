@@ -50,6 +50,7 @@ Example of usage of the **Shelf** control:
 
 ```
 
+
 ## Controls for product pages
 
 | Control | Description  |
