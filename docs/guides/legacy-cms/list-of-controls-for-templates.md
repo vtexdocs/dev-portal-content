@@ -150,6 +150,7 @@ Example of usage of search results:
 For more information, read the tutorial [Shelf template controls](https://developers.vtex.com/docs/guides/shelf-template-controls).
 
 ## Other controls
+
 | Control | Description  |
 |---|---|
 |`<vtex.cmc:orderList/>`| Displays the customer order list on the **Orders** section in **My account** – `/account/orders` |
