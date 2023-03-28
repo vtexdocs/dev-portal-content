@@ -151,7 +151,7 @@ To do this, click on Fields to set and add the `userId` field with its desired v
 Triggers are conditions to when you want your tags to fire. For example, if you want to activate the Google Ads conversion tag when a visitor signs up your store newsletter, you use a trigger to do it.
 To create a trigger, click on Trigger in the left menu and then on New:
 
-![trigger-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-4.png)
+![trigger-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-4.png)
 
 #### Custom Events
 
