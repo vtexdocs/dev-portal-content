@@ -189,7 +189,7 @@ When you [invoice an order](https://help.vtex.com/en/tracks/orders--2xkTisx4SXOW
 In that case, the endpoint [Order invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) must be called, and instead of having the field `type` value determined as Output, it will be Input.
 
 - [Order invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice)
-- [Update order's partial invoice (send tracking number)](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber)
+- [Update order's partial invoice (send tracking number)](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/oms/pvt/orders/-orderId-/invoice/-invoiceNumber-)
 - [Adding a second address for invoicing an order](https://developers.vtex.com/docs/guides/adding-a-second-address-to-the-order)
 - [Formatting order invoicing time via API](https://developers.vtex.com/docs/guides/formatting-order-invoicing-time)
 
