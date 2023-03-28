@@ -43,7 +43,7 @@ The order flow visible to the store responsible for handling the order.
 
 The order flow visible to the store responsible for the order's sale and delivery. In this case, the store acts both as a seller and marketplace.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-2.png)
+![complete_flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-2.png)
 
 ### Chain flow
 
