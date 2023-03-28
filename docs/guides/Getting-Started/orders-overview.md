@@ -102,7 +102,7 @@ The action of placing an order involves both the Orders Management module and th
 
 </OverviewCard>
 
-> The [orderForm](https://developers.vtex.com/vtex-rest-api/reference/orderform-fields) is the main object processed by the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview) and it stores a lot of contextual information about an order. The orderForm fields will be present in most of OMS's API calls.
+> The [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) is the main object processed by the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview) and it stores a lot of contextual information about an order. The orderForm fields will be present in most of OMS's API calls.
 
 <OverviewCard icon='SearchDetails'>
 
