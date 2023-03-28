@@ -191,7 +191,7 @@ In that case, the endpoint [Order invoice notification](https://developers.vtex.
 - [Order invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice)
 - [Update order's partial invoice (send tracking number)](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber)
 - [Adding a second address for invoicing an order](https://developers.vtex.com/docs/guides/adding-a-second-address-to-the-order)
-- [Formatting order invoicing time via API](https://developers.vtex.com/vtex-rest-api/docs/formatting-order-invoicing-time)
+- [Formatting order invoicing time via API](https://developers.vtex.com/docs/guides/formatting-order-invoicing-time)
 
 </OverviewCard>
 
