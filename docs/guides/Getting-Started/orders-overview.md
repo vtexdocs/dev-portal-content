@@ -31,7 +31,7 @@ The order flow describes the status, possibilities, and actions throughout the l
 
 The order flow visible to the store responsible for the sale only.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-0.jpg)
+![marketplace_flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-0.jpg)
 
 ### Seller flow
 
