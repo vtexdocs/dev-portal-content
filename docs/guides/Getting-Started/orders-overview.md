@@ -69,7 +69,7 @@ The Orders Feed is a list of order updates, meaning that whenever there is an ev
 - [Delete feed configuration](https://developers.vtex.com/vtex-rest-api/reference/feedconfigurationdelete)
 - [Retrieve feed items](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed)
 - [Commit feed items](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed)
-- [Test JSONata expression](https://developers.vtex.com/vtex-rest-api/reference/testjsonataexpression)
+- [Test JSONata expression](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata)
 
 </OverviewCard>
 
