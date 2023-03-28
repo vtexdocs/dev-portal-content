@@ -248,7 +248,7 @@ There are optional settings available for you to manage your store’s orders. T
 - [List tasks](https://developers.vtex.com/vtex-rest-api/reference/listtasksbyassignee)
 - [Retrieve Task](https://developers.vtex.com/vtex-rest-api/reference/gettask)
 - [Update Task](https://developers.vtex.com/docs/api-reference/vtex-do-api#put-/tasks/-taskId-)
-- [Add Comment on a Task](https://developers.vtex.com/vtex-rest-api/reference/addcomment)
+- [Add Comment on a Task](https://developers.vtex.com/docs/api-reference/vtex-do-api#post-/tasks/-taskId-/comments)
 
 </OverviewCard>
 
