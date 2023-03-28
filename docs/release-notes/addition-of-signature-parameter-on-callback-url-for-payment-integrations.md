@@ -21,6 +21,6 @@ https://gatewayqa.vtexpayments.com.br/api/pvt/payment-provider/transactions/8FB0
 
 In the [Transactions page of the Admin](https://help.vtex.com/en/tutorial/how-to-view-the-orders-details--tutorials_452), the signature token appears masked for security reasons, as in this example: `X-VTEX-signature=Rj******tk`.
 
-When making the callback request, we recommend that payment providers use the callback URL exactly as received. **The use of the** `X-VTEX-signature` **parameter will be mandatory from October 31 for security reasons. Callback requests made without this parameter will not work after the deadline.**
+When making the callback request, we recommend that payment providers use the callback URL exactly as received. **The use of the** `X-VTEX-signature` **parameter will be mandatory from April 30, 2023 for security reasons. Callback requests made without this parameter will not work after the deadline.**
 
 For more information check the [Create Payment endpoint](https://developers.vtex.com/vtex-rest-api/reference/createpayment#callback-url) reference, the [Payment Provider Protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#callback-url) article, and the [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows#callback-url) article.
