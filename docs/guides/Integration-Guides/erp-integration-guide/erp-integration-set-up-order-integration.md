@@ -91,7 +91,7 @@ Let’s imagine a simple integration scenario, in which a store configured a fee
 
 5. Finally, the implementation should update the order’s status to `start-handling` with the [Start handling](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/start-handling) endpoint in the Orders API.
 
-> ℹThis is a basic example of a typical Orders Feed ERP integration. There are many possibilities of more complex use. You can, for example, monitor different types of updates and trigger different actions for each.
+> ℹ️ This is a basic example of a typical Orders Feed ERP integration. There are many possibilities of more complex use. You can, for example, monitor different types of updates and trigger different actions for each.
 
 ## Wrapping up
 
