@@ -51,7 +51,7 @@ To start, create the essential variables to work within GTM: **Data Layer** and 
 2. Click on **Variables.**
 3. In the **User-Defined Variables** box, click on **New.**
 
-![variables-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-0.png)
+![variables-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-0.png)
 
 #### Data Layer Variables
 
