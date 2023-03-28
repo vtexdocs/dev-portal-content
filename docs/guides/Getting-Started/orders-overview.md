@@ -96,8 +96,8 @@ There are several actions a VTEX store can perform on orders. In the next sectio
 The action of placing an order involves both the Orders Management module and the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview), and there are different paths to create orders. For more information about order placement, see the links below.
 
 - [Place order](https://developers.vtex.com/vtex-rest-api/reference/placeorder)
-- [Process order](https://developers.vtex.com/vtex-rest-api/reference/processorder)
 - [Place order from an existing cart](https://developers.vtex.com/vtex-rest-api/reference/placeorderfromexistingorderform)
+- [Process order](https://developers.vtex.com/vtex-rest-api/reference/processorder)
 - [Create a regular order using the Checkout API](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api)
 
 </OverviewCard>
