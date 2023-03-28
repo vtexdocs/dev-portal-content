@@ -256,7 +256,7 @@ There are optional settings available for you to manage your store’s orders. T
 
 ### B2B
 
-- [How to add and handle custom information in the order (B2B)](https://developers.vtex.com/vtex-rest-api/docs/how-to-add-and-handle-custom-information-in-the-order)
+- [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite)
 
 </OverviewCard>
 
