@@ -233,7 +233,7 @@ There are optional settings available for you to manage your store’s orders. T
 ### VTEX inStore
 
 - [Enable order filter by sales associate](https://developers.vtex.com/vtex-rest-api/docs/enable-order-filter-by-sales-associate)
-- [Get invoiced orders placed in inStore](https://developers.vtex.com/vtex-rest-api/docs/get-invoiced-orders-placed-in-instore)
+- [Get invoiced orders placed in inStore](https://developers.vtex.com/docs/guides/get-invoiced-orders-placed-in-instore)
 
 </OverviewCard>
 
