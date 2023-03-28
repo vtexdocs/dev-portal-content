@@ -95,9 +95,9 @@ There are several actions a VTEX store can perform on orders. In the next sectio
 
 The action of placing an order involves both the Orders Management module and the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview), and there are different paths to create orders. For more information about order placement, see the links below.
 
-- [Place order](https://developers.vtex.com/vtex-rest-api/reference/placeorder)
+- [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders)
 - [Place order from an existing cart](https://developers.vtex.com/vtex-rest-api/reference/placeorderfromexistingorderform)
-- [Process order](https://developers.vtex.com/vtex-rest-api/reference/processorder)
+- [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-)
 - [Create a regular order using the Checkout API](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api)
 
 </OverviewCard>
@@ -172,13 +172,13 @@ It is possible to choose another seller to fulfill a given order after the origi
 
 ### Sending payment notification
 
-For your payment provider to notify the Order Management System that the payment of a given order is completed, use te endpoint [Send payment notification](https://developers.vtex.com/vtex-rest-api/reference/sendpaymentnotification).
+For your payment provider to notify the Order Management System that the payment of a given order is completed, use te endpoint [Send payment notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/payments/-paymentId-/payment-notification).
 
 In case your store receives the payments outside VTEX’s platform, like payments in cash or with promissories, the store must call this endpoint to notify the OMS, so that the order can follow its flow and be fulfilled.
   
 </OverviewCard>
 
-> The endpoint [Send payment notification](https://developers.vtex.com/vtex-rest-api/reference/sendpaymentnotification) must be called only after the order payment has been approved. The store might not receive the payment if there is an issue with the settlement and the endpoint has already been called.
+> The endpoint [Send payment notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/payments/-paymentId-/payment-notification) must be called only after the order payment has been approved. The store might not receive the payment if there is an issue with the settlement and the endpoint has already been called.
 
 <OverviewCard icon='Integration'>
 
@@ -189,7 +189,7 @@ When you [invoice an order](https://help.vtex.com/en/tracks/orders--2xkTisx4SXOW
 In that case, the endpoint [Order invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) must be called, and instead of having the field `type` value determined as Output, it will be Input.
 
 - [Order invoice notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice)
-- [Update order's partial invoice (send tracking number)](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber)
+- [Update order's partial invoice (send tracking number)](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/oms/pvt/orders/-orderId-/invoice/-invoiceNumber-)
 - [Adding a second address for invoicing an order](https://developers.vtex.com/docs/guides/adding-a-second-address-to-the-order)
 - [Formatting order invoicing time via API](https://developers.vtex.com/docs/guides/formatting-order-invoicing-time)
 
