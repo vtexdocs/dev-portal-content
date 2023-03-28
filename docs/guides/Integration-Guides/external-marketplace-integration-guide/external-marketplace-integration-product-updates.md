@@ -78,7 +78,7 @@ Use the endpoints described below to get SKU, price and inventory details. It is
 
 ![](https://user-images.githubusercontent.com/77292838/211638221-d444704e-bb9d-4c31-b2e0-8b62af4dcf08.png)
 
->ℹ All parameters in the endpoints below must be declared in the request. In case one of the parameters does not have a value, you must still send it as `null`.",
+>ℹ️ All parameters in the endpoints below must be declared in the request. In case one of the parameters does not have a value, you must still send it as `null`.",
 
 [Get list of SKUs associated with a sales channel](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitidsbysaleschannel)
 
@@ -152,7 +152,7 @@ To consider the integration validated by VTEX, the connector should:
 6. Create a table that explicits which data is mandatory and which is recommended when registering products or SKUs, and to improve the offer’s positioning in the marketplace’s storefront.
 7. Create a table with known error logs and actions that the user can do to solve the problem.
 
->ℹ Tables should follow the format below. They will be implemented in the integration according to the connector’s documentation.
+>ℹ️ Tables should follow the format below. They will be implemented in the integration according to the connector’s documentation.
 
 
 ### Template table for field mapping
