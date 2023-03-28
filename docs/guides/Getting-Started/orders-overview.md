@@ -178,7 +178,7 @@ In case your store receives the payments outside VTEX’s platform, like payment
   
 </OverviewCard>
 
-> The endpoint [Send payment notification](https://developers.vtex.com/vtex-rest-api/reference/sendpaymentnotification) must be called only after the order payment has been approved. The store might not receive the payment if there is an issue with the settlement and the endpoint has already been called.
+> The endpoint [Send payment notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/payments/-paymentId-/payment-notification) must be called only after the order payment has been approved. The store might not receive the payment if there is an issue with the settlement and the endpoint has already been called.
 
 <OverviewCard icon='Integration'>
 
