@@ -184,7 +184,7 @@ Tags are tracking code you want to implement on your store. For example, if you 
 
 To create a tag, click on Tags in the left menu and then on New:
 
-![tag-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-5.png) 
+![tag-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-5.png)
 
 #### Google Analytics - Checkout and Order Placed
 
