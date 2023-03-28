@@ -37,7 +37,7 @@ The order flow visible to the store responsible for the sale only.
 
 The order flow visible to the store responsible for handling the order.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-1.png)
+![seller_flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-1.png)
 
 ### Complete flow
 
