@@ -97,8 +97,8 @@ The action of placing an order involves both the Orders Management module and th
 
 - [Place order](https://developers.vtex.com/vtex-rest-api/reference/placeorder)
 - [Process order](https://developers.vtex.com/vtex-rest-api/reference/processorder)
-- [Using APIs to place a regular order](https://developers.vtex.com/vtex-rest-api/docs/using-apis-to-place-a-regular-order)
 - [Place order from an existing cart](https://developers.vtex.com/vtex-rest-api/reference/placeorderfromexistingorderform)
+- [Create a regular order using the Checkout API](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api)
 
 </OverviewCard>
 
