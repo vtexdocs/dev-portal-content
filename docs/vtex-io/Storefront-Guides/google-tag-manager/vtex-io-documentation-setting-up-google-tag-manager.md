@@ -123,7 +123,7 @@ You will create one variable for the storefront - default - and another for the 
 6. Click **Add Field**. Then, type `referrer` in **Field Name** and `{{Original Referrer}}` in the **Value** field.
 7. Click **Add Field**. Then, type `page` in **Field Name** and `{{Page Path}}` in the **Value** field.
 
-![img-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-3.png) 
+![img-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-3.png)
 
 7. Then, go to **Ecommerce**  and tick the `Enable Enhanced Ecommerce Features` and `Use data layer` boxes.
 8. Save your changes as **Google Analytics**.
