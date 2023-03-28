@@ -51,7 +51,7 @@ To start, create the essential variables to work within GTM: **Data Layer** and 
 2. Click on **Variables.**
 3. In the **User-Defined Variables** box, click on **New.**
 
-![variables-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/gtm-images-update/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-0.webp) 
+![variables-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-0.png) 
 
 #### Data Layer Variables
 
@@ -67,10 +67,10 @@ Repeat the instructions above, now changing the data layer variable name to each
 | Data Layer Variable - transactionId    | `transactionId`    | Indicates a unique transaction identifier.                        | `Google Ads Conversion Tracking` |
 | Data Layer Variable - transactionTotal | `transactionTotal` | Indicates the total value transaction.                            | `Google Ads Conversion Tracking` |
 
-| Variable name                | Value         | Description                                                                                                                                                               | Variables that will use it                     |
-| ---------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| Data Layer Variable - userId | `userId`      | Enables the association of one or more sessions with a unique and persistent ID for your store’s users.                                                                   | `Google Analytics`                             |
-| ecommerceV2                  | `ecommerceV2` | Triggers events to track the entire user’s journey through the store, from viewing a product to purchasing it. **This variable is part of the major 3.x** of the GTM app. | `Google Analytics - Checkout and Order Placed` |
+| Variable name | Value | Description | Variables that will use it |
+| ------------- | ------| ----------- | -------------------------- |
+| Data Layer Variable - userId | `userId`      | Enables the association of one or more sessions with a unique and persistent ID for your store’s users.   | `Google Analytics`  |
+| ecommerceV2   | `ecommerceV2` | Triggers events to track the entire user’s journey through the store, from viewing a product to purchasing it. **This variable is part of the major 3.x** of the GTM app. | `Google Analytics - Checkout and Order Placed` |
 
 There are two other variables, **The `originalLocation` and `originalReferrer`,** that you must create to **prevent GTM from making additional session identifiers every time a user navigates the website.** Learn how to create them in the following steps.
 
@@ -108,10 +108,10 @@ Once you have saved the `originalLocation` variable, create the `originalReferre
 
 You will create one variable for the storefront - default - and another for the store’s checkout.
 
-| Variable type            | Description                                                                         | Tags that will use it                                                                                                                               |
-| ------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Default - For storefront | Tracks the page’s view.                                                             | `Google Analytics - Enhanced Ecommerce - No Interaction`, `Google Analytics - Enhanced Ecommerce - Yes Interaction`, `Google Analytics - Page View` |
-| For store’s checkout     | Tracks a user’s journey through the store, from viewing a product to purchasing it. | `Google Analytics - Checkout and Order Placed`                                                                                                      |
+| Variable type  | Description  | Tags that will use it |
+| -------------- | ------------ | --------------------- |
+| Default - For storefront | Tracks the page’s view.  | `Google Analytics - Enhanced Ecommerce - No Interaction`, `Google Analytics - Enhanced Ecommerce - Yes Interaction`, `Google Analytics - Page View` |
+| For store’s checkout | Tracks a user’s journey through the store, from viewing a product to purchasing it. | `Google Analytics - Checkout and Order Placed` |
 
 ##### Default - For storefront
 
@@ -123,7 +123,7 @@ You will create one variable for the storefront - default - and another for the 
 6. Click **Add Field**. Then, type `referrer` in **Field Name** and `{{Original Referrer}}` in the **Value** field.
 7. Click **Add Field**. Then, type `page` in **Field Name** and `{{Page Path}}` in the **Value** field.
 
-![img-example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/gtm-images-update/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-3.webp)
+![img-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-3.png) 
 
 7. Then, go to **Ecommerce**  and tick the `Enable Enhanced Ecommerce Features` and `Use data layer` boxes.
 8. Save your changes as **Google Analytics**.
@@ -151,7 +151,7 @@ To do this, click on Fields to set and add the `userId` field with its desired v
 Triggers are conditions to when you want your tags to fire. For example, if you want to activate the Google Ads conversion tag when a visitor signs up your store newsletter, you use a trigger to do it.
 To create a trigger, click on Trigger in the left menu and then on New:
 
-![trigger-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/gtm-images-update/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-4.webp)
+![trigger-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-4.png) 
 
 #### Custom Events
 
@@ -184,7 +184,7 @@ Tags are tracking code you want to implement on your store. For example, if you 
 
 To create a tag, click on Tags in the left menu and then on New:
 
-![tag-overview](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/gtm-images-update/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-5.webp)
+![tag-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@images-gtm/docs/vtex-io/Storefront-Guides/google-tag-manager/vtex-io-documentation-setting-up-google-tag-manager-5.png) 
 
 #### Google Analytics - Checkout and Order Placed
 
