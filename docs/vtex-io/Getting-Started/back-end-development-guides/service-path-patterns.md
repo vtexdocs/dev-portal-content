@@ -18,7 +18,7 @@ For the purpose of this tutorial, consider you are implementing the service `/ex
 - **Segment dependant:** `/_v/segment/examplepath/123`
 - **Private:** `/_v/private/examplepath/123`
 
-VTEX has an edge layer that handles all requests to VTEX, including VTEX IO apps, in order to improve performance. Because of this, VTEX will handle requests to each of these possible paths in a different way when it comes to caching and handling cookies. See the table below.
+VTEX has an edge layer that handles all requests to VTEX, including VTEX IO apps, in order to improve performance. Because of this, VTEX will handle requests to each of these possible paths differently when it comes to caching and handling cookies. See the table below.
 
 | **Path type**     | **Pattern**              | **Cookies behavior**                                                                                                                                                                                                                                | **Caching behavior**                                                        | **Example use case**                                                                                                                             |
 |-------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
