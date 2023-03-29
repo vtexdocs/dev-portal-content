@@ -6,7 +6,7 @@ hidden: false
 
 When [developing a new VTEX IO service](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps), you must define a path so that the service is available to receive requests.
 
-In this article you will learn about the pattern for service paths according to the desired behavior. To know more about how to implement the path in your app's code, check the guide [Developing service configuration apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps).
+In this article, you will learn about the pattern for service paths according to the desired behavior. To know more about how to implement the path in your app's code, check the guide [Developing service configuration apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps).
 
 ## Patterns
 
