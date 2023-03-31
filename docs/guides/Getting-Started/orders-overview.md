@@ -112,7 +112,7 @@ You can fetch information related to orders in multiple ways and about specific 
 
 #### Orders
 
-- [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder)
+- [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-)
 - [List orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders)
 
 #### Conversation
