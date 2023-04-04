@@ -9,26 +9,26 @@ updatedAt: "2022-08-03T14:56:02.147Z"
 There are two ways of sending emails automatically with Master Data v2 triggers:
 
 - [Sending emails](#sending-emails)
-- [Sending emails using Message Center templates](#send-email-using-message-center-template)
+- [Sending emails using Message Center templates](#send-email-using-message-center-templates)
 
 >ℹ️ Learn more about triggers in the article [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2).
 
 ## Sending emails
 
-This is the more direct method of sending emails with Master Data v2 triggers, but without the standardization provided by [Message Center templates](#send-email-using-message-center-template).
+This is the more direct method of sending emails with Master Data v2 triggers, but without the standardization provided by [Message Center templates](#send-email-using-message-center-templates).
 
 ### Properties
 
-| Field     | Description     |
-| ---------- | ---------- |
-| type*       | The action type must be `email` |
-| provider*       | Message Center provider name (usually named as `default`) |
-| from*       | define name and email of from address |
-| to*       | list of emails that email will be sended |
-| replyTo*       | list of addresses to reply |
-| subject*       | subject line for this e-mail |
-| body*       | the message body |
-| bcc       | address collection that contains the blind carbon copy (BCC) |
+| Field     | Type     | Description     |
+| ---------- | ---------- | ---------- |
+| type*       | String | The action type must be `email` |
+| provider*       | String | Message Center provider name (usually named as `default`) |
+| from*       | Object | Name and email address of sender |
+| to*       | Array | List of emails that email will be sended |
+| replyTo*       | Array | Email address for replies |
+| subject*       | String | Email subject |
+| body*       | String | Email message body |
+| bcc       | Array | List of email addresses that will receive a blind carbon copy (BCC) of the message |
 
 ### Dynamic expressions
 
@@ -59,21 +59,21 @@ You can use dynamic expressions to deal with document properties in these settin
 
 ## Sending emails using Message Center templates
 
-See below how to set up a trigger to send emails using a [Message Center](https://help.vtex.com/pt/tutorial/conhecendo-o-message-center--tutorials_84) template.
+See below how to set up a trigger to send emails using a [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) template.
 
 ### Properties
 
-| Field     | Description     |
-| ---------- | ---------- |
-| type*       | The action type must be `t-email` |
-| template*       | Name of the Message Center template |
-| provider*       | Message Center provider name (usually named as `default`) |
-| from*       | define name and email of from address |
-| to*       | list of emails that email will be sended |
-| replyTo*       | list of addresses to reply |
-| subject*       | subject line for this e-mail |
-| body*       | the message body |
-| bcc       | address collection that contains the blind carbon copy (BCC) |
+| Field     | Type | Description     |
+| ---------- | ---------- | ---------- |
+| type*       | String | The action type must be `t-email` |
+| template*       | String | Name of the Message Center template |
+| provider*       | String | Message Center provider name (usually named as `default`) |
+| from       | Object | Name and email address of sender |
+| to*       | Array | List of email addresses to send the email |
+| replyTo*       | String | Email address for replies |
+| subject*       | String | Email subject |
+| body*       | String | Email message body |
+| bcc       | Array | List of email addresses that will receive a blind carbon copy (BCC) of the message |
 
 ### JSON Schema example
 
