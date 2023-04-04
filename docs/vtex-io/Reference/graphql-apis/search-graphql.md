@@ -35,107 +35,108 @@ To resolve this query, you need to have a app that implements the schema declare
 
 <summary><strong>Table of Contents</strong></summary>
 
-* [Query](#query)  
-* [Objects](#objects)
-* [AssemblyOption](#assemblyoption)
-* [Attachment](#attachment)
-* [Banners](#banners)
-* [Benefit](#benefit)
-* [BenefitItem](#benefititem)
-* [Brand](#brand)
-* [BrandFacet](#brandfacet)
-* [CategoriesTreeFacet](#categoriestreefacet)
-* [Category](#category)
-* [ClusterHighlight](#clusterhighlight)
-* [CompositionItem](#compositionitem)
-* [CompositionType](#compositiontype)
-* [Correction](#correction)
-* [DeliverySlaPerTypes](#deliveryslapertypes)
-* [DeliverySlaSamples](#deliveryslasamples)
-* [DepartmentFacet](#departmentfacet)
-* [Discount](#discount)
-* [DomainValues](#domainvalues)
-* [Facet](#facet)
-* [FacetValue](#facetvalue)
-* [Facets](#facets)
-* [FilterFacet](#filterfacet)
-* [FilterFacets](#filterfacets)
-* [Gift](#gift)
-* [GiftImage](#giftimage)
-* [Image](#image)
-* [InputValue](#inputvalue)
-* [Installment](#installment)
-* [ItemMetadata](#itemmetadata)
-* [ItemMetadataUnit](#itemmetadataunit)
-* [ItemPriceTable](#itempricetable)
-* [Items](#items)
-* [KitItem](#kititem)
-* [Offer](#offer)
-* [OnlyProduct](#onlyproduct)
-* [PageType](#pagetype)
-* [PriceRange](#pricerange)
-* [PriceRangesFacet](#pricerangesfacet)
-* [PriceTableItem](#pricetableitem)
-* [Product](#product)
-* [ProductClusters](#productclusters)
-* [ProductPriceRange](#productpricerange)
-* [ProductSearch](#productsearch)
-* [ProductSuggestions](#productsuggestions)
-* [Property](#property)
-* [PropertyGroup](#propertygroup)
-* [QueryArgs](#queryargs)
-* [Range](#range)
-* [Recommendation](#recommendation)
-* [Reference](#reference)
-* [Region](#region)
-* [SKU](#sku)
-* [SKUSpecificationField](#skuspecificationfield)
-* [SKUSpecificationValue](#skuspecificationvalue)
-* [SearchBanner](#searchbanner)
-* [SearchBreadcrumb](#searchbreadcrumb)
-* [SearchCorrection](#searchcorrection)
-* [SearchMetadata](#searchmetadata)
-* [SearchSuggestion](#searchsuggestion)
-* [SearchSuggestionAttribute](#searchsuggestionattribute)
-* [SearchSuggestions](#searchsuggestions)
-* [SearchURLStats](#searchurlstats)
-* [SelectedFacet](#selectedfacet)
-* [SelectedProperty](#selectedproperty)
-* [Seller](#seller)
-* [SkuSpecification](#skuspecification)
-* [SpecificationGroup](#specificationgroup)
-* [SpecificationGroupProperty](#specificationgroupproperty)
-* [Suggestions](#suggestions)
-* [Teaser](#teaser)
-* [TeaserCondition](#teasercondition)
-* [TeaserEffects](#teasereffects)
-* [TeaserValue](#teaservalue)
-* [Video](#video)
-* [productSpecification](#productspecification)  
-* [Inputs](#inputs)
-* [AssemblyOptionInput](#assemblyoptioninput)
-* [Options](#options)
-* [ProductUniqueIdentifier](#productuniqueidentifier)
-* [SelectedFacetInput](#selectedfacetinput)  
-* [Enums](#enums)
-* [CategoryTreeBehavior](#categorytreebehavior)
-* [CrossSelingInputEnum](#crossselinginputenum)
-* [FilterType](#filtertype)
-* [InputValueType](#inputvaluetype)
-* [InstallmentsCriteria](#installmentscriteria)
-* [ItemsFilter](#itemsfilter)
-* [Operator](#operator)
-* [PageEntityIdentifier](#pageentityidentifier)
-* [ProductUniqueIdentifierField](#productuniqueidentifierfield)
-* [SORT](#sort)
-* [SimulationBehavior](#simulationbehavior)  
-* [Scalars](#scalars)
-* [Boolean](#boolean)
-* [Float](#float)
-* [ID](#id)
-* [Int](#int)
-* [String](#string)
-* [StringOrBoolean](#stringorboolean)
+- [Query](#query)
+- [Objects](#objects)
+  - [AssemblyOption](#assemblyoption)
+  - [Attachment](#attachment)
+  - [Banners](#banners)
+  - [Benefit](#benefit)
+  - [BenefitItem](#benefititem)
+  - [Brand](#brand)
+  - [BrandFacet](#brandfacet)
+  - [CategoriesTreeFacet](#categoriestreefacet)
+  - [Category](#category)
+  - [ClusterHighlight](#clusterhighlight)
+  - [CompositionItem](#compositionitem)
+  - [CompositionType](#compositiontype)
+  - [Correction](#correction)
+  - [DeliverySlaPerTypes](#deliveryslapertypes)
+  - [DeliverySlaSamples](#deliveryslasamples)
+  - [DepartmentFacet](#departmentfacet)
+  - [Discount](#discount)
+  - [DomainValues](#domainvalues)
+  - [Facet](#facet)
+  - [FacetValue](#facetvalue)
+  - [Facets](#facets)
+  - [FilterFacet](#filterfacet)
+  - [FilterFacets](#filterfacets)
+  - [Gift](#gift)
+  - [GiftImage](#giftimage)
+  - [Image](#image)
+  - [InputValue](#inputvalue)
+  - [Installment](#installment)
+  - [ItemMetadata](#itemmetadata)
+  - [ItemMetadataUnit](#itemmetadataunit)
+  - [ItemPriceTable](#itempricetable)
+  - [Items](#items)
+  - [KitItem](#kititem)
+  - [Offer](#offer)
+  - [OnlyProduct](#onlyproduct)
+  - [PageType](#pagetype)
+  - [PriceRange](#pricerange)
+  - [PriceRangesFacet](#pricerangesfacet)
+  - [PriceTableItem](#pricetableitem)
+  - [Product](#product)
+  - [ProductClusters](#productclusters)
+  - [ProductPriceRange](#productpricerange)
+  - [ProductSearch](#productsearch)
+  - [ProductSuggestions](#productsuggestions)
+  - [Property](#property)
+  - [PropertyGroup](#propertygroup)
+  - [QueryArgs](#queryargs)
+  - [Range](#range)
+  - [Recommendation](#recommendation)
+  - [Reference](#reference)
+  - [Region](#region)
+  - [SKU](#sku)
+  - [SKUSpecificationField](#skuspecificationfield)
+  - [SKUSpecificationValue](#skuspecificationvalue)
+  - [SearchBanner](#searchbanner)
+  - [SearchBreadcrumb](#searchbreadcrumb)
+  - [SearchCorrection](#searchcorrection)
+  - [SearchMetadata](#searchmetadata)
+  - [SearchSuggestion](#searchsuggestion)
+  - [SearchSuggestionAttribute](#searchsuggestionattribute)
+  - [SearchSuggestions](#searchsuggestions)
+  - [SearchURLStats](#searchurlstats)
+  - [SelectedFacet](#selectedfacet)
+  - [SelectedProperty](#selectedproperty)
+  - [Seller](#seller)
+  - [SkuSpecification](#skuspecification)
+  - [SpecificationGroup](#specificationgroup)
+  - [SpecificationGroupProperty](#specificationgroupproperty)
+  - [Suggestions](#suggestions)
+  - [Teaser](#teaser)
+  - [TeaserCondition](#teasercondition)
+  - [TeaserEffects](#teasereffects)
+  - [TeaserValue](#teaservalue)
+  - [Video](#video)
+  - [productSpecification](#productspecification)
+- [Inputs](#inputs)
+  - [AssemblyOptionInput](#assemblyoptioninput)
+  - [Options](#options)
+  - [ProductUniqueIdentifier](#productuniqueidentifier)
+  - [SelectedFacetInput](#selectedfacetinput)
+    - [General filters](#general-filters)
+- [Enums](#enums)
+  - [CategoryTreeBehavior](#categorytreebehavior)
+  - [CrossSelingInputEnum](#crossselinginputenum)
+  - [FilterType](#filtertype)
+  - [InputValueType](#inputvaluetype)
+  - [InstallmentsCriteria](#installmentscriteria)
+  - [ItemsFilter](#itemsfilter)
+  - [Operator](#operator)
+  - [PageEntityIdentifier](#pageentityidentifier)
+  - [ProductUniqueIdentifierField](#productuniqueidentifierfield)
+  - [SORT](#sort)
+  - [SimulationBehavior](#simulationbehavior)
+- [Scalars](#scalars)
+  - [Boolean](#boolean)
+  - [Float](#float)
+  - [ID](#id)
+  - [Int](#int)
+  - [String](#string)
+  - [StringOrBoolean](#stringorboolean)
 
 </details>
 
@@ -264,7 +265,17 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" align="right" valign="top">orderBy</td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC If you want to sort by a specification, use the format {specification key}:{asc|desc}. For example: "pricePerUnit:asc" or "size:desc" (this only works on <code>vtex.search-resolver@1.x</code>)</td>
+            <td>Sort by a criteria: <ul>
+                    <li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li>
+                    <li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li>
+                    <li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li>
+                    <li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li>
+                    <li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li>
+                    <li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li>
+                    <li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li>
+                </ul> If you want to sort by a specification, use the format <code>{specification key}:{asc|desc}</code>. For
+                example: <code>pricePerUnit:asc</code> or <code>size:desc</code> (this only works on
+                <code>vtex.search-resolver@1.x</code>)</td>
         </tr>
         <tr>
             <td colspan="2" align="right" valign="top">from</td>
@@ -379,7 +390,15 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" align="right" valign="top">orderBy</td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC</td>
+            <td>Sort by a criteria: <ul>
+                    <li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li>
+                    <li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li>
+                    <li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li>
+                    <li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li>
+                    <li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li>
+                    <li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li>
+                    <li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li>
+                </ul></td>
         </tr>
         <tr>
             <td colspan="2" align="right" valign="top">from</td>
@@ -589,7 +608,17 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" align="right" valign="top">orderBy</td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByScoreDESC If you want to sort by a specification, use the format {specification key}:{asc|desc}. For example: "pricePerUnit:asc" or "size:desc" (this only works on <code>vtex.search-resolver@1.x</code>)</td>
+            <td>Sort by a criteria: <ul>
+                    <li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li>
+                    <li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li>
+                    <li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li>
+                    <li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li>
+                    <li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li>
+                    <li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li>
+                    <li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li>
+                </ul> If you want to sort by a specification, use the format <code>{specification key}:{asc|desc}</code>. For
+                example: <code>pricePerUnit:asc</code> or <code>size:desc</code> (this only works on
+                <code>vtex.search-resolver@1.x</code>)</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>searchURLsCount</strong></td>
