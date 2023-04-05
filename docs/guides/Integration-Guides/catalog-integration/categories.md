@@ -8,6 +8,20 @@ updatedAt: "2022-03-16T18:40:49.494Z"
 
 Categories organize your product assortment within your ecommerce. They work as hierarchical levels of product classification, making your client’s search for a product easier and keeping your store organized.
 
+## Mermaidjs diagram
+
+```mermaid
+flowchart TB
+    startState(PR is merged into main) --> setReleaseEnvVar(1. Extract release type from PR labels)
+    setReleaseEnvVar(Extract release type from PR labels) --If PR has 'release-auto', 'release-patch', 'release-minor' or 'release-major' label--> releaseVersionScript(Run release script)
+    setReleaseEnvVar(Extract release type from PR labels) --If PR has no release label--> setDefaultAutoRelease(Set default auto release)
+    setDefaultAutoRelease(Set default auto release) --> releaseVersionScript(Run release script)
+    setReleaseEnvVar(Extract release type from PR labels) --If PR has 'release-no' label--> endState(Finish workflow)
+    releaseVersionScript(Run release script) --> |Commit changes to CHANGELOG.md and package.json with the new version and create a new version tag| pushReleaseVersionScriptResult(Push script results to the remote repository)
+    pushReleaseVersionScriptResult(Push script results to the remote repository) --> createRelease(Create new GitHub Release)
+    createRelease(Create new GitHub Release) --> endState(Finish workflow)
+```
+
 ## Category tree
 
 The category tree is the backbone of the Catalog, so it needs to be carefully planned and validated before importing to VTEX.
