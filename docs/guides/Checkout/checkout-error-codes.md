@@ -5,7 +5,7 @@ createdAt: ""
 updatedAt: ""
 -------------
 
-During Checkout API calls, some error codes may appear as a message in the response body. See the meaning of each one of them:
+During Checkout API requests, some error codes may appear as a message in the response body. See the meaning of each one of them:
 
 | Error Code        | Message                                                                        | Meaning                                                                                                                                                                              |
 | ----------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
