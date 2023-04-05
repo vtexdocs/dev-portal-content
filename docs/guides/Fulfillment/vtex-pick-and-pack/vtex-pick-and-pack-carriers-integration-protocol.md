@@ -14,8 +14,7 @@ hidePaginationNext: false
 
 # VTEX Pick and Pack Carrriers Integration Protocol
 
-
-All API access is over HTTPS and accessed from `https://api.pickingnpacking.com `. All data is sent and received as JSON.
+All API access is over HTTPS and accessed from `https://api.pickingnpacking.com`. All data is sent and received as JSON.
 
 Blank fields are included as `null` instead of being omitted.
 
@@ -23,17 +22,15 @@ All timestamps returned in UTC, ISO 8601 format: `YYYY-MM-DDTHH:mm:ss.sssZ` .
 
 All distance measurements are in meters.
 
-# Basic authentication
+## Basic authentication
 
 API keys available
-
 
 **Developer:**
 
 ```plaintext
 db5a3cecfef9cb0a9815af7c2eb8f7d6:c400460c165cc9beb146ad4d757e3bb1a24ff15228c424a0bd7c37f0ac356c0f6230568705d93dd6ff68190c0eafe5a74cbb14229748f20d3e53cbcc790ba372
 ```
-
 
 **Production:**
 
@@ -45,7 +42,7 @@ db5a3cecfef9cb0a9815af7c2eb8f7d6:c400460c165cc9beb146ad4d757e3bb1a24ff15228c424a
 
 * * *
 
-1.  Create a token of authentication with service [/token](/API%20Carriers%20integration%20protocol.md)
+1.  Create a token of authentication with service [/token](/API%20Carriers%20integration%20protocol.md).
 2.  Send in the headers of the request `Authorization` with the JWT generated in step 1.
 
 ```json
@@ -55,15 +52,15 @@ db5a3cecfef9cb0a9815af7c2eb8f7d6:c400460c165cc9beb146ad4d757e3bb1a24ff15228c424a
 }
 ```
 
-# Service endpoints
+## Service endpoints
 
-## Endpoint URLs
+### Endpoint URLs
 
-Endpoints are configurable when creating the carrier configuration
+Endpoints are configurable when creating the carrier configuration.
 
 * * *
 
-## Service creation
+### Service creation
 
 This is the information that VTEX will send to the carrier to create a service
 
@@ -72,7 +69,7 @@ This is the information that VTEX will send to the carrier to create a service
 - **Headers:** Carrier configuration  
 - **Query:** Carrier configuration  
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -175,10 +172,9 @@ This is the information that VTEX will send to the carrier to create a service
   }!
 }
 
-
 ```
 
-### Body Example
+#### Body Example
 
 ```json
 {
@@ -287,7 +283,7 @@ This is the information that VTEX will send to the carrier to create a service
 
 ```
 
-### Expected response
+#### Expected response
 
 ```json
 {
@@ -299,7 +295,7 @@ This is the information that VTEX will send to the carrier to create a service
 }
 ```
 
-## Status codes
+### Status codes
 
 | HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
@@ -312,7 +308,7 @@ This is the information that VTEX will send to the carrier to create a service
 >ℹ️ Note: There is a 5 seconds timeout before the service creation is confirmed. After that, is possible to use any of the endpoints below.
 
 
-## Cancel service
+### Cancel service
 
 In the case that a user or the application needs to cancel a service, this will be sent to the carrier configurated endpoints
 
@@ -321,7 +317,7 @@ In the case that a user or the application needs to cancel a service, this will 
 - **Headers:** Carrier config  
 - **Query:** Carrier config  
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -331,7 +327,7 @@ In the case that a user or the application needs to cancel a service, this will 
 }
 ```
 
-### Example
+#### Example
 
 ```json
 {
@@ -366,16 +362,16 @@ Response
 
 * * *
 
-## Pause service
+### Pause service
 
-In the case that a user or the application needs to pause/continue a service, this will be sent to the carrier configurated endpoints
+In the case that a user or the application needs to pause/continue a service, this will be sent to the carrier configurated endpoints.
 - **URL**: Carrier config  
 - **Method:** Carrier config  
 - **Headers:** Carrier config  
 - **Query:** Carrier config  
 
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -386,7 +382,7 @@ In the case that a user or the application needs to pause/continue a service, th
 }
 ```
 
-### Example
+#### Example
 
 ```json
 {
@@ -397,7 +393,7 @@ In the case that a user or the application needs to pause/continue a service, th
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -423,11 +419,11 @@ In the case that a user or the application needs to pause/continue a service, th
 
 * * *
 
-## Shipping services updates
+### Shipping services updates
 
 This endpoint will allow the carriers to update an ongoing shipping service.
 
-### Endpoint URLs
+#### Endpoint URLs
 
 REST API endpoints are prefixed with the following URLs:
 
@@ -440,7 +436,7 @@ REST API endpoints are prefixed with the following URLs:
 `https://api.pickingnpacking.com/prod/v1`
 
 
-### Get service
+#### Get service
 
 he following endpoint returns information about a service, which can be queried by providing the carrier ID and the corresponding service ID as query parameters. The response returned by the endpoint will contain the requested information.
 
@@ -448,7 +444,7 @@ he following endpoint returns information about a service, which can be queried 
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
 
-### Schema
+#### Schema
 
 ```graphql
 type ServiceResponseDto {
@@ -590,7 +586,7 @@ type CTimezone {
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -888,14 +884,14 @@ type CTimezone {
 }
 ```
 
-## Update service (via webhook)
+### Update service (via webhook)
 
 Service that allows updating the details of the tracking service via webhook
 
 - **PATCH:**  `/tracking/hook/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-### Parameters
+#### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -903,7 +899,7 @@ Service that allows updating the details of the tracking service via webhook
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -924,7 +920,7 @@ Service that allows updating the details of the tracking service via webhook
 }
 ```
 
-### Example
+#### Example
 
 ```json
 {
@@ -945,7 +941,7 @@ Service that allows updating the details of the tracking service via webhook
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -969,7 +965,7 @@ Service that allows updating the details of the tracking service via webhook
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description        |
 | -------------------- | ----------------------- |
@@ -981,14 +977,14 @@ Service that allows updating the details of the tracking service via webhook
 
 
 
-## Create notes
+### Create notes
 
 Service that allows the carriers to add notes/information on services
 
 - **POST:** `/tracking/hook/notes/{carrierId}/{serviceId}`  
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-### Parameters
+#### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -996,7 +992,7 @@ Service that allows the carriers to add notes/information on services
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-### Schema
+#### Schema
 
 ```graphql
 [
@@ -1008,7 +1004,7 @@ Service that allows the carriers to add notes/information on services
 ]
 ```
 
-### Example
+#### Example
 
 ```json
 [
@@ -1026,7 +1022,7 @@ Service that allows the carriers to add notes/information on services
 
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -1047,7 +1043,7 @@ Service that allows the carriers to add notes/information on services
 
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
@@ -1059,14 +1055,14 @@ Service that allows the carriers to add notes/information on services
 
 
 
-## Create evidence
+### Create evidence
 
 Service that allows the carrier to add evidence like proof of delivery or pickup to the shipping service, photos, text, others
 
 - **POST:** `/tracking/hook/evidences/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-### Parameters
+#### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1074,7 +1070,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-### Schema
+#### Schema
 
 ```graphql
 [
@@ -1086,7 +1082,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 ]
 ```
 
-### Example
+#### Example
 
 ```json
 [
@@ -1103,7 +1099,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 ]
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -1123,7 +1119,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
@@ -1135,14 +1131,14 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 
 
 
-## Create labels
+### Create labels
 
 Service that allows the carrier to add the shipping labels.
 
 - **POST:** `/tracking/hook/labels/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-### Parameters
+#### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1150,7 +1146,7 @@ Service that allows the carrier to add the shipping labels.
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -1163,7 +1159,7 @@ Service that allows the carrier to add the shipping labels.
 
 if the label is type **BASE64 **or** TXT**, the max size that we allow is **180kb**
 
-### Example
+#### Example
 
 ```json
 {
@@ -1174,7 +1170,7 @@ if the label is type **BASE64 **or** TXT**, the max size that we allow is **180k
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -1188,7 +1184,7 @@ if the label is type **BASE64 **or** TXT**, the max size that we allow is **180k
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description        |
 | -------------------- | ----------------------- |
@@ -1199,14 +1195,14 @@ if the label is type **BASE64 **or** TXT**, the max size that we allow is **180k
 | 500                  | Internal error          |
 
 
-## Cancel service
+### Cancel service
 
 Service that will cancel an ongoing shipping service
 
 - **POST:** `/tracking/hook/cancel/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-### Parameters
+#### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1214,7 +1210,7 @@ Service that will cancel an ongoing shipping service
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -1223,7 +1219,7 @@ Service that will cancel an ongoing shipping service
 }
 ```
 
-### Example
+#### Example
 
 ```json
 {
@@ -1232,7 +1228,7 @@ Service that will cancel an ongoing shipping service
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -1244,7 +1240,7 @@ Service that will cancel an ongoing shipping service
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description        |
 | -------------------- | ----------------------- |
@@ -1256,14 +1252,14 @@ Service that will cancel an ongoing shipping service
 
 
 
-## On hold service
+### On hold service
 
 Service that allows a carrier to temporarily pause a shipping service
 
 - **POST:** `/tracking/hook/on-hold/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-### Parameters
+#### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1271,7 +1267,7 @@ Service that allows a carrier to temporarily pause a shipping service
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -1280,7 +1276,7 @@ Service that allows a carrier to temporarily pause a shipping service
 }
 ```
 
-### Example
+#### Example
 
 ```json
 {
@@ -1289,7 +1285,7 @@ Service that allows a carrier to temporarily pause a shipping service
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -1301,7 +1297,7 @@ Service that allows a carrier to temporarily pause a shipping service
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description       |
 | -------------------- | ----------------------- |
@@ -1313,7 +1309,7 @@ Service that allows a carrier to temporarily pause a shipping service
 
 
 
-## Create token
+### Create token
 
 Endpoint available to generate authentication JWT
 
@@ -1330,7 +1326,7 @@ _REST API endpoints are prefixed with the following URL:_
 - **POST:** `/token`
 - **Authentication:** None
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -1338,7 +1334,7 @@ _REST API endpoints are prefixed with the following URL:_
 }
 ```
 
-### Example
+#### Example
 
 - **POST:** `https://auth.pickingnpacking.com/dev/token`
 
@@ -1348,7 +1344,7 @@ _REST API endpoints are prefixed with the following URL:_
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -1357,7 +1353,7 @@ _REST API endpoints are prefixed with the following URL:_
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
