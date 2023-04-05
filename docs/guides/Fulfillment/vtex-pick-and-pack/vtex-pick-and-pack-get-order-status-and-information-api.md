@@ -4,11 +4,7 @@
 
 This documentation explains how to make a request to the **Get order status and information** REST API to retrieve the status and details of an order in the **VTEX Pick and Pack** context. If you use this API to retrieve orders from other contexts, you will receive 404 error messages.
 
-
-
->⚠️The [order statuses in VTEX Pick and Pack](#order-status-in-pick-and-pack) do not correspond to the [order flow and status](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196) of the Order Management System (OMS). 
-
-
+>⚠️The [order statuses in VTEX Pick and Pack](#order-status-in-pick-and-pack) do not correspond to the [order flow and status](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196) of the Order Management System (OMS).
 
 ## Before you start
 
