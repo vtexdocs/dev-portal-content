@@ -24,7 +24,6 @@ Below, you will find an Api-Key for the Development environment that you can use
 
 **Production (Prod)**
 
-
 ```
 {{alphanumericSequence}}
 ```
