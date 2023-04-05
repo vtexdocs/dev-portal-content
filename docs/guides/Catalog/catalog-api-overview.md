@@ -5,16 +5,83 @@ hidden: false
 createdAt: "2019-12-20T02:25:40.558Z"
 updatedAt: "2022-08-08T21:09:09.766Z"
 ---
+
+Catalog API offers methods for managing and retrieving data about products and SKUs, categories, brands and other information from your store's catalog.
+
 > Check the new [Catalog onboarding guide](https://developers.vtex.com/docs/guides/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Catalog and is organized by focusing on the developer's journey.
 
-Methods for collecting product/SKU catalog data, categories, brands and other information. All content that comes between `{{}}` keys must be replaced with the correct data before performing the request.
+
+## Common parameters
+
+| Parameter name | Description |
+| - | - |
+| `{{accountName}}` | VTEX account name. |
+| `{{environment}` | The environment that will be called. Change for vtexcommercestable or vtexcommmercebeta |
+| `{{X-VTEX-API-AppKey}}` | Located in the headers of the requests, user authentication key. |
+| `{{X-VTEX-API-AppToken}}` | Located in the headers of the requests, authentication password. |
+
+All content that comes between `{{}}` keys must be replaced with the correct data before performing the request.
+
+## Index
+
+### Category
+
+### Category Specification
+
+### Brand
+
+### Specification Group
+
+### Specification
+
+### Specification Value
+
+### Product
+
+### Product Specification
+
+### SKU
+
+### SKU Specification
+
+### SKU File
+
+### SKU Complement
+
+### SKU EAN
+
+### Attachment
+
+### SKU Attachment
+
+### SKU Service
+
+### SKU Kit
+
+### SKU Seller
+
+### Similar Category
+
+### Collection Beta
+
+### Legacy Collection
+
+### Legacy Subcollection
+
+### Seller
+
+### Supplier
+
+### Trade Policy
+
+### Product Indexing
+
+### Commercial Conditions
+
+### Gift List
 
 
-[block:api-header]
-{
-  "title": "Index"
-}
-[/block]
+<!---
 - [Product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetProductAndSkuIds) - Here you can consult, create, or update a Product. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1wmX3QvQVxbKVmalhIE5Ru).
 - [Product Specification](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/-productId-/specification) - You can consult, create, or update additional information of a Product.  For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP#product-specification).
 - [SKU](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitids) - Here you can consult, create, or update an SKU. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3mJbIqMlz6oKDmyZ2bKJoA).
@@ -49,16 +116,4 @@ Methods for collecting product/SKU catalog data, categories, brands and other in
 - [Trade Policy](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/salespolicy) - You can create, update, or delete a Trade Policy. Trade policy is required when one of the above factors is different among the sale channel. For more information, check [this article](https://help.vtex.com/tutorial/what-is-a-sales-policy--563tbcL0TYKEKeOY4IAgAE?locale=en).
 - [Product Indexing](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetIndexedInfo/-productId-) - Here you can consult Product Indexed information.
 - [Commercial Conditions](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/commercialcondition/list) - Here you can consult commercial conditions registered in the store.
-
-
-[block:api-header]
-{
-  "title": "Common parameters"
-}
-[/block]
-| Parameter name              | Description                                                                             |
-|---------------------------|-----------------------------------------------------------------------------------------|
-| `{{accountName}}`         | Store account name                                                                      |
-| `{{environment}`          | The environment that will be called. Change for vtexcommercestable or vtexcommmercebeta |
-| `{{X-VTEX-API-AppKey}}`   | Located in the headers of the requests, user authentication key                         |
-| `{{X-VTEX-API-AppToken}}` | Located in the headers of the requests, authentication password                         |
+-->
