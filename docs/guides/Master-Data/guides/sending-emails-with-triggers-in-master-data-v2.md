@@ -9,13 +9,13 @@ updatedAt: "2022-08-03T14:56:02.147Z"
 There are two ways of sending emails automatically with Master Data v2 triggers:
 
 - [Sending emails](#sending-emails)
-- [Sending emails using Message Center templates](#send-email-using-message-center-templates)
+- [Sending emails using Message Center templates](#sending-emails-using-message-center-templates)
 
 >ℹ️ Learn more about triggers in the article [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2).
 
 ## Sending emails
 
-This is the more direct method of sending emails with Master Data v2 triggers, but without the standardization provided by [Message Center templates](#send-email-using-message-center-templates).
+This is the more direct method of sending emails with Master Data v2 triggers, but without the standardization provided by [Message Center templates](#sending-emails-using-message-center-templates).
 
 ### Properties
 
