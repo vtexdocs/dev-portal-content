@@ -1,6 +1,18 @@
+---
+title: "VTEX Pick and Pack Carrriers Integration Protocol"
+slug: "vtex-pick-and-pack-get-order-status-and-information-api"
+hidden: false
+createdAt: "2023-04-05T17:08:52.219Z"
+updatedAt: "2023-04-05T17:08:52.219Z"
+excerpt: "Learn how to create webhooks and get order status and information from VTEX Pick and Pack API"
+seeAlso:
+ - "vtex-pick-and-pack"
+ - "vtex-pick-and-pack-get-order-status-and-information-api"
+hidePaginationPrevious: false
+hidePaginationNext: false
+---
 
-# VTEX Pick and Pack Carreriers Integration Protocol
-
+# VTEX Pick and Pack Carrriers Integration Protocol
 
 
 All API access is over HTTPS and accessed from `https://api.pickingnpacking.com `. All data is sent and received as JSON.
