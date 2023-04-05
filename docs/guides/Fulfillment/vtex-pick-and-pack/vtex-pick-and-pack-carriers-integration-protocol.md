@@ -1,6 +1,6 @@
 ---
 title: "VTEX Pick and Pack Carrriers Integration Protocol"
-slug: "vtex-pick-and-pack-get-order-status-and-information-api"
+slug: "vtex-pick-and-pack-carriers-integration-protocol"
 hidden: false
 createdAt: "2023-04-05T17:08:52.219Z"
 updatedAt: "2023-04-05T17:08:52.219Z"
