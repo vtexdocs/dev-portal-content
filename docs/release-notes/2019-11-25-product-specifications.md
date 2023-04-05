@@ -1,5 +1,6 @@
 ---
 title: Product Specifications
+slug: "2019-11-25-product-specifications"
 excerpt: "The Product Specifications `visibleSpecifications` and `hiddenSpecifications` props can now be edited using the admin's Site Editor. This Site Editor never tires of being a hero for code-less people, for real..."
 createdAt: "2019-11-25T14:47:00.000Z"
 ---
