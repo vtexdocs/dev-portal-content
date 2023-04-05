@@ -291,11 +291,11 @@ This is the information that VTEX will send to the carrier to create a service
 
 ```json
 {
-	"status": "PENDING", // PENDING | ASSIGNED | PICKED | ON_ROUTE | INCIDENT | RETURNED | DELIVERED | CANCELED | ON_HOLD
-	"serviceId": "ASDF23324KDSF2", // Id devuelto por la transportadora
-	"shippingPrice": 20000.09 // If not exists send `null`
-	"metaData": {}, // Carrier additional information for example: {"anyKey": "anyValue", "propertyCustom": "anyValue", "anyArray": ["anyValue"], "errorKeyExample": "Show error trace exampel"}, if not exists send `null`
-	"shippingEstimatedDate": "2022-05-29T22:36:37.589Z" // If not exists send `null`
+ "status": "PENDING", // PENDING | ASSIGNED | PICKED | ON_ROUTE | INCIDENT | RETURNED | DELIVERED | CANCELED | ON_HOLD
+ "serviceId": "ASDF23324KDSF2", // Id devuelto por la transportadora
+ "shippingPrice": 20000.09 // If not exists send `null`
+ "metaData": {}, // Carrier additional information for example: {"anyKey": "anyValue", "propertyCustom": "anyValue", "anyArray": ["anyValue"], "errorKeyExample": "Show error trace exampel"}, if not exists send `null`
+ "shippingEstimatedDate": "2022-05-29T22:36:37.589Z" // If not exists send `null`
 }
 ```
 
