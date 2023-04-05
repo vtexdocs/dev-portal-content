@@ -6,7 +6,8 @@ createdAt: "2023-04-05T17:08:52.219Z"
 updatedAt: "2023-04-05T17:08:52.219Z"
 excerpt: "Get an overview of VTEX Pick and Pack"
 seeAlso:
- - "vtex-pick-and-pack"
+ - "vtex-pick-and-pack-carriers-integration-protocol"
+ - "vtex-pick-and-pack-get-order-status-and-information-api"
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---

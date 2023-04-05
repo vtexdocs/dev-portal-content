@@ -4,7 +4,7 @@ slug: "vtex-pick-and-pack-get-order-status-and-information-api"
 hidden: false
 createdAt: "2023-04-05T17:08:52.219Z"
 updatedAt: "2023-04-05T17:08:52.219Z"
-excerpt: "Learn how to create webhooks and get order status and information from VTEX Pick and Pack API"
+excerpt: "Learn how to integrate carriers with VTEX Pick and Pack API Protocol"
 seeAlso:
  - "vtex-pick-and-pack"
  - "vtex-pick-and-pack-get-order-status-and-information-api"
