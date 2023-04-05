@@ -27,23 +27,21 @@ All distance measurements are in meters.
 
 API keys available
 
-\_\_
 
-**Dev: **
+**Developer:**
 
 ```plaintext
 db5a3cecfef9cb0a9815af7c2eb8f7d6:c400460c165cc9beb146ad4d757e3bb1a24ff15228c424a0bd7c37f0ac356c0f6230568705d93dd6ff68190c0eafe5a74cbb14229748f20d3e53cbcc790ba372
 ```
 
-* * *
 
-**Prod:**
+**Production:**
 
 ```raw
 **xxx**
 ```
 
-### **Steps to generate JWT**
+### Steps to generate JWT
 
 * * *
 
@@ -57,7 +55,7 @@ db5a3cecfef9cb0a9815af7c2eb8f7d6:c400460c165cc9beb146ad4d757e3bb1a24ff15228c424a
 }
 ```
 
-# <u>Service endpoints</u>
+# Service endpoints
 
 ## Endpoint URLs
 
@@ -69,15 +67,12 @@ Endpoints are configurable when creating the carrier configuration
 
 This is the information that VTEX will send to the carrier to create a service
 
-**URL**: Carrier configuration
+- **URL:** Carrier configuration  
+- **Method:** Carrier configuration  
+- **Headers:** Carrier configuration  
+- **Query:** Carrier configuration  
 
-**Method: **Carrier configuration
-
-**Headers: **Carrier configuration
-
-**Query: **Carrier configuration
-
-Schema
+### Schema
 
 ```graphql
 {
@@ -183,7 +178,7 @@ Schema
 
 ```
 
-Example body
+### Body Example
 
 ```json
 {
@@ -292,7 +287,7 @@ Example body
 
 ```
 
-Expected response
+### Expected response
 
 ```json
 {
@@ -304,9 +299,9 @@ Expected response
 }
 ```
 
-**Status codes**
+## Status codes
 
-| **HTTP Status Code** | **Description**         |
+| HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Required authentication |
@@ -314,23 +309,19 @@ Expected response
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-**Note: **There are a 5 seconds time space before the service creation is confirmed. After that, is possible to use any of the endpoints below.
+>ℹ️ Note: There is a 5 seconds timeout before the service creation is confirmed. After that, is possible to use any of the endpoints below.
 
-* * *
 
 ## Cancel service
 
 In the case that a user or the application needs to cancel a service, this will be sent to the carrier configurated endpoints
 
-**URL**: Carrier config
+- **URL**: Carrier config  
+- **Method:** Carrier config  
+- **Headers:** Carrier config  
+- **Query:** Carrier config  
 
-**Method: **Carrier config
-
-**Headers: **Carrier config
-
-**Query: **Carrier config
-
-Schema
+### Schema
 
 ```graphql
 {
@@ -340,7 +331,7 @@ Schema
 }
 ```
 
-Example
+### Example
 
 ```json
 {
@@ -378,16 +369,13 @@ Response
 ## Pause service
 
 In the case that a user or the application needs to pause/continue a service, this will be sent to the carrier configurated endpoints
+- **URL**: Carrier config  
+- **Method:** Carrier config  
+- **Headers:** Carrier config  
+- **Query:** Carrier config  
 
-**URL**: Carrier config
 
-**Method: **Carrier config
-
-**Headers: **Carrier config
-
-**Query: **Carrier config
-
-Schema
+### Schema
 
 ```graphql
 {
@@ -398,7 +386,7 @@ Schema
 }
 ```
 
-Example
+### Example
 
 ```json
 {
@@ -409,7 +397,7 @@ Example
 }
 ```
 
-Response
+### Response
 
 ```json
 {
@@ -435,13 +423,13 @@ Response
 
 * * *
 
-# <u>Shipping services updates</u>
+## Shipping services updates
 
 This endpoint will allow the carriers to update an ongoing shipping service.
 
-## Endpoint URLs
+### Endpoint URLs
 
-REST API endpoints are prefixed with the following URL:
+REST API endpoints are prefixed with the following URLs:
 
 **Dev**
 
@@ -451,19 +439,16 @@ REST API endpoints are prefixed with the following URL:
 
 `https://api.pickingnpacking.com/prod/v1`
 
-* * *
 
-## Get service
+### Get service
 
 he following endpoint returns information about a service, which can be queried by providing the carrier ID and the corresponding service ID as query parameters. The response returned by the endpoint will contain the requested information.
 
-<mark>GET</mark> - `/tracking/hook/{carrierId}/{serviceId}`
+- **GET:** `/tracking/hook/{carrierId}/{serviceId}`
+- **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-**Authentication: **[API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-**Parameters**
-
-**Schema**
+### Schema
 
 ```graphql
 type ServiceResponseDto {
@@ -605,7 +590,7 @@ type CTimezone {
 }
 ```
 
-**Response**
+### Response
 
 ```json
 {
@@ -907,11 +892,10 @@ type CTimezone {
 
 Service that allows updating the details of the tracking service via webhook
 
-**<mark>PATCH</mark>** - `/tracking/hook/{carrierId}/{serviceId}`
+- **PATCH:**  `/tracking/hook/{carrierId}/{serviceId}`
+- **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-**Authentication: **[API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
-
-**Parameters**
+### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -919,7 +903,7 @@ Service that allows updating the details of the tracking service via webhook
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-**Schema**
+### Schema
 
 ```graphql
 {
@@ -940,7 +924,7 @@ Service that allows updating the details of the tracking service via webhook
 }
 ```
 
-**Example**
+### Example
 
 ```json
 {
@@ -961,7 +945,7 @@ Service that allows updating the details of the tracking service via webhook
 }
 ```
 
-**Response**
+### Response
 
 ```json
 {
@@ -985,9 +969,9 @@ Service that allows updating the details of the tracking service via webhook
 }
 ```
 
-**Status codes**
+### Status codes
 
-| **HTTP Status Code** | **Description**         |
+| HTTP Status Code | Description        |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Requires authentication |
@@ -995,17 +979,16 @@ Service that allows updating the details of the tracking service via webhook
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-* * *
+
 
 ## Create notes
 
 Service that allows the carriers to add notes/information on services
 
-<mark>POST</mark> - `/tracking/hook/notes/{carrierId}/{serviceId}`
+- **POST:** `/tracking/hook/notes/{carrierId}/{serviceId}`  
+- **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-**Authentication: **[API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
-
-**Parameters**
+### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1013,7 +996,7 @@ Service that allows the carriers to add notes/information on services
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-**Schema**
+### Schema
 
 ```graphql
 [
@@ -1025,7 +1008,7 @@ Service that allows the carriers to add notes/information on services
 ]
 ```
 
-**Example**
+### Example
 
 ```json
 [
@@ -1043,7 +1026,7 @@ Service that allows the carriers to add notes/information on services
 
 ```
 
-**Response**
+### Response
 
 ```json
 {
@@ -1064,9 +1047,9 @@ Service that allows the carriers to add notes/information on services
 
 ```
 
-**Status codes**
+### Status codes
 
-| **HTTP Status Code** | **Description**         |
+| HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Requires authentication |
@@ -1074,17 +1057,16 @@ Service that allows the carriers to add notes/information on services
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-* * *
+
 
 ## Create evidence
 
 Service that allows the carrier to add evidence like proof of delivery or pickup to the shipping service, photos, text, others
 
-<mark>POST</mark> - `/tracking/hook/evidences/{carrierId}/{serviceId}`
+- **POST:** `/tracking/hook/evidences/{carrierId}/{serviceId}`
+- **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-**Authentication: **[API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
-
-**Parameters**
+### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1092,7 +1074,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-**Schema**
+### Schema
 
 ```graphql
 [
@@ -1104,7 +1086,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 ]
 ```
 
-**Example**
+### Example
 
 ```json
 [
@@ -1121,7 +1103,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 ]
 ```
 
-**Response**
+### Response
 
 ```json
 {
@@ -1141,9 +1123,9 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 }
 ```
 
-**Status codes**
+### Status codes
 
-| **HTTP Status Code** | **Description**         |
+| HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Requires authentication |
@@ -1151,17 +1133,16 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-* * *
+
 
 ## Create labels
 
 Service that allows the carrier to add the shipping labels.
 
-<mark>POST</mark> - `/tracking/hook/labels/{carrierId}/{serviceId}`
+- **POST:** `/tracking/hook/labels/{carrierId}/{serviceId}`
+- **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-**Authentication: **[API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
-
-**Parameters**
+### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1169,7 +1150,7 @@ Service that allows the carrier to add the shipping labels.
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-**Schema**
+### Schema
 
 ```graphql
 {
@@ -1182,7 +1163,7 @@ Service that allows the carrier to add the shipping labels.
 
 if the label is type **BASE64 **or** TXT**, the max size that we allow is **180kb**
 
-**Example**
+### Example
 
 ```json
 {
@@ -1193,7 +1174,7 @@ if the label is type **BASE64 **or** TXT**, the max size that we allow is **180k
 }
 ```
 
-**Response**
+### Response
 
 ```json
 {
@@ -1207,9 +1188,9 @@ if the label is type **BASE64 **or** TXT**, the max size that we allow is **180k
 }
 ```
 
-**Status codes**
+### Status codes
 
-| **HTTP Status Code** | **Description**         |
+| HTTP Status Code | Description        |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Requires authentication |
@@ -1217,17 +1198,15 @@ if the label is type **BASE64 **or** TXT**, the max size that we allow is **180k
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-* * *
 
 ## Cancel service
 
 Service that will cancel an ongoing shipping service
 
-<mark>POST</mark> - `/tracking/hook/cancel/{carrierId}/{serviceId}`
+- **POST:** `/tracking/hook/cancel/{carrierId}/{serviceId}`
+- **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-**Authentication: **[API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
-
-**Parameters**
+### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1235,7 +1214,7 @@ Service that will cancel an ongoing shipping service
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-**Schema**
+### Schema
 
 ```graphql
 {
@@ -1244,7 +1223,7 @@ Service that will cancel an ongoing shipping service
 }
 ```
 
-**Example**
+### Example
 
 ```json
 {
@@ -1253,7 +1232,7 @@ Service that will cancel an ongoing shipping service
 }
 ```
 
-**Response**
+### Response
 
 ```json
 {
@@ -1265,9 +1244,9 @@ Service that will cancel an ongoing shipping service
 }
 ```
 
-**Status codes**
+### Status codes
 
-| **HTTP Status Code** | **Description**         |
+| HTTP Status Code | Description        |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Requires authentication |
@@ -1275,17 +1254,16 @@ Service that will cancel an ongoing shipping service
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-* * *
+
 
 ## On hold service
 
 Service that allows a carrier to temporarily pause a shipping service
 
-<mark>POST</mark> - `/tracking/hook/on-hold/{carrierId}/{serviceId}`
+- **POST:** `/tracking/hook/on-hold/{carrierId}/{serviceId}`
+- **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-**Authentication: **[API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
-
-**Parameters**
+### Parameters
 
 | Name            | Type   | In     | Description                                                                      |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------- |
@@ -1293,7 +1271,7 @@ Service that allows a carrier to temporarily pause a shipping service
 | `serviceId`     | string | path   | Id generated by the service                                                      |
 | `Authorization` | string | header | JWT generated with [API KEY PUBLIC](/API%20Carriers%20integration%20protocol.md) |
 
-**Schema**
+### Schema
 
 ```graphql
 {
@@ -1302,7 +1280,7 @@ Service that allows a carrier to temporarily pause a shipping service
 }
 ```
 
-**Example**
+### Example
 
 ```json
 {
@@ -1311,7 +1289,7 @@ Service that allows a carrier to temporarily pause a shipping service
 }
 ```
 
-**Response**
+### Response
 
 ```json
 {
@@ -1323,9 +1301,9 @@ Service that allows a carrier to temporarily pause a shipping service
 }
 ```
 
-**Status codes**
+### Status codes
 
-| **HTTP Status Code** | **Description**         |
+| HTTP Status Code | Description       |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Requires authentication |
@@ -1333,7 +1311,7 @@ Service that allows a carrier to temporarily pause a shipping service
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-* * *
+
 
 ## Create token
 
@@ -1349,11 +1327,10 @@ _REST API endpoints are prefixed with the following URL:_
 
 `https://auth.pickingnpacking.com/prod`
 
-<mark>POST</mark> - `/token`
+- **POST:** `/token`
+- **Authentication:** None
 
-**Authentication: **None
-
-**Schema**
+### Schema
 
 ```graphql
 {
@@ -1361,11 +1338,9 @@ _REST API endpoints are prefixed with the following URL:_
 }
 ```
 
-**Example**
+### Example
 
-* * *
-
-**POST** - `https://auth.pickingnpacking.com/dev/token`
+- **POST:** `https://auth.pickingnpacking.com/dev/token`
 
 ```json
 {
@@ -1373,7 +1348,7 @@ _REST API endpoints are prefixed with the following URL:_
 }
 ```
 
-**Response**
+### Response
 
 ```json
 {
@@ -1382,9 +1357,9 @@ _REST API endpoints are prefixed with the following URL:_
 }
 ```
 
-**Status codes**
+### Status codes
 
-| **HTTP Status Code** | **Description**         |
+| HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Requires authentication |
