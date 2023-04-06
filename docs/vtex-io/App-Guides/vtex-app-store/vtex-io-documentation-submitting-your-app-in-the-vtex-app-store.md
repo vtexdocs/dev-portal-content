@@ -103,6 +103,6 @@ Merchants with advanced requirements might wish to develop their own Edition app
 
 Only apps meant to be published in the App Store must go through the homologation process.
 
-### How much time does it take for an app homologation process to complete? Do we have a formal SLA?
+### How long does the app homologation process take to complete?
 
 The SLA is 45 days from [the moment the app data is sent for validation](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-2-sending-the-app-data-for-validation).
