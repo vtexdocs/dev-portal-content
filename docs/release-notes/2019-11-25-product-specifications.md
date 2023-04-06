@@ -13,6 +13,6 @@ The [Product Specification](https://developers.vtex.com/docs/apps/vtex.store-com
 
 Whenever a component, such as Product Specification, gains the flexibility to be editable (whether in part or in full) using Site Editor, retailers become independent from the source code and are able to configure their stores as desired.
 
-## What you need to do 
+## What you need to do
 
 Make sure your store is already running [**Store Components**](https://developers.vtex.com/docs/apps/vtex.store-components) version **3.85.0** or higher.
