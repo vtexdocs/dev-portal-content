@@ -27,7 +27,6 @@ Before making the request, you will need the following:
 * [Basic authentication](#basic-authentication)
 * [JSON Web Token (JWT)](#json-web-token-jwt)
 
-
 ### Basic authentication
 
 Basic Authentication is a method for an HTTP user agent to provide a username and password when making a request. The system doesn't store API keys, they need  to be generated every time there's a new request.
