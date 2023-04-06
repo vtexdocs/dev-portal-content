@@ -1311,8 +1311,6 @@ Service that allows a carrier to temporarily pause a shipping service
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-
-
 ## Create token
 
 Endpoint available to generate authentication JWT
