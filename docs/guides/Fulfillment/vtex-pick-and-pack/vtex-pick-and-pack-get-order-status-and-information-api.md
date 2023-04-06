@@ -24,8 +24,6 @@ This documentation explains how to make a request to the **Get order status and 
 
 Before making the request, you will need the following:
 
-
-
 * [Basic authentication](#basic-authentication)
 * [JSON Web Token (JWT)](#json-web-token-jwt)
 
