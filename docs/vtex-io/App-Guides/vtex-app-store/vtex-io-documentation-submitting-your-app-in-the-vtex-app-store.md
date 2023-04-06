@@ -78,3 +78,31 @@ When an app fulfills the above-mentioned criteria, the PR will be approved and y
 
 Notice the following: once everything is approved, a product (which effectively is your app) will be automatically created in your store catalog. Do not remove our change it - this product is what integrates your app to the VTEX App Store marketplace.
 
+## Frequently Asked Questions
+
+### Does the homologation process occur only for apps to be published on the App Store?
+
+Yes. For an app to be eligible for publication in the App Store, it must be [public](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available) – meaning it should be available for all VTEX accounts to install or purchase.
+
+In technical terms, this translates to having a [billing model set up for the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model#setting-the-app-as-public). The homologation process must occur for new apps and new major versions of apps.
+
+### Which type of apps goes through a homologation process (Storefront apps, Admin apps, Backend apps and Pixel apps, Private apps, Public app, Single account, Multi-account)?
+
+All apps must go through the homologation process before they're published to the App Store. The type of functionality (storefront, admin, backend, pixel) does not make any difference. Only public apps, that can be installed on multiple accounts, are eligible – if you want your app to be private to your organization and installed on a single account, you can [install it](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) directly.
+
+### Which category does an Edition app go into? And does it also go through a homologation process?
+
+[Edition apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) work as app bundles – they make it easier to guarantee a set of apps will be installed on certain accounts. Only one Edition app can be set per account, and most accounts use the default alternatives that are provided by VTEX:
+
+- `vtex.edition-business`: all apps required to build a store with our legacy [CMS](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC).
+- `vtex.edition-store`: all apps required to build a store with Store Framework.
+
+Merchants with advanced requirements might wish to develop their own Edition apps. To do so they must fulfill the [requirements to become a Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-sponsor-account), but no homologation process is required since Edition apps are not installed or set through the App Store.
+
+### Do custom and non-custom apps (non-boilerplate apps) also go through a homologation process?
+
+Only apps meant to be published in the App Store must go through the homologation process.
+
+### How much time does it take for an app homologation process to complete? Do we have a formal SLA?
+
+The SLA is 45 days from [the moment the app data is sent for validation](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-2-sending-the-app-data-for-validation).
