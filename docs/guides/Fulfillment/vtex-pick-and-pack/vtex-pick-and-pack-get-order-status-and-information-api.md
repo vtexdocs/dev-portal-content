@@ -40,8 +40,6 @@ Below, you will find an Api-Key for the Development environment that you can use
 {{alphanumericSequence}}
 ```
 
-
-
 ### JSON Web Token (JWT)
 
 JSON Web Token (JWT) is an open standard ([RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)) that defines a compact and self-contained way for securely transmitting information as a JSON object between parties. 
