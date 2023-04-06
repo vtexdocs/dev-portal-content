@@ -44,14 +44,17 @@ As a developer, you can develop your own VTEX Apps. VTEX Apps are built and depl
 
 Notice that, besides developing custom solutions for the VTEX ecosystem, you can also publish and share your apps with VTEX merchants on the VTEX App Store, helping them leverage their business. Check out [how to become a registered VTEX App Store developer.](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer)
 
+>ℹ For an app to be eligible for publication in the App Store, it must be [public](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available) – meaning it should be available for all VTEX accounts to install or purchase. In technical terms, this translates to having a [billing model set up for the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model#setting-the-app-as-public). All apps must go through the [homologation process](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-3-waiting-for-the-app-homologation) before they are published to the App Store independently from the type of functionality (storefront, admin, backend, pixel). The homologation process must occur for new apps and new major versions of apps (e.g.: when updating an app version from `1.x` to `2.x`). In the process, our team assesses if the app follows our [guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store).
+
 ### Types of apps
 
 Custom apps complete business solutions, addressing pain points from real customers. With VTEX IO, it's possible to develop:
 
-- **Storefront apps**: React components that compose the storefront - works as an open beta.
-- **Admin apps**: Modules and functionalities for the VTEX Admin - works as a closed beta.
-- **Backend apps**: Node or .NET Core services that speed up connections with Storefront or Admin apps - works as a closed beta.
-- **Pixel apps**: Integrations that collect user data for a third-party service - works as a closed beta.
+- **[Storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io):** React components that compose the storefront - works as an open beta.
+- **Admin apps:** Modules and functionalities for the VTEX Admin - works as a closed beta.
+- **Backend apps:** Node or .NET Core services that speed up connections with Storefront or Admin apps - works as a closed beta.
+- **[Pixel apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps):** Integrations that collect user data for a third-party service - works as a closed beta.
+- **[Edition apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app):** Bundle of settings, policies, back-end and front-end apps encapsulated and exported by a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
 
 A VTEX App can also be characterized as:
 

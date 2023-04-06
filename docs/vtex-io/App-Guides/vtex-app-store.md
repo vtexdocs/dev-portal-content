@@ -5,6 +5,11 @@ hidden: false
 createdAt: "2021-10-26T23:00:18.640Z"
 updatedAt: "2022-03-04T21:41:10.287Z"
 ---
+The [VTEX App Store](https://apps.vtex.com/) is a marketplace for VTEX IO plug-and-play solutions. It is where both first-party and third-party apps are published to be downloaded by clients and partners.
+
+Developers that want to publish their solutions in the VTEX App Store have to follow a series of requirements which are detailed in the cards below.
+
+>ℹ For an app to be eligible for publication in the App Store, it must be [public](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available) – meaning it should be available for all VTEX accounts to install or purchase. In technical terms, this translates to having a [billing model set up for the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model#setting-the-app-as-public). All apps must go through the [homologation process](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-3-waiting-for-the-app-homologation) before they are published to the App Store independently from the type of functionality (storefront, admin, backend, pixel). The homologation process must occur for new apps and new major versions of apps (e.g.: when updating an app version from `1.x` to `2.x`). In the process, our team assesses if the app follows our [guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store).
 
 <Flex>
 

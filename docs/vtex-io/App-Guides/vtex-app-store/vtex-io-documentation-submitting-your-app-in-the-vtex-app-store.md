@@ -72,6 +72,8 @@ Therefore, the **3 main criteria** taken into account by the VTEX product team a
 
 You can find more details on how these criteria will be assessed in our [Homologation requirements for the VTEX App Store](/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store).
 
+>ℹ The SLA for the homologation process is 45 days from [the moment the app data is sent for validation](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-2-sending-the-app-data-for-validation).
+
 When an app fulfills the above-mentioned criteria, the PR will be approved and your new app version is ready to be released and made available in the VTEX app store.
 
 Notice the following: once everything is approved, a product (which effectively is your app) will be automatically created in your store catalog. Do not remove our change it - this product is what integrates your app to the VTEX App Store marketplace.
