@@ -302,7 +302,6 @@ The order’s information and status change notifications received will be an ob
 
 **Example**
 
-
 ```
 {
   "orderId": "XDE-1253881550433-01",
