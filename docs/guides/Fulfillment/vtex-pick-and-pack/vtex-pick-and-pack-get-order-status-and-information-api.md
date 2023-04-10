@@ -12,8 +12,6 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-# VTEX Pick and Pack Get order status and information API
-
 [VTEX Pick and Pack](link) is a solution to streamline stores’ fulfillment processes by optimizing orders’ picking and packing, and the last-mile delivery. The solution is composed of the [VTEX Fulfillment](http://link) and the [Last Mile](link) modules.
 
 This documentation explains how to make a request to the **Get order status and information** REST API to retrieve the status and details of an order in the **VTEX Pick and Pack** context. If you use this API to retrieve orders from other contexts, you will receive 404 error messages.

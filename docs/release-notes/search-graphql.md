@@ -4,13 +4,13 @@ excerpt: "The `store-graphql` morphed into `search-graphql`, which took over res
 createdAt: "2019-09-23T14:47:00.000Z"
 ---
 
-The giant `store-graphql` app was segmented and gave way to the new `search-graphql` app. 
+The giant `store-graphql` app was segmented and gave way to the new `search-graphql` app.
 
-## What has changed 
+## What has changed
 
-**Previously, the** `store-graphql` **was a monolith app** responsible for sending GraphQL queries to all [VTEX APIs](https://help.vtex.com/developer-docs), meaning that all information required by the store's front end would necessarily go through `store-graphql`. 
+**Previously, the** `store-graphql` **was a monolith app** responsible for sending GraphQL queries to all [VTEX APIs](https://help.vtex.com/developer-docs), meaning that all information required by the store's front end would necessarily go through `store-graphql`.
 
-The issue was that the constant and rapid platform evolution meant that the app centralized a very large number of different requests, from getting product data from the Search API (a fast operation having a short timeout and a lot of cache) to adding items in the cart (whose timeout is long due to the delay in Checkout responsiveness along with the inexistent cache, since it's a operation performed by the user). 
+The issue was that the constant and rapid platform evolution meant that the app centralized a very large number of different requests, from getting product data from the Search API (a fast operation having a short timeout and a lot of cache) to adding items in the cart (whose timeout is long due to the delay in Checkout responsiveness along with the inexistent cache, since it's a operation performed by the user).
 
 Such a scenario resulted in a long code base to meet all the demands required by an increasingly complex front. Therefore, the app had to begin its segmentation process, which started by creating the `search-graphql` app.  
 
@@ -20,9 +20,9 @@ This means that henceforth **all related search queries in** `store-graphql` **w
 
 `store-graphql` segmentation into smaller apps such as `search-graphql` aims to better define each app's functionalities. By specializing an app, we are able to:
 
-- Facilitate its code review and support. 
+- Facilitate its code review and support.
 - Set the app's parameters (such as `timeout`, `memória`, `cache` , etc) more adequately.
-- Choose more precise metrics to manage and control its performance. 
+- Choose more precise metrics to manage and control its performance.
 
 ## What you need to do
 
@@ -30,9 +30,9 @@ To send your queries through `search-graphql`, simply read and attentively follo
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) `search-graphql` version **0.2.3** or higher in your store.
 2. Add it as a dependency in your store's `manifest.json`. If your store only uses search related queries such as the above-mentioned, feel free to remove the `store-graphql` app from dependencies.
-3.  If your store needs to use the queries of two apps, have **both** as dependencies in your store's `manifest.json`. In this case, you need to mention in each query (in `@context`) which app should be used, following the example below:
+3. If your store needs to use the queries of two apps, have **both** as dependencies in your store's `manifest.json`. In this case, you need to mention in each query (in `@context`) which app should be used, following the example below:
 
-```
+```json
 query Autocomplete($maxRows: Int, $inputValue: String) {
     autocomplete(maxRows: $maxRows, searchTerm: $inputValue) {
     autocomplete(maxRows: $maxRows, searchTerm: $inputValue)
@@ -44,8 +44,8 @@ query Autocomplete($maxRows: Int, $inputValue: String) {
 
 > ⚠️ Fixes and improvements related to search queries should only be performed in `search-graphql` from now onwards.
 
-:eyes: Notice that several deprecated fields, such as `categoriesIds` in `Product`, were removed. Therefore, these fields should also be removed from your queries. In any case, GraphQL will notify you about the removal once the query having the removed field is performed. 
+> Notice that several deprecated fields, such as `categoriesIds` in `Product`, were removed. Therefore, these fields should also be removed from your queries. In any case, GraphQL will notify you about the removal once the query having the removed field is performed.
 
-## Side effects 
+## Side effects
 
 Nothing should be in the sense that once the code is transferred from one app repository to another.
