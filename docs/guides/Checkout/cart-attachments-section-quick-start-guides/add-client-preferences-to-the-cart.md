@@ -12,7 +12,7 @@ This guide will describe how to add customer preferences information (website lo
 
 ## Getting shopping cart information
 
-The first step is to get the `orderFormId` of the shopping cart to which you want to add the customer preferences information. For more information, read the [Getting cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.
+The first step is to get the `orderFormId` of the shopping cart to which you want to add the customer preferences information. For more information, read the [Getting cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id) guide.
 
 ## Adding customer preferences to the shopping cart
 
