@@ -16,7 +16,7 @@ The first step is to get the `orderFormId` of the shopping cart to which you wan
 
 ## Adding customer profile information to the shopping cart
 
-To add customer profile information to the shopping cart, use the [Add client profile](https://developers.vtex.com/vtex-rest-api/reference/addclientprofile) endpoint. In this request, you must send the `orderFormId` through the URL address, as shown in the example below:
+To add customer profile information to the shopping cart, use the [Add client profile](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData) endpoint. In this request, you must send the `orderFormId` through the URL address, as shown in the example below:
 
 `https://{accountName}.{environment.com.br}/api/checkout/pub/orderForm/ede846222cd44046ba6c638442c3505a/attachments/clientProfileData`
 
