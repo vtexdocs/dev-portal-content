@@ -12,7 +12,7 @@ As part of our ongoing efforts to improve VTEX's order integration functionality
 
 This feature has already been deprecated for accounts that used this data entity previously and did not interact with it in 2022.
 
-As of october 2023 VTEX will deprecate the [Master Data v2 orders entity](https://developers.vtex.com/docs/guides/use-master-data-with-orders) for all accounts.
+As of October 2023, VTEX will deprecate the [Master Data v2 orders entity](https://developers.vtex.com/docs/guides/use-master-data-with-orders) for all accounts.
 
 For now, deprecation only means that VTEX will no longer register new orders' data to the entity. Stores will still be able to view previously recorded information in the Master Data v2 order entity.
 
