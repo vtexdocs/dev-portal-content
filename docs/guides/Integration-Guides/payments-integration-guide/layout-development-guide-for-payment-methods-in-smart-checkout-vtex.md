@@ -86,7 +86,7 @@ In addition to localizing the texts, images should be altered to better suit eac
 Follow these steps to create your layout:
 
 1. Download the repository to your local machine (either through the Github clone or by downloading the repository from the download option).
-   ![vtex<span data-type=](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-0.png)\_payment\_mocker" />
+   ![vtex<span data-type=](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-0.png)
 2. Install the [NodeJS](https://nodejs.org/en/).
 3. Enter the following commands in the terminal to install Grunt and Sass:
 
