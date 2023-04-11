@@ -14,7 +14,7 @@ Every millisecond counts and affects not only *the consumer decision-making* pro
 
 Thus, to help you guarantee the success of your brand's online presence, this article presents a few practices you can implement to optimize your store's performance and, consequently, improve the shopper experience.
 
-Some actions that can boost your store's website performance can be enabled in your store's Admin Panel, under *Store Setup > CMS > Store > Advanced*.
+Some actions that can boost your store's website performance can be enabled in your store's Admin Panel, under *Store Settings > Storefront > Store > Advanced*.
 
 ![cms-store-advanced](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-0.png)
 
