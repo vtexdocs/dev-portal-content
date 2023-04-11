@@ -19,6 +19,5 @@ For now, deprecation only means that VTEX will no longer register new orders' da
 ## What needs to be done?
 
 If you have order integrations that depend on the Master Data v2 data entity, you must adapt your implementation to use the [orders feed or hook](https://developers.vtex.com/docs/guides/orders-feed) instead as soon as possible. See this articles to learn how to do this:
-
 - [Orders feed and hook guide](https://developers.vtex.com/docs/guides/orders-feed)
 - [Setting up an order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration)
