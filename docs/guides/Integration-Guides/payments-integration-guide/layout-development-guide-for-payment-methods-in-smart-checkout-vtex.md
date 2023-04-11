@@ -86,12 +86,13 @@ In addition to localizing the texts, images should be altered to better suit eac
 Follow these steps to create your layout:
 
 1. Download the repository to your local machine (either through the Github clone or by downloading the repository from the download option).
-   ![vtex<span data-type=](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-0.png)\_payment\_mocker" />
+   ![payment mocker](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-0.png)
 2. Install the [NodeJS](https://nodejs.org/en/).
 3. Enter the following commands in the terminal to install Grunt and Sass:
 
    - **Grunt**: `sudo npm i -g grunt-cli`
    - **Saas**: `sudo npm install -g sass`
+
 4. Still in the terminal, go to the project folder and run the command `npm i` ; wait for the project's  dependencies to be installed.
 5. Run the command *Grunt* on the project folder.
 6. Open your preferred browser and go to the link `http://localhost:8080`.
@@ -123,7 +124,7 @@ See below an example of layout and language switching ([Brastemp](http://loja.br
 
 ![layout junto](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-1.png)
 
-![layout<span data-type=](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-2.gif)\_gif" />
+![gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/layout-development-guide-for-payment-methods-in-smart-checkout-vtex-2.gif)
 
 ### Reference Links
 
