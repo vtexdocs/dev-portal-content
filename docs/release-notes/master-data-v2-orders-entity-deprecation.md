@@ -6,7 +6,7 @@ type: "deprecated"
 excerpt: "VTEX will deprecate the order entity of Master Data v2 in October 2023. Learn how to adapt your store integrations."
 ---
 
-Some VTEX stores use the [Master Data v2 orders entity](https://developers.vtex.com/docs/guides/use-master-data-with-orders) to create order integrations. However, using the [orders feed or hook](https://developers.vtex.com/docs/guides/orders-feed) is the recommended way to create this type of integration.
+As part of our ongoing efforts to improve VTEX's order integration functionality, we are deprecating the [Master Data v2 orders entity](https://developers.vtex.com/docs/guides/use-master-data-with-orders). While some stores may use this entity to create order integrations, we recommend using the [orders feed or hook](https://developers.vtex.com/docs/guides/orders-feed) as they provide a more effective and efficient way to create this type of integration. We encourage all users to update their integrations accordingly to ensure a seamless transition.
 
 ## What has changed?
 
