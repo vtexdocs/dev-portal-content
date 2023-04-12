@@ -3,7 +3,7 @@ title: "VTEX Pick and Pack Carrriers Integration Protocol"
 slug: "vtex-pick-and-pack-carriers-integration-protocol"
 hidden: false
 createdAt: "2023-04-05T17:08:52.219Z"
-updatedAt: "2023-04-05T17:08:52.219Z"
+updatedAt: "2023-04-12T17:08:52.219Z"
 excerpt: "Learn how to integrate carriers with VTEX Pick and Pack API Protocol"
 seeAlso:
  - "vtex-pick-and-pack"
