@@ -416,14 +416,7 @@ This endpoint will allow the carriers to update an ongoing shipping service.
 
 REST API endpoints are prefixed with the following URLs:
 
-**Dev**
-
-`https://api.pickingnpacking.com/dev/v1`
-
-**Prod**
-
 `https://api.pickingnpacking.com/prod/v1`
-
 
 ### Get service
 
