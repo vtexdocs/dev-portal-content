@@ -1132,7 +1132,7 @@ Service that allows the carrier to add the shipping labels.
 }
 ```
 
-if the label is type **BASE64 **or** TXT**, the max size that we allow is **180kb**
+If the label is type **BASE64** or **TXT**, the max size that we allow is **180kb**.
 
 ### Example
 
