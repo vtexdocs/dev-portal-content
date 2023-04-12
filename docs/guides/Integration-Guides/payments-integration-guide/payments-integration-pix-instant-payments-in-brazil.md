@@ -8,10 +8,14 @@ updatedAt: "2022-02-03T15:19:06.694Z"
 
 [Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix) is the instant payments ecosystem implementation led by the Central Bank of Brazil (BCB) to enable online money transfers with reduced costs, increased safety and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account, without the need for intermediaries, resulting in lower transaction costs.
 
-Pix will be available for persons and businesses. Both need to have an identifier key registered in some financial entity - banks, fintechs or payment institutions - to proceed with the transaction. According to the [eligibility criteria](https://www.bcb.gov.br/estabilidadefinanceira/participantespix) set forth by the BCB, certain entities will be required to offer this payment method, while others may optionally offer it or not be eligible to participate.
+Pix is available to both physical and legal persons, and both need to have an identifier key registered with some financial entity (banks, fintechs or payment institutions) to proceed with the transaction.
 
-In this step, we’ll explain how to extend your Payment Provider Protocol implementation to allow stores to offer Pix as an additional payment method to their clients.
+According to the [eligibility criteria](https://www.bcb.gov.br/estabilidadefinanceira/participantespix) set forth by the BCB, certain financial entities will be required to offer this payment method, while others may optionally offer it or not be eligible to participate.
+
+In this article, we will explain how to extend your Payment Provider Protocol implementation to allow stores to offer Pix as an additional payment method to their clients.
+
 ![These are some of the benefits of an instant payments ecosystem highlighted by the BCB](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-pix-instant-payments-in-brazil-0.png)
+
 [block:callout]
 {
   "type": "success",
@@ -20,21 +24,7 @@ In this step, we’ll explain how to extend your Payment Provider Protocol imple
 }
 [/block]
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "This tutorial assumes you are already a [VTEX Partner](http://vtex.com/br-pt/partner) and understand how the [Payment Provider Protocol](/docs/guides/payment-provider-protocol) works.",
-  "title": "Are you ready for a Payment Provider implementation?"
-}
-[/block]
-
-[block:callout]
-{
-  "type": "info",
-  "body": "On November 3th, the BCB will realize some transactions strictly for tests. \nOn November 16th, Pix will be available for operations working fully.",
-  "title": "Expected launch: November 2020"
-}
-[/block]
+>⚠️ This tutorial assumes you are already a [VTEX Partner](http://vtex.com/br-pt/partner) and understand how the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol) works.
 
 ## Integration conditions
 
@@ -46,13 +36,14 @@ If you are ready to develop the middleware that implements our Payment Provider 
 
 - **The middleware must consistently respond within established response times.** We enforce a maximum response time of 5 seconds for homologation tests, as well as a maximum response time of 20 seconds to any other API request.
 
-While our protocol describes ten endpoints for implementation, not all of them are applicable when integrating Pix instant payments. Regarding the two provider flows:
+While our protocol describes 9 endpoints for implementation, not all of them are applicable when integrating Pix instant payments. Regarding the two provider flows:
 
-- [Payment Flow](https://developers.vtex.com/vtex-rest-api/reference/payment-flow): its implementation is **mandatory**.
+- [Payment Flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): 6 endpoints that must be **mandatory** implemented.
 
-- [Configuration Flow](https://developers.vtex.com/vtex-rest-api/reference/configuration-flow): its implementation is **optional and currently not available for Pix**.
+- [Configuration Flow endpoints](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token): 3 endpoints whose implementation is **optional and currently not available for Pix**.
 
-The table below gives further detail on the applicability of each endpoint to Pix instant payments. More details on the integration steps are given in the rest of this tutorial.
+The table below gives further detail on the applicability of each endpoint to Pix instant payments.
+
 [block:parameters]
 {
   "data": {
@@ -70,7 +61,7 @@ The table below gives further detail on the applicability of each endpoint to Pi
     "2-2": "✅ Yes",
     "3-0": "Payment",
     "3-1": "Cancel Payment",
-    "4-1": "Capture Payment",
+    "4-1": "Settle Payment",
     "5-1": "Refund Payment",
     "4-0": "Payment",
     "5-0": "Payment",
@@ -82,9 +73,9 @@ The table below gives further detail on the applicability of each endpoint to Pi
     "7-0": "Configuration",
     "8-0": "Configuration",
     "9-0": "Configuration",
-    "7-2": ":x: No",
-    "8-2": ":x: No",
-    "9-2": ":x: No",
+    "7-2": "⛔ No",
+    "8-2": "⛔ No",
+    "9-2": "⛔ No",
     "3-2": "✅ Yes",
     "4-2": "✅ Yes",
     "5-2": "✅ Yes",
@@ -95,72 +86,167 @@ The table below gives further detail on the applicability of each endpoint to Pi
 }
 [/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Pix is <strong>not available</strong> for marketplace clients that use the Checkout Split.",
-  "title": "Marketplace restrictions"
-}
-[/block]
+>ℹ️ Pix is **not available** for marketplace clients that use the Checkout Split.
 
->❗ We strongly advise against using the <span class="api pg-type type-get">GET</span>[List Payment Methods](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods) to proceed with the implementation. This route is obsolete and it will be deprecated in soon - early 2021
+>⚠️ The following JSONs are just **examples**. Each partner **must adapt** the models to their own realities, with the data needed to realize the integration.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "The following JSONs are just <strong>examples</strong>. Each partner <strong>must adapt</strong> the models to their own realities, with the data needed to realize the integration.",
-  "title": "Request and response examples"
-}
-[/block]
 
 ## Integration steps
 
 ### Establish the payment methods available
 
-The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API call using the <span class="api pg-type type-get">GET</span>[List Payment Provider Manifest](https://developers.vtex.com/vtex-developer-docs/reference/manifest-1) route.
+The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API request using the <span class="api pg-type type-get">GET</span>[List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) route.
 
 The expected response is:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n    \"paymentMethods\": [\n        {\n            \"name\": \"Visa\",\n            \"allowsSplit\": \"onCapture\"\n        },\n        { \n            \"name\": \"Pix\",\n            \"allowsSplit\": \"disabled\"\n        },\n        {\n            \"name\": \"Mastercard\",\n            \"allowsSplit\": \"onCapture\"\n        },\n        {\n            \"name\": \"American Express\",\n            \"allowsSplit\": \"onCapture\"\n        },\n        {\n            \"name\": \"BankInvoice\",\n            \"allowsSplit\": \"onAuthorize\"\n        },\n        {\n            \"name\": \"Privatelabels\",\n            \"allowsSplit\": \"disabled\"\n        },\n        {\n            \"name\": \"Promissories\",\n            \"allowsSplit\": \"disabled\"\n        }\n    ],\n    \"customFields\": [\n        {\n            \"name\": \"Merchant's custom field\",\n            \"type\": \"text\"\n        },\n        {\n            \"name\": \"Merchant's custom select field\",\n            \"type\": \"select\",\n            \"options\": [\n                {\n                    \"text\": \"Field option 1\",\n                    \"value\": \"1\",\n                },\n                {\n                    \"text\": \"Field option 2\",\n                    \"value\": \"2\",\n                },\n                {\n                    \"text\": \"Field option 3\",\n                    \"value\": \"3\",\n                }\n            ]\n        }\n    ]\n}",
-      "language": "curl",
-      "name": "200 OK"
-    }
-  ]
-}
-[/block]
 
-[block:callout]
+```json
 {
-  "type": "warning",
-  "title": "Payment split for Pix",
-  "body": "Pix does <strong>not</strong> handle payment split yet, this functionality will be released soon."
+    "paymentMethods": [
+        {
+            "name": "Visa",
+            "allowsSplit": "onCapture"
+        },
+        { 
+            "name": "Pix",
+            "allowsSplit": "disabled"
+        },
+        {
+            "name": "Mastercard",
+            "allowsSplit": "onCapture"
+        },
+        {
+            "name": "American Express",
+            "allowsSplit": "onCapture"
+        },
+        {
+            "name": "BankInvoice",
+            "allowsSplit": "onAuthorize"
+        },
+        {
+            "name": "Privatelabels",
+            "allowsSplit": "disabled"
+        },
+        {
+            "name": "Promissories",
+            "allowsSplit": "disabled"
+        }
+    ],
+    "customFields": [
+        {
+            "name": "Merchant's custom field",
+            "type": "text"
+        },
+        {
+            "name": "Merchant's custom select field",
+            "type": "select",
+            "options": [
+                {
+                    "text": "Field option 1",
+                    "value": "1",
+                },
+                {
+                    "text": "Field option 2",
+                    "value": "2",
+                },
+                {
+                    "text": "Field option 3",
+                    "value": "3",
+                }
+            ]
+        }
+    ]
 }
-[/block]
-For more details, check the [complete documentation](https://developers.vtex.com/vtex-developer-docs/reference/manifest-1).
+```
+
+>⚠️ Pix still **does not** handle payment split, but this feature may be released in the future. For more information on payment methods that currently accept split, check the [List Payment Provider Manifest endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
+
 
 ### Create Pix Payment Method
 
-Now you have to create a new payment method and there’s only one route as an option: <span class="api pg-type type-post">POST</span>[Create Payment](https://developers.vtex.com/vtex-developer-docs/reference/createpayment).
+Now you have to create a new payment method. To do this, use the route <span class="api pg-type type-post">POST</span>[Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
 
-There’s a lot of information needed stem from the cart data in the Smart Checkout, so be careful and validate all the payload’s information.
+>ℹ️ A lot of information is required from the cart data in the Smart Checkout, so be careful and validate all payload information.
 
-The request goes like this:
-[block:code]
+See an example of the Create Payment request:
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"reference\": \"32478982\",\n    \"orderId\": \"v967373115140abc\",\n    \"transactionId\": \"D3AA1FC8372E430E8236649DB5EBD08E\",\n    \"paymentId\": \"F5C1A4E20D3B4E07B7E871F5B5BC9F91\",\n    \"paymentMethod\": \"Pix\",\n    \"paymentMethodCustomCode\": null,\n    \"merchantName\": \"mystore\",\n    \"value\": 4307.23,\n    \"currency\": \"BRL\",\n    \"installments\": 31,\n    \"deviceFingerprint\": \"12ade389087fe\",\n    \"card\": {\n        \"holder\": null,\n        \"number\": null,\n        \"csc\": null,\n        \"expiration\": {\n            \"month\": null,\n            \"year\": null\n        }\n    },\n    \"miniCart\": {\n        \"shippingValue\": 11.44,\n        \"taxValue\": 10.01,\n        \"buyer\": {\n            \"id\": \"c1245228-1c68-11e6-94ac-0afa86a846a5\",\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\",\n            \"document\": \"01234567890\",\n            \"documentType\": \"CPF\",\n            \"email\": \"john.doe@example.com\",\n            \"phone\": \"+5521987654321\"\n        },\n        \"shippingAddress\": {\n            \"country\": \"BRA\",\n            \"street\": \"Praia de Botafogo St.\",\n            \"number\": \"300\",\n            \"complement\": \"3rd Floor\",\n            \"neighborhood\": \"Botafogo\",\n            \"postalCode\": \"22250040\",\n            \"city\": \"Rio de Janeiro\",\n            \"state\": \"RJ\"\n        },\n        \"billingAddress\": {\n            \"country\": \"BRA\",\n            \"street\": \"Brigadeiro Faria Lima Avenue\",\n            \"number\": \"4440\",\n            \"complement\": \"10th Floor\",\n            \"neighborhood\": \"Itaim Bibi\",\n            \"postalCode\": \"04538132\",\n            \"city\": \"São Paulo\",\n            \"state\": \"SP\"\n        },\n        \"items\": [\n            {\n                \"id\": \"132981\",\n                \"name\": \"My First Product\",\n                \"price\": 2134.90,\n                \"quantity\": 2,\n                \"discount\": 5.00\n            },\n            {\n                \"id\": \"123242\",\n                \"name\": \"My Second Product\",\n                \"price\": 21.98,\n                \"quantity\": 1,\n                \"discount\": 1.00\n            }\n        ]\n    },\n    \"url\": \"https://admin.mystore.example.com/orders/v32478982\",\n    \"callbackUrl\": \"https://api.example.com/some-path/to-notify/status-changes?an=mystore\",\n    \"returnUrl\": \"https://mystore.example.com/checkout/order/v32478982\"\n}'",
-      "language": "curl",
-      "name": "Pix Success Approved"
-    }
-  ]
+    "reference": "32478982",
+    "orderId": "v967373115140abc",
+    "transactionId": "D3AA1FC8372E430E8236649DB5EBD08E",
+    "paymentId": "F5C1A4E20D3B4E07B7E871F5B5BC9F91",
+    "paymentMethod": "Pix",
+    "paymentMethodCustomCode": null,
+    "merchantName": "mystore",
+    "value": 4307.23,
+    "currency": "BRL",
+    "installments": 31,
+    "deviceFingerprint": "12ade389087fe",
+    "card": {
+        "holder": null,
+        "number": null,
+        "csc": null,
+        "expiration": {
+            "month": null,
+            "year": null
+        }
+    },
+    "miniCart": {
+        "shippingValue": 11.44,
+        "taxValue": 10.01,
+        "buyer": {
+            "id": "c1245228-1c68-11e6-94ac-0afa86a846a5",
+            "firstName": "John",
+            "lastName": "Doe",
+            "document": "01234567890",
+            "documentType": "CPF",
+            "email": "john.doe@example.com",
+            "phone": "+5521987654321"
+        },
+        "shippingAddress": {
+            "country": "BRA",
+            "street": "Praia de Botafogo St.",
+            "number": "300",
+            "complement": "3rd Floor",
+            "neighborhood": "Botafogo",
+            "postalCode": "22250040",
+            "city": "Rio de Janeiro",
+            "state": "RJ"
+        },
+        "billingAddress": {
+            "country": "BRA",
+            "street": "Brigadeiro Faria Lima Avenue",
+            "number": "4440",
+            "complement": "10th Floor",
+            "neighborhood": "Itaim Bibi",
+            "postalCode": "04538132",
+            "city": "São Paulo",
+            "state": "SP"
+        },
+        "items": [
+            {
+                "id": "132981",
+                "name": "My First Product",
+                "price": 2134.90,
+                "quantity": 2,
+                "discount": 5.00
+            },
+            {
+                "id": "123242",
+                "name": "My Second Product",
+                "price": 21.98,
+                "quantity": 1,
+                "discount": 1.00
+            }
+        ]
+    },
+    "url": "https://admin.mystore.example.com/orders/v32478982",
+    "callbackUrl": "https://api.example.com/some-path/to-notify/status-changes?an=mystore",
+    "returnUrl": "https://mystore.example.com/checkout/order/v32478982"
 }
-[/block]
+```
+
 As a result, we expect the following response:
->❗ Have in mind that, by default, the QRCode **must** have five minutes (300 seconds) expiration time. Also, the partner **must** respect the callback time (20 seconds).
 
 ```json
 {
@@ -180,20 +266,24 @@ As a result, we expect the following response:
 }
 ```
 
-The complete documentation is [here](https://developers.vtex.com/vtex-developer-docs/reference/createpayment).
+>❗ Have in mind that, by default, the QRCode **must** have five minutes (300 seconds) expiration time. Also, the partner **must** respect the callback time (20 seconds).
+
+For more information, access the [Create Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
 
 ### Cancel a Payment
 
-To cancel a payment, you must already have created one. To do so, you’ll make an API call using the route <span class="api pg-type type-post">POST</span>[Cancel Payment](https://developers.vtex.com/vtex-developer-docs/reference/cancelpayment):
+To cancel a payment, you must already have created one. To do so, you will make an API request using the route <span class="api pg-type type-post">POST</span>[Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations).
 
-```curl
+See an example of the Cancel Payment request:
+
+```json
 {
     "paymentId": "F5C1A4E20D3B4E07B7E871F5B5BC9F91",
     "requestId": "1234"
 }
 ```
 
-After the provider realizes the payment cancelation, we expect is a response like this:
+After the provider realizes the payment cancelation, we expect a response like this:
 
 ```json
 {
@@ -205,106 +295,107 @@ After the provider realizes the payment cancelation, we expect is a response lik
 }
 ```
 
-See the [complete documentation](https://developers.vtex.com/vtex-developer-docs/reference/cancelpayment) for more details.
+For more information, access the [Cancel Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations).
 
-### Capture Payment
+### Settle Payment (capture)
 
-If your transaction was completed successfully, the provider can capture the payment.  
+If your transaction was completed successfully, the provider can settle the payment.  
 
-So, to capture payment, VTEX will send the information below through the <span class="api pg-type type-post">POST</span>[Capture Payment route](https://developers.vtex.com/vtex-developer-docs/reference/capturepayment):
-[block:code]
+Thus, in order to settle the payment, VTEX will send the information below through the <span class="api pg-type type-post">POST</span>[Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements).
+
+See an example of the Settle Payment request:
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"paymentId\": \"5B127F1E0C944EF9ACE264FEC1FC0E91\",\n    \"transactionId\": \"611966\",\n    \"value\": 20.0,\n    \"requestId\": \"5678\"\n}",
-      "language": "curl",
-      "name": "Success"
-    }
-  ]
+    "paymentId": "5B127F1E0C944EF9ACE264FEC1FC0E91",
+    "transactionId": "611966",
+    "value": 20.0,
+    "requestId": "5678"
 }
-[/block]
+```
+
 The response should be similar to the following response body:
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"paymentId\": \"5B127F1E0C944EF9ACE264FEC1FC0E91\",\n    \"settleId\": \"CEE16492C6\",\n    \"value\": 20.0,\n    \"code\": null,\n    \"message\": null,\n    \"requestId\": \"5678\"\n}",
-      "language": "curl",
-      "name": "200 OK"
-    }
-  ]
+    "paymentId": "5B127F1E0C944EF9ACE264FEC1FC0E91",
+    "settleId": "CEE16492C6",
+    "value": 20.0,
+    "code": null,
+    "message": null,
+    "requestId": "5678"
 }
-[/block]
-You can check more details in the [endpoint’s documentation](https://developers.vtex.com/vtex-developer-docs/reference/capturepayment).
+```
+
+For more information, access the [Settle Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements).
 
 ### Refund Payment
 
-The provider should be ready to receive the following request through the <span class="api pg-type type-post">POST</span>[Refund Payment route](https://developers.vtex.com/vtex-developer-docs/reference/refundpayment):
-[block:code]
+The provider should be ready to receive the following request through the <span class="api pg-type type-post">POST</span>[Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds).
+
+See an example of the Refund Payment request:
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"paymentId\": \"VQKIIBUVOFDBIDLKZPOWSKETDYWCMJSACDVXWFCJVSKXGYVBBVISZRJLLQEKERJEMDYEINOUMFAZZGNEDVBQBABLUKLFBSEEIGLCAQTOGOGURKLFCAHJQTDMBNKYBIST\",\n    \"transactionId\": \"611966\",\n    \"settleId\": \"31018A3281\",\n    \"value\": 10.0,\n    \"requestId\": \"5678\"\n}",
-      "language": "curl",
-      "name": "Success"
-    }
-  ]
+    "paymentId": "VQKIIBUVOFDBIDLKZPOWSKETDYWCMJSACDVXWFCJVSKXGYVBBVISZRJLLQEKERJEMDYEINOUMFAZZGNEDVBQBABLUKLFBSEEIGLCAQTOGOGURKLFCAHJQTDMBNKYBIST",
+    "transactionId": "611966",
+    "settleId": "31018A3281",
+    "value": 10.0,
+    "requestId": "5678"
 }
-[/block]
+```
+
 The expected response is:
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"paymentId\": \"VQKIIBUVOFDBIDLKZPOWSKETDYWCMJSACDVXWFCJVSKXGYVBBVISZRJLLQEKERJEMDYEINOUMFAZZGNEDVBQBABLUKLFBSEEIGLCAQTOGOGURKLFCAHJQTDMBNKYBIST\",\n    \"refundId\": null,\n    \"value\": 0.0,\n    \"code\": \"refund-manually\",\n    \"message\": \"Refund should be done manually\",\n    \"requestId\": \"5678\"\n}",
-      "language": "curl",
-      "name": "200 OK"
-    }
-  ]
+    "paymentId": "VQKIIBUVOFDBIDLKZPOWSKETDYWCMJSACDVXWFCJVSKXGYVBBVISZRJLLQEKERJEMDYEINOUMFAZZGNEDVBQBABLUKLFBSEEIGLCAQTOGOGURKLFCAHJQTDMBNKYBIST",
+    "refundId": null,
+    "value": 0.0,
+    "code": "refund-manually",
+    "message": "Refund should be done manually",
+    "requestId": "5678"
 }
-[/block]
-Go to the [route’s documentation](https://developers.vtex.com/vtex-developer-docs/reference/refundpayment) to check all the details.
+```
+
+For more information, access the [Refund Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds).
 
 ### Communicate with the Gateway
 
-The last route - <span class="api pg-type type-post">POST</span>[Inbound Request (BETA)](https://developers.vtex.com/vtex-developer-docs/reference/inboundrequestbeta) -  implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider.
+The last endpoint, the <span class="api pg-type type-post">POST</span>[Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider.
 
-The request will be:
-[block:code]
+See an example of the Inbound Request (BETA) request:
+
+```json
 {
-  "codes": [
-    {
-      "code": "'{\n    \"requestId\": \"LA4E20D3B4E07B7E871F5B5BC9F91\",\n    \"transactionId\": \"D3AA1FC8372E430E8236649DB5EBD08E\",\n    \"paymentId\": \"F5C1A4E20D3B4E07B7E871F5B5BC9F91\",\n    \"authorizationId\": \"{{authorizationId}}\",\n    \"tid\": \"{{tid}}\",\n    \"requestData\": {\n        \"body\": \"{{originalRequestBody}}\"\n    }\n}'",
-      "language": "curl",
-      "name": "Success"
+    "requestId": "LA4E20D3B4E07B7E871F5B5BC9F91",
+    "transactionId": "D3AA1FC8372E430E8236649DB5EBD08E",
+    "paymentId": "F5C1A4E20D3B4E07B7E871F5B5BC9F91",
+    "authorizationId": "{{authorizationId}}",
+    "tid": "{{tid}}",
+    "requestData": {
+        "body": "{{originalRequestBody}}"
     }
-  ]
 }
-[/block]
+```
+
 As a result, the client should send the following response:
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n    \"requestId\": \"{{requestId}}\",\n    \"transactionId\": \"{{transactionId}}\",\n    \"paymentId\": \"{{paymentId}}\",\n    \"authorizationId\": \"{{authorizationId}}\",\n    \"tid\": \"{{tid}}\",\n    \"requestData\": {\n        \"body\": \"{{originalRequestBody}}\"\n    }\n}",
-      "language": "curl",
-      "name": "200 OK"
+    "requestId": "{{requestId}}",
+    "transactionId": "{{transactionId}}",
+    "paymentId": "{{paymentId}}",
+    "authorizationId": "{{authorizationId}}",
+    "tid": "{{tid}}",
+    "requestData": {
+        "body": "{{originalRequestBody}}"
     }
-  ]
 }
-[/block]
+```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "The Inbound Request (BETA) is mandatory only for integrations via Payment Provider Protocol with an external Payment App. If the Pix payment method was implemented via VTEX Payment App, the Inbound Request is not necessary.",
-  "title": "Not required for Payment App"
-}
-[/block]
-Check the complete endpoint documentation [here](https://developers.vtex.com/vtex-developer-docs/reference/inboundrequestbeta).
+>ℹ️ The Inbound Request (BETA) is mandatory only for integrations via Payment Provider Protocol with an external Payment App. If the Pix payment method was implemented via VTEX Payment App, the Inbound Request is not necessary. For more information, access the [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-).
 
-For more information and frequently asked questions, refer to [Pix - FAQ](https://help.vtex.com/pt/tutorial/pix-faq--3lx7zCU2lQroTEBCYKYbo3).
+For more information about the Pix, access its [FAQ](https://help.vtex.com/pt/tutorial/pix-faq--3lx7zCU2lQroTEBCYKYbo3).
 
-## Wrapping up
-
-If you have completed all integration steps, you should have a working implementation of our Payment Provider Protocol with Pix instant payments. The last step before VTEX stores can use your provider is to complete our homologation process.
+After completing all integration steps, you should complete our [homologation process](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) to allow VTEX stores to use your provider as a payment method.
