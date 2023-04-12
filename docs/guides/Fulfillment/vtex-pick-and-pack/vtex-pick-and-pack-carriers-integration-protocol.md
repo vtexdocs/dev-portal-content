@@ -425,7 +425,7 @@ he following endpoint returns information about a service, which can be queried 
 - **GET:** `/tracking/hook/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
-### Schema
+#### Schema
 
 ```graphql
 type ServiceResponseDto {
