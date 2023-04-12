@@ -300,7 +300,7 @@ In the case that a user or the application needs to cancel a service, this will 
 - **Headers:** Carrier config  
 - **Query:** Carrier config  
 
-### Schema
+#### Schema
 
 ```graphql
 {
