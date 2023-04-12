@@ -16,7 +16,7 @@ All API access is over HTTPS and accessed from `https://api.pickingnpacking.com
 
 Blank fields are included as `null` instead of being omitted.
 
-All timestamps returned in UTC, ISO 8601 format: `YYYY-MM-DDTHH:mm:ss.sssZ` .
+All timestamps returned in UTC, ISO 8601 format: `YYYY-MM-DDTHH:mm:ss.sssZ`.
 
 All distance measurements are in meters.
 
