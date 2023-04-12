@@ -347,7 +347,7 @@ In the case that a user or the application needs to cancel a service, this will 
 
 ### Pause service
 
-In the case that a user or the application needs to pause/continue a service, this will be sent to the carrier configurated endpoints
+In case a user or the application needs to pause or resume a service, this will be sent to the carrier's configured endpoints.
 
 - **URL:** Carrier config  
 - **Method:** Carrier config  
