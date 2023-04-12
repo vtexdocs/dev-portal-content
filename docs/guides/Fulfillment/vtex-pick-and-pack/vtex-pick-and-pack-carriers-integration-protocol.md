@@ -1222,7 +1222,7 @@ Service that will cancel an ongoing shipping service.
 
 ## On hold service
 
-Service that allows a carrier to temporarily pause a shipping service
+Service that allows a carrier to temporarily pause a shipping service.
 
 - **POST:** `/tracking/hook/on-hold/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
