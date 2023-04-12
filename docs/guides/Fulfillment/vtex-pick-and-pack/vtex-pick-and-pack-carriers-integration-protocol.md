@@ -289,7 +289,7 @@ This is the information that VTEX will send to the carrier to create a service.
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
->ℹ️ Note: There is a 5 seconds timeout before the service creation is confirmed. After that, is possible to use any of the endpoints below.
+>ℹ️ There is a 5 seconds timeout before the service creation is confirmed. After that, it is possible to use any of the endpoints below.
 
 ### Cancel service
 
