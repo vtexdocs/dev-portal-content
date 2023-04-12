@@ -1096,7 +1096,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-## Create labels
+### Create labels
 
 Service that allows the carrier to add the shipping labels.
 
