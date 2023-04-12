@@ -1171,7 +1171,7 @@ If the label is type **BASE64** or **TXT**, the max size that we allow is **180k
 
 ## Cancel service
 
-Service that will cancel an ongoing shipping service
+Service that will cancel an ongoing shipping service.
 
 - **POST:** `/tracking/hook/cancel/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
