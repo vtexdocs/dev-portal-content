@@ -24,7 +24,6 @@ All distance measurements are in meters.
 
 API keys available
 
-
 **Developer:**
 
 ```plaintext
