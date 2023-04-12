@@ -12,8 +12,6 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-# VTEX Pick and Pack
-
 VTEX Pick and Pack is the solution that enables merchants to manage order picking, packing, and delivery from physical stores and warehouses to customers’ addresses or pickup points. All management is made in one place, providing visibility and control for merchants through the whole fulfillment process.
 
 VTEX Pick and Pack is a solution composed of:
