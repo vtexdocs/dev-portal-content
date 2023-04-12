@@ -333,7 +333,7 @@ In the case that a user or the application needs to cancel a service, this will 
 }
 ```
 
-### Status codes
+#### Status codes
 
 | **HTTP Status Code** | **Description**         |
 | -------------------- | ----------------------- |
