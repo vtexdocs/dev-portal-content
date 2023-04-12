@@ -293,7 +293,7 @@ This is the information that VTEX will send to the carrier to create a service.
 
 ### Cancel service
 
-In the case that a user or the application needs to cancel a service, this will be sent to the carrier configurated endpoints
+In case a user or the application needs to cancel a service, this will be sent to the carrier's configured endpoints.
 
 - **URL:** Carrier config  
 - **Method:** Carrier config  
