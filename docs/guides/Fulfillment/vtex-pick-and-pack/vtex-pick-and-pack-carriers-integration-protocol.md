@@ -1280,7 +1280,7 @@ REST API endpoints are prefixed with the following URL:
 - **POST:** `/token`
 - **Authentication:** None
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -1288,7 +1288,7 @@ REST API endpoints are prefixed with the following URL:
 }
 ```
 
-### Example
+#### Example
 
 - **POST:** `https://auth.pickingnpacking.com/dev/token`
 
@@ -1298,7 +1298,7 @@ REST API endpoints are prefixed with the following URL:
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -1307,7 +1307,7 @@ REST API endpoints are prefixed with the following URL:
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
