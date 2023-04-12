@@ -956,7 +956,7 @@ Service that allows updating the details of the tracking service via webhook.
 
 ## Create notes
 
-Service that allows the carriers to add notes/information on services
+Service that allows the carriers to add notes/information on services.
 
 - **POST:** `/tracking/hook/notes/{carrierId}/{serviceId}`  
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
