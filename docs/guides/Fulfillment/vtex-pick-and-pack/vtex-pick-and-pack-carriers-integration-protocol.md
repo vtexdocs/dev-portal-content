@@ -354,7 +354,7 @@ In the case that a user or the application needs to pause/continue a service, th
 - **Headers:** Carrier config  
 - **Query:** Carrier config
 
-### Schema
+#### Schema
 
 ```graphql
 {
