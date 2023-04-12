@@ -412,7 +412,7 @@ This endpoint will allow the carriers to update an ongoing shipping service.
 
 ### Endpoint URLs
 
-REST API endpoints are prefixed with the following URLs:
+REST API endpoints are prefixed with the following URL:
 
 `https://api.pickingnpacking.com/prod/v1`
 
