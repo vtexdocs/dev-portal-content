@@ -289,11 +289,11 @@ This is the information that VTEX will send to the carrier to create a service.
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
->ℹ️ Note: There is a 5 seconds timeout before the service creation is confirmed. After that, is possible to use any of the endpoints below.
+>ℹ️ There is a 5 seconds timeout before the service creation is confirmed. After that, it is possible to use any of the endpoints below.
 
 ### Cancel service
 
-In the case that a user or the application needs to cancel a service, this will be sent to the carrier configurated endpoints
+In case a user or the application needs to cancel a service, this will be sent to the carrier's configured endpoints.
 
 - **URL:** Carrier config  
 - **Method:** Carrier config  
@@ -347,7 +347,7 @@ In the case that a user or the application needs to cancel a service, this will 
 
 ### Pause service
 
-In the case that a user or the application needs to pause/continue a service, this will be sent to the carrier configurated endpoints
+In case a user or the application needs to pause or resume a service, this will be sent to the carrier's configured endpoints.
 
 - **URL:** Carrier config  
 - **Method:** Carrier config  
