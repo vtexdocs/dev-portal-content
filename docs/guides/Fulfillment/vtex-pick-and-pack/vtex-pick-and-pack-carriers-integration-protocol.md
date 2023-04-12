@@ -352,10 +352,11 @@ In the case that a user or the application needs to cancel a service, this will 
 ## Pause service
 
 In the case that a user or the application needs to pause/continue a service, this will be sent to the carrier configurated endpoints
+
 - **URL**: Carrier config  
 - **Method:** Carrier config  
 - **Headers:** Carrier config  
-- **Query:** Carrier config  
+- **Query:** Carrier config
 
 ### Schema
 
