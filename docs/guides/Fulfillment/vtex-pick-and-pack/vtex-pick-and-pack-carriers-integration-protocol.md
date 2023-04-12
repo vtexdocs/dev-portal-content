@@ -996,7 +996,6 @@ Service that allows the carriers to add notes/information on services.
     "author": "Oscar Rojas"
   }
 ]
-
 ```
 
 ### Response
