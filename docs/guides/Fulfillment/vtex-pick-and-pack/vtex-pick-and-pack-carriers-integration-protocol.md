@@ -12,7 +12,7 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-All API access is over HTTPS and accessed from `https://api.pickingnpacking.com `. All data is sent and received as JSON.
+All API access is over HTTPS and accessed from `https://api.pickingnpacking.com`. All data is sent and received as JSON.
 
 Blank fields are included as `null` instead of being omitted.
 
