@@ -956,8 +956,6 @@ Service that allows updating the details of the tracking service via webhook.
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-
-
 ## Create notes
 
 Service that allows the carriers to add notes/information on services
