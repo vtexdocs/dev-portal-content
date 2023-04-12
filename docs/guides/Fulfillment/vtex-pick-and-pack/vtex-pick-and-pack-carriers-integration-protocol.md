@@ -1326,5 +1326,3 @@ REST API endpoints are prefixed with the following URL:
 | 400                  | Bad request             |
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
-
-          
