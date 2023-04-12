@@ -44,13 +44,13 @@ API keys available
 
 ## Service endpoints
 
-## Endpoint URLs
+### Endpoint URLs
 
 Endpoints are configurable when creating the carrier configuration
 
 * * *
 
-## Service creation
+### Service creation
 
 This is the information that VTEX will send to the carrier to create a service
 
@@ -59,7 +59,7 @@ This is the information that VTEX will send to the carrier to create a service
 - **Headers:** Carrier configuration  
 - **Query:** Carrier configuration  
 
-### Schema
+#### Schema
 
 ```graphql
 {
@@ -165,7 +165,7 @@ This is the information that VTEX will send to the carrier to create a service
 
 ```
 
-### Body Example
+#### Body Example
 
 ```json
 {
