@@ -418,7 +418,7 @@ REST API endpoints are prefixed with the following URL:
 
 ### Get service
 
-he following endpoint returns information about a service, which can be queried by providing the carrier ID and the corresponding service ID as query parameters. The response returned by the endpoint will contain the requested information.
+The following endpoint returns information about a service, which can be queried by providing the carrier ID and the corresponding service ID as query parameters. The response returned by the endpoint will contain the requested information.
 
 - **GET:** `/tracking/hook/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
