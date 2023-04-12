@@ -30,7 +30,6 @@ API key available:
 
 ### Steps to generate JWT
 
-
 1. Create a token of authentication with service [token](#create-token).
 2. Send in the headers of the request `Authorization` with the JWT generated in step 1.
 
