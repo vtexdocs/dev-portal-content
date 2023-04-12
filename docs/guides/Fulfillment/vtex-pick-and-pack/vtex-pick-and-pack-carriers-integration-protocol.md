@@ -400,7 +400,6 @@ In the case that a user or the application needs to pause/continue a service, th
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-
 ## Shipping services updates
 
 This endpoint will allow the carriers to update an ongoing shipping service.
