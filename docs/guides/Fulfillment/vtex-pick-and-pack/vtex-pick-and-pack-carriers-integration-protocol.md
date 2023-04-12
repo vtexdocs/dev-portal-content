@@ -42,7 +42,7 @@ API keys available
 }
 ```
 
-# Service endpoints
+## Service endpoints
 
 ## Endpoint URLs
 
