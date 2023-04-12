@@ -24,15 +24,6 @@ All distance measurements are in meters.
 
 API keys available
 
-**Developer:**
-
-```plaintext
-db5a3cecfef9cb0a9815af7c2eb8f7d6:c400460c165cc9beb146ad4d757e3bb1a24ff15228c424a0bd7c37f0ac356c0f6230568705d93dd6ff68190c0eafe5a74cbb14229748f20d3e53cbcc790ba372
-```
-
-
-**Production:**
-
 ```raw
 **xxx**
 ```
