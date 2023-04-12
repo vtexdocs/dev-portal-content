@@ -46,7 +46,7 @@ API key available:
 
 Endpoints are configurable when creating the carrier configuration.
 
-### Service creation
+### Create service
 
 This is the information that VTEX will send to the carrier to create a service.
 
