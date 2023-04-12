@@ -20,7 +20,6 @@ VTEX Pick and Pack is a solution composed of:
 - **[Last Mile](https://help.vtex.com/en/tutorial/vtex-pick-and-pack-last-mile--HN7WKV0xoq2ssVjsJlfzr):** Admin app for the store operator to instruct delivery drivers from their own fleet about collecting and delivering orders to customers’ address or pickup points. It includes route optimization and proof of collecting and delivering, meaning the driver can upload the customer's signature, a picture, or a note confirming the delivery was made.
 - **Mobile Applications:** Applications for mobile devices meant exclusively for pickers and drivers, so that they fulfill their parts with no access to the store’s Admin.
 
-
 Learn more about developer capabilities allowed for VTEX Pick and Pack:
 
 [VTEX Pick and Pack Get Order Status and Information API](https://developers.vtex.com/docs/guides/vtex-pick-and-pack-get-order-status-and-information-api)
