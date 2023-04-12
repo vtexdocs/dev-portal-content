@@ -1281,7 +1281,7 @@ Service that allows a carrier to temporarily pause a shipping service
 
 ## Create token
 
-Endpoint available to generate authentication JWT
+Endpoint available to generate authentication JWT.
 
 _REST API endpoints are prefixed with the following URL:_
 
