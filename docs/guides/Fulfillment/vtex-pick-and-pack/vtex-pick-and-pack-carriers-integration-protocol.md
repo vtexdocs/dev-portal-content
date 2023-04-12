@@ -22,7 +22,7 @@ All distance measurements are in meters.
 
 ## Basic authentication
 
-API keys available:
+API key available:
 
 ```raw
 **xxx**
