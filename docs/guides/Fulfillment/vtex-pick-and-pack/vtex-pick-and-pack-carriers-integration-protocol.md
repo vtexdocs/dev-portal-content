@@ -1030,7 +1030,7 @@ Service that allows the carriers to add notes/information on services.
 
 ## Create evidence
 
-Service that allows the carrier to add evidence like proof of delivery or pickup to the shipping service, photos, text, others
+Service that allows the carrier to add evidence like proof of delivery or pickup to the shipping service, photos, text, others.
 
 - **POST:** `/tracking/hook/evidences/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
