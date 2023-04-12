@@ -320,7 +320,7 @@ In the case that a user or the application needs to cancel a service, this will 
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
