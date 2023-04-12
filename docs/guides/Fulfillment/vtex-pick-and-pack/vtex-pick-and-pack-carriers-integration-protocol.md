@@ -1283,7 +1283,7 @@ Service that allows a carrier to temporarily pause a shipping service
 
 Endpoint available to generate authentication JWT.
 
-_REST API endpoints are prefixed with the following URL:_
+REST API endpoints are prefixed with the following URL:
 
 **Dev**
 
