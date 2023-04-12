@@ -869,7 +869,7 @@ type CTimezone {
 
 Service that allows updating the details of the tracking service via webhook.
 
-- **PATCH:**  `/tracking/hook/{carrierId}/{serviceId}`
+- **PATCH:** `/tracking/hook/{carrierId}/{serviceId}`
 - **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
 
 ### Parameters
