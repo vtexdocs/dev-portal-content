@@ -1159,7 +1159,7 @@ If the label is type **BASE64** or **TXT**, the max size that we allow is **180k
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-## Cancel service
+### Cancel service
 
 Service that will cancel an ongoing shipping service.
 
