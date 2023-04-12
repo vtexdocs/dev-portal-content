@@ -281,7 +281,7 @@ This is the information that VTEX will send to the carrier to create a service.
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description         |
 | -------------------- | ----------------------- |
