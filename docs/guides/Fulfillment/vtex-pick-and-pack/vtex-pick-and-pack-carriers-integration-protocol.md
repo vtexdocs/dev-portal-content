@@ -20,7 +20,7 @@ All timestamps returned in UTC, ISO 8601 format: `YYYY-MM-DDTHH:mm:ss.sssZ`.
 
 All distance measurements are in meters.
 
-# Basic authentication
+## Basic authentication
 
 API keys available
 
