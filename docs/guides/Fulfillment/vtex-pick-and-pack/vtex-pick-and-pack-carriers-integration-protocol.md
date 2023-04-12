@@ -1285,12 +1285,6 @@ Endpoint available to generate authentication JWT.
 
 REST API endpoints are prefixed with the following URL:
 
-**Dev**
-
-`https://auth.pickingnpacking.com/dev`
-
-**Prod**
-
 `https://auth.pickingnpacking.com/prod`
 
 - **POST:** `/token`
