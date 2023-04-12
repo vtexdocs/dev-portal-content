@@ -1107,7 +1107,7 @@ Service that allows the carrier to add evidence like proof of delivery or pickup
 Service that allows the carrier to add the shipping labels.
 
 - **POST:** `/tracking/hook/labels/{carrierId}/{serviceId}`
-- **Authentication:** [API_KEY_PUBLIC](/API%20Carriers%20integration%20protocol.md)
+- **Authentication:** [API_KEY_PUBLIC](#basic-authentication)
 
 ### Parameters
 
