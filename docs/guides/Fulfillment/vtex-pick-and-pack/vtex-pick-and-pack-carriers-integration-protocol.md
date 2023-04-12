@@ -32,7 +32,7 @@ API key available:
 
 * * *
 
-1. Create a token of authentication with service [/token](/API%20Carriers%20integration%20protocol.md).
+1. Create a token of authentication with service [token](#create-token).
 2. Send in the headers of the request `Authorization` with the JWT generated in step 1.
 
 ```json
