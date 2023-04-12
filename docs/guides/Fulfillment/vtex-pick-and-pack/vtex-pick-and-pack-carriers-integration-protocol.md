@@ -52,7 +52,7 @@ Endpoints are configurable when creating the carrier configuration.
 
 ### Service creation
 
-This is the information that VTEX will send to the carrier to create a service
+This is the information that VTEX will send to the carrier to create a service.
 
 - **URL:** Carrier configuration  
 - **Method:** Carrier configuration  
