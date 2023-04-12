@@ -1224,8 +1224,6 @@ Service that will cancel an ongoing shipping service.
 | 404                  | Resource not found      |
 | 500                  | Internal error          |
 
-
-
 ## On hold service
 
 Service that allows a carrier to temporarily pause a shipping service
