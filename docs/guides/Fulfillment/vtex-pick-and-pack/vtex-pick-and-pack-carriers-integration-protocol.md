@@ -938,7 +938,7 @@ Service that allows updating the details of the tracking service via webhook.
 }
 ```
 
-### Status codes
+#### Status codes
 
 | HTTP Status Code | Description        |
 | -------------------- | ----------------------- |
