@@ -396,7 +396,7 @@ In the case that a user or the application needs to pause/continue a service, th
 }
 ```
 
-**Status codes**
+### Status codes
 
 | **HTTP Status Code** | **Description**         |
 | -------------------- | ----------------------- |
