@@ -269,7 +269,6 @@ This is the information that VTEX will send to the carrier to create a service.
     "value": "America/Bogota"
   }
 }
-
 ```
 
 #### Expected response
