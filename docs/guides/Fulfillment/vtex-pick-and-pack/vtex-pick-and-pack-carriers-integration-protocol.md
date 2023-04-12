@@ -404,7 +404,7 @@ In the case that a user or the application needs to pause/continue a service, th
 
 This endpoint will allow the carriers to update an ongoing shipping service.
 
-### Endpoint URLs
+#### Endpoint URLs
 
 REST API endpoints are prefixed with the following URL:
 
