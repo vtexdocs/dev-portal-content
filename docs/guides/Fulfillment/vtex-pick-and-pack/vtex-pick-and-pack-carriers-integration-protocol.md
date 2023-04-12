@@ -46,7 +46,7 @@ API key available:
 
 ### Endpoint URLs
 
-Endpoints are configurable when creating the carrier configuration
+Endpoints are configurable when creating the carrier configuration.
 
 * * *
 
