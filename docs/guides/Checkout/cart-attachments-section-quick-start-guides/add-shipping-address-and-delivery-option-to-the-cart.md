@@ -73,6 +73,7 @@ The following errors may appear as a message in the response body.
 - **Message error example (code CHK0041)**: `"Invalid item index"`: This message indicates that the `itemIndex` used in the request does not exist or is incorrect. [block:code]
 { "codes": [
   { "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"CHK0041\",\n        \"message\": \"Invalid item index\",\n        \"exception\": null\n    },\n    \"operationId\": \"5d9f54e6-7db4-46d6-bca9-deeb278b8b98\"\n}", "language": "json" } ] } [/block]
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`: Check if the URL is correct. [block:code]
