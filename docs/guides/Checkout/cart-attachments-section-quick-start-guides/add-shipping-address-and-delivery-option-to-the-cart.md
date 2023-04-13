@@ -52,6 +52,7 @@ To add a delivery option to the shopping cart, you must add a shipping address (
 After sending the request, the endpoint will return the response body containing the delivery option information in the shopping cart, as in the example below: [block:code]
 { "codes": [
     { "code": "...\n\"logisticsInfo\": [\n            {\n                \"itemIndex\": 0,\n                \"selectedSla\": \"normal\",\n                \"selectedDeliveryChannel\": \"delivery\",\n                \"addressId\": \"954ee939c1274633bfb7a5af4d6c642d\",\n                \"slas\": [],\n                \"shipsTo\": [\n                    \"BRA\"\n                ],\n                \"itemId\": \"5\",\n                \"deliveryChannels\": [\n                    {\n                        \"id\": \"delivery\"\n                    }\n                ]\n            },\n...", "language": "json" } ] } [/block]
+
 ## Error codes
 
 The following errors may appear as a message in the response body.
