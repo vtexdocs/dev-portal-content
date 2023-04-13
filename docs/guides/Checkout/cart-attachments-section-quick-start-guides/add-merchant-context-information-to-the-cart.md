@@ -10,7 +10,6 @@ The shopping cart gathers information on the products the customer chooses while
 
 This guide will describe how to add relevant information related to a specific order to a shopping cart via API.
 
-
 ## Getting shopping cart information
 
 The first step is to get the `orderFormId` of the shopping cart to which you want to add the merchant context information. For more information, read the [Getting cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.
