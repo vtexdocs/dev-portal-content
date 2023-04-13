@@ -26,94 +26,242 @@ All content that comes between `{{}}` keys must be replaced with the correct dat
 
 ### Category
 
+- `GET` [Get Category Tree](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/category/tree/-categoryLevels-)
+- `GET` [Get Category by ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/category/-categoryId-)
+- `PUT` [Update Category](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/category/-categoryId-)
+- `POST` [Create Category](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/category)
+
 ### Category Specification
+
+- `GET` [Get Specifications By Category ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/field/listByCategoryId/-categoryId-)
+- `GET` [Get Specifications Tree By Category ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/field/listTreeByCategoryId/-categoryId-)
 
 ### Brand
 
+- `GET` [Get Brand List](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/list)
+- `GET` [Get Brand List Per Page](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/pagedlist)
+- `GET` [Get Brand](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/-brandId-)
+- `POST` [Create Brand](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/brand)
+- `GET` [Get Brand and context](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/brand/-brandId-)
+- `PUT` [Update Brand](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/brand/-brandId-)
+- `DELETE` [Delete Brand](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/brand/-brandId-)
+
 ### Specification Group
+
+- `GET` [List Specification Group by Category](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/specification/groupbycategory/-categoryId-)
+- `GET` [Get Specification Group](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/groupGet/-groupId-)
+- `POST` [Create Specification Group](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/specificationgroup)
+- `PUT` [Update Specification Group](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/specificationgroup/-groupId-)
 
 ### Specification
 
+- `GET` [Get Specification](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/specification/-specificationId-)
+- `PUT` [Update Specification](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/specification/-specificationId-)
+- `POST` [Create Specification](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/specification)
+
+#### Specification Field
+
+- `GET` [Get Specification Field](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/fieldGet/-fieldId-)
+- `POST` [Create Specification Field](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/specification/field)
+- `PUT` [Update Specification Field](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog_system/pvt/specification/field)
+
+#### Non Structured Specification
+
+- `GET` [Get Non Structured Specification by ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/specification/nonstructured/-Id-)
+- `DELETE` [Delete Non Structured Specification](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/specification/nonstructured/-Id-)
+- `GET` [Get Non Structured Specification by SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/specification/nonstructured)
+- `DELETE` [Delete Non Structured Specification by SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/specification/nonstructured)
+
 ### Specification Value
+
+- `GET` [Get Specification Value](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/specificationvalue/-specificationValueId-)
+- `PUT` [Update Specification Value](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/specificationvalue/-specificationValueId-)
+- `POST` [Create Specification Value](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/specificationvalue)
+
+#### Specification Field Value
+
+- `GET` [Get Specification Field Value](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/specification/fieldValue/-fieldValueId-)
+- `GET` [Get Specification Values By Field ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/fieldvalue/-fieldId-)
+- `POST` [Create Specification Field Value](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/specification/fieldValue)
+- `PUT` [Update Specification Field Value](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog_system/pvt/specification/fieldValue)
 
 ### Product
 
+- `GET` [Get Product and SKU IDs](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetProductAndSkuIds)
+- `GET` [Get Product by ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-)
+- `PUT` [Update Product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-)
+- `GET` [Get Product and its general context](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/productget/-productId-)
+- `GET` [Get Product by RefId](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/productgetbyrefid/-refId-)
+- `GET` [Get Product's SKUs by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/products/variations/-productId-)
+- `GET` [Get Product Review Rate by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/addon/pvt/review/GetProductRate/-productId-)
+- `POST` [Create Product with Category and Brand](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product)
+
 ### Product Specification
+
+- `GET` [Get Product Specification by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/-productId-/specification)
+- `POST` [Update Product Specification by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/products/-productId-/specification)
+- `GET` [Get Product Specification and its information by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/specification)
+- `POST` [Associate Product Specification](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product/-productId-/specification)
+- `DELETE` [Delete all Product Specifications by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/product/-productId-/specification)
+- `DELETE` [Delete a specific Product Specification](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/product/-productId-/specification/-specificationId-)
+- `PUT` [Associate product specification using specification name and group name](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/specificationvalue)
 
 ### SKU
 
+- `GET` [List all SKU IDs](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitids)
+- `GET` [Get SKU and context](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-)
+- `GET` [Get SKU by RefId](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit)
+- `POST` [Create SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit)
+- `GET` [Get SKU ID by Reference ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitidbyrefid/-refId-)
+- `GET` [Get SKU by Alternate ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitbyalternateId/-alternateId-)
+- `GET` [Get SKU list by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitByProductId/-productId-)
+- `POST` [Retrieve SKU ID list by Reference ID list](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pub/sku/stockkeepingunitidsbyrefids)
+- `GET` [Get SKU](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-)
+- `PUT` [Update SKU](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-)
+
 ### SKU Specification
+
+- `GET` [Get SKU Specifications](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/specification)
+- `POST` [Associate SKU Specification](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/specification)
+- `PUT` [Update SKU Specification](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-/specification)
+- `DELETE` [Delete all SKU Specifications](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/stockkeepingunit/-skuId-/specification)
+- `DELETE` [Delete SKU Specification](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/stockkeepingunit/-skuId-/specification/-specificationId-)
+- `PUT` [Associate SKU specification using specification name and group name](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-/specificationvalue)
 
 ### SKU File
 
+- `GET` [Get SKU Files](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/file)
+- `POST` [Create SKU File](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/file)
+- `DELETE` [Delete All SKU Files](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/stockkeepingunit/-skuId-/file)
+- `PUT` [Update SKU File](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-)
+- `DELETE` [Delete SKU Image File](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-)
+- `PUT` [Copy Files from an SKU to another SKU](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/copy/-skuIdfrom-/-skuIdto-/file/)
+- `DELETE` [Disassociate SKU File](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/stockkeepingunit/disassociate/-skuId-/file/-skuFileId-)
+
 ### SKU Complement
+
+- `GET` [Get SKU Complement by SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/complement)
+- `GET` [Get SKU Complements by Complement Type ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/complement/-complementTypeId-)
+- `GET` [Get SKU complements by type](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/complements/-parentSkuId-/-type-)
+- `POST` [Create SKU Complement](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/skucomplement)
+- `GET` [Get SKU Complement by SKU Complement ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/skucomplement/-skuComplementId-)
+- `DELETE` [Delete SKU Complement by SKU Complement ID](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/skucomplement/-skuComplementId-)
 
 ### SKU EAN
 
+- `GET` [Get SKU by EAN](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/sku/stockkeepingunitbyean/-ean-)
+- `GET` [Get EAN by SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/stockkeepingunit/-skuId-/ean)
+- `DELETE` [Delete all SKU EAN values](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/stockkeepingunit/-skuId-/ean)
+- `POST` [Create SKU EAN](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-)
+- `DELETE` [Delete SKU EAN](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-)
+
 ### Attachment
+
+- `GET` [Get attachment](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/attachment/-attachmentid-)
+- `PUT` [Update attachment](https://developers.vtex.com/docs/api-reference/catalog-api#put-api/catalog/pvt/attachment/-attachmentid-)
+- `DELETE` [Delete attachment](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/attachment/-attachmentid-)
+- `POST` [Create attachment](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/attachment)
+- `GET` [Get all attachments](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/attachments)
 
 ### SKU Attachment
 
+- `POST` [Associate SKU Attachment](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/skuattachment)
+- `DELETE` [Dissociate attachments and SKUs](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/skuattachment)
+- `GET` [Get SKU Attachments by SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/stockkeepingunit/-skuId-/attachment)
+- `DELETE` [Delete SKU Attachment by Attachment Association ID](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/skuattachment/-skuAttachmentAssociationId-)
+- `POST` [Associate attachments to an SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog_system/pvt/sku/associateattachments)
+
 ### SKU Service
+
+- `GET` [Get SKU Service](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/skuservice/-skuServiceId-)
+- `PUT` [Update SKU Service](https://developers.vtex.com/docs/api-reference/catalog-api#put-api/catalog/pvt/skuservice/-skuServiceId-)
+- `DELETE` [Dissociate SKU Service](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/skuservice/-skuServiceId-)
+- `POST` [Associate SKU Service](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/skuservice)
 
 ### SKU Kit
 
+- `GET` [Get SKU Kit by SKU ID or Parent SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/stockkeepingunitkit)
+- `POST` [Create SKU Kit](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/stockkeepingunitkit)
+- `DELETE` [Delete SKU Kit by SKU ID or Parent SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/stockkeepingunitkit)
+- `GET` [Get SKU Kit](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/stockkeepingunitkit/-kitId-)
+- `DELETE` [Delete SKU Kit by KitId](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/stockkeepingunitkit/-kitId-)
+
 ### SKU Seller
+
+- `GET` [Get details of a seller's SKU](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/skuseller/-sellerId-/-sellerSkuId-)
+- `POST` [Remove a seller's SKU binding](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog_system/pvt/skuseller/remove/-sellerId-/-sellerSkuId-)
+- `POST` [Change Notification with Seller ID and Seller SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog_system/pvt/skuseller/changenotification/-sellerId-/-sellerSkuId-)
+- `POST` [Change Notification with SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog_system/pvt/skuseller/changenotification/-skuId-)
 
 ### Similar Category
 
+- `GET` [Get Similar Categories](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/product/-productId-/similarcategory/)
+- `POST` [Add Similar Category](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/product/-productId-/similarcategory/-categoryId-)
+- `DELETE` [Delete Similar Category](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/product/-productId-/similarcategory/-categoryId-)
+
 ### Collection Beta
+
+- `GET` [Get All Collections](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/collection/search)
+- `GET` [Get All Inactive Collections](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/collection/inactive)
+- `POST` [Create Collection](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/collection/)
+- `GET` [Get Collections by search terms](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/collection/search/-searchTerms-)
+- `GET` [Import Collection file example](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/collection/stockkeepingunit/importfileexample)
+- `POST` [Add products to Collection by imported file](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/collection/-collectionId-/stockkeepingunit/importinsert)
+- `POST` [Remove products from Collection by imported file](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/collection/-collectionId-/stockkeepingunit/importexclude)
+- `GET` [Get products from a collection](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/collection/-collectionId-/products)
 
 ### Legacy Collection
 
+- `GET` [Get Collection](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/collection/-collectionId-)
+- `PUT` [Update Collection](https://developers.vtex.com/docs/api-reference/catalog-api#put-api/catalog/pvt/collection/-collectionId-)
+- `DELETE` [Delete Collection](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/collection/-collectionId-)
+- `POST` [Create Collection](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/collection)
+
 ### Legacy Subcollection
+
+- `POST` [Add SKU to Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit)
+- `DELETE` [Delete SKU from Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit/-skuId-)
+- `POST` [Associate Category to Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/subcollection/-subCollectionId-/category)
+- `DELETE` [Delete Category from Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/subcollection/-subCollectionId-/brand/-categoryId-)
+- `POST` [Associate Brand to Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/subcollection/-subCollectionId-/brand)
+- `DELETE` [Delete Brand from Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/subcollection/-subCollectionId-/brand/-brandId-)
+- `GET` [Get Subcollection by Collection ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/collection/-collectionId-/subcollection)
+- `GET` [Get Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/subcollection/-subCollectionId-)
+- `PUT` [Update Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#put-api/catalog/pvt/subcollection/-subCollectionId-)
+- `DELETE` [Delete Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/subcollection/-subCollectionId-)
+- `POST` [Create Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/subcollection)
+- `POST` [Reposition SKU on the Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/collection/-collectionId-/position)
 
 ### Seller
 
+- `GET` [Get Seller List](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/seller/list)
+- `GET` [Get Seller by ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/seller/-sellerId-)
+- `PUT` [Update Seller](https://developers.vtex.com/docs/api-reference/catalog-api#put-api/catalog_system/pvt/seller)
+- `POST` [Create Seller](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog_system/pvt/seller)
+- `GET` [Get Seller by ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/sellers/-sellerId-)
+
 ### Supplier
+
+- `POST` [Create Supplier](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/supplier)
+- `PUT` [Update Supplier](https://developers.vtex.com/docs/api-reference/catalog-api#put-api/catalog/pvt/supplier/-supplierId-)
+- `DELETE` [Delete Supplier](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/supplier/-supplierId-)
 
 ### Trade Policy
 
+- `GET` [Get Trade Policies by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog/pvt/product/-productId-/salespolicy)
+- `POST` [Associate Product with Trade Policy](https://developers.vtex.com/docs/api-reference/catalog-api#post-api/catalog/pvt/product/-productId-/salespolicy/-tradepolicyId-)
+- `DELETE` [Remove Product from Trade Policy](https://developers.vtex.com/docs/api-reference/catalog-api#delete-api/catalog/pvt/product/-productId-/salespolicy/-tradepolicyId-)
+- `GET` [List all SKUs of a Trade Policy](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/sku/stockkeepingunitidsbysaleschannel)
+
 ### Product Indexing
+
+- `GET` [Get Product Indexed Information](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/products/GetIndexedInfo/-productId-)
 
 ### Commercial Conditions
 
+- `GET` [Get all commercial conditions](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/commercialcondition/list)
+- `GET` [Get commercial condition](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/catalog_system/pvt/commercialcondition/-commercialConditionId-)
+
 ### Gift List
 
-
-<!---
-- [Product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetProductAndSkuIds) - Here you can consult, create, or update a Product. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1wmX3QvQVxbKVmalhIE5Ru).
-- [Product Specification](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/-productId-/specification) - You can consult, create, or update additional information of a Product.  For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP#product-specification).
-- [SKU](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitids) - Here you can consult, create, or update an SKU. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3mJbIqMlz6oKDmyZ2bKJoA).
-- [SKU Complement](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/complement) - You can consult, create, or update an SKU Complement. An SKU Complement is a new SKU that has a Parent SKU.
-- [SKU EAN](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitbyean/-ean-) -  Here you can consult, create, or update an SKU unique identification code (barcode).
-- [SKU Attachment](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/skuattachment) - You can consult, create, or update an SKU Attachment. An attachment is used to add custom information about the item. For more information, check [this article](https://help.vtex.com/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm?locale=en).
-- [SKU File](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/file) - Here you can consult, create, or update an SKU File. An SKU File is an image associated with an SKU.
-- [SKU Kit](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunitkit) - You can consult, create, or update an SKU Kit. A kit is an SKU composed of one or more SKUs. For more information, check [this article](https://help.vtex.com/tutorial/what-is-a-kit--5ov5s3eHM4AqAAgqWwoc28?locale=en).
-- [SKU Seller](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/skuseller/-sellerId-/-sellerSkuId-) - Here you can consult and delete an SKU Seller. An SKU Seller is a seller associated with an SKU. For more information, check [this article](https://help.vtex.com/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w?locale=en).
-- [SKU Service](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/skuservice/-skuServiceId-) - You can create, update, or delete an SKU Service. A service is an item that may come with a product, optionally, and with a cost. For more information, check [this article](https://help.vtex.com/tutorial/what-is-a-service--46Ha8CEEQoC6Y40i6akG0y?locale=en).
-- [SKU Service Attachment](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/skuservicetypeattachment) - Here you can associate or disassociate an Attachment to an SKU Service.
-- [SKU Service Type](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/skuservicetype) - You can create, update, or delete an SKU Service Type. A service type is the behavior configuration of a service.
-- [SKU Service Value](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/skuservicevalue) - Here you can create, update, or delete an SKU Service Value. Service value is how much the customer will be charged for the service.
-- [SKU Specification](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/specification) - You can consult, create, or delete an SKU Specification. SKU Specification is used to create site browsing filters and to differentiate SKUs within the product page. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP?locale=en#sku-specifications).
-- [Legacy Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit) - Here you can can consult, create, or delete an SKU, Brand or Category from a Subcollection, as well as create, delete and update subcollections. A subcollection is a group type associated with a collection. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3moFonW33dgOYDrU21Z1X0#group-types).
-- [Category](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/category/tree/-categoryLevels-) - You consult, create, or update a Category. A category is a hierarchical level of product classification. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2gkZDjXRqfsq62TlAkj4uf).
-- [Similar Category](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/similarcategory/) - Here you can create and delete a Similar Category to a Product. This way the Product will be shown in both categories (main and similar).
-- [Category Specification](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/field/listByCategoryId/-categoryId-) - You can consult all Specifications by Category. For more information about Specification, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP).
-- [Brand](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/list) - You can consult, create, update, or delete a Brand. A brand is a product property. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/7i3sB8fgkqUp5NoH5yJtfh).
-- [Attachment](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/attachment/-attachmentid-) - You can consult, create, or update an Attachment. An attachment is used to add custom information about the item. For more information, check [this article](https://help.vtex.com/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm?locale=en).
-- [Collection Beta](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/collection/search) - The new [Beta Collections module](https://help.vtex.com/announcements/new-beta-collections-module-easily-create-and-manage-product-collections--6KvFxylC5SNsbVm8L8XZpZ#) launch allowed us to engineer new endpoints that create and manage Collections. For more information, check [this article](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye?&utm_source=autocomplete#).
-- [Legacy Collection](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/collection/-collectionId-) - Here you can consult, create, update, or delete a Collection. A collection is a group of items. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4hN41yU8IPeb8HKmmaXoca?locale=en).
-- [Specification](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/specification/-specificationId-) - Here you can consult, create, or delete a Specification. A specification is used to create site browsing filters and to differentiate SKUs and Products within the product page. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP?locale=en).
-- [Specification Field](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/specification/fieldGet/-fieldId-) - You can consult, create, or update a Specification Field. A specification field allows you to present more detailed items. 
-- [Specification Field Value](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/specification/fieldValue/-fieldValueId-) - Here you can consult, create, or update a Specification Field Value. 
-- [Specification Value](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/specificationvalue/-specificationValueId-) - You can consult, create, or update a Specification Value.
-- [Specification Group](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/specification/groupbycategory/-categoryId-) - Here you can consult, create, or update a Specification Group.
-- [Non Structured Specification](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/specification/nonstructured/-Id-) - You can consult or delete a Non Structured Specification.
-- [Sales Channel](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/saleschannel/list) - Here you can consult Sales Channel.
-- [Seller](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/seller/list) - You can consult, create, or update a Seller. A seller is the _product owner_. For more information, check [this article](https://help.vtex.com/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w?locale=en).
-- [Supplier](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/supplier) - Here you can consult, create, or update a Supplier.
-- [Trade Policy](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/salespolicy) - You can create, update, or delete a Trade Policy. Trade policy is required when one of the above factors is different among the sale channel. For more information, check [this article](https://help.vtex.com/tutorial/what-is-a-sales-policy--563tbcL0TYKEKeOY4IAgAE?locale=en).
-- [Product Indexing](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetIndexedInfo/-productId-) - Here you can consult Product Indexed information.
-- [Commercial Conditions](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/commercialcondition/list) - Here you can consult commercial conditions registered in the store.
--->
+- `GET` [Get Gift List](https://developers.vtex.com/docs/api-reference/catalog-api#get-api/addon/pvt/giftlist/get/-listId-)
