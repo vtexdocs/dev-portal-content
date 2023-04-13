@@ -37,6 +37,7 @@ The following errors may appear as a message in the response body.
 - **Message error example (code ORD002)**: `"Invalid order form"`. The `orderFormId` information is not valid. [block:code]
 { "codes": [
   { "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD002\",\n        \"message\": \"Invalid order form\",\n        \"exception\": null\n    },\n    \"operationId\": \"5d9f54e6-7db4-46d6-bca9-deeb278b8b98\"\n}", "language": "json" } ] } [/block]
+
 ### 404 - Not Found
 
 - `Message error example: "The requested URL was not found on the server"`: Check if the URL is correct. [block:code]
