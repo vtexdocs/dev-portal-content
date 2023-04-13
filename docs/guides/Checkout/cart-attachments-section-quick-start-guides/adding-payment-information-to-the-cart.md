@@ -57,6 +57,7 @@ The following errors may appear as a message in the response body.
 - **Message error example (code ORD020)**: `"Invalid payment"`. The `referenceValue` information has not been sent. [block:code]
 { "codes": [
   { "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD020\",\n        \"message\": \"Invalid payment\",\n        \"exception\": null\n    },\n    \"operationId\": \"9d14e7af-a63d-4c26-8974-bad734b758da\"\n}", "language": "json" } ] } [/block]
+
 ### 404 - Not Found
 
 - **Message error example**: `"The requested URL was not found on the server"`: Check if the URL is correct. [block:code]
