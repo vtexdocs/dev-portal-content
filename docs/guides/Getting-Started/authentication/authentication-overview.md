@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T18:43:56.137Z"
 In this article, you can learn about all authentication aspects relevant to developers building integrations with VTEX:
 
 - [Machine authentication](#machine-authentication)
-- [Single Sign On integration](#single-sign-on-integration)
+- [Single Sign On integrations](#single-sign-on-integrations)
 - [Shopper authentication for B2B stores](#shopper-authentication-for-b2b-stores)
 
 > ℹ️️ See this related content:\n- Authorization: [Users](https://help.vtex.com/en/subcategory/users--63DHe3VQEEE6Uuua8gIs2M), [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [License Manager Resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)\n- Accounting: [Audit](https://help.vtex.com/en/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA)
@@ -133,9 +133,10 @@ The tokens shown above are available via the VTEX IO context and are associated 
 ## Single sign on integrations
 
 VTEX allows stores to integrate with external identity providers to provide single sign on (SSO) experiences to shoppers and Administrative users. You can learn more about this in the article [Login (SSO)](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide) and below you can find more information on these and other SSO use cases:
+
 - [Store SSO with OAuth 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2)
 - [Admin SSO with SAML 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-admin-saml2)
-- [Use your VTEX account as an OAuth provider](https://github.com/vtex/oauth-provider)
+- [Use your VTEX account as an OAuth provider](https://developers.vtex.com/docs/apps/vtex.oauth-provider-admin@2.x)
 - [Unifying login for different accounts](https://developers.vtex.com/vtex-rest-api/docs/unifying-login-for-different-accounts)
 
 ## Shopper authentication for B2B stores
