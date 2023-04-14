@@ -24,7 +24,7 @@ After sending the request, the endpoint will return the response body containing
 { "codes": [
     { "code": "...\n{\n  \"userProfileId\": \"fb542e51-5488-4c34-8d17-ed8fcf597a94\",\n  \"profileProvider\": \"VTEX\",\n  \"availableAccounts\": [],\n  \"availableAddresses\": [\n    {\n      \"addressType\": \"residential\",\n      \"receiverName\": \"Clark Kent\",\n      \"addressId\": \"666c2e830bd9474ab6f6cc53fb6dd2d2\",\n      \"isDisposable\": false,\n      \"postalCode\": \"12345-000\",\n      \"city\": \"Metropolis\",\n      \"state\": \"NY\",\n      \"country\": \"USA\",\n      \"street\": \"My street\",\n      \"number\": \"123\",\n      \"neighborhood\": \"My neighborhood\",\n      \"complement\": null,\n      \"reference\": null,\n      \"geoCoordinates\": [\n        -47.924747467041016,\n        -15.832582473754883\n      ]\n    }\n  ],\n  \"userProfile\": {\n    \"email\": \"clark.kent@example.com\",\n    \"firstName\": \"Clark\",\n    \"lastName\": \"Kent\",\n    \"document\": \"12345678900\",\n    \"documentType\": \"cpf\",\n    \"phone\": \"+556199999999\",\n    \"corporateName\": null,\n    \"tradeName\": null,\n    \"corporateDocument\": null,\n    \"stateInscription\": null,\n    \"corporatePhone\": null,\n    \"isCorporate\": false,\n    \"profileCompleteOnLoading\": null,\n    \"profileErrorOnLoading\": null,\n    \"customerClass\": null\n  },\n  \"isComplete\": true\n}\n...", "language": "json" } ] } [/block]
 
-> ℹ️️ Fields not completed in the customer profile will be displayed as `null`.
+>ℹ️️ Fields not completed in the customer profile will be displayed as `null`.
 
 ## Error codes
 
