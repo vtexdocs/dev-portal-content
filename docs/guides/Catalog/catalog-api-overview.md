@@ -51,7 +51,6 @@ The Catalog API provides methods for collecting product/SKU catalog data, catego
 - [Product Indexing](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetIndexedInfo/-productId-) - Retrieve product indexed information.
 - [Commercial Conditions](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/commercialcondition/list) - Retrieve commercial conditions added to the store.
 
-
 [block:api-header]
 {
   "title": "Common parameters"
