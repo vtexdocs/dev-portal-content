@@ -10,7 +10,6 @@ updatedAt: "2022-08-08t21:09:09.766z"
 
 The Catalog API provides methods for collecting product/SKU catalog data, categories, brands, and other information. All content between `{{}}` keys must be replaced with the correct data before performing the request.
 
-
 [block:api-header]
 {
   "title": "Index"
