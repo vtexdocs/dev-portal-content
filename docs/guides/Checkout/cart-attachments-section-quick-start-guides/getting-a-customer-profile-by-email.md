@@ -48,7 +48,7 @@ Despite the `200` code, which indicates the success of the request, if the email
 
 ### 404 - Not Found
 
-- **Message error example**: `"The requested URL was not found on the server"`: Check if the URL is correct. 
+- **Message error example**: `"The requested URL was not found on the server"`: Check if the URL is correct.
 
 [block:code]
 {
