@@ -8,7 +8,7 @@ updatedAt: "2022-11-28T16:44:35.966Z"
 
 The shopping cart gathers information on the products the customer chooses while browsing a store, such as prices, shipping costs, payment methods, delivery methods, etc. This data may include item prices, shipping value, payment, and delivery methods, among others.
 
-The information added to the customer profile can be used in the shopping cart to reduce the time the customer spends at Checkout and improve their shopping experience. For more information, read [Purchasing with SmartCheckout](https://help.vtex.com/en/tutorial/smartcheckout-customer-information-automatic-fill-in--2Nuu3xAFzdhIzJIldAdtan?&utm_source=autocomplete#purchasing-with-smartcheckout).
+The information added to the customer profile can be used in the shopping cart to reduce the time the customer spends at Checkout and improve their shopping experience. For more information, read [Purchasing with SmartCheckout](https://help.vtex.com/en/tutorial/smartcheckout-customer-information-automatic-fill-in--2Nuu3xAFzdhIzJIldAdtan#purchasing-with-smartcheckout).
 
 This guide will describe how to get client profile information using the email address registered in your store.
 
