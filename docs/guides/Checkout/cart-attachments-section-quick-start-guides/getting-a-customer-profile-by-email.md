@@ -40,7 +40,9 @@ Despite the `200` code, which indicates the success of the request, if the email
 
 ### 400 - Bad Request
 
-- **Message error example (code ORD002)**: `"Invalid order form"`. The `orderFormId` information is not valid. [block:code]
+- **Message error example (code ORD002)**: `"Invalid order form"`. The `orderFormId` information is not valid. 
+
+[block:code]
 { "codes": [
   { "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD002\",\n        \"message\": \"Invalid order form\",\n        \"exception\": null\n    },\n    \"operationId\": \"5d9f54e6-7db4-46d6-bca9-deeb278b8b98\"\n}", "language": "json" } ] } [/block]
 
