@@ -6,7 +6,7 @@ createdAt: "2019-12-20T02:25:40.558Z"
 updatedAt: "2022-08-08t21:09:09.766z"
 ---
 
-> Check out the new [Catalog onboarding guide](https://developers.vtex.com/docs/guides/catalog-overview) to improve your onboarding experience with VTEX. We created this guide to improve the onboarding experience for developers at VTEX. It combines all our Developer Portal documentation about Catalog and focuses on the developer's journey.
+> Check out the new [Catalog onboarding guide](https://developers.vtex.com/docs/guides/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It combines all our Developer Portal documentation about Catalog and focuses on the developer's journey.
 
 The Catalog API provides methods for collecting product/SKU catalog data, categories, brands, and other information. All content between `{{}}` keys must be replaced with the correct data before performing the request.
 
