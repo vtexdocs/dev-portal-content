@@ -6,7 +6,7 @@ createdAt: "2019-12-20T02:25:40.558Z"
 updatedAt: "2022-08-08t21:09:09.766z"
 ---
 
-The Catalog API provides methods for managing and retrieving products, SKUs, categories, brands, and other catalog information. 
+The Catalog API provides methods for managing and retrieving products, SKUs, categories, brands, and other catalog information.
 
 > Check out the new [Catalog onboarding guide](https://developers.vtex.com/docs/guides/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It combines all our Developer Portal documentation about Catalog and focuses on the developer's journey.
 
