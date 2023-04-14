@@ -38,9 +38,9 @@ If you are ready to develop the middleware that implements our Payment Provider 
 
 While our protocol describes 9 endpoints for implementation, not all of them are applicable when integrating Pix instant payments. Regarding the two provider flows:
 
-- [Payment Flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): 6 endpoints that must be **mandatory** implemented.
+- [Payment Flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): six endpoints that must be **mandatory** implemented.
 
-- [Configuration Flow endpoints](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token): 3 endpoints whose implementation is **optional and currently not available for Pix**.
+- [Configuration Flow endpoints](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token): three endpoints whose implementation is **optional and currently not available for Pix**.
 
 The table below gives further detail on the applicability of each endpoint to Pix instant payments.
 
@@ -396,6 +396,6 @@ As a result, the client should send the following response:
 
 >ℹ️ The Inbound Request (BETA) is mandatory only for integrations via Payment Provider Protocol with an external Payment App. If the Pix payment method was implemented via VTEX Payment App, the Inbound Request is not necessary. For more information, access the [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-).
 
-For more information about the Pix, access its [FAQ](https://help.vtex.com/pt/tutorial/pix-faq--3lx7zCU2lQroTEBCYKYbo3).
+For more information about the Pix, access its [FAQ](https://help.vtex.com/en/tutorial/pix-faq--3lx7zCU2lQroTEBCYKYbo3).
 
 After completing all integration steps, you should complete our [homologation process](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) to allow VTEX stores to use your provider as a payment method.
