@@ -42,3 +42,5 @@ linkTitle="See more"
 </Flex>
 
 These guidelines describe the business, design, and engineering requirements enforced by the VTEX App Store to guarantee the quality, viability, and usability of VTEX apps.
+
+>ℹ The SLA for the homologation process is 45 days from [the moment the app data is sent for validation](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-2-sending-the-app-data-for-validation).

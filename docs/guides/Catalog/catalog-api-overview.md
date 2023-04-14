@@ -3,24 +3,23 @@ title: "Catalog API - Overview"
 slug: "catalog-api-overview"
 hidden: false
 createdAt: "2019-12-20T02:25:40.558Z"
-updatedAt: "2022-08-08T21:09:09.766Z"
+updatedAt: "2022-08-08t21:09:09.766z"
 ---
 
-Catalog API offers methods for managing and retrieving data about products and SKUs, categories, brands and other information from your store's catalog.
+The Catalog API provides methods for managing and retrieving products, SKUs, categories, brands, and other catalog information. 
 
-> Check the new [Catalog onboarding guide](https://developers.vtex.com/docs/guides/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Catalog and is organized by focusing on the developer's journey.
-
+> Check out the new [Catalog onboarding guide](https://developers.vtex.com/docs/guides/catalog-overview). We created this guide to improve the onboarding experience for developers at VTEX. It combines all our Developer Portal documentation about Catalog and focuses on the developer's journey.
 
 ## Common parameters
 
-| Parameter name | Description |
-| - | - |
-| `{{accountName}}` | VTEX account name. |
-| `{{environment}` | The environment that will be called. Change for vtexcommercestable or vtexcommmercebeta |
-| `{{X-VTEX-API-AppKey}}` | Located in the headers of the requests, user authentication key. |
-| `{{X-VTEX-API-AppToken}}` | Located in the headers of the requests, authentication password. |
+| Parameter name            | Description                                                                             |
+| ------------------------- | --------------------------------------------------------------------------------------- |
+| `{{accountName}}`         | Store account name                                                                      |
+| `{{environment}}`         | The environment that will be called. Change to vtexcommercestable or vtexcommmercebeta. |
+| `{{X-VTEX-API-AppKey}}`   | Located in the request headers, user authentication key.                                |
+| `{{X-VTEX-API-AppToken}}` | Located in the request headers, authentication password.                                |
 
-All content that comes between `{{}}` keys must be replaced with the correct data before performing the request.
+All content between `{{}}` keys must be replaced with the correct data before performing the request.
 
 ## Index
 
@@ -103,7 +102,7 @@ Retrieve, create, or update a Specification Field Value.
 
 ### Product
 
-Retrieve, create, or update a Product. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1wmX3QvQVxbKVmalhIE5Ru).
+Retrieve, create, or update a product. For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1wmX3QvQVxbKVmalhIE5Ru).
 
 - `GET` [Get Product and SKU IDs](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetProductAndSkuIds)
 - `GET` [Get Product by ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-)
@@ -116,7 +115,7 @@ Retrieve, create, or update a Product. For more information, check [this article
 
 ### Product Specification
 
-Retrieve, create, or update additional information of a Product.  For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP#product-specification).
+Retrieve, create, or update additional information of a product.  For more information, check [this article](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP#product-specification).
 
 - `GET` [Get Product Specification by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/-productId-/specification)
 - `POST` [Update Product Specification by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/products/-productId-/specification)
@@ -154,7 +153,7 @@ Retrieve, create, or delete an SKU Specification. SKU Specification is used to c
 
 ### SKU File
 
-Retrieve, create, or update an SKU File. An SKU File is an image associated with an SKU.
+Retrieve, create, or update an SKU file. An SKU file is an image linked to a SKU.
 
 - `GET` [Get SKU Files](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-/file)
 - `POST` [Create SKU File](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/file)
@@ -187,7 +186,7 @@ Retrieve, create, or update an SKU unique identification code (barcode).
 
 ### Attachment
 
-Retrieve, create, or update an Attachment. An attachment is used to add custom information about the item. For more information, check [this article](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm).
+Retrieve, create, or update an Attachment. An attachment is used to add custom information about an item. For more information, check [this article](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm).
 
 - `GET` [Get attachment](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/attachment/-attachmentid-)
 - `PUT` [Update attachment](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/attachment/-attachmentid-)
@@ -261,7 +260,7 @@ Retrieve and delete an SKU Seller. An SKU Seller is a seller associated with an 
 
 ### Similar Category
 
-Create and delete a Similar Category to a Product. This way the Product will be shown in both categories (main and similar).
+Retrieve, create or delete a similar category related to a product. By creating a similar category, the product will be shown in both categories (main and similar).
 
 - `GET` [Get Similar Categories](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/similarcategory/)
 - `POST` [Add Similar Category](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product/-productId-/similarcategory/-categoryId-)
@@ -282,7 +281,7 @@ The Beta Collections module provides endpoints to create and manage Collections.
 
 ### Legacy Collection
 
- Retrieve, create, update, or delete a Collection. A collection is a group of items. For more information, check [this article](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4hN41yU8IPeb8HKmmaXoca).
+Retrieve, create, update, or delete a collection. A collection is a group of items. For more information, check [this article](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/4hN41yU8IPeb8HKmmaXoca).
 
 - `GET` [Get Collection](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/collection/-collectionId-)
 - `PUT` [Update Collection](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/collection/-collectionId-)
@@ -291,7 +290,7 @@ The Beta Collections module provides endpoints to create and manage Collections.
 
 ### Legacy Subcollection
 
-Can retrieve, create, or delete an SKU, Brand or Category from a Subcollection, as well as create, delete and update subcollections. A subcollection is a group type associated with a collection. For more information, check [this article](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3moFonW33dgOYDrU21Z1X0#group-types).
+Retrieve, create, or delete an SKU, Brand or Category from a Subcollection, as well as create, delete and update subcollections. A subcollection is a group type associated with a collection. For more information, check [this article](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3moFonW33dgOYDrU21Z1X0#group-types).
 
 - `POST` [Add SKU to Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit)
 - `DELETE` [Delete SKU from Subcollection](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit/-skuId-)
@@ -326,7 +325,7 @@ Retrieve, create, or update a Supplier.
 
 ### Trade Policy
 
- Create, update, or delete a [trade policy](https://help.vtex.com/en/tutorial/what-is-a-sales-policy--563tbcL0TYKEKeOY4IAgAE).
+Create, update, or delete a [trade policy](https://help.vtex.com/en/tutorial/what-is-a-sales-policy--563tbcL0TYKEKeOY4IAgAE).
 
 - `GET` [Get Trade Policies by Product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/salespolicy)
 - `POST` [Associate Product with Trade Policy](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product/-productId-/salespolicy/-tradepolicyId-)
