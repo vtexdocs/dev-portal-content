@@ -1,14 +1,15 @@
+---
 title: "Checkout error codes"
 slug: "checkout-error-codes"
-hidden: true
+hidden: false
 createdAt: ""
 updatedAt: ""
--------------
+---
 
 During Checkout API requests, some error codes may appear as a message in the response body. See the meaning of each one of them:
 
-| Error Code        | Message                                                                        | Meaning                                                                                                                                                                              |
-| ----------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <div style="width:200px">Error Code</div>   | Message                                                                        | Meaning                                                                                                                                                                              |
+| :-------------: | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **CHK002**  | `GatewayNullEndpoint`                                                        | Gateway authentication error.                                                                                                                                                        |
 | **CHK003**  | `AccessDenied`                                                               | Authentication error (error or missing AppKey and AppToken information).                                                                                                             |
 | **CHK004**  | `MissingActiveTransaction`                                                   | Error creating and activating payment transaction.                                                                                                                                   |
@@ -283,7 +284,9 @@ During Checkout API requests, some error codes may appear as a message in the re
 | **CHK0290**      | `ORICommunicationError`                                                      | There was a communication error with the Routing System.                                                                                                                             |
 | **CHK0291**      | `ExternalMarketplaceCommunicationError`                                      | There was a communication error with the External Marketplace.                                                                                                                       |
 | **CHK0292**      | `LockTimeout`                                                                | The time limit for obtaining the access lock to a required resource was exceeded.                                                                                                    |
-| -----------       | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------                        |
+
+| <div style="width:200px">Error Code</div>   | Message                                                                        | Meaning                                                                                                                                                                              |
+| :-------------: | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **ORD002**       | `InvalidCart`                                                                | Inconsistent or invalid data in cart.                                                                                                                                                |
 | **ORD003**       | `RatesAndBenefitsCommunication`                                              | There was a communication error with the RnB (Rates & Benefits).                                                                                                                    |
 | **ORD004**       | `NegativeCartTotal`                                                          | Error when counting the total value of the cart because the value is negative.                                                                                                       |
