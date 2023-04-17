@@ -25,15 +25,15 @@ Again, it is all about offering a great navigation experience to buyers, with fa
 
 ## Import product
 
-VTEX provides three different ways to register products to a catalog:
+VTEX provides three different ways to register products in the catalog:
 
-1. API Integration - The collection with all methods can be found at: [Catalog API Overview](https://developers.vtex.com/docs/guides/catalog-api-overview).
-2. Using Spreadsheet
-    a. Google Drive Import - Import the catalog from a single Google Drive file - See the [google-import app details](https://github.com/vtex-apps/google-import)
-    b. Classic Method - Import the catalog using multiple files (Product, SKU, Specification, Image)
-3. Manual input - [Catalog data is loaded manually into VTEX Admin panel](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1ROhz3Y7mfSMmCO1I1GxEL), by filling out each field.
+1. API Integration: Read our [Catalog getting started guide](https://developers.vtex.com/docs/guides/catalog-overview) for an overview of the integration flow. Find the collection with all available methods on [Catalog API Overview](https://developers.vtex.com/docs/guides/catalog-api-overview).
+2. Spreadsheet:
+   - Google Drive Import: Import the catalog from a single Google Drive file. See the [Google Drive Import app details](https://developers.vtex.com/docs/apps/vtex.google-drive-import@0.x).
+   - Classic Method: Import the catalog using multiple files (Product, SKU, Specification, Image).
+3. Manual input: Load Catalog data manually on VTEX Admin, as described in our [Catalog 101 track](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1ROhz3Y7mfSMmCO1I1GxEL).
 
-In order to import your products, it is possible that you have to use more than one method, depending on how the data is structured and what types of software are used in your operation. Usually, some combination of [API integration](https://developers.vtex.com/docs/guides/catalog-api-overview) and [Google sheet import](https://github.com/vtex-apps/google-import) works best. Below you can see some of the use cases and choose the processes that best fit your needs.
+In order to import your products, it is possible that you have to use more than one method, depending on how the data is structured and what types of software are used in your operation. Usually, a combination of [API integration](https://developers.vtex.com/docs/guides/catalog-api-overview) and [Google Drive Import app](https://developers.vtex.com/docs/apps/vtex.google-drive-import@0.x) works best. Below you can see some of the use cases and choose the processes that best fit your needs.
 
 >⚠️ It is worth noting that product information in ERPs is often not suitable to be used and displayed in an ecommerce. Because of that it needs to go through an enrichment process, which may include restructuring categories and creating more descriptive and appealing description texts, for example.
 
@@ -52,11 +52,11 @@ Information availability:
 Product import steps:
 1. Backend sends new product/sku to VTEX associated with a [mock category](https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#category-migration-from-erps) called **Integration**. 
 
-> If brands are not available, you may do the same, creating a mock brand called **Integration**, for products to be enriched later.
+   > If brands are not available, you may do the same, creating a mock brand called **Integration**, for products to be enriched later.
 
 2. Store team uses the [Google Sheets method](https://github.com/vtex-apps/google-import) or Admin to manually enrich the imported catalog information, assigning the correct categories to each product in the **Integration** category.
 
->❗ Make sure the **Integration** category is inactive, so that the incomplete products are not displayed in the store.
+   >❗ Make sure the **Integration** category is inactive, so that the incomplete products are not displayed in the store.
 
 #### Backend provides categories
 
