@@ -16,13 +16,7 @@ In this article, we will explain how to extend your Payment Provider Protocol im
 
 ![These are some of the benefits of an instant payments ecosystem highlighted by the BCB](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-pix-instant-payments-in-brazil-0.png)
 
-[block:callout]
-{
-  "type": "success",
-  "body": "If you want to know more instant payments in Brazil, we have prepared a [blog post](https://vtex.com/pt-br/blog/produto/pix-no-e-commerce/) with all the implications of this new payment method. You can also check out the [FAQ](https://www.bcb.gov.br/estabilidadefinanceira/perguntaserespostaspix) provided by the BCB for more details.",
-  "title": "Pix in e-commerce: everything you need to know"
-}
-[/block]
+>✔️ If you want to know more instant payments in Brazil, we have prepared a [blog post](https://vtex.com/pt-br/blog/produto/pix-no-e-commerce/) with all the implications of this new payment method. You can also check out the [FAQ](https://www.bcb.gov.br/estabilidadefinanceira/perguntaserespostaspix) provided by the BCB for more details.
 
 >⚠️ This tutorial assumes you are already a [VTEX Partner](http://vtex.com/br-pt/partner) and understand how the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol) works.
 
@@ -36,7 +30,7 @@ If you are ready to develop the middleware that implements our Payment Provider 
 
 - **The middleware must consistently respond within established response times.** We enforce a maximum response time of 5 seconds for homologation tests, as well as a maximum response time of 20 seconds to any other API request.
 
-While our protocol describes 9 endpoints for implementation, not all of them are applicable when integrating Pix instant payments. Regarding the two provider flows:
+While our protocol describes nine endpoints for implementation, not all of them are applicable when integrating Pix instant payments. Regarding the two provider flows:
 
 - [Payment Flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): six endpoints that must be **mandatory** implemented.
 
@@ -44,47 +38,18 @@ While our protocol describes 9 endpoints for implementation, not all of them are
 
 The table below gives further detail on the applicability of each endpoint to Pix instant payments.
 
-[block:parameters]
-{
-  "data": {
-    "h-1": "Endpoint",
-    "0-1": "List Payment Methods",
-    "h-0": "Provider Flow",
-    "h-2": "Applicable to Pix?",
-    "0-0": "Payment",
-    "1-0": "Payment",
-    "0-2": "⚠️ Obsolete",
-    "1-1": "List Payment Provider Manifest",
-    "1-2": "✅ Yes",
-    "2-0": "Payment",
-    "2-1": "Create Payment",
-    "2-2": "✅ Yes",
-    "3-0": "Payment",
-    "3-1": "Cancel Payment",
-    "4-1": "Settle Payment",
-    "5-1": "Refund Payment",
-    "4-0": "Payment",
-    "5-0": "Payment",
-    "6-0": "Payment",
-    "6-1": "Inbound Request (BETA)",
-    "7-1": "Create Authorization Token",
-    "8-1": "Provider Authentication",
-    "9-1": "Get Credentials",
-    "7-0": "Configuration",
-    "8-0": "Configuration",
-    "9-0": "Configuration",
-    "7-2": "⛔ No",
-    "8-2": "⛔ No",
-    "9-2": "⛔ No",
-    "3-2": "✅ Yes",
-    "4-2": "✅ Yes",
-    "5-2": "✅ Yes",
-    "6-2": "✅ Yes"
-  },
-  "cols": 3,
-  "rows": 10
-}
-[/block]
+| Provider Flow      | Endpoint      | Applicable to Pix?      |
+| ---------- | ---------- | ---------- |
+|   Payment  |   List Payment Provider Manifest    |   ✅ Yes  |
+|   Payment  |   Create Payment    |   ✅ Yes  |
+|   Payment  |   Cancel Payment    |   ✅ Yes  |
+|   Payment  |   Capture Payment    |   ✅ Yes  |
+|   Payment  |   Refund Payment    |   ✅ Yes  |
+|   Payment  |   Inbound Request (BETA)    |   ✅ Yes  |
+|   Payment  |   Create Authorization Token    |   ⛔ No  |
+|   Payment  |   Provider Authentication    |   ⛔ No  |
+|   Payment  |   Get Credentials    |   ⛔ No  |
+
 
 >ℹ️ Pix is **not available** for marketplace clients that use the Checkout Split.
 
@@ -95,7 +60,7 @@ The table below gives further detail on the applicability of each endpoint to Pi
 
 ### Establish the payment methods available
 
-The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API request using the <span class="api pg-type type-get">GET</span>[List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) route.
+The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API request using the <span class="api pg-type type-get">GET</span> [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) route.
 
 The expected response is:
 
@@ -163,7 +128,7 @@ The expected response is:
 
 ### Create Pix Payment Method
 
-Now you have to create a new payment method. To do this, use the route <span class="api pg-type type-post">POST</span>[Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
+Now you have to create a new payment method. To do this, use the route <span class="api pg-type type-post">POST</span> [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
 
 >ℹ️ A lot of information is required from the cart data in the Smart Checkout, so be careful and validate all payload information.
 
@@ -272,7 +237,7 @@ For more information, access the [Create Payment endpoint](https://developers.vt
 
 ### Cancel a Payment
 
-To cancel a payment, you must already have created one. To do so, you will make an API request using the route <span class="api pg-type type-post">POST</span>[Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations).
+To cancel a payment, you must already have created one. To do so, you will make an API request using the route <span class="api pg-type type-post">POST</span> [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations).
 
 See an example of the Cancel Payment request:
 
@@ -301,7 +266,7 @@ For more information, access the [Cancel Payment endpoint](https://developers.vt
 
 If your transaction was completed successfully, the provider can settle the payment.  
 
-Thus, in order to settle the payment, VTEX will send the information below through the <span class="api pg-type type-post">POST</span>[Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements).
+Thus, in order to settle the payment, VTEX will send the information below through the <span class="api pg-type type-post">POST</span> [Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements).
 
 See an example of the Settle Payment request:
 
@@ -331,7 +296,7 @@ For more information, access the [Settle Payment endpoint](https://developers.vt
 
 ### Refund Payment
 
-The provider should be ready to receive the following request through the <span class="api pg-type type-post">POST</span>[Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds).
+The provider should be ready to receive the following request through the <span class="api pg-type type-post">POST</span> [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds).
 
 See an example of the Refund Payment request:
 
@@ -362,7 +327,7 @@ For more information, access the [Refund Payment endpoint](https://developers.vt
 
 ### Communicate with the Gateway
 
-The last endpoint, the <span class="api pg-type type-post">POST</span>[Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider.
+The last endpoint, the <span class="api pg-type type-post">POST</span> [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider.
 
 See an example of the Inbound Request (BETA) request:
 
