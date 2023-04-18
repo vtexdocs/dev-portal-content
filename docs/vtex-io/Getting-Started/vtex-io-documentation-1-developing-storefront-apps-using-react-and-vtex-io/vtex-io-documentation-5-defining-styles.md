@@ -8,52 +8,51 @@ category: "App Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-6-structuring-documentation"
 ---
-After defining your theme's block, it is time to think about the style you want for it, defining colors, typography, among other elements that establish the visual identity of the app when it is rendered.
 
-To define the style of your component(s), we will use *Cascading Style Sheets* - **CSS**.
+Once you have defined the blocks for your theme, the next step is to consider the style you want to apply to them. This includes defining the color scheme, typography, and other design elements that will establish the visual identity of your app when it is rendered.
 
-In VTEX IO, there are three different tools for using CSS in a store:
+To define the style of your storefront components, we will use *Cascading Style Sheets (CSS).
 
-- **Tachyons** - Main option for styling components from CSS classes.
-- **CSS Modules** - Secondary option for styling components from CSS classes. It should only be used when the desired style cannot be configured using Tachyons.
-- **CSS Handles** - Exports generic CSS classes to allow users that work with your component to customize it according to their respective scenarios.
+Store Framework provides three different tools for applying CSS to a storefront:
 
-Now that you know the difference between the tools that are available on the platform, you are ready to learn more about them.
+- **Tachyons** - Main option for styling components from CSS classes. It offers a wide range of pre-defined styles and enables you to customize them as needed.
+- **CSS Modules** - Secondary option for styling components from CSS classes. It should only be used when the desired style cannot be achieved with Tachyons.
+- **CSS Handles** - This option exports generic CSS classes that allow users that work with your component to customize it according to their individual needs.
 
-Below, you can find the instructions for each of these tools and their purpose.
+Now that you are familiar with the various styling tools available on the platform, it's time to delve deeper into each of them and explore their features and functionalities. Below you will find detailed instructions on how to work with each of these tools.
 
-> ℹ️ Customizing the style in a component requires basic CSS knowledge. We recommended that you check the [documentation](https://www.w3schools.com/css/default.asp) for this language before following the instructions detailed in this article.
+## Before you start
+
+To customize the style of a component, it's important to have a basic understanding of CSS. If you're new to CSS, we recommend reviewing the [documentation](https://developer.mozilla.org/pt-BR/docs/Web/CSS) provided by MDN Web Docs for this language before proceeding with the instructions in this article. 
 
 ## Using Tachyons
 
-VTEX Tachyons is a functional CSS structure built on a [Tachyons](https://tachyons.io/) base.
+VTEX Tachyons is a functional CSS structure built on [Tachyons](https://tachyons.io/). VTEX Tachyons offers single-purpose CSS classes that can be combined to create complex layouts and responsive components for your storefront app.
 
-The framework has single-purpose CSS classes that can be structured to build anything from complex layouts to responsive components.
+In practice, using VTEX Tachyons enables you to apply CSS styling to your app's components with minimal effort.
 
-In practice, VTEX Tachyons helps you use CSS classes in your store-front app with little effort.
+> ℹ️ To gain a deeper understanding of the VTEX Tachyons CSS and how they work, it's important to familiarize yourself with the underlying Tachyons framework. We highly recommend carefully reading through Tachyons [documentation](https://tachyons.io/#getting-started) to learn more about this CSS framework. 
 
-> ℹ️ To better understand VTEX Tachyons tokens for CSS classes, it is important to familiarize yourself with the Tachyons solution. Carefully read your [documentation](https://tachyons.io/#getting-started).
-
-1. Open your app's code in your code editor.
+1. Open your app project in the code editor of your choice.
 2. In the `react` folder, access the file created for the component you want to style.
 3. Access the [VTEX Tachyons documentation](https://vtex.github.io/vtex-tachyons/) and look for the most appropriate CSS classes according to the customization you want to apply.
-4. In the React component code, declare the desired CSS classes. For example:
+4. In the React component code, declare the desired CSS classes as in the following example:
 
-```css
-const Example = () => (
-  <div className="flex justify-center pv4 ph3 bg-base--inverted">
-    <p>Hello, World!</p>
-  </div>
-)
-```
+ ```css
+ const Example = () => (
+   <div className="flex justify-center pv4 ph3 bg-base--inverted">
+     <p>Hello, World!</p>
+   </div>
+ )
+ ```
 
 5. Save your changes.
 
 ## Using CSS Modules
 
-CSS Modules is a CSS file in which CSS classes are designed according to the store-front app that exports the component.
+CSS Modules is a tool for defining CSS classes within a separate CSS file that is scoped to the storefront app exporting the component. In this regard, the use of CSS Modules may be limiting when it comes to importing and exporting components between different apps. Thus, it is recommended to use VTEX Tachyons as the primary CSS styling tool in your project. CSS Modules should only be used when the desired style cannot be achieved using Tachyons.
 
->⚠️ By defining CSS classes this way, the CSS Modules tool becomes limiting when considering the scenarios for importing and exporting components between different apps. That is why we recommend only using VTEX Tachyons in your project. **Use CSS Modules only for cases not solved by Tachyons.**
+>⚠️ Keep in mind that using CSS Modules should be avoided whenever possible in favor of VTEX Tachyons. This will ensure greater compatibility and flexibility when importing and exporting components between different storefront apps.
 
 1. In your app's `react` folder, create the `styles.css` file.
 2. In this file, create the desired CSS classes (those not understood by Tachyons tokens). For example:
@@ -93,7 +92,7 @@ export default function MyButton() {
 
 > ℹ️ Remember that the name of the created classes will depend on the *import* model you made (step 3 or step 4 in this section).
 
-6. Save the changes you made and [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app/) your app.
+6. Save your changes and [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app/) your app.
 
 When rendered and inspected, the component will now have the following HTML structure if you chose to follow the *import* model shown in step 3:
 
