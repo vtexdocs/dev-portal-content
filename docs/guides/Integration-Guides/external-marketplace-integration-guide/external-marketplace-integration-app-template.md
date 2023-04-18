@@ -124,6 +124,11 @@ Follow the list below to substitute placeholders properly. Once placeholders are
         <td>Connector’s ID in Offer Management.</td>
         <td><ol><li>node/constants/variables.ts</li></ol></td>
     </tr>
+    <tr>
+        <td><code>connectorId</code></td>
+        <td>Connector's ID registered in Channel Manager.</td>
+        <td><ol><li>node/constants/variables.json</li></ol></td>
+    </tr>
 </table>
 
 The fields listed above come with the App Template as default. However, it is possible to remove fields that represent features not used by your integration, like the VTEX Mapper and Offer Management. They are listed ahead in the section [CustomConfigs](#customconfigs).
