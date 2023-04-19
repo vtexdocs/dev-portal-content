@@ -32,7 +32,7 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 1. Create a new development workspace for testing purposes.
 
 ```bash
-	vtex use {workspace-name}
+ vtex use {workspace-name}
 ```
 
 1. Install the Google Tag Manager app by running the following command:
