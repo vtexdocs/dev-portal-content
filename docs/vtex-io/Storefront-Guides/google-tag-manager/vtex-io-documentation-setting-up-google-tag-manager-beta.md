@@ -82,7 +82,6 @@ To verify if the events are arriving and the reports are being filled with data,
 
 ![DebugView](https://user-images.githubusercontent.com/67270558/232895238-979567b3-38a8-491b-92f8-7c84691d7ccc.png)
 
-
 ## Overview Events
 
 ### View Promotion
