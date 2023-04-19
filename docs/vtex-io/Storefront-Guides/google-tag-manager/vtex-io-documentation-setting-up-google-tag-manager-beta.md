@@ -98,7 +98,6 @@ Other than the events listed above, GA4 has new events that stores can start tra
 
 The GTM app listens to the following events and send them in the GA4 format:
 
-
 | VTEX | GA4 |
 | ---- | --- |
 | vtex:addPaymentInfo| add_payment_info |
