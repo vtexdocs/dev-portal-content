@@ -41,7 +41,7 @@ The only mandatory key that needs to be declared in a block interface is `compon
 
 ## Step by step
 
-## Step 1 - Declaring an interface
+### Step 1 - Declaring an interface
 
 To add new custom blocks to your VTEX store, you need to declare their interfaces in the interfaces.json file of your app. This file is used by [Store Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/) during the website building process.
 
