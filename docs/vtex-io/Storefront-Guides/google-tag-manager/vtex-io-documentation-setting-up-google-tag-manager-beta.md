@@ -91,7 +91,8 @@ To test that the Google Analytics: GA4 Configuration tag is firing correctly for
 
 ### View Promotion
 
-The [GA4 view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion) expects to receive the product’s name or ID associated with it.
+
+### View Promotion
 
 This event is commonly attached to promotion banners carousel displayed by the Slider Layout block, for example, and you can use the Site Editor to configure the `Product ID` and `Product Name`.
 
