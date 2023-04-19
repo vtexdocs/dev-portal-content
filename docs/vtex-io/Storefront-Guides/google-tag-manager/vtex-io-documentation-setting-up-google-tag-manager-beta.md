@@ -41,7 +41,6 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 ```bash
     vtex install vtex.google-tag-manager@3.3.2.beta
 ```
-Once the installation is complete, you should see a successful message.
 
 
 ### Enabling the GA4 setting in the GTM app
