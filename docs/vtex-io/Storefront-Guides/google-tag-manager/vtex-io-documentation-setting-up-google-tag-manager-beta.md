@@ -20,6 +20,7 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant.This pr
 > ⚠️ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.com/analytics/answer/9539598#find-G-ID), since It will be used later to set up the Google Analytics 4 tag on Google Tag Manager.
 
 ## Installing Google Tag Manager (Beta)
+
 1. Open the VTEX CLI and enter your store’s account. For example:
 ```bash
     vtex login {account-name}
