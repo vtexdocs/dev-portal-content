@@ -4,58 +4,61 @@ slug: "vtex-io-documentation-3-creating-the-new-app"
 hidden: false
 createdAt: "2021-03-25T20:58:43.434Z"
 category: "App Development"
-excerpt: "Now that your development environment is set up, let's create our first React app using VTEX IO."
+excerpt: "Now that your development environment is set up, it is time to start developing your new React app."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-4-declaring-a-theme-block"
 ---
-To start developing your app optimally, you need to:
 
-- Copy our [React app boilerplate](https://github.com/vtex-apps/react-app-template) to your local files.
-- Make the first and main changes to the `manifest.json` file in the React example app.
+To begin developing your app, you need to follow these steps:
 
-This step is important to eliminate the concerns about the default settings in the VTEX IO platform. Once copied, the repository will automatically import the basic settings that you will need to start developing your app.  
+- Clone the React [boilerplate app](https://github.com/vtex-apps/react-app-template) to your local files.
+- Modify the `manifest.json` file in the React example app to include your app's information, such as its name, version, vendor, and dependencies.
 
-## Cloning the boilerplate repository to your local files
+Once copied, the repository will automatically import the basic settings that you will need to kickstart your app development.
+
+## Step by step
+
+### Step 1 - Cloning the boilerplate repository to your local files
 
 Clone the boilerplate repository to your local files by running the following command:
 
-```sh
-git clone https://github.com/vtex-apps/react-app-template
-```
+ ```sh
+ git clone https://github.com/vtex-apps/react-app-template
+ ```
 
-Then, open the imported React app's repository using the code editor of your choice.
+### Step 2 - Editing the `manifest.json` file
 
-## Editing the `manifest.json` file
+Now, let's examine the manifest.json file, which contains essential information about the app such as:
 
-Having the app's code open in your code editor, let us analyze the `manifest.json` file, which saves **basic and essential information** about the app, such as:
-
-- `vendor` - Name of the VTEX account that develops, maintains, and distributes the app.
-- `name` - App name. You choose the name, but be careful to avoid special characters (with the exception `-` hyphens).
-- `version` - App's current version. For versioning, VTEX IO uses [Semantic Versioning 2.0.0](https://semver.org/).
-- `title` - App's distribution name. This name will be displayed on the `Apps` section in the admin and, also, on the VTEX App Store.
-- `description` - Brief description of the app's functionality.
-- `builders` - List of [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/) that facilitate the app's development, abstracting service configurations.
+- `vendor` - Name of the VTEX account responsible for developing, maintaining, and distributing the app.
+- `name` - App name of your choice. Avoid special characters.
+- `version` - Current version of the app following [Semantic Versioning 2.0.0](https://semver.org/) standards.
+- `title` - The distribution name of the app that is displayed on the `Apps` section in the admin and, also, on the VTEX App Store.
+- `description` - Brief description of the app's features.
+- `builders` - List of [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/) that facilitate the app's development by abstracting service configurations.
 - `dependencies` - List of apps that the app you are developing depends on for proper functioning.
 
-At the beginning of the process, it is very important to incorporate the new app's basic information in the `manifest.json` file in order to make it your own instead of it staying another example version provided by VTEX. To do that:
+Incorporating the new app's basic information into the `manifest.json` file is a crucial step at the beginning of the development process. This step is essential to make the app unique and distinct from the example version provided by VTEX. 
 
-1. Replace the account in the `vendor` field with the VTEX account you are using for development.
-2. Replace the value in the `name` field with the name you want. Remember that the name defined in this field will be the name of your new app.
-3. Replace the values in the `title` and `description` fields with something that matches the app you are developing.
+To add this information, open the app's code in your code editor, and update the `manifest.json` file as in the following:
+
+1. Replace the `vendor` field value with the name of the VTEX account you are using for development.
+2. Replace the `name` field value with the name of your app. Avoid using special characters, except hyphens (-).
+3. Replace the values in the `title` and `description` fields with appropriate ones that describe the app you are developing.
 4. Add the `store@0.x` builder to the builder list to allow the creation of new blocks:
 
-```diff
-"builders": {
-+  "store": "0.x"
-}
-```
+  ```diff
+  "builders": {
+  +  "store": "0.x"
+  }
+  ```
 
-5. If you want to import any React components previously developed for your new app, update the `dependencies` list with the name of the app that runs the desired component, for example:
+5. If you want to import any React components previously developed for your new app, update the `dependencies` list with the name and. version of the app that runs the desired component. For example:
 
-```diff
-"dependencies": {
-+  "vtex.styleguide": "9.x"
-}
-```
+  ```diff
+  "dependencies": {
+  +  "vtex.styleguide": "9.x"
+  }
+  ```
 
-This will allow you to later import the app component added in `dependencies` into your code via the `import {componentName} from 'vtex.styleguide'` structure, for example.
+ This will allow you to later import the app component added in `dependencies` into your code via the `import {componentName} from '{dependency}'` structure.
