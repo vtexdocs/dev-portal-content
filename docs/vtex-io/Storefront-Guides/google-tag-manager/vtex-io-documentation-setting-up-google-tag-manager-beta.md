@@ -49,6 +49,7 @@ Once the installation finished you should see a successful message.
 
 ### Enabling the GA4 setting in the GTM app
 
+Once the installation is complete, you should see a successful message.
 
 ### Enabling the GA4 setting in the GTM app
 
