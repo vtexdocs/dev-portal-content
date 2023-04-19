@@ -50,7 +50,8 @@ Once the installation is complete, you should see a successful message.
 
 ### Enabling the GA4 setting in the GTM app
 
-1. In the VTEX Admin, access **Apps > My apps**, search for the Google Tag Manager app and click on it.
+
+### Enabling the GA4 setting in the GTM app
 
 2. Check the box **Send Google Analytics 4 Events** and click on `Save`.
 
