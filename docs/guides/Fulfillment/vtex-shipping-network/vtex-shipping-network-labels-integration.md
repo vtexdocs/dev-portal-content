@@ -44,11 +44,11 @@ The order origin can be found using the [Orders API documentation](https://devel
 
 Order with Fulfillment origin:
 
-**POST** - `https://portal.vtexcommerce.com.br/api/transportation/deliverylabels/{orderId}`
+**POST** - `https://api.vtex.com/api/transportation/deliverylabels/{orderId}`
 
 Order with another origin:
 
-**POST** - `https://portal.vtexcommerce.com.br/api/transportation/deliverylabels/{sellerOrderId}`
+**POST** - `https://api.vtex.com/api/transportation/deliverylabels/{sellerOrderId}`
 
 The [authentication](https://developers.vtex.com/docs/guides/authentication-overview#application-keys) headers must be used to call this endpoint:
 
