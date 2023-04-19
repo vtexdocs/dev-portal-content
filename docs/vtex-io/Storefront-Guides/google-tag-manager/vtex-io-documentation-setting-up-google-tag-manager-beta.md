@@ -78,6 +78,7 @@ The [GA4 view_promotion](https://developers.google.com/analytics/devguides/colle
 This event is commonly attached to the promotion banners carousel displayed by the Slider Layout block for example and you can use the Site Editor to configure the `Product ID` and `Product Name`.
 
 ### Supported Events
+
 Check out the available events that [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) can listen to and their equivalent names in UA and GA4:
 
 | VTEX | UA | GA4 |
