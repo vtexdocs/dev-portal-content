@@ -43,7 +43,7 @@ All mock routes will be available in _/my-provider_.
 }
 ```
 
-Once it is there, your store's Checkout will use the serviceUrl to make requests. You should do this in a test account so it doesn't break anyone.
+Once it is there, your store's Checkout will use the serviceUrl to make requests. You should do this in a test account so it does not break anyone.
 
 ## Testing the mock provider
 
