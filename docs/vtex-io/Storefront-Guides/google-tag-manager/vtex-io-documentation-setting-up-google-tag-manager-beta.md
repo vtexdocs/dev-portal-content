@@ -22,6 +22,7 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 ## Installing Google Tag Manager (Beta)
 
 1. Open the VTEX CLI and enter your store’s account:
+
 ```bash
     vtex login {account-name}
 ```
