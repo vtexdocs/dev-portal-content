@@ -46,7 +46,6 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 
 Once the installation is complete, you should see a successful message.
 Once the installation finished you should see a successful message.
-Once the installation is complete, you should see a successful message.
 
 ### Enabling the GA4 setting in the GTM app
 
