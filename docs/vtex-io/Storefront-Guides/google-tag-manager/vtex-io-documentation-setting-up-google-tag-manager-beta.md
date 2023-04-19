@@ -24,6 +24,7 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 1. Open the VTEX CLI and enter your store’s account:
 
 ```bash
+```bash
     vtex login {account-name}
 ```
 > ⚠️ Replace `{account-name}` with your store's account name, for example, `vtex login storecomponents`.
