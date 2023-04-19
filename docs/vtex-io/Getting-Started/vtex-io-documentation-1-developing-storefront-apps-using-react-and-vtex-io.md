@@ -15,6 +15,8 @@ In this tutorial, you will learn how to build React storefront components using 
 
 Here's an overview of the parts:
 
+<Flex>
+
 <WhatsNextCard
 title="Part 1. Setting up your development environment"
 description="Learn how to set up your development environment to build storefront components with VTEX IO."
@@ -77,6 +79,8 @@ description="Learn how to make your app available to other users, either by publ
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available"
 linkTitle="See more"
 />
+ 
+</Flex>
 
 The storefronts apps you develop can be used in your store's theme or be made available to other stores interested in the same solution through [VTEX App Store](https://apps.vtex.com/). During the development process, make sure to follow our [best practices on developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components) and [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store) to ensure the best results.
 
