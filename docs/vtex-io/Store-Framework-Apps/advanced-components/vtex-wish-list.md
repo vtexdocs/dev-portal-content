@@ -6,23 +6,20 @@ createdAt: "2020-06-03T15:19:09.963Z"
 updatedAt: "2022-11-23T14:55:16.485Z"
 ---
 
-The Wishlist app, designed for **B2C** stores, adds a heart icon to shelves and product detail pages, so users can add the desired products to a Wishlist.
+Designed for **B2C** stores, the Wishlist app adds a heart icon to digital shelves and product details pages, allowing users to add their desired products to a wishlist.
 
-![wishlist-list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-0.png)<br/>
-_Example of heart icons on a shelf._
+![wishlist-list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-0.png)<br/> _Example of heart icons on a shelf._
 
-![wish-list-pdp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-1.png)
-_Example of a heart icon on a product details page._
+![wish-list-pdp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-1.png) _Example of a heart icon on a product details page._
 
-In addition to that, a brand new route called `/wishlist` is generated under the My Account menu, creating a page responsible for listing all wishlisted items for your users.
+In addition, it generates a brand-new route called `/wishlist` under the My Account menu, creating a page with the items users added to the wishlist.
 
-![wishlist-my-account](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-2.png)
-_Example of a wishlist page._
+![wishlist-my-account](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-wish-list-2.png) _Example of a wishlist page._
 
-## Configuration
+## Configurating the wishlist
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the Wishlist app in the desired VTEX account by running `vtex install vtex.wish-list` in your terminal.
-2. Open your store's Store Theme app directory in your code editor.
+2. Open your Store Theme app directory in the code editor.
 3. Add the Wishlist app to your theme's `manifest.json` file inside **peerDependencies** as shown below:
 
 ```diff
@@ -31,9 +28,9 @@ _Example of a wishlist page._
  }
 ```
 
-> ℹ️ _The Wishlist app can export two theme blocks when added as a dependency: `add-to-list-btn` and `list-context.wishlist`. They are responsible, respectively, for adding the heart icon to other theme blocks and for providing product data to build the `/wishlist` also shared with the My Account page._
+> ℹ️ _The Wishlist app can export two theme blocks when added as a dependency: `add-to-list-btn` and `list-context.wishlist`. These are responsible for adding the heart icon to other theme blocks and providing product data to build the `/wishlist`, which is also shared with the My Account page._
 
-4. Add the `add-to-list-btn` block into the `store.product` template's children block list. For example:
+4. Add the `add-to-list-btn` block in the `store.product` template's children block list. For example:
 
 ```diff
 {
@@ -60,13 +57,13 @@ _Example of a wishlist page._
   }
 ```
 
-> ℹ️ _The new route called `/wishlist`, responsible for creating the Wishlist custom page that displays wishlisted product items, already contains a default template, it is already rendered under the My Account menu and no further actions are required from you. However, you can **customize the Wishlist page, overwriting the template by creating a brand new one as you wish**. To do so, check the **Advanced configurations** section below._
+> ℹ️ _The new route called `/wishlist`, which creates the Wishlist custom page containing the products added to the wishlist, already has a default template and is rendered under the My Account menu. No further action is required. However, you can **customize the Wishlist page by overwriting the template**. To do so, you have to create a brand new one as you wish. See more details in the **Advanced configurations** section below._
 
 ## Advanced configurations
 
-According to the Wishlist app composition, the `/wishlist` page can be highly customizable using other blocks. Currently, its default implementation is as follows:
+The Wishlist app architecture allows you to customize the `/wishlist` page using other blocks. Currently, its default implementation is as follows:
 
-`store.wishlist` interface for the route `/wishlist` and `my-account-page.wishlist-page` along with `my-account-link.wishlist-link` for the Wishlist section under My Account
+`store.wishlist` interface for the route `/wishlist` and `my-account-page.wishlist-page` along with `my-account-link.wishlist-link` for the Wishlist section under My Account.
 
 **wishlist.jsonc**
 
@@ -132,7 +129,7 @@ According to the Wishlist app composition, the `/wishlist` page can be highly cu
 }
 ```
 
-Add the `plugins.json` file to your theme's `/store/` folder, this will add the Wishlist to the "My Account"
+Add the `plugins.json` file to your theme's `/store/` folder. This will add the Wishlist to My Account.
 
 **plugins.json**
 
@@ -143,28 +140,28 @@ Add the `plugins.json` file to your theme's `/store/` folder, this will add the 
 }
 ```
 
-By "default implementation" we mean that, by installing the Wishlist app in your store, you're actually using the `json` above behind the scenes to build the new page template (`/wishlist`), as shown in the third image displayed above.
+By "default implementation" we mean that, by installing the Wishlist app in your store, you're using the `json` above behind the scenes to build the new page template (`/wishlist`), as shown in the third image displayed above.
 
-Therefore, in order to customize the `/wishlist` page configuration, you should:
+Therefore, to customize the `/wishlist` page configuration, you need to:
 
 1. Create a `wishlist.jsonc` file under `store/blocks`.
 2. Create a `plugins.json` file under `store/`.
-3. Copy the code above, paste it in the new file and change it as you wish.
+3. Copy the code above, paste it in the new file, and change it as you wish.
 4. Deploy your changes.
 
-If you want to configure the layout without the `slider-layout` dependency, you can use the `list-context-renderer` to wrap the `product-summary.shelf`, more information [here](https://github.com/vtex-apps/list-context#list-context-renderer)
+If you want to configure the layout without the `slider-layout` dependency, you can use the `list-context-renderer` to wrap the `product-summary.shelf`. Learn more [here](https://github.com/vtex-apps/list-context#list-context-renderer).
 
 #### `my-account-link.wishlist-link` props
 
-| Prop name |   Type   |                         Description                         | Default value |
-| :-------: | :------: | :---------------------------------------------------------: | :-----------: |
-|  `label`  | `string` | Change the label for the section menu under My Account page |  `Wishlist`   |
+| Prop name |   Type   |                      Description                      | Default value |
+|:---------:|:--------:|:-----------------------------------------------------:|:-------------:|
+|  `label`  | `string` | Changes the section menu label on the My Account page |  `Wishlist`   |
 
 ## Usages
 
-There are couple URLs to read, search and modify data for the app:
+There are a couple of URLs to read, search and change data for the app:
 
-To read the schema of the wishlist app:
+To read the schema of the Wishlist app:
 
 ```
 curl --request GET \
@@ -180,7 +177,7 @@ curl --request GET \
      --header 'VtexIdClientAutCookie: {authToken}' \
 ```
 
-To search wishlist by user email:
+To search for a wishlist by user email:
 
 ```
 curl --request GET \
@@ -188,7 +185,7 @@ curl --request GET \
      --header 'VtexIdClientAutCookie: {authToken}' \
 ```
 
-To PATCH a wishlist to the MasterData:
+To PATCH a wishlist to Master Data:
 
 ```
 curl --request PATCH \
@@ -206,7 +203,7 @@ curl --request PATCH \
      '
 ```
 
-To DELETE a wishlist from the MasterData::
+To DELETE a wishlist from Master Data:
 
 ```
 curl --request DELETE \
@@ -214,9 +211,9 @@ curl --request DELETE \
      --header 'VtexIdClientAutCookie: {authToken}' \
 ```
 
-## Custom toast URL
+## Custom URL for toast messages
 
-Change the link of toast message
+To change the link of the toast message:
 
 ```json
 {
@@ -228,13 +225,13 @@ Change the link of toast message
 }
 ```
 
-| Prop name  |   Type   |           Description            |     Default value     |
-| :--------: | :------: | :------------------------------: | :-------------------: |
-| `toastURL` | `string` | Change the link of toast message | `/account/#wishlist'` |
+| Prop name  |   Type   |              Description              |     Default value     |
+|:----------:|:--------:|:-------------------------------------:|:---------------------:|
+| `toastURL` | `string` | Changes the link of the toast message | `/account/#wishlist'` |
 
-## Custom View Wishlist Empty
+## Custom view for empty wishlists
 
-Show custom view in case there are no added products.
+To show a custom view if no product has been added to the wishlist:
 
 ```diff
 {
@@ -263,15 +260,15 @@ Show custom view in case there are no added products.
 
 #### `list-context.wishlist` props
 
-|      Prop name      |   Type    |                      Description                      | Default value |
-| :-----------------: | :-------: | :---------------------------------------------------: | :-----------: |
-| `showViewEmptyList` | `boolean` | Show custom view in case there are no added products. |    `false`    |
+|      Prop name      |   Type    |                           Description                            | Default value |
+|:-------------------:|:---------:|:----------------------------------------------------------------:|:-------------:|
+| `showViewEmptyList` | `boolean` | Shows a custom view if no product has been added to the wishlist |    `false`    |
 
 ## Customization
 
-In order to apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
+To apply CSS customizations to this and other blocks, follow the instructions in [Using CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
-| CSS Handles             |
+| CSS handles             |
 | ----------------------- |
 | `columnText`            |
 | `columnThumb`           |
