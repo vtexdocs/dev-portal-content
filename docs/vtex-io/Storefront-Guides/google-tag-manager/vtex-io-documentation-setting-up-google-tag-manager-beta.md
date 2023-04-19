@@ -100,7 +100,7 @@ The GTM app listens to the following events and send them in the GA4 format:
 
 
 | VTEX | GA4 |
-| ---- | --- | 
+| ---- | --- |
 | vtex:addPaymentInfo| add_payment_info |
 | vtex:addShippingInfo | add_shipping_info |
 | vtex:login| login |
