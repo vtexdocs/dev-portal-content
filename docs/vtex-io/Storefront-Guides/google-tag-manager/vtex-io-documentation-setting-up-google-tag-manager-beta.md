@@ -30,6 +30,7 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 > ⚠️ Replace `{account-name}` with your store's account name, for example, `vtex login storecomponents`.
 
 1. Create a new development workspace for testing purposes.
+
 ```bash
 	vtex use {workspace-name}
 ```
