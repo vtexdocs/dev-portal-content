@@ -15,7 +15,7 @@ seeAlso:
 
 ## Before you start
 
-Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant.This property collects data in parallel with your existing Universal Analytics property. To create the GA4 property, follow [Google’s official guide](https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article).
+Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This property collects data in parallel with your existing Universal Analytics property. To create the GA4 property, follow [Google’s official guide](https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article).
 
 > ⚠️ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.com/analytics/answer/9539598#find-G-ID), since It will be used later to set up the Google Analytics 4 tag on Google Tag Manager.
 
@@ -46,7 +46,7 @@ Once the installation finished you should see a successful message.
 ![gtm-app-one](https://user-images.githubusercontent.com/67270558/232889771-bdb8c814-4d89-42a3-b48d-4d3cae29f57c.png)
 
 ## Configuring Google Analytics 4 Configuration tag in Google Tag Manager
-### Step 1: Creating a Google Analytics 4 configuration tag
+### Creating a Google Analytics 4 configuration tag
 To ensure data flows from your store to Google Analytics, create a Google Analytics 4 configuration tag using Measumerent ID in [Google Tag Manager](https://tagmanager.google.com/). To create the tag see the following the article Set up the Google Analytics 4 Configuration tag.
 
 Once created the Google Analytics 4 Configuration tag set up each GA4 event:
@@ -54,7 +54,7 @@ Once created the Google Analytics 4 Configuration tag set up each GA4 event:
 
 2. Import the container file by following Google’s [Import a container guide](https://support.google.com/tagmanager/answer/6106997?#import). It will add all the needed tags, triggers, and variables.
 
-![import-container](https://user-images.githubusercontent.com/67270558/232896885-5c951e94-d08d-426d-b5c0-e0c256134fdd.png)
+![import-container](https://user-images.githubusercontent.com/67270558/232900478-36277198-bc4a-40f2-a7e3-f54b73270fe9.png)
 
 3. In the GTM app, in the GA4 Configuration tag, edit the Measurement ID field.
 
