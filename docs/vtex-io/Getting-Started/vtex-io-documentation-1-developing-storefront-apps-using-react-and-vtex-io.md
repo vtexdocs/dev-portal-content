@@ -1,32 +1,83 @@
 ---
 title: "Storefront apps"
 slug: "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io"
+excerpt: "Learn how to create your own storefront components with React and VTEX IO."
 hidden: false
 createdAt: "2021-03-25T20:58:43.339Z"
 updatedAt: "2022-12-13T20:17:45.041Z"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-2-basic-development-setup-in-vtex-io"
 ---
-This track will show you how to build sophisticated, tailor-made React storefront components using the VTEX IO platform.
 
-- [Part 1. Setting up your development environment](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basic-development-setup-in-vtex-io)
-- [Part 2. Creating the new app](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-creating-the-new-app)
-- [Part 3. Declaring a Theme block](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block)
-- [Part 4. Defining styles](https://developers.vtex.com/docs/guides/vtex-io-documentation-5-defining-styles)
-- [Part 5. Structuring documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-6-structuring-documentation)
-- [Part 6. Consuming data](https://developers.vtex.com/docs/guides/vtex-io-documentation-7-consuming-data)
-- [Part 7. Translating the component](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component)
-- [Part 8. Improving performance with caching](https://developers.vtex.com/docs/guides/vtex-io-documentation-9-improving-performance-with-caching)
-- [Part 9. Making your app publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available)
+While the VTEX IO platform and Store Framework provide high-quality and customizable React storefront blocks, there may be cases where you require specific frontend solutions not covered by our native components. In such cases, the VTEX IO platform empowers you to create your own storefront apps with [React](https://reactjs.org/). 
 
-Leveraging from the VTEX IO platform, the VTEX IO Store Framework solution delivers the needed foundations for any storefront structure, providing high quality and customizable [React](https://reactjs.org/) store blocks so that you can create (in the fastest possible go-to-market time) comprehensive shopping experiences that never become outdated.
+In this tutorial, you will learn how to build React storefront components using the VTEX IO platform. This tutorial comprises nine parts covering all aspects of the development process, from setting up your development environment to making your app publicly available. 
 
-However, considering some particular business scenarios, you may feel the need for specific front-end solutions which are not covered yet by our native components. In this case, you can develop your own storefront apps with React and VTEX IO.
+Here's an overview of the parts:
 
-The components you develop can be used in your store's theme or be made available to other stores interested in the same solution through the admin and [VTEX App Store](https://apps.vtex.com/). During the development process, make sure to check the following guides:
+<WhatsNextCard
+title="Part 1. Setting up your development environment"
+description="Learn how to set up your development environment to build storefront components with VTEX IO."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basic-development-setup-in-vtex-io"
+linkTitle="See more"
+/>
 
-- [Developing custom storefront components - Best Practices](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components)
+<WhatsNextCard
+title="Part 2. Creating the new app"
+description="Learn how to create a new app on the VTEX IO platform, which will serve as the foundation of your storefront component."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-3-creating-the-new-app"
+linkTitle="See more"
+/>
 
-- [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store)
+<WhatsNextCard
+title="Part 3. Declaring a theme block"
+description="Learn how to declare a theme block, which is a reusable piece of code that defines the structure of your storefront component."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block"
+linkTitle="See more"
+/>
 
-> ℹ️  Custom apps are the liability of whoever developed and implemented them, meaning the [app's vendor](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#vendor). VTEX shall bear no responsibility for any of these apps nor provide support for their users.
+<WhatsNextCard
+title="Part 4. Defining styles"
+description=" Learn how to define styles for your storefront components, including how to export CSS handles for further customization."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-5-defining-styles"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Part 5. Structuring documentation"
+description="Learn how to structure documentation for your storefront component, making it easier for other developers to use and understand."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-6-structuring-documentation"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Part 6. Consuming data"
+description="Learn how to consume data from different sources and integrate it into your storefront components,"
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-7-consuming-data"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Part 7. Translating the component"
+description="Learn how to translate your storefront components into different languages, making them accessible to a broader audience."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Part 8. Improving performance with caching"
+description="Learn how to use caching to improve the performance of your storefront components, ensuring that they load quickly and provide a seamless shopping experience."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-9-improving-performance-with-caching"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Part 9. Making your app publicly available"
+description="Learn how to make your app available to other users, either by publishing it for scoped usage or by submitting it to the VTEX App Store."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available"
+linkTitle="See more"
+/>
+
+The storefronts apps you develop can be used in your store's theme or be made available to other stores interested in the same solution through [VTEX App Store](https://apps.vtex.com/). During the development process, make sure to follow our [best practices on developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components) and [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store) to ensure the best results.
+
+> ⚠️ Please note that custom apps are the liability of the [app's vendor](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#vendor), and VTEX shall bear no responsibility for these apps nor provide support for their users.
