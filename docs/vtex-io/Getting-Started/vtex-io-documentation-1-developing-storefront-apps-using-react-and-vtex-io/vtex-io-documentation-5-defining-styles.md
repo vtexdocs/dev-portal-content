@@ -37,7 +37,7 @@ VTEX Tachyons is a functional CSS structure built on [Tachyons](https://tachyons
 3. Access the [VTEX Tachyons documentation](https://vtex.github.io/vtex-tachyons/) and look for the most appropriate CSS classes according to the customization you want to apply.
 4. In the React component code, declare the desired CSS classes as in the following example:
 
- ```css
+ ```tsx
  const Example = () => (
    <div className="flex justify-center pv4 ph3 bg-base--inverted">
      <p>Hello, World!</p>
@@ -64,19 +64,19 @@ CSS Modules is a tool for defining CSS classes within a separate CSS file that i
 
 3. Still in the `react` folder, access the component file being customized and import the `styles` file, created in step 1. For example:
 
- ```jsx
+ ```tsx
  import styles from './styles.css'
  ```
 
 4. It is also possible to import the `styles` file so that the generated CSS classes are private, that is, they are generated with a unique identifier (*hash*) instead of the traditional `vendor-app-major-x-format-classname`. For this, you need to do an import following the model below:
 
- ```jsx
+ ```tsx
  import styleModule from './style.module.css'
  ```
 
 5. From there, the `styles` imported for your component will be an object whose keys will be the names of the classes you created (`className`). For example:
 
- ```jsx
+ ```tsx
  /* /react/MyButton.tsx */
  import styles from './styles.css'
 
@@ -95,7 +95,7 @@ CSS Modules is a tool for defining CSS classes within a separate CSS file that i
 
 When rendered and inspected, the component will now have the following HTML structure if you chose to follow the *import* model shown in step 3:
 
-```html
+```tsx
 <button class="vtex-my-app-name-0-x-myButton">My button</button>
 ```
 
@@ -125,7 +125,7 @@ There are two possible scenarios:
 1. In your app's `react` folder, access the file of the React component you want.
 2. Copy and paste the following code example in the file:
 
- ```jsx
+ ```tsx
  import { useCssHandles } from 'vtex.css-handles'
 
  const CSS_HANDLES = ['container', 'background', 'text', 'item'] as const
@@ -138,7 +138,7 @@ There are two possible scenarios:
 
 3. In the `CSS_HANDLES` array, replace the exemple strings with new ones (according to the names of the *CSS Handles* you want). You can choose any name for the *CSS Handle*, but remember, it will be used with CSS classes by your app users to personalize HTML elements in stores. We recommend choosing intuitive names. Following the above example, the variable `(CSS_HANDLES)` will be an object using the following format:
 
- ```json
+ ```tsx
  {
    container: 'vtex-foobar-1-x-container',
    background: 'vtex-foobar-1-x-background',
@@ -151,7 +151,7 @@ There are two possible scenarios:
 
 4. Add the new *CSS Handle* to the desired CSS class–according to the HTML element to be customized by app users. Remember to use the `handle` variable when adding it and also the *CSS Handle* name defined in the `CSS_HANDLES` array (like `container`). For example:
 
- ```css
+ ```tsx
      <div className={handles.container}>
        <div className={`${handles.background} bg-red`}>
          <h1 className={`${handles.text} f1 c-white`}>Hello world</h1>
@@ -172,7 +172,7 @@ There are two possible scenarios:
 1. In your app's `react` folder, access the file of the React component you want.
 2. Copy and paste the following code example in the file:
 
- ```jsx
+ ```tsx
  import { withCssHandles } from 'vtex.css-handles'
 
  const CSS_HANDLES = ['text'] as const
@@ -188,7 +188,7 @@ There are two possible scenarios:
 
 *Following the above example, the variable `{ cssHandles }` will be an object using the following format:*
 
- ```json
+ ```tsx
  {
    text: 'vtex-foobar-1-x-text',
  }
@@ -198,7 +198,7 @@ There are two possible scenarios:
 
 4. Add the new *CSS Handle* to the desired CSS class–according to the HTML element to be customized by app users. Remember to use the `handle` variable when adding it and also the *CSS Handle* name defined in the `CSS_HANDLES` array (like `text`). For example:
 
- ```css
+ ```tsx
  <div className={`${cssHandles.text} f1 c-white`}>Hello world</div>
  ```
 
