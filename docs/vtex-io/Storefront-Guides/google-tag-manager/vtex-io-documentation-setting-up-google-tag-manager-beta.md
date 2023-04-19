@@ -20,6 +20,7 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 > ⚠️ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.com/analytics/answer/9539598#find-G-ID), since It will be used later to set up the Google Analytics 4 tag on Google Tag Manager.
 
 ## Installing Google Tag Manager (Beta)
+
 1. Open the VTEX CLI and enter your store’s account. For example:
 ```bash
     vtex login {account-name}
@@ -77,6 +78,7 @@ The [GA4 view_promotion](https://developers.google.com/analytics/devguides/colle
 This event is commonly attached to the promotion banners carousel displayed by the Slider Layout block for example and you can use the Site Editor to configure the `Product ID` and `Product Name`.
 
 ### Supported Events
+
 Check out the available events that [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) can listen to and their equivalent names in UA and GA4:
 
 | VTEX | UA | GA4 |
@@ -97,9 +99,8 @@ Other than the events listed above, GA4 has new events that stores can start tra
 
 The GTM app listens to the following events and send them in the GA4 format:
 
-
 | VTEX | GA4 |
-| ---- | --- | 
+| ---- | --- |
 | vtex:addPaymentInfo| add_payment_info |
 | vtex:addShippingInfo | add_shipping_info |
 | vtex:login| login |
