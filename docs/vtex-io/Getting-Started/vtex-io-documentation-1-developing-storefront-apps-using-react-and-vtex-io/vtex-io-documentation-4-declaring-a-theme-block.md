@@ -83,33 +83,31 @@ After saving your code changes, your new block will be ready to be implemented b
 
 > ℹ️ If the app under development exports more than one theme block, all of these blocks' interfaces must also be declared in the `interfaces.json` file, according to the format presented in this section.
 
-#### Declaring different interfaces by breakpoint
+#### Declaring device-specific interfaces
 
-You may want your app to export different blocks for rendering different components according to the store's breakpoint, in other words, according to the device that is accessing it.
+In some cases, you may want your app to export different blocks to render different components depending on the device accessing the store. You can achieve this by creating different blocks for each possible device and defining different interfaces for each one of them
 
-To do this, you have to create different blocks for each possible device and, consequently, create interfaces for each one of them.
+Let's take an example where you are developing the `hello-world` block and want to create mobile and desktop versions for it. You will have to create the `HelloWorld`, `HelloWorldMobile`, and `HelloWorldDesktop` components, and define interfaces for each one of them, such as `hello-world`, `hello-world.mobile`, and `hello-world.desktop`.
 
-For example, you are developing the `hello-world` block and want to create mobile and desktop versions for it. You will have to create the `HelloWorld`,`HelloWorldMobile`, and `HelloWorldDesktop` components, and define interfaces for each, such as `hello-world`, `hello-world.mobile`, and `hello-world.desktop`.
+The parent block's interface (`hello-world`) should contain only the `component` and `allowed` keys, with the `allowed` key declaring the `hello-world.mobile` and `hello-world.desktop` blocks.
 
-The parent block's `hello-world` interface has to contain only the `component` and `allowed` keys, the latter declaring the `hello-world.mobile` and `hello-world.desktop` blocks.
+The interfaces for the mobile and desktop blocks, in turn, should declare the desired keys, for example `device`, to define the behavior of each block according to the device for which they were designed.
 
-The interfaces for the last blocks, in turn, have to declare the desired keys to define the behavior of each block according to the device for which they were designed, such as the `device` key.
-
-App examples that use different React components for different devices are [Header](https://github.com/vtex-apps/store-header) and [Footer](https://github.com/vtex-apps/store-footer).
+Apps like [Header](https://github.com/vtex-apps/store-header) and [Footer](https://github.com/vtex-apps/store-footer) are good examples that use different React components for different devices.
 
 ### Step 2 - Using your new theme block
 
-We will now implement the new block you created.
+Now, it's time to implement the new block you created in a Store Theme app.
 
-If the VTEX account you are working on already has the Store Theme app for VTEX Store Framework installed, follow the instructions below from step 2. If your account does not yet have the Store Theme app installed, follow the instructions from step 1:
+If the Store Theme app for VTEX Store Framework is already installed in your VTEX account, follow the instructions below starting from step 2. If the app is not yet installed, follow the instructions from step 1:
 
 1. Read carefully [step 3 in the Build stores with Store Framework section](https://developers.vtex.com/docs/guides/getting-started-3) and follow the steps detailed in the article. Once you are done, you will have implemented the standard theme for the VTEX Store Framework and will be ready to test your new block.
-2. Open the Store Theme app folder in your local files using the code editor of your choice.
-3. In the Store Theme `manifest.json` file, add the front app you are developing as a dependency in `dependencies`. For example:
+2. Open the Store Theme app folder using the code editor of your choice.
+3. In the Store Theme `manifest.json` file, add the app you are developing as a dependency in `dependencies`. For example:
 
 ```diff
 "dependencies": {
-+   "yourVTEXAccountName.yourAppName": "0.x",
++   "{accountName}.{appName}": "{appVersion}",
     "vtex.store": "2.x",
     "vtex.store-header": "2.x",
     "vtex.product-summary": "2.x",
@@ -132,11 +130,10 @@ If the VTEX account you are working on already has the Store Theme app for VTEX 
 }
 ```
 
-5. [Link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the store's theme with the VTEX IO platform to verify the results:
+5. [Link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the store's theme with the VTEX IO platform.
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-4-declaring-a-theme-block-0.png)
+ ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-4-declaring-a-theme-block-0.png)
 
-6. Access your VTEX store using the structure `{workspaceName}-{accountName}.myvtex.com`
-   to see your new `hello-world` block being displayed in your development *workspace*:
+6. Access your store using the structure `{workspaceName}-{accountName}.myvtex.com` to see your new `hello-world` block being displayed in your development workspace:
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-4-declaring-a-theme-block-1.png)
