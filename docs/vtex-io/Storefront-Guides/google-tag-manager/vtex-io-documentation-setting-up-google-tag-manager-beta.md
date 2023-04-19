@@ -39,7 +39,8 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 
 1. Install the Google Tag Manager app by running the following command:
 
-```bash
+
+1. Install the Google Tag Manager app by running the following command:
     vtex install vtex.google-tag-manager@3.3.2.beta
 ```
 
