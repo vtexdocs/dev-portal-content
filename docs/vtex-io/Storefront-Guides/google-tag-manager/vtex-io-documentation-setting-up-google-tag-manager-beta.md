@@ -51,6 +51,7 @@ Once the installation is complete, you should see a successful message.
 ![gtm-app-one](https://user-images.githubusercontent.com/67270558/232889771-bdb8c814-4d89-42a3-b48d-4d3cae29f57c.png)
 
 ## Configuring Google Analytics 4 Configuration tag in Google Tag Manager
+
 ### Creating a Google Analytics 4 configuration tag
 To ensure data flows from your store to Google Analytics, create a Google Analytics 4 configuration tag using Measumerent ID in [Google Tag Manager](https://tagmanager.google.com/). To create the tag see the following article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
 
