@@ -139,7 +139,7 @@ When your integration has successfully passed all tests, please open a ticket in
 - **Owner account**: the VTEX account name which will be used in callback requests. This account must be available at *{account}.myvtex.com*.
 - **Allowed Accounts**: describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
 - **New Payment methods**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.
-- **New Payment method purchase flow**: if a “New Payment method” is supported, inform whether it works with Redirect or Payment App. For more information, access [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
+- **New Payment method purchase flow**: if a “New Payment method” is supported, inform whether it works with Redirect or Payment App. For more information, access [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
 
 The SLA required for the VTEX payments team to carry out the homologation is 30 days.
 
