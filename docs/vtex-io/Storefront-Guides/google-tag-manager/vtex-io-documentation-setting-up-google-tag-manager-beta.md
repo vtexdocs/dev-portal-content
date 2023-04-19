@@ -11,32 +11,32 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app"
  - "/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking"
 ---
-> ⚠️ The new version of the VTEX Google Tag Manager is in beta, meaning that we still evolving it. If you agree to use this version, please report any issue you find in the [Issue section on GitHub](https://github.com/vtex-apps/google-tag-manager/issues).
+> ⚠️ The new version of the VTEX Google Tag Manager is currently in beta. If you agree to use this version, please report any issues you find in the [Issue section on GitHub](https://github.com/vtex-apps/google-tag-manager/issues).
 
 ## Before you start
 
-Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This property collects data in parallel with your existing Universal Analytics property. To create the GA4 property, follow [Google’s official guide](https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article).
+Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This property collects data in parallel with your existing Universal Analytics property. To create the GA4 property. Follow [Google’s official guide](https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article).
 
-> ⚠️ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.com/analytics/answer/9539598#find-G-ID), since It will be used later to set up the Google Analytics 4 tag on Google Tag Manager.
+> ⚠️ Take note of the *Measurement ID*, also known as [*G- ID*](https://support.google.com/analytics/answer/9539598#find-G-ID), as it will be used later to set up the Google Analytics 4 tag in Google Tag Manager.
 
 ## Installing Google Tag Manager (Beta)
 
-1. Open the VTEX CLI and enter your store’s account. For example:
+1. Open the VTEX CLI and enter your store’s account:
 ```bash
     vtex login {account-name}
 ```
-> ⚠️ Make sure to replace {account-name} with the store’s account name, for example, `vtex login storecomponents`.
+> ⚠️ Replace `{account-name}` with your store's account name, for example, `vtex login storecomponents`.
 
-2. Create a new development workspace for testing purposes.
+1. Create a new development workspace for testing purposes.
 ```bash
 	vtex use {workspace-name}
 ```
 
-3. Install the Google Tag Manager app by running the following command:
+1. Install the Google Tag Manager app by running the following command:
 ```bash
     vtex install vtex.google-tag-manager@3.3.2.beta
 ```
-Once the installation finished you should see a successful message.
+Once the installation is complete, you should see a successful message.
 
 
 ### Enabling the GA4 setting in the GTM app
@@ -48,24 +48,24 @@ Once the installation finished you should see a successful message.
 
 ## Configuring Google Analytics 4 Configuration tag in Google Tag Manager
 ### Creating a Google Analytics 4 configuration tag
-To ensure data flows from your store to Google Analytics, create a Google Analytics 4 configuration tag using Measumerent ID in [Google Tag Manager](https://tagmanager.google.com/). To create the tag see the following the article Set up the Google Analytics 4 Configuration tag.
+To ensure data flows from your store to Google Analytics, create a Google Analytics 4 configuration tag using Measumerent ID in [Google Tag Manager](https://tagmanager.google.com/). To create the tag see the following article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
 
-Once created the Google Analytics 4 Configuration tag set up each GA4 event:
-1. Download the [container file](https://gist.githubusercontent.com/filipewl/6fab5e75ae938487fe780b1ce213970f/raw/e9bf3db528bca7a07851512e378e53ac7d8ba08d/gtm-ga4-container-template.json). This container adds all the needed tags, triggers, and variables.
+Once the Google Analytics 4 Configuration tag is created, set up each GA4 event as follows:
+1. Download the [container file](https://gist.githubusercontent.com/filipewl/6fab5e75ae938487fe780b1ce213970f/raw/e9bf3db528bca7a07851512e378e53ac7d8ba08d/gtm-ga4-container-template.json). This container adds all the necessary tags, triggers, and variables.
 
-2. Import the container file by following Google’s [Import a container guide](https://support.google.com/tagmanager/answer/6106997?#import). It will add all the needed tags, triggers, and variables.
+2. Import the container file by following Google’s [Import a container guide](https://support.google.com/tagmanager/answer/6106997?#import). It will add all the necessary tags, triggers, and variables.
 
 ![import-container](https://user-images.githubusercontent.com/67270558/232900478-36277198-bc4a-40f2-a7e3-f54b73270fe9.png)
 
-3. In the GTM app, in the GA4 Configuration tag, edit the Measurement ID field.
+3. In the GTM app, in the GA4 Configuration tag, edit the **Measurement ID** field.
 
 > ℹ️ Your measurement ID usually starts with `G-`. To find your Google tag ID, refer to [Find your Google tag ID article](https://support.google.com/analytics/answer/9539598?sjid=16676572490197811169-SA#find-G-ID)
 
-### Testing the Tags fired
-Use the [Preview mode](https://support.google.com/tagmanager/answer/6107056) in Google Tag Manager (GTM) to test that the Google Analytics: GA4 Configuration tag is firing correctly for every page. Additionally, verify that the Google Analytics: GA4 Event tags are firing accurately for user actions such as viewing a product or adding a product to the cart. 
+### Testing Tags in Google Tag Manager
+To test that the Google Analytics: GA4 Configuration tag is firing correctly for every page, use the [Preview mode](https://support.google.com/tagmanager/answer/6107056) in Google Tag Manager (GTM). Additionally, verify that the Google Analytics: GA4 Event tags are firing accurately for user actions such as viewing a product or adding a product to the cart. 
 
-### Testing Events sent to GA4
-Access the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to verify if the events are arriving and the [Reports](https://support.google.com/analytics/answer/9212670) are being filled with data.
+### Testing Events sent to Google Analytics 4
+To verify if the events are arriving and the reports are being filled with data, access the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to verify if the events are arriving and the [Reports](https://support.google.com/analytics/answer/9212670) are being filled with data.
 
 ![DebugView](https://user-images.githubusercontent.com/67270558/232895238-979567b3-38a8-491b-92f8-7c84691d7ccc.png)
 
@@ -75,7 +75,7 @@ Access the Google Analytics Admin and use the [DebugView](https://support.google
 ### View Promotion
 The [GA4 view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion) expects to receive the product’s name or ID associated with it.
 
-This event is commonly attached to the promotion banners carousel displayed by the Slider Layout block for example and you can use the Site Editor to configure the `Product ID` and `Product Name`.
+This event is commonly attached to promotion banners carousel displayed by the Slider Layout block, for example, and you can use the Site Editor to configure the `Product ID` and `Product Name`.
 
 ### Supported Events
 
