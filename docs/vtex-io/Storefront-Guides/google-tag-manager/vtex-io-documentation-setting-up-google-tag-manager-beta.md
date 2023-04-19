@@ -32,8 +32,6 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 
 1. Create a new development workspace for testing purposes.
 
-
-
  vtex use {workspace-name}
 ```
 
