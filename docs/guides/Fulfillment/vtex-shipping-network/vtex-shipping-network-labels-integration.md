@@ -3,7 +3,7 @@ title: "VTEX Shipping Network Labels Integration"
 slug: "vtex-shipping-network-labels-integration"
 hidden: true
 createdAt: "2023-03-01T16:44:01.460Z"
-updatedAt: "2023-03-01T16:44:01.460Z"
+updatedAt: "2023-04-19T16:44:01.460Z"
 ---
 
 [VTEX Shipping Network](https://vtex.com/br-pt/shipping-network/) is the solution that uses order tracking data directly from [carriers](https://help.vtex.com/en/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE) to keep merchants and shoppers up to date with the status of each delivery.
@@ -44,11 +44,11 @@ The order origin can be found using the [Orders API documentation](https://devel
 
 Order with Fulfillment origin:
 
-**POST** - `https://portal.vtexcommerce.com.br/api/transportation/deliverylabels/{orderId}`
+**POST** - `https://api.vtex.com/api/transportation/deliverylabels/{orderId}`
 
 Order with another origin:
 
-**POST** - `https://portal.vtexcommerce.com.br/api/transportation/deliverylabels/{sellerOrderId}`
+**POST** - `https://api.vtex.com/api/transportation/deliverylabels/{sellerOrderId}`
 
 The [authentication](https://developers.vtex.com/docs/guides/authentication-overview#application-keys) headers must be used to call this endpoint:
 
@@ -60,7 +60,7 @@ The [authentication](https://developers.vtex.com/docs/guides/authentication-over
 ### Example cURL request
 
 ```curl
-curl --location --request POST 'https://portal.vtexcommerce.com.br/api/transportation/deliverylabels/{{orderId}}?an={{accountName}}' \
+curl --location --request POST 'https://api.vtex.com/api/transportation/deliverylabels/{{orderId}}?an={{accountName}}' \
 --header 'X-VTEX-API-AppToken: {{token}}' \
 --header 'X-VTEX-API-AppKey: {{appKey}}'
 ```
