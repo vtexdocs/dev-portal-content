@@ -74,6 +74,7 @@ Once the Google Analytics 4 Configuration tag is created, set up each GA4 event 
 To test that the Google Analytics: GA4 Configuration tag is firing correctly for every page, use the [Preview mode](https://support.google.com/tagmanager/answer/6107056) in Google Tag Manager (GTM). Additionally, verify that the Google Analytics: GA4 Event tags are firing accurately for user actions such as viewing a product or adding a product to the cart.
 
 ### Testing Events sent to Google Analytics 4
+
 To verify if the events are arriving and the reports are being filled with data, access the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to verify if the events are arriving and the [Reports](https://support.google.com/analytics/answer/9212670) are being filled with data.
 
 ![DebugView](https://user-images.githubusercontent.com/67270558/232895238-979567b3-38a8-491b-92f8-7c84691d7ccc.png)
