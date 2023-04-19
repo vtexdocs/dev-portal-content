@@ -87,7 +87,6 @@ To test that the Google Analytics: GA4 Configuration tag is firing correctly for
 ### Testing Events sent to Google Analytics 4
 
 ![DebugView](https://user-images.githubusercontent.com/67270558/232895238-979567b3-38a8-491b-92f8-7c84691d7ccc.png)
-
 ## Overview Events
 
 ### View Promotion
