@@ -58,6 +58,7 @@ Once the installation is complete, you should see a successful message.
 To ensure data flows from your store to Google Analytics, create a Google Analytics 4 configuration tag using Measumerent ID in [Google Tag Manager](https://tagmanager.google.com/). To create the tag see the following article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
 
 Once the Google Analytics 4 Configuration tag is created, set up each GA4 event as follows:
+
 1. Download the [container file](https://gist.githubusercontent.com/filipewl/6fab5e75ae938487fe780b1ce213970f/raw/e9bf3db528bca7a07851512e378e53ac7d8ba08d/gtm-ga4-container-template.json). This container adds all the necessary tags, triggers, and variables.
 
 2. Import the container file by following Google’s [Import a container guide](https://support.google.com/tagmanager/answer/6106997?#import). It will add all the necessary tags, triggers, and variables.
