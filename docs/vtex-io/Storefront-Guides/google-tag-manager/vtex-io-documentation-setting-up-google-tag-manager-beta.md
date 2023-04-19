@@ -83,7 +83,8 @@ To test that the Google Analytics: GA4 Configuration tag is firing correctly for
 
 ### Testing Events sent to Google Analytics 4
 
-To verify if the events are arriving and the reports are being filled with data, access the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to verify if the events are arriving and the [Reports](https://support.google.com/analytics/answer/9212670) are being filled with data.
+
+### Testing Events sent to Google Analytics 4
 
 ![DebugView](https://user-images.githubusercontent.com/67270558/232895238-979567b3-38a8-491b-92f8-7c84691d7ccc.png)
 
