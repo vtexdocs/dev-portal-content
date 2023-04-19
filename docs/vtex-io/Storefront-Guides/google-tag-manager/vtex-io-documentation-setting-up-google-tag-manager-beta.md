@@ -93,6 +93,7 @@ To test that the Google Analytics: GA4 Configuration tag is firing correctly for
 
 
 ### View Promotion
+### View Promotion
 
 This event is commonly attached to promotion banners carousel displayed by the Slider Layout block, for example, and you can use the Site Editor to configure the `Product ID` and `Product Name`.
 
