@@ -54,6 +54,7 @@ Once the installation is complete, you should see a successful message.
 ## Configuring Google Analytics 4 Configuration tag in Google Tag Manager
 
 ### Creating a Google Analytics 4 configuration tag
+
 To ensure data flows from your store to Google Analytics, create a Google Analytics 4 configuration tag using Measumerent ID in [Google Tag Manager](https://tagmanager.google.com/). To create the tag see the following article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
 
 Once the Google Analytics 4 Configuration tag is created, set up each GA4 event as follows:
