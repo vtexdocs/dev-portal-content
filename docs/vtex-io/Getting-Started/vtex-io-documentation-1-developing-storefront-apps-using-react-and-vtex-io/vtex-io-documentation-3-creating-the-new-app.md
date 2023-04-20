@@ -6,7 +6,8 @@ createdAt: "2021-03-25T20:58:43.434Z"
 category: "App Development"
 excerpt: "Now that your development environment is set up, it is time to start developing your new React app."
 seeAlso:
- - "/docs/guides/vtex-io-documentation-4-declaring-a-theme-block"
+ - "/docs/guides/vtex-io-documentation-manifest"
+ - "/docs/guides/vtex-io-documentation-builders"
 ---
 
 To begin developing your app, you need to follow these steps:
