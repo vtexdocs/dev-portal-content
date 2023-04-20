@@ -26,7 +26,6 @@ Our components allow you to:
 - Connect and collaborate with other developers, ask questions and share your knowledge at the VTEX Community.
 - **Standardize the way your team develops** frontend code.
 
-*And much more!*
 
 Now that you know what VTEX Store Framework is, dive deeper into it: read the answers to the most [frequently asked questions](https://developers.vtex.com/docs/guides/vtex-io-documentation-frequently-asked-questions) and take a look at some of our [components](https://developers.vtex.com/docs/guides/store-framework-apps).
 
