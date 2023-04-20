@@ -7,7 +7,9 @@ createdAt: "2021-03-25T20:58:43.721Z"
 updatedAt: "2022-12-13T20:17:44.103Z"
 category: "App Development"
 seeAlso:
- - "/docs/guides/vtex-io-documentation-3-creating-the-new-app"
+ - "/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference"
+ - "/docs/guides/vtex-io-documentation-workspace"
+ - "/docs/guides/vtex-io-documentation-creating-a-development-workspace"
 ---
 
 Any development in VTEX IO begins and ends with [**VTEX IO CLI**](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference). It acts as a communication gateway that connects your VTEX account to the VTEX IO development platform.
