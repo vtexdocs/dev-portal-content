@@ -18,9 +18,6 @@ We added the following routes for creating, managing coupons batches:
 - [PUT Archive a coupon batch](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api-v2#put-/coupon/group/-groupingKey-/archive)
 - [POST Create coupon batches](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api-v2#post-/coupon/group)
 - [PUT Unarchive a coupon batch](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api-v2#put-/coupon/group/-groupingKey-/unarchive)
-
-We also added the following routes to see how many times a coupon batch was used and more information. 
-
 - [GET Get usage coupon for a coupon batch](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api-v2#get-/coupon/usage-count/group/-groupingKey-)
 - [GET Get coupon batch information](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api-v2#get-/coupon/group/-groupingKey-)
 - [PUT Edit coupon batch configuration](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api-v2#put-/coupon/group/-groupingKey-)
