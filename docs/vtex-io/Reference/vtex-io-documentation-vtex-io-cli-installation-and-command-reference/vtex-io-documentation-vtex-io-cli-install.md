@@ -78,7 +78,7 @@ According to your operating system, follow the respective steps to install VTEX 
 
 Since VTEX IO CLI is built with [Node.js](https://nodejs.org/en/), you can manually install it via [npm](https://www.npmjs.com/package/vtex). This method is recommended only for environments where auto-updating VTEX IO CLI is not ideal.
 
-> ❗️ We highly recommend using an alternative installation method. If you opt to use npm to install the VTEX IO CLI, remember that CLI won't be automatically updated, and the Node version on your computer might conflict with the one used by CLI developers. If you opt for any other installation method, VTEX IO's CLI will always be up-to-date, and you will avoid installation issues.
+> ❗️ We highly recommend using an alternative installation method. If you opt to use npm to install the VTEX IO CLI, remember that CLI won't be automatically updated, and the Node version on your computer might conflict with the one used by CLI developers. If you opt for any other installation method, VTEX IO CLI will always be up-to-date, and you will avoid installation issues.
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
