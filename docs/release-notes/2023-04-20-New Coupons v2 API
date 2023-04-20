@@ -9,7 +9,7 @@ createdAt: "2019-11-25T14:47:00.000Z"
 
 A [coupon](https://help.vtex.com/en/tutorial/cupons-beta--1aAEN3ADpz19ss5JCIEBdL) consists of a promotional code composed of a sequence of letters and numbers. Coupons may be used to apply promotions to the shopping cart price. By entering a coupon code at checkout, your customers may get discounts on the order price.
 
-VTEX provides [single coupons](https://help.vtex.com/en/tutorial/cupons-beta--1aAEN3ADpz19ss5JCIEBdL#single-coupons) and [coupon batches](https://help.vtex.com/en/tutorial/cupons-beta--1aAEN3ADpz19ss5JCIEBdL#coupon-batches), however there were no routes to enable you to create coupons in bulk, edit and archive all coupons in the same batch. Thinking about this improvement, we updated the Coupons module in VTEX.
+VTEX provides [single coupons](https://help.vtex.com/en/tutorial/coupons-beta--1aAEN3ADpz19ss5JCIEBdL#single-coupons) and [coupon batches](https://help.vtex.com/en/tutorial/coupons-beta--1aAEN3ADpz19ss5JCIEBdL#coupon-batches), however there were no routes to enable you to create coupons in bulk, edit and archive all coupons in the same batch. Thinking about this improvement, we updated the Coupons module.
 
 We added the following routes for creating, managing coupons batches: 
 
