@@ -5,36 +5,37 @@ hidden: false
 createdAt: "2020-06-26T15:56:56.646Z"
 updatedAt: "2022-12-13T20:17:44.804Z"
 ---
-VTEX IO is an enterprise **low-code development platform** that provides performance management, scalability and safety to your project.
 
-It gives you the tools to focus on code that really matters for your business instead of needing to deal with infrastructure problems and challenges - that's our job.  
+VTEX IO is an enterprise **low-code development platform** that provides performance management, scalability, and security to your project.
 
-From *web storefronts* to *custom admin apps* and *back-end integrations*: VTEX IO allows you to develop and evolve fast and safe, mainly through:
+It gives you the tools to focus on code that matters for your business instead of dealing with infrastructure problems and challenges — that's our job.
+
+From *web storefronts* to *custom admin apps* and *backend integrations*: VTEX IO allows you to develop and evolve fast and secure, mainly through:
 
 ## Cloud-native infrastructure
 
-The VTEX IO platform is battle-tested and **scales automatically** to meet your business demands because infrastructure is taken away from the developer.
+The VTEX IO platform is battle-tested and **automatically scales** to meet your business demands, freeing developers from infrastructure concerns.
 
-Forget the servers, focus on your sales: our elastic back-end allows you to maintain up-time throughout traffic surges without having to pre-scale or manually prepare.
+Forget about servers and focus on selling: our scalable backend maintains uptime during traffic surges without requiring pre-scaling or manual preparation.
 
-With nothing to install locally and a command-line application, developers enjoy an unprecedented fast setup time and become productive in record time.
+With no local installation necessary and a command-line application, developers can set up the platform quickly and be more productive in no time.
 
-All local changes to code are immediately synced to our cloud development environment and your software is instantly redeployed. "*Works on my machine*" just became a thing of the past.
+All local code changes are instantly synced to our cloud development environment, and your software is immediately redeployed. *"Works on my machine"* is now a thing of the past.
 
 ## Workspaces
 
-You should be able to deploy changes to code knowing that they will not disrupt your users' experience and will improve your business metrics.
+You should be able to deploy changes to your code without risking disruption to user experience and while improving business metrics. With VTEX IO workspaces, this is exactly what you can do.
 
-VTEX IO Workspaces, as the name implies, allow you to do just that by creating **multiple versions of your code**, synchronizing each workspace to our platform and A/B test them.
+By creating **multiple versions of your code**, synchronizing each workspace to our platform, and A/B testing them, you can confidently deploy changes and measure their impact.
 
 ## Opinionated set of frameworks
 
-Work with familiar and highly productive technologies like TypeScript, React, GraphQL, .NET and Node, using simple and intuitive frameworks which you can learn on-the-go.
+Work with familiar and highly productive technologies like TypeScript, React, GraphQL, .NET, and Node, using intuitive frameworks that are easy to learn on the go.
 
 ### VTEX IO Store Framework
 
-Leveraging from the VTEX IO platform, the **VTEX IO Store Framework solution delivers the needed foundations for any storefront structure**.
+Leveraging from the VTEX IO platform, the **VTEX IO Store Framework solution delivers the necessary foundations for any storefront structure**.
 
-It provides you with high quality, customizable React [store blocks](https://developers.vtex.com/docs/vtex-io-apps) so that you can build (in the fastest possible go-to-market time) comprehensive shopping experiences that never get old.
+It provides you with high-quality, customizable React [store blocks](https://developers.vtex.com/docs/vtex-io-apps), allowing you to quickly build and launch comprehensive shopping experiences that never get old.
 
-> Now that you've understood what VTEX IO and VTEX IO Store Framework are, dig deeper: check out the answers to the most frequently asked questions about the platform [here](https://developers.vtex.com/docs/guides/vtex-io-documentation-frequently-asked-questions).
+> Now that you know what VTEX IO and VTEX IO Store Framework are, dive deeper into it by reading the answers to the most frequently asked questions about the platform [here](https://developers.vtex.com/docs/guides/vtex-io-documentation-frequently-asked-questions).
