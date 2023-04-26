@@ -29,6 +29,7 @@ After sending the request, the endpoint will return the response body containing
 "messages": [],
 
 ```
+
 > ℹ️ For more information about the meaning of each field available in the shopping cart, please refer to the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 
 ## Error codes
