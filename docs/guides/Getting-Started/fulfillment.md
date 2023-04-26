@@ -1,5 +1,5 @@
 ---
-title: "Fulfillment"
+title: "Fulfillment and Logistics"
 slug: "fulfillment"
 hidden: false
 createdAt: "2023-01-11T13:13:50.000Z"
