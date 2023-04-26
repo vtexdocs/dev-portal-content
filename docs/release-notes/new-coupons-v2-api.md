@@ -11,7 +11,7 @@ A [coupon](https://help.vtex.com/en/tutorial/cupons-beta--1aAEN3ADpz19ss5JCIEBdL
 
 VTEX provides [single coupons](https://help.vtex.com/en/tutorial/coupons-beta--1aAEN3ADpz19ss5JCIEBdL#single-coupons) and [coupon batches](https://help.vtex.com/en/tutorial/coupons-beta--1aAEN3ADpz19ss5JCIEBdL#coupon-batches), however there were no routes to enable you to create coupons in bulk, edit and archive all coupons in the same batch. Thinking about this improvement, we updated the Coupons module.
 
-We added the following routes for creating, managing coupons batches: 
+We added the following routes for creating, managing coupons batches:
 
 - [GET: Get Archived Coupons](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api-v2#get-/coupon/group/archived)
 - [GET: Get coupon batch codes](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api-v2#get-/coupon/group/-groupingKey-/codes)
