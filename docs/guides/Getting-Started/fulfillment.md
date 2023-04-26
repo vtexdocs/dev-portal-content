@@ -3,7 +3,7 @@ title: "Fulfillment and Logistics"
 slug: "fulfillment"
 hidden: false
 createdAt: "2023-01-11T13:13:50.000Z"
-updatedAt: "2023-02-27T13:13:50.000Z"
+updatedAt: "2023-04-26T13:13:50.000Z"
 ---
 
 > Help us improve our documentation! Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8)!
