@@ -8,10 +8,7 @@ updatedAt: "2022-12-13T20:17:44.621Z"
 
 According to your operating system, follow the respective steps to install VTEX IO CLI on your computer.
 
-<details>
-  <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
-
-  <br>
+## MacOS
 
 - **Brew**
 
@@ -28,13 +25,7 @@ According to your operating system, follow the respective steps to install VTEX 
   brew install vtex
   ```
 
-<br>
-</details>
-
-<details>
-  <summary><span class="fa fa-linux">&nbsp;</span>Linux</summary>
-
-<br>
+## Linux
 
 - **Tarball**
 
@@ -46,13 +37,7 @@ According to your operating system, follow the respective steps to install VTEX 
   curl -L https://vtex.io/vtexcli/install | sh
   ```
 
-<br>
-</details>
-
-<details>
-  <summary><span class="fa fa-windows">&nbsp;</span>Windows</summary>
-
-<br>
+## Windows
 
 - **Installer for Windows**
 
@@ -70,9 +55,6 @@ According to your operating system, follow the respective steps to install VTEX 
   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-1.png)
 
   You don't have to be in your admin role for the next step.
-
-<br>
-</details>
 
 ## Installing CLI via NPM
 
