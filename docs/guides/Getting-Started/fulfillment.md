@@ -209,7 +209,7 @@ Create carriers’ freight values and retrieve information about them.
 
 ### VTEX Shipping Network (independent App)
 
-[VTEX Shipping Network](https://developers.vtex.com/vtex-rest-api/reference/vtex-shipping-network-api-overview) is an app that connects your store with carriers to deliver orders at better freight costs and with optimized logistic operation. Currently, the solution is available exclusively in Brazil.
+[VTEX Shipping Network](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api) is an app that connects your store with carriers to deliver orders at better freight costs and with optimized logistic operation. Currently, the solution is available exclusively in Brazil.
 
 With VTEX Shipping Network you coordinate the actions of:
 
