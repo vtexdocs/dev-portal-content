@@ -18,6 +18,7 @@ To update an account orderForm configuration, you must use the [Update orderForm
 `https://{accountName}.{environment.com.br}/api/checkout/pvt/configuration/orderForm`
 
 Additionally, you can send the configuration information below that you want to modify in your account’s orderForm:
+
 - `paymentConfiguration`: Payment configuration information. -  `requiresAuthenticationForPreAuthorizedPaymentOption`: Determines whether pre-authorized payments require authentication. - `allowInstallmentsMerge`: In a multi-seller purchase scenario, it allows a flexible installment option that considers maximum installments for each seller according to their respective configuration options. - `paymentSystemToCheckFirstInstallment`: Option to apply a first installment discount to a particular payment system.
 
 - `taxConfiguration`: External tax service configuration information. - `url`: Endpoint URL. - `authorizationHeader`: Authorization header. - `appId`: Custom data ID sent to the tax system.
