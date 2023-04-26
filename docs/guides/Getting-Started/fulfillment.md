@@ -221,7 +221,7 @@ With VTEX Shipping Network you coordinate the actions of:
 
 The endpoint below notifies the carrier of the dispatched package information, including fiscal information, and a contact email.
 
-* [POST - Notify Carrier with App](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/-app_name-/v-app_version-/-account-/-workspace-/notify)
+* [POST - Notify Carrier with App](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/notify)
 
 #### Tracking
 
