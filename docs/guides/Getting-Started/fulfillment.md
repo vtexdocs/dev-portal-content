@@ -231,7 +231,7 @@ The endpoint below updates tracking events for pending deliveries using a list o
 
 ### VTEX Tracking (independent App)
 
-[VTEX Tracking](https://vtex.com/br-pt/tracking/) is an app that enables the merchant to control and manage deliveries in real-time, having visibility of indicators like the driver's location and order delivery status. Shoppers can also keep up with deliveries in real-time. Currently, the solution is available exclusively in Brazil.
+[VTEX Tracking](https://vtex.com/br-pt/vtex-tracking/) is an app that enables the merchant to control and manage deliveries in real-time, having visibility of indicators like the driver's location and order delivery status. Shoppers can also keep up with deliveries in real-time. Currently, the solution is available exclusively in Brazil.
 
 >❗ We strongly recommend that a call to a VTEX Tracking GET endpoint is made only once every 6 hours. Retrieving data from the same endpoint more than once during a 6-hour window represents a load to our API that will slow down the overall usage of systems.
 
