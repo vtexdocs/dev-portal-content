@@ -4,10 +4,15 @@ slug: "using-the-docs-builder-to-publish-app-documentation"
 hidden: false
 createdAt: "2023-04-26T16:05:00.000Z"
 updatedAt: "2023-04-26T16:05:00.000Z"
+excerpt: "Learn how to provide documentation for your users to follow in the VTEX Developer Portal"
 category: "App Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-builders"
+hidePaginationPrevious: false
+hidePaginationNext: false
 ---
+
+## Using the Docs builder to publish app documentation
 
 If you are publishing an app, you might want to be able to provide documentation for your users to follow. The Docs builder allows you to do that, right here in the VTEX Developer Portal.
 
@@ -17,7 +22,9 @@ In short, all Markdown content in the `/docs` folder of your app identified as `
 https://developers.vtex.com/docs/apps/{appvendor}.{appname}@{appversion}
 ```
 
-Check out the instructions to use it below:
+Any app developer can make their documentation publicly available using the docs builder. So even if your app is not published to the VTEX App Store, you can take advantage of this convenience.
+
+> ⚠️ Keep in mind that access is not restricted to accounts/users that have the app installed. **Do not share any information that cannot be public to the web!**
 
 ## Step by step
 
