@@ -227,7 +227,7 @@ The endpoint below notifies the carrier of the dispatched package information, i
 
 The endpoint below updates tracking events for pending deliveries using a list of tracking codes.
 
-* [POST - Tracking Events with App](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
+* [POST - Tracking Events with App](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
 
 ### VTEX Tracking (independent App)
 
