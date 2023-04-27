@@ -73,7 +73,7 @@ Follow the list below to substitute placeholders properly. Once placeholders are
 | appName | Name of the app. This value must follow the kebab case (only minor case letters and the - character). | manifest.json, navigation.json, routes.json, node/service.json, node/constants/variables.ts, react/package.json |
 | appVendor | Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX accountName. | manifest.json, navigation.json, node/routes.json, node/service.json, node/constants/variables.json |
 | appTitle | Title of the app that will appear in the VTEX Admin’s screen and left navigation, once the seller accesses it. | messages/context.json, messages/en.json, messages/pt.json, messages/es.json, node/constants/variables.ts |
-| connectorEndpoint | Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples: https://externalconnector.com or relative URL; https://externalconnector.com/api/vtex. | node/constants/variables.ts, react/areas/ConfigArea/DefaultConfigs/endpoint.tsx |
+| connectorEndpoint | Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples: <https://externalconnector.com> or relative URL; <https://externalconnector.com/api/vtex>. | node/constants/variables.ts, react/areas/ConfigArea/DefaultConfigs/endpoint.tsx |
 | connectorEndpointHost | Endpoint host informed in the connectorEndpoint placeholder. Example: externalconnector.com. | manifest.json |
 | affiliateId | Affiliate identifier code, which consists of three consonants, whether they are repeated or not. | react/areas/ConfigArea/index.tsx |
 | manifestTitle | App’s title in the VTEX App Store. | manifest.json |
