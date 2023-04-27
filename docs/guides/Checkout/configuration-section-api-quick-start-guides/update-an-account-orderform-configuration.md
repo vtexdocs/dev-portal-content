@@ -13,11 +13,12 @@ This guide will describe how to update settings currently applied to every order
 
 ## Updating an account orderForm configuration
 
-To update an account orderForm configuration, you must use the [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) endpoint. In this request, you must send the `accountname` in the URL address, as in the example below:
+To update an account orderForm configuration, you must use the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint. In this request, you must send the `accountname` in the URL address, as in the example below:
 
 `https://{accountName}.{environment.com.br}/api/checkout/pvt/configuration/orderForm`
 
 Additionally, you can send the configuration information below that you want to modify in your account’s orderForm:
+
 - `paymentConfiguration`: Payment configuration information. -  `requiresAuthenticationForPreAuthorizedPaymentOption`: Determines whether pre-authorized payments require authentication. - `allowInstallmentsMerge`: In a multi-seller purchase scenario, it allows a flexible installment option that considers maximum installments for each seller according to their respective configuration options. - `paymentSystemToCheckFirstInstallment`: Option to apply a first installment discount to a particular payment system.
 
 - `taxConfiguration`: External tax service configuration information. - `url`: Endpoint URL. - `authorizationHeader`: Authorization header. - `appId`: Custom data ID sent to the tax system.
@@ -52,7 +53,7 @@ See a request body example below:
 
 After sending the request, the endpoint will return `code 204 (No Content)` and an empty response body.
 
-To confirm that the new orderForm settings have been applied to your account, please access the [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) endpoint again.
+To confirm that the new orderForm settings have been applied to your account, please access the [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm) endpoint again.
 
 ## Error codes
 
