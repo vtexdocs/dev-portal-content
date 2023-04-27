@@ -68,68 +68,19 @@ Follow the list below to substitute placeholders properly. Once placeholders are
 }
 [/block]
 
-<table>
-    <tr>
-        <td><strong>Placeholder</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Files where it can be found</strong></td>
-    </tr>
-    <tr>
-        <td><code>appName</code></td>
-        <td>Name of the app. This value must follow the kebab case (only minor case letters and the `-` character).</td>
-        <td><ol><li>manifest.json</li><li>navigation.json</li><li>routes.json</li><li>node/service.json</li><li>node/constants/variables.ts</li><li>react/package.json</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>appVendor</code></td>
-        <td>Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX `accountName`.</td>
-        <td><ol><li>manifest.json</li><li>navigation.json</li><li>node/routes.json</li><li>node/service.json</li><li>node/constants/variables.json</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>appTitle</code></td>
-        <td>Title of the app that will appear in the VTEX Admin’s screen and left navigation, once the seller accesses it.</td>
-        <td><ol><li>messages/context.json</li><li>messages/en.json</li><li>messages/pt.json</li><li>messages/es.json</li><li>node/constants/variables.ts</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>connectorEndpoint</code></td>
-        <td>Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples: <code>https://externalconnector.com</code> or relative URL; <code>https://externalconnector.com/api/vtex</code>.</td>
-        <td><ol><li>node/constants/variables.ts</li><li>react/areas/ConfigArea/DefaultConfigs/endpoint.tsx</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>connectorEndpointHost</code></td>
-        <td>Endpoint host informed in the connectorEndpoint placeholder. Example: <code>externalconnector.com</code>.</td>
-        <td><ol><li>manifest.json</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>affiliateId</code></td>
-        <td>Affiliate identifier code, which consists of three consonants, whether they are repeated or not.</td>
-        <td><ol><li>react/areas/ConfigArea/index.tsx</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>manifestTitle</code></td>
-        <td>App’s title in the VTEX App Store.</td>
-        <td><ol><li>manifest.json</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>manifestDescription</code></td>
-        <td>App’s description in the VTEX App Store.</td>
-        <td><ol><li>manifest.json</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>mapperId</code></td>
-        <td>Connector’s ID in VTEX Mapper.</td>
-        <td><ol><li>admin/navigation.json</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>feedId</code></td>
-        <td>Connector’s ID in Offer Management.</td>
-        <td><ol><li>node/constants/variables.ts</li></ol></td>
-    </tr>
-    <tr>
-        <td><code>connectorId</code></td>
-        <td>Connector's ID registered in Channel Manager.</td>
-        <td><ol><li>node/constants/variables.json</li></ol></td>
-    </tr>
-</table>
+| Placeholder | Description | Files where it can be found |
+|---|---|---|
+| appName | Name of the app. This value must follow the kebab case (only minor case letters and the - character). | manifest.json, navigation.json, routes.json, node/service.json, node/constants/variables.ts, react/package.json |
+| appVendor | Name of the app’s owner, responsible for its distribution and maintenance. It must be the Partner’s VTEX accountName. | manifest.json, navigation.json, node/routes.json, node/service.json, node/constants/variables.json |
+| appTitle | Title of the app that will appear in the VTEX Admin’s screen and left navigation, once the seller accesses it. | messages/context.json, messages/en.json, messages/pt.json, messages/es.json, node/constants/variables.ts |
+| connectorEndpoint | Base URL of the backend connector to which notifications coming from VTEX will be sent. Examples: https://externalconnector.com or relative URL; https://externalconnector.com/api/vtex. | node/constants/variables.ts, react/areas/ConfigArea/DefaultConfigs/endpoint.tsx |
+| connectorEndpointHost | Endpoint host informed in the connectorEndpoint placeholder. Example: externalconnector.com. | manifest.json |
+| affiliateId | Affiliate identifier code, which consists of three consonants, whether they are repeated or not. | react/areas/ConfigArea/index.tsx |
+| manifestTitle | App’s title in the VTEX App Store. | manifest.json |
+| manifestDescription | App’s description in the VTEX App Store. | manifest.json |
+| mapperId | Connector’s ID in VTEX Mapper. | admin/navigation.json |
+| feedId | Connector’s ID in Offer Management. | node/constants/variables.ts |
+| connectorId | Connector's ID registered in Channel Manager. | node/constants/variables.json |
 
 The fields listed above come with the App Template as default. However, it is possible to remove fields that represent features not used by your integration, like the VTEX Mapper and Offer Management. They are listed ahead in the section [CustomConfigs](#customconfigs).
 
