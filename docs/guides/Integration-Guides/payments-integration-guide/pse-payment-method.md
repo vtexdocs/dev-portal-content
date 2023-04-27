@@ -11,7 +11,7 @@ To provide this information in a way that is frictionless to the shopper experie
 below:
 
 1. Send banks and authentication information to VTEX.
-2. Update the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) or [List Payment Methods](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/payment-methods) API.
+2. Update the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) API.
 3. [POST Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) configuration.
 4. Request through the [VTEX Support Portal](https://help.vtex.com/support) for the payment connector update.
 
@@ -59,13 +59,11 @@ After that, VTEX expects a response body following the structure described below
 }
 ```
 
-## List Payment Provider Manifest / List Payment Methods API Update
+## List Payment Provider Manifest API Update
 
 After forwarding the banking and authentication information to VTEX, it will be necessary for the payment provider to update information in the API, so that the PSE is recognized as a payment method.
 
-The below PSE information should be added in one of the two APIs bellow (according to your choice): 
-
-- [List Payment Provider Manifest API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) 
+The following PSE information should be added on [List Payment Provider Manifest API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
 
 ```json
 {
@@ -77,18 +75,6 @@ The below PSE information should be added in one of the two APIs bellow (accordi
     "allowsSplit": "disabled"
 },
 ...
-]
-...
-}
-```
-
-- [List Payment Methods API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/payment-methods)
-
-```json
-{
-...
-"paymentMethods":[
-       "PSE",
 ]
 ...
 }
