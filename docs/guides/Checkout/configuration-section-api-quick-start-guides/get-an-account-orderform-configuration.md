@@ -15,7 +15,10 @@ This guide describes how to check the following settings, which are currently ap
      - `allowInstallmentsMerge`: In a multi-seller purchase scenario, it allows a flexible installment option that considers maximum installments for each seller according to their respective configuration options. 
      - `paymentSystemToCheckFirstInstallment`: Option to apply a first installment discount to a particular payment system.
 
-- `taxConfiguration`: External tax service configuration information. - `url`: Endpoint URL. - `authorizationHeader`: Authorization header. - `appId`: Custom data ID sent to the tax system.
+- `taxConfiguration`: External tax service configuration information. 
+     - `url`: Endpoint URL. 
+     - `authorizationHeader`: Authorization header. 
+     - `appId`: Custom data ID sent to the tax system.
 
 - `minimumQuantityAccumulatedForItems`: Minimum SKU quantity per cart.
 - `decimalDigitsPrecision`: Number of price digits.
