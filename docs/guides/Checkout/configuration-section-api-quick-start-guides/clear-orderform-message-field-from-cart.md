@@ -10,7 +10,7 @@ The orderForm is the main object processed by VTEX Checkout and one of the most 
 
 This guide will describe how to remove all messages from the `messages` field of the orderForm, leaving it empty.
 
-# Removing all messages from the orderForm message field
+## Removing all messages from the orderForm message field
 
 To remove all messages from the orderForm `messages` field of the shopping cart, you need to use the [Clear orderForm messages](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/messages/clear) endpoint. The `orderFormId` information of the shopping cart must be sent through the URL request, as in the example below:
 
@@ -29,6 +29,7 @@ After sending the request, the endpoint will return the response body containing
 "messages": [],
 
 ```
+
 > ℹ️ For more information about the meaning of each field available in the shopping cart, please refer to the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 
 ## Error codes
