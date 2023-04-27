@@ -133,7 +133,7 @@ The following errors may appear as messages in the response body:
 
 - **Message error example**: `"The requested URL was not found on the server"`. Check if the URL is correct.
 
-```json
+```html
 <body>
     <h1>404 Not Found</h1>
     <p>The requested URL was not found on this server.</p>
