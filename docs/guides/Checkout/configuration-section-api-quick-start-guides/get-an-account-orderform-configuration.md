@@ -9,6 +9,7 @@ updatedAt: "2022-12-12t14:06:21.595z"
 The orderForm is the main object processed by VTEX Checkout and one of the most important data structures in the architecture of every VTEX store. It stores a lot of contextual information about the order, which is essential for processing order information, such as order items, customer personal information, delivery address, and shipping information.
 
 This guide describes how to check the following settings, which are currently applied to every orderForm in a specific account:
+
 - `paymentConfiguration`: Payment configuration information. -  `requiresAuthenticationForPreAuthorizedPaymentOption`: Determines whether pre-authorized payments require authentication. - `allowInstallmentsMerge`: In a multi-seller purchase scenario, it allows a flexible installment option that considers maximum installments for each seller according to their respective configuration options. - `paymentSystemToCheckFirstInstallment`: Option to apply a first installment discount to a particular payment system.
 
 - `taxConfiguration`: External tax service configuration information. - `url`: Endpoint URL. - `authorizationHeader`: Authorization header. - `appId`: Custom data ID sent to the tax system.
