@@ -1,15 +1,65 @@
 ---
 title: "VTEX IO CLI"
 slug: "vtex-io-documentation-vtex-io-cli-installation-and-command-reference"
+excerpt: "Learn more about VTEX IO CLI: a powerful and essential command-line tool for developers to interact with the VTEX platform"
 hidden: false
 createdAt: "2020-06-03T16:02:44.285Z"
 updatedAt: "2022-12-13T20:17:44.776Z"
 ---
 
-> ⚠️ D️ifferent from the previous version, VTEX IO CLI 3.x now has a plugin-based architecture. See [what changed](https://developers.vtex.com/updates/release-notes/new-version-of-vtex-io-cli-released), or follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+The VTEX IO CLI (Command Line Interface) is the starting and ending point for any development on the VTEX platform. It provides developers with the ability to perform a wide range of actions essential to the development process, including linking local files to the VTEX platform, managing workspaces, and releasing new app versions. 
 
-[block:html]
-{
-  "html": "<style>\n    .description p {\n        font-size: 16px;\n        text-align: justify;\n    }\n\n    #docs,\n    #docs tr,\n    #docs td,\n    #docs a {\n        padding-left: 0;\n        border: 0;\n        border-top: 0;\n        outline: 0;\n        background-color: transparent !important;\n        text-decoration: none;\n    }\n\n    #docs a:hover {\n        text-decoration: underline;\n    }\n\n    .vtex-button{\n        background-color: #f71963;\n        color: #fff!important;\n        padding: 1rem 1.5rem;\n        border-radius: 6px;\n        font-style: normal;\n        font-size: .875rem;\n        line-height: 125%;\n        text-align: center;\n        letter-spacing: .5px;\n        font-weight: 400;\n    }\n    .vtex-button:hover{\n        background-color: rgb(217,22,87);\n    }\n</style>\n<div class=\" main-content\">\n\n                <div style=\" float: right;margin:4% 5% 4% 6%;\"><svg width=\"81\" height=\"71\" viewBox=\"0 0 81 71\"\n                        fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                        <rect x=\"1.5\" y=\"1.5\" width=\"78\" height=\"67.9587\" rx=\"14.5\" stroke=\"#142032\" stroke-width=\"3\" />\n                        <path d=\"M34.0569 42.8848H51.6292\" stroke=\"#F71963\" stroke-width=\"3\" stroke-linecap=\"round\"\n                            stroke-linejoin=\"round\">\n                            <animate attributeType=\"XML\" attributeName=\"stroke\" values=\"#F71963;#fff\" dur=\"2s\"\n                                repeatCount=\"indefinite\" />\n                        </path>\n                        <path d=\"M13.9741 12.7608L29.0361 27.8228L13.9741 42.8848\" stroke=\"#142032\" stroke-width=\"3\"\n                            stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n                    </svg>\n</div>\n\n<div class=\"description\">\n    <p>Any development in VTEX IO begins and ends with our CLI (Command Line Interface).\n    </p>\n    <p>VTEX IO's CLI allows you to perform any action necessary to your development process, such as linking\n        local\n        files to the VTEX platform, managing workspaces, and releasing new app versions.</p>\n</div>\n<br>\n<a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install\" style=\"text-decoration:none;\"\n    class=\"vtex-button\">Install the VTEX IO CLI</a>\n<br>\n\n<table id=\"docs\" style=\"margin-top: 50px;\">\n    <tr>\n        <td><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage\">Using the CLI</a></td>\n       \n        <td><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-update\">Updating the CLI</a></td>\n \n    </tr>\n    <tr>\n\t      <td><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins\">Managing plugins</a></td>\n  \n    \t\t <td><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-uninstall\">Uninstalling the CLI</a></td>\n    </tr>\n    <tr>\n        <td><a href=\"https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference\">Command Reference</a></td>\n      \n        <td><a href=\"https://github.com/vtex/toolbelt/blob/master/CHANGELOG.md\">Changelog</a></td>\n       \n    </tr>\n</table>\n\n</div>"
-}
-[/block]
+> ⚠️ Different from the previous version, VTEX IO CLI 3.x has a plugin-based architecture. See [what changed](https://developers.vtex.com/updates/release-notes/new-version-of-vtex-io-cli-released), or access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+
+<Flex>
+
+<WhatsNextCard
+title="Installing VTEX IO CLI"
+description="Learn how to install VTEX IO CLI according to your operating system."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Using VTEX IO CLI"
+description="Discover the most commonly used VTEX IO CLI commands and how to utilize them."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage"
+linkTitle="See more"
+/>
+  
+<WhatsNextCard
+title="Managing plugins"
+description="List, update, install or remove VTEX IO CLI plugins."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Command reference"
+description="Check this comprehensive list of all available VTEX IO CLI commands, their functions, examples, and syntax."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Updating VTEX IO CLI"
+description="Learn how to update the VTEX IO CLI to its latest version."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-update"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Uninstalling VTEX IO CLI"
+description="Learn how to completely uninstall VTEX IO CLI from your machine."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-uninstall"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Changelog"
+description="Check the latest changes in the VTEX IO CLI repository."
+linkTo="https://github.com/vtex/toolbelt/blob/main/CHANGELOG.md"
+linkTitle="See more"
+/>
+ 
+</Flex>

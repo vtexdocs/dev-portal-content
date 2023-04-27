@@ -7,7 +7,7 @@ updatedAt: "2022-11-22T18:39:23.082Z"
 ---
 ![https://img.shields.io/badge/-Deprecated-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-newsletter-0.png)
 
-> ⚠️ **The Newsletter block has been deprecated in favor of the [Newsletter app](https://developers.vtex.com/docs/guides/vtex-store-newsletter/).** Although support for this block is still granted, we strongly recommend you to update your store theme with the Product Specification's blocks in order to keep up with the component's evolution.
+> ⚠️ **The Newsletter block has been deprecated in favor of the [Newsletter app](https://developers.vtex.com/docs/apps/vtex.store-newsletter/).** Although support for this block is still granted, we strongly recommend you to update your store theme with the Product Specification's blocks in order to keep up with the component's evolution.
 
 The `newsletter` block displays a newsletter form.
 

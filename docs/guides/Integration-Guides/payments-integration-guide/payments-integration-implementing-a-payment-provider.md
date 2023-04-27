@@ -9,12 +9,7 @@ The following sections show how to develop the middleware that will interpret th
 
 It also shows that the payment provider protocol consists of nine endpoints, divided into two sessions: **Payment flow** and **Configuration flow**. The middleware must be able to receive the information supplied by all these calls properly.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites)."
-}
-[/block]
+>⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
 
 ## Developing the middleware
 
@@ -33,33 +28,9 @@ With the requirements aligned, we can proceed to the Payment Flow.
 
 The following endpoints are used to implement the operations that happen in the authorization, cancellation or refund, and settlement flows.
 
-**1. GET List Payment Methods**
+**1. GET Manifest**
 
-The first action that your middleware must be ready to return to VTEX is what payment methods are accepted by the provider. 
-
-In the following payload, there is an example of a response that we expect to receive with some of the payment methods used in the industry.
-
-```json
-{
-    "paymentMethods": [
-        "BankInvoice",
-        "DebitCard",
-        "Pix",
-        "CreditCard",
-        "Promissories",
-        "Privatelabels",
-        "Cobranded",
-        "Cash"
-    ]
-}
-```
-We reinforce that it is just an example. While developing the middleware, you should include the payment methods accepted by your system exclusively. 
-
-If you have any questions about this step, you can check the [GET List Payment Methods](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/payment-methods) endpoint documentation.
-
-**2. GET Manifest**
-
-This endpoint exposes the provider manifest, a range of metadata settings, like payment methods, split configuration and custom fields.
+Through this endpoint, the provider's manifest is displayed, consisting of a variety of metadata settings such as payment methods, split configuration, and custom fields.
 
 ```json
 {
@@ -97,7 +68,7 @@ This endpoint exposes the provider manifest, a range of metadata settings, like 
 ```
 If you have any questions about this step, you can check the [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint documentation.
 
-**3. POST Create Payment **
+**2. POST Create Payment**
 
 When a customer makes a purchase at the checkout, the provider must create a payment related to the order. Therefore, the provider must be ready to receive the request body that will contain all the cart information:
 
@@ -179,12 +150,9 @@ When a customer makes a purchase at the checkout, the provider must create a pay
 }
 ```
 The `callbackURL` is an URL used to make retries in the operation flow. In addition, if the partner adopts redirect as a payment flow, you should also include the `returnURL` in the request payload. Thus, VTEX will be able to realize the redirect flow, if necessary. 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Both `callbackURL` and `returnURL` are developed by the provider."
-}
-[/block]
+
+>⚠️ Both `callbackURL` and `returnURL` are developed by the provider.
+
 On the other hand, we need that your provider returns this call with the following response:
 
 ```json
@@ -205,17 +173,14 @@ On the other hand, we need that your provider returns this call with the followi
 }
 ```
 The parameters `delayToAutoSettle` and `delayToAutoSettleAfterAntifraud` define the total of time that the system will wait to start the capture flow. A similar process happens for the parameter  `delayToCancel`, but after the timeout, the system will proceed to the cancellation flow.  
-[block:callout]
-{
-  "type": "warning",
-  "body": "All of these three periods of time are established by the provider and should be counted in seconds."
-}
-[/block]
+
+>⚠️ All of these three periods of time are established by the provider and should be counted in seconds.
+
 Also, the parameters `code` and `message` are fields to which the provider can send us any information about the process. Both are optional and will appear in the next calls.
 
 All the fields are described in the [POST Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) documentation. 
 
-4. **POST Cancel Payment**
+**3. POST Cancel Payment**
 
 To cancel a payment, you must already have created one. Your provider must be ready to receive only two information: the `paymentId`, the identifier of the payment that will be canceled, and the `requestId`, the identifier that ensures its idempotency.
 
@@ -240,7 +205,7 @@ After the provider realizes the payment cancelation, we expect a response like t
 ```
 Refer to the [complete documentation](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations) for more details.
 
-5. **POST Capture Payment**
+**4. POST Capture Payment**
 
 If your transaction was completed successfully, the provider can capture the payment. In fact, it is really important for you to know that VTEX supports partial captures. 
 
@@ -275,7 +240,7 @@ The response will be similar to the request body. But the parameter `value` can 
 ```
 Refer to the [Capture Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements) endpoint documentation for more details.
 
-**6. POST Refund Payment**
+**5. POST Refund Payment**
 
 VTEX also supports partial refunds, it is a similar logic for the capture.  
 
@@ -308,7 +273,7 @@ Remember that, if needed, the provider can return the call with the field `value
 
 Refer to the [Post Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) endpoint for more details.
 
-**7. POST Inbound Request (BETA)**
+**6. POST Inbound Request (BETA)**
 
 The Inbound Request (BETA) implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider. 
 
@@ -343,7 +308,7 @@ An expected response would be:
 }
 ```
 
-Refer to the [Post Inbound Request (BETA)](https://developers.vtex.com/vtex-developer-docs/reference/inboundrequestbeta) endpoint for more details.
+Refer to the [Post Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-) endpoint for more details.
 
 ## Configuration Flow
 
@@ -368,12 +333,9 @@ For the first step, the request body will be:
     "returnUrl": "https://admin.mystore.example.com/provider-return?authorizationCode="
 }
 ```
-[block:callout]
-{
-  "type": "warning",
-  "body": "The `applicationId` will always be \"vtex\"."
-}
-[/block]
+
+>⚠️ The `applicationId` will always be \"vtex\".
+
 Then, the provider should return an identification token so we can redirect the merchant to the provider application.  
 
 ```json
@@ -382,7 +344,7 @@ Then, the provider should return an identification token so we can redirect the 
     "token": "auth_token_39766d98535d43a491d03b8c3bea060f"
 }
 ```
-Refer to the [Create Authorization Token](https://developers.vtex.com/vtex-developer-docs/reference/createauthorizationtoken) endpoint documentation to check all the details.
+Refer to the [Create Authorization Token](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token) endpoint documentation to check all the details.
 
 **2. GET Provider Authentication**
 
@@ -399,9 +361,9 @@ In the response body, we expect an `authorizationCode` related to the `returnUrl
 }
 ```
 
-Refer to the [Get Provider Authentication](https://developers.vtex.com/vtex-developer-docs/reference/providerauthentication) endpoint for more details.
+Refer to the [Get Provider Authentication](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/authorization/redirect) endpoint for more details.
 
-3. **GET Credentials**
+**3. GET Credentials**
 
 Finally, the provider must send us the values of the three credentials. 
 
