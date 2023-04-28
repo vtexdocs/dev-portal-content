@@ -23,10 +23,10 @@ This guide describes how to check the following settings, which are currently ap
 - `minimumQuantityAccumulatedForItems`: Minimum SKU quantity per cart.
 - `decimalDigitsPrecision`: Number of price digits.
 - `minimumValueAccumulated`: Minimum cart value.
-- `apps`: Apps configuration information. 
-     - `id`: App ID. 
-     - `fields`: App fields information. 
-     - `major`: App major version.
+- `apps`: Apps configuration information.
+  - `id`: App ID.
+  - `fields`: App fields information.
+  - `major`: App major version.
 
 - `allowMultipleDeliveries`: Allows selecting items from several delivery channels in the same purchase.
 - `allowManualPrice`: Allows editing SKU prices directly in the cart.
