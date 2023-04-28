@@ -12,7 +12,9 @@ In this article, you can learn about all authentication aspects relevant to deve
 - [Shopper authentication for B2B stores](#shopper-authentication-for-b2b-stores)
 
 > ℹ️️ See this related content:
+> 
 > Authorization: [Users](https://help.vtex.com/en/subcategory/users--63DHe3VQEEE6Uuua8gIs2M), [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [License Manager Resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)
+> 
 > Accounting: [Audit](https://help.vtex.com/en/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA)
 
 ## Machine authentication
