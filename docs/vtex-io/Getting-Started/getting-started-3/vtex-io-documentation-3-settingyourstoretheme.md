@@ -15,7 +15,7 @@ seeAlso:
 
 This article provides a step-by-step guide on how to initiate a storefront project, also known as a Store Theme, for your online store. A Store Theme is a VTEX IO project that uses the `store` builder, and Store Framework blocks to create the storefront of a VTEX online store. The Store Theme is responsible for defining the visual and interactive elements of the store, such as the layout, colors, typography, icons, and animations.
 
-To jumpstart our storefront project, we'll utilize a pre-defined [Store Theme boilerplate app](https://github.com/vtex-apps/store-theme) that will be further adapted to meet specific needs. This boilerplate app streamlines the process of creating a custom store theme by providing pre-defined templates and styles. In the upcoming sections of this getting started guide, we'll define templates, which involve configuring and combining components for each page of the store, and declare styles, such as primary and secondary colors, typography scales, and spacing, that will apply to the store's overall theme.
+To jumpstart our storefront project, we'll utilize a pre-defined [Store Theme boilerplate app](https://github.com/vtex-apps/store-theme) that will be further adapted to meet specific needs. This boilerplate app streamlines the process of creating a custom store theme by providing pre-defined templates and styles. In the upcoming sections of this getting started guide, we'll define templates, which involve configuring and combining components for each page of the store, and declare styles, including primary and secondary colors, typography scales, and spacing.
 
 ## Before you start
 
@@ -64,7 +64,7 @@ It is important to note that the Store Theme boilerplate app you copied to your 
 
 ### Step 3 - Linking your local code to the VTEX IO platform
 
-After setting up your local development environment and cloning the Store Theme boilerplate app, you'll want to sync your changes with the VTEX IO platform to preview them on your website. Since the boilerplate app already includes a default theme, you can immediately see how this theme affect your website's frontend. This is done using a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) the `vtex link` command, which sends your code to the platform and allows you to see your changes in real-time.
+After setting up your local development environment and cloning the Store Theme boilerplate app, you'll want to sync your changes with the VTEX IO platform to preview them on your website. Since the boilerplate app already includes a default theme, you can immediately see how this theme affect your website's frontend. This is done using a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and the `vtex link` command, which sends your code to the platform and allows you to see your changes in real-time.
 
 1. Open the terminal and log in to your VTEX account.
 ```sh
