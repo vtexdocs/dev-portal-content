@@ -20,7 +20,6 @@ In this guide, you will learn how to track and analyze data from your store usin
 
 - Verify that the events are arriving and the reports are being filled with data by accessing the Google Analytics' DebugView  and Reports.
 
-
 - Use the available events that Pixel Apps can listen to and new events that GA4 has introduced to start tracking various user actions such as product impressions, add to cart, order placed, and more.
 
 ## Before you start
@@ -52,3 +51,31 @@ To test that the GA4 Configuration tag is firing correctly for every page, use t
 To verify if the events are arriving and the reports are being filled with data, access the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to verify if the events are arriving and the [Reports](https://support.google.com/analytics/answer/9212670) are being filled with data.
 
 ![gtm-debug-view](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-debug-view___e2dc572dcc33e2e23e81749583226ec8.png)
+
+To see the available events that GA4 can track, refer to the [Overview of Events in Google Analytics 4](##overview-events) section.
+
+## Overview events
+
+This section provides a list of events that GA4 can track.This section also explains the `view_promotion` event, which is usually attached to the promotion banners carousel displayed by the Slider Layout block. 
+### View Promotion
+The [GA4 view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion) expects to receive the product’s name or ID associated with it.
+
+This event is commonly attached to the promotion banners carousel displayed by the Slider Layout block. For example, you can use the Site Editor to configure the `Product ID` and `Product Name`. To access the Site Editor, in the VTEX Admin, go to **Storefront > Site Editor**.
+
+![gtm-site-editor-fields](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-site-editor___bc52365aafad63deb5bfed1d74f307c0.png)
+
+### Supported events
+Check out the available events that [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) can listen to and their equivalent names in UA and GA4:
+
+| VTEX          | UA    | GA4   |
+| ------------- | ----- | ----- |
+
+
+### GA4 events
+
+Besides the events listed in the previous sections, GA4 has new events that stores can start tracking. The full list can be found on [Google documentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm).
+
+The GTM app listens to the following events and sends them in the following corresponding GA4 format:
+
+| VTEX          | GA4   |
+| ------------- | ----- |
