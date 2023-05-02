@@ -1,5 +1,5 @@
 ---
-title: "3. Setting your store's theme"
+title: "3. Creating a Store Theme project"
 slug: "vtex-io-documentation-3-settingyourstoretheme"
 hidden: false
 createdAt: "2020-06-03T16:02:44.903Z"
