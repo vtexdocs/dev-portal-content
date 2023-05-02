@@ -25,7 +25,7 @@ Before downloading the Store Theme app, make sure your VTEX account has the [Sto
 
 ### Step 1 - Downloading the Store Theme app
 
-The VTEX IO CLI offers the `vtex init` command which can quickly copy the Store Theme app repository to your computer, where it may be configured and fine-tuned according to your business needs.
+The VTEX IO CLI simplifies the process of starting a new VTEX IO project by proving a list of pre-defined app templates. In the following steps, we will kick-start a new Store Theme project.
 
 1. Using your terminal, navigate to an already existing local files directory where you want Store Theme to be copied to:
 
