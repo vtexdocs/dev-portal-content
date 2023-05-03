@@ -18,7 +18,8 @@ This guide provides a step-by-step on how to install and configure Google Tag Ma
 
 Before proceeding with the installation, ensure you match the following requisites:
 
-### Access to a Google account 
+### Access to a Google account
+
 You need a Google account to use Google Tag Manager (GTM). If you already use Google products like Gmail, you can use the same account.
 
 If you do not have an account for a Google product, create one by following Google's guide on [Creating your Google account](https://accounts.google.com/signup/v2/webcreateaccount?service=analytics&continue=https%3A%2F%2Ftagmanager.google.com%2F&dsh=S1158101756%3A1642078409369040&biz=true&flowName=GlifWebSignIn&flowEntry=SignUp&nogm=true).
