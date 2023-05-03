@@ -73,6 +73,16 @@ Check out the available events that [Pixel Apps](https://developers.vtex.com/doc
 
 | VTEX          | UA    | GA4   |
 | ------------- | ----- | ----- |
+| vtex:promoView | [promoView](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-impressions) | [view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#view_promotion) |
+| vtex:promotionClick | [promoClick](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-clicks) | [select_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#select_promotion) |
+| vtex:productView | [detail](https://developers.google.com/tag-manager/enhanced-ecommerce#details) | [view_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#view_item) |
+| vtex:productImpression | [impressions](https://developers.google.com/tag-manager/enhanced-ecommerce#product-impressions) | [view_item_list](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#view_item_list) |
+| vtex:productClick | [click](https://developers.google.com/tag-manager/enhanced-ecommerce#product-clicks) | [select_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#select_item) |
+| vtex:addToCart | [add](https://developers.google.com/tag-manager/enhanced-ecommerce#add) | [add_to_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#add_to_cart) |
+| vtex:removeFromCart | [remove](https://developers.google.com/tag-manager/enhanced-ecommerce#remove) | [remove_from_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#remove_from_cart) |
+| vtex:cartLoaded| [checkout](https://developers.google.com/analytics/devguides/collection/ua/gtm/enhanced-ecommerce#checkout) | [begin_checkout](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#begin_checkout) |
+| vtex:orderPlaced | [purchase](https://developers.google.com/tag-manager/enhanced-ecommerce#purchases) | [purchase](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#purchase) |
+
 
 ### GA4 events
 
@@ -82,3 +92,13 @@ The GTM app listens to the following events and sends them in the following corr
 
 | VTEX          | GA4   |
 | ------------- | ----- |
+| vtex:addPaymentInfo | add_payment_info |
+| vtex:addShippingInfo | add_shipping_info |
+| vtex:login | login |
+| vtex:signUp | sign_up |
+| vtex:viewCart | view_cart |
+| vtex:beginCheckout | begin_checkout |
+| vtex:refund | refund |
+| vtex:addToWishlist | add_to_wishlist |
+| vtex:search | search |
+| vtex:share| share |
