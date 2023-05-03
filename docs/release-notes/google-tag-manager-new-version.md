@@ -21,6 +21,7 @@ To aid in this transition, VTEX has released a new Google Tag Manager (GTM) vers
 ## Why are we making this change?
 
 We are presenting the new version of VTEX Google Tag Manager app to help:
+
 - Migrate from the Universal Analytics property settings to Google Analytics 4.
 - Keep your store compatible with Google Analytics 4.
 - Obtain relevant data on navigation through the most current version of the Google tool.
