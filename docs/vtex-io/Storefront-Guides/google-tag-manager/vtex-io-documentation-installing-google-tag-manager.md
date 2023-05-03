@@ -13,6 +13,7 @@ seeAlso:
 This guide provides a step-by-step on how to install and configure Google Tag Manager (GTM) on Store Framework stores. The guide also highlights some restrictions to avoid performance issues and unpredictable behavior, including blocklists for custom HTML tags and variables.
 
 > ⚠️ If you have already installed the Google Tag Manager app, navigate to this guide's section titled [Create a Google Analytics 4 property](#create-a-google-analytics-4-property) to create the property. Then, follow the instructions in [Step 2: to enable the GA4 setting in the GTM app](#step-2-enabling-the-ga4-setting-in-the-gtm-app).
+>
 ## Before you start
 
 Before proceeding with the installation, ensure you match the following requisites:
