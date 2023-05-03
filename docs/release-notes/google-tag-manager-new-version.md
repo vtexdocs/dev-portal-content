@@ -28,6 +28,3 @@ To aid in this transition, VTEX has released a new Google Tag Manager (GTM) vers
 - Obtain relevant data on navigation through the most current version of the Google tool.
 
 ## What needs to be done?
-
-
-
