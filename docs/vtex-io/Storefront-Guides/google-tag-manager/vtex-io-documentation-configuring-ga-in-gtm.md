@@ -14,7 +14,6 @@ In this guide, you will learn how to track and analyze data from your store usin
 
 - Set up GA4 events by downloading and importing a container file, adding necessary tags, triggers, and variables, and editing the Measurement ID field with your Google tag ID.
 
-
 - Test that the GA4 Configuration tag is firing correctly on every page and ensure that the GA4 Event tags accurately track user actions such as viewing a product or adding a product to the cart.
 
 
