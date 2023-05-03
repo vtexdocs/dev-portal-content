@@ -58,7 +58,8 @@ To see the available events that GA4 can track, refer to the [Overview of Events
 
 ## Overview events
 
-This section provides a list of events that GA4 can track.This section also explains the `view_promotion` event, which is usually attached to the promotion banners carousel displayed by the Slider Layout block. 
+This section provides a list of events that GA4 can track.This section also explains the `view_promotion` event, which is usually attached to the promotion banners carousel displayed by the Slider Layout block.
+
 ### View Promotion
 The [GA4 view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion) expects to receive the product’s name or ID associated with it.
 
