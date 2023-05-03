@@ -3,7 +3,7 @@ title: "Google Tag Manager"
 slug: "google-tag-manager"
 hidden: false
 createdAt: "2022-01-13T14:20:38.126Z"
-updatedAt: "2022-02-01T17:19:48.865Z"
+updatedAt: "2023-05-03T12:19:48.865Z"
 category: "VTEX IO Apps"
 ---
 
@@ -29,11 +29,3 @@ linkTo="/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
 linkTitle="See more"
 />
 
-<WhatsNextCard
-title="Migrating Google Tag Manager app from major 2.x to major 3.x"
-description="Step-by-step to update the Google Tag Manager app to version 3.x."
-linkTo="/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
-linkTitle="See more"
-/>
-
-</Flex>
