@@ -27,4 +27,5 @@ We are presenting the new version of VTEX Google Tag Manager app to help:
 - Obtain relevant data on navigation through the most current version of the Google tool.
 
 ## What needs to be done?
+
 Refer to the [Google Tag Manager guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-google-tag-manager) to configure the Google Analytics 4 settings.
