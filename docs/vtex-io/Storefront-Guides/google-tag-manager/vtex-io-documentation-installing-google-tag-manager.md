@@ -35,6 +35,7 @@ Once you've created a container, you can find its GTM ID in the `Container ID` c
 Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This property collects data in parallel with your existing Universal Analytics (UA) property. To create the GA4 property, follow [Google’s official guide](https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article).
 
 ### Take note of GTM settings
+
 Take note of the Measurement ID, also known as [*G- ID*](https://support.google.com/analytics/answer/9539598#find-G-ID), since it will be used later to set up the GA4 tag on GTM.
 
 ## Step-by-step
