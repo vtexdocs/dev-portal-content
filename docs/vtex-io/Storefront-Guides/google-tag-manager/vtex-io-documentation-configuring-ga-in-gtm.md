@@ -69,6 +69,7 @@ This event is commonly attached to the promotion banners carousel displayed by t
 ![gtm-site-editor-fields](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-site-editor___bc52365aafad63deb5bfed1d74f307c0.png)
 
 ### Supported events
+
 Check out the available events that [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) can listen to and their equivalent names in UA and GA4:
 
 | VTEX          | UA    | GA4   |
