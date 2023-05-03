@@ -21,6 +21,7 @@ In this guide, you will learn how to track and analyze data from your store usin
 - Use the available events that Pixel Apps can listen to and new events that GA4 has introduced to start tracking various user actions such as product impressions, add to cart, order placed, and more.
 
 ## Before you start
+
 Before proceeding any further, make sure you have the following requisites:
 
 1. Installed and configured the VTEX Google Tag Manager app. For more information, refer to [Installing Google Tag Manager](/docs/guides/vtex-io-documentation-installing-google-tag-manager).
