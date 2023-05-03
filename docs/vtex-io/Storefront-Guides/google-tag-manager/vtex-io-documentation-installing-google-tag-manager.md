@@ -25,6 +25,7 @@ You need a Google account to use Google Tag Manager (GTM). If you already use Go
 If you do not have an account for a Google product, create one by following Google's guide on [Creating your Google account](https://accounts.google.com/signup/v2/webcreateaccount?service=analytics&continue=https%3A%2F%2Ftagmanager.google.com%2F&dsh=S1158101756%3A1642078409369040&biz=true&flowName=GlifWebSignIn&flowEntry=SignUp&nogm=true).
 
 ### Access to a GTM Container
+
 To use a GTM ID in your store, you'll need a GTM container. If you don't have one already, follow the steps in the [create a new account and container tutorial](https://support.google.com/tagmanager/answer/6103696?hl=en#install).
 
 Once you've created a container, you can find its GTM ID in the `Container ID` column. Be sure to take note of this ID, as you'll need it later during the installation process.
