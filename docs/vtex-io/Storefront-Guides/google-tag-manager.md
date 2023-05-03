@@ -23,16 +23,9 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Setting up Google Tag Manager"
-description="Step-by-step to set up the Google Tag Manager app with variables, triggers, and tags."
-linkTo="/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
-linkTitle="See more"
-/>
-
-<WhatsNextCard
-title="Migrating Google Tag Manager app from major 2.x to major 3.x"
-description="Step-by-step to update the Google Tag Manager app to version 3.x."
-linkTo="/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
+title="Configuring Google Analytics 4 Configuration tag in Google Tag Manager"
+description="Learn how to track and analyze data from your store using Google Analytics 4."
+linkTo="/docs/guides/vtex-io-documentation-configuring-ga-in-gtm"
 linkTitle="See more"
 />
 
