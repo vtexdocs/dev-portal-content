@@ -55,7 +55,8 @@ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.
 
 
 
-### Step 2: Enabling the GA4 setting in the GTM app
+
+
 
 In the VTEX Admin, access **Apps > My apps**, check the box **Send Google Analytics 4 Events**, and click `Save`.
 
