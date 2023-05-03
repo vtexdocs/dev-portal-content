@@ -1,7 +1,7 @@
 ---
 title: "Migrating Google Tag Manager app from major 2.x to major 3.x"
 slug: "vtex-io-documentation-migrating-google-tag-manager-app"
-hidden: false
+hidden: true
 createdAt: "2021-10-27T17:53:23.675Z"
 updatedAt: "2022-12-13T20:17:44.057Z"
 category: "Storefront Development"
@@ -11,7 +11,7 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
 ---
 
-Version 3.x of [VTEX’s Google Tag Manager (GTM) app](https://developers.vtex.com/docs/guides/vtex-google-tag-manager) tracks the entire user’s journey through the store, from viewing a product to purchasing it, via events triggered by the variable `ecommerceV2`.
+Version 3.x of VTEX’s Google Tag Manager (GTM) app tracks the entire user’s journey through the store, from viewing a product to purchasing it, via events triggered by the variable `ecommerceV2`.
 
 New and rearranged properties were added to the product schema to represent on the events and to track the user's journey and keep product information consistent across all areas of the store.
 
