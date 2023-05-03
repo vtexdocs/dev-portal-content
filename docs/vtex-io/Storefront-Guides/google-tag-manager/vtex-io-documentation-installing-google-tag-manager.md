@@ -71,7 +71,7 @@ To avoid performance issues and unpredictable behavior, the VTEX IO Google Tag M
 
 > ⚠️ The HTML blocklist is a VTEX Google Tag Manager app's default. If you want to disable this restriction, go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.x/setup` and check the box *Allow Custom HTML tags*.
 
-The most widely used Custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs a Custom HTML for one of those cases, the integration can be done by transforming the tags into a [VTEX IO Pixel App](/docs/guides/pixel-apps) or by removing this restriction.
+The most widely used Custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs a Custom HTML for one of those cases, the integration can be done by transforming the tags into a [VTEX IO Pixel App](https://developers.vtex.com/docs/guides/pixel-apps) or by removing this restriction.
 
 Check below the list of tags and variables that are blocked, by default, in the VTEX IO Google Tag Manager app:
 
