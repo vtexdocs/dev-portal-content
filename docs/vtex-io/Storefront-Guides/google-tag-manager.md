@@ -25,7 +25,7 @@ linkTitle="See more"
 <WhatsNextCard
 title="Configuring Google Analytics 4 Configuration tag in Google Tag Manager"
 description="Learn how to track and analyze data from your store using Google Analytics 4."
-linkTo="/docs/guides/vtex-io-documentation-configuring-ga-in-gtm"
+linkTo="/tbd"
 linkTitle="See more"
 />
 

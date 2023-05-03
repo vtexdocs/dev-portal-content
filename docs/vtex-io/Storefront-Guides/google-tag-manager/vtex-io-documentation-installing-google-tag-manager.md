@@ -7,7 +7,7 @@ updatedAt: "2023-05-02T20:17:44.697Z"
 excerpt: "Step-by-step on how to install the Google Tag Manager app in your VTEX Admin."
 category: "Storefront Development"
 seeAlso:
- - "/docs/guides/vtex-io-documentation-configuring-ga-in-gtm"
+ - "/tbd"
 ---
 
 This guide provides a step-by-step on how to install and configure Google Tag Manager (GTM) on Store Framework stores. The guide also highlights some restrictions to avoid performance issues and unpredictable behavior, including blocklists for custom HTML tags and variables. 

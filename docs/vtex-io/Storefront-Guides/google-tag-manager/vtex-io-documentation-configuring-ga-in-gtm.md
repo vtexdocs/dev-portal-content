@@ -7,7 +7,7 @@ updatedAt: "2023-05-02T20:17:44.697Z"
 excerpt: "In this guide, you will learn how to track and analyze data from your store using Google Analytics 4"
 category: "Storefront Development"
 seeAlso:
- - "/docs/guides/vtex-io-documentation-installing-google-tag-manager"
+ - "/tbd"
 ---
 
 In this guide, you will learn how to track and analyze data from your store using Google Analytics 4. Specifically, you will:
