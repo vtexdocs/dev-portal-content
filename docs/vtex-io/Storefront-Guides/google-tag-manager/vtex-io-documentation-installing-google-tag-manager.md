@@ -63,7 +63,8 @@ In the VTEX Admin, access **Apps > My apps**, check the box **Send Google Analyt
 Once you have installed the app and check the box **Send Google Analytics 4 Events**, go to [Configuring Google Analytics 4 Configuration tag in Google Tag Manager](/tbd) documentation and learn how to set up the variables, triggers, and tags necessary for the app to work.
 
 ## Restrictions
-To avoid performance issues and unpredictable behavior, the VTEX IO Google Tag Manager app uses the native GTM blocklist feature. This feature is thoroughly explained on the  [Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/restrict), but in short, it allows the app to block certain types of tags, variables, and triggers from firing. By default, the blocklist includes the HTML ID, which automatically blocks all the tags, variables, and triggers of the type `customScripts`. The main consequence of this blocklist is that Custom HTML tags are not triggered. 
+
+To avoid performance issues and unpredictable behavior, the VTEX IO Google Tag Manager app uses the native GTM blocklist feature. This feature is thoroughly explained on the  [Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/restrict), but in short, it allows the app to block certain types of tags, variables, and triggers from firing. By default, the blocklist includes the HTML ID, which automatically blocks all the tags, variables, and triggers of the type `customScripts`. The main consequence of this blocklist is that Custom HTML tags are not triggered.
 
 > ⚠️ The HTML blocklist is a VTEX Google Tag Manager app's default. If you want to disable this restriction, go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.x/setup` and check the box *Allow Custom HTML tags*.
 
