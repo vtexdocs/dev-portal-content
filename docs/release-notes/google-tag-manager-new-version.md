@@ -19,6 +19,7 @@ To aid in this transition, VTEX has released a new Google Tag Manager (GTM) vers
 ![gtm-in-admin](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-new-field___bf665f34409d6d7cbcfc79239e277ee0.png)
 
 ## Why are we making this change?
+
 We are presenting the new version of VTEX Google Tag Manager app to help:
 - Migrate from the Universal Analytics property settings to Google Analytics 4.
 - Keep your store compatible with Google Analytics 4.
