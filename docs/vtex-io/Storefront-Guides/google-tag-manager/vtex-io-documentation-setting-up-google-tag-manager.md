@@ -6,7 +6,6 @@ createdAt: "2020-06-03T16:02:44.272Z"
 updatedAt: "2023-05-13T11:50:44.813Z"
 category: "Storefront Development"
 excerpt: "In this guide, you will learn how to track and analyze data from your store using Google Analytics 4"
-
 ---
 
 In this guide, you will learn how to track and analyze data from your store using Google Analytics 4. Specifically, you will:
