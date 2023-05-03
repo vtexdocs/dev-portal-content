@@ -6,7 +6,7 @@ createdAt: "2022-09-08t14:21:08.318z"
 updatedAt: "2022-09-08t14:21:08.318z"
 ---
 
-The controls listed in this article can be used by your store's *frontend* developer to create the store page layout in the **Storefront > Layout** module.
+The controls listed in this article can be used by your store's frontend developer to create the store page layout in the **Storefront > Layout** module.
 
 - [General controls](#general-controls)
 - [Product page controls](#controls-for-product-pages)
