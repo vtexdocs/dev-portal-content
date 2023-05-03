@@ -75,7 +75,6 @@ Check out the available events that [Pixel Apps](https://developers.vtex.com/doc
 | VTEX          | UA    | GA4   |
 | ------------- | ----- | ----- |
 
-
 ### GA4 events
 
 Besides the events listed in the previous sections, GA4 has new events that stores can start tracking. The full list can be found on [Google documentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm).
