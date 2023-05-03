@@ -16,7 +16,6 @@ In this guide, you will learn how to track and analyze data from your store usin
 
 - Test that the GA4 Configuration tag is firing correctly on every page and ensure that the GA4 Event tags accurately track user actions such as viewing a product or adding a product to the cart.
 
-
 - Verify that the events are arriving and the reports are being filled with data by accessing the Google Analytics' DebugView  and Reports.
 
 - Use the available events that Pixel Apps can listen to and new events that GA4 has introduced to start tracking various user actions such as product impressions, add to cart, order placed, and more.
