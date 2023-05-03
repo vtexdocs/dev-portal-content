@@ -11,6 +11,7 @@ To assist with this migration, stores using VTEX IO can benefit from the new VTE
 > ⚠️ If you have a store using Portal CMS Legacy, refer to the offical [announcement](https://help.vtex.com/en/announcements/upgrade-your-store-to-google-analytics-4--01mmrSck8nvXAKsypecT9V).
 
 ## What has changed?
+
 As of July 1st, 2023, Google Analytics 4 (GA4) will be the only operational version of the tool, as the processing of events by Universal Analytics will be discontinued. Therefore, VTEX users are strongly encouraged to transition to GA4 to continue receiving valuable analytical insights for their stores.
 
 To aid in this transition, VTEX has released a new Google Tag Manager (GTM) version capable of sending events in both UA and GA4 formats. To activate this, it is necessary to enable the new **Send Google Analytics 4 Events** setting on the app's Admin and configure some GA4 tags on GTM.
