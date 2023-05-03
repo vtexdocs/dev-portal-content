@@ -43,7 +43,6 @@ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.
 ### Step 1: Installing the Google Tag Manager in Admin
 
 1. In the VTEX Admin, access **Apps > App Store.**
-   
 2. Search for the Google Tag Manager app and click on `Install`. You will be redirected to the [App Store page](https://apps.vtex.com/vtex-google-tag-manager/p).
    
 3. Login in to your App Store account if you still need to enter. After logging into your account, if the page redirects you to the [App Store landing page](https://apps.vtex.com/), go to the search field, type Google Tag Manager and click on the app.
