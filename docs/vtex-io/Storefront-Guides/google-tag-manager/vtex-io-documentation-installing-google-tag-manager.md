@@ -50,7 +50,6 @@ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.
 > ℹ️ The GTM is a free app.
 
 6. Click `GO TO INSTALL PAGE`. This will redirect you to the GTM setup page, where you'll see a warning message about entering the necessary GTM configurations.
-   
 7. Type your **GTM ID** in the Google Tag Manager field.
 
 8. Click `Save`.
