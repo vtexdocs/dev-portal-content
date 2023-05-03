@@ -7,6 +7,7 @@ updatedAt: "2023-05-13T11:50:44.813Z"
 category: "Storefront Development"
 excerpt: "In this guide, you will learn how to track and analyze data from your store using Google Analytics 4"
 ---
+> ⚠️ This documentation is currently under development. We'll communicate once we have the final revision.
 
 In this guide, you will learn how to track and analyze data from your store using Google Analytics 4. Specifically, you will:
 
@@ -32,7 +33,7 @@ Before proceeding any further, make sure you have the following requisites:
 
 Once the GA4 Configuration tag is created, set up all GA4 events as follows:
 
-1. Download the [container file](https://gist.githubusercontent.com/filipewl/6fab5e75ae938487fe780b1ce213970f/raw/e9bf3db528bca7a07851512e378e53ac7d8ba08d/gtm-ga4-container-template.json). This container adds all the necessary tags, triggers, and variables.
+1. Download the container file (coming soon). This container adds all the necessary tags, triggers, and variables.
 
 2. Import the container file by following Google’s [Import a container guide](https://support.google.com/tagmanager/answer/6106997?#import). This will add all the necessary tags, triggers, and variables to the workspace.
 
