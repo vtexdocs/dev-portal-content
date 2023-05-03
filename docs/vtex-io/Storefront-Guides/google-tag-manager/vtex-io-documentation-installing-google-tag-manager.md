@@ -85,4 +85,3 @@ Check below the list of tags and variables that are blocked, by default, in the 
 - Custom JavaScript Variable - jsm
 
 Check out a list with all the GTM available tags on [the Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/datalayer).
-
