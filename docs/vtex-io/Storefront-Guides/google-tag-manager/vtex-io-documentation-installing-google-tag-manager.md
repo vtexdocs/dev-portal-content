@@ -55,9 +55,6 @@ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.
 
 
 
-
-
-
 In the VTEX Admin, access **Apps > My apps**, check the box **Send Google Analytics 4 Events**, and click `Save`.
 
 ![gtm-new-field](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-new-field___bf665f34409d6d7cbcfc79239e277ee0.png)
