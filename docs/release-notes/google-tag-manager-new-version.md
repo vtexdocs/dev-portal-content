@@ -25,3 +25,5 @@ To aid in this transition, VTEX has released a new Google Tag Manager (GTM) vers
 - Obtain relevant data on navigation through the most current version of the Google tool.
 
 ## What needs to be done?
+
+Refer to the [Installing Google Tag Manager](/docs/guides/vtex-io-documentation-installing-google-tag-manager) and the [Setting up Google Tag Manager](/docs/guides/vtex-io-documentation-setting-up-google-tag-manager) to configure the Google Analytics 4 settings.
