@@ -4,11 +4,11 @@ excerpt: "Prepare you store for Google Analytics 4 with the new version of VTEX'
 createdAt: "2023-05-03T16:47:00.000Z"
 ---
 
-Starting on July 1st, 2023, Google Analytics 4 (GA4) will become Google's official data analysis tool, replacing the current version, Universal Analytics (UA). [According to Google's official announcement](https://support.google.com/analytics/answer/11583528), this change requires stores to migrate their UA property settings to GA4 before July 1st to continue tracking data navigation.
+Starting on July 1st, 2023, Google Analytics 4 (GA4) will become Google's official data analysis tool, replacing the current version, Universal Analytics (UA). According to [Google's official announcement](https://support.google.com/analytics/answer/11583528), this change requires stores to migrate their UA property settings to GA4 before July 1st to continue tracking data navigation.
 
-To assist with this migration, stores using VTEX IO can benefit from the new VTEX Google Tag Manager (GTM) app version. The app allows stores to send events in the GA4 format while still sending UA events, facilitating a smooth transition to GA4.
+To assist with this migration, Store Framework stores can benefit from the new VTEX Google Tag Manager (GTM) app version. The app allows stores to send events in the GA4 format while still sending UA events, facilitating a smooth transition to GA4.
 
-> ⚠️ If you have a store using Portal CMS Legacy, refer to the offical [announcement](https://help.vtex.com/en/announcements/upgrade-your-store-to-google-analytics-4--01mmrSck8nvXAKsypecT9V).
+> ⚠️ If you have a store using Legacy CMS Portal, refer to the [Help Center announcement](https://help.vtex.com/en/announcements/upgrade-your-store-to-google-analytics-4--01mmrSck8nvXAKsypecT9V).
 
 ## What has changed?
 
@@ -25,3 +25,5 @@ To aid in this transition, VTEX has released a new Google Tag Manager (GTM) vers
 - Obtain relevant data on navigation through the most current version of the Google tool.
 
 ## What needs to be done?
+
+Refer to the [Installing Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-google-tag-manager) and the [Setting up Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager) to configure the Google Analytics 4 settings.
