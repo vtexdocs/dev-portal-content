@@ -32,7 +32,7 @@ Before proceeding any further, make sure you have the following requisites:
 
 Once the GA4 Configuration tag is created, set up all GA4 events as follows:
 
-1. Download the <a href="https://gist.githubusercontent.com/filipewl/6fab5e75ae938487fe780b1ce213970f/raw/3648454449222241dd2eccc3dc8b24a75f82d924/gtm-ga4-container-template.json" download>container file</a>. This container adds all the necessary tags, triggers, and variables.
+1. Download the <a href="https://developers.vtex.com/container-template.json" download>container file</a>. This container adds all the necessary tags, triggers, and variables.
 
 2. Import the container file by following Google’s [Import a container guide](https://support.google.com/tagmanager/answer/6106997?#import). This will add all the necessary tags, triggers, and variables to the workspace.
 
