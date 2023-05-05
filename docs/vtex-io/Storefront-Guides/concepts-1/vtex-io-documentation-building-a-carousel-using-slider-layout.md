@@ -55,7 +55,7 @@ Check the instructions below for more information.
   },
 ```
 
-> ⚠️ Note that **list blocks do not render anything in your store**, they simply hold content that can be edited using Site Editor and pass it down to their child blocks.
+> ⚠️ Note that list blocks do not render anything in your store. Instead, they hold content that can be edited using Site Editor and pass it down to their child blocks.
 
 4. Now that you have specified which information, an image in this case, will be displayed in your slider using a `list` block, you need to configure the [slider properties](https://developers.vtex.com/docs/guides/vtex-slider-layout) themselves, meaning the properties of `slider-layout`.
 
