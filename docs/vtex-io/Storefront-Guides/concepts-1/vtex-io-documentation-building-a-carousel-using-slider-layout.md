@@ -90,7 +90,7 @@ Check the instructions below for more information.
   }
 ```
 
-And there you go! Now you have a fully functioning carousel for your store.
+Now you have a fully functioning carousel for your store.
 
 ![gif-caroulsel-slider-layout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-carousel-using-slider-layout-0.gif) *When inspecting the page, you will notice that the `carousel` block was not used to build the component.*
 
