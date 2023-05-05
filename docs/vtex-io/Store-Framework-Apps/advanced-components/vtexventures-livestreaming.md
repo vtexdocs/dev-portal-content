@@ -178,65 +178,15 @@ Once finished, you can request the recording of your event in **Recording the ev
 
 ## Customization
 
-To apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
+To apply CSS customizations in this and other blocks is done through the customization module.
 
-| CSS Handles                       |
-| --------------------------------- |
-| `analiticsBlocksContainer`        |
-| `answerContent`                   |
-| `answerText`                      |
-| `answerVotes`                     |
-| `backgroundBlue`                  |
-| `buttonContenModal`               |
-| `chackIconCorner`                 |
-| `chatArea`                        |
-| `chatBubble`                      |
-| `chatMessage`                     |
-| `chatText`                        |
-| `chatTextContainer`               |
-| `chatTime`                        |
-| `chatUser`                        |
-| `container`                       |
-| `graphicContainer`                |
-| `graphicsArea`                    |
-| `iconCorner`                      |
-| `infoTimeLineContainer`           |
-| `inputChat`                       |
-| `itemWords`                       |
-| `lifeChatContainer`               |
-| `lifeChatText`                    |
-| `likeIcon`                        |
-| `likeIconContainer`               |
-| `likesCounterContainer`           |
-| `likesNumber`                     |
-| `liveInfoContainer`               |
-| `liveInfoEventName`               |
-| `livestreamingIndicator`          |
-| `loadingAnimationOne`             |
-| `loadingAnimationThree`           |
-| `loadingAnimationTwo`             |
-| `loadingContainer`                |
-| `loadingContent`                  |
-| `loadingItem`                     |
-| `myWishListProducts`              |
-| `myWishListProductsContainer`     |
-| `noVideoContainer`                |
-| `noVideoText`                     |
-| `productsDrawer`                  |
-| `profileIcon`                     |
-| `shippingTermsSocialNetworks`     |
-| `stepper`                         |
-| `stepperContainer`                |
-| `stepperDescription`              |
-| `stepperIcon`                     |
-| `stepperStep`                     |
-| `subContainer`                    |
-| `timeContent`                     |
-| `timeLineIndicatorIconCircle`     |
-| `timeLineIndicatorIconContainer`  |
-| `timeLineIndicatorIconLine`       |
-| `timeLineIndicatorIconsContainer` |
-| `videoPlayerContainer`            |
-| `viewers`                         |
-| `viewersContainer`                |
-| `wordsContent`                    |
+Enter the details of the event and when the event is in live a button will be activated called "Customize look and feel" by clicking in it, you will enter the customization module.
+
+Now, you will be able to customize the elements of the application according to the brand image in a simple and fast way.
+We recommend that ideally the configuration and customization be done before selecting the event in the site editor, starting the live and making it visible on the website; well, to visualize the changes on the user's side the page where the transmission is being shown must be refreshed.
+
+![1](https://user-images.githubusercontent.com/34868336/236523154-256f1c99-7cd5-44e5-b371-198c3285b173.png)
+
+When entering the customization module you will find two visuals: Mobile and Desktop; by selecting each of them you will be able to configure and customize the components of said views. In each of these visuals you can customize the product and chat sections.
+
+![2](https://user-images.githubusercontent.com/34868336/236523186-9aacc6e4-b74a-456e-80e4-b8339f5e366b.png)
