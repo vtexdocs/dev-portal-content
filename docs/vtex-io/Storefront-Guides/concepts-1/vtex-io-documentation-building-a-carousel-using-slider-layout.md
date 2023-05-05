@@ -92,7 +92,9 @@ Check the instructions below for more information.
 
 Now you have a fully functioning carousel for your store.
 
-![gif-caroulsel-slider-layout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-carousel-using-slider-layout-0.gif) *When inspecting the page, you will notice that the `carousel` block was not used to build the component.*
+![gif-caroulsel-slider-layout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-carousel-using-slider-layout-0.gif) 
+
+*When inspecting the page, you will notice that the `carousel` block was not used to build the component.*
 
 Note that you can also edit the information contained in `list-context.image-list` through Site Editor section in the Admin:
 
