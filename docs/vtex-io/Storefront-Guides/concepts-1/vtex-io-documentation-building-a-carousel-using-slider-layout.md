@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T20:17:43.910Z"
 
 ## Introduction
 
-Some block types in VTEX IO Store Framework **carry and provide data to their child blocks** instead of rendering store components, such as `shelf`.
+Some block types in Store Framework carry and provide data to their child blocks instead of rendering storefront components.
 
 These blocks are instances of a `list-context` interface called `lists`. They are exported by the `vtex.list-context` app.
 
