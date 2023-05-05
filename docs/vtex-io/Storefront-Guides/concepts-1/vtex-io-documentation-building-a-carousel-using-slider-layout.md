@@ -6,8 +6,6 @@ createdAt: "2020-06-03T16:02:44.233Z"
 updatedAt: "2022-12-13T20:17:43.910Z"
 ---
 
-## Introduction
-
 Some block types in Store Framework carry and provide data to their child blocks instead of rendering storefront components.
 
 These blocks are instances of a `list-context` interface called `lists`. They are exported by the `vtex.list-context` app.
