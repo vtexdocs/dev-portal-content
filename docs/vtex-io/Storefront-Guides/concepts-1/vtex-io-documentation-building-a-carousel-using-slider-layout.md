@@ -12,7 +12,7 @@ These blocks are instances of a `list-context` interface called `lists`. They ar
 
 A carousel is essentially a slider that showcases a collection of images. Hence, to create a carousel for your store, you can use one of the available `list-context` instances together with a `slider-layout`, a versatile layout block that allows you to create a Slider component from a set of other blocks.
 
-In the instructions below, you can see how easy it is!
+Check the instructions below for more information.
 
 ## Instructions
 
