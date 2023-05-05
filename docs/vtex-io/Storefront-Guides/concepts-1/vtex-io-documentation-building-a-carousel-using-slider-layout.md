@@ -14,7 +14,7 @@ A carousel is essentially a slider that showcases a collection of images. Hence,
 
 Check the instructions below for more information.
 
-## Instructions
+## Step by step
 
 1. Make sure your store is running `vtex.store@2.70.0` or higher.
 
