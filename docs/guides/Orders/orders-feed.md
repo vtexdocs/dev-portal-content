@@ -341,9 +341,7 @@ If a new event is not correctly notified to the endpoint, the interval for futur
 
  
 {
-  "type": "warning",
-  "body": "When notified, the configured endpoint must always respond with HTTP status 200 within 5000 ms."
-}
+>⚠️ When notified, the configured endpoint must always respond with HTTP status 200 within 5000 ms.
 [/block] Below is an example of a hook notification request body made to the integration endpoint.
 
 ```json
