@@ -339,7 +339,7 @@ If configured, the Hook notifies the integration endpoint whenever an order upda
 If a new event is not correctly notified to the endpoint, the interval for future retries is recalculated based on an internal geometric progression algorithm.
 > ❗ If the hook has no notifications for three days, your configuration will be removed, and you will have to reconfigure it with the [Hook configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) to continue using it. Therefore, it's important to be mindful of your filter configuration. You can check it any time using the [Get hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/hook/config) endpoint.
 
-[block:callout]
+ 
 {
   "type": "warning",
   "body": "When notified, the configured endpoint must always respond with HTTP status 200 within 5000 ms."
