@@ -62,16 +62,16 @@ Check out the instructions below for how it can be done.
 
   },
 
- +  "product-summary.shelf#demo1": {
- +   "children": [
- +    "product-summary-name",
- +    "product-summary-description",
- +    "product-summary-image",
- +    "product-summary-price",
- +    "product-summary-sku-selector",
- +    "product-summary-buy-button"
-    ]
-  }
++ "product-summary.shelf#demo1": {
++   "children": [
++    "product-summary-name",
++    "product-summary-description",
++    "product-summary-image",
++    "product-summary-price",
++    "product-summary-sku-selector",
++    "product-summary-buy-button"
++   ]
++ }
 }
 ```
 
@@ -96,19 +96,19 @@ Check out the instructions below for how it can be done.
     ]
   },
 
-  + "slider-layout#demo-products": {
-  +    "props": {
-  +      "itemsPerPage": {
-  +        "desktop": 1,
-  +        "tablet": 1,
-  +        "phone": 1
-  +      },
-  +      "infinite": true,
-  +      "showNavigationArrows": "desktopOnly",
-  +      "blockClass": "carousel"
-  +    },
-  +    "children": ["rich-text#1", "rich-text#2", "rich-text#3"]
- +  },
++ "slider-layout#demo-products": {
++    "props": {
++      "itemsPerPage": {
++        "desktop": 1,
++        "tablet": 1,
++        "phone": 1
++      },
++      "infinite": true,
++      "showNavigationArrows": "desktopOnly",
++      "blockClass": "carousel"
++    },
++    "children": ["rich-text#1", "rich-text#2", "rich-text#3"]
++  },
 }
 ```
 
