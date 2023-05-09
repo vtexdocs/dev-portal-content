@@ -262,8 +262,9 @@ Check the [back-office order integration guide](https://developers.vtex.com/docs
 
 ## Hook
 
-Hook is a counterpart to Feed. It allows integrations to consume order update data differently. Instead of receiving events to form a queue that can be retrieved, a hook automatically sends the items to a URL provided by the user in the hook configuration. [block:callout]
-{ "type": "warning", "body": "Since Hook is a counterpart, [access](#access) follows the same principles described for Feed above. This means each appKey can configure or access only one hook. Different users that sharing the same appKey access the same hook. We recommend configuring one hook per appKey per user, ensuring that each user has access to their own hook." } [/block]
+Hook is a counterpart to Feed. It allows integrations to consume order update data differently. Instead of receiving events to form a queue that can be retrieved, a hook automatically sends the items to a URL provided by the user in the hook configuration. 
+
+>⚠️ Since Hook is a counterpart, [access](#access) follows the same principles described for Feed above. This means each appKey can configure or access only one hook. Different users that sharing the same appKey access the same hook. We recommend configuring one hook per appKey per user, ensuring that each user has access to their own hook.
 
 ### Configuration
 
