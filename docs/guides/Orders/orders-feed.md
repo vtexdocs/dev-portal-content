@@ -85,7 +85,7 @@ You can see the list of possible order statuses in the article [Order flow in or
 >⚠️ The two filter types are mutually exclusive. If you pass `FromWorkflow` in the `type` field, you should not include the `expression` field nor `disableSingleFire` in the body. The reverse is also true. If you pass `FromOrders` `type`, you should not include the `status` field. If you combine them, you will get a `409 conflict` status response.
 
  
-{ "type": "info", "body": "If the `filter` is not configured, the `FromWorkflow` type is used, and all status changes will appear in the feed." } [/block]
+>ℹ️ If the `filter` is not configured, the `FromWorkflow` type is used, and all status changes will appear in the feed.
 
 ##### `expression`
 
