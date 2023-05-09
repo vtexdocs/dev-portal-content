@@ -34,7 +34,7 @@ The feed's application key must have a [role](https://help.vtex.com/en/tutorial/
 [/block]
 
 [block:callout]
-{ "type": "info", "body": "Before getting data from the order feed queue, you need to set it up. Otherwise, the API will return a `404 not found` error. Order updates will only show in the feed queue only after it's configured. You can learn more about configuring the feed below." } [/block]
+>ℹ️ Before getting data from the order feed queue, you need to set it up. Otherwise, the API will return a `404 not found` error. Order updates will only show in the feed queue only after it's configured. You can learn more about configuring the feed below.
 
 ## Configuration
 
