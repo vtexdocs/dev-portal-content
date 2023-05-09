@@ -32,7 +32,6 @@ The feed's application key must have a [role](https://help.vtex.com/en/tutorial/
 >⚠️ Each appKey can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user commits an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
  
 
->ℹ️ Before getting data from the order feed queue, you need to set it up. Otherwise, the API will return a `404 not found` error. Order updates will only show in the feed queue only after it's configured. You can learn more about configuring the feed below.
 
 ## Configuration
 
