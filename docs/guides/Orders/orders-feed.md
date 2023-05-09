@@ -331,7 +331,7 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
  
   "body": "We recommend configuring the hook in the main account. This ensures more visibility to commit all events correctly and that the configured endpoint is more frequently notified, preventing the hook from being excluded due to inactivity."
 }
-[/block]
+ 
 
 ### Hook notifications
 
