@@ -66,7 +66,7 @@ You can see the list of possible order statuses in the article [Order flow in or
     }
 ```
 
-[block:callout]
+ 
 { "type": "info", "body": "The `FromWorkflow` filter may be limited for some of the integration needs of your store. If you want more filter options, consider using the `FromOrders` filter." } [/block]
 
 #### `FromOrders`
