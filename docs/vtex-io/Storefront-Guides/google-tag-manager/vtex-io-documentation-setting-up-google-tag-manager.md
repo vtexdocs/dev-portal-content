@@ -85,6 +85,16 @@ Check out the available events that [Pixel Apps](https://developers.vtex.com/doc
 | vtex:viewCart | Not applicable | [view_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_cart) |
 | vtex:addToWishlist | Not applicable | [add_to_wishlist](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_wishlist) |
 
+### Partially-supported events
+
+The following events are not fully supported yet. Although the GTM app may listen and format them into GA4, their VTEX event triggers have not been implemented yet:
+
+| VTEX               | GA4                                                                                                                                  |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| vtex:login         | [login](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#login)                     |
+| vtex:signUp        | [sign_up](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#sign_up)                 |
+| vtex:refund        | [refund](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#refund)                   |
+
 ### GA4 events
 
 Besides the events listed in the previous sections, GA4 has new events that stores can start tracking. The full list can be found on [Google documentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm).
@@ -95,7 +105,4 @@ The GTM app listens to the following events and sends them in the following corr
 | ------------- | ----- |
 | vtex:addPaymentInfo | add_payment_info |
 | vtex:addShippingInfo | add_shipping_info |
-| vtex:login | login |
-| vtex:signUp | sign_up |
 | vtex:beginCheckout | begin_checkout |
-| vtex:refund | refund |
