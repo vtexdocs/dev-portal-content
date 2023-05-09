@@ -95,14 +95,14 @@ The following events are not fully supported yet. Although the GTM app may liste
 | vtex:signUp        | [sign_up](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#sign_up)                 |
 | vtex:refund        | [refund](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#refund)                   |
 
-### GA4 events
+### Checkout events
 
-Besides the events listed in the previous sections, GA4 has new events that stores can start tracking. The full list can be found on [Google documentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm).
+The following events are supported by VTEX's Checkout module. This module does not loads the GTM app, but it still pushes the events to the data layer.
 
-The GTM app listens to the following events and sends them in the following corresponding GA4 format:
-
-| VTEX          | GA4   |
-| ------------- | ----- |
-| vtex:addPaymentInfo | add_payment_info |
-| vtex:addShippingInfo | add_shipping_info |
-| vtex:beginCheckout | begin_checkout |
+| GA4                                                                                                                                      |
+|------------------------------------------------------------------------------------------------------------------------------------------|
+| [view_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_cart)                 |
+| [begin_checkout](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#begin_checkout)       |
+| [add_payment_info](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_payment_info)   |
+| [add_shipping_info](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_shipping_info) |
+| [remove_from_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#remove_from_cart)   |
