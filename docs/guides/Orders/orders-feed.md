@@ -326,7 +326,7 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
  
 >⚠️ The given endpoint should return status 200 for the above-mentioned request. Otherwise, the Hook API will return status `400 Bad Request`, and you won't be able to save the configuration.
 
-[block:callout]
+ 
 {
   "type": "warning",
   "body": "We recommend configuring the hook in the main account. This ensures more visibility to commit all events correctly and that the configured endpoint is more frequently notified, preventing the hook from being excluded due to inactivity."
