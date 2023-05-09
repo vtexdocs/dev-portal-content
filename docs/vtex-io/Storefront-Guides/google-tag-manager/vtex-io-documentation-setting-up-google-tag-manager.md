@@ -79,7 +79,6 @@ Check out the available events that [Pixel Apps](https://developers.vtex.com/doc
 | vtex:productClick | [click](https://developers.google.com/tag-manager/enhanced-ecommerce#product-clicks) | [select_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#select_item) |
 | vtex:addToCart | [add](https://developers.google.com/tag-manager/enhanced-ecommerce#add) | [add_to_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#add_to_cart) |
 | vtex:removeFromCart | [remove](https://developers.google.com/tag-manager/enhanced-ecommerce#remove) | [remove_from_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#remove_from_cart) |
-| vtex:cartLoaded| [checkout](https://developers.google.com/analytics/devguides/collection/ua/gtm/enhanced-ecommerce#checkout) | [begin_checkout](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#begin_checkout) |
 | vtex:orderPlaced | [purchase](https://developers.google.com/tag-manager/enhanced-ecommerce#purchases) | [purchase](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#purchase) |
 
 
