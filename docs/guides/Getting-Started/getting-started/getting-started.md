@@ -18,10 +18,6 @@ Check out our introductory content to give your first steps of our Rest API capa
 
 > ℹ️ You're now in our Developer Portal. If you wish to see business-focused content, and documentation about our web platform, check out our Help Center .
 
-## Getting to know our core services
-
-Leverage your ecommerce in our Headless architecture, by learning what you can accomplish with each microsservice in VTEX.
-
 <OverviewCard icon='Platform'>
 
 ### Platform overview

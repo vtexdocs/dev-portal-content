@@ -6,9 +6,10 @@ createdAt: "2021-03-26t15:35:50.014z"
 updatedAt: "2022-09-27t21:01:32.508z"
 ---
 
-> **Help us improve our documentation!** Tell us about your experience with this article by completing [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
 
-Catalog is the store administration module for configuring features related to your ecommerce products in order to make them available for customers on your website. This overview article covers what you can do with VTEX Catalog, including relevant links to our developer documentation about this topic.
+> **Help us improve our documentation!** Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
+
+Catalog is your store's administration module for configuring the features related to your ecommerce products to make them available for customers on your website. This overview article goes over what you can accomplish with the VTEX Catalog, including relevant links to our developer documentation about this topic.
 
 ## Understanding Catalog architecture
 
@@ -47,51 +48,9 @@ To understand how to build your storefront and display your product assortment, 
 
 ## Integrating with external marketplaces or sellers
 
-Learn more about integrating with non-VTEX marketplaces or sellers through the following documentation. [block:html]
-          <path d=\"M20 20V9.78\" stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n                d=\"M4.30101 9.778C2.60301 9.766 1.49601 8.085 2.23201 6.636L3.94801 3.259C4.33801 2.489 5.16001 2 6.06201 2H17.938C18.84 19.662 20.053 3.259L21.769 6.636C22.505 21.398 19.7 9.778C18.283 9.778 17.134 8.81 7.615V7.567C17.134 8.788 15.985 14.568 9.778C13.149 12 7.567C12 10.851 9.43401 9.778C8.01701 6.86801 7.567V7.615C6.86701 5.71801 4.30101 9.778Z\"\n stroke =\"#323232\" stroke-width =\"1.5\" stroke-linecap =\"round\" stroke-linejoin =\"round\" />\n            <path d=\"M16 20H21\" stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path d=\"M4.59999 14.95H11L10.3 18.45H5.29999L4.29999 13.45H3.04999\" stroke=\"#F71963\" stroke-width=\"1.5\"\n                stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path\n                d=\"M9.835 20.915C9.855 20.935 9.855 20.966 9.835 20.986C9.815 21.006 9.784 21.006 9.764 20.986C9.744 20.966 9.744 20.935 9.764 20.915C9.784 20.895 9.816 20.895 9.835 20.915\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path\n                d=\"M5.835 20.915C5.855 20.935 5.855 20.966 5.835 20.986C5.815 21.006 5.784 21.006 5.764 20.986C5.744 20.966 5.744 20.935 5.764 20.915C5.784 20.895 5.816 20.895 5.835 20.915\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n        </svg>\n    </div>\n    <div class=\"column2\">\n        <p class=\"section-title\">External sellers</p>\n        <p>Read the documentation below to understand how to integrate external seller products with your catalog if\n            you operate as a VTEX marketplace.\n        </p>\n    </div>\n    <ul class=\"row3\">\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-guide\">External seller\n                integration guide</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-vtex-marketplace-operation\">Catalog\n                management for VTEX marketplaces</a></li>\n    </ul>\n</div>" } [/block]
-diff --git a/docs/guides/Getting-Started/getting-started/getting-started.md b/docs/guides/Getting-Started/getting-started/getting-started.md
-index 2b055df6..3c0a55ec 100644
---- a/docs/guides/Getting-Started/getting-started/getting-started.md
-+++ b/docs/guides/Getting-Started/getting-started/getting-started.md
-@@ -6,7 +6,7 @@ createdAt: "2019-11-26T19:13:15.434Z"
- updatedAt: "2022-09-27T20:40:28.033Z"
- hidePaginationPrevious: true
- ---
--Welcome! VTEX is a headless commerce platform that is highly customizable and constantly evolving. 
-+Welcome! VTEX is a headless commerce platform that is highly customizable and constantly evolving.
- 
- The video below illustrates how our clients our currently using VTEX to address their business needs:
- 
-@@ -84,7 +84,6 @@ Manage all store logistics data by accessing warehouses, docks, pick up points,
- 
- </OverviewCard>
- 
--
- <OverviewCard icon='Payments'>
- 
- ### [Payments](https://developers.vtex.com/docs/guides/payments-overview)
-@@ -93,7 +92,6 @@ Get payment data and process your transactions.
- 
- </OverviewCard>
- 
--
- <OverviewCard icon='Promotions'>
- 
- ### [Promotions](https://developers.vtex.com/docs/guides/promotions-overview)
-@@ -102,7 +100,6 @@ Create and manage promotions and coupons to scale your sales.
- 
- </OverviewCard>
- 
--
- <OverviewCard icon='Pricing'>
- 
- ### [Pricing](https://developers.vtex.com/docs/guides/pricing-overview)
-@@ -111,7 +108,6 @@ Create, read and edit prices for each SKU, sales channel or price table.
- 
- </OverviewCard>
- 
--
- <OverviewCard icon='AccountManagement'>
- 
- ### [Account Management](https://developers.vtex.com/vtex-rest-api/docs/account-management)
-@@ -12
+Learn more about integrating with non-VTEX marketplaces or sellers through the following documentation.
+[block:html]
+{
+  "html": "\n<!--- INTEGRATING WITH EXTERNAL MARKETPLACE OR SELLER   -->\n\n<!--- EXTERNAL MARKETPLACE   -->\n\n<div class=\"doc-type\">\n    <div class=\"column1\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M11 20C6.029 20 2 15.971 2 11C2 6.029 6.029 2 11 2C15.971 2 20 6.029 20 11\" stroke=\"#323232\"\n                stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path d=\"M22 14H20.742L19.736 19.031H14.705L14 15.509H20.44\" stroke=\"#F71963\" stroke-width=\"1.5\"\n                stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path\n                d=\"M15.172 21.512C15.192 21.492 15.224 21.492 15.243 21.512C15.262 21.532 15.263 21.564 15.243 21.583C15.223 21.602 15.191 21.603 15.172 21.583C15.152 21.563 15.152 21.531 15.172 21.512\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path\n                d=\"M19.197 21.512C19.217 21.492 19.249 21.492 19.268 21.512C19.287 21.532 19.288 21.564 19.268 21.583C19.248 21.602 19.216 21.603 19.197 21.583C19.177 21.563 19.177 21.531 19.197 21.512\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path\n                d=\"M15 11C15 8.23599 14.277 5.47199 12.833 3.05999C11.986 1.64699 10.014 1.64699 9.16799 3.05999C6.27799 7.88499 6.27799 14.116 9.16799 18.941C9.59099 19.647 10.295 20 11 20\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path d=\"M2.50999 8H19\" stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\"\n                stroke-linejoin=\"round\" />\n            <path d=\"M2.50999 14H11\" stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\"\n                stroke-linejoin=\"round\" />\n        </svg>\n    </div>\n    <div class=\"column2\">\n        <p class=\"section-title\">External Marketplace</p>\n        <p>If you are an external marketplace that wishes to integrate with VTEX sellers, you can see the links below to\n            learn how to develop a custom connector to connect with VTEX's architecture and sellers’ catalogs.</p>\n    </div>\n    <ul class=\"row3\">\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide\">External\n                Marketplace Integration Guide</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-catalog\">Catalog\n                Integration</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs\">Catalog\n                logs</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-product-load\">Get\n                product list for an initial load</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-new-products\">How\n                to get a new product to offer in the marketplace</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-product-updates\">How\n                to get product updates</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-catalog-mapping\">Product\n                and Category Mappings</a></li>\n    </ul>\n</div>\n\n<!--- EXTERNAL SELLER   -->\n\n<div class=\"doc-type\">\n    <div class=\"column1\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M20 20V9.78\" stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n                d=\"M4.30101 9.778C2.60301 9.766 1.49601 8.085 2.23201 6.636L3.94801 3.259C4.33801 2.489 5.16001 2 6.06201 2H17.938C18.84 2 19.662 2.489 20.053 3.259L21.769 6.636C22.505 8.085 21.398 9.766 19.7 9.778C18.283 9.778 17.134 8.81 17.134 7.615V7.567C17.134 8.788 15.985 9.778 14.568 9.778C13.149 9.778 12 8.788 12 7.567C12 8.788 10.851 9.778 9.43401 9.778C8.01701 9.778 6.86801 8.788 6.86801 7.567V7.615C6.86701 8.81 5.71801 9.778 4.30101 9.778Z\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path d=\"M16 20H21\" stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path d=\"M4.59999 14.95H11L10.3 18.45H5.29999L4.29999 13.45H3.04999\" stroke=\"#F71963\" stroke-width=\"1.5\"\n                stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path\n                d=\"M9.835 20.915C9.855 20.935 9.855 20.966 9.835 20.986C9.815 21.006 9.784 21.006 9.764 20.986C9.744 20.966 9.744 20.935 9.764 20.915C9.784 20.895 9.816 20.895 9.835 20.915\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n            <path\n                d=\"M5.835 20.915C5.855 20.935 5.855 20.966 5.835 20.986C5.815 21.006 5.784 21.006 5.764 20.986C5.744 20.966 5.744 20.935 5.764 20.915C5.784 20.895 5.816 20.895 5.835 20.915\"\n                stroke=\"#323232\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n        </svg>\n    </div>\n    <div class=\"column2\">\n        <p class=\"section-title\">External Seller</p>\n        <p>See the documentation below to understand how to integrate an external seller’s offers into your catalog if\n            you act as a VTEX marketplace.\n        </p>\n    </div>\n    <ul class=\"row3\">\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-guide\">External Seller\n                Integration Guide</a></li>\n        <li><a class=\"vtex-section-option\"\n                href=\"https://developers.vtex.com/vtex-rest-api/docs/external-seller-integration-vtex-marketplace-operation\">Catalog\n                management for VTEX Marketplace</a></li>\n    </ul>\n</div>"
+}
+[/block]
