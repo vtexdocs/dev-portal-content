@@ -80,7 +80,10 @@ Check out the available events that [Pixel Apps](https://developers.vtex.com/doc
 | vtex:addToCart | [add](https://developers.google.com/tag-manager/enhanced-ecommerce#add) | [add_to_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#add_to_cart) |
 | vtex:removeFromCart | [remove](https://developers.google.com/tag-manager/enhanced-ecommerce#remove) | [remove_from_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#remove_from_cart) |
 | vtex:orderPlaced | [purchase](https://developers.google.com/tag-manager/enhanced-ecommerce#purchases) | [purchase](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#purchase) |
-
+| vtex:search | Not applicable | [search](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#search) |
+| vtex:share | Not applicable | [share](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#share) |
+| vtex:viewCart | Not applicable | [view_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_cart) |
+| vtex:addToWishlist | Not applicable | [add_to_wishlist](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_wishlist) |
 
 ### GA4 events
 
@@ -94,9 +97,5 @@ The GTM app listens to the following events and sends them in the following corr
 | vtex:addShippingInfo | add_shipping_info |
 | vtex:login | login |
 | vtex:signUp | sign_up |
-| vtex:viewCart | view_cart |
 | vtex:beginCheckout | begin_checkout |
 | vtex:refund | refund |
-| vtex:addToWishlist | add_to_wishlist |
-| vtex:search | search |
-| vtex:share| share |
