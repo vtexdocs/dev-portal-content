@@ -229,7 +229,6 @@ Here are two complete example bodies for the [Feed configuration response](https
 }
 ```
 
-[block:callout]
  
   
  >ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
