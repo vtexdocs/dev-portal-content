@@ -236,7 +236,7 @@ Here are two complete example bodies for the [Feed configuration response](https
 [block:callout]
  
   
-  "body": "When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires."
+ >ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
 }
 [/block]
 > ❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
