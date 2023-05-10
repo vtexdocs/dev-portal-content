@@ -16,6 +16,7 @@ In this guide, you can learn about the changes and limitations you must be aware
 ### OMS 
 
 There are no longer restrictions to the use of these OMS features for PII platform version accounts:
+- Subscriptions
 - VTEX DO
 - Conversation tracker
 - Shipping notifications
@@ -80,15 +81,11 @@ The [Price tables](https://help.vtex.com/en/tutorial/creating-price-tables--58Ym
 
 ### OMS 
 
-VTEX’s Order Management System is impacted by in a few different features. See details below.
-
-#### Subscriptions
-
-Subscriptions are not available for PII platform version accounts at this moment.
+VTEX’s Order Management System is impacted on a few different aspects. See details below.
 
 #### Call center
 
-You must disable call center impersonation must be disabled at the License Manager.
+You must disable call center impersonation at the License Manager.
 
 #### Orders Admin interface
 
@@ -106,8 +103,13 @@ It is possible to configure PII preferences on OMS' interface of your VTEX Admin
     a. On all orders: View personal information and be audited on all orders.
     b. This order only: View PII content and be audited on this order only.
     c. Hide and do not audit: Browse orders without displaying personal information.
-5. Click on `Confirm`. 
+5. Click on `Confirm`.
 
+#### Subscriptions
+
+The subscription feature is compatible with the PII data architecture.
+
+However, the **Subscriptions** Admin interface displays only masked PII. If you wish to see unmasked PII, you must use the 
 
 ### MessageCenter - Admin panel
 
