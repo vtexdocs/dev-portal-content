@@ -38,8 +38,6 @@ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.
 
 ## Step-by-step
 
-### Step 1: Installing the Google Tag Manager in Admin
-
 1. In the VTEX Admin, access **Apps > App Store.**
 2. Search for the Google Tag Manager app and click on `Install`. You will be redirected to the [App Store page](https://apps.vtex.com/vtex-google-tag-manager/p).
    
@@ -52,18 +50,14 @@ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.
 > ℹ️ The GTM is a free app.
 
 6. Click `GO TO INSTALL PAGE`. This will redirect you to the GTM setup page, where you'll see a warning message about entering the necessary GTM configurations.
+
 7. Type your **GTM ID** in the Google Tag Manager field.
 
-
-
-
-In the VTEX Admin, access **Apps > My apps**, check the box **Send Google Analytics 4 Events**, and click `Save`.
+8. In the VTEX Admin, access **Apps > My apps**, check the box **Send Google Analytics 4 Events**, and click `Save`.
 
 ![gtm-new-field](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-new-field___bf665f34409d6d7cbcfc79239e277ee0.png)
 
 Once you have installed the app and check the box **Send Google Analytics 4 Events**, go to [Configuring Google Analytics 4 Configuration tag in Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager) documentation and learn how to set up the variables, triggers, and tags necessary for the app to work.
-
-To avoid performance issues and unpredictable behavior, the VTEX IO Google Tag Manager app uses the native GTM blocklist feature. This feature is thoroughly explained on the  [Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/restrict), but in short, it allows the app to block certain types of tags, variables, and triggers from firing. By default, the blocklist includes the HTML ID, which automatically blocks all the tags, variables, and triggers of the type `customScripts`. The main consequence of this blocklist is that Custom HTML tags are not triggered.
 
 To avoid performance issues and unpredictable behavior, the VTEX IO Google Tag Manager app uses the native GTM blocklist feature. This feature is thoroughly explained on the  [Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/restrict), but in short, it allows the app to block certain types of tags, variables, and triggers from firing. By default, the blocklist includes the HTML ID, which automatically blocks all the tags, variables, and triggers of the type `customScripts`. The main consequence of this blocklist is that Custom HTML tags are not triggered.
 
