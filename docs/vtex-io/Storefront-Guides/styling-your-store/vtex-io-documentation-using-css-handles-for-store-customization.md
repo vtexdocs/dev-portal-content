@@ -6,15 +6,13 @@ createdAt: "2020-06-03T16:02:45.024Z"
 updatedAt: "2022-12-13T20:17:44.398Z"
 ---
 
-## Introduction
 
-CSS Handles is an **HTML element identifier**. It can be used to customize your store components by using CSS classes in the store theme code.
+This guide will walk you through how to use CSS Handles to customize your storefront. CSS Handles are unique identifiers assigned to HTML elements. They can be used in the store theme to customize frontend components via CSS classes.
 
-CSS Handles is your **store layout building assistant**. Follow the steps below and find out how to use them in a fast and simple way!
 
-## Instructions
+## Step by step
 
-1. Open your workspace on your browser, add `?__inspect` at the end of the page URL, and press enter. For example, `https://yourworkspace--youraccount.myvtex.com?__inspect`. Please note that it must be a development workspace rather than a production one, and it must be under the domain `myvtex.com`.
+1. Open your workspace on your browser, add `?__inspect` at the end of the page URL, and press enter. For example, `https://{workspace}--{account}.myvtex.com?__inspect`. Please note that it must be a development workspace rather than a production one, and it must be under the domain `myvtex.com`.
 
 2. Hover over the element you want to customize. It should display its available CSS Handles in a box (the big names beginning with `.`), along with their respective CSS file names and other information.
 
@@ -72,15 +70,14 @@ Then, you can use the class `.menuItem--header` to target specifically the eleme
 
 ![specific menu items with css handles applied using blockClass](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-3.png)
 
-> ℹ️ Our team is constantly working on developing CSS Handles for every possible store component. If you are unable to find a CSS Handle for a component you would like to customize, please share the scenario with us in [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 ## Best practices
 
-To standardize CSS customization and avoid potential breakdowns in layout, **we recommend store customization to be performed exclusively using CSS Handles**.
+To standardize CSS customization and avoid potential breakdowns in layout, we recommend store customization to be performed exclusively using CSS Handles.
 
 However, it is common to come across store scenarios whose customization uses CSS Selectors. As the name implies, they are used for selecting elements for CSS customization following the page's HTML hierarchy.
 
-This customization practice is mostly deprecated. It means that **only** the CSS Selectors listed below will continue to be allowed for store customization:
+This customization practice is mostly deprecated. It means that only the CSS Selectors listed below will continue to be allowed for store customization:
 
 - Class selectors (e.g. `.foo`)
 - Pseudo-selectors `:hover`, `:visited`, `:active`, `:disabled`, `:focus`, `:local`, `:empty`, and `:target`
@@ -92,6 +89,6 @@ This customization practice is mostly deprecated. It means that **only** the CSS
 - `[data-...]`
 - `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selection of elements that come from different apps
 
-**CSS Selectors that are not on this list, such as** `:nth-child(2)`**,** `foo > bar` **and** `[alt="bar"]`**, are not accepted by VTEX IO CLI when [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the store theme to its local files.**
+CSS Selectors that are not on this list, such as `:nth-child(2)`, `foo > bar` and `[alt="bar"]`, are not accepted by VTEX IO CLI when [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the store theme to its local files.
 
-> ⚠️ Please bear in mind that any customization that uses CSS Selectors depends on an HTML structure that, when changed, can break the merchant's desired customization. **Always prefer to use CSS Handles**.
+> ⚠️ Please bear in mind that any customization that uses CSS Selectors depends on an HTML structure that, when changed, can break the merchant's desired customization. Always prefer to use CSS Handles.
