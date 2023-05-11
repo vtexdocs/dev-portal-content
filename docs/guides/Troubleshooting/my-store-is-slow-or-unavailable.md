@@ -1,6 +1,6 @@
 ---
-title: "Store is slow or unavailable"
-slug: "store-is-slow-or-unavailable"
+title: "My store is slow or unavailable"
+slug: "my-store-is-slow-or-unavailable"
 hidden: false
 createdAt: "2023-05-11T10:17:18.615Z"
 updatedAt: "2023-05-11T10:17:18.615Z"
@@ -35,7 +35,7 @@ Your account must be set to production. Otherwise it cannot be live. See this ar
 ### DNS propagation
 
 DNS propagation may take up to 48 hours after [DNS pointing](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing). So if you are within that 48 hour period, it is possible that the store will not be accessible everywhere.
- 
+
 ### Conflict in CDN domain registration
 
 If you've registered your store's domain with the same CDN provider that BLERG uses, it may cause issues with CDN provisioning and result in a go-live failure. To avoid this, please refer to the go-live guide for instructions on how to resolve any conflicts related to [CDN domain registration](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/7wFsbWgN4rnZsbjhv8IItX#checking-domain-in-cdns).
@@ -58,7 +58,7 @@ For example, if cloudflare is your DNS provider, their native proxy can interfer
 
 ### Reverse proxy
 
-[Reverse proxy](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir) malfunction can cause store availability issues. 
+[Reverse proxy](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir) malfunction can cause store availability issues.
 
 When you use a reverse proxy, you give up the optimized edge service managed by VTEX and are responsible for the site's actual provisioning, which is tasked with the settings, monitoring and feature management such as header forwarding, cookies and cache management. If this is your case, follow up with your infrastructure team or provider to learn if this is the cause of your problem. VTEX does not recommend using reverse proxies.
 
