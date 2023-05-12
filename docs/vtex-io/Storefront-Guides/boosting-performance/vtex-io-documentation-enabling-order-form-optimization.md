@@ -13,7 +13,7 @@ Through our constant effort of building the store Checkout using the VTEX IO Sto
 
 The new `OrderFormProvider` v2 is already used by `minicart.v2`, the `add-to-cart-button`, the `checkout-cart` and it will be used by any native block that will be developed in Store Framework from now on. However, important native blocks that are older, such as the `minicart` and `buy-button`, still consume `orderForm` data that was exported by the legacy `OrderFormProvider`.
 
-Ensuring **backward-compatibility** is reinforced in Store Framework,  **both** `OrderFormProvider`s, the legacy and the new one, remain on store pages, exporting `OrderForm` data to their respective blocks.
+To ensure **backward-compatibility** is reinforced in Store Framework,  **both** `OrderFormProvider`s, the legacy and the new one, remain on store pages, exporting `OrderForm` data to their respective blocks.
 
 This comes with a performance cost since it means every store is now fetching **two** different `orderForm`s to use in each of the `OrderFormProvider`s working behind the scenes.
 
