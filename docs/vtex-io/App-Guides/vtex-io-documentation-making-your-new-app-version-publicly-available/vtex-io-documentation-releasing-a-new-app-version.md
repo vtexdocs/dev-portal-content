@@ -18,19 +18,19 @@ Once you have finished developing your app, you may release it as the first step
 
 Please note that releasing a new app version does not make it available to end-users or automatically update the app on accounts that have it installed. To do so, you must finish the entire process of [making your new app version public](/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
 
-## Before you begin
+## Before you start
 
 If you are releasing an app in the [App Store](https://apps.vtex.com/), make sure that you have covered the [VTEX guidelines](/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store) before proceeding.
 
-## Instructions
+## Step by step
 
-1. Open the terminal and log in to the account responsible for the app development, i.e., **the account specified as the app vendor in the [`manifest.json`](/docs/guides/vtex-io-documentation-manifest) file.**
+1. Open the terminal and log in to the account responsible for the app development, i.e., the account specified as the app vendor in the [`manifest.json`](/docs/guides/vtex-io-documentation-manifest) file.
 2. Change to the app root folder.
 3. Depending on the scenario, run one of the following commands to release your new app version:
 
 - `vtex release major stable` - Releases a **major** stable version.
 - `vtex release minor stable` - Releases a **minor** stable version.
-- `vtex release major stable` - Releases a **major** stable version.
+- `vtex release patch stable` - Releases a **patch** stable version.
 
 - `vtex release major beta` - Releases a **major** beta version.
 - `vtex release minor beta` - Releases a **minor** beta version.
