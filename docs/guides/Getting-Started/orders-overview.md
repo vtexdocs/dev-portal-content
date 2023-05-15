@@ -201,10 +201,6 @@ There are optional settings available for you to manage your store’s orders. T
 
 - [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite)
 
-<OverviewCard icon='StoreData'>
-
 ### Master Data
 
 - [Use v2 triggers to interact with orders](https://developers.vtex.com/vtex-rest-api/docs/use-master-data-with-orders)
-
-</OverviewCard>
