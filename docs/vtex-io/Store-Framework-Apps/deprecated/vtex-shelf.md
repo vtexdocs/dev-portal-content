@@ -71,5 +71,5 @@ To apply CSS customizations to this and other blocks, follow the instructions in
 | ----------------- |
 | `relatedProducts` |
 > ⚠️ Warning
-> 
+>
 > The CSS Handles list above refers to the `shelf.relatedProducts` block. Since the `shelf` block is deprecated, your shelf customization must be done using the CSS Handles available for the [Product Summary List](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/docs/guides/vtex-product-summary), and the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-slider-layout) blocks.
