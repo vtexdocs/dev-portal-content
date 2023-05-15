@@ -130,16 +130,12 @@ Change order is a feature that allows your store to modify the items or prices o
 - [Change order](https://developers.vtex.com/docs/guides/change-order)
 - [Register change on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes)
 
-<OverviewCard icon='ToStore'>
-
 ### Changing seller
 
 It is possible to choose another seller to fulfill a given order after the original seller canceled it. The period during which this action can be performed is called window to change seller, and you can use the endpoints below for this scenario.
 
 - [Get window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller-1)
 - [Update window to change seller](https://developers.vtex.com/vtex-rest-api/reference/updatewindowtochangeseller-1)
-
-</OverviewCard>
 
 <OverviewCard icon='PaymentHand'>
 
