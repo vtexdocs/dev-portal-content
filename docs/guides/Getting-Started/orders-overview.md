@@ -10,8 +10,6 @@ updatedAt: "2023-03-28T15:07:06.478Z"
 
 This overview article goes over VTEX’s Order Management System (OMS), including relevant links from our developer documentation about this topic. In the following sections you will find information about setting up and managing your orders, creating order integrations with external partners and making optional configurations.
 
-<OverviewCard icon='Integration'>
-
 ### Importing orders from an ERP or Back office
 
 If your store has an ERP integration or another kind of integration for managing orders, it will be necessary to make an integration with VTEX’s platform. The links below provide a general view of the integration flow between a back office system and a VTEX store regarding orders.
@@ -21,8 +19,6 @@ If your store has an ERP integration or another kind of integration for managing
 - [Set up order processing](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-processing)
 - [Change order](https://developers.vtex.com/docs/guides/change-order)
 - [FAQ: ERP Integration](https://developers.vtex.com/vtex-rest-api/docs/faq-erp-integration)
-
-</OverviewCard>
 
 ## Understanding order flow types
 
