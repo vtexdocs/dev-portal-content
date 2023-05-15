@@ -78,8 +78,6 @@ The Hook is a complement to the Feed, which allows an integration to consume ord
 
 There are several actions a VTEX store can perform on orders. In the next sections, you will find the main actions related to a store’s order management routine.
 
-<OverviewCard icon='Cart'>
-
 ### Placing an order
 
 The action of placing an order involves both the Orders Management module and the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview), and there are different paths to create orders. For more information about order placement, see the links below.
@@ -88,8 +86,6 @@ The action of placing an order involves both the Orders Management module and th
 - [Place order from an existing cart](https://developers.vtex.com/vtex-rest-api/reference/placeorderfromexistingorderform)
 - [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-)
 - [Create a regular order using the Checkout API](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api)
-
-</OverviewCard>
 
 > The [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) is the main object processed by the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview) and it stores a lot of contextual information about an order. The orderForm fields will be present in most of OMS's API calls.
 
