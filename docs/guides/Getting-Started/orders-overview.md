@@ -123,16 +123,12 @@ Every order has a life cycle registered in the form of an [order flow](https://h
 - [Start handling order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/start-handling)
 - [Cancel order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel)
 
-<OverviewCard icon='ChangeCart'>
-
 ### Changing an order
 
 Change order is a feature that allows your store to modify the items or prices of an order. This allows you to handle eventual changes motivated by customer mistakes or product unavailability, for example. To know more, see the links below.
 
 - [Change order](https://developers.vtex.com/docs/guides/change-order)
 - [Register change on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes)
-
-</OverviewCard>
 
 <OverviewCard icon='ToStore'>
 
