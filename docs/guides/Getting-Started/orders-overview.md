@@ -18,7 +18,7 @@ If your store has an ERP integration or another kind of integration for managing
 - [Set up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration)
 - [Set up order processing](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing)
 - [Change order](https://developers.vtex.com/docs/guides/change-order)
-- [FAQ: ERP Integration](https://developers.vtex.com/vtex-rest-api/docs/faq-erp-integration)
+- [FAQ: ERP Integration](https://developers.vtex.com/docs/guides/faq-erp-integration)
 
 ## Understanding order flow types
 
