@@ -66,8 +66,6 @@ The Orders Feed is a list of order updates, meaning that whenever there is an ev
 - [Commit feed items](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed)
 - [Test JSONata expression](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata)
 
-<OverviewCard icon='FileConfiguration'>
-
 ### Hook
 
 The Hook is a complement to the Feed, which allows an integration to consume order updates data by sending items to an URL provided by the user in the Hook configuration.
@@ -75,8 +73,6 @@ The Hook is a complement to the Feed, which allows an integration to consume ord
 - [Get hook configuration](https://developers.vtex.com/vtex-rest-api/reference/gethookconfiguration)
 - [Create or update hook configuration](https://developers.vtex.com/vtex-rest-api/reference/hookconfiguration)
 - [Delete hook configuration](https://developers.vtex.com/vtex-rest-api/reference/deletehookconfiguration)
-
-</OverviewCard>
 
 ## Managing orders
 
