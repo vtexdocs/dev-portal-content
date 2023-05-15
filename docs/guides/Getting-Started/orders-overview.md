@@ -16,7 +16,7 @@ If your store has an ERP integration or another kind of integration for managing
 
 - [Back office (ERP/PIM/WMS)](https://developers.vtex.com/docs/guides/erp-integration-guide)
 - [Set up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration)
-- [Set up order processing](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-processing)
+- [Set up order processing](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing)
 - [Change order](https://developers.vtex.com/docs/guides/change-order)
 - [FAQ: ERP Integration](https://developers.vtex.com/vtex-rest-api/docs/faq-erp-integration)
 
