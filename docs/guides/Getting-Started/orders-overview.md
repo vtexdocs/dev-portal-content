@@ -89,8 +89,6 @@ The action of placing an order involves both the Orders Management module and th
 
 > The [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) is the main object processed by the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview) and it stores a lot of contextual information about an order. The orderForm fields will be present in most of OMS's API calls.
 
-<OverviewCard icon='SearchDetails'>
-
 ### Retrieving order’s details
 
 You can fetch information related to orders in multiple ways and about specific topics. To know more about retrieving orders’ content, see the links below.
@@ -117,8 +115,6 @@ You can fetch information related to orders in multiple ways and about specific 
 
 - [Fetching marketplace information with the Orders API](https://developers.vtex.com/docs/guides/get-marketplace-data-orders-api)
 - [Fetching payment details from a Mercado Libre order with Orders API](https://developers.vtex.com/docs/guides/get-payment-data-mercado-libre-orders-api)
-
-</OverviewCard>
 
 <OverviewCard icon='SwitchArrows'>
 
