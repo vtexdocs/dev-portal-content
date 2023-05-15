@@ -48,7 +48,7 @@ Let’s now have a look at your store’s predefined homepage template:
 2. Access `store` and then `blocks`.
 3. Acess `home` and then `home.jsonc`. You will be able to see a result similar to the one below:
 
-```jsonc
+```json
 {
   "store.home": {
     "blocks": [
