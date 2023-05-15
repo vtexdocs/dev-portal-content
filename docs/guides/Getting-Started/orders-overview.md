@@ -156,15 +156,11 @@ In that case, the endpoint [Order invoice notification](https://developers.vtex.
 - [Adding a second address for invoicing an order](https://developers.vtex.com/docs/guides/adding-a-second-address-to-the-order)
 - [Formatting order invoicing time via API](https://developers.vtex.com/docs/guides/formatting-order-invoicing-time)
 
-<OverviewCard icon='GlobeCart'>
-
 ### Tracking an order
 
 Every order has a tracking number that allows you to keep track of its status in the [order flow](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196). To send a tracking event to an order that already has a tracking number, use the endpoint [Update order's partial invoice](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber).
 
 If you wish to register a tracking number and URL to an order’s invoice, use the endpoint [Update order's partial invoice](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber).
-
-</OverviewCard>
 
 ## Integrating with the Multilevel Omnichannel Inventory
 
