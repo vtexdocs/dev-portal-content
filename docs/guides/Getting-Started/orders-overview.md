@@ -186,8 +186,6 @@ There are optional settings available for you to manage your store’s orders. T
 - [Enable order filter by sales associate](https://developers.vtex.com/vtex-rest-api/docs/enable-order-filter-by-sales-associate)
 - [Get invoiced orders placed in inStore](https://developers.vtex.com/docs/guides/get-invoiced-orders-placed-in-instore)
 
-<OverviewCard icon='List'>
-
 ### VTEX DO
 
 - [Create Note](https://developers.vtex.com/vtex-rest-api/reference/newnote)
@@ -198,8 +196,6 @@ There are optional settings available for you to manage your store’s orders. T
 - [Retrieve Task](https://developers.vtex.com/vtex-rest-api/reference/gettask)
 - [Update Task](https://developers.vtex.com/docs/api-reference/vtex-do-api#put-/tasks/-taskId-)
 - [Add Comment on a Task](https://developers.vtex.com/docs/api-reference/vtex-do-api#post-/tasks/-taskId-/comments)
-
-</OverviewCard>
 
 <OverviewCard icon='Blocks'>
 
