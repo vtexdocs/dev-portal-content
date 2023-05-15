@@ -197,13 +197,9 @@ There are optional settings available for you to manage your store’s orders. T
 - [Update Task](https://developers.vtex.com/docs/api-reference/vtex-do-api#put-/tasks/-taskId-)
 - [Add Comment on a Task](https://developers.vtex.com/docs/api-reference/vtex-do-api#post-/tasks/-taskId-/comments)
 
-<OverviewCard icon='Blocks'>
-
 ### B2B
 
 - [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite)
-
-</OverviewCard>
 
 <OverviewCard icon='StoreData'>
 
