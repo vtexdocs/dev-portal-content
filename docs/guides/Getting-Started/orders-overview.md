@@ -145,8 +145,6 @@ In case your store receives the payments outside VTEX’s platform, like payment
   
 > The endpoint [Send payment notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/payments/-paymentId-/payment-notification) must be called only after the order payment has been approved. The store might not receive the payment if there is an issue with the settlement and the endpoint has already been called.
 
-<OverviewCard icon='Integration'>
-
 ### Invoicing an order
 
 When you [invoice an order](https://help.vtex.com/en/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/2WgQrlHTyVo4hLjhUs1LMT), its status in the [order flow](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196) changes to Invoiced, which means the order was successfully completed. After an order is invoiced, you can no longer modify it’s status, except when you wish to send a return invoice.
@@ -157,8 +155,6 @@ In that case, the endpoint [Order invoice notification](https://developers.vtex.
 - [Update order's partial invoice (send tracking number)](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/oms/pvt/orders/-orderId-/invoice/-invoiceNumber-)
 - [Adding a second address for invoicing an order](https://developers.vtex.com/docs/guides/adding-a-second-address-to-the-order)
 - [Formatting order invoicing time via API](https://developers.vtex.com/docs/guides/formatting-order-invoicing-time)
-
-</OverviewCard>
 
 <OverviewCard icon='GlobeCart'>
 
