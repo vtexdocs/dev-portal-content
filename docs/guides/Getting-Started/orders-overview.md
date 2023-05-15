@@ -54,8 +54,6 @@ In the following sections, you will learn how to build order integrations with t
 
 > We strongly recommend you to create an order integration using the [Orders Feed v3](https://developers.vtex.com/vtex-rest-api/docs/orders-feed), instead of using the List orders API request or external services. If you already use an integration based on the API request, you should migrate to using the Feed. Keep in mind that this means changing the integration flow. To learn how to implement this change, see the [Set up order integration](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration).
 
-<OverviewCard icon='SearchList'>
-
 ### Feed v.3
   
 The Orders Feed is a list of order updates, meaning that whenever there is an event in an order, like an order status update, it will be included as a new item in the Feed.
@@ -67,8 +65,6 @@ The Orders Feed is a list of order updates, meaning that whenever there is an ev
 - [Retrieve feed items](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed)
 - [Commit feed items](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed)
 - [Test JSONata expression](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata)
-
-</OverviewCard>
 
 <OverviewCard icon='FileConfiguration'>
 
