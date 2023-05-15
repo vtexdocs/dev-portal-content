@@ -172,14 +172,10 @@ In other words, the feature allows VTEX sellers to sell products from its franch
 
 A VTEX’s store can act both as a [seller](https://help.vtex.com/en/tutorial/configuring-a-seller-on-vtex-marketplace--6g045OkRSjNpqhkExbQRlP) and a [marketplace](https://help.vtex.com/en/tutorial/configuring-vtex-marketplace--7splyp5MqIyt2Iyz5jsNzb) to another VTEX store or an external partner. If you are an [external marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide) that wishes to integrate with VTEX sellers, see the links below to learn how to develop a custom connector to connect with VTEX's architecture and sellers’ orders.
 
-<OverviewCard>
-
 - [Order Integration overview](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-orders)
 - [New Order Integration](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders)
 - [Update Order Status](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-update-order-status)
 - [How to update a canceled order’s status in VTEX](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-canceled-orders)
-
-</OverviewCard>
 
 ## Adding optional configurations
 
