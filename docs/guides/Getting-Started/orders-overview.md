@@ -181,14 +181,10 @@ A VTEX’s store can act both as a [seller](https://help.vtex.com/en/tutorial/co
 
 There are optional settings available for you to manage your store’s orders. This allows you to take advantage of other VTEX capabilities, such as [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), [VTEX DO](https://help.vtex.com/en/tutorial/vtex-do-interface--7KMbRL4OslN8DTX9oiuCiu), [B2B](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC) and [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
 
-<OverviewCard icon='StoreCart'>
-
 ### VTEX inStore
 
 - [Enable order filter by sales associate](https://developers.vtex.com/vtex-rest-api/docs/enable-order-filter-by-sales-associate)
 - [Get invoiced orders placed in inStore](https://developers.vtex.com/docs/guides/get-invoiced-orders-placed-in-instore)
-
-</OverviewCard>
 
 <OverviewCard icon='List'>
 
