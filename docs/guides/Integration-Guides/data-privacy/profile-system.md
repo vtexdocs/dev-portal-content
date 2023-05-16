@@ -9,7 +9,7 @@ updatedAt: "2022-08-19T18:42:00.613Z"
 
 VTEX’s Profile System provides APIs that enable stores to:
 - Deal with a single source of truth for shoppers’ data.
-- [Safely store](https://developers.vtex.com/vtex-rest-api/docs/data-privacy) PII and sensitive information.
+- [Safely store](https://developers.vtex.com/docs/guides/data-privacy) PII and sensitive information.
 
 Below you can learn more about some of the Profile System’s features and how to integrate with the APIs.
 
@@ -22,7 +22,7 @@ Below you can learn more about some of the Profile System’s features and how t
 
 >❗ When implementing your integration:
 >
-> Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-compliant-account) that impact other integrations.
+> Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture) that impact other integrations.
 >
 > Note that, at the moment, Master Data triggers are not supported by the PII platform version Profile System.
 
@@ -63,7 +63,7 @@ Shopper profiles and addresses are accessible via API by a unique `profileId`. H
 To do this, you must replace the `profileId` path parameter with the key of your choice and send the name of the field that will be used in the query parameter `alternativeKey`.
 
 
-## Masked data
+pii## Masked data
 
 After registering customer information to the Profile System, such as profile and address, it will be returned as masked by the default `GET` requests.
 
