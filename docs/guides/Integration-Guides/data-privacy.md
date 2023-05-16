@@ -1,6 +1,6 @@
 ---
-title: "PII data architecture"
-slug: "pii-data-architecture"
+title: "Data privacy"
+slug: "data-privacy"
 hidden: true
 createdAt: "2022-02-22T22:27:02.330Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
@@ -17,11 +17,11 @@ In the PII data architecture, all PII is stored in the Profile System. Other VTE
 
 VTEX has established a comprehensive [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) that incorporates a range of solutions and processes for PII. See the documentation below to learn more about how it works and how to implement it.
 
-- [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) - Technical specifications of the PII data architecture, including the Profile System, data encryption and auditability, among other key features.
+- [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications) - Technical specifications of the PII data architecture, including the Profile System, data encryption and auditability, among other key features.
 - [Data residency](https://developers.vtex.com/docs/guides/data-residency) - How PII data residency works for VTEX stores.
 - [Data subject rights](https://help.vtex.com/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM) - Detailed instructions on how VTEX stores can apply each right of data subjects.
 - [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system) - How to integrate with the Profile System API.
-- [Changes and limitations of the PII data architecture](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-platform-version) - Differences in the implementation of the PII data architecture.
+- [Changes and limitations of the PII data architecture](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture) - Differences in the implementation of the PII data architecture.
 
 ## Parties' responsibilities
 
