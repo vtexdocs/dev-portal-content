@@ -13,9 +13,10 @@ In this guide, you can learn about the changes and limitations you must be aware
 
 ## Adaptations
 
-### OMS 
+### OMS
 
 There are no longer restrictions to the use of these OMS features for PII platform version accounts:
+
 - Subscriptions
 - VTEX DO
 - Conversation tracker
@@ -44,7 +45,7 @@ If you are integrated to Master Data API to get any of this data (CL, AD, BK ent
 
 ### Checkout
 
-[Checkout](https://developers.vtex.com/docs/guides/orderform-fields) endpoints that deal with getting order information keep the same paths but with different behaviors. Contracts are the same for masked data, but for complete data you must include the query parameter: `reason`. Learn more about [retrieving unmasked data](https://developers.vtex.com/vtex-rest-api/docs/profile-system#masked-data).
+[Checkout](https://developers.vtex.com/docs/guides/orderform-fields) endpoints that deal with getting order information keep the same paths but with different behaviors. Contracts are the same for masked data, but for complete data you must include the query parameter: `reason`. Learn more about [retrieving unmasked data](https://developers.vtex.com/docs/guides/profile-system#masked-data).
 
 ### Payments
 
@@ -79,7 +80,7 @@ This feature is not available at this moment. The **Customer cluster** field wil
 
 The [Price tables](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S#) feature is not supported at this moment.
 
-### OMS 
+### OMS
 
 VTEX’s Order Management System is impacted on a few different aspects. See details below.
 
@@ -103,13 +104,13 @@ It is possible to configure PII preferences on OMS' interface of your VTEX Admin
     a. On all orders: View personal information and be audited on all orders.
     b. This order only: View PII content and be audited on this order only.
     c. Hide and do not audit: Browse orders without displaying personal information.
-5. Click on `Confirm`.
+4. Click on `Confirm`.
 
 #### Subscriptions
 
 The subscription feature is compatible with the PII data architecture.
 
-However, the **Subscriptions** Admin interface displays only masked PII. If you wish to see unmasked PII, you must use the 
+However, the **Subscriptions** Admin interface displays only masked PII. If you wish to see unmasked PII, you must use the [Subscriptions v3 API](https://developers.vtex.com/docs/api-reference/subscriptions-api-v3) endpoints, while sending the `reason` query parameter. Learn more about [retrieving unmasked data](https://developers.vtex.com/docs/guides/profile-system#masked-data).
 
 ### MessageCenter - Admin panel
 
