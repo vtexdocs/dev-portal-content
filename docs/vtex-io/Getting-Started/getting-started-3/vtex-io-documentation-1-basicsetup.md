@@ -6,65 +6,65 @@ createdAt: "2020-08-11T07:03:17.968Z"
 updatedAt: "2022-12-13T20:17:44.100Z"
 category: "Storefront Development"
 seeAlso:
- - "/docs/guides/vtex-io-documentation-2-prerequesites"
+  - "/docs/guides/vtex-io-documentation-2-prerequesites"
 ---
 
-You may not realize it, but once you've implemented [**VTEX Store Framework**](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) in your store, you'll be developing in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io/) on a certain scale.
+You may not realize it, but once you have implemented the [**VTEX Store Framework**](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) in your store, you will be developing in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io/) on a certain scale.
 
-That's because **our e-commerce components are in fact native apps to the VTEX IO development platform**. In practice this means that you'll need to install such apps and configure them in order to properly function on your storefront.
+This is because **our ecommerce components are native apps on the VTEX IO development platform**. To make them work correctly on your storefront, you need to install and configure these apps. Here are the steps to get started:
 
-## Step 1 - Installing the VTEX IO CLI
+## Step 1 - Installing VTEX IO CLI
 
-Any development in the VTEX IO platform begins and ends with the **VTEX IO CLI** (Command Line Interface).
+All development in the VTEX IO platform revolves around the **VTEX IO CLI** (Command Line Interface).
 
-It's the communication gateway between your VTEX store and the VTEX IO development platform, allowing you to login, install new apps on the account and manage those already installed, for example.
+It is the communication gateway between your VTEX store and the VTEX IO development platform, allowing you to log in, install new apps on the account, and manage those already installed.
 
-Follow the instructions to install the VTEX IO CLI in your machine and get familiar with it accessing the [reference documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/).
+Follow the instructions to install the VTEX IO CLI on your computer and get familiar with it by reading the [reference documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/).
 
 ## Step 2 - Logging in to your VTEX account
 
-Once VTEX IO’s CLI is installed, you can log in to your VTEX account using your terminal the following command to connect to the platform (replacing `{account}`  with the name of the VTEX account in which you are working):
+Once VTEX IO CLI is installed, you can log in to your VTEX account using the following command in your terminal to connect to the platform (replacing `{account}` with the name of your VTEX account):
 
 ```sh
 vtex login {account}
 ```
 
-By running the command, a browser window will open and ask for your credentials.
+By running this command, a browser window will appear for you to enter your credentials.
 
 ## Step 3 - Creating your own workspace
 
-When using VTEX IO, any interaction with an account happens in a [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/).
+In VTEX IO, all interactions with an account happen within a [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/).
 
-It works as a version of the account in which you are logged in, in a way that any development operation done using such a workspace will be isolated, separate from other workspaces and the public version of the account itself (called Master).
+The workspace in VTEX IO functions as a separate version of your logged-in account, so any development operation using such a workspace will be isolated, separate from other workspaces and the public version of the account (Master).
 
-> ℹ️ If you're used to working with GitHub, think of workspaces as **branches**.
+> ℹ️ If you're familiar with GitHub, you can think of workspaces as **branches**.
 
-As you log in to a VTEX store using VTEX IO, you are automatically in its master workspace, meaning you are in the version available to the end user.
+When you log in to a VTEX store using VTEX IO, you are automatically in the master workspace, which represents the version accessible to end users.
 
-To confirm this, you can run the `vtex whoami` command in your terminal to find out which **account** and **workspace** is being used by the VTEX IO CLI for your login:
+To verify the **account** and **workspace** being used by the VTEX IO CLI for your login, you can run the `vtex whoami` command in your terminal.
 
 ![VTEX IO CLI-whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-1-basicsetup-0.png)
 
-To start performing the desired changes in your storefront, we will need to create a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/).
+To start performing the desired changes in your storefront, you need to create a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/).
 
-Use the `vtex use` command in order to start configuring Store Framework in your store. For example:
+Use the `vtex use` command to start configuring Store Framework in your store. For example:
 
 ```sh
 vtex use examplename
 ```
 
-*Remember to replace* `examplename`  *with a name of your choosing that will be given to the workspace in which you will develop.*
+*Replace* `examplename`  *with the desired name for your workspace.*
 
-Following our example, the command will change the login to the  `examplename` workspace if it exists. If it does not, VTEX IO CLI will create it:
+If the workspace already exists, the command will switch the login to that workspace. If it does not, VTEX IO CLI will create it:
 
 ![workspace-examplename EN](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-1-basicsetup-1.png)
 
-> ℹ️ The `vtex use` command makes all your operations run in the workspace specified in the command, which means you can shift your operations to Master simply by running `vtex use master` in VTEX IO CLI, for example.
+> ℹ️ The `vtex use` command makes all your operations run in the workspace specified in the command. This means you can shift your operations to Master simply by running `vtex use master` in the VTEX IO CLI.
 
 ## Step 4 - Accessing your store using a workspace
 
-Having created your own development workspace in VTEX IO, you can now go to your store by accessing `https://{workspace}--{account}.myvtex.com`, where `{workspace}` should be replaced with the name of the workspace that you've just created and `{account}` with the name of the VTEX account in which you are working.
+Having created your development workspace in VTEX IO, you can now go to your store by accessing `https://{workspace}--{account}.myvtex.com`, where `{workspace}` should be replaced with the name of your workspace and `{account}` with the name of your VTEX account.
 
-> ℹ️ **Tip:** you can simply run `vtex browse` in your terminal to automatically open your browser using the workspace and account in which you are working.
+> ℹ️ **Tip:** You can simply run `vtex browse` in your terminal to automatically open your browser with the correct workspace and account.
 
-Done! Your store is now connected to the VTEX IO platform and you are technically ready to implement the VTEX Store Framework!
+Done! Your store is now connected to the VTEX IO platform, and you are technically ready to implement VTEX Store Framework!
