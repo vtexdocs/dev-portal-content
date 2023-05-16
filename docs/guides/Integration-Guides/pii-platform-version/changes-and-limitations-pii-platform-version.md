@@ -1,9 +1,9 @@
 ---
-title: "Changes and limitations of the PII platform version"
-slug: "changes-and-limitations-pii-platform-version"
+title: "Changes and limitations of the PII data architecture"
+slug: "changes-and-limitations-pii-data-architecture"
 hidden: true
 createdAt: "2022-02-22T22:29:28.541Z"
-updatedAt: "2022-12-09T14:49:14.969Z"
+updatedAt: "2023-05-16T09:38:36.446Z"
 ---
 Some commerce features of the VTEX platform are not available for PII platform version accounts at the moment. There are also features that require adaptations when implemented by the store.
 
