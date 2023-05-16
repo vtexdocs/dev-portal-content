@@ -182,4 +182,4 @@ The marketplace is your source of data, so you must guarantee that marketplaces 
 
 ## PII data architecture integration changes
 
-Due to the changes in data architecture made for the PII data architecture, it has some differences in implementation when compared to the previous version, such as API contracts and how information is displayed. See this article about [Changes and limitations of the PII data architecture](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-platform-version). This document is constantly updated to reflect the evolution of the PII data architecture.
+Due to the changes in data architecture made for the PII data architecture, it has some differences in implementation when compared to the previous version, such as API contracts and how information is displayed. See this article about [Changes and limitations of the PII data architecture](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture). This document is constantly updated to reflect the evolution of the PII data architecture.
