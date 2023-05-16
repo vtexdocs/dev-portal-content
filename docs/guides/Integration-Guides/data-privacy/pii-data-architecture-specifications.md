@@ -95,7 +95,7 @@ sequenceDiagram
 	Order management->>Payments: Order information with pseudonymised profile data
 ```
 
-Modules may need to index PII information for purposes such as search. In this case, the data is hashed, meaning it can not be reversed. This minimizes requests to the [Profile System](#profile-system) and overall latency of the shopping experience. 
+Modules may need to index PII information for purposes such as search. In this case, the data is hashed, meaning it can not be reversed. This minimizes requests to the [Profile System](#profile-system) and overall latency of the shopping experience.
 
 See how the platform hashes this data in this case:
 
@@ -113,44 +113,46 @@ However, unmasked data can be requested by modules, integrations, and store oper
 See examples, as returned by [Profile System APIs](https://developers.vtex.com/docs/guides/profile-system#masked-data).
 
 Masked profile:
+
 ```
 {
-	"id": "70caf394-8534-447e-a0ca-1803c669c771",
-	"meta": {
-    	"version": "abc",
-    	"author": "e40e0b6d-0605-4fa6-8176-1d69fbaf0818",
-    	"creationDate": "13/12/2021T00:00:00Z",
-    	"lastUpdate": "13/12/2021T00:00:00Z"
-	},
-	"document": {
-    	"firstName": "J***",
-    	"lastName": "D**",
-    	"email": "j***.d**@e******.c**",
-    	"birthDate": "1925-11-17",
-    	"document": "1**********",
-    	"documentType": "CPF"
-	}
+    "id": "70caf394-8534-447e-a0ca-1803c669c771",
+    "meta": {
+        "version": "abc",
+        "author": "e40e0b6d-0605-4fa6-8176-1d69fbaf0818",
+        "creationDate": "13/12/2021T00:00:00Z",
+        "lastUpdate": "13/12/2021T00:00:00Z"
+    },
+    "document": {
+        "firstName": "J***",
+        "lastName": "D**",
+        "email": "j***.d**@e******.c**",
+        "birthDate": "1925-11-17",
+        "document": "1**********",
+        "documentType": "CPF"
+    }
 }
 ```
 
 Unmasked profile:
+
 ```
 {
-	"id": "70caf394-8534-447e-a0ca-1803c669c771",
-	"document": {
-    	"firstName": "John",
-    	"lastName": "Doe",
-    	"email": "john.doe@example.com",
-    	"birthDate": "1925-11-17",
-    	"document": "12345678911",
-    	"documentType": "CPF"
-	},
-	"meta": {
-    	"version": "abc",
-    	"author": "e40e0b6d-0605-4fa6-8176-1d69fbaf0818",
-    	"creationDate": "13/12/2021T00:00:00Z",
-    	"lastUpdate": "13/12/2021T00:00:00Z"
-	}
+    "id": "70caf394-8534-447e-a0ca-1803c669c771",
+    "document": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "birthDate": "1925-11-17",
+        "document": "12345678911",
+        "documentType": "CPF"
+    },
+    "meta": {
+        "version": "abc",
+        "author": "e40e0b6d-0605-4fa6-8176-1d69fbaf0818",
+        "creationDate": "13/12/2021T00:00:00Z",
+        "lastUpdate": "13/12/2021T00:00:00Z"
+    }
 }
 ```
 
