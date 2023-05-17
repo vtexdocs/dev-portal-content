@@ -98,17 +98,17 @@ The following events are not fully supported yet. Although the GTM app will list
 | vtex:login  | [login](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#login)     |
 | vtex:signUp | [sign_up](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#sign_up) |
 
-## Container Template Changelog
+## Container template file changelog
 
-This section contains the changes history of the container template file. The most current version can be downloaded in the [Setting up GA4 events](#step-1-setting-up-ga4-events) section.
+This section contains the changes history of the container template file. The latest version can be downloaded in [Step 1 - Setting up GA4 events](#step-1-setting-up-ga4-events).
 
-### [1.1.0] - 2023-05-11
+### 2023-05-11
 
 ### Refactored
 
 - Organized the tags, triggers, and variables in a single "GA4" folder and followed a naming standard.
 
-### [1.0.0] - 2023-05-03
+### 2023-05-03
 
 #### Added
 
