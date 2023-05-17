@@ -104,7 +104,7 @@ This section contains the changes history of the container template file. The la
 
 ### 2023-05-11
 
-### Refactored
+#### Refactored
 
 - Organized the tags, triggers, and variables in a single "GA4" folder and followed a naming standard.
 
