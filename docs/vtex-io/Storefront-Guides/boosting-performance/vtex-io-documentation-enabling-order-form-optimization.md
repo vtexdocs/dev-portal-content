@@ -8,12 +8,12 @@ updatedAt: "2022-12-13T20:17:44.505Z"
 
 Every VTEX store uses the `orderForm` object to **record and fetch data from a user's order**, including each item added to the cart.
 
-In order to give store page blocks access to information stored on any VTEX `orderForm` and thereby be able to render it,  Store Framework always worked with an `OrderFormProvider` in each store page that, behind the scenes, exports user data to every Store Framework block.
+To give store page blocks access to information stored on any VTEX `orderForm` and thereby be able to render it,  Store Framework always worked with an `OrderFormProvider` in each store page that, behind the scenes, exports user data to every Store Framework block.
 Through our constant effort of building the store Checkout using the VTEX IO Store Framework, a **new** `OrderFormProvider` was created, making the former a **legacy**.
 
 The new `OrderFormProvider` v2 is already used by `minicart.v2`, the `add-to-cart-button`, the `checkout-cart` and it will be used by any native block that will be developed in Store Framework from now on. However, important native blocks that are older, such as the `minicart` and `buy-button`, still consume `orderForm` data that was exported by the legacy `OrderFormProvider`.
 
-To make sure **backward-compatibility** is reinforced in Store Framework,  **both** `OrderFormProvider`s, the legacy and the new one, remain on store pages, exporting `OrderForm` data to their respective blocks.
+To ensure **backward-compatibility** is reinforced in Store Framework,  **both** `OrderFormProvider`s, the legacy and the new one, remain on store pages, exporting `OrderForm` data to their respective blocks.
 
 This comes with a performance cost since it means every store is now fetching **two** different `orderForm`s to use in each of the `OrderFormProvider`s working behind the scenes.
 
@@ -25,11 +25,9 @@ Find out how to enable the Order Form optimization in the steps below.
 
 ## Step by step
 
-1. In the desired account's admin, access **CMS** and select the **Store**.
+1. In the VTEX Admin, access **Store Settings > Storefront > Store**.
 
-    ![store-settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-order-form-optimization-0.png)
-
-2. In the **Advanced** tab, toggle the **Enable orderForm optimization** button.
+2. In the **Advanced** tab, toggle the **orderForm optimization** button.
 
     ![enabling-pwa](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-order-form-optimization-1.png)
 
