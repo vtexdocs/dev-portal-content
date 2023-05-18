@@ -17,7 +17,7 @@ Note that once promoted to Master, you can't make new code changes in your app v
 
 Before proceeding any further, make sure the app you are about to publish has been [deployed](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version).
 
-Also, remember that when you promote a workspace to Master, your changes are applied to all workspaces of the current account. Hence, if you are promoting a new version of the [Store Theme app](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-settingyourstoretheme) to Master, make sure to complete all the necessary adjustments to store content in Site Editor and to your code beforehand.
+Also, remember that when you promote a workspace to master, your changes are applied to all workspaces of the current account. Hence, if you are promoting a new version of the [Store Theme app](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-settingyourstoretheme) to master, make sure to complete all the necessary adjustments to store content in Site Editor and to your code beforehand.
 
 Promoting a workspace to Master is a step in **making your new app version publicly available**. Please check [this](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide for more information.
 
