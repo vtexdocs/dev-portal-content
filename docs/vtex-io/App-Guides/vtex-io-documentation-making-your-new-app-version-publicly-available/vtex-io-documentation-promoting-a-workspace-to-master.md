@@ -13,7 +13,7 @@ Note that once promoted to Master, you can't make new code changes in your app v
 
 ![Promoting a production workspace to Master](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-promoting-a-workspace-to-master-0.gif)
 
-## Before you begin
+## Before you start
 
 Before proceeding any further, make sure the app you are about to publish has been [deployed](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version).
 
