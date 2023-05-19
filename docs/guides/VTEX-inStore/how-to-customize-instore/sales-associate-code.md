@@ -30,7 +30,7 @@ You can configure the JavaScript file according to your needs, using different v
     "2-0": "`mask`",
     "h-0": "Property",
     "0-1": "string",
-    "0-2": "Defines the ‘vendors’ field format. The possible values are `text` and `textarea`, for big text blocks, and `input`, a text field for simple keys.",
+    "0-2": "Defines the ‘vendors’ field format. The possible values are `text` and `textarea`, for big text blocks. `input`, a text field for simple keys. `select`, showing a combobox to quickly select.",
     "1-1": "boolean",
     "2-2": "A regular variable expression that applies a validation logic to the type property value. In other words, the person responsible for editing the `window.INSTORE_CONFIG` object can create the variable expression they find most appropriate for the sales rep code.",
     "1-2": "Activates the validation performed via Master Data.",
