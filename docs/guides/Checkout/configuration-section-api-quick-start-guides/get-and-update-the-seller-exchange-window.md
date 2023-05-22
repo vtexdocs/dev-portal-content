@@ -16,7 +16,7 @@ This guide describes how to get a seller change window or update the number of d
 
 ## Getting the current seller change window
 
-To get seller change window in a marketplace, you need to use the [Get window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller) endpoint as a **GET** request. In this request, you must send the `accountname` in the URL address, as in the example below:
+To get seller change window in a marketplace, you need to use the [Get window to change seller](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/window-to-change-seller) endpoint as a **GET** request. In this request, you must send the `accountname` in the URL address, as in the example below:
 
 **Method: GET**
 
@@ -30,7 +30,7 @@ After sending the request, the endpoint will return the response body showing th
 
 ## Updating the window to change sellers
 
-To update the seller change window (in days), you need to use a request similar to **Get window to change seller**, but as a **POST** request ([Update window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller)), as in the example below:
+To update the seller change window (in days), you need to use a request similar to **Get window to change seller**, but as a **POST** request ([Update window to change seller](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/checkout/pvt/configuration/window-to-change-seller)), as in the example below:
 
 **Method: POST**
 
@@ -46,7 +46,7 @@ See a request body example below (10 days):
 
 After sending the request, the endpoint will return `code 201 (Created)` and an empty response body.
 
-To confirm that the new seller change window has been applied to your account, access the [Get window to change seller](https://developers.vtex.com/vtex-rest-api/reference/getwindowtochangeseller) endpoint again as a **GET** request.
+To confirm that the new seller change window has been applied to your account, access the [Get window to change seller](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/window-to-change-seller) endpoint again as a **GET** request.
 
 ## Error codes
 
