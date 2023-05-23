@@ -6,6 +6,8 @@ createdAt: "2023-03-01T16:44:01.460Z"
 updatedAt: "2023-04-19T16:44:01.460Z"
 ---
 
+> This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/pt-br/requests).
+
 [VTEX Shipping Network](https://vtex.com/br-pt/shipping-network/) is the solution that uses order tracking data directly from [carriers](https://help.vtex.com/en/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE) to keep merchants and shoppers up to date with the status of each delivery.
 
 ## Overview
