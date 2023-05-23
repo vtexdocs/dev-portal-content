@@ -6,6 +6,8 @@ createdAt: "2023-03-01T16:44:01.460Z"
 updatedAt: "2023-04-19T16:44:01.460Z"
 ---
 
+> This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com).
+
 [VTEX Shipping Network](https://vtex.com/br-pt/shipping-network/) is the solution that uses order tracking data directly from [carriers](https://help.vtex.com/en/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE) to keep merchants and shoppers up to date with the status of each delivery.
 
 ## Overview
@@ -87,3 +89,7 @@ This endpoint can return other status codes in the following scenarios:
 | 403 | `reason: User does not have access to the resources [TransportationAdmin]` | Forbidden response status code indicates that the request has not been completed because it lacks valid authentication credentials for the requested resource. In this case, the header values `X-VTEX-API-AppToken` or `X-VTEX-API-AppKey` are invalid. |
 | 404 | `Not Found` | The `orderId` provided does not belong to any existing order. This might happen if the `orderId` does not contain the correct prefix. |
 | 500 | `Internal Server Error` | Unexpected error. |
+
+## Configuring shipping labels printing format
+
+In the VTEX Admin, you can configure the shipping labels printing format as a **A4** (297x210mm) or a **ZPL** (Zebra Programming Language) extension. You will find the instructions in our Help Center article [Pronto para envio](https://help.vtex.com/pt/tutorial/pronto-para-envio--5YOZV7Aotv3pap0fGNESDs).
