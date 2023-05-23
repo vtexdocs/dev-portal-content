@@ -2,65 +2,65 @@
 title: "Command reference"
 slug: "vtex-io-documentation-vtex-io-cli-command-reference"
 hidden: false
-createdAt: "2021-04-04T22:02:14.325Z"
+createdAt: "2021-04-04t22:02:14.325z"
 updatedAt: "2022-12-13T20:17:44.857Z"
 ---
+
 This documentation is a reference for:
 
 - [VTEX IO CLI default commands](#default-commands)
 - [VTEX plugins commands](#plugins)
-
->⚠️  VTEX IO's CLI 3.x now has a plugin-based architecture. Hence, some commands from the previous versions of VTEX IO's CLI are now available as plugins. They are: `add`, `autoupdate`, `config`, `debug`, `infra`, `lighthouse`, `logs`, `redirects`, `settings`, `submit`, `support`, `test`, `url`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ⚠️ VTEX IO CLI 3.x now has a plugin-based architecture, which means that certain commands from earlier versions are now implemented as plugins.  These plugins include: `add`, `autoupdate`, `config`, `debug`, `infra`, `lighthouse`, `logs`, `redirects`, `settings`, `submit`, `support`, `test`, and `url`. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
 ## Default commands
 
-Check in the following a brief description of the default commands of VTEX IO's CLI. For a detailed description of each command, click on its respective name. You can also access this information in your terminal by adding `--help` or `-h` after the command name.
+Below is a brief description of the default commands available in VTEX IO CLI. For detailed information about each command, you can click on the respective command name.  You can also get this information in your terminal by adding `--help` or `-h` after the command name.
 
-|Command Name|Functionality|
-|------------|-------------|
-| [`autoupdate`](#autoupdate) | Automatically updates VTEX IO's CLI.|
-| [`browse`](#browse) |Opens the URL relative to your current workspace and account in a new browser window.|
-| [`deploy`](#deploy) | Publishes an app as a stable version. Only works for apps previously published as a release candidate version.|
-| [`deprecate`](#deprecate) |Deprecates the specified app, uninstalling and downgrading it to the latest stable version in every VTEX account.|
-| [`deps diff`](#deps-diff) |Displays the differences between the dependencies of two distinct workspaces.|
-| [`deps list`](#deps-list) |Displays the complete dependency tree of the current workspace.|
-| [`deps update`](#deps-update) |Updates a dependency of the current workspace. If not specified which one, it updates all dependencies.|
-| [`edition get`](#edition-get) |Displays the Edition App version installed on the current account.|
-| [`edition set`](#edition-set) |Sets the Edition App version for the current account.|
-| [`help`](#help) |Displays help for VTEX CLI commands.|
-| [`init`](#init) |Copies starting files and folders from VTEX boilerplates into your local directories.|
-| [`install`](#install) | Installs an app on the current workspace. If not specified which one, it defaults to the app in the current directory.|
-| [`link`](#link) |Syncs the app in the current directory with the development workspace in use.|
-| [`list`](#list)| Lists the apps installed on the current workspace and account.|
-| [`local token`](#local-token) |Prints the user's auth token and copies it to the clipboard. |
-| [`login`](#login) |Logs in to a VTEX account.|
-| [`logout`](#logout) |Logs out of the current VTEX account.|
-| [`publish`](#publish) | Publishes the app in the current directory as a release candidate version. |
-| [`release`](#release) |(Only for git users.) Bumps the app version, commits, and pushes to remote the app in the current directory.|
-| [`setup`](#setup) |Sets up typings and tools for the current development environment.|
-| [`switch`](#switch) |Switches to another VTEX account.|
-| [`undeprecate`](#undeprecate) |Reestablishes a deprecated version of an app as a stable version.|
-| [`uninstall`](#uninstall) |Uninstalls an app from the current account and workspace.|
-| [`unlink`](#unlink) |Unlinks an app from the current workspace.|
-| [`update`](#update) |Updates all installed apps to the latest (minor or patch) version. Does not upgrade to another major version.|
-| [`whoami`](#whoami) |Prints the current account, workspace, environment, and login details.|
-| [`workspace abtest finish`](#workspace-abtest-finish) |Stops all A/B tests from running on the current account.|
-| [`workspace abtest start`](#workspace-abtest-start) |Starts a new A/B test on the current workspace.|
-| [`workspace abtest status`](#workspace-abtest-status) |Displays the results of the active A/B tests.|
-| [`workspace delete`](#workspace-delete) |Deletes one or many workspaces from the current account.|
-| [`workspace list`](#workspace-list) |Lists all workspaces of the current account.|
-| [`workspace promote`](#workspace-promote)|Promotes the current workspace to master. Only works for production workspaces|
-| [`workspace reset`](#workspace-reset) |Cleans all configurations of the specified workspace and recreates it with the configurations from master.|
-| [`workspace status`](#workspace-status) |Displays information about the specified workspace.|
-| [`workspace use`](#workspace-use) |Creates and switches to a new workspace or simply switches to an existing one.|
+| Command name                                          | Feature                                                                                                                         |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| [`autoupdate`](#autoupdate)                           | Automatically updates VTEX IO CLI.                                                                                              |
+| [`browse`](#browse)                                   | Opens your current workspace and account URL in a new browser window.                                                           |
+| [`deploy`](#deploy)                                   | Publishes an app as a stable version. Only works for apps previously published as a release candidate version.                  |
+| [`deprecate`](#deprecate)                             | Deprecates the specified app, uninstalling and downgrading it to the latest stable version on every VTEX account.               |
+| [`deps diff`](#deps-diff)                             | Displays the differences between the dependencies of two distinct workspaces.                                                   |
+| [`deps list`](#deps-list)                             | Displays the complete dependency tree of the current workspace.                                                                 |
+| [`deps update`](#deps-update)                         | Updates a dependency of the current workspace. If not specified which one, it updates all dependencies.                         |
+| [`edition get`](#edition-get)                         | Displays the Edition App version installed on the current account.                                                              |
+| [`edition set`](#edition-set)                         | Sets the version of the Edition App for the current account.                                                                    |
+| [`help`](#help)                                       | Displays help for VTEX CLI commands.                                                                                            |
+| [`init`](#init)                                       | Copies starting files and folders from VTEX boilerplates to your local directories.                                             |
+| [`install`](#install)                                 | Installs an app on the current workspace. If no app is specified, it defaults to the app in the current directory.              |
+| [`link`](#link)                                       | Syncs the app in the current directory with the development workspace being used.                                               |
+| [`list`](#list)                                       | Lists the apps installed on the current workspace and account.                                                                  |
+| [`local token`](#local-token)                         | Prints the user auth token and copies it to the clipboard.                                                                      |
+| [`login`](#login)                                     | Logs into a VTEX account.                                                                                                       |
+| [`logout`](#logout)                                   | Logs out from the current VTEX account.                                                                                         |
+| [`publish`](#publish)                                 | Publishes the app in the current directory as a release candidate version.                                                      |
+| [`release`](#release)                                 | (For git users only.) Bumps the app version, commits, and pushes to the remote repository for the app in the current directory. |
+| [`setup`](#setup)                                     | Sets up typing and tools for the current development environment.                                                               |
+| [`switch`](#switch)                                   | Switches to another VTEX account.                                                                                               |
+| [`undeprecate`](#undeprecate)                         | Reverts a deprecated version of an app to a stable version.                                                                     |
+| [`uninstall`](#uninstall)                             | Uninstalls an app from the current account and workspace.                                                                       |
+| [`unlink`](#unlink)                                   | Unlinks an app from the current workspace.                                                                                      |
+| [`update`](#update)                                   | Updates all installed apps to the latest minor or patch version. Does not upgrade to another major version.                     |
+| [`whoami`](#whoami)                                   | Prints details about the current account, workspace, environment, and login information.                                        |
+| [`workspace abtest finish`](#workspace-abtest-finish) | Stops all A/B tests on the current account.                                                                                     |
+| [`workspace abtest start`](#workspace-abtest-start)   | Starts a new A/B test on the current workspace.                                                                                 |
+| [`workspace abtest status`](#workspace-abtest-status) | Displays the results of the active A/B tests.                                                                                   |
+| [`workspace delete`](#workspace-delete)               | Deletes one or many workspaces from the current account.                                                                        |
+| [`workspace list`](#workspace-list)                   | Lists all workspaces of the current account.                                                                                    |
+| [`workspace promote`](#workspace-promote)             | Promotes the current workspace to the master branch. Only applicable for production workspaces.                                 |
+| [`workspace reset`](#workspace-reset)                 | Cleans all configurations of the specified workspace and recreates them with the configurations from the master branch.         |
+| [`workspace status`](#workspace-status)               | Displays information about the specified workspace.                                                                             |
+| [`workspace use`](#workspace-use)                     | Creates and switches to a new workspace or simply switches to an existing one.                                                  |
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
 ### autoupdate
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-autoupdate`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-autoupdate` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
-Automatically updates VTEX IO's CLI.
+Automatically updates VTEX IO CLI.
 
 #### Usage
 
@@ -70,15 +70,15 @@ Automatically updates VTEX IO's CLI.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**CHANNEL** (optional)|.|
+| Argument               | Description                            |
+| ---------------------- | -------------------------------------- |
+| **CHANNEL** (optional) | Channel for which to display the logs. |
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
 ### browse
 
-Opens the URL relative to your current workspace and account in a new browser window.
+Opens your current workspace and account URL in a new browser window.
 
 #### Usage
 
@@ -88,16 +88,16 @@ Opens the URL relative to your current workspace and account in a new browser wi
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**PATH** (optional)|Relative path from `https://{workspace}--{account}.myvtex.com/`.|
+| Argument            | Description                                                      |
+| ------------------- | ---------------------------------------------------------------- |
+| **PATH** (optional) | Relative path from `https://{workspace}--{account}.myvtex.com/`. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--qr**|-q|Prints a QR Code on the terminal.|
-  
+| Option   | Alias | Description                       |
+| -------- | ----- | --------------------------------- |
+| **--qr** | -q    | Prints a QR Code on the terminal. |
+
 #### Examples
 
 ```shell
@@ -109,9 +109,9 @@ Opens the URL relative to your current workspace and account in a new browser wi
 
 ### deploy
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deploy`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-deploy` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
-Publishes an app as a stable version. Only works for apps previously published as a release candidate version [see vtex publish --help].
+Publishes an app as a stable version. This command is specifically designed for apps that have been previously published as a release candidate version [see vtex publish --help].
 
 #### Usage
 
@@ -121,16 +121,16 @@ Publishes an app as a stable version. Only works for apps previously published a
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPID** (optional)|Name and version of the app you want to deploy.|
+| Argument             | Description                                         |
+| -------------------- | --------------------------------------------------- |
+| **APPID** (optional) | The name and version of the app you want to deploy. |
 
 #### Options
 
-|Option|Alias|Description|
-|------|-----|-----------|
-|**--yes**|-y|Answers yes to all prompts.|
-|**--force**|-f|(Use with caution.) Ignores the testing period of 7 minutes after publishing an app.|
+| Option      | Alias | Description                                                                          |
+| ----------- | ----- | ------------------------------------------------------------------------------------ |
+| **--yes**   | -y    | Answers yes to all prompts.                                                          |
+| **--force** | -f    | (Use with caution.) Ignores the testing period of 7 minutes after publishing an app. |
 
 #### Examples
 
@@ -143,7 +143,7 @@ Publishes an app as a stable version. Only works for apps previously published a
 
 ### deprecate
 
-Deprecates the specified app, uninstalling and downgrading it to the latest stable version in every VTEX account.
+Deprecates the specified app, uninstalling and downgrading it to the latest stable version on every VTEX account.
 
 #### Usage
 
@@ -153,16 +153,16 @@ Deprecates the specified app, uninstalling and downgrading it to the latest stab
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPID** (optional)|Name and version of the app (`{vendor}.{appname}@{x.x.x}`) to deprecate.|
-|**ITHAPPID** (optional)|Names and versions of the multiple apps (`{vendor}.{appname}@{x.x.x}`) to deprecate.|
+| Argument                | Description                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **APPID** (optional)    | The name and version of the app to deprecate, specified in the format `{vendor}.{appname}@{x.x.x}`.           |
+| **ITHAPPID** (optional) | The names and versions of multiple apps to deprecate, specified in the format (`{vendor}.{appname}@{x.x.x}`). |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--yes**|-y|Answers yes to all prompts.|
+| Option    | Alias | Description                 |
+| --------- | ----- | --------------------------- |
+| **--yes** | -y    | Answers yes to all prompts. |
 
 #### Examples
 
@@ -175,9 +175,9 @@ Deprecates the specified app, uninstalling and downgrading it to the latest stab
 
 ### deps diff
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
-Displays the differences between the dependencies of two distinct workspaces. If a single parameter is passed, the specified workspace's dependencies are compared with the master's. If no parameter is passed, the diff is made between the current workspace and master.
+Displays the differences between the dependencies of two distinct workspaces. If a single parameter is passed, the command compares the dependencies of the specified workspace with those of the master workspace. If no parameter is passed, the command compares the dependencies of the current workspace with those of the master workspace.
 
 #### Usage
 
@@ -187,10 +187,10 @@ Displays the differences between the dependencies of two distinct workspaces. If
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**WORKSPACE1** (optional)|First workspace for comparison.|
-|**WORKSPACE2** (optional)| [default: master] Second workspace for comparison.|
+| Argument                  | Description                                        |
+| ------------------------- | -------------------------------------------------- |
+| **WORKSPACE1** (optional) | First workspace for comparison.                    |
+| **WORKSPACE2** (optional) | [default: master] Second workspace for comparison. |
 
 #### Example
 
@@ -202,7 +202,7 @@ Displays the differences between the dependencies of two distinct workspaces. If
 
 ### deps list
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
 Displays the complete dependency tree of the current workspace.
 
@@ -214,11 +214,11 @@ Displays the complete dependency tree of the current workspace.
 
 #### Options
 
-|Option|Alias|Description|
-|------|-----|-----------|
-|**--keys**|-k|Shows only key dependencies.|
-|**--npm** |-n|Includes dependencies from the npm registry.|
-  
+| Option     | Alias | Description                                  |
+| ---------- | ----- | -------------------------------------------- |
+| **--keys** | -k    | Shows only key dependencies.                 |
+| **--npm**  | -n    | Includes dependencies from the npm registry. |
+
 #### Alias
 
 ```shell
@@ -236,9 +236,9 @@ Displays the complete dependency tree of the current workspace.
 
 ### deps update
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-deps`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
-Updates a dependency of the current workspace. If not specified which dependency, it updates all of them.
+Updates a dependency of the current workspace. If not specified which dependency, the command updates all dependencies of the workspace.
 
 #### Usage
 
@@ -248,10 +248,10 @@ Updates a dependency of the current workspace. If not specified which dependency
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPID** (optional)|Name and version of the app (`{vendor}.{appname}@{x.x.x}`) to update.|
-|**ITHAPPID** (optional)|Names and versions of the multiple apps (`{vendor}.{appname}@{x.x.x}`) to update.|
+| Argument                | Description                                                                                                |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **APPID** (optional)    | The name and version of the app to update, specified in the format `{vendor}.{appname}@{x.x.x}`.           |
+| **ITHAPPID** (optional) | The names and versions of multiple apps to update, specified in the format (`{vendor}.{appname}@{x.x.x}`). |
 
 #### Examples
 
@@ -264,7 +264,7 @@ Updates a dependency of the current workspace. If not specified which dependency
 
 ### edition get
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-edition`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-edition` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
 Displays the Edition App version installed on the current account.
 
@@ -284,7 +284,7 @@ Displays the Edition App version installed on the current account.
 
 ### edition set
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-edition`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-edition` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
 Sets the Edition App version for the current account.
 
@@ -296,9 +296,9 @@ Sets the Edition App version for the current account.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**EDITION**|Name of the Edition App to install.|
+| Argument    | Description                         |
+| ----------- | ----------------------------------- |
+| **EDITION** | Name of the Edition App to install. |
 
 #### Example
 
@@ -320,21 +320,21 @@ Displays help for VTEX CLI commands.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**COMMAND** (optional)|Command to show help about.|
+| Argument               | Description           |
+| ---------------------- | --------------------- |
+| **COMMAND** (optional) | Command to show help. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--all**|-|Displays all commands available in the CLI.|
+| Option    | Alias | Description                             |
+| --------- | ----- | --------------------------------------- |
+| **--all** | -     | Displays all commands available in CLI. |
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
 ### init
 
-Copies starting files and folders from VTEX boilerplates into your local directories.
+Copies starting files and folders from VTEX boilerplates to your local directories.
 
 #### Usage
 
@@ -352,7 +352,7 @@ Copies starting files and folders from VTEX boilerplates into your local directo
 
 ### install
 
-Installs an app on the current workspace. If not specified which one, it defaults to the app in the current directory.
+Installs an app on the current workspace. If no app is specified, it defaults to the app in the current directory.
 
 #### Usage
 
@@ -362,17 +362,17 @@ Installs an app on the current workspace. If not specified which one, it default
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPID** (optional)|Name and version of the app (`{vendor}.{appname}@{x.x.x}`) to install.|
-|**ITHAPPID** (optional)|Names and versions of the multiple apps (`{vendor}.{appname}@{x.x.x}`) to install.|
+| Argument                | Description                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
+| **APPID** (optional)    | The name and version of the app to install, specified in the format `{vendor}.{appname}@{x.x.x}`.         |
+| **ITHAPPID** (optional) | The names and versions of multiple apps to install, specified in the format `{vendor}.{appname}@{x.x.x}`. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--force**|-f|Installs the specified app without checking for route conflicts.|
-  
+| Option      | Alias | Description                                                      |
+| ----------- | ----- | ---------------------------------------------------------------- |
+| **--force** | -f    | Installs the specified app without checking for route conflicts. |
+
 #### Examples
 
 ```shell
@@ -385,7 +385,7 @@ Installs an app on the current workspace. If not specified which one, it default
 
 ### link
 
-Syncs the app in the current directory with the development workspace in use.
+Syncs the app in the current directory with the development workspace being used.
 
 #### Usage
 
@@ -395,14 +395,14 @@ Syncs the app in the current directory with the development workspace in use.
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--account=account**|-a|Starts a development session in the specified account. Must be paired with the '--workspace' flag.|
-|**--clean**|-c|Cleans builder cache.|
-|**--setup**|-s|Sets up typing definitions before linking the app [see vtex setup --help].|
-|**--unsafe**|-u|Allows linking the app despite Typescript errors.|
-|**--workspace=workspace**|-w|Starts a development session in the specified workspace. Can be paired with the '--account' flag to switch from the current account and workspace.|
-|**--no-watch**|-|Doesn't watch for file changes after the initial link.|  
+| Option                    | Alias | Description                                                                                                                                                  |
+| ------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **--account=account**     | -a    | Starts a development session in the specified account. Must be used together with the '--workspace' flag.                                                    |
+| **--clean**               | -c    | Cleans the builder cache.                                                                                                                                    |
+| **--setup**               | -s    | Sets up typing definitions before linking the app [see vtex setup --help].                                                                                   |
+| **--unsafe**              | -u    | Allows linking the app despite TypeScript errors.                                                                                                            |
+| **--workspace=workspace** | -w    | Starts a development session in the specified workspace. It can be used together with the '--account' flag to switch from the current account and workspace. |
+| **--no-watch**            | -     | Does not watch for file changes after the initial link.                                                                                                      |
 
 #### Example
 
@@ -440,7 +440,7 @@ Lists the apps installed on the current workspace and account.
 
 ### local token
 
-Prints the user's auth token and copies it to the clipboard.
+Prints the user auth token and copies it to the clipboard.
 
 #### Usage
 
@@ -458,7 +458,7 @@ Prints the user's auth token and copies it to the clipboard.
 
 ### login
 
-Logs in to a VTEX account.
+Logs into a VTEX account.
 
 #### Usage
 
@@ -468,15 +468,15 @@ Logs in to a VTEX account.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**ACCOUNT** (optional)|Account name to log in.|
+| Argument               | Description             |
+| ---------------------- | ----------------------- |
+| **ACCOUNT** (optional) | Account name to log in. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--workspace=workspace**|-w|Logs in the specified workspace.|
+| Option                    | Alias | Description                        |
+| ------------------------- | ----- | ---------------------------------- |
+| **--workspace=workspace** | -w    | Logs into the specified workspace. |
 
 #### Examples
 
@@ -489,7 +489,7 @@ Logs in to a VTEX account.
 
 ### logout
 
-Logs out of the current VTEX account.
+Logs out from the current VTEX account.
 
 #### Usage
 
@@ -517,13 +517,13 @@ Publishes the app in the current directory as a release candidate version.
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--force**|-f|Publishes the app independently of SemVer rules.|
-|**--tag=tag**|-t|Adds the specified tag to the release.|
-|**--workspace=workspace**|-w|Uses the specified workspace in the app registry.|
-|**--yes**|-y|Answers yes to all prompts.|
-  
+| Option                    | Alias | Description                                      |
+| ------------------------- | ----- | ------------------------------------------------ |
+| **--force**               | -f    | Publishes the app independently of SemVer rules. |
+| **--tag=tag**             | -t    | Adds the specified tag to the release.           |
+| **--workspace=workspace** | -w    | Uses the specified workspace for the app.        |
+| **--yes**                 | -y    | Answers yes to all prompts.                      |
+
 #### Example
 
 ```shell
@@ -534,7 +534,7 @@ Publishes the app in the current directory as a release candidate version.
 
 ### release
 
-(Only for git users.) Bumps the app version, commits, and pushes to remote the app in the current directory.
+(For git users only.) Bumps the app version, commits, and pushes to the remote repository for the app in the current directory.
 
 #### Usage
 
@@ -544,10 +544,10 @@ Publishes the app in the current directory as a release candidate version.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**RELEASETYPE** (optional)|Release type (major, minor, or patch).|
-|**TAGNAME** (optional)|Tag name (e.g., stable, beta).|
+| Argument                   | Description                            |
+| -------------------------- | -------------------------------------- |
+| **RELEASETYPE** (optional) | Release type (major, minor, or patch). |
+| **TAGNAME** (optional)     | Tag name (e.g., stable, beta).         |
 
 #### Examples
 
@@ -563,7 +563,7 @@ Publishes the app in the current directory as a release candidate version.
 
 ### setup
 
-Sets up typings and tools for the current development environment.
+Configures typing definitions and tools for the current development environment.
 
 #### Usage
 
@@ -573,13 +573,13 @@ Sets up typings and tools for the current development environment.
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--ignore-linked**|-i|Sets up types from published apps, and ignores types from linked apps.|
-|**--all**|-|Sets up all available typings, configs, and tools.|
-|**--tooling**|-|Sets up Prettier, Husky, and ESLint.|
-|**--tsconfig**|-|Sets up React and Node TSconfig, if applicable.|
-|**--typings**|-|Sets up GraphQL and React typings.|
+| Option              | Alias | Description                                                                                        |
+| ------------------- | ----- | -------------------------------------------------------------------------------------------------- |
+| **--ignore-linked** | -i    | Configures typing definitions from published apps and ignores typing definitions from linked apps. |
+| **--all**           | -     | Configures all available typing definitions, configurations, and tools.                            |
+| **--tooling**       | -     | Configures Prettier, Husky, and ESLint.                                                            |
+| **--tsconfig**      | -     | Configures React and Node TSconfig, if applicable.                                                 |
+| **--typings**       | -     | Configures GraphQL and React typing definitions.                                                   |
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
@@ -595,16 +595,16 @@ Switches to another VTEX account.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**ACCOUNT**|Account name to log in.|
+| Argument    | Description                           |
+| ----------- | ------------------------------------- |
+| **ACCOUNT** | The name of the account to log in to. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--workspace=workspace**|-w|Moves to the specified workspace.|
-  
+| Option                    | Alias | Description                       |
+| ------------------------- | ----- | --------------------------------- |
+| **--workspace=workspace** | -w    | Moves to the specified workspace. |
+
 #### Examples
 
 ```shell
@@ -625,16 +625,16 @@ Reestablishes a deprecated version of an app as a stable version.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPID** (optional)|Name and version of the app (`{vendor}.{appname}@{x.x.x}`) to undeprecate.|
-|**ITHAPPID** (optional)|Names and versions of the multiple apps (`{vendor}.{appname}@{x.x.x}`) to undeprecate.|
+| Argument                | Description                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **APPID** (optional)    | The name and version of the app to undeprecate, specified in the format `{vendor}.{appname}@{x.x.x}`.         |
+| **ITHAPPID** (optional) | The names and versions of multiple apps to undeprecate, specified in the format `{vendor}.{appname}@{x.x.x}`. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--yes**|-y|Answers yes to all prompts.|
+| Option    | Alias | Description                 |
+| --------- | ----- | --------------------------- |
+| **--yes** | -y    | Answers yes to all prompts. |
 
 #### Example
 
@@ -646,7 +646,7 @@ Reestablishes a deprecated version of an app as a stable version.
 
 ### uninstall
 
-Uninstalls an app from the current workspace. If not specified which app to uninstall, it defaults to the app in the current directory.
+Uninstalls an app from the current workspace. If no app is specified, it defaults to the app in the current directory.
 
 #### Usage
 
@@ -656,16 +656,16 @@ Uninstalls an app from the current workspace. If not specified which app to unin
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPNAME** (optional)|Name and version of the app (`{vendor}.{appname}@{x.x.x}`) to uninstall.|
-|**ITHAPPNAME** (optional)|Names and versions of the multiple apps (`{vendor}.{appname}@{x.x.x}`) to uninstall.|
+| Argument                  | Description                                                                                                 |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **APPNAME** (optional)    | The name and version of the app to uninstall, specified in the format `{vendor}.{appname}@{x.x.x}`.         |
+| **ITHAPPNAME** (optional) | The names and versions of multiple apps to uninstall, specified in the format `{vendor}.{appname}@{x.x.x}`. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--yes**|-y|Answers yes to all prompts.|
+| Option    | Alias | Description                 |
+| --------- | ----- | --------------------------- |
+| **--yes** | -y    | Answers yes to all prompts. |
 
 #### Examples
 
@@ -679,7 +679,7 @@ Uninstalls an app from the current workspace. If not specified which app to unin
 
 ### unlink
 
-Unlinks an app from the current workspace. If not specified which app to unlink, it defaults to the app in the current directory.
+Unlinks an app from the current workspace. If no app is specified, it defaults to the app in the current directory.
 
 #### Usage
 
@@ -691,16 +691,16 @@ appname Name of the app to unlink.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPID** (optional)|Name and version of the app (`{vendor}.{appname}@{x.x.x}`) to unlink.|
-|**ITHAPPID** (optional)|Names and versions of the multiple apps (`{vendor}.{appname}@{x.x.x}`) to unlink.|
+| Argument                | Description                                                                                              |
+| ----------------------- | -------------------------------------------------------------------------------------------------------- |
+| **APPID** (optional)    | The name and version of the app to unlink, specified in the format `{vendor}.{appname}@{x.x.x}`.         |
+| **ITHAPPID** (optional) | The names and versions of multiple apps to unlink, specified in the format `{vendor}.{appname}@{x.x.x}`. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--all**|-a|Unlinks all apps.|
+| Option    | Alias | Description       |
+| --------- | ----- | ----------------- |
+| **--all** | -a    | Unlinks all apps. |
 
 #### Examples
 
@@ -713,7 +713,7 @@ appname Name of the app to unlink.
 
 ### update
 
-Updates all installed apps to the latest (minor or patch) version. Does not upgrade to another major version.
+Updates all installed apps to the latest minor or patch version. Does not upgrade to another major version.
 
 #### Usage
 
@@ -731,9 +731,9 @@ Updates all installed apps to the latest (minor or patch) version. Does not upgr
 
 ### whoami
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-whoami`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-whoami` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
-Prints the current account, workspace, environment, and login details.
+Prints details about the current account, workspace, environment, and login information.
 
 #### Usage
 
@@ -751,7 +751,7 @@ Prints the current account, workspace, environment, and login details.
 
 ### workspace abtest finish
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-abtest` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
 Stops all A/B tests from running on the current account.
 
@@ -765,7 +765,7 @@ Stops all A/B tests from running on the current account.
 
 ### workspace abtest start
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-abtest` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
 Starts a new A/B test on the current workspace.
 
@@ -779,9 +779,9 @@ Starts a new A/B test on the current workspace.
 
 ### workspace abtest status
 
-> ℹ️ This command refers to the plugin `@vtex/cli-plugin-abtest.`. Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-abtest` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
-Displays the results of the active A/B tests.
+Displays the results of active A/B tests.
 
 #### Usage
 
@@ -803,17 +803,17 @@ Deletes one or many workspaces from the current account.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**WORKSPACE1**|Name of the workspace to delete.|
-|**ITHWORKSPACE** (optional)|Name of the multiple workspaces to delete.|
+| Argument                    | Description                             |
+| --------------------------- | --------------------------------------- |
+| **WORKSPACE1**              | Name of the workspace to delete.        |
+| **ITHWORKSPACE** (optional) | Names of multiple workspaces to delete. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--force**|-f|Deletes the specified workspace even if it is currently in use.|
-|**--yes**|-y|Answers yes to all prompts.|
+| Option      | Alias | Description                                                |
+| ----------- | ----- | ---------------------------------------------------------- |
+| **--force** | -f    | Deletes the specified workspace, even if it is being used. |
+| **--yes**   | -y    | Answers yes to all prompts.                                |
 
 #### Examples
 
@@ -835,7 +835,7 @@ Lists all workspaces of the current account.
 ```
 
 #### Aliases
-  
+
 ```shell
   vtex workspace ls
 
@@ -852,7 +852,7 @@ Lists all workspaces of the current account.
 
 ### workspace promote
 
-Promotes the current workspace to master. Only works for production workspaces.
+Promotes the current workspace to the master branch. Only works for production workspaces.
 
 #### Usage
 
@@ -861,7 +861,7 @@ Promotes the current workspace to master. Only works for production workspaces.
 ```
 
 #### Aliases
-  
+
 ```shell
   vtex promote
 
@@ -878,7 +878,7 @@ Promotes the current workspace to master. Only works for production workspaces.
 
 ### workspace reset
 
-Cleans all configurations of the specified workspace and recreates it with the configurations from master.
+Cleans all configurations of the specified workspace and recreates them with the configurations from the master.
 
 #### Usage
 
@@ -888,17 +888,17 @@ Cleans all configurations of the specified workspace and recreates it with the c
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**WORKSPACENAME** (optional)|Name of the workspace to reset.|
+| Argument                     | Description                     |
+| ---------------------------- | ------------------------------- |
+| **WORKSPACENAME** (optional) | Name of the workspace to reset. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--production**|-p|Recreates the workspace as a production one.|
-|**--yes**|-y|Answers yes to all prompts.|
-  
+| Option           | Alias | Description                                  |
+| ---------------- | ----- | -------------------------------------------- |
+| **--production** | -p    | Recreates the workspace as a production one. |
+| **--yes**        | -y    | Answers yes to all prompts.                  |
+
 #### Examples
 
 ```shell
@@ -921,9 +921,9 @@ Displays information about the specified workspace.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**WORKSPACENAME** (optional)|Name of the workspace.|
+| Argument                     | Description            |
+| ---------------------------- | ---------------------- |
+| **WORKSPACENAME** (optional) | Name of the workspace. |
 
 #### Example
 
@@ -945,16 +945,16 @@ Creates and switches to a new workspace or simply switches to an existing one.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**WORKSPACE**|Name of the workspace to use.|
+| Argument      | Description                   |
+| ------------- | ----------------------------- |
+| **WORKSPACE** | Name of the workspace to use. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--production**|-p|Creates and/or switches to a production workspace.|
-|**--reset**|-r|Resets the workspace before switching to it.|
+| Option           | Alias | Description                                        |
+| ---------------- | ----- | -------------------------------------------------- |
+| **--production** | -p    | Creates and/or switches to a production workspace. |
+| **--reset**      | -r    | Resets the workspace before switching to it.       |
 
 #### Aliases
 
@@ -973,59 +973,59 @@ Creates and switches to a new workspace or simply switches to an existing one.
 
 ## Plugins
 
-Check in the following a brief description of the commands available by VTEX plugins. For a detailed description of each command, click on its respective name. After installing the corresponding plugin, you can also access this information in your terminal by adding `--help` or `-h` after the command name.
+Below is a brief description of the commands provided by VTEX plugins. For detailed information about each command, click its respective name. After installing the corresponding plugin, you can also access this information in your terminal by adding `--help` or `-h` after the command name.
 
-> ℹ️ Follow this link [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO's CLI plugins.
+> ℹ️ Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
-|Plugin command|Functionality|
-|------------|-------------|
-| [`add`](#add) |Adds the specified app(s) to the manifest's dependencies.|
-|[`config get`](#-config-get)|Prints the value of the requested configuration key.|
-|[`config reset`](#-config-reset)|Resets the specified configuration to its default value.|
-|[`config set`](#-config-set)|Sets the value of a configuration key.|
-| [`debug dotnet`](#debug-donet) | Debugs .NET applications (IDEs only).|
-| [`infra install`](#infra-install) |Installs an infra service.|
-| [`infra list`](#infra-list) |Lists installed infra services.|
-| [`infra update`](#infra-update) |Updates all installed infra services.|
-| [`lighthouse audit`](#lighthouse-audit) |Runs a Lighthouse audit over the specified URL.|
-| [`lighthouse show`](#lighthouse-show) |Shows a previous audit report, filtering by app and/or URL.|
-| [`logs`](#logs) |Shows logs of an app (only apps in production).|
-| [`plugins install`](#plugins-install) |Installs a plugin into the CLI.|
-| [`plugins link`](#plugins-link) |Links a plugin into the CLI for development.|
-| [`plugins:list`](#plugins-list) |Lists all plugins installed on your machine.|
-| [`plugins source`](#plugins-source) |Lists all plugins supported by VTEX.|
-| [`plugins uninstall`](#plugins-uninstall) |Removes a plugin from the CLI.|
-| [`plugins:update`](#plugins-update) |Updates all plugins installed on your machine.|
-| [`redirects delete`](#redirects-delete) |Deletes redirects from the current account and workspace.|
-| [`redirects export`](#redirects-export) |Exports all redirects defined in the current account and workspace to a CSV file.|
-| [`redirects import`](#redirects-import) |Imports redirects from a CSV file to the current account and workspace.|
-| [`settings get`](#settings-get) |Prints the settings of the specified app.|
-| [`settings set`](#settings-set) |Sets value to the specified setting of an app.|
-| [`settings unset`](#settings-unset) |Disables the specified setting of an app.|
-| [`submit`](#submit) |Submits the current app, or an specified one, to validation from VTEX App Store team.|
-| [`support`](#support) |Logs in as support to another VTEX account.|
-| [`test e2e`](#test-e2e) |Runs E2E integration tests for the app in the current directory.|
-| [`test unit`](#test-unit) |Runs unit tests for the app in the current directory.|
-| [`url`](#url) |Prints base URL for the current account and workspace.|
+| Plugin command                            | Feature description                                                                     |
+| ----------------------------------------- | --------------------------------------------------------------------------------------- |
+| [`add`](#add)                             | Adds the specified app(s) to the manifest dependencies.                                 |
+| [`config get`](#-config-get)              | Prints the value of the requested configuration key.                                    |
+| [`config reset`](#-config-reset)          | Resets the specified configuration to its default value.                                |
+| [`config set`](#-config-set)              | Sets the value of a configuration key.                                                  |
+| [`debug dotnet`](#debug-donet)            | Debugs .NET applications (IDEs only).                                                   |
+| [`infra install`](#infra-install)         | Installs an infra service.                                                              |
+| [`infra list`](#infra-list)               | Lists installed infra services.                                                         |
+| [`infra update`](#infra-update)           | Updates all installed infra services.                                                   |
+| [`lighthouse audit`](#lighthouse-audit)   | Runs a Lighthouse audit over the specified URL.                                         |
+| [`lighthouse show`](#lighthouse-show)     | Shows a previous audit report, filtered by app and/or URL.                              |
+| [`logs`](#logs)                           | Shows logs of an app (only apps in production).                                         |
+| [`plugins install`](#plugins-install)     | Installs a plugin on CLI.                                                               |
+| [`plugins link`](#plugins-link)           | Links a plugin to CLI for development.                                                  |
+| [`plugins:list`](#plugins-list)           | Lists all plugins installed on your machine.                                            |
+| [`source plugins`](#plugins-source)       | Lists all plugins supported by VTEX.                                                    |
+| [`plugins uninstall`](#plugins-uninstall) | Removes a plugin from CLI.                                                              |
+| [`plugins:update`](#plugins-update)       | Updates all plugins installed on your machine.                                          |
+| [`redirects delete`](#redirects-delete)   | Deletes redirects from the current account and workspace.                               |
+| [`redirects export`](#redirects-export)   | Exports all redirects defined in the current account and workspace to a CSV file.       |
+| [`redirects import`](#redirects-import)   | Imports redirects from a CSV file to the current account and workspace.                 |
+| [`settings get`](#settings-get)           | Prints the settings of the specified app.                                               |
+| [`settings set`](#settings-set)           | Sets value to the specified setting of an app.                                          |
+| [`settings unset`](#settings-unset)       | Disables the specified setting of an app.                                               |
+| [`submit`](#submit)                       | Submits the current app, or a specified one, for validation by the VTEX App Store team. |
+| [`support`](#support)                     | Logs in as support to another VTEX account.                                             |
+| [`test e2e`](#test-e2e)                   | Runs E2E integration tests for the app in the current directory.                        |
+| [`test unit`](#test-unit)                 | Runs unit tests for the app in the current directory.                                   |
+| [`url`](#url)                             | Prints the base URL for the current account and workspace.                              |
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
 ### add
 
-Adds the specified app(s) to the manifest's dependencies.
+Adds the specified app(s) to the manifest dependencies.
 
 #### Usage
-  
+
 ```shell
 vtex add APPID [ITHAPPID]
 ```
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPID**|Name and version (`{vendor}.{appname}@{x.x.x}`) of the dependency to include in the manifest.json file.|
-|**ITHAPPID** (optional)|Names and versions (`{vendor}.{appname}@{x.x.x}`) of the multiple dependencies to include in the manifest.json file.|
+| Argument                | Description                                                                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **APPID**               | The name and version of the dependency to include in the manifest.json file, specified in the format `{vendor}.{appname}@{x.x.x}`.          |
+| **ITHAPPID** (optional) | The names and versions of multiple dependencies to include in the manifest.json file, specified in the format `{vendor}.{appname}@{x.x.x}`. |
 
 #### Example
 
@@ -1037,7 +1037,7 @@ vtex add vtex.service-example@0.x
 
 ### autoupdate
 
-Automatically updates VTEX IO's CLI.
+Automatically updates VTEX IO CLI.
 
 #### Usage
 
@@ -1047,9 +1047,9 @@ Automatically updates VTEX IO's CLI.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**CHANNEL** (optional)|.|
+| Argument               | Description |
+| ---------------------- | ----------- |
+| **CHANNEL** (optional) | .           |
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
@@ -1058,16 +1058,16 @@ Automatically updates VTEX IO's CLI.
 Prints the value of the requested configuration key.
 
 #### Usage
-  
+
 ```shell
 vtex config get CONFIGNAME
 ```
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**CONFIGNAME**|Configuration to retrieve the value from.|
+| Argument       | Description                               |
+| -------------- | ----------------------------------------- |
+| **CONFIGNAME** | Configuration to retrieve the value from. |
 
 #### Example
 
@@ -1083,16 +1083,16 @@ vtex config get CONFIGNAME
 Resets the specified configuration to its default value.
 
 #### Usage
-  
+
 ```shell
 vtex config reset CONFIGNAME
 ```
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**CONFIGNAME**|Name of the configuration to reset.|
+| Argument       | Description                         |
+| -------------- | ----------------------------------- |
+| **CONFIGNAME** | Name of the configuration to reset. |
 
 #### Example
 
@@ -1108,17 +1108,17 @@ vtex config reset CONFIGNAME
 Sets the value of a configuration key.
 
 #### Usage
-  
+
 ```shell
 vtex config set CONFIGNAME VALUE
 ```
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**CONFIGNAME**|Name of the configuration.|
-|**VALUE**|New value of the specified configuration.|
+| Argument       | Description                               |
+| -------------- | ----------------------------------------- |
+| **CONFIGNAME** | Name of the configuration.                |
+| **VALUE**      | New value of the specified configuration. |
 
 #### Example
 
@@ -1141,9 +1141,9 @@ Debugs .NET applications (IDEs only).
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**DEBUGINST**|Name of the .NET application to debug.|
+| Argument      | Description                            |
+| ------------- | -------------------------------------- |
+| **DEBUGINST** | Name of the .NET application to debug. |
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
@@ -1159,9 +1159,9 @@ Installs an infra service.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**SERVICEID**|Name and version of the service (`{vendor}.{servicename}@{x.x.x}`) to install.|
+| Argument      | Description                                                                                               |
+| ------------- | --------------------------------------------------------------------------------------------------------- |
+| **SERVICEID** | The name and version of the service to install, specified in the format `{vendor}.{servicename}@{x.x.x}`. |
 
 #### Examples
 
@@ -1184,17 +1184,17 @@ Lists installed infra services.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**NAME** (optional)|Service name.|
+| Argument            | Description   |
+| ------------------- | ------------- |
+| **NAME** (optional) | Service name. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--available**|-a|Lists services that are available to install.|
-|**--filter=filter**|-f|Lists services that contain the specified word.|
-  
+| Option              | Alias | Description                                     |
+| ------------------- | ----- | ----------------------------------------------- |
+| **--available**     | -a    | Lists services that are available to install.   |
+| **--filter=filter** | -f    | Lists services that contain the specified word. |
+
 #### Aliases
 
 ```shell
@@ -1212,7 +1212,7 @@ Lists installed infra services.
 
 ### infra update
 
-Updates all installed infra services.
+Updates installed infra services.
 
 #### Usage
 
@@ -1240,15 +1240,15 @@ Runs a Lighthouse audit over the specified URL.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**URL**|URL to audit.|
+| Argument | Description   |
+| -------- | ------------- |
+| **URL**  | URL to audit. |
 
 #### Options
 
-|Option|Alias|Description|
-|------|-----|-----------|
-|**--json**|-j|Returns the report as a json on stdout.|
+| Option     | Alias | Description                             |
+| ---------- | ----- | --------------------------------------- |
+| **--json** | -j    | Returns the report as a JSON on stdout. |
 
 #### Aliases
 
@@ -1277,11 +1277,11 @@ Shows a previous audit report, filtering by app and/or URL.
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--app=app**|-a|Filters by app name.|
-|**--url=url**|-u|Filters by URL.|
-  
+| Option        | Alias | Description          |
+| ------------- | ----- | -------------------- |
+| **--app=app** | -a    | Filters by app name. |
+| **--url=url** | -u    | Filters by URL.      |
+
 #### Aliases
 
 ```shell
@@ -1313,17 +1313,17 @@ Shows logs of an app. (Only apps in production.)
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APP** (optional)|Name of the app to show logs.|
+| Argument           | Description                   |
+| ------------------ | ----------------------------- |
+| **APP** (optional) | Name of the app to show logs. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--all**|-a|Shows logs of every app installed on the current account.|
-|**--past**|-p|Shows previous logs of the specified app.|
-  
+| Option     | Alias | Description                                              |
+| ---------- | ----- | -------------------------------------------------------- |
+| **--all**  | -a    | Shows logs of all apps installed on the current account. |
+| **--past** | -p    | Shows previous logs of the specified app.                |
+
 #### Examples
 
 ```shell
@@ -1337,7 +1337,7 @@ Shows logs of an app. (Only apps in production.)
 
 ### plugins install
 
-Installs a plugin into the CLI.
+Installs a plugin on CLI.
 
 #### Usage
 
@@ -1347,16 +1347,16 @@ Installs a plugin into the CLI.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-| **PLUGIN** | Plugin to install.|
+| Argument   | Description         |
+| ---------- | ------------------- |
+| **PLUGIN** | Plugins to install. |
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--force**| -f| Refetches all packages, even the ones that were previously installed.|
-  
+| Option      | Alias | Description                                                           |
+| ----------- | ----- | --------------------------------------------------------------------- |
+| **--force** | -f    | Refetches all packages, even the ones that were previously installed. |
+
 #### Aliases
 
 ```shell
@@ -1375,7 +1375,7 @@ Installs a plugin into the CLI.
 
 ### plugins link
 
-Links a plugin into the CLI for development.
+Links a plugin to CLI for development.
 
 #### Usage
 
@@ -1385,9 +1385,9 @@ Links a plugin into the CLI for development.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**PATH [default: .]** |Plugin path.|
+| Argument              | Description  |
+| --------------------- | ------------ |
+| **PATH [default: .]** | Plugin path. |
 
 #### Examples
 
@@ -1409,9 +1409,9 @@ Lists all plugins installed on your machine.
 
 #### Options
 
-|Option|Description|
-|-------|-----------|
-|**--core**| Shows core plugins.|
+| Option     | Description         |
+| ---------- | ------------------- |
+| **--core** | Shows core plugins. |
 
 #### Examples
 
@@ -1433,10 +1433,10 @@ Lists all plugins supported by VTEX.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-| **PLUGIN** | Plugin name.|
-|**PATH [default: .]** |Plugin path.|
+| Argument              | Description  |
+| --------------------- | ------------ |
+| **PLUGIN**            | Plugin name. |
+| **PATH [default: .]** | Plugin path. |
 
 #### Examples
 
@@ -1448,7 +1448,7 @@ Lists all plugins supported by VTEX.
 
 ### plugins uninstall
 
-Removes a plugin from the CLI.
+Removes a plugin from CLI.
 
 #### Usage
 
@@ -1458,9 +1458,9 @@ Removes a plugin from the CLI.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-| **PLUGIN** | Plugin to uninstall.|
+| Argument   | Description          |
+| ---------- | -------------------- |
+| **PLUGIN** | Plugin to uninstall. |
 
 #### Aliases
 
@@ -1501,9 +1501,9 @@ Deletes redirects from the current account and workspace.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**CSVPATH**|CSV file containing the URL paths to be deleted.|
+| Argument    | Description                                  |
+| ----------- | -------------------------------------------- |
+| **CSVPATH** | CSV file containing the URL paths to delete. |
 
 #### Example
 
@@ -1525,9 +1525,9 @@ Exports all redirects defined in the current account and workspace to a CSV file
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**CSVPATH**|Name of the CSV file.|
+| Argument    | Description           |
+| ----------- | --------------------- |
+| **CSVPATH** | Name of the CSV file. |
 
 #### Example
 
@@ -1549,10 +1549,10 @@ Imports redirects from a CSV file to the current account and workspace.
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--reset**|-r|Removes all redirects previously defined.|
-  
+| Option      | Alias | Description                               |
+| ----------- | ----- | ----------------------------------------- |
+| **--reset** | -r    | Removes all previously defined redirects. |
+
 #### Example
 
 ```shell
@@ -1573,10 +1573,10 @@ Prints the settings of the specified app.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APNAME**| Name of the app to check the available settings.|
-|**FIELD** (optional)|Name of the setting.|
+| Argument             | Description                                      |
+| -------------------- | ------------------------------------------------ |
+| **APNAME**           | Name of the app to check the available settings. |
+| **FIELD** (optional) | Name of the setting.                             |
 
 #### Aliases
 
@@ -1594,7 +1594,7 @@ Prints the settings of the specified app.
 
 ### settings set
 
-Sets value to the specified setting of an app.
+Sets the value for the specified setting of an app.
 
 #### Usage
 
@@ -1604,11 +1604,11 @@ Sets value to the specified setting of an app.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPNAME** |Name of the app.|
-|**FIELD**|Name of the setting.|
-|**VALUE**|Value of the setting.|
+| Argument    | Description           |
+| ----------- | --------------------- |
+| **APPNAME** | Name of the app.      |
+| **FIELD**   | Name of the setting.  |
+| **VALUE**   | Value of the setting. |
 
 #### Example
 
@@ -1630,10 +1630,10 @@ Disables the specified setting of an app.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPNAME**|Name of the app.|
-|**FIELD**|Name of the setting.|
+| Argument    | Description          |
+| ----------- | -------------------- |
+| **APPNAME** | Name of the app.     |
+| **FIELD**   | Name of the setting. |
 
 #### Example
 
@@ -1645,7 +1645,7 @@ Disables the specified setting of an app.
 
 ### submit
 
-Submits the current app, or an specified one, to validation from VTEX App Store team.
+Submits the current app, or a specified one, for validation by the VTEX App Store team.
 
 #### Usage
 
@@ -1655,9 +1655,9 @@ Submits the current app, or an specified one, to validation from VTEX App Store 
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**APPID** (optional)|Name of the app to be validated.|
+| Argument             | Description                      |
+| -------------------- | -------------------------------- |
+| **APPID** (optional) | The name of the app to validate. |
 
 #### Examples
 
@@ -1680,9 +1680,9 @@ Logs in as support to another VTEX account.
 
 #### Arguments
 
-|Argument|Description|
-|--------|-----------|
-|**ACCOUNT**|Name of the account to give support.|
+| Argument    | Description                          |
+| ----------- | ------------------------------------ |
+| **ACCOUNT** | Name of the account to give support. |
 
 #### Example
 
@@ -1704,11 +1704,11 @@ Runs E2E integration tests for the app in the current directory.
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--report=report**|-r|Displays the results and state of the specified test ID.|
-|**--token**|-t|(Not recommended.) Sends your personal authorization token to your testing session, making it available during the tests. It can be dangerous since it exposes your token via the 'authToken' environment variable.|
-|**--workspace**|-w|Runs tests for the apps installed on the specified workspace.|
+| Option              | Alias | Description                                                                                                                                                                                                                                                |
+| ------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **--report=report** | -r    | Displays the results and status of the specified test ID.                                                                                                                                                                                                  |
+| **--token**         | -t    | (Not recommended.) Sends your personal authorization token to your testing session, making it available during the tests. Please note that this action can be potentially dangerous as it exposes your token through the 'authToken' environment variable. |
+| **--workspace**     | -w    | Runs tests for the apps installed on the specified workspace.                                                                                                                                                                                              |
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
@@ -1724,15 +1724,15 @@ Runs unit tests for the app in the current directory.
 
 #### Options
 
-|Option|Alias|Description|
-|-------|-----|-----------|
-|**--unsafe**|-u|Ignores Typescript errors|
+| Option       | Alias | Description               |
+| ------------ | ----- | ------------------------- |
+| **--unsafe** | -u    | Ignores TypeScript errors |
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
 ### url
 
-Prints base URL for current account, workspace and environment.
+Prints the base URL for the current account, workspace, and environment.
 
 #### Usage
 
