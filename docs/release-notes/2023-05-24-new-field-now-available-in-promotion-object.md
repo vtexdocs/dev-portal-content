@@ -10,7 +10,7 @@ createdAt: "2023-04-26T14:47:00.000Z"
 The field `nominalDiscountType` has been added to the promotion object. This field accepts two string values:
 
 - **Item:** This option applies the intended nominal discount on every item present on the cart.
-- **Cart:** This option keeps the behavior as it currently, the cart receives a nominal discount that is distributed among the items.
+- **Cart:** This option keeps the behavior as it currently is, the cart receives a nominal discount that is distributed among the items.
 
 The following endpoints have been updated with the addition of the new field:
 
