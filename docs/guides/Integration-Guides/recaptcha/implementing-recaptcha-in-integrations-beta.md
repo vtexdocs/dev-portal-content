@@ -6,10 +6,9 @@ createdAt: "2021-08-03T21:56:05.910Z"
 updatedAt: "2023-05-24T10:20:43.993Z"
 ---
 
-If your store uses integrations to place orders, such as mobile apps or proprietary web-based storefronts, follow the steps below to implement [reCAPTCHA validation](https://developers.vtex.com/docs/guides/recaptcha-beta). 
+If your store uses integrations to place orders, such as mobile apps or proprietary web-based storefronts, follow the steps below to implement [reCAPTCHA validation](https://developers.vtex.com/docs/guides/recaptcha-beta).
 
 >⚠️ You must have a [Beta environment](https://help.vtex.com/pt/tutorial/acessar-o-ambiente-beta-pelo-dominio-myvtex-com--3BHM289568gcSwk2O80Asu) and use [Checkout V6](https://help.vtex.com/pt/tutorial/ativar-o-checkout-v6--7qVqv3ptRvpVVplrvg8ruH) to test the feature.
-
 > ℹ️️ In order to simulate an untrustworthy session, try accessing the shopping cart’s link through an anonymous browser window. reCAPTCHA validation will probably be required.
 
 In order to have your implementation validate users with reCAPTCHA, you must first [obtain the appropriate reCAPTCHA key](#getting-the-recaptcha-key) and then use that key to [integrate reCAPTCHA on your storefront](#integrating-recaptcha-on-your-storefront). Once the shopper correctly solves the validation, the integration receives a token that must be [sent in the request that places the order](#final-validation).
@@ -62,12 +61,13 @@ There are two different ways of placing orders via API. It can be done through t
 The first is based on a pre-existing shopping cart (`orderForm`), while the latter requires passing all of the order’s information in a single request body. Because of that distinction, different integrations must use different methods to obtain the reCAPTCHA key.
 
 At this stage you must choose a key compatible with your desired implementation:
+
 - `recaptchaKey`: if you are integrating with [reCAPTCHA v2](https://developers.google.com/recaptcha/docs/display).
 - `recaptchaKeyV3`: if you are integrating with [reCAPTCHA v3](https://developers.google.com/recaptcha/docs/v3).
 
 >ℹ️ Learn more about the different versions of [reCAPTCHA for VTEX Checkout](https://help.vtex.com/en/tutorial/recaptcha-no-checkout--18Te3oDd7f4qcjKu9jhNzP).
 
-#### orderForm transaction
+#### orderForm transaction key
 
 This method of creating orders is based on existing `orderForm`, meaning a payment method has already been selected and VTEX already knows if reCAPTCHA validation is needed.
 
@@ -75,29 +75,29 @@ Whenever reCAPTCHA validation applies, according to your `recaptchaValidation` [
 
 ```json
 {
-	...,
-	"recaptchaKey": "5Lc5UOBTRDBDBLNo2iOCPG0q7JCUgHUerDIJEHR-",
+    ...,
+    "recaptchaKey": "5Lc5UOBTRDBDBLNo2iOCPG0q7JCUgHUerDIJEHR-",
             "recaptchaKeyV3": "6LfnCR8mAAAAAGfsca_MuJ4oXTWJWOJ4TkPFOXzT"
 }
 ```
 
 Now you can use this key to [display the reCAPTCHA widget](#integrating-web---based-storefronts) on your storefront.
 
-#### Place order
+#### Place order key
 
 If a reCAPTCHA validation token is necessary for a given order and this request is made without it, you should get an error response with the `recaptchaKey` in the `fields` object, like in the example below.
 
 ```json
 {
-	"fields": {
-    	"recaptchaKey": "5Lc5UOBTRDBDBLNo2iOCPG0q7JCUgHUerDIJEHR-",
+    "fields": {
+        "recaptchaKey": "5Lc5UOBTRDBDBLNo2iOCPG0q7JCUgHUerDIJEHR-",
             "recaptchaKeyV3": "6LfnCR8mAAAAAGfsca_MuJ4oXTWJWOJ4TkPFOXzT"
 	},
-	"operationId": "749dt09-34d3-4b5b-b244-978473d0d373",
-	"error": {
-    	"code": "CHK0082",
-    	"message": "ReCAPTCHA necessário. Tente novamente passando o token reCAPTCHA junto com a chave fornecida.",
-    	"exception": null
+    "operationId": "749dt09-34d3-4b5b-b244-978473d0d373",
+    "error": {
+        "code": "CHK0082",
+        "message": "ReCAPTCHA necessário. Tente novamente passando o token reCAPTCHA junto com a chave fornecida.",
+        "exception": null
 	}
 }
 ```
@@ -111,15 +111,18 @@ See below instructions for integrating reCAPTCHA depending on whether you are im
 ### Integrating mobile apps
 
 See the documentation provided by Google to learn how to integrate reCAPTCHA v3 on your mobile app according to the mobile platform of your choice:
+
 - [Android](https://cloud.google.com/recaptcha-enterprise/docs/instrument-android-apps)
 - [iOS](https://cloud.google.com/recaptcha-enterprise/docs/instrument-ios-apps)
 
 ### Integrating web-based storefronts
 
-Having obtained the `recaptchaKey`, you can pass it as the `siteKey` property when displaying the validation widget as described in the [reCAPTCHA v2 documentation](https://developers.google.com/recaptcha/docs/display).
+Having obtained the reCAPTCHA key, you can apply validation on your storefront according to the version of reCAPTCHA you are using:
 
-Since reCAPTCHA application may vary according to payment method, we recommend that the integration is prepared to render the validation widget after the payment selection step.
+- reCAPTCHA v2: pass the `recaptchaKey` value you got as the `siteKey` property when displaying the validation widget as described in the [reCAPTCHA v2 documentation](https://developers.google.com/recaptcha/docs/display).
+- reCAPTCHA v3: integrate the validation according to the instructions in the [reCAPTCHA v3 documentation](https://developers.google.com/recaptcha/docs/v3).
 
+Since reCAPTCHA application may vary according to payment method, we recommend that the integration is prepared apply the validation after the payment selection step.
 
 ## Final validation
 
@@ -139,14 +142,13 @@ After the shopper successfully solves the validation, the integration should rec
 
 The reCAPTCHA token is valid for only one attempt. So in case of error during validation, the widget has to be displayed again to the shopper, in order to get a new token. The key used to display the validation widget after the error may vary depending on the error and order placement method, as described below.
 
-
-### orderForm transaction
+### orderForm transaction errors
 
 In case of internal error (`status 500`), the widget has to be displayed using the `recaptchaKey` from the latest updated `orderForm`.
 
 If validation fails (`status 403`), the API returns the same error `CHK0082` as mentioned above. Note that the `recaptchaKey` returned in the error may be different than the one used previously.
 
-### Place order
+### Place order errors
 
 In case of internal error (`status 500`), the widget has to be displayed again. The `recaptchaKey` that was used the first time may be used this time.
 
