@@ -63,7 +63,7 @@ Shopper profiles and addresses are accessible via API by a unique `profileId`. H
 To do this, you must replace the `profileId` path parameter with the key of your choice and send the name of the field that will be used in the query parameter `alternativeKey`.
 
 
-pii## Masked data
+## Masked data
 
 After registering customer information to the Profile System, such as profile and address, it will be returned as masked by the default `GET` requests.
 
