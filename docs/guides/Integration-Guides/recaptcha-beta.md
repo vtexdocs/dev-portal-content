@@ -24,7 +24,6 @@ To configure reCAPTCHA verification, follow the steps below:
 This configuration is valid for the entire account. It is not possible to activate reCAPTCHA for a limited number of [bindings](https://help.vtex.com/en/tutorial/o-que-e-binding--4NcN3NJd0IeYccgWCI8O2W#).
 
 >❗ If you activate reCAPTCHA for your account, it is important to note that any integrations that deal with placing orders should be able to handle the validation. If reCAPTCHA is required for a given order, it can not be placed without validation. However, if your store uses VTEX’s native UI, it is already capable of handling reCAPTCHA.
-
 >⚠️ If you are implementing a headless checkout experience in your store or even carrying out order creation tests via API, reCAPTCHA in active mode can block order completion requesting the reCAPTCHA validation key that is not possible to generate only via API, its only possible to generate displaying the reCAPTCHA widget.
 
 Learn more about the [applicable cases](https://developers.vtex.com/vtex-rest-api/docs/applicable-cases) and [how to implement reCAPTCHA for Checkout integrations](https://developers.vtex.com/vtex-rest-api/docs/implementing-recaptcha-in-integrations-beta).
