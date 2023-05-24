@@ -92,13 +92,13 @@ If a reCAPTCHA validation token is necessary for a given order and this request 
     "fields": {
         "recaptchaKey": "5Lc5UOBTRDBDBLNo2iOCPG0q7JCUgHUerDIJEHR-",
             "recaptchaKeyV3": "6LfnCR8mAAAAAGfsca_MuJ4oXTWJWOJ4TkPFOXzT"
-	},
+    },
     "operationId": "749dt09-34d3-4b5b-b244-978473d0d373",
     "error": {
         "code": "CHK0082",
         "message": "ReCAPTCHA necessário. Tente novamente passando o token reCAPTCHA junto com a chave fornecida.",
         "exception": null
-	}
+    }
 }
 ```
 
