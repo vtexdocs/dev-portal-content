@@ -8,7 +8,7 @@ updatedAt: '2022-06-01T21:27:30.468Z'
 
 When implementing an ecommerce project, it may be necessary to import customer data from other systems, such as Customer Relationship Management (CRM) applications.
 
-VTEX Checkout natively stores shopper data in [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw). Because of this, using the [Master Data v1 API](https://developers.vtex.com/docs/api-reference/masterdata-api) is the best way of integrating your customer data base to VTEX.
+The **Checkout** module stores shopper data in [**Master Data v1**](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) by default. Because of this, using the [**Master Data v1** API](https://developers.vtex.com/docs/api-reference/masterdata-api) is the best way to integrate your customer database into VTEX.
 
 In this guide, you can learn how to import customer data to VTEX. Learn more about Master Data and its features in the [Master Data developers guide](https://developers.vtex.com/docs/guides/master-data-how-it-works).
 
@@ -16,7 +16,7 @@ In this guide, you can learn how to import customer data to VTEX. Learn more abo
 
 ## Data entities
 
-Master Data v1 leveradges the concept of [data entities](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) to allow for highly customizable data bases. These work as tables, where each document (profile or address) is saved as a row.
+**Master Data v1** leverages the concept of [data entities](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) to allow for highly customizable databases. These work as tables, where each document (profile or address) is saved as a row.
 
 There are two native data entities you must use for this integration:
 
@@ -125,9 +125,8 @@ However, if you need to implement such an integration, you can use the [Update p
 
 ### Updating customer profile request example
 
+```bash
 PATCH
-
-```
 https://{accountName}.{environment}.com.br/api/dataentities/CL/documents/{id}
 ```
 
@@ -142,9 +141,8 @@ Request body
 
 ### Updating address request example
 
+```bash
 PATCH
-
-```
 https://{accountName}.{environment}.com.br/api/dataentities/AD/documents/{id}
 ```
 
