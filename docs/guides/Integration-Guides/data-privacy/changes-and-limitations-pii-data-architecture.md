@@ -5,30 +5,32 @@ hidden: true
 createdAt: "2022-02-22T22:29:28.541Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
 ---
-Some commerce features of the VTEX platform are not available for PII platform version accounts at the moment. There are also features that require adaptations when implemented by the store.
+This document outlines the current limitations associated with the PII data architecture provided by VTEX. By acknowledging these limitations, we provide alternative approaches that may be necessary to ensure data privacy best practices.
+
+Some commerce features of the VTEX platform are not available for accounts using the current PII platform beta version, while others may require adaptations when implemented by the store.
 
 In this guide, you can learn about the changes and limitations you must be aware of when managing your customers' information with the [Profile System](https://developers.vtex.com/docs/guides/profile-system).
 
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
 
-## Adaptations
+## Adaptation requirements for feature implementation
 
 ### OMS
 
-There are no longer restrictions to the use of these OMS features for PII platform version accounts:
+There are no longer restrictions to the use of these OMS features for PII data architecture accounts:
 
 - Subscriptions
 - VTEX DO
 - Conversation tracker
 - Shipping notifications
 
-However, API requests to `/do`, `/conversationtracker`, and `shipping-tracker` paths must include the query parameter `reason` in order to retrieve unmasked PII information.
+However, API requests to `/do`, `/conversationtracker`, `/subscriptions`, and `/shipping-tracker` paths must include the query parameter `reason` in order to retrieve unmasked PII information.
 
 #### OMS API adaptations
 
 In order to use order management APIs, you should adapt your integrations to use new endpoints, for features you may already have implemented in your store, such as retrieving order information or notifying invoices. See the table below to know which endpoints need adaptation and where to find the new reference.
 
-| **Feature**                | **Previous endpoint**                                                                                                                                         | **New endpoint (PII platform version)**                                                                                                                                        | **Payload changed** |
+| **Feature**                | **Previous endpoint**                                                                                                                                         | **New endpoint (PII data architecture)**                                                                                                                                        | **Payload changed** |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | Get order                  | `GET` [/api/oms/orders/{orderId}](https://developers.vtex.com/vtex-rest-api/reference/getorder)                                                               | `GET` [/api/orders/pvt/document/{orderId}](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-)                                                    | No                  |
 | List orders                | `GET` [/api/oms/pvt/orders](https://developers.vtex.com/vtex-rest-api/reference/listorders)                                                                   | `POST` [/api/orders/extendsearch/orders](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders)                                                    | Yes                 |
@@ -45,7 +47,7 @@ If you are integrated to Master Data API to get any of this data (CL, AD, BK ent
 
 ### Checkout
 
-[Checkout](https://developers.vtex.com/docs/guides/orderform-fields) endpoints that deal with getting order information keep the same paths but with different behaviors. Contracts are the same for masked data, but for complete data you must include the query parameter: `reason`. Learn more about [retrieving unmasked data](https://developers.vtex.com/docs/guides/profile-system#masked-data).
+Although [Checkout](https://developers.vtex.com/docs/guides/orderform-fields) endpoints that retrieve order information use the same path, they may behave differently. Contracts are the same for masked data, but for complete data, you must include the query parameter: `reason`. Learn more about [retrieving unmasked data](https://developers.vtex.com/docs/guides/profile-system#masked-data).
 
 ### Payments
 
