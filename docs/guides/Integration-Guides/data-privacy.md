@@ -25,8 +25,8 @@ VTEX has established a comprehensive [PII data architecture](https://developers.
 
 ## Parties' responsibilities
 
-VTEX will isolate all fields that are mapped as sensitive and protect them. There are scenarios, however, in which VTEX has no control, and therefore it is up to your store to ensure that your integration is not using data improperly. The main scenarios are:
+VTEX isolates and protects all fields classified as sensitive. However, it is important to acknowledge that there are scenarios beyond VTEX's control. In such cases, as a VTEX client, it is the store's responsibility to ensure the integrity of your integrations and prevent any data misuse. The main scenarios to consider include:
 
 - Sending PII in custom or text fields.
-- Adhere to IO apps that depend on or consume PII data.
-- Integrations with other systems that consume PII data, such as ERPs.
+- Adhering to IO apps that depend on or consume PII data.
+- Integrating with third-party systems that consume PII data, such as ERPs.
