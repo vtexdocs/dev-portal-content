@@ -36,7 +36,7 @@ Once the GA4 Configuration tag is created, set up all GA4 events as follows:
 
 2. Import the container file by following Google’s [Import a container guide](https://support.google.com/tagmanager/answer/6106997?#import). This will add all the necessary tags, triggers, and variables to the workspace.
 
-![import-container](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-import-container___755c64280e03b4df0105de7722099c65.png)
+![import-container](https://vtexhelp.vtexassets.com/assets/docs/src/new-ga4-tags-variables___b2619df57689429d97a8abd56a5f7d83.png)
 
 3. In the GTM container, go to the GA4 Configuration tag, and edit the **Measurement ID** field with your Google Tag ID ( G- ID).
 
@@ -70,34 +70,46 @@ This event is commonly attached to the promotion banners carousel displayed by t
 
 Check out the available events that [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) can listen to and their equivalent names in UA and GA4:
 
-| VTEX          | UA    | GA4   |
-| ------------- | ----- | ----- |
-| vtex:promoView | [promoView](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-impressions) | [view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#view_promotion) |
-| vtex:promotionClick | [promoClick](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-clicks) | [select_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#select_promotion) |
-| vtex:productView | [detail](https://developers.google.com/tag-manager/enhanced-ecommerce#details) | [view_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#view_item) |
-| vtex:productImpression | [impressions](https://developers.google.com/tag-manager/enhanced-ecommerce#product-impressions) | [view_item_list](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#view_item_list) |
-| vtex:productClick | [click](https://developers.google.com/tag-manager/enhanced-ecommerce#product-clicks) | [select_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#select_item) |
-| vtex:addToCart | [add](https://developers.google.com/tag-manager/enhanced-ecommerce#add) | [add_to_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#add_to_cart) |
-| vtex:removeFromCart | [remove](https://developers.google.com/tag-manager/enhanced-ecommerce#remove) | [remove_from_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#remove_from_cart) |
-| vtex:cartLoaded| [checkout](https://developers.google.com/analytics/devguides/collection/ua/gtm/enhanced-ecommerce#checkout) | [begin_checkout](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#begin_checkout) |
-| vtex:orderPlaced | [purchase](https://developers.google.com/tag-manager/enhanced-ecommerce#purchases) | [purchase](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#purchase) |
+| VTEX                   | UA                                                                                              | GA4                                                                                                                                      |
+|------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| vtex:promoView         | [promoView](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-impressions)     | [view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion)       |
+| vtex:promotionClick    | [promoClick](https://developers.google.com/tag-manager/enhanced-ecommerce#promo-clicks)         | [select_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#select_promotion)   |
+| vtex:productImpression | [impressions](https://developers.google.com/tag-manager/enhanced-ecommerce#product-impressions) | [view_item_list](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_item_list)       |
+| vtex:productClick      | [click](https://developers.google.com/tag-manager/enhanced-ecommerce#product-clicks)            | [select_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#select_item)             |
+| vtex:productView       | [detail](https://developers.google.com/tag-manager/enhanced-ecommerce#details)                  | [view_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_item)                 |
+| vtex:addToCart         | [add](https://developers.google.com/tag-manager/enhanced-ecommerce#add)                         | [add_to_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_cart)             |
+| vtex:removeFromCart    | [remove](https://developers.google.com/tag-manager/enhanced-ecommerce#remove)                   | [remove_from_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#remove_from_cart)   |
+| vtex:viewCart          | Not applicable                                                                                  | [view_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_cart)                 |
+| vtex:beginCheckout     | checkout                                                                                        | [begin_checkout](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#refund)               |
+| vtex:addShippingInfo   | Not applicable                                                                                  | [add_shipping_info](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_shipping_info) |
+| vtex:addPaymentInfo    | Not applicable                                                                                  | [add_payment_info](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_payment_info)   |
+| vtex:orderPlaced       | [purchase](https://developers.google.com/tag-manager/enhanced-ecommerce#purchases)              | [purchase](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#purchase)                   |
+| vtex:refund            | Not applicable                                                                                  | [refund](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#refund)                       |
+| vtex:search            | Not applicable                                                                                  | [search](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#search)                       |
+| vtex:share             | Not applicable                                                                                  | [share](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#share)                         |
+| vtex:addToWishlist     | Not applicable                                                                                  | [add_to_wishlist](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_wishlist)     |
 
+### Partially-supported events
 
-### GA4 events
+The following events are not fully supported yet. Although the GTM app will listen and format them into GA4, their VTEX event triggers have not been implemented yet:
 
-Besides the events listed in the previous sections, GA4 has new events that stores can start tracking. The full list can be found on [Google documentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm).
+| VTEX        | GA4                                                                                                                  |
+|-------------|----------------------------------------------------------------------------------------------------------------------|
+| vtex:login  | [login](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#login)     |
+| vtex:signUp | [sign_up](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#sign_up) |
 
-The GTM app listens to the following events and sends them in the following corresponding GA4 format:
+## Container template file changelog
 
-| VTEX          | GA4   |
-| ------------- | ----- |
-| vtex:addPaymentInfo | add_payment_info |
-| vtex:addShippingInfo | add_shipping_info |
-| vtex:login | login |
-| vtex:signUp | sign_up |
-| vtex:viewCart | view_cart |
-| vtex:beginCheckout | begin_checkout |
-| vtex:refund | refund |
-| vtex:addToWishlist | add_to_wishlist |
-| vtex:search | search |
-| vtex:share| share |
+This section contains the changes history of the container template file. The latest version can be downloaded in [Step 1 - Setting up GA4 events](#step-1-setting-up-ga4-events).
+
+### 2023-05-11
+
+#### Refactored
+
+- Organized the tags, triggers, and variables in a single "GA4" folder and followed a naming standard.
+
+### 2023-05-03
+
+#### Added
+
+- The first version of the container template.
