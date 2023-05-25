@@ -18,11 +18,11 @@ To maximize security and improve the shopper experience, we recommend that you f
 
 ## Preventing repeated passwords
 
-If you intend to expire shoppers' passwords, it may be a good idea to prevent them from using the same password repeatedly. 
+If you intend to expire shoppers' passwords, it may be a good idea to prevent them from using the same password repeatedly.
 
 To do this, use the following API request:
 
-```
+```bash
 POST
 https://{{accountName}}.{{environment}}.com.br/api/vtexid/pub/providers/setup/password/webstore/password
 ```
@@ -42,7 +42,7 @@ Request body:
 
 You can use the API request below to expire the password associated with a specific shopper email:
 
-```
+```bash
 POST
 https://{{accountName}}.{{environment}}.com.br/api/vtexid/password/expire?email={{email}}
 ```
