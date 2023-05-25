@@ -9,7 +9,7 @@ The VTEX platform allows stores to process shoppers’ Personal Identifiable Inf
 
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
 
-In the PII data architecture, all PII is stored in the Profile System. Other VTEX modules, such as order management and checkout, store only pseudoanonymised data associated to a Profile System token. These modules may also, at times, access PII from the Profile System according to the specifications linked below.
+In the PII data architecture, all PII is stored in the **Profile System**. Other VTEX modules, such as **Order Management** and **Checkout**, store only pseudonymized data associated with a **Profile System** token. According to the specifications linked below, these modules may also access PII from the **Profile System**.
 
 >ℹ️ See the [Trust Hub](https://vtex.com/us-en/trust/) to learn more about VTEX's vision regarding data privacy, including certifications, internal policies and commitments.
 
