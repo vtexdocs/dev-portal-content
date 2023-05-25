@@ -77,7 +77,6 @@ As response of this configuration, the endpoint used at the example before is go
 
 The received order id can be used to get the full Order information, including the products on it by using the OMS API Method: Get Order ([Orders API reference](https://developers.vtex.com/vtex-rest-api/reference/getorder)).
 
-
 ### Invoicing Local stock sale Order
 
 After getting the Order Data, the next step is to start an Invoice Emission, this step is not handled by VTEX and each Merchant can pick the solution that fits best their operation (ie: using POS software to emit and print it at the physical store, using ERP to send it through email…).
