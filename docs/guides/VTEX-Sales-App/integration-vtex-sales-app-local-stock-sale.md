@@ -1,31 +1,31 @@
 ---
-title: "Integration VTEX Sales App On Hands"
-slug: "integration-vtex-sales-app-on-hands"
+title: "Integration VTEX Sales App Local stock sale"
+slug: "integration-vtex-sales-app-local-stock-sale"
 hidden: false
 createdAt: ""
 updatedAt: ""
-excerpt: "Learn how to integrate the VTEX Sales App On Hands"
+excerpt: "Learn how to integrate the VTEX Sales App Local stock sale"
 seeAlso:
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---
-## Integration VTEX Sales App On Hands
+## Integration VTEX Sales App Local stock sale
 
-To first identify On Hands sales the first thing to do is to look for [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf) sales. VTEX Sales App sales can be filtered by a specific OMS filter called "VTEX Sales App", this filter looks for user agent information that sets a specific user agent that can be used to track VTEX Sales App sales. This tag is not available at the Order Payload or databases (redshift), but it can be used at [list orders API](https://developers.vtex.com/vtex-rest-api/reference/listorders) to filter VTEX Sales App Sales. Another field that can be used for this is `marketingData.marketingTags`, if the array contains an "VTEX Sales App" tag the order was made by VTEX Sales App application. This field can be found at the Order Payload and Redshift databases.
+To first identify Local stock sale sales the first thing to do is to look for [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf) sales. VTEX Sales App sales can be filtered by a specific OMS filter called "VTEX Sales App", this filter looks for user agent information that sets a specific user agent that can be used to track VTEX Sales App sales. This tag is not available at the Order Payload or databases (redshift), but it can be used at [list orders API](https://developers.vtex.com/vtex-rest-api/reference/listorders) to filter VTEX Sales App Sales. Another field that can be used for this is `marketingData.marketingTags`, if the array contains an "VTEX Sales App" tag the order was made by VTEX Sales App application. This field can be found at the Order Payload and Redshift databases.
 
 The next step is to understand if the order generated will be processed by the same store that has created it. To do that, check first if the `checkedIn` flag is `true`, next run through all products of this order looking at  `shippingData.logisticsInfo`. Inside this key, it is needed to compare `pickupPointId` with `checkedInPickupPointId` the value of those tags must be the same and not null, meaning that the store that created the order is responsible for delivering the order.
 
 ## Integration Methods
 
-Now that VTEX Sales App Orders and _"On Hands delivery method"_ can be identified in our OMS, the next step is to use the available methods to consume OMS APIs to process On Hands orders. There are two options for that:
+Now that VTEX Sales App Orders and _"Local stock sale delivery method"_ can be identified in our OMS, the next step is to use the available methods to consume OMS APIs to process Local stock sale orders. There are two options for that:
 
-### Tracking On Hands Order
+### Tracking Local stock sale Order
 
-The On Hands Order tracking can be active or passive regarding what works best for the business. Although we strongly recommend to use **Web Hook Integrations** for Physical Stores Sales Operations, since it provides the best response time.
+The Local stock sale Order tracking can be active or passive regarding what works best for the business. Although we strongly recommend to use **Web Hook Integrations** for Physical Stores Sales Operations, since it provides the best response time.
 
 ### API Integration
 
-It is recommended to get a list from all On Hand Orders in a specific time gap. You can use this method to display all On Hands orders or to double check the orders and reprocess any of it that had issues for invoicing or updating the ERP / POS inventory. Although it is not recommended to track orders using this method, for that it is needed to integrate by Web Hook APIs.
+It is recommended to get a list from all On Hand Orders in a specific time gap. You can use this method to display all Local stock sale orders or to double check the orders and reprocess any of it that had issues for invoicing or updating the ERP / POS inventory. Although it is not recommended to track orders using this method, for that it is needed to integrate by Web Hook APIs.
 
 As an example you can use this request:
 
@@ -36,11 +36,11 @@ curl --request GET \
      --header 'Content-Type: application/json'
 ```
 
-This is a normal request using the Get Orders List method by OMS API. To filter VTEX Sales App orders it is needed to set the flag **f_isInstore=true.** Then to know if it is an On Hands Orders check if the flag **checkedInPickupPointId is not null** and compare the value of it is equal to the tag **shippingData.logisticsInfo.pickupPointId** on every product.
+This is a normal request using the Get Orders List method by OMS API. To filter VTEX Sales App orders it is needed to set the flag **f_isInstore=true.** Then to know if it is an Local stock sale Orders check if the flag **checkedInPickupPointId is not null** and compare the value of it is equal to the tag **shippingData.logisticsInfo.pickupPointId** on every product.
 
 ### Web Hook Integration
 
-First, it is necessary to configure a web hook to receive On Hands orders. For this it can be used the following expression, inside the filter tag  ([Order Hooks Documentation](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#configuration-1)):
+First, it is necessary to configure a web hook to receive Local stock sale orders. For this it can be used the following expression, inside the filter tag  ([Order Hooks Documentation](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#configuration-1)):
 
 ```json
 {
@@ -58,7 +58,7 @@ First, it is necessary to configure a web hook to receive On Hands orders. For t
 }
 ```
 
-As response of this configuration, the endpoint used at the example before is going to receive the following payload when a new On Hands order is placed ([Order Hooks documentation](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook-notifications)):
+As response of this configuration, the endpoint used at the example before is going to receive the following payload when a new Local stock sale order is placed ([Order Hooks documentation](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook-notifications)):
 
 ```json
 {
@@ -77,8 +77,7 @@ As response of this configuration, the endpoint used at the example before is go
 
 The received order id can be used to get the full Order information, including the products on it by using the OMS API Method: Get Order ([Orders API reference](https://developers.vtex.com/vtex-rest-api/reference/getorder)).
 
-
-### Invoicing On Hands Order
+### Invoicing Local stock sale Order
 
 After getting the Order Data, the next step is to start an Invoice Emission, this step is not handled by VTEX and each Merchant can pick the solution that fits best their operation (ie: using POS software to emit and print it at the physical store, using ERP to send it through email…).
 
