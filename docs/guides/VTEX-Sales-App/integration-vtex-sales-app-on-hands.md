@@ -13,13 +13,11 @@ hidePaginationNext: false
 
 To first identify On Hands sales the first thing to do is to look for [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf) sales. VTEX Sales App sales can be filtered by a specific OMS filter called "VTEX Sales App", this filter looks for user agent information that sets a specific user agent that can be used to track VTEX Sales App sales. This tag is not available at the Order Payload or databases (redshift), but it can be used at [list orders API](https://developers.vtex.com/vtex-rest-api/reference/listorders) to filter VTEX Sales App Sales. Another field that can be used for this is `marketingData.marketingTags`, if the array contains an "VTEX Sales App" tag the order was made by VTEX Sales App application. This field can be found at the Order Payload and Redshift databases.
 
-The next step is to understand if the order generated will be processed by the same store that has created it. To do that, check first if the `checkedIn` flag is `true`, next run through all products of this order looking at  `shippingData.logisticsInfo. `Inside this key, it is needed to compare `pickupPointId `with `checkedInPickupPointId `the value of those tags must be the same and not null, meaning that the store that created the order is responsible for delivering the order.
-
+The next step is to understand if the order generated will be processed by the same store that has created it. To do that, check first if the `checkedIn` flag is `true`, next run through all products of this order looking at  `shippingData.logisticsInfo`. Inside this key, it is needed to compare `pickupPointId` with `checkedInPickupPointId` the value of those tags must be the same and not null, meaning that the store that created the order is responsible for delivering the order.
 
 ## Integration Methods
 
 Now that VTEX Sales App Orders and _"On Hands delivery method"_ can be identified in our OMS, the next step is to use the available methods to consume OMS APIs to process On Hands orders. There are two options for that:
-
 
 ### Tracking On Hands Order
 
@@ -38,7 +36,7 @@ curl --request GET \
      --header 'Content-Type: application/json'
 ```
 
-This is a normal request using the Get Orders List method by OMS API. To filter VTEX Sales App orders it is needed to set the flag **f_isInstore=true.** Then to know if it is an On Hands Orders check if the flag **checkedInPickupPointId is not null **and compare the value of it is equal to the tag **shippingData.logisticsInfo.pickupPointId **on every product.
+This is a normal request using the Get Orders List method by OMS API. To filter VTEX Sales App orders it is needed to set the flag **f_isInstore=true.** Then to know if it is an On Hands Orders check if the flag **checkedInPickupPointId is not null** and compare the value of it is equal to the tag **shippingData.logisticsInfo.pickupPointId** on every product.
 
 ### Web Hook Integration
 
@@ -61,7 +59,6 @@ First, it is necessary to configure a web hook to receive On Hands orders. For t
 ```
 
 As response of this configuration, the endpoint used at the example before is going to receive the following payload when a new On Hands order is placed ([Order Hooks documentation](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook-notifications)):
-
 
 ```json
 {
