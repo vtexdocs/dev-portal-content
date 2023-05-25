@@ -13,16 +13,22 @@ When your VTEX account is created under the PII data architecture, you may choos
 
 This feature applies to all data saved in the [Profile System](https://developers.vtex.com/docs/guides/profile-system), such as name, email, and shipping address, among others. 
 
-There are two instances of the [Profile System](https://developers.vtex.com/docs/guides/profile-system) running in parallel, each based in different locations: US (Virginia) and EU (Ireland). These instances are identical in terms of their functioning. However, each instance stores and processes only data associated with stores that selected that location as their accounts' PII data residency.
+There are two instances of the [Profile System](https://developers.vtex.com/docs/guides/profile-system) running in parallel, each based in different locations: US (Virginia) and EU (Ireland). These instances are identical in terms of their functioning. However, each instance only holds and processes data associated with stores that selected that location as their accounts' PII data residency.
 
-Every time data is requested from the Profile System, the VTEX edge layer routes that request to the corresponding [Profile System](https://developers.vtex.com/docs/guides/profile-system) location, depending on the account's selected data residency location.
+In practice, when data is requested from the [Profile System](https://developers.vtex.com/docs/guides/profile-system), the VTEX edge layer directs the request to the appropriate Profile System location based on the data residency location selected by the account.
 
 ```mermaid
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
 flowchart LR
-	A[VTEX services] -->|PII| B[Profile System]
-	B -->|Shopper token| A
-	B -->|Shopper token + PII| C[(Database)]
+    subgraph us [AWS us-east-1]
+        A[VTEX service] --> B[Router]
+        B -->C(Storage entity)
+        C -->E[(Database)]
+    end
+    subgraph eu [AWS eu-west-1]
+        D -->F[(Database)]
+    end
+        B -->D(Storage entity)
 ```
 
 >ℹ️ The [Profile System](https://developers.vtex.com/docs/guides/profile-system) is the VTEX module responsible for keeping Shopper Profile PII at rest.
