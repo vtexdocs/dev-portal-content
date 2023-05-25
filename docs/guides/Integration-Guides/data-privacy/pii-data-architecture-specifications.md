@@ -19,11 +19,11 @@ See the sections below to learn more about:
 
 ## Profile system
 
-The [Profile System](https://developers.vtex.com/docs/guides/profile-system) is VTEX's single source of truth when it comes to shopper's profile data. Other modules, such as checkout and order management, can request data from the Profile System when necessary.
+The [**Profile System**](https://developers.vtex.com/docs/guides/profile-system) is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
 
-This means that Profile System information is subject to specific data guidelines and processes, appropriate to handling PII. These specifications also apply whenever other VTEX modules communicate with the Profile System. In the following sections you can learn more about these specifications.
+This means that **Profile System** information is subject to specific data guidelines and processes, appropriate to handling PII. These specifications also apply whenever other VTEX modules communicate with the **Profile System**. In the following sections, you can learn more about these specifications.
 
->⚠️ The Profile System does not store credit card information. Instead, all credit card data, including billing addresses, is processed and stored in a [PCI compliant](https://help.vtex.com/tutorial/what-is-the-pci-ssc) manner for all VTEX stores, regardless of any differences in data architecture. This ensures that VTEX adheres to the best practices of data protection regulations when it comes to handling credit card-related PII. Learn more about [VTEX PCI certification](https://secure.vtex.com/?an=VTEX).
+>⚠️ The **Profile System** does not hold credit card information. Instead, all credit card data, including billing addresses, is processed and stored in a [PCI-compliant](https://help.vtex.com/tutorial/what-is-the-pci-ssc) manner for all VTEX stores, regardless of any differences in data architecture. This ensures that VTEX adheres to the best practices of data protection regulations related to handling credit card PII. Learn more about [VTEX PCI certification](https://secure.vtex.com/?an=VTEX).
 
 >ℹ️ You can integrate with the Profile System via its REST APIs, as described in the [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system).
 
@@ -32,8 +32,8 @@ This means that Profile System information is subject to specific data guideline
 The Profile System has three data entities:
 
 - **Prospect:** information entered by shoppers during cart and checkout flow.
-- **Profile:** prospect information can become a profile if the shopper creates a profile, which can happen via order placement, manual profile creation or [single sign on integrations](https://developers.vtex.com/docs/guides/authentication-overview#single-sign-on-integrations).
-- **Address:** once a prospect or profile places an order, shipping address information is saved, associated with a given profile. One profile may be associated with multiple shipping addresses.
+- **Profile:** prospect information can become a profile if the shopper creates a profile, which can happen via order placement, manual profile creation, or [single sign-on integrations](https://developers.vtex.com/docs/guides/authentication-overview#single-sign-on-integrations).
+- **Address:** once a prospect or profile places an order, the shipping address information is saved and associated with the respective profile. Note that a single profile may be associated with multiple shipping addresses.
 
 >⚠️ The **address** data entity only stores shipping addresses. All credit card related PII, including billing addresses, is stored and processed in a [PCI compliant](https://help.vtex.com/tutorial/what-is-the-pci-ssc) manner for all VTEX stores, regardless of any differences in data architecture.
 
@@ -172,16 +172,16 @@ The VTEX platform enables your store to be a marketplace and a seller to other m
 
 ### Your store is the marketplace
 
-Shopper data belongs to the marketplace, so all specifications described above apply.
+Shopper data belongs to the marketplace. Hence, all specifications described above apply.
 
-Fullfilment information is shared with the seller, so you must make sure that your associated sellers are also compliant with data privacy laws.
+Moreover, fulfillment information is shared with the seller. Therefore, you must ensure that your associated sellers also comply with data privacy laws.
 
 ### Your store is the seller
 
 The specifications described above apply to the fulfillment data received by your store from the marketplace.
 
-The marketplace is your source of data, so you must guarantee that marketplaces associated with your store are also compliant with data privacy laws.
+The marketplace is your data source, so you must guarantee that marketplaces associated with your store also comply with data privacy laws.
 
 ## PII data architecture integration changes
 
-Due to the changes in data architecture made for the PII data architecture, it has some differences in implementation when compared to the previous version, such as API contracts and how information is displayed. See this article about [Changes and limitations of the PII data architecture](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture). This document is constantly updated to reflect the evolution of the PII data architecture.
+Due to the architecture changes made for the PII data architecture, it has some differences in implementation when compared to the standard data architecture, such as API contracts and how information is displayed. See this article about [Changes and limitations of the PII data architecture](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture). This document is constantly updated to reflect the evolution of the PII data architecture.
