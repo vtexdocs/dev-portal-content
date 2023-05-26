@@ -30,7 +30,7 @@ If your store had a go-live failure or was functioning normally and then stopped
 
 ### Account in production
 
-Your account must be set to production. Otherwise it cannot be live. See this article to learn how to [make sure your account is in production](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/7wFsbWgN4rnZsbjhv8IItX#putting-your-account-into-production).
+Your account must be set to production. Otherwise, your store will not be live. See this article for instructions on how to [put your account into production](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/7wFsbWgN4rnZsbjhv8IItX#putting-your-account-into-production).
 
 ### DNS propagation
 
