@@ -8,21 +8,23 @@ updatedAt: "2023-05-11T10:17:18.615Z"
 
 If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons.
 
-You can always check the [VTEX status page](https://status.vtex.com) to learn if the platform is undergoing some instability. If the platform status is ok, try and go through the troubleshooting instructions below. Additionally, keep in mind that there could still be an unreported instability, so periodically checking the status page while following the troubleshooting steps can be helpful.
+You can always refer to the [VTEX status page](https://status.vtex.com) to check if the platform is undergoing some instability. If the status page indicates that the platform is functioning normally, please proceed with the troubleshooting instructions outlined below.
+ 
+> Please note that there may be unreported instabilities when you initially check the status page, especially if it is a recent incident. Therefore, it is recommended to periodically monitor the status page while following the troubleshooting steps provided.
 
 Below are various troubleshooting checks and instructions you can use to solve your store's issue:
 
-- [Checking your connection](#checking-your-connection) - Make sure your internet connection is working properly.
-- [Store is not working](#store-is-not-working) - Your store stopped functioning or had a go-live failure.
+- [Checking your connection](#checking-your-connection) - Your internet connection fails when attempting to access your store.
+- [Store is not working](#store-is-not-working) - The store stopped functioning or had a go-live failure.
 - [Store is slow](#store-is-slow) - Shopping operations work, but slowly.
 - [Store Framework](#store-framework) - Additional checks and instructions for stores using [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) as their storefront solution.
 - [FastStore](#faststore) - Additional checks and instructions for stores using [FastStore](https://www.faststore.dev/) as their storefront solution.
 
 ## Checking your connection
 
-Visit other websites to confirm whether your internet connection is working. Additionally, attempting to access your store using a different internet connection may also be helpful.
+Verify your internet connection by visiting other websites to ensure it is functioning properly. Alternatively, attempt to access your store using a different internet connection.
 
-If you continue to encounter issues with your store, see the recommendations below depending on what is your issue.
+If the issues persists, refer to the specific recommendations below based on the issue you are experiencing.
 
 ## Store is not working
 
