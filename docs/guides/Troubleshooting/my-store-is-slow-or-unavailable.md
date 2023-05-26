@@ -70,9 +70,9 @@ See the [go-live guide](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxI
 
 ## Store is slow
 
-The VTEX platform is designed to be multi-tenant and autoscalable, which means that it can handle the needs of several merchants simultaneously without impacting individual store performance. However, to ensure the health of your store, VTEX may occasionally throttle unintentionally abusive requests to the platform.
+The VTEX platform is designed to be multi-tenant and autoscalable, which means that it can handle the needs of several merchants simultaneously without impacting individual store performance. 
 
-If your store is experiencing slow performance, it is likely due to storefront code customizations or composable integrations. We recommend checking these elements to ensure they are not sending excessive requests to VTEX, which can cause a throttle issue or bottleneck for your store.
+To maintain the overall health of the platform, VTEX may occasionally throttle unintentionally abusive requests. Therefore, if you notice slow performance, it is recommended to review your storefront code customizations and composable integrations. Ensure that these elements are not generating excessive requests to VTEX, as this can lead to throttling issues or bottlenecks for your store. By optimizing your requests and ensuring they are within acceptable limits, you can improve the overall performance of your store while ensuring compliance with VTEX's request throttling mechanisms.
 
 If the issue persists, you can find further instructions below if you use [Store Framework](#store-framework) or [FastStore](#faststore) as your storefront solution.
 
