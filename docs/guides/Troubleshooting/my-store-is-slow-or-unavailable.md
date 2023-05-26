@@ -104,7 +104,7 @@ See this guide on [Debugging Releases and VTEX Headless CMS publishing errors](h
 
 ### Best practices for fetching data with FastStore
 
-Data fetching can impact site performance if not done correctly. See the [Best practices for fetching data on your storefront](https://www.faststore.dev/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data) and make sure they are implemented.
+Data fetching can have a negative impact on the performance of your storefront if not done correctly. See the [Best practices for fetching data on your storefront](https://www.faststore.dev/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data) and make sure they are implemented.
 
 ### Third party scripts on FastStore
 
