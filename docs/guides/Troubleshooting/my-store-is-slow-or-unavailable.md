@@ -108,4 +108,4 @@ Data fetching can impact site performance if not done correctly. See the [Best p
 
 ### Third party scripts on FastStore
 
-[Third party scripts](https://www.faststore.dev/how-to-guides/performance/handling-the-impact-of-third-party-scripts) may also can cause your site to be slow, see this article to learn [how to handle the impact of third-party scripts](https://www.faststore.dev/how-to-guides/performance/handling-the-impact-of-third-party-scripts) on your FastStore project.
+[Third party scripts](https://www.faststore.dev/how-to-guides/performance/handling-the-impact-of-third-party-scripts) may also cause your site to be slow, see this article to learn [how to handle the impact of third-party scripts](https://www.faststore.dev/how-to-guides/performance/handling-the-impact-of-third-party-scripts) on your FastStore project.
