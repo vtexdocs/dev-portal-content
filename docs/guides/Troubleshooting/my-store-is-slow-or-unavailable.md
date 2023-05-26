@@ -80,7 +80,7 @@ If the issue persists, you can find further instructions below if you use [Store
 
 If your store uses [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) and the topics above have not helped you, see the instructions below.
 
-### Account edition compatibility
+### Edition App compatibility
 
 If your [go-live](https://developers.vtex.com/docs/guides/vtex-io-documentation-go-live) or [storefront migration](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io) has failed, it may be a good idea to check if you have the correct [account edition](https://developers.vtex.com/docs/guides/vtex-io-documentation-go-live#account-edition).
 
