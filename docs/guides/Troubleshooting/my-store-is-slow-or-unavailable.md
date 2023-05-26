@@ -34,7 +34,7 @@ Your account must be set to production. Otherwise it cannot be live. See this ar
 
 ### DNS propagation
 
-DNS propagation may take up to 48 hours after [DNS pointing](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing). So if you are within that 48 hour period, it is possible that the store will not be accessible everywhere.
+DNS propagation may take up to 48 hours after [DNS pointing](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing). If you are within this timeframe, the store may not be accessible yet. Please be patient and allow sufficient time for DNS propagation to complete.
 
 ### Conflict in CDN domain registration
 
