@@ -1,9 +1,9 @@
 ---
 title: "Headless commerce"
 slug: "headless-commerce"
-hidden: true
+hidden: false
 createdAt: "2021-03-31T21:12:21.094Z"
-updatedAt: "2021-03-31T21:16:23.800Z"
+updatedAt: "2023-05-29T21:21:53.940Z"
 ---
 [block:callout]
 {
