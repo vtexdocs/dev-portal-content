@@ -15,7 +15,7 @@ You can always refer to the [VTEX status page](https://status.vtex.com) to check
 Below are various troubleshooting checks and instructions you can use to solve your store's issue:
 
 - [Checking your connection](#checking-your-connection) - Your internet connection fails when attempting to access your store.
-- [Store is not working](#store-is-not-working) - The store stopped functioning or had a go-live failure.
+- [Store is unavilable](#store-is-unavailable) - The store stopped functioning or had a go-live failure.
 - [Store is slow](#store-is-slow) - Shopping operations work, but slowly.
 - [Store Framework](#store-framework) - Additional checks and instructions for stores using [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) as their storefront solution.
 - [FastStore](#faststore) - Additional checks and instructions for stores using [FastStore](https://www.faststore.dev/) as their storefront solution.
@@ -80,7 +80,7 @@ When you use a reverse proxy, you give up the optimized edge service managed by 
 
 ## Store is slow
 
-The VTEX platform is designed to be multi-tenant and autoscalable, which means that it can handle the needs of several merchants simultaneously without impacting individual store performance. 
+The VTEX platform is designed to be multi-tenant and autoscalable, which means that it can handle the needs of several merchants simultaneously without impacting individual store performance.
 
 To maintain the overall health of the platform, VTEX may occasionally throttle unintentionally abusive requests. Therefore, if you notice slow performance, it is recommended to review your storefront code customizations and composable integrations. Ensure that these elements are not generating excessive requests to VTEX, as this can lead to throttling issues or bottlenecks for your store. By optimizing your requests and ensuring they are within acceptable limits, you can improve the overall performance of your store while ensuring compliance with VTEX's request throttling mechanisms.
 
