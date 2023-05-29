@@ -178,3 +178,11 @@ VTEX stores have access to [reCAPTCHA integration](https://help.vtex.com/en/tuto
 >ℹ️ Learn more about [reCAPTCHA for VTEX stores](https://help.vtex.com/en/tutorial/using-recaptcha-at-checkout--18Te3oDd7f4qcjKu9jhNzP).
 
 If you activate reCAPTCHA for your store, you must make sure that your frontend is prepared to display and handle reCAPTCHA. Otherwise, it will not be able to place orders. Learn how to implement this in your frontend with the [reCAPTCHA integration guide](https://developers.vtex.com/docs/guides/recaptcha).
+
+## Learn more
+
+See these other guides to learn more about building a headless shopping experience using VTEX:
+
+- [Headless commerce overview](https://developers.vtex.com/docs/guides/headless-commerce)
+- [Headless catalog and search](https://developers.vtex.com/docs/guides/headless-catalog)
+- [Headless profile management and order history](https://developers.vtex.com/docs/guides/headless-profile-management-and-order-history)
