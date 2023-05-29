@@ -49,4 +49,4 @@ Interactions that return a value lower than the minimum value applicable will no
 To set a minimum score for your account, follow the steps below:
 
 1. Make a `GET` request using the endpoint [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm).
-2. Make a `POST` request using the endpoint [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) with the same data obtained in the GET request, just adding or modifying the value of the field `recaptchaMinScore`, which is a number.
+2. Make a `POST` request using the endpoint [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) with the same data obtained in the GET request, just adding or modifying the value of the field `recaptchaMinScore`, which is a decimal number.
