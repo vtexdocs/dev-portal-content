@@ -101,3 +101,11 @@ See this guide  to learn [how to set up cross selling](https://help.vtex.com/en/
 - [Get Product Search of Accessories](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/accessories/-productId-)
 - [Get Product Search of Similars](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/similars/-productId-)
 - [Get Product Search of Suggestions](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/suggestions/-productId-)
+
+## Learn more
+
+See these other guides to learn more about building a headless shopping experience using VTEX:
+
+- [Headless commerce overview](https://developers.vtex.com/docs/guides/headless-commerce)
+- [Headless cart and checkout](https://developers.vtex.com/docs/guides/headless-cart-and-checkout)
+- [Headless profile management and order history](https://developers.vtex.com/docs/guides/headless-profile-management-and-order-history)
