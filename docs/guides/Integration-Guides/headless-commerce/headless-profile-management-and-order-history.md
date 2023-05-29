@@ -1,7 +1,7 @@
 ---
 title: "Headless profile management and order history"
 slug: "headless-profile-management-and-order-history"
-hidden: true
+hidden: false
 createdAt: "2021-03-31T21:21:53.940Z"
 updatedAt: "2023-05-29T21:21:53.940Z"
 ---
