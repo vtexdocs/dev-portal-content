@@ -1,7 +1,7 @@
 ---
 title: "Headless cart and checkout"
 slug: "headless-cart-and-checkout"
-hidden: true
+hidden: false
 createdAt: "2021-03-31T21:20:32.157Z"
 updatedAt: "2023-05-29T21:21:53.940Z"
 ---
