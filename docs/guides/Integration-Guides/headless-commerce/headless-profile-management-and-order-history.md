@@ -68,3 +68,11 @@ Some stores allow shoppers to request changes or even the cancellation of existi
 For requesting changes to an existing order, you can use the endpoint below, but see the [Change order guide](https://developers.vtex.com/docs/guides/change-order) to learn more about this process.
 
 - [Register change on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes)
+
+## Learn more
+
+See these other guides to learn more about building a headless shopping experience using VTEX:
+
+- [Headless commerce overview](https://developers.vtex.com/docs/guides/headless-commerce)
+- [Headless catalog and search](https://developers.vtex.com/docs/guides/headless-catalog)
+- [Headless cart and checkout](https://developers.vtex.com/docs/guides/headless-cart-and-checkout)
