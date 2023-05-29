@@ -9,7 +9,7 @@ updatedAt: "2023-05-11T10:17:18.615Z"
 If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons.
 
 You can always refer to the [VTEX status page](https://status.vtex.com) to check if the platform is undergoing some instability. If the status page indicates that the platform is functioning normally, please proceed with the troubleshooting instructions outlined below.
- 
+
 > Please note that there may be unreported instabilities when you initially check the status page, especially if it is a recent incident. Therefore, it is recommended to periodically monitor the status page while following the troubleshooting steps provided.
 
 Below are various troubleshooting checks and instructions you can use to solve your store's issue:
@@ -26,17 +26,13 @@ Verify your internet connection by visiting other websites to ensure it is funct
 
 If the issues persists, refer to the specific recommendations below based on the issue you are experiencing.
 
-## Store is not working
+## Store is unavailable
 
 If your store had a go-live failure or was functioning normally and then stopped, see the topics below.
 
 ### Account in production
 
 Your account must be set to production. Otherwise, your store will not be live. See this article for instructions on how to [put your account into production](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/7wFsbWgN4rnZsbjhv8IItX#putting-your-account-into-production).
-
-### DNS propagation
-
-DNS propagation may take up to 48 hours after [DNS pointing](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing). If you are within this timeframe, the store may not be accessible yet. Please be patient and allow sufficient time for DNS propagation to complete.
 
 ### Conflict in CDN domain registration
 
@@ -54,21 +50,33 @@ If your store failed to go-live after you [notified DNS pointing](https://help.v
 
 ### DNS provider settings
 
-It may be a good idea to double check your DNS provider settings.
+If you have not configured your DNS provider settings properly, VTEX may not be able to generate the SSL certificate, leading to store unavailability. See this guide on how to [Set up DNS pointing to VTEX](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj) and double check your DNS provider settings.
 
-For example, if cloudflare is your DNS provider, their native proxy can interfere with SSL certificate, causing your store to go down. If this is your case, learn [how to disable the Cloudflare proxy](https://help.vtex.com/en/tutorial/disable-cloudflare-proxy--75QqsXAqR7NdkRc1GZPiXb).
+Also, there are a few more specific issues related to your DNS provider settings, such as [DNS propagation](#dns-propagation), [pointing deadline] and [Cloudflare proxy](#cloudflare-proxy).
+
+#### DNS propagation
+
+DNS propagation may take up to 48 hours after [DNS pointing](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing). The length of this period depends on the Time To Live (TTL) you configured in your DNS provider.
+
+If you are within this timeframe, the store may not be accessible yet. Please be patient and allow sufficient time for DNS propagation to complete.
+
+#### DNS pointing deadline
+
+Once you register your domain in VTEX, you have up to seven days to set up DNS pointing. If you miss this deadline, you must [register your domain in VTEX](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/7sM5IMx02zaHvAFTm0OxiJ#registering-the-domain-on-vtex) again.
+
+See the [go-live guide](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/1iP90RcJvlrfQhnlxM54wo) to learn details about this process.
+
+#### Cloudflare proxy
+
+If cloudflare is your DNS provider, their native proxy can interfere with SSL certificate, causing your store to go down. If this is your case, learn [how to disable the Cloudflare proxy](https://help.vtex.com/en/tutorial/disable-cloudflare-proxy--75QqsXAqR7NdkRc1GZPiXb).
 
 ### Reverse proxy
 
 [Reverse proxy](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir) malfunction can cause store availability issues.
 
-When you use a reverse proxy, you give up the optimized edge service managed by VTEX and are responsible for the site's actual provisioning, which is tasked with the settings, monitoring and feature management such as header forwarding, cookies and cache management. If this is your case, follow up with your infrastructure team or provider to learn if this is the cause of your problem. VTEX does not recommend using reverse proxies.
+When you use a reverse proxy, you give up the optimized edge service managed by VTEX and are responsible for the site's actual provisioning, which is tasked with the settings, monitoring and feature management such as header forwarding, cookies and cache management. If this is your case, you can see this article on [How to insert a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir) and follow up with your infrastructure team or provider to learn if this is the cause of your problem.
 
-### Double check go-live procedures and timeline
-
-A store's [go-live](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/1iP90RcJvlrfQhnlxM54wo) is a delicate series of processes, some being time sensitive. For example, once you register your domain in VTEX, you have up to seven days to set up DNS pointing.
-
-See the [go-live guide](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/1iP90RcJvlrfQhnlxM54wo) to check whether there is anything you missed and how to fix it.
+>❗ VTEX does not recommend using reverse proxies.
 
 ## Store is slow
 
