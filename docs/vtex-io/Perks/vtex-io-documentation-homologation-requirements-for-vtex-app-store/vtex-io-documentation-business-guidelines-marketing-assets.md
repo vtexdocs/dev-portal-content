@@ -126,7 +126,6 @@ Use screenshots to visually represent your app’s key features and purpose.
 Download and use our templates to create great app images for your App Page, such as the ones from the [Live Shopping](https://apps.vtex.com/liveshopping/p) app.
 
 - [Download image templates - Figma](https://www.figma.com/community/file/1078681677235396508)
-- [Download image templates - psd.](https://github.com/Mariana-Caetano/simple-test/files/8134504/VTEX.App.Store.visual.asset.templates.zip)
 
 ## Licenses
 
