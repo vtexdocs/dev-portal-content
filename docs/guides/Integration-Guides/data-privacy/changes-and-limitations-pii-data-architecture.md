@@ -1,32 +1,36 @@
 ---
-title: "Changes and limitations of the PII platform version"
-slug: "changes-and-limitations-pii-platform-version"
+title: "Changes and limitations of the PII data architecture"
+slug: "changes-and-limitations-pii-data-architecture"
 hidden: true
 createdAt: "2022-02-22T22:29:28.541Z"
-updatedAt: "2022-12-09T14:49:14.969Z"
+updatedAt: "2023-05-16T09:38:36.446Z"
 ---
-Some commerce features of the VTEX platform are not available for PII platform version accounts at the moment. There are also features that require adaptations when implemented by the store.
+This document outlines the current limitations associated with the PII data architecture provided by VTEX. By acknowledging these limitations, we provide alternative approaches that may be necessary to ensure data privacy best practices.
 
-In this guide, you can learn about the changes and limitations you must be aware of when managing your customers' information with the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system).
+Some commerce features of the VTEX platform are not available for accounts using the current PII platform beta version, while others may require adaptations when implemented by the store.
+
+In this guide, you can learn about the changes and limitations you must be aware of when managing your customers' information with the [Profile System](https://developers.vtex.com/docs/guides/profile-system).
 
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
 
-## Adaptations
+## Adaptation requirements for feature implementation
 
-### OMS 
+### OMS
 
-There are no longer restrictions to the use of these OMS features for PII platform version accounts:
+There are no longer restrictions to the use of these OMS features for PII data architecture accounts:
+
+- Subscriptions
 - VTEX DO
 - Conversation tracker
 - Shipping notifications
 
-However, API requests to `/do`, `/conversationtracker`, and `shipping-tracker` paths must include the query parameter `reason` in order to retrieve unmasked PII information.
+However, API requests to `/do`, `/conversationtracker`, `/subscriptions`, and `/shipping-tracker` paths must include the query parameter `reason` in order to retrieve unmasked PII information.
 
 #### OMS API adaptations
 
 In order to use order management APIs, you should adapt your integrations to use new endpoints, for features you may already have implemented in your store, such as retrieving order information or notifying invoices. See the table below to know which endpoints need adaptation and where to find the new reference.
 
-| **Feature**                | **Previous endpoint**                                                                                                                                         | **New endpoint (PII platform version)**                                                                                                                                        | **Payload changed** |
+| **Feature**                | **Previous endpoint**                                                                                                                                         | **New endpoint (PII data architecture)**                                                                                                                                        | **Payload changed** |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | Get order                  | `GET` [/api/oms/orders/{orderId}](https://developers.vtex.com/vtex-rest-api/reference/getorder)                                                               | `GET` [/api/orders/pvt/document/{orderId}](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-)                                                    | No                  |
 | List orders                | `GET` [/api/oms/pvt/orders](https://developers.vtex.com/vtex-rest-api/reference/listorders)                                                                   | `POST` [/api/orders/extendsearch/orders](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders)                                                    | Yes                 |
@@ -43,7 +47,7 @@ If you are integrated to Master Data API to get any of this data (CL, AD, BK ent
 
 ### Checkout
 
-[Checkout](https://developers.vtex.com/docs/guides/orderform-fields) endpoints that deal with getting order information keep the same paths but with different behaviors. Contracts are the same for masked data, but for complete data you must include the query parameter: `reason`. Learn more about [retrieving unmasked data](https://developers.vtex.com/vtex-rest-api/docs/profile-system#masked-data).
+Although [Checkout](https://developers.vtex.com/docs/guides/orderform-fields) endpoints that retrieve order information use the same path, they may behave differently. Contracts are the same for masked data, but for complete data, you must include the query parameter: `reason`. Learn more about [retrieving unmasked data](https://developers.vtex.com/docs/guides/profile-system#masked-data).
 
 ### Payments
 
@@ -78,17 +82,13 @@ This feature is not available at this moment. The **Customer cluster** field wil
 
 The [Price tables](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S#) feature is not supported at this moment.
 
-### OMS 
+### OMS
 
-VTEX’s Order Management System is impacted by in a few different features. See details below.
-
-#### Subscriptions
-
-Subscriptions are not available for PII platform version accounts at this moment.
+VTEX’s Order Management System is impacted on a few different aspects. See details below.
 
 #### Call center
 
-You must disable call center impersonation must be disabled at the License Manager.
+You must disable call center impersonation at the License Manager.
 
 #### Orders Admin interface
 
@@ -106,8 +106,13 @@ It is possible to configure PII preferences on OMS' interface of your VTEX Admin
     a. On all orders: View personal information and be audited on all orders.
     b. This order only: View PII content and be audited on this order only.
     c. Hide and do not audit: Browse orders without displaying personal information.
-5. Click on `Confirm`. 
+4. Click on `Confirm`.
 
+#### Subscriptions
+
+The subscription feature is compatible with the PII data architecture.
+
+However, the **Subscriptions** Admin interface displays only masked PII. If you wish to see unmasked PII, you must use the [Subscriptions v3 API](https://developers.vtex.com/docs/api-reference/subscriptions-api-v3) endpoints, while sending the `reason` query parameter. Learn more about [retrieving unmasked data](https://developers.vtex.com/docs/guides/profile-system#masked-data).
 
 ### MessageCenter - Admin panel
 
