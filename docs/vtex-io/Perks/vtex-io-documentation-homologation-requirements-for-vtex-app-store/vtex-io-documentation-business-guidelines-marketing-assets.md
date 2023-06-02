@@ -90,7 +90,7 @@ Do not force your logo or artwork to fit the full asset space. Instead, utilize 
 
 Below we have examples of icon elements that mislead users and violate our guidelines.
 
-![App Store icon mislead](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-6.png)
+![App Store icon mislead](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-6.png)
 
 #### Brand adaptation
 
