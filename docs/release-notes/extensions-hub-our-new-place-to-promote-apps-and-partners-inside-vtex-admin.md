@@ -8,7 +8,7 @@ excerpt: "Extensions Hub is a new section in the Admin that allows VTEX-certifie
 
 Extensions Hub is a new section in the Admin that allows VTEX-certified developers and partners to expand their reach by offering their products and services directly to VTEX merchants. The Extensions Hub will be available globally in all VTEX stores in the third quarter (Q3) of 2023.
 
-![Extensions Hub App Store home page](../../images/extensions-hub-app-store-home-page.png)
+![Extensions Hub App Store home page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/extensions-hub-app-store-home-page.png)
 
 ## What has changed?
 
