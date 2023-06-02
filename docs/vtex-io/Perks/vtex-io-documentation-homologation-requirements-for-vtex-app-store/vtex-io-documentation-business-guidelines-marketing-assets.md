@@ -82,7 +82,7 @@ On the left-hand side is your new icon asset. The following two images on the ri
 
 Utilize the full asset space as the background when dealing with minimalistic artwork. Use the keylines as guides for positioning artwork elements (i.e. logos).
 
-![App Store icon positioning](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-4.png)
+![App Store icon positioning](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-4.png)
 
 Do not force your logo or artwork to fit the full asset space. Instead, utilize the keyline grid.
 
