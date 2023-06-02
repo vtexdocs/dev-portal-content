@@ -54,7 +54,7 @@ Images are a tool to express the visual identity of your app, make users learn m
 
 Your app icon is one of the first elements of your app that developers and merchants see. It expresses the visual identity and reinforces your brand in the VTEX App Store environment.
 
-![App Store icon example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-1.png)
+![App Store icon example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-1.png)
 
 #### Attributes
 
@@ -74,7 +74,7 @@ When creating your artwork, ensure it conforms to the following:
 
 After the asset is uploaded, our platform dynamically applies the rounded mask to ensure consistency across all app icons.
 
-![App Store icon mask](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-3.png)
+![App Store icon mask](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-3.png)
 
 On the left-hand side is your new icon asset. The following two images on the right-hand side show the dynamic processing of the icon.
 
@@ -82,21 +82,21 @@ On the left-hand side is your new icon asset. The following two images on the ri
 
 Utilize the full asset space as the background when dealing with minimalistic artwork. Use the keylines as guides for positioning artwork elements (i.e. logos).
 
-![App Store icon positioning](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-4.png)
+![App Store icon positioning](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-4.png)
 
 Do not force your logo or artwork to fit the full asset space. Instead, utilize the keyline grid.
 
-![App Store icon full bleed](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-5.png)
+![App Store icon full bleed](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-5.png)
 
 Below we have examples of icon elements that mislead users and violate our guidelines.
 
-![App Store icon mislead](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-6.png)
+![App Store icon mislead](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-6.png)
 
 #### Brand adaptation
 
 If shapes are a critical part of a logo, do not force the artwork to full bleed. Instead, place it on the new keyline grid.
 
-![App Store icon adaptation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-7.png)
+![App Store icon adaptation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-7.png)
 
 From left to right: original icon asset, new icon asset (recommended adaptation), new icon rendered on the App Store.
 
