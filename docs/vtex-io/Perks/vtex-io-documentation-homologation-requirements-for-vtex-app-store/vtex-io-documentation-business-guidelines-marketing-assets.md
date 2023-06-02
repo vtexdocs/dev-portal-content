@@ -102,6 +102,10 @@ From left to right: original icon asset, new icon asset (recommended adaptation)
 
 If possible, pick a background color for your asset that is appropriate for your brand and does not include any transparency. Transparent assets will display the background color of the App Store UI.
 
+#### Figma Template
+
+Access our [Figma Community template](https://www.figma.com/community/file/1246469471037339772) and use our baseline grid and keylines in the Guide page.
+
 ### Screenshots
 
 Use screenshots to visually represent your app’s key features and purpose.
