@@ -96,7 +96,7 @@ Below we have examples of icon elements that mislead users and violate our guide
 
 If shapes are a critical part of a logo, do not force the artwork to full bleed. Instead, place it on the new keyline grid.
 
-![App Store icon adaptation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-7.png)
+![App Store icon adaptation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-7.png)
 
 From left to right: original icon asset, new icon asset (recommended adaptation), new icon rendered on the App Store.
 
