@@ -70,7 +70,7 @@ When creating your artwork, ensure it conforms to the following:
 - The icon design must be simple and avoid unnecessary visual details. This will help merchants understand your app's purpose and have a better fit on smaller screens.
 - The icon must not exceed 768px of the total space available in the icon size. This is equivalent to a 128px margin on each side.
 
-![App Store icon keylines](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-2.png)
+![App Store icon keylines](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-2.png)
 
 After the asset is uploaded, our platform dynamically applies the rounded mask to ensure consistency across all app icons.
 
