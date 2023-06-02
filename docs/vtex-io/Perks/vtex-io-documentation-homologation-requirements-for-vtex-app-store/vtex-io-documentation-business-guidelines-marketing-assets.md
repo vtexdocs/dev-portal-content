@@ -74,7 +74,7 @@ When creating your artwork, ensure it conforms to the following:
 
 After the asset is uploaded, our platform dynamically applies the rounded mask to ensure consistency across all app icons.
 
-![App Store icon mask](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-3.png)
+![App Store icon mask](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-3.png)
 
 On the left-hand side is your new icon asset. The following two images on the right-hand side show the dynamic processing of the icon.
 
