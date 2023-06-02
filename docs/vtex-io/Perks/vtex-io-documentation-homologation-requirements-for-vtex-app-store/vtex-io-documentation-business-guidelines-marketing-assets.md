@@ -54,7 +54,7 @@ Images are a tool to express the visual identity of your app, make users learn m
 
 Your app icon is one of the first elements of your app that developers and merchants see. It expresses the visual identity and reinforces your brand in the VTEX App Store environment.
 
-![App Store icon example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-1.png)
+![App Store icon example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-1.png)
 
 #### Attributes
 
