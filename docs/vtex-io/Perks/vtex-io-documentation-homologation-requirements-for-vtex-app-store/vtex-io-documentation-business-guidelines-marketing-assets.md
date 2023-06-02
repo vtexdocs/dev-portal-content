@@ -86,7 +86,7 @@ Utilize the full asset space as the background when dealing with minimalistic ar
 
 Do not force your logo or artwork to fit the full asset space. Instead, utilize the keyline grid.
 
-![App Store icon full bleed](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/Update-icon-specifications-for-apps-in-the-Marketing-Guidelines/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-5.png)
+![App Store icon full bleed](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-5.png)
 
 Below we have examples of icon elements that mislead users and violate our guidelines.
 
