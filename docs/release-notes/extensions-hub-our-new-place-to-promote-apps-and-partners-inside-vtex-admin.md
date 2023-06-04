@@ -32,4 +32,4 @@ On top of that, we are enabling partners to sell and promote solutions in the Ap
 
 There will be no changes to the app development, approval, publishing, and marketing processes. However, we updated some of our marketing guidelines to be compatible with our new App Store. We have new rules for icons and the maximum size of the app headline is now limited to 120 characters. Make sure to check our updated guidelines in the [documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store).
 
-Also, if you are a VTEX partner that has an app published in the App Store, please contact our team to sign the updated contract considering the new App Store business model.
+Also, if you are a VTEX partner that has an app published in the App Store, please [contact our team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) to sign the updated contract considering the new App Store business model.
