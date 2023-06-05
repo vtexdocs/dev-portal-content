@@ -36,7 +36,7 @@ If you are implementing reCAPTCHA v3, you have the option to set a minimum score
 
 The priority order of score application for any given purchase is:
 
-```
+```bash
 reCAPTCHA v3 key score > Account score > VTEX default score (0.7)
 ```
 
