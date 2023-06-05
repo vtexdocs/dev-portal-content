@@ -9,7 +9,7 @@ updatedAt: "2022-08-19T18:42:00.613Z"
 
 VTEX’s Profile System provides APIs that enable stores to:
 - Deal with a single source of truth for shoppers’ data.
-- [Safely store](https://developers.vtex.com/docs/guides/data-privacy) PII and sensitive information.
+- [Safely store](https://developers.vtex.com/docs/guides/pii-data-architecture) PII and sensitive information.
 
 Below you can learn more about some of the Profile System’s features and how to integrate with the APIs.
 
