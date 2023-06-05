@@ -26,7 +26,7 @@ By default, this endpoint returns only complete profiles, but you may use the bo
 
 ### Editing profile information
 
-VTEX uses [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) to store and manage shopper information. So in order to manage profile data from your storefront, you must use the Master Data v1 API. 
+VTEX uses [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) to store and manage shopper information. So in order to manage profile data from your storefront, you must use the Master Data v1 API.
 
 >ℹ️ Learn more about [Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#versions-available) and its [basic components](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#basic-components).
 
@@ -38,6 +38,7 @@ In Master Data v1, shopper profiles are documents in the `CL` data entity, while
 - [Delete document](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-)
 
 If you prefer to search shopper information by other information, such as email address, instead of the document ID, use the search endpoint:
+
 - [Search documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search)
 
 ### Password
@@ -50,7 +51,7 @@ To implement this feature, follow the instructions in the guide [Expiring a shop
 
 ### News letter subscription
 
-When shoppers go to the profile management section of your store, they may wish to manage their consent of newsletter subscription. For this purpose, note that this information is in the shopper profile, in the boolean field named `isNewsletterOptIn `.
+When shoppers go to the profile management section of your store, they may wish to manage their consent of newsletter subscription. For this purpose, note that this information is in the shopper profile, in the boolean field named `isNewsletterOptIn`.
 
 ## Order history
 
