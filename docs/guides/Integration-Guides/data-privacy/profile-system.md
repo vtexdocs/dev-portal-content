@@ -13,12 +13,7 @@ VTEX’s Profile System provides APIs that enable stores to:
 
 Below you can learn more about some of the Profile System’s features and how to integrate with the APIs.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Data stored in the new Profile System is not related to documents saved in Master Data v1 or v2. The API endpoints and features described in this article only apply to documents registered in the new Profile System."
-}
-[/block]
+>⚠️ Data stored in the new Profile System is not related to documents saved in Master Data v1 or v2. The API endpoints and features described in this article only apply to documents registered in the new Profile System.
 
 >❗ When implementing your integration:
 >
@@ -36,12 +31,26 @@ To use the Profile System features, ensure you have the appropriate [License Man
 | Profile System | Documents | Save and Update Item | Edit items from Profile System. |
 | Profile System | Documents | Delete Item | Delete items from Profile System. |
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Learn more about License Manager [roles](https://help.vtex.com/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [resources](https://help.vtex.com/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)."
-}
-[/block]
+>⚠️ Learn more about License Manager [roles](https://help.vtex.com/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [resources](https://help.vtex.com/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
+
+## Auditability
+
+You can use the [Audit app](https://help.vtex.com/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA) to check actions made using the Profile System in your account.
+
+>ℹ️ Learn more about [how to audit actions in the VTEX platform](https://help.vtex.com/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA).
+
+See the table below to learn more about the Profile System events available on Audit.
+
+| **Action**                   | **Description**                                      | **Event details**                     |
+|------------------------------|------------------------------------------------------|---------------------------------------|
+| GetAddressUnmasked           | Retrieval of an unmasked address by ID.              | Address ID.                           |
+| GetAddressVersionUnmasked    | Retrieval of an unmasked address by ID and version.  | Address ID and version ID.            |
+| GetPickupInfoUnmasked        | Retrieval of unmasked pickup information.            | Pickup point ID.                      |
+| GetPickupInfoVersionUnmasked | Retrieval of unmasked pickup information by version. | Pickup point ID and version ID.       |
+| GetProfileUnmasked           | Retrieval of an unmasked profile by ID.              | Profile ID.                           |
+| GetProfileVersionUnmasked    | Retrieval of an unmasked profile by ID and version.  | Profile ID and version ID.            |
+| EmailRectification           | Change existing email address.                       | ID of user whose email was rectified. |
+
 ## TTL
 
 Profile System documents have a defined TTL, which means Time To Live. This means that whenever a customer creates a profile, it will be deleted after the TTL has passed from the time of its creation.
@@ -52,16 +61,13 @@ You may set a document's TTL, with the query parameter `ttl` allowed for request
 ## Alternative keys
 
 Shopper profiles and addresses are accessible via API by a unique `profileId`. However, it is also possible to use alternative keys. Currently, there are two allowed alternative keys:
+
 - `email`
 - `document`
-[block:callout]
-{
-  "type": "warning",
-  "body": "Note that, in this context, the `document` field means the document number registered by the store customer."
-}
-[/block]
-To do this, you must replace the `profileId` path parameter with the key of your choice and send the name of the field that will be used in the query parameter `alternativeKey`.
 
+>⚠️ Note that, in this context, the `document` field means the document number registered by the store customer.
+
+To do this, you must replace the `profileId` path parameter with the key of your choice and send the name of the field that will be used in the query parameter `alternativeKey`.
 
 ## Masked data
 
@@ -119,7 +125,6 @@ Unmasked profile
 }
 ```
 
-
 ## API integration
 
 There are several APIs you can integrate with in order to manage information regarding profiles and addresses. Below you can find some examples and links to the detailed API reference.
@@ -165,6 +170,7 @@ Example response when getting unmasked profile
 ```
 
 API endpoints:
+
 - [Create client profile](https://developers.vtex.com/vtex-rest-api/reference/createclientprofile)
 - [Get profile](https://developers.vtex.com/vtex-rest-api/reference/getprofile)
 - [Update client profile](https://developers.vtex.com/vtex-rest-api/reference/updateclientprofile)
@@ -220,6 +226,7 @@ Example response when getting unmasked address
 ```
 
 API endpoints:
+
 - [Create client address](https://developers.vtex.com/vtex-rest-api/reference/createclientaddress)
 - [Get client addresses](https://developers.vtex.com/vtex-rest-api/reference/getclientaddresses)
 - [Get unmasked client addresses](https://developers.vtex.com/vtex-rest-api/reference/getunmaskedclientaddresses)
@@ -234,6 +241,7 @@ API endpoints:
 ### Prospects
 
 API endpoints:
+
 - [Create prospect](https://developers.vtex.com/vtex-rest-api/reference/createprospect)
 - [Get prospect](https://developers.vtex.com/vtex-rest-api/reference/getprospect)
 - [Update prospect](https://developers.vtex.com/vtex-rest-api/reference/updateprospect)
@@ -244,6 +252,7 @@ API endpoints:
 ### Purchase information
 
 API endpoints:
+
 - [Create purchase information](https://developers.vtex.com/vtex-rest-api/reference/createpurchaseinformation)
 - [Get purchase information](https://developers.vtex.com/vtex-rest-api/reference/getpurchaseinformation)
 - [Update purchase information](https://developers.vtex.com/vtex-rest-api/reference/updatepurchaseinformation)
