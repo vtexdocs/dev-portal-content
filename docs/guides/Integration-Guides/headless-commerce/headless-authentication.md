@@ -87,3 +87,12 @@ Since your store is not using VTEX's native frontend to authenticate shoppers, t
 - Keeping track of the expiration time set for the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token).
 - Requiring new login if it was somehow revoked.
 - Repeating the [token exchange](#exchanging-oauth-identity-provider-access-token-for-vtex-user-token) in case the shopper had to log in again.
+
+## Learn more
+
+See these other guides to learn more about building a headless shopping experience using VTEX:
+
+- [Headless commerce overview](https://developers.vtex.com/docs/guides/headless-commerce)
+- [Headless catalog and search](https://developers.vtex.com/docs/guides/headless-catalog)
+- [Headless cart and checkout](https://developers.vtex.com/docs/guides/headless-cart-and-checkout)
+- [Headless profile management and order history](https://developers.vtex.com/docs/guides/headless-profile-management-and-order-history)
