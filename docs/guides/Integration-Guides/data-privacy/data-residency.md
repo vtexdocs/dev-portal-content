@@ -25,9 +25,11 @@ flowchart LR
         B -->C(Storage entity)
         C -->E[(Database)]
     end
+    style us fill:#FFFFFF
     subgraph eu [AWS eu-west-1]
         D -->F[(Database)]
     end
+    style eu fill:#FFFFFF
         B -->D(Storage entity)
 ```
 
