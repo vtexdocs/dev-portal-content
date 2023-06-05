@@ -85,8 +85,8 @@ On product pages and maybe other sections of your headless store, you will need 
 
 - [Search Product by Product URL](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search/-product-text-link-/p)
 - [Search for Products with Filter, Order and Pagination](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search)
-    - Filter by product ID: `fq=productId:{productId}`
-    - Filter by SKU ID: `fq=skuId:{skuId}`
+  - Filter by product ID: `fq=productId:{productId}`
+  - Filter by SKU ID: `fq=skuId:{skuId}`
 
 ### Cross selling
 
