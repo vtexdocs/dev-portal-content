@@ -81,7 +81,7 @@ Whenever reCAPTCHA validation applies, according to your `recaptchaValidation` [
 }
 ```
 
-Now you can use this key to [display the reCAPTCHA widget](#integrating-web---based-storefronts) on your storefront.
+Now you can use this key to [display the reCAPTCHA widget](#integrating-web-based-storefronts) on your storefront.
 
 #### Place order key
 
@@ -102,11 +102,11 @@ If a reCAPTCHA validation token is necessary for a given order and this request 
 }
 ```
 
-Now you can use this key to [display the reCAPTCHA widget](#integrating-web---based-storefronts) on your storefront.
+Now you can use this key to [display the reCAPTCHA widget](#integrating-web-based-storefronts) on your storefront.
 
 ## Integrating reCAPTCHA on your storefront
 
-See below instructions for integrating reCAPTCHA depending on whether you are implementing a [mobile](#integrating-mobile-apps) or [web-based storefront](#integrating-web---based-storefronts).
+See below instructions for integrating reCAPTCHA depending on whether you are implementing a [mobile](#integrating-mobile-apps) or [web-based storefront](#integrating-web-based-storefronts).
 
 ### Integrating mobile apps
 
