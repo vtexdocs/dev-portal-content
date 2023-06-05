@@ -1,9 +1,9 @@
 ---
-title: "Data privacy"
-slug: "data-privacy"
+title: "PII data architecture"
+slug: "pii-data-architecture"
 hidden: true
 createdAt: "2022-02-22T22:27:02.330Z"
-updatedAt: "2023-05-16T09:38:36.446Z"
+updatedAt: "2023-06-14T43:38:36.446Z"
 ---
 The VTEX platform allows stores to process shoppers’ Personal Identifiable Information (PII) in compliance with data privacy regulations such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/).
 
