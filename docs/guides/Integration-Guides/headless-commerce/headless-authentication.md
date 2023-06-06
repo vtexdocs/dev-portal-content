@@ -43,7 +43,7 @@ See an example below of how to use the **POST - Exchange OAuth access token for 
 
   ```
   POST
-  https://{accountName}.{environment}.com.br/vtexid/audience/webstore/provider/oauth/exchange
+  https://{accountName}.{environment}.com.br/api/vtexid/audience/webstore/provider/oauth/exchange
   ```
 
 - Request body:
