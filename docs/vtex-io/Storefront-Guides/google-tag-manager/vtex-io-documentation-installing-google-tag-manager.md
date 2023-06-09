@@ -72,7 +72,7 @@ The main consequence of this blacklist is that custom HTML tags will not be trig
 
 ![restrictions](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-installing-google-tag-manager-1.png)
 
-Most of the widely used custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs custom HTML for any of those cases, the integration can either be done by transforming the tags in a [VTEX IO Pixel app](/docs/guides/pixel-apps) or by removing this restriction. See below the full list of tags and variables that are blocked by default in the VTEX IO Google Tag Manager solution:
+Most widely used custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs custom HTML for any of those cases, the integration can either be done by transforming the tags in a [VTEX IO Pixel app](https://developers.vtex.com/docs/guides/pixel-apps) or by removing this restriction. See below the full list of tags and variables that are blocked by default in the VTEX IO Google Tag Manager solution:
 
 **Blocked tags**
 
