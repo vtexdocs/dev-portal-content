@@ -31,7 +31,7 @@ query ProductQuery($slug: String) {
 
 To resolve this query, you need to have a app that implements the schema declared in this app, such as: [vtex.search-resolver](https://github.com/vtex-apps/search-resolver).
 
-<details> 
+<details>
 
 <summary><strong>Table of Contents</strong></summary>
 
