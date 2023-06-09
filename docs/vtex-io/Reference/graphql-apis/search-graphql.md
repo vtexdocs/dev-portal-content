@@ -11,7 +11,7 @@ The default implementation for this schema is on [vtex.search-resolver](https://
 
 ### Usage
 
-To use it in your app, decalre it on your manifest file like:
+To use it in your app, declare it on your `manifest.json` file, as demonstrated below:
 
 ```json
 "dependencies": {
@@ -29,7 +29,7 @@ query ProductQuery($slug: String) {
 }
 ```
 
-To resolve this query, you need to have a app that implements the schema declared in this app, such as: [vtex.search-resolver](https://github.com/vtex-apps/search-resolver)
+To resolve this query, you need to have a app that implements the schema declared in this app, such as: [vtex.search-resolver](https://github.com/vtex-apps/search-resolver).
 
 <details> 
 
@@ -265,7 +265,7 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" align="right" valign="top">orderBy</td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Sort by a criteria: <ul><li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li><li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li><li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li><li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li><li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li><li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li><li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li></ul> If you want to sort by a specification, use the format <code>{specification key}:{asc|desc}</code>. For example: <code>pricePerUnit:asc</code> or <code>size:desc</code> (this only works on <code>vtex.search-resolver@1.x</code>)</td>
+            <td>Sort by a criteria: <ul><li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li><li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li><li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li><li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li><li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li><li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li><li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li></ul> If you want to sort textually by a specification, use the format <code>{specification key}:{asc|desc}</code>. For example: <code>material:asc</code> or <code>material:desc</code>. This always sorts values textually (not numerically) and it works only on <code>vtex.search-resolver@1.x</code>.
         </tr>
         <tr>
             <td colspan="2" align="right" valign="top">from</td>
@@ -590,7 +590,7 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" align="right" valign="top">orderBy</td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Sort by a criteria: <ul><li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li><li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li><li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li><li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li><li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li><li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li><li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li> </ul> If you want to sort by a specification, use the format <code>{specification key}:{asc|desc}</code>. For example: <code>pricePerUnit:asc</code> or <code>size:desc</code> (this only works on <code>vtex.search-resolver@1.x</code>)</td>
+            <td>Sort by a criteria: <ul><li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li><li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li><li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li><li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li><li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li><li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li><li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li> </ul> If you want to sort textually by a specification, use the format <code>{specification key}:{asc|desc}</code>. For example: <code>material:asc</code> or <code>material:desc</code>. This always sorts values textually (not numerically) and it works only on <code>vtex.search-resolver@1.x</code>.
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>searchURLsCount</strong></td>
