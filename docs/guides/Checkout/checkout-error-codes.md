@@ -460,7 +460,7 @@ During Checkout API requests, some error codes may appear as a message in the re
 
 The information described in the list below can appear in the `messages` field of the [orderForm response body](https://developers.vtex.com/docs/guides/orderform-fields).
 
-| <div style="width:120px">Status</div> | <div style="width:250px">Code</div>                                                           | Message                                                | Meaning                                                |
+| <div style="width:120px">Status</div> | <div style="width:300px">Code</div>                                                           | Message                                                | Meaning                                                |
 | :-----------------------------------------------: | ----------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 |                 **Error**                 | `"unavailableItemFulfillment"`                        | `"Item {0} is unavailable"`                              | The item is not available.                        |
 |                 **Error**                 | `"withoutStock"`                        | `"The item {0} has no inventory"`                              | The item is out of stock.                        |
@@ -501,7 +501,7 @@ The information described in the list below can appear in the `messages` field o
 |                 **Error**                 | `"ORD027"`                        | `"Item {0} not found or unavailable"`                             | The item is not available or not found.                     |
 |                 **Error**                 | `"ORD028"`                        | `"Item {0} is unavailable"`                             | The item is not available.                     |
 |                 **Info**                 | `"cartMaxProductCountReached"`                        | `"Cart has already reached max limit of {0} items"`                              | The cart has reached the maximum number of items allowed.                        |
-|                 **Info**                 | `"giftRegistryCommunicationError"`                        | `"Fail to get informations of the gift registry"`                              | Failed to get shopping list information.                        |
+|                 **Info**                 | `"giftRegistryCommunicationError"`                        | `"Fail to get information of the gift registry"`                              | Failed to get shopping list information.                        |
 |                 **Info**                 | `"subscriptionNotAllowedToOrderFormWithoutItens"`                        | `"It's not allowed to insert subscription data in the cart without itens"`                              | It is not allowed to enter subscription data in a cart without items.                        |
 |                 **Warning**                 | `"changedFreight"`                        | `"Freight type has changed"`                              | Shipping type has changed.                        |
 |                 **Warning**                 | `"unavailableSelectedPayment"`                        | `"The selected payment is not available anymore"`                              | The selected payment method is no longer available.                        |
@@ -509,13 +509,9 @@ The information described in the list below can appear in the `messages` field o
 |                 **Warning**                 | `"itemAttachmentsRemoved"`                        | `"Some item attachments are not available anymore and have been removed from your cart"`                              | Some attachments are no longer available and have been removed from the cart.                        |
 |                 **Warning**                 | `"invalidItemAttachmentKeyValue"`                        | `"Some item attachments have invalid key values"`                              | Some attachments have invalid identifiers.                        |
 |                 **Warning**                 | `"bundleItemsRemoved"`                        | `"Some services are not available anymore and have been removed from your cart"`                              | Some services are no longer available and have been removed from the cart.                        |
-|                 **Warning**                 | `"changedPriceValue"`                        | `"Items value has changed"`                              |
-Item value has changed.                        |
-|                 **Warning**                 | `"changedFreightPrice"`                        | `"Freight value has changed"`                              |
-Shipping cost has changed.                        |
-|                 **Warning**                 | `"itemQuantityNotAvailable"`                        | `"The desired quantity for item {0} is not available"`                              |
-The desired quantity for the item is not available.                        |
-|                 **Warning**                 | `"GiftUnavailable"`                        | `"Gift {0} is unavailable and was removed from cart"`                              |
-One or more gifts are unavailable and have been removed from your cart.                        |
-|                 **Warning**                 | `"orderCommercialConditionsCannotBeMaintained"`                        | `"Your cart has changed, so price conditions from original order have been lost. A new order will be created and the original one should be manually cancelled."`                              |
-The commercial conditions of the cart were not maintained.                        |
+|                 **Warning**                 | `"changedPriceValue"`                        | `"Items value has changed"`                              | Item value has changed.                        |
+|                 **Warning**                 | `"changedFreightPrice"`                        | `"Freight value has changed"`                              | Shipping cost has changed.                        |
+|                 **Warning**                 | `"itemQuantityNotAvailable"`                        | `"The desired quantity for item {0} is not available"`                              | The desired quantity for the item is not available.                        |
+|                 **Warning**                 | `"GiftUnavailable"`                        | `"Gift {0} is unavailable and was removed from cart"`                              | One or more gifts are unavailable and have been removed from your cart.                        |
+|                 **Warning**                 | `"orderCommercialConditionsCannotBeMaintained"`                        | `"Your cart has changed, so price conditions from original order have been lost. A new order will be created and the original one should be manually cancelled"`                              | The commercial conditions of the cart were not maintained.                        |
+
