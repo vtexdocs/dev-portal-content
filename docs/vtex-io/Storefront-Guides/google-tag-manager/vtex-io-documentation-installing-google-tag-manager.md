@@ -42,7 +42,7 @@ Take note of the Measurement ID, also known as [*G- ID*](https://support.google.
 
 1. Access your VTEX **Admin** and go to **Account settings > Apps > App Store**.
 
-2. Search for the Google Tag Manager app and click `Install`. You will be redirected to the [App Store page](https://apps.vtex.com/vtex-google-tag-manager/p). Log in to your App Store account if you are not currently logged in. 
+2. Search for the Google Tag Manager app and click `Install`. You will be redirected to the [App Store page](https://apps.vtex.com/vtex-google-tag-manager/p). Log in to your App Store account if you are not currently logged in.
 
 ![image2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-installing-google-tag-manager-0.gif)
 
