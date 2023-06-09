@@ -295,4 +295,3 @@ To make the product information consistent across all store areas and help captu
 The `dimension1`, `dimension2`, and `dimension3` properties are custom dimensions that you can use to collect and analyze data that Google Analytics does not automatically create.
 
 For more information about custom dimensions and Enhanced Ecommerce, see [Custom dimensions and metrics](https://support.google.com/analytics/answer/2709828?hl=en&ref_topic=2709827#configuration&zippy=%2Cin-this-article) and [Google Enhanced ecommerce official guide](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce#ecommerce-data) respectively.
-
