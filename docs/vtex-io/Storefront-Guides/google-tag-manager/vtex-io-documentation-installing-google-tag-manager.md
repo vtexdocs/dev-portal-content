@@ -10,7 +10,7 @@ seeAlso:
   - "/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
 ---
 
-## Before you begin
+## Before you start
 
 You need a Google account to use Google Tag Manager. You can use the same account if you already use Google products, such as Gmail.
 
