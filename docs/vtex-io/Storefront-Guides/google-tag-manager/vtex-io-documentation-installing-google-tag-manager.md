@@ -10,6 +10,7 @@ seeAlso:
   - "/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
 ---
 
+This guide provides a step-by-step guide on installing and configuring Google Tag Manager (GTM) on Store Framework stores. The guide also highlights some restrictions to avoid performance issues and unpredictable behavior, including blocklists for custom HTML tags and variables.
 ## Before you start
 
 You need a Google account to use Google Tag Manager. You can use the same account if you already use Google products, such as Gmail.
