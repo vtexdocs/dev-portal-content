@@ -66,7 +66,7 @@ Once you have installed the app and check the box **Send Google Analytics 4 Even
 
 ## Restrictions
 
-To avoid performance problems and unpredictable behavior, the VTEX IO Google Tag Manager solution uses the native GTM blacklist feature. You can read more about this feature in the [Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/restrict). By default, the HTML ID is blocked, automatically blocking all the tags, variables, and triggers of type `customScripts`. 
+To avoid performance problems and unpredictable behavior, the VTEX IO Google Tag Manager solution uses the native GTM blacklist feature. You can read more about this feature in the [Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/restrict). By default, the HTML ID is blocked, automatically blocking all the tags, variables, and triggers of type `customScripts`.
 
 The main consequence of this blacklist is that custom HTML tags will not be triggered. **The HTML blacklist is the VTEX Google Tag Manager app default.** If you want to disable this restriction, go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.x/setup` and check the toggle below.
 
