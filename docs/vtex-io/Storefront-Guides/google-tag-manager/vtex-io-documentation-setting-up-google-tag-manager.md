@@ -3,10 +3,16 @@ title: "Setting up Google Tag Manager"
 slug: "vtex-io-documentation-setting-up-google-tag-manager"
 hidden: false
 createdAt: "2020-06-03T16:02:44.272Z"
-updatedAt: "2023-05-13T11:50:44.813Z"
-category: "Storefront Development"
-excerpt: "In this guide, you will learn how to track and analyze data from your store using Google Analytics 4"
+updatedAt: "2022-12-13T20:17:44.813Z"
+category: "Storefront development"
+excerpt: "Steps on how to track and analyze data from your store using Google Analytics 4"
+seeAlso:
+  - "/docs/guides/google-tag-manager"
+  - "/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app"
+  - "/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking"
 ---
+
+Once you have installed the [VTEX IO Google Tag Manager app](https://developers.vtex.com/docs/guides/google-tag-manager), set it up in your store by configuring all the necessary variables, triggers, and tags.
 
 In this guide, you will learn how to track and analyze data from your store using Google Analytics 4. Specifically, you will:
 
@@ -97,19 +103,3 @@ The following events are not fully supported yet. Although the GTM app will list
 |-------------|----------------------------------------------------------------------------------------------------------------------|
 | vtex:login  | [login](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#login)     |
 | vtex:signUp | [sign_up](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#sign_up) |
-
-## Container template file changelog
-
-This section contains the changes history of the container template file. The latest version can be downloaded in [Step 1 - Setting up GA4 events](#step-1-setting-up-ga4-events).
-
-### 2023-05-11
-
-#### Refactored
-
-- Organized the tags, triggers, and variables in a single "GA4" folder and followed a naming standard.
-
-### 2023-05-03
-
-#### Added
-
-- The first version of the container template.

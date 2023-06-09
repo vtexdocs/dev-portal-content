@@ -2,13 +2,15 @@
 title: "Installing Google Tag Manager"
 slug: "vtex-io-documentation-installing-google-tag-manager"
 hidden: false
-createdAt: "2022-02-01T13:34:01.638Z"
-updatedAt: "2023-05-03T11:17:44.697Z"
-excerpt: "Step-by-step on how to install the Google Tag Manager app in your VTEX Admin."
+createdAt: "2022-02-01t13:34:01.638z"
+updatedAt: "2022-12-13T20:17:44.697Z"
+excerpt: "Steps to install the Google Tag Manager app in your VTEX Admin."
 category: "Storefront Development"
+seeAlso:
+  - "/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
 ---
 
-This guide provides a step-by-step on how to install and configure Google Tag Manager (GTM) on Store Framework stores. The guide also highlights some restrictions to avoid performance issues and unpredictable behavior, including blocklists for custom HTML tags and variables.
+This guide provides a step-by-step guide on installing and configuring Google Tag Manager (GTM) on Store Framework stores. The guide also highlights some restrictions to avoid performance issues and unpredictable behavior, including blocklists for custom HTML tags and variables.
 
 > ⚠️ If you have already installed the Google Tag Manager app, navigate to this guide's section titled [Create a Google Analytics 4 property](#create-a-google-analytics-4-property) to create the property and follow along.
 
@@ -36,36 +38,41 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 
 Take note of the Measurement ID, also known as [*G- ID*](https://support.google.com/analytics/answer/9539598#find-G-ID), since it will be used later to set up the GA4 tag on GTM.
 
-## Step-by-step
+## Step by step
 
-1. In the VTEX Admin, access **Apps > App Store.**
-2. Search for the Google Tag Manager app and click on `Install`. You will be redirected to the [App Store page](https://apps.vtex.com/vtex-google-tag-manager/p).
-   
-3. Login in to your App Store account if you still need to enter. After logging into your account, if the page redirects you to the [App Store landing page](https://apps.vtex.com/), go to the search field, type Google Tag Manager and click on the app.
+1. Access your VTEX **Admin** and go to **Account settings > Apps > App Store**.
 
-4. Click `GET APP`.
+2. Search for the Google Tag Manager app and click `Install`. You will be redirected to the [App Store page](https://apps.vtex.com/vtex-google-tag-manager/p). Log in to your App Store account if you are not currently logged in.
 
-5. On the checkout page, click *check out the Google Tag Manager terms and conditions*. Read the terms and click on `PLACE ORDER` if you agree. In this case, you’ll see a success message about the purchase.
+![image2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-installing-google-tag-manager-0.gif)
 
-> ℹ️ The GTM is a free app.
+3. Then, you will be redirected to the [App Store landing page](https://apps.vtex.com/). In the search field, type `Google Tag Manager`, click the app, and then click `GET APP`.
 
-6. Click `GO TO INSTALL PAGE`. This will redirect you to the GTM setup page, where you'll see a warning message about entering the necessary GTM configurations.
+4. On the checkout page, click *check the Google Tag Manager terms and conditions*, and if you agree, click `PLACE ORDER`.
 
-7. Type your **GTM ID** in the Google Tag Manager field.
+> ℹ️ GTM is a free app.
+
+5. You’ll see a success message about the purchase. Click `GO TO INSTALL PAGE`, which will redirect you to the GTM setup page.
+6. You'll see a warning message prompting you to complete the necessary settings. Type your **GTM ID** in the Google Tag Manager field.
+7. Click Save.
+
+> ℹ️ To find your store's **GTM ID**, first, you need a container for the Google Tag Manager account. If you do not have one, follow the [create a new account and container tutorial](https://support.google.com/tagmanager/answer/6103696?hl=en#install) and, then, get the GTM ID from the `Container ID` column of the container.
 
 8. In the VTEX Admin, access **Apps > My apps**, check the box **Send Google Analytics 4 Events**, and click `Save`.
 
 ![gtm-new-field](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-new-field___bf665f34409d6d7cbcfc79239e277ee0.png)
 
-Once you have installed the app and check the box **Send Google Analytics 4 Events**, go to [Configuring Google Analytics 4 Configuration tag in Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager) documentation and learn how to set up the variables, triggers, and tags necessary for the app to work.
+Once you have installed the app and check the box **Send Google Analytics 4 Events**, see the [Configuring Google Analytics 4 Configuration tag in Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager) documentation and learn how to set up the variables, triggers, and tags necessary for the app to work.
 
-To avoid performance issues and unpredictable behavior, the VTEX IO Google Tag Manager app uses the native GTM blocklist feature. This feature is thoroughly explained on the  [Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/restrict), but in short, it allows the app to block certain types of tags, variables, and triggers from firing. By default, the blocklist includes the HTML ID, which automatically blocks all the tags, variables, and triggers of the type `customScripts`. The main consequence of this blocklist is that Custom HTML tags are not triggered.
+## Restrictions
 
-> ⚠️ The HTML blocklist is a VTEX Google Tag Manager app's default. If you want to disable this restriction, go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.x/setup` and check the box *Allow Custom HTML tags*.
+To avoid performance problems and unpredictable behavior, the VTEX IO Google Tag Manager solution uses the native GTM blacklist feature. You can read more about this feature in the [Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/restrict). By default, the HTML ID is blocked, automatically blocking all the tags, variables, and triggers of type `customScripts`.
 
-The most widely used Custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs a Custom HTML for one of those cases, the integration can be done by transforming the tags into a [VTEX IO Pixel App](https://developers.vtex.com/docs/guides/pixel-apps) or by removing this restriction.
+The main consequence of this blacklist is that custom HTML tags will not be triggered. **The HTML blacklist is the VTEX Google Tag Manager app default.** If you want to disable this restriction, go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.x/setup` and check the toggle below.
 
-Check below the list of tags and variables that are blocked, by default, in the VTEX IO Google Tag Manager app:
+![restrictions](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-installing-google-tag-manager-1.png)
+
+Most widely used custom HTML tags are integrations with third-party services, like Customer Chat, Analytics, Remarketing, and Pixel tags. If your store needs custom HTML for any of those cases, the integration can either be done by transforming the tags in a [VTEX IO Pixel app](https://developers.vtex.com/docs/guides/pixel-apps) or by removing this restriction. See below the full list of tags and variables that are blocked by default in the VTEX IO Google Tag Manager solution:
 
 **Blocked tags**
 
@@ -79,4 +86,4 @@ Check below the list of tags and variables that are blocked, by default, in the 
 
 - Custom JavaScript Variable - jsm
 
-Check out a list with all the GTM available tags on [the Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/datalayer).
+See a list with all the available GTM tags on [the Google Developer Guide](https://developers.google.com/tag-platform/tag-manager/web/datalayer).
