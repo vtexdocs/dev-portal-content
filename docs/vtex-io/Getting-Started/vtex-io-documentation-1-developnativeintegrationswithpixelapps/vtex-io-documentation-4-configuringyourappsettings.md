@@ -26,7 +26,7 @@ In the following steps, you will learn how to make your Pixel app read the user 
 - `title` - Pixel app name.
 - `type` - JSON Schema type (this must always be completed as `object`).
 - `description` *(Optional)*  - Description of the `settingsSchema` field.
-- `properties` - Keys that define the user identification. Possible keys for `properties` are: `title` (user identification title), `description` (user identification description), and `type` (property type to define how users should input their identification). Note that these keys will be displayed to the app users.
+- `properties` - Key-value pairs that define the user identification. Possible keys for `properties` are: `title` (user identification title), `description` (user identification description), and `type` (property type to define how users should input their identification). Note that these keys will be displayed to the app users.
 
 ```json
 "settingsSchema": {
