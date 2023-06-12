@@ -1,5 +1,6 @@
 ---
 title: "Using CSS handles for store customizations"
+excerpt: "Learn how to customize your storefront using CSS handles."
 slug: "vtex-io-documentation-using-css-handles-for-store-customization"
 hidden: false
 createdAt: "2020-06-03T16:02:45.024Z"
