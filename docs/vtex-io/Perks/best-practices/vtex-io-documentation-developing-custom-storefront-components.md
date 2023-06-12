@@ -104,7 +104,7 @@ Boolean props, therefore, demand creating brand-new props whenever unprecedented
 
 > ⚠️ Once the component is deployed, avoid modifying its props (creating, removing, and/or updating them). Modifying props can be costly because it can directly impact API maintenance and affect other developers working with it.
 
-With that in mind, replace the boolean props with enum props! The latter have a broader range and are more adapted to keep up with the component evolution and the several behaviors it may have to handle.
+With that in mind, replace the boolean props with enum props. The latter has a broader range and is more adapted to keep up with the component evolution and the several behaviors it may have to handle.
 
 For example:
 
