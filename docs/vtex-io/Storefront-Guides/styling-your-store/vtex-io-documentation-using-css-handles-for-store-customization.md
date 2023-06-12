@@ -34,7 +34,7 @@ This guide will teach you how to customize your storefront using CSS handles. CS
 }
 ```
 
-> ℹ️ Remember: If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon)`.
+> ⚠️ If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon)`.
 
 Once your app is linked and the changes are saved, the new customization should immediately be reflected in your workspace.
 
