@@ -42,7 +42,6 @@ Once your app is linked and the changes are saved, the new customization should 
 
 As demonstrated, CSS handles can be used to overwrite the default styles of a storefront, allowing for independent customization of specific blocks within a store theme. Note that the change above was applied universally to all `menu-item` blocks.
 
-To independently customize a single `menu-item` block, you should use the  `blockClass` prop.
 
 
 ### Customizing a single block
