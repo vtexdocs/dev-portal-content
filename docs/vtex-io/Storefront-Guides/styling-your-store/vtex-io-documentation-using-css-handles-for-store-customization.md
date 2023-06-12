@@ -27,7 +27,7 @@ CSS handles are **HTML element identifiers**. Therefore, they can be used to cus
 4. In the new file, use one of the CSS handles listed and customize its properties. For example:
 
 ```css
-menuItem {  
+.menuItem {  
     background: rgba(0, 0, 0, 0.2);
     margin: 5px;
     border-radius: 5px;
