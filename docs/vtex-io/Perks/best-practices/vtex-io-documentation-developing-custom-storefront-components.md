@@ -36,7 +36,7 @@ vtex setup --typings
 
 A typical slip is to design a component to perform different tasks on the screen, aiming to reuse code and develop a more significant project.
 
-Do not lose track of what you want the primary goal of the component to be: **the more specific, the better!**
+Ensure you maintain a clear focus on the primary objective of the component. It is crucial to be as precise as possible in defining this goal.
 
 Keep it simple. Components with several functionalities tend to mislead users in the interface and translate to a lot of code to manage behind the scenes, especially when handling APIs.
 
