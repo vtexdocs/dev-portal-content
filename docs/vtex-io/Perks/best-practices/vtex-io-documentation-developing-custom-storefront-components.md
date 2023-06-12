@@ -187,7 +187,7 @@ Adopt the following practices to promote inclusion:
 
 - Enable user interactivity through the keyboard.
 - Bet on color contrast when defining the component style. You can use the [ChromeLens extension](http://chromelens.xyz/) to help you with that.
-- Avoid HTML divs: They are the number one enemy of screen readers and search engines.
+- Avoid the usage of HTML div to enhance accessibility for screen readers and improve search engine optimization.
 
 ## Internationalization
 
