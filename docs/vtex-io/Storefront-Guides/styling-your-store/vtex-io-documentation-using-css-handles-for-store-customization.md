@@ -73,7 +73,6 @@ After that, you can use the class `.menuItem--header` to specifically target the
 
 To standardize CSS customization and avoid any potential breakdown in layout, we recommend making store customizations exclusively using CSS handles.
 
-However, it is common to come across store scenarios where CSS selectors are used for the customization. As the name implies, they select elements for CSS customization based on the HTML hierarchy of the page.
 
 Customization using CSS selectors is mostly deprecated. Only the following CSS selectors are still allowed for store customization:
 
