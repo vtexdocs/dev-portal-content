@@ -9,6 +9,29 @@ Refer to the following guidelines to guarantee the quality and usability of your
 
 >⚠️ Notice that you must respect these guidelines if you aim to publish your app at the VTEX App Store.
 
+## Table of contents
+
+- [Scalability and performance](#scalability-and-performance)
+  - [Using APIs efficiently](#using-apis-efficiently)
+  - [Using the latest builders](#using-the-latest-builders)
+- [Security](#security)
+  - [Handling security breaches](#handling-security-breaches)
+  - [Hardcoding VTEX appKey/appToken](#hardcoding-vtex-appkeyapptoken)
+  - [Using app token for a user-initiated action](#using-app-token-for-a-user-initiated-action)
+  - [Declaring broad policies](#declaring-broad-policies)
+  - [Avoid exposing private information through public routes](#avoid-exposing-private-information-through-public-routes)
+  - [Isolate data between tenants](#isolate-data-between-tenants)
+- [Data privacy](#data-privacy)
+  - [Persisting PII within VTEX](#persisting-pii-within-vtex)
+  - [Sending PII to external service](#sending-pii-to-external-service)
+- [Usability](#usability)
+  - [Implementing internationalization (i18n) correctly](#implementing-internationalization-i18n-correctly)
+  - [Avoid declaring routes with collision-prone paths](#avoid-declaring-routes-with-collision-prone-paths)
+  - [Creating custom Admin settings form](#creating-custom-admin-settings-form)
+- [Plug\&Play](#plugplay)
+- [Support channel](#support-channel)
+- [Documentation](#documentation)
+
 ## Scalability and performance
 
 Use the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) infrastructure to build and deploy your extensions. The VTEX IO development platform uses cloud computing to ensure that your app runs without bottlenecks 24/7.
