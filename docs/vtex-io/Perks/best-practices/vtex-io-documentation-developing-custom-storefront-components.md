@@ -207,7 +207,7 @@ Use Tachyons instead of CSS Modules whenever possible when applying CSS to your 
 
 Get acquainted with the particularities of both tools to make the best decision for the component style without wasting development efforts.
 
-Also, do not forget to make CSS handles available to your component users if distribution is a goal. Through Handles, future users can style your storefront component as desired, based on their specific needs.
+Also, do not forget to make CSS handles available to your component users if distribution at the VTEX App Store is a goal. Through CSS handles, future developers can style your storefront component based on their specific needs.
 
 Read the documentation on [Defining styles](https://developers.vtex.com/docs/guides/vtex-io-documentation-5-defining-styles) to learn about Tachyons, CSS Modules, and CSS handles, as well as their use cases.
 
