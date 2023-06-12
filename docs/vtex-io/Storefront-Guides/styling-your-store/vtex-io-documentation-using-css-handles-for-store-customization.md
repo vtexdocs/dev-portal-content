@@ -18,7 +18,7 @@ This guide will teach you how to customize your storefront using CSS handles. CS
 
 ![css-handles-inspect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-0.png)
 
-> ⚠️ Before proceeding to the third step, check the CSS handles table in the documentation of the app/block that renders the HTML element. This will allow you to confirm whether the inspected handle is valid and also if the customization requires another add-on, such as the HTML element attribute.
+3. Check the CSS handles table in the documentation of the app/block that renders the HTML element. This will allow you to confirm whether the inspected handle is valid and also if the customization requires another add-on, such as the HTML element attribute.
 
 > ⚠️ If after checking the CSS handles table, you notice that the desired handle needs to use the attribute of the HTML element that will be customized, inspect the page again, this time using your browser and not the `?__inspect` option. After inspecting the page, look for the desired HTML element and copy the attribute linked to it that will be used in the upcoming customization.
 
