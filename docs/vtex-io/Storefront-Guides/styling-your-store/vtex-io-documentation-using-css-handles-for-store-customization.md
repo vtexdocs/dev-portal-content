@@ -62,7 +62,7 @@ For example:
 }
 ```
 
-After saving and updating your workspace, when you inspect the element, it should display an additional CSS handle along with the default one, like this:
+Once you have saved and updated your workspace, inspecting the element should display an additional CSS handle in addition to the default one. The element will be displayed as follows, showcasing both the default CSS handle and the newly added one:
 
 ![css handles with block class](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-2.png)
 
