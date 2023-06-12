@@ -23,7 +23,7 @@ In these scenarios, your Pixel app must be able to listen to the desired events 
 - `pageView` - Triggered on every loaded page view.
 - `productImpression` - Triggered when product information is visible on the page currently being accessed by users.
 
-> ℹ️ All the available event properties are written in **TypeScript**. You can see the properties [here](https://github.com/vtex-apps/pixel-app-template/blob/master/react/typings/events.d.ts).
+> ℹ️ All the available event properties are written in TypeScript. For a comprehensive list of properties, please refer to [this file](https://github.com/vtex-apps/pixel-app-template/blob/master/react/typings/events.d.ts).
 
 This is an example of an event implementation in the [Google Tag Manager Pixel app](https://github.com/vtex-apps/google-tag-manager/blob/master/react/index.tsx):
 
