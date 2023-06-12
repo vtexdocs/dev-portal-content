@@ -7,7 +7,7 @@ updatedAt: "2022-12-13T20:17:44.398Z"
 ---
 
 
-CSS handles are **HTML element identifiers**. Therefore, they can be used to customize any store component by simply using CSS classes through theme code of the store.
+This guide will teach you how to customize your storefront using CSS handles. CSS handles are unique identifiers assigned to HTML elements. They can be used in your store theme to target and add CSS classes to a component, allowing you to personalize your storefront according to your preferences.
 
 
 ## Instructions
