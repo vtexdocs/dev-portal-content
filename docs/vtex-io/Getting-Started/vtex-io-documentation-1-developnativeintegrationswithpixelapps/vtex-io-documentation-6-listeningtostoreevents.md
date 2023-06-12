@@ -19,7 +19,7 @@ In these scenarios, your Pixel app must be able to listen to the desired events 
 2. Write your script based on your Pixel app needs. Some store events you can use in your Pixel app are:
 
 - `addToCart` - Triggered when a product is added to the cart.
-- `removeItem` - Triggered when a product is removed from the cart.
+- `removeFromCart` - Triggered when a product is removed from the cart.
 - `pageView` - Triggered on every loaded page view.
 - `productImpression` - Triggered when product information is visible on the page currently being accessed by users.
 
