@@ -24,7 +24,7 @@ This guide will teach you how to customize your storefront using CSS handles. CS
 
 4. Open the Store Theme code using the code editor of your choice. Then, create a file inside the `css` folder named after the text displayed below the desired handle. Following the example above, we would have `vtex.menu.css`.
 
-4. In the new file, use one of the CSS handles listed and customize its properties. For example:
+5. In the new file, use one of the CSS handles listed and customize its properties. For example:
 
 ```css
 .menuItem {  
