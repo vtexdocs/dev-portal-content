@@ -167,7 +167,7 @@ The Dispatcher and State patterns, as well as the useMemo feature, are powerful 
 
 Using media in storefront components can be tricky if you do not think about performance critically.
 
-When [uploading the desired media assets to the VTEX File Server](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder), clearly define height and width parameters to avoid data over-fetching and resizing on the customer side. This way, you can set up your component to request media assets based on the required size per breaking point.
+When [uploading the desired media assets to the VTEX File Server](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder), clearly define height and width parameters to avoid data over-fetching and resizing on the client-side. This way, you can set up your component to request media assets based on the required size per breaking point.
 
 ### Rendering
 
