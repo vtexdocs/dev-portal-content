@@ -90,4 +90,4 @@ Customization using HTML hierarchy was mostly deprecated. This means that **only
 
 **Any CSS selectors that are not on this list, such as** `:nth-child(2)`**,** `foo > bar` **, and** `[alt="bar"]`**, is not accepted by the VTEX IO CLI during the [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) of the store's theme to the local files.**
 
-> ⚠️ Note that any customization that uses CSS selectors depends on an HTML structure that, when changed, can break the merchant's desired customization. **Always use CSS handles as your first choice**.
+> ⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, are not supported by the platform. Therefore, processes like [linking an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) will fail if unlisted selectors are used.
