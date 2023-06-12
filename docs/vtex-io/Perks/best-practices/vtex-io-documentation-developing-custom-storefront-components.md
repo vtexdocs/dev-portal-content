@@ -219,7 +219,7 @@ Another good styling tip is to be careful with the breakpoints on the screen for
 
 Finally, the best practice you can adopt is keeping up with the VTEX IO platform! Engage with us:
 
-- Follow the [Developer Portal's release notes feed](https://developers.vtex.com/vtex-developer-docs/changelog).
+- Follow the [Developer Portal's release notes feed](https://developers.vtex.com/updates/release-notes).
 - Subscribe to the [VTEX Developer Newsletter](https://forms.gle/DHo3SS7ZaGCvAMow8).
 - Join the [Office Hours meeting](https://zoom.us/j/282720990?pwd=MkhFajhPS0xxZGppVjhNSm9MeUVJdz09) every Tuesday at 4 pm.
 - Contribute to the [Store Framework native components](https://github.com/vtex-apps/store-discussion).
