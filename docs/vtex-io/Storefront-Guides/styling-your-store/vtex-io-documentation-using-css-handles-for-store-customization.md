@@ -9,7 +9,6 @@ updatedAt: "2022-12-13T20:17:44.398Z"
 
 CSS handles are **HTML element identifiers**. Therefore, they can be used to customize any store component by simply using CSS classes through theme code of the store.
 
-CSS handles are basically the **layout building assistants** for your store. Follow the steps below and learn how to use them in a fast and simple way!
 
 ## Instructions
 
