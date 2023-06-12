@@ -89,4 +89,3 @@ Customization using CSS selectors is mostly deprecated. Only the following CSS s
 
 > ⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, are not supported by the platform. Therefore, processes like [linking an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) will fail if unlisted selectors are used.
 
-> ⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, are not supported by the platform. Therefore, processes like [linking an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) will fail if unlisted selectors are used.
