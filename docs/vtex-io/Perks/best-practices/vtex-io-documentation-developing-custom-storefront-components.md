@@ -195,7 +195,7 @@ Your component should be ready to be displayed worldwide if store globalization 
 
 In terms of content internationalization, be cautious with string text translations. You can leverage the Messages app, a native VTEX IO service for automatic translations, and have manual translations as well.
 
-Remember that internationalization can mean more than string text translations! Make sure to consider interpolation, pluralization, price, and percentage formatting, among other differences that may come your way when crossing borders.
+Remember that internationalization can mean more than string text translations. Consider interpolation, pluralization, price, and percentage formatting, among other differences that may come your way when crossing borders.
 
 Read the [Translating the component](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) article and the [multi-language store documentation](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores) to understand how you can make these adjustments in your component!
 
