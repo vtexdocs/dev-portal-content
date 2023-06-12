@@ -46,8 +46,9 @@ To independently customize a single `menu-item` block, you should use the  `bloc
 
 `blockClass` is a property that you can freely define. When passed in a block, it serves as its single **identifier** for customization.
 
-### Using the blockClass property
+### Customizing a single block
 
+To independently customize a single block (e.g., `menu-item`), you should use the  `blockClass` property. When passed in a block, the `blockClass` value serves as the block's unique identifier for customization.
 1. In the `json` file where your block is declared, add the prop `blockClass` to the element you want to customize, with any name as a value.
 
 For example:
