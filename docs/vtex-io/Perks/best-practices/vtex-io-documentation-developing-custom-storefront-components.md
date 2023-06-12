@@ -42,7 +42,7 @@ Keep it simple. Components with several functionalities tend to mislead users in
 
 ### Native-first
 
-Before developing a custom component from scratch, make sure VTEX does not already offer the same feature natively through the [Store Framework native components](https://developers.vtex.com/docs/guides/vtex-store-components).
+Before developing a custom component from scratch, make sure VTEX does not already offer the same feature natively through the [Store Framework native components](https://developers.vtex.com/docs/vtex-io-apps).
 
 Create your component importing and combining native components to achieve a better result. For example:
 
