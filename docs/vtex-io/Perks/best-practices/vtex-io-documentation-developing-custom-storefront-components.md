@@ -113,7 +113,7 @@ For example:
 | Prop name | `show`            | `visibility`        |
 | Values    | `true` or `false` | `visible` or `none` |
 
-Bet on enum props to develop a future-proof component!
+To ensure long-term compatibility and resilience of the component, it is recommended to use enum props during development.
 
 ### Responsive values
 
