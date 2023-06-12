@@ -75,7 +75,7 @@ To standardize CSS customization and avoid any potential breakdown in layout, we
 
 However, it is common to come across store scenarios where CSS selectors are used for the customization. As the name implies, they select elements for CSS customization based on the HTML hierarchy of the page.
 
-Customization using HTML hierarchy was mostly deprecated. This means that **only** the CSS selectors listed below will continue to be allowed for store customization:
+Customization using CSS selectors is mostly deprecated. Only the following CSS selectors are still allowed for store customization:
 
 - Class selectors (e.g. `.foo`)
 - Pseudo-selectors `:hover`, `:visited`, `:active`, `:disabled`, `:focus`, `:local`, `:empty`, and `:target`
