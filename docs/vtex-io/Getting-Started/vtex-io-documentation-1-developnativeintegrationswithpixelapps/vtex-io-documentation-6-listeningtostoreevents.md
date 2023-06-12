@@ -4,27 +4,28 @@ slug: "vtex-io-documentation-6-listeningtostoreevents"
 hidden: false
 category: "App Development"
 seeAlso:
- - "/docs/guides/vtex-io-documentation-7-structuringthedocumentation"
+  - "/docs/guides/vtex-io-documentation-7-structuringthedocumentation"
 createdAt: "2020-11-03T18:19:23.235Z"
 updatedAt: "2022-12-13T20:17:44.943Z"
 ---
-Some services provided by third-party solutions may rely on store events. Events are notifications that a web application automatically broadcasts whenever a user performs an important action in a store, such as adding items to the shopping cart or accessing a product page.
 
-For these scenarios, your Pixel app must be able to listen to the desired events and provide the required data to the third-party service in question.
+Some services provided by third-party solutions may rely on store events. Events are notifications a web application automatically broadcasts whenever a user performs an important action in a store, such as adding items to the shopping cart or accessing a product page.
+
+In these scenarios, your Pixel app must be able to listen to the desired events and provide the required data to the third-party service in question.
 
 ## Step by step
 
 1. Open the `react/index.tsx` file.
-2. Write your script according to your Pixel app needs. Some store events you can use in your Pixel app are:
+2. Write your script based on your Pixel app needs. Some store events you can use in your Pixel app are:
 
-- `addToCart`- Triggered when a product is added to the cart.
-- `removeItem` - Triggered when a product is removed from the cart
+- `addToCart` - Triggered when a product is added to the cart.
+- `removeFromCart` - Triggered when a product is removed from the cart.
 - `pageView` - Triggered on every loaded page view.
-- `productImpression` - Triggered when product data is visible on the page currently being accessed by users.
+- `productImpression` - Triggered when product information is visible on the page currently being accessed by users.
 
-> ℹ️ All the available event properties are written in **TypeScript**. Check them out [here](https://github.com/vtex-apps/pixel-app-template/blob/master/react/typings/events.d.ts).
+> ℹ️ All the available event properties are written in TypeScript. For a comprehensive list of properties, please refer to [this file](https://github.com/vtex-apps/pixel-app-template/blob/master/react/typings/events.d.ts).
 
-Take the following example of an event implementation in the [Google Tag Manager Pixel app](https://github.com/vtex-apps/google-tag-manager/blob/master/react/index.tsx):
+This is an example of an event implementation in the [Google Tag Manager Pixel app](https://github.com/vtex-apps/google-tag-manager/blob/master/react/index.tsx):
 
 ```ts
 import { canUseDOM } from 'vtex.render-runtime'
