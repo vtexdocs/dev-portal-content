@@ -222,4 +222,4 @@ Finally, the best practice you can adopt is keeping up with the VTEX IO platform
 - Follow the [Developer Portal's release notes feed](https://developers.vtex.com/updates/release-notes).
 - Subscribe to the [VTEX Developer Newsletter](https://forms.gle/DHo3SS7ZaGCvAMow8).
 - Follow our [YouTube channel](https://www.youtube.com/@VTEXDevelopers) for developers.
-- Contribute to the [Store Framework native components](https://github.com/vtex-apps/store-discussion).
+- Join the [Community](https://community.vtex.com/).
