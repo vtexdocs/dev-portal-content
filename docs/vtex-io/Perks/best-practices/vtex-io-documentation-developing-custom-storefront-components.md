@@ -108,7 +108,7 @@ With that in mind, replace the boolean props with enum props. The latter has a b
 
 For example:
 
-| xxxxxxxxx | Do not use        | Use                 |
+| | Do not use        | Use                 |
 | --------- | ----------------- | ------------------- |
 | Prop name | `show`            | `visibility`        |
 | Values    | `true` or `false` | `visible` or `none` |
