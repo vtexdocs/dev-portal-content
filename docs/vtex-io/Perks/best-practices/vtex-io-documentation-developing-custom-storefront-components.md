@@ -34,7 +34,7 @@ vtex setup --typings
 
 ### Store-specific
 
-A typical slip is to design a component to perform different tasks on the screen, aiming to reuse code and develop a more "significant" project.**
+A typical slip is to design a component to perform different tasks on the screen, aiming to reuse code and develop a more significant project.
 
 Do not lose track of what you want the primary goal of the component to be: **the more specific, the better!**
 
