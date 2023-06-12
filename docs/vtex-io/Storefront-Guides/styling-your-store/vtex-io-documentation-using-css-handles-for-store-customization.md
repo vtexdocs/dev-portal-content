@@ -12,7 +12,7 @@ This guide will teach you how to customize your storefront using CSS handles. CS
 
 ## Step by step
 
-1. While viewing your workspace on your browser, add `?__inspect` at the end of the page URL and press enter. For example, `https://yourworkspace--youraccount.myvtex.com?__inspect`. Note that the workspace must be a development workspace rather than a production one, and it must be under the domain `myvtex.com`.
+1. Access the following URL: `https://{workspace}--{account}.myvtex.com?__inspect`, replacing the values between curly braces according to your scenario. Please note that you must use a development workspace rather than a production one, and the store domain must be under `myvtex.com`.
 
 2. Hover over the element you want to customize. It should display its available CSS handles in a box (the big names beginning with `.`), along with their respective CSS file names and other information.
 
