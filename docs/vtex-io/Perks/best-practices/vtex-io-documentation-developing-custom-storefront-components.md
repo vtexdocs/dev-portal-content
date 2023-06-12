@@ -159,7 +159,7 @@ Choose light libraries to support your code and optimize performance.
 
 Use the React context to share data between components and avoid over-fetching at all costs.
 
-The Dispatcher and State patterns and the useMemo feature are powerful resources that can be made available by the context and used by your component.
+The Dispatcher and State patterns, as well as the useMemo feature, are powerful resources that can be made available by the context and used by your component.
 
 > ℹ️ Read the article on [using the React context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively) for a detailed explanation about how the React context can work in your favor.
 
