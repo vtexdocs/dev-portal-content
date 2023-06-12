@@ -24,7 +24,9 @@ The [React App repository](https://github.com/vtex-apps/react-app-template) is t
 
 Use Typescript types as an ally in your development journey since they provide autocomplete tools that can be used when developing and importing a new component. To have them handy, run the following command in your terminal:
 
-`vtex setup --typings`
+```
+vtex setup --typings
+```
 
 > ⚠️ The above command will install all Typescript types from the apps listed in the app `dependencies` list in your project. Whenever you add a new dependency, the command must be run again.
 
