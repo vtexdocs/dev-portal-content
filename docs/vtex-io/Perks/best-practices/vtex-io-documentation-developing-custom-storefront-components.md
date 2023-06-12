@@ -34,7 +34,7 @@ vtex setup --typings
 
 ### Store-specific
 
-A typical slip is to design a component to perform different tasks on the screen, aiming to reuse code and develop a more significant project.
+In an attempt to reuse code, one common mistake is to design a component that tries to perform multiple tasks.
 
 Ensure you maintain a clear focus on the primary objective of the component. It is crucial to be as precise as possible in defining this goal.
 
