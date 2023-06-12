@@ -44,7 +44,6 @@ As demonstrated, CSS handles can be used to overwrite the default styles of a st
 
 To independently customize a single `menu-item` block, you should use the  `blockClass` prop.
 
-`blockClass` is a property that you can freely define. When passed in a block, it serves as its single **identifier** for customization.
 
 ### Customizing a single block
 
