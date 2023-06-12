@@ -74,7 +74,7 @@ After that, you can use the class `.menuItem--header` to specifically target the
 
 ## Best practices
 
-To standardize CSS customization and avoid any potential breakdown in layout, **we recommend making store customizations exclusively using CSS handles**.
+To standardize CSS customization and avoid any potential breakdown in layout, we recommend making store customizations exclusively using CSS handles.
 
 However, it is common to come across store scenarios where CSS selectors are used for the customization. As the name implies, they select elements for CSS customization based on the HTML hierarchy of the page.
 
