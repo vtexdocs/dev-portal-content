@@ -66,7 +66,7 @@ function Shelf({ title }: Props) {
 export default Shelf
 ```
 
-> ℹ️ Notice how the Store Framework solution relies on specific apps for [integrations with third-party solutions](https://developers.vtex.com/docs/guides/vtex-accessibe) and [layout structuring](https://developers.vtex.com/docs/guides/vtex-condition-layout), besides having template components that play a particular role once rendered to the end users, such as the [Product Identifier app](https://developers.vtex.com/docs/guides/vtex-product-identifier). When developing your storefront component, remember that segmentation is key to light code and a successful component!
+> ℹ️ Notice how the Store Framework solution relies on specific apps for [integrations with third-party solutions](https://developers.vtex.com/docs/guides/vtex-accessibe) and [layout structuring](https://developers.vtex.com/docs/guides/vtex-condition-layout), besides having template components that play a particular role once rendered to the end users, such as the [Product Identifier app](https://developers.vtex.com/docs/guides/vtex-product-identifier). When developing your storefront component, remember that segmentation is key to light code and a successful component.
 
 ## Flexibility and scalability
 
