@@ -175,7 +175,7 @@ Performance can be optimized during component rendering as well.
 
 When declaring the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) of a block, set the `Hydration` attribute and pass `on-view` as its value to only load and correctly render your component once users find it on the interface.
 
-The [Footer](https://developers.vtex.com/docs/guides/vtex-store-footer) is a good example of a Store Framework native component that counts on this attribute to be rendered, which optimizes store performance!
+The [Footer](https://developers.vtex.com/docs/guides/vtex-store-footer) is a good example of a Store Framework native component that uses this attribute.
 
 > ℹ️ The default value for `Hydration` is `always`, meaning that the component will be loaded and rendered as expected, regardless of the user's view.
 
