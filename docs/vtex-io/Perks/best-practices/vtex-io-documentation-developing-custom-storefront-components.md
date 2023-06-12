@@ -102,7 +102,7 @@ However, they do not offer great scalability when taking into account that the c
 
 Boolean props, therefore, demand creating brand-new props whenever unprecedented use cases are introduced to your component.
 
-> ⚠️ Once the component is deployed, avoid modifying its props (creating, removing, and/or updating them)! Modifying props can be costly because it can directly impact API maintenance and affect other developers working with it.
+> ⚠️ Once the component is deployed, avoid modifying its props (creating, removing, and/or updating them). Modifying props can be costly because it can directly impact API maintenance and affect other developers working with it.
 
 With that in mind, replace the boolean props with enum props! The latter have a broader range and are more adapted to keep up with the component evolution and the several behaviors it may have to handle.
 
