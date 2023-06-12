@@ -153,7 +153,7 @@ Avoid using heavy npm libraries because they negatively impact page loading time
 
 Choose light libraries to support your code and optimize performance.
 
-> ℹ️ See how your npm libraries can impact user browsing at [bundlephobia.com](https://bundlephobia.com/).
+> ℹ️ Evaluate the impact of npm libraries on user experience at [bundlephobia.com](https://bundlephobia.com/).
 
 ### Data sharing
 
