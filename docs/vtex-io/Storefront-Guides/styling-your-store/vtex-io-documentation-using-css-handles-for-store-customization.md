@@ -70,8 +70,6 @@ After that, you can use the class `.menuItem--header` to specifically target the
 
 ![specific menu items with css handles applied using blockClass](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-3.png)
 
-## Best practices
-
 To standardize CSS customization and avoid any potential breakdown in layout, we recommend making store customizations exclusively using CSS handles.
 
 However, it is common to come across store scenarios where CSS selectors are used for the customization. As the name implies, they select elements for CSS customization based on the HTML hierarchy of the page.
