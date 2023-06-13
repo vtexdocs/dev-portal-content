@@ -1,6 +1,6 @@
 ---
 title: "New field now available in Promotion object"
-slug: "new-field-now-available-in-promotion-object"
+slug: "2023-05-24-new-field-now-available-in-promotion-object"
 type: "added"
 excerpt: "The field `nominalDiscountType` has been added to the promotion object."
 createdAt: "2023-04-23T14:47:00.000Z"
