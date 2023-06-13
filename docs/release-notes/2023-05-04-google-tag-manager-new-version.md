@@ -1,6 +1,7 @@
 ---
 title: "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app"
 slug: "2023-05-04-google-tag-manager-new-version"
+type: "improved"
 excerpt: "Prepare you store for Google Analytics 4 with the new version of VTEX's Google Tag Manager app."
 createdAt: "2023-05-03T16:47:00.000Z"
 ---
