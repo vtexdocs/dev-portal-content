@@ -1,6 +1,7 @@
 ---
 title: "New integration guide: headless commerce"
 slug: "2023-06-06-new-integration-guide-headless-commerce"
+type: "added"
 excerpt: "Leverage VTEX APIs to build a headless shopping experience."
 createdAt: "2023-06-06T12:23:00.000Z"
 ---
