@@ -1,8 +1,10 @@
 ---
 title: "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app"
 slug: "2023-05-04-google-tag-manager-new-version"
+type: "added"
 excerpt: "Prepare you store for Google Analytics 4 with the new version of VTEX's Google Tag Manager app."
 createdAt: "2023-05-03T16:47:00.000Z"
+updatedAt: "2023-06-13T09:30:00.000Z"
 ---
 
 Starting on July 1st, 2023, Google Analytics 4 (GA4) will become Google's official data analysis tool, replacing the current version, Universal Analytics (UA). According to [Google's official announcement](https://support.google.com/analytics/answer/11583528), this change requires stores to migrate their UA property settings to GA4 before July 1st to continue tracking data navigation.

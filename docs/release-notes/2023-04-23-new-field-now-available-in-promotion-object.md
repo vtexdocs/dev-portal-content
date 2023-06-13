@@ -1,10 +1,10 @@
 ---
-title: New field now available in Promotion object
-slug: "new-field-now-available-in-promotion-object"
-hidden: false
+title: "New field now available in Promotion object"
+slug: "2023-04-23-new-field-now-available-in-promotion-object"
 type: "added"
 excerpt: "The field `nominalDiscountType` has been added to the promotion object."
 createdAt: "2023-04-23T14:47:00.000Z"
+updatedAt: "2023-06-13T09:20:00.000Z"
 ---
 
 The field `nominalDiscountType` has been added to the promotion object. This field accepts two string values:

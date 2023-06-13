@@ -1,8 +1,10 @@
 ---
 title: "New integration guide: headless commerce"
 slug: "2023-06-06-new-integration-guide-headless-commerce"
+type: "added"
 excerpt: "Leverage VTEX APIs to build a headless shopping experience."
 createdAt: "2023-06-06T12:23:00.000Z"
+updatedAt: "2023-06-13T09:20:00.000Z"
 ---
 
 VTEX technology allows for flexibility, enabling our clients to build commerce experiences that address their needs and potentialize their strengths.
