@@ -157,6 +157,7 @@ Check all props to configure your search data in the table below:
 > ⚠️ When the `simulationBehavior` prop is set as `skip`, it defines that the search data should only be fetched using the store's cache. This may impact the content displayed on store pages since the cache storage changes according to user interaction in each page.
 
 You must define the query for the following search pages:
+
 - Brand
 - Department
 - Category
