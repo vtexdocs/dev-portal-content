@@ -21,9 +21,9 @@ To configure the VTEX Search Result, check the sections below.
 In your theme's `manifest.json`, add the Search Result app as a dependency:
 
 ```json
- "dependencies": {
+"dependencies": {
     "vtex.search-result": "3.x"
- }
+}
 ```
 
 Now, you can use all the blocks exported by the `search-result` app. Check out the full list below:
@@ -67,21 +67,25 @@ When added to the search page, the block used must be the `search-result-layout`
 On the desired store page, add the `search-result-layout` block or the `search-result-layout.customQuery` to the correct template blocks list. Check both codes below as examples:
 
 On search pages
+
 ```json
 "store.search": {
  "blocks": ["search-result-layout"]
 }
 ```
+
 On other pages
+
 ```diff
- "store.home": {
- "blocks": [
- "carousel#home",
- "shelf#home",
-+ "search-result-layout.customQuery#home"
- ]
- }
+"store.home": {
+    "blocks": [
+        "carousel#home",
+        "shelf#home",
+   + "search-result-layout.customQuery#home"
+    ]
+}
 ```
+
 ### Defining how the search query data should be fetched
 
 You need to define how the search results will be fetched before declaring the blocks into the search results layout.
@@ -94,15 +98,17 @@ Using `search-result-layout`:
 
 ```json
 {
- "store.search": {
- "blocks": ["search-result-layout"],
- "props": {
-"context": {
- "skusFilter": "FIRST_AVAILABLE",
- "simulationBehavior": "default"
-}
- }
- }
+    "store.search": {
+        "blocks": [
+            "search-result-layout"
+        ],
+        "props": {
+            "context": {
+                "skusFilter": "FIRST_AVAILABLE",
+                "simulationBehavior": "default"
+            }
+        }
+    }
 }
 ```
 
@@ -110,21 +116,21 @@ Using `search-result-layout.customQuery`:
 
 ```json
 {
- "store.home": {
- "blocks": [
-"carousel#home",
-"shelf#home",
-"search-result-layout.customQuery#home"
- ]
- },
- "search-result-layout.customQuery#home": {
- "props": {
-"querySchema": {
- "skusFilter": "FIRST_AVAILABLE",
- "simulationBehavior": "default"
-}
- }
- }
+    "store.home": {
+        "blocks": [
+            "carousel#home",
+            "shelf#home",
+            "search-result-layout.customQuery#home"
+        ]
+    },
+    "search-result-layout.customQuery#home": {
+        "props": {
+            "querySchema": {
+                "skusFilter": "FIRST_AVAILABLE",
+                "simulationBehavior": "default"
+            }
+        }
+    }
 }
 ```
 
@@ -160,51 +166,61 @@ This allows you to define custom behaviors for each of your store's search pages
 
 ```json
 {
- "store.search": {
- "blocks": ["search-result-layout"],
- "props": {
- "context": {
- "skusFilter": "FIRST_AVAILABLE",
- "simulationBehavior": "default"
- }
- }
- },
- "store.search#category": {
- "blocks": ["search-result-layout"],
- "props": {
- "context": {
- "skusFilter": "FIRST_AVAILABLE",
- "simulationBehavior": "default"
- }
- }
- },
- "store.search#brand": {
- "blocks": ["search-result-layout"],
- "props": {
- "context": {
- "skusFilter": "FIRST_AVAILABLE",
- "simulationBehavior": "default"
- }
- }
- },
- "store.search#department": {
- "blocks": ["search-result-layout"],
- "props": {
- "context": {
- "skusFilter": "FIRST_AVAILABLE",
- "simulationBehavior": "default"
- }
- }
- },
- "store.search#subcategory": {
- "blocks": ["search-result-layout"],
- "props": {
- "context": {
- "skusFilter": "FIRST_AVAILABLE",
- "simulationBehavior": "default"
- }
- }
- }
+    "store.search": {
+        "blocks": [
+            "search-result-layout"
+        ],
+        "props": {
+            "context": {
+                "skusFilter": "FIRST_AVAILABLE",
+                "simulationBehavior": "default"
+            }
+        }
+    },
+    "store.search#category": {
+        "blocks": [
+            "search-result-layout"
+        ],
+        "props": {
+            "context": {
+                "skusFilter": "FIRST_AVAILABLE",
+                "simulationBehavior": "default"
+            }
+        }
+    },
+    "store.search#brand": {
+        "blocks": [
+            "search-result-layout"
+        ],
+        "props": {
+            "context": {
+                "skusFilter": "FIRST_AVAILABLE",
+                "simulationBehavior": "default"
+            }
+        }
+    },
+    "store.search#department": {
+        "blocks": [
+            "search-result-layout"
+        ],
+        "props": {
+            "context": {
+                "skusFilter": "FIRST_AVAILABLE",
+                "simulationBehavior": "default"
+            }
+        }
+    },
+    "store.search#subcategory": {
+        "blocks": [
+            "search-result-layout"
+        ],
+        "props": {
+            "context": {
+                "skusFilter": "FIRST_AVAILABLE",
+                "simulationBehavior": "default"
+            }
+        }
+    }
 }
 ```
 
@@ -216,23 +232,23 @@ According to your store's scenario, structure the `search-result-layout` or the 
 
 ```json
 {
- "search-result-layout": {
- "blocks": [
- "search-result-layout.desktop",
- "search-result-layout.mobile",
- "search-not-found-layout"
- ]
- },
- "search-result-layout.desktop": {
- "children": [
- "flex-layout.row#searchbread",
- "flex-layout.row#searchtitle",
- "flex-layout.row#result"
- ],
- "props": {
- "preventRouteChange": true
- }
- }
+    "search-result-layout": {
+        "blocks": [
+            "search-result-layout.desktop",
+            "search-result-layout.mobile",
+            "search-not-found-layout"
+        ]
+    },
+    "search-result-layout.desktop": {
+        "children": [
+            "flex-layout.row#searchbread",
+            "flex-layout.row#searchtitle",
+            "flex-layout.row#result"
+        ],
+        "props": {
+            "preventRouteChange": true
+        }
+    }
 }
 ```
 
@@ -334,32 +350,32 @@ For `PreferredSKUEnum`:
 
 ```json
 {
-  "gallery": {
-  "props": {
-  "layouts": [
- {
- "name": "whole",
- "component": "OneOrTwoLineSummary",
- "itemsPerRow": 1
- },
- {
- "name": "two",
- "component": "OneOrTwoLineSummary",
- "itemsPerRow": 2
- },
- {
- "name": "many",
- "component": "ManyByLineSummary",
- "itemsPerRow": {
- "desktop": 5,
- "mobile": 1
- }
- }
-  ],
-  "OneOrTwoLineSummary": "product-summary.shelf",
-  "ManyByLineSummary": "product-summary.shelf"
-  }
-  }
+    "gallery": {
+        "props": {
+            "layouts": [
+                {
+                    "name": "whole",
+                    "component": "OneOrTwoLineSummary",
+                    "itemsPerRow": 1
+                },
+                {
+                    "name": "two",
+                    "component": "OneOrTwoLineSummary",
+                    "itemsPerRow": 2
+                },
+                {
+                    "name": "many",
+                    "component": "ManyByLineSummary",
+                    "itemsPerRow": {
+                        "desktop": 5,
+                        "mobile": 1
+                    }
+                }
+            ],
+            "OneOrTwoLineSummary": "product-summary.shelf",
+            "ManyByLineSummary": "product-summary.shelf"
+        }
+    }
 }
 ```
 #### The `gallery-layout-switcher` block
@@ -380,32 +396,41 @@ This block defines how each layout option should be rendered for users.
 
 ```jsonc
 {
-  "gallery-layout-switcher": {
- "children": [
- //It follows the same whole -> two -> many order
- "gallery-layout-option#whole",
- "gallery-layout-option#two",
- "gallery-layout-option#many"
- ]
-  },
-  "gallery-layout-option#whole": {
- "props": {
- "name": "whole"
- },
- "children": ["icon-single-grid", "rich-text#option-whole"]
-  },
-  "gallery-layout-option#two": {
- "props": {
- "name": "two"
- },
- "children": ["icon-inline-grid", "rich-text#option-two"]
-  },
-  "gallery-layout-option#many": {
- "props": {
- "name": "many"
- },
- "children": ["icon-menu", "rich-text#option-many"]
-  }
+    "gallery-layout-switcher": {
+        "children": [
+            //It follows the same whole -> two -> many order
+            "gallery-layout-option#whole",
+            "gallery-layout-option#two",
+            "gallery-layout-option#many"
+        ]
+    },
+    "gallery-layout-option#whole": {
+        "props": {
+            "name": "whole"
+        },
+        "children": [
+            "icon-single-grid",
+            "rich-text#option-whole"
+        ]
+    },
+    "gallery-layout-option#two": {
+        "props": {
+            "name": "two"
+        },
+        "children": [
+            "icon-inline-grid",
+            "rich-text#option-two"
+        ]
+    },
+    "gallery-layout-option#many": {
+        "props": {
+            "name": "many"
+        },
+        "children": [
+            "icon-menu",
+            "rich-text#option-many"
+        ]
+    }
 }
 ```
 
@@ -449,17 +474,17 @@ For example:
 
 ```jsonc
 {
-  "filter-navigator.v3": {
-    "props": {
-      "facetOrdering": [
-  {
-    "key": "brand",
-    "orderBy": "name",
-    "order": "ASC"
-  }
-      ]
+    "filter-navigator.v3": {
+        "props": {
+            "facetOrdering": [
+                {
+                    "key": "brand",
+                    "orderBy": "name",
+                    "order": "ASC"
+                }
+            ]
+        }
     }
-  }
 }
 ```
 
