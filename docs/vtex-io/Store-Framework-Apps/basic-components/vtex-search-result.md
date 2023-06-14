@@ -379,6 +379,7 @@ For `PreferredSKUEnum`:
     }
 }
 ```
+
 #### The `gallery-layout-switcher` block
 
 The `gallery-layout-switcher` block is a logical block that allows users to switch between the available `gallery` layouts.
