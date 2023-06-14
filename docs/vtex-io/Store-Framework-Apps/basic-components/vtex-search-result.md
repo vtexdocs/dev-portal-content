@@ -274,6 +274,7 @@ According to your store's scenario, structure the `search-result-layout` or the 
 | `mode2` | `enum` | Defines which layout will be set for the mobile search results page when users click on the layout selector button. Possible values also are `normal`, `small`, or `inline`. | `small` |
 
 #### The `hiddenFacets` object
+
 | Prop name | Type | Description | Default value |
 | - | - | - | - |
 | `brands` | `boolean` | Determines whether Brand filters should be hidden (`true`) or not (`false`). | `false` |
