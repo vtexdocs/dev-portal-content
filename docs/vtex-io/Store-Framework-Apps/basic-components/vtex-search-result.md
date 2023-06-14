@@ -312,6 +312,7 @@ In a scenario where multiple layouts are provided, your store users will be able
 To understand how to build your search results with multiple layouts using the `layouts` prop, access the [**documentation**](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts).
 
 ##### The `gallery-layout-switcher` props
+
 | Prop name | Type | Description | Default value |
 | - | - | - | - |
 | `layouts` | `object` | List of layouts used to arrange and display the items on the search results page. If no value is provided, the `gallery` block must receive a `product-summary-shelf` block instead as a child. Check [this table](#the-layouts-object) for props of this block. | `undefined` |
