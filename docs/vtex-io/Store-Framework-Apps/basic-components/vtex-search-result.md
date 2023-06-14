@@ -290,6 +290,7 @@ According to your store's scenario, structure the `search-result-layout` or the 
 | `hiddenFilters` | `object` | Object array of specification filters that should be hidden. The possible values are in [this table](#the-hiddenfilters-object). | `undefined` |
 
 #### The `hiddenFilters` object
+
 | Prop name | Type | Description | Default value |
 | - | - | - | - |
 | `name` | `string` | Name of the specification filter that you want to hide. | `undefined` |
