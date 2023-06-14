@@ -291,7 +291,8 @@ According to your store's scenario, structure the `search-result-layout` or the 
 
 #### The `hiddenFilters` object
 
-| Prop name | Type | Description | Default value |
+
+#### The `hiddenFilters` object
 | - | - | - | - |
 | `name` | `string` | Name of the specification filter that you want to hide. | `undefined` |
 
