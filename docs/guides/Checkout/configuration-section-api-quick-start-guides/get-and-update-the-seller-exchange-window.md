@@ -6,11 +6,11 @@ createdAt: "2022-12-12t21:19:51.360z"
 updatedAt: "2022-12-12T21:36:31.439Z"
 ---
 
-[Marketplace](https://help.vtex.com/en/tutorial/integrating-with-marketplace) is a platform where different sellers can sell their products in a single place. After the customer makes a purchase and the order is created, there may be scenarios in which the original seller of the product needs to be modified, for example, when they cancel the order due to internal unavailability of product fulfillment.
+A [Marketplace](https://help.vtex.com/en/tutorial/integrating-with-marketplace) is a platform where products from different sellers can be offered to customers in a single place. After the customer makes a purchase and the order is created, there may be scenarios in which the original seller of the product needs to be modified, for example, when they cancel the order due to internal unavailability of product fulfillment.
 
-In such situations, VTEX allows the marketplace to have a period (window) after the customer makes the purchase to change sellers and avoid order cancellation. For more information on the process of changing sellers, please read the guides in the [Help Center](https://help.vtex.com/en/tutorial/change-seller--5TBAwO2kOAMw44uyaaQMQO) and the [Developer Portal](https://developers.vtex.com/vtex-rest-api/docs/change-seller).
+In such situations, after the customer makes the purchase, VTEX allows the marketplace to have a period of time (window) to change sellers and avoid order cancellation. For more information on the process of changing sellers, please read the guides in the [Help Center](https://help.vtex.com/en/tutorial/change-seller--5TBAwO2kOAMw44uyaaQMQO) and the [Developer Portal](https://developers.vtex.com/vtex-rest-api/docs/change-seller).
 
-> ⚠️ The default window for changing a seller is **2 days**. However, you can change it for up to **30 days**.
+> ⚠️ The default window for changing a seller is **2 days**. However, you can set the window for up to **30 days**.
 
 This guide describes how to get a seller change window or update the number of days in a marketplace on your account.
 
