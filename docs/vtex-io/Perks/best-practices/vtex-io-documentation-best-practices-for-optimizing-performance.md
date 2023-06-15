@@ -50,7 +50,7 @@ You can deactivate the native service worker provided by VTEX IO to successfully
 
 ### Optimizing critical CSS
 
-The content which a user first sees when opening a web page is known as *above-the-fold* content. This part of the page can also be called *critical* because it needs to be loaded quickly to provide a better user experience.
+The content which a user first sees when opening a web page is known as above-the-fold content. This part of the page can also be called critical because it needs to be loaded quickly to provide a better user experience.
 
 ![critical](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-1.png)
 
