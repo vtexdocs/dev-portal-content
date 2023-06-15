@@ -74,7 +74,7 @@ Note that by combining CSS in a single file, the browser makes fewer requests an
 
 ### Lazy loading page metadata
 
-Before displaying a web page, the VTEX IO service app for server-side rendering, or simply Render Runtime, interprets the page metadata script. You can see an example of this script below.
+Before displaying a web page, the VTEX IO service app responsible for server-side rendering (Render Runtime) interprets the page metadata script. You can see an example of this script below.
 
 ```ts
 <script>
