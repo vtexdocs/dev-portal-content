@@ -58,7 +58,6 @@ In the following sections, you will learn how to build order integrations with F
   
 The order feed is a list of order updates, meaning that an order status update will be included as a new item in the feed whenever there is an event in an order.
   
-
 - [Feed v3 Guide](https://developers.vtex.com/docs/guides/orders-feed)
 - [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config)
 - [Create or update feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed/config)
