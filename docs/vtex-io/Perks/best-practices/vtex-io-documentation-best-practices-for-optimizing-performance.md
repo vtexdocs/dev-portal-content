@@ -83,7 +83,7 @@ Before displaying a web page, the VTEX IO service app responsible for server-sid
 
 Note that this script holds a lot of important data about a web page, and it can be long, characterizing a long task for the browser.
 
-Therefore, to prevent the total blocking time of the store website from being compromised, this script will be broken into smaller ones when lazy runtime is enabled.
+Therefore, when lazy runtime is enabled, this script is broken into smaller ones in order to prevent the total blocking time of the store website from being compromised.
 
 This way, long tasks will be avoided, and you will reap the benefit of a faster store.
 
