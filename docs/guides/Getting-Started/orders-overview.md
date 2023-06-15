@@ -12,7 +12,7 @@ This overview article covers the VTEX Order Management System (OMS), including r
 
 ### Importing orders from an ERP or Back office
 
-If your store has an ERP integration or another integration for managing orders, you will need to create an integration for the VTEX platform. The links below provide an overview of the order integration flow between a back-office system and a VTEX store.
+If your store has an ERP integration or another integration for managing orders, you will need to create an integration with the VTEX platform. The links below provide an overview of the order integration flow between a back-office system and a VTEX store.
 
 - [Back office (ERP/PIM/WMS)](https://developers.vtex.com/docs/guides/erp-integration-guide)
 - [Set up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration)
@@ -22,29 +22,29 @@ If your store has an ERP integration or another integration for managing orders,
 
 ## Understanding order flow types
 
-The order flow describes the status, options, and actions throughout the life cycle of an order. On VTEX, there are four [order flow types](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196):
+The order flow describes the status, possible flows, and actions throughout the life cycle of an order. On VTEX, there are four [order flow types](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196):
 
 ### Marketplace flow
 
-The order flow is only visible to the store responsible for the sale.
+The marketplace order flow is only visible to the store responsible for the sale.
 
 ![marketplace_flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-0.jpg)
 
 ### Seller flow
 
-The order flow is only visible to the store responsible for handling the order.
+The seller order flow is only visible to the store responsible for handling the order.
 
 ![seller_flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-1.png)
 
 ### Complete flow
 
-The order flow is only visible to the store responsible for the sale and delivery. In this case, the store acts both as seller and marketplace.
+The complete order flow is only visible to the store responsible for the sale and delivery. In this case, the store acts both as seller and marketplace.
 
 ![complete_flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-2.png)
 
 ### Chain flow
 
-The order flow is visible to the store acting as an intermediary between the marketplace and the seller. This flow is similar to the marketplace flow. However, the payment is only made to the marketplace, not to the store that acts as a chain. This flow is followed in [Multilevel Omnichannel Inventory](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) sales cases.
+The chain order flow is visible to the store acting as an intermediary between the marketplace and the seller. This flow is similar to the marketplace flow. However, the payment is only made to the marketplace, not to the store that acts as a chain. This flow is followed in [Multilevel Omnichannel Inventory](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) sales situations.
 
 ![chain_flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-3.png)
 
@@ -56,7 +56,7 @@ In the following sections, you will learn how to build order integrations with F
 
 ### Feed v.3
   
-The order feed is a list of order updates, meaning that an order status update will be included as a new item in the feed whenever there is an event in an order.
+The Orders feed is a list of order updates, meaning that an order status update will be included as a new item in the feed whenever there is an event in an order.
   
 - [Feed v3 Guide](https://developers.vtex.com/docs/guides/orders-feed)
 - [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config)
@@ -68,7 +68,7 @@ The order feed is a list of order updates, meaning that an order status update w
 
 ### Hook
 
-Hook is a counterpart to Feed, which allows an integration to get order update data by sending items to a URL provided by the user in the hook configuration.
+Hook works as a complement to Feed, because it allows an integration to consume order updates data by sending items to a URL provided by the user in the Hook configuration.
 
 - [Get hook configuration](https://developers.vtex.com/vtex-rest-api/reference/gethookconfiguration)
 - [Create or update hook configuration](https://developers.vtex.com/vtex-rest-api/reference/hookconfiguration)
@@ -125,7 +125,7 @@ Every order has a life cycle registered as an [order flow](https://help.vtex.com
 
 ### Changing an order
 
-Changing orders is a feature that allows your store to change the items or prices of an order. For example, this allows you to handle eventual changes due to customer mistakes or product unavailability. To learn more, see the links below.
+Changing orders is a feature that allows your store to edit the items or prices of an order. For example, this allows you to handle eventual changes due to customer mistakes or product unavailability. To learn more, see the links below.
 
 - [Change order](https://developers.vtex.com/docs/guides/change-order)
 - [Register change on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes)
@@ -135,7 +135,7 @@ Changing orders is a feature that allows your store to change the items or price
 Another seller can be selected to fulfill a given order after the original seller canceled it. The period when this can be done is called the change seller window. You can use the endpoints below for this.
 
 - [Get window to change seller](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/checkout/pvt/configuration/window-to-change-seller)
-- [Update window to change seller](https://developers.vtex.com/vtex-rest-api/reference/updatewindowtochangeseller-1)
+- [Update window to change seller](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/checkout/pvt/configuration/window-to-change-seller)
 
 ### Sending payment notification
 
@@ -172,12 +172,12 @@ In other words, the feature allows VTEX sellers to sell products from its franch
 
 ## Integrating orders from an external marketplace
 
-A VTEX store can act as a [seller](https://help.vtex.com/en/tutorial/configuring-a-seller-on-vtex-marketplace--6g045OkRSjNpqhkExbQRlP) and a [marketplace](https://help.vtex.com/en/tutorial/configuring-vtex-marketplace--7splyp5MqIyt2Iyz5jsNzb) in relation to another VTEX store or an external partner. If you are an [external marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide) that wants to integrate with VTEX sellers, see the links below to learn how to develop a custom connector for the VTEX architecture and seller orders.
+A VTEX store can act as both a [seller](https://help.vtex.com/en/tutorial/configuring-a-seller-on-vtex-marketplace--6g045OkRSjNpqhkExbQRlP) and a [marketplace](https://help.vtex.com/en/tutorial/configuring-vtex-marketplace--7splyp5MqIyt2Iyz5jsNzb) in relation to another VTEX store or an external partner. If you are an [external marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide) that wants to integrate with VTEX sellers, see the links below to learn how to develop a custom connector to integrate with the VTEX architecture and seller orders.
 
-- [Order Integration overview](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-orders)
-- [New Order Integration](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders)
-- [Update Order Status](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-update-order-status)
-- [How to update the status of a canceled order on VTEX](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-canceled-orders)
+- [Order Integration overview](https://developers.vtex.com/docs/guides/external-marketplace-integration-orders)
+- [New Order Integration](https://developers.vtex.com/docs/guides/external-marketplace-integration-collect-orders)
+- [Update Order Status](https://developers.vtex.com/docs/guides/external-marketplace-update-order-status)
+- [How to update the status of a canceled order on VTEX](https://developers.vtex.com/docs/guides/external-marketplace-integration-canceled-orders)
 
 ## Adding optional configurations
 
@@ -185,7 +185,7 @@ There are additional configurations available for you to manage your store order
 
 ### VTEX inStore
 
-- [Enabling order filter by sales associate](https://developers.vtex.com/vtex-rest-api/docs/enable-order-filter-by-sales-associate)
+- [Enabling order filter by sales associate](https://developers.vtex.com/docs/guides/enable-order-filter-by-sales-associate)
 - [Getting invoiced orders placed on inStore](https://developers.vtex.com/docs/guides/get-invoiced-orders-placed-in-instore)
 
 ### VTEX DO
