@@ -81,7 +81,7 @@ Before displaying a web page, the VTEX IO service app responsible for server-sid
         __RUNTIME__ = {"account":"vtexstore","amp":false,"bindingChanged":false,"binding":{"id":"aacb04t3-a8fa-4bab-b5bd-2d654d20dcd8","canonicalBaseAddress":"vtexstore.vtex.com"},"culture":{"availableLocales":[],"country":"USA","currency":"USD","language":"en","locale":"en-US","customCurrencyDecimalDigits":null,"customCurrencySymbol":"$"},"production":true,"query":{},"settings":{....
 ```
 
-Note that this script holds a lot of important data about a web page, and it can be long, which can be a big task for the browser.
+Note that this script holds a lot of important data about a web page, and it can be long, characterizing a long task for the browser.
 
 Therefore, to prevent the total blocking time of the store website from being compromised, this script will be broken into smaller ones when lazy runtime is enabled.
 
