@@ -169,7 +169,7 @@ We recommend that you only allow the first available SKU to be returned for each
 
 We recommend you build your theme shelf and carousel blocks using Slider Layout.
 
-Slider Layout natively lazily loads the rendered images or product information. That means that the information in a shelf or carousel built with Slider will only be loaded when components receive user interaction, decreasing the website page load time.
+Slider Layout natively lazy loads the rendered images or product information. That means that the information in a shelf or carousel built with Slider will only be loaded when components receive user interaction, decreasing the website page load time.
 
 However, keep in mind that the more products your shelf or carousel has, the more greater the impact on website performance will be.
 
