@@ -53,6 +53,7 @@ To confirm that the new seller change window has been applied to your account, a
 The following errors may appear as messages in the response body:
 
 ### 401 - Unauthorized
+
 - **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (Application Key and Application Token) used in this request are incorrect or not authorized to access this information.
 
 ```json
