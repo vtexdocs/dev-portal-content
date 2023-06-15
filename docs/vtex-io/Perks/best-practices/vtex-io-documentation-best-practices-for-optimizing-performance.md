@@ -6,15 +6,15 @@ createdAt: "2020-11-11T12:55:53.602Z"
 updatedAt: "2022-12-13T20:17:44.632Z"
 ---
 
-For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough for *converting leads* if *user-experience* is left behind.
+For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough for converting leads if user-experience is left behind.
 
-In the digital world, store website *performance* plays an essential role in the *user experience*, directly impacting *sales conversion rate* and *user session time*, among other important metrics.
+In the digital world, store website performance plays an essential role in the user experience, directly impacting sales conversion rate, user session time, among other important metrics.
 
-Every millisecond counts and affects not only *the consumer decision-making* process but also the store website *rank* in search engine results.
+Every millisecond counts and affects not only the consumer decision-making process but also the store website rank in search engine results.
 
 Thus, to help you ensure the success of your online presence, this article introduces a few practices you can implement to optimize store performance and, consequently, improve customer experience.
 
-Some actions that can boost store website performance can be enabled in the Admin of your store under *Store Settings > Storefront > Store > Advanced*.
+Some actions that can boost store website performance can be enabled in the Admin of your store under **Store Settings > Storefront > Store > Advanced**.
 
 ![cms-store-advanced](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-0.png)
 
