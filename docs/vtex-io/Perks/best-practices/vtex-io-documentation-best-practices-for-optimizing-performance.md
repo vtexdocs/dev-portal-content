@@ -58,7 +58,7 @@ In other words, the critical part of the page must be rendered correctly and pro
 
 However, by default, the browser initiates the rendering of a web page after it has finished loading, parsing, and executing all related CSS files. Consequently, the more extensive the CSS code, the greater the time required to render the critical part of the page.
 
-Fortunately, VTEX IO can enable critical CSS optimization on home pages. This feature provides the browser a way to find the *minimum blocks of CSS code* first needed to display the critical content of the page, while the remainder of the CSS code is loaded asynchronously.
+To address this problem, you can enable critical CSS optimization on home pages. This feature allows the browser to identify the essential CSS code blocks required to display the critical part of the page and load the remaining CSS code asynchronously.
 
 > ⚠️ Keep in mind that by enabling this option, you might notice some style inconsistencies in the store layout. Test it with caution before enabling it on a production workspace. Also, if you notice any side-effects on the store website, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) and let us know!
 
