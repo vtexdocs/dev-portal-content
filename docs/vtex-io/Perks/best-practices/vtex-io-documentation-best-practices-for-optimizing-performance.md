@@ -56,7 +56,7 @@ The content which a user first sees when opening a web page is known as above-th
 
 In other words, the critical part of the page must be rendered correctly and promptly before anything else.
 
-However, by default, the browser only renders a web page after it has finished loading, parsing, and executing all related CSS files. As a result, the time taken by a browser to render the critical part of the page can significantly increase for large CSS codes.
+However, by default, the browser initiates the rendering of a web page after it has finished loading, parsing, and executing all related CSS files. Consequently, the more extensive the CSS code, the greater the time required to render the critical part of the page.
 
 Fortunately, VTEX IO can enable critical CSS optimization on home pages. This feature provides the browser a way to find the *minimum blocks of CSS code* first needed to display the critical content of the page, while the remainder of the CSS code is loaded asynchronously.
 
