@@ -12,7 +12,6 @@ In such situations, VTEX allows the marketplace to have a period (window) after 
 
 > ⚠️ The default window for changing a seller is **2 days**. However, you can change it for up to **30 days**.
 
-
 This guide describes how to get a seller change window or update the number of days in a marketplace on your account.
 
 ## Getting the current seller change window
