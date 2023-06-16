@@ -35,7 +35,7 @@ The `dimension1`, `dimension2`, `dimension3` properties are custom dimensions th
 
 For more information about custom dimensions and Enhanced Ecommerce, refer to [Custom dimensions and metrics](https://support.google.com/analytics/answer/2709828?hl=en&ref_topic=2709827#configuration&zippy=%2Cin-this-article) and [Google Enhanced ecommerce official guide](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce#ecommerce-data) respectively.
 
-## Migrating to GTM 3.x.
+## Migrating to GTM 3.x
 
  To migrate to the app's 3.x version, please follow these guides:
 
