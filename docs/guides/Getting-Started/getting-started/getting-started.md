@@ -45,10 +45,6 @@ See how to use our APIs to integrate third-party solutions with a single platfor
 
 </OverviewCard>
 
-## Getting to know our core services
-
-Leverage your ecommerce operation with our headless architecture by learning what you can accomplish with each microservice on the VTEX platform.
-
 Our API Guides and Reference cover VTEX Core Services, as illustrated in the image below.
 
 ![](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Getting-Started/getting-started/getting-started.png?raw=true)
