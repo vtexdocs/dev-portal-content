@@ -1,0 +1,91 @@
+name: Preview modified pages
+on: [pull_request]
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get branch name
+        id: get-branch-name
+        uses: tj-actions/branch-names@v7
+      - name: Get changed markdown files
+        id: get-changed-markdown-files
+        uses: tj-actions/changed-files@v36
+        with:
+          files: |
+            **.md
+            **.mdx
+      - name: Fetch navigation.json
+        run: curl -o ./navigation.json https://developers.vtex.com/navigation.json
+      - name: Map slugs to paths
+        id: map-slugs-to-paths
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const navigation = require('./navigation.json')
+
+            const paths = {}
+            const slugsToPaths = (slugPrefix, obj) => {
+              if (!obj || typeof obj !== 'object') return
+
+              if (obj.slug && obj.type === 'markdown') {
+                paths[obj.slug] = `${slugPrefix}${obj.slug}`
+              }
+
+              for (const key in obj) {
+                slugsToPaths(slugPrefix, obj[key])
+              }
+            }
+
+            navigation.navbar.forEach(({ slugPrefix, categories }) => slugsToPaths(slugPrefix.endsWith('/') ? slugPrefix : `${slugPrefix}/`, categories))
+            core.setOutput('slugs-to-paths', JSON.stringify(paths))
+      - name: Install front-matter
+        run: npm install front-matter
+      - name: Get preview links
+        id: get-preview-links
+        uses: actions/github-script@v6
+        env:
+          BRANCH: ${{ steps.get-branch-name.outputs.head_ref_branch }}
+          FILES: ${{ steps.get-changed-markdown-files.outputs.modified_files }}
+          PATHS: ${{ steps.map-slugs-to-paths.outputs.slugs-to-paths }}
+        with:
+          script: |
+            const fs = require('fs')
+            const frontmatter = require('front-matter')
+
+            const branch = process.env.BRANCH
+            const files = process.env.FILES.split(' ')
+            const paths = JSON.parse(process.env.PATHS)
+
+            let output = '# Preview Links\n\n'
+            if (files.length === 0) {
+              output += 'No changes detected in any markdown/MDX file'
+            } else {
+              output += `Open [this URL](https://developers.vtex.com/api/preview?branch=${branch}) to set up the portal with this branch changes.\n\n`
+              output += 'You can now access the edited pages with the following URLs:\n'
+
+              for (const file of files) {
+                const fileContent = fs.readFileSync(file, { encoding: 'utf8', flag: 'r' })
+                if (!frontmatter.test(fileContent)) {
+                  output += `* Aren't you forgetting the frontmatter in \`${file}\`?\n`
+                } else {
+                  const { slug } = frontmatter(fileContent).attributes
+                  if (!slug) {
+                    output += `* Aren't you forgetting the slug property in the frontmatter of \`${file}\`?\n`
+                  } else if (!paths[slug]) {
+                    output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file?\n`
+                  } else {
+                    output += `* https://developers.vtex.com/${paths[slug]}\n`
+                  }
+                }
+              }
+            }
+
+            core.setOutput('preview-links', output)
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: preview-links
+          message: ${{ steps.get-preview-links.outputs.preview-links }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
