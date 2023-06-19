@@ -55,8 +55,10 @@ jobs:
             const frontmatter = require('front-matter')
 
             const branch = process.env.BRANCH
-            const files = process.env.FILES.split(' ')
             const paths = JSON.parse(process.env.PATHS)
+            const files = process.env.FILES.split(' ')
+              .map(file => file.trim())
+              .filter(file => file !== '')
 
             let output = '# Preview Links\n\n'
             if (files.length === 0) {
