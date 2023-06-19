@@ -45,4 +45,4 @@ As previously stated, the native buy button control (`<vtex.cmc:BuyButton/>`) pe
 
 However, if instead of using this control, your store decides to customize the call and therefore makes the POST of the purchase request on its own, you must remember to send in this POST all the data that may be useful to assemble the **orderForm**, including the marketing context.
 
-To send the UTM values ​​to the cart, access the [Add marketing data](https://developers.vtex.com/vtex-rest-api/reference/addmarketingdata) endpoint or enter the `marketingData` information via the [sendAttachment](https://developers.vtex.com/vtex-rest-api/docs/vtexjs-for-checkout#sendattachmentattachmentid-attachment-expectedorderformsections).
+To send the UTM values ​​to the cart, access the [Add marketing data](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/marketingData) endpoint or enter the `marketingData` information via the [sendAttachment](https://developers.vtex.com/docs/guides/vtexjs-for-checkout#sendattachmentattachmentid-attachment-expectedorderformsections).
