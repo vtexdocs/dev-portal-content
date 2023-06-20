@@ -65,6 +65,8 @@ You can add these examples to [JSON Schema Validator](http://www.jsonschemavalid
 
 The JSON Schema validates only the fields configured in properties. The exceeding fields will be maintained without validation. To preserve only the fields configured in the JSON schema, see the `additionalProperties` property information in [external documentation about JSON schema](https://json-schema.org/understanding-json-schema/reference/object.html#properties).
 
+> ⚠️ Master Data v2 data entities can have up to 60 schemas per entity.
+
 ## Indexing fields
 
 Use the property `v-indexed` to set up indexed fields. You must add the field to the properties to generate the indexer configuration with the right type.

@@ -152,11 +152,11 @@ At this point, your app may not recognize the folder created by `vtex setup`, le
 
 ### Data entities and schemas
 
-You can set more than one data entity in you app. To do so, create one folder inside the `masterdata` folder for each data entity you wish to create. Each must have its own `schema.json` with a valid [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
+You can set more than one data entity in your app. To do so, create one folder inside the `masterdata` folder for each data entity you wish to create. Each must have its own `schema.json` with a valid [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
 
 Your app creates regular Master Data entities, which can be accessed via the [Master Data v2 endpoints](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview). The name of the entity created follows this pattern: `{vendor}_{appName}_{entityName}`.
 
-> ⚠️ Whenever you install or link a different version of your app, the Master Data builder cerates a new schema with the app’s name and version.
+> ⚠️ Whenever you install or link a different version of your app, the Master Data builder cerates a new schema with the app’s name and version. Note that Master Data v2 data entities have a limit of 60 schemas per entity. So you must [delete unused schemas](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/schemas/-schemaName-) to prevent from running into issues.
 
 ## Usage
 
