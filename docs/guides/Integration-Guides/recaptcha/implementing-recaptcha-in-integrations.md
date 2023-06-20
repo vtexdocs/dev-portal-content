@@ -23,9 +23,10 @@ There are different ways of obtaining the reCAPTCHA key. See below the method th
 
 In order to implement reCAPTCHA validation in a mobile app that places orders, follow the steps below.
 
-1. Create a reCAPTCHA v3 key, according to the instructions in the article [How to create reCAPTCHA keys](https://cloud.google.com/recaptcha-enterprise/docs/create-key) provided by Google.
-2. Get your current VTEX Checkout settings, with the [Get orderForm configuration API request](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm).
-3. Add your newly created reCAPTCHA key to your VTEX Checkout settings, by sending a request to the [Update orderForm configuration endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm). Use the configuration retrieved in step 2 as your request body and add your key information in this field:
+1. Create a Google Cloud project, according to the instructions in the article [Create, shut down, and restore projects](https://support.google.com/googleapi/answer/6251787).
+2. Create a Google Cloud API key, according to the instructions in the article [Authenticate using API keys](https://cloud.google.com/docs/authentication/api-keys) provided by Google.
+3. Get your current VTEX Checkout settings, with the [Get orderForm configuration API request](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm).
+4. Add your newly created reCAPTCHA key to your VTEX Checkout settings, by sending a request to the [Update orderForm configuration endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm). Use the configuration retrieved in step 2 as your request body and add your key information in this field:
 
 ```json
 {
@@ -34,6 +35,7 @@ In order to implement reCAPTCHA validation in a mobile app that places orders, f
         {
             "clientId": "{id-of-your-recaptcha-key}",
             "clientSecret": "{secret-key}",
+            "projectId": "{id-of-your-google-cloud-project}",
             "label": "{key-name-in-vtex}",
             "score": "{recaptcha-v3-score}"
         }
@@ -44,7 +46,7 @@ In order to implement reCAPTCHA validation in a mobile app that places orders, f
 
 - `recaptchaKeys`: array of objects with keys information.
 - `clientId`: ID of your reCAPTCHA key.
-- `clientSecret`: reCAPTCHA secret key.
+- `clientSecret`: reCAPTCHA secret key. If you do not have your project ID at hand, check the Google Cloud documentation to learn how to [locate your project ID](https://support.google.com/googleapi/answer/7014113)
 - `label`: use this field to identify your key. We recommend that you indicate the mobile platform in which you intend to use the key (e.g., `android-001`).
 - `score`: [reCAPTCHA v3 score](https://developers.vtex.com/docs/guides/recaptcha#recaptcha-v3-score) (optional).
 
