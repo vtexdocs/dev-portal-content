@@ -5,10 +5,12 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.335Z"
 updatedAt: "2022-12-13T20:17:44.526Z"
 category: "Storefront Development"
+excerpt: "Learn how to manage templates, add or remove blocks, and customize your store theme."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-5-definingstyles"
 ---
-**We call a template your website's page structure.**
+
+We call a template your website's page structure.
 
 Templates are responsible for declaring `JSON` blocks that, once rendered, will define the set of components for your website's pages, such as the home page, product page, search results page, etc.
 
