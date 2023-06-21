@@ -7,6 +7,7 @@ updatedAt: "2022-12-13T20:17:44.370Z"
 category: "App Development"
 seeAlso:
   - "/docs/guides/vtex-io-documentation-8-translating-the-component"
+excerpt: "Learn how to communicate with the backend system in VTEX IO using GraphQL APIs."
 ---
 
 Now you need to learn how this new component will talk with the *backend* system, in other words, how it is going to **consume and insert data in the platform**.
