@@ -173,4 +173,6 @@ Once the app is installed, follow the steps below:
 
 If you need help, there is a `docs` tab on the right corner of your screen that describes the queries and mutations available for the selected app.
 
-![GraphQL IDE example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-7-consuming-data-2.png) *The example above shows how to use the GraphQL IDE Admin to query an internal route in the `vtex.rewriter` app.*
+![GraphQL IDE example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-7-consuming-data-2.png) 
+
+The example above shows how to use the GraphQL IDE Admin to query an internal route in the `vtex.rewriter` app.
