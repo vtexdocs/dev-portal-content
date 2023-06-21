@@ -36,7 +36,7 @@ Application keys (`appKey`) are credentials used to authenticate requests to VTE
 
 You can [manage permissions for any given application key](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) with License Manager [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
 
-Application keys are usually the best way to authenticate API calls in your integrations. However, there are some VETX API endpoints that do not allow this mode of authentication. Authenticate those with [user tokens](#user-token).
+Application keys are usually the best way to authenticate API calls in your integrations. However, there are some VTEX API endpoints that do not allow this mode of authentication. Authenticate those with [user tokens](#user-token).
 
 >❗ [Do not use application keys in your client-side code](https://help.vtex.com/en/tutorial/best-practices-application-keys--7b6nD1VMHa49aI5brlOvJm#never-use-client-side-code-for-integrations). This makes your store vulnerable to attacks.
 
