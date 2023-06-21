@@ -161,7 +161,7 @@ vtex install vtex.admin-graphql-ide
 
 Once the app is installed, follow the steps below:
 
-1. Log in to your VTEX Admin account.
+1. Access the Admin.
 2. In the sidebar, go to **Apps**.
 3. Look for GraphQL IDE in the installed apps list.
 4. In the `Choose your app from the list below` field, select the app you want to debug/test. In this case, you need to choose the name of the app you are developing.
