@@ -14,7 +14,7 @@ With the app template already copied, we will now create a new theme block. Foll
 
 ## Before you start
 
-- Make sure you are familiar with the core concepts of Store Framework, including blocks, store themes, and templates. If you need to refresh your knowledge or get acquainted with these concepts, you can refer to the getting started tutorial on [**building storefronts with Store Framework**](https://developers.vtex.com/docs/guides/getting-started-3).
+- Make sure you are familiar with the core concepts of Store Framework, including blocks, store themes, and templates. If you need to refresh your knowledge or get acquainted with these concepts, you can refer to the getting started tutorial on [building storefronts with Store Framework](https://developers.vtex.com/docs/guides/getting-started-3).
 
 - Check our recommended practices for tooling, features, flexibility, scalability, performance, accessibility, internationalization, and styling. For more information, please refer to [Best practices for developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components).
 
