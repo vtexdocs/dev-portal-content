@@ -21,9 +21,7 @@ To jumpstart our storefront project, we'll utilize a pre-defined [Store Theme bo
 
 Before downloading the Store Theme app, make sure your VTEX account has the [Store Edition](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) app installed, as recommended in this track's second step. Otherwise, you won't be able to successfully implement the VTEX Store Framework.
 
-## Step by step
-
-### Step 1 - Downloading the Store Theme app
+## Step 1 - Downloading the Store Theme app
 
 The VTEX IO CLI simplifies the process of starting a new VTEX IO project by proving a list of pre-defined app templates. In the following steps, we will kick-start a new Store Theme project.
 
@@ -48,7 +46,7 @@ The VTEX IO CLI simplifies the process of starting a new VTEX IO project by prov
 4. Open the `minimum-boilerplate-theme` in the code editor of your preference.
 5. Go to the `manifest.json` file and replace the predefined `vendor`  value with the account name of the store you're developing. This will ensure that you can publish the theme app correctly later on.
 
-### Step 2 - Understanding the Store Theme's structure
+## Step 2 - Understanding the Store Theme's structure
 
 In this section, we'll take a closer look at the files and folders that make up the Store Theme app's structure. Understanding the purpose of each file and folder will help you configure the store's templates and visual theme according to your needs.
 
@@ -62,7 +60,7 @@ The following files and folders comprise the Store Theme app:
 
 It is important to note that the Store Theme boilerplate app you copied to your local machine already defines a basic theme for your store. You'll notice that code has already been declared in the `store` and `styles` folders, providing default components and styles to help you build your desired store frontend.
 
-### Step 3 - Linking your local code to the VTEX IO platform
+## Step 3 - Linking your local code to the VTEX IO platform
 
 After setting up your local development environment and cloning the Store Theme boilerplate app, you'll want to sync your changes with the VTEX IO platform to preview them on your website. Since the boilerplate app already includes a default theme, you can immediately see how this theme affect your website's frontend. This is done using a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and the `vtex link` command, which sends your code to the platform and allows you to see your changes in real-time.
 
@@ -83,7 +81,7 @@ After setting up your local development environment and cloning the Store Theme 
 
 By successfully running this command in your terminal, your local code is sent to the VTEX IO cloud-native infrastructure and it is reflected in the development workspace you are currently working in. Now, any changes you make to your Store Theme app files will be automatically reflected on your website in real-time.
 
-### Step 4 - Checking out your new store theme
+## Step 4 - Checking out your new store theme
 
 After linking your local code to the VTEX IO platform, you can check out your new store theme in action on your store's website. To do this, navigate to `https://{workspaceName}--{account}.myvtex.com`, replacing the values between brackets with your development workspace and VTEX account name.
 
