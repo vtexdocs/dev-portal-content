@@ -10,7 +10,7 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
 ---
 
-Version 3.x of VTEX’s Google Tag Manager (GTM) app enables comprehensive tracking of the user's journey within the store, from product views to purchases, using events triggered by the `ecommerceV2` variable. Additionally, it allows stores to send events in both the Google Analytics 4 (GA4) format and the Universal Analytics (UA) format, facilitating a seamless transition to GA4.
+Version 3.x of [VTEX Google Tag Manager (GTM) app](https://developers.vtex.com/docs/apps/vtex.google-tag-manager) introduces enhanced tracking capabilities for user interactions within the store. With the integration of the `ecommerceV2` variable, this version allows for comprehensive monitoring of the user journey, capturing events from product views to completed purchases. Additionally, it allows stores to send events in both the Google Analytics 4 (GA4) format and the Universal Analytics (UA) format, facilitating a seamless transition to GA4.
 
 ## New properties to the product schema
 
