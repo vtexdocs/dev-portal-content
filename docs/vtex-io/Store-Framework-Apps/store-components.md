@@ -2,12 +2,122 @@
 title: "Store Components"
 slug: "store-components"
 hidden: false
+excerpt: "Store Components is a collection of components that can be used to create or extend other VTEX apps."
 createdAt: "2021-10-25T17:13:45.960Z"
 updatedAt: "2021-10-25T17:41:19.739Z"
 ---
 
-[block:html]
-{
-  "html": "<style>\n    .flexcontainer {\n        display: flex;\n        flex-wrap: wrap;\n        padding-top: 1rem;\n        padding-bottom: 2rem;\n        justify-content: space-between;\n    }\n\n    .flexcontainer-card {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        align-items: flex-start;\n        width: 22rem;\n        margin: 0.5rem;\n        line-height: 1.8;\n    }\n    .see-more {\n        color: rgb(247, 25, 99);\n        text-decoration: none !important;\n    }\n\n    .see-more::after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(247, 25, 99)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(247, 25, 99)'></path></svg>\");\n        display: inline-block;\n        margin-left: 6px;\n        text-decoration: none !important;\n    }\n\n    .see-more:hover:after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(181, 16, 71)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(181, 16, 71)'></path></svg>\");\n        margin-left: 8px;\n    }\n\n    .see-more:hover {\n        color: rgb(181, 16, 71);\n    }\n    .app-description{\n        font-size: 16px;\n    }\n</style>\n\n<p class=\"app-description\">Store Components is a collection of components that can be used to create or extend other VTEX apps.</p>\n\n<div class=\"flexcontainer\">\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Autocomplete result list</h3>\n                <div>\n                    Represents the search bar autocomplete. \n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-autocompleteresults\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Availability subscriber</h3>\n                <div>\n                    Shows the availability subscriber form displayed when a product is not available. \n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-availabilitysubscriber\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Back to top button</h3>\n                <div>\n                     Redirects users to the top of the page when clicked.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-backtotopbutton\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Image</h3>\n                <div>\n                     Allows adding any image to the store.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-image\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Info card</h3>\n                <div>\n                    Displays content combining image and text on your store.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-infocard\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Logo</h3>\n                <div>\n                    Displays an image logo for the store header.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-logo\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Notification</h3>\n                <div>\n                    Displays text content in a bar style or inline.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-notification\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product brand</h3>\n                <div>\n                    Displays either the name or the logo of a product brand.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-productbrand\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product description</h3>\n                <div>\n                    Displays a product description.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-productdescription\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product images</h3>\n                <div>\n                    Renders a product image or video.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-productimages\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product name</h3>\n                <div>\n                    Displays the product name and its details, such as SKU or brand.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-productname\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product SKU attributes</h3>\n                <div>\n                    Displays a list of the current SKU variations for a product.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-productskuattributes\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Search bar</h3>\n                <div>\n                   Shows a search bar that suggests autocomplete options while also displaying the matching products.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-searchbar\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Share</h3>\n                <div>\n                    Allows to share a product URL via social media.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-share\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Shipping simulator</h3>\n                <div>\n                    Estimates the shipping rate based on a postal code input.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-shippingsimulator\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>SKU selector</h3>\n                <div>\n                   Displays every SKU available for a given product.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-components-skuselector\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n</div>\n"
-}
-[/block]
+<Flex>
+
+<WhatNextCard
+title="Autocomplete result list"
+description= "Represents the search bar autocomplete."
+linkTo="/docs/apps/vtex.store-components/autocompleteresults"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Availability subscriber"
+description= "Shows the availability subscriber form displayed when a product is not available."
+linkTo="/docs/apps/vtex.store-components/availabilitysubscriber"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Back to top button"
+description= "Redirects users to the top of the page when clicked."
+linkTo="/docs/apps/vtex.store-components/backtotopbutton"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Image"
+description= "Allows adding any image to the store."
+linkTo="/docs/apps/vtex.store-components/image"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Info card"
+description= "Displays content combining image and text on your store."
+linkTo="/docs/apps/vtex.store-components/infocard"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Logo"
+description= "Displays an image logo for the store header."
+linkTo="/docs/apps/vtex.store-components/logo"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Notification"
+description= "Displays text content in a bar style or inline."
+linkTo="/docs/apps/vtex.store-components/notification"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Product brand"
+description= "Displays either the name or the logo of a product brand."
+linkTo="/docs/apps/vtex.store-components/productbrand"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Product description"
+description= "Displays a product description."
+linkTo="/docs/apps/vtex.store-components/productdescription"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Product images"
+description= "Renders a product image or video."
+linkTo="/docs/apps/vtex.store-components/productimages"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Product name"
+description= "Displays the product name and its details, such as SKU or brand."
+linkTo="/docs/apps/vtex.store-components/productname"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Product SKU attributes"
+description= "Displays a list of the current SKU variations for a product."
+linkTo="/docs/apps/vtex.store-components/productskuattributes"
+linkTitle="See more
+
+<WhatNextCard
+title="Search bar"
+description= "Shows a search bar that suggests autocomplete options while also displaying the matching products."
+linkTo="/docs/apps/vtex.store-components/searchbar"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Share"
+description= "Allows to share a product URL via social media."
+linkTo="/docs/apps/vtex.store-components/share"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="Shipping simulator"
+description= "Estimates the shipping rate based on a postal code input."
+linkTo="/docs/apps/vtex.store-components/shippingsimulator"
+linkTitle="See more"
+/>
+
+<WhatNextCard
+title="SKU selector"
+description= "Displays every SKU available for a given product."
+linkTo="/docs/apps/vtex.store-components/skuselector"
+linkTitle="See more"
+/>
+
+</Flex>
