@@ -12,7 +12,7 @@ seeAlso:
 
 Version 3.x of [VTEX Google Tag Manager (GTM) app](https://developers.vtex.com/docs/apps/vtex.google-tag-manager) introduces enhanced tracking capabilities for user interactions within the store. With the integration of the `ecommerceV2` variable, this version allows for comprehensive monitoring of the user journey, capturing events from product views to completed purchases. Additionally, it allows stores to send events in both the Google Analytics 4 (GA4) format and the Universal Analytics (UA) format, facilitating a seamless transition to GA4.
 
-## New properties to the product schema
+## Product schema properties of GTM 3.x 
 
 To ensure consistency in product information across all areas of the store and effectively track the user's journey, Google Tag Manager 3.x introduces Enhanced Ecommerce properties to the product data schema as events. By adding these properties, stores can include additional information such as product printing, promotion, and sales data, thereby enhancing the overall tracking capabilities and maintaining a unified view of the user's journey throughout the store.
 
