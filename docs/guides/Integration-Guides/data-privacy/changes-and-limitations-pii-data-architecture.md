@@ -19,7 +19,7 @@ In this section, you can learn what VTEX features are available but require adap
 
 ### Promotions - Customer cluster
 
-To use cluster promotions in a way that is compatible with the PII data architecture, you must use the `piiClusterExpressions` field to configure your promotions instead of `clusterExpressions`.
+To set up promotions for specific customer clusters in a way that is compatible with the PII data architecture, you must use the `piiClusterExpressions` field instead of `clusterExpressions` in [Promotions and Taxes API](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#post-/api/rnb/pvt/calculatorconfiguration).
 
 ### OMS
 
