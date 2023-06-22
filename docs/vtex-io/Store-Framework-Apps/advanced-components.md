@@ -142,4 +142,4 @@ linkTo="/docs/apps/vtex.store-video"
 linkTitle="See more"
 />
 
-<Flex>
+</Flex>
