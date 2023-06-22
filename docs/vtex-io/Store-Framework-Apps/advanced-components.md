@@ -1,13 +1,145 @@
 ---
 title: "Advanced components"
 slug: "advanced-components"
+excerpt: "Use our native components to enhance user experience. While not required for your store's operation, advanced components provide additional functionalities to your store."
 hidden: false
 createdAt: "2021-03-17t12:54:38.070Z"
 updatedAt: "2021-10-05t19:31:50.850Z"
 ---
 
-[block:html]
-{
-  "html": "<style>\n    .flexcontainer {\n        display: flex;\n        flex-wrap: wrap;\n        padding-top: 1rem;\n        padding-bottom: 2rem;\n        justify-content: space-between;\n    }\n\n    .flexcontainer-card {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        align-items: flex-start;\n        width: 22rem;\n        margin: 0.5rem;\n        line-height: 1.8;\n    }\n    .see-more {\n        color: rgb(247, 25, 99);\n        text-decoration: none !important;\n    }\n\n    .see-more::after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(247, 25, 99)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(247, 25, 99)'></path></svg>\");\n        display: inline-block;\n        margin-left: 6px;\n        text-decoration: none !important;\n    }\n\n    .see-more:hover:after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(181, 16, 71)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(181, 16, 71)'></path></svg>\");\n        margin-left: 8px;\n    }\n\n    .see-more:hover {\n        color: rgb(181, 16, 71);\n    }\n    .app-description{\n        font-size: 16px;\n    }\n</style>\n\n<p class=\"app-description\">These native components enhance the user experience and, although not mandatory for your store's operation, offer additional benefits.</p>\n\n<div class=\"flexcontainer\">\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Category menu</h3>\n                <div>\n                    Shows the store department list on a customizable menu.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-category-menu\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Iframe</h3>\n                <div>\n                    Renders external iframes on your store.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-iframe\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product availability</h3>\n                <div>\n                    This store component block displays messages to users regarding the product availability in the store.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-product-availability\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product comparison</h3>\n                <div>\n                    Displays a component that compares specifications of pre-selected SKUs.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-product-comparison\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product gifts</h3>\n                <div>\n                    The blocks of this app are designed to showcase all available gifts for a specific product within the Product Description block.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-product-gifts\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product kit</h3>\n                <div>\n                    Displays a list of product kits.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-product-kit\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product recommendation</h3>\n                <div>\n                    Displays a selection of products using recommendation strategies. \n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-recommendation-shelf\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Product specification badge</h3>\n                <div>\n                    Use this component to show badges based on your product specifications on the product page.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-product-specification-badges\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Live Shopping</h3>\n                <div>\n                   Allows businesses to host live broadcasts directly on their store website, increasing selling rates, enhancing user experience, and boosting customer interaction with real-time streaming capabilities.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtexventures-livestreaming\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Reviews and ratings</h3>\n                <div>\n                    Allows customers to submit their reviews and ratings for products and see them while navigating the store.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-reviews-and-ratings\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Sandbox</h3>\n                <div>\n                   Allows building custom HTML content within extension points using an Iframe.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-sandbox\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Seller selector</h3>\n                <div>\n                    Displays the number of sellers available on your marketplace for each product, allowing users to easily compare prices from different sellers.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-seller-selector\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Store drawer</h3>\n                <div>\n                    Designed for mobile devices, this app renders a sliding drawer for the store menu.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-drawer\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Store locator</h3>\n                <div>\n                    Uses the pickup points information to add the Store Locator feature to the store.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-locator\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Store form</h3>\n                <div>\n                    Provides blocks for displaying an user form connected to Master Data through a JSON Schema.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-form\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Store link</h3>\n                <div>\n                    Provides blocks for displaying links in other theme blocks, such as the Product Summary.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-link\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Store media</h3>\n                <div>\n                    Allows you to display image and video assets using a single block.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-media\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Store newsletter</h3>\n                <div>\n                    Provides a set of blocks that you can use to create a newsletter subscription form.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-newsletter\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h3>Video</h3>\n                <div>\n                    Provides blocks to display video assets on your store pages.\n                </div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-store-video\" class=\"see-more\">Learn more</a>\n            <hr></article>\n    </div>\n\n\n</div>\n"
-}
-[/block]
+<Flex>
+
+<WhatsNextCard
+title="Category menu"
+description="Shows the store department list on a customizable menu."
+linkTo="/docs/apps/vtex.category-menu"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Iframe"
+description="Renders external iframes on your store."
+linkTo="/docs/apps/vtex.iframe"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Product availability"
+description="This store component block displays messages to users regarding the product availability in the store."
+linkTo="/docs/apps/vtex.product-availability"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Product comparison"
+description="Displays a component that compares specifications of pre-selected SKUs."
+linkTo="/docs/apps/vtex.product-comparison"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Product gifts"
+description="The blocks of this app are designed to showcase all available gifts for a specific product within the Product Description block."
+linkTo="/docs/apps/vtex.product-gifts"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Product kit"
+description="Displays a list of product kits."
+linkTo="/docs/apps/vtex.product-kit"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Product recommendation"
+description="Displays a selection of products using recommendation strategies."
+linkTo="/docs/apps/vtex.recommendation-shelf"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Product specification badge"
+description="Use this component to show badges based on your product specifications on the product page."
+linkTo="/docs/apps/vtex.product-specification-badges"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Live Shopping"
+description="Allows businesses to host live broadcasts directly on their store website, increasing selling rates, enhancing user experience, and boosting customer interaction with real-time streaming capabilities."
+linkTo="/docs/guides/vtexventures.livestreaming"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Reviews and ratings"
+description="Allows customers to submit their reviews and ratings for products and see them while navigating the store."
+linkTo="/docs/apps/vtex.reviews-and-ratings"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Sandbox"
+description="Allows building custom HTML content within extension points using an Iframe."
+linkTo="/docs/apps/vtex.sandbox"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Seller selector"
+description="Displays the number of sellers available on your marketplace for each product, allowing users to easily compare prices from different sellers."
+linkTo="/docs/apps/vtex.seller-selector"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Store drawer"
+description="Designed for mobile devices, this app renders a sliding drawer for the store menu."
+linkTo="/docs/apps/vtex.store-drawer"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Store locator"
+description="Uses the pickup points information to add the Store Locator feature to the store."
+linkTo="/docs/apps/vtex.store-locator"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Store form"
+description="Provides blocks for displaying an user form connected to Master Data through a JSON Schema."
+linkTo="/docs/apps/vtex.store-form"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Store link"
+description="Provides blocks for displaying links in other theme blocks, such as the Product Summary."
+linkTo="/docs/apps/vtex.store-link"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Store media"
+description="Allows you to display image and video assets using a single block."
+linkTo="/docs/apps/vtex.store-media"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Store newsletter"
+description="Provides a set of blocks that you can use to create a newsletter subscription form."
+linkTo="/docs/apps/vtex.store-newsletter"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Video"
+description="Provides blocks to display video assets on your store pages."
+linkTo="/docs/apps/vtex.store-video"
+linkTitle="See more"
+/>
+
+<Flex>
