@@ -46,7 +46,7 @@ In order to implement reCAPTCHA validation in a mobile app that places orders, f
 
 - `recaptchaKeys`: array of objects with keys information.
 - `clientId`: ID of your reCAPTCHA key.
-- `clientSecret`: reCAPTCHA secret key.
+- `clientSecret`: API key.
 - `projectId`: ID of your Google Cloud project. If you do not have your project ID at hand, check the Google Cloud documentation to learn how to [locate your project ID](https://support.google.com/googleapi/answer/7014113)
 - `label`: use this field to identify your key. We recommend that you indicate the mobile platform in which you intend to use the key (e.g., `android-001`).
 - `score`: [reCAPTCHA v3 score](https://developers.vtex.com/docs/guides/recaptcha#recaptcha-v3-score) (optional).
