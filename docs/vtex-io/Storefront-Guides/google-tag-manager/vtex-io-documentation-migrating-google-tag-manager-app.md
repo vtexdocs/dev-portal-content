@@ -20,7 +20,7 @@ To ensure consistency in product information across all areas of the store and e
 | ---------------- | ------------------ | --------------------------------------------------------------------------- |
 | `id`             | Updated property   | Product ID - Previously SKU ID.                                             |
 | `variant`        | Updated property   | SKU ID - Previously SKU Name. The variant of the product, e.g., Rebel pink. |
-| `name`           | Renewed property   | Product Name - Previously Product Name or SKU Name.                         |
+| `name`           | Updated property   | Product Name - Previously Product Name or SKU Name.                         |
 | `quantity`       | Unchanged property | Product quantity                                                            |
 | `price`          | Unchanged property | Product price.                                                              |
 | `category`       | Unchanged property | Product category, e.g., Apparel.                                            |
