@@ -40,6 +40,6 @@ For more information about custom dimensions and Enhanced Ecommerce, refer to [C
  To migrate to the app's 3.x version, please follow these guides:
 
 1. [Create a Google Analytics 4 property](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-google-tag-manager#create-a-google-analytics-4-property): Refer to the "Create a Google Analytics 4 property" section and follow the instructions provided.
-2. Once you have completed the setup, proceed to the  [Setting up Google Tag Manager documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager) documentation for instructions on configuring events, tags, and triggers specifically for GA4.
+2. Once you have completed the setup, proceed to the [Setting up Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-tag-manager) guide for instructions on configuring events, tags, and triggers specifically for GA4.
 
 By following these steps, you'll be able to smoothly migrate to the latest version of the app and set up events, tags, and triggers for both GA4 and UA formats.
