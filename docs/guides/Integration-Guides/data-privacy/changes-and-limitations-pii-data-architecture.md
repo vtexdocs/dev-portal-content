@@ -15,6 +15,12 @@ In this guide, you can learn about the changes and limitations you must be aware
 
 ## Adaptation requirements for feature implementation
 
+In this section, you can learn what VTEX features are available but require adaptation for accounts using the PII data architecture.
+
+### Promotions - Customer cluster
+
+To use cluster promotions in a way that is compatible with the PII data architecture, you must use the `piiClusterExpressions` field to configure your promotions instead of `clusterExpressions`.
+
 ### OMS
 
 There are no longer restrictions to the use of these OMS features for PII data architecture accounts:
@@ -71,12 +77,6 @@ This is a legacy integration that was deprecated. VTEX will disable it.
 #### CL
 
 Currently, Master Data custom CL fields are not supported.
-
-
-### Promotions - Customer cluster
-
-This feature is not available at this moment. The **Customer cluster** field will be disabled when creating a promotion, which means it will not be possible to apply [promotions to specific customer clusters](https://help.vtex.com/en/tutorial/creating-promotion-for-a-customer-cluster--tutorials_342), since cluster segmentation is based on PII stored in CL entity fields.
-
 
 ### Pricing - Price tables
 
