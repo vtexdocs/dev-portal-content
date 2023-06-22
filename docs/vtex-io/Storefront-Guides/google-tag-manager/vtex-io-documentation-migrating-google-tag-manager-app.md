@@ -19,7 +19,7 @@ To ensure consistency in product information across all areas of the store and e
 | GTM 3.x property | Type               | Description                                                                 |
 | ---------------- | ------------------ | --------------------------------------------------------------------------- |
 | `id`             | Updated property   | Product ID - Previously SKU ID.                                             |
-| `variant`        | Renewed property   | SKU ID - Previously SKU Name. The variant of the product, e.g., Rebel pink. |
+| `variant`        | Updated property   | SKU ID - Previously SKU Name. The variant of the product, e.g., Rebel pink. |
 | `name`           | Renewed property   | Product Name - Previously Product Name or SKU Name.                         |
 | `quantity`       | Unchanged property | Product quantity                                                            |
 | `price`          | Unchanged property | Product price.                                                              |
