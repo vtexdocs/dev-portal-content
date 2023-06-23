@@ -1,0 +1,98 @@
+---
+title: '4. FastStore CLI'
+sidebar_label: 'Getting Started'
+---
+
+import { Callout, Tab, Tabs } from 'nextra-theme-docs'
+
+<header>
+
+# FastStore CLI
+
+</header>
+
+The FastStore Command Line Interface (CLI) is the main pre-configured tool for initializing, building and developing FastStore projects.
+
+Also the CLI is the responsible on keeping the stores up-to-date with the [`@faststore/core`](/docs/getting-started/3-project-structure#faststorecore) package and enables the cloud platform to understand the FastStore project.
+
+---
+
+## Runnig FastStore CLI on the project
+
+The CLI is a dependency in the `package.json` file of the FastStore project, so once you run `yarn install` during the [set up of the project](/docs/getting-started/2-setting-up-the-project) you can start using it on the project.
+
+### Commands
+
+#### `dev`
+
+Starts the project in the development environment and usally servers it at `http://localhost:3000`. It allows you to make changes to the project and see the results in real-time locally on your machine without affecting the production environment.
+
+```bash
+  yarn dev
+```
+
+#### `build`
+
+Generates a store in the production environment by compiling the project and optimizing it for production usage.
+
+```bash
+  yarn build
+```
+
+#### `start`
+
+Executes a Next.js project in the root directory and usally servers it at `http://localhost:3000`.
+
+```bash
+  yarn start
+```
+
+#### `cms-sync`
+
+Sync changes in the cms folder with the VTEX Headless CMS app.
+
+```bash
+  yarn cms-sync
+```
+
+---
+
+## Installing FastStore CLI globally using `npm`
+
+Installing the CLI via `npm` allows you to use its commands in you machine. To install [`@faststore/cli`](https://www.npmjs.com/package/@faststore/cli) package, run the following in the terminal:
+
+```bash
+  npm install -g @faststore/cli
+```
+
+### Commands
+
+#### `dev`
+
+```bash
+  yarn faststore dev
+```
+
+#### `build`
+
+```bash
+  yarn faststore build
+```
+
+#### `start`
+
+```bash
+  yarn faststore start
+```
+
+#### `cms-sync`
+
+```bash
+  yarn faststore cms-sync
+```
+
+#### `help`
+
+```bash
+  yarn faststore help [COMMAND] [-n]
+```
