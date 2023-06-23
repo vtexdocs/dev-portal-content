@@ -3,7 +3,7 @@ title: "My store is slow or unavailable"
 slug: "my-store-is-slow-or-unavailable"
 hidden: false
 createdAt: "2023-05-11T10:17:18.615Z"
-updatedAt: "2023-05-11T10:17:18.615Z"
+updatedAt: "2023-07-20T10:10:00.615Z"
 ---
 
 If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons.
