@@ -56,4 +56,4 @@ vtex install {appvendor}.{appname}@{appversion}
 
 From this point onwards, you won't be able to link apps or make any code changes in your app's current version. Hence, if you need to make any modifications to your app, you will need to retreat and work on it in a development workspace.
 
-️>⚠️ If you are developing a new store theme major, follow the steps in the [Migrating CMS settings after a theme major update](/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) guide before proceeding any further. Otherwise, you may lose page templates set up via the Admin.
+> ⚠️ If you are developing a new store theme major, follow the steps in the [Migrating CMS settings after a theme major update](/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) guide before proceeding any further. Otherwise, you may lose page templates set up via the Admin.
