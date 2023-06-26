@@ -8,7 +8,7 @@ category: "App Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-deploying-the-app-stable-version"
 ---
-After [releasing](/docs/guides/vtex-io-documentation-releasing-a-new-app-version) an app version, you must publish your app so that you can install it in certain accounts to perform A/B tests and validate your changes. In other words, you must turn your app into a **candidate version**.
+After [releasing](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) an app version, you must publish your app so that you can install it in certain accounts to perform A/B tests and validate your changes. In other words, you must turn your app into a **candidate version**.
 
 A candidate version of an app is a build distributed internally for **testing purposes only**. It's intended to check, before deployment, whether any critical problems have gone undetected earlier during development. Ideally, there shouldn't be many differences between your app's last candidate version and its final build.
 
