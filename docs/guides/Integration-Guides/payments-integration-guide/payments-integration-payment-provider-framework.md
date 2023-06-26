@@ -6,8 +6,6 @@ createdAt: "2022-05-19T16:21:58.633Z"
 updatedAt: "2022-05-19T17:46:05.176Z"
 ---
 
->⚠️ This feature is in beta, which means that we are working to improve it. We do not recommend the use of this Beta version of PPF for connectors related to stores with a rollout date close (less than 3 months).
-
 Payment Provider Framework (PPF) is an alternative way to develop payment connectors for your integration through VTEX IO. Since the development is based on a boilerplate of an IO app, a lot of the work is already done to implement the needed feature including the [API routes](https://developers.vtex.com/docs/guides/payment-provider-protocol-api-overview), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). With PPF, developers also do not need to worry about hosting the connector since it is hosted on the IO infrastructure.
 
 >⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
