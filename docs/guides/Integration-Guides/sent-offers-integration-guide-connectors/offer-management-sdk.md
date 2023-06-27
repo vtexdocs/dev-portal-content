@@ -8,6 +8,15 @@ updatedAt: "2022-07-06T14:38:05.752Z"
 [block:callout]
 {
   "type": "info",
+  "body": "To evolve your experience in synchronizing and updating offers, the VTEX team is developing a new functionality that will replace the current module **Offer Management**. As a result, the module will not receive new updates or maintenance.
+  For connectors and marketplaces already integrated into the module, please contact the development team by email [taissa.araujo@vtex.com.br](taissa.araujo@vtex.com.br).
+  For connectors interested in starting the integration, we ask you to wait for the release of the new module, as soon as it is available we will announce it to all customers through the [dev portal](https://developers.vtex.com/updates/release-notes) and [help VTEX](https://help.vtex.com/pt/en/announcements)."
+}
+[/block]
+
+[block:callout]
+{
+  "type": "info",
   "body": "For the guide based on APIs, see [Offer Management Integration Guide](https://developers.vtex.com/vtex-rest-api/docs/sent-offers-integration-guide-connectors)."
 }
 [/block]
