@@ -76,7 +76,8 @@ jobs:
                   if (!slug) {
                     output += `* Aren't you forgetting the slug property in the frontmatter of \`${file}\`?\n`
                   } else if (!paths[slug]) {
-                    output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file?\n`
+                    output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file? `
+                    output += `Maybe you can find it in https://developers.vtex.com/docs/guides/${slug}\n`
                   } else {
                     output += `* https://developers.vtex.com/${paths[slug]}\n`
                   }
