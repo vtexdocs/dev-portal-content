@@ -14,7 +14,7 @@ B2B commerce relations are usually complex and often require a customized servic
 
 The **B2B Organizations** app enables you to group B2B users into organizations. You can assign specific payment methods, price tables, and product collections to each organization, allowing all organization users to share the same commercial conditions. Additionally, each organization can be further segmented into one or more cost centers, each with its own shipping addresses.
 
-## Before you begin
+## Before you start
 
 First, make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed in your computer.
 
@@ -26,11 +26,9 @@ If you want to manage roles and permissions in the VTEX Admin, you must install 
 
 You can install the **B2B Organizations** app by running the command `vtex install vtex.b2b-organizations` in your terminal, using [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
-## Configuring user widget
+## User widget configuration
 
 To enable the [user widget](#user-widget) in your storefront, this app provides a `b2b-user-widget` block that you can add to the account store theme. We recommend adding it to the store header, as shown below.
-
- 
 
 <img src="https://user-images.githubusercontent.com/77292838/159766647-a8d22a55-61da-4169-a1be-1072a4ca8d73.png"></img>
 
@@ -74,7 +72,9 @@ Follow the instructions below to display the user widget.
 
 This is the store header for only one associated organization: <img src="https://i.imgur.com/5yXFU6y.png"></img>
 
-This is the store header for more than one associated organization: <img src="https://i.imgur.com/ScQtfIz.png"></img>
+This is the store header for more than one associated organization:
+
+<img src="https://i.imgur.com/ScQtfIz.png"></img>
 
 ### `b2b-user-widget`
 
@@ -193,8 +193,6 @@ Once the customer completes this step, B2B store admins can review the organizat
 
 On this page, admins can view a list of all the organization requests placed in their store.
 
- 
-
 <img src="https://user-images.githubusercontent.com/77292838/159766650-d989a5bc-a33b-4fee-9e60-76f26567b067.png" alt="02-organization-requests"></img>
 
 Each organization within the system can be assigned one of the following statuses: **pending**, **approved** or **declined**. Pending requests are the ones awaiting review.
@@ -262,7 +260,7 @@ On the **Organizations Details** page, you can view and edit the following infor
 - [Collections](#collections)
 - [Payment terms](#payment-terms)
 - [Price tables](#price-tables)
-- [Users ](#users)
+- [Users](#users)
 
 You can access this page by going to **Account Settings** > **B2B Organizations & Cost Centers** > **Organizations** in the VTEX Admin and clicking the organization whose details you want to view, or <img src="https://user-images.githubusercontent.com/77292838/159766633-dfcb818f-6bd7-4cd0-92dc-9c682fb50d04.png" width="10" alt-text="00-ellipsis" /> > `View`.
 
@@ -318,6 +316,7 @@ This will lead you to the **Cost Center Details** page, where you can:
 <img src="https://user-images.githubusercontent.com/77292838/159766691-4557a032-a38c-4abb-a5a1-29019b833ad2.png" alt="09-cost-center-details"></img>
 
 The **Business Document field** is optional and can be utilized to store business identifiers such as Tax ID, VAT ID, CNPJ, or similar identification numbers. If a Business Document is specified in a user's cost center, it will be automatically applied as the `corporateDocument` in the user's profile. Additionally, this business document will be attached to any orders placed by the user.
+
 > ⚠️ Please note that the shipping addresses assigned to a cost center will only be accessible to users belonging to that specific cost center during the checkout process if you have installed [B2B Checkout Settings](https://developers.vtex.com/docs/guides/vtex-b2b-checkout-settings). Other addresses will not be available. Therefore, each cost center must have at least one shipping address.
 
 To edit or delete an existing address, click <img src="https://user-images.githubusercontent.com/77292838/159766633-dfcb818f-6bd7-4cd0-92dc-9c682fb50d04.png" width="10" alt-text="00-ellipsis" /> next to it and select **Edit** or **Delete**.
