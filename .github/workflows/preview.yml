@@ -40,8 +40,6 @@ jobs:
 
             navigation.navbar.forEach(({ slugPrefix, categories }) => slugsToPaths(slugPrefix.endsWith('/') ? slugPrefix : `${slugPrefix}/`, categories))
             core.setOutput('slugs-to-paths', JSON.stringify(paths))
-      - name: Install front-matter
-        run: npm install front-matter
       - name: Get preview links
         id: get-preview-links
         uses: actions/github-script@v6
@@ -51,9 +49,6 @@ jobs:
           PATHS: ${{ steps.map-slugs-to-paths.outputs.slugs-to-paths }}
         with:
           script: |
-            const fs = require('fs')
-            const frontmatter = require('front-matter')
-
             const branch = process.env.BRANCH
             const paths = JSON.parse(process.env.PATHS)
             const files = process.env.FILES.split(' ')
@@ -68,19 +63,12 @@ jobs:
               output += 'You can now access the edited pages with the following URLs:\n'
 
               for (const file of files) {
-                const fileContent = fs.readFileSync(file, { encoding: 'utf8', flag: 'r' })
-                if (!frontmatter.test(fileContent)) {
-                  output += `* Aren't you forgetting the frontmatter in \`${file}\`?\n`
+                const slug = file.split('/').pop().split('.')[0]
+                if (!paths[slug]) {
+                  output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file? `
+                  output += `Maybe you can find it in https://developers.vtex.com/docs/guides/${slug}\n`
                 } else {
-                  const { slug } = frontmatter(fileContent).attributes
-                  if (!slug) {
-                    output += `* Aren't you forgetting the slug property in the frontmatter of \`${file}\`?\n`
-                  } else if (!paths[slug]) {
-                    output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file? `
-                    output += `Maybe you can find it in https://developers.vtex.com/docs/guides/${slug}\n`
-                  } else {
-                    output += `* https://developers.vtex.com/${paths[slug]}\n`
-                  }
+                  output += `* https://developers.vtex.com/${paths[slug]}\n`
                 }
               }
             }
