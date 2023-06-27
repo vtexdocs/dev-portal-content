@@ -6,9 +6,9 @@ createdAt: "2022-09-12t20:50:49.238z"
 updatedAt: "2022-09-15t18:56:45.172z"
 ---
 
-> ⚠️ VTEX has two search options: Legacy Search and Intelligent Search. This article is about Legacy Search. To learn more about the Intelligent Search application, see [this article series](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb).
+> ⚠️ VTEX has two search options: Legacy Search and Intelligent Search. This article is about Legacy Search. To learn more about the Intelligent Search application, see [this track](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb).
 
-When creating a search on VTEX, there are different options for URLs. The URLs of departments and categories are formatted as follows:
+When making a search on VTEX, there are different options for URLs. The URLs of departments and categories are formatted as follows:
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-0.png)
 
@@ -28,8 +28,8 @@ The browsing filters also have specific URLs defined by certain parameters in th
 
 ## Default 1
 
-| URL                                                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| URL |
+| - |
 | `www.store.com/busca/?fq=C:[DepartmentId/CategoryId/SubcategoryId]&fq=B:[BrandId]&fq=H:[CollectionId]&fq=specfct[ProductFieldId/Sku]:[SearchValue]&ft=[SearchTerm]` |
 
 Where:
@@ -41,7 +41,7 @@ Where:
 - **B:[BrandId]:** Shows products from a specific brand based on the indicated ID. This code is shown at the end of the URL, on the page used for changing the brand, in**Products**>**Catalog**>**Brands**. ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-3.png)
 - **H:[CollectionId]**: Shows products of a specific collection based on the indicated ID. This code is indicated when editing a collection in**Store setup** > **CMS** > **Layout** > **CMS** > **Product Clusters (Collections)**. ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-4.png)
 
-> ⚠️ There are two ways to configure collections: through the CMS or the Collections module (beta). This article explains how to [configure collections through the CMS](https://help.vtex.com/en/tutorial/adding-collections-cms--2YBy6P6X0NFRpkD2ZBxF6L).
+> ⚠️ There are two ways to configure collections: through the CMS or the Collections module (Beta). This article explains how to [configure collections through the CMS](https://help.vtex.com/en/tutorial/adding-collections-cms--2YBy6P6X0NFRpkD2ZBxF6L).
 
 - **spec_fct_[ProductFieldId/Sku]:[SearchValue]:** Shows products whose product or SKU field value, with the indicated ID, is equal to the entered value. This code can be found on the page for changing a product/SKU field at the end of the URL.
 
@@ -57,7 +57,7 @@ www.store.com.br/busca/?fq=spec_fct_1:110v
 
 In the example above, all products whose **Voltage**(ID **1**) field is **110v** would be displayed.
 
-- **ft=[SearchTerm]**: This parameter represents a full-text search (*Example: searching a specific term in the search field*) of the specified term based on the other indicated parameters.
+- **ft=[SearchTerm]**: This parameter represents a full-text search (for example, searching a specific term in the search field) of the specified term based on the other indicated parameters.
 
 The parameters above can be matched in many ways. However, note that the search order will follow the order of the indicated parameters. In other words, when you use a category parameter followed by a brand parameter, the category will be searched first. Then, a second search will be made for the brand among the category results.
 
