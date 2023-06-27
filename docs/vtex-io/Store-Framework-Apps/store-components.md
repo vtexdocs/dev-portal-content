@@ -91,6 +91,7 @@ title="Product SKU attributes"
 description= "Displays a list of the current SKU variations for a product."
 linkTo="/docs/apps/vtex.store-components/productskuattributes"
 linkTitle="See more
+/>
 
 <WhatNextCard
 title="Search bar"
