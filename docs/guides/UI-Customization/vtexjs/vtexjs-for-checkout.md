@@ -99,7 +99,7 @@ Sends an attachment to the current orderForm. (An attachment is a section.)
 
 This makes it possible to update this section by sending new information, making changes, or removing something.
 
-Caution: You must send the complete attachment. See examples.
+>⚠️ You must send the complete attachment. See examples.
 
 Read the [OrderForm documentation](https://developers.vtex.com/docs/guides/orderform-fields) to learn more about sections.
 
@@ -168,8 +168,11 @@ vtexjs.checkout
 
 ## addToCart(items, expectedOrderFormSections, salesChannel)
 
-Add items to the orderForm. [block:callout]
-{ "type": "warning", "body": "This method does not automatically apply for promotions through UTM. To add promotions using UTM, do a `sendAttachment` of `marketingData` with the required information." } [/block] An item to be added is necessarily composed of: `id`, `quantity`, and `seller`. The `id` property can be obtained from the [Catalog](https://developers.vtex.com/vtex-rest-api/docs/vtexjs-for-catalog) by looking at the ItemId of the item in the product item array.
+Add items to the orderForm.
+
+>⚠️ This method does not automatically apply to promotions through UTM. To add promotions using UTM, do a `sendAttachment` of `marketingData` with the required information.
+
+An item to be added is necessarily composed of: `id`, `quantity`, and `seller`. The `id` property can be obtained from the [Catalog](https://developers.vtex.com/vtex-rest-api/docs/vtexjs-for-catalog) by looking at the ItemId of the item in the product item array.
 
 Items that are already in the orderForm will remain unchanged.
 
