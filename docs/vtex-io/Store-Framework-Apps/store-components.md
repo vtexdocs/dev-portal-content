@@ -1,8 +1,8 @@
 ---
 title: "Store Components"
 slug: "store-components"
-hidden: false
 excerpt: "Store Components is a collection of components that can be used to create or extend other VTEX apps."
+hidden: false
 createdAt: "2021-10-25T17:13:45.960Z"
 updatedAt: "2023-06-27T12:51:19.739Z"
 ---
