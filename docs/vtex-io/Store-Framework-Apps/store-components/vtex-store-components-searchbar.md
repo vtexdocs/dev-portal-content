@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-06-03T16:04:30.385Z"
 updatedAt: "2022-11-22T18:39:23.161Z"
 ---
-The `search-bar` component shows a search bar with autocomplete options and displays the matching products as well. This component can be imported and used by any VTEX App.
+The `search-bar` component shows a search bar with autocomplete options and displays the matching products. This component can be imported and used by any VTEX App.
 
 ![search-bar](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-searchbar-0.png)
 
