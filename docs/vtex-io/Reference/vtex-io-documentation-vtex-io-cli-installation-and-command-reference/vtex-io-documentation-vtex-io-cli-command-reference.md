@@ -10,6 +10,7 @@ This documentation is a reference for:
 
 - [VTEX IO CLI default commands](#default-commands)
 - [VTEX plugins commands](#plugins)
+
 > ⚠️ VTEX IO CLI 3.x now has a plugin-based architecture, which means that certain commands from earlier versions are now implemented as plugins.  These plugins include: `add`, `autoupdate`, `config`, `debug`, `infra`, `lighthouse`, `logs`, `redirects`, `settings`, `submit`, `support`, `test`, and `url`. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
 
 ## Default commands
