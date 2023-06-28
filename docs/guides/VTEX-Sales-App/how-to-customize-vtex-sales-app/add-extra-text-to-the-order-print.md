@@ -6,7 +6,7 @@ createdAt: "2021-08-11T19:20:47.780Z"
 updatedAt: "2022-02-24T20:40:37.713Z"
 ---
 
-By default, the order summary print does not contain any custom text. If you want to add extra text to the order print, it is necessary to edit the file `checkout-instore-custom.js`. Check out the [How to customize inStore](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-instore) guide for further information on how to access this file.
+By default, the order summary print does not contain any custom text. If you want to add extra text to the order print, it is necessary to edit the file `checkout-instore-custom.js`. Check out the [How to customize VTEX Sales App](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-vtex-sales-app) guide for further information on how to access this file.
 
 ## Edit the `checkout-instore-custom.js` file
 
@@ -22,7 +22,7 @@ window.INSTORE_CONFIG = {
 
 After making changes in the code, make sure you press the `Save` button.
 
-Once you reload inStore, whenever a sales associate prints an order, the text you configured will appear on the order summary printout.
+Once you reload VTEX Sales App, whenever a sales associate prints an order, the text you configured will appear on the order summary printout.
 
 ## Example
 
