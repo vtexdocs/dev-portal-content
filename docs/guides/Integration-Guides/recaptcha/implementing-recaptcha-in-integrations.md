@@ -8,9 +8,6 @@ updatedAt: "2023-06-16T10:20:43.993Z"
 
 If your store uses integrations to place orders, such as mobile apps or proprietary web-based storefronts, follow the steps below to implement [reCAPTCHA validation](https://developers.vtex.com/docs/guides/recaptcha).
 
->⚠️ You must have a [Beta environment](https://help.vtex.com/pt/tutorial/acessar-o-ambiente-pelo-dominio-myvtex-com--3BHM289568gcSwk2O80Asu) and use [Checkout V6](https://help.vtex.com/pt/tutorial/ativar-o-checkout-v6--7qVqv3ptRvpVVplrvg8ruH) to test the feature.
-> ℹ️️ In order to simulate an untrustworthy session, try accessing the shopping cart’s link through an anonymous browser window. reCAPTCHA validation will probably be required.
-
 In order to have your implementation validate users with reCAPTCHA, you must first [obtain the appropriate reCAPTCHA key](#getting-the-recaptcha-key) and then use that key to [integrate reCAPTCHA on your storefront](#integrating-recaptcha-on-your-storefront). Once the shopper correctly solves the validation, the integration receives a token that must be [sent in the request that places the order](#final-validation).
 
 >ℹ️ The implementation process may vary depending on whether you are using a mobile or web-based storefront. More details below.
