@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-5-writingtheheaderandbodyscripts"
 hidden: false
 category: "App Development"
 seeAlso:
-  - "/docs/guides/vtex-io-documentation-6-listeningtostoreevents"
+- "/docs/guides/vtex-io-documentation-6-listeningtostoreevents"
 createdAt: "2020-11-03T18:19:23.999Z"
 updatedAt: "2022-12-13T20:17:44.369Z"
 ---
