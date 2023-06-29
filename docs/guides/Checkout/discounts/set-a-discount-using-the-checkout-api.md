@@ -10,23 +10,34 @@ One of the most used customer attraction strategies in ecommerce is applying a d
 
 This Checkout configuration sets the discount price and links it to a payment method. To configure, follow the steps below:
 
-1. Use the [Checkout configuration API request](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) to enter the desired payment method ID in the `paymentSystemToCheckFirstInstallment` property.
+1. Use the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint to enter the desired payment method ID in the `paymentSystemToCheckFirstInstallment` property.
 
-2. To get the payment method ID, access Settings in the **Payments** module. The ID of the condition you want to use is on the right side of the screen in the **Payments Settings** > **Payments Conditions** section.
+2. To get the payment method ID, access Settings in the **Payments** module. The ID of the condition you want to use is on the right side of the screen in the **Payments Settings > Payments Conditions** section.
 
 ![Payment condition](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/set-a-discount-using-the-checkout-api-0.png)
 
-3. After updating `paymentSystemToCheckFirstInstallment`, you can run the [Do OrderForm Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) endpoint. Thus, you will be able to verify that the chosen payment method has been updated with the discount in the cash payment option in the `installmentOptions` section, within `paymentData`.
+3. After updating `paymentSystemToCheckFirstInstallment`, you can [Simulate a shopping cart](https://developers.vtex.com/docs/guides/simulate-a-shopping-cart). Thus, you will be able to verify that the chosen payment method has been updated with the discount in the cash payment option in the `installmentOptions` section, within `paymentData`.
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "\"paymentData\":{\n    \"installmentOptions\":[\n   \t {\n   \t\t \"paymentSystem\":\"6\",\n   \t\t \"paymentName\":\"Boleto Bancário\",\n   \t\t \"paymentGroupName\":\"bankInvoicePaymentGroup\",\n   \t\t \"value\":10000,\n   \t\t \"installments\":[\n   \t\t\t {\n   \t\t\t\t \"count\":1,\n   \t\t\t\t \"hasInterestRate\":false,\n   \t\t\t\t \"interestRate\":0,\n   \t\t\t\t \"value\":9000,\n   \t\t\t\t \"total\":9000,\n   \t\t\t }\n   \t\t ]\n   \t }\n    ]\n}",
-      "language": "json"
-    }
+```json
+"paymentData":{
+    "installmentOptions":[
+   	 {
+   		 "paymentSystem":"6",
+   		 "paymentName":"Boleto Bancário",
+   		 "paymentGroupName":"bankInvoicePaymentGroup",
+   		 "value":10000,
+   		 "installments":[
+   			 {
+   				 "count":1,
+   				 "hasInterestRate":false,
+   				 "interestRate":0,
+   				 "value":9000,
+   				 "total":9000,
+   			 }
+   		]
+   	}
   ]
 }
-[/block]
+```
 
 For more information, check [Configuring a discount for orders prepaid in full](https://help.vtex.com/en/tutorial/configurar-desconto-de-preco-a-vista--7Lfcj9Wb5dpYfA2gKkACIt).

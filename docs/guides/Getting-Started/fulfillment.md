@@ -1,14 +1,14 @@
 ---
-title: "Fulfillment"
+title: "Fulfillment and Logistics"
 slug: "fulfillment"
 hidden: false
 createdAt: "2023-01-11T13:13:50.000Z"
-updatedAt: "2023-02-27T13:13:50.000Z"
+updatedAt: "2023-04-26T13:13:50.000Z"
 ---
 
 > Help us improve our documentation! Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8)!
 
-[Fulfillment](https://help.vtex.com/en/tutorial/fulfillment-logistics-vtex--53udnvI5eBy8DKo8FOjMoP) is the process of storing merchandise and receiving, managing, packing and shipping orders. It starts when a shopper buys a product and ends when the life cycle of the order is complete with the shopper receiving the purchase.
+[Fulfillment](https://help.vtex.com/en/tutorial/fulfillment-logistics-vtex--53udnvI5eBy8DKo8FOjMoP) is the logistic process of storing merchandise and receiving, managing, packing and shipping orders. It starts when a shopper buys a product and ends when the life cycle of the order is complete with the shopper receiving the purchase.
 
 This overview article goes over what you can accomplish with VTEX logistics’ capabilities, like the registration and control of your inventory, shipping rates management, items availability control, tracking deliveries, and more.
 
@@ -148,7 +148,7 @@ VTEX offers different solutions for your logistic process according to your busi
 
 [Reservation](https://help.vtex.com/en/tutorial/how-does-reservation-work--tutorials_92) is the solution that prevents the same item from being sold more than once. After the shopper completes the purchase, the status of the purchased item changes from `Available` to `Reserved` in the [inventory management](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139).
 
-* [POST - Create reservation](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/inventory/reservationsn)
+* [POST - Create reservation](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/inventory/reservations)
 * [GET - List reservation by ID](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/reservations/-reservationId-)
 * [GET - List reservation by warehouse and SKU](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/inventory/reservations/-warehouseId-/-skuId-)
 * [POST - Confirm reservation](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/inventory/reservations/-reservationId-/confirm)
@@ -209,7 +209,7 @@ Create carriers’ freight values and retrieve information about them.
 
 ### VTEX Shipping Network (independent App)
 
-[VTEX Shipping Network](https://developers.vtex.com/vtex-rest-api/reference/vtex-shipping-network-api-overview) is an app that connects your store with carriers to deliver orders at better freight costs and with optimized logistic operation. Currently, the solution is available exclusively in Brazil.
+[VTEX Shipping Network](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api) is an app that connects your store with carriers to deliver orders at better freight costs and with optimized logistic operation. Currently, the solution is available exclusively in Brazil.
 
 With VTEX Shipping Network you coordinate the actions of:
 
@@ -221,17 +221,17 @@ With VTEX Shipping Network you coordinate the actions of:
 
 The endpoint below notifies the carrier of the dispatched package information, including fiscal information, and a contact email.
 
-* [POST - Notify Carrier with App](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/-app_name-/v-app_version-/-account-/-workspace-/notify)
+* [POST - Notify Carrier with App](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/notify)
 
 #### Tracking
 
 The endpoint below updates tracking events for pending deliveries using a list of tracking codes.
 
-* [POST - Tracking Events with App](https://developers.vtex.com/docs/api-reference/pricing-hub#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
+* [POST - Tracking Events with App](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
 
 ### VTEX Tracking (independent App)
 
-[VTEX Tracking](https://vtex.com/br-pt/tracking/) is an app that enables the merchant to control and manage deliveries in real-time, having visibility of indicators like the driver's location and order delivery status. Shoppers can also keep up with deliveries in real-time. Currently, the solution is available exclusively in Brazil.
+[VTEX Tracking](https://vtex.com/br-pt/vtex-tracking/) is an app that enables the merchant to control and manage deliveries in real-time, having visibility of indicators like the driver's location and order delivery status. Shoppers can also keep up with deliveries in real-time. Currently, the solution is available exclusively in Brazil.
 
 >❗ We strongly recommend that a call to a VTEX Tracking GET endpoint is made only once every 6 hours. Retrieving data from the same endpoint more than once during a 6-hour window represents a load to our API that will slow down the overall usage of systems.
 

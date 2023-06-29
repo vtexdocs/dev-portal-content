@@ -6,27 +6,28 @@ createdAt: "2019-11-26T19:13:15.434Z"
 updatedAt: "2022-09-27T20:40:28.033Z"
 hidePaginationPrevious: true
 ---
-Welcome! VTEX is a headless commerce platform that is highly customizable and constantly evolving. 
 
-The video below illustrates how our clients our currently using VTEX to address their business needs:
+Welcome! VTEX is a headless commerce platform that is highly customizable and constantly evolving to meet your business needs.
+
+In the video below, you can see how our clients are currently using VTEX to address their specific requirements:
 
 <YoutubeFrame embedId="JgkrlaF52WQ"/>
 
 ## Getting started
 
-Check out our introductory content to give your first steps of our Rest API capabilities.
+We recommend exploring our introductory content that covers the capabilities of our REST API.
 
-> ℹ️ You're now in our Developer Portal. If you wish to see business-focused content, and documentation about our web platform, check out our Help Center .
+> ℹ️ Please note that you are in our Developer Portal. If you are looking for business-focused content and documentation about our platform, visit our Help Center.
 
 ## Getting to know our core services
 
-Leverage your ecommerce in our Headless architecture, by learning what you can accomplish with each microsservice in VTEX.
+Leverage your ecommerce operation with our headless architecture by learning what you can accomplish with each microservice on the VTEX platform.
 
 <OverviewCard icon='Platform'>
 
 ### Platform overview
 
-Understand our platform's architecture and data orchestration through our Platform Overview article.
+Understand the VTEX platform's architecture and data orchestration in our Platform Overview article.
 
 - [Platform overview](https://developers.vtex.com/vtex-rest-api/docs/getting-started-platform-overview)
 
@@ -36,17 +37,13 @@ Understand our platform's architecture and data orchestration through our Platfo
 
 ### REST API
 
-See how to use our APIs to integrate third-party solutions to a single platform for all experiences.
+See how to use our APIs to integrate third-party solutions with a single platform for all experiences.
 
 - [List of REST APIs](https://developers.vtex.com/vtex-rest-api/docs/getting-started-list-of-rest-apis)
 - [Authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication)
 - [Making your first request](https://developers.vtex.com/vtex-rest-api/docs/getting-started-making-your-first-request)
 
 </OverviewCard>
-
-## Getting to know our core services
-
-Leverage your ecommerce in our Headless architecture, by learning what you can accomplish with each microsservice in VTEX.
 
 Our API Guides and Reference cover VTEX Core Services, as illustrated in the image below.
 
@@ -56,7 +53,7 @@ Our API Guides and Reference cover VTEX Core Services, as illustrated in the ima
 
 ### [Catalog](https://developers.vtex.com/docs/guides/catalog-overview)
 
-Manage your store's categories, brands, products, SKUs and specifications.
+Manage your store's categories, brands, products, SKUs, and specifications effectively.
 
 </OverviewCard>
 
@@ -64,7 +61,7 @@ Manage your store's categories, brands, products, SKUs and specifications.
 
 ### [Checkout](https://developers.vtex.com/docs/guides/checkout-overview)
 
-Access and manipulate items data of a checkout cart.
+Access and manipulate checkout cart item data seamlessly.
 
 </OverviewCard>
 
@@ -80,7 +77,7 @@ Receive, process, and manage every order through our APIs.
 
 ### [Fulfillment](https://developers.vtex.com/docs/guides/fulfillment)
 
-Manage all store logistics data by accessing warehouses, docks, pick up points, carriers and shipping rates. Get or update the inventory of each SKU.
+Manage all store logistics data by accessing warehouses, loading docks, pickup points, carriers, shipping rates, and inventory updates for each SKU.  
 
 </OverviewCard>
 
@@ -98,7 +95,7 @@ Get payment data and process your transactions.
 
 ### [Promotions](https://developers.vtex.com/docs/guides/promotions-overview)
 
-Create and manage promotions and coupons to scale your sales.
+Boost your sales by creating and managing promotions and coupons.
 
 </OverviewCard>
 
@@ -107,7 +104,7 @@ Create and manage promotions and coupons to scale your sales.
 
 ### [Pricing](https://developers.vtex.com/docs/guides/pricing-overview)
 
-Create, read and edit prices for each SKU, sales channel or price table.
+Create, read, and edit prices for each SKU, sales channel, or price table.
 
 </OverviewCard>
 
@@ -116,7 +113,7 @@ Create, read and edit prices for each SKU, sales channel or price table.
 
 ### [Account Management](https://developers.vtex.com/vtex-rest-api/docs/account-management)
 
-Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.
+Manage users, roles, hosts, AppKeys, and AppTokens in the VTEX platform.
 
 </OverviewCard>
 
@@ -125,7 +122,7 @@ Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.
 
 ### [Search](https://developers.vtex.com/docs/guides/search-overview)
 
-Search and sort products in the catalog using fulltext, category and brand search terms. Retrieve product data to create custom searches and product shelves.
+Search and sort products in the catalog using full-text, category, and brand search terms. Retrieve product information to create custom searches and product shelves.
 
 </OverviewCard>
 
@@ -134,6 +131,6 @@ Search and sort products in the catalog using fulltext, category and brand searc
 
 ### [Subscriptions](https://developers.vtex.com/docs/guides/subscriptionsw)
 
-Manage store's subscription rules to improve the revenue, reduce bounce rate and churn.
+Manage store subscription rules to optimize revenue, reduce bounce rate, and churn.
 
 </OverviewCard>

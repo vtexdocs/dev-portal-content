@@ -43,14 +43,9 @@ To start, fulfill each field according to the instructions below:
 - X-VTEX-API-AppKey: fulfill it with the value `X-VTEX-API-AppKey`.
 - X-VTEX-API-AppToken: fulfill it with the value `X-VTEX-API-AppToken`.
 
-[block:callout]
-{
-  "type": "danger",
-  "title": "Warning",
-  "body": "Once you define the connector name, it can not be changed."
-}
-[/block]
-Then, click the **Check URL** button. This action will call the [GET List Payment Methods](https://developers.vtex.com/vtex-developer-docs/reference/paymentmethods) endpoint. The response will indicate which payment methods will be able to be analyzed in the next step (Tests form).
+>❗ Once you define the connector name, it can not be changed.
+
+Then, click the **Check URL** button. This action will call the [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint. The response will indicate which payment methods will be able to be analyzed in the next step (Tests form).
 
 ### Tests
 
@@ -68,7 +63,7 @@ If everything is ok, you need to [open a ticket to the VTEX support team](https:
 
 - **Connector Name**: a description of the provider. Use max. 16 alphanumeric characters. This name can not be modified after being published.
 - **Partner contact**: partner email address in case we need to communicate changes and new features of our protocol.
-- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g. `https://vtex.pagadito.com>` It has to respond to at least one of the following routes: `{{serviceUrl}}/manifest` or `{{serviceUrl}}/payment-methods`. This endpoint must be publicly available.
+- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g. `https://vtex.pagseguro.com>` It has to respond to the route `{{serviceUrl}}/manifest`. This endpoint must be publicly available.
 - **Sandbox Service Provider Endpoint**: the base path that will be used in test mode for API calls to the provider. E.g. `https://sandboxserviceproviderendpoint.com`.
 - **Owner account**: the VTEX account name which will be used in callback requests. This account must be available at *[account].myvtex.com*.
 - **Allowed Accounts**: describe which VTEX accounts from this provider will be available (all accounts or specific accounts).

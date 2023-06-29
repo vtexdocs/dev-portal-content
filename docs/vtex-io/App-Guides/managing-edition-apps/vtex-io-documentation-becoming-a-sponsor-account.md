@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-09-04T11:12:43.282Z"
 updatedAt: "2022-12-13T20:17:44.880Z"
 category: "App Development"
+excerpt: "Check all requirements to become a Sponsor Account if you want to publish Edition apps for child accounts."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-edition-app"
  - "/docs/guides/vtex-io-documentation-sponsor-account"

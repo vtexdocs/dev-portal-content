@@ -54,22 +54,57 @@ Images are a tool to express the visual identity of your app, make users learn m
 
 Your app icon is one of the first elements of your app that developers and merchants see. It expresses the visual identity and reinforces your brand in the VTEX App Store environment.
 
-![2-Icon](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157433167-6118f67e-4042-40d8-bee3-e64ca5a65f12_50.png)
+![App Store icon example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-1.png)
 
-#### Do’s and Don’ts
+#### Attributes
 
-- The icon must be in `PNG` format, a square image, without rounded corners.
-- The icon must have a minimum resolution of 1024 x 1024 pixels, a maximum resolution of 3000 x 3000 pixels, and a 1:1 ratio.
-- The background of your icon must be transparent.
+Icon artwork can populate the entire asset space, or you can design and position artwork elements, such as logos, onto the keyline grid. When placing your artwork, use keylines as a guideline, not as a hard rule.
+
+When creating your artwork, ensure it conforms to the following:
+
+- Final size: 1024px x 1024px.
+- File type: 32-bit PNG.
+- Color space: sRGB.
+- Format: Square image, without rounded corners.
+- The background of your icon must be a solid color.
 - The icon design must be simple and avoid unnecessary visual details. This will help merchants understand your app's purpose and have a better fit on smaller screens.
-- The icon must not exceed 75% of the total space available of the icon size.
+- The icon must not exceed 768px of the total space available in the icon size. This is equivalent to a 128px margin on each side.
 
-<details>
-  <summary><b>Show example</b></summary>
+![App Store icon keylines](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-2.png)
 
-  ![Icon with size description required for the App Store](https://user-images.githubusercontent.com/67270558/126643069-18ead453-ce79-44d6-847b-e9e4f1a378c4.png)
+After the asset is uploaded, our platform dynamically applies the rounded mask to ensure consistency across all app icons.
 
-</details>
+![App Store icon mask](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-3.png)
+
+On the left-hand side is your new icon asset. The following two images on the right-hand side show the dynamic processing of the icon.
+
+#### Sizing
+
+Utilize the full asset space as the background when dealing with minimalistic artwork. Use the keylines as guides for positioning artwork elements (i.e. logos).
+
+![App Store icon positioning](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-4.png)
+
+Do not force your logo or artwork to fit the full asset space. Instead, utilize the keyline grid.
+
+![App Store icon full bleed](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-5.png)
+
+Below we have examples of icon elements that mislead users and violate our guidelines.
+
+![App Store icon mislead](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-6.png)
+
+#### Brand adaptation
+
+If shapes are a critical part of a logo, do not force the artwork to full bleed. Instead, place it on the new keyline grid.
+
+![App Store icon adaptation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-7.png)
+
+From left to right: original icon asset, new icon asset (recommended adaptation), new icon rendered on the App Store.
+
+If possible, pick a background color for your asset that is appropriate for your brand and does not include any transparency. Transparent assets will display the background color of the App Store UI.
+
+#### Figma Template
+
+Access our [Figma Community template](https://www.figma.com/community/file/1246469471037339772) and use our baseline grid and keylines in the Guide page.
 
 ### Screenshots
 
@@ -80,7 +115,7 @@ Use screenshots to visually represent your app’s key features and purpose.
 #### Do’s and Don’ts
 
 - Provide three to five images showing the app on a Desktop and Mobile screen.
-- Choose images of the app's interface and behavior, as well as the app's avaialble configurations on the Admin panel.
+- Choose images of the app's interface and behavior, as well as the app's available configurations on the Admin panel.
 - Use the PNG format.
 - The image’s size must be up to 700 x 400 pixels.
 - Ensure text in your images is localized according to the app’s applicable market.
@@ -91,7 +126,6 @@ Use screenshots to visually represent your app’s key features and purpose.
 Download and use our templates to create great app images for your App Page, such as the ones from the [Live Shopping](https://apps.vtex.com/liveshopping/p) app.
 
 - [Download image templates - Figma](https://www.figma.com/community/file/1078681677235396508)
-- [Download image templates - psd.](https://github.com/Mariana-Caetano/simple-test/files/8134504/VTEX.App.Store.visual.asset.templates.zip)
 
 ## Licenses
 

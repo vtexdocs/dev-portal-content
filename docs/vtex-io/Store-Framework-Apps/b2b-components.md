@@ -2,11 +2,45 @@
 title: "B2B components"
 slug: "b2b-components"
 hidden: false
-createdAt: "2021-10-05T15:09:57.133Z"
-updatedAt: "2021-10-05T18:01:35.630Z"
+createdAt: "2021-10-05t15:09:57.133z"
+updatedAt: "2021-10-05t18:01:35.630z"
 ---
-[block:html]
-{
-  "html": "<style>\n    .flexcontainer {\n        display: flex;\n        flex-wrap: wrap;\n        padding-top: 1rem;\n        padding-bottom: 2rem;\n        justify-content: space-between;\n    }\n\n    .flexcontainer-card {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        align-items: flex-start;\n        width: 22rem;\n        margin: 0.5rem;\n        line-height: 1.8;\n    }\n    .see-more {\n        color: rgb(247, 25, 99);\n        text-decoration: none !important;\n    }\n\n    .see-more::after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(247, 25, 99)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(247, 25, 99)'></path></svg>\");\n        display: inline-block;\n        margin-left: 6px;\n        text-decoration: none !important;\n    }\n\n    .see-more:hover:after {\n        content: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(181, 16, 71)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(181, 16, 71)'></path></svg>\");\n        margin-left: 8px;\n    }\n\n    .see-more:hover {\n        color: rgb(181, 16, 71);\n    }\n</style>\n\n\n<div class=\"flexcontainer\">\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h2>Challenge Trade Policy Condition</h2>\n                <div>Challenge that checks if an user can access the current Trade Policy based on a specified condition rule.</div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-challenge-tp-condition\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n    \n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h2>Order Configuration</h2>\n                <div>Designed for B2B scenarios, the Order Configuration app displays a form responsible for collecting order data in a modal.</div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-order-configuration\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h2>Order Quote</h2>\n                <div>Provides B2B capabilities to save a cart (its items, quantities and price) for further use.</div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-orderquote\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h2>Quickorder</h2>\n                <div>Designed for B2B scenarios, it allows users to add multiple products to the cart at once.</div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-quickorder\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n\n    <div class=\"flexcontainer-card\">\n        <article >\n            <div>\n                <h2>SKU List</h2>\n                <div>The SKU List app is an essential B2B feature responsible for rendering a SKU list in the product details page.</div>\n            </div><a href=\"https://developers.vtex.com/docs/guides/vtex-sku-list\" class=\"see-more\">See more</a>\n            <hr></article>\n    </div>\n    \n</div>\n"
-}
-[/block]
+
+<Flex>
+
+<WhatsNextCard
+title="Challenge Trade Policy Condition"
+description="This app checks if a user can access the current trade policy based on a specified condition rule"
+linkTo="/docs/apps/vtex.challenge-tp-condition"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Order Configuration"
+description="Designed for B2B scenarios, the Order Configuration app displays a form for collecting order data in a modal"
+linkTo="/docs/apps/vtex.order-configuration"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Order Quote"
+description="Provides B2B features to save a cart (its items, quantities, and price) for further use"
+linkTo="/docs/apps/vtex.orderquote"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Quickorder"
+description="Designed for B2B scenarios, it allows users to add multiple products to the cart at once"
+linkTo="/docs/apps/vtex.quickorder"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="SKU List"
+description="The SKU List app is an essential B2B feature for rendering a SKU list on the product details page"
+linkTo="/docs/apps/vtex.sku-list"
+linkTitle="See more"
+/>
+
+</Flex>

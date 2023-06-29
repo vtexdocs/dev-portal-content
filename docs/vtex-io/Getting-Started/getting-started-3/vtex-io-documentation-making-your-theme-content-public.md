@@ -3,13 +3,13 @@ title: "7. Making your theme content public"
 slug: "vtex-io-documentation-making-your-theme-content-public"
 hidden: false
 category: "Storefront Development"
+excerpt: "Learn how to make your Store Framework theme public."
 createdAt: "2020-06-03T16:02:49.869Z"
 updatedAt: "2022-12-13T20:17:44.111Z"
 ---
 Once you're using VTEX IO Store Framework, making a new version of your theme public (or even the first version) can be a big challenge if any of the necessary steps are unclear.
 
-To better understand the process, you need to remember that **your store's theme works exactly as any other platform app**.
-This means that it takes on an app's default behavior, with its own versioning and deploys.
+Note that your store theme works exactly as any other VTEX IO app. This means it takes on an app's default behavior, with its own versioning and deploys.
 
 ## Step by step
 

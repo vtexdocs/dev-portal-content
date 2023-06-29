@@ -11,7 +11,7 @@ The default implementation for this schema is on [vtex.search-resolver](https://
 
 ### Usage
 
-To use it in your app, decalre it on your manifest file like:
+To use it in your app, declare it on your `manifest.json` file, as demonstrated below:
 
 ```json
 "dependencies": {
@@ -29,9 +29,9 @@ query ProductQuery($slug: String) {
 }
 ```
 
-To resolve this query, you need to have a app that implements the schema declared in this app, such as: [vtex.search-resolver](https://github.com/vtex-apps/search-resolver)
+To resolve this query, you need to have a app that implements the schema declared in this app, such as: [vtex.search-resolver](https://github.com/vtex-apps/search-resolver).
 
-<details> 
+<details>
 
 <summary><strong>Table of Contents</strong></summary>
 
@@ -265,17 +265,7 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" align="right" valign="top">orderBy</td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Sort by a criteria: <ul>
-                    <li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li>
-                    <li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li>
-                    <li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li>
-                    <li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li>
-                    <li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li>
-                    <li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li>
-                    <li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li>
-                </ul> If you want to sort by a specification, use the format <code>{specification key}:{asc|desc}</code>. For
-                example: <code>pricePerUnit:asc</code> or <code>size:desc</code> (this only works on
-                <code>vtex.search-resolver@1.x</code>)</td>
+            <td>Sort by a criteria: <ul><li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li><li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li><li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li><li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li><li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li><li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li><li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li></ul> If you want to sort textually by a specification, use the format <code>{specification key}:{asc|desc}</code>. For example: <code>material:asc</code> or <code>material:desc</code>. This always sorts values textually (not numerically) and it works only on <code>vtex.search-resolver@1.x</code>.</td>
         </tr>
         <tr>
             <td colspan="2" align="right" valign="top">from</td>
@@ -390,15 +380,7 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" align="right" valign="top">orderBy</td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Sort by a criteria: <ul>
-                    <li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li>
-                    <li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li>
-                    <li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li>
-                    <li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li>
-                    <li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li>
-                    <li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li>
-                    <li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li>
-                </ul></td>
+            <td>Sort by a criteria: <ul><li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li><li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li><li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li><li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li><li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li><li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li><li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li></ul></td>
         </tr>
         <tr>
             <td colspan="2" align="right" valign="top">from</td>
@@ -608,17 +590,7 @@ To resolve this query, you need to have a app that implements the schema declare
         <tr>
             <td colspan="2" align="right" valign="top">orderBy</td>
             <td valign="top"><a href="#string">String</a></td>
-            <td>Sort by a criteria: <ul>
-                    <li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li>
-                    <li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li>
-                    <li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li>
-                    <li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li>
-                    <li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li>
-                    <li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li>
-                    <li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li>
-                </ul> If you want to sort by a specification, use the format <code>{specification key}:{asc|desc}</code>. For
-                example: <code>pricePerUnit:asc</code> or <code>size:desc</code> (this only works on
-                <code>vtex.search-resolver@1.x</code>)</td>
+            <td>Sort by a criteria: <ul><li><code>OrderByPriceDESC/OrderByPriceASC</code>: Price, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) order.</li><li><code>OrderByTopSaleDESC</code>: Amount of orders in the past 90 days, in descending order.</li><li><code>OrderByReviewRateDESC</code>: Review rates, in descending (<code>DESC</code>) order.</li><li><code>OrderByNameASC/OrderByNameDESC</code>: Name, in descending (<code>DESC</code>) or ascending (<code>ASC</code>) alphabetical order.</li><li><code>OrderByReleaseDateDESC</code>: Release date, in descending (<code>DESC</code>) order. </li><li><code>OrderByBestDiscountDESC</code>: Discount percentage in descending (<code>DESC</code>) order.</li><li><code>OrderByScoreDESC</code>: Score, in descending (<code>DESC</code>) order.</li> </ul> If you want to sort textually by a specification, use the format <code>{specification key}:{asc|desc}</code>. For example: <code>material:asc</code> or <code>material:desc</code>. This always sorts values textually (not numerically) and it works only on <code>vtex.search-resolver@1.x</code>.</td>
         </tr>
         <tr>
             <td colspan="2" valign="top"><strong>searchURLsCount</strong></td>
@@ -639,18 +611,30 @@ To resolve this query, you need to have a app that implements the schema declare
 </table>
 
 ## Objects
-
 ### AssemblyOption
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#id">ID</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>required</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>composition</strong></td><td valign="top"><a href="#compositiontype">CompositionType</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>inputValues</strong></td><td valign="top">[<a href="#inputvalue">InputValue</a>]</td><td></td></tr></tbody></table>
+| Field | Argument | Type | Description |
+| --- | --- | --- | --- |
+| id | [ID](#id) |  |  |
+| name | [String](#string) |  |  |
+| required | [Boolean](#boolean) |  |  |
+| composition | [CompositionType](#compositiontype) |  |  |
+| inputValues | [InputValue](#inputvalue)[] |  |  |
 
 ### Attachment
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>id</strong></td><td valign="top"><a href="#id">ID</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>name</strong></td><td valign="top"><a href="#string">String</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>required</strong></td><td valign="top"><a href="#boolean">Boolean</a></td><td></td></tr><tr><td colspan="2" valign="top"><strong>domainValues</strong></td><td valign="top">[<a href="#domainvalues">DomainValues</a>]</td><td></td></tr></tbody></table>
+| Field | Argument | Type | Description |
+| --- | --- | --- | --- |
+| id | [ID](#id) |  |  |
+| name | [String](#string) |  |  |
+| required | [Boolean](#boolean) |  |  |
+| domainValues | [DomainValues](#domainvalues)[] |  |  |
 
 ### Banners
 
-<table><thead><tr><th align="left">Field</th><th align="right">Argument</th><th align="left">Type</th><th align="left">Description</th></tr></thead><tbody><tr><td colspan="2" valign="top"><strong>banners</strong></td><td valign="top">[<a href="#searchbanner">SearchBanner</a>]</td><td>List of banners.</td></tr></tbody></table>
+| Field | Argument | Type | Description |
+| --- | --- | --- | --- |
+| banners | [SearchBanner](#searchbanner)[] |  | List of banners. |
 
 ### Benefit
 

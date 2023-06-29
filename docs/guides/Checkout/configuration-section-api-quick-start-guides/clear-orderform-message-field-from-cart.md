@@ -1,17 +1,18 @@
 ---
-title: "Clear orderForm message field from cart"
+title: "Clearing the orderForm message field from the cart"
 slug: "clear-orderform-message-field-from-cart"
 hidden: false
-createdAt: "2023-01-13T09:00:00.051Z"
+createdAt: "2023-01-13t09:00:00.051z"
 updatedAt: "2023-01-13T10:00:00.334Z"
 ---
-The orderForm is the main object processed by VTEX checkout, and one of the most important data structures in the architecture of every VTEX store. It stores a lot of contextual information about the order which is important to the processing of the order: order items, client's personal data, delivery address, freight information, among others.
+
+The orderForm is the main object processed by VTEX Checkout and one of the most important data structures in the architecture of every VTEX store. It stores a lot of contextual information about the order, which is essential for processing order information, such as order items, customer personal information, delivery address, and shipping information.
 
 This guide will describe how to remove all messages from the `messages` field of the orderForm, leaving it empty.
 
-# Removing all messages from the orderForm message field
+## Removing all messages from the orderForm message field
 
-To remove all messages from the orderForm `messages` field of the shopping cart, you need to use the [Clear orderForm messages](https://developers.vtex.com/vtex-rest-api/reference/clearorderformmessages) endpoint. The `orderFormId` information of the shopping cart must be sent through the URL request, as shown by the example below:
+To remove all messages from the orderForm `messages` field of the shopping cart, you need to use the [Clear orderForm messages](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/messages/clear) endpoint. The `orderFormId` information of the shopping cart must be sent through the URL request, as in the example below:
 
 `https://{accountname}.{environment.com.br}/api/checkout/pub/orderForm/ede846222cd44046ba6c638442c3505a/messages/clear`
 
@@ -21,7 +22,7 @@ Additionally, you need to send the request body containing only two curly bracke
 {}
 ```
 
-After sending the request, the endpoint will return the response body containing the shopping cart information and the `messages` field empty, as shown in the example below:
+After sending the request, the endpoint will return the response body containing the shopping cart information and the `messages` field will empty, as in the example below:
 
 ```json
 
@@ -29,11 +30,11 @@ After sending the request, the endpoint will return the response body containing
 
 ```
 
->ℹ️ For more information about the meaning of each of the fields available in the shopping cart, access the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
+> ℹ️ For more information about the meaning of each field available in the shopping cart, please refer to the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 
 ## Error codes
 
-The following errors may appear as a message in the response body.
+The following errors may appear as messages in the response body:
 
 ### 400 - Bad Request
 
@@ -67,11 +68,11 @@ The following errors may appear as a message in the response body.
 
 ### 404 - Not Found
 
-- **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
+- **Message error example**: `"The requested URL was not found on the server"`: check if the URL is correct.
 
 ```json
 <body>
-	<h1>404 Not Found</h1>
-	<p>The requested URL was not found on this server.</p>
+    <h1>404 Not Found</h1>
+    <p>The requested URL was not found on this server.</p>
 </body>
 ```

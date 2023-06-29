@@ -11,4 +11,4 @@ The Antifraud Provider Protocol is a set of definitions to help you integrate yo
 
 To achieve this, you need to implement a web API (REST) following the specifications described in this documentation.
 
-To learn more about the Antifraud Provider Protocol, check our [Help Center article](https://help.vtex.com/tutorial/antifraud-provider--4aZtmdpgFikcsQomWyqAOq).
+For more information, access [Antifraud Provider Protocol](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works).

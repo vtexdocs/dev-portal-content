@@ -1,46 +1,47 @@
 ---
-title: "Get an account's orderForm configuration"
+title: "Getting an account orderForm configuration"
 slug: "get-an-account-orderform-configuration"
 hidden: true
-createdAt: "2022-12-08T23:21:08.132Z"
-updatedAt: "2022-12-12T14:06:21.595Z"
+createdAt: "2022-12-08t23:21:08.132z"
+updatedAt: "2022-12-12t14:06:21.595z"
 ---
 
-The orderForm is the main object processed by VTEX checkout, and one of the most important data structures in the architecture of every VTEX store. It stores a lot of contextual information about the order which is important to the processing of the order: order items, client's personal data, delivery address, freight information, etc.
+The orderForm is the main object processed by VTEX Checkout and one of the most important data structures in the architecture of every VTEX store. It stores a lot of contextual information about the order, which is essential for processing order information, such as order items, customer personal information, delivery address, and shipping information.
 
-This guide will describe how to check the following settings applied currently to every orderForm in a specific account:
-- `paymentConfiguration`: payment configuration information.
-         -  ` requiresAuthenticationForPreAuthorizedPaymentOption`: determines whether pre-authorized payments require authentication.
-         - `allowInstallmentsMerge`: when in a multi-seller purchase scenario, it allows a flexible installment option that considers maximum installments for each seller, according to their respective configuration options.
-         - `paymentSystemToCheckFirstInstallment`: option to apply a first installment discount to a particular payment system.
+This guide describes how to check the following settings, which are currently applied to every orderForm in a specific account:
 
-- `taxConfiguration`: external tax service configuration information.
-         - `url`: endpoint URL.
-         - `authorizationHeader`: authorization header.
-         - `appId`: custom data ID sent to the tax system.
+- `paymentConfiguration`: Payment configuration information.
+  - `requiresAuthenticationForPreAuthorizedPaymentOption`: Determines whether pre-authorized payments require authentication.
+  - `allowInstallmentsMerge`: In a multi-seller purchase scenario, it allows a flexible installment option that considers maximum installments for each seller according to their respective configuration options.
+  - `paymentSystemToCheckFirstInstallment`: Option to apply a first installment discount to a particular payment system.
 
-- `minimumQuantityAccumulatedForItems`: minimum SKU quantity by cart.
-- `decimalDigitsPrecision`: number of price digits.
-- `minimumValueAccumulated`: minimum cart value.
-- `apps`: apps configuration information.
-         - `id`: app ID.
-         - `fields`: app fields information.
-         - `major`: app major version.
+- `taxConfiguration`: External tax service configuration information.
+  - `url`: Endpoint URL.
+  - `authorizationHeader`: Authorization header.
+  - `appId`: Custom data ID sent to the tax system.
 
-- `allowMultipleDeliveries`: allows the selection of items from several delivery channels in the same purchase.
-- `allowManualPrice`: allows the editing of SKU prices directly in the cart.
-- `savePersonalDataAsOptIn`: allows users to select whether they want the store to keep their personal and payment data saved.
-- `maxNumberOfWhiteLabelSellers`: allows the input of a limit of white label sellers involved on the cart.
-- `maskFirstPurchaseData`: allows, on a first purchase, masking client's data. It could be useful when a shared cart is used and the client doesn't want to share its data.
-- `recaptchaValidation`: configures reCAPTCHA validation status for the account.
+- `minimumQuantityAccumulatedForItems`: Minimum SKU quantity per cart.
+- `decimalDigitsPrecision`: Number of price digits.
+- `minimumValueAccumulated`: Minimum cart value.
+- `apps`: Apps configuration information.
+  - `id`: App ID.
+  - `fields`: App fields information.
+  - `major`: App major version.
 
-## Getting an account's orderForm configuration
+- `allowMultipleDeliveries`: Allows selecting items from several delivery channels in the same purchase.
+- `allowManualPrice`: Allows editing SKU prices directly in the cart.
+- `savePersonalDataAsOptIn`: Allows users to select whether they want the store to save their personal and payment information.
+- `maxNumberOfWhiteLabelSellers`: Allows entering a limit of white label sellers in the cart.
+- `maskFirstPurchaseData`: Allows masking the customer information in the first purchase. It may be useful when a shared cart is used and the customer does not want to share their information.
+- `recaptchaValidation`: Configures reCAPTCHA verification status for the account.
 
-To get an account orderForm configuration, you need to use the [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) endpoint. In this request, you must send the `accountname` through the URL address, as shown by the example below:
+## Getting an account orderForm configuration
+
+To get an account orderForm configuration, you need to use the [Get orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/getorderformconfiguration) endpoint. In this request, you must send the `accountname` in the URL address, as in the example below:
 
 `https://{accountName}.{environment.com.br}/api/checkout/pvt/configuration/orderForm`
 
-After sending the request, the endpoint will return the response body containing the current account orderForm configuration, as shown in the example below:
+After sending the request, the endpoint will return the response body containing the current account orderForm configuration, as in the example below:
 
 ```json
 {
@@ -106,14 +107,15 @@ After sending the request, the endpoint will return the response body containing
 }
 ```
 
-If you need to update any of your account's orderForm settings, access the [Update an account's orderForm configuration Dev. Guide](https://developers.vtex.com/vtex-rest-api/docs/update-an-account-orderform-configuration).
+If you need to update any of your account orderForm settings, see the [Update an account's orderForm configuration Dev. Guide](https://developers.vtex.com/vtex-rest-api/docs/update-an-account-orderform-configuration).
 
 ## Error codes
 
-The following errors may appear as a message in the response body.
+The following errors may appear as messages in the response body:
 
 ### 401 - Unauthorized
-- **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (Application Key and Application Token) used in this request are incorrect or not authorized to access this type of information.
+
+- **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (Application Key and Application Token) used in this request are incorrect or not authorized to access this information.
 
 ```json
 {
@@ -127,14 +129,13 @@ The following errors may appear as a message in the response body.
 }
 ```
 
-
 ### 404 - Not Found
 
-- **Message error example**: `"The requested URL was not found on the server"`: check that the URL data is correct.
+- **Message error example**: `"The requested URL was not found on the server"`. Check if the URL is correct.
 
-```json
+```html
 <body>
-	<h1>404 Not Found</h1>
-	<p>The requested URL was not found on this server.</p>
+    <h1>404 Not Found</h1>
+    <p>The requested URL was not found on this server.</p>
 </body>
 ```

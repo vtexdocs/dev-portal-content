@@ -5,6 +5,7 @@ hidden: false
 category: "Storefront Development"
 createdAt: "2020-08-11T07:03:17.864Z"
 updatedAt: "2022-12-13T20:17:44.531Z"
+excerpt: "Access our hands-on course on Store Framework."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-making-your-theme-content-public"
 ---
