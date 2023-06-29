@@ -45,7 +45,7 @@ jobs:
         uses: actions/github-script@v6
         env:
           BRANCH: ${{ steps.get-branch-name.outputs.head_ref_branch }}
-          FILES: ${{ steps.get-changed-markdown-files.outputs.modified_files }}
+          FILES: ${{ steps.get-changed-markdown-files.outputs.all_changed_files }}
           PATHS: ${{ steps.map-slugs-to-paths.outputs.slugs-to-paths }}
         with:
           script: |
