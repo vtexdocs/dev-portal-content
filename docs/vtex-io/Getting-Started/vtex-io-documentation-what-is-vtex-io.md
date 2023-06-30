@@ -30,7 +30,7 @@ By creating **multiple versions of your code**, synchronizing each workspace to 
 
 ## Opinionated set of frameworks
 
-Work with familiar and highly productive technologies like TypeScript, React, GraphQL, .NET, and Node, using intuitive frameworks that are easy to learn on the go.
+Work with familiar and highly productive technologies like [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), [GraphQL](https://graphql.org/), [.NET](https://dotnet.microsoft.com/en-us/), and [Node](https://nodejs.org/en), using intuitive frameworks that are easy to learn on the go.
 
 ### VTEX IO Store Framework
 
