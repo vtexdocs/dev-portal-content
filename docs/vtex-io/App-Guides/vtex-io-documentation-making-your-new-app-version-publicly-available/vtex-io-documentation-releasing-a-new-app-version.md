@@ -11,7 +11,7 @@ seeAlso:
 
 Once you have finished developing your app, you may release it as the first step toward [making your new app version public](/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available). The process of releasing an app consists of:
 
-- Incrementing the app version in the `manifest.json` file according to the SemVer (semantic versioning) best practices.
+- Incrementing the app version in the `manifest.json` file according to the [SemVer (semantic versioning) best practices](https://semver.org/).
 - Updating the app `CHANGELOG.md`.
 - Creating a release commit and a release tag.
 - Sending the performed changes to the app repository.
@@ -26,7 +26,7 @@ If you are releasing an app in the [App Store](https://apps.vtex.com/), make sur
 
 1. Open the terminal and log in to the account responsible for the app development, i.e., the account specified as the app vendor in the [`manifest.json`](/docs/guides/vtex-io-documentation-manifest) file.
 2. Change to the app root folder.
-3. Depending on the scenario, run one of the following commands to release your new app version:
+3. Depending on the scenario (check [SemVer best practices](https://semver.org/)), run one of the following commands to release your new app version:
 
 - `vtex release patch stable` - Releases a **patch** stable version.
 - `vtex release minor stable` - Releases a **minor** stable version.
