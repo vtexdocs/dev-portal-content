@@ -12,19 +12,13 @@ seeAlso:
 
 With the app template already copied, we will now create a new theme block. Follow the instructions below to create the new theme block.
 
-## Before you start
-
-- Make sure you are familiar with the core concepts of Store Framework, including blocks, store themes, and templates. If you need to refresh your knowledge or get acquainted with these concepts, you can refer to the getting started tutorial on [building storefronts with Store Framework](https://developers.vtex.com/docs/guides/getting-started-3).
-
-- Check our recommended practices for tooling, features, flexibility, scalability, performance, accessibility, internationalization, and styling. For more information, please refer to [Best practices for developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components).
-
 ## Understanding interfaces
 
 An interface describes the shape of an object, including its properties and data types. This is crucial for ensuring type safety and preventing potential bugs.
 
 In VTEX Store Framework, interfaces are used to link theme blocks to their corresponding React components. This way, interfaces provide a set of rules that dictate the behavior of theme blocks when rendering their React components and the available properties and methods.
 
-For each theme block exported by your app, you should define a corresponding [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) that defines the props available to the React component. 
+For each theme block exported by your app, you should define a corresponding [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) that defines the props available to the React component.
 
 The following table shows some possible keys that could be added to the block interface, as well as their respective descriptions:
 

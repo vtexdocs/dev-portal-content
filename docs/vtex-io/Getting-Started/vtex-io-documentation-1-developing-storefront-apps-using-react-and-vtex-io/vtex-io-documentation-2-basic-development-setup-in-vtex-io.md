@@ -16,6 +16,12 @@ Any development on VTEX IO begins and ends with [**VTEX IO CLI**](https://develo
 
 With VTEX IO CLI, you can log in to your VTEX account, manage workspaces, develop apps, and install new ones.
 
+## Before you start
+
+- Make sure you are familiar with the core concepts of Store Framework, including blocks, store themes, and templates. If you need to refresh your knowledge or get acquainted with these concepts, you can refer to the getting started tutorial on [building storefronts with Store Framework](https://developers.vtex.com/docs/guides/getting-started-3).
+
+- Check our recommended practices for tooling, features, flexibility, scalability, performance, accessibility, internationalization, and styling. For more information, please refer to [Best practices for developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components).
+
 ## Step by step
 
 ### Step 1 - Getting started with VTEX IO CLI
