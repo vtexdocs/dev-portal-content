@@ -28,10 +28,10 @@ If you are releasing an app in the [App Store](https://apps.vtex.com/), make sur
 2. Change to the app root folder.
 3. Depending on the scenario, run one of the following commands to release your new app version:
 
-- `vtex release major stable` - Releases a **major** stable version.
-- `vtex release minor stable` - Releases a **minor** stable version.
 - `vtex release patch stable` - Releases a **patch** stable version.
+- `vtex release minor stable` - Releases a **minor** stable version.
+- `vtex release major stable` - Releases a **major** stable version.
 
-- `vtex release major beta` - Releases a **major** beta version.
-- `vtex release minor beta` - Releases a **minor** beta version.
 - `vtex release patch beta` - Releases a **patch** beta version.
+- `vtex release minor beta` - Releases a **minor** beta version.
+- `vtex release major beta` - Releases a **major** beta version.
