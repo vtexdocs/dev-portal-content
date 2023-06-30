@@ -4,37 +4,15 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Price___9acce93fd9399d7dcea4a3bb8b7de0c6.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { Price } from '@faststore/ui'
 import { useMemo } from 'react'
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const pricePath = path.resolve(__filename)
-  const components = ['Price.tsx']
-  const [priceProps] = getComponentPropsFrom(pricePath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: { priceProps },
-    },
-  }
-}
-
-export const PricePropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { priceProps } = useSSG()
-  return {
-    Price: <PropsSection propsList={priceProps} />,
-  }[component]
-}
+const components = ['Price.tsx']
 
 <header>
 
@@ -98,7 +76,7 @@ import '@faststore/ui/src/components/atoms/Price/styles.scss'
 
 ## Props
 
-<PricePropsSection component="Price" />
+<ComponentPropsSection component="Price" />
 
 ---
 

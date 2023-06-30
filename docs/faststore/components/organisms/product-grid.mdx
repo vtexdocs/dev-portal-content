@@ -8,7 +8,6 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Hero___c73fdfe80ce87c2ccc4701c07e9d5398.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -22,40 +21,10 @@ import {
 } from '@faststore/ui'
 import { products } from 'site/mocks/products'
 import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
-
 import ProductShelfUsage from 'site/components/ProductShelf/ProductShelfUsage'
-
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const productGridPath = path.resolve(__filename)
-  const components = ['ProductGrid.tsx', 'ProductGridItem.tsx']
-  const [productGridProps, productGridItemProps] = getComponentPropsFrom(
-    productGridPath,
-    components
-  )
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        productGridProps,
-        productGridItemProps,
-      },
-    },
-  }
-}
-
-export const ProductGridPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { productGridProps, productGridItemProps } = useSSG()
-  return {
-    ProductGrid: <PropsSection propsList={productGridProps} />,
-    ProductGridItem: <PropsSection propsList={productGridItemProps} />,
-  }[component]
-}
+const components = ['ProductGrid.tsx', 'ProductGridItem.tsx']
 
 <header>
 
@@ -169,11 +138,11 @@ import '@faststore/ui/src/components/organisms/ProductGrid/styles.scss'
 
 ### ProductGrid
 
-<ProductGridPropsSection component="ProductGrid" />
+<ComponentPropsSection component="ProductGrid" />
 
 ### ProductGridItem
 
-<ProductGridPropsSection component="ProductGridItem" />
+<ComponentPropsSection component="ProductGridItem" />
 
 ---
 

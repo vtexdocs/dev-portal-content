@@ -5,7 +5,6 @@ sidebar_custom_props:
 title: 'Carousel'
 ---
 
-import { Tab, Tabs, Callout } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -23,30 +22,9 @@ import CarouselUsage from 'site/components/Carousel/CarouselUsage'
 import { products } from 'site/mocks/products'
 import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const carouselPath = path.resolve(__filename)
-  const components = ['Carousel.tsx']
-  const [carouselProps] = getComponentPropsFrom(carouselPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: { carouselProps },
-    },
-  }
-}
-
-export const CarouselPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { carouselProps } = useSSG()
-  return {
-    Carousel: <PropsSection propsList={carouselProps} />,
-  }[component]
-}
+const components = ['Carousel.tsx']
 
 <header>
 
@@ -76,10 +54,7 @@ import '@faststore/ui/src/components/molecules/Carousel/styles.scss'
 
 ## Usage
 
-<Callout type="warning" emoji="⚠️">
-  This component is a work in progress, so it might work as expected in some
-  cases, we gratefully accept feedback.
-</Callout>
+>⚠️ This component is a work in progress, so it might work as expected in some cases, we gratefully accept feedback.
 
 For the mobile preview, please refresh the browser after resize it.
 
@@ -126,7 +101,7 @@ For the mobile preview, please refresh the browser after resize it.
 
 ## Props
 
-<CarouselPropsSection component="Carousel" />
+<ComponentPropsSection component="Carousel" />
 
 ---
 

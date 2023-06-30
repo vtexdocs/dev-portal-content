@@ -4,40 +4,14 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Quantity%20Selector___6b3886945c4028b5a37e6f4de3baab71.png
 ---
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { QuantitySelector } from '@faststore/ui'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const quantitySelectorPath = path.resolve(__filename)
-  const components = ['QuantitySelector.tsx']
-  const [quantitySelectorProps] = getComponentPropsFrom(
-    quantitySelectorPath,
-    components
-  )
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        quantitySelectorProps,
-      },
-    },
-  }
-}
+const components = ['QuantitySelector.tsx']
 
-export const QuantitySelectorPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { quantitySelectorProps } = useSSG()
-  return {
-    QuantitySelector: <PropsSection propsList={quantitySelectorProps} />,
-  }[component]
-}
 
 <header>
 
@@ -95,7 +69,7 @@ import '@faststore/ui/src/components/molecules/QuantitySelector/styles.scss'
 
 ## Props
 
-<QuantitySelectorPropsSection component="QuantitySelector" />
+<ComponentPropsSection component="QuantitySelector" />
 
 ---
 

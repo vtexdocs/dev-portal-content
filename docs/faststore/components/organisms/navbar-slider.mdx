@@ -2,9 +2,6 @@
 description: As part of the Navbar, this component it its mobile version used to list the navigation links.
 ---
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
-import { Callout, Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -15,49 +12,12 @@ import NavbarUsage from 'site/components/Navigation/NavbarUsage'
 import { Navbar, NavbarSlider, UIProvider } from '@faststore/ui'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const navbarSliderPath = path.resolve(__filename)
-  const components = [
-    'NavbarSlider.tsx',
-    'NavbarSliderHeader.tsx',
-    'NavbarSliderContent.tsx',
-    'NavbarSliderFooter.tsx',
-  ]
-  const [
-    navbarSliderProps,
-    navbarSliderHeaderProps,
-    navbarSliderContentProps,
-    navbarSliderFooterProps,
-  ] = getComponentPropsFrom(navbarSliderPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        navbarSliderProps,
-        navbarSliderHeaderProps,
-        navbarSliderContentProps,
-        navbarSliderFooterProps,
-      },
-    },
-  }
-}
-
-export const NavbarSliderPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const {
-    navbarSliderProps,
-    navbarSliderHeaderProps,
-    navbarSliderContentProps,
-    navbarSliderFooterProps,
-  } = useSSG()
-  return {
-    NavbarSlider: <PropsSection propsList={navbarSliderProps} />,
-    NavbarSliderHeader: <PropsSection propsList={navbarSliderHeaderProps} />,
-    NavbarSliderContent: <PropsSection propsList={navbarSliderContentProps} />,
-    NavbarSliderFooter: <PropsSection propsList={navbarSliderFooterProps} />,
-  }[component]
-}
+const components = [
+  'NavbarSlider.tsx',
+  'NavbarSliderHeader.tsx',
+  'NavbarSliderContent.tsx',
+  'NavbarSliderFooter.tsx',
+]
 
 <header>
 
@@ -92,10 +52,7 @@ import '@faststore/ui/src/components/organisms/NavbarSlider/styles.scss'
 
 ## Usage
 
-<Callout type="warning" emoji="⚠️">
-  This component is intended to be used only in the **mobile version**, but it
-  can be adapted to a desktop version by customizing the component styles.
-</Callout>
+>⚠️ This component is intended to be used only in the **mobile version**, but it can be adapted to a desktop version by customizing the component styles.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -142,19 +99,19 @@ import '@faststore/ui/src/components/organisms/NavbarSlider/styles.scss'
 
 ### Navbar Slider
 
-<NavbarSliderPropsSection component="NavbarSlider" />
+<ComponentPropsSection component="NavbarSlider" />
 
 ### Navbar Slider Header
 
-<NavbarSliderPropsSection component="NavbarSliderHeader" />
+<ComponentPropsSection component="NavbarSliderHeader" />
 
 ### Navbar Slider Content
 
-<NavbarSliderPropsSection component="NavbarSliderContent" />
+<ComponentPropsSection component="NavbarSliderContent" />
 
 ### Navbar Slider Footer
 
-<NavbarSliderPropsSection component="NavbarSliderFooter" />
+<ComponentPropsSection component="NavbarSliderFooter" />
 
 ---
 

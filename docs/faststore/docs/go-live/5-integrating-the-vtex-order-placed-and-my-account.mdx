@@ -3,8 +3,6 @@ title: '5. Integrating the VTEX Order Placed and My Account'
 sidebar_label: 'Go-live'
 ---
 
-import { Callout, Tab, Tabs } from 'nextra-theme-docs'
-
 <header>
 
 # Part 5: Integrating the VTEX Order Placed and My Account
@@ -25,9 +23,7 @@ Before proceeding any further, make sure you already have:
 - The VTEX IO CLI installed on your machine. Please refer to [this documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) for more information.
 - The `vtex.edition-store 5.x` app version installed on your VTEX account.
 
-<Callout type="info" emoji=" ℹ️ ">
-Run `vtex edition get` to check if the `vtex.edition-store` app is installed on your account. If not, [open a support ticket](https://help.vtex.com/en/support) communicating you need the `vtex.edition-store@5.x` to be installed on your account so you can integrate your FastStore project with the VTEX platform.
-</Callout>
+>ℹ️ Run `vtex edition get` to check if the `vtex.edition-store` app is installed on your account. If not, [open a support ticket](https://help.vtex.com/en/support) communicating you need the `vtex.edition-store@5.x` to be installed on your account so you can integrate your FastStore project with the VTEX platform.
 
 
 ---
@@ -50,18 +46,14 @@ npx degit vtex/faststore-vtex-integrations
 vtex login {account}
 ```
 
-<Callout type="warning" emoji="⚠️">
-Replace the value between curly brackets with the name of your account.
-</Callout>
+>⚠️ Replace the value between curly brackets with the name of your account.
 
 5. Create a new development workspace.
 
 ```sh
 vtex workspace use {workspace}
 ```
-<Callout type="warning" emoji="⚠️">
-Replace the value between curly brackets with any name of your preference, making sure the name you choose is not already taken.
-</Callout>
+>⚠️ Replace the value between curly brackets with any name of your preference, making sure the name you choose is not already taken.
 
    *Enter `Y` to continue creating the new workspace.*
 
@@ -139,9 +131,7 @@ vtex publish
 vtex install {vendor}.{name}@{version}
 ```
 
-<Callout type="warning" emoji="⚠️">
-Replace the values between curly brackets according to the `manifest.json` file of your `faststore-vtex-integrations` app.
-</Callout>
+>⚠️ Replace the values between curly brackets according to the `manifest.json` file of your `faststore-vtex-integrations` app.
 
 5. Deploy the candidate version as a stable version.
 

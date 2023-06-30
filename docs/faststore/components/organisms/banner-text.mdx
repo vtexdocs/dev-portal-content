@@ -8,44 +8,14 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Hero___c73fdfe80ce87c2ccc4701c07e9d5398.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { SectionItem, SectionList } from 'site/components/SectionItem'
 import { BannerText, BannerTextContent } from '@faststore/ui'
-
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const bannerTextPath = path.resolve(__filename)
-  const components = ['BannerText.tsx', 'BannerTextContent.tsx']
-  const [bannerTextProps, bannerTextContentProps] = getComponentPropsFrom(
-    bannerTextPath,
-    components
-  )
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        bannerTextProps,
-        bannerTextContentProps,
-      },
-    },
-  }
-}
-
-export const BannerTextPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { bannerTextProps, bannerTextContentProps } = useSSG()
-  return {
-    BannerText: <PropsSection propsList={bannerTextProps} />,
-    BannerTextContent: <PropsSection propsList={bannerTextContentProps} />,
-  }[component]
-}
+const components = ['BannerText.tsx', 'BannerTextContent.tsx']
 
 <header>
 
@@ -116,11 +86,11 @@ Besides those attributes, the following props are also supported:
 
 ### BannerText
 
-<BannerTextPropsSection component="BannerText" />
+<ComponentPropsSection component="BannerText" />
 
 ### BannerTextContent
 
-<BannerTextPropsSection component="BannerTextContent" />
+<ComponentPropsSection component="BannerTextContent" />
 
 ---
 

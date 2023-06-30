@@ -3,32 +3,19 @@ title: ' Overriding a native component'
 sidebar_label: 'Component Customization'
 ---
 
-import { Callout } from 'nextra-theme-docs'
-
 <header>
 
 # Overriding a native component
 
 </header>
 
-<Callout type="warning" emoji="⚠️">
-  This documentation is currently under development.
-</Callout>
+>⚠️ This documentation is currently under development.
 
 In this guide, you will learn how to override a native component to use a custom component.
 
 The `@faststore/core` package provides a set of native sections. These native sections are made up of various components, each offering distinct functionalities. You can customize specific components within a native section or replace them entirely with alternative options that better align with your desired functionality or appearance. For example, you may want to modify the behavior of the `Price` component from the `ProductDetails` section to meet your business needs.
 
-<Callout type="warning" emoji="⚠️">
-  **By overriding a component, you lose all the integration developed on
-  [@faststore/core](/docs/getting-started/3-project-structure#faststorecore) for
-  that component.** We highly recommend trying first [overriding
-  props](/docs/building-sections/overriding-components-props) and/or using our
-  [theming tools](/docs/themes/overview) to achieve the desired behavior without
-  compromising the existing integration implemented in `@faststore/core`. You
-  can find the available props for each component on the [Components
-  UI](/components).
-</Callout>
+>⚠️ **By overriding a component, you lose all the integration developed on [@faststore/core](/docs/getting-started/3-project-structure#faststorecore) for that component.** We highly recommend trying first [overriding props](/docs/building-sections/overriding-components-props) and/or using our [theming tools](/docs/themes/overview) to achieve the desired behavior without compromising the existing integration implemented in `@faststore/core`. You can find the available props for each component on the [Components UI](/components).
 
 ---
 
@@ -68,11 +55,7 @@ const overrides: SectionOverride[typeof SECTION] = {
 export default overrides
 ```
 
-<Callout type="warning" emoji="⚠️">
-  Change the value of the `SECTION` variable to the name of the section you want
-  to override. In the given example, we set the `SECTION` variable to
-  `ProductDetails` to override this specific section.
-</Callout>
+>⚠️ Change the value of the `SECTION` variable to the name of the section you want to override. In the given example, we set the `SECTION` variable to `ProductDetails` to override this specific section.
 
 6. Save your changes.
 

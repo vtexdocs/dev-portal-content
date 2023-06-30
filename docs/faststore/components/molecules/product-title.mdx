@@ -4,41 +4,13 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Checkbox___5dfb3d931c093ee7ebfac8bc388e68b5.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { ProductTitle, DiscountBadge } from '@faststore/ui'
-
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const productTitlePath = path.resolve(__filename)
-  const components = ['ProductTitle.tsx']
-  const [productTitleProps] = getComponentPropsFrom(
-    productTitlePath,
-    components
-  )
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        productTitleProps,
-      },
-    },
-  }
-}
-
-export const ProductTitlePropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { productTitleProps } = useSSG()
-  return {
-    ProductTitle: <PropsSection propsList={productTitleProps} />,
-  }[component]
-}
+const components = ['ProductTitle.tsx']
 
 <header>
 # Product Title
@@ -150,7 +122,7 @@ import '@faststore/ui/src/components/molecules/ProductTitle/styles.scss'
 
 ## Props
 
-<ProductTitlePropsSection component="ProductTitle" />
+<ComponentPropsSection component="ProductTitle" />
 
 ---
 

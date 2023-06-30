@@ -8,42 +8,14 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { SectionItem, SectionList } from 'site/components/SectionItem'
 import { PaymentMethods, Icon } from '@faststore/ui'
-
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const paymentMethodsPath = path.resolve(__filename)
-  const components = ['PaymentMethods.tsx']
-  const [paymentMethodsProps] = getComponentPropsFrom(
-    paymentMethodsPath,
-    components
-  )
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        paymentMethodsProps,
-      },
-    },
-  }
-}
-
-export const PaymentMethodsPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { paymentMethodsProps } = useSSG()
-  return {
-    PaymentMethods: <PropsSection propsList={paymentMethodsProps} />,
-  }[component]
-}
+const components = ['PaymentMethods.tsx']
 
 <header>
 
@@ -111,7 +83,7 @@ export const flags = [
 
 ## Props
 
-<PaymentMethodsPropsSection component="PaymentMethods" />
+<ComponentPropsSection component="PaymentMethods" />
 
 export const propsFlag = [
   {

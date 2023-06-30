@@ -8,38 +8,13 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { EmptyState, Button, Icon } from '@faststore/ui'
-
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const componentPath = path.resolve(__filename)
-  const components = ['EmptyState.tsx']
-  const [emptyStateProps] = getComponentPropsFrom(componentPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        emptyStateProps,
-      },
-    },
-  }
-}
-
-export const EmptyStatePropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { emptyStateProps } = useSSG()
-  return {
-    EmptyState: <PropsSection propsList={emptyStateProps} />,
-  }[component]
-}
+const components = ['EmptyState.tsx']
 
 <header>
 
@@ -189,7 +164,7 @@ import '@faststore/ui/src/components/organisms/EmptyState/styles.scss'
 
 ## Props
 
-<EmptyStatePropsSection component="EmptyState" />
+<ComponentPropsSection component="EmptyState" />
 
 ---
 

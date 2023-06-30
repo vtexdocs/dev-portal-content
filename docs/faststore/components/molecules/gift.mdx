@@ -4,7 +4,6 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/ProductCardComponent___e6502d57cf7e5bf247f86b64577d4141.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -12,40 +11,9 @@ import { SectionItem, SectionList } from 'site/components/SectionItem'
 import { Badge, Gift, GiftContent, GiftImage, Icon, Price } from '@faststore/ui'
 import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
 import { propsPriceDefinition } from 'site/components/PriceDefinitionProps/PriceDefinitionProps'
-
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const giftPath = path.resolve(__filename)
-  const components = ['Gift.tsx', 'GiftImage.tsx', 'GiftContent.tsx']
-  const [giftProps, giftImageProps, giftContentProps] = getComponentPropsFrom(
-    giftPath,
-    components
-  )
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        giftProps,
-        giftImageProps,
-        giftContentProps,
-      },
-    },
-  }
-}
-
-export const GiftPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { giftProps, giftImageProps, giftContentProps } = useSSG()
-  return {
-    Gift: <PropsSection propsList={giftProps} />,
-    GiftImage: <PropsSection propsList={giftImageProps} />,
-    GiftContent: <PropsSection propsList={giftContentProps} />,
-  }[component]
-}
+const components = ['Gift.tsx', 'GiftImage.tsx', 'GiftContent.tsx']
 
 <header>
 
@@ -266,11 +234,11 @@ Besides those attributes, the following props are also supported:
 
 ### Gift
 
-<GiftPropsSection component="Gift" />
+<ComponentPropsSection component="Gift" />
 
 ### GiftContent
 
-<GiftPropsSection component="GiftContent" />
+<ComponentPropsSection component="GiftContent" />
 
 #### Price Definition
 
@@ -278,7 +246,7 @@ Besides those attributes, the following props are also supported:
 
 ### GiftImage
 
-<GiftPropsSection component="GiftImage" />
+<ComponentPropsSection component="GiftImage" />
 
 ---
 

@@ -8,9 +8,6 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Hero___c73fdfe80ce87c2ccc4701c07e9d5398.png
 ---
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -19,35 +16,7 @@ import ImageGalleryUsage from 'site/components/ImageGallery/ImageGalleryUsage'
 import { ImageGallery, ImageGallerySelector } from '@faststore/ui'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const imageGalleryPath = path.resolve(__filename)
-  const components = ['ImageGallery.tsx', 'ImageGallerySelector.tsx']
-  const [imageGalleryProps, imageGallerySelectorProps] = getComponentPropsFrom(
-    imageGalleryPath,
-    components
-  )
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        imageGalleryProps,
-        imageGallerySelectorProps,
-      },
-    },
-  }
-}
-
-export const ImageGalleryPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { imageGalleryProps, imageGallerySelectorProps } = useSSG()
-  return {
-    ImageGallery: <PropsSection propsList={imageGalleryProps} />,
-    ImageGallerySelector: (
-      <PropsSection propsList={imageGallerySelectorProps} />
-    ),
-  }[component]
-}
+const components = ['ImageGallery.tsx', 'ImageGallerySelector.tsx']
 
 <header>
 
@@ -159,11 +128,11 @@ export const imagesUsage = [
 
 ### Image Gallery
 
-<ImageGalleryPropsSection component="ImageGallery" />
+<ComponentPropsSection component="ImageGallery" />
 
 ### Image Gallery Selector
 
-<ImageGalleryPropsSection component="ImageGallerySelector" />
+<ComponentPropsSection component="ImageGallerySelector" />
 
 ### ImageElementData
 

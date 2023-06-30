@@ -4,37 +4,13 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/OutOfStock___5863b0eb4a4a8ce9a98da5c760461e61.png
 ---
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { OutOfStock } from '@faststore/ui'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const outOfStockPath = path.resolve(__filename)
-  const components = ['OutOfStock.tsx']
-  const [outOfStockProps] = getComponentPropsFrom(outOfStockPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        outOfStockProps,
-      },
-    },
-  }
-}
-
-export const OutOfStockPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { outOfStockProps } = useSSG()
-  return {
-    OutOfStock: <PropsSection propsList={outOfStockProps} />,
-  }[component]
-}
+const components = ['OutOfStock.tsx']
 
 <header>
 
@@ -96,7 +72,7 @@ import '@faststore/ui/src/components/organisms/OutOfStock/styles.scss'
 
 ### Out of Stock
 
-<OutOfStockPropsSection component="OutOfStock" />
+<ComponentPropsSection component="OutOfStock" />
 
 ---
 

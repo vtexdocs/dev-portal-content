@@ -8,9 +8,6 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Breadcrumb___20a8572e919e1262c1405a5e80009e25.png
 ---
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -18,29 +15,7 @@ import { Breadcrumb } from '@faststore/ui'
 import { breadcrumbList } from '../../../mocks/breadcrumbList'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-
-export const getStaticProps = () => {
-  const breadcrumbPath = path.resolve(__filename)
-  const components = ['Breadcrumb.tsx']
-  const [breadcrumbProps] = getComponentPropsFrom(breadcrumbPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        breadcrumbProps
-      },
-    },
-  }
-}
-
-export const BreadcrumbPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { breadcrumbProps } = useSSG()
-  return {
-    Breadcrumb: <PropsSection propsList={breadcrumbProps} />
-  }[component]
-}
+const components = ['Breadcrumb.tsx']
 
 <header>
 
@@ -130,7 +105,7 @@ import '@faststore/ui/src/components/molecules/Breadcrumb/styles.scss'
 
 ## Props
 
-<BreadcrumbPropsSection component="Breadcrumb" />
+<ComponentPropsSection component="Breadcrumb" />
 
 ---
 

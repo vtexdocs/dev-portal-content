@@ -2,9 +2,6 @@
 description: This component represents the page header and groups features like Search and Regionalization.
 ---
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -15,28 +12,7 @@ import NavbarSliderUsage from 'site/components/Navigation/NavbarSliderUsage'
 import NavbarLinksUsage from 'site/components/Navigation/NavbarLinksUsage'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const navbarPath = path.resolve(__filename)
-  const components = ['Navbar.tsx']
-  const [navbarProps] = getComponentPropsFrom(navbarPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        navbarProps,
-      },
-    },
-  }
-}
-
-export const NavbarPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { navbarProps } = useSSG()
-  return {
-    Navbar: <PropsSection propsList={navbarProps} />,
-  }[component]
-}
+const components = ['Navbar.tsx']
 
 <header>
 
@@ -131,7 +107,7 @@ The [NavbarLinks](/components/molecules/navbar-links) and [NavbarSlider](/compon
 
 ### Navbar
 
-<NavbarPropsSection component="Navbar" />
+<ComponentPropsSection component="Navbar" />
 
 ---
 

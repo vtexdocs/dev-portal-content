@@ -4,38 +4,14 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Select___8842f3b6522c3e8db0a887b3f216a6ab.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { SelectField } from '@faststore/ui'
-
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const selectFieldPath = path.resolve(__filename)
-  const components = ['SelectField.tsx']
-  const [selectFieldProps] = getComponentPropsFrom(selectFieldPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        selectFieldProps,
-      },
-    },
-  }
-}
+const components = ['SelectField.tsx']
 
-export const SelectFieldPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { selectFieldProps } = useSSG()
-  return {
-    SelectField: <PropsSection propsList={selectFieldProps} />,
-  }[component]
-}
 
 <header>
 
@@ -144,7 +120,7 @@ import '@faststore/ui/src/components/molecules/SelectField/styles.scss'
 
 ## Props
 
-<SelectFieldPropsSection component="SelectField" />
+<ComponentPropsSection component="SelectField" />
 
 ---
 

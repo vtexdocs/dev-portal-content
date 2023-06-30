@@ -4,38 +4,14 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Overlay___5ae3e4dc6b4b413cf33295d52a64fac0.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { Skeleton } from '@faststore/ui'
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const skeletonPath = path.resolve(__filename)
-  const components = ['Skeleton.tsx']
-  const [skeletonProps] = getComponentPropsFrom(skeletonPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        skeletonProps,
-      },
-    },
-  }
-}
-
-export const SkeletonPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { skeletonProps } = useSSG()
-  return {
-    Skeleton: <PropsSection propsList={skeletonProps} />,
-  }[component]
-}
+const components = ['Skeleton.tsx']
 
 <header>
 
@@ -118,7 +94,7 @@ import '@faststore/ui/src/components/atoms/Skeleton/styles.scss'
 
 ## Props
 
-<SkeletonPropsSection component="Skeleton" />
+<ComponentPropsSection component="Skeleton" />
 
 ---
 

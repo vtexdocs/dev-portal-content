@@ -4,7 +4,6 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Select___8842f3b6522c3e8db0a887b3f216a6ab.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -18,58 +17,14 @@ import {
 import { product } from 'site/mocks/product'
 import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
 import { propsPriceDefinition } from 'site/components/PriceDefinitionProps/PriceDefinitionProps'
-
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const searchProductsPath = path.resolve(__filename)
-  const components = [
-    'SearchProducts.tsx',
-    'SearchProductItem.tsx',
-    'SearchProductItemImage.tsx',
-    'SearchProductItemContent.tsx',
-  ]
-  const [
-    searchProductsProps,
-    searchProductItemProps,
-    searchProductItemImageProps,
-    searchProductItemContentProps,
-  ] = getComponentPropsFrom(searchProductsPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        searchProductsProps,
-        searchProductItemProps,
-        searchProductItemImageProps,
-        searchProductItemContentProps,
-      },
-    },
-  }
-}
-
-export const SearchProductsPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const {
-    searchProductsProps,
-    searchProductItemProps,
-    searchProductItemImageProps,
-    searchProductItemContentProps,
-  } = useSSG()
-  return {
-    SearchProducts: <PropsSection propsList={searchProductsProps} />,
-    SearchProductItem: <PropsSection propsList={searchProductItemProps} />,
-    SearchProductItemImage: (
-      <PropsSection propsList={searchProductItemImageProps} />
-    ),
-    SearchProductItemContent: (
-      <PropsSection propsList={searchProductItemContentProps} />
-    ),
-  }[component]
-}
+const components = [
+  'SearchProducts.tsx',
+  'SearchProductItem.tsx',
+  'SearchProductItemImage.tsx',
+  'SearchProductItemContent.tsx',
+]
 
 <header>
 
@@ -193,19 +148,19 @@ All search product related components support all attributes also supported by t
 
 ### Search Products
 
-<SearchProductsPropsSection component="SearchProducts" />
+<ComponentPropsSection component="SearchProducts" />
 
 ### Search Product Item
 
-<SearchProductsPropsSection component="SearchProductItem" />
+<ComponentPropsSection component="SearchProductItem" />
 
 ### Search Product Item Image
 
-<SearchProductsPropsSection component="SearchProductItemImage" />
+<ComponentPropsSection component="SearchProductItemImage" />
 
 ### Search Product Item Content
 
-<SearchProductsPropsSection component="SearchProductItemContent" />
+<ComponentPropsSection component="SearchProductItemContent" />
 
 #### Price Definition
 

@@ -8,7 +8,6 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -16,45 +15,14 @@ import { SectionItem, SectionList } from 'site/components/SectionItem'
 import FilterUsage from 'site/components/Filter/FilterUsage'
 import { Button, Toast, useUI, UIProvider, Filter } from '@faststore/ui'
 import { SearchProvider } from '@faststore/sdk'
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const componentPath = path.resolve(__filename)
-  const components = [
-    'Filter.tsx',
-    'FilterFacets.tsx',
-    'FilterFacetBooleanItem.tsx',
-    'FilterFacetRange.tsx',
-  ]
-  const [filterProps, facetsProps, facetBooleanItemProps, facetRangeProps] =
-    getComponentPropsFrom(componentPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        filterProps,
-        facetsProps,
-        facetBooleanItemProps,
-        facetRangeProps,
-      },
-    },
-  }
-}
-
-export const FilterPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { filterProps, facetsProps, facetBooleanItemProps, facetRangeProps } =
-    useSSG()
-  return {
-    Filter: <PropsSection propsList={filterProps} />,
-    FilterFacets: <PropsSection propsList={facetsProps} />,
-    FilterFacetBooleanItem: <PropsSection propsList={facetBooleanItemProps} />,
-    FilterFacetRange: <PropsSection propsList={facetRangeProps} />,
-  }[component]
-}
+const components = [
+  'Filter.tsx',
+  'FilterFacets.tsx',
+  'FilterFacetBooleanItem.tsx',
+  'FilterFacetRange.tsx',
+]
 
 <header>
 
@@ -316,19 +284,19 @@ import '@faststore/ui/src/components/organisms/Filter/styles.scss'
 
 ### Filter
 
-<FilterPropsSection component="Filter" />
+<ComponentPropsSection component="Filter" />
 
 ### FilterFacets
 
-<FilterPropsSection component="FilterFacets" />
+<ComponentPropsSection component="FilterFacets" />
 
 ### FilterFacetBooleanItem
 
-<FilterPropsSection component="FilterFacetBooleanItem" />
+<ComponentPropsSection component="FilterFacetBooleanItem" />
 
 ### FilterFacetRange
 
-<FilterPropsSection component="FilterFacetRange" />
+<ComponentPropsSection component="FilterFacetRange" />
 
 ---
 

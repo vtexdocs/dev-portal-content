@@ -4,43 +4,14 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/AggregateRating___a8300916874f5a11de7633b7cabc12e9.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { SearchHistory, SearchHistoryTerm, Icon } from '@faststore/ui'
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const searchHistoryPath = path.resolve(__filename)
-  const components = ['SearchHistory.tsx', 'SearchHistoryTerm.tsx']
-  const [searchHistoryProps, searchHistoryTermProps] = getComponentPropsFrom(
-    searchHistoryPath,
-    components
-  )
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        searchHistoryProps,
-        searchHistoryTermProps,
-      },
-    },
-  }
-}
-
-export const SearchHistoryPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { searchHistoryProps, searchHistoryTermProps } = useSSG()
-  return {
-    SearchHistory: <PropsSection propsList={searchHistoryProps} />,
-    SearchHistoryTerm: <PropsSection propsList={searchHistoryTermProps} />,
-  }[component]
-}
+const components = ['SearchHistory.tsx', 'SearchHistoryTerm.tsx']
 
 <header>
 
@@ -89,11 +60,11 @@ import '@faststore/ui/src/components/molecules/SearchHistory/styles.scss'
 
 ### Search History
 
-<SearchHistoryPropsSection component="SearchHistory" />
+<ComponentPropsSection component="SearchHistory" />
 
 ### Search History Term
 
-<SearchHistoryPropsSection component="SearchHistoryTerm" />
+<ComponentPropsSection component="SearchHistoryTerm" />
 
 ---
 

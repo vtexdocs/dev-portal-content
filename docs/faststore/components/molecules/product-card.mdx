@@ -8,7 +8,6 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/ProductCardComponent___e6502d57cf7e5bf247f86b64577d4141.png
 ---
 
-import { Tab, Tabs } from 'nextra-theme-docs'
 import PropsSection from 'site/components/PropsSection'
 import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { SectionItem, SectionList } from 'site/components/SectionItem'
@@ -29,42 +28,13 @@ import { product } from 'site/mocks/product'
 import { products } from 'site/mocks/products'
 import { propsPriceDefinition } from 'site/components/PriceDefinitionProps/PriceDefinitionProps'
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const productCardPath = path.resolve(__filename)
-  const components = [
-    'ProductCard.tsx',
-    'ProductCardImage.tsx',
-    'ProductCardContent.tsx',
-  ]
-  const [productCardProps, productCardImageProps, productCardContentProps] =
-    getComponentPropsFrom(productCardPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        productCardProps,
-        productCardImageProps,
-        productCardContentProps,
-      },
-    },
-  }
-}
-
-export const ProductCardPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { productCardProps, productCardImageProps, productCardContentProps } =
-    useSSG()
-  return {
-    ProductCard: <PropsSection propsList={productCardProps} />,
-    ProductCardImage: <PropsSection propsList={productCardImageProps} />,
-    ProductCardContent: <PropsSection propsList={productCardContentProps} />,
-  }[component]
-}
+const components = [
+  'ProductCard.tsx',
+  'ProductCardImage.tsx',
+  'ProductCardContent.tsx',
+]
 
 <header>
 
@@ -296,15 +266,15 @@ All product card related components support all attributes also supported by the
 
 ### Product Card
 
-<ProductCardPropsSection component="ProductCard" />
+<ComponentPropsSection component="ProductCard" />
 
 ### Product Card Image
 
-<ProductCardPropsSection component="ProductCardImage" />
+<ComponentPropsSection component="ProductCardImage" />
 
 ### Product Card Content
 
-<ProductCardPropsSection component="ProductCardContent" />
+<ComponentPropsSection component="ProductCardContent" />
 
 #### Price Definition
 

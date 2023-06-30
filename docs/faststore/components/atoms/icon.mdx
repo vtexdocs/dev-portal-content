@@ -8,32 +8,9 @@ import PropsSection from 'site/components/PropsSection'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { Icon } from '@faststore/ui'
 
-import path from 'path'
-import { useSSG } from 'nextra/ssg'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const getStaticProps = () => {
-  const iconPath = path.resolve(__filename)
-  const components = ['Icon.tsx']
-  const [iconProps] = getComponentPropsFrom(iconPath, components)
-  return {
-    props: {
-      // We add an `ssg` field to the page props,
-      // which will be provided to the Nextra `useSSG` hook.
-      ssg: {
-        iconProps,
-      },
-    },
-  }
-}
-
-export const IconPropsSection = ({ component }) => {
-  // Get the data from SSG, and render it as a component.
-  const { iconProps } = useSSG()
-  return {
-    Icon: <PropsSection propsList={iconProps} />,
-  }[component]
-}
+const components = ['Icon.tsx']
 
 <header>
 
@@ -94,7 +71,7 @@ import '@faststore/ui/src/components/atoms/Icon/styles.scss'
 
 ## Props
 
-<IconPropsSection component="Icon" />
+<ComponentPropsSection component="Icon" />
 
 List of available [icons](../../docs/icons)
 
