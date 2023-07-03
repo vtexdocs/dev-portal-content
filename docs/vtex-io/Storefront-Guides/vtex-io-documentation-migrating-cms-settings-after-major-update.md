@@ -10,9 +10,9 @@ You may need to perform a major update of your store theme app due to changes in
 
 To handle this situation and ensure a smooth migration, follow the steps below to migrate template settings.
 
-## Before you begin
+## Before you start
 
-1. Install [VTEX IO CLI.](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install)
+1. Install [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 2. Install GraphQL IDE by running the following command: `vtex install vtex.admin-graphql-ide@3.x`.
 
 ## Instructions
@@ -21,7 +21,7 @@ To handle this situation and ensure a smooth migration, follow the steps below t
 2. Change to the **production workspace** containing your latest changes and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your store theme app.
 3. Create a new production workspace by running the following command:
 
-  - _Remember to replace the values in curly brackets with the values that apply to your scenario._
+ >ℹ️ Replace the values in curly brackets with the values that apply to your scenario.
 
   ```sh
   vtex use {workspaceName} --production
@@ -48,6 +48,6 @@ To handle this situation and ensure a smooth migration, follow the steps below t
   }
   ```
 
-8. Remember to replace the values in curly brackets with the values that apply to your scenario, and press Play.
+8. Replace the values in curly brackets with the values that apply to your scenario, and press **Play**.
 9. Open the VTEX Admin using the workspace created in the previous steps and validate the CMS content, routes, pages, and redirects.
 10. Once you have validated your data, [promote your workspace to master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/).
