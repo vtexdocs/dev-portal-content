@@ -32,4 +32,3 @@ To implement the debit card anti-fraud provider flow in your system, during the 
 Upon your request, our team will add the parameter `shouldUseAntifraudOnDebit` to your provider settings. This is a boolean field, with the default value being `false`.
 
 When you set this value to `true`, and a debit card transaction occurs using a payment rule containing an anti-fraud, the anti-fraud provider will be triggered, and the payment flow will be carried out as mentioned in this article.
-
