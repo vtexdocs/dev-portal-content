@@ -8,6 +8,11 @@ keywords:
   - react
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
+components:
+  - Filter.tsx
+  - FilterFacets.tsx
+  - FilterFacetBooleanItem.tsx
+  - FilterFacetRange.tsx
 ---
 
 import PropsSection from 'site/components/PropsSection'
@@ -18,14 +23,6 @@ import FilterUsage from 'site/components/Filter/FilterUsage'
 import { Button, Toast, useUI, UIProvider, Filter } from '@faststore/ui'
 import { SearchProvider } from '@faststore/sdk'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
-
-const components = [
-  'Filter.tsx',
-  'FilterFacets.tsx',
-  'FilterFacetBooleanItem.tsx',
-  'FilterFacetRange.tsx',
-]
-
 
 The `Filter` component is a compound of the following:
 
