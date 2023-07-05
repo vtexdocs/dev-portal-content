@@ -21,15 +21,15 @@ The diagram below can help you assess whether an integration needs to be adjuste
 
 ![reCAPTCHA diagram](https://images.ctfassets.net/alneenqid6w5/46F1byxPKdYgWcf1lSkPMn/077e3f3122263a78aaa5a4cf47bd9eb2/recaptcha-config-EN.png)
 
-- __Case 1__: *No changes are required in the integration, but your store might be at risk.*
+- **Case 1**: *No changes are required in the integration, but your store might be at risk.*
 
   Your store does not use reCAPTCHA at Checkout and is therefore vulnerable to automated attacks, unless other protective measures are implemented in your integration.
 
-- __Case 2__: *You need to adjust your integration, otherwise it might stop working.*
+- **Case 2**: *You need to adjust your integration, otherwise it might stop working.*
 
   Your store uses reCAPTCHA at Checkout, but is not ready to display it correctly in the user interface. Your development team should [adjust your integrations](#adjust-your-integrations).
 
-- __Case 3__: *No changes are required in the integration.*
+- **Case 3**: *No changes are required in the integration.*
 
   Your store uses reCAPTCHA at Checkout and is ready to display it correctly in the user interface. Congratulations for following best practices in security!
 
