@@ -22,7 +22,7 @@ See below an example of a debit card transaction using the anti-fraud system:
 10. **Finished**: The transaction reaches the **finished** status when the invoice with the payment amount is issued and linked to the order in the OMS. You should note that even after the settlement finishes successfully, [it is necessary to include the invoice in the order](https://help.vtex.com/en/faq/why-has-a-transaction-been-successfully-captured-but-not-finalized-in-the-pci-gateway).
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/a6366f253c5abb8a1fc21552bfbdd3c53314146c/docs/guides/Payments/payments-configuration-guides/antifraud-debit-card-transactions.png">
+<img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/a6366f253c5abb8a1fc21552bfbdd3c53314146c/docs/guides/Payments/payments-configuration-guides/antifraud-debit-card-transactions.png"></img>
 </p>
 
 ## How to activate the anti-fraud flow for debit card transactions
