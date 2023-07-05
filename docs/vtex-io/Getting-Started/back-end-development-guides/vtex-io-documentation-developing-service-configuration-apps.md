@@ -7,7 +7,7 @@ updatedAt: "2022-12-13T20:17:44.992Z"
 ---
 ## Introduction
 
-**A service is basically what an app configures**. At the end of the day, services are responsible for delivering a given functionality to the app's users.
+**A [service](https://developers.vtex.com/docs/guides/vtex-io-documentation-service) is basically what an app configures**. At the end of the day, services are responsible for delivering a given functionality to the app's users.
 
 Previously, the code of any service that was configured by an app developed on the VTEX IO platform was part of that app's code package. This mean that each VTEX IO app needed to carry the services configuration required for its proper functioning.
 
