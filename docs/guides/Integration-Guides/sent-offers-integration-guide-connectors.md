@@ -5,8 +5,8 @@ hidden: false
 createdAt: "2020-07-31T22:14:39.890Z"
 updatedAt: "2022-06-17T14:46:06.405Z"
 ---
-> ⚠️To evolve your experience in synchronizing and updating offers, the VTEX team is developing a new functionality that will replace the current module **Offer Management**. As a result, the module will not receive new updates or maintenance.  
-  For connectors and marketplaces already integrated into the module, please contact the development team by email [taissa.araujo@vtex.com.br](taissa.araujo@vtex.com.br).  
+> ⚠️To evolve your experience in synchronizing and updating offers, the VTEX team is developing a new functionality that will replace the current module **Offer Management**. As a result, the module will not receive new updates or maintenance.
+  For connectors and marketplaces already integrated into the module, please contact the development team by email [taissa.araujo@vtex.com.br](taissa.araujo@vtex.com.br).
   For connectors interested in starting the integration, we ask you to wait for the release of the new module; as soon as it is available we will announce it to all customers through the [Developer Portal's release notes section](https://developers.vtex.com/updates/release-notes) and [VTEX Help Center announcements page](https://help.vtex.com/pt/en/announcements)."
 
 Offer Management is the VTEX feature that gives sellers more visibility around a product’s sending process to external channels, like marketplaces. Offer Management does not reflect what happens to offers after they’re sent to channels and start being sold. Instead, it helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing that they can be sent to the marketplace and synced correctly.
@@ -22,10 +22,7 @@ Connectors interact with Offer Management in four ways:
 3. [Updating offers](#3-interactions-where-all-processes-happen), by creating interactions.
 4. [Registering all actions in the Offer Management timeline](#4-logs-registering-steps), by creating logs.
 
-> **VTEX Bridge**  was the previous VTEX module responsible for managing all marketplaces used by a seller. Offer Management replaces the product, price, and inventory features currently managed by VTEX Bridge.",
-  "title": "Deprecated features"
-}
-[/block]
+> **VTEX Bridge**  was the previous VTEX module responsible for managing all marketplaces used by a seller. Offer Management replaces the product, price, and inventory features currently managed by VTEX Bridge.
 
 The diagram below shows the Offer Management’s interface, which the vendors access through their VTEX accounts.
 
@@ -122,7 +119,7 @@ This result is what allows Offer Management to infer an offer’s status. The ty
 | Notification | **Unavailable:** When the offer is discarded by the connector - by being inactive or not included in the trade policy, Offer Management doesn’t infer an offer’s status, and the connector indicates it. In that case, the connector will send the "status":"unavailable" data in a interaction. |
 | Processing | **Sending:** When the interaction is being processed, the offer’s status becomes sending when the interaction has the attribute “context”=”setup”. |
 
-## 4. Logs: registering steps  
+## 4. Logs: registering steps
 
 > **API Reference:** [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)
 
