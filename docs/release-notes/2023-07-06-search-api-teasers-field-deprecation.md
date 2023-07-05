@@ -13,7 +13,6 @@ From September 2023, the `Teasers` field in [Search API requests](https://develo
 
 We have already added the `PromotionTeasers` field to Search API endpoints. Currently, both fields coexist, and it is possible to view previously recorded information. From September 2023, VTEX will deprecate the `Teasers` field for all accounts and maintain `PromotionTeasers` only.
 
-
 ### Before  - "Teasers" example
 
 ```json
