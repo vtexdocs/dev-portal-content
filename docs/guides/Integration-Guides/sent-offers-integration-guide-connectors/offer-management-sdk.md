@@ -39,11 +39,13 @@ These SDK is organized in the following sections:
 ```
 <PackageReference Include=\"SentOffers.SDK\" Version=\"0.0.4\" />
 ```
+
 **Step 2 -** Inject dependencies in the project:
 
 ```
 services.AddSingleton<ISentOffersClient, SentOffersClient>();
 ```
+
 ## Offer Management APIs
 
 All of the APIs responses are contained in the object `SentOffersResponse`, which can be used to check if a transaction was successful or presented an error. All errors are listed in the `errors` attribute.
@@ -97,7 +99,7 @@ var response = await soClient.DeleteFeedAsync(
 
 ### Create interaction
 
-An interaction should be created before the connector’s integration flow. The reason is that for any flow it will be necessary to inform the interaction context, whether it is a setup or a synchronization. 
+An interaction should be created before the connector’s integration flow. The reason is that for any flow it will be necessary to inform the interaction context, whether it is a setup or a synchronization.
 
 To create an interaction, do the following:
 
@@ -176,7 +178,7 @@ var result = await _soClient.CreateUnifiedInteractionAsync(
 
 ## Integration flows
 
-If the [unified contract](#unified-contract) was not a solution for the connector, then this section’s specific flows must be implemented. 
+If the [unified contract](#unified-contract) was not a solution for the connector, then this section’s specific flows must be implemented.
 
 In order to integrate a VTEX seller’s SKU with a marketplace, the connector has to implement the flows as in the list below:
 
@@ -188,7 +190,7 @@ In order to integrate a VTEX seller’s SKU with a marketplace, the connector ha
 
 > ℹ️ After the creation of the feed, each interaction in Offer Management must start with the same `OriginType` attribute used in the integration flow that is operating, whether it is about inventory, price or catalog.
 
-### Catalog integration 
+### Catalog integration
 
 In order to create catalog integration, do as the following example:
 
