@@ -9,10 +9,9 @@ updatedAt: "2022-07-06T14:38:05.752Z"
   For connectors and marketplaces already integrated into the module, please contact the development team by email [taissa.araujo@vtex.com.br](taissa.araujo@vtex.com.br).
   For connectors interested in starting the integration, we ask you to wait for the release of the new module, as soon as it is available we will announce it to all customers through the [dev portal](https://developers.vtex.com/updates/release-notes) and [help VTEX](https://help.vtex.com/pt/en/announcements).
 
-
 > ℹ️ For the guide based on APIs, see [Offer Management Integration Guide](https://developers.vtex.com/vtex-rest-api/docs/sent-offers-integration-guide-connectors).  
 
-The [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) allows sellers to track the sending and syncing of their offers in marketplaces integrated with their store. The feature helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing they were sent to the marketplace and synced correctly.  In VTEX, an offer is an SKU from a seller that has been sent to a marketplace and whose price and inventory information have been configured. 
+The [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) allows sellers to track the sending and syncing of their offers in marketplaces integrated with their store. The feature helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing they were sent to the marketplace and synced correctly.  In VTEX, an offer is an SKU from a seller that has been sent to a marketplace and whose price and inventory information have been configured.
 
 The current document is a Software Development Kit (SDK) created to facilitate the integration between a connector and Offer Management. The SDK includes the implementation of Offer Management’s main features and a .NET library via MyGet.
 
@@ -23,7 +22,6 @@ The integration using this SDK follows the same concepts presented in the [Offer
 | Feed | The `feedId` attribute created by the connector will identify sellers’ feeds with a channel.|
 | Interaction  | For every action that happens to an offer, whether it is a status notification or a price update, the connector creates an interaction about it.|
 | Logs | Logs are the granular details of actions that happen within an interaction, and they are organized in a timeline. Logs registers last for ten days.|  
-
 
 Offer Management works with the creation of a feed, followed by the creation of interactions and logs. After the log is created, it is necessary to close the interaction, and that process is what makes an offer update visible for sellers in Offer Management’s UI.
 
@@ -37,10 +35,12 @@ These SDK is organized in the following sections:
 ## Installing dependencies
 
 **Step 1 -** Open the terminal and add the package to the project dependencies:
-``` 
+
+```
 <PackageReference Include=\"SentOffers.SDK\" Version=\"0.0.4\" />
 ```
 **Step 2 -** Inject dependencies in the project:
+
 ```
 services.AddSingleton<ISentOffersClient, SentOffersClient>();
 ```
@@ -65,6 +65,7 @@ Authentication in Offer Management works as in VTEX REST APIs, as it can be seen
 ### Create feed
 
 The creation of a feed establishes the connection between the seller's [affiliate](https://help.vtex.com/en/tutorial/configuring-affiliates--tutorials_187) ID and the marketplace’s ID, which corresponds to the attribute `Id` (also referred to as `feedId`).  
+
 ```
 SentOffersResponse <FeedCreateResponseDto> response;
 
@@ -99,6 +100,7 @@ var response = await soClient.DeleteFeedAsync(
 An interaction should be created before the connector’s integration flow. The reason is that for any flow it will be necessary to inform the interaction context, whether it is a setup or a synchronization. 
 
 To create an interaction, do the following:
+
 ```
 var response = await soClient.CreateInteractionAsync(
   "account",
@@ -116,6 +118,7 @@ var response = await soClient.CreateInteractionAsync(
 ### Create log
 
 Logs can be created as the following:
+
 ```
 CreateLogDTO log = new()
 {
@@ -188,6 +191,7 @@ In order to integrate a VTEX seller’s SKU with a marketplace, the connector ha
 ### Catalog integration 
 
 In order to create catalog integration, do as the following example:
+
 ```
 CreateLogDTO log = new()
 {
@@ -216,6 +220,7 @@ var result = await _soClient.CreateLogAsync(
 ### Price update
 
 In order to update price in the integration, do as the following example:
+
 ```
 CreateLogDTO log = new()
 {
@@ -240,9 +245,11 @@ var result = await _soClient.CreateLogAsync(
   log, credentials
 )
 ```
+
 ### Inventory update
 
 In order to update inventory in the integration, do as the following example:
+
 ```
 CreateLogDTO log = new()
 {
@@ -266,9 +273,11 @@ var result = await _soClient.CreateLogAsync(
   log, credentials
 )
 ```
+
 ### Integration errors
 
 To integrate errors cases, do as the following example:
+
 ```
 string skuId = "1";
 string interactionId = "3DB3542A2C93412298AC95964A66A995";

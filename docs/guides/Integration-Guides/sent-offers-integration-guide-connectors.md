@@ -116,7 +116,7 @@ This result is what allows Offer Management to infer an offer’s status. The ty
 
 | Interaction’s result | Corresponding status |
 |---|---|
-| Success | **Synced:** When closing a `success` interaction, Offer Management updates the offer’s status to `Synced`, if there aren't any active errors in this offer. 
+| Success | **Synced:** When closing a `success` interaction, Offer Management updates the offer’s status to `Synced`, if there aren't any active errors in this offer.
 ||**Unavailable:** When the offer already exists and the seller removes it from the trade policy, Offer Management doesn’t infer an offer’s status. |
 | Failure | **Error:** When an offer has at least one failure interaction, the offer’s status becomes error. |
 | Notification | **Unavailable:** When the offer is discarded by the connector - by being inactive or not included in the trade policy, Offer Management doesn’t infer an offer’s status, and the connector indicates it. In that case, the connector will send the "status":"unavailable" data in a interaction. |
