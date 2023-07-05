@@ -1,14 +1,14 @@
 ---
-title: "Implementing a pre-analysis antifraud flow for debit card transactions"
+title: "Implementing a pre-analysis anti-fraud flow for debit card transactions"
 slug: "implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions"
 hidden: false
 createdAt: "2023-07-04T00:00:00.691Z"
 updatedAt: ""
 ---
 
-To provide more protection in transactions processed by debit cards, an initial pre-analysis antifraud step can be added to the standard payment transaction flow.
+To provide more protection in transactions processed by debit cards, an initial pre-analysis anti-fraud step can be added to the standard payment transaction flow.
 
-See below an example of a debit card transaction using the antifraud system:
+See below an example of a debit card transaction using the anti-fraud system:
 
 1. **Analyzing initial risk (pre-analysis)**: This flow starts with a pre-analysis carried out by the anti-fraud system using the data forwarded by the payment gateway.
 2. **Authorizing**: If no initial inconsistencies are found, the transaction information is forwarded to the acquirer or another gateway (when applicable).
@@ -23,9 +23,9 @@ See below an example of a debit card transaction using the antifraud system:
 
 ![Antifraud Debit Card Transactions](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/a6366f253c5abb8a1fc21552bfbdd3c53314146c/docs/guides/Payments/payments-configuration-guides/antifraud-debit-card-transactions.png)
 
-## How to activate the antifraud flow for debit card transactions
+## How to activate the anti-fraud flow for debit card transactions
 
-Before starting the configuration to enable the antifraud flow for debit card transactions, check whether the [Send Antifraud Pre-Analysis Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/pre-analysis) endpoint is already implemented in your anti-fraud provider's internal settings.
+Before starting the configuration to enable the anti-fraud flow for debit card transactions, check whether the [Send Antifraud Pre-Analysis Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/pre-analysis) endpoint is already implemented in your anti-fraud provider's internal settings.
 
 To implement the debit card anti-fraud provider flow in your system, during the homologation process, you should contact the [Support VTEX](https://help.vtex.com/support) and request its activation.
 
