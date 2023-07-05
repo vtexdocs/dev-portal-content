@@ -9,7 +9,7 @@ updatedAt: "2022-07-06T14:38:05.752Z"
   For connectors and marketplaces already integrated into the module, please contact the development team by email [taissa.araujo@vtex.com.br](taissa.araujo@vtex.com.br).
   For connectors interested in starting the integration, we ask you to wait for the release of the new module, as soon as it is available we will announce it to all customers through the [dev portal](https://developers.vtex.com/updates/release-notes) and [help VTEX](https://help.vtex.com/pt/en/announcements).
 
-> ℹ️ For the guide based on APIs, see [Offer Management Integration Guide](https://developers.vtex.com/vtex-rest-api/docs/sent-offers-integration-guide-connectors).  
+> ℹ️ For the guide based on APIs, see [Offer Management Integration Guide](https://developers.vtex.com/vtex-rest-api/docs/sent-offers-integration-guide-connectors).
 
 The [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) allows sellers to track the sending and syncing of their offers in marketplaces integrated with their store. The feature helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing they were sent to the marketplace and synced correctly.  In VTEX, an offer is an SKU from a seller that has been sent to a marketplace and whose price and inventory information have been configured.
 
@@ -17,11 +17,11 @@ The current document is a Software Development Kit (SDK) created to facilitate t
 
 The integration using this SDK follows the same concepts presented in the [Offer Management Integration Guide](https://developers.vtex.com/vtex-rest-api/docs/sent-offers-integration-guide-connectors):
 
-| Concept | Description |
-|---------|---------------|
-| Feed | The `feedId` attribute created by the connector will identify sellers’ feeds with a channel.|
-| Interaction  | For every action that happens to an offer, whether it is a status notification or a price update, the connector creates an interaction about it.|
-| Logs | Logs are the granular details of actions that happen within an interaction, and they are organized in a timeline. Logs registers last for ten days.|  
+| Concept     | Description                                                                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Feed        | The `feedId` attribute created by the connector will identify sellers’ feeds with a channel.                                                        |
+| Interaction | For every action that happens to an offer, whether it is a status notification or a price update, the connector creates an interaction about it.    |
+| Logs        | Logs are the granular details of actions that happen within an interaction, and they are organized in a timeline. Logs registers last for ten days. |
 
 Offer Management works with the creation of a feed, followed by the creation of interactions and logs. After the log is created, it is necessary to close the interaction, and that process is what makes an offer update visible for sellers in Offer Management’s UI.
 
@@ -52,13 +52,21 @@ All of the APIs responses are contained in the object `SentOffersResponse`, whic
 
 This section is organized as below:
 
-- [Authentication](#authentication)
-- [Create feed](#create-feed)
-- [Deactivate feed](#deactivate-feed)
-- [Create interaction](#create-interaction)
-- [Create log](#create-log)
+- [Installing dependencies](#installing-dependencies)
+- [Offer Management APIs](#offer-management-apis)
+  - [Authentication](#authentication)
+  - [Create feed](#create-feed)
+  - [Deactivate feed](#deactivate-feed)
+  - [Create interaction](#create-interaction)
+  - [Create log](#create-log)
+- [Unified contract](#unified-contract)
+- [Integration flows](#integration-flows)
+  - [Catalog integration](#catalog-integration)
+  - [Price update](#price-update)
+  - [Inventory update](#inventory-update)
+  - [Integration errors](#integration-errors)
 
-> ℹ️ This SDK does not reference all the APIs related to Offer Management, however, they can be found in VTEX API Reference under **Marketplace APIs > [Offer Management](https://developers.vtex.com/vtex-rest-api/reference/createchannel)**.  
+> ℹ️ This SDK does not reference all the APIs related to Offer Management, however, they can be found in VTEX API Reference under **Marketplace APIs > [Offer Management](https://developers.vtex.com/vtex-rest-api/reference/createchannel)**.
 
 ### Authentication
 
@@ -66,7 +74,7 @@ Authentication in Offer Management works as in VTEX REST APIs, as it can be seen
 
 ### Create feed
 
-The creation of a feed establishes the connection between the seller's [affiliate](https://help.vtex.com/en/tutorial/configuring-affiliates--tutorials_187) ID and the marketplace’s ID, which corresponds to the attribute `Id` (also referred to as `feedId`).  
+The creation of a feed establishes the connection between the seller's [affiliate](https://help.vtex.com/en/tutorial/configuring-affiliates--tutorials_187) ID and the marketplace’s ID, which corresponds to the attribute `Id` (also referred to as `feedId`).
 
 ```
 SentOffersResponse <FeedCreateResponseDto> response;
@@ -133,12 +141,12 @@ CreateLogDTO log = new()
 
 string skuId = "1";
 string interactionId = "3DB3542A2C93412298AC95964A66A995";
- 
+
 var result = await _soClient.CreateLogAsync(
   "account",
   "vtex.marketplace",
-  skuId, 
-  interactionId, 
+  skuId,
+  interactionId,
   log, credentials
   )
   ```
@@ -166,7 +174,7 @@ UnifiedInteractionCreateDTO unifiedContract = new()
 };
 
 string skuId = "1";
- 
+
 var result = await _soClient.CreateUnifiedInteractionAsync(
   "account",
   "vtex.marketplace",
@@ -213,8 +221,8 @@ string interactionId = "3DB3542A2C93412298AC95964A66A995";
 var result = await _soClient.CreateLogAsync(
   "account",
   "vtex.marketplace",
-  skuId, 
-  interactionId, 
+  skuId,
+  interactionId,
   log, credentials
 )
 ```
@@ -238,12 +246,12 @@ CreateLogDTO log = new()
 
 string skuId = "1";
 string interactionId = "3DB3542A2C93412298AC95964A66A995";
- 
+
 var result = await _soClient.CreateLogAsync(
   "account",
   "vtex.marketplace",
-  skuId, 
-  interactionId, 
+  skuId,
+  interactionId,
   log, credentials
 )
 ```
@@ -266,12 +274,12 @@ CreateLogDTO log = new()
 
 string skuId = "1";
 string interactionId = "3DB3542A2C93412298AC95964A66A995";
- 
+
 var result = await _soClient.CreateLogAsync(
   "account",
   "vtex.marketplace",
-  skuId, 
-  interactionId, 
+  skuId,
+  interactionId,
   log, credentials
 )
 ```
@@ -283,12 +291,12 @@ To integrate errors cases, do as the following example:
 ```
 string skuId = "1";
 string interactionId = "3DB3542A2C93412298AC95964A66A995";
- 
+
 var result = await _soClient.CreateLogAsync(
   "account",
   "vtex.marketplace",
-  skuId, 
-  interactionId, 
+  skuId,
+  interactionId,
   log, credentials
 )
 ```
