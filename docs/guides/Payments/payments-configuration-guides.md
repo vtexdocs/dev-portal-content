@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-01-27T14:09:38.942Z"
 updatedAt: "2022-04-29T12:42:57.970Z"
 ---
-The articles in this subsection will present the necessary steps to make payment settings.
+The articles listed below will present the necessary steps to make payment settings.
 
 | Article | Description |
 | - | - |
