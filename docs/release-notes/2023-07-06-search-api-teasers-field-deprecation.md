@@ -77,8 +77,6 @@ We have already added the `PromotionTeasers` field to Search API endpoints. Curr
 ]
 ```
 
-
-
 ## What needs to be done?
 
 If you have integrations that depend on the `Teasers` field, you must adapt your implementation to use `PromotionTeasers` instead as soon as possible. You can find more information about the new field in [Search API reference](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search).
