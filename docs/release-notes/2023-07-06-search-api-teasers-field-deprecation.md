@@ -1,5 +1,5 @@
 ---
-title: "Search API: "Teasers" field deprecation"
+title: "Search API: Teasers field deprecation"
 slug: "2023-07-06-search-api-teasers-field-deprecation"
 excerpt: "From September 2023, the Teasers field in Search API requests will be deprecated."
 hidden: false
