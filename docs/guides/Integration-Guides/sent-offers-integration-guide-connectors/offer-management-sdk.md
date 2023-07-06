@@ -5,11 +5,11 @@ hidden: false
 createdAt: "2022-07-06T14:04:18.259Z"
 updatedAt: "2022-07-06T14:38:05.752Z"
 ---
->⚠️To evolve your experience in synchronizing and updating offers, the VTEX team is developing a new functionality that will replace the current module **Offer Management**. As a result, the module will not receive new updates or maintenance.
+>⚠️ To evolve your experience in synchronizing and updating offers, the VTEX team is developing a new functionality that will replace the current module **Offer Management**. As a result, the module will not receive new updates or maintenance.
   For connectors and marketplaces already integrated into the module, please contact the development team by email [taissa.araujo@vtex.com.br](taissa.araujo@vtex.com.br).
   For connectors interested in starting the integration, we ask you to wait for the release of the new module, as soon as it is available we will announce it to all customers through the [dev portal](https://developers.vtex.com/updates/release-notes) and [help VTEX](https://help.vtex.com/pt/en/announcements).
 
-> ℹ️ For the guide based on APIs, see [Offer Management Integration Guide](https://developers.vtex.com/vtex-rest-api/docs/sent-offers-integration-guide-connectors).
+>ℹ️ For the guide based on APIs, see [Offer Management Integration Guide](https://developers.vtex.com/vtex-rest-api/docs/sent-offers-integration-guide-connectors).
 
 The [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) allows sellers to track the sending and syncing of their offers in marketplaces integrated with their store. The feature helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing they were sent to the marketplace and synced correctly.  In VTEX, an offer is an SKU from a seller that has been sent to a marketplace and whose price and inventory information have been configured.
 
@@ -66,7 +66,7 @@ This section is organized as below:
   - [Inventory update](#inventory-update)
   - [Integration errors](#integration-errors)
 
-> ℹ️ This SDK does not reference all the APIs related to Offer Management, however, they can be found in VTEX API Reference under **Marketplace APIs > [Offer Management](https://developers.vtex.com/vtex-rest-api/reference/createchannel)**.
+>ℹ️ This SDK does not reference all the APIs related to Offer Management, however, they can be found in VTEX API Reference under **Marketplace APIs > [Offer Management](https://developers.vtex.com/vtex-rest-api/reference/createchannel)**.
 
 ### Authentication
 
@@ -196,7 +196,7 @@ In order to integrate a VTEX seller’s SKU with a marketplace, the connector ha
 - [Integration error](#integration-errors)
 [block:callout]
 
-> ℹ️ After the creation of the feed, each interaction in Offer Management must start with the same `OriginType` attribute used in the integration flow that is operating, whether it is about inventory, price or catalog.
+>ℹ️ After the creation of the feed, each interaction in Offer Management must start with the same `OriginType` attribute used in the integration flow that is operating, whether it is about inventory, price or catalog.
 
 ### Catalog integration
 
