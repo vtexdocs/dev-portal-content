@@ -11,7 +11,7 @@ From September 2023, we will no longer allow price and inventory changes to be n
 
 ## What will change?
 
-The [Change Notification with SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-) endpoint will no longer notify VTEX marketplaces about price and inventory changes. It will only about changes in SKU catalog information, such as name, description, and measurements.
+The [Change Notification with SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-) endpoint will no longer notify VTEX marketplaces about price and inventory changes. It will only notify about changes in SKU catalog information, such as name, description, and measurements.
 
 From September 2023, only the Marketplace API endpoints will be available to send price and inventory notifications:
 
