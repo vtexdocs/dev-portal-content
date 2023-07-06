@@ -15,19 +15,19 @@ This documentation is a reference for:
 
 ## Default commands
 
-Below is a brief description of the default commands available in VTEX IO CLI. For detailed information about each command, you can click on the respective command name.  You can also get this information in your terminal by adding `--help` or `-h` after the command name.
+Below is a brief description of the default commands available in VTEX IO CLI. For detailed information about each command, click on the respective command name. You can also get this information in your terminal by adding `--help` or `-h` after the command name.
 
-| Command name                                          | Feature                                                                                                                         |
+| Command name                                          | Description                                                                                                                         |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | [`autoupdate`](#autoupdate)                           | Automatically updates VTEX IO CLI.                                                                                              |
-| [`browse`](#browse)                                   | Opens your current workspace and account URL in a new browser window.                                                           |
+| [`browse`](#browse)                                   | Opens the URL relative to your current workspace and account in a new browser window.                                                           |
 | [`deploy`](#deploy)                                   | Publishes an app as a stable version. Only works for apps previously published as a release candidate version.                  |
 | [`deprecate`](#deprecate)                             | Deprecates the specified app, uninstalling and downgrading it to the latest stable version on every VTEX account.               |
 | [`deps diff`](#deps-diff)                             | Displays the differences between the dependencies of two distinct workspaces.                                                   |
 | [`deps list`](#deps-list)                             | Displays the complete dependency tree of the current workspace.                                                                 |
 | [`deps update`](#deps-update)                         | Updates a dependency of the current workspace. If not specified which one, it updates all dependencies.                         |
 | [`edition get`](#edition-get)                         | Displays the Edition App version installed on the current account.                                                              |
-| [`edition set`](#edition-set)                         | Sets the version of the Edition App for the current account.                                                                    |
+| [`edition set`](#edition-set)                         | Displays the version of the Edition App for the current account.                                                                    |
 | [`help`](#help)                                       | Displays help for VTEX CLI commands.                                                                                            |
 | [`init`](#init)                                       | Copies starting files and folders from VTEX boilerplates to your local directories.                                             |
 | [`install`](#install)                                 | Installs an app on the current workspace. If no app is specified, it defaults to the app in the current directory.              |
@@ -37,7 +37,7 @@ Below is a brief description of the default commands available in VTEX IO CLI. F
 | [`login`](#login)                                     | Logs into a VTEX account.                                                                                                       |
 | [`logout`](#logout)                                   | Logs out from the current VTEX account.                                                                                         |
 | [`publish`](#publish)                                 | Publishes the app in the current directory as a release candidate version.                                                      |
-| [`release`](#release)                                 | (For git users only.) Bumps the app version, commits, and pushes to the remote repository for the app in the current directory. |
+| [`release`](#release)                                 | (For git users only.) Bumps the app version, commits, and pushes to remote the app in the current directory. |
 | [`setup`](#setup)                                     | Sets up typing and tools for the current development environment.                                                               |
 | [`switch`](#switch)                                   | Switches to another VTEX account.                                                                                               |
 | [`undeprecate`](#undeprecate)                         | Reverts a deprecated version of an app to a stable version.                                                                     |
@@ -50,8 +50,8 @@ Below is a brief description of the default commands available in VTEX IO CLI. F
 | [`workspace abtest status`](#workspace-abtest-status) | Displays the results of the active A/B tests.                                                                                   |
 | [`workspace delete`](#workspace-delete)               | Deletes one or many workspaces from the current account.                                                                        |
 | [`workspace list`](#workspace-list)                   | Lists all workspaces of the current account.                                                                                    |
-| [`workspace promote`](#workspace-promote)             | Promotes the current workspace to the master branch. Only applicable for production workspaces.                                 |
-| [`workspace reset`](#workspace-reset)                 | Cleans all configurations of the specified workspace and recreates them with the configurations from the master branch.         |
+| [`workspace promote`](#workspace-promote)             | Promotes the current workspace to master. Only applicable for production workspaces.                                 |
+| [`workspace reset`](#workspace-reset)                 | Cleans all configurations of the specified workspace and recreates it with the configurations from master.         |
 | [`workspace status`](#workspace-status)               | Displays information about the specified workspace.                                                                             |
 | [`workspace use`](#workspace-use)                     | Creates and switches to a new workspace or simply switches to an existing one.                                                  |
 
@@ -79,7 +79,7 @@ Automatically updates VTEX IO CLI.
 
 ### browse
 
-Opens your current workspace and account URL in a new browser window.
+Opens the URL relative to your current workspace and account in a new browser window.
 
 #### Usage
 
@@ -110,9 +110,9 @@ Opens your current workspace and account URL in a new browser window.
 
 ### deploy
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-deploy` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-deploy` plugin. Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
-Publishes an app as a stable version. This command is specifically designed for apps that have been previously published as a release candidate version [see vtex publish --help].
+Publishes an app as a stable version. This command only works for apps previously published as a release candidate version [see vtex publish --help].
 
 #### Usage
 
@@ -176,7 +176,7 @@ Deprecates the specified app, uninstalling and downgrading it to the latest stab
 
 ### deps diff
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 Displays the differences between the dependencies of two distinct workspaces. If a single parameter is passed, the command compares the dependencies of the specified workspace with those of the master workspace. If no parameter is passed, the command compares the dependencies of the current workspace with those of the master workspace.
 
@@ -203,7 +203,7 @@ Displays the differences between the dependencies of two distinct workspaces. If
 
 ### deps list
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 Displays the complete dependency tree of the current workspace.
 
@@ -237,7 +237,7 @@ Displays the complete dependency tree of the current workspace.
 
 ### deps update
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-deps` plugin. Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 Updates a dependency of the current workspace. If not specified which dependency, the command updates all dependencies of the workspace.
 
@@ -265,7 +265,7 @@ Updates a dependency of the current workspace. If not specified which dependency
 
 ### edition get
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-edition` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-edition` plugin. Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 Displays the Edition App version installed on the current account.
 
@@ -285,7 +285,7 @@ Displays the Edition App version installed on the current account.
 
 ### edition set
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-edition` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-edition` plugin.Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 Sets the Edition App version for the current account.
 
@@ -522,7 +522,7 @@ Publishes the app in the current directory as a release candidate version.
 | ------------------------- | ----- | ------------------------------------------------ |
 | **--force**               | -f    | Publishes the app independently of SemVer rules. |
 | **--tag=tag**             | -t    | Adds the specified tag to the release.           |
-| **--workspace=workspace** | -w    | Uses the specified workspace for the app.        |
+| **--workspace=workspace** | -w    | Uses the specified workspace in the app registry.        |
 | **--yes**                 | -y    | Answers yes to all prompts.                      |
 
 #### Example
@@ -535,7 +535,7 @@ Publishes the app in the current directory as a release candidate version.
 
 ### release
 
-(For git users only.) Bumps the app version, commits, and pushes to the remote repository for the app in the current directory.
+(For git users only.) Bumps the app version, commits, and pushes to remote the app in the current directory.
 
 #### Usage
 
@@ -564,7 +564,7 @@ Publishes the app in the current directory as a release candidate version.
 
 ### setup
 
-Configures typing definitions and tools for the current development environment.
+Configures typings and tools for the current development environment.
 
 #### Usage
 
@@ -576,11 +576,11 @@ Configures typing definitions and tools for the current development environment.
 
 | Option              | Alias | Description                                                                                        |
 | ------------------- | ----- | -------------------------------------------------------------------------------------------------- |
-| **--ignore-linked** | -i    | Configures typing definitions from published apps and ignores typing definitions from linked apps. |
-| **--all**           | -     | Configures all available typing definitions, configurations, and tools.                            |
+| **--ignore-linked** | -i    | Configures types from published apps and ignores types from linked apps. |
+| **--all**           | -     | Sets all available typings, configurations, and tools.                            |
 | **--tooling**       | -     | Configures Prettier, Husky, and ESLint.                                                            |
 | **--tsconfig**      | -     | Configures React and Node TSconfig, if applicable.                                                 |
-| **--typings**       | -     | Configures GraphQL and React typing definitions.                                                   |
+| **--typings**       | -     | Configures GraphQL and React typings.                                                   |
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
@@ -647,7 +647,7 @@ Reestablishes a deprecated version of an app as a stable version.
 
 ### uninstall
 
-Uninstalls an app from the current workspace. If no app is specified, it defaults to the app in the current directory.
+Uninstalls an app from the current workspace. If no app is specified to uninstall, it defaults to the app in the current directory.
 
 #### Usage
 
@@ -680,7 +680,7 @@ Uninstalls an app from the current workspace. If no app is specified, it default
 
 ### unlink
 
-Unlinks an app from the current workspace. If no app is specified, it defaults to the app in the current directory.
+Unlinks an app from the current workspace. If no app is specified to unlink, it defaults to the app in the current directory.
 
 #### Usage
 
@@ -714,7 +714,7 @@ appname Name of the app to unlink.
 
 ### update
 
-Updates all installed apps to the latest minor or patch version. Does not upgrade to another major version.
+Updates all installed apps to the latest, minor, or patch version. Does not upgrade to another major version.
 
 #### Usage
 
@@ -732,7 +732,7 @@ Updates all installed apps to the latest minor or patch version. Does not upgrad
 
 ### whoami
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-whoami` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-whoami` plugin. Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 Prints details about the current account, workspace, environment, and login information.
 
@@ -766,7 +766,7 @@ Stops all A/B tests from running on the current account.
 
 ### workspace abtest start
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-abtest` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-abtest` plugin. Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 Starts a new A/B test on the current workspace.
 
@@ -780,7 +780,7 @@ Starts a new A/B test on the current workspace.
 
 ### workspace abtest status
 
-> ℹ️ This command refers to the `@vtex/cli-plugin-abtest` plugin. Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ This command refers to the `@vtex/cli-plugin-abtest` plugin. Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 Displays the results of active A/B tests.
 
@@ -813,7 +813,7 @@ Deletes one or many workspaces from the current account.
 
 | Option      | Alias | Description                                                |
 | ----------- | ----- | ---------------------------------------------------------- |
-| **--force** | -f    | Deletes the specified workspace, even if it is being used. |
+| **--force** | -f    | Deletes the specified workspace, even if it is currently being used. |
 | **--yes**   | -y    | Answers yes to all prompts.                                |
 
 #### Examples
@@ -853,7 +853,7 @@ Lists all workspaces of the current account.
 
 ### workspace promote
 
-Promotes the current workspace to the master branch. Only works for production workspaces.
+Promotes the current workspace to master. It only works for production workspaces.
 
 #### Usage
 
@@ -879,7 +879,7 @@ Promotes the current workspace to the master branch. Only works for production w
 
 ### workspace reset
 
-Cleans all configurations of the specified workspace and recreates them with the configurations from the master.
+Cleans all configurations of the specified workspace and recreates it with the configurations from master.
 
 #### Usage
 
@@ -976,9 +976,9 @@ Creates and switches to a new workspace or simply switches to an existing one.
 
 Below is a brief description of the commands provided by VTEX plugins. For detailed information about each command, click its respective name. After installing the corresponding plugin, you can also access this information in your terminal by adding `--help` or `-h` after the command name.
 
-> ℹ️ Access [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about VTEX IO CLI plugins.
+> ℹ️ Access [VTEX IO CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
-| Plugin command                            | Feature description                                                                     |
+| Plugin command                            | Description                                                                     |
 | ----------------------------------------- | --------------------------------------------------------------------------------------- |
 | [`add`](#add)                             | Adds the specified app(s) to the manifest dependencies.                                 |
 | [`config get`](#-config-get)              | Prints the value of the requested configuration key.                                    |
@@ -994,7 +994,7 @@ Below is a brief description of the commands provided by VTEX plugins. For detai
 | [`plugins install`](#plugins-install)     | Installs a plugin on CLI.                                                               |
 | [`plugins link`](#plugins-link)           | Links a plugin to CLI for development.                                                  |
 | [`plugins:list`](#plugins-list)           | Lists all plugins installed on your machine.                                            |
-| [`source plugins`](#plugins-source)       | Lists all plugins supported by VTEX.                                                    |
+| [`plugins source`](#plugins-source)       | Lists all plugins supported by VTEX.                                                    |
 | [`plugins uninstall`](#plugins-uninstall) | Removes a plugin from CLI.                                                              |
 | [`plugins:update`](#plugins-update)       | Updates all plugins installed on your machine.                                          |
 | [`redirects delete`](#redirects-delete)   | Deletes redirects from the current account and workspace.                               |
@@ -1025,8 +1025,8 @@ vtex add APPID [ITHAPPID]
 
 | Argument                | Description                                                                                                                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **APPID**               | The name and version of the dependency to include in the manifest.json file, specified in the format `{vendor}.{appname}@{x.x.x}`.          |
-| **ITHAPPID** (optional) | The names and versions of multiple dependencies to include in the manifest.json file, specified in the format `{vendor}.{appname}@{x.x.x}`. |
+| **APPID**               | The name and version of the dependency to include in the `manifest.json` file, specified in the format `{vendor}.{appname}@{x.x.x}`.          |
+| **ITHAPPID** (optional) | The names and versions of multiple dependencies to include in the `manifest.json` file, specified in the format `{vendor}.{appname}@{x.x.x}`. |
 
 #### Example
 
@@ -1213,7 +1213,7 @@ Lists installed infra services.
 
 ### infra update
 
-Updates installed infra services.
+Updates all installed infra services.
 
 #### Usage
 
@@ -1338,7 +1338,7 @@ Shows logs of an app. (Only apps in production.)
 
 ### plugins install
 
-Installs a plugin on CLI.
+Installs a plugin on the CLI.
 
 #### Usage
 
@@ -1350,7 +1350,7 @@ Installs a plugin on CLI.
 
 | Argument   | Description         |
 | ---------- | ------------------- |
-| **PLUGIN** | Plugins to install. |
+| **PLUGIN** | Plugin to install. |
 
 #### Options
 
@@ -1707,7 +1707,7 @@ Runs E2E integration tests for the app in the current directory.
 
 | Option              | Alias | Description                                                                                                                                                                                                                                                |
 | ------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **--report=report** | -r    | Displays the results and status of the specified test ID.                                                                                                                                                                                                  |
+| **--report=report** | -r    | Displays the results and state of the specified test ID.                                                                                                                                                                                                  |
 | **--token**         | -t    | (Not recommended.) Sends your personal authorization token to your testing session, making it available during the tests. Please note that this action can be potentially dangerous as it exposes your token through the 'authToken' environment variable. |
 | **--workspace**     | -w    | Runs tests for the apps installed on the specified workspace.                                                                                                                                                                                              |
 
