@@ -20,4 +20,4 @@ From September 2023, only the Marketplace API endpoints will be available to sen
 
 ## What needs to be done?
 
-If you used the [Change Notification with SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-) endpoint, make sure your integrations use Marketplace API endpoints to notify VTEX marketplaces of price and inventory updates before September 2023.
+If you used the [Change Notification with SKU ID](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-) endpoint, make sure your integrations start using Marketplace API endpoints to notify VTEX marketplaces of price and inventory updates before September 2023.
