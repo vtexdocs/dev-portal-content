@@ -55,7 +55,7 @@ export const suggestions = [{ value: 'apple airpods' }, { value: 'apple tv' }]
   <SectionItem
     title="Search History"
     description="Responsible for showing the latest terms searched by a user."
-    actionPath="/components/molecules/search-history"
+    actionPath="/docs/faststore/molecules-search-history"
   >
     <SearchHistory title="History">
       <SearchHistoryTerm value="Headphone" linkProps={{ href: '#' }} />
@@ -66,7 +66,7 @@ export const suggestions = [{ value: 'apple airpods' }, { value: 'apple tv' }]
   <SectionItem
     title="Search Top"
     description="This section displays the most searched terms by customers."
-    actionPath="/components/molecules/search-top"
+    actionPath="/docs/faststore/molecules-search-top"
   >
     <SearchTop title="Top Search">
       <SearchTopTerm value="Notebooks" linkProps={{ href: '#' }} index={0} />
@@ -85,7 +85,7 @@ export const suggestions = [{ value: 'apple airpods' }, { value: 'apple tv' }]
   <SectionItem
     title="Search Auto Complete"
     description="List of auto completing suggestions based on searched term."
-    actionPath="/components/molecules/search-auto-complete"
+    actionPath="/docs/faststore/molecules-search-auto-complete"
   >
     <SearchAutoComplete>
       {suggestions?.map((suggestion) => (
@@ -101,7 +101,7 @@ export const suggestions = [{ value: 'apple airpods' }, { value: 'apple tv' }]
   <SectionItem
     title="Search Products"
     description="List of SearchProductItem to show details of the suggested products."
-    actionPath="/components/molecules/search-products"
+    actionPath="/docs/faststore/molecules-search-products"
   >
     <SearchProducts>
       <SearchProductItem linkProps={{ href: '#' }}>
@@ -143,7 +143,7 @@ export const suggestions = [{ value: 'apple airpods' }, { value: 'apple tv' }]
   <SectionItem
     title="Search Dropdown"
     description="Combine SearchHistory, SearchTop and SearchAutoComplete and SearchProducts to show all options in SearchInput."
-    actionPath="/components/molecules/search-dropdown"
+    actionPath="/docs/faststore/molecules-search-dropdown"
     containerStyle={{
       alignItems: 'start',
     }}
@@ -153,14 +153,14 @@ export const suggestions = [{ value: 'apple airpods' }, { value: 'apple tv' }]
   <SectionItem
     title="Search Input Field"
     description="An InputField with a search button."
-    actionPath="/components/molecules/search-input-field"
+    actionPath="/docs/faststore/molecules-search-input-field"
   >
     <SearchInputField onSubmit={() => {}} />
   </SectionItem>
   <SectionItem
     title="Search Input"
     description="The SearchInput is responsible to receive, search and display suggestions."
-    actionPath="/components/organisms/search-input"
+    actionPath="/docs/faststore/organisms-search-input"
     containerStyle={{
       alignItems: 'start',
     }}
