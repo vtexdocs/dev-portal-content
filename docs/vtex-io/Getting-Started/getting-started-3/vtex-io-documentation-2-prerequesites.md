@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-08-11T07:03:18.428Z"
 updatedAt: "2022-12-13T20:17:46.410Z"
 category: "Storefront Development"
+excerpt: "Set up your account Edition to get started with Store Framework."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-3-settingyourstoretheme"
 ---

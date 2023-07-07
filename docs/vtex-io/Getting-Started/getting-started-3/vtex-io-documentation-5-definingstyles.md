@@ -5,25 +5,25 @@ hidden: false
 createdAt: "2020-08-11T07:03:18.383Z"
 updatedAt: "2022-12-13T20:17:44.175Z"
 category: "Storefront Development"
+excerpt: "Learn how to set specific styles for your store components to enhance your store's user experience."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-6-buildingyourownstoretheme"
 ---
-Your website’s **visual style** is a fundamental resource to building your **store’s identity**.
+
+Your website’s visual style is fundamental to building your store’s identity.
 
 Once you understand what blocks and templates are and how they render interface components, it's time to learn how to customize them.
 
 The Store Theme will allow you to:
 
-- Set a *default style* for all your store components.
-- Set a *specific style* for a store component type or for a single component from all available in your store.
+- Set a default style for all your store components.
+- Set a specific style for a store component type or for a single component from all available in your store.
 
 ## Setting a default style for all store components
 
-The theme's default visual style is configured in a single file named `style.json`, in the  Store Theme app's `style` folder.
+To set the default visual style for your entire store, you can utilize the `style.json` file located in the `style` folder of the Store Theme app. This single file allows you to customize the appearance of your store by modifying the default definitions declared within it. With this approach, you can avoid the need to customize individual components on each page.
 
-This means that you can customize your entire store’s appearance by simply adjusting the default definitions declared in this file, without the need to customize components on each page.
-
-For example: we can set the default theme background color to blue, by simply changing the `semanticColors` block’s `base` property:
+For example, we can set the default theme background color to blue by changing the `semanticColors` block’s `base` property:
 
 ```css
 "semanticColors": {
@@ -46,20 +46,15 @@ For example: we can set the default theme background color to blue, by simply ch
     "muted-4": "#e3e4e6",
     "muted-5": "#f2f4f5"
   },
+}
 ```
 
-This is easy to do thanks to the [**VTEX Styleguide**](https://styleguide.vtex.com/#/Styles), a highly-configurable CSS framework responsible for defining the component style guideline. In it you can find a detailed explanation on the `styles.json` file structure to help with your customization.
+For detailed instructions on customizing your theme, refer to the [VTEX Styleguide](https://styleguide.vtex.com/#/Styles), a comprehensive CSS framework that provides guidelines for defining component styles. It includes a detailed explanation of the `styles.json` file structure to assist you in your customization efforts.
 
 ## Setting a specific style for a component type or a single component
 
-The `style.json` file allows for a more generic customization of your store's visual style and can be very useful in most scenarios.
+The `style.json` file allows for more generic customization of your store's visual style and can be useful in most scenarios.
 
-However, you may want to create a more custom store identity, giving some components a more exclusive look with styles that are different than the default theme.
+However, if you desire a more distinctive store identity, where certain components have unique styles different from the default theme, consider the following scenario: suppose your store primarily uses blue as its main color, but you want the text components (rendered by `rich-text` blocks) to appear in red. Now, let's say you only want one specific text component to be red while the rest remain in the default blue color. To achieve such advanced customization, you can override the default style defined in `styles.json` with CSS handles and use the `blockClass` prop for the last given example.
 
-Picture the following scenario: your entire store uses blue as its main color, but you want your store's text components (rendered by `rich-text` blocks, as shown in the previous step) to be displayed in red.
-
-Let's also imagine that instead of all text components, you now want just one to be displayed in red - with the rest being displayed in the store's main color, blue.
-
-For such an advanced customization, you can overwrite the default style declared in `styles.json` using **CSS Handles**, along with the `blockClass` prop for the last given example.
-
-If you are interested on applying advanced customization in your store's style, access the recipe on [**Using CSS Handles for store customization**](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization/) for more instructions.
+If you are interested in applying advanced customization in your store style, access the [**Using CSS Handles for store customization**](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization/) guide for more instructions.

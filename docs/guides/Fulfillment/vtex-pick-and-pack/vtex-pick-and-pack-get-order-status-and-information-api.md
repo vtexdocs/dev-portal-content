@@ -1,5 +1,5 @@
 ---
-title: "VTEX Pick and Pack Get order status and information API"
+title: "VTEX Pick and Pack Get Order Status and Information API"
 slug: "vtex-pick-and-pack-get-order-status-and-information-api"
 hidden: false
 createdAt: "2023-04-05T17:08:52.219Z"

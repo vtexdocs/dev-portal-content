@@ -896,7 +896,7 @@ __Example:__
 
 ### storePreferencesData
 
-This object contains data from the store's configuration (stored in VTEX's License Manager).
+This object contains data from the store's configuration.
 
 __Example:__
 

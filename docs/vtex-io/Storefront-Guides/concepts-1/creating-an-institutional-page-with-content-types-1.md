@@ -56,7 +56,7 @@ To create an institutional page, follow these tutorial.
         “type”: “string”,
         “title”: “Link path”
       },
-      “Image5rc”: {
+      “ImageSrc”: {
         “type”: “string”,
         “title”: “Image”,
         “widget”: {
@@ -67,6 +67,9 @@ To create an institutional page, follow these tutorial.
           “title”: “Alt text”
         }
       }
+    }
+  }
+}
 ```
 
 > ℹ️️ These fields are the structure of your page. Complete them based on what was defined in step one of this tutorial.

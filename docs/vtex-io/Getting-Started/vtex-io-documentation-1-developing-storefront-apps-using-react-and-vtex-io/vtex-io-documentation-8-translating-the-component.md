@@ -43,7 +43,7 @@ All set! Having all the `react-intl` dependencies installed and the Messages [bu
 
 To understand how VTEX IO translations work in practice, consider the React `HelloWorld` component imported in article 3 of this series:
 
-```jsx
+```tsx
 import React from 'react'
  
 const HelloWorld = () => <div>Hello World!</div>
@@ -59,15 +59,15 @@ As a parameter for the `FormattedMessage` component, we will have a unique ID (`
 
 1. Substitute the `HelloWorld` component code with the code below:
 
-```jsx
+```tsx
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
  
 const HelloWorld = () => {
   return (
- <div>
-   <FormattedMessage id="store/my-app.hello"/>
- </div>
+   <div>
+     <FormattedMessage id="store/my-app.hello"/>
+   </div>
   )
 }
  
@@ -84,7 +84,7 @@ export default HelloWorld
 
 ```json
 {
-  "store/my-app.hello" : "Hello World!"
+  "store/my-app.hello": "Hello World!"
 }
 ```
 
@@ -105,7 +105,7 @@ In this section, we will teach you how to override Messages’ automatic transla
 
 ```json
 {
-  "store/my-app.hello" : "Olá, pessoal!"
+  "store/my-app.hello": "Olá, pessoal!"
 }
 ```
 
@@ -143,7 +143,7 @@ To automate these price changes in the translation flow, you need to add the `vt
 3. Once you are in it, import the `FormattedCurrency` component from `vtex.format-currency`.
 4. Use the `<FormattedCurrency value={price} />` format to indicate that the variable `price` should be treated as the price notation value. For example:
 
-```jsx
+```tsx
 import React from 'react'
 import { FormattedCurrency } from 'vtex.format-currency'
  
@@ -151,9 +151,9 @@ const PriceComponent = () => {
   const price = 10.50
  
   return (
- <div>
-   <FormattedCurrency value={price} />
- </div>
+   <div>
+     <FormattedCurrency value={price} />
+   </div>
   )
 }
  
@@ -173,7 +173,7 @@ Given you have already added the `react-intl` package to your app's dependencies
 1. Access the file created in the `react` folder for the imported React component.
 2. Once you are in it, import the `FormattedMessage` component from `react-intl`, setting the variable `user` (sent as a component parameter) using the following standard format: `<FormattedNumber id={id} values={{ user: user }}/>`. For example:
 
-```jsx
+```tsx
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
  
@@ -181,9 +181,9 @@ const HelloUser = () => {
   const user = 'John'
  
   return (
-  <div>
-    <FormattedMessage id='store/my-app.hello-user' values={{ user: user }} />
-  </div>
+   <div>
+     <FormattedMessage id='store/my-app.hello-user' values={{ user: user }} />
+   </div>
   )
 }
  
@@ -195,7 +195,7 @@ export default HelloUser
 
 ```json
 {
- "store/my-app.hello-user" : "Hello {user}!"
+ "store/my-app.hello-user": "Hello {user}!"
 }
 ```
 
@@ -218,7 +218,7 @@ Given you have already added the `react-intl` package to your app's dependencies
 1. Access the file created in the `react` folder for the imported React component.
 2. Import the `FormattedMessage` component from `react-intl`, setting the `myQuantity` variable (sent as a component parameter). Use the following format: `<FormattedNumber id={id} values={{ quantity: myQuantity }}/>`. For example:
 
-```jsx
+```tsx
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
  
@@ -226,9 +226,9 @@ const PluralSingularComponent = () => {
   const myQuantity = 1
  
   return (
- <div>
-   <FormattedMessage id='store/my-app.pluralsingular' values={{ quantity: myQuantity }} />
- </div>
+   <div>
+     <FormattedMessage id='store/my-app.pluralsingular' values={{ quantity: myQuantity }} />
+   </div>
   )
 }
  
@@ -240,7 +240,7 @@ export default PluralSingularComponent
 
 ```json
 {
- "store/my-app.pluralsingular" : "{quantity, plural, =0 {No product found} one{One product found} other{# products found}}"
+ "store/my-app.pluralsingular": "{quantity, plural, =0 {No product found} one{One product found} other{# products found}}"
 }
 ```
 
@@ -259,7 +259,7 @@ Given you have already added the `react-intl` package to your app's dependencies
 1. Access the file created in the `react` folder for the imported React component.
 2. Import the `FormattedNumber` component from `react-intl`, defining the `value` and `style` properties with the following format: `<FormattedNumber value={variable} style="percent"/>`. For example:
 
-```jsx
+```tsx
 import React from 'react'
 import { FormattedNumber } from 'react-intl'
  
@@ -267,9 +267,9 @@ const PercentageComponent = () => {
   const percent = 0.1
  
   return (
- <div>
-   <FormattedNumber value={percent} style="percent" />
- </div>
+   <div>
+     <FormattedNumber value={percent} style="percent" />
+   </div>
   )
 }
  
@@ -287,24 +287,24 @@ Given you have already added the `react-intl` package to your app's dependencies
 1. Access the file created in the `react` folder for the imported React component.
 2. Import the `FormattedMessage` component from`react-intl`, defining the `errorCode` variable (sent as a component parameter) to match the HTTP status code returned. For example:
 
-```jsx
+```tsx
 import React from 'react'
 import { FormattedMessage, defineMessages } from 'react-intl'
  
 const messages = defineMessages({
   404: {
- id: 'store/my-app.errors.404',
+   id: 'store/my-app.errors.404',
   },
   500: {
- id: 'store/my-app.errors.500',
+   id: 'store/my-app.errors.500',
   },
 })
  
 const ErrorMessage = ({ errorCode = 500 }) => {
   return {
- <div>
-   <FormattedMessage id={messages[errorCode].id} />
- </div>
+   <div>
+     <FormattedMessage id={messages[errorCode].id} />
+   </div>
   }
 }
  

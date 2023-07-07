@@ -26,8 +26,8 @@ To complete this guide, you must have the VTEX IO CLI installed in your machine.
 1. Open your Node app in any code editor of your preference.
 2. Define an object with the `Context` interface as a parameter of a function you wish to provide logging messages. Take the following example:
 
-```js
-const helloWorld = (Context: ctx) => {
+```ts
+const helloWorld = (ctx: Context) => {
   const { vtex: { logger } } = ctx
 
   logger.info('Hello World!')
@@ -40,8 +40,8 @@ In this example, the `helloWorld` function receives an object with a [**Context*
 
 3. [Destructure](https://www.typescriptlang.org/docs/handbook/variable-declarations.html#destructuring) the `logger` object from the `vtex` context and use its methods (i.e., `error`, `warn`, `info`, and `debug`) to provide error, warning, debugging, or informative messages in the log. Take the following example:
 
-```js
-const helloWorld = (Context: ctx) => {
+```ts
+const helloWorld = (ctx: Context) => {
   const { vtex: { logger } } = ctx
 
   logger.warn('Warning the world!')
