@@ -41,17 +41,13 @@ __VTEX ID__ is the service used for identifying users on our platform. Usually, 
 
 ### Relevant requests
 
-Some steps of the OAuth2 authentication process are worth highlighting and describing in more detail. [block:callout]
-{
-  "type": "info",
-  "title": "",
-  "body": "Note that some of the variable names in the requests mentioned below are customizable when you implement a custom OAuth option. You can adapt them to the specifications of your identity provider."
-}
-[/block]
+Some steps of the OAuth2 authentication process are worth highlighting and describing in more detail.
+
+> ℹ️ Note that some of the variable names in the requests mentioned below are customizable when you implement a custom OAuth option. You can adapt them to the specifications of your identity provider.
 
 #### Authorization request
 
-When an unauthenticated user requests access to protected resources in a store, VTEX ID will start the authentication process by generating a unique identifier for this authentication session, storing the URI of the requested resource for this session and redirecting the __user agent__ to this endpoint with the following query variables:
+When an unauthenticated user requests access to protected resources in a store, VTEX ID will start the authentication process by generating a unique identifier for this authentication session, storing the URI of the requested resource for this session, and redirecting the __user agent__ to this endpoint with the following query variables:
 
 - `Client ID`: Client identification.
 - `state`: The state containing the unique identifier.
@@ -84,7 +80,7 @@ The values of `client_id` and `client_secret` are stored in VTEX ID when the __i
 
 #### Get user information
 
-This endpoint should only allow requests with valid `access_token` credentials, which can be used to identify the user, and return the following user information in the request body:
+This endpoint should only allow requests with valid `access_token` credentials, which can be used to identify the user and return the following user information in the request body:
 
 - `userId` (required)
 - `email` (required)
@@ -102,12 +98,9 @@ You should understand all the expected behavior for the __identity provider__ en
 
 You can implement a custom OAuth option by going to your Admin and providing information about the communication between VTEX and your __identity provider__ as shown in the relevant requests described above.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Each VTEX store may have up to one custom OAuth implementation, which will be active for all store names in that account."
-}
-[/block] See the table below to learn the information you are required to configure for each request. After the table, you will find more details about each configuration step.
+>⚠️ Each VTEX store may have up to one custom OAuth implementation, which will be active for all store names in that account.
+
+See the table below to learn the information you are required to configure for each request. After the table, you will find more details about each configuration step.
 
 | __Request__                                                                 | __From__                     | __To__                       | __Fields requiring setup__                                                                                                                                                                                                                 |
 | --------------------------------------------------------------------------- | ---------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -116,8 +109,7 @@ You can implement a custom OAuth option by going to your Admin and providing inf
 | [Access token exchange](#5.-configure-access-token-exchange)                | VTEX                         | Custom __identity provider__ | <p>__Request:__</p><p>- __URL__</p><p>- Content-Type</p><p>- Authorization code key</p><p>- Custom parameters (optional)</p><p>__Response:__</p><p>- Access token key</p><p>- Token duration key</p>                                   |
 | [User information exchange](#6.-configure-user-information-exchange)        | VTEX                         | Custom __identity provider__ | <p>__Request:__</p><p>- __URL__</p><p>- Where to send the access token (bearer token or query string)</p><p>- Access token key (if sent in query string)</p><p>- Custom parameters (optional)</p>  <p>__Response:__</p><p>- User email key</p><p>- User ID key</p><p>- User name key</p> |
 
-[block:callout]
-{ "type": "warning", "body": "Note that many of the field values indicated in the table are dynamically generated or come from the __identity provider__. Because of this, you must define only the key under which this information will be sent to VTEX, so the platform knows how to properly handle each piece of information. Examples of this include the _authorization code key_, _token duration key_, and _user email key_." } [/block]
+> ⚠️ Note that many of the field values indicated in the table are dynamically generated or come from the __identity provider__. Because of this, you must define only the key under which this information will be sent to VTEX so the platform knows how to handle each piece of information properly. Examples include the _authorization code key_, _token duration key_, and _user email key_.
 
 #### Configuration steps
 
@@ -126,14 +118,14 @@ To set up this process, follow the steps below:
 1. Go to the __Admin__ > __Account Settings__ > __Authentication__.
 2. In the __Webstore__ tab, click `SET UP` in the __My Custom OAuth__ section.
 
-![Authentication settings screen with options: Access Key, Password, Facebook, Google, and My Custom OAuth.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-0.PNG)
-3. [Set the provider details.](#3.-set-provider-details)
-4. [Configure the authorization code requests.](#4.-configure-authorization-code-requests)
-5. [Configure the access token exchange request.](#5.-configure-access-token-exchange)
-6. [Configure the get user information request.](#6.-configure-user-information-exchange)
+  ![Authentication settings screen with options: Access Key, Password, Facebook, Google, and My Custom OAuth.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-0.PNG)
 
-[block:callout]
-{ "type": "info", "body": "When configuring these steps, you will be able to preview the outcome in the respective __Request preview__ and __Expected response preview__ sections. We recommend checking them thoroughly when setting up the integration." } [/block]
+3. [Set the provider details.](#3.-setting-the-provider-details)
+4. [Configure the authorization code requests.](#4.-configuring-the-authorization-code-requests)
+5. [Configure the access token exchange request.](#5.-configuring-the-access-token-exchange)
+6. [Configure the get user information request.](#6.-configuring-the-user-information-exchange)
+
+> ℹ️ When configuring these steps, you will be able to preview the outcome in the respective __Request preview__ and __Expected response preview__ sections. We recommend checking them thoroughly when setting up the integration.
 
 #### 3. Setting the provider details
 
@@ -144,9 +136,12 @@ When you start the custom OAuth setup, you must complete the following informati
 - __Client ID__ value
 - __Client secret__ key (`client_secret`)
 - __Client secret__ value
-> ❗ These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret` respectively.
 
-![Provider details section in the custom OAuth setup, an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-1.PNG) Click `NEXT`.
+> ❗ These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret`, respectively.
+
+![Provider details section in the custom OAuth setup, an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-1.PNG) 
+
+Click `NEXT`.
 
 #### 4. Configuring the authorization code requests
 
@@ -154,8 +149,9 @@ In this step, you must first provide the authorization request __URL__.
 
 ![Authorization code section in the custom OAuth set up, an interface with the options described in the tutorial](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-2.PNG)
 
-[block:callout]
-{ "type": "info", "body": "If you want, you can also add [custom parameters](#custom-parameters) to this request." } [/block] Then, scroll down to the __Callback Request Information__ section and enter the __Key__ under which the authorization code will be sent by the __identity provider__ to VTEX. ![Scrolling further down in the authorization code section, in the custom OAuth set up an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-3.PNG) Click `NEXT`.
+> ℹ️ If you want, you can also add [custom parameters](#custom-parameters) to this request." } [/block] Then, scroll down to the __Callback Request Information__ section and enter the __Key__ under which the authorization code will be sent by the __identity provider__ to VTEX.
+> ![Scrolling further down in the authorization code section, in the custom OAuth set up an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-3.PNG)
+> Click `NEXT`.
 
 #### 5. Configuring the access token exchange
 
@@ -164,8 +160,9 @@ To configure the __access token__ exchange request, you need to provide:
 - The request __URL__.
 - The __authorization code key__ under which VTEX should send the authorization code to the identity provider. ![Access token exchange section in the custom OAuth set up, an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-4.PNG)
 
-[block:callout]
-{ "type": "info", "body": "If you want, you can also add [custom parameters](#custom-parameters) to this request." } [/block] Then, you may scroll down to the __Response Information__ section and enter the __Keys__ under which VTEX should expect to receive user information:
+> ℹ️ If you want, you can also add [custom parameters](#custom-parameters) to this request.
+
+Then, you may scroll down to the __Response Information__ section and enter the __Keys__ under which VTEX should expect to receive user information:
 
 - __Access token key__
 - __Token duration key__
@@ -183,8 +180,9 @@ Check the __Request Preview__ section to make sure it matches the format expecte
 
 ![Get user info section, in the custom OAuth set up, an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-6.PNG)
 
-[block:callout]
-{ "type": "info", "title": "", "body": "If you wish, you can also add [custom parameters](#custom-parameters) to this request." } [/block] Scroll down to the __Response Information__ section, and provide the __Keys__ under which VTEX should expect to receive user information:
+> ℹ️ If you wish, you can also add [custom parameters](#custom-parameters) to this request.
+
+Scroll down to the __Response Information__ section, and provide the __Keys__ under which VTEX should expect to receive user information:
 
 - __User email key__
 - __User ID key__
