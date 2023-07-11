@@ -28,7 +28,7 @@ Notice that by dividing responsibilities into smaller builders, we are able to e
 
 We currently work with several builders that simplify app development by making each part of an app's responsibilities clear and well separated. Check our [list of builders](#list-of-builders).
 
-> ℹ In order to use all our builders, you need `vtex.builder-hub@0.293.4` or newer [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app) in your account.
+> ℹ To use VTEX builders, ensure that you have `vtex.builder-hub@0.293.4` or a newer version [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app) in your account.
 
 ## Implementation example
 
