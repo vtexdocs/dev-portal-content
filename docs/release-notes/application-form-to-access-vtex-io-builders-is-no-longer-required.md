@@ -17,4 +17,6 @@ We no longer require app developers to fill out the application form to use VTEX
 
 ## What needs to be done?
 
-If you want to use any builder, you can just add it to the [manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) of your application. For more information, check our [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) documentation.
+To use a specific builder, you need to add it to the [manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) of your app. You also need `vtex.builder-hub@0.293.4` or a more recent version [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app) in your account. 
+
+For more information, check our [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) documentation.
