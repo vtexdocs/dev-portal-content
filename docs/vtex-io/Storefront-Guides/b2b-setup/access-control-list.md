@@ -23,7 +23,7 @@ After creating the product specification, Intelligent Search automatically trigg
 
 ## Defining segmented navigation
 
-To define segmented navigation, you must configure the `accesscontrollist` facet on the <code>[vtex-segment](https://developers.vtex.com/docs/guides/vtex-io-documentation-segmenting-the-search-result)</code> app. For example, <code>acesscontrollist:1</code> can define navigation for a customer, where a certain product will not be displayed in the search results.
+To define segmented navigation, you must configure the `accesscontrollist` facet on the [`vtex-segment`](https://developers.vtex.com/docs/guides/vtex-io-documentation-segmenting-the-search-result) app. For example, `acesscontrollist:1` can define navigation for a customer, where a certain product will not be displayed in the search results.
 
 ```graphql
 query {
