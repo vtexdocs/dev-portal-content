@@ -10,7 +10,7 @@ By default, all VTEX stores are configured to display all available products dur
  
 ## Creating a specification
 
-To configure the Access Control List, you must first create one of the following product specifications either through [Catalog API](https://developers.vtex.com/docs/guides/product-specifications) or on [VTEX Admin](https://help.vtex.com/tutorial/adding-specifications-or-product-fields--tutorials_106) and set their values, which represent groups of customers that can be set on Master Data. All values for both specifications must be separated by `;` (i.e.: `1;2;3`).
+To configure the Access Control List, you must first create one of the following product specifications either through [Catalog API](https://developers.vtex.com/docs/guides/product-specifications) or on [VTEX Admin](https://help.vtex.com/en/tutorial/adding-specifications-or-product-fields--tutorials_106) and set their values, which represent groups of customers that can be set on Master Data. All values for both specifications must be separated by `;` (i.e.: `1;2;3`).
 
 | Specification name | Example values | Description |
 |-|-|-|
