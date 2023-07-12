@@ -50,5 +50,5 @@ Wherever the `accesscontrollist` facet is present, `_blocklist` and `_allowlist`
 |-|-|-|
 | Empty value or nonexistent specification | Empty value or nonexistent specification | The product will always be visible. |
 | Defined value | Empty value or nonexistent specification | The product will be visible unless the `accesscontrollist` value is included in `_blocklist`. |
-| Empty value or nonexistent specification | Defined value | The product will be visible only if the `accesscontrollist` value is included in `_allowlist`. | 
+| Empty value or nonexistent specification | Defined value | The product will be visible only if the `accesscontrollist` value is included in `_allowlist`. |
 | Defined value | Defined value | The product will not be visible to anyone. This is an invalid scenario. |
