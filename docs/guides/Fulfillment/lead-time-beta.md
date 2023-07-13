@@ -107,7 +107,7 @@ You can configure _Lead Time_ using the _Update inventory by SKU and warehouse_ 
 | Name | Type | Description | Example |
 |:---:|:---:|:---|:---:|
 | `skuId` | string | SKU ID is the unique identifier of the SKU you wish to update. | `36` |
-| `warehouseId` | string | Warehouse ID is the unique identifier of the warehouse associated with the SKU you wish to update. | `warehouse-1-StoreName` |
+| `warehouseId` | string | Warehouse ID is the unique identifier of the [warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) associated with the SKU you wish to update. | `warehouse-1-StoreName` |
 
 #### Headers
 
