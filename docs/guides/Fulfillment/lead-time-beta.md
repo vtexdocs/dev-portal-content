@@ -161,7 +161,7 @@ To configure _Lead Time_ for calendar days via VTEX Admin, follow the steps belo
 4. In the **Weekends and Holidays** section, enable the desired toggles:
 
     * <i class="fas fa-toggle-on"></i> **Saturday delivery**
-  * <i class="fas fa-toggle-on"></i> **Sunday delivery**
+    * <i class="fas fa-toggle-on"></i> **Sunday delivery**
   * <i class="fas fa-toggle-on"></i> **Holiday delivery**
 
 print_lead_time_holidays
