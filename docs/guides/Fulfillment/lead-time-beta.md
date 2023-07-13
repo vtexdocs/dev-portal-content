@@ -96,7 +96,7 @@ You can configure _Lead Time_ using the _Update inventory by SKU and warehouse_ 
 * **Configure Lead Time:** If you set the _Lead Time_ for the SKU in a warehouse, Checkout heuristic will consider that time for shipping calculation. You can configure _Lead Time_ in days, hours, minutes, and seconds.
 * **Set infinite inventory:** If you enable infinite inventory for the SKU in a warehouse, your store will always have these SKU units available for sales, which means not running out of inventory.
 
->⚠️ The difference between the current endpoint and the new beta endpoint is that the new version supports the `leadTime` request body field, which allows you to configure Lead Time for a SKU in a warehouse.
+>⚠️ The difference between the [current endpoint](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-) and the new beta endpoint is that the new version supports the `leadTime` request body field, which allows you to configure Lead Time for a SKU in a warehouse.
 
 #### Endpoint
 
