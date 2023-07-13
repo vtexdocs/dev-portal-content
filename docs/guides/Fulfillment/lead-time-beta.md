@@ -6,7 +6,7 @@ createdAt: "2023-07-13T13:17:05.725Z"
 updatedAt: "2023-07-13T13:17:33.816Z"
 ---
 
-> The _Lead Time_ feature is in beta, which means that we are working to improve it.
+> The Lead Time feature is in beta, which means that we are working to improve it.
 
 _Lead Time_ is an optional configuration you can make for a given SKU in a warehouse. The solution allows you to have more flexibility in managing logistic operations, and it is especially useful in some [scenarios](#use-cases), such as dropshipping and selling manufactured products.
 
