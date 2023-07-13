@@ -39,7 +39,7 @@ The _Lead Time_ feature allows you to configure a time frame for a given SKU in 
 * **Lead Time:** Amount of time you can configure for a specific SKU in a warehouse. The _Lead Time_ could represent handling time or fabrication, for example. Defining Lead Time is optional.
 * **[Warehouse time](https://help.vtex.com/en/tutorial/managing-warehouses--tutorials_137):** Amount of time a SKU takes to leave a warehouse to a loading dock. Defining warehouse time is required, but you can set the time to `0`.
 * **[Loading Dock time](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW):** Amount of time an SKU takes to leave a loading dock, which is an intermediate point between the warehouse and the [carrier](https://help.vtex.com/en/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE), and it is where products are shipped from. Defining loading dock time is required, but you can set the time to `0`.
-* **[Shipping Policy](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW):** Defines the conditions that will be displayed to shoppers at Checkout, and includes information like:
+* **[Shipping Policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140):** Defines the conditions that will be displayed to shoppers at Checkout, and includes information like:
   * [Shipping rates](https://help.vtex.com/en/tutorial/planilha-de-frete--tutorials_127)
   * [Carrier](https://help.vtex.com/tutorial/carries-on-vtex--7u9duMD5UQa2QQwukAWMcE) working hours
   * Delivery time frames
