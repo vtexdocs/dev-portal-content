@@ -164,6 +164,8 @@ To configure _Lead Time_ for calendar days via VTEX Admin, follow the steps belo
   * <i class="fas fa-toggle-on"></i> **Sunday delivery**
   * <i class="fas fa-toggle-on"></i> **Holiday delivery**
 
+  ![print_lead_time_holidays](link)
+
 5. Click `Save changes`.
 
 ## Endpoints that retrieve Lead Time information
