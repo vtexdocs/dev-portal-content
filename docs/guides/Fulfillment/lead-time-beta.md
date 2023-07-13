@@ -34,7 +34,7 @@ You can manage your inventory with the [Logistics API](https://developers.vtex.c
 
 The _Lead Time_ feature allows you to configure a time frame for a given SKU in a warehouse. The solution is part of the shipping time displayed to shoppers at Checkout, as in the example below:
 
-![lead_time_image_total_time_diagram_final](link)
+![lead_time_image_total_time_diagram_final](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Fulfillment/lead_time_image_total_time_diagram_final.png)
 
 * **Lead Time:** Amount of time you can configure for a specific SKU in a warehouse. The _Lead Time_ could represent handling time or fabrication, for example. Defining Lead Time is optional.
 * **[Warehouse time](https://help.vtex.com/en/tutorial/managing-warehouses--tutorials_137):** Amount of time a SKU takes to leave a warehouse to a loading dock. Defining warehouse time is required, but you can set the time to `0`.
