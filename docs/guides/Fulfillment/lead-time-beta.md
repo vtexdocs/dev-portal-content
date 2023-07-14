@@ -115,7 +115,7 @@ You can configure _Lead Time_ using the _Update inventory by SKU and warehouse_ 
 
 | Key | Value | Description |
 |:---:|:---:|:---|
-| `Accept` | `application/json; charset=utf-8` | HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand. |
+| `Accept` | `application/json` | HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand. |
 | `Content-Type` | `application/json` | Type of the content being sent. |
 
 #### Request body example
