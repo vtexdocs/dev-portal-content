@@ -17,11 +17,13 @@ When editing the email template on VTEX Admin, in **Store Settings** > **Email T
 Check out the following example in which the template uses the `HostName` information from the JSON Data:
 
 **HTML email template:**
+
 ```html
 <strong>{{_accountInfo.HostName}}</strong>
 ```
 
 **Example JSON Data:**
+
 ```json
 "_accountInfo": { 
   "HostName": "lojadosuporte" 
@@ -41,6 +43,7 @@ The use of the functions follows the syntax `{{function class.attribute}}`.
 Consider the following JSON Data example to understand the available functions, described in the table below.
 
 **Example JSON Data:**
+
 ```json
 "items": [ 
   { 
@@ -74,6 +77,7 @@ Consider the following JSON Data example to understand the available functions, 
 ## Example
 
 **Handlebars code:**
+
 ```handlebars
 {{#each items}} 
 {{name}} 
@@ -99,4 +103,4 @@ em até{{#hasSubStr shippingEstimate 'bd'}}
 ```
 
 **Result:**
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-set-up-functions-in-the-message-center-templates-1.jpg)
+![result-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-set-up-functions-in-the-message-center-templates-1.jpg)
