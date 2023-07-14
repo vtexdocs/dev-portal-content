@@ -10,7 +10,7 @@ The purpose of this article is to present the most used commands and all the fun
 
 To configure its templates, Message Center uses a language called Handlebars, with a few commands that make it easy to implement while expanding its customization.
 
-When editing the email template on VTEX Admin, in **Store Settings** > **Email Templates** > **Templates**, it is possible to use a range of variables provided by the system. To use these variables in the email layout, you must follow this Handlebars syntax: `{{class.attribute}}`. The `{{class.attribute}}` is obtained using the JSON Data field.
+When editing the email template on VTEX Admin, in **Store Settings** > **Email Templates** > **Templates**, it is possible to use a range of variables provided by the system. To use these variables in the email layout, you must follow this syntax using Handlebars: `{{class.attribute}}`. The `{{class.attribute}}` is obtained using the JSON Data field.
 
 >⚠️ The JSON attributes are the same for every VTEX store, however, the values may differ depending on the way you configured your store. So it is important to remember to configure your store relying on the info displayed by the [Get Order API](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) of your store.
 
