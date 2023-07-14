@@ -45,13 +45,13 @@ For more information, access [configuring template in the SmartCheckout](https:/
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/checkout-customization-guide-0.PNG)
 
-### Legacy CMS
+### Legacy CMS Portal
 
-In stores using the Legacy CMS, files are managed by the **Files Manager**. The CMS and JS files are located in the route `https://{accountName}.myvtex.com/arquivos/`, and named respectively as *checkout-custom.css* and *checkout-custom.js*.
+In stores using the Legacy CMS Portal, files are managed by the **Files Manager**. The CMS and JS files are located in the route `https://{accountName}.myvtex.com/arquivos/`, and named respectively as *checkout-custom.css* and *checkout-custom.js*.
 [block:callout]
 {
 "type": "warning",
-"body": "Modifications made to Legacy CMS files will be applied to all websites (stores) of your account at the same time."
+"body": "Modifications made to Legacy CMS Portal files will be applied to all websites (stores) of your account at the same time."
 }
 [/block]
 For more information, access [View the contents of the store's CSS files](https://help.vtex.com/en/tutorial/view-the-contents-of-the-stores-css-files--U5v7DXpRSee86uqiKQUQi#).

@@ -79,7 +79,7 @@ A [Pixel](https://developers.facebook.com/docs/meta-pixel/get-started) is a snip
  
 This app is fully compatible with the Facebook Pixel App. FBE detects if you've selected the same pixel and replaces the Facebook Pixel App with its own Pixel App, that is tailored to work properly with Conversions API.
 
-Stores using our Legacy CMS need to [manually add the pixel's code](https://www.facebook.com/business/help/952192354843755) to their frontend. Once you've added the Pixel base code to your site, you can set up events to measure actions that interest you, such as making a purchase. 
+Stores using our Legacy CMS Portal need to [manually add the pixel's code](https://www.facebook.com/business/help/952192354843755) to their frontend. Once you've added the Pixel base code to your site, you can set up events to measure actions that interest you, such as making a purchase. 
 
 Pixel code example: 
 [block:code]
@@ -136,8 +136,8 @@ The table below shows if any actions are required:
 
 | Store        	| Pixel Setup        	| Actions Required?     	|
 |--------------	|--------------------	|-----------------------	|
-| Legacy (CMS) 	| None               	| Yes ⚠️         	         |
-| Legacy (CMS) 	| Google Tag Manager 	| Yes ⚠️         	         |
+| Legacy CMS Portal 	| None               	| Yes ⚠️         	         |
+| Legacy CMS Portal  	| Google Tag Manager 	| Yes ⚠️         	         |
 | VTEX IO      	| None               	| No ✅                   |
 | VTEX IO      	| Facebook Pixel App 	| No ✅ 	                 |
 | VTEX IO      	| Google Tag Manager 	| Yes ⚠️            	     |
@@ -356,11 +356,11 @@ You can then test your events on the Events Manager in the Facebook platform. Op
 
 > ℹ️ Though most of the setups use GTM to fire pixel events, it's possible to configure this using other tools. Just make sure the corresponding parameters are being sent correctly in your tool of choice.
 
-### Configuring Conversions API for stores using our Legacy CMS (Backend)
+### Configuring Conversions API for stores using our Legacy CMS Portal (Backend)
 
 The Conversions API is configured automatically on any IO stores, but not in Legacy CMS Portal. Therefore, it is mandatory that Legacy CMS Portal do the configuration.
 
-#### Required actions for stores using the Legacy CMS
+#### Required actions for stores using the Legacy CMS Portal
 
 The event captured by the frontend will start the conversions API in the backend. Create a custom script in your store's backend to call the conversions API, following the example below.
 
