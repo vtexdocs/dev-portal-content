@@ -77,7 +77,9 @@ There are two ways you can configure _Lead Time_:
 * [Via VTEX Admin](#configuration-via-vtex-admin): You are able to configure it for days only.
 * [Via Logistics API](#configuration-via-logistics-api): You are able to configure it for days, hours, minutes, and seconds.
 
-By default, _Lead Time_ is configured as business days, because VTEX platform automatically considers weekends and [holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEAoyAmcwsuiO6Yk) for the shipping calculation. However, you can [configure Lead Time for calendar days](#configuration-of-calendar-days-optional) in the shipping policy.
+_Lead Time_ is calculated considering [holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEAoyAmcwsuiO6Yk) and business days according to your shipping policy configuration. You can configure _Lead Time_ duration up to 365 days, whether by VTEX Admin or via Logistics API.
+
+By default, shipping policies are created considering business days for shipping time calculation, but you can [configure a shipping policy to consider calendar days](#configuration-of-calendar-days-optional). That way, you can have Lead Time counted as calendar days.
 
 ### Configuration via VTEX Admin
 
@@ -107,13 +109,13 @@ You can configure _Lead Time_ using the _Update inventory by SKU and warehouse_ 
 | Name | Type | Description | Example |
 |:---:|:---:|:---|:---:|
 | `skuId` | string | SKU ID is the unique identifier of the SKU you wish to update. | `36` |
-| `warehouseId` | string | Warehouse ID is the unique identifier of the warehouse associated with the SKU you wish to update. | `warehouse-1-StoreName` |
+| `warehouseId` | string | Warehouse ID is the unique identifier of the [warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb) associated with the SKU you wish to update. | `warehouse-1-StoreName` |
 
 #### Headers
 
 | Key | Value | Description |
 |:---:|:---:|:---|
-| `Accept` | `application/json; charset=utf-8` | HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand. |
+| `Accept` | `application/json` | HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand. |
 | `Content-Type` | `application/json` | Type of the content being sent. |
 
 #### Request body example
@@ -131,10 +133,10 @@ You can configure _Lead Time_ using the _Update inventory by SKU and warehouse_ 
 
 | Field name | Type | Description | Example |
 |:---:|:---:|:---|:---:|
-| `quantity` | integer | Quantity of SKU units you wish to update the inventory in the given warehouse. Note that: Sending it as `null` sets the quantity to `0`. Not sending it sets the quantity to `0`. Sending `unlimitedQuantity` as `true` overrules the `quantity`. | `101` |
-| `unlimitedQuantity` | boolean | When set as `true`, you make the SKU from the given warehouse permanently available for sales. No matter how many units are sold, the default quantity of `1000000` items does not decrease, and the store never runs out of stock. When set as `false`, every sold unit will decrease your inventory quantity.  Note that: Sending this field as `null` sets the value to `false`. Not sending this field sets the value to `false`. Sending this field as `true` overrules `quantity`. | `false` |
-| `leadTime` |  string | Defines the Lead Time, which is an optional time configuration you can make for a SKU in a warehouse. It can be handling time, fabrication or how long it takes for the item to be available to be shipped to the shopper.  The Lead Time is part of the total shipping time and will be considered by Checkout for the shipping calculation. The format is `dd.hh:mm:ss` (days.hours:minutes:seconds). Note that: Sending this field as `null` sets the value to `0`. Not sending this field sets the value to `0`. | `10.23:59:15` |
-| `dateUtcOnBalanceSystem` |  string | Defines the corresponding moment to the given warehouse. It is useful due to the liberation of handling order reservations. When set as `null`, the value will be the date/time of the request. Its format is `DateTimeOffset`, as in `yyyy-mm-dd-Thh:mm:ss`. For example:  `2023-03-15T00:52:16`. | `2023-03-15T00:52:16` |
+| `quantity` | integer | Quantity of SKU units you wish to update the [inventory](https://help.vtex.com/tutorial/inventory-management--tutorials_139) in the given [warehouse](https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb). Note that:<p>- Sending it as `null` sets the quantity to `0`.</p><p>- Not sending it sets the quantity to `0`.</p><p>- Sending `unlimitedQuantity` as `true` overrules the  `quantity` field.</p> | `101` |
+| `unlimitedQuantity` | boolean | When set as `true`, you make the SKU from the given warehouse permanently available for sales. No matter how many units are sold, the default quantity of `1000000` items does not decrease, and the store never runs out of stock. When set as `false`, every sold unit will decrease your inventory quantity. Note that:<p>- Sending this field as `null` sets the value to `false`.</p><p>- Not sending this field sets the value to `false`.</p><p>- Sending this field as `true` overrules `quantity`.</p> | `false` |
+| `leadTime` |  string | Defines _Lead Time_, which is an optional time configuration you can make for a SKU in a warehouse. It can be handling time, fabrication or how long it takes for the item to be available to be shipped to the shopper.<p>The Lead Time is part of the total shipping time and will be considered by Checkout for the shipping calculation.</p><p>The format is `dd.hh:mm:ss` (days.hours:minutes:seconds). Note that:</p><p>- Sending this field as `null` sets the value to `0`.</p><p>- Not sending this field sets the value to `0`.</p> | `10.23:59:15` |
+| `dateUtcOnBalanceSystem` |  string | Defines the corresponding moment to the given warehouse. It is useful due to the liberation of handling order reservations.<p>When set as `null`, the value will be the date/time of the request. Its format is `DateTimeOffset`, as in `yyyy-mm-dd-Thh:mm:ss`. For example:  `2023-03-15T00:52:16`.</p> | `2023-03-15T00:52:16` |
 
 #### Response body example
 
@@ -164,7 +166,7 @@ To configure _Lead Time_ for calendar days via VTEX Admin, follow the steps belo
     * <i class="fas fa-toggle-on"></i> **Sunday delivery**
     * <i class="fas fa-toggle-on"></i> **Holiday delivery**
 
-![print_lead_time_holidays](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Fulfillment/print_lead_time_holidays.png)
+    ![print_lead_time_holidays](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Fulfillment/print_lead_time_holidays.png)
 
 5. Click `Save changes`.
 
@@ -186,7 +188,7 @@ The table below shows the path params of these requests:
 |:---:|:---:|:---|:---:|
 | `skuId` | string | Every SKU has a unique identifier called SKU ID. | `36` |
 | `itemId` | string | SKU unique identifier called SKU ID. This field is an equivalent to `skuId`. | `89` |
-| `dockId` | string | Dock ID is the unique identifier of the loading dock. | `dock-13a` |
+| `dockId` | string | Dock ID is the unique identifier of the [loading dock](https://help.vtex.com/en/tutorial/loading-dock--5DY8xHEjOLYDVL41Urd5qj). | `dock-13a` |
 | `warehouseId` | string | Warehouse ID is the unique identifier of the warehouse. | `warehouse-1-StoreName` |
 
 ### 1. List inventory by SKU
