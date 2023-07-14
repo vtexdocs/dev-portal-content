@@ -53,7 +53,7 @@ Consider the following JSON Data example to understand the available functions, 
     "deliveryTime": "8bd" 
   }, 
   {
-    "name": "Produto B", 
+    "name": "Product B", 
     "sellingPrice": 3000, 
     "priceValidUntil": "2050-09-23T11:00:00Z", 
     "deliveryTime": "10d" 
