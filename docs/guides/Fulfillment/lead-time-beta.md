@@ -77,7 +77,9 @@ There are two ways you can configure _Lead Time_:
 * [Via VTEX Admin](#configuration-via-vtex-admin): You are able to configure it for days only.
 * [Via Logistics API](#configuration-via-logistics-api): You are able to configure it for days, hours, minutes, and seconds.
 
-By default, _Lead Time_ is configured as business days, because VTEX platform automatically considers weekends and [holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEAoyAmcwsuiO6Yk) for the shipping calculation. However, you can [configure Lead Time for calendar days](#configuration-of-calendar-days-optional) in the shipping policy.
+_Lead Time_ is calculated considering [holidays](https://help.vtex.com/en/tutorial/registering-holidays--2ItOthSEAoyAmcwsuiO6Yk) and business days according to your shipping policy configuration. You can configure _Lead Time_ duration up to 365 days, whether by VTEX Admin or via Logistics API.
+
+By default, shipping policies are created considering business days for shipping time calculation, but you can [configure a shipping policy to consider calendar days](#configuration-of-calendar-days-optional). That way, you can have Lead Time counted as calendar days.
 
 ### Configuration via VTEX Admin
 
