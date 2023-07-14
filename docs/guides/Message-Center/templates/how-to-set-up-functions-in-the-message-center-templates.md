@@ -16,14 +16,19 @@ When editing the email template on VTEX Admin, in **Store Settings** > **Email T
 
 Check out the following example in which the template uses the `HostName` information from the JSON Data:
 
-**HTML email template:** `<strong>{{_accountInfo.HostName}}</strong> => lojavirtual`
+**HTML email template:**
+```html
+<strong>{{_accountInfo.HostName}}</strong>
+```
 
 **Example JSON Data:**
 ```json
 "_accountInfo": { 
-  "HostName": "lojavirtual" 
+  "HostName": "lojadosuporte" 
 }
 ```
+
+**Result**: **lojadosuporte**
 
 ![exemplo html](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-set-up-functions-in-the-message-center-templates-0.png)
 
@@ -63,6 +68,8 @@ Consider the following JSON Data example to understand the available functions, 
 | `formatDateTime` | Formats a date  as `dd/mm/yyyy hh:mm:ss`. | `{{formatDateTime items.0.priceValidUntil}}` | 30/05/2050 21:00:00 |
 | `formatDateUtc` | Formats a date as `dd/mm/yyyy mh:mm:ss` and converts it to the local UTC | `{{formatDateUtc items.0.priceValidUntil}}` | 30/05/2050 18:00:00 |
 | `replace` | Replaces a given value with another. This function has the following syntax: `{{replace class.attribute "previous value" "new value"}}` | `{{replace deliveryTime "bd" " business days"}}` | 8 business days |
+
+>ℹ If necessary, you should add currency symbols — such as `$` or `R$` — directly on the template, since they are not automatically retrieved by functions.
 
 ## Example
 
