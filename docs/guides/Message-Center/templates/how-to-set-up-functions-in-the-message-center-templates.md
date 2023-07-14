@@ -6,74 +6,90 @@ createdAt: "2021-10-15T15:21:14.824Z"
 updatedAt: "2022-02-10T20:58:11.681Z"
 ---
 
-The purpose of this article is to present the most used commands and all the functions that can be used to boost your store’s templates.
+The purpose of this article is to present the most used commands and all the functions that can be used to boost your store’s email templates using Message Center.
 
-To configure its templates, Message Center uses a language called **HandleBars**, which is quite simple, with only a few commands, making it easy to implement while expanding its customization.
+To configure its templates, Message Center uses a language called Handlebars, with a few commands that make it easy to implement while expanding its customization.
 
-When editing the email, it is possible to use a range of variables provided by the system. Use of these variables in the email layout has the following Handlebars syntax: `{{class.attribute}}`. The `classe.atributo` is obtained using the JSON Data field.
-[block:callout]
-{
-  "type": "warning",
-  "body": "The JSON attributes are the same for every VTEX store, however, the values may differ depending on the way you configured your store. So it is important to remember to configure your store relying on the info displayed by the [Get Order API](https://developers.vtex.com/vtex-rest-api/reference/getorder) of your store."
+When editing the email template on VTEX Admin, in **Store Settings** > **Email Templates** > **Templates**, it is possible to use a range of variables provided by the system. To use these variables in the email layout, you must follow this Handlebars syntax: `{{class.attribute}}`. The `{{class.attribute}}` is obtained using the JSON Data field.
+
+>⚠️ The JSON attributes are the same for every VTEX store, however, the values may differ depending on the way you configured your store. So it is important to remember to configure your store relying on the info displayed by the [Get Order API](https://developers.vtex.com/vtex-rest-api/reference/getorder) of your store.
+
+Check out the following example in which the template uses the `HostName` information from the JSON Data:
+
+**HTML email template:** `<strong>{{_accountInfo.HostName}}</strong> => lojavirtual`
+
+**Example JSON Data:**
+```json
+"_accountInfo": { 
+  "HostName": "lojavirtual" 
 }
-[/block]
+```
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "\"_accountInfo\": { \n  \"HostName\": \"lojavirtual\" \n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]
-**Template HTML:** `<strong>{{_accountInfo.HostName}}</strong> => lojavirtual`
 ![exemplo html](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-set-up-functions-in-the-message-center-templates-0.png)
+
 The above example can have different values when comparing Sellers and Marketplaces.
 
 ## Functions
 
-The use of the functions follows the following syntax: `{{funcão classe.atributo}}`
-[block:code]
-{
-  "codes": [
-    {
-      "code": "\"items\": [ \n  { \n    \"name\": \"Produto A\", \n    \"sellingPrice\": 20000, \n    \"priceValidUntil\": \"2050-05-30T21:00:00Z\", \n    \"deliveryTime\": \"8bd\" \n  }, \n  {\n    \"name\": \"Produto B\", \n    \"sellingPrice\": 3000, \n    \"priceValidUntil\": \"2050-09-23T11:00:00Z\", \n    \"deliveryTime\": \"10d\" \n  } \n]",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+The use of the functions follows the syntax `{{function class.attribute}}`.
 
-- **formatCurrency**: formats a value for currency `{{formatCurrency items.0.sellingPrice}}`
-  - **Result:** R$ 200,00
-- **formatUSDCurrency:** formats a value for the american decimal pattern `{{formatUSDCurrency items.0.sellingPrice}}`
-  - **Result:** $ 200.00
-- **formatCurrencyWithoutDecimals:** formats a value for the currency without the decimal places `{{formatCurrencyWithoutDecimals items.0.sellingPrice}}`
-  - **Result:** R$ 200
-- **multiplyCurrency:** formats a value for currency and multiplies it by a value This function has the following syntax: `{{formatCurrency classe.atributo multiplicador}}`  `{{formatCurrency items.0.sellingPrice 4}}`
-  - **Result:** R$ 800,00
-- **formatDate:** formats a date to its (`dd/mm/yyyy`) default value `{{formatDate items.0.priceValidUntil}}`
-  - **Result:** 30/05/2050
-- **formatDateTime:** formats a date to its (`dd/mm/yyyy hh:mm:ss`) value `{{formatDateTime items.0.priceValidUntil}}`
-  - **Result:** 30/05/2050 21:00:00
-- **formatDateUtc:** formats the date to its (`dd/mm/yyyy mh:mm:ss`) default value and converts it to the local UTC `{{formatDateUtc items.0.priceValidUntil}}`
-  - **Result:** 30/05/2050 18:00:00 (-3h, for example)
-- **replace:** its function is to replace a given value with another This function has the following syntax: `{{replace classe.atributo "Valor Substituído" "Valor Novo"}}` `{{replace deliveryTime "bd" " dias úteis"}}`
-  - **Result:** 8 business days
+Consider the following JSON Data example to understand the available functions, described in the table below.
+
+**Example JSON Data:**
+```json
+"items": [ 
+  { 
+    "name": "Produto A", 
+    "sellingPrice": 20000, 
+    "priceValidUntil": "2050-05-30T21:00:00Z", 
+    "deliveryTime": "8bd" 
+  }, 
+  {
+    "name": "Produto B", 
+    "sellingPrice": 3000, 
+    "priceValidUntil": "2050-09-23T11:00:00Z", 
+    "deliveryTime": "10d" 
+  } 
+]
+```
+
+| Function | Description | Example syntax | Example result |
+| - | - | - | - |
+| `formatCurrency` |  Formats a value as currency, separating decimal values with a comma `,`. | `{{formatCurrency items.0.sellingPrice}}` | 200,00 |
+| `formatUSDCurrency` | Formats a value as currency, separating decimal values with a dot `.`. | `{{formatUSDCurrency items.0.sellingPrice}}` | 200.00 |
+| `formatCurrencyWithoutDecimals` | Formats a value as currency without decimal values. | `{{formatCurrencyWithoutDecimals items.0.sellingPrice}}` | 200 |
+| `multiplyCurrency` | Formats a value as currency and multiplies it by a number. This function has the following syntax: `{{formatCurrency class.attribute multiplier}}` | `{{formatCurrency items.0.sellingPrice 4}}` | 800,00 |
+| `formatDate` | Formats a date as `dd/mm/yyyy`. | `{{formatDate items.0.priceValidUntil}}` | 30/05/2050 |
+| `formatDateTime` | Formats a date  as `dd/mm/yyyy hh:mm:ss`. | `{{formatDateTime items.0.priceValidUntil}}` | 30/05/2050 21:00:00 |
+| `formatDateUtc` | Formats a date as `dd/mm/yyyy mh:mm:ss` and converts it to the local UTC | `{{formatDateUtc items.0.priceValidUntil}}` | 30/05/2050 18:00:00 |
+| `replace` | Replaces a given value with another. This function has the following syntax: `{{replace class.attribute "previous value" "new value"}}` | `{{replace deliveryTime "bd" " business days"}}` | 8 business days |
 
 ## Example
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{{#each items}} \n{{name}} \nEntrega{{#each ../shippingData.logisticsInfo}} \n{{#eq itemId ../id}} \n{{#each slas}} \n{{#eq ../selectedSla id}} \n{{#if deliveryWindow}} \nagendada entre{{formatDateTime deliveryWindow.startDateUtc}} e {{formatDateTime deliveryWindow.endDateUtc}} \n{{else}} \nem até{{#hasSubStr shippingEstimate 'bd'}} \n{{replace shippingEstimate 'bd' ' dias úteis.'}} \n{{else}} \n{{replace shippingEstimate 'd' ' dias.'}} \n{{/hasSubStr}} \n{{/if}} \n{{/eq}} \n{{/each}} \n{{/eq}} \n{{/each}} \n{{quantity}}x R$ {{formatCurrency sellingPrice}} \n{{/each}}",
-      "language": "handlebars"
-    }
-  ]
-}
-[/block]
+**Handlebars code:**
+```handlebars
+{{#each items}} 
+{{name}} 
+Entrega{{#each ../shippingData.logisticsInfo}} 
+{{#eq itemId ../id}} 
+{{#each slas}} 
+{{#eq ../selectedSla id}} 
+{{#if deliveryWindow}} 
+agendada entre{{formatDateTime deliveryWindow.startDateUtc}} e {{formatDateTime deliveryWindow.endDateUtc}} 
+{{else}} 
+em até{{#hasSubStr shippingEstimate 'bd'}} 
+{{replace shippingEstimate 'bd' ' dias úteis.'}} 
+{{else}} 
+{{replace shippingEstimate 'd' ' dias.'}} 
+{{/hasSubStr}} 
+{{/if}} 
+{{/eq}} 
+{{/each}} 
+{{/eq}} 
+{{/each}} 
+{{quantity}}x R$ {{formatCurrency sellingPrice}} 
+{{/each}}
+```
+
 **Result:**
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-set-up-functions-in-the-message-center-templates-1.jpg)
