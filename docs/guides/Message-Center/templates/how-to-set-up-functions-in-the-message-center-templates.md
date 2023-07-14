@@ -69,7 +69,7 @@ Consider the following JSON Data example to understand the available functions, 
 | `formatDateUtc` | Formats a date as `dd/mm/yyyy mh:mm:ss` and converts it to the local UTC | `{{formatDateUtc items.0.priceValidUntil}}` | 30/05/2050 18:00:00 |
 | `replace` | Replaces a given value with another. This function has the following syntax: `{{replace class.attribute "previous value" "new value"}}` | `{{replace deliveryTime "bd" " business days"}}` | 8 business days |
 
->ℹ If necessary, you should add currency symbols — such as `$` or `R$` — directly on the template, since they are not automatically retrieved by functions.
+> If necessary, you should add currency symbols — such as `$` or `R$` — directly on the template, since they are not automatically retrieved by functions.
 
 ## Example
 
