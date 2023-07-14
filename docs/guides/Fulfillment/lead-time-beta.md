@@ -188,7 +188,7 @@ The table below shows the path params of these requests:
 |:---:|:---:|:---|:---:|
 | `skuId` | string | Every SKU has a unique identifier called SKU ID. | `36` |
 | `itemId` | string | SKU unique identifier called SKU ID. This field is an equivalent to `skuId`. | `89` |
-| `dockId` | string | Dock ID is the unique identifier of the loading dock. | `dock-13a` |
+| `dockId` | string | Dock ID is the unique identifier of the [loading dock](https://help.vtex.com/en/tutorial/loading-dock--5DY8xHEjOLYDVL41Urd5qj). | `dock-13a` |
 | `warehouseId` | string | Warehouse ID is the unique identifier of the warehouse. | `warehouse-1-StoreName` |
 
 ### 1. List inventory by SKU
