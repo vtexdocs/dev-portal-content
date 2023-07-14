@@ -47,7 +47,7 @@ Consider the following JSON Data example to understand the available functions, 
 ```json
 "items": [ 
   { 
-    "name": "Produto A", 
+    "name": "Product A", 
     "sellingPrice": 20000, 
     "priceValidUntil": "2050-05-30T21:00:00Z", 
     "deliveryTime": "8bd" 
