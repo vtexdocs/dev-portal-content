@@ -11,7 +11,7 @@ The **Google Tag Manager (GTM) app** is a first-party solution that integrates y
 
 With the app, you can avoid contact with the store's source code when adding, editing, or removing website tags and quickly provide user browsing tracking for Google Analytics.
 
-> ⚠️ This app is only available for stores built with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework). For stores built with Legacy CMS Portal, refer to [Configuring Google Tag Manager](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG#configuring-google-tag-manager)
+> ⚠️ This app is only available for stores built with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework). For stores built with Legacy CMS Portal, refer to [Configuring Google Tag Manager](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG#configuring-google-tag-manager).
 
 ![gtm-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-tag-manager-0.png)
 
