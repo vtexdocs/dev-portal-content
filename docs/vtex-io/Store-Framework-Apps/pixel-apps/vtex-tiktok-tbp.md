@@ -50,7 +50,6 @@ You must configure the TikTok for Business app through the VTEX Admin. Please ch
 
 In case you are using the Legacy CMS Portal or Headless CMS, you need to configure the TikTok Pixel manually as well. Read the following sections for more information on this.
 
-
 ## TikTok Pixel
 
 The TikTok Pixel is a JavaScript code snippet that you can include on your store's website, which allows you to track various actions of your website’s visitors and share them with TikTok. These actions are called Pixel events – see the [Supported Pixel events](#supported-pixel-events) section to learn more.
