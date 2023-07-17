@@ -94,7 +94,6 @@ Below, you can see a description of the **Shelf** control `<vtex.cmc:ProductQuer
 | `<vtex:contentPlaceHolder id="Sugestoes"/>`           | **Suggestions:** It adds a control of type **Related products** in the Legacy CMS Portal. When editing the element, select `Sugestao` in the **Tipo** field.                                                                                                                                                                                                                                                                   |
 | `<vtex.cmc:facebookLike/>`                            | **Facebook Like**                                                                                                                                                                                                                                                                                                                                                                                                |
 
-
 ### RichSnippets controls
 
 The `<vtex.cmc:productRichSnippets />` control adds specific tags for sharing information through social media, such as Google microformats, Facebook Open Graph, and Twitter cards. The testing tools are:
