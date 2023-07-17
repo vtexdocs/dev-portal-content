@@ -21,7 +21,6 @@ The app includes the following features:
 
 Before installing the app, make sure you have read about its compatibility and requirements in the following sections.
 
-
 ### Compatibility
 
 TikTok for Business is fully compatible with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2) and partially compatible with stores using [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS](https://faststore.dev/tutorials/cms/0#vtex-headless-cms).
