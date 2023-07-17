@@ -28,7 +28,6 @@ TikTok for Business is fully compatible with stores using [VTEX IO](https://help
 
 In VTEX IO stores, installing and configuring TikTok for Business causes the TikTok Pixel to be inserted automatically. On the other hand, stores using the Legacy CMS Portal or Headless CMS need to configure the TikTok Pixel manually. Refer to the [Manual TikTok Pixel configuration](#manual-tiktok-pixel-configuration) section for more information on this.
 
-
 ### Requirements
 
 To be able to configure the TikTok for Business app in your VTEX store, you need to meet the following requirements:
