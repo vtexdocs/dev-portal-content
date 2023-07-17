@@ -60,12 +60,8 @@ For more information, access [View the contents of the store's CSS files](https:
 ## Customizing Checkout UI - Apps
 
 In addition to Admin VTEX, you can use two apps to customize your store’s Checkout UI: *Checkout UI Settings* and *Checkout UI Custom*.
-[block:callout]
-{
-"type": "warning",
-"body": "If you want to use the Checkout UI Settings app, any script changes made through it will override HTML, CSS, and JS information made through [Admin VTEX](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings)."
-}
-[/block]
+
+>⚠️ If you want to use the Checkout UI Settings app, any script changes made through it will override HTML, CSS, and JS information made through [Admin VTEX](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings).
 
 ### Checkout UI Settings app
 
