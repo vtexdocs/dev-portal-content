@@ -67,7 +67,6 @@ TikTok Pixel supports the following events:
 
 For more information on TikTok Pixel events, read TikTok’s documentation on [Standard Events and Parameters](https://ads.tiktok.com/help/article?aid=10028&lang=en).
 
-
 ### Manual TikTok Pixel configuration
 
 > ⚠️ This configuration applies only to [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) and [Headless CMS](https://faststore.dev/tutorials/cms/0#vtex-headless-cms) stores. If your store is built with [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), skip this section.
