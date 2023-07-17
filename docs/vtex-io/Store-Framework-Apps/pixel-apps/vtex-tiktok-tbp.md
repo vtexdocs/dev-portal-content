@@ -74,7 +74,6 @@ For more information on TikTok Pixel events, read TikTok’s documentation on [S
 
 > ⚠️ This configuration applies only to [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) and [Headless CMS](https://faststore.dev/tutorials/cms/0#vtex-headless-cms) stores. If your store is built with [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), skip this section.
 
-
 To insert the TikTok Pixel manually, you must follow the instructions in the TikTok documentation, more specifically in [Option 2: Install the pixel using Developer Mode](https://ads.tiktok.com/help/article?aid=10000357#:~:text=to%20create%20events.%C2%A0-,Option%202%3A%20Install%20the%20pixel%20using%20Developer%20Mode%C2%A0,-Step%201%3A%20Install) of the [Get Started with Google Tag Manager](https://ads.tiktok.com/help/article?aid=10000357#:~:text=TikTok%20Pixel%20Partners.-,Get%20Started%20with%20Google%20Tag%20Manager,-There%20are%20two) guide.
 
 
