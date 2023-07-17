@@ -45,9 +45,4 @@ To receive catalog changes, refer to this [Receiving Catalog Changes on VTEX IO]
 ## Onboarding
 
 - When a user installs your search-resolver app, you probably will need an admin panel to set up the app. You can find a working example on `https://github.com/vtex-apps/admin-example`. This admin app can show the indexing progress and also notify the search provider service that a new customer needs to be onboarded.
-- The onboarding flow usually is: VTEX client installs app in a different workspace than master → Enters the admin panel to set up the app → app notifies indexing system that a new account is to be indexed → index is 100% completed → VTEX client can promote/install the search provider in master
-[block:html]
-{
-  "html": "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n\n\n<a href=\"search-integration-guide\"<button type=\"button\" class=\"btn btn-outline-secondary\">Back</button></a>\n\n<style></style>"
-}
-[/block]
+- The onboarding flow usually is: VTEX client installs app in a different workspace than master → Enters the admin panel to set up the app → app notifies indexing system that a new account is to be indexed → index is 100% completed → VTEX client can promote/install the search provider in master.
