@@ -79,7 +79,7 @@ A [Pixel](https://developers.facebook.com/docs/meta-pixel/get-started) is a snip
  
 This app is fully compatible with the Facebook Pixel App. FBE detects if you've selected the same pixel and replaces the Facebook Pixel App with its own Pixel App, that is tailored to work properly with Conversions API.
 
-Stores using our Legacy CMS Portal need to [manually add the pixel's code](https://www.facebook.com/business/help/952192354843755) to their frontend. Once you've added the Pixel base code to your site, you can set up events to measure actions that interest you, such as making a purchase. 
+Stores using our Legacy CMS Portal need to [manually add the pixel's code](https://www.facebook.com/business/help/952192354843755) to their frontend. Once you've added the Pixel base code to your site, you can set up events to measure actions that interest you, such as making a purchase.
 
 Pixel code example: 
 [block:code]
