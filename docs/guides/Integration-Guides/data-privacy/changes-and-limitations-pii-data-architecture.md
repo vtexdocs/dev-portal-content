@@ -19,14 +19,7 @@ In this section, you can learn what VTEX features are available but require adap
 
 ### Promotions - Customer cluster
 
-To set up promotions for specific customer clusters in a way that is compatible with the PII data architecture, you must use the `piiClusterExpressions` field instead of `clusterExpressions` in [Promotions and Taxes API](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#post-/api/rnb/pvt/calculatorconfiguration). However you can not create new cluster fields, you are restricted to creating cluster promotions based on the existing shopper profile fields:
-
-- `firstName`
-- `lastName`
-- `email`
-- `birthDate`
-- `document`
-- `documentType`
+To set up promotions for specific customer clusters in a way that is compatible with the PII data architecture, you must use the `piiClusterExpressions` field instead of `clusterExpressions` in [Promotions and Taxes API](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#post-/api/rnb/pvt/calculatorconfiguration).
 
 ### OMS
 
