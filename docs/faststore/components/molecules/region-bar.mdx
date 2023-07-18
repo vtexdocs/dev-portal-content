@@ -25,26 +25,6 @@ import {
 
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
-export const RegionBarUsage = () => {
-  const { modal, openModal } = useUI()
-  return (
-    <>
-      <RegionBar onButtonClick={() => openModal()} />
-      {modal && <RegionModal fadeOutOnSubmit={true} />}
-    </>
-  )
-}
-
-export const RegionBarEditUsage = () => {
-  const { modal, openModal } = useUI()
-  return (
-    <>
-      <RegionBar postalCode={'151515'} onButtonClick={() => openModal()} />
-      {modal && <RegionModal fadeOutOnSubmit={true} inputValue={'151515'} />}
-    </>
-  )
-}
-
 ## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">

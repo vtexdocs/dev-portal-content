@@ -36,65 +36,11 @@ import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
 ## Overview
 
-export const skuActiveVariants =
-  product.isVariantOf.skuVariants.activeVariations
-export const activeVariations = Object.keys(skuActiveVariants).map((key) => ({
-  label: key,
-  option: skuActiveVariants[key],
-}))
-
-export const CartItemExample = (
-  <CartItem
-    price={{
-      value: product.offers.offers[0].price,
-      listPrice: product.offers.offers[0].listPrice,
-      formatter: useFormattedPrice,
-    }}
-    quantity={3}
-  >
-    <CartItemImage>
-      <img
-        data-fs-image
-        src={product.image[0].url}
-        alt={product.image[0].alternateName}
-      />
-    </CartItemImage>
-    <CartItemSummary
-      title={product.isVariantOf.name}
-      activeVariations={activeVariations}
-    />
-  </CartItem>
-)
-
-export const CartItemExampleUnavailable = (
-  <CartItem
-    price={{
-      value: product.offers.offers[0].price,
-      listPrice: product.offers.offers[0].listPrice,
-      formatter: useFormattedPrice,
-    }}
-    quantity={3}
-    unavailable
-  >
-    <CartItemImage>
-      <img
-        data-fs-image
-        src={product.image[0].url}
-        alt={product.image[0].alternateName}
-      />
-    </CartItemImage>
-    <CartItemSummary
-      title={product.isVariantOf.name}
-      activeVariations={activeVariations}
-    />
-  </CartItem>
-)
-
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      {CartItemExample}
-      {CartItemExampleUnavailable}
+      <CartItemExample/>
+      <CartItemExampleUnavailable/>
     </OverviewSection>
   </Tab>
   <Tab>
@@ -170,7 +116,7 @@ import '@faststore/ui/src/components/atoms/CartItem/styles.scss'
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>{CartItemExample}</OverviewSection>
+    <OverviewSection><CartItemExample/></OverviewSection>
   </Tab>
   <Tab>
     ```tsx

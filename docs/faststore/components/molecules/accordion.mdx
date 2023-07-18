@@ -54,95 +54,11 @@ import '@faststore/ui/src/components/molecules/Accordion/styles.scss'
 ```
 
 ---
-
-export const UsageAccordionMultiple = () => {
-  const [indices, setIndices] = useState(new Set([]))
-  const onChange = (index) => {
-    if (indices.has(index)) {
-      indices.delete(index)
-      setIndices(new Set(indices))
-    } else {
-      setIndices(new Set(indices.add(index)))
-    }
-  }
-  return (
-    <Accordion indices={indices} onChange={onChange}>
-      <AccordionItem>
-        <AccordionButton>Clothing</AccordionButton>
-        <AccordionPanel>
-          <List>
-            <li>Shorts</li>
-            <li>Sweatshirt</li>
-            <li>Tank tops</li>
-          </List>
-        </AccordionPanel>
-      </AccordionItem>
-      <AccordionItem>
-        <AccordionButton>Bags</AccordionButton>
-        <AccordionPanel>
-          <List>
-            <li>Backpacks</li>
-            <li>Necessaire</li>
-          </List>
-        </AccordionPanel>
-      </AccordionItem>
-      <AccordionItem>
-        <AccordionButton>Sale</AccordionButton>
-        <AccordionPanel>
-          <List>
-            <li>Smartphones</li>
-            <li>TVs</li>
-          </List>
-        </AccordionPanel>
-      </AccordionItem>
-    </Accordion>
-  )
-}
-
-export const UsageAccordion = () => {
-  const [indices, setIndices] = useState([0])
-  const onChange = (index) => {
-    setIndices([index])
-  }
-  return (
-    <Accordion indices={indices} onChange={onChange}>
-      <AccordionItem>
-        <AccordionButton>Clothing</AccordionButton>
-        <AccordionPanel>
-          <List>
-            <li>Shorts</li>
-            <li>Sweatshirt</li>
-            <li>Tank tops</li>
-          </List>
-        </AccordionPanel>
-      </AccordionItem>
-      <AccordionItem>
-        <AccordionButton>Bags</AccordionButton>
-        <AccordionPanel>
-          <List>
-            <li>Backpacks</li>
-            <li>Necessaire</li>
-          </List>
-        </AccordionPanel>
-      </AccordionItem>
-      <AccordionItem>
-        <AccordionButton>Sale</AccordionButton>
-        <AccordionPanel>
-          <List>
-            <li>Smartphones</li>
-            <li>TVs</li>
-          </List>
-        </AccordionPanel>
-      </AccordionItem>
-    </Accordion>
-  )
-}
-
 ## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>{UsageAccordion()}</OverviewSection>
+    <OverviewSection><AccordionUsage/></OverviewSection>
   </Tab>
   <Tab>
     ```tsx
@@ -193,27 +109,6 @@ Besides those attributes, the following props are also supported:
 <ComponentPropsSection component="Accordion" />
 
 ### Accordion Item
-
-export const propsAccordionItem = [
-  {
-    name: 'testId',
-    type: 'string',
-    description:
-      'ID to find this component in testing tools (e.g.: cypress, testing library, and jest).',
-    default: 'fs-accordion-item',
-  },
-  {
-    name: 'index',
-    type: 'number',
-    description: 'Index of the current accordion item within the accordion.',
-  },
-  {
-    name: 'prefixId',
-    type: 'string',
-    description:
-      "Namespace ID prefix for the current Accordion item's panel and button to avoid ID duplication when multiple instances are on the same page.",
-  },
-]
 
 <ComponentPropsSection propsList={propsAccordionItem} />
 
@@ -304,7 +199,7 @@ The `AccordionButton` component inherits [Button](/docs/faststore/atoms-button) 
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>{UsageAccordionMultiple()}</OverviewSection>
+    <OverviewSection><AccordionMultipleUsage/></OverviewSection>
   </Tab>
   <Tab>
     ```tsx
@@ -359,7 +254,7 @@ The `AccordionButton` component inherits [Button](/docs/faststore/atoms-button) 
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>{UsageAccordion()}</OverviewSection>
+    <OverviewSection><AccordionUsage/></OverviewSection>
   </Tab>
   <Tab>
     ```tsx

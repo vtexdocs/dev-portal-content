@@ -17,79 +17,11 @@ import {
 
 All store content is centered by default using the `[data-fs-content]` with our `@mixin layout-content`. To add any customization, as in the examples below, you can add it to your `custom-theme.scss` file inside the `.section` class using the desired `data-attribute`.
 
-export const TilesTemplate = (
-  <ul
-    role="list"
-    data-fs-tiles="true"
-    data-fs-tiles-variant="expanded-first"
-    data-fs-content="tiles"
-    data-testid="store-tiles"
-  >
-    <li data-fs-tile="true">
-      <ProductCard variant="wide">
-        <ProductCardImage aspectRatio="1.8">
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-        />
-      </ProductCard>
-    </li>
-    <li data-fs-tile="true">
-      <ProductCard variant="wide">
-        <ProductCardImage aspectRatio="1.8">
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-        />
-      </ProductCard>
-    </li>
-    <li data-fs-tile="true">
-      <ProductCard variant="wide">
-        <ProductCardImage aspectRatio="1.8">
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-        />
-      </ProductCard>
-    </li>
-  </ul>
-)
-
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection direction="column" containerStyle={{ padding: '0' }}>
       <section class="section layout__section | nx-section-layout">
-        {TilesTemplate}
+        <TilesTemplate/>
       </section>
     </OverviewSection>
   </Tab>
@@ -123,7 +55,7 @@ To display a **colored background** with **full width** and maintain the **conte
   <Tab>
     <OverviewSection containerStyle={{ padding: '0' }}>
       <section class="section layout__section | nx-section-layout nx-section-layout-colored">
-        {TilesTemplate}
+        <TilesTemplate/>
       </section>
     </OverviewSection>
   </Tab>
@@ -166,7 +98,7 @@ To add a **colored background** and **centering** the `.section`, add `@include 
   <Tab>
     <OverviewSection containerStyle={{ padding: '0' }}>
       <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
-        {TilesTemplate}
+        <TilesTemplate/>
       </section>
     </OverviewSection>
   </Tab>
@@ -213,7 +145,7 @@ To use your store section's content with a **full-width layout** you'll need to 
   <Tab>
     <OverviewSection containerStyle={{ padding: '0' }}>
       <section class="section layout__section | nx-section-layout nx-section-layout-full">
-        {TilesTemplate}
+        <TilesTemplate/>
       </section>
     </OverviewSection>
   </Tab>

@@ -13,19 +13,6 @@ import {
 
 import { SectionItem, SectionList } from 'site/components/SectionItem'
 
-export const RegionModalUsage = () => {
-  const { modal, openModal, closeModal } = useUI()
-  return (
-    <>
-      <Button variant="primary" onClick={() => openModal()}>
-        Open Region Modal
-      </Button>
-      {modal && <RegionModal onSubmit={() => closeModal()} />}
-    </>
-  )
-}
-
-
 ## Overview
 
 Regionalization is a feature of [VTEX Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) that allows for the optimization of search results according to the availability of sellers in the customer's region.

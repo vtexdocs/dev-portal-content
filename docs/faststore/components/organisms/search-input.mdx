@@ -72,50 +72,6 @@ import '@faststore/ui/src/components/organisms/SearchInput/styles.scss'
 
 ## Props
 
-export const propsSearchInput = [
-  {
-    name: 'testId',
-    type: 'string',
-    description:
-      'ID to find this component in testing tools (e.g.: cypress, testing library, and jest).',
-    default: 'fs-search-input',
-  },
-  {
-    name: 'visibleDropdown',
-    type: 'false | true',
-    description: 'The current status of the Search Dropdown.',
-  },
-  {
-    name: 'term',
-    type: 'string',
-    description: 'Term to be researched.',
-    required: true,
-  },
-  {
-    name: 'isLoading',
-    type: 'false | true',
-    description: 'Enables a loading state.',
-  },
-  {
-    name: 'terms',
-    type: '{ value: string; }[]',
-    description: 'List of Suggestion terms.',
-    required: true,
-  },
-  {
-    name: 'products',
-    type: '{}[]',
-    description: 'List of Suggested products.',
-    required: true,
-  },
-  {
-    name: 'onSearchSelection',
-    type: '(term: string, path: string) => void',
-    description: 'Callback function when a search term is selected.',
-    required: false,
-  },
-]
-
 <ComponentPropsSection propsList={propsSearchInput} />
 
 ---

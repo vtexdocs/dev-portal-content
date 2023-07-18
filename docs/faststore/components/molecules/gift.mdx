@@ -27,78 +27,68 @@ The Gift component is a compound of the following:
 
 ## Overview
 
-export const GiftTemplate = (
-  <Gift icon={<Icon name="Tag" />}>
-    <GiftImage>
-      <img
-        src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
-        alt="Magicwhite"
-        width={89}
-        height={89}
-      />
-    </GiftImage>
-    <GiftContent
-      productName="Apple Magic Mouse"
-      price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
-    />
-  </Gift>
-)
-
-export const GiftTemplateIcon = (
-  <Gift icon={<Icon name="ShoppingCart" />}>
-    <GiftImage>
-      <img
-        src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
-        alt="Magicwhite"
-        width={89}
-        height={89}
-      />
-    </GiftImage>
-    <GiftContent
-      productName="Apple Magic Mouse"
-      price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
-    />
-  </Gift>
-)
-
-export const GiftTemplateWithoutIcon = (
-  <Gift>
-    <GiftImage>
-      <img
-        src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
-        alt="Magicwhite"
-        width={89}
-        height={89}
-      />
-    </GiftImage>
-    <GiftContent
-      productName="Apple Magic Mouse"
-      price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
-    />
-  </Gift>
-)
-
-export const GiftTemplateWithoutBadge = (
-  <Gift icon={<Icon name="Tag" />}>
-    <GiftImage>
-      <img
-        src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
-        alt="Magicwhite"
-        width={89}
-        height={89}
-      />
-    </GiftImage>
-    <GiftContent
-      productName="Apple Magic Mouse"
-      price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
-    />
-  </Gift>
-)
-
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection bigGap>{GiftTemplate} {GiftTemplateIcon}</OverviewSection>
-    <OverviewSection bigGap>{GiftTemplateWithoutIcon} {GiftTemplateWithoutBadge}</OverviewSection>
+    <OverviewSection bigGap>
+      <Gift icon={<Icon name="Tag" />}>
+        <GiftImage>
+          <img
+            src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
+            alt="Magicwhite"
+            width={89}
+            height={89}
+          />
+        </GiftImage>
+        <GiftContent
+          productName="Apple Magic Mouse"
+          price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
+        />
+      </Gift>
+      <Gift icon={<Icon name="ShoppingCart" />}>
+        <GiftImage>
+          <img
+            src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
+            alt="Magicwhite"
+            width={89}
+            height={89}
+          />
+        </GiftImage>
+        <GiftContent
+          productName="Apple Magic Mouse"
+          price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
+        />
+      </Gift>
+    </OverviewSection>
+    <OverviewSection bigGap>
+      <Gift>
+        <GiftImage>
+          <img
+            src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
+            alt="Magicwhite"
+            width={89}
+            height={89}
+          />
+        </GiftImage>
+        <GiftContent
+          productName="Apple Magic Mouse"
+          price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
+        />
+      </Gift>
+      <Gift icon={<Icon name="Tag" />}>
+        <GiftImage>
+          <img
+            src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
+            alt="Magicwhite"
+            width={89}
+            height={89}
+          />
+        </GiftImage>
+        <GiftContent
+          productName="Apple Magic Mouse"
+          price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
+        />
+      </Gift>
+    </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
@@ -198,7 +188,22 @@ import '@faststore/ui/src/components/molecules/Gift/styles.scss'
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>{GiftTemplate}</OverviewSection>
+    <OverviewSection>
+      <Gift icon={<Icon name="Tag" />}>
+        <GiftImage>
+          <img
+            src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
+            alt="Magicwhite"
+            width={89}
+            height={89}
+          />
+        </GiftImage>
+        <GiftContent
+          productName="Apple Magic Mouse"
+          price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
+        />
+      </Gift>
+    </OverviewSection>
   </Tab>
   <Tab>
     ```tsx

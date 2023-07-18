@@ -40,46 +40,14 @@ import '@faststore/ui/src/components/molecules/Modal/styles.scss'
 ```
 
 ---
-
-export const ModalBase = () => {
-  const { modal, openModal } = useUI()
-  return (
-    <>
-      <Button variant="primary" onClick={() => openModal()}>
-        Open Modal
-      </Button>
-      {modal && (
-        <Modal>
-          {({ fadeOut }) => (
-            <>
-              <ModalHeader
-                onClose={() => fadeOut()}
-                title="Modal Title"
-                description="Modal description"
-              />
-              <ModalBody>
-                <p>This is the ModalBody</p>
-              </ModalBody>
-            </>
-          )}
-        </Modal>
-      )}
-    </>
-  )
-}
-
-export const ModalTemplate = () => (
-  <UIProvider>
-    <ModalBase />
-  </UIProvider>
-)
-
 ## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <ModalTemplate />
+      <UIProvider>
+        <ModalBase />
+      </UIProvider>
     </OverviewSection>
   </Tab>
   <Tab>
