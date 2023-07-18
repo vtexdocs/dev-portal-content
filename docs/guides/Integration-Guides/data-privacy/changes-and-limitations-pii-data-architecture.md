@@ -15,6 +15,12 @@ In this guide, you can learn about the changes and limitations you must be aware
 
 ## Adaptation requirements for feature implementation
 
+In this section, you can learn what VTEX features are available but require adaptation for accounts using the PII data architecture.
+
+### Promotions - Customer cluster
+
+To set up promotions for specific customer clusters in a way that is compatible with the PII data architecture, you must use the `piiClusterExpressions` field instead of `clusterExpressions` in [Promotions and Taxes API](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#post-/api/rnb/pvt/calculatorconfiguration).
+
 ### OMS
 
 There are no longer restrictions to the use of these OMS features for PII data architecture accounts:
@@ -32,9 +38,9 @@ In order to use order management APIs, you should adapt your integrations to use
 
 | **Feature**                | **Previous endpoint**                                                                                                                                         | **New endpoint (PII data architecture)**                                                                                                                                        | **Payload changed** |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
-| Get order                  | `GET` [/api/oms/orders/{orderId}](https://developers.vtex.com/vtex-rest-api/reference/getorder)                                                               | `GET` [/api/orders/pvt/document/{orderId}](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-)                                                    | No                  |
-| List orders                | `GET` [/api/oms/pvt/orders](https://developers.vtex.com/vtex-rest-api/reference/listorders)                                                                   | `POST` [/api/orders/extendsearch/orders](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders)                                                    | Yes                 |
-| Start handling order       | `POST` [api/oms/orders/{orderId}/start-handling](https://developers.vtex.com/vtex-rest-api/reference/starthandling)                                           | `POST` [/api/orders/pvt/document/{orderId}/actions/start-handling](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/actions/start-handling)                       | No                  |
+| Get order                  | `GET` [/api/oms/orders/{orderId}](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-)                                                               | `GET` [/api/orders/pvt/document/{orderId}](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-)                                                    | No                  |
+| List orders                | `GET` [/api/oms/pvt/orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders)                                                                   | `POST` [/api/orders/extendsearch/orders](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders)                                                    | Yes                 |
+| Start handling order       | `POST` [api/oms/orders/{orderId}/start-handling](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/start-handling)                                           | `POST` [/api/orders/pvt/document/{orderId}/actions/start-handling](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/actions/start-handling)                       | No                  |
 | Cancel order               | `POST` [api/oms/pvt/orders/{orderId}/cancel](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel)                                                 | `POST` [/api/orders/pvt/document/{orderId}/cancel](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/cancel)                                         | No                  |
 | Order invoice notification | `POST` [api/oms/orders/{orderId}/invoice](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice)                                            | `POST` [api/orders/pvt/document/{orderId}/invoices](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/invoices)                                | Yes                 |
 | Send payment notification  | `POST` [/api/oms/pvt/orders/{orderId}/payments/{paymentId}/payment-notification](https://developers.vtex.com/docs/api-reference/orders-api/#post-/api/oms/pvt/orders/-orderId-/payments/-paymentId-/payment-notification) | `POST` [/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment) | No                  |
@@ -43,7 +49,7 @@ In order to use order management APIs, you should adapt your integrations to use
 
 In the new solution architecture, Master Data will no longer have CL, AD, BK entities. There will be a new isolated system to protect those information, Profile System.
 
-If you are integrated to Master Data API to get any of this data (CL, AD, BK entities) you will need to integrate with the new [Profile System APIs](https://developers.vtex.com/vtex-rest-api/docs/profile-system).
+If you are integrated to Master Data API to get any of this data (CL, AD, BK entities) you will need to integrate with the new [Profile System APIs](https://developers.vtex.com/docs/guides/profile-system).
 
 ### Checkout
 
@@ -71,12 +77,6 @@ This is a legacy integration that was deprecated. VTEX will disable it.
 #### CL
 
 Currently, Master Data custom CL fields are not supported.
-
-
-### Promotions - Customer cluster
-
-This feature is not available at this moment. The **Customer cluster** field will be disabled when creating a promotion, which means it will not be possible to apply [promotions to specific customer clusters](https://help.vtex.com/en/tutorial/creating-promotion-for-a-customer-cluster--tutorials_342), since cluster segmentation is based on PII stored in CL entity fields.
-
 
 ### Pricing - Price tables
 
