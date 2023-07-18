@@ -21,9 +21,9 @@ By meeting these two prerequisites, your store is apt to use the VTEX Store Fram
 
 An [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app/) is a mandatory app that exports a bundle of settings and basic configurations to the VTEX account in which it is installed.
 
-By default, every VTEX store comes with the Edition app for building storefronts with [VTEX Legacy CMS](https://help.vtex.com/tutorial/what-is-cms--EmO8u2WBj2W4MUQCS8262) installed. To use the [VTEX Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) instead, get in touch with our [Customer Care team](https://support.vtex.com/hc/pt-br/signin?return_to=https%3A%2F%2Fsupport.vtex.com%2Fhc%2Fpt-br%2Frequests) and request the installation of the `vtex.edition-store@3.x` app in your VTEX account.
+By default, every VTEX store comes with the Edition app for building storefronts with [Legacy CMS Portal](https://help.vtex.com/tutorial/what-is-cms--EmO8u2WBj2W4MUQCS8262) installed. To use the [VTEX Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) instead, get in touch with our [Customer Care team](https://help.vtex.com/support?/cultureInfo=en-us) and request the installation of the `vtex.edition-store@3.x` app in your VTEX account.
 
-> ⚠️ Whether you are a new VTEX account or a former account using [VTEX Legacy CMS](https://help.vtex.com/tutorial/what-is-cms--EmO8u2WBj2W4MUQCS8262), installing the `vtex.edition-store@3.x` Edition app is necessary to implement the Store Framework solution successfully.
+> ⚠️ Whether you are a new VTEX account or a former account using [Legacy CMS Portal](https://help.vtex.com/tutorial/what-is-cms--EmO8u2WBj2W4MUQCS8262), installing the `vtex.edition-store@3.x` Edition app is necessary to implement the Store Framework solution successfully.
 
 ## Step 2 - Implementing the VTEX Intelligent Search
 

@@ -40,7 +40,7 @@ Once the app is deployed and installed in the account, every scripts contained i
 [block:callout]
 {
   "type": "warning",
-  "title": "If you are using the classic CMS (Legacy):",
+  "title": "If you are using the Legacy CMS Portal:",
   "body": "You can create a workspace and install the app there. While using the app, you will need to apply your changes and copy/paste the content of the files to your portal."
 }
 [/block]
