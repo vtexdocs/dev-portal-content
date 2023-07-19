@@ -2,9 +2,9 @@
 title: "Marketplace"
 slug: "marketplace-overview"
 hidden: false
-createdAt: "{Creation date as 2022-10-20T17:08:52.219Z}"
-updatedAt: "{Update dates as 2022-10-21T14:33:45.242Z}"
-excerpt: "{Insert a synopsis of your article here}"
+createdAt: "2023-07-19T17:08:52.219Z"
+updatedAt: "2023-07-19T17:08:52.219Z"
+excerpt: "Integration guide for VTEX or external Marketplaces and Sellers"
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---
@@ -182,4 +182,4 @@ The endpoints presented will be used by sellers already connected to a marketpla
 
 [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE?&utm_source=autocomplete) is the VTEX feature that provides sellers with more visibility into the process of sending a product to external channels, such as marketplaces. Offer Management helps sellers identify updates and resolve errors in their offers during the sending process, ensuring that they can be sent to the marketplace and synchronized correctly.
 
-Check our[Offer Management Integration Guide](https://developers.vtex.com/docs/guides/sent-offers-integration-guide-connectors) for more details.
+Check our [Offer Management Integration Guide](https://developers.vtex.com/docs/guides/sent-offers-integration-guide-connectors) for more details.
