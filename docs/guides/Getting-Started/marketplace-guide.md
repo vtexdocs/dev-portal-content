@@ -30,7 +30,7 @@ To operate as a marketplace, it is necessary to configure your store according t
 
 The actions that can be performed via API are the following:
 
-- [Adding seller](#adding-sellers)
+- [Adding seller](#1-marketplace-adding-sellers)
 - [Configuring seller selection at checkout](https://developers.vtex.com/docs/guides/checkout-overview)
 - [Configure storefront](https://developers.vtex.com/docs/guides/getting-started-3)
 - [Configure payments](https://developers.vtex.com/docs/guides/payments-integration-guide)
@@ -58,7 +58,7 @@ To integrate a partner's products to your marketplace using the Seller Portal as
 
 The marketplace is responsible for onboarding new sellers. In other words, it is the role of the marketplace to support the seller's experience in the Seller Portal. For information about seller actions, see [Seller Portal: First Steps for the Seller](https://help.vtex.com/en/tutorial/seller-portal-primeiros-passos--6w1vBdRH2uuBGmUqgNQjwK).
 
-To  invite and activate sellers, the marketplace must follow the endpoints listed below in the order represented. For the action of approving offers, see the section [Cataloging offers](#cataloging-offers).
+To  invite and activate sellers, the marketplace must follow the endpoints listed below in the order represented. For the action of approving offers, see the section [Cataloging offers](#3-marketplace-cataloging-offers).
 
    1. POST - [Invite Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/seller-register/pvt/seller-leads)  
    2. PUT - [Accept Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis#put-/seller-register/pvt/seller-leads/-sellerLeadId-)  
