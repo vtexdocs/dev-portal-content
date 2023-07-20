@@ -30,7 +30,7 @@ To operate as a marketplace, it is necessary to configure your store according t
 
 The actions that can be performed via API are the following:
 
-- [Adding seller](#Adding-Sellers)
+- [Adding seller](#adding-sellers)
 - [Configuring seller selection at checkout](https://developers.vtex.com/docs/guides/checkout-overview)
 - [Configure storefront](https://developers.vtex.com/docs/guides/getting-started-3)
 - [Configure payments](https://developers.vtex.com/docs/guides/payments-integration-guide)
@@ -42,7 +42,7 @@ The Marketplace Protocol is a set of API requests and definitions to help you in
 - **External seller protocol:** If you are a VTEX marketplace and want to integrate offers from an external seller into your catalog, see our [External Seller Integration Guide](https://developers.vtex.com/docs/guides/external-seller-integration-guide).
 - **External marketplace protocol:** If you are an external marketplace that wants to integrate with a VTEX seller, see [External Marketplace Integration Guide](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide) to learn how to develop a custom connector to integrate with the architecture and catalog of VTEX sellers.
 
-## <a name="Adding-Sellers"></a>1. Marketplace: Adding Sellers
+## 1. Marketplace: Adding Sellers
 
 VTEX marketplaces that want to make products from sellers available in their store must go over some processes. The first step is to find out if the seller you want to connect to is a VTEX seller or an external seller. For *external sellers*, verify the [External Seller Integration Guide](https://developers.vtex.com/docs/guides/external-seller-integration-guide) and for *VTEX sellers*, follow the steps below.
 
@@ -58,7 +58,7 @@ To integrate a partner's products to your marketplace using the Seller Portal as
 
 The marketplace is responsible for onboarding new sellers. In other words, it is the role of the marketplace to support the seller's experience in the Seller Portal. For information about seller actions, see [Seller Portal: First Steps for the Seller](https://help.vtex.com/en/tutorial/seller-portal-primeiros-passos--6w1vBdRH2uuBGmUqgNQjwK).
 
-To  invite and activate sellers, the marketplace must follow the endpoints listed below in the order represented. For the action of approving offers, see the section [Cataloging offers](#Cataloging-offers).
+To  invite and activate sellers, the marketplace must follow the endpoints listed below in the order represented. For the action of approving offers, see the section [Cataloging offers](#cataloging-offers).
 
    1. POST - [Invite Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/seller-register/pvt/seller-leads)  
    2. PUT - [Accept Seller Lead](https://developers.vtex.com/docs/api-reference/marketplace-apis#put-/seller-register/pvt/seller-leads/-sellerLeadId-)  
@@ -124,28 +124,28 @@ If the marketplace wants to remove a submitted suggestion, they should use this 
 
 - DELETE - [Delete SKU Suggestion](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#delete-/suggestions/-sellerId-/-sellerSkuId-)
 
-## <a name="Cataloging-offers"></a>3. Cataloging offers
+## 3. Marketplace: Cataloging offers
 
 When the seller sends a product suggestion to the marketplace with configured price and inventory information, after approval by the marketplace, this suggestion becomes an offer. However, before approving a seller's suggestion, it is important to ensure that the product information sent corresponds to the business strategy of the marketplace. When cataloging offers, consider the quality of information sent by the seller, such as price, product description and image.
 
 Cataloging can be performed [manually](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396) or automatically by [VTEX Matcher](https://help.vtex.com/en/tutorial/understanding-vtex-matcher-scoring--tutorials_424) and/or by external matchers. VTEX Matcher is a default tool used by marketplaces to analyze offers submitted by sellers and accelerate their cataloging process.
 
-### Marketplace: Matching
+### Matching
 
 When matching received suggestions, the marketplace can perform this action either in bulk or individually.
 
 - PUT - [Match Received SKUs individually](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/-sellerId-/-sellerskuid-/versions/-version-/matches/-matchid-)
 - PUT - [Match Multiple Received SKUs](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/matches/action/-actionName-)
 
-### Marketplace: Auto Approve
+### autoApprove
 
-Received SKUs will be approved automatically, regardless of their [Matcher score](https://help.vtex.com/en/tutorial/entendendo-a-pontuacao-do-vtex-matcher--tutorials_424), if the auto approve feature is activated.
+Received SKUs will be approved automatically, regardless of their [Matcher score](https://help.vtex.com/en/tutorial/entendendo-a-pontuacao-do-vtex-matcher--tutorials_424), if the autoApprove feature is activated.
 
-- PUT - [Activate autoApprove in the Marketplace's Account](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions/#put-/suggestions/configuration/autoapproval/toggle): Will be used by the marketplace to activate the auto Approve feature with the default parameters for all received SKU modules, so that all sent SKUs are automatically approved.
-- GET - [Get Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration): After activating the auto Approve feature, the marketplace can use this endpoint to check the current settings of automatic approval acting in its store.
+- PUT - [Activate autoApprove in the Marketplace's Account](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions/#put-/suggestions/configuration/autoapproval/toggle): Will be used by the marketplace to activate the autoApprove feature with the default parameters for all received SKU modules, so that all sent SKUs are automatically approved.
+- GET - [Get Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration): After activating the autoApprove feature, the marketplace can use this endpoint to check the current settings of automatic approval acting in its store.
 - PUT - [Save Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration): Updates the VTEX Matcher's approval parameters in the [Received SKU page](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396).
-- GET - [Get autoApprove Status in Account Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/autoapproval/toggle): Checks the auto Approve's status for a specific seller.
-- PUT - [Activate autoApprove Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration/autoapproval/toggle/seller/-sellerId-): The marketplace will use this to activate the auto Approve with the default parameters for a specific seller identified by sellerId.
+- GET - [Get autoApprove Status in Account Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/autoapproval/toggle): Checks the autoApprove's status for a specific seller.
+- PUT - [Activate autoApprove Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration/autoapproval/toggle/seller/-sellerId-): The marketplace will use this to activate the autoApprove with the default parameters for a specific seller identified by sellerId.
 - GET - [Get Seller's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/seller/-sellerId-): Checks the current automatic approval configuration for a specific seller identified by sellerId.
 - PUT - [Save Seller's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration/seller/-sellerId-): Updates the matcher's approval parameters for a specific seller identified by `sellerId`.
 
