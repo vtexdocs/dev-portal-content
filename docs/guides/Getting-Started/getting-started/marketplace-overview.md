@@ -8,7 +8,6 @@ excerpt: "Integration guide for VTEX or external Marketplaces and Sellers"
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---
-# Marketplace
 
 >ℹ️ Help us improve our documentation! Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
 
@@ -23,7 +22,7 @@ The architecture of a VTEX store allows merchants to become marketplaces or sell
 - **VTEX Marketplace:** Store environment hosted on the VTEX platform responsible for product sales, checkout, and payment.
 - **External Marketplace:** Showcase store hosted on platforms external to VTEX and responsible for product sales, checkout, and payment.
 - **VTEX Seller**: Store hosted on the VTEX platform that owns the products and is usually responsible for fulfilling orders to the consumer.
-- **External Seller:** Is a store hosted on another platform, or that is not yet hosted on any platform, which owns the products and is usually responsible for fulfilling orders to the consumer. A VTEX marketplace may be interested in integrating with this external store, in order to offer its products.
+- **External Seller:** Store hosted on another platform, or that is not yet hosted on any platform, which owns the products and is usually responsible for fulfilling orders to the consumer. A VTEX marketplace may be interested in integrating with this external store, in order to offer its products.
 
 ## Configuring VTEX Marketplace
 
@@ -49,7 +48,7 @@ VTEX marketplaces that want to make products from sellers available in their sto
 
 ### Marketplace: Adding a seller to the Seller Portal
 
-The [Seller Portal](https://help.vtex.com/en/tutorial/seller-portal-primeiros-passos-para-o-marketplace--6ccErY3mCcfoW0qGXf167) is an edition of the VTEX platform with essential functionalities available, so that external or VTEX sellers can quickly integrate into VTEX marketplaces. 
+The [Seller Portal](https://help.vtex.com/en/tutorial/seller-portal-primeiros-passos-para-o-marketplace--6ccErY3mCcfoW0qGXf167) is an edition of the VTEX platform with essential functionalities available, so that external or VTEX sellers can quickly integrate into VTEX marketplaces.
 
 >ℹ️ The Seller Portal has default version developed by VTEX and if the marketplace wants its own customized version, it can develop from the VTEX version following the [Seller Portal Edition App](https://developers.vtex.com/docs/guides/seller-portal-edition-app) guide.
 
@@ -74,7 +73,7 @@ In the same category of Seller invite, you will also find the endpoints:
 
 ### Sellers: Configuring your Seller Portal environment
 
-To learn how to configure your brand new Seller Portal environment and other seller actions, see [Seller Portal: First Steps for the Seller](https://help.vtex.com/en/tutorial/seller-portal-primeiros-passos--6w1vBdRH2uuBGmUqgNQjwK). To integrate with your ERP, check out our [ERP integration guide](https://developers.vtex.com/docs/guides/erp-integration-guide).
+To learn how to configure your brand new Seller Portal environment and other seller actions, see [Seller Portal: First Steps for the Seller](https://help.vtex.com/en/tutorial/how-to-set-up-your-store-on-seller-portal--6w1vBdRH2uuBGmUqgNQjwK). To integrate with your ERP, check out our [ERP integration guide](https://developers.vtex.com/docs/guides/erp-integration-guide).
 
 Catalog integration must be done manually through the Seller Portal interface or massively through REST API, using [Catalog API - Seller Portal](https://developers.vtex.com/docs/api-reference/catalog-api-seller-portal). It is not possible to integrate Catalog via spreadsheet nor via SOAP API (Webservice).
 
@@ -129,7 +128,7 @@ If the marketplace wants to remove a submitted suggestion, they should use this 
 
 When the seller sends a product suggestion to the marketplace with configured price and inventory information, after approval by the marketplace, this suggestion becomes an offer. However, before approving a seller's suggestion, it is important to ensure that the product information sent corresponds to the business strategy of the marketplace. When cataloging offers, consider the quality of information sent by the seller, such as price, product description and image.
 
-Cataloging can be performed [manually](https://help.vtex.com/en/tutorial/sugerindo-e-aprovando-skus--tutorials_396#opcoes-de-catalogacao) or automatically by [VTEX matcher](https://help.vtex.com/en/tutorial/entendendo-a-pontuacao-do-vtex-matcher) and/or by external matchers. VTEX matcher is a default tool used by marketplaces to analyze offers submitted by sellers and accelerate their cataloging process.
+Cataloging can be performed [manually](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396) or automatically by [VTEX Matcher](https://help.vtex.com/en/tutorial/understanding-vtex-matcher-scoring--tutorials_424) and/or by external matchers. VTEX Matcher is a default tool used by marketplaces to analyze offers submitted by sellers and accelerate their cataloging process.
 
 ### Marketplace: Matching
 
@@ -142,13 +141,13 @@ When matching received suggestions, the marketplace can perform this action eith
 
 Received SKUs will be approved automatically, regardless of their [Matcher score](https://help.vtex.com/en/tutorial/entendendo-a-pontuacao-do-vtex-matcher--tutorials_424), if the auto approve feature is activated.
 
-- PUT - [Active autoApprove in the Marketplace's Account](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions/#put-/suggestions/configuration/autoapproval/toggle): Will be used by the marketplace to activate the auto Approve feature with the default parameters for all received SKU modules, so that all sent SKUs are automatically approved.
+- PUT - [Activate autoApprove in the Marketplace's Account](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions/#put-/suggestions/configuration/autoapproval/toggle): Will be used by the marketplace to activate the auto Approve feature with the default parameters for all received SKU modules, so that all sent SKUs are automatically approved.
 - GET - [Get Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration): After activating the auto Approve feature, the marketplace can use this endpoint to check the current settings of automatic approval acting in its store.
-- PUT - [Save Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration): Will be used to update the VTEX Matcher's approval parameters in the [Received SKU page](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396).
-- GET - [Get autoApprove Status in Account Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/autoapproval/toggle): Can be used to check the auto Approve's status for a specific seller.
+- PUT - [Save Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration): Updates the VTEX Matcher's approval parameters in the [Received SKU page](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396).
+- GET - [Get autoApprove Status in Account Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/autoapproval/toggle): Checks the auto Approve's status for a specific seller.
 - PUT - [Activate autoApprove Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration/autoapproval/toggle/seller/-sellerId-): The marketplace will use this to activate the auto Approve with the default parameters for a specific seller identified by sellerId.
-- GET - [Get Seller's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/seller/-sellerId-): To check the current automatic approval configuration for a specific seller identified by sellerId.
-- PUT - [Save Seller's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration/seller/-sellerId-): Will be used to update the matcher's approval parameters for a specific seller identified by sellerId.
+- GET - [Get Seller's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/seller/-sellerId-): Checks the current automatic approval configuration for a specific seller identified by sellerId.
+- PUT - [Save Seller's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration/seller/-sellerId-): Updates the matcher's approval parameters for a specific seller identified by `sellerId`.
 
 ## 4. Managing Catalog
 
@@ -158,12 +157,12 @@ There are several actions that a marketplace or a VTEX seller can perform in cat
 
 The following endpoints will be used by the marketplace to query information about sellers in a store.
 
-**Suggestion**
+**Suggestions**
 
 - GET - [Get all SKU Suggestions](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions): Retrieves information about all suggestions sent by a seller.
 - GET - [Get SKU Suggestion by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions/#get-/suggestions/-sellerId-/-sellerSkuId-): Retrieves the matcher status and score information of a specific suggestion.
 
-**Version**
+**Versions**
 
 - GET - [Get all Versions](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions/#get-/suggestions/-sellerId-/-sellerskuid-/versions): Retrieves information about the versions of a suggestion sent by the seller.
 - GET - [Get Version by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions/#get-/suggestions/-sellerId-/-sellerskuid-/versions/-version-): Retrieves information about a specific version of the suggestion.
@@ -173,13 +172,13 @@ The following endpoints will be used by the marketplace to query information abo
 
 ### For Sellers
 
-The endpoints presented will be used by sellers already connected to a marketplace to notify external marketplaces or VTEX whenever there is an update to their SKUs.
+The endpoints presented will be used by sellers already connected to a marketplace to notify external marketplaces or VTEX whenever there is a price or inventory update to their SKUs.
 
 - POST - [Notify Marketplace of Price Update](https://developers.vtex.com/docs/api-reference/marketplace-apis/#post-/notificator/-sellerId-/changenotification/-skuId-/price)
 - POST - [Notify Marketplace of Inventory Update](https://developers.vtex.com/docs/api-reference/marketplace-apis/#post-/notificator/-sellerId-/changenotification/-skuId-/inventory)
 
 ## 5. Sellers: Offer Management
 
-[Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE?&utm_source=autocomplete) is the VTEX feature that provides sellers with more visibility into the process of sending a product to external channels, such as marketplaces. Offer Management helps sellers identify updates and resolve errors in their offers during the sending process, ensuring that they can be sent to the marketplace and synchronized correctly.
+[Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) is the VTEX feature that provides sellers with more visibility into the process of sending a product to external channels, such as marketplaces. Offer Management helps sellers identify updates and resolve errors in their offers during the sending process, ensuring that they can be sent to the marketplace and synchronized correctly.
 
 Check our [Offer Management Integration Guide](https://developers.vtex.com/docs/guides/sent-offers-integration-guide-connectors) for more details.
