@@ -541,7 +541,7 @@ To use impersonation, users with **Sales** roles or the **Organization Admin** r
 
 <img src="https://user-images.githubusercontent.com/77292838/159766777-1ff83458-cad0-46de-82e4-1e3c3e4bb144.png" alt="20-users"></img>
 
-> ⚠️ it's not possible to impersonate emails with Sales roles.
+> ⚠️ It is not possible to impersonate emails with Sales roles.
 
 #### User widget
 
