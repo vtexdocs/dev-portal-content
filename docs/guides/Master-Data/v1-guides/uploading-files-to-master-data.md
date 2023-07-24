@@ -1,7 +1,9 @@
 ---
 title: Uploading files to Master Data
-slug: 'uploading-files-to-master-data'
-excerpt: 'Learn how to upload files to Master Data v1.'
+slug: uploading-files-to-master-data
+excerpt: Learn how to upload files to Master Data v1.
+createdAt: "2023-06-21T10:45:55.338Z"
+updatedAt: "2023-06-21T11:40:35.480Z"
 hidden: false
 ---
 
