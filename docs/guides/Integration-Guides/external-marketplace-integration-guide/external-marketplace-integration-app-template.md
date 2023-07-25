@@ -32,7 +32,7 @@ An integration app created from our App Template already includes:
 The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io). Before you begin creating your app from our template, make sure to:
 
 - [Set up your development environment](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio).
-- [Install VTEX IO CLI](https://learn.vtex.com/page/setting-up-your-environment).
+- [Install VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 - Have your VTEX Partner account in hand for step 2.
 
 > If you do not have access to a VTEX Account, join our [Partner Program](https://vtex.com/us-en/partner), to become a certified partner.
