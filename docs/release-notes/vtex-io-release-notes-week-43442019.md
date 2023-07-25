@@ -25,7 +25,7 @@ See for yourself:
 
 ### Deprecation ❌
 
-- [CSS Selectors](https://vtex.io/docs/releases/2019-week-43-44/css-selectors-deprecation) - The wise Toolbelt has been warning us for the past few days, but you can also read about the deprecation of some Themes CSS selectors here. Check out the details and scenarios that are still allowed.
+- [CSS Selectors](https://vtex.io/docs/releases/2019-week-43-44/css-selectors-deprecation) - The wise VTEX IO CLI has been warning us for the past few days, but you can also read about the deprecation of some Themes CSS selectors here. Check out the details and scenarios that are still allowed.
 
 ### Improvements ➕
 

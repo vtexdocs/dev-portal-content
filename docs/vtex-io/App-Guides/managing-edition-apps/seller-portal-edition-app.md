@@ -77,7 +77,7 @@ To configure your Edition app, follow these steps:
 2. To clone this repository run `vtex init`.
 3. Choose the `edition app` option.
 
-If you don't have VTEX Toolbelt installed, you can also clone it manually:
+If you don't have VTEX IO CLI installed, you can also clone it manually:
 
  `git clone https://github.com/vtex/edition-hello edition-hello`
 
@@ -126,7 +126,7 @@ E.g.: The contents of the `apps.json` file could be:
 
 ### Testing
 
-To test the app, make sure you have [VTEX's toolbelt](https://github.com/vtex/toolbelt) installed.
+To test the app, make sure you have [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed.
 
 Edition apps cannot be linked, so for testing, you need to launch a pre-release version and set them on test accounts or workspaces for validation. To do so:
 
@@ -192,7 +192,7 @@ Instead of creating an edition app and manually adding the desired custom pages 
 
 For the dependency to work, **MKPSeller** must be **Cosmetics2** app’s sponsor. This means that **Cosmetics2** has an edition belonging to **MKPSeller** associated to it.
 
-> ℹ️ To know which edition is associated with an account, on VTEX Toolbelt, run `vtex edition get` .
+> ℹ️ To know which edition is associated with an account, run `vtex edition get` on the terminal.
 
 This way, **Cosmetics2** edition app will include everything declared in `mkpseller.edition-seller` . This means including:
 

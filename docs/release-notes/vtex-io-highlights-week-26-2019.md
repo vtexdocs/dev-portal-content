@@ -19,7 +19,7 @@ Here's a sneak peek at the key changes made in the last week:
 
 ### Improvements ➕
 
-- [Toolbelt dependency on Housekeeper](toolbelt-dependency-on-housekeeper.md) - Housekeep API is presently used by VTEX IO Toolbelt, giving app updates more reliability in a workspace.
+- [VTEX IO CLI dependency on Housekeeper](vtex io cli-dependency-on-housekeeper.md) - Housekeep API is presently used by VTEX IO CLI, giving app updates more reliability in a workspace.
 - [Search Bar component](search-bar-component.md) - Increase the search results preview performance with this new Search Bar component improvement.
 - [React builder optimization](react-builder-optimization.md) - The webpack logic has now been improved with the React builder optimization, leading to an impressive reduction in resources.
 - [Product Description component](product-description-component.md) - It is now possible to display a product description in your store regardless of its size.

@@ -8,7 +8,7 @@ updatedAt: "2020-06-03T15:19:09.634Z"
 
 ## How to install
 
-Open the VTEX App Store and install this app on your store, or run the following command on VTEX toolbelt:
+Open the VTEX App Store and install this app on your store, or run the following command on VTEX IO CLI:
 
 > vtex install vtex.google-adwords@1.x
 

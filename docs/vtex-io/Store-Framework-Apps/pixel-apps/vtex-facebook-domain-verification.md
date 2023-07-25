@@ -12,7 +12,7 @@ This app sets the meta-tag containing the verification code into the `<head>` se
 
 ## Configuration
 
-It is possible to install this app in your store either by using App Store or the VTEX IO Toolbelt.
+It is possible to install this app in your store either by using App Store or the VTEX IO CLI.
 
 ### Using VTEX App Store
 
@@ -23,7 +23,7 @@ It is possible to install this app in your store either by using App Store or th
 
 > ℹ️️ Access the [Facebook Business Settings](https://business.facebook.com/settings/owned-domains/) and login to you account in order to find out what is your domain verification code is. Click on the Meta-tag Verification tag and copy only the code inside the content attribute.
 
-### Using VTEX IO Toolbelt
+### Using VTEX IO CLI
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.facebook-domain-verification@1.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
 2. Access the **Apps** section in your account's admin page and look for the Facebook Domain Verification box. Once you find it, click on the box.

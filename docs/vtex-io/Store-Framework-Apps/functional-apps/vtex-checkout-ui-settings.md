@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:09.589Z"
 updatedAt: "2022-05-20T00:24:43.708Z"
 ---
 
-The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
+The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 
 The main advantage of using the app instead of the [store's admin](https://help.vtex.com/tutorial/configure-template-in-smartcheckout-update--ToTE5XB39t0SwtHgpgwSv?locale=en) for this customization is that your Checkout scripts will behave as configurations for platform apps.
 
@@ -14,7 +14,7 @@ In practice, it means that Checkout UI Settings allows A/B testing in your store
 
 ## Configuration
 
-1.  Using your terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install), log into the desired account;
+1.  Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install), log into the desired account;
 2.  Run `vtex list` to access the list of apps that are already installed on the account you're working on. If the Checkout UI Settings option already exists, you can skip to step 7 of this step-by-step;
 3.  If the Checkout UI Settings app was not found in the list of installed apps, run the `vtex init` command;
 4. Select the `checkout-ui-settings` option;

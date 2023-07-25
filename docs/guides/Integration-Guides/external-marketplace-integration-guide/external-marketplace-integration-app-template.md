@@ -25,14 +25,14 @@ An integration app created from our App Template already includes:
   - Button to activate/deactivate [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl)
 - Complete **search endpoint** to retrieve seller configurations using [AppKey and AppToken](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) generated in the seller’s account, defined by the appVendor.
 - **Feed creation mechanism in [Offer Management](https://help.vtex.com/tutorial/anuncios-enviados-beta--6yg2CBv5Z5AnD0qS0cw2sa)**, that allows the connector to interact with Offer Management for generating logs.
-- **Link to [VTEX Mapper Registration**](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register), allowing sellers to map their catalog according to the marketplace’s definitions.
+- **Link to [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register)**, allowing sellers to map their catalog according to the marketplace’s definitions.
 
 ## Before you start
 
 The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io). Before you begin creating your app from our template, make sure to:
 
-- [Prep the basic setup for your environment](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio).
-- [Install VTEX IO’s Toolbelt](https://learn.vtex.com/page/setting-up-your-environment).
+- [Set up your development environment](https://developers.vtex.com/docs/guides/vtex-io-documentation-2-basicsetuptodevelopinvtexio).
+- [Install VTEX IO CLI](https://learn.vtex.com/page/setting-up-your-environment).
 - Have your VTEX Partner account in hand for step 2.
 
 > If you do not have access to a VTEX Account, join our [Partner Program](https://vtex.com/us-en/partner), to become a certified partner.

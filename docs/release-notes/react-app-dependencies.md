@@ -1,10 +1,10 @@
 ---
 title: React app dependencies 
-excerpt: "The wise Toolbelt will now update an App React's dependencies (located in the app's `package.json` file) to keep them in line with Render's dependencies list."
+excerpt: "The wise VTEX IO CLI will now update an App React's dependencies (located in the app's `package.json` file) to keep them in line with Render's dependencies list."
 createdAt: "2020-03-16"
 ---
 
-App React dependencies (located in the app's `package.json` file) are now automatically updated by Toolbelt and kept up-to-date with the Render Runtime dependencies. 
+App React dependencies (located in the app's `package.json` file) are now automatically updated by VTEX IO CLI and kept up-to-date with the Render Runtime dependencies. 
 
 ## What has changed
 
@@ -14,17 +14,17 @@ While React apps also declare their own dependencies to properly function, in pr
 
 At the end of the day, independent of the apps and versions declared in a React app's dependencies, VTEX IO platform only used those listed in Render, leading to a lack of transparency in the development process.
 
-React app dependencies that are also in Render will continue to not be taken into account for the rendering process, however now **Toolbelt will update the React dependencies and keep it up-to-date with the Render fixed dependencies list**.
+React app dependencies that are also in Render will continue to not be taken into account for the rendering process, however now **VTEX IO CLI will update the React dependencies and keep it up-to-date with the Render fixed dependencies list**.
 
 > ⚠️ Bear in mind that this is regarding dependencies that are declared **both** in Render and React apps. Dependencies that are only listed in React apps will keep being used by Render and updated by Housekeeper normally.
 
 ### How it works
 
-Whenever the React app is linked, published, deployed or undergoes any changes that require Toolbelt interaction, Toolbelt will automatically update the app's dependencies list to keep it up-to-date with the Render's dependencies. 
+Whenever the React app is linked, published, deployed or undergoes any changes that require VTEX IO CLI interaction, VTEX IO CLI will automatically update the app's dependencies list to keep it up-to-date with the Render's dependencies. 
 
 However, this will only occur if these updates are not breaking changes.
 
-Toolbelt **will not** update any dependency if this implies a change in a Major, meaning a  breaking change for your app. Only changes to minor and patch versions will be applied. 
+VTEX IO CLI **will not** update any dependency if this implies a change in a Major, meaning a  breaking change for your app. Only changes to minor and patch versions will be applied. 
 
 ## Why we are doing this
 
@@ -34,10 +34,10 @@ The **homogeneity** of the dependencies lists aims to ensure the **transparency*
 
 Your app should function without any adverse side effects.
 
-However, statistical analysis tools may detect the updates that Toolbelt performed to your code and point out inconsistency errors based on the code used and the dependency's new version.
+However, statistical analysis tools may detect the updates that VTEX IO CLI performed to your code and point out inconsistency errors based on the code used and the dependency's new version.
 
 Whenever this happens, check the app's dependencies version and perform the necessary changes! 
 
 ## What you need to do 
 
-Let Toolbelt perform its magic for you. Just keep an eye out for any errors that may pop up due to the changes implemented by Toolbelt.
+Let VTEX IO CLI perform its magic for you. Just keep an eye out for any errors that may pop up due to the changes implemented by VTEX IO CLI.
