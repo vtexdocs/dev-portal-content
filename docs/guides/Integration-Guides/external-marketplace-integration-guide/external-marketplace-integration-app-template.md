@@ -1,6 +1,7 @@
 ---
 title: "Creating an integration app from a Template"
 slug: "external-marketplace-integration-app-template"
+excerpt: "Create an app to integrate with external marketplaces."
 hidden: false
 createdAt: "2021-09-27T16:02:23.338Z"
 updatedAt: "2022-06-23T20:26:15.880Z"
@@ -34,13 +35,7 @@ The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-
 - [Install VTEX IO’s Toolbelt](https://learn.vtex.com/page/setting-up-your-environment).
 - Have your VTEX Partner account in hand for step 2.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "If you do not have access to a VTEX Account, join our [Partner Program](https://vtex.com/us-en/partner), to become a certified partner.",
-  "title": "VTEX Partner"
-}
-[/block]
+> If you do not have access to a VTEX Account, join our [Partner Program](https://vtex.com/us-en/partner), to become a certified partner.
 
 ## Step 1 - Creating your repository from the template
 
@@ -60,13 +55,7 @@ Once your repository is created from the template, you must configure your app b
 
 Follow the list below to substitute placeholders properly. Once placeholders are replaced, the App’s foundation will include the fields needed to set up the seller and the integration on VTEX's side.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Placeholders within the `manifest.json` file must follow the rules described in [Manifest Fields Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).",
-  "title": "Manifest file"
-}
-[/block]
+> Placeholders within the `manifest.json` file must follow the rules described in [Manifest Fields Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 | Placeholder | Description | Files where it can be found |
 |---|---|---|
@@ -140,38 +129,24 @@ The CustomConfigs section is where you find configurations that come as default 
 
 You can remove [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register) from the app, if the integration does not require mapping categories, or the partner already has a solution for mapping catalog architecture. To remove VTEX Mapper, on the `admin/navigation.json`, remove file the object that defines the Mapper endpoint in the Admin:
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n“labelId”: “admin/app.mapper.tile”,\n“path”: “/admin/mkp-category-mapper/{{mapperId}}\n}\n",
-      "language": "json",
-      "name": "Removing VTEX Mapper"
-    }
-  ]
+  "labelId": "admin/app.mapper.tile",
+  "path": "/admin/mkp-category-mapper/{{mapperId}}"
 }
-[/block]
+```
 
 ##### Removing Offer Management
 
 You can remove [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) from the app, If your integration already includes a solution to generate logs for offers. To remove Offer Management, on the `node/resolvers/saveConfig.ts` file (line 15), remove the feed’s creation in Sent Offers:
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "await ctx.clients.sentOffers.createFeed({affiliateId, salesChannel, id: FEED_ID)}.then( async () => {",
-      "language": "json",
-      "name": "Removing Sent Offers"
-    }
-  ]
-}
-[/block]
+```ts
+await ctx.clients.sentOffers.createFeed({affiliateId, salesChannel, id: FEED_ID)}.then( async () => {
+```
 
 ##### Removing _AllowFranchiseAccounts_
 
 When the configuration _AllowFranchiseAccounts_ is configured, the component becomes a toggle indicating whether [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) are permitted.
-
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-integration-app-template-0.png)
 
@@ -203,17 +178,17 @@ CustomConfigs is also where connectors can add their custom fields and most of t
 
 2. In the file, add the following **code**, replacing the `ExampleComponent` field with the name you wish to give it.
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "import React from \"react\"\nimport { DefaultProps } from '../../../typings/props'\n\nconst ExampleComponent: React.FC<DefaultProps> = ({ intl, config }) => {\n    return (\n    )\n}\n\nexport default ExampleComponent\n",
-      "language": "json",
-      "name": "Add the following code"
-    }
-  ]
+```ts
+import React from "react"
+import { DefaultProps } from '../../../typings/props'
+
+const ExampleComponent: React.FC<DefaultProps> = ({ intl, config }) => {
+    return (
+    )
 }
-[/block]
+
+export default ExampleComponent
+```
 
 <table>
     <tr>
@@ -230,17 +205,20 @@ CustomConfigs is also where connectors can add their custom fields and most of t
 
 3. To add more properties to the `DefaultProps` for a specific field, **extend the `DefaultProps` interface**, adding the extra properties. This step is optional.
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "import React from \"react\"\n\nexport interface CustomProps extends DefaultProps {\n\tnewProp: string\n}\n\nconst FieldName: React.FC<CustomProps > = ({ intl, config, newProp}) => {\n    return (\n    )\n}\n\nexport default FieldName\n",
-      "language": "json",
-      "name": "Default Props"
-    }
-  ]
+```ts
+import React from "react"
+
+export interface CustomProps extends DefaultProps {
+ newProp: string
 }
-[/block]
+
+const FieldName: React.FC<CustomProps > = ({ intl, config, newProp}) => {
+    return (
+    )
+}
+
+export default FieldName
+```
 
 In the example above, a new interface called `CustomProps` was created, that can `extend` the `DefaultProps`, by adding a `newProp` string property. Thus, it is possible to use `CustomProps` in place of `DefaultProps`, and the component can now accept the extra `newProp` property.
 
@@ -248,33 +226,57 @@ In the example above, a new interface called `CustomProps` was created, that can
 
 In the example below, a new interface called `CustomProps` is created, with only two properties: `prop1` (string) and `prop2` (number).
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "import React from \"react\"\n\nexport interface CustomProps {\n\tprop1: string.\n\tprop2: number\n}\n\nconst FieldName: React.FC<CustomProps > = ({ prop1, prop2 }) => {\n    return (\n    )\n}\n\nexport default FieldName\n",
-      "language": "json",
-      "name": "CustomProps"
-    }
-  ]
+```ts
+import React from "react"
+
+export interface CustomProps {
+ prop1: string.
+ prop2: number
 }
-[/block]
+
+const FieldName: React.FC<CustomProps > = ({ prop1, prop2 }) => {
+    return (
+    )
+}
+
+export default FieldName
+```
 
 5. Add **components developed** to the app’s template.
 
 Here’s an example code for adding an input field:
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "import React from \"react\"\nimport InputComponent from \"../../../components/InputComponent\"\nimport { DefaultProps } from \"../../../typings/props\"\n\nexport interface ExampleProps extends DefaultProps {\n  setConfig: React.Dispatch<React.SetStateAction<Configuration>>\n}\n\nconst ExampleComponent: React.FC<ExampleProps> = ({ intl, config, setConfig }) => {\n    return (\n\t\t\t<InputComponent\n\t      id={example}\n\t      label={example}\n\t      canEdit={true}\n\t      initValue={config.email}\n\t      type={'text'}\n\t      required={false}\n\t      tooltip={intl.formatMessage({ id: \"admin/app.example\" })}\n\t      onChange={value => {\n\t          if(value !== undefined){\n\t            setConfig(oldConfig => ({ ...oldConfig, email: value }))\n\t          }\n\t        }\n\t      }\n\t    />\n    )\n}\n\nexport default ExampleComponent\n",
-      "language": "json",
-      "name": "Adding input field"
-    }
-  ]
+```ts
+import React from "react"
+import InputComponent from "../../../components/InputComponent"
+import { DefaultProps } from "../../../typings/props"
+
+export interface ExampleProps extends DefaultProps {
+  setConfig: React.Dispatch<React.SetStateAction<Configuration>>
 }
-[/block]
+
+const ExampleComponent: React.FC<ExampleProps> = ({ intl, config, setConfig }) => {
+    return (
+   <InputComponent
+       id={example}
+       label={example}
+       canEdit={true}
+       initValue={config.email}
+       type={'text'}
+       required={false}
+       tooltip={intl.formatMessage({ id: "admin/app.example" })}
+       onChange={value => {
+           if(value !== undefined){
+             setConfig(oldConfig => ({ ...oldConfig, email: value }))
+           }
+         }
+       }
+     />
+    )
+}
+
+export default ExampleComponent
+```
 
 The example above creates an input field called `ExampleComponent`. It uses an extra property, or the `setConfig`, used in this case within the `onChange` property of the Input component. This updates the `email` field in the config, whenever the seller types something within the field. This is how it is rendered in the UI:
 
@@ -286,21 +288,23 @@ The example above creates an input field called `ExampleComponent`. It uses an e
   Following the example above: *import ExampleComponent from './example'*
 - Add the component within the ` ` of `CustomConfigArea`.
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "const CustomConfigsArea: React.FC<CustomConfigsProps> = ({ intl, config, setConfig }) => {\n  return (\n    <div>      \n      <ExemploComponent\n        config={config}\n        intl={intl}\n        setConfig={setConfig}\n      />\n    </div>\n  )\n}\n",
-      "language": "json",
-      "name": "CustomConfigsArea"
-    }
-  ]
+```ts
+const CustomConfigsArea: React.FC<CustomConfigsProps> = ({ intl, config, setConfig }) => {
+  return (
+    <div>      
+      <ExemploComponent
+        config={config}
+        intl={intl}
+        setConfig={setConfig}
+      />
+    </div>
+  )
 }
-[/block]
+```
 
 Note that the `CustomConfigArea` in the template does not include `intl`, `config` and `setConfig`. They must be added, like in the example above, depending on which properties are needed. To add more properties, repeat step 3.
 
-1. If other components are necessary, add them in the `return` object.
+7. If other components are necessary, add them in the `return` object.
 
 The order of components within the `return` affects the order in which components are rendered in the app.
 
@@ -328,17 +332,25 @@ The following languages are also available in the VTEX Admin: italian (it), japa
 
 To illustrate with an example, let’s suppose we have the following component:
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "import React from \"react\"\nimport InputComponent from \"../../../components/InputComponent\"\nimport { DefaultProps } from '../../../typings/props'\n\nconst ExemploComponent: React.FC<DefaultProps> = ({ intl }) => {\n    return (\n      <InputComponent \n        canEdit={true}\n        id={'test'}\n        initValue={\"\"}\n        label={intl.formatMessage({ id: 'admin/app.test.title' })}\n        type={'text'}\n      />\n    )\n}\n\nexport default ExemploComponent\n",
-      "language": "json",
-      "name": "Input component example"
-    }
-  ]
+```ts
+import React from "react"
+import InputComponent from "../../../components/InputComponent"
+import { DefaultProps } from '../../../typings/props'
+
+const ExemploComponent: React.FC<DefaultProps> = ({ intl }) => {
+    return (
+      <InputComponent 
+        canEdit={true}
+        id={'test'}
+        initValue={""}
+        label={intl.formatMessage({ id: 'admin/app.test.title' })}
+        type={'text'}
+      />
+    )
 }
-[/block]
+
+export default ExemploComponent
+```
 
 In this case, we have an Input component, type “text”, and its label will be translated according to the VTEX Admin’s locale. If we do not add the id `"admin/app.test.title"` in the `messages` folder, this is what is rendered in the UI:
 
