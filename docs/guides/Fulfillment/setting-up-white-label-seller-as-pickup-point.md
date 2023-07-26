@@ -59,7 +59,243 @@ __POST__: `https://{accountName}.{environment}.com.br/api/checkout/pub/orderForm
 #### Response body example
 
 ```json
-
+{
+  "items": [
+    {
+      "id": "1",
+      "requestIndex": 0,
+      "quantity": 1,
+      "seller": "1",
+      "sellerChain": [
+        "1"
+      ],
+      "tax": 0,
+      "priceValidUntil": "2023-07-12T11:49:01Z",
+      "price": 9999,
+      "listPrice": 9999,
+      "rewardValue": 0,
+      "sellingPrice": 2999700,
+      "offerings": [],
+      "priceTags": [
+        {
+          "name": "DISCOUNT@MANUALPRICE",
+          "value": -5000,
+          "rawValue": -50,
+          "isPercentual": false,
+          "identifier": "1234abc-5678b-1234c"
+        }
+      ],
+      "measurementUnit": "un",
+      "unitMultiplier": 300,
+      "parentItemIndex": null,
+      "parentAssemblyBinding": null,
+      "availability": "available",
+      "priceDefinition": {
+        "calculatedSellingPrice": 2999700,
+        "total": 2999700,
+        "sellingPrices": [
+          {
+            "value": 2999700,
+            "quantity": 1
+          }
+        ]
+      }
+    }
+  ],
+  "ratesAndBenefitsData": {
+    "rateAndBenefitsIdentifiers": [],
+    "teaser": []
+  },
+  "paymentData": {
+    "installmentOptions": [
+      {
+        "paymentSystem": "2",
+        "bin": null,
+        "paymentName": "Visa",
+        "paymentGroupName": "creditCardPaymentGroup",
+        "value": 2999700,
+        "installments": [
+          {
+            "count": 1,
+            "hasInterestRate": false,
+            "interestRate": 0,
+            "value": 2999700,
+            "total": 2999700,
+            "sellerMerchantInstallments": [
+              {
+                "id": "brenoStore",
+                "count": 1,
+                "hasInterestRate": false,
+                "interestRate": 0,
+                "value": 2999700,
+                "total": 2999700
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "paymentSystems": [
+      {
+        "id": 2,
+        "name": "Visa",
+        "groupName": "creditCardPaymentGroup",
+        "validator": null,
+        "stringId": "2",
+        "template": "creditCardPaymentGroup-template",
+        "requiresDocument": false,
+        "displayDocument": false,
+        "isCustom": false,
+        "description": "",
+        "requiresAuthentication": false,
+        "dueDate": "2022-07-19T11:39:36.37197Z",
+        "availablePayments": null
+      }
+    ],
+    "payments": [],
+    "giftCards": [],
+    "giftCardMessages": [],
+    "availableAccounts": [],
+    "availableTokens": [],
+    "availableAssociations": {}
+  },
+  "selectableGifts": [],
+  "marketingData": {
+    "utmSource": "app",
+    "utmMedium": "CPC",
+    "utmCampaign": "Black friday",
+    "utmipage": "true",
+    "utmiPart": "true",
+    "utmiCampaign": "true",
+    "coupon": null,
+    "marketingTags": [
+      "tag1",
+      "tag2"
+    ]
+  },
+  "country": "BRA",
+  "postalCode": "12345-000",
+  "geoCoordinates": [
+    -47.924747467041016,
+    -15.832582473754883
+  ],
+  "logisticsInfo": [
+    {
+      "itemIndex": 0,
+      "addressId": null,
+      "selectedSla": null,
+      "selectedDeliveryChannel": null,
+      "quantity": 1,
+      "shipsTo": [
+        "BRA"
+      ],
+      "slas": [],
+      "deliveryChannels": [
+        {
+          "id": "pickup-in-point"
+        }
+      ]
+    }
+  ],
+  "messages": [],
+  "purchaseConditions": {
+    "itemPurchaseConditions": [
+      {
+        "id": "1",
+        "seller": "1",
+        "sellerChain": [
+          "1"
+        ],
+        "slas": [
+          {
+            "id": "Normal",
+            "deliveryChannel": "delivery",
+            "name": "Normal",
+            "deliveryIds": [
+              {
+                "courierId": "1",
+                "warehouseId": "1_1",
+                "dockId": "1",
+                "courierName": "Transportadora",
+                "quantity": 1,
+                "kitItemDetails": []
+              }
+            ],
+            "shippingEstimate": "3bd",
+            "shippingEstimateDate": null,
+            "lockTTL": "10d",
+            "availableDeliveryWindows": {
+              "startDateUtc": "2017-03-27T00:00:00+00:00",
+              "endDateUtc": "2017-03-27T00:00:00+00:00",
+              "price": 0,
+              "lisPrice": 0,
+              "tax": 0
+            },
+            "deliveryWindow": {
+              "startDateUtc": "2014-04-21T09:00:00+00:00",
+              "endDateUtc": "2014-04-21T12:00:00+00:00",
+              "price": 0,
+              "listprice": 1000,
+              "tax": 0
+            },
+            "price": 1500,
+            "listPrice": 1500,
+            "tax": 0,
+            "pickupStoreInfo": {
+              "isPickupStore": false,
+              "friendlyName": null,
+              "address": null,
+              "additionalInfo": null,
+              "dockId": null
+            },
+            "pickupPointId": null,
+            "pickupDistance": 0,
+            "polygonName": null,
+            "transitTime": "3bd"
+          }
+        ],
+        "price": 9999,
+        "listPrice": 9999
+      }
+    ]
+  },
+  "pickupPoints": [
+    {
+            "friendlyName": "Locker Arizona",
+            "address": {
+                "addressType": "pickup",
+                "receiverName": null,
+                "addressId": "1cc6116",
+                "postalCode": "85004",
+                "city": "Phoenix",
+                "state": "AZ",
+                "country": "USA",
+                "street": "North 3rd Street",
+                "number": "752",
+                "neighborhood": "Downtown",
+                "complement": "",
+                "reference": null,
+                "geoCoordinates": [
+                    3345.231544494628906,
+                    -11206.918148040771484
+                ]
+            },
+            "additionalInfo": "Bring your ID",
+            "id": "1cc6116",
+            "businessHours": []
+        }
+  ],
+  "subscriptionData": null,
+  "totals": [
+    {
+      "id": "Items",
+      "name": "Total dos Itens",
+      "value": 2999700
+    }
+  ],
+  "itemMetadata": {
+    "items": []
+  }
 ```
 
 When the configuration was made correctly, the call will return the shipping information of a given SKU. That is enough to check if the shipping is occurring by the registered pickup point.
