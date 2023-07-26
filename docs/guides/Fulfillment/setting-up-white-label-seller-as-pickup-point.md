@@ -35,7 +35,7 @@ When you made the pickup point configurations correctly in the franchise account
 
 To check if the white label seller is delivering a SKU through the registered pickup point, use the [Cart simulation endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation).
 
-When the configuration was made correctly, the call will return the shipping information of the a given SKU. That is enough to check if the shipping is occuring by the registered pickup point.
+When the configuration was made correctly, the call will return the shipping information of a given SKU. That is enough to check if the shipping is occurring by the registered pickup point.
 
 ### Marketplace and main account
 
