@@ -17,13 +17,13 @@ Before delving into the internationalization process, it's essential to understa
 
 A Store Framework storefront consists of multiple frontend apps built with VTEX IO and React. For translations, Store Framework uses the [react-intl](https://www.npmjs.com/package/react-intl) library and the VTEX IO Messages app. 
 
-Moreover, when developing a frontend app, developers can designate text components as translatable messages using the `<Formatted*>` component from the `react-intl` library. This enables translatable messages to be automatically translated by an automatic translation service based on the user's locale.
+Moreover, developers can designate text components as translatable messages when developing a frontend app using the `<Formatted*>` component from the `react-intl` library. This enables translatable messages to be automatically translated by an automatic translation service based on the user's locale.
 
 ### Automatic translations
 
-The Messages app can automatically translate frontend app messages based on the user's locale using the automatic translation service. In such cases, the current locale and the corresponding set of translated messages obtained from the automatic translation system become accessible at the root of the component tree and made available to each component. 
+By leveraging the automatic translation service, the Messages app can automatically translate frontend app messages according to the user's locale. The user's current locale and the translated messages, obtained from the automatic translation system, become accessible at the root of the component tree and available to each component.
 
-However, automatic translations may not always be culturally accurate. To address this, the Messages app provides functionalities to manage custom translations.
+However, automatic translations may not always be culturally accurate. To address this, the Messages app provides functionalities to manage custom translations. If preferred, it is also possible to [disable the automatic translation service](https://developers.vtex.com/docs/guides/vtex-io-documentation-disabling-automatic-translation).
 
 ### Customizing automatic translations
 
@@ -31,8 +31,8 @@ To address potential cultural inaccuracies in automatic translations, the Messag
 
 Custom translations can be implemented at either the app or account level:
 
-- **App-level translations**: Developers can set personalized translations for each locale within the `/messages` folder of the frontend app. These translations are applied, by default, to any store using the app. To learn how to set messages during the development of a React app, please follow this [guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component).
-- **Account-level translations**: Developers can overwrite a message imported from a frontend app with a completely customized message making the appropriate GraphQL API request to the Messages app. To learn how to overwrite a message from a storefront app, please follow this [guide](https://developers.vtex.com/docs/guides/storefront-content-internationalization).
+- **App-level translations**: Developers can set personalized translations for each locale within the frontend app's `/messages` folder. These translations are applied, by default, to any store using the app. To learn how to set messages during the development of a React app, please follow this [guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component).
+- **Account-level translations**: Developers can overwrite a message imported from a frontend app with a completely customized message making the appropriate GraphQL API request to the Messages app. To learn how to overwrite a message from a frontend app, please follow this [guide](https://developers.vtex.com/docs/guides/storefront-content-internationalization).
 
 > The Messages app is a standalone translation application and should not be confused with a string repository. It requires providing a source language, source content, and destination language. The output will be the translation of the source content from the source language to the destination language.
 
@@ -41,12 +41,33 @@ Custom translations can be implemented at either the app or account level:
 When translating a message, the Messages app follows a specific decision flow:
 
 1. Check for custom account-level translations.
-2. If no custom definitions are found, it checks for storefront app translations in the `/messages` folder of the app.
+2. If no custom definitions are found, it checks for frontend app translations in the app's `/messages` folder.
 3. If a specific translation is still not found, the Messages app falls back to the automatic translation service.
 
-As translating an app to every language can be a daunting task, it is recommended to structure precise translations for the target audience and rely on automatic translation for other languages.
+```mermaid
+sequenceDiagram
+    participant Messages
+    participant Messages API
+    participant Frontend app
+    participant Translation service
 
-Note that, after detecting a user locale, every message from your storefront components set as translatable will be automatically translated either by the automatic translation service, the storefront app's messages, or custom content personalized through a GraphQL mutation at the account level.
+    Messages->>Messages API: Checks for account-level translations
+    alt Account-level translations found
+        Messages API-->>Messages: Returns account-level translations
+    else No account-level translations found
+        Messages->>Frontend app: Checks for frontend app translations in the messages folder
+        alt Frontend app translations found
+            Frontend app-->>Messages: Returns frontend app translation
+        else No frontend app translations found
+            Messages->>Translation service: Requests automatic translation
+            Translation service-->>Messages: Returns automatic translation
+        end
+    end
+```
+
+As translating an app to every language can be daunting, it is recommended to structure precise translations for the target audience and rely on automatic translation for other languages.
+
+Note that after detecting a user locale, every message from your frontend component set as translatable will be automatically translated either by the automatic translation service, the frontend app's messages, or custom content personalized through a GraphQL mutation at the account level.
 
 ## Catalog data
 
