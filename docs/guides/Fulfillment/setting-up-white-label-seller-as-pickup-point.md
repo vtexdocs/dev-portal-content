@@ -3,7 +3,7 @@ title: "Setting up white label seller as pickup point"
 slug: "setting-up-white-label-seller-as-pickup-point"
 hidden: false
 createdAt: "2023-07-25T20:30:14.043Z"
-updatedAt: "2023-07-25T20:30:14.127Z"
+updatedAt: "2023-07-26T20:30:14.127Z"
 ---
 
 Every [franchise account](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) created in VTEX is also automatically a [white label seller](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa) of the main account. So any [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R) configured in the franchise account will be available options for shoppers who place orders in the main account.
