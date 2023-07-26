@@ -27,7 +27,7 @@ The franchise account does not have its own catalog, it inherits products and SK
 
 ## Validate settings
 
-When you made the pickup point configurations correctly in the franchise account, SKUs with inventory and price can be sold on the main account. The franchise account will work as white label seller and the main account will work as marketplace.
+Once you've made the pickup point settings correctly in the franchise account, SKUs with inventory levels and price values configured can be sold on the main account. The franchise account will work as a white label seller and the main account will work as marketplace.
 
 >❗ Make sure your white label seller is active. In your VTEX Admin, go to __Marketplace > Sellers > Management__, and in the seller row in column _Status_, click `Active`.
 
