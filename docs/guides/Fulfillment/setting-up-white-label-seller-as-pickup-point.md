@@ -12,7 +12,7 @@ Every [franchise account](https://help.vtex.com/en/tutorial/what-is-a-franchise-
 
 ## Initial setup
 
-To set up a white label seller as a pickup point, you have to make the following configurations:
+To set up a white label seller as a pickup point, you have to make the following configurations in the franchise account:
 
 - [Pickup point](https://help.vtex.com/en/tutorial/creating-pickup-points--2R5ClQiwe4KoSQgsuiOw4E): create the pickup point with the franchise account address. You can use the [Create/Update Pickup Point](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-) endpoint.
 - [Shipping policy](https://help.vtex.com/en/tutorial/shipping-policy--tutorials_140): set up a shipping policy and link it to a registered pickup point. You can use the [Create shipping policy](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/shipping-policies) endpoint.
