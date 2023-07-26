@@ -302,6 +302,6 @@ When the configuration was made correctly, the call will return the shipping inf
 
 ### Marketplace and main account
 
-To check if the marketplace is including the SKU of the white label seller in the shopping cart, use the [Cart simulation endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation).
+To check if the main account, which is the marketplace, is including the SKU of the white label seller in the shopping cart, use the same [Cart simulation](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation) endpoint mentioned in the previous section.
 
 The call should return shopping cart information to where the SKU was sent in the context of the request body.
