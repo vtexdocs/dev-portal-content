@@ -25,7 +25,7 @@ After setting the pickup point, the shipping policy, the loading dock, and the w
 
 The franchise account does not have its own catalog, it inherits products and SKU information from the main account, so it is necessary to update quantity through the [import and export of the inventory spreadsheet](https://help.vtex.com/en/tutorial/importing-and-exporting-an-inventory-spreadsheet--tutorials_2034).
 
-## Validate configuration
+## Validate settings
 
 When you made the pickup point configurations correctly in the franchise account, SKUs with inventory and price can be sold on the main account. The franchise account will work as white label seller and the main account will work as marketplace.
 
