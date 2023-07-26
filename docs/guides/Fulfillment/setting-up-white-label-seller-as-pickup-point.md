@@ -304,4 +304,4 @@ When the configuration was made correctly, the call will return the shipping inf
 
 To check if the main account, which is the marketplace, is including the SKU of the white label seller in the shopping cart, use the same [Cart simulation](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation) endpoint mentioned in the previous section.
 
-The call should return shopping cart information to where the SKU was sent in the context of the request body.
+Fill in the `id` field of the [request body](#request-body-example) with the SKU ID sold by the white label seller and make sure to use a shipping address covered by your logistic operation. The [response body](#response-body-example) you will get should display valid shopping cart information, which shows that the SKU is been sold by the main account as well.
