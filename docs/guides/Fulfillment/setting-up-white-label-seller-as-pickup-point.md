@@ -23,7 +23,7 @@ To set up a white label seller as a pickup point, you have to make the following
 
 After setting the pickup point, the shipping policy, the loading dock, and the warehouse, fill in the quantity of the items in inventory. You can also use the [Update inventory by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-) endpoint.
 
-The franchise account does not have its own catalogue, it inherits products and SKU information from the main account, so it is necessary to update quantity through the [import and export of the inventory spreadsheet](https://help.vtex.com/en/tutorial/importing-and-exporting-an-inventory-spreadsheet--tutorials_2034).
+The franchise account does not have its own catalog, it inherits products and SKU information from the main account, so it is necessary to update quantity through the [import and export of the inventory spreadsheet](https://help.vtex.com/en/tutorial/importing-and-exporting-an-inventory-spreadsheet--tutorials_2034).
 
 ## Validate configuration
 
