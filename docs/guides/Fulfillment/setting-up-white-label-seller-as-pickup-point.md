@@ -8,7 +8,7 @@ updatedAt: "2023-07-25T20:30:14.127Z"
 
 Every [franchise account](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) created in VTEX is also automatically a [white label seller](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa) of the main account. So any [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R) configured in the franchise account will be available options for shoppers who place orders in the main account.
 
->❗ Items will only be displayed at Checkout for shoppers with the pickup point option if the SKU is available in the [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139) of the main account and also in the inventory of the franchise account.
+>❗ Items will only be displayed for shoppers at Checkout with the pickup point option if the SKU is available in the [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139) of the main account and also in the inventory of the franchise account.
 
 ## Initial setup
 
