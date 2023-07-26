@@ -9,10 +9,6 @@ hidePaginationPrevious: true
 
 Welcome! VTEX is a headless commerce platform that is highly customizable and constantly evolving to meet your business needs.
 
-In the video below, you can see how our clients are currently using VTEX to address their specific requirements:
-
-<YoutubeFrame embedId="JgkrlaF52WQ"/>
-
 ## Getting started
 
 We recommend exploring our introductory content that covers the capabilities of our REST API.
