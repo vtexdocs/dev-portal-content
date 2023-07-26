@@ -19,7 +19,7 @@ To set up a white label seller as a pickup point, you have to make the following
 - [Loading dock](https://help.vtex.com/en/tutorial/managing-loading-docks--7K3FultD8I2cuuA6iyGEiW): configure a loading dock and link it to the shipping policy associated with the pickup point. You can use the [Create/update dock](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/docks) endpoint.
 - [Warehouse](https://help.vtex.com/en/tutorial/managing-warehouses--tutorials_137): you must configure a warehouse and link it to the shipping policy associated with the pickup point. You can use the [Create/update warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses) endpoint.
 
-## Fill in inventory quantity
+## Fill in inventory level
 
 After setting the pickup point, the shipping policy, the loading dock, and the warehouse, fill in the quantity of the items in inventory. You can also use the [Update inventory by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-) endpoint.
 
