@@ -22,7 +22,7 @@ The B2B Orders app comes with a specific pattern for communicating with the ERP 
 - [Search order details](#search-order-details)
 - [Search order documents](#optional-search-order-documents) [OPTIONAL]
 
-> ℹ If you have specific business needs which are not satisfied by the scenarios presented, you can customize the B2B Orders app.
+> If you have specific business needs which are not satisfied by the scenarios presented, you can customize the B2B Orders app.
 
 The possible requests and response formats for each of the ERP API's required endpoints are presented below.
 
