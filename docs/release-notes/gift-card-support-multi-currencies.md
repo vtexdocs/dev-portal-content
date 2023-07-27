@@ -24,6 +24,6 @@ Also, a new optional field (`currencyCode`) has been added to the endpoints belo
 
 
 
->⚠️ Setting a specific currency for each gift card is optional. If you don't want to indicate in which currency it should be created, the behavior will remain the same as in a store using only one currency type, where discounts on the amount are applied without currency conversion.
+>⚠️ Setting a specific currency for each gift card is optional. If you do not want to indicate in which currency it should be created, the behavior will remain the same as in a store using only one currency type, where discounts on the amount are applied without currency conversion.
 
 To learn more about how to create gift cards, read the [Setting up Gift cards](https://help.vtex.com/en/tutorial/gift-card--tutorials_995) article.
