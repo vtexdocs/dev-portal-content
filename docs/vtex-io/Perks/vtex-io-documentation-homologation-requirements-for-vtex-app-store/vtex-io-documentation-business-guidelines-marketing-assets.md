@@ -12,7 +12,7 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store"
  - "/docs/guides/vtex-io-documentation-preparing-your-app-distribution"
 ---
-> ℹ Extensions Hub is the standard place for the App Store, inside the Admin. If the Extensions Hub is not installed in your store, ask our team by [opening a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM). You can find more information in the [release note](https://developers.vtex.com/updates/release-notes/extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin) and our [Help Center](https://help.vtex.com/es/tracks/extensions-hub--AW7klkYMh557y5IUOgzco/2LDRvGujYsumxi7IlE7CEJ).
+> ℹ️ The App Store is now accessible within the Admin in the Extensions Hub. If the Extensions Hub is not yet installed in your store, you can request assistance from our team by [opening a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM). For more information, please refer to the [Extensions Hub](https://help.vtex.com/es/tracks/extensions-hub--AW7klkYMh557y5IUOgzco/2LDRvGujYsumxi7IlE7CEJ) track and [release note](https://developers.vtex.com/updates/release-notes/extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin).
 
 Once you have [developed your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.
 
