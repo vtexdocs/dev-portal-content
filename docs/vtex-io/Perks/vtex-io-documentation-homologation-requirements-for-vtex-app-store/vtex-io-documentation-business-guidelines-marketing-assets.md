@@ -24,7 +24,7 @@ Make sure to present your solutions professionally by adhering to the following 
 - Choose a product name that indicates the purpose of the app.
 - Use high-quality images (icon and screenshots) and videos (if applicable).
 
-If we see room for improvement, we will reach out to you before listing your app on the VTEX App Store.
+If we identify areas for improvement, we will reach out to you before listing your app on the VTEX App Store.
 
 Refer to the following sections to improve your App Page and increase its adoption on the VTEX App Store.
 
