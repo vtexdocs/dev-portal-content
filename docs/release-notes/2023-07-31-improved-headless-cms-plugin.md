@@ -33,7 +33,8 @@ To benefit from the enhancements in the Headless CMS plugin version `1.0.8`, fol
 
 > ⚠️  Remember to replace the values between curly brackets according to your
 ```bash
-vtex login {account}
+
+```bash
 ```
 
 2. Update the `@vtex/cli-plugin-cms` to version `1.0.8` by running the following command:
