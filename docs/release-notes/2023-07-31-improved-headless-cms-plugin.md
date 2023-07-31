@@ -29,9 +29,6 @@ These error messages will help you quickly identify and resolve access-related p
 ## Why are we making this change?
 
 
-
-
-
 ## What needs to be done?
 1. Access the VTEX IO CLI and log in to your VTEX account:
 
