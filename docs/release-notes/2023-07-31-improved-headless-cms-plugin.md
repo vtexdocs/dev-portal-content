@@ -11,7 +11,7 @@ The terminal will now present precise error messages when faced with such scenar
 
 ## What has changed?
 
-In the previous versions, when users attempted to run `vtex cms sync` command without the necessary permissions to access the Headless CMS or if they were logged out of their accounts, a misleading successful message would be displayed in the terminal, even if the changes were not synchronized in the Headless CMS interface.
+The `vtex cms sync` command synchronizes changes made in a FastStore project, including modifications to new sections or content types for Headless CMS.
 
 
 Now, with the Headless CMS plugin `v1.0.8`, you can expect precise error messages to appear in the terminal when encountering authentication or insufficient permissions to sync changes in your FastStore project with Headless CMS. 
