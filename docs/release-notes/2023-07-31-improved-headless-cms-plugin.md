@@ -49,7 +49,8 @@ vtex plugins update
 
 3. Run `vtex cms sync` and check what you should do if the following messages display:
 
-- `Error: Permission denied`:
+
+
 If applicable, ask the account’s administrators you are trying to make the sync to check your user role to the Headless CMS in VTEX Admin.  For more information, refer to [Roles](https://help.vtex.com/pt/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc).
 
 - `Error: You’ve been logged out`
