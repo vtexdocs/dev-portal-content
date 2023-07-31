@@ -28,6 +28,7 @@ To benefit from the enhancements in the Headless CMS plugin version `1.0.8`, fol
 
 
 
+
 > ⚠️  Remember to replace the values between curly brackets according to your
 
 > ⚠️  Remember to replace the values between curly brackets according to your
