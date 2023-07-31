@@ -25,6 +25,7 @@ These error messages will help you quickly identify and resolve access-related p
 ![logged-out-account-message](https://vtexhelp.vtexassets.com/assets/docs/src/cms-error-message-login___40a4de3dbf35aeb953e0f003ce083ee1.png)
 
 ## Why are we making this change?
+
 This update aims to enhance the developer experience during the `vtex cms sync` process. Providing better feedback and more accurate error messages for access issues helps reduce debugging time.
 
 ## What needs to be done?
