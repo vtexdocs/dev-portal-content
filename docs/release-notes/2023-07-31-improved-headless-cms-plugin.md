@@ -26,7 +26,8 @@ These error messages will help you quickly identify and resolve access-related p
 
 ## Why are we making this change?
 
-This update aims to enhance the developer experience during the `vtex cms sync` process. Providing better feedback and more accurate error messages for access issues helps reduce debugging time.
+
+## Why are we making this change?
 
 ## What needs to be done?
 
