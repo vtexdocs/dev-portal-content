@@ -40,7 +40,8 @@ vtex login {account}
 
 ```bash
 vtex plugins update
-```
+
+```bash
 3. Run `vtex cms sync` and check what you should do if the following messages display:
 
 `Error: Permission denied`:
