@@ -51,6 +51,7 @@ vtex login {account}
 vtex plugins update
 ```
 
+vtex plugins update
 
 ```bash
 
