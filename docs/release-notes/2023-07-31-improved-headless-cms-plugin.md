@@ -6,7 +6,7 @@ createdAt: "2023-07-31T10:28:00.000Z"
 excerpt: "The latest version of the Headless CMS plugin, 1.0.8, brings enhancements to the vtex cms sync command feedback."
 ---
 
-The latest version of the Headless CMS plugin, `1.0.8`, enhances the `vtex cms sync` command feedback. These improvements address user authentication and access permission issues. 
+The latest version of the Headless CMS plugin, `1.0.8`, enhances the `vtex cms sync` command feedback. These improvements address user authentication and access permission issues.
 The terminal will now present precise error messages when faced with such scenarios, making it easier for developers to identify and resolve access-related problems that may arise during the synchronization process.
 
 ## What has changed?
