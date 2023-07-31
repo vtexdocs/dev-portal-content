@@ -29,6 +29,7 @@ These error messages will help you quickly identify and resolve access-related p
 This update aims to enhance the developer experience during the `vtex cms sync` process. Providing better feedback and more accurate error messages for access issues helps reduce debugging time.
 
 ## What needs to be done?
+
 To benefit from the enhancements in the Headless CMS plugin version `1.0.8`, follow the steps below:
 
 1. Access the VTEX IO CLI and log in to your VTEX account:
