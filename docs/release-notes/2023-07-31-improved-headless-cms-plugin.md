@@ -1,8 +1,10 @@
 ---
 title: "Headless CMS Plugin v1.0.8: Improved sync command"
 slug: "2023-07-31-improved-headless-cms-plugin"
+hidden: false
 type: "improved"
 createdAt: "2023-07-31T10:28:00.000Z"
+updatedAt: "2023-07-31T17:46:00.000Z"
 excerpt: "The latest version of the Headless CMS plugin, 1.0.8, brings enhancements to the vtex cms sync command feedback."
 ---
 
