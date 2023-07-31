@@ -51,7 +51,5 @@ vtex plugins update
 vtex plugins update
 
 ```bash
-
-
 - `Error: You’ve been logged out`
 Log back into the account you are trying to make the sync and run `vtex cms sync` again.
