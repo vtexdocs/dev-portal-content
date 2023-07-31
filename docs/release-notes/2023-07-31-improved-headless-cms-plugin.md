@@ -21,34 +21,27 @@ Now, with the Headless CMS plugin `v1.0.8`, you can expect precise error message
 
 - **User that has been logged out of their account**
 ![logged-out-account-message](https://vtexhelp.vtexassets.com/assets/docs/src/cms-error-message-login___40a4de3dbf35aeb953e0f003ce083ee1.png)
-Why are we making this change?
-This update aims to enhance the developer experience during the `vtex cms sync` process. Providing better feedback and more accurate error messages for access issues helps reduce debugging time.
 
-What needs to be done?
+## Why are we making this change?
+
 To benefit from the enhancements in the Headless CMS plugin version `1.0.8`, follow the steps below:
 
+1. Access the VTEX IO CLI and log in to your VTEX account. *Remember to replace the values between curly brackets according to your account name*.
 
+    ```bash
+    vtex login {account}
+    ```
 
-> ⚠️  Remember to replace the values between curly brackets according to your
+2. Update the `@vtex/cli-plugin-cms` to version `1.0.8` by running the following command.
 
-> ⚠️  Remember to replace the values between curly brackets according to your
-```bash
+    ```bash
+      vtex plugins update
+    ```
 
-```bash
-```
+3. Run `vtex cms sync` and check what you should do if the following messages display.
 
-2. Update the `@vtex/cli-plugin-cms` to version `1.0.8` by running the following command:
-
-```bash
-vtex plugins update
-
-```bash
-
-vtex plugins update
-
-```bash
-`Error: Permission denied`:
+- `Error: Permission denied`:
 If applicable, ask the account’s administrators you are trying to make the sync to check your user role to the Headless CMS in VTEX Admin.  For more information, refer to [Roles](https://help.vtex.com/pt/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc).
 
-`Error: You’ve been logged out`
+- `Error: You’ve been logged out`
 Log back into the account you are trying to make the sync and run `vtex cms sync` again.
