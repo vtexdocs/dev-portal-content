@@ -10,7 +10,6 @@ The latest version of the Headless CMS plugin, `1.0.8`, enhances the `vtex cms s
 The terminal will now present precise error messages when faced with such scenarios, making it easier for developers to identify and resolve access-related problems that may arise during the synchronization process.
 
 ## What has changed?
-The `vtex cms sync` command synchronizes changes made in a FastStore project, including modifications to new sections or content types for Headless CMS. 
 
 In the previous versions, when users attempted to run `vtex cms sync` command without the necessary permissions to access the Headless CMS or if they were logged out of their accounts, a misleading successful message would be displayed in the terminal, even if the changes were not synchronized in the Headless CMS interface.
 
