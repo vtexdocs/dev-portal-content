@@ -30,7 +30,6 @@ To benefit from the enhancements in the Headless CMS plugin version `1.0.8`, fol
 1. Access the VTEX IO CLI and log in to your VTEX account:
 
 > ⚠️  Remember to replace the values between curly brackets according to your
-  account name.
 
 ```bash
 vtex login {account}
