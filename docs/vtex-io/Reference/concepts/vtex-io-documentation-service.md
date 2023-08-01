@@ -46,4 +46,4 @@ As a reference, consider the following parameters for the `services.json` file:
 
 Keep in mind that most of these fields are optional and default values from the platform are commonly used.
 
-> ℹ️ For more information, check our [Node.js](https://github.com/vtex-apps/service-example), [.NET](https://github.com/vtex-apps/service-example-dotnet), and [GraphQL](https://github.com/vtex-apps/graphql-example) service example apps.
+> ℹ️ For more information, check our [Node.js](https://github.com/vtex-apps/service-example), [.NET](https://github.com/vtex-apps/service-example-dotnet), and [GraphQL](https://github.com/vtex-apps/graphql-example) service example apps. You can also check our [service app development guides](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps).
