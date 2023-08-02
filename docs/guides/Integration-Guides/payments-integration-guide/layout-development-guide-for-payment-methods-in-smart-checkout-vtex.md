@@ -7,13 +7,15 @@ updatedAt: "2022-05-19T17:04:20.940Z"
 ---
 This is a guide intended for those responsible for integrating new payment methods into VTEX's Smart Checkout. In addition to the integration with PCI Gateway, it is essential that integrators provide a UI that aligns with the visual identity of the payment method being presented.
 
+> ⚠️ All layout updates made through this guide will only apply to Checkout v6.
+
 When a consumer selects their payment method at checkout, they express their interest in using it. Therefore, it is important to communicate, briefly and clearly, how each payment method works and what are the advantages of using each one of them.
 
 As part of a layout, information such as contact details (e.g. phone number or email), can help the consumer to solve any problem or question at the time of purchase.
 
 The following sections show how to create a layout to be used for payment methods in VTEX's Smart Checkout.
 
-> ⚠️ All layout updates made through this guide will only apply to Checkout v6.
+> ℹ️ It is not possible to create a new layout to be used in custom payment methods (those developed by the merchant and that only work in their stores).
 
 ## Layout Requirements
 
