@@ -106,17 +106,17 @@ Follow these steps to create your layout:
    - *src/i18n*: Inside this folder you are going to find four files, each one corresponding to one language (*pt-BR, en-US, es, and fr*). You should change the values for the keys and check if the languages are rendered correctly by clicking on the flags located in the upper left corner in the Payment Mocker, see the example in the section below.
 8. Open the file *src/assets/css/less/style.less*, get access to the property *#payment-group-template-PaymentGroup* *.payment-group-item-text* and update the attribute background-image, in order to insert the icon referring to your payment method.
 
-> ⚠️ If there is no change in the attribute _background-image_, no icon will be rendered next to the payment method label.
+> ⚠️ If there is no change in the attribute *background-image*, no icon will be rendered next to the payment method label.
 
 9. Open the file *src/i18n/{language}.json*, and change the value of the  *paymentData.paymentGroup.title* key, in order to customize the label that your payment method will be rendered on checkout.
 
-> ℹ️ If the value of the _paymentData.paymentGroup.title_ key is not changed, the payment method will be rendered with the default label. Likewise, if the name chosen for your new payment method is the same or similar to one of the existing payment method on the VTEX platform, it will not be possible to register it. To check the payment methods already registered, access the VTEX Admin, and go to __Store Settings > Payments > Settings > Payment Conditions__.
+> ℹ️ If the value of the *paymentData.paymentGroup.title* key is not changed, the payment method will be rendered with the default label. Likewise, if the name chosen for your new payment method is the same or similar to one of the existing payment method on the VTEX platform, it will not be possible to register it. To check the payment methods already registered, access the VTEX Admin, and go to **Store Settings > Payments > Settings > Payment Conditions**.
 
 ### Delivery
 
 To deliver the code (which is a repository of the Payment Mocker containing all modifications related to your payment methods), you must compress it in .zip or .rar extensions, and submit it by opening a ticket on the [VTEX Support Portal](https://help.vtex.com/support).
 
-> ⚠️ You must delete any additionally files or folders created during the compilation process of the project, such as, the folder _node_modules_ or file _yarn.lock_ (e.g. for those use yarn package manager).
+> ⚠️ You must delete any additionally files or folders created during the compilation process of the project, such as, the folder *node_modules* or file *yarn.lock* (e.g. for those use yarn package manager).
 
 ## Layout Example
 
