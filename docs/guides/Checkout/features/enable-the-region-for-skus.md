@@ -64,4 +64,4 @@ Below are examples of bodies to be sent to `POST`:
 To verify that the session has updated the country and zip code data, send a `GET` request on the route below and search for the `country` and `Post Code` fields:
 `{{account-name}}.{{environment}}.com.br/api/sessions?items={{namespace}}.{{value}},{{namespace}}.{{value2}}`
 
-After updating the page where the SKUs are being viewed in the store, the price and availability information will be updated according to the region specified in the country and zip code information.
+After updating the product page, the platform will update price and availability information according to the region specified in the country and zip code information.
