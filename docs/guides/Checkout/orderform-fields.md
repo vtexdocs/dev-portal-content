@@ -236,6 +236,7 @@ __Example:__
             "parentAssemblyBinding": null,
             "priceValidUntil": "2022-04-07T18:31:11Z",
             "tax": 0,
+            "taxCode": "x",
             "price": 3190,
             "listPrice": 3190,
             "manualPrice": 1700,
