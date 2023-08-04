@@ -20,14 +20,14 @@ Below are examples of bodies to be sent to `POST`:
 
 ```json
 {
-	"public":{
-		"country":{
-			"value":"USA"
-		},
-		"postalCode":{
-			"value":"32004"
-		}
-	}
+    "public": {
+        "country": {
+            "value": "USA"
+        },
+        "postalCode": {
+            "value": "32004"
+        }
+    }
 }
 ```
 
@@ -35,14 +35,14 @@ Below are examples of bodies to be sent to `POST`:
 
 ```json
 {
-	"public":{
-		"country":{
-			"value":"USA"
-		},
-		"geoCoordinates":{
-			"value":"22.123,-14.1"
-		}
-	}
+    "public": {
+        "country": {
+            "value": "USA"
+        },
+        "geoCoordinates": {
+            "value": "22.123,-14.1"
+        }
+    }
 }
 ```
 
@@ -54,7 +54,7 @@ Below are examples of bodies to be sent to `POST`:
         "storeUserEmail": {
             "value": "<mailto:example@example.complexample.com>"
         },
-        "adressId": {
+        "addressId": {
             "value": "123456789"
         }
     }
