@@ -16,7 +16,7 @@ To enter the country and zip code in the session, you must perform a `POST` in t
 
 Below are examples of bodies to be sent to `POST`:
 
-- Update session by zipCode.
+- Update session by postal code.
 
 ```json
 {
