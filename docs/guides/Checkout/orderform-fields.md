@@ -7,9 +7,9 @@ updatedAt: "2022-10-27T19:51:49.586Z"
 ---
 The `orderForm` is the main object processed by VTEX checkout, and one of the most important data structures in the architecture of every VTEX store.
 
-It stores a lot of contextual information about the order which is important to the processing of the order: order items, client's personal data, delivery address, freight information, etc.
+It stores a lot of contextual information about the order which is important to the processing of the order: order items, client's personal data, delivery address, freight information, etc. 
 
-Using VTEX APIs this information can be accessed, processed, and even changed on certain occasions.
+Using VTEX APIs this information can be accessed, processed, and even changed on certain occasions. 
 
 VTEX's Checkout API is one of the main interfaces interacting with the `orderForm` object. Most of its operations will return the `orderForm` or part of it.
 
@@ -52,7 +52,7 @@ The object's basic structure is:
 
 This structure is made of many __sections__.
 
-> ⚠️ Any properties representing monetary values will have __cents__ as their units. (e.g. `10390` means __R$103,90__ in Brazilian stores). In the following menu, you can find details regarding these sections.
+>⚠️ Any properties representing monetary values will have __cents__ as their units. (e.g. `10390` means __R$103,90__ in Brazilian stores). In the following menu, you can find details regarding these sections.
 
 ## `OrderForm` Sections
 
@@ -63,7 +63,7 @@ This structure is made of many __sections__.
 - [giftRegistryData](#giftregistrydata)
 - [hooksData](#hooksdata)
 - [items](#items)
-  - [items[].priceDefinition](#itemspricedefinition)
+    - [items[].priceDefinition](#itemspricedefinition)
 - [invoiceData](#invoicedata)
 - [itemsOrdination](#itemsordination)
 - [marketingData](#marketingdata)
@@ -92,10 +92,10 @@ __Example:__
 }
 ```
 
-| Field           | Type    | Description                                                                                                                        |
-| --------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| locale          | String  | Client's locale. Examples:`"pt-BR"` and `"en-US"`. The method `sendLocale()`, from vtex.js, changes the value of this field. |
-| optinNewsLetter | Boolean | `true` if the client opted to receive newsletters from the store.                                                                |
+| Field     | Type     | Description     |
+| ---------- | ---------- | ---------- |
+| locale       | String       | Client's locale. Examples: `"pt-BR"` and `"en-US"`. The method `sendLocale()`, from vtex.js, changes the value of this field.       |
+| optinNewsLetter       | Boolean       | `true` if the client opted to receive newsletters from the store.       |
 
 ### clientProfileData
 
@@ -124,24 +124,24 @@ __Example:__
 }
 ```
 
-| Field             | Type    | Description                                         |
-| ----------------- | ------- | --------------------------------------------------- |
-| email             | String  | Customer's email.                                   |
-| firstName         | String  | Customer's first name.                              |
-| lastName          | String  | Customer's last name.                               |
-| document          | String  | Document number informed by the customer.           |
-| documentType      | String  | Type of the document informed by the customer.      |
-| phone             | String  | Customer's phone number.                            |
-| corporateName     | String  | If it's a legal entity, here goes the company name. |
-| tradeName         | String  | If legal entity, here goes the trade name.          |
-| corporateDocument | String  | If legal entity, here goes the corporate document.  |
-| stateInscription  | String  | If legal entity, here goes the state inscription.   |
-| corporatePhone    | String  | If legal entity, here goes the company phone.       |
-| isCorporate       | Boolean | It has the value `true` if it's a legal entity.   |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|      email      |    String    |  Customer's email.      |
+|   firstName         |     String       |  Customer's first name.     |
+|    lastName        |   String         |   Customer's last name.      |
+|   document         |   String         |  Document number informed by the customer.          |
+|   documentType         |   String         |  Type of the document informed by the customer.          |
+|   phone         |     String       |   Customer's phone number.    |
+|    corporateName        |  String          |     If it's a legal entity, here goes the company name.       |
+|  tradeName          |  String          |     If legal entity, here goes the trade name.       |
+|  corporateDocument          |      String      |   If legal entity, here goes the corporate document.         |
+|   stateInscription         |    String        |   If legal entity, here goes the state inscription.         |
+|   corporatePhone         |    String        |   If legal entity, here goes the company phone.        |
+|   isCorporate         |     Boolean       |  It has the value `true` if it's a legal entity.         |
 
 ### commercialConditionData
 
-> ⚠️ This guide is currently being written and published as content becomes available.
+>⚠️ This guide is currently being written and published as content becomes available.
 
 ### customData
 
@@ -179,12 +179,12 @@ __Example:__
 }
 ```
 
-| Field      | Type    | Description                                                        |
-| ---------- | ------- | ------------------------------------------------------------------ |
-| customApps | Array   | Array containing the apps created by the store.                    |
-| fields     | Object  | Object that contains the fields created by the store for each app. |
-| id         | String  | App ID.                                                            |
-| major      | Integer | App major version.                                                 |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    customApps |    Array  |  Array containing the apps created by the store.      |
+|    fields |    Object  |  Object that contains the fields created by the store for each app.      |
+|    id   |    String   |   App ID.      |
+|    major   |   Integer     |  App major version.         |
 
 ### giftRegistryData
 
@@ -198,21 +198,21 @@ __Example:__
   "giftRegistryType": null,
   "giftRegistryTypeName": null,
   "addressId": null,
-  "description": "gift1"  
+  "description": "gift1"    
 }
 ```
 
-| Field                | Type   | Description                   |
-| -------------------- | ------ | ----------------------------- |
-| giftRegistryId       | String | Gift registry ID.             |
-| giftRegistryType     | String | Gift registry type.           |
-| giftRegistryTypeName | String | Gift registration typen name. |
-| addressId            | String | Address ID.                   |
-| description          | String | Gift registry description.    |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    giftRegistryId |    String  |  Gift registry ID.      |
+|    giftRegistryType |    String  |  Gift registry type.      |
+|    giftRegistryTypeName   |    String   |   Gift registration typen name.       |
+|    addressId   |    String   |   Address ID.      |
+|    description   |    String   |   Gift registry description.      |
 
 ### hooksData
 
-> ⚠️ This guide is currently being written and published as content becomes available.
+>⚠️ This guide is currently being written and published as content becomes available.
 
 ### items
 
@@ -236,7 +236,7 @@ __Example:__
             "parentAssemblyBinding": null,
             "priceValidUntil": "2022-04-07T18:31:11Z",
             "tax": 0,
-            "taxCode": "54WC8ZN6K8",
+            "taxCode":"54WC8ZN6K8",
             "price": 3190,
             "listPrice": 3190,
             "manualPrice": 1700,
@@ -294,70 +294,70 @@ __Example:__
     ]
 ```
 
-| Field                  | Type             | Description                                                                                                                                                                                                              |
-| ---------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| uniqueId               | String           | Obsolete field. This string is the unique identifier for each occurrence of a SKU in an order. Two units of the same SKU in an order will have different uniqueIds.                                                      |
-| id                     | String           | ID of the item.                                                                                                                                                                                                          |
-| productId              | String           | Product ID.                                                                                                                                                                                                              |
-| productRefId           | String           | Product Ref ID.                                                                                                                                                                                                          |
-| refId                  | String           | Ref ID.                                                                                                                                                                                                                  |
-| ean                    | String           | EAN (codebar) field from[SKU registry](https://help.vtex.com/pt/tutorial/cadastrar-o-codigo-de-barra-dos-skus-para-o-instore--2jkOdRB4XSMG2ke0uUQIKS#cadastrar-o-campo-ean).                                                |
-| name                   | String           | Product name.                                                                                                                                                                                                            |
-| skuName                | String           | SKU name.                                                                                                                                                                                                                |
-| modalType              | String           | Modal type.                                                                                                                                                                                                              |
-| parentItemIndex        | Integer          | Parent item index.                                                                                                                                                                                                       |
-| parentAssemblyBinding  | String           | Parent assembly binding.                                                                                                                                                                                                 |
-| priceValidUntil        | String           | Price expiration date and time.                                                                                                                                                                                          |
-| tax                    | Integer          | Tax value in cents.                                                                                                                                                                                                      |
-| taxCode                | String           | Tax code.                                                                                                                                                                                                                |
-| price                  | Integer          | Price in cents.                                                                                                                                                                                                          |
-| listPrice              | Integer          | List price in cents.                                                                                                                                                                                                     |
-| manualPrice            | Integer          | Manual price in cents.                                                                                                                                                                                                   |
-| manualPriceAppliedBy   | String           | User that applied the manual price, if that is the case.                                                                                                                                                                 |
-| sellingPrice           | Integer          | Selling price in cents. Note that this field may be subject to rounding discrepancies. We recommend retrieving data from the `priceDefinition` data structure instead.                                                 |
-| rewardValue            | Integer          | Reward value in cents.                                                                                                                                                                                                   |
-| isGift                 | Boolean          | Indicates whether item is a gift.                                                                                                                                                                                        |
-| additionalInfo         | Object           | Additional information.                                                                                                                                                                                                  |
-| dimension              | String           | Dimension.                                                                                                                                                                                                               |
-| brandName              | String           | Brand name.                                                                                                                                                                                                              |
-| brandId                | String           | Brand ID.                                                                                                                                                                                                                |
-| offeringInfo           | String           | Offering information.                                                                                                                                                                                                    |
-| offeringType           | String           | Offering type.                                                                                                                                                                                                           |
-| offeringTypeId         | String           | Offering type ID.                                                                                                                                                                                                        |
-| preSaleDate            | String           | Presale date.                                                                                                                                                                                                            |
-| productCategoryIds     | String           | Product category IDs.                                                                                                                                                                                                    |
-| productCategories      | Object           | Object, where each field is an ID from `productCategoryIds`.                                                                                                                                                           |
-| {ID}                   | String           | Product category corresponding to the ID in the field key.                                                                                                                                                               |
-| quantity               | Integer          | Quantity.                                                                                                                                                                                                                |
-| seller                 | String           | Seller information.                                                                                                                                                                                                      |
-| sellerChain            | Array of strings | Sellers involved in the chain. The list should contain only one seller, unless it is a[Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) order. |
-| imageUrl               | String           | Image URL.                                                                                                                                                                                                               |
-| detailUrl              | String           | Detail URL.                                                                                                                                                                                                              |
-| bundleItems            | Array of objects | Information on services sold along with the SKU. Example: a gift package.                                                                                                                                                |
-| type                   | String           | Service type.                                                                                                                                                                                                            |
-| id                     | Integer          | Service identifier.                                                                                                                                                                                                      |
-| name                   | String           | Service name.                                                                                                                                                                                                            |
-| price                  | Integer          | Service price in cents.                                                                                                                                                                                                  |
-| attachments            | Array of strings | Array containing information on attachments.                                                                                                                                                                             |
-| priceTags              | Array of objects | Array of price tags, each of which, modifies the price in some way, like discounts or rates that apply to the item in the context of the order.                                                                          |
-| name                   | String           | Price tag name.                                                                                                                                                                                                          |
-| value                  | Integer          | Price tag value.                                                                                                                                                                                                         |
-| rawValue               | Integer          | Price tag raw value.                                                                                                                                                                                                     |
-| isPercentual           | Boolean          | Indicates whether price tag value is applied through a percentage.                                                                                                                                                       |
-| identifier             | String           | Price tag identifier.                                                                                                                                                                                                    |
-| owner                  | String           | Identification of the responsible for the price tag.                                                                                                                                                                     |
-| availability           | String           | SKU availability. The values are:`available`, `withoutStock`and `cannotBeDelivered`. Only SKUs with  `available` value can be sold and delivered.                                                                |
-| measurementUnit        | String           | Measurement unit.                                                                                                                                                                                                        |
-| unitMultiplier         | String           | Unit multiplier.                                                                                                                                                                                                         |
-| manufacturerCode       | String           | Manufacturer code.                                                                                                                                                                                                       |
-| priceDefinition        | Object           | Price information for all units of a specific item.                                                                                                                                                                      |
-| calculatedSellingPrice | Integer          | Item's calculated unitary selling price in cents.                                                                                                                                                                        |
-| total                  | Integer          | Total value for all units of the item in cents.                                                                                                                                                                          |
-| sellingPrices          | Array of objects | Array of objects, each containing value (in cents) and quantity for the different rounding instances that can be combined to form the correctly rounded total.                                                           |
-| value                  | Integer          | Value in cents for that specific rounding.                                                                                                                                                                               |
-| quantity               | Integer          | Rounding quantity, meaning how many items are rounded to this value.                                                                                                                                                     |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    uniqueId |    String  |  Obsolete field. This string is the unique identifier for each occurrence of a SKU in an order. Two units of the same SKU in an order will have different uniqueIds.    |
+|    id |    String  |  ID of the item.     |
+|    productId   |    String   |   Product ID.       |
+|    productRefId   |    String   |   Product Ref ID.      |
+|    refId   |    String   |   Ref ID.    |
+|    ean |    String  |  EAN (codebar) field from [SKU registry](https://help.vtex.com/pt/tutorial/cadastrar-o-codigo-de-barra-dos-skus-para-o-instore--2jkOdRB4XSMG2ke0uUQIKS#cadastrar-o-campo-ean).      |
+|    name |    String  |  Product name.     |
+|    skuName |    String  |  SKU name.    |
+|    modalType   |    String   |   Modal type.     |
+|    parentItemIndex   |    Integer   |   Parent item index.     |
+|    parentAssemblyBinding   |    String   |   Parent assembly binding.   |
+|    priceValidUntil |    String  |  Price expiration date and time.    |
+|    tax |    Integer |  Tax value in cents.    |
+|    taxCode |    String|  Tax code.    |
+|    price   |    Integer   |   Price in cents.    |
+|    listPrice   |    Integer  |   List price in cents.    |
+|    manualPrice   |    Integer  |   Manual price in cents.   |
+|    manualPriceAppliedBy |    String  |  User that applied the manual price, if that is the case.    |
+|    sellingPrice |    Integer |  Selling price in cents. Note that this field may be subject to rounding discrepancies. We recommend retrieving data from the `priceDefinition` data structure instead.   |
+|    rewardValue   |    Integer   |   Reward value in cents.   |
+|    isGift   |    Boolean  |   Indicates whether item is a gift.   |
+|    additionalInfo   |    Object  |   Additional information. |
+|    dimension |    String  |  Dimension.    |
+|    brandName |    String |  Brand name.   |
+|    brandId |    String |  Brand ID.   |
+|    offeringInfo  |    String  |   Offering information.  |
+|    offeringType  |    String|   Offering type.   |
+|    offeringTypeId  |    String  |   Offering type ID. |
+|    preSaleDate |    String  |  Presale date.   |
+|    productCategoryIds |    String |  Product category IDs.  |
+|    productCategories  |    Object  |   Object, where each field is an ID from `productCategoryIds`.  |
+|    {ID}  |    String|   Product category corresponding to the ID in the field key.   |
+|    quantity  |    Integer  |   Quantity. |
+|    seller |    String  |  Seller information.   |
+|    sellerChain |    Array of strings |  Sellers involved in the chain. The list should contain only one seller, unless it is a [Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) order.   |
+|    imageUrl  |    String  |   Image URL.  |
+|    detailUrl  |    String|   Detail URL.   |
+|    bundleItems |    Array of objects |   Information on services sold along with the SKU. Example: a gift package. |
+|    type |    String  |  Service type.  |
+|    id |    Integer |  Service identifier. |
+|   name  |    String |   Service name.  |
+|    price  |     Integer |   Service price in cents.  |
+|    attachments |    Array of strings |   Array containing information on attachments. |
+|    priceTags |    Array of objects  |  Array of price tags, each of which, modifies the price in some way, like discounts or rates that apply to the item in the context of the order.  |
+|    name  |     String |   Price tag name. |
+|    value |    Integer  |  Price tag value.  |
+|    rawValue |    Integer |   Price tag raw value. |
+|   isPercentual  |    Boolean |   Indicates whether price tag value is applied through a percentage.  |
+|    identifier |    String |  Price tag identifier. |
+|    owner |    String |  Identification of the responsible for the price tag. |
+|    availability |    String |  SKU availability. The values are: `available`, `withoutStock`and `cannotBeDelivered`. Only SKUs with  `available` value can be sold and delivered. |
+|   measurementUnit  |    String |   Measurement unit.  |
+|    unitMultiplier  |     String |   Unit multiplier. |
+|    manufacturerCode |    String |   Manufacturer code. |
+|    priceDefinition |    Object  |  Price information for all units of a specific item. |
+|    calculatedSellingPrice |    Integer |  Item's calculated unitary selling price in cents. |
+|   total  |     Integer |   Total value for all units of the item in cents. |
+|    sellingPrices  |     Array of objects |   Array of objects, each containing value (in cents) and quantity for the different rounding instances that can be combined to form the correctly rounded total. |
+|    value |    Integer |   Value in cents for that specific rounding. |
+|    quantity |    Integer |   Rounding quantity, meaning how many items are rounded to this value. |
 
-> ⚠️ If you use integrations that consume price data, such as checkout or order integrations, note that the field `sellingPrice` may be subject to rounding discrepancies. We recommend retrieving data from the `priceDefinition` data structure instead.
+>⚠️ If you use integrations that consume price data, such as checkout or order integrations, note that the field `sellingPrice` may be subject to rounding discrepancies. We recommend retrieving data from the `priceDefinition` data structure instead.
 
 #### items[].priceDefinition
 
@@ -390,12 +390,12 @@ __Example:__
 }
 ```
 
-| **Atribute**                             | **Type** | **Description**                                                                                                                                                      |
-| ---------------------------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| items[].priceDefinition                        | Object         | Price information for all units of a specific item.                                                                                                                        |
-| items[].priceDefinition.total                  | Integer        | Total value for all units of the item in cents.                                                                                                                            |
-| items[].priceDefinition.calculatedSellingPrice | Integer        | Item's calculated unitary selling price in cents.                                                                                                                          |
-| items[].priceDefinition.sellingPrices          | Array          | Array of objects, each containing `value` (in cents) and `quantity` for the different rounding instances that can be combined to form the correctly rounded `total`. |
+| **Atribute**                                   | **Type** | **Description**                                                                                                                                                      |
+|------------------------------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| items[].priceDefinition                        | Object   | Price information for all units of a specific item.                                                                                                                  |
+| items[].priceDefinition.total                  | Integer  | Total value for all units of the item in cents.                                                                                                                      |
+| items[].priceDefinition.calculatedSellingPrice | Integer  | Item's calculated unitary selling price in cents.                                                                                                                    |
+| items[].priceDefinition.sellingPrices          | Array    | Array of objects, each containing `value` (in cents) and `quantity` for the different rounding instances that can be combined to form the correctly rounded `total`. |
 
 ### invoiceData
 
@@ -418,10 +418,10 @@ This is an object containing information pertinent to the order's invoice.
 }
 ```
 
-| Field          | Type   | Description                                       |
-| -------------- | ------ | ------------------------------------------------- |
-| address        | Object | Address information.                              |
-| settleInvoices | String | List of strings corresponding to invoice numbers. |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    address |    Object  |  Address information.      |
+|    settleInvoices |    String  |  List of strings corresponding to invoice numbers.      |
 
 ### itemsOrdination
 
@@ -436,10 +436,11 @@ __Example:__
 }
 ```
 
-| Field     | Type   | Description                                                                                                                                                               |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| criteria  | String | Criteria adopted to order the items in the list. The values are:`NAME`, `ADD_TIME` (date information), and `GIFT` (non-gift items are mentioned before gift items). |
-| ascending | String | Indicates whether the ordering is ascending.                                                                                                                              |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    criteria  |    String |  Criteria adopted to order the items in the list. The values are: `NAME`, `ADD_TIME` (date information), and `GIFT` (non-gift items are mentioned before gift items).              |
+|    ascending |    String |  Indicates whether the ordering is ascending.              |
+
 
 ### marketingData
 
@@ -461,17 +462,17 @@ __Example:__
 }
 ```
 
-| Field         | Type   | Description                                                                                                            |
-| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------- |
-| attachmentId  | String | Attachment ID.                                                                                                         |
-| coupon        | String | Coupon code information.                                                                                               |
-| marketingTags | Array  | Marketing tags information. This field can be used to register campaign data or informative tags regarding promotions. |
-| utmCampaign   | String | Value of the `utm_campaign` parameter of the URL that led to the request.                                            |
-| utmMedium     | String | Value of the `utm_medium` parameter of the URL that led to the request.                                              |
-| utmSource     | String | Value of the `utm_source` parameter of the URL that led to the request.                                              |
-| utmiCampaign  | String | Internal UTM value `utmi_cp`.                                                                                        |
-| utmiPart      | String | Internal UTM value `utmi_pc`.                                                                                        |
-| utmipage      | String | Internal UTM value `utmi_p`.                                                                                         |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    attachmentId  |    String |   Attachment ID.     |
+|    coupon |    String |   Coupon code information.     |
+|    marketingTags |    Array |   Marketing tags information. This field can be used to register campaign data or informative tags regarding promotions.    |
+|    utmCampaign  |    String |  Value of the `utm_campaign` parameter of the URL that led to the request.      |
+|    utmMedium  |    String |  Value of the `utm_medium` parameter of the URL that led to the request.      |
+|    utmSource  |    String |  Value of the `utm_source` parameter of the URL that led to the request.      |
+|    utmiCampaign  |    String |  Internal UTM value `utmi_cp`.     |
+|    utmiPart  |    String |  Internal UTM value `utmi_pc`.      |
+|    utmipage  |    String |  Internal UTM value `utmi_p`.      |
 
 ### messages
 
@@ -498,10 +499,11 @@ Optional field meant to hold additional information about the order. We recommen
     "value": "{\"Phones\":[\"55555555\"]}"
 }
 ```
+  
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    value |    String |  Additional information about the order.               |
 
-| Field | Type   | Description                             |
-| ----- | ------ | --------------------------------------- |
-| value | String | Additional information about the order. |
 
 ### paymentData
 
@@ -595,18 +597,18 @@ __Example:__
 }
 ```
 
-| Field              | Type   | Description                                                                                                                                                                                                                                                        |
-| ------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| giftCards          | Array  | Gift cards information.                                                                                                                                                                                                                                            |
-| giftCardMessages   | Array  | Gift cards message information.                                                                                                                                                                                                                                    |
-| availableAccounts  | Array  | Available accounts information.                                                                                                                                                                                                                                    |
-| availableTokens    | Array  | Available tokes information.                                                                                                                                                                                                                                       |
-| installmentOptions | Array  | For accurate information on installment options and values, we recommend using the[Cart installments endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm/-orderFormId-/installments), instead of this field's data. |
-| paymentSystems     | Array  | Payment systems information.                                                                                                                                                                                                                                       |
-| payments           | Array  | Payments information.                                                                                                                                                                                                                                              |
-| updateStatus       | String | Checkout can not be concluded if value is `"outdated"`.                                                                                                                                                                                                          |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    giftCards  |    Array  |    Gift cards information.    |
+|    giftCardMessages |    Array  |    Gift cards message information.    |
+|    availableAccounts |    Array  |    Available accounts information.    |
+|    availableTokens  |    Array  |    Available tokes information.    |
+|    installmentOptions  |    Array  | For accurate information on installment options and values, we recommend using the [Cart installments endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm/-orderFormId-/installments), instead of this field's data. |
+|    paymentSystems |    Array  |    Payment systems information.    |
+|    payments  |    Array  |    Payments information.    |
+|    updateStatus    |    String    |    Checkout can not be concluded if value is `"outdated"`.    |
 
-> ⚠️ This guide is currently being written and published as content becomes available.
+>⚠️ This guide is currently being written and published as content becomes available.
 
 ### ratesAndBenefitsData
 
@@ -629,12 +631,13 @@ __Example:__
 }
 ```
 
-| Field                      | Type   | Description                                   |
-| -------------------------- | ------ | --------------------------------------------- |
-| rateAndBenefitsIdentifiers | Array  | List with rates and benefits identifiers.     |
-| items                      | Object | Object that contains identifiers information. |
-| teaser                     | Array  | List with rates and benefits teasers.         |
-| items                      | Object | Object that contains teasers information.     |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    rateAndBenefitsIdentifiers    |    Array    |    List with rates and benefits identifiers.    |
+|    items    |   Object    |    Object that contains identifiers information.    |
+|    teaser    |    Array   |    List with rates and benefits teasers.    |
+|    items    |    Object   |    Object that contains teasers information.  |
+
 
 ### selectableGifts
 
@@ -655,12 +658,13 @@ Array containing the data of the item selected as a gift.
  ]
 ```
 
-| Field             | Type    | Description                                                                     |
-| ----------------- | ------- | ------------------------------------------------------------------------------- |
-| id                | String  | Identification of the selectable gifts list.                                    |
-| availableQuantity | Integer | Number of items available.                                                      |
-| items             | Integer | Array containing an object describing each item that can be selected as a gift. |
-| isSelected        | Boolean | Indication if the item was selected as a gift.                                  |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    id    |    String    |    Identification of the selectable gifts list.    |
+|    availableQuantity    |    Integer   |    Number of items available.    |
+|    items   |    Integer   |    Array containing an object describing each item that can be selected as a gift.    |
+|    isSelected    |    Boolean   |    Indication if the item was selected as a gift.    |
+
 
 ### sellers
 
@@ -678,11 +682,12 @@ __Example:__
 ]
 ```
 
-| Field | Type   | Description                                |
-| ----- | ------ | ------------------------------------------ |
-| id    | String | ID of the seller.                          |
-| name  | String | Name of the seller.                        |
-| logo  | String | URL pointing to where the image is hosted. |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    id  |    String  |   ID of the seller.     |
+|    name |    String  |   Name of the seller.     |
+|    logo  |    String  |  URL pointing to where the image is hosted.     |
+
 
 ### shippingData
 
@@ -790,7 +795,7 @@ __Example:__
               "listprice": 1000,
               "tax": 0
             }
-          ],        
+          ],          
           "price": 1220,
           "tax": 0,
           "pickupStoreInfo": {
@@ -826,53 +831,54 @@ __Example:__
 }
 ```
 
-| Field                    | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| attachmentId             | String  | Attachment ID.                                                                                                                                                                                                                                                                                                                                                                             |
-| address                  | Object  | Address information.                                                                                                                                                                                                                                                                                                                                                                       |
-| availableAddresses       | Array   | Information about available shipping addresses.                                                                                                                                                                                                                                                                                                                                            |
-| logisticsInfo            | Array   | Logistics information.                                                                                                                                                                                                                                                                                                                                                                     |
-| itemIndex                | Integer | Index corresponding to the position of the object in the `items` array.                                                                                                                                                                                                                                                                                                                  |
-| selectedSla              | String  | SLA selected by the customer.                                                                                                                                                                                                                                                                                                                                                              |
-| selectedDeliveryChannel  | String  | Delivery channel selected by the customer.                                                                                                                                                                                                                                                                                                                                                 |
-| addressId                | String  | Address ID.                                                                                                                                                                                                                                                                                                                                                                                |
-| slas                     | Array   | Information on available SLAs.                                                                                                                                                                                                                                                                                                                                                             |
-| id                       | String  | SLA ID.                                                                                                                                                                                                                                                                                                                                                                                    |
-| deliveryChannel          | String  | Delivery channel.                                                                                                                                                                                                                                                                                                                                                                          |
-| name                     | String  | SLA name.                                                                                                                                                                                                                                                                                                                                                                                  |
-| deliveryIds              | Array   | Information on each delivery ID.                                                                                                                                                                                                                                                                                                                                                           |
-| courierId                | String  | Courier ID.                                                                                                                                                                                                                                                                                                                                                                                |
-| warehouseId              | String  | Warehouse ID.                                                                                                                                                                                                                                                                                                                                                                              |
-| dockId                   | String  | Dock ID.                                                                                                                                                                                                                                                                                                                                                                                   |
-| courierName              | String  | Courier name.                                                                                                                                                                                                                                                                                                                                                                              |
-| quantity                 | Integer | Quantity.                                                                                                                                                                                                                                                                                                                                                                                  |
-| shippingEstimate         | String  | Total shipping estimate time, represented by a number followed by a time unit. For instance, three business days is represented as `3bd`. The time unit can be one of the following: `<ul><li>``<code>`m`</code>` (minutes)`</li><li>``<code>`h`</code>` (hours)`</li><li>``<code>`bd`</code>` (business days)`</li><li>``<code>`d`</code>` (days)`</li></ul>` |
-| shippingEstimateDate     | String  | Shipping estimate date.                                                                                                                                                                                                                                                                                                                                                                    |
-| lockTTL                  | String  | Estimate date of delivery.                                                                                                                                                                                                                                                                                                                                                                 |
-| availableDeliveryWindows | String  | Available shipping date.                                                                                                                                                                                                                                                                                                                                                                   |
-| startDateUtc             | String  | Available delivery window start date in UTC.                                                                                                                                                                                                                                                                                                                                               |
-| endDateUtc               | String  | Available delivery window end date in UTC.                                                                                                                                                                                                                                                                                                                                                 |
-| deliveryWindow           | Object  | Scheduled delivery window information, in case it applies to the item.                                                                                                                                                                                                                                                                                                                     |
-| startDateUtc             | String  | Scheduled delivery window start date in UTC.                                                                                                                                                                                                                                                                                                                                               |
-| endDateUtc               | String  | Scheduled delivery window end date in UTC.                                                                                                                                                                                                                                                                                                                                                 |
-| listPrice                | Integer | Scheduled delivery window list price.                                                                                                                                                                                                                                                                                                                                                      |
-| price                    | Integer | Price in cents.                                                                                                                                                                                                                                                                                                                                                                            |
-| tax                      | Integer | Tax in cents.                                                                                                                                                                                                                                                                                                                                                                              |
-| pickupStoreInfo          | Object  | Information on the pickup store.                                                                                                                                                                                                                                                                                                                                                           |
-| isPickupStore            | Boolean | Indicates whether it is the pickup store.                                                                                                                                                                                                                                                                                                                                                  |
-| friendlyName             | String  | Friendly name.                                                                                                                                                                                                                                                                                                                                                                             |
-| address                  | Object  | Address information.                                                                                                                                                                                                                                                                                                                                                                       |
-| additionalInfo           | String  | Additional information.                                                                                                                                                                                                                                                                                                                                                                    |
-| dockId                   | String  | Corresponding dock ID.                                                                                                                                                                                                                                                                                                                                                                     |
-| pickupPointId            | String  | Pickup point ID.                                                                                                                                                                                                                                                                                                                                                                           |
-| pickupDistance           | Integer | Pickup point distance.                                                                                                                                                                                                                                                                                                                                                                     |
-| polygonName              | String  | Polygon name.                                                                                                                                                                                                                                                                                                                                                                              |
-| transitTime              | String  | Transit time. For instance, "three business days" is represented `3bd`.                                                                                                                                                                                                                                                                                                                  |
-| shipsTo                  | Array   | List of countries that the item may be shipped to.                                                                                                                                                                                                                                                                                                                                         |
-| itemId                   | String  | Item ID.                                                                                                                                                                                                                                                                                                                                                                                   |
-| deliveryChannels         | String  | List of available delivery channels.                                                                                                                                                                                                                                                                                                                                                       |
-| id                       | String  | elivery channel ID.                                                                                                                                                                                                                                                                                                                                                                        |
-| selectedAddresses        | Array   | Selected addresses information.                                                                                                                                                                                                                                                                                                                                                            |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    attachmentId  |    String  |   Attachment ID.     |
+|    address  |    Object  |   Address information.     |
+|    availableAddresses  |    Array  |   Information about available shipping addresses.    |
+|    logisticsInfo  |    Array  |   Logistics information.     |
+|    itemIndex  |    Integer  |   Index corresponding to the position of the object in the `items` array.     |
+|    selectedSla  |    String  |   SLA selected by the customer.     |
+|    selectedDeliveryChannel  |    String  |   Delivery channel selected by the customer.     |
+|    addressId  |    String  |   Address ID.    |
+|    slas |    Array  |   Information on available SLAs.     |
+|    id |    String  |   SLA ID.    |
+|    deliveryChannel |    String  |   Delivery channel.    |
+|    name |    String  |   SLA name.    |
+|    deliveryIds |    Array  |   Information on each delivery ID.    |
+|    courierId |    String  |   Courier ID.    |
+|    warehouseId |    String  |   Warehouse ID.    |
+|    dockId |    String  |   Dock ID.    |
+|    courierName |    String  |   Courier name.   |
+|    quantity |    Integer  |   Quantity.   |
+|    shippingEstimate |    String  | Total shipping estimate time, represented by a number followed by a time unit. For instance, three business days is represented as `3bd`. The time unit can be one of the following: <ul><li><code>m</code> (minutes)</li><li><code>h</code> (hours)</li><li><code>bd</code> (business days)</li><li><code>d</code> (days)</li></ul> |
+|    shippingEstimateDate |     String  |   Shipping estimate date.  |
+|    lockTTL |     String  |   Estimate date of delivery.  |
+|    availableDeliveryWindows |     String  |   Available shipping date.  | 
+|    startDateUtc |     String  |   Available delivery window start date in UTC.  |
+|    endDateUtc |     String  |   Available delivery window end date in UTC.  |
+|    deliveryWindow |     Object  |   Scheduled delivery window information, in case it applies to the item.  | 
+|    startDateUtc |     String  |   Scheduled delivery window start date in UTC.  |
+|    endDateUtc |     String  |   Scheduled delivery window end date in UTC.  |
+|    listPrice |     Integer  |   Scheduled delivery window list price.  |
+|    price |     Integer  |   Price in cents.  |
+|    tax |     Integer  |   Tax in cents.  |
+|    pickupStoreInfo |     Object  |   Information on the pickup store.  |
+|    isPickupStore |     Boolean  |   Indicates whether it is the pickup store.  |
+|    friendlyName |     String  |   Friendly name.  |
+|    address |     Object  |   Address information.  |
+|    additionalInfo |     String  |   Additional information.  |
+|    dockId |     String  |   Corresponding dock ID.  |
+|    pickupPointId |     String  |   Pickup point ID.  |
+|    pickupDistance |     Integer  |   Pickup point distance.  |
+|    polygonName |     String  |   Polygon name.  |
+|    transitTime |     String  |   Transit time. For instance, "three business days" is represented `3bd`.  |
+|    shipsTo |     Array  |   List of countries that the item may be shipped to.  |
+|    itemId |     String  |   Item ID.  |
+|    deliveryChannels |     String  |   List of available delivery channels.  |
+|    id |     String  |   elivery channel ID.  |
+|    selectedAddresses  |    Array  |   Selected addresses information.     |
+
 
 ### storeId
 
@@ -886,9 +892,9 @@ __Example:__
 }
 ```
 
-| Field   | Type    | Description                  |
-| ------- | ------- | ---------------------------- |
-| storeId | integer | Identification of the store. |
+| Field      | Type      | Description |
+| ---------- | ---------- | ---------- |
+|    storeId  |    integer  |   Identification of the store.    |
 
 ### storePreferencesData
 
