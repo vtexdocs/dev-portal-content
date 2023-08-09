@@ -51,12 +51,15 @@ See a request body example below:
     "paymentConfiguration": {
         "requiresAuthenticationForPreAuthorizedPaymentOption": true
     },
-    "recaptchaValidation": "vtexCriteria",    
+    "recaptchaValidation": "vtexCriteria",
     "minimumValueAccumulated": 5,
     "maxNumberOfWhiteLabelSellers": 2,
     "maskFirstPurchaseData": false,
     "decimalDigitsPrecision": 2,
     "minimumQuantityAccumulatedForItems": 8,
+    "requiresLoginToPlaceOrder": true
+    "minimumPurchaseDowntimeSeconds": 90
+    "cartAgeToUseNewCardSeconds": 30
     "apps": [
         {
             "fields": [
