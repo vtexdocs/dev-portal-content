@@ -14,7 +14,7 @@ Its main objective is to facilitate the installation of numerous apps that might
 
 For example, consider the following two Edition Apps developed by the `vtex` account:
 
-- The Edition Business (`vtex.edition-business@0.x`) - installs all the necessary apps to build a store with our legacy [CMS](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC).
+- The Edition Business (`vtex.edition-business@0.x`) - installs all the necessary apps to build a store with our [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC).
 
 - The Edition Store (`vtex.edition-store@5.x`) - installs all the necessary apps to develop a store with the [Store Framework](https://developers.vtex.com/docs/guides/getting-started-3).
 

@@ -19,7 +19,7 @@ Flixmedia first party integration app. The [solution](https://flixmedia.eu/) enh
 2. Look for the Flixmedia app.
 3. Click on the `Install` button.
 
-#### Using VTEX IO Toolbelt
+#### Using VTEX IO CLI
 
 In your terminal, log into your VTEX account and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.flixmedia@0.x` app.
 

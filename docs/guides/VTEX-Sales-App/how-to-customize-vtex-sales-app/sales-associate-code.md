@@ -10,19 +10,19 @@ The sales associate code field is an additional customization of the [**Observat
 
 Once enabled, this field becomes a mandatory step in the purchase flow, meaning that the order can only be completed if the `sales associate code` field is filled with a personal code.
 
-![The inStore's UI once the sales rep code is enabled on the purchase flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/sales-associate-code-0.PNG)
+![The VTEX Sales App's UI once the sales rep code is enabled on the purchase flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/sales-associate-code-0.PNG)
 
 ## Prerequisites
 
-Before customizing the **sales associate code** field, you must enable the **Observation** field on inStore. Check [this article](https://developers.vtex.com/vtex-rest-api/docs/enable-the-remarks-field-in-the-order-screen) to learn how to do that.
+Before customizing the **sales associate code** field, you must enable the **Observation** field on VTEX Sales App. Check [this article](https://developers.vtex.com/vtex-rest-api/docs/enable-the-remarks-field-in-the-order-screen) to learn how to do that.
 
 ## Edit the `checkout-instore-custom.js` file
 
-After enabling the **Observation** field, you should [configure the sales associate code](https://help.vtex.com/en/tracks/instore-customizations--1z9kBm12oBPyVNDo1ivVc2/5kNtS80hbBGg58jMeF8CRv) by editing the `checkout-instore-custom.js` file.
+After enabling the **Observation** field, you should [configure the sales associate code](https://help.vtex.com/en/tracks/vtex-sales-app-customizations--1z9kBm12oBPyVNDo1ivVc2/5kNtS80hbBGg58jMeF8CRv) by editing the `checkout-instore-custom.js` file.
 
-You can configure the JavaScript file according to your needs, using different value combinations for the three properties: <code>type</code>, <code>skipValidation</code>, and <code>mask</code>.
+You can configure the JavaScript file according to your needs, using different value combinations for the three properties: `type`, `skipValidation`, and `mask`.
 
-[block:parameters]
+```json
 {
   "data": {
     "0-0": "`type`",
@@ -39,12 +39,12 @@ You can configure the JavaScript file according to your needs, using different v
     "h-1": "Type",
     "3-0": "`autofill`",
     "3-1": "boolean",
-    "3-2": "Defines whether inStore will automatically insert the sales associate code when the Social Selling feature is active.\n\nWhen this value is `true` (default), the vendor code is automatically filled by inStore.\n\nWhen this value is `false`, the operator must inform the vendor code manually.\n\nThis flag does not change any behavior when Social Selling is not activated."
+    "3-2": "Defines whether VTEX Sales App will automatically insert the sales associate code when the Social Selling feature is active.\n\nWhen this value is `true` (default), the vendor code is automatically filled by VTEX Sales App.\n\nWhen this value is `false`, the operator must inform the vendor code manually.\n\nThis flag does not change any behavior when Social Selling is not activated."
   },
   "cols": 3,
   "rows": 4
 }
-[/block]
+```
 
 [block:callout]
 {
@@ -53,7 +53,7 @@ You can configure the JavaScript file according to your needs, using different v
   "body": "Even though all properties are not mandatory, the JavaScript file must have at least one of them described in the code.\n\nOtherwise, the customization will fail."
 }
 [/block]
-To fill the <code>mask</code> field, you must create a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). As the sales associate code is built on JavaScript, your regular expression should follow the same programming language as well.
+To fill the `mask` field, you must create a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). As the sales associate code is built on JavaScript, your regular expression should follow the same programming language as well.
 
 In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check the step-by-step guide to constructing a regular expression according to this pattern in the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
 [block:callout]

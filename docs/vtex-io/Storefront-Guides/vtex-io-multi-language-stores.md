@@ -4,84 +4,75 @@ slug: "vtex-io-multi-language-stores"
 hidden: false
 createdAt: "2020-08-31T17:15:01.754Z"
 updatedAt: "2021-03-17T13:43:00.948Z"
+excerpt: "Get to know the internationalization process for creating a multi-language e-commerce store using Store Framework."
 ---
-Before making your e-commerce global, it's essential to take care of its website's content internationalization.
 
-After detecting a user locale, every text from your storefront components that is set as translatable (i.e., message) will be automatically translated either by the automatic translation service, the storefront app's settings, or custom content personalized through a GraphQL mutation.
-[block:callout]
-{
-  "type": "info",
-  "body": "A locale is the set of parameters regarding a language, region, and other regional particularities used to format the front-end data of a website."
-}
-[/block]
-Concerning the front-end content of a store's website, text data can be provided either by the settings of an app or by the Catalog API. 
-[block:callout]
-{
-  "type": "info",
-  "body": "The Catalog API is one of the multiple REST APIs that compose the VTEX Administrative panel. This particular API is responsible for manipulating a store’s sales channels, categories, brands, products, SKUs, and specifications."
-}
-[/block]
-While app messages are specifications from front-end components, catalog messages are external data from the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview).
+This document outlines the internationalization process for creating a multi-language e-commerce store using Store Framework. Internationalization is crucial for reaching global markets and providing a seamless shopping experience for customers from different locales. This guide covers how Store Framework handles internationalization for both storefront content and catalog data, highlighting the tools and libraries used for translations.
 
-Translations, therefore, must consider the different natures of these two kinds of content. 
+## Before you start
 
-In the following, we discuss how VTEX IO handles both cases.
+Before delving into the internationalization process, it's essential to understand the distinction between frontend app messages and catalog data. In general, **storefront content** can be sourced from either **frontend React apps** or the **[Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview)**. More precisely, app messages are translatable strings defined within a frontend app, while catalog messages comprise external data from the Catalog API. Therefore, it is crucial to consider these differences when translating storefront content, as internationalization is handled differently for each case. 
 
-## Storefront content internationalization
+## Frontend app messages
 
-As the VTEX IO platform makes use of tailor-made React components for storefront end, it's important to get to know React basics and how VTEX IO handles these components translations.
+A Store Framework storefront consists of multiple frontend apps built with VTEX IO and React. For translations, Store Framework uses the [react-intl](https://www.npmjs.com/package/react-intl) library and the VTEX IO Messages app. 
 
-Similarly to JavaScript functions, React components accept arbitrary arguments as `props`, and return React elements that describe what should be rendered on a page.
+Moreover, developers can designate text components as translatable messages when developing a frontend app using the `<Formatted*>` component from the `react-intl` library. This enables translatable messages to be automatically translated by an automatic translation service based on the user's locale.
 
-> ℹ️ Leveraging the VTEX IO platform, the [VTEX IO Store Framework](https://developers.vtex.com/docs/guides/frequently-asked-questions) solution delivers the needed foundations for any storefront structure, providing high quality, customizable React store blocks so that you can build (in the fastest possible go-to-market time) comprehensive shopping experiences that never get old.
+### Automatic translations
 
-Regarding multi-language stores, one of the advantages of using React is the possibility of rendering content translations on the client-side. This way, no refresh or re-render of the page is needed, and a high-performance result is achieved.
+By leveraging the automatic translation service, the Messages app can automatically translate frontend app messages according to the user's locale. The user's current locale and the translated messages, obtained from the automatic translation system, become accessible at the root of the component tree and available to each component.
 
-By using the [react-intl](https://www.npmjs.com/package/react-intl) internationalization (i18n) library along with the VTEX IO Messages app, it's possible to manage and have automatic translations of every storefront text content set as translatable (i.e., *message*).
+However, automatic translations may not always be culturally accurate. To address this, the Messages app provides functionalities to manage custom translations. If preferred, it is also possible to [disable the automatic translation service](https://developers.vtex.com/docs/guides/vtex-io-documentation-disabling-automatic-translation).
 
-Therefore, to turn a generic text into a *message*, meaning, to indicate that a specific text component from the storefront app must be translated, the `<Formatted*>` component from the *react-intl* library must be used. 
+### Customizing automatic translations
 
-Once every message is set up, the current locale and set of translated messages obtained from the *automatic translation system* will be provided at the root of the component tree and made available to the component.
+To address potential cultural inaccuracies in automatic translations, the Messages app provides functionalities to manage custom translations. Developers can overwrite an automatic translation with more specific or representative content for their store, such as providing a special login message for Spanish-speaking users from Argentina.
 
-However, since automatic translations can be unsatisfactory considering cultural factors and literal translations, the Messages app provides functionalities to manage custom translations.
+Custom translations can be implemented at either the app or account level:
 
-This can be performed on an app or account level. 
+- **App-level translations**: Developers can set personalized translations for each locale within the frontend app's `/messages` folder. These translations are applied, by default, to any store using the app. To learn how to set messages during the development of a React app, please follow this [guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component).
+- **Account-level translations**: Developers can overwrite a message imported from a frontend app with a completely customized message making the appropriate GraphQL API request to the Messages app. To learn how to overwrite a message from a frontend app, please follow this [guide](https://developers.vtex.com/docs/guides/storefront-content-internationalization).
 
-For an app level, that means using the Messages builder to set personalized messages for each locale. These translations are set in different files named over each locale inside the `/messages` folder. With this, every store using this specific storefront app will import these overwritten messages translations.
-[block:callout]
-{
-  "type": "warning",
-  "body": "To learn how to set messages during the development of a React component, please follow this [guide]().",
-  "title": "UNDER CONSTRUCTION"
-}
-[/block]
-At the account level, using the Messages app means overwriting a message imported from an app with a complete customized message. To perform this action, the appropriate GraphQL API request must be sent to the Messages app.
-[block:callout]
-{
-  "type": "info",
-  "body": "To learn how to overwrite a message from a storefront app, please follow this [guide](https://developers.vtex.com/docs/guides/storefront-content-internationalization)."
-}
-[/block]
-To sum it up, with the Messages app it's possible to overwrite an automatic translation with a more specific or representative content of your store, such as a special login message for Spanish speaking users from Argentina.
+> The Messages app is a standalone translation application and should not be confused with a string repository. It requires providing a source language, source content, and destination language. The output will be the translation of the source content from the source language to the destination language.
 
-The Messages app is a standalone translation application and might not be confused with a string repository. This means that, for it to work at its basic one must provide a source language, a source content, and a destination language. The output will be the translation of the source content at the source language to the destination language.
+### Translation decision flow
 
-To make it more tangible, it's important to understand the Messages app decision flow.
+When translating a message, the Messages app follows a specific decision flow:
 
-Considering a message pointed out as translatable, the Messages app will first go through custom account-defined content. 
+1. Check for custom account-level translations.
+2. If no custom definitions are found, it checks for frontend app translations in the app's `/messages` folder.
+3. If a specific translation is still not found, the Messages app falls back to the automatic translation service.
 
-Therefore, if no definitions are found, the Messages app will go through the storefront app translations defined in the `/messages` folder of the component's development folder. 
+```mermaid
+sequenceDiagram
+    participant Messages
+    participant Messages API
+    participant Frontend app
+    participant Translation service
 
-In the sequence, if no specific translation is still not found, then the Messages app will fall back to the automatic translation service.
+    Messages->>Messages API: Checks for account-level translations
+    alt Account-level translations found
+        Messages API-->>Messages: Returns account-level translations
+    else No account-level translations found
+        Messages->>Frontend app: Checks for frontend app translations in the messages folder
+        alt Frontend app translations found
+            Frontend app-->>Messages: Returns frontend app translation
+        else No frontend app translations found
+            Messages->>Translation service: Requests automatic translation
+            Translation service-->>Messages: Returns automatic translation
+        end
+    end
+```
 
-Since translating an app to every language is an arduous task, we suggest that you structure a precise translation for your target audience and let the automatic translation do the heavy lifting on the other languages for you.
+As translating an app to every language can be daunting, it is recommended to structure precise translations for the target audience and rely on automatic translation for other languages.
 
-Moreover, it's important to highlight that the Messages app aggregates all the translation services in the platform, regardless of the app nature (backend or frontend) and the actor (e.g., user, app, or automatic translation service) which contributed to that translation.
+Note that after detecting a user locale, every message from your frontend component set as translatable will be automatically translated either by the automatic translation service, the frontend app's messages, or custom content personalized through a GraphQL mutation at the account level.
 
-## Catalog internationalization
+## Catalog data
 
-So far, we've talked about app messages - text messages exported from a storefront app (declared in its `message` folder), such as a text component from a React block. However, we also have catalog messages - messages related to a product name or a product description from the store catalog, which play an essential role in store internationalization.
+So far, we've discussed app messages, which are text messages exported from a frontend app. However, we must also consider catalog messages, which include messages related to a product name or product description from the store catalog.
 
-Every data from the Catalog API, such as a product name and a product description, is already set as translatable. Therefore, it's possible to overwrite an automatic translation of the catalog by sending the appropriate GraphQL query either to the Catalog API or to the Messages app.
+Every data from the Catalog API is already set as translatable. Therefore, it is possible to overwrite an automatic catalog translation by sending the appropriate GraphQL query either to the Catalog API or to the Messages app.
 
-> ℹ️ To learn how to overwrite a catalog message through the Catalog API, please follow this [guide](https://developers.vtex.com/docs/guides/catalog-internationalization).
+To learn how to overwrite a catalog message via the Catalog API, please follow this [guide](https://developers.vtex.com/docs/guides/catalog-internationalization).

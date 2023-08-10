@@ -62,7 +62,7 @@ A list of all `CSS Handles` is in [this section](#css-handles-list).
 
 📢 **Avoid** using element or position-based selectors, as the customization may break in the face of the smallest UI changes.
 
-To upload your `.css` file, go to the VTEX CMS (`/admin/a`) and open the `CMS/Files Manager/.css` file. Click `Add` and you'll be able to upload it. This file is accessible from [VTEX CMS storage](https://help.vtex.com/en/tutorial/ver-o-conteudo-dos-arquivos-css-da-loja--U5v7DXpRSee86uqiKQUQi).
+To upload your `.css` file, go to the VTEX CMS (`/admin/a`) and open the `CMS/Files Manager/.css` file. Click `Add` and you'll be able to upload it. This file is accessible from [VTEX Legacy CMS Portal storage](https://help.vtex.com/en/tutorial/ver-o-conteudo-dos-arquivos-css-da-loja--U5v7DXpRSee86uqiKQUQi).
 
 Lastly, you should link that `.css` file to the Account Page HTML Head by [editing the "Account" CMS template](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/Y6dPEF6GzROQ8PuYKxrKe).
 

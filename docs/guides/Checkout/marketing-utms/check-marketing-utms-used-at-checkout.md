@@ -12,7 +12,7 @@ The orderForm of orders closed by the user will receive this cookie in the heade
 
 In this way, the Checkout will be able to assemble the orderForm considering the `marketingData` used in the purchase.
 
-> ⚠️ The IPS cookie is created for Legacy CMS (Portal) accounts only. For stores using the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), information from marketing UTMs is sent to Checkout through the Sessions system.
+> ⚠️ The IPS cookie is created for Legacy CMS Portal accounts only. For stores using the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), information from marketing UTMs is sent to Checkout through the Sessions system.
 
 ## Simulation
 

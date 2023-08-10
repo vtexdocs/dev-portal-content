@@ -15,7 +15,7 @@ In order to celebrate the end of this endless month, check out the VTEX IO Relea
 
 ### New features 🚀
 
-- [Toolbelt apps installation inspection](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-34/toolbelt-apps-installation-inspection.md) - Automatically check whether route conflicts can occur in your workspace as a result of installing an app.
+- [VTEX IO CLI apps installation inspection](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-34/toolbelt-apps-installation-inspection.md) - Automatically check whether route conflicts can occur in your workspace as a result of installing an app.
 - [`ProductSummaryBrand` component](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-34/ProductSummaryBrand-component.md) - Render brand data with your own customizations in your Shelf component.
 
 ### Improvements ➕

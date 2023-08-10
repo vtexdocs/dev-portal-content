@@ -6,8 +6,6 @@ createdAt: "2022-05-19T16:21:58.633Z"
 updatedAt: "2022-05-19T17:46:05.176Z"
 ---
 
->⚠️ This feature is in beta, which means that we are working to improve it. We do not recommend the use of this Beta version of PPF for connectors related to stores with a rollout date close (less than 3 months).
-
 Payment Provider Framework (PPF) is an alternative way to develop payment connectors for your integration through VTEX IO. Since the development is based on a boilerplate of an IO app, a lot of the work is already done to implement the needed feature including the [API routes](https://developers.vtex.com/docs/guides/payment-provider-protocol-api-overview), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). With PPF, developers also do not need to worry about hosting the connector since it is hosted on the IO infrastructure.
 
 >⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
@@ -144,7 +142,7 @@ By doing this you do not need to declare the `/manifest` route. They will be imp
 
 >⚠️ The `name` field indicating the name of the connector must be replaced with the name of your provider. This field cannot be filled with a value `"MyConnector"`.
 
->ℹ️ The available payment methods in the platform are available in the Admin. You can check the supported methods by going to the left panel and **Transactions** > **Payments** > **Payment conditions** and clicking on the green plus (+) button as you were adding a new payment option. You can check more details on the [Configuring payment conditions article](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455).\n\nIn case you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
+>ℹ️ The available payment methods in the platform are available in the Admin. You can check the supported methods by going to the left panel and **Transactions** > **Payments** > **Payment conditions** and clicking on the green plus (+) button as you were adding a new payment option. You can check more details on the [Configuring payment conditions article](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455). In case you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
 
 
 ### Overriding the Manifest route
@@ -190,10 +188,10 @@ Along with manifest fields (`paymentMethods` and `customFields`) there are the f
 |   `usesProviderHeadersName`  |   No    |   `true`  |   Decides if the provider will receive appKey and appToken headers as `"x-provider-api-appKey"` and `"x-provider-api-appToken"` respectively. |
 |   `useAntifraud`  |   No    |   `false`  |   Decides if the provider can or cannot be used along antifraud providers. |
 |   `usesBankInvoiceEnglishName`  |   No    |   `false`  |   Decides if the Bank Invoice payment method will use the English name, if `true`, or the Brazilian name (Boleto Bancário), if `false`. |
-|   `usesSecureProxy`  |   No    |   `true`  |   If `true`, the provider can process payment without being PCI-Certified, the connector will receive a `secureProxyUrl` on `createPayment flow`, and the card encrypted data.\r\n\r\nIf `false`, the provider must be a PCI-Certified entity, and you should send the AOC containing the provided `serviceUrl`. |
-|   `requiresDocument`  |   No    |   `false`  |   If `true`, the customer must include the cardholder document on Checkout. A new field will appear on the Checkout form.\r\n\r\nIf `false`, the customer does not need to include a cardholder document. |
-|   `acceptSplitPartialRefund`  |   No    |   `false`  |   If `true`, a partial refund will be sent when a payment split occurs.\r\n\r\nIf `false`, the connector couldn't process a partial refund when a payment split occurs.|
-|   `usesAutoSettleOptions`  |   No    |   `false`  |   If `true`, the client will be able to choose the behavior of the auto settlement in the VTEX admin configurations of the provider. The options available are the following: Use behavior recommended by the payment processor, Automatic capture immediately after payment authorization, Automatic capture immediately after anti-fraud analysis, Deactivated: Not automatically captured.\r\n\r\nIf `false`, the connector won't have this dropdown configuration field for auto settlement. More information can be found in the [Custom Auto Capture Feature article](https://developers.vtex.com/docs/guides/custom-auto-capture-feature). |
+|   `usesSecureProxy`  |   No    |   `true`  |   If `true`, the provider can process payment without being PCI-Certified, the connector will receive a `secureProxyUrl` on `createPayment flow`, and the card encrypted data. If `false`, the provider must be a PCI-Certified entity, and you should send the AOC containing the provided `serviceUrl`. |
+|   `requiresDocument`  |   No    |   `false`  |   If `true`, the customer must include the cardholder document on Checkout. A new field will appear on the Checkout form. If `false`, the customer does not need to include a cardholder document. |
+|   `acceptSplitPartialRefund`  |   No    |   `false`  |   If `true`, a partial refund will be sent when a payment split occurs. If `false`, the connector couldn't process a partial refund when a payment split occurs.|
+|   `usesAutoSettleOptions`  |   No    |   `false`  |   If `true`, the client will be able to choose the behavior of the auto settlement in the VTEX admin configurations of the provider. The options available are the following: Use behavior recommended by the payment processor, Automatic capture immediately after payment authorization, Automatic capture immediately after anti-fraud analysis, Deactivated: Not automatically captured. If `false`, the connector won't have this dropdown configuration field for auto settlement. More information can be found in the [Custom Auto Capture Feature article](https://developers.vtex.com/docs/guides/custom-auto-capture-feature). |
 
 
 ### Request a retry from Payment Gateway
@@ -251,7 +249,7 @@ new PaymentProviderService({
 
 For processing credit, debit or co-branded card transactions, integrations must be compliant with [PCI-DSS security standards](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance). For integrations hosted in VTEX IO supporting one of those payment methods, it is mandatory to use Secure Proxy to make calls to a PCI-certified endpoint. You can check more details in the [Secure Proxy article](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
->⚠️ The endpoint must be allowed by VTEX Secure Proxy. This must be [requested via ticket](https://help.vtex.com/support) sending the AOC with the wanted endpoint.\n\nCurrently the Secure Proxy only accepts two Content-Types: You can use `\"application/json\"` or `\"application/x-www-form-urlencoded\"`. Any other Content-Type will not be supported.
+>⚠️ The endpoint must be allowed by VTEX Secure Proxy. This must be [requested via ticket](https://help.vtex.com/support) sending the AOC with the wanted endpoint. Currently the Secure Proxy only accepts two Content-Types: You can use `\"application/json\"` or `\"application/x-www-form-urlencoded\"`. Any other Content-Type will not be supported.
 
 To make calls over our Secure Proxy, you must:
 
@@ -312,7 +310,7 @@ A prerequisite for this procedure is to have products for sale at your store for
 8. Configure a [payment condition](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) with your newly created connector and wait 10 minutes to appear on Checkout.
 9. Make a purchase with the payment condition you configured with your connector.
 
->⚠️ Our Payment Provider Test Suite, an app used to test payment connector flows, is not prepared to test cases considering an integration using Secure Proxy. More details about this app can be found in the [Payment Provider  Homologation article](hhttps://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation).
+>⚠️ Our Payment Provider Test Suite, an app used to test payment connector flows, is not prepared to test cases considering an integration using Secure Proxy. More details about this app can be found in the [Payment Provider  Homologation article](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation).
 
 Also, differently from connectors that do not use Payment Provider Framework, integrations that do use it do not support the ability to have a sandbox service provider endpoint, which is used for tests. A PPF connector only supports one production endpoint, so the toggle to choose between test and production in the configuration page of the Admin will not appear.
 

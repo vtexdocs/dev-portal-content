@@ -21,13 +21,13 @@ From January 2, `vtex publish` will become just one of the **three steps** neede
 
 The new process will be as follows:
 
-1. When running the `vtex publish` command in your terminal, a **candidate release version** will be generated. The candidate release will be nothing more than a **test phase**, that is, the new version in probation mode. Because of this state, Housekeeper won't automatically install it on any account. To install it, you must order Toolbelt to [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the exact version.
+1. When running the `vtex publish` command in your terminal, a **candidate release version** will be generated. The candidate release will be nothing more than a **test phase**, that is, the new version in probation mode. Because of this state, Housekeeper won't automatically install it on any account. To install it, you must order VTEX IO CLI to [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the exact version.
 2. After the installation, it is recommended to manually **perform** [**A/B tests**](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) on the new version, checking and confirming its stability.
 3. Once the necessary testing is completed, the third and last step is to **validate the candidate release** as a version that's ready to become stable on the infrastructure (having the `validated` status) and to be automatically installed by Housekepper. This is achieved using the `vtex validate` command. 
 
 ## Why will this action be taken 
 
-According to the command's current behavior, you can release a new stable version and publish it as fast as possible and enable it on the platform, without any of the Toolbelt requisites.
+According to the command's current behavior, you can release a new stable version and publish it as fast as possible and enable it on the platform, without any of the VTEX IO CLI requisites.
 
 The new publication process steps strengthen the culture of these tests in addition to their validation during the development process, bringing **test discipline** and **greater stability** to the platform's apps.
 

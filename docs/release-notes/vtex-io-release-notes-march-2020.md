@@ -48,7 +48,7 @@ So wash your hands, sing Happy Birthday twice and cast your eyes on this beauty:
 
 ## Bug Fixes 🐛
 
-- **Duplicated blocks**: Store Framework was passively accepting a block being declared twice in your store's theme (as long as one was a `.json` file and the other a `jsonc`). This led to various bugs, since only one of the two was going to be effectively rendered... but the developer didn't know which one. An error message is now displayed in Toolbelt whenever the theme is linked and duplicate blocks are present.
+- **Duplicated blocks**: Store Framework was passively accepting a block being declared twice in your store's theme (as long as one was a `.json` file and the other a `jsonc`). This led to various bugs, since only one of the two was going to be effectively rendered... but the developer didn't know which one. An error message is now displayed in VTEX IO CLI whenever the theme is linked and duplicate blocks are present.
 
 - **[Sensitive Menu](https://github.com/vtex-apps/menu/pull/91)**: It was easy to mistakenly change the Menu you were navigating on since the Hover was way too sensitive. This is now fixed and you can expect a better user experience when using the Menu.
 

@@ -1,14 +1,14 @@
 ---
-title: "How to customize inStore"
-slug: "how-to-customize-instore"
+title: "How to customize VTEX Sales App"
+slug: "how-to-customize-vtex-sales-app"
 hidden: false
 createdAt: "2021-08-11T17:17:40.610Z"
 updatedAt: "2022-02-24T20:32:46.010Z"
 ---
 
-[inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc) is VTEX's main product for Unified Commerce operations. It’s an app that enables your store to provide a true omnichannel experience, seamlessly integrating your online and physical channels, and placing your customers at the business core.
+[VTEX Sales App](https://help.vtex.com/en/tracks/vtex-sales-app-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc) is VTEX's main product for Unified Commerce operations. It’s an app that enables your store to provide a true omnichannel experience, seamlessly integrating your online and physical channels, and placing your customers at the business core.
 
-You can customize the inStore experience according to your business needs by editing custom [JavaScript](#javascript-customizations) and [CSS](#css-customizations) files.
+You can customize the VTEX Sales App experience according to your business needs by editing custom [JavaScript](#javascript-customizations) and [CSS](#css-customizations) files.
 
 ## JavaScript customizations
 
@@ -25,14 +25,14 @@ You can perform JavaScript customizations on the  `checkout-instore-custom.js` f
 
 ### Edit the JavaScript file
 
-`checkout-instore-custom.js` is a JavaScript file that accepts a number of functions, variables and objects responsible for changing standard behaviors of the inStore application.
+`checkout-instore-custom.js` is a JavaScript file that accepts a number of functions, variables and objects responsible for changing standard behaviors of the VTEX Sales App application.
 
 To make any changes to the file, simply add or modify the lines of code directly in the file edit box. Check out our list of possible customizations to learn more.
 
 Once you are done, click on the `Save` button, as shown in the image below.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_3_-_EN.png)
 
->⚠️ Always follow the customization instructions in this documentation and only make changes as indicated here, or inStore may not work as expected.
+>⚠️ Always follow the customization instructions in this documentation and only make changes as indicated here, or VTEX Sales App may not work as expected.
 
 ## CSS customizations
 
@@ -45,16 +45,16 @@ When you have finished, make sure you click the `Save` button.
 
 ## List of customizations
 
-You can make the following customizations on inStore:
+You can make the following customizations on VTEX Sales App:
 
-- [Customize inStore login options](https://developers.vtex.com/vtex-rest-api/docs/customize-instore-login-options)
-- [Change inStore language](https://developers.vtex.com/vtex-rest-api/docs/change-instore-language)
+- [Customize VTEX Sales App login options](https://developers.vtex.com/vtex-rest-api/docs/customize-vtex-sales-app-login-options)
+- [Change VTEX Sales App language](https://developers.vtex.com/vtex-rest-api/docs/change-vtex-sales-app-language)
 - [Enable the Observation field in the order screen](https://developers.vtex.com/vtex-rest-api/docs/enable-the-remarks-field-in-the-order-screen)
 - [Enable the sales associate code](https://developers.vtex.com/vtex-rest-api/docs/sales-associate-code)
 - [Enable cart transfer and capture between devices](https://developers.vtex.com/vtex-rest-api/docs/enable-cart-transfer-between-devices)
 - [Enable order filter by sales associate](https://developers.vtex.com/vtex-rest-api/docs/enable-order-filter-by-sales-associate)
 - [Force stock availability](https://developers.vtex.com/vtex-rest-api/docs/force-stock-availability)
 - [Set up the order summary printing](https://developers.vtex.com/vtex-rest-api/docs/set-up-the-order-summary-printing)
-- [Define payment methods displayed on inStore](https://developers.vtex.com/vtex-rest-api/docs/define-payment-methods-displayed-on-instore)
+- [Define payment methods displayed on VTEX Sales App](https://developers.vtex.com/vtex-rest-api/docs/define-payment-methods-displayed-on-vtex-sales-app)
 
 You can find more information on how to set up each customization on the following guides.

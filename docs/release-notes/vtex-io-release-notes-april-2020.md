@@ -38,9 +38,9 @@ Get a sneak peek at last month's releases:
 
 ## Improvements ➕
 
-- **Public app documentation** - Publish an app on the VTEX IO platform and win a public documentation slot in VTEX IO Docs! This functionality is not new, but its communication is: from now on, Toolbelt (version `2.101.0` or higher) will display the public documentation's link each time an app is successfully published!
+- **Public app documentation** - Publish an app on the VTEX IO platform and win a public documentation slot in VTEX IO Docs! This functionality is not new, but its communication is: from now on, VTEX IO CLI (version `2.101.0` or higher) will display the public documentation's link each time an app is successfully published!
 
-- **Toolbelt's commands** - The VTEX IO CLI has undergone an improvement: now, every command has its own `--help` flag. When running `vtex {commandName} --help` in the terminal, you can expect the command's documentation to be shown!
+- **VTEX IO CLI commands** - The VTEX IO CLI has undergone an improvement: now, every command has its own `--help` flag. When running `vtex {commandName} --help` in the terminal, you can expect the command's documentation to be shown!
 
 - **CSS Handles** - Let's talk about good news related to [CSS Handles](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) for the [Rich Text](https://developers.vtex.com/docs/apps/vtex.rich-text@0.10.0/) (`tableTr`, `tableTh` and `tableTd`), [Drawer](https://developers.vtex.com/docs/apps/vtex.store-drawer) (`opened`, `closed` and `moving`) and the Filter Navigator block (`filtersWrapper` and `filtersWrapperMobile` ) from the [Search Results](https://developers.vtex.com/docs/apps/vtex.search-result@3.59.0/) app.
 
@@ -69,7 +69,7 @@ _Still with us? I hope so, my friend, because our team wasn't fooling around in 
 
 ## Removals ⛔
 
-- **`vtex install` command** - The `vtex install` command underwent changes to improve the installation flow of apps: now, whenever both version's major and minor have been defined through the command, you'll need to also define the desired patch, meaning that commands such as `vtex install vtex.render-server@8.0.x` won't be able to install the app. To know more about how to properly install an app using Toolbelt, check out our documentation on [installing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/).
+- **`vtex install` command** - The `vtex install` command underwent changes to improve the installation flow of apps: now, whenever both version's major and minor have been defined through the command, you'll need to also define the desired patch, meaning that commands such as `vtex install vtex.render-server@8.0.x` won't be able to install the app. To know more about how to properly install an app using VTEX IO CLI, check out our documentation on [installing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/).
 
 ## Notable bug fixes 🐛
 

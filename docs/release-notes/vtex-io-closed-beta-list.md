@@ -28,7 +28,7 @@ When looking at the previous process, this greater visibility was not possible, 
 
 **This release does not affect any of the closed beta list accounts that are developing already published platform apps, only apps that weren't published yet**. 
 
-Even if no permissions were requested for an app's major following the new workflow, Toolbelt (during the linking or publishing process) will investigate whether the app's major in which the account is working on was already published. 
+Even if no permissions were requested for an app's major following the new workflow, VTEX IO CLI (during the linking or publishing process) will investigate whether the app's major in which the account is working on was already published. 
 
 If the app's major already has been published, it will then be automatically saved in the data base for the account in question which will effortlessly receive the necessary permissions (according to the new workflow for app's major) to seamlessly develop and continue to evolve its project. 
 
@@ -38,6 +38,6 @@ However, if the app's major has never been published, the account *will not* be 
 
 If your development process was interrupted by the new Closed Beta list workflow, it means that the app's major you're working on was not yet published. 
 
-In such case, Toolbelt won't be able to automatically grant your account permission to those app's major. You will then need to **submit your project's details to our product team by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSfhuhFxvezMhPEoFlN9yFEkUifGQlGP4HmJQgx6GP32WZchBw/viewform?usp=send_form)**, specifying the app's major you wish to work on.
+In such case, VTEX IO CLI won't be able to automatically grant your account permission to those app's major. You will then need to **submit your project's details to our product team by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSfhuhFxvezMhPEoFlN9yFEkUifGQlGP4HmJQgx6GP32WZchBw/viewform?usp=send_form)**, specifying the app's major you wish to work on.
 
 Our team will thus gain visibility over your project and will be able to analyze each project individually to ensure that the required permissions are granted.

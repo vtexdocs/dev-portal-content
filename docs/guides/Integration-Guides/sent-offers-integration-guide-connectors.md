@@ -1,10 +1,14 @@
 ---
-title: "Offer Management Integration Guide"
+title: "Offer Management integration guide"
 slug: "sent-offers-integration-guide-connectors"
+excerpt: "Learn how to use Offer Management to improve the seller's visibility of the product's sending process to external channels."
 hidden: false
 createdAt: "2020-07-31T22:14:39.890Z"
 updatedAt: "2022-06-17T14:46:06.405Z"
 ---
+
+>⚠️ To evolve your experience in synchronizing and updating offers, the VTEX team is developing a new functionality that will replace the current module **Offer Management**. As a result, the module will not receive new updates or maintenance. For connectors and marketplaces already integrated into the module, please contact the development team by email [taissa.araujo@vtex.com.br](taissa.araujo@vtex.com.br).
+> For connectors interested in starting the integration, we ask you to wait for the release of the new module; as soon as it is available we will announce it to all customers through the [Developer Portal's release notes section](https://developers.vtex.com/updates/release-notes) and [VTEX Help Center announcements page](https://help.vtex.com/pt/en/announcements).
 
 Offer Management is the VTEX feature that gives sellers more visibility around a product’s sending process to external channels, like marketplaces. Offer Management does not reflect what happens to offers after they’re sent to channels and start being sold. Instead, it helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing that they can be sent to the marketplace and synced correctly.
 
@@ -19,13 +23,7 @@ Connectors interact with Offer Management in four ways:
 3. [Updating offers](#3-interactions-where-all-processes-happen), by creating interactions.
 4. [Registering all actions in the Offer Management timeline](#4-logs-registering-steps), by creating logs.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "**VTEX Bridge**  was the previous VTEX module responsible for managing all marketplaces used by a seller. Offer Management replaces the product, price, and inventory features currently managed by VTEX Bridge.",
-  "title": "Deprecated features"
-}
-[/block]
+> ℹ️ **VTEX Bridge** was the previous VTEX module responsible for managing all marketplaces used by a seller. Offer Management replaces the product, price, and inventory features currently managed by VTEX Bridge.
 
 The diagram below shows the Offer Management’s interface, which the vendors access through their VTEX accounts.
 
@@ -39,7 +37,7 @@ The first step for connectors to integrate with Offer Management is to create a 
 
 The [Create Channel API](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels) must be called a single time by the connector for each marketplace. The feedId created by this call will apply to all sellers connected to the given channel, and will be necessary for the next step of the integration flow.
 
->⚠️ Note that creating the channel through API is a sensitive step, and does not include public endpoints for retrieving (GET), updating (PUT), or deleting (DELETE) the channel created. If you wish to make any changes of this sort, you can request it through a [support](https://help.vtex.com/support?/cultureInfo=en-us) ticket with VTEX.
+>⚠️ Note that creating the channel through API is a sensitive step, and does not include public endpoints for retrieving (`GET`), updating (`PUT`), or deleting (`DELETE`) the channel created. If you wish to make any changes of this sort, you can request it through a [support](https://help.vtex.com/support?/cultureInfo=en-us) ticket with VTEX.
 
 ## 2.  Feed: establishing the connection
 
@@ -59,9 +57,9 @@ The feed links the created channel to a seller’s account, so offers and their 
 The `feedId` attribute that identifies a feed between a seller and a channel, follows a standardized pattern that will be used by connectors when establishing the connection between the two. This means that a feed’s  `feedId` is always the same for the relation between those specific sellers and channels, and will be used in other API calls.
 Connectors can create more than one feed with a single marketplace, depending on their business rules. It doesn’t matter if a feed is established more than once, the ID is always the same, and each connector is aware of the ID implemented.
 
-The pattern for naming the `feedId` is the following:
-“seller” + “.” + “channel’s name”
-Ex. “vtex.netshoes”, “anymarket.b2w”, `"vtex.meli-premium"`, `"vtex.meli-classic"`, “vtex.wish”
+The pattern for naming the `feedId` is the following: `“seller” + “.” + “channel’s name”`
+
+Ex., “vtex.netshoes”, “anymarket.b2w”, `"vtex.meli-premium"`, `"vtex.meli-classic"`, “vtex.wish”.
 
 ## 3. Interactions: where all processes happen
 
@@ -89,7 +87,7 @@ A seller interaction’s `origin` indicates what the process  is about, and incl
 ![Updates seller portal](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/sent-offers-integration-guide-connectors-2.jpg)
 Interactions are usually used to deal with a single type of process at a time. However, there are situations in which data about catalog, price or inventory are added in the same interaction.
 
-> Ex: B2W’s API has only one endpoint for creating and updating products. This means that to send them a seller’s catalog, both price and inventory data must be sent through the request. So even though initially an `Inventory type`  interaction is created, price data will also be added.
+> Ex., B2W’s API has only one endpoint for creating and updating products. This means that to send them a seller’s catalog, both price and inventory data must be sent through the request. So even though initially an `Inventory type`  interaction is created, price data will also be added.
 
 ### Offers Status
 
@@ -114,24 +112,13 @@ An interaction’s goal is to generate a process, or update to an offer. Once an
 
 This result is what allows Offer Management to infer an offer’s status. The types of interaction results, and their relation to offer statuses are the following:
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Interaction’s result",
-    "h-1": "Success",
-    "h-2": "Failure",
-    "h-3": "Notification",
-    "h-4": "Processing",
-    "0-1": "**Status: Synced** \n When closing a `success` interaction, Offer Management updates the offer’s status to `Synced`, if there aren't any active errors in this offer.\n\n\n**Status: Unavailable**\n When the offer already exists and the seller removes it from the trade policy, Offer Management doesn’t infer an offer’s status, and the connector indicates it. In this case, the connector must also remove the duplicate from the channel. Once the action is done, the interaction should be a success. \n\n In cases, the connector will send the `\"status\":\"unavailable\"` data in an interaction.",
-    "0-2": "**Status: Error**\nWhen an offer has at least one failure interaction, the offer’s status becomes `error`.",
-    "0-3": "**Status: Unavailable**\nWhen the offer is discarded by the connector - by being inactive or not included in the trade policy, Offer Management doesn’t infer an offer’s status, and the connector indicates it.  In that case, the connector will send the `\"status\":\"unavailable\"` data in a interaction.",
-    "0-4": "**Status: Sending** \nWhen the interaction is being processed, the offer’s status becomes `sending`when the interaction has the attribute “context”=”setup”.",
-    "0-0": "**Corresponding status** "
-  },
-  "cols": 5,
-  "rows": 1
-}
-[/block]
+| Interaction result | Status | Description |
+|--------|-------------|----------------------|
+| **Success** | **Synced** | When closing a `success` interaction, Offer Management updates the offer’s status to `Synced`, if there aren't any active errors in this offer. |
+| **Success** | **Unavailable** | When the offer already exists and the seller removes it from the trade policy, Offer Management doesn’t infer an offer’s status. |
+| **Failure** | **Error** | When an offer has at least one failure interaction, the offer’s status becomes `error`. |
+| **Notification** | **Unavailable** | When the offer is discarded by the connector - by being inactive or not included in the trade policy, Offer Management doesn’t infer an offer’s status, and the connector indicates it. In that case, the connector will send the `"status":"unavailable"` data in an interaction. |
+| **Processing** | **Sending** | When the interaction is being processed, the offer’s status becomes `sending` when the interaction has the attribute `“context”=”setup”`. |
 
 ## 4. Logs: registering steps
 

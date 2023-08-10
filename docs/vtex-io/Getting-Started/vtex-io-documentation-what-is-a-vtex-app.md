@@ -48,9 +48,9 @@ Notice that, besides developing custom solutions for the VTEX ecosystem, you can
 
 Custom apps complete business solutions, addressing pain points from real customers. With VTEX IO, it's possible to develop:
 
-- **[Storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io):** React components that compose the storefront - works as an open beta.
-- **Admin apps:** Modules and functionalities for the VTEX Admin - works as a closed beta.
-- **Backend apps:** Node or .NET Core services that speed up connections with Storefront or Admin apps - works as a closed beta.
+- **[Storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io):** React components that compose the [storefront](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) - works as an open beta.
+- **[Admin apps](https://learn.vtex.com/docs/course-admin-lang-en):** Modules and functionalities for the [VTEX Admin](https://help.vtex.com/en/tutorial/vtex-admin-start-here--531cHtUCUi3puRXNDmKziw) - works as a closed beta.
+- **[Backend apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-service):** Node or .NET Core services that speed up connections with Storefront or Admin apps - works as a closed beta.
 - **[Pixel apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps):** Integrations that collect user data for a third-party service - works as a closed beta.
 - **[Edition apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app):** Bundle of settings, policies, back-end and front-end apps encapsulated and exported by a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
 

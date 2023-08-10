@@ -10,6 +10,8 @@ seeAlso:
   - "/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
 ---
 
+> ⚠️ This app is only available for stores built with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework). For stores built with Legacy CMS Portal, refer to [Configuring Google Tag Manager](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG#configuring-google-tag-manager).
+
 This guide provides a step-by-step guide on installing and configuring Google Tag Manager (GTM) on Store Framework stores. The guide also highlights some restrictions to avoid performance issues and unpredictable behavior, including blocklists for custom HTML tags and variables.
 
 > ⚠️ If you have already installed the Google Tag Manager app, navigate to this guide's section titled [Create a Google Analytics 4 property](#create-a-google-analytics-4-property) to create the property and follow along.

@@ -12,18 +12,19 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store"
  - "/docs/guides/vtex-io-documentation-preparing-your-app-distribution"
 ---
+> ℹ️ The App Store is now accessible within the Admin in the Extensions Hub. If the Extensions Hub is not yet installed in your store, you can request assistance from our team by [opening a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM). For more information, please refer to the [Extensions Hub](https://help.vtex.com/es/tracks/extensions-hub--AW7klkYMh557y5IUOgzco/2LDRvGujYsumxi7IlE7CEJ) track and [release note](https://developers.vtex.com/updates/release-notes/extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin).
 
 Once you have [developed your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app), you have to prepare the App Page used to promote your app at the [VTEX App Store](https://apps.vtex.com/). The App Page is the first point of contact for merchants to learn more about your app and decide whether it is suitable for their business.
 
-![appstore-page-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/153282275-98bab015-81e8-4858-8538-72c9fa33d17e_11.gif)
+![app-store-page-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-page-example.png)
 
 Make sure to present your solutions professionally by adhering to the following principles:
 
-- Clearly describe your app’s value proposition, key benefits, and how merchants can benefit from it.
+- Clearly describe your app's value proposition, key benefits, and how merchants can benefit from it.
 - Choose a product name that indicates the purpose of the app.
 - Use high-quality images (icon and screenshots) and videos (if applicable).
 
-Note that if we see room for improvement, we’ll reach out to you before listing your app on the VTEX App Store.
+If we identify areas for improvement, we will reach out to you before listing your app on the VTEX App Store.
 
 Refer to the following sections to improve your App Page and increase its adoption on the VTEX App Store.
 
@@ -31,23 +32,23 @@ Refer to the following sections to improve your App Page and increase its adopti
 
 ## Tone & Voice
 
-Choose to favor the Serious and Authority tones. We understand that they capture the reliability and expertise our system’s voice should have.
+Choose to favor Serious and Authority tones. We understand they capture the reliability and expertise our system's voice should have.
 
 |Tone and Voice|Description|
 |--------------|-----------|
 |Serious|Speak firmly, respectfully, and honestly - always with a more serious tone than playful.|
 |Authority|Speak with mastery, proficiency, and expertise.|
 
-To see more about VTEX’s tone and voice, go to [UX Writing Guidelines](https://uxwriting.vtex.com/docs/principles/goals-principles/#tone-and-voice) and [VTEX Brand Guide](https://brand.vtex.com/voice-and-tone/) pages.
+To see more about VTEX's tone and voice, go to [UX Writing Guidelines](https://uxwriting.vtex.com/docs/principles/goals-principles/#tone-and-voice) and [VTEX Brand Guide](https://brand.vtex.com/voice-and-tone/) pages.
 
 ## Images
 
 Images are a tool to express the visual identity of your app, make users learn more about the app, and reinforce your brand in the VTEX environment. The principles of a pack of images for the app are the following:
 
-- Use high-quality images of your app’s UI to show the users how it behaves.
-- Add one icon that represents your app that will appear in search results, the first page of VTEX App Store, and the App’s page.
-- Upload up to ten screenshots (app’s images) and a minimum of three.
-- For storefront apps, combine Admin and storefront images to illustrate your app’s experience for both Merchant and Shopper.
+- Use high-quality images of your app's UI to show the users how it behaves.
+- Add one icon that represents your app that will appear in search results, the first page of the VTEX App Store, and the App's page.
+- Upload up to ten screenshots (app's images) and a minimum of three.
+- For storefront apps, combine Admin and storefront images to illustrate your app's experience for both Merchant and Shopper.
 - Add different mobile and desktop screenshots to improve the user experience depending on the screen.
 
 ### Icon
@@ -58,7 +59,7 @@ Your app icon is one of the first elements of your app that developers and merch
 
 #### Attributes
 
-Icon artwork can populate the entire asset space, or you can design and position artwork elements, such as logos, onto the keyline grid. When placing your artwork, use keylines as a guideline, not as a hard rule.
+Icon artwork can populate the entire asset space, or you can design and position artwork elements, such as logos, onto the keyline grid. When placing your artwork, use keylines as a guideline, not a hard rule.
 
 When creating your artwork, ensure it conforms to the following:
 
@@ -67,8 +68,8 @@ When creating your artwork, ensure it conforms to the following:
 - Color space: sRGB.
 - Format: Square image, without rounded corners.
 - The background of your icon must be a solid color.
-- The icon design must be simple and avoid unnecessary visual details. This will help merchants understand your app's purpose and have a better fit on smaller screens.
-- The icon must not exceed 768px of the total space available in the icon size. This is equivalent to a 128px margin on each side.
+- The icon design must be simple and avoid unnecessary visual details. It will help merchants understand your app's purpose and have a better fit on smaller screens.
+- The icon must not exceed 768px of the total space available in the icon size. It is equivalent to a 128px margin on each side.
 
 ![App Store icon keylines](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-2.png)
 
@@ -94,7 +95,7 @@ Below we have examples of icon elements that mislead users and violate our guide
 
 #### Brand adaptation
 
-If shapes are a critical part of a logo, do not force the artwork to full bleed. Instead, place it on the new keyline grid.
+If shapes are a critical part of a logo, do not force the artwork to fully bleed. Instead, place it on the new keyline grid.
 
 ![App Store icon adaptation](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-icon-specification-7.png)
 
@@ -108,18 +109,18 @@ Access our [Figma Community template](https://www.figma.com/community/file/12464
 
 ### Screenshots
 
-Use screenshots to visually represent your app’s key features and purpose.
+Use screenshots to visually represent your app's key features and purpose.
 
-![1- screenshot](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157434543-3b706ebd-7570-4d1e-8cda-d1ee230014e5_71.png)
+![app-store-screenshot](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-screenshot.png)
 
-#### Do’s and Don’ts
+#### Do's and Don'ts
 
 - Provide three to five images showing the app on a Desktop and Mobile screen.
 - Choose images of the app's interface and behavior, as well as the app's available configurations on the Admin panel.
 - Use the PNG format.
-- The image’s size must be up to 700 x 400 pixels.
-- Ensure text in your images is localized according to the app’s applicable market.
-- Screenshots must highlight the purpose, actions and benefits of the app.
+- The image's size must be up to 700 x 400 pixels.
+- Ensure the text in your images is localized according to the app's applicable market.
+- Screenshots must highlight the purpose, actions, and benefits of the app.
 - Do not use images that reveal real usernames and accounts. Opt to take images with fictional or blurred information.
 - Do not fully maximize the window when taking a screenshot. It can damage the quality of the image.
 
@@ -131,22 +132,22 @@ Download and use our templates to create great app images for your App Page, suc
 
 Licenses are written documents that contain the Terms and Conditions (T&C) of your app. They establish the direct business relationship between you, the developer, and the retailer that installs the app.
 
-### Do’s and Don’ts
+### Do's and Don'ts
 
 - Seek legal advice for the writing of your T&C.
 - Prepare a Personal Data Governance Program, which includes clauses in its T&C on the subject, depending on the applicable legislation, in addition to tools that allow data subjects to exercise their rights.
 - Consider wording limiting liability clauses.
 - Remember to cover Intellectual Property issues.
-- Offer the T&C in your User’s language (Expected in English, Portuguese and Spanish).
+- Offer the T&C in your User's language (Expected in English, Portuguese, and Spanish).
 - Analyze the consumer laws of the countries in which you operate, and offer consumers the rights provided.
 - Review specific legislation related to your business, such as those issued by central banks if you are in financial services.
 - Make it clear how you can hire your service: free, freemium, or premium, for example. Also, review the regulations regarding the payment methods you will accept.
 
-> ⚠️ The recommendations presented here are intended to serve as guidelines for the third-party developers and do not represent a legal recommendation. VTEX is not responsible for direct, indirect, moral, punitive damages, consequential damages or loss of profits arising from the use and/or compliance with these guidelines. Hiring legal advice is necessary and recommended for the final writing of terms and conditions for applications.
+> ⚠️ The recommendations presented here are intended to serve as guidelines for third-party developers and do not represent a legal recommendation. VTEX is not responsible for direct, indirect, moral, punitive damages, consequential damages, or loss of profits arising from the use and/or compliance with these guidelines. Hiring legal advice is necessary and recommended for the final writing of terms and conditions for applications.
 
 ## Messaging
 
-The textual content of your App Page must highlight your app’s value proposition and features in a clear and concise way so merchants can easily understand what they can do and achieve with your app.
+The textual content of your App Page must highlight your app's value proposition and features clearly and concisely so merchants can easily understand what they can do and achieve with your app.
 
 Remember, your App Page is your main marketing tool and touchpoint with merchants.
 
@@ -154,9 +155,9 @@ Remember, your App Page is your main marketing tool and touchpoint with merchant
 
 The name of an app is decisive for how merchants will find your app on the VTEX App Store.
 
-![3 - Name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157513213-1fa5c1f1-6f55-40ef-99da-d9f6cdee5685_116.png)
+![app-store-name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-name.png)
 
-#### Do’s and Don’ts
+#### Do's and Don'ts
 
 - The app name must be a maximum of 26 characters.
 
@@ -212,7 +213,7 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 </section>
 </details>
 
-- Do not use punctuation, such as period, comma, exclamation point, question mark, semicolon, colon, and underscore unless it’s part of the actual company name.
+- Do not use punctuation, such as period, comma, exclamation point, question mark, semicolon, colon, or underscore unless it's part of the actual company name.
 
 <details>
     <summary><b>Show example</b></summary>
@@ -240,15 +241,17 @@ The name of an app is decisive for how merchants will find your app on the VTEX 
 
 ### Headline
 
-The headline should describe the value proposition of your app in a concise sentence.
+The headline should describe the value proposition of your app in a concise sentence. It is shown on the App Page and square cards of apps.
 
-![4-Headline](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157516505-f43a11ed-ac35-49f7-9b41-08f5099f34ba_240.png)
+![app-store-headline-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-headline-1.png)
 
-### Do’s and Don’ts
+![app-store-headline-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-headline-2.png)
 
-- The headline must have a maximum of 120 characters.
+### Do's and Don'ts
 
-- Capture your app's key value proposition in a consise way.
+- The headline must have at most 120 characters.
+
+- Capture your app's key value proposition concisely.
 
 <details>
     <summary><b>Show example</b></summary>
@@ -256,7 +259,7 @@ The headline should describe the value proposition of your app in a concise sent
 
 |✅ Do|❌ Don't|
 |-----|-------|
-| <ul><li>Engage with customers through live broadcasts, real-time chat, and product promotion.</li><li>Create live broadcasts on your store, increase sales and boost customer interaction in real-time.</li></ul>| <ul><li>Live broadcasts with customers.</li><li>Create Live streaming and sell more.</li></ul>|
+| <ul><li>Engage with customers through live broadcasts, real-time chat, and product promotion.</li><li>Create live broadcasts on your store, increase sales, and boost customer interaction in real-time.</li></ul>| <ul><li>Live broadcasts with customers.</li><li>Create Live streaming and sell more.</li></ul>|
 
 </section>
 </details>
@@ -273,7 +276,7 @@ The headline should describe the value proposition of your app in a concise sent
 </section>
 </details>
 
-- Consider using verbs that reference the actions the users will be able to do with your app and the benefit it will deliver
+- Consider using verbs that reference the actions the users will be able to do with your app and the benefit it will deliver.
 
   - `Integrate data` | `create wishlists` | `monitor performance`.
   - `Increase revenue` | `deliver convenient experiences`.
@@ -295,12 +298,12 @@ The headline should describe the value proposition of your app in a concise sent
 
 The overview is the description of the app and should be an engaging message that focuses on how your app can benefit merchants in a clear and precise way.
 
-![5-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157517177-836ba2c6-f7d2-4795-940e-7532eea475f6_315.png)
+![app-store-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-overview.png)
 
-#### Do’s and Don’ts
+#### Do's and Don'ts
 
 - Write a short overview limited to a maximum of 200 characters.
-- The app description must give a glimpse of your app’s benefits and functionalities, not a step-by-step on how it works.
+- The app description must give a glimpse of your app's benefits and functionalities, not a step-by-step on how it works.
 
 <details>
     <summary><b>Show example</b></summary>
@@ -313,9 +316,9 @@ The overview is the description of the app and should be an engaging message tha
 </section>
 </details>
 
-- Make sure you are addessing for whom your app is, what need it solves and how uniquely do you solve it.
+- Make sure you are addressing for whom your app is, what need it solves, and how uniquely you solve it.
 
-> ℹ️  There are numerous value proposition frameworks that can be used as a reference in this task, such as the following: *Our [product] help(s) [audience] who wants to [jobs to be done] by [verb e.g. reducing, avoiding] + [a user pain or gain].*
+> ℹ️  Numerous value proposition frameworks can be used as a reference in this task, such as the following: *Our [product] help(s) [audience] who wants to [jobs to be done] by [verb e.g. reducing, avoiding] + [a user pain or gain]*.
 
 <details>
   <summary><b>Show example</b></summary>
@@ -323,7 +326,7 @@ The overview is the description of the app and should be an engaging message tha
 
 |✅ Do|❌ Don't|
 |-----|-------|
-|With The Live Shopping app, *create* live stream events on your store's website, promote product collections, increase sales, and enhance user experience simultaneously while interacting via live chat.|Live shopping is an app to stream live events on your store in real-time.|
+|With The Live Shopping app, create live stream events on your store's website, promote product collections, increase sales, and enhance user experience simultaneously while interacting via live chat.|Live shopping is an app to stream live events on your store in real-time.|
 
   </section>
 </details>
@@ -349,18 +352,18 @@ The overview is the description of the app and should be an engaging message tha
 
 |✅ Do|❌ Don't|
 |-----|-------|
-|Interact with customers in real-time by generating personalized experiences through real-time chat and interactive like button.|Interact with customers by managing the event’s live chat in the events list clicking on the desired live event’s arrow button.|
+|Interact with customers in real-time by generating personalized experiences through real-time chat and the interactive like button.|Interact with customers by managing the event's live chat in the events list by clicking on the desired live event's arrow button.|
 
   </section>
 </details>
 
 ### Features
 
-In `features`, provide a list of your app's main features.
+In `features`, provide a list of your app's main features. It is included at the bottom of the overview.
 
-![6-features](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520024-66ee8e75-4b53-41f0-90ca-e4c8c37281cf_402.png)
+![app-store-features](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-features.png)
 
-#### Do’s
+#### Do's
 
 - Highlight which tasks can be performed within the app.
 
@@ -389,39 +392,13 @@ The Website URL is a hyperlink to your website to redirect users to your own cor
 
 - Enter a valid URL in this field to direct them to a landing page, "About Us" page, or your corporate website.
 
-### Support
-
-Provide support information to make potential buyers aware of your support channels, such as email, a ticket portal, or a phone number. Including details on how support for your app works might make merchants more confident to choose your app.
-
-![9-Support](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520794-a8a1173e-2781-4c0c-b292-caa30de2bb87_445.png)
-
-### Additional Information
-
-Use this field to provide more specific details about the app. For example, is your app only available in certain regions? How the merchant will receive the app’s billing information? Is your app available only in specific environments (Legacy CMS Portal or VTEX IO)?
-
-![7-Additional info](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520727-dc72709f-b386-47ec-bb50-5731bfab2201_451.png)
-
-#### Do
-
-- Write a summary, a maximum of 80 characters.
-- Consider your app’s audience: regional location or global user, IO or Legacy user.
-
-<details>
-  <summary><b>Show example</b></summary>
-  <section>
-
-|✅ Do|❌ Don't|
-|-----|-------|
-|<ul><li>This application is only being made available in a Beta version.</li> <li>If you do not have the integration done yet, you will need to complete the integration form.</li><li>We have three different plans that adjust to your content and commercial needs to have the most competitive rates.</li></ul>|<ul> <li>Simpler logistical operation and a reduction in logistical costs.</li> <li>Automatic messages (after-sales)</li> <li>Real-time metrics: After the end of the event, review quality KPIs such as likes, comments, and shares, as well as performance KPIs such as sales and average product value (AOV).</li></ul> These describe the features of apps. Therefore, they should be in the feature section.|
-
-  </section>
-</details>
-
 ### Video
 
-Use videos to demonstrate how your app behaves in different scenarios. Videos are exciting resources to complement [images](#images) as an educational tool showing your app’s main benefits and features.
+Use videos to demonstrate how your app behaves in different scenarios. Videos are exciting resources to complement [images](#images) as an educational tool showing your app's main benefits and features.
 
-![8-Video](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/157520797-a42e7221-7a48-4c89-b809-8f8fd196b3a2_489.png)
+![app-store-video-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-video-1.png)
+
+![app-store-video-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-video-2.png)
 
 #### Do's
 
@@ -434,6 +411,6 @@ For example, check out the [video for the Live Shopping app](https://apps.vtex.c
 
 ### Metric description
 
-> ⚠️ Metric descriptios are required only for apps whose pricing is based on one or more metrics. If this is not the case, please do not fill in this field.
+> ⚠️ Metric descriptions are required only for apps whose pricing is based on one or more metrics. If this is not the case, please do not fill in this field.
 
-For each metric declared in the `billingOptions` field (found in the app's manifest.json file), you must include a simple description of how it works. This description will help the extension buyer understand what each metric does and how it will impact the application billing.
+For each metric declared in the `billingOptions` field (found in the app's `manifest.json` file), you must include a simple description of how it works. This description will help the extension buyer understand what each metric does and how it will impact the application billing. For more information about variable rate charging using metrics, check the [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model#setting-the-app-as-public) article.

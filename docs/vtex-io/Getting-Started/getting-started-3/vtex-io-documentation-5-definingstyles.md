@@ -25,7 +25,7 @@ To set the default visual style for your entire store, you can utilize the `styl
 
 For example, we can set the default theme background color to blue by changing the `semanticColors` block’s `base` property:
 
-```css
+```json
 "semanticColors": {
   "background": {
     "base": "#00BFFF",
