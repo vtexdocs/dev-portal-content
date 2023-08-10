@@ -79,7 +79,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
     vtex workspace abtest start
     ```
 
-    ![ab-testing-step4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-running-native-ab-testing-1.png)
+    ![ab-testing-step4](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-one___83dbc879805d76ab0065bc5dc241a795.png)
 
 7. Select the production workspace you want to use for comparison with the master and agree to proceed.
 
@@ -106,7 +106,7 @@ Any time during the A/B test, you can run the following command to check the liv
 vtex workspace abtest status
 ```
 
-![ab-testing-step5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-running-native-ab-testing-2.png)
+![ab-testing-step5](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-two___79a658c8af9f5cde0854b30922d868af.png)
 
 If desired, you can still update the workspaces being used in the A/B test. However, notice that the fewer changes made to these workspaces, the more accurate your results will be.
 
