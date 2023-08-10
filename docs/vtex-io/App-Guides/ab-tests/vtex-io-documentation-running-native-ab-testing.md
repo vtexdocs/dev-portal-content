@@ -22,18 +22,18 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
 
 2. Install the A/B Tester app in the `master` workspace to enable A/B testing on your store website by running:
 
-```sh
-vtex use master
-vtex install vtex.ab-tester
-```
+    ```sh
+    vtex use master
+    vtex install vtex.ab-tester
+    ```
 
 3. Type `y` to confirm that you want to install the app in the `master` workspace.
 
 4. Install the **A/B Tester Admin app** in the `master` workspace by running the following:
 
-```sh
-vtex install vtexarg.abtester
-```
+    ```sh
+    vtex install vtexarg.abtester
+    ```
   
 5. Type `y` to confirm the installation.
 6. Now, access the Admin and go to **Extensions Hub > Installed Apps > AB Tester**.
@@ -44,42 +44,42 @@ vtex install vtexarg.abtester
 ### Step 1 - Enabling A/B testing
 
 1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account:
-
-```sh
-vtex login {accountName}
-```
+  
+    ```sh
+    vtex login {accountName}
+    ```
 
 2. [Create and switch to a Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) by running the following command:
 
-```sh
-vtex use {workspaceName} --production
-```
+    ```sh
+    vtex use {workspaceName} --production
+    ```
 
 3. Perform the changes you want to test in the production workspace you are using. For example, install or edit an app.
 
-> ⚠️ If your store uses the [Checkout UI Custom](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0) app, you must first publish its configurations on your new production workspace. Otherwise, you might experience undesired consequences, such as losing the Checkout custom Javascript code and styles.
+    > ⚠️ If your store uses the [Checkout UI Custom](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0) app, you must first publish its configurations on your new production workspace. Otherwise, you might experience undesired consequences, such as losing the Checkout custom Javascript code and styles.
 
 4. Switch to the master workspace.
 
-```sh
-vtex use master
-```
+    ```sh
+    vtex use master
+    ```
 
 5. Install the VTEX A/B tester app in the Master workspace to enable A/B testing on your store website by running:
 
-```bash
-vtex install vtex.ab-tester
-```
+    ```bash
+    vtex install vtex.ab-tester
+    ```
 
-> ℹ️ You can run `vtex ls` to make sure that you have successfully installed `vtex.ab-tester` in the `master` workspace.
+    > ℹ️ You can run `vtex ls` to make sure that you have successfully installed `vtex.ab-tester` in the `master` workspace.
 
 6. Run the following command in the master workspace.
 
-```sh
-vtex workspace abtest start
-```
+    ```sh
+    vtex workspace abtest start
+    ```
 
-![ab-testing-step4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-running-native-ab-testing-1.png)
+    ![ab-testing-step4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-running-native-ab-testing-1.png)
 
 7. Select the production workspace you want to use for comparison with the master and agree to proceed.
 
@@ -89,7 +89,7 @@ By agreeing to proceed with the test, you will need to answer the two following 
 
 1. `What's the proportion of traffic initially directed to the master workspace?`. You must answer this question with any whole number between 0 and 10000. For example, if you answer `9000`, you'll set 90% of the traffic to the master workspace.
 
-> ℹ️ To promote the changes from your production workspace in the safest way possible, we strongly recommend that you leave 90% of traffic dedicated to the master and the other 10% to the production workspace being tested.
+    > ℹ️ To promote the changes from your production workspace in the safest way possible, we strongly recommend that you leave 90% of traffic dedicated to the master and the other 10% to the production workspace being tested.
 
 2. `What's the amount of time respecting the restriction?`. This is the amount of time (in hours) during which the traffic proportion stated in the previous question remains constant. After this period, the A/B testing system automatically balances the traffic proportions, sending more traffic to the best-performing workspace. There are two possible answers to this question:
 
