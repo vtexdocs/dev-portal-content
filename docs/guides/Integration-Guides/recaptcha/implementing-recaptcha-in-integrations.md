@@ -23,7 +23,7 @@ In order to implement reCAPTCHA validation in a mobile app that places orders, f
 1. Create a Google Cloud project, according to the instructions in the article [Create, shut down, and restore projects](https://support.google.com/googleapi/answer/6251787).
 2. Create a Google Cloud API key, according to the instructions in the article [Authenticate using API keys](https://cloud.google.com/docs/authentication/api-keys) provided by Google.
 3. Get your current VTEX Checkout settings, with the [Get orderForm configuration API request](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm).
-4. Add your newly created reCAPTCHA key to your VTEX Checkout settings, by sending a request to the [Update orderForm configuration endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm). Use the configuration retrieved in step 2 as your request body and add your key information in this field:
+4. Add your newly created reCAPTCHA key to your VTEX Checkout settings, by sending a request to the [Update orderForm configuration endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm). Use the configuration retrieved in step 3 as your request body and add your key information in this field:
 
 ```json
 {
