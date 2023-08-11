@@ -9,16 +9,24 @@ seeAlso:
  - "/docs/guides/vtexarg-abtester"
 ---
 
-In this guide, you learn how to manage an A/B test, covering every step from running the test, configuring traffic and time settings, understanding the test results, and concluding the test.
+In this guide, learn how to manage an A/B test, covering steps from running the test to concluding the test.
 
-A/B testing is a technique that compares the traffic between the workspaces of two stores and helps you determine which one performs better in terms of user engagement and conversions.
-To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/docs/guides/vtexarg-abtester). For more information, please refer to the following sections.
+A/B testing involves comparing traffic between two store workspaces and helps you determine which one performs better in terms of user engagement and conversions.
+To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/docs/guides/vtexarg-abtester).
+
+## Before you start
+
+Ensure you have the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) installed on your machine.
 
 ## Running A/B tests via the Admin
 
-The A/B Tester app allows you to run A/B tests via Admin. To use the app, first you need to install it in your account:
+The A/B Tester app allows you to run A/B tests via Admin. To use the app, follow these steps:
 
-1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account.
+1. Open the terminal and log in to the desired account. *Remember to replace the values between curly brackets according to your account name.*
+
+    ```bash
+    vtex login {accountName}
+    ```
 
 2. Install the A/B Tester app in the `master` workspace to enable A/B testing on your store website by running:
 
@@ -36,14 +44,14 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, first 
     ```
   
 5. Type `y` to confirm the installation.
-6. Now, access the Admin and go to **Extensions Hub > Installed Apps > AB Tester**.
-7. Create A/B tests, compare and finish tests, referring to the [A/B Tester Admin app documentation](https://developers.vtex.com/docs/guides/vtexarg-abtester#usage).
+6. Now, access the VTEX Admin and go to **Extensions Hub > Installed Apps > AB Tester**.
+7. Refer to the [A/B Tester Admin app documentation](https://developers.vtex.com/docs/guides/vtexarg-abtester#usage) to create A/B tests, compare and finish tests.
 
 ## Running A/B tests via the VTEX IO CLI
 
 ### Step 1 - Enabling A/B testing
 
-1. Open the terminal and use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to the desired account:
+1. Open the terminal and log in to the desired account. *Remember to replace the values between curly brackets according to your account name.*
   
     ```sh
     vtex login {accountName}
