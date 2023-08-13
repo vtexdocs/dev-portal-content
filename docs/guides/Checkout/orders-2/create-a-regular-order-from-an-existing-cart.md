@@ -81,6 +81,7 @@ After sending the request, the endpoint will return the response body containing
             "assemblies": [],
             "priceValidUntil": "2024-02-06T19:41:02Z",
             "tax": 0,
+            "taxCode":"54WC8ZN6K8",
             "price": 100,
             "listPrice": 100,
             "manualPrice": null,
