@@ -77,7 +77,7 @@ To ensure that all points of contact between our retailers, their customers, and
 Nevertheless, if you identify any security breaches after publishing your app, take the following measures:
 
 1. [Open a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) requesting to remove your app from the VTEX App Store and avoid further installations of the unstable version.
-2. Notify us of the issue by [opening tickets](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) so that we can provide support to retailers operating with this version and guide them on how to remove it from their stores.
+2. Notify us of the issue by [opening tickets](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) so that we can provide support to retailers operating with this version and guide them on how to remove it from their stores.
 3. Fix the security flaw and resubmit your application for homologation.
 
 Once the new version is approved, the app will be available again in the VTEX App Store.
@@ -98,7 +98,7 @@ Outbound access policies (`outbound-access`) to VTEX resources should follow the
 
 Public routes do not require authentication when called from the Frontend, so they should not expose information obtained from calling private APIs, e.g.: exposing a list of orders to the Frontend. A common mistake is leaving routes which are meant to only be consumed from the Admin unrestricted. Also, GraphQL APIs are public by default, so the schema should not have queries exposing private information either.
 
-Access to REST APIs should be restricted using [policies](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-policies#resource-based-policies). Access to GraphQL APIs should be restricted using directives, either [@auth](https://github.com/vtex/node-vtex-api/blob/08ea11d380997f5abf02455487b342caa74b2001/src/service/worker/runtime/graphql/schema/schemaDirectives/Auth.ts#L66-L75) or a custom-made one.
+Access to REST APIs should be restricted using [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies#resource-based-policies). Access to GraphQL APIs should be restricted using directives, either [@auth](https://github.com/vtex/node-vtex-api/blob/08ea11d380997f5abf02455487b342caa74b2001/src/service/worker/runtime/graphql/schema/schemaDirectives/Auth.ts#L66-L75) or a custom-made one.
 
 ### Isolate data between tenants
 
