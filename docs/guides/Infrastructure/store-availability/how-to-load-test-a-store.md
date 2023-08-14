@@ -34,7 +34,7 @@ When conducting load tests, it's essential to replicate real-world scenarios as 
 
 Each customer should have their own unique email address to accurately simulate individual user interactions. This realistic simulation contributes to more accurate load testing results, providing insights into how the platform performs under different user circumstances.
 
-We recommend that you incorporate a randomized selection of email addresses when configuring your load test scenarios. 
+We recommend that you incorporate a randomized selection of email addresses when configuring your load test scenarios.
 
 ### Customers shop from different regions
 
