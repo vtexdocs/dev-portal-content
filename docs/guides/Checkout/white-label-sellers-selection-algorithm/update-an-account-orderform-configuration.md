@@ -43,7 +43,7 @@ Additionally, you can submit the following information to modify your account's 
 - `maxNumberOfWhiteLabelSellers`: allows the input of a limit of white label sellers involved on the cart.
 - `maskFirstPurchaseData`: allows, on a first purchase, masking client's data. It could be useful when a shared cart is used and the client doesn't want to share its data.
 - `recaptchaValidation`: configures reCAPTCHA validation status for the account.
-- `requiresLoginToPlaceOrder`: demands authentication before completing purchases.
+- `requiresLoginToPlaceOrder`: indicates whether authentication is required for completing purchases.
 - `minimumPurchaseDowntimeSeconds`: define a minimum interval between successive purchases.
 - `cartAgeToUseNewCardSeconds`: define a minimum cart existence period before allowing the use of a new credit card.
 
