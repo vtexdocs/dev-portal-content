@@ -28,6 +28,14 @@ Instead, try to model the probability of a user picking products based on real u
 
 The main reason for this is that picking the same product over and over does not test the platform’s infrastructure. It mostly tests our caching layer.
 
+## Customers shop with different emails.
+
+When conducting load tests, it's essential to replicate real-world scenarios as closely as possible. To achieve this, ensure that you perform tests using a variety of customer emails.
+
+Each customer should have their own unique email address to accurately simulate individual user interactions. This realistic simulation contributes to more accurate load testing results, providing insights into how the platform performs under different user circumstances.
+
+We recommend that you incorporate a randomized selection of email addresses when configuring your load test scenarios. 
+
 ### Customers shop from different regions.
 
 Even if the load test is focused on a specific country, state, or region, customers will still shop from a range of IP addresses and locations.
