@@ -28,7 +28,7 @@ Instead, try to model the probability of a user picking products based on real u
 
 The main reason for this is that picking the same product over and over does not test the platform’s infrastructure. It mostly tests our caching layer.
 
-## Customers shop with different emails
+### Customers shop with different emails
 
 When conducting load tests, it's essential to replicate real-world scenarios as closely as possible. To achieve this, ensure that you perform tests using a variety of customer emails.
 
