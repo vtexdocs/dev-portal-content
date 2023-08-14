@@ -11,9 +11,11 @@ Refer to the following guidelines to guarantee the quality and usability of your
 
 ## Table of contents
 
+- [Table of contents](#table-of-contents)
 - [Scalability and performance](#scalability-and-performance)
   - [Using APIs efficiently](#using-apis-efficiently)
   - [Using the latest builders](#using-the-latest-builders)
+- [Versioning](#versioning)
 - [Security](#security)
   - [Handling security breaches](#handling-security-breaches)
   - [Hardcoding VTEX appKey/appToken](#hardcoding-vtex-appkeyapptoken)
@@ -38,7 +40,13 @@ Use the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-
 
 ### Using APIs efficiently
 
-For communication with services, your app should use existing [VTEX IO Clients](https://github.com/vtex/io-clients) whenever possible. Try to avoid unnecessary or excessive API calls. Excessive API calls can degrade the performance of your app, increasing response times. Unnecessary API calls or lack of proper use of our Clients can lead to security issues. For more information, see our [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.
+For communication with services, your app should use existing [VTEX IO Clients](https://github.com/vtex/io-clients) whenever possible. Using our Clients have many advantages, including:
+
+- The code to call the services is done by VTEX and standardized in all applications.
+- The Clients are updated automatically by VTEX, providing new features, bug fixes, and improving compatibility.
+- You do not need to maintain the code. Everything works out of the box and will keep working as long as we are maintaining it.
+
+Try to avoid unnecessary or excessive API calls and make sure they are fast and scalable. Excessive API calls can degrade the performance of your app, increasing response times. Unnecessary API calls or lack of proper use of our Clients can lead to security issues. For more information, see our [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.
 
 >ℹ️ **Performance of external systems**
 >
@@ -56,6 +64,10 @@ For developing and publishing apps for the VTEX App Store, the following builder
 - Docs builder- version 0.x.
 - Graphql builder -version 1.x.
 
+## Versioning
+
+When creating a new version of your app, follow the good practices. There are many types of versions available (major, minor, and patch; stable and beta) and you should choose properly according to the changes implemented. Breaking changes also need additional care (i.e.: must be a new major). You can find more details in the [SemVer standard](https://semver.org/) and the [Releasing a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) article.
+
 ## Security
 
 To ensure that all points of contact between our retailers, their customers, and other parts of the ecosystem are protected and secure, we test if your app respects regulations on data traffic, usage, and storage worldwide.
@@ -64,7 +76,7 @@ To ensure that all points of contact between our retailers, their customers, and
 
 Nevertheless, if you identify any security breaches after publishing your app, take the following measures:
 
-1. Remove your app from the VTEX App Store to avoid further installations of the unstable version.
+1. [Open a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) requesting to remove your app from the VTEX App Store and avoid further installations of the unstable version.
 2. Notify us of the issue by [opening tickets](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) so that we can provide support to retailers operating with this version and guide them on how to remove it from their stores.
 3. Fix the security flaw and resubmit your application for homologation.
 
@@ -90,17 +102,17 @@ Access to REST APIs should be restricted using [policies](https://developers.vte
 
 ### Isolate data between tenants
 
-Single-tenant external systems should be used carefully. Data from one tenant must always be isolated from data from another tenant to prevent leakage and unwanted access.
+Single-tenant external systems should be used carefully. Data from one tenant must always be isolated from data from another tenant to prevent leakage and unwanted access. The isolation method will depend on the external system. One possible solution is to use the name (or other identifier) of the tenant in routes or as a parameter for access control or to define how the data is managed.
 
 ## Data privacy
 
 ### Persisting PII within VTEX
 
-If using Master Data or VBase to store Personal Identifiable Information (PII), a mechanism must be in place to ensure compliance with the [Right to be Forgotten](https://www.gdpreu.org/right-to-be-forgotten/) or other similar data-protection practices.
+If using Master Data or VBase to store Personal Identifiable Information (PII), a mechanism must be in place to ensure compliance with the [Right to be Forgotten](https://www.gdpreu.org/right-to-be-forgotten/) or other similar data-protection practices. Possible solutions are to provide an option or endpoint in the app that erases the data, for instance, by using a delete operation with our Clients ([Master Data](https://developers.vtex.com/docs/guides/create-master-data-crud-app#delete), [VBase](https://github.com/vtex/node-vtex-api/blob/1b3c54976aa974619d0728fae4ed2fe076dbb551/src/clients/infra/VBase.ts#L178)) or through the API ([Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-), [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)).
 
 ### Sending PII to external service
 
-We should ensure that all PII being shared externally is strictly necessary for the app to work. If you have any questions, reach out to us [via ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
+We should ensure that all PII being shared externally is strictly necessary for the app to work. If you have any questions, reach out to us [via ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM).
 
 ## Usability
 
@@ -110,11 +122,11 @@ Ensure that all messages are [internationalized](https://developers.vtex.com/doc
 
 ### Avoid declaring routes with collision-prone paths
 
-When declaring [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes), generic paths (e.g.: `/_v/orders/`, `/_v/settings`) should be avoided to reduce changes of collision with other apps.
+When declaring [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes), generic paths (e.g.: `/_v/orders/`, `/_v/settings`) should be avoided to reduce changes of collision with other apps. A suggestion is to add a prefix (i.e.: the name of the app) in the routes to avoid conflicts.
 
 ### Creating custom Admin settings form
 
-We recommend to build the Admin settings form of your app using the [settingsSchema](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#settingsschema) structure, which should cover most cases. We also understand that there are some specific cases where the schema is not enough to build the settings page of the app, which will be assessed by our team in the homologation.
+We recommend building the Admin settings form of your app using the [settingsSchema](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#settingsschema) structure, which should cover most cases. We also understand that there are some specific cases where the schema is not enough to build the settings page of the app, which will be assessed by our team in the homologation. For the cases where the schema is not enough, you can create your form as a page of an [Admin app](https://learn.vtex.com/docs/course-admin-lang-en).
 
 ## Plug&Play
 
