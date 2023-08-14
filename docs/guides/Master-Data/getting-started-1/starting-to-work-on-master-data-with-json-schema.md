@@ -7,13 +7,13 @@ createdAt: "2022-07-05T19:36:42.104Z"
 updatedAt: "2022-08-03T13:10:23.602Z"
 ---
 
-A JSON Schema defines how your data will be validated. Further information can be found in [External documentation on JSON Schemas](http://json-schema.org), this article on [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema), and our article about the [Master Data schema lifecycle](https://developers.vtex.com/vtex-rest-api/reference/master-data-schema-lifecycle).
+A JSON Schema defines how your data will be validated. Further information can be found in [External documentation on JSON Schemas](http://json-schema.org), this article on [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema), and our article about the [Master Data schema lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle).
 
 Use the following API requests to manage your Master Data schemas:
 
-- [Get schemas](https://developers.vtex.com/vtex-rest-api/reference/getschemas)
-- [Get schemas by name](https://developers.vtex.com/vtex-rest-api/reference/getschemabyname)
-- [Save schema by name](https://developers.vtex.com/vtex-rest-api/reference/saveschemabyname)
+- [Get schemas](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas)
+- [Get schemas by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas/-schemaName-)
+- [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-)
 
 Below you can learn more about how to set up your JSON schemas, and some Master Data features you can use with them.
 
@@ -64,6 +64,8 @@ You can add these examples to [JSON Schema Validator](http://www.jsonschemavalid
   ```
 
 The JSON Schema validates only the fields configured in properties. The exceeding fields will be maintained without validation. To preserve only the fields configured in the JSON schema, see the `additionalProperties` property information in [external documentation about JSON schema](https://json-schema.org/understanding-json-schema/reference/object.html#properties).
+
+> ⚠️ Master Data v2 data entities can have up to 60 schemas per entity.
 
 ## Indexing fields
 
@@ -126,4 +128,4 @@ Use the property `v-cache` to disable default caching.
 
 ## Creating triggers
 
-Use the property `v-triggers` to set up automatic actions that will be performed by the platform if the creation or update of a document meets certain criteria defined by you. Learn more in [Setting up triggers in Master Data v2](https://developers.vtex.com/vtex-rest-api/docs/setting-up-triggers-in-master-data-v2).
+Use the property `v-triggers` to set up automatic actions that will be performed by the platform if the creation or update of a document meets certain criteria defined by you. Learn more in [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2).

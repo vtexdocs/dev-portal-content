@@ -12,6 +12,8 @@ The orderForm of orders closed by the user will receive this cookie in the heade
 
 In this way, the Checkout will be able to assemble the orderForm considering the `marketingData` used in the purchase.
 
+> ⚠️ The IPS cookie is created for Legacy CMS Portal accounts only. For stores using the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), information from marketing UTMs is sent to Checkout through the Sessions system.
+
 ## Simulation
 
 To make sure the content of the `utm_source` parameter is being sent to the Checkout, you can follow the steps below:
@@ -43,4 +45,4 @@ As previously stated, the native buy button control (`<vtex.cmc:BuyButton/>`) pe
 
 However, if instead of using this control, your store decides to customize the call and therefore makes the POST of the purchase request on its own, you must remember to send in this POST all the data that may be useful to assemble the **orderForm**, including the marketing context.
 
-To send the UTM values ​​to the cart, access the [Add marketing data](https://developers.vtex.com/vtex-rest-api/reference/addmarketingdata) endpoint or enter the `marketingData` information via the [sendAttachment](https://developers.vtex.com/vtex-rest-api/docs/vtexjs-for-checkout#sendattachmentattachmentid-attachment-expectedorderformsections).
+To send the UTM values ​​to the cart, access the [Add marketing data](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/marketingData) endpoint or enter the `marketingData` information via the [sendAttachment](https://developers.vtex.com/docs/guides/vtexjs-for-checkout#sendattachmentattachmentid-attachment-expectedorderformsections).

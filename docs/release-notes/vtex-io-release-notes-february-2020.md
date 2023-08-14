@@ -35,7 +35,7 @@ Still with us? It gets better...
 
 - **Components Debugger** - If you thought you had problems decrypting each component's Handles, the dog days are now over because the Components Debugger has landed. Check out the recipe on [using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) and begin using the Components Debugger now.
 
-- **Toolbelt** - A notification is now triggered in your terminal when the `vtex link` command is not running anymore, meaning when your link has died. Can I get an amen? But remember: this new feature is only valid for MAC and Linux at the moment.
+- **VTEX IO CLI** - A notification is now triggered in your terminal when the `vtex link` command is not running anymore, meaning when your link has died. Can I get an amen? But remember: this new feature is only valid for MAC and Linux at the moment.
 
 
 - **Alexa Certify Code** - Natively integrate with Amazon's [Alexa solution](https://developers.vtex.com/docs/guides/vtex-alexa-certify-code#configuration) now!
@@ -50,7 +50,7 @@ Still with us? It gets better...
 
 - **Order Placed** - Previously, [Order Placed](https://developers.vtex.com/docs/guides/vtex-order-placed) was a big monolithic block. Now, Order Placed v2 is launched. Broken into small and customizable blocks, it allows you to customize the order placed page as you wish! Yay!
 
-- **React app dependencies** - The wise Toolbelt will now automatically update an App React's dependencies located in the app's `package.json` file to keep them in line with Render's dependencies list. Find out more details on this improvement [here](https://github.com/vtex-apps/release-notes/blob/master/docs/2020-02/react-app-dependencies.md)!
+- **React app dependencies** - The wise VTEX IO CLI will now automatically update an App React's dependencies located in the app's `package.json` file to keep them in line with Render's dependencies list. Find out more details on this improvement [here](https://github.com/vtex-apps/release-notes/blob/master/docs/2020-02/react-app-dependencies.md)!
 
 - **SVG's size** - The `viewbox` prop for [Store Icons](https://developers.vtex.com/docs/guides/vtex-store-icons) now accepts other values aside from 16x16px for the following block icons: `search-bar`, `login` and `minicart`.  
 

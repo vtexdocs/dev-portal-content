@@ -20,7 +20,7 @@ You can find all repositories included in it in [vtex/education-tools](https://g
 
 They each serve a different purpose, and will be mentioned in the FAQ below, depending on which action you wish to perform.
 
-### In this repository
+## In this repository
 
 You will find the following folders in this repository:
 
@@ -63,8 +63,8 @@ The frontmatter is the table with metadata about the article you're adding. It c
   - *Release notes:* it is rendered as a synopsis of the release notes, readable when the user clicks on the ▶️ collapsible button next to the release's title, in our [changelog UI](https://developers.vtex.com/updates/release-notes). This field is mandatory for release notes! Character limit: 400.
   - *Guides*: it is rendered as the greyed-out sentence at the bottom of the title, with a brief TLDR for that article. Character limit: 120.
 - **hidden:** boolean that makes the article not discoverable by search engines and our internal search if `true`. Know more in [How can I hide articles from search engines](#how-can-i-hide-articles-from-search-engines).
-- **createdAt:** creation date, automatically filled in.
-- **updatedAt:** update date, automatically filled in.
+- **createdAt:** creation date (UTC) and time in this format `{YYYY}-{MM}-{DD}T{HH}:{MM}:{SS}.{mmm}Z`.
+- **updatedAt:** update date (UTC) in this format `{YYYY}-{MM}-{DD}T{HH}:{MM}:{SS}.{mmm}Z`.
 - **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled in when there's a recommended reading sequence for the articles you are managing. It should be filled with the slug of the chosen article. Example `seeAlso: - "/docs/guides/vtex-io-documentation-2-prerequesites"`
 - **hidePaginationPrevious**: boolean that hides in the article's footer a hyperlink to the previous article listed on the navigation. Mark as `true` to  hide the link to the previous doc on the navigation.
 - **hidePaginationNext**: boolean that hides in the article's footer a hyperlink to the next article listed on the navigation. Mark as `true` to  hide the link to the following doc on the navigation.
@@ -189,6 +189,22 @@ To add new content in the left navigation:
 6. Test your navigation through the preview.
 7. Send the PR link in the `#dev-portal-pr` Slack channel for approval.
 
+
+### How to publish a new API reference and add it to navigation?
+
+After creating a file for a new API reference in [openapi-schemas](https://github.com/vtex/openapi-schemas), follow these steps so it shows in Dev Portal's navigation:
+
+1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
+2. In the `src/pages/api/openapi/[slug].tsx` file, edit `referencePaths` by adding the API schema file name exactly as saved in openapi-schemas and its corresponding slug on Developer Portal. Follow this syntax: `'{schemaFileName}': '{slug}'`. 
+3. Repeat step 2 in the `src/utils/getReferencePaths.ts` file, editing `fileSlugMap` with the same information.
+4. Add the API category and all its endpoints in `public/navigation.json`, following [these instructions](#what-determines-the-left-navigations-order-and-organization) and making sure endpoints are added in [this format](#how-to-update-the-left-navigation-after-changing-an-endpoints-path).
+5. Open a PR with all the changes.
+6. Send the PR in `#dev-portal-pr` Slack channel for approval.
+5. After approval, merge the PR.
+
+>ℹ️ If you have any questions about this process, check out [this example pull request](https://github.com/vtexdocs/devportal/pull/300/files) to publish the Shipping Network API.
+
+
 ### How to update the left navigation after changing an endpoint's path?
 
 The URL structure of the Developer Portal API reference has the endpoint's path as part of it. For example, the [List shipping policies](https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies) endpoint's URL is `https://developers.vtex.com/docs/api-reference/logistics-api#get-/api/logistics/pvt/shipping-policies`, and the endpoints path is `/api/logistics/pvt/shipping-policies`.
@@ -214,6 +230,7 @@ To update the left navigation after changing an endpoint's path follow the steps
         "children": []
     }
     ```
+    >⚠️ Don't change the `slug` field. It should have the same value as the API category slug.
 
 3. Open a PR.
 4. Send the PR in `#dev-portal-pr` Slack channel for approval.
@@ -304,14 +321,14 @@ updatedAt: "2022-10-04T14:36:08.692Z"
 
 1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
     >⚠️ Before you start adding commits, read the repository's readme file. Commits must be done in a certain format for your PR to be approved.
-2. In line 37 of the [next.config.js](https://github.com/vtexdocs/devportal/blob/07519dab0c357cb107342cf21bc86ae107cce603/next.config.js#L37) file, you will find an array of redirects. Add the one you want to create following this format, replacing `source` and `destination` with the desired slugs:
+2. In the file [netlify.toml](https://github.com/vtexdocs/devportal/blob/main/netlify.toml), you will find an array of redirects. Add the one you want to create following this format, replacing `from` and `to` with the desired slugs:
 
-    ```javascript
-        {
-                source: '/vtex-rest-api/docs/:slug',
-                destination: '/docs/guides/:slug',
-                permanent: true,
-        },
+    ```
+        [[redirects]]
+        force = true
+        from = "/vtex-rest-api/docs/:slug"
+        status = 308
+        to = "/docs/guides/:slug"
     ```
 
     Make sure you add specific redirects before more global redirects, otherwise they will have no effect. For now, hashlinks (`#`) are not supported in the source slug.

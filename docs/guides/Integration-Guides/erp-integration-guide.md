@@ -1,35 +1,37 @@
 ---
 title: "Back office integration guide (ERP/PIM/WMS)"
 slug: "erp-integration-guide"
+excerpt: "Use our APIs to build a complete back-office integration"
 hidden: false
 createdAt: "2020-03-11T20:58:11.386Z"
 updatedAt: "2022-09-22T14:51:08.009Z"
 ---
 
->ℹ️ This guide refers mostly to ERPs. But keep in mind that integrating PIMs and WMSs basically follows the same principles and the content will point out whenever that is not the case."
+>ℹ️ This guide refers mostly to ERPs. But keep in mind that integrating PIMs and WMSs basically follows the same principles and the content will point out whenever that is not the case.
 
 An ecommerce operation may use a range of software to better manage its resources and information. In this guide, we take a look at the best ways to integrate these systems with your VTEX store. This allows your store to optimize operations by creating efficient communications between VTEX and other software.
 
 Each operation has its specific needs and we do not recommend any particular software. However, here are some examples used by different operations:
+
 - Enterprise Resource Planning (ERP) and Warehouse Management System (WMS)
-    - Aquilon
-    - Aptean Catalyst
-    - Brightpearl
-    - ECI Software Solutions
-    - IBM Sterling WMS
-    - JDA
-    - Microsoft
-    - Oracle Netsuite
-    - Sage
-    - SAP
-    - Manhattan
+  - Aquilon
+  - Aptean Catalyst
+  - Brightpearl
+  - ECI Software Solutions
+  - IBM Sterling WMS
+  - JDA
+  - Microsoft
+  - Oracle Netsuite
+  - Sage
+  - SAP
+  - Manhattan
 - Product Information Manager (PIM)
-    - Akeneo
-    - Simplus
-    - IBM Product Master
-    - Informatica
-    - inRiver
-    - Widen Collective
+  - Akeneo
+  - Simplus
+  - IBM Product Master
+  - Informatica
+  - inRiver
+  - Widen Collective
 
 For a complete back-office integration, you should use our APIs to send your Products, Pricing, and Inventory to VTEX and to receive your Orders from VTEX. In order to provide more detail on this data flow, this overview is split into the initial setup and the ongoing integration flow.
 
@@ -39,8 +41,8 @@ For a complete back-office integration, you should use our APIs to send your Pro
 
 To get your integration up and running, you need to perform some configuration steps and then set up the middleware that will handle the ongoing flow. See the steps below.
 
-
 ### Configuration
+
 [block:html]
 {
   "html": "<div style=\"margin: 0px auto; width: 50%;\">\n  <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" width=\"235px\" height=\"541px\" viewBox=\"-0.5 -0.5 235 541\" content=\"&lt;mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2022-02-08T22:45:39.624Z&quot; agent=&quot;5.0 (Windows)&quot; etag=&quot;NyXsc24ZRdkISHTYS18d&quot; version=&quot;16.4.3&quot; type=&quot;google&quot;&gt;&lt;diagram id=&quot;L_kD2X_V7P35VdTbJaCe&quot; name=&quot;Page-1&quot;&gt;7Vpbc9o4FP41PDoDNjbkMSQh3TSdpstk2+6bYgmjrbC8ssylv75HsgQ2NsRLu4QU0pmO9flIRzr3I9zyrqeLO4GSyQeOCWu5bbxoeTct1+0HffhfAcsc6HbbORAJinOoswZG9DsxoCXLKCZpiVByziRNymDI45iEsoQhIfi8TDbmrMw1QRGpAKMQsSr6mWI5Mcdye2v8HaHRxHLuBJf5mymyxOYk6QRhPi9A3m3Luxacy/xpurgmTMnOyiWfN9zydrUxQWLZZELv3ZeBeMKfu+Tj+/v5Yvh4F/ztdM3e5NIemGA4vxlyISc84jFit2t0IHgWY6JWbcNoTfPAeQJgB8B/iJRLo0yUSQ7QRE6ZeUsWVH5R0y98M/paeHOzMCvrwdIOYimWhUlq+LX4bj1Nj+y8/HzqUFvFZqCUZyI0VPcfH3x59enDvccek8fJw+iTHDjW/JCIiNxBd7lSLjgF4VMC+4F5gjAk6ay8D2TMM1rRrTUID0aJ9QrdtckZYpnh9Mc0AR2pMwsagittKjyd0ylDsdLsmMfSaK3TV2PK2DVnXGhKb+yrf4DbKcPCe0zGKGNSvZWCfyOFeYH+M+sX8PxvpaQancyIkGRRgKpiNW9dz7iZiTPBpRnP117rBgabFD223d6uCsPuT4gsKI5AYit+ThD4JYbdXpVhp1fD0Nvgh5gkIkaSDJRfpRULWJ11f6NwK0bRcgOtK0xn8BipR6elAkgOI7VnQcaaOPg3UzEKPFiqoHultucOMZkRxhMi0osZ6Ogi5FNA1aMjSCodlFBFxUM40ZCIxKGxJJEAF+CxQ7VNOtYiLQe7lRFR9vqMUmLN1m4M1kKWqoAVjnFcJ/NSIp0xXRBsIGfMhZMmJKRjGjqQtWBZuVUEembBdSF/CeW9Zn6e9+wKWwX0LF4S2UZIUCuWQ3bZp2Oeh4uC+xsIMRrFMGRkrFZQ/kshmV4ZeEox1jlkPqGSjBKkA+4cKodKXinGIr82RuyMfy8HDuu3NXGi3cBt94nYtSnYPafgxinYb5iCe6+Zgv1KtM2dOUuUvyKJGI9OJAt77aZZ2N8zC3fLWdhza7JwHcNXyMLB7ixcsAabDJSmnFSbAuSmdsdPFsVM0bbRdg3quFtJJodMgCrhZYmzsvPNvVyDjCOujUYKsm9i/02F5YWCgHycZ4G0EW7ubWDxs8wqMrNFkaZKnQhyZFJXWJXIjk+Ulk+aoLiWkS6d4LS6drrSxaGKiDmXF3axYgFiuywfNef35tR5Z/GzGo9fjdAJEVYX14YWP2vxDWhRVzA1WvzL4js70f+urp/sXZv2pCAe+h0964WUBhMOotHloT9o+TdqJeijUlOZV0rs7U3xnq2s37j6XlXb1drXrSu2O/9XL+ude9nGvWyvYS+7ReeH6WV7u66TOc5CeSoXyt3GF8rBfq1s19toZY/4Qrn/q1vZV7yotVa8uZlNQz9YdXIEsvDKyEYx3kRW7cqU0xEewnglOckdKRAmTsIZDZfVrV5hXJIbZDd1MwJTFGwnnY7wDJJ+y3aY2ej904kKpbkrahmdshsWhEan6jOPl2RlqQ7avhy2kX2VBuzN/HjYa1wkmhqtf8AfD7d/a1Jfn9N4BqflhsnvX6D3a9rf2gK9t1997vfL/PyahuBY6nPb4B/dFx8Fo6z8MKSvmpQ8wSomPEt3XyUd41cfhdN5WYL1zZnKPtsP/aSp1hmoQHn+nKMQ337mDuxXRWQYrr/WzD11/cmrd/sD&lt;/diagram&gt;&lt;/mxfile&gt;\"><defs/><g><path d=\"M 117 441 L 117 471.27\" fill=\"none\" stroke=\"rgb(0, 0, 0)\" stroke-miterlimit=\"10\" pointer-events=\"stroke\"/><path d=\"M 117 475.99 L 113.85 469.69 L 117 471.27 L 120.15 469.69 Z\" fill=\"rgb(0, 0, 0)\" stroke=\"rgb(0, 0, 0)\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 371.7 L 0 351 L 234 351 L 234 371.7\" fill=\"#f5f5f5\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 371.7 L 0 441 L 234 441 L 234 371.7\" fill=\"rgb(255, 255, 255)\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 371.7 L 234 371.7\" fill=\"none\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><g fill=\"#333333\" font-family=\"Helvetica\" font-weight=\"bold\" text-anchor=\"middle\" font-size=\"16.2px\"><text x=\"116.5\" y=\"368.05\">Import prices</text></g><rect x=\"0\" y=\"387\" width=\"180\" height=\"27\" fill=\"none\" stroke=\"none\" pointer-events=\"all\"/><g transform=\"translate(-0.5 -0.5)scale(0.9)\"><switch><foreignObject style=\"overflow: visible; text-align: left;\" pointer-events=\"none\" width=\"112%\" height=\"112%\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 198px; height: 1px; padding-top: 445px; margin-left: 2px;\"><div style=\"box-sizing: border-box; font-size: 0px; text-align: left;\" data-drawio-colors=\"color: rgb(0, 0, 0); \"><div style=\"display: inline-block; font-size: 15px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;\"><div>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-prices\">Set base price</a></div><div>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-prices#set-fixed-prices-for-specific-contexts\">Set fixed prices for specific contexts</a><br /></div></div></div></div></foreignObject><text x=\"2\" y=\"450\" fill=\"rgb(0, 0, 0)\" font-family=\"Helvetica\" font-size=\"15px\">- Set base price...</text></switch></g><path d=\"M 117 135 L 117 165.27\" fill=\"none\" stroke=\"rgb(0, 0, 0)\" stroke-miterlimit=\"10\" pointer-events=\"stroke\"/><path d=\"M 117 169.99 L 113.85 163.69 L 117 165.27 L 120.15 163.69 Z\" fill=\"rgb(0, 0, 0)\" stroke=\"rgb(0, 0, 0)\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 20.7 L 0 0 L 234 0 L 234 20.7\" fill=\"#f5f5f5\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 20.7 L 0 135 L 234 135 L 234 20.7\" fill=\"rgb(255, 255, 255)\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 20.7 L 234 20.7\" fill=\"none\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><g fill=\"#333333\" font-family=\"Helvetica\" font-weight=\"bold\" text-anchor=\"middle\" font-size=\"16.2px\"><text x=\"116.5\" y=\"17.05\">Set up catalog</text></g><rect x=\"0\" y=\"27\" width=\"108\" height=\"99\" fill=\"none\" stroke=\"none\" pointer-events=\"all\"/><g transform=\"translate(-0.5 -0.5)scale(0.9)\"><switch><foreignObject style=\"overflow: visible; text-align: left;\" pointer-events=\"none\" width=\"112%\" height=\"112%\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 85px; margin-left: 2px;\"><div style=\"box-sizing: border-box; font-size: 0px; text-align: left;\" data-drawio-colors=\"color: rgb(0, 0, 0); \"><div style=\"display: inline-block; font-size: 15px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;\"><div style=\"font-size: 15px\" align=\"left\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog\">Category tree</a></div><div style=\"font-size: 15px\" align=\"left\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#create-brands\">Brands</a></div><div style=\"font-size: 15px\" align=\"left\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#create-specifications-groups\">Specifications</a></div><div style=\"font-size: 15px\" align=\"left\"><span style=\"white-space: pre ; font-size: 15px\">\t</span>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#create-specifications-groups\">Groups</a></div><div style=\"font-size: 15px\" align=\"left\"><span style=\"white-space: pre ; font-size: 15px\">\t</span>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#create-specification-fields\">Fields</a></div><div style=\"font-size: 15px\" align=\"left\"><span style=\"white-space: pre ; font-size: 15px\">\t</span>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#create-specification-values\">Values</a><br style=\"font-size: 15px\" /></div></div></div></div></foreignObject><text x=\"2\" y=\"90\" fill=\"rgb(0, 0, 0)\" font-family=\"Helvetica\" font-size=\"15px\">- Category tree...</text></switch></g><path d=\"M 117 315 L 117 345.27\" fill=\"none\" stroke=\"rgb(0, 0, 0)\" stroke-miterlimit=\"10\" pointer-events=\"stroke\"/><path d=\"M 117 349.99 L 113.85 343.69 L 117 345.27 L 120.15 343.69 Z\" fill=\"rgb(0, 0, 0)\" stroke=\"rgb(0, 0, 0)\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 191.7 L 0 171 L 234 171 L 234 191.7\" fill=\"#f5f5f5\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 191.7 L 0 315 L 234 315 L 234 191.7\" fill=\"rgb(255, 255, 255)\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 191.7 L 234 191.7\" fill=\"none\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><g fill=\"#333333\" font-family=\"Helvetica\" font-weight=\"bold\" text-anchor=\"middle\" font-size=\"16.2px\"><text x=\"116.5\" y=\"188.05\">Import products</text></g><rect x=\"0\" y=\"243\" width=\"180\" height=\"27\" fill=\"none\" stroke=\"none\" pointer-events=\"all\"/><g transform=\"translate(-0.5 -0.5)scale(0.9)\"><switch><foreignObject style=\"overflow: visible; text-align: left;\" pointer-events=\"none\" width=\"112%\" height=\"112%\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 198px; height: 1px; padding-top: 285px; margin-left: 2px;\"><div style=\"box-sizing: border-box; font-size: 0px; text-align: left;\" data-drawio-colors=\"color: rgb(0, 0, 0); \"><div style=\"display: inline-block; font-size: 15px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;\"><div style=\"font-size: 15px\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-products\">Import product</a></div><div style=\"font-size: 15px\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-products#import-product-specifications\">Import product specifications</a></div><div style=\"font-size: 15px\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-products#add-product-to-trade-policy\">Add product to trade policy</a></div><div style=\"font-size: 15px\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-products#import-sku\">Import SKU</a></div><div style=\"font-size: 15px\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-products#import-sku-specifications\">Import SKU specifications</a></div><div style=\"font-size: 15px\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-products#import-sku-image\">Import SKU image</a><br style=\"font-size: 15px\" /></div><div style=\"font-size: 15px\" align=\"left\"><br style=\"font-size: 15px\" /></div></div></div></div></foreignObject><text x=\"2\" y=\"290\" fill=\"rgb(0, 0, 0)\" font-family=\"Helvetica\" font-size=\"15px\">- Import product...</text></switch></g><path d=\"M 0 497.7 L 0 477 L 234 477 L 234 497.7\" fill=\"#f5f5f5\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 497.7 L 0 540 L 234 540 L 234 497.7\" fill=\"rgb(255, 255, 255)\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 497.7 L 234 497.7\" fill=\"none\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><g fill=\"#333333\" font-family=\"Helvetica\" font-weight=\"bold\" text-anchor=\"middle\" font-size=\"16.2px\"><text x=\"116.5\" y=\"494.05\">Import inventory</text></g><rect x=\"0\" y=\"504\" width=\"180\" height=\"27\" fill=\"none\" stroke=\"none\" pointer-events=\"all\"/><g transform=\"translate(-0.5 -0.5)scale(0.9)\"><switch><foreignObject style=\"overflow: visible; text-align: left;\" pointer-events=\"none\" width=\"112%\" height=\"112%\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 198px; height: 1px; padding-top: 575px; margin-left: 2px;\"><div style=\"box-sizing: border-box; font-size: 0px; text-align: left;\" data-drawio-colors=\"color: rgb(0, 0, 0); \"><div style=\"display: inline-block; font-size: 15px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;\"><div>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-inventory\">Create warehouses</a></div><div>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-import-inventory#update-sku-inventory\">Update SKU inventory</a><br /></div></div></div></div></foreignObject><text x=\"2\" y=\"580\" fill=\"rgb(0, 0, 0)\" font-family=\"Helvetica\" font-size=\"15px\">- Create warehouses...</text></switch></g></g><switch><g requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"/><a transform=\"translate(0,-5)\" xlink:href=\"https://www.diagrams.net/doc/faq/svg-export-text-problems\" target=\"_blank\"><text text-anchor=\"middle\" font-size=\"10px\" x=\"50%\" y=\"100%\">Text is not SVG - cannot display</text></a></switch></svg>\n</div>"
@@ -58,6 +60,7 @@ Unlike the processes shown in the image above, this import does not require a sp
 See the [Import customer data integration guide](https://developers.vtex.com/docs/guides/import-customer-data) to learn how to perform this process using [Master Data v2](https://help.vtex.com/en/tutorial/master-data-v2--3JJ1mlzuo88w22gO0gy0QS#).
 
 ### Middleware setup
+
 [block:html]
 {
   "html": "<div style=\"margin: 0px auto; width: 50%;\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" width=\"261px\" height=\"191px\" viewBox=\"-0.5 -0.5 261 191\" content=\"&lt;mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2022-02-25T21:34:56.093Z&quot; agent=&quot;5.0 (Windows)&quot; etag=&quot;xqPgzelLGStJM2ao1viY&quot; version=&quot;16.5.4&quot; type=&quot;google&quot;&gt;&lt;diagram id=&quot;L_kD2X_V7P35VdTbJaCe&quot; name=&quot;Page-1&quot;&gt;5VdNc9owEP01HJ3BNhA4BhLSZMgkKZ1Jk5tqr201QuvKMh/99ZUsGduYJNAe2qQww2jfSlrt7vMT7viTxfpSkDS5wRBYx+uG645/3vG80dBTvxrYGMDte6cGiQUNLVYBc/oTLNi1aE5DyBoTJSKTNG2CAXIOgWxgRAhcNadFyJpRUxJDC5gHhLXRBxrKxKDDMguNfwIaJ2VkdzAyngUpJ9tMsoSEuKpB/kXHnwhEaUaL9QSYLl5ZF7Nu+oJ3ezABXB6y4Pp21pdn9zfXPrtL75LZ/F6OHd/ssiQstwnPQSogT9UPihCEjiEwgCyjPLaZyE1ZnmxFF4xwZY0j5NL2zx1qmzI2QYaimOlHff1VeLlkWvOHEJGcSe2VAp+htm5QfOz+Ndx8FN6ugy3NEoSEdQ2ydbkEXIAUGzXFenu2RZakjtstkVXVc29gsaTe764FieVZvN18G++z4iXhsSrZNqDTHzZD9kftgO7pnoD+TjzCJAhOJIwx52FWZ4Aa1JKtoIIXR3Ck1+JIxxsUzQrpUg1jPXQ6mn4GJvrMAqJi8uBHrhk+TqTUj+yZPp43DWEJDFMQ2clSNekkwIVC9dARkEmHpFTPwkBlNAWROpRLiAWRFLmTgXTy1Cno6dTJWcYqDzVJVN2hYrI5ntqRlDNK7JvYRXT4Kr1/NWM/IDwA5pQJ7hag8LJik9fSfyfJUr5EGsBL2V4VbsOE956qgaQgwfNean+pPH9A6h01V4c2CS6YVvGWHHM0Sl9TbgsRRmOuTAaR3kFLL1WX6JmFFzQMdZDxKqES5ikJdMSV+sugMKGVC7QCdXeukf5eeX/1Intb863iensUvrdHcIevCHxDaY+VVddt6eqeu7fGlv/l8nX9Ay/f/se/e12vRZK/pk8NKrZuGuQRjXOhCx2Bepo1hfXpEJ/3a9TH0R73cM4fKT67jPsd8enNkmjYu316Skeb+6t5NnsA4nit+kOo3nusiUImGCMn7KJCd2pVzZkhprZl30HKja0gySU2GwprKr/q5Sd9az3WPOdru3NhbEqDq3TNot7AK4HHurdaWFiNlXcgqKoYCAuatHWuL75FWSjDXARwwKMpiYjhzaupTQUB+n/ZsnmQIxqtzOrl0ehN9QruX/wC&lt;/diagram&gt;&lt;/mxfile&gt;\"><defs/><g><path d=\"M 0 113 L 0 90 L 260 90 L 260 113\" fill=\"#f5f5f5\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 113 L 0 190 L 260 190 L 260 113\" fill=\"rgb(255, 255, 255)\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 113 L 260 113\" fill=\"none\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><g fill=\"#333333\" font-family=\"Helvetica\" font-weight=\"bold\" text-anchor=\"middle\" font-size=\"18px\"><text x=\"129.5\" y=\"109\">Set up order processing</text></g><rect x=\"0\" y=\"110\" width=\"240\" height=\"80\" fill=\"none\" stroke=\"none\" pointer-events=\"all\"/><g transform=\"translate(-0.5 -0.5)\"><switch><foreignObject style=\"overflow: visible; text-align: left;\" pointer-events=\"none\" width=\"100%\" height=\"100%\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 238px; height: 1px; padding-top: 150px; margin-left: 2px;\"><div style=\"box-sizing: border-box; font-size: 0px; text-align: left;\" data-drawio-colors=\"color: rgb(0, 0, 0); \"><div style=\"display: inline-block; font-size: 15px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;\"><div>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing\">Change order</a><br /></div><div>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing#cancel-order\">Cancellation</a></div><div>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing#invoice-order\">Invoicing</a></div><div>- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing#order-tracking\">Tracking</a><br /></div></div></div></div></foreignObject><text x=\"2\" y=\"155\" fill=\"rgb(0, 0, 0)\" font-family=\"Helvetica\" font-size=\"15px\">- Change order...</text></switch></g><path d=\"M 0 23 L 0 0 L 260 0 L 260 23\" fill=\"#f5f5f5\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 23 L 0 50 L 260 50 L 260 23\" fill=\"rgb(255, 255, 255)\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><path d=\"M 0 23 L 260 23\" fill=\"none\" stroke=\"#666666\" stroke-miterlimit=\"10\" pointer-events=\"all\"/><g fill=\"#333333\" font-family=\"Helvetica\" font-weight=\"bold\" text-anchor=\"middle\" font-size=\"18px\"><text x=\"129.5\" y=\"19\">Set up order integration</text></g><rect x=\"0\" y=\"20\" width=\"240\" height=\"30\" fill=\"none\" stroke=\"none\" pointer-events=\"all\"/><g transform=\"translate(-0.5 -0.5)\"><switch><foreignObject style=\"overflow: visible; text-align: left;\" pointer-events=\"none\" width=\"100%\" height=\"100%\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 238px; height: 1px; padding-top: 35px; margin-left: 2px;\"><div style=\"box-sizing: border-box; font-size: 0px; text-align: left;\" data-drawio-colors=\"color: rgb(0, 0, 0); \"><div style=\"display: inline-block; font-size: 15px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;\">- <a href=\"https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration\">Configure feed or hook</a></div></div></div></foreignObject><text x=\"2\" y=\"40\" fill=\"rgb(0, 0, 0)\" font-family=\"Helvetica\" font-size=\"15px\">- Configure feed or hook</text></switch></g><path d=\"M 120 50 L 120 70 L 120.08 83.63\" fill=\"none\" stroke=\"rgb(0, 0, 0)\" stroke-miterlimit=\"10\" pointer-events=\"stroke\"/><path d=\"M 120.11 88.88 L 116.57 81.9 L 120.08 83.63 L 123.57 81.86 Z\" fill=\"rgb(0, 0, 0)\" stroke=\"rgb(0, 0, 0)\" stroke-miterlimit=\"10\" pointer-events=\"all\"/></g><switch><g requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"/><a transform=\"translate(0,-5)\" xlink:href=\"https://www.diagrams.net/doc/faq/svg-export-text-problems\" target=\"_blank\"><text text-anchor=\"middle\" font-size=\"10px\" x=\"50%\" y=\"100%\">Text is not SVG - cannot display</text></a></switch></svg>\n</div>\n"
@@ -82,7 +85,6 @@ Once you have configurated your store and set up the middleware, the general flo
 [/block]
 Each of the requests or processes represented by the arrows in the diagram above, is triggered by a different event in the day-to-day operation of an ecommerce. See details on the following sessions.
 
-
 ### Send product updates
 
 **Trigger:** Whenever there are product updates in your ERP or PIM.
@@ -91,7 +93,6 @@ There are many business reasons that may lead to product updates to your store, 
 
 Learn more about how to implement this in our [Product updates](https://developers.vtex.com/docs/guides/erp-integration-updating-and-deleting-information#product-updates) guide.
 
-
 ### Send pricing updates
 
 **Trigger:** Whenever there are price changes in your ERP or PIM.
@@ -99,7 +100,6 @@ Learn more about how to implement this in our [Product updates](https://develope
 Similar to product updates, there are different reasons as to why stores change their prices. In any case, whenever you decide to change your store’s prices, you should set up the integration to automatically send these updates from the ERP to VTEX.
 
 Learn more in our guide [Pricing updates](https://developers.vtex.com/docs/guides/erp-integration-updating-and-deleting-information#pricing-updates).
-
 
 ### Receive order flow notification
 
@@ -111,7 +111,6 @@ For example, the status `ready-for-handling` tells you that the order has been p
 
 To learn more see [Set up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration).
 
-
 ### Get order information
 
 **Trigger:** When your store needs to take action regarding a specific order.
@@ -122,20 +121,17 @@ For instance, when an order gets to `ready-for-handling` it is time to pick and 
 
 To learn more check [Set up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration).
 
-
 ### Send invoice information
 
 **Trigger:** When your ERP has generated the invoice for the order.
 
 To learn more see [Invoice order](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing#invoice-order).
 
-
 ### Send tracking information
 
 **Trigger:** When the assigned carrier makes tracking information available for a given order.
 
 In VTEX order management, tracking information is tied to the order’s invoice. Learn more in [Order tracking](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing#order-tracking).
-
 
 ### Send order changes
 
@@ -147,11 +143,11 @@ To learn more see [Change order](https://developers.vtex.com/docs/guides/change-
 
 For marketplaces, it may also be necessary to perform changes in sellers. Learn more with our [Change seller guide](https://developers.vtex.com/docs/guides/change-seller)
 
-
 ### Send order cancelations
 
 **Trigger:** When your store needs to cancel an order.
 
 To learn more see [Cancel order](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing#cancel-order).
 
->ℹ️ Make sure you've gone through our [Getting Started Guide](https://developers.vtex.com/docs/guides/getting-started-platform-overview) and have [created the appKey and appToken](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys) for the system you want to integrate with VTEX.\n\nFor stores hosted in Seller Portal or Admin v4, you can find the Application Keys page by clicking on your **profile's avatar**, which is marked with the initial from your email, then going to **Account settings > Application keys.**
+>ℹ️ Make sure you've gone through our [Getting Started Guide](https://developers.vtex.com/docs/guides/getting-started-platform-overview) and have [created the appKey and appToken](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys) for the system you want to integrate with VTEX.
+>For stores hosted in Seller Portal or Admin v4, you can find the Application Keys page by clicking on your **profile's avatar**, which is marked with the initial from your email, then going to **Account settings > Application keys.**

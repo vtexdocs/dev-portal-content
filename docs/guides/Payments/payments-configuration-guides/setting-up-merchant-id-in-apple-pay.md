@@ -101,12 +101,8 @@ Firstly, you need to validate each of the desired URLs. Once this step is correc
 
 Lastly, you need to import this file to VTEX's system through Postman - an [API](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis) management tool.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "This validation can only be done one domain at a time. This means that if your store uses 10 different domains, the process will have to be repeated 10 times."
-}
-[/block]
+>⚠️ This validation can only be done one domain at a time. This means that if your store uses 10 different domains, the process will have to be repeated 10 times.
+
 Follow these steps:
 
 1. Search for the recently created **MerchantID** in the search bar.
@@ -131,7 +127,7 @@ Thereafter, to upload the`.txt` file by API, follow these instructions:
 
 Then, start a Postman session. You perform a call to VTEX's CDN using the POST method:
 
-1. Configure the route **POST** `https://{{yourdomain}}/.well-known/raw/{token}`.
+1. Configure the route **POST** `https://{{yourdomain}}/.well-known/raw/apple-developer-merchantid-domain-association.txt`.
 2. Ensure that **all the contents** of the `.txt` file is in **quotation marks** and without any **line breaks**.
 3. Add the **X-VTEX-API-AppKey** and the **X-VTEX-API-AppToken** to the header.
 
@@ -149,12 +145,7 @@ Lastly, you must generate a Merchant ID certificate, which will be used every ti
 
 To complete the action, you'll need to create a password to protect the exported data.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "We recommend an easy to remember password, since it will be filled into the Apple Merchant Password field upon configuring the gateway affiliation on VTEX's platform."
-}
-[/block]
+> ℹ️️ We recommend an easy to remember password, since it will be filled into the Apple Merchant Password field upon configuring the gateway affiliation on VTEX's platform.
 
 1. Access the **Certificate**, **Identifiers & Profilers** module.
 2. From the left side menu, choose **Identifiers**.

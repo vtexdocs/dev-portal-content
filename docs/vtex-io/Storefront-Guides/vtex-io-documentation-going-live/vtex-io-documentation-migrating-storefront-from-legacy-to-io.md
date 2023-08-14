@@ -37,7 +37,7 @@ Once you have created your workspaces, [open a support ticket](https://help.vtex
 
 You can check the Edition app installed in a workspace by running the following command: `vtex edition get`. Please refer to [Edition apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) for further information.
 
->⚠️ Do not request the Edition change for the master workspace of your store. This will make your main domain display a blank Store Framework template instead of your existing Legacy CMS Portal store.
+>⚠️ Do not request the Edition change for the master workspace of your store. This will cause some features, such as My Account, to stop functioning properly.
 
 ### Step 2 - Developing and testing your storefront
 

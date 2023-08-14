@@ -35,7 +35,7 @@ After you have configured your [OAuth](https://developers.vtex.com/docs/guides/l
 
 If you have set up your OAuth integration and implemented login on your frontend, users may be able to authenticate themselves. However, this alone is not sufficient for your frontend to communicate with VTEX REST APIs.
 
-To enable this communication, your frontend application must exchange the [access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) from the OAuth login for a VTEX [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). This can be achieved through the [POST - Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/vtexid/audience/webstore/provider/oauth/exchange) API.
+To enable this communication, your frontend application must exchange the [access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) from the OAuth login for a VTEX [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). This can be achieved through the [POST - Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange) API.
 
 See an example below of how to use the **POST - Exchange OAuth access token for VTEX credential** API to perform this operation:
 
@@ -43,7 +43,7 @@ See an example below of how to use the **POST - Exchange OAuth access token for 
 
   ```
   POST
-  https://{accountName}.{environment}.com.br/vtexid/audience/webstore/provider/oauth/exchange
+  https://{accountName}.{environment}.com.br/api/vtexid/audience/webstore/provider/oauth/exchange
   ```
 
 - Request body:
@@ -87,3 +87,12 @@ Since your store is not using VTEX's native frontend to authenticate shoppers, t
 - Keeping track of the expiration time set for the [VTEX user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token).
 - Requiring new login if it was somehow revoked.
 - Repeating the [token exchange](#exchanging-oauth-identity-provider-access-token-for-vtex-user-token) in case the shopper had to log in again.
+
+## Learn more
+
+See these other guides to learn more about building a headless shopping experience using VTEX:
+
+- [Headless commerce overview](https://developers.vtex.com/docs/guides/headless-commerce)
+- [Headless catalog and search](https://developers.vtex.com/docs/guides/headless-catalog)
+- [Headless cart and checkout](https://developers.vtex.com/docs/guides/headless-cart-and-checkout)
+- [Headless profile management and order history](https://developers.vtex.com/docs/guides/headless-profile-management-and-order-history)

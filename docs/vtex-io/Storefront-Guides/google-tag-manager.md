@@ -3,7 +3,7 @@ title: "Google Tag Manager"
 slug: "google-tag-manager"
 hidden: false
 createdAt: "2022-01-13T14:20:38.126Z"
-updatedAt: "2022-02-01T17:19:48.865Z"
+updatedAt: "2023-05-03T12:19:48.865Z"
 category: "VTEX IO Apps"
 ---
 
@@ -11,29 +11,24 @@ The **Google Tag Manager (GTM) app** is a first-party solution that integrates y
 
 With the app, you can avoid contact with the store's source code when adding, editing, or removing website tags and quickly provide user browsing tracking for Google Analytics.
 
+> ⚠️ This app is only available for stores built with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework). For stores built with Legacy CMS Portal, refer to [Configuring Google Tag Manager](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG#configuring-google-tag-manager).
+
 ![gtm-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-tag-manager-0.png)
 
 <Flex>
 
-<WhatsNextCard
-title="Installing Google Tag Manager"
-description="Step-by-step on how to install the Google Tag Manager app in your VTEX Admin."
-linkTo="/docs/guides/vtex-io-documentation-installing-google-tag-manager"
-linkTitle="See more"
-/>
+  <WhatsNextCard
+  title="Installing Google Tag Manager"
+  description="Step-by-step on how to install the Google Tag Manager app in your VTEX Admin."
+  linkTo="/docs/guides/vtex-io-documentation-installing-google-tag-manager"
+  linkTitle="See more"
+  />
 
-<WhatsNextCard
-title="Setting up Google Tag Manager"
-description="Step-by-step to set up the Google Tag Manager app with variables, triggers, and tags."
-linkTo="/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
-linkTitle="See more"
-/>
-
-<WhatsNextCard
-title="Migrating Google Tag Manager app from major 2.x to major 3.x"
-description="Step-by-step to update the Google Tag Manager app to version 3.x."
-linkTo="/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
-linkTitle="See more"
-/>
-
+  <WhatsNextCard
+  title="Setting up Google Tag Manager"
+  description="Step-by-step to set up the Google Tag Manager app with variables, triggers, and tags."
+  linkTo="/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
+  linkTitle="See more"
+  />
+ 
 </Flex>

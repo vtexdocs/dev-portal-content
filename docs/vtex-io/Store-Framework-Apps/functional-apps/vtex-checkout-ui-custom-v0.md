@@ -11,7 +11,7 @@ The Checkout UI Custom app is responsible for customizing your store's Checkout 
 
 ## Configuration
 
-1. Using your terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into the desired VTEX account.
+1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into the desired VTEX account.
 2. Run `vtex install vtex.checkout-ui-custom` on the account you're working on.
 3. Access your VTEX account's admin.
 4. Access **Store Setup** and then **Checkout UI Custom**.

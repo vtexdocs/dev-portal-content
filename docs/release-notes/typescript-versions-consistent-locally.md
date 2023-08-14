@@ -1,10 +1,10 @@
 ---
 title: 'Typescript versions consistent locally'
-excerpt: 'The VTEX IO Toolbelt now overwrites local `package.json` dependencies to match the same Typescript version as in current Builder-Hub.'
+excerpt: 'The VTEX IO CLI now overwrites local `package.json` dependencies to match the same Typescript version as in current Builder-Hub.'
 createdAt: '2019-12-12T18:27:49.833Z'
 ---
 
-The VTEX IO Toolbelt now overwrites local `package.json` dependencies to match the same Typescript version as in current Builder-Hub.
+The VTEX IO CLI now overwrites local `package.json` dependencies to match the same Typescript version as in current Builder-Hub.
 
 :eyes: Builder-Hub now uses Typescript 3.5.2. It previously used version 3.4.3.
 
@@ -14,7 +14,7 @@ As the local `Package.json` was not overwritten, there was a mismatch between it
 
 ## What you need to do
 
-When running the Toolbelt on your app, you will see that your `package.json` might change. Commit that change to your version control.
+When running the VTEX IO CLI on your app, you will see that your `package.json` might change. Commit that change to your version control.
 
 ## Side effects
 

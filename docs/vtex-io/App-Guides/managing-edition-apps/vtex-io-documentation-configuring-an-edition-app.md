@@ -2,6 +2,8 @@
 title: "Configuring an Edition App"
 slug: "vtex-io-documentation-configuring-an-edition-app"
 hidden: false
+category: "App Development"
+excerpt: "If you already match all requirements to become a Sponsor Account, learn now how to create your own Edition Apps for child accounts."
 createdAt: "2020-06-03T16:02:44.714Z"
 updatedAt: "2022-12-13T20:17:44.546Z"
 ---

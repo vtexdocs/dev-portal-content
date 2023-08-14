@@ -25,4 +25,4 @@ This is the protocol defining the communication standards gift card providers mu
 
 Our native gift card provider is bundled into your VTEX store, and [Gift Card API](https://developers.vtex.com/docs/api-reference/giftcard-api#overview) is the implementation of the Gift Card Provider Protocol for it. It can be used to manage VTEX gift cards directly - although Gift Card Hub API provides the same functionality in a more generic abstraction layer.
 
->⚠️ "The `VtexGiftCard` provider was built from a legacy system, created before our Gift Card system architecture evolved to the Gift Card Hub model. As such, it should not be considered a reference implementation of the Gift Card Provider Protocol.
+>⚠️ The `VtexGiftCard` provider was built from a legacy system, created before our Gift Card system architecture evolved to the Gift Card Hub model. As such, it should not be considered a reference implementation of the Gift Card Provider Protocol.

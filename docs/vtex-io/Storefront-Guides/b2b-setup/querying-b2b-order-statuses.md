@@ -22,7 +22,7 @@ The B2B Orders app comes with a specific pattern for communicating with the ERP 
 - [Search order details](#search-order-details)
 - [Search order documents](#optional-search-order-documents) [OPTIONAL]
 
-> ℹ If you have specific business needs which are not satisfied by the scenarios presented, you can customize the B2B Orders app.
+> If you have specific business needs which are not satisfied by the scenarios presented, you can customize the B2B Orders app.
 
 The possible requests and response formats for each of the ERP API's required endpoints are presented below.
 
@@ -271,7 +271,7 @@ By exposing the `GET` `api/v1/arquivospedido?pedidoErpId={pedidoErpId}&revendaId
 
 Follow the steps below to install the B2B Orders app.
 
-1. Using the terminal and the [Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the B2B Orders app in the desired workspace by running `vtex install vtex.omnichannel-order-status`.
+1. Using the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the B2B Orders app in the desired workspace by running `vtex install vtex.omnichannel-order-status`.
 2. In your browser, access your account's admin as in `https://{workspace}--{account}.myvtex.com/admin`. ️Remember to replace `{workspace}` and `{account}` with the workspace and account you are using.
 3. Under **Account Settings**, go to \*\*Apps \*\*> **My apps**.
 4. Look for the **B2B Order** app.

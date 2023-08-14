@@ -54,7 +54,7 @@ Check out the instructions below for how it can be done.
 
 3. Declare the `product-summary.shelf` block and add the desired blocks as children, as shown in the example below. If you have any questions about structuring the block, check its [documentation](https://developers.vtex.com/docs/guides/vtex-product-summary).
 
-```json
+```diff
 {
   "list-context.product-list#demo1": {
     "blocks": ["product-summary.shelf#demo1"],
@@ -62,22 +62,22 @@ Check out the instructions below for how it can be done.
 
   },
 
- +  "product-summary.shelf#demo1": {
- +   "children": [
- +    "product-summary-name",
- +    "product-summary-description",
- +    "product-summary-image",
- +    "product-summary-price",
- +    "product-summary-sku-selector",
- +    "product-summary-buy-button"
-    ]
-  }
++ "product-summary.shelf#demo1": {
++   "children": [
++    "product-summary-name",
++    "product-summary-description",
++    "product-summary-image",
++    "product-summary-price",
++    "product-summary-sku-selector",
++    "product-summary-buy-button"
++   ]
++ }
 }
 ```
 
 4. Declare the `slider-layout` block, adding as desired child blocks and props. If you have any questions about structuring the block, check its [documentation](https://developers.vtex.com/docs/guides/vtex-slider-layout).
 
-```json
+```diff
 {
   "list-context.product-list#demo1": {
     "blocks": ["product-summary.shelf#demo1"],
@@ -96,19 +96,19 @@ Check out the instructions below for how it can be done.
     ]
   },
 
-  + "slider-layout#demo-products": {
-  +    "props": {
-  +      "itemsPerPage": {
-  +        "desktop": 1,
-  +        "tablet": 1,
-  +        "phone": 1
-  +      },
-  +      "infinite": true,
-  +      "showNavigationArrows": "desktopOnly",
-  +      "blockClass": "carousel"
-  +    },
-  +    "children": ["rich-text#1", "rich-text#2", "rich-text#3"]
- +  },
++ "slider-layout#demo-products": {
++    "props": {
++      "itemsPerPage": {
++        "desktop": 1,
++        "tablet": 1,
++        "phone": 1
++      },
++      "infinite": true,
++      "showNavigationArrows": "desktopOnly",
++      "blockClass": "carousel"
++    },
++    "children": ["rich-text#1", "rich-text#2", "rich-text#3"]
++  },
 }
 ```
 

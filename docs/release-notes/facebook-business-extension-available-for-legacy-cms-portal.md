@@ -16,5 +16,5 @@ Stores using VTEX IO were not affected by this update, and can follow the instru
 If your store uses Legacy CMS Portal and you want to use the features of the FBE app, follow the instructions in:
 
 - [Facebook Pixel for Legacy CMS Portal: (Frontend)](https://developers.vtex.com/docs/guides/vtex-facebook-fbe#facebook-pixel-for-legacy-cms-portal-frontend)
-- [Configuring Conversions API for stores using our Legacy CMS (Backend)](https://developers.vtex.com/docs/guides/vtex-facebook-fbe#configuring-conversions-api-for-stores-using-our-legacy-cms-backend)
+- [Configuring Conversions API for stores using our Legacy CMS Portal (Backend)](https://developers.vtex.com/docs/guides/vtex-facebook-fbe#configuring-conversions-api-for-stores-using-our-legacy-cms-backend)
 - [Integration with Facebook Business Extension](https://help.vtex.com/en/tracks/integracao-com-o-facebook-business-extension--2hS3ANSZ7vlHCcba4h7k8D)

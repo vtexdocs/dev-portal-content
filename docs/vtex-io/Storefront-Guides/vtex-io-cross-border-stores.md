@@ -8,7 +8,7 @@ category: "Storefront Development"
 ---
 A Cross-border store is a special case of a [multistore](https://help.vtex.com/en/tutorial/creating-multi-store-multi-domain--tutorials_510?locale=en).
 
-Every VTEX account can have multiple stores, meaning that the same VTEX administrative panel can be used to manage more than one store. These accounts are named multistore or multidomain.
+Every VTEX account can have multiple stores, meaning that the same VTEX Admin can be used to manage more than one store. These accounts are named multistore or multidomain.
 
 This feature is mostly used by stores that have different brands and business models, needing multiple operational environments.
 

@@ -4,6 +4,10 @@ slug: "erp-integration-import-prices"
 hidden: false
 createdAt: "2020-03-11T20:58:11.051Z"
 updatedAt: "2022-02-03T13:51:58.560Z"
+excerpt: "Learn how to send pricing information to VTEX."
+seeAlso:
+    - "/docs/api-reference/pricing-api#overview"
+    - "/docs/guides/erp-integration-import-products"
 ---
 
 In this step, you will send the current pricing information for all your products to VTEX.

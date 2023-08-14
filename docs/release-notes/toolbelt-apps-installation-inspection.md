@@ -1,10 +1,10 @@
 ---
-title: Toolbelt apps installation inspection
+title: VTEX IO CLI apps installation inspection
 excerpt: "Automatically check whether route conflicts can occur in your workspace as a result of installing an app."
 createdAt: "2019-08-29T14:47:00.000Z"
 ---
 
-VTEX IO Toolbelt now inspects if route conflicts can occur in your workspace as a result of installing a new app.
+VTEX IO CLI now inspects if route conflicts can occur in your workspace as a result of installing a new app.
 
 ## How it works
 
@@ -18,6 +18,6 @@ In addition to stifling route conflicts in any workspace, an automated inspectio
 
 ## What you need to do
 
-Make sure your **VTEX IO Toolbelt** is updated to version **2.67.0** or higher.
+Make sure your **VTEX IO CLI** is updated to version **2.67.0** or higher.
 
-> ℹ️ You can run `vtex -v` in your Toolbelt in order to check its version and `npm i -g vtex` or `yarn global add vtex` in order to update it. 
+> ℹ️ You can run `vtex -v` to check the VTEX IO CLI version and `npm i -g vtex` or `yarn global add vtex` in order to update it.

@@ -45,15 +45,12 @@ For more information, access [configuring template in the SmartCheckout](https:/
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/checkout-customization-guide-0.PNG)
 
-### Legacy CMS
+### Legacy CMS Portal
 
-In stores using the Legacy CMS, files are managed by the **Files Manager**. The CMS and JS files are located in the route `https://{accountName}.myvtex.com/arquivos/`, and named respectively as *checkout-custom.css* and *checkout-custom.js*.
-[block:callout]
-{
-"type": "warning",
-"body": "Modifications made to Legacy CMS files will be applied to all websites (stores) of your account at the same time."
-}
-[/block]
+In stores using the Legacy CMS Portal, files are managed by the **Files Manager**. The CMS and JS files are located in the route `https://{accountName}.myvtex.com/arquivos/`, and named respectively as *checkout-custom.css* and *checkout-custom.js*.
+
+>⚠️ Modifications made to Legacy CMS Portal files will be applied to all websites (stores) of your account at the same time.
+
 For more information, access [View the contents of the store's CSS files](https://help.vtex.com/en/tutorial/view-the-contents-of-the-stores-css-files--U5v7DXpRSee86uqiKQUQi#).
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/checkout-customization-guide-1.PNG)
@@ -63,16 +60,12 @@ For more information, access [View the contents of the store's CSS files](https:
 ## Customizing Checkout UI - Apps
 
 In addition to Admin VTEX, you can use two apps to customize your store’s Checkout UI: *Checkout UI Settings* and *Checkout UI Custom*.
-[block:callout]
-{
-"type": "warning",
-"body": "If you want to use the Checkout UI Settings app, any script changes made through it will override HTML, CSS, and JS information made through [Admin VTEX](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings)."
-}
-[/block]
+
+>⚠️ If you want to use the Checkout UI Settings app, any script changes made through it will override HTML, CSS, and JS information made through [Admin VTEX](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings).
 
 ### Checkout UI Settings app
 
-The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install). This app, if compared to the [Admin VTEX](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) method, offers the possibility to:
+The Checkout UI Settings app allows you to customize your store's through the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install). This app, if compared to the [Admin VTEX](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) method, offers the possibility to:
 
 - Perform A/B Testing
 - Easily track all changes made to the UI (through app versions)
