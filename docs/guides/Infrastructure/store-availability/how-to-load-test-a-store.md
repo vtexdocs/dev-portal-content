@@ -31,9 +31,9 @@ The main reason for this is that picking the same product over and over does not
 
 ### Customers shop with different emails
 
-When conducting load tests, it's essential to replicate real-world scenarios as closely as possible. To achieve this, ensure that you perform tests using a variety of customer emails.
+When conducting load tests, ensure that you perform tests using a variety of customer emails. Each customer in your store has their own email address, so it is important to simulate purchases from multiple customers as would happen in a real-world scenario.
 
-Each customer should have their own unique email address to accurately simulate individual user interactions. This realistic simulation contributes to more accurate load testing results, providing insights into how the platform performs under different user circumstances.
+This realistic simulation contributes to more accurate load testing results, providing insights into how the platform performs under different user circumstances.
 
 We recommend that you incorporate a randomized selection of email addresses when configuring your load test scenarios.
 
