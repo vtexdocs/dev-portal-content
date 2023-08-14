@@ -45,7 +45,7 @@ Additionally, you can submit the following information to modify your account's 
 - `recaptchaValidation`: configures reCAPTCHA validation status for the account.
 - `requiresLoginToPlaceOrder`: indicates whether authentication is required for completing purchases.
 - `minimumPurchaseDowntimeSeconds`: minimum interval (in seconds) between successive purchases.
-- `cartAgeToUseNewCardSeconds`: define a minimum cart existence period before allowing the use of a new credit card.
+- `cartAgeToUseNewCardSeconds`: minimum cart existence period (in seconds) before allowing the use of a new credit card.
 
 See a request body example below:
 
