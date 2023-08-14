@@ -10,6 +10,7 @@ Load testing is the practice of determining whether a service is able to handle 
 VTEX engineers load test the platform regularly to ensure it matches the expectations for heavy load. Therefore, you do not need to load test the VTEX platform on your own.
 
 However, if you still feel the need to load test specific scenarios, we recommend you follow some principles in order to guarantee a safe test and meaningful results:
+
 - [Simulate real user behavior](#simulate-real-user-behavior)
 - [Ensure your test is not the bottleneck](#ensure-your-test-is-not-the-bottleneck)
 - [Understand how to interpret results from the test](#understand-how-to-interpret-results-from-the-test)
