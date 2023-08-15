@@ -64,5 +64,5 @@ Optional props such as the ones presented in the following table can also be add
 
 | Prop | Type | Description |
 | ---- |------| ----------- |
-| `title` | string | The name of the custom route used as an identifier in CMS > Pages. |
+| `title` | string | The name of the custom route used as an identifier in **Storefront > Pages**. |
 | `isSitemapEntry`| boolean | Makes the route available in the store [sitemap](https://github.com/vtex-apps/store-sitemap) when set as `TRUE`.|

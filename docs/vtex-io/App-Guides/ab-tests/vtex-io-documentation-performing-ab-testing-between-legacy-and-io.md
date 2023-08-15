@@ -15,7 +15,7 @@ In this guide, you will learn how to perform A/B testing between store workspace
 
 3. Ensure that your Development workspace has the `vtex.edition-store@3.x` Edition app installed. Run the `vtex edition get` in your terminal to verify the Edition App version installed on the current account. Otherwise, [Open a ticket to the VTEX support team](https://help-tickets.vtex.com/smartlink/sso/login/zendesk?_ga=2.222513819.1487123273.1647865109-1001456323.1619912759) requesting the installation of the `vtex.edition-store@3.x` Edition app in the new Development workspace.
 
-## Step-by-step
+## Step by step
 
 1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into your VTEX account by running the following command:
 

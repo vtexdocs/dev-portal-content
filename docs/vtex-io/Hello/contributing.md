@@ -180,7 +180,7 @@ When documenting a prop whose type is `object` or `array` another prop table wil
 
 Remember to also use this Configuration section to **showcase any necessary disclaimer** related to the app and its blocks, such as the different behavior it may display during its configuration.
 
-## Modus Operandi _(not mandatory)_
+## App behavior _(not mandatory)_
 
 There are scenarios in which an app can behave differently in a store, according to how it was added to the catalog, for example. It's crucial to go through these **behavioral changes** in this section, allowing users to fully understand the **practical application** of the app in their store.
 
@@ -278,7 +278,7 @@ It is possible to install in your store either by using App Store or the VTEX IO
 
 <!-- Remember to also **showcase any necessary disclaimer** related to the app in this section, such as the different behavior it may display during its configuration. -->
 
-## Modus Operandi _(not mandatory)_
+## App behavior _(not mandatory)_
 
 There are scenarios in which an app can behave differently in a store, according to its configuration. It's crucial then to go through these **behavioral changes** in this section, allowing users to fully understand the **practical application** of the app in their store.
 
