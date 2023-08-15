@@ -106,7 +106,7 @@ Use [SpeedCurve](https://speedcurve.com/) or any other tool of your preference t
 
 ### Step 5: Enabling performance settings
 
-To help you guarantee the success of your brand's online presence, we provide a series of performance settings, which can be enabled at your stores's admin, under *Store Setup > CMS > Store > Advanced*.
+To help you guarantee the success of your brand's online presence, we provide a series of performance settings, which can be enabled at your stores's admin, under *Store Settings > Storefront > Store > Advanced*.
 
 > ℹ️ Follow [this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance) to learn about the currently available performance settings.
 

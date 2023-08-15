@@ -59,7 +59,7 @@ The expected answer is a JSON object containing all the redirects related to tha
 
 #### If the query doesn't return the redirect path
 
-Open your account admin and go to *Store Setup > CMS > Pages > Redirects*. Then, save the desired URL redirects.
+Open your account admin and go to *Storefront > Pages > Redirects*. Then, save the desired URL redirects.
 
 > ℹ️ For more information, check our doc on [managing URL redirects.](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects)
 

@@ -53,7 +53,7 @@ Download the template files available here: [black-friday-template-files 2021.zi
 
 ### Step 3 - Implementing the page at your store
 
-1. On your browser, open the Admin and go to *CMS > Pages*.
+1. On your browser, open the Admin and go to **Storefront > Pages**.
 2. Click on **Create new** to create a new page.
 3. Edit the page title and URL as you wish. At the Templates section, select the `"store.custom#blackfriday-lp"` template.
 
