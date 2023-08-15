@@ -26,7 +26,7 @@ In this step by step, you will learn how to create a content type and customize 
 1. Access the Admin.
 2. Go to **Storefront > Pages**.
 3. Click on **Create New** to create a new page.
-4. Fill in the fields according to your scenario. For the URL input field, check the [URL guidelines section](#URL-guidelines) and set up the route of your page using the desired content type (e.g., `/collection/:collection_id`).
+4. Fill in the fields according to your scenario. For the URL input field, check the [URL guidelines section](#url-guidelines) and set up the route of your page using the desired content type (e.g., `/collection/:collection_id`).
 5. Click **Save**.
 
 ### Step 2 - Adding the content
