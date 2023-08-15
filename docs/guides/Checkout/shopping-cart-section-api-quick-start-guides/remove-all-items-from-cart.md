@@ -11,7 +11,7 @@ This guide will describe how to remove all items from a shopping cart by the API
 
 ## Getting and accessing shopping cart information
 
-The first step is to get the `orderFormId` and access the shopping cart information that you want to remove the items from. To do so, access the [Get cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.
+The first step is to get the `orderFormId` and access the shopping cart information that you want to remove the items from. To do so, access the [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id) guide.
 
 See below an example of item details contained in a shopping cart:
 [block:code]

@@ -11,7 +11,7 @@ This guide will describe how to add new items to a shopping cart by the API.
 
 ## Getting shopping cart information
 
-The first step is to get the `orderFormId` of the shopping cart to which you want to add items. For more information, access the [Get cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.
+The first step is to get the `orderFormId` of the shopping cart to which you want to add items. For more information, access the [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id) guide.
 
 ## Adding items to the shopping cart
 
