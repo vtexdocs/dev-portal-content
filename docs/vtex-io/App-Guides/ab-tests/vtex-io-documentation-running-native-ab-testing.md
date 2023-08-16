@@ -67,13 +67,13 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, follow
 
     > ⚠️ If your store uses the [Checkout UI Custom](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0) app, you must first publish its configurations on your new production workspace. Otherwise, you might experience undesired consequences, such as losing the Checkout custom Javascript code and styles.
 
-4. Switch to the master workspace.
+4. Switch to the `master` workspace.
 
     ```sh
     vtex use master
     ```
 
-5. Install the VTEX A/B tester app in the Master workspace to enable A/B testing on your store website by running:
+5. Install the VTEX A/B tester app in the `master` workspace to enable A/B testing on your store website by running:
 
     ```bash
     vtex install vtex.ab-tester
@@ -81,7 +81,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, follow
 
     > ℹ️ You can run `vtex ls` to make sure that you have successfully installed `vtex.ab-tester` in the `master` workspace.
 
-6. Run the following command in the master workspace.
+6. Run the following command in the `master` workspace.
 
     ```sh
     vtex workspace abtest start
@@ -89,7 +89,7 @@ The A/B Tester app allows you to run A/B tests via Admin. To use the app, follow
 
     ![ab-testing-start-step1](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-start___5c87b822a4829a1b74a8318510b00c4e.png)
 
-7. Select the production workspace you want to use for comparison with the master and agree to proceed.
+7. Select the production workspace you want to use for comparison with the `master` and agree to proceed.
 
 ### Step 2 - Configuring the traffic and time
 
@@ -97,9 +97,9 @@ By agreeing to proceed with the test, you will need to answer the two following 
 
 1. `What's the proportion of traffic initially directed to the master workspace?`
 
-      You must answer this question with any whole number between 0 and 10000. For example, if you answer `9000`, you'll set 90% of the traffic to the master workspace.
+      You must answer this question with any whole number between 0 and 10000. For example, if you answer `9000`, you'll set 90% of the traffic to the `master` workspace.
 
-      > ℹ️ To promote the changes from your production workspace in the safest way possible, we strongly recommend that you leave 90% of traffic dedicated to the master and the other 10% to the production workspace being tested.
+      > ℹ️ To promote the changes from your production workspace in the safest way possible, we strongly recommend that you leave 90% of traffic dedicated to the `master` and the other 10% to the production workspace being tested.
 
 2. `What's the amount of time respecting the restriction?`
 
@@ -107,10 +107,10 @@ By agreeing to proceed with the test, you will need to answer the two following 
 
 | **Option** | **Description**                                                                                                                                                                                                                                                                                                                                                                            |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Answer `0` to automatically proceed with the A/B test.** | In this case, VTEX IO will automatically split your website traffic between workspaces, routing 50% of your store's traffic to the master and the other 50% to the production workspace being tested. Following that, the platform will automatically balance traffic every three minutes based on the conversion rates. This means that traffic will be gradually routed from the workspace with the lowest conversion rate to the workspace with the highest conversion rate. It's important to note that the test does not end on its own. We also suggest that you evaluate the test results on a daily basis. |
+| **Answer `0` to automatically proceed with the A/B test.** | In this case, VTEX IO will automatically split your website traffic between workspaces, routing 50% of your store's traffic to the `master` and the other 50% to the production workspace being tested. Following that, the platform will automatically balance traffic every three minutes based on the conversion rates. This means that traffic will be gradually routed from the workspace with the lowest conversion rate to the workspace with the highest conversion rate. It's important to note that the test does not end on its own. We also suggest that you evaluate the test results on a daily basis. |
 | **Answer with the number of hours you want to keep constant the proportion of traffic previously specified.** | During peak operational periods, it's critical for the test to extract as much data as possible. At the same time, the test shouldn't overextend and end up being harmful to users who are navigating the workspace with the poorest performance.                                                                                                                                                                                     |
 
-  > ℹ️ You can run many A/B tests simultaneously by comparing two or more workspaces to the master individually. However, if you opt to set up the traffic manually, the A/B test will distribute the traffic evenly among all production workspaces being A/B tested. For example, suppose you started an A/B test between workspace A and master, routing 90% of traffic to the former and 10% to the latter. If you run a new A/B test between workspace B and the master, each production workspace, A and B, will only receive 5% of the store's traffic.
+  > ℹ️ You can run many A/B tests simultaneously by comparing two or more workspaces to the `master` individually. However, if you opt to set up the traffic manually, the A/B test will distribute the traffic evenly among all production workspaces being A/B tested. For example, suppose you started an A/B test between workspace A and `master`, routing 90% of traffic to the former and 10% to the latter. If you run a new A/B test between workspace B and the `master`, each production workspace, A and B, will only receive 5% of the store's traffic.
 
 ### Step 3 - Interpreting the test results
 
@@ -141,7 +141,7 @@ Before completing your A/B test, it is important to understand the comparative a
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Start Date**                  | Date and time for the beginning of the test.                                                                                                                                                |
 | **Running Time**                | Test duration.                                                                                                                                                                               |
-| **Probability B beats A**        | Probability, in percentage points, that the production workspace is better for your store than the current master workspace. This calculation is based on session and completed sales counts. If this metric is greater than 10%, the production workspace can become the winner. |
+| **Probability B beats A**        | Probability, in percentage points, that the production workspace is better for your store than the current `master` workspace. This calculation is based on session and completed sales counts. If this metric is greater than 10%, the production workspace can become the winner. |
 | **Winner**                      | Workspace you selected as the winner.                                                                                                                                                        |
 
 > ⚠️ The main results of the A/B test are aimed at scenarios where the platform automatically directed store traffic. While you can and should use A/B tests even if you manually direct the traffic, bear in mind that the numbers behind each result reflect an automatic segmentation according to each workspace experience.
@@ -154,7 +154,7 @@ For example, you can set a maximum conversion loss of `0,0001%` when starting yo
 
 ### Step 4 - Finishing the A/B test
 
-If your test has already reached the time frame you've manually set for it, or if you have already detected a winner during [Step 3](#step-3---interpreting-the-test-results), run the following command in `Master`` to finish the test.
+If your test has already reached the time frame you have manually set for it, or if you have already detected a winner during [Step 3](#step-3---interpreting-the-test-results), run the following command in `master` to finish the test.
 
 ```sh
 vtex workspace abtest finish
@@ -162,8 +162,28 @@ vtex workspace abtest finish
 
 > ⚠️ If you have manually set a predefined time frame to run your A/B test, it's important that you pay attention to the test during this entire period. Although the platform automatically redistributes traffic according to how each workspace is behaving after the set time frame, overseeing the test is fundamental to its success.
 
-Running the command will display a list of all workspaces being tested by the `vtex.ab-tester` app in the Master environment. Choose the workspace that you intend to conclude. For example:
+Running the command will display a list of all workspaces being tested by the `vtex.ab-tester` app in the `master` environment. Choose the workspace that you intend to conclude. For example:
 
 ![ab-testing-finish-step4](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-end___2940fdcba7933cab4d828ba9e7a34d72.png)
 
-> ⚠️ Note that you will only end the test on the selected workspace. **It will not promote any workspace to master**. You must do that by yourself to make the new configurations public for all users.
+Now that you finish the A/B test, follow the next step to promote the workspace to `master``.
+
+### Step 5 - Promoting the production workspace to master
+
+Note that in the [Step 4](#step-4---finishing-the-ab-test) you only ended the test on the selected workspace. It did not promote any workspace to `master`. Follow these steps below to promote the production workspace to `master`.
+
+1. Change to the production workspace to be promoted. *Remember to replace the values between curly brackets according to your workspace name.*
+
+    > ℹ️ You must be logged in to your VTEX account.
+
+    ```bash
+    vtex use {workspaceName}
+    ```
+
+2. Promote the workspace being used.
+
+    ```bash
+    vtex workspace promote
+    ```
+
+Now, all your changes made in production are available in the master workspace.
