@@ -236,6 +236,7 @@ __Example:__
             "parentAssemblyBinding": null,
             "priceValidUntil": "2022-04-07T18:31:11Z",
             "tax": 0,
+            "taxCode":"54WC8ZN6K8",
             "price": 3190,
             "listPrice": 3190,
             "manualPrice": 1700,
@@ -308,6 +309,7 @@ __Example:__
 |    parentAssemblyBinding   |    String   |   Parent assembly binding.   |
 |    priceValidUntil |    String  |  Price expiration date and time.    |
 |    tax |    Integer |  Tax value in cents.    |
+|    taxCode |    String|  A unique identifier code assigned to a tax within the VTEX Admin.    |
 |    price   |    Integer   |   Price in cents.    |
 |    listPrice   |    Integer  |   List price in cents.    |
 |    manualPrice   |    Integer  |   Manual price in cents.   |
