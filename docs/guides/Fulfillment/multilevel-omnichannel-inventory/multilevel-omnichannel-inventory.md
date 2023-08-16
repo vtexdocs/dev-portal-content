@@ -14,10 +14,12 @@ For VTEX sellers, this means being able to sell products from its franchises or 
 
 For marketplaces, this means selling products from its direct sellers and also physical stores and white label sellers associated with those sellers in a scalable way.
 
+This article covers the account architecture details, chain order flows and necessary settings for VTEX marketplaces to implement this feature via API. 
+
 [block:callout]
 {
   "type": "warning",
-  "body": "To know restrictions around the use of Multilevel Omnichannel Inventory, check out our [Multilevel Omnichannel Inventory Help article](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).",
+  "body": "To know how to implement this feature via VTEX Admin, along with benefits and restrictions around the use of Multilevel Omnichannel Inventory, check out our [Multilevel Omnichannel Inventory Help article](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).",
   "title": "Restrictions of use"
 }
 [/block]
@@ -96,9 +98,9 @@ The order flow seen by the level 2 store in a Multilevel Omnichannel Inventory i
 
 > VTEX stores cannot use the [change order](https://developers.vtex.com/docs/guides/change-order) feature for chain orders made in VTEX marketplaces. However, it is possible to [Change chain orders in external marketplaces](https://developers.vtex.com/docs/guides/change-orders-multilevel-omnichannel-inventory-external-marketplaces).
 
-## Initial setup
+## Setup for VTEX marketplaces
 
-The setup for Multilevel Omnichannel Inventory must be made by the marketplace in their VTEX Admin or through REST API. This setup can be made in sellers that are already integrated, or sellers being added for the first time.
+The setup for Multilevel Omnichannel Inventory must be made by the marketplace [through their VTEX Admin](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) or REST API. This setup can be made in sellers that are already integrated, or sellers being added for the first time.
 
 To configure Multilevel Omnichannel Inventory via REST API:
 
@@ -118,4 +120,7 @@ https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{a
 
 - **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
 
-![Chain Order Flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/multilevel-omnichannel-inventory-2.png)
+
+-----
+
+Checkout the [API Integration](https://developers.vtex.com/docs/guides/api-integration) article to learn how to  external marketplace integrations, and headless architectures can make Multilevel omnichannel inventory available for their sellers. 
