@@ -21,7 +21,7 @@ The integration can be implemented by:
 
 This article is suitable for both cases.
 
->❗The external marketplace must be responsible for the payment process, otherwise the change order in Multilevel Omnichannel Inventory chain orders in external marketplaces operations will be blocked by the Order Management System (OMS).
+>❗ The external marketplace must be responsible for the payment process, otherwise the change order in Multilevel Omnichannel Inventory chain orders in external marketplaces operations will be blocked by the Order Management System (OMS).
 
 ## Implementation steps
 
