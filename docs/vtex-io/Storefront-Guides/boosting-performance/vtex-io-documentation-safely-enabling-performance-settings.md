@@ -19,7 +19,7 @@ Thus, to help you guarantee the success of your brand's online presence, we'll t
 >⚠️ Remember to replace the values between the curly braces according to your scenario.
 
 3. Using your browser, access the account's admin relative to that workspace.
-4. From the account's admin panel, go to *Store Setup > CMS > Store > Advanced*.
+4. From the account's admin panel, go to *Store Settings > Storefront > Store > Advanced*.
 5. Now, considering our documentation on [Best practices for optimizing performance](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance), activate the desired features, and save the changes.
 6. Access your store in the current workspace that you're working in and check if the performance improvements were applied.
 

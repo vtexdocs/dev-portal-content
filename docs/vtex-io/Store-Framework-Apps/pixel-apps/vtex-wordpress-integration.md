@@ -12,7 +12,7 @@ The Wordpress Integration app provides a way to bring in blog data from the Word
 
 ### Step 1 - Installing the Wordpress Integration app
 
-Using your terminal and [VTEX IO Toolbelt](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference), log in to the VTEX account you are working on and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.wordpress-integration@2.x` app.
+Using your terminal and [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference), log in to the VTEX account you are working on and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.wordpress-integration@2.x` app.
 
 ### Step 2 - Defining the app settings
 

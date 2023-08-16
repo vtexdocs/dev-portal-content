@@ -1,9 +1,11 @@
 ---
 title: "reCAPTCHA validation will now follow orderForm configuration for all requests"
 slug: "2023-07-05-recaptcha-validation-will-now-follow-orderform-configuration-for-all-requests"
+type: "improved"
 excerpt: "Merchants that use the Checkout API to place orders from mobile apps and headless storefronts must review their integrations."
 hidden: false
 createdAt: "2023-07-05T15:54:00.000Z"
+updatedAt: "2023-08-10T10:21:36.446Z"
 ---
 
 To further protect our customers, VTEX will now enforce the reCAPTCHA orderForm configuration set in each account for all Checkout API requests, regardless of the roles associated with the user or application key.
@@ -32,6 +34,13 @@ The diagram below can help you assess whether an integration needs to be adjuste
 - **Case 3**: *No changes are required in the integration.*
 
   Your store uses reCAPTCHA at Checkout and is ready to display it correctly in the user interface. Congratulations for following best practices in security!
+
+You must make sure that the [application key](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) used to make the requests to the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) ("Transaction") / [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) ("PlaceOrder") endpoints of the Checkout API has one of these [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) in their [roles](https://help.vtex.com/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc):
+
+- Checkout > CheckoutResources > Shopping Cart Full Access
+- Catalog > Telesales > Assisted Sales
+
+This includes [predefined roles](https://help.vtex.com/en/tutorial/predefined-roles--jGDurZKJHvHJS13LnO7Dy) like **Owner (Super Admin), Call center operator,** and **Checkout Admin,** as well as custom roles including either of those specific resources.
 
 ## Adjust your integrations
 

@@ -180,7 +180,7 @@ When documenting a prop whose type is `object` or `array` another prop table wil
 
 Remember to also use this Configuration section to **showcase any necessary disclaimer** related to the app and its blocks, such as the different behavior it may display during its configuration.
 
-## Modus Operandi _(not mandatory)_
+## App behavior _(not mandatory)_
 
 There are scenarios in which an app can behave differently in a store, according to how it was added to the catalog, for example. It's crucial to go through these **behavioral changes** in this section, allowing users to fully understand the **practical application** of the app in their store.
 
@@ -260,7 +260,7 @@ Next, you can **add media** (either an image of a GIF) if possible, so that user
 
 ## Configuration
 
-It is possible to install in your store either by using App Store or the VTEX IO Toolbelt.
+It is possible to install in your store either by using App Store or the VTEX IO CLI.
 
 ### Using VTEX App Store
 
@@ -269,7 +269,7 @@ It is possible to install in your store either by using App Store or the VTEX IO
 3. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your **NAME OF A SETTINGS FIELD** in the `NAME OF THE APP` field.
 4. Click on **Save**.
 
-### Using VTEX IO Toolbelt
+### Using VTEX IO CLI
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.icommkt@0.x` app. You can confirm that the app has now been installed by running `vtex ls` again.
 2. Access the **Apps** section in your account's admin page and look for the NAME OF THE APP box. Once you find it, click on the box.
@@ -278,7 +278,7 @@ It is possible to install in your store either by using App Store or the VTEX IO
 
 <!-- Remember to also **showcase any necessary disclaimer** related to the app in this section, such as the different behavior it may display during its configuration. -->
 
-## Modus Operandi _(not mandatory)_
+## App behavior _(not mandatory)_
 
 There are scenarios in which an app can behave differently in a store, according to its configuration. It's crucial then to go through these **behavioral changes** in this section, allowing users to fully understand the **practical application** of the app in their store.
 

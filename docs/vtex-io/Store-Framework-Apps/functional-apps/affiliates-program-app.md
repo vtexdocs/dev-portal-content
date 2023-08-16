@@ -180,16 +180,119 @@ To customize these pages, follow the steps below:
    - `affiliates-form.jsonc`
 
 4. Copy the respective block’s code – you will find them below.
+
+<details>
+  <summary><b>affiliates.jsonc code</b></summary>
+  <pre><code>
+  {
+    "store.affiliates": {
+      "blocks": ["affiliate-validator"]
+    },
+    "affiliate-validator": {
+      "props": {
+        "Valid": "affiliate-template",
+        "Invalid": "affiliate-invalid-template"
+      }
+    },
+    "affiliate-template": {
+      "children": [
+        "affiliate-store-name",
+        "flex-layout.row#banner",
+        "affiliate-profile-button",
+        "search-result-layout.customQuery#affiliate"
+      ]
+    },
+    "flex-layout.row#banner": {
+      "children": ["image#affiliate-banner"]
+    },
+    "image#affiliate-banner": {
+      "props": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/VTEX_Logo.svg/400px-VTEX_Logo.svg.png"
+      }
+    },
+    "search-result-layout.customQuery#affiliate": {
+      "props": {
+        "querySchema": {
+          "skusFilter": "ALL_AVAILABLE",
+          "simulationBehavior": "default",
+          "queryField": "137",
+          "mapField": "productClusterIds",
+          "facetsBehavior": "Dynamic"
+        }
+      },
+      "blocks": [
+        "search-result-layout.desktop",
+        "search-result-layout.mobile",
+        "search-not-found-layout"
+      ]
+    },
+    "affiliate-invalid-template": {
+      "children": ["rich-text#invalid-affiliate"]
+    },
+    "rich-text#invalid-affiliate": {
+      "props": {
+        "textAlignment": "CENTER",
+        "textPosition": "CENTER",
+        "text": "**Affiliate does not exist or has not been approved**",
+        "font": "t-heading-1"
+      }
+    }
+  }
+  </code></pre>
+</details>
+
+<details>
+  <summary><b>affiliates-profile.jsonc code</b></summary>
+  <pre><code>
+  {
+    "store.affiliates-profile": {
+      "children": ["affiliate-profile"]
+    },
+    "affiliate-profile": {
+      "children": ["affiliate-profile-topbar", "affiliate-profile-validator"]
+    },
+    "affiliate-profile-validator": {
+      "props": {
+        "Valid": "flex-layout.row#profile",
+        "Invalid": "rich-text#profileerror"
+      }
+    },
+    "rich-text#profileerror": {
+      "props": {
+        "text": "### Faça o login com a conta correta do afiliado para acessar as informações",
+        "textAlignment": "CENTER",
+        "textPosition": "CENTER"
+      }
+    },
+    "flex-layout.row#profile": {
+      "children": ["flex-layout.col#profile"]
+    },
+    "flex-layout.col#profile": {
+      "children": [
+        "affiliate-profile-title",
+        "affiliate-profile-totalizer",
+        "affiliate-profile-table"
+      ]
+    }
+  }
+  </code></pre>
+</details>
+
+<details>
+  <summary><b>store.affiliate-form.jsonc code</b></summary>
+  <pre><code>
+  {
+    "store.affiliate-form": {
+      "children": ["affiliate-form"]
+    }
+  }
+  </code></pre>
+</details>
+
 5. Paste the code in the corresponding file. For example, paste the `store.affiliates` JSON in the `affiliates.jsonc` file.
 6. Customize the code as you wish.
 7. Repeat steps 4 to 6 for each of the three blocks.
 8. Deploy the changes.
-
-**store.affiliates**
-
-**store.affiliates-profile**
-
-**store.affiliate-form**
 
 ### Props
 

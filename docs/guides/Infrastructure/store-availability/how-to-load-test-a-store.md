@@ -10,6 +10,7 @@ Load testing is the practice of determining whether a service is able to handle 
 VTEX engineers load test the platform regularly to ensure it matches the expectations for heavy load. Therefore, you do not need to load test the VTEX platform on your own.
 
 However, if you still feel the need to load test specific scenarios, we recommend you follow some principles in order to guarantee a safe test and meaningful results:
+
 - [Simulate real user behavior](#simulate-real-user-behavior)
 - [Ensure your test is not the bottleneck](#ensure-your-test-is-not-the-bottleneck)
 - [Understand how to interpret results from the test](#understand-how-to-interpret-results-from-the-test)
@@ -20,7 +21,7 @@ These principles are especially relevant when your test includes services that i
 
 Simulating real user behavior is key to obtaining statistically meaningful results to your test. Below are some points to consider when building your load test scenario:
 
-### Customers shop for different products.
+### Customers shop for different products
 
 In most cases, customers browse stores going through different searches and products. Make sure your test automation is not always picking the first product on the page, or always searching for the same term in the search bar.
 
@@ -28,7 +29,15 @@ Instead, try to model the probability of a user picking products based on real u
 
 The main reason for this is that picking the same product over and over does not test the platform’s infrastructure. It mostly tests our caching layer.
 
-### Customers shop from different regions.
+### Customers shop with different emails
+
+When conducting load tests, ensure that you perform tests using a variety of customer emails. Each customer in your store has their own email address, so it is important to simulate purchases from multiple customers as would happen in a real-world scenario.
+
+This realistic simulation contributes to more accurate load testing results, providing insights into how the platform performs under different user circumstances.
+
+We recommend that you incorporate a randomized selection of email addresses when configuring your load test scenarios.
+
+### Customers shop from different regions
 
 Even if the load test is focused on a specific country, state, or region, customers will still shop from a range of IP addresses and locations.
 
@@ -38,7 +47,7 @@ Our edge services have protective measures from increased load from a single IP 
 
 To make sure that you are using various destination IP addresses, use tools such as [WhatsMyDns](https://www.whatsmydns.net/#A/). This allows you to check the domain for different regions close to your testing site. Run it multiple times so that you get different IPs for the same region as well.
 
-### Customers shop at different times.
+### Customers shop at different times
 
 Your customers’ activities naturally spread through intervals of time, even in the case of flash sales. A click on one client may happen seconds after one in another client. This difference is small for shopping behavior, but a big one when computing results in less than a second.
 
@@ -68,11 +77,11 @@ Remember to monitor the resource usage on your test to ensure your CPU and RAM a
 
 With the test simulating real user behavior, you should be able to look at the test results and understand the outcomes and necessary actions. A failed test may not mean that the platform will not handle the requested load, just as a successful test could still bring some points to consider.
 
-### Understand the errors from the log.
+### Understand the errors from the log
 
 The main way to understand what went wrong with a test is to look at the most common errors from test runs. You can query a search engine for error messages and see the most common reasons. But remember that they may not apply to your case.
 
-### Check if the error comes from a third-party service.
+### Check if the error comes from a third-party service
 
 Depending on how you programmed your test, you may be querying third-party resources, for images, ads, fonts, scripts, pixels, and more, in addition to VTEX’s.
 

@@ -32,6 +32,6 @@ This feature removes the need to incessantly define an app's every GraphQL type 
 
 ## What you need to do 
 
-This feature is available to stores running Toolbelt version **2.74.0** or higher and **Builder-hub** version **0.171.0** or higher.
+This feature is available to stores running VTEX IO CLI version **2.74.0** or higher and **Builder-hub** version **0.171.0** or higher.
 
-> ℹ️ You can run `vtex -v` in your Toolbelt in order to check its version and `npm i -g vtex` or `yarn global add vtex` in order to update it. The Builder-hub update should occur automatically.
+> ℹ️ You can run `vtex -v` in your VTEX IO CLI in order to check its version and `npm i -g vtex` or `yarn global add vtex` in order to update it. The Builder-hub update should occur automatically.

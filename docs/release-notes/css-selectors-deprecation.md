@@ -56,7 +56,7 @@ However, bear in mind that the store **will continue to be susceptible to the ab
 
 ### Apps that are not yet published
 
-If your store's project was never published, **any CSS customization performed using CSS Selectors not on the above-mentioned whitelist (such as **`:nth-child`**,** `foo > bar` **and** `[alt="bar"]`**) will be blocked by Toolbelt** during the linking from December 18, 2019 onward.
+If your store's project was never published, **any CSS customization performed using CSS Selectors not on the above-mentioned whitelist (such as **`:nth-child`**,** `foo > bar` **and** `[alt="bar"]`**) will be blocked by VTEX IO CLI** during the linking from December 18, 2019 onward.
 
 Although each project scenario can be evaluated individually, it is expected that stores that haven't gone live yet manage to adapt better and faster to the correct customization format.
 

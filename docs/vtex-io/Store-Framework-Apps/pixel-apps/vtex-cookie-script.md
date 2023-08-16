@@ -26,7 +26,7 @@ It is possible to install the Cookie Script in your store either by using [App S
 3. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your **Cookie Script ID**.
 4. Click on **Save**.
 
-### Using VTEX IO Toolbelt
+### Using VTEX IO CLI
  
 
 1. In your terminal, [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.cookie-script@0.x` app. 

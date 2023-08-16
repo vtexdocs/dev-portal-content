@@ -12,7 +12,7 @@ OneSignal first party integration app. The [solution](https://onesignal.com/) pr
 
 ## Configuration
 
-It is possible to install the app in your store either by using the VTEX App Store or the VTEX IO Toolbelt.
+It is possible to install the app in your store either by using the VTEX App Store or the VTEX IO CLI.
 
 ### Using VTEX App Store
 

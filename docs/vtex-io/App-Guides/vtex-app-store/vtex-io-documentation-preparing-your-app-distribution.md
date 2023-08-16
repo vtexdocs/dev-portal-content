@@ -29,7 +29,7 @@ After developing your app, you must establish whether your app will be charged o
 
 After establishing your app's billing model, you must set up the marketing assets (e.g., icons, images, and descriptions) that will compose your app's page on the VTEX App Store. During this step, please refer to our [Marketing](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets) guidelines.
 
-![App Page on the VTEX App Store](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-preparing-your-app-distribution-0.gif)
+![App Page on the VTEX App Store](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-page-example.png)
 
 1. Create a new folder named `public` in the root directory of your project.
 2. Inside the `public` folder, create the `metadata` folder. Also, create the `images`, `licenses` and `messages` folders inside `metadata`.
@@ -102,12 +102,12 @@ See below the base template for structuring this file:
     "Fourth feature"
   ],
   "additionalinformation": "Additional information\\nYou can also write new lines here\\n\\n\\nIt should work just like the overview",
-  "video": "<https://www.youtube.com/embed/645ASYhJS-Q>",
-  "websiteURL": "<https://www.website.com/en>",
+  "video": "https://www.youtube.com/embed/645ASYhJS-Q",
+  "websiteURL": "https://www.website.com/en",
   "support": {
-    "email": "a@bcd.io"
+    "email": "a@bcd.io",
     "url": "www....",
-    "phone": +1....
+    "phone": "+1...."
   },
   "metricDescription": {
     "track": "English description for metric track",
@@ -124,7 +124,7 @@ See below the base template for structuring this file:
 - **`support`:** Link to the support channel. It can be an email, a ticket portal, or a phone number.
 - **`additionalinformation`:** Additional details and disclaimers related to your app.
 - **`video`:** URL of a video featuring the app's behavior.
-- **`metricDescription`:** Billing options' metrics (declared in the app's `manifest.json` file). This field is required only for apps whose pricing is based on one or more metrics. Please do not fill in this field if this is not the case.
+- **`metricDescription`:** Billing options' metrics (declared in the app's `manifest.json` file). **This field is required only for apps whose pricing is based on one or more metrics. Please do not fill in this field if this is not the case.**
 
 The files in this folder must be available in English, Spanish, and Portuguese in the following paths: `public/metadata/messages/en-US.json`, `public/metadata/messages/es-AR.json` and `public/metadata/messages/pt-BR.json`, respectively.
 

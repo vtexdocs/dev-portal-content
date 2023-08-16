@@ -56,9 +56,9 @@ We value clear, well-formatted and easy-to-read codes. Therefore, please follow 
 - Always use the `import` command instead of `require` to import references into Typescript files.
 - Always use the `const` command instead of `let` or `var` to declare elements in Typescript files.
 - Follow the order below when importing references into Typescripts files:
-    1) External dependencies;
-    2) Other VTEX apps;
-    3) Local modules of your code.
+    1. External dependencies;
+    2. Other VTEX apps;
+    3. Local modules of your code.
 
 - Avoid implementing routes and resolvers directly in the `index.ts` file. Instead, implement the middleware functions in other files and import them into the main file
 
