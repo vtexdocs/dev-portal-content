@@ -1,6 +1,6 @@
 ---
 title: "Multilevel omnichannel inventory API integration"
-slug: "multilevel-omnichannel- inventory-api-integration"
+slug: "multilevel-omnichannel-inventory-api-integration"
 hidden: false
 createdAt: "2022-11-18T18:48:14.043Z"
 updatedAt: "2022-11-18T18:53:14.127Z"
