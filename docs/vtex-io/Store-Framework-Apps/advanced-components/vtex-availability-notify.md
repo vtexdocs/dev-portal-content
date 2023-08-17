@@ -43,7 +43,7 @@ The app records the notification request and monitors inventory updates. This wa
 ```
 
 5. Once you have added the `availability-notify` component, access your store's Admin.
-6. Go to **Orders** > **Inventory & Shipping** > **Availability Notifier**.
+6. Go to **Extensions Hub** > **Installed Apps** > **Availability Notifier**. You can also find it using the search bar on the top of the page.
 7. Then, you will see the app's settings:
 
 ![app-settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-availability-notify-1.png)
