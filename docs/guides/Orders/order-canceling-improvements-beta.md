@@ -149,7 +149,7 @@ In the order flow, there is a [cancellation window](https://help.vtex.com/en/tut
 
 A common scenario for using this endpoint is when the marketplace works with sellers whose products are made on demand by each purchase. If a shopper contacts the marketplace customer care service via telephone demanding the order cancellation, and the marketplace cancels the order, now the seller can deny the cancellation request.
 
->⚠️ To deny an order cancellation request, the order status in the marketplace and seller must be the following:<p><ul><li>- **Marketplace status:** `waiting-for-seller-decision`.</li><li>- **Seller status:** `cancellation-requested`.</l></ul></p>
+>⚠️ To deny an order cancellation request, the order status in the marketplace and seller must be the following:<p><ul><li>- **Marketplace status:** `waiting-for-seller-decision`.</li><li>- **Seller status:** `cancellation-requested`.</li></ul></p>
 
 ### Diagram
 
