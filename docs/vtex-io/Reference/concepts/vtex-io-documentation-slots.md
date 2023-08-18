@@ -1,100 +1,37 @@
 ---
 title: "Slots"
 slug: "vtex-io-documentation-slots"
+excerpt: "Slots provide an alternative way for defining component structures within Store Framework themes."
 hidden: false
 createdAt: "2020-10-21T17:35:29.193Z"
 updatedAt: "2022-12-13T20:17:44.635Z"
 ---
-Slots composition is a new way to declare a React component in your store theme code.
 
-Working simarly to the blocks and children composition, the slots allows you to use React props instead of passing an array of blocks when rendering a component on the store UI.
+Slots composition is an alternative paradigm for defining component structures within the Store Framework themes. Unlike the conventional block composition method, slots enable developers to pass React props directly to components, providing enhanced flexibility in storefront design.
 
-It enables Store Framework users to be way more flexible when developing the store theme by removing the need for the `allowed` property in the components' interface definitions!  
+When using slots, consider the following:
 
-Some advantages of using slots over the traditional blocks composition are, namely:
+- The requirement for the `blocks` attribute is eliminated when implementing components that utilize slots in the store theme. Instead, developers can pass the desired blocks as regular `props`.
+- Slots grant the ability to include any block from any app as a regular prop. Hence, unlike the blocks composition method, declaring the `allowed` interface attribute is not necessary.
 
-- No need for `blocks` attribute when implementing a component in the store theme. Users just need to pass the desired blocks as regular props.
-- No need for the `allowed` interface attribute. Any block from any app can be declared as a regular prop.
+## Blocks vs. Slots
 
-## Practical example
+To better understand the distinctions between blocks and slots, let's delve into the specifics of each method using a hypothetical `hello-world` component.
 
-Let's suppose you are trying to create a `hello-world` block. At first, it could be as simple as:
+### Blocks
 
-```jsx
-// HelloWorld.tsx
-import React from 'react'
+When using the blocks composition, the focus revolves around defining `allowed` blocks and structuring their arrangement. In this approach, the `blocks` attribute specifies which blocks can be used within the `hello-world` component. Consider the following example:
 
-const HelloWorld = () => <div>Hello, world!</div>
+<table>
+<tr>
+<th>`HelloWorld.tsx`</th>
+<th>`interfaces.json`</th>
+<th>`blocks.json`</th>
+</tr>
+<tr>
+<td>
 
-export default HelloWorld
-```
-
-```json
-// interfaces.json
-{
-  "hello-world": {
-    "component": "HelloWorld"
-  }
-}
-```
-
-Let's now set up an icon to be displayed right above the "Hello, world!" text:
-
-```jsx
-// HelloWorld.tsx
-import React, { ReactElement } from 'react'
-
-const HelloWorld = ({ Icon }) => (
-  <div className="tc pv5">
-    <Icon size={32} />
-    <h1 className="t-heading-1 c-on-base">Hello, world!<h1>
-  </div>
-)
-
-export default HelloWorld
-```
-
-Notice that in the example above the icon is being declared via props to the `HelloWorld` component, clarifying how the slots composition logic works in the development flow.  
-
-In practice, users would pass this value to the theme *block* `hello-world`, as shown in the `json` example below:
-
-```json
-{
-  "hello-world": {
-    "props": {
-      "Icon": "icon-caret#point-up"
-    }
-  },
-  "icon-caret#point-up": {
-    "props": {
-      "orientation": "up"
-    }
-  }
-}
-```
-
-According to the slots composition logic, there is no need to use the `allowed` field in the block's interface definition the component it displays works independently.
-
-## What is the difference between slots and blocks composition?
-
-If you've been using Store Framework for a while, you are probably familiar with the `blocks` property - whose functionality is the same as the slots'.
-
-According to the `blocks` prop logic, you could configure your theme as shown below and still achieve pretty much the same results on your store UI:
-
-```json
-{
-  "hello-world": {
-    "blocks": ["icon-caret#point-up"]
-  },
-  "icon-caret#point-up": {
-    "props": {
-      "orientation": "up"
-    }
-  }
-}
-```
-
-```jsx
+```tsx
 // HelloWorld.tsx
 import React from 'react'
 import { ExtensionPoint } from 'vtex.render-runtime'  
@@ -109,6 +46,8 @@ const HelloWorld = () => (
 export default HelloWorld
 ```
 
+</td>
+<td>
 ```json
 // interfaces.json
 {
@@ -118,49 +57,107 @@ export default HelloWorld
   }
 }
 ```
+</td>
 
-However, if we decide to use the `blocks` composition as shown above, we would face some restrictions, such as:
-
-- The `hello-world` block would **only** be able to receive an `icon-caret` block. Any other `icon-*` block, or any block whatsoever, would not work. To make it work we would need to allow each different block users would be able to use.
-- The `blocks` approach would also be trickier to implement in `HelloWorld.tsx` because we would need to check which block was passed by the user to then pass its ID to the `ExtensionPoint` component.
-- Through the use of `ExtensionPoint`s, we would not be able to render multiple instances of the same block as well. For example, if we wanted to render `icon-caret#foo` **and** `icon-caret#bar` in our `HelloWorld` component, we would not be able to do so using `<ExtensionPoint id="icon-caret" />`, since this would be ambiguous. Also, the user would not be able to pass multiple instances of the same block to `hello-world`, such as:
-
+<td>
 ```json
+// blocks.json
 {
   "hello-world": {
-    "blocks": ["icon-caret#point-up", "icon-caret#point-down"]
+    "blocks": ["icon-caret#point-up"]
   },
   "icon-caret#point-up": {
     "props": {
       "orientation": "up"
     }
-  },
-  "icon-caret#point-down": {
+  }
+}
+```
+</td>
+</tr>
+</table>
+
+Note that, in this example, the `icon-caret` block is the only child block allowed for `hello-world`. Other limitations of this method include:
+
+- The `hello-world` block only accepts the `icon-caret` block as a child. Any other `icon-*` block or any block beyond that scope is incompatible, necessitating the explicit allowance of each distinct block in the `interfaces.json` file.
+- Implementing the block-based approach within `HelloWorld.tsx` involves conditional logic to identify the block passed by the developer and subsequently convey its ID to the `ExtensionPoint` component.
+- Passing multiple instances of the same block within the `HelloWorld` component may lead to rendering problems. For example, passing and rendering both `icon-caret#point-up` and `icon-caret#point-down` in the `blocks.json` file would lead to an ambiguous scenario. 
+
+### Slots
+
+Now, let's reimagine the same scenario using slots composition:
+
+<table>
+<tr>
+<th>`HelloWorld.tsx`</th>
+<th>`interfaces.json`</th>
+<th>`blocks.json`</th>
+</tr>
+<tr>
+<td>
+
+```tsx
+import React, { ReactElement } from 'react';
+const HelloWorld = ({ Icon }) => (
+  <div className="tc pv5">
+    <Icon size={32} />
+    <h1 className="t-heading-1 c-on-base">Hello, world!</h1>
+  </div>
+);
+
+export default HelloWorld;
+```
+
+</td>
+<td>
+```json
+// interfaces.json
+{
+  "hello-world": {
+    "component": "HelloWorld"
+  }
+}
+```
+</td>
+
+
+<td>
+```json
+//blocks.json
+{
+  "hello-world": {
     "props": {
-      "orientation": "down"
+      "Icon": "icon-caret#point-up"
+    }
+  },
+  "icon-caret#point-up": {
+    "props": {
+      "orientation": "up"
     }
   }
 }
 ```
+</td>
+</tr>
+</table>
 
-The main difference, therefore, is that we can offer much more flexibility to our users when using the slots composition.
+Note that, by directly passing required components as `props`, the slots approach eliminates the need for the `allowed` attribute. This method introduces flexibility into the component integration process, allowing any component to be included as a prop without prior restrictions.
 
-## Restrictions
+This example demonstrates how slots composition simplifies the component declaration process and enhances flexibility. You can adjust the composition by passing different components as props, making the structure more adaptable to your needs.
 
-There are some limitations put in place to guarantee that your slots will be working consistently:
+To ensure consistent and effective usage of slots, it is important to adhere to the following guidelines:
 
-1. Slots are **always** exposed via `PascalCased` props. This is very important because otherwise our builder would not be able to identify the props as `slots` which, in turn, would block the component rendering:
+- Slots are always exposed via `PascalCased` props.
 
-```jsonc
-{
-  "props": {
-    // Does NOT work. This will be interpreted as a string by store builder
-    "icon": "icon-caret"
-  }
-}
- ```
+<table>
+<tr>
+<th>✅ Do</th>
+<th>❌ Don't</th>
+</tr>
+<tr>
+<td>
 
-```jsonc
+```json
 {
   "props": {
     // Works!
@@ -169,9 +166,25 @@ There are some limitations put in place to guarantee that your slots will be wor
 }
 ```
 
-2. *Nested* slots are not currently supported. This means that you can't have a slot prop inside of an object, such as shown below:
+</td>
+<td>
+  
+```json
+{
+  "props": {
+    // Does NOT work. This will be interpreted as a string by store builder
+    "icon": "icon-caret"
+  }
+}
+```
+</td>
 
-```jsonc
+</tr>
+</table>
+
+- Nested slots are not supported. This means that you can't have a slot prop inside of an object, such as shown below:
+
+```json
 {
   "props": {
     "somePropThatsAnObject": {
