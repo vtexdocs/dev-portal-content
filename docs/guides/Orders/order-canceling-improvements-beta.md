@@ -33,7 +33,7 @@ A common scenario is when the shopper contacts the marketplaces customer care se
 
 The following image shows the flow when canceling an order on behalf of the shopper:
 
-![cancel_by_user](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/order-canceling-improvements-closed-beta/docs/guides/Orders/cancel_by_user.png)
+![cancel_by_user](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Orders/cancel_by_user.png)
 
 The step by step is the following:
 
