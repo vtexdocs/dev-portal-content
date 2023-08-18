@@ -33,7 +33,7 @@ A common scenario is when the shopper contacts the marketplaces customer care se
 
 The following image shows the flow when canceling an order on behalf of the shopper:
 
-![cancel_by_user](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/order-canceling-improvements-closed-beta/docs/guides/Orders/cancel_by_user.png)
+![cancel_by_user](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Orders/cancel_by_user.png)
 
 The step by step is the following:
 
@@ -149,13 +149,13 @@ In the order flow, there is a [cancellation window](https://help.vtex.com/en/tut
 
 A common scenario for using this endpoint is when the marketplace works with sellers whose products are made on demand by each purchase. If a shopper contacts the marketplace customer care service via telephone demanding the order cancellation, and the marketplace cancels the order, now the seller can deny the cancellation request.
 
->⚠️ To deny an order cancellation request, the order status in the marketplace and seller must be the following:<p><ul><li>- **Marketplace status:** `waiting-for-seller-decision`.</li><li>- **Seller status:** `cancellation-requested`.</l></ul></p>
+>⚠️ To deny an order cancellation request, the order status in the marketplace and seller must be the following:<p><ul><li>**Marketplace status:** `waiting-for-seller-decision`.</li><li>**Seller status:** `cancellation-requested`.</li></ul></p>
 
 ### Diagram
 
 The following image shows the flow of denying an order’s cancel request outside the cancellation window:
 
-![deny_cancel_request](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/order-canceling-improvements-closed-beta/docs/guides/Orders/deny_cancel_request.png)
+![deny_cancel_request](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Orders/deny_cancel_request.png)
 
 The step by step is the following:
 
