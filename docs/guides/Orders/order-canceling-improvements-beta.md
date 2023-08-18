@@ -155,7 +155,7 @@ A common scenario for using this endpoint is when the marketplace works with sel
 
 The following image shows the flow of denying an order’s cancel request outside the cancellation window:
 
-INSERT IMAGE 2
+![deny_cancel_request](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/order-canceling-improvements-closed-beta/docs/guides/Orders/deny_cancel_request.png)
 
 The step by step is the following:
 
