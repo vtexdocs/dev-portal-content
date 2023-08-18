@@ -108,10 +108,10 @@ The possible response status codes are shown in the table below:
 | Status Code | Description |
 |:---:|:---|
 | 200 OK | The order was successfully canceled. |
-| 403 Forbidden | Unauthorized request. Please, update the credentials used in the request and try again. |
-| 404 Not Found | The requested order was not found. Please, check the order ID and try again. |
-| 429 Too Many Requests | We were unable to process the request due to the high volume of submissions. Please, wait a few minutes before trying again. |
-| 500 Internal Server Error | An unexpected application error occurred. Please, review the request data and try again. |
+| 403 Forbidden | Unauthorized request. Update the credentials used in the request and try again. |
+| 404 Not Found | The requested order was not found. Check the order ID and try again. |
+| 429 Too Many Requests | We were unable to process the request due to the high volume of submissions. Wait a few minutes before trying again. |
+| 500 Internal Server Error | An unexpected application error occurred. Review the request data and try again. |
 
 ### Order after cancellation
 
