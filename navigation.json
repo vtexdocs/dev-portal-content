@@ -7539,31 +7539,6 @@
               ]
             },
             {
-              "name": "Export order report",
-              "slug": "orders-api-export-order-report",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Export order report with status 'Completed'",
-                  "slug": "orders-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/oms/pvt/admin/reports/completed",
-                  "children": []
-                },
-                {
-                  "name": "Export order report with status 'In Progress'",
-                  "slug": "orders-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/oms/pvt/admin/reports/inprogress",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "User orders",
               "slug": "orders-api-user-orders",
               "type": "category",
