@@ -1,5 +1,5 @@
 ---
-title: "Profile System"
+title: "Profile System integration"
 slug: "profile-system"
 hidden: true
 createdAt: "2022-02-22T22:28:50.366Z"
@@ -7,19 +7,21 @@ updatedAt: "2022-08-19T18:42:00.613Z"
 ---
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
 
-VTEX’s Profile System provides APIs that enable stores to:
-- Deal with a single source of truth for shoppers’ data.
-- [Safely store](https://developers.vtex.com/docs/guides/pii-data-architecture) PII and sensitive information.
+The [**Profile System**](https://developers.vtex.com/docs/guides/profile-system) is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
+
+The Profile System API enables stores to:
+- Communicate with a single source of truth for shoppers’ data.
+- Safely store [PII](https://developers.vtex.com/docs/guides/pii-data-architecture) and sensitive information.
 
 Below you can learn more about some of the Profile System’s features and how to integrate with the APIs.
 
->⚠️ Data stored in the new Profile System is not related to documents saved in Master Data v1 or v2. The API endpoints and features described in this article only apply to documents registered in the new Profile System.
+>⚠️ Data stored in the new Profile System is not related to documents saved in [Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api) or [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2). The API endpoints and features described in this article only apply to documents registered in the new Profile System designed to handle PII data architecture.
 
 >❗ When implementing your integration:
 >
 > Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture) that impact other integrations.
 >
-> Note that, at the moment, Master Data triggers are not supported by the PII platform version Profile System.
+> Note that, at the moment, [Master Data triggers](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270) are not supported by the PII platform version Profile System, for example.
 
 ## Permission
 
@@ -31,7 +33,7 @@ To use the Profile System features, ensure you have the appropriate [License Man
 | Profile System | Documents | Save and Update Item | Edit items from Profile System. |
 | Profile System | Documents | Delete Item | Delete items from Profile System. |
 
->⚠️ Learn more about License Manager [roles](https://help.vtex.com/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [resources](https://help.vtex.com/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
+>ℹ Learn more about License Manager [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
 
 ## Auditability
 
@@ -57,7 +59,6 @@ Profile System documents have a defined TTL, which means Time To Live. This mean
 
 You may set a document's TTL, with the query parameter `ttl` allowed for requests that create or update documents.
 
-
 ## Alternative keys
 
 Shopper profiles and addresses are accessible via API by a unique `profileId`. However, it is also possible to use alternative keys. Currently, there are two allowed alternative keys:
@@ -81,7 +82,7 @@ There are specific endpoints from which to get unmasked data. When using those, 
 
 ### Examples
 
-Masked profile
+**Masked profile:**
 
 ```json
 {
@@ -103,7 +104,7 @@ Masked profile
 }
 ```
 
-Unmasked profile
+**Unmasked profile:**
 
 ```json
 {
@@ -125,16 +126,26 @@ Unmasked profile
 }
 ```
 
-## API integration
+## Profile System API reference
 
 There are several APIs you can integrate with in order to manage information regarding profiles and addresses. Below you can find some examples and links to the detailed API reference.
 
 
 ### Profiles
 
-A profile is the main entity where a given customer’s data is stored. See the example below.
+A profile is the main entity where a given customer’s data is stored.
 
-Example request body for profile creation
+**API endpoints:**
+
+- `POST` [Create client profile](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/profiles)
+- `GET` [Get profile](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-)
+- `PATCH` [Update client profile](https://developers.vtex.com/docs/api-reference/profile-system#patch-/api/storage/profile-system/profiles/-profileId-)
+- `DELETE` [Delete client profile](https://developers.vtex.com/docs/api-reference/profile-system#delete-/api/storage/profile-system/profiles/-profileId-)
+- `GET` [Get unmasked profile](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/unmask)
+- `GET` [Get profile by version](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/versions/-profileVersionId-)
+- `GET` [Get unmasked profile by version](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/versions/-profileVersionId-/unmask)
+
+**Example request body for profile creation:**
 
 ```json
 {
@@ -147,7 +158,7 @@ Example request body for profile creation
 } 
 ```
 
-Example response when getting unmasked profile 
+**Example response when getting unmasked profile:**
 
 ```json
 {
@@ -169,22 +180,24 @@ Example response when getting unmasked profile
 }
 ```
 
-API endpoints:
-
-- [Create client profile](https://developers.vtex.com/vtex-rest-api/reference/createclientprofile)
-- [Get profile](https://developers.vtex.com/vtex-rest-api/reference/getprofile)
-- [Update client profile](https://developers.vtex.com/vtex-rest-api/reference/updateclientprofile)
-- [Delete client profile](https://developers.vtex.com/vtex-rest-api/reference/deleteclientprofile)
-- [Get unmasked profile](https://developers.vtex.com/vtex-rest-api/reference/getunmaskedprofile)
-- [Get profile by version](https://developers.vtex.com/vtex-rest-api/reference/getprofilebyversion)
-- [Get unmasked profile by version](https://developers.vtex.com/vtex-rest-api/reference/getunmaskedprofilebyversion)
-
 
 ### Addresses
 
 Addresses are linked to profiles and any profile can have as many addresses as it might need. This means that a valid `profileId` is necessary to perform any action regarding addresses.
 
-Example request body for address creation
+**API endpoints:**
+
+- `POST` [Create client address](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/profiles/-profileId-/addresses)
+- `GET` [Get client addresses](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses)
+- `GET` [Get unmasked client addresses](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses/unmask)
+- `GET` [Get address](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-)
+- `PATCH` [Update client address](https://developers.vtex.com/docs/api-reference/profile-system#patch-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-)
+- `DELETE` [Delete address](https://developers.vtex.com/docs/api-reference/profile-system#delete-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-)
+- `GET` [Get unmasked address](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/unmask)
+- `GET` [Get address by version](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/versions/-addressVersionId-)
+- `GET` [Get unmasked address by version](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/versions/-addressVersionId-/unmask)
+
+**Example request body for address creation:**
 
 ```json
 {
@@ -200,7 +213,7 @@ Example request body for address creation
 }
 ```
 
-Example response when getting unmasked address
+**Example response when getting unmasked address:**
 
 ```json
 {
@@ -225,36 +238,23 @@ Example response when getting unmasked address
 }
 ```
 
-API endpoints:
-
-- [Create client address](https://developers.vtex.com/vtex-rest-api/reference/createclientaddress)
-- [Get client addresses](https://developers.vtex.com/vtex-rest-api/reference/getclientaddresses)
-- [Get unmasked client addresses](https://developers.vtex.com/vtex-rest-api/reference/getunmaskedclientaddresses)
-- [Get address](https://developers.vtex.com/vtex-rest-api/reference/getaddress)
-- [Update client address](https://developers.vtex.com/vtex-rest-api/reference/updateclientaddress)
-- [Delete address](https://developers.vtex.com/vtex-rest-api/reference/deleteaddress)
-- [Get unmasked address](https://developers.vtex.com/vtex-rest-api/reference/getunmaskedaddress)
-- [Get address by version](https://developers.vtex.com/vtex-rest-api/reference/getaddressbyversion)
-- [Get unmasked address by version](https://developers.vtex.com/vtex-rest-api/reference/getunmaskedaddressbyversion)
-
-
 ### Prospects
 
-API endpoints:
+**API endpoints:**
 
-- [Create prospect](https://developers.vtex.com/vtex-rest-api/reference/createprospect)
-- [Get prospect](https://developers.vtex.com/vtex-rest-api/reference/getprospect)
-- [Update prospect](https://developers.vtex.com/vtex-rest-api/reference/updateprospect)
-- [Delete prospect](https://developers.vtex.com/vtex-rest-api/reference/deleteprospect)
-- [Get unmasked prospect](https://developers.vtex.com/vtex-rest-api/reference/getunmaskedprospect)
+- `POST` [Create prospect](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/prospects)
+- `GET` [Get prospect](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/prospects/-prospectId-)
+- `PATCH` [Update prospect](https://developers.vtex.com/docs/api-reference/profile-system#patch-/api/storage/profile-system/prospects/-prospectId-)
+- `DELETE` [Delete prospect](https://developers.vtex.com/docs/api-reference/profile-system#delete-/api/storage/profile-system/prospects/-prospectId-)
+- `GET` [Get unmasked prospect](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/prospects/-prospectId-/unmask)
 
 
 ### Purchase information
 
-API endpoints:
+**API endpoints:**
 
-- [Create purchase information](https://developers.vtex.com/vtex-rest-api/reference/createpurchaseinformation)
-- [Get purchase information](https://developers.vtex.com/vtex-rest-api/reference/getpurchaseinformation)
-- [Update purchase information](https://developers.vtex.com/vtex-rest-api/reference/updatepurchaseinformation)
-- [Delete purchase information](https://developers.vtex.com/vtex-rest-api/reference/deletepurchaseinformation)
-- [Get unmasked profile information](https://developers.vtex.com/vtex-rest-api/reference/getunmaskedpurchaseinformation)
+- `POST` [Create purchase information](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/profiles/-profileId-/purchase-info)
+- `GET` [Get purchase information](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/purchase-info)
+- `PATCH` [Update purchase information](https://developers.vtex.com/docs/api-reference/profile-system#patch-/api/storage/profile-system/profiles/-profileId-/purchase-info)
+- `DELETE` [Delete purchase information](https://developers.vtex.com/docs/api-reference/profile-system#delete-/api/storage/profile-system/profiles/-profileId-/purchase-info)
+- `GET` [Get unmasked purchase information](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/purchase-info/unmask)
