@@ -9,42 +9,59 @@ The Region feature is one of the features made available by the session system i
 
 After you [set up delivery](https://help.vtex.com/en/tutorial/setting-up-price-and-availability-of-skus-by-region--12ne58BmvYsYuGsimmugoc#setting-up-delivery-in-franchise-accountseller-white-label) of a SKU to a White Label Seller from your store, it is necessary for the session system to identify the zip code and country of the user browsing the store to show the custom price and availability by region.
 
-This information about ZIP code and country can be stored in the cookie [vtex_session](https://help.vtex.com/en/tutorial/setting-up-price-and-availability-of-skus-by-region--12ne58BmvYsYuGsimmugoc), due to a purchase made previously by the user, or can be entered via JavaScript in the session. 
+This information about ZIP code and country can be stored in the cookie [vtex_session](https://help.vtex.com/en/tutorial/setting-up-price-and-availability-of-skus-by-region--12ne58BmvYsYuGsimmugoc), due to a purchase made previously by the user, or can be entered via JavaScript in the session.
 
 To enter the country and zip code in the session, you must perform a `POST` in the following route:
 `{{account-name}}.{{environment}}.com.br/api/sessions`
 
-Below is an example of a `body` to be sent to `POST`:
+Below are examples of bodies to be sent to `POST`:
+
+- Update session by postal code.
 
 ```json
 {
-	"public":{
-		"country":{
-			"value":"USA"
-		},
-		"postalCode":{
-			"value":"32004"
-		}
-	}
+    "public": {
+        "country": {
+            "value": "USA"
+        },
+        "postalCode": {
+            "value": "32004"
+        }
+    }
 }
 ```
 
-Or, for cases of geo-coordinates:
+- Update session by geo-coordinates.
 
 ```json
 {
-	"public":{
-		"country":{
-			"value":"USA"
-		},
-		"geoCoordinates":{
-			"value":"22.123,-14.1"
-		}
-	}
+    "public": {
+        "country": {
+            "value": "USA"
+        },
+        "geoCoordinates": {
+            "value": "22.123,-14.1"
+        }
+    }
 }
 ```
 
-To verify that the session has updated the country and zip code data, simply do a `GET` on the route below and search for the` country` and `Post Code` fields:
+- Update session by address.
+
+```Json
+{
+    "public": {
+        "storeUserEmail": {
+            "value": "<mailto:example@example.complexample.com>"
+        },
+        "addressId": {
+            "value": "123456789"
+        }
+    }
+}
+```
+
+To verify that the session has updated the country and zip code data, send a `GET` request on the route below and search for the `country` and `postalCode` fields:
 `{{account-name}}.{{environment}}.com.br/api/sessions?items={{namespace}}.{{value}},{{namespace}}.{{value2}}`
 
-After updating the page where the SKUs are being viewed in the store, the price and availability information will be updated according to the region specified in the country and zip code information.
+After refreshing the product page, the platform will update price and availability information according to the region specified in the country and zip code information.
