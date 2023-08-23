@@ -17,6 +17,7 @@ If you do not need to validate your data, you may save your documents without an
 - [Update partial document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#patch-/api/dataentities/-dataEntityName-/documents/-id-)
 
 In case you need to validate the data, you must first [create a JSON schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-). After that, you'll add the name of the JSON Schema to the query, like in this example:
+
 ```
 api/dataentities/{data-entity-name}/documents?_schema={my-schema}
 ```
