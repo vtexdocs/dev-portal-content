@@ -32,7 +32,7 @@ Before implementing Intelligent Search in your headless storefront, make sure to
 
 To retrieve products with the Intelligent Search API, use this endpoint:
 
-- [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-]
+- [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-)
 
 For any given Intelligent Search query, you can get search facets and display them so that your shoppers can narrow their search.
 
