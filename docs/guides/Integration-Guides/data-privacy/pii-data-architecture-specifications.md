@@ -6,6 +6,9 @@ createdAt: "2023-05-16T09:38:36.446Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
 seeAlso: - "/docs/guides/data-residency"
 ---
+
+>❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
+
 VTEX's comprehensive [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) incorporates a range of solutions and processes for managing personally identifiable information (PII). Here you can find detailed information about how this architecture works to ensure the protection of shoppers' data privacy.
 
 Read the sections below to learn more about:
