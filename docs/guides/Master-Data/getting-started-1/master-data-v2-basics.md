@@ -10,6 +10,7 @@ Master Data v2 provides a powerful data base solution for your store, that you c
 ## Saving documents
 
 If you do not need to validate your data, you may save your documents without any setup. You can use the following API requests:
+
 - [Create new document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents)
 - [Create partial document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#patch-/api/dataentities/-dataEntityName-/documents) 
 - [Create document with custom ID or Update entire document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-) 
