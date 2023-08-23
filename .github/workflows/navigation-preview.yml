@@ -1,0 +1,45 @@
+name: Navigation preview
+on: [pull_request]
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get branch name
+        id: get-branch-name
+        uses: tj-actions/branch-names@v7
+      - name: Get changed navigation file
+        id: get-changed-navigation-file
+        uses: tj-actions/changed-files@v36
+        with:
+          files: |
+            navigation.json
+      - name: Get preview link
+        id: get-preview-link
+        uses: actions/github-script@v6
+        env:
+          BRANCH: ${{ steps.get-branch-name.outputs.head_ref_branch }}
+          FILES: ${{ steps.get-changed-navigation-file.outputs.all_changed_files }}
+          REPO: ${{ github.repository }}
+        with:
+          script: |
+            const branch = process.env.BRANCH
+            const files = process.env.FILES
+            const repo = process.env.REPO
+
+            let output = '# Navigation Preview Link\n\n'
+            if (files.length === 0) {
+              output += 'No changes detected in the navigation.json file'
+            } else {
+              output += `Open [this URL](https://developers.vtex.com/editor/sidebar?file=https://raw.githubusercontent.com/${repo}/${branch}/navigation.json) to see the sidebar with the updated navigation file.\n\n`
+              output += '**Note**: The preview may take a few minutes to reflect the changes made.'
+            }
+
+            core.setOutput('preview-link', output)
+      - name: Add comment with preview link to the PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: preview-link
+          message: ${{ steps.get-preview-link.outputs.preview-link }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
