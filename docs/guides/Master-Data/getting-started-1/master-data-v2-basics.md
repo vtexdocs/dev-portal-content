@@ -28,7 +28,6 @@ There are three ways of retrieving documents. If you have the document's ID, you
 
 To get multiple documents, you may use the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) API request.
 
-
 And finally, if you want to get all documents that attend to a specific set of criteria, you must use the [Scroll documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/scroll) API endpoint.
 
 The documents could comply with none or multiple JSON Schemas. You may add the `_schema` parameter to the query to filter the documents based in the JSON Schema. See the example below.
