@@ -51,8 +51,8 @@ It is the trigger name and must be a string value with limit of 100 characters.
 Boolean value that indicates if the trigger is either enabled or disabled.
 
 #### `condition`
-The rule is the same for the search route. Example: `status=ready-for-handling`
-To get futher information, check the developer docs for Master Data search route.
+The rule is the same as Master Data API v2's [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) route. Example: `status=ready-for-handling`
+To get futher information, check the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) endpoint reference.
 
 #### `runAt`
 In case of scheduling an action in the future you can use the `runAt` property. See the examples below:
