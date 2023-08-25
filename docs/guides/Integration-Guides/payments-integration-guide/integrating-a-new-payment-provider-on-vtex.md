@@ -111,7 +111,7 @@ To learn more about the transparent purchase flow, see [What is transparent chec
 
 ### Custom
 
-If you don't want to use the native VTEX purchase flow (transparent), you have two options to create custom payment experiences for your customer: Payment App and Redirect.
+If you do not want to use the native VTEX purchase flow (transparent), you have two options to create custom payment experiences for your customer: Payment App and Redirect.
 
 #### Payment App
 
