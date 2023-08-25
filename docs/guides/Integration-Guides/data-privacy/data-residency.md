@@ -12,6 +12,7 @@ seeAlso: - "/docs/guides/profile-system"
 The VTEX data residency feature enables stores with [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) to select the specific geographic region where their shoppers' information is stored.
 
 It is possible to choose the data residency location from two available options:
+
 - **AWS us-east-1:** located in Virginia, USA.
 - **AWS eu-west-1:** located in Ireland.
 
