@@ -14,7 +14,7 @@ The integration flow of a new payment provider on VTEX has the following stages:
 3. [Selecting the infrastructure type](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#3-selecting-the-infrastructure-type)
 4. [Defining the purchase flow](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#4-defining-the-purchase-flow)
 5. [Additional requirements and settings](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#5-additional-requirements-and-settings)
-6. [Connector tests](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#6-tests)
+6. [Connector tests](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#6-connector-tests)
 7. [Homologation and Go-live](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#7-homologation-and-go-live)
 
 The following flowchart shows the possible journeys within the integration process.
@@ -122,7 +122,7 @@ If your connector is being developed using [VTEX infrastructure](https://develop
 1. [Create a specific app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app) for Payment App.
 2. Use the connector's app. In this case, you have to create a specific React folder for Payment App within the connector app.
 
-> ⚠️ Connectors that only [operate payments in physical stores](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex##operating-payments-in-the-physical-stores-only) are required to use Payment App as the default purchase flow.
+> ⚠️ Connectors that only [operate payments in physical stores](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#operating-payments-in-the-physical-stores-only) are required to use Payment App as the default purchase flow.
 
 To learn more, see [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app).
 
