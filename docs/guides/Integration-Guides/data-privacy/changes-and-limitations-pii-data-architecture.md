@@ -102,7 +102,7 @@ It is possible to configure PII preferences on OMS' interface of your VTEX Admin
 
 1. In your VTEX Admin, in the **Orders** menu, then **All Orders**.
 2. Click on an order on the list.
-3. Under the Customer information card, click on `PII Preferences`. 
+3. Under the Customer information card, click on `PII Preferences`.
 4. Select one of the following options to configure how you will view customer's PII and be audited depending on your choice:
     a. **On all orders:** View personal information and be audited on all orders.
     b. **This order only:** View PII content and be audited on this order only.
