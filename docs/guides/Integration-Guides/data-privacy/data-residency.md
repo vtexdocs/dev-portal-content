@@ -9,18 +9,16 @@ seeAlso: - "/docs/guides/profile-system"
 
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
 
-The VTEX data residency feature enables stores with [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) to select the specific geographic region where their shoppers' information is stored.
+The VTEX data residency feature enables stores with [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) to select the specific geographic region where all data saved in the [Profile System](https://developers.vtex.com/docs/guides/profile-system) is stored, such as name, email, and shipping address, among others.
 
 It is possible to choose the data residency location from two available options:
 
 - **AWS us-east-1:** located in Virginia, USA.
 - **AWS eu-west-1:** located in Ireland.
 
-This feature applies to all data saved in the [Profile System](https://developers.vtex.com/docs/guides/profile-system), such as name, email, and shipping address, among others.
-
 There are two instances of the [Profile System](https://developers.vtex.com/docs/guides/profile-system) running in parallel, each based in different locations: US (Virginia) and EU (Ireland). These instances are identical in terms of their functioning. However, each instance only holds and processes data associated with stores that selected that location as their accounts' PII data residency.
 
-In practice, when data is requested from the [Profile System](https://developers.vtex.com/docs/guides/profile-system), the VTEX edge layer directs the request to the appropriate Profile System location based on the data residency location selected by the account.
+In practice, when data is requested from the [Profile System](https://developers.vtex.com/docs/guides/profile-system), the VTEX edge layer directs the request to the appropriate Profile System location based on the data residency location selected by the account, as illustrated below.
 
 ```mermaid
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
