@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2023-08-25T00:00:15.623Z"
 updatedAt: ""
 ---
-This article is divided into stages that explain the integration flow for a new payment provider on VTEX. Before completing each stage and moving on, make sure to check and understand the information in the related links, as well as any prerequisites and settings that need to be in place in the current stage.
+This article is divided into steps that explain the integration flow for a new payment provider on VTEX. Before completing each stage and moving on, make sure to check and understand the information in the related links, as well as any prerequisites and settings that need to be in place in the current stage.
 
 The integration flow of a new payment provider on VTEX has the following stages:
 
