@@ -38,7 +38,7 @@ After making sure you meet the PPP implementation [prerequisites](https://help.v
 
 ## 2. Defining the operation environment
 
-On VTEX, a payment connector can operate in three different environments: ecommerce websites, physical stores, or both. Select the option that matches the operating characteristics of your connector.
+On VTEX, a payment connector can operate in three different contexts: ecommerce websites, physical stores, or both. Select the option that matches the operating characteristics of your connector.
 
 ### Operating payments on the ecommerce website only
 
