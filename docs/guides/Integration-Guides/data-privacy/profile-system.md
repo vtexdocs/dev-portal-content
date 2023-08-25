@@ -181,7 +181,6 @@ A profile is the main entity where a given customer’s data is stored.
 }
 ```
 
-
 ### Addresses
 
 Addresses are linked to profiles and any profile can have as many addresses as it might need. This means that a valid `profileId` is necessary to perform any action regarding addresses.
