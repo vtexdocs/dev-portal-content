@@ -10,7 +10,7 @@ reCAPTCHA is a tool used to determine if a given action is performed by a real u
 
 This guide shows you how to implement this feature in checkout integrations. To learn more about this type of validation in VTEX stores, see this [article on reCAPTCHA](https://help.vtex.com/tutorial/recaptcha-no-checkout--18Te3oDd7f4qcjKu9jhNzP) on our help center.
 
->ℹ️ VTEX is integrated with reCAPTCHA enterprise, which offers two validation approaches: checkbox (equivalent to reCAPTCHA v2) and score-based (equivalent to reCATPCHA v3) . See this article on [reCAPTCHA at VTEX Checkout](https://help.vtex.com/en/tutorial/recaptcha-no-checkout--18Te3oDd7f4qcjKu9jhNzP#recaptcha-versions) to learn what version you should use depending on your storefront characteristics. You can also learn more each method: [reCAPTCHA v2](https://developers.google.com/recaptcha/docs/display) or [reCAPTCHA v3](https://developers.google.com/recaptcha/docs/v3) with the documentation provided by Google.
+>ℹ️ VTEX is integrated with reCAPTCHA enterprise, which offers two validation approaches: checkbox (equivalent to reCAPTCHA v2) and score-based (equivalent to reCATPCHA v3). See this article on [reCAPTCHA at VTEX Checkout](https://help.vtex.com/en/tutorial/recaptcha-no-checkout--18Te3oDd7f4qcjKu9jhNzP#recaptcha-versions) to learn what version you should use depending on your storefront characteristics. You can also learn more each method: [reCAPTCHA v2](https://developers.google.com/recaptcha/docs/display) or [reCAPTCHA v3](https://developers.google.com/recaptcha/docs/v3) with the documentation provided by Google.
 
 To configure reCAPTCHA verification, follow the steps below:
 
