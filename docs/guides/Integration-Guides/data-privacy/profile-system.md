@@ -11,6 +11,7 @@ seeAlso: - "/docs/guides/changes-and-limitations-pii-data-architecture"
 The [**Profile System**](https://developers.vtex.com/docs/guides/profile-system) is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
 
 The Profile System API enables stores to:
+
 - Communicate with a single source of truth for shoppers’ data.
 - Safely store [PII](https://developers.vtex.com/docs/guides/pii-data-architecture) and sensitive information.
 
