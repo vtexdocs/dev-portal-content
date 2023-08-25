@@ -91,7 +91,7 @@ If you want to develop your connector using VTEX infrastructure, you can use our
 - [Serverless](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless) environment with no need to invest additional financial resources related to infrastructure, reliability, and security management.
 - Simplified authentication, authorization, and configuration resources that are integrated with all other VTEX systems.
 
-If you use our infrastructure, you can also use our VTEX IO boilerplate, __Payment Provider Framework (PPF)__, which makes creating the connector faster in comparison to using your own infrastructure. With PPF, you don't have to manually configure the API routes, response and request body default formats, and sensitive information transfer (such as credit card information).
+If you use our infrastructure, you can also use our VTEX IO boilerplate, __Payment Provider Framework (PPF)__, which makes creating the connector faster in comparison to using your own infrastructure. With PPF, you do not have to manually configure the API routes, response and request body default formats, and sensitive information transfer (such as credit card information).
 
 To learn more about development using VTEX IO and how the Payment Provider Framework works, see:
 
