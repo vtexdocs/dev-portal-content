@@ -131,7 +131,6 @@ There are specific endpoints from which to get unmasked data. When using those, 
 
 There are several APIs you can integrate with in order to manage information regarding profiles and addresses. Below you can find some examples and links to the detailed API reference.
 
-
 ### Profiles
 
 A profile is the main entity where a given customer’s data is stored.
