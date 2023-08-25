@@ -65,7 +65,7 @@ If you want to offer a payment experience in physical stores and on the ecommerc
 
 To learn more about this type of operation, in addition to the documentation references linked in previous sections, see [Unified Commerce Strategies](https://help.vtex.com/en/tracks/estrategias-de-comercio-unificado--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3).
 
-> ℹ️ You can develop a single connector configured to work in both environments (physical stores and ecommerce website). You don't have to create a connector for each type of operation.
+> ℹ️ You can develop a single connector configured to work in both environments (physical stores and ecommerce websites). You do not have to create a connector for each type of operation.
 
 ## 3. Selecting the infrastructure type
 
