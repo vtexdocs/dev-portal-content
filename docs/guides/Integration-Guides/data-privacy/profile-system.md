@@ -249,7 +249,6 @@ Addresses are linked to profiles and any profile can have as many addresses as i
 - `DELETE` [Delete prospect](https://developers.vtex.com/docs/api-reference/profile-system#delete-/api/storage/profile-system/prospects/-prospectId-)
 - `GET` [Get unmasked prospect](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/prospects/-prospectId-/unmask)
 
-
 ### Purchase information
 
 **API endpoints:**
