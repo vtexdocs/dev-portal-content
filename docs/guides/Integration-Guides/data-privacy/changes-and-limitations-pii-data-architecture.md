@@ -59,7 +59,6 @@ Although [Checkout](https://developers.vtex.com/docs/guides/orderform-fields) en
 
 In order to be able to view transaction logs, store users must be assigned a role with the resource `View Payments Sensitive Data`, from the `PCI Gateway` product in the License Manager. Learn more about [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) and how to [Create roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#creating-a-role).
 
-
 ## Limitations
 
 ### Master Data
@@ -92,7 +91,7 @@ You must disable call center impersonation at the License Manager.
 
 #### Orders Admin interface
 
-The PII rules have also been applied to the [Orders List (Beta)](https://help.vtex.com/tutorial/order-list-beta--2QTduKHAJMFIZ3BAsi6Pi) and [Order details](https://help.vtex.com/tutorial/order-details-page-beta--2Y75n54Cc9VizrlG1N6ZNl) pages. The pages have been adjusted so that: 
+The PII rules have also been applied to the [Orders List (Beta)](https://help.vtex.com/tutorial/order-list-beta--2QTduKHAJMFIZ3BAsi6Pi) and [Order details](https://help.vtex.com/tutorial/order-details-page-beta--2Y75n54Cc9VizrlG1N6ZNl) pages. The pages have been adjusted so that:
 
 - By default, the account will see all data masked.
 - Searches by name only work with the shopper's full name.
@@ -101,13 +100,13 @@ The PII rules have also been applied to the [Orders List (Beta)](https://help.vt
 It is possible to configure PII preferences on OMS' interface of your VTEX Admin, by following these instructions:
 
 1. In your VTEX Admin, in the **Orders** menu, then **All Orders**.
-2. Click on an order on the list.
-3. Under the Customer information card, click on `PII Preferences`.
+2. Click an order on the list.
+3. Under the Customer information card, click `PII Preferences`.
 4. Select one of the following options to configure how you will view customer's PII and be audited depending on your choice:
     a. **On all orders:** View personal information and be audited on all orders.
     b. **This order only:** View PII content and be audited on this order only.
     c. **Hide and do not audit:** Browse orders without displaying personal information.
-5. Click on `Confirm`.
+5. Click `Confirm`.
 
 #### Subscriptions
 
