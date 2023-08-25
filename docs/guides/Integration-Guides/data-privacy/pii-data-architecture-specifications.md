@@ -75,13 +75,11 @@ Then the Profile System proceeds with the following actions:
 
 1. Check whether the requester can access that data. If they do, it proceeds to the next steps.
 2. Log [Audit](#auditability) event.
-3. Retrieve [encryption key](#encryption) from the key management system.
+3. Retrieve [encryption key](#encryption) from the encryption key management system.
 4. Decrypt information.
 5. Return information to the requester.
 
 These steps ensure access control with specific authorization and auditability of each access.
-
->ℹ️ The key management system is a separated system and can only be accessed by the Profile System.
 
 ### Versioning
 
@@ -91,6 +89,7 @@ The Profile System works with versioning, meaning that each [token](#tokenizatio
 
 All PII is encrypted with a unique key for each store. The [Profile System](#profile-system) uses AES GCM with an encryption key of 256 bits. VTEX does not share the encryption keys with any external entity, not even with the corresponding merchants.
 
+>ℹ️ The encryption key management system is a separate system and can only be accessed by the Profile System.
 
 ## Tokenization
 
