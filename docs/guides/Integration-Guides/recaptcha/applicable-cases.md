@@ -7,7 +7,7 @@ updatedAt: "2022-05-10T14:01:46.295Z"
 ---
 When a shopper places an order on your store paying with a credit or debit card, they may or may not be required to perform reCAPTCHA validation according to the criteria set in the [orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration).
 
-The recommended configuration is `vtexCriteria`, which uses an algorithm to determine which sessions are trustworthy. This reduces the application of reCAPTCHA validation, improving security with no impact conversion.
+The `vtexCriteria` option uses an algorithm to determine which sessions are trustworthy. This reduces the application of reCAPTCHA validation, improving security with no impact conversion. This is the recommended option if you are using checkbox validation (equivalent to reCAPTCHA v2).
 
 Regardless of this configuration, reCAPTCHA verification will not be required in some cases:
 
