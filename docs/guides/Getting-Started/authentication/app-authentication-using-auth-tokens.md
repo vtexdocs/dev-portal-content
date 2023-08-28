@@ -12,7 +12,7 @@ When working on VTEX IO apps, you generally won't have to make direct requests t
 
 We recommend using the VTEX IO [clients package](https://github.com/vtex/io-clients) when possible. In this context, every client method accepts an optional argument called `authMethod`, which receives one of three authentication options, indicating which token will be used in this request.
 
-The tokens are available via the VTEX IO context and are associated with different permissions. 
+The tokens are available via the VTEX IO context and are associated with different permissions.
 
 You can import the context in your app as in the following: `import { IOContext } as ctx from '@vtex/api'.` See the table below to learn about each token.
 
