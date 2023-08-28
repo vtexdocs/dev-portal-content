@@ -45,6 +45,7 @@ Each trigger is described as an item of the array `v-triggers` of a [JSON schema
 | `action`    | the action that will be executed                   |
 
 #### `name`
+
 It is the trigger name and must be a string value with limit of 100 characters.
 
 #### `active`
