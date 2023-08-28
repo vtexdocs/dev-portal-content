@@ -4,9 +4,11 @@ slug: "expiring-a-shoppers-password"
 hidden: false
 createdAt: "2023-05-24T22:18:24.684Z"
 updatedAt: "2023-05-24T22:18:24.684Z"
+seeAlso:
+ - "user-authentication-and-login"
 ---
 
-You can use the VTEX ID API to expire a shopper's password. This means they will not be able to login until they create a new password on your website. In this article you can learn how to do this.
+You can use the VTEX ID API to expire a shopper's password. This means they will not be able to login until they create a new password on your website.
 
 To maximize security and improve the shopper experience, we recommend that you follow the steps below to expire a shopper's password:
 
@@ -14,7 +16,7 @@ To maximize security and improve the shopper experience, we recommend that you f
 2. [Expire shopper password](#expiring-a-password-by-email)
 3. [Notify the shopper](#notifying-the-shopper)
 
->ℹ️ Any user or [application key](https://developers.vtex.com/docs/guides/authentication-overview) that wishes to perform password expiration must have a [License Manager role](https://help.vtex.com/pt/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that includes the [resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) `Expire User Password`.
+>ℹ️ Any user or [application key](https://developers.vtex.com/docs/guides/authentication-overview) that wishes to perform password expiration must have a [License Manager role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that includes the `Expire User Password` [resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
 
 ## Preventing repeated passwords
 
@@ -49,7 +51,7 @@ https://{{accountName}}.{{environment}}.com.br/api/vtexid/password/expire?email=
 
 This request has no body.
 
-A successful response will have status code `200` and an empty body.
+A successful response will have status code `200 (OK)` and an empty body.
 
 >❗ This request does not trigger any notification. We strongly recommend that you [notify the user](#notifying-the-shopper) to prevent a frustrating shopping experience next time they try to login to your store.
 
