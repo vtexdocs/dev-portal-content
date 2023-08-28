@@ -56,6 +56,7 @@ The rule is the same as Master Data API v2's [Search documents](https://develope
 To get futher information, check the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) endpoint reference.
 
 #### `runAt`
+
 In case of scheduling an action in the future you can use the `runAt` property. See the examples below:
 
 - Schedule the execution 10 minutes after.
