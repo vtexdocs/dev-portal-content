@@ -17,7 +17,6 @@ User tokens allow for actions limited to their scope, which is defined according
 
 As described above, user tokens and associated permissions are tied to the user who logged in. However, they are not store-exclusive. This means, for example, that administrative users with access to different accounts can perform actions in all of those stores with the same token.
 
-
 ## Generating user tokens
 
 Developers working with VTEX can generate authentication tokens without having to simulate a shopper’s login. This can be useful to run tests or even to generate tokens programmatically if your integration depends on an API that can not be authenticated with [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys). There are two methods you can use:
