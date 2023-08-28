@@ -6,6 +6,7 @@ createdAt: "2022-07-05T16:11:49.082Z"
 updatedAt: "2022-10-28T14:34:21.479Z"
 ---
 A Master Data trigger is an [action](#action) executed after the insert or update of a given document. Actions can be of three types:
+
 - Send an HTTP request.
 - Send an email.
 - Send email using [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) template.
