@@ -5,11 +5,11 @@ hidden: false
 createdAt: "2023-08-25T00:00:15.623Z"
 updatedAt: ""
 ---
-This article is divided into steps that explain the integration flow for a new payment provider on VTEX. Before completing each stage and moving on, make sure to check and understand the information in the related links, as well as any prerequisites and settings that need to be in place in the current stage.
+This article is divided into steps that explain the integration flow for a new payment provider on VTEX. Before completing each step and moving on, make sure to check and understand the information in the related links, as well as any prerequisites and settings that need to be in place in the current step.
 
-The integration flow of a new payment provider on VTEX has the following stages:
+The integration flow of a new payment provider on VTEX has the following steps:
 
-1. [Payment Provider Protocol - Overview](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#1-payment-provider-protocol---overview)
+1. [Payment Provider Protocol - Overview](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#1-payment-provider-protocol-overview)
 2. [Defining the operation environment](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#2-defining-the-operation-environment)
 3. [Selecting the infrastructure type](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#3-selecting-the-infrastructure-type)
 4. [Defining the purchase flow](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#4-defining-the-purchase-flow)
@@ -54,16 +54,16 @@ For payment operations in physical stores, VTEX offers the VTEX Sales App soluti
 
 To learn more about VTEX Sales App, see:
 
-- [VTEX Sales App - Getting started and setting up](https://help.vtex.com/en/tracks/instore-primeiros-passos-e-configuracoes--zav76TFEZlAjnyBVL5tRc)
-- [VTEX Sales App - Using the app](https://help.vtex.com/en/tracks/instore-usando-o-app--4BYzQIwyOHvnmnCYQgLzdr/6cq4E1JCmA6vCvBCCtAgIM)
-- [VTEX Sales App - Payments](https://help.vtex.com/en/tracks/instore-pagamentos--43B4Nr7uZva5UdwWEt3PEy)
+- [VTEX Sales App - Getting started and setting up](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf)
+- [VTEX Sales App - Using the app](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/6cq4E1JCmA6vCvBCCtAgIM)
+- [VTEX Sales App - Payments](https://help.vtex.com/en/tracks/instore-payments--43B4Nr7uZva5UdwWEt3PEy/2liigRors32hzqBNs2M1Oa)
 - [Payment Provider Protocol applied to payments with POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos)
 
 ### Operating payments in both physical stores and ecommerce website
 
 If you want to offer a payment experience in physical stores and on the ecommerce website, you will need to configure settings for both cases.
 
-To learn more about this type of operation, in addition to the documentation references linked in previous sections, see [Unified Commerce Strategies](https://help.vtex.com/en/tracks/estrategias-de-comercio-unificado--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3).
+To learn more about this type of operation, in addition to the documentation references linked in previous sections, see [Unified Commerce Strategies](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3).
 
 > ℹ️ You can develop a single connector configured to work in both environments (physical stores and ecommerce websites). You do not have to create a connector for each type of operation.
 
