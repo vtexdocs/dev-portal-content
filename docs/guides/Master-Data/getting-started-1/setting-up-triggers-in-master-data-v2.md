@@ -48,6 +48,7 @@ Each trigger is described as an item of the array `v-triggers` of a [JSON schema
 It is the trigger name and must be a string value with limit of 100 characters.
 
 #### `active`
+
 Boolean value that indicates if the trigger is either enabled or disabled.
 
 #### `condition`
