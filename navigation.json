@@ -489,6 +489,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Integrating a new payment provider on VTEX",
+                  "slug": "integrating-a-new-payment-provider-on-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },                
+                {
                   "name": "Payment Provider Protocol",
                   "slug": "payments-integration-payment-provider-protocol",
                   "origin": "",
@@ -496,22 +503,8 @@
                   "children": []
                 },
                 {
-                  "name": "PCI - DSS Compliance",
-                  "slug": "payments-integration-pci-dss-compliance",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Methods",
-                  "slug": "payments-integration-payment-methods",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Purchase Flows",
-                  "slug": "payments-integration-purchase-flows",
+                  "name": "Payment Provider Protocol applied to payments with POS",
+                  "slug": "payments-integration-ppp-applied-to-pos",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -524,8 +517,71 @@
                   "children": []
                 },
                 {
+                  "name": "Payment Provider Framework",
+                  "slug": "payments-integration-payment-provider-framework",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Purchase Flows",
+                  "slug": "payments-integration-purchase-flows",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment App",
+                  "slug": "payments-integration-payment-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },  
+                {
+                  "name": "Payment Methods",
+                  "slug": "payments-integration-payment-methods",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Payment Provider Homologation",
                   "slug": "payments-integration-payment-provider-homologation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },                
+                {
+                  "name": "PCI - DSS Compliance",
+                  "slug": "payments-integration-pci-dss-compliance",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Secure Proxy",
+                  "slug": "payments-integration-secure-proxy",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Split Payouts on Payment Provider Protocol",
+                  "slug": "split-payouts-on-payment-provider-protocol",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },                
+                {
+                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
+                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Custom Auto Capture Feature",
+                  "slug": "custom-auto-capture-feature",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -543,56 +599,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Payment App",
-                  "slug": "payments-integration-payment-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Split Payouts on Payment Provider Protocol",
-                  "slug": "split-payouts-on-payment-provider-protocol",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Custom Auto Capture Feature",
-                  "slug": "custom-auto-capture-feature",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
-                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Secure Proxy",
-                  "slug": "payments-integration-secure-proxy",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Framework",
-                  "slug": "payments-integration-payment-provider-framework",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Protocol applied to payments with POS",
-                  "slug": "payments-integration-ppp-applied-to-pos",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
+                },                               
                 {
                   "name": "PSE Payment Method",
                   "slug": "pse-payment-method",
