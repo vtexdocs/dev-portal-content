@@ -4,7 +4,6 @@ slug: "pii-data-architecture"
 hidden: true
 createdAt: "2022-02-22T22:27:02.330Z"
 updatedAt: "2023-06-14T43:38:36.446Z"
-seeAlso: - "/docs/guides/pii-data-architecture-specifications"
 ---
 
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.

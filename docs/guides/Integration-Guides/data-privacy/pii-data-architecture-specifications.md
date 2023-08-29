@@ -4,7 +4,6 @@ slug: "pii-data-architecture-specifications"
 hidden: true
 createdAt: "2023-05-16T09:38:36.446Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
-seeAlso: - "/docs/guides/data-residency"
 ---
 
 >❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
