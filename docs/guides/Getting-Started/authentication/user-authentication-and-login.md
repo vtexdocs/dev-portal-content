@@ -44,7 +44,7 @@ Developers working with VTEX can generate authentication tokens without having t
 
    With this, the CLI will generate a valid user token associated with your profile, print it to your terminal and also copy it to your clipboard.
 
-#### Generating an authentication token with the VTEX ID API
+### Generating an authentication token with the VTEX ID API
 
 To do this, use the [Generate authentication token endpoint](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/apptoken/login).
 
