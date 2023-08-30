@@ -1,21 +1,17 @@
 ---
-title: "Changes and limitations of the PII data architecture"
-slug: "changes-and-limitations-pii-data-architecture"
+title: "Changes in VTEX features behavior to handle PII data"
+slug: "changes-in-vtex-features-behavior-to-handle-pii-data"
 hidden: true
 createdAt: "2022-02-22T22:29:28.541Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
 ---
->❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
+>❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
-This document outlines the current limitations associated with the [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) provided by VTEX. By acknowledging these limitations, we provide alternative approaches that may be necessary to ensure data privacy best practices.
+This document outlines the changes in the default behavior of certain VTEX features, which apply to stores using the [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) provided by VTEX.
 
-Some commerce features of the VTEX platform are not available for accounts using the current PII platform beta version, while others may require adaptations when implemented by the store.
+To handle PII data, we provide alternative approaches that are necessary to ensure data privacy best practices. As a result, some commerce features of the VTEX platform require adaptations when implemented by the store.
 
-In this guide, you can learn about the changes and limitations you must be aware of when managing your customers' information with the [Profile System](https://developers.vtex.com/docs/guides/profile-system).
-
-## Adaptations
-
-In this section, you can learn what VTEX features are available but require adaptation for accounts using the PII data architecture.
+In this guide, you can learn about the changes you must be aware of when managing your customers' information with the [Profile System](https://developers.vtex.com/docs/guides/profile-system).
 
 ### Promotions - Customer cluster
 
@@ -44,6 +40,35 @@ In order to use Orders API, you should adapt your integrations to use new endpoi
 | Cancel order               | `POST` [api/oms/pvt/orders/{orderId}/cancel](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel)                                                 | `POST` [/api/orders/pvt/document/{orderId}/cancel](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/cancel)                                         | No                  |
 | Order invoice notification | `POST` [api/oms/orders/{orderId}/invoice](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice)                                            | `POST` [api/orders/pvt/document/{orderId}/invoices](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/invoices)                                | Yes                 |
 | Send payment notification  | `POST` [/api/oms/pvt/orders/{orderId}/payments/{paymentId}/payment-notification](https://developers.vtex.com/docs/api-reference/orders-api/#post-/api/oms/pvt/orders/-orderId-/payments/-paymentId-/payment-notification) | `POST` [/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment) | No                  |
+
+#### Orders Admin interface
+
+The PII rules have also been applied to the [Orders List (Beta)](https://help.vtex.com/tutorial/order-list-beta--2QTduKHAJMFIZ3BAsi6Pi) and [Order details](https://help.vtex.com/tutorial/order-details-page-beta--2Y75n54Cc9VizrlG1N6ZNl) pages. The pages have been adjusted so that:
+
+- By default, the account will see all data masked.
+- Searches by name only work with the shopper's full name.
+- Searches by document only work with the shopper's full document ID.
+
+It is possible to configure PII preferences on OMS' interface of your VTEX Admin, by following these instructions:
+
+1. In your VTEX Admin, in the **Orders** menu, then **All Orders**.
+2. Click an order on the list.
+3. Under the Customer information card, click `PII Preferences`.
+4. Select one of the following options to configure how you will view customer's PII and be audited depending on your choice:
+    a. **On all orders:** View personal information and be audited on all orders.
+    b. **This order only:** View PII content and be audited on this order only.
+    c. **Hide and do not audit:** Browse orders without displaying personal information.
+5. Click `Confirm`.
+
+#### Subscriptions
+
+The subscription feature is compatible with the PII data architecture.
+
+However, the **Subscriptions** Admin interface displays only masked PII. If you wish to see unmasked PII, you must use the [Subscriptions v3 API](https://developers.vtex.com/docs/api-reference/subscriptions-api-v3) endpoints, while sending the `reason` query parameter. Learn more about [retrieving unmasked data](https://developers.vtex.com/docs/guides/profile-system#masked-data).
+
+### Message Center
+
+When you edit an email template on the **Message Center** Admin interface, you can see information about the last email sent from that template, rendered as an email. Currently, all values on the JSON Data will be masked.
 
 ### Master Data - CL, AD, BK entities
 
@@ -125,3 +150,11 @@ The [gift card](https://help.vtex.com/en/subcategory/gift-card--3qWeS7abxCyC0G0G
 ### Customer Credit
 
 Currently, the [Customer Credit](https://help.vtex.com/en/tutorial/customer-credit-overview--1uIqTjWxIIIEW0COMg4uE0) feature is not supported.
+
+## Learn more
+
+- [PII Data Architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications)
+- [Data residency](https://developers.vtex.com/docs/guides/data-residency)
+- [Data subject rights](https://help.vtex.com/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM)
+- [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system)
+- [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta)
