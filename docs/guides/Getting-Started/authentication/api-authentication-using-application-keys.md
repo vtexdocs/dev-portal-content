@@ -26,7 +26,7 @@ Use the `appKey` and `appToken` credential pair to authenticate API requests by 
 
 | Header key | Value |
 | - | - |
-| `X-VTEX-API-AppKey` | {appKey}` |
+| `X-VTEX-API-AppKey` | `{appKey}` |
 | `X-VTEX-API-AppToken` | `{appToken}` |
 
 See an example [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder) request:
