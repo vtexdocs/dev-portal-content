@@ -19,7 +19,7 @@ Note that **Master Data** features may be impacted in the following three aspect
 
 At the moment, triggers are not supported by the PII platform version Profile System.
 
-#### Orders Index 
+#### Orders Index
 
 This is a legacy integration that was deprecated. VTEX will disable it.
 
