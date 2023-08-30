@@ -26,7 +26,7 @@ Developers working with VTEX can generate authentication tokens without having t
     - [Generating an authentication token with the VTEX ID API](#generating-an-authentication-token-with-the-vtex-id-api)
 - [Single sign on integrations](#single-sign-on-integrations)
 
-#### Generating an user token with the VTEX IO CLI
+#### Generating a user token with the VTEX IO CLI
 
 1. Install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 2. Log in to VTEX by running this command on your terminal:
