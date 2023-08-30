@@ -29,7 +29,8 @@ Developers working with VTEX can generate authentication tokens without having t
 #### Generating a user token with the VTEX IO CLI
 
 1. Install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
-2. Log in to VTEX by running this command on your terminal:
+2. Log in to VTEX by running the following command on your terminal.
+   Remember to replace the `{accountName}` value with your VTEX account name.
    
    ```bash
    vtex login {accountName}
