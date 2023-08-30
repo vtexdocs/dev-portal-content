@@ -8,7 +8,7 @@ seeAlso:
  - "user-authentication-and-login"
 ---
 
-When working on VTEX IO apps, you generally won't have to make direct requests to VTEX APIs. This is because the platform provides convenient access to its features through clients. Hence, using application keys within your app will often be unnecessary. Instead, the recommended approach involves employing authentication tokens.
+When working on VTEX IO apps, you generally won't have to make direct requests to VTEX APIs. This is because VTEX IO already provides convenient access to VTEX APIs through pre-defined [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). Hence, using application keys within your app will often be unnecessary. When necessary, the recommended approach involves employing authentication tokens.
 
 We recommend using the VTEX IO [clients package](https://github.com/vtex/io-clients) when possible. In this context, every client method accepts an optional argument called `authMethod`, which receives one of three authentication options, indicating which token will be used in this request.
 
