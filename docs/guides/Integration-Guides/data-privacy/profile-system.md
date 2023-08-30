@@ -6,16 +6,16 @@ createdAt: "2022-02-22T22:28:50.366Z"
 updatedAt: "2022-08-19T18:42:00.613Z"
 seeAlso: - "/docs/guides/changes-and-limitations-pii-data-architecture"
 ---
->❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
+>❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
-The [**Profile System**](https://developers.vtex.com/docs/guides/profile-system) is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
+The **Profile System** is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
 
 The Profile System API enables stores to:
 
-- Communicate with a single source of truth for shoppers’ data.
+- Communicate with a single source of truth for shoppers' data.
 - Safely store [PII](https://developers.vtex.com/docs/guides/pii-data-architecture) and sensitive information.
 
-Below you can learn more about some of the Profile System’s features and how to integrate with the APIs.
+Below you can learn more about some of the Profile System's features and how to integrate with the APIs.
 
 >⚠️ Data stored in the new Profile System is not related to documents saved in [Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api) or [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2). The API endpoints and features described in this article only apply to documents registered in the new Profile System designed to handle PII data architecture.
 
