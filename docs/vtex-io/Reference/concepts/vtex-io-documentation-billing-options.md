@@ -54,7 +54,7 @@ Valid example of the object:
 "plans": [{
   "id": "BRAplan23",
   "currency": "BRL",
-  "price": {...}  
+  "price": {...}
 }]
 ```
 
@@ -62,7 +62,7 @@ Valid example of the object:
 
 | Property | Type | Description | Valid example |
 | -------- | ------- | --------- | -------- |
-| `subscription` | `number` | The subscription’s *monthly* price. | `19.99` |
+| `subscription` | `number` | The subscription’s *monthly* price. This property accepts values with or without cents. Examples: `10` (10 dollars), `60.25` (60 dollars and 25 cents), `0.9` (90 cents). | `19.99` |
 | `metrics` | `array` | Defines (in an object array) the criteria on which the variable fee will be based on, according to the app’s use. Only use this property if you also want to charge your app users according to the app usage (in addition to the subscription fee). To know more, check out the [`metrics` array](#metrics-array) section below. | `undefined` |
 
 Valid example of the object:
