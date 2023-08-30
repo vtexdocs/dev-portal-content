@@ -11,7 +11,7 @@ When a user logs into your store, cookies that store the authorization token are
 
 In many contexts different than API requests to VTEX, it may be necessary to verify that the user is logged in or maybe get something that identifies them, such as email or ID. Cookies also allow this type of action.
 
-However, note that these cookies have the "HTTP Only" and "Secure" options enabled, which means that they are not accessible by any JavaScript method, and will only be sent in secure HTTP requests (i.e. using the HTTPS protocol).
+However, note that these cookies have the "HTTP Only" and "Secure" options enabled, which means that they are not accessible by any JavaScript method, and will only be sent in secure HTTP requests (i.e., using the HTTPS protocol).
 
 So the verification of the user who is authenticated must happen through the following API endpoint:
 
