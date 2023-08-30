@@ -4,7 +4,6 @@ slug: "profile-system"
 hidden: true
 createdAt: "2022-02-22T22:28:50.366Z"
 updatedAt: "2022-08-19T18:42:00.613Z"
-seeAlso: - "/docs/guides/changes-and-limitations-pii-data-architecture"
 ---
 >❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
@@ -21,7 +20,7 @@ Below you can learn more about some of the Profile System's features and how to 
 
 >❗ When implementing your integration:
 >
-> Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture) that impact other integrations.
+> Do not forget to check the [changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data) that impact other integrations, as well as the [current limitations related to PII data architecture](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta).
 >
 > Note that, at the moment, [Master Data triggers](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270) are not supported by the PII platform version Profile System, for example.
 
