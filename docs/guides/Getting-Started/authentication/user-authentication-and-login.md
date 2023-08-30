@@ -22,7 +22,7 @@ As described above, user tokens and associated permissions are tied to the user 
 Developers working with VTEX can generate authentication tokens without having to simulate a shopper’s login. This can be useful to run tests or even to generate tokens programmatically if your integration depends on an API that can not be authenticated with [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys). There are two methods you can use:
 
 - [Generating user tokens](#generating-user-tokens)
-    - [Generating an user token with the VTEX IO CLI](#generating-an-user-token-with-the-vtex-io-cli)
+    - [Generating a user token with the VTEX IO CLI](#generating-an-user-token-with-the-vtex-io-cli)
     - [Generating an authentication token with the VTEX ID API](#generating-an-authentication-token-with-the-vtex-id-api)
 - [Single sign on integrations](#single-sign-on-integrations)
 
