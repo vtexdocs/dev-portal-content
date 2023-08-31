@@ -21,7 +21,7 @@ To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app
 
 <WhatsNextCard
 title="Running A/B tests"
-description="Set up your environment and Enable A/B testing for your store account."
+description="Set up your environment and enable A/B testing for your store account."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing"
 linkTitle="See more"
 />
