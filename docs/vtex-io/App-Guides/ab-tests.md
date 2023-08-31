@@ -15,9 +15,9 @@ flowchart LR
     B --> C(Master)
     B --> D(Production workspace)
 
-To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/docs/guides/vtexarg-abtester). For more information, please refer to the following sections.
-
 ```
+
+To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/docs/guides/vtexarg-abtester). For more information, please refer to the following sections.
 
 <Flex>
 
