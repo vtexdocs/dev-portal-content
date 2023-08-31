@@ -9,7 +9,11 @@ An A/B test compares traffic between two workspaces: the master and a production
 
 For example, suppose you want to update your store's landing page. To confirm the beneficial results of your changes, you can run an A/B test and base your decisions on quantitative metrics.
 
-![ab-testing](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-running-native-ab-testing-0.png)
+```mermaid
+flowchart LR
+    A[End user] --> B(Autobalance)
+    B --> C(Master)
+    B --> D(Production workspace)
 
 To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/docs/guides/vtexarg-abtester). For more information, please refer to the following sections.
 
