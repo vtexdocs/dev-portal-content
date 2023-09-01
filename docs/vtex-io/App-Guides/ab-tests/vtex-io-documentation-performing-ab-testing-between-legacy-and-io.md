@@ -44,7 +44,7 @@ In this guide, you will learn how to perform A/B testing between store workspace
 
 8. Once the production workspace is rendering in the VTEX IO, you can enable the A/B test between the workspaces described in the [Running native A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) guide.
 
-### Validating if the A/B test is running
+### Step 4 - Validating if the A/B test is running
 
 1. To ensure that the A/B test is working, make a GET response in the following API: `http://platform.io.vtex.com/{{account}}/_abtest/parameters`.
 
