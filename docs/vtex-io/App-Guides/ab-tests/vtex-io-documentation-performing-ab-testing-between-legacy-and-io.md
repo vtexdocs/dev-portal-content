@@ -41,7 +41,7 @@ vtex install vtex.colossus-legacy-proxy@@1.8.9-hkignore
 
         >⚠️ The app’s version must be `vtex.colossus-legacy-proxy@1.8.9-hkignore`. If not, the store won’t respond to the request. **Do not uninstall this app, as it's essential for proper store rendering.** The `vtex.colossus-legacy-proxy` app routes requests from the store website within the VTEX IO environment. For example, during an A/B test between IO and Legacy CMS Portal, the store is placed inside the IO environment, and this app is configured in a workspace to route requests for the website to render the store. The `vtex.colossus-legacy-proxy@1.8.9-hkignore` points to the master workspace that is in Legacy CMS Portal and the `vtex.colossus-legacy-proxy@2.x`` points to the development workspace in VTEX IO. 
 
-7. [Open a ticket to the VTEX support team](https://help-tickets.vtex.com/smartlink/sso/login/zendesk?_ga=2.222513819.1487123273.1647865109-1001456323.1619912759) requesting the redirection of the production workspace to be rendered in VTEX IO
+7. [Open a ticket to the VTEX support team](https://help-tickets.vtex.com/smartlink/sso/login/zendesk?_ga=2.222513819.1487123273.1647865109-1001456323.1619912759) requesting the redirection of the production workspace to be rendered in VTEX IO.
 
         >⚠️ If the store has a different storefront for mobile, inform this in the ticket to the VTEX support.
 
