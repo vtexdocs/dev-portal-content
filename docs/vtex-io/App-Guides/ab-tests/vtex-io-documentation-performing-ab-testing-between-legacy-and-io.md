@@ -81,7 +81,7 @@ The `vtex.colossus-legacy-proxy` app routes requests from the store website with
 
         ```
 
-The result means that the `master` is with 90% of the traffic and the `wsio` is with 10%.
+The response indicates that the `master` is with 90% of the traffic and the `wsio` production workspace is with 10%.
 
 ## Next Step
 
