@@ -33,7 +33,7 @@ In this guide, you will learn how to perform A/B testing between store workspace
 
 3. Perfom the desired changes in the store theme in the development workspace. Refer to [Creating a Store Theme project](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-settingyourstoretheme) guide for more information.
 
-### Step 2 - Setting up the Legacy CMS 
+### Step 2 - Setting up the Legacy CMS
 
 1. Once you have created and performed changes in the development workspace, [create a production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) to test your changes with some user traffic.
 
@@ -46,9 +46,10 @@ In this guide, you will learn how to perform A/B testing between store workspace
         ```
 
 #### `vtex.colossus-legacy-proxy@1.8.9-hkignore`
-The app’s version must be `vtex.colossus-legacy-proxy@1.8.9-hkignore`. If not, the store won’t respond to the request. **Do not uninstall this app, as it's essential for proper store rendering.** 
 
-The `vtex.colossus-legacy-proxy` app routes requests from the store website within the VTEX IO environment. For example, during an A/B test between IO and Legacy CMS Portal, the store is placed inside the IO environment, and this app is configured in a workspace to route requests for the website to render the store. The `vtex.colossus-legacy-proxy@1.8.9-hkignore` points to the master workspace that is in Legacy CMS Portal and the `vtex.colossus-legacy-proxy@2.x`` points to the development workspace in VTEX IO. 
+The app’s version must be `vtex.colossus-legacy-proxy@1.8.9-hkignore`. If not, the store won’t respond to the request. **Do not uninstall this app, as it's essential for proper store rendering.**
+
+The `vtex.colossus-legacy-proxy` app routes requests from the store website within the VTEX IO environment. For example, during an A/B test between IO and Legacy CMS Portal, the store is placed inside the IO environment, and this app is configured in a workspace to route requests for the website to render the store. The `vtex.colossus-legacy-proxy@1.8.9-hkignore` points to the master workspace that is in Legacy CMS Portal and the `vtex.colossus-legacy-proxy@2.x` points to the development workspace in VTEX IO.
 
 ### Step 3 - Requesting an A/B test
 
