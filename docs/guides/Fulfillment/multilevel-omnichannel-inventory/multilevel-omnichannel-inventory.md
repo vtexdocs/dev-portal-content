@@ -123,4 +123,4 @@ https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{a
 
 -----
 
-Checkout the [API Integration](https://developers.vtex.com/docs/guides/api-integration) article to learn how to  external marketplace integrations, and headless architectures can make Multilevel omnichannel inventory available for their sellers. 
+Checkout the [API Integration](https://developers.vtex.com/docs/guides/api-integration) article to learn how to  external marketplace integrations, and headless architectures can make Multilevel omnichannel inventory available for their sellers.
