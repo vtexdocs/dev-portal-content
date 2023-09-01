@@ -34,7 +34,10 @@ In this guide, you will learn how to perform A/B testing between store workspace
 
 5. Run the `vtex use master` command in your terminal to perform the steps below in the master workspace. The master workspace must be set to the `vtex.edition-business@0.x` [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
 
-6. Install the `vtex.colossus-legacy-proxy@@1.8.9-hkignore` app. This is an essential step to avoid that you store in production break.
+6. Install the `vtex.colossus-legacy-proxy@@1.8.9-hkignore` app by running the following command:
+
+```sh
+vtex install vtex.colossus-legacy-proxy@@1.8.9-hkignore
 
         >⚠️ The app’s version must be `vtex.colossus-legacy-proxy@1.8.9-hkignore`. If not, the store won’t respond to the request. **Do not uninstall this app, as it's essential for proper store rendering.** The `vtex.colossus-legacy-proxy` app routes requests from the store website within the VTEX IO environment. For example, during an A/B test between IO and Legacy CMS Portal, the store is placed inside the IO environment, and this app is configured in a workspace to route requests for the website to render the store. The `vtex.colossus-legacy-proxy@1.8.9-hkignore` points to the master workspace that is in Legacy CMS Portal and the `vtex.colossus-legacy-proxy@2.x`` points to the development workspace in VTEX IO. 
 
