@@ -1,18 +1,30 @@
 ---
-title: "API Integration"
-slug: "api-integration"
+title: "Multilevel omnichannel inventory API integration"
+slug: "multilevel-omnichannel-inventory-api-integration"
 hidden: false
 createdAt: "2022-11-18T18:48:14.043Z"
 updatedAt: "2022-11-18T18:53:14.127Z"
 ---
-When using a Multilevel Omnichannel Inventory architecture, the endpoints used in the integration's architecture are the following:
+
+Marketplaces following the [External Marketplace protocol](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide) can also make the [Multilevel Omnichannel Inventory](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) setting available for VTEX sellers connected to it. This allows for more fulfillment options by VTEX sellers, since they can connect their franchise accounts' inventories as fulfillment options. You can learn more about the benefits and restrictions of implementing this feature in our [Multilevel Omnichannel Inventory Help article](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).
+
+External marketplaces and connectors should follow this article's instructions to configure Multilevel Omnichannel Inventory in their marketplace architecture with VTEX. 
+
+>ℹ️ Before you start, make sure that the necessary [settings](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory#setup-for-vtex-marketplaces) are made in the connected VTEX account, so the feature is fully operational.
+
+## API integration overview
+
+When using a [Multilevel Omnichannel Inventory](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) architecture, the endpoints used in the integration's architecture are the following:
 
 * [Place Order](#place-multilevel-omnichannel-order): create the order in the seller responsible for fulfillment.
 * [Marketplace Order Authorization](#marketplace-order-authorization): progressing the order, after the marketplace's authorization.
 * [Cancel Order Notification](#cancel-order-notification): route to be notified of the seller's, or of the chain agent's (in this case seller level 2) cancellation.
 * [Order Invoice Notification](#order-invoice-notification): route to receive invoice notification from the seller, or of the chain agent's (in this case seller level 2).
 
-Therefore, the flow of the routes follows as the image below shows:
+Therefore, the flow of the routes follows the image below:
+
+
+![chain-orders-order-flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/multilevel-omnichannel-inventory-1.png)
 
 ## Place Multilevel Omnichannel Order
 
@@ -386,3 +398,7 @@ Response example:
 "receipt": "95233cf2078d418ba77155380c18f398"
 }
 ```
+
+## Next steps
+
+Checkout the [Change chain orders in external marketplaces](https://developers.vtex.com/docs/guides/change-orders-multilevel-omnichannel-inventory-external-marketplaces) article to learn how to implement more complex change order scenarios.
