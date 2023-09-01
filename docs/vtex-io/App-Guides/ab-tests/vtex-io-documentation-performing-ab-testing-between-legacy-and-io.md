@@ -17,7 +17,7 @@ In this guide, you will learn how to perform A/B testing between store workspace
 
 ## Step-by-step
 
-1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into your VTEX account by running the following command. *Remember to replace the value between the brackets for the VTEX account name you desire. For example: `vtex login account-name`.*
+1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into your VTEX account by running the following command. *Remember to replace `{accountName}` with your VTEX account name.*
 
         ```bash
         vtex login {account-name}
