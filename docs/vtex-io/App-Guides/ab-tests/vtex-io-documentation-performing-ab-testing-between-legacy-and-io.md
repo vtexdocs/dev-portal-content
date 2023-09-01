@@ -32,7 +32,7 @@ In this guide, you will learn how to perform A/B testing between store workspace
 3. Perfom the changes you desire in the Development workspace.
 4. Once you have created and performed changes in the development workspace, [create a production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) to test your changes with some user traffic.
 
-5. Run the `vtex use master` command in your terminal to perform the steps below in the Master workspace. The Master workspace must be set to the `vtex.edition-business@0.x` [edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
+5. Run the `vtex use master` command in your terminal to perform the steps below in the master workspace. The master workspace must be set to the `vtex.edition-business@0.x` [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
 
 6. Install the `vtex.colossus-legacy-proxy@@1.8.9-hkignore` app. This is an essential step to avoid that you store in production break.
 
