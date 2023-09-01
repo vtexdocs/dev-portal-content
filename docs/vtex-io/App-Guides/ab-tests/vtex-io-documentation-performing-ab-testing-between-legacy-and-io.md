@@ -23,7 +23,7 @@ In this guide, you will learn how to perform A/B testing between store workspace
         vtex login {accountName}
         ```
 
-2. Access the Development workspace that you have created by running the following command. *Remember to replace the value between the brackets for the Development workspace you desire. For example: `vtex use test`.*
+2. Access the development workspace that you have created by running the following command. *Remember to replace the value between the brackets with the name of the development workspace you created in the previous step.*
 
         ```bash
         vtex use {workspace} 
