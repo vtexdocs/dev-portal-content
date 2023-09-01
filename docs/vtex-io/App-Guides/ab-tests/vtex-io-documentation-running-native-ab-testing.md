@@ -146,7 +146,7 @@ Before completing your A/B test, it is important to understand the comparative a
 
 > ⚠️ The main results of the A/B test are aimed at scenarios where the platform automatically directed store traffic. While you can and should use A/B tests even if you manually direct the traffic, bear in mind that the numbers behind each result reflect an automatic segmentation according to each workspace experience.
 
-#### Validating your workspace winner
+#### Validating the winner workspace
 
 The best way to validate your A/B test workspace winner is to set a maximum conversion loss value according to your store operation size.
 
