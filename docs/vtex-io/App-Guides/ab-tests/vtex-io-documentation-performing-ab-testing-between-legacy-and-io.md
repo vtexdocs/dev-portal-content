@@ -42,7 +42,7 @@ In this guide, you will learn how to perform A/B testing between store workspace
 
         >⚠️ If the store has a different storefront for mobile, inform this in the ticket to the VTEX support.
 
-8. Once the Production workspace is rendering in the VTEX IO, you can enable the A/B test between the workspaces described in the [Running native A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) step-by-step.
+8. Once the production workspace is rendering in the VTEX IO, you can enable the A/B test between the workspaces described in the [Running native A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) guide.
 
 ### Validating if the A/B test is running
 
