@@ -49,7 +49,7 @@ vtex install vtex.colossus-legacy-proxy@@1.8.9-hkignore
 
 ### Step 4 - Validating if the A/B test is running
 
-1. To ensure that the A/B test is working, make a GET response in the following API: `http://platform.io.vtex.com/{{account}}/_abtest/parameters`.
+1. To ensure that the A/B test is working, send a `GET` request to the following API: `http://platform.io.vtex.com/{{accountName}}/_abtest/parameters`.
 
         >⚠️ The Header must have `VtexIdclientAutCookie` from the account you want to get the information. For example: `VtexIdclientAutCookie: {{VtexIdclientAutCookie}}`
 
