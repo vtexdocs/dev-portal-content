@@ -26,8 +26,6 @@ Therefore, the flow of the routes follows the image below:
 
 ![chain-orders-order-flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/multilevel-omnichannel-inventory-1.png)
 
-
-
 ## Place Multilevel Omnichannel Order
 
 Use the request example below to Place Order.
