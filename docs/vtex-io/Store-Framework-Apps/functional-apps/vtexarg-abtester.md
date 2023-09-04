@@ -45,10 +45,10 @@ After installing the AB Tester app, you'll be able to:
 
 ### Creating an A/B test
 
-In the following step by step, you will learn how to set up a new A/B test. Notice that, before proceeding any further, you must already have a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) containing the changes you want to evaluate.
+In the following step by step, learn how to set up a new A/B test. Notice that, before proceeding any further, you must already have a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) containing the changes you want to evaluate.
 
 1. Access the VTEX Admin.
-2. Go to **Others > AB Tester**.
+2. Go to **Extensions Hub > Installed Apps > AB Tester**.
 3. Click on **Create new AB test**.
 4. Fill out the presented fields as in the following:
    - **Workspace Name -** Enter the name of the production workspace containing the changes you want to examine via the A/B test.
@@ -74,5 +74,5 @@ After creating your A/B test, the **AB Tester** app will provide a table contain
 Although automatic, an A/B test will not end by itself. Take the following steps to terminate an A/B test:
 
 1. Access the VTEX Admin.
-2. Go to **Others > AB Tester** and scroll the horizontal bar until you see a Kebab menu.
+2. Go to **Extensions Hub > Installed Apps > AB Tester** and scroll the horizontal bar until you see a Kebab menu.
 3. Click on the Kebab menu and click on **Finish A/B Test**.
