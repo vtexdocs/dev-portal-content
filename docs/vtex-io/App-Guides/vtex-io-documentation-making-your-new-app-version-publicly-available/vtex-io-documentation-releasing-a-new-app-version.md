@@ -65,7 +65,7 @@ App versions are created as **stable** by default. **Beta** versions must be exp
 The recommended use cases for stable and beta versions are:
 
 - **Stable**: intended for wide availability and production environments.
-- **Beta**: intended for tests and to limited availability.
+- **Beta**: intended for tests and limited availability.
 
 Observe these points when dealing with a **beta** version:
 
