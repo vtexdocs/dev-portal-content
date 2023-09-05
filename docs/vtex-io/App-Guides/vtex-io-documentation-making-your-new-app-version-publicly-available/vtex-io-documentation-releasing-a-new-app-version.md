@@ -48,7 +48,7 @@ Apps should start development with version `0.0.0`.
 
 The recommended use cases for each version type are as follows:
 
-- **Patch**: intended for fixes, small changes to correct errors and bugs.
+- **Patch**: intended for bug fixes and minor issues.
 - **Minor**: intended for changes in functionality that are not breaking changes like new features, changes in the UI, and others.
 - **Major**: intended for breaking changes and changes in the endpoints. Changes in the [Billing Options](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options) always require a new **major** release.
 
