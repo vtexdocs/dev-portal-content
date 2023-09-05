@@ -38,7 +38,7 @@ If you are releasing an app in the [App Store](https://apps.vtex.com/), make sur
 
 For more details about the `vtex release` command, check our [VTEX IO CLI reference](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#release).
 
-## Details for each version type
+## Understanding app versioning
 
 ### Major, minor and patch
 
