@@ -185,10 +185,10 @@ A VTEX store can act as both a [seller](https://help.vtex.com/en/tutorial/config
 
 There are additional configurations available for you to manage your store orders. This allows you to take advantage of other VTEX features, such as [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), [VTEX DO](https://help.vtex.com/en/tutorial/vtex-do-interface--7KMbRL4OslN8DTX9oiuCiu), [B2B](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC), and [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
 
-### VTEX inStore
+### VTEX Sales App
 
-- [Enabling order filter by sales associate](https://developers.vtex.com/docs/guides/enable-order-filter-by-sales-associate)
-- [Getting invoiced orders placed on inStore](https://developers.vtex.com/docs/guides/get-invoiced-orders-placed-in-instore)
+- [Enable order filter by sales associate](https://developers.vtex.com/docs/guides/enable-order-filter-by-sales-associate)
+- [Enable partial cancellation for Debit or Credit Direct sales](https://developers.vtex.com/docs/guides/enable-partial-cancellation)
 
 ### VTEX DO
 
