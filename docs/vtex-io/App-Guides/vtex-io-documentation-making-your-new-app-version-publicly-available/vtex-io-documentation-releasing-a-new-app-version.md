@@ -46,7 +46,7 @@ Versioning in VTEX IO follows the [SemVer standard](https://semver.org/), utiliz
 
 Apps should start development with version `0.0.0`.
 
-The recommended use cases for each version type are:
+The recommended use cases for each version type are as follows:
 
 - **Patch**: intended for fixes, small changes to correct errors and bugs.
 - **Minor**: intended for changes in functionality that are not breaking changes like new features, changes in the UI, and others.
