@@ -69,5 +69,5 @@ The recommended use cases for stable and beta versions are:
 
 Observe these points when dealing with a **beta** version:
 
-1. **Beta** versions cannot be deployed. If you use `vtex deploy` on a beta version of an app, the accounts and workspaces with the app installed will not update to this version.
+- **Beta** versions cannot be deployed. If you run `vtex deploy` on a beta version of an app, the accounts and workspaces with that specific app version installed will not be updated to this version.
 2. **Beta** versions ignore the `ttl` (time-to-live) parameter set in the [`service.json` file](https://developers.vtex.com/docs/guides/overview-of-vtex-io-services#the-servicejson-file).
