@@ -42,7 +42,7 @@ For more details about the `vtex release` command, check our [VTEX IO CLI refere
 
 ### Major, minor and patch
 
-Following the [SemVer standard](https://semver.org/), the version of an app is composed of three numbers using the format `{major}.{minor}.{patch}`. For instance, if an app has a version `2.13.5`, the **major** number is `2`, the **minor** number is `13` and the **patch** number is `5`.
+Versioning in VTEX IO follows the [SemVer standard](https://semver.org/), utilizing a format of `{major}.{minor}.{patch}`. For instance, if an app version is `2.13.5`, the **major** is `2`, the **minor** is `13`, and the **patch** is `5`.
 
 For each new version of a type, this version type will be increased by one and turn the minor types to `0`, if applicable. For instance, if your app version is `2.13.5` and you want to:
 
