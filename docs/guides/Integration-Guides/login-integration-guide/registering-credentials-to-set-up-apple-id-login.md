@@ -108,7 +108,6 @@ Now, you have an App ID, and you have created a Services ID which serves as your
 
 In this step, you must create and download a private key with Sign in with Apple enabled and associate it with a primary App ID. Then, you need to retrieve the Key ID. The Key ID will later be used by VTEX to generate an [OAuth client secret](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/) during setup in the VTEX Admin. Follow the steps below:
 
-
 1. On the Apple Developer Portal, click **Certificates, Identifiers & Profiles**, as shown below.
 
    ![apple-credentials-11](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.PNG)
