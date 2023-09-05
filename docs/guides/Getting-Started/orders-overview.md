@@ -52,7 +52,7 @@ The chain order flow is visible to the store acting as an intermediary between t
 
 In the following sections, you will learn how to build order integrations with Feed and Hook. For example, this can be useful for developing an integration between your store ERP and the VTEX platform.
 
-> We strongly recommend you to create an order integration using the [Orders Feed v3](https://developers.vtex.com/docs/guides/orders-feed), instead of using the List orders API request or external services. If you already use an integration based on the API request, you should migrate to using the Feed. Keep in mind that this means changing the integration flow. To learn how to implement this change, see the [Set up order integration](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration).
+> We strongly recommend you to create an order integration using the [Orders Feed v3](https://developers.vtex.com/docs/guides/orders-feed), instead of using the List orders API request or external services. If you already use an integration based on the API request, you should migrate to using the Feed. Keep in mind that this means changing the integration flow. To learn how to implement this change, see the [Set up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration).
 
 ### Feed v.3
   
