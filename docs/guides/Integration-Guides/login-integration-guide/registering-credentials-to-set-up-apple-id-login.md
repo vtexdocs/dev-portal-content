@@ -36,7 +36,7 @@ Get started by enabling the Sign in with Apple service on an iOS, tvOS, watchOS,
 
    ![apple-credentials-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.PNG)
 
-3. From the sidebar, click **Identifiers, **then click the blue add `+` icon.
+3. From the sidebar, click **Identifiers**, then click the blue add `+` icon.
 
    ![apple-credentials-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-2-7.PNG)
 
@@ -45,7 +45,7 @@ Get started by enabling the Sign in with Apple service on an iOS, tvOS, watchOS,
    ![apple-credentials-3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-3.PNG)
 
 5. Complete the fields to register the App ID:
-   
+
    * **Platform**: Select the app platform. You can choose between **iOS, tvOS, watchOS,** or **macOS**.
    * **Description**: Write an internal description for the app. Don’t use special characters such as `@`, `&`, `*`, `'`, `"`.
    * **App ID Prefix:** Non-editable field corresponding to your Apple Developer Team ID, which acts as a prefix to your App ID. Copy this Team ID and save it somewhere, as you will use it to configure the Apple ID login in the VTEX Admin later on. You can also find this Team ID on the [Apple Developer Portal](https://developer.apple.com/) top bar anytime you are logged in.
@@ -61,8 +61,7 @@ Get started by enabling the Sign in with Apple service on an iOS, tvOS, watchOS,
 
 7. Click `Continue`, review the completed information, then click `Register`.
 
-The App ID created is the combination of the **App ID Prefix** (Team ID) and the **Bundle ID**. For example, `5PD8XQY9EW.com.mystore`. 
-
+The App ID created is the combination of the **App ID Prefix** (Team ID) and the **Bundle ID**. For example, `5PD8XQY9EW.com.mystore`.
 
 ### Step 2: Creating a Services ID
 
@@ -74,7 +73,7 @@ Go ahead and create a new identifier and choose Services IDs.
 
    ![apple-credentials-6](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.PNG)
 
-2. From the sidebar, click **Identifiers, **then click the blue add `+` icon.
+2. From the sidebar, click **Identifiers**, then click the blue add `+` icon.
 
    ![apple-credentials-7](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-2-7.PNG)
 
@@ -89,7 +88,6 @@ Go ahead and create a new identifier and choose Services IDs.
 
    ![apple-credentials-9](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-9.PNG)
 
-
 5. Check the **Sign In with Apple** checkbox.
 6. Click `Configure` next to **Sign In with Apple**.
 7. Now, you must define the domain your app is running on and the redirect URLs used during the OAuth flow:
@@ -102,16 +100,13 @@ Go ahead and create a new identifier and choose Services IDs.
 
    ![apple-credentials-10](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-10.PNG)
 
-
 8. Click `Save`, then `Continue` and `Register` to complete this step.
 
 Now, you have an App ID, and you have created a Services ID which serves as your OAuth `client_id`. The **Identifier** you entered for your Services ID is your OAuth `client_id`. In the given example, this is `com.mystore.client`.
 
-
 ### Step 3: Creating a private Key ID and p8 Certificate
 
 In this step, you must create and download a private key with Sign in with Apple enabled and associate it with a primary App ID. Then, you need to retrieve the Key ID. The Key ID will later be used by VTEX to generate an [OAuth client secret](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/) during setup in the VTEX Admin. Follow the steps below:
-
 
 
 1. On the Apple Developer Portal, click **Certificates, Identifiers & Profiles**, as shown below.
