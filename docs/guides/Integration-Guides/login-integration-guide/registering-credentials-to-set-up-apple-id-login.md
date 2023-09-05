@@ -6,7 +6,9 @@ createdAt: "2023-09-05T17:34:17Z"
 updatedAt: "2023-09-05T17:34:17Z"
 ---
 
-To allow users to [sign in to your store with their Apple ID](https://developer.apple.com/sign-in-with-apple/get-started/), you must create valid Apple credentials before [setting up this type of authentication through the VTEX Admin](#). This guide describes all the necessary steps to get these credentials:
+> This feature is in closed beta, which means that only specific customers can access it now. If you want to implement it in the future, please contact [our support](https://support.vtex.com/hc/pt-br/).
+
+To allow users to [sign in to your store with their Apple ID](https://developer.apple.com/sign-in-with-apple/get-started/), you must create valid Apple credentials before [setting up this type of authentication through the VTEX Admin](https://help.vtex.com/en/tutorial/configuring-sign-in-with-apple-id-beta--5qprgEmHYfPTghnYwm0KrV). This guide describes all the necessary steps to get these credentials:
 
 - [Before you start](#before-you-start)
 - [Instructions](#instructions)
@@ -15,7 +17,7 @@ To allow users to [sign in to your store with their Apple ID](https://developer.
   - [Step 3: Creating a private Key ID and p8 Certificate](#step-3-creating-a-private-key-id-and-p8-certificate)
   - [Step 4: Configuring the Apple ID login in the VTEX Admin](#step-4-configuring-the-apple-id-login-in-the-vtex-admin)
 
-After following these steps to register Apple credentials, you must complete the configuration of Apple ID login in the VTEX Admin, as explained in [Configuring login with Apple ID](#).
+After following these steps to register Apple credentials, you must complete the configuration of Apple ID login in the VTEX Admin, as explained in [Configuring Sign in with Apple ID](https://help.vtex.com/en/tutorial/configuring-sign-in-with-apple-id-beta--5qprgEmHYfPTghnYwm0KrV).
 
 > Read [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/create-a-sign-in-with-apple-private-key) for more information about the required credentials.
 
@@ -146,4 +148,4 @@ After creating the required credentials, make sure you save them to set up the l
 | **Service ID** | Services identifier, to be used as the [OAuth `client_id`](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/). | Obtained in Creating a Services ID. |
 | **p8 Certificate** | Private key saved in a text file ending in `.p8`, generated only once by Apple. | Obtained in [Creating a private Key ID and p8 certificate](#step-3-creating-a-private-key-id-and-p8-certificate). |
 
-Then, access the VTEX Admin to complete the configuration of Apple ID login. Follow the steps described in [Configuring Sign in with Apple ID](#) to continue.
+Then, access the VTEX Admin to complete the configuration of Apple ID login. Follow the steps described in [Configuring Sign in with Apple ID](https://help.vtex.com/en/tutorial/configuring-sign-in-with-apple-id-beta--5qprgEmHYfPTghnYwm0KrV) to continue.
