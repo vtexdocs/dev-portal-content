@@ -44,19 +44,19 @@ For more details about the `vtex release` command, check our [VTEX IO CLI refere
 
 Versioning in VTEX IO follows the [SemVer standard](https://semver.org/), utilizing a format of `{major}.{minor}.{patch}`. For instance, if an app version is `2.13.5`, the **major** is `2`, the **minor** is `13`, and the **patch** is `5`.
 
-For each new version of a type, this version type will be increased by one and turn the minor types to `0`, if applicable. For instance, if your app version is `2.13.5` and you want to:
-
-- Release a new **patch**, your new app version will be `2.13.6`.
-- Release a new **minor**, your new app version will be `2.14.0`.
-- Release a new **major**, your new app version will be `3.0.0`.
-
-Apps should start development with version `0.0.1`. For an app to be publicly available, it must have a major number of at least `1`.
+Apps should start development with version `0.0.0`.
 
 The recommended use cases for each version type are:
 
 - **Patch**: intended for fixes, small changes to correct errors and bugs.
 - **Minor**: intended for changes in functionality that are not breaking changes like new features, changes in the UI, and others.
 - **Major**: intended for breaking changes and changes in the endpoints. Changes in the [Billing Options](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options) always require a new **major** release.
+
+For each new version of a type, this version type will be increased by one and turn the minor types to `0`, if applicable. For instance, if your app version is `2.13.5` and you want to:
+
+- Release a new **patch**, your new app version will be `2.13.6`.
+- Release a new **minor**, your new app version will be `2.14.0`.
+- Release a new **major**, your new app version will be `3.0.0`.
 
 ### Stable and beta versions
 
