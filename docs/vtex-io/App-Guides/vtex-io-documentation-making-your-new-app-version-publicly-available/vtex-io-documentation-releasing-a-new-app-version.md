@@ -58,7 +58,7 @@ The recommended use cases for each version type are:
 - **Minor**: intended for changes in functionality that are not breaking changes like new features, changes in the UI, and others.
 - **Major**: intended for breaking changes and changes in the endpoints. Changes in the [Billing Options](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options) always require a new **major** release.
 
-### Stable and beta
+### Stable and beta versions
 
 App versions are created as **stable** by default. **Beta** versions must be explicitly declared and are identified by a dash symbol (`-`) following a sequence of alphanumeric characters after the version number. For instance, `2.13.5` is a **stable** version, and you can have a **beta** version called `2.13.5-beta1`.
 
