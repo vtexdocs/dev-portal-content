@@ -46,10 +46,10 @@ Get started by enabling the Sign in with Apple service on an iOS, tvOS, watchOS,
 
 5. Complete the fields to register the App ID:
 
-   * **Platform**: Select the app platform. You can choose between **iOS, tvOS, watchOS,** or **macOS**.
-   * **Description**: Write an internal description for the app. Don’t use special characters such as `@`, `&`, `*`, `'`, `"`.
-   * **App ID Prefix:** Non-editable field corresponding to your Apple Developer Team ID, which acts as a prefix to your App ID. Copy this Team ID and save it somewhere, as you will use it to configure the Apple ID login in the VTEX Admin later on. You can also find this Team ID on the [Apple Developer Portal](https://developer.apple.com/) top bar anytime you are logged in.
-   * **Bundle ID**: Choose between creating an **Explicit** App ID, used for a single app, or a **Wildcard**, used for a set of apps. Check [Apple’s documentation about App IDs](https://developer.apple.com/help/glossary/app-id/) for more details.
+   - **Platform**: Select the app platform. You can choose between **iOS, tvOS, watchOS,** or **macOS**.
+   - **Description**: Write an internal description for the app. Don’t use special characters such as `@`, `&`, `*`, `'`, `"`.
+   - **App ID Prefix:** Non-editable field corresponding to your Apple Developer Team ID, which acts as a prefix to your App ID. Copy this Team ID and save it somewhere, as you will use it to configure the Apple ID login in the VTEX Admin later on. You can also find this Team ID on the [Apple Developer Portal](https://developer.apple.com/) top bar anytime you are logged in.
+   - **Bundle ID**: Choose between creating an **Explicit** App ID, used for a single app, or a **Wildcard**, used for a set of apps. Check [Apple’s documentation about App IDs](https://developer.apple.com/help/glossary/app-id/) for more details.
 
       Then, define the Bundle ID, which works as your app’s unique identifier. It needs to be a uniform type identifier (UTI) string containing only alphanumeric characters (`A-Z`, `a-z`, `0-9`), hyphens (`-`), and/or periods (`.`). The string should be in reverse-DNS format, such as `com.domainname.appname`. Bundle IDs are case-sensitive.
 
@@ -83,8 +83,8 @@ Go ahead and create a new identifier and choose Services IDs.
 
 4. Complete the fields to register the Services ID:
 
-   * **Description:** Write the name of the app the user will see during the login flow. Don’t use special characters such as `@`, `&`, `*`, `'`, `"`.
-   * **Identifier:** Write the identifier which will be used as the OAuth `client_id`. The string should be in reverse-DNS format, such as `com.domainname.appname.client`. Don’t include asterisks (`*`).
+   - **Description:** Write the name of the app the user will see during the login flow. Don’t use special characters such as `@`, `&`, `*`, `'`, `"`.
+   - **Identifier:** Write the identifier which will be used as the OAuth `client_id`. The string should be in reverse-DNS format, such as `com.domainname.appname.client`. Don’t include asterisks (`*`).
 
    ![apple-credentials-9](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-9.PNG)
 
@@ -92,9 +92,9 @@ Go ahead and create a new identifier and choose Services IDs.
 6. Click `Configure` next to **Sign In with Apple**.
 7. Now, you must define the domain your app is running on and the redirect URLs used during the OAuth flow:
 
-   * **Primary App ID:** Make sure your associated App ID is chosen in this field. If this is the first App ID you’ve created that uses Sign In with Apple, it will probably already be selected.
-   * **Web Domain:** Enter the domain name where your app will run.
-   * **Return URLs:** Enter the redirect URL for your app.
+   - **Primary App ID:** Make sure your associated App ID is chosen in this field. If this is the first App ID you’ve created that uses Sign In with Apple, it will probably already be selected.
+   - **Web Domain:** Enter the domain name where your app will run.
+   - **Return URLs:** Enter the redirect URL for your app.
 
    > ⚠️ Apple doesn’t allow localhost URLs in this step. If you enter an IP address, it will fail later in the flow. You have to use a real domain here.
 
