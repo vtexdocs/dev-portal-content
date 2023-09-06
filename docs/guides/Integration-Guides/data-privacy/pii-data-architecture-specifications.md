@@ -197,7 +197,7 @@ The marketplace is your data source, so you must guarantee that marketplaces ass
 
 ## Changes in VTEX features default behavior
 
-The behavior of some VTEX features has been adapted to better communicate with the PII data architecture. There are some differences in implementation when compared to the standard data architecture, such as API contracts and how information is displayed on VTEX Admin. Read [Changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data). This document is constantly updated to reflect the evolution of the PII data architecture. 
+The behavior of some VTEX features has been adapted to better communicate with the PII data architecture. There are some differences in implementation when compared to the standard data architecture, such as API contracts and how information is displayed on VTEX Admin. Read [Changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data). This document is constantly updated to reflect the evolution of the PII data architecture.
 
 ## Limitations during closed beta
 
