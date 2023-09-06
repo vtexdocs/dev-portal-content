@@ -1,6 +1,6 @@
 ---
 title: "Headless CMS Plugin v1.0.10: Bug fix for sync error"
-slug: "2023-07-31-fixed-headless-cms-plugin"
+slug: "2023-09-06-fixed-headless-cms-plugin"
 type: "fixed"
 createdAt: "2023-09-06T10:28:00.000Z"
 excerpt: "The SyntaxError issue has been resolved in the latest release,`v1.0.10`"
