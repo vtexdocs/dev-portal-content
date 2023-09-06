@@ -201,4 +201,4 @@ The behavior of some VTEX features has been adapted to better communicate with t
 
 ## Limitations during closed beta
 
-During closed beta testing stage, there are limitations in certain features for stores using PII data architecture. See this article about [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta). This document is constantly updated to reflect the evolution of the PII data architecture. 
+During closed beta testing stage, there are limitations in certain features for stores using PII data architecture. See this article about [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta). This document is constantly updated to reflect the evolution of the PII data architecture.
