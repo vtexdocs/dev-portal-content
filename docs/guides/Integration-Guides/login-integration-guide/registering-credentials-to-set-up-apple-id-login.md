@@ -67,8 +67,6 @@ The App ID created is the combination of the **App ID Prefix** (Team ID) and the
 
 Next, to enable Sign in with Apple for each website, you must register a Services ID, verify your domain, and associate it to an app. The Services ID identifies the particular instance of your app and serves as the [OAuth client_id](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/).
 
-Go ahead and create a new identifier and choose Services IDs.
-
 1. In the Apple Developer Portal, click **Certificates, Identifiers & Profiles**, as shown below.
 
    ![apple-credentials-6](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.PNG)
