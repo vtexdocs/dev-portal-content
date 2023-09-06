@@ -5,24 +5,23 @@ hidden: true
 createdAt: "2022-02-22T22:28:50.366Z"
 updatedAt: "2022-08-19T18:42:00.613Z"
 ---
->❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
+>❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
-The [**Profile System**](https://developers.vtex.com/docs/guides/profile-system) is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
+The **Profile System** is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
 
 The Profile System API enables stores to:
 
-- Communicate with a single source of truth for shoppers’ data.
+- Communicate with a single source of truth for shoppers' data.
 - Safely store [PII](https://developers.vtex.com/docs/guides/pii-data-architecture) and sensitive information.
 
-Below you can learn more about some of the Profile System’s features and how to integrate with the APIs.
+Below you can learn more about some of the Profile System's features and how to integrate with the APIs.
 
 >⚠️ Data stored in the new Profile System is not related to documents saved in [Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api) or [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2). The API endpoints and features described in this article only apply to documents registered in the new Profile System designed to handle PII data architecture.
 
->❗ When implementing your integration:
->
-> Do not forget to check the [Adaptations and limitations](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture) that impact other integrations.
->
-> Note that, at the moment, [Master Data triggers](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270) are not supported by the PII platform version Profile System, for example.
+## Before you start
+
+- Check the [changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data) that impact other integrations.
+- Check the [current limitations related to PII data architecture](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta). Note that, at the moment, [Master Data triggers](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270) are not supported by the PII platform version Profile System, for example.
 
 ## Permission
 

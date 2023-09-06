@@ -6,7 +6,7 @@ createdAt: "2022-02-22T22:27:02.330Z"
 updatedAt: "2023-06-14T43:38:36.446Z"
 ---
 
->❗ This feature is in closed beta phase, meaning we are working to improve it. Do not share this documentation with people outside of your company.
+>❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
 The VTEX platform allows stores to process shoppers’ Personal Identifiable Information (PII) in compliance with data privacy regulations such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/).
 
@@ -18,11 +18,12 @@ In the PII data architecture, all PII is stored in the **Profile System**. Other
 
 VTEX has established a comprehensive PII data architecture that incorporates a range of solutions and processes for PII. See the documentation below to learn more about how it works and how to implement it.
 
-- [PII Data Architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications) - Technical specifications of the PII data architecture, including the Profile System, data encryption and auditability, among other key features.
-- [Data residency](https://developers.vtex.com/docs/guides/data-residency) - How PII data residency works for VTEX stores.
-- [Data subject rights](https://help.vtex.com/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM) - Detailed instructions on how VTEX stores can apply each right of data subjects.
-- [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system) - How to integrate with the Profile System API.
-- [Changes and limitations of the PII data architecture](https://developers.vtex.com/docs/guides/changes-and-limitations-pii-data-architecture) - Differences in the implementation of the PII data architecture.
+- [PII Data Architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications): Technical specifications of the PII data architecture, including the Profile System, data encryption and auditability, among other key features.
+- [Data residency](https://developers.vtex.com/docs/guides/data-residency): How PII data residency works for VTEX stores using the PII data architecture.
+- [Data subject rights](https://help.vtex.com/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM): Detailed instructions on how VTEX stores can apply data subject rights.
+- [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system): How to integrate with the Profile System API.
+- [Changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data): Adaptations in the default behavior of certain VTEX features to handle the PII data architecture.
+- [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta): Current limitations that apply to stores using PII data architecture, in relation to certain VTEX features.
 
 ## Parties' responsibilities
 
