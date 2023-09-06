@@ -8,6 +8,8 @@ excerpt: "The SyntaxError issue has been resolved in the latest release,`v1.0.10
 
 In version [`v1.0.8` of the Headless CMS Plugin](https://developers.vtex.com/updates/release-notes/2023-07-31-improved-headless-cms-plugin), running the `vtex cms sync` command would lead to the following error message: `SyntaxError: Cannot use import statement outside a module.` This issue has been resolved in the latest release,`v1.0.10`.
 
+> ⚠️ Headless CMS is currently only available for FastStore projects.
+
 ## What needs to be done?
 
 To update the Headless CMS plugin to `v1.0.10`, follow the steps below:
