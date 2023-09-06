@@ -26,7 +26,8 @@ To update the Headless CMS plugin to `v1.0.10`, follow the steps below:
         vtex plugins update
         ```
 
-3. Change to the `cms` folder and run `vtex cms sync`. Once your changes are synced, you should see the following message display:
+3. Open your FastStore project.
+4. Change to the `cms` folder and run `vtex cms sync`. Once your changes are synced, you should see the following message:
 
         ```bash
         CMS synced successfully…
