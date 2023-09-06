@@ -155,11 +155,3 @@ The [gift card](https://help.vtex.com/en/subcategory/gift-card--3qWeS7abxCyC0G0G
 ### Customer Credit
 
 Currently, the [Customer Credit](https://help.vtex.com/en/tutorial/customer-credit-overview--1uIqTjWxIIIEW0COMg4uE0) feature is not supported.
-
-## Learn more
-
-- [PII Data Architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications)
-- [Data residency](https://developers.vtex.com/docs/guides/data-residency)
-- [Data subject rights](https://help.vtex.com/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM)
-- [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system)
-- [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta)
