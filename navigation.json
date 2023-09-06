@@ -464,6 +464,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Registering credentials to set up Apple ID login",
+                  "slug": "registering-credentials-to-set-up-apple-id-login",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
