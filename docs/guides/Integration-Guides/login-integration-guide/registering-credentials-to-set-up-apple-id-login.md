@@ -29,7 +29,7 @@ You must have an [Apple ID](https://support.apple.com/apple-id) and be a member 
 
 ### Step 1: Creating an App ID
 
-Get started by enabling the Sign in with Apple service on an iOS, tvOS, watchOS, or macOS App ID and classifying it as the primary App ID. Read [Apple’s documentation](https://developer.apple.com/help/account/configure-app-capabilities/about-sign-in-with-apple) on this step for more information.
+Begin by following the instructions below to enable the Sign in with Apple service on an iOS, tvOS, watchOS, or macOS App ID and classifying it as the primary App ID. Read [Apple’s documentation](https://developer.apple.com/help/account/configure-app-capabilities/about-sign-in-with-apple) on this step for more information.
 
 1. Sign in to the [Apple Developer Portal](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Faccount%2F&rv=1).
 2. Click **Certificates, Identifiers & Profiles**, as shown below.
