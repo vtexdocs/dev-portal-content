@@ -6,7 +6,7 @@ createdAt: "2023-09-05T17:34:17Z"
 updatedAt: "2023-09-05T17:34:17Z"
 ---
 
-> This feature is in closed beta, which means that only specific customers can access it now. If you want to implement it in the future, please contact [our support](https://support.vtex.com/hc/pt-br/).
+> ⚠️ This feature is in closed beta, meaning only specific customers can access it now. If you want to implement it in the future, please contact [our support](https://support.vtex.com/hc/pt-br/).
 
 To allow users to [sign in to your store with their Apple ID](https://developer.apple.com/sign-in-with-apple/get-started/), you must create valid Apple credentials before [setting up this type of authentication through the VTEX Admin](https://help.vtex.com/en/tutorial/configuring-sign-in-with-apple-id-beta--5qprgEmHYfPTghnYwm0KrV). This guide describes all the necessary steps to get these credentials:
 
