@@ -65,7 +65,12 @@ The frontmatter is the table with metadata about the article you're adding. It c
 - **hidden:** boolean that makes the article not discoverable by search engines and our internal search if `true`. Know more in [How can I hide articles from search engines](#how-can-i-hide-articles-from-search-engines).
 - **createdAt:** creation date (UTC) and time in this format `{YYYY}-{MM}-{DD}T{HH}:{MM}:{SS}.{mmm}Z`.
 - **updatedAt:** update date (UTC) in this format `{YYYY}-{MM}-{DD}T{HH}:{MM}:{SS}.{mmm}Z`.
-- **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled in when there's a recommended reading sequence for the articles you are managing. It should be filled with the slug of the chosen article. Example `seeAlso: - "/docs/guides/vtex-io-documentation-2-prerequesites"`
+- **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled with one or more slugs of recommended related articles, when applicable. Example:
+  ```md
+  seeAlso:
+   - "/docs/guides/pii-data-architecture-specifications"
+   - "/docs/guides/data-residency"
+  ```
 - **hidePaginationPrevious**: boolean that hides in the article's footer a hyperlink to the previous article listed on the navigation. Mark as `true` to  hide the link to the previous doc on the navigation.
 - **hidePaginationNext**: boolean that hides in the article's footer a hyperlink to the next article listed on the navigation. Mark as `true` to  hide the link to the following doc on the navigation.
 
