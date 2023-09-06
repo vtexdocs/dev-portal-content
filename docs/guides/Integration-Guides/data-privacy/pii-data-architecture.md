@@ -4,6 +4,12 @@ slug: "pii-data-architecture"
 hidden: true
 createdAt: "2022-02-22T22:27:02.330Z"
 updatedAt: "2023-06-14T43:38:36.446Z"
+seeAlso:
+ - "/docs/guides/pii-data-architecture-specifications"
+ - "/docs/guides/data-residency"
+ - "/docs/guides/profile-system"
+ - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
+ - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
 ---
 
 >❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
