@@ -4,6 +4,11 @@ slug: "limitations-of-the-pii-data-architecture-during-closed-beta"
 hidden: true
 createdAt: "2022-02-22T22:29:28.541Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
+seeAlso:
+ - "/docs/guides/pii-data-architecture-specifications"
+ - "/docs/guides/data-residency"
+ - "/docs/guides/profile-system"
+ - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
 ---
 >❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
@@ -46,11 +51,3 @@ The [gift card](https://help.vtex.com/en/subcategory/gift-card--3qWeS7abxCyC0G0G
 ### Customer Credit
 
 Currently, the [Customer Credit](https://help.vtex.com/en/tutorial/customer-credit-overview--1uIqTjWxIIIEW0COMg4uE0) feature is not supported.
-
-## Learn more
-
-- [PII Data Architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications)
-- [Data residency](https://developers.vtex.com/docs/guides/data-residency)
-- [Data subject rights](https://help.vtex.com/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM)
-- [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system)
-- [Changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data)
