@@ -24,7 +24,7 @@ To set up promotions for specific customer clusters in a way that is compatible 
 
 ### Order Management
 
-There are no longer restrictions to the use of these Order Management features for PII data architecture accounts:
+There are no restrictions to the use of these Order Management features for PII data architecture accounts:
 
 - Subscriptions
 - VTEX DO
@@ -77,7 +77,7 @@ When you edit an email template on the **Message Center** Admin interface, you c
 
 ### Master Data - CL, AD, BK entities
 
-In the new solution architecture, [Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) will no longer have CL, AD, BK entities. There will be a new isolated system to protect those information, [Profile System](https://developers.vtex.com/docs/guides/profile-system).
+In the PII data architecture, [Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) does not have CL, AD, BK entities. There will be a new isolated system to protect those information, [Profile System](https://developers.vtex.com/docs/guides/profile-system).
 
 If you are integrated to Master Data API to get any of this data (CL, AD, BK entities) you will need to integrate with the new [Profile System API](https://developers.vtex.com/docs/guides/profile-system).
 
@@ -101,7 +101,7 @@ At the moment, triggers are not supported by the PII platform version Profile Sy
 
 #### Orders Index 
 
-This is a legacy integration that was deprecated. VTEX will disable it.
+This is a legacy integration that was deprecated and it should not be used.
 
 #### CL
 
