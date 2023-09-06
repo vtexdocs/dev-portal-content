@@ -52,7 +52,7 @@ The chain order flow is visible to the store acting as an intermediary between t
 
 In the following sections, you will learn how to build order integrations with Feed and Hook. For example, this can be useful for developing an integration between your store ERP and the VTEX platform.
 
-> We strongly recommend you to create an order integration using the [Orders Feed v3](https://developers.vtex.com/docs/guides/orders-feed), instead of using the List orders API request or external services. If you already use an integration based on the API request, you should migrate to using the Feed. Keep in mind that this means changing the integration flow. To learn how to implement this change, see the [Set up order integration](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration).
+> We strongly recommend you to create an order integration using the [Orders Feed v3](https://developers.vtex.com/docs/guides/orders-feed), instead of using the List orders API request or external services. If you already use an integration based on the API request, you should migrate to using the Feed. Keep in mind that this means changing the integration flow. To learn how to implement this change, see the [Set up order integration](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration).
 
 ### Feed v.3
   
@@ -90,6 +90,8 @@ Placing an order involves the Order Management module and [Checkout](https://dev
 > The [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) is the main object processed by the [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview) and it stores a lot of contextual information about an order. The orderForm fields will be present in most of OMS's API calls.
 
 ### Retrieving order’s details
+
+> You can only access information from orders created in the last two years, and that same period is valid for customers through [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh). To access order data from previous years, please contact [our Support](https://support.vtex.com/hc/en-us/requests). When granted by our Support, your access to orders placed before the last two years is temporary and will be available for 15 days.
 
 You can fetch information about orders in multiple ways and about specific topics. To learn more about retrieving order content, see the links below.
 
@@ -181,12 +183,12 @@ A VTEX store can act as both a [seller](https://help.vtex.com/en/tutorial/config
 
 ## Adding optional configurations
 
-There are additional configurations available for you to manage your store orders. This allows you to take advantage of other VTEX features, such as [inStore](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), [VTEX DO](https://help.vtex.com/en/tutorial/vtex-do-interface--7KMbRL4OslN8DTX9oiuCiu), [B2B](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC), and [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
+There are additional configurations available for you to manage your store orders. This allows you to take advantage of other VTEX features, such as [VTEX Sales App](https://developers.vtex.com/docs/guides/how-to-customize-vtex-sales-app), [VTEX DO](https://help.vtex.com/en/tutorial/vtex-do-interface--7KMbRL4OslN8DTX9oiuCiu), [B2B](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC), and [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
 
-### VTEX inStore
+### VTEX Sales App
 
-- [Enabling order filter by sales associate](https://developers.vtex.com/docs/guides/enable-order-filter-by-sales-associate)
-- [Getting invoiced orders placed on inStore](https://developers.vtex.com/docs/guides/get-invoiced-orders-placed-in-instore)
+- [Enable order filter by sales associate](https://developers.vtex.com/docs/guides/enable-order-filter-by-sales-associate)
+- [Enable partial cancellation for Debit or Credit Direct sales](https://developers.vtex.com/docs/guides/enable-partial-cancellation)
 
 ### VTEX DO
 
