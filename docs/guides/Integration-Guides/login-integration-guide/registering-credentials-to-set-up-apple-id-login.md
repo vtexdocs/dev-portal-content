@@ -34,15 +34,15 @@ Get started by enabling the Sign in with Apple service on an iOS, tvOS, watchOS,
 1. Sign in to the [Apple Developer Portal](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Faccount%2F&rv=1).
 2. Click **Certificates, Identifiers & Profiles**, as shown below.
 
-   ![apple-credentials-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.PNG)
+   ![apple-credentials-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.png)
 
 3. From the sidebar, click **Identifiers**, then click the blue add `+` icon.
 
-   ![apple-credentials-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-2-7.PNG)
+   ![apple-credentials-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-2-7.png)
 
 4. Choose **App IDs** and click `Continue`:
 
-   ![apple-credentials-3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-3.PNG)
+   ![apple-credentials-3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-3.png)
 
 5. Complete the fields to register the App ID:
 
@@ -53,11 +53,11 @@ Get started by enabling the Sign in with Apple service on an iOS, tvOS, watchOS,
 
       Then, define the Bundle ID, which works as your app’s unique identifier. It needs to be a uniform type identifier (UTI) string containing only alphanumeric characters (`A-Z`, `a-z`, `0-9`), hyphens (`-`), and/or periods (`.`). The string should be in reverse-DNS format, such as `com.domainname.appname`. Bundle IDs are case-sensitive.
 
-   ![apple-credentials-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-4.PNG)
+   ![apple-credentials-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-4.png)
 
 6. Scroll down through the list of capabilities and check the box next to **Sign In with Apple**.
 
-   ![apple-credentials-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-5.PNG)
+   ![apple-credentials-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-5.png)
 
 7. Click `Continue`, review the completed information, then click `Register`.
 
@@ -71,22 +71,22 @@ Go ahead and create a new identifier and choose Services IDs.
 
 1. In the Apple Developer Portal, click **Certificates, Identifiers & Profiles**, as shown below.
 
-   ![apple-credentials-6](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.PNG)
+   ![apple-credentials-6](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.png)
 
 2. From the sidebar, click **Identifiers**, then click the blue add `+` icon.
 
-   ![apple-credentials-7](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-2-7.PNG)
+   ![apple-credentials-7](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-2-7.png)
 
 3. Choose **Services IDs**, as shown below, and click `Continue`.
 
-   ![apple-credentials-8](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-8.PNG)
+   ![apple-credentials-8](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-8.png)
 
 4. Complete the fields to register the Services ID:
 
    - **Description:** Write the name of the app the user will see during the login flow. Don’t use special characters such as `@`, `&`, `*`, `'`, `"`.
    - **Identifier:** Write the identifier which will be used as the OAuth `client_id`. The string should be in reverse-DNS format, such as `com.domainname.appname.client`. Don’t include asterisks (`*`).
 
-   ![apple-credentials-9](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-9.PNG)
+   ![apple-credentials-9](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-9.png)
 
 5. Check the **Sign In with Apple** checkbox.
 6. Click `Configure` next to **Sign In with Apple**.
@@ -98,7 +98,7 @@ Go ahead and create a new identifier and choose Services IDs.
 
    > ⚠️ Apple doesn’t allow localhost URLs in this step. If you enter an IP address, it will fail later in the flow. You have to use a real domain here.
 
-   ![apple-credentials-10](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-10.PNG)
+   ![apple-credentials-10](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-10.png)
 
 8. Click `Save`, then `Continue` and `Register` to complete this step.
 
@@ -110,26 +110,26 @@ In this step, you must create and download a private key with Sign in with Apple
 
 1. On the Apple Developer Portal, click **Certificates, Identifiers & Profiles**, as shown below.
 
-   ![apple-credentials-11](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.PNG)
+   ![apple-credentials-11](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-1-6-11.png)
 
 2. From the sidebar, click **Keys**, then click the blue add `+` icon to register a new key.
 3. Give your key a name, and check the **Sign In with Apple** checkbox.
 
-   ![apple-credentials-12](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-12.PNG)
+   ![apple-credentials-12](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-12.png)
 
 4. Click the `Configure` button next to **Sign In with Apple** and select the primary App ID you created earlier, as shown below.
 
-   ![apple-credentials-13](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-13.PNG)
+   ![apple-credentials-13](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-13.png)
 
 5. Click `Save`. Apple will generate a new private key for you and let you download it only once as a **p8 certificate**, which is a text file ending in `.p8`.
 
    > ⚠️ Make sure you save this file. You won’t be able to get it back again later, and you will need to upload this file when configuring login with Apple ID afterwards through the VTEX Admin.
 
-   ![apple-credentials-14](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-14.PNG)
+   ![apple-credentials-14](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-14.png)
 
 6. Return and view the key information to find your **Key ID**. In the example below, the Key ID is `FGTOPLJDP`.
 
-   ![apple-credentials-15](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-15.PNG)
+   ![apple-credentials-15](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/apple-credentials-15.png)
 
 ### Step 4: Configuring the Apple ID login in the VTEX Admin
 
