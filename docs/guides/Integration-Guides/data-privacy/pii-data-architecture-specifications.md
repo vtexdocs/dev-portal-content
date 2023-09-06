@@ -4,6 +4,11 @@ slug: "pii-data-architecture-specifications"
 hidden: true
 createdAt: "2023-05-16T09:38:36.446Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
+seeAlso:
+ - "/docs/guides/data-residency"
+ - "/docs/guides/profile-system"
+ - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
+ - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
 ---
 
 >❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
@@ -25,7 +30,6 @@ Read the sections below to learn more about:
   - [Scenario 2: Your store acts as a seller](#scenario-2-your-store-acts-as-a-seller)
 - [Changes in VTEX features default behavior](#changes-in-vtex-features-default-behavior)
 - [Limitations during closed beta](#limitations-during-closed-beta)
-- [Learn more](#learn-more)
 
 ## Profile system
 
@@ -195,15 +199,6 @@ The marketplace is your data source, so you must guarantee that marketplaces ass
 
 The behavior of some VTEX features has been adapted to better communicate with the PII data architecture. There are some differences in implementation when compared to the standard data architecture, such as API contracts and how information is displayed on VTEX Admin. Read [Changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data). This document is constantly updated to reflect the evolution of the PII data architecture. 
 
-
 ## Limitations during closed beta
 
 During closed beta testing stage, there are limitations in certain features for stores using PII data architecture. See this article about [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta). This document is constantly updated to reflect the evolution of the PII data architecture. 
-
-## Learn more
-
-- [Data residency](https://developers.vtex.com/docs/guides/data-residency)
-- [Data subject rights](https://help.vtex.com/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM)
-- [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system)
-- [Changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data)
-- [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta)
