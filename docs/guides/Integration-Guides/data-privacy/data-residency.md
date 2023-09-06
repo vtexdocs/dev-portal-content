@@ -4,6 +4,11 @@ slug: "data-residency"
 hidden: true
 createdAt: "2023-05-16T09:38:36.446Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
+seeAlso:
+ - "/docs/guides/pii-data-architecture-specifications"
+ - "/docs/guides/profile-system"
+ - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
+ - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
 ---
 
 >❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
@@ -36,11 +41,3 @@ flowchart LR
 ```
 
 >ℹ️ The [Profile System](https://developers.vtex.com/docs/guides/profile-system) is the VTEX module responsible for keeping Shopper Profile PII at rest.
-
-## Learn more
-
-- [PII Data Architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications)
-- [Data subject rights](https://help.vtex.com/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM)
-- [Profile System integration guide](https://developers.vtex.com/docs/guides/profile-system)
-- [Changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data)
-- [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta)
