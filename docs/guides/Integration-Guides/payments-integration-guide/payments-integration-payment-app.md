@@ -146,6 +146,8 @@ respondTransaction = () => {
 }
 ```
 
+> ⚠️ If the `transactionValidation.vtex` event is not triggered, the order confirmation email will not be sent to the user.
+
 ### Injecting external scripts
 
 An external script injection allows your Payment App to have additional content and behavior. To run external scripts on your Payment app, you need to inject the following script on the `head` of the checkout `html`. To do so, you have to do a DOM injection as follows:
