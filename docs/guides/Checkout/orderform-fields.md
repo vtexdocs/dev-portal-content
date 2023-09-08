@@ -852,7 +852,7 @@ __Example:__
 |    courierName |    String  |   Courier name.   |
 |    quantity |    Integer  |   Quantity.   |
 |    shippingEstimate |    String  | Total shipping estimate time, represented by a number followed by a time unit. For instance, three business days is represented as `3bd`. The time unit can be one of the following: <ul><li><code>m</code> (minutes)</li><li><code>h</code> (hours)</li><li><code>bd</code> (business days)</li><li><code>d</code> (days)</li></ul> |
-|    shippingEstimateDate |     String  |   When using the query parameter `individualShippingEstimates=true`, it will contain the estimated delivery date, otherwise it will contain `null`.  |
+|    shippingEstimateDate |     String  |   When using the query parameter `individualShippingEstimates=true`, it will contain the estimated shipping date, otherwise it will contain `null`.  |
 |    lockTTL |     String  |   Estimate date of delivery.  |
 |    availableDeliveryWindows |     String  |   Available shipping date.  |
 |    startDateUtc |     String  |   Available delivery window start date in UTC.  |
