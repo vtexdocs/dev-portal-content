@@ -20,20 +20,22 @@ Follow the step-by-step below to see how to apply this configuration in your sto
 
 ## Step by step
 
-1. In the admin's Catalog, access Products and SKUs.
-2. Select the desired SKU and access the Images tab.
-3. Upload the desired custom image, by clicking on **Insert**.
+1. In the admin's Catalog, access **Products and SKUs**.
+2. Select the desired product, click on the three dots button and on **View SKU list**.
+3. Select the desired SKU and click on the **Edit** button.
+4. Click on the **Images** tab.
+5. Upload the desired custom image, by clicking on **Insert**.
 
 ![configuring-sku-selector-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-2.png)
 
-4. Upload the file in the `File` field and set an ID for the recently uploaded file in the `Label` field. Click on **Save** after performing all your changes.
-5. In your theme's code `sku-selector` block, add the `thumbnailImage` prop, whose past value should be the same as the label added in the catalog. For example:
+6. Upload the file in the `File` field and set an ID for the recently uploaded file in the `Label` field. Click on **Save** after performing all your changes.
+7. In your theme's code `sku-selector` block, add the `thumbnailImage` prop, whose past value should be the same as the label added in the catalog. For example:
 
 ```json
-"sku-selector":{  
-  "props": {  
-    "thumbnailImage": ["LabelName"]  
-  }  
+"sku-selector":{
+  "props": {
+    "thumbnailImage": ["LabelName"]
+  }
 },
 ```
 
@@ -46,11 +48,11 @@ The way out of this scenario is to **hide the custom image** that's linked to th
 6. In the `product-images` block you can use the `hiddenImages` prop to activate a sort of image blacklist. This prop's value should be the custom image's label, the same one used in the previous step. For example:
 
 ```json
-"product-images": {  
-  "props": {  
-    "displayThumbnailsArrows": true,  
-    "hiddenImages": ["LabelName"]  
-  }  
+"product-images": {
+  "props": {
+    "displayThumbnailsArrows": true,
+    "hiddenImages": ["LabelName"]
+  }
 },
 ```
 
@@ -70,9 +72,10 @@ Follow the next step-by-step on how to configure the SKU color variations.
 
 1. Access your store's Admin.
 2. Go to **Catalog** > **Categories**.
-3. Choose the desired categorie and in `ACTIONS` click on **Field(SKU)**
-4. In **Field** click in the group's `Edit` and in the fields **Name** and **Text** complete with a color variation name which you can check the values in the [SKU Selector component](https://github.com/vtex-apps/store-components/blob/e130859a02e5c5d5e9deb9494bde9cfb6a0babc2/react/components/SKUSelector/utils/index.ts#L50-L72). For example:
+3. Choose the desired category and in `ACTIONS` click on **Field(SKU)**
+4. In **Field** click in the group's `Edit`.
+5. In the fields **Name** and **Text** complete with a color variation name which you can check the values in the [SKU Selector component](https://github.com/vtex-apps/store-components/blob/e130859a02e5c5d5e9deb9494bde9cfb6a0babc2/react/components/SKUSelector/utils/index.ts#L50-L72). For example:
 
 ![color-name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-4.png)
 
-5. Click on `Save` to make your changes available on SKU with thumbnail images.
+6. Click on `Save` to make your changes available on SKU with thumbnail images.
