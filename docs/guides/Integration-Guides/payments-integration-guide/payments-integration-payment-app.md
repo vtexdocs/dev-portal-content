@@ -19,7 +19,7 @@ The main reasons why someone would choose to build a Payment App over a standard
 - Measure conversions by analytics tools for customized flows.
 
 As you can see below, the Payment App is displayed as a modal window when the customer clicks on the **Buy now** button:
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-app-0.gif)
+![Affirm Payment App](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-app-0.gif)
 This tutorial will guide you through the steps required to develop, test, and set up a Payment App in your store. The sections of this tutorial are:
 
 - [Understanding the Payment App flow](#understanding-the-payment-app-flow): An explanation of what a Payment App is, its behavior, and usage.
@@ -79,9 +79,13 @@ git clone https://github.com/vtex-apps/example-payment-authorization-app.git
 ```
 
 2. After cloning the repository, use a code editor of your choice to open the project locally.
+
 3. Open the `manifest.json` file and update its content according to your scenario. If you need more information about the required fields, access our [Manifest documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest). The value set in the `name` field will be the unique identifier for this app and must be the exact name that corresponds to the response of your connector (`appname` property of `paymentAppData` field in the response body of the Create Payment endpoint). The `billingOptions` field is also required and set with the property `type` as `free`. More information about the `billingOptions` field can be found in the [Billing Options article](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
+
 4. After finishing the update, open the `pages/pages.json` file and replace `example-payment-auth-app` with the app `name` set in `manifest.json`. The `pages.json` file is responsible for creating the routes for your application. So it is necessary to make this configuration for the VTEX system to find and display the app at checkout. Also, the `"component"` field having the `"index"` value indicates that the `index.js` file in the `react` folder is the file with the component that will be instantiated at checkout.
+
 > ⚠️ Replace only the last part of the path in the `pages.json` file for the name of your app. In this case, the `example-payment-auth-app` part.  Do not change the beginning of the path `checkout/transactions/`, since the checkout uses it to identify a payment application.\n\nAlso, if you are using the **Test Connector** to make internal tests with your app, you have to keep the original name of the app that came from the repository in the `pages.json` file, since it will be the reference for this connector to open the Payment App in the checkout.
+
 5. Using your terminal, go to the app directory and run the following command:
 
 ```shell
@@ -145,6 +149,8 @@ respondTransaction = () => {
     $(window).trigger('transactionValidation.vtex')
 }
 ```
+
+> ⚠️ If the `transactionValidation.vtex` event is not triggered, the order confirmation email will not be sent to the user.
 
 ### Injecting external scripts
 
