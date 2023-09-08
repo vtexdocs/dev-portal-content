@@ -194,6 +194,54 @@ To add new content in the left navigation:
 6. Test your navigation through the preview.
 7. Send the PR link in the `#dev-portal-pr` Slack channel for approval.
 
+### How do I add new release notes to the Developer Portal homepage?
+
+In the Home page of the portal, there's the section **Last Updates** which shows the last release notes posted. If you just posted on, you need to manually introduce it to the **Last Updates** section in the [/devportal](https://github.com/vtexdocs/devportal). See the following to add the updated release note:
+
+1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
+2. In [src/components/last-updates-section/index.tsx](https://github.com/vtexdocs/devportal/blob/main/src/components/last-updates-section/index.tsx) locate the `CardProps` and update the following parameters:
+     - type: '{Specify the type of change: improved, fixed, etc.}'
+     - description: '{Provide the exact name of the release note, as you published it}'
+     - date: new Date('{Add the publication date of the release note in mm/dd/yyyy format}'),
+  
+  3. The code should look as the following:
+
+       ```
+       import { Box, Text } from '@vtex/brand-ui'
+
+      import LastUpdatesCard, { CardProps } from '../last-updates-card'
+      import { getMessages } from 'utils/get-messages'
+      
+      import styles from './styles'
+      
+      const lastReleaseNote: CardProps = {
+        action: {
+          type: 'improved',
+          description: 'Headless CMS Plugin v1.0.8: Improved sync command',
+          date: new Date('07/31/2023'),
+        },
+        updateType: 'release-notes',
+      }
+      
+      const LastUpdatesSection = () => {
+        const messages = getMessages()
+      
+        return (
+          <Box sx={styles.sectionContainer}>
+            <Text sx={styles.title}>
+              {messages['landing_page_last_updates.title']}
+            </Text>
+            <Box sx={styles.cardsContainer}>
+              <LastUpdatesCard {...lastReleaseNote} />
+            </Box>
+          </Box>
+        )
+      }
+      
+      export default LastUpdatesSection
+
+      ```
+4. Open a PR.
 
 ### How to publish a new API reference and add it to navigation?
 
