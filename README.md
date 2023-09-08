@@ -16,7 +16,7 @@ We're so glad you're here! It means you care about sharing knowledge through doc
 
 We have created a new organization in GitHub to host our documentation: [vtexdocs](https://github.com/vtexdocs).
 
-You can find all repositories included in it in [vtex/education-tools](https://github.com/vtex/education-tools#education-teams-repositories).
+You can find all repositories included in it in `vtex/education-tools` (To access this repository, ask the Education team).
 
 They each serve a different purpose, and will be mentioned in the FAQ below, depending on which action you wish to perform.
 
@@ -66,11 +66,13 @@ The frontmatter is the table with metadata about the article you're adding. It c
 - **createdAt:** creation date (UTC) and time in this format `{YYYY}-{MM}-{DD}T{HH}:{MM}:{SS}.{mmm}Z`.
 - **updatedAt:** update date (UTC) in this format `{YYYY}-{MM}-{DD}T{HH}:{MM}:{SS}.{mmm}Z`.
 - **seeAlso:** adds articles in the `See also` section, at the footer of the content. Should be filled with one or more slugs of recommended related articles, when applicable. Example:
+  
   ```md
   seeAlso:
    - "/docs/guides/pii-data-architecture-specifications"
    - "/docs/guides/data-residency"
   ```
+
 - **hidePaginationPrevious**: boolean that hides in the article's footer a hyperlink to the previous article listed on the navigation. Mark as `true` to  hide the link to the previous doc on the navigation.
 - **hidePaginationNext**: boolean that hides in the article's footer a hyperlink to the next article listed on the navigation. Mark as `true` to  hide the link to the following doc on the navigation.
 
@@ -176,39 +178,87 @@ To add new content in the left navigation:
 2. In the [navigation.json](https://github.com/vtexdocs/devportal/blob/main/public/navigation.json) file, locate where you want the new content to appear. (Yes, it is a long document, be patient!)
 3. Copy the structure below, and replace the values for your desired content.
 
-```jsx
-    {
-        "name": "Checking which user is currently authenticated",
-        "slug": "checking-which-user-is-currently-authenticated",
-        "origin": "",
-        "type": "markdown",
-        "children": []
-    }
-```
+    ```jsx
+        {
+            "name": "Checking which user is currently authenticated",
+            "slug": "checking-which-user-is-currently-authenticated",
+            "origin": "",
+            "type": "markdown",
+            "children": []
+        }
+    ```
 
 4. Paste the object in the desired spot.
 5. Open a PR.
 
-> By opening a PR, a bot will present a preview for you to test the navigation. With each commit, the preview will be updated.
+    > By opening a PR, a bot will present a preview for you to test the navigation. With each commit, the preview will be updated.
 
 6. Test your navigation through the preview.
 7. Send the PR link in the `#dev-portal-pr` Slack channel for approval.
 
+### How do I add new release notes to the Developer Portal homepage?
+
+In the Home page of the portal, there's the section **Last Updates** which shows the last release notes posted. If you just posted on, you need to manually introduce it to the **Last Updates** section in the [/devportal](https://github.com/vtexdocs/devportal). See the following to add the updated release note:
+
+1. Open a branch in the [/devportal](https://github.com/vtexdocs/devportal) repository.
+2. In [src/components/last-updates-section/index.tsx](https://github.com/vtexdocs/devportal/blob/main/src/components/last-updates-section/index.tsx) locate the `CardProps` and update the following parameters:
+     - type: '{Specify the type of change: improved, fixed, etc.}'
+     - description: '{Provide the exact name of the release note, as you published it}'
+     - date: new Date('{Add the publication date of the release note in mm/dd/yyyy format}'),
+  
+3. The code should look as the following:
+
+      ```
+      import { Box, Text } from '@vtex/brand-ui'
+
+      import LastUpdatesCard, { CardProps } from '../last-updates-card'
+      import { getMessages } from 'utils/get-messages'
+      
+      import styles from './styles'
+      
+      const lastReleaseNote: CardProps = {
+        action: {
+          type: 'improved',
+          description: 'Headless CMS Plugin v1.0.8: Improved sync command',
+          date: new Date('07/31/2023'),
+        },
+        updateType: 'release-notes',
+      }
+      
+      const LastUpdatesSection = () => {
+        const messages = getMessages()
+      
+        return (
+          <Box sx={styles.sectionContainer}>
+            <Text sx={styles.title}>
+              {messages['landing_page_last_updates.title']}
+            </Text>
+            <Box sx={styles.cardsContainer}>
+              <LastUpdatesCard {...lastReleaseNote} />
+            </Box>
+          </Box>
+        )
+      }
+      
+      export default LastUpdatesSection
+
+      ```
+
+4. Open a PR.
 
 ### How to publish a new API reference and add it to navigation?
 
 After creating a file for a new API reference in [openapi-schemas](https://github.com/vtex/openapi-schemas), follow these steps so it shows in Dev Portal's navigation:
 
 1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
-2. In the `src/pages/api/openapi/[slug].tsx` file, edit `referencePaths` by adding the API schema file name exactly as saved in openapi-schemas and its corresponding slug on Developer Portal. Follow this syntax: `'{schemaFileName}': '{slug}'`. 
+2. In the `src/pages/api/openapi/[slug].tsx` file, edit `referencePaths` by adding the API schema file name exactly as saved in openapi-schemas and its corresponding slug on Developer Portal. Follow this syntax: `'{schemaFileName}': '{slug}'`.
 3. Repeat step 2 in the `src/utils/getReferencePaths.ts` file, editing `fileSlugMap` with the same information.
 4. Add the API category and all its endpoints in `public/navigation.json`, following [these instructions](#what-determines-the-left-navigations-order-and-organization) and making sure endpoints are added in [this format](#how-to-update-the-left-navigation-after-changing-an-endpoints-path).
 5. Open a PR with all the changes.
 6. Send the PR in `#dev-portal-pr` Slack channel for approval.
-5. After approval, merge the PR.
+7. After approval, merge the PR.
 
 >ℹ️ If you have any questions about this process, check out [this example pull request](https://github.com/vtexdocs/devportal/pull/300/files) to publish the Shipping Network API.
-
 
 ### How to update the left navigation after changing an endpoint's path?
 
@@ -235,6 +285,7 @@ To update the left navigation after changing an endpoint's path follow the steps
         "children": []
     }
     ```
+
     >⚠️ Don't change the `slug` field. It should have the same value as the API category slug.
 
 3. Open a PR.
