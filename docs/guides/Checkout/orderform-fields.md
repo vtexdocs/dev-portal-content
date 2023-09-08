@@ -749,7 +749,7 @@ __Example:__
             }
           ],
           "shippingEstimate": "3d",
-          "shippingEstimateDate": null,
+          "shippingEstimateDate": "2023-09-09T11:29:00+00:00",
           "lockTTL": null,
           "availableDeliveryWindows": [],
           "deliveryWindow": null,
@@ -768,7 +768,7 @@ __Example:__
             }
           ],
           "shippingEstimate": "90d",
-          "shippingEstimateDate": null,
+          "shippingEstimateDate": "2023-09-09T11:29:00+00:00",
           "lockTTL": null,
           "availableDeliveryWindows": [
             {
@@ -795,7 +795,7 @@ __Example:__
               "listprice": 1000,
               "tax": 0
             }
-          ],          
+          ],
           "price": 1220,
           "tax": 0,
           "pickupStoreInfo": {
@@ -852,12 +852,12 @@ __Example:__
 |    courierName |    String  |   Courier name.   |
 |    quantity |    Integer  |   Quantity.   |
 |    shippingEstimate |    String  | Total shipping estimate time, represented by a number followed by a time unit. For instance, three business days is represented as `3bd`. The time unit can be one of the following: <ul><li><code>m</code> (minutes)</li><li><code>h</code> (hours)</li><li><code>bd</code> (business days)</li><li><code>d</code> (days)</li></ul> |
-|    shippingEstimateDate |     String  |   Shipping estimate date.  |
+|    shippingEstimateDate |     String  |   When using the query parameter `individualShippingEstimates=true`, it will contain the estimated delivery date, otherwise it will contain `null`.  |
 |    lockTTL |     String  |   Estimate date of delivery.  |
-|    availableDeliveryWindows |     String  |   Available shipping date.  | 
+|    availableDeliveryWindows |     String  |   Available shipping date.  |
 |    startDateUtc |     String  |   Available delivery window start date in UTC.  |
 |    endDateUtc |     String  |   Available delivery window end date in UTC.  |
-|    deliveryWindow |     Object  |   Scheduled delivery window information, in case it applies to the item.  | 
+|    deliveryWindow |     Object  |   Scheduled delivery window information, in case it applies to the item.  |
 |    startDateUtc |     String  |   Scheduled delivery window start date in UTC.  |
 |    endDateUtc |     String  |   Scheduled delivery window end date in UTC.  |
 |    listPrice |     Integer  |   Scheduled delivery window list price.  |
@@ -876,7 +876,7 @@ __Example:__
 |    shipsTo |     Array  |   List of countries that the item may be shipped to.  |
 |    itemId |     String  |   Item ID.  |
 |    deliveryChannels |     String  |   List of available delivery channels.  |
-|    id |     String  |   elivery channel ID.  |
+|    id |     String  |   Delivery channel ID.  |
 |    selectedAddresses  |    Array  |   Selected addresses information.     |
 
 
