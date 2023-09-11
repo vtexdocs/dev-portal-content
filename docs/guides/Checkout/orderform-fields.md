@@ -64,6 +64,7 @@ This structure is made of many __sections__.
 - [hooksData](#hooksdata)
 - [items](#items)
     - [items[].priceDefinition](#itemspricedefinition)
+    - [items[].attachmentOfferings](#itemsattachmentofferings)
 - [invoiceData](#invoicedata)
 - [itemsOrdination](#itemsordination)
 - [marketingData](#marketingdata)
@@ -266,7 +267,23 @@ __Example:__
             "detailUrl": "/mild-hair-cleanser/p",
             "bundleItems": [],
             "attachments": [],
-            "attachmentOfferings": [],
+            "attachmentOfferings": [
+              {
+                  "name":"vtex.subscription.weekly",
+                  "required":false,
+                  "schema":{
+                    "vtex.subscription.key.frequency":{
+                        "MaximumNumberOfCharacters":7,
+                        "Domain":[
+                          "1 week",
+                          " 2 week",
+                          " 3 week",
+                          " 4 week"
+                        ]
+                    }
+                  }
+              }
+            ],
             "offerings": [],
             "priceTags": [
                 {
@@ -396,6 +413,34 @@ __Example:__
 | items[].priceDefinition.total                  | Integer  | Total value for all units of the item in cents.                                                                                                                      |
 | items[].priceDefinition.calculatedSellingPrice | Integer  | Item's calculated unitary selling price in cents.                                                                                                                    |
 | items[].priceDefinition.sellingPrices          | Array    | Array of objects, each containing `value` (in cents) and `quantity` for the different rounding instances that can be combined to form the correctly rounded `total`. |
+
+#### items[].attachmentOfferings
+
+```json
+"attachmentOfferings":[
+  {
+      "name":"vtex.subscription.weekly",
+      "required":false,
+      "schema":{
+        "vtex.subscription.key.frequency":{
+            "MaximumNumberOfCharacters":7,
+            "Domain":[
+              "1 week",
+              "2 week",
+              "3 week",
+              "4 week"
+            ]
+        }
+      }
+  }
+]
+```
+
+| **Atribute**                                   | **Type** | **Description**                                                                                                                                                      |
+|------------------------------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| items[].attachmentOfferings.name                        | string or null   | Name of the attachment.                                                                                                                  |
+| items[].attachmentOfferings.required               | boolean or null  |       If the attachment is required (true) or not (false).                                                                                                                |
+| items[].attachmentOfferings.schema | object or null  | Schema of the content declared in the field attachmentOfferings.                                                                                                                    |
 
 ### invoiceData
 
