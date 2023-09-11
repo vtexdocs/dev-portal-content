@@ -1,9 +1,9 @@
 ---
 title: "VTEX Shipping Network Labels Integration"
 slug: "vtex-shipping-network-labels-integration"
-hidden: true
+hidden: false
 createdAt: "2023-03-01T16:44:01.460Z"
-updatedAt: "2023-04-19T16:44:01.460Z"
+updatedAt: "2023-09-11T16:44:01.460Z"
 ---
 
 > This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com).
