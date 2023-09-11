@@ -39,13 +39,13 @@ Follow the step-by-step below to see how to apply this configuration in your sto
 },
 ```
 
-After completing step 5, you will be able to check a brand new image for your SKU selector.
+After completing step 7, you will be able to check a brand new image for your SKU selector.
 
 The problem is that **this image is link to the SKU** through the catalog information, and therefore will also be rendered in its original format when users select the SKU in question.
 
 The way out of this scenario is to **hide the custom image** that's linked to the SKU in the `product-images` block.
 
-6. In the `product-images` block you can use the `hiddenImages` prop to activate a sort of image blacklist. This prop's value should be the custom image's label, the same one used in the previous step. For example:
+8. In the `product-images` block you can use the `hiddenImages` prop to activate a sort of image blacklist. This prop's value should be the custom image's label, the same one used in the previous step. For example:
 
 ```json
 "product-images": {
