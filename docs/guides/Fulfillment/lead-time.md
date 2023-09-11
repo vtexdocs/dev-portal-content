@@ -1,9 +1,9 @@
 ---
-title: "Lead Time (Beta)"
-slug: "lead-time-beta"
-hidden: true
+title: "Lead time"
+slug: "lead-time"
+hidden: false
 createdAt: "2023-07-13T13:17:05.725Z"
-updatedAt: "2023-07-13T13:17:33.816Z"
+updatedAt: "2023-09-11T13:17:33.816Z"
 ---
 
 > The Lead Time feature is in beta, which means that we are working to improve it.
