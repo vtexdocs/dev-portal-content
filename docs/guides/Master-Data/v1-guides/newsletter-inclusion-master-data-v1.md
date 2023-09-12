@@ -1,5 +1,5 @@
 ---
-title: "Setting Up Newsletter opt-in with Master Data v1"
+title: "Setting up Newsletter opt-in with Master Data v1"
 excerpt: "Learn how to configure newsletter subscriptions with Master Data v1."
 slug: "newsletter-inclusion-master-data-v1"
 hidden: false
