@@ -13,7 +13,7 @@ In order to enhance system security, new Checkout configuration options have bee
 
 The following fields have been added to your store's orderForm configuration and can be modified via the endpoint [Update an account's orderForm configuration](https://developers.vtex.com/docs/guides/update-an-account-orderform-configuration).
 
-- `requiresLoginToPlaceOrder`: indicates whether purchases should only be completed by customers who are already authenticated in the store (via registered email).
+- `requiresLoginToPlaceOrder`: indicates whether purchases can only be completed by customers already [authenticated in the store](https://help.vtex.com/en/tutorial/authentication-page--21CkKHLKP1o41lUpGhuRUs#login-methods).
 - `minimumPurchaseDowntimeSeconds`: defines a minimum amount of time (in seconds) for a buyer to wait before making another purchase.
 
 >⚠️ This setting is most efficient when combined with mandatory login during the checkout process (previous configuration).
