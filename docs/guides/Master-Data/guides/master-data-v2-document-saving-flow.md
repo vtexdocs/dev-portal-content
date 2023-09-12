@@ -1,43 +1,54 @@
 ---
 title: "Master Data v2 document saving flow"
 slug: "master-data-v2-document-saving-flow"
+excerpt: "Get to know each step of the saving flow in Master Data v2."
 hidden: false
 createdAt: "2022-08-04T19:16:31.431Z"
 updatedAt: "2022-08-04T19:27:16.561Z"
 ---
 
-Whenever you save a document in Master Data v2, the platform performs a specific sequence of processes indicated in the image below. In this article, you can learn more about each step in this saving flow.
+When you save a document in **Master Data v2**, the platform executes a series of orchestrated processes to ensure data integrity and consistency. The following diagram illustrates the key steps involved in this saving flow:
 
-![master data v2 document saving flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/master-data-v2-document-saving-flow-0.png)
+```mermaid
+flowchart TD
+    A(Save API call) --> B(Resolve ID)
+    B --> C(Validate Schema)
+    C --> D(Lock)
+    D --> E(Get changed fields)
+    E --> F(Validate condition clause)
+    F --> G(Persistence in database)
+    G --> H(Enqueue to worker process)
+```
 
-## Save API call
+## Step 1 - Save API call
 
-It happens whenever you send a request to the saving documents APIs ([POST](https://developers.vtex.com/vtex-rest-api/reference/createnewdocument), [PUT](https://developers.vtex.com/vtex-rest-api/reference/updateentiredocument) or [PATCH](https://developers.vtex.com/vtex-rest-api/reference/updatepartialdocument)). This triggers the rest of the sequence of processes.
+The flow begins with a `Save API` call, triggered by your request to save a document using one of the following HTTP methods: ([`POST`](https://developers.vtex.com/vtex-rest-api/reference/createnewdocument), [`PUT`](https://developers.vtex.com/vtex-rest-api/reference/updateentiredocument) or [`PATCH`](https://developers.vtex.com/vtex-rest-api/reference/updatepartialdocument)). This call triggers the entire sequence of processes.
 
-## Resolve ID
+## Step 2 - Resolve ID
 
-Add an ID to the document. If the ID doesn't exist in the content, Master Data tries to get the document by index (alternate key). If the document by index does not exist, the platform creates a new ID.
+In this step, an ID is added to the document. If the document lacks an ID, **Master Data** attempts to retrieve the document by index (alternate key). If the document by index does not exist, the platform creates a new ID for the document.
 
-## Validate Schema
+## Step 3 - Validate Schema
 
-Master Data validates the content with the corresponding JSON schemas if the parameter `_schema` exists in the query.
+**Master Data** validates the document's content against the corresponding JSON schemas if the `_schema` parameter exists in the query. This ensures that the document adheres to the defined data structure.
 
-## Lock
+## Step 4 - Lock
 
-After this step, only one operation could be executed by ID or alternate key.
+Following validation, a locking mechanism is applied. This ensures that only one operation can be executed using the document's ID or alternate key, preventing data conflicts.
 
-## Get fields changed
+## Step 5 - Get changed fields
 
-Get the last version of the document in the database and compare it with the saved content. If there is some change, it moves to the next step.
+In this step, the system retrieves the most recent version of the document from the database and compares it with the newly saved content. If any changes are detected, the process proceeds to the next step.
 
-## Validate condition clause
+## Step 6- Validate condition clause
 
-If you pass the parameter `_where` in the query, Master Data will validate this condition at this moment.
+If you have included the `_where` parameter in your query, **Master Data** evaluates this condition at this point. This step allows you to specify additional criteria for document validation.
 
-## Persistence in database
+## Step 7 - Persistence in the database
 
-Save the document in the database.
+With all validations completed, the document is ready for persistence in the database. It is securely stored, ensuring the durability and reliability of your data.
 
-## Enqueue to the worker process
+## Step 8 - Enqueue to the worker process
 
-Enqueue the operation. Some moments after, the *Background Worker* will start the background operations (validation with other schemas and indexing).
+Finally, the operation is enqueued for processing by the _Background Worker_. This component handles background tasks, including further schema validation and indexing, to guarantee data consistency and performance.
+
