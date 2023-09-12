@@ -41,7 +41,7 @@ https://{{accountName}}.vtexcommercestable.com.br/api/io/safedata/CL/documents/{
   "firstName": "Jonh",
   "lastName": "Lennon",
   "email": "jonh.lennon@lennon.com.br",
-  “isNewsletterOptIn”: true
+  "isNewsletterOptIn": true
 }
 ```
 
