@@ -20,4 +20,4 @@ The following fields have been added to your store's orderForm configuration and
 
 >⚠️ This setting is most efficient when combined with mandatory login during the checkout process (previous configuration).
 
-cartAgeToUseNewCardSeconds: defines the minimum amount of time (in seconds) in which the cart must have been created to allow a new credit card to be applied to it.
+- `cartAgeToUseNewCardSeconds`: defines the minimum amount of time (in seconds) in which the cart must have been created to allow a new credit card to be applied to it.
