@@ -8,16 +8,26 @@ createdAt: "2021-04-08T20:21:10.886Z"
 updatedAt: "2021-04-08T22:43:45.769Z"
 ---
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Schemas are supported only by Master Data V2."
-}
-[/block]
 JSON Schema is a tool with rules to validate the structure of JSON data. More information about JSON Schema can be found in the book [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html). A Schema lets users configure the structure of a Data Entity.
 
+> ⚠️ Schemas are supported only by Master Data V2.
+
 This article explains how changes in a Schema affect the Data Entities, which actions are triggered in the background and the amount of inconsistency time until all configurations are completed. So, consider the lifecycle of a Schema below:
-![MD\_Schema\_Lifecycle](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/master-data-schema-lifecycle-0.jpg)
+
+```mermaid
+stateDiagram-v2
+direction LR
+    state "Life without a Schema" as A
+    state "Creating a Schema" as B
+    state "Modifying a Schema" as C
+    state "Removing a Schema" as D
+    [*] --> A
+    A --> B
+    B --> C
+    C --> D
+    D --> [*]
+```
+
 Each phase of the lifecycle will be split into 3 areas: saving data, searching and background process.
 
 ## Master Data without Schemas
