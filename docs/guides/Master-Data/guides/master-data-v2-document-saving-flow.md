@@ -1,14 +1,34 @@
 ---
 title: "Master Data v2 document saving flow"
 slug: "master-data-v2-document-saving-flow"
+excerpt: "master-data-v2-document-saving-flow"
 hidden: false
 createdAt: "2022-08-04T19:16:31.431Z"
 updatedAt: "2022-08-04T19:27:16.561Z"
 ---
 
-Whenever you save a document in Master Data v2, the platform performs a specific sequence of processes indicated in the image below. In this article, you can learn more about each step in this saving flow.
+Whenever you save a document in Master Data v2, the platform performs a specific sequence of processes indicated in the diagram below. In this article, you can learn more about each step in this saving flow.
 
-![master data v2 document saving flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/master-data-v2-document-saving-flow-0.png)
+```mermaid
+stateDiagram-v2
+    state "Save API called" as A
+    state "Resolve id" as B
+    state "Validate Schema" as C
+    state "Lock" as D
+    state "Get fields changed" as E
+    state "Validate condition clause" as F
+    state "Persistence in database" as G
+    state "Enqueue to worker process" as H
+    [*] --> A
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> [*]
+```
 
 ## Save API call
 
