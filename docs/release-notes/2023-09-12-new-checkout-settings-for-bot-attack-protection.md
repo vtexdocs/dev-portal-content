@@ -22,4 +22,4 @@ The following fields have been added to your store's orderForm configuration and
 
 ## What needs to be done?
 
-The new settings are available in the [Update an account's orderForm configuration](https://developers.vtex.com/docs/guides/update-an-account-orderform-configuration) endpoint throught the new fields described in the previous session.
+If you wish to enable these settings on your store's checkout, see the [Update an account's orderForm configuration](https://developers.vtex.com/docs/guides/update-an-account-orderform-configuration) endpoint documentation. Otherwise, there is no action needed.
