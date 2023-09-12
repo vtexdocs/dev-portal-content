@@ -27,8 +27,9 @@ Below, we provide a step-by-step guide to assist you in setting up this configur
   >⚠️ Please note that the `vtex.cmc:newsletterOptIn` control has been discontinued and should no longer be employed. Instead, use the HTML code created by your development team to achieve this functionality on the store's designated page.
 3. Send the information via SafeData API. The SafeData app provides endpoints similar to Master Data endpoints. Use the example request below to update a user profile and enable newsletter opt-in:
 
-**Method:** Patch
-**Patch:**
+**Method:** `PATCH`
+
+**Path:**
 
 ```
 https://{{accountName}}.vtexcommercestable.com.br/api/io/safedata/CL/documents/{{documentId}}
