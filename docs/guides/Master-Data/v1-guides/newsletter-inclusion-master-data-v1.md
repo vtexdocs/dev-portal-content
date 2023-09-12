@@ -1,6 +1,6 @@
 ---
 title: "Setting Up Newsletter opt-in with Master Data v1"
-excerpt: ""
+excerpt: "Learn how to configure newsletter subscriptions with Master Data v1."
 slug: "newsletter-inclusion-master-data-v1"
 hidden: false
 createdAt: "2022-10-20T18:16:54.439Z"
@@ -11,7 +11,7 @@ In this article, we will guide you through configuring **Master Data** to collec
 
 Newsletter inclusion is a form that can be integrated into any page of your store website (except checkout), allowing you to capture the email addresses of customers who express an interest in receiving updates about your store. This registration is usually associated with a store promotion.
 
-Configuring newsletter subscriptions through **Master Data** streamlines customer management since all the store's registered customers are already stored in Master Data.
+Integrating newsletter subscriptions with **Master Data** streamlines customer management since all the store's registered customers are already stored in Master Data.
 
 ## Before you begin
 
@@ -28,7 +28,7 @@ Below, we provide a step-by-step guide to assist you in setting up this configur
 3. Send the information via SafeData API. The SafeData app provides endpoints similar to Master Data endpoints. Use the example request below to update a user profile and enable newsletter opt-in:
 
 **Method:** Patch
-**Path:**
+**Patch:**
 
 ```
 https://{{accountName}}.vtexcommercestable.com.br/api/io/safedata/CL/documents/{{documentId}}
@@ -37,9 +37,9 @@ https://{{accountName}}.vtexcommercestable.com.br/api/io/safedata/CL/documents/{
 **Body:**
 ```json
 {
-  "firstName" : "Jonh",
-  "lastName" : "Lennon",
-  "email" : "jonh.lennon@lennon.com.br",
+  "firstName": "Jonh",
+  "lastName": "Lennon",
+  "email": "jonh.lennon@lennon.com.br",
   “isNewsletterOptIn”: true
 }
 ```
