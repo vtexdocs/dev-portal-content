@@ -1,64 +1,64 @@
 ---
 title: "Setting up triggers in Master Data v2"
+excerpt: "Learn how to create and configure triggers in Master Data v2 to automate actions after a document update."
 slug: "setting-up-triggers-in-master-data-v2"
 hidden: false
 createdAt: "2022-07-05T16:11:49.082Z"
 updatedAt: "2022-10-28T14:34:21.479Z"
 ---
-A Master Data trigger is an [action](#action) executed after the insert or update of a given document. Actions can be of three types:
+
+This guide will teach you how to create and configure triggers in **Master Data v2** to automate actions after a document update. 
+
+A **Master Data** trigger is an [action](#action) executed immediately after a document is inserted or updated.
+
+**Master Data v2** supports the following types of triggers:
 
 - Send an HTTP request.
 - Send an email.
 - Send email using [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) template.
 - Save data to another data entity.
 
-In this guide, you will learn how to set up Master Data v2 triggers and see some code examples of different use cases.
+> ⚠️ This article is about **Master Data v2** triggers. If you want to use **Master Data v1**, check the [How to create a trigger in **Master Data v1**](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270) guide.
 
-> This article is about Master Data v2 triggers. If you want to use Master Data v1, check out the steps described in [How to create a trigger in Master Data v1](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270).
+## Before you begin
 
-> You may use Master Data triggers to create add hooks to VTEX first party apps. To do that, [Create a new JSON schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) for the data entity used by the app and then follow the instructions below.
+You may use **Master Data v2** triggers to create and add hooks to VTEX first-party apps. To do that, [Create a new JSON schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) for the data entity used by the app and then follow the instructions below.
 
-## Creating triggers
+## Step by step
 
-Each trigger is described as an item of the array `v-triggers` of a [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle). If you want to create a trigger for a data entity with no associated schema, you may [create a new schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) with the trigger settings according to what is described below. To create a new trigger in an existing schema, follow these steps:
+Each trigger is described as an item of the array `v-triggers` of a [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle). If you want to create a trigger for a data entity with no associated schema, you may [create a new schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) with the trigger settings according to what is described below. 
 
-1. [Get the schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas/-schemaName-) to which you wish to add a trigger.
-2. Copy the JSON schema from the response and create a new item in the `v-triggers` array, configuring the properties according to your desired behavior. See the [properties](#json-properties) and [example](#complete-example) below.
-3. Send your edited schema as the body in the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint.
+To create a new trigger in an existing schema, follow these steps:
 
-> To edit Master Data v2 triggers, follow the same steps described above, just editing the properties you wish instead of creating a new array item.
+1. [Get the schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas/-schemaName-) associated with the data entity you wish to add a trigger to.
+2. Copy the JSON schema from the response and create a new item in the `v-triggers` array, configuring the properties according to your desired behavior. See the [JSON properties](#json-properties) and [Example](#example) sections for more information.
+3. Send the edited schema as the body to the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint.
+
+> To edit Master Data v2 triggers, follow the steps described above, editing the properties you wish instead of creating a new array item.
 
 ### JSON Properties
 
-| Property  | Description                                        |
-|-----------|----------------------------------------------------|
-| `name`      | trigger name                                       |
-| `active`    | boolean to enable or disable the trigger           |
-| `condition` | rule that validates the document before execution  |
-| `runAt`     | schedule the action to some time in the future     |
-| `weight`    | percentage value used for A/B test                 |
-| `retry`     | customize the retry policy                         |
-| `action`    | the action that will be executed                   |
-
-#### `name`
-
-It is the trigger name and must be a string value with limit of 100 characters.
-
-#### `active`
-
-Boolean value that indicates if the trigger is either enabled or disabled.
+| Property  | Type | Description                                  |
+|-----------|------|---------------------------------------------|
+| `name`      |`string`| A descriptive name for your trigger, limited to 100 characters. |
+| `active`    | `boolean`| Whether the trigger is enabled (`true`) or disabled (`false`). |
+| `condition` | `string` | A rule that validates the document before executing the trigger. See the [`condition`](#condition) section for more information. |
+| `runAt`     | `object` | The scheduled date to execute the action. See the [`runAt`](#runAt) section for more information.    |
+| `weight`    |`integer` | Percentage value used for A/B testing. See the [Setting up an A/B test with Master Data trigger](https://help.vtex.com/en/tutorial/setting-up-a-b-test--4xFzBMHYty6gmEosWGWMC0#) article for more information.|
+| `retry`     | `object` | Defines the retry policy, specifying the number of attempts and delay between them. See the [`retry`](#retry) section for more information.        |
+| `action`    | `object` | The action that will be executed. See the [`action`](#action) section for more information.                 |
 
 #### `condition`
 
 The rule is the same as Master Data API v2's [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) route. Example: `status=ready-for-handling`
 
-To get futher information, check the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) endpoint reference.
+To get further information, check the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) endpoint reference.
 
 #### `runAt`
 
-In case of scheduling an action in the future you can use the `runAt` property. See the examples below:
+In case of scheduling an action in the future, you can use the `runAt` property. See the examples below:
 
-- Schedule the execution 10 minutes after.
+- Schedule the execution 10 minutes later.
 
 ```json
     {
@@ -80,15 +80,9 @@ In case of scheduling an action in the future you can use the `runAt` property. 
     }
 ```
 
-#### `weight`
-
-An integer field used to distribute actions. See more information in the article [Setting up an A/B test with Master Data trigger](https://help.vtex.com/en/tutorial/setting-up-a-b-test--4xFzBMHYty6gmEosWGWMC0#).
-
 #### `retry`
 
-By default, VTEX Master Data makes 3 attempts in an interval of 10 minutes. Use this property to override such behavior. See the example below.
-
-Attempt five times in an interval of 30 minutes.
+By default, VTEX Master Data makes three attempts in an interval of 10 minutes. Use this property to override such behavior. See the example below of five attempts in an interval of 30 minutes.
 
 ```json
     {
@@ -101,10 +95,11 @@ Attempt five times in an interval of 30 minutes.
 
 #### `action`
 
-There are three types of actions: `Call an HTTP Request`, `send an email` and `save in other data entity`. See the examples below.
+Define the action to be executed, which can be one of the following types:  
 
-- Setting up an HTTP Request action.
-  
+<details>
+<summary>Call an HTTP request</summary>
+
 ```json
     {
     	"type": "http",
@@ -121,27 +116,33 @@ There are three types of actions: `Call an HTTP Request`, `send an email` and `s
     }
 ```
 
-- Setting up an email action.
-  
+</details>
+
+<details>
+<summary>Send an email</summary>
+    
 ```json
-    {
-    	"type": "email",
-    	"provider": "default",
-    	"subject": "My email with VTEX Master Data",
-    	"to": [
-    		"{!email}",
-    		"test@email.com"
-    	],
-    	"bcc": [
-    		"myemail@test.com"
-    	],
-    	"replyTo": "noreply@company.com",
-    	"body": "My email with document {!id}."
-    }
+{
+    "type": "email",
+    "provider": "default",
+    "subject": "My email with VTEX Master Data",
+    "to": [
+        "{!email}",
+        "test@email.com"
+    ],
+    "bcc": [
+        "myemail@test.com"
+    ],
+    "replyTo": "noreply@company.com",
+    "body": "My email with document {!id}."
+}
 ```
 
-- Setting up an email action using a [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) template.
-  
+</details>
+
+<details>
+<summary>Send an email action using a [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) template.</summary>
+
 ```json
     {
         "type": "t-email",
@@ -169,8 +170,11 @@ There are three types of actions: `Call an HTTP Request`, `send an email` and `s
     }
 ```
 
-- Setting up an action saving a document to another data entity.
+</details>
 
+<details>
+<summary>Save a document to another data entity.</summary>
+    
 ```json
     {
     	"type": "save",
@@ -183,32 +187,35 @@ There are three types of actions: `Call an HTTP Request`, `send an email` and `s
     }
 ```
 
-### Complete example
+</details>
+
+
+### Example
 
 ```json
-    {
-    	"properties": {},
-    	"v-triggers": [
-    		{
-    			"name": "copy-document",
-    			"active": true,
-    			"condition": "status=window-to-cancel",
-    			"action": {
-    				"type": "save",
-    				"dataEntity": "copy",
-    				"json": {
-    					"id": "{!id}",
-    					"message": "{!message}",
-    					"custom": "created/updated by VTEX triggers"
-    				}
-    			},
-    			"retry": {
-    				"times": 5,
-    				"delay": {
-    					"addMinutes": 30
-    				}
-    			}
-    		}
-    	]
-    }
+{
+    "properties": {},
+    "v-triggers": [
+        {
+            "name": "copy-document",
+            "active": true,
+            "condition": "status=window-to-cancel",
+            "action": {
+                "type": "save",
+                "dataEntity": "copy",
+                "json": {
+                    "id": "{!id}",
+                    "message": "{!message}",
+                    "custom": "created/updated by VTEX triggers"
+                }
+            },
+            "retry": {
+                "times": 5,
+                "delay": {
+                    "addMinutes": 30
+                }
+            }
+        }
+    ]
+}
 ```
