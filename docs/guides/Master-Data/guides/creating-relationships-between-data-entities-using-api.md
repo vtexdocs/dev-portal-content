@@ -1,18 +1,30 @@
 ---
 title: "Creating relationships between data entities using API"
 slug: "creating-relationships-between-data-entities-using-api"
+excerpt: "Learn how to create relationships between data entities in Master Data v2."
 hidden: false
 createdAt: "2022-07-05T15:15:24.161Z"
 updatedAt: "2022-07-05T15:23:31.068Z"
 ---
-This document shows how to create a relationship between data entities in Master Data v2.
 
-It is important to know the structure of the JSON Schema. If you don't know what that is, please check out the external documentation [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema). To learn more about schemas in Master Data v2, see [Schema lifecycle](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle).
+This document will teach you how to establish relationships between data entities in **Master Data v2**. Creating these relationships is vital for organizing and structuring data efficiently within your system.
 
-When [setting up a JSON Schema](https://developers.vtex.com/vtex-rest-api/reference/saveschemabyname), you may configure a field to link to another data entity using the ID or a field to which there is some associated index.
+## Before you begin
 
-Example of link through ID:
-```
+Before delving into the process of creating relationships, it's essential to grasp the structure of JSON Schema. If you're not familiar with JSON Schema, we recommend referring to the external documentation, [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema). 
+
+To learn more about schemas in Master Data v2, see [Schema lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle).
+
+## Establishing relationships
+
+Use the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) to configure a field to link to another data entity using either the ID or a field to which there is some associated index. 
+
+Below are examples of both methods:
+
+<details>
+<summary>Link through ID.</summary>
+
+```json
 {
 	"properties": {
 		"clientEmail": { "type": "string" },
@@ -24,8 +36,12 @@ Example of link through ID:
 }
 ```
 
-Example of link through a field with an index:
-```
+</details>
+
+<details>
+<summary>Link through a field with an index.</summary>
+
+```json
 {
 	"properties": {
 		"clientEmail": { "type": "string" },
@@ -38,26 +54,36 @@ Example of link through a field with an index:
 }
 ```
 
-As you may have noticed, in the `link` property we associate a JSON Schema of the data entity with which we want to create a relationship.
+</details>
 
-This will create in the response a new field with the JSON of the related document. If the document doesn't exist with that key, the property will be filled with `null`. 
+Notice that the `link` property associates a JSON Schema of the data entity with which you want to create a relationship.
 
-The fields of the returned object will be same that are specified in the `v-default-fields`.
+## Response handling
 
-Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) without schema:
+Creating a relationship in this manner will generate a response containing a new field with the JSON of the related document. 
 
-PATH: `/api/dataentities/client/documents/{id}`
-```
+The fields in the returned object will match those specified in the `v-default-fields`. However, if the document does not exist with the specified key, the property will be populated with `null`. 
+
+<details>
+<summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) without schema.</summary>
+
+**PATH:** `/api/dataentities/client/documents/{id}`
+
+```json
 {
 	"clientEmail": "vtext@mail.com",
 	"address": "1"
 }
 ```
 
-Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) using schema with link:
+</details>
 
-PATH: `/api/dataentities/client/documents/{id}`
-```
+<details>
+<summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) using schema with link.</summary>
+
+**PATH:** `/api/dataentities/client/documents/{id}`
+
+```json
 {
 	"clientEmail": "vtext@mail.com",
 	"address": "1"
@@ -67,3 +93,5 @@ PATH: `/api/dataentities/client/documents/{id}`
 	}
 }
 ```
+
+</details>
