@@ -1,5 +1,6 @@
 ---
 title: "Translating Catalog content"
+excerpt: "Overwrite automatic message translations from the Catalog with a more representative content of your store."
 slug: "catalog-internationalization"
 hidden: false
 createdAt: "2020-08-31T17:18:54.238Z"
