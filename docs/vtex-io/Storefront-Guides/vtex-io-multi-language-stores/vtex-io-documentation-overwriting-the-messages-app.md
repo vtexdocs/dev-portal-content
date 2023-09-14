@@ -1,6 +1,7 @@
 ---
 title: "Overwriting the Messages app"
 slug: "vtex-io-documentation-overwriting-the-messages-app"
+excerpt: "Learn how to overwrite automatic translations."
 hidden: false
 createdAt: "2020-09-01T19:49:09.322Z"
 updatedAt: "2022-12-13T20:17:44.427Z"
@@ -8,11 +9,11 @@ updatedAt: "2022-12-13T20:17:44.427Z"
 
 ## Introduction
 
-Messages is VTEX IO's key tool for your store's **internationalization**, since it's responsible for translating any website message (that is, website text content) for rendering.
+Messages is VTEX IO's key tool for your store's internationalization since it's responsible for translating any website message (that is, website text content) for rendering.
 
-However, you may feel that some translations done by the app are not what you want them to be. Therefore, you may want to change the translated content to something more specific or representative of your store, such as a special login message for Spanish speaking users from Argentina.
+However, you may feel that some translations done by the app are not what you want them to be. Therefore, you may want to change the translated content to something more specific or representative of your store, such as a special login message for Spanish-speaking users from Argentina.
 
-In the next section, we present you a step by step on how to overwrite a translation from your store's catalog, such as a product name or a product description, and text messages exported from an app.
+In the next section, we present you a step-by-step on how to overwrite a translation from your store's catalog, such as a product name or a product description, and text messages exported from an app.
 
 ## Step by step
 
@@ -22,10 +23,7 @@ In the next section, we present you a step by step on how to overwrite a transla
 vtex install vtex.admin-graphql-ide@3.x
 ```
 
-2. Access the **GraphQL admin IDE** section of the desired account. You may find it in the admin's side-bar menu:
-
-![overwriting-messages-adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-overwriting-the-messages-app-0.png)
-
+2. Access the Admin and go to **Store Setting > Storefront > GraphQL IDE**.
 3. From the dropdown list, choose the `vtex.messages` app.
 4. Write the following mutation command in the text box that is displayed:
 
@@ -40,7 +38,7 @@ mutation Save($saveArgs: SaveArgsV2!) {
 ![queryvariables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-overwriting-the-messages-app-1.png)
 
 6. To fill in the `Query Variables` box, check the next sections **according to your store's desired scenario** (*catalog* or *app* messages translations).
-7. After adjusting your query, click on the play button to run the declared mutation. For both scenarios, the expected response is as follows:
+7. After adjusting your query, click the play button to run the declared mutation. For both scenarios, the expected response is as follows:
 
 ```json
 {
@@ -50,13 +48,13 @@ mutation Save($saveArgs: SaveArgsV2!) {
 }
 ```
 
-Once you receive the expected response, no further actions are needed on your part: you are ready to check out the desired changes in your store!
+Once you receive the expected response, no further actions are needed: you are ready to check out the desired changes in your store.
 
-You also can confirm whether Messages properly saved the new translations or not by performing a query. To know further, check out the **Checking your changes** section.
+You can also confirm whether Messages properly saved the new translations by performing a query. To know further, check out the **Checking your changes** section.
 
 ### Catalog translations
 
-Use the following example as a guide if you aim to translate text messages from your store's catalog, such as a product name or a product description.
+Use the following example as a guide if you aim to translate text messages from your store's catalog, such as a product name or description.
 
 ```json
 {
@@ -80,7 +78,7 @@ Use the following example as a guide if you aim to translate text messages from 
 - `messages`: a list of the messages you want to translate, containing the following parameters:
   - `srcLang`: source message locale.
   - `srcMessage`: source message string.
-  - `context`: ID of the product/brand/category that you want to translate. IDs can be found in your store's registration on the admin under Product > Catalog.
+  - `context`: ID of the product/brand/category you want to translate. IDs can be found in your store's registration on the admin under Product > Catalog.
   - `targetMessage`: translated message string.
 
 To better understand the full process of overwriting a product message translation, check the following gif:
@@ -89,7 +87,7 @@ To better understand the full process of overwriting a product message translati
 
 ### App messages translations
 
-Use the following example as a guide if you aim to translate text messages exported from an app (declared in the app's `messages` folder).
+Use the following example as a guide to translate text messages exported from an app (declared in the app's `messages` folder).
 
 ```json
 {
@@ -122,7 +120,7 @@ To better understand the full process of overwriting an app message translation,
 
 ### VTEX Intelligent Search context
 
-Use the following example as a guide if you aim to translate text messages exported from the [VTEX Intelligent Search](https://developers.vtex.com/docs/guides/vtex-search).
+Use the following example as a guide to translate text messages exported from the [VTEX Intelligent Search](https://developers.vtex.com/docs/guides/vtex-search).
 
 ```json
 {
@@ -146,7 +144,7 @@ Use the following example as a guide if you aim to translate text messages expor
 - `messages`: a list of the messages you want to translate, containing the following parameters:
   - `srcLang`: store's locale default. In the VTEX Intelligent Search context, this variable must be the store's binding default.
 
-  - `srcMessage`: source message string. Check the table below to the possible values of this variable.
+  - `srcMessage`: source message string. Check the table below for the possible values of this variable.
     | Value         | Definition  |
     | ------------- | ----------- |
     | `Category 1`  | Department  |
@@ -166,7 +164,7 @@ Use the following example as a guide if you aim to translate text messages expor
 
 If you have already performed the desired mutations, you can check your changes through a query in the GraphQL IDE, **according to your store's desired scenario** (*catalog* or *app* messages translations).
 
-### Checking catalog messages translations
+### Checking catalog message translations
 
 1. In the **GraphQL admin IDE**, after choosing the `vtex.messages` app, write the following query command in the text box that is displayed:
 
@@ -181,7 +179,7 @@ query GetTranslation($args2: TranslateArgs!) {
 - `from`: source message locale.
 - `messages`: a list of the messages you want to check translations, containing the following parameters:
   - `content`: source message string.
-  - `context`: ID of the product/brand/category that you want to check the translation. IDs can be found in your store's registration on the admin under Product > Catalog.
+  - `context`: ID of the product/brand/category you want to check the translation. IDs can be found in your store's registration on the admin under Product > Catalog.
 - `to`: target translation locale.
 
 Take the following example:
@@ -205,7 +203,7 @@ Take the following example:
 }
 ```
 
-3. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale.
+3. After adjusting your query, click the play button to run it. The expected response is the translated message in the target locale.
 
 For the given example, the expected response is as follows:
 
@@ -260,7 +258,7 @@ Take the following example:
 }
 ```
 
-3. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale.
+3. After adjusting your query, click the play button to run it. The expected response is the translated message in the target locale.
 
 For the given example, the expected response is as follows:
 
