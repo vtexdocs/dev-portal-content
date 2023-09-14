@@ -66,6 +66,7 @@ Once VTEX’s edition is declared as a dependency, you can add your own desired 
 
 Every **Edition App** has a **dependency** declared, which imports pages from another edition app.
 
+
 ```mermaid
 graph TB
     vtex --> vtex.edition-seller
@@ -74,9 +75,9 @@ graph TB
     mkt(Marketplace 1) --> marketplace1.edition-seller
     mkt(Marketplace 1) --> vtex((VTEX))
     vtex.edition-store -.Applied edition.-> mkt
-    marketplace1.edition-seller -.-> s1
-    marketplace1.edition-seller -.-> s2
-    marketplace1.edition-seller -.-> s3
+    marketplace1.edition-seller -.Applied edition.-> s1
+    marketplace1.edition-seller -.Applied edition.-> s2
+    marketplace1.edition-seller -.Applied edition.-> s3
     s1(Seller 1) --> mkt
     s2(Seller 2) --> mkt
     s3(Seller 3) --> mkt
