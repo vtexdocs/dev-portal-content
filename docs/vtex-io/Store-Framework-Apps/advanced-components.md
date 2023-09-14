@@ -68,7 +68,7 @@ linkTitle="See more"
 <WhatsNextCard
 title="Live Shopping"
 description="Allows businesses to host live broadcasts directly on their store website, increasing selling rates, enhancing user experience, and boosting customer interaction with real-time streaming capabilities."
-linkTo="/docs/guides/vtexventures.livestreaming"
+linkTo="/docs/apps/vtexventures.livestreaming"
 linkTitle="See more"
 />
 
