@@ -1,6 +1,7 @@
 ---
 title: "Translating storefront content"
 slug: "storefront-content-internationalization"
+excerpt: "Learn how to translate text messages from a frontend app."
 hidden: false
 createdAt: "2020-08-31T17:17:21.148Z"
 updatedAt: "2020-09-01T16:14:21.366Z"
@@ -14,20 +15,16 @@ However, considering literal translations and cultural factors, some translation
 
 Hence, you may want to overwrite a translation provided by the automatic translation service or by the app's definitions with a more specific or representative content of your store.
 
-For example, you may want to set a special login message for Spanish speaking users from Argentina.
+For example, you may want to set a special login message for Spanish-speaking users from Argentina.
 
-Considering this case, in the following step by step, we'll teach you how to overwrite a storefront message with exclusive content for your store through the Messages app.
+Considering this case, in the following step-by-step, we'll teach you how to overwrite a storefront message with exclusive content for your store through the Messages app.
 
 ## Step by step
 
-Follow this step by step if you aim to translate text messages exported from an app (declared in the app's `messages` folder).
+Follow this step-by-step to translate text messages exported from an app (declared in the app's `messages` folder).
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
-
-2. Access the **GraphQL admin IDE** section of the desired account. You may find it in the admin's side-bar menu:
-
-![overwriting-messages-adminsidebarmenu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/storefront-content-internationalization-0.png)
-
+2. Access the Admin and go to **Store Setting > Storefront > GraphQL IDE**.
 3. From the dropdown list, choose the `vtex.messages` app.
 4. Write the following mutation command in the text box that is displayed:
 [block:code]
@@ -71,7 +68,7 @@ Take the following example:
   "body": "In VTEX IO, translations of storefront components are kept in a `/messages` folder inside the app's root folder. For example, the English translation of the `search.placeholder` message from the `store-components` app is declared [here](https://github.com/vtex-apps/store-components/blob/master/messages/en.json#L2). Hence, in this example, we just overwrote this message with \"My personalized Search message\" through the Messages app."
 }
 [/block]
-7. After adjusting your query, click on the play button to run the declared mutation. The expected response is as follows:
+7. After adjusting your query, click the play button to run the declared mutation. The expected response is as follows:
 [block:code]
 {
   "codes": [
@@ -127,7 +124,7 @@ Take the following example:
   ]
 }
 [/block]
-4. After adjusting your query, click on the play button to run it. The expected response is the translated message in the target locale.
+4. After adjusting your query, click the play button to run it. The expected response is the translated message in the target locale.
 
 For the given example, the expected response is as follows:
 [block:code]
