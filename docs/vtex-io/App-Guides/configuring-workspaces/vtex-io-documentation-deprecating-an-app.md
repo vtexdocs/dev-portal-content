@@ -9,12 +9,19 @@ updatedAt: "2022-12-13T20:17:44.894Z"
 
 A deprecated version of an app or a deprecated app is one that developers discourage its use. It can be because it leads to errors or a better alternative exists.
 
-If you're unsure about whether you should deprecate an app version or not, consider the following scenario: Imagine you've developed the app `mystore.store-theme`, and the latest version published is `mystore.store-theme@1.0.1`. You've developed a new feature and are ready to release the improved version `mystore.store-theme@1.2.0`. You publish the app, but later that day, you discover a critical bug in this new version. In such situations, you have two main options to consider:
+If you're unsure whether you should deprecate an app version, consider the following scenario: Imagine you've developed the app `mystore.store-theme`, and the latest version published is `mystore.store-theme@1.0.1`. You've developed a new feature and are ready to release the improved version `mystore.store-theme@1.2.0`. You publish the app, but later that day, you discover a critical bug in this new version. In such situations, you have two main options to consider:
 
 - **Release a bug-fix version:** If the bug is simple, not affecting sales significantly, and you can swiftly address it, releasing a new version with the bug fix may be the best course of action.
-- **Deprecate the buggy app version:** However, If the bug is critical or will require considerable time and resources, we recommend you opt for deprecating the buggy app version and downgrading it to the latest stable version.
+- **Deprecate the buggy app version:** However, If the bug is critical or will require considerable time and resources, we recommend deprecating the buggy app version and downgrading it to the latest stable version.
 
 By deprecating the app version with the issue, you choose to revert the store to a more stable state. In this scenario, the VTEX IO platform will automatically uninstall `mystore.store-theme@1.2.0` and revert it to the previous stable version, `mystore.store-theme@1.0.1`. This approach allows you to restore normal store operations while giving you the time and space to work on the fix without disrupting sales and users.
+
+```mermaid
+graph LR
+A[Identify bug in app] --> B{Is it critical?}
+B -->|Yes| C[Deprecate app version]
+B -->|No| D[Release bug-fix version]
+```
 
 ## Step by step
 
