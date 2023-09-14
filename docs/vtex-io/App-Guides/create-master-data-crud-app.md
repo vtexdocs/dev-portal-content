@@ -27,7 +27,7 @@ Before diving into coding your app, it's essential to grasp some fundamental con
 
 To create a [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) app, follow these steps:
 
-## Step 1 - Defining the data structure
+### Step 1 - Defining the data structure
 
 Before diving into coding, take time to plan your data structure. Since you will be setting up a VTEX IO service app with a focus on [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw)'s basic elements, ensure you have well-defined data entities and written schemas prepared for each entity your app will interact with.
 
