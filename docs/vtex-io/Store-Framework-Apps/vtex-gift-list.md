@@ -56,7 +56,7 @@ To set up Gift List in your store, follow these steps:
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-gift-list-1.png)
 9. In the left panel of the Admin, go to **Store Settings** > **Intelligent Search** > **Integrations**. Here you will configure the [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) so that your entire store catalog is indexed in the subaccount.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-gift-list-2.png)
-10.  Click on `START INTEGRATION` and wait until all the integration to complete successfully as shown in the image below.
+10. Click on `START INTEGRATION` and wait until all the integration to complete successfully as shown in the image below.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-gift-list-3.png)
 
 After these steps, the app is configured and the gift lists are available to shoppers in the store.
