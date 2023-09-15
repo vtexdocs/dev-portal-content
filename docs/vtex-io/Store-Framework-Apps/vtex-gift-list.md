@@ -74,6 +74,7 @@ The Gift List interface is composed of many front-end components, which you can 
 ## Recommended settings (optional)
 
 Besides installing, making the basic setup and customizing the components, we also have some recommended settings available to improve the experience of using the app for the shopper and managing the app for the merchant. These settings are not mandatory (optional), but highly recommended.
+
 ### Trade Policy
 
 To better control the functioning of the gift list, we strongly recommend creating a new trade policy. The trade policy helps you with gift list management through:
