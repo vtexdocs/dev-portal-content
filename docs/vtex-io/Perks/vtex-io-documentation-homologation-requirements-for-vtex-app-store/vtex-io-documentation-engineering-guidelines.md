@@ -50,7 +50,7 @@ Avoid unnecessary or excessive API calls and ensure they are fast and scalable. 
 
 >ℹ️ **Performance of external systems**
 >
->When you offer your app on the VTEX App Store, your app might become available to brands of all sizes across different time zones and business calendars. In this context, relying on a manual system with on-demand scalability can become a huge risk in terms of performance.
+>When you offer your app on the VTEX App Store, your app may become available to brands of all sizes across different time zones and business calendars. In this context, relying on a manual system with on-demand scalability can become a huge risk in terms of performance.
 
 ### Using the latest builders
 
