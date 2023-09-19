@@ -120,7 +120,7 @@ We should ensure that all PII being shared externally is strictly necessary for 
 
 ### Implementing internationalization (i18n) correctly
 
-Ensure that all messages are [internationalized](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores#storefront-content-internationalization) using the `messages` builder. Also, i18n keys should start with the domain (`store/` for storefront and `admin/` for Admin) where they are used, otherwise they will not render properly. For more information, see our [reference](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) for translating components.
+Ensure that all messages are [internationalized](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores#storefront-content-internationalization) using the `messages` builder. Also, i18n keys should start with the domain (`store/` for storefront and `admin/` for Admin) where they are used. Otherwise, they will not render properly. For more information, see our [reference](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) for translating components.
 
 ### Avoid declaring routes with collision-prone paths
 
