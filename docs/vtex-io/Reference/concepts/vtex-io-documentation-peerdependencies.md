@@ -11,6 +11,8 @@ Peer dependencies are specified within the `manifest.json` file of a VTEX IO app
 
 Peer dependencies become particularly useful in scenarios where an app depends on paid apps or requires a specific major version of another app.
 
+![Peer dependencies](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-peerdependencies-0.png)
+
 ## Example
 
 Let's illustrate this concept with an example. Suppose you have an app named `vtex.example` with the following `manifest.json` configuration:
