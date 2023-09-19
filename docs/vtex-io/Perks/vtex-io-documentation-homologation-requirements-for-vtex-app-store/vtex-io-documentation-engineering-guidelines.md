@@ -66,7 +66,7 @@ For developing and publishing apps for the VTEX App Store, the following builder
 
 ## Versioning
 
-When releasing a new version of your app, it's crucial to adhere to best practices. There are various types of versions to consider, including major, minor, and patch, as well as stable and beta releases. Select the appropriate version type based on the nature of the implemented changes. Special attention is required for breaking changes, which should always result in a new major version. 
+When releasing a new version of your app, it's crucial to adhere to best practices. There are various types of versions to consider, including major, minor, and patch, as well as stable and beta releases. Select the appropriate version type based on the nature of the implemented changes. Special attention is required for breaking changes, which should always result in a new major version.
 
 For more information, refer to the [SemVer standard](https://semver.org/) and our guide on [Releasing a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version).
 
