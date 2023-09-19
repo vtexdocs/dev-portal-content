@@ -98,7 +98,7 @@ Outbound access policies (`outbound-access`) to VTEX resources should follow the
 
 ### Do not expose private information through public routes
 
-Public routes do not require authentication when called from the Frontend, so they should not expose information obtained from calling private APIs, e.g.: exposing a list of orders to the Frontend. A common mistake is leaving routes which are meant to only be consumed from the Admin unrestricted. Also, GraphQL APIs are public by default, so the schema should not have queries exposing private information either.
+As the name suggests, public routes do not require authentication when accessed from the frontend. Consequently, they should never reveal data sourced from private APIs, such as displaying a list of orders directly to the frontend. In this sense, a common mistake is failing to restrict routes intended exclusively for Admin usage. Additionally, keep in mind that GraphQL APIs are public by default, necessitating cautious schema design to avoid queries that inadvertently expose confidential information.
 
 Access to REST APIs should be restricted using [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies#resource-based-policies). Access to GraphQL APIs should be restricted using directives, either [@auth](https://github.com/vtex/node-vtex-api/blob/08ea11d380997f5abf02455487b342caa74b2001/src/service/worker/runtime/graphql/schema/schemaDirectives/Auth.ts#L66-L75) or a custom-made one.
 
