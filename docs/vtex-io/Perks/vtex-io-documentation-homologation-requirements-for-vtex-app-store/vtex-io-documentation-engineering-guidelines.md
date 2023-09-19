@@ -40,7 +40,7 @@ Use the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-
 
 ### Using APIs efficiently
 
-For communication with services, your app should use existing [VTEX IO Clients](https://github.com/vtex/io-clients) whenever possible. Using our Clients have many advantages, including:
+Efficiently utilizing APIs is paramount for optimal performance in your application. Whenever possible, leverage our pre-built [VTEX IO Clients](https://github.com/vtex/io-clients) to harness the following advantages:
 
 - The code to call the services is done by VTEX and standardized in all applications.
 - The Clients are updated automatically by VTEX, providing new features, bug fixes, and improving compatibility.
