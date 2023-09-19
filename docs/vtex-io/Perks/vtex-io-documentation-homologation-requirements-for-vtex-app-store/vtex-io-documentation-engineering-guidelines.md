@@ -124,7 +124,7 @@ Ensure that all messages are [internationalized](https://developers.vtex.com/doc
 
 ### Avoid declaring routes with collision-prone paths
 
-When declaring [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes), generic paths (e.g., `/_v/orders/`, `/_v/settings`) should be avoided to reduce chances of collision with other apps. 
+When declaring [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes), generic paths (e.g., `/_v/orders/`, `/_v/settings`) should be avoided to reduce chances of collision with other apps.
 
 To mitigate this risk, consider adopting a naming convention that includes a distinctive prefix, typically the name of your app, when defining routes. This simple practice effectively reduces the chances of conflicts and ensures that your app's routes remain uniquely identifiable and isolated from others.
 
