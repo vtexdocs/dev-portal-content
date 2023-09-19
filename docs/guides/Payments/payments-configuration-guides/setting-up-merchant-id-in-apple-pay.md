@@ -129,9 +129,9 @@ Then, start a Postman session. You perform a call to VTEX's CDN using the POST m
 
 1. Configure the route **POST** `https://{{yourdomain}}/.well-known/raw/apple-developer-merchantid-domain-association.txt`.
 2. Ensure that all contents of the .txt files are in:
-    a. Quotations marks
-    b. JSON format, inside a `{"data": "token_content"}` body
-    c. Without any line breaks.
+   - Quotations marks
+   - JSON format, inside a `{"data": "token_content"}` body
+   - Without any line breaks.
 
 ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Payments/payments-configuration-guides/setting-up-merchant-id-in-apple-pay-20.png)
 
