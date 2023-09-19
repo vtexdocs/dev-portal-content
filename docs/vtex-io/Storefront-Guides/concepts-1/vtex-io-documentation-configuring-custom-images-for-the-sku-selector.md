@@ -20,7 +20,7 @@ Follow the step-by-step below to see how to apply this configuration in your sto
 
 ## Step by step
 
-1. In the admin's Catalog, access **Products and SKUs**.
+1. Access the Admin and go to **Catalog > All Products**.
 2. Select the desired product, click on the three dots button and on **View SKU list**.
 3. Select the desired SKU and click on the **Edit** button.
 4. Click on the **Images** tab.
