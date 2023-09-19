@@ -130,7 +130,9 @@ To mitigate this risk, consider adopting a naming convention that includes a dis
 
 ### Creating custom Admin settings form
 
-We recommend building the Admin settings form of your app using the [settingsSchema](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#settingsschema) structure, which should cover most cases. We also understand that there are some specific cases where the schema is not enough to build the settings page of the app, which will be assessed by our team in the homologation. For the cases where the schema is not enough, you can create your form as a page of an [Admin app](https://learn.vtex.com/docs/course-admin-lang-en).
+Our primary recommendation for defining the Admin settings form of your app is to leverage the [`settingsSchema`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#settingsschema) structure, as it caters to the majority of use cases effectively. 
+
+However, for more specific cases where the schema is insufficient, you can create your form as a page of an [Admin app](https://learn.vtex.com/docs/course-admin-lang-en). In such cases, our team will evaluate your requirements during the homologation process.
 
 ## Plug&Play
 
