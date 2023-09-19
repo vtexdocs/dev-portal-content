@@ -1,17 +1,19 @@
 ---
 title: "Peer Dependencies"
 slug: "vtex-io-documentation-peerdependencies"
+excerpt: "Learn what peer dependencies are their use cases."
 hidden: false
 createdAt: "2020-07-21T13:18:17.298Z"
 updatedAt: "2022-12-13T20:17:44.256Z"
 ---
-Peer dependencies is how we call a JSON object field (`peerDependencies`) in the app's `manifest.json` file.
 
-This field is used to specify the set of **IO apps** an app relies on to properly work. However, unlike regular dependencies, peer dependencies **are not automatically installed** in an account. Hence, setting peer dependencies can be especially useful for cases when an app relies on a **paid app**, for example.
+Peer dependencies are specified within the `manifest.json` file of a VTEX IO app under the `peerDependencies` field. This JSON object is used to declare the set of IO apps that an app requires to function seamlessly. Unlike regular [`dependencies`](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies), which are automatically installed when someone installs an app, peer dependencies are not automatically handled by the system. Instead, it is the responsibility of the app user to ensure that the required peer dependencies are installed in their VTEX account.
 
-Another use case for the `peerDependencies` field is when your app relies on an app that has different major versions, which can affect other app's functionalities depending on the installed version. Therefore, instead of automatically installing such dependency, you need to guarantee that the account installing your new app already has installed your app's dependencies in the same major version specified in the `peerDependencies` field.
+Peer dependencies become particularly useful in scenarios where an app depends on paid apps or requires a specific major version of another app.
 
-To make it more tangible, take the following example, in which `vtex.store@2.x` and `vtex.paid-app-example@1.x` are declared as peer dependencies of the `vtex.example` app.
+## Example
+
+Let's illustrate this concept with an example. Suppose you have an app named `vtex.example` with the following `manifest.json` configuration:
 
 ```json
 {
@@ -28,14 +30,34 @@ To make it more tangible, take the following example, in which `vtex.store@2.x` 
 }
 ```
 
-For this example, if you wanted to install the `vtex.example` app in an account, you'd first need to manually install the exact versions of `vtex.store` and `vtex.paid-app-example` apps declared under the `peerDependencies` field.
+In this example, anyone who wants to install the `vtex. example` app must first manually install the exact versions of `vtex.store` and `vtex.paid-app-example` apps specified in the `peerDependencies` field.
 
-Now, considering the development context, suppose the following: you are developing an app called `X` that directly depends on the `vtex.example` app. Therefore, you list`vtex.example`  as a dependency in the `dependencies` field from the `X`'s `manifest.json` file.
+## Use cases
 
-The `vtex.example` app, in turn, has `vtex.store@2.x` and `vtex.paid-app-example@1.x` set as its `peerDependencies`. In practice, this means that in order to develop your app `X` (whose `dependencies` field includes `vtex.example`), you will have to manually install `vtex.store@2.x` and `vtex.paid-app-example@1.x` in the VTEX account in which you are working.
+### Handling paid dependencies
 
-If your account does not have `vtex.store@2.x` and `vtex.paid-app-example@1.x` installed, you won't be able to install the `vtex.example` and your development flow will be interrupted.
+When your app relies on a paid app, it's crucial to specify it as a peer dependency. This ensures that users who want to use your app must manually install the required paid app. This practice not only helps maintain licensing and payment compliance but also ensures that users are aware of the additional costs associated with your app's dependencies.
 
-Notice that, this way, the `vtex.example` forces every account that is installing it to also have `vtex.store@2.x` and `vtex.paid-app-example@1.x` installed.
+### Enforcing a specific major version
 
->⚠️ Keep in mind: Peer dependencies are not automatically installed, therefore you will have to manually install them in the account in which you are working. As a result, if your app relies on a paid app you should declare it as a peer dependency.
+Consider a situation where your app depends on another app that has multiple major versions, each with significant differences that may affect your app's functionality. Instead of specifying it under `dependencies` that would install the latest version of the app, you can use the `peerDependencies` field to declare the exact major version your app requires. Users who want to install your app must ensure that the specified major version of the dependency is already installed in their account.
+
+## Adding a peer dependency to a Store Theme app
+
+If you want to add a new peer dependency to a Store Theme app, it involves deploying a new major version of the app. To ensure a smooth deployment, please refer to the [Migrating CMS settings after a theme major version update](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) guide.
+
+## Developing an app that relies on an app with peerDependencies
+
+Now, let's consider a development scenario where you are working on an app named `X`, and this app directly depends on the `vtex.example` app. To indicate this dependency, you list `vtex.example` in the `dependencies` field of `X`'s `manifest.json` file.
+
+Since `vtex.example` specifies `vtex.store@2.x` and `vtex.paid-app-example@1.x` as its `peerDependencies`, this means that to develop `X` (which includes `vtex.example` in its `dependencies`), you must manually install `vtex.store@2.x` and `vtex.paid-app-example@1.x` in the VTEX account in which you are working.
+
+>⚠️ Keep in mind: Peer dependencies are not automatically installed. You must manually install them in your working account.
+
+If your account lacks these specific versions of `vtex.store@2.x` and `vtex.paid-app-example@1.x`, you won't be able to install the `vtex.example` and your development flow will be interrupted.
+
+Notice that the `vtex.example` requires every account installing it also to have `vtex.store@2.x` and `vtex.paid-app-example@1.x` installed. 
+
+Remember that these dependencies are a manual prerequisite and should be documented clearly for your users.
+
+
