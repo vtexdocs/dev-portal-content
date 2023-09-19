@@ -21,7 +21,7 @@ Follow the step-by-step below to see how to apply this configuration in your sto
 ## Step by step
 
 1. Access the Admin and go to **Catalog > All Products**.
-2. Select the desired product, click on the three dots button and on **View SKU list**.
+2. Find the desired product, and click the down arrow button. Then, click  **SKU**.
 3. Find the desired SKU and click the corresponding **Edit** button.
 4. Click the **Images** tab.
 5. Click the **Insert** button to add a new SKU image.
