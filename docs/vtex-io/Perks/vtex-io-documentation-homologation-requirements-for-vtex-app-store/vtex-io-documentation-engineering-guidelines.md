@@ -79,7 +79,7 @@ To ensure that all points of contact between our retailers, their customers, and
 Nevertheless, if you identify any security breaches after publishing your app, take the following measures:
 
 1. [Open a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) requesting to remove your app from the VTEX App Store and avoid further installations of the unstable version.
-2. Notify us of the issue by [opening tickets](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) so that we can provide support to retailers operating with this version and guide them on how to remove it from their stores.
+2. [Open a support ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) and notify us of the issue so that we can support retailers operating with this version and guide them on removing it from their stores.
 3. Fix the security flaw and resubmit your application for homologation.
 
 Once the new version is approved, the app will be available again in the VTEX App Store.
