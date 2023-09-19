@@ -96,7 +96,7 @@ For user-initiated actions, apps should use either `ctx.vtex.storeUserAuthToken`
 
 Outbound access policies (`outbound-access`) to VTEX resources should follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). In short, you only give access to what is really needed. For instance, the `path` should not be configured as `*`. See an example [here](https://github.com/vtex-apps/store-graphql/blob/684dcbbbd6e9cdbd121afd7802200856cb952d2b/manifest.json#L107-L112) of how it should be done.
 
-### Avoid exposing private information through public routes
+### Do not expose private information through public routes
 
 Public routes do not require authentication when called from the Frontend, so they should not expose information obtained from calling private APIs, e.g.: exposing a list of orders to the Frontend. A common mistake is leaving routes which are meant to only be consumed from the Admin unrestricted. Also, GraphQL APIs are public by default, so the schema should not have queries exposing private information either.
 
