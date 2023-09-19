@@ -42,7 +42,7 @@ Use the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-
 
 Efficiently utilizing APIs is paramount for optimal performance in your application. Whenever possible, leverage our pre-built [VTEX IO Clients](https://github.com/vtex/io-clients) to harness the following advantages:
 
-- The code to call the services is done by VTEX and standardized in all applications.
+- **Standardized code:**  VTEX IO Clients streamline interfacing with various services, providing standardized code across all applications.
 - The Clients are updated automatically by VTEX, providing new features, bug fixes, and improving compatibility.
 - You do not need to maintain the code. Everything works out of the box and will keep working as long as we are maintaining it.
 
