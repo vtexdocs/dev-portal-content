@@ -88,7 +88,7 @@ Once the new version is approved, the app will be available again in the VTEX Ap
 
 Having an appKey/appToken exposed in your code can cause serious security issues, like unwanted access. Instead of using a VTEX appKey/appToken pair, apps should use the existing tokens (`ctx.authToken`,  `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken`). For more information, see [Connecting to VTEX Core Commerce APIs](https://developers.vtex.com/docs/guides/how-to-connect-with-vtex-core-commerce-apis-using-vtex-io#steps).
 
-### Using app token for a user-initiated action
+### Using an app token for a user-initiated action
 
 For user-initiated actions, apps should use either `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken` (as opposed to `ctx.authToken`). For more information, see [Connecting to VTEX Core Commerce APIs](https://developers.vtex.com/vtex-developer-docs/docs/how-to-connect-with-vtex-core-commerce-apis-using-vtex-io#steps).
 
