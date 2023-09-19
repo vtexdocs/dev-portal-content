@@ -70,7 +70,7 @@ Once you have configured the [custom images](###step-by-step), you should set a 
 
 Follow the next step-by-step on how to configure the SKU color variations.
 
-1. Access your store's Admin.
+1. Access the Admin.
 2. Go to **Catalog** > **Categories**.
 3. Choose the desired category and in `ACTIONS` click on **Field(SKU)**
 4. In **Field** click in the group's `Edit`.
