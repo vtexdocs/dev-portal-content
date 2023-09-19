@@ -46,7 +46,7 @@ Efficiently utilizing APIs is paramount for optimal performance in your applicat
 - **Automatic updates:** VTEX consistently updates VTEX IO Clients, delivering new features, resolving bugs, and ensuring compatibility with the latest technologies.
 - **Simplified maintenance:** By relying on VTEX IO Clients, you eliminate the need for extensive code maintenance.
 
-Try to avoid unnecessary or excessive API calls and make sure they are fast and scalable. Excessive API calls can degrade the performance of your app, increasing response times. Unnecessary API calls or lack of proper use of our Clients can lead to security issues. For more information, see our [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.
+Avoid unnecessary or excessive API calls and ensure they are fast and scalable. Excessive API calls can degrade your app's performance, increasing response times. Unnecessary API calls or lack of proper use of our Clients can lead to security issues. For more information, see our [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.
 
 >ℹ️ **Performance of external systems**
 >
