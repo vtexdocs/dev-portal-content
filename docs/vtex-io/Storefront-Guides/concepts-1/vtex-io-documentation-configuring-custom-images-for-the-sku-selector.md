@@ -22,9 +22,9 @@ Follow the step-by-step below to see how to apply this configuration in your sto
 
 1. Access the Admin and go to **Catalog > All Products**.
 2. Select the desired product, click on the three dots button and on **View SKU list**.
-3. Select the desired SKU and click on the **Edit** button.
-4. Click on the **Images** tab.
-5. Upload the desired custom image, by clicking on **Insert**.
+3. Find the desired SKU and click the corresponding **Edit** button.
+4. Click the **Images** tab.
+5. Click the **Insert** button to add a new SKU image.
 
 ![configuring-sku-selector-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-2.png)
 
