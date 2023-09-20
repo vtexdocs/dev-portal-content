@@ -128,7 +128,13 @@ Thereafter, to upload the`.txt` file by API, follow these instructions:
 Then, start a Postman session. You perform a call to VTEX's CDN using the POST method:
 
 1. Configure the route **POST** `https://{{yourdomain}}/.well-known/raw/apple-developer-merchantid-domain-association.txt`.
-2. Ensure that **all the contents** of the `.txt` file is in **quotation marks** and without any **line breaks**.
+2. Ensure that all contents of the .txt files are in:
+   - Quotations marks
+   - JSON format, inside a `{"data": "token_content"}` body
+   - Without any line breaks.
+
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Payments/payments-configuration-guides/setting-up-merchant-id-in-apple-pay-20.png)
+
 3. Add the **X-VTEX-API-AppKey** and the **X-VTEX-API-AppToken** to the header.
 
 Now, when making the **POST** call, the response will inform you that your certificate will be saved for 60 minutes. During this time, you should complete the domain validation.
