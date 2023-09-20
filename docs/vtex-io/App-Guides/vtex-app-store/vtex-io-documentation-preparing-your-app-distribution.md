@@ -11,7 +11,7 @@ This guide will teach you how to prepare your app for distribution in the VTEX A
 
 Notice that every app goes through a homologation process before being available at the VTEX App Store. During this process, our team ensures the apps follow the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Hence, be sure to review these guidelines while you develop and prepare your app for distribution.
 
-## Before you start
+## Before you begin
 
 Before proceeding, make sure you have already:
 

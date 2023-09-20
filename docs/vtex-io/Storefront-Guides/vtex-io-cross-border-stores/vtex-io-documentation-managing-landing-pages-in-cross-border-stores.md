@@ -16,7 +16,7 @@ In this case, after creating a custom page, you must link its path to the desire
 
 Finally, you may want to remove your landing page from the *default binding*. For that, check the [Unlinking a landing page from a specific *binding*.](#unlinking-a-landing-page-from-a-binding) section.
 
-## Before you start
+## Before you begin
 
 Before proceeding any further with this step-by-step:
 

@@ -9,7 +9,7 @@ excerpt: "Get to know the internationalization process for creating a multi-lang
 
 This document outlines the internationalization process for creating a multi-language e-commerce store using Store Framework. Internationalization is crucial for reaching global markets and providing a seamless shopping experience for customers from different locales. This guide covers how Store Framework handles internationalization for both storefront content and catalog data, highlighting the tools and libraries used for translations.
 
-## Before you start
+## Before you begin
 
 Before delving into the internationalization process, it's essential to understand the distinction between frontend app messages and catalog data. In general, **storefront content** can be sourced from either **frontend React apps** or the **[Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview)**. More precisely, app messages are translatable strings defined within a frontend app, while catalog messages comprise external data from the Catalog API. Therefore, it is crucial to consider these differences when translating storefront content, as internationalization is handled differently for each case. 
 

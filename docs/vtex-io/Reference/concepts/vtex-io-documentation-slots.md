@@ -11,7 +11,7 @@ Slots composition is an alternative paradigm for defining component structures w
 
 When using slots, consider the following:
 
-- The requirement for the `blocks` attribute is eliminated when implementing components that utilize slots in the store theme. Instead, developers can pass the desired blocks as regular `props`.
+- The requirement for the `blocks` attribute is eliminated when implementing components that utilize slots in the Store Theme. Instead, developers can pass the desired blocks as regular `props`.
 - Slots grant the ability to include any block from any app as a regular prop. Hence, unlike the blocks composition method, declaring the `allowed` interface attribute is not necessary.
 
 ## Blocks vs. Slots

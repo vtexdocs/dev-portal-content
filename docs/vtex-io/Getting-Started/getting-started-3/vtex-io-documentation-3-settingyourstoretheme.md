@@ -15,9 +15,9 @@ seeAlso:
 
 This article provides a step-by-step guide on how to initiate a storefront project, also known as a Store Theme, for your online store. A Store Theme is a VTEX IO project that uses the `store` builder, and Store Framework blocks to create the storefront of a VTEX online store. The Store Theme is responsible for defining the visual and interactive elements of the store, such as the layout, colors, typography, icons, and animations.
 
-To jumpstart our storefront project, we'll utilize a pre-defined [Store Theme boilerplate app](https://github.com/vtex-apps/store-theme) that will be further adapted to meet specific needs. This boilerplate app streamlines the process of creating a custom store theme by providing pre-defined templates and styles. In the upcoming sections of this getting started guide, we'll define templates, which involve configuring and combining components for each page of the store, and declare styles, including primary and secondary colors, typography scales, and spacing.
+To jumpstart our storefront project, we'll utilize a pre-defined [Store Theme boilerplate app](https://github.com/vtex-apps/store-theme) that will be further adapted to meet specific needs. This boilerplate app streamlines the process of creating a custom Store Theme by providing pre-defined templates and styles. In the upcoming sections of this getting started guide, we'll define templates, which involve configuring and combining components for each page of the store, and declare styles, including primary and secondary colors, typography scales, and spacing.
 
-## Before you start
+## Before you begin
 
 Before downloading the Store Theme app, make sure your VTEX account has the [Store Edition](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) app installed, as recommended in this track's second step. Otherwise, you won't be able to successfully implement the VTEX Store Framework.
 
@@ -81,9 +81,9 @@ After setting up your local development environment and cloning the Store Theme 
 
 By successfully running this command in your terminal, your local code is sent to the VTEX IO cloud-native infrastructure and it is reflected in the development workspace you are currently working in. Now, any changes you make to your Store Theme app files will be automatically reflected on your website in real-time.
 
-## Step 4 - Checking out your new store theme
+## Step 4 - Checking out your new Store Theme
 
-After linking your local code to the VTEX IO platform, you can check out your new store theme in action on your store's website. To do this, navigate to `https://{workspaceName}--{account}.myvtex.com`, replacing the values between brackets with your development workspace and VTEX account name.
+After linking your local code to the VTEX IO platform, you can check out your new Store Theme in action on your store's website. To do this, navigate to `https://{workspaceName}--{account}.myvtex.com`, replacing the values between brackets with your development workspace and VTEX account name.
 
 Once you're logged in, you should see the following Store Theme rendered on your store's website:
 

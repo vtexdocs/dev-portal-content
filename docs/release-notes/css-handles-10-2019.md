@@ -6,7 +6,7 @@ createdAt: "2019-10-25T14:47:00.000Z"
 
 Some VTEX IO native components received their own CSS Handles to facilitate customization by CSS classes. 
 
-CSS Handles are **HTML element identifiers**. Therefore, these can be used to simply customize your store components by simply using CSS classes throughout the store theme's code. 
+CSS Handles are **HTML element identifiers**. Therefore, these can be used to simply customize your store components by simply using CSS classes throughout the Store Theme's code. 
 
 
 ## What has changed

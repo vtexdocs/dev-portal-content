@@ -65,7 +65,7 @@ Open your account admin and go to *Storefront > Pages > Redirects*. Then, save t
 
 #### If the query returns the redirect path
 
-Check if your store theme, or some other app, defined a route with the same path you're trying to save your redirect.
+Check if your Store Theme, or some other app, defined a route with the same path you're trying to save your redirect.
 
 If this route is already declared, the redirect will be ignored.
 </details>

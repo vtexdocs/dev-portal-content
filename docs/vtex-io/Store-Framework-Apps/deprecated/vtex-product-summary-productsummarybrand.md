@@ -15,7 +15,7 @@ Product Summary Brand is a block exported by the [Product Summary app](https://d
 
 ![product-brand](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummarybrand-1.png)
 
-## Before you start
+## Before you begin
 
 Ensure that you have registered [brands](https://help.vtex.com/en/tutorial/what-is-a-brand--QU07yhHoaWcEYseEucOQW) in your store. To do so, follow the [How to register brands](https://help.vtex.com/en/tutorial/registering-brands--tutorials_1414) guide.
 

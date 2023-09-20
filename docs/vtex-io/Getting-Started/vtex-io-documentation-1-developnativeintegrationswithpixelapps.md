@@ -19,7 +19,7 @@ Pixel apps are responsible for running scripts on all pages of a store website. 
 - [Part 6. Structuring documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-7-structuringthedocumentation)
 - [Part 7. Making your Pixel app publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-makingyourpixelapppubliclyavailable)
 
-## Before you start
+## Before you begin
 
 Before taking this tutorial, check our [list of Pixel apps](https://developers.vtex.com/docs/guides/pixel-apps/) and make sure the integration you're looking for is not already available.
 

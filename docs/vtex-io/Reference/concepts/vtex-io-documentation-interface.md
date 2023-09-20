@@ -23,4 +23,4 @@ For every exported block, the app also defines a React component linked to that 
 }
 ```
 
-In general, frontend apps export different blocks, which are declared and configured in the store theme's code, and React components related to these blocks. These components are then rendered on the store's frontend.
+In general, frontend apps export different blocks, which are declared and configured in the Store Theme's code, and React components related to these blocks. These components are then rendered on the store's frontend.

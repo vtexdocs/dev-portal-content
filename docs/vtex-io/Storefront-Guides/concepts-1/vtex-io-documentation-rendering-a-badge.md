@@ -17,7 +17,7 @@ To render a badge on top of a [Product Summary](/docs/guides/vtex-product-summar
 
 ![badge](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-rendering-a-badge-0.png)
 
-## Before you start
+## Before you begin
 
 1. Knowledge of how the Product Summary, Product Highlights, Stack Layout, and Product collections work is required for this recipe. If you have any doubts regarding them, we strongly recommend you access their technical documentation: [Product Summary](/docs/guides/vtex-product-summary), [Product Highlights](/docs/guides/vtex-product-highlights/), [Stack Layout](/docs/guides/vtex-stack-layout) and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye).
 

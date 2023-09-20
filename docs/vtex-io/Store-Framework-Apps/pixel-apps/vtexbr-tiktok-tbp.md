@@ -17,7 +17,7 @@ The app includes the following features:
 * Inserting the [TikTok Pixel](#tiktok-pixel) in your store.
 * Managing TikTok Ads from the VTEX Admin.
 
-## Before you start
+## Before you begin
 
 Before installing the app, make sure you have read about its compatibility and requirements in the following sections.
 

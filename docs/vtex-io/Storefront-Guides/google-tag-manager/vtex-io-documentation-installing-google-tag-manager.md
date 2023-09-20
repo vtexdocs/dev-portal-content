@@ -16,7 +16,7 @@ This guide provides a step-by-step guide on installing and configuring Google Ta
 
 > ⚠️ If you have already installed the Google Tag Manager app, navigate to this guide's section titled [Create a Google Analytics 4 property](#create-a-google-analytics-4-property) to create the property and follow along.
 
-## Before you start
+## Before you begin
 
 Before proceeding with the installation, ensure you match the following requisites:
 

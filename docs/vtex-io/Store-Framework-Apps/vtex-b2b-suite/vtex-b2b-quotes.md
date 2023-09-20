@@ -12,7 +12,7 @@ The B2B shopping experience frequently requires the possibility for customers to
 
 The **B2B Quotes & Carts** app allows customers who are part of [B2B Organizations](https://developers.vtex.com/docs/guides/vtex-b2b-organizations) to request a quote for a shopping cart and save it for future use – including its items, product quantities and prices. This enables price negotiations between them and the store’s sales representatives, as well as order approval flows within their organization.
 
-## Before you start
+## Before you begin
 
 First, make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
 

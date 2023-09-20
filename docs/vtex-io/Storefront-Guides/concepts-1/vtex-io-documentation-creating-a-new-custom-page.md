@@ -24,7 +24,7 @@ However, you may want to create a new custom page to attend your store's specifi
 
 Follow the steps below and learn how to define a different layout and path for a new store page:
 
-1. Create a **new template** in your store theme.
+1. Create a **new template** in your Store Theme.
 2. Create your **new page's path**.
 3. **Add content** to your page.
 4. Making your new theme content **publicly available**.
@@ -47,7 +47,7 @@ Let's suppose we are going to create a simple About Us page for a store. As such
 
 ![store-product-exp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-0.png)
 
-1. In your store theme's code, declare a new template within your `blocks` folder or `blocks.jsonc` file.
+1. In your Store Theme's code, declare a new template within your `blocks` folder or `blocks.jsonc` file.
 
 ```json
 {
@@ -107,7 +107,7 @@ To learn more about how the Flex Layout works, access its [documentation](https:
 
 ### Creating the new page's path
 
-Now that your page layout has been defined in the store theme code, the next step is to define the page's path to make the page accessible. You can define it through direct code changes or by using the account's admin.
+Now that your page layout has been defined in the Store Theme code, the next step is to define the page's path to make the page accessible. You can define it through direct code changes or by using the account's admin.
 
 #### Through code changes
 
@@ -125,7 +125,7 @@ Now that your page layout has been defined in the store theme code, the next ste
 
 #### Using the account admin
 
-If you prefer to set the new page path using account admin, you must first must [release](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) your changes regarding template creation and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the new version of your store theme in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace).
+If you prefer to set the new page path using account admin, you must first must [release](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) your changes regarding template creation and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the new version of your Store Theme in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace).
 
 Once your changes are set up in a Production workspace, you will be able to use the admin's CMS to create the page's path:
 
@@ -149,4 +149,4 @@ You can define your page content performing changes directly to your Store Theme
 
 ### Making your theme content publicly available
 
-If you are happy with the changes to your store theme, make your new theme content public. Up until this point, the changes were performed in your development workspace. Access our documentation on [**making your theme content publicly available**](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/) and follow the steps detailed there.
+If you are happy with the changes to your Store Theme, make your new theme content public. Up until this point, the changes were performed in your development workspace. Access our documentation on [**making your theme content publicly available**](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/) and follow the steps detailed there.

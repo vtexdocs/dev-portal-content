@@ -8,7 +8,7 @@ type: "improved"
 
 ![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/file-paths-from-assets-builder-in-css-files-0.png)
 
-Media uploaded on Assets builder can now be referenced in your store theme CSS files by adding the desired file path.
+Media uploaded on Assets builder can now be referenced in your Store Theme CSS files by adding the desired file path.
 
 Previously, file paths from Assets builder only worked in `blocks.json` and `blocks.jsonc` files.
 

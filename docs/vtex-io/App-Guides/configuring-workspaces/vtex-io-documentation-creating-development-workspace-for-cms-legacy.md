@@ -9,7 +9,7 @@ In this guide, you will learn how to create a Development workspace to start dev
 
 When working in a Development workspace, the public version of your store, that is, the one that is visible to end users, will stay stable utilizing the CMS Legacy until you are ready to transition to IO.
 
-## Before you start
+## Before you begin
 
 1. [Install the VTEX IO Command-line Interface (CLI)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference). Through the CLI, you can log in to your VTEX account, manage workspaces and develop new apps.
 

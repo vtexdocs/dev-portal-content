@@ -10,7 +10,7 @@ The original Store Theme `blocks.json` file now can be **split into different fo
 
 Before this feature, your store’s entire component structure would be stored in a single `blocks.json` file, in your theme code `store` folder. Since the file did not allow blocks to be divided into other files and folders, some stores were facing code reliability issues in `blocks.json` files with more than 1500+ lines which didn’t have any separation or explanatory comments.
 
-Now, developers can organize the store theme code however they seem best, declaring store blocks in different folders and files and adding comments whenever warranted.
+Now, developers can organize the Store Theme code however they seem best, declaring store blocks in different folders and files and adding comments whenever warranted.
 
 ![](https://user-images.githubusercontent.com/52087100/61823740-c187a180-ae32-11e9-9593-1f7ba16a812b.png)
 

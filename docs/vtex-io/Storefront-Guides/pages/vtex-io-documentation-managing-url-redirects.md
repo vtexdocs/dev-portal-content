@@ -10,7 +10,7 @@ URL redirection is a method of forwarding website visitors and search engines fr
 
 Check the following sections to learn how to [create](#creating-url-redirects), [remove](#deleting-url-redirects) and [verify](#verifying-url-redirects) your store's URL redirects.
 
-## Before you start
+## Before you begin
 
 1. [Install the VTEX IO Command-Line Interface (CLI)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 2. [Install the `redirects` plugin for the VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins#installing-a-plugin):

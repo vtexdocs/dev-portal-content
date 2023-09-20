@@ -32,7 +32,7 @@ These practices can improve SEO by up to 80% and page loading time by over 50%. 
 
 The `orderForm` is an object that stores and fetches data from a user order, including each item added to the cart.
 
-To give other store theme blocks access to the data stored in the `orderForm` and, consequently, allow them to render it, Store Framework runs the `OrderFormProvider` object in each store page. This object is exports all the necessary `orderForm` data to these blocks.
+To give other Store Theme blocks access to the data stored in the `orderForm` and, consequently, allow them to render it, Store Framework runs the `OrderFormProvider` object in each store page. This object is exports all the necessary `orderForm` data to these blocks.
 
 However, all stores using VTEX IO Store Framework currently have two `OrderFormProviders`: a legacy one, still consumed by native blocks such as `minicart` and `buy-button`, and a newer version, which is better suited to replace it.
 

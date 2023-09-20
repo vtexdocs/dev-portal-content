@@ -26,9 +26,9 @@ Download the template files available here: [black-friday-template-files 2021.zi
 - `/store/blocks/custom-template-blackfriday-lp` - json blocks.
 - `/style/css/custom-template-blackfriday-lp` - Custom page styles.
 
-### Step 2 - Integrating the template files with the store theme
+### Step 2 - Integrating the template files with the Store Theme
 
-1. Open your store theme project using the code editor of your choice.
+1. Open your Store Theme project using the code editor of your choice.
 2. Open your project's `manifest.json` file and declare the `"assets": "0.x"` builder on the `builders` list:
 
   ```diff
@@ -40,7 +40,7 @@ Download the template files available here: [black-friday-template-files 2021.zi
   }
   ```
 
-3. Copy and paste the code you previously downloaded into the corresponding folders of your store theme project.
+3. Copy and paste the code you previously downloaded into the corresponding folders of your Store Theme project.
 
 > ⚠️ If you are running "styles": "1.x", you must copy and paste the CSS code within its corresponding CSS files since this version doesn't allow subfolders for CSS.
 

@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.111Z"
 ---
 Once you're using VTEX IO Store Framework, making a new version of your theme public (or even the first version) can be a big challenge if any of the necessary steps are unclear.
 
-Note that your store theme works exactly as any other VTEX IO app. This means it takes on an app's default behavior, with its own versioning and deploys.
+Note that your Store Theme works exactly as any other VTEX IO app. This means it takes on an app's default behavior, with its own versioning and deploys.
 
 ## Step by step
 
@@ -23,4 +23,4 @@ If you’re comfortable with the configurations you’ve performed and want your
 6. [**Deploy**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/) it as a stable version if you are sure about all the changes you performed;
 7. [Promote the Production workspace to **Master**](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/), finally making your theme public to your store's end users.
 
-For more details on each of these steps, you can check out the recipe on [**Making your new app version publicly available**](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available/), considering that your store theme works exactly as an app, as previously mentioned.
+For more details on each of these steps, you can check out the recipe on [**Making your new app version publicly available**](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available/), considering that your Store Theme works exactly as an app, as previously mentioned.

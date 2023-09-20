@@ -18,7 +18,7 @@ Product subscriptions facilitate recurring sales by automatically scheduling the
 ![subscription-gif](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-customizer-1.gif)
 *Example of a PDP with the Product Customizer component displaying the product subscription.*
 
-## Before you start
+## Before you begin
 
 - If you'll use the Product Customizer component to display **attachments**, [set up Assembly Options.](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) 
 - If you'll use the Product Customizer component to display a **subscription form**, [set up Subscriptions.](https://help.vtex.com/tutorial/setting-up-subscription-v2--1FA9dfE7vJqxBna9Nft5Sj) The Product Customizer's integration with the Subscription module is native and automatically enabled when subscriptions settings are detected.

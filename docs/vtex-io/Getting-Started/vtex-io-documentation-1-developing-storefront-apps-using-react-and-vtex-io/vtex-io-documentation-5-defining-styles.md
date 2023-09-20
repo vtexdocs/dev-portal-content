@@ -12,7 +12,7 @@ seeAlso:
 
 Once you have defined the blocks for your theme, the next step is to consider the style you want to apply to them. This includes defining the color scheme, typography, and other design elements that will establish the visual identity of your app when it is rendered.
 
-## Before you start
+## Before you begin
 
 Customizing the style in a component requires basic CSS knowledge. If you're new to CSS, we recommended checking the [documentation](https://www.w3schools.com/css/default.asp) for this language before following the instructions detailed in this article.
 

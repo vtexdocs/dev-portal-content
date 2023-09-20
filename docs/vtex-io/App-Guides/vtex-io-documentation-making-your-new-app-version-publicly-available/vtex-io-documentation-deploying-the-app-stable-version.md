@@ -10,7 +10,7 @@ seeAlso:
 ---
 This guide will teach you how to deploy the latest stable version of your app so that all accounts having your app installed can be automatically updated with the new stable version.
 
-## Before you start
+## Before you begin
 
 Before proceeding any further, make sure the app you are about to deploy has already been [published](/docs/guides/vtex-io-documentation-publishing-an-app) and tested. Note that deploying an app is one of the steps to **making your new app version publicly available**. Please refer to [this](/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide for more information.
 

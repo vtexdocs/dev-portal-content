@@ -5,18 +5,18 @@ hidden: false
 createdAt: "2020-06-18T18:51:40.292Z"
 updatedAt: "2022-06-23T13:45:58.727Z"
 category: "Storefront Development"
-excerpt: "Learn how to build a store theme with VTEX IO and Store Framework from scratch."
+excerpt: "Learn how to build a Store Theme with VTEX IO and Store Framework from scratch."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-1-basicsetup"
 ---
 
-This track will show you how to build a store theme using VTEX IO and Store Framework.
+This comprehensive guide will take you through the process of building a Store Theme using VTEX IO and Store Framework.
 
 <Flex>
 
 <WhatsNextCard
 title="Part 1. Setting up your development environment"
-description="Learn how to set up your development environment to build storefront components with VTEX IO."
+description="Learn how to configure your development environment to build a Store Theme app with VTEX IO."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-1-basicsetup"
 linkTitle="See more"
 />
@@ -31,14 +31,14 @@ linkTitle="See more"
 
 <WhatsNextCard
 title="Part 3. Creating a Store Theme project"
-description="Create your very first Store Framework storefront."
+description="Create your very first Store Framework storefront project."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-3-settingyourstoretheme"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Part 4. Configuring templates"
-description="Learn how to manage templates, add or remove blocks, and customize your store theme."
+description="Discover how to manage templates, add or remove blocks, and customize your Store Theme."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates"
 linkTitle="See more"
 />
@@ -51,7 +51,7 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Part 6. Building your own store theme"
+title="Part 6. Building your own Store Theme"
 description="Access our hands-on course on Store Framework."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-6-buildingyourownstoretheme"
 linkTitle="See more"
@@ -59,7 +59,7 @@ linkTitle="See more"
 
 <WhatsNextCard
 title="Part 7.  Making your theme content public"
-description="Learn how to make your Store Framework theme public."
+description="Find out how to make your Store Framework theme accessible to end users."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public"
 linkTitle="See more"
 />

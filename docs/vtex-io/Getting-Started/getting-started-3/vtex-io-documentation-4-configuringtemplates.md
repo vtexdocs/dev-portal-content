@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.335Z"
 updatedAt: "2022-12-13T20:17:44.526Z"
 category: "Storefront Development"
-excerpt: "Learn how to manage templates, add or remove blocks, and customize your store theme."
+excerpt: "Learn how to manage templates, add or remove blocks, and customize your Store Theme."
 seeAlso:
  - "/docs/guides/vtex-io-documentation-5-definingstyles"
 ---
@@ -20,7 +20,7 @@ In practice, managing templates is what allows you to build the desired theme fo
 
 ## Step 1 - Understanding what is a JSON block
 
-In order to edit templates and consequently your store's components, we need to take a closer look at what blocks are and how they are applied to the store theme.
+In order to edit templates and consequently your store's components, we need to take a closer look at what blocks are and how they are applied to the Store Theme.
 
 **Blocks are the minimal Store Framework abstraction of React components that we want to see on the UI**. Blocks are small pieces of code, exported to the platform by independent apps that configure how they will be rendered on your website.
 

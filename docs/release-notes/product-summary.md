@@ -6,7 +6,7 @@ createdAt: "2019-11-11T14:47:00.000Z"
 
 The Product Summary component now has its own **CSS Handles** and **blockClass**. 
 
-CSS Handles are **HTML element identifiers** and can therefore be used to customize store components that use Product Summary by simply using CSS classes in the store theme's code.  
+CSS Handles are **HTML element identifiers** and can therefore be used to customize store components that use Product Summary by simply using CSS classes in the Store Theme's code.  
 
 The blockClass is a prop that functions as a block identifier within your code. When configured, it becomes possible to customize two Product Summary blocks individually
 

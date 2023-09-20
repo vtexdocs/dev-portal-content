@@ -44,7 +44,7 @@ Shall we then start reading this Release Notes gem for May?
 
 ## Deprecations ❌
 
-- **Product Summary Price and Product Price blocks** - The Product Summary Price and the Product Price blocks, respectively, pertaining to the [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary) and the [Store components](https://developers.vtex.com/docs/guides/vtex-store-components) apps, were deprecated in favor of the [**Product Price**](https://developers.vtex.com/docs/guides/vtex-product-price/) app. Although support for these blocks is still granted, it is strongly recommended to update your store theme with the Product Price's blocks in order to keep up with the component's evolution.
+- **Product Summary Price and Product Price blocks** - The Product Summary Price and the Product Price blocks, respectively, pertaining to the [Product Summary](https://developers.vtex.com/docs/guides/vtex-product-summary) and the [Store components](https://developers.vtex.com/docs/guides/vtex-store-components) apps, were deprecated in favor of the [**Product Price**](https://developers.vtex.com/docs/guides/vtex-product-price/) app. Although support for these blocks is still granted, it is strongly recommended to update your Store Theme with the Product Price's blocks in order to keep up with the component's evolution.
 
 ## Bug fixes 🐛
 

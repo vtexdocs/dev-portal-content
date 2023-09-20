@@ -39,7 +39,7 @@ The only mandatory key that needs to be declared in a block interface is `compon
 
 ## Step 1 - Declaring an interface
 
-To add new custom blocks to your storefront, you need to declare their interfaces in the `interfaces.json` file of your store theme app. 
+To add new custom blocks to your storefront, you need to declare their interfaces in the `interfaces.json` file of your Store Theme app. 
 
 > The `interfaces.json` file is used by the `store` [Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/) during the website building process.
 

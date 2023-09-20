@@ -19,7 +19,7 @@ Learn how to successfully submit your app for distribution in the VTEX App Store
 
 > [Edition apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) do not need to be published in the App Store. Instead, accounts that wish to develop their own Edition apps must fulfill the [requirements to become a Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-sponsor-account).
 
-## Before you start
+## Before you begin
 
 ### Technical requirements
 

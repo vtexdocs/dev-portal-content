@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T20:17:44.398Z"
 ---
 
 
-This guide will teach you how to customize your storefront using CSS handles. CSS handles are unique identifiers assigned to HTML elements. They can be used in your store theme to target and add CSS classes to a component, allowing you to personalize your storefront according to your preferences.
+This guide will teach you how to customize your storefront using CSS handles. CSS handles are unique identifiers assigned to HTML elements. They can be used in your Store Theme to target and add CSS classes to a component, allowing you to personalize your storefront according to your preferences.
 
 
 ## Step by step
@@ -41,7 +41,7 @@ Once your app is linked and the changes are saved, the new customization should 
 
 ![css handles customization applied to the menuItem](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-1.png)
 
-As demonstrated, CSS handles can be used to overwrite the default styles of a storefront, allowing for independent customization of specific blocks within a store theme. Note that the change above was applied universally to all `menu-item` blocks.
+As demonstrated, CSS handles can be used to overwrite the default styles of a storefront, allowing for independent customization of specific blocks within a Store Theme. Note that the change above was applied universally to all `menu-item` blocks.
 
 
 

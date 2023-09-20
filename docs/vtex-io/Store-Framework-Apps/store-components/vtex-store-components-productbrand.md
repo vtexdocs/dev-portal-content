@@ -9,7 +9,7 @@ The `product-brand` block displays either the **name** or the **logo** of a prod
 
 ![product-brand](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-components-productbrand-0.png)
 
-## Before you start
+## Before you begin
 Ensure that you have registered [brands](https://help.vtex.com/en/tutorial/what-is-a-brand--QU07yhHoaWcEYseEucOQW) in your store. To do so, follow the [How to register brands](https://help.vtex.com/en/tutorial/registering-brands--tutorials_1414) documentation.
 
 ## Configuration

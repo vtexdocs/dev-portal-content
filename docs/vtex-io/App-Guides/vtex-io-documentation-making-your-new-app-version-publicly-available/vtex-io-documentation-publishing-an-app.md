@@ -12,7 +12,7 @@ After [releasing](https://developers.vtex.com/docs/guides/vtex-io-documentation-
 
 A candidate version of an app is a build distributed internally for **testing purposes only**. It's intended to check, before deployment, whether any critical problems have gone undetected earlier during development. Ideally, there shouldn't be many differences between your app's last candidate version and its final build.
 
-## Before you start
+## Before you begin
 
 Before proceeding any further, make sure the app you are about to publish has already been [released](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version).
 
@@ -56,4 +56,4 @@ vtex install {appvendor}.{appname}@{appversion}
 
 From this point onwards, you won't be able to link apps or make any code changes in your app's current version. Hence, if you need to make any modifications to your app, you will need to retreat and work on it in a development workspace.
 
-> ⚠️ If you are developing a new store theme major, follow the steps in the [Migrating CMS settings after a theme major update](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) guide before proceeding any further. Otherwise, you may lose page templates set up via the Admin.
+> ⚠️ If you are developing a new Store Theme major, follow the steps in the [Migrating CMS settings after a theme major update](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) guide before proceeding any further. Otherwise, you may lose page templates set up via the Admin.

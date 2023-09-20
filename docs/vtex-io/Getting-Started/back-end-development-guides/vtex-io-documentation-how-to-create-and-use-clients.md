@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T20:17:44.776Z"
 
 In this guide, you will learn how to create [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) and how to use them in your implementations.
 
-## Before you start
+## Before you begin
 
 - Being familiar with the [concept of Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients)
 

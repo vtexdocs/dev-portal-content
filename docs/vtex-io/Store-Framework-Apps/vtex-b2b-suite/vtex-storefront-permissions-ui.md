@@ -18,7 +18,7 @@ This app communicates with the backstage **Storefront Permissions** app and prov
 We recommend that you use it alongside the other apps in the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) for all functionalities to work as expected.
 
 
-## Before you start
+## Before you begin
 
 Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
 
