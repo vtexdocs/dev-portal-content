@@ -1,17 +1,46 @@
 ---
-title: "Making your new app version publicly available"
+title: "Deploying a new app version"
 slug: "vtex-io-documentation-making-your-new-app-version-publicly-available"
+excerpt: "Learn how to make your new app version publicly available."
 hidden: false
 createdAt: "2020-06-03T16:02:44.750Z"
 updatedAt: "2022-12-13T20:17:44.423Z"
 ---
 
-To make your new app version available to end users, follow the steps below.
+Deploying a new version of your app in VTEX IO is a crucial step in delivering improvements and updates to your target audience. This guide will walk you through the process to make your latest app version publicly available.
 
-1. [**Release** your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version): Create a release commit and a release tag.
-2. [**Publish** a candidate version](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app): Turn the app version into a candidate version by generating an internal build for **testing purposes only**.
-3. [**Validate** the candidate version in a **production workspace**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app): Check for critical issues that may have gone undetected during development.
-4. [**Deploy** the app as a stable version](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version): Update the app version on all accounts that have the app installed.
-5. [Promote your changes to **Master**](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master): Make the new app version available to end users.
+![public](https://github.com/vtexdocs/dev-portal-content/blob/main/images/making-an-app-publicly-available.png)
 
-![public](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-making-your-new-app-version-publicly-available-0.png)
+<Steps>
+
+## Release the app
+
+The Releasing stage marks the beginning of the deployment process in VTEX IO. It initiates the deployment process by releasing your app using Git as a version control system. It increments the app version in the `manifest.json` file, updates the `CHANGELOG.md file` with the changes, and creates a commit and a tag on the app repository.
+
+For more information, refer to: [Releasing a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version).
+
+## Publish a candidate version
+
+In the Publishing stage, your app version becomes a candidate version, ready for testing and validation in a production workspace.
+
+For more information, refer to: [Publishing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).
+
+## Test the candidate version in a production workspace
+
+Collaborate with your development and quality assurance teams to conduct thorough testing in a production workspace. This includes A/B testing, as well as rigorous performance and security testing to identify and address any potential issues with your app.
+
+For more information, refer to: [A/B tests](https://developers.vtex.com/docs/guides/ab-tests).
+
+## Deploy the app as a stable version
+
+Initiate the deployment process to update the app version across all accounts where the app is installed, ensuring stability and consistency.
+
+For more information, refer to: [Deploying the app's stable version](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version).
+
+## Promote your changes to `master`
+
+The Promotion stage is *optional* and the final step in the deployment process. It involves promoting the production workspace used for testing to the master workspace.
+
+For more information, refer to: [Promoting a workspace to `master`](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master).
+
+</Steps>
