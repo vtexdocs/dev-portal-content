@@ -20,37 +20,39 @@ Follow the step-by-step below to see how to apply this configuration in your sto
 
 ## Step by step
 
-1. In the admin's Catalog, access Products and SKUs.
-2. Select the desired SKU and access the Images tab.
-3. Upload the desired custom image, by clicking on **Insert**.
+1. Access the Admin and go to **Catalog > All Products**.
+2. Find the desired product, and click the down arrow button. Then, click  **SKU**.
+3. Find the desired SKU and click the corresponding **Edit** button.
+4. Click the **Images** tab.
+5. Click the **Insert** button to add a new SKU image.
 
 ![configuring-sku-selector-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-2.png)
 
-4. Upload the file in the `File` field and set an ID for the recently uploaded file in the `Label` field. Click on **Save** after performing all your changes.
-5. In your theme's code `sku-selector` block, add the `thumbnailImage` prop, whose past value should be the same as the label added in the catalog. For example:
+6. Upload the file in the `File` field and set an ID for the recently uploaded file in the `Label` field. Click on **Save** after performing all your changes.
+7. In your theme's code `sku-selector` block, add the `thumbnailImage` prop, whose past value should be the same as the label added in the catalog. For example:
 
 ```json
-"sku-selector":{  
-  "props": {  
-    "thumbnailImage": ["LabelName"]  
-  }  
+"sku-selector":{
+  "props": {
+    "thumbnailImage": ["LabelName"]
+  }
 },
 ```
 
-After completing step 5, you will be able to check a brand new image for your SKU selector.
+After completing step 7, you will be able to check a brand new image for your SKU selector.
 
 The problem is that **this image is link to the SKU** through the catalog information, and therefore will also be rendered in its original format when users select the SKU in question.
 
 The way out of this scenario is to **hide the custom image** that's linked to the SKU in the `product-images` block.
 
-6. In the `product-images` block you can use the `hiddenImages` prop to activate a sort of image blacklist. This prop's value should be the custom image's label, the same one used in the previous step. For example:
+8. In the `product-images` block you can use the `hiddenImages` prop to activate a sort of image blacklist. This prop's value should be the custom image's label, the same one used in the previous step. For example:
 
 ```json
-"product-images": {  
-  "props": {  
-    "displayThumbnailsArrows": true,  
-    "hiddenImages": ["LabelName"]  
-  }  
+"product-images": {
+  "props": {
+    "displayThumbnailsArrows": true,
+    "hiddenImages": ["LabelName"]
+  }
 },
 ```
 
@@ -68,11 +70,12 @@ Once you have configured the [custom images](###step-by-step), you should set a 
 
 Follow the next step-by-step on how to configure the SKU color variations.
 
-1. Access your store's Admin.
+1. Access the Admin.
 2. Go to **Catalog** > **Categories**.
-3. Choose the desired categorie and in `ACTIONS` click on **Field(SKU)**
-4. In **Field** click in the group's `Edit` and in the fields **Name** and **Text** complete with a color variation name which you can check the values in the [SKU Selector component](https://github.com/vtex-apps/store-components/blob/e130859a02e5c5d5e9deb9494bde9cfb6a0babc2/react/components/SKUSelector/utils/index.ts#L50-L72). For example:
+3. Choose the desired category and in `ACTIONS` click on **Field(SKU)**
+4. In **Field** click in the group's `Edit`.
+5. In the fields **Name** and **Text** complete with a color variation name which you can check the values in the [SKU Selector component](https://github.com/vtex-apps/store-components/blob/e130859a02e5c5d5e9deb9494bde9cfb6a0babc2/react/components/SKUSelector/utils/index.ts#L50-L72). For example:
 
 ![color-name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-4.png)
 
-5. Click on `Save` to make your changes available on SKU with thumbnail images.
+6. Click on `Save` to make your changes available on SKU with thumbnail images.
