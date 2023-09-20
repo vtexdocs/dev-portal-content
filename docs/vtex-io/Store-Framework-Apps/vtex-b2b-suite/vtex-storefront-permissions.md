@@ -39,7 +39,7 @@ It also allows you to configure available permissions when developing your own a
 The **Storefront Permissions** app does not contain an interface – it operates “backstage”, storing the predefined roles and serving as a bridge to communicate with other apps in order to check user permissions. If you would like to manage roles and app permissions using the VTEX Admin interface, you must also install the [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui) app. As an optional feature, you can install the [Admin Customers](https://developers.vtex.com/docs/guides/vtex-admin-customers) app for additional customer management capabilities.
 
 
-## Before you start
+## Before you begin
 
 Make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed in your machine.
 

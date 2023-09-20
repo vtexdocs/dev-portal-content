@@ -18,7 +18,7 @@ Once you have finished developing your app, you may release it as the first step
 
 Please note that releasing a new app version does not make it available to end-users or automatically update the app on accounts that have it installed. To do so, you must finish the entire process of [making your new app version public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
 
-## Before you start
+## Before you begin
 
 If you are releasing an app in the [App Store](https://apps.vtex.com/), make sure that you have covered the [VTEX guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store) before proceeding.
 

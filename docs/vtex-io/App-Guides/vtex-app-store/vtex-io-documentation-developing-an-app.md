@@ -18,7 +18,7 @@ In this guide, you will learn how to develop an app using the VTEX IO platform. 
 
 [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is a cloud-native development platform that allows you to develop web storefronts, custom admin apps, and backend integrations for VTEX.
 
-## Before you start
+## Before you begin
 
 Make sure to install the [VTEX IO CLI (Command Line Interface) in your machine](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 

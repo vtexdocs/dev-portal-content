@@ -9,7 +9,7 @@ This article will guide you through the steps you must take to make your ecommer
 
 > ℹ️ The steps below also apply if you are migrating your store from another ecommerce platform. You can also learn about how to [migrate your storefront from the Legacy CMS Portal to CMS Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io).
 
-## Before you start
+## Before you begin
 
 There are a few things you must check to make sure you are ready to go live.
 

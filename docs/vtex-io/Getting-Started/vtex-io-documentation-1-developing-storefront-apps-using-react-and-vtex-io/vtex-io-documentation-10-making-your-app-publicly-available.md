@@ -117,7 +117,7 @@ vtex workspace promote
 
 ### Submitting your app to the VTEX App Store
 
-Whether you incorporate the new component into your VTEX store theme or not, you may still want to add the app you developed to the VTEX App Store app catalog.
+Whether you incorporate the new component into your VTEX Store Theme or not, you may still want to add the app you developed to the VTEX App Store app catalog.
 
 The [VTEX App Store](https://apps.vtex.com/) is a *marketplace* for *plug&play* solutions and can be used by any interested VTEX account that wants to make available its solutions to other accounts in the ecosystem.
 

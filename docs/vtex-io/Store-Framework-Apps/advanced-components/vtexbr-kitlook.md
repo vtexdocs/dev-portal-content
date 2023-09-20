@@ -14,7 +14,7 @@ The customer can choose the items from the kit they want to buy or add the compl
 
 In the following sections, learn how to add the app to your store and configure it.
 
-## Before you start
+## Before you begin
 
 Set up the Kit with all the products that will be displayed. To do so, refer to the tutorial [Kit registration](https://help.vtex.com/tutorial/kit-registration--tutorials_215).
 

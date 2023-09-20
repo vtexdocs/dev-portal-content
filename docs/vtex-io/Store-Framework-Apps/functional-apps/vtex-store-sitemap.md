@@ -11,7 +11,7 @@ An important SEO feature for cross-border stores is having a sitemap capable of 
 
 For more information about generating a sitemap, check the following sections.
 
-## Before you start
+## Before you begin
 
 This app is available to stores using `vtex.edition-store@3.x` [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app). To check which Edition App is installed on your account, run `vtex edition get`. If it's a different Edition, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to VTEX Support asking for the installation of the `vtex.edition-store@3.x` Edition App.
 

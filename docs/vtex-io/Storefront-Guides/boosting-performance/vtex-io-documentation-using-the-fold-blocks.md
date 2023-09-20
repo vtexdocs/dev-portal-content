@@ -13,7 +13,7 @@ The `__fold__.experimentalLazyAssets`, an optional block, defines which componen
 
 **They impact the initial loading performance** of the page on which they are configured, improving your storefront UX.
 
-## Before you start
+## Before you begin
 
 - **Optimizing performance**
 

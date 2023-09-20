@@ -6,11 +6,11 @@ createdAt: "2020-09-22T20:44:01.218Z"
 updatedAt: "2022-12-13T20:17:44.742Z"
 ---
 
-You may need to perform a major update of your store theme app due to changes in its peer dependencies. However, transitioning to a new major version of the store theme could potentially result in undesired consequences, such as losing the configured Admin page template settings.
+You may need to perform a major update of your Store Theme app due to changes in its peer dependencies. However, transitioning to a new major version of the Store Theme could potentially result in undesired consequences, such as losing the configured Admin page template settings.
 
 To handle this situation and ensure a smooth migration, follow the steps below to migrate template settings.
 
-## Before you start
+## Before you begin
 
 1. Install [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 2. Install GraphQL IDE by running the following command: `vtex install vtex.admin-graphql-ide@3.x`.
@@ -18,7 +18,7 @@ To handle this situation and ensure a smooth migration, follow the steps below t
 ## Instructions
 
 1. Open the terminal and log in to your account.
-2. Change to the **production workspace** containing your latest changes and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your store theme app.
+2. Change to the **production workspace** containing your latest changes and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your Store Theme app.
 3. Create a new production workspace by running the following command:
 
  >ℹ️ Replace the values in curly brackets with the values that apply to your scenario.
@@ -27,7 +27,7 @@ To handle this situation and ensure a smooth migration, follow the steps below t
   vtex use {workspaceName} --production
   ```
 
-4. Install the store theme app published in the previous steps:
+4. Install the Store Theme app published in the previous steps:
 
    ```sh
    vtex install {appVendor}.{appName}@{appVersion}

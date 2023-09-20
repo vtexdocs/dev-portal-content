@@ -98,7 +98,7 @@ vtex init
 
 ![Init command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-5.png)
 
-For example, choose the `store` option to start developing a store theme app. This will clone the [Store Theme](https://github.com/vtex-apps/store) boilerplate app to your local files.
+For example, choose the `store` option to start developing a Store Theme app. This will clone the [Store Theme](https://github.com/vtex-apps/store) boilerplate app to your local files.
 
 ## Developing locally
 

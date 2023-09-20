@@ -6,7 +6,7 @@ createdAt: "2020-06-03T16:02:44.305Z"
 updatedAt: "2022-12-13T20:17:44.494Z"
 ---
 
-The VTEX Assets Builder is responsible for  **handling assets**  within store theme  `blocks` and CSS classes by getting all asset paths used and uploading them in the  **File Manager**  service.
+The VTEX Assets Builder is responsible for  **handling assets**  within Store Theme  `blocks` and CSS classes by getting all asset paths used and uploading them in the  **File Manager**  service.
 
 As its name implies, the File Manager manages all of your store files and their respective URLs. It is able to translate the asset paths and then export the asset immutable URLs so that all block assets can be properly rendered.
 

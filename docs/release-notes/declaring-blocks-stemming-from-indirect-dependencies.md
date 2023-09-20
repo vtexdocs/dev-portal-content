@@ -4,7 +4,7 @@ excerpt: "A few releases require more urgency and demand more focus from our use
 createdAt: "2019-12-12T18:27:49.833Z"
 ---
 
-The Store Builder now requires **all blocks** that are used in the construction of a store theme to be defined by the **direct dependencies** of the app in which you are working, without exception. 
+The Store Builder now requires **all blocks** that are used in the construction of a Store Theme to be defined by the **direct dependencies** of the app in which you are working, without exception. 
 
 ## What has changed
 

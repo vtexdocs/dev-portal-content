@@ -18,7 +18,7 @@ The Styles Builder’s major 2. x is already available, and It offers better sto
 
 ## What needs to be done?
 
-To successfully migrate from Styles Builder 1.x to Styles Builder 2.x, you must update the version of the `styles` builder in the `manifest.json` file of your store theme app, as the example below:
+To successfully migrate from Styles Builder 1.x to Styles Builder 2.x, you must update the version of the `styles` builder in the `manifest.json` file of your Store Theme app, as the example below:
 
 ```
 builders{

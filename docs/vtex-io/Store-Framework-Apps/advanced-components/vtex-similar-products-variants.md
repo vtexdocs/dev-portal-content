@@ -10,7 +10,7 @@ The Similar Products Variants app returns similar products related to an SKU so 
 
 ![similar-in-action](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-similar-products-variants-0.png)
 
-## Before you start
+## Before you begin
 
 1. Set up similar products in your store’s **Products and SKU.** Access your store’s Admin and go to **Products > Catalog > Products and SKU**.
 2. In **Products and SKU**, in the column **SKU**, click on the desired SKU.

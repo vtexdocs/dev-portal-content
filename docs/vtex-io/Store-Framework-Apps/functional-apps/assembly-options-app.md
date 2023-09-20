@@ -11,7 +11,7 @@ At VTEX, [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--
 
 The **Assembly Options** app provides an interface on VTEX Admin to create and manage product customization options available to customers in a specific store.  This experience aims to offer a simple and easy-to-use alternative to the [manual configuration](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH#attachments) available through **Catalog > Attachments** using a certain attachment syntax.
 
-## Before you start
+## Before you begin
 
 To use Assembly Options, you must first install and configure [Product Customizer](https://developers.vtex.com/docs/guides/vtex-product-customizer) in your store.
 

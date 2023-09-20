@@ -12,7 +12,7 @@ Here's a sneak peek at key changes made in the last week:
 
 ### New features :rocket:
 
-- [Store Theme blocks structure](store-theme-blocks-structure.md) - Gain more flexibility when organizing your store theme blocks as wanted.
+- [Store Theme blocks structure](store-theme-blocks-structure.md) - Gain more flexibility when organizing your Store Theme blocks as wanted.
 - [Price internationalization](price-internationalization.md) – Overcome internationalization hurdles by changing the behavior of the currency in which prices are being displayed in your store.
 - [Server Timing](server-timing.md) – Monitor the performance of each sent request with the Server timing feature.
 

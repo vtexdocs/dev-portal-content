@@ -7,13 +7,13 @@ updatedAt: "2022-12-13T20:17:44.827Z"
 ---
 In addition to being crucial for communicating with users, a store’s typography should be a reflection of its identity, using its characteristic styles, such as font size and spacing.
 
-Whether using the admin’s CMS or your store theme CSS files, Store Framework gives you the flexibility to customize your store’s typography according to your business needs.
+Whether using the admin’s CMS or your Store Theme CSS files, Store Framework gives you the flexibility to customize your store’s typography according to your business needs.
 
 > ⚠️ If you want to perform your store's typography customization in **the Admin's CMS**, refer to [Customizing your store’s typography documentation in the Help Center](https://help.vtex.com/tutorial/personalizando-a-tipografia-da-sua-loja--2R0ByIjvJtuz99RK3OL5WP).
 
-## Before you start
+## Before you begin
 
-Bear in mind that for the customization to work, the **Styles builder of your store must be 2. x.** To successfully migrate to Styles Builder 2.x, you must update the version of the `styles` builder in the `manifest.json` file of your store theme app, as the example below:
+Bear in mind that for the customization to work, the **Styles builder of your store must be 2. x.** To successfully migrate to Styles Builder 2.x, you must update the version of the `styles` builder in the `manifest.json` file of your Store Theme app, as the example below:
 
 ```json
 builders{
@@ -26,9 +26,9 @@ In the following, check the [best practices of CSS handles](https://developers.v
 
 ## Step by step
 
-### Using store theme CSS files
+### Using Store Theme CSS files
 
-1. Open your store theme directory using a code editor of your preference.
+1. Open your Store Theme directory using a code editor of your preference.
 2. Create a new folder inside the `assets` directory called `fonts`. Make sure your app have the [assets builder in its manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder/).
 3. Add the font files inside this folder (`assets/fonts/`).
 

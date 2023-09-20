@@ -12,7 +12,7 @@ The **Product Highlight by VTEX Segment** app allows shoppers to select a Whitel
 
 ---
 
-## Before you start
+## Before you begin
 
 Before configuring the **Product Highlight by VTEX Segment** app, make sure to create a collection for each Whitelabel Seller of your store (*See [Creating Collections Beta](https://help.vtex.com/en/tutorial/creating-collections-beta) for more information).* When naming your collection, make sure to use the following naming structure: `{sellerId}-{defaultCollectionName}`, where the `{sellerId}` is the `sellerId` of the Whitelabel Seller and `{defaultCollectionName}` is the name of the Collection.
 

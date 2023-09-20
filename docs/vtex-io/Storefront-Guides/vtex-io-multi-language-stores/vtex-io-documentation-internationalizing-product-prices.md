@@ -9,7 +9,7 @@ excerpt: "Ensure seamless global shopping experiences by adopting ISO currency c
 
 As you expand your business globally, it becomes essential to properly internationalize your website's content to cater to users from different locales. One crucial aspect of internationalization is to ensure that users can easily understand product prices and make purchases without confusion caused by misleading currency conversions. To accomplish this, we will adopt the following approach: for international users, we will display prices according to the ISO standard of the currency code (e.g., `USD`), while for local users, we will use the country-specific commonly used currency symbol (e.g., `$`). This flexibility in displaying product prices will help create a user-friendly shopping experience for both local and international users.
 
-## Before you start
+## Before you begin
 
 Before you start the internationalization process, it's essential to understand [trade policies](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV). Trade policies contain configurations for catalog, pricing, promotions, logistics, customer segmentation, and payments for different sales strategies. If your store operates in multiple sales channels with varying settings, you need to [create a new trade policy](https://help.vtex.com/tutorial/creating-a-trade-policy--563tbcL0TYKEKeOY4IAgAE) for each unique setup. Thus, before proceeding with this guide, ensure you have set up different trade policies that align with your store's operational requirements.
 

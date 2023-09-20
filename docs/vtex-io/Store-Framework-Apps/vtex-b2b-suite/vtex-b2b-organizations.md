@@ -14,7 +14,7 @@ B2B commerce relations are usually complex and often require a customized servic
 
 The **B2B Organizations** app enables you to group B2B users into organizations. You can assign specific payment methods, price tables, and product collections to each organization, allowing all organization users to share the same commercial conditions. Additionally, each organization can be further segmented into one or more cost centers, each with its own shipping addresses.
 
-## Before you start
+## Before you begin
 
 First, make sure you have the [VTEX IO CLI (Command Line Interface)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed in your computer.
 

@@ -57,7 +57,7 @@ A **route** maps a URL pattern and an HTTP request method to an action. It's, th
 
 ## [Slots](/docs/guides/vtex-io-documentation-slots)
 
-**Slots** composition is a new way to declare a React component in your store theme code.
+**Slots** composition is a new way to declare a React component in your Store Theme code.
 
 ## [Sponsor Account](/docs/guides/vtex-io-documentation-sponsor-account)
 

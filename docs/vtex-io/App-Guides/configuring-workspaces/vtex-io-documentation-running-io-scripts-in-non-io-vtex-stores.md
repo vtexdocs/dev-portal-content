@@ -15,7 +15,7 @@ Notice that nothing keeps an account from having multiple _Scripts apps_ install
 
 In the following sections, we'll teach you how to develop and implement your own _Scripts app_.
 
-## Before you start
+## Before you begin
 
 Before proceeding with the steps outlined in this document, ensure that you have the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed on your machine.
 

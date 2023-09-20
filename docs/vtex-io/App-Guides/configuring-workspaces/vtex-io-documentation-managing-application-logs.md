@@ -13,7 +13,7 @@ In the following section, you'll learn how to implement the VTEX IO Logging Serv
 
 ---
 
-## Before you start
+## Before you begin
 
 To complete this guide, you must have the VTEX IO CLI installed in your machine. For more information, please refer to [this document](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 

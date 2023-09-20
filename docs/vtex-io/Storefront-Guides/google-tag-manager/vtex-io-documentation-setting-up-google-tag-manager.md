@@ -24,7 +24,7 @@ In this guide, you will learn how to track and analyze data from your store usin
 
 - Use the available events that Pixel Apps can listen to and new events that GA4 has introduced to start tracking various user actions such as product impressions, add to cart, order placed, and more.
 
-## Before you start
+## Before you begin
 
 Before proceeding any further, make sure you have the following requisites:
 

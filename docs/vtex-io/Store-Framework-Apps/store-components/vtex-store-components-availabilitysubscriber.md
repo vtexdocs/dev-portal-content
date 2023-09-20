@@ -13,7 +13,7 @@ This component only collects the emails of the customers that subscribed to rece
 
 > ℹ️ Alternatively, check the [Availability Notify component](https://developers.vtex.com/docs/guides/vtex-availability-notify), which renders a subscription form when a product is unavailable and also emails the shopper when the requested product is back in stock.
 
-## Before you start
+## Before you begin
 
 Before configuring the Availability Subscriber component in your theme, make sure you've already configured a **JSON schema in Master Data** to collect the emails correctly. Otherwise, the subscriber form won't be properly saved with the shoppers' emails. Please refer to the [Creating a product availability form](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-product-availability-form) guide for more information.
 

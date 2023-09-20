@@ -6,7 +6,7 @@ createdAt: "2020-06-03T16:02:44.292Z"
 updatedAt: "2022-12-13T20:17:44.236Z"
 ---
 
-A CSS Handle is a **CSS class that maps out an HTML element**. Therefore, it can be used to [customize any of the store blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) by simply using CSS classes in the store theme's code.
+A CSS Handle is a **CSS class that maps out an HTML element**. Therefore, it can be used to [customize any of the store blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) by simply using CSS classes in the Store Theme's code.
 
 At the end of the day, they are nothing more than the store's layout building assistants. The more HTML elements with CSS Handles you have at your disposal, the better!
 

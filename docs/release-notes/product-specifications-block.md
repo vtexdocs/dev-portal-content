@@ -10,4 +10,4 @@ type: "deprecated"
 
 The [Product Specification block](https://github.com/vtex-apps/store-components/blob/master/docs/ProductSpecifications.md), pertaining to the [Store Components app](https://developers.vtex.com/docs/apps/vtex.store-components/) was deprecated.
 
-Although support for this block is still provided, it is strongly recommended to update your store theme with the [**Product Specifications app**](https://developers.vtex.com/docs/apps/vtex.product-specifications@1.0.1/) in order to benefit from greater flexibility and keep up with the component evolution.
+Although support for this block is still provided, it is strongly recommended to update your Store Theme with the [**Product Specifications app**](https://developers.vtex.com/docs/apps/vtex.product-specifications@1.0.1/) in order to benefit from greater flexibility and keep up with the component evolution.

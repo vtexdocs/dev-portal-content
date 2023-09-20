@@ -16,7 +16,7 @@ flowchart LR;
 
 ```
 
-## Before you start
+## Before you begin
 
 1. **Install the VTEX IO Command-line Interface (CLI):** This command-line interface allows you to log in to your VTEX account, manage workspaces, and develop new apps. To install it, refere to the [Installing VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) guide.
 

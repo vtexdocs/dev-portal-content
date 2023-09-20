@@ -6,7 +6,7 @@ createdAt: "2020-06-03T16:02:44.306Z"
 updatedAt: "2022-12-13T20:17:44.629Z"
 ---
 
-While building your brand's visual identity, you'll often use images in your store theme. Images, however, can significantly impact a website's performance. In this sense, Store Framework provides different image blocks for different use cases. Each block defines how images will be cropped, rendered, and displayed to end-users. Hence, to implement the right solution for your use case, please consider the practices presented in the following.
+While building your brand's visual identity, you'll often use images in your Store Theme. Images, however, can significantly impact a website's performance. In this sense, Store Framework provides different image blocks for different use cases. Each block defines how images will be cropped, rendered, and displayed to end-users. Hence, to implement the right solution for your use case, please consider the practices presented in the following.
 
 ***
 

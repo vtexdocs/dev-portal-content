@@ -37,11 +37,11 @@ Notice that, for providing a fast response, caching is enabled by default. Howev
 
 1. Log in to your store's VTEX account.
 2. Run `vtex ls` to list the apps installed on your account.
-3. Check if the major of the `store theme` app installed is different from the one you are developing.
+3. Check if the major of the `Store Theme` app installed is different from the one you are developing.
 
-> ℹ️ To see your changes in action, the version of the theme project you're working must be in the same major as the one from the `store theme` app installed on your account.
+> ℹ️ To see your changes in action, the version of the theme project you're working must be in the same major as the one from the `Store Theme` app installed on your account.
 
-4. Check if there is another `store theme` app installed on your VTEX account. If positive, uninstall it.
+4. Check if there is another `Store Theme` app installed on your VTEX account. If positive, uninstall it.
 
 </details>
 

@@ -12,7 +12,7 @@ This guide shows the steps to change the appearance of the Authentication tab in
   "body": "This guide is for stores that use VTEX IO, making the customization through IO apps. If your store is not a VTEX IO store, check the [My Authentication Customization Guide using CMS](https://developers.vtex.com/vtex-rest-api/docs/ui-customization-my-authentication) article."
 }
 [/block]
-General instructions for customization of IO apps using CSS handles can be found in the article [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization). Below are specific instructions to customize the My Authentication components in the store theme.
+General instructions for customization of IO apps using CSS handles can be found in the article [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization). Below are specific instructions to customize the My Authentication components in the Store Theme.
 
 1. Open the code of the theme app of your store. As an example, the boilerplate code of the VTEX store-theme app can be found [here](https://github.com/vtex-apps/store-theme).
 2. Navigate to the `styles\css` folder.
