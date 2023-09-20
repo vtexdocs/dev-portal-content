@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.423Z"
 
 Deploying a new version of your app in VTEX IO is a crucial step in delivering improvements and updates to your target audience. This guide will walk you through the process to make your latest app version publicly available.
 
-![public](https://github.com/vtexdocs/dev-portal-content/blob/main/images/making-an-app-publicly-available.png)
+![public](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/making-an-app-publicly-available.png)
 
 <Steps>
 
