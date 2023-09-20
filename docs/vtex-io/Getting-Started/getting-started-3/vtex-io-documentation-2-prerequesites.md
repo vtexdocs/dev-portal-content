@@ -55,11 +55,11 @@ Intelligent Search is an advanced search engine designed to assist shoppers thro
 
 #### Starting the Search Integration process
 
-After successfully installing the Intelligent Search apps, follow these steps to index and integrate Intelligent Search with your store's catalog:
+After successfully installing the Intelligent Search apps, follow these steps to [index and integrate](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) Intelligent Search with your store's catalog:
 
 1. Access the Admin.
-2. Go to **Store Settings > Intelligent Search > [Integrations](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V)**.
-3. Click the *Start integration* button to initiate the integration process.
+2. Go to **Store Settings > Intelligent Search > Integrations**.
+3. Click the `Start integration` button to initiate the integration process.
 
 ![start-integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-2-prerequesites-0.png)
 
