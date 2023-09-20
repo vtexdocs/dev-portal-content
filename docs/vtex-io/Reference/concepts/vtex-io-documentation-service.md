@@ -14,7 +14,7 @@ To create and export services, you need to specify the `node` or `dotnet` [build
 
 > ℹ️ For a practical example, refer to our service example apps: [Node.js](https://github.com/vtex-apps/service-example), [.NET](https://github.com/vtex-apps/service-example-dotnet), and [GraphQL](https://github.com/vtex-apps/graphql-example).
 
-Check our [service app development guides](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps).
+For more information, check the [Developing services on VTEX IO](https://learn.vtex.com/docs/course-service-course-lang-en) course in the VTEX Learning Center.
 
 ## Configuring services
 
