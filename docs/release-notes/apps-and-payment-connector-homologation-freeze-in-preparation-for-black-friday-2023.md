@@ -15,6 +15,8 @@ A [homologation](https://developers.vtex.com/vtex-rest-api/docs/payments-integra
 
 We will have a deadline for receiving requests for approval and publication of apps in the App Store and payment connectors in our gateway. Therefore, tickets opened after the deadline will be queued for publishing and updating but will not be updated before Black Friday, November 24, 2023. After Cyber Monday week, our team will resume its regular schedule with periodic request updates.
 
+>⚠️ The homologation freeze period is also valid for tickets requesting updates to connectors or connectors templates at checkout.
+
 ## Homologation security schedule
 
 The homologation freeze dates are:
