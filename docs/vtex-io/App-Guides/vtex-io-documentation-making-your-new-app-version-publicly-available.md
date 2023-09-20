@@ -37,7 +37,7 @@ Initiate the deployment process to update the app version across all accounts wh
 
 For more information, refer to: [Deploying the app's stable version](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version).
 
-## Promote your changes to `master`
+## (Optional) Promote your changes to `master`
 
 The Promotion stage is *optional* and the final step in the deployment process. It involves promoting the production workspace used for testing to the master workspace.
 
