@@ -9,7 +9,7 @@ excerpt: "A homologation freeze is a behavior adopted by VTEX in the period befo
 ---
 ![Payments](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payment-connector-homologation-freeze-in-preparation-for-black-friday-0.png)
 
-A [homologation](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-homologation) freeze is a behavior adopted by VTEX in the period before Black Friday to ensure that our platform no longer performs updates, entering a security mode, which allows greater resilience, reliability, and stability for our customers' businesses.
+A homologation freeze is a behavior adopted by VTEX in the period before Black Friday to ensure that our platform no longer performs updates, entering a security mode, which allows greater resilience, reliability, and stability for our customers' businesses.
 
 ## How is the freeze done?
 
@@ -31,4 +31,4 @@ The commitment to homologate apps and payment connectors is only valid for offic
 
 If the homologation sent within the deadline needs to be changed or fixed by the partner, this adjustment must also be made respecting the limit of our freeze schedule presented above regarding **the homologation deadline** on November 10, 2023.
 
-For more information about the homologation of apps and payment connectors, visit [Submit your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store) and [Payment Provider Homologation](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-homologation) for more information on how to homologate your connector.
+For more information about the homologation of apps and payment connectors, visit [Submit your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store) and [Payment Provider Homologation](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-homologation).
