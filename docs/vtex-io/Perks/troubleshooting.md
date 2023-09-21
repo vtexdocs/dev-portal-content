@@ -1,12 +1,161 @@
 ---
 title: "Troubleshooting"
 slug: "troubleshooting"
+excerpt: "Troubleshoot common issues in development and production environments with this guide."
 hidden: false
 createdAt: "2020-12-17T18:31:03.581Z"
 updatedAt: "2022-02-16T15:20:43.154Z"
 ---
-[block:html]
-{
-  "html": "<style>\n  .title {\n    font-size: 30px;\n    text-align: left;\n    font-weight: 600\n  }\n\t.description{\n    text-align:left;\n    font-size: 18px;\n    line-height: 1.2;\n  }\n  .header {\n    padding-top: 3rem;\n    padding-bottom: 2rem;\n    height: 23rem;\n    background-image: url(https://user-images.githubusercontent.com/60782333/102536561-8a014100-4088-11eb-8f5b-bc51b6e3bb67.png);\n    background-size: 61%;\n    background-position: right bottom;\n    background-repeat: no-repeat\n  }\n\n  .flexcontainer {\n    display: flex;\n    flex-wrap: wrap;\n    padding-top: 1rem;\n    padding-bottom: 2rem;\n    justify-content: space-around\n  }\n\n  .flexcontainer-card {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: flex-start;\n    width: 22rem;\n    margin: .5rem;\n    line-height: 1.8\n  }\n\n  .accordion>input[type=checkbox] {\n    position: absolute;\n    left: -100vw\n  }\n\n  .accordion .content {\n    overflow-y: hidden;\n    height: 0;\n    transition: height .3s ease\n  }\n\n  .accordion>input[type=checkbox]:checked~.content {\n    height: auto;\n    overflow: visible\n  }\n\n  .accordion label {\n    display: block;\n    padding: 1.5rem\n  }\n\n  .accordion {\n    margin-bottom: 1em;\n    width: 400px\n  }\n\n  .accordion>input[type=checkbox]:checked~.content {\n    padding: 1.5rem;\n    border: 1px solid #fff;\n    border-top: 0\n  }\n\n  .accordion .handle {\n    margin: 0;\n    font-size: 1.125em;\n    line-height: 1.2em\n  }\n\n  .accordion label {\n    color: #142032;\n    cursor: pointer;\n    font-weight: 800;\n    font-size: 18px\n  }\n\n  .accordion .handle label:before {\n    font-family: fontawesome;\n    content: \"\\f054\";\n    display: inline-block;\n    margin-right: 10px;\n    font-size: 18px;\n    line-height: 1.556em;\n    vertical-align: baseline;\n    float: right;\n    padding-right: 1.5rem\n  }\n\n  .accordion>input[type=checkbox]:checked~.handle label:before {\n    content: \"\\f078\"\n  }\n</style>\n\n<div class=\"header\">\n  <div style=\"width: 22rem\">\n    <p class=\"title\">What are you having trouble with?</p>\n    <p class=\"description\">Choose a category to start solving your problem: are you working on a development or production stage?</p>\n  </div>\n</div>\n\n<hr />\n<div class=\"flexcontainer\">\n  <div class=\"flexcontainer-card\">\n    <section class=\"accordion\">\n      <input type=\"checkbox\" name=\"collapse2\" id=\"handle2\">\n      <h2 class=\"handle\">\n        <label for=\"handle2\">When developing stores\n        </label>\n        <p style=\"padding-left: 1.5rem;\">Problems to solve on daily work.</p>\n      </h2>\n      <hr width=\"90%\">\n      <div class=\"content\">       \n        <br><a href=\"https://developers.vtex.com/docs/guides/development#i-cant-install-an-app\">I can't install an app</a>        \n        <br><a href=\"https://developers.vtex.com/docs/guides/development#i-cant-create-a-new-workspace\">I can't create a new workspace</a>\n        <br><a href=\"https://developers.vtex.com/docs/guides/development#i-dont-see-my-changes\">I don't see my changes</a>\n      </div>\n    </section>\n  </div>\n  <div class=\"flexcontainer-card\">\n    <section class=\"accordion\">\n      <input type=\"checkbox\" name=\"collapse4\" id=\"handle4\">\n      <h2 class=\"handle\">\n        <label for=\"handle4\">When the store is on production</label>\n        <p style=\"padding-left: 1.5rem;\">Take educated fast decisions.</p>\n      </h2>\n      <hr width=\"90%\">\n      <div class=\"content\">\n          <br><a href=\"https://developers.vtex.com/docs/guides/production#my-store-translation-is-not-behaving-as-expected\">My store translation is not behaving as expected</a>\n          <br><a href=\"https://developers.vtex.com/docs/guides/production#my-routes-are-not-behaving-as-expected\">My routes are not behaving as expected</a>\n        <br><a href=\"https://developers.vtex.com/docs/guides/production#my-routes-are-not-behaving-as-expected\">My store is presenting inconsistencies</a>\n      </div>\n    </section>\n  </div>\n</div>\n\n<p class=\"title\">Still having trouble?</span></p>\n<p class=\"description\">Don’t hesitate to get in touch! Find us on:</p>\n\n<div class=\"flexcontainer\">\n  <div class=\"flexcontainer-card\">\n    <h2><img style=\"float:left; width: 25%; padding-right: 5%;\"\n        src=\"https://user-images.githubusercontent.com/60782333/97609050-e4b7de00-19f1-11eb-99a7-a4cef5452ebd.png\" />\n      Support</h2>\n    <h3><a style=\"text-decoration: none;\" href=\"https://help.vtex.com/support\">Contact us</a></h3>\n    <p>Open a ticket to the VTEX support team if you have something specific to ask about the platform.</p>\n  </div>\n  <div class=\"flexcontainer-card\">\n    <h2><img style=\"float:left; width: 15%;padding-right: 5%;\"\n        src=\"https://user-images.githubusercontent.com/60782333/102545975-be2f2e80-4095-11eb-93f2-43324e075c59.png\" />\n      Office Hours</h2>\n    <h3><a style=\"text-decoration: none;\"\n        href=\"https://www.youtube.com/channel/UCReNhDqLOVL4edqENJ4k7Fg\">Save\n        the date</a></h3>\n    <p>Work with the VTEX IO team and partners in our Office Hours meeting.</p>\n  </div>\n  <div class=\"flexcontainer-card\">\n    <h2><img style=\"float:left; width: 15%;padding-right: 5%;\"\n        src=\"https://user-images.githubusercontent.com/60782333/102543782-8ffc1f80-4092-11eb-96a3-272414baa570.png\" />\n      Community</h2>\n    <h3><a style=\"text-decoration: none;\" href=\"https://community.vtex.com/c/store-development/store-framework\">Join the discussion</a>\n    </h3>\n    <p>Share your questions with the VTEX IO team in our community.</p>\n  </div>\n  <div class=\"flexcontainer-card\">\n    <h2><img style=\"float:left; width: 15%;padding-right: 5%;\"\n        src=\"https://user-images.githubusercontent.com/60782333/102543545-398ee100-4092-11eb-9e21-0d6e4a9e05ac.png\" />\n      Latest Releases</h2>\n    <h3><a style=\"text-decoration: none;\" href=\"https://vtex.io/docs/releases/\">Get up to date</a></h3>\n    <p> Find out and obtain knowledge on the most recent VTEX IO releases.</p>\n  </div>\n</div>\n\n<blockquote>\n  💡 Help us improve! Propose new troubleshooting docs <a href=\"\">on the source.</a>\n</blockquote>"
-}
-[/block]
+
+## Development
+
+### I don't see my changes
+
+Once you [link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app), you should see all your changes live at `https://{workspace}--{accountName}.myvtex.com`. If your theme changes are not reflecting on your store workspace, check the following workarounds to fix your scenario.
+
+<details>
+<summary>My workspace does not reflect changes in Typescript types</summary>
+
+The `vtex link` command does not automatically detect changes in Typescript types. To address this issue, follow these steps:
+
+1. Stop the link process with `vtex unlink`.
+2. Update the Typescript types.
+3. Run `vtex link` to link the app again.
+
+</details>
+
+<details>
+<summary>My endpoint is returning outdated values</summary>
+
+If your endpoint is returning outdated values, consider disabling caching temporarily by setting the `no-cache` option on your endpoint's response, as in the following example:
+
+```ts
+ctx.set('Cache-Control', 'no-cache')
+```
+
+Please note that caching is enabled by default to enhance performance. Only use this option during development if a real-time response is necessary. Ensure not to disable caching for production stores.
+
+</details>
+
+<details>
+<summary>My theme changes are not reflecting on my store</summary>
+
+To see your changes in action, the version of the Store Theme you are working must be in the same major as the one from the Store Theme app installed on your account.
+
+1. Log in to your VTEX account.
+2. List the apps installed on your account by running `vtex ls`.
+3. Check if the major of the Store Theme app installed is different from the one you are developing.
+4. Check if there is another `Store Theme` app installed on your VTEX account. If positive, uninstall it.
+
+</details>
+
+### I can't install an app
+
+<details>
+<summary>I can't install an app with a major other than `0.x`</summary>
+
+![major](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/development-0.png)
+
+Run `vtex ls` to check which apps are included on the [Edition App](https://vtex.io/docs/concepts/edition-app/) installed on your account. If you see the app you are trying to install with another major, you might have an issue with the Edition App installed on your account.
+
+In this case, consider [opening a support ticket](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) to request a change to the Edition App installed on your account. First, go to the [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) article to learn more about the available Edition Apps.
+
+</details>
+
+### I can't create a new workspace
+
+<details>
+<summary>Render fail when sender is `vtex.menu`, Request failed with status code 400</summary>
+
+###### Checking if the Search Integration process started
+
+1. Access the Admin and go to **Store Settings > Intelligent Search > Integrations**.
+2. Check if the search has been activated in the store.
+3. Click the `Start integration` button to start integration.
+
+The indexing process will start and you will see a link to the Indexing Status screen.
+
+> ℹ️ The [Integration settings](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) is responsible for the Catalog's initial indexing with VTEX Intelligent Search. After installing the application, this will be the first step to integrating it with the Catalog.
+
+![start-integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/development-1.png)
+
+</details>
+
+## Production
+
+### My store translation is not behaving as expected
+
+<details>
+<summary>My store is being translated when it shouldn't</summary>
+
+- **Checking the default locale**
+
+Access the API `http://portal.vtexcommercestable.com.br/api/tenant/tenants?q={accountName}` and check the `defaultLocale` file.
+
+  >⚠️ Replace the `{accountName}` with your VTEX account name.
+
+If the `defaultLocale` value doesn't match your store locale, [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to report the issue.
+
+</details>
+
+### My routes are not behaving as expected
+
+<details>
+<summary>My redirect path doesn't work</summary>
+
+- **Checking if the redirect is saved in the Rewriter**
+
+    1. Install the GraphiQL IDE in your account by running `vtex install vtex.admin-graphql-ide@3.x`.
+    2. Access the Admin and go to **Store Settings > Storefront > GraphiQL IDE**.
+    3. Select the `vtex.rewriter@1.x` app from the dropdown list.
+    4. Run the following query, replacing `{URL}` with the `from` path you are having trouble with:
+
+    ```gql
+    {
+      redirect {
+        get(path: "/{URL}") {
+            from
+            to
+        }
+      }
+    }
+    ```
+
+    The expected answer is a JSON object containing all the redirects related to that path. Take the following example:
+
+    ```json
+    {
+      "data": {
+        "redirect": {
+          "get": {
+            "from": "/about-us",
+            "to": "/my-store"
+          }
+        }
+      }
+    }
+    ```
+
+- **If the query doesn't return the redirect path**
+
+    Access the Admin, go to **Storefront > Pages > Redirects**, and save the desired URL redirects. For more information, refer to the [Managing URL redirects](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects) guide.
+
+- **If the query returns the redirect path**
+
+    Check if your Store Theme or another app has defined a route with the same path you are attempting to save as a redirect. If the route already exists, the redirect will be ignored.
+
+</details>
+
+### My store is presenting inconsistencies
+
+<details>
+<summary>Product price is different on Search Results and Product Detail pages</summary>
+
+The Search Results and Product Details pages have different indexing processes. This can lead to differences in the price.
+
+1. [Reindex](https://developers.vtex.com/docs/guides/vtex-io-documentation-understanding-how-store-url-indexing-works) the products presenting inconsistencies.
+2. Check the value set for the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app's `simulationBehavior` prop. If set to `skip`, change it to `default`.
+
+> ℹ️ When the `simulationBehavior` is set to `skip`, the Search Results page displays the cold price based on the user cache. In order to fetch and display the latest price registered in the catalog, change it to `default`.
+
+</details>
