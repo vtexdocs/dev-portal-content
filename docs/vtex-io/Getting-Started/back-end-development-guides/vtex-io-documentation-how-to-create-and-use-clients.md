@@ -1,130 +1,235 @@
 ---
-title: "Managing Clients"
+title: "Developing Clients"
 slug: "vtex-io-documentation-how-to-create-and-use-clients"
+excerpt: "Learn how to develop custom clients for seamless communication with other services."
 hidden: false
 createdAt: "2022-02-16T13:52:17.247Z"
 updatedAt: "2022-12-13T20:17:44.776Z"
 ---
 
-In this guide, you will learn how to create [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) and how to use them in your implementations.
+If you need to integrate your VTEX IO app with external services that aren't covered by [VTEX IO's native Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients), creating custom clients can be a powerful solution. Custom clients extend the functionality of VTEX IO Client types, offering benefits like caching and versioning. This guide will walk you through the process of creating custom clients for your VTEX IO apps.
+
+> ⚠️ Note that direct communication with APIs is generally discouraged in favor of implementing a dedicated Client.
+
+As you develop your custom Client, you will define methods within it. These Client methods are functions responsible for handling the logic needed to execute specific actions. They facilitate interactions with services and APIs, managing requests and responses effectively.
+
+Once you've created your custom Client, you can seamlessly integrate it into your VTEX IO app to execute the implemented methods. While you have the flexibility to incorporate data-handling logic within your Client's methods (e.g., field mapping or data filtering), it's essential to keep the core responsibilities of the Client well-organized.
 
 ## Before you begin
 
-- Being familiar with the [concept of Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients)
+Before diving into Client development, make sure you have the following prerequisites in place:
 
-So, what to do with *clients*? You **create them**, extending some base code. IO Node Services already ship with some **default clients**, mostly to our internal services, that you may use right away. Check them [here](https://github.com/vtex/node-vtex-api/blob/ccf4d8f8d3208007c4bfd558baf979df8d825af8/src/clients/IOClients.ts).
+- **VTEX IO development workspace:** Ensure you have a VTEX IO development workspace set up. For more information, refer to [Creating a Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
+- **TypeScript Familiarity:** This guide assumes you have a basic understanding of TypeScript, as we'll be using the `node` [Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) to develop with TypeScript. For more information, refer to [Typescript's official documentation](https://www.typescriptlang.org/docs/).
+- **Understanding of Clients:** Clients play a crucial role in facilitating interactions between your application and both external and internal services. For more information, refer to [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
 
-Before talking about *how we create clients*, let's *recap* how we use them. If you are familiar with IO services, you already know that your implementation **exports functions** that receive a ***context*** object. These functions can be a **resolver function to a GraphQL field**, a **middleware to an HTTP server** or an **event handler**, and, in all of them, you receive a `ctx`*(or however you wanna call it)*  object of type [`Context`](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts), and it is inside of `ctx.clients` where you'll find each client.
+## Step by step
 
-```typescript
-export const authorize = async (ctx: Context) {
- const { clients: { licenseManager } } = ctx
- ...
- const data = await licenseManager.canAccessResource(/*...*/)
-}
-```
+In this guide, we will create an example custom Client for communicating with GitHub APIs. We'll implement the following methods within our Client:
 
-## Creating clients
+- `getRepo`: Fetches a GitHub repository given the owner and repository name.
+- `getUser`: Retrieves GitHub user data based on a specified GitHub username.
+- `createTag`: Creates a new tag on GitHub, considering the repository owner, repository, and tag data.
+- `searchRepos`: Searches for GitHub repositories using a specified query.
 
-1. The [`@vtex/api`](https://github.com/vtex/node-vtex-api/) SDK provides a structured way to create clients, and the first thing to do is **identify the type of communication you want to implement.** As of now, we support these out of the box:
+### Step 1 - Setting up your VTEX IO app
+
+1. Start a new VTEX IO app and open the project using your preferred code editor.
+2. Install the `@vtex/api` package by running the following command:
+
+   ```sh
+   yarn add @vtex/api
+   ```
+
+3. Open the app's `manifest.json` file and add the necessary [Policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies). Policies are a set of permissions granted to an app, allowing or forbidding it to execute a given set of actions, such as making requests to an external resource. For this example, we will use the `outbound-access` policy to communicate with GitHub APIs (`api.github.com`).
+
+    ```json
+    "policies": [
+      {
+        "name": "outbound-access",
+        "attrs": {
+          "host": "api.github.com",
+          "path": "*"
+        }
+      },
+    ]
+    ```
+
+    > ⚠️ Note that incorrect policies may result in request blocking.
+
+### Step 2 - Creating a custom Client
+
+1. Create a folder named `clients` inside the `node` directory.
+2. Create a TypeScript file for your Client in the `node/clients` directory. Choose a name that easily identifies your Client (e.g., `github.ts`).
+3. Implement the Typescript class that extends the appropriate [Client type](#client-types) from `@vtex/api`. In this example, since we are communicating with GitHub's external APIs, we will use `ExternalClient`.
+4. Use [`InstanceOptions`](#instanceoptions) as needed, configuring options like authentication, timeout, caching, and more based on your requirements.
+
+   ```ts
+   //node/clients/github.ts
+   import { 
+    ExternalClient, 
+    IOContext, 
+    InstanceOptions 
+   } from "@vtex/api";
+
+   export default class GithubClient extends ExternalClient {
+     constructor(context: IOContext, options?: InstanceOptions) {
+       super("https://api.github.com", context, {
+        ...options,
+        retries: 2,
+        headers: {
+          Accept: 'application/vnd.github.machine-man-preview+json',
+          Authorization: 'Bearer my.cool.jwt'
+        }
+       });
+     }
+
+     // We will add the Client-related methods here
+   }
+   ```
+
+### Step 3 - Implementing Client methods
+
+Within your Client TypeScript file, implement the methods for your Client. You can leverage the methods provided by the [HttpClient](#httpclient-methods) to build your own methods. For example:
+
+   ```ts
+   //node/clients/github.ts
+   public getRepo({owner, repo}: GitRepo) {
+    return this.http.get<ReposGetResponse>(this.routes.repo({owner, repo}),{
+      metric: 'git-repo-get',
+      headers: {
+        Accept: 'application/vnd.github.nebula-preview+json'
+      }
+    })
+   }
+   ```
+
+Refer to the image below, which showcases the complete code of our example:
+
+![Github API Client example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-how-to-create-and-use-clients-0.png)
+
+## Client types
+
+The [`@vtex/api`](https://github.com/vtex/node-vtex-api/) package provides a structured way to create clients.
 
 | Type               | Use case                                                         |
 | ------------------ | ---------------------------------------------------------------- |
-| `AppClient`        | Communication with other IO Services via *plain-old* HTTP calls  |
-| `AppGraphQLClient` | Communication with other IO GraphQL services                     |
-| `ExternalClient`   | Communication with external API's                                |
-| `JanusClient`      | Communication with VTEX Core Commerce API's through Janus Router |
-| `InfraClient`      | Communication with VTEX IO Infra services                        |
+| `AppClient`        | Communication with other IO Services via HTTP calls.             |
+| `AppGraphQLClient` | Communication with other IO GraphQL services.                    |
+| `ExternalClient`   | Communication with external APIs.                                |
+| `JanusClient`      | Communication with VTEX Core Commerce APIs through Janus Router. |
+| `InfraClient`      | Communication with VTEX IO Infra services.                       |
 
-> ⚠️ When using clients, do not forget to add the **appropriate policies** on your `manifest.json`. Incorrect policies may result in request blocking.
+Refer to the diagram below to better understand the relationship between Client types.
 
-2. After finding the *base* client you are looking for, you need to implement a **Typescript class that extends the type of this base client**. You may place them wherever you want, but we advise you to put them on `node/clients`.
-
-Let's take a look on the anatomy of an *ExternalClient* to the *Github API*:
-
-`node/clients/github.ts`
-![Github API Client example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-how-to-create-and-use-clients-0.png)
-
-**Reference**
-1 - Look, it's one of the types from the **table above**.
-
-2 - Take a look [here](https://github.com/vtex/node-vtex-api/blob/4f17dba5d750dae6603c606187c888fbd91fd18c/src/HttpClient/typings.ts#L58) to check everything you can configure.
-
-3 - Read more about **app's pricing** [here](https://help.vtex.com/tutorial/app-pricing-options--2ZKBKxLe08Q6seA6sCi6o2).
-
-4 - There are a lot of other methods available, you can check them on [**HttpClient.**](https://github.com/vtex/node-vtex-api/blob/master/src/HttpClient/HttpClient.ts)
-
-> ⚠️ You're free to add data handling logic inside your client's methods (*i.e:* mapping fields, or filtering data), but be careful to not lose track of the client's responsabilities.
-
-## Using clients on implementations
-
-After you've learned how to create **great clients**, it's time to **ship them**, so you may **use it on your implementations**. It's easy as well!
-
-> ℹ️ If you want to jump to an example, check how the *StatusClient* is setup on [service-example](https://github.com/vtex-apps/service-example).
-
-**Let's suppose you've created the Github client** we've described above!
-
-1. Make sure you've **exported** the *client* from its module. *(Either [default or named export](https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910))*
-2. Create a `node/clients/index.ts` file.
-3. Paste the following snippet on it. *(If you've used named export on Step 2, change the import clause)*
-
-```typescript
-import { IOClients } from '@vtex/api'
-import GithubClient from './github.ts'
-
-export class Clients extends IOClients {
-  public get status() {
-    return this.getOrSet('github', GithubClient)
-  }
-}
+```mermaid
+classDiagram
+    IOClient *-- HttpClient
+    HttpClient <.. GraphQLClient
+    IOGraphQLClient <|-- AppGraphQLClient
+    IOClient <|-- IOGraphQLClient
+    IOGraphQLClient *-- GraphQLClient
+    IOClient <|-- InfraClient
+    ExternalClient <|-- JanusClient
+    IOClient <|-- ExternalClient
+    IOClient <|-- AppClient
+    class IOClient{
+      http: HttpClient
+      constructor(context,options)
+    }
+    class HttpClient{
+      cacheableType: CacheType
+      getConfig: (url: string, config?: RequestConfig)
+      logger: Logger
+      runMiddlewares: ComposedMiddleware
+      request: (config: RequestConfig) => Promise<AxiosResponse>
+      delete
+      get
+      getBuffer: (url: string, config?: RequestConfig) => Promise<>
+      getRaw
+      getStream: (url: string, config?: RequestConfig) => Promise<IncomingMessage>
+      getWithBody
+      head: (url: string, config?: RequestConfig) => Promise<IOResponse<void>>
+      name: string
+      post
+      postRaw
+      put
+      putRaw
+    }
+    class AppGraphQLClient{
+      constructor(app,context,options)
+    }
+    class ExternalClient{
+      constructor(baseURL,context,options)
+    }
+    class InfraClient{
+      constructor(app, context, options, isRoot)
+    }
+    class JanusClient{
+      constructor(context,options,environment)
+    }
+    class AppClient{
+      constructor(app,context,options)
+    }
+    class IOGraphQLClient{
+        graphql: GraphQLClient
+        constructor(context,options)
+    }
+    class GraphQLClient{
+        mutate
+        query
+        constructor(http:HttpClient)
+    }
 ```
 
-4. Now, **import the Clients class** on `node/index.ts` (the service *entrypoint*).
-5. Create or edit a `clients` object of type `ClientsConfig<Clients>` *(from @vtex/api)* like so:
+Note that `context` is of type `IOContext` and `options` is of type [`InstanceOptions`](#instanceoptions).
 
-```typescript
- const clients: ClientsConfig<Clients> = {
-   implementation: Clients,
-   options: {
-     default: {
-       retries: 2,
-       timeout: 2000,
-     },
-   },
- }
-```
+## `InstanceOptions`
 
-6. Use the `clients` variable on the **Service** exported:
+The `InstanceOptions` table below provides a detailed description of the available options for configuring your `HttpClient` instance:
 
-```typescript
-export default new Service<Clients, State>({
-  clients,
-  routes: {
-    ...
-  },
-})
-```
+| Option                          | Description                                                                         |
+| ------------------------------- | ----------------------------------------------------------------------------------- |
+| `authType`                      | Specifies the authentication type.                                                  |
+| `timeout`                       | Sets the request timeout duration in milliseconds.                                  |
+| `memoryCache`                   | Configures a memory cache layer for caching data.                                   |
+| `diskCache`                     | Configures a disk cache layer for caching data.                                     |
+| `baseURL`                       | Defines the base URL for making requests.                                           |
+| `retries`                       | Specifies the number of times a request should be retried in case of failure.       |
+| `exponentialTimeoutCoefficient` | Configures the coefficient for exponential timeout backoff strategy.                |
+| `initialBackoffDelay`           | Sets the initial delay before starting exponential backoff retries in milliseconds. |
+| `exponentialBackoffCoefficient` | Configures the coefficient for exponential backoff retries.                         |
+| `metrics`                       | Specifies an object for accumulating metrics related to requests.                   |
+| `concurrency`                   | Defines the maximum number of concurrent requests.                                  |
+| `headers`                       | Sets default headers to be sent with every request.                                 |
+| `params`                        | Sets default query string parameters to be sent with every request.                 |
+| `middlewares`                   | Configures an array of middleware functions for request processing.                 |
+| `verbose`                       | Enables or disables verbose logging for requests and responses.                     |
+| `name`                          | Defines a custom name for the instance.                                             |
+| `serverTimings`                 | Sets server timings for measuring request and response times.                       |
+| `httpsAgent`                    | Configures the HTTPS agent for making requests over SSL/TLS.                        |
 
-7. **Optional:** Place this **type declaration** on the same `node/index.ts` file. It helps you type the implementation functions.
+## `HttpClient` methods
 
-```typescript
-declare global {
-  type Context = ServiceContext<Clients, State>
-}
-```
+Below is a table outlining the methods available in the `HttpClient` class:
 
-8. **That's it** ✨! Now you can, on your functions, **access your client** from the `ctx`.
+| Method                             | Description                                                                                       |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `get(url: string, config?: RequestConfig)`               | Sends an HTTP GET request.                       |
+| `getRaw(url: string, config?: RequestConfig)` | Sends an HTTP GET request.                   |
+| `getWithBody(url: string, data?: any, config?: RequestConfig)` | Sends an HTTP GET request with a request body.  |
+| `getBuffer(url: string, config?: RequestConfig)` | Sends an HTTP GET request and resolves with the response data as a buffer along with the headers. |
+| `getStream(url: string, config?: RequestConfig)` | Sends an HTTP GET request and resolves with the response as a readable stream (of type `IncomingMessage`). |
+| `put(url: string, data?: any, config?: RequestConfig)`               | Sends an HTTP PUT request.                       |
+| `putRaw(url: string, data?: any, config?: RequestConfig)` | Sends an HTTP PUT request.                   |
+| `post(url: string, data?: any, config?: RequestConfig)`               | Sends an HTTP POST request.                       |
+| `postRaw(url: string, data?: any, config?: RequestConfig)` | Sends an HTTP POST request.                   |
+| `patch(url: string, data?: any, config?: RequestConfig)`               | Sends an HTTP PATCH request.                       |
+| `head(url: string, config?: RequestConfig)`              | Sends an HTTP HEAD request and resolves when the request is complete.                              |
+| `delete(url: string, config?: RequestConfig)`             | Sends an HTTP DELETE request.                       |
 
-```typescript
-export const authorize = async (ctx: Context) {
- const { clients: { github } } = ctx
- ...
- const data = await github.getUser(/*...*/)
-}
-```
+## Next steps
 
-## Want to dive deeper?
+Now that you've developed your custom client to communicate with the desired service, learn how to use clients effectively in our [Using Node Clients](https://developers.vtex.com/docs/guides/using-node-clients) guide.
 
-If you didn't find what you were looking for here, try **learning by example**. We are already doing some advanced thing on our default clients, like **file upload**, **use of disk cache** and more:
-
-- [AppsClient](https://github.com/vtex/node-vtex-api/blob/master/src/clients/infra/Apps.ts)
+By creating custom Clients, you can extend the capabilities of your VTEX IO applications, opening up opportunities to integrate with a wide range of services seamlessly.
