@@ -1,7 +1,7 @@
 ---
 title: "Using Node Clients"
 slug: "using-node-clients"
-excerpt: "Learn how to use Clients in your VTEX IO app for interaction with both internal and external services"
+excerpt: "Learn how to use Clients in your VTEX IO app for interaction with both internal and external services."
 hidden: false
 createdAt: "2022-02-16T13:52:17.234Z"
 updatedAt: "2022-12-13T20:17:43.979Z"
@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:43.979Z"
 
 In VTEX IO Services, Node [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) are powerful tools that enable you to seamlessly interact with both internal and external services. These clients play a crucial role in tasks such as making API requests, fetching data, and performing various operations within your VTEX IO apps. This guide will walk you through the effective utilization of Node Clients.
 
-For this guide, note that VTEX IO Services exports functions that receive a `context` object. These functions can be resolver functions for GraphQL fields, middlewares for an HTTP server or event handlers. In all cases, the Service receives a `ctx` object of type [`Context`](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts), and it is within `ctx.clients` where you will find your Clients.
+For this guide, note that VTEX IO Services exports functions that receive a `context` object. These functions can be resolver functions for GraphQL fields, middlewares for an HTTP server, or event handlers. In all cases, the Service receives a `ctx` object of type [`Context`](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts), and it is within `ctx.clients` where you will find your Clients.
 
 ## Before you begin
 
@@ -57,7 +57,7 @@ The [`@vtex/clients`](https://github.com/vtex/io-clients) package exports Client
    yarn add @vtex/clients
    ```
 
-5. Check the list of VTEX IO Clients available in the `@vtex/clients` package. Refer to [List of native Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients#list-of-native-clients) and choose whether to use a Factory or individual Client based on your requirements.
+5. Check the list of VTEX IO Clients available in the `@vtex/clients` package. Refer to [List of native Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients#list-of-native-clients) and choose whether to use a Factory or an individual Client based on your requirements.
 
 <details>
 <summary>Using individual Clients</summary>
@@ -148,7 +148,7 @@ If you have developed custom Clients for a specific need, take the following ste
    };
    ```
 
-   Note that inside the `options` property, there's a `default` key with default Client options. These options include specifying the number of retries and the timeout for HTTP requests. See the [Options](#options) table for more options. All IO Clients will be initialized with these options, unless otherwise specified.
+   Note that inside the `options` property, there's a `default` key with default Client options. These options include specifying the number of retries and the timeout for HTTP requests. See the [Options](#options) table for more options. All IO Clients will be initialized with these options unless otherwise specified.
 
 3. (Optional) In the `node/index.ts` file, consider adding a type declaration to improve type safety and code clarity. This declaration helps you define the `Context` type, which is based on `ServiceContext<Clients, State>`.
 
@@ -173,7 +173,7 @@ If you have developed custom Clients for a specific need, take the following ste
 
    > For more information on how to set up routes, refer to the [Routes](https://developers.vtex.com/docs/guides/service-path-patterns) guide.
 
-5. Now in your app's handlers and middlewares, use the `clients` object from the `ctx` to access your custom Client. Check the following example where we acess the custom `github` Client in the `authorize` function.
+5. Now, in your app's handlers and middlewares, use the `clients` object from the `ctx` to access your custom Client. Check the following example where we access the custom `github` Client in the `authorize` function.
 
    ```ts
    export const authorize = async (ctx: Context) {
