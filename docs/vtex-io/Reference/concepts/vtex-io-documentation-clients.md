@@ -26,9 +26,11 @@ When developing VTEX IO apps, using Clients can help you manage and streamline c
 - **Retry and timeout options:** Clients offer configurable retry and timeout settings, ensuring robustness and resilience in the face of network issues or service unavailability.
 - **Billing tracking:** Clients can track usage and resource consumption, aiding in billing and cost optimization.
 
-### List of native Clients
+## List of native Clients
 
 VTEX offers some native Clients, allowing developers to save time and effort when interacting with services such as VTEX Core Commerce APIs and other internal services.
+
+### `@vtex/clients`
 
 The [`@vtex/clients`](https://github.com/vtex/io-clients) package provides the following clients for IO apps using the `node` Builder:
 
@@ -47,6 +49,19 @@ The [`@vtex/clients`](https://github.com/vtex/io-clients) package provides the f
 | ------------ | ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | `masterData` | Interacts with Master Data services. | `get`, `save`, `update`, `saveOrUpdate`, `saveOrUpdatePartial`, `delete`, `search`, `searchRaw`, `scroll` |
 | `vbase`      | Interacts with VBase services.       | `get`, `getRaw`, `getWithMetadata`, `save`, `trySaveIfhashMatches`                                        |
+
+### `@vtex/api`
+
+The [`@vtex/api`](https://github.com/vtex/node-vtex-api/blob/master/src/clients/IOClients.ts#L15) package provides the following clients for IO apps using the `node` Builder:
+
+| Name              | Description                                                 | Methods                                                                                                                                                                                                                                                                                                |
+| ----------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `id`              | Handles identity management and authentication.             | `getTemporaryToken`, `sendCodeToEmail`, `getEmailCodeAuthenticationToken`, `getPasswordAuthenticationToken`                                                                                                                                                                                            |
+| `licenseManager`  | Interacts with License Manager services.                                      | `getAccountData`, `getTopbarData`, `canAccessResource` |
+| `masterdata`      | Interacts with Master Data services.                        | `getSchema`, `createOrUpdateSchema`, `getPublicSchema`, `getDocument`, `createDocument`, `createOrUpdateEntireDocument`, `createOrUpdatePartialDocument`, `updateEntireDocument`, `updatePartialDocument`, `searchDocuments`, `searchDocumentsWithPaginationInfo`, `scrollDocuments`, `deleteDocument` |
+| `messagesGraphQL` | Handles internationalization messages.                      | `translateV2`, `translate`, `translateWithDependencies`, `saveV2`, `userTranslations`                                                                                                                                                                                                                  |
+| `catalogGraphQL`  | Interacts with the catalog management system using GraphQL. | `sku`, `category`, `brand`, `product`                                                                                                                                                                                                                                                                  |
+| `paymentProvider` | Interacts with payment service providers.                   | `callback`, `inbound`                                                                                                                                                                                                                                                                                  |
 
 ## Developing Clients
 

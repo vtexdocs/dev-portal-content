@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.776Z"
 
 If you need to integrate your VTEX IO app with external services that aren't covered by [VTEX IO's native Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients), creating custom clients can be a powerful solution. Custom clients extend the functionality of VTEX IO Client types, offering benefits like caching and versioning. This guide will walk you through the process of creating custom clients for your VTEX IO apps.
 
-> ⚠️ Note that direct communication with APIs is generally discouraged in favor of implementing a dedicated Client.
+> ⚠️ Note that direct communication with APIs is generally discouraged in favor of implementing a dedicated Client. By creating custom Clients, you can extend the capabilities of your VTEX IO applications, opening up opportunities to integrate with a wide range of services seamlessly.
 
 As you develop your custom Client, you will define methods within it. These Client methods are functions responsible for handling the logic needed to execute specific actions. They facilitate interactions with services and APIs, managing requests and responses effectively.
 
@@ -34,7 +34,7 @@ In this guide, we will create an example custom Client for communicating with Gi
 
 ### Step 1 - Setting up your VTEX IO app
 
-1. Start a new VTEX IO app and open the project using your preferred code editor.
+1. Start a new VTEX IO app using the `node` builder and open the project using your preferred code editor.
 2. Install the `@vtex/api` package by running the following command:
 
    ```sh
@@ -61,7 +61,7 @@ In this guide, we will create an example custom Client for communicating with Gi
 
 1. Create a folder named `clients` inside the `node` directory.
 2. Create a TypeScript file for your Client in the `node/clients` directory. Choose a name that easily identifies your Client (e.g., `github.ts`).
-3. Implement the Typescript class that extends the appropriate [Client type](#client-types) from `@vtex/api`. In this example, since we are communicating with GitHub's external APIs, we will use `ExternalClient`.
+3. Implement the Typescript class that extends the appropriate [Client type](#client-types) from `@vtex/api`. In this example, we will create the `GithubClient`. Also, since we are communicating with GitHub's external APIs, we will use `ExternalClient`.
 4. Use [`InstanceOptions`](#instanceoptions) as needed, configuring options like authentication, timeout, caching, and more based on your requirements.
 
    ```ts
@@ -88,6 +88,8 @@ In this guide, we will create an example custom Client for communicating with Gi
    }
    ```
 
+Ensure to export the Client from its module (either [default or named export](https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910)).
+
 ### Step 3 - Implementing Client methods
 
 Within your Client TypeScript file, implement the methods for your Client. You can leverage the methods provided by the [HttpClient](#httpclient-methods) to build your own methods. For example:
@@ -107,6 +109,32 @@ Within your Client TypeScript file, implement the methods for your Client. You c
 Refer to the image below, which showcases the complete code of our example:
 
 ![Github API Client example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-how-to-create-and-use-clients-0.png)
+
+### Step 4 - Exporting custom clients
+
+Now that you've created your custom Client, you need to organize and export it for use in your VTEX IO service. Follow these steps:
+
+1. Create an `index.ts` file in the `node/clients` folder.
+2. Inside the `index.ts` file, import the custom client you created in the previous step. For example:
+
+    ```ts
+    import GithubClient from "./github.ts";
+    ```
+
+3. Define a class called `Clients` that extends `IOClients`. This class is used to organize and configure your custom Clients. Within the Clients class, declare a `get` property for each of your custom Clients. This property allows you to access a specific Client by name. In our example, we've created a client named `github` that uses the `GithubClient` class.
+
+    ```ts
+    import { IOClients } from "@vtex/api";
+    import GithubClient from "./github.ts";
+
+    export class Clients extends IOClients {
+      public get status() {
+        return this.getOrSet("github", GithubClient);
+      }
+    }
+    ```
+
+Now that you have developed and exported your custom Client to communicate with the desired service, your Clients can be accessed and used within your VTEX IO service to perform various tasks, such as interacting with external APIs like GitHub. Learn how to use clients effectively in the [Using Node Clients](https://developers.vtex.com/docs/guides/using-node-clients) guide.
 
 ## Client types
 
@@ -227,9 +255,3 @@ Below is a table outlining the methods available in the `HttpClient` class:
 | `patch(url: string, data?: any, config?: RequestConfig)`               | Sends an HTTP PATCH request.                       |
 | `head(url: string, config?: RequestConfig)`              | Sends an HTTP HEAD request and resolves when the request is complete.                              |
 | `delete(url: string, config?: RequestConfig)`             | Sends an HTTP DELETE request.                       |
-
-## Next steps
-
-Now that you've developed your custom client to communicate with the desired service, learn how to use clients effectively in our [Using Node Clients](https://developers.vtex.com/docs/guides/using-node-clients) guide.
-
-By creating custom Clients, you can extend the capabilities of your VTEX IO applications, opening up opportunities to integrate with a wide range of services seamlessly.
