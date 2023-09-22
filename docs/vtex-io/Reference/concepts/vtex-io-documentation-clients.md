@@ -1,26 +1,57 @@
 ---
 title: "Clients"
+excerpt: "Learn more about VTEX IO Clients and their advantages."
 slug: "vtex-io-documentation-clients"
 hidden: false
 createdAt: "2022-02-16T13:52:17.234Z"
 updatedAt: "2022-12-13T20:17:43.979Z"
 ---
 
-Systems are meant to solve real problems by communicating to the needed services. A delivery app, for example, solves the issue of the desire to eat by communicating with a local restaurant service.
+Clients serve as intermediaries that initiate and maintain interactions with both external and internal services. Whether interfacing with VTEX IO Services, VTEX Core Commerce APIs, or external APIs, Clients are crucial in enabling seamless communication and data exchange. This guide will explore the concept of Clients and provide a list of native Clients available in VTEX IO.
 
-On VTEX IO architecture, the communication made by a system to request a service is so crucial that a whole concept was built for it: **Clients**.
+## Understanding Clients
 
-In other words, Clients are configurations to be set up in a given system to **abstract its communications to the needed services**.
+Clients are essentially configurations implemented within the VTEX IO platform to abstract and streamline communication with various services. They simplify the process of sending requests and receiving responses, acting as intermediaries between an app and the other services it relies on.
 
-When building software, you can tackle complexities by setting up clients and then optimizing your code. Some standard clients are already into the VTEX IO. Check them [here](https://github.com/vtex/node-vtex-api/blob/ccf4d8f8d3208007c4bfd558baf979df8d825af8/src/clients/IOClients.ts).
+In simpler terms, think of Clients as the messengers of an app, responsible for reaching out to other services, gathering information, and returning it to your application.
 
-These are some of the features built-in our clients infrastructure:
+## Advantages of using Clients
 
-- Cache;
-- Native metrics support;
-- Retry and timeout options;
-- Billing tracking.
+Clients offer various advantages when it comes to managing interactions and data exchange between your app and other services. They ensure that your app functions effectively by handling the complexity of communication with other services.
 
-![Clients on IO Services](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-clients-0.png)
+When developing VTEX IO apps, using Clients can help you manage and streamline complexity. Clients centralize communication logic, making it easier to maintain and scale your codebase. VTEX IO Clients come equipped with several built-in features that enhance the functionality and performance of your applications:
 
-Learn how to create Clients of your own by accessing [Managing Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) documentation.
+- **Cache:** Clients incorporate caching mechanisms to store and retrieve data efficiently, reducing the load on services and improving response times.
+- **Native metrics support:** Clients integrate with performance monitoring and analytics tools, providing insights into service usage and performance.
+- **Retry and timeout options:** Clients offer configurable retry and timeout settings, ensuring robustness and resilience in the face of network issues or service unavailability.
+- **Billing tracking:** Clients can track usage and resource consumption, aiding in billing and cost optimization.
+
+### List of native Clients
+
+VTEX offers some native Clients, allowing developers to save time and effort when interacting with services such as VTEX Core Commerce APIs and other internal services.
+
+The [`@vtex/clients`](https://github.com/vtex/io-clients) package provides the following clients for IO apps using the `node` Builder:
+
+| Client             | Description | Methods                                                                                                                                                        |
+| ------------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `affiliate`        | Handles affiliate-related operations. | `registerAffiliate`, `changeNotification`, `createSeller`, `getSellerList`                                                                                     |
+| `catalog`          | Handles catalog-related tasks such as retrieving product and SKU information. | `getProductsAndSkus`, `getSkuById`, `changeNotification`, `createSeller`, `getSellerList`, `getSellerById`, `getSkuContext`, `getCategoryById`, `getBrandById` |
+| `Checkout`         | Deals with order form configurations and custom Checkout data. | `getOrderFormConfiguration`, `setOrderFormConfiguration`, `setSingleCustomData`                                                                                |
+| `Logistics`        | Manages logistics and inventory-related tasks. | `getDockById`, `pickupById`, `listPickupPoints`, `nearPickupPoints`, `shipping`, `listInventoryBySku`                                                          |
+| `OMS`              | Handles order management operations. | `listOrders`, `userLastOrder`, `order`, `orderNotification`, `cancelOrder`                                                                                     |
+| `omsApiProxy`      | Acts as a proxy for OMS API operations. | `orders`, `orderFormId`, `customData`, `register`                                                                                                              |
+| `ratesAndBenefits` | Handles Rates and Benefits data. | `getAllBenefits`, `getPromotionById`, `createOrUpdatePromotion`, `createMultipleSkuPromotion`, `updateMultipleSkuPromotion`                                    |
+| `suggestions`      | Handles product suggestions and versions. | `getAllSuggestions`, `getSuggestionById`, `sendSkuSuggestion`, `deleteSkuSuggestion`, `getAllVersions`, `getVersionById`                                       |
+
+| Factory      | Description                          | Methods                                                                                                   |
+| ------------ | ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `masterData` | Interacts with Master Data services. | `get`, `save`, `update`, `saveOrUpdate`, `saveOrUpdatePartial`, `delete`, `search`, `searchRaw`, `scroll` |
+| `vbase`      | Interacts with VBase services.       | `get`, `getRaw`, `getWithMetadata`, `save`, `trySaveIfhashMatches`                                        |
+
+## Developing Clients
+
+Consider developing your own clients if you require integration with other services not covered by VTEX native clients. Custom clients extend VTEX IO native Clients, leveraging caching and versioning functionalities.
+
+> ⚠️ Note that direct communication with APIs is generally discouraged in favor of implementing a dedicated Client.
+
+Learn how to create Clients of your own by accessing the [Developing Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) guide.
