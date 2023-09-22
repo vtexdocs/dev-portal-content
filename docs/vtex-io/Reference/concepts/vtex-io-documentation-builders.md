@@ -1,42 +1,36 @@
 ---
 title: "Builders"
 slug: "vtex-io-documentation-builders"
+excerpt: "Learn what VTEX IO Builders are and how to use them."
 hidden: false
 createdAt: "2020-06-03T16:02:44.727Z"
 updatedAt: "2022-12-13T20:17:44.395Z"
 category: "App Development"
 ---
-A *Builder* is responsible for processing, validating, and forwarding a given block of code to a runtime or a framework capable of executing it.
 
-In practice, a builder works as an API responsible for configuring other IO services.
+Builders play a pivotal role in streamlining app development. They are the orchestrators of VTEX IO apps, responsible for processing, validating, and passing on a specific block of code to a runtime or framework capable of executing it. This article will teach you what Builders are and how to use them effectively.
 
-As you'll see in the following, builders can also be understood as the entry points to the functionalities of an IO app.
+## Understanding Builders
 
-In fact, the whole app implementation must relate to the builders declared in the app's `manifest.json` file and live inside the folders named over the app's builders.
+In practical terms, a Builder acts like a bridge that allows different parts of your app to work together by configuring and connecting to the necessary services. Each Builder operates under its unique set of rules and validation processes, acting as gateways to an IO app's functionalities.
 
-When running an IO app, each builder converts the files included in its corresponding folder into configurations to the competent services. Check our [implementation example](#implementation-example).
+By having very well-defined and minimal responsibilities, a Builder can evolve independently, allowing for rapid development with minimal disruptive changes.
 
-> ℹ️ Notice that each builder has its own set of rules and validation process.
+## Using Builders
 
-One important aspect is that an app can have as many builders as you want. That allows bundling front and backend development and delivering your solution with just one package.
+Builders are specified in an app's `manifest.json` file, and the app itself is neatly structured with folders bearing the Builder's names. This organization ensures that each Builder knows precisely which code to process.
 
-Notice that by dividing responsibilities into smaller builders, we are able to evolve them separately - quickly and with fewer stop-the-world breaking changes. Thus, it's expected from a builder to:
+![example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-builders.png)
 
-- Have very *well-defined* and *minimal responsibilities*.
-- Be *abstract* and *opinionated* according to its goals.
-- Allow *fine-grained permission control*.
+When you run a VTEX IO app, each Builder converts the files included in its corresponding folder into configurations for the competent services. This means an app can have as many Builders as you want, enabling the bundling of both frontend and backend development into a single package.
 
-We currently work with several builders that simplify app development by making each part of an app's responsibilities clear and well separated. Check our [list of builders](#list-of-builders).
+For more information on the available Builders, see the [List of Builders](#list-of-builders) section.
 
-> ℹ To use VTEX builders, ensure that you have `vtex.builder-hub@0.293.4` or a newer version [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app) in your account.
+> To use Builders, ensure that you have at least `vtex.builder-hub@0.293.4` version [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app) in your account.
 
-## Implementation example
+## Example
 
-Pretend you want to develop a *React* component in your IO app.
-
-For that, you'll need to use a builder that offers a way to configure a *React renderer*, namely, the `react@3.x` builder.
-
-To do that, you must declare the `react@3.x` builder in the app's `manifest.json` file, as in the following:
+Suppose you want to develop a React frontend component with VTEX IO. For this, you will need to use a Builder that offers a React renderer, namely, the `react` Builder. To do that, you must declare the `react` Builder in your app's `manifest.json` file, as in the following:
 
 ```json
 "builders": {
@@ -44,28 +38,26 @@ To do that, you must declare the `react@3.x` builder in the app's `manifest.json
 }
 ```
 
-Then, in your app's root directory, you must create a folder named over the builder (e.g., `/react`) and place there the files you want its respective builder to compile (e.g., React component files).
+Then, in your app's root directory, you must create a folder named after the Builder (e.g., `/react`) and place your React code inside it.
 
-When running your app, the `react@3.x` builder will transform the source code of TypeScript React components, placed inside the `/react` folder, into compiled bundles, ready to be imported into render apps.
+When you run your app, the `react` Builder will transform the React code within the `/react` folder into compiled bundles, ready to be imported into frontend apps.
 
-## List of builders
+## List of Builders
 
-The VTEX Product Team is always improving how our builders work and *creating new ones* to ease the development of commerce solutions.
+This is a non-exhaustive list of VTEX IO Builders:
 
-This is a *non-exhaustive* list of VTEX IO builders:
-
-Name | Functionality |
----- | ------------- |
- `admin` | Exports blocks and routes to the VTEX Admin.|
- `assets` | Handles assets used by Store Theme blocks. It gets all asset paths used and uploads them to the VTEX IO database. *You can learn how to use it by accessing the recipe on [Using the Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder/).*|
- `configuration` | Allows you to allocate code pertaining to service configurations to an app that's independent of the platform. *You can learn how to use it by accessing the recipe on [Developing service configuration apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps/).*|
-  `docs` | Allows developers to add documentation in the `/docs` directory, to be published in our Developer Portal. *You can learn how to use it by accessing the recipe on [Using the Docs Builder to publish app documentation](https://developers.vtex.com/docs/guides/using-the-docs-builder-to-publish-app-documentation/).*|
- `dotnet` | Interprets the `/dotnet` directory, empowering the development of custom backend services.|
- `graphql` | Processes GraphQL API's and schemas by interpreting `.graphql` and `.gql` files contained in the app's `/graphql` directory.|
- `services` | Fetches service workers exported by the account's installed apps and bundles them in a single file, enabling the store to work with several service workers simultaneously. You can learn how to use it by accessing the recipe on [Using several service workers in your store](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-several-service-workers-in-your-store).|
- `styles` | Exports CSS configurations for Store Framework blocks. When building your app, the Styles builder reads the `styles/styles.json` file and uses a [Tachyons](https://tachyons.io/) generator to properly produce your store's CSS.|
- `store` | Interprets and validates the blocks, interfaces and routes contained in the theme app's `/store` directory, powering Store Framework store's components and building the storefront.|
- `messages` | Exports localized string messages, empowering *VTEX IO internationalization*. It reads `.json` files associated with different locales within the app's `/messages` directory and makes them available for front-end applications to use via `react-intl`.|
- `node` | Interprets the `/node` directory, empowering the development of custom backend services using Typescript.|
- `pixel` | Processes the source-code and configuration of [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) in VTEX IO. The files picked up by this builder are located in the app's `/pixel` directory.|
- `react` | Interprets the `/react` directory, empowering the development of React components using Typescript|
+| Name            | Functionality                                                                                                                                                                                                                                                                                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `admin`         | Exports blocks and routes to the VTEX Admin.                                                                                                                                                                                                                                                                                                                                                 |
+| `assets`        | Handles assets used by Store Theme blocks. It gets all asset paths used and uploads them to the VTEX IO database. _You can learn how to use it by accessing the recipe on [Using the Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder/)._                                                                                              |
+| `configuration` | Allows you to allocate code pertaining to service configurations to an app that's independent of the platform. _You can learn how to use it by accessing the recipe on [Developing service configuration apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps/)._                                                                       |
+| `docs`          | Allows developers to add documentation in the `/docs` directory, to be published in our Developer Portal. _You can learn how to use it by accessing the recipe on [Using the Docs Builder to publish app documentation](https://developers.vtex.com/docs/guides/using-the-docs-builder-to-publish-app-documentation/)._                                                                      |
+| `dotnet`        | Interprets the `/dotnet` directory, empowering the development of custom backend services.                                                                                                                                                                                                                                                                                                   |
+| `graphql`       | Processes GraphQL API's and schemas by interpreting `.graphql` and `.gql` files contained in the app's `/graphql` directory.                                                                                                                                                                                                                                                                 |
+| `services`      | Fetches service workers exported by the account's installed apps and bundles them in a single file, enabling the store to work with several service workers simultaneously. You can learn how to use it by accessing the recipe on [Using several service workers in your store](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-several-service-workers-in-your-store). |
+| `styles`        | Exports CSS configurations for Store Framework blocks. When building your app, the Styles Builder reads the `styles/styles.json` file and uses a [Tachyons](https://tachyons.io/) generator to properly produce your store's CSS.                                                                                                                                                            |
+| `store`         | Interprets and validates the blocks, interfaces and routes contained in the theme app's `/store` directory, powering [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) store's components and building the storefront.                                                                                                                                                                                                         |
+| `messages`      | Exports localized string messages, empowering _VTEX IO internationalization_. It reads `.json` files associated with different locales within the app's `/messages` directory and makes them available for front-end applications to use via `react-intl`.                                                                                                                                   |
+| `node`          | Interprets the `/node` directory, empowering the development of custom backend services using Typescript.                                                                                                                                                                                                                                                                                    |
+| `pixel`         | Processes the source-code and configuration of [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) in VTEX IO. The files picked up by this Builder are located in the app's `/pixel` directory.                                                                                                                                                                                 |
+| `react`         | Interprets the `/react` directory, empowering the development of React components using Typescript                                                                                                                                                                                                                                                                                           |
