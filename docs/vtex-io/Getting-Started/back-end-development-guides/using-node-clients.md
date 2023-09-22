@@ -1,4 +1,10 @@
-### Using Clients on implementations
+---
+title: "Using Node Clients"
+slug: "using-node-clients"
+hidden: false
+createdAt: "2022-02-16T13:52:17.234Z"
+updatedAt: "2022-12-13T20:17:43.979Z"
+---
 
 VTEX IO Services exports functions that receive a _context_ object. These functions can be a resolver function to a GraphQL field, a middleware to an HTTP server or an event handler, and, in all of them, you receive a `ctx` object of type [`Context`](https://github.com/vtex/node-vtex-api/blob/master/src/service/worker/runtime/typings.ts), and it is inside of `ctx.clients` where you'll find each client.
 
