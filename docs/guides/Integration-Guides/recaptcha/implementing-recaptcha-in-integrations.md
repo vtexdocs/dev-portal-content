@@ -137,7 +137,7 @@ After the shopper successfully solves the validation, the integration should rec
 }
 ```
 
->❗ The `recaptchaKey` you send must be the one used to display the challenge that was solved.
+>❗ You must send the key used to display the challenge that was solved in the field `recaptchaKey`. Use this field regardless of the reCAPTCHA version of the key previously used.
 
 ## Handling errors
 
