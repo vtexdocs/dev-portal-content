@@ -60,8 +60,11 @@ Once you [create your reCAPTCHA key](#getting-the-recaptcha-key-for-mobile-imple
 ```
 https://console.cloud.google.com/security/recaptcha?project={projectId}
 ```
+
+When you get to the reCAPTCHA Enterprise page, your reCAPTCHA key is available in the **Key ID** field of the section corresponding with the key you want to use.
+
 ![google cloud recaptcha screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/recaptcha/google-ui-recaptcha-key.png)
-https://github.com/vtexdocs/dev-portal-content/tree/main/docs/guides/Integration-Guides/recaptcha
+
 #### Finding your Google Cloud API key (mobile implementations)
 
 Once you create your [Google Cloud API key](#getting-the-recaptcha-key-for-mobile-implementations), it will be available in this address:
@@ -69,7 +72,10 @@ Once you create your [Google Cloud API key](#getting-the-recaptcha-key-for-mobil
 ```
 https://console.cloud.google.com/apis/credentials?project={projectId}
 ```
+
 ![google cloud credentials screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/recaptcha/google-ui-api-key.png)
+
+When you get to the credentials page, click **SHOW KEY** on the line corresponding to the key you wish to use.
 
 ### Getting the reCAPTCHA key in web-based implementations
 
