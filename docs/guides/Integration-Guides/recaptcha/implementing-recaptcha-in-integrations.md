@@ -61,7 +61,7 @@ Once you [create your reCAPTCHA key](#getting-the-recaptcha-key-for-mobile-imple
 https://console.cloud.google.com/security/recaptcha?project={projectId}
 ```
 ![google cloud recaptcha screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/recaptcha/google-ui-recaptcha-key.png)
-https://github.com/vtexdocs/dev-portal-content/tree/main/docs/guides/Integration-Guides/recaptcha
+
 #### Finding your Google Cloud API key (mobile implementations)
 
 Once you create your [Google Cloud API key](#getting-the-recaptcha-key-for-mobile-implementations), it will be available in this address:
