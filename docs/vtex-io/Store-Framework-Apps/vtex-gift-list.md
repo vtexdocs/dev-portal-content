@@ -88,7 +88,7 @@ To create a new trade policy, please fill out this [form](https://docs.google.co
 
 ### Ready-made theme
 
-You can use a ready-made theme with these components or customize the theme to better suit your needs. If you want to use the mentioned theme, you can access it on the [List Theme repository](https://github.com/vtex-apps/list-theme) or install it directly using the command:
+You can use a ready-made theme with these components or customize the theme to better suit your needs. If you want to use the mentioned theme, you can install it directly using the command:
 
 ```bash
 vtex install vtex.list-theme@3.x
