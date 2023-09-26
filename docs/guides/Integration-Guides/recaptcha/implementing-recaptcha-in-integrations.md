@@ -53,6 +53,24 @@ After completing this steps, see how you can [integrate reCAPTCHA](#integrating-
 
 >⚠️ If you have multiple integrations (e.g., an app for Android and another for iOS), create one key for each and register each one as an object in the `recaptchaKeys` array.
 
+#### Finding your reCAPTCHA key (mobile implementations)
+
+Once you [create your reCAPTCHA key](#getting-the-recaptcha-key-for-mobile-implementations), it will be available in this address:
+
+```
+https://console.cloud.google.com/security/recaptcha?project={projectId}
+```
+![google cloud recaptcha screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/recaptcha/google-ui-recaptcha-key)
+https://github.com/vtexdocs/dev-portal-content/tree/main/docs/guides/Integration-Guides/recaptcha
+#### Finding your Google Cloud API key (mobile implementations)
+
+Once you create your [Google Cloud API key](#getting-the-recaptcha-key-for-mobile-implementations), it will be available in this address:
+
+```
+https://console.cloud.google.com/apis/credentials?project={projectId}
+```
+![google cloud credentials screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/recaptcha/google-ui-api-key)
+
 ### Getting the reCAPTCHA key in web-based implementations
 
 If you are implementing a web-based storefront, you must get the reCAPTCHA key from the checkout API you use to place the order.
