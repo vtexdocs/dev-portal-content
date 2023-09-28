@@ -53,7 +53,6 @@ After receiving the access data and deploying the backend, the provider can acce
 3. After that, you will be redirected to the VTEX APP Store. Click the `GET APP` button at the top right corner of the page.
 4. Then, on the popup screen, type your account's name (with lowercase and no space in between) and click the `CONFIRM` button.
 5. Click `INSTALL` to complete the installation process.
-    
    ![Apps Image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-0_46.png)
 
 With the app installed, go to **Apps > Installed Apps** and click on **Antifraud Provider**, or access `https://{{AccountName}}.myvtex.com/admin/test-suite/antifraud-provider`, replacing `{{AccountName}}` with the name of your platform account.
