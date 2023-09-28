@@ -42,6 +42,8 @@ If the partner is a SI (Service Implementer) developing integrations for clients
 
 Before setting up the VTEX environment, the provider must implement the back-end service required to process the antifraud services (API). For more information, access the [Antifraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol).
 
+> ⚠️ You can also access our [template on GitHub](https://github.com/vtex-apps/antifraud-provider-example) to help you quickly develop your anti-fraud connector using the Antifraud Provider Protocol and VTEX IO.
+
 ### 2. Install the Antifraud Provider Tester App
 
 After receiving the access data and deploying the backend, the provider can access the approval tool through VTEX Admin. If you still do not have the Antifraud Provider Tester App installed in your store, you need to follow these steps:
@@ -51,10 +53,9 @@ After receiving the access data and deploying the backend, the provider can acce
 3. After that, you will be redirected to the VTEX APP Store. Click the `GET APP` button at the top right corner of the page.
 4. Then, on the popup screen, type your account's name (with lowercase and no space in between) and click the `CONFIRM` button.
 5. Click `INSTALL` to complete the installation process.
-    
    ![Apps Image](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-0_46.png)
 
-With the app installed, go to **Apps > Installed Apps** and click on **Antifraud Provider**, or access `https://{{AccountName}}.myvtex.com/admin/test-suite/antifraud-provider`, replacing `{{AccountName}}` with the name of your platform account. 
+With the app installed, go to **Apps > Installed Apps** and click on **Antifraud Provider**, or access `https://{{AccountName}}.myvtex.com/admin/test-suite/antifraud-provider`, replacing `{{AccountName}}` with the name of your platform account.
 
 ### 3. Initial settings
 
