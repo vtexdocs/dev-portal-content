@@ -77,7 +77,7 @@ It is possible to setup payment conditions through your gateway account’s VTEX
 
 If you wish to realize this step through API calls, use [Get Rules](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/rules) > [Insert Rule](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/rules) calls.
 
-The Anti-fraud can be set up  through your gateway account’s VTEX Admin.  Check [Set up the Anti-fraud](https://help.vtex.com/tutorial/how-to-configure-the-anti-fraud--tutorials_446) to know how.
+The Anti-fraud can be set up through your gateway account’s VTEX Admin. Check [Set up the Anti-fraud](https://help.vtex.com/en/tutorial/how-to-configure-the-anti-fraud--tutorials_446) to know how.
 
 To configure it through API, fill in the `antifraud` object in the [Insert Rule](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/rules) endpoint.
 
