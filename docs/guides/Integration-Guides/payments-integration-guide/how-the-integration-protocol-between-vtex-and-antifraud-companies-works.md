@@ -5,9 +5,8 @@ hidden: false
 createdAt: "2022-12-07T17:09:28.603Z"
 updatedAt: "2022-12-07T18:17:43.140Z"
 ---
-## What is the Antifraud Provider Protocol?
 
-The Antifraud Provider Protocol is the integration protocol between VTEX and companies that provide antifraud services.
+The Anti-fraud Provider Protocol is the integration protocol between VTEX and companies that provide anti-fraud services.
 
 Through it, VTEX offers a public contract available to all providers that wish to integrate into our platform. As a result, providers become more autonomous regarding such integration.
 
@@ -18,9 +17,9 @@ The protocol has the following features:
 
 ## Concepts
 
-**Provider**: system or provider that offers the antifraud risk analysis service.
+**Provider**: system or provider that offers the anti-fraud risk analysis service.
 
-**Antifraud Provider Protocol**: integration protocol developed by VTEX.
+**Anti-fraud Provider Protocol**: integration protocol developed by VTEX.
 
 **Connector**: name of the integration partner provider.
 
@@ -28,7 +27,7 @@ The protocol has the following features:
 
 ### 1. Business partnership agreement
 
-To make your antifraud service available at VTEX, you must sign a partnership agreement that is specific to financial services covering the details of this subject and platform regulations. If you do not have a partnership agreement yet but are interested in becoming a payment provider, contact our team through our [website](https://vtex.com/us-en/partner).
+To make your anti-fraud service available at VTEX, you must sign a partnership agreement that is specific to financial services covering the details of this subject and platform regulations. If you do not have a partnership agreement yet but are interested in becoming a payment provider, contact our team through our [website](https://vtex.com/us-en/partner).
 
 ### 2. Access to a VTEX environment
 
@@ -40,13 +39,13 @@ If the partner is a SI (Service Implementer) developing integrations for clients
 
 ### 1. Implementing the protocol
 
-Before setting up the VTEX environment, the provider must implement the back-end service required to process the antifraud services (API). For more information, access the [Antifraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol).
+Before setting up the VTEX environment, the provider must implement the back-end service required to process the anti-fraud services (API). For more information, access the [Anti-fraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol).
 
-> ⚠️ You can also access our [template on GitHub](https://github.com/vtex-apps/antifraud-provider-example) to help you quickly develop your anti-fraud connector using the Antifraud Provider Protocol and VTEX IO.
+> ⚠️ You can also access our [template on GitHub](https://github.com/vtex-apps/antifraud-provider-example) to help you quickly develop your anti-fraud connector using the Anti-fraud Provider Protocol and VTEX IO.
 
-### 2. Install the Antifraud Provider Tester App
+### 2. Install the Anti-fraud Provider Tester App
 
-After receiving the access data and deploying the backend, the provider can access the approval tool through VTEX Admin. If you still do not have the Antifraud Provider Tester App installed in your store, you need to follow these steps:
+After receiving the access data and deploying the backend, the provider can access the approval tool through VTEX Admin. If you still do not have the Anti-fraud Provider Tester App installed in your store, you need to follow these steps:
 
 1. In the VTEX Admin, go to **Apps > Apps Store**.
 2. Type **Antifraud Provider** in the search bar at the bottom of the page and click on `Install`.
@@ -59,14 +58,14 @@ With the app installed, go to **Apps > Installed Apps** and click on **Antifraud
 
 ### 3. Initial settings
 
-In the Antifraud Provider Tester app environment, fill in the fields as indicated below:
+In the Anti-fraud Provider Tester app environment, fill in the fields as indicated below:
 
 - **Connector Name**: name you want to give to your connector within VTEX.
 - **Service URL**: URL of your provider service. This URL will be the base address of the protocol and must follow the format determined by it. For example, if the service URL is `http://10.10.10.10`, the full URL for the endpoint *transactions* will be `http://10.10.10.10/transactions`.
 - **Application Key**: "X-PROVIDER-API-AppKey" value of your provider's request header for testing purposes.
 - **Application Token**: "X-PROVIDER-API-AppToken" value of your provider's request header for testing purposes.
 
-![Antifraud test suite](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-2_53.png)
+![Anti-fraud test suite](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-2_53.png)
 
 > ⚠️ It is important to remember that all HTTPS communication should run exclusively on TLS 1.2. Your provider must be prepared to receive two headers (**X-PROVIDER-API-AppKey** and **X-PROVIDER-API-AppToken**), as this combination is used to identify a merchant. All settings that need to be made by the merchant should persist in your provider. The only configuration that VTEX saves about merchants is the combination of X-PROVIDER-API-AppKey and X-PROVIDER-API-AppToken credentials.
 
@@ -74,44 +73,44 @@ After completing the fields correctly, the system will check the approved transa
 
 ### 4. Testing
 
-To ensure the correct operation of the antifraud, a series of tests are necessary. You can choose how many tests you want to run at a time. However, for your integration to be analyzed by the VTEX team, **all tests must have been performed and approved**. See below the description of each test:
+To ensure the correct operation of the anti-fraud, a series of tests are necessary. You can choose how many tests you want to run at a time. However, for your integration to be analyzed by the VTEX team, **all tests must have been performed and approved**. See below the description of each test:
 
 - **Authorize**: test performed in two steps.
 
-  - A [Send Antifraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
-  - A [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `approved`.
+  - A [Send Anti-fraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
+  - A [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `approved`.
 - **Denied**: test performed in two steps.
 
-  - A [Send Antifraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
-  - A [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `denied`.
+  - A [Send Anti-fraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
+  - A [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `denied`.
 - **AsyncApproved**: test performed in three steps.
 
-  - A [Send Antifraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
-  - A [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `undefined`.
-  - After 10 seconds, a [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the first step, is sent again. The expected value for `status` in the response body is `approved`.
+  - A [Send Anti-fraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
+  - A [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `undefined`.
+  - After 10 seconds, a [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the first step, is sent again. The expected value for `status` in the response body is `approved`.
 - **AsyncDenied**: test performed in three steps.
 
-  - A [Send Antifraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
-  - A [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `undefined`.
-  - After 10 seconds, a [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the first step, is sent again. The expected value for `status` in the response body is `denied`.
+  - A [Send Anti-fraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
+  - A [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `undefined`.
+  - After 10 seconds, a [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the first step, is sent again. The expected value for `status` in the response body is `denied`.
 - **HookApproved**: test performed in four steps.
 
-  - A [Send Antifraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
-  - A [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `undefined`.
-  - Afterwards, 10 seconds is waited for the antifraud provider to POST the URL sent in the *hook* field of the first step (the POST content should contain the response obtained in that same step).
-  - A [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the first step, is sent again. The expected value for `status` in the response body is `approved`.
+  - A [Send Anti-fraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
+  - A [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `undefined`.
+  - Afterwards, 10 seconds is waited for the anti-fraud provider to POST the URL sent in the *hook* field of the first step (the POST content should contain the response obtained in that same step).
+  - A [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the first step, is sent again. The expected value for `status` in the response body is `approved`.
 - **HookDenied**: test performed in four steps.
 
-  - A [Send Antifraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
-  - A [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `undefined`.
-  - Afterwards, 10 seconds is waited for the antifraud provider to POST the URL sent in the *hook* field of the first step (the POST content should contain the response obtained in that same step).
-  - A [Get Antifraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the first step, is sent again. The expected value for `status` in the response body is `denied`.
+  - A [Send Anti-fraud Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) request (`{{ServiceURL}}/transactions`) is sent. The expected value for `status` in the response body is `received`.
+  - A [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the previous step, is sent. The expected value for `status` in the response body is `undefined`.
+  - Afterwards, 10 seconds is waited for the anti-fraud provider to POST the URL sent in the *hook* field of the first step (the POST content should contain the response obtained in that same step).
+  - A [Get Anti-fraud Status](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-) request (`{{ServiceURL}}/transactions/transactionId`), with the Transaction ID generated in the first step, is sent again. The expected value for `status` in the response body is `denied`.
 
-When you click the **RUN TESTS** button, the Antifraud Provider Tester App will apply the selected tests in your integration to the different possible scenarios. To run them your service must be in HTTPS.
+When you click the **RUN TESTS** button, the Anti-fraud Provider Tester App will apply the selected tests in your integration to the different possible scenarios. To run them your service must be in HTTPS.
 
 ![Antifraud test suite2](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-3_75.png)
 
-For each Antifraud Provider Protocol test, we send a specific ID end to return the expected response. They are:
+For each Anti-fraud Provider Protocol test, we send a specific ID end to return the expected response. They are:
 
 - **Authorize**: ID with end 1.
 - **Denied**: ID with end 2.
@@ -145,32 +144,32 @@ The SLA required for the VTEX payments team to carry out the homologation is 30 
 
 ## VTEX Credentials
 
-When calling `CallbackURL`, you must specify the authentication headers, which in VTEX are **X-VTEX-API-AppKey** and **X-VTEX-API-AppToken**. You can find these credentials in VTEX License Manager. These credentials are used by the Antifraud Provider only.
+When calling `CallbackURL`, you must specify the authentication headers, which in VTEX are **X-VTEX-API-AppKey** and **X-VTEX-API-AppToken**. You can find these credentials in VTEX License Manager. These credentials are used by the Anti-fraud Provider only.
 
 Use the `https://{{AccountName}}.myvtex.com/admin/license-manager/#/home` URL, replacing `{{AccountName}}` with your account name. Then follow the instructions of [this tutorial](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) to learn how to create appKeys and appTokens on our platform.
 
 ## Settings in VTEX stores
 
-Once the integration with your antifraud is approved, a connector will be made available for VTEX merchants to configure it on their respective stores. To do this, in addition to the contract with your company, the store will need two keys in hand: "X-PROVIDER-API-AppKey" and "X-PROVIDER-API-AppToken".
+Once the integration with your anti-fraud is approved, a connector will be made available for VTEX merchants to configure it on their respective stores. To do this, in addition to the contract with your company, the store will need two keys in hand: "X-PROVIDER-API-AppKey" and "X-PROVIDER-API-AppToken".
 
-An example of how the antifraud settings screen will look for the VTEX store:
+An example of how the anti-fraud settings screen will look for the VTEX store:
  
 ![gateway affiliations screen](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-6_138.png)
  
-These keys should be made available by you and will serve to identify the store that hired and is using your antifraud service.
+These keys should be made available by you and will serve to identify the store that hired and is using your anti-fraud service.
 
 ## Cardholder Document Configuration
 
 During payment transactions analysis, some anti-fraud providers may choose not to use additional information such as the cardholder’s personal identification. In these cases, the merchant has the autonomy to decide whether or not to request this document from his customer during the checkout procedure.
 
-> ⚠️ The configuration option **Cardholder document field** will only be available to the merchant if the antifraud provider declares in its [manifest](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/manifest), the cardholder document field (`cardholderDocument`) as `optional`. Learn more at [Cardholder Document Configuration](https://developers.vtex.com/docs/guides/cardholder-document-configuration).
+> ⚠️ The configuration option **Cardholder document field** will only be available to the merchant if the anti-fraud provider declares in its [manifest](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/manifest), the cardholder document field (`cardholderDocument`) as `optional`. Learn more at [Cardholder Document Configuration](https://developers.vtex.com/docs/guides/cardholder-document-configuration).
 
 To set up the cardholder document field, follow the steps below:
 
 1. In the VTEX Admin, go to **Store Settings > Payments > Settings**, or type **Settings** in the search bar at the top of the page.
 2. In the **Gateway affiliations** tab, click on the `+` button.
-3. Select the antifraud provider you wish to use.
-4. On the antifraud configuration screen, fill in the requested information.
+3. Select the anti-fraud provider you wish to use.
+4. On the anti-fraud configuration screen, fill in the requested information.
 5. In **Cardholder document field**, select one of the following options:
 
    - **Display as a required field**: the field will be displayed at checkout with the information “required”, and the customer must fill in the cardholder information to complete the order.

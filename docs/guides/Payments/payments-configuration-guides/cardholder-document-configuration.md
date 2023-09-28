@@ -20,7 +20,7 @@ To allow each anti-fraud provider and merchant to have the autonomy to decide wh
 [/block]
 The procedures below demonstrate how to configure anti-fraud providers via PPP.
 
-## Configuring cardholder document field - Antifraud Provider (PPP)
+## Configuring cardholder document field - Anti-fraud Provider (PPP)
 
 To configure the cardholder document field, follow the steps below:
 

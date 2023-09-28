@@ -69,15 +69,15 @@ You can view all the affiliations natively connected to VTEX through your VTEX A
 
 >⚠️The full list of affiliations is only visible through the VTEX Admin, by following the steps above from steps 1-4. Once you choose the affiliation that will be implemented, you can use our [Insert affiliation](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/affiliations) endpoint to configure it to your account, instead of following steps 5-7. You can check all affiliations implemented to your store through the [Get Affiliations](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/affiliations) endpoint.
 
-#### Set up Payment Conditions and Antifraud
+#### Set up Payment Conditions and Anti-fraud
 
-To finalize Payment settings on the seller's side, it is necessary to set up Payment Conditions, or Rules, and an Antifraud for transactions.
+To finalize Payment settings on the seller's side, it is necessary to set up Payment Conditions, or Rules, and an Anti-fraud for transactions.
 
 It is possible to setup payment conditions through your gateway account’s VTEX Admin.  Check [Set up  the payment options](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions) to know how.
 
 If you wish to realize this step through API calls, use [Get Rules](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/rules) > [Insert Rule](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/rules) calls.
 
-The Antifraud can be set up  through your gateway account’s VTEX Admin.  Check [Set up the Antifraud](https://help.vtex.com/tutorial/how-to-configure-the-anti-fraud--tutorials_446) to know how.
+The Anti-fraud can be set up  through your gateway account’s VTEX Admin.  Check [Set up the Anti-fraud](https://help.vtex.com/tutorial/how-to-configure-the-anti-fraud--tutorials_446) to know how.
 
 To configure it through API, fill in the `antifraud` object in the [Insert Rule](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/rules) endpoint.
 
