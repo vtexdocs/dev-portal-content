@@ -8,9 +8,9 @@ updatedAt: "2022-09-29T21:05:13.444Z"
 
 > **Help us improve our documentation!** Tell us about your experience with this article by completing [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
 
-## Developing an antifraud integration
+## Developing an anti-fraud integration
 
-Antifraud solutions play a crucial role in ensuring secure payment transactions by performing risk analysis. VTEX offers integration capabilities for antifraud systems through the [Antifraud Provider Protocol](https://help.vtex.com/en/tutorial/antifraud-provider--4aZtmdpgFikcsQomWyqAOq). This protocol is an agreement between VTEX and providers, defining a set of rules that have to be implemented by the providers in their integrations. The integrations must include a set of endpoints defined in our [Antifraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#overview).
+Anti-fraud solutions play a crucial role in ensuring secure payment transactions by performing risk analysis. VTEX offers integration capabilities for anti-fraud systems through the [Anti-fraud Provider Protocol](https://help.vtex.com/en/tutorial/antifraud-provider--4aZtmdpgFikcsQomWyqAOq). This protocol is an agreement between VTEX and providers, defining a set of rules that have to be implemented by the providers in their integrations. The integrations must include a set of endpoints defined in our [Anti-fraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#overview).
 
 ## Developing a gift card integration
 

@@ -8,4 +8,4 @@ excerpt: "New anti-fraud flow available for debit card transactions."
 ---
 Starting on July 1st, 2023, debit card transactions at VTEX stores can be processed with an extra layer of protection (pre-analysis anti-fraud). Through this new flow, you can offer greater security to your customers in transactions made by debit cards.
 
-To learn how to apply this new layer of security, read [Implementing a pre-analysis antifraud flow for debit card transactions](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions).
+To learn how to apply this new layer of security, read [Implementing a pre-analysis anti-fraud flow for debit card transactions](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions).
