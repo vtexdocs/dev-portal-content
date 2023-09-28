@@ -73,7 +73,7 @@ You can view all the affiliations natively connected to VTEX through your VTEX A
 
 To finalize Payment settings on the seller's side, it is necessary to set up Payment Conditions, or Rules, and an Anti-fraud for transactions.
 
-It is possible to setup payment conditions through your gateway account’s VTEX Admin.  Check [Set up  the payment options](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions) to know how.
+It is possible to set up payment conditions through your gateway account’s VTEX Admin.  Check [Set up  the payment options](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions) to know how.
 
 If you wish to realize this step through API calls, use [Get Rules](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/rules) > [Insert Rule](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/rules) calls.
 
