@@ -36,7 +36,6 @@ This is an example on how to use it:
     mutedClassName: PropTypes.string,
   }
   export default IconSearch
-
  ```
 
 ## SVG Prefixes
