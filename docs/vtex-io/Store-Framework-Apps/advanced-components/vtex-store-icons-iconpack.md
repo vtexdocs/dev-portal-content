@@ -66,8 +66,8 @@ The following prefixes help to understand what a specific icon means.
 | ![hpa-delete](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-delete.svg)  | hpa-delete |
 | ![hpa-hamburguer-menu](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-hamburguer-menu.svg)  | hpa-hamburguer-menu |
 | ![hpa-location-marker](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-location-marker.svg)  | hpa-location-marker |
-| ![hpa-play](https://github.com/vtex-apps/store-icons/blob/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-play.svg)  | hpa-play |
-| ![hpa-profile](https://github.com/vtex-apps/store-icons/blob/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-profile.svg)  | hpa-profile |
+| ![hpa-play](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-play.svg)  | hpa-play |
+| ![hpa-profile](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-profile.svg)  | hpa-profile |
 | ![hpa-save](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-save.svg)  | hpa-save |
 | ![hpa-search](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-search.svg)  | hpa-search |
 | ![hpa-telemarketing](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-telemarketing.svg)  | hpa-telemarketing |
