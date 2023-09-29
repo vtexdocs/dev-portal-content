@@ -46,7 +46,7 @@ The following prefixes help to understand what a specific icon means.
 | ------ | ------- |
 |  bnd   | Brand                  |
 |  hpa   | High Priority Actions  |
-|  mpa   | Midle Priority Actions |
+|  mpa   | Middle Priority Actions |
 |  sti   | Status Indicator       |
 |  inf   | Informative            |
 |   nav  | Navigation             |
@@ -95,10 +95,10 @@ The following prefixes help to understand what a specific icon means.
 | ![mpa-exchange](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-exchange.svg)  | mpa-exchange |
 | ![mpa-export](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-export.svg)  | mpa-export |
 | ![mpa-external-link](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-external-link--line.svg)  | mpa-external-link--line |
-| ![mpa-external-link-outline](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-external-link--outline.svg)  | mpa-external-link--outline |
+| ![mpa-external-link-outline](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-external-link--outline.svg) |mpa-external-link--outline |
 | ![eyesight--filled--off](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-eyesight--filled--off.svg)  | mpa-eyesight--filled--off |
 | ![eyesight--filled--on](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-eyesight--filled--on.svg)  | mpa-eyesight--filled--on |
-| ![eyesight--outline--off](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-eyesight--outline--off.svg)  | mpa-eyesight--outline--off |
+| ![eyesight--outline--off](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-eyesight--outline--off.svg) |mpa-eyesight--outline--off |
 | ![eyesight--outline--on](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-eyesight--outline--on.svg)  | mpa-eyesight--outline--on |
 | ![mpa-filter--filled](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-filter--filled.svg)  | mpa-filter--filled |
 | ![filter--outline](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-filter--outline.svg)  | mpa-filter--outline |
