@@ -40,7 +40,7 @@ This is an example on how to use it:
 
 ## SVG Prefixes
 
-The following prefixes help to understand what a specific icon means.
+The following prefixes help in understanding the meaning of a specific icon.
 
 | Prefix | Meaning |
 | ------ | ------- |
