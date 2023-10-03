@@ -2,8 +2,8 @@
 title: "Apps and payment connector homologation freeze in preparation for Black Friday 2023"
 slug: "apps-and-payment-connector-homologation-freeze-in-preparation-for-black-friday-2023"
 type: "improved"
-createdAt: "2022-09-20T16:00:00.661Z"
-updatedAt: "2022-09-20T16:00:00.661Z"
+createdAt: "2023-09-20T16:00:00.661Z"
+updatedAt: "2023-09-20T16:00:00.661Z"
 hidden: false
 excerpt: "A homologation freeze is a behavior adopted by VTEX in the period before Black Friday to ensure that our platform no longer performs updates, entering a security mode, which allows greater resilience, reliability, and stability for our customers' businesses."
 ---
