@@ -6,7 +6,7 @@ createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"
 seeAlso:
  - "app-authentication-using-auth-tokens"
- - "user-authentication-and-login"
+ - "api-authentication-using-user-tokens"
  - "https://help.vtex.com/en/tutorial/best-practices-application-keys--7b6nD1VMHa49aI5brlOvJm"
 ---
 
@@ -16,7 +16,7 @@ An application key includes specific permissions, based on License Manager [role
 
 Each `appKey` you create has an associated `appToken`. The appKey-appToken pair can be used in API requests to authorize interactions with VTEX services if they have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) with the required [resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3?&utm_source=autocomplete).
 
-Application keys are usually the best way to authenticate API calls in your integrations or in self-hosted backend requests in general. However, frontend requests should be authenticated with [user tokens](https://developers.vtex.com/docs/guides/user-authentication-and-login).
+Application keys are usually the best way to authenticate API calls in your integrations or in self-hosted backend requests in general. However, frontend requests should be authenticated with [user tokens](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens).
 
 >❗ Do not use application keys in your client-side code. This makes your store vulnerable to attacks. Follow the [Best practices for using application keys](https://help.vtex.com/en/tutorial/best-practices-application-keys--7b6nD1VMHa49aI5brlOvJm#never-use-client-side-code-for-integrations).
 

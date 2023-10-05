@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-08-04T22:00:24.684Z"
 updatedAt: "2022-08-04T22:08:52.246Z"
 seeAlso:
- - "user-authentication-and-login"
+ - "api-authentication-using-user-tokens"
 ---
 When a user logs into your store, cookies that store the authorization token are created. From this moment, any request to VTEX servers will load these cookies automatically, identifying the user responsible for the action.
 

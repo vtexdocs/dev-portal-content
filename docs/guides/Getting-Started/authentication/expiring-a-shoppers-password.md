@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2023-05-24T22:18:24.684Z"
 updatedAt: "2023-05-24T22:18:24.684Z"
 seeAlso:
- - "user-authentication-and-login"
+ - "api-authentication-using-user-tokens"
 ---
 
 You can use the VTEX ID API to expire a shopper's password. This means they will not be able to login until they create a new password on your website.
