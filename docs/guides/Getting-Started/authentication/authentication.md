@@ -6,23 +6,32 @@ createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"
 seeAlso:
  - "api-authentication-using-application-keys"
+ - "api-authentication-using-user-tokens"
  - "app-authentication-using-auth-tokens"
- - "user-authentication-and-login"
 ---
 Authentication is a crucial aspect of API integrations, backend, and frontend app development. It ensures authorized access by requiring valid credentials like API keys or tokens. This shields sensitive data, prevents breaches, and builds user trust. Get started with VTEX authentication for developers with the following guides:
 
 - [API authentication using application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys)
+- [API authentication using user tokens](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens)
 - [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens)
-- [User authentication and login](https://developers.vtex.com/docs/guides/user-authentication-and-login)
 
 There are different contexts in which authentication is required in the regular functioning of a VTEX store. Below are some example use cases and the recommended authentication methods.
 
 | **Use case** | **Indicated authentication methods** |
 | ----- | ----- |
-| Backend VTEX IO app | [User token](https://developers.vtex.com/docs/guides/user-authentication-and-login) via VTEX IO context, or, if needed, [app authentication token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) via VTEX IO context |
-| Frontend VTEX IO app | [User token](https://developers.vtex.com/docs/guides/user-authentication-and-login) via VTEX IO context |
+| Backend VTEX IO app | [User token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) via VTEX IO context, or, if needed, [app authentication token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) via VTEX IO context |
+| Frontend VTEX IO app | [User token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) via VTEX IO context |
 | Self-hosted backend request to VTEX APIs | [Application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys) |
-| Self-hosted frontend request to VTEX APIs | [User token](https://developers.vtex.com/docs/guides/user-authentication-and-login) |
+| Self-hosted frontend request to VTEX APIs | [User token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) |
+
+## Single sign on integrations
+
+VTEX allows stores to integrate with external identity providers to provide single sign on (SSO) experiences to shoppers and Administrative users. You can learn more about this in the article [Login (SSO)](https://developers.vtex.com/vtex-rest-api/docs/login-integration-guide) and below you can find more information on these and other SSO use cases:
+
+* [Store SSO with OAuth 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2)
+* [Admin SSO with SAML 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-admin-saml2)
+* [Use your VTEX account as an OAuth provider](https://developers.vtex.com/docs/apps/vtex.oauth-provider-admin@2.x)
+* [Unifying login for different accounts](https://developers.vtex.com/vtex-rest-api/docs/unifying-login-for-different-accounts)
 
 ## Learn more
 
