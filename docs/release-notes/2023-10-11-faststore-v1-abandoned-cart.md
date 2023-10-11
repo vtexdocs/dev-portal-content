@@ -55,7 +55,7 @@ After syncing the changes, you can test the solution by checking the information
 - **Check if `VTEX_METADATA` has been defined:**
 
   1. Access the provided localhost URL in your browser.
-  2. Open the Dev Tools terminal, go to the **Console** tab, and check if the `window.VTEX_METADATA` is defined in the console.
+  2. Open the Dev Tools terminal, go to the **Console** tab, and check if the `window.VTEX_METADATA` is defined in the console, as illustrated in the image below.
 
   ![console-object](https://vtexhelp.vtexassets.com/assets/docs/src/console-vtex-metadata___f1d9f78c17949decc87f22266ac3285d.gif)
 
