@@ -50,7 +50,7 @@ Stores using [FastStore v1](https://v1.faststore.dev/) must define the `VTEX_MET
 
 3. In the terminal, run `yarn dev` to sync the changes.
 
-After syncing the changes, you can verify if the `VTEX_METADATA` has been defined and if the data captured by Return Customer (RC) is updating the records in Master Data.
+After syncing the changes, you can test the solution by checking the information in the following topics:
 
 - **Check the `VTEX_METADATA`**
   1. Access the provided localhost URL in your browser.
