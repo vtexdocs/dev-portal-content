@@ -59,6 +59,6 @@ After syncing the changes, you can test the solution by checking the information
 
   ![console-object](https://vtexhelp.vtexassets.com/assets/docs/src/console-vtex-metadata___f1d9f78c17949decc87f22266ac3285d.gif)
 
-- **Check if the data captured by Return Customer (RC) is updating the records in Master Data**
+- **Check if the data captured by Return Customer (RC) is updating the records in Master Data:**
 
-To check, refer to the topic [Is the data captured by RC updating the records in Master Data?](https://help.vtex.com/en/tutorial/configurando-carrinho-abandonado--tutorials_740?locale=pt#is-the-data-captured-by-rc-updating-the-records-in-master-data).
+   Refer to the topic [Is the data captured by RC updating the records in Master Data?](https://help.vtex.com/en/tutorial/setting-up-abandoned-carts--tutorials_740#is-the-data-captured-by-rc-updating-the-records-in-master-data).
