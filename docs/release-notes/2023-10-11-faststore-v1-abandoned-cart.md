@@ -56,7 +56,7 @@ After syncing the changes, you can verify if the `VTEX_METADATA` has been define
   1. Access the provided localhost URL in your browser.
   2. Open the Dev Tools terminal, go to the **Console** tab, and check if the `window.VTEX_METADATA` is defined in the console.
 
-![console-object](https://vtexhelp.vtexassets.com/assets/docs/src/console-vtex-metadata___f1d9f78c17949decc87f22266ac3285d.png)
+![console-object](https://vtexhelp.vtexassets.com/assets/docs/src/console-vtex-metadata___f1d9f78c17949decc87f22266ac3285d.gif)
 
 - **Check if the data captured by Return Customer (RC) is updating the records in Master Data**
 
