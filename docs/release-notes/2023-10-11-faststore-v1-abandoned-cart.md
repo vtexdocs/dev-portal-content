@@ -52,7 +52,8 @@ Stores using [FastStore v1](https://v1.faststore.dev/) must define the `VTEX_MET
 
 After syncing the changes, you can test the solution by checking the information in the following topics:
 
-- **Check the `VTEX_METADATA`**
+- **Check if `VTEX_METADATA` has been defined:**
+
   1. Access the provided localhost URL in your browser.
   2. Open the Dev Tools terminal, go to the **Console** tab, and check if the `window.VTEX_METADATA` is defined in the console.
 
