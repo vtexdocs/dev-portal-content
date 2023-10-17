@@ -10,22 +10,27 @@ updatedAt: "2022-07-28T21:27:21.269Z"
 
 To render an app in VTable you must follow these steps:
 
-1. [Create a JSON schema](#1-creating-a-json-schema)
-2. [Build the app schema](#2-building-the-app-schema)
-3. [Validate the app schema](#3-validating-the-app-schema)
-4. [Save the app schema to Master Data](#4-saving-the-app-schema-to-master-data)
+- [Step by step](#step-by-step)
+  - [Step 1 - Creating a JSON schema](#step-1---creating-a-json-schema)
+  - [Step 2 - Building the app schema](#step-2---building-the-app-schema)
+  - [Step 3 - Validating the app schema](#step-3---validating-the-app-schema)
+  - [Step 4 - Saving the app schema to Master Data](#step-4---saving-the-app-schema-to-master-data)
+- [JSON schema configurations](#json-schema-configurations)
 
 Below you can also learn more about all necessary [JSON schema configurations](#json-schema-configurations).
 
-## 1. Creating a JSON schema
+## Step by step
 
-First, make sure you have a [data entity](https://developers.vtex.com/docs/guides/master-data-components#data-entity) and a [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema) associated with it to store data in a specific format.
+### Step 1 - Creating a JSON schema
+
+First, create a [data entity](https://developers.vtex.com/docs/guides/master-data-components#data-entity) and a [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema) associated with it to store data in a specific format.
 
 You can create it with the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint. Use your JSON schema as a request body, as exemplified below.
 
 Check the [JSON schema configurations](#json-schema-configurations) section to learn how to configure each field for your specific needs.
 
-### Example JSON schema (request body)
+<details>
+<summary>Example JSON schema (request body)</summary>
 
 ```json
 [
@@ -64,8 +69,9 @@ Check the [JSON schema configurations](#json-schema-configurations) section to l
     }
 ]
 ```
+</details>
 
-## 2. Building the app schema
+### Step 2 - Building the app schema
 
 To create a VTable app, you must define a schema that specifies the data VTable will use to render a table.
 
@@ -75,7 +81,8 @@ For now, start with the [Example app schema](#example-app-schema) and edit it ac
 
 You will validate your app schema's structure in the following step.
 
-### VTable app objects schema
+<details>
+<summary>VTable app objects schema</summary>
 
 ```json
 {
@@ -214,7 +221,10 @@ You will validate your app schema's structure in the following step.
 }
 ```
 
-### Example app schema
+</details>
+
+<details>
+<summary>Example app schema</summary>
 
 ```json
 {
@@ -261,6 +271,8 @@ You will validate your app schema's structure in the following step.
 }
 ```
 
+</details>
+
 You can use this example app schema as a foundation to create your own app. Check the meaning of fields in the example app schema:
 
 | Field | Type | Description |
@@ -288,11 +300,11 @@ You can use this example app schema as a foundation to create your own app. Chec
 
 Read the [JSON schema configurations](#json-schema-configurations) section to learn how to configure each field for your specific needs.
 
-## 3. Validating the app schema
+### Step 3 - Validating the app schema
 
 To validate your app schema, use a tool such as [JSON Schema Validator](https://www.jsonschemavalidator.net/), which allows you to paste the code from [VTable app objects schema](#vtable-app-objects-schema) and the code from your app schema created in [step 2](#2-building-the-app-schema) to check if the structure of your app schema is valid.
 
-## 4. Saving the app schema to Master Data
+### Step 4 - Saving the app schema to Master Data
 
 To save the app schema to Master Data, send a `PUT` request to the [Create document with custom ID](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-) endpoint, adding your app schema as the request body and filling the URL with the information below:
 
@@ -306,9 +318,10 @@ After that, you will be able to access the app data in VTable at `https://{accou
 
 VTable parses the JSON Schema configuration and each field to a corresponding UI component. These are some examples of possible configurations:
 
-### Checkbox
+<details>
+<summary>Checkbox</summary>
 
-To render a checkbox the field must have type **boolean**.
+Set the value of the `type` field as `boolean` to render a checkbox.
 
 ```json
 "approved": {
@@ -317,9 +330,12 @@ To render a checkbox the field must have type **boolean**.
 }
 ```
 
-### DropDown
+</details>
 
-To render a DropDown the field must have the **enum** keyword.
+<details>
+<summary>Dropdown</summary>
+
+Add the **enum** property to render dropdown options.
 
 ```json
 "gender": {
@@ -331,9 +347,12 @@ To render a DropDown the field must have the **enum** keyword.
 }
 ```
 
-### DatePicker
+</details>
 
-To render a `DatePicker` the field must have the property `format` with the value `date-time`.
+<details>
+<summary>DatePicker</summary>
+
+Add the `format` property with the value `date-time` to render a date picker.
 
 ```json
 "birthdate":{
@@ -342,38 +361,54 @@ To render a `DatePicker` the field must have the property `format` with the valu
 }
 ```
 
-### TextArea
+</details>
 
-To render a `TextArea` the field must have the type `string` and the property `multiline` with the value `true` in the app configuration.
+<details>
+<summary>TextArea</summary>
+
+Add the type `string` and the property `multiline` set to `true` in the app configuration to render a `TextArea` field.
+
+**JSON Schema configuration:**
 
 ```json
-// JSON Schema configuration
 "lastName":{
    "type":"string",
    "title":"LastName",
    "maxLenght":250
-},
-// APP configuration
+}
+```
+
+**App configuration:**
+
+```json
 "lastName":{
    "width":300,
    "multiLine":true
 }
 ```
 
-### Link
+</details>
+
+<details>
+<summary>Link</summary>
 
 The `LinkControl` represents the reference of one data entity to another data entity. To render the `LinkControl` set the properties `link` and `linked_field` where the value of `link` is the link to the referenced schema and the value of `linked_field` is the field that will be referenced.
 
 The `LinkControl` lets you navigate between the related tables. For that, you need to set the properties `relatedApp` and `relatedTable` in the app configuration.
 
+**JSON Schema configuration:**
+
 ```json
-// JSON Schema Configuration
 "user":{
    "type":"string",
    "link":"http://api.vtex.com/{accountName}/dataentities/users/schemas/user-v1",
    "linked_field":"email"
 }
-// APP Configuration
+```
+
+**App configuration:**
+
+```json
 "user":{
    "width":300,
    "relatedApp":"users",
@@ -381,31 +416,41 @@ The `LinkControl` lets you navigate between the related tables. For that, you ne
 }
 ```
 
-### TextBox
+</details>
 
-To render a TextBox the field must be a `string`, `number`, or `integer`. All properties of the JSON Schema that are used to validate the field (e.g., `pattern`, `minLength`, `maxLength`) will be used by VTable to validate the value of the field.
+<details>
+<summary>TextBox</summary>
 
-You can add a **mask** to the field in the APP configuration.
+Add a `string`, `number`, or `integer` to render a `TextBox`. All properties of the JSON Schema that are used to validate the field (e.g., `pattern`, `minLength`, `maxLength`) will be used by VTable to validate the value of the field.
+
+You can add a mask to the field in the app configuration to require a specific value format.
+
+**JSON Schema configuration:**
 
 ```json
-// JSON Schema
 "phone":{
    "type":"string",
-   "maxLenght":100,
+   "maxLength":100,
    "title":"Phone",
    "pattern":"[0-9]{10,11}"
 }
+```
 
-// APP Configuration
+**App configuration:**
+
+```json
 "phone":{
    "width":200,
    "mask":"(99) 99999-9999"
-},
+}
 ```
 
-### MultiOptions
+</details>
 
-To render a `MultiOptions` control, set the field type to `array` and each item must be a `string`. Also, each item must contain the `enum` property, which is an array with the possible strings for that field.
+<details>
+<summary>MultiOptions</summary>
+
+Set the field type to `array` and define that each item must be a `string` to render a `MultiOptions` control. Each item must contain the `enum` property, which is an array with the possible strings for that field.
 
 ```json
 "nationality":{
@@ -424,7 +469,10 @@ To render a `MultiOptions` control, set the field type to `array` and each item 
 },
 ```
 
-### ArrayControl
+</details>
+
+<details>
+<summary>ArrayControl</summary>
 
 If the field type is `array` and the field schema does not match a special case, VTable will use `ArrayControl`.
 
@@ -452,9 +500,12 @@ If the field type is `array` and the field schema does not match a special case,
 }
 ```
 
-### ObjectControl
+</details>
 
-To render an `ObjectControl`, set the field type to **object**. The `ObjectControl` is recursive, so it can hold another object as a property.
+<details>
+<summary>ObjectControl</summary>
+
+Set the field type to `object` to render an `ObjectControl` field. The `ObjectControl` field is recursive, so it can hold another object as a property.
 
 ```json
 "complex":{
@@ -495,4 +546,7 @@ To render an `ObjectControl`, set the field type to **object**. The `ObjectContr
 }
 ```
 
+</details>
+
 > To learn more, check the [Master Data v2 API documentation](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview).
+> 
