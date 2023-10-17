@@ -6,7 +6,7 @@ createdAt: "2022-07-28T20:39:04.566Z"
 updatedAt: "2022-07-28T21:27:21.269Z"
 ---
 
- VTable is a flexible and dynamic user interface designed to handle data from Master Data v2 directly from VTEX Admin. It allows you to create custom applications for managing and visualizing data efficiently, using [JSON schemas](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
+ VTable is a dynamic user interface designed to handle data from Master Data v2 directly from VTEX Admin. It allows you to create custom applications for managing and visualizing data efficiently, using [JSON schemas](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
 
 To render an app in VTable you must follow these steps:
 
