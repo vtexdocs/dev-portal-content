@@ -1,0 +1,217 @@
+---
+title: "2. Handling and receiving events"
+slug: "services-2-handling-and-receiving-events"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+Some interactions on VTEX IO can generate events and they can be used as triggers for actions. For example, an app that listens for order placements and triggers a confirmation email. In this guide, we will fire events from the [events-example](https://github.com/vtex-apps/events-example), then make the [service-course-template](https://github.com/vtex-trainings/service-course-template) app listen to these events and handle them.
+
+>⚠️ Events are _workspace and account bound_, which means that events are only visible for the account and workspace where they were fired. Events fired on your personal workspace will only be listened to by apps linked on this same workspace.
+
+>✅ **Tip:** To navigate through this article and explore specific topics, click the steps below. Relevant code will be highlighted and focused for your convenience.
+
+## Step-by-step
+
+Follow the steps below to start communication between apps:
+
+1. Clone the `events-example` app by running the following command:
+
+    ```shell
+    git clone https://github.com/vtex-apps/events-example
+    ```
+2. Log into your VTEX account and the desired workspace using the terminal.
+  
+3. Run `vtex link` in the `events-example` directory.
+
+   >⚠️ If you don't clone the `events-example` app as instructed in step 1, the boilerplate app will not be successfully linked, as the `events-example` app is listed as a dependency.
+
+   After running `vtex link` on the `events-example` app, the terminal should show a healthcheck route that will be used later. It looks like this:
+
+   ![image](https://user-images.githubusercontent.com/43679629/83797811-91777480-a679-11ea-9bc9-9d32ace321d7.png)
+4. Click on the healthcheck route illustrated in the previous step and an `ok` message should appear on the browser.
+
+   This healthcheck route access creates a cache context needed for the VTEX IO to fire events. Without it, the `events-example` app won't be able to fire the events our app is going to listen to.
+
+<CH.Scrollycoding>
+
+3. Add the event handler on the `Service` declaration to refer to what the app is supposed to do when listening to the event. To do so, in `service-course-template`, on the `/node/index.ts` file, complement the `Service` declaration with the highlighted lines.
+
+   Going by each configuration, we have the following:
+
+   | Field | Type    | Description |
+   | - | - | - |
+   | `exponentialTimeoutCoefficient` | Integer | Exponential factor by which the `timeout` will increase in each retry, in seconds. |
+   | `exponentialBackoffCoefficient` | Integer | Exponential factor by which the `backoff delay` will increase in each retry, in seconds. |
+   | `initialBackoffDelay` | Integer | Time the app will wait until the next retry, in seconds. |
+   | `retries` | Integer | Maximum times the app will retry. |
+   | `timeout` | Integer | Timeout until the attempt is considered a failure, in seconds. |
+   | `concurrency` | Integer | Amount of simultaneous processes the event is able to perform. |
+
+   By adding this code to the `Service`, we are adding to the `Client` of this `Service`, the capability to handle events. At this point, we are not yet using the `Client` itself when handling the event.
+
+```typescript service-course-template/node/index.ts focus=25:26,36:43 
+import {
+  LRUCache,
+  Service,
+  ServiceContext,
+  ParamsContext,
+  RecorderState,
+  method,
+} from '@vtex/api'
+import { Clients } from './clients'
+import { analytics } from './handlers/analytics'
+
+// Create a LRU memory cache for the Status client.
+// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
+const memoryCache = new LRUCache<string, any>({ max: 5000 })
+metrics.trackCache('status', memoryCache)
+
+declare global {
+  type Context = ServiceContext<Clients, State>
+
+  interface State extends RecorderState {
+    code: number
+  }
+}
+
+const THREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
+
+export default new Service<Clients, State, ParamsContext>({
+  clients: {
+    implementation: Clients,
+    options: {
+      default: {
+        retries: 2,
+        timeout: 10000,
+      },
+      events: {
+        exponentialTimeoutCoefficient: 2,
+        exponentialBackoffCoefficient: 2,
+        initialBackoffDelay: 50,
+        retries: 1,
+        timeout: THREE_SECONDS_MS,
+        concurrency: CONCURRENCY,
+      },
+    },
+  },
+},
+  routes: {
+  analytics: method({
+    GET: [analytics],
+  }),
+})
+```
+
+---
+
+5. For now, we are only going to create a log when receiving an event. To create this event handler, in the `/node/event` directory, go to the `liveUsersUpdate.ts` file and add the code on the right.
+
+```typescript service-course-template/node/event/liveUsersUpdate.ts
+export async function updateLiveUsers() {
+    console.log('EVENT HANDLER: received event')
+}
+```
+
+---
+
+6. Now, we need to declare the reference to this function in the `Service`. On the `/node/index.ts` file, add the highlighted code.
+
+```typescript service-course-template/node/index.ts focus=11,47:49
+import {
+  LRUCache,
+  Service,
+  ServiceContext,
+  ParamsContext,
+  RecorderState,
+  method,
+} from '@vtex/api'
+import { Clients } from './clients'
+import { analytics } from './handlers/analytics'
+import { updateLiveUsers } from './event/liveUsersUpdate'
+
+// Create a LRU memory cache for the Status client.
+// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
+const memoryCache = new LRUCache<string, any>({ max: 5000 })
+metrics.trackCache('status', memoryCache)
+
+declare global {
+  type Context = ServiceContext<Clients, State>
+
+  interface State extends RecorderState {
+    code: number
+  }
+}
+
+const THREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
+
+export default new Service<Clients, State, ParamsContext>({
+  clients: {
+    implementation: Clients,
+    options: {
+      default: {
+        retries: 2,
+        timeout: 10000,
+      },
+      events: {
+        exponentialTimeoutCoefficient: 2,
+        exponentialBackoffCoefficient: 2,
+        initialBackoffDelay: 50,
+        retries: 1,
+        timeout: THREE_SECONDS_MS,
+        concurrency: CONCURRENCY,
+      },
+    },
+  },
+  events: {
+    liveUsersUpdate: updateLiveUsers,
+  },
+  routes: {
+    analytics: method({
+      GET: [analytics],
+    }),
+  },
+})
+```
+
+---
+
+7. In order to listen to events sent, modify the `service.json` file, declaring the highlighted code to give the app's service this capability.
+
+   Note that we declare this by using the `events` resolver, the reference of the app that fires the event (`sender`) and the event reference key (`keys`).
+
+```json service-course-template/node/service.json focus=8:15
+{
+  "memory": 128,
+  "ttl": 10,
+  "timeout": 10,
+  "minReplicas": 2,
+  "maxReplicas": 10,
+  "workers": 4,
+  "events": {
+    "liveUsersUpdate": {
+      "sender": "vtex.events-example",
+      "keys": [
+        "send-event"
+      ]
+    }
+  },
+  "routes": {
+    "analytics": {
+      "path": "/_v/app/analytics/realTime",
+      "public": true
+    }
+  }
+}
+```
+   
+</CH.Scrollycoding>
+
+8. In the `service-course-template` directory, run `vtex link` and wait for the event to be fired by the `events-example` app.
+   
+   When listened, the log should appear on the console, like this:
+
+   ![image](https://user-images.githubusercontent.com/43679629/83823425-5f323b00-a6aa-11ea-816a-68525e5800d7.png)
