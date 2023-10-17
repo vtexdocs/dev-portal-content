@@ -303,7 +303,7 @@ Read the [JSON schema configurations](#json-schema-configurations) section to le
 
 ### Step 3 - Validating the app schema
 
-To validate your app schema, use a tool such as [JSON Schema Validator](https://www.jsonschemavalidator.net/), which allows you to paste the code from VTable app objects schema and the code from your app schema created in [step 2](#step-2-building-the-app-schema) to check if the structure of your app schema is valid.
+To validate your app schema, use a tool such as [JSON Schema Validator](https://www.jsonschemavalidator.net/), which allows you to paste the code from VTable app objects schema and the code from your app schema created in [step 2](#step-2---building-the-app-schema) to check if the structure of your app schema is valid.
 
 ### Step 4 - Saving the app schema to Master Data
 
