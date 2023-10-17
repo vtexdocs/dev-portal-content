@@ -1,0 +1,237 @@
+---
+title: "5. Using the Master Data client"
+slug: "services-5-using-the-master-data-client"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+Now that we are using the data retrieved from  Analytics, we need to save this data and update it. So, every time we retrieve new data we want to update it using Master Data, a database-as-a-service product from VTEX.
+
+Master Data is the VTEX service that makes it possible to create database architectures for a store. By default, it's used to store and organize customer data, but it's also widely used by VTEX stores to make business rule customizations and create applications for your virtual store. You can configure applications that use the module as a data repository to create a system on top of Master Data, just by modeling new data.
+
+In the current version of Master Data, we use the concept of *data entities* and [JSON Schema](https://spacetelescope.github.io/understanding-json-schema/) to validate and index documents. One _data entity_ can have many _schemas_, depending on how you need to use the data stored. You'll need the name of the JSON Schema to implement a query, as will be seen in the following steps.
+
+> A JSON Schema is not required for all endpoints. If you don't need to validate your data, you may save your documents without any setup, just indicate the data entity and some access credential. Right now, as we need validation, we must create a JSON Schema.
+
+Master Data documents have unique IDs and can have many customized fields. In the JSON Schema, you can declare fields and indicate the ones that you want to index. Indexed fields can be retrieved in queries.
+
+## Master Data client
+
+A Master Data client is already provided in VTEX IO Node Runtime. It is possible to access this client through the `Context`, a param which contains all IO Clients in the clients property.
+
+In this step, it will be used to fetch data regarding the top-N most viewed products, where N is a parameter that will be used to get the desired amount of products.
+
+> The Master Data client will be available if the correct version of `@vtex/api` is installed in the node folder. It can be used by accessing `ctx.clients.masterdata`.
+
+## Step-by-step
+
+<CH.Scrollycoding>
+
+1. First, you need to create an entity in Master Data to save your product list. To do so, you will use [Master Data API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-), to save a new schema.
+
+   Using [Postman](https://www.postman.com/) or any other API client you prefer, make the request in the cURL to the right.
+
+   You need to fill in some information on the route:
+  - `accountName`: Name of your VTEX account.
+  - `data_entity_name`: Name of the data entity to be created in Master Data. Use `course_backend_product_list` to be consistent with our app.
+  - `schema_name`: Name of the schema to be created in Master Data. Use `v1` to be consistent with our app (identical to the one used in `service-course-template/node/event/updateLiveUsers.ts`).
+  - `userToken`: Value of your user authentication cookie. To get your VTEX local token, run `vtex local token` in your terminal.
+
+```cURL cURL
+curl --location --request PUT 'https://{{accountName}}.vtexcommercestable.com.br/api/dataentities/{{data_entity_name}}/schemas/{{schema_name}}' \
+--header 'Content-Type: application/json' \
+--header 'VtexIdclientAutCookie: {{userToken}}'  \
+--data '{
+	"properties": {
+		"slug": {
+			"type": "string"
+		},
+		"count": {
+			"type": "number"
+		}
+	},
+	"v-indexed": [
+		"slug",
+		"count"
+	],
+	"v-security": {
+		"allowGetAll": true,
+		"publicRead": [
+			"slug",
+			"count"
+		],
+		"publicWrite": [
+			"slug",
+			 "count"
+		],
+		"publicFilter": [
+			"slug",
+			"count"
+		]
+	}
+}'
+```
+
+---
+
+The expected response is a `200 OK` with the message illustrated in the code to the right.
+
+By doing this, you are not only creating an entity but also creating a new schema to be used during this step.
+
+```json Response
+{
+    "Message": "JSON Schema persisted successfully. Revalidation and indexing process running in background."
+}
+```
+
+---
+
+2. Now, to save this data in Master Data, we need to check for each `productSlug`, if it is already saved. To do so, we will use a method of the Master Data client called `searchDocuments`. To use it, in the `node/event/liveUsersUpdate.ts` file, add the code highlighted on the right panel.
+
+   Note that we are using the `COURSE_ENTITY`, from the global constants, to access your data.
+
+```ts service-course-template/node/event/liveUsersUpdate.ts focus=3,8:26
+import { Clients } from '../clients/index'
+import { EventContext } from '@vtex/api'
+import { COURSE_ENTITY } from '../utils/constants'
+
+export async function updateLiveUsers(ctx: EventContext<Clients>) {
+    const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
+    console.log('LIVE USERS: ', liveUsersProducts)
+    await Promise.all(
+        liveUsersProducts.map(async ({ slug, liveUsers }) => {
+            const [savedProduct] = await ctx.clients.masterdata.searchDocuments<{
+                id: string
+                count: number
+                slug: string
+            }>({
+                dataEntity: COURSE_ENTITY,
+                fields: ['count', 'id', 'slug'],
+                pagination: {
+                    page: 1,
+                    pageSize: 1,
+                },
+                schema: 'v1',
+                where: `slug=${slug}`,
+            })
+            console.log('SAVED PRODUCT', savedProduct)
+                    })
+          )
+    return true
+}
+```
+
+---
+
+3. To make sure we are handling errors, implement a `try-catch` structure, as illustrated in the code to the right.
+
+```ts service-course-template/node/event/liveUsersUpdate.ts focus=10,26:29
+import { Clients } from '../clients/index'
+import { EventContext } from '@vtex/api'
+import { COURSE_ENTITY } from '../utils/constants'
+
+export async function updateLiveUsers(ctx: EventContext<Clients>) {
+    const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
+    console.log('LIVE USERS: ', liveUsersProducts)
+    await Promise.all(
+        liveUsersProducts.map(async ({ slug, liveUsers }) => {
+            try {
+                const [savedProduct] = await ctx.clients.masterdata.searchDocuments<{
+                    id: string
+                    count: number
+                    slug: string
+                }>({
+                    dataEntity: COURSE_ENTITY,
+                    fields: ['count', 'id', 'slug'],
+                    pagination: {
+                        page: 1,
+                        pageSize: 1,
+                    },
+                    schema: 'v1',
+                    where: `slug=${slug}`,
+                })
+                console.log('SAVED PRODUCT', savedProduct)
+            } catch (e) {
+                console.log(`failed to update product ${slug}`)
+                console.log(e)
+            }
+        })
+    )
+    return true
+}
+```
+
+---
+
+4. If our product is already saved, we need to update it by incrementing its count. Master Data has a method that allows us to update an existing document or create a new document, if the document does not exist: `createOrUpdateEntireDocument`.
+
+   To use this method and implement the incrementation on the Master Data entity, in the same file that was changed before, right after the `console.log({savedProduct})` line, add the code highlighted to the right.
+
+   If an error is thrown inside an event handler, VTEX IO will retry sending this event.
+
+```ts service-course-template/node/event/liveUsersUpdate.ts focus=26:34
+import { Clients } from '../clients/index'
+import { EventContext } from '@vtex/api'
+import { COURSE_ENTITY } from '../utils/constants'
+
+export async function updateLiveUsers(ctx: EventContext<Clients>) {
+    const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
+    console.log('LIVE USERS: ', liveUsersProducts)
+    await Promise.all(
+        liveUsersProducts.map(async ({ slug, liveUsers }) => {
+            try {
+                const [savedProduct] = await ctx.clients.masterdata.searchDocuments<{
+                    id: string
+                    count: number
+                    slug: string
+                }>({
+                    dataEntity: COURSE_ENTITY,
+                    fields: ['count', 'id', 'slug'],
+                    pagination: {
+                        page: 1,
+                        pageSize: 1,
+                    },
+                    schema: 'v1',
+                    where: `slug=${slug}`,
+                })
+                console.log('SAVED PRODUCT', savedProduct)
+                await ctx.clients.masterdata.createOrUpdateEntireDocument({
+                    dataEntity: COURSE_ENTITY,
+                    fields: {
+                        count: liveUsers,
+                        slug,
+                    },
+                    id: savedProduct?.id,
+                    schema: 'v1'
+                })
+            } catch (e) {
+                console.log(`failed to update product ${slug}`)
+                console.log(e)
+            }
+        })
+    )
+    return true
+}
+```
+
+---
+
+5. Finally, run `vtex link` and wait for an event to be fired. Once it does, check your terminal for the logs in the code.
+   
+   Break the `vtex link` by typing `ctrl + C` and use the cURL to the right on the terminal to check the updates on Master Data. Replace `{{accountName}}` with your VTEX account name.
+
+   > To run a cURL on Windows, it's necessary to substitute single quotes (`'`) for double quotes (`"`).
+
+   > If you have a version of Windows earlier than Windows 10 (version 1803), [download and install cURL](https://curl.se/windows/). Otherwise, it is installed by default.
+
+```curl
+curl --location --request GET 'https://api.vtex.com/api/dataentities/course_backend_product_list/search?_fields=slug,count&_schema=v1&an={{accountName}}' \
+--header 'Content-Type: application/json'
+```
+
+   The result should be like this:
+
+   ![image](https://user-images.githubusercontent.com/43679629/85172472-8579de00-b247-11ea-9758-f34a66df29c7.png)
+
+</CH.Scrollycoding>
