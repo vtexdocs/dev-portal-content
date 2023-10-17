@@ -1,0 +1,251 @@
+---
+title: "6. Using GraphQL to retrieve data from Master Data"
+slug: "services-6-using-graphql-to-retrieve-data-from-master-data"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+Now that we have updated the product count, we need to retrieve the top N most viewed products. Then we can use Master Data to retrieve the product page view data and sort by the `count` field. We can also limit the length of retrieved products, creating a customized size rank of most-visited products.
+
+## GraphQL
+
+To get these product page views, we will use [GraphQL](https://graphql.org/), the technology used by VTEX IO for data fetching, to implement a query to Master Data. GraphQL allows us to implement queries in a simple and easy way, specifying the data you want to retrieve. This makes your API reliable since GraphQL controls the data fetched instead of the server itself.
+
+GraphQL is the only possible way to create an interface between services and front-end applications.
+
+Therefore, GraphQL uses types and a query schema to specify the data retrieved and resolvers to get the exact data needed.
+
+## Step-by-step
+
+
+<CH.Scrollycoding>
+
+1. Inside the `service-course-template/graphql` directory, create a folder called `types`. In this folder, create the `productView.graphql` file and declare the type of the product list we want to retrieve.
+
+```graphql service-course-template/graphql/types/productView.graphql
+type ProductView {
+   slug: String
+   count: Int
+}
+```
+
+---
+
+2. Still in the `service-course-template/graphql` directory, define the schema in the `schema.graphql` file.
+
+   The schema will define the structure of our query and the retrieved data.
+
+   Also, in this declaration, you can include directives. In some cases, it is required, for example, if you need to get the user token or use cookies (e.g. `OrderForm`). To read more about it, check out [graphql-example](https://github.com/vtex-apps/graphql-example).
+
+```graphql service-course-template/graphql/types/schema.graphql
+type Query {
+   productList(topN: Int): [ProductView]
+}
+```
+
+---
+
+3. With the schema, types, and the query defined, we need to create the query's resolver. The resolver is what happens when a query is executed.
+
+   In our case, we want to perform a [scroll](https://developers.vtex.com/docs/guides/search-and-scroll-api-queries) on Master Data, ordering by the count (as we want to get the top most viewed products) and limiting the page size (the top N).
+   
+   To define this resolver, in the `/node` directory, create a `resolvers` directory with a new file called `products.ts`. Add the code on the right panel.
+
+```ts service-course-template/node/resolvers/products.ts
+import { COURSE_ENTITY } from '../utils/constants'
+
+export const productList = async (
+ _: any,
+ { topN }: { topN: number },
+ { clients: { masterdata } }: Context
+) =>
+ masterdata
+   .scrollDocuments({
+     dataEntity: COURSE_ENTITY,
+     fields: ['count', 'slug'],
+     schema: 'v1',
+     size: topN,
+     sort: `count DESC`,
+   })
+   .then(({ data }) => data)
+```
+
+---
+
+4. Import the resolver on the `index.ts` file:
+
+```ts service-course-template/node/index.ts focus=12
+import {
+  LRUCache,
+  Service,
+  ServiceContext,
+  ParamsContext,
+  RecorderState,
+  method,
+} from '@vtex/api'
+import { Clients } from './clients'
+import { analytics } from './handlers/analytics'
+import { updateLiveUsers } from './event/liveUsersUpdate'
+import { productList } from './resolvers/products'
+
+// Create a LRU memory cache for the Status client.
+// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
+const memoryCache = new LRUCache<string, any>({ max: 5000 })
+metrics.trackCache('status', memoryCache)
+
+declare global {
+  type Context = ServiceContext<Clients, State>
+
+  interface State extends RecorderState {
+    code: number
+  }
+}
+
+const THREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
+
+export default new Service<Clients, State, ParamsContext>({
+  clients: {
+    implementation: Clients,
+    options: {
+      default: {
+        retries: 2,
+        timeout: 10000,
+      },
+      events: {
+        exponentialTimeoutCoefficient: 2,
+        exponentialBackoffCoefficient: 2,
+        initialBackoffDelay: 50,
+        retries: 1,
+        timeout: THREE_SECONDS_MS,
+        concurrency: CONCURRENCY,
+      },
+    },
+  },
+  events: {
+    liveUsersUpdate: updateLiveUsers,
+  },
+  routes: {
+    analytics: method({
+      GET: [analytics],
+    }),
+  },
+})
+```
+
+---
+
+5. Update the `index.ts` file to set up the resolver and the query. Complete the `service` declaration as below:
+
+```ts service-course-template/node/index.ts focus=56:62
+import {
+  LRUCache,
+  Service,
+  ServiceContext,
+  ParamsContext,
+  RecorderState,
+  method,
+} from '@vtex/api'
+import { Clients } from './clients'
+import { analytics } from './handlers/analytics'
+import { updateLiveUsers } from './event/liveUsersUpdate'
+import { productList } from './resolvers/products'
+
+// Create a LRU memory cache for the Status client.
+// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
+const memoryCache = new LRUCache<string, any>({ max: 5000 })
+metrics.trackCache('status', memoryCache)
+
+declare global {
+  type Context = ServiceContext<Clients, State>
+
+  interface State extends RecorderState {
+    code: number
+  }
+}
+
+const THREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
+
+export default new Service<Clients, State, ParamsContext>({
+  clients: {
+    implementation: Clients,
+    options: {
+      default: {
+        retries: 2,
+        timeout: 10000,
+      },
+      events: {
+        exponentialTimeoutCoefficient: 2,
+        exponentialBackoffCoefficient: 2,
+        initialBackoffDelay: 50,
+        retries: 1,
+        timeout: THREE_SECONDS_MS,
+        concurrency: CONCURRENCY,
+      },
+    },
+  },
+  events: {
+    liveUsersUpdate: updateLiveUsers,
+  },
+  routes: {
+    analytics: method({
+      GET: [analytics],
+    }),
+  },
+  graphql: {
+    resolvers: {
+      Query: {
+        productList,
+      },
+    },
+  },
+})
+```
+
+---
+
+6. Add the `graphql` builder on the `manifest.json`:
+
+```json service-course-template/manifest.json focus=8
+{
+  "name": "backend-course",
+  "vendor": "vtex",
+  "version": "0.0.2",
+  "title": "Backend Course",
+  "description": "Reference app for the Backend Course",
+  "builders": {
+    "graphql": "1.x",
+    "node": "6.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    }
+  ],
+  "dependencies": {
+    "vtex.events-example": "0.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
+```
+
+</CH.Scrollycoding>
+
+7. Finally, run `vtex link` and you should get a GraphQL route.
+   
+   The result should be like this:
+
+   ![image](https://user-images.githubusercontent.com/43679629/82947940-3c4faa80-9f77-11ea-8bfa-138d11cdec1f.png)
