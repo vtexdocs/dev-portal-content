@@ -69,15 +69,16 @@ Check the [JSON schema configurations](#json-schema-configurations) section to l
     }
 ]
 ```
+
 </details>
 
 ### Step 2 - Building the app schema
 
 To create a VTable app, you must define a schema that specifies the data VTable will use to render a table.
 
-The app schema you create must follow the structure indicated by the [VTable app objects schema](#vtable-app-objects-schema).
+The app schema you create must follow the structure indicated by the **VTable app objects schema** below.
 
-For now, start with the [Example app schema](#example-app-schema) and edit it according to your data.
+For now, start with the **Example app schema** below and edit it according to your data.
 
 You will validate your app schema's structure in the following step.
 
@@ -302,7 +303,7 @@ Read the [JSON schema configurations](#json-schema-configurations) section to le
 
 ### Step 3 - Validating the app schema
 
-To validate your app schema, use a tool such as [JSON Schema Validator](https://www.jsonschemavalidator.net/), which allows you to paste the code from [VTable app objects schema](#vtable-app-objects-schema) and the code from your app schema created in [step 2](#2-building-the-app-schema) to check if the structure of your app schema is valid.
+To validate your app schema, use a tool such as [JSON Schema Validator](https://www.jsonschemavalidator.net/), which allows you to paste the code from VTable app objects schema and the code from your app schema created in [step 2](#step-2-building-the-app-schema) to check if the structure of your app schema is valid.
 
 ### Step 4 - Saving the app schema to Master Data
 
@@ -549,4 +550,3 @@ Set the field type to `object` to render an `ObjectControl` field. The `ObjectCo
 </details>
 
 > To learn more, check the [Master Data v2 API documentation](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview).
-> 
