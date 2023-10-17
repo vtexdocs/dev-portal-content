@@ -1,0 +1,63 @@
+---
+title: "4. Using events as triggers"
+slug: "services-4-using-events-as-triggers"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+With the Analytics client implemented, we want to use events as triggers to the requests. This means that, for every event listened, we should make a request to the Analytics app. So, for every X seconds, we will have new data on **Live Products**.
+
+In VTEX IO, events are often used as triggers to other actions, such as sending emails to the final client. To implement this, we need to configure our app's client and event handler.
+
+## Step-by-step
+
+<CH.Scrollycoding>
+
+1. As the Analytics client is implemented, we need to use it in the event handler. First, in the `service-course-template/node/event/liveUsersUpdate.ts` file, import the client we implemented in the previous step:
+
+```ts service-course-template/node/event/liveUsersUpdate.ts focus=1
+import { Clients } from '../clients/index'
+
+export async function updateLiveUsers() {
+    console.log('EVENT HANDLER: received event')
+}
+```
+
+---
+
+2. Now, we need to use the `EventContext` that we already configured before. Import it by updating the method. You can do so as shown in the code to the right.
+
+> You can also globally declare your event context in the `index.ts` file. If you do so, you don't need to import in every file you want to use it.
+
+```ts service-course-template/node/event/liveUsersUpdate.ts focus=2,4
+import { Clients } from '../clients/index'
+import { EventContext } from '@vtex/api'
+
+export async function updateLiveUsers(ctx: EventContext<Clients>) {
+    console.log('EVENT HANDLER: received event')
+}
+```
+
+---
+
+3. Now, to use the Analytics client, edit the code as shown in the right panel.
+
+```ts service-course-template/node/event/liveUsersUpdate.ts focus=5:7
+import { Clients } from '../clients/index'
+import { EventContext } from '@vtex/api'
+
+export async function updateLiveUsers(ctx: EventContext<Clients>) {
+    const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
+    console.log('LIVE USERS: ', liveUsersProducts)
+    return true
+}
+```
+   
+</CH.Scrollycoding>
+
+4. Run `vtex link`. For every event fired, you should see the live users retrieved from Analytics.
+
+   The result should be like this:
+   
+   ![image](https://user-images.githubusercontent.com/43679629/85150833-69ffda80-b229-11ea-9260-b9255adf7d9c.png)
