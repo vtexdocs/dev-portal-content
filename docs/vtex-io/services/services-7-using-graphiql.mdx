@@ -1,0 +1,53 @@
+---
+title: "7. Using GraphiQL"
+slug: "services-7-using-graphiql"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+With the query and resolver implemented, we need to use it to retrieve the top N most viewed products. By using the **GraphQL IDE**, we can test the query we implemented before.
+
+[GraphiQL](https://github.com/graphql/graphiql) is a graphical interactive in-browser GraphQL IDE. Before using the query in the app, let's test its functionality. To do so, we will reproduce your query usage in the GraphQL IDE.
+
+
+## Step-by-step
+
+To test your query, follow the steps below:
+
+1. Access the GraphQL route you received in the previous step. 
+
+   Exploring the IDE interface, there are three main areas: the coding area, the query variables area and the debug area. Check where each shows up in the interface in the image below.
+
+   ![image](https://user-images.githubusercontent.com/43679629/83764107-e900ea80-a64f-11ea-969f-116ea896fe2d.png)
+
+<CH.Scrollycoding>
+
+2. Add the code below in the coding area:
+
+```graphql GraphQL query
+query ($topN: Int) {
+ productList(topN: $topN){
+   slug
+   count
+ }
+}
+```
+
+---
+
+3. The query that we just declared uses a variable (`topN`). Now we need to declare it in the _Query Variables_ area.
+
+   > The _Query Variables_ area is below the coding area, to amplify its area just drag by the title.
+
+```json Query variables
+{
+ "topN": 2
+}
+```
+
+</CH.Scrollycoding>
+
+4. At last, just click on the _Play_ button and check the outcome on the debug area. The query results should look like this:
+
+   ![image](https://user-images.githubusercontent.com/43679629/83763622-4c3e4d00-a64f-11ea-9615-435811d411c6.png)
