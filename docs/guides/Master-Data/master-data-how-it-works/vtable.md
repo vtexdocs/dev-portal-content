@@ -270,9 +270,9 @@ You can use this example app schema as a foundation to create your own app. Chec
 | `tables` | array of objects | List of objects containing information about the tables. |
 | `tables[i].id` | string | Table ID. |
 | `tables[i].title` | string | Table title. |
-| `tables[i].entity` | string | Corresponds to the data entity in Master Data, which must exist before creating the app. |
-| `tables[i].model` | string |  Relates to the schema associated with the data entity in Master Data. |
-| `tables[i].fields` | object | Lists the fields to be displayed. Each field specifies the width it occupies in the table. |
+| `tables[i].entity` | string | Table entity that corresponds to the data entity in Master Data, which must exist before creating the app. |
+| `tables[i].model` | string |  Model that relates to the schema associated with the Master Data data entity. |
+| `tables[i].fields` | object | List of fields to be displayed. Each field specifies the width it occupies in the table. |
 | `tables[i].fields.id` | object | Field name. |
 | `tables[i].fields.id.width` | integer | Width of the `id` field. |
 | `tables[i].fields.email` | object | Field name. |
@@ -280,7 +280,7 @@ You can use this example app schema as a foundation to create your own app. Chec
 |`tables[i].fields.firstName` | object | Field name. |
 | `tables[i].fields.firstName.width` | integer | Width of the `firstName` field. |
 | `tables[i].list` | array of strings | Defines the fields to be rendered in the table. |
-| `tables[i].editor` | object | Configures the form's rendering. |
+| `tables[i].editor` | object | Object responsible for configuring the form's rendering. |
 | `tables[i].editor.settings` | object | Form settings. |
 | `tables[i].editor.settings.sections` | array of objects | List of form sections and their respective settings. |
 | `tables[i].editor.settings.sections[j].name` | string | Setting name. |
@@ -294,7 +294,7 @@ To validate your app schema, use a tool such as [JSON Schema Validator](https://
 
 ## 4. Saving the app schema to Master Data
 
-To save the app schema to Master Data, you must use the [Create document with custom ID](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-) endpoint, adding your app schema as the request body and filling the URL with the information below:
+To save the app schema to Master Data, send a `PUT` request to the [Create document with custom ID](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-) endpoint, adding your app schema as the request body and filling the URL with the information below:
 
 `PUT` `https://{accountName}.{environment}.com.br/api/dataentities/vtable/documents/{appName}?_schema=app`
 
