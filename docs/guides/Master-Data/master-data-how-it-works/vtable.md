@@ -10,12 +10,10 @@ updatedAt: "2022-07-28T21:27:21.269Z"
 
 To render an app in VTable you must follow these steps:
 
-- [Step by step](#step-by-step)
-  - [Step 1 - Creating a JSON schema](#step-1---creating-a-json-schema)
-  - [Step 2 - Building the app schema](#step-2---building-the-app-schema)
-  - [Step 3 - Validating the app schema](#step-3---validating-the-app-schema)
-  - [Step 4 - Saving the app schema to Master Data](#step-4---saving-the-app-schema-to-master-data)
-- [JSON schema configurations](#json-schema-configurations)
+- [Step 1 - Creating a JSON schema](#step-1---creating-a-json-schema)
+- [Step 2 - Building the app schema](#step-2---building-the-app-schema)
+- [Step 3 - Validating the app schema](#step-3---validating-the-app-schema)
+- [Step 4 - Saving the app schema to Master Data](#step-4---saving-the-app-schema-to-master-data)
 
 Below you can also learn more about all necessary [JSON schema configurations](#json-schema-configurations).
 
