@@ -9,7 +9,7 @@ createdAt: "2021-04-08T20:21:10.886Z"
 updatedAt: "2021-04-08T22:43:45.769Z"
 ---
 
-JSON Schema is a tool with rules to validate the structure of JSON data. More information about JSON Schema can be found in the book [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html). A Schema lets users configure the structure of a Data Entity.
+JSON Schema is a tool with rules to validate the structure of JSON data. More information about JSON Schema can be found in the book [Understanding JSON Schema](https://json-schema.org/understanding-json-schema). A Schema lets users configure the structure of a Data Entity.
 
 > ⚠️ Schemas are supported only by Master Data V2.
 
@@ -43,7 +43,7 @@ Master Data can work without any Schema created before documents are stored, but
 
 ## Creating a Schema
 
-You can create a Schema before or after sending documents to be persisted in Master Data. Schemas are created using the [Schemas API](#schemas). In case we already have documents in the database, a process is triggered in the background.
+You can create a Schema before or after sending documents to be persisted in Master Data. Schemas are created using the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint from [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2). In case we already have documents in the database, a process is triggered in the background.
 
 | Area | Description |
 | - | - |
