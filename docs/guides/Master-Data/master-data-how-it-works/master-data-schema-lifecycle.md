@@ -43,7 +43,7 @@ Master Data can work without any Schema created before documents are stored, but
 
 ## Creating a Schema
 
-You can create a Schema before or after sending documents to be persisted in Master Data. Schemas are created using the [Schemas API](#schemas). In case we already have documents in the database, a process is triggered in the background.
+You can create a Schema before or after sending documents to be persisted in Master Data. Schemas are created using the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint from [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2). In case we already have documents in the database, a process is triggered in the background.
 
 | Area | Description |
 | - | - |
