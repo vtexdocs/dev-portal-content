@@ -9,7 +9,7 @@ createdAt: "2021-04-08T20:21:10.886Z"
 updatedAt: "2021-04-08T22:43:45.769Z"
 ---
 
-JSON Schema is a tool with rules to validate the structure of JSON data. More information about JSON Schema can be found in the book [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html). A Schema lets users configure the structure of a Data Entity.
+JSON Schema is a tool with rules to validate the structure of JSON data. More information about JSON Schema can be found in the book [Understanding JSON Schema](https://json-schema.org/understanding-json-schema). A Schema lets users configure the structure of a Data Entity.
 
 > ⚠️ Schemas are supported only by Master Data V2.
 
