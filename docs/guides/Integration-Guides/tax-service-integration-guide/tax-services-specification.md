@@ -149,34 +149,24 @@ This body has eight main fields:
 In response to the request sent by Checkout, we expect an array of products, each with its own array of taxes. See the example below:
 
 ```json
-{
-    "itemTaxResponse": [
+[
+    {
+        "id": "0",
+        "taxes": [
             {
-            "id": "0",
-            "taxes": [
-              {
                 "name": "TAX 1",
                 "description": "",
                 "value": 3.48
-              },
-              {
+            },
+            {
                 "name": "TAX 2",
                 "description": "",
                 "value": 22
-              }
-            ]
-          }
-        ],
-    "hooks": [
-        {
-          "major": 1,
-          "url": "http://master--bufferin.myvtex.com/avalara/checkout/salesinvoice-tax"
-        }
-    ]
-}
+            }
+        ]
+    }
+]
 ```
-
-- `itemTaxResponse` is an array of objects that corresponds to all the tax information that is applied to the different items sent to the tax provider. The main fields of those objects are described below:
 
 - `id` is the request item index, which means the SKU position on the items array sent by the requisition body;
 
@@ -187,8 +177,6 @@ In response to the request sent by Checkout, we expect an array of products, eac
 - `description` is an informative field. It will not appear on the storefront;
 
 - `value` is the absolute value that will be added to the original price;
-
-- `hooks` should be an empty array, but any entry on the array corresponds to an URL that will be called when an order has its status changed. Usually, the relevant status change to listen to is “invoiced”. This URL needs to be prepared to receive the order id and should just respond to an HTTP 200 status.
 
 In the example above, the only item in the items array has a cost of `10`, and, including the calculated taxes returned by the tax calculation tool, the total value would be `10 + 3.48 + 22 = 35.48`.
 
