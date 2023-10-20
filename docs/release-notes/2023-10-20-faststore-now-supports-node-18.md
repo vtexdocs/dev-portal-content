@@ -2,7 +2,7 @@
 title: "FastStore now supports Node.js 18"
 slug: "2023-10-20-faststore-now-supports-node-18"
 type: "added"
-excerpt: "Stores using FastStore can now take advantage of Node.js 18 capabilities."
+excerpt: "Stores using FastStore can now take advantage of Node.js 18 capabilities"
 createdAt: "2023-10-20T00:00:00.000Z"
 ---
 
