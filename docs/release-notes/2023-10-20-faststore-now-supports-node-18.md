@@ -24,18 +24,18 @@ To try this change beforehand, set the `experimental` flag in your code. To do s
 2. Open your store configuration file, which is `store.config.js` for [FastStore v1](https://v1.faststore.dev/) and `faststore.config.js` for [FastStore v2](https://faststore.dev/).
 3. Set the experimental flag as follows:
 
-        ```js
-        ...
-        experimental: {
-        nodeVersion: 18,
-        },
-        ...
-        ```
+   ```js
+   ...
+   experimental: {
+   nodeVersion: 18,
+   },
+   ...
+   ```
 
 4. In the terminal, run `yarn dev`.
 5. Ensure there are no errors in the terminal and, if everything checks out, open a Pull Request.
 
-        > ⚠️ To prevent the build from failing due to compatibility issues during the first build with Node.js 18, some stores may need to turn off the build cache. To do this, set to `FALSE` the following variables in the `vtex.env` file and try again: `USE_BUILD_CACHE=false`, `USE_NODE_MODULES_CACHE=false`, `USE_FRAMEWORK_CACHE=false`.
+   > ⚠️ To prevent the build from failing due to compatibility issues during the first build with Node.js 18, some stores may need to turn off the build cache. To do this, set to `FALSE` the following variables in the `vtex.env` file and try again: `USE_BUILD_CACHE=false`, `USE_NODE_MODULES_CACHE=false`, `USE_FRAMEWORK_CACHE=false`.
 
 6. Merge it to the main branch.
 
