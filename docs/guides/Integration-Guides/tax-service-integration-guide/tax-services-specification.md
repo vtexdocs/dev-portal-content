@@ -11,13 +11,8 @@ Below, we are going to go over tax service integration works, and if you want to
 
 In synchronous integration, VTEX’s Checkout API triggers and sends a request to the external tax service API whenever there are changes to a customer’s cart, such as adding or removing items.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "- Timeout for the request is five seconds.\n- There is no retry in case of timeout.\n- If the external service that responds to the request times out constantly, the store will not be able to finish the order.\n- If this integration is active, it applies to all stores in that account.",
-  "title": "When using Tax Service integration, keep in mind that:"
-}
-[/block]
+>⚠️ Timeout for the request is five seconds.\n- There is no retry in case of timeout.\n- If the external service that responds to the request times out constantly, the store will not be able to finish the order.\n- If this integration is active, it applies to all stores in that account.
+
 ### Checkout Configuration
 
 Synchronous tax integration can be activated or deactivated through a request to the Checkout Configuration API.
@@ -42,12 +37,9 @@ The most important data in this object is the `url`. This is the endpoint URL th
 The `authorizationHeader` defines the value that the Checkout will use in the `Authorization` header of calls to the external tax calculation API. This field can be used to define the access credentials for this API.
 
 Once the POST for the Checkout Configuration API has finished processing the request with this data, its synchronous integration with the Tax API is activated.
-[block:callout]
-{
-  "type": "warning",
-  "body": "When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/pt/tutorial/definicoes-de-conta-franquia-e-seller-white-label--5orlGHyDHGAYciQ64oEgKa#) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly."
-}
-[/block]
+
+> ℹ When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/pt/tutorial/definicoes-de-conta-franquia-e-seller-white-label--5orlGHyDHGAYciQ64oEgKa#) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly.
+
 ### Tax calculation request
 
 The tax calculation tool must provide an endpoint that will receive a POST request. In this request, Checkout provides a body in a specific format. This means that either the endpoint must be prepared to receive this body format, or the integration must contain a parser to adapt it to the correct format.
@@ -128,19 +120,19 @@ Let’s see an example of that body sent by Checkout:
 
 This body has eight main fields:
 
-- `orderFormId`: *string* related to the order form ID;
+- `orderFormId`: *string* related to the order form ID.
 
-- `salesChannel`: type of sales channel;
+- `salesChannel`: type of sales channel.
 
-- `items`: an *array* that contains objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address;
+- `items`: an *array* that contains objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address.
 
-- `totals`: an *array* with the total amount of the order form, divided into taxes, shipping, discounts, and the items themselves;
+- `totals`: an *array* with the total amount of the order form, divided into taxes, shipping, discounts, and the items themselves.
 
-- `clientEmail`: *string* that contains the client's email;
+- `clientEmail`: *string* that contains the client's email.
 
-- `shippingDestination`: *object* with shipping information, it's a mandatory field;
+- `shippingDestination`: *object* with shipping information, it's a mandatory field.
 
-- `clientData`: *object* that contains information regarding the client that did the order;
+- `clientData`: *object* that contains information regarding the client that did the order.
 
 - `paymentData`: *object* that contains an *array* of payments, where there is information regarding the payment methods, etc.
 
@@ -168,31 +160,21 @@ In response to the request sent by Checkout, we expect an array of products, eac
 ]
 ```
 
-- `id` is the request item index, which means the SKU position on the items array sent by the requisition body;
+- `id`: is the request item index, which means the SKU position on the items array sent by the requisition body.
 
-- `taxes` is an array that contains all the taxes types for an SKU;
+- `taxes`: is an array that contains all the taxes types for an SKU.
 
-- `name` is the tax name that will appear on the checkout;
+- `name`: is the tax name that will appear on the checkout.
 
-- `description` is an informative field. It will not appear on the storefront;
+- `description`: is an informative field. It will not appear on the storefront.
 
-- `value` is the absolute value that will be added to the original price;
+- `value`: is the absolute numeric value that will be added to the original price.
 
 In the example above, the only item in the items array has a cost of `10`, and, including the calculated taxes returned by the tax calculation tool, the total value would be `10 + 3.48 + 22 = 35.48`.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "If no taxes apply to the items in the order, the expected response is an empty array (`[]`)."
-}
-[/block]
+>ℹ️ If no taxes apply to the items in the order, the expected response is an empty array (`[]`).
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For the Checkout API to understand the request body, the content-type must be set to `application/vnd.vtex.checkout.minicart.v1+json`"
-}
-[/block]
+>ℹ️ For the Checkout API to understand the request body, the content-type must be set to `application/vnd.vtex.checkout.minicart.v1+json`
 
 #### Jurisdiction fields
 
