@@ -68,6 +68,7 @@ Consider the following JSON Data example to understand the available functions, 
 | `formatCurrencyWithoutDecimals` | Formats a value as currency without decimal values. | `{{formatCurrencyWithoutDecimals items.0.sellingPrice}}` | 200 |
 | `multiplyCurrency` | Formats a value as currency and multiplies it by a number. This function has the following syntax: `{{formatCurrency class.attribute multiplier}}` | `{{formatCurrency items.0.sellingPrice 4}}` | 800,00 |
 | `formatDate` | Formats a date as `dd/mm/yyyy`. | `{{formatDate items.0.priceValidUntil}}` | 30/05/2050 |
+| `formatUSDate` | Formats a date as `mm/dd/yyyy`. | `{{formatUSDate items.0.priceValidUntil}}` | 05/30/2050 |
 | `formatDateTime` | Formats a date  as `dd/mm/yyyy hh:mm:ss`. | `{{formatDateTime items.0.priceValidUntil}}` | 30/05/2050 21:00:00 |
 | `formatDateUtc` | Formats a date as `dd/mm/yyyy mh:mm:ss` and converts it to the local UTC | `{{formatDateUtc items.0.priceValidUntil}}` | 30/05/2050 18:00:00 |
 | `replace` | Replaces a given value with another. This function has the following syntax: `{{replace class.attribute "previous value" "new value"}}` | `{{replace deliveryTime "bd" " business days"}}` | 8 business days |
