@@ -12,7 +12,7 @@ The values ​​of the `value` and `referenceValue` fields will be equal whenev
 
 See the examples below:
 
-- **Case 1**: Order value is 15.00 (interest free):
+Example 1: Order value is 15.00 (interest free).
 
   - `value`: 15.00
   - `referenceValue`: 15.00
