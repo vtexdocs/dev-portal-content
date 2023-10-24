@@ -174,7 +174,7 @@ In the example above, the only item in the items array has a cost of `10`, and, 
 
 >ℹ️ If no taxes apply to the items in the order, the expected response is an empty array (`[]`).
 
->ℹ️ For the Checkout API to understand the request body, the content-type must be set to `application/vnd.vtex.checkout.minicart.v1+json`
+>ℹ️ For the Checkout API to understand the request body, the content-type must be set to `application/vnd.vtex.checkout.minicart.v1+json`.
 
 #### Jurisdiction fields
 
