@@ -132,7 +132,7 @@ This body has eight main fields:
 
 - `shippingDestination`: Object with shipping information. Mandatory field.
 
-- `clientData`: *object* that contains information regarding the client that did the order.
+- `clientData`: Object that contains information regarding the client that made the order.
 
 - `paymentData`: *object* that contains an *array* of payments, where there is information regarding the payment methods, etc.
 
