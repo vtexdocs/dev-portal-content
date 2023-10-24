@@ -134,7 +134,7 @@ This body has eight main fields:
 
 - `clientData`: Object that contains information regarding the client that made the order.
 
-- `paymentData`: *object* that contains an *array* of payments, where there is information regarding the payment methods, etc.
+- `paymentData`: Object that contains an array of payments, where there is information regarding the payment methods, etc.
 
 ### Tax provider response to the request
 
