@@ -14,14 +14,22 @@ See the examples below:
 
 Example 1: Order value is 15.00 (interest free).
 
-  - `value`: 15.00
-  - `referenceValue`: 15.00
-  - `installments`: 1
-  - `installmentsInterestRate`: 0.00
+```json
+...
+"value": "15.00",
+"referenceValue": "15.00",
+"installments": 1,
+"installmentsInterestRate": "0.00"
+...
+```
 
 Example 2: Order value is 15.00 (with interest of 1.00 per month, 3 installments).
 
-  - `value`: 15.00
-  - `referenceValue`: 12.00
-  - `installments`: 3
-  - `installmentsInterestRate`: 1.00
+```json
+...
+"value": "15.00",
+"referenceValue": "12.00",
+"installments": 3,
+"installmentsInterestRate": "1.00"
+...
+```
