@@ -33,3 +33,7 @@ Example 2: Order value is 15.00 (with interest of 1.00 per month, 3 installments
 "installmentsInterestRate": "1.00"
 ...
 ```
+## What needs to be done?
+
+No action is need.
+
