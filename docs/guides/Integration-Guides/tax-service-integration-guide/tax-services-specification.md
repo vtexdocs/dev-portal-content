@@ -130,7 +130,7 @@ This body has eight main fields:
 
 - `clientEmail`: *string* that contains the client's email.
 
-- `shippingDestination`: *object* with shipping information, it's a mandatory field.
+- `shippingDestination`: Object with shipping information. Mandatory field.
 
 - `clientData`: *object* that contains information regarding the client that did the order.
 
