@@ -19,7 +19,7 @@ Example 1: Order value is 15.00 (interest free).
   - `installments`: 1
   - `installmentsInterestRate`: 0.00
 
-- **Case 2**: Order value is 15.00 (with interest of 1.00 per month, 3 installments):
+Example 2: Order value is 15.00 (with interest of 1.00 per month, 3 installments).
 
   - `value`: 15.00
   - `referenceValue`: 12.00
