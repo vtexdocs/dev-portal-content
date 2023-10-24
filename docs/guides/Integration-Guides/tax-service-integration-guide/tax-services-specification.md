@@ -162,7 +162,7 @@ In response to the request sent by Checkout, we expect an array of products, eac
 
 - `id`: Request item index, which means the SKU position on the items array sent by the requisition body.
 
-- `taxes`: is an array that contains all the taxes types for an SKU.
+- `taxes`: Array that contains all the taxes types for an SKU.
 
 - `name`: is the tax name that will appear on the checkout.
 
