@@ -129,7 +129,7 @@ Then, start a Postman session. You perform a call to VTEX's CDN using the POST m
 
 1. Configure the route **POST** `https://{{yourdomainhere}}/.well-known/raw/apple-developer-merchantid-domain-association.txt?persistent=true`.
 2. Paste the content of the .txt file in the request body. Ensure that all contents of the file are:
-   - Inside quotations marks
+   - Inside quotations marks.
    - In JSON format, as in `"{token_content}"`.
    - Without any line breaks.
 
