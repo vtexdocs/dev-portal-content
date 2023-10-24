@@ -164,7 +164,7 @@ In response to the request sent by Checkout, we expect an array of products, eac
 
 - `taxes`: Array that contains all the taxes types for an SKU.
 
-- `name`: is the tax name that will appear on the checkout.
+- `name`: Tax name that will appear on the checkout.
 
 - `description`: is an informative field. It will not appear on the storefront.
 
