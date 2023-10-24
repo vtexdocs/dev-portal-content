@@ -11,7 +11,7 @@ Below, we are going to go over tax service integration works, and if you want to
 
 In synchronous integration, VTEX’s Checkout API triggers and sends a request to the external tax service API whenever there are changes to a customer’s cart, such as adding or removing items.
 
->⚠️ Timeout for the request is five seconds.\n- There is no retry in case of timeout.\n- If the external service that responds to the request times out constantly, the store will not be able to finish the order.\n- If this integration is active, it applies to all stores in that account.
+>⚠️ Timeout for the request is five seconds. There is no retry in case of timeout. If the external service that responds to the request times out constantly, the store will not be able to finish the order. If this integration is active, it applies to all stores in that account.
 
 ### Checkout Configuration
 
