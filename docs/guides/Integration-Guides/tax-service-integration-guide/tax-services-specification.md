@@ -11,7 +11,7 @@ Below, we are going to go over tax service integration works, and if you want to
 
 In synchronous integration, VTEX’s Checkout API triggers and sends a request to the external tax service API whenever there are changes to a customer’s cart, such as adding or removing items.
 
->⚠️ Timeout for the request is five seconds.\n- There is no retry in case of timeout.\n- If the external service that responds to the request times out constantly, the store will not be able to finish the order.\n- If this integration is active, it applies to all stores in that account.
+>⚠️ Timeout for the request is five seconds. There is no retry in case of timeout. If the external service that responds to the request times out constantly, the store will not be able to finish the order. If this integration is active, it applies to all stores in that account.
 
 ### Checkout Configuration
 
@@ -38,7 +38,7 @@ The `authorizationHeader` defines the value that the Checkout will use in the `A
 
 Once the POST for the Checkout Configuration API has finished processing the request with this data, its synchronous integration with the Tax API is activated.
 
-> ℹ When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/pt/tutorial/definicoes-de-conta-franquia-e-seller-white-label--5orlGHyDHGAYciQ64oEgKa#) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly.
+>⚠️ When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly.
 
 ### Tax calculation request
 
@@ -130,11 +130,11 @@ This body has eight main fields:
 
 - `clientEmail`: *string* that contains the client's email.
 
-- `shippingDestination`: *object* with shipping information, it's a mandatory field.
+- `shippingDestination`: Object with shipping information. Mandatory field.
 
-- `clientData`: *object* that contains information regarding the client that did the order.
+- `clientData`: Object that contains information regarding the client that made the order.
 
-- `paymentData`: *object* that contains an *array* of payments, where there is information regarding the payment methods, etc.
+- `paymentData`: Object that contains an array of payments, where there is information regarding the payment methods, etc.
 
 ### Tax provider response to the request
 
@@ -160,11 +160,11 @@ In response to the request sent by Checkout, we expect an array of products, eac
 ]
 ```
 
-- `id`: is the request item index, which means the SKU position on the items array sent by the requisition body.
+- `id`: Request item index, which means the SKU position on the items array sent by the requisition body.
 
-- `taxes`: is an array that contains all the taxes types for an SKU.
+- `taxes`: Array that contains all the taxes types for an SKU.
 
-- `name`: is the tax name that will appear on the checkout.
+- `name`: Tax name that will appear on the checkout.
 
 - `description`: is an informative field. It will not appear on the storefront.
 
@@ -174,7 +174,7 @@ In the example above, the only item in the items array has a cost of `10`, and, 
 
 >ℹ️ If no taxes apply to the items in the order, the expected response is an empty array (`[]`).
 
->ℹ️ For the Checkout API to understand the request body, the content-type must be set to `application/vnd.vtex.checkout.minicart.v1+json`
+>ℹ️ For the Checkout API to understand the request body, the content-type must be set to `application/vnd.vtex.checkout.minicart.v1+json`.
 
 #### Jurisdiction fields
 
