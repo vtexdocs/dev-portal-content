@@ -6,7 +6,7 @@ hidden: false
 type: "added"
 excerpt: "New parameter available in the Create Payment endpoint request body."
 ---
-The `referenceValue` parameter was added to the [Create Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request body. This new field is mandatory and must be sent on the endpoint to represent the payment amount without interest applied.
+The `referenceValue` parameter was added to the [Create Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request body. This new field was created to represent the interest-free payment amount and is automatically filled in by the gateway before being sent to the payment connector.
 
 The values ​​of the `value` and `referenceValue` fields will be equal whenever the value of the `installmentsInterestRate` field is equal to zero.
 
