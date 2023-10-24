@@ -128,9 +128,9 @@ Thereafter, to upload the`.txt` file by API, follow these instructions:
 Then, start a Postman session. You perform a call to VTEX's CDN using the POST method:
 
 1. Configure the route **POST** `https://{{yourdomainhere}}/.well-known/raw/apple-developer-merchantid-domain-association.txt?persistent=true`.
-2. Ensure that all contents of the .txt files are in:
-   - Quotations marks
-   - JSON format, inside a `"token_content"` body
+2. Paste the content of the .txt file in the request body. Ensure that all contents of the file are:
+   - Inside quotations marks
+   - In JSON format, as in `"{token_content}"`.
    - Without any line breaks.
 
 ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Payments/payments-configuration-guides/setting-up-merchant-id-in-apple-pay-20.png)
