@@ -6,7 +6,11 @@ hidden: false
 type: "added"
 excerpt: "New parameter available in the Create Payment endpoint request body."
 ---
-The `referenceValue` parameter was added to the Create Payment endpoint. This new field is mandatory and must be sent on the endpoint to represent the payment amount without interest applied. The values ​​of the `value` and `referenceValue` fields will be equal whenever the value of the `installmentsInterestRate` field is equal to zero. See the examples below:
+The `referenceValue` parameter was added to the Create Payment endpoint request body. This new field is mandatory and must be sent on the endpoint to represent the payment amount without interest applied.
+
+The values ​​of the `value` and `referenceValue` fields will be equal whenever the value of the `installmentsInterestRate` field is equal to zero.
+
+See the examples below:
 
 - **Case 1**: Order value is 15.00 (interest free):
 
