@@ -38,7 +38,7 @@ The `authorizationHeader` defines the value that the Checkout will use in the `A
 
 Once the POST for the Checkout Configuration API has finished processing the request with this data, its synchronous integration with the Tax API is activated.
 
-> ℹ When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/pt/tutorial/definicoes-de-conta-franquia-e-seller-white-label--5orlGHyDHGAYciQ64oEgKa#) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly.
+>⚠️ When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly.
 
 ### Tax calculation request
 
