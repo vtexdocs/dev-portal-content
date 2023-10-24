@@ -120,21 +120,16 @@ Let’s see an example of that body sent by Checkout:
 
 This body has eight main fields:
 
-- `orderFormId`: *string* related to the order form ID.
-
-- `salesChannel`: type of sales channel.
-
-- `items`: an *array* that contains objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address.
-
-- `totals`: an *array* with the total amount of the order form, divided into taxes, shipping, discounts, and the items themselves.
-
-- `clientEmail`: *string* that contains the client's email.
-
-- `shippingDestination`: Object with shipping information. Mandatory field.
-
-- `clientData`: Object that contains information regarding the client that made the order.
-
-- `paymentData`: Object that contains an array of payments, where there is information regarding the payment methods, etc.
+| Field               | Type   | Description                                                                                                                                                                         |
+|---------------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `orderFormId`       | string | Related to the order form ID.                                                                                                                                                       |
+| `salesChannel`      | string | Type of sales channel.                                                                                                                                                              |
+| `items`             | array  | that contains objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address. |
+| `totals`            | array  | with the total amount of the order form, divided into taxes, shipping, discounts, and the items themselves.                                                                         |
+| `clientEmail`       | string | that contains the client's email.                                                                                                                                                   |
+| `shippingDestination`| object | with shipping information, it's a mandatory field.                                                                                                                              |
+| `clientData`         | object | that contains information regarding the client that did the order.                                                                                                                  |
+| `paymentData`        | object | that contains an *array* of payments, where there is information regarding the payment methods, etc.                                                                                |
 
 ### Tax provider response to the request
 
@@ -160,15 +155,13 @@ In response to the request sent by Checkout, we expect an array of products, eac
 ]
 ```
 
-- `id`: Request item index, which means the SKU position on the items array sent by the requisition body.
-
-- `taxes`: Array that contains all the taxes types for an SKU.
-
-- `name`: Tax name that will appear on the checkout.
-
-- `description`: is an informative field. It will not appear on the storefront.
-
-- `value`: is the absolute numeric value that will be added to the original price.
+| Field         | Type   | Description                                                                                              |
+|---------------|--------|----------------------------------------------------------------------------------------------------------|
+| `id`          | string | Is the request item index, which means the SKU position on the items array sent by the requisition bodyI |
+| `taxes`       | array  | Is an array that contains all the taxes types for an SKU.                                                |
+| `name`        | string | Is the tax name that will appear on the checkout.                                                        |
+| `description` | string | Is an informative field. It will not appear on the storefront.                                           |
+| `value`       | number | Is the absolute numeric value that will be added to the original price.                                  |
 
 In the example above, the only item in the items array has a cost of `10`, and, including the calculated taxes returned by the tax calculation tool, the total value would be `10 + 3.48 + 22 = 35.48`.
 
@@ -180,9 +173,11 @@ In the example above, the only item in the items array has a cost of `10`, and, 
 
 If you use Avalara as your tax calculation provider, response bodies might also include the following fields, which refer to the different jurisdictions that may apply according to location.
 
-- `jurisType`: Type of jurisdiction that applies to calculation.
-- `jurisCode`: Unique code that identifies the appropriate jurisdiction.
-- `jurisName`: Name of the Jurisdiction that applies to the calculation.
+| Field       | Type   | Description                                               |
+|-------------|--------|-----------------------------------------------------------|
+| `jurisType` | string | Type of jurisdiction that applies to calculation.         |
+| `jurisCode` | string | Unique code that identifies the appropriate jurisdiction. |
+| `jurisName` | string | Name of the Jurisdiction that applies to the calculation. |
 
 These fields are also read by Checkout and added to the `priceTag`.
 
@@ -190,12 +185,11 @@ Below is an example for values that may be contained in these fields, and you ca
 
 ```json
 {
-“jurisType”: “State”,
-“jurisCode”: “20”,
-“jurisName”: “Kansas”
+  "jurisType": "State",
+  "jurisCode": "20",
+  "jurisName": "Kansas"
 }
 ```
-
 
 [block:html]
 {
