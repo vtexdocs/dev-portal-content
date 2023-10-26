@@ -155,8 +155,8 @@ In response to the request sent by Checkout, we expect an array of products, eac
 ]
 ```
 
-| Field         | Type   | Description                                                                                              |
-|---------------|--------|----------------------------------------------------------------------------------------------------------|
+| Field | Type | Description |
+| - | - | - |
 | `id` | string | Request item index, which means the SKU's position on the `items` array sent by the request body. |
 | `taxes` | array | List of all the taxes types for an SKU. |
 | `name` | string | Tax name that will appear on the checkout. |
