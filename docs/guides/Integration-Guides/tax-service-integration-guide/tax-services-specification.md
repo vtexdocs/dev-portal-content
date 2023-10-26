@@ -122,14 +122,14 @@ This body has eight main fields:
 
 | Field               | Type   | Description                                                                                                                                                                         |
 |---------------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `orderFormId`       | string | Related to the order form ID.                                                                                                                                                       |
-| `salesChannel`      | string | Type of sales channel.                                                                                                                                                              |
-| `items`             | array  | that contains objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address. |
-| `totals`            | array  | with the total amount of the order form, divided into taxes, shipping, discounts, and the items themselves.                                                                         |
-| `clientEmail`       | string | that contains the client's email.                                                                                                                                                   |
-| `shippingDestination`| object | with shipping information, it's a mandatory field.                                                                                                                              |
-| `clientData`         | object | that contains information regarding the client that did the order.                                                                                                                  |
-| `paymentData`        | object | that contains an *array* of payments, where there is information regarding the payment methods, etc.                                                                                |
+| `orderFormId` | string | Order form ID. |
+| `salesChannel` | string | Type of sales channel. |
+| `items` | array  | List of objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address. |
+| `totals` | array  | Total amount of the order form, divided into taxes, shipping, discounts, and the items themselves. |
+| `clientEmail` | string | Client's email address. |
+| `shippingDestination` | object | Shipping information. Mandatory field. |
+| `clientData` | object | Information regarding the client that placed the order. |
+| `paymentData` | object | Contains an *array* of payments, where there is information regarding the payment methods, etc. |
 
 ### Tax provider response to the request
 
