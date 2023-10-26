@@ -120,8 +120,8 @@ Let’s see an example of that body sent by Checkout:
 
 This body has eight main fields:
 
-| Field               | Type   | Description                                                                                                                                                                         |
-|---------------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Field | Type | Description |
+| - | - | - |
 | `orderFormId` | string | Order form ID. |
 | `salesChannel` | string | Type of sales channel. |
 | `items` | array  | List of objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address. |
