@@ -173,11 +173,11 @@ In the example above, the only item in the items array has a cost of `10`, and, 
 
 If you use Avalara as your tax calculation provider, response bodies might also include the following fields, which refer to the different jurisdictions that may apply according to location.
 
-| Field       | Type   | Description                                               |
-|-------------|--------|-----------------------------------------------------------|
-| `jurisType` | string | Type of jurisdiction that applies to calculation.         |
+| Field | Type | Description |
+| - | - | - |
+| `jurisType` | string | Type of jurisdiction that applies to calculation. |
 | `jurisCode` | string | Unique code that identifies the appropriate jurisdiction. |
-| `jurisName` | string | Name of the Jurisdiction that applies to the calculation. |
+| `jurisName` | string | Name of the jurisdiction that applies to the calculation. |
 
 These fields are also read by Checkout and added to the `priceTag`.
 
