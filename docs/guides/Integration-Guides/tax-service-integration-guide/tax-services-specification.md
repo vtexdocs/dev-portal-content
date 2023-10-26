@@ -157,11 +157,11 @@ In response to the request sent by Checkout, we expect an array of products, eac
 
 | Field         | Type   | Description                                                                                              |
 |---------------|--------|----------------------------------------------------------------------------------------------------------|
-| `id`          | string | Is the request item index, which means the SKU position on the items array sent by the requisition bodyI |
-| `taxes`       | array  | Is an array that contains all the taxes types for an SKU.                                                |
-| `name`        | string | Is the tax name that will appear on the checkout.                                                        |
-| `description` | string | Is an informative field. It will not appear on the storefront.                                           |
-| `value`       | number | Is the absolute numeric value that will be added to the original price.                                  |
+| `id` | string | Request item index, which means the SKU's position on the `items` array sent by the request body. |
+| `taxes` | array | List of all the taxes types for an SKU. |
+| `name` | string | Tax name that will appear on the checkout. |
+| `description` | string | Informative field, which does not appear on the storefront. |
+| `value` | number | Absolute numeric value that will be added to the original price. |
 
 In the example above, the only item in the items array has a cost of `10`, and, including the calculated taxes returned by the tax calculation tool, the total value would be `10 + 3.48 + 22 = 35.48`.
 
