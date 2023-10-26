@@ -11,13 +11,8 @@ Below, we are going to go over tax service integration works, and if you want to
 
 In synchronous integration, VTEX’s Checkout API triggers and sends a request to the external tax service API whenever there are changes to a customer’s cart, such as adding or removing items.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "- Timeout for the request is five seconds.\n- There is no retry in case of timeout.\n- If the external service that responds to the request times out constantly, the store will not be able to finish the order.\n- If this integration is active, it applies to all stores in that account.",
-  "title": "When using Tax Service integration, keep in mind that:"
-}
-[/block]
+>⚠️ Timeout for the request is five seconds. There is no retry in case of timeout. If the external service that responds to the request times out constantly, the store will not be able to finish the order. If this integration is active, it applies to all stores in that account.
+
 ### Checkout Configuration
 
 Synchronous tax integration can be activated or deactivated through a request to the Checkout Configuration API.
@@ -42,12 +37,9 @@ The most important data in this object is the `url`. This is the endpoint URL th
 The `authorizationHeader` defines the value that the Checkout will use in the `Authorization` header of calls to the external tax calculation API. This field can be used to define the access credentials for this API.
 
 Once the POST for the Checkout Configuration API has finished processing the request with this data, its synchronous integration with the Tax API is activated.
-[block:callout]
-{
-  "type": "warning",
-  "body": "When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/pt/tutorial/definicoes-de-conta-franquia-e-seller-white-label--5orlGHyDHGAYciQ64oEgKa#) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly."
-}
-[/block]
+
+>⚠️ When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa) are part of an order, tax configuration for the marketplace (seller 1) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly.
+
 ### Tax calculation request
 
 The tax calculation tool must provide an endpoint that will receive a POST request. In this request, Checkout provides a body in a specific format. This means that either the endpoint must be prepared to receive this body format, or the integration must contain a parser to adapt it to the correct format.
@@ -128,91 +120,64 @@ Let’s see an example of that body sent by Checkout:
 
 This body has eight main fields:
 
-- `orderFormId`: *string* related to the order form ID;
-
-- `salesChannel`: type of sales channel;
-
-- `items`: an *array* that contains objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address;
-
-- `totals`: an *array* with the total amount of the order form, divided into taxes, shipping, discounts, and the items themselves;
-
-- `clientEmail`: *string* that contains the client's email;
-
-- `shippingDestination`: *object* with shipping information, it's a mandatory field;
-
-- `clientData`: *object* that contains information regarding the client that did the order;
-
-- `paymentData`: *object* that contains an *array* of payments, where there is information regarding the payment methods, etc.
+| Field | Type | Description |
+| - | - | - |
+| `orderFormId` | string | Order form ID. |
+| `salesChannel` | string | Type of sales channel. |
+| `items` | array  | List of objects which are the order products, where **dockId** is a field that refers to its identification on the logistics system that contains information of its address. |
+| `totals` | array  | Total amount of the order form, divided into taxes, shipping, discounts, and the items themselves. |
+| `clientEmail` | string | Client's email address. |
+| `shippingDestination` | object | Shipping information. Mandatory field. |
+| `clientData` | object | Information regarding the client that placed the order. |
+| `paymentData` | object | Contains an *array* of payments, where there is information regarding the payment methods, etc. |
 
 ### Tax provider response to the request
 
 In response to the request sent by Checkout, we expect an array of products, each with its own array of taxes. See the example below:
 
 ```json
-{
-    "itemTaxResponse": [
+[
+    {
+        "id": "0",
+        "taxes": [
             {
-            "id": "0",
-            "taxes": [
-              {
                 "name": "TAX 1",
                 "description": "",
                 "value": 3.48
-              },
-              {
+            },
+            {
                 "name": "TAX 2",
                 "description": "",
                 "value": 22
-              }
-            ]
-          }
-        ],
-    "hooks": [
-        {
-          "major": 1,
-          "url": "http://master--bufferin.myvtex.com/avalara/checkout/salesinvoice-tax"
-        }
-    ]
-}
+            }
+        ]
+    }
+]
 ```
 
-- `itemTaxResponse` is an array of objects that corresponds to all the tax information that is applied to the different items sent to the tax provider. The main fields of those objects are described below:
-
-- `id` is the request item index, which means the SKU position on the items array sent by the requisition body;
-
-- `taxes` is an array that contains all the taxes types for an SKU;
-
-- `name` is the tax name that will appear on the checkout;
-
-- `description` is an informative field. It will not appear on the storefront;
-
-- `value` is the absolute value that will be added to the original price;
-
-- `hooks` should be an empty array, but any entry on the array corresponds to an URL that will be called when an order has its status changed. Usually, the relevant status change to listen to is “invoiced”. This URL needs to be prepared to receive the order id and should just respond to an HTTP 200 status.
+| Field | Type | Description |
+| - | - | - |
+| `id` | string | Request item index, which means the SKU's position on the `items` array sent by the request body. |
+| `taxes` | array | List of all the taxes types for an SKU. |
+| `name` | string | Tax name that will appear on the checkout. |
+| `description` | string | Informative field, which does not appear on the storefront. |
+| `value` | number | Absolute numeric value that will be added to the original price. |
 
 In the example above, the only item in the items array has a cost of `10`, and, including the calculated taxes returned by the tax calculation tool, the total value would be `10 + 3.48 + 22 = 35.48`.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "If no taxes apply to the items in the order, the expected response is an empty array (`[]`)."
-}
-[/block]
+>ℹ️ If no taxes apply to the items in the order, the expected response is an empty array (`[]`).
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For the Checkout API to understand the request body, the content-type must be set to `application/vnd.vtex.checkout.minicart.v1+json`"
-}
-[/block]
+>ℹ️ For the Checkout API to understand the request body, the content-type must be set to `application/vnd.vtex.checkout.minicart.v1+json`.
 
 #### Jurisdiction fields
 
 If you use Avalara as your tax calculation provider, response bodies might also include the following fields, which refer to the different jurisdictions that may apply according to location.
 
-- `jurisType`: Type of jurisdiction that applies to calculation.
-- `jurisCode`: Unique code that identifies the appropriate jurisdiction.
-- `jurisName`: Name of the Jurisdiction that applies to the calculation.
+| Field | Type | Description |
+| - | - | - |
+| `jurisType` | string | Type of jurisdiction that applies to calculation. |
+| `jurisCode` | string | Unique code that identifies the appropriate jurisdiction. |
+| `jurisName` | string | Name of the jurisdiction that applies to the calculation. |
 
 These fields are also read by Checkout and added to the `priceTag`.
 
@@ -220,12 +185,11 @@ Below is an example for values that may be contained in these fields, and you ca
 
 ```json
 {
-“jurisType”: “State”,
-“jurisCode”: “20”,
-“jurisName”: “Kansas”
+  "jurisType": "State",
+  "jurisCode": "20",
+  "jurisName": "Kansas"
 }
 ```
-
 
 [block:html]
 {
