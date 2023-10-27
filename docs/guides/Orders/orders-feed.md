@@ -12,6 +12,8 @@ In this sense, the feed is not a list of orders, but rather a list of events. Fo
 
 This guide explains how Feed and Hook work and how to configure them to build order integrations. Also, in the latter part of the article, we explain the differences between each and when to choose one over the other based on the specific needs of your operation.
 
+>ℹ️ Feed and Hook are independent configurations to build order integrations.
+
 ## Best practices for integrations
 
 When designing your orders’s integration, consider the practices below to increase performance and avoid throttling errors:
