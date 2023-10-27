@@ -42,10 +42,8 @@ On the other hand, the feed has been specifically developed to track order updat
 Configuring and using Feed v3 and Hook is only allowed when authorization is granted in the Order Management module.
 
 The feed's application key must have a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#) with one of the appropriate resources: `Feed v3 and Hook Admin` or `Feed v3 and Hook view only`, depending on the intended use.
- 
->⚠️ Each appKey can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user commits an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
- 
 
+>⚠️ Each appKey can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user commits an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
 
 ## Configuration
 
@@ -77,7 +75,6 @@ You can see the list of possible order statuses in the article [Order flow in or
     }
 ```
 
- 
 >ℹ️ The `FromWorkflow` filter may be limited for some of the integration needs of your store. If you want more filter options, consider using the `FromOrders` filter.
 
 #### `FromOrders`
@@ -94,7 +91,6 @@ You can see the list of possible order statuses in the article [Order flow in or
 
 >⚠️ The two filter types are mutually exclusive. If you pass `FromWorkflow` in the `type` field, you should not include the `expression` field nor `disableSingleFire` in the body. The reverse is also true. If you pass `FromOrders` `type`, you should not include the `status` field. If you combine them, you will get a `409 conflict` status response.
 
- 
 >ℹ️ If the `filter` is not configured, the `FromWorkflow` type is used, and all status changes will appear in the feed.
 
 ##### `expression`
@@ -243,11 +239,8 @@ Here are two complete example bodies for the [Feed configuration response](https
 }
 ```
 
- 
-  
  >ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
- 
- 
+
 > ❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
 
 ## Feed readout
