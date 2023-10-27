@@ -12,6 +12,18 @@ In this sense, the feed is not a list of orders, but rather a list of events. Fo
 
 This guide explains how Feed and Hook work and how to configure them to build order integrations. Also, in the latter part of the article, we explain the differences between each and when to choose one over the other based on the specific needs of your operation.
 
+## Best practices for integrations
+
+When designing your orders’s integration, consider the practices below to increase performance and avoid throttling errors:
+
+- Optimize your code to get only the required data.
+- Use caching for often-used data.
+- Consider including code that catches errors. By ignoring these errors and persisting in making requests, your app will not be able to recover gracefully.
+- After getting a 429 status code error, you should stop making additional API requests and wait before retrying. We recommend a 1 minute backoff time.
+- Configure your integration to communicate asynchronously with VTEX APIs in order to keep requests in a queue and do other processing tasks while waiting for the next queued job to run.
+
+>⚠️ If your integration is getting 429 status code errors, we recommend you to regulate the rate of your requests for smoother distribution. When the account exceeds the request limit, VTEX Admin might also become unavailable.
+
 ## Order integration: Feed vs. List orders
 
 Some stores use the List orders API request to check order status changes. However, this method only returns orders that have already been indexed, which may lead to some problems:
