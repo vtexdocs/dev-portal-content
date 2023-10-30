@@ -5,10 +5,9 @@ hidden: false
 createdAt: "2022-05-19T16:21:58.633Z"
 updatedAt: "2022-05-19T17:46:05.176Z"
 ---
-
 Payment Provider Framework (PPF) is an alternative way to develop payment connectors for your integration through VTEX IO. Since the development is based on a boilerplate of an IO app, a lot of the work is already done to implement the needed feature including the [API routes](https://developers.vtex.com/docs/guides/payment-provider-protocol-api-overview), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). With PPF, developers also do not need to worry about hosting the connector since it is hosted on the IO infrastructure.
 
->⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
+> ⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
 
 ## Getting started
 
@@ -22,29 +21,29 @@ Once you have the repository code in your workspace, you have to make sure you h
 
 1. Run the following command on your node folder:
 
-  ```sh
+```sh
   yarn add @vtex/payment-provider
 ```
 
 2. Go to your package.json and make sure it has been added as a dependency with the correct version:
 
-  ```sh
+```sh
   "@vtex/payment-provider": "1.x"
-  ```
+```
 
 3. Check in the `package.json` the version of `@vtex/api`, which should be listed in the devDependencies as follows:
 
-  ```sh
+```sh
   "@vtex/api": "6.x"
-  ```
+```
 
 4. When linking your app, this version might get updated to a later than 6.x version, which is fine. In case it is not listed as a `devDependency`, run the following command on your node folder:
 
-  ```shell
+```shell
   yarn add -D @vtex/api
-  ```
+```
 
->ℹ️ If you get any type errors or conflicts in your project related to `@vtex/api`, follow these steps to resolve the problem: delete the `node_modules` folder and the `yarn.lock` file from both your project root and your project's node folder, then run the command `yarn install -f` in both folders.
+> ℹ️ If you get any type errors or conflicts in your project related to `@vtex/api`, follow these steps to resolve the problem: delete the `node_modules` folder and the `yarn.lock` file from both your project root and your project's node folder, then run the command `yarn install -f` in both folders.
 
 5. In your `manifest.json`, you should check the builders section, in which you must include the `paymentProvider` in its current version. This will add policies to callback the Payment Gateway APIs and also expose Payment Provider protocol routes.
 
@@ -140,10 +139,9 @@ manifest.json
 
 By doing this you do not need to declare the `/manifest` route. They will be implemented automatically by the builder.
 
->⚠️ The `name` field indicating the name of the connector must be replaced with the name of your provider. This field cannot be filled with a value `"MyConnector"`.
+> ⚠️ The `name` field indicating the name of the connector must be replaced with the name of your provider. This field cannot be filled with a value `"MyConnector"`.
 
->ℹ️ The available payment methods in the platform are available in the Admin. You can check the supported methods by going to the left panel and **Transactions** > **Payments** > **Payment conditions** and clicking on the green plus (+) button as you were adding a new payment option. You can check more details on the [Configuring payment conditions article](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455). In case you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
-
+> ℹ️ The available payment methods in the platform are available in the Admin. You can check the supported methods by going to the left panel and **Transactions** > **Payments** > **Payment conditions** and clicking on the green plus (+) button as you were adding a new payment option. You can check more details on the [Configuring payment conditions article](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455). In case you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
 
 ### Overriding the Manifest route
 
@@ -179,20 +177,19 @@ You can also omit the `handler` and `headers` parameters, by doing it you will n
 
 Along with manifest fields (`paymentMethods` and `customFields`) there are the following configurable options.
 
-| Parameter name      | Required      | Default      | Description      |
-| ---------- | ---------- | ---------- | ---------- |
-|   `name`  |   Yes    |     |   Name of connector.  |
-|   `serviceUrl`  |   Yes    |   Auto-generated for IO connectors.  |   A valid URL (can include relative paths).  |
-|   `implementsOAuth`  |   No    |   `false`  |   Decides if the provider implements or not the configuration flow supporting OAuth authentication.  |
-|   `implementsSplit`  |   No    |   `false`  |   Decides if the provider implements or not the split flow. |
-|   `usesProviderHeadersName`  |   No    |   `true`  |   Decides if the provider will receive appKey and appToken headers as `"x-provider-api-appKey"` and `"x-provider-api-appToken"` respectively. |
-|   `useAntifraud`  |   No    |   `false`  |   Decides if the provider can or cannot be used along antifraud providers. |
-|   `usesBankInvoiceEnglishName`  |   No    |   `false`  |   Decides if the Bank Invoice payment method will use the English name, if `true`, or the Brazilian name (Boleto Bancário), if `false`. |
-|   `usesSecureProxy`  |   No    |   `true`  |   If `true`, the provider can process payment without being PCI-Certified, the connector will receive a `secureProxyUrl` on `createPayment flow`, and the card encrypted data. If `false`, the provider must be a PCI-Certified entity, and you should send the AOC containing the provided `serviceUrl`. |
-|   `requiresDocument`  |   No    |   `false`  |   If `true`, the customer must include the cardholder document on Checkout. A new field will appear on the Checkout form. If `false`, the customer does not need to include a cardholder document. |
-|   `acceptSplitPartialRefund`  |   No    |   `false`  |   If `true`, a partial refund will be sent when a payment split occurs. If `false`, the connector couldn't process a partial refund when a payment split occurs.|
-|   `usesAutoSettleOptions`  |   No    |   `false`  |   If `true`, the client will be able to choose the behavior of the auto settlement in the VTEX admin configurations of the provider. The options available are the following: Use behavior recommended by the payment processor, Automatic capture immediately after payment authorization, Automatic capture immediately after anti-fraud analysis, Deactivated: Not automatically captured. If `false`, the connector won't have this dropdown configuration field for auto settlement. More information can be found in the [Custom Auto Capture Feature article](https://developers.vtex.com/docs/guides/custom-auto-capture-feature). |
-
+| Parameter name                 | Required | Default                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------ | -------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                       | Yes      |                                   | Name of connector.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `serviceUrl`                 | Yes      | Auto-generated for IO connectors. | A valid URL (can include relative paths).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `implementsOAuth`            | No       | `false`                         | Decides if the provider implements or not the configuration flow supporting OAuth authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `implementsSplit`            | No       | `false`                         | Decides if the provider implements or not the split flow.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `usesProviderHeadersName`    | No       | `true`                          | Decides if the provider will receive appKey and appToken headers as `"x-provider-api-appKey"` and `"x-provider-api-appToken"` respectively.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `useAntifraud`               | No       | `false`                         | Decides if the provider can or cannot be used along antifraud providers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `usesBankInvoiceEnglishName` | No       | `false`                         | Decides if the Bank Invoice payment method will use the English name, if `true`, or the Brazilian name (Boleto Bancário), if `false`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `usesSecureProxy`            | No       | `true`                          | If `true`, the provider can process payment without being PCI-Certified, the connector will receive a `secureProxyUrl` on `createPayment flow`, and the card encrypted data. If `false`, the provider must be a PCI-Certified entity, and you should send the AOC containing the provided `serviceUrl`.                                                                                                                                                                                                                                                                                                                         |
+| `requiresDocument`           | No       | `false`                         | If `true`, the customer must include the cardholder document on Checkout. A new field will appear on the Checkout form. If `false`, the customer does not need to include a cardholder document.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `acceptSplitPartialRefund`   | No       | `false`                         | If `true`, a partial refund will be sent when a payment split occurs. If `false`, the connector couldn't process a partial refund when a payment split occurs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `usesAutoSettleOptions`      | No       | `false`                         | If `true`, the client will be able to choose the behavior of the auto settlement in the VTEX admin configurations of the provider. The options available are the following: Use behavior recommended by the payment processor, Automatic capture immediately after payment authorization, Automatic capture immediately after anti-fraud analysis, Deactivated: Not automatically captured. If `false`, the connector won't have this dropdown configuration field for auto settlement. More information can be found in the [Custom Auto Capture Feature article](https://developers.vtex.com/docs/guides/custom-auto-capture-feature). |
 
 ### Request a retry from Payment Gateway
 
@@ -249,12 +246,11 @@ new PaymentProviderService({
 
 For processing credit, debit or co-branded card transactions, integrations must be compliant with [PCI-DSS security standards](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance). For integrations hosted in VTEX IO supporting one of those payment methods, it is mandatory to use Secure Proxy to make calls to a PCI-certified endpoint. You can check more details in the [Secure Proxy article](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
->⚠️ The endpoint must be allowed by VTEX Secure Proxy. This must be [requested via ticket](https://help.vtex.com/support) sending the AOC with the wanted endpoint. Currently the Secure Proxy only accepts two Content-Types: You can use `\"application/json\"` or `\"application/x-www-form-urlencoded\"`. Any other Content-Type will not be supported.
+> ⚠️ The endpoint must be allowed by VTEX Secure Proxy. This must be [requested via ticket](https://help.vtex.com/support) sending the AOC with the wanted endpoint. Currently the Secure Proxy only accepts two Content-Types: You can use `\"application/json\"` or `\"application/x-www-form-urlencoded\"`. Any other Content-Type will not be supported.
 
 To make calls over our Secure Proxy, you must:
 
 1. Extend the `SecureExternalClient` abstract class. The constructor of the class is made in a way that VTEX allows `'http://my-pci-certified-domain.com'` as one of the trusted destinations by receiving its AOC.
-
 2. Set the Secure Proxy URL on the request that you want to be proxied. `SecureProxyURL` is received on `createPayment` flow.
 
 ```js
@@ -294,7 +290,7 @@ export class MyPCICertifiedClient extends SecureExternalClient {
 
 Now that you have a new connector ready to be used, you can test it entirely in the production flow using your store's Checkout.
 
->⚠️ The account must be allowed to test IO Connectors. This must be [requested via ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing the name of the app and the account where the tests will be made.
+> ⚠️ The account must be allowed to test IO Connectors. This must be [requested via ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing the name of the app and the account where the tests will be made.
 
 A prerequisite for this procedure is to have products for sale at your store for testing. To place an order with your new connector:
 
@@ -310,13 +306,13 @@ A prerequisite for this procedure is to have products for sale at your store for
 8. Configure a [payment condition](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) with your newly created connector and wait 10 minutes to appear on Checkout.
 9. Make a purchase with the payment condition you configured with your connector.
 
->⚠️ Our Payment Provider Test Suite, an app used to test payment connector flows, is not prepared to test cases considering an integration using Secure Proxy. More details about this app can be found in the [Payment Provider  Homologation article](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation).
+> ⚠️ Our Payment Provider Test Suite, an app used to test payment connector flows, is not prepared to test cases considering an integration using Secure Proxy. More details about this app can be found in the [Payment Provider  Homologation article](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation).
 
 Also, differently from connectors that do not use Payment Provider Framework, integrations that do use it do not support the ability to have a sandbox service provider endpoint, which is used for tests. A PPF connector only supports one production endpoint, so the toggle to choose between test and production in the configuration page of the Admin will not appear.
 
-## Making your connector available to everyone
+## Making your connector available to process sales
 
->⚠️ If you want to make your connector available to all accounts, make sure to have the `billingOptions` field in your manifest with the value `free`. More information about this field can be found in the [Billing Options article](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
+> ⚠️ To process sales with your connector on all VTEX accounts, make sure to send the `billingOptions` field indicated as `free`  in the manifest. If you only want to make it available for some specific accounts, inform the payments team through the ticket and do not send the `billingOptions` field in the manifest. More information about this field can be found in the [Billing Options article](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
 
 The publication process is made via the [app store](https://apps.vtex.com/). More info on how to do that can be found in the [Submitting your app to the VTEX App Store article](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
 
