@@ -141,7 +141,7 @@ By doing this you do not need to declare the `/manifest` route. They will be imp
 
 > ⚠️ The `name` field indicating the name of the connector must be replaced with the name of your provider. This field cannot be filled with a value `"MyConnector"`.
 
-> ℹ️ The available payment methods in the platform are available in the Admin. You can check the supported methods by going to the left panel and **Transactions** > **Payments** > **Payment conditions** and clicking on the green plus (+) button as you were adding a new payment option. You can check more details on the [Configuring payment conditions article](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455). In case you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
+> ℹ️ The available payment methods can be found in the Admin, by going to the left panel and accessing **Transactions** > **Payments** > **Payment conditions**, then clicking on the green plus (+) button as if you were adding a new payment option. Check more details on the [Configuring payment conditions article](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455). In case you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
 
 ### Overriding the Manifest route
 
