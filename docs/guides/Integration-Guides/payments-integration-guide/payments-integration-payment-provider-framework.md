@@ -312,7 +312,7 @@ Also, differently from connectors that do not use Payment Provider Framework, in
 
 ## Making your connector available to process sales
 
-> ⚠️ To process sales with your connector on all VTEX accounts, make sure to send the `billingOptions` field indicated as `free`  in the manifest. If you only want to make it available for some specific accounts, inform the payments team through the ticket and do not send the `billingOptions` field in the manifest. More information about this field can be found in the [Billing Options article](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
+> ⚠️ To process sales with your connector on all VTEX accounts, make sure to send the `billingOptions` field indicated as `free`  in the manifest. If you only want to make it available for some specific accounts, inform our Payments team through a [support ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) and do not send the `billingOptions` field in the manifest. More information about this field can be found in the [Billing Options article](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
 
 The publication process is made via the [app store](https://apps.vtex.com/). More info on how to do that can be found in the [Submitting your app to the VTEX App Store article](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
 
