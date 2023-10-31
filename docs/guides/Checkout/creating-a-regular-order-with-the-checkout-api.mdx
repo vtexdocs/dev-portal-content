@@ -8,20 +8,20 @@ excerpt: "Learn how to use VTEX APIs to efficiently handle the placement, paymen
 hideTOC: true
 ---
 
-This step-by-step guide will walk you through the process of using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) for handling the placement, payment, and delivery aspects of a regular order, with all responsibilities managed within the scope of a single account. This process is divided into the following steps
+This step-by-step guide will walk you through the process of using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) for handling the placement, payment, and delivery aspects of a regular order, with all responsibilities managed within the scope of a single account. This process is divided into the following steps:
 
-1. **Assess cart requirements:** The process begins with the simulation of a cart to assess available delivery and payment options. Additionally, since indicating an email address is necessary to place an order, this step also includes verifying the existence of a customer by cross-referencing their email address in the database.
-2. **Assemble the cart:** After assessing the cart requirements, the next step is to assemble the cart, ensuring that all essential order information is organized accurately under the [`orderForm`](https://developers.vtex.com/docs/guides/orderform-fields) object.
+1. **Assess cart requirements:** The process begins with the simulation of a cart to assess available delivery and payment options. Additionally, since indicating an email address is necessary to place an order, this step also includes verifying if the provided email is already associated with an existing customer.
+2. **Assemble the cart:** After assessing the cart requirements, the next step is to assemble the cart, ensuring that all essential order information is organized according to the [`orderForm`](https://developers.vtex.com/docs/guides/orderform-fields) data structure.
 3. **Handle the order:** This step involves placing the order on the VTEX platform and sending the necessary payment data to resolve the order payment.
-4. **Processing and validating the order:** The process ends by processing order details and conducting a verification procedure to confirm the successful placement of the order.
+4. **Process and validate the order:** The process ends by processing order details and conducting a verification procedure to confirm the successful placement of the order.
 
 <CH.Spotlight>
 
 <CH.Code>
 
-```shell Shell mark=2[18:30],2[32:44],5[32:39],6[34:43]
+```shell Shell
 curl --request post \
-  --url 'https://{accountname}.{environment}.com.br/api/checkout/pub/orderForms/simulation?RnbBehavior=0' \
+  --url 'https://{accountName}.{environment}.com.br/api/checkout/pub/orderForms/simulation?RnbBehavior=0' \
   --header 'Accept: application/json' \
   --header 'Content-Type: application/json' \
   --header 'X-VTEX-API-AppKey: {appKey}' \
@@ -32,16 +32,16 @@ curl --request post \
 ```python Python
 import http.client
 
-conn = http.client.HTTPSConnection("{accountname}.{environment}.com.br")
+conn = http.client.HTTPSConnection("{accountName}.{environment}.com.br")
 
 payload = "{\"items\":[{\"id\":\"1\",\"quantity\":1,\"seller\":\"1\"}],\"country\":\"BRA\",\"postalCode\":\"12345-000\",\"geoCoordinates\":[-47.924747467041016]}"
 
 headers = {
-    'Accept': "application/json",
-    'Content-Type': "application/json",
-    'X-VTEX-API-AppKey': "",
-    'X-VTEX-API-AppToken': ""
-    }
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
 
 conn.request("post", "/api/checkout/pub/orderForms/simulation?RnbBehavior=0", payload, headers)
 
@@ -56,14 +56,14 @@ const http = require("https");
 
 const options = {
  "method": "post",
- "hostname": "{accountname}.{environment}.com.br",
+ "hostname": "{accountName}.{environment}.com.br",
  "port": null,
  "path": "/api/checkout/pub/orderForms/simulation?RnbBehavior=0",
  "headers": {
   "Accept": "application/json",
   "Content-Type": "application/json",
-  "X-VTEX-API-AppKey": "",
-  "X-VTEX-API-AppToken": ""
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
  }
 };
 
@@ -163,7 +163,7 @@ req.end();
 
 ## Before you begin
 
-Before proceeding any further, ensure that you have a valid `appKey` and `appToken` granted with the necessary permissions to access the Checkout and Payments Gateway APIs. For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
+Before proceeding any further, ensure that you have a valid `appKey` and `appToken` granted with the necessary permissions to access the [Checkout](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway](https://developers.vtex.com/docs/api-reference/payments-gateway-api) APIs. For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
 
 > ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code will be highlighted and focused for your convenience.
 
@@ -182,13 +182,13 @@ This step provides essential information regarding the available delivery and pa
 
 <CH.Code show={["Shell", "Python", "Node.js", "Body"]}>
 
-```shell Shell mark=2[18:30],2[32:44],5[32:39],6[34:43]
+```shell Shell mark=2[18:30],2[32:44],5[32:39],6[34:43],7[11:138]
 ```
 
-```python Python mark=3[37:49],3[51:63]
+```python Python mark=3[37:49],3[51:63],10[25:32],11[27:36],5[12:161]
 ```
 
-```js Node.js mark=5[15:27],5[29:41]
+```js Node.js mark=5[15:27],5[29:41],11[25:32],12[27:36],30:33
 ```
 
 ---
@@ -211,24 +211,24 @@ This step verifies if the email used to place the order is already related to a 
 
 ```shell Shell mark=2[18:30],2[32:44],2[85:98],5[32:39],6[34:43]
 curl --request get \
-  --url 'https://{accountname}.{environment}.com.br/api/checkout/pub/profiles?email={emailAddress}' \
+  --url 'https://{accountName}.{environment}.com.br/api/checkout/pub/profiles?email={emailAddress}' \
   --header 'Accept: application/json' \
   --header 'Content-Type: application/json' \
   --header 'X-VTEX-API-AppKey: {appKey}' \
   --header 'X-VTEX-API-AppToken: {appToken}'
 ```
 
-```python Python mark=3[37:49],3[51:63]
+```python Python mark=3[37:49],3[51:63],8[25:32],9[27:36],12[55:68]
 import http.client
 
-conn = http.client.HTTPSConnection("{accountname}.{environment}.com.br")
+conn = http.client.HTTPSConnection("{accountName}.{environment}.com.br")
 
 headers = {
-    'Accept': "application/json",
-    'Content-Type': "application/json",
-    'X-VTEX-API-AppKey': "",
-    'X-VTEX-API-AppToken': ""
-    }
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
 
 conn.request("get", "/api/checkout/pub/profiles?email={emailAddress}", headers=headers)
 
@@ -238,19 +238,19 @@ data = res.read()
 print(data.decode("utf-8"))
 ```
 
-```js Node.js mark=5[15:27],5[29:41]
+```js Node.js mark=5[15:27],5[29:41],7[44:57],11[25:32],12[27:36]
 const http = require("https");
 
 const options = {
  "method": "get",
- "hostname": "{accountname}.{environment}.com.br",
+ "hostname": "{accountName}.{environment}.com.br",
  "port": null,
  "path": "/api/checkout/pub/profiles?email={emailAddress}",
  "headers": {
   "Accept": "application/json",
   "Content-Type": "application/json",
-  "X-VTEX-API-AppKey": "",
-  "X-VTEX-API-AppToken": ""
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
  }
 };
 
@@ -686,7 +686,7 @@ For returning customers, the `orderForm` for your order should resemble this str
 
 ### Placing the order
 
-Send a request to the [`Place order`](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) endpoint, using the `orderForm` you built as the request body.
+Send a request to the [`Place order`](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) endpoint using the `orderForm` you built as the request body.
 
 Upon receiving a `201 Created` response, take note of these four pieces of information:
 
@@ -699,29 +699,29 @@ Upon receiving a `201 Created` response, take note of these four pieces of infor
 
 <CH.Code show={["Shell", "Python", "Node.js", "Response"]}>
 
-```shell Shell mark=2[17:29],2[31:43]
+```shell Shell mark=2[17:29],2[31:43],5[31:38],6[33:42],7[10:20]
 curl --request put \
- --url 'https://{accountname}.{environment}.com.br/api/checkout/pub/orders' \
+ --url 'https://{accountName}.{environment}.com.br/api/checkout/pub/orders' \
  --header 'Accept: application/json' \
  --header 'Content-Type: application/json' \
- --header 'X-VTEX-API-AppKey: ' \
- --header 'X-VTEX-API-AppToken: ' \
- --data 'YOUR_ORDERFORM'
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{orderForm}'
 ```
 
-```python Python mark=3[37:49],3[51:63]
+```python Python mark=3[37:49],3[51:63],10[25:32],11[27:36],5[12:22]
 import http.client
 
-conn = http.client.HTTPSConnection("{accountname}.{environment}.com.br")
+conn = http.client.HTTPSConnection("{accountName}.{environment}.com.br")
 
-payload = "YOUR_ORDERFORM"
+payload = "{orderForm}"
 
 headers = {
-    'Accept': "application/json",
-    'Content-Type': "application/json",
-    'X-VTEX-API-AppKey': "",
-    'X-VTEX-API-AppToken': ""
-    }
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
 
 conn.request("put", "/api/checkout/pub/orders", payload, headers)
 
@@ -731,19 +731,19 @@ data = res.read()
 print(data.decode("utf-8"))
 ```
 
-```js Node.js mark=5[15:27],5[29:41]
+```js Node.js mark=5[15:27],5[29:41],11[25:32],12[27:36],29[26:36]
 const http = require("https");
 
 const options = {
  "method": "put",
- "hostname": "{accountname}.{environment}.com.br",
+ "hostname": "{accountName}.{environment}.com.br",
  "port": null,
  "path": "/api/checkout/pub/orders",
  "headers": {
   "Accept": "application/json",
   "Content-Type": "application/json",
-  "X-VTEX-API-AppKey": "",
-  "X-VTEX-API-AppToken": ""
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
  }
 };
 
@@ -760,7 +760,7 @@ const req = http.request(options, function (res) {
  });
 });
 
-req.write(JSON.stringify(YOUR_ORDERFORM));
+req.write(JSON.stringify({orderForm}));
 req.end();
 ```
 
@@ -855,29 +855,29 @@ In this step, we will communicate the necessary payment data to VTEX for the fin
 
 <CH.Code show={["Shell", "Python", "Node.js", "Response"]}>
 
-```shell Shell mark=2[17:29],2[31:43]
+```shell Shell mark=2[17:29],2[72:86],2[105:113],4[31:38],5[33:42],6[10:407]
 curl --request post \
- --url 'https://apiexamples.vtexpayments.com.br/api/pub/transactions/{{transactionId}}/payments?orderId={{orderId}}' \
+ --url 'https://{accountName}.vtexpayments.com.br/api/pub/transactions/{transactionId}/payments?orderId={orderId}' \
  --header 'Content-Type: application/json' \
- --header 'X-VTEX-API-AppKey: ' \
- --header 'X-VTEX-API-AppToken: ' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
  --data '[{"paymentSystem":4,"installments":1,"currencyCode":"BRL","value":100,"installmentsInterestRate":0,"installmentsValue":100,"referenceValue":100,"fields":{"holderName":"UserTest","cardNumber":"5378244888889174","validationCode":"231","dueDate":"10/19","document":"8041734561","accountId":"","address":null,"callbackUrl":""},"transaction":{"id":"{{transactionId}}","merchantName":"{{accountName}}"}}]'
 ```
 
-```python Python mark=3[37:49],3[51:63]
+```python Python mark=3[37:49],9[25:32],10[27:36],13[45:59],13[78:86]
 import http.client
 
-conn = http.client.HTTPSConnection("apiexamples.vtexpayments.com.br")
+conn = http.client.HTTPSConnection("{accountName}.vtexpayments.com.br")
 
 payload = "[{\"paymentSystem\":4,\"installments\":1,\"currencyCode\":\"BRL\",\"value\":100,\"installmentsInterestRate\":0,\"installmentsValue\":100,\"referenceValue\":100,\"fields\":{\"holderName\":\"UserTest\",\"cardNumber\":\"5378244888889174\",\"validationCode\":\"231\",\"dueDate\":\"10/19\",\"document\":\"8041734561\",\"accountId\":\"\",\"address\":null,\"callbackUrl\":\"\"},\"transaction\":{\"id\":\"{{transactionId}}\",\"merchantName\":\"{{accountName}}\"}}]"
 
 headers = {
-    'Content-Type': "application/json",
-    'X-VTEX-API-AppKey': "",
-    'X-VTEX-API-AppToken': ""
-    }
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
 
-conn.request("post", "/api/pub/transactions/%7B%7BtransactionId%7D%7D/payments?orderId=%7B%7BorderId%7D%7D", payload, headers)
+conn.request("post", "/api/pub/transactions/{transactionId}/payments?orderId={orderId}", payload, headers)
 
 res = conn.getresponse()
 data = res.read()
@@ -885,18 +885,18 @@ data = res.read()
 print(data.decode("utf-8"))
 ```
 
-```js Node.js mark=5[15:27],5[29:41]
+```js Node.js mark=5[15:27],10[25:32],11[27:36],29:48,7[33:47],7[66:74]
 const http = require("https");
 
 const options = {
  "method": "post",
- "hostname": "apiexamples.vtexpayments.com.br",
+ "hostname": "{accountName}.vtexpayments.com.br",
  "port": null,
- "path": "/api/pub/transactions/%7B%7BtransactionId%7D%7D/payments?orderId=%7B%7BorderId%7D%7D",
+ "path": "/api/pub/transactions/{transactionId}/payments?orderId={orderId}",
  "headers": {
   "Content-Type": "application/json",
-  "X-VTEX-API-AppKey": "",
-  "X-VTEX-API-AppToken": ""
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
  }
 };
 
@@ -950,7 +950,7 @@ req.end();
 
 ## Step 4 - Processing and validating the order
 
-In this final step, we will process the order. 
+In this final step, we will process the order.
 
 - Send a request to the [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-) endpoint. If the payment is processed without any issues, the order should be successfully placed; otherwise, a `status 500` error might occur.
 
@@ -958,30 +958,30 @@ In this final step, we will process the order.
 
 <CH.Code show={["Shell", "Python", "Node.js", "Response"]}>
 
-```shell Shell mark=2[17:29],2[31:43],2[86:97],5[21:28]
+```shell Shell mark=2[18:30],2[32:44],2[86:97],5[21:28],6[32:39],7[34:43]
 curl --request post \
-  --url 'https://{accountname}.{environment}.com.br/api/checkout/pub/gatewayCallback/{orderGroup}' \
+  --url 'https://{accountName}.{environment}.com.br/api/checkout/pub/gatewayCallback/{orderGroup}' \
   --header 'Accept: application/json' \
   --header 'Content-Type: application/json' \
   --header 'Cookie: {cookie}' \
-  --header 'X-VTEX-API-AppKey: ' \
-  --header 'X-VTEX-API-AppToken: '
+  --header 'X-VTEX-API-AppKey: {appKey}' \
+  --header 'X-VTEX-API-AppToken: {appToken}'
 ```
 
-```python Python mark=3[37:49],3[51:63]
+```python Python mark=3[37:49],3[51:63],9[25:32],10[27:36],6[14:21],13[57:68]
 import http.client
 
-conn = http.client.HTTPSConnection("{accountname}.{environment}.com.br")
+conn = http.client.HTTPSConnection("{accountName}.{environment}.com.br")
 
 headers = {
-    'Cookie': "Vtex_CHKO_Auth=0e/RpYIEZu19BuwXB4tZ7eIGu9HT8vdUAHWQDHDpxMc=; CheckoutDataAccess=0e/PoiTEZu19BuwXB4tZ7eIGu9HT8vdUAHWQDHDpxMc=",
-    'Accept': "application/json",
-    'Content-Type': "application/json",
-    'X-VTEX-API-AppKey': "",
-    'X-VTEX-API-AppToken': ""
-    }
+  'Cookie': "{cookie}",
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
 
-conn.request("post", "/api/checkout/pub/gatewayCallback/123456789", headers=headers)
+conn.request("post", "/api/checkout/pub/gatewayCallback/{orderGroup}", headers)
 
 res = conn.getresponse()
 data = res.read()
@@ -989,20 +989,20 @@ data = res.read()
 print(data.decode("utf-8"))
 ```
 
-```js Node.js mark=5[15:27],5[29:41]
+```js Node.js mark=5[15:27],5[29:41],12[25:32],13[27:36],7[45:56]
 const http = require("https");
 
 const options = {
  "method": "post",
- "hostname": "{accountname}.{environment}.com.br",
+ "hostname": "{accountName}.{environment}.com.br",
  "port": null,
- "path": "/api/checkout/pub/gatewayCallback/123456789",
+ "path": "/api/checkout/pub/gatewayCallback/{orderGroup}",
  "headers": {
-  "Cookie": "Vtex_CHKO_Auth=0e/RpYIEZu19BuwXB4tZ7eIGu9HT8vdUAHWQDHDpxMc=; CheckoutDataAccess=0e/PoiTEZu19BuwXB4tZ7eIGu9HT8vdUAHWQDHDpxMc=",
+  "Cookie": "{cookie}",
   "Accept": "application/json",
   "Content-Type": "application/json",
-  "X-VTEX-API-AppKey": "",
-  "X-VTEX-API-AppToken": ""
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
  }
 };
 
@@ -1038,19 +1038,71 @@ Finally, you can confirm if your order was correctly placed by checking the [Ord
 
 <CH.Code show={["Shell", "Python", "Node.js", "Body"]}>
 
-```shell Shell mark=2[18:30],2[32:44],5[32:39],6[34:43]
+```shell Shell mark=2[17:29],5[31:38],6[33:42],2[76:84]
+curl --request get \
+ --url 'https://{accountName}.vtexcommercestable.com.br/api/oms/pvt/orders/{orderId}' \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}'
 ```
 
-```python Python mark=3[37:49],3[51:63]
+```python Python mark=3[37:49],8[25:32],9[27:36],12[42:50]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("get", "/api/oms/pvt/orders/{orderId}", headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
 ```
 
-```js Node.js mark=5[15:27],5[29:41]
+```js Node.js mark=5[15:27],7[31:39],11[25:32],12[27:36]
+const http = require("https");
+
+const options = {
+ "method": "get",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/oms/pvt/orders/{orderId}",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.end();
 ```
 
 ---
 
-```json Response
-{}
+```txt Response
+200 OK
 ```
 
 </CH.Code>
