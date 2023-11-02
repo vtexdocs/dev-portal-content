@@ -18,10 +18,10 @@ To unify login for different accounts, you must choose one account that will be 
 
 To implement this connection, you must:
 
-- [Set up OAuth Provider in primary account](#set-up-oauth-provider-in-primary-account)
-- [Set up OAuth connection in secondary account](#set-up-oauth-connection-in-secondary-account)
+- [Set up OAuth Provider in the primary account](#set-up-oauth-provider-in-the-primary-account)
+- [Set up OAuth connection in the secondary account](#set-up-oauth-connection-in-the-secondary-account)
 
-### Set up OAuth Provider in primary account
+### Set up OAuth Provider in the primary account
 
 To set up your OAuth Provider, follow these steps:
 
@@ -66,16 +66,11 @@ https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx
 8. Copy the client ID and secret. You will need these credentials to set up the OAuth connection in the **secondary account**.
    ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/unifying-login-for-different-accounts-3.PNG)
 
-### Set up OAuth connection in secondary account
+### Set up OAuth connection in the secondary account
 
-Now that you have setup an OAuth identity provider in your **primary account** and registered your **secondary account** as an OAuth client, you must head to the Admin panel of your **secondary account** and set up the connection between the accounts according to the [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration). For the purpose of this method, there are some custom OAuth configuration information that you must fill in specific ways. See the specification below to learn how to fill in this information for each configuration step of the [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration).
+Now that you have set an OAuth identity provider in your **primary account** and registered your **secondary account** as an OAuth client, you must head to the Admin panel of your **secondary account** and set up the connection between the accounts according to the [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration). For the purpose of this method, there is some custom OAuth configuration information that you must fill in specific ways. See the specification below to learn how to fill in this information for each configuration step of the [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration).
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "The information below is meant for VTEX accounts using VTEX ID as identity providers. If you want to use a custom OAuth identity provider, see the  [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration)."
-}
-[/block]
+>⚠️ The information below is meant for VTEX accounts using VTEX ID as identity providers. If you want to use a custom OAuth identity provider, see the  [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration).
 
 #### 1. Provider Details
 
@@ -121,6 +116,6 @@ Now that you have setup an OAuth identity provider in your **primary account** a
 
 #### Account host
 
-The account host, used in the **URLs** for some of the configuration steps above, can be defined in the VTEX Admin panel, by going to `ACCOUNT SETTINGS` > `Account management` > `Account`.
+The account host, used in the **URLs** for some of the configuration steps above, can be defined in the VTEX Admin panel by going to `ACCOUNT SETTINGS` > `Account management` > `Account`.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/unifying-login-for-different-accounts-4.PNG)
