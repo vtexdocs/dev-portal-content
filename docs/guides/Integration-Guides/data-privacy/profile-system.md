@@ -139,8 +139,6 @@ There are several APIs you can integrate with in order to manage information reg
 
 A profile is the main entity where a given customer’s data is stored.
 
-**API endpoints:**
-
 - `POST` [Create client profile](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/profiles)
 - `GET` [Get profile](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-)
 - `PATCH` [Update client profile](https://developers.vtex.com/docs/api-reference/profile-system#patch-/api/storage/profile-system/profiles/-profileId-)
@@ -187,8 +185,6 @@ A profile is the main entity where a given customer’s data is stored.
 ### Addresses
 
 Addresses are linked to profiles and any profile can have as many addresses as it might need. This means that a valid `profileId` is necessary to perform any action regarding addresses.
-
-**API endpoints:**
 
 - `POST` [Create client address](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/profiles/-profileId-/addresses)
 - `GET` [Get client addresses](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses)
@@ -243,9 +239,9 @@ Addresses are linked to profiles and any profile can have as many addresses as i
 
 ### Prospects
 
-**API endpoints:**
-
 - `POST` [Create prospect](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/prospects)
+- `GET` [Get prospects](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/prospects)
+- `GET` [Get unmasked prospects](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/prospects/unmask)
 - `GET` [Get prospect](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/prospects/-prospectId-)
 - `PATCH` [Update prospect](https://developers.vtex.com/docs/api-reference/profile-system#patch-/api/storage/profile-system/prospects/-prospectId-)
 - `DELETE` [Delete prospect](https://developers.vtex.com/docs/api-reference/profile-system#delete-/api/storage/profile-system/prospects/-prospectId-)
@@ -253,10 +249,14 @@ Addresses are linked to profiles and any profile can have as many addresses as i
 
 ### Purchase information
 
-**API endpoints:**
-
 - `POST` [Create purchase information](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/profiles/-profileId-/purchase-info)
 - `GET` [Get purchase information](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/purchase-info)
 - `PATCH` [Update purchase information](https://developers.vtex.com/docs/api-reference/profile-system#patch-/api/storage/profile-system/profiles/-profileId-/purchase-info)
 - `DELETE` [Delete purchase information](https://developers.vtex.com/docs/api-reference/profile-system#delete-/api/storage/profile-system/profiles/-profileId-/purchase-info)
 - `GET` [Get unmasked purchase information](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/purchase-info/unmask)
+
+### Schemas
+
+- `GET` [Get full schema](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/schemas/profileSystem)
+- `PUT` [Create or delete custom fields](https://developers.vtex.com/docs/api-reference/profile-system#put-/api/storage/profile-system/schemas/profileSystem/custom)
+- `GET` [Get custom fields](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/schemas/profileSystem/custom)
