@@ -23,20 +23,20 @@ vtex help
 Log in to your VTEX account by running the following command:
 
 ```shell
-vtex login {account-name}
+vtex login {accountName}
 ```
 
 > ⚠️ Remember to replace the value in curly brackets with the values that apply to your scenario.
 
 After running this command, a new tab will open in your browser, asking you to log in to the desired VTEX account with your email.
 
-Once you have logged in, the web page will display the following message: *“You may now close this window.”*
+Once logged in, the web page will display the following message: *“You may now close this window.”*
 
 When you return to the computer terminal, you will have access to a development environment for this VTEX account. You will see some basic information about your account displayed as follows:
 
 ![Login Screen](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-1.png)
 
-> ℹ️ If you decide to work on another account later, run the command `vtex switch {account-name}`, specifying the account name to which you want to switch.
+> ℹ️ If you decide to work on another account later, run the command `vtex switch {accountName}`, specifying the account name to which you want to switch.
 
 ## Creating a new workspace
 
@@ -47,7 +47,7 @@ To start customizing your storefront or developing a VTEX IO app, you must switc
 To switch to an existing development workspace or create a new one, run the following command:
 
 ```shell
-vtex use {workspace-name}
+vtex use {workspaceName}
 ```
 
 Notice that if a workspace with the chosen name already exists, you will be directed to it.
@@ -73,7 +73,7 @@ vtex whoami
 To install an app on your current account and workspace, use the following command:
 
 ```shell
-vtex install {appvendor}.{appname}@{appversion}
+vtex install {appVendor}.{appName}@{appVersion}
 ```
 
 > ⚠️ Remember to replace the values in curly brackets with the values that apply to your scenario.
