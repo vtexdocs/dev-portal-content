@@ -13,6 +13,8 @@ There are many scenarios where canceling an order is necessary, whether on behal
 
 In each case, both seller and marketplace will be notified about changes, have access to information about each other's reasons for canceling and/or denying a cancel request, and sellers will know when the shopper requested the cancellation.
 
+For information about this feature in VTEX Admin, see [Declining order cancelation](https://help.vtex.com/en/tutorial/declining-order-cancelation--F2n0h1TeQ5td540Gjyff4).
+
 > In this article, the term marketplace will refer to VTEX marketplace and seller to VTEX seller. For more information, see [Marketplace strategies at VTEX](https://help.vtex.com/en/tutorial/marketplace-strategies-at-vtex--tutorials_402).
 
 ## Permissions
