@@ -11,15 +11,32 @@ hideTOC: true
 This step-by-step guide will walk you through the process of using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) for handling the placement, payment, and delivery aspects of a regular order, with all responsibilities managed within the scope of a single account. This process is divided into the following steps:
 
 1. **Assess cart requirements:** The process begins with the simulation of a cart to assess available delivery and payment options. Additionally, since indicating an email address is necessary to place an order, this step also includes verifying if the provided email is already associated with an existing customer.
-2. **Assemble the cart:** After assessing the cart requirements, the next step is to assemble the cart, ensuring that all essential order information is organized according to the [`orderForm`](https://developers.vtex.com/docs/guides/orderform-fields) data structure.
+2. **Assemble the cart:** After assessing the cart requirements, the next step is to assemble the cart, ensuring that all essential order information is organized according to the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) data structure.
 3. **Handle the order:** This step involves placing the order on the VTEX platform and sending the necessary payment data to resolve the order payment.
 4. **Process and validate the order:** The process ends by processing order details and conducting a verification procedure to confirm the successful placement of the order.
 
-<CH.Spotlight>
+## Before you begin
 
-<CH.Code>
+Before proceeding any further, ensure that you have a valid `appKey` and `appToken` granted with the necessary permissions to access the [Checkout](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway](https://developers.vtex.com/docs/api-reference/payments-gateway-api) APIs. For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
 
-```shell Shell
+> ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code will be highlighted and focused for your convenience on the right side of the screen.
+
+<CH.Scrollycoding>
+
+## Step 1 - Assessing cart requirements
+
+In this step, we will verify if your store can fulfill the cart requirements and gather essential order information to ensure a smooth order placement process in the subsequent steps.
+
+### Simulating a cart
+
+This step provides essential information regarding the available delivery and payment options for the specific combination of items in the cart.
+
+- Send a request to the [Cart simulation](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation) API endpoint. Specify the SKU ID (`items.id`), the number of items in the cart (`items.quantity`), the Seller's ID (`items.seller`), and the shipping address country (`country`) in the request body. Also, provide the shipping address's postal code (`postalCode`) or the geo-coordinates (`geoCoordinates`).
+- Take note of the `items`, `shippingData.logisticsInfo`, and `paymentData` objects, as we will use this data in the following steps.
+
+<CH.Code show={["Shell", "Python", "Node.js", "Body"]}>
+
+```shell Shell mark=2[18:30],2[32:44],5[32:39],6[34:43],7[11:138]
 curl --request post \
   --url 'https://{accountName}.{environment}.com.br/api/checkout/pub/orderForms/simulation?RnbBehavior=0' \
   --header 'Accept: application/json' \
@@ -29,7 +46,7 @@ curl --request post \
   --data '{"items":[{"id":"1","quantity":1,"seller":"1"}],"country":"BRA","postalCode":"12345-000","geoCoordinates":[-47.924747467041016]}'
 ```
 
-```python Python
+```python Python mark=3[37:49],3[51:63],10[25:32],11[27:36],5[12:161]
 import http.client
 
 conn = http.client.HTTPSConnection("{accountName}.{environment}.com.br")
@@ -51,7 +68,7 @@ data = res.read()
 print(data.decode("utf-8"))
 ```
 
-```js Node.js mark=5[15:27],5[29:41]
+```js Node.js mark=5[15:27],5[29:41],11[25:32],12[27:36],30:33
 const http = require("https");
 
 const options = {
@@ -89,7 +106,9 @@ req.write(JSON.stringify({
 req.end();
 ```
 
-```json Response
+---
+
+```json Response mark=13,20,25
 {
   "allowManualPrice": boolean,
   "canEditData": boolean,
@@ -124,87 +143,15 @@ req.end();
 }
 ```
 
-```json orderForm.json
-{
-  "allowManualPrice": boolean,
-  "canEditData": boolean,
-  "clientPreferencesData": {},
-  "clientProfileData": {},
-  "commercialConditionData": {},
-  "customData": {},
-  "giftRegistryData": {},
-  "hooksData": {},
-  "ignoreProfileData": boolean,
-  "isCheckedIn": boolean,
-  "itemMetadata": {},
-  "items": {},
-  "itemsOrdination": {},
-  "loggedIn": boolean,
-  "marketingData": {},
-  "messages": [],
-  "openTextField": {},
-  "orderFormId": string,
-  "paymentData": {},  
-  "ratesAndBenefitsData": {},
-  "salesChannel": "1",
-  "selectableGifts": {},
-  "sellers": {},
-  "shippingData": {},
-  "storeId": {},
-  "storePreferencesData": {},
-  "totalizers": {},
-  "userProfileId": {},
-  "userType": {},
-  "value": number
-}
-```
-
-</CH.Code>
-
-## Before you begin
-
-Before proceeding any further, ensure that you have a valid `appKey` and `appToken` granted with the necessary permissions to access the [Checkout](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway](https://developers.vtex.com/docs/api-reference/payments-gateway-api) APIs. For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
-
-> ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code will be highlighted and focused for your convenience.
-
----
-
-## Step 1 - Assessing cart requirements
-
-In this step, we will verify if your store can fulfill the cart requirements and gather essential order information to ensure a smooth order placement process in the subsequent steps.
-
-### Simulating a cart
-
-This step provides essential information regarding the available delivery and payment options for the specific combination of items in the cart.
-
-- Send a request to the [`Cart simulation`](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation) API endpoint. Specify the SKU ID (`items.id`), the number of items in the cart (`items.quantity`), and the Seller's ID (`items.seller`) in the request body.
-- Take note of the `items`, `shippingData.logisticsInfo`, and `paymentData` objects, as we will use this data in the following steps.
-
-<CH.Code show={["Shell", "Python", "Node.js", "Body"]}>
-
-```shell Shell mark=2[18:30],2[32:44],5[32:39],6[34:43],7[11:138]
-```
-
-```python Python mark=3[37:49],3[51:63],10[25:32],11[27:36],5[12:161]
-```
-
-```js Node.js mark=5[15:27],5[29:41],11[25:32],12[27:36],30:33
-```
-
----
-
-```json Response mark=13,20,25
-```
-
 </CH.Code>
 
 ---
 
 ### Checking for existing customer
 
-This step verifies if the email used to place the order is already related to a customer in your database. This verification serves to not only enhance operational efficiency but also proactively prevent potential permission-related issues.
+Now, we will verify whether the email that will be used to place the order is already related to a customer in your database. This verification serves to not only enhance operational efficiency but also proactively prevent potential permission-related issues.
 
-- Send a request to the [`Get client by email`](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles) endpoint to check for existing profiles associated with a specific email address. If the response to this request returns any content, it means the shopper’s information is in your database. In such cases, you can proceed using this data in subsequent steps, sparing the shopper from the need to provide their email again.
+- Send a request to the [Get client by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles) endpoint to check for existing profiles associated with a specific email address. If the response to this request returns any content, it means the shopper’s information is in your database. In such cases, you can proceed using this data in subsequent steps, sparing the shopper from the need to provide their email again.
 - If applicable, take note of the `availableAddresses` and `userProfile` objects, as we will use this data in the following steps.
 
 <CH.Code show={["Shell", "Python", "Node.js", "Body"]}>
@@ -322,9 +269,9 @@ req.end();
 
 ## Step 2 - Assembling the cart
 
-In this step, we will arrange the order details into the specified data format, following the [`orderForm`](https://developers.vtex.com/docs/guides/orderform-fields) data structure. This formatted cart data will be used as the request body in the following steps.
+In this step, we will arrange the order details into the specified data format, following the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) data structure. This formatted cart data will be used as the request body in the following steps.
 
-Below, we will briefly examine the key elements that make up the [`orderForm`](https://developers.vtex.com/docs/guides/orderform-fields), which include:
+Below, we will briefly examine the key elements that make up the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields), which include:
 
 - `items`
 - `clientProfileData`
@@ -332,11 +279,43 @@ Below, we will briefly examine the key elements that make up the [`orderForm`](h
 - `shippingData.logisticsInfo`
 - `paymentData`
 
-Note that while an `orderForm` can have various elements, a standard order typically consists of the abovementioned ones.
+Note that while an `orderForm` can have multiple elements, a standard order typically consists of the ones mentioned above.
 
 <CH.Code  show={["orderForm.json"]}>
 
 ```json orderForm.json focus=5,13,25,20
+{
+  "allowManualPrice": boolean,
+  "canEditData": boolean,
+  "clientPreferencesData": {},
+  "clientProfileData": {},
+  "commercialConditionData": {},
+  "customData": {},
+  "giftRegistryData": {},
+  "hooksData": {},
+  "ignoreProfileData": boolean,
+  "isCheckedIn": boolean,
+  "itemMetadata": {},
+  "items": {},
+  "itemsOrdination": {},
+  "loggedIn": boolean,
+  "marketingData": {},
+  "messages": [],
+  "openTextField": {},
+  "orderFormId": string,
+  "paymentData": {},  
+  "ratesAndBenefitsData": {},
+  "salesChannel": "1",
+  "selectableGifts": {},
+  "sellers": {},
+  "shippingData": {},
+  "storeId": {},
+  "storePreferencesData": {},
+  "totalizers": {},
+  "userProfileId": {},
+  "userType": {},
+  "value": number
+}
 ```
 
 </CH.Code>
@@ -409,7 +388,7 @@ Note that while an `orderForm` can have various elements, a standard order typic
 
 ### `clientProfileData`: Existing customers
 
-If the customer already exists in your database, use the `userProfile.email` obtained in the [Checking for existing customer](#checking-for-existing-customer) step to build the `clientProfileData` object. Note that the email address is enough to register the order to the shopper’s existing account.
+If the customer already exists in your database, use the `userProfile.email` obtained in the [Checking for existing customer](#checking-for-existing-customer) step to build the `clientProfileData` object. The email address is enough to register the order to the shopper’s existing account.
 
 <CH.Code  show={["orderForm.json"]}>
 
@@ -467,7 +446,7 @@ If the customer already exists in your database, use the `userProfile.email` obt
 
 ### `shippingData.address`: Existing customers
 
-If the customer already exists in your database, use the desired `addressId` obtained from the [Checking for existing customer](#checking-for-existing-customer) step to build the `shippingData.address` block.
+If the customer already exists in your database, use the desired `availableAddresses[i].addressId` obtained from the [Checking for existing customer](#checking-for-existing-customer) step to build the `shippingData.address` block.
 
 <CH.Code  show={["orderForm.json"]}>
 
@@ -686,7 +665,7 @@ For returning customers, the `orderForm` for your order should resemble this str
 
 ### Placing the order
 
-Send a request to the [`Place order`](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) endpoint using the `orderForm` you built as the request body.
+Send a request to the [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) endpoint using the `orderForm` you built as the request body.
 
 Upon receiving a `201 Created` response, take note of these four pieces of information:
 
@@ -855,16 +834,17 @@ In this step, we will communicate the necessary payment data to VTEX for the fin
 
 <CH.Code show={["Shell", "Python", "Node.js", "Response"]}>
 
-```shell Shell mark=2[17:29],2[72:86],2[105:113],4[31:38],5[33:42],6[10:407]
+```shell Shell mark=2[17:29],2[72:86],2[105:113],5[31:38],6[33:42],7[10:407]
 curl --request post \
  --url 'https://{accountName}.vtexpayments.com.br/api/pub/transactions/{transactionId}/payments?orderId={orderId}' \
+ --header 'Accept: application/json' \
  --header 'Content-Type: application/json' \
  --header 'X-VTEX-API-AppKey: {appKey}' \
  --header 'X-VTEX-API-AppToken: {appToken}' \
  --data '[{"paymentSystem":4,"installments":1,"currencyCode":"BRL","value":100,"installmentsInterestRate":0,"installmentsValue":100,"referenceValue":100,"fields":{"holderName":"UserTest","cardNumber":"5378244888889174","validationCode":"231","dueDate":"10/19","document":"8041734561","accountId":"","address":null,"callbackUrl":""},"transaction":{"id":"{{transactionId}}","merchantName":"{{accountName}}"}}]'
 ```
 
-```python Python mark=3[37:49],9[25:32],10[27:36],13[45:59],13[78:86]
+```python Python mark=3[37:49],10[25:32],11[27:36],14[45:59],14[78:86]
 import http.client
 
 conn = http.client.HTTPSConnection("{accountName}.vtexpayments.com.br")
@@ -872,6 +852,7 @@ conn = http.client.HTTPSConnection("{accountName}.vtexpayments.com.br")
 payload = "[{\"paymentSystem\":4,\"installments\":1,\"currencyCode\":\"BRL\",\"value\":100,\"installmentsInterestRate\":0,\"installmentsValue\":100,\"referenceValue\":100,\"fields\":{\"holderName\":\"UserTest\",\"cardNumber\":\"5378244888889174\",\"validationCode\":\"231\",\"dueDate\":\"10/19\",\"document\":\"8041734561\",\"accountId\":\"\",\"address\":null,\"callbackUrl\":\"\"},\"transaction\":{\"id\":\"{{transactionId}}\",\"merchantName\":\"{{accountName}}\"}}]"
 
 headers = {
+  'Accept': "application/json",
   'Content-Type': "application/json",
   'X-VTEX-API-AppKey': "{appKey}",
   'X-VTEX-API-AppToken': "{appToken}"
@@ -885,7 +866,7 @@ data = res.read()
 print(data.decode("utf-8"))
 ```
 
-```js Node.js mark=5[15:27],10[25:32],11[27:36],29:48,7[33:47],7[66:74]
+```js Node.js mark=5[15:27],11[25:32],12[27:36],30:49,8[33:47],8[66:74]
 const http = require("https");
 
 const options = {
@@ -894,6 +875,7 @@ const options = {
  "port": null,
  "path": "/api/pub/transactions/{transactionId}/payments?orderId={orderId}",
  "headers": {
+  "Accept": "application/json",
   "Content-Type": "application/json",
   "X-VTEX-API-AppKey": "{appKey}",
   "X-VTEX-API-AppToken": "{appToken}"
@@ -952,7 +934,7 @@ req.end();
 
 In this final step, we will process the order.
 
-- Send a request to the [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-) endpoint. If the payment is processed without any issues, the order should be successfully placed; otherwise, a `status 500` error might occur.
+- Send a request to the [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-) endpoint. If the payment is processed without any issues, the order should be successfully placed. Otherwise, a `status 500` error might occur.
 
 > Note that this process uses the gateway connectors configured in your VTEX environment. Be careful to prevent any unwanted charges or unexpected payment denials.
 
@@ -1034,7 +1016,7 @@ req.end();
 
 ### Verifying the order placement
 
-Finally, you can confirm if your order was correctly placed by checking the [Order management](https://help.vtex.com/en/tutorial/orders-list--tutorials_200#) in VTEX Admin. Alternatively, you can use the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) and [List orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) endpoints for this purpose.
+Finally, you can confirm if your order was correctly placed by checking the [Order management](https://help.vtex.com/en/tutorial/all-orders--2QTduKHAJMFIZ3BAsi6Pi) in VTEX Admin. Alternatively, you can use the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) and [List orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) endpoints for this purpose.
 
 <CH.Code show={["Shell", "Python", "Node.js", "Body"]}>
 
@@ -1107,4 +1089,4 @@ req.end();
 
 </CH.Code>
 
-</CH.Spotlight>
+</CH.Scrollycoding>
