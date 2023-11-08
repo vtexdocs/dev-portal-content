@@ -1,9 +1,9 @@
 ---
-title: "Order canceling improvements (Beta)"
-slug: "order-canceling-improvements-beta"
-hidden: true
+title: "Order canceling improvements"
+slug: "order-canceling-improvements"
+hidden: false
 createdAt: "2023-08-17T13:21:05.725Z"
-updatedAt: "2023-08-17T13:17:33.816Z"
+updatedAt: "2023-11-17T13:17:33.816Z"
 ---
 
 There are many scenarios where canceling an order is necessary, whether on behalf of sellers, marketplaces or shoppers. To cover multiple scenarios, we made the following improvements in order cancellation:
@@ -13,7 +13,9 @@ There are many scenarios where canceling an order is necessary, whether on behal
 
 In each case, both seller and marketplace will be notified about changes, have access to information about each other's reasons for canceling and/or denying a cancel request, and sellers will know when the shopper requested the cancellation.
 
-> In this article, the term marketplace will refer to VTEX marketplace and seller to VTEX seller. For more information, see Marketplace strategies at VTEX.
+For information about this feature in VTEX Admin, see [Declining order cancelation](https://help.vtex.com/en/tutorial/declining-order-cancelation--F2n0h1TeQ5td540Gjyff4).
+
+> In this article, the term marketplace will refer to VTEX marketplace and seller to VTEX seller. For more information, see [Marketplace strategies at VTEX](https://help.vtex.com/en/tutorial/marketplace-strategies-at-vtex--tutorials_402).
 
 ## Permissions
 
