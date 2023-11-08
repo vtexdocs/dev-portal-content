@@ -6,7 +6,10 @@ createdAt: "2021-10-25T23:13:41.287Z"
 updatedAt: "2022-10-27T18:56:50.737Z"
 ---
 There are different ways of using VTEX APIs to handle shopping carts and checkout in order to place orders. For instance, you can use API requests to [create](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) and [manage](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) shopping carts on the VTEX platform, so as to place an order from that information later, or directly place an order with a single request containing all cart data.
+
 > ℹ️️ The main data structure used in VTEX Checkout is the `orderForm`. It contains every piece of information pertinent to a shopping cart, including logistics, payment, products and customer profile, for instance. Learn more in the [orderForm documentation.](https://developers.vtex.com/docs/guides/orderform-fields)
+
+> ✅ Try the interactive version of this article by accessing this [link](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api). Code will be highlighted and focused for your convenience.
 
 For this tutorial, we chose one of the more objective ways to understand and use our APIs to place a regular order (placed, paid, and delivered under the liability of a single account). To do this, we will follow these steps:
 

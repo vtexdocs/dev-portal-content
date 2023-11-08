@@ -1,0 +1,571 @@
+---
+title: "Managing SKUs"
+slug: "managing-skus"
+excerpt: "Learn how to create, update, and activate an SKU with the Catalog API."
+hidden: false
+createdAt: "2021-12-14T13:56:04.502Z"
+updatedAt: "2022-02-04T21:26:33.803Z"
+---
+
+This step-by-step guide will walk you through the process of creating, updating, and activating a [Stock Keeping Unit (SKU)](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3mJbIqMlz6oKDmyZ2bKJoA#) within the VTEX platform. An SKU represents a specific item in the inventory that customers can purchase, essentially serving as a unique product variation, such as a "long sleeve gray size S shirt."
+
+## Before you begin
+
+Before you begin managing your SKUs, make sure you've completed the following steps:
+
+- **Create a Product**: Your SKUs should be associated with an existing product. If you haven't created a product yet, refer to the [Product](https://developers.vtex.com/docs/guides/products) for more information.
+- **Obtain API Credentials**: Ensure you have a valid `appKey` and `appToken` with the necessary permissions to access the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api). For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
+
+> ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code will be highlighted and focused for your convenience. Additionally, in the code viewer on the right, you can switch between different code files or tabs to view the corresponding code examples.
+
+<CH.Scrollycoding>
+
+## Creating an SKU
+
+Send a request to the [Create SKU endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit) to create a new SKU, considering the following points when building the request body:
+
+- `IsActive`: Ensure that `IsActive` is set to `false`. Activating it during creation will result in a `400 Bad Request` error.
+- `ActivateIfPossible`: It's recommended to set `ActivateIfPossible` as `true,` unless you plan to have an internal workflow to [manually activate SKUs](#manual-activation).
+- **Alternate IDs**: Provide at least one of the following IDs in the request body: `RefId` or `EAN`. You can also provide both if necessary.
+
+When sending the request body, you can specify the desired SKU `Id` or let VTEX automatically generate it, as presented in the following.
+
+### Custom `Id`: Request body
+
+If there is a need to create a new SKU with a specific custom `Id`, specify the `Id` (`integer`) in the request body.
+
+<CH.Code>
+
+```sh Shell mark=2[16:28],5[31:38],6[33:42],7[10:15]
+curl --request post \
+ --url https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/stockkeepingunit \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{body}'
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+payload = "{body}"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("post", "/api/catalog/pvt/stockkeepingunit", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],11[25:32],12[28:36],29[26:31]
+const http = require("https");
+
+const options = {
+ "method": "post",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/catalog/pvt/stockkeepingunit",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify({body}));
+req.end();
+```
+
+---
+
+```json Body mark=2,4:5,7:8
+{
+  "Id": 1,
+  "ProductId": 310117069,
+  "IsActive": false,
+  "ActivateIfPossible": true,
+  "Name": "sku test",
+  "RefId": "125478",
+  "Ean": "8949461894984",
+  "PackagedHeight": 10,
+  "PackagedLength": 10,
+  "PackagedWidth": 10,
+  "PackagedWeightKg": 10,
+  "Height": null,
+  "Length": null,
+  "Width": null,
+  "WeightKg": null,
+  "CubicWeight": 0.1667,
+  "IsKit": false,
+  "CreationDate": null,
+  "RewardValue": null,
+  "EstimatedDateArrival": null,
+  "ManufacturerCode": "123",
+  "CommercialConditionId": 1,
+  "MeasurementUnit": "un",
+  "UnitMultiplier": 2.0,
+  "ModalType": null,
+  "KitItensSellApart": false,
+  "Videos": ["https://www.youtube.com/"]
+}
+```
+
+```json Response
+{
+  "Id": 1,
+  "ProductId": 310117069,
+  "IsActive": false,
+  "ActivateIfPossible": true,
+  "Name": "sku test",
+  "RefId": "125478",
+  "Ean": "8949461894984",
+  "PackagedHeight": 10,
+  "PackagedLength": 10,
+  "PackagedWidth": 10,
+  "PackagedWeightKg": 10,
+  "Height": null,
+  "Length": null,
+  "Width": null,
+  "WeightKg": null,
+  "CubicWeight": 0.1667,
+  "IsKit": false,
+  "CreationDate": null,
+  "RewardValue": null,
+  "EstimatedDateArrival": null,
+  "ManufacturerCode": "123",
+  "CommercialConditionId": 1,
+  "MeasurementUnit": "un",
+  "UnitMultiplier": 2.0,
+  "ModalType": null,
+  "KitItensSellApart": false,
+  "Videos": ["https://www.youtube.com/"]
+}
+```
+
+</CH.Code>
+
+---
+
+### Automatically generated ID: Request body
+
+If there's no need to specify a custom `Id`, you can omit it from the request body, and VTEX will automatically generate the `Id`.
+
+<CH.Code>
+
+```sh Shell mark=2[16:28],5[31:38],6[33:42],7[10:15]
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36]
+```
+
+```js Node.js mark=5[15:27],11[25:32],12[28:36],29[26:31]
+```
+
+---
+
+```json Body mark=3:4,6:7
+{
+  "ProductId": 310117069,
+  "IsActive": false,
+  "ActivateIfPossible": true,
+  "Name": "sku test",
+  "RefId": "125478",
+  "Ean": "8949461894984",
+  "PackagedHeight": 10,
+  "PackagedLength": 10,
+  "PackagedWidth": 10,
+  "PackagedWeightKg": 10,
+  "Height": null,
+  "Length": null,
+  "Width": null,
+  "WeightKg": null,
+  "CubicWeight": 0.1667,
+  "IsKit": false,
+  "CreationDate": null,
+  "RewardValue": null,
+  "EstimatedDateArrival": null,
+  "ManufacturerCode": "123",
+  "CommercialConditionId": 1,
+  "MeasurementUnit": "un",
+  "UnitMultiplier": 2.0,
+  "ModalType": null,
+  "KitItensSellApart": false,
+  "Videos": ["https://www.youtube.com/"]
+}
+```
+
+</CH.Code>
+
+---
+
+## Updating an SKU
+
+After successfully creating an SKU, you can update its details by sending a request to the [Update SKU](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-) endpoint. To update an SKU, provide the SKU's unique `skuId` in the URL and include the updated information in the request body.
+
+<CH.Code>
+
+```sh Shell mark=2[17:29],2[90:96],5[31:38],6[33:42],7[10:15]
+curl --request put \
+ --url 'https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/stockkeepingunit/{skuId}' \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{body}'
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36],14[56:62]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+payload = "{body}"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("put", "/api/catalog/pvt/stockkeepingunit/{skuId}", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],7[45:51],11[25:32],12[28:36],29[26:31]
+const http = require("https");
+
+const options = {
+ "method": "put",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/catalog/pvt/stockkeepingunit/{skuId}",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify({body}));
+req.end();
+```
+
+---
+
+```json Body
+{
+    "Id": 70,
+    "ProductId": 42,
+    "IsActive": true,
+    "Name": "Size 10",
+    "RefId": "B096QW8Y8Z",
+    "PackagedHeight": 15.0,
+    "PackagedLength": 15.0,
+    "PackagedWidth": 15.0,
+    "PackagedWeightKg": 15.0,
+    "Height": null,
+    "Length": null,
+    "Width": null,
+    "WeightKg": null,
+    "CubicWeight": 0.0,
+    "IsKit": false,
+    "CreationDate": "2020-01-25T15:51:00",
+    "RewardValue": null,
+    "EstimatedDateArrival": null,
+    "ManufacturerCode": null,
+    "CommercialConditionId": 1,
+    "MeasurementUnit": "un",
+    "UnitMultiplier": 1.0,
+    "ModalType": null,
+    "KitItensSellApart": false,
+    "Videos": []
+}
+```
+
+```json Response
+{
+    "Id": 70,
+    "ProductId": 42,
+    "IsActive": true,
+    "Name": "Size 10",
+    "RefId": "B096QW8Y8Z",
+    "PackagedHeight": 15.0,
+    "PackagedLength": 15.0,
+    "PackagedWidth": 15.0,
+    "PackagedWeightKg": 15.0,
+    "Height": null,
+    "Length": null,
+    "Width": null,
+    "WeightKg": null,
+    "CubicWeight": 0.0,
+    "IsKit": false,
+    "CreationDate": "2020-01-25T15:51:00",
+    "RewardValue": null,
+    "EstimatedDateArrival": null,
+    "ManufacturerCode": null,
+    "CommercialConditionId": 1,
+    "MeasurementUnit": "un",
+    "UnitMultiplier": 1.0,
+    "ModalType": null,
+    "KitItensSellApart": false,
+    "Videos": []
+}
+```
+
+</CH.Code>
+
+---
+
+## Activating an SKU
+
+Activating an SKU means making it available for purchase in your store, allowing customers to browse, search, and buy the associated product. To be activated, ensure your SKU meets the following requirements:
+
+- **Alternate IDs**: The SKU must have at least one of the following alternate IDs configured: `RefId` or `EAN`.
+- **Image**: The SKU must have at least one image associated with it. Use the [Create SKU file endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/file) to associate an image to an SKU.
+- **Specifications**: If the SKU has [specifications](https://developers.vtex.com/docs/guides/specifications), they must be filled in.
+- **Kit**: For [kit](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunitkit) SKUs, at least one component must be active.
+- **Product**: The SKU must be associated with an active product, which, in turn, must be related to an active [Brand](https://developers.vtex.com/docs/guides/brands) and an active [Category](https://developers.vtex.com/docs/guides/categories).
+
+Once the SKU meets these requirements, you can activate it using one of the following methods: [automatic](#automatic-activation) or [manual](#manual-activation).
+
+### Automatic activation
+
+If your SKU's `IsActive` is set to `false` and `ActivateIfPossible` is set to `true`, your SKU will automatically become active as soon as it is associated with an image or an active component.
+
+Here's an overview of the necessary steps to implement automatic SKU activation:
+
+1. [Create the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit), setting `IsActive` as `false` and `ActivateIfPossible` as `true`.
+2. If the SKU is a kit, [create and associate SKU components](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunitkit).
+3. [Create and associate SKU files](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/file).
+
+<CH.Code show={["Response"]}>
+
+```json Response mark=4:5
+{
+  "Id": 1,
+  "ProductId": 310117069,
+  "IsActive": false,
+  "ActivateIfPossible": true,
+  "Name": "sku test",
+  "RefId": "125478",
+  "Ean": "8949461894984",
+  "PackagedHeight": 10,
+  "PackagedLength": 10,
+  "PackagedWidth": 10,
+  "PackagedWeightKg": 10,
+  "Height": null,
+  "Length": null,
+  "Width": null,
+  "WeightKg": null,
+  "CubicWeight": 0.1667,
+  "IsKit": false,
+  "CreationDate": null,
+  "RewardValue": null,
+  "EstimatedDateArrival": null,
+  "ManufacturerCode": "123",
+  "CommercialConditionId": 1,
+  "MeasurementUnit": "un",
+  "UnitMultiplier": 2.0,
+  "ModalType": null,
+  "KitItensSellApart": false,
+  "Videos": ["https://www.youtube.com/"]
+}
+```
+
+</CH.Code>
+
+---
+
+### Manual activation
+
+If your SKU's `IsActive` is set to `false` and `ActivateIfPossible` is set to `false`, send a request to the [Update the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-) endpoint, setting `IsActive` as `true`.
+
+Here's an overview of the necessary steps to implement manual SKU activation:
+
+1. [Create the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit), setting `IsActive` as `false` and `ActivateIfPossible` as `false`.
+2. If the SKU is a kit, [create and associate SKU components](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-post-sku-kit).
+3. [Create and associate SKU files](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/file).
+4. [Update the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-) as active, setting `IsActive` as `true`.
+
+<CH.Code>
+
+```sh Shell mark=2[17:29],2[90:96],5[31:38],6[33:42],7[10:15]
+curl --request put \
+ --url 'https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/stockkeepingunit/{skuId}' \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{body}'
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36],14[56:62]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+payload = "{body}"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("put", "/api/catalog/pvt/stockkeepingunit/{skuId}", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],7[45:51],11[25:32],12[28:36],29[26:31]
+const http = require("https");
+
+const options = {
+ "method": "put",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/catalog/pvt/stockkeepingunit/{skuId}",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify({body}));
+req.end();
+```
+
+---
+
+```json Body mark=4
+{
+    "Id": 70,
+    "ProductId": 42,
+    "IsActive": true,
+    "Name": "Size 10",
+    "RefId": "B096QW8Y8Z",
+    "PackagedHeight": 15.0,
+    "PackagedLength": 15.0,
+    "PackagedWidth": 15.0,
+    "PackagedWeightKg": 15.0,
+    "Height": null,
+    "Length": null,
+    "Width": null,
+    "WeightKg": null,
+    "CubicWeight": 0.0,
+    "IsKit": false,
+    "CreationDate": "2020-01-25T15:51:00",
+    "RewardValue": null,
+    "EstimatedDateArrival": null,
+    "ManufacturerCode": null,
+    "CommercialConditionId": 1,
+    "MeasurementUnit": "un",
+    "UnitMultiplier": 1.0,
+    "ModalType": null,
+    "KitItensSellApart": false,
+    "Videos": []
+}
+```
+
+```json Response
+{
+    "Id": 70,
+    "ProductId": 42,
+    "IsActive": true,
+    "Name": "Size 10",
+    "RefId": "B096QW8Y8Z",
+    "PackagedHeight": 15.0,
+    "PackagedLength": 15.0,
+    "PackagedWidth": 15.0,
+    "PackagedWeightKg": 15.0,
+    "Height": null,
+    "Length": null,
+    "Width": null,
+    "WeightKg": null,
+    "CubicWeight": 0.0,
+    "IsKit": false,
+    "CreationDate": "2020-01-25T15:51:00",
+    "RewardValue": null,
+    "EstimatedDateArrival": null,
+    "ManufacturerCode": null,
+    "CommercialConditionId": 1,
+    "MeasurementUnit": "un",
+    "UnitMultiplier": 1.0,
+    "ModalType": null,
+    "KitItensSellApart": false,
+    "Videos": []
+}
+```
+
+</CH.Code>
+
+</CH.Scrollycoding>
+
+>❗ Note that additional configurations are necessary for a product and its SKUs to become visible in a store:
+>
+> - Register a price for the SKU in the associated trade policy (sales channel). Refer to the [Pricing](https://developers.vtex.com/docs/guides/pricing-overview) guide for more information.
+> - Ensure you have at least one unit in stock. Manage your inventory by following the [Fulfillment](https://developers.vtex.com/docs/guides/fulfillment) guide.
+> - Configure your storefront to display products correctly.

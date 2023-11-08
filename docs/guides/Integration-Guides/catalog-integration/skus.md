@@ -10,6 +10,8 @@ A [Stock Keeping Unit (SKU)](https://help.vtex.com/en/tracks/catalog-101--5AF0Xf
 
 Once you have created a product, it is time to submit its respective SKUs.
 
+> ✅ Try the interactive version of this article by accessing this [link](https://developers.vtex.com/docs/guides/managing-skus). Code will be highlighted and focused for your convenience.
+
 ## Creating an SKU
 
 To create a new SKU, use the [Create SKU endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit).
