@@ -13,7 +13,7 @@ This part of the guide explains how the connector should act when receiving the 
 
 To use this flow, the connector should provide an endpoint according to the standard:
 
-`https://{endpointDoAfiliado}/api/notification/`
+`https://{endpointDoAfiliado}`
 
 This endpoint should be configured in the VTEX affiliate registration page. Check out our [Configuring an Affiliate](https://help.vtex.com/en/tutorial/configuring-affiliates--tutorials_187) article.
 
