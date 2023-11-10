@@ -8,7 +8,7 @@ The giant `store-graphql` app was segmented and gave way to the new `search-grap
 
 ## What has changed
 
-**Previously, the** `store-graphql` **was a monolith app** responsible for sending GraphQL queries to all [VTEX APIs](https://help.vtex.com/developer-docs), meaning that all information required by the store's front end would necessarily go through `store-graphql`.
+**Previously, the** `store-graphql` **was a monolith app** responsible for sending GraphQL queries to all [VTEX APIs](https://help.vtex.com/developer-docs), meaning that all information required by the store's frontend would necessarily go through `store-graphql`.
 
 The issue was that the constant and rapid platform evolution meant that the app centralized a very large number of different requests, from getting product data from the Search API (a fast operation having a short timeout and a lot of cache) to adding items in the cart (whose timeout is long due to the delay in Checkout responsiveness along with the inexistent cache, since it's a operation performed by the user).
 
