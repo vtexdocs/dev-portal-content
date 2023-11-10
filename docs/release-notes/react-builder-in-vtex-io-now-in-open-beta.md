@@ -12,6 +12,6 @@ Before, developers interested in creating custom components in [VTEX IO](https:/
 
 This is no longer required, as **we officially move our React builder to open beta status**. You can take advantage of this autonomy to further customize and improve your storefront experience using the [React](https://reactjs.org/) technology.
 
-> ⚠️ **This change applies only to the React builder**. We continue to require that you fill in the [Application form for development](https://developers.vtex.com/docs/guides/vtex-io-documentation-filling-the-application-form-for-development) and wait for our approval if your project depends on builders that are still in closed beta. This includes, for example, back-end integrations using Node.js and GraphQL.
+> ⚠️ **This change applies only to the React builder**. We continue to require that you fill in the [Application form for development](https://developers.vtex.com/docs/guides/vtex-io-documentation-filling-the-application-form-for-development) and wait for our approval if your project depends on builders that are still in closed beta. This includes, for example, backend integrations using Node.js and GraphQL.
 
 > ℹ️ Check out our documentation on [best practices for storefront component development](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components)!

@@ -6,7 +6,7 @@ createdAt: "2022-07-18T20:12:55.205Z"
 updatedAt: "2022-07-18T20:12:55.205Z"
 ---
 
-B2B Store Theme is a front-end template to help your store get started with VTEX’s core features for businesses selling to other businesses.
+B2B Store Theme is a frontend template to help your store get started with VTEX’s core features for businesses selling to other businesses.
 
 > ⚠️ The B2B Store Theme is not compatible with the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) documentation.
 

@@ -40,16 +40,16 @@ As a true multi-tenant cloud platform, all our clients take advantage of the sam
 
 ## VTEX IO
 
-[VTEX IO](https://vtex.io) is our enterprise low-code development platform that helps you deliver commerce solutions faster. From smooth, PWA-ready stores, to custom admin interfaces and back-end integrations, it offers an opinionated set of frameworks that allow you to evolve fast and safely.
+[VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is our enterprise low-code development platform that helps you deliver commerce solutions faster. From smooth, PWA-ready stores, to custom admin interfaces and backend integrations, it offers an opinionated set of frameworks that allow you to evolve fast and safely.
 
 **Transformation should be powered by technology, not limited by it.** Work with highly productive technologies like TypeScript, React, GraphQL, .NET and Node, using simple and intuitive frameworks which you can learn on-the-go. Become productive in record time with just a command line code application and stop running your code locally — deploy and publish all changes to our cloud development environment seamlessly.
 
 With VTEX IO, you can build:
 
-- Comprehensive shopping experiences that never get old
-- Custom storefront apps
-- Custom admin apps
-- Custom back-end integrations.
+- Comprehensive shopping experiences that never get old.
+- Custom storefront apps.
+- Custom admin apps.
+- Custom backend integrations.
 
 Check out our [App Store](https://apps.vtex.com) and documentation.
 

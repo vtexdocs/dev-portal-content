@@ -29,7 +29,7 @@ Declare **dependencies**in your app's *manifest* file to specify which VTEX IO a
 
 ## [Edition App](/docs/guides/vtex-io-documentation-edition-app)
 
-An **Edition App**consists of a bundle of settings, policies, back-end and front-end apps encapsulated and exported by a *Sponsor Account.*
+An **Edition App**consists of a bundle of settings, policies, backend and frontend apps encapsulated and exported by a *Sponsor Account.*
 
 ## [Interfaces](/docs/guides/vtex-io-documentation-interface)
 

@@ -8,9 +8,9 @@ updatedAt: "2020-10-30T20:44:33.600Z"
 
 A search engine is a crucial part of e-commerce. It can drive more sales if the search results are good and it can worsen the user experience if they are bad.
 
-Changing the search provider usually involved changing code both in the front-end and in the back-end, creating unnecessary friction.
+Changing the search provider usually involved changing code both in the frontend and in the backend, creating unnecessary friction.
 
-The idea behind the VTEX search protocol is to provide a clear contract between any VTEX store on VTEX IO and a search provider defined by a GraphQL schema. This contract enables low-effort switching between different search engines. And it also helps to speed up the development process of integration with a new search provider, because the integration will be completely decoupled from the front-end components.
+The idea behind the VTEX search protocol is to provide a clear contract between any VTEX store on VTEX IO and a search provider defined by a GraphQL schema. This contract enables low-effort switching between different search engines. And it also helps to speed up the development process of integration with a new search provider, because the integration will be completely decoupled from the frontend components.
 
 Search protocol benefits both developers and VTEX stores!
 

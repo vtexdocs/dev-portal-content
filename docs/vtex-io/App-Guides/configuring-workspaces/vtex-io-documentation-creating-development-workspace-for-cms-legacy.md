@@ -29,7 +29,7 @@ vtex login {account-name}
 
 3. [Open a ticket to the VTEX support team](https://help-tickets.vtex.com/smartlink/sso/login/zendesk?_ga=2.222513819.1487123273.1647865109-1001456323.1619912759) requesting the installation of the `vtex.edition-store@3.x` Edition app in the new Development workspace.
 
-> ℹ️ The `vtex.edition-store@3.x` Edition app is responsible for enabling building elements for the front-end using the VTEX Store Framework. You can only configure and test the solution successfully after installing it.
+> ℹ️ The `vtex.edition-store@3.x` Edition app is responsible for enabling building elements for the frontend using the VTEX Store Framework. You can only configure and test the solution successfully after installing it.
 
 Once the `vtex.edition-store@3.x` Edition app is installed in the Development workspace, configure the Store Framework theme you want in the Store Theme app and test it in the new Development workspace. Refer to the [Setting your store's theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-settingyourstoretheme) documentation for more details.
 
