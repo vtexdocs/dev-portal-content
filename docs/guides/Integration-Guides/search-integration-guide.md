@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-09-11T16:42:03.604Z"
 updatedAt: "2022-04-28T18:33:13.280Z"
 ---
-The Search Protocol defines the contract between an external search provider and a VTEX store running on VTEX IO. If a search provider adheres to this protocol, it can replace completely the original VTEX search capabilities without needing to implement any front-end pages or react components.
+The Search Protocol defines the contract between an external search provider and a VTEX store running on VTEX IO. If a search provider adheres to this protocol, it can replace completely the original VTEX search capabilities without needing to implement any frontend pages or react components.
 
 The main idea is to provide the ability for a search provider to integrate with the minimum amount of work necessary and a VTEX customer to easily switch search providers without having to change anything in the storefront.
 [block:html]

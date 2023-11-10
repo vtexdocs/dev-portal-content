@@ -11,7 +11,7 @@ In order to allow this type of selling, VTEX offers the telesales feature, throu
 
 ## Telesales Toolbar 
 
-The [telesales toolbar](https://help.vtex.com/en/tutorial/telesales-toolbar--tutorials_5500) is the most straightforward way to use the telesales feature. A top bar appears on the store's front end once the registered operator logs in to the store environment. It is displayed in all site areas, except on the [My Orders screen](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh#orders).
+The [telesales toolbar](https://help.vtex.com/en/tutorial/telesales-toolbar--tutorials_5500) is the most straightforward way to use the telesales feature. A top bar appears on the store's frontend once the registered operator logs in to the store environment. It is displayed in all site areas, except on the [My Orders screen](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh#orders).
 
 These are the steps required to use the telesales toolbar:
 1. [Create a telesales user](https://help.vtex.com/tutorial/como-criar-um-usuario-de-televendas--frequentlyAskedQuestions_4227).

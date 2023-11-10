@@ -19,7 +19,7 @@ To use it in your app, declare it on your `manifest.json` file, as demonstrated 
 }
 ```
 
-You may then use it in your front end component queries, for example, write file `productQuery.gql`:
+You may then use it in your frontend component queries, for example, write file `productQuery.gql`:
 
 ```graphql
 query ProductQuery($slug: String) {

@@ -59,7 +59,7 @@ For example, in a fashion store you would be able to create a product specificat
 
 This information could be displayed as a filter in the search navigation menu or as an informative text inside the product page.
 
-Product specifications can receive data such as strings and numbers, which VTEX APIs then consume and use for front-end customizations or to send information to external integrations.
+Product specifications can receive data such as strings and numbers, which VTEX APIs then consume and use for frontend customizations or to send information to external integrations.
 
 ### SKU Specifications
 

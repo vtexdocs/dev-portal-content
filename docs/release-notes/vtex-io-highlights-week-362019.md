@@ -21,7 +21,7 @@ Honestly, why are still reading the into after such news? Scroll down and have a
 ### Improvements ➕
 
 - [Platform performance](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-36/platform-performance.md) - Understand last week's VTEX IO performance improvement key points.
-- _Storefront name change_ - Your account Admin's Storefront section, responsible for defining your store's front-end content is now called **Site Editor**. Commit to memory!
+- _Storefront name change_ - Your account Admin's Storefront section, responsible for defining your store's frontend content is now called **Site Editor**. Commit to memory!
 - [Events context](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-36/events-context.md) - Create a web app with more ease with help from Events' expanding functionalities.
 - [Google Analytics `orderPlaced` event](https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-36/google-analytics-orderplaced-event.md) - Make your Google Analytics metrics more reliable with the `orderPlaced` event trigger improvement.
 

@@ -288,7 +288,7 @@ Refer to the [Post Refund Payment](https://developers.vtex.com/docs/api-referenc
 
 The Inbound Request (BETA) implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider.
 
-It is responsible for the communication with the provider's back-end through our gateway, relying on the security of sending the context of the transaction by VTEX.
+It is responsible for the communication with the provider's backend through our gateway, relying on the security of sending the context of the transaction by VTEX.
 
 An example of the request is:
 

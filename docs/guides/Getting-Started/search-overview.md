@@ -70,7 +70,7 @@ You can provide your customers with a more customized experience navigating the 
 
 ## Integrating an external search provider with VTEX
 
-The [Search Protocol](https://developers.vtex.com/vtex-rest-api/docs/search-integration-guide) defines the contract between an external search provider and a VTEX store running on VTEX IO. If a search provider adheres to this protocol, it can completely replace the original VTEX search capabilities without needing to implement any front-end pages or react components.
+The [Search Protocol](https://developers.vtex.com/vtex-rest-api/docs/search-integration-guide) defines the contract between an external search provider and a VTEX store running on VTEX IO. If a search provider adheres to this protocol, it can completely replace the original VTEX search capabilities without needing to implement any frontend pages or react components.
 
 - [Overview](https://developers.vtex.com/vtex-rest-api/docs/external-search-provider-overview)
 - [Specification](https://developers.vtex.com/vtex-rest-api/docs/external-search-provider-specification)

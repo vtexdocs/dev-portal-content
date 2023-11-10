@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.127Z"
 The VTEX IO platform currently works as a **closed beta solution**, only accessible for a small group of developers, for the following development projects:
 
 - **Custom Admin Apps**
-- **Custom back-end Apps**
+- **Custom backend Apps**
 - **Custom Pixel apps**
 - **Custom mobile Apps**
 
@@ -25,7 +25,7 @@ To help answer some of these questions, we've put together **guidelines regardin
 
 ### Apps development by functionality
 
-Faced with a more complex project, that involves storefront components and a back-end service, for example, developers tens to request permissions to develop multiple apps aimed at each of these well defined platform functions.
+Faced with a more complex project, that involves storefront components and a backend service, for example, developers tens to request permissions to develop multiple apps aimed at each of these well defined platform functions.
 
 The problem with this code segmentation is that it's done from a developer's point of view, someone who unlike the end user, has technical know-how about the platform. For end users, micro-services done behind the scenes on the platform are not what matter.
 

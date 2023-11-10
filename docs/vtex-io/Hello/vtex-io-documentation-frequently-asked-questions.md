@@ -17,7 +17,7 @@ With VTEX IO, you can create:
 
 - **Custom Storefront App** - *Build sophisticated, tailor-made React storefront components for your store - works as an open beta.*
 - **Custom Admin Apps** - *Unlock and extend VTEX data by creating apps for your store's admin interface - works as a closed beta.*
-- **Custom back-end Apps** - *Speed up connections with Storefront apps or Admin apps by building back-end services that are developed using Node or .NET Core - works as a closed beta.*
+- **Custom backend Apps** - *Speed up connections with Storefront apps or Admin apps by building backend services that are developed using Node or .NET Core - works as a closed beta.*
 - **Custom Pixel apps** -  *Collect user data for a third-party service of your choosing by creating a pixel app - works as a closed beta.*
 - **Custom mobile Apps** - *Your store website in your customers' mobile device - works as a closed beta.*
 
@@ -31,11 +31,11 @@ In case you aim to develop a Custom Storefront App, do not worry about prerequis
 
 ### I meet all the necessary prerequisites. What do I need to do to start developing?
 
-If you've met all the necessary conditions to be part of the small group of VTEX IO developers regarding Admin, back-end, pixel and mobile apps, fill in and submit the  [Application form](https://forms.gle/f7bYdTA7tfdfB5tt7) with your project's details to let us know about your interest in order to understand your scenario and provide all the necessary permissions.
+If you've met all the necessary conditions to be part of the small group of VTEX IO developers regarding Admin, backend, pixel and mobile apps, fill in and submit the  [Application form](https://forms.gle/f7bYdTA7tfdfB5tt7) with your project's details to let us know about your interest in order to understand your scenario and provide all the necessary permissions.
 
 Don't forget to give a good read to the documentation on [filling the Application form for development](https://developers.vtex.com/docs/guides/vtex-io-documentation-filling-the-application-form-for-development/).
 
-> ℹ️ Only submit the Application form when developing Admin, back-end, pixel, or mobile apps. Storefront app development no longer requires VTEX authorization i.e., the form submission.
+> ℹ️ Only submit the Application form when developing Admin, backend, pixel, or mobile apps. Storefront app development no longer requires VTEX authorization i.e., the form submission.
 
 ### How much does it cost?
 

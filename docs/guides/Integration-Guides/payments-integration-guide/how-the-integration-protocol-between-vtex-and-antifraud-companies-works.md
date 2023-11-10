@@ -39,7 +39,7 @@ If the partner is a SI (Service Implementer) developing integrations for clients
 
 ### 1. Implementing the protocol
 
-Before setting up the VTEX environment, the provider must implement the back-end service required to process the anti-fraud services (API). For more information, access the [Anti-fraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol).
+Before setting up the VTEX environment, the provider must implement the backend service required to process the anti-fraud services (API). For more information, access the [Anti-fraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol).
 
 > ⚠️ You can also access our [template on GitHub](https://github.com/vtex-apps/antifraud-provider-example) to help you quickly develop your anti-fraud connector using the Anti-fraud Provider Protocol and VTEX IO.
 

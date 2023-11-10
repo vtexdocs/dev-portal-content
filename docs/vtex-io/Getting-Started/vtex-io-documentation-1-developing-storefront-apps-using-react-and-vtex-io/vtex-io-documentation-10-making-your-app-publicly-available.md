@@ -127,6 +127,6 @@ To make your app available, check the documentation for [Submitting an app in th
 
 **All set!** After completing these steps, the app will be launched, published, tested, validated, and, finally, made public for all its users.
 
-During this article series, you learned all the necessary steps to develop a front-end app from scratch using React, GraphQL, CSS, and the VTEX IO development platform.
+During this article series, you learned all the necessary steps to develop a frontend app from scratch using React, GraphQL, CSS, and the VTEX IO development platform.
 
 To understand more about the platform's development possibilities, do not forget to access the rest of our [documentation](https://developers.vtex.com/docs/guides)!
