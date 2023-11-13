@@ -85,7 +85,6 @@ There are specific endpoints from which to get unmasked data. When using those, 
 |--------------|----------|--------|-------------------------------------------------------|
 | `reason`     | Yes      | String | Reason for requesting unmasked data.                  |
 
-
 <details>
 <summary>Masked profile example</summary>
 
