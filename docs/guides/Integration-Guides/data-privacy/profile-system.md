@@ -85,9 +85,9 @@ There are specific endpoints from which to get unmasked data. When using those, 
 |--------------|----------|--------|-------------------------------------------------------|
 | `reason`     | Yes      | String | Reason for requesting unmasked data.                  |
 
-### Examples
 
-**Masked profile:**
+<details>
+<summary>Masked profile example</summary>
 
 ```json
 {
@@ -109,7 +109,10 @@ There are specific endpoints from which to get unmasked data. When using those, 
 }
 ```
 
-**Unmasked profile:**
+</details>
+
+<details>
+<summary>Unmasked profile example</summary>
 
 ```json
 {
@@ -130,6 +133,8 @@ There are specific endpoints from which to get unmasked data. When using those, 
     }
 }
 ```
+
+</details>
 
 ## Profile System API reference
 
@@ -147,7 +152,8 @@ A profile is the main entity where a given customer’s data is stored.
 - `GET` [Get profile by version](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/versions/-profileVersionId-)
 - `GET` [Get unmasked profile by version](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/versions/-profileVersionId-/unmask)
 
-**Example request body for profile creation:**
+<details>
+<summary>Example request body for profile creation</summary>
 
 ```json
 {
@@ -160,7 +166,10 @@ A profile is the main entity where a given customer’s data is stored.
 } 
 ```
 
-**Example response when getting unmasked profile:**
+</details>
+
+<details>
+<summary>Example response when getting unmasked profile</summary>
 
 ```json
 {
@@ -182,6 +191,8 @@ A profile is the main entity where a given customer’s data is stored.
 }
 ```
 
+</details>
+
 ### Addresses
 
 Addresses are linked to profiles and any profile can have as many addresses as it might need. This means that a valid `profileId` is necessary to perform any action regarding addresses.
@@ -196,7 +207,8 @@ Addresses are linked to profiles and any profile can have as many addresses as i
 - `GET` [Get address by version](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/versions/-addressVersionId-)
 - `GET` [Get unmasked address by version](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/versions/-addressVersionId-/unmask)
 
-**Example request body for address creation:**
+<details>
+<summary>Example request body for address creation</summary>
 
 ```json
 {
@@ -212,7 +224,10 @@ Addresses are linked to profiles and any profile can have as many addresses as i
 }
 ```
 
-**Example response when getting unmasked address:**
+</details>
+
+<details>
+<summary>Example response when getting unmasked address</summary>
 
 ```json
 {
@@ -237,6 +252,8 @@ Addresses are linked to profiles and any profile can have as many addresses as i
 }
 ```
 
+</details>
+
 ### Prospects
 
 - `POST` [Create prospect](https://developers.vtex.com/docs/api-reference/profile-system#post-/api/storage/profile-system/prospects)
@@ -256,6 +273,10 @@ Addresses are linked to profiles and any profile can have as many addresses as i
 - `GET` [Get unmasked purchase information](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/purchase-info/unmask)
 
 ### Schemas
+
+A JSON Schema defines the structure of data stored in the Profile System. It determines, for example, which fields a profile has and their respective formats. Read [Working with schemas in the Profile System](https://developers.vtex.com/docs/guides/working-with-schemas-in-the-profile-system) for more information.
+
+The following endpoints allow you to interact with the profile schema:
 
 - `GET` [Get full schema](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/schemas/profileSystem)
 - `PUT` [Create or delete custom fields](https://developers.vtex.com/docs/api-reference/profile-system#put-/api/storage/profile-system/schemas/profileSystem/custom)
