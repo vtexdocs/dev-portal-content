@@ -24,13 +24,12 @@ The following endpoints in the [Profile System API](https://developers.vtex.com/
 
 Using the `PUT` [Create or delete custom fields](https://developers.vtex.com/docs/api-reference/profile-system#put-/api/storage/profile-system/schemas/profileSystem/custom) endpoint allows you to customize the schema for the profile entity in the Profile System by:
 
-- [Customizing the profile schema](#customizing-the-profile-schema)
-  - [Adding custom fields](#adding-custom-fields)
-  - [Defining PII and sensitive custom fields](#defining-pii-and-sensitive-custom-fields)
-  - [Configuring Unique Alternate Keys](#configuring-unique-alternate-keys)
-  - [Configuring TTL](#configuring-ttl)
-  - [Deleting custom fields](#deleting-custom-fields)
-  - [Restrictions](#restrictions)
+- [Adding custom fields](#adding-custom-fields)
+- [Defining PII and sensitive custom fields](#defining-pii-and-sensitive-custom-fields)
+- [Configuring Unique Alternate Keys](#configuring-unique-alternate-keys)
+- [Configuring TTL](#configuring-ttl)
+- [Deleting custom fields](#deleting-custom-fields)
+- [Restrictions](#restrictions)
 
 Make sure you check the applicable [Restrictions](#restrictions).
 
@@ -117,8 +116,8 @@ To delete only one or more fields, but not all, make this request including ever
 
 The following restrictions apply when working with custom fields in the profile schema:
 
-* You cannot use `oneOf`, `anyOf`, `allOf,` or `not` [keywords](https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/).
-* The schema is valid per account.
-* You cannot remove or edit required fields. Custom fields cannot be mandatory, so the existing documents will still be compatible with the new schema.
-* Default fields cannot be changed.
-* Custom fields cannot be in `v-indexed` or in `v-unique`.
+- You cannot use `oneOf`, `anyOf`, `allOf,` or `not` [keywords](https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/).
+- The schema is valid per account.
+- You cannot remove or edit required fields. Custom fields cannot be mandatory, so the existing documents will still be compatible with the new schema.
+- Default fields cannot be changed.
+- Custom fields cannot be in `v-indexed` or in `v-unique`.
