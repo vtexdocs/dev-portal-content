@@ -26,13 +26,9 @@ Using the `PUT` [Create or delete custom fields](https://developers.vtex.com/doc
 
 - [Customizing the profile schema](#customizing-the-profile-schema)
   - [Adding custom fields](#adding-custom-fields)
-    - [Request body example](#request-body-example)
   - [Defining PII and sensitive custom fields](#defining-pii-and-sensitive-custom-fields)
-      - [Request body example - PII and sensitive field](#request-body-example---pii-and-sensitive-field)
   - [Configuring Unique Alternate Keys](#configuring-unique-alternate-keys)
-    - [Example](#example)
   - [Configuring TTL](#configuring-ttl)
-    - [Example](#example-1)
   - [Deleting custom fields](#deleting-custom-fields)
   - [Restrictions](#restrictions)
 
@@ -42,7 +38,7 @@ Make sure you check the applicable [Restrictions](#restrictions).
 
 Extend the profile schema with custom fields by making a request to `PUT` [Create or delete custom fields](https://developers.vtex.com/docs/api-reference/profile-system#put-/api/storage/profile-system/schemas/profileSystem/custom), with a request body structured as in the following example.
 
-#### Request body example
+**Request body example**
 
 ```json
 {
@@ -67,7 +63,7 @@ Properties marked as [Personally Identifiable Information (PII)](https://develop
 
 Set the `sensitive` and/or `pii` properties as `true` inside the JSON Schema property definition to determine that they must follow this behavior, as exemplified below.
 
-##### Request body example - PII and sensitive field
+**Request body example - PII and sensitive field**
 
 ```json
 {
@@ -86,7 +82,7 @@ Unique Alternate Keys are properties that must be used to identify the profile, 
 
 This property must be structured as a string or as an array. The `v-unique-alternate-keys` array accepts up to three items, meaning three different keys. Once created, alternate keys cannot be removed.
 
-#### Example
+**Example**
 
 ```json
 `v-unique-alternate-keys`: [
@@ -105,7 +101,7 @@ This property must be structured as a string or as an array. The `v-unique-alter
 
 The TTL (Time To Live) property is a value expressed in days used to schedule the deletion of the document in the future. When this time expires, the document is automatically deleted.
 
-#### Example
+**Example**
 
 ```json
 "documentTTL": 1825,
