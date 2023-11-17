@@ -19,4 +19,4 @@ The suspension of automatic app distribution is scheduled as follows:
 
 ## How can I update the app version installed in an account during the freeze period?
 
-If you need to update an installed app during the freeze period, you can manually install the specific app version in the desired VTEX accounts. Please refer to the [Installing apps on live stores](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-apps-in-live-stores-best-practices) guide for more information.
+If you need to update an installed app during the freeze period, you can manually install the specific app version in the desired VTEX accounts. For more information, please refer to the [Installing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) guide.
