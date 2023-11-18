@@ -1,7 +1,7 @@
 ---
 title: "Temporary freeze on automatic app distribution in preparation for Black Friday 2023"
 slug: "2023-11-17-temporary-freeze-on-automatic-app-distribution-in-preparation-for-black-friday-2023"
-type: "fixed"
+type: "info"
 createdAt: "2023-11-17T16:00:00.661Z"
 updatedAt: "2023-11-17T16:00:00.661Z"
 hidden: false
