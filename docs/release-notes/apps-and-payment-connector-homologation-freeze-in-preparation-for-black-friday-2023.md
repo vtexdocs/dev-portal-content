@@ -1,7 +1,7 @@
 ---
 title: "Apps and payment connector homologation freeze in preparation for Black Friday 2023"
 slug: "apps-and-payment-connector-homologation-freeze-in-preparation-for-black-friday-2023"
-type: "improved"
+type: "info"
 createdAt: "2023-09-20T16:00:00.661Z"
 updatedAt: "2023-09-20T16:00:00.661Z"
 hidden: false
