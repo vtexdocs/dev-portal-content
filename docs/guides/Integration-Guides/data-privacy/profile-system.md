@@ -162,7 +162,7 @@ A profile is the main entity where a given customer’s data is stored.
     "birthDate": "1925-11-17",
     "document": "12345678911",
     "documentType": "CPF"
-} 
+}
 ```
 
 </details>
