@@ -20,7 +20,7 @@ It is possible to choose the data residency location from two available options:
 - **AWS us-east-1:** located in Virginia, USA.
 - **AWS eu-west-1:** located in Ireland.
 
-There are two instances of the [Profile System](https://developers.vtex.com/docs/guides/profile-system) running in parallel, each based in different locations: US (Virginia) and EU (Ireland). These instances are identical in terms of their functioning. However, each instance only holds and processes data associated with stores that selected that location as their accounts' PII data residency.
+There are two instances of the [Profile System](https://developers.vtex.com/docs/guides/profile-system) running in parallel, each based in different locations: US (Virginia) and EU (Ireland). These instances are identical in terms of their functioning. However, each instance only holds and processes data associated with stores that selected that location as their accounts' PII data residency. Profile System information is backed up in the same selected region, using [Amazon DynamoDB Point-in-time recovery (PITR)](https://aws.amazon.com/dynamodb/pitr).
 
 In practice, when data is requested from the [Profile System](https://developers.vtex.com/docs/guides/profile-system), the VTEX edge layer directs the request to the appropriate Profile System location based on the data residency location selected by the account, as illustrated below.
 
