@@ -43,13 +43,8 @@ A **Service Provider** is an application server that communicates with an IdP to
 ## SAML Assertions
 
 SAML 2.0 uses assertions (packages) to pass information between the SP and the IdP. These packages contain information about a user (subject) and are written using the XML markup language. Although the standard specification defines [three types of subject-related assertion statements](http://saml.xml.org/assertions), VTEX only supports the **Authentication Assertion** type. We recommend the reading of [this document](https://github.com/jch/saml) to get a better understanding of the SAML protocol.
-[block:callout]
-{
-"type": "info",
-"body": "An **Authentication Assertion** states that a user was authenticated by an external service at a particular time and is often used to enable web browser SSO.",
-"title": ""
-}
-[/block]
+
+> ℹ️ An **Authentication Assertion** states that a user was authenticated by an external service at a particular time and is often used to enable web browser SSO.
 
 ## Integration
 
@@ -96,13 +91,13 @@ The identity provider must send the authenticated user's email in the **Name Ide
 
 In the table below you can learn more about the information you need to provide when [setting up SAML](#setup).
 
-| **Information**        | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Provider Name`        | Name displayed to unauthenticated users in the list of login options.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `SSO Service Endpoint` | URL of your SAML Identity provider. Users will be redirected to this address. This URL must be HTTPS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `Redirect URL`         | You can choose to redirect users to one of two URLs: `https://{accountName}.myvtex.com/` or `https://{accountName}.myvtex.com/admin`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `Allowed Email Hosts`  | List of hosts (the portion after the `@` symbol in an email address) allowed for authentication. When a SAML Authentication Assertion is received by our platform, the email provided by the user is checked against the list of **Allowed Email Hosts**. Only emails with hosts listed here are allowed.                                                                                                                                                                                                                                                                                                                                                                          |
-| `Metadata`             | XML file that must be uploaded to the VTEX platform. It must describe your identity provider in a way that allows our servers to redirect users to it and securely identify assertions made by it. It usually contains information like the SSO and Logout URLs as well as the certificate used by the identity provider to sign the assertions. The authentication system your organization is using should be capable of generating this file for you. Learn more about [SAML 2.0 metadata](http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf). This file must also contain the `SSO Service Endpoint`, described above. You can see an example file below. |
+| **Information** | **Description** |
+| - | - |
+| `Provider Name` | Name displayed to unauthenticated users in the list of login options. |
+| `SSO Service Endpoint` | URL of your SAML Identity provider. Users will be redirected to this address. This URL must be HTTPS. |
+| `Redirect URL` | You can choose to redirect users to one of two URLs: `https://{accountName}.myvtex.com/` or `https://{accountName}.myvtex.com/admin`. |
+| `Allowed Email Hosts` | List of hosts (the portion after the `@` symbol in an email address) allowed for authentication. When a SAML Authentication Assertion is received by our platform, the email provided by the user is checked against the list of **Allowed Email Hosts**. Only emails with hosts listed here are allowed. |
+| `Metadata` | XML file that must be uploaded to the VTEX platform. It must describe your identity provider in a way that allows our servers to redirect users to it and securely identify assertions made by it. It usually contains information like the SSO and Logout URLs as well as the certificate used by the identity provider to sign the assertions. The authentication system your organization is using should be capable of generating this file for you. Learn more about [SAML 2.0 metadata](http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf). This file must also contain the `SSO Service Endpoint`, described above. You can see an example file below. |
 
 #### Example metadata file
 
@@ -202,10 +197,6 @@ This is done by including two `<md:KeyDescriptor use="signing">` entries in your
 
 As the SP, VTEX ID must know of the new certificate or it will not be able to validate the signatures. And since the SP is unable to check at what stage of renewal the IdP is, it always checks if the signature validates for each of the listed certificates.
 
-[block:callout]
-{
-"type": "info",
-"body": "We recommend checking if your IdP allows the configuration of a primary and secondary certificate to simplify the export process."
-}
-[/block]
+> ℹ️ We recommend checking if your IdP allows the configuration of a primary and secondary certificate to simplify the export process.
+
 Once the old certificate expires, you may remove it from the `metadata.xml` file and re-upload it if you wish to avoid unnecessary requests in the **Send Valid Credentials** step of the [SAML authentication flow](#authentication-flow).
