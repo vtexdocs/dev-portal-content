@@ -5,9 +5,8 @@ hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"
 seeAlso:
- - "app-authentication-using-auth-tokens"
- - "api-authentication-using-user-tokens"
- - "https://help.vtex.com/en/tutorial/best-practices-application-keys--7b6nD1VMHa49aI5brlOvJm"
+ - "/docs/guides/app-authentication-using-auth-tokens"
+ - "/docs/guides/api-authentication-using-user-tokens"
 ---
 
 Application keys (`appKey`) are credentials used to authenticate requests to VTEX APIs. Store administrators can create multiple application keys that may be used, for example, for different integrations. Read [Generating and managing application keys](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) to learn how to create these credentials.

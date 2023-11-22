@@ -6,8 +6,8 @@ createdAt: "2023-04-05T17:08:52.219Z"
 updatedAt: "2023-04-05T17:08:52.219Z"
 excerpt: "Learn how to create webhooks and get order status and information from VTEX Pick and Pack API"
 seeAlso:
- - "vtex-pick-and-pack"
- - "vtex-pick-and-pack-carriers-integration-protocol"
+  - "/docs/guides/vtex-pick-and-pack"
+  - "/docs/guides/vtex-pick-and-pack-carriers-integration-protocol"
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---

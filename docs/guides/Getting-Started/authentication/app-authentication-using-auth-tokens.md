@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"
 seeAlso:
- - "api-authentication-using-user-tokens"
+ - "/docs/guides/api-authentication-using-user-tokens"
 ---
 
 When working on VTEX IO apps, you generally won't have to make direct requests to VTEX APIs. This is because VTEX IO already provides convenient access to VTEX APIs through pre-defined [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). Hence, using application keys within your app will often be unnecessary. When necessary, the recommended approach involves employing authentication tokens.
