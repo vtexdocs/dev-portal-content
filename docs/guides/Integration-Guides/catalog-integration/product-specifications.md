@@ -7,13 +7,7 @@ updatedAt: "2022-02-04T21:23:05.347Z"
 ---
 Learn more with this [article about specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP?&utm_source=autocomplete#).
 
-[block:callout]
-{
-  "type": "info",
-  "body": "If you wish to implement color variation in your products, we recommend you do not use specifications. Instead, see this tutorial about [How to implement product color variation](https://developers.vtex.com/docs/guides/how-to-implement-product-color-variation)."
-}
-[/block]
-
+>ℹ️ If you wish to implement color variation in your products, we recommend you do not use specifications. Instead, see this tutorial about [How to implement product color variation](https://developers.vtex.com/docs/guides/how-to-implement-product-color-variation).
 
 ## Data Model
 
@@ -29,12 +23,7 @@ Learn more with this [article about specifications](https://help.vtex.com/en/tra
 
 To create a product specification, use the API below. Remembering that you must have saved the ID of the field for which you want to create a specification.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "If the specification field is of the Combo, Radio or Checkbox type (`FieldTypeId` of 5, 6 and 7 respectively), the `FieldValueId` field is required and the `Text` field is not.\n- For text type fields, it is not necessary to create values for the field, that is, the `FieldValueId` attribute must be `null` and the `Text` attribute must be provided with the specification value."
-}
-[/block]
+>ℹ️ If the specification field is of the Combo, Radio or Checkbox type (`FieldTypeId` of 5, 6 and 7 respectively), the `FieldValueId` field is required and the `Text` field is not.\n- For text type fields, it is not necessary to create values for the field, that is, the `FieldValueId` attribute must be `null` and the `Text` attribute must be provided with the specification value.
 
 ### Create Specification - Example #1 (text field)
 
@@ -147,12 +136,7 @@ To get all specification fields and values from a product, use the [Get product 
 
 To update a product specification use the [Update a product specification by product ID API endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/products/-productId-/specification). It's also possible to update specification values in bulk.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Updating product specification by `fieldName` does not work."
-}
-[/block]
+>⚠️ Updating product specification by `fieldName` does not work.
 
 #### Example request
 

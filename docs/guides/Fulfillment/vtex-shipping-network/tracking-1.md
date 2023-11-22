@@ -42,13 +42,8 @@ Response body example:
   }
 }
 ```
-[block:callout]
-{
-  "type": "warning",
-  "body": "Be aware that this call may contain several package's tracking numbers, and the app should respond with tracking information for each of them."
-}
-[/block]
 
+>⚠️ Be aware that this call may contain several package's tracking numbers, and the app should respond with tracking information for each of them.
 
 ## Learn more
 

@@ -16,13 +16,7 @@ For marketplaces, this means selling products from its direct sellers and also p
 
 This article covers the account architecture details, chain order flows and necessary settings for VTEX marketplaces to implement this feature via API. 
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "To know how to implement this feature via VTEX Admin, along with benefits and restrictions around the use of Multilevel Omnichannel Inventory, check out our [Multilevel Omnichannel Inventory Help article](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).",
-  "title": "Restrictions of use"
-}
-[/block]
+>⚠️ To know how to implement this feature via VTEX Admin, along with benefits and restrictions around the use of Multilevel Omnichannel Inventory, check out our [Multilevel Omnichannel Inventory Help article](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).
 
 ## Account architecture
 
@@ -38,12 +32,7 @@ Stores that have white label sellers and franchises are marketplaces to those ac
 
 With the Multilevel Omnichannel Inventory setting, all franchise accounts and white label sellers (level 3) are already fully integrated to a store's main account (level 2). This means that when the main account sets up an integration with an external marketplace (level 1), the franchise accounts can be integrated as well, no longer being necessary to manage each franchise individually in order to set up its integration with the marketplace.
 
-[block:callout]
-{
-  "type": "info",
-  "body": "This feature is valid for [VTEX marketplaces](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#ser-um-marketplace-vtex), [native connectors](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#integrado-a-conector-nativo-vtex) and [certified partners](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#integrado-a-conector-certificado-parceiro)."
-}
-[/block]
+>ℹ️ This feature is valid for [VTEX marketplaces](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#ser-um-marketplace-vtex), [native connectors](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#integrado-a-conector-nativo-vtex) and [certified partners](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#integrado-a-conector-certificado-parceiro).
 
 ## Order flow
 

@@ -5,13 +5,9 @@ hidden: true
 createdAt: "2022-06-09T21:06:51.232Z"
 updatedAt: "2022-06-10T16:12:38.932Z"
 ---
-[block:callout]
-{
-  "type": "warning",
-  "body": "We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. If you used this previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/vtex-rest-api/docs/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/vtex-rest-api/docs/deprecated-how-to-collect-orders-from-sales-channels). These previous methods, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in our [New Order Integration](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders) guide.",
-  "title": "New method for integrating orders"
-}
-[/block]
+
+>⚠️ We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. If you used this previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/vtex-rest-api/docs/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/vtex-rest-api/docs/deprecated-how-to-collect-orders-from-sales-channels). These previous methods, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in our [New Order Integration](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders) guide.
+
 Connectors should present the logs that follow, considering their status:
 
 <table>

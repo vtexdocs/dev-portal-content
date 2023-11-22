@@ -25,11 +25,25 @@ Additionally, you need to send the request body containing the following custome
 - `locale`: Defines the website language chosen by the customer (e.g. PT, EN, ES).
 - `optinNewsLetter`: Indicates if the customer subscribed to the store newsletter.
 
-See a request body example below: [block:code]
-{ "codes": [
-    { "code": "{\n     \"locale\": \"EN\",\n     \"optinNewsLetter\": true\n}", "language": "json" } ] } [/block] After sending the request, the endpoint will return the response body containing the client preferences information in the shopping cart, as in the example below: [block:code]
-{ "codes": [
-    { "code": "...\n\"clientPreferencesData\": {\n        \"locale\": \"EN\",\n        \"optinNewsLetter\": true\n    }\n...", "language": "json" } ] } [/block]
+See a request body example below:
+
+```json
+{
+  "locale": "EN",
+  "optinNewsLetter": true
+}
+```
+
+After sending the request, the endpoint will return the response body containing the client preferences information in the shopping cart, as in the example below:
+
+```json
+...
+"clientPreferencesData": {
+        "locale": "EN",
+        "optinNewsLetter": true
+    }
+...
+```
 
 > ℹ️️ For more information on each field available in the shopping cart, see the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) overview.
 
@@ -39,17 +53,27 @@ The following errors may appear as a message in the response body.
 
 ### 400 - Bad Request
 
-- **Message error example (code ORD002)**: `"Invalid order form"`. The `orderFormId` information is not valid. [block:code]
-{ "codes": [
-  { "code": "{\n    \"fields\": {},\n    \"error\": {\n        \"code\": \"ORD002\",\n        \"message\": \"Invalid order form\",\n        \"exception\": null\n    },\n    \"operationId\": \"5d9f54e6-7db4-46d6-bca9-deeb278b8b98\"\n}", "language": "json" } ] } [/block]
+- **Message error example (code ORD002)**: `"Invalid order form"`. The `orderFormId` information is not valid.
+
+```json
+{
+  "fields": {},
+  "error": {
+      "code": "ORD002",
+      "message": "Invalid order form",
+      "exception": null
+  },
+  "operationId": "5d9f54e6-7db4-46d6-bca9-deeb278b8b98"
+}
+```
 
 ### 404 - Not Found
 
-- **Message error example**: `"The requested URL was not found on the server"`: Check if the URL is correct. [block:code]
-{
-"codes": [
-  {
-    "code": "<body>\n\t<h1>404 Not Found</h1>\n\t<p>The requested URL was not found on this server.</p>\n</body>",
-    "language": "json"
-  }
-] } [/block]
+- **Message error example**: `"The requested URL was not found on the server"`: Check if the URL is correct.
+
+```html
+<body>
+<h1>404 Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+</body>
+```

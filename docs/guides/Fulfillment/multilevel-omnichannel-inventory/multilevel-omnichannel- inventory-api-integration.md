@@ -286,12 +286,8 @@ The marketplace must implement this endpoint for the chain order to inform it ab
 * Method: POST
 * URL: `{marketplaceServiceEndpoint}/api/oms/pvt/orders/{orderId}/invoice`
 
-[block:callout]
-{
-  "type": "info",
-  "body": "Note that the path including `/pvt` is usually called if the notification is meant for an internal VTEX endpoint. If calling external agents, substitute the path for `/pub`."
-}
-[/block]
+>ℹ️ Note that the path including `/pvt` is usually called if the notification is meant for an internal VTEX endpoint. If calling external agents, substitute the path for `/pub`.
+
 Request example:
 
 ```json

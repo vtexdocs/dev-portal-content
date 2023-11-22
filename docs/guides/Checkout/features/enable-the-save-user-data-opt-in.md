@@ -7,12 +7,8 @@ updatedAt: "2022-10-20T17:36:55.171Z"
 ---
 
 To comply with GDPR (General Data Protection Regulation - Europe) and LGPD - Lei Geral de Proteção de Dados (General Data Protection Law - Brazil), among other solutions, VTEX offers the **Save User Data opt-in** functionality. Through it, users can select whether they want the store to keep their personal and payment data saved.
-[block:callout]
-{
-  "type": "warning",
-  "body": "The **Save user data opt-in** feature is only available for Checkout v6."
-}
-[/block]
+
+>⚠️ The **Save user data opt-in** feature is only available for Checkout v6.
 
 ## Save user data opt-in activation
 
@@ -42,12 +38,8 @@ Checkbox for saving payment data:
 
 ![Pagamento](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-the-save-user-data-opt-in-3.PNG)
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "The checkbox for saving payment data will only be shown if the user has already selected the option to save their personal data."
-}
-[/block]
+>⚠️ The checkbox for saving payment data will only be shown if the user has already selected the option to save their personal data.
+
 Checkbox not available to save payment data if (the user has not previously selected the option to save personal data):
 
 ![Payment\_No Checkbox](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/enable-the-save-user-data-opt-in-4.png)

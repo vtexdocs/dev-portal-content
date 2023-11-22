@@ -9,12 +9,7 @@ VTEX performs integrations with external vendors through secure HTTPS connection
 
 For services performed in the Checkout module, where there is an exchange of data with sellers that are not part of VTEX (external fulfillment), the following ciphers are supported for the external seller, so that the flow of information occurs correctly.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "TLS 1.0 and 1.1 integration protocols are not supported by VTEX."
-}
-[/block]
+>⚠️ TLS 1.0 and 1.1 integration protocols are not supported by VTEX.
 
 | Cipher Suite Name (IANA)      | Name (OpenSSL)      |
 | ---------- | ---------- |

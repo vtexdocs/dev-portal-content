@@ -8,12 +8,9 @@ updatedAt: "2022-11-17T12:47:05.110Z"
 The shopping cart is where the information on the products chosen by the customer while browsing a store is gathered. This data may include item prices, shipping value, payment, and delivery methods, among others.
 
 This guide will describe how to obtain information about the number of installments and their respective amounts from an existing payment method in the shopping cart.
-[block:callout]
-{
-  "type": "warning",
-  "body": "Before starting the search for information about installments, make sure that there is already payment information (`paymentData`) assigned to the chosen cart (`orderFormId`)."
-}
-[/block]
+
+>⚠️ Before starting the search for information about installments, make sure that there is already payment information (`paymentData`) assigned to the chosen cart (`orderFormId`).
+
 ## Getting shopping cart information
 
 The first step is to get the `orderFormId` of the shopping cart information that you want to obtain information about the amount of installments. For more information, access the [Get cart information by ID](https://developers.vtex.com/vtex-rest-api/docs/get-cart-information-by-id) guide.

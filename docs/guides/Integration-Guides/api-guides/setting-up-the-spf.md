@@ -47,12 +47,7 @@ See the example below to understand the change:
 }
 [/block]
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "It should not exist duplicated entries, or even mixed with other values, to avoid possible validation errors."
-}
-[/block]
+>⚠️ It should not exist duplicated entries, or even mixed with other values, to avoid possible validation errors.
 
 ## Verifying the SPF
 

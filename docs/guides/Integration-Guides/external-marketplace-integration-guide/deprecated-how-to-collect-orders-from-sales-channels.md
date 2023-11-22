@@ -6,13 +6,9 @@ createdAt: "2022-06-09T21:22:22.023Z"
 updatedAt: "2022-06-10T16:12:54.251Z"
 ---
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. If you used this previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/vtex-rest-api/docs/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/vtex-rest-api/docs/deprecated-how-to-collect-orders-from-sales-channels). These previous methods, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in our [New Order Integration](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders) guide.",
-  "title": "New method for integrating orders"
-}
-[/block]
+
+>⚠️ We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. If you used this previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/vtex-rest-api/docs/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/vtex-rest-api/docs/deprecated-how-to-collect-orders-from-sales-channels). These previous methods, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in our [New Order Integration](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-collect-orders) guide.
+
 Orders in an integration fit into two different categories:
 
 **Paid orders:** the marketplace only makes orders available for the integration once they are paid by the customer.
@@ -65,13 +61,7 @@ If all validations pass, the order is sent to VTEX and the operation is logged a
 
 After VTEX OMS returns `success`, if the IDs between VTEX and the marketplace differ, the connector should store the mapping of the order (VTEX ID and Marketplace ID). This information will be used for [order status update operations](https://developers.vtex.com/docs/guides/external-marketplace-update-order-status#api-reference-update-order-status).
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Be mindful to make all validations at once. In case there's an error detected, the connector presents the seller a list of actions to correct. This way we can avoid the correct - publish - correct cycle. If orders do not apply to the steps above, an [error log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) must be filed.",
-  "title": "Validations and logs"
-}
-[/block]
+>⚠️ Be mindful to make all validations at once. In case there's an error detected, the connector presents the seller a list of actions to correct. This way we can avoid the correct - publish - correct cycle. If orders do not apply to the steps above, an [error log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) must be filed.
 
 ## API Reference
 
@@ -79,13 +69,7 @@ Use the endpoints described below to perform this step. It is important to note 
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/deprecated-how-to-collect-orders-from-sales-channels-5.jpg)
 
-[block:callout]
-{
-  "type": "info",
-  "body": "All parameters in the endpoints below must be declared in the request. In case one of the parameters does not have a value, you must still send it as `null`.",
-  "title": "Request bodies for POST calls"
-}
-[/block]
+>ℹ️ All parameters in the endpoints below must be declared in the request. In case one of the parameters does not have a value, you must still send it as `null`.
 
 ### Fulfillment simulation
 
@@ -337,10 +321,4 @@ Connectors should:
 6. In case the call returns a bad request (400), signaling that the order could not be canceled, file an [error log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs), following the error code x.
 7. In case the call returns an unauthorized request (500), signaling that the order cancelling failed due to error in system communication, the order should be queued on the connector’s flow to perform a retry.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Make sure that all steps are logged as either success or failure, to offer the operation’s full traceability. Check out the [Order logs](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) page to learn more.",
-  "title": "Error logs"
-}
-[/block]
+>⚠️ Make sure that all steps are logged as either success or failure, to offer the operation’s full traceability. Check out the [Order logs](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-order-logs) page to learn more.
