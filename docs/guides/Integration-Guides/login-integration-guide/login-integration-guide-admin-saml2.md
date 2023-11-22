@@ -9,13 +9,8 @@ updatedAt: "2022-09-01T15:21:02.265Z"
 User management is a native feature of the VTEX platform. Store administrators can not only manage the users that can log in to the admin panel, but also specify which pages they can see and the operations they are allowed to perform using [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). This granular control allows stores to adopt [best practices](https://developers.onelogin.com/saml/best-practices-and-faqs) in terms of security and compliance.
 
 However, there is often the need to enable or enforce the use of credentials from a central authentication system used by the organization. This guide provides the basic information you need to integrate such an authentication system to the Admin panel for a Single Sign-On (SSO) experience.
-[block:callout]
-{
-"type": "warning",
-"body": "If you need to use an external identity provider to login to your Admin panel, it must adhere to the SAML 2.0 protocol. We do not currently support other authentication protocols for this scope.",
-"title": "SAML 2.0 is required for Admin login integration"
-}
-[/block]
+
+> ⚠️ If you need to use an external identity provider to login to your Admin panel, it must adhere to the SAML 2.0 protocol. We do not currently support other authentication protocols for this scope.
 
 ## SAML
 
@@ -27,7 +22,7 @@ It is an open standard, a product of the OASIS Security Services Technical Commi
 
 ## Authentication flow
 
-![VTEX ID SAML authentication flow.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images-admin-saml2-0.png)
+![VTEX ID SAML authentication flow.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-0.png)
 
 ## SAML roles
 
@@ -42,24 +37,14 @@ An IdP is a trusted third party that can be relied upon when users and servers a
 ### Service Provider (SP)
 
 A **Service Provider** is an application server that communicates with an IdP to determine if a user has authenticated and obtain information about the user. The information obtained from the IdP may be used to make authorization decisions.
-[block:callout]
-{
-"type": "info",
-"title": "",
-"body": "In the context of this guide, the external authentication system is the **Identity Provider** and the module for identifying users on the VTEX platform, VTEX ID, is the **Service Provider**."
-}
-[/block]
+
+> ℹ️ In the context of this guide, the external authentication system is the **Identity Provider** and the module for identifying users on the VTEX platform, VTEX ID, is the **Service Provider**.
 
 ## SAML Assertions
 
 SAML 2.0 uses assertions (packages) to pass information between the SP and the IdP. These packages contain information about a user (subject) and are written using the XML markup language. Although the standard specification defines [three types of subject-related assertion statements](http://saml.xml.org/assertions), VTEX only supports the **Authentication Assertion** type. We recommend the reading of [this document](https://github.com/jch/saml) to get a better understanding of the SAML protocol.
-[block:callout]
-{
-"type": "info",
-"body": "An **Authentication Assertion** states that a user was authenticated by an external service at a particular time and is often used to enable web browser SSO.",
-"title": ""
-}
-[/block]
+
+> ℹ️ An **Authentication Assertion** states that a user was authenticated by an external service at a particular time and is often used to enable web browser SSO.
 
 ## Integration
 
@@ -98,26 +83,21 @@ urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
 https://identity-broker.vtex.com/{accountName}/idps/{accountName}-saml
 ```
 
-[block:callout]
-{
-"type": "warning",
-"title": "Keep in mind that:",
-"body": "- The `entityID` of the **EntityDescriptor** is not a URL and must not be configured as one. It is an ID.\n- The `{accountName}` is your business identification on the VTEX platform. It is the one you use inside the URL that gives access to your admin: `{accountName}.myvtex.com/admin`."
-}
-[/block]
+> ⚠️ The `entityID` of the **EntityDescriptor** is not a URL and must not be configured as one. It is an ID.\n- The `{accountName}` is your business identification on the VTEX platform. It is the one you use inside the URL that gives access to your admin: `{accountName}.myvtex.com/admin`.
+
 The identity provider must send the authenticated user's email in the **Name Identifier** (`saml:NameID`) variable. The response will be cryptographically signed with the certificate described in the Identity Provider's [Metadata](#metadata) file.
 
 ### Required information
 
 In the table below you can learn more about the information you need to provide when [setting up SAML](#setup).
 
-| **Information**        | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Provider Name`        | Name displayed to unauthenticated users in the list of login options.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `SSO Service Endpoint` | URL of your SAML Identity provider. Users will be redirected to this address. This URL must be HTTPS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `Redirect URL`         | You can choose to redirect users to one of two URLs: `https://{accountName}.myvtex.com/` or `https://{accountName}.myvtex.com/admin`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `Allowed Email Hosts`  | List of hosts (the portion after the `@` symbol in an email address) allowed for authentication. When a SAML Authentication Assertion is received by our platform, the email provided by the user is checked against the list of **Allowed Email Hosts**. Only emails with hosts listed here are allowed.                                                                                                                                                                                                                                                                                                                                                                          |
-| `Metadata`             | XML file that must be uploaded to the VTEX platform. It must describe your identity provider in a way that allows our servers to redirect users to it and securely identify assertions made by it. It usually contains information like the SSO and Logout URLs as well as the certificate used by the identity provider to sign the assertions. The authentication system your organization is using should be capable of generating this file for you. Learn more about [SAML 2.0 metadata](http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf). This file must also contain the `SSO Service Endpoint`, described above. You can see an example file below. |
+| **Information** | **Description** |
+| - | - |
+| `Provider Name` | Name displayed to unauthenticated users in the list of login options. |
+| `SSO Service Endpoint` | URL of your SAML Identity provider. Users will be redirected to this address. This URL must be HTTPS. |
+| `Redirect URL` | You can choose to redirect users to one of two URLs: `https://{accountName}.myvtex.com/` or `https://{accountName}.myvtex.com/admin`. |
+| `Allowed Email Hosts` | List of hosts (the portion after the `@` symbol in an email address) allowed for authentication. When a SAML Authentication Assertion is received by our platform, the email provided by the user is checked against the list of **Allowed Email Hosts**. Only emails with hosts listed here are allowed. |
+| `Metadata` | XML file that must be uploaded to the VTEX platform. It must describe your identity provider in a way that allows our servers to redirect users to it and securely identify assertions made by it. It usually contains information like the SSO and Logout URLs as well as the certificate used by the identity provider to sign the assertions. The authentication system your organization is using should be capable of generating this file for you. Learn more about [SAML 2.0 metadata](http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf). This file must also contain the `SSO Service Endpoint`, described above. You can see an example file below. |
 
 #### Example metadata file
 
@@ -157,16 +137,14 @@ Once you have [setup your identity provider](#identity-provider-configuration) a
 
 1. Go to the **Admin panel** > **Account settings** > **Authentication**.
 2. Click the **Admin** tab.
-
-![Admin panel authentication page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-1.PNG)
-
-3. Click `SET UP` in the **My SAML** section.
+   ![Admin panel authentication page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-1.PNG)
+3. Click `Set up` in the **My SAML** section.
 4. Fill in the [required information](#required-information) as described above.
    ![Custom SAML configuration page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-2.PNG)
 5. Upload your metadata XML according to the information provided in [required information](#required-information).
    ![Custom SAML configuration page (metadata upload section).](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-admin-saml2-3.PNG)
 6. You have the option of setting the **Send AuthRequest** toggle. Turning it on means that the attributes `RelayState` and `SAMLRequest` will be sent on the URL when authenticating on the identity provider.
-7. Click `SAVE`
+7. Click `Save`.
 
 With this, your SAML configuration is set up.
 
@@ -219,10 +197,6 @@ This is done by including two `<md:KeyDescriptor use="signing">` entries in your
 
 As the SP, VTEX ID must know of the new certificate or it will not be able to validate the signatures. And since the SP is unable to check at what stage of renewal the IdP is, it always checks if the signature validates for each of the listed certificates.
 
-[block:callout]
-{
-"type": "info",
-"body": "We recommend checking if your IdP allows the configuration of a primary and secondary certificate to simplify the export process."
-}
-[/block]
+> ℹ️ We recommend checking if your IdP allows the configuration of a primary and secondary certificate to simplify the export process.
+
 Once the old certificate expires, you may remove it from the `metadata.xml` file and re-upload it if you wish to avoid unnecessary requests in the **Send Valid Credentials** step of the [SAML authentication flow](#authentication-flow).
