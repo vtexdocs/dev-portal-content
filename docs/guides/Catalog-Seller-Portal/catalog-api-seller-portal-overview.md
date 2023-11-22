@@ -8,7 +8,7 @@ updatedAt: "2022-11-10T17:09:42.326Z"
 
 The Catalog API for Seller Portal allows you to create, edit, and view products, including their variations, brands, and categories.
 
-> This API is part of the [Seller Portal Catalog](https://help.vtex.com/en/tutorial/how-the-seller-portal-catalog-works--7pMB6YOt6YQDQQbzFB4Pxp), which is currently in beta and may be discontinued by VTEX at any time. This functionality is in the Beta stage and can be discontinued at any moment at VTEX's discretion. VTEX will not be responsible for any instabilities caused by its use or interruptions. If you have any questions, please contact [our Support Center](https://help.vtex.com/support).
+> This API is part of the [Seller Portal Catalog](https://help.vtex.com/en/tutorial/how-the-seller-portal-catalog-works--7pMB6YOt6YQDQQbzFB4Pxp), which is currently in beta and may be discontinued by VTEX at any time. This functionality is in the Beta stage and can be discontinued at any moment at VTEX's discretion. VTEX will not be responsible for any instabilities caused by its use or interruptions. If you have any questions, please contact [our Support Center.](https://help.vtex.com/support)
 
 ## Index
 
