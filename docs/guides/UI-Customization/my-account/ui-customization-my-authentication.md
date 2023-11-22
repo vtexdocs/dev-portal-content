@@ -68,24 +68,22 @@ To customize the appearance of My Authentication components, first you have to c
 
 Then go to the Admin of your store and do the following steps:
 
-1. In the Admin left panel, go to the **STORE SETUP** section.
-2. Click on **CMS**.
-3. Click on **Layout**. You can also get here from the link `{accountName}.myvtex.com/admin/a/` replacing `{accountName}` for the name of your account.
-   ![Admin menu Layout](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/ui-customization-my-authentication-1.png)
-4. In the **Frontend CMS** left panel, navigate to **CMS** > **Files Manager** > **.css**.
-5. In the **Files Manager** tab, click on the **Add** button.
+1. Open the Admin and go to the **Storefront** section.
+2. Click **Layout**.
+3. In the **Frontend CMS** left panel, navigate to **CMS** > **Files Manager** > **.css**.
+4. In the **Files Manager** tab, click on the **Add** button.
    ![CMS File Manager CSS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/ui-customization-my-authentication-2.png)
-6. In the **Files Maintenance** tab, click on the `Localizar` button.
-7. A window with a file explorer will open. Choose the CSS file you created.
-8. Click on the `Salvar arquivo` button. This will upload your CSS file to the CMS of the store.
+5. In the **Files Maintenance** tab, click on the `Localizar` button.
+6. A window with a file explorer will open. Choose the CSS file you created.
+7. Click on the `Salvar arquivo` button. This will upload your CSS file to the CMS of the store.
    ![Add CSS file CMS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/ui-customization-my-authentication-3.png)
-9. In the **Frontend CMS** left panel, navigate to **CMS** > **HTML Templates** > **Account**.
+8. In the **Frontend CMS** left panel, navigate to **CMS** > **HTML Templates** > **Account**.
    ![CMS HTML Template Account](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/ui-customization-my-authentication-4.png)
-10. In the right panel will appear the My Account HTML template. Inside the `<head>` section, insert the tag `<link href="https://{accountName}.vteximg.com.br/arquivos/{cssFile}" rel="stylesheet"></link>`, replacing `{accountName}` for the account name of your store and `{cssFile}` for the name of the CSS file you uploaded.
+9. In the right panel will appear the My Account HTML template. Inside the `<head>` section, insert the tag `<link href="https://{accountName}.vteximg.com.br/arquivos/{cssFile}" rel="stylesheet"></link>`, replacing `{accountName}` for the account name of your store and `{cssFile}` for the name of the CSS file you uploaded.
     ![My Authentication HTML code](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/ui-customization-my-authentication-5.png)
-11. A popup window will show up. In the last field type **yes**.
-12. Click on the `Update Item` button.
+10. A popup window will show up. In the last field type **yes**.
+11. Click on the `Update Item` button.
     ![CMS Update HMTL template](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/ui-customization-my-authentication-6.png)
-13. A new popup window will appear. If there are no errors, the HTML template will be saved. Then click on **Ok**.
+12. A new popup window will appear. If there are no errors, the HTML template will be saved. Then click on **Ok**.
     ![CMS template successfully saved](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/ui-customization-my-authentication-7.png)
     After updating the HTML template, you should see the changes in the Authentication tab of your store.

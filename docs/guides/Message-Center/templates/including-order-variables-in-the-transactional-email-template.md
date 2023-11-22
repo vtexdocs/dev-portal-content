@@ -20,12 +20,8 @@ These variables are JSON properties that are in the **JSON Data** field and can 
 
 ### Example
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Examples of JSON Data will only appear in the templates when you come up with the desired action in your store. If you have not transacted an order, a recurrence, or any other action, JSON Data will be blank."
-}
-[/block]
+> ⚠️ Examples of JSON Data will only appear in the templates when you come up with the desired action in your store. If you have not transacted an order, a recurrence, or any other action, JSON Data will be blank.
+
 Let's say you want to enter the name of the carrier in the "product sent" email.
 
 To do this, enter the "product sent" template and, in the **JSON Data** field, search for the `courier` property.
@@ -38,12 +34,14 @@ Note that the `courier` property is inside the `package` object. Therefore, you 
 `{{package.courier}}`
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/including-order-variables-in-the-transactional-email-template-1.png)
+
 As you see, the sample value ("Transportadora Teste Courier S.A.") was inserted in the preview screen, below the **HTML** and **JSON Data** fields.
 
 ### Other order email variables
 
 Among the properties of order JSONs that can be used as variables in transactional email templates are:
-[block:parameters]
+
+```json
 {
   "data": {
     "h-0": "Properties",
@@ -68,4 +66,4 @@ Among the properties of order JSONs that can be used as variables in transaction
   "cols": 2,
   "rows": 8
 }
-[/block]
+```

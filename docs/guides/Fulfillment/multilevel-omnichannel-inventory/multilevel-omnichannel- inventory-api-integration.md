@@ -8,7 +8,7 @@ updatedAt: "2022-11-18T18:53:14.127Z"
 
 Marketplaces following the [External Marketplace protocol](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide) can also make the [Multilevel Omnichannel Inventory](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) setting available for VTEX sellers connected to it. This allows for more fulfillment options by VTEX sellers, since they can connect their franchise accounts' inventories as fulfillment options. You can learn more about the benefits and restrictions of implementing this feature in our [Multilevel Omnichannel Inventory Help article](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).
 
-External marketplaces and connectors should follow this article's instructions to configure Multilevel Omnichannel Inventory in their marketplace architecture with VTEX. 
+External marketplaces and connectors should follow this article's instructions to configure Multilevel Omnichannel Inventory in their marketplace architecture with VTEX.
 
 >ℹ️ Before you start, make sure that the necessary [settings](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory#setup-for-vtex-marketplaces) are made in the connected VTEX account, so the feature is fully operational.
 
@@ -22,7 +22,6 @@ When using a [Multilevel Omnichannel Inventory](https://developers.vtex.com/docs
 * [Order Invoice Notification](#order-invoice-notification): route to receive invoice notification from the seller, or of the chain agent's (in this case seller level 2).
 
 Therefore, the flow of the routes follows the image below:
-
 
 ![chain-orders-order-flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/multilevel-omnichannel-inventory-1.png)
 
@@ -87,57 +86,17 @@ Request example:
 The Multilevel Omnichannel Inventory changes and adds fields to the order's data. You can know more about the fields in the [Retrieve user order details](https://developers.vtex.com/vtex-rest-api/reference/userorderdetails) API Reference.
 
 The table below describes the fields that were added or changed in the order's data.
-<table>
-    <tr>
-        <td><strong>Field</strong></td>
-        <td><strong>New or Changed?</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td>sc</td>
-        <td>New</td>
-        <td>Path parameter including the sales channel ID.</td>
-    </tr>
-    <tr>
-        <td>marketplaceServicesEndpoint</td>
-        <td>New</td>
-        <td>Field is added to the orderform. This field should be filled in with the information provided by the
-            external marketplace that is placing an order in VTEX.</td>
-    </tr>
-    <tr>
-        <td>marketplaceOrdergroup</td>
-        <td>New</td>
-        <td>Field is added to the orderform. This field should be filled in with the information provided by the
-            external marketplace that is placing an order in VTEX.</td>
-    </tr>
-    <tr>
-        <td>affiliateId</td>
-        <td>New</td>
-        <td>The <a href="https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0">afiliate</a>
-            identification code created by the seller. The seller must inform this ID to the marketplace so that the
-            marketplace can complete the configuration process.</td>
-    </tr>
-    <tr>
-        <td>marketplacePaymentValue</td>
-        <td>New</td>
-        <td>Field is added to the orderform.</td>
-    </tr>
-    <tr>
-        <td>transaction</td>
-        <td>Changed</td>
-        <td>This field no longer is required in the orderform.</td>
-    </tr>
-    <tr>
-        <td>origin</td>
-        <td>Changed</td>
-        <td>The field 'origin' will come with `chain` as a value, and not `fulfillment` or `marketplace` like before.</td>
-    </tr>
-    <tr>
-        <td>paymentData</td>
-        <td>Changed</td>
-        <td>The field is no longer required in chained orders.</td>
-    </tr>
-</table>
+
+| Field                        | New or Changed? | Description                                                                                                                         |
+|------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| sc                           | New              | Path parameter including the sales channel ID.                                                                                      |
+| marketplaceServicesEndpoint  | New              | Field is added to the orderform. This field should be filled in with the information provided by the external marketplace that is placing an order in VTEX.                                      |
+| marketplaceOrdergroup         | New              | Field is added to the orderform. This field should be filled in with the information provided by the external marketplace that is placing an order in VTEX.                                      |
+| affiliateId                  | New              | The [afiliate](https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0) identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process. |
+| marketplacePaymentValue       | New              | Field is added to the orderform.                                                                                                    |
+| transaction                  | Changed          | This field no longer is required in the orderform.                                                                                 |
+| origin                       | Changed          | The field 'origin' will come with `chain` as a value, and not `fulfillment` or `marketplace` like before.                           |
+| paymentData                  | Changed          | The field is no longer required in chained orders.                                                                                  |
 
 ## Marketplace Order Authorization
 
@@ -166,75 +125,18 @@ Request example
 }
 ```
 
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Mandatory</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td>orderId</td>
-        <td>String</td>
-        <td>Yes</td>
-        <td>Path parameter with the Chain order ID.</td>
-    </tr>
-    <tr>
-        <td>items</td>
-        <td>array of objects</td>
-        <td>Yes</td>
-        <td>Array containing the SKUs that are being invoiced.</td>
-    </tr>
-    <tr>
-        <td>id</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>ID of the SKU being invoiced.</td>
-    </tr>
-    <tr>
-        <td>price</td>
-        <td>integer</td>
-        <td>Yes</td>
-        <td>Total price of the SKU being invoiced in cents. Do not use any decimal separator. For instance, $24.99
-            should be represented as 2499.</td>
-    </tr>
-    <tr>
-        <td>seller</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Account name of the seller responsible for fulfillment</td>
-    </tr>
-    <tr>
-        <td>quantity</td>
-        <td>integer</td>
-        <td>Yes</td>
-        <td>Quantity currently in inventory of the SKU being invoiced.</td>
-    </tr>
-    <tr>
-        <td>marketplaceOrderGroup</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Marketplace order ID or ordergroup</td>
-    </tr>
-    <tr>
-        <td>authorizationReceipt</td>
-        <td>Object</td>
-        <td>Yes</td>
-        <td>Object including date and receipt of authorization</td>
-    </tr>
-    <tr>
-        <td>date</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Date of authorization</td>
-    </tr>
-    <tr>
-        <td>receipt</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Receipt number</td>
-    </tr>
-</table>
+| Name                   | Type              | Mandatory | Description                                            |
+|------------------------|-------------------|-----------|--------------------------------------------------------|
+| orderId                | String            | Yes       | Path parameter with the Chain order ID.                |
+| items                  | Array of objects  | Yes       | Array containing the SKUs that are being invoiced.    |
+| id                     | String            | Yes       | ID of the SKU being invoiced.                           |
+| price                  | Integer           | Yes       | Total price of the SKU being invoiced in cents. Do not use any decimal separator. For instance, $24.99 should be represented as 2499. |
+| seller                 | String            | Yes       | Account name of the seller responsible for fulfillment |
+| quantity               | Integer           | Yes       | Quantity currently in inventory of the SKU being invoiced. |
+| marketplaceOrderGroup  | String            | Yes       | Marketplace order ID or order group                    |
+| authorizationReceipt   | Object            | Yes       | Object including date and receipt of authorization    |
+| date                   | String            | Yes       | Date of authorization                                  |
+| receipt                | String            | Yes       | Receipt number                                         |
 
 ## Cancel Order Notification
 
@@ -245,39 +147,18 @@ The marketplace must implement the endpoint below, to receive the cancel notific
 
 ### Request example
 
-```
+```json
 { 
-"id":"sellerOrderCancelled", 
-"sellerOrderId": "7908010136043"
+    "id":"sellerOrderCancelled", 
+    "sellerOrderId": "7908010136043"
 }
 ```
 
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Mandatory</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td>orderGroup</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Path parameter including the marketplace order ID or ordergroup.</td>
-    </tr>
-    <tr>
-        <td>id</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>ID of the canceled order by the seller</td>
-    </tr>
-    <tr>
-        <td>sellerOrderId</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Order ID in the VTEX system</td>
-    </tr>
-</table>
+| Name           | Type   | Mandatory | Description                                   |
+|----------------|--------|-----------|-----------------------------------------------|
+| orderGroup     | String | Yes       | Path parameter including the marketplace order ID or order group. |
+| id             | String | Yes       | ID of the canceled order by the seller.       |
+| sellerOrderId  | String | Yes       | Order ID in the VTEX system.                  |
 
 ## Order Invoice Notification
 
@@ -310,88 +191,27 @@ Request example:
 }
 ```
 
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Mandatory</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td>invoiceNumber</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Number that identifies the invoice.</td>
-    </tr>
-    <tr>
-        <td>invoiceValue</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Total amount being invoiced in cents. Do not use any decimal separator. For instance, $24.99 should be represented as 2499.</td>
-    </tr>
-    <tr>
-        <td>issuanceDate</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>Issuance date of the invoice.</td>
-    </tr>
-    <tr>
-        <td>invoiceUrl</td>
-        <td>string</td>
-        <td></td>
-        <td>URL of the invoice. Can be used to send the URL of an XML file, for example, which is useful for some integrations.</td>
-    </tr>
-    <tr>
-        <td>trackingNumber</td>
-        <td>string</td>
-        <td>No</td>
-        <td>The number code that identifies the order tracking. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty</td>
-    </tr>
-    <tr>
-        <td>trackingUrl</td>
-        <td>string</td>
-        <td>No</td>
-        <td>The URL used to track the order. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty</td>
-    </tr>
-    <tr>
-        <td>courier</td>
-        <td>string</td>
-        <td>No</td>
-        <td>The name of the carrier responsible for delivering the order. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty</td>
-    </tr>
-    <tr>
-        <td>items</td>
-        <td>array of objects</td>
-        <td>Yes</td>
-        <td>Array containing the SKUs that are being invoiced.</td>
-    </tr>
-    <tr>
-        <td>id</td>
-        <td>string</td>
-        <td>Yes</td>
-        <td>ID of the SKU being invoiced.</td>
-    </tr>
-    <tr>
-        <td>price</td>
-        <td>integer</td>
-        <td>Yes</td>
-        <td>Total price of the SKU being invoiced in cents. Do not use any decimal separator. For instance, $24.99 should be represented as 2499.</td>
-    </tr>
-    <tr>
-        <td>quantity</td>
-        <td>integer</td>
-        <td>Yes</td>
-        <td>Quantity currently in inventory of the SKU being invoiced.</td>
-    </tr>
-</table>
+| Name              | Type              | Mandatory | Description                                                                                                 |
+|-------------------|-------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| invoiceNumber     | String            | Yes       | Number that identifies the invoice.                                                                         |
+| invoiceValue      | String            | Yes       | Total amount being invoiced in cents. Do not use any decimal separator. For instance, $24.99 should be represented as 2499.                                            |
+| issuanceDate      | String            | Yes       | Issuance date of the invoice.                                                                                |
+| invoiceUrl        | String            |           | URL of the invoice. Can be used to send the URL of an XML file, for example, which is useful for some integrations.                                                   |
+| trackingNumber    | String            | No        | The number code that identifies the order tracking. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty. |
+| trackingUrl       | String            | No        | The URL used to track the order. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty.                   |
+| courier           | String            | No        | The name of the carrier responsible for delivering the order. This field should only be used when sending the tracking information. When the request is used for sending the invoice, this field should be left empty.                   |
+| items             | Array of objects  | Yes       | Array containing the SKUs that are being invoiced.                                                           |
+| id                | String            | Yes       | ID of the SKU being invoiced.                                                                                |
+| price             | Integer           | Yes       | Total price of the SKU being invoiced in cents. Do not use any decimal separator. For instance, $24.99 should be represented as 2499.                                            |
+| quantity          | Integer           | Yes       | Quantity currently in inventory of the SKU being invoiced.                                                 |
 
 Response example:
 
 ```json
 {
-"date": "2018-11-21T11:50:09.9994509-02:00",
-"orderId": "876053333998-01",
-"receipt": "95233cf2078d418ba77155380c18f398"
+    "date": "2018-11-21T11:50:09.9994509-02:00",
+    "orderId": "876053333998-01",
+    "receipt": "95233cf2078d418ba77155380c18f398"
 }
 ```
 
