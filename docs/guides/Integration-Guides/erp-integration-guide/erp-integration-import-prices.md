@@ -56,7 +56,7 @@ To set a fixed price for a specific context, you should use the [Create / Edit F
 
 You should set a fixed price for each price table / SKU combination that needs to be priced differently from the base price. In between steps, you can use the [Get Fixed Prices](https://developers.vtex.com/docs/api-reference/pricing-api#get-/prices/-itemId-/fixed) endpoint or visit the *Products > Prices > Price list* section of your Admin panel to check on your progress.
 
->⚠️ The ```tradePolicyId``` parameter should be filled in with the Price Table name if you want to set fixed prices for a custom Price Table that is not associated with a specific Trade Policy.
+>⚠️ The `tradePolicyId` parameter should be filled in with the Price Table name if you want to set fixed prices for a custom Price Table that is not associated with a specific Trade Policy.
 
 > Keep in mind that [price rules](https://help.vtex.com/tracks/prices-101--6f8pwCns3PJHqMvQSugNfP/2rBirbpB7wLnei4dQ9KGMW) might be a better option than fixed prices if you are consistently applying the same criteria for SKUs in the same category, brand or markup range.
 
