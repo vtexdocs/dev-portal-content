@@ -15,12 +15,7 @@ SKU specifications are necessary to be able to choose the SKU, that is, the vari
 }
 [/block]
 
-[block:callout]
-{
-"type": "warning",
-"body": "VTEX Admin says that if a new SKU Specification field is created, all the SKUs associated will be deactivated. However, if created, products will keep activated."
-}
-[/block]
+>⚠️ VTEX Admin says that if a new SKU Specification field is created, all the SKUs associated will be deactivated. However, if created, products will keep activated.
 
 ## Data Model
 

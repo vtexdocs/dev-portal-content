@@ -57,12 +57,7 @@ Response:
 
 To change an existing SKU image that already existed, you can use the [Update SKU file endpoint](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-put-sku-file).
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "In order to update a SKU file the image needs to be uploaded again."
-}
-[/block]
+>⚠️ In order to update a SKU file the image needs to be uploaded again.
 
 #### Example request
 

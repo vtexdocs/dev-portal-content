@@ -30,12 +30,7 @@ To edit Checkout confirmation UI information, access the following templates:
 Code tab view:
 ![Checkout confirmation information codes section](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/customize-checkout-confirmation-pages-1.png)
 
-[block:callout]
-{
-"type": "warning",
-"body": "It is important to note that any customization performed on the templates will be applied to both pages at the same time (Order Placed and Order Confirmation)."
-}
-[/block]
+>⚠️ It is important to note that any customization performed on the templates will be applied to both pages at the same time (Order Placed and Order Confirmation).
 
 Template areas on the page:
 ![Página de confirmação de pedido com imports de HTML](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/customize-checkout-confirmation-pages-2.png)

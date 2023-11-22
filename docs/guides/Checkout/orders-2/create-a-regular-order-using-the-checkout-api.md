@@ -32,12 +32,8 @@ For this tutorial, we chose one of the more objective ways to understand and use
     The payments module can now process the transaction.
 
 And by the end of this process you may [check the result.](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api#checking-the-result)
-[block:callout]
-{
-  "type": "warning",
-  "body": "For any authentication required by the APIs presented in this tutorial, you must provide a valid `appToken` and `appKey` registered in the **License Manager** module of your account and empowered with enough permissions. Learn more in this article about [Roles.](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#)"
-}
-[/block]
+
+>⚠️ For any authentication required by the APIs presented in this tutorial, you must provide a valid `appToken` and `appKey` registered in the **License Manager** module of your account and empowered with enough permissions. Learn more in this article about [Roles.](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#)
 
 ## 1. Simulate a cart
 
@@ -382,12 +378,8 @@ For most cases, it will look like the following:
 Finally, you must request the processing of the order with the [Process order API request](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-).
 
 At this point, if everything is ok with the payment, the order should be placed. Otherwise, you should get a `status 500` error.
-[block:callout]
-{
-  "type": "warning",
-  "body": "Be aware that this process uses the gateway connectors configured in your VTEX environment. Be careful to avoid any unwanted charges or unexpected payment denials."
-}
-[/block]
+
+>⚠️ Be aware that this process uses the gateway connectors configured in your VTEX environment. Be careful to avoid any unwanted charges or unexpected payment denials.
 
 ## Checking the result
 

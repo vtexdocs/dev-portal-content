@@ -15,9 +15,5 @@ The name or description of payment methods can be modified by your store's CSS e
 - Change the name of the delivery phase: enter the following code on your CSS:
 
 `.shipping-data .accordion-toggle span { font-size: 0: }.shipping-data .accordion-toggle span:after { content: "{Text here}"; }`
-[block:callout]
-{
-  "type": "warning",
-  "body": "Note that you should be very careful about any CSS or JavaScript changes in your store. If it's not properly done, this kind of customization can compromise your store's conversion rate and the security of your checkout."
-}
-[/block]
+
+>⚠️ Note that you should be very careful about any CSS or JavaScript changes in your store. If it's not properly done, this kind of customization can compromise your store's conversion rate and the security of your checkout.

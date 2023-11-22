@@ -23,12 +23,8 @@ When accessing shopping cart information, make sure that the `clientProfileData`
 ...
 ```
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "The request [Ignore profile data](https://developers.vtex.com/vtex-rest-api/reference/ignoreprofiledata) will only work if the `clientProfileData` information has not been sent to the cart yet (as shown above). If the cart already has a `clientProfileData` information, the response status will be `403 Forbidden error`, with an `Access Denied` message."
-}
-[/block]
+>⚠️ The request [Ignore profile data](https://developers.vtex.com/vtex-rest-api/reference/ignoreprofiledata) will only work if the `clientProfileData` information has not been sent to the cart yet (as shown above). If the cart already has a `clientProfileData` information, the response status will be `403 Forbidden error`, with an `Access Denied` message.
+
 Example of a cart containing customer profile data, and in which the request [Ignore profile data](https://developers.vtex.com/vtex-rest-api/reference/ignoreprofiledata) cannot be applied:
 
 ```json

@@ -25,22 +25,14 @@ To edit Checkout UI information, access the following files/templates:
 - CSS: *file checkout6-custom.css*
 - JS: *file checkout6-custom.js*
 
-[block:callout]
-{
-"type": "warning",
-"body": "It is not possible to edit information in HTML body of the page."
-}
-[/block]
+>⚠️ It is not possible to edit information in HTML body of the page.
 
 ### Import Information
 
 You can import additional information and files by clicking on the `New` button and then on **File upload**, located in the **Code** tab.
-[block:callout]
-{
-"type": "warning",
-"body": "The action of importing information is not recommended for CSS files and it is prohibited for JS files. Using non-standard files can cause side effects, such as your store breaking or stopping your sales."
-}
-[/block]
+
+>⚠️ The action of importing information is not recommended for CSS files and it is prohibited for JS files. Using non-standard files can cause side effects, such as your store breaking or stopping your sales.
+
 For more information, access [configuring template in the SmartCheckout](https://help.vtex.com/en/tutorial/configurar-template-no-smartcheckout--frequentlyAskedQuestions_599#).
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/checkout-customization-guide-0.PNG)
@@ -71,12 +63,8 @@ The Checkout UI Settings app allows you to customize your store's through the te
 - Easily track all changes made to the UI (through app versions)
 - Apply quick rollbacks to a previous version, if needed.
 
-[block:callout]
-{
-"type": "warning",
-"body": "It is highly recommended that you have prior experience using IO apps (VTEX Store Framework) before choosing this checkout UI configuration option."
-}
-[/block]
+>⚠️ It is highly recommended that you have prior experience using IO apps (VTEX Store Framework) before choosing this checkout UI configuration option.
+
 For more information, access the [Checkout UI Settings Guide](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings).
 
 ### Checkout UI Custom app
