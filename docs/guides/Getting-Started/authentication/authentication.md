@@ -5,9 +5,9 @@ hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"
 seeAlso:
- - "api-authentication-using-application-keys"
- - "api-authentication-using-user-tokens"
- - "app-authentication-using-auth-tokens"
+ - "/docs/guides/api-authentication-using-application-keys"
+ - "/docs/guides/api-authentication-using-user-tokens"
+ - "/docs/guides/app-authentication-using-auth-tokens"
 ---
 Authentication is a crucial aspect of API integrations, backend, and frontend app development. It ensures authorized access by requiring valid credentials like API keys or tokens. This shields sensitive data, prevents breaches, and builds user trust. Get started with VTEX authentication for developers with the following guides:
 
