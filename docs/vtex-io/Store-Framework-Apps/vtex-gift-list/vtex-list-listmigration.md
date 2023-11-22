@@ -24,11 +24,11 @@ The migration process will use different APIs to extract data from the native fe
 The data extraction will be made with the following endpoint:
 `[host]/api/addon/pvt/giftlist/get/[list-id]`. 
 
-``list-id`` is an integer number representing the list creation sequence, starting with the number 1. For example, for a store with 170 lists created on the native method, there will be lists with ``list-ids`` between 1 and 170.
+`list-id` is an integer number representing the list creation sequence, starting with the number 1. For example, for a store with 170 lists created on the native method, there will be lists with `list-ids` between 1 and 170.
 
-Native lists have diverse types of configuration, and the data structure can vary. Because of that, it is important to treat this data to adapt it to the data structure on the native app. Treating the extracted data, we can insert it into the app feature data structure. 
+Native lists have diverse types of configuration, and the data structure can vary. Because of that, it is important to treat this data to adapt it to the data structure on the native app. Treating the extracted data, we can insert it into the app feature data structure.
 
-It can be made by GraphQL routes. All managing methods for MD v2 are available on our GraphQL layer, where they can be manipulated. The entity related to the app is ``vtex.list-graphql@3.5.0``. For more information, you can access the [following documentation](https://developers.vtex.com/docs/guides/graphql-ide).
+It can be made by GraphQL routes. All managing methods for MD v2 are available on our GraphQL layer, where they can be manipulated. The entity related to the app is `vtex.list-graphql@3.5.0`. For more information, you can access the [following documentation](https://developers.vtex.com/docs/guides/graphql-ide).
 
 > Gift List App has no responsibility for the success of the migration process since it is related to two different products.
 

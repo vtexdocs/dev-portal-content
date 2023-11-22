@@ -166,7 +166,7 @@ Running the command will display a list of all workspaces being tested by the `v
 
 ![ab-testing-finish-step4](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-end___2940fdcba7933cab4d828ba9e7a34d72.png)
 
-Now that you finish the A/B test, follow the next step to promote the workspace to `master``.
+Now that you finish the A/B test, follow the next step to promote the workspace to `master`.
 
 ### Step 5 - Promoting the production workspace to master
 
