@@ -53,15 +53,15 @@ Check out the possible values for this property:
 
 If you want to change VTEX Sales App's language to English, for example, replace the `pt` value with `en`. The resulting code snippet should look like this:
 
-```json
-{
-  "codes": [
-    {
-      "code": "window.LOCALE_MESSAGES = {\n  locale: 'en',\n  messages: {\n    en: {\n     \n    },\n  },\n};",
-      "language": "javascript"
-    }
-  ]
-}
+```javascript
+window.LOCALE_MESSAGES = {
+  locale: 'en',
+  messages: {
+    en: {
+      // Empty for now, you can add messages here as needed
+    },
+  },
+};
 ```
 
 >ℹ️ After making changes in the code, make sure you press the `Save` button.

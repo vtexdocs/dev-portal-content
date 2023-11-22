@@ -20,23 +20,13 @@ Inside this file, you need to find the `window.INSTORE_CONFIG` object and add th
 
 The result should look like:
 
-```json
-{
-  "codes": [
-    {
-      "code": "window.INSTORE_CONFIG = {\n  transferEnabled: true,\n}",
-      "language": "javascript"
-    }
-  ]
-}
-[/block]
-
-[block:callout]
-{
-  "type": "info",
-  "body": "After making changes in the code, make sure you press the `Save` button."
-}
+```javascript
+window.INSTORE_CONFIG = {
+  transferEnabled: true,
+};
 ```
+
+> After making changes in the code, make sure you press the `Save` button.
 
 ## Check out your changes
 

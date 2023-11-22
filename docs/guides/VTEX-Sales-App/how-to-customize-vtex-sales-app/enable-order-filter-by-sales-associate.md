@@ -13,18 +13,17 @@ Inside this file, you must find the `window.INSTORE_CONFIG` object and add the `
 
 The code snippet should look like the example below:
 
-```json
-{
-  "codes": [
-    {
-      "code": "window.INSTORE_CONFIG = {\n  OMSFilters: {\n    'f_UtmSource': '{{ vendor.storeId }}',\n    'CallCenterOperatorEmail': '{{ vendor.username }}',\n  },\n}",
-      "language": "javascript"
-    }
-  ]
-}
+```javascript
+window.INSTORE_CONFIG = {
+  OMSFilters: {
+    'f_UtmSource': '{{ vendor.storeId }}',
+    'CallCenterOperatorEmail': '{{ vendor.username }}',
+  },
+};
 ```
 
 With that, the app will filter orders to display only those made by the sales associate currently logged in on inStore.
+
 >❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
 
 >ℹ️ After making changes in the code, make sure you press the `Save` button.

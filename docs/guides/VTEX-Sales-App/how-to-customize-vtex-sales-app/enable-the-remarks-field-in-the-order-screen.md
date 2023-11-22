@@ -60,28 +60,29 @@ This information must be added to the code as shown in the example below.
 
 If it's necessary to apply some validation logic or mask to the data entered in this field, you can include in the `checkout-instore-custom.js` file a function that listens to the `note.visible` event, which is triggered when the modal is open, and then develop your logic.
 
-```json
-{
-  "codes": [
-    {
-      "code": "document.addEventListener (\n  \"note.visible\",\n  function () {\n    // add mask logic, validation, etc.\n    // example: to capture the “textarea” element of the Observation field, you can use the following code:\n    // var note = document.getElementById('note')\n  },\n  false\n);",
-      "language": "javascript"
-    }
-  ]
-}
+```javascript
+document.addEventListener(
+  "note.visible",
+  function () {
+    // Add mask logic, validation, etc.
+    // Example: to capture the “textarea” element of the Observation field, you can use the following code:
+    // var note = document.getElementById('note')
+  },
+  false
+);
 ```
 
 If you need something more advanced, like making a specific request based on the data entered, it is possible to listen to the `note.change` event, which is emitted whenever the button to save the data is pressed.
 
-```json
-{
-  "codes": [
-    {
-      "code": "document.addEventListener (\n  \"note.change\",\n  function (inputData) {\n    // add the logic that uses the data\n    // the content of the field is the value of \"inputData\"\n  },\n  false\n);",
-      "language": "javascript"
-    }
-  ]
-}
+```javascript
+document.addEventListener(
+  "note.change",
+  function (inputData) {
+    // Add the logic that uses the data
+    // The content of the field is the value of "inputData"
+  },
+  false
+);
 ```
 
 >ℹ️ After making changes in the code, make sure you press the `Save` button.

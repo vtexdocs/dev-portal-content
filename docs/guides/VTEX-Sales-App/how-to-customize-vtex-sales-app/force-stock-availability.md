@@ -13,19 +13,14 @@ inStore allows this through a customization in the `checkout-instore-custom.js` 
 
 1. To activate this feature, you need to include the `sellWithoutStockInHands` property in the `window.INSTORE_CONFIG` object, with the value `true`.
 
-The code should look like the example below:
+  The code should look like the example below:
 
-```json
-{
-  "codes": [
-    {
-      "code": "window.INSTORE_CONFIG = {\n  sellWithoutStockInHands: true,\n}",
-      "language": "javascript"
-    }
-  ]
-}
-```
+  ```javascript
+  window.INSTORE_CONFIG = {
+  sellWithoutStockInHands: true,
+  };
+  ```
 
->❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
+  >❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object, to avoid breaking other functionalities.
 
 2. After making changes in the code, make sure you press the `Save` button.

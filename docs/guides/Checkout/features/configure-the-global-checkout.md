@@ -19,16 +19,15 @@ To display document and phone typing options different from those used by the st
 3. Select the **Code** tab.
 4. On **Files**, click on `checkout6-custom.css`.
 5. Add the code below.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "/*Displays the option to enter a foreign document*/\n.document-box { display: block; }\n\n/*Displays the option to enter an international phone*/\n.phone-box { display: block; }",
-      "language": "css"
-    }
-  ]
-}
-[/block]
+
+  ```css
+  /*Displays the option to enter a foreign document*/
+  .document-box { display: block; }
+
+  /*Displays the option to enter an international phone*/
+  .phone-box { display: block; }
+  ```
+
 6. Click on `Save`.
    ![Document and Phone field](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/configure-the-global-checkout-0.png)
 
@@ -57,13 +56,11 @@ By unchecking the **My invoice address is the same as the delivery** box on the 
 To allow billing for a credit card whose invoice address is in another country, you must make on your store page a country select field appear on **Invoice Address**.
 
 Also, if you want the option to display all countries in the Invoice Address field, you must enable it in your store layout (CSS) using the code below:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "/*Show all countries*/\n.CountrySelector--all-countries { display: block; }\n\n/*Hide delivery countries*/\n.CountrySelector { display: none; } ",
-      "language": "css"
-    }
-  ]
-}
-[/block]
+
+```css
+/*Show all countries*/
+.CountrySelector--all-countries { display: block; }
+
+/*Hide delivery countries*/
+.CountrySelector { display: none; }
+```
