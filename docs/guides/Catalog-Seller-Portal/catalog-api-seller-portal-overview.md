@@ -13,6 +13,7 @@ The Catalog API for Seller Portal allows you to create, edit, and view products,
 ## Index
 
 - ### Product
+>The limit for each Seller Portal account is 100 thousand products. For more information, please contact our [Support Center](https://support.vtex.com/hc/pt-br/requests). 
 
   - `GET` [Get Product by ID](https://developers.vtex.com/docs/api-reference/catalog-api-seller-portal#get-/api/catalog-seller-portal/products/-productId-)
   - `PUT` [Update Product](https://developers.vtex.com/docs/api-reference/catalog-api-seller-portal#put-/api/catalog-seller-portal/products/-productId-)
