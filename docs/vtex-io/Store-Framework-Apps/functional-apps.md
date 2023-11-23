@@ -7,55 +7,55 @@ createdAt: "2021-10-05T13:49:13.486Z"
 updatedAt: "2021-10-05T19:28:35.161Z"
 ---
 
-In addition to the blocks that build the store's layout and interface content, we also have the apps that are not rendered by themselves, but that have important roles for the functioning of your store.
+Beyond layout and UI apps, these functional apps operate behind the scenes, executing critical functions for a seamless shopping experience. 
 
 <Flex>
 
 <WhatsNextCard
 title="Checkout UI Custom"
-description="Customizes your store's Checkout UI through the admin's interface."
-linkTo="/docs/apps/vtex.checkout-ui-custom-v0"
+description="Customize the UI of your store's checkout through the VTEX Admin."
+linkTo="/docs/apps/vtex.checkout-ui-custom"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Checkout UI Settings"
-description="App responsible for exporting scripts to build a custom Checkout UI."
+description="Export scripts to build a custom Checkout UI."
 linkTo="/docs/apps/vtex.checkout-ui-settings"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Product Context"
-description="Provides data regarding a certain product to all of its children blocks."
+description="Fetch and access product data in your component."
 linkTo="/docs/apps/vtex.product-context"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Responsive Values"
-description="Utility for using props that accept different values for different devices or media queries."
+description="Utility for using props that accept different values for different devices and media queries."
 linkTo="/docs/apps/vtex.responsive-values"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Store Icons"
-description="Exports all icons used by the store's components."
+description="Export the icons used in your storefront components."
 linkTo="/docs/apps/vtex.store-icons"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Store Sitemap"
-description="App responsible for automatically generating a `sitemap.xml` file of your VTEX IO Store."
+description="Automatically generate a sitemap.xml file of your store."
 linkTo="/docs/apps/vtex.store-sitemap"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Telemarketing"
-description="Enables a call center operator impersonate a costumer in the store, and this app is used by store theme."
+description="Enable call center operators to act on behalf of your store customers."
 linkTo="/docs/apps/vtex.telemarketing"
 linkTitle="See more"
 />
