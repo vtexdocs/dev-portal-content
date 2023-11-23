@@ -1,5 +1,5 @@
 ---
-slug: "xxx"
+slug: "2020-14-08-list-price-presentation-on-product-selling-price"
 title: "List price presentation on product selling price"
 createdAt: 2020-08-14T12:48:22.865Z
 hidden: false
