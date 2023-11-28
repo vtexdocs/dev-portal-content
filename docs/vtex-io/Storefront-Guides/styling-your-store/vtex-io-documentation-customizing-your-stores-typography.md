@@ -49,7 +49,6 @@ Before following this guide, ensure that you:
 The `font-faces.css` file is a global configuration. Utilize the declared font faces using the `font-family` property to specify the desired font for a particular component. Here's an example:
 
 <table>
-<th>
 <td>
   
 ```css styles/configs/font-faces.css
@@ -87,5 +86,4 @@ The `font-faces.css` file is a global configuration. Utilize the declared font f
 ```
 
 </td>
-</th>
 </table>
