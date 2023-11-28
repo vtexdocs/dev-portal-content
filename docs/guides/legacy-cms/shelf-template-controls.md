@@ -11,14 +11,14 @@ VTEX system offers some controls for the creation of shelves.
 
 Product attributes can be stored in variables, and these are used in every template. To declare the variables and receive an attribute of a product, use the following command: `#set ($variable=$attribute)`
 
-### Examples
+## Examples
 
 - `#set($id = $product.Id)`  
 - `#set($uri = $product.Uri)`  
 - `#set($escapedName = $product.HtmlEscapedName)`  
 - `#set($evaluationRate = $product.EvaluationRate)`  
 
-### Product and SKU
+## Product and SKU
 
 | Property                | Description                                      |
 |-------------------------|--------------------------------------------------|
@@ -29,7 +29,7 @@ Product attributes can be stored in variables, and these are used in every templ
 |`$product.GetImageTag(number corresponding to the image)`| Shows the image and the type of image you want. It follows this list of image types: <ul><li>ProductImageShowcaseLittle (Size: 65×65) = 1;</li><li>ProductImageShowcaseMedium (Size: 90×90) = 29;</li><li>ProductImageShowcaseLarge (Size: 130×130) = 30;</li><li>MainProductImage (Size: 250×250) = 2;</li><li>ThumbProductImage (Size: 45×45) = 3;</li><li>ZoomProductImage (Size: 344×344) = 10;</li><li>File = 11;</li><li>ProductManual = 12;</li></ul><br/> The sizes of the images are according to the store's layout.|
 |`$product.ProductField(IdField)`| Shows the value of a product field by passing the ID of this field as a parameter.|
 
-### Price
+## Price
 
 | Property                          | Description                                                                                             |
 |-----------------------------------|---------------------------------------------------------------------------------------------------------|
@@ -44,7 +44,7 @@ Product attributes can be stored in variables, and these are used in every templ
 | `$product.ListPriceMinusBestPrice`              | Shows the absolute difference between the "From" price and the best price of the product.                |
 | `$product.ListPriceMinusBestPriceInPercent`    | Shows the difference (in percentage) of the price "From" to the best price of the product.        |
 
-### Departament and Category
+## Departament and Category
 
 | Property                | Description                                      |
 |-----------------------|-----------------------------------------------|
@@ -53,7 +53,7 @@ Product attributes can be stored in variables, and these are used in every templ
 | `$product.CategoryName`           | Displays the name of the product's category.|
 | `$product.CategoryLink`           | Displays the link of the product's category.|
 
-### Brand
+## Brand
 
 | Property              | Description                                   |
 |-----------------------|-----------------------------------------------|
@@ -61,8 +61,7 @@ Product attributes can be stored in variables, and these are used in every templ
 | `$product.Brand`      | Shows the product's brand in a link-friendly format. |
 | `$product.BrandLink`  | Shows the link to the brand.                   |
 
-
-### Buy button
+## Buy button
 
 | Property                         | Description                                                                                                                                           |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -71,7 +70,7 @@ Product attributes can be stored in variables, and these are used in every templ
 | `$product.ButtonBuyModal(false,true)` | Includes a buy button that inserts the product into the cart and keeps the customer in the shop window. This control needs the `$product.AmountInCart` control to add a desired quantity textbox for adding to the cart. |
 | `$product.AmountInCart`          | Inserts a textbox element to set the desired quantity of the product to be added to the cart. This control is used in conjunction with the control `$product.ButtonBuyModal(false,true)`. |
 
-### Others
+## Others
 
 | Property                   | Description                                                                                                                      |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------|
