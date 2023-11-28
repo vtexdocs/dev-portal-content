@@ -5,46 +5,85 @@ hidden: false
 createdAt: "2020-06-18T15:04:52.500Z"
 updatedAt: "2022-12-13T20:17:44.827Z"
 ---
-In addition to being crucial for communicating with users, a store’s typography should be a reflection of its identity, using its characteristic styles, such as font size and spacing.
 
-Whether using the admin’s CMS or your Store Theme CSS files, Store Framework gives you the flexibility to customize your store’s typography according to your business needs.
+Effectively communicating with users requires careful consideration of your store's typography. It serves as a visual representation of your store's identity through distinctive styles, encompassing factors like font size and spacing.
 
-> ⚠️ If you want to perform your store's typography customization in **the Admin's CMS**, refer to [Customizing your store’s typography documentation in the Help Center](https://help.vtex.com/tutorial/personalizando-a-tipografia-da-sua-loja--2R0ByIjvJtuz99RK3OL5WP).
+> For additional information on customizing your store’s typography using the CMS, refer to the [Customizing your store’s typography](https://help.vtex.com/en/tutorial/customizing-your-stores-typography--2R0ByIjvJtuz99RK3OL5WP) guide.
 
 ## Before you begin
 
-Bear in mind that for the customization to work, the **Styles builder of your store must be 2. x.** To successfully migrate to Styles Builder 2.x, you must update the version of the `styles` builder in the `manifest.json` file of your Store Theme app, as the example below:
+Before following this guide, ensure that you:
 
-```json
-builders{
-...
-"styles": "2.x"
-}
-```
-
-In the following, check the [best practices of CSS handles](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization#best-practices) to review and update every CSS customization for your store elements.
+-  Review the [Best practices for using CSS handles](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization#best-practices) article.
+-  Set up the [Assets](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder/) builder in your Store Theme app's `manifest.json` file.
+-  Set up the Styles builder to version `2.x` in your Store Theme app's `manifest.json` file. Note that previous versions of the Styles builder do not support the customization outlined in this guide.
+  
+  ```json manifest.json
+  builders{
+  ...
+    "assets": "0.x",
+    "styles": "2.x"
+  }
+  ```
 
 ## Step by step
 
-### Using Store Theme CSS files
+1. Open your Store Theme app in your preferred code editor.
+2. Create a new folder named `fonts` within the `assets` directory. 
+3. Place the font files inside the `assets/fonts/` folder. Ensure font files have the extensions: `.ttf` or `.woff`.
+4. In the `styles/configs` folder, create a new file named `font-faces.css`.
+5. Use the `@font-face` rule to declare the desired CSS properties for your website's typography. For example:
+  
+  ```css font-faces.css
+  @font-face {
+    font-family: 'MyHelvetica';
+    src: url(assets/fonts/MyHelvetica.woff2), url(assets/fonts/MyHelvetica.ttf);
+    font-weight: bold;
+  }
+  ```
+  
+  > ℹ️ Fonts uploaded on the Assets Builder can be referenced in your CSS files by specifying their file path in the `src` property.
 
-1. Open your Store Theme directory using a code editor of your preference.
-2. Create a new folder inside the `assets` directory called `fonts`. Make sure your app have the [assets builder in its manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder/).
-3. Add the font files inside this folder (`assets/fonts/`).
+### Using font faces
 
->⚠️  The font files must be in the following file extensions: `.ttf` or `.woff`.
+The `font-faces.css` file is a global configuration. Utilize the declared font faces using the `font-family` property to specify the desired font for a particular component. Here's an example:
 
-4. In `styles/configs` folder, create a new file called `font-faces.css`.
-5. Use the `@font-face` rule declaring the CSS properties you desire to apply in your website typography. For example:
-
-```css
+<table>
+<td>
+  
+```css styles/configs/font-faces.css
 @font-face {
-  font-family: 'MyHelvetica';
-  src: url(assets/fonts/MyHelvetica.woff2), url(assets/fonts/MyHelvetica.ttf);
-  font-weight: bold;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("assets/fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+    url("assets/fonts/roboto-v20-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+    url("assets/fonts/roboto-v20-latin-500.woff2") format("woff2"),
+    url("assets/fonts/roboto-v20-latin-500.woff") format("woff");
 }
 ```
 
-> ℹ️  Notice that fonts uploaded on Assets builder can be referenced in your CSS files by declaring the desired file path in the `src` property.
+</td>
+<td>
 
->⚠️ The `font-faces.css` is a global file meaning its configurations are applied to all texts from the website. If you want to customize a component's typography independently, overriding the global configurations,you should declare the `font-faces.css` file still and refer the desired component font using the `font-family` property in the app's CSS overriding file.
+```css styles/css/vtex.minicart.css
+.closeIconContainer::before {
+  content: "My cart";
+  font-size: 24px;
+  line-height: 32px;
+  font-family: Roboto;
+  color: #000;
+  font-weight: 500;
+}
+```
+
+</td>
+</table>
