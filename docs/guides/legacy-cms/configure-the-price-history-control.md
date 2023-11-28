@@ -28,7 +28,7 @@ The default exhibition method for the values looks like the image below. The yea
 
 If you want to show these details in another way, you must get a layout agency to customize the model.
 
-### The *Months* and *Percentile*parameters
+### The *Months* and *Percentile* parameters
 
 To allow more flexibility in showing values on the product page, you can use the **Months** parameter to define the number of months to be taken into account by the control.
 
