@@ -38,13 +38,17 @@ However, API requests to `/do`, `/conversationtracker`, `/subscriptions`, and `/
 In order to use Orders API, you should adapt your integrations to use new endpoints, for features you may already have implemented in your store, such as retrieving order information or notifying invoices. See the table below to know which endpoints need adaptation and where to find the new reference.
 
 | **Feature** | **Previous endpoint** | **New endpoint (PII data architecture)** | **Payload changed** |
-| - | - | - |
+| - | - | - | - |
 | Get order | `GET` [/api/oms/orders/{orderId}](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) | `GET` [/api/orders/pvt/document/{orderId}](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-) | No |
 | List orders | `GET` [/api/oms/pvt/orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) | `POST` [/api/orders/extendsearch/orders](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders) | Yes |
 | Start handling order | `POST` [api/oms/orders/{orderId}/start-handling](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/start-handling) | `POST` [/api/orders/pvt/document/{orderId}/actions/start-handling](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/actions/start-handling) | No |
 | Cancel order | `POST` [api/oms/pvt/orders/{orderId}/cancel](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/cancel) | `POST` [/api/orders/pvt/document/{orderId}/cancel](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/cancel) | No |
 | Order invoice notification | `POST` [api/oms/orders/{orderId}/invoice](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) | `POST` [api/orders/pvt/document/{orderId}/invoices](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/invoices) | Yes |
 | Send payment notification | `POST` [/api/oms/pvt/orders/{orderId}/payments/{paymentId}/payment-notification](https://developers.vtex.com/docs/api-reference/orders-api/#post-/api/oms/pvt/orders/-orderId-/payments/-paymentId-/payment-notification) | `POST` [/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment) | No |
+
+> ℹ️ To display the unmasked contact information on the PII data architecture version of [Get order](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-), we rely on the `contactId` property, which should be filled in the [Address](https://developers.vtex.com/docs/api-reference/profile-system#get-/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-) in the Profile System.
+>
+> In order to unmask the `contactInformation`, the `shippingAttachment` of the orderForm must contain the `contactId` that the address is related to. This is sent in the request for [Add shipping address and select delivery option](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData), where `address.contactId` must match the `contactInformation[0].id`.
 
 #### Orders Admin interface
 
