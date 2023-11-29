@@ -14,12 +14,6 @@ seeAlso:
 
 Rate limits serve as crucial control mechanisms for managing the volume and frequency of requests made to an API. Exceeding these limits can lead to disruptions in service and a temporary suspension of access to [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference). This article delves into the best practices for responsibly dealing with rate limits while ensuring your apps and store code adhere to ethical and responsible digital practices.
 
-<!--->
-## Review API documentation
-
-The rate limits for the [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference) are detailed in the Rate limits article. Pay close attention to the rate limit policies, including the monthly quota and limits per second of the API you intend to use. Understanding these limits is the first step in avoiding rate limit errors.
-<!--->
-
 ## Implement efficient data retrieval techniques
 
 Implementing efficient data retrieval techniques is pivotal in optimizing system performance and ensuring seamless operations. This section delves into the best practices for minimizing resource usage while maximizing the efficiency of [VTEX IO apps](#vtex-io-apps) and [Storefront implementations](#storefront-implementation).
