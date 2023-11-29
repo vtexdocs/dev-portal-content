@@ -14,8 +14,6 @@ Check the following snippet, which shows a manifest example and its supported fi
 
 Click on each field to learn more about it.
 
-<CH.Code autolink={true}>
-
 ```json manifest.json
 {
   // link[3:8] #name
@@ -52,8 +50,6 @@ Click on each field to learn more about it.
   "credentialType": {...}
 }
 ```
-
-</CH.Code>
 
 For a real example of a `manifest.json` file, refer to [this file](https://github.com/vtex-apps/store-theme/blob/master/manifest.json).
 
