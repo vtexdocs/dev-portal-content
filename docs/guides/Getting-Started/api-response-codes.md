@@ -6,8 +6,8 @@ updatedAt: "2023-11-28T13:19:52.868Z"
 hidden: false
 excerpt: "Understand the outcome of your interactions with VTEX Core Commerce APIs by delving deeper into HTTP status codes."
 seeAlso:
-    - "/docs/api-reference"
-    - "/docs/guides/handling-errors-and-exceptions"
+ - "/docs/api-reference"
+ - "/docs/guides/handling-errors-and-exceptions"
 ---
 
 Every interaction with [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference) returns an HTTP status code that indicates whether the request succeeded, failed, or demands particular actions for subsequent actions.
