@@ -1,10 +1,10 @@
 ---
-title: Best practices for avoiding rate limit errors
-slug: best-practices-for-avoiding-rate-limit-errors
-createdAt: ''
-updatedAt: ''
+title: "Best practices for avoiding rate limit errors"
+slug: "best-practices-for-avoiding-rate-limit-errors"
+createdAt: "2023-01-28T23:12:53.108Z"
+updatedAt: "2023-11-28T13:19:52.868Z"
 hidden: false
-excerpt: Learn how to responsibly manage rate limits for fair and reliable usage of VTEX Core Commerce APIs.
+excerpt: "Learn how to responsibly manage rate limits for fair and reliable usage of VTEX Core Commerce APIs."
 seeAlso:
     - "/docs/api-reference"
     - "/docs/guides/api-response-codes"

@@ -1,10 +1,10 @@
 ---
-title: API response status codes
-slug: api-response-codes
-createdAt: ''
-updatedAt: ''
+title: "API response status codes"
+slug: "api-response-codes"
+createdAt: "2023-01-28T23:12:53.108Z"
+updatedAt: "2023-11-28T13:19:52.868Z"
 hidden: false
-excerpt: Understand the outcome of your interactions with VTEX Core Commerce APIs by delving deeper into HTTP status codes.
+excerpt: "Understand the outcome of your interactions with VTEX Core Commerce APIs by delving deeper into HTTP status codes."
 seeAlso:
     - "/docs/api-reference"
     - "/docs/guides/handling-errors-and-exceptions"

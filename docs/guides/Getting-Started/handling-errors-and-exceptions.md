@@ -1,10 +1,10 @@
 ---
-title: Handling errors and exceptions
-slug: handling-errors-and-exceptions
-createdAt: ''
-updatedAt: ''
+title: "Handling errors and exceptions"
+slug: "handling-errors-and-exceptions"
+createdAt: "2023-01-28T23:12:53.108Z"
+updatedAt: "2023-11-28T13:19:52.868Z"
 hidden: false
-excerpt: Learn how to handle errors and exceptions in VTEX API Core Commerce APIs to build resilient applications.
+excerpt: "Learn how to handle errors and exceptions in VTEX API Core Commerce APIs to build resilient applications."
 seeAlso:
     - "/docs/api-reference"
     - "/docs/guides/api-response-codes"
