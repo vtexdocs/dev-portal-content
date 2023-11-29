@@ -5,10 +5,6 @@ createdAt: "2023-01-28T23:12:53.108Z"
 updatedAt: "2023-11-28T13:19:52.868Z"
 hidden: false
 excerpt: "Learn how to handle errors and exceptions in VTEX API Core Commerce APIs to build resilient applications."
-seeAlso:
- - "/docs/api-reference"
- - "/docs/guides/api-response-codes"
- - "/docs/guides/best-practices-for-avoiding-rate-limit-errors"
 ---
 
 Handling errors and exceptions is essential for building resilient applications that can effectively navigate temporary restrictions from VTEX Core Commerce API's rate limits. Exception handling and error recovery mechanisms help your store respond gracefully to rate limit exceeded errors without impacting user interactions. They also minimize unnecessary retries and resource wastage by introducing appropriate wait times and contributing to responsible resource management.
