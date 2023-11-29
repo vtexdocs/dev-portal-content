@@ -10,6 +10,8 @@ category: "App Development"
 
 Every IO app must have a `manifest.json` file in its root folder. This file serves as the initial point of communication with VTEX IO, holding important metadata about an app, such as its name, version, vendor, description, and dependencies.
 
+## Fields
+
 Check the following snippet, which shows a manifest example and its supported fields.
 
 Click on each field to learn more about it.
@@ -59,15 +61,15 @@ The app name. It should concisely express the app's purpose.
 
 App names are [kebab case](https://en.wiktionary.org/wiki/kebab_case). Basically, they must be comprised of lowercase letters separated by hyphens. Special characters, such as `*` and `@`, and numbers at the beginning of the name are not recommended.
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `vendor`
 
-The app owner, i.e., he VTEX account responsible for the app development, maintenance, and distribution.
+The app owner, i.e., the VTEX account responsible for the app development, maintenance, and distribution.
 
 If the app is to be sold on the VTEX App Store, the vendor is the one to profit from its installation. Therefore, remember the following: an app must have only one vendor. Even if the app is installed on multiple accounts, you shouldn't change the app's `vendor` value for each one of them.
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `version`
 
@@ -75,19 +77,19 @@ The app version, according to the [Semantic Versioning 2.0.0](https://semver.org
 
 > ℹ️ For more information, please refer to [Understanding app versioning](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning).
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `title`
 
 The app distribution name. This name is the one used in the Apps section from the Admin and in the VTEX App Store.
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `description`
 
 A brief description explaining the app's purpose.
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `builders`
 
@@ -105,13 +107,13 @@ And create a `react` folder inside the app, placing there the component files. E
 
 > ℹ️ For more information, please refer to [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `scripts`
 
 The list of scripts the app runs.
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `dependencies`
 
@@ -127,7 +129,7 @@ The most recurrent use of VTEX IO apps as dependencies is for:
 
 > ℹ️ For more information, please refer to [Dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies/).
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `peerDependencies`
 
@@ -135,7 +137,7 @@ The list of other apps that the app relies on to properly work. However, unlike 
 
 > ℹ️ For more information, please refer to [peerdependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-peerdependencies/).
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `policies`
 
@@ -143,7 +145,7 @@ The list of policies, responsible for granting permissions to the app in case it
 
 > ℹ️ For more information, please refer to [Policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies/).
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `settingsSchema`
 
@@ -181,10 +183,10 @@ will generate the following form once that app is installed:
 
 ![settingsschema](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-manifest-0.png)
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## [DEPRECATED] `credentialType`
 
 The credential type. When set as `relative`, a request from the app can only be performed if the app and the role who called it have the required permissions. When set as `absolute`, if the app has the necessary permission, a request from the app can be performed.
 
-<div style="text-align: right"><a href="#manifest-fields-summary">Manifest fields summary</a> 🔼</div>
+<div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
