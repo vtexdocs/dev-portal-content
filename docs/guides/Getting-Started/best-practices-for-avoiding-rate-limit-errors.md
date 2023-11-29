@@ -1,15 +1,15 @@
 ---
-title: Best practices for avoiding rate limit errors
-slug: best-practices-for-avoiding-rate-limit-errors
-createdAt: ''
-updatedAt: ''
+title: "Best practices for avoiding rate limit errors"
+slug: "best-practices-for-avoiding-rate-limit-errors"
+createdAt: "2023-01-28T23:12:53.108Z"
+updatedAt: "2023-11-28T13:19:52.868Z"
 hidden: false
-excerpt: Learn how to responsibly manage rate limits for fair and reliable usage of VTEX Core Commerce APIs.
+excerpt: "Learn how to responsibly manage rate limits for fair and reliable usage of VTEX Core Commerce APIs."
 seeAlso:
-    - "/docs/api-reference"
-    - "/docs/guides/api-response-codes"
-    - "/docs/guides/handling-errors-and-exceptions"
-    - "/docs/guides/vtex-io-documentation-engineering-guidelines"
+ - "/docs/api-reference"
+ - "/docs/guides/api-response-codes"
+ - "/docs/guides/handling-errors-and-exceptions"
+ - "/docs/guides/vtex-io-documentation-engineering-guidelines"
 ---
 
 Rate limits serve as crucial control mechanisms for managing the volume and frequency of requests made to an API. Exceeding these limits can lead to disruptions in service and a temporary suspension of access to [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference). This article delves into the best practices for responsibly dealing with rate limits while ensuring your apps and store code adhere to ethical and responsible digital practices.
