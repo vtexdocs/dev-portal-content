@@ -23,16 +23,18 @@ First, you must check if a product has a service available attached to it. This 
 You must use the [Cart simulation](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation?endpoint=post-/api/checkout/pub/orderForms/simulation) endpoint and send the `skuId`, `seller` and `quantity` in the request body, as the code example below.
 
 ```json
-    "items": [
+{    "items": [
         {
             "id": "30",
             "quantity": 1,
             "seller": "1"
         }
     ]
+}
+
 ```
 
-In the response body, you must check if the `offerings` object presents the following information:
+In the response body, you must check if the `offerings` object presents the following information, as the example below:
 
 ```json
     "offerings": [
@@ -47,7 +49,7 @@ In the response body, you must check if the `offerings` object presents the foll
     ]
 ```
 
-If the `offerings` array presents this information, the product has a service associated with it. You will use the `id` value in the next step.
+If the `offerings` array presents this information, the SKU has a service associated with it. You will use the `id` value in the next step.
 
 >ℹ️ If you have multiple services associated with the product, all of them will be returned in the `offerings` array. 
 
@@ -58,7 +60,7 @@ You can add a service to an item in the shopping cart by using the checkout [`or
 To do so, you must add the item to the cart using the [Add cart items](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint. 
 
 Then, you must send the service `id` from the previous step in the desired `item` by using the request body of the 
-`POST` `https://{accountName}.{enviroument}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings` request:
+`POST` `https://{accountName}.{environment}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings` request:
 
 ```json
 {
@@ -81,9 +83,44 @@ The expected response is the `orderForm` structure with the `offerings` array wi
     ]
 ```
 
+#### Adding more than one service to a product
+
+If you need to add more than a service to a specific product, you must add more units of the product that the service is attached to. To do so, you must follow the steps below:
+
+1. Update the product you want to add the service to have `"quantity": 1`. Use the  [Handle cart items](https://developers.vtex.com/docs/api-reference/checkout-api#patch-/api/checkout/pub/orderForm/-orderFormId-/items?endpoint=patch-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint with the  following request body:
+```json
+{    
+    "orderItems": [
+        {
+            "index": 0,
+            "quantity": 1
+        }
+    ]
+}
+```
+2. Attach the `offering` to the `item` in the shoppoing cart. Use the `POST` `https://{accountName}.{environment}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings` request as the previous section:
+
+```json
+{
+    "id": "1"
+}
+```
+3. Update the `quantity` back to the previous value, sending the `noSplitItem` field as `true` in the [Handle cart items](https://developers.vtex.com/docs/api-reference/checkout-api#patch-/api/checkout/pub/orderForm/-orderFormId-/items?endpoint=patch-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint in the request body. This field will make sure the items do not split the configuration, making it possible to have the same `quantity` of products and services.
+```json
+{    
+    "orderItems": [
+        {
+            "index": 0,
+            "quantity": 4
+        }
+    ],
+    "noSplitItem": true
+}
+```
+
 ### Removing a service (offering) from a shopping cart
 
-In order to remove a service (offering), you must use the `POST` `https://{accountName}.{enviroument}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings/remove` endpoint with the service `id` in the request body:
+In order to remove a service (offering), you must use the `POST` `https://{accountName}.{environment}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings/remove` endpoint with the service `id` in the request body:
 
 ```json
     {
@@ -96,4 +133,6 @@ The expected response is the `orderForm` structure with the `offerings` array em
 ```json
     "offerings": []
 ```
+
+
 
