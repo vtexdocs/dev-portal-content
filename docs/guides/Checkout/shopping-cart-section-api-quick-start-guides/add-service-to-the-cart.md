@@ -133,6 +133,3 @@ The expected response is the `orderForm` structure with the `offerings` array em
 ```json
     "offerings": []
 ```
-
-
-
