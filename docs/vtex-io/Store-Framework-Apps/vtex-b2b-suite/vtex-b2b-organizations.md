@@ -526,7 +526,7 @@ Users with the **Sales Admin** role may add, edit, or remove users with any of t
 
 In telesales, assisted sales, or customer support scenarios where the B2B customer needs help from a salesperson to navigate the store or place orders, it is common to use impersonation.
 
-In the **B2B Organizations** app, only users with **Sales** roles or the **Organization Admin** role can impersonate another user.
+In the **B2B Organizations** app, users with one of the following permissions may impersonate another user: **impersonate-users-all**, **impersonate-users-organization** or **impersonate-users-costcenter**.
 
 When impersonation is activated, it temporarily applies the email, organization, and cost center of the impersonated user to the storefront session. This allows impersonating users to do the following:
 
