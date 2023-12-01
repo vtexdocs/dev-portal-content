@@ -8276,7 +8276,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/config",
+                  "endpoint": "/api/pricing-hub/prices/config",
                   "children": []
                 }
               ]
