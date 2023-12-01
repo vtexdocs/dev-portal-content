@@ -57,7 +57,7 @@ If the `offerings` array presents this information, the SKU has a service associ
 
 You can add a service to an item in the shopping cart by using the checkout [`orderForm`](https://developers.vtex.com/docs/guides/orderform-fields).
 
-To do so, you must add the item to the cart using the [Add cart items](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint. 
+To do so, you must add the item to the cart using the [Add cart items](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint.
 
 Then, you must send the service `id` from the previous step in the desired `item` by using the request body of the 
 `POST` `https://{accountName}.{environment}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings` request:
