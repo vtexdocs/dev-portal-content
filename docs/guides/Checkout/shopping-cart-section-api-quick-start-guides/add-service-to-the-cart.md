@@ -31,7 +31,6 @@ You must use the [Cart simulation](https://developers.vtex.com/docs/api-referenc
         }
     ]
 }
-
 ```
 
 In the response body, you must check if the `offerings` object presents the following information, as the example below:
