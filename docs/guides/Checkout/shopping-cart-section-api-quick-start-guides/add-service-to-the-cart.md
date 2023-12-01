@@ -51,7 +51,7 @@ In the response body, you must check if the `offerings` object presents the foll
 
 If the `offerings` array presents this information, the SKU has a service associated with it. You will use the `id` value in the next step.
 
->ℹ️ If you have multiple services associated with the product, all of them will be returned in the `offerings` array. 
+>ℹ️ If you have multiple services associated with the product, all of them will be returned in the `offerings` array.
 
 ### Adding a service to a product
 
