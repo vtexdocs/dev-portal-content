@@ -12,6 +12,7 @@ hidePaginationNext: false
 ---
 ## Add a service (offering) to a shopping cart
 
+
 A service, also known as offering, is an item that may come with a product, optionally and with an additional cost. It is used to assign a value of an additional service to an SKU, as a gift packaging. 
 
 You can add a service (offering) to a shopping cart by using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api). To do so, follow the sections below.
@@ -51,6 +52,7 @@ In the response body, you must check if the `offerings` object presents the foll
 
 If the `offerings` array presents this information, the SKU has a service associated with it. You will use the `id` value in the next step.
 
+
 >ℹ️ If you have multiple services associated with the product, all of them will be returned in the `offerings` array. 
 
 ### Adding a service to a product
@@ -86,6 +88,7 @@ The expected response is the `orderForm` structure with the `offerings` array wi
 #### Adding more than one service to a product
 
 If you need to add more than a service to a specific product, you must add more units of the product that the service is attached to. To do so, you must follow the steps below:
+
 
 1. Update the product you want to add the service to have `"quantity": 1`. Use the  [Handle cart items](https://developers.vtex.com/docs/api-reference/checkout-api#patch-/api/checkout/pub/orderForm/-orderFormId-/items?endpoint=patch-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint with the  following request body:
 ```json
