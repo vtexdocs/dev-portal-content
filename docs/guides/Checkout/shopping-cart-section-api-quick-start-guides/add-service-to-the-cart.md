@@ -4,9 +4,6 @@ slug: "add-service-to-the-cart"
 hidden: false
 createdAt: ""
 updatedAt: ""
-excerpt: "{Insert a synopsis of your article here}"
-seeAlso:
- - ""
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---
