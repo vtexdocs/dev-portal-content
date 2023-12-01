@@ -98,7 +98,7 @@ If you need to add more than a service to a specific product, you must add more 
     ]
 }
 ```
-2. Attach the `offering` to the `item` in the shoppoing cart. Use the `POST` `https://{accountName}.{environment}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings` request as the previous section:
+2. Attach the `offering` to the `item` in the shopping cart. Use the `POST` `https://{accountName}.{environment}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings` request as the previous section:
 
 ```json
 {
