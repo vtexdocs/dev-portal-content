@@ -1,21 +1,18 @@
 ---
-title: "Introduction"
+title: "Getting started"
 slug: "getting-started"
 hidden: false
 createdAt: "2019-11-26T19:13:15.434Z"
 updatedAt: "2022-09-27T20:40:28.033Z"
 hidePaginationPrevious: true
+excerpt: "Discover the features and capabilities of VTEX Core Commerce APIs."
 ---
 
 Welcome! VTEX is a headless commerce platform that is highly customizable and constantly evolving to meet your business needs.
 
-## Getting started
+> ℹ️ Please note that you are in our Developer Portal. If you are looking for business-focused content and documentation about our platform, visit our [Help Center](https://help.vtex.com/).
 
-We recommend exploring our introductory content that covers the capabilities of our REST API.
-
-> ℹ️ Please note that you are in our Developer Portal. If you are looking for business-focused content and documentation about our platform, visit our Help Center.
-
-## Getting to know our core services
+## VTEX Core services
 
 Leverage your ecommerce operation with our headless architecture by learning what you can accomplish with each microservice on the VTEX platform.
 
@@ -127,6 +124,6 @@ Search and sort products in the catalog using full-text, category, and brand sea
 
 ### [Subscriptions](https://developers.vtex.com/docs/guides/subscriptionsw)
 
-Manage store subscription rules to optimize revenue, reduce bounce rate, and churn.
+Manage store subscription rules to optimize revenue and reduce bounce rate and churn.
 
 </OverviewCard>
