@@ -10,7 +10,7 @@ hidePaginationNext: false
 
 A service, also known as offering, is an item that may come with a product, optionally and with an additional cost. It is used to assign a value of an additional service to an SKU, as a gift packaging.
 
-You can add a service (offering) to a shopping cart by using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api). To do so, follow the sections below.
+You can add a service to a shopping cart by using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api). To do so, follow the sections below.
 
 ### Checking if a cart product has a service attached to it
 
