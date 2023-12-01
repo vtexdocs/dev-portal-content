@@ -31,7 +31,6 @@ You must use the [Cart simulation](https://developers.vtex.com/docs/api-referenc
         }
     ]
 }
-
 ```
 
 In the response body, you must check if the `offerings` object presents the following information, as the example below:
@@ -86,7 +85,6 @@ The expected response is the `orderForm` structure with the `offerings` array wi
 #### Adding more than one service to a product
 
 If you need to add more than a service to a specific product, you must add more units of the product that the service is attached to. To do so, you must follow the steps below:
-
 
 1. Update the product you want to add the service to have `"quantity": 1`. Use the  [Handle cart items](https://developers.vtex.com/docs/api-reference/checkout-api#patch-/api/checkout/pub/orderForm/-orderFormId-/items?endpoint=patch-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint with the  following request body:
 ```json
