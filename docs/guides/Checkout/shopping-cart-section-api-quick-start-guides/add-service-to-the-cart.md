@@ -101,6 +101,7 @@ If you need to add more than a service to a specific product, you must add more 
 }
 ```
 3. Update the `quantity` back to the previous value, sending the `noSplitItem` field as `true` in the [Handle cart items](https://developers.vtex.com/docs/api-reference/checkout-api#patch-/api/checkout/pub/orderForm/-orderFormId-/items?endpoint=patch-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint in the request body. This field will make sure the items do not split the configuration, making it possible to have the same `quantity` of products and services.
+
 ```json
 {    
     "orderItems": [
