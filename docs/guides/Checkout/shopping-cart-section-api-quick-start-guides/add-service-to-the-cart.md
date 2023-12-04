@@ -7,7 +7,7 @@ updatedAt: ""
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---
-A service, also known as offering, is an item that may come with a product, optionally and with an additional cost. It is used to assign a value of an additional service to an SKU, as a gift packaging.
+A service, also known as an offering, is an item that may come with a product, optionally and with an additional cost. It is used to assign a value of an additional service to an SKU, as a gift packaging.
 
 You can add a service to a shopping cart by using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api). To do so, follow the sections below.
 
@@ -28,7 +28,7 @@ You must use the [Cart simulation](https://developers.vtex.com/docs/api-referenc
 }
 ```
 
-In the response body, you must check if the `offerings` object presents the following information, as the example below:
+In the response body, you must check if the `offerings` object presents the following information, as in the example below:
 
 ```json
     "offerings": [
@@ -102,8 +102,6 @@ If you need to add more than a service to a specific product, you must add more 
 3. Update the `quantity` back to the previous value, sending the `noSplitItem` field as `true` in the [Handle cart items](https://developers.vtex.com/docs/api-reference/checkout-api#patch-/api/checkout/pub/orderForm/-orderFormId-/items?endpoint=patch-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint in the request body. This field will make sure the items do not split the configuration, making it possible to have the same `quantity` of products and services.
 
 ```json
-
-
     "orderItems": [
         {
             "index": 0,
@@ -111,7 +109,6 @@ If you need to add more than a service to a specific product, you must add more 
         }
     ],
     "noSplitItem": true
-}
 ```
 
 ### Removing a service (offering) from a shopping cart
