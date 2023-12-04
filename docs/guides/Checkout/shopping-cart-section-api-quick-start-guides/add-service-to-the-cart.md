@@ -11,7 +11,7 @@ A service, also known as an offering, is an item that may come with a product, o
 
 You can add a service to a shopping cart by using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api). To do so, follow the sections below.
 
-### Checking if a cart product has a service attached to it
+## Checking if a cart product has a service attached to it
 
 First, you must check if a product has a service available attached to it. This way, you know the options of service you can add to the item in the shopping cart.
 
@@ -47,7 +47,7 @@ If the `offerings` array presents this information, the SKU has a service associ
 
 >ℹ️ If you have multiple services associated with the product, all of them will be returned in the `offerings` array.
 
-### Adding a service to a product
+## Adding a service to a product
 
 You can add a service to an item in the shopping cart by using the checkout [`orderForm`](https://developers.vtex.com/docs/guides/orderform-fields).
 
@@ -76,7 +76,7 @@ The expected response is the `orderForm` structure with the `offerings` array wi
     ]
 ```
 
-#### Adding more than one service to a product
+### Adding more than one service to a product
 
 If you need to add more than a service to a specific product, you must add more units of the product that the service is attached to. To do so, you must follow the steps below:
 
@@ -111,7 +111,7 @@ If you need to add more than a service to a specific product, you must add more 
     "noSplitItem": true
 ```
 
-### Removing a service (offering) from a shopping cart
+## Removing a service (offering) from a shopping cart
 
 In order to remove a service (offering), you must use the `POST` `https://{accountName}.{environment}.com/api/checkout/pub/orderForm/{orderFormId}/items/{itemPosition}/offerings/remove` endpoint with the service `id` in the request body:
 
