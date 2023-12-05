@@ -10,6 +10,7 @@ seeAlso:
  - "/docs/guides/profile-system"
  - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
  - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
+ - "/docs/guides/erasing-customer-data"
 ---
 
 >❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
@@ -31,6 +32,7 @@ VTEX has established a comprehensive PII data architecture that incorporates a r
 - [Working with schemas in the Profile System](https://developers.vtex.com/docs/guides/working-with-schemas-in-the-profile-system): How to interact with the structure of data stored in the Profile System.
 - [Changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data): Adaptations in the default behavior of certain VTEX features to handle the PII data architecture.
 - [Limitations of the PII data architecture during closed beta](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta): Current limitations that apply to stores using PII data architecture, in relation to certain VTEX features.
+- [Erasing customer data](https://developers.vtex.com/docs/guides/erasing-customer-data): Process to erase customer data when using the PII data architecture.
 
 ## Parties' responsibilities
 
