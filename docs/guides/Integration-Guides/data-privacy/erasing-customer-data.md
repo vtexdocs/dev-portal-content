@@ -12,11 +12,11 @@ seeAlso:
  - "/docs/guides/data-residency"
 ---
 
->❗ This feature is currently in closed alpha testing stage, which means that only specific customers can access it now. Do not share this documentation with people outside of your company. If you do not have access yet, please refer to the [Erasing customer data](https://help.vtex.com/en/tutorial/erasing-customer-data--1R9Fn7A06Ifj4R9YD4JTKU) guide instead.
+>❗ This feature is currently in closed alpha testing stage, meaning that only specific customers can access it now. Do not share this documentation with people outside of your company. If you do not have access yet, please refer to the [Erasing customer data](https://help.vtex.com/en/tutorial/erasing-customer-data--1R9Fn7A06Ifj4R9YD4JTKU) guide instead.
 
 According to data protection policies, such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/), companies using customer personal data are required to delete collected information upon the customer's request. Data Subject Rights API allows stores using the [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) to erase user data collected by Checkout, Orders, VTEX ID and Profile System, without depending on the VTEX Support flow described in the [Erasing customer data](https://help.vtex.com/en/tutorial/erasing-customer-data--1R9Fn7A06Ifj4R9YD4JTKU) guide.
 
-It is necessary to make a request to the `POST` [Erase customer data](https://developers.vtex.com/docs/api-reference/data-subject-rights-api#post-/api/user-rights/createAndProcessDeleteUserData) endpoint from [Data Subject Rights API](https://developers.vtex.com/docs/api-reference/data-subject-rights-api) to delete a given customer's data collected in your store by Checkout, Orders, VTEX ID and Profile System.
+To begin the data erasing process, make a `POST` request to the [Erase customer data](https://developers.vtex.com/docs/api-reference/data-subject-rights-api#post-/api/user-rights/createAndProcessDeleteUserData) endpoint from the [Data Subject Rights API](https://developers.vtex.com/docs/api-reference/data-subject-rights-api). This action deletes a given customer's data collected in your store by Checkout, Orders, VTEX ID and Profile System.
 
 >❗ Only orders with `invoiced` or `canceled` status are erased in this request.
 
