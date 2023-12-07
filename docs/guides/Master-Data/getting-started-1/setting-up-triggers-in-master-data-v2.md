@@ -31,12 +31,12 @@ Each trigger is described as an item of the array `v-triggers` of a [JSON schema
 To create a new trigger in an existing schema, follow these steps:
 
 1. [Get the schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas/-schemaName-) associated with the data entity you wish to add a trigger to.
-2. Copy the JSON schema from the response and create a new item in the `v-triggers` array, configuring the properties according to your desired behavior. See the [JSON properties](#json-properties) and [Example](#example) sections for more information.
+2. Copy the JSON schema from the response and create a new object in the `v-triggers` array, configuring its properties according to your desired behavior. See the [Trigger properties](#trigger-properties) and [Example](#trigger-example) sections for more information.
 3. Send the edited schema as the body to the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint.
 
 > To edit Master Data v2 triggers, follow the steps described above, editing the properties you wish instead of creating a new array item.
 
-### JSON Properties
+### Trigger Properties
 
 | Property  | Type | Description                                  |
 |-----------|------|---------------------------------------------|
@@ -44,17 +44,23 @@ To create a new trigger in an existing schema, follow these steps:
 | `active`    | `boolean`| Whether the trigger is enabled (`true`) or disabled (`false`). |
 | `condition` | `string` | A rule that validates the document before executing the trigger. See the [`condition`](#condition) section for more information. |
 | `runAt`     | `object` | The scheduled date to execute the action. See the [`runAt`](#runAt) section for more information.    |
-| `weight`    |`integer` | Percentage value used for A/B testing. See the [Setting up an A/B test with Master Data trigger](https://help.vtex.com/en/tutorial/setting-up-a-b-test--4xFzBMHYty6gmEosWGWMC0#) article for more information.|
+| `weight`    |`integer` | Percentage value used for A/B testing. See the [Setting up an A/B test with Master Data trigger](https://help.vtex.com/en/tutorial/setting-up-a-b-test--4xFzBMHYty6gmEosWGWMC0) article for more information.|
 | `retry`     | `object` | Defines the retry policy, specifying the number of attempts and delay between them. See the [`retry`](#retry) section for more information.        |
 | `action`    | `object` | The action that will be executed. See the [`action`](#action) section for more information.                 |
 
-#### `condition`
+#### Condition
 
-The rule is the same as Master Data API v2's [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) route. Example: `status=ready-for-handling`
+Setting up condition rules is very similar to using query parameters when making a call to Master Data API v2's [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search). However, differently from the API, you should not include `_where` in the `condition` string. Examples: `status=ready-for-handling`, `createdIn between 2001-01-01 AND 2016-01-01`, `email=my@email.com`.
+
+You can create conditions based on any value of any field, including nested fields up to the second level, as exemplified below.
+
+```json
+            "condition": "Body.ChildOne.ChildTwo=Foo",
+```
 
 To get further information, check the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) endpoint reference.
 
-#### `runAt`
+#### runAt
 
 In case of scheduling an action in the future, you can use the `runAt` property. See the examples below:
 
@@ -80,7 +86,7 @@ In case of scheduling an action in the future, you can use the `runAt` property.
     }
 ```
 
-#### `retry`
+#### Retry
 
 By default, VTEX Master Data makes three attempts in an interval of 10 minutes. Use this property to override such behavior. See the example below of five attempts in an interval of 30 minutes.
 
@@ -93,7 +99,7 @@ By default, VTEX Master Data makes three attempts in an interval of 10 minutes. 
     }
 ```
 
-#### `action`
+#### Action
 
 Define the action to be executed, which can be one of the following types:  
 
@@ -189,8 +195,7 @@ Define the action to be executed, which can be one of the following types:
 
 </details>
 
-
-### Example
+### Trigger example
 
 ```json
 {
