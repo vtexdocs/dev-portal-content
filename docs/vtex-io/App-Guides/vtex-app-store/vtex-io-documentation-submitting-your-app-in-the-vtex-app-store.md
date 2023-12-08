@@ -15,7 +15,7 @@ seeAlso:
 
 >⚠ From the [release of Extensions Hub](https://developers.vtex.com/updates/release-notes/extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin), we changed our terms of service to enable VTEX partners to promote and sell their apps in the App Store. Thus, we created an addendum in the contract with partners, considering the app monetization and the new payment flow.
 >
-> Due to changes in our internal procedures, we are with temporary restrictions related to the publishing of apps in the App Store:
+> Due to changes in our internal procedures, we applied temporary restrictions related to publishing apps in the App Store:
 >
 > - Partners that already have published apps and still did not sign the new contract with the addendum must sign it as soon as possible.
 > - Only partners that already signed the new contract can publish apps as usual, following the homologation process.
