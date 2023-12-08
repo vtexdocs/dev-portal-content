@@ -9,6 +9,14 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store"
 ---
 
+>⚠ From the [release of Extensions Hub](https://developers.vtex.com/updates/release-notes/extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin), we changed our terms of service to enable VTEX partners to promote and sell their apps in the App Store. Thus, we created an addendum in the contract with partners, considering the app monetization and the new payment flow.
+>
+> Due to changes in our internal procedures, we are with temporary restrictions related to the publishing of apps in the App Store:
+>
+> - Partners that already have published apps and still did not sign the new contract with the addendum must sign it as soon as possible.
+> - Only partners that already signed the new contract can publish apps as usual, following the [homologation process](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
+> - We are not accepting new partners for publishing apps in the App Store.
+
 The [**VTEX App Store**](https://apps.vtex.com/) is a marketplace for VTEX IO plug-and-play solutions.
 
 As a developer, you can **share your own solutions** with other VTEX users in the [**VTEX App Store**](https://apps.vtex.com/) so they can also **leverage their business**.
