@@ -1,0 +1,48 @@
+---
+title: "1. Getting the Service app boilerplate"
+slug: "calling-commerce-apis-1-getting-the-service-app-boilerplate"
+hidden: false
+createdAt: "2023-12-11T15:40:00.000Z"
+updatedAt: "2023-12-11T15:40:00.000Z"
+---
+
+To exercise the concepts learned in this course, it is necessary that you have the `vtex.service-example` app available locally, also used in the [Services course](https://learn.vtex.com/docs/course-service-course-lang-en).
+
+So, if you don't already have this application on your computer:
+
+1. Clone the `vtex-apps/service-example` repository by inserting on a terminal the command:  
+   ```
+   git clone https://github.com/vtex-apps/service-example
+   ```
+2. Inside the app folder, run `vtex link` to check if the app builds normally. You should receive a link to a public route that the code exposes.
+
+## Project structure
+
+The project has many files and directories, but we will use only some of them in this course. The ones we will use are shown below.
+
+```
+service-example
+├── manifest.json
+├── node
+│   ├── middlewares
+│   │   ├── validate.ts
+│   │   └── status.ts
+│   ├── clients
+│   │   └── index.ts
+```
+
+- **manifest.json**: Manifest of the app containing various informations including vendor, app name, version, dependencies, builders, policies, etc.
+- **node**: Folder where is located the TypeScript code that runs on NodeJS runtime. Every app that uses the `node` builder will have this folder containing the files that will run with this builder.
+- **middlewares**: Folder with the TypeScript middlewares. They are functions that are used to process a request made through a route exposed by the service. The routes of the service, which middlewares are used in each route, and the order in which the middlewares are called are defined in the `node/index.ts` file (do not confuse with the `node/clients/index.ts` file).
+- **validate.ts**: Middleware that validates if the request has a valid HTTP status code. It will also be used to access the app authentication token.
+- **status.ts**: Middleware to call the VTEX Commerce API. In this example, it will display the SKU details from the Catalog.
+- **clients**: Folder where the Clients of the app are defined, which are used to access resources external to the app.
+- **index.ts**: Definition of the `Clients` class. Here we will import the Client `Catalog` and define a getter/setter function for Catalog items.
+
+For more conceptual information related to the project files and its execution, you can check the following documentation:
+
+- [Service](https://developers.vtex.com/docs/guides/vtex-io-documentation-service)
+- [Manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest)
+- [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders)
+- [Service path patterns](https://developers.vtex.com/docs/guides/service-path-patterns)
+- [Linking an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app)
