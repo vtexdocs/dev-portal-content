@@ -1,0 +1,91 @@
+---
+title: "2. Discovering VTEX Commerce APIs and authentication"
+slug: "calling-commerce-apis-2-discovering-vtex-commerce-apis-and-authentication"
+hidden: false
+createdAt: "2023-12-11T15:40:00.000Z"
+updatedAt: "2023-12-11T15:40:00.000Z"
+---
+
+In this step, you will learn:
+
+1. How to find the documentation for VTEX APIs. You will have access to what is available from VTEX Core Sevices and the details needed to call them.
+2. The differences in calling our APIs through VTEX IO. Due to how authentication works on VTEX, there are specific details when making API calls on an app. Also, it is important to authorize only what is needed and who is receiveing access to what.
+
+## VTEX Commerce APIs
+
+VTEX Commerce APIs are the access points for VTEX Core Services like Catalog, Checkout, Master Data, Payments, among others. The VTEX's [Developer Portal](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis) lists all available APIs and explains how to use each of the endpoints offered.
+
+![Dev Portal APIs](https://user-images.githubusercontent.com/18706156/92934603-0f3be080-f41e-11ea-95f7-34f0238a8d96.png)
+
+Most APIs follows the [REST (Representational state transfer)](https://en.wikipedia.org/wiki/Representational_state_transfer) specification. It is also important to note that all calls **operate on an account** at VTEX.
+
+## Differences in VTEX IO
+
+VTEX IO is a first-class citizen for VTEX APIs and, therefore, there are some differences in using them in your application compared to third-party applications. The Developer Portal receives some identification and authorization parameters that are not required when calling endpoints through VTEX IO.
+
+## Authentication
+
+Traditionally, VTEX authenticates calls to private routes (`/pvt`) using a pair **AppKey** and **AppToken**, obtained from an account administration panel. In VTEX IO, it is not recommended to use this key and token pair to authenticate yourself, since the platform offers another more scalable and elegant way.
+
+All apps that are developed on VTEX IO represent a **resource** on the platform, which allows an application to interact with other systems on behalf of itself, duly authorized by the account administrator. It is up to the app developer to declare the necessary permissions.
+
+In practice, this means two things:
+
+1. Both the endpoint and the [role](https://developers.vtex.com/docs/guides/vtex-io-documentation-roles) required to access any API must be declared in the `manifest.json` file of the app.
+2. Calls must be made with a **VTEX ID token** instead of the **AppKey** and **AppToken** pair.
+
+You will learn how to make these settings soon!
+
+> A **role**, talking about authorization within VTEX, is a set of resources which a user or application is authorized to access. A user or application can have many roles, and a role can be assigned to multiple users or applications. Some VTEX modules do not require any specific role, but others may and are necessary for the caller to be able to access that resource.
+
+## App Token and User Token
+
+Each app in VTEX IO automatically receives an **authToken** that can be used to call external APIs. This token, which can be obtained from the context object in any request, has all the permissions that were declared in the `policies` field of the application manifest.
+
+It is necessary to check if it makes sense to use this token in requests, especially when accessing critical systems of accounts. If you identify a situation like this, you can also use the token of the user using the app. For more details, check [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens).
+
+## `accountName`
+
+As stated, all calls to VTEX's Commerce modules are related to some [`account`](https://help.vtex.com/en/tutorial/what-is-an-account-name--i0mIGLcg3QyEy8OCicEoC) on VTEX, and traditionally this information is passed through the query string `?an`. However, throughout the course, we will present abstractions created in VTEX IO that do not require this manual configuration.
+
+It is worth mentioning that the apps that are developed on VTEX IO must work regardless of the account where they are installe*, so it is important that none of this critical information is hard-coded.
+
+## Activity
+
+> ✅ **Tip**: To navigate through this article and explore specific topics, scroll through the steps below. Explana. Relevant code will be highlighted and focused for your convenience.
+
+<CH.Scrollycoding>
+
+```typescript node/middlewares/validate.ts
+console.log('Received params:', params)
+
+const { code } = params
+...
+```
+---
+
+1. To check the token that each application receives from the platform, in the validation middleware of the `service-example` app, go to the `node/middlewares/validate.ts` file and add the following log:
+
+```typescript node/middlewares/validate.ts focus=1
+console.log(ctx.vtex.authToken)
+console.log('Received params:', params)
+
+const { code } = params
+...
+```
+
+---
+
+2. Now, on a terminal, run `vtex link` to link your app and access the public URL provided in the process. The URL will be something like `https://{workspace}-{account}.myvtex.com/_v/status/:code`. Replace `:code` with `200` and, after accessing the URL, check the content that was logged in the terminal by `console.log`.
+
+<CH.Code>
+
+```console console
+info: eyJhbGciOiJSUzI1NiIsImtpZCI6IkVFQkFGRjY1QkVFRUNDODUxQkQ2NkFEOEI0NjIyQUY2MDAzOEI5NUQiLCJ0eXAiOiJKV1QifQ.eyJhY2NvdW50IjoiY29zbWV0aWNzMiIsIndvcmtzcGFjZSI6ImhlbnJpcXVlYmFsYmlubyIsInN1YiI6InZ0ZXguc2VydmljZS1leGFtcGxlQDAuMi4yMiIsInR5cGUiOiJsaW5rIiwidXNlckxvZ2luIjoidnRleC5zZXJ2aWNlLWV4YW1wbGVAMC4yLjIyIiwidXNlcklkIjoibGluazp2dGV4LnNlcnZpY2UtZXhhbXBsZUAwLjIuMjIiLCJyb2xlcyI6WyJsaW5rOnZ0ZXguc2VydmljZS1leGFtcGxlQDAuMi4yMiJdLCJuYmYiOjE2OTE1MTIxNzcsImV4cCI6MTY5MTU5ODU3NywiaWF0IjoxNjkxNTEyMTc3LCJpc3MiOiJ2dGV4aW8vcm91dGVyIiwiYXVkIjoidnRleGlvIn0.
+```
+
+</CH.Code>
+
+</CH.Scrollycoding>
+
+> You can check the contents of this token on [jwt.io](https://jwt.io/). It is a token similar to your personal token (run the command `vtex local token`), but it represents the application you are developing and will contain the permissions that were requested by this app in the `manifest.json`.
