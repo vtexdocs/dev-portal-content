@@ -526,7 +526,7 @@ Users with the **Sales Admin** role may add, edit, or remove users with any of t
 
 In telesales, assisted sales, or customer support scenarios where the B2B customer needs help from a salesperson to navigate the store or place orders, it is common to use impersonation.
 
-In the B2B Organization app, users with a profile with at least one of the permissions **impersonate-users-all**, **impersonate-users-organization**, or **impersonate-users-costcenter** will be able to impersonate another user. These permissions are available in the [Storefront Permissions](https://developers.vtex.com/docs/apps/vtex.storefront-permissions) and can be added to the user's profile using the [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui).
+In the **B2B Organizations** app, users with a profile with at least one of the permissions **impersonate-users-all**, **impersonate-users-organization**, or **impersonate-users-costcenter** will be able to impersonate another user. These permissions are available in the [Storefront Permissions](https://developers.vtex.com/docs/apps/vtex.storefront-permissions) and can be added to the user's profile using the [Storefront Permissions UI](https://developers.vtex.com/docs/guides/vtex-storefront-permissions-ui).
 
 When impersonation is activated, it temporarily applies the email, organization, and cost center of the impersonated user to the storefront session. This allows impersonating users to do the following:
 
