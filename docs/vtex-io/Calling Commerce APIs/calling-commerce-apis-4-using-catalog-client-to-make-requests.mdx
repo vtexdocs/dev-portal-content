@@ -1,0 +1,130 @@
+---
+title: "4. Using Catalog Client to make requests"
+slug: "calling-commerce-apis-4-using-catalog-client-to-make-requests"
+hidden: false
+createdAt: "2023-12-11T15:40:00.000Z"
+updatedAt: "2023-12-11T15:40:00.000Z"
+---
+
+In this step you will learn how to use the Client you just configured in a middleware of the `service-example` app. We will use the `getSkuById` method to return information from a SKU (Stock Keeping Unit) in the VTEX Catalog.
+
+## Test route
+
+Since the `service-example` app already exports a public route for testing (`https://{workspace}--{account}.myvtex.com/_v/status/:code`), we will call this route using the Client from the **Catalog** module. We will use the `code` parameter as our "Sku ID" to quickly test our Client.
+
+> If you have already run the command `vtex link`, just keep it running since the VTEX CLI automatically updates your application with changes in the code. If not, run the command now.
+
+## Activity
+
+As we saw in the previous step, we now have our Client methods available in `ctx.clients.catalog`. To use it, we will need to call the methods in some middleware of our app.
+
+> ✅ **Tip**: To navigate through this article and explore specific topics, click the steps below. Relevant code will be highlighted and focused for your convenience.
+
+<CH.Scrollycoding>
+
+1. In the `node/middlewares/status.ts` file to use `ctx.clients.catalog`. Paste the following code there:
+
+   **What are we doing?**
+
+   - Extracting `catalog` from the context that is received in the middleware functions. This is a shortcut so we don't have to call `ctx.clients.catalog`. Learn more about Destructuring on the [Mozilla docuentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+   - Extracting the variable `code`, which will come as a parameter of the URL of our route (`/_v/status/:code`). We will use this data to represent the SKU ID that we will test when calling the Catalog.
+   - Calling the Client Catalog's `getSkuById` method. This method will, internally, call the relative endpoint in the catalog module, passing the parameter that we are passing (`code`) as the SKU ID to be searched. Remembering that this is an asynchronous call, so we need to add `await` just before to wait for it.
+
+```typescript node/middlewares/status.ts
+export async function status(ctx: Context, next: () => Promise<any>) {
+  const {
+    state: { code },
+    clients: { catalog },
+  } = ctx
+
+  const data = await catalog.getSkuById(code.toString())
+  ctx.body = data
+
+  await next()
+}
+```
+
+---
+
+2. Generally, `commerce-clients` Clients are already automatically configured to make authenticated calls, by default using the app token. Even so, we still need to declare that our application will be making requests for some service, and this is done in the `manifest.json` file.
+
+   For our specific case, we need to add the following section to the `policies` field of this file:
+
+   This will allow your app to make calls to that URL, specifically. As much as you didn't need to put it in your code, it is what is used internally by the **Catalog** Client.
+
+```json manifest.json
+"policies": [
+  ...,
+  {
+    "name": "outbound-access",
+    "attrs": {
+      "host": "portal.vtexcommercestable.com.br",
+      "path": "/api/catalog/*"
+    }
+  }
+]
+```
+
+---
+
+3. Now, let's test what we did! The vtex link process must have already updated, and we can copy the public URL that our service is exposing:
+
+   In this case, the app is being developed in the `marinbrasil` account and in the `trainingweek` workspace, but in your terminal you must copy the link provided for your environment.
+
+```  console
+16:39:05.042 - info: Worker 26 is listening service-node@6.27.4 16:39:05.567 info: Runtime @vtex/api is: /usr/local/app/node_modules/@vtex/api/lib/index.js service-node@6.27.4
+16:39:85.568 - info: Using @vtex/api from: /usr/local/data/service/node_modules/@vtex/api/lib/index.js service-node@6.27.4
+16:39:05.929 - info: Available service routes:
+https://trainingweek--marinbrasil.myvtex.com/_v/status/:code service-node@6.27.4
+16:39:05.932 - info: App running service-node@6.27.4
+16:39:85.956 - info: Debugger tunnel listening on :9229. Go to chrome://inspect in Google Chrome to debug your running application.
+```
+
+---
+
+4. As our middleware is activated by a GET request, we can test the functionality in our own browser. Paste in the address bar `https://{workspace}--{account}.myvtex.com/_v/status/1` to find information about the SKU 1 ID.
+
+   The expected result should be a JSON with the SKU data.
+
+   > Remembering that this information will depend on the account catalog being used.
+
+```json https://{workspace}--{account}.myvtex.com/_v/status/1
+{
+  Id: 1,
+  ProductId: 1,
+  IsActive: true,
+  Name: "Tanque Duplo Tramontina Hera Duo Plus 2C 30 + 30 L em Aço Inox Acetinado 120 x 55 cm",
+  RefId: "94406117",
+  PackagedHeight: 1,
+  PackagedLength: 1,
+  PackagedWidth: 1,
+  PackagedWeightKg: 20000,
+  Height: null,
+  Length: null,
+  Width: null,
+  WeightKg: null,
+  CubicWeight: 1,
+  IsKit: false, CreationDate: "2019-07-28T14:51:00",
+  RewardValue: null,
+  EstimatedDateArrival: null,
+  ManufacturerCode: "94406117",
+  CommercialConditionId: 1,
+  Measurement Unit: "un",
+  UnitMultiplier: 1,
+  ModalType: null,
+  KitItensSellApart: false,
+  Videos: []
+}
+```
+
+---
+
+</CH.Scrollycoding>
+
+# Conclusion
+
+With what was accomplished during the course, you should be able to use VTEX Commerce APIs in your apps through the use of Clients and have access to the functionalities of VTEX Core Services. The Clients are used in middlewares and retrieved from the `clients` property of `ctx` (Context). The Clients available in the `@vtex/clients` library are ready-made and have functions that make the API calls, eliminating the need to explicit the endpoint path in the middleware.
+
+You can do more with Clients than accessing VTEX Commerce APIs. If you wish to access external providers, you can create your own custom Clients.
+
+Furthermore, we saw that authentication is done in a specific way on VTEX IO. You have to use the proper token to identify who is the caller of the endpoint (the app, an Admin user or a Store user) and add the necessary policies in your manifest for the resources that the app will access.
