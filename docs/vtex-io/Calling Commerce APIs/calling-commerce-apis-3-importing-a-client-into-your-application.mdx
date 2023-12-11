@@ -1,0 +1,83 @@
+---
+title: "3. Importing a Client into your application"
+slug: "calling-commerce-apis-3-importing-a-client-into-your-application"
+hidden: false
+createdAt: "2023-12-11T15:40:00.000Z"
+updatedAt: "2023-12-11T15:40:00.000Z"
+---
+
+In this step, you will learn:
+
+1. How to search for ready-made Clients that abstract the Core Commerce APIs. You will find the Clients VTEX already made for many services.
+2. How to import these Clients into your app on VTEX IO. We will import the Client `Catalog` which will allow us to search for details about an SKU within the VTEX platform.
+
+## Clients
+
+Clients, in VTEX IO, are abstractions for external services and are used natively to make external requests in backend services. For more information, check our [Clients article](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
+
+## VTEX IO Commerce clients
+
+The [Commerce Clients package](https://github.com/vtex/io-clients/tree/master) is a TypeScript library that offers several Clients already configured for access VTEX Core Commerce APIs. To use it in your app, just install it in the `node/` folder running in your terminal:
+
+```
+yarn add @vtex/clients
+```
+
+## Custom Clients
+
+If you do not find the Client you want for a Core Commerce service from VTEX, we recommend that you send a Pull Request to the [`io-clients` repository](https://github.com/vtex/io-clients/tree/master). We will be happy to review and eventually dive into your contribution.
+
+But, if the service you are trying to access is an external provider (e.g.: [Google Maps API](https://developers.google.com/maps/apis-by-platform)), we recommend that you create a Client in your own app by following the steps in [Developing Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients).
+
+## Activity
+
+> ✅ **Tip**: To navigate through this article and explore specific topics, click the steps below. Relevant code will be highlighted and focused for your convenience.
+
+<CH.Scrollycoding>
+
+1. We will now import a Client from the **Catalog** module into our app. After you have cloned the [boilerplate app](https://github.com/vtex-apps/service-example), open the app code that was downloaded in the `service-example` folder in your editor.
+
+```
+```
+
+---
+
+2. As the Client that we will use is offered in the Commerce Clients package, we will perform the installation. In a terminal, open the `node` folder and run the following command:
+
+```console console
+yarn add @vtex/clients
+```
+
+---
+
+3. Now that the package has been installed, we need to configure the Client to use it in the resolvers and middlewares of our app. For that, we need you to open the file `node/clients/index.ts` in your editor.
+
+---
+
+4. Import the Client `Catalog` from the `@vtex/clients` library.
+
+```typescript node/clients/index.ts focus=1
+import { Catalog } from '@vtex/clients'
+...
+public get catalog() {
+  return this.getOrSet('catalog', Catalog)
+}
+```
+
+---
+
+5. Add the getter `catalog`, similar to the method above in the `Clients` class.
+
+```typescript node/clients/index.ts focus=3:5
+import { Catalog } from '@vtex/clients'
+...
+public get catalog() {
+  return this.getOrSet('catalog', Catalog)
+}
+```
+
+</CH.Scrollycoding>
+
+Any of the resolver GraphQL or middlewares service functions can use this Client via `ctx.clients.catalog`. Due to TypeScript, it is possible to have autocomplete of the methods and see details of the types needed in the parameters.
+
+![Client methods autocomplete](https://drive.google.com/uc?export=view&id=1-DBosXllypqOj2DBGHx667lH4dkj-ADs)
