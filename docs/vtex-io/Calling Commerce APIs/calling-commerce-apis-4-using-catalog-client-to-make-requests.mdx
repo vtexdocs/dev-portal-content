@@ -120,11 +120,3 @@ https://trainingweek--marinbrasil.myvtex.com/_v/status/:code service-node@6.27.4
 ---
 
 </CH.Scrollycoding>
-
-# Conclusion
-
-With what was accomplished during the course, you should be able to use VTEX Commerce APIs in your apps through the use of Clients and have access to the functionalities of VTEX Core Services. The Clients are used in middlewares and retrieved from the `clients` property of `ctx` (Context). The Clients available in the `@vtex/clients` library are ready-made and have functions that make the API calls, eliminating the need to explicit the endpoint path in the middleware.
-
-You can do more with Clients than accessing VTEX Commerce APIs. If you wish to access external providers, you can create your own custom Clients.
-
-Furthermore, we saw that authentication is done in a specific way on VTEX IO. You have to use the proper token to identify who is the caller of the endpoint (the app, an Admin user or a Store user) and add the necessary policies in your manifest for the resources that the app will access.
