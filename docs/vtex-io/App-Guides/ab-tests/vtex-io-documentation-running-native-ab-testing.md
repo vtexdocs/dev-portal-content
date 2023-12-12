@@ -14,6 +14,8 @@ In this guide, learn how to manage an A/B test, covering steps from running the 
 A/B testing involves comparing traffic between two store workspaces and helps you determine which one performs better in terms of user engagement and conversions.
 To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/docs/guides/vtexarg-abtester).
 
+> ⚠️ A/B tests have a maximum duration of 30 days from its start. After this period, the test may end automatically without notice.
+
 ## Before you begin
 
 Ensure you have the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) installed on your machine.
