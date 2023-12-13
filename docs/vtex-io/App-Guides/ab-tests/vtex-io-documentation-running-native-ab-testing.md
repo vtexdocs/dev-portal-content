@@ -168,7 +168,7 @@ Running the command will display a list of all workspaces being tested by the `v
 
 ![ab-testing-finish-step4](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-end___2940fdcba7933cab4d828ba9e7a34d72.png)
 
-> ❗ It is not possible to retrieve A/B test data after it is finished. Remember to save any relevant data before using the `vtex workspace abtest finish` command or it ends automatically in 30 days. You can access data from ongoing tests with the `vtex workspace abtest status` command.
+> ❗ Remember to save any relevant data using the `vtex workspace abtest finish` command before it ends automatically in 30 days – A/B test data cannot be retrieved otherwise. You can access data from ongoing tests with the `vtex workspace abtest status` command.
 
 Now that you finish the A/B test, follow the next step to promote the workspace to `master`.
 
