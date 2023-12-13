@@ -14,6 +14,8 @@ In this guide, learn how to manage an A/B test, covering steps from running the 
 A/B testing involves comparing traffic between two store workspaces and helps you determine which one performs better in terms of user engagement and conversions.
 To execute an A/B test, you can use the VTEX IO CLI or the [A/B Tester Admin app](https://developers.vtex.com/docs/guides/vtexarg-abtester).
 
+> ⚠️ A/B tests have a maximum duration of 30 days from their start. After this period, tests may end automatically without notice.
+
 ## Before you begin
 
 Ensure you have the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) installed on your machine.
@@ -165,6 +167,8 @@ vtex workspace abtest finish
 Running the command will display a list of all workspaces being tested by the `vtex.ab-tester` app in the `master` environment. Choose the workspace that you intend to conclude. For example:
 
 ![ab-testing-finish-step4](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-end___2940fdcba7933cab4d828ba9e7a34d72.png)
+
+> ❗ Remember to save any relevant data using the `vtex workspace abtest finish` command before it ends automatically in 30 days – A/B test data cannot be retrieved otherwise. You can access data from ongoing tests with the `vtex workspace abtest status` command.
 
 Now that you finish the A/B test, follow the next step to promote the workspace to `master`.
 
