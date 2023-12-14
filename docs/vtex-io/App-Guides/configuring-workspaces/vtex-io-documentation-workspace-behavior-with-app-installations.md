@@ -33,7 +33,7 @@ Considering the given example, imagine the following actions:
 - Installing `appC@2.x` on `prod2`
 - Installing `appC@3.x` on `dev1`
 
-Results in:
+This would be the result:
 
 - `master`: `appA@1.x`
 - `prod1`: `appA@2.x`
