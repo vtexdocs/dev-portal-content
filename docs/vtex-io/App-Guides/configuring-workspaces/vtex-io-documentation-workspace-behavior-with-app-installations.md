@@ -55,7 +55,7 @@ This would be the result:
 - `prod2`:`appA@1.x`, `appB@0.x`, `appC@2.x`
 - `dev1`: `appA@1.x`, `appB@0.x`, `appC@3.x`
 
-## Promote workspace
+## Promote a workspace
 
 When a production workspace is [promoted to master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master), all the other workspaces are updated to reflect the changes seen in the promoted workspace.
 
