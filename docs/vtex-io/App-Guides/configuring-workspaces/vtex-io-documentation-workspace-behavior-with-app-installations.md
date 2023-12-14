@@ -46,7 +46,7 @@ When you install an app on the master workspace, it is installed on every worksp
 
 Considering the given example, imagine the following action:
 
-- Install `appB@0.x` on `master`
+- Installing `appB@0.x` on `master`
 
 Results in:
 
