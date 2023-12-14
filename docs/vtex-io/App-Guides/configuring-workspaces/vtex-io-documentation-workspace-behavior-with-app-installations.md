@@ -6,7 +6,7 @@ createdAt: "2023-12-14T10:00:00.000Z"
 updatedAt: "2023-12-14T10:00:00.000Z"
 ---
 
-On VTEX IO, [workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) work like [git](https://git-scm.com/) [branches](https://www.atlassian.com/git/tutorials/using-branches) with automatic [rebase](https://www.w3docs.com/learn-git/git-rebase.html). You always have your work on top of what is in production (master).
+On VTEX IO, [workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) function similarly to [Git branches](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) with automatic [rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing). Your work in development and production workspaces is always based on what's in the master workspace.
 
 Below is an example to illustrate the behavior of apps when performing operations on workspaces.
 
