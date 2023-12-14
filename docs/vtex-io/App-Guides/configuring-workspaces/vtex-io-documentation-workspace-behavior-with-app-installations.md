@@ -17,6 +17,12 @@ Imagine there is a VTEX account with four identical workspaces:
 - `prod2`: `appA@1.x`
 - `dev1`: `appA@1.x`
 
+The following sections present scenarios based on this example. Check what happens when you:
+
+- [Install an app on development or production](#install-an-app-on-development-or-production)
+- [Install an app on master](#install-an-app-on-master)
+- [Promote a workspace](#promote-a-workspace)
+
 ## Install an app on development or production
 
 [Installing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) on a development or production workspace does not affect other workspaces.
