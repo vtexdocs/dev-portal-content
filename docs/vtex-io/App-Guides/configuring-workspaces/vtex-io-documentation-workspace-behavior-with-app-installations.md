@@ -59,7 +59,7 @@ This would be the result:
 
 When a production workspace is [promoted to master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master), all the other workspaces are updated to reflect the changes seen in the promoted workspace.
 
-After promoting `prod2` to `master`, we have the following result:
+Considering the given example, after promoting `prod2` to `master`, this is the result:
 
 - `master`: `appA@1.x`, `appB@0.x`, `appC@2.x`
 - `prod1`: `appA@2.x`, `appB@0.x`, `appC@2.x`
