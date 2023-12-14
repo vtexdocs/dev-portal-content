@@ -27,7 +27,7 @@ The following sections present scenarios based on this example. Check what happe
 
 [Installing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) on a development or production workspace does not affect other workspaces.
 
-The following actions:
+Considering the given example, imagine the following actions:
 
 - Installing `appA@2.x` on `prod1`
 - Installing `appC@2.x` on `prod2`
