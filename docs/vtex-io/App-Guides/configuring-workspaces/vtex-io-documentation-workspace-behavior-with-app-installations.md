@@ -42,7 +42,7 @@ This would be the result:
 
 ## Install an app on master
 
-When installing an app on the master workspace, it is installed on every workspace that does not have this app installed. If a workspace has the same app installed with another major version, the app version on this workspace is unchanged.
+When you install an app on the master workspace, it is installed on every workspace that does not have this app installed. If a workspace has the same app installed with another major version, the app version on this workspace is unchanged.
 
 The following action:
 
