@@ -48,7 +48,7 @@ Considering the given example, imagine the following action:
 
 - Installing `appB@0.x` on `master`
 
-Results in:
+This would be the result:
 
 - `master`: `appA@1.x`, `appB@0.x`
 - `prod1`: `appA@2.x`, `appB@0.x`
