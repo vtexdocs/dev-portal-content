@@ -29,9 +29,9 @@ The following sections present scenarios based on this example. Check what happe
 
 The following actions:
 
-- Install `appA@2.x` on `prod1`
-- Install `appC@2.x` on `prod2`
-- Install `appC@3.x` on `dev1`
+- Installing `appA@2.x` on `prod1`
+- Installing `appC@2.x` on `prod2`
+- Installing `appC@3.x` on `dev1`
 
 Results in:
 
