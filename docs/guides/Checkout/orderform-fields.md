@@ -924,7 +924,6 @@ __Example:__
 |    id |     String  |   Delivery channel ID.  |
 |    selectedAddresses  |    Array  |   Selected addresses information.     |
 
-
 ### storeId
 
 It is a string containing the store ID.
