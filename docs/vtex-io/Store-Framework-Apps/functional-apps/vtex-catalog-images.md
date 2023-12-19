@@ -12,12 +12,11 @@ The Catalog Images app provides REST and [GraphQL](https://developers.vtex.com/d
 
 Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your desired account and workspace and run the following command to install the Catalog Images app:
 
-```
+```sh
 vtex install vtex.catalog-images@0.x 
 ```
 
 Once the installation is confirmed, you can use the Catalog Images app's resources through [REST API](#rest-api) or [GraphQL](#graphql) as long as you follow the [authentication process](#authentication).
-
 
 ## Authentication
 
@@ -27,7 +26,7 @@ Using your appKey and appToken, make the following API request to obtain a local
 
 **Request local token:**
 
-```curl
+```sh
 curl --location --request POST 'http://api.vtexcommercestable.com.br/api/vtexid/apptoken/login?an={{accountName}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -48,7 +47,6 @@ curl --location --request POST 'http://api.vtexcommercestable.com.br/api/vtexid/
 
 The `token` value you will receive as a response is required for authentication in the app's API calls, explained in the following sections.
 
-
 ## REST API
 
 There are two REST API endpoints available to manage images using the Catalog Images app:
@@ -56,12 +54,11 @@ There are two REST API endpoints available to manage images using the Catalog Im
 * `POST` [Save image](#save-image)
 * `DELETE` [Delete image](#delete-image)
 
-
 ### Save image
 
 To save an image in File Manager, use the request below. Make sure to send one image at a time and set the request body format to `multipart/form-data`.
 
-```curl
+```sh
 curl --location --request POST 'https://app.io.vtex.com/vtex.catalog-images/v0/{{accountName}}/{{workspace}}/images/save/{{fileName}}' \
 --header 'VtexIdclientAutCookie:  {{token}}' \
 --form '=@"{{filePath}}"'
@@ -82,6 +79,7 @@ If there is already an image with the same filename given, the response will be 
 Otherwise, the response will be `OK (200)` with the `id`, `slug`, and `fullUrl` in the response body, as follows:
 
 **Response body example (200 OK):**
+
 ```json
 {
     "id": "special-offer.png",
@@ -90,13 +88,11 @@ Otherwise, the response will be `OK (200)` with the `id`, `slug`, and `fullUrl` 
 }
 ```
 
-
 ### Delete image
 
 The following REST API route allows you to delete a Catalog image in File Manager:
 
-
-```curl
+```sh
 curl --location -g --request DELETE 'https://app.io.vtex.com/vtex.catalog-images/v0/{{accountName}}/{{workspace}}/images/save/{{fileName}}' \
 --header 'VtexIdclientAutCookie: {{token}}'
 ```
@@ -112,9 +108,7 @@ Replace the values as explained below:
 
 If there is already an image with the same `fileName` given, the response will be `Conflict (409)` with the conflicted image URL in the response body.
 
-
 If the image exists and is successfully deleted, the response will be an empty body with status code `OK (200)`. If the image does not exist, the response will be `Not Found (404)`.
-
 
 ## GraphQL API
 
@@ -123,12 +117,12 @@ The following mutations are available for Catalog images using the app’s Graph
 * [saveImage](#saveimage)
 * [deleteImage](#deleteimage)
 
-
 ### saveImage
 
 Use the following mutation to save an image on File Manager using GraphQL:
 
 **Mutation:**
+
 ```graphql
 saveImage(filename: String!, file: Upload!){
   id
@@ -137,8 +131,8 @@ saveImage(filename: String!, file: Upload!){
 }
 ```
 
-
 **Response body example (200 OK):**
+
 ```json
 {
     "id": "special-offer.png",
@@ -147,10 +141,10 @@ saveImage(filename: String!, file: Upload!){
 }
 ```
 
-
 If there is already an image with the same name registered on File Manager, the response will contain an array of errors, including `CONFLICT_FILE_ERROR`.
 
 **Response body example (409 Conflict):**
+
 ```json
 "errors": [
     {
@@ -167,20 +161,20 @@ If there is already an image with the same name registered on File Manager, the 
 ]
 ```
 
-
 ### deleteImage
 
 Use the following mutation to delete an image on File Manager using GraphQL:
 
 **Mutation:**
+
 ```graphql
 deleteImage(filename: String!){
   statusCode
 }
 ```
 
-
 **Response body example (200 OK):**
+
 ```json
 {
     "statusCode": "Ok"

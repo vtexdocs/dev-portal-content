@@ -7,9 +7,7 @@ createdAt: "2020-06-03T16:02:45.024Z"
 updatedAt: "2022-12-13T20:17:44.398Z"
 ---
 
-
 This guide will teach you how to customize your storefront using CSS handles. CSS handles are unique identifiers assigned to HTML elements. They can be used in your Store Theme to target and add CSS classes to a component, allowing you to personalize your storefront according to your preferences.
-
 
 ## Step by step
 
@@ -43,11 +41,10 @@ Once your app is linked and the changes are saved, the new customization should 
 
 As demonstrated, CSS handles can be used to overwrite the default styles of a storefront, allowing for independent customization of specific blocks within a Store Theme. Note that the change above was applied universally to all `menu-item` blocks.
 
-
-
 ### Customizing a single block
 
 To independently customize a single block (e.g., `menu-item`), you should use the  `blockClass` property. When passed in a block, the `blockClass` value serves as the block's unique identifier for customization.
+
 1. In the `json` file where your block is declared, add the prop `blockClass` to the element you want to customize, with any name as a value.
 
 For example:
@@ -74,7 +71,6 @@ After that, you can use the class `.menuItem--header` to specifically target the
 
 While it is common to encounter scenarios where CSS selectors are utilized for customization, it is important to note that such customization relies on the HTML hierarchy. Consequently, any changes to the HTML structure may disrupt the desired customization. Therefore, to standardize CSS customization and avoid any potential breakdown in layout, we recommend making store customizations exclusively using CSS handles.
 
-
 Customization using CSS selectors is mostly deprecated. Only the following CSS selectors are still allowed for store customization:
 
 - Class selectors (e.g. `.foo`)
@@ -88,4 +84,3 @@ Customization using CSS selectors is mostly deprecated. Only the following CSS s
 - `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selection of elements that come from different apps
 
 > ⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, are not supported by the platform. Therefore, processes like [linking an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) will fail if unlisted selectors are used.
-

@@ -61,7 +61,7 @@ The [authentication](https://developers.vtex.com/docs/guides/authentication-over
 
 ### Example cURL request
 
-```curl
+```sh
 curl --location --request POST 'https://api.vtex.com/api/transportation/deliverylabels/{{orderId}}?an={{accountName}}' \
 --header 'X-VTEX-API-AppToken: {{token}}' \
 --header 'X-VTEX-API-AppKey: {{appKey}}'

@@ -52,7 +52,7 @@ See below the [Cancel order](https://developers.vtex.com/docs/api-reference/orde
 
 **cURL**
 
-```curl
+```sh
 curl --request post \
 	--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/cancel' \
 	--header 'Accept: application/json' \
@@ -180,7 +180,7 @@ See below the endpoint deny order cancellation, where `orderId` corresponds to t
 
 **cURL**
 
-```curl
+```sh
 curl --request post \
 	--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/deny-cancellation-request' \
 	--header 'Accept: application/json' \

@@ -75,7 +75,7 @@ Use the endpoints described below to perform this step. It is important to note 
 
 Use the curl example below to perform the fulfillment Simulation.
 
-```curl
+```sh
 curl --location --request POST 'https://{{accountName}}.vtexcommercestable.com.br/api/checkout/pub/orderForms/simulation?affiliateId={{affiliateId}}={{salesChannelId}}' \
 --header 'Accept: application/vnd.vtex.checkout.debug.v1+json' \
 --header 'Content-Type: application/json' \

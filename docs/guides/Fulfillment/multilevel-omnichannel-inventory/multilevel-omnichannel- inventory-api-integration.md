@@ -10,7 +10,7 @@ Marketplaces following the [External Marketplace protocol](https://developers.vt
 
 External marketplaces and connectors should follow this article's instructions to configure Multilevel Omnichannel Inventory in their marketplace architecture with VTEX.
 
->ℹ️ Before you start, make sure that the necessary [settings](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory#setup-for-vtex-marketplaces) are made in the connected VTEX account, so the feature is fully operational.
+>ℹ️ Before you begin, make sure that the necessary [settings](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory#setup-for-vtex-marketplaces) are made in the connected VTEX account, so the feature is fully operational.
 
 ## API integration overview
 
@@ -116,9 +116,9 @@ Request example
          "seller":"1",
          "price":12
       },
- {
-"marketplaceOrderGroup": "847392476",
-"authorizationReceipt":  {
+   ],
+   "marketplaceOrderGroup": "847392476",
+   "authorizationReceipt":  {
         "date": "{date}",
         "receipt": "{receipt}"
     }
@@ -176,18 +176,18 @@ Request example:
  "invoiceNumber":"7999972",
  "invoiceValue":7450,
  "issuanceDate":"2019-02-07T02:00:00.000Z",
- "invoiceUrl":http://www.invoiceu.rl",
+ "invoiceUrl":"http://www.invoiceu.rl",
  "invoiceKey":"799",
  "trackingNumber":"9997LUX",
  "trackingUrl":"http://www.trackingu.rl",
  "courier":"All postal codes",
  "items": [
-               {
-        "id": "1231",
-        "price": 7450,
-        "quantity": 1
-                               }
-                        [
+      {
+         "id": "1231",
+         "price": 7450,
+         "quantity": 1
+      }
+   ]
 }
 ```
 
