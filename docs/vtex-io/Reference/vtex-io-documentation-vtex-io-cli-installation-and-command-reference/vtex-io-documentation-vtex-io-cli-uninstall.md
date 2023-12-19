@@ -1,57 +1,38 @@
 ---
 title: "Uninstalling VTEX IO's CLI"
 slug: "vtex-io-documentation-vtex-io-cli-uninstall"
+excerpt: "Learn how to uninstall VTEX IO's CLI from your computer."
 hidden: false
 createdAt: "2021-10-20T14:59:19.807Z"
 updatedAt: "2022-12-13T20:17:44.708Z"
 ---
+
 To uninstall VTEX IO's CLI from your system, run the command relative to your operating system or package manager.
 
 >⚠️ This will also remove all [plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) from your system.
 
-<details>
-  <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
-<br>
-  
-- Brew
+## MacOS
 
 ```sh
 brew uninstall vtex
 ```
-  
-<br>
-</details>
 
-<details>
-  <summary><span class="fa fa-linux">&nbsp;</span>Linux</summary>
-<br>
-
-- Standalone
+## Linux
 
 ```sh
 curl -L https://vtex.io/vtexcli/uninstall | sh
 ```
 
-> ℹ️ The standalone is a tarball with a binary that contains its own node.js binary.
+> ℹ️ The standalone is a tarball with a binary that contains its node.js binary.
 
-<br>
-</details>
+## Windows
 
-<details>
-  <summary><span class="fa fa-windows">&nbsp;</span>Windows</summary>
-<br>
+Follow the [Windows uninstall tutorial](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98) to remove the VTEX IO's CLI from your programs list.
 
-- Standalone
-  
-  Follow the [Window's uninstall tutorial](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98) to remove the VTEX IO's CLI from your programs list.
+## Uninstalling VTEX IO's CLI via NPM
 
-<br>
-</details>
-
-### Uninstalling VTEX IO's CLI via NPM
-
-If you have [installed VTEX IO's CLI via NPM](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install), to uninstall it on your machine run the following in your command line:
+If you have [installed VTEX IO's CLI via NPM](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install), to uninstall it on your machine, run the following command:
 
 ```sh
-  yarn global remove vtex
+yarn global remove vtex
 ```
