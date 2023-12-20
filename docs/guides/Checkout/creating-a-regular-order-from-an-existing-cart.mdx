@@ -171,21 +171,22 @@ req.end();
 
 ## Step 2 - Placing the order
 
-Use the obtained `orderFormId` to place a new order via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint, providing the following information in the request body:
+Place a new order via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint, providing the following information in the request body:
 
-- `referenceId`: unique identifier (ID) of the `orderForm` associated with the shopping cart from which the order will be created (`orderFormId`).
+- `referenceId`: `orderFormId` obtained in the previous step, serving as the unique identifier (ID) of the `orderForm` associated with the shopping cart from which the order will be created.
 - `savePersonalData`: set as `true` if the shopper’s data provided during checkout should be saved for future reference (default is `false`).
 - `optinNewsLetter`: set as `true` if the shopper opted to receive the newsletter (default is `false`).
 - `value`: total value of the order without separating cents (e.g., $24.99 is represented by `2499`).
 - `referenceValue`: reference value of the order, without separating cents (e.g., $24.99 is represented by `2499`). This is used for calculating interest, if applicable.
 - `interestValue`: interest rate to be applied if applicable.
 
-The request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of these pieces of information and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
+Upon receiving a `201 Created` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of these pieces of information and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
 
+- `orderId` - ID of the order within VTEX’s Order Management System (OMS). You can find the `orderId` within each object in the orders array.
 - `transactionId` - ID of the transaction, which can be found within the objects contained in the `transactionData.merchantTransactions` array.
 - `addressId` - ID of the customer address. If you plan to use the same address for both shipping and billing, get the `addressId` from the `shippingData.address` object.
 
-Otherwise, if you face errors during the request submission, refer to [Handling HTTP response errors](#handling-http-response-errors) for common error scenarios when placing an order.
+> ⚠️ If you face errors during the request submission, refer to [Handling HTTP response errors when placing the order](#handling-http-response-errors-when-placing-the-order) for common error scenarios when placing an order.
 
 <CH.Code>
 
@@ -257,7 +258,7 @@ req.end();
 
 ---
 
-```json Response 37
+```json Response mark=7,28,65
 {
   "orderForm": null,
   "transactionData": {
@@ -283,12 +284,57 @@ req.end();
     "receiverUri": "https://store.vtexpayments.com.br/split/v976778amgh/payments",
     "gatewayCallbackTemplatePath": "/checkout/gatewayCallback/v976778amgh/{messageCode}"
   },
-  "orders": [],
+  "orders": [
+    {
+      "orderId": "v976778amgh-01",
+      "orderGroup": "v976778amgh",
+      "state": "order-created",
+      "isCheckedIn": false,
+      "sellerOrderId": "00-v976778amgh-01",
+      "storeId": null,
+      "value": 15650,
+      "items": [],
       "sellers": [],
       "totals": [],
-      "clientProfileData": {},
-      "ratesAndBenefitsData": {},
-      "shippingData": {},
+      "clientProfileData": {
+        "attachmentId": "clientProfileData",
+        "email": "marcelo@vtex.com.br",
+        "firstName": "Marcelo",
+        "lastName": "Couto",
+        "document": "71279846675",
+        "documentType": "cpf",
+        "phone": "1234567890",
+        "corporateName": null,
+        "tradeName": null,
+        "corporateDocument": null,
+        "stateInscription": null,
+        "corporatePhone": null,
+        "isCorporate": false,
+        "profileCompleteOnLoading": null,
+        "profileErrorOnLoading": null
+      },
+      "ratesAndBenefitsData": {
+        "attachmentId": "ratesAndBenefitsData",
+        "rateAndBenefitsIdentifiers": [],
+        "teaser": []
+      },
+      "shippingData": {
+        "attachmentId": "shippingData",
+        "address": {
+          "addressType": "residential",
+          "receiverName": "Marcelo",
+          "addressId": "49ad09e5fba8434a8ff1e0faa4b60ceb",
+          "postalCode": "28050987",
+          "city": "Rio de Janeiro",
+          "state": "RJ",
+          "country": "BRA",
+          "street": "Rua da minha casa",
+          "number": "123",
+          "neighborhood": "Copacabana",
+          "complement": "15º andar",
+          "reference": null,
+          "geoCoordinates": []
+        },
         "logisticsInfo": [],
         "availableAddresses": [
           {
@@ -323,35 +369,11 @@ req.end();
         ],
         "merchantName": "STORE"
       },
-      "clientPreferencesData": {
-        "attachmentId": "clientPreferencesData",
-        "locale": "pt-BR",
-        "optinNewsLetter": true
-      },
+      "clientPreferencesData": {},
       "giftRegistryData": null,
       "marketingData": null,
-      "storePreferencesData": {
-        "countryCode": "BRA",
-        "checkToSavePersonDataByDefault": false,
-        "templateOptions": {
-          "toggleCorporate": false
-        },
-        "timeZone": "E. South America Standard Time",
-        "currencyCode": "BRL",
-        "currencyLocale": 1046,
-        "currencySymbol": "R$",
-        "currencyFormatInfo": {
-          "currencyDecimalDigits": 2,
-          "currencyDecimalSeparator": ",",
-          "currencyGroupSeparator": ".",
-          "currencyGroupSize": 3,
-          "startsWithCurrencySymbol": true
-        }
-      },
-      "openTextField": {
-        "attachmentId": "openTextField",
-        "value": null
-      },
+      "storePreferencesData": {},
+      "openTextField": {},
       "changeData": null,
       "salesChannel": "1",
       "followUpEmail": "f1e7309d88dd4633825ce183d52a50a6@ct.vtex.com.br",
@@ -370,97 +392,6 @@ req.end();
 ```
 
 </CH.Code>
-
----
-
-### Handling HTTP response errors
-
-#### 400 - Bad Request (`ORD002`)
-
-`Message error example (code ORD002): "Invalid order form"`
-
-- **Issue:** The `orderFormId` information is not valid.
-- **Troubleshooting:**
-  - Verify that the `orderFormId` is correct.
-  - Ensure that the `orderFormId` corresponds to an existing shopping cart.
-
-<CH.Code show={["Response"]}>
-
-```json Response
-{
-    "fields": {},
-    "error": {
-        "code": "ORD002",
-        "message": "Invalid order form",
-        "exception": null
-    },
-    "operationId": "f01ef909-8b81-4ffd-a91d-82be680d60ff"
-}
-```
-
-</CH.Code>
-
----
-
-#### 400 - Bad Request (`CHK0016`)
-
-`Message error example (code CHK0016): "Payment value does not match with reference value"`
-
-- **Issue:** The `value` and `referenceValue` fields have different values even without the use of interest in the payment. 
-- **Troubleshooting:**
-  - Confirm that the provided `value` and `referenceValue` align correctly.
-  - Check if the interest rate is correctly configured.
-
-```json Response
-{
-    "fields": {},
-    "error": {
-        "code": "CHK0016",
-        "message": "Payment value does not match with reference value",
-        "exception": null
-    },
-    "operationId": "6a080d5f-6911-4469-a661-312e93c23419"
-}
-```
-
----
-
-#### 404 - Not Found
-
-`Message error example: "The requested URL was not found on the server"`
-
-- **Issue:** The requested URL was not found on the server.
-- **Troubleshooting:** Check if the endpoint used is correct.
-
-```html Response
-<body>
- <h1>404 Not Found</h1>
- <p>The requested URL was not found on this server.</p>
-</body>
-```
-
----
-
-#### 500 - Internal Server Error
-
-`Message error example (code ORD005): "The purchase cannot be done without items"`
-
-- **Issue:** The shopping cart (`orderFormId`) informed in the request does not have any item, making it impossible to create an order.
-- **Troubleshooting:**
-  - Verify that the specified shopping cart has items.
-  - Confirm that the `orderFormId` corresponds to a valid and non-empty shopping cart.
-
-```json Response
-{
-    "fields": {},
-    "error": {
-        "code": "ORD005",
-        "message": "The purchase cannot be done without items",
-        "exception": null
-    },
-    "operationId": "673771c0-f5ba-4fa6-800d-bea836c51f93"
-}
-```
 
 ---
 
@@ -656,5 +587,98 @@ req.end();
 ```
 
 </CH.Code>
+
+</CH.Scrollycoding>
+
+## Handling HTTP response errors when placing the order
+
+<CH.Scrollycoding>
+
+### 400 - Bad Request (`ORD002`)
+
+`Message error example (code ORD002): "Invalid order form"`
+
+- **Issue:** The `orderFormId` information is not valid.
+- **Troubleshooting:**
+  - Verify that the `orderFormId` is correct.
+  - Ensure that the `orderFormId` corresponds to an existing shopping cart.
+
+<CH.Code show={["Response"]}>
+
+```json Response
+{
+    "fields": {},
+    "error": {
+        "code": "ORD002",
+        "message": "Invalid order form",
+        "exception": null
+    },
+    "operationId": "f01ef909-8b81-4ffd-a91d-82be680d60ff"
+}
+```
+
+</CH.Code>
+
+---
+
+### 400 - Bad Request (`CHK0016`)
+
+`Message error example (code CHK0016): "Payment value does not match with reference value"`
+
+- **Issue:** The `value` and `referenceValue` fields have different values even without the use of interest in the payment. 
+- **Troubleshooting:**
+  - Confirm that the provided `value` and `referenceValue` align correctly.
+  - Check if the interest rate is correctly configured.
+
+```json Response
+{
+    "fields": {},
+    "error": {
+        "code": "CHK0016",
+        "message": "Payment value does not match with reference value",
+        "exception": null
+    },
+    "operationId": "6a080d5f-6911-4469-a661-312e93c23419"
+}
+```
+
+---
+
+### 404 - Not Found
+
+`Message error example: "The requested URL was not found on the server"`
+
+- **Issue:** The requested URL was not found on the server.
+- **Troubleshooting:** Check if the endpoint used is correct.
+
+```html Response
+<body>
+ <h1>404 Not Found</h1>
+ <p>The requested URL was not found on this server.</p>
+</body>
+```
+
+---
+
+### 500 - Internal Server Error
+
+`Message error example (code ORD005): "The purchase cannot be done without items"`
+
+- **Issue:** The shopping cart (`orderFormId`) informed in the request does not have any item, making it impossible to create an order.
+- **Troubleshooting:**
+  - Verify that the specified shopping cart has items.
+  - Confirm that the `orderFormId` corresponds to a valid and non-empty shopping cart.
+
+```json Response
+{
+    "fields": {},
+    "error": {
+        "code": "ORD005",
+        "message": "The purchase cannot be done without items",
+        "exception": null
+    },
+    "operationId": "673771c0-f5ba-4fa6-800d-bea836c51f93"
+}
+```
 
 </CH.Scrollycoding>
