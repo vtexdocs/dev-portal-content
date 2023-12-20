@@ -11,6 +11,8 @@ This guide will describe how to create an order from an existing shopping cart b
 
 > ℹ️ To place an order from a new cart, access the [Create a regular order using the Checkout API](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api).
 
+> ✅ Try the interactive version of this article by accessing this [link](https://developers.vtex.com/docs/guides/creating-a-regular-order-from-an-existing-cart). Code will be highlighted and focused for your convenience.
+
 ## Getting shopping cart information
 
 The first step is to get the `orderFormId` of the shopping cart you want to create an order. For more information, access the [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id) guide.
