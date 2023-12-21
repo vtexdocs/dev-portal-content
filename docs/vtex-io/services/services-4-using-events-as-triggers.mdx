@@ -6,44 +6,15 @@ createdAt: "2023-10-17T10:45:55.338Z"
 updatedAt: "2023-10-17T11:40:35.480Z"
 ---
 
-With the Analytics client implemented, we want to use events as triggers to the requests. This means that, for every event listened, we should make a request to the Analytics app. So, for every X seconds, we will have new data on **Live Products**.
-
-In VTEX IO, events are often used as triggers to other actions, such as sending emails to the final client. To implement this, we need to configure our app's client and event handler.
-
-## Step-by-step
+With the Analytics client implemented, we want to use the events fired by the `events-example` app as triggers to the requests to the Analytics client. This means that, for every event listened, we should make a request to the Analytics app. So, every 3 seconds, we will have new data on **Live Products**.
 
 <CH.Scrollycoding>
 
-1. As the Analytics client is implemented, we need to use it in the event handler. First, in the `service-course-template/node/event/liveUsersUpdate.ts` file, import the client we implemented in the previous step:
+## Using the Analytics client as a event handler
 
-```ts service-course-template/node/event/liveUsersUpdate.ts focus=1
-import { Clients } from '../clients/index'
+As the Analytics client is already implemented, we can use it in our event handler function. First, in the `service-course-template/node/event/liveUsersUpdate.ts` file, import the client we implemented in the previous step and the `EventContext` from the `@vtex/api` package to access the Analytics client that is within the `ctx` object. Finally, use the `getLiveUsers()` method the Analytics client implements and log the fetched data.
 
-export async function updateLiveUsers() {
-    console.log('EVENT HANDLER: received event')
-}
-```
-
----
-
-2. Now, we need to use the `EventContext` that we already configured before. Import it by updating the method. You can do so as shown in the code to the right.
-
-> You can also globally declare your event context in the `index.ts` file. If you do so, you don't need to import in every file you want to use it.
-
-```ts service-course-template/node/event/liveUsersUpdate.ts focus=2,4
-import { Clients } from '../clients/index'
-import { EventContext } from '@vtex/api'
-
-export async function updateLiveUsers(ctx: EventContext<Clients>) {
-    console.log('EVENT HANDLER: received event')
-}
-```
-
----
-
-3. Now, to use the Analytics client, edit the code as shown in the right panel.
-
-```ts service-course-template/node/event/liveUsersUpdate.ts focus=5:7
+```ts service-course-template/node/event/liveUsersUpdate.ts
 import { Clients } from '../clients/index'
 import { EventContext } from '@vtex/api'
 
@@ -53,11 +24,28 @@ export async function updateLiveUsers(ctx: EventContext<Clients>) {
     return true
 }
 ```
-   
+
+---
+
+## Linking the app
+
+Run `vtex link`. For every event fired, you should see the live users retrieved from the Analytics client.
+
+```sh Terminal
+15:53:44.220 - info: App running service-node@6.38.1  
+15:53:44.229 - info: Available service routes:
+https://myworkspace--myaccount.myvtex.com/_v/app/analytics/realTime service-node@6.38.1  
+15:54:25.279 - info: [18:54:25.495Z]	[72]	myaccount/myworkspace:analytics	200	GET	/_v/app/analytics/realTime	793 ms service-node@6.38.1  
+15:54:44.772 - info: LIVE USERS:  [
+  { slug: '1659', liveUsers: 4 },
+  { slug: '1837', liveUsers: 2 },
+  { slug: '1438', liveUsers: 1 },
+  { slug: '1204', liveUsers: 1 },
+  { slug: '1542', liveUsers: 2 },
+  { slug: '1352', liveUsers: 1 },
+  { slug: '1168', liveUsers: 3 },
+  { slug: '1821', liveUsers: 1 }
+] service-node@6.38.1  
+```
+
 </CH.Scrollycoding>
-
-4. Run `vtex link`. For every event fired, you should see the live users retrieved from Analytics.
-
-   The result should be like this:
-   
-   ![image](https://user-images.githubusercontent.com/43679629/85150833-69ffda80-b229-11ea-9260-b9255adf7d9c.png)

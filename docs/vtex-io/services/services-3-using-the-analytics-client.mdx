@@ -111,9 +111,9 @@ export class Clients extends IOClients {
 
 ## Using the custom client
 
-### Defining the event handler function
+### Defining the handler function
 
-With our new analytics client, let's update our event handler to display the output of the analytics client's `getLiveUsers` method. Go to the `node/handlers/analytics.ts` file and replace the content of `ctx.body` with the method developed in the previous steps (`ctx.analytics.getLiveUsers()`).
+With our new analytics client, let's update its handler function to display the output of the analytics client's `getLiveUsers` method. Go to the `node/handlers/analytics.ts` file and replace the content of `ctx.body` with the method developed in the previous steps (`ctx.analytics.getLiveUsers()`).
 
 ```ts service-course-template/node/handlers/analytics.ts
 export async function analytics(ctx: Context, next: () => Promise<any>) {
@@ -152,11 +152,11 @@ Go to the `node/service.json` file, and define a public route named `analytics` 
 
 ---
 
-### Relating a route to a event handler
+### Relating a route to a handler
 
-Update the `node/index.ts` file to relate a route to an event handler. Note that the `routes` section associates the `analytics` route with the `analytics` event handler function. The `GET` method is associated with the `analytics` event handler.
+Update the `node/index.ts` file to relate a route to a handler. Note that the `routes` section associates the `analytics` route with the `analytics` handler function. The `GET` method is associated with the `analytics` handler.
 
-Therefore, when a GET request is made to the `analytics` route previously defined, it triggers the `analytics` event handler function, which, in turn, executes the `getLiveUsers()` method of the Analytics client, providing real-time insights into product views.
+Therefore, when a GET request is made to the `analytics` route previously defined, it triggers the `analytics` handler function, which, in turn, executes the `getLiveUsers()` method of the Analytics client, providing real-time insights into product views.
 
 ```ts service-course-template/node/index.ts mark=10,50:53
 import {
