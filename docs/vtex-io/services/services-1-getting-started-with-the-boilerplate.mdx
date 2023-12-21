@@ -8,42 +8,53 @@ updatedAt: "2023-10-17T11:40:35.480Z"
 
 The first thing you need to do is clone the [service-course-template](https://github.com/vtex-trainings/service-course-template) boilerplate, which is a template repository that we provide with all the initial files that you need to get started in this course.
 
-Follow the [step-by-step](#step-by-step) instructions to get started with the boilerplate and its dependencies.
-
-## Step-by-step
-
-Follow these instructions to clone both repositories and link the app to your workspace.
-
-1. Clone the boilerplate by running the following command:
-
-    ```shell
-    git clone https://github.com/vtex-trainings/service-course-template
-    ```
-    
-2. Read the [Boilerplate overview](#boilerplate-overview) section to understand the files in the template.
-    
-
-## Boilerplate overview
-
-The [service-course-template](https://github.com/vtex-trainings/service-course-template) boilerplate contains two directories (`/node` and `/graphql`) and the `manifest.json` file, which is an important file to your VTEX IO app because it will be the first communication point with VTEX IO. Check the following sections for information on each of them.
-
-### Understanding the manifest.json file
+Follow the step-by-step instructions to get started with the boilerplate and its dependencies.
 
 <CH.Scrollycoding>
 
-In the `manifest.json` file, you will find the app's information, such as name, vendor, version, and other fields. For now, in this initial state, it is important to understand builders, policies and dependencies:
+## Cloning the boilerplate repository
+
+Clone the `service-course-template` boilerplate by running the command presented in the left. This will create a local copy of the project, equipping you with the necessary files to start the course.
+
+```shell
+git clone https://github.com/vtex-trainings/service-course-template
+```
+
+---
+
+## Understanding the app structure
+
+Open the [service-course-template](https://github.com/vtex-trainings/service-course-template) project in the code editor of your preference. You will notice the project contains three directories (`/docs`, `/node` and `/graphql`), the `manifest.json` file and the `package.json` file.
+
+```txt
+root
+ ┣ 📂 docs
+ ┣ 📂 node
+ ┣ 📂 graphql
+ ┣ 📄 README.md
+ ┣ 📄 manifest.json
+ ┗ 📄 package.json
+```
+
+---
+
+### `manifest.json` file
+
+At the heart of this structure lies the [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file, a crucial document encapsulating metadata about the app. This file not only contains fundamental details such as the app's `name`, `version`, and `title` but also outlines the `builders`, `policies`, and `dependencies` necessary for the app functionality. Let's delve deeper into some of these concepts:
 
 | Field | Type | Description |
 | - | - | - |
-|`builders` | Object | Defines which builders your app will need. In this case, we currently only have the `node` builder, with its respective version. |
-| `policies` | Array | If the app being built needs to access some external services or get some specific data from other places, it needs to declare these policies in this array, even for external APIs. At this point, we have no specific policies yet. |
-|`dependencies` | Object | Other VTEX IO apps your app depends on. Note that the [service-course-template](https://github.com/vtex-trainings/service-course-template) app has a dependency on the [events-example](https://github.com/vtex-apps/events-example) app. The [events-example](https://github.com/vtex-apps/events-example) app, when linked to your account and workspace, is responsible for providing events examples. In the next step, you will clone it as well.  |
+|`builders` | `object` | Specifies the [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) required by the app. Note that the app uses the `node` builder, which is responsible for interpreting [Node.js](https://nodejs.org/en) code. For each declared builder, there will be a dedicated folder specifically designed to be interpreted by that particular builder. |
+| `policies` | `array` | Declares [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) for accessing external services or specific resources needed for the app functioning. |
+|`dependencies` | `object` | Lists other VTEX IO apps on which the app relies. For example, the app is dependent on the [events-example](https://github.com/vtex-apps/events-example) app, which we will use in the following steps to trigger events.  |
 
-```json service-course-template/manifest.json focus=7:9,14:17
+<CH.Code show={["manifest.json"]}>
+
+```json manifest.json focus=7:9,14:17
 {
   "name": "backend-course",
   "vendor": "vtex",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "title": "Backend Course",
   "description": "Reference app for the Backend Course",
   "builders": {
@@ -60,37 +71,60 @@ In the `manifest.json` file, you will find the app's information, such as name, 
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
 ```
-</CH.Scrollycoding>
 
+</CH.Code>
 
-### Understanding the `/node` directory
+---
 
-All directories used during this course are already in this initial project. Most of the directories are empty and will be filled throughout the course. Check the table below to understand the folders and files you will use:
+### `/node` folder
+
+The `/node` folder houses the backend logic of the app, written in [Node.js](https://nodejs.org/en/). Here, Node packages and native libraries, such as [`@vtex/clients`](https://github.com/vtex/io-clients), can be employed to enhance code development.
+
+In this project, our Node code is organized as in the following:
 
 | Folder or file | Description |
 | - | - |
-| `/node/clients` | Both files are almost blank and are now just placeholders for the next steps. |
-| `/node/handlers` | Contains a handler that will be used in the next steps. |
-| `/node/utils` | You will find a file containing global constants declarations (`/node/constants.ts`). |
-| `/node/index.ts` | Contains the initial declarations for the app functionality like the cache declaration and the service declarations, which will be incremented during the course. Here it is also possible to export resolver functions implementations (for GraphQL). |
-| `/node/service.json` | Describes your REST API and some characteristics that will directly impact your app's infrastructure attributes. Read the [next section](#understanding-the-service-json-file) for more details. |
+| `/node/clients` | Holds placeholder files for implementing custom [VTEX IO clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). |
+| `/node/handlers` | Contains handler functions and logic designed to handle specific tasks and events. |
+| `/node/utils` | Holds global constants declarations (`/node/constants.ts`) and other utility fuctions. |
+| `/node/index.ts` | Encompasses initial declarations for app functionality, such as cache and service declarations. This file will evolve throughout the course and also allow for the export of resolver function implementations for GraphQL. |
+| `/node/service.json` | Describes the behavior of the service and attributes that impact the app's infrastructure. |
 
-### Understanding the `service.json` file
+Note that most of the directories are empty and will be filled throughout this course.
 
-<CH.Scrollycoding>
+<CH.Code show={[]}>
 
-Your `service.json` file will be found inside your app's `/node` folder. Check the table below to understand the information available in this file:
+```txt
+node
+ ┣ 📂 clients
+ ┣ 📂 event
+ ┣ 📂 handlers
+ ┣ 📂 utils
+ ┣ 📄 index.ts
+ ┣ 📄 package.json
+ ┣ 📄 service.json
+ ┣ 📄 tsconfig.json
+ ┗ 📄 yarn.lock
+```
+
+</CH.Code>
+
+---
+
+#### `service.json` file
+
+Located within the `/node` folder, the [`service.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-service) file configures the app's infrastructure attributes. Key details are summarized in the following table:
 
 | Field | Type | Description |
 | - | - | - |
-| `memory` | Integer | How much memory in megabytes your app will have allocated. This value will be overwritten if IO detects that your app is abusing memory usage. |
-| `timeout` | Integer | VTEX IO infra will abort the connection if the request time is longer than this timeout, defined in seconds. |
-| `minReplicas` | Integer | Determines how many minimum replicas will be available when your app is running. |
-| `maxReplicas` | Integer | The largest amount of replicas that will be available. |
-| `routes` | Object | Describes your app's REST routes, inside which you will describe the name, (ex: `ssr`), the path, and inform if it's public or private. |
+| `memory` | `integer` | Memory size allocated to the app, in megabytes. This value is subjective to automatic adjustments if excessive usage is detected. |
+| `timeout` | `integer` | Maximum duration for fulfilling a request, in seconds. Requests exceeding this timeout are aborted. |
+| `minReplicas` | `integer` | Minimum number of replicas available when the app is operational. |
+| `maxReplicas` | `integer` | Maximum numbers of replicas available for the app. |
+| `routes` | `object` | Describes the app's REST routes. |
 
-  ```json service-course-template/node/service.json
-  {
+```json node/service.json
+{
   "memory": 256,
   "timeout": 2,
   "minReplicas": 2,
@@ -101,10 +135,22 @@ Your `service.json` file will be found inside your app's `/node` folder. Check t
       "public": true
     }
   }
-  ```
+}
+```
+
+---
+
+### `/graphql` folder
+
+The `/graphql` folder, though currently empty, will be used to house GraphQL-related files in the project. The `/graphql/schema.graphql` file is a common convention for storing the GraphQL schema definition. In a GraphQL schema, you define the types, queries, mutations, and subscriptions that your GraphQL service supports. As our app evolves, we will populate this file with our GraphQL schema.
+
+<CH.Code show={[]}>
+
+```
+graphql
+ ┗ 📄 schema.graphql
+```
+
+</CH.Code>
 
 </CH.Scrollycoding>
-
-### Understanding the `/graphql` directory
-
-On this directory, you will find only the empty directories and the `/graphql/schema.graphql` blank file. This will all be filled throughout the course as well.
