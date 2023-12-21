@@ -178,7 +178,7 @@ Place a new order via the [Place order from an existing cart](https://developers
 - `optinNewsLetter`: set as `true` if the shopper opted to receive the newsletter (default is `false`).
 - `value`: total value of the order without separating cents (e.g., $24.99 is represented by `2499`).
 - `referenceValue`: reference value of the order, without separating cents (e.g., $24.99 is represented by `2499`). This is used for calculating interest, if applicable.
-- `interestValue`: interest rate to be applied if applicable.
+- `interestValue`: interest rate to be applied, if applicable.
 
 Upon receiving a `201 Created` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of these pieces of information and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
 
