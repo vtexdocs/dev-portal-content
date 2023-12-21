@@ -1,0 +1,198 @@
+---
+title: "6. Using GraphQL to retrieve data from Master Data"
+slug: "services-6-using-graphql-to-retrieve-data-from-master-data"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+Now that we have updated the product count, we need to retrieve the top N most viewed products. To do so, we can use Master Data to retrieve the product page view data and sort by the `count` field. We can also limit the length of retrieved products, creating a customized size rank of most-visited products.
+
+To achieve this objective, we'll employ [GraphQL](https://graphql.org/), the technology used by VTEX IO for data retrieval and interface between services and front-end applications. GraphQL allows implementing queries for fetching the exact data you need via types, schemas, and resolvers.
+
+<CH.Scrollycoding>
+
+## Using the `graphql` builder
+
+To enable the use of [GraphQL](https://graphql.org/) in your VTEX IO app, add the `graphql` builder to the app's `manifest.json` file.
+
+```json service-course-template/manifest.json focus=8
+{
+  "name": "backend-course",
+  "vendor": "vtex",
+  "version": "0.0.2",
+  "title": "Backend Course",
+  "description": "Reference app for the Backend Course",
+  "builders": {
+    "graphql": "1.x",
+    "node": "6.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    }
+  ],
+  "dependencies": {
+    "vtex.events-example": "0.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
+```
+
+---
+
+## Creating the GraphQL type
+
+Within the `service-course-template/graphql` folder, create a folder named `types`. Inside this folder, create the `productView.graphql` file to declare the type of the product list we intend to retrieve.
+
+```graphql service-course-template/graphql/types/productView.graphql
+type ProductView {
+   slug: String
+   count: Int
+}
+```
+
+---
+
+## Creating the GraphQL schema
+
+Still within the `service-course-template/graphql` folder, define the schema in the `schema.graphql` file. This schema outlines the structure of our query and the data to be retrieved.
+
+> Optionally, [directives](https://graphql.org/learn/queries/#directives) can be included for scenarios like obtaining user tokens or utilizing cookies. Check out the [graphql-example](https://github.com/vtex-apps/graphql-example) app for advanced usage examples.
+
+```graphql service-course-template/graphql/types/schema.graphql
+type Query {
+   productList(topN: Int): [ProductView]
+}
+```
+
+---
+
+## Creating the GraphQL resolver
+
+With the schema, types, and query defined, create the query's resolver. The resolver determines the actions executed when a query is invoked. In our case, we want to perform a [scroll](https://developers.vtex.com/docs/guides/search-and-scroll-api-queries) on Master Data, ordering by the count (to obtain the top most viewed products) and limiting the page size (the top N).
+
+Back to our `node` implementation, define the resolver by creating a `node/resolvers` folder. In this new folder, add a file named `products.ts` and populate it with the code presented in the right panel.
+
+```ts service-course-template/node/resolvers/products.ts
+import { COURSE_ENTITY } from '../utils/constants'
+
+export const productList = async (
+ _: any,
+ { topN }: { topN: number },
+ { clients: { masterdata } }: Context
+) =>
+ masterdata
+   .scrollDocuments({
+     dataEntity: COURSE_ENTITY,
+     fields: ['count', 'slug'],
+     schema: 'v1',
+     size: topN,
+     sort: `count DESC`,
+   })
+   .then(({ data }) => data)
+```
+
+---
+
+## Using the GraphQL resolver
+
+Import the resolver into the `node/index.ts` file and set up the `graphql` section, connecting your defined queries with the underlying data retrieval logic (`productList`).
+
+Note that resolvers act as the glue between your GraphQL schema and the actual data-fetching logic. When a GraphQL query is executed, the resolver associated with each field in the query is invoked to obtain the corresponding data. In this case, when the `productList` query is executed, the `productList` resolver function (`products.ts`) is triggered to fetch the top N most viewed products from Master Data.
+
+```ts service-course-template/node/index.ts focus=12,56:62
+import {
+  LRUCache,
+  Service,
+  ServiceContext,
+  ParamsContext,
+  RecorderState,
+  method,
+} from '@vtex/api'
+import { Clients } from './clients'
+import { analytics } from './handlers/analytics'
+import { updateLiveUsers } from './event/liveUsersUpdate'
+import { productList } from './resolvers/products'
+
+// Create a LRU memory cache for the Status client.
+// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
+const memoryCache = new LRUCache<string, any>({ max: 5000 })
+metrics.trackCache('status', memoryCache)
+
+declare global {
+  type Context = ServiceContext<Clients, State>
+
+  interface State extends RecorderState {
+    code: number
+  }
+}
+
+const THREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
+
+export default new Service<Clients, State, ParamsContext>({
+  clients: {
+    implementation: Clients,
+    options: {
+      default: {
+        retries: 2,
+        timeout: 10000,
+      },
+      events: {
+        exponentialTimeoutCoefficient: 2,
+        exponentialBackoffCoefficient: 2,
+        initialBackoffDelay: 50,
+        retries: 1,
+        timeout: THREE_SECONDS_MS,
+        concurrency: CONCURRENCY,
+      },
+    },
+  },
+  events: {
+    liveUsersUpdate: updateLiveUsers,
+  },
+  routes: {
+    analytics: method({
+      GET: [analytics],
+    }),
+  },
+  graphql: {
+    resolvers: {
+      Query: {
+        productList,
+      },
+    },
+  },
+})
+```
+
+---
+
+## Linking the app
+
+Finally, run `vtex link` and access the provided GraphQL route.
+
+```sh Terminal mark=8
+17:31:10.803 -info: Build accepted for vtex.service-course-template@0.0.1 at myaccount/myworkspace vtex.builder-hub@0.250.0
+17:31:10.818 - info: Starting build for app vtex.service-course-template@0.0.1 vtex.builder-hub@0.250.0
+17:31:19.588 - warn: node builder overrode the following options in tsconfig.json: target: 'es2017' = 'es2019' vtex.builder-hub@0.250.0
+17:31:27.227 - info: Bundle: 26 files - 34.44MB vtex.builder-hub@0.250.0 
+17:31:27.228 - info: Sent bundle to Apps in 3869ms vtex.builder-hub@0.250.0
+17:31:27.229 - info:App linked successfully vtex.builder-hub@0.250.0
+17:31:27.230 - info: You can try out the queries in this app using the GraphiQLIDE available at:
+https://myworkspace--myaccount.myvtex.com/_v/private/vtex.service-course-template@0.0.1/graphiql/v1 vtex.builder-hub@0.250.0
+```
+
+</CH.Scrollycoding>

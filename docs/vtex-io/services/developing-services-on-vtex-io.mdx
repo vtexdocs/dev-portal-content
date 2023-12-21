@@ -1,0 +1,45 @@
+---
+title: "Developing services on VTEX IO"
+slug: "developing-services-on-vtex-io"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+The VTEX IO platform allows developers to create unique commerce experiences using Web technologies. It’s possible to create frontend blocks for Store Framework, backend services exposing REST or GraphQL APIs, and combine a series of VTEX modules into a complete solution, packaging it into an app.
+
+As VTEX IO powers big ecommerce operations, they require running code on a server. **Services** are how we run **Node.js** or **.NET** code on VTEX IO infrastructure, backed by API abstractions to improve developer experience.
+
+By the end of this tutorial, you will be able to export routes, handle events, and connect with internal and external applications, in order to make your application even better and make the most of VTEX's infrastructure.
+
+* [service-course-template](https://github.com/vtex-trainings/service-course-template)
+* [events-example](https://github.com/vtex-apps/events-example)
+
+## Understanding services
+
+A **Service** must be exported from a VTEX IO app, just like themes or store blocks, using `node` or `dotnet` builders. With these, you are able to develop a REST API without having to set up a server, GraphQL APIs and routes.
+
+Services in VTEX IO support one-command rollbacks and continuous integration. They can export internal and external routes and run on top of Kubernetes. You can count on VTEX IO to manage the scalability of your services.
+
+Inside the `/node` folder of a service is a `service.json` file, where it's possible to declare routes that the service must respond to and other configurations like timeout and memory.
+
+During this course, you will implement some services in VTEX IO and learn more about the possibilities they offer to your development.
+
+## Overview
+
+1. [Getting started with the boilerplate](https://developers.vtex.com/docs/guides/services-1-getting-started-with-the-boilerplate)
+2. [Handling and receiving events](https://developers.vtex.com/docs/guides/services-2-handling-and-receiving-events)
+3. [Using the Analytics client](https://developers.vtex.com/docs/guides/services-3-using-the-analytics-client)
+4. [Using events as triggers](https://developers.vtex.com/docs/guides/services-4-using-events-as-triggers)
+5. [Using the Master Data client](https://developers.vtex.com/docs/guides/services-5-using-the-master-data-client)
+6. [GraphQL: Retrieving data from Master Data](https://developers.vtex.com/docs/guides/services-6-graphql-retrieving-data-from-master-data)
+7. [Using GraphiQL](https://developers.vtex.com/docs/guides/services-7-using-graphiql)
+8. [Conclusion](https://developers.vtex.com/docs/guides/services-conclusion)
+
+## Before you start
+
+Make sure you check the technical requirements to complete this project:
+
+- Basic knowledge of [GraphQL](https://graphql.org/learn/).
+- Experience developing in [Typescript](https://www.typescriptlang.org/) language.
+- The VTEX IO CLI is installed on your computer.

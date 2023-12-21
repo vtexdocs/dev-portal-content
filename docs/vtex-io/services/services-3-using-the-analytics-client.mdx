@@ -1,0 +1,251 @@
+---
+title: "3. Using the Analytics client"
+slug: "services-3-using-the-analytics-client"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+Now that we have successfully set up event listening, our next objective is to gain insights into the live number of views for each product page in our store whenever an event is triggered.
+
+To achieve this, we will implement a [custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) with analytics capabilities. This client will be responsible for retrieving information about a product's number of views from mocked data.
+
+In VTEX IO, a [client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) is responsible for establishing connections with external APIs and other VTEX services. The Analytics client, which will be developed in this step, will execute a REST request, fetching valuable information about product views.
+
+<CH.Scrollycoding>
+
+## Developing a custom client
+
+Navigate to the `service-course-template/node/clients/analytics.ts` file. This is where the Analytics client will be implemented. Observe that the `Analytics` client extends the `AppClient` class from the `@vtex/api` package, ensuring secure communication configurations within your app.
+
+```ts service-course-template/node/clients/analytics.ts mark=3[32:48]
+import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
+
+export default class Analytics extends AppClient {
+    constructor(context: IOContext, options?: InstanceOptions) {
+        super('vtex.mocked-analytics@0.x', context, options)
+    }
+
+    public getLiveUsers(): Promise<LiveUsersProduct[]> {
+        return this.http.get('_v/live-products')
+    }
+}
+
+interface LiveUsersProduct {
+    slug: string
+    liveUsers: number
+}
+```
+
+---
+
+### Defining a constructor
+
+The client includes a constructor, a special method invoked when an object is instantiated from a class. Its primary purpose is to initialize the object's properties and perform any necessary setup, ensuring that the Analytics client can interact effectively with other parts of the app and the `vtex.mocked-analytics` app.
+
+> The [`vtex.mocked-analytics`](https://github.com/vtex-apps/mocked-analytics) app provides mocked live products data via the `/_v/live-products` endpoint.
+
+```ts service-course-template/node/clients/analytics.ts focus=1[20:46],4:6
+import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
+
+export default class Analytics extends AppClient {
+    constructor(context: IOContext, options?: InstanceOptions) {
+        super('vtex.mocked-analytics@0.x', context, options)
+    }
+
+    public getLiveUsers(): Promise<LiveUsersProduct[]> {
+        return this.http.get('_v/live-products')
+    }
+}
+
+interface LiveUsersProduct {
+    slug: string
+    liveUsers: number
+}
+```
+
+---
+
+### Implementing the client's method
+
+Proceed to implement the `getLiveUsers` method, responsible for making an HTTP GET request to the `_v/live-products` endpoint. This method returns a promise for fetching an array, with each element of type `LiveUsersProduct` -  an object containing `slug` (product ID) and `liveUsers` (quantity of users viewing the product).
+
+```ts service-course-template/node/clients/analytics.ts focus=8:10,13:16
+import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
+
+export default class Analytics extends AppClient {
+    constructor(context: IOContext, options?: InstanceOptions) {
+        super('vtex.mocked-analytics@0.x', context, options)
+    }
+
+    public getLiveUsers(): Promise<LiveUsersProduct[]> {
+        return this.http.get('_v/live-products')
+    }
+}
+
+interface LiveUsersProduct {
+    slug: string
+    liveUsers: number
+}
+```
+
+---
+
+### Exporting the custom client
+
+Expose the custom client by extending the default `Clients` implementation. Open the `node/clients/index.ts` file, import the analytics client, and update the `Clients` class as highlighted.
+
+```ts service-course-template/node/clients/index.ts focus=2,6:8
+import { IOClients } from '@vtex/api'
+import Analytics from '../clients/analytics'
+
+// Extend the default IOClients implementation with our own custom clients.
+export class Clients extends IOClients {
+    public get analytics() {
+        return this.getOrSet('analytics', Analytics)
+    }
+}
+```
+
+---
+
+## Using the custom client
+
+### Defining the handler function
+
+With our new analytics client, let's update its handler function to display the output of the analytics client's `getLiveUsers` method. Go to the `node/handlers/analytics.ts` file and replace the content of `ctx.body` with the method developed in the previous steps (`ctx.analytics.getLiveUsers()`).
+
+```ts service-course-template/node/handlers/analytics.ts
+export async function analytics(ctx: Context, next: () => Promise<any>) {
+  const {
+    clients: { analytics },
+  } = ctx
+  ctx.status = 200
+  ctx.body = await analytics.getLiveUsers()
+  ctx.set('cache-control', 'no-cache')
+  await next()
+}
+```
+
+---
+
+### Defining the service route
+
+Go to the `node/service.json` file, and define a public route named `analytics` with the path `/_v/app/analytics/realTime`.
+
+```json service-course-template/node/service.json marked=9:12
+{
+  "memory": 128,
+  "ttl": 10,
+  "timeout": 10,
+  "minReplicas": 2,
+  "maxReplicas": 10,
+  "workers": 4,
+  "routes": {
+    "analytics": {
+      "path": "/_v/app/analytics/realTime",
+      "public": true
+    }
+  }
+}
+```
+
+---
+
+### Relating a route to a handler
+
+Update the `node/index.ts` file to relate a route to a handler. Note that the `routes` section associates the `analytics` route with the `analytics` handler function. The `GET` method is associated with the `analytics` handler.
+
+Therefore, when a GET request is made to the `analytics` route previously defined, it triggers the `analytics` handler function, which, in turn, executes the `getLiveUsers()` method of the Analytics client, providing real-time insights into product views.
+
+```ts service-course-template/node/index.ts mark=10,50:53
+import {
+  LRUCache,
+  Service,
+  ServiceContext,
+  ParamsContext,
+  RecorderState,
+  method,
+} from '@vtex/api'
+import { Clients } from './clients'
+import { analytics } from './handlers/analytics'
+import { updateLiveUsers } from './event/liveUsersUpdate'
+
+// Create a LRU memory cache for the Status client.
+// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
+const memoryCache = new LRUCache<string, any>({ max: 5000 })
+metrics.trackCache('status', memoryCache)
+
+declare global {
+  type Context = ServiceContext<Clients, State>
+
+  interface State extends RecorderState {
+    code: number
+  }
+}
+
+const THREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
+
+export default new Service<Clients, State, ParamsContext>({
+  clients: {
+    implementation: Clients,
+    options: {
+      default: {
+        retries: 2,
+        timeout: 10000,
+      },
+      events: {
+        exponentialTimeoutCoefficient: 2,
+        exponentialBackoffCoefficient: 2,
+        initialBackoffDelay: 50,
+        retries: 1,
+        timeout: THREE_SECONDS_MS,
+        concurrency: CONCURRENCY,
+      },
+    },
+  },
+  events: {
+    liveUsersUpdate: updateLiveUsers,
+  },
+  routes: {
+    analytics: method({
+      GET: [analytics],
+    }),
+  },
+})
+```
+
+---
+
+## Linking the app
+
+To test the Analytics client, link your app using `vtex link`. Then, use [Postman](https://www.postman.com/) or `curl` to send a `GET` request to the designated route, replacing `{workspace}` with your workspace name and `{accountName}` with your VTEX account name.
+
+The request should return status `200 OK` and data in the same format as the example in the right.
+
+<CH.Code>
+
+```cURL cURL
+curl --location '{workspace}--{accountName}.myvtex.com/_v/app/analytics/realTime' \
+--header 'Cookie: janus_sid=fd2b4008-1241-483c-a8ef-bff9230fe63b'
+```
+
+---
+   
+```json Response
+[
+    {
+        "slug": "1926",
+        "liveUsers": 3
+    },
+    {
+        "slug": "1992",
+        "liveUsers": 5
+    }
+]
+```
+
+</CH.Code>
+
+</CH.Scrollycoding>

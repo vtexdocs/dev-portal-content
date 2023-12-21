@@ -1,0 +1,51 @@
+---
+title: "4. Using events as triggers"
+slug: "services-4-using-events-as-triggers"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+Now that we have successfully implemented the Analytics client, our next goal is to leverage events fired by the `events-example` app as triggers for requests to the Analytics client. This approach ensures that with every event received, we make a corresponding request to the Analytics client, resulting in updated data for live product visualizations every 3 seconds.
+
+<CH.Scrollycoding>
+
+## Using the Analytics client as a event handler
+
+As the Analytics client is already implemented, we can use it in our event handler function. First, in the `service-course-template/node/event/liveUsersUpdate.ts` file, import the client we implemented in the previous step and the `EventContext` from the `@vtex/api` package to access the Analytics client that is within the `ctx` object. Finally, use the `getLiveUsers()` method the Analytics client implements and log the fetched data.
+
+```ts service-course-template/node/event/liveUsersUpdate.ts
+import { Clients } from '../clients/index'
+import { EventContext } from '@vtex/api'
+
+export async function updateLiveUsers(ctx: EventContext<Clients>) {
+    const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
+    console.log('LIVE USERS: ', liveUsersProducts)
+    return true
+}
+```
+
+---
+
+## Linking the app
+
+Run `vtex link`. For every event fired, you should see the live users retrieved from the Analytics client.
+
+```sh Terminal
+15:53:44.220 - info: App running service-node@6.38.1  
+15:53:44.229 - info: Available service routes:
+https://myworkspace--myaccount.myvtex.com/_v/app/analytics/realTime service-node@6.38.1  
+15:54:25.279 - info: [18:54:25.495Z]	[72]	myaccount/myworkspace:analytics	200	GET	/_v/app/analytics/realTime	793 ms service-node@6.38.1  
+15:54:44.772 - info: LIVE USERS:  [
+  { slug: '1659', liveUsers: 4 },
+  { slug: '1837', liveUsers: 2 },
+  { slug: '1438', liveUsers: 1 },
+  { slug: '1204', liveUsers: 1 },
+  { slug: '1542', liveUsers: 2 },
+  { slug: '1352', liveUsers: 1 },
+  { slug: '1168', liveUsers: 3 },
+  { slug: '1821', liveUsers: 1 }
+] service-node@6.38.1  
+```
+
+</CH.Scrollycoding>

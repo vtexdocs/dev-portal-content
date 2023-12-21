@@ -1,0 +1,82 @@
+---
+title: "7. Using GraphiQL"
+slug: "services-7-using-graphiql"
+hidden: false
+createdAt: "2023-10-17T10:45:55.338Z"
+updatedAt: "2023-10-17T11:40:35.480Z"
+---
+
+Now that you've implemented the GraphQL query and its resolver, it's time to put it to the test using [GraphiQL](https://github.com/graphql/graphiql), an in-browser GraphQL IDE. Follow the steps below to efficiently experiment with your GraphQL queries.
+
+<CH.Scrollycoding>
+
+## Accessing the GraphiQL IDE
+
+Navigate to the GraphQL route prompted in the terminal after linking your app. The GraphiQL interface consists of three main areas: the coding area, the query variables area, and the debug area, as illustrated below.
+
+![image](https://user-images.githubusercontent.com/43679629/83764107-e900ea80-a64f-11ea-969f-116ea896fe2d.png)
+
+```sh Terminal mark=8
+17:31:10.803 -info: Build accepted for vtex.service-course-template@0.0.1 at myaccount/myworkspace vtex.builder-hub@0.250.0
+17:31:10.818 - info: Starting build for app vtex.service-course-template@0.0.1 vtex.builder-hub@0.250.0
+17:31:19.588 - warn: node builder overrode the following options in tsconfig.json: target: 'es2017' = 'es2019' vtex.builder-hub@0.250.0
+17:31:27.227 - info: Bundle: 26 files - 34.44MB vtex.builder-hub@0.250.0 
+17:31:27.228 - info: Sent bundle to Apps in 3869ms vtex.builder-hub@0.250.0
+17:31:27.229 - info:App linked successfully vtex.builder-hub@0.250.0
+17:31:27.230 - info: You can try out the queries in this app using the GraphiQLIDE available at:
+https://myworkspace--myaccount.myvtex.com/_v/private/vtex.service-course-template@0.0.1/graphiql/v1 vtex.builder-hub@0.250.0
+```
+
+---
+
+## Writing the query
+
+In the coding area, enter the GraphQL query provided in the right panel. This query is designed to retrieve information about the `topN` most viewed products, including their `slug` (product identifier) and `count` (number of views).
+
+```graphql Query
+query ($topN: Int) {
+ productList(topN: $topN){
+   slug
+   count
+ }
+}
+```
+
+---
+
+## Using query variables
+
+Since the declared query involves a variable (`topN`), declare it in the _Query Variables_ area located beneath the coding area. You can expand this area by dragging its title.
+
+```json QueryVariables
+{
+ "topN": 2
+}
+```
+
+---
+
+## Running the query
+
+Click the `Play` button to execute the code, and check the outcome in the debug area.
+
+![image](https://user-images.githubusercontent.com/43679629/83763622-4c3e4d00-a64f-11ea-9615-435811d411c6.png)
+
+```json Response
+{
+  "data": {
+    "productList": [
+      {
+        "slug": "1920",
+        "count": 7
+      },
+      {
+        "slug": "1234",
+        "count": 5
+      }
+    ]
+  }
+}
+```
+
+</CH.Scrollycoding>
