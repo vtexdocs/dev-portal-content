@@ -11,7 +11,7 @@ This step-by-step guide will walk you through the process of using the [Checkout
 
 1. **Get cart information:** The process begins with retrieving the `orderFormId` of the current shopping cart via the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint.
 2. **Place the order:** The process continues by placing the order on the VTEX platform via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint.
-3. **Handling the order payment and processing:** The process ends by sending the necessary payment data to resolve the order payment and processing order details.
+3. **Handling the order payment and processing:** The process ends by [sending the necessary payment data](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) to resolve the order payment and [processing order details](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-).
 
 ## Before you begin
 
