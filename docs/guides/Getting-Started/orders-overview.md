@@ -91,7 +91,7 @@ Placing an order involves the Order Management module and [Checkout](https://dev
 
 ### Retrieving order’s details
 
-> You can only access information from orders created in the last two years, and that same period is valid for customers through [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh). To access order data from previous years, please contact [our Support](https://support.vtex.com/hc/en-us/requests). When granted by our Support, your access to orders placed before the last two years is temporary and will be available for 15 days.
+> You can only access information from orders created in the last two years, and that same period is valid for customers through [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh).
 
 You can fetch information about orders in multiple ways and about specific topics. To learn more about retrieving order content, see the links below.
 
