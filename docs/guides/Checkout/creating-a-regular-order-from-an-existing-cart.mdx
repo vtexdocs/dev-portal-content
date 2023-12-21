@@ -182,7 +182,7 @@ Place a new order via the [Place order from an existing cart](https://developers
 
 Upon receiving a `201 Created` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of these pieces of information and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
 
-- `orderId` - ID of the order within VTEX’s Order Management System (OMS). You can find the `orderId` within each object in the orders array.
+- `orderId` - ID of the order within VTEX’s Order Management System (OMS). You can find the `orderId` within each object in the `orders` array.
 - `transactionId` - ID of the transaction, which can be found within the objects contained in the `transactionData.merchantTransactions` array.
 - `addressId` - ID of the customer address. If you plan to use the same address for both shipping and billing, get the `addressId` from the `shippingData.address` object.
 
