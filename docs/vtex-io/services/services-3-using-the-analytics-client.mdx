@@ -6,68 +6,19 @@ createdAt: "2023-10-17T10:45:55.338Z"
 updatedAt: "2023-10-17T11:40:35.480Z"
 ---
 
-In this step, we present the concept of clients on VTEX IO and explain how to implement an **Analytics client** to get information regarding a product's number of views.
+Now that we have successfully set up event listening, our next objective is to gain insights into the live number of views for each product page in our store whenever an event is triggered.
 
-## VTEX IO Clients
+To achieve this, we will implement a [custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) with analytics capabilities. This client will be responsible for retrieving information about a product's number of views from mocked data.
 
-Clients, on VTEX IO, are abstractions to other services. We tackle complexities when setting up an HTTP client, for example, so you can focus on the real value of your software. Whenever you need to set up a connection with an external API or another VTEX service, you should create a client. Some standard clients are already built into VTEX IO, check them [here](https://github.com/vtex/node-vtex-api/blob/ccf4d8f8d3208007c4bfd558baf979df8d825af8/src/clients/IOClients.ts).
-
-If you already got to know more about IO services, you probably know that your implementation exports functions that receive a context object. These functions can be a resolver function to a GraphQL field, a middleware to an HTTP server or an event handler, and, in all of them, you receive a `ctx` (or however you wanna call it) object of type `Context`, and it is inside of `ctx.clients` where you’ll find each client.
-
-Learn more about using and creating clients [on this guide](https://developers.vtex.com/docs/guides/how-to-use-and-create-clients-on-vtex-io).
-
-## Analytics client
-
-The **Analytics client** that will be created in this step will make a REST request in which it will retrieve information about product views. This client needs to have a function that will be used on a handler for a specific route and this is how it can be tested.
-
-## Step-by-step
-
-Follow the steps below to implement the Analytics client:
+In VTEX IO, a [client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) is responsible for establishing connections with external APIs and other VTEX services. The Analytics client, which will be developed in this step, will execute a REST request, fetching valuable information about product views.
 
 <CH.Scrollycoding>
 
-1. In the `service-course-template/node/clients/` directory, you will find a file called `analytics.ts`, which already has the code to the right. This is where you'll implement your client.
+## Developing a custom client
 
-   You can see in this code block that `Analytics` is a client that extends from `AppClient` because this class offers pre-configurations that assure that your client has secure communication with other parts of your app.
+Navigate to the `service-course-template/node/clients/analytics.ts` file. This is where the Analytics client will be implemented. Observe that the `Analytics` client extends the `AppClient` class from the `@vtex/api` package, ensuring secure communication configurations within your app.
 
-```ts service-course-template/node/clients/analytics.ts
-import { AppClient } from '@vtex/api'
-
-export default class Analytics extends AppClient {}
-```
-
----
-
-2. The client needs to have a constructor and just a single method, called `getLiveUsers`. This method returns a promise of an array that its elements are of the type `LiveUsersProduct`. Use the code to the right to add the constructor to the client.
-
-   The interface that is defined is going to be used as a typing on the method that we'll implement.
-
-```ts service-course-template/node/clients/analytics.ts focus=1[20:46],4:8,11:14
-import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
-
-export default class Analytics extends AppClient {
-    constructor(context: IOContext, options?: InstanceOptions) {
-        super('vtex.mocked-analytics@0.x', context, options)
-    }
-
-    public getLiveUsers(): Promise<LiveUsersProduct[]> { }
-}
-
-interface LiveUsersProduct {
-    slug: string
-    liveUsers: number
-}
-```
-   
----
-
-3. Now it's necessary to implement the `getLiveUsers` method. It returns an HTTP GET request to a well-defined endpoint that is responsible for getting the data that is needed in this application. So add the highlighted line to the method `getLiveUsers`.
-
-   The method that you've just created will get the necessary data for this application, which is an array of objects with two fields:
-   - `slug`: String that represents the product ID.
-   - `liveUsers`: Number that represents the quantity of users visualizing this product.
-
-```ts service-course-template/node/clients/analytics.ts focus=9
+```ts service-course-template/node/clients/analytics.ts mark=3[32:48]
 import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
 
 export default class Analytics extends AppClient {
@@ -86,13 +37,63 @@ interface LiveUsersProduct {
 }
 ```
 
-4. The `_v/live-products` API endpoint we call needs the app `mocked-analytics` to run, or your `getLiveUsers` method will not see anything there. To check if the application is already installed, run the command `vtex list`. If not, use the following command: `vtex install vtex.mocked-analytics`.
+---
+
+### Defining a constructor
+
+The client includes a constructor, a special method invoked when an object is instantiated from a class. Its primary purpose is to initialize the object's properties and perform any necessary setup, ensuring that the Analytics client can interact effectively with other parts of the app and the `vtex.mocked-analytics` app.
+
+> The [`vtex.mocked-analytics`](https://github.com/vtex-apps/mocked-analytics) app provides mocked live products data via the `/_v/live-products` endpoint.
+
+```ts service-course-template/node/clients/analytics.ts focus=1[20:46],4:6
+import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
+
+export default class Analytics extends AppClient {
+    constructor(context: IOContext, options?: InstanceOptions) {
+        super('vtex.mocked-analytics@0.x', context, options)
+    }
+
+    public getLiveUsers(): Promise<LiveUsersProduct[]> {
+        return this.http.get('_v/live-products')
+    }
+}
+
+interface LiveUsersProduct {
+    slug: string
+    liveUsers: number
+}
+```
 
 ---
 
-5. With your analytics client already implemented, it's necessary to declare it as one of the clients in the `Clients` class, so it will be accessible using the `Context`.
+### Implementing the client's method
 
-   So, in the `service-course-template/node/clients/` directory, go to the file called `index.ts` and add a `get` method to the class that refers to the analytics client. It's also necessary to import the client that you created.
+Proceed to implement the `getLiveUsers` method, responsible for making an HTTP GET request to the `_v/live-products` endpoint. This method returns a promise for fetching an array, with each element of type `LiveUsersProduct` -  an object containing `slug` (product ID) and `liveUsers` (quantity of users viewing the product).
+
+```ts service-course-template/node/clients/analytics.ts focus=8:10,13:16
+import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
+
+export default class Analytics extends AppClient {
+    constructor(context: IOContext, options?: InstanceOptions) {
+        super('vtex.mocked-analytics@0.x', context, options)
+    }
+
+    public getLiveUsers(): Promise<LiveUsersProduct[]> {
+        return this.http.get('_v/live-products')
+    }
+}
+
+interface LiveUsersProduct {
+    slug: string
+    liveUsers: number
+}
+```
+
+---
+
+### Exporting the custom client
+
+Expose the custom client by extending the default `Clients` implementation. Open the `node/clients/index.ts` file, import the analytics client, and update the `Clients` class as highlighted.
 
 ```ts service-course-template/node/clients/index.ts focus=2,6:8
 import { IOClients } from '@vtex/api'
@@ -108,11 +109,13 @@ export class Clients extends IOClients {
 
 ---
 
-6. To see it working, it's possible to use `getLiveUsers` method inside the handler for the analytics client. Using a route that it's already defined in the project, it is possible to send a request to it and the handler responsible for this route will call the method that we created.
+## Using the custom client
 
-   Inside the `node` directory, there is a folder called `handlers`. There is already a file named `analytics.ts`, in which it's necessary to do two things for your test to work: get the analytics client from `ctx` and replace the content of `ctx.body` with the method mentioned before, as you can see in the code to the right.
+### Defining the event handler function
 
-```ts service-course-template/node/handlers/analytics.ts focus=2:7
+With our new analytics client, let's update our event handler to display the output of the analytics client's `getLiveUsers` method. Go to the `node/handlers/analytics.ts` file and replace the content of `ctx.body` with the method developed in the previous steps (`ctx.analytics.getLiveUsers()`).
+
+```ts service-course-template/node/handlers/analytics.ts
 export async function analytics(ctx: Context, next: () => Promise<any>) {
   const {
     clients: { analytics },
@@ -126,7 +129,102 @@ export async function analytics(ctx: Context, next: () => Promise<any>) {
 
 ---
 
-7. To test it, make sure your workspace is linked by running `vtex link` and use [Postman](https://www.postman.com/) to send a `GET` request to the route, replacing `{workspace}` with your workspace name and `{accountName}` with your VTEX account name.
+### Defining the service route
+
+Go to the `node/service.json` file, and define a public route named `analytics` with the path `/_v/app/analytics/realTime`.
+
+```json service-course-template/node/service.json marked=9:12
+{
+  "memory": 128,
+  "ttl": 10,
+  "timeout": 10,
+  "minReplicas": 2,
+  "maxReplicas": 10,
+  "workers": 4,
+  "routes": {
+    "analytics": {
+      "path": "/_v/app/analytics/realTime",
+      "public": true
+    }
+  }
+}
+```
+
+---
+
+### Relating a route to a event handler
+
+Update the `node/index.ts` file to relate a route to an event handler. Note that the `routes` section associates the `analytics` route with the `analytics` event handler function. The `GET` method is associated with the `analytics` event handler.
+
+Therefore, when a GET request is made to the `analytics` route previously defined, it triggers the `analytics` event handler function, which, in turn, executes the `getLiveUsers()` method of the Analytics client, providing real-time insights into product views.
+
+```ts service-course-template/node/index.ts mark=10,50:53
+import {
+  LRUCache,
+  Service,
+  ServiceContext,
+  ParamsContext,
+  RecorderState,
+  method,
+} from '@vtex/api'
+import { Clients } from './clients'
+import { analytics } from './handlers/analytics'
+import { updateLiveUsers } from './event/liveUsersUpdate'
+
+// Create a LRU memory cache for the Status client.
+// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
+const memoryCache = new LRUCache<string, any>({ max: 5000 })
+metrics.trackCache('status', memoryCache)
+
+declare global {
+  type Context = ServiceContext<Clients, State>
+
+  interface State extends RecorderState {
+    code: number
+  }
+}
+
+const THREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
+
+export default new Service<Clients, State, ParamsContext>({
+  clients: {
+    implementation: Clients,
+    options: {
+      default: {
+        retries: 2,
+        timeout: 10000,
+      },
+      events: {
+        exponentialTimeoutCoefficient: 2,
+        exponentialBackoffCoefficient: 2,
+        initialBackoffDelay: 50,
+        retries: 1,
+        timeout: THREE_SECONDS_MS,
+        concurrency: CONCURRENCY,
+      },
+    },
+  },
+  events: {
+    liveUsersUpdate: updateLiveUsers,
+  },
+  routes: {
+    analytics: method({
+      GET: [analytics],
+    }),
+  },
+})
+```
+
+---
+
+## Linking the app
+
+To test the Analytics client, link your app using `vtex link`. Then, use [Postman](https://www.postman.com/) or `curl` to send a `GET` request to the designated route, replacing `{workspace}` with your workspace name and `{accountName}` with your VTEX account name.
+
+The request should return status `200 OK` and data in the same format as the example in the right.
+
+<CH.Code>
 
 ```cURL cURL
 curl --location '{workspace}--{accountName}.myvtex.com/_v/app/analytics/realTime' \
@@ -134,8 +232,6 @@ curl --location '{workspace}--{accountName}.myvtex.com/_v/app/analytics/realTime
 ```
 
 ---
-
-8. Check if the response contains status `200 OK` and data in the same format as the example as shown to the right. If yes, this means the test worked. If not, repeat the steps in this guide.
    
 ```json Response
 [
@@ -149,5 +245,7 @@ curl --location '{workspace}--{accountName}.myvtex.com/_v/app/analytics/realTime
     }
 ]
 ```
+
+</CH.Code>
 
 </CH.Scrollycoding>
