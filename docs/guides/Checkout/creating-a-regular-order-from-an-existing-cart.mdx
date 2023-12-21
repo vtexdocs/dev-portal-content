@@ -1,0 +1,684 @@
+---
+title: "Creating a regular order from an existing cart"
+slug: "creating-a-regular-order-from-an-existing-cart"
+hidden: false
+createdAt: "2023-07-18T17:08:52.219Z"
+updatedAt: "2023-07-18T17:08:52.219Z"
+excerpt: "Learn how to use VTEX APIs to place a regular order from an existing cart."
+---
+
+This step-by-step guide will walk you through the process of using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) to create an order from an existing shopping cart. This process is divided into the following steps:
+
+1. **Get cart information:** The process begins with retrieving the `orderFormId` of the current shopping cart via the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint.
+2. **Place the order:** The process continues by placing the order on the VTEX platform via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint.
+3. **Handling the order payment and processing:** The process ends by [sending the necessary payment data](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) to resolve the order payment and [processing order details](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-).
+
+## Before you begin
+
+Before proceeding any further, ensure that you have a valid `appKey` and `appToken` granted with the necessary permissions to access the [Checkout](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway](https://developers.vtex.com/docs/api-reference/payments-gateway-api) APIs. For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
+
+> ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code for each phase or parameter will be highlighted on the right side of the screen.
+
+<CH.Scrollycoding>
+
+## Step 1 - Getting cart information
+
+Send a `GET` request to the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint to retrieve the `orderFormId` of the shopping cart you intend to use to create an order. 
+
+> For more information, access the [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id) guide.
+
+<CH.Code>
+
+```shell Shell mark=2[20:30],2[32:49]
+curl --request get \
+     --url https://apiexamples.vtexcommercestable.com.br/api/checkout/pub/orderForm \
+     --header 'Accept: application/json' \
+     --header 'Content-Type: application/json'
+```
+
+```python Python mark=3[37:47],3[49:66]
+import http.client
+
+conn = http.client.HTTPSConnection("apiexamples.vtexcommercestable.com.br")
+
+headers = {
+    'Accept': "application/json",
+    'Content-Type': "application/json"
+    }
+
+conn.request("get", "/api/checkout/pub/orderForm", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:25],5[27:44]
+const http = require("https");
+
+const options = {
+	"method": "get",
+	"hostname": "apiexamples.vtexcommercestable.com.br",
+	"port": null,
+	"path": "/api/checkout/pub/orderForm",
+	"headers": {
+		"Accept": "application/json",
+		"Content-Type": "application/json"
+	}
+};
+
+const req = http.request(options, function (res) {
+	const chunks = [];
+
+	res.on("data", function (chunk) {
+		chunks.push(chunk);
+	});
+
+	res.on("end", function () {
+		const body = Buffer.concat(chunks);
+		console.log(body.toString());
+	});
+});
+
+req.end();
+```
+
+---
+
+```json Response mark=2
+{
+  "orderFormId": "9ceee0fde6db489fbc682a0e2ab13a86",
+  "salesChannel": "1",
+  "loggedIn": false,
+  "isCheckedIn": false,
+  "storeId": null,
+  "checkedInPickupPointId": null,
+  "allowManualPrice": false,
+  "canEditData": true,
+  "userProfileId": null,
+  "userType": null,
+  "ignoreProfileData": false,
+  "value": 0,
+  "messages": [],
+  "items": [],
+  "selectableGifts": [],
+  "totalizers": [],
+  "shippingData": null,
+  "clientProfileData": {
+    "email": null,
+    "firstName": null,
+    "lastName": null,
+    "document": null,
+    "documentType": null,
+    "phone": null,
+    "corporateName": null,
+    "tradeName": null,
+    "corporateDocument": null,
+    "stateInscription": null,
+    "corporatePhone": null,
+    "isCorporate": false,
+    "profileCompleteOnLoading": null,
+    "profileErrorOnLoading": null,
+    "customerClass": null
+  },
+  "paymentData": {
+    "installmentOptions": [],
+    "paymentSystems": [],
+    "payments": [],
+    "giftCards": [],
+    "giftCardMessages": [],
+    "availableAccounts": [],
+    "availableTokens": []
+  },
+  "marketingData": null,
+  "sellers": [],
+  "clientPreferencesData": {
+    "locale": "pt-BR",
+    "optinNewsLetter": null
+  },
+  "commercialConditionData": null,
+  "storePreferencesData": {
+    "countryCode": "BRA",
+    "saveUserData": true,
+    "timeZone": "E. South America Standard Time",
+    "currencyCode": "BRL",
+    "currencyLocale": 1046,
+    "currencySymbol": "R$",
+    "currencyFormatInfo": {
+      "currencyDecimalDigits": 2,
+      "currencyDecimalSeparator": ",",
+      "currencyGroupSeparator": ".",
+      "currencyGroupSize": 3,
+      "startsWithCurrencySymbol": true
+    }
+  },
+  "giftRegistryData": null,
+  "openTextField": null,
+  "invoiceData": null,
+  "customData": null,
+  "itemMetadata": null,
+  "hooksData": null,
+  "ratesAndBenefitsData": null,
+  "subscriptionData": null,
+  "itemsOrdination": null
+}
+```
+
+</CH.Code>
+
+---
+
+## Step 2 - Placing the order
+
+Place a new order via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint, providing the following information in the request body:
+
+- `referenceId`: `orderFormId` obtained in the previous step, serving as the unique identifier (ID) of the `orderForm` associated with the shopping cart from which the order will be created.
+- `savePersonalData`: set as `true` if the shopper’s data provided during checkout should be saved for future reference (default is `false`).
+- `optinNewsLetter`: set as `true` if the shopper opted to receive the newsletter (default is `false`).
+- `value`: total value of the order without separating cents (e.g., $24.99 is represented by `2499`).
+- `referenceValue`: reference value of the order, without separating cents (e.g., $24.99 is represented by `2499`). This is used for calculating interest, if applicable.
+- `interestValue`: interest rate to be applied, if applicable.
+
+Upon receiving a `201 Created` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of these pieces of information and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
+
+- `orderId` - ID of the order within VTEX’s Order Management System (OMS). You can find the `orderId` within each object in the `orders` array.
+- `transactionId` - ID of the transaction, which can be found within the objects contained in the `transactionData.merchantTransactions` array.
+- `addressId` - ID of the customer address. If you plan to use the same address for both shipping and billing, get the `addressId` from the `shippingData.address` object.
+
+> ⚠️ If you face errors during the request submission, refer to [Handling HTTP response errors when placing the order](#handling-http-response-errors-when-placing-the-order) for common error scenarios when placing an order.
+
+<CH.Code>
+
+```shell Shell mark=2[21:31],2[33:50],2[86:98],5[14:165]
+curl --request post \
+     --url 'https://apiexamples.vtexcommercestable.com.br/api/checkout/pub/orderForm/{orderFormId}/transaction' \
+     --header 'Accept: application/json' \
+     --header 'Content-Type: application/json' \
+     --data '{"referenceId":"41a22925298a4ddca95318131a25b000","savePersonalData":false,"optinNewsLetter":false,"value":6800,"referenceValue":6800,"interestValue":0}'
+```
+
+```python Python mark=3[37:47],3[49:66],12[51:63],5
+import http.client
+
+conn = http.client.HTTPSConnection("apiexamples.vtexcommercestable.com.br")
+
+payload = "{\"referenceId\":\"41a22925298a4ddca95318131a25b000\",\"savePersonalData\":false,\"optinNewsLetter\":false,\"value\":6800,\"referenceValue\":6800,\"interestValue\":0}"
+
+headers = {
+    'Accept': "application/json",
+    'Content-Type': "application/json"
+    }
+
+conn.request("post", "/api/checkout/pub/orderForm/{orderFormId}/transaction", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:25],5[27:44],7[39:51],27:34
+const http = require("https");
+
+const options = {
+	"method": "post",
+	"hostname": "apiexamples.vtexcommercestable.com.br",
+	"port": null,
+	"path": "/api/checkout/pub/orderForm/{orderFormId}/transaction",
+	"headers": {
+		"Accept": "application/json",
+		"Content-Type": "application/json"
+	}
+};
+
+const req = http.request(options, function (res) {
+	const chunks = [];
+
+	res.on("data", function (chunk) {
+		chunks.push(chunk);
+	});
+
+	res.on("end", function () {
+		const body = Buffer.concat(chunks);
+		console.log(body.toString());
+	});
+});
+
+req.write(JSON.stringify({
+  referenceId: '41a22925298a4ddca95318131a25b000',
+  savePersonalData: false,
+  optinNewsLetter: false,
+  value: 6800,
+  referenceValue: 6800,
+  interestValue: 0
+}));
+req.end();
+```
+
+---
+
+```json Response mark=7,28,65
+{
+  "orderForm": null,
+  "transactionData": {
+    "merchantTransactions": [
+      {
+        "id": "STORE",
+        "transactionId": "62FEDE228E2144649CF67812C4E5ER79",
+        "merchantName": "STORE",
+        "payments": [
+          {
+            "paymentSystem": "6",
+            "bin": null,
+            "accountId": null,
+            "value": 15650,
+            "referenceValue": 15650,
+            "giftCardRedemptionCode": null,
+            "giftCardProvider": null,
+            "giftCardId": null
+          }
+        ]
+      }
+    ],
+    "receiverUri": "https://store.vtexpayments.com.br/split/v976778amgh/payments",
+    "gatewayCallbackTemplatePath": "/checkout/gatewayCallback/v976778amgh/{messageCode}"
+  },
+  "orders": [
+    {
+      "orderId": "v976778amgh-01",
+      "orderGroup": "v976778amgh",
+      "state": "order-created",
+      "isCheckedIn": false,
+      "sellerOrderId": "00-v976778amgh-01",
+      "storeId": null,
+      "value": 15650,
+      "items": [],
+      "sellers": [],
+      "totals": [],
+      "clientProfileData": {
+        "attachmentId": "clientProfileData",
+        "email": "marcelo@vtex.com.br",
+        "firstName": "Marcelo",
+        "lastName": "Couto",
+        "document": "71279846675",
+        "documentType": "cpf",
+        "phone": "1234567890",
+        "corporateName": null,
+        "tradeName": null,
+        "corporateDocument": null,
+        "stateInscription": null,
+        "corporatePhone": null,
+        "isCorporate": false,
+        "profileCompleteOnLoading": null,
+        "profileErrorOnLoading": null
+      },
+      "ratesAndBenefitsData": {
+        "attachmentId": "ratesAndBenefitsData",
+        "rateAndBenefitsIdentifiers": [],
+        "teaser": []
+      },
+      "shippingData": {
+        "attachmentId": "shippingData",
+        "address": {
+          "addressType": "residential",
+          "receiverName": "Marcelo",
+          "addressId": "49ad09e5fba8434a8ff1e0faa4b60ceb",
+          "postalCode": "28050987",
+          "city": "Rio de Janeiro",
+          "state": "RJ",
+          "country": "BRA",
+          "street": "Rua da minha casa",
+          "number": "123",
+          "neighborhood": "Copacabana",
+          "complement": "15º andar",
+          "reference": null,
+          "geoCoordinates": []
+        },
+        "logisticsInfo": [],
+        "availableAddresses": [
+          {
+            "addressType": "residential",
+            "receiverName": "Marcelo",
+            "addressId": "49ad09e5fba8434a8ff1e0faa4b60ceb",
+            "postalCode": "28050642",
+            "city": "Rio de Janeiro",
+            "state": "RJ",
+            "country": "BRA",
+            "street": "Rua da minha casa",
+            "number": "123",
+            "neighborhood": "Copacabana",
+            "complement": "15º andar",
+            "reference": null,
+            "geoCoordinates": []
+          }
+        ]
+      },
+      "paymentData": {
+        "attachmentId": "paymentData",
+        "transactionId": "62FEDE228E2144649CF67812C4E5DD87",
+        "payments": [],
+        "giftCards": [],
+        "transactions": [
+          {
+            "isActive": true,
+            "transactionId": "62FEDE228E2144649CF67812C4E5DD87",
+            "merchantName": "STORE",
+            "payments": []
+          }
+        ],
+        "merchantName": "STORE"
+      },
+      "clientPreferencesData": {},
+      "giftRegistryData": null,
+      "marketingData": null,
+      "storePreferencesData": {},
+      "openTextField": {},
+      "changeData": null,
+      "salesChannel": "1",
+      "followUpEmail": "f1e7309d88dd4633825ce183d52a50a6@ct.vtex.com.br",
+      "creationDate": "2017-02-16T23:42:43.9605088Z",
+      "lastChange": "2017-02-16T23:42:47.62285Z",
+      "timeZoneCreationDate": "2017-02-16T21:42:43.9605088",
+      "timeZoneLastChange": "2017-02-16T21:42:47.62285",
+      "isCompleted": false,
+      "hostName": "ambienteqa",
+      "merchantName": null,
+      "userType": "",
+      "roundingError": 0
+    }
+  ]
+}
+```
+
+</CH.Code>
+
+---
+
+## Step 3 - Resolving the order payment
+
+Now, we will communicate the necessary payment data to VTEX for the finalization of the order's payment. Note that from now on, you have 5 (five) minutes to complete the payment process.
+
+- Send a request to the [Send payments information public](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) endpoint, considering the following:
+
+  - Use the `orderFormId` value obtained in the previous step as the `orderId` query-string parameter.
+  - Use the `transactionId` value obtained in the previous step as a path parameter.
+  - Ensure that the request body is based on the `paymentData` section of your `orderForm`.
+  - In the `fields` object, use the `addressId` field to reference an existing address or introduce a new `address` object for an entirely new address.
+
+> If you intend to send saved credit card data, you can use the [Send payments with saved credit card](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/payments) endpoint instead.
+
+<CH.Code show={["Shell", "Python", "Node.js", "Response"]}>
+
+```shell Shell mark=2[17:29],2[72:86],2[105:113],5[31:38],6[33:42],7[10:407]
+curl --request post \
+ --url 'https://{accountName}.vtexpayments.com.br/api/pub/transactions/{transactionId}/payments?orderId={orderId}' \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '[{"paymentSystem":4,"installments":1,"currencyCode":"BRL","value":100,"installmentsInterestRate":0,"installmentsValue":100,"referenceValue":100,"fields":{"holderName":"UserTest","cardNumber":"5378244888889174","validationCode":"231","dueDate":"10/19","document":"8041734561","accountId":"","address":null,"callbackUrl":""},"transaction":{"id":"{{transactionId}}","merchantName":"{{accountName}}"}}]'
+```
+
+```python Python mark=3[37:49],10[25:32],11[27:36],14[45:59],14[78:86]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexpayments.com.br")
+
+payload = "[{\"paymentSystem\":4,\"installments\":1,\"currencyCode\":\"BRL\",\"value\":100,\"installmentsInterestRate\":0,\"installmentsValue\":100,\"referenceValue\":100,\"fields\":{\"holderName\":\"UserTest\",\"cardNumber\":\"5378244888889174\",\"validationCode\":\"231\",\"dueDate\":\"10/19\",\"document\":\"8041734561\",\"accountId\":\"\",\"address\":null,\"callbackUrl\":\"\"},\"transaction\":{\"id\":\"{{transactionId}}\",\"merchantName\":\"{{accountName}}\"}}]"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("post", "/api/pub/transactions/{transactionId}/payments?orderId={orderId}", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],11[25:32],12[27:36],30:49,8[33:47],8[66:74]
+const http = require("https");
+
+const options = {
+ "method": "post",
+ "hostname": "{accountName}.vtexpayments.com.br",
+ "port": null,
+ "path": "/api/pub/transactions/{transactionId}/payments?orderId={orderId}",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify([
+  {
+    paymentSystem: 4,
+    installments: 1,
+    currencyCode: 'BRL',
+    value: 100,
+    installmentsInterestRate: 0,
+    installmentsValue: 100,
+    referenceValue: 100,
+    fields: {
+      holderName: 'UserTest',
+      cardNumber: '5378244888889174',
+      validationCode: '231',
+      dueDate: '10/19',
+      document: '8041734561',
+      accountId: '',
+      address: null,
+      callbackUrl: ''
+    },
+    transaction: {id: '{{transactionId}}', merchantName: '{{accountName}}'}
+  }
+]));
+req.end();
+```
+
+---
+
+```txt Response
+200 OK
+```
+
+</CH.Code>
+
+---
+
+## Step 4 - Processing and validating the order
+
+In this final step, we will process the order.
+
+- Send a request to the [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-) endpoint. If the payment is processed without any issues, the order should be successfully placed. Otherwise, a `status 500` error might occur.
+
+> Note that this process uses the gateway connectors configured in your VTEX environment. Be careful to prevent any unwanted charges or unexpected payment denials.
+
+<CH.Code show={["Shell", "Python", "Node.js", "Response"]}>
+
+```shell Shell mark=2[18:30],2[32:44],2[86:97],5[21:28],6[32:39],7[34:43]
+curl --request post \
+  --url 'https://{accountName}.{environment}.com.br/api/checkout/pub/gatewayCallback/{orderGroup}' \
+  --header 'Accept: application/json' \
+  --header 'Content-Type: application/json' \
+  --header 'Cookie: {cookie}' \
+  --header 'X-VTEX-API-AppKey: {appKey}' \
+  --header 'X-VTEX-API-AppToken: {appToken}'
+```
+
+```python Python mark=3[37:49],3[51:63],9[25:32],10[27:36],6[14:21],13[57:68]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.{environment}.com.br")
+
+headers = {
+  'Cookie': "{cookie}",
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("post", "/api/checkout/pub/gatewayCallback/{orderGroup}", headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],5[29:41],12[25:32],13[27:36],7[45:56]
+const http = require("https");
+
+const options = {
+ "method": "post",
+ "hostname": "{accountName}.{environment}.com.br",
+ "port": null,
+ "path": "/api/checkout/pub/gatewayCallback/{orderGroup}",
+ "headers": {
+  "Cookie": "{cookie}",
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.end();
+```
+
+---
+
+```txt Response
+200 OK
+```
+
+</CH.Code>
+
+</CH.Scrollycoding>
+
+## Handling HTTP response errors when placing the order
+
+<CH.Scrollycoding>
+
+### 400 - Bad Request (`ORD002`)
+
+`Message error example (code ORD002): "Invalid order form"`
+
+- **Issue:** The `orderFormId` information is not valid.
+- **Troubleshooting:**
+  - Verify that the `orderFormId` is correct.
+  - Ensure that the `orderFormId` corresponds to an existing shopping cart.
+
+<CH.Code show={["Response"]}>
+
+```json Response
+{
+    "fields": {},
+    "error": {
+        "code": "ORD002",
+        "message": "Invalid order form",
+        "exception": null
+    },
+    "operationId": "f01ef909-8b81-4ffd-a91d-82be680d60ff"
+}
+```
+
+</CH.Code>
+
+---
+
+### 400 - Bad Request (`CHK0016`)
+
+`Message error example (code CHK0016): "Payment value does not match with reference value"`
+
+- **Issue:** The `value` and `referenceValue` fields have different values even without the use of interest in the payment. 
+- **Troubleshooting:**
+  - Confirm that the provided `value` and `referenceValue` align correctly.
+  - Check if the interest rate is correctly configured.
+
+```json Response
+{
+    "fields": {},
+    "error": {
+        "code": "CHK0016",
+        "message": "Payment value does not match with reference value",
+        "exception": null
+    },
+    "operationId": "6a080d5f-6911-4469-a661-312e93c23419"
+}
+```
+
+---
+
+### 404 - Not Found
+
+`Message error example: "The requested URL was not found on the server"`
+
+- **Issue:** The requested URL was not found on the server.
+- **Troubleshooting:** Check if the endpoint used is correct.
+
+```html Response
+<body>
+ <h1>404 Not Found</h1>
+ <p>The requested URL was not found on this server.</p>
+</body>
+```
+
+---
+
+### 500 - Internal Server Error
+
+`Message error example (code ORD005): "The purchase cannot be done without items"`
+
+- **Issue:** The shopping cart (`orderFormId`) informed in the request does not have any item, making it impossible to create an order.
+- **Troubleshooting:**
+  - Verify that the specified shopping cart has items.
+  - Confirm that the `orderFormId` corresponds to a valid and non-empty shopping cart.
+
+```json Response
+{
+    "fields": {},
+    "error": {
+        "code": "ORD005",
+        "message": "The purchase cannot be done without items",
+        "exception": null
+    },
+    "operationId": "673771c0-f5ba-4fa6-800d-bea836c51f93"
+}
+```
+
+</CH.Scrollycoding>
