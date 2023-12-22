@@ -23,7 +23,6 @@ import SearchInputUsage from 'site/components/Search/SearchInputUsage'
 import { product } from 'site/mocks/product'
 import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
 
-
 ## Overview
 
 This Search feature is based on Autocomplete. Autocomplete is the functionality that displays previous search results based on current and previous searches. These results are presented in four different lists, which can be together or separated, depending on the customer's interaction. The existing sections are:
@@ -51,7 +50,7 @@ You can add this component whenever it's needed. It's suggested to add it on Nav
   <SectionItem
     title="Search History"
     description="Responsible for showing the latest terms searched by a user."
-    actionPath="/docs/faststore/molecules-search-history"
+    actionPath="/docs/guides/faststore/molecules-search-history"
   >
     <SearchHistory title="History">
       <SearchHistoryTerm value="Headphone" linkProps={{ href: '#' }} />
@@ -62,7 +61,7 @@ You can add this component whenever it's needed. It's suggested to add it on Nav
   <SectionItem
     title="Search Top"
     description="This section displays the most searched terms by customers."
-    actionPath="/docs/faststore/molecules-search-top"
+    actionPath="/docs/guides/faststore/molecules-search-top"
   >
     <SearchTop title="Top Search">
       <SearchTopTerm value="Notebooks" linkProps={{ href: '#' }} index={0} />
@@ -81,7 +80,7 @@ You can add this component whenever it's needed. It's suggested to add it on Nav
   <SectionItem
     title="Search Auto Complete"
     description="List of auto completing suggestions based on searched term."
-    actionPath="/docs/faststore/molecules-search-auto-complete"
+    actionPath="/docs/guides/faststore/molecules-search-auto-complete"
   >
     <SearchAutoComplete>
       {suggestions?.map((suggestion) => (
@@ -97,7 +96,7 @@ You can add this component whenever it's needed. It's suggested to add it on Nav
   <SectionItem
     title="Search Products"
     description="List of SearchProductItem to show details of the suggested products."
-    actionPath="/docs/faststore/molecules-search-products"
+    actionPath="/docs/guides/faststore/molecules-search-products"
   >
     <SearchProducts>
       <SearchProductItem linkProps={{ href: '#' }}>
@@ -139,7 +138,7 @@ You can add this component whenever it's needed. It's suggested to add it on Nav
   <SectionItem
     title="Search Dropdown"
     description="Combine SearchHistory, SearchTop and SearchAutoComplete and SearchProducts to show all options in SearchInput."
-    actionPath="/docs/faststore/molecules-search-dropdown"
+    actionPath="/docs/guides/faststore/molecules-search-dropdown"
     containerStyle={{
       alignItems: 'start',
     }}
@@ -149,14 +148,14 @@ You can add this component whenever it's needed. It's suggested to add it on Nav
   <SectionItem
     title="Search Input Field"
     description="An InputField with a search button."
-    actionPath="/docs/faststore/molecules-search-input-field"
+    actionPath="/docs/guides/faststore/molecules-search-input-field"
   >
     <SearchInputField onSubmit={() => {}} />
   </SectionItem>
   <SectionItem
     title="Search Input"
     description="The SearchInput is responsible to receive, search and display suggestions."
-    actionPath="/docs/faststore/organisms-search-input"
+    actionPath="/docs/guides/faststore/organisms-search-input"
     containerStyle={{
       alignItems: 'start',
     }}
