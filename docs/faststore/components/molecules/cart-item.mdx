@@ -1,7 +1,6 @@
 ---
 title: "Cart Item"
-excerpt: "Cart Items are used to present the summarized information of a product inside the Cart."
-description: Cart Items are used to present the summarized information of a product inside the Cart.
+excerpt: Cart Items are used to present the summarized information of a product inside the Cart.
 keywords:
   - UI library
   - ecommerce
@@ -13,26 +12,6 @@ components:
   - CartItemImage.tsx
   - CartItemSummary.tsx
 ---
-
-import { ShoppingCart } from '@faststore/components'
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import {
-  Price,
-  IconButton,
-  CartItem,
-  CartItemImage,
-  CartItemSummary,
-} from '@faststore/ui'
-
-import { XCircle } from '@faststore/components'
-import { product } from 'site/mocks/product'
-import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
-import { propsPriceDefinition } from 'site/components/PriceDefinitionProps/PriceDefinitionProps'
-
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
 ## Overview
 
@@ -98,7 +77,7 @@ import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { CartItem, CartItemImage, CartItemSummary } from '@faststore/ui'
@@ -149,21 +128,23 @@ import '@faststore/ui/src/components/atoms/CartItem/styles.scss'
 
 ## Props
 
-### CartItem
+### Cart Item
 
 <ComponentPropsSection component="CartItem" />
 
-#### Price Definition
-
-<ComponentPropsSection propsList={propsPriceDefinition} />
-
-### CartItemImage
+### Cart Item Image
 
 <ComponentPropsSection component="CartItemImage" />
 
-### CartItemSummary
+### Cart Item Summary
 
 <ComponentPropsSection component="CartItemSummary" />
+
+### Other Resources
+
+#### PriceDefinition
+
+<PropsSection propsList={propsPriceDefinition} />
 
 ---
 
