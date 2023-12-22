@@ -44,10 +44,12 @@ All store content is centered by default using the `[data-fs-content]` with the 
     </OverviewSection>
   </Tab>
   <Tab>
-    ```scss copy
-    // This is already set as default
-    [data-fs-content] { @include layout-content; }
+
+```scss
+// This is already set as default
+[data-fs-content] { @include layout-content; }
 ```
+
   </Tab>
 </Tabs>
 
@@ -56,42 +58,43 @@ All store content is centered by default using the `[data-fs-content]` with the 
 To display a **colored background** with **full width** and maintain the **content centered**, add `@include layout-colored` to your desired section.
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
-      <section class="section layout__section | nx-section-layout nx-section-layout-colored">
-        <TilesTemplate/>
-      </section>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    <OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
-      <section class="section layout__section | nx-section-layout nx-section-layout-colored">
-        <BannerText colorVariant="light">
-          <BannerTextContent
-            title="Explore more about our amazing products and discover a world of possibilities."
-            caption="All the amazing products from the brands we partner with."
-            link="/"
-            linkText="See more"
-          />
-        </BannerText>
-      </section>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```scss copy
-    // Add this to your custom-theme.scss
-    .section {
-      [data-fs-tiles] {
-        @include layout-colored(var(--fs-color-main-2));
-      }
+<Tab>
+<OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
+  <section class="section layout__section | nx-section-layout nx-section-layout-colored">
+    <TilesTemplate/>
+  </section>
+</OverviewSection>
+</Tab>
+<Tab>
+<OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
+  <section class="section layout__section | nx-section-layout nx-section-layout-colored">
+    <BannerText colorVariant="light">
+      <BannerTextContent
+        title="Explore more about our amazing products and discover a world of possibilities."
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+  </section>
+</OverviewSection>
+</Tab>
+<Tab>
 
-      [data-fs-banner-text] {
-        @include layout-colored(var(--fs-color-main-2));
-      }
-    }
-    ```
+```scss
+// Add this to your custom-theme.scss
+.section {
+  [data-fs-tiles] {
+    @include layout-colored(var(--fs-color-main-2));
+  }
 
-  </Tab>
+  [data-fs-banner-text] {
+    @include layout-colored(var(--fs-color-main-2));
+  }
+}
+```
+
+</Tab>
 </Tabs>
 
 ### Content centered + Colored bg + Section centered
@@ -99,44 +102,45 @@ To display a **colored background** with **full width** and maintain the **conte
 To add a **colored background** and **centering** the `.section`, add `@include layout-colored` and `@include layout-content` to your desired section.
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
-      <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
-        <TilesTemplate/>
-      </section>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    <OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
-      <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
-        <BannerText colorVariant="light">
-          <BannerTextContent
-            title="Explore more about our amazing products and discover a world of possibilities."
-            caption="All the amazing products from the brands we partner with."
-            link="/"
-            linkText="See more"
-          />
-        </BannerText>
-      </section>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```scss copy
-    // Add this to your custom-theme.scss
-    .section {
-      [data-fs-tiles] {
-        @include layout-colored(var(--fs-color-main-2));
-        @include layout-content;
-      }
+<Tab>
+<OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
+  <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
+    <TilesTemplate/>
+  </section>
+</OverviewSection>
+</Tab>
+<Tab>
+<OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
+  <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
+    <BannerText colorVariant="light">
+      <BannerTextContent
+        title="Explore more about our amazing products and discover a world of possibilities."
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+  </section>
+</OverviewSection>
+</Tab>
+<Tab>
 
-      [data-fs-banner-text] {
-        @include layout-colored(var(--fs-color-main-2));
-        @include layout-content;
-      }
-    }
-    ```
+```scss
+// Add this to your custom-theme.scss
+.section {
+  [data-fs-tiles] {
+    @include layout-colored(var(--fs-color-main-2));
+    @include layout-content;
+  }
 
-  </Tab>
+  [data-fs-banner-text] {
+    @include layout-colored(var(--fs-color-main-2));
+    @include layout-content;
+  }
+}
+```
+
+</Tab>
 </Tabs>
 
 ### Full width layout
@@ -147,34 +151,36 @@ To use your store section's content with a **full-width layout** you'll need to 
   comes with **layout-content-full** by default.
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
-      <section class="section layout__section | nx-section-layout nx-section-layout-full">
-        <TilesTemplate/>
-      </section>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    <OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
-      <section class="section layout__section | nx-section-layout nx-section-layout-full">
-        <BannerText colorVariant="light">
-          <BannerTextContent
-            title="Explore more about our amazing products and discover a world of possibilities."
-            caption="All the amazing products from the brands we partner with."
-            link="/"
-            linkText="See more"
-          />
-        </BannerText>
-      </section>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```scss copy
-    // Add this to your custom-theme.scss
-    .section {
-      [data-fs-tiles] [data-fs-content="tiles"] { @include layout-content-full; }
-      [data-fs-banner-text] [data-fs-content="banner"] { @include layout-content-full; }
-    }
-    ```
-  </Tab>
+<Tab>
+<OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
+  <section class="section layout__section | nx-section-layout nx-section-layout-full">
+    <TilesTemplate/>
+  </section>
+</OverviewSection>
+</Tab>
+<Tab>
+<OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
+  <section class="section layout__section | nx-section-layout nx-section-layout-full">
+    <BannerText colorVariant="light">
+      <BannerTextContent
+        title="Explore more about our amazing products and discover a world of possibilities."
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+  </section>
+</OverviewSection>
+</Tab>
+<Tab>
+
+```scss copy
+// Add this to your custom-theme.scss
+.section {
+  [data-fs-tiles] [data-fs-content="tiles"] { @include layout-content-full; }
+  [data-fs-banner-text] [data-fs-content="banner"] { @include layout-content-full; }
+}
+```
+
+</Tab>
 </Tabs>
