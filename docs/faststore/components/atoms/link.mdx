@@ -1,20 +1,17 @@
 ---
-title: "Link"
-excerpt: "Link performs the same behavior of a regular anchor tag (`a`), but can be used as any HTML tag and component, including specific Frameworks link components."
-description: Links allow users to easily navigate through web pages.
+title: Link
+excerpt: Links allow users to easily navigate through web pages.
 keywords:
   - UI library
   - ecommerce
   - react
+components:
+  - Link.tsx
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Link___ae95650d3842207e2d790446c3418086.png
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { Link } from '@faststore/ui'
-
+Link performs the same behavior of a regular anchor tag (`a`), but can be used as any HTML tag and component, including specific Frameworks link components.
 
 ## Overview
 
@@ -41,7 +38,7 @@ import { Link } from '@faststore/ui'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/../components)
 
 ```tsx
 import { Link } from '@faststore/ui'
@@ -68,12 +65,12 @@ import '@faststore/ui/src/components/atoms/Link/styles.scss'
 
 ## Props
 
-The `Link` component supports all attributes supported by the tag chosen through the `as` prop.
-For example, if someone wants to use a wrapper for any external link component (i.e., Next.js `Link` or Gatsby `Link`), the FastStore UI `Link` component can be used with the `as="div"` prop.
+The `Link` component supports all attributes supported by the tag `a`.
+If you need to use it as external link component (i.e., Next.js `Link` or Gatsby `Link`), the FastStore UI `Link` component can be used with the `as={NextLink}` prop.
 
 Besides those attributes, the following props are also supported:
 
-<ComponentPropsSection name="link" />
+<PropsSection propsList={propsLink} />
 
 ---
 

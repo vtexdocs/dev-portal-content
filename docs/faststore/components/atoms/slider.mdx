@@ -1,19 +1,9 @@
 ---
 title: "Slider"
-excerpt: "Sliders allow users to select a single value from a range."
-description: Sliders allow users to select a single value from a range.
+excerpt: Sliders allow users to select a single value from a range.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Slider___9fa1f5d802a9bbdc93a77db318594af7.png
 ---
-
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import { Slider, Price, PriceRange } from '@faststore/ui'
-import PriceRangeUsage from 'site/components/PriceRange/PriceRangeUsage'
-import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
-
 
 ## Overview
 
@@ -65,7 +55,7 @@ import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { Slider } from '@faststore/ui'
@@ -118,7 +108,15 @@ import '@faststore/ui/src/components/atoms/Slider/styles.scss'
 
 ## Props
 
-<ComponentPropsSection name="Slider" />
+<ComponentPropsSection component="Slider" />
+
+### Range
+
+<PropsSection propsList={propsRange} />
+
+### RangeLabel
+
+<PropsSection propsList={propsRangeLabel} />
 
 ---
 
@@ -243,7 +241,7 @@ For further customization, you can use the following data attributes:
     title="PriceRange"
     description="
 Price Ranges are sliders that allows users to select a maximum and minimum price."
-    actionPath="/docs/faststore/organisms-price-range"
+    actionPath="/docs/guides/faststore/organisms/price-range"
   >
     <PriceRangeUsage />
   </SectionItem>
