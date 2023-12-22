@@ -1,7 +1,6 @@
 ---
 title: "Select"
-excerpt: "Select components allow users to pick an option from a predefined list. The Select component should be used when there are more than 5 options available. Otherwise, consider using the RadioGroup component."
-description: Selects allow users to pick an option from a predefined list.
+excerpt: Selects allow users to pick an option from a predefined list.
 keywords:
   - UI library
   - ecommerce
@@ -19,6 +18,7 @@ import { SectionItem, SectionList } from 'site/components/SectionItem'
 import { Select, SelectField } from '@faststore/ui'
 import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
+Select components allow users to pick an option from a predefined list. The Select component should be used when there are more than 5 options available. Otherwise, consider using the [RadioGroup](/docs/guides/faststore/molecules-radio-group) component.
 
 ## Overview
 
@@ -71,7 +71,7 @@ import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { Select } from '@faststore/ui'
@@ -232,8 +232,8 @@ For further customization, you can use the following data attributes:
 
 ### ✅ Do's
 
-- Consider using a [`RadioGroup`](/docs/faststore/molecules-radio-group) when few options are available. Doing so will prevent users from opening a dropdown box just to scan how many and which options are available.
-- Consider using an open text [`Input`](/docs/faststore/atoms-input) when several options are available and if the entries don’t need to be validated. Doing so will prevent users from having to read and understand all options before making a choice.
+- Consider using a [`RadioGroup`](/docs/guides/faststore/molecules-radio-group) when few options are available. Doing so will prevent users from opening a dropdown box just to scan how many and which options are available.
+- Consider using an open text [`Input`](/docs/guides/faststore/atoms-input) when several options are available and if the entries don’t need to be validated. Doing so will prevent users from having to read and understand all options before making a choice.
 - Consider using an autocomplete field when multiple options are available and if the inputs need to be validated.
 - Opt to grey out unavailable items instead of removing them completely.
 
@@ -246,7 +246,7 @@ For further customization, you can use the following data attributes:
     title="SelectField"
     description="
 SelectField wraps a Select input and its corresponding Label. It allows users to select one option from a set."
-    actionPath="/docs/faststore/molecules-select-field"
+    actionPath="/docs/guides/faststore/molecules-select-field"
   >
     <SelectField
       id="select-order-by"

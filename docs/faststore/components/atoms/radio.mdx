@@ -1,9 +1,10 @@
 ---
 title: "Radio"
-excerpt: "Radios allow users to select one option from a set."
-description: Radios allow users to select one option from a set.
+excerpt: Radios allow users to select one option from a set.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Radio___4bdff3538eb6a18e99c6f5a9c1043468.png
+components:
+  - Radio.tsx
 ---
 
 import PropsSection from 'site/components/PropsSection'
@@ -11,7 +12,6 @@ import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
 import { OverviewSection } from 'site/components/OverviewSection'
 import { SectionItem, SectionList } from 'site/components/SectionItem'
 import { Radio, RadioField } from '@faststore/ui'
-
 
 ## Overview
 
@@ -37,7 +37,7 @@ import { Radio, RadioField } from '@faststore/ui'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { Radio } from '@faststore/ui'
@@ -64,7 +64,7 @@ import '@faststore/ui/src/components/atoms/Radio/styles.scss'
 
 ## Props
 
-<ComponentPropsSection name="Radio" />
+<ComponentPropsSection component="Radio" />
 
 ---
 
@@ -194,7 +194,7 @@ For further customization, you can use the following data attributes:
 
 ### ✅ Do's
 
-- Provide a [Label](/docs/faststore/atoms-label) when using radio input. Descriptive labels help users understand the purpose of a form control.
+- Provide a [Label](/docs/guides/faststore/atoms-label) when using radio input. Descriptive labels help users understand the purpose of a form control.
 
 ---
 
@@ -205,7 +205,7 @@ For further customization, you can use the following data attributes:
     title="RadioField"
     description="
 RadioField wraps a Radio input and its corresponding Label."
-    actionPath="/docs/faststore/molecules-radio-field"
+    actionPath="/docs/guides/faststore/molecules-radio-field"
   >
     <RadioField label="RadioField" id="radiofield" checked readOnly />
   </SectionItem>

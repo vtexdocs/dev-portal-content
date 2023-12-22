@@ -1,7 +1,6 @@
 ---
 title: "Price"
-excerpt: "Prices are used to display the price of a given product, discount and total values."
-description: Prices are used to display the price of a given product, discount and total values.
+excerpt: Prices are used to display the price of a given product, discount and total values.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Price___9acce93fd9399d7dcea4a3bb8b7de0c6.png
 components:
@@ -14,7 +13,7 @@ import { OverviewSection } from 'site/components/OverviewSection'
 import { Price } from '@faststore/ui'
 import { useMemo } from 'react'
 
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
+Prices are used to display the price of a given product, discount and total values.
 
 ## Overview
 
@@ -43,7 +42,7 @@ import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { Price } from '@faststore/ui'
@@ -86,6 +85,11 @@ import '@faststore/ui/src/components/atoms/Price/styles.scss'
   <TokenRow
     token="--fs-price-spot-font-weight"
     value="var(--fs-text-weight-bold)"
+  />
+  <TokenRow
+    token="--fs-price-spot-color"
+    value="var(--fs-color-text)"
+    isColor
   />
 </TokenTable>
 
