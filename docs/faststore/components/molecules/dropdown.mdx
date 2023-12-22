@@ -1,7 +1,6 @@
 ---
 title: "Dropdown"
-excerpt: "Displays a set of actions/items to the user, usually used to show a menu of options."
-description: Dropdowns are used to reveal a list of options or commands.
+excerpt: Dropdowns are used to reveal a list of options or commands.
 sidebar_class_name: test
 keywords:
   - UI library
@@ -9,6 +8,11 @@ keywords:
   - react
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Dropdown___1d904311eb18facba54340e76b109d62.png
+components:
+  - Dropdown.tsx
+  - DropdownItem.tsx
+  - DropdownMenu.tsx
+  - DropdownButton.tsx
 ---
 
 import PropsSection from 'site/components/PropsSection'
@@ -27,6 +31,7 @@ import {
 } from '@faststore/ui'
 import { OverviewSection } from 'site/components/OverviewSection'
 
+Displays a set of actions/items to the user, usually used to show a menu of options.
 
 ## Overview
 
@@ -101,7 +106,7 @@ import { OverviewSection } from 'site/components/OverviewSection'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import {
@@ -169,19 +174,19 @@ import '@faststore/ui/src/components/molecules/Dropdown/styles.scss'
 
 ### Dropdown
 
-<ComponentPropsSection name="Dropdown" />
+<ComponentPropsSection component="Dropdown" />
 
-### DropdownItem
+### Dropdown Item
 
-<ComponentPropsSection name="DropdownItem" />
+<ComponentPropsSection component="DropdownItem" />
 
-### DropdownMenu
+### Dropdown Menu
 
-<ComponentPropsSection name="DropdownMenu" />
+<ComponentPropsSection component="DropdownMenu" />
 
-### DropdownButton
+### Dropdown Button
 
-<ComponentPropsSection name="DropdownButton" />
+<ComponentPropsSection component="DropdownButton" />
 
 ---
 
@@ -189,7 +194,7 @@ import '@faststore/ui/src/components/molecules/Dropdown/styles.scss'
 
 ### Compound Components
 
-#### DropdownItem
+#### Dropdown Item
 
 <TokenTable>
   <TokenRow token="--fs-dropdown-item-min-height" value="2.375rem" />
@@ -239,7 +244,7 @@ import '@faststore/ui/src/components/molecules/Dropdown/styles.scss'
   />
 </TokenTable>
 
-#### DropdownMenu
+#### Dropdown Menu
 
 <TokenTable>
   <TokenRow
@@ -279,11 +284,11 @@ import '@faststore/ui/src/components/molecules/Dropdown/styles.scss'
 
 For further customization, you can use the following data attributes:
 
-#### DropdownItem
+#### Dropdown Item
 
 `data-fs-dropdown-item`
 
-#### DropdownMenu
+#### Dropdown Menu
 
 `data-fs-dropdown-menu`
 
@@ -293,11 +298,11 @@ For further customization, you can use the following data attributes:
 
 `data-fs-dropdown-menu-size="small | regular"`
 
-#### DropdownButton
+#### Dropdown Button
 
 `data-fs-dropdown-button`
 
-This component inherits [Button](/docs/faststore/atoms-button) CSS selectors and styles.
+This component inherits [Button](/docs/guides/faststore/atoms-button) CSS selectors and styles.
 
 ---
 
