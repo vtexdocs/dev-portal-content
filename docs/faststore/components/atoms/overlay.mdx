@@ -7,14 +7,56 @@ components:
   - Overlay.tsx
 ---
 
-import PropsSection from 'components/faststore-components/PropsSection'
-import { TokenTable, TokenRow } from 'components/faststore-components/Tokens'
-import { OverviewSection } from 'components/faststore-components/OverviewSection'
-import { Overlay } from '@faststore/ui'
+import PropsSection from 'components/faststore-components/PropsSection';
+import { TokenTable, TokenRow } from 'components/faststore-components/Tokens';
+import { OverviewSection } from 'components/faststore-components/OverviewSection';
+import { Overlay } from '@faststore/ui';
 
 Overlays provide contextual information on top of the current layer of the interface. They can be interruptive like modals or augmenting like popovers and tooltips.
 
 ## Overview
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <div
+        style={{
+          position: 'relative',
+          height: '8rem',
+          width: '100%',
+          textAlign: 'center',
+        }}
+      >
+        A content outside me
+        <Overlay style={{ position: 'absolute' }} />
+      </div>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+function Component() {
+  const styles = {
+    container: {
+      position: 'relative',
+      height: '8rem',
+    },
+    overlay: {
+      position: 'absolute',
+    },
+  }
+  return (
+    <div style={styles.container}>
+      A content outside me
+      <Overlay style={styles.overlay} />
+    </div>
+  )
+}
+```
+
+</Tab>
+</Tabs>
+
 ---
 
 ## Import
