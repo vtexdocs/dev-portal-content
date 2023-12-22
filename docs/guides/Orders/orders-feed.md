@@ -16,7 +16,7 @@ This guide explains how Feed and Hook work and how to configure them to build or
 
 ## Best practices for integrations
 
-When designing your orders’s integration, consider the practices below to increase performance and avoid throttling errors:
+When designing an orders integration, consider the practices below to increase performance and avoid throttling errors:
 
 - Optimize your code to get only the required data.
 - Use caching for often-used data.
