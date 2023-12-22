@@ -1,7 +1,6 @@
 ---
 title: "Accordion"
-excerpt: "Accordions display an expandable/collapsible list of items."
-description: Accordions display an expandable/collapsible list of items.
+excerpt: Accordions display an expandable/collapsible list of items.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Accordion___66012e5367e86c5b4422ff8d6974b8cd.png
 components:
@@ -10,24 +9,8 @@ components:
   - AccordionPanel.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  List,
-} from '@faststore/ui'
-import { useState } from 'react'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
+Accordions display an expandable/collapsible list of items. The final Accordion component is a compound of the following:- `Accordion`: wraps a series of `AccordionItem`s in a single component.
 
-
-The final Accordion component is a compound of the following:
-
-- `Accordion`: wraps a series of `AccordionItem`s in a single component.
 - `AccordionItem`: wraps an `AccordionButton` and an `AccordionPanel`.
 - `AccordionButton`: contains the top-level items of the Accordion list. It is a clickable button that shows or hides the child items of a given `AccordionItem`.
 - `AccordionPanel`: contains the child items of a given `AccordionItem`.
@@ -36,7 +19,7 @@ The final Accordion component is a compound of the following:
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import {
@@ -54,6 +37,7 @@ import '@faststore/ui/src/components/molecules/Accordion/styles.scss'
 ```
 
 ---
+
 ## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
@@ -93,6 +77,7 @@ import '@faststore/ui/src/components/molecules/Accordion/styles.scss'
       </AccordionItem>
     </Accordion>
     ```
+
   </Tab>
 </Tabs>
 
@@ -100,7 +85,7 @@ import '@faststore/ui/src/components/molecules/Accordion/styles.scss'
 
 ## Props
 
-All accordion-related components support all attributes also supported by the `<div>` tag, except for the `AccordionButton`, which renders the `<button>` tag and inherits [Button](/docs/faststore/atoms-button) props.
+All accordion-related components support all attributes also supported by the `<div>` tag, except for the `AccordionButton`, which renders the `<button>` tag and inherits [Button](/docs/guides/faststore/atoms-button) props.
 
 Besides those attributes, the following props are also supported:
 
@@ -109,6 +94,8 @@ Besides those attributes, the following props are also supported:
 <ComponentPropsSection component="Accordion" />
 
 ### Accordion Item
+
+export const 
 
 <ComponentPropsSection propsList={propsAccordionItem} />
 
@@ -189,7 +176,7 @@ Besides those attributes, the following props are also supported:
 
 `data-fs-accordion-panel`
 
-The `AccordionButton` component inherits [Button](/docs/faststore/atoms-button) CSS selectors.
+The `AccordionButton` component inherits [Button](/docs/guides/faststore/atoms-button) CSS selectors.
 
 ---
 
@@ -247,6 +234,7 @@ The `AccordionButton` component inherits [Button](/docs/faststore/atoms-button) 
       )
     }
   ```
+
   </Tab>
 </Tabs>
 
