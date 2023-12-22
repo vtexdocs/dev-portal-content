@@ -4,8 +4,6 @@ sidebar_label: 'API Extensions'
 slug: extending-queries-using-fragments
 ---
 
-import { ExtendableQueryTable } from 'site/components/ExtendableQueryTable'
-
 After [defining the new fields exposed by the FastStore API Extension](/docs/api-extension/extending-api-schema), the next step is to specify where these fields will be utilized within GraphQL fragments.
 
 [Fragments](https://graphql.org/learn/queries/#fragments) in GraphQL are reusable units that enhance query functionality. FastStore associates these fragments with the existing queries used on its pages to incorporate the newly exposed fields.
@@ -67,7 +65,7 @@ These queries enable customization by allowing the addition or modification of f
 <li>
 <details>
 <summary>Query: `ClientProductGalleryQuery`</summary>
-<ExtendableQueryTable>
+<table>
   <td>ClientProductGallery</td>
   <td>Client</td>
   <td>search</td>
@@ -83,7 +81,7 @@ These queries enable customization by allowing the addition or modification of f
     Frontend data from the `useSearch()` and `useLocalizedVariables()`
     hooks, the latter uses `useSession()`.
   </td>
-</ExtendableQueryTable>
+</table>
 <br />
 
 ### How to consume it
@@ -106,7 +104,7 @@ These queries enable customization by allowing the addition or modification of f
 <li>
 <details>
 <summary>Query: `ServerCollectionPageQuery`</summary>
-<ExtendableQueryTable>
+<table>
   <td>ServerCollectionPage</td>
   <td>Server</td>
   <td>collection</td>
@@ -116,7 +114,7 @@ These queries enable customization by allowing the addition or modification of f
     seo, breadcrumbList and meta data from the collection ([StoreCollection](https://v1.faststore.dev/reference/api/objects#storecollection)).
   </td>
   <td>Collection `slug` that comes from URL.</td>
-</ExtendableQueryTable>
+</table>
 <br />
 
 ### How to consume it
@@ -132,7 +130,7 @@ These queries enable customization by allowing the addition or modification of f
 <li>
 <details>
 <summary>Query: `ServerProductQuery`</summary>
-<ExtendableQueryTable>
+<table>
   <td>ServerProduct</td>
   <td>Server</td>
   <td>product</td>
@@ -140,7 +138,7 @@ These queries enable customization by allowing the addition or modification of f
   <td>In the function `getStaticProps()` from `PDP`.</td>
   <td>General product data from [StoreProduct](https://v1.faststore.dev/reference/api/objects#storeproduct).</td>
   <td>The `locator` with `slug` key/value.</td>
-</ExtendableQueryTable>
+</table>
 <br />
 
 ### How to consume it
@@ -157,7 +155,7 @@ These queries enable customization by allowing the addition or modification of f
 <li>
 <details>
 <summary>Query: `ClientProductQuery`</summary>
-<ExtendableQueryTable>
+<table>
   <td>ClientProduct</td>
   <td>Client</td>
   <td>product</td>
@@ -171,7 +169,7 @@ These queries enable customization by allowing the addition or modification of f
     Frontend data from the `useSession()` hook in the locator array with
     `id`, `channel`, `locale` as key/values.
   </td>
-</ExtendableQueryTable>
+</table>
 <br />
 
 ### How to consume it
@@ -188,7 +186,7 @@ These queries enable customization by allowing the addition or modification of f
 <li>
 <details>
 <summary>Query: `ClientManyProductsQuery`</summary>
-<ExtendableQueryTable>
+<table>
   <td>ClientManyProducts</td>
   <td>Client</td>
   <td>search</td>
@@ -211,7 +209,7 @@ These queries enable customization by allowing the addition or modification of f
   <td>
     Frontend data from the `useLocalizedVariables()` and `useSession()` hooks.
   </td>
-</ExtendableQueryTable>
+</table>
 <br />
 
 ### How to consume it
@@ -234,7 +232,7 @@ These queries enable customization by allowing the addition or modification of f
 <li>
 <details>
 <summary>Query: `ClientShippingSimulationQuery`</summary>
-<ExtendableQueryTable>
+<table>
   <td>ClientShippingSimulation</td>
   <td>Client</td>
   <td>shipping</td>
@@ -246,7 +244,7 @@ These queries enable customization by allowing the addition or modification of f
   <td>
     Frontend `country`, and `postalCode` from `useSession()` hook, and the `items` Array of `IShippingItem` (`id`, `quantity`, and `seller`).
   </td>
-</ExtendableQueryTable>
+</table>
 <br />
 
 ### How to consume it
@@ -257,7 +255,7 @@ These queries enable customization by allowing the addition or modification of f
 <li>
 <details>
 <summary>Query: `ClientSearchSuggestionsQuery`</summary>
-<ExtendableQueryTable>
+<table>
   <td>ClientSearchSuggestions</td>
   <td>Client</td>
   <td>search</td>
@@ -265,7 +263,7 @@ These queries enable customization by allowing the addition or modification of f
   <td>In the `SearchInput` component.</td>
   <td>General search data with the `suggestions` and `products`.</td>
   <td>Frontend data from `useSession()` hook, and the `term` searched.</td>
-</ExtendableQueryTable>
+</table>
 <br />
 
 ### How to consume it
@@ -276,7 +274,7 @@ You can use the experimental `useSuggestions_unstable()` hook to retrieve the se
 <li>
 <details>
 <summary>Query: `ClientTopSearchSuggestionsQuery`</summary>
-<ExtendableQueryTable>
+<table>
   <td>ClientTopSearchSuggestions</td>
   <td>Client</td>
   <td>search</td>
@@ -284,7 +282,7 @@ You can use the experimental `useSuggestions_unstable()` hook to retrieve the se
   <td>In the `SearchInput` component.</td>
   <td>The top searched suggestions.</td>
   <td>Frontend data from `useSession()` hook.</td>
-</ExtendableQueryTable>
+</table>
 
 ### How to consume it
 
