@@ -1,15 +1,13 @@
 ---
 title: "Radio Field"
-excerpt: "Radio Field wraps a Radio input and its corresponding Label. It allows users to select one option from a set."
-description: RadioField grouped a Radio input and its corresponding Label.
+excerpt: RadioField grouped a Radio input and its corresponding Label.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/RadioLabel___b3fc3b7a139796e4921349df5aaa270c.png
+components:
+  - RadioField.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { RadioField } from '@faststore/ui'
+Radio Field wraps a [Radio](/docs/guides/faststore/atoms-radio) input and its corresponding [Label](/componentes/atoms/label). It allows users to select one option from a set.
 
 ## Overview
 
@@ -47,13 +45,17 @@ import { RadioField } from '@faststore/ui'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { RadioField } from '@faststore/ui'
 ```
 
 Import Styles
+
+```tsx
+import '@faststore/ui/src/components/atoms/Radio/styles.scss'
+```
 
 ```tsx
 import '@faststore/ui/src/components/molecules/RadioField/styles.scss'
@@ -75,7 +77,7 @@ import '@faststore/ui/src/components/molecules/RadioField/styles.scss'
 
 ## Props
 
-<ComponentPropsSection name="RadioField" />
+<ComponentPropsSection component="RadioField" />
 
 ---
 

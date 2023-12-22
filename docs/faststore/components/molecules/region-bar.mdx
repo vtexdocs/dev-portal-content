@@ -1,7 +1,6 @@
 ---
 title: "Region Bar"
-excerpt: "The RegionBar is a custom Button, usually used on mobile devices only. It should trigger the RegionModal. The component is part of Regionalization feature."
-description: The RegionBar is a custom Button, usually used on mobile devices only. It should trigger the RegionModal.
+excerpt: The RegionBar is a custom Button, usually used on mobile devices only. It should trigger the RegionModal.
 keywords:
   - UI library
   - ecommerce
@@ -12,18 +11,10 @@ components:
   - RegionBar.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import {
-  RegionBar,
-  RegionModal,
-  Button,
-  UIProvider,
-  useUI,
-} from '@faststore/ui'
+The RegionBar is a custom Button, usually used on mobile devices only. It should trigger the [RegionModal](/docs/guides/faststore/organisms-region-modal).
 
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
+The component is part of [Regionalization](/docs/guides/faststore/feature-regionalization) feature.
+
 
 ## Overview
 
@@ -43,7 +34,11 @@ import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
     const { modal, openModal } = useUI()
     return (
       <>
-        <RegionBar onButtonClick={() => openModal()} />
+        <RegionBar
+          icon={<Icon name="MapPin" />}
+          postalCode={'151515'}
+          onButtonClick={() => openModal()}
+        />
         {modal && <RegionModal fadeOutOnSubmit={true} />}
       </>
     )
@@ -51,7 +46,10 @@ import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
     const { modal, openModal } = useUI()
     return (
       <>
-        <RegionBar postalCode={'151515'} onButtonClick={() => openModal()} />
+        <RegionBar
+          icon={<Icon name="MapPin" />}
+          postalCode={'151515'}
+          onButtonClick={() => openModal()} />
         {modal && <RegionModal fadeOutOnSubmit={true} inputValue={'151515'} />}
       </>
     )
@@ -64,7 +62,7 @@ import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { RegionBar } from '@faststore/ui'
@@ -90,7 +88,11 @@ import '@faststore/ui/src/components/molecules/RegionBar/styles.scss'
 const { modal, openModal } = useUI()
 return (
   <>
-    <RegionBar onButtonClick={() => openModal()} />
+    <RegionBar
+      icon={<Icon name="MapPin" />}
+      postalCode={'151515'}
+      onButtonClick={() => openModal()}
+    />
     {modal && <RegionModal fadeOutOnSubmit={true} />}
   </>
 )

@@ -1,16 +1,11 @@
 ---
 title: "Radio Group"
-excerpt: "Radio Group allows users to select a single option from a list of two or more mutually exclusive options."
-description: RadioGroup allows users to select a single option from a list of two or more mutually exclusive options.
+excerpt: RadioGroup allows users to select a single option from a list of two or more mutually exclusive options.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/RadioGroup___a09afdd36ab1bcf64ad0c8fa87ee8dd0.png
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { RadioField, RadioGroup } from '@faststore/ui'
-
+Radio Group allows users to select a single option from a list of two or more mutually exclusive options.
 
 ## Overview
 
@@ -63,10 +58,20 @@ import { RadioField, RadioGroup } from '@faststore/ui'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
-import { RadioGroup } from '@faststore/ui'
+import { RadioGroup, RadioField } from '@faststore/ui'
+```
+
+Import Styles
+
+```tsx
+import '@faststore/ui/src/components/atoms/Radio/styles.scss'
+```
+
+```tsx
+import '@faststore/ui/src/components/molecules/RadioField/styles.scss'
 ```
 
 ---
@@ -117,7 +122,7 @@ import { RadioGroup } from '@faststore/ui'
 
 ## Props
 
-<ComponentPropsSection name="RadioGroup" />
+<PropsSection propsList={propsRadioGroup} />
 
 ---
 
