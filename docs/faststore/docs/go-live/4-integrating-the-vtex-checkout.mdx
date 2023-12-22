@@ -1,6 +1,7 @@
 ---
 title: '4. Integrating the VTEX Checkout'
 sidebar_label: 'Go-live'
+slug: 4-integrating-the-vtex-checkout
 ---
 
 In this guide, you'll learn how to integrate your **FastStore** project with the [**VTEX Checkout**](https://help.vtex.com/en/tutorial/checkout-vtex-overview--7wcprkM7yZUflOqbzAN5SI). The Checkout comprehends the pages responsible for receiving the shopper's information necessary to process an order.
@@ -14,7 +15,7 @@ To successfully integrate the VTEX Checkout with your FastStore project, you mus
 
 ## Before you start
 
-Before proceeding any further, make sure you have already [configured the custom domain name of your FastStore website](/docs/faststore/go-live-2-configuring-external-dns).
+Before proceeding any further, make sure you have already [configured the custom domain name of your FastStore website](/docs/go-live/2-configuring-external-dns).
 
 ---
 
@@ -30,7 +31,7 @@ Take the following steps to guarantee shoppers will be redirected to the newest 
 4. Select `checkout-confirmation-custom.js` under **Files**.
 5. Add the following JavaScript code in the editor:
 
-```jsx {4-5} filename="checkout-confirmation-custom.js"
+```jsx {4-5} filename="checkout-confirmation-custom.js" copy
 // WARNING: THE USAGE OF CUSTOM SCRIPTS IS NOT SUPPORTED. VTEX IS NOT LIABLE FOR ANY DAMAGES THIS MAY CAUSE.
 // THIS MAY BREAK YOUR STORE AND STOP SALES. IN CASE OF ERRORS, PLEASE DELETE THE CONTENT OF THIS SCRIPT.
 
@@ -51,7 +52,7 @@ We now need to update the links presented in the Header and Footer of the Checko
 1. Still in the VTEX Admin at the **Store Settings > Storefront > Checkout > Default > Code** tab, click on `checkout-header` under **Template**.
 2. Edit the `checkout-header` code according to your scenario, making sure all links are pointing to your FastStore website. For example:
 
-   ```diff filename="checkout-header.js"
+   ```diff filename="checkout-header.js" copy
    <div class="container">
    -  <a href="/" title="Home Page">Your logo here!</a>
    +  <a href="https://www.vtexfaststore.com" title="Home Page">FastStore</a>
@@ -61,4 +62,4 @@ We now need to update the links presented in the Header and Footer of the Checko
 
 3. Click on **Save**. Notice that, as soon as you hit the _Save_ button, your changes will be live to all clients.
 
-Once you adjust all the Header links of the Checkout pages, make sure to repeat the process in the [step 2](/docs/faststore/go-live-4-integrating-the-vtex-checkout#step-2---adjusting-the-header-and-footer-links-of-the-checkout-pages) for the `checkout-footer` file to adjust the Checkout Footer.
+Once you adjust all the Header links of the Checkout pages, make sure to repeat the process in the [step 2](/docs/go-live/4-integrating-the-vtex-checkout#step-2---adjusting-the-header-and-footer-links-of-the-checkout-pages) for the `checkout-footer` file to adjust the Checkout Footer.

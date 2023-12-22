@@ -1,9 +1,10 @@
 ---
 title: '1. Setting up a VTEX account for FastStore'
 sidebar_label: 'Go-live'
+slug: 1-setting-up-vtex-account-for-faststore
 ---
 
->⚠️ This documentation is currently under development.
+> ⚠️ This documentation is currently under development.
 
 This guide is the first step in developing a **FastStore** website integrated with the **VTEX** Platform. In the following section, you will set up your VTEX environment and install all the necessary apps to start developing with FastStore.
 
@@ -26,16 +27,22 @@ You will use the FastStore plugin for the VTEX IO CLI to install, with a single 
 
 1. Log in to your VTEX account:
 
->ℹ️ Remember to replace the values between curly brackets according to your scenario.
+> ℹ️ Remember to replace the values between curly brackets according to your scenario.
 
-```
+```bash copy
 vtex login {account}
 ```
 
 2. Install the FastStore plugin for the VTEX IO CLI:
 
-```
+```bash copy
 vtex plugins install faststore
+```
+
+3. Set up your VTEX account for FastStore by running the following command:
+
+```bash copy
+vtex faststore setup
 ```
 
 Once the command completes, you should see the following message: `Happy coding on FastStore 🎉`.
