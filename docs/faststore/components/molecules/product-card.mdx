@@ -1,7 +1,6 @@
 ---
 title: "Product Card"
-excerpt: "Displays summarized information about a product. They usually present a call-to-action button, as well as the product's name, price, and image."
-description: ProductCard displays summarized information about a product.
+excerpt: ProductCard displays summarized information about a product.
 keywords:
   - UI library
   - ecommerce
@@ -14,32 +13,12 @@ components:
   - ProductCardContent.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import { OverviewSection } from 'site/components/OverviewSection'
-import {
-  ProductShelf,
-  ProductShelfItems,
-  ProductShelfItem,
-  ProductCard,
-  ProductCardContent,
-  ProductCardImage,
-  ProductGrid,
-  ProductGridItem,
-} from '@faststore/ui'
-import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
-
-import { product } from 'site/mocks/product'
-import { products } from 'site/mocks/products'
-import { propsPriceDefinition } from 'site/components/PriceDefinitionProps/PriceDefinitionProps'
-
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
-
-The `ProductCard` is a compound of the following:
+Displays summarized information about a product. They usually present a call-to-action button, as well as the product's name, price, and image.The `ProductCard` is a compound of the following:
 
 - `ProductCardImage`: wraps the product's image.
 - `ProductCardContent`: wraps the content's details.
+
+---
 
 ## Overview
 
@@ -179,7 +158,7 @@ The `ProductCard` is a compound of the following:
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import {
@@ -268,9 +247,11 @@ All product card related components support all attributes also supported by the
 
 <ComponentPropsSection component="ProductCardContent" />
 
-#### Price Definition
+### Other Resources
 
-<ComponentPropsSection propsList={propsPriceDefinition} />
+#### PriceDefinition
+
+<PropsSection propsList={propsPriceDefinition} />
 
 ---
 
@@ -439,6 +420,9 @@ All product card related components support all attributes also supported by the
 #### Out of Stock
 
 To replicate this style, add `outOfStock` prop on both `ProductCard` and `ProductCardContent`.
+
+export const outOfStock =
+  product.offers.offers[0].availability === 'https://schema.org/InStock'
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -718,7 +702,7 @@ Use the `ProductCard` to:
     title="ProductShelf"
     description="
 Displays a list of products to be used as a section on the store."
-    actionPath="/docs/faststore/organisms-product-shelf"
+    actionPath="/docs/guides/faststore/organisms/product-shelf"
   >
     <ProductShelf>
       <ProductShelfItems>
@@ -750,7 +734,7 @@ Displays a list of products to be used as a section on the store."
     title="ProductGrid"
     description="
 It's a section generally used on PLP pages to list the products available in the store."
-    actionPath="/docs/faststore/organisms-product-grid"
+    actionPath="/docs/guides/faststore/organisms/product-grid"
   >
     <ProductGrid>
       {products.map(({ product }, idx) => (
