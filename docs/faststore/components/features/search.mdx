@@ -3,26 +3,6 @@ title: "Search"
 excerpt: "This feature enables customers to find their search easier."
 ---
 
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import { SearchAutoComplete, SearchAutoCompleteTerm } from '@faststore/ui'
-import { SearchHistory, SearchHistoryTerm } from '@faststore/ui'
-import { SearchTop, SearchTopTerm } from '@faststore/ui'
-import {
-  SearchProducts,
-  SearchProductItem,
-  SearchProductItemImage,
-  SearchProductItemContent,
-} from '@faststore/ui'
-import { SearchInputField } from '@faststore/ui'
-
-import SearchDropdownUsage from 'site/components/Search/SearchDropdownUsage'
-
-import SearchInputUsage from 'site/components/Search/SearchInputUsage'
-
-import { product } from 'site/mocks/product'
-import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
-
 ## Overview
 
 This Search feature is based on Autocomplete. Autocomplete is the functionality that displays previous search results based on current and previous searches. These results are presented in four different lists, which can be together or separated, depending on the customer's interaction. The existing sections are:
