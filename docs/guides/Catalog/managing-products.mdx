@@ -25,14 +25,10 @@ Before you begin managing your SKUs, make sure you've completed the following st
 
 ## Creating a product
 
-To insert a new product, use the [Create product with category and brand endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product).
-
-When creating or updating products, note that any product must be associated with their brand and their corresponding [category](https://developers.vtex.com/docs/guides/categories) in the more specific category level.
-
-This endpoint allows two types of request:
+When creating or updating products, the product must be associated with their corresponding brand and most specific [category](https://developers.vtex.com/docs/guides/categories). Hence, use the [Create product with category and brand endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product) to insert a new product, considering the following scenarios:
 
 - [Type 1 - New product, category, and brand](#type-1---new-product-category-and-brand)
-- [Type 2 - New product, existing category and brand](#type-2---new-product-existing-category-and-brand)
+- [Type 2 - New product, existing category, and brand](#type-2---new-product-existing-category-and-brand)
 
 Regardless of the type of request, if there is a need to create a new product with a specific custom product ID, it is possible to specify the `Id` (integer) in the request body. Otherwise, VTEX will generate the ID automatically.
 
@@ -42,7 +38,7 @@ Regardless of the type of request, if there is a need to create a new product wi
 
 #### Type 1 - New product, category, and brand
 
-Creating a new product as well as a new category path (including subcategories) and a new brand by using `CategoryPath` and `BrandName` parameters.
+Create a new product as well as a new category path (including subcategories) and a new brand by specifying the `CategoryPath` and `BrandName` parameters in the [Create product with category and brand endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product) request body.
 
 <CH.Code>
 
@@ -113,7 +109,7 @@ req.end();
 
 ---
 
-```json Request
+```json Request mark=2,3
 {
     "Name": "Black T-Shirt",
     "CategoryPath": "Mens/Clothing/T-Shirts",
@@ -288,7 +284,7 @@ req.end();
 
 #### Type 2 - New product, existing category and brand
 
-Creating a new product given an existing `CategoryId` and an existing `BrandId`.
+Creating a new product given an existing `CategoryId` and an existing `BrandId` by specifying the `CategoryId` and `BrandId` parameters in the [Create product with category and brand endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product) request body.
 
 <CH.Code>
 
@@ -359,7 +355,7 @@ req.end();
 
 ---
 
-```json Request
+```json Request mark=4,5
 {
   "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
   "DepartmentId": 2000089,
@@ -612,7 +608,7 @@ req.end();
 
 >⚠️ If you need to change any product field, it is necessary to send all the other fields in the request. Otherwise, all other previously configured information will be deleted. Therefore, before making a change, you should [get the product data](#retrieving-product-data) for the same `Id` and use the response as a template to make the change.
 
-In case you have already created a product and want to change it, use the [Update product API request](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-), sending in the `Id` of the product already created.
+If you want to update information from an existing product, send a request to the [Update product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-) endpoint, indicating the `Id` of the existing product.
 
 <CH.Code>
 
