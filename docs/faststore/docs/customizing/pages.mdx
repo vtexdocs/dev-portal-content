@@ -1,7 +1,9 @@
 ---
 title: "Customizing Pages"
 excerpt: "FastStore provides the flexibility to use mixins for styling your page sections."
+slug: pages
 ---
+
 import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
 import { product } from 'site/mocks/product'
 import { OverviewSection } from 'site/components/OverviewSection'
@@ -13,20 +15,90 @@ import {
   ProductCardImage,
 } from '@faststore/ui'
 
-## Styling a section
+<header className="hero">FastStore provides the flexibility to use mixins for styling your page sections.## Styling a section
 
-All store content is centered by default using the `[data-fs-content]` with our `@mixin layout-content`. To add any customization, as in the examples below, you can add it to your `custom-theme.scss` file inside the `.section` class using the desired `data-attribute`.
+All store content is centered by default using the `[data-fs-content]` with the `@mixin layout-content`. To add any customization, as in the examples below, you can add it to your `custom-theme.scss` file inside the `.section` class using the desired `data-attribute`.
+
+> ℹ️ If you want to override any layout related mixins, please check [Mixins & Breakpoints](/docs/customizing/mixins-breakpoints) page.
+
+export const TilesTemplate = (
+  <ul
+    role="list"
+    data-fs-tiles="true"
+    data-fs-tiles-variant="expanded-first"
+    data-fs-content="tiles"
+    data-testid="store-tiles"
+  >
+    <li data-fs-tile="true">
+      <ProductCard variant="wide">
+        <ProductCardImage aspectRatio="1.8">
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </ProductCardImage>
+        <ProductCardContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+        />
+      </ProductCard>
+    </li>
+    <li data-fs-tile="true">
+      <ProductCard variant="wide">
+        <ProductCardImage aspectRatio="1.8">
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </ProductCardImage>
+        <ProductCardContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+        />
+      </ProductCard>
+    </li>
+    <li data-fs-tile="true">
+      <ProductCard variant="wide">
+        <ProductCardImage aspectRatio="1.8">
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </ProductCardImage>
+        <ProductCardContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+        />
+      </ProductCard>
+    </li>
+  </ul>
+)
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection direction="column" containerStyle={{ padding: '0' }}>
+    <OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
       <section class="section layout__section | nx-section-layout">
-        <TilesTemplate/>
+        {TilesTemplate}
       </section>
     </OverviewSection>
   </Tab>
   <Tab>
-    <OverviewSection direction="column" containerStyle={{ padding: '0' }}>
+    <OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
       <section class="section layout__section | nx-section-layout">
         <BannerText colorVariant="light">
           <BannerTextContent
@@ -40,10 +112,10 @@ All store content is centered by default using the `[data-fs-content]` with our 
     </OverviewSection>
   </Tab>
   <Tab>
-    ```scss
+    ```scss copy
     // This is already set as default
     [data-fs-content] { @include layout-content; }
-    ```
+```
   </Tab>
 </Tabs>
 
@@ -53,14 +125,14 @@ To display a **colored background** with **full width** and maintain the **conte
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection containerStyle={{ padding: '0' }}>
+    <OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
       <section class="section layout__section | nx-section-layout nx-section-layout-colored">
-        <TilesTemplate/>
+        {TilesTemplate}
       </section>
     </OverviewSection>
   </Tab>
   <Tab>
-    <OverviewSection direction="column" containerStyle={{ padding: '0' }}>
+    <OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
       <section class="section layout__section | nx-section-layout nx-section-layout-colored">
         <BannerText colorVariant="light">
           <BannerTextContent
@@ -74,7 +146,7 @@ To display a **colored background** with **full width** and maintain the **conte
     </OverviewSection>
   </Tab>
   <Tab>
-    ```scss
+    ```scss copy
     // Add this to your custom-theme.scss
     .section {
       [data-fs-tiles] {
@@ -96,14 +168,14 @@ To add a **colored background** and **centering** the `.section`, add `@include 
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection containerStyle={{ padding: '0' }}>
+    <OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
       <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
-        <TilesTemplate/>
+        {TilesTemplate}
       </section>
     </OverviewSection>
   </Tab>
   <Tab>
-    <OverviewSection direction="column" containerStyle={{ padding: '0' }}>
+    <OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
       <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
         <BannerText colorVariant="light">
           <BannerTextContent
@@ -117,7 +189,7 @@ To add a **colored background** and **centering** the `.section`, add `@include 
     </OverviewSection>
   </Tab>
   <Tab>
-    ```scss
+    ```scss copy
     // Add this to your custom-theme.scss
     .section {
       [data-fs-tiles] {
@@ -139,18 +211,19 @@ To add a **colored background** and **centering** the `.section`, add `@include 
 
 To use your store section's content with a **full-width layout** you'll need to change its content to include the `@mixin layout-content-full`.
 
->ℹ️ Our [Alert](/docs/faststore/molecules/alert) component is the only section that comes with **layout-content-full** by default.
+> ℹ️ Our [Alert](/docs/guides/faststore/molecules-alert) component is the only section that
+  comes with **layout-content-full** by default.
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection containerStyle={{ padding: '0' }}>
+    <OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
       <section class="section layout__section | nx-section-layout nx-section-layout-full">
-        <TilesTemplate/>
+        {TilesTemplate}
       </section>
     </OverviewSection>
   </Tab>
   <Tab>
-    <OverviewSection containerStyle={{ padding: '0' }}>
+    <OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
       <section class="section layout__section | nx-section-layout nx-section-layout-full">
         <BannerText colorVariant="light">
           <BannerTextContent
@@ -164,7 +237,7 @@ To use your store section's content with a **full-width layout** you'll need to 
     </OverviewSection>
   </Tab>
   <Tab>
-    ```scss
+    ```scss copy
     // Add this to your custom-theme.scss
     .section {
       [data-fs-tiles] [data-fs-content="tiles"] { @include layout-content-full; }

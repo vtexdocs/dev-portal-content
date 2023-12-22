@@ -26,7 +26,7 @@ GraphQL Optimizations are essential for optimizing your GraphQL server and TypeS
 - Improved efficiency and security
 - Enforcement of predefined operations
 
-Without these optimizations, any modifications to the GraphQL schema, such as adding or removing fields from a query or altering a GraphQL type, won't be reflected in the store. 
+Without these optimizations, any modifications to the GraphQL schema, such as adding or removing fields from a query or altering a GraphQL type, won't be reflected in the store.
 
 Additionally, GraphQL query optimizations update TypeScript types for the API to match schema changes seamlessly.
 </details>
@@ -67,7 +67,10 @@ If you need to access other data not available in the native FastStore API schem
 
 If you need data that is not available on the native [FastStore GraphQL schema](https://v1.faststore.dev/reference/api/objects), check the [root object](https://v1.faststore.dev/reference/api/objects).
 The [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) represents the top-level object returned to a query. You can see what data is available in the root object by typing the root param in your store code,
-as you can see in the step 2 of [Creating resolvers](/docs/api-extensions/extending-api-schema#step-3---creating-resolvers).### Avoid custom API Routes
+as you can see in the step 2 of [Creating resolvers](/docs/guides/faststore/api-extensions-extending-api-schema#step-3---creating-resolvers).
+
+### Avoid custom API Routes
+
 We do not recomend using Next.js [API Routes](https://nextjs.org/docs/api-routes/introduction) other than the ones already built in FastStore.
 
 If you do use this type of function, you must be mindful to always check which ones are actually running and remove the ones that are not.
@@ -76,28 +79,28 @@ If you do use this type of function, you must be mindful to always check which o
 
 <ul class="nx-card-list">
 <li class="nx-card">
-<a href="/docs/api-extensions/extending-api-schema">
+<a href="/docs/guides/faststore/api-extensions-extending-api-schema">
 #### Extending VTEX API schemas
 Extend VTEX and third-party APIs to customize how data is managed and processed in your store.
 </a>
 </li>
 
 <li class="nx-card">
-<a href="/docs/api-extensions/extending-queries-using-fragments">
+<a href="/docs/guides/faststore/api-extensions-extending-queries-using-fragments">
 #### Extending queries using fragments
 Extend GraphQL queries using fragments in FastStore API Extension to add custom fields to predefined queries.
 </a>
 </li>
 
 <li class="nx-card">
-<a href="/docs/api-extensions/consuming-api-extensions">
+<a href="/docs/guides/faststore/api-extensions-consuming-api-extensions">
 #### Consuming FastStore API extension with custom components
-Consume FastStore API extension data with custom components, such as [Sections](/docs/building-sections/creating-a-new-section) and [Override components](/docs/building-sections/overriding-components-and-props).
+Consume FastStore API extension data with custom components, such as [Sections](/docs/guides/faststore/building-sections-creating-a-new-section) and [Override components](/docs/guides/faststore/building-sections-overriding-components-and-props).
 </a>
 </li>
 
 <li class="nx-card">
-<a href="/docs/api-extensions/troubleshooting">
+<a href="/docs/guides/faststore/api-extensions-troubleshooting">
 #### Troubleshooting
 Check for common errors that can happen while using API extensions.
 </a>

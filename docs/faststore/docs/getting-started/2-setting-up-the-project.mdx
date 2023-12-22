@@ -1,19 +1,25 @@
 ---
-title: 'Setting Up the Project'
+title: '2. Setting Up the Project'
 sidebar_label: 'Getting Started'
+slug: 2-setting-up-the-project
 ---
 
-Now that your store is up and running after [FastStore Onboarding](/docs/faststore/1-faststore-onboarding-overview), you're ready to set up your development environment and create a unique storefront that reflects your brand. Let's get started!
+import { Callout, Tab, Tabs, Steps } from 'nextra-theme-docs'Now that your store is up and running after [FastStore Onboarding](/docs/guides/faststore/getting-started-1-faststore-onboarding-overview), you're ready to set up your development environment and create a unique storefront that reflects your brand. Let's get started!
 
 In this guide, you will:
 
 - Clone your store repository to your local machine.
-- Run a local development server, usually at http://localhost:3000/.
+- Run a local development server, usually at <http://localhost:3000/>.
 - Make your first change in your storefront.
 
 ---
 
 ## Before you start
+
+<Steps>
+
+### Required tooling
+
 Before cloning your store's repository, ensure that you have the following tools on your machine:
 
 <details>
@@ -21,7 +27,7 @@ Before cloning your store's repository, ensure that you have the following tools
     <b>Node.js</b>
   </summary>
   <p>
-    <p>To run your FastStore project, you must have the latest <b><a href="">Node.js</a></b> version or a version higher than 15.0.0.</p>
+    <p>To run your FastStore project, you must have the latest <b><a href="">Node.js</a></b> version or a version higher than `15.0.0`.</p>
     <ul>
        <li>- <b><a href="https://nodejs.org/tr/download/package-manager#macos">Install Node.js on macOS using Homebrew</a></b></li>
        <li>- <b><a href="https://nodejs.org/tr/download/package-manager#windows-1">Install Node.js on Windows</a></b> </li>
@@ -39,14 +45,14 @@ Before cloning your store's repository, ensure that you have the following tools
     </p>
       <details>
           <summary>Install Yarn on macOS by running the following:</summary>
-          ```bash
+          ```bash copy
             brew install yarn
           ```
         </details>
 
         <details>
           <summary>Install Yarn on Windows by running the following:</summary>
-          ```bash
+          ```bash copy
             npm install -g yarn
           ```
         </details>
@@ -75,7 +81,19 @@ Before cloning your store's repository, ensure that you have the following tools
   </p>
 </details>
 
->ℹ️ Although you might opt to use an alternative code editor, note that Visual Studio Code might help you follow along with the FastStore documentation since our documentation may include screenshots from VS Code.
+> ℹ️ Although you might opt to use an alternative code editor,
+  note that [Visual Studio Code](https://code.visualstudio.com/) might help you follow along with the FastStore documentation
+  since our documentation may include screenshots from VS Code.
+
+### Enabling Developer Mode (Windows users)
+
+We strongly recommend enabling Developer Mode when using the terminal for FastStore projects.
+Since FastStore projects rely on creating symlinks, this mode grants the necessary permissions and privileges, reducing the chance of errors during development.
+To activate Developer Mode, refer to Microsoft's official guide on [Enabling your device for development](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers).
+
+> ⚠️ Running the FastStore project as an Administrator is not recommended.
+
+</Steps>
 
 ---
 
@@ -83,28 +101,32 @@ Before cloning your store's repository, ensure that you have the following tools
 
 1. Open the terminal and navigate to the directory where you want to store your project.
 
->ℹ️ For Windowns users we highly recommend to run the terminal in administrator mode. To run in this mode, right-click on the terminal icon and select `Run as administrator`.
+> ℹ️ For Windowns users we highly recommend to enable the [Developer mode](/docs/getting-started/2-setting-up-the-project#developer-mode-for-windows-users) to run the terminal.
 
-2. Clone the repository created during the [Onboarding](/docs/faststore/1-faststore-onboarding-onboarding#repository-and-live-store-created) by running the following command in the terminal:
-```bash
+2. Clone the repository created during the [FastStore Onboarding](/docs/guides/faststore/getting-started-1-faststore-onboarding-onboarding#repository-and-live-store-created) by running the following command in the terminal:
+
+```bash copy
     git clone https://github.com/vtex-sites/{storeName}
 ```
->⚠️ Replace `{storeName}` for your store's repository.
+
+> ⚠️ Replace `{storeName}` for your store's repository.
 
 3. Change into the working directory by running the following command:
 
-```bash
+```bash copy
 cd {storeName}
 ```
-### 4. Install all the dependencies listed within the `package.json` file by running the following command:
 
-```bash
+4. Install all the dependencies listed within the `package.json` file by running the following command:
+
+```bash copy
 yarn install
 ```
 
 5. Open up your FastStore project in any code editor of your choice.
 
->ℹ️ Note that your store configuration was already set during the [Onboarding](/docs/faststore/1-faststore-onboarding-onboarding#repository-and-live-store-created). Therefore, there is no need to connect your project to your VTEX account. If you want to review these configurations, you can access the `faststore.config.js` file in the root directory of your project's repository.
+> ℹ️ Note that your store configuration was already set during the [FastStore Onboarding](/docs/guides/faststore/getting-started-1-faststore-onboarding-onboarding#repository-and-live-store-created). Therefore, there is no need to connect your project to your VTEX account.
+  If you want to review these configurations, you can access the `faststore.config.js` file in the root directory of your project's repository.
 
 ---
 
@@ -114,18 +136,20 @@ Let's check what the project looks like in a web browser so far.
 
 1. Start a local development server to serve your website:
 
-```bash
+```bash copy
   yarn dev
 ```
+
 This may take a few minutes. Once your development server is ready, the command line will output a similar message as the following:
 
-```bash
+```bash copy
   ready - started server on 0.0.0.0:3000, url: http://localhost:3000
   event - compiled client and server successfully in 333 ms (951 modules)
 ```
->ℹ️ The `dev` command is a part of the FastStore CLI, a pre-configured command line interface in your starter project. Using the CLI, this command enables you to execute code to keep your store's project up-to-date with the [@faststore/core package](/docs/faststore/getting-started-3-project-structure). For more information, refer to the topic on [FastStore CLI](/docs/faststore/getting-started-4-faststore-cli).
 
-2. Now, open your favorite web browser and navigate to the localhost served, for example, http://localhost:3000.
+> ℹ️ The `dev` command is part of the [FastStore CLI](/docs/getting-started/4-faststore-cli), a pre-configured command line interface in your starter project. Using the CLI, this command enables you to execute code to keep your store's project up-to-date with the [@faststore/core package](/docs/getting-started/3-project-structure).
+
+2. Now, open your favorite web browser and navigate to the localhost served, for example, <http://localhost:3000>.
 
 ![localhost-example](https://vtexhelp.vtexassets.com/assets/docs/src/starter-gif___42003e72ece61064991a34c3f14e398f.gif)
 
@@ -137,27 +161,22 @@ While your local development server is running, you can preview any changes you 
 
 ## Step 3: Making the first change in your store frontend
 
-Now that your store is up and running locally, let's make a simple change in the store frontend.
+Now that your store is up and running locally, let's make a simple change in the storefront.
 
-Let's make the first level of customization which is update the store's theme with [Theming](/docs/faststore/docs-brandless). For this customization we are going to use the [Soft Blue theme](/docs/faststore/themes-soft-blue) and we will make some updates on it.
+Let's make the first level of customization which updates the store's [theme](/docs/guides/faststore/themes-overview). For this customization, we are going to use the [Soft Blue theme](/docs/guides/faststore/themes-soft-blue).
 
-1. Open the `faststore.config.js` file and in `theme` and change the name to `soft-blue`.
+1. Create a new file named `soft-blue.scss` in `src/themes`. This is going to be the new theme of your store.
 
-```scss
-  theme: 'soft-blue',
-```
+2. Add the following styles to `src/themes/soft-blue.scss`:
 
-2. Change the `custom-theme.scss` file's name located in `src/themes` to `soft-blue.scss`. This is the theme of your store website UI.
-
-3. Add the following styles to `src/themes/soft-blue.scss`:
-
-```scss
+```scss filename="src/themes/soft-blue.scss" copy
 // ----------------------------------------------------------
 // GLOBAL TOKENS
 // Theme Soft Blue
 // ----------------------------------------------------------
 
-.theme {
+@layer theme {
+  .theme {
   // --------------------------------------------------------
   // Colors (Branding Core)
   // --------------------------------------------------------
@@ -212,10 +231,12 @@ Let's make the first level of customization which is update the store's theme wi
   --fs-shadow-hover: 0 1px 4px rgb(0 0 0 / 10%), 0 6px 8px rgb(0 0 0 / 10%);
 
   // --------------------------------------------------------
-  // Components
+  // FS UI Components
   // --------------------------------------------------------
+  // Add here the customizations for FastStore UI components.
 
-  .section {
+    --fs-logo-width: 8rem;
+
     [data-fs-product-card] {
       --fs-product-card-border-color: transparent;
       --fs-product-card-border-color-hover: var(--fs-border-color-light);
@@ -224,18 +245,19 @@ Let's make the first level of customization which is update the store's theme wi
         --fs-product-card-border-color: var(--fs-border-color-light);
       }
     }
-
-    [data-fs-logo] {
-      --fs-logo-width: 8rem;
-    }
   }
 }
 
 ```
 
-4. Save your changes.
-5. Restart the server and check your browser to see your changes. You may need to refresh the page.
+3. Open the `faststore.config.js` file and changes the `theme` from `custom-theme` to `soft-blue`.
 
-![themw-soft-blue](https://vtexhelp.vtexassets.com/assets/docs/src/soft-blue___9eb9e3e506de6396df954598739be8f8.png)
+```js filename="faststore.config.js" copy
+  theme: 'soft-blue',
+```
 
->ℹ️ It is important to highlight that the store's logo is set through the [VTEX Headless CMS](https://www.faststore.dev/tutorials/cms/0).
+4. Restart the server and check in the browser the new theme applied to your store. You may need to refresh the page.
+
+![theme-soft-blue](https://vtexhelp.vtexassets.com/assets/docs/src/soft-blue___9eb9e3e506de6396df954598739be8f8.png)
+
+> ℹ️ It is important to highlight that the store's logo is set through the [Headless CMS](/docs/headless-cms-overview).
