@@ -4,7 +4,6 @@ excerpt: "FastStore provides the flexibility to use mixins for styling your page
 slug: pages
 ---
 
-import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
 import { product } from 'site/mocks/product'
 import { OverviewSection } from 'site/components/OverviewSection'
 import {
@@ -23,14 +22,14 @@ All store content is centered by default using the `[data-fs-content]` with the 
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
+    <OverviewSection>
       <section class="section layout__section | nx-section-layout">
         <TilesTemplate/>
       </section>
     </OverviewSection>
   </Tab>
   <Tab>
-    <OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
+    <OverviewSection>
       <section class="section layout__section | nx-section-layout">
         <BannerText colorVariant="light">
           <BannerTextContent
@@ -59,14 +58,14 @@ To display a **colored background** with **full width** and maintain the **conte
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
 <Tab>
-<OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
+<OverviewSection>
   <section class="section layout__section | nx-section-layout nx-section-layout-colored">
     <TilesTemplate/>
   </section>
 </OverviewSection>
 </Tab>
 <Tab>
-<OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
+<OverviewSection>
   <section class="section layout__section | nx-section-layout nx-section-layout-colored">
     <BannerText colorVariant="light">
       <BannerTextContent
@@ -103,14 +102,14 @@ To add a **colored background** and **centering** the `.section`, add `@include 
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
 <Tab>
-<OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
+<OverviewSection>
   <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
     <TilesTemplate/>
   </section>
 </OverviewSection>
 </Tab>
 <Tab>
-<OverviewSection direction="column" containerStyle={{ padding: '0', justifyContent: 'center' }}>
+<OverviewSection>
   <section class="section layout__section layout__content | nx-section-layout nx-section-layout-colored">
     <BannerText colorVariant="light">
       <BannerTextContent
@@ -152,14 +151,14 @@ To use your store section's content with a **full-width layout** you'll need to 
 
 <Tabs items={['Tiles', 'BannerText', 'Code']} defaultIndex="0">
 <Tab>
-<OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
+<OverviewSection>
   <section class="section layout__section | nx-section-layout nx-section-layout-full">
     <TilesTemplate/>
   </section>
 </OverviewSection>
 </Tab>
 <Tab>
-<OverviewSection containerStyle={{ padding: '0', justifyContent: 'center' }}>
+<OverviewSection>
   <section class="section layout__section | nx-section-layout nx-section-layout-full">
     <BannerText colorVariant="light">
       <BannerTextContent
