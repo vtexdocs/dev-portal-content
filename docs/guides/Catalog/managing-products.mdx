@@ -1,0 +1,736 @@
+---
+title: "Managing products"
+slug: "managing-products"
+excerpt: "Learn how to create and update a product with the Catalog API."
+hidden: false
+createdAt: "2021-12-14T13:56:04.502Z"
+updatedAt: "2022-02-04T21:26:33.803Z"
+---
+
+This step-by-step guide will walk you through the process of creating and updating a [product](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1wmX3QvQVxbKVmalhIE5Ru) within the VTEX platform.
+
+A product is a generic definition of an item that is part of your store’s Catalog, for instance, a shirt.
+
+Products may vary by model, color, size, among other characteristics. Therefore, it would be possible to have the same product (shirt) in different models, like short or long sleeves, gray or pink color, sizes S, M or L.
+
+Each variation, such as a _long sleeve gray size S shirt_, will correspond to a [Stock Keeping Unit (SKU)](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3mJbIqMlz6oKDmyZ2bKJoA), which is the actual item in the inventory that customers can purchase. Before creating SKUs, you must create a product.
+
+## Before you begin
+
+Before you begin managing your SKUs, make sure you've completed the following steps:
+
+- **Obtain API Credentials**: Ensure you have a valid `appKey` and `appToken` with the necessary permissions to access the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api). For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
+
+## Creating a product
+
+When creating or updating products, the product must be associated with their corresponding brand and most specific [category](https://developers.vtex.com/docs/guides/categories). Hence, use the [Create product with category and brand endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product) to insert a new product, considering the following scenarios:
+
+- [Type 1 - New product, category, and brand](#type-1---new-product-category-and-brand)
+- [Type 2 - New product, existing category, and brand](#type-2---new-product-existing-category-and-brand)
+
+Regardless of the type of request, if there is a need to create a new product with a specific custom product ID, it is possible to specify the `Id` (integer) in the request body. Otherwise, VTEX will generate the ID automatically.
+
+>⚠️ We recommend leaving VTEX to automatically generate an ID, by not including a custom product ID in the `Id` field of the request body. The generated ID can be retrieved in the request's response and must be stored in the system for future updates of this product.
+
+> ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code will be highlighted and focused for your convenience. Additionally, in the code viewer on the right, you can switch between different code files or tabs to view the corresponding code examples.
+
+<CH.Scrollycoding>
+
+#### Type 1 - New product, category, and brand
+
+Create a new product as well as a new category path (including subcategories) and a new brand by specifying the `CategoryPath` and `BrandName` parameters in the [Create product with category and brand endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product) request body.
+
+<CH.Code>
+
+```sh Shell mark=2[16:28],5[31:38],6[33:42],7[10:15]
+curl --request post \
+ --url https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/product \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{body}'
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+payload = "{body}"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("post", "/api/catalog/pvt/product", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],11[25:32],12[28:36],29[26:31]
+const http = require("https");
+
+const options = {
+ "method": "post",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/catalog/pvt/product",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify({body}));
+req.end();
+```
+
+---
+
+```json Request mark=2,3
+{
+    "Name": "Black T-Shirt",
+    "CategoryPath": "Mens/Clothing/T-Shirts",
+    "BrandName": "Nike",
+    "RefId": "31011706925",
+    "Title": "Black T-Shirt",
+    "LinkId": "tshirt-black",
+    "Description": "This is a cool Tshirt",
+    "ReleaseDate": "2022-01-01T00:00:00",
+    "IsVisible": true,
+    "IsActive": true,
+    "TaxCode": "",
+    "MetaTagDescription": "tshirt black",
+    "ShowWithoutStock": true,
+    "Score": 1
+}
+```
+
+
+```json Response
+{
+    "Id": 42,
+    "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "DepartmentId": 2000089,
+    "CategoryId": 2000090,
+    "BrandId": 12121219,
+    "LinkId": "stefan-janoski-canvas-varsity-red",
+    "RefId": "sr_1_90",
+    "IsVisible": true,
+    "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "DescriptionShort": "The Nike Zoom Stefan Janoski is made with a premium leather.",
+    "ReleaseDate": "2023-01-01T00:00:00",
+    "KeyWords": "Zoom,Stefan,Janoski",
+    "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "IsActive": true,
+    "TaxCode": "",
+    "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "SupplierId": 1,
+    "ShowWithoutStock": true,
+    "AdWordsRemarketingCode": null,
+    "LomadeeCampaignCode": null,
+    "Score": 1
+}
+```
+
+</CH.Code>
+
+---
+
+##### Type 1 with custom `Id`
+
+If there is a need to create a new product with a specific custom product ID, specify the `Id` (integer) in the request body.
+
+<CH.Code>
+
+```sh Shell mark=2[16:28],5[31:38],6[33:42],7[10:15]
+curl --request post \
+ --url https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/product \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{body}'
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+payload = "{body}"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("post", "/api/catalog/pvt/product", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],11[25:32],12[28:36],29[26:31]
+const http = require("https");
+
+const options = {
+ "method": "post",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/catalog/pvt/product",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify({body}));
+req.end();
+```
+
+---
+
+```json Request mark=2
+{
+    "Id": 42,
+    "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "CategoryPath": "Mens/Clothing/T-Shirts",
+    "BrandName": "Nike",
+    "RefId": "sr_1_90",
+    "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "LinkId": "stefan-janoski-canvas-varsity-red",
+    "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "ReleaseDate": "2023-01-01T00:00:00",
+    "IsVisible": true,
+    "IsActive": true,
+    "TaxCode": "",
+    "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "ShowWithoutStock": true,
+    "Score": 1
+}
+```
+
+```json Response
+{
+    "Id": 42,
+    "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "DepartmentId": 2000089,
+    "CategoryId": 2000090,
+    "BrandId": 12121219,
+    "LinkId": "stefan-janoski-canvas-varsity-red",
+    "RefId": "sr_1_90",
+    "IsVisible": true,
+    "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "DescriptionShort": "The Nike Zoom Stefan Janoski is made with a premium leather.",
+    "ReleaseDate": "2023-01-01T00:00:00",
+    "KeyWords": "Zoom,Stefan,Janoski",
+    "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "IsActive": true,
+    "TaxCode": "",
+    "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "SupplierId": 1,
+    "ShowWithoutStock": true,
+    "AdWordsRemarketingCode": null,
+    "LomadeeCampaignCode": null,
+    "Score": 1
+}
+```
+
+</CH.Code>
+
+---
+
+#### Type 2 - New product, existing category and brand
+
+Creating a new product given an existing `CategoryId` and an existing `BrandId` by specifying the `CategoryId` and `BrandId` parameters in the [Create product with category and brand endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product) request body.
+
+<CH.Code>
+
+```sh Shell mark=2[16:28],5[31:38],6[33:42],7[10:15]
+curl --request post \
+ --url https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/product \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{body}'
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+payload = "{body}"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("post", "/api/catalog/pvt/product", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],11[25:32],12[28:36],29[26:31]
+const http = require("https");
+
+const options = {
+ "method": "post",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/catalog/pvt/product",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify({body}));
+req.end();
+```
+
+---
+
+```json Request mark=4,5
+{
+  "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+  "DepartmentId": 2000089,
+  "CategoryId": 2000090,
+  "BrandId": 12121219,
+  "LinkId": "stefan-janoski-canvas-varsity-red",
+  "RefId": "sr_1_90",
+  "IsVisible": true,
+  "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+  "DescriptionShort": "The Nike Zoom Stefan Janoski is made with a premium leather.",
+  "ReleaseDate": "2023-01-01T00:00:00",
+  "KeyWords": "Zoom,Stefan,Janoski",
+  "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+  "IsActive": true,
+  "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+  "ShowWithoutStock": true,
+}
+```
+
+</CH.Code>
+
+---
+
+##### Type 2 with custom `Id`
+
+If there is a need to create a new product with a specific custom product ID, specify the `Id` (integer) in the request body.
+
+<CH.Code>
+
+```sh Shell mark=2[16:28],5[31:38],6[33:42],7[10:15]
+curl --request post \
+ --url https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/product \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{body}'
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+payload = "{body}"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("post", "/api/catalog/pvt/product", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],11[25:32],12[28:36],29[26:31]
+const http = require("https");
+
+const options = {
+ "method": "post",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/catalog/pvt/product",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify({body}));
+req.end();
+```
+
+---
+
+```json Request mark=2
+{
+  "Id": 42,
+  "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+  "DepartmentId": 2000089,
+  "CategoryId": 2000090,
+  "BrandId": 12121219,
+  "LinkId": "stefan-janoski-canvas-varsity-red",
+  "RefId": "sr_1_90",
+  "IsVisible": true,
+  "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+  "DescriptionShort": "The Nike Zoom Stefan Janoski is made with a premium leather.",
+  "ReleaseDate": "2023-01-01T00:00:00",
+  "KeyWords": "Zoom,Stefan,Janoski",
+  "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+  "IsActive": true,
+  "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+  "ShowWithoutStock": true,
+}
+```
+
+```json Response
+{
+    "Id": 42,
+    "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "DepartmentId": 2000089,
+    "CategoryId": 2000090,
+    "BrandId": 12121219,
+    "LinkId": "stefan-janoski-canvas-varsity-red",
+    "RefId": "sr_1_90",
+    "IsVisible": true,
+    "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "DescriptionShort": "The Nike Zoom Stefan Janoski is made with a premium leather.",
+    "ReleaseDate": "2023-01-01T00:00:00",
+    "KeyWords": "Zoom,Stefan,Janoski",
+    "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "IsActive": true,
+    "TaxCode": "",
+    "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "SupplierId": 1,
+    "ShowWithoutStock": true,
+    "AdWordsRemarketingCode": null,
+    "LomadeeCampaignCode": null,
+    "Score": 1
+}
+```
+
+</CH.Code>
+
+---
+
+## Retrieving product data
+
+You can retrieve product information by calling the [Get product by ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-) endpoint.
+
+Make sure to copy the response body, modify specific fields and use the full updated body as a request when [updating a product](#updating-a-product).
+
+<CH.Code>
+
+```sh Shell mark=2[17:29],2[81:91],5[31:38],6[33:42]
+curl --request get \
+ --url 'https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/product/{productId}' \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36],14[47:57]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("GET", "/api/catalog/pvt/product/{productId}", headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[14:26],7[35:45],11[27:34],12[29:38]
+const https = require("https");
+
+const options = {
+  method: "GET",
+  hostname: "{accountName}.vtexcommercestable.com.br",
+  port: null,
+  path: "/api/catalog/pvt/product/{productId}",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+    "X-VTEX-API-AppKey": "{appKey}",
+    "X-VTEX-API-AppToken": "{appToken}",
+  },
+};
+
+const req = https.request(options, function (res) {
+  const chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    const body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.end();
+```
+
+---
+
+```json Response
+{
+    "Id": 42,
+    "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "DepartmentId": 2000089,
+    "CategoryId": 2000090,
+    "BrandId": 12121219,
+    "LinkId": "stefan-janoski-canvas-varsity-red",
+    "RefId": "sr_1_90",
+    "IsVisible": true,
+    "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "DescriptionShort": "The Nike Zoom Stefan Janoski is made with a premium leather.",
+    "ReleaseDate": "2023-01-01T00:00:00",
+    "KeyWords": "Zoom,Stefan,Janoski",
+    "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "IsActive": true,
+    "TaxCode": "",
+    "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "SupplierId": 1,
+    "ShowWithoutStock": true,
+    "AdWordsRemarketingCode": null,
+    "LomadeeCampaignCode": null,
+    "Score": 1
+}
+```
+
+</CH.Code>
+
+---
+
+## Updating a product
+
+>⚠️ If you need to change any product field, it is necessary to send all the other fields in the request. Otherwise, all other previously configured information will be deleted. Therefore, before making a change, you should [get the product data](#retrieving-product-data) for the same `Id` and use the response as a template to make the change.
+
+If you want to update information from an existing product, send a request to the [Update product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-) endpoint, indicating the `Id` of the existing product.
+
+<CH.Code>
+
+```sh Shell mark=2[17:29],2[81:91],5[31:38],6[33:42],7[10:15]
+curl --request put \
+ --url 'https://{accountName}.vtexcommercestable.com.br/api/catalog/pvt/product/{productId}' \
+ --header 'Accept: application/json' \
+ --header 'Content-Type: application/json' \
+ --header 'X-VTEX-API-AppKey: {appKey}' \
+ --header 'X-VTEX-API-AppToken: {appToken}' \
+ --data '{body}'
+```
+
+```py Python mark=3[37:49],5[12:17],10[25:32],11[28:36],14[47:57]
+import http.client
+
+conn = http.client.HTTPSConnection("{accountName}.vtexcommercestable.com.br")
+
+payload = "{body}"
+
+headers = {
+  'Accept': "application/json",
+  'Content-Type': "application/json",
+  'X-VTEX-API-AppKey': "{appKey}",
+  'X-VTEX-API-AppToken': "{appToken}"
+}
+
+conn.request("put", "/api/catalog/pvt/product/{productId}", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```js Node.js mark=5[15:27],7[36:46],11[25:32],12[28:36],29[26:31]
+const http = require("https");
+
+const options = {
+ "method": "put",
+ "hostname": "{accountName}.vtexcommercestable.com.br",
+ "port": null,
+ "path": "/api/catalog/pvt/product/{productId}",
+ "headers": {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  "X-VTEX-API-AppKey": "{appKey}",
+  "X-VTEX-API-AppToken": "{appToken}"
+ }
+};
+
+const req = http.request(options, function (res) {
+ const chunks = [];
+
+ res.on("data", function (chunk) {
+  chunks.push(chunk);
+ });
+
+ res.on("end", function () {
+  const body = Buffer.concat(chunks);
+  console.log(body.toString());
+ });
+});
+
+req.write(JSON.stringify({body}));
+req.end();
+```
+
+---
+
+```json Request
+{
+    "Id": 42,
+    "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "DepartmentId": 2000089,
+    "CategoryId": 2000090,
+    "BrandId": 12121219,
+    "LinkId": "stefan-janoski-canvas-varsity-red",
+    "RefId": "sr_1_90",
+    "IsVisible": true,
+    "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "DescriptionShort": "The Nike Zoom Stefan Janoski is made with a premium leather.",
+    "ReleaseDate": "2023-01-01T00:00:00",
+    "KeyWords": "Zoom,Stefan,Janoski",
+    "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Re",
+    "IsActive": true,
+    "TaxCode": "",
+    "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "SupplierId": 1,
+    "ShowWithoutStock": true,
+    "AdWordsRemarketingCode": null,
+    "LomadeeCampaignCode": null,
+    "Score": 1
+}
+```
+
+```json Response
+{
+    "Id": 42,
+    "Name": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "DepartmentId": 2000089,
+    "CategoryId": 2000090,
+    "BrandId": 12121219,
+    "LinkId": "stefan-janoski-canvas-varsity-red",
+    "RefId": "sr_1_90",
+    "IsVisible": true,
+    "Description": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "DescriptionShort": "The Nike Zoom Stefan Janoski is made with a premium leather.",
+    "ReleaseDate": "2023-01-01T00:00:00",
+    "KeyWords": "Zoom,Stefan,Janoski",
+    "Title": "Zoom Stefan Janoski Canvas RM SB Varsity Red",
+    "IsActive": true,
+    "TaxCode": "",
+    "MetaTagDescription": "The Nike Zoom Stefan Janoski Men's Shoe is made with a premium leather upper for superior durability and a flexible midsole for all-day comfort. A tacky gum rubber outsole delivers outstanding traction.",
+    "SupplierId": 1,
+    "ShowWithoutStock": true,
+    "AdWordsRemarketingCode": null,
+    "LomadeeCampaignCode": null,
+    "Score": 1
+}
+```
+
+</CH.Code>
+
+</CH.Scrollycoding>

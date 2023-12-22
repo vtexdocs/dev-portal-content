@@ -12,6 +12,8 @@ Products may vary by model, color, size, among other characteristics. Therefore,
 
 Each variation, such as a _long sleeve gray size S shirt_, will correspond to a [Stock Keeping Unit (SKU)](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3mJbIqMlz6oKDmyZ2bKJoA), which is the actual item in the inventory that customers can purchase. Before creating SKUs, you must create a product.
 
+> ✅ Try the interactive version of this article by accessing this [link](https://developers.vtex.com/docs/guides/managing-products). Code will be highlighted and focused for your convenience.
+
 ## Create a product
 
 To insert a new product, use the [Create product API endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product).
