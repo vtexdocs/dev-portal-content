@@ -1,7 +1,6 @@
 ---
 title: "Link Button"
-excerpt: "Link Button is similar to a button, however acts as a link to navigate users between pages."
-description: LinkButton is similar to a button, however acts as a link to navigate users between pages.
+excerpt: LinkButton is similar to a button, however acts as a link to navigate users between pages.
 keywords:
   - UI library
   - ecommerce
@@ -10,10 +9,7 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Button___6d6b16886d5d7e2a05dba8c45c075796.png
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { LinkButton, Icon } from '@faststore/ui'
-
+Link Button is similar to a button, however acts as a link to navigate users between pages.
 
 ## Overview
 
@@ -28,7 +24,7 @@ import { LinkButton, Icon } from '@faststore/ui'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { LinkButton } from '@faststore/ui'
@@ -55,13 +51,17 @@ import '@faststore/ui/src/components/molecules/LinkButton/styles.scss'
 
 ## Props
 
-<ComponentPropsSection name="LinkButton" />
+The `LinkButton` component supports all attributes supported by the tag `a`.
+
+Besides those attributes, the following props are also supported [Button Props](/docs/guides/faststore/atoms-button#props):
+
+<PropsSection propsList={propsLinkButton} />
 
 ---
 
 ## Design Tokens
 
-This component inherits [Button](/docs/faststore/atoms-button) design tokens.
+This component inherits [Button](/docs/guides/faststore/atoms-button) design tokens.
 
 ---
 
@@ -82,7 +82,7 @@ This component inherits [Button](/docs/faststore/atoms-button) design tokens.
 
 ## Variants
 
-This component inherits [Button](/docs/faststore/atoms-button) variants.
+This component inherits [Button](/docs/guides/faststore/atoms-button) variants.
 
 ### Primary
 
@@ -200,7 +200,7 @@ For further customization, you can use the following data attributes:
 
 `data-fs-link-button`
 
-This component inherits [Button](/docs/faststore/atoms-button) CSS selectors and styles.
+This component inherits [Button](/docs/guides/faststore/atoms-button) CSS selectors and styles.
 
 ---
 
@@ -208,4 +208,4 @@ This component inherits [Button](/docs/faststore/atoms-button) CSS selectors and
 
 ### ✅ Do's
 
-- Use the `LinkButton` only to navigate the user between store pages. For general purposes, use the standard [Button](/docs/faststore/atoms-button).
+- Use the `LinkButton` only to navigate the user between store pages. For general purposes, use the standard [Button](/docs/guides/faststore/atoms-button).
