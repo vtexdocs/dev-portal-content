@@ -1,0 +1,86 @@
+---
+title: "2. Discovering VTEX Commerce APIs and authentication"
+slug: "calling-commerce-apis-2-discovering-vtex-commerce-apis-and-authentication"
+hidden: false
+createdAt: "2023-12-11T15:40:00.000Z"
+updatedAt: "2023-12-11T15:40:00.000Z"
+---
+
+Now that we have a comprehensive understanding of the project structure, it's important to address API authentication before we proceed with calling VTEX Core Commerce APIs. VTEX strongly advises against using the `AppKey` and `AppToken` pair in VTEX IO apps. Instead, the recommended practice involves utilizing the VTEX ID token.
+
+Every app developed on VTEX IO represents a resource on the platform. This allows an app to interact with other systems on behalf of itself, duly authorized by the account administrator. It is the reponsibility of the app developer to declare the necessary permissions. In practical terms, this entails:
+
+- Declaring both the endpoint and the [roles](https://developers.vtex.com/docs/guides/vtex-io-documentation-roles) required to access any API in the apps's `manifest.json` file.
+- Making request with a **VTEX ID token** instead of the **AppKey** and **AppToken** pair. For more information, refer to [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens).
+
+<CH.Scrollycoding>
+
+## Logging the app token
+
+Each VTEX IO app is issued a corresponding `authToken`. This token can be obtained from the `ctx` object and contains all the permissions declared in the `policies` field of the app's `manifest.json` file.
+
+To inspect the `authToken` of an app, go to the `node/middlewares/validate.ts` file and add the highlighted log code.
+
+```typescript node/middlewares/validate.ts focus=10
+import { UserInputError } from '@vtex/api'
+
+export async function validate(ctx: Context, next: () => Promise<any>) {
+  const {
+    vtex: {
+      route: { params },
+    },
+  } = ctx
+
+  console.log(ctx.vtex.authToken)
+  console.info('Received params:', params)
+
+  const { code } = params
+
+  if (!code) {
+    throw new UserInputError('Code is required') // Wrapper for a Bad Request (400) HTTP Error. Check others in https://github.com/vtex/node-vtex-api/blob/fd6139349de4e68825b1074f1959dd8d0c8f4d5b/src/errors/index.ts
+  }
+
+  const codeNumber = parseInt(code as string, 10)
+
+  ctx.state.code = codeNumber
+
+  await next()
+}
+```
+
+---
+
+## Checking the app token
+
+With the app linked to your development workspace, access the service route and check the content logged in the terminal. Use the following URL format: `https://{workspace}-{account}.myvtex.com/_v/status/:code`, replacing `{workspace}` and `{account}` according to your scenario, and `:code` with `200`
+
+```sh Terminal
+info: eyJhbGciOiJSUzI1NiIsImtpZCI6IkVFQkFGRjY1QkVFRUNDODUxQkQ2NkFEOEI0NjIyQUY2MDAzOEI5NUQiLCJ0eXAiOiJKV1QifQ.eyJhY2NvdW50IjoiY29zbWV0aWNzMiIsIndvcmtzcGFjZSI6ImhlbnJpcXVlYmFsYmlubyIsInN1YiI6InZ0ZXguc2VydmljZS1leGFtcGxlQDAuMi4yMiIsInR5cGUiOiJsaW5rIiwidXNlckxvZ2luIjoidnRleC5zZXJ2aWNlLWV4YW1wbGVAMC4yLjIyIiwidXNlcklkIjoibGluazp2dGV4LnNlcnZpY2UtZXhhbXBsZUAwLjIuMjIiLCJyb2xlcyI6WyJsaW5rOnZ0ZXguc2VydmljZS1leGFtcGxlQDAuMi4yMiJdLCJuYmYiOjE2OTE1MTIxNzcsImV4cCI6MTY5MTU5ODU3NywiaWF0IjoxNjkxNTEyMTc3LCJpc3MiOiJ2dGV4aW8vcm91dGVyIiwiYXVkIjoidnRleGlvIn0.
+```
+
+---
+
+## Decoding the app token
+
+Check the content of this token using a platform such as [jwt.io](https://jwt.io/). This decoded representation provides valuable details, including the associated account and workspace, user and role information, as well as timestamps for token validity.
+
+```json DecodedToken
+{
+  "account": "myaccount",
+  "workspace": "myworkspace",
+  "sub": "vtex.service-example@0.2.22",
+  "type": "link",
+  "userLogin": "vtex.service-example@0.2.22",
+  "userId": "link:vtex.service-example@0.2.22",
+  "roles": [
+    "link:vtex.service-example@0.2.22"
+  ],
+  "nbf": 1691512177,
+  "exp": 1691598577,
+  "iat": 1691512177,
+  "iss": "vtexio/router",
+  "aud": "vtexio"
+}
+```
+
+</CH.Scrollycoding>

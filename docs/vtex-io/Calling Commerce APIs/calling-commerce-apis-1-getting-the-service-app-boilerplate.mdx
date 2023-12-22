@@ -1,0 +1,286 @@
+---
+title: "1. Getting the Service app boilerplate"
+slug: "calling-commerce-apis-1-getting-the-service-app-boilerplate"
+hidden: false
+createdAt: "2023-12-11T15:40:00.000Z"
+updatedAt: "2023-12-11T15:40:00.000Z"
+---
+
+To kickstart your journey in this course, your initial step is to clone the [`vtex.service-example`](https://github.com/vtex-apps/service-example) boilerplate app. This repository serves as a template with all the essential files you need to get started in this course.
+
+<CH.Scrollycoding>
+
+## Cloning the boilerplate repository
+
+Clone the `vtex-apps/service-example` boilerplate by running the command presented on the right panel. This will create a local copy of the project, equipping you with the necessary files to start the course.
+
+```sh
+git clone https://github.com/vtex-apps/service-example
+```
+
+---
+
+## Understanding the project structure
+
+Open the [service-example](https://github.com/vtex-apps/service-example) project in the code editor of your preference. Note that the project contains the `/node` and `/docs` directories, the `manifest.json` file, and the `package.json` file.
+
+```txt
+root
+ ┣ 📂 node
+ ┣ 📂 docs
+ ┣ 📄 README.md
+ ┣ 📄 manifest.json
+ ┗ 📄 package.json
+```
+
+---
+
+### `manifest.json` file
+
+At the heart of this structure lies the [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file, a crucial document encapsulating metadata about the app. This file not only contains fundamental details such as the app's `name`, `version`, and `title` but also outlines the `builders`, `policies`, and `dependencies` necessary for the app functionality. Let's delve deeper into some of these concepts:
+
+| Field | Type | Description |
+| - | - | - |
+|`builders` | `object` | Specifies the [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) required by the app. Note that the app uses the `node` builder, responsible for interpreting [Node.js](https://nodejs.org/en) code. For each declared builder, there will be a dedicated folder specifically designed to be interpreted by that particular builder. |
+| `policies` | `array` | Declares [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) for accessing external services or specific resources needed for the app functioning. |
+
+<CH.Code show={["manifest.json"]}>
+
+```json manifest.json focus=10:13,18:32
+{
+  "name": "service-example",
+  "vendor": "vtex",
+  "version": "0.2.22",
+  "title": "Service Example",
+  "description": "Reference app for VTEX IO Services",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
+```
+
+</CH.Code>
+
+---
+
+## `node` folder
+
+The `/node` folder contains the backend logic of the app, written in [Node.js](https://nodejs.org/en/). Here, Node packages and native libraries, such as [`@vtex/clients`](https://github.com/vtex/io-clients), can be employed to enhance code development.
+
+Within the `node` folder, you will also find the following folders and files:
+
+| Folder or file | Description |
+| - | - |
+| `/middlewares` | Folder containing middleware functions. |
+| `/middlewares/validate.ts` | Middleware that validates if the request has a valid HTTP status code. It will also be used to access the app authentication token. |
+| `/middlewares/status.ts` | Middleware to call the VTEX Commerce API and fetch SKU details from the Catalog API. |
+| `/clients` | Folder where the Clients of the app are defined, used to access external resources and services. |
+| `/clients/index.ts` | Definition of the `Clients` class. Here we will import the Client `Catalog` and define a getter/setter function for Catalog items. |
+| `index.ts` | Initial declarations for the app's functionality, including mapping routes and middlewares. |
+| `package.json` | Metadata about the node app, including its name, version, description, dependencies, and scripts. |
+| `service.json` | Configuration file that specifies the the app's infrastructure attributes. It includes details such as memory allocation, timeout duration, minimum and maximum replicas, and routes. |
+| `tsconfig.json` | Configuration file for TypeScript, specifying how the TypeScript compiler should compile the project. It may include options such as the target JavaScript version, module system, and other compiler settings. |
+
+```txt
+node
+ ┣ 📂 middlewares
+ ┃  ┣ 📄 validate.ts
+ ┃  ┗ 📄 status.ts
+ ┣ 📂 clients
+ ┃  ┣ 📄 status.ts
+ ┃  ┗ 📄 index.ts
+ ┣ 📄 index.ts
+ ┣ 📄 package.json
+ ┣ 📄 service.json
+ ┣ 📄 tsconfig.json
+ ┗ 📄 yarn.lock
+```
+
+---
+
+### `node/service.json` file
+
+Located within the `/node` folder, the [`service.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-service) file configures the app's infrastructure attributes. Key details are summarized in the following table:
+
+| Field | Type | Description |
+| - | - | - |
+| `memory` | `integer` | Memory size allocated to the app, in megabytes. This value is subjective to automatic adjustments if excessive usage is detected. |
+| `timeout` | `integer` | Maximum duration for fulfilling a request, in seconds. Requests exceeding this timeout are aborted. |
+| `minReplicas` | `integer` | Minimum number of replicas available when the app is operational. |
+| `maxReplicas` | `integer` | Maximum numbers of replicas available for the app. |
+| `routes` | `object` | Describes the app's REST routes. Note that a public route named `status` with the path `/_v/status/:code` is already defined. |
+
+```json node/service.json mark=8:13
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 2,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "status": {
+      "path": "/_v/status/:code",
+      "public": true
+    }
+  }
+}
+```
+
+---
+
+### `node/index.ts` file
+
+The `node/index.ts` file associates routes with middlewares. Note that the `routes` section associates the `status` route with the GET method and the `validate` and `status` middleware functions.
+
+This means that when a GET request is made to the `status` route, the app will trigger the `validate` and `status` middleware functions in the specified order.
+
+> Check the `middlewares/status.ts` and `middlewares/validate.ts` files to better understand the functions exposed by this service.
+
+```ts node/index.ts mark=5:6,52:54
+import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
+import { LRUCache, method, Service } from '@vtex/api'
+
+import { Clients } from './clients'
+import { status } from './middlewares/status'
+import { validate } from './middlewares/validate'
+
+const TIMEOUT_MS = 800
+
+// Create a LRU memory cache for the Status client.
+// The 'max' parameter sets the size of the cache.
+// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
+// Note that the response from the API being called must include an 'etag' header
+// or a 'cache-control' header with a 'max-age' value. If neither exist, the response will not be cached.
+// To force responses to be cached, consider adding the `forceMaxAge` option to your client methods.
+const memoryCache = new LRUCache<string, any>({ max: 5000 })
+
+metrics.trackCache('status', memoryCache)
+
+// This is the configuration for clients available in `ctx.clients`.
+const clients: ClientsConfig<Clients> = {
+  // We pass our custom implementation of the clients bag, containing the Status client.
+  implementation: Clients,
+  options: {
+    // All IO Clients will be initialized with these options, unless otherwise specified.
+    default: {
+      retries: 2,
+      timeout: TIMEOUT_MS,
+    },
+    // This key will be merged with the default options and add this cache to our Status client.
+    status: {
+      memoryCache,
+    },
+  },
+}
+
+declare global {
+  // We declare a global Context type just to avoid re-writing ServiceContext<Clients, State> in every handler and resolver
+  type Context = ServiceContext<Clients, State>
+
+  // The shape of our State object found in `ctx.state`. This is used as state bag to communicate between middlewares.
+  interface State extends RecorderState {
+    code: number
+  }
+}
+
+// Export a service that defines route handlers and client options.
+export default new Service({
+  clients,
+  routes: {
+    // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
+    status: method({
+      GET: [validate, status],
+    }),
+  },
+})
+```
+
+---
+
+## Testing the `/status` route
+
+Change to the app directory and link it to a development workspace. This action will prompt the availability of the `/status` route. To verify its functionality, make a request to `https://{workspace}--{accountName}.myvtex.com/_v/status/200`, replacing `{workspace}` and `{accountName}` according to your scenario.
+
+<CH.Code>
+
+```sh
+cd services-example && vtex link
+```
+
+---
+
+```sh Terminal focus=42
+20:00:48.027 - warn: Changing @vtex/api on devDependencies from 6.45.15 to 6.46.0  
+20:00:48.029 - info: Running yarn in node  
+yarn install v1.22.19
+warning package.json: No license field
+warning No license field
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+warning "@vtex/test-tools > react-intl@2.9.0" has unmet peer dependency "prop-types@^15.5.4".
+[4/4] 🔨  Building fresh packages...
+success Saved lockfile.
+✨  Done in 38.02s.
+20:01:26.400 - info: Finished running yarn  
+20:01:26.400 - info: Linking app vtex.service-example@0.2.22  
+20:01:26.590 - info: Sending 14 files   
+20:01:26.591 - info: Link ID: 0be90a2d772f711b  
+20:01:26.592 - info: Project size: 0.49MB  
+20:01:26.592 - info: Compressing project files...  
+20:01:26.642 - info: Compressed project size: 0.21MB  
+20:01:28.175 - info: Sending files: 100% - 0.21MB/0.21MB  
+20:01:28.214 - info: Build accepted for vtex.service-example@0.2.22 at myaccount/myworkspace vtex.builder-hub@0.296.0  
+20:01:28.488 - info: Starting build for app vtex.service-example@0.2.22 vtex.builder-hub@0.296.0  
+20:01:42.645 - warn: node builder overrode the following options in tsconfig.json:
+  module: 'esnext' => 'commonjs' vtex.builder-hub@0.296.0  
+20:01:50.121 - info: Bundle: 17 files - 0.67MB vtex.builder-hub@0.296.0  
+20:01:50.121 - info: Sent bundle to Apps in 688ms vtex.builder-hub@0.296.0  
+20:01:50.121 - info: App linked successfully vtex.builder-hub@0.296.0  
+20:01:50.122 - info: Node app build finished successfully vtex.builder-hub@0.296.0  
+20:01:52.783 - info: Starting vtex.service-example@0.2.22 service-node@6.38.1  
+20:01:52.783 - info: Fetching /apps/vtex.service-example@0.2.22/files/dist/service-node/dependencies.tar.zst service-node@6.38.1  
+20:01:52.784 - info: Fetching /apps/vtex.service-example@0.2.22/bundle/dist/service-node/app service-node@6.38.1  
+20:01:52.791 - info: OK: /apps/vtex.service-example@0.2.22/bundle/dist/service-node/app service-node@6.38.1  
+20:01:52.792 - info: Extracted /apps/vtex.service-example@0.2.22/bundle/dist/service-node/app service-node@6.38.1  
+20:01:52.830 - info: OK: /apps/vtex.service-example@0.2.22/files/dist/service-node/dependencies.tar.zst service-node@6.38.1  
+20:01:52.866 - info: Extracted /apps/vtex.service-example@0.2.22/files/dist/service-node/dependencies.tar.zst service-node@6.38.1  
+20:01:53.357 - info: Runtime @vtex/api is: /usr/local/app/node_modules/@vtex/api/lib/index.js service-node@6.38.1  
+20:01:53.359 - info: Using @vtex/api from: /usr/local/app/node_modules/@vtex/api/lib/index.js service-node@6.38.1  
+20:01:53.364 - info: Spawning 1 workers service-node@6.38.1  
+20:01:53.368 - info: Using 30 seconds as worker graceful shutdown timeout service-node@6.38.1  
+20:01:53.384 - info: Worker 25 is listening service-node@6.38.1  
+20:01:53.878 - info: Available service routes:
+https://myworkspace--myaccount.myvtex.com/_v/status/:code service-node@6.38.1  
+20:01:53.882 - info: App running service-node@6.38.1  
+20:02:01.904 - info: Debugger tunnel listening on :9229. Go to chrome://inspect in Google Chrome to debug your running application.
+```
+
+</CH.Code>
+
+</CH.Scrollycoding>
