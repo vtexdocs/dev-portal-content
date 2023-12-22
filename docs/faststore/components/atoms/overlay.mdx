@@ -33,26 +33,28 @@ Overlays provide contextual information on top of the current layer of the inter
     </OverviewSection>
   </Tab>
   <Tab>
-    ```tsx live
-    function Component() {
-      const styles = {
-        container: {
-          position: 'relative',
-          height: '8rem',
-        },
-        overlay: {
-          position: 'absolute',
-        },
-      }
-      return (
-        <div style={styles.container}>
-          A content outside me
-          <Overlay style={styles.overlay} />
-        </div>
-      )
-    }
-    ```
-  </Tab>
+
+```tsx
+function Component() {
+  const styles = {
+    container: {
+      position: 'relative',
+      height: '8rem',
+    },
+    overlay: {
+      position: 'absolute',
+    },
+  }
+  return (
+    <div style={styles.container}>
+      A content outside me
+      <Overlay style={styles.overlay} />
+    </div>
+  )
+}
+```
+
+</Tab>
 </Tabs>
 
 ---
@@ -89,10 +91,10 @@ import '@faststore/ui/src/components/atoms/Overlay/styles.scss'
   </div>
 </OverviewSection>
 
-```tsx live
+```tsx
 <div>
   A content outside me
-  <Overlay />
+  <Overlay/>
 </div>
 ```
 
