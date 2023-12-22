@@ -21,8 +21,6 @@ Before you begin managing your SKUs, make sure you've completed the following st
 
 - **Obtain API Credentials**: Ensure you have a valid `appKey` and `appToken` with the necessary permissions to access the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api). For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
 
-> ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code will be highlighted and focused for your convenience. Additionally, in the code viewer on the right, you can switch between different code files or tabs to view the corresponding code examples.
-
 ## Creating a product
 
 When creating or updating products, the product must be associated with their corresponding brand and most specific [category](https://developers.vtex.com/docs/guides/categories). Hence, use the [Create product with category and brand endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/product) to insert a new product, considering the following scenarios:
@@ -33,6 +31,8 @@ When creating or updating products, the product must be associated with their co
 Regardless of the type of request, if there is a need to create a new product with a specific custom product ID, it is possible to specify the `Id` (integer) in the request body. Otherwise, VTEX will generate the ID automatically.
 
 >⚠️ We recommend leaving VTEX to automatically generate an ID, by not including a custom product ID in the `Id` field of the request body. The generated ID can be retrieved in the request's response and must be stored in the system for future updates of this product.
+
+> ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code will be highlighted and focused for your convenience. Additionally, in the code viewer on the right, you can switch between different code files or tabs to view the corresponding code examples.
 
 <CH.Scrollycoding>
 
