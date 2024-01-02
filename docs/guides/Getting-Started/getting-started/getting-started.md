@@ -104,7 +104,7 @@ Create, read, and edit prices for each SKU, sales channel, or price table.
 
 <OverviewCard icon='AccountManagement'>
 
-### [Account Management](https://developers.vtex.com/vtex-rest-api/docs/account-management)
+### [Account Management](https://help.vtex.com/category/account-management--2d48l0t9GweqoGkWCg2IQU)
 
 Manage users, roles, hosts, AppKeys, and AppTokens in the VTEX platform.
 
