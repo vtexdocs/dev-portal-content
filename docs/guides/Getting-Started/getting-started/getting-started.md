@@ -3,7 +3,7 @@ title: "Getting started"
 slug: "getting-started"
 hidden: false
 createdAt: "2019-11-26T19:13:15.434Z"
-updatedAt: "2022-09-27T20:40:28.033Z"
+updatedAt: "2024-01-02T20:40:28.033Z"
 hidePaginationPrevious: true
 excerpt: "Discover the features and capabilities of VTEX Core Commerce APIs."
 ---
@@ -122,7 +122,7 @@ Search and sort products in the catalog using full-text, category, and brand sea
 
 <OverviewCard icon='Subscriptions'>
 
-### [Subscriptions](https://developers.vtex.com/docs/guides/subscriptionsw)
+### [Subscriptions](https://developers.vtex.com/docs/guides/subscriptions)
 
 Manage store subscription rules to optimize revenue and reduce bounce rate and churn.
 
