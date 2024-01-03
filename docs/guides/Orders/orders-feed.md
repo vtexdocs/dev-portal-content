@@ -3,7 +3,7 @@ title: "Feed v3"
 slug: "orders-feed"
 hidden: false
 createdAt: "2021-03-29t19:21:28.241z"
-updatedAt: "2022-11-29T22:43:22.990Z"
+updatedAt: "2023-10-27T18:14:22.990Z"
 ---
 
 The [order feed](https://developers.vtex.com/docs/guides/orders-overview#feed-v3) is a list of order updates. This means that whenever an order is updated, the event is included as a new entry in the feed. Updates can include status changes, items added or removed by the store, order delivered, and others.
@@ -11,6 +11,20 @@ The [order feed](https://developers.vtex.com/docs/guides/orders-overview#feed-v3
 In this sense, the feed is not a list of orders, but rather a list of events. For example, if the status of an order is changed to `Approve payment` and then to `Authorize shipping`, the feed will receive two events: one for each update, both related to the same order. You can configure the feed to filter the updates that will actually generate feed events, instead of having all updates in all orders generating events in the feed queue.
 
 This guide explains how Feed and Hook work and how to configure them to build order integrations. Also, in the latter part of the article, we explain the differences between each and when to choose one over the other based on the specific needs of your operation.
+
+>ℹ️ Feed and Hook are independent configurations to build order integrations.
+
+## Best practices for integrations
+
+When designing an orders integration, consider the practices below to increase performance and avoid throttling errors:
+
+- Optimize your code to get only the required data.
+- Use caching for often-used data.
+- Consider including code that catches errors. By ignoring these errors and persisting in making requests, your app will not be able to recover gracefully.
+- After getting a 429 status code error, you should stop making additional API requests and wait before retrying. We recommend a 1 minute backoff time.
+- Configure your integration to communicate asynchronously with VTEX APIs in order to keep requests in a queue and do other processing tasks while waiting for the next queued job to run.
+
+>⚠️ If your integration is getting 429 status code errors, we recommend you to regulate the rate of your requests for smoother distribution. When the account exceeds the request limit, VTEX Admin might also become unavailable.
 
 ## Order integration: Feed vs. List orders
 
@@ -28,10 +42,8 @@ On the other hand, the feed has been specifically developed to track order updat
 Configuring and using Feed v3 and Hook is only allowed when authorization is granted in the Order Management module.
 
 The feed's application key must have a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#) with one of the appropriate resources: `Feed v3 and Hook Admin` or `Feed v3 and Hook view only`, depending on the intended use.
- 
->⚠️ Each appKey can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user commits an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
- 
 
+>⚠️ Each [appKey](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user commits an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
 
 ## Configuration
 
@@ -63,7 +75,6 @@ You can see the list of possible order statuses in the article [Order flow in or
     }
 ```
 
- 
 >ℹ️ The `FromWorkflow` filter may be limited for some of the integration needs of your store. If you want more filter options, consider using the `FromOrders` filter.
 
 #### `FromOrders`
@@ -80,7 +91,6 @@ You can see the list of possible order statuses in the article [Order flow in or
 
 >⚠️ The two filter types are mutually exclusive. If you pass `FromWorkflow` in the `type` field, you should not include the `expression` field nor `disableSingleFire` in the body. The reverse is also true. If you pass `FromOrders` `type`, you should not include the `status` field. If you combine them, you will get a `409 conflict` status response.
 
- 
 >ℹ️ If the `filter` is not configured, the `FromWorkflow` type is used, and all status changes will appear in the feed.
 
 ##### `expression`
@@ -229,11 +239,8 @@ Here are two complete example bodies for the [Feed configuration response](https
 }
 ```
 
- 
-  
  >ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
- 
- 
+
 > ❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
 
 ## Feed readout
@@ -257,7 +264,7 @@ Check the [back-office order integration guide](https://developers.vtex.com/docs
 
 ## Hook
 
-Hook is a counterpart to Feed. It allows integrations to consume order update data differently. Instead of receiving events to form a queue that can be retrieved, a hook automatically sends the items to a URL provided by the user in the hook configuration. 
+Hook is a counterpart to Feed. It allows integrations to consume order update data differently. Instead of receiving events to form a queue that can be retrieved, a hook automatically sends the items to a URL provided by the user in the hook configuration.
 
 >⚠️ Since Hook is a counterpart, [access](#access) follows the same principles described for Feed above. This means each appKey can configure or access only one hook. Different users that sharing the same appKey access the same hook. We recommend configuring one hook per appKey per user, ensuring that each user has access to their own hook.
 
@@ -318,15 +325,9 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
 }
 ```
 
- 
 >⚠️ The given endpoint should return status 200 for the above-mentioned request. Otherwise, the Hook API will return status `400 Bad Request`, and you won't be able to save the configuration.
 
- 
- 
- 
 >⚠️ We recommend configuring the hook in the main account. This ensures more visibility to commit all events correctly and that the configured endpoint is more frequently notified, preventing the hook from being excluded due to inactivity.
- 
- 
 
 ### Hook notifications
 
@@ -335,8 +336,6 @@ If configured, the Hook notifies the integration endpoint whenever an order upda
 If a new event is not correctly notified to the endpoint, the interval for future retries is recalculated based on an internal geometric progression algorithm.
 > ❗ If the hook has no notifications for three days, your configuration will be removed, and you will have to reconfigure it with the [Hook configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) to continue using it. Therefore, it's important to be mindful of your filter configuration. You can check it any time using the [Get hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/hook/config) endpoint.
 
- 
- 
 >⚠️ When notified, the configured endpoint must always respond with HTTP status 200 within 5000 ms.
 Below is an example of a hook notification request body made to the integration endpoint.
 
