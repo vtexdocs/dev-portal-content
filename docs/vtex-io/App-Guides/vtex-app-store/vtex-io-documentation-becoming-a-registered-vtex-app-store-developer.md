@@ -31,7 +31,7 @@ For that, you must register as a VTEX App Store seller by taking the following s
 
 ### Step 1 - Expressing your interest
 
-Fill out the [Application form](https://vtex.com/us-en/partner/) to **share your interest** in publishing your application or integration on the VTEX App Store.
+Fill out the [Application form](https://vtex.com/us-en/partners/) to **share your interest** in publishing your application or integration on the VTEX App Store.
 
 The form will help our team to understand the best approach and prioritize the publication demands.
 
