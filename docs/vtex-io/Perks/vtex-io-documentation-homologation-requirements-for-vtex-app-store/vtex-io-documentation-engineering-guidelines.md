@@ -133,4 +133,4 @@ The app documentation should include:
 - Installation and configuration guides.
 - Answers to frequently asked questions.
 
-For more information on the best practices for creating documentation, refer to [Documentation Guideline](/tbd)
+For more information on the best practices for creating documentation, refer to [Documentation Guideline](https://developers.vtex.com/docs/guides/vtex-io-documentation-documentation-guidelines)
