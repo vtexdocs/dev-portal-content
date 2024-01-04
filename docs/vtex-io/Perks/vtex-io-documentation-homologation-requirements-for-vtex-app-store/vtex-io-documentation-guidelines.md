@@ -60,7 +60,6 @@ The title must be concise and memorable. Ensure that it describes the experience
 
 The introduction should summarize your app’s purpose and what the user will learn with the documentation.
 
-#### Do’s
 
 - Write a short description of the app.
 - Emphasize the end-user benefits.
