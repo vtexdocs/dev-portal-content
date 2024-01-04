@@ -1,5 +1,5 @@
 ---
-title: "Documentation best practices"
+title: "Documentation guidelines"
 slug: "vtex-io-documentation-documentation-guidelines"
 hidden: false
 createdAt: "2024-01-04T10:33:04.345Z"
