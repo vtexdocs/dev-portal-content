@@ -7,7 +7,7 @@ updatedAt: "2022-12-13T20:17:44.537Z"
 category: "App Development"
 ---
 
-Workspaces are environments isolated from one another. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your store's live version or other developers' work.
+Workspaces are environments isolated from each other in terms of app development. They can be understood as different versions of the same VTEX account. In practice, changes performed in a particular workspace do not affect your store's live version or other developers' work.
 
 > ℹ️ If you're used to working with git, think of workspaces as branches.
 
@@ -20,3 +20,5 @@ There are three main types of workspaces:
 Development and production workspaces can be accessed at `https://{workspace}--{account}.myvtex.com`.
 
 ![Workspaces](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-workspace-0.png)
+
+> ⚠ While each workspace operates independently when it comes to app development, they share the same VTEX platform modules accessible through Admin. Then, any changes made in a specific workspace will be reflected in all others.
