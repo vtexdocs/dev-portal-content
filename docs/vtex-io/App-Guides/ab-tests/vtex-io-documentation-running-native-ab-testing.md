@@ -136,6 +136,8 @@ Before completing your A/B test, it is important to understand the comparative a
 | **Expected Loss**            | Anticipated percentage of conversion loss for the store if the lower conversion rate workspace is selected as the winner (based on **Conversion** results). |
 | **N. of Sessions**           | Total number of sessions for each workspace since the beginning of the test.                        |
 | **N. of Sessions (last 24hrs)** | Number of sessions for each workspace in the past 24 hours during the test.                           |
+| **Revenue**             | Total value of orders placed by users navigating in the version of your store associated to each workspace since the beginning of the test (according to the currency configured in the store).|
+| **Revenue (last 24hs)** | Value of orders placed by users navigating in the version of your store associated to each workspace in the past 24 hours durint the test (according to the currency configured in the store).|
 
 #### Final results
 
