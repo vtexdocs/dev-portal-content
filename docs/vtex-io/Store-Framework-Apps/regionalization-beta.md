@@ -8,15 +8,15 @@ updatedAt: "2021-10-25T20:15:31.016Z"
 
 > ℹ️ This feature is in closed beta, which means that only specific customers can access it now. If you want to implement it in the future, please contact [our Support](https://help.vtex.com/support).
 
-Regionalization is a feature of [VTEX Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG#) that allows store administrators to optimize search results according to the availability of sellers in a customer's region. To learn how to install and configure VTEX Intelligent Search in your store, read our [Search app article](https://developers.vtex.com/docs/guides/vtex-search).
+Regionalization is a feature of [VTEX Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG#) that allows store administrators to optimize search results according to the availability of sellers in a customer's region. For information on installing and configuring VTEX Intelligent Search in your store, refer to the [Search app](https://developers.vtex.com/docs/apps/vtex.search) article.
 
-For the Regionalization to work, it uses a native behavior from the VTEX Intelligent Search called [Availability](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/7LMQbWK5nElIkXo0NK8Kux). The platform searches for available products according to the stock in a given region. In a Availability paradigm, the platform also checks the sellers registered in the store for their stocks.
+Regionalization leverages a native functionality from the VTEX Intelligent Search known as [Availability](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/7LMQbWK5nElIkXo0NK8Kux). This feature searches for products currently in stock within a specified region. In addition, it checks the inventories of registered sellers in the store, ensuring a comprehensive assessment of available stock within the designated area.
 
-Stores that have more than one registered white label seller usually have specific inventories for each region. This is the case for supermarkets, for example. With the Regionalization feature enabled, if a customer enters their ZIP code while browsing the store (before checkout), only products available in the corresponding region will be displayed in the search results.
+Stores that have more than one registered white label seller usually have specific inventories for each region. This is the case for supermarkets, for example. With the Regionalization feature enabled, if a customer enters their ZIP code while browsing the store (before checkout), the search results will only display the products available in the corresponding region.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/regionalization-beta-0.gif)
 
-## Before you start
+## Before you begin
 
 Make sure you have finished these actions before setting up the Regionalization feature in your store:
 
@@ -45,9 +45,9 @@ To use the Regionalization feature, you must have the [Search Result](https://de
 }
 ```
 
-### Showing out of stock products on the search results page
+### Showing out-of-stock products on the search results page
 
-Using the Regionalization feature, you can show customers out of stock products from your sellers.
+You can show customers out-of-stock products from your sellers using the Regionalization feature.
 
 > ℹ The products shown will depend on the [Availability](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/7LMQbWK5nElIkXo0NK8Kux) context.
 
@@ -55,7 +55,7 @@ For this, you must make the following configurations on your store's Catalog and
 
 #### Catalog
 
-Each product to be shown even out of stock must have the **Show out of stock** option activated, as follows:
+To display products, even when they are out of stock, the **Show out of stock** option must be enabled. Take the following steps:
 
 1. On VTEX Admin, click on the **Catalog** module.
 2. Click on **Products and SKUs**.
@@ -65,7 +65,7 @@ Each product to be shown even out of stock must have the **Show out of stock** o
 
 You can also set the `ShowWithoutStock` attribute in the [Create Product](https://developers.vtex.com/docs/api-reference/catalog-api/#post-/api/catalog/pvt/product) endpoint or in the [Update Product](https://developers.vtex.com/docs/api-reference/catalog-api/#put-/api/catalog/pvt/product/-productId-) endpoint.
 
-### VTEX IO
+#### VTEX IO
 
 Set the `hideUnavailableItems` prop to `true` on the `autocomplete-result-list.v2` block. Check our [Search documentation](https://developers.vtex.com/docs/guides/vtex-search#autocomplete-result-listv2-props).
 
@@ -82,7 +82,7 @@ Set the `hideUnavailableItems` prop to `true` on the `autocomplete-result-list.v
 
 ## Indexing
 
-After finishing the configuration, stores using VTEX Intelligent Search for the first time need to initiate the indexing of the store's Catalog with the Intelligent Search. If necessary, follow the steps below:
+After finishing the configuration, stores using VTEX Intelligent Search for the first time need to initiate the indexing of the store's Catalog with the Intelligent Search. If applicable, follow the steps below:
 
 1. On VTEX Admin, go to **Store Settings > Intelligent Search > Integrations**.
 2. Click `Start`.
