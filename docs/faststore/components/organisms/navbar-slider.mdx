@@ -1,7 +1,6 @@
 ---
 title: "Navbar Slider"
-excerpt: "As part of the Navbar, this component is its mobile version used to list the navigation links (through the NavbarLinks). This component is part of the Navigation feature and must be used in the Navbar context."
-description: As part of the Navbar, this component it its mobile version used to list the navigation links.
+excerpt: As part of the Navbar, this component it its mobile version used to list the navigation links.
 components:
   - NavbarSlider.tsx
   - NavbarSliderHeader.tsx
@@ -9,19 +8,11 @@ components:
   - NavbarSliderFooter.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import NavbarSliderUsage from 'site/components/Navigation/NavbarSliderUsage'
-import NavbarLinksUsage from 'site/components/Navigation/NavbarLinksUsage'
-import NavbarUsage from 'site/components/Navigation/NavbarUsage'
-import { Navbar, NavbarSlider, UIProvider } from '@faststore/ui'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
+As part of the [Navbar](/docs/guides/faststore/organisms-navbar), this component is its **mobile version** used to list the navigation links (through the [NavbarLinks](/docs/guides/faststore/molecules-navbar-links)).
 
-## Import
+This component is part of the [Navigation](/docs/guides/faststore//feature-navigation) feature and must be used in the [Navbar](/docs/guides/faststore/organisms-navbar) context.## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import {
@@ -42,7 +33,7 @@ import '@faststore/ui/src/components/organisms/NavbarSlider/styles.scss'
 
 ## Usage
 
->⚠️ This component is intended to be used only in the **mobile version**, but it can be adapted to a desktop version by customizing the component styles.
+> ⚠️ This component is intended to be used only in the **mobile version**, but it can be adapted to a desktop version by customizing the component styles.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -53,32 +44,33 @@ import '@faststore/ui/src/components/organisms/NavbarSlider/styles.scss'
     </OverviewSection>
   </Tab>
   <Tab>
-    ```tsx
-      const { closeNavbar } = useUI()
-      const { fade, fadeOut } = useFadeEffect()
+  
+```tsx
+  const { closeNavbar } = useUI()
+  const { fade, fadeOut } = useFadeEffect()
 
-      return (
-        <NavbarSlider
-          fade={fade}
-          onDismiss={fadeOut}
-          onTransitionEnd={() => fade === 'out' && closeNavbar()}
-        >
-          <NavbarSliderHeader onClose={fadeOut}>
-            <IconButton
-              onClick={fadeOut}
-              aria-label="Logo"
-              icon={<Icon name="Storefront" width={32} height={32} />}
-            />
-          </NavbarSliderHeader>
-          <NavbarSliderContent>
-            <NavbarLinksUsage />
-          </NavbarSliderContent>
-          <NavbarSliderFooter>
-            <Button onClick={fadeOut}>Sign In</Button>
-          </NavbarSliderFooter>
-        </NavbarSlider>
-      )
-    ```
+  return (
+    <NavbarSlider
+      fade={fade}
+      onDismiss={fadeOut}
+      onTransitionEnd={() => fade === 'out' && closeNavbar()}
+    >
+      <NavbarSliderHeader onClose={fadeOut}>
+        <IconButton
+          onClick={fadeOut}
+          aria-label="Logo"
+          icon={<Icon name="Storefront" width={32} height={32} />}
+        />
+      </NavbarSliderHeader>
+      <NavbarSliderContent>
+        <NavbarLinksUsage />
+      </NavbarSliderContent>
+      <NavbarSliderFooter>
+        <Button onClick={fadeOut}>Sign In</Button>
+      </NavbarSliderFooter>
+    </NavbarSlider>
+  )
+```
 
   </Tab>
 </Tabs>
@@ -168,11 +160,13 @@ For further customization, you can use the following data attributes:
 
 ## Related components
 
-<SectionList grid="column" columns={1}>
+<SectionList grid="column" columns={2}>
   <SectionItem
     title="Navbar"
     description="Represents the page header and groups features like Search and Regionalization."
-    actionPath="/docs/faststore/organisms-navbar"
+    actionPath="/docs/guides/faststore/organisms/navbar"
+    zoomOut
+    smallHeight
   >
     <UIProvider>
       <NavbarUsage />
@@ -181,7 +175,9 @@ For further customization, you can use the following data attributes:
   <SectionItem
     title="NavbarLinks"
     description="Displays a set of navigation links."
-    actionPath="/docs/faststore/molecules-navbar-links"
+    actionPath="/docs/guides/faststore/molecules-navbar-links"
+    zoomOut
+    smallHeight
   >
     <UIProvider>
       <Navbar>

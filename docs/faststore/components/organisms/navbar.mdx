@@ -1,24 +1,13 @@
 ---
 title: "Navbar"
-excerpt: "Represents the page header and groups some features like: `Search`, `Regionalization`, `SignIn`, `CartSidebar`. This component is part of the Navigation feature."
-description: This component represents the page header and groups features like Search and Regionalization.
+excerpt: This component represents the page header and groups features like Search and Regionalization.
 components:
   - Navbar.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import { Navbar, UIProvider } from '@faststore/ui'
-import NavbarUsage from 'site/components/Navigation/NavbarUsage'
-import NavbarSliderUsage from 'site/components/Navigation/NavbarSliderUsage'
-import NavbarLinksUsage from 'site/components/Navigation/NavbarLinksUsage'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
+Represents the page header and groups some features like: `Search`, `Regionalization`, `SignIn`, `CartSidebar`. This component is part of the [Navigation](/docs/guides/faststore//feature-navigation) feature.## Import
 
-## Import
-
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { Navbar, NavbarHeader, NavbarRow, NavbarButtons } from '@faststore/ui'
@@ -36,7 +25,7 @@ import '@faststore/ui/src/components/organisms/Navbar/styles.scss'
 
 Uses `NavbarHeader`, `NavbarRow` and `NavbarButtons` as compound components.
 
-The [NavbarLinks](/docs/faststore/molecules-navbar-links) and [NavbarSlider](/docs/faststore/organisms-navbar-slider) components are used as child components.
+The [NavbarLinks](/docs/guides/faststore/molecules-navbar-links) and [NavbarSlider](/docs/guides/faststore/organisms-navbar-slider) components are used as child components.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -101,6 +90,18 @@ The [NavbarLinks](/docs/faststore/molecules-navbar-links) and [NavbarSlider](/do
 
 <ComponentPropsSection component="Navbar" />
 
+### Navbar Header
+
+<ComponentPropsSection component="NavbarHeader" />
+
+### Navbar Row
+
+<ComponentPropsSection component="NavbarRow" />
+
+### Navbar Buttons
+
+<ComponentPropsSection component="NavbarButtons" />
+
 ---
 
 ## Design Tokens
@@ -163,15 +164,6 @@ The [NavbarLinks](/docs/faststore/molecules-navbar-links) and [NavbarSlider](/do
 
 <TokenTable>
   <TokenRow
-    token="--fs-navbar-search-expanded-input-wrapper-margin-right"
-    value="0.625rem"
-  />
-  <TokenRow
-    token="--fs-navbar-search-expanded-input-wrapper-margin-left"
-    value="var(--fs-spacing-9)"
-  />
-  <TokenDivider />
-  <TokenRow
     token="--fs-navbar-search-expanded-input-width"
     value="calc(100% - var(--fs-spacing-7))"
   />
@@ -213,11 +205,12 @@ The [NavbarLinks](/docs/faststore/molecules-navbar-links) and [NavbarSlider](/do
 
 ## Related components
 
-<SectionList grid="column" columns={1}>
+<SectionList grid="column" columns={2}>
   <SectionItem
     title="NavbarSlider"
     description="As part of the Navbar, this component it its mobile version used to list the navigation links."
-    actionPath="/docs/faststore/organisms-navbar-slider"
+    actionPath="/docs/guides/faststore/organisms/navbar-slider"
+    smallHeight
   >
     <UIProvider>
       <NavbarSliderUsage />
@@ -226,7 +219,9 @@ The [NavbarLinks](/docs/faststore/molecules-navbar-links) and [NavbarSlider](/do
   <SectionItem
     title="NavbarLinks"
     description="Displays a set of navigation links."
-    actionPath="/docs/faststore/molecules-navbar-links"
+    actionPath="/docs/guides/faststore/molecules-navbar-links"
+    zoomOut
+    smallHeight
   >
     <UIProvider>
       <Navbar>

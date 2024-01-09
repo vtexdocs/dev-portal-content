@@ -1,7 +1,6 @@
 ---
 title: "Product Grid"
-excerpt: "It's a section generally used on PLP pages to list the products available in the store."
-description: It's a section generally used on PLP pages to list the products available in the store.
+excerpt: It's a section generally used on PLP pages to list the products available in the store.
 keywords:
   - UI library
   - ecommerce
@@ -13,23 +12,7 @@ components:
   - ProductGridItem.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import {
-  ProductGrid,
-  ProductGridItem,
-  ProductCard,
-  ProductCardContent,
-  ProductCardImage,
-} from '@faststore/ui'
-import { products } from 'site/mocks/products'
-import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
-import ProductShelfUsage from 'site/components/ProductShelf/ProductShelfUsage'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
-
-The `ProductGrid` is a compound of the following:
+It's a section generally used on PLP pages to list the products available in the store.The `ProductGrid` is a compound of the following:
 
 - `ProductGrid`: wraps the product grid items.
 - `ProductGridItem`: wraps the product inside a list item.
@@ -39,13 +22,13 @@ The `ProductGrid` is a compound of the following:
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { ProductGrid, ProductGridItem } from '@faststore/ui'
 ```
 
-We highly recommend using the [ProductCard](/components/molecules/product-card) as the direct child of the `ProductGridItem`.
+We highly recommend using the [ProductCard](/docs/guides/faststore/molecules-product-card) as the direct child of the `ProductGridItem`.
 
 ```tsx
 import {
@@ -67,62 +50,62 @@ import '@faststore/ui/src/components/organisms/ProductGrid/styles.scss'
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>
-      <ProductGrid>
-        {products.map(({ product }, idx) => (
-           <ProductGridItem>
-             <ProductCard>
-               <ProductCardImage>
-                 <img
-                   data-fs-image
-                   src={product.image[0].url}
-                   alt={product.image[0].alternateName}
-                 />
-               </ProductCardImage>
-               <ProductCardContent
-                 title={product.isVariantOf.name}
-                 price={{
-                   value: product.offers.offers[0].price,
-                   listPrice: product.offers.offers[0].listPrice,
-                   formatter: useFormattedPrice,
-                 }}
-               />
-             </ProductCard>
-           </ProductGridItem>
-        ))}
-       </ProductGrid>
+<OverviewSection>
+  <ProductGrid>
+    {products.map(({ product }, idx) => (
+        <ProductGridItem>
+          <ProductCard>
+            <ProductCardImage>
+              <img
+                data-fs-image
+                src={product.image[0].url}
+                alt={product.image[0].alternateName}
+              />
+            </ProductCardImage>
+            <ProductCardContent
+              title={product.isVariantOf.name}
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+            />
+          </ProductCard>
+        </ProductGridItem>
+    ))}
+    </ProductGrid>
 
-    </OverviewSection>
+</OverviewSection>
 
   </Tab>
   <Tab>
-    ```tsx
+  
+```tsx
+<ProductGrid>
+  {products.map(({ product }, idx) => (
+      <ProductGridItem>
+        <ProductCard>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[0].url}
+              alt={product.image[0].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+          />
+        </ProductCard>
+      </ProductGridItem>
+  ))}
+</ProductGrid>
 
-    <ProductGrid>
-      {products.map(({ product }, idx) => (
-         <ProductGridItem>
-           <ProductCard>
-             <ProductCardImage>
-               <img
-                 data-fs-image
-                 src={product.image[0].url}
-                 alt={product.image[0].alternateName}
-               />
-             </ProductCardImage>
-             <ProductCardContent
-               title={product.isVariantOf.name}
-               price={{
-                 value: product.offers.offers[0].price,
-                 listPrice: product.offers.offers[0].listPrice,
-                 formatter: useFormattedPrice,
-               }}
-             />
-           </ProductCard>
-         </ProductGridItem>
-      ))}
-    </ProductGrid>
-
-    ```
+```
 
   </Tab>
 </Tabs>
@@ -131,11 +114,11 @@ import '@faststore/ui/src/components/organisms/ProductGrid/styles.scss'
 
 ## Props
 
-### ProductGrid
+### Product Grid
 
 <ComponentPropsSection component="ProductGrid" />
 
-### ProductGridItem
+### Product Grid Item
 
 <ComponentPropsSection component="ProductGridItem" />
 
@@ -190,7 +173,8 @@ import '@faststore/ui/src/components/organisms/ProductGrid/styles.scss'
   <SectionItem
     title="Product Shelf"
     description=" Displays a list of products to be used as a section on the store."
-    actionPath="/docs/faststore/organisms-product-shelf"
+    actionPath="/docs/guides/faststore/organisms/product-shelf"
+    fullWidth
   >
     <ProductShelfUsage items={6} />
   </SectionItem>

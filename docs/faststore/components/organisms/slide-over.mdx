@@ -1,7 +1,6 @@
 ---
 title: "SlideOver"
-excerpt: "This component represents an aditional session that complements the screen's information."
-description: This component represents an aditional session that complements the screen's information.
+excerpt: This component represents an aditional session that complements the screen's information.
 keywords:
   - UI library
   - ecommerce
@@ -13,26 +12,9 @@ components:
   - SlideOverHeader.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import {
-  Button,
-  SlideOver,
-  SlideOverHeader,
-  useUI,
-  UIProvider,
-} from '@faststore/ui'
-import SlideOverUsage from 'site/components/SlideOver/SlideOverUsage'
-import FilterUsage from 'site/components/Filter/FilterUsage'
-import CartSidebarUsage from 'site/components/CartSidebar/CartSidebarUsage'
-import { SearchProvider } from '@faststore/sdk'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
+This component represents an aditional session that complements the screen's information.## Import
 
-## Import
-
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { SlideOver, SlideOverHeader } from '@faststore/ui'
@@ -105,21 +87,22 @@ import '@faststore/ui/src/components/organisms/SlideOver/styles.scss'
     ```
 
     <b>Open Full</b>
-    ```tsx
-    export const SlideOverFullRight = () => {
-      const { modal, openModal } = useUI()
-      return (
-        <>
-          <Button variant="primary" onClick={openModal}>
-            Right
-          </Button>
-          {modal && (
-            <SlideOverUsage size="full" direction="rightSide" isOpen={modal} />
-          )}
-        </>
-      )
-    }
-    ```
+  
+  ```tsx
+  export const SlideOverFullRight = () => {
+    const { modal, openModal } = useUI()
+    return (
+      <>
+        <Button variant="primary" onClick={openModal}>
+          Right
+        </Button>
+        {modal && (
+          <SlideOverUsage size="full" direction="rightSide" isOpen={modal} />
+        )}
+      </>
+    )
+  }
+  ```
 
     ```tsx
     export const SlideOverFullLeft = () => {
@@ -144,11 +127,11 @@ import '@faststore/ui/src/components/organisms/SlideOver/styles.scss'
 
 ## Props
 
-### SlideOver
+### Slide Over
 
 <ComponentPropsSection component="SlideOver" />
 
-### SlideOverHeader
+### Slide Over Header
 
 <ComponentPropsSection component="SlideOverHeader" />
 
@@ -230,7 +213,7 @@ import '@faststore/ui/src/components/organisms/SlideOver/styles.scss'
   <SectionItem
     title="Cart Sidebar"
     description="The CartSidebar displays the summary of items added to the cart along with detailed information, and checkout option."
-    actionPath="/docs/faststore/organisms-cart-sidebar"
+    actionPath="/docs/guides/faststore/organisms/cart-sidebar"
   >
     <UIProvider>
       <CartSidebarUsage />
@@ -239,7 +222,7 @@ import '@faststore/ui/src/components/organisms/SlideOver/styles.scss'
   <SectionItem
     title="Filter Slider"
     description="The mobile Filter view that is rendered inside a SlideOver component."
-    actionPath="/docs/faststore/organisms-filter-slider"
+    actionPath="/docs/guides/faststore/organisms/filter-slider"
   >
     <UIProvider>
       <SearchProvider onChange={() => ({})}>

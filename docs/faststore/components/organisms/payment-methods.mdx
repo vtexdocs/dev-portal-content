@@ -1,7 +1,6 @@
 ---
 title: "PaymentMethods"
-excerpt: "The PaymentMethods component displays the logos of the available payment options in a store."
-description: Payment Methods display the logos of the available payment options in a store.
+excerpt: Payment Methods display the logos of the available payment options in a store.
 keywords:
   - UI library
   - ecommerce
@@ -12,16 +11,9 @@ components:
   - PaymentMethods.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import { PaymentMethods, Icon } from '@faststore/ui'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
+The PaymentMethods component displays the logos of the available payment options in a store.## Import
 
-## Import
-
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { PaymentMethods } from '@faststore/ui'
@@ -44,20 +36,20 @@ import '@faststore/ui/src/components/organisms/PaymentMethods/styles.scss'
     </OverviewSection>
   </Tab>
   <Tab>
-    ```tsx
-    export const flags = [
-      { icon: { icon: 'Visa' }, alt: 'Visa' },
-      { icon: { icon: 'Diners' }, alt: 'Diners Club' },
-      { icon: { icon: 'Mastercard' }, alt: 'Mastercard' },
-      { icon: { icon: 'EloCard' }, alt: 'Elo Card' },
-      { icon: { icon: 'PayPal' }, alt: 'PayPal' },
-      { icon: { icon: 'Stripe' }, alt: 'Stripe' },
-      { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
-      { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
-    ]
+```tsx
+export const flags = [
+  { icon: { icon: 'Visa' }, alt: 'Visa' },
+  { icon: { icon: 'Diners' }, alt: 'Diners Club' },
+  { icon: { icon: 'Mastercard' }, alt: 'Mastercard' },
+  { icon: { icon: 'EloCard' }, alt: 'Elo Card' },
+  { icon: { icon: 'PayPal' }, alt: 'PayPal' },
+  { icon: { icon: 'Stripe' }, alt: 'Stripe' },
+  { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
+  { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
+]
 
-    <PaymentMethods title={<h3>Payment Methods</h3>} flagList={flags} />
-    ```
+<PaymentMethods title={<h3>Payment Methods</h3>} flagList={flags} />
+```
 
   </Tab>
 </Tabs>
@@ -70,7 +62,7 @@ import '@faststore/ui/src/components/organisms/PaymentMethods/styles.scss'
 
 ## Flag
 
-<ComponentPropsSection propsList={propsFlag} />
+<PropsSection propsList={propsFlag} />
 
 ## Design Tokens
 

@@ -1,7 +1,6 @@
 ---
 title: "Product Shelf"
-excerpt: "Displays a list of products to be used as a section on the store."
-description: Displays a list of products to be used as a section on the store.
+excerpt: Displays a list of products to be used as a section on the store.
 keywords:
   - UI library
   - ecommerce
@@ -14,14 +13,7 @@ components:
   - ProductShelfItem.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import ProductShelfUsage from 'site/components/ProductShelf/ProductShelfUsage'
-import ProductShelfCarouselUsage from 'site/components/ProductShelf/ProductShelfCarouselUsage'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
-
-The `ProductShelf` is a compound of the following:
+Displays a list of products to be used as a section on the store.The `ProductShelf` is a compound of the following:
 
 - `ProductShelfItems`: the product list.
 - `ProductShelfItem`: wraps the product inside a list item.
@@ -31,7 +23,7 @@ The `ProductShelf` is a compound of the following:
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import {
@@ -41,7 +33,7 @@ import {
 } from '@faststore/ui'
 ```
 
-We highly recommend using the [ProductCard](/components/molecules/product-card) as the direct child of the `ProductShelfItem`.
+We highly recommend using the [ProductCard](/docs/guides/faststore/molecules-product-card) as the direct child of the `ProductShelfItem`.
 
 ```tsx
 import {
@@ -63,8 +55,8 @@ import '@faststore/ui/src/components/organisms/ProductShelf/styles.scss'
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>
-      <ProductShelfUsage items={6}/>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <ProductShelfUsage items={6} id="shelf-example-1"/>
     </OverviewSection>
   </Tab>
   <Tab>
@@ -72,7 +64,7 @@ import '@faststore/ui/src/components/organisms/ProductShelf/styles.scss'
       <ProductShelf>
         <ProductShelfItems>
           {products.map(({ product }, idx) => (
-            <ProductShelfItem>
+            <ProductShelfItem key={idx}>
               <ProductCard>
                 <ProductCardImage>
                   <img
@@ -142,14 +134,14 @@ All `ProductShelf` related components support all attributes also supported by t
 
 ## Variants
 
-You can use [ProductCard variants](/components/molecules/product-card#variants) to create `ProductShelf` variations.
+You can use [ProductCard variants](/docs/guides/faststore/molecules-product-card#variants) to create `ProductShelf` variations.
 
 ### With Button
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>
-      <ProductShelfUsage withButton items={4}/>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <ProductShelfUsage withButton items={4} id="shelf-example-2"/>
     </OverviewSection>
 
   </Tab>
@@ -158,7 +150,7 @@ You can use [ProductCard variants](/components/molecules/product-card#variants) 
       <ProductShelf>
         <ProductShelfItems>
           {products.map(({ product }, idx) => (
-            <ProductShelfItem>
+            <ProductShelfItem key={idx}>
               <ProductCard>
                 <ProductCardImage>
                   <img
@@ -190,8 +182,8 @@ You can use [ProductCard variants](/components/molecules/product-card#variants) 
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>
-     <ProductShelfUsage bordered items={4}/>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+     <ProductShelfUsage bordered items={4} id="shelf-example-3"/>
     </OverviewSection>
 
   </Tab>
@@ -201,7 +193,7 @@ You can use [ProductCard variants](/components/molecules/product-card#variants) 
         <ProductShelfItems>
           {products.map(({ product }, idx) => (
             <ProductShelfItem>
-              <ProductCard bordered>
+              <ProductCard bordered key={idx}>
                 <ProductCardImage>
                   <img
                     data-fs-image
@@ -231,8 +223,8 @@ You can use [ProductCard variants](/components/molecules/product-card#variants) 
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>
-      <ProductShelfUsage aspectRatio={3/4}/>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <ProductShelfUsage aspectRatio={3/4} id="shelf-example-4"/>
     </OverviewSection>
 
   </Tab>
@@ -241,7 +233,7 @@ You can use [ProductCard variants](/components/molecules/product-card#variants) 
       <ProductShelf>
         <ProductShelfItems>
           {products.map(({ product }, idx) => (
-            <ProductShelfItem>
+            <ProductShelfItem key={idx}>
               <ProductCard>
                 <ProductCardImage aspectRatio={3 / 4}>
                   <img
@@ -268,11 +260,11 @@ You can use [ProductCard variants](/components/molecules/product-card#variants) 
   </Tab>
 </Tabs>
 
-### With [Carousel](/components/molecules/carousel)
+### With [Carousel](/docs/guides/faststore/molecules-carousel)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection style={{ width: '100%', overflow: 'hidden' }}>
+    <OverviewSection style={{ width: '100%', overflow: 'hidden', paddingLeft: '0', paddingRight: '0' }}>
       <ProductShelfCarouselUsage/>
     </OverviewSection>
 
@@ -289,7 +281,7 @@ You can use [ProductCard variants](/components/molecules/product-card#variants) 
             infiniteMode={false}
           >
           {products.map(({ product }, idx) => (
-            <ProductCard>
+            <ProductCard key={idx}>
               <ProductCardImage aspectRatio={3 / 4}>
                 <img
                   data-fs-image
@@ -330,6 +322,7 @@ You can use [ProductCard variants](/components/molecules/product-card#variants) 
 
 ### ❌ Don'ts
 
-- We don't recommend using [Carousel](/docs/faststore/molecules-carousel) inside `ProductShelf` when display 5 or less items.
+- We don't recommend using [Carousel](/docs/guides/faststore/molecules-carousel) inside `ProductShelf` when display 5 or less items.
 - We don't recommend using `ProductShelfItems` and `ProductShelfItem` when using Carousel component to avoid: `validateDOMNesting(...): <li> cannot appear as a descendant of <li>` issue.
-  See [Carousel Code Example](/docs/faststore/organisms-product-shelf)
+
+See [Carousel Code Example](/docs/guides/faststore/organisms-product-shelf#with-carousel)
