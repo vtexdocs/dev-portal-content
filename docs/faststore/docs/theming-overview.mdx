@@ -2,8 +2,6 @@
 title: "Theming"
 ---
 
-import { LinkButton, Icon } from '@faststore/ui'
-
 Theming allows you to change the UI of your project by using CSS stylesheets called themes.
 
 In this guide, you'll have an overview of theming in FastStore, explaining the concept of theming, the use of global and local tokens, the structure and architecture of themes, and the naming scheme for design tokens.
@@ -46,12 +44,9 @@ The **Theme layer** is where the branding and customization happen. It allows yo
 
 You have the flexibility to customize or override the styles defined in the Structural Styles or Theme layers. Alternatively, you can start from scratch and create your own styles without relying on pre-existing FastStore CSS.
 
-Understanding the Structural Styles and Theme layers enables you to create visually appealing and unique user interfaces while maintaining control and flexibility.<div style={{ display: 'flex', marginTop: '12px' }}>
-<img
-  src="<https://vtexhelp.vtexassets.com/assets/docs/src/theming-intro___1d021c8548ba2338faba6dd2995bf7ce.png>"
-  style={{ width: '90%', display: 'block', margin: '0 auto' }}
-/>
-</div>
+Understanding the Structural Styles and Theme layers enables you to create visually appealing and unique user interfaces while maintaining control and flexibility.
+
+![](https://vtexhelp.vtexassets.com/assets/docs/src/theming-intro___1d021c8548ba2338faba6dd2995bf7ce.png)
 
 ---
 
@@ -73,11 +68,11 @@ Components rely on local design tokens, which are specific to each component. Th
 
 Local design tokens are connected to global tokens, forming the Theme. Global tokens are responsible for setting the overall visual style of the entire system. They affect the appearance of multiple components and ensure consistency across the application.
 
-</Steps>The interaction between components, local design tokens, and global design tokens creates a hierarchical structure that allows for modular theming and customization.<img
-  src="<https://vtexhelp.vtexassets.com/assets/docs/src/theming-architecture___f965569346d8d7d6a3de1f020f06ac99.png>"
-  align="center"
-  style={{ width: '90%', display: 'block', margin: '12px auto 0' }}
-/>
+</Steps>
+
+The interaction between components, local design tokens, and global design tokens creates a hierarchical structure that allows for modular theming and customization.
+
+![](https://vtexhelp.vtexassets.com/assets/docs/src/theming-architecture___f965569346d8d7d6a3de1f020f06ac99.png)
 
 ---
 
@@ -117,25 +112,21 @@ Global design tokens are parameters that affect all UI look 'n' feel. They are t
 
 ## Next steps
 
-<Cards>
-  <Card
-    title="Global Tokens"
-    href="/docs/global-tokens/overview"
-  />
+<WhatsNextCard
+  title="Global Tokens"
+  linkTo="/docs/global-tokens/overview"
+/>
 
-  <Card
-    title="Themes"
-    href="/docs/guides/faststore/themes-overview"
-  />
+<WhatsNextCard
+  title="Themes"
+  href="/docs/guides/faststore/themes-overview"
+/>
 
-   <br></br>
-
-  <Card
-    title="Icons"
-    href="/docs/icons"
-  />
-  <Card
-    title="Customizing"
-    href="/docs/customizing/components"
-  />
-</Cards>
+<WhatsNextCard
+  title="Icons"
+  href="/docs/icons"
+/>
+<WhatsNextCard
+  title="Customizing"
+  href="/docs/customizing/components"
+/>
