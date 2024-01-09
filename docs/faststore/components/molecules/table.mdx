@@ -71,8 +71,8 @@ Tables display information in a friendly way, allowing users to scan for details
       </Table>
     </OverviewSection>
     <OverviewSection>
-      {UsageTableColored}
-      {UsageTableBordered}
+      <UsageTableColored/>
+      <UsageTableBordered/>
     </OverviewSection>
   </Tab>
   <Tab>
@@ -370,7 +370,7 @@ All table-related components support all attributes also supported by their resp
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>{UsageTableColored}</OverviewSection>
+    <OverviewSection><UsageTableColored/></OverviewSection>
   </Tab>
   <Tab>
     ```tsx
