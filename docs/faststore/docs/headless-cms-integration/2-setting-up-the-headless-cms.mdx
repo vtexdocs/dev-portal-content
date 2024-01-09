@@ -40,14 +40,14 @@ If your project already includes any of the following files: `content-types.json
 <Tabs items={['macOs and Linux', 'Windows']}>
   <Tab>
 
-```bash copy
+```bash
 mkdir -p cms/faststore
 ```
 
   </Tab>
 
   <Tab>
-   ```bash copy
+   ```bash
   mkdir cms\faststore
   ```
   </Tab>
@@ -60,14 +60,14 @@ mkdir -p cms/faststore
 <Tabs items={['macOs and Linux', 'Windows']}>
   <Tab>
 
-```bash copy
+```bash
 touch cms/faststore/content-types.json cms/faststore/sections.json
 ```
 
   </Tab>
 
   <Tab>
-   ```bash copy
+   ```bash
   type nul > cms\faststore\content-types.json
   type nul > cms\faststore\sections.json
   ```
@@ -81,13 +81,13 @@ touch cms/faststore/content-types.json cms/faststore/sections.json
 
 5. Update the `sections.json` file with an empty array:
 
-```bash copy
+```bash
 echo "[]" > cms/faststore/sections.json
 ```
 
 6. Open the `content-types.json` file in any code editor of your choice and add the following code:
 
-```json filename="cms/faststore/content-types.json" copy
+```json "cms/faststore/content-types.json"
 [
   {
     "id": "customPage",
@@ -153,7 +153,7 @@ Let's now sync the changes with the Headless CMS app and see what happens.
 
 2. Create a new development workspace by running the following command. _Remember to replace the values between curly brackets according to your scenario_:
 
-```bash copy
+```bash
 vtex use {workspace}
 ```
 
@@ -163,7 +163,7 @@ vtex use {workspace}
 
 4. Sync your changes in the `cms` folder with the Headless CMS app:
 
-```bash copy
+```bash
 faststore cms-sync
 ```
 
@@ -171,7 +171,7 @@ faststore cms-sync
 
 Once your changes are synced with the Headless CMS, the terminal will show the following message:
 
-```bash copy
+```bash
 CMS synced successfully...
 ```
 
