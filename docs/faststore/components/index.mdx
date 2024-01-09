@@ -194,26 +194,7 @@ Atomic Design breaks user interfaces hierarchically into smaller and simpler com
     description="Used to present the summarized information of a product inside the Cart."
     actionPath="/docs/guides/faststore/molecules-cart-item"
   >
-    <CartItem
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      quantity={3}
-    >
-      <CartItemImage>
-        <img
-          data-fs-image
-          src={product.image[0].url}
-          alt={product.image[0].alternateName}
-        />
-      </CartItemImage>
-      <CartItemSummary
-        title={product.isVariantOf.name}
-        activeVariations={activeVariations}
-      />
-    </CartItem>
+    <CartItemExample/>
   </CardItem>
   <CardItem
     title="Checkbox Field"
