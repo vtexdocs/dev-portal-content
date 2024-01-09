@@ -1,7 +1,6 @@
 ---
 title: "Sku Selector"
-excerpt: "The `SkuSelector` component is mainly used in Product Details Pages (PDPs) to display all the available variants for a given product."
-description: The `SkuSelector` component is mainly used in Product Details Pages (PDPs) to display all the available variants for a given product.
+excerpt: The `SkuSelector` component is mainly used in Product Details Pages (PDPs) to display all the available variants for a given product.
 keywords:
   - UI library
   - ecommerce
@@ -12,17 +11,7 @@ components:
   - SkuSelector.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import {
-  SkuSelectorImage,
-  SkuSelectorLabel,
-  SkuSelectorColor,
-} from 'site/components/SkuSelector'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
-
-import { product } from 'site/mocks/product'
+The `SkuSelector` component is mainly used in Product Details Pages (PDPs) to display all the available variants for a given product.
 
 ## Overview
 
@@ -73,7 +62,7 @@ This is a product related component, we recommend testing it using a product moc
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { SkuSelector } from '@faststore/ui'
@@ -118,7 +107,7 @@ import '@faststore/ui/src/components/molecules/SkuSelector/styles.scss'
 
 ### SkuOptions
 
-<ComponentPropsSection propsList={propsSkuOptions} />
+<PropsSection propsList={propsSkuOptions} />
 
 ---
 

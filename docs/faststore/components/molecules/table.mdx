@@ -1,28 +1,11 @@
 ---
 title: "Table"
-excerpt: "Tables display information in a friendly way, allowing users to scan for details quickly."
-description: Tables display information in a friendly way, allowing users to scan for details quickly.
+excerpt: Tables display information in a friendly way, allowing users to scan for details quickly.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Table___06dbb666025a4d64540fb91d22b54ba6.png
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableFooter,
-  Icon,
-  Price,
-} from '@faststore/ui'
-import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
-
-
-The Table component is a compound of the following:
+Tables display information in a friendly way, allowing users to scan for details quickly.The Table component is a compound of the following:
 
 - `Table` - renders a `<div>` as wrapper with a `<table>` tag inside it.
 - `TableBody` - renders a `<tbody>` tag.
@@ -30,6 +13,8 @@ The Table component is a compound of the following:
 - `TableRow` - renders a `<tr>` tag.
 - `TableFooter` - renders a `<tfoot>` tag.
 - `TableCell` - renders a `<th>` or `<td>` tag depending on the value of the `variant` prop.
+
+---
 
 ## Overview
 
@@ -86,8 +71,8 @@ The Table component is a compound of the following:
       </Table>
     </OverviewSection>
     <OverviewSection>
-      <UsageTableColored/>
-      <UsageTableBordered/>
+      {UsageTableColored}
+      {UsageTableBordered}
     </OverviewSection>
   </Tab>
   <Tab>
@@ -206,7 +191,7 @@ The Table component is a compound of the following:
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { Table } from '@faststore/ui'
@@ -224,7 +209,7 @@ import '@faststore/ui/src/components/molecules/Table/styles.scss'
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection><UsageTableExample/></OverviewSection>
+    <OverviewSection>{UsageTableExample}</OverviewSection>
   </Tab>
   <Tab>
     ```tsx live
@@ -271,23 +256,27 @@ All table-related components support all attributes also supported by their resp
 
 ### Table
 
-<ComponentPropsSection name="Table" />
+<ComponentPropsSection component="Table" />
 
-### TableBody
+### Table Body
 
-<ComponentPropsSection name="TableBody" />
+<ComponentPropsSection component="TableBody" />
 
-### TableRow
+### Table Head
 
-<ComponentPropsSection name="TableRow" />
+<ComponentPropsSection component="TableHead" />
 
-### TableFooter
+### Table Row
 
-<ComponentPropsSection name="TableFooter" />
+<ComponentPropsSection component="TableRow" />
 
-### TableCell
+### Table Footer
 
-<ComponentPropsSection name="TableCell" />
+<ComponentPropsSection component="TableFooter" />
+
+### Table Cell
+
+<ComponentPropsSection component="TableCell" />
 
 ---
 
@@ -381,7 +370,7 @@ All table-related components support all attributes also supported by their resp
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection><UsageTableColored/></OverviewSection>
+    <OverviewSection>{UsageTableColored}</OverviewSection>
   </Tab>
   <Tab>
     ```tsx
@@ -429,7 +418,7 @@ All table-related components support all attributes also supported by their resp
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection><UsageTableBordered/></OverviewSection>
+    <OverviewSection>{UsageTableBordered}</OverviewSection>
   </Tab>
   <Tab>
     ```tsx

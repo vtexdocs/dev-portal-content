@@ -1,7 +1,6 @@
 ---
 title: "Search Products"
-excerpt: "List of `SearchProductItem` to show details of the suggested products. This component is part of the Search feature."
-description: List of `SearchProductItem` to show details of the suggested products.
+excerpt: List of `SearchProductItem` to show details of the suggested products.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Select___8842f3b6522c3e8db0a887b3f216a6ab.png
 components:
@@ -11,24 +10,9 @@ components:
   - SearchProductItemContent.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import {
-  SearchProducts,
-  SearchProductItem,
-  SearchProductItemImage,
-  SearchProductItemContent,
-} from '@faststore/ui'
+List of `SearchProductItem` to show details of the suggested products. This component is part of the [Search](/docs/guides/faststore//feature-search) feature.## Import
 
-import { product } from 'site/mocks/product'
-import { useFormattedPrice } from 'site/components/utilities/usePriceFormatter'
-import { propsPriceDefinition } from 'site/components/PriceDefinitionProps/PriceDefinitionProps'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
-
-## Import
-
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import {
@@ -154,9 +138,11 @@ All search product related components support all attributes also supported by t
 
 <ComponentPropsSection component="SearchProductItemContent" />
 
-#### Price Definition
+### Other Resources
 
-<ComponentPropsSection propsList={propsPriceDefinition} />
+#### PriceDefinition
+
+<PropsSection propsList={propsPriceDefinition} />
 
 ---
 

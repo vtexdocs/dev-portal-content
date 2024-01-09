@@ -1,21 +1,13 @@
 ---
 title: "Search Dropdown"
-excerpt: "Combine `SearchHistory`, `SearchTop`, `SearchAutoComplete` and `SearchProducts` to show all options in `SearchInput`. This component is part of the Search feature."
-description: Combine `SearchHistory`, `SearchTop` and `SearchAutoComplete` and `SearchProducts` to show all options in `SearchInput`.
+excerpt: Combine `SearchHistory`, `SearchTop` and `SearchAutoComplete` and `SearchProducts` to show all options in `SearchInput`.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/AggregateRating___a8300916874f5a11de7633b7cabc12e9.png
 components:
   - SearchDropdown.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-
-import SearchDropdownUsage from 'site/components/Search/SearchDropdownUsage'
-import { product } from 'site/mocks/product'
-
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
+Combine `SearchHistory`, `SearchTop`, `SearchAutoComplete` and `SearchProducts` to show all options in `SearchInput`. This component is part of the [Search](/docs/guides/faststore//feature-search) feature.
 
 ## Overview
 
@@ -75,16 +67,16 @@ import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
-import { SearchDropdown } from '@faststore/ui'
+import { SearchDropdown } from "@faststore/ui";
 ```
 
 Import Styles
 
 ```tsx
-import '@faststore/ui/src/components/molecules/SearchDropdown/styles.scss'
+import "@faststore/ui/src/components/molecules/SearchDropdown/styles.scss";
 ```
 
 ---
@@ -170,7 +162,7 @@ import '@faststore/ui/src/components/molecules/SearchDropdown/styles.scss'
   />
   <TokenRow
     token="--fs-search-dropdown-position-top-tablet"
-    value="calc(var(--fs-control-tap-size) + var(--fs-spacing-2) + var(--fs-border-width))"
+    value="calc(var(--fs-control-tap-size) + var(--fs-border-width))"
   />
   <TokenRow
     token="--fs-search-dropdown-position-top-desktop"
