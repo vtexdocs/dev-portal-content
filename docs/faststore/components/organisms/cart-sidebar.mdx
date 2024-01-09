@@ -1,30 +1,23 @@
 ---
 title: "Cart Sidebar"
-excerpt: "The `CartSidebar` displays the summary of items added to the cart along with detailed information, and checkout option."
-description: The `CartSidebar` displays the summary of items added to the cart along with detailed information, and checkout option.
+excerpt: The `CartSidebar` displays the summary of items added to the cart along with detailed information, and checkout option.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/CartSidebar___5863b0eb4a4a8ce9a98da5c760461e61.png
 components:
   - CartSidebar.tsx
 ---
 
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import { UIProvider, OrderSummary } from '@faststore/ui'
-import CartSidebarUsage from 'site/components/CartSidebar/CartSidebarUsage'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
-
-The final component is a compound of the following:
+The `CartSidebar` displays the summary of items added to the cart along with detailed information, and checkout option.The final component is a compound of the following:
 
 - `CartSidebar`: renders a `SlideOver` as wrapper with the `CartSidebarList` and `CartSidebarFooter`.
 - `CartSidebarList`: wraps a series of `CartItem`s and `Gifts`.
 - `CartSidebarFooter`: wraps an `OrdeSummary` usually along with the Checkout Button.
 
+---
+
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
 import { CartSidebar, CartSidebarList, CartSidebarFooter } from '@faststore/ui'
@@ -165,7 +158,8 @@ import '@faststore/ui/src/components/organisms/CartSidebar/styles.scss'
   <SectionItem
     title="Order Summary"
     description="This component provide a summary of the items in the cart, including the total price, related shipping tax, and discounts."
-    actionPath="/docs/faststore/molecules-order-summary"
+    actionPath="/docs/guides/faststore/molecules-order-summary"
+    fullWidth
   >
     <OrderSummary
       subtotalLabel="Subtotal (3 products)"
