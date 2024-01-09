@@ -9,7 +9,7 @@ excerpt: "Steps on how to track and analyze data from your store using Google An
 seeAlso:
   - "/docs/guides/google-tag-manager"
   - "/docs/guides/vtex-io-documentation-migrating-google-tag-manager-app"
-  - "/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking"
+  - "/docs/apps/vtex.search#app-behavior-improving-search-experience"
 ---
 
 Once you have installed the [VTEX IO Google Tag Manager app](https://developers.vtex.com/docs/guides/google-tag-manager), set it up in your store by configuring all the necessary variables, triggers, and tags.
