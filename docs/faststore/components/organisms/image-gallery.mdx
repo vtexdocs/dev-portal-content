@@ -1,7 +1,6 @@
 ---
 title: "Image Gallery"
-excerpt: "An `ImageGallery` is used when you want to display a series of photos in a gallery on a post or page."
-description: Used when you want to display a series of photos in a gallery on a post or page.
+excerpt: Used when you want to display a series of photos in a gallery on a post or page.
 keywords:
   - UI library
   - ecommerce
@@ -12,25 +11,20 @@ components:
   - ImageGallery.tsx
   - ImageGallerySelector.tsx
 ---
-
-import PropsSection from 'site/components/PropsSection'
-import { TokenTable, TokenRow, TokenDivider } from 'site/components/Tokens'
-import { OverviewSection } from 'site/components/OverviewSection'
-import { SectionItem, SectionList } from 'site/components/SectionItem'
-import ImageGalleryUsage from 'site/components/ImageGallery/ImageGalleryUsage'
-import { ImageGallery, ImageGallerySelector } from '@faststore/ui'
-import { getComponentPropsFrom } from 'site/components/utilities/propsSection'
-
-According to the quantity of `Image` to be displayed, the `ImageGallerySelector` will be displayed.
+An `ImageGallery` is used when you want to display a series of photos in a gallery on a post or page.According to the quantity of `Image` to be displayed, the `ImageGallerySelector` will be displayed.
 
 ---
 
 ## Import
 
-Import the component from [@faststore/ui](/../docs/faststore/components-index)
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
 
 ```tsx
-import { ImageGallery, ImageGallerySelector, ImageZoom } from '@faststore/ui'
+import {
+  ImageGallery,
+  ImageGallerySelector,
+  ImageGalleryViewer,
+} from '@faststore/ui'
 ```
 
 Import Styles
@@ -43,6 +37,8 @@ import '@faststore/ui/src/components/organisms/ImageGallery/styles.scss'
 
 ## Usage
 
+> ⚠️ Add the `data-fs-image` attribute in all `<img>` tags to ensure they work as expected. You can find an example in the `Code` tab below for reference.
+
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
@@ -50,30 +46,29 @@ import '@faststore/ui/src/components/organisms/ImageGallery/styles.scss'
     </OverviewSection>
   </Tab>
   <Tab>
-    ```tsx
-    const ImageComponent = ({ url, alternateName }) => (
-      <img data-fs-image src={url} alt={alternateName} />
-    )
+```tsx
+const ImageComponent = ({ url, alternateName }) => (
+  <img data-fs-image src={url} alt={alternateName} />
+)
 
-    const [selectedImageIdx, setSelectedImageIdx] = useState(0)
-    const currentImage = imagesUsage[selectedImageIdx]
+const [selectedImageIdx, setSelectedImageIdx] = useState(0)
+const currentImage = imagesUsage[selectedImageIdx]
 
-    <ImageGallery
-      images={imagesUsage}
-      ImageComponent={ImageComponent}
-      selectedImageIdx={selectedImageIdx}
-      setSelectedImageIdx={setSelectedImageIdx}
-    >
-      <ImageZoom>
-        <img
-          data-fs-image
-          src={currentImage.url}
-          alt={currentImage.alternateName}
-        />
-      </ImageZoom>
-    </ImageGallery>
-
-    ```
+<ImageGallery
+  images={imagesUsage}
+  ImageComponent={ImageComponent}
+  selectedImageIdx={selectedImageIdx}
+  setSelectedImageIdx={setSelectedImageIdx}
+>
+  <ImageGalleryViewer>
+    <img
+      data-fs-image
+      src={currentImage.url}
+      alt={currentImage.alternateName}
+    />
+  </ImageGalleryViewer>
+</ImageGallery>
+```
 
   </Tab>
 </Tabs>
@@ -92,7 +87,7 @@ import '@faststore/ui/src/components/organisms/ImageGallery/styles.scss'
 
 ### ImageElementData
 
-<ComponentPropsSection propsList={propsImageElementData} />
+<PropsSection propsList={propsImageElementData} />
 
 ---
 
@@ -243,29 +238,28 @@ import '@faststore/ui/src/components/organisms/ImageGallery/styles.scss'
     </OverviewSection>
   </Tab>
   <Tab>
-    ```tsx
-    const ImageComponent = ({ url, alternateName }) => (
-      <img data-fs-image src={url} alt={alternateName} />
-    )
+```tsx
+const ImageComponent = ({ url, alternateName }) => (
+  <img data-fs-image src={url} alt={alternateName} />
+)
 
-    const [selectedImageIdx, setSelectedImageIdx] = useState(0)
-    const currentImage = imagesUsage[selectedImageIdx]
+const [selectedImageIdx, setSelectedImageIdx] = useState(0)
+const currentImage = imagesUsage[selectedImageIdx]
 
-    <ImageGallery
-      images={imagesUsage}
-      ImageComponent={ImageComponent}
-      selectedImageIdx={selectedImageIdx}
-      setSelectedImageIdx={setSelectedImageIdx}
-    >
-      <ImageZoom>
-        <img
-          data-fs-image
-          src={currentImage.url}
-          alt={currentImage.alternateName}
-        />
-      </ImageZoom>
-    </ImageGallery>
-
+<ImageGallery
+  images={imagesUsage}
+  ImageComponent={ImageComponent}
+  selectedImageIdx={selectedImageIdx}
+  setSelectedImageIdx={setSelectedImageIdx}
+>
+  <ImageGalleryViewer>
+    <img
+      data-fs-image
+      src={currentImage.url}
+      alt={currentImage.alternateName}
+    />
+  </ImageGalleryViewer>
+</ImageGallery>
     ```
 
   </Tab>
@@ -276,34 +270,35 @@ import '@faststore/ui/src/components/organisms/ImageGallery/styles.scss'
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <ImageGalleryUsage images={[imagesUsage[0]]} />
+      <ImageGalleryUsage images={imagesWithoutSelector} />
     </OverviewSection>
   </Tab>
   <Tab>
-    ```tsx
-    const ImageComponent = ({ url, alternateName }) => (
-      <img data-fs-image src={url} alt={alternateName} />
-    )
+  ```tsx
+  const ImageComponent = ({ url, alternateName }) => (
+    <img data-fs-image src={url} alt={alternateName} />
+  )
 
-    const [selectedImageIdx, setSelectedImageIdx] = useState(0)
-    const currentImage = [imagesUsage[0]][selectedImageIdx]
+  export const images = [imagesUsage[0]]
 
-    <ImageGallery
-      images={[imagesUsage[0]]}
-      ImageComponent={ImageComponent}
-      selectedImageIdx={selectedImageIdx}
-      setSelectedImageIdx={setSelectedImageIdx}
-    >
-      <ImageZoom>
-        <img
-          data-fs-image
-          src={currentImage.url}
-          alt={currentImage.alternateName}
-        />
-      </ImageZoom>
-    </ImageGallery>
+  const [selectedImageIdx, setSelectedImageIdx] = useState(0)
+  const currentImage = images[selectedImageIdx]
 
-    ```
+  <ImageGallery
+    images={images}
+    ImageComponent={ImageComponent}
+    selectedImageIdx={selectedImageIdx}
+    setSelectedImageIdx={setSelectedImageIdx}
+  >
+    <ImageGalleryViewer>
+      <img
+        data-fs-image
+        src={currentImage.url}
+        alt={currentImage.alternateName}
+      />
+    </ImageGalleryViewer>
+  </ImageGallery>
+  ```
 
   </Tab>
 </Tabs>
