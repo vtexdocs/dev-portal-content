@@ -19,7 +19,7 @@ To handle this situation and ensure a smooth migration, follow the steps below t
 
 1. Open the terminal and log in to your account.
 2. [Change to the **production workspace**](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) containing your latest changes and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your Store Theme app.
-3. Install the Store Theme app published in the previous steps:
+3. In the production workspace, install the Store Theme version published in the previous steps:
 
    ```sh
    vtex install {appVendor}.{appName}@{appVersion}
@@ -36,11 +36,11 @@ To handle this situation and ensure a smooth migration, follow the steps below t
 
   ```gql
   mutation{
-    updateThemeIds(from:"{appvendor}.{appname}@{oldmajor}.x", to:"{appvendor}.{appname}@{newmajor}.x")
+    updateThemeIds(from:"{appVendor}.{appName}@{oldMajor}.x", to:"{appVendor}.{appName}@{newMajor}.x")
   }
   ```
 
- >ℹ️ Replace the values in curly brackets with the values that apply to your scenario, and press **Play**.
+ >ℹ️ Replace the values in curly brackets with the values that apply to your scenario, then click **Play**.
 
 7. Open the VTEX Admin of the production workspace used in the previous steps and validate the CMS content, routes, pages, and redirects.
 8. Once you have validated your data, [promote your workspace to master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/).
