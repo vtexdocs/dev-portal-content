@@ -1,7 +1,7 @@
 ---
-title: 'API Extensions'
-sidebar_label: 'API Extensions'
-slug: 'api-extensions'
+title: "API Extensions"
+sidebar_label: "API Extensions"
+slug: "api-extensions"
 ---
 
 In this track, learn how to extend the FastStore API schema by adding new data to the existing [queries](https://v1.faststore.dev/reference/api/queries).
@@ -19,7 +19,8 @@ If you need to retrieve more data, you can achieve this by extending the FastSto
 <ul>
 <li>
 <details>
-<summary><b>GraphQL Optimizations & types</b></summary>
+<summary>GraphQL Optimizations & types</summary>
+
 GraphQL Optimizations are essential for optimizing your GraphQL server and TypeScript types. They provide benefits such as:
 
 - Build-time generated mappings of declared queries
@@ -29,23 +30,28 @@ GraphQL Optimizations are essential for optimizing your GraphQL server and TypeS
 Without these optimizations, any modifications to the GraphQL schema, such as adding or removing fields from a query or altering a GraphQL type, won't be reflected in the store.
 
 Additionally, GraphQL query optimizations update TypeScript types for the API to match schema changes seamlessly.
+
 </details>
 </li>
 
 <li>
 <details>
-<summary><b>GraphQL Optimization automation</b></summary>
+<summary>GraphQL Optimization automation</summary>
+
 GraphQL optimizations are seamlessly executed, requiring no direct intervention from end developers.
 They are automatically triggered every time you start a development server (`yarn dev`) or builds the store (`yarn build`).
 Resolver changes are automatically and instantly visible, without the need for manual optimization generation.
+
 </details>
 </li>
 
 <li>
 <details>
-<summary><b>Extendable queries</b></summary>
+<summary>Extendable queries</summary>
+
 Extendable queries in FastStore's GraphQL API are predefined GraphQL queries that serve as a foundation for retrieving data from the API.
 These queries allow you to add or modify fields within the query to tailor the data retrieval process to the store specific needs.
+
 </details>
 </li>
 </ul>
@@ -77,32 +83,30 @@ If you do use this type of function, you must be mindful to always check which o
 
 ---
 
-<ul class="nx-card-list">
-<li class="nx-card">
-<a href="/docs/guides/faststore/api-extensions-extending-api-schema">
-#### Extending VTEX API schemas
-Extend VTEX and third-party APIs to customize how data is managed and processed in your store.
-</a>
-</li>
+<WhatsNextCard
+  title="Extending VTEX API schemas"
+  description="Extend VTEX and third-party APIs to customize how data is managed and processed in your store."
+  linkto="/docs/guides/faststore/api-extensions-extending-api-schema"
+  linkTitle="See more"
+/>
 
-<li class="nx-card">
-<a href="/docs/guides/faststore/api-extensions-extending-queries-using-fragments">
-#### Extending queries using fragments
-Extend GraphQL queries using fragments in FastStore API Extension to add custom fields to predefined queries.
-</a>
-</li>
+<WhatsNextCard
+  title="Extending queries using fragments"
+  description="Extend GraphQL queries using fragments in FastStore API Extension to add custom fields to predefined queries."
+  linkto="/docs/guides/faststore/api-extensions-extending-queries-using-fragments"
+  linkTitle="See more"
+/>
 
-<li class="nx-card">
-<a href="/docs/guides/faststore/api-extensions-consuming-api-extensions">
-#### Consuming FastStore API extension with custom components
-Consume FastStore API extension data with custom components, such as [Sections](/docs/guides/faststore/building-sections-creating-a-new-section) and [Override components](/docs/guides/faststore/building-sections-overriding-components-and-props).
-</a>
-</li>
+<WhatsNextCard
+  title="Consuming FastStore API extension with custom components"
+  description="Consume FastStore API extension data with custom components."
+  linkto="/docs/guides/faststore/api-extensions-consuming-api-extensions"
+  linkTitle="See more"
+/>
 
-<li class="nx-card">
-<a href="/docs/guides/faststore/api-extensions-troubleshooting">
-#### Troubleshooting
-Check for common errors that can happen while using API extensions.
-</a>
-</li>
-</ul>
+<WhatsNextCard
+  title="Troubleshooting"
+  description="Check for common errors that can happen while using API extensions."
+  linkto="/docs/guides/faststore/api-extensions-troubleshooting"
+  linkTitle="See more"
+/>
