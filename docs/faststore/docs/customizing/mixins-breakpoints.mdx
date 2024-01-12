@@ -56,7 +56,7 @@ Follow the steps below to override the pre-defined sizing system for the screen 
 
 3. Add the following code snippet into the file:
 
-```scss {10} filename="src/styles/custom-mixins.scss" copy
+```scss src/styles/custom-mixins.scss mark=10
 @import "@faststore/ui/src/styles/base/utilities";
 
 // Overwrites Breakpoints & Mixins ////////////////////
@@ -82,7 +82,7 @@ The [Sass `@mixin`](https://sass-lang.com/documentation/at-rules/mixin/) allows 
 
 <Tabs items={['Global Mixins', 'Layout & Spacing Mixins', 'Focus Ring Mixins']}>
   <Tab>
-    ```scss copy
+    ```scss
     $base: 16px !default;
 
     @function rem($size) {
@@ -105,7 +105,7 @@ The [Sass `@mixin`](https://sass-lang.com/documentation/at-rules/mixin/) allows 
     ```
   </Tab>
   <Tab>
-    ```scss copy
+    ```scss
     @mixin layout-content {
       box-sizing: border-box;
       width: calc(100% - var(--fs-grid-padding) - var(--fs-grid-padding));
@@ -143,7 +143,7 @@ The [Sass `@mixin`](https://sass-lang.com/documentation/at-rules/mixin/) allows 
     ```
   </Tab>
   <Tab>
-    ```scss copy
+    ```scss
     @mixin input-focus-ring($outline: #{var(--fs-color-focus-ring)}, $border: #{var(--fs-border-color-active)}) {
       @media not all and (min-resolution: .001dpcm) { // Target only Safari browsers
         @supports (-webkit-appearance:none) {         // Use `focus` instead of `focus-visible`
@@ -223,7 +223,7 @@ Overriding the predefined mixins follows a process similar to the [customizing b
 
 3. Choose the [mixin](#mixins) you want to override and add it to the file:
 
-```scss {8} filename="src/styles/custom-mixins.scss" copy
+```scss src/styles/custom-mixins.scss mark=8
 @import "@faststore/ui/src/styles/base/utilities";
 
 // Overwrites Breakpoints & Mixins ////////////////////
@@ -235,7 +235,7 @@ Overriding the predefined mixins follows a process similar to the [customizing b
 
 This code will make the following changes on the default `@mixin input-focus-ring`:
 
-```diff copy
+```diff
 - @mixin input-focus-ring($outline: #{var(--fs-color-focus-ring)}, $border: #{var(--fs-border-color-active)}) {
 + @mixin input-focus-ring($outline: #{var(--fs-color-focus-ring-danger)}, $border: #{var(--fs-color-danger-border)}) {
   [...]
