@@ -35,8 +35,7 @@ Learn how to add custom integration tests in the following steps.
 2. Add the `experimental` object with the `enableCypressExtension` as it property.
 3. Set the `enableCypressExtension` value to `true`:
 
-```js filename="faststore.config.js" {2-4}
-  },
+```js faststore.config.js mark=1:3
   experimental: {
       enableCypressExtension: true,
   }
@@ -64,7 +63,7 @@ As storefront projects evolve, changes to component and page code may lead to er
 
 In such cases, you can override FastStore's default tests using custom tests with the same name as the original test files. For example:
 
-```js filename="plp.test.js"
+```js plp.test.js
 import { cypress } from '../../faststore.config'
 
 const { pages } = cypress
@@ -93,8 +92,7 @@ First, ensure that you use Cypress version 12 by setting the `cypressVersion` ex
 2. Inside the `experimental` object, add the `cypressVersion` property.
 3. Set the `cypressVersion` value to `12`.
 
-```js filename="faststore.config.js" {4}
-  },
+```js faststore.config.js mark=3
   experimental: {
       enableCypressExtension: true,
       cypressVersion: 12,
@@ -112,7 +110,7 @@ Now, change your custom Cypress tests directory from `cypress/integration` to `c
 1. In your storefront project, rename the folder from `cypress/integration` to `cypress/e2e`.
 2. Update your new Cypress configuration file `cypress.config.ts` to match the new custom tests folder `cypress/e2e` by specifying the `specPattern`:
 
-```ts filename="cypress.config.ts" {7}
+```ts cypress.config.ts mark=7
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
