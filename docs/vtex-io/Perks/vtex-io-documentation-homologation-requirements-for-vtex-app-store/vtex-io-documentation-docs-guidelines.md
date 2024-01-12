@@ -188,9 +188,9 @@ If you do not have {insert what the user needs to have and how it can be done}.
 
 Once you have installed the app, you can {describe the app's configuration in the VTEX Admin, for example}.
 
-1. {first step}.
-2. {second step}.
-3. {third step}.
+1. *Describe the first step here*.
+2. *Describe the second step here*.
+3. *Describe the third step here*.
 
 ## Customization
 
