@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-docs-guidelines"
 hidden: false
 createdAt: "2024-01-04T10:33:04.345Z"
 ---
+
 Developing and publishing apps on the VTEX App Store requires meticulous documentation to ensure seamless adoption by developers and business users. Follow these best practices to create clear, engaging, and effective documentation for your VTEX apps.
 
 ## Identifying your audience
@@ -143,7 +144,7 @@ Represents the highest criticality level. If the user ignores the information gi
 
 A basic documentation template structure with the previously described sections for you to start.
 
-```md
+```bash
 # {Insert the app's name}
 
 The {insert app's name} is responsible for {app's purpose} so you can {job to be done}. 
@@ -188,9 +189,9 @@ If you do not have {insert what the user needs to have and how it can be done}.
 
 Once you have installed the app, you can {describe the app's configuration in the VTEX Admin, for example}.
 
-1. *Describe the first step here*.
-2. *Describe the second step here*.
-3. *Describe the third step here*.
+1. `first step`.
+2. `Second step`.
+3. `Third step`.
 
 ## Customization
 
@@ -206,9 +207,9 @@ To apply CSS customizations to this and other blocks, follow the instructions gi
 
 Thanks go to these wonderful people:
 
-- {insert the GitHub username}
+- `{insert the GitHub username}`
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
 
 ```
 
