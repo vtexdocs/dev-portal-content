@@ -22,7 +22,9 @@ Before proceeding any further, make sure you already have:
 - The VTEX IO CLI installed on your machine. Please refer to [this documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) for more information.
 - Check the Editon Store on your VTEX account:
   - **Stores using Store Framework or FastStore technology:** the `vtex.edition-store 5.x` version should be installed on your VTEX account.
-  - **Stores using Legacy CMS Portal technology:** the `vtex.edition-store 3.x` version should be installed on your VTEX account.> ℹ️ Run `vtex edition get` to check if the `vtex.edition-store` app is installed on your account. If not, [open a support ticket](https://help.vtex.com/en/support) communicating you need the `vtex.edition-store@5.x` to be installed on your account so you can integrate your FastStore project with the VTEX platform.
+  - **Stores using Legacy CMS Portal technology:** the `vtex.edition-store 3.x` version should be installed on your VTEX account.
+  
+  > ℹ️ Run `vtex edition get` to check if the `vtex.edition-store` app is installed on your account. If not, [open a support ticket](https://help.vtex.com/en/support) communicating you need the `vtex.edition-store@5.x` to be installed on your account so you can integrate your FastStore project with the VTEX platform.
 
 ---
 
@@ -32,26 +34,27 @@ Before proceeding any further, make sure you already have:
 
 1. Open the terminal and clone the [`faststore-vtex-integrations`](https://github.com/vtex/faststore-vtex-integrations/) project into your local files.
 
-```bash
-npx degit vtex/faststore-vtex-integrations
-```
+  ```bash
+  npx degit vtex/faststore-vtex-integrations
+  ```
 
 2. Open the `faststore-vtex-integrations` directory in any code editor of your preference.
 3. Open the `manifest.json` file and update the value of the `vendor` field with the name of your VTEX account.
 4. Using the terminal, log in to your VTEX account.
 
-```bash
-vtex login {account}
-```
+  ```bash
+  vtex login {account}
+  ```
 
-> ⚠️ Replace the value between curly brackets with the name of your account.
+  >   ⚠️ Replace the value between curly brackets with the name of your account.
 
 5. Create a new development workspace.
 
-```bash
-vtex workspace use {workspace}
-```
-> ⚠️ Replace the value between curly brackets with any name of your preference, making sure the name you choose is not already taken.
+  ```bash
+  vtex workspace use {workspace}
+  ```
+
+  > ⚠️ Replace the value between curly brackets with any name of your preference, making sure the name you choose is not already taken.
 
    *Enter `Y` to continue creating the new workspace.*
 
@@ -73,7 +76,7 @@ After accessing the Order Placed page, you probably noticed the FastStore logo. 
 1. Save your logo inside the `assets` folder.
 2. Open the `store/blocks/header.jsonc` file and update the `title`, `href`, `url`, and `width` values of your store logo (`logo#desktop` and `logo#mobile`) according to your scenario:
 
-```jsonc filename="store/blocks/header.json" {4-7,13-16} copy
+```jsonc store/blocks/header.json {4-7,13-16}
 ...
 "logo#desktop": {
   "props": {
@@ -106,41 +109,41 @@ Now that everything is as expected, you need to make your changes publicly avail
 
 1. Open the terminal and create a production workspace.
 
-```bash
-vtex use {workspace} --production
-```
+  ```bash
+  vtex use {workspace} --production
+  ```
 
 2. Change to the `faststore-vtex-integrations` directory.
 3. Release a new app version.
 
-```bash
-vtex release major stable
-```
+  ```bash
+  vtex release major stable
+  ```
 
 3. Publish your app as a candidate version.
 
-```bash
-vtex publish
-```
+  ```bash
+  vtex publish
+  ```
 
 4. Install the candidate version indicating the app's version as in the following:
 
-```bash
-vtex install {vendor}.{name}@{version}
-```
+  ```bash
+  vtex install {vendor}.{name}@{version}
+  ```
 
-> ⚠️ Replace the values between curly brackets according to the `manifest.json` file of your `faststore-vtex-integrations` app.
+  > ⚠️ Replace the values between curly brackets according to the `manifest.json` file of your `faststore-vtex-integrations` app.
 
 5. Deploy the candidate version as a stable version.
 
-```bash
-vtex deploy {vendor}.{appname}@{appversion}
-```
+  ```bash
+  vtex deploy {vendor}.{appname}@{appversion}
+  ```
 
 6. Promote your Production workspace to master to make your changes publicly available to your store shoppers.
 
-```bash
-vtex workspace promote
-```
+  ```bash
+  vtex workspace promote
+  ```
 
 That's all. Now, if you place an order in your store, you'll be presented with the **Order Placed** page. Similarly, you'll also have access to the **My Account** page.
