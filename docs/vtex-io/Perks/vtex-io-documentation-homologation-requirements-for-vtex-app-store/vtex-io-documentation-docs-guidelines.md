@@ -147,21 +147,21 @@ A basic documentation template structure with the previously described sections 
 ```bash
 # {Insert the app's name}
 
-The {insert app's name} is responsible for {app's purpose} so you can {job to be done}. 
+The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`. 
 
-![insert-an-image-preview](/)
+`![insert-an-image-preview](/)`
 
 ## Before you start
 
-You need to have {insert what the user needs to have: an account in another platform, CLI, knowledge in another app, etc}.
+You need to have `{insert what the user needs to have: an account in another platform, CLI, knowledge in another app, etc}`.
 
-If you do not have {insert what the user needs to have and how it can be done}.
+If you do not have `{insert what the user needs to have and how it can be done}`.
 
 ## Installation
 
-1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the {insert app's name} app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
+1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
 2. Open your store’s Store Theme app directory in your code editor.
-3. Open your app's `manifest.json file` and add the {insert app's name} app under the `peerDependencies` field.
+3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
 
     ```json
 
@@ -171,7 +171,7 @@ If you do not have {insert what the user needs to have and how it can be done}.
 
     ```
 
-4. Declare the {insert app's name} app in the desired template. For example:
+4. Declare the `{insert app's name}` app in the desired template. For example:
 
     ```json
 
@@ -187,7 +187,7 @@ If you do not have {insert what the user needs to have and how it can be done}.
 
 ## Configuration
 
-Once you have installed the app, you can {describe the app's configuration in the VTEX Admin, for example}.
+Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
 
 1. `first step`.
 2. `Second step`.
