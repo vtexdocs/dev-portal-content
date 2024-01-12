@@ -2,6 +2,8 @@
 title: '1. Configuring your VTEX account'
 sidebar_label: 'Integrating your storefront with Headless CMS'
 slug: '1-configuring-the-vtex-account'
+seeAlso: 
+  - "/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference"
 ---
 
 ## Part 1: Configuring your VTEX account with the Headless CMS
@@ -19,7 +21,7 @@ Before you proceed with setting up the Headless CMS in your account, please ensu
 
 ### Installation of the Headless CMS and its dependencies
 
-Ensure that you have installed the `vtex.admin-cms@1.x` and its dependencies as described in the F[astStore requirements](/docs/getting-started-requirements#2-ensure-the-headless-cms-and-its-ependencies-are-installed-in-your-account).
+Ensure that you have installed the `vtex.admin-cms@1.x` and its dependencies as described in the [FastStore requirements](/docs/getting-started-requirements#2-ensure-the-headless-cms-and-its-ependencies-are-installed-in-your-account).
 
 ### Successful FastStore Onboarding
 
@@ -56,7 +58,9 @@ Now, check if the installation of the Headless CMS plugin was successful by runn
 
 ![success-vtex-cms-sync](https://vtexhelp.vtexassets.com/assets/docs/src/faststore-vtex-cms___460365970fb39c94e300b9fbd497e17e.png)
 
-> ⚠️ - **Windows user:** if you find problems while installing the plugin, please refer to the [Troubleshooting](/docs/guides/faststore/error-installing-headless-cms) article
+> ⚠️
+>
+> - **Windows user:** if you find problems while installing the plugin, please refer to the [Troubleshooting](/docs/guides/faststore/error-installing-headless-cms) article
 >
 > - **macOS user:** if you find problems, run `yarn config set ignore-engines true` to ignore the Node.js incompatibility version, then run `vtex plugins install cms` again.
 >
@@ -115,9 +119,3 @@ Now, if you are developing your FastStore project with CI/CD and Headless CMS, y
 Now you can make changes to the Headless CMS and check if commits are being created in the project. In the following example, the `Hero` title was modified to `10% off on first purchase`, and we can see that it generated a commit in the repository.
 
 ![cms-commits](https://vtexhelp.vtexassets.com/assets/docs/src/cms-example-commits___7bb21be1504033098122feb013667b49.png)
-
----
-
-## Related resources
-
-- [VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference)
