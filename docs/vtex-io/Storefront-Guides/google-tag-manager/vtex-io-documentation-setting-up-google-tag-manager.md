@@ -42,7 +42,7 @@ Once the GA4 Configuration tag is created, set up all GA4 events as follows:
 
 2. Import the container file by following Google’s [Import a container guide](https://support.google.com/tagmanager/answer/6106997?#import). This will add all the necessary tags, triggers, and variables to the workspace.
 
-![import-container](https://vtexhelp.vtexassets.com/assets/docs/src/new-ga4-tags-variables___b2619df57689429d97a8abd56a5f7d83.png)
+    ![import-container](https://vtexhelp.vtexassets.com/assets/docs/src/new-ga4-tags-variables___b2619df57689429d97a8abd56a5f7d83.png)
 
 3. In the GTM container, go to the GA4 Configuration tag, and edit the **Measurement ID** field with your Google Tag ID ( G- ID).
 
@@ -58,7 +58,7 @@ To verify if the events are arriving and the reports are being filled with data,
 
 ![gtm-debug-view](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-debug-view___e2dc572dcc33e2e23e81749583226ec8.png)
 
-To see the available events that GA4 can track, refer to the [Overview of Events in Google Analytics 4](##overview-events) section.
+To see the available events that GA4 can track, refer to the [Overview of Events in Google Analytics 4](#overview-events) section.
 
 ## Overview events
 
