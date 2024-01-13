@@ -11,37 +11,35 @@ A product details page (PDP) is the page in an ecommerce website that displays i
 The PDP is defined within the `store.product` block in the Store Theme app, and it's built with a series of child blocks. The `store.product` block accepts all blocks allowed by the `store` and `flex-layout` blocks as child dependencies, as well as block in the following list:
 
 <details>
-  <summary>Blocks accepted by <code>store.product</code></summary>
+<summary>Blocks accepted by `store.product`</summary>
 
-<ul>
-  <li><code>availability-subscriber</code></li>
-  <li><code>buy-button</code></li>
-  <li><code>blog-related-posts</code></li>
-  <li><code>breadcrumb</code></li>
-  <li><code>product-add-to-list-button</code></li>
-  <li><code>product-assembly-options</code></li>
-  <li><code>product-availability</code></li>
-  <li><code>product-brand</code></li>
-  <li><code>product-details</code></li>
-  <li><code>product-description</code></li>
-  <li><code>product-highlights</code></li>
-  <li><code>product-identifier</code></li>
-  <li><code>product-images</code></li>
-  <li><code>product-kit</code></li>
-  <li><code>product-name</code></li>
-  <li><code>product-price</code></li>
-  <li><code>product-rating-inline</code></li>
-  <li><code>product-rating-summary</code></li>
-  <li><code>product-reviews</code></li>
-  <li><code>product-teaser.product</code></li>
-  <li><code>product-quantity</code></li>
-  <li><code>product-questions-and-answers</code></li>
-  <li><code>product-separator</code></li>
-  <li><code>product-specifications</code></li>
-  <li><code>share</code></li>
-  <li><code>shipping-simulator</code></li>
-  <li><code>sku-selector</code></li>
-</ul>
+- `availability-subscriber`
+- `buy-button`
+- `blog-related-posts`
+- `breadcrumb`
+- `product-add-to-list-button`
+- `product-assembly-options`
+- `product-availability`
+- `product-brand`
+- `product-details`
+- `product-description`
+- `product-highlights`
+- `product-identifier`
+- `product-images`
+- `product-kit`
+- `product-name`
+- `product-price`
+- `product-rating-inline`
+- `product-rating-summary`
+- `product-reviews`
+- `product-teaser.product`
+- `product-quantity`
+- `product-questions-and-answers`
+- `product-separator`
+- `product-specifications`
+- `share`
+- `shipping-simulator`
+- `sku-selector`
 
 </details>
 
@@ -54,7 +52,7 @@ To build a responsive PDP, you need to use [`flex-layout`](https://developers.vt
 Consider the following example of a PDP built using the `store.product` and `flex-layout` blocks:
 
 <details>
-  <summary>Click here to see the code sample</summary>
+<summary>Click here to see the code sample</summary>
 
 ```json
 {
