@@ -44,24 +44,24 @@ FastStore uses [Partytown](https://partytown.builder.io/) for script execution. 
 
 3. In the `ThirdPartyScripts.tsx` file, add your script as the example below:
 
-```tsx filename="src/scripts/ThirdPartyScripts.tsx" {7} copy
-const ThirdPartyScripts = () => {
-  return (
-    <script
-      type="text/partytown"
-      dangerouslySetInnerHTML={{
-        // Add your script here and remove the console.log example
-        __html: "console.log('🚀 Hello from a third-party script!')",
-      }}
-    />
-  )
-}
+  ```tsx src/scripts/ThirdPartyScripts.tsx mark=7
+  const ThirdPartyScripts = () => {
+    return (
+      <script
+        type="text/partytown"
+        dangerouslySetInnerHTML={{
+          // Add your script here and remove the console.log example
+          __html: "console.log('🚀 Hello from a third-party script!')",
+        }}
+      />
+    )
+  }
 
-export default ThirdPartyScripts
-```
+  export default ThirdPartyScripts
+  ```
 
 4. Run `yarn dev` in the terminal to start the development server and execute the script you have added.
 
 5. Access the provided localhost URL in your browser, open the Developer Tools, and go to the `Console` tab. You should be able to see the message: `🚀Hello from a third-party script!`:
 
-![third-party-script-example](https://vtexhelp.vtexassets.com/assets/docs/src/third-party-scripts___2f9d925975b6217a5c3872ed96fc6bd7.png)
+    ![third-party-script-example](https://vtexhelp.vtexassets.com/assets/docs/src/third-party-scripts___2f9d925975b6217a5c3872ed96fc6bd7.png)
