@@ -31,19 +31,19 @@ Take the following steps to guarantee shoppers will be redirected to the newest 
 4. Select `checkout-confirmation-custom.js` under **Files**.
 5. Add the following JavaScript code in the editor:
 
-```jsx {4-5} filename="checkout-confirmation-custom.js" copy
-// WARNING: THE USAGE OF CUSTOM SCRIPTS IS NOT SUPPORTED. VTEX IS NOT LIABLE FOR ANY DAMAGES THIS MAY CAUSE.
-// THIS MAY BREAK YOUR STORE AND STOP SALES. IN CASE OF ERRORS, PLEASE DELETE THE CONTENT OF THIS SCRIPT.
+    ```jsx {4-5} filename="checkout-confirmation-custom.js" copy
+    // WARNING: THE USAGE OF CUSTOM SCRIPTS IS NOT SUPPORTED. VTEX IS NOT LIABLE FOR ANY DAMAGES THIS MAY CAUSE.
+    // THIS MAY BREAK YOUR STORE AND STOP SALES. IN CASE OF ERRORS, PLEASE DELETE THE CONTENT OF THIS SCRIPT.
 
-const og = new URLSearchParams(location.search).get('og')
-window.location.assign(
-  `${window.location.origin}/api/io${window.location.pathname}?og=${og}`
-)
-```
+    const og = new URLSearchParams(location.search).get('og')
+    window.location.assign(
+      `${window.location.origin}/api/io${window.location.pathname}?og=${og}`
+    )
+    ```
 
 6. Click on **Save**. Notice that, as soon as you hit the _Save_ button, your changes will be live to all clients.
 
-![live-example](https://vtexhelp.vtexassets.com/assets/docs/src/orderplacedversion___224b9d7a692b85ae1e56eee5744bd511.png)
+    ![live-example](https://vtexhelp.vtexassets.com/assets/docs/src/orderplacedversion___224b9d7a692b85ae1e56eee5744bd511.png)
 
 ### Step 2 - Adjusting the Header and Footer links of the Checkout pages
 
