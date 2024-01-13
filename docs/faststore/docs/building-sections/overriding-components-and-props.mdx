@@ -1,6 +1,5 @@
 ---
 title: 'Overriding native components and props'
-sidebar_label: 'Component Customization'
 ---
 
 > ⚠️ This documentation is currently being developed.
@@ -104,9 +103,7 @@ const override: SectionOverride = {
 export { override }
 ```
 
-> ℹ️ Change the value of the `SECTION` variable to the name of the section you want
-  to override. In the given example, we set the `SECTION` variable to
-  `ProductDetails` to override this specific section.
+> ℹ️ Change the value of the `SECTION` variable to the name of the section you want to override. In the given example, we set the `SECTION` variable to `ProductDetails` to override this specific section.
 
 5. Save your changes.
 
@@ -133,7 +130,9 @@ This code overrides the `BuyButton` props `size` and `iconPosition`. You'll see 
 
 2. Run `yarn dev` in the terminal to start the development server. Access the provided localhost URL in your browser and go to product details page to see the updated `BuyButton` component:
 
-![overrides-PDP-buy-button-props](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-pdp-buy-button-props___898b016bd82c908b5b24c8822be6789a.png)> ⚠️ Remember: props changed via Headless CMS overlap the changes made through [override](/docs/guides/faststore/building-sections-overriding-components-and-props#override-native-components-props). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
+  ![overrides-PDP-buy-button-props](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-pdp-buy-button-props___898b016bd82c908b5b24c8822be6789a.png)
+
+  > ⚠️ Remember: props changed via Headless CMS overlap the changes made through [override](/docs/guides/faststore/building-sections-overriding-components-and-props#override-native-components-props). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
 
 ---
 
@@ -168,8 +167,7 @@ type nul > src\components\CustomBuyButton.tsx
 </Tab>
 </Tabs>
 
-> ℹ️ When creating a custom component, it's important to choose a name that
-  distinguishes it from the native component. For example, `Custom{ComponentName}` = `CustomBuyButton`.
+> ℹ️ When creating a custom component, it's important to choose a name that distinguishes it from the native component. For example, `Custom{ComponentName}` = `CustomBuyButton`.
 
 2. Add the following code into `CustomBuyButton.tsx` file:
 
@@ -229,7 +227,8 @@ By using your custom component, you may need to customize it from scratch. See [
 In specific scenarios, when you want to partially keep the default integration or components configuration, you can use prior integrations within your custom component.
 
 > ⚠️ Note that this will only work if your custom component's props are compatible with the overriding component.
-  We encourage using [FastStore UI components](/docs/guides/faststore/) to leverage existing features, basic styles, and better props compatibility.
+
+We encourage using [FastStore UI components](/docs/guides/faststore/) to leverage existing features, basic styles, and better props compatibility.
 
 Building upon our previous example, we could pass the `BuyButton` props to our new component.
 This approach allows us to incorporate the icon and cart sidebar integration while introducing additional functionality to the `onClick` function, such as triggering an alert or sending an event to analytics.
