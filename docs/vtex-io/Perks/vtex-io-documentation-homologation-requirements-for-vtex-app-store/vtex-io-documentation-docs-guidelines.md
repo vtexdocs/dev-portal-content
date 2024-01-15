@@ -139,7 +139,7 @@ A basic documentation template structure with the previously described sections 
 <details>
 <summary><b>Documentation template</b></summary>
 
-````bash
+```bash
 # {Insert the app's name}
 
 The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`.
