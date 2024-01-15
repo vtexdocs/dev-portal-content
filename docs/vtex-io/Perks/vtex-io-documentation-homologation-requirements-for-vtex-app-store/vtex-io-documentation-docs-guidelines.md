@@ -29,15 +29,10 @@ The title must be concise and memorable. Ensure that it describes the experience
 
 - Capitalize the first letter of each word.
 
-✅ Availability Subscriber
-
-❌ Availability Subscribe
-
----
-
-✅ Search Bar
-
-❌ Search bar
+| ✅ Do                  | ❌ Don't              |
+|-------------------------|-----------------------|
+| Availability Subscriber | Availability Subscribe|
+| Search Bar              | Search bar            |
 
 #### Don’ts
 
@@ -47,10 +42,10 @@ The title must be concise and memorable. Ensure that it describes the experience
 
 - Do not include the version number of the app.
 
-| ✅ Do | ❌ Don't |
-|-------|---------|
+| ✅ Do              | ❌ Don't                 |
+|--------------------|---------------------------|
 | Google Tag Manager | Google Tag Manager v3.5.2.|
-| Live Shopping | Live Shopping app |
+| Live Shopping      | Live Shopping app         |
 
 ### Introduction
 
@@ -61,13 +56,9 @@ The introduction should summarize your app’s purpose and what the user will le
 - Add an image that illustrates the app behavior.
 - Use [Callout](#callout) for important notes.
 
-✅ The `Availability Subscriber` component shows the availability subscriber form displayed when a product is unavailable. This component can be imported and used by any VTEX App.
-
----
-
-❌ The `Availability Subscriber` is a First-Party solution and can be imported and used by any VTEX App.
-
----
+| ✅ Do | ❌ Don't |
+|--------|----------|
+| The `Availability Subscriber` component shows the availability subscriber form displayed when a product is unavailable. This component can be imported and used by any VTEX App. | The `Availability Subscriber` is a First-Party solution and can be imported and used by any VTEX App.|
 
 ### (Optional) Before you start
 
@@ -76,13 +67,12 @@ Before the app’s installation, the user may need to meet some prerequisites. F
 - Create bullets or checklists to describe the prerequisites.
 - Use [Callout](#callout) if applicable.
 
-✅ You need a Google account to use Google Tag Manager. You can use the same account if you already use Google products like Gmail.
+| ✅ Do | ❌ Don't |
+|--------|--------- |
+| You need a Google account to use Google Tag Manager. You can use the same account if you already use Google products like Gmail.
 
 If you do not have an account for a Google product, create one at [Creating your Google account](https://support.google.com/accounts/answer/27441?hl=en).
-
----
-
-❌ You need a Google account to use Google Tag Manager.
+ | You need a Google account to use Google Tag Manager.|
 
 ### Installation
 
@@ -204,7 +194,7 @@ Thanks go to these wonderful people:
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
 
-````
+```
 
 </details>
 
