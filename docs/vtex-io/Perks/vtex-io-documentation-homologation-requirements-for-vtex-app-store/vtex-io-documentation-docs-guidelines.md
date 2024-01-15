@@ -47,15 +47,10 @@ The title must be concise and memorable. Ensure that it describes the experience
 
 - Do not include the version number of the app.
 
-✅ Live Shopping
-
-❌ Live Shopping app
-
----
-
-✅ Google Tag Manager
-
-❌Google Tag Manager v3.5.2.
+| ✅ Do | ❌ Don't |
+|-------|---------|
+| Google Tag Manager | Google Tag Manager v3.5.2.|
+| Live Shopping | Live Shopping app |
 
 ### Introduction
 
