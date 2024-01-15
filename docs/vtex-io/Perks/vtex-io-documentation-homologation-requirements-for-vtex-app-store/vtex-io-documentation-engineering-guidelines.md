@@ -132,3 +132,5 @@ The app documentation should include:
 - Technical and commercial requirements for the app's operation.
 - Installation and configuration guides.
 - Answers to frequently asked questions.
+
+For more information on the best practices for creating documentation, refer to [Documentation guidelines](/docs/guides/vtex-io-documentation-docs-guidelines).
