@@ -144,13 +144,10 @@ Represents the highest criticality level. If the user ignores the information gi
 
 A basic documentation template structure with the previously described sections for you to start.
 
-<ul>
-  <li>
-    <details>
-      <summary><b>Documentation template</b></summary>
-        <br />
+<details>
+<summary><b>Documentation template</b></summary>
 
-        ```bash
+```bash
             # {Insert the app's name}
 
             The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`. 
@@ -192,9 +189,9 @@ A basic documentation template structure with the previously described sections 
 
             Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
 
-            1. `first step`.
-            2. `Second step`.
-            3. `Third step`.
+            5. `first step`.
+            6. `Second step`.
+            7. `Third step`.
 
             ## Customization
 
@@ -214,13 +211,9 @@ A basic documentation template structure with the previously described sections 
 
             This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
 
-        ```
-
-        <br />
-        
-    </details>
-  </li>
-</ul>
+```
+  
+</details>
 
 ## Related articles
 
