@@ -33,7 +33,7 @@ The title must be concise and memorable. Ensure that it describes the experience
 
 ❌ Availability Subscribe
 
-------------------------------------------------
+---
 
 ✅ Search Bar
 
@@ -43,7 +43,7 @@ The title must be concise and memorable. Ensure that it describes the experience
 
 - Do not use punctuation, such as periods, commas, exclamation points, question marks, semicolons, colons, and underscores.
 
-- Do not use the word *App*.
+- Do not use the word _App_.
 
 - Do not include the version number of the app.
 
@@ -51,7 +51,7 @@ The title must be concise and memorable. Ensure that it describes the experience
 
 ❌ Live Shopping app
 
-------------------------------------------------
+---
 
 ✅ Google Tag Manager
 
@@ -68,11 +68,11 @@ The introduction should summarize your app’s purpose and what the user will le
 
 ✅ The `Availability Subscriber` component shows the availability subscriber form displayed when a product is unavailable. This component can be imported and used by any VTEX App.
 
-------------------------------------------------
+---
 
 ❌ The `Availability Subscriber` is a First-Party solution and can be imported and used by any VTEX App.
 
-------------------------------------------------
+---
 
 ### (Optional) Before you start
 
@@ -85,7 +85,7 @@ Before the app’s installation, the user may need to meet some prerequisites. F
 
 If you do not have an account for a Google product, create one at [Creating your Google account](https://support.google.com/accounts/answer/27441?hl=en).
 
-------------------------------------------------
+---
 
 ❌ You need a Google account to use Google Tag Manager.
 
@@ -93,13 +93,13 @@ If you do not have an account for a Google product, create one at [Creating your
 
 Offer a step-by-step installation guide, utilizing code snippets to enhance user comprehension.
 
-Refer to the *Installation* section in the [Documentation template](#documentation-template) for an example.
+Refer to the _Installation_ section in the [Documentation template](#documentation-template) for an example.
 
 ### Configuration
 
 After installation, guide users through configuring the app in their store's theme code or Admin settings. List all essential app settings with detailed step-by-step instructions.
 
-Refer to the *Configuration* section in the [Documentation template](#documentation-template) for an example.
+Refer to the _Configuration_ section in the [Documentation template](#documentation-template) for an example.
 
 ### (Optional) Customization
 
@@ -119,7 +119,6 @@ Highlights an aspect the user should pay attention to, giving additional informa
 
 ```md
 > ℹ️ Information goes here.
-
 ```
 
 #### Warning
@@ -128,7 +127,6 @@ Applies when the user must pay attention to information to avoid issues or unexp
 
 ```md
 > ⚠️ Warning message goes here.
-
 ```
 
 #### Danger
@@ -137,7 +135,6 @@ Represents the highest criticality level. If the user ignores the information gi
 
 ```md
 > ⛔ Danger message goes here.
-
 ```
 
 ## Documentation template
@@ -146,73 +143,75 @@ A basic documentation template structure with the previously described sections 
 
 <details>
 <summary><b>Documentation template</b></summary>
+<br>
 
-```bash
-            # {Insert the app's name}
+````bash
+# {Insert the app's name}
 
-            The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`. 
+The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`.
 
-            `![insert-an-image-preview](/)`
+    `![insert-an-image-preview](/)`
 
-            ## Before you start
+## Before you start
 
-            You need to have `{insert what the user needs to have: an account in another platform, CLI, knowledge in another app, etc}`.
+You need to have `{insert what the user needs to have: an account in another platform, CLI, knowledge in another app, etc}`.
 
-            If you do not have `{insert what the user needs to have and how it can be done}`.
+If you do not have `{insert what the user needs to have and how it can be done}`.
 
-            ## Installation
+## Installation
 
-            1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
-            2. Open your store’s Store Theme app directory in your code editor.
-            3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
+1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
+2. Open your store’s Store Theme app directory in your code editor.
+3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
 
-                ```json
+    ```json
 
-                "peerDependencies": {
-                    "vtex.{appName}": "{appVersion}"
-                }
-                ```
-            4. Declare the `{insert app's name}` app in the desired template. For example:
+    "peerDependencies": {
+        "vtex.{appName}": "{appVersion}"
+    }
+    ```
 
-                ```json
+4. Declare the `{insert app's name}` app in the desired template. For example:
 
-                "store.home": {
-                    "blocks": [
-                +     "{app-name}",
-                    ]
-                },
-                ```
+    ```json
 
-            *![insert-an-image-preview](/)*
+        "store.home": {
+            "blocks": [
+        +     "{app-name}",
+            ]
+        },
+    ```
 
-            ## Configuration
+    *![insert-an-image-preview](/)*
 
-            Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
+## Configuration
 
-            5. `first step`.
-            6. `Second step`.
-            7. `Third step`.
+Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
 
-            ## Customization
+5. `first step`.
+6. `Second step`.
+7. `Third step`.
 
-            To apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+## Customization
 
-            | CSS Handles |
-            | ------------------ |
-            | csshandlesName |
-            | csshandlesName |
-            | csshandlesName |
+To apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
 
-            ## Contributors
+| CSS Handles |
+| ------------------ |
+| csshandlesName |
+| csshandlesName |
+| csshandlesName |
 
-            Thanks go to these wonderful people:
+## Contributors
 
-            - `{insert the GitHub username}`
+Thanks go to these wonderful people:
 
-            This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
+- `{insert the GitHub username}`
 
-```
-  
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
+
+````
+
 </details>
 
 ## Related articles
