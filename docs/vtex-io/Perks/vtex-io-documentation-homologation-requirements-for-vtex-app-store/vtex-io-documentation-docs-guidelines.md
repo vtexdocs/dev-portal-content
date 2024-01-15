@@ -143,7 +143,6 @@ A basic documentation template structure with the previously described sections 
 
 <details>
 <summary><b>Documentation template</b></summary>
-<br>
 
 ````bash
 # {Insert the app's name}
