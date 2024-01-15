@@ -144,72 +144,83 @@ Represents the highest criticality level. If the user ignores the information gi
 
 A basic documentation template structure with the previously described sections for you to start.
 
-```bash
-    # {Insert the app's name}
+<ul>
+  <li>
+    <details>
+      <summary><b>Documentation template</b></summary>
+        <br />
 
-    The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`. 
+        ```bash
+            # {Insert the app's name}
 
-    `![insert-an-image-preview](/)`
+            The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`. 
 
-    ## Before you start
+            `![insert-an-image-preview](/)`
 
-    You need to have `{insert what the user needs to have: an account in another platform, CLI, knowledge in another app, etc}`.
+            ## Before you start
 
-    If you do not have `{insert what the user needs to have and how it can be done}`.
+            You need to have `{insert what the user needs to have: an account in another platform, CLI, knowledge in another app, etc}`.
 
-    ## Installation
+            If you do not have `{insert what the user needs to have and how it can be done}`.
 
-    1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
-    2. Open your store’s Store Theme app directory in your code editor.
-    3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
+            ## Installation
 
-        ```json
+            1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
+            2. Open your store’s Store Theme app directory in your code editor.
+            3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
 
-        "peerDependencies": {
-            "vtex.{appName}": "{appVersion}"
-        }
+                ```json
+
+                "peerDependencies": {
+                    "vtex.{appName}": "{appVersion}"
+                }
+                ```
+            4. Declare the `{insert app's name}` app in the desired template. For example:
+
+                ```json
+
+                "store.home": {
+                    "blocks": [
+                +     "{app-name}",
+                    ]
+                },
+                ```
+
+            *![insert-an-image-preview](/)*
+
+            ## Configuration
+
+            Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
+
+            1. `first step`.
+            2. `Second step`.
+            3. `Third step`.
+
+            ## Customization
+
+            To apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
+
+            | CSS Handles |
+            | ------------------ |
+            | csshandlesName |
+            | csshandlesName |
+            | csshandlesName |
+
+            ## Contributors
+
+            Thanks go to these wonderful people:
+
+            - `{insert the GitHub username}`
+
+            This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
+
         ```
+
+        <br />
         
-    4. Declare the `{insert app's name}` app in the desired template. For example:
-
-        ```json
-
-        "store.home": {
-            "blocks": [
-        +     "{app-name}",
-            ]
-        },
-        ```
-
-    *![insert-an-image-preview](/)*
-
-    ## Configuration
-
-    Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
-
-    1. `first step`.
-    2. `Second step`.
-    3. `Third step`.
-
-    ## Customization
-
-    To apply CSS customizations to this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
-
-    | CSS Handles |
-    | ------------------ |
-    | csshandlesName |
-    | csshandlesName |
-    | csshandlesName |
-
-    ## Contributors
-
-    Thanks go to these wonderful people:
-
-    - `{insert the GitHub username}`
-
-    This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
-
-```
+    </details>
+  </li>
+</ul>
 
 ## Related articles
 
