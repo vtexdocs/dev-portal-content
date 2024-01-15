@@ -144,7 +144,7 @@ A basic documentation template structure with the previously described sections 
 
 The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`.
 
-    `![insert-an-image-preview](/)`
+    ![insert-an-image-preview](/)
 
 ## Before you start
 
