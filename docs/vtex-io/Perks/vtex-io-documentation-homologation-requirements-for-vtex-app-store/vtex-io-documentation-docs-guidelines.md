@@ -130,7 +130,7 @@ A basic documentation template structure with the previously described sections 
 
 The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`.
 
-    ![insert-an-image-preview](/)
+![insert-an-image-preview](/)
 
 ## Before you start
 
@@ -140,37 +140,37 @@ If you do not have `{insert what the user needs to have and how it can be done}`
 
 ## Installation
 
-1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
-2. Open your store’s Store Theme app directory in your code editor.
-3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
+  1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
+  2. Open your store’s Store Theme app directory in your code editor.
+  3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
 
-        ```json
+      ```json
 
-        "peerDependencies": {
-            "vtex.{appName}": "{appVersion}"
-        }
-        ```
+      "peerDependencies": {
+          "vtex.{appName}": "{appVersion}"
+      }
+      ```
 
-4. Declare the `{insert app's name}` app in the desired template. For example:
+  4. Declare the `{insert app's name}` app in the desired template. For example:
 
-        ```json
+      ```json
 
-            "store.home": {
-                "blocks": [
-            +     "{app-name}",
-                ]
-            },
-        ```
+      "store.home": {
+          "blocks": [
+      +     "{app-name}",
+          ]
+      },
+      ```
 
-    *![insert-an-image-preview](/)*
+      *![insert-an-image-preview](/)*
 
 ## Configuration
 
 Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
 
-5. `first step`.
-6. `Second step`.
-7. `Third step`.
+   1. `first step`.
+   2. `Second step`.
+   3. `Third step`.
 
 ## Customization
 
@@ -189,7 +189,6 @@ Thanks go to these wonderful people:
 - `{insert the GitHub username}`
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
-
 
 </details>
 
