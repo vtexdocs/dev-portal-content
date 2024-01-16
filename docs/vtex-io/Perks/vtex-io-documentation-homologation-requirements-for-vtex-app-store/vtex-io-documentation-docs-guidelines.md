@@ -124,7 +124,7 @@ Represents the highest criticality level. If the user ignores the information gi
 A basic documentation template structure with the previously described sections for you to start.
 
 <details>
-<summary><b>Documentation template<b></summary>
+<summary><b>Documentation template</b></summary>
 
 ```md
 # {Insert the app's name}
@@ -159,7 +159,7 @@ If you do not have `{insert what the user needs to have and how it can be done}`
           ]
       },
 
-      *![insert-an-image-preview](/)*
+    *![insert-an-image-preview](/)*
 
 ## Configuration
 
