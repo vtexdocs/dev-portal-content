@@ -127,7 +127,7 @@ Represents the highest criticality level. If the user ignores the information gi
 A basic documentation template structure with the previously described sections for you to start.
 
 <details>
-<summary><b>Documentation template</b></summary>
+<summary>Documentation template</summary>
 
 ```md
 # {Insert the app's name}
