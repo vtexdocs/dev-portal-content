@@ -124,8 +124,9 @@ Represents the highest criticality level. If the user ignores the information gi
 A basic documentation template structure with the previously described sections for you to start.
 
 <details>
-<summary>Documentation template</summary>
+<summary><b>Documentation template<b></summary>
 
+```md
 # {Insert the app's name}
 
 The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`.
@@ -144,23 +145,19 @@ If you do not have `{insert what the user needs to have and how it can be done}`
   2. Open your store’s Store Theme app directory in your code editor.
   3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
 
-      ```json
 
       "peerDependencies": {
           "vtex.{appName}": "{appVersion}"
       }
-      ```
+      
 
   4. Declare the `{insert app's name}` app in the desired template. For example:
-
-      ```json
 
       "store.home": {
           "blocks": [
       +     "{app-name}",
           ]
       },
-      ```
 
       *![insert-an-image-preview](/)*
 
@@ -189,6 +186,7 @@ Thanks go to these wonderful people:
 - `{insert the GitHub username}`
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
+```
 
 </details>
 
