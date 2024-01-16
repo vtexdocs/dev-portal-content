@@ -123,7 +123,9 @@ Represents the highest criticality level. If the user ignores the information gi
 
 A basic documentation template structure with the previously described sections for you to start.
 
-```md
+<details>
+<summary>Documentation template</summary>
+
 # {Insert the app's name}
 
 The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`.
@@ -188,7 +190,8 @@ Thanks go to these wonderful people:
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
 
-```
+
+</details>
 
 ## Related articles
 
