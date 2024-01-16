@@ -43,7 +43,7 @@ linkTitle="See more"
 <WhatsNextCard
 title="Documentation guidelines"
 description="Refer to our documentation guidelines to create clear, engaging, and effective documentation for your IO app."
-linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-docs-guidelines"
+linkTo="/"
 linkTitle="See more"
 />
 </Flex>
