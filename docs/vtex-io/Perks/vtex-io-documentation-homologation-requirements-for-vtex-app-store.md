@@ -39,6 +39,13 @@ description="Refer to our coding guidelines to guarantee the quality and usabili
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines"
 linkTitle="See more"
 />
+
+<WhatsNextCard
+title="Documentation guidelines"
+description="Refer to our documentation guidelines to create clear, engaging, and effective documentation for your IO app."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-docs-guidelines"
+linkTitle="See more"
+/>
 </Flex>
 
 These guidelines describe the business, design, and engineering requirements enforced by the VTEX App Store to guarantee the quality, viability, and usability of VTEX apps.

@@ -69,10 +69,7 @@ Before the app’s installation, the user may need to meet some prerequisites. F
 
 | ✅ Do | ❌ Don't |
 |--------|--------- |
-| You need a Google account to use Google Tag Manager. You can use the same account if you already use Google products like Gmail.
-
-If you do not have an account for a Google product, create one at [Creating your Google account](https://support.google.com/accounts/answer/27441?hl=en).
- | You need a Google account to use Google Tag Manager.|
+| You need a Google account to use Google Tag Manager. You can use the same account if you already use Google products like Gmail. If you do not have an account for a Google product, create one at [Creating your Google account](https://support.google.com/accounts/answer/27441?hl=en). | You need a Google account to use Google Tag Manager.|
 
 ### Installation
 
@@ -134,7 +131,7 @@ A basic documentation template structure with the previously described sections 
 
 The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job to be done}`.
 
-    ![insert-an-image-preview](/)
+![insert-an-image-preview](/)
 
 ## Before you start
 
@@ -148,33 +145,29 @@ If you do not have `{insert what the user needs to have and how it can be done}`
 2. Open your store’s Store Theme app directory in your code editor.
 3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
 
-    ```json
 
-    "peerDependencies": {
-        "vtex.{appName}": "{appVersion}"
-    }
-    ```
+      "peerDependencies": {
+          "vtex.{appName}": "{appVersion}"
+      }
+      
 
 4. Declare the `{insert app's name}` app in the desired template. For example:
 
-    ```json
+      "store.home": {
+          "blocks": [
+      +     "{app-name}",
+          ]
+      },
 
-        "store.home": {
-            "blocks": [
-        +     "{app-name}",
-            ]
-        },
-    ```
-
-    *![insert-an-image-preview](/)*
+*![insert-an-image-preview](/)*
 
 ## Configuration
 
 Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
 
-5. `first step`.
-6. `Second step`.
-7. `Third step`.
+1. `first step`.
+2. `Second step`.
+3. `Third step`.
 
 ## Customization
 
@@ -193,7 +186,6 @@ Thanks go to these wonderful people:
 - `{insert the GitHub username}`
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome.
-
 ```
 
 </details>
