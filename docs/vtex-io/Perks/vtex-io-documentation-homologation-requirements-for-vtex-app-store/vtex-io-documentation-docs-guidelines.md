@@ -141,9 +141,9 @@ If you do not have `{insert what the user needs to have and how it can be done}`
 
 ## Installation
 
-  1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
-  2. Open your store’s Store Theme app directory in your code editor.
-  3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
+1. [Install](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-installing-an-app) the `{insert app's name}` app in the desired VTEX account by running `vtex install {appVendor}.{appName}` in your terminal.
+2. Open your store’s Store Theme app directory in your code editor.
+3. Open your app's `manifest.json file` and add the `{insert app's name}` app under the `peerDependencies` field.
 
 
       "peerDependencies": {
@@ -151,7 +151,7 @@ If you do not have `{insert what the user needs to have and how it can be done}`
       }
       
 
-  4. Declare the `{insert app's name}` app in the desired template. For example:
+4. Declare the `{insert app's name}` app in the desired template. For example:
 
       "store.home": {
           "blocks": [
@@ -159,15 +159,15 @@ If you do not have `{insert what the user needs to have and how it can be done}`
           ]
       },
 
-    *![insert-an-image-preview](/)*
+*![insert-an-image-preview](/)*
 
 ## Configuration
 
 Once you have installed the app, you can `{describe the app's configuration in the VTEX Admin, for example}`.
 
-   1. `first step`.
-   2. `Second step`.
-   3. `Third step`.
+1. `first step`.
+2. `Second step`.
+3. `Third step`.
 
 ## Customization
 
