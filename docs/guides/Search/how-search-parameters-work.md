@@ -46,21 +46,21 @@ Where:
 - **B:[BrandId]:** Shows products from a specific brand based on the indicated ID. This code is shown at the end of the URL, on the page used for changing the brand, in**Products**>**Catalog**>**Brands**. ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-3.png)
 - **H:[CollectionId]**: Shows products of a specific collection based on the indicated ID. This code is indicated when editing a collection in**Store setup** > **CMS** > **Layout** > **CMS** > **Product Clusters (Collections)**. ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-4.png)
 
-> ⚠️ There are two ways to configure collections: through the CMS or the Collections module (Beta). This article explains how to [configure collections through the CMS](https://help.vtex.com/en/tutorial/adding-collections-cms--2YBy6P6X0NFRpkD2ZBxF6L).
+  > ⚠️ There are two ways to configure collections: through the CMS or the Collections module (Beta). This article explains how to [configure collections through the CMS](https://help.vtex.com/en/tutorial/adding-collections-cms--2YBy6P6X0NFRpkD2ZBxF6L).
 
 - **spec_fct_[ProductFieldId/Sku]:[SearchValue]:** Shows products whose product or SKU field value, with the indicated ID, is equal to the entered value. This code can be found on the page for changing a product/SKU field at the end of the URL.
 
-```txt
-https://store.myvtex.com/admin/Site/ProdutoForm.aspx?id=93
-```
+  ```txt
+  https://store.myvtex.com/admin/Site/ProdutoForm.aspx?id=93
+  ```
 
-Below is an example of how to use this field:
+  Below is an example of how to use this field:
 
-```txt
-www.store.com.br/busca/?fq=spec_fct_1:110v
-```
+  ```txt
+  www.store.com.br/busca/?fq=spec_fct_1:110v
+  ```
 
-In the example above, all products whose **Voltage**(ID **1**) field is **110v** would be displayed.
+  In the example above, all products whose **Voltage**(ID **1**) field is **110v** would be displayed.
 
 - **ft=[SearchTerm]**: This parameter represents a full-text search (for example, searching a specific term in the search field) of the specified term based on the other indicated parameters.
 
