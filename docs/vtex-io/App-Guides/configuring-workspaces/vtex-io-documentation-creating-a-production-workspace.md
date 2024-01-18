@@ -1,43 +1,61 @@
 ---
 title: "Creating a Production workspace"
 slug: "vtex-io-documentation-creating-a-production-workspace"
+excerpt: "Learn how to create and use a production workspace." 
 hidden: false
 createdAt: "2020-06-03T16:02:44.959Z"
 updatedAt: "2022-12-13T20:17:44.589Z"
 ---
-[Workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/) in production mode are ready to **receive traffic**, that is, to be **accessed by other account users**.
+Production [workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/) are ready to handle live traffic. This guide provides step-by-step instructions on creating and managing a Production workspace.
 
-Once you are sure of your changes performed in the Development workspace, it is time to create a Production one in order to test them with traffic.
+Production workspaces serve multiple purposes, including quality assurance, testing, running A/B tests, and validating VTEX IO apps. It's important to note that for making changes or developing a new VTEX IO app, you must use a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
 
-But notice: a Production workspace is created from scratch, meaning it does not inherit the code changes performed in a Developer workspace. All changes performed in a Development workspace need to be replicated by you into your new Production workspace.
+## Creating a production workspace
 
-## Step by step
-
-1. [Log into](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) the desired VTEX account;
-2. Run the following command:
+1. [Log in to](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) your VTEX account.
+2. Create a production workspace by running the following command:
 
 ```sh
 vtex use {workspaceName} --production
 ```
 
-> ⚠️ Remember to replace the value in the curly brackets according to your store's scenario and needs.
+> ⚠️ Replace `{workspaceName}` according to your scenario.
 
-From this point onwards, **any changes to the code are prohibited in the Production workspace, and you can only install new apps in it**. This means that you are not able to link any app as well. If you want to change your code, work on it using a [Developer workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/) and then copy all the performed changes to a Production one.
+### Next steps
 
-Once created, the Production workspace has no expiration date, which means that settings will remain stored in it unless there is any conflict with the store's Master workspace configurations. In these cases, **the Master settings will always prevail over the settings of the other account's workspaces**, including the Developer one in which you are working, since the account's workspaces work as a copy of the version available to the end-user.
+After testing your app and configurations, you can [promote a Production workspace to Master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master) to make your code changes available to the end-user.
 
-Stick to the list of workspaces created for your account. It is important to keep a shortlist for two reasons:
+Creating a Production workspace is one of the steps to making your code's new version public. Refer to the [Making your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide for detailed information on subsequent steps.
 
-- Your organization.
+## Deleting a workspace
 
-- Spare platform infrastructure resources.
+You can manually delete workspaces that are no longer in use by running the following command:
 
-Currently, no service is responsible for automatically deleting unused workspaces from an account. This means that you must manually delete workspaces that are no longer being used by running `vtex workspace delete {workspaceName}`.
+```shell
+vtex workspace delete {workspaceName}
+```
 
-> ⚠️ Be aware: once you **delete a workspace**, it is **not possible to restore it** and its content.
+>❗ Deleting a workspace is irreversible, and its content cannot be restored.
 
-## Next step
+## Production workspace behavior
 
-Once all configurations are tested, you can [promote the Production workspace to Master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master), making your code changes finally available to the end-user.
+In Production workspaces, certain actions are permitted while others are restricted to maintain stability and reliability. Here is a summary of allowed and restricted actions:
 
-Creating a Production workspace is one of the steps to making your code's new version public, meaning that it will become available to your end-users. For more details on the next steps and better understanding the complete flow, access the recipe on [Making your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
+| Action                                | Allowed |
+|---------------------------------------|---------|
+| [Install apps.](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) | ✅ |
+| [Run A/B tests.](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) | ✅ |
+| Handle traffic. | ✅ |
+| [Promote to master.](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master) | ✅ |
+| App development. | ❌ |
+| [Link an app.](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) | ❌ |
+| [Publish an app.](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) | ❌ |
+
+## Key considerations
+
+- **Code modifications:** Production workspaces strictly prohibit code changes in VTEX IO apps. To implement code modifications, it is necessary to switch to a dedicated [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/).
+- **Workspace inheritance:** Production workspaces are initiated independently and do not inherit code changes from a [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace). Therefore, any modifications made in a Development workspace must be manually replicated to the new Production workspace. 
+- **Data persistency:** Workspace settings persist unless conflicts arise with the Master workspace. In such cases, Master settings take precedence over settings in other workspaces, including the Development ones.
+- **Expiration:** Once created, Production workspaces have no expiration date.
+- **Deletion:** Unused workspaces are not automatically deleted. It is recommended to perform manual deletion to optimize platform resources and maintain an efficient operational state.
+- **Organization:** Maintain a concise list of workspaces for organizational and resource efficiency reasons.
