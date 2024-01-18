@@ -39,6 +39,7 @@ To handle this situation and ensure a smooth migration, follow the steps below t
       updateThemeIds(from:"{appVendor}.{appName}@{oldMajor}.x", to:"{appVendor}.{appName}@{newMajor}.x")
    }
    ```
+
    >⚠️ Replace only the values in curly brackets with those that apply to your scenario, then click **Play**. You must keep the `x`, without replacing it with the minor and patch versions. If you do that, the GraphQL mutation will not work.
 
 7. Open the VTEX Admin of the **production workspace** used in the previous steps and validate the CMS content, routes, pages, and redirects.
