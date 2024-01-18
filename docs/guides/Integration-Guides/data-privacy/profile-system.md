@@ -50,11 +50,6 @@ See the table below to learn more about the Profile System events available on A
 
 | **Action**                   | **Description**                                      | **Event details**                     |
 |------------------------------|------------------------------------------------------|---------------------------------------|
-| GetAddressUnmasked           | Retrieval of an unmasked address by ID.              | Address ID.                           |
-| GetAddressVersionUnmasked    | Retrieval of an unmasked address by ID and version.  | Address ID and version ID.            |
-| GetPickupInfoUnmasked        | Retrieval of unmasked pickup information.            | Pickup point ID.                      |
-| GetPickupInfoVersionUnmasked | Retrieval of unmasked pickup information by version. | Pickup point ID and version ID.       |
-| GetProfileUnmasked           | Retrieval of an unmasked profile by ID.              | Profile ID.                           |
 | GetProfileVersionUnmasked    | Retrieval of an unmasked profile by ID and version.  | Profile ID and version ID.            |
 | EmailRectification           | Change existing email address.                       | ID of user whose email was rectified. |
 
