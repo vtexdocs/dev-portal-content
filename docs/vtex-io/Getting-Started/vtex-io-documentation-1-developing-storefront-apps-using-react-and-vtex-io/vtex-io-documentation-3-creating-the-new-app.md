@@ -14,6 +14,7 @@ To begin developing your app, you need to follow these steps:
 
 - Clone the React [boilerplate app](https://github.com/vtex-apps/react-app-template) to your local files.
 - Modify the `manifest.json` file in the React example app to include your app's information, such as its name, version, vendor, and dependencies.
+- [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to a development workspace.
 
 Once copied, the repository will automatically import the basic settings that you will need to kickstart your app development.
 
@@ -54,7 +55,7 @@ To add this information, open the app's code in your code editor, and update the
   }
   ```
 
-5. If you want to import any React components previously developed for your new app, update the `dependencies` list with the name and. version of the app that runs the desired component. For example:
+5. If you want to import any React components previously developed for your new app, update the `dependencies` list with the name and version of the app that runs the desired component. For example:
 
   ```diff
   "dependencies": {
@@ -62,4 +63,20 @@ To add this information, open the app's code in your code editor, and update the
   }
   ```
 
- This will allow you to later import the app component added in `dependencies` into your code via the `import {componentName} from '{dependency}'` structure.
+This will allow you to later import the app component added in `dependencies` into your code via the `import {componentName} from '{dependency}'` structure.
+
+### Step 3 - Linking your app
+
+To upload all the changes you made in your local files, you must link your app to the current development workspace by running the following command: 
+
+  ```sh
+  vtex link
+  ```
+
+If the process runs without any errors, the following message will be displayed: `App linked successfully`.
+
+Run the `vtex browse` command to open a browser window having your linked store in it, or use https://{workspace}--{account}.myvtex.com, where workspace is the development workspace in use and account is the name of your VTEX account, to check your local version of the app.
+
+>⚠️ When linking the app, the `yarn` command is run in the builder directories (Node and React ones), but it is not run in the root folder, as it is not required for the project to run. However, running it in the root folder can enable certain features, such as linter and prettier checks, when committing the project.
+
+>ℹ️ The `npm install`command or just `npm` are equivalent to run `yarn`.
