@@ -13,7 +13,7 @@ VTEX provides the building blocks for any kind of ecommerce operation, including
 
 - Experience management  
 - Multiple channel and marketplace management  
-- An Order Management System  
+- Order management
 - Commerce modules for catalog, checkout, pricing, promotions, account management, and much more  
 
 
