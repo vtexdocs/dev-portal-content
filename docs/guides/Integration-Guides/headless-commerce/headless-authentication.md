@@ -31,29 +31,27 @@ After you have configured your [OAuth](https://developers.vtex.com/docs/guides/l
 
 >⚠️ Make sure that the [OAuth access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) has scope `email` (or another value associated with scope `email`).
 
-<CH.Scrollycoding>
-
 ### Exchanging OAuth identity provider access token for VTEX user token
 
 If you have set up your OAuth integration and implemented login on your frontend, users may be able to authenticate themselves. However, this alone is not sufficient for your frontend to communicate with VTEX REST APIs.
 
-To enable this communication, your frontend application must exchange the [access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) from the OAuth login for a VTEX [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). This can be achieved through the `POST` [Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange) endpoint, as exemplified on the right side panel.
+To enable this communication, your frontend application must exchange the [access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) from the OAuth login for a VTEX [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). This can be achieved through the `POST` [Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange) endpoint.
 
-```curl cURL
-curl --request post \
-	--url https://apiexamples.vtexcommercestable.com.br/api/vtexid/audience/webstore/provider/oauth/exchange \
-	--header 'Accept: application/json' \
-	--header 'Content-Type: application/json' \
-	--header 'X-VTEX-API-AppKey: ' \
-	--header 'X-VTEX-API-AppToken: ' \
-	--data '{"providerId":"GoogleID","accessToken":"dsfDShdgfhDFI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bdg465DATU4GVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-654fgjLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ","duration":90}'
+Check out request and response body examples below and refer to the `POST` [Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange) API reference for more details on each field.
+
+#### Request body example
+
+```json
+{
+  "providerId": "GoogleID",
+  "accessToken": "dsfDShdgfhDFI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bdg465DATU4GVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-654fgjLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ",
+  "duration": 90
+}
 ```
 
----
+#### Response body example
 
-When performing this operation, the response body includes an [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens). Check an example response on the right side panel.
-
-```json Response
+```json
 {
 "authToken": "eyJhbGciOiJFUzI1NiIsIrtyZCI6IjFBRjI5MUUwRDY0MERENTlEQTkzRTg0REMxNjQyNjA3ODZEQjY3ODAiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJ2dGV4YXBwa2V5LXZ0ZXhoZWxwLVdWQ0FCVCIsImFjY291bnQiOiJwerV4aGVscCIsImF1MBllbmNlIjoiYWRtaW4iLCJleHAiOjE2Njk3NzA3MzcsInVzZXJJZCI6IjM5MjNhMmUy5khmMTctNGNiYy04YzU3LWQ3OGFkNmUxYTU2NiIsImlhdCI6MTY2OTc0OTEzNywiaXNzIjoidG9rZW4tZW1HgoRlciIsImp0aSI6IjNiNjAxODA2LTExMzEtNDcwYS05MWJjLTVhM2JhOThiYWQyNiJ9.Q7N8MFa1FMJsQUpxBY29oije4aa-Jf463lwgLFLl6LUY3Wei3MRUVUMRQWkey6Kug8iFPonZ1L-PaFmwfzSz3TCQ"
 }
@@ -64,8 +62,6 @@ When performing this operation, the response body includes an [user token](https
 Once with a valid VTEX user token, your frontend application can leverage [VTEX APIs](https://developers.vtex.com/docs/api-reference) to manage various commerce capabilities of your store, including product information, shopping cart management, and checkout.
 
 Learn more about [machine authentication in VTEX](https://developers.vtex.com/docs/guides/getting-started-authentication) and [how to use user tokens](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) to authenticate your requests.
-
-</CH.Scrollycoding>
 
 ## Authentication responsibilities of headless applications
 
