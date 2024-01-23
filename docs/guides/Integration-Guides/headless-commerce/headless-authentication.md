@@ -31,7 +31,7 @@ After you have configured your [OAuth](https://developers.vtex.com/docs/guides/l
 
 >⚠️ Make sure that the [OAuth access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) has scope `email` (or another value associated with scope `email`).
 
-<CH.Code>
+<CH.Scrollycoding>
 
 ### Exchanging OAuth identity provider access token for VTEX user token
 
@@ -39,7 +39,9 @@ If you have set up your OAuth integration and implemented login on your frontend
 
 To enable this communication, your frontend application must exchange the [access token](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#relevant-requests) from the OAuth login for a VTEX [user token](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). This can be achieved through the `POST` [Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange) endpoint.
 
-On the code block to the side, check an example of how to use this endpoint to perform this operation. For details about fields in the request and response body, check the `POST` [Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange) endpoint API reference.
+See an example to the side of how to use the `POST` [Exchange OAuth access token for VTEX credential](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange) endpoint to perform this operation.
+
+<CH.Code>
 
 ```curl cURL
 curl --request post \
@@ -72,6 +74,8 @@ Response body example
 ```
 
 </CH.Code>
+
+</CH.Scrollycoding>
 
 ### Making requests to VTEX APIs
 
