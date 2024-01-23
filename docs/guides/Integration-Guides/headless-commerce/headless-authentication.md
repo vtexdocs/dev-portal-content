@@ -59,13 +59,13 @@ When performing this operation, the response body includes an [user token](https
 }
 ```
 
-</CH.Scrollycoding>
-
 ### Making requests to VTEX APIs
 
 Once with a valid VTEX user token, your frontend application can leverage [VTEX APIs](https://developers.vtex.com/docs/api-reference) to manage various commerce capabilities of your store, including product information, shopping cart management, and checkout.
 
 Learn more about [machine authentication in VTEX](https://developers.vtex.com/docs/guides/getting-started-authentication) and [how to use user tokens](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token) to authenticate your requests.
+
+</CH.Scrollycoding>
 
 ## Authentication responsibilities of headless applications
 
