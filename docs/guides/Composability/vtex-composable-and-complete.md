@@ -23,5 +23,3 @@ We understand that every business is unique and no two commerce architectures ar
 
 
 ![composable](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/composable.png)
-
-
