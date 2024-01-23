@@ -35,13 +35,14 @@ With VTEX IO CLI, you can log in to your VTEX account, manage workspaces, develo
  vtex login {accountName}
  ```
 
- This will open a browser window prompting you to enter your credentials.
+This will open a browser window prompting you to enter your credentials.
+
 3. Enter your credential in the browser window and return to the terminal.
 4. Run the `vtex whoami` command to show which `account` and `workspace` are being used by VTEX IO CLI.
 
 ![VTEX IO CLI - whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-2-basic-development-setup-in-vtex-io-0.png)
 
-By logging in to your VTEX account with VTEX IO CLI, you'll have access to various development tools and be able to manage your workspaces.
+By logging in to your VTEX account with VTEX IO CLI, you will have access to various development tools and be able to manage your workspaces.
 
 ### Step 2 - Creating a workspace
 
