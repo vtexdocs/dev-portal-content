@@ -47,4 +47,4 @@ Note that the list is organized into three categories:
 
 - **Edition Apps**: Apps installed by an [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app). Modifying these app versions and configurations is restricted to the [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
 - **Installed Apps**: Independently [installed apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app).
-- **Linked Apps**: Apps [linked](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) apps in a [development workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
+- **Linked Apps**: Apps [linked](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) in a [development workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
