@@ -19,7 +19,6 @@ VTEX provides the building blocks for any kind of ecommerce operation, including
 
 We understand that every business is unique and no two commerce architectures are exactly alike. That’s why VTEX supports many layers of composability. With our API-first and multi-tenant microservices solution, your tech team can integrate with any sales channel, backend system, or third-party application, extending or swapping our native commerce services for custom and best-of-breed third-party applications that will give your business a competitive edge.
 
-
 ## List of capabilities
 
 
