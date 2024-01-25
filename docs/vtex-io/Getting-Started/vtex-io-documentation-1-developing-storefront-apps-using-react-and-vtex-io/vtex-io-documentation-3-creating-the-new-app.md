@@ -40,7 +40,7 @@ Now, let's examine the manifest.json file, which contains essential information 
 - `builders` - List of [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/) that facilitate the app's development by abstracting service configurations.
 - `dependencies` - List of apps that the app you are developing depends on for proper functioning.
 
-Incorporating the new app's basic information into the `manifest.json` file is a crucial step at the beginning of the development process. This step is essential to make the app unique and distinct from the example version provided by VTEX. 
+Incorporating the new app's basic information into the `manifest.json` file is a crucial step at the beginning of the development process. This step is essential to make the app unique and distinct from the example version provided by VTEX.
 
 To add this information, open the app's code in your code editor, and update the `manifest.json` file as in the following:
 
@@ -67,7 +67,7 @@ This will allow you to later import the app component added in `dependencies` in
 
 ### Step 3 - Linking your app
 
-To upload all the changes you made in your local files, you must link your app to the current development workspace by running the following command: 
+To upload all the changes you made in your local files, you must link your app to the current development workspace by running the following command:
 
   ```sh
   vtex link
@@ -75,8 +75,6 @@ To upload all the changes you made in your local files, you must link your app t
 
 If the process runs without any errors, the following message will be displayed: `App linked successfully`.
 
-Run the `vtex browse` command to open a browser window having your linked store in it, or use https://{workspace}--{account}.myvtex.com, where workspace is the development workspace in use and account is the name of your VTEX account, to check your local version of the app.
+To check and review your local app code, run the `vtex browse` command to open a browser window for your current workspace. Alternatively, access `https://{workspace}--{account}.myvtex.com`, replacing `workspace` with the development workspace in use and `account` with the name of your VTEX account.
 
->⚠️ When linking the app, the `yarn` command is run in the builder directories (Node and React ones), but it is not run in the root folder, as it is not required for the project to run. However, running it in the root folder can enable certain features, such as linter and prettier checks, when committing the project.
-
->ℹ️ The `npm install`command or just `npm` are equivalent to run `yarn`.
+>ℹ️ When linking an app to a development workspace, the `yarn install` command is automatically executed in the builder directories (e.g., `node` and `react` directories). Nevertheless, for an enhanced development experience, consider manually running `yarn install` in the root folder of your project to activate additional features, such as linter and prettier checks.
