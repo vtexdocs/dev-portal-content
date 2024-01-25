@@ -18,7 +18,7 @@ The `vtex` account currently provides the following native Edition Apps:
 - Edition Business (`vtex.edition-business@0.x`) - installs all the necessary apps to build a store with the [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC).
 - Edition Store (`vtex.edition-store@5.x`) - installs all the necessary apps to develop a store with the [Store Framework](https://developers.vtex.com/docs/guides/getting-started-3).
 
-There are currently 4 available versions of the Edition Store. Next, you can better understand the differences between them:
+There are currently four available versions of the Edition Store. Next, you can better understand the differences between them:
 
 | Versions | What is new? |
 | --- | --- |
@@ -27,7 +27,7 @@ There are currently 4 available versions of the Edition Store. Next, you can bet
 |  4.x  | Majors of `vtex.checkout` app, including both 1.x and 2.x versions, declared in the manifest’s dependencies  |
 |  5.x  | [Search apps](https://developers.vtex.com/docs/apps/vtex.search) installed  |
 
->⚠️ If you are [migrating from Legacy CMS Portal to Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io) or are using the 2.x version and want to update, it is not necessary to install the 5.x version **if your store already has the Search apps installed**. You can install 3.x or 4.x versions, depending on your case. If you have doubts about which version to set in your store, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to the VTEX Support team.
+>⚠️ If you are [migrating from Legacy CMS Portal to Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io) or are using the 2.x version and want to update, it is not necessary to install the 5.x version **if your store already has the Search apps installed**. You can install 3.x or 4.x versions, depending on your case. If you are not sure which version to set in your store, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to the VTEX Support team.
 
 If you are interested in creating your own Edition App, please refer to the [Developing an Edition app](#developing-an-edition-app) section.
 
@@ -49,6 +49,5 @@ All Edition apps must depend, either directly or indirectly, on either `vtex.edi
 
 Apps included as [`dependencies`](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies) within an Edition App are considered inherited apps. Moreover, all apps bundled within an Edition App must share the same [`vendor`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) as the Edition App itself.
 
-It is important to note that Sponsored Accounts cannot modify apps and configurations installed through an Edition App. Only the Sponsor Account has the authority to make changes by releasing a new version of its Edition App and requesting a reinstallation.
-
+> ℹ It is important to note that Sponsored Accounts cannot modify apps and configurations installed through an Edition App. Only the Sponsor Account has the authority to make changes by releasing a new version of its Edition App and requesting a reinstallation.
 
