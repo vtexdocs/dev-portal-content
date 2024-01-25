@@ -24,11 +24,11 @@ The [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-
 vtex edition get
 ```
 
-If the current edition is older than `vtex.edition-store@3.x`, [open a support ticket](https://help.vtex.com/support?/cultureInfo=en-us) and request the installation of the `vtex.edition-store@3.x` or a newer one in your VTEX account.
+If the current edition differs or is older than `vtex.edition-store@3.x`, [open a support ticket](https://help.vtex.com/support?/cultureInfo=en-us) and request the installation of the `vtex.edition-store@3.x` or a newer one in your VTEX account.
 
->ℹ Check out our  [Edition App documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) to know more about its different versions and install the correct one.
+Refer to the [Edition App article](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) to know more about its different versions and identify the most suitable version for your specific scenario.
 
-> ⚠️ By default, every VTEX store comes with the Edition app configured for building storefronts with [Legacy CMS Portal](https://help.vtex.com/tutorial/what-is-cms--EmO8u2WBj2W4MUQCS8262) installed. Therefore, requesting the installation of the `vtex.edition-store@3.x` or newer Edition app is necessary for both new VTEX accounts and accounts previously using the [Legacy CMS Portal](https://help.vtex.com/tutorial/what-is-cms--EmO8u2WBj2W4MUQCS8262).
+>ℹ Note that both new VTEX accounts and accounts previously using the [Legacy CMS Portal](https://help.vtex.com/tutorial/what-is-cms--EmO8u2WBj2W4MUQCS8262) need to formally request the installation of the `vtex.edition-store@3.x` or a more recent version of this Edition app. This is necessary, as every VTEX account is configured by default with the [Legacy CMS Portal](https://help.vtex.com/tutorial/what-is-cms--EmO8u2WBj2W4MUQCS8262) Edition app (`vtex.edition-business`).
 
 ### Step 2 - Implementing the VTEX Intelligent Search
 
@@ -36,7 +36,7 @@ Before you can begin building your storefront with Store Framework, you need to 
 
 >ℹ️ If you use the `vtex.edition-store@3.x` version, you must also install the Search apps. If you use the `vtex.edition-store@5.x`, you must start the Search Integration process directly, as the Intelligent Search is already configured by default in this version.
 
-Intelligent Search is an advanced search engine designed to assist shoppers throughout their entire purchasing journey. It serves as a superior alternative to the platform's legacy native search engine, but it requires the installation of two critical apps on your VTEX account:
+Intelligent Search is an advanced search engine designed to assist shoppers throughout their entire purchasing journey. It serves as an alternative to the platform's legacy native search engine, but it requires the installation of two apps on your VTEX account:
 
 - `admin-search` - Allows stores to configure every functionality made available by the search solution, including initial catalog indexing.
 - `search-resolver` - Serves as the main backend app for Intelligent Search, handling all search queries.
