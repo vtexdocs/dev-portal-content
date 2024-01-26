@@ -1,0 +1,143 @@
+---
+title: "Atoms"
+---
+
+<CardList columns={4}>
+  <CardItem
+    title="Badge"
+    description="Badges are status descriptors used to emphasize an item's state."
+    actionPath="/docs/guides/faststore/atoms-badge"
+  >
+    <Badge variant="success">Success</Badge>
+  </CardItem>
+  <CardItem
+    title="Button"
+    description="Buttons indicate actions that users can take, like adding an item to the cart."
+    actionPath="/docs/guides/faststore/atoms-button"
+  >
+    <Button variant="primary">Primary</Button>
+  </CardItem>
+  <CardItem
+    title="Checkbox"
+    description="Checkboxes allow users to toggle an option on or off."
+    actionPath="/docs/guides/faststore/atoms-checkbox"
+  >
+    <Checkbox checked readOnly />
+  </CardItem>
+  <CardItem
+    title="Icon"
+    description="Icons are simplified graphics used to represent concepts and help users navigate the UI."
+    actionPath="/docs/guides/faststore/atoms-icon"
+  >
+    <Icon name="ShoppingCart" weight="regular" width={24} height={24} />
+  </CardItem>
+  <CardItem
+    title="Input"
+    description="Fields used to get user inputs."
+    actionPath="/docs/guides/faststore/atoms-input"
+  >
+    <Input placeholder="Label" id="inputfield-default" />
+  </CardItem>
+  <CardItem
+    title="Label"
+    description="Describes the meaning of input fields."
+    actionPath="/docs/guides/faststore/atoms-label"
+  >
+    <Label>Label</Label>
+  </CardItem>
+  <CardItem
+    title="Link"
+    description="Performs the same behavior of a regular anchor tag (`a`), but can be used as any HTML tag and component."
+    actionPath="/docs/guides/faststore/atoms-link"
+  >
+    <Link variant="default">Default</Link>
+  </CardItem>
+  <CardItem
+    title="List"
+    description="Lists group related content. They can be ordered or unordered."
+    actionPath="/docs/guides/faststore/atoms-list"
+  >
+    <List marker>
+      <li>Great Unordered List</li>
+      <li>Ok Unordered List</li>
+      <li>Bad Unordered List</li>
+    </List>
+  </CardItem>
+  <CardItem
+    title="Loader"
+    description="Loaders provide a visual cue that an action is being processed."
+    actionPath="/docs/guides/faststore/atoms-loader"
+  >
+    <Loader />
+  </CardItem>
+  <CardItem
+    title="Overlay"
+    description="Overlays provide contextual information on top of the current layer of the interface."
+    actionPath="/docs/guides/faststore/atoms-overlay"
+  >
+    <div
+      style={{
+        position: 'relative',
+        height: '8rem',
+        width: '100%',
+        textAlign: 'center',
+      }}
+    >
+      A content outside me
+      <Overlay style={{ position: 'absolute' }} />
+    </div>
+  </CardItem>
+  <CardItem
+    title="Price"
+    description="Used to display the price of a given product, discount and total values."
+    actionPath="/docs/guides/faststore/atoms-price"
+  >
+    <Price value={62.5} variant="selling" />
+  </CardItem>
+  <CardItem
+    title="Radio"
+    description="Allow users to select one option from a set."
+    actionPath="/docs/guides/faststore/atoms-radio"
+  >
+    <Radio checked readOnly />
+  </CardItem>
+  <CardItem
+    title="Select"
+    description="Select components allow users to pick an option from a predefined list."
+    actionPath="/docs/guides/faststore/atoms-select"
+  >
+    <Select
+      id="select-overview-default"
+      options={{
+        great: 'Great',
+        ok: 'Ok',
+        bad: 'Bad',
+      }}
+    />
+  </CardItem>
+  <CardItem
+    title="Skeleton"
+    description="Improves the store's experience and perceived performance through loading placeholders."
+    actionPath="/docs/guides/faststore/atoms-skeleton"
+  >
+    <Skeleton size={{ width: '150px', height: '80px' }} borderRadius="32px" />
+  </CardItem>
+  <CardItem
+    title="Slider"
+    description="Allows users to select a single value from a range."
+    actionPath="/docs/guides/faststore/atoms-slider"
+  >
+    <Slider
+      max={{ absolute: 500, selected: 250 }}
+      min={{ absolute: 0, selected: 100 }}
+      absoluteValuesLabel={{ min: '0', max: '500' }}
+    />
+  </CardItem>
+  <CardItem
+    title="SROnly"
+    description="Hides an element visually. Improve accessibility by providing text to screen readers when applied."
+    actionPath="/docs/guides/faststore/atoms-sr-only"
+  >
+    <SROnly text="visually hidden text" />
+  </CardItem>
+</CardList>
