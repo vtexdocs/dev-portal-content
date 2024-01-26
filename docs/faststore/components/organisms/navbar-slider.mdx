@@ -1,0 +1,188 @@
+---
+title: "Navbar Slider"
+excerpt: As part of the Navbar, this component it its mobile version used to list the navigation links.
+components:
+  - NavbarSlider.tsx
+  - NavbarSliderHeader.tsx
+  - NavbarSliderContent.tsx
+  - NavbarSliderFooter.tsx
+---
+
+As part of the [Navbar](/docs/guides/faststore/organisms-navbar), this component is its **mobile version** used to list the navigation links (through the [NavbarLinks](/docs/guides/faststore/molecules-navbar-links)).
+
+This component is part of the [Navigation](/docs/guides/faststore//feature-navigation) feature and must be used in the [Navbar](/docs/guides/faststore/organisms-navbar) context.## Import
+
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
+
+```tsx
+import {
+  NavbarSlider,
+  NavbarSliderHeader,
+  NavbarSliderContent,
+  NavbarSliderFooter,
+} from '@faststore/ui'
+```
+
+Import Styles
+
+```tsx
+import '@faststore/ui/src/components/organisms/NavbarSlider/styles.scss'
+```
+
+---
+
+## Usage
+
+> ⚠️ This component is intended to be used only in the **mobile version**, but it can be adapted to a desktop version by customizing the component styles.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ display: 'block' }}>
+      <UIProvider>
+        <NavbarSliderUsage />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+  
+```tsx
+  const { closeNavbar } = useUI()
+  const { fade, fadeOut } = useFadeEffect()
+
+  return (
+    <NavbarSlider
+      fade={fade}
+      onDismiss={fadeOut}
+      onTransitionEnd={() => fade === 'out' && closeNavbar()}
+    >
+      <NavbarSliderHeader onClose={fadeOut}>
+        <IconButton
+          onClick={fadeOut}
+          aria-label="Logo"
+          icon={<Icon name="Storefront" width={32} height={32} />}
+        />
+      </NavbarSliderHeader>
+      <NavbarSliderContent>
+        <NavbarLinksUsage />
+      </NavbarSliderContent>
+      <NavbarSliderFooter>
+        <Button onClick={fadeOut}>Sign In</Button>
+      </NavbarSliderFooter>
+    </NavbarSlider>
+  )
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Props
+
+### Navbar Slider
+
+<ComponentPropsSection component="NavbarSlider" />
+
+### Navbar Slider Header
+
+<ComponentPropsSection component="NavbarSliderHeader" />
+
+### Navbar Slider Content
+
+<ComponentPropsSection component="NavbarSliderContent" />
+
+### Navbar Slider Footer
+
+<ComponentPropsSection component="NavbarSliderFooter" />
+
+---
+
+## Design Tokens
+
+<TokenTable>
+  <TokenRow token="--fs-navbar-slider-padding" value="var(--fs-spacing-3)" />
+</TokenTable>
+
+## Nested Elements
+
+### Header
+
+<TokenTable>
+  <TokenRow token="--fs-navbar-slider-header-height" value="5rem" />
+  <TokenRow
+    token="--fs-navbar-slider-header-padding-bottom"
+    value="var(--fs-spacing-2)"
+  />
+  <TokenRow
+    token="--fs-navbar-slider-header-button-margin-right"
+    value="calc(-1 * var(--fs-spacing-1))"
+  />
+</TokenTable>
+
+### Footer
+
+<TokenTable>
+  <TokenRow
+    token="--fs-navbar-slider-footer-padding-top"
+    value="var(--fs-navbar-slider-header-padding-bottom)"
+  />
+  <TokenRow
+    token="--fs-navbar-slider-footer-margin-top"
+    value="var(--fs-navbar-slider-header-padding-bottom)"
+  />
+</TokenTable>
+
+### Logo
+
+<TokenTable>
+  <TokenRow token="--fs-navbar-slider-logo-padding" value="0" />
+  <TokenRow
+    token="--fs-navbar-slider-logo-margin-right"
+    value="var(--fs-spacing-5)"
+  />
+</TokenTable>
+
+---
+
+## Customization
+
+For further customization, you can use the following data attributes:
+
+`data-fs-navbar-slider`
+
+`data-fs-navbar-slider-header`
+
+`data-fs-navbar-slider-content`
+
+`data-fs-navbar-slider-footer`
+
+---
+
+## Related components
+
+<SectionList grid="column" columns={2}>
+  <SectionItem
+    title="Navbar"
+    description="Represents the page header and groups features like Search and Regionalization."
+    actionPath="/docs/guides/faststore/organisms-navbar"
+    zoomOut
+    smallHeight
+  >
+    <UIProvider>
+      <NavbarUsage />
+    </UIProvider>
+  </SectionItem>
+  <SectionItem
+    title="NavbarLinks"
+    description="Displays a set of navigation links."
+    actionPath="/docs/guides/faststore/molecules-navbar-links"
+    zoomOut
+    smallHeight
+  >
+    <UIProvider>
+      <Navbar>
+        <NavbarLinksUsage />
+      </Navbar>
+    </UIProvider>
+  </SectionItem>
+</SectionList>

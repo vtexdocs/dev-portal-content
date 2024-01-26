@@ -1,0 +1,324 @@
+---
+title: "Product Shelf"
+excerpt: Displays a list of products to be used as a section on the store.
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/ProductCardComponent___e6502d57cf7e5bf247f86b64577d4141.png
+components:
+  - ProductShelf.tsx
+  - ProductShelfItems.tsx
+  - ProductShelfItem.tsx
+---
+
+Displays a list of products to be used as a section on the store.The `ProductShelf` is a compound of the following:
+
+- `ProductShelfItems`: the product list.
+- `ProductShelfItem`: wraps the product inside a list item.
+- `ProductCard`: the proposed child of a `ProductShelf`.
+
+---
+
+## Import
+
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
+
+```tsx
+import {
+  ProductShelf,
+  ProductShelfItems,
+  ProductShelfItem,
+} from '@faststore/ui'
+```
+
+We highly recommend using the [ProductCard](/docs/guides/faststore/molecules-product-card) as the direct child of the `ProductShelfItem`.
+
+```tsx
+import {
+  ProductCard,
+  ProductCardContent,
+  ProductCardImage,
+} from '@faststore/ui'
+```
+
+Import Styles
+
+```tsx
+import '@faststore/ui/src/components/organisms/ProductShelf/styles.scss'
+```
+
+---
+
+## Usage
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <ProductShelfUsage items={6} id="shelf-example-1"/>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+      <ProductShelf>
+        <ProductShelfItems>
+          {products.map(({ product }, idx) => (
+            <ProductShelfItem key={idx}>
+              <ProductCard>
+                <ProductCardImage>
+                  <img
+                    data-fs-image
+                    src={product.image[0].url}
+                    alt={product.image[0].alternateName}
+                  />
+                </ProductCardImage>
+                <ProductCardContent
+                  title={product.isVariantOf.name}
+                  price={{
+                    value: product.offers.offers[0].price,
+                    listPrice: product.offers.offers[0].listPrice,
+                    formatter: useFormattedPrice,
+                  }}
+                />
+              </ProductCard>
+            </ProductShelfItem>
+          ))}
+        </ProductShelfItems>
+      </ProductShelf>
+    ```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Props
+
+All `ProductShelf` related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
+
+### Product Shelf
+
+<ComponentPropsSection component="ProductShelf" />
+
+### Product Shelf Items
+
+<ComponentPropsSection component="ProductShelfItems" />
+
+### Product Shelf Item
+
+<ComponentPropsSection component="ProductShelfItem" />
+
+---
+
+## Design Tokens
+
+### Nested Elements
+
+#### Items
+
+<TokenTable>
+  <TokenRow token="--fs-product-shelf-items-gap" value="var(--fs-grid-gap-1)" />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-product-shelf-items-padding-top"
+    value="var(--fs-spacing-0)"
+  />
+  <TokenRow
+    token="--fs-product-shelf-items-padding-bottom"
+    value="var(--fs-spacing-3)"
+  />
+</TokenTable>
+
+---
+
+## Variants
+
+You can use [ProductCard variants](/docs/guides/faststore/molecules-product-card#variants) to create `ProductShelf` variations.
+
+### With Button
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <ProductShelfUsage withButton items={4} id="shelf-example-2"/>
+    </OverviewSection>
+
+  </Tab>
+  <Tab>
+    ```tsx
+      <ProductShelf>
+        <ProductShelfItems>
+          {products.map(({ product }, idx) => (
+            <ProductShelfItem key={idx}>
+              <ProductCard>
+                <ProductCardImage>
+                  <img
+                    data-fs-image
+                    src={product.image[0].url}
+                    alt={product.image[0].alternateName}
+                  />
+                </ProductCardImage>
+                <ProductCardContent
+                  title={product.isVariantOf.name}
+                  price={{
+                    value: product.offers.offers[0].price,
+                    listPrice: product.offers.offers[0].listPrice,
+                    formatter: useFormattedPrice,
+                  }}
+                  onButtonClick={() => {}}
+                />
+              </ProductCard>
+            </ProductShelfItem>
+          ))}
+        </ProductShelfItems>
+      </ProductShelf>
+    ```
+
+  </Tab>
+</Tabs>
+
+### Bordered
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+     <ProductShelfUsage bordered items={4} id="shelf-example-3"/>
+    </OverviewSection>
+
+  </Tab>
+  <Tab>
+    ```tsx
+      <ProductShelf>
+        <ProductShelfItems>
+          {products.map(({ product }, idx) => (
+            <ProductShelfItem>
+              <ProductCard bordered key={idx}>
+                <ProductCardImage>
+                  <img
+                    data-fs-image
+                    src={product.image[0].url}
+                    alt={product.image[0].alternateName}
+                  />
+                </ProductCardImage>
+                <ProductCardContent
+                  title={product.isVariantOf.name}
+                  price={{
+                    value: product.offers.offers[0].price,
+                    listPrice: product.offers.offers[0].listPrice,
+                    formatter: useFormattedPrice,
+                  }}
+                />
+              </ProductCard>
+            </ProductShelfItem>
+          ))}
+        </ProductShelfItems>
+      </ProductShelf>
+    ```
+
+  </Tab>
+</Tabs>
+
+### Aspect Ratio
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <ProductShelfUsage aspectRatio={3/4} id="shelf-example-4"/>
+    </OverviewSection>
+
+  </Tab>
+  <Tab>
+    ```tsx
+      <ProductShelf>
+        <ProductShelfItems>
+          {products.map(({ product }, idx) => (
+            <ProductShelfItem key={idx}>
+              <ProductCard>
+                <ProductCardImage aspectRatio={3 / 4}>
+                  <img
+                    data-fs-image
+                    src={product.image[0].url}
+                    alt={product.image[0].alternateName}
+                  />
+                </ProductCardImage>
+                <ProductCardContent
+                  title={product.isVariantOf.name}
+                  price={{
+                    value: product.offers.offers[0].price,
+                    listPrice: product.offers.offers[0].listPrice,
+                    formatter: useFormattedPrice,
+                  }}
+                />
+              </ProductCard>
+            </ProductShelfItem>
+          ))}
+        </ProductShelfItems>
+      </ProductShelf>
+    ```
+
+  </Tab>
+</Tabs>
+
+### With [Carousel](/docs/guides/faststore/molecules-carousel)
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection style={{ width: '100%', overflow: 'hidden', paddingLeft: '0', paddingRight: '0' }}>
+      <ProductShelfCarouselUsage/>
+    </OverviewSection>
+
+  </Tab>
+  <Tab>
+    ```tsx
+     const isMobile = window.innerWidth <= 768
+
+      <ProductShelf>
+          {/* Avoid using `ProductShelfItem` component here since the `Carousel` component already wraps its children as <li />` */}
+          <Carousel
+            itemsPerPage={isMobile ? 1 : 3}
+            variant="scroll"
+            infiniteMode={false}
+          >
+          {products.map(({ product }, idx) => (
+            <ProductCard key={idx}>
+              <ProductCardImage aspectRatio={3 / 4}>
+                <img
+                  data-fs-image
+                  src={product.image[0].url}
+                  alt={product.image[0].alternateName}
+                />
+              </ProductCardImage>
+              <ProductCardContent
+                title={product.isVariantOf.name}
+                price={{
+                  value: product.offers.offers[0].price,
+                  listPrice: product.offers.offers[0].listPrice,
+                  formatter: useFormattedPrice,
+                }}
+              />
+            </ProductCard>
+          ))}
+          </Carousel>
+      </ProductShelf>
+    ```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Customization
+
+`data-fs-product-shelf`
+
+`data-fs-product-shelf-items`
+
+`data-fs-product-shelf-item`
+
+---
+
+## Best Practices
+
+### ❌ Don'ts
+
+- We don't recommend using [Carousel](/docs/guides/faststore/molecules-carousel) inside `ProductShelf` when display 5 or less items.
+- We don't recommend using `ProductShelfItems` and `ProductShelfItem` when using Carousel component to avoid: `validateDOMNesting(...): <li> cannot appear as a descendant of <li>` issue.
+
+See [Carousel Code Example](/docs/guides/faststore/organisms-product-shelf#with-carousel)

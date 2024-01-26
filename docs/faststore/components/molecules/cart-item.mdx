@@ -1,0 +1,260 @@
+---
+title: "Cart Item"
+excerpt: Cart Items are used to present the summarized information of a product inside the Cart.
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/Button___6d6b16886d5d7e2a05dba8c45c075796.png
+components:
+  - CartItem.tsx
+  - CartItemImage.tsx
+  - CartItemSummary.tsx
+---
+
+## Overview
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <CartItemExample/>
+      <CartItemExampleUnavailable/>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <CartItem
+      price={{
+        value: product.offers.offers[0].price,
+        listPrice: product.offers.offers[0].listPrice,
+        formatter: useFormattedPrice,
+      }}
+      quantity={3}
+    >
+      <CartItemImage>
+        <img
+          data-fs-image
+          src={product.image[0].url}
+          alt={product.image[0].alternateName}
+        />
+      </CartItemImage>
+      <CartItemSummary
+        title={product.isVariantOf.name}
+        activeVariations={activeVariations}
+      />
+    </CartItem>
+    ```
+
+    ```tsx
+    <CartItem
+      price={{
+        value: product.offers.offers[0].price,
+        listPrice: product.offers.offers[0].listPrice,
+        formatter: useFormattedPrice,
+      }}
+      quantity={3}
+      unavailable
+    >
+      <CartItemImage>
+        <img
+          data-fs-image
+          src={product.image[0].url}
+          alt={product.image[0].alternateName}
+        />
+      </CartItemImage>
+      <CartItemSummary
+        title={product.isVariantOf.name}
+        activeVariations={activeVariations}
+      />
+    </CartItem>
+    ```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
+
+```tsx
+import { CartItem, CartItemImage, CartItemSummary } from '@faststore/ui'
+```
+
+Import Styles
+
+```tsx
+import '@faststore/ui/src/components/atoms/CartItem/styles.scss'
+```
+
+---
+
+## Usage
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection><CartItemExample/></OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+      <CartItem
+      price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+      quantity={3}
+    >
+      <CartItemImage>
+        <img
+          data-fs-image
+          src={product.image[0].url}
+          alt={product.image[0].alternateName}
+        />
+      </CartItemImage>
+      <CartItemSummary
+        title={product.isVariantOf.name}
+        activeVariations={activeVariations}
+      />
+    </CartItem>
+    ```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Props
+
+### Cart Item
+
+<ComponentPropsSection component="CartItem" />
+
+### Cart Item Image
+
+<ComponentPropsSection component="CartItemImage" />
+
+### Cart Item Summary
+
+<ComponentPropsSection component="CartItemSummary" />
+
+### Other Resources
+
+#### PriceDefinition
+
+<PropsSection propsList={propsPriceDefinition} />
+
+---
+
+## Design Tokens
+
+<TokenTable>
+  <TokenRow token="--fs-cart-item-padding" value="var(--fs-spacing-3)" />
+  <TokenRow
+    token="--fs-cart-item-bkg-color"
+    value="var(--fs-control-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-cart-item-border-width"
+    value="var(--fs-border-width)"
+  />
+  <TokenRow
+    token="--fs-cart-item-border-color"
+    value="var(--fs-border-color-light)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-cart-item-border-radius"
+    value="var(--fs-border-radius)"
+  />
+</TokenTable>
+
+### Nested Elements
+
+#### Image
+
+<TokenTable>
+  <TokenRow
+    token="--fs-cart-item-image-border-radius"
+    value="var(--fs-cart-item-border-radius)"
+  />
+  <TokenRow token="--fs-cart-item-image-width" value="var(--fs-spacing-8)" />
+  <TokenRow
+    token="--fs-cart-item-image-height"
+    value="var(--fs-cart-item-image-width)"
+  />
+</TokenTable>
+
+#### Title
+
+<TokenTable>
+  <TokenRow
+    token="--fs-cart-item-title-margin-bottom"
+    value="var(--fs-spacing-0)"
+  />
+  <TokenRow token="--fs-cart-item-title-line-height" value="1.2" />
+  <TokenRow
+    token="--fs-cart-item-title-color"
+    value="var(--fs-color-text)"
+    isColor
+  />
+</TokenTable>
+
+#### SKUs
+
+<TokenTable>
+  <TokenRow
+    token="--fs-cart-item-skus-margin-top"
+    value="var(--fs-spacing-0)"
+  />
+  <TokenRow
+    token="--fs-cart-item-skus-text-size"
+    value="var(--fs-text-size-legend)"
+  />
+  <TokenRow
+    token="--fs-cart-item-skus-text-color"
+    value="var(--fs-color-text-light)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-cart-item-skus-line-height"
+    value="var(--fs-text-size-body)"
+  />
+  <TokenRow
+    token="--fs-cart-item-skus-column-gap"
+    value="var(--fs-spacing-1)"
+  />
+  <TokenRow token="--fs-cart-item-skus-row-gap" value="var(--fs-spacing-0)" />
+</TokenTable>
+
+#### Prices
+
+<TokenTable>
+  <TokenRow token="--fs-cart-item-price-gap" value="var(--fs-spacing-1)" />
+</TokenTable>
+
+---
+
+## Customization
+
+For further customization, you can use the following data attributes:
+
+`data-fs-cart-item`
+
+`data-fs-cart-item="unavailable"`
+
+`data-fs-cart-item-content`
+
+`data-fs-cart-item-image`
+
+`data-fs-cart-item-summary`
+
+`data-fs-cart-item-title`
+
+`data-fs-cart-item-skus`
+
+`data-fs-cart-item-remove-button`
+
+`data-fs-cart-item-prices`
+
+`data-fs-cart-item-actions`

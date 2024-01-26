@@ -1,0 +1,494 @@
+---
+title: "Molecules"
+---
+
+<CardList columns={3}>
+  <CardItem
+    title="Accordion"
+    description="Displays an expandable/collapsible list of items."
+    actionPath="/docs/guides/faststore/molecules-accordion"
+  >
+    <UsageAccordionMultiple/>
+  </CardItem>
+  <CardItem
+    title="Alert"
+    description="Displays short messages related to the behavior of a system, feature or page."
+    actionPath="/docs/guides/faststore/molecules-alert"
+  >
+    <Alert link={{ children: 'Link', href: '#' }} dismissible>
+      Alert message
+    </Alert>
+  </CardItem>
+  <CardItem
+    title="Breadcrumb"
+    description="Indicates the user's location in a website hierarchy."
+    actionPath="/docs/guides/faststore/molecules-breadcrumb"
+    zoomOut
+  >
+    <Breadcrumb breadcrumbList={breadcrumbList} />
+  </CardItem>
+  <CardItem
+    title="Buy Button"
+    description="Intends to send the user to the checkout/cart step directly."
+    actionPath="/docs/guides/faststore/molecules-breadcrumb"
+  >
+    <BuyButton>Buy Now</BuyButton>
+  </CardItem>
+  {/* <CardItem
+    title="Carousel"
+    description="Slides through multiple elements using custom controls."
+    actionPath="/docs/guides/faststore/molecules-carousel"
+  >
+    <CarouselUsage />
+  </CardItem> */}
+  <CardItem
+    title="Cart Item"
+    description="Used to present the summarized information of a product inside the Cart."
+    actionPath="/docs/guides/faststore/molecules-cart-item"
+  >
+    <CartItemExample/>
+  </CardItem>
+  <CardItem
+    title="Checkbox Field"
+    description={
+      <>
+        Wraps a <code>Checkbox</code> input and its corresponding{' '}
+        <code>Label</code>. It allows users to select one option from a set.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-checkbox-field"
+  >
+    <CheckboxField label="Default" id="checkboxfield-default" />
+  </CardItem>
+  <CardItem
+    title="Discount Badge"
+    description={
+      <>
+        A custom <code>Badge</code> that display product's discounts.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-discount-badge"
+  >
+    <DiscountBadge listPrice={80} spotPrice={40} />
+  </CardItem>
+  <CardItem
+    title="Dropdown"
+    description="Displays a set of actions/items to the user, usually used to show a menu of options."
+    actionPath="/docs/guides/faststore/molecules-dropdown"
+  >
+    <Dropdown>
+      <DropdownButton icon={<Icon name="CaretDown" />}>
+        {'Dropdown'}
+      </DropdownButton>
+      <DropdownMenu>
+        <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
+          {'Dropdown Item 1'}
+        </DropdownItem>
+        <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
+          {'Dropdown Item 2'}
+        </DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  </CardItem>
+  <CardItem
+    title="Gift"
+    description="Displays an additional item to purchase as a gift."
+    actionPath="/docs/guides/faststore/molecules-gift"
+  >
+    <Gift icon={<Icon name="Tag" />}>
+      <GiftImage>
+        <img
+          src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
+          alt="Magicwhite"
+          width={89}
+          height={89}
+        />
+      </GiftImage>
+      <GiftContent
+        productName="Apple Magic Mouse"
+        price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
+      />
+    </Gift>
+  </CardItem>
+  <CardItem
+    title="Icon Button"
+    description="icons that trigger some sort of action, such as adding an item to the cart."
+    actionPath="/docs/guides/faststore/molecules-discount-badge"
+  >
+    <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" />
+  </CardItem>
+  <CardItem
+    title="Input Field"
+    description={
+      <>
+        Wraps an <code>Input</code> and its corresponding <code>Label</code>.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-input-field"
+  >
+    <InputField label="Input w/ Action" id="inputfield-action" actionable />
+  </CardItem>
+  <CardItem
+    title="Link Button"
+    description={
+      <>
+        Visuallly replicates a <code>Button</code>, however acts as a link to
+        navigate users between pages.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-link-button"
+  >
+    <LinkButton href="#">Link Button</LinkButton>
+  </CardItem>
+  <CardItem
+    title="Modal"
+    description="Are dialog windows that sit on top of an application's main view."
+    actionPath="/docs/guides/faststore/molecules-modal"
+  >
+    <UIProvider>
+      <ModalBase />
+    </UIProvider>
+  </CardItem>
+  <CardItem
+    title="Navbar Links"
+    description="Used to display a set of navigation links that self adapts on mobile or desktop screens."
+    actionPath="/docs/guides/faststore/molecules-navbar-links"
+    zoomOut
+  >
+    <NavbarLinksUsage />
+  </CardItem>
+  <CardItem
+    title="Order Summary"
+    description="Provides a summary of the items in the cart, including the total price, related shipping tax, and discounts."
+    actionPath="/docs/guides/faststore/molecules-order-summary"
+    fullWidth
+  >
+    <OrderSummary
+      subtotalLabel="Subtotal (3 products)"
+      subtotalValue={useFormattedPrice(1200)}
+      discountValue={`-${useFormattedPrice(100)}`}
+      totalValue={useFormattedPrice(1100)}
+    />
+  </CardItem>
+  <CardItem
+    title="Product Card"
+    description="Displays summarized information about a product."
+    actionPath="/docs/guides/faststore/molecules-product-card"
+  >
+    <ProductCard bordered>
+      <ProductCardImage>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title="Mouse"
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        ratingValue={3.5}
+      />
+    </ProductCard>
+  </CardItem>
+  <CardItem
+    title="Product Title"
+    description="Used on Product Details Page, wraps the product name, a product label and the rating."
+    actionPath="/docs/guides/faststore/molecules-product-title"
+    fullWidth
+  >
+    <ProductTitle
+      title={<h1>Apple Mouse</h1>}
+      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+      refNumber="99995945"
+      ratingValue={4}
+    />
+  </CardItem>
+  <CardItem
+    title="Quantity Selector"
+    description="Allows customers to select the quantity of a given product to purchase."
+    actionPath="/docs/guides/faststore/molecules-quantity-selector"
+  >
+    <QuantitySelector min={1} max={10} initial={5} />
+  </CardItem>
+  <CardItem
+    title="Radio Field"
+    description={
+      <>
+        Wraps a <code>Radio</code> input and its corresponding{' '}
+        <code>Label</code>. It allows users to select one option from a set.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-radio-field"
+  >
+    <RadioField label="Checked" id="radiofield-checked" checked readOnly />
+  </CardItem>
+  <CardItem
+    title="Radio Group"
+    description="Allows users to select a single option from a list of two or more mutually exclusive options."
+    actionPath="/docs/guides/faststore/molecules-radio-group"
+  >
+    <RadioGroup name="radiogroup">
+      <RadioField label="First" name="radiogroup" id="radiofield-first" />
+      <RadioField label="Second" name="radiogroup" id="radiofield-second" />
+      <RadioField label="Third" name="radiogroup" id="radiofield-third" />
+    </RadioGroup>
+  </CardItem>
+  <CardItem
+    title="Rating"
+    description="Displays the average rating of a product based on other shoppers' feedback and reviews."
+    actionPath="/docs/guides/faststore/molecules-rating"
+  >
+    <Rating value={3.5} icon={<Icon name="Star" />} />
+  </CardItem>
+  <CardItem
+    title="Region Bar"
+    description={
+      <>
+        Trigger the <code>RegionModal</code> and is part of{' '}
+        <code>Regionalization</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-region-bar"
+  >
+    <RegionBar icon={<Icon name="MapPin" />} label="Set your location" />
+  </CardItem>
+  <CardItem
+    title="Search Auto Complete"
+    description={
+      <>
+        Lists auto completing suggestions based on searched term. This component
+        is part of the <code>Search</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-search-auto-complete"
+  >
+    <SearchAutoComplete>
+      {suggestions?.map((suggestion) => (
+        <SearchAutoCompleteTerm
+          key={suggestion.value}
+          term={searchContent}
+          suggestion={suggestion.value}
+          linkProps={{ href: '#' }}
+        />
+      ))}
+    </SearchAutoComplete>
+  </CardItem>
+  <CardItem
+    title="Search Dropdown"
+    description={
+      <>
+        Combines all <code>Search</code> components to show all options in{' '}
+        <code>SearchInput</code>. This component is part of the{' '}
+        <code>Search</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-search-dropdown"
+    zoomOut
+  >
+    <SearchDropdownUsage term="App" products={product} />
+  </CardItem>
+  <CardItem
+    title="Search History"
+    description={
+      <>
+        Responsible for showing the latest terms searched by a user. This
+        component is part of the <code>Search</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-search-history"
+  >
+    <SearchHistory title="History">
+      <SearchHistoryTerm value="Headphone" linkProps={{ href: '#' }} />
+      <SearchHistoryTerm value="Audio & Video" linkProps={{ href: '#' }} />
+      <SearchHistoryTerm value="mh-7000" linkProps={{ href: '#' }} />
+    </SearchHistory>
+  </CardItem>
+  <CardItem
+    title="Search Input Field"
+    description={
+      <>
+        An <code>InputField</code> with a search button. This component is part
+        of the <code>Search</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-search-input-field"
+  >
+    <SearchInputField onSubmit={() => {}} />
+  </CardItem>
+  <CardItem
+    title="Search Products"
+    description={
+      <>
+        Shows details of the suggested products. This component is part of the{' '}
+        <code>Search</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-search-products"
+  >
+    <SearchProducts>
+      <SearchProductItem linkProps={{ href: '#' }}>
+        <SearchProductItemImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </SearchProductItemImage>
+        <SearchProductItemContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+        />
+      </SearchProductItem>
+      <SearchProductItem linkProps={{ href: '#' }}>
+        <SearchProductItemImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </SearchProductItemImage>
+        <SearchProductItemContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+        />
+      </SearchProductItem>
+    </SearchProducts>
+  </CardItem>
+  <CardItem
+    title="Search Top"
+    description={
+      <>
+        Displays the most searched terms by customers. This component is part of
+        the <code>Search</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-search-top"
+  >
+    <SearchTop title="Top Search">
+      <SearchTopTerm value="Notebooks" linkProps={{ href: '#' }} index={0} />
+      <SearchTopTerm
+        value="Laser Printer"
+        linkProps={{ href: '#' }}
+        index={1}
+      />
+      <SearchTopTerm
+        value="Bluetooth Keyboard"
+        linkProps={{ href: '#' }}
+        index={2}
+      />
+    </SearchTop>
+  </CardItem>
+  <CardItem
+    title="Select Field"
+    description={
+      <>
+        Wraps a <code>Select</code> input and its corresponding{' '}
+        <code>Label</code>. It allows users to select one option from a set.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-select-field"
+  >
+    <SelectField
+      id="select-overview-default"
+      label="Select a Status:"
+      options={{
+        great: 'Great',
+        ok: 'Ok',
+        bad: 'Bad',
+      }}
+    />
+  </CardItem>
+  <CardItem
+    title="SKU Selector"
+    description="Used in Product Details Pages (PDPs) to display all the available variants for a given product."
+    actionPath="/docs/guides/faststore/molecules-sku-selector"
+  >
+    <SkuSelectorColor />
+  </CardItem>
+  <CardItem
+    title="Table"
+    description="Displays information in a friendly way, allowing users to scan for details quickly."
+    actionPath="/docs/guides/faststore/molecules-table"
+  >
+    <Table variant="bordered">
+      <TableHead>
+        <TableRow>
+          <TableCell scope="col" variant="header" align="left">
+            Bordered
+          </TableCell>
+          <TableCell scope="col" variant="header" align="right">
+            Total
+          </TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {options.map((option) => (
+          <TableRow key={option.numberOfInstallments}>
+            <TableCell variant="header" align="left">
+              {option.numberOfInstallments}x
+            </TableCell>
+            <TableCell align="right">
+              <Price formatter={useFormattedPrice} value={option.total} />
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </CardItem>
+  <CardItem
+    title="Tag"
+    description={
+      <>
+        Are an interactive <code>Badge</code>. By default, its have a close
+        button.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-tag"
+  >
+    <Tag variant="highlighted" label="Tag" onClose={() => {}} />
+  </CardItem>
+  <CardItem
+    title="Toast"
+    description="Used to display notifications."
+    actionPath="/docs/guides/faststore/molecules-toast"
+  >
+    <UIProvider>
+      <ToastUsage
+        message={'Simple Toast message.'}
+        status={'INFO'}
+        btnLabel="Simple Toast"
+      />
+    </UIProvider>
+  </CardItem>
+  <CardItem
+    title="Toggle"
+    description="A customized checkbox input styled to look like a switch button."
+    actionPath="/docs/guides/faststore/molecules-toggle"
+  >
+    <Toggle id="toggle-default-checked" checked readOnly />
+  </CardItem>
+  <CardItem
+    title="Toggle Field"
+    description={
+      <>
+        Toggle Field wraps a <code>Toggle</code> input and its corresponding{' '}
+        <code>Label</code>.
+      </>
+    }
+    actionPath="/docs/guides/faststore/molecules-toggle-field"
+  >
+    <ToggleField id="toggle-field-default" label="Label" />
+  </CardItem>
+</CardList>

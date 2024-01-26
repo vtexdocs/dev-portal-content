@@ -1,0 +1,244 @@
+---
+title: "Organism"
+---
+
+<CardList columns={3}>
+  <CardItem
+    title="Banner Text"
+    description="Used for advertising brands, products, and/or collections."
+    actionPath="/docs/guides/faststore/organisms-banner-text"
+    zoomOut
+  >
+    <BannerText>
+      <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+  </CardItem>
+  <CardItem
+    title="Cart Sidebar"
+    description="Displays the summary of items added to the cart along with detailed information, and checkout option."
+    actionPath="/docs/guides/faststore/organisms-cart-sidebar"
+  >
+    <UIProvider>
+      <CartSidebarUsage />
+    </UIProvider>
+  </CardItem>
+  <CardItem
+    title="Empty State"
+    description="Used to represent an empty state."
+    actionPath="/docs/guides/faststore/organisms-empty-state"
+    zoomOut
+  >
+    <EmptyState
+      title="Your Cart is empty"
+      titleIcon={
+        <Icon name="ShoppingCart" width={56} height={56} weight="thin" />
+      }
+    >
+      <Button variant="secondary">Start Shopping</Button>
+    </EmptyState>
+  </CardItem>
+  <CardItem
+    title="Filter"
+    description="Filters products inside the Product Listing Page (PLP) and Search Page."
+    actionPath="/docs/guides/faststore/organisms-filter"
+    containerStyle={{ alignItems: 'flex-start' }}
+  >
+    <UIProvider>
+      <SearchProvider onChange={() => ({})}>
+        <FilterUsage />
+      </SearchProvider>
+    </UIProvider>
+  </CardItem>
+  <CardItem
+    title="Filter Slider"
+    description={
+      <>
+        The mobile <code>Filter</code> view that is rendered inside a <code>SlideOver</code> component.
+      </>
+    }
+    actionPath="/docs/guides/faststore/organisms-filter-slider"
+  >
+    <UIProvider>
+      <SearchProvider onChange={() => ({})}>
+        <FilterUsage onlyMobile={true} />
+      </SearchProvider>
+    </UIProvider>
+  </CardItem>
+  <CardItem
+    title="Hero"
+    description="Full-width banner presented on the above-the-fold section of a web page."
+    actionPath="/docs/guides/faststore/organisms-hero"
+    zoomOut
+  >
+    <Hero>
+      <HeroImage>
+        <img
+          alt="Controller on a table"
+          src="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
+        />
+      </HeroImage>
+      <HeroHeader
+        title="Explore our products"
+        subtitle="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </Hero>
+  </CardItem>
+  <CardItem
+    title="Image Gallery"
+    description="Used when you want to display a series of photos in a gallery on a post or page."
+    actionPath="/docs/guides/faststore/organisms-image-gallery"
+    zoomOut
+  >
+    <ImageGalleryUsage images={imagesUsage} />
+  </CardItem>
+  <CardItem
+    title="Navbar"
+    description="Represents the page header and groups features like Search and Regionalization."
+    actionPath="/docs/guides/faststore/organisms-navbar"
+    zoomOut
+  >
+    <UIProvider>
+      <NavbarUsage />
+    </UIProvider>
+  </CardItem>
+  <CardItem
+    title="Navbar Slider"
+    description={
+      <>
+        As part of the <code>Navbar</code>, this component is its{' '}
+        <strong>mobile version</strong> used to list the navigation links
+        through the <code>NavbarLinks</code>.
+      </>
+    }
+    actionPath="/docs/guides/faststore/organisms-navbar-slider"
+  >
+    <UIProvider>
+      <NavbarSliderUsage />
+    </UIProvider>
+  </CardItem>
+  <CardItem
+    title="Out of Stock"
+    description="Used to announce to users that the product is out of stock."
+    actionPath="/docs/guides/faststore/organisms-out-of-stock"
+  >
+    <OutOfStock
+      title="Out of Stock"
+      subtitle="Notify me when available"
+      inputLabel="Email"
+      buttonLabel="Notify Me"
+      onSubmit={() => {}}
+      disabled={false}
+    />
+  </CardItem>
+  <CardItem
+    title="Payment Methods"
+    description="Displays the logos of the available payment options in a store."
+    actionPath="/docs/guides/faststore/organisms-payment-methods"
+  >
+    <PaymentMethods title={<h3>Payment Methods</h3>} flagList={flags} />
+  </CardItem>
+  <CardItem
+    title="Price Range"
+    description={
+      <>
+        <code>Slider</code> that allows users to select a maximum and minimum
+        price from a range.
+      </>
+    }
+    actionPath="/docs/guides/faststore/organisms-price-range"
+  >
+    <PriceRangeUsage />
+  </CardItem>
+  <CardItem
+    title="Product Grid"
+    description="A section generally used on PLP pages to list the products available in the store."
+    actionPath="/docs/guides/faststore/organisms-product-grid"
+    zoomOut
+  >
+    <ProductGrid>
+      {products.map(({ product }, idx) => (
+        <ProductGridItem>
+          <ProductCard>
+            <ProductCardImage>
+              <img
+                data-fs-image
+                src={product.image[0].url}
+                alt={product.image[0].alternateName}
+              />
+            </ProductCardImage>
+            <ProductCardContent
+              title={product.isVariantOf.name}
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+            />
+          </ProductCard>
+        </ProductGridItem>
+      ))}
+    </ProductGrid>
+  </CardItem>
+  <CardItem
+    title="Product Shelf"
+    description="Displays a list of products to be used as a section on the store."
+    actionPath="/docs/guides/faststore/organisms-product-shelf"
+    zoomOut
+  >
+    <ProductShelfUsage items={6}/>
+  </CardItem>
+  <CardItem
+    title="Region Modal"
+    description={
+      <>
+        A <code>Modal</code> with some region configurations. The component is
+        part of <code>Regionalization</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/organisms-region-modal"
+  >
+    <UIProvider>
+      <RegionModalUsage />
+    </UIProvider>
+  </CardItem>
+  <CardItem
+    title="Search Input"
+    description={
+      <>
+        Responsible to receive, search and display suggestions. This component
+        is part of the <code>Search</code> feature.
+      </>
+    }
+    actionPath="/docs/guides/faststore/organisms-search-input"
+  >
+    <SearchInputUsage />
+  </CardItem>
+  <CardItem
+    title="Shipping Simulation"
+    description={
+      <>
+        Lets customers set the <code>PostalCode</code> and see the shipping
+        options in the `PDP`.
+      </>
+    }
+    actionPath="/docs/guides/faststore/organisms-shipping-simulation"
+  >
+    <ShippingSimulationUsage />
+  </CardItem>
+  <CardItem
+    title="Slide Over"
+    description="Represents an aditional session that complements the screen's information."
+    actionPath="/docs/guides/faststore/organisms-slide-over"
+  >
+    <UIProvider>
+      <SlideOverPartialRight />
+    </UIProvider>
+  </CardItem>
+</CardList>

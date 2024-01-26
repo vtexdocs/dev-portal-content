@@ -1,0 +1,196 @@
+---
+title: "Navbar Links"
+excerpt: Displays a set of navigation links.
+components:
+  - NavbarLinks.tsx
+---
+
+A wrapper used to display a set of navigation links that self adapts on mobile or desktop screens.
+
+This component is part of the [Navigation](/docs/guides/faststore//feature-navigation) feature and must be used in the [Navbar](/docs/guides/faststore/organisms-navbar) context.## Import
+
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
+
+```tsx
+import {
+  NavbarLinks,
+  NavbarLinksList,
+  NavbarLinksListItem,
+} from '@faststore/ui'
+```
+
+Import Styles
+
+```tsx
+import '@faststore/ui/src/components/molecules/NavbarLinks/styles.scss'
+```
+
+---
+
+## Usage
+
+> ⚠️ The mobile version can be achieved with
+  [NavbarSlider](/docs/guides/faststore/organisms-navbar-slider) as wrapper.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ display: 'block' }}>
+      <Navbar>
+        <NavbarLinksUsage />
+      </Navbar>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    const links = ['Office', 'Home Appliances', 'Computer and Software', 'Technology']
+
+    <Navbar>
+      <NavbarLinks>
+        <div>
+          <Button variant="tertiary" size="small">
+            Set location
+          </Button>
+          <NavbarLinksList>
+            {links.map((link) => (
+              <NavbarLinksListItem key={link}>
+                <Link variant="display" href="#">
+                  {link}
+                </Link>
+              </NavbarLinksListItem>
+            ))}
+          </NavbarLinksList>
+        </div>
+      </NavbarLinks>
+    </Navbar>
+    ```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Props
+
+### Navbar Links
+
+<ComponentPropsSection component="NavbarLinks" />
+
+### Navbar Links List
+
+<ComponentPropsSection component="NavbarLinksList" />
+
+---
+
+## Design Tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-navbar-links-bkg-color"
+    value="--fs-color-body-bkg"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-navbar-links-transition-property"
+    value="var(--fs-transition-property)"
+  />
+  <TokenRow
+    token="--fs-navbar-links-transition-timing"
+    value="var(--fs-transition-timing)"
+  />
+  <TokenRow
+    token="--fs-navbar-links-transition-function"
+    value="var(--fs-transition-function)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-navbar-links-border-top-width-mobile"
+    value="var(--fs-border-width)"
+  />
+  <TokenRow
+    token="--fs-navbar-links-border-top-color-mobile"
+    value="var(--fs-border-color-light)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-navbar-links-border-bottom-width-mobile"
+    value="var(--fs-navbar-links-border-top-width-mobile)"
+  />
+  <TokenRow
+    token="--fs-navbar-links-border-bottom-color-mobile"
+    value="var(--fs-navbar-links-border-top-color-mobile)"
+    globalValue="var(--fs-border-color-light)"
+    isColor
+  />
+</TokenTable>
+
+## Nested Elements
+
+### Link
+
+<TokenTable>
+  <TokenRow token="--fs-navbar-links-link-width-notebook" value="auto" />
+  <TokenRow
+    token="--fs-navbar-links-link-padding-notebook"
+    value="0 var(--fs-spacing-0)"
+  />
+</TokenTable>
+
+### List
+
+<TokenTable>
+  <TokenRow
+    token="--fs-navbar-links-list-padding-left-notebook"
+    value="var(--fs-spacing-3)"
+  />
+  <TokenRow
+    token="--fs-navbar-links-list-margin-left-notebook"
+    value="var(--fs-spacing-2)"
+  />
+  <TokenRow
+    token="--fs-navbar-links-list-border-left-width-notebook"
+    value="var(--fs-border-width)"
+  />
+  <TokenRow
+    token="--fs-navbar-links-list-border-left-color-notebook"
+    value="var(--fs-border-color-light)"
+    isColor
+  />
+</TokenTable>
+
+---
+
+## Customization
+
+For further customization, you can use the following data attributes:
+
+`data-fs-navbar-links`
+
+`data-fs-navbar-links-list`
+
+`data-fs-navbar-links-list-item`
+
+---
+
+## Related components
+
+<SectionList grid="column" columns={1}>
+  <SectionItem
+    title="Navbar"
+    description="Represents the page header and groups features like Search and Regionalization."
+    actionPath="/docs/guides/faststore/organisms-navbar"
+  >
+    <UIProvider>
+      <NavbarUsage />
+    </UIProvider>
+  </SectionItem>
+  <SectionItem
+    title="NavbarSlider"
+    description="As part of the Navbar, this component it its mobile version used to list the navigation links."
+    actionPath="/docs/guides/faststore/organisms-navbar-slider"
+  >
+    <UIProvider>
+      <NavbarSliderUsage />
+    </UIProvider>
+  </SectionItem>
+</SectionList>

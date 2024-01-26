@@ -1,0 +1,43 @@
+---
+title: ' Overview'
+sidebar_label: 'Global Tokens'
+---
+
+**Design tokens** are parameters that affect all UI look 'n' feel and they are the **main configuration** file of a Theme. Component-specific tokens often inherit from global tokens but are named specifically to apply those tokens in component development.## Global Tokens
+
+FastStore uses a default theme called `Brandless`, which provides structural styles for your components and pages. Please read [Brandless's page](/docs/theming-overview#brandless-and-the-theming-structure) to further information about the themeable architecture.
+
+Its presets are defined on `src/base/tokens.scss` in [@faststore/ui](https://github.com/vtex/faststore/blob/main/packages/ui/src/styles/base/tokens.scss) and it's separated in these main areas:
+
+<SectionList grid="column" classes="faststore-tokensLinks">
+  <SectionItem
+    title="Colors"
+    actionPath="/docs/guides/faststore/global-tokens-colors"
+    description="The store palette with all the tones needed."
+  ></SectionItem>
+  <SectionItem
+    title="Typography"
+    actionPath="/docs/guides/faststore/global-tokens-typography"
+    description="A standard scale and basic definitions for your text: `font family`,`weight` and `sizes`."
+  ></SectionItem>
+  <SectionItem
+    title="Spacing"
+    actionPath="/docs/guides/faststore/global-tokens-spacing"
+    description="All tokens used for spacings on the store: `padding`, `margins` and `sizes`. It's also used as base for grid tokens."
+  ></SectionItem>
+  <SectionItem
+    title="Grid & Layout"
+    actionPath="/docs/guides/faststore/global-tokens-grid-and-layout"
+    description="`Padding`, `Container`, `Gaps` and `Breakpoints` definitions."
+  ></SectionItem>
+  <SectionItem
+    title="Interactive Controls"
+    actionPath="/docs/guides/faststore/global-tokens-interactive-controls"
+    description="`Tap`, `States` and `Sizing` definitions."
+  ></SectionItem>
+  <SectionItem
+    title="Refinements"
+    actionPath="/docs/guides/faststore/global-tokens-refinements"
+    description="`Transition`, `Borders` and `Shadow` definitions."
+  ></SectionItem>
+</SectionList>

@@ -1,0 +1,116 @@
+---
+title: "Overlay"
+excerpt: Overlays provide contextual information on top of the current layer of the interface.
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/Overlay___5ae3e4dc6b4b413cf33295d52a64fac0.png
+components:
+  - Overlay.tsx
+---
+
+Overlays provide contextual information on top of the current layer of the interface. They can be interruptive like modals or augmenting like popovers and tooltips.
+
+## Overview
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <div
+        style={{
+          position: 'relative',
+          height: '8rem',
+          width: '100%',
+          textAlign: 'center',
+        }}
+      >
+        A content outside me
+        <Overlay style={{ position: 'absolute' }} />
+      </div>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+function Component() {
+  const styles = {
+    container: {
+      position: 'relative',
+      height: '8rem',
+    },
+    overlay: {
+      position: 'absolute',
+    },
+  }
+  return (
+    <div style={styles.container}>
+      A content outside me
+      <Overlay style={styles.overlay} />
+    </div>
+  )
+}
+```
+
+</Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
+
+```tsx
+import { Overlay } from '@faststore/ui'
+```
+
+Import Styles
+
+```tsx
+import '@faststore/ui/src/components/atoms/Overlay/styles.scss'
+```
+
+---
+
+## Usage
+
+<OverviewSection>
+  <div
+    style={{
+      position: 'relative',
+      height: '8rem',
+      width: '100%',
+      textAlign: 'center',
+    }}
+  >
+    A content outside me
+    <Overlay style={{ position: 'absolute' }} />
+  </div>
+</OverviewSection>
+
+```tsx
+<div>
+  A content outside me
+  <Overlay/>
+</div>
+```
+
+---
+
+## Props
+
+<ComponentPropsSection component="Overlay" />
+
+---
+
+## Design Tokens
+
+<TokenTable>
+  <TokenRow token="--fs-overlay-bkg-color" value="rgb(0 0 0 / 20%)" isColor />
+</TokenTable>
+
+---
+
+## Customization
+
+For further customization, you can use the following data attributes:
+
+`data-fs-overlay`

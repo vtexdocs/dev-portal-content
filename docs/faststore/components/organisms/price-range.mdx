@@ -1,0 +1,76 @@
+---
+title: "Price Range"
+excerpt: Price Ranges are sliders that allows users to select a maximum and minimum price.
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/PriceRange___5863b0eb4a4a8ce9a98da5c760461e61.png
+components:
+  - PriceRange.tsx
+---
+
+The Price Range component is a [Slider](/docs/guides/faststore/atoms-slider) that allows users to select a maximum and minimum price from a range.
+
+## Overview
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <PriceRangeUsage />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <PriceRange
+      max={{ absolute: 500, selected: 250 }}
+      min={{ absolute: 0, selected: 100 }}
+      formatter={formatter}
+      step={1}
+    />
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
+
+```tsx
+import { PriceRange } from '@faststore/ui'
+```
+
+Import Styles
+
+```tsx
+import '@faststore/ui/src/components/organisms/PriceRange/styles.scss'
+```
+
+---
+
+## Usage
+
+<OverviewSection>
+  <PriceRangeUsage />
+</OverviewSection>
+```tsx
+<PriceRange
+  max={{ absolute: 500, selected: 250 }}
+  min={{ absolute: 0, selected: 100 }}
+  formatter={formatter}
+  step={1}
+/>
+```
+
+---
+
+## Props
+
+<ComponentPropsSection component="PriceRange" />
+
+---
+
+## Customization
+
+`data-fs-price-range`
+
+`data-fs-price-range-inputs`

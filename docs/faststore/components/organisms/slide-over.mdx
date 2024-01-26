@@ -1,0 +1,229 @@
+---
+title: "SlideOver"
+excerpt: This component represents an aditional session that complements the screen's information.
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
+components:
+  - SlideOver.tsx
+  - SlideOverHeader.tsx
+---
+
+This component represents an aditional session that complements the screen's information.## Import
+
+Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
+
+```tsx
+import { SlideOver, SlideOverHeader } from '@faststore/ui'
+```
+
+Import Styles
+
+```tsx
+import '@faststore/ui/src/components/organisms/SlideOver/styles.scss'
+```
+
+---
+
+## Usage
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection direction="column">
+      <b>Open Partial</b>
+      <UIProvider>
+        <SlideOverPartialRight />
+      </UIProvider>
+      <UIProvider>
+        <SlideOverPartialLeft />
+      </UIProvider>
+    </OverviewSection>
+     <OverviewSection direction="column">
+      <b>Open Full</b>
+      <UIProvider>
+        <SlideOverFullRight />
+      </UIProvider>
+      <UIProvider>
+        <SlideOverFullLeft />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    <b>Open Partial</b>
+
+    ```tsx
+      export const SlideOverPartialRight = () => {
+        const { modal, openModal } = useUI()
+        return (
+          <>
+            <Button variant="primary" onClick={openModal}>
+              Right
+            </Button>
+            {modal && (
+              <SlideOverUsage size="partial" direction="rightSide" isOpen={modal} />
+            )}
+          </>
+        )
+      }
+    ```
+
+    ```tsx
+      export const SlideOverPartialLeft = () => {
+        const { modal, openModal } = useUI()
+        return (
+          <>
+            <Button variant="primary" onClick={openModal}>
+              Left
+            </Button>
+            {modal && (
+              <SlideOverUsage size="partial" direction="leftSide" isOpen={modal} />
+            )}
+          </>
+        )
+      }
+    ```
+
+    <b>Open Full</b>
+  
+  ```tsx
+  export const SlideOverFullRight = () => {
+    const { modal, openModal } = useUI()
+    return (
+      <>
+        <Button variant="primary" onClick={openModal}>
+          Right
+        </Button>
+        {modal && (
+          <SlideOverUsage size="full" direction="rightSide" isOpen={modal} />
+        )}
+      </>
+    )
+  }
+  ```
+
+    ```tsx
+    export const SlideOverFullLeft = () => {
+      const { modal, openModal } = useUI()
+      return (
+        <>
+          <Button variant="primary" onClick={openModal}>
+            Left
+          </Button>
+          {modal && (
+            <SlideOverUsage size="full" direction="leftSide" isOpen={modal} />
+          )}
+        </>
+      )
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Props
+
+### Slide Over
+
+<ComponentPropsSection component="SlideOver" />
+
+### Slide Over Header
+
+<ComponentPropsSection component="SlideOverHeader" />
+
+---
+
+## Design Tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-slide-over-bkg-color"
+    value="var(--fs-color-body-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-slide-over-transition-timing"
+    value="var(--fs-transition-timing)"
+  />
+</TokenTable>
+
+### Nested Elements
+
+#### Header
+
+<TokenTable>
+  <TokenRow
+    token="--fs-slide-over-header-padding"
+    value="var(--fs-spacing-2) var(--fs-spacing-3) var(--fs-spacing-2)"
+  />
+  <TokenRow
+    token="--fs-slide-over-header-bkg-color"
+    value="var(--fs-color-neutral-0)"
+    isColor
+  />
+</TokenTable>
+
+### Variants
+
+#### Partial
+
+<TokenTable>
+  <TokenRow
+    token="--fs-slide-over-partial-gap"
+    value="calc(2 * var(--fs-grid-padding))"
+  />
+  <TokenRow
+    token="--fs-slide-over-partial-width-mobile"
+    value="calc(100vw - var(--fs-slide-over-partial-gap))"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-slide-over-partial-width-notebook"
+    value="calc(100% / 3)"
+  />
+  <TokenRow
+    token="--fs-slide-over-partial-max-width-notebook"
+    value="calc(var(--fs-grid-breakpoint-notebook) / 3)"
+  />
+</TokenTable>
+
+---
+
+## Customization
+
+`data-fs-slide-over`
+
+`data-fs-slide-over-size="full" | "partial"`
+
+`data-fs-slide-over-state="in" | "out"`
+
+`data-fs-slide-over-header`
+
+`data-fs-slide-over-header-icon`
+
+---
+
+## Related components
+
+<SectionList grid="row">
+  <SectionItem
+    title="Cart Sidebar"
+    description="The CartSidebar displays the summary of items added to the cart along with detailed information, and checkout option."
+    actionPath="/docs/guides/faststore/organisms-cart-sidebar"
+  >
+    <UIProvider>
+      <CartSidebarUsage />
+    </UIProvider>
+  </SectionItem>
+  <SectionItem
+    title="Filter Slider"
+    description="The mobile Filter view that is rendered inside a SlideOver component."
+    actionPath="/docs/guides/faststore/organisms-filter-slider"
+  >
+    <UIProvider>
+      <SearchProvider onChange={() => ({})}>
+        <FilterUsage onlyMobile={true} />
+      </SearchProvider>
+    </UIProvider>
+  </SectionItem>
+</SectionList>
