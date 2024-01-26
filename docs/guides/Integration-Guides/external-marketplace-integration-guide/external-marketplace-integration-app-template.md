@@ -24,7 +24,6 @@ An integration app created from our App Template already includes:
 - **Custom settings page** containing:
   - Button to activate/deactivate [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl)
 - Complete **search endpoint** to retrieve seller configurations using [AppKey and AppToken](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) generated in the seller’s account, defined by the appVendor.
-- **Feed creation mechanism in [Offer Management](https://help.vtex.com/tutorial/anuncios-enviados-beta--6yg2CBv5Z5AnD0qS0cw2sa)**, that allows the connector to interact with Offer Management for generating logs.
 - **Link to [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register)**, allowing sellers to map their catalog according to the marketplace’s definitions.
 
 ## Before you start
@@ -68,10 +67,9 @@ Follow the list below to substitute placeholders properly. Once placeholders are
 | manifestTitle | App’s title in the VTEX App Store. | manifest.json |
 | manifestDescription | App’s description in the VTEX App Store. | manifest.json |
 | mapperId | Connector’s ID in VTEX Mapper. | admin/navigation.json |
-| feedId | Connector’s ID in Offer Management. | node/constants/variables.ts |
 | connectorId | Connector's ID registered in Channel Manager. | node/constants/variables.json |
 
-The fields listed above come with the App Template as default. However, it is possible to remove fields that represent features not used by your integration, like the VTEX Mapper and Offer Management. They are listed ahead in the section [CustomConfigs](#customconfigs).
+The fields listed above come with the App Template as default. However, it is possible to remove fields that represent features not used by your integration, like the VTEX Mapper. They are listed ahead in the section [CustomConfigs](#customconfigs).
 
 #### Receiving notifications
 
@@ -123,7 +121,7 @@ DefaultConfigs is where the mandatory fields for all apps are included. This sec
 
 #### CustomConfigs
 
-The CustomConfigs section is where you find configurations that come as default but are optional, like VTEX Mapper, Offer Management and AllowFranchiseAccounts.
+The CustomConfigs section is where you find configurations that come as default but are optional, like VTEX Mapper and AllowFranchiseAccounts.
 
 ##### Removing VTEX Mapper
 
@@ -134,14 +132,6 @@ You can remove [VTEX Mapper Registration](https://developers.vtex.com/docs/api-r
   "labelId": "admin/app.mapper.tile",
   "path": "/admin/mkp-category-mapper/{{mapperId}}"
 }
-```
-
-##### Removing Offer Management
-
-You can remove [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) from the app, If your integration already includes a solution to generate logs for offers. To remove Offer Management, on the `node/resolvers/saveConfig.ts` file (line 15), remove the feed’s creation in Sent Offers:
-
-```ts
-await ctx.clients.sentOffers.createFeed({affiliateId, salesChannel, id: FEED_ID)}.then( async () => {
 ```
 
 ##### Removing _AllowFranchiseAccounts_
@@ -291,7 +281,7 @@ The example above creates an input field called `ExampleComponent`. It uses an e
 ```ts
 const CustomConfigsArea: React.FC<CustomConfigsProps> = ({ intl, config, setConfig }) => {
   return (
-    <div>      
+    <div>
       <ExemploComponent
         config={config}
         intl={intl}
@@ -339,7 +329,7 @@ import { DefaultProps } from '../../../typings/props'
 
 const ExemploComponent: React.FC<DefaultProps> = ({ intl }) => {
     return (
-      <InputComponent 
+      <InputComponent
         canEdit={true}
         id={'test'}
         initValue={""}
