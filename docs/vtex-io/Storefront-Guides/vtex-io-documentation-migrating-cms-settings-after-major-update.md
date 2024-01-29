@@ -15,7 +15,7 @@ To handle this situation and ensure a smooth migration, follow the steps below t
 Ensure you have the following tools installed on your machine. They are responsible for facilitating the interactions with the VTEX platform and enhancing your development experience:
 
 1. Install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
-2. Install GraphQL IDE by running the following command: 
+2. Install GraphQL IDE by running the following command:
 
    ```bash
    vtex install vtex.admin-graphql-ide@3.x
