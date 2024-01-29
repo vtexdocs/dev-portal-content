@@ -7,13 +7,13 @@ updatedAt: "2021-02-09T15:24:50.558Z"
 ---
 ## Clients
 
-Clients are an abstraction for implementing connections to VTEX APIs or external ones that are agnostic to the purpose of the application you are developing. So, the methods of a client class expect some parameters that are necessary for some calls to the API, such as a body to a POST request.
+Clients are an abstraction for implementing connections to VTEX APIs or external ones that are agnostic to the purpose of the application you are developing. So, the methods of a client class expect some parameters that are necessary for some calls to the API, such as a body to a `POST` request.
 
 ### Developing clients on a tax service
 
 Regarding the purpose of a tax service integration, there are some connections to be implemented:
 
-- To the Checkout API, to do the orderForm configuration;
+- To the [Checkout API](), to do the `orderForm` configuration.
 - To the Tax Provider API, to calculate any taxes related to the items of a cart.
 
 ### Example of implementation
