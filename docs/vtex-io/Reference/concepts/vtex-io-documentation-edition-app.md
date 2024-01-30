@@ -20,12 +20,12 @@ The `vtex` account currently provides the following native Edition Apps:
 
 There are currently four available versions of the Edition Store. Next, you can better understand their differences regarding the apps installed by default in the manifest’s [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies).
 
-| Version	| [vtex.store-sitemap](https://developers.vtex.com/docs/apps/vtex.store-sitemap)	| vtex.checkout (including 1.x and 2.x  versions) | [vtex.search](https://developers.vtex.com/docs/apps/vtex.search)
+| Version | [vtex.store-sitemap](https://developers.vtex.com/docs/apps/vtex.store-sitemap) | vtex.checkout (including 1.x and 2.x  versions) | [vtex.search](https://developers.vtex.com/docs/apps/vtex.search)
 |   :---:   |   :---:   |   :---:   |   :---:   |
-| 2.x	| ❌ | ❌	| ❌ |
-| 3.x	| ✅	| ❌	| ❌ |
-| 4.x	| ✅	| ✅	| ❌ |
-| 5.x	| ✅    | ✅	| ✅ |
+| 2.x | ❌ | ❌ | ❌ |
+| 3.x | ✅ | ❌ | ❌ |
+| 4.x | ✅ | ✅ | ❌ |
+| 5.x | ✅    | ✅ | ✅ |
 
 >⚠️ If you are [migrating from Legacy CMS Portal to Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io) or are using the 2.x version and want to update, it is not necessary to install the 5.x version **if your store already has the Search apps installed**. You can install 3.x or 4.x versions, depending on your case. If you are not sure which version to set in your store, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to the VTEX Support team.
 
