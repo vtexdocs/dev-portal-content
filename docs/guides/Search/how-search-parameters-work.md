@@ -27,11 +27,11 @@ The URL will always contain the term entered in the search field:
 The browsing filters also have specific URLs defined by certain parameters in the URL, which can follow one of these options:
 
 - [Default 1](#default-1): Valid only for Legacy CMS Portal stores.
-- [Default 2](#default-2): Valid for Legacy CMS Portal and VTEX IO stores. Recommended for best performance results.
+- [Default 2](#default-2): Valid for Legacy CMS Portal and Store Framework stores. Recommended for best performance results.
 
 ## Default 1
 
-> ⚠️ This option works only for Legacy CMS Portal stores. Refer to [Default 2](#default-2) for VTEX IO stores.
+> ⚠️ This option works only for Legacy CMS Portal stores. Refer to [Default 2](#default-2) for Store Framework stores.
 
 | URL |
 | - |
@@ -68,7 +68,7 @@ The parameters above can be matched in many ways. However, note that the search 
 
 ## Default 2
 
-> ℹ️ Stores hosted in VTEX IO must use Default 2.
+> ℹ️ Store Framework stores must use Default 2.
 
 | URL                                                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------- |
