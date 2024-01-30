@@ -46,7 +46,7 @@ Where:
 - **B:[BrandId]:** Shows products from a specific brand based on the indicated ID. This code is shown at the end of the URL, on the page used for changing the brand, in**Products**>**Catalog**>**Brands**. ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-3.png)
 - **H:[CollectionId]**: Shows products of a specific collection based on the indicated ID. This code is indicated when editing a collection in**Store setup** > **CMS** > **Layout** > **CMS** > **Product Clusters (Collections)**. ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-search-parameters-work-4.png)
 
-  > ⚠️ There are two ways to configure collections: through the CMS or the Collections module (Beta). This article explains how to [configure collections through the CMS](https://help.vtex.com/en/tutorial/adding-collections-cms--2YBy6P6X0NFRpkD2ZBxF6L).
+  > ⚠️ There are two ways to configure collections: through the Legacy CMS Portal or the Collections module (Beta). Refer to [Adding collections CMS](https://help.vtex.com/en/tutorial/adding-collections-cms--2YBy6P6X0NFRpkD2ZBxF6L) for more information on how to configure collections through the Legacy CMS Portal.
 
 - **spec_fct_[ProductFieldId/Sku]:[SearchValue]:** Shows products whose product or SKU field value, with the indicated ID, is equal to the entered value. This code can be found on the page for changing a product/SKU field at the end of the URL.
 
