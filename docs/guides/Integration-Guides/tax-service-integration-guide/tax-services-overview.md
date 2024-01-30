@@ -9,7 +9,7 @@ Selling products online is subject to various types of taxes that can differ bas
 
 In such scenarios, it is feasible to establish an integration that enables a store to transmit checkout information to an external tax calculation API. Subsequently, the external API should provide the necessary tax details and values applicable to the purchase.
 
-<img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-services-overview-0.svg"/>
+![Tax Service diagram](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/overview-tax-service.png)
 
 ## Implementation
 
