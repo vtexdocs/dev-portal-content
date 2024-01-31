@@ -1,9 +1,9 @@
 ---
 title: "Segmenting the search result"
 slug: "vtex-io-documentation-segmenting-the-search-result"
-hidden: false
+hidden: true
 createdAt: "2021-12-29T16:02:23.423Z"
-updatedAt: "2022-12-13T20:17:44.718Z"
+updatedAt: "2024-01-31T20:17:44.718Z"
 ---
 
 In some situations, especially in B2B accounts, you may want to present custom search results for each of your customers. To this end, this tutorial will guide you on how to segment the search result page of your store.

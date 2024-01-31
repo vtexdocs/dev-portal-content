@@ -1,9 +1,9 @@
 ---
 title: "Organizations Challenge"
 slug: "vtex-organizations-challenge"
-hidden: false
+hidden: true
 createdAt: "2020-06-03T15:19:10.972Z"
-updatedAt: "2021-11-18T19:27:08.494Z"
+updatedAt: "2024-01-31T19:27:08.494Z"
 ---
 Organizations Challenge is an app that checks if users are allowed to view content, based on their roles and permissions within [Organizations](https://github.com/vtex-apps/organizations).
 

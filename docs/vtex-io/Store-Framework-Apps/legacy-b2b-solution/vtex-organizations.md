@@ -1,9 +1,9 @@
 ---
 title: "Organizations"
 slug: "vtex-organizations"
-hidden: false
+hidden: true
 createdAt: "2020-06-03T15:19:18.888Z"
-updatedAt: "2022-03-17T16:38:51.319Z"
+updatedAt: "2024-01-31T16:38:51.319Z"
 ---
 This application allows you to create organization and manage users under that organization with diffrent roles. 
 

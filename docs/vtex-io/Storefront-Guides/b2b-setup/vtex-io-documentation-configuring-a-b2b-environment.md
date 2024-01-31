@@ -1,9 +1,9 @@
 ---
 title: "Configuring a B2B environment"
 slug: "vtex-io-documentation-configuring-a-b2b-environment"
-hidden: false
+hidden: true
 createdAt: "2020-06-03T16:02:44.631Z"
-updatedAt: "2022-12-13T20:17:44.342Z"
+updatedAt: "2024-01-31T20:17:44.342Z"
 ---
 
 B2B (Business to Business) is an abbreviation used in ecommerce in reference to commercial transactions between companies.

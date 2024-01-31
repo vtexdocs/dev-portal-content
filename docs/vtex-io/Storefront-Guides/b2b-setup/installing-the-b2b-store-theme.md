@@ -1,9 +1,9 @@
 ---
 title: "B2B Store Theme"
 slug: "installing-the-b2b-store-theme"
-hidden: false
+hidden: true
 createdAt: "2022-07-18T20:12:55.205Z"
-updatedAt: "2022-07-18T20:12:55.205Z"
+updatedAt: "2024-01-31T20:12:55.205Z"
 ---
 
 B2B Store Theme is a frontend template to help your store get started with VTEX’s core features for businesses selling to other businesses.

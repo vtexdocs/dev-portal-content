@@ -11415,42 +11415,6 @@
           ]
         },
         {
-          "name": "Legacy B2B components",
-          "slug": "guides/legacy-b2b-solution",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Admin Organizations",
-              "slug": "apps/vtex.admin-organizations",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Organizations",
-              "slug": "apps/vtex.organizations",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Organizations Challenge",
-              "slug": "apps/vtex.organizations-challenge",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Challenge Trade Policy Condition",
-              "slug": "apps/vtex.challenge-tp-condition",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "B2B Suite",
           "slug": "apps/vtex.b2b-suite",
           "origin": "",
@@ -12444,63 +12408,6 @@
                 {
                   "name": "Creating an institutional page with Content types",
                   "slug": "creating-an-institutional-page-with-content-types-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "B2B setup",
-              "slug": "b2b-setup",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Segmenting the search result",
-                  "slug": "vtex-io-documentation-segmenting-the-search-result",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Access Control List",
-                  "slug": "access-control-list",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Configuring a B2B environment",
-                  "slug": "vtex-io-documentation-configuring-a-b2b-environment",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Installing B2B Easy Set Up",
-                  "slug": "installing-b2b-easy-set-up",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "B2B Store Theme",
-                  "slug": "installing-the-b2b-store-theme",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Customizing the B2B Store Theme",
-                  "slug": "customizing-the-b2b-store-theme",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Querying B2B order statuses",
-                  "slug": "querying-b2b-order-statuses",
                   "origin": "",
                   "type": "markdown",
                   "children": []

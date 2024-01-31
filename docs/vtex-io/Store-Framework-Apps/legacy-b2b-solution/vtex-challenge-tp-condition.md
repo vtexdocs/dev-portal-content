@@ -1,9 +1,9 @@
 ---
 title: "Challenge Trade Policy Condition"
 slug: "vtex-challenge-tp-condition"
-hidden: false
+hidden: true
 createdAt: "2020-06-03T15:19:30.796Z"
-updatedAt: "2021-04-29T13:29:19.890Z"
+updatedAt: "2024-01-31T13:29:19.890Z"
 ---
 
 Used in B2B environments, the Challenge block is a non-rendered block responsible for checking if a user is allowed to access the store's content.

@@ -1,9 +1,9 @@
 ---
 title: "Access Control List"
 slug: "access-control-list"
-hidden: false
+hidden: true
 createdAt: "2022-01-24T14:17:40.173Z"
-updatedAt: "2022-01-24T14:19:43.562Z"
+updatedAt: "2024-01-31T14:19:43.562Z"
 ---
 
 By default, all VTEX stores are configured to display all available products during every navigation session. The Access Control List feature allows you to create a list of users that can or cannot access specific products in the store.

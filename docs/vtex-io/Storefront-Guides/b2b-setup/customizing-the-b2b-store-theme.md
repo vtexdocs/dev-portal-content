@@ -1,9 +1,9 @@
 ---
 title: "Customizing the B2B Store Theme"
 slug: "customizing-the-b2b-store-theme"
-hidden: false
+hidden: true
 createdAt: "2021-08-02T20:48:26.061Z"
-updatedAt: "2022-07-13T14:50:53.504Z"
+updatedAt: "2024-01-31T14:50:53.504Z"
 ---
 Once you have installed either the [B2B Store Theme](https://developers.vtex.com/docs/guides/installing-the-b2b-store-theme) or the [B2B New Store Theme](https://github.com/vtex-apps/b2b-newstore-theme) (when using the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution), you can customize the theme according to your store’s business needs. To do so, follow the steps described below. 
 [block:callout]

@@ -1,9 +1,9 @@
 ---
 title: "Admin Organizations"
 slug: "vtex-admin-organizations"
-hidden: false
+hidden: true
 createdAt: "2020-06-03T15:19:29.881Z"
-updatedAt: "2020-12-11T11:57:26.752Z"
+updatedAt: "2024-01-31T11:57:26.752Z"
 ---
 
 This is an Admin application for managing `Roles` and `Permissions` for organizations on a B2B Store.

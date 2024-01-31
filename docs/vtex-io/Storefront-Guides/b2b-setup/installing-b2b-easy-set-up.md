@@ -1,10 +1,10 @@
 ---
 title: "Installing B2B Easy Set Up"
 slug: "installing-b2b-easy-set-up"
-hidden: false
+hidden: true
 excerpt: Use the B2B Easy Set Up to quickly get your store configured for B2B ecommerce.
 createdAt: "2021-07-28T20:53:10.893Z"
-updatedAt: "2022-07-19T17:44:04.867Z"
+updatedAt: "2024-01-31T17:44:04.867Z"
 ---
 
 B2B Easy Set Up is an app that helps you quickly get your store configured for B2B ecommerce.

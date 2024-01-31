@@ -1,9 +1,9 @@
 ---
 title: "Querying B2B order statuses"
 slug: "querying-b2b-order-statuses"
-hidden: false
+hidden: true
 createdAt: "2022-07-12T19:09:55.157Z"
-updatedAt: "2022-07-12T19:09:55.157Z"
+updatedAt: "2024-01-31T19:09:55.157Z"
 ---
 
 In a B2B business model, your company and your partners may need to share selected information, such as order statuses. This is necessary when you want to show the status of external orders — orders made outside VTEX — to customers on your ecommerce, for example.
