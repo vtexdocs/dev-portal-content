@@ -87,7 +87,7 @@ The `events` field defines the events the service will listen to and specifies h
 
 After saving the `node/service.json`, edit the `node/index.ts` file to create the `skuChange` handler function. 
 
-```ts node/index.ts mark=33:38
+```ts node/index.ts mark=34:39
 import type {
   IOClients,
   ParamsContext,
@@ -167,7 +167,7 @@ OK
 
 ---
 
-## Verifying the handler function
+## Checking the handler function behavior
 
 After linking the `events-example` app and firing the event with the Broadcast app, check the console for a log message similar to the following: `Received SKU changed event service-node@6.38.3`.
 
