@@ -24,7 +24,7 @@ SKU specifications are necessary to be able to choose the SKU, that is, the vari
 | Id | ID of Specification. This ID is used to delete/update the specification | No | Integer | AutoIncrement |
 | SkuId | ID of SKU | Yes | Integer | - |
 | FieldId | Field ID | Yes| Integer | - |
-| FieldValueId | ID of FieldValue. Required only for FieldTypeId 5,6,7 | No | Integer | null |
+| FieldValueId | ID of FieldValue. Required only for FieldTypeId 5,6 | Yes | Integer | null |
 | Text | Value of specification. Only for FieldTypeId different from 5,6,7 | No | String | null |
 
 ## Implementation
