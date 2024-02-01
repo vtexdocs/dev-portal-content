@@ -7,9 +7,9 @@ hidden: false
 
 When developing a new [VTEX IO service](https://developers.vtex.com/docs/guides/vtex-io-documentation-service), you must define a proper path for your service to handle requests effectively. This guide provides insights into service path patterns, outlining the recommended approaches based on the desired behavior.
 
-Paths are specified within the `manifest.json` file. Check the following example:
+Paths are specified within the `service.json` file. Check the following example:
 
-```json manifest.json mark=7:11
+```json service.json mark=7:11
 {
   "memory": 256,
   "ttl": 10,
