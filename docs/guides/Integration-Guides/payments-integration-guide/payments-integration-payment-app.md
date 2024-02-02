@@ -150,7 +150,7 @@ respondTransaction = () => {
 }
 ```
 
-> ⚠️ If the `transactionValidation.vtex` event is not triggered, the order confirmation email will not be sent to the user.
+> ⚠️ If the `transactionValidation.vtex` event is not triggered, the order confirmation email will not be sent to the user. We recommend that you create a retry flow to act in cases where this event is not triggered or the order confirmation email is not sent.
 
 ### Injecting external scripts
 
