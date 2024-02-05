@@ -75,6 +75,16 @@ In the `node/service.json` file, add `"settingsType": "workspace"` to define whi
 }
 ```
 
+You also have to declare the required policy for the service app be able to read the data from the configuration app. In the `manifest.json` file, add the following policy in the `"policies"` list:
+
+```json
+"policies": [
+  {
+    "name": "read-workspace-apps"
+  }
+]
+```
+
 It is also possible to define your configurations through event listening. In this case, you should add in the `node/service.json` file something similar to the example below, replacing the values according to your needs:
 
 ```json
