@@ -8,9 +8,7 @@ After [defining the new fields exposed by the FastStore API Extension](https://d
 
 [Fragments](https://graphql.org/learn/queries/#fragments) in GraphQL are reusable units that enhance query functionality. FastStore associates these fragments with the existing queries on its pages to incorporate the newly exposed fields.
 
-<Callout type="info" emoji="ℹ️">
- To access the list of queries and their corresponding fragments, check the [extendable queries](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-queries-using-fragments) section.
-</Callout>
+> ℹ️ To access the list of queries and their corresponding fragments, check the [extendable queries](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-queries-using-fragments) section.
 
 Follow the steps below to add custom fields to an [existing query](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-queries-using-fragments#extendable-queries). We will use the `ServerProduct` query as an example to illustrate how to extend it.
 
@@ -39,10 +37,7 @@ Even though you can add information to the FastStore API schema, you must be car
   touch ServerProduct.ts
   ```
 
-
-<Callout type="warning" emoji="⚠️">
-  The file name should match the name of the query you want to extend.
-</Callout>
+> ⚠️ The file name should match the name of the query you want to extend.
 
 ### Step 2: Define the GraphQL fragment
 
