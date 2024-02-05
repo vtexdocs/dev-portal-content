@@ -29,11 +29,13 @@ Let's start taking a look at the structure that represents the source code of a 
 
 ## Folders
 
-- `/.faststore` - Manages and coordinates the FastStore project to deliver a functional starter store. This folder, also known as [@faststore/core](/docs/getting-started/3-project-structure#faststorecore), provides the core functionality of the FastStore starter.
+- `/.faststore` - Manages and coordinates the FastStore project to deliver a functional starter store. This folder, also known as [@faststore/core](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson), provides the core functionality of the FastStore starter.
 
 - `/src` - Contains all of your store's customizations, including your custom components and theme.
 
-- `/themes` - Keeps your store's theme, such as [midnight](/docs/guides/faststore/themes-midnight)---
+- [`/themes`](https://developers.vtex.com/docs/guides/faststore/themes-overview#available-themes) - Keeps your store's theme, such as [midnight](/docs/guides/faststore/themes-midnight).
+
+---
 
 ## Files
 
@@ -41,8 +43,8 @@ Let's start taking a look at the structure that represents the source code of a 
 
 - `cypress.config.ts` - Configures the options and preferences required for running tests with Cypress.
 
-- [`faststore.config.js`](/docs/guides/faststore-config-options) - Configures aspects of the project such as SEO preferences, VTEX account options, and theme. Note that these configurations are set during the [onboarding process](/docs/guides/faststore/getting-started-1-faststore-onboarding-overview), reducing the need for changes to this file.
-For more information on configuration options for this file, refer to [Configuration options for faststore.config.js](/docs/guides/faststore-config-options).
+- [`faststore.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) - Configures aspects of the project such as SEO preferences, VTEX account options, and theme. Note that these configurations are set during the [onboarding process](/docs/guides/faststore/1-onboarding-overview), reducing the need for changes to this file.
+For more information on configuration options for this file, refer to [Configuration options for faststore.config.js](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options).
 
 - `next-env.d.ts` - Generates a TypeScript definition file for Next.js.
   
@@ -62,4 +64,4 @@ Bundles FastStore source code, including the FatsStore starter: `starter store`.
 
 #### `@faststore/cli`
 
-Provides scripts for building, running, debugging, and deploying your FastStore project. This package helps with debugging and differentiating between VTEX code and customizations. To learn more, refer to the [FastStore CLI documentation](/docs/getting-started/faststore-cli).
+Provides scripts for building, running, debugging, and deploying your FastStore project. This package helps with debugging and differentiating between VTEX code and customizations. To learn more, refer to the [FastStore CLI documentation](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli).
