@@ -22,5 +22,6 @@ For every exported block, the app also defines a React component linked to that 
   }
 }
 ```
+>ℹ️ Refer to our documentation to know more about the other concepts, such as [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components), [composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition), and [content](https://developers.vtex.com/docs/guides/vtex-io-documentation-content).
 
-In general, frontend apps export different blocks, which are declared and configured in the Store Theme's code, and React components related to these blocks. These components are then rendered on the store's frontend.
+In general, frontend apps export different [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#blocks), which are declared and configured in the Store Theme's code, and React components related to these blocks. These [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) are then rendered on the store's frontend.
