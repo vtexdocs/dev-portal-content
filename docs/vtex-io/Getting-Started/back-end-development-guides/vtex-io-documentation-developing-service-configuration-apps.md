@@ -75,7 +75,7 @@ In the `node/service.json` file, add `"settingsType": "workspace"` to define whi
 }
 ```
 
-You also have to declare the required policy for the service app be able to read the data from the configuration app. In the `manifest.json` file, add the following policy in the `"policies"` list:
+You also have to declare the required [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) for the service app be able to read the data from the configuration app. In the `manifest.json` file, add the following policy in the `"policies"` list:
 
 ```json
 "policies": [
