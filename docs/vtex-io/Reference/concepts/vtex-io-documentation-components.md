@@ -21,7 +21,7 @@ Components play a crucial role in developing VTEX stores and applications, enabl
 
 Within the VTEX IO ecosystem, various types of components cater to different aspects of store development:
 
- - **Storefront Components**: These are components used to build the frontend of online stores. They include UI components for displaying products, navigation menus, search bars, cart summaries, and more. Storefront components are typically built using React and can be customized and extended to fit specific design requirements.
+- **Storefront Components**: These are components used to build the frontend of online stores. They include UI components for displaying products, navigation menus, search bars, cart summaries, and more. Storefront components are typically built using React and can be customized and extended to fit specific design requirements.
 
 For instance, the [Product Summary app](https://developers.vtex.com/docs/apps/vtex.product-summary) exemplifies a storefront component, summarizing essential product information like name, price, and image, which can be seamlessly integrated into other store blocks, such as the [Shelf](https://developers.vtex.com/docs/apps/vtex.shelf).
 
@@ -53,11 +53,11 @@ Considering the Reviews & Ratings example given above, go to the `interfaces.jso
    ```
 
 Refer to our documentation to know more about [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#blocks) and their relation with [interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface).
-	
+ 
 - **Extensions**: specialized components or modules that extend the functionality of the VTEX platform. They can add new features, integrate third-party services, enhance performance, or provide other valuable capabilities. Extensions are often developed by third-party developers or partner solution providers and can be installed and configured to meet specific business needs.
 
 The extensions include VTEX IO apps, payment connectors, and marketplace integrations. These solutions are available in the [VTEX App Store](https://apps.vtex.com/).
-	
+ 
 ## Custom components
 
 When building a store, you can leverage existing VTEX IO apps or create custom apps to add new components and extend the platform’s capabilities.
