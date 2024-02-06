@@ -18,19 +18,21 @@ You must activate the tax integration by configuring the `orderForm`, a object t
 
 Check the flow of `orderForm` configuration below:
 
-<img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-services-specification-0.svg"/>
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-services-specification-0.svg)
+
 
 To activate the tax integration, first it is necessary to get the current `orderForm` settings using the [Get `orderForm` configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm?endpoint=get-/api/checkout/pvt/configuration/orderForm).
-
+In the request response, the `taxConfiguration` object has the tax information that must be updated.
 In the request response, the `taxConfiguration` object has the tax information that must be updated. 
 
 ```json
   "taxConfiguration": {
-        "url": "https://accountname.myvtex.com/tax-service/order-tax",
+        "url": "https://{accountName}.myvtex.com/tax-service/order-tax",
         "authorizationHeader": "99b9935b048dfd86893d0bf9gas628849",
+        "appId": 1,
         ...
     },
-  "isMarketplaceResponsibleFoTaxes": false
+  "isMarketplaceResponsibleForTaxes": false
 ```
 
 Then, Checkout settings can be updated via [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm?endpoint=post-/api/checkout/pvt/configuration/orderForm) endpoint.
@@ -39,13 +41,16 @@ The most important data in the `taxConfiguration` object is the `url`. This is t
 
 The `authorizationHeader` defines the value that the Checkout will use in the `Authorization` header of calls to the external tax calculation API. This field can be used to define the access credentials for this API.
 
+The `isMarketplaceResponsibleForTaxes` indicates whether the marketplace is responsible for defining taxes for the products (`true`) or if the responsibility lies with the seller (`false`).
+
 ```json
   "taxConfiguration": {
         "url": "{Tax provider URL}",
         "authorizationHeader": "{Tax provider authorization header}",
+        "appId": 1,
         ...
     },
-  "isMarketplaceResponsibleFoTaxes": true,
+  "isMarketplaceResponsibleForTaxes": true,
   ...
 ```
 
@@ -205,7 +210,6 @@ Below is an example for values that may be contained in these fields, and you ca
 ```
 
 ```html
-{
   "html": "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n\n\n<a href=\"tax-service-integration-guide\"<button type=\"button\" class=\"btn btn-outline-secondary\">Back</button></a>\n\n<style></style>"
 }
 ```
