@@ -10639,6 +10639,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Best practices on workspaces management",
+                  "slug": "vtex-io-documentation-workspaces-best-practices",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
