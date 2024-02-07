@@ -14,7 +14,7 @@ This guide explains how to use the [Message Center API](https://developers.vtex.
 
 ## DKIM endpoint
 
-To create a DKIM key for your domain, it is necessary to use the `POST` [Generate DKIM keys](https://developers.vtex.com/docs/api-reference/message-center-api?endpoint=post-/api/mail-service/pvt/providers/-EmailProvider-/dkim) endpoint from Message Center API, as follows:
+It is necessary to use the `POST` [Generate DKIM keys](https://developers.vtex.com/docs/api-reference/message-center-api?endpoint=post-/api/mail-service/pvt/providers/-EmailProvider-/dkim) endpoint from Message Center API, as follows:
 
 `POST https://{accountName}.{environment}.com/api/mail-service/pvt/providers/{EmailProvider}/dkim`
 
@@ -25,6 +25,8 @@ To create a DKIM key for your domain, it is necessary to use the `POST` [Generat
 See the [Message Center API](https://developers.vtex.com/docs/api-reference/message-center-api?endpoint=post-/api/mail-service/pvt/providers/-EmailProvider-/dkim) reference for more details.
 
 ## Generating a DKIM key for your domain
+
+Follow the steps below to create a DKIM key for your domain:
 
 1. Make a request to the `POST` [Generate DKIM keys](https://developers.vtex.com/docs/api-reference/message-center-api?endpoint=post-/api/mail-service/pvt/providers/-EmailProvider-/dkim) endpoint.
 
@@ -54,11 +56,11 @@ See the [Message Center API](https://developers.vtex.com/docs/api-reference/mess
     }
     ```
 
-5. Once you have clicked the confirmation link, test your SMTP configuration by clicking the ✅**Test** button, as shown in the image below.
+5. Once you have clicked the confirmation link, test your SMTP configuration on VTEX Admin at **Email Templates > Senders** by clicking the ✅**Test** button, as shown in the image below.
 
     ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-dkim-for-transactional-emails-1.png)
 
-    After clicking ✅**Test** button, you should receive an email from the VTEX mail server using the sender you selected. The email message sent follows the [Message Center template](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/335JZKUYgvYlGOJgvJYxRO) `messageservice_teste_email`, which can be customized as in the image below.
+    You should receive an email from the VTEX mail server using the sender you selected. The email message sent follows the Message Center template `messageservice_teste_email`, which you can customize as in the image below by following the [How to create and edit transactional email templates](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/335JZKUYgvYlGOJgvJYxRO) guide.
 
     ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-dkim-for-transactional-emails-2.png)
 
