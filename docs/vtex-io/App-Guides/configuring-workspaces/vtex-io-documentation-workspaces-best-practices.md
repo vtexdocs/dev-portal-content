@@ -1,5 +1,5 @@
 ---
-title: "Best practices on wokspaces management"
+title: "Best practices on workspaces management"
 slug: "vtex-io-documentation-workspaces-best-practices"
 hidden: false
 createdAt: "2023-02-07T16:08:55.480Z"
@@ -29,8 +29,6 @@ Never develop a Store Theme or other apps directly in the production workspace. 
 
 To provide a structured process and avoid errors and loss of content, the collaboration must be done by utilizing pull requests for proposing and reviewing changes. These pull requests must be well-documented, fostering discussion and ensuring that modifications meet quality standards before merging.
 
-The code versioning
-
 ## Testing and Quality Assurance
 
 - **Pre-production testing**: Before moving any changes to the production workspace, conduct your tests in the development workspace to ensure all functionalities are working as expected.
@@ -39,7 +37,7 @@ The code versioning
 
 - **A/B testing**: Before promoting the production workspace to master, [run A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) to compare traffic between these workspaces. This test reveals which version is best for your business needs.
 
-## Deployment and workspace promotion 
+## Deployment and workspace promotion
 
 - **Checkout UI Custom**: if your store uses the [Checkout UI Custom](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0) app, you must first publish its configurations on your new production workspace. Otherwise, you might lose the Checkout custom Javascript code and styles.
 
@@ -47,11 +45,11 @@ The code versioning
 
 The **Site Editor** is always linked to the workspace, meaning that changes made in a specific workspace do not reflect in others. The master workspace is the only environment where changes made in Site Editor reflect in the live store.
 
-- **Updating live stores**: When performing a major update on your Store Theme, be aware of the steps outlined in [our documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) to avoid loss of content. 
+- **Updating live stores**: When performing a major update on your Store Theme, be aware of the steps outlined in [our documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) to avoid loss of content.
 
 It is crucial that the same `threepath` structure be maintained in the new major, as changes to it result in a content loss in the Site Editor and potential store breakdown. If you need to change the `threepath` structure, it is necessary to configure the Site Editor again.
 
-### Do’s and Don’ts
+## Do’s and Don’ts
 
 |✅ Do|❌ Don't|
 |-----|-------|
