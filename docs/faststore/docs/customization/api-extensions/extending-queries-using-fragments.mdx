@@ -4,21 +4,20 @@ sidebar_label: 'API Extensions'
 slug: extending-queries-using-fragments
 ---
 
-After [defining the new fields exposed by the FastStore API Extension](/docs/api-extension/extending-api-schema), the next step is to specify where these fields will be utilized within GraphQL fragments.
+After [defining the new fields exposed by the FastStore API Extension](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema), the next step is to specify where these fields will be used within GraphQL fragments.
 
-[Fragments](https://graphql.org/learn/queries/#fragments) in GraphQL are reusable units that enhance query functionality. FastStore associates these fragments with the existing queries used on its pages to incorporate the newly exposed fields.
+[Fragments](https://graphql.org/learn/queries/#fragments) in GraphQL are reusable units that enhance query functionality. FastStore associates these fragments with the existing queries on its pages to incorporate the newly exposed fields.
 
-> ℹ️ To access the list of queries and their corresponding fragments, refer to the [extendable queries](/docs/api-extension/extending-queries-using-fragments#extendable-queries) section.
+> ℹ️ To access the list of queries and their corresponding fragments, check the [extendable queries](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-queries-using-fragments) section.
 
-follow the steps below to add custom fields to an [existing query](/docs/api-extensions#extendable-queries). We will use the `ServerProduct` query as an example to illustrate how to extend.
+Follow the steps below to add custom fields to an [existing query](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-queries-using-fragments#extendable-queries). We will use the `ServerProduct` query as an example to illustrate how to extend it.
 
 ---
-
-## Before you start
+## Before you begin
 
 ### Avoid over-fetching data on pages
-
-Even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. See the [best practices for fetching data on your storefront](https://v1.faststore.dev/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data).
+ 
+Even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. See the [best practices for fetching data on your storefront](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview#best-practices-for-fetching-data).
 
 ---
 
@@ -26,22 +25,25 @@ Even though you can add information to the FastStore API schema, you must be car
 
 ### Step 1: Create a new file
 
-1. In the `src` folder of your store code, create the `fragments` folder.
+1. In the `src` folder of your store code, create a `fragments` folder.
 
   ```bash
   mkdir fragments
-  ```
+```
 
-2. In the `fragments` folder, create the file named `ServerProduct.ts`.
+2. In the `fragments` folder, create a file named `ServerProduct.ts`. 
 
   ```bash
   touch ServerProduct.ts
-  ```> ⚠️ The name of the file should match the name of the query you want to extend without the Query suffix. In our example we're extending the `ServerProductQuery`, so the fragment file must be `ServerProduct.ts`.
+  ```
+
+> ⚠️ The file name should match the name of the query you want to extend.
 
 ### Step 2: Define the GraphQL fragment
-In the `ServerProduct.ts` file, define the GraphQL fragment corresponding to the new fields you want. In this example, the new field is represented by `customData` property to retrieve. Use the following syntax as a guideline:
 
-```ts copy filename="src/fragments/ServerProduct.ts"
+In the `ServerProduct.ts` file, define the GraphQL fragment corresponding to the new fields you want to retrieve. In this example, the `customData` property represents the new field. Use the following syntax as a guideline:
+
+```ts src/fragments/ServerProduct.ts
 
 import { gql } from '@faststore/core/api'
 
@@ -53,8 +55,15 @@ export const fragment = gql`
   }
 `
 ```
+Now, you can consume `customData` by following the [Consuming FastStore API extension with custom components](/docs/api-extensions/consuming-api-extensions) guide.
 
-Now, you can consume `customData` by following the [Consuming FastStore API extension with custom components](/docs/guides/faststore/api-extensions-consuming-api-extensions) guide.
+## Extendable queries
+
+Extendable queries in FastStore's GraphQL API are predefined queries that form the basis for fetching data from the API. 
+These queries enable customization by adding or changing fields to align data retrieval with your store-specific requirements.
+
+
+### Query: `ClientProductGalleryQuery`
 
 ## Extendable Queries
 
