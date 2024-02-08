@@ -14,16 +14,14 @@ To know more about how to implement a client to connect your tax calculation pro
 
 ## Tax integration via Checkout API
 
-You must activate the tax integration by configuring the `orderForm`, a object that stores contextual information about the order. This data is essencial to the checkout process of the order.
+You must activate the tax integration by configuring the `orderForm`, an object that stores contextual information about the order. This data is essential to the checkout process of the order.
 
 Check the flow of `orderForm` configuration below:
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-services-specification-0.svg)
-
+![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-service-flow-specification.png)
 
 To activate the tax integration, first it is necessary to get the current `orderForm` settings using the [Get `orderForm` configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm?endpoint=get-/api/checkout/pvt/configuration/orderForm).
 In the request response, the `taxConfiguration` object has the tax information that must be updated.
-In the request response, the `taxConfiguration` object has the tax information that must be updated. 
 
 ```json
   "taxConfiguration": {
@@ -37,11 +35,16 @@ In the request response, the `taxConfiguration` object has the tax information t
 
 Then, Checkout settings can be updated via [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm?endpoint=post-/api/checkout/pvt/configuration/orderForm) endpoint.
 
-The most important data in the `taxConfiguration` object is the `url`. This is the external API endpoint of the tax tool that the Checkout will query to receive the calculated taxes.
+The most important data in the `taxConfiguration` object is the `url`. This is the external API endpoint of the tax tool that the Checkout will query to receive the calculated taxes. Here is an endpoint example from [Avalara](https://www.avalara.com/us/en/index.html/):
+
+```http
+    https://sandbox-rest.avatax.com/api/v2/transactions/create
+```
+
 
 The `authorizationHeader` defines the value that the Checkout will use in the `Authorization` header of calls to the external tax calculation API. This field can be used to define the access credentials for this API.
 
-The `isMarketplaceResponsibleForTaxes` indicates whether the marketplace is responsible for defining taxes for the products (`true`) or if the responsibility lies with the seller (`false`).
+The `isMarketplaceResponsibleForTaxes` indicates whether the marketplace is responsible for calculating taxes for the products (`true`) or if the responsibility lies with the seller (`false`).
 
 ```json
   "taxConfiguration": {
@@ -138,16 +141,16 @@ Here is an example of that body sent by Checkout API:
 
 This body has eight main fields:
 
-| Field | Type | Description |
-| - | - | - |
-| `orderFormId` | string | `orderform` ID. |
-| `salesChannel` | string | Type of sales channel. |
-| `items` | array  | List of objects which are the order products, where `dockId` is a field that refers to its identification on the logistics system that contains information of its address. |
-| `totals` | array  | Total amount of the order form, divided into taxes, shipping, discounts, and the items themselves. |
-| `clientEmail` | string | Client's email address. |
-| `shippingDestination` | object | Shipping information. Mandatory field. |
-| `clientData` | object | Information regarding the client that placed the order. |
-| `paymentData` | object | Contains an array of payments, where there is information regarding the order payment. |
+| Field                 | Type   | Description                                                                                                                                                                 |
+| --------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `orderFormId`         | string | `orderform` ID.                                                                                                                                                             |
+| `salesChannel`        | string | Type of sales channel.                                                                                                                                                      |
+| `items`               | array  | List of objects which are the order products, where `dockId` is a field that refers to its identification on the logistics system that contains information of its address. |
+| `totals`              | array  | Total amount of the order form, divided into taxes, shipping, discounts, and the items themselves.                                                                          |
+| `clientEmail`         | string | Client's email address.                                                                                                                                                     |
+| `shippingDestination` | object | Shipping information. Mandatory field.                                                                                                                                      |
+| `clientData`          | object | Information regarding the client that placed the order.                                                                                                                     |
+| `paymentData`         | object | Contains an array of payments, where there is information regarding the order payment.                                                                                      |
 
 ### Tax provider response to the request
 
@@ -173,13 +176,13 @@ In response to the request sent by Checkout, we expect an array of products, eac
 ]
 ```
 
-| Field | Type | Description |
-| - | - | - |
-| `id` | string | Request item index, which means the SKU's position on the `items` array sent by the request body. |
-| `taxes` | array | List of all the taxes types for an SKU. |
-| `name` | string | Tax name that will appear on the checkout. |
-| `description` | string | Informative field, which does not appear on the storefront. |
-| `value` | number | Absolute numeric value that will be added to the original price. |
+| Field         | Type   | Description                                                                                       |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------- |
+| `id`          | string | Request item index, which means the SKU's position on the `items` array sent by the request body. |
+| `taxes`       | array  | List of all the taxes types for an SKU.                                                           |
+| `name`        | string | Tax name that will appear on the checkout.                                                        |
+| `description` | string | Informative field, which does not appear on the storefront.                                       |
+| `value`       | number | Absolute numeric value that will be added to the original price.                                  |
 
 In the example above, the only item in the items array has a cost of `10`, and, including the calculated taxes returned by the tax calculation tool, the total value would be `10 + 3.48 + 22 = 35.48`.
 
@@ -191,9 +194,9 @@ For the Checkout API to understand the request body, the `content-type` must be 
 
 If you use [Avalara](https://www.avalara.com/us/en/index.html) as your tax calculation provider, response bodies might also include the following fields, which refer to the different jurisdictions that may apply according to location.
 
-| Field | Type | Description |
-| - | - | - |
-| `jurisType` | string | Type of jurisdiction that applies to calculation. |
+| Field       | Type   | Description                                               |
+| ----------- | ------ | --------------------------------------------------------- |
+| `jurisType` | string | Type of jurisdiction that applies to calculation.         |
 | `jurisCode` | string | Unique code that identifies the appropriate jurisdiction. |
 | `jurisName` | string | Name of the jurisdiction that applies to the calculation. |
 
@@ -203,10 +206,46 @@ Below is an example for values that may be contained in these fields, and you ca
 
 ```json
 {
-  "jurisType": "State",
-  "jurisCode": "20",
-  "jurisName": "Kansas"
-}
+	"Id": "0",
+	"taxes": [
+      {
+        "name": "NY STATE TAX: NEW YORK",
+        "description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
+        "rate": 0.04,
+        "value": 1.4,
+        "jurisCode": "36",
+        "jurisType": "State",
+        "jurisName": "NEW YORK"
+      },
+      {
+        "name": "NY COUNTY TAX: ERIE",
+        "description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
+        "rate": 0.0475,
+        "value": 1.66,
+        "jurisCode": "029",
+        "jurisType": "County",
+        "jurisName": "ERIE"
+      },
+      {
+        "name": "NY STATE TAX: NEW YORK (SHIPPING)",
+        "description": "freight",
+        "rate": 0.04,
+        "value": 0.17,
+        "jurisCode": "36",
+        "jurisType": "State",
+        "jurisName": "NEW YORK"
+      },
+      {
+        "name": "NY COUNTY TAX: ERIE (SHIPPING)",
+        "description": "freight",
+        "rate": 0.0475,
+        "value": 0.2,
+        "jurisCode": "029",
+        "jurisType": "County",
+        "jurisName": "ERIE"
+      }
+	  ]
+  }
 ```
 
 ```html
