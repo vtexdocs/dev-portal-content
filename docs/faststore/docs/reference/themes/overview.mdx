@@ -8,7 +8,7 @@ seeAlso:
 
 ---
 
-By default, every FastStore project comes with the [Brandless theme](/docs/theming-overview#brandless-and-the-theming-structure). However, you have the option to use one of the [available themes](#available-themes) or [create a custom theme](#creating-a-custom-theme).
+By default, every FastStore project comes with the [Brandless theme](https://developers.vtex.com/docs/guides/faststore/using-themes-overview#brandless-and-the-theming-structure). However, you have the option to use one of the [available themes](#available-themes) or [create a custom theme](#creating-a-custom-theme).
 
 > ℹ️ You have the flexibility and freedom to style the theme by overriding it using global or local tokens, or by starting from scratch using your preferred styling tool.
 
@@ -36,7 +36,8 @@ By default, every FastStore project comes with the [Brandless theme](/docs/themi
 
 ## Creating a Custom Theme
 
-1. Create a new `.scss` file on `src/themes` (e.g. `my-theme.scss`) in your [starter](https://github.com/vtex-sites/starter.store), then add the tokens you want to overwrite inside the `.theme` class.
+1. Open your starter project and create a new `.scss` file on `src/themes` (e.g. `my-theme.scss`).
+2. Add the tokens you want to overwrite inside the `.theme` class.
 
 > ℹ️ If you want, you can work on `custom-theme.scss` file that's ready to use. We are using [CSS cascade layers](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) feature to better deal with styling specificities issues, so keeping the `@layer theme` in the file is recommended.
 
@@ -76,7 +77,7 @@ By default, every FastStore project comes with the [Brandless theme](/docs/themi
 }
 ```
 
-2. Go to `faststore.config.js` and changes the `theme` from `custom-theme` to your file's name:
+3. Go to `faststore.config.js` and change the `theme` from `custom-theme` to your file's name, for example:
 
 ```js faststore.config.js
 theme: 'my-theme',
