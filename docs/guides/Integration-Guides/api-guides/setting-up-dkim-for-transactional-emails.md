@@ -41,7 +41,7 @@ Follow the steps below to create a DKIM key for your domain:
     
 2. Follow [this guide](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP#senders) to set up a sender on Message Center.
 
-    Once the sender has been set up, you should receive an email from Amazon Web Services requesting you to authorize the configured email address to use [Amazon SES](https://aws.amazon.com/ses/), as illustrated below.
+    Once the sender has been set up, you should receive an email from Amazon Web Services requesting you to authorize the configured email address to use [Amazon SES](https://aws.amazon.com/ses/), as illustrated below:
     
     ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-dkim-for-transactional-emails-0.png)
 
@@ -56,7 +56,7 @@ Follow the steps below to create a DKIM key for your domain:
     }
     ```
 
-5. Once you have clicked the confirmation link, test your SMTP configuration on VTEX Admin at **Email Templates > Senders** by clicking the ✅**Test** button, as shown in the image below.
+5. Once you have clicked the confirmation link, test your SMTP configuration on VTEX Admin at **Email Templates > Senders** by clicking the ✅**Test** button, as shown in the image below:
 
     ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-dkim-for-transactional-emails-1.png)
 
