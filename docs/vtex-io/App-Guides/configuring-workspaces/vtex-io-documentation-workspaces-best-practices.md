@@ -3,7 +3,7 @@ title: "Best practices on workspaces management"
 slug: "vtex-io-documentation-workspaces-best-practices"
 hidden: false
 createdAt: "2023-02-07T16:08:55.480Z"
-updatedAt: "2023-02-07T17:02:55.480Z"
+updatedAt: "2023-02-09T18:06:45.350Z"
 excerpt: "Learn how to manage workspaces effectively"
 ---
 
@@ -54,4 +54,3 @@ It is crucial that the same `threepath` structure be maintained in the new major
 |✅ Do|❌ Don't|
 |-----|-------|
 |<ul><li>Create a development workspace to start any development work.</li><li>When developing a Store Theme, ensure your VTEX account has the Store Edition app installed.</li><li>Utilize appropriate tools, such as GitHub, to handle code versioning in your projects.</li><li>Run A/B tests before promoting a production workspace to master.</li><li>Feel free to perform tests in the Site Editor of your development workspace, as changes will not be reflected in others.</li></ul>|<ul><li>Use subaccounts to develop a Store Theme or other apps.</li><li>Start any development work in a production workspace.</li><li>Make changes in any module of VTEX Core Services when using a development or production workspace.</li><li>Change the `threepath` structure when updating a Store Theme.</li></ul>|
-
