@@ -12,10 +12,22 @@ As a developer, you are responsible not only for creating custom frontend soluti
 
 ## Before you begin
 
-Before you start this guide, make sure you have:
+Before you proceed, please ensure the following:
 
-- Access to a VTEX account.
-- Associated the following resources with your VTEX user role to be able to manage the Headless CMS:
+<Steps>
+
+### Access to a VTEX account.
+
+Ensure you have a VTEX account to set up the Headless CMS with a FastStore project.
+
+### Set up your FastStore project
+
+If you do not have a FastStore project, refer to the [Setting up the project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project) guide.
+
+
+### Set up CMS resources with your VTEX user role
+
+You must have the following resources with your VTEX user role to be able to manage the Headless CMS:
 
 | **Product** | **Category** | **Resource** |
 | --------------- | ----------------- | ----------------- |
@@ -25,7 +37,7 @@ Before you start this guide, make sure you have:
 
 To associate a role with the resources above you can [create a custom role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#creating-a-role) or edit an existing one.
 
-- Set up your FastStore project. For more information, see [Setting up the project](/docs/getting-started/2-setting-up-the-project).
+</Steps>
 
 ---
 
@@ -33,7 +45,7 @@ To associate a role with the resources above you can [create a custom role](http
 
 Headless CMS is a headless content management system that allows users to store content in a decoupled data layer and deliver it as structured data to their FastStore project via an API. 
 
-After successfully completing the [FastStore Onboarding process](/docs/guides/faststore/getting-started-1-faststore-onboarding-overview), the app will be installed in your VTEX account. To access it go to the VTEX Admin and navigate to **Storefront > Headless CMS**.
+After successfully completing the [FastStore Onboarding process](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview), the app will be installed in your VTEX account. To access it go to the VTEX Admin and navigate to **Storefront > Headless CMS**.
 The CMS provides a list of all web pages created with it, which is initially empty but populates as editors create new pages.
 
 Notice that each page created with the Headless CMS is related to a specific URL and is distinguished by the following properties:
@@ -52,10 +64,10 @@ Once editors click on **Create New** in the Headless CMS interface, they'll be a
 
 ### Sections
 
-For each Content Type, different **Sections** will be available to compose that page. Sections represent the content structure of a React component, for example, the [Alert](/docs/guides/faststore/molecules-alert).
+For each Content Type, different **Sections** will be available to compose that page. Sections represent the content structure of a React component, for example, the [Alert](https://developers.vtex.com/docs/guides/faststore/molecules-alert).
 
 ![CMS Section](https://vtexhelp.vtexassets.com/assets/docs/src/cms-sections___ccc8b00d73f222d249a009eb195c8e0c.png)
 
-Sections can be reused in different pages of an ecommerce. You are the one who will choose which Sections will be available at the CMS. Check the following example of the [*Hero Section*](/docs/guides/faststore/organisms-hero) being used:
+Sections can be reused in different pages of an ecommerce. You are the one who will choose which Sections will be available at the CMS. Check the following example of the [Hero Section](https://developers.vtex.com/docs/guides/faststore/organisms-hero) being used:
 
 ![Hero Section](https://vtexhelp.vtexassets.com/assets/docs/src/headless-example-hero___7cbbc99654d6607f50c013053b1348ca.png)
