@@ -19,7 +19,6 @@ You must activate the tax integration by configuring the `orderForm`, an object 
 Check the flow of `orderForm` configuration below:
 
 ![Tax integration flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-service-flow-specification.png)
-
 To activate the tax integration, first it is necessary to get the current `orderForm` settings using the [Get `orderForm` configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm?endpoint=get-/api/checkout/pvt/configuration/orderForm).
 In the request response, the `taxConfiguration` object has the tax information that must be updated.
 
