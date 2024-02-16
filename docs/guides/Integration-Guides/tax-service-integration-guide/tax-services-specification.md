@@ -6,11 +6,11 @@ createdAt: "2020-09-01T16:35:02.523Z"
 updatedAt: "2022-02-11T15:38:54.137Z"
 ---
 
-In synchronous integration, VTEX’s [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) triggers and sends a request to the external tax service API whenever there are changes to a customer’s cart, such as adding or removing items.
+In synchronous integration, VTEX’s [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) triggers and sends a request to the external tax service API whenever there are changes to a shopper’s cart, such as adding or removing items.
 
 To know more about how to implement a client to connect your tax calculation provider to VTEX’s APIs, the [Tax Service recipe](https://developers.vtex.com/docs/guides/tax-services-recipe) and [example](https://developers.vtex.com/docs/guides/tax-services-reference-implementation).
 
->⚠️ Timeout for the request is five seconds. There is no retry in case of timeout. If the external service that responds to the request times out constantly, the store will not be able to finish the order. If this integration is active, it applies to all stores in that account.
+>⚠️ Timeout for the request is five seconds. There is no retry in case of timeout. If the external service that responds to the request timed out constantly, the store will not be able to finish the order. If this integration is active, it applies to all stores in that account.
 
 ## Tax integration via Checkout API
 
@@ -18,19 +18,20 @@ You must activate the tax integration by configuring the `orderForm`, an object 
 
 Check the flow of `orderForm` configuration below:
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-service-flow-specification.png)
+![Tax integration flow](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-service-flow-specification.png)
 
 To activate the tax integration, first it is necessary to get the current `orderForm` settings using the [Get `orderForm` configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm?endpoint=get-/api/checkout/pvt/configuration/orderForm).
 In the request response, the `taxConfiguration` object has the tax information that must be updated.
 
 ```json
-  "taxConfiguration": {
+    "taxConfiguration": {
         "url": "https://{accountName}.myvtex.com/tax-service/order-tax",
         "authorizationHeader": "99b9935b048dfd86893d0bf9gas628849",
-        "appId": 1,
+	      "appId": "tradeincart",
         ...
     },
-  "isMarketplaceResponsibleForTaxes": false
+  "isMarketplaceResponsibleForTaxes": false,
+   ...
 ```
 
 Then, Checkout settings can be updated via [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm?endpoint=post-/api/checkout/pvt/configuration/orderForm) endpoint.
@@ -41,18 +42,19 @@ The most important data in the `taxConfiguration` object is the `url`. This is t
     https://sandbox-rest.avatax.com/api/v2/transactions/create
 ```
 
-
 The `authorizationHeader` defines the value that the Checkout will use in the `Authorization` header of calls to the external tax calculation API. This field can be used to define the access credentials for this API.
 
 The `isMarketplaceResponsibleForTaxes` indicates whether the marketplace is responsible for calculating taxes for the products (`true`) or if the responsibility lies with the seller (`false`).
+
+>⚠️ The `isMarketplaceResponsibleForTaxes` feature is not compatible with stores that have [Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) implemented.
 
 ```json
   "taxConfiguration": {
         "url": "{Tax provider URL}",
         "authorizationHeader": "{Tax provider authorization header}",
-        "appId": 1,
+        "appId": "tradeincart",
         ...
-    },
+  },
   "isMarketplaceResponsibleForTaxes": true,
   ...
 ```
@@ -75,8 +77,10 @@ Here is an example of that body sent by Checkout API:
        {
          "id": "0",
          "sku": "26",
+         "productId": "12",
          "ean": "12345678909123",
-         "refId": null,
+         "refId": "3432",
+	       "categoryId": "3",
          "unitMultiplier": 1,
          "measurementUnit": "un",
          "targetPrice": 8.2,
@@ -85,7 +89,9 @@ Here is an example of that body sent by Checkout API:
          "discountPrice": 0,
          "dockId": "1125a08",
          "freightPrice": 0,
-         "brandId": "2000002"
+         "brandId": "2000002",
+         "taxCode": "PC040210",
+         "sellerId": "1"
        }
      ],
      "totals": [
@@ -122,8 +128,9 @@ Here is an example of that body sent by Checkout API:
      "clientData": {
        "email": "client@email.com",
        "document": "12345678909",
-       "corporateDocument": null,
-       "stateInscription": null
+       "documentType": "cpf",
+       "clientProfileData": "12345678000100",
+       "stateInscription": "12345678"
      },
      "paymentData": {
        "payments": [
@@ -135,7 +142,22 @@ Here is an example of that body sent by Checkout API:
            "installments": null
          }
        ]
-     }
+     },
+    "taxApp": {
+        "fields": {
+            "isTradeIn": "Yes",
+            "productuid": "15216842581",
+            "quoteuid": "29882961591",
+            "condition": "working",
+            "tradeInPrice": "220.00",
+            "title": "ROG Phone II 512GB",
+            "productIdApplied": "404",
+            "uid": "29882961591",
+            "taxBase": "1399.99"
+        },
+        "id": "tradeincart",
+        "major": 1
+    }
 }
 ```
 
@@ -151,10 +173,11 @@ This body has eight main fields:
 | `shippingDestination` | object | Shipping information. Mandatory field.                                                                                                                                      |
 | `clientData`          | object | Information regarding the client that placed the order.                                                                                                                     |
 | `paymentData`         | object | Contains an array of payments, where there is information regarding the order payment.                                                                                      |
+| `taxApp`         | object | Contains an object with custom fields specific to the tax application.                                                                                      |
 
 ### Tax provider response to the request
 
-In response to the request sent by Checkout, we expect an array of products, each with its own array of taxes. See the example below:
+In response to the request sent by Checkout, it is expected an array of products, each with its own array of taxes. See the example below:
 
 ```json
 [
@@ -208,47 +231,42 @@ Below is an example for values that may be contained in these fields, and you ca
 {
 	"Id": "0",
 	"taxes": [
-      {
-        "name": "NY STATE TAX: NEW YORK",
-        "description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
-        "rate": 0.04,
-        "value": 1.4,
-        "jurisCode": "36",
-        "jurisType": "State",
-        "jurisName": "NEW YORK"
-      },
-      {
-        "name": "NY COUNTY TAX: ERIE",
-        "description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
-        "rate": 0.0475,
-        "value": 1.66,
-        "jurisCode": "029",
-        "jurisType": "County",
-        "jurisName": "ERIE"
-      },
-      {
-        "name": "NY STATE TAX: NEW YORK (SHIPPING)",
-        "description": "freight",
-        "rate": 0.04,
-        "value": 0.17,
-        "jurisCode": "36",
-        "jurisType": "State",
-        "jurisName": "NEW YORK"
-      },
-      {
-        "name": "NY COUNTY TAX: ERIE (SHIPPING)",
-        "description": "freight",
-        "rate": 0.0475,
-        "value": 0.2,
-        "jurisCode": "029",
-        "jurisType": "County",
-        "jurisName": "ERIE"
-      }
-	  ]
+  	{
+    	"name": "NY STATE TAX: NEW YORK",
+    	"description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
+    	"rate": 0.04,
+    	"value": 1.4,
+    	"jurisCode": "36",
+    	"jurisType": "State",
+    	"jurisName": "NEW YORK"
+  	},
+  	{
+    	"name": "NY COUNTY TAX: ERIE",
+    	"description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
+    	"rate": 0.0475,
+    	"value": 1.66,
+    	"jurisCode": "029",
+    	"jurisType": "County",
+    	"jurisName": "ERIE"
+  	},
+  	{
+    	"name": "NY STATE TAX: NEW YORK (SHIPPING)",
+    	"description": "freight",
+    	"rate": 0.04,
+    	"value": 0.17,
+    	"jurisCode": "36",
+    	"jurisType": "State",
+    	"jurisName": "NEW YORK"
+  	},
+  	{
+    	"name": "NY COUNTY TAX: ERIE (SHIPPING)",
+    	"description": "freight",
+    	"rate": 0.0475,
+    	"value": 0.2,
+    	"jurisCode": "029",
+    	"jurisType": "County",
+    	"jurisName": "ERIE"
+  	}
+	]
   }
-```
-
-```html
-  "html": "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n\n\n<a href=\"tax-service-integration-guide\"<button type=\"button\" class=\"btn btn-outline-secondary\">Back</button></a>\n\n<style></style>"
-}
 ```
