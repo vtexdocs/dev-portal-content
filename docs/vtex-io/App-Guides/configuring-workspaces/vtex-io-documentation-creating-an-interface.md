@@ -4,12 +4,11 @@ When developing a [Pixel App](https://developers.vtex.com/docs/guides/vtex-io-do
 
 Considering your [Pixel App](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps) is already developed, follow the steps below.
 
-
 ## Step by step
 
 ### Creating an interface
 
-1. Open the `manifest.json` file. 
+1. Open the `manifest.json` file.
 2. Ensure that the `pixel` [builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) is properly declared within it, as shown in the following example:
 
    ```json
@@ -77,4 +76,4 @@ Below is an example of how to retrieve the app settings from your app:
     },
    ```
 
-This code is part of a GraphQL server within a VTEX IO context, where interaction with apps occurs through specific clients, such as the `apps` client used in this example. When the `getConfig` query is employed, it retrieves the app settings defined in the `manifest.json` file for that specific app. 
+This code is part of a GraphQL server within a VTEX IO context, where interaction with apps occurs through specific clients, such as the `apps` client used in this example. When the `getConfig` query is employed, it retrieves the app settings defined in the `manifest.json` file for that specific app.
