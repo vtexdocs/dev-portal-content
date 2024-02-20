@@ -23,7 +23,7 @@ Based on the Google Tag Manager example above, below is a step-by-step guide on 
 
 ### Creating an interface
 
-Open the `manifest.json` file. 
+Open the `manifest.json` file.
 Ensure that the appropriate [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) are properly declared within it, as shown in the following example:
 
 ```json
@@ -91,9 +91,9 @@ Below is an example of each case.
 
 #### Storefront apps
 
-The [storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) are composed by React components that provide frontend solutions. 
+The [storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) are composed by React components that provide frontend solutions.
 
-Below is an example of how to retrieve into your React app the app settings configured within the `settingsSchema` field. 
+Below is an example of how to retrieve into your React app the app settings configured within the `settingsSchema` field.
 
 ```gql
 query getSettings {
