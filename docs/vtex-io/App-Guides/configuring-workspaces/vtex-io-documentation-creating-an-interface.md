@@ -62,7 +62,7 @@ Considering the example of the Google Tag Manager interface shown previously, th
         "type": "boolean"
       }
     }
-  },
+  }
 ```
 
 This code defines a schema for settings UI that interacts with Google Tag Manager app. Below, you can better understand the configured fields:
@@ -130,7 +130,7 @@ getConfig: async (_: any, __: any, ctx: Context) => {
        error,
      })
    })
- },
+ }
 ```
 
 This code is part of a GraphQL server within a VTEX IO context, where interaction with apps occurs through specific clients, such as the `apps` client used in this example. When the `getConfig` query is employed, it retrieves the app settings defined in the `manifest.json` file for that specific app.
