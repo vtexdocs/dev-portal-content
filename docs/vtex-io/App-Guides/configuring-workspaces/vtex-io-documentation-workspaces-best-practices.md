@@ -45,7 +45,7 @@ Implement these best practices to deploy changes and promote workspaces seamless
 
 - **[Store Framework] Site Editor behavior**: Note that the **Site Editor** is always linked to the workspace, meaning that changes made in a specific workspace do not reflect in others. The master workspace is the only environment where changes made in Site Editor reflect in the live store.
 
-- **[Store Framework] Updating live stores**: When performing a major update on your Store Theme, be aware of the steps outlined in the [Migrating CMS setting after a major theme update]((https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) guide to avoid loss of content.
+- **[Store Framework] Updating live stores**: When performing a major update on your Store Theme, be aware of the steps outlined in the [Migrating CMS setting after a major theme update](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update) guide to avoid loss of content.
 
 It is crucial that the same `treePath` structure be maintained in the new major, as changes to it result in a content loss in the Site Editor and potential store breakdown. If you need to change the `treePath` structure, make sure to configure the Site Editor again.
 
