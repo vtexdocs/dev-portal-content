@@ -34,13 +34,14 @@ title: "Molecules"
   >
     <BuyButton>Buy Now</BuyButton>
   </CardItem>
-  {/* <CardItem
+
+  <CardItem
     title="Carousel"
     description="Slides through multiple elements using custom controls."
     actionPath="/docs/guides/faststore/molecules-carousel"
   >
     <CarouselUsage />
-  </CardItem> */}
+  </CardItem>
   <CardItem
     title="Cart Item"
     description="Used to present the summarized information of a product inside the Cart."
@@ -200,6 +201,17 @@ title: "Molecules"
     actionPath="/docs/guides/faststore/molecules-product-title"
     fullWidth
   >
+  <CardItem
+    title="Product Price"
+    description="Displays product's selling and listing prices."
+    actionPath="/components/molecules/product-price"
+  >
+    <ProductPrice
+      value={950.04}
+      listPrice={999}
+      formatter={useFormattedPrice}
+    />
+  </CardItem>
     <ProductTitle
       title={<h1>Apple Mouse</h1>}
       label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
