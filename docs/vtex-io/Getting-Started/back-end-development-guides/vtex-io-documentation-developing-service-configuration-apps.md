@@ -75,16 +75,6 @@ In the `node/service.json` file, add `"settingsType": "workspace"` to define whi
 }
 ```
 
-You also have to declare the required [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) for the service app be able to read the data from the configuration app. In the `manifest.json` file, add the following policy in the `"policies"` list:
-
-```json
-"policies": [
-  {
-    "name": "read-workspace-apps"
-  }
-]
-```
-
 It is also possible to define your configurations through event listening. In this case, you should add in the `node/service.json` file something similar to the example below, replacing the values according to your needs:
 
 ```json
@@ -119,7 +109,19 @@ Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app a
 
 </details>
 
-### Step 3 - Setting up the `configuration` builder
+### Step 3 - Declaring policies and permissions
+
+You have to declare the required [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) that gives permission to the service app to read the data from the configuration app. In the `manifest.json` file, add the following policy in the `"policies"` list:
+
+```json
+"policies": [
+  {
+    "name": "read-workspace-apps"
+  }
+]
+```
+
+### Step 4 - Setting up the `configuration` builder
 
 1. Open the app's `manifest.json` file and add the `configuration` builder to the `builders` list. Also, update the `name` and `vendor` fields according your scenario. For example:
 
@@ -150,11 +152,11 @@ Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app a
 
    In the example above, the accepted configuration is an object with two keys: `id` and `name`, where the first is a number, and the second is a string.
 
-### Step 4 - Deploying the Service app
+### Step 5 - Deploying the Service app
 
 Save your changes and then [deploy your new Service app](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
 
-### Step 5 - Linking the Configuration app to the Service app
+### Step 6 - Linking the Configuration app to the Service app
 
 Once your Service app is deployed, it is ready to receive configurations from other apps.
 
