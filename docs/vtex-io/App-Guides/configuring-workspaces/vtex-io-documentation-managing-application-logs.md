@@ -91,7 +91,7 @@ vtex logs --all
   routeId: 'login' }
 ```
 
-> ℹ️ You can also retrieve logs from a specific app installed in your account by running the following command: `vtex logs {account}.{serviceAppExample}`. Remeber to replace `account` with your account name and `serviceAppExample` with the desired app name.
+> ℹ️ You can also retrieve logs from a specific app installed in your account by running the following command: `vtex logs {serviceAppExample}`. Remeber to replace `serviceAppExample` with the desired app name.
 
 We suggest running `vtex logs --all > {mylogfile.logs}` to save the log messages in a local file. Replace `{mylogfile.logs}` with the most suitable name for you.
 
