@@ -21,17 +21,9 @@ v=spf1 include:server.com include:amazonses.com ~all
 
 All `include` mechanisms should be set up to add a new SPF. See the example below to understand how to add `include:amazonses.com` if there is already another `include` mechanism:
 
-Before:
-
-```spf
-v=spf1 include:websitewelcome.com include:_spf.google.com ~all
-```
-
-After:
-
-```spf
-v=spf1 include:websitewelcome.com include:_spf.google.com include:amazonses.com ~all
-```
+| Before | After |
+|-|-|
+| `v=spf1 include:websitewelcome.com include:_spf.google.com ~all` | `v=spf1 include:websitewelcome.com include:_spf.google.com include:amazonses.com ~all` |
 
 >⚠️ Do not create duplicated entries or entries mixed with other values to avoid possible validation errors.
 
