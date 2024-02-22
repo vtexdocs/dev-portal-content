@@ -22,7 +22,7 @@ The configuration of your service depends on the selected builder  (`node` or `d
 
 Here's an example of a `service.json` file:
 
-```json
+```json service.json
 {
   "memory": 256,
   "ttl": 10,
@@ -44,11 +44,11 @@ Let's delve into the parameters you can set within the `service.json` file:
 
 |Name  |Type  |Description  |
 |--|--| -- |
-|`events` | `object` |Maps a event handler to an object that describes sender or keys.|
+|`events` | `object` |Maps an event handler to an object that describes the sender or keys.|
 |`maxReplicas` | `number` |Defines the maximum number of replicas available.|
 |`minReplicas` | `number` |Defines the minimum number of replicas available when the service is running. |
 |`memory` |`number`  |Allocates the specified memory size (in MB) allocated to the service.|
-|`routes` | `object` |Maps route handlers to objects containining information about the route, such as `path` and `public`.|
+|`routes` | `object` |Maps route handlers to objects containing information about the route, such as `path` and `public`.|
 |`timeout` | `number` |Sets the timeout (in seconds) for aborting a connection if a request takes too long.|
 |`ttl` | `number` | Defines the time-to-live (in minutes) for how long the platform will keep the service running without receiving new requests (Default: 10 minutes; minimum: 10 minutes; maximum: 60 minutes).|
 |`workers` | `number` |Specifies the number of workers to spawn for the service on production. (maximum: 4). |
