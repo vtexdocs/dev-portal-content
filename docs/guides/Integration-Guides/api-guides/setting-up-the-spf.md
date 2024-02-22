@@ -5,49 +5,31 @@ hidden: false
 createdAt: "2021-05-19T19:35:16.057Z"
 updatedAt: "2021-05-28T18:40:04.171Z"
 ---
-The SPF (Sender Policy Framework) is a system used to avoid not allowed servers to send emails on behalf of your domain. This system implements rules that verify if the server has a particular policy set up by the domain’s admin.
-
-Check for more information on [the Sender Policy Framework Introduction](https://web.archive.org/web/20080510142749/http://www.openspf.org/Introduction).
+The [SPF (Sender Policy Framework)](http://www.open-spf.org/Introduction/) is a standard that specifies how to prevent unauthorized servers from sending emails on behalf of your domain. This framework implements rules that verify if the server has a particular policy set up by the domain’s admin.
 
 ## Editing the SPF
 
-All `includes` should be set up to add a new SPF. Here is an example of an SPF on VTEX:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "v=spf1 a mx ip4:192.0.2.32/27 include:server.com include:amazonses.com -all",
-      "language": "erlang"
-    }
-  ]
-}
-[/block]
+All `include` mechanisms should be set up to add a new SPF. Here is an example of an SPF on VTEX:
+
+```spf
+v=spf1 include:server.com include:amazonses.com ~all
+```
+
 See the example below to understand the change:
 
 **Before**
-[block:code]
-{
-  "codes": [
-    {
-      "code": "v=spf1 include:websitewelcome.com include:_spf.google.com ~all",
-      "language": "erlang"
-    }
-  ]
-}
-[/block]
-**After**
-[block:code]
-{
-  "codes": [
-    {
-      "code": "v=spf1 include:websitewelcome.com include:_spf.google.com include:amazonses.com ~all",
-      "language": "erlang"
-    }
-  ]
-}
-[/block]
 
->⚠️ It should not exist duplicated entries, or even mixed with other values, to avoid possible validation errors.
+```spf
+v=spf1 include:websitewelcome.com include:_spf.google.com ~all
+```
+
+**After**
+
+```spf
+v=spf1 include:websitewelcome.com include:_spf.google.com include:amazonses.com ~all
+```
+
+>⚠️ Don't create duplicated entries or entries mixed with other values, to avoid possible validation errors.
 
 ## Verifying the SPF
 
@@ -61,6 +43,6 @@ To consult the verification, you need to:
 
 > ℹ️️ The modifications are impacted by the domain propagation time. This can take between 24 or 48 hours to reflect the changes.
 
-Here is a [consult example using the VTEX domain](https://www.digwebinterface.com/?hostnames=vtex.com&type=TXT&ns=resolver&useresolver=8.8.4.4&nameservers=):
+Below, check a [consult example using the VTEX domain](https://www.digwebinterface.com/?hostnames=vtex.com&type=TXT&ns=resolver&useresolver=8.8.4.4&nameservers=):
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-the-spf-0.png)
