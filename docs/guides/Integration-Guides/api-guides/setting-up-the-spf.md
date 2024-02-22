@@ -33,7 +33,7 @@ After:
 v=spf1 include:websitewelcome.com include:_spf.google.com include:amazonses.com ~all
 ```
 
->⚠️ Don't create duplicated entries or entries mixed with other values, to avoid possible validation errors.
+>⚠️ Do not create duplicated entries or entries mixed with other values to avoid possible validation errors.
 
 ## Verifying the SPF
 
