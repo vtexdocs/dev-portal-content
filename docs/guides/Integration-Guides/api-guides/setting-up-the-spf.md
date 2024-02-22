@@ -9,21 +9,25 @@ The [SPF (Sender Policy Framework)](http://www.open-spf.org/Introduction/) is a 
 
 ## Editing the SPF
 
-All `include` mechanisms should be set up to add a new SPF. Here is an example of an SPF on VTEX:
+To understand SPF syntax, we recommend reading [SPF Record Syntax](http://www.open-spf.org/SPF_Record_Syntax/).
+
+VTEX uses `include:amazonses.com`, Amazon's transactional email sending service, used in the default sender of Message Center.
+
+Here is an example of an SPF on VTEX:
 
 ```spf
 v=spf1 include:server.com include:amazonses.com ~all
 ```
 
-See the example below to understand the change:
+All `include` mechanisms should be set up to add a new SPF. See the example below to understand how to add `include:amazonses.com` if there is already another `include` mechanism:
 
-**Before**
+Before:
 
 ```spf
 v=spf1 include:websitewelcome.com include:_spf.google.com ~all
 ```
 
-**After**
+After:
 
 ```spf
 v=spf1 include:websitewelcome.com include:_spf.google.com include:amazonses.com ~all
@@ -33,15 +37,13 @@ v=spf1 include:websitewelcome.com include:_spf.google.com include:amazonses.com 
 
 ## Verifying the SPF
 
-To verify the SPF entries on your domain, we recommend using the DIG tool. You can check the online version on [the Dig web interface](http://www.digwebinterface.com).
+To verify the SPF entries on your domain, we recommend using the [DIG](https://www.digwebinterface.com) tool. Follow the steps below:
 
-To consult the verification, you need to:
-
-1. Fill your domain in **hostnames or IP addresses**.
+1. On the [DIG tool website](https://www.digwebinterface.com/), fill your root domain (e.g. `vtex.com`) in **Hostnames or IP addresses**.
 2. Select **TXT** as **Type**.
 3. Click on **Dig**.
 
-> ℹ️️ The modifications are impacted by the domain propagation time. This can take between 24 or 48 hours to reflect the changes.
+> ℹ️️ The modifications are impacted by the domain propagation time. It can take between 24 or 48 hours for DIG to reflect changes.
 
 Below, check a [consult example using the VTEX domain](https://www.digwebinterface.com/?hostnames=vtex.com&type=TXT&ns=resolver&useresolver=8.8.4.4&nameservers=):
 
