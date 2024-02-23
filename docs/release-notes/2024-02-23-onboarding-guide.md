@@ -13,7 +13,7 @@ To simplify the onboarding process, from the initial architectural planning of t
 
 ## What is the Onboarding Guide?
 
-The Onboarding Guide [introduces]([/link-introdução](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/3QfoDZWg9YWl8lwS9MVrnU)) a set of documentation tracks covering store architecture planning, configurations for go-live, strategies to enhance your business through product evolution, and guidance on leveraging VTEX support services. This guide focuses on the merchant journey, outlining how to strategically plan, set up, and launch their store operations.
+The Onboarding Guide [introduces](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/3QfoDZWg9YWl8lwS9MVrnU) a set of documentation tracks covering store architecture planning, configurations for go-live, strategies to enhance your business through product evolution, and guidance on leveraging VTEX support services. This guide focuses on the merchant journey, outlining how to strategically plan, set up, and launch their store operations.
 
 The Onboarding Guide is divided into three tracks:
 
