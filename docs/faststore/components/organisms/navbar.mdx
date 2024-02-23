@@ -8,19 +8,25 @@ components:
   - NavbarButtons.tsx
 ---
 
-Represents the page header and groups some features like: `Search`, `Regionalization`, `SignIn`, `CartSidebar`. This component is part of the [Navigation](/docs/guides/faststore//feature-navigation) feature.## Import
+Represents the page header and groups some features like: `Search`, `Regionalization`, `SignIn`, `CartSidebar`. This component is part of the [Navigation](https://developers.vtex.com/docs/guides/faststore/feature-navigation) feature.
 
-Import the component from [@faststore/ui](/docs/guides/faststore/components-index)
+## Import
+
+Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
 
 ```tsx
 import { Navbar, NavbarHeader, NavbarRow, NavbarButtons } from '@faststore/ui'
 ```
 
-Import Styles
+### Import Styles into your FastStore project
 
-```tsx
-import '@faststore/ui/src/components/organisms/Navbar/styles.scss'
+To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/organisms/Navbar/styles.scss';
 ```
+
+Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
 
 ---
 
@@ -28,7 +34,7 @@ import '@faststore/ui/src/components/organisms/Navbar/styles.scss'
 
 Uses `NavbarHeader`, `NavbarRow` and `NavbarButtons` as compound components.
 
-The [NavbarLinks](/docs/guides/faststore/molecules-navbar-links) and [NavbarSlider](/docs/guides/faststore/organisms-navbar-slider) components are used as child components.
+The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-navbar-links) and [NavbarSlider](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider) components are used as child components.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>

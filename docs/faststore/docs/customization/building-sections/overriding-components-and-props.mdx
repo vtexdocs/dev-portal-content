@@ -7,7 +7,7 @@ In this guide, you will learn how to modify a component's behavior using additio
 
 These features are useful when you need a customized behavior for a specific component not available in the [FastStore native options](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections).
 
-> ⚠️ We highly recommend considering [overriding props](#override-native-components-props) or utilizing the [theming tools](https://developers.vtex.com/docs/guides/faststore/using-themes-overview) provided by `@faststore/core` to achieve the desired behavior. Overriding a component inside a section will compromise the existing integration developed in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) by losing updates for that component.
+> ⚠️ We highly recommend considering [overriding props](#override-native-components-props) or utilizing the [theming tools](https://developers.vtex.com/docs/guides/faststore/using-themes-components) provided by `@faststore/core` to achieve the desired behavior. Overriding a component inside a section will compromise the existing integration developed in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#faststorecore) by losing updates for that component.
 
 ---
 
@@ -17,7 +17,7 @@ These features are useful when you need a customized behavior for a specific com
 
 ### Ensure you have a functioning FastStore project
 
-Make sure you have a functioning FastStore project after following the [FastStore onboarding](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) and [setting up the project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project).
+Make sure you have a functioning FastStore project after following the [FastStore onboarding](https://developers.vtex.com/docs/guides/faststore/getting-started-overview) and [setting up the project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project).
 
 ### Check the version compatibility of your `faststore/core` package
 
@@ -25,8 +25,8 @@ This feature is available for stores using `@faststore/core` 2.1.36 version and 
 
 ### Choose a native section and the component you want to customize
 
-The [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) package provides a set of native sections, each consisting of different components with unique functionalities.
-Refer to the [List of native sections and overridable components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections) to explore available native sections.
+The [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#faststorecore) package provides a set of native sections, each consisting of different components with unique functionalities.
+Refer to the [List of native sections and overridable components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#faststore-native-sections) to explore available native sections.
 
 ### Consider two aspects for this feature
 
@@ -44,7 +44,7 @@ Keep in mind the following aspects when using this feature:
 
 Overriding props allows you to customize a component's behavior while preserving its native integration. This approach is useful when you want to modify specific aspects of a native component.
 
-All component customizations in FastStore are performed within a section and to override props, you need to choose the desired native section and component from the [List of available native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections).
+All component customizations in FastStore are performed within a section and to override props, you need to choose the desired native section and component from the [List of available native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#faststore-native-sections).
 
 For this guide, we'll use the [`BuyButton`](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button#props) component to make the customization.
 
@@ -131,7 +131,7 @@ This code overrides the `BuyButton` props `size` and `iconPosition`. You'll see 
 
 2. Run `yarn dev` in the terminal to start the development server. Access the provided localhost URL in your browser and go to product details page to see the updated `BuyButton` component:
 
-![overrides-PDP-buy-button-props](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-pdp-buy-button-props___898b016bd82c908b5b24c8822be6789a.png)> ⚠️ Remember: props changed via Headless CMS overlap the changes made through [override](/docs/guides/faststore/building-sections-overriding-components-and-props#override-native-components-props). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
+![overrides-PDP-buy-button-props](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-pdp-buy-button-props___898b016bd82c908b5b24c8822be6789a.png)> ⚠️ Remember: props changed via Headless CMS overlap the changes made through [override](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#override-native-components-props). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
 
 ---
 
@@ -152,7 +152,7 @@ For this guide we will create a custom Buy Button that once you click on it, it 
 
 #### Step 1 - Create your custom component
 
-1. Inside the `components` folder, create a file named `CustomBuyButton.tsx`. _If you haven't created the `components` folder yet, see the [Setting up the overrides folder](/docs/guides/faststore/building-sections-overriding-components-and-props#step-1---setting-up-the-overrides-folder) step._
+1. Inside the `components` folder, create a file named `CustomBuyButton.tsx`. _If you haven't created the `components` folder yet, see the [Setting up the overrides folder](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#step-1---setting-up-the-overrides-folder) step._
 
 <Tabs items={['macOS and Linux', 'Windows']}>
 <Tab>
@@ -190,13 +190,13 @@ export function CustomBuyButton() {
 }
 ```
 
-The provided code imports the [Button](/docs/guides/faststore/atoms-button) component from the [@faststore/ui](/docs/guides/faststore/) package. The code defines the `CustomBuyButton` component that displays an alert message when clicked, based on the behavior we want.
+The provided code imports the [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) component from the [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/) package. The code defines the `CustomBuyButton` component that displays an alert message when clicked, based on the behavior we want.
 However, you have the flexibility to customize the component to achieve a different behavior if needed.
 
 #### Step 2 - Overriding the component
 
-1. Choose a component to override from the [list of overridable components of each native section](/docs/guides/faststore/building-sections-list-of-native-sections). In this example, we are overriding the `BuyButton` component in the `ProductDetails` section.
-2. Navigate to `src/components/overrides` that we've created [before](/docs/guides/faststore/building-sections-overriding-components-and-props#step-1---setting-up-the-overrides-folder).
+1. Choose a component to override from the [list of overridable components of each native section](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections). In this example, we are overriding the `BuyButton` component in the `ProductDetails` section.
+2. Navigate to `src/components/overrides` that we've created [before](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#step-1---setting-up-the-overrides-folder).
 3. Open the `ProductDetails.tsx` file and update it with the following code:
 
 ```tsx filename="ProductDetails.tsx" {8-9}
@@ -219,7 +219,7 @@ export { override }
 
 ![overrides-PDP-buy-button-component-alert](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-buy-button-open-alert___b62f8cb5f3f98f6bd0f5502081de6a9b.gif)
 
-By using your custom component, you may need to customize it from scratch. See [Customizing a New Component when using Override](/docs/customizing/components#customizing-a-new-component-when-using-override) guide for more details about styling it.
+By using your custom component, you may need to customize it from scratch. See [Customizing a New Component when using Override](https://developers.vtex.com/docs/guides/faststore/using-themes-components#customizing-a-new-component-when-using-override) guide for more details about styling it.
 
 ### `Product Title`
 
@@ -272,7 +272,7 @@ export { override }
 In specific scenarios, when you want to partially keep the default integration or components configuration, you can use prior integrations within your custom component.
 
 > ⚠️ Note that this will only work if your custom component's props are compatible with the overriding component.
-  We encourage using [FastStore UI components](/docs/guides/faststore/) to leverage existing features, basic styles, and better props compatibility.
+  We encourage using [FastStore UI components](https://developers.vtex.com/docs/guides/faststore/) to leverage existing features, basic styles, and better props compatibility.
 
 Building upon our previous example, we could pass the `BuyButton` props to our new component.
 This approach allows us to incorporate the icon and cart sidebar integration while introducing additional functionality to the `onClick` function, such as triggering an alert or sending an event to analytics.

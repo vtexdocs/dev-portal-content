@@ -10,7 +10,7 @@ The overwhelming majority of ecommerce websites use at least one analytics provi
 
 ## Google Tag Assistant is not working
 
-Debugging Google Tag Manager (GTM) and Google Analytics (GA) using Google Tag Assistant is, as of now, not possible if you're using Partytown. Thus, to debug your tags and GA behavior on your website requires turning partytown down. We recognize this is not ideal, after all, you'll not be debugging in the same environment your users will browse. If you're using Google Analytics 4 (recommended), you can mitigate this effect by debugging the events inside GA: check their [official docs](https://support.google.com/analytics/answer/7201382?hl=pt-BR#zippy=%2Cgerenciador-de-tags-do-google-sites) on how to enable it.
+Debugging Google Tag Manager (GTM) and Google Analytics (GA) using Google Tag Assistant is, as of now, not possible if you're using Partytown. Thus, to debug your tags and GA behavior on your website requires turning partytown down. We recognize this is not ideal, after all, you'll not be debugging in the same environment your users will browse. If you're using Google Analytics 4 (recommended), you can mitigate this effect by debugging the events inside GA: check [Google official documentation](https://support.google.com/analytics/answer/7201382?hl=pt-BR#zippy=%2Cgerenciador-de-tags-do-google-sites) on how to enable it.
 
 To help you debug GTM and GA using Google Tag Assistant, we've included a switch in the form of a query string in our starters. When this query string is included in the URL, it is guaranteed that partytown will not be enabled for GTM. You can enable this query string to be included automatically when previewing a GTM container (image below). Check the next topic for more details on this query string.
 
@@ -50,4 +50,4 @@ There are a few possible solutions for this:
 
 1. (Recommended) Remove the jQuery dependency from the script and use vanilla javascript instead.
 2. Break down the script into smaller pieces, so only the parts that don't depend on jQuery run as expected. Meanwhile, you can address the faulty part of the script by following one of the other solutions provided here.
-3. Reference jQuery from inside the script in a way Partytown understands. In the script, you can set `$ = jQuery = window.jQuery` to define these variables locally. This way, Partytown **may** be able to recognize and use jQuery from inside the Web Worker.
+3. Reference jQuery from inside the script in a way Partytown understands. In the script, you can set `$ = jQuery = window.jQuery` to define these variables locally. This way, Partytown may be able to recognize and use jQuery from inside the Web Worker.

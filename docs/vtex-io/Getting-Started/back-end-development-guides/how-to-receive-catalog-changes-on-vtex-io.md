@@ -9,7 +9,7 @@ updatedAt: "2021-03-25T14:46:35.907Z"
 
 This guide will teach you how to set up a system for detecting and responding to changes in the VTEX Catalog using VTEX IO. 
 
-We will use the [`Broadcaster`](https://developers.vtex.com/docs/apps/vtex.broadcaster) app to trigger events and develop a new app to handle these events.
+We will use the [Broadcaster](https://developers.vtex.com/docs/apps/vtex.broadcaster) app to trigger events and develop a new app to handle these events.
 
 ```mermaid
 sequenceDiagram
@@ -29,19 +29,19 @@ sequenceDiagram
 
 ## Before you begin
 
-Ensure you are in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and install the [`broadcaster`](https://developers.vtex.com/docs/apps/vtex.broadcaster) app using the following command:
+Ensure you are in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and install the [Broadcaster](https://developers.vtex.com/docs/apps/vtex.broadcaster) app using the following command:
 
 ```sh
 vtex install vtex.broadcaster
 ```
 
-The Broadcaster app broadcasts catalog changes to other parts of the VTEX system. In this guide, we will use it to listen for catalog modifications and execute tasks accordingly.
+The  [Broadcaster](https://developers.vtex.com/docs/apps/vtex.broadcaster) app broadcasts catalog changes to other parts of the VTEX system. In this guide, we will use it to listen for catalog modifications and execute tasks accordingly.
 
 <CH.Scrollycoding>
 
 ## Cloning the boilerplate repository
 
-Clone the `events-example` boilerplate by running the command presented on the right. This will create a local copy of the project, equipping you with the necessary files to start implementing the catalog change handling system.
+Clone the [events-example](https://github.com/vtex-apps/events-example) boilerplate by running the command presented on the right. This will create a local copy of the project, equipping you with the necessary files to start implementing the catalog change handling system.
 
 ```shell
 git clone https://github.com/vtex-apps/events-example
@@ -53,10 +53,10 @@ git clone https://github.com/vtex-apps/events-example
 
 Navigate to the `node/service.json` file and configure the event handler's name to `skuChange` and the `keys` property to `["broadcaster.notification"]`.
 
-The `events` field defines the events the service will listen to and specifies how it will handle them. In this case, the `skuChange` function will run whenever the event, identified by the `key` value, is triggered - specifically when the `broadcaster` app triggers the [`notification`](https://github.com/vtex-apps/broadcaster/blob/master/node/middlewares/pushNotification.ts#L8) event).
+The `events` field defines the events the service will listen to and specifies how it will handle them. In this case, the `skuChange` function will run whenever the event, identified by the `key` value, is triggered - specifically when the Broadcaster app triggers the [notification](https://github.com/vtex-apps/broadcaster/blob/master/node/middlewares/pushNotification.ts#L8) event.
 
-- `skuChange`: The `skuChange` is a custom name given to the event handler function. You are free to choose a meaningful name for your events; in this case, it represents a change related to a Stock Keeping Unit (SKU).
-- `keys`: The keys property specifies the event identifier the service will listen for. In this case, `["broadcaster.notification"]`.
+- `skuChange`: Custom name given to the event handler function. You are free to choose a meaningful name for your events; in this case, it represents a change related to a Stock Keeping Unit (SKU).
+- `keys`: Property that specifies the event identifier the service will listen for. In this case, `["broadcaster.notification"]`.
 
 
 ```json node/service.json mark=8:12
@@ -145,7 +145,7 @@ Note that the `skuChange` function will log the `Received SKU changed event` mes
 
 ## Linking the app
 
-In the `events-example`, run `vtex link` and trigger an event to the `broadcaster` app by making a POST request to `app.io.vtex.com/vtex.broadcaster-adapter/v0/{{account}}/{{workspace}}/notify`. 
+In the `events-example`, run `vtex link` and trigger an event to the Broadcaster app by making a POST request to `app.io.vtex.com/vtex.broadcaster-adapter/v0/{{account}}/{{workspace}}/notify`. 
 
 <CH.Code>
 ```sh Request
