@@ -58,7 +58,9 @@ Site performance tends to get worse as more API requests are made by a page. Bec
 
 GraphQL allows you to customize your query to get precisely the data you need, which reduces the data returned from the requests. Double-check your queries to make sure they are not over-fetching.
 
-This also means that you must be mindful of the data brought into your query by [GraphQL fragments](https://graphql.org/learn/queries/#fragments). Use them only when they do not include unnecessary data.### Do not send requests to other APIs
+This also means that you must be mindful of the data brought into your query by [GraphQL fragments](https://graphql.org/learn/queries/#fragments). Use them only when they do not include unnecessary data.
+
+### Do not send requests to other APIs
 
 When building your storefront with FastStore, to avoid comprimising the website performance and lead to `504` timeout errors, do not send requests to APIs other than the FastStore API.
 If you need to access other data not available in the native FastStore API schema, you must do this by using [API extension](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview).
