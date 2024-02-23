@@ -1,7 +1,6 @@
 ---
 title: 'Extending queries using fragments'
 sidebar_label: 'API Extensions'
-slug: extending-queries-using-fragments
 ---
 
 After [defining the new fields exposed by the FastStore API Extension](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema), the next step is to specify where these fields will be used within GraphQL fragments.
@@ -59,14 +58,6 @@ Now, you can consume `customData` by following the [Consuming FastStore API exte
 
 ## Extendable queries
 
-Extendable queries in FastStore's GraphQL API are predefined queries that form the basis for fetching data from the API. 
-These queries enable customization by adding or changing fields to align data retrieval with your store-specific requirements.
-
-
-### Query: `ClientProductGalleryQuery`
-
-## Extendable Queries
-
 Extendable queries in FastStore's GraphQL API are predefined queries that form the basis for fetching data from the API.
 These queries enable customization by allowing the addition or modification of fields to align data retrieval with your store-specific requirements.
 
@@ -93,14 +84,14 @@ These queries enable customization by allowing the addition or modification of f
 ### How to consume it
 
     Use the `usePage()` hook when you have a single section that is used in more than one type of page.
-    ```ts copy
+    ```ts
     import { usePage } from "@faststore/core"
 
     const context = usePage()
     ```
     This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
     
-    ```ts copy
+    ```ts
     import { usePage } from "@faststore/core"
 
     const context = usePage<PLPContext | SearchPageContext>()
@@ -124,7 +115,7 @@ These queries enable customization by allowing the addition or modification of f
 ### How to consume it
 
     Use the `usePLP()` hook when integrating your section with a Product Listing Page (PLP).
-    ```ts copy
+    ```ts
     import { usePLP } from "@faststore/core"
 
     const context = usePLP()
@@ -147,7 +138,7 @@ These queries enable customization by allowing the addition or modification of f
 
     `usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).
 
-    ```ts copy
+    ```ts
       import { usePDP } from "@faststore/core"
 
       const context = usePDP()
@@ -176,7 +167,7 @@ These queries enable customization by allowing the addition or modification of f
 
     `usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).
 
-    ```ts copy
+    ```ts
       import { usePDP } from "@faststore/core"
 
       const context = usePDP()
@@ -213,14 +204,14 @@ These queries enable customization by allowing the addition or modification of f
 ### How to consume it
 
     Use the `usePage()` hook when you have a single section that is used in more than one type of page.
-    ```ts copy
+    ```ts
     import { usePage } from "@faststore/core"
 
     const context = usePage()
     ```
     This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
     
-    ```ts copy
+    ```ts
     import { usePage } from "@faststore/core"
 
     const context = usePage<PLPContext | SearchPageContext>()

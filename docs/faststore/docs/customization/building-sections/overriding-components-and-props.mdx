@@ -89,7 +89,7 @@ type nul > src\components\overrides\ProductDetails.tsx
 
 4. Copy and paste the following code snippet into the file:
 
-```tsx copy
+```tsx
 import { SectionOverride } from '@faststore/core'
 
 const SECTION = 'ProductDetails' as const
@@ -226,7 +226,7 @@ By using your custom component, you may need to customize it from scratch. See [
 1. After [Setting up the overrides folder](#step-1-setting-up-the-overrides-folder), inside the  `components` folder, create the `CustomProductTitle.tsx` file.
 2. Add the following to the file:
 
-```tsx copy
+```tsx
 import React from 'react'
 import { ProductTitle, Tag } from '@faststore/ui'
 
@@ -246,7 +246,7 @@ This code creates a custom `ProductTitle` component displaying the product title
 3. In the `overrides` folder, create the `ProductDetails.tsx` file.
 2. Add the following code to the `ProductDetails.tsx` file to render the new `CustomProductTitle` component.
 
-```tsx copy
+```tsx
 import { SectionOverride } from '@faststore/core'
 
 import CustomProductTitle from '../CustomProductTitle'
