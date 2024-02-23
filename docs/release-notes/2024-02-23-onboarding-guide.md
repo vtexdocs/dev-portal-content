@@ -32,4 +32,6 @@ The Onboarding Guide is divided into three tracks:
 | Part I | Part II | Part III |
 | [VTEX store overview](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9) | [Next steps after the go-live](https://help.vtex.com/en/tracks/next-steps-after-the-go-live--3J7WFZyvTcoiwkcIVFVhIS) | [Support at VTEX](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy) |
 
-![onboarding-guide-illustration](https://vtexhelp.vtexassets.com/assets/docs/src/onboarding-guide-img-two___b5f68e87a2991bf598cef9fbcd2090bf.png)
+<div>
+  <img src="https://vtexhelp.vtexassets.com/assets/docs/src/onboarding-guide-img-two___b5f68e87a2991bf598cef9fbcd2090bf.png" alt="Ecommerce image" width: "300">
+</div>
