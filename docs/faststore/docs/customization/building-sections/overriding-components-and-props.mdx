@@ -3,8 +3,6 @@ title: 'Overriding native components and props'
 sidebar_label: 'Component Customization'
 ---
 
-> ⚠️ This documentation is currently being developed.
-
 In this guide, you will learn how to modify a component's behavior using additional properties in your store code and create new components by overriding their native equivalents.
 
 These features are useful when you need a customized behavior for a specific component not available in the [FastStore native options](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections).
@@ -147,9 +145,10 @@ Currently, when the `BuyButton` is clicked, it opens the `CartSideBar` as its de
 
 ![overrides-PDP-buy-button-component](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-buy-button-open-cart___a5853a88238fa31610a93e8a1333bb00.gif)
 
-For this guide we will create a custom Buy Button that once you click on it, it displays an `alert` for the customer.
+For this guide we will create a custom Buy Button that once you click on it, it displays an `alert` for the customer and the a custom Product Title.
 
-### Step by step
+
+### `BuyButton`
 
 #### Step 1 - Create your custom component
 
@@ -221,6 +220,50 @@ export { override }
 ![overrides-PDP-buy-button-component-alert](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-buy-button-open-alert___b62f8cb5f3f98f6bd0f5502081de6a9b.gif)
 
 By using your custom component, you may need to customize it from scratch. See [Customizing a New Component when using Override](https://developers.vtex.com/docs/guides/faststore/using-themes-components#customizing-a-new-component-when-using-override) guide for more details about styling it.
+
+### `Product Title`
+
+1. After [Setting up the overrides folder](#step-1-setting-up-the-overrides-folder), inside the  `components` folder, create the `CustomProductTitle.tsx` file.
+2. Add the following to the file:
+
+```tsx copy
+import React from 'react'
+import { ProductTitle, Tag } from '@faststore/ui'
+
+
+export default function CustomProductTitle() {
+  return (
+    <section>
+      <ProductTitle title={<h1>New headphones</h1>} />
+      <Tag variant="warning" label="On sale" onClose={() => {}} />
+    </section>
+  )
+}
+```
+
+This code creates a custom `ProductTitle` component displaying the product title, and a tag indicating that the product is on sale.
+
+3. In the `overrides` folder, create the `ProductDetails.tsx` file.
+2. Add the following code to the `ProductDetails.tsx` file to render the new `CustomProductTitle` component.
+
+```tsx copy
+import { SectionOverride } from '@faststore/core'
+
+import CustomProductTitle from '../CustomProductTitle'
+
+const SECTION = 'ProductDetails' as const
+
+const override: SectionOverride = {
+  section: SECTION,
+  components: {
+    ProductTitle: { Component: CustomProductTitle },
+  },
+}
+
+export { override }
+```
+
+4. Run `yarn dev` in the terminal to start the development server and access the provided localhost URL in your browser.
 
 ---
 

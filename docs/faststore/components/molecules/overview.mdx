@@ -34,13 +34,14 @@ title: "Molecules"
   >
     <BuyButton>Buy Now</BuyButton>
   </CardItem>
-  {/* <CardItem
+
+  <CardItem
     title="Carousel"
     description="Slides through multiple elements using custom controls."
     actionPath="/docs/guides/faststore/molecules-carousel"
   >
     <CarouselUsage />
-  </CardItem> */}
+  </CardItem>
   <CardItem
     title="Cart Item"
     description="Used to present the summarized information of a product inside the Cart."
@@ -64,7 +65,7 @@ title: "Molecules"
     title="Discount Badge"
     description={
       <>
-        A custom <code>Badge</code> that display product's discounts.
+        A custom <code>Badge</code> that displays product's discounts.
       </>
     }
     actionPath="/docs/guides/faststore/molecules-discount-badge"
@@ -132,7 +133,7 @@ title: "Molecules"
     title="Link Button"
     description={
       <>
-        Visuallly replicates a <code>Button</code>, however acts as a link to
+        Visually replicates a <code>Button</code>, however acts as a link to
         navigate users between pages.
       </>
     }
@@ -200,6 +201,17 @@ title: "Molecules"
     actionPath="/docs/guides/faststore/molecules-product-title"
     fullWidth
   >
+  <CardItem
+    title="Product Price"
+    description="Displays product's selling and listing prices."
+    actionPath="/docs/guides/faststore/molecules-product-price"
+  >
+    <ProductPrice
+      value={950.04}
+      listPrice={999}
+      formatter={useFormattedPrice}
+    />
+  </CardItem>
     <ProductTitle
       title={<h1>Apple Mouse</h1>}
       label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
@@ -260,7 +272,7 @@ title: "Molecules"
     title="Search Auto Complete"
     description={
       <>
-        Lists auto completing suggestions based on searched term. This component
+        Lists auto-completing suggestions based on searched terms. This component
         is part of the <code>Search</code> feature.
       </>
     }

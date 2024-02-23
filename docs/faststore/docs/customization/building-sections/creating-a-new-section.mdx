@@ -3,11 +3,11 @@ title: 'Creating a new section'
 sidebar_label: 'Building and Customizing sections'
 ---
 
-> ⚠️ This documentation is currently under development.
-
 In this guide, you'll learn how to create a new section for your store and make it available in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). This solution is useful when your store requires a section not natively available in FastStore.
 
-For this guide we'll create a `Call to Action` section.
+For this guide we'll create two sections:
+- `Call to Action` Gets an specifc action from the user.
+- `OurStores`: Indicates the closest store for the user.
 
 > ℹ️ Sections are page components that wrap up other components, enabling you to create cohesive and functional content for your store. For example, the Hero section is a native section that includes the following components: `Hero`, `HeroImage`, and `HeroHeader`.
 
@@ -31,7 +31,7 @@ Make sure to install the FastStore CLI to use its commands locally. Refer to the
 
 </Steps>
 
-## Step by step
+## `Call to Action`
 
 ### Step 1: Creating folders and files related to the Headless CMS
 
@@ -136,3 +136,98 @@ export default { CallToAction }
 4. In the `Sections` tab, click the `+`, search for the new `Call to Action` section, and add it to your page.
 
   ![create-new-section-cms-component](https://vtexhelp.vtexassets.com/assets/docs/src/create-new-section-cms-component___994587c4fa77d99a04fda72524266d4d.gif)
+
+## `OurStore`
+
+1. After [creating the files and folders](#step-1-creating-folders-and-files-related-to-the-headless-cms), In the `sections.json` file add the new section that you want to display in the Headless CMS. 
+The schema below defines how the Headless CMS renders the `OurStores` section that we will use in the example:
+
+```json filename="sections.json" copy
+[
+  {
+    "name": "OurStores",
+    "schema": {
+      "title": "Our Stores",
+      "description": "Search stores near to the users",
+      "type": "object",
+      "required": ["title", "description"],
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "default": "Explore Nearby Stores"
+        },
+        "description": {
+          "title": "Link Path",
+          "type": "string",
+          "default": "Discover the closest store to you and pay us a visit."
+        }
+      }
+    }
+  }
+]
+```
+2.  Inside the `components` folder, create a file named `OurStores.tsx` and add the following code:
+
+```tsx filename="src/components/OurStores.tsx" copy
+import React from 'react'
+import { Button, Icon, SelectField } from '@faststore/ui'
+
+export interface OurStoresProps {
+  title: string
+  description: string
+}
+
+export default function OurStores(props: OurStoresProps) {
+  return (
+    <section>
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
+      <div>
+        <SelectField
+          id="select-state-store"
+          label="State:"
+          options={{
+            newYork: 'New York',
+            arizona: 'Arizona',
+            massachusetts: 'Massachusetts',
+            hawaii: 'Hawaii',
+          }}
+        />
+        <SelectField
+          id="select-city-store"
+          label="City:"
+          options={{
+            newYorkCity: 'New York City',
+            phoenix: 'Phoenix',
+            boston: 'Boston',
+            honolulu: 'Honolulu',
+          }}
+        />
+        <Button
+          variant="secondary"
+          icon={<Icon name="ArrowRight" />}
+          iconPosition="right"
+        >
+          Find Store
+        </Button>
+      </div>
+    </section>
+  )
+}
+```
+
+For this section we will use the following component from the Faststore UI: [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button), [Icon](https://developers.vtex.com/docs/guides/faststore/atoms-icon) and [SelectField](https://developers.vtex.com/docs/guides/faststore/molecules/select-field).
+
+3. Create a file named `index.tsx` inside the components folder, and add the following code:
+
+```tsx filename="src/components/index.tsx" copy
+import OurStores from './OurStores'
+
+export default { OurStores }
+```
+
+4. Repeat the steps in [Step 3: Synchronizing the new section with the Headless CMS](#step3-synchronizing-the-new-section-with-the-headless-cms) and you should see the new section but without styles as the example below:
+
+![new-section-structure-without-styles](https://vtexhelp.vtexassets.com/assets/docs/src/section-structure-without-styles___7be40088d6137bdd63cbb4940c2fa599.png)
+
