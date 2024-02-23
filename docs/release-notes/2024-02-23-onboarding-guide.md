@@ -7,7 +7,7 @@ hidden: false
 excerpt: "Explore the new Onboarding guide that covers content from store initial settings to go-live strategies, store operational expansion, and VTEX Support."
 ---
 
-To simplify the onboarding process, from the initial architectural planning of the store account to its go-live and subsequent extensions, VTEX now provides the [Onboarding Guide](https://help.vtex.com/en/tracks). 
+To simplify the onboarding process, from the initial architectural planning of the store account to its go-live and subsequent extensions, VTEX now provides the [Onboarding Guide](https://help.vtex.com/en/tracks).
 
 ![onboarding-track-overview](https://vtexhelp.vtexassets.com/assets/docs/src/onboarding-guide-img-one___26b520565fa3aeb97aa7c5f369ca3a4c.png)
 
