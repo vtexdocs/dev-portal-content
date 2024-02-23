@@ -23,7 +23,7 @@ The Onboarding Guide is divided into three tracks:
 | **Next steps after the go-live** | Presents the execution of unified commerce using platform features and guides you on evolving your store operation post-go-live. This track also introduces VTEX's [Add-on products](https://help.vtex.com/tracks/next-steps-after-the-go-live--3J7WFZyvTcoiwkcIVFVhIS/1t2QBZvrOBSLgvHaAV9fYm), a series of items available for separate purchases to enable new strategies and business diversification. |
 | **VTEX Support** | Details how you can connect with [VTEX support](https://help.vtex.com/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy) throughout your store operation, outlining the procedures for opening a ticket based on the type of support required: technical, financial, and commercial. |
 
-- For more details about each track and the reason behind the creation of the guide, refer to the [announcement in the Help Center](/).
+- For more details about each track and the reason behind the creation of the guide, refer to the [announcement in the Help Center](https://help.vtex.com/en/announcements/onboarding-guide-your-complete-journey-at-vtex--510SdtVmDcuIQAGoAl0sgf).
 
 - Check out all the available documentation in the [Onboarding guide](https://help.vtex.com/tracks) in the Help Center.
 
