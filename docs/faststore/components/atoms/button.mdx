@@ -54,11 +54,15 @@ Import the component from [@faststore/ui](/docs/guides/faststore/components-inde
 import { Button } from '@faststore/ui'
 ```
 
-Import Styles
+### Import Styles into your FastStore project
 
-```tsx
-import '@faststore/ui/src/components/atoms/Button/styles.scss'
+To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/atoms/Button/styles.scss';
 ```
+
+Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
 
 ---
 
@@ -689,10 +693,10 @@ import '@faststore/ui/src/components/atoms/Button/styles.scss'
 
 Use the `Button` component to communicate user actions on the following components:
 
-- Buy-now and add-to-cart buttons on [Product Cards](/docs/guides/faststore/molecules-product-card)
-- Call-to-action buttons on [Cards](/docs/guides/faststore/organisms-card)
-- Submit and/or withdraw actions on [Forms](/docs/guides/faststore/molecules-form)
-- Submit and/or withdraw actions on [Modal](/docs/guides/faststore/molecules-modal) windows.
+- Buy-now and add-to-cart buttons on [Product Cards](https://developers.vtex.com/docs/guides/faststore/molecules-product-card)
+- Call-to-action buttons on [Cards](https://developers.vtex.com/docs/guides/faststore/organisms-card)
+- Submit and/or withdraw actions on [Forms](https://developers.vtex.com/docs/guides/faststore/molecules-form)
+- Submit and/or withdraw actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) windows.
 
 ---
 
@@ -734,8 +738,8 @@ For further customization, you can use the following data attributes:
 - Avoid cluttering the UI with too many buttons.
 - Avoid having more than one Primary action button on the screen at a time.
 - Avoid using disabled buttons, if possible. Instead, give preference to hiding the unavailable option.
-- Don't place buttons next to [Badges](/docs/guides/faststore/atoms-badge). Although badges and buttons are similar in appearance, badges are not interactive and may confuse users if not used in the proper context.
-- Don't use Buttons as [Links](/docs/guides/faststore/atoms-link). Links are not intended to invite users to take action. Instead, they redirect users somewhere.
+- Don't place buttons next to [Badges](https://developers.vtex.com/docs/guides/faststore/atoms-badge). Although badges and buttons are similar in appearance, badges are not interactive and may confuse users if not used in the proper context.
+- Don't use Buttons as [Links](https://developers.vtex.com/docs/guides/faststore/atoms-link). Links are not intended to invite users to take action. Instead, they redirect users somewhere.
 - Avoid using `aria-label` when the button already has a label.
 
 ---
@@ -746,21 +750,21 @@ For further customization, you can use the following data attributes:
   <SectionItem
     title="Icon Button"
     description="A button which content is only an icon, without any label."
-    actionPath="/docs/guides/faststore/molecules-icon-button"
+    actionPath="https://developers.vtex.com/docs/guides/faststore/molecules-icon-button"
   >
     <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" />
   </SectionItem>
   <SectionItem
     title="Buy Button"
     description="A button with the intent of directly sending the user to the checkout/cart step."
-    actionPath="/docs/guides/faststore/molecules-buy-button"
+    actionPath="https://developers.vtex.com/docs/guides/faststore/molecules-buy-button"
   >
     <BuyButton>Buy Now</BuyButton>
   </SectionItem>
   <SectionItem
     title="Link Button"
     description="Is similar to a button, however acts as a link to navigate users between pages."
-    actionPath="/docs/guides/faststore/molecules-link-button"
+    actionPath="https://developers.vtex.com/docs/guides/faststore/molecules-link-button"
   >
     <LinkButton>Link Button</LinkButton>
   </SectionItem>
