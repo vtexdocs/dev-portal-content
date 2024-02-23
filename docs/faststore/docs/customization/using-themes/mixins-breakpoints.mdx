@@ -3,7 +3,6 @@ title: ' Mixins & Breakpoints'
 slug: mixins-breakpoints
 ---
 
-
 ## Breakpoints
 
 FastStore simplifies screen breakpoint customization for projects by using [Include-Media](https://eduardoboucas.github.io/include-media/#features), a Sass library for writing CSS media queries in an easy and maintainable way, using a natural and simplistic syntax. Each project has the following five pre-defined screen breakpoints:
@@ -22,7 +21,7 @@ $breakpoints: (
 
 Follow the steps below to override the pre-defined sizing system for the screen breakpoints.
 
-> ⚠️ Modifying these breakpoints implies changes to certain global tokens. See [Grid & Layout](https://developers.vtex.com/docs/global-tokens/grid-and-layout#breakpoints) for more details.
+> ⚠️ Modifying these breakpoints implies changes to certain global tokens. See [Grid & Layout](https://developers.vtex.com/docs/guides/faststore/global-tokens-grid-and-layout#breakpoints) for more details.
 
 1. Go to the `src` folder and create the `styles` folder inside it. You can run the following command to create it:
 
@@ -30,12 +29,14 @@ Follow the steps below to override the pre-defined sizing system for the screen 
   <Tab>
     ```bash
     mkdir src/styles
+
 ```
   </Tab>
   <Tab>
     ```bash
     mkdir src\styles
 ```
+
   </Tab>
 </Tabs>
 
@@ -45,12 +46,14 @@ Follow the steps below to override the pre-defined sizing system for the screen 
   <Tab>
     ```bash
     touch src/styles/custom-mixins.scss
+
 ```
   </Tab>
   <Tab>
     ```bash
     type nul > src\styles\custom-mixins.scss
 ```
+
   </Tab>
 </Tabs>
 
@@ -189,7 +192,7 @@ The [Sass `@mixin`](https://sass-lang.com/documentation/at-rules/mixin/) allows 
 
 ### Customizing Mixins
 
-Overriding the predefined mixins follows a process similar to the [customizing breakpoints steps](https://developers.vtex.com/docs/customizing/mixins-breakpoints#customizing-breakpoints). If you already have a `custom-mixin.scss` file, you can skip to *Step 3*. Otherwise, follow the steps below:
+Overriding the predefined mixins follows a process similar to the [customizing breakpoints steps](https://developers.vtex.com/docs/guides/faststore/using-themes-mixins-breakpoints#customizing-breakpoints). If you already have a `custom-mixin.scss` file, you can skip to *Step 3*. Otherwise, follow the steps below:
 
 1. Go to the `src` folder and create the `styles` folder inside it. You can run the following command to create it:
 
@@ -197,12 +200,14 @@ Overriding the predefined mixins follows a process similar to the [customizing b
   <Tab>
     ```bash
     mkdir src/styles
+
 ```
   </Tab>
   <Tab>
     ```bash
     mkdir src\styles
 ```
+
   </Tab>
 </Tabs>
 
@@ -212,12 +217,14 @@ Overriding the predefined mixins follows a process similar to the [customizing b
   <Tab>
     ```bash
     touch src/styles/custom-mixins.scss
+
 ```
   </Tab>
   <Tab>
     ```bash
     type nul > src\styles\custom-mixins.scss
 ```
+
   </Tab>
 </Tabs>
 
