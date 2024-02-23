@@ -25,7 +25,7 @@ All `include` mechanisms should be set up to add a new SPF. See the example belo
 |-|-|
 | `v=spf1 include:websitewelcome.com include:_spf.google.com ~all` | `v=spf1 include:websitewelcome.com include:_spf.google.com include:amazonses.com ~all` |
 
->⚠️ Do not create duplicated entries or entries mixed with other values to avoid possible validation errors.
+>⚠️ The domain should only have one SPF entry including all the necessary rules, such as `include` mechanisms and others in [SPF Record Syntax](http://www.open-spf.org/SPF_Record_Syntax/).
 
 ## Verifying the SPF
 
