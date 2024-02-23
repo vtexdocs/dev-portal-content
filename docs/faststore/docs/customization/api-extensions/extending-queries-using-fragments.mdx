@@ -93,14 +93,14 @@ These queries enable customization by allowing the addition or modification of f
 ### How to consume it
 
     Use the `usePage()` hook when you have a single section that is used in more than one type of page.
-    ```ts copy
+    ```ts
     import { usePage } from "@faststore/core"
 
     const context = usePage()
     ```
     This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
     
-    ```ts copy
+    ```ts
     import { usePage } from "@faststore/core"
 
     const context = usePage<PLPContext | SearchPageContext>()
@@ -124,7 +124,7 @@ These queries enable customization by allowing the addition or modification of f
 ### How to consume it
 
     Use the `usePLP()` hook when integrating your section with a Product Listing Page (PLP).
-    ```ts copy
+    ```ts
     import { usePLP } from "@faststore/core"
 
     const context = usePLP()
@@ -147,7 +147,7 @@ These queries enable customization by allowing the addition or modification of f
 
     `usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).
 
-    ```ts copy
+    ```ts
       import { usePDP } from "@faststore/core"
 
       const context = usePDP()
@@ -176,7 +176,7 @@ These queries enable customization by allowing the addition or modification of f
 
     `usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).
 
-    ```ts copy
+    ```ts
       import { usePDP } from "@faststore/core"
 
       const context = usePDP()
@@ -213,14 +213,14 @@ These queries enable customization by allowing the addition or modification of f
 ### How to consume it
 
     Use the `usePage()` hook when you have a single section that is used in more than one type of page.
-    ```ts copy
+    ```ts
     import { usePage } from "@faststore/core"
 
     const context = usePage()
     ```
     This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
     
-    ```ts copy
+    ```ts
     import { usePage } from "@faststore/core"
 
     const context = usePage<PLPContext | SearchPageContext>()
