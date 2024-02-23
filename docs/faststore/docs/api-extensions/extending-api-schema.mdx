@@ -80,7 +80,7 @@ from FastStore API, so the name of the file is `product.graphql`.> ℹ️ The wa
 2. To extend the `StoreProduct`, let's add a `customData` field in the `product.graphql` and it should return a string value.
 This field can store custom information related to a product in your store. For example, you might use this field to store additional product details that are not present in the native FastStore API schema.
 
-```graphql "graphql/vtex/typeDefs/product.graphql"
+```graphql graphql/vtex/typeDefs/product.graphql
 extend type StoreProduct {
   """
   Custom data extending StoreProduct
@@ -105,7 +105,7 @@ example, so the name of the file is `product.ts`.
 
 2. Define the resolver in the `product.ts` file. This resolver specifies how to fetch the data for the `customData` field based on the root object.
 
-```ts copy filename="graphql/vtex/resolvers/product.ts"
+```ts graphql/vtex/resolvers/product.ts
 import type { StoreProductRoot } from '@faststore/core/api'
 
 const productResolver = {
@@ -127,7 +127,7 @@ Note that you can leverage the use of TypeScript by typing the root param as [St
 
 4. Export a new `resolvers` object that includes the imported resolver(s).
 
-```ts copy filename="graphql/vtex/resolvers/index.ts"
+```ts graphql/vtex/resolvers/index.ts
 import { default as StoreProductResolver } from './product'
 
 const resolvers = {
@@ -205,7 +205,7 @@ Below, you'll find an example of code for implementing a third-party extension u
 
 1. In the `extra.graphql` file, add the following:
 
-```ts copy filename="graphql/thirdParty/typeDefs/extra.graphql"
+```ts graphql/thirdParty/typeDefs/extra.graphql
 
 type ExtraData {
   """
@@ -222,7 +222,7 @@ type Query {
 
 2. In the `<resolver>.ts` file, let's continue the example, so the file name can be `extra.ts`. This file defines the resolvers that handle the logic for the defined queries or mutations.
 
-```ts copy filename="graphql/thirdParty/resolvers/extra.ts"
+```ts graphql/thirdParty/resolvers/extra.ts
 
 const extraDataResolver = {
   Query: {
@@ -244,7 +244,7 @@ export default extraDataResolver
 
 3. In the `graphql/thirdParty/resolvers` folder, create an `index.ts` file to combine all the resolvers into a single object.
 
-```ts copy filename="graphql/thirdParty/resolvers/index.ts"
+```ts graphql/thirdParty/resolvers/index.ts
 
 import { default as StoreExtraResolver } from './extra'
 
@@ -257,7 +257,7 @@ export default resolvers
 
 4. With the schema and resolvers in place, you can query the data using GraphQL queries. Here's an example query to access the extra data:
 
-```ts copy
+```ts
 query {
  extraData {
   data
