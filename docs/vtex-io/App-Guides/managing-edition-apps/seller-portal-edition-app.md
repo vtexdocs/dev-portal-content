@@ -120,7 +120,6 @@ After cloning the repository, follow the instructions below to configure your ap
 1. In the `manifest.json`, change the `name` to `sponsor.edition-seller`.
 
 > ❗️ The name `sponsor.edition-seller` is mandatory, if another name is configured, the application will not work.
-
 > By standard, VTEX adopts the edition-seller- prefix in all edition apps.
 
 2. Change the `vendor` field to your store’s account name, to become the app’s sponsor.
