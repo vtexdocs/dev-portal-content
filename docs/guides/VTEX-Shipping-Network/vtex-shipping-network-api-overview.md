@@ -17,5 +17,5 @@ For the integration, carriers should develop VTEX IO apps only for the [Notifica
 
 ## Index
 
-<span class="api pg-type type-post">post</span> [Notify carrier with app](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/notify?endpoint=post-/-app_name-/v-app_version-/-account-/-workspace-/notify)
-<span class="api pg-type type-post">post</span> [Tracking events with app](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking?endpoint=post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
+- `POST` [Notify carrier with app](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/notify)
+- `POST` [Tracking events with app](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
