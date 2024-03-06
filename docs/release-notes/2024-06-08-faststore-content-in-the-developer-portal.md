@@ -4,7 +4,7 @@ slug: "2024-06-08-faststore-content-in-the-developer-portal"
 type: "info"
 createdAt: "2024-03-06T10:00:00.661Z"
 hidden: false
-excerpt: "Explore the new Onboarding guide that covers content from store initial settings to go-live strategies, store operational expansion, and VTEX Support."
+excerpt: "After March __, 2024, FastStore content moves to the Developer Portal."
 ---
 
 After March __, 2024, all FastStore content currently available on the [FastStore Portal](htttps://faststore.dev) will be relocated and redirected to the [Developer Portal](https://developers.vtex.com).
