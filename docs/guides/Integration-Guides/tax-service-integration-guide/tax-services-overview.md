@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-09-01T16:28:25.618Z"
 updatedAt: "2021-02-24T13:24:53.349Z"
 ---
-Selling products online is subject to various types of taxes that can differ based on factors such as inventory location, shipping addresses, and, of course, the nature of the product. For certain stores, particularly those operating in a B2B model, tax calculations can become intricate, necessitating the use of an external tax calculation provider.
+Selling products online is subject to various types of taxes that can differ based on factors such as inventory location, shipping addresses, and, of course, the nature of the product. For certain stores, particularly those operating in a B2B model, tax calculations can become intricate and require an external tax calculation provider.
 
 In such scenarios, it is feasible to establish an integration that enables a store to transmit checkout information to an external tax calculation API. Subsequently, the external API should provide the necessary tax details and values applicable to the purchase.
 
