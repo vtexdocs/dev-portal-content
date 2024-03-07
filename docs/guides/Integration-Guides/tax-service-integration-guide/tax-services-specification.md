@@ -228,44 +228,44 @@ Below is an example for values that may be contained in these fields, and you ca
 
 ```json
 {
-	"Id": "0",
-	"taxes": [
-  	{
-    	"name": "NY STATE TAX: NEW YORK",
-    	"description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
-    	"rate": 0.04,
-    	"value": 1.4,
-    	"jurisCode": "36",
-    	"jurisType": "State",
-    	"jurisName": "NEW YORK"
-  	},
-  	{
-    	"name": "NY COUNTY TAX: ERIE",
-    	"description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
-    	"rate": 0.0475,
-    	"value": 1.66,
-    	"jurisCode": "029",
-    	"jurisType": "County",
-    	"jurisName": "ERIE"
-  	},
-  	{
-    	"name": "NY STATE TAX: NEW YORK (SHIPPING)",
-    	"description": "freight",
-    	"rate": 0.04,
-    	"value": 0.17,
-    	"jurisCode": "36",
-    	"jurisType": "State",
-    	"jurisName": "NEW YORK"
-  	},
-  	{
-    	"name": "NY COUNTY TAX: ERIE (SHIPPING)",
-    	"description": "freight",
-    	"rate": 0.0475,
-    	"value": 0.2,
-    	"jurisCode": "029",
-    	"jurisType": "County",
-    	"jurisName": "ERIE"
-  	}
-	]
+ "Id": "0",
+ "taxes": [
+   {
+     "name": "NY STATE TAX: NEW YORK",
+     "description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
+     "rate": 0.04,
+     "value": 1.4,
+     "jurisCode": "36",
+     "jurisType": "State",
+     "jurisName": "NEW YORK"
+   },
+   {
+     "name": "NY COUNTY TAX: ERIE",
+     "description": "Srixon Q-Star Tour Golf Balls 5013392- Dozen Yellow",
+     "rate": 0.0475,
+     "value": 1.66,
+     "jurisCode": "029",
+     "jurisType": "County",
+     "jurisName": "ERIE"
+   },
+   {
+     "name": "NY STATE TAX: NEW YORK (SHIPPING)",
+     "description": "freight",
+     "rate": 0.04,
+     "value": 0.17,
+     "jurisCode": "36",
+     "jurisType": "State",
+     "jurisName": "NEW YORK"
+   },
+   {
+     "name": "NY COUNTY TAX: ERIE (SHIPPING)",
+     "description": "freight",
+     "rate": 0.0475,
+     "value": 0.2,
+     "jurisCode": "029",
+     "jurisType": "County",
+     "jurisName": "ERIE"
+   }
+ ]
   }
 ```
