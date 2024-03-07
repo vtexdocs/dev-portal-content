@@ -15,4 +15,3 @@ In such scenarios, it is possible to establish an integration that enables a sto
 
 Access the [specification](https://developers.vtex.com/docs/guides/tax-services-specification) and [recipe](https://developers.vtex.com/docs/guides/tax-services-recipe) to learn more about Tax Service integration and how to implement it.
 
-```
