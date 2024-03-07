@@ -1,10 +1,10 @@
 ---
 title: "FastStore content new home"
-slug: "2024-06-08-faststore-content-in-the-developer-portal"
+slug: "2024-03-07-faststore-content-in-the-developer-portal"
 type: "info"
-createdAt: "2024-03-06T10:00:00.661Z"
+createdAt: "2024-03-07T10:00:00.661Z"
 hidden: false
-excerpt: "After March __, 2024, FastStore content moves to the Developer Portal."
+excerpt: "After March 18, 2024, FastStore content moves to the Developer Portal."
 ---
 
 After March 18, 2024, all FastStore content currently available on the [FastStore Portal](htttps://faststore.dev) will be relocated and redirected to the [Developer Portal](https://developers.vtex.com).
@@ -21,4 +21,4 @@ To keep VTEX documentation centralized in one place and maintain a single source
 
 ## What needs to be done?
 
-After March 18, 2024, access the FastStore content in the Developer Portal section for [FastStore](/). Do not worry about updating bookmarks or links, your access will automatically redirect to the new section in the Developer Portal.
+After March 18, 2024, access the FastStore content in the Developer Portal section for [FastStore](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore). Do not worry about updating bookmarks or links, your access will automatically redirect to the new section in the Developer Portal.
