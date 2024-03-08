@@ -38,15 +38,15 @@ To create a new trigger in an existing schema, follow these steps:
 
 ### Trigger Properties
 
-| Property  | Type | Description                                  |
-|-----------|------|---------------------------------------------|
-| `name`      |`string`| A descriptive name for your trigger, limited to 100 characters. |
-| `active`    | `boolean`| Whether the trigger is enabled (`true`) or disabled (`false`). |
-| `condition` | `string` | A rule that validates the document before executing the trigger. See the [`condition`](#condition) section for more information. |
-| `runAt`     | `object` | The scheduled date to execute the action. See the [`runAt`](#runAt) section for more information.    |
-| `weight`    |`integer` | Percentage value used for A/B testing. See the [Setting up an A/B test with Master Data trigger](https://help.vtex.com/en/tutorial/setting-up-a-b-test--4xFzBMHYty6gmEosWGWMC0) article for more information.|
-| `retry`     | `object` | Defines the retry policy, specifying the number of attempts and delay between them. See the [`retry`](#retry) section for more information.        |
-| `action`    | `object` | The action that will be executed. See the [`action`](#action) section for more information.                 |
+| Property | Type | Description |
+| - | - | - |
+| `name` |`string`| A descriptive name for your trigger, limited to 100 characters. |
+| `active` | `boolean`| Whether the trigger is enabled (`true`) or disabled (`false`). |
+| `condition` | `string` | A rule that validates the document before executing the trigger. See the [condition](#condition) section for more information. |
+| `runAt` | `object` | The scheduled date to execute the action. See the [runAt](#runat) section for more information. |
+| `weight` |`integer` | Percentage value used for A/B testing. See the [Setting up an A/B test with Master Data trigger](https://help.vtex.com/en/tutorial/setting-up-a-b-test--4xFzBMHYty6gmEosWGWMC0) article for more information. |
+| `retry` | `object` | Defines the retry policy, specifying the number of attempts and delay between them. See the [retry](#retry) section for more information. |
+| `action` | `object` | The action that will be executed. See the [action](#action) section for more information. |
 
 #### Condition
 
@@ -62,7 +62,22 @@ To get further information, check the [Search documents](https://developers.vtex
 
 #### runAt
 
-In case of scheduling an action in the future, you can use the `runAt` property. See the examples below:
+To schedule an action in the future, use the `runAt` object, with the `dateTime` and `increment` properties.
+
+Set the `dateTime` string according to your specific need:
+
+- To consider the date and time of the trigger as the start date, use `now` as the value.
+- To consider the date and time of a specific field, use `{!fieldName}` as the value. E.g. `{!createdIn}`
+
+Use one of the following `increment` object properties (integers) according to the time unit to be used:
+
+- Minutes: `addMinutes`
+- Hours: `addHours`
+- Days: `addDays`
+- Months: `addMonths`
+- Years: `addYears`
+
+See examples below:
 
 - Schedule the execution 10 minutes later.
 
