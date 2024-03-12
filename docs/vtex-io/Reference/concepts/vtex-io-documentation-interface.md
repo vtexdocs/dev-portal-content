@@ -22,6 +22,14 @@ For every exported block, the app also defines a React component linked to that 
   }
 }
 ```
->ℹ️ Refer to our documentation to know more about the other concepts, such as [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components), [composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition), and [content](https://developers.vtex.com/docs/guides/vtex-io-documentation-content).
 
 In general, frontend apps export different [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#blocks), which are declared and configured in the Store Theme's code, and React components related to these blocks. These [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) are then rendered on the store's frontend.
+
+## Example
+
+Let's delve into the provided interface definition for a component named `ProductSummary`:
+
+- `product-summary`: Name of the interface block being defined.
+- `component`: Specifies the React component (`ProductSummary`) associated with the interface. Refer to [Component](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) for more information.
+- `composition`: Indicates the structure and composition of the component within its parent component. Refer to [Composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition) for more information.
+- `content`: Refers to an external schema definition for the `ProductSummary` component. This means that the structure and properties expected within the `ProductSummary` component are defined in a separate schema file associated with the `vtex.product-summary` app. Refer to [Content](https://developers.vtex.com/docs/guides/vtex-io-documentation-content) for more information.
