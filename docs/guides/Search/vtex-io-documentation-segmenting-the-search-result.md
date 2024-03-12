@@ -12,7 +12,7 @@ In some situations, especially in B2B accounts, you may want to present custom s
 
 Take the following example in which different results for the same search are obtained based on the customer's email.
 
-![Segmented Catalog B2B](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-segmenting-the-search-result-0.gif)
+![Segmented Catalog B2B](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-segmenting-the-search-result.gif)
 
 ## Step by step
 
