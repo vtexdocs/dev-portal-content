@@ -8,19 +8,16 @@ createdAt: "2021-04-08T20:20:35.782Z"
 updatedAt: "2021-04-08T22:22:38.592Z"
 ---
 This article explains the Master Data core components: Data Entity, Document, Field and Index. 
-[block:callout]
-{
-  "type": "info",
-  "body": "The Master Data core components are equivalent to what is found in database solutions. Some of these components might be found in common database solutions with other names such as record or table."
-}
-[/block]
+
+>ℹ️ The Master Data core components are equivalent to what is found in database solutions. Some of these components might be found in common database solutions with other names such as record or table.
+
 ## Data Entity
 
 In comparison to a regular database, Data Entity is a table in which records (or [Documents](#document)) and [Fields](#field) are always stored.
 
-Master Data currently has two versions (V1 and V2). In V1, a Data Entity is referred by its acronym (a sequence of two uppercase characters). In V2, it is used the name of the Data Entity for reference. For instance, in Master Data V1 Data Entities can be called CL or AD, while in Master Data V2 Data Entities can be called Client and Address.
+Master Data currently has two versions (V1 and V2). In V1, a Data Entity is referred by its acronym (a sequence of two uppercase characters). In V2, the Data Entity name is used as reference. For instance, in Master Data V1 a data entity can be identified by NT, while in Master Data V2 Data Entities it can be identified by Notification.
 
-While the CL Data Entity is used to keep all customer data related to personal information such as name, email, document and others stored in the same place, the AD Data Entity is used to store all customers addresses with their respective information such as: receiver name, street, city, etc.
+In Master Data v1, the CL Data Entity is used to keep all customer data related to personal information such as name, email, document and others stored in the same place, and the AD Data Entity is used to store all customers addresses with their respective information such as: receiver name, street, city, etc.
 
 ### Document
 
@@ -37,10 +34,7 @@ Meaning that each Field has a Type which indicates the format of the attribute b
 ## Index
 
 An Index is a shortcut to find Documents whenever users do not know the Document `id`. An Index can be set up for each Field of a Data Entity. As well as when using an `id`, the Index is used to retrieve a single Document at a time, but using the value of indexed Field instead. For instance, users can find a Document inside CL Data Entity through the email because it has a native Index for the email Field. Indexes are set up in [Master Data V1 using the Admin](https://help.vtex.com/en/tutorial/setting-up-an-index-on-master-data--tutorials_785) and in [Master Data V2 through the API](ref:indices).
-[block:callout]
-{
-  "type": "warning",
-  "body": "The Index of a Document is created when the Document is created or modified. Documents will only have Index if the creation or change occurs after the Index of the Data Entity was set up. Documents created before the Index set up of the Data Entity need to be updated to receive the Index."
-}
-[/block]
-After a Document has an Index, you can retrieve it by using the [Search API](ref:search) with the Field name as a query parameter and the value of Field as the value of the parameter. Example: `/dataentities/CL/search?email=my@email.com`.
+
+>⚠️ The Index of a Document is created when the Document is created or modified. Documents will only have Index if the creation or change occurs after the Index of the Data Entity was set up. Documents created before the Index set up of the Data Entity need to be updated to receive the Index.
+
+Once a Document has an Index, you can retrieve it by using the [Search documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search?endpoint=get-/api/dataentities/-acronym-/search) endpoint with the Field name as a query parameter and the value of Field as the value of the parameter. Example: `/dataentities/CL/search?email=my@email.com`.
