@@ -52,12 +52,30 @@ This means you can copy this content to be imported into other software.
 
 ### Downloading API specifications
 
-Our API reference documentation is built using the [Open API 3.0 (OAS 3.0)](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) standard. The OAS 3.0 schemas are available for [download](https://github.com/vtex/openapi-schemas) in our GitHub repository.
+Our API reference documentation is built using the [Open API 3.0 (OAS 3.0)](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) standard.
 
-![Download ZIP](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/getting-started-making-your-first-request-2.png)
+It is possible to download the OAS 3.0 schemas in three ways, via [GitHub](#github), the [API SPEC](#api-spec) button or the [POSTMAN](#postman) button.
 
-### Using Postman
+#### GitHub
 
-You can import our OAS API specification to [Postman](https://www.postman.com/product/api-client/) by [downloading the JSON schemas](#downloading-api-specifications) you are interested in and following [these instructions](https://learning.postman.com/docs/postman/collections/working-with-openAPI).
+To download the schemas from GitHub, follow the steps below:
 
-If you have copied a `cURL` [request example](#request-examples), you can also [import it into Postman as raw text](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman).
+1. Access the repository [OpenAPI Schemas](https://github.com/vtex/openapi-schemas).
+2. Click the **<>Code** button.
+3. Click Download ZIP.
+
+In a short time, the file with all the repository's schemas will be available on your computer.
+
+#### API SPEC
+
+In each Developer Portal API Reference you will find two buttons referring to the SPEC API at the top of the page: **DOWNLOAD OPENAPI SPEC** and **VIEW OPENAPI SPEC**.
+
+The **DOWNLOAD OPENAPI SPEC** button is used to download the collection schema file in JSON format to the computer, the **VIEW OPENAPI SPEC** button is used to view the collection schema in the browser.
+
+#### Postman
+
+In each Developer Portal API Reference you will also find two buttons referring to Postman at the top of the page: **DOWNLOAD POSTMAN COLLECTION** and **VIEW POSTMAN COLLECTION**.
+
+The **DOWNLOAD POSTMAN COLLECTION**  is button used to download the collection schema file in JSON format. This file can be imported into POSTMAN for testing. The **VIEW POSTMAN COLLECTION** button is used to view the collection schema in the browser.
+
+Another option for importing a schema into Postman is to copy the `cURL` from the desired API Reference and follow the Tutorial [Import cURL commands](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-curl-commands/#import-a-curl-command-into-postman).
