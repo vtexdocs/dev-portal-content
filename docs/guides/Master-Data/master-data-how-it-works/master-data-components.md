@@ -15,7 +15,7 @@ This article explains the Master Data core components: Data Entity, Document, Fi
 
 In comparison to a regular database, Data Entity is a table in which records (or [Documents](#document)) and [Fields](#field) are always stored.
 
-Master Data currently has two versions (V1 and V2). In V1, a Data Entity is referred by its acronym (a sequence of two uppercase characters). In V2, the Data Entity name is used as reference. For instance, in Master Data V1 a data entity can be identified by NT, while in Master Data V2 Data Entities it can be identified by Notification.
+Master Data currently has two versions (V1 and V2). In V1, a Data Entity is referred by its acronym (a sequence of two uppercase characters). In V2, the Data Entity name is used as reference. For instance, in Master Data V1 a data entity can be identified by NT, while in Master Data V2 it can be identified by Notification.
 
 In Master Data v1, the CL Data Entity is used to keep all customer data related to personal information such as name, email, document and others stored in the same place, and the AD Data Entity is used to store all customers addresses with their respective information such as: receiver name, street, city, etc.
 
