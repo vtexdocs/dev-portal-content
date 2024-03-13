@@ -52,7 +52,7 @@ This means you can copy this content to be imported into other software.
 
 ### Downloading API specifications
 
-Our API reference documentation is built using the [Open API 3.0 (OAS 3.0)](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) standard.
+Our API reference documentation is built using the [OpenAPI 3.0 (OAS 3.0)](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) standard.
 
 It is possible to download the OAS 3.0 schemas in three ways, via [GitHub](#github), the [API SPEC](#api-spec) button or the [POSTMAN](#postman) button.
 
@@ -76,6 +76,6 @@ The **DOWNLOAD OPENAPI SPEC** button is used to download the collection schema f
 
 In each Developer Portal API Reference you will also find two buttons referring to Postman at the top of the page: **DOWNLOAD POSTMAN COLLECTION** and **VIEW POSTMAN COLLECTION**.
 
-The **DOWNLOAD POSTMAN COLLECTION**  is button used to download the collection schema file in JSON format. This file can be imported into POSTMAN for testing. The **VIEW POSTMAN COLLECTION** button is used to view the collection schema in the browser.
+The **DOWNLOAD POSTMAN COLLECTION** button is used to download the collection schema file in JSON format. This file can be imported into POSTMAN for testing. The **VIEW POSTMAN COLLECTION** button is used to view the collection schema in your browser.
 
-Another option for importing a schema into Postman is to copy the `cURL` from the desired API Reference and follow the Tutorial [Import cURL commands](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-curl-commands/#import-a-curl-command-into-postman).
+Another option for importing a schema into Postman is to copy the `cURL` from the desired API Reference and follow the tutorial [Import cURL commands](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-curl-commands/#import-a-curl-command-into-postman).
