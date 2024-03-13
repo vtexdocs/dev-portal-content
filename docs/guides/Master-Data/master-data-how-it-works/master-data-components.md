@@ -7,7 +7,7 @@ metadata:
 createdAt: "2021-04-08T20:20:35.782Z"
 updatedAt: "2021-04-08T22:22:38.592Z"
 ---
-This article explains the Master Data core components: Data Entity, Document, Field and Index. 
+This article explains the Master Data core components: Data Entity, Document, Field and Index.
 
 >ℹ️ The Master Data core components are equivalent to what is found in database solutions. Some of these components might be found in common database solutions with other names such as record or table.
 
