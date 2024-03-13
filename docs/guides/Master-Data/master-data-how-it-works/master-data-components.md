@@ -33,7 +33,7 @@ Meaning that each Field has a Type which indicates the format of the attribute b
 
 ## Index
 
-An Index is a shortcut to find Documents whenever users do not know the Document `id`. An Index can be set up for each Field of a Data Entity. As well as when using an `id`, the Index is used to retrieve a single Document at a time, but using the value of indexed Field instead. For instance, users can find a Document inside CL Data Entity through the email because it has a native Index for the email Field. Indexes are set up in [Master Data V1 using the Admin](https://help.vtex.com/en/tutorial/setting-up-an-index-on-master-data--tutorials_785) and in [Master Data V2 through the API](ref:indices).
+An Index is a shortcut to find Documents whenever users do not know the Document `id`. An Index can be set up for each Field of a Data Entity. As well as when using an `id`, the Index is used to retrieve a single Document at a time, but using the value of indexed Field instead. For instance, users can find a Document inside CL Data Entity through the email because it has a native Index for the email Field. Indexes are set up in [Master Data V1 using the Admin](https://help.vtex.com/en/tutorial/setting-up-an-index-on-master-data--tutorials_785) and in [Master Data V2 through the API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/indices).
 
 >⚠️ The Index of a Document is created when the Document is created or modified. Documents will only have Index if the creation or change occurs after the Index of the Data Entity was set up. Documents created before the Index set up of the Data Entity need to be updated to receive the Index.
 
