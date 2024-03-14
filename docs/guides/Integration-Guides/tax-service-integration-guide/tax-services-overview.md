@@ -5,18 +5,13 @@ hidden: false
 createdAt: "2020-09-01T16:28:25.618Z"
 updatedAt: "2021-02-24T13:24:53.349Z"
 ---
-Selling products online is subject to different types of taxes that may vary according to inventory location, shipping addresses, and, of course, the product itself. For some stores, especially those that operate in a  B2B model, tax calculations can be so complex that it is necessary to use an external tax calculation provider.
+Selling products online is subject to various types of taxes that can differ based on factors such as inventory location, shipping addresses, and, of course, the nature of the product. For certain stores, particularly those operating in a B2B model, tax calculations can become intricate and require an external tax calculation provider.
 
-For such cases, it is possible to build an integration that allows a store to send Checkout information to an external tax calculation API. The external API should then respond with the appropriate taxes and values that apply to the purchase.
+In such scenarios, it is possible to establish an integration that enables a store to send checkout information to an external tax calculation API and obtain a response from that API with the necessary tax details and values applicable to the purchase.
 
-<img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/tax-services-overview-0.svg"/>
+![Tax Service diagram](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/overview-tax-service.png)
 
 ## Implementation
 
 Access the [specification](https://developers.vtex.com/docs/guides/tax-services-specification) and [recipe](https://developers.vtex.com/docs/guides/tax-services-recipe) to learn more about Tax Service integration and how to implement it.
 
-[block:html]
-{
-  "html": "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n\n\n<a href=\"tax-service-integration-guide\"<button type=\"button\" class=\"btn btn-outline-secondary\">Back</button></a>\n\n<style></style>"
-}
-[/block]

@@ -7,14 +7,14 @@ updatedAt: "2021-02-09T15:24:50.558Z"
 ---
 ## Clients
 
-Clients are an abstraction for implementing connections to VTEX APIs or external ones that are agnostic to the purpose of the application you are developing. So, the methods of a client class expect some parameters that are necessary for some calls to the API, such as a body to a POST request.
+Clients are an abstraction for implementing connections to VTEX APIs or external ones that are agnostic to the purpose of the application you are developing. So, the methods of a client class expect some parameters that are necessary for some calls to the API, such as a body to a `POST` request.
 
 ### Developing clients on a tax service
 
-Regarding the purpose of a tax service integration, there are some connections to be implemented:
+Regarding the purpose of a tax service integration, there are some connections to be implemented to establish the [tax calculation flow](https://developers.vtex.com/docs/guides/tax-services-overview):
 
-- To the Checkout API, to do the orderForm configuration;
-- To the Tax Provider API, to calculate any taxes related to the items of a cart.
+- To the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api), to do the `orderForm` configuration.
+- To the external tax provider API, to calculate any taxes related to the items of a cart.
 
 ### Example of implementation
 
@@ -67,9 +67,3 @@ The external provider API will receive a POST request with a specifically format
 ### Parsing data from provider to VTEX
 
 Considering the request done by the provider to the VTEX Checkout API, it is also possible to implement a parser in order to put the payload in the format that the checkout expects.
-
-[block:html]
-{
-  "html": "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n\n\n<a href=\"tax-service-integration-guide\"<button type=\"button\" class=\"btn btn-outline-secondary\">Back</button></a>\n\n<style></style>"
-}
-[/block]
