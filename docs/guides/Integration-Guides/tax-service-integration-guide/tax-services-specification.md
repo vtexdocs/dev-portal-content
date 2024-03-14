@@ -285,4 +285,5 @@ Below is an example for values that may be contained in these fields, and you ca
     ]  
 }
 ```
+
 By following these guidelines and leveraging the provided examples, you can incorporate tax integration into your VTEX platform.
