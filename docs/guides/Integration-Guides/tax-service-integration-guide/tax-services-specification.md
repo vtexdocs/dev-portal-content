@@ -69,6 +69,7 @@ Here is an example of the `taxConfiguration` object with the expected informatio
 }
 
 ```
+
 >⚠️ You must send the entire `orderForm` in the request body in the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
 
 After successfully submitting the request, the Tax API integration becomes active in synchronous mode.
