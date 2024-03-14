@@ -78,7 +78,7 @@ After successfully submitting the request, the Tax API integration becomes activ
 
 ## Tax calculation request
 
-The external tax calculation service must provide an endpoint, as the `"https://sandbox-rest.avatax.com/api/v2/transactions/create"` example, that will receive a `POST` request. In this request, Checkout provides a body in a specific format. This means that either the endpoint must be prepared to receive this body format, or the integration must contain a parser to adapt it to the correct format.  
+The external tax calculation service must provide an endpoint, as the `https://sandbox-rest.avatax.com/api/v2/transactions/create` example, that will receive a `POST` request. In this request, Checkout provides a body in a specific format. This means that either the endpoint must be prepared to receive this body format, or the integration must contain a parser to adapt it to the correct format.  
 
 Here is an example of that body sent by Checkout API:
 
