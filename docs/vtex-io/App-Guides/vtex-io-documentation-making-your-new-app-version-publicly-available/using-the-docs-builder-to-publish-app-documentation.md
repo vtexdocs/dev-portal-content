@@ -49,7 +49,7 @@ To begin using the `docs` builder in your app development, follow these steps.
 
 ```json
 "builders": {
-  	  "docs": "0.x"
+     "docs": "0.x"
 }
 ```
 
