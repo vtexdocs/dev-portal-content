@@ -29,42 +29,17 @@ Understand who's visiting your store and reach a higher organic traffic.
 
 </Steps>
 
----
-
 ## What is included?
 
-FastStore consists of three packages that enable the store to work: **FastStore Core**, **FastStore UI**, and **FastStore CLI**.
+FastStore consists of [five main packages](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) that enable the store to work: **FastStore Core**, **FastStore UI**, **FastStore SDK**, and **FastStore API** and **FastStore CLI**:
 
-### FastStore Core (@faststore/core)
-
-Provides the starter source code to get your store up and running. It contains three sub-packages: **Components, SDK, and API packages.**
-
-The `Components` package is a library that crafts the behavior of React components into data attributes. The SDK is an extensible state management library that handles all meaningful states an ecommerce store might have, such as:
-
-| SDK states    | Description                                                                      |
-| ------------- | -------------------------------------------------------------------------------- |
-| **Session**   | Handles auth, region, locale, and currency data.                                 |
-| **Cart**      |  Handles a store cart's addition, remotion, update, and current state.           |
-| **Component** |  Handles the state of the components of a store (e.g., display/hide mini cart).  |
-| **Search**    | Handles the state of the faceted search (e.g., apply filters and sort).          |
-
-Our SDKs also provide GA4-compatible analytics functions to help you create powerful analytics capabilities in your ecommerce.
-Finally, the API package lets you connect to your favorite ecommerce provider by creating interfaces for querying products, collections and manipulating carts.
-
-### FastStore UI (@faststore/ui)
-
-Gathers the design system based on FastStore components, using [Sass](https://sass-lang.com/) for styling. For more information, refer to the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) guide.
-
-> ℹ️ Although the components use [Sass](https://sass-lang.com/), you can work with the desired tool for styling.
-
-### FastStore CLI (@faststore/cli)
-
-This package is responsible for unifying the VTEX source code, in `@faststore/core`, with the customizations and extensions the store will create in the `/src` folder.
-It makes debugging easier since we have this division between the VTEX source code and the customizations and extensions.
-
-FastStore never constrains developers to any proprietary framework. It is opinionated by default but flexible under the hood.
-
----
+| Package | Description |
+|---------| ------------|
+| Core | Provides the starter source code to get your store up and running. It contains four sub-packages: Components, SDK, UI, and API packages. |
+| UI | Gathers the design system based on FastStore components, using [Sass](https://sass-lang.com/) for styling. |
+| SDK | Provides developers with a set of tools that handle all meaningful states an ecommerce store might have, such as Session, Cart, Component, Search. |
+| API | Connects your project to your favorite ecommerce provider by creating interfaces for querying products and collections, as well as handling carts. |
+| CLI | unifies the VTEX source code in `@faststore/core` with the customizations and extensions the store will create in the `/src` folder. |
 
 ## What prior knowledge is required?
 
@@ -73,8 +48,6 @@ To follow along with this documentation, you should be familiar with web develop
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://react.dev/)
 - [Next.js](https://nextjs.org/)
-
----
 
 ## What can you learn here?
 
