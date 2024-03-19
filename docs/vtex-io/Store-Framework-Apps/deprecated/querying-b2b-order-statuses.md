@@ -6,13 +6,11 @@ createdAt: "2022-07-12T19:09:55.157Z"
 updatedAt: "2024-03-04T19:09:55.157Z"
 ---
 
-> ⚠️This guide uses the B2B Orders app, which has been deprecated in favor of the [B2B Orders History](https://developers.vtex.com/docs/apps/vtex.b2b-orders-history) app. Although this app has limited support, we strongly recommend you update your store theme with the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) app to keep up with the component's evolution.
+> ⚠️This guide references the B2B Orders app, which is deprecated and has limited support in favor of the [B2B Orders History](https://developers.vtex.com/docs/apps/vtex.b2b-orders-history) app. It is strongly recommended to update your store theme with the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) app for compatibility and to follow the component's evolution. Note that the B2B Orders app is not compatible with the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, and these instructions are not applicable for stores using the B2B Suite. For B2B Suite users, please consult the [B2B Orders History](https://developers.vtex.com/docs/guides/vtex-b2b-orders-history) documentation instead.
 
 In a B2B business model, your company and your partners may need to share selected information, such as order statuses. This is necessary to show the status of external orders — orders made outside VTEX — to customers on your ecommerce, for example.
 
 For these scenarios, we recommend that you install and set up the [B2B Orders app](#installing-the-b2b-orders-app) in your VTEX account. By communicating with your Enterprise Resource Planning (ERP), this app allows your business’ customers to securely check their order status at any time they want.
-
-> ⚠️ The B2B Orders app is not compatible with the [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution. Therefore, these instructions do not apply to stores using the B2B Suite. If you are using the B2B Suite, refer to the [B2B Orders History](https://developers.vtex.com/docs/guides/vtex-b2b-orders-history) documentation instead.
 
 Check the following sections for information on the [ERP API requirements](#erp-api-requirements) and on how to [install the B2B Orders app](#installing-the-b2b-orders-app) in your store.
 
