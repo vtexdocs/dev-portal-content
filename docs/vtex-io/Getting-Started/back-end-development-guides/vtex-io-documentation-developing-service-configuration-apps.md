@@ -111,7 +111,7 @@ Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app a
 
 ### Step 3 - Declaring policies and permissions
 
-You have to declare the required [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) that gives permission to the service app to read the data from the configuration app. In the `manifest.json` file, add the following policy in the `"policies"` list:
+In the `manifest.json` file, add the `read-workspace-apps` [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) to the `"policies"` list. This policy is responsible for allowing the service app to read the data from the configuration app.
 
 ```json
 "policies": [
