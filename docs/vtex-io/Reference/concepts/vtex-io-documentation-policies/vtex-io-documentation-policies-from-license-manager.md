@@ -39,207 +39,166 @@ In order for a  VTEX IO app to access external resources, it requires authorizat
 Below is a table listing the role-based VTEX IO policies for the License Manager resources. The table indicates which [Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) the policy is associated with.
 
 <table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Key</th>
-            <th>Description</th>
-            <th>Client</th>
-            <th>Resources</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Product management</td>
-            <td><code>ProdutoForm.aspx</code>
-            </td>
-            <td>View the registration screen and product change.</td>
-            <td><code>catalog</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>{{account}}.vtexcommercestable.com.br/api/catalog_system/pvt/products/*</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Product and SKU Management</td>
-            <td><code>ManterFormularioProdutoSku</code>
-            </td>
-            <td>Change and inclusion of product and SKU.</td>
-            <td><code>catalog</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>{{account}}.vtexcommercestable.com.br/api/catalog_system/pvt/products/*</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Brands</td>
-            <td><code>Marca.aspx</code>
-            </td>
-            <td>List all registered brands.</td>
-            <td><code>catalog</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>{{account}}.vtexcommercestable.com.br/api/catalog_system/pvt/brand/list</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>SKUs</td>
-            <td><code>Sku.aspx</code>
-            </td>
-            <td>Lists all registered SKUs.</td>
-            <td><code>catalog</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>{{account}}.vtexcommercestable.com.br/api/catalog_system/pvt/sku/*</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Orders Full Access</td>
-            <td><code>AcessaTodosPedidos</code>
-            </td>
-            <td>Reading and writing for all requests via Checkout API. It does not allow access to requests for the flow of the order management module.</td>
-            <td><code>checkout</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>{{account}}.vtexcommercestable.com.br/api/oms/pvt/orders/*</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Order Cancellation</td>
-            <td><code>CancelaPedidos</code>
-            </td>
-            <td>Cancel orders.</td>
-            <td><code>checkout</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>/api/oms/pvt/orders/{{orderId}}/cancel</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Save OrderForm Configuration</td>
-            <td><code>SaveOrderFormConfiguration</code>
-            </td>
-            <td>Save the configuration of shopping carts.</td>
-            <td><code>checkout</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>/api/checkout/pvt/configuration/orderform</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Read Shopping Cart</td>
-            <td><code>GetOrderForm</code>
-            </td>
-            <td>Reading and listing all shopping carts. It does not allow access to non-masked cart data.</td>
-            <td><code>checkout</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>/api/checkout/pub/orderform/{{orderFormId}}</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Get account by identifier</td>
-            <td><code>Get_Account_By_Identifier</code>
-            </td>
-            <td>Consultation that returns accounts for the identifier, which may be the account ID, host, or name of the account application.</td>
-            <td><code>licenseManager</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>/api/license-manager/account</code>
-                    </li>
-                    <li><code>/api/license-manager/pvt/accounts/*</code>
-                    </li>
-                    <li><code>/api/pvt/accounts/*</code>
-                    </li>
-                    <li><code>/api/site/pvt/accounts/*</code>
-                    </li>
-                    <li><code>/api/license-manager/site/pvt/accounts/*</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Master Data administrator</td>
-            <td><code>ADMIN_DS</code>
-            </td>
-            <td>Manage Master Data.</td>
-            <td><code>masterData</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>{{account}}.vtexcommercestable.com.br/*</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Vbase Read Only</td>
-            <td><code>vbase-read-only</code>
-            </td>
-            <td>Read-only access to VBase.</td>
-            <td><code>vbase</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>/buckets/*</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Vbase Read Write</td>
-            <td><code>vbase-read-write</code>
-            </td>
-            <td>Read and write access to VBase.</td>
-            <td><code>vbase</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>/buckets/*</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>List Orders</td>
-            <td><code>ListOrders</code>
-            </td>
-            <td>List all orders from the given account.</td>
-            <td><code>OMS</code>
-            </td>
-            <td>
-                <ul>
-                    <li><code>/api/oms/pvt/orders</code>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Key</th>
+      <th>Description</th>
+      <th>Client</th>
+      <th>Resources</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Product management</td>
+      <td><code>ProdutoForm.aspx</code></td>
+      <td>View the registration screen and product change.</td>
+      <td><code>catalog</code></td>
+      <td>
+        <ul>
+          <li><code>{{account}}.vtexcommercestable.com.br/api/catalog_system/pvt/products/*</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Product and SKU Management</td>
+      <td><code>ManterFormularioProdutoSku</code></td>
+      <td>Change and inclusion of product and SKU.</td>
+      <td><code>catalog</code></td>
+      <td>
+        <ul>
+          <li><code>{{account}}.vtexcommercestable.com.br/api/catalog_system/pvt/products/*</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Brands</td>
+      <td><code>Marca.aspx</code></td>
+      <td>List all registered brands.</td>
+      <td><code>catalog</code></td>
+      <td>
+        <ul>
+          <li><code>{{account}}.vtexcommercestable.com.br/api/catalog_system/pvt/brand/list</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>SKUs</td>
+      <td><code>Sku.aspx</code></td>
+      <td>Lists all registered SKUs.</td>
+      <td><code>catalog</code></td>
+      <td>
+        <ul>
+          <li><code>{{account}}.vtexcommercestable.com.br/api/catalog_system/pvt/sku/*</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Orders Full Access</td>
+      <td><code>AcessaTodosPedidos</code></td>
+      <td>Reading and writing for all requests via Checkout API. It does not allow access to requests for the flow of
+        the order management module.</td>
+      <td><code>checkout</code></td>
+      <td>
+        <ul>
+          <li><code>{{account}}.vtexcommercestable.com.br/api/oms/pvt/orders/*</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Order Cancellation</td>
+      <td><code>CancelaPedidos</code></td>
+      <td>Cancel orders.</td>
+      <td><code>checkout</code></td>
+      <td>
+        <ul>
+          <li><code>/api/oms/pvt/orders/{{orderId}}/cancel</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Save OrderForm Configuration</td>
+      <td><code>SaveOrderFormConfiguration</code></td>
+      <td>Save the configuration of shopping carts.</td>
+      <td><code>checkout</code></td>
+      <td>
+        <ul>
+          <li><code>/api/checkout/pvt/configuration/orderform</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Read Shopping Cart</td>
+      <td><code>GetOrderForm</code></td>
+      <td>Reading and listing all shopping carts. It does not allow access to non-masked cart data.</td>
+      <td><code>checkout</code></td>
+      <td>
+        <ul>
+          <li><code>/api/checkout/pub/orderform/{{orderFormId}}</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Get account by identifier</td>
+      <td><code>Get_Account_By_Identifier</code></td>
+      <td>Consultation that returns accounts for the identifier, which may be the account ID, host, or name of the
+        account application.</td>
+      <td><code>licenseManager</code></td>
+      <td>
+        <ul>
+          <li><code>/api/license-manager/account</code></li>
+          <li><code>/api/license-manager/pvt/accounts/\*</code></li>
+          <li><code>/api/pvt/accounts/\*</code></li>
+          <li><code>/api/site/pvt/accounts/\*</code></li>
+          <li><code>/api/license-manager/site/pvt/accounts/\*</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Master Data administrator</td>
+      <td><code>ADMIN_DS</code></td>
+      <td>Manage Master Data.</td>
+      <td><code>masterData</code></td>
+      <td>
+        <ul>
+          <li><code>{{account}}.vtexcommercestable.com.br/*</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Vbase Read Only</td>
+      <td><code>vbase-read-only</code></td>
+      <td>Read-only access to VBase.</td>
+      <td><code>vbase</code></td>
+      <td>
+        <ul>
+          <li><code>/buckets/*</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Vbase Read Write</td>
+      <td><code>vbase-read-write</code></td>
+      <td>Read and write access to VBase.</td>
+      <td><code>vbase</code></td>
+      <td>
+        <ul>
+          <li><code>/buckets/*</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>List Orders</td>
+      <td><code>ListOrders</code></td>
+      <td>List all orders from the given account.</td>
+      <td><code>OMS</code></td>
+      <td>
+        <ul>
+          <li><code>/api/oms/pvt/orders</code></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 >ℹIf you know about a policy that needs to be described in the table and want it to be documented, open a request using our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSfmnotPvPjw-SjiE7lt2Nt3RQgNUe10ixXZmuO2v9enOJReoQ/viewform).
