@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-policies-from-license-manager"
 hidden: false
 createdAt: "2024-03-20T11:51:00.000Z"
 updatedAt: "2024-03-20T11:51:00.000Z"
+excerpt: "Discover the policies a VTEX IO app can use from License Manager resources."
 ---
 In order for a  VTEX IO app to access external resources, it requires authorization through policies declared in its [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest). One type of external resource available is the [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3), which can be authorized to access by declaring the resource’s **Key** in the `policies` list of the app. For instance, by adding `Sku.aspx` to the `policies` list,  your app gains permission to read SKUs from the Catalog.
 
