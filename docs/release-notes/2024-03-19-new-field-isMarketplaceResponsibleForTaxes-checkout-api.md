@@ -9,6 +9,6 @@ excerpt: "Introducing a new field, isMarketplaceResponsibleForTaxes, in the Chec
 
 We have added the `isMarketplaceResponsibleForTaxes` property to the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api#overview) `orderForm`. This new field is a boolean that indicates whether the marketplace is responsible for calculating taxes for the products (`true`) or if the responsibility lies with the seller (`false`).
 
-For more information on how to use this field, please refer to the [Tax Service Specification](https://developers.vtex.com/docs/guides/tax-services-specification) article.
+For more information on how to use it, please refer to the [Tax Service Specification](https://developers.vtex.com/docs/guides/tax-services-specification) guide.
 
 >ℹ️ This is important for US merchants who must comply with some legislation regarding tax redemption.
