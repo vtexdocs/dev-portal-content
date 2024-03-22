@@ -56,11 +56,34 @@ For more information on configuration options for this file, refer to [Configura
 
 ### `package.json`
 
-Defines the project's metadata and handles dependencies and scripts using [Yarn](https://yarnpkg.com/migration/overview). Let's take a closer look at three important packages declared in this file:
+Defines the project's metadata and handles dependencies and scripts using [Yarn](https://yarnpkg.com/migration/overview). Let's take a closer look at five important packages declared in this file:
 
 #### `@faststore/core`
 
 Bundles FastStore source code, including the FatsStore starter: `starter store`. It contains four sub-packages, `Components`, `SDK`, `UI` and `API`, which handle the starter.
+
+#### `@faststore/sdk`
+
+Handles all meaningful states an ecommerce store might have, such as:
+
+| SDK states    | Description                                                                      |
+| ------------- | -------------------------------------------------------------------------------- |
+| **Session**   | Handles auth, region, locale, and currency data.                                 |
+| **Cart**      |  Handles a store cart's addition, remotion, update, and current state.           |
+| **Component** |  Handles the state of the components of a store (e.g., display/hide mini cart).  |
+| **Search**    | Handles the state of the faceted search (e.g., apply filters and sort).          |
+
+The SDKs also provide GA4-compatible analytics functions to help you create powerful analytics capabilities in your ecommerce.
+
+#### `@faststore/ui`
+
+Gathers the design system based on FastStore components, using [Sass](https://sass-lang.com/) for styling. For more information, refer to the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) guide.
+
+> ℹ️ Although the components use [Sass](https://sass-lang.com/), you can work with the desired tool for styling.
+
+#### `@faststore/api`
+
+Connects your project to your favorite ecommerce provider by creating interfaces for querying products, collections, and handling carts.
 
 #### `@faststore/cli`
 
