@@ -1,7 +1,7 @@
 ---
 title: "Tax Service"
 slug: "2024-03-19-new-field-isMarketplaceResponsibleForTaxes-checkout-api"
-type: "improvement"
+type: "added"
 createdAt: ""
 hidden: false
 excerpt: "Introducing a new field, isMarketplaceResponsibleForTaxes, in the Checkout API orderForm. Easily determine tax calculation responsibility between marketplace and seller."
