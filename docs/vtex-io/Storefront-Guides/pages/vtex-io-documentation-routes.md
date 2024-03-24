@@ -36,6 +36,8 @@ Now, to better understand the rendering process of a page in VTEX IO, it's impor
 
 Rewriter interprets the *canonical path* received from the client request and translates it into the route *path* itself. In the sequence, to finally display the requested page, Rewriter forwards the route *path* to the rendering pipeline.
 
+>ℹ️ It is possible to access and manage the Rewriter routes using its GraphQL API. For more details, see [Rewriter GraphQL API](https://developers.vtex.com/docs/guides/rewriter-graphql-api).
+
 ## Custom routes
 
 In VTEX IO, search, product, and some navigation pages with preset paths are already available, such as [home page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L2), [product page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L11), [login page](https://github.com/vtex-apps/store/blob/master/store/routes.json#L8), etc.
