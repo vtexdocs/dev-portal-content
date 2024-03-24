@@ -1,9 +1,12 @@
 ---
-title: "Overview"
+title: "GraphQL"
 slug: "graphql-ide"
 hidden: false
 createdAt: "2021-03-25t17:12:53.428Z"
 updatedAt: "2021-10-26t23:27:34.148Z"
+seeAlso:
+ - "/docs/guides/rewriter-graphql-api"
+ - "/docs/guides/search-graphql"
 ---
 
 VTEX IO APIs are built with [GraphQL](https://graphql.org/) — a query language and a server-side runtime for fulfilling those queries with existing data.
