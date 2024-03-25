@@ -7,7 +7,7 @@ This guide will walk you through the process of filling out the bulk import spre
 1. Download the [template file](https://io.vtex.com.br/b2b-bulk-import/b2b-bulk-import-template.xlsx).
 2. Fill in the file with buyer organization data following the specifications detailed in [File structure for import](#file-structure-for-import).
 
-2. **File size limitation**: Ensure your file is in `.xlsx` format and does not exceed 50MB.
+  >ℹ Ensure your file is in `.xlsx` format and does not exceed 50MB.
 
 3. **Review and validate**: Double-check your data and ensure it aligns with this guidelines.
 
