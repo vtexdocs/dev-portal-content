@@ -1,0 +1,151 @@
+---
+title: 'Multiple page templates'
+---
+
+Multiple page templates allow the creation of flexible layouts for Product Details and Product Listing Pages (PDPs and PLPs) in Headless CMS. This feature allows you to create and manage pages hierarchically, leveraging product information, user context, product type, brand specifications, and template hierarchy.
+
+> ⚠️ Multiple page templates are natively included for stores with the 3.x. `@faststore/core` package version. To update the `@faststore/core` package, check this [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
+
+This document outlines the implementation details, usage instructions, and template hierarchy logic for integrating the templates into your FastStore project.
+
+## Creating a multiple page template
+
+To add multiple templates to your FastStore project, follow the steps below:
+
+Go to the VTEX Admin and navigate to **Storefront > Headless CMS**.
+Select your FastStore project.
+Click  `Create Document` and choose between `Product Page` and `Product List Page`.
+Now that you have created the template, check the [Template hierarchy logic] section to learn how to use and edit the template.
+
+> ℹ️ Check the [Managing pages in the Headless CMS](https://help.vtex.com/tutorial/managing-pages--3DO6rBhZ1p3zndnFu5BgRt) guide to learn how to edit the name, publish, duplicate, or delete the template.
+
+## Template hierarchy logic
+
+Both PDPs and PLPs use a similar logic for selecting the appropriate template to render. This logic prioritizes templates based on various criteria, starting with the most specific and moving to more generic templates, like department or generic PDP/PLP.
+
+Here's the difference between Product Details and Product Listing Page template hierarchy:
+
+| Feature | PDP hierarchy logic | PLP hierarchy logic |
+| ---------- | ---------------------------- | ---------------------------- |
+| Matching Criteria | Slug, Subcategory, Category, Department, Generic. | Slug (subcategory, category, department implied), Generic. |
+| Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details beyond the slug. |
+### Product Details Page (PDP) template selection criteria
+
+The template selection process follows a specific hierarchy, starting with the most specific template and progressing towards a generic one if no exact match is found.
+
+FastStore checks for templates in the following order:
+
+```mermaid
+graph TB
+A[Finding the Product Page] --> B{Product Slug match?}
+B --> C{Yes} --> D(Use matching template)
+B --> E{No} --> F{Product Subcategory match?}
+F --> G{Yes} --> H(Use matching template)
+F --> I{No} --> J{Product Category match?}
+J --> K{Yes} --> L(Use matching template)
+J --> M{No} --> N{Product Department match?}
+N --> O{Yes} --> P(Use matching template)
+N --> Q{No} --> R{Use generic template}
+```
+The system first searches for a template named after the product slug. For example, if the product slug is `/blue-shirts`, FastStore will look for a template named `/blue-shirts`. 
+
+1. If no template matches the slug, FastStore searches for a template based on the product subcategory. For example, if the subcategory is `summer clothing`, the system might look for `/clothing/shirts/summer-clothing/`. 
+
+2. Following the subcategory, the system checks for a template matching the product category. For example, if the category is `shirts`, the system might look for `/clothing/shirts/`.
+
+3. If no match is found at the category level, FastStore searches for a template based on the product department. For example, if the department is `clothing`, the system might look for `/clothing/`.
+
+4. If none of the above criteria match, the generic Product Page template is used. This template has an empty Template section value in the settings.
+
+![pdp-page-list](https://vtexhelp.vtexassets.com/assets/docs/src/pdplist___d6f00d8bcfc23aecc477c97d487eebca.png)
+
+### Product Listing Page (PLP) template selection criteria
+
+PLPs adhere to the following template selection logic:
+
+1. FastStore prioritizes templates based on the slug information. This can include the combined department and category (department/category) or just the department (department).
+
+2. If no slug match is found, the generic PLP template is used. |
+
+For example:
+
+- Slug: `/office/chairs` - matches department and category.
+- Department template: `/office` alternative for products within a department, ignoring category.
+- Generic PLP template: Used if no other matches are found.
+
+### Main difference between PDP and PLP template selection criteria
+
+To sum up, here's the difference between the two template hierarchies:
+
+| Feature | PDP Hierarchy logic | PLP Hierarchy logic |
+| ---------- | ---------------------------- | ---------------------------- |
+| Matching Criteria | Slug, Subcategory, Category, Department, Generic. | Slug (subcategory, category, department implied), Generic. |
+| Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details beyond the slug. |
+
+## Examples
+
+In this section, we'll delve into different scenarios for selecting PDPs and PLPs templates.
+
+### PDP template selection example
+
+For this example, we will explore three template scenarios to render in Headless CMS for the Apple Magic Mouse product:
+
+- [Slug](#rendering-within-a-slug): Matches the product slug, e.g., `/apple-magic-mouse/p`. It offers the highest level of specificity.
+- [Department](#rendering-within-a-department): Applies to products within a specific department category, such as `/technology/`, if no slug template is defined.
+- [Generic Product Page Template](#rendering-the-generic-product-page-template): Fallback template used if no other specific template matches.
+
+#### Rendering within a slug
+
+When using PDPs, this type of page template is recognized by the slug pattern. In the example, we will use the [Apple Magic Mouse product page](https://starter.vtex.app/apple-magic-mouse/p) which has the slug `/apple-magic-mouse/p`.
+
+![PDP Slug template](https://vtexhelp.vtexassets.com/assets/docs/src/pdpslug___95ada5a5b24e23e34c04f4837d11ade7.png)
+
+Adding the slug to this template makes it specific, prompting FastStore to prioritize it for rendering on the product page.
+
+#### Rendering within a `department`
+
+Products in [catalog](https://help.vtex.com/en/tutorial/catalog-overview--77M8ItLhDXs6aBdQTqToVe) fall under a [category tree](https://help.vtex.com/en/tutorial/what-is-a-category--6HV4Q3E2FauUoOQoiCCgCg), typically `/department/category/subcategory/`. For example, the product we’ve been using is in the `Technology department`, allowing you to create a department-specific template.
+
+![PDP Department template](https://vtexhelp.vtexassets.com/assets/docs/src/pdpdepartment___387cf641f675d05666afeafc65a3e56b.png)
+
+If this product is under a [subcategory](https://help.vtex.com/en/tutorial/what-is-a-subcategory--2cb0aRkG3i6AeiAMM24iwY?&utm_source=autocomplete), you can create a corresponding template. The category tree is used in the template input, separated by slashes.
+
+![PDP subcategory template](https://vtexhelp.vtexassets.com/assets/docs/src/pdpsubcategory___566be1fd3bba2db777dd18881933292c.png)
+
+You can also see the category hierarchy through the breadcrumb.
+
+![PDP breadcrumb](https://vtexhelp.vtexassets.com/assets/docs/src/breadcrumb___c9c12da51f685572dfb3a9403168b26a.png)
+
+#### Rendering the generic Product Page template
+If no matches are found for the slug or department, the generic template will be used to render the PDP. In this case, create a Headless CMS document with the `Product Page` option, leaving the **Template** field empty in the **Sections** tab
+
+![PDP general template](https://vtexhelp.vtexassets.com/assets/docs/src/pdpgeneral___cdeeaf6060b529aea029e2e5814efc50.png)
+
+### Product Listing Page (PLP) template selection example
+
+For PLPs, we will go over the following possible templates:
+- [Slug](#rendering-within-slugs)
+- [Product Listing Page generic template](#rendering-the-generic-product-listing-page).
+
+When using PLPs, this type of page template is recognized by the slug pattern. In the example, we will use the [office/chairs slug](https://starter.vtex.app/office/chairs) to render the PLP template.
+
+#### Rendering within slugs
+
+Products in catalog are organized within a category tree, structured as `/department/category/subcategory`. If a slug template exists for any of these options, it will be rendered accordingly.
+
+For example, if you want to render a specific template for products inside a [department](https://help.vtex.com/en/tutorial/what-is-a-department--22rKjmYWVmmKAK8CWa8yKw?&utm_source=autocomplete) without considering the category or subcategory, you can create a Department template [/office](https://starter.vtex.app/office/chairs).
+
+![PLP department template](https://vtexhelp.vtexassets.com/assets/docs/src/plpdepartment___4c520237721ca14a722215a93e8cd4c7.png)
+
+
+If this product were under a `subcategory`, it would still be possible to create a template representing this scenario. The category tree is used in the template slug input, as in the image below.
+
+![PLP subcategory template](https://vtexhelp.vtexassets.com/assets/docs/src/plpsubcategory___ac973acd0b5d1745e848f1a0a94c5988.png)
+
+> ⚠️ Keep in mind that if a more specific template, such as `/office/chairs`, exists, it will take precedence when the slug matches the same pattern.
+
+#### Rendering the generic Product Listing Page
+
+If no matches are found for the slug, the generic template will be used to render the PLP. In this case, create a Headless CMS page with the `Product List Page` option, leaving the Template field empty in the **Sections** tab.
+
+![PLP general template](https://vtexhelp.vtexassets.com/assets/docs/src/plpgeneral___d5ecb7ef0a45bb0bfa6280ec719d9b80.png)
