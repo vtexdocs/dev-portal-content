@@ -90,9 +90,9 @@ Fields marked with an asterisk `*` indicate required information.
 
 | Column | Type | Description |
 | - | - | - |
-| Buyer Org ID* | String | A unique identifier linking the member to a specific buyer organization. |
-| Cost Center ID* | String | An identifier linking the member to a specific cost center within the organization. |
-| Name* | String | The member's full name used for identification and communication. |
-| Email* | String | The email address of the member serving as a primary point of contact for communication. |
-| Role Id* | String - UUID | A unique identifier denoting the member's role within the organization. |
+| Buyer Org ID* | String | Unique identifier linking the member to a specific buyer organization. |
+| Cost Center ID* | String  | Identifier linking the member to a specific cost center within the organization. |
+| Name* | String  | Member's full name used for identification and communication. |
+| Email* | String  | Email address of the member serving as a primary point of contact for communication. |
+| Role Id* | GUID | Unique identifier denoting the member's role within the organization. |
 | Can Impersonate | Boolean | Indicates if the member can impersonate another user within the system. |
