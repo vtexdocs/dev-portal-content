@@ -82,7 +82,7 @@ Check the default columns present in the Cost Centers tab in the table below. Ma
 | Phone Number* | String | Contact number for the receiver. |
 | Business Document*| String | Document that contains essential business information (e.g. tax identification number). |
 
-### Members tab columns
+### Columns in the Members tab
 
 This tab is required only for organization with multiple members. If the buyer organization has only one member, do not fill this information.
 
