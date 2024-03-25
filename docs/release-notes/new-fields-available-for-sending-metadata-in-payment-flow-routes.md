@@ -14,12 +14,12 @@ Two new fields are now available in [Payment Provider Protocol API](https://deve
 
 The `metadataFields` and `connectorMetadata` were added to the [Payment Provider Protocol API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#overview) endpoints to allow the provider to send metadata information in payment transactions carried out at the VTEX gateway.
 
-The following endpoints have been updated to add these parameters:
+See where each field was added:
 
-- `metadataFields`: [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest)
-- `connectorMetadata`: [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments), [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations), [Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements), [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) and [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound/-action-).
-
-
+| Field   | Endpoints    |
+| ---------- | ---------- |
+| `metadataFields`       | <ul><li><a href="https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest">List Payment Provider Manifest</a></li></ul>     |
+| `connectorMetadata`       | <ul><li><a href="https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments">Create Payment</a></li></ul><ul><li><a href="https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations">Cancel Payment</a></li></ul><ul><li><a href="https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements">Settle Payment</a></li></ul><ul><li><a href="https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds">Refund Payment</a></li></ul><ul><li><a href="https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound/-action-">Inbound Request (BETA</a></li></ul>      |
 
 ## What needs to be done?
 
