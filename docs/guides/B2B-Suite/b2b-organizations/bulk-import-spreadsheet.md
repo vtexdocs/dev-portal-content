@@ -60,9 +60,9 @@ Fields marked with an asterisk `*` indicate required information.
 
 ### Cost Centers tab
 
-This tab applies only to organizations with multiple cost centers. Do not fill this information if the buyer organization has only one cost center.
+This tab is required only for organizations with multiple cost centers. If the buyer organization has only one cost center, do not fill this tab.
 
-Fields marked with an asterisk `*` indicate required information.
+Check the default columns present in the Cost Centers tab in the table below. Mandatory information is marked with `*`.
 
 | Column | Type | Description |
 | - | - | - |
