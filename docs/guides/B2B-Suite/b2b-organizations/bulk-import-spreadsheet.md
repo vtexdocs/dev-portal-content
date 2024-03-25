@@ -84,9 +84,9 @@ Check the default columns present in the Cost Centers tab in the table below. Ma
 
 ### Members tab columns
 
-This tab applies only to organization with multiple members. Do not fill this information if the buyer organization has only one member.
+This tab is required only for organization with multiple members. If the buyer organization has only one member, do not fill this information.
 
-Fields marked with an asterisk `*` indicate required information.
+Check the default columns present in the Cost Centers tab in the table below. Mandatory information is marked with `*`.
 
 | Column | Type | Description |
 | - | - | - |
