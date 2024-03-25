@@ -66,21 +66,21 @@ Check the default columns present in the Cost Centers tab in the table below. Ma
 
 | Column | Type | Description |
 | - | - | - |
-| Buyer Org ID* | String | A unique identifier for the buyer organization essential for tracking and future updates. |
-| Cost Center ID* | String | A unique identifier for the cost center essential for tracking and future updates. |
-| Cost Center Name* | String | The name assigned to the cost center. |
-| Address Type* | String | The classification of the address (e.g., residential, commercial). |
-| Postal Code* | String | The postal code corresponding to the address. |
-| Street* | String | The street name of the address. |
-| Number* | String | The numerical identifier for the location (house/building number). |
-| Complement* | String | Additional information regarding the address if any. |
-| Neighborhood* | String | The specific neighborhood of the address. |
-| City* | String | The city where the address is located. |
-| State* | String | The state where the address is situated. |
-| Country* | String | The country of the address. |
-| Receiver Name* | String | The name of the individual who is the point of contact at the address. |
-| Phone Number* | String | The contact number for the receiver. |
-| Business Document*| String | A document that contains essential business information (e.g., tax identification number). |
+| Buyer Org ID* | String | Unique identifier for the buyer organization essential for tracking and future updates. |
+| Cost Center ID* | String | Unique identifier for the cost center essential for tracking and future updates. |
+| Cost Center Name* | String | Name assigned to the cost center. |
+| Address Type* | String | Classification of the address (e.g., residential, commercial). |
+| Postal Code* | String | Postal code corresponding to the address. |
+| Street* | String | Street name of the address. |
+| Number* | String | Numerical identifier for the location (house/building number). |
+| Complement* | String | Additional information regarding the address. |
+| Neighborhood* | String | Neighborhood of the address. |
+| City* | String | City where the address is located. |
+| State* | String | State where the address is situated. |
+| Country* | String | Country of the address. |
+| Receiver Name* | String | Name of the individual who is the point of contact at the address. |
+| Phone Number* | String | Contact number for the receiver. |
+| Business Document*| String | Document that contains essential business information (e.g. tax identification number). |
 
 ### Members tab columns
 
