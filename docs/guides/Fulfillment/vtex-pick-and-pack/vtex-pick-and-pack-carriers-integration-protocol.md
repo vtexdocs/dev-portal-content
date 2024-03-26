@@ -1,5 +1,5 @@
 ---
-title: "VTEX Pick and Pack Carrriers Integration Protocol"
+title: "VTEX Pick and Pack Carriers Integration Protocol"
 slug: "vtex-pick-and-pack-carriers-integration-protocol"
 hidden: false
 createdAt: "2023-04-05T17:08:52.219Z"
