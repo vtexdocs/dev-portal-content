@@ -4,9 +4,30 @@ title: 'Multiple page templates'
 
 Multiple page templates allow the creation of flexible layouts for Product Details and Product Listing Pages (PDPs and PLPs) in Headless CMS. This feature allows you to create and manage pages hierarchically, leveraging product information, user context, product type, brand specifications, and template hierarchy.
 
-> ⚠️ Multiple page templates are natively included for stores with the 3.x. `@faststore/core` package version. To update the `@faststore/core` package, check this [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
-
 This document outlines the implementation details, usage instructions, and template hierarchy logic for integrating the templates into your FastStore project.
+
+## Before you begin
+
+To benefit from this feature, follow the steps below:
+
+1. Update your store’s `@faststore/core` package to the `v3.0.17` by running the following commands:
+
+```bash
+yarn add @faststore/core@3.0.17
+``` 
+```bash
+yarn add -D @faststore/cli@3.0.17
+```
+
+2. Run `yarn dev` to apply the changes to your project.
+
+3. After updating the `@faststore/core`, run the following command in your terminal to sync the changes from the Headless CMS:
+
+```bash
+faststore cms-sync
+```
+
+After the sync, you can start [using the templates](#usage).
 
 ## Creating a multiple page template
 
