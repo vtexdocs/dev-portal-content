@@ -16,7 +16,7 @@ The Render Server app has some settings available in the Admin for [cache-contro
 3. Search for **Render Server**.
 4. In the Render Server app’s box, click on <i class="fa fa-gear"></i> **Settings**.
 
-![Cache-control settings](../../../../images/cache-control-settings.jpg)
+![Cache-control settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/cache-control-settings.jpg)
 
 |Name|Type|Description|
 |-|-|-|

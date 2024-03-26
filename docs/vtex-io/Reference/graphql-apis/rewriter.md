@@ -22,7 +22,7 @@ Follow the steps below to access the Rewriter settings page in your store:
 3. Search for **Rewriter**.
 4. In the Rewriter app’s box, click on <i class="fa fa-gear"></i> **Settings**.
 
-![Rewriter settings](../../../../images/rewriter-settings.jpg)
+![Rewriter settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/rewriter-settings.jpg)
 
 The table below describes the available settings of the Rewriter app:
 

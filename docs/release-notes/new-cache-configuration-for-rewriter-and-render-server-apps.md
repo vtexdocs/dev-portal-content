@@ -17,7 +17,7 @@ Within the apps’ settings page, there are three new settings that merchants ca
 - **Max-Age overwrite**: This setting overwrites the `max-age` header default value. This header specifies the maximum amount of time (in seconds) for which a resource should be considered fresh. After this time elapses, the client must revalidate the resource with the server before using it again. The default value for this setting is 300. The valid range is between 300 to 3600 seconds.
 - **Stale Revalidate overwrite**: This setting overwrites the `stale-while-revalidate` header default value. This header allows a client to continue using a cached version of a resource even after it has become stale (i.e., expired according to the `max-age` header). The value of this header indicates the maximum amount of time (in seconds) that the client is allowed to serve a stale response while it revalidates the resource with the server in the background. The default value for this setting is 600 seconds. The valid range is between 600 to 86400 seconds.
 
-![Cache-control settings](../../images/cache-control-settings.jpg)
+![Cache-control settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/cache-control-settings.jpg)
 
 ## Why did we make this change?
 
