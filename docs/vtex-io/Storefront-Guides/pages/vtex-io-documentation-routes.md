@@ -1,6 +1,6 @@
 ---
-title: "Routes"
-slug: "vtex-io-documentation-routes"
+title: "Routing"
+slug: "vtex-io-documentation-routing"
 hidden: false
 createdAt: "2020-07-16T19:36:59.239Z"
 updatedAt: "2022-12-13T20:17:44.554Z"
@@ -35,6 +35,8 @@ The canonical path is the unique string that contains the route shortest absolut
 Now, to better understand the rendering process of a page in VTEX IO, it's important to know that the render server recognizes only the *path* property of a route. Therefore, the Rewriter app is an interface that intermediates the client request of a canonical and the rendering process.
 
 Rewriter interprets the *canonical path* received from the client request and translates it into the route *path* itself. In the sequence, to finally display the requested page, Rewriter forwards the route *path* to the rendering pipeline.
+
+>ℹ️ It is possible to access and manage the Rewriter routes using its GraphQL API. For more details, see [Rewriter GraphQL API](https://developers.vtex.com/docs/guides/rewriter-graphql-api).
 
 ## Custom routes
 

@@ -1,6 +1,6 @@
 ---
-title: "Rewriter GraphQL API"
-slug: "rewriter-graphql-api"
+title: "Rewriter GraphQL"
+slug: "rewriter-graphql"
 hidden: false
 createdAt: "2024-03-27T11:00:00.000Z"
 updatedAt: "2024-03-27T11:00:00.000Z"
