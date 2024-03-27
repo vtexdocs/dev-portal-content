@@ -3,10 +3,10 @@ title: 'Creating a new section'
 sidebar_label: 'Building and Customizing sections'
 ---
 
-In this guide, you'll learn how to create a new section for your store and make it available in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). This solution is useful when your store requires a section not natively available in FastStore.
+In this guide, you will learn how to create a new section for your storefront and make it available in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). This solution is useful when your project requires a section not natively available in FastStore.
 
-For this guide we'll create two sections:
-- `Call to Action` Gets an specifc action from the user.
+For this guide, we will create two sections:
+- `Call to Action` Gets a specific action from the user.
 - `OurStores`: Indicates the closest store for the user.
 
 > ℹ️ Sections are page components that wrap up other components, enabling you to create cohesive and functional content for your store. For example, the Hero section is a native section that includes the following components: `Hero`, `HeroImage`, and `HeroHeader`.
@@ -21,7 +21,7 @@ For this guide we'll create two sections:
 
 All sections must be available in the Headless CMS so they can be added and managed on your store's pages. To integrate your FastStore project, please refer to the [Headless CMS integration track](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account).
 
-### 2. Knowledge on how sections and content types work on Headless CMS
+### 2. Knowledge of how sections and content types work on Headless CMS
 
 During the creation of a new section, you will create files such as `sections.json` and `content-types.json`, which follow a structure established for the Headless CMS.
 
@@ -38,9 +38,9 @@ Make sure to install the FastStore CLI to use its commands locally. Refer to the
 1. In the FastStore root directory, create a folder named `cms`.
 2. Inside `cms`, create the `faststore` folder.
 3. Within the `cms/faststore` folder, create `sections.json` file.
-4. In the `sections.json` file add the new section that you want to display in the Headless CMS. The schema below defines how the Headless CMS renders a section:
+4. In the `sections.json` file, add the new section that you want to display in the Headless CMS. The schema below defines how the Headless CMS renders a section:
 
-```json filename="sections.json" copy
+```json sections.json
   [
     {
       "name": "CallToAction",
@@ -90,7 +90,7 @@ To render the `CallToAction` section you created in the previous step, you need 
 1. If you don't already have it, create a folder named `components` inside the `src` directory.
 2. Inside the `components` folder, create a file named `CallToAction.tsx` and add the following code:
 
-```tsx filename="src/components/CallToAction.tsx" copy
+```tsx src/components/CallToAction.tsx
 import React from "react";
 
 export interface CallToActionProps {
@@ -119,7 +119,7 @@ This section will receive the `link` and `title` defined previously in the `sect
 
 Open the `index.tsx` file and add the following code:
 
-```tsx filename="src/components/index.tsx" copy
+```tsx src/components/index.tsx
 import CallToAction from './CallToAction'
 
 export default { CallToAction }
@@ -139,10 +139,10 @@ export default { CallToAction }
 
 ## `OurStore`
 
-1. After [creating the files and folders](#step-1-creating-folders-and-files-related-to-the-headless-cms), In the `sections.json` file add the new section that you want to display in the Headless CMS. 
+1. After [creating the files and folders](#step-1-creating-folders-and-files-related-to-the-headless-cms), In the `sections.json` file, add the new section that you want to display in the Headless CMS. 
 The schema below defines how the Headless CMS renders the `OurStores` section that we will use in the example:
 
-```json filename="sections.json" copy
+```json sections.json
 [
   {
     "name": "OurStores",
@@ -167,9 +167,10 @@ The schema below defines how the Headless CMS renders the `OurStores` section th
   }
 ]
 ```
+
 2.  Inside the `components` folder, create a file named `OurStores.tsx` and add the following code:
 
-```tsx filename="src/components/OurStores.tsx" copy
+```tsx src/components/OurStores.tsx
 import React from 'react'
 import { Button, Icon, SelectField } from '@faststore/ui'
 
@@ -217,17 +218,17 @@ export default function OurStores(props: OurStoresProps) {
 }
 ```
 
-For this section we will use the following component from the Faststore UI: [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button), [Icon](https://developers.vtex.com/docs/guides/faststore/atoms-icon) and [SelectField](https://developers.vtex.com/docs/guides/faststore/molecules/select-field).
+For this section, we will use the following components from the Faststore UI: [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button), [Icon](https://developers.vtex.com/docs/guides/faststore/atoms-icon) and [SelectField](https://developers.vtex.com/docs/guides/faststore/molecules/select-field).
 
 3. Create a file named `index.tsx` inside the components folder, and add the following code:
 
-```tsx filename="src/components/index.tsx" copy
+```tsx src/components/index.tsx
 import OurStores from './OurStores'
 
 export default { OurStores }
 ```
 
-4. Repeat the steps in [Step 3: Synchronizing the new section with the Headless CMS](#step3-synchronizing-the-new-section-with-the-headless-cms) and you should see the new section but without styles as the example below:
+4. Repeat the steps in [Step 3: Synchronizing the new section with the Headless CMS](#step3-synchronizing-the-new-section-with-the-headless-cms), and you should see the new section but without styles as in the example below:
 
 ![new-section-structure-without-styles](https://vtexhelp.vtexassets.com/assets/docs/src/section-structure-without-styles___7be40088d6137bdd63cbb4940c2fa599.png)
 
