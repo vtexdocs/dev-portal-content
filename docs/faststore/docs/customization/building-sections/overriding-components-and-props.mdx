@@ -44,7 +44,7 @@ Keep in mind the following aspects when using this feature:
 
 Overriding props allows you to customize a component's behavior while preserving its native integration. This approach is useful when you want to modify specific aspects of a native component.
 
-All component customizations in FastStore are performed within a section and to override props, you need to choose the desired native section and component from the [List of available native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#faststore-native-sections).
+All component customizations in FastStore are performed within a section, and to override props, you need to choose the desired native section and component from the [List of available native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#faststore-native-sections).
 
 For this guide, we'll use the [`BuyButton`](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button#props) component to make the customization.
 
@@ -102,9 +102,7 @@ const override: SectionOverride = {
 export { override }
 ```
 
-> ℹ️ Change the value of the `SECTION` variable to the name of the section you want
-  to override. In the given example, we set the `SECTION` variable to
-  `ProductDetails` to override this specific section.
+> Change the value of the `SECTION` variable to the name of the section you want to override. In the given example, we set the `SECTION` variable to `ProductDetails` to override this specific section.
 
 5. Save your changes.
 
@@ -127,11 +125,13 @@ const override: SectionOverride = {
 export { override }
 ```
 
-This code overrides the `BuyButton` props `size` and `iconPosition`. You'll see a smaller button than the initial one, and the cart icon positioned on the right side.
+This code overrides the `BuyButton` props `size` and `iconPosition`. You'll see a smaller button than the initial one and the cart icon positioned on the right side.
 
-2. Run `yarn dev` in the terminal to start the development server. Access the provided localhost URL in your browser and go to product details page to see the updated `BuyButton` component:
+2. Run `yarn dev` in the terminal to start the development server. Access the provided localhost URL in your browser and go to the product details page to see the updated `BuyButton` component:
 
-![overrides-PDP-buy-button-props](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-pdp-buy-button-props___898b016bd82c908b5b24c8822be6789a.png)> ⚠️ Remember: props changed via Headless CMS overlap the changes made through [override](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#override-native-components-props). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
+![overrides-PDP-buy-button-props](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-pdp-buy-button-props___898b016bd82c908b5b24c8822be6789a.png)
+
+> ⚠️ Remember: props changed via Headless CMS overlap the changes made through [override](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#override-native-components-props). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
 
 ---
 
@@ -145,7 +145,7 @@ Currently, when the `BuyButton` is clicked, it opens the `CartSideBar` as its de
 
 ![overrides-PDP-buy-button-component](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-buy-button-open-cart___a5853a88238fa31610a93e8a1333bb00.gif)
 
-For this guide we will create a custom Buy Button that once you click on it, it displays an `alert` for the customer and the a custom Product Title.
+For this guide, we will create a custom Buy Button that, once you click on it, displays an `alert` for the customer and the custom Product Title.
 
 
 ### `BuyButton`
@@ -167,12 +167,11 @@ type nul > src\components\CustomBuyButton.tsx
 </Tab>
 </Tabs>
 
-> ℹ️ When creating a custom component, it's important to choose a name that
-  distinguishes it from the native component. For example, `Custom{ComponentName}` = `CustomBuyButton`.
+> ℹ️ When creating a custom component, it's important to choose a name that distinguishes it from the native component. For example, `Custom{ComponentName}` = `CustomBuyButton`.
 
 2. Add the following code into `CustomBuyButton.tsx` file:
 
-```tsx filename="CustomBuyButton.tsx" copy
+```tsx CustomBuyButton.tsx
 import React from 'react'
 import { Button as UIButton } from '@faststore/ui'
 
@@ -190,7 +189,7 @@ export function CustomBuyButton() {
 }
 ```
 
-The provided code imports the [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) component from the [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/) package. The code defines the `CustomBuyButton` component that displays an alert message when clicked, based on the behavior we want.
+The provided code imports the [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) component from the [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/) package. The code defines the `CustomBuyButton` component that displays an alert message when clicked based on the behavior we want.
 However, you have the flexibility to customize the component to achieve a different behavior if needed.
 
 #### Step 2 - Overriding the component
@@ -199,7 +198,7 @@ However, you have the flexibility to customize the component to achieve a differ
 2. Navigate to `src/components/overrides` that we've created [before](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#step-1---setting-up-the-overrides-folder).
 3. Open the `ProductDetails.tsx` file and update it with the following code:
 
-```tsx filename="ProductDetails.tsx" {8-9}
+```tsx ProductDetails.tsx mark=8:9
 import { SectionOverride } from '@faststore/core'
 import { CustomBuyButton } from '../CustomBuyButton'
 
@@ -241,7 +240,7 @@ export default function CustomProductTitle() {
 }
 ```
 
-This code creates a custom `ProductTitle` component displaying the product title, and a tag indicating that the product is on sale.
+This code creates a custom `ProductTitle` component displaying the product title and a tag indicating that the product is on sale.
 
 3. In the `overrides` folder, create the `ProductDetails.tsx` file.
 2. Add the following code to the `ProductDetails.tsx` file to render the new `CustomProductTitle` component.
@@ -269,15 +268,14 @@ export { override }
 
 ## Overriding components while maintaining default configuration
 
-In specific scenarios, when you want to partially keep the default integration or components configuration, you can use prior integrations within your custom component.
+In specific scenarios, when you want to keep the default integration or component configuration partially, you can use prior integrations within your custom component.
 
-> ⚠️ Note that this will only work if your custom component's props are compatible with the overriding component.
-  We encourage using [FastStore UI components](https://developers.vtex.com/docs/guides/faststore/) to leverage existing features, basic styles, and better props compatibility.
+> ⚠️ Note that this will only work if your custom component's props are compatible with the overriding component. We encourage using [FastStore UI components](https://developers.vtex.com/docs/guides/faststore/) to leverage existing features, basic styles, and better props compatibility.
 
 Building upon our previous example, we could pass the `BuyButton` props to our new component.
 This approach allows us to incorporate the icon and cart sidebar integration while introducing additional functionality to the `onClick` function, such as triggering an alert or sending an event to analytics.
 
-```tsx filename="CustomBuyButton.tsx"
+```tsx CustomBuyButton.tsx
 import React from 'react'
 import { Button as UIButton, ButtonProps } from '@faststore/ui'
 
