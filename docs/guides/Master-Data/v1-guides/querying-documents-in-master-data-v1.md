@@ -44,7 +44,7 @@ The attribute **Is searchable?** indicates that we can search this field's valu
 
 The `_keyword` would be used, for example, to retrieve all the documents containing the value `mary`.
 
-The API path in this case would be: `/dataentities/CL/search?_keyword=maria`
+In this case, the API path would be: `/dataentities/CL/search?_keyword=maria`
 
 Asterisks are indicators for a partial query. In other words, documents with the exact value `mary`, will not be searched for, but only those showing this group of characters somewhere.
 
@@ -52,7 +52,7 @@ The result of this query would return documents with values such as the followin
 
 ### Indices
 
-An [index](https://help.vtex.com/en/tutorial/setting-up-an-index-on-master-data--tutorials_785) works a shortcut to find documents. Using this resource, the query is quicker than with a normal filter or keyword search.
+An [index](https://help.vtex.com/en/tutorial/setting-up-an-index-on-master-data--tutorials_785) works as a shortcut to find documents. Using this resource, the query is quicker than with a normal filter or keyword search.
 
 However, the greater the number of indexes, the more slowly documents are written. The use of the index is recommended for search results of up to 1 thousand documents.
 
