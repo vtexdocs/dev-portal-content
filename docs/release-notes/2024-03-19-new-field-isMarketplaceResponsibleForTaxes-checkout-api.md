@@ -2,7 +2,7 @@
 title: "New tax calculation field on Checkout API"
 slug: "2024-03-19-new-field-isMarketplaceResponsibleForTaxes-checkout-api"
 type: "added"
-createdAt: ""
+createdAt: "2024-03-19T10:00:00.661Z"
 hidden: false
 excerpt: "Introducing new field isMarketplaceResponsibleForTaxes in the Checkout API."
 ---
