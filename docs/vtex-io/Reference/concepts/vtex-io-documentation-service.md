@@ -73,11 +73,11 @@ Note that most of these fields are optional, and default values provided by the 
 
 ## Best practices
 
-To help configuring your service, we have described some best practices about many of the parameters available. This should help achieve good performance and avoid failures with your application.
+To help configuring your service, we describe some best practices below about many of the parameters available. This should help achieve good performance and avoid failures with your application.
 
 ### Memory allocation
 
-App developers have to evaluate the `memory` usage of the app to choose proper values for the memory parameter. Consider factors such as the complexity of your application, and the size of the data structures instanced in the implementation. Adequate memory allocation helps prevent failures and performance issues.
+App developers have to evaluate the `memory` usage of the app to choose a proper value for the memory parameter. Consider factors such as the complexity of your application, and the size of the data structures instanced in the implementation. Adequate memory allocation helps prevent failures and performance issues.
 
 ### Timeout settings
 
@@ -106,3 +106,9 @@ Time-to-live (TTL) is the time that a service instance will keep running in the 
 When new requests are made and there are no instances available to respond, the platform has to start new instances to process and respond to the requests, a process that we call cold start. A cold start is slow, so the first request a new instance responds to takes longer than usual, and the following requests are processed as usual.
 
 Depending on the service usage, a small TTL value can lead to cold starts happening more frequently, which causes slower response times. We recommend increasing the TTL above the default value only if you frequently notice slow response times that can be caused by cold starts.
+
+### Worker configuration
+
+VTEX IO services use the [Cluster module from Node.js](https://nodejs.org/api/cluster.html) for parallelism. A service starts with a main process and then creates child processes, or workers, to handle the load from requests. The number of workers is determined by the value of the `workers` parameter.
+
+A higher number of workers is recommended when more processing capacity is required to handle requests, which can reduce response times. Be aware that more workers also increase the memory usage of the service, so adjust the `memory` parameter accordingly. If your service performs well with a single worker or does not take advantage of parallelism, we recommend not declaring a `workers` value or setting it to 1.
