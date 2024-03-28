@@ -7,13 +7,13 @@ updatedAt: "2024-03-28T09:47:00.000Z"
 excerpt: "Learn how to manage workspaces effectively."
 ---
 
-Check out the following [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) guidelines to ensure smooth development, effective testing, secure deployments, and minimal errors and breakdowns. 
+Check out the following [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) guidelines to ensure smooth development, effective testing, secure deployments, and minimal errors and breakdowns.
 
 ## Workspace setup
 
 Understanding workspaces is essential for effective development. Different types of workspaces, such as Development and Production, serve specific purposes and should be used properly.
 
-- **Using development workspaces**: Create a separate [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/) and switch to it before starting any development work. Note that making changes directly to the master workspace can potentially affect the user experience. 
+- **Using development workspaces**: Create a separate [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/) and switch to it before starting any development work. Note that making changes directly to the master workspace can potentially affect the user experience.
 
 - **[Store Framework] Developing a Store Theme**: Before developing a Store Theme app, make sure the [Store Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) is installed in your account. Otherwise, you won't be able to use Store Framework successfully.
 
@@ -35,7 +35,7 @@ From pre-production testing to implementing A/B testing strategies, learn how to
 
 - **Production testing**: Once you are satisfied with your code in the development workspace, release a candidate version of your app. Install and thoroughly test it in a production workspace. [Run A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) to compare traffic between these workspaces to understand which app version is best for your business needs.
 
-## Deployment and workspace promotion 
+## Deployment and workspace promotion
 
 Follow these best practices to deploy changes and promote workspaces seamlessly, avoiding disruptions to your live store.
 
