@@ -57,7 +57,7 @@ To begin using the `docs` builder in your app development, follow these steps.
 3. [Publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) and [deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version) your new app version.
 4. Once you publish your app, the documentation will be available in the VTEX Developer Portal.
 
->ℹ️ **Versioning**: Each app version will have its own documentation available at https://developers.vtex.com/docs/apps/{appvendor}.{appname}@{appversion}, while accessing https://developers.vtex.com/docs/apps/{appvendor}.{appname} will direct users to the latest version.
+>ℹ️ **Versioning**: Each app version will have its own documentation available at `https://developers.vtex.com/docs/apps/{appvendor}.{appname}@{appversion}`, while accessing `https://developers.vtex.com/docs/apps/{appvendor}.{appname}` will direct users to the latest version.
 
 ## Use case examples
 
