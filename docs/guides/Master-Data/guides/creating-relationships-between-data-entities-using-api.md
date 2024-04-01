@@ -11,7 +11,7 @@ This document will teach you how to establish relationships between data entitie
 
 ## Before you begin
 
-Before delving into the process of creating relationships, it's essential to grasp the structure of JSON Schema. If you're not familiar with JSON Schema, we recommend referring to the external documentation, [Understanding JSON Schema](https://json-schema.org/understanding-json-schema). 
+Before delving into the process of creating relationships, it's essential to grasp the structure of JSON Schema. If you're not familiar with JSON Schema, we recommend referring to the external documentation, [Understanding JSON Schema](https://json-schema.org/understanding-json-schema).
 
 To learn more about schemas in Master Data v2, see [Schema lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle).
 
