@@ -18,7 +18,7 @@ https://developers.vtex.com/docs/apps/{appvendor}.{appname}@{appversion}
 
 Any app developer can make their documentation publicly available using the docs builder. So even if your app is not published to the VTEX App Store, you can take advantage of this convenience.
 
->❗When using the `docs` builder, ensure no sensitive or private information is shared in the files under the `/docs` folder.
+>❗ When using the `docs` builder, ensure no sensitive or private information is shared in the files under the `/docs` folder.
 
 ## Folder structure
 
