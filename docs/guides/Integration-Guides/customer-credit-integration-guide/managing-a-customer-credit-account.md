@@ -702,4 +702,4 @@ You can also access your VTEX Admin (__Apps > Customer Credit > Accounts__) to v
 
 ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/customer-credit-integration-guide/customer-credit-account_4.png)
 
-> ⚠️ Once closed, a Customer Credit account cannot be reopened again and all invoices, statements, and additional dependents data will be deleted. However, after completing the account closure, if you wish, you can [open a new account](https://docs.google.com/document/d/10EJmh9ELupEvoIx5ynVahtcl3yYNdXjP6vtgDTyIYyQ/edit#heading=h.yqy2l76230c2](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts) for the customer using the same email as the closed account.
+> ⚠️ Once closed, a Customer Credit account cannot be reopened again and all invoices, statements, and additional dependents data will be deleted. However, after completing the account closure, if you wish, you can [open a new account](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts) for the customer using the same email as the closed account.
