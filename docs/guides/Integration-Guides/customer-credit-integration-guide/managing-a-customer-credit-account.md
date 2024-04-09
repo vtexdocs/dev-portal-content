@@ -526,7 +526,7 @@ You can also share the credit available in a customer account with other custome
 
 ### Adding a new account holder
 
-To add the new account holder to the customer credit account, use the VTEX Admin or the [Add an account holder](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts/-) endpoint. In this request, you must send the account identification (`id`) as a path parameter.
+To add the new account holder to the customer credit account, use the VTEX Admin or the [Add an account holder](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts/-creditAccountId-/holders) endpoint. In this request, you must send the account identification (`id`) as a path parameter.
 
 See an example below using the account `fe60ff40-d1cb-11ee-a0ed-87f4fcc03446`:
 
@@ -570,7 +570,7 @@ You can also access your VTEX Admin (__Apps > Customer Credit > Accounts__) and 
 
 ### Removing an account holder
 
-To remove a holder from a customer credit account and prevent them from using the available credit, you can use the VTEX Admin or the [Delete an account holder](https://developers.vtex.com/docs/api-reference/customer-credit-api#delete-/api/creditcontrol/accounts/-creditAccountId-/holders/-holderId-) endpoint. In this request, you must send the account identification (`id`) and the holder identification (`id` obtained in the VTEX Admin or in the response body of the [Add an account holder endpoint](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts/-)) as path parameters.
+To remove a holder from a customer credit account and prevent them from using the available credit, you can use the VTEX Admin or the [Delete an account holder](https://developers.vtex.com/docs/api-reference/customer-credit-api#delete-/api/creditcontrol/accounts/-creditAccountId-/holders/-holderId-) endpoint. In this request, you must send the account identification (`id`) and the holder identification (`id` obtained in the VTEX Admin or in the response body of the [Add an account holder](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts/-creditAccountId-/holders) endpoint as path parameters.
 
 See an example below using the account `fe60ff40-d1cb-11ee-a0ed-87f4fcc03446` and the holder `78d22849ad844ae5a57ef1715de73467`:
 
@@ -702,4 +702,4 @@ You can also access your VTEX Admin (__Apps > Customer Credit > Accounts__) to v
 
 ![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/customer-credit-integration-guide/customer-credit-account_4.png)
 
-> ⚠️ Once closed, a Customer Credit account cannot be reopened again and all invoices, statements, and additional dependents data will be deleted. However, after completing the account closure, if you wish, you can [open a new account](https://docs.google.com/document/d/10EJmh9ELupEvoIx5ynVahtcl3yYNdXjP6vtgDTyIYyQ/edit#heading=h.yqy2l76230c2) for the customer using the same email as the closed account.
+> ⚠️ Once closed, a Customer Credit account cannot be reopened again and all invoices, statements, and additional dependents data will be deleted. However, after completing the account closure, if you wish, you can [open a new account](https://docs.google.com/document/d/10EJmh9ELupEvoIx5ynVahtcl3yYNdXjP6vtgDTyIYyQ/edit#heading=h.yqy2l76230c2](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts) for the customer using the same email as the closed account.
