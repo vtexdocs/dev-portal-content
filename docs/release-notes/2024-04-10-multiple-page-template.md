@@ -1,8 +1,8 @@
 ---
 title: "FastStore: Create flexible PLPs and PDPs with Multiple page templates"
-slug: "2024-04-09-multiple-page-templates"
+slug: "2024-04-10-multiple-page-templates"
 type: "added"
-createdAt: "2024-04-09T18:00:00.661Z"
+createdAt: "2024-04-10T0:00:00.661Z"
 hidden: false
 excerpt: "Design unique product & listing pages with the new Multiple Page Templates for FastStore users."
 ---
