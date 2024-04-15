@@ -10,7 +10,7 @@ This guide will walk you through the process of filling out the bulk import spre
 
 ## Before you begin
 
-To use the bulk import buyer organization, you must first install and configure the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) and [B2B Organizations](https://developers.vtex.com/docs/apps/vtex.b2b-organizations) in your store.
+To use the bulk import of buyer organizations, you must first install and configure the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) which includes the [B2B Organizations](https://developers.vtex.com/docs/apps/vtex.b2b-organizations) app.
 
 ## Step-by-step
 
