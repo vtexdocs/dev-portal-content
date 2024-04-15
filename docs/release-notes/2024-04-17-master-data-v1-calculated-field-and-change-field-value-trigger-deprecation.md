@@ -15,7 +15,7 @@ Instead of using these settings, we recommend [creating an app to communicate wi
 
 These two dynamic settings will be deprecated in Master Data v1.
 
-Existing **Calculated Fields** and triggers that use the **Change field value** action will stop working on the same date. Check the [What needs to be done?](#what-needs-to-be-done) section for more information on how to adapt to these changes. 
+Existing **Calculated Fields** and triggers that use the **Change field value** action will stop working on the same date. Check the [What needs to be done?](#what-needs-to-be-done) section for more information on how to adapt to these changes.
 
 ### Calculated Field 
 
