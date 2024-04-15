@@ -15,14 +15,12 @@ To use the bulk import buyer organization, you must first install and configure 
 ## Step-by-step
 
 1. Download the [template file](https://io.vtex.com.br/b2b-bulk-import/b2b-bulk-import-template.xlsx).
-2. Fill in the file with buyer organization data following the specifications detailed in [File structure for import](#file-structure-for-import).
+2. Fill in the file with buyer organizations data following the specifications detailed in [File structure for import](#file-structure-for-import).
 
   >ℹ Ensure your file is in `.xlsx` format and does not exceed 50MB.
 
 3. Once your file is ready, upload it by making a request to the [Upload file](https://developers.vtex.com/docs/api-reference/buyer-organizations#post-/api/b2b/import/buyer-orgs) endpoint.
-
 4. Validate file content by making a request to the [Validate file](https://developers.vtex.com/docs/api-reference/buyer-organizations#post-/api/b2b/import/buyer-orgs/validate/-importId-) endpoint.
-
 5. Once the file is successfully validated, start the bulk data import by making a request to the [Start import](https://developers.vtex.com/docs/api-reference/buyer-organizations#post-/api/b2b/import/buyer-orgs/-importId-) endpoint.
 
 ## File structure for import
