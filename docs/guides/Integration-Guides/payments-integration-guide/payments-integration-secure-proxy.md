@@ -96,12 +96,9 @@ The possible known errors are:
 - **Error 500:** the Gateway cannot respond due to an internal failure.
 
 The external gateway or acquirer also can respond with their own 4XX or 5XX errors.
-[block:callout]
-{
-  "type": "warning",
-  "body": "You must open a ticket asking to add the acquirer’s endpoint (the one used in the `X-PROVIDER-Forward-To` header) in the VTEX’s allowed list of endpoints along with the [AOC](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-pci-dss-compliance#attestation-of-compliance-for-onsite-assessments-aoc) of the acquirer. If a request is made to the acquirer’s endpoint and it is not on the allowed list, it will result in an error."
-}
-[/block]
+
+> ⚠️ You must open a ticket asking to add the acquirer’s endpoint (the one used in the `X-PROVIDER-Forward-To` header) in the VTEX’s allowed list of endpoints along with the [AOC](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-pci-dss-compliance#attestation-of-compliance-for-onsite-assessments-aoc) of the acquirer. If a request is made to the acquirer’s endpoint and it is not on the allowed list, it will result in an error.
+
 **Request header**
 
 ```
@@ -113,12 +110,8 @@ X-PROVIDER-Forward-MerchantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 X-PROVIDER-Forward-MerchantKey: 012345678901234567890123456789012345678
 ```
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Requests to the PCI Proxy only accept two options for Content-Types: `application/json` or `application/x-www-form-urlencoded`. Other Content-Type options are not supported, but if you need any other for an integration you can share your use case with the product team by [opening a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM)."
-}
-[/block]
+> ⚠️ Requests to the PCI Proxy only accept two options for Content-Types: `application/json` or `application/x-www-form-urlencoded`. Other Content-Type options are not supported, but if you need any other for an integration you can share your use case with the product team by [opening a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM).
+
 **Request body**
 
 ```json
@@ -138,12 +131,7 @@ X-PROVIDER-Forward-MerchantKey: 012345678901234567890123456789012345678
 }
 ```
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "Secure Proxy only supports HTTP-API (REST) integrations, which means it does not support Webservice (SOAP) or any other type of communication protocol."
-}
-[/block]
+> ⚠️ Secure Proxy only supports HTTP-API (REST) integrations, which means it does not support Webservice (SOAP) or any other type of communication protocol.
 
 ### 4. Requests for external gateways or acquirers in a PCI environment
 
@@ -190,12 +178,7 @@ Custom headers:
 }
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "This request has a timeout of 15 seconds. It means that the Gateway will wait 15 seconds for the response of the acquirer and respond back to the payment provider."
-}
-[/block]
+> ℹ️ This request has a timeout of 15 seconds. It means that the Gateway will wait 15 seconds for the response of the acquirer and respond back to the payment provider.
 
 ## Custom Tokens
 
@@ -233,12 +216,9 @@ The `secureHash` is a short string used for authentication during the access to 
 ### Create custom tokens
 
 New tokens can be created via a POST request to the `secureProxyTokensURL`. After being created, these can be referenced inside requests to the Secure Proxy and will be replaced by their values before the requests are forwarded to the acquirer.
-[block:callout]
-{
-  "type": "info",
-  "body": "Custom tokens allow, for example, the creation of tokens whose values are derived from credit card information."
-}
-[/block]
+
+> ℹ️ Custom tokens allow, for example, the creation of tokens whose values are derived from credit card information.
+
 The creation request should include a list of tokens to be created, where each one consists of a `name` and a `value`. The first will be included in the placeholder used to reference the token (as mentioned above) and the second will be a [JsonLogic](https://jsonlogic.com/) expression that describes its value. In the `value` field for each token in the request body, every string must be encoded in the UTF-8 format.
 
 **Request body**
@@ -285,18 +265,15 @@ In the example request above, two new tokens are created.
 ```
 
 The response consists of a list of the tokens that were created. The `placeholder` can then be used inside requests to the Secure Proxy to reference the values specified by the expression of the token.
-[block:callout]
-{
-  "type": "info",
-  "body": "A `placeholder` can be referenced in the body or as a header in a request to the Secure Proxy."
-}
-[/block]
+
+> ℹ️ A `placeholder` can be referenced in the body or as a header in a request to the Secure Proxy.
 
 #### Custom supported operators
 
 Aside from the [default JsonLogic operators](https://jsonlogic.com/operations.html), the Secure Proxy also provides support to the following operators:
 
 - `replaceTokens`: given a string, replaces the tokens in it by their respective values.
+- `base64`: given a string, encode in Base64.
 - `hmac-sha256`: given two UTF-8 encoded string arguments, computes the [HMAC-SHA256](https://datatracker.ietf.org/doc/html/rfc4868) hash considering the first string argument as the *key* and the second as the *data* to be hashed. The default result is [Base64-encoded](https://developer.mozilla.org/en-US/docs/Glossary/Base64) by default.
   - Optionally, a third parameter may be specified to choose the desired format of the output. The available options are `"base64"` (default) and `"hex"`.
   - Also optionally, a fourth parameter can be specified to choose the format of the key. The available options are `“plainText”` (default), `"hex”` and `"base64”`.
@@ -343,6 +320,23 @@ Example of the creation of a token named `"example-signature-2"` with a MD5 hash
 }
 ```
 
+Example of the creation of a token named `"example-base64"` with a Base64 hash as its value:
+
+```json
+{
+  "tokens":[
+    {
+      "name":"example-base64",
+      "value":{
+        "base64":[
+          "string-to-be-encoded"
+        ]
+      }
+    }
+  ]
+}
+```
+
 ### Known issues
 
-The operator `cat` from the JSONLogic lib may misbehave when concatenating dates. It may change the date format.
+The operator `cat` from the [JSONLogic library](https://jsonlogic.com/operations.html) may misbehave when concatenating dates. It may change the date format.
