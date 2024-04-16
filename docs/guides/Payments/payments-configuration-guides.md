@@ -13,3 +13,4 @@ The articles listed below will present the necessary steps to make payment setti
 | [Setting up Merchant ID in Apple Pay](https://developers.vtex.com/docs/guides/setting-up-merchant-id-in-apple-pay) | How to set up Merchant ID in Apple Pay. |
 | [Cardholder document configuration](https://developers.vtex.com/docs/guides/cardholder-document-configuration) | How to configure a cardholder document field to be displayed at checkout. |
 | [Implementing a pre-analysis anti-fraud flow for debit card transactions](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions) | How to activate the anti-fraud flow for debit card transactions. |
+| [Metadata information in payment transactions](https://developers.vtex.com/docs/guides/metadata-information-in-payment-transactions) | How to insert metadata information into your payment transactions. |
