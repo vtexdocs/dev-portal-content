@@ -41,9 +41,9 @@ We're so glad you're here! Thanks for being interested.
 ### How can I add new articles or release notes?
 
 1. Open a branch in the [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository.
-2. Add a new file in the [desired folder](#in-this-repository), following our [template](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guide_template.md).
+2. Add a new file in the [desired folder](#in-this-repository), following our [guide template](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guide_template.md) or our [release notes template](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/release_notes_template.md).
 3. Complete the [frontmatter](#what-information-goes-in-the-frontmatter).
-   > The `excerpt` field is mandatory for release notes.
+   > For release notes, the `excerpt` and `type` fields are mandatory. The file name and the slug should contain the inversed publication date, as in `yyyy-mm-dd-title`, to avoid duplicate URLs. E.g. `2024-03-07-faststore-content-in-the-developer-portal`.
 4. Add your content in markdown.
 5. Add images in the chosen guide's folder, if you wish.
 6. To determine the left navigation's order, follow [these instructions](#what-determines-the-left-navigations-order-and-organization).
@@ -57,11 +57,12 @@ We're so glad you're here! Thanks for being interested.
 
 The frontmatter is the table with metadata about the article you're adding. It contains the following fields:
 
-- **title:** article's title, which should match the slug.
-- **slug:** slug to the article's link, which should match the title.
+- **title:** article's title. E.g. "Setting up triggers in Master Data v2"
+- **slug:** slug of the article's link on Developer Portal, which should match the file name. E.g. "setting-up-triggers-in-master-data-v2". For release notes, add the inverted date before the slug and the file name, as in `yyyy-mm-dd-title`, e.g. "2024-03-07-faststore-content-in-the-developer-portal".
 - **excerpt:** brief description of release notes and guides, like a synopsis or TLDR.
-  - *Release notes:* it is rendered as a synopsis of the release notes, readable when the user clicks on the ▶️ collapsible button next to the release's title, in our [changelog UI](https://developers.vtex.com/updates/release-notes). This field is mandatory for release notes! Character limit: 400.
+  - *Release notes:* it is rendered as a synopsis of the release notes, readable when the user clicks on the ▶️ collapsible button next to the release's title, in our [changelog UI](https://developers.vtex.com/updates/release-notes). This field is mandatory for release notes. Character limit: 400.
   - *Guides*: it is rendered as the greyed-out sentence at the bottom of the title, with a brief TLDR for that article. Character limit: 120.
+- **type**: type of release notes, which can be one of the following: `added`, `deprecated`, `info`, `fixed`, `removed`, or `improved`.
 - **hidden:** boolean that makes the article not discoverable by search engines and our internal search if `true`. Know more in [How can I hide articles from search engines](#how-can-i-hide-articles-from-search-engines).
 - **createdAt:** creation date (UTC) and time in this format `{YYYY}-{MM}-{DD}T{HH}:{MM}:{SS}.{mmm}Z`.
 - **updatedAt:** update date (UTC) in this format `{YYYY}-{MM}-{DD}T{HH}:{MM}:{SS}.{mmm}Z`.
@@ -87,7 +88,7 @@ The frontmatter is the table with metadata about the article you're adding. It c
 
 The slugs used in our previous version of Developer Portal were mostly maintained. You shouldn't have to worry about previous slugs.
 
-- **New guide:** an article's title will become the page's slug always. *Do not create a slug that is different than the title, the portal will not interpret it otherwise.*
+- **New guide or release notes:** an article's file name will become the page's slug always. *Do not create a slug that is different from the file name, the portal will not interpret it otherwise.* For release notes, add the inverted date before the slug and the file name, as in `yyyy-mm-dd-title`, e.g. "2024-03-07-faststore-content-in-the-developer-portal".
 - **API Reference:** the URL structure of the Developer Portal API reference has the endpoint's path as part of it. It includes `/api-reference/{category in API Reference}#{operation}-{endpoint's path}`.
 
 > For the content to be rendered properly, it is mandatory that slugs are unique, so no article should have a repeated title. Learn how to fill in titles in [frontmatter](#what-information-goes-in-the-frontmatter).
