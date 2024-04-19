@@ -58,6 +58,13 @@
   "headless-cms-troubleshooting": {
     "title": "Troubleshooting"
   },
+  "-- Additional Features --": {
+    "type": "separator",
+    "title": "Aditional Features"
+  },
+  "additional-features-overview": {
+    "title": "Overview"
+  },
   "-- VTEX Integration --": {
     "type": "separator",
     "title": "VTEX Platform Integration"
