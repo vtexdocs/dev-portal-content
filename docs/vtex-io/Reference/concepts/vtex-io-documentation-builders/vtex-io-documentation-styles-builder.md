@@ -14,7 +14,7 @@ Using this builder, you avoid having to customize each component on different pa
 
 ## Folder structure
 
-An app that uses the `styles` builder has a folder named `\styles` in its root directory. The directory structure may vary depending on the specific project settings. 
+An app that uses the `styles` builder has a folder named `\styles` in its root directory. The directory structure may vary depending on the specific project settings.
 
 Below is the folder structure of this builder:
 
@@ -23,7 +23,7 @@ styles
  ┣ 📄 style.json
 ```
 
-The `style.json` file contains information relevant to styling, such as type scales, spacing, colors, typography, and other style-related settings. 
+The `style.json` file contains information relevant to styling, such as type scales, spacing, colors, typography, and other style-related settings.
 
 ## Usage
 
@@ -33,7 +33,7 @@ If you are developing a Store Theme with VTEX IO and Store Framework from the [S
 
 ## Use case examples
 
-An app using the `styles` builder has a folder named `/styles` in its root directory and the `style.json` file in it. The directory structure may vary depending on specific project settings. 
+An app using the `styles` builder has a folder named `/styles` in its root directory and the `style.json` file in it. The directory structure may vary depending on specific project settings.
 
 The basic structure of a `/styles` folder is composed of the following files, as you can see in the [Store Theme app](https://github.com/vtex-apps/store-theme) repository:
 
@@ -43,6 +43,5 @@ styles
       ┗ 📄 style.json
  ┣ 📂 css
 ```
-      
 - Within the `style.json` file, there is a set of values and configurations to be used to guide styling decisions.
 - The `css` folder contains the CSS files, which, in turn, can be organized into different folders.
