@@ -43,5 +43,6 @@ styles
       ┗ 📄 style.json
  ┣ 📂 css
 ```
+
 - Within the `style.json` file, there is a set of values and configurations to be used to guide styling decisions.
 - The `css` folder contains the CSS files, which, in turn, can be organized into different folders.
