@@ -17,12 +17,12 @@ To learn more about schemas in Master Data v2, see [Schema lifecycle](https://de
 
 ## Establishing relationships
 
-Use the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) to configure a field to link to another data entity using either the ID or a field to which there is some associated index. 
+Use the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) to configure a field to link to another data entity using either the ID or a field with an associated [index](https://developers.vtex.com/docs/guides/master-data-components#index) created using the [Create index](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/indices) endpoint.
 
 Below are examples of both methods:
 
 <details>
-<summary>Link through ID.</summary>
+<summary>Link through ID</summary>
 
 ```json
 {
@@ -39,7 +39,7 @@ Below are examples of both methods:
 </details>
 
 <details>
-<summary>Link through a field with an index.</summary>
+<summary>Link through a field with an index</summary>
 
 ```json
 {
@@ -65,7 +65,7 @@ Creating a relationship in this manner will generate a response containing a new
 The fields in the returned object will match those specified in the `v-default-fields`. However, if the document does not exist with the specified key, the property will be populated with `null`. 
 
 <details>
-<summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) without schema.</summary>
+<summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) without schema</summary>
 
 **PATH:** `/api/dataentities/client/documents/{id}`
 
@@ -79,7 +79,7 @@ The fields in the returned object will match those specified in the `v-default-f
 </details>
 
 <details>
-<summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) using schema with link.</summary>
+<summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) using schema with link</summary>
 
 **PATH:** `/api/dataentities/client/documents/{id}`
 
