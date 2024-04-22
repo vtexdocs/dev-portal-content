@@ -26,13 +26,13 @@ Below are examples of both methods:
 
 ```json
 {
-	"properties": {
-		"clientEmail": { "type": "string" },
-		"address": {
-			"type": "string",
-			"link": "https://vtexaccount.vtexcommercestable.com.br/api/dataentities/address/schemas/address-schema-v1"
-		}
-	}
+    "properties": {
+        "clientEmail": { "type": "string" },
+        "address": {
+            "type": "string",
+            "link": "https://vtexaccount.vtexcommercestable.com.br/api/dataentities/address/schemas/address-schema-v1"
+        }
+    }
 }
 ```
 
@@ -43,14 +43,14 @@ Below are examples of both methods:
 
 ```json
 {
-	"properties": {
-		"clientEmail": { "type": "string" },
-		"addressName": {
-			"type": "string",
-			"link": "https://vtexaccount.vtexcommercestable.com.br/api/dataentities/address/schemas/address-schema-v1",
-			"linked_field": "addressName"
-		}
-	}
+    "properties": {
+        "clientEmail": { "type": "string" },
+        "addressName": {
+            "type": "string",
+            "link": "https://vtexaccount.vtexcommercestable.com.br/api/dataentities/address/schemas/address-schema-v1",
+            "linked_field": "addressName"
+        }
+    }
 }
 ```
 
@@ -71,8 +71,8 @@ The fields in the returned object will match those specified in the `v-default-f
 
 ```json
 {
-	"clientEmail": "vtext@mail.com",
-	"address": "1"
+    "clientEmail": "vtext@mail.com",
+    "address": "1"
 }
 ```
 
@@ -85,12 +85,12 @@ The fields in the returned object will match those specified in the `v-default-f
 
 ```json
 {
-	"clientEmail": "vtext@mail.com",
-	"address": "1"
-	"address_linked": {
-		"id": "1"
-		"city": "Rio de Janeiro"
-	}
+    "clientEmail": "vtext@mail.com",
+    "address": "1"
+    "address_linked": {
+        "id": "1"
+        "city": "Rio de Janeiro"
+    }
 }
 ```
 
