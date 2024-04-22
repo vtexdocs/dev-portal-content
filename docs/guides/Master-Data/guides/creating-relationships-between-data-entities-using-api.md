@@ -17,7 +17,7 @@ To learn more about schemas in Master Data v2, see [Schema lifecycle](https://de
 
 ## Establishing relationships
 
-Use the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) to configure a field to link to another data entity using either the ID or a field with an associated [index](https://developers.vtex.com/docs/guides/master-data-components#index) created using the [Create index](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/indices) endpoint.
+Use the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) ednpoint to configure a field to link to another data entity using either the ID or a field with an associated [index](https://developers.vtex.com/docs/guides/master-data-components#index) created using the [Create index](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/indices) endpoint.
 
 Below are examples of both methods:
 
