@@ -60,7 +60,7 @@ Notice that the `link` property associates a JSON Schema of the data entity with
 
 ## Response handling
 
-Creating a relationship in this manner will generate a response containing a new field with the JSON of the related document. 
+Creating a relationship in this manner will generate a response containing a new field with the JSON of the related document.
 
 The fields in the returned object will match those specified in the `v-default-fields`. However, if the document does not exist with the specified key, the property will be populated with `null`.
 
