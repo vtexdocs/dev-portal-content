@@ -62,7 +62,7 @@ Notice that the `link` property associates a JSON Schema of the data entity with
 
 Creating a relationship in this manner will generate a response containing a new field with the JSON of the related document. 
 
-The fields in the returned object will match those specified in the `v-default-fields`. However, if the document does not exist with the specified key, the property will be populated with `null`. 
+The fields in the returned object will match those specified in the `v-default-fields`. However, if the document does not exist with the specified key, the property will be populated with `null`.
 
 <details>
 <summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) without schema</summary>
