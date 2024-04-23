@@ -40,7 +40,7 @@ The Landing Page is not a singleton and can represent different pages, so to ide
 
 ![Landing Page Settings Seo Path](https://vtexhelp.vtexassets.com/assets/docs/src/lpseopath___beab493e9781d1b1b8b0cdb821d9d41b.png)
 
-Note that this slug is used as the key in the dynamicContent object, withou the initial `/`.
+Note that this slug is used as the key in the dynamicContent object, without the initial `/`.
 
 ### Server-side data fetching function
 
@@ -319,11 +319,11 @@ export default dynamicContent;
 For both approaches, Data fetching using Fetch API or Data Fetching using API Extensions feature, the data-fetching function must return an object with data as root key, in the following format:
 
 ```ts
-{
+return {
   data: {
     // data fetched
-  }
-}
+  },
+};
 ```
 
 The data object can contain other objects inside:
