@@ -14,7 +14,7 @@ Using this builder, you avoid having to customize each component on different pa
 
 ## Folder structure
 
-An app that uses the `styles` builder has a folder named `\styles` in its root directory. The directory structure may vary depending on the specific project settings.
+An app that uses the `styles` builder has a folder named `/styles` in its root directory. The directory structure may vary depending on the specific project settings.
 
 Below is the folder structure of this builder:
 
