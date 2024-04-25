@@ -93,7 +93,7 @@ Testing response times to decide a proper timeout setting can be done in various
 
 VTEX has an autoscaling feature for the IO infrastructure, which dynamically controls the number of instances of each app obeying certain parameters. We call replicas the number of instances of an app running in our infrastructure. The minimum and maximum replicas an app can have are determined by the parameters `minReplicas` and `maxReplicas` respectively. The current replicas increase and decrease automatically according to how much the app is requested in the platform, considering all the accounts where the app is installed.
 
-The values of `minReplicas` and `maxReplicas` should be defined considering the expected demand for the app. If you have observability on the accounts where the app is installed, some metrics can help define the parameters, e.g. the number of accesses or purchases and how they fluctuate.
+The values of `minReplicas` and `maxReplicas` should be defined considering the expected demand for the app. If you have observability on the accounts where the app is installed, some metrics can help define the parameters, e.g., the number of accesses or purchases and how they fluctuate.
 
 ### Route configuration
 
