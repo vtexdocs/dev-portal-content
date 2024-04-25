@@ -26,7 +26,7 @@ The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/inte
 
 ### Search Result
 
-[VTEX Search Result app](https://developers.vtex.com/docs/guides/vtex-search-result) is responsible for handling the result fetched by the [VTEX Search API](https://developers.vtex.com/docs/api-reference/search-api#overview) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
+[VTEX Search Result app](https://developers.vtex.com/docs/guides/vtex-search-result) is responsible for handling the result fetched by the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
 
 ![Search Result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-1_33.png)
 
@@ -66,7 +66,7 @@ You can provide your customers with a more customized experience navigating the 
 - [Building a search results page with multiple layouts](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts)
 - [Creating a custom search results page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-custom-search-results-page)
 
-![Segmenting the search result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-4_71.gif)
+![Segmenting the search result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-segmenting-the-search-result.gif)
 
 ## Integrating an external search provider with VTEX
 
@@ -87,14 +87,7 @@ You can integrate your store's search to some Google features, such as the Googl
 
 ## Consulting search information using Legacy Search
 
-You can consult, search and sort products in the catalog using fulltext, category, and brand search terms.
+Legacy Search allows you to query, search and sort products in the catalog using fulltext, category, and brand search terms.
 
+- [Legacy Search API](https://developers.vtex.com/docs/api-reference/search-api#overview)
 - [How search parameters work](https://developers.vtex.com/vtex-rest-api/docs/how-search-parameters-work)
-
-### Search API
-
-- [CrossSelling](https://developers.vtex.com/vtex-rest-api/reference/productsearchwhosawalsosaw)
-- [Search](https://developers.vtex.com/vtex-rest-api/reference/productsearch)
-- [Offers](https://developers.vtex.com/vtex-rest-api/reference/get_api-catalog-system-pub-products-offers-productid)
-- [Facets](https://developers.vtex.com/vtex-rest-api/reference/get_api-catalog-system-pub-facets-category-categoryid)
-- [Autocomplete](https://developers.vtex.com/vtex-rest-api/reference/autocomplete)
