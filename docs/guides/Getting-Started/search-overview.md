@@ -66,7 +66,7 @@ You can provide your customers with a more customized experience navigating the 
 - [Building a search results page with multiple layouts](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts)
 - [Creating a custom search results page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-custom-search-results-page)
 
-![Segmenting the search result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-4_71.gif)
+![Segmenting the search result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-segmenting-the-search-result.gif)
 
 ## Integrating an external search provider with VTEX
 
