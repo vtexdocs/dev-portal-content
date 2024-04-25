@@ -16,7 +16,7 @@ To learn how to implement apps using this builder, check our [Storefront apps gu
 
 ## Folder structure
 
-An app that uses the `react` builder has a folder named `\react` in its root directory. The directory structure may vary depending on the development preferences or specific project settings.
+An app that uses the `react` builder has a folder named `/react` in its root directory. The directory structure may vary depending on the development preferences or specific project settings.
 
 The basic structure of a React folder is composed of the following files, as you can see in the [React boilerplate app](https://github.com/vtex-apps/react-app-template/tree/master/react):
 
