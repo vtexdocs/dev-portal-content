@@ -67,7 +67,7 @@ The fields in the returned object will match those specified in the `v-default-f
 <details>
 <summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) without schema</summary>
 
-**PATH:** `/api/dataentities/client/documents/{id}`
+**PATH:** `/api/dataentities/client/documents/{id}?_fields={fields}`
 
 ```json
 {
@@ -81,7 +81,9 @@ The fields in the returned object will match those specified in the `v-default-f
 <details>
 <summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) using schema with link</summary>
 
-**PATH:** `/api/dataentities/client/documents/{id}`
+In this request, you must use the `_schema` and the `_fields` query parameters for the linked fields to return correctly.
+
+**PATH:** `/api/dataentities/client/documents/{id}?_schema={schema}&_fields={fields}`
 
 ```json
 {
