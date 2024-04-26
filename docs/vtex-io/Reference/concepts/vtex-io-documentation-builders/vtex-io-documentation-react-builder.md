@@ -39,16 +39,16 @@ react
 
 To use the `react` builder, follow these steps:
 
-Clone the React [boilerplate app](https://github.com/vtex-apps/react-app-template/tree/master/react) to your local files.
-Modify the `manifest.json` file in the React example app to include your app’s metadata, such as its name, version, vendor, and dependencies. The `react` builder must also be declared in the app’s `manifest.json` file as follows:
+1. Clone the React [boilerplate app](https://github.com/vtex-apps/react-app-template/tree/master/react) to your local files.
+2. Modify the `manifest.json` file in the React example app to include your app’s metadata, such as its name, version, vendor, and dependencies. The `react` builder must also be declared in the app’s `manifest.json` file as follows:
+    
+    ```json
+    "builders": {
+        "react": "3.x"
+    }
+    ```
 
-```json
-"builders": {
-    "react": "3.x"
-}
-```
-
-[Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to a development workspace.
+3. [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to a development workspace.
 
 For more information on how to create a React app using VTEX IO, see [Creating a new app](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-creating-the-new-app).
 
