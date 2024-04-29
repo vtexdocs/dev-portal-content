@@ -5,7 +5,6 @@ hidden: false
 createdAt: "2022-09-28T22:39:13.979Z"
 updatedAt: "2022-09-29T17:49:33.957Z"
 ---
-
 VTEX has multiple solutions to deliver a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience to shoppers, being able to handle orders from both the ecommerce and physical stores. To deal with the physical store experience, VTEX offers the [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), where sellers can serve customers and complete the entire sales process. When finishing a purchase, the customer will have the option to make the payment with a physical card in a payment terminal, also known as a Point of Sale (POS).
 
 For payment partners to integrate their solutions for payments using a POS, there are a series of requirements that must be taken into account. You can check a summary of the requirements in the list below:
@@ -18,7 +17,7 @@ For payment partners to integrate their solutions for payments using a POS, ther
 - If needed for testing, have a device with the [VTEX Sales App installed](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh).
 - Developers might want to create their Payment App to identify the POS. This app will also have to be installed in the store.
 
->⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
+> ⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
 
 ## Payment connector pre-requisites
 
@@ -92,7 +91,7 @@ Here we describe the payment flow in the context of a physical store using a POS
 1. The flow starts with a buyer finishing a purchase in a VTEX physical store created on [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc).
 2. The VTEX Sales App makes an [Authorization](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/authorization-request) request to the VTEX Payment Gateway.
 3. Our Gateway makes a [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request to the connector defined in the store settings for the specific payment method used in the purchase (i.e.: `Venda Direta Credito`).
-4. The Gateway receives the Create Payment response from the connector with the `undefined` status and the `appname` field of the `paymentAppData` parameter filled with the name of an app (i.e.: `vtex.challenge-fulfill-form`). It means that the payment is not concluded and it needs to do a challenge by opening a [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app#understanding-the-payment-app-flow), which will be responsible to identify the POS.
+4. The Gateway receives the Create Payment response from the connector with the `undefined` status and the `appname` field of the `paymentAppData` parameter filled with the name of an app (i.e.: `vtex.challenge-terminal-connector-app). It means that the payment is not concluded and it needs to do a challenge by opening a [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app#understanding-the-payment-app-flow), which will be responsible to identify the POS.
 5. The VTEX Sales App receives the response from the Gateway and opens the app to start the challenge.
 6. The seller interacts with the app to identify the POS to be used in the payment process. Then the app sends the serial number of the POS to the connector and closes.
 7. The connector requests to update the order in the payment processor with the serial number of the POS.
@@ -107,11 +106,13 @@ Here we describe the payment flow in the context of a physical store using a POS
    2. The Gateway uses the Create Payment request to the connector for the updated payment status.
    3. While the POS does not finish the payment and responds, the Payment Connector keeps responding that the payment status is `undefined`.
    4. The Gateway responds to the **Wait for confirmation** app with the `undefined` status.
-   5. The **Wait for confirmation** app enters in a loop, repeating from step 9.a, calling the Gateway again for the updated status until the POS finishes the payment and the status change or there is a timeout. The time for the timeout is defined in the `secondsWaiting` parameter from the payload. If there is a timeout, the payment is canceled and the buyer has to finish the order again. More information can be found in the **Wait for confirmation** subsection in this article.
-10. After step 8.c, many of the steps occurred in the background. But from that point, the buyer is allowed to insert the card and interact with the POS to perform the payment.
-11. The POS responds to the payment processor from the request in step 8.c.
+   5. The **Wait for confirmation** app enters in a loop, repeating from step 9.1., calling the Gateway again for the updated status until the POS finishes the payment and the status change or there is a timeout. The time for the timeout is defined in the `secondsWaiting` parameter from the payload. If there is a timeout, the payment is canceled and the buyer has to finish the order again. More information can be found in the **Wait for confirmation** subsection in this article.
+10. After step 8.3., many of the steps occurred in the background. But from that point, the buyer is allowed to insert the card and interact with the POS to perform the payment.
+11. The POS responds to the payment processor from the request in step 8.3.
 12. The payment processor processes the transaction and uses a webhook to call the connector.
-13. The payment connector makes a [callback](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) to the Gateway, so the Gateway can receive the new payment status (`approved` or `denied`). The payload of the response of the callback must have the fields `cardBrand`, `firstDigits` and `lastDigits` containing information about the card used in the payment. More information can be found in the **Interaction with the POS** subsection in this article.
+13. The payment provider makes a mandatory [callback](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) request to the Gateway (without which it is not possible to approve or deny the POS transaction), sending the following information to VTEX:
+    - payload containing card information (`cardBrand`, `firstDigits` and `lastDigits` fields)
+    - payment status (`approved` or `denied`)
 14. The **Wait for confirmation** app requests the Gateway once more for the updated payment status.
 15. The **Wait for confirmation** app receives the updated payment status.
 16. The **Wait for confirmation** app responds to the VTEX Sales App that it can proceed, so the app is closed.
@@ -155,56 +156,14 @@ We have some apps that are ready to use for additional interaction with payments
 
 > ℹ️ Besides the provided apps, partners can also develop apps for their specific needs. You can check more details in the [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app) article.
 
-#### Fulfill form
-
-This is an app that renders a form to the user. The form fields are defined by the `jsonSchema` parameter and the URL to where the form is submitted is defined by the `submitUrl` parameter. This is a generic app for integration tests.
-
-Fields used in this app:
-
-- `appName`:
-  - `vtex.challenge-fulfill-form`
-- `payload`:
-  - `jsonSchema` (object): JSON that follows the [react-jsonschema-form format](https://rjsf-team.github.io/react-jsonschema-form/).
-  - `submitUrl` (string): URL where the form data is sent to.
-
-Payload example:
-
-```json
-"paymentAppData": {
-    "appName": "vtex.challenge-fulfill-form",
-    "payload":
-        "{
-            \"jsonSchema\":
-                {
-                    \"title\": \"Configuração do POS\",
-                    \"description\": \"Preencha o campo abaixo para iniciar o pagamento.\",
-                    \"type\": \"object\",
-                    \"required\": [
-                        \"serialNumber\"
-                    ],
-                    \"properties\": {
-                        \"serialNumber\": {
-                            \"type\": \"string\",
-                            \"title\": \"Serial number do POS\",
-                            \"default\": \"\"
-                        }
-                    }
-                },
-            \"submitUrl\": \"https://coolacquirer.com/instore_config/1231231\"
-        }"
-}
-```
-
-![Print of the Fullfil form app using the example payload above](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-ppp-applied-to-pos-1.png)
-
-#### Pagar.me Payment App
+#### Terminal connector App
 
 This app uses the device camera to read the barcode of the POS that will be used for the purchase. After reading the barcode, the information is sent automatically to the URL defined by the `submitUrl` parameter. The payload sent by the app to the URL uses the following format: `{"serialNumber": "12345"}`.
 
 Fields used in this app:
 
 - `appName`:
-  - `vtex.pagarme-payment-app`
+  - `vtex.terminal-connector-app`
 - `payload`:
   - `submitUrl` (string): URL where the `serialNumber` is sent to.
 
@@ -212,15 +171,15 @@ Payload example:
 
 ```json
 "paymentAppData": {
-    "appName": "vtex.pagarme-payment-app",
-    “payload":
+    "appName": "vtex.terminal-connector-app",
+    "payload":
         "{
-            \”submitUrl\”: \”https://coolacquirer.com/instore_config/1231231\”
+            \"submitUrl\": \"https://coolacquirer.com/instore_config/1231231\"
         }"
 }
 ```
 
-![Print of the Pagarme Payment App using the camera to scan the bar code of the POS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-ppp-applied-to-pos-2.png)
+![Print of the Terminal connector App using the camera to scan the bar code of the POS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-ppp-applied-to-pos-2.png)
 
 #### Wait for confirmation
 
