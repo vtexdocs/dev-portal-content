@@ -1,7 +1,7 @@
 ---
 title: "Erasing customer data"
 slug: "erasing-customer-data"
-hidden: false
+hidden: true
 createdAt: "2023-05-16T09:38:36.446Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
 seeAlso:
