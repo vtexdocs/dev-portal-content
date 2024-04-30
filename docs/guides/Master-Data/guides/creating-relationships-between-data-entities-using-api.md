@@ -17,40 +17,40 @@ To learn more about schemas in Master Data v2, see [Schema lifecycle](https://de
 
 ## Establishing relationships
 
-Use the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) to configure a field to link to another data entity using either the ID or a field to which there is some associated index. 
+Use the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) ednpoint to configure a field to link to another data entity using either the ID or a field with an associated [index](https://developers.vtex.com/docs/guides/master-data-components#index) created using the [Create index](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/indices) endpoint.
 
 Below are examples of both methods:
 
 <details>
-<summary>Link through ID.</summary>
+<summary>Link through ID</summary>
 
 ```json
 {
-	"properties": {
-		"clientEmail": { "type": "string" },
-		"address": {
-			"type": "string",
-			"link": "https://vtexaccount.vtexcommercestable.com.br/api/dataentities/address/schemas/address-schema-v1"
-		}
-	}
+    "properties": {
+        "clientEmail": { "type": "string" },
+        "address": {
+            "type": "string",
+            "link": "https://vtexaccount.vtexcommercestable.com.br/api/dataentities/address/schemas/address-schema-v1"
+        }
+    }
 }
 ```
 
 </details>
 
 <details>
-<summary>Link through a field with an index.</summary>
+<summary>Link through a field with an index</summary>
 
 ```json
 {
-	"properties": {
-		"clientEmail": { "type": "string" },
-		"addressName": {
-			"type": "string",
-			"link": "https://vtexaccount.vtexcommercestable.com.br/api/dataentities/address/schemas/address-schema-v1",
-			"linked_field": "addressName"
-		}
-	}
+    "properties": {
+        "clientEmail": { "type": "string" },
+        "addressName": {
+            "type": "string",
+            "link": "https://vtexaccount.vtexcommercestable.com.br/api/dataentities/address/schemas/address-schema-v1",
+            "linked_field": "addressName"
+        }
+    }
 }
 ```
 
@@ -60,37 +60,39 @@ Notice that the `link` property associates a JSON Schema of the data entity with
 
 ## Response handling
 
-Creating a relationship in this manner will generate a response containing a new field with the JSON of the related document. 
+Creating a relationship in this manner will generate a response containing a new field with the JSON of the related document.
 
-The fields in the returned object will match those specified in the `v-default-fields`. However, if the document does not exist with the specified key, the property will be populated with `null`. 
+The fields in the returned object will match those specified in the `v-default-fields`. However, if the document does not exist with the specified key, the property will be populated with `null`.
 
 <details>
-<summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) without schema.</summary>
+<summary>Example of a [Get document request](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/documents/-id-) without schema</summary>
 
-**PATH:** `/api/dataentities/client/documents/{id}`
+`GET` `/api/dataentities/client/documents/{id}?_fields={fields}`
 
 ```json
 {
-	"clientEmail": "vtext@mail.com",
-	"address": "1"
+    "clientEmail": "vtext@mail.com",
+    "address": "1"
 }
 ```
 
 </details>
 
 <details>
-<summary>Example of a [Get document request](https://developers.vtex.com/vtex-rest-api/reference/getdocument) using schema with link.</summary>
+<summary>Example of a [Get document request](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/documents/-id-) using a schema with a link</summary>
 
-**PATH:** `/api/dataentities/client/documents/{id}`
+In this request, you must use the `_schema` and the `_fields` query parameters for the linked fields to return correctly.
+
+`GET` `/api/dataentities/client/documents/{id}?_schema={schema}&_fields={fields}`
 
 ```json
 {
-	"clientEmail": "vtext@mail.com",
-	"address": "1"
-	"address_linked": {
-		"id": "1"
-		"city": "Rio de Janeiro"
-	}
+    "clientEmail": "vtext@mail.com",
+    "address": "1"
+    "address_linked": {
+        "id": "1"
+        "city": "Rio de Janeiro"
+    }
 }
 ```
 
