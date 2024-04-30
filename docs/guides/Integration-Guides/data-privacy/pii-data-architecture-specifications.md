@@ -1,19 +1,21 @@
 ---
 title: "PII Data Architecture specifications"
 slug: "pii-data-architecture-specifications"
-hidden: true
+hidden: false
 createdAt: "2023-05-16T09:38:36.446Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
 seeAlso:
+ - "/docs/guides/data-protection-plus"
  - "/docs/guides/data-residency"
  - "/docs/guides/profile-system"
  - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
  - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
 ---
 
->❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
+>⚠️ [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta phase, only available in select regions.<br /><br />
+> This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
 
-VTEX's comprehensive [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) incorporates a range of solutions and processes for managing personally identifiable information (PII). Here you can find detailed information about how this architecture works to ensure the protection of shoppers' data privacy.
+VTEX's comprehensive PII data architecture, available for stores using [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus), incorporates a range of solutions and processes for managing personally identifiable information (PII). Here you can find detailed information about how this architecture works to ensure the protection of shoppers' data privacy.
 
 Read the sections below to learn more about:
 
@@ -33,7 +35,7 @@ Read the sections below to learn more about:
 
 ## Profile system
 
-The [**Profile System**](https://developers.vtex.com/docs/guides/profile-system) is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
+The [Profile System](https://developers.vtex.com/docs/guides/profile-system) is VTEX's single source of truth regarding shoppers' profile data, for stores using [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus). Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
 
 This means that **Profile System** information is subject to specific data guidelines and processes, appropriate to handling PII. These specifications also apply whenever other VTEX modules communicate with the **Profile System**. In the following sections, you can learn more about these specifications.
 
