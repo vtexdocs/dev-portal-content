@@ -1,16 +1,18 @@
 ---
 title: "Working with schemas in the Profile System"
 slug: "working-with-schemas-in-the-profile-system"
-hidden: true
+hidden: false
 createdAt: "2022-02-22T22:28:50.366Z"
 updatedAt: "2022-08-19T18:42:00.613Z"
 seeAlso:
  - "/docs/guides/profile-system"
+ - "/docs/guides/data-protection-plus"
 ---
 
-> ❗ This feature is in closed beta, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside your company.
+>⚠️ [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta phase, only available in select regions.<br /><br />
+> This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
 
-A JSON Schema defines the structure of data stored in the Profile System. It determines, for example, which fields a profile has and their respective formats. To learn more about JSON Schemas, read the [JSON Schema external documentation](http://json-schema.org/).
+A JSON Schema defines the structure of data stored in the [Profile System](https://developers.vtex.com/docs/guides/profile-system). It determines, for example, which fields a profile has and their respective formats. To learn more about JSON Schemas, read the [JSON Schema external documentation](http://json-schema.org/).
 
 The following endpoints in the [Profile System API](https://developers.vtex.com/docs/guides/profile-system) allow you to interact with the profile schema:
 
@@ -58,7 +60,7 @@ Extend the profile schema with custom fields by making a request to `PUT` [Creat
 
 ### Defining PII and sensitive custom fields
 
-Properties marked as [Personally Identifiable Information (PII)](https://developers.vtex.com/docs/guides/pii-data-architecture) or sensitive are the ones that are masked by default and must be audited when accessed by a user for legal reasons.
+Properties marked as Personally Identifiable Information (PII) or sensitive are the ones that are masked by default and must be audited when accessed by a user for legal reasons.
 
 Set the `sensitive` and/or `pii` properties as `true` inside the JSON Schema property definition to determine that they must follow this behavior, as exemplified below.
 
