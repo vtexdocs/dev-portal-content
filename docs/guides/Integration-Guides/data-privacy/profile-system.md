@@ -20,7 +20,7 @@ The **Profile System** is VTEX's single source of truth regarding shoppers' prof
 The Profile System API enables stores to:
 
 - Communicate with a single source of truth for shoppers' data.
-- Safely store [PII](https://developers.vtex.com/docs/guides/pii-data-architecture) and sensitive information.
+- Safely store PII and sensitive information.
 
 Below you can learn more about some of the Profile System's features and how to integrate with the APIs.
 
