@@ -111,8 +111,8 @@ Here we describe the payment flow in the context of a physical store using a POS
 11. The POS responds to the payment processor from the request in step 8.3.
 12. The payment processor processes the transaction and uses a webhook to call the connector.
 13. The payment provider makes a mandatory [callback](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) request to the Gateway (without which it is not possible to approve or deny the POS transaction), sending the following information to VTEX:
-    - payload containing card information (`cardBrand`, `firstDigits` and `lastDigits` fields)
-    - payment status (`approved` or `denied`)
+    - Payload containing card information (`cardBrand`, `firstDigits` and `lastDigits` fields)
+    - Payment status (`approved` or `denied`)
 14. The **Wait for confirmation** app requests the Gateway once more for the updated payment status.
 15. The **Wait for confirmation** app receives the updated payment status.
 16. The **Wait for confirmation** app responds to the VTEX Sales App that it can proceed, so the app is closed.
