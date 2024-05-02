@@ -100,22 +100,22 @@ Here we describe the payment flow in the context of a physical store using a POS
    2. The connector calls the payment processor to start the payment in the POS.
    3. The payment processor calls the POS to make the payment with the card. Then, the payment processor returns to the connector telling that the payment in the POS has started.
    4. Since it takes some time for the payment to be concluded in the POS, the connector returns to the Gateway once more with an `undefined` status and information to open another Payment App called `vtex.challenge-wait-for-confirmation`.
-   5. The Gateway returns to the VTEX Sales App telling it to open the **Wait for confirmation** Payment App.
-9. The VTEX Sales App opens the **Wait for confirmation** app, so the user visually understands that the VTEX Sales App is waiting for the POS to finish the payment.
-   1. The **Wait for confirmation** app asks the Gateway for the updated payment status.
+   5. The Gateway returns to the VTEX Sales App telling it to open the [Wait for confirmation app](#wait-for-confirmation).
+9. The VTEX Sales App opens the [Wait for confirmation app](#wait-for-confirmation), so the user visually understands that the VTEX Sales App is waiting for the POS to finish the payment.
+   1. The [Wait for confirmation app](#wait-for-confirmation) asks the Gateway for the updated payment status.
    2. The Gateway uses the Create Payment request to the connector for the updated payment status.
    3. While the POS does not finish the payment and responds, the Payment Connector keeps responding that the payment status is `undefined`.
-   4. The Gateway responds to the **Wait for confirmation** app with the `undefined` status.
-   5. The **Wait for confirmation** app enters in a loop, repeating from step 9.1., calling the Gateway again for the updated status until the POS finishes the payment and the status change or there is a timeout. The time for the timeout is defined in the `secondsWaiting` parameter from the payload. If there is a timeout, the payment is canceled and the buyer has to finish the order again. More information can be found in the **Wait for confirmation** subsection in this article.
+   4. The Gateway responds to the [Wait for confirmation app](#wait-for-confirmation) app with the `undefined` status.
+   5. The [Wait for confirmation app](#wait-for-confirmation) enters in a loop, repeating from step 9.1., calling the Gateway again for the updated status until the POS finishes the payment and the status change or there is a timeout. The time for the timeout is defined in the `secondsWaiting` parameter from the payload. If there is a timeout, the payment is canceled and the buyer has to finish the order again. More information can be found in the [Wait for confirmation app](#wait-for-confirmation) subsection in this article.
 10. After step 8.3., many of the steps occurred in the background. But from that point, the buyer is allowed to insert the card and interact with the POS to perform the payment.
 11. The POS responds to the payment processor from the request in step 8.3.
 12. The payment processor processes the transaction and uses a webhook to call the connector.
 13. The payment provider makes a mandatory [callback](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) request to the Gateway (without which it is not possible to approve or deny the POS transaction), sending the following information to VTEX:
     - Payload containing card information (`cardBrand`, `firstDigits` and `lastDigits` fields)
     - Payment status (`approved` or `denied`)
-14. The **Wait for confirmation** app requests the Gateway once more for the updated payment status.
-15. The **Wait for confirmation** app receives the updated payment status.
-16. The **Wait for confirmation** app responds to the VTEX Sales App that it can proceed, so the app is closed.
+14. The [Wait for confirmation app](#wait-for-confirmation) requests the Gateway once more for the updated payment status.
+15. The [Wait for confirmation app](#wait-for-confirmation) receives the updated payment status.
+16. The [Wait for confirmation app](#wait-for-confirmation) responds to the VTEX Sales App that it can proceed, so the app is closed.
 17. From a callback, the VTEX Sales App calls the Gateway to know the status of the payment.
 18. The Gateway responds to the VTEX Sales App with the last status. If the payment status is `denied` or `canceled`, the VTEX Sales App shows an error and the buyer can try to finish the purchase again from the checkout. Else, the purchase is concluded and the order is placed in the system.
 
