@@ -68,18 +68,19 @@ Now, check if the installation of the Headless CMS plugin was successful by runn
 
 Let's configure the URLs of the webhooks used by the Headless CMS app.
 
-1. In the VTEX Admin, access **Extensions Hub > App management**.
-2. Search for the **CMS (alpha)** app and click on **Settings**.
-3. Expand the pre-filled item, **Item # 0**, which is automatically created during the [FastStore Onboarding](https://developers.vtex.com/docs/guides/faststore/getting-started-overview) process for your project.
-4. If you're using the VTEX CI/CD, you must fill in the **Build Webhook URL** field with the following value. _Replace the values between curly brackets according to your scenario._
+1. In the VTEX Admin, access **Storefront > Headless CMS**. 
+2. In the FastStore project interface, click in Settings.
+3. In **Settings** click the **Build** tab.
+
+  ![cms-settings](https://vtexhelp.vtexassets.com/assets/docs/src/build-url___c220e60df37fbf4fc612eeebd4c90602.gif)
+
+4. In **Build Webhook URL**, click `Add`.
+5. In the field, enter the following value. _Replace the values between curly brackets according to your scenario._
 
 ```sh
 https://app.io.vtex.com/vtex.cms-builder-sf-jamstack/v1/{account}/{workspace}/build-releases
 ```
-
-![cms-settings](https://vtexhelp.vtexassets.com/assets/docs/src/cms-alpha-settings___5ec952c685b0e9c70d47378e6718a0d1.png)
-
-> ℹ️ When an editor clicks to publish a page using the Headless CMS interface, the CMS calls the **Build Webhook URL**, which changes the status of that page to `published`. The CMS, then, waits for the content to be built in the background.
+> ℹ️ When an editor clicks to publish a page using the Headless CMS interface, the CMS calls the **Build Webhook URL**, which changes the page's status to `published`. The CMS then waits for the content to be built in the background.
 
 5. Fill in the **Preview URL** field with your production URL. This URL activates the button on Headless CMS for you to preview the changes made on a page. _Replace the values between curly brackets according to your scenario._
 
