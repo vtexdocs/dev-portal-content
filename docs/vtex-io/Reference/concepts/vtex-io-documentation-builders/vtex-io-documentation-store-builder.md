@@ -21,7 +21,7 @@ With the `store` builder, you can use VTEX IO capabilities to quickly build stor
 
 ## Folder structure
 
-An app that uses the `store` builder has a folder named `/store` in its root directory. The directory structure may vary depending on the specific project settings. 
+An app that uses the `store` builder has a folder named `/store` in its root directory. The directory structure may vary depending on the specific project settings.
 
 The basic structure of a `/store` folder is composed of the following files, as you can see in the [store repository](https://github.com/vtex-apps/store/tree/master/store):
 
@@ -35,7 +35,7 @@ store
 
 - `blocks.json`: Declares all blocks that exist in your project. Note that blocks can be defined both in the `store/blocks.json` file or in any number of `.json` files organized within the `store/blocks` directory, using an arbitrary directory structure.
 - `contentSchemas.json`: Follows the [JSON Schema](https://json-schema.org/) format.
-- `interfaces.json`: Establishes a relationship between blocks and React components. Learn more in [Interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface). 
+- `interfaces.json`: Establishes a relationship between blocks and React components. Learn more in [Interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface).
 - `routes.json`: Creates custom routes in your app, mapping page templates to the path they will respond to. When developing store themes, see [Creating a custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) for more information.
 
 ## Usage
@@ -43,7 +43,6 @@ store
 To use the `store` builder in your app, follow these steps:
 
 Add the `store` builder to your app’s builder list in the `manifest.json` file, as follows:
-    
 ```json
   "builders": {
       "store": "3.x"
