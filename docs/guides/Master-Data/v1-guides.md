@@ -10,9 +10,9 @@ updatedAt: "2022-08-09T22:11:19.696Z"
 <Flex>
 
 <WhatsNextCard
-title="How the queries in Master Data v1 work"
+title="Querying documents in Master Data v1"
 description="Learn how queries in VTEX Master Data v1 work"
-linkTo="https://developers.vtex.com/vtex-rest-api/docs/how-the-queries-in-master-data-v1-work"
+linkTo="https://developers.vtex.com/docs/guides/querying-documents-in-master-data-v1"
 linkTitle="See more"
 />
 
@@ -31,7 +31,7 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="How the queries in Master Data v1 work"
+title="Uploading files to Master Data"
 description="Learn how to upload files to Master Data v1."
 linkTo="https://developers.vtex.com/docs/guides/uploading-files-to-master-data"
 linkTitle="See more"
