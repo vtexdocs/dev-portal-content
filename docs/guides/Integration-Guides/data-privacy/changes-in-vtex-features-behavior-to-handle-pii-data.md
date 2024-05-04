@@ -12,8 +12,13 @@ seeAlso:
  - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
 ---
 
->⚠️ [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta phase, only available in select regions.<br /><br />
-> This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
+>⚠️ **Closed beta:** [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta and is only available in select regions.
+
+>❗ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh),  meaning *additional fees may apply.* 
+> 
+> If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ).
+>
+> If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/). 
 
 This document outlines the changes in the default behavior of certain VTEX features, which apply to stores using [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus).
 
