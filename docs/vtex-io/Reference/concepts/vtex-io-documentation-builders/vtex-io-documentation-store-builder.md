@@ -15,7 +15,7 @@ The `store` builder enables the development of [Store Framework](https://develop
 
 >ℹ️ Note that if your store uses a different [storefront solution](https://developers.vtex.com/docs/storefront-development), the `store` builder is not necessary, as this builder is specifically designed for developing apps for Store Framework.
 
-This builder interprets and validates the [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#blocks), [interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface), and [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes) contained in the theme app’s `/store` directory.
+This builder interprets and validates the [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#blocks), [interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface), and [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes) within the `/store` folder.
 
 With the `store` builder, you can use VTEX IO capabilities to quickly build store components and themes that can be reused across ecommerce stores and interact seamlessly with VTEX APIs and existing components.
 
