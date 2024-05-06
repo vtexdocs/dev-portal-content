@@ -4,16 +4,16 @@ slug: "vtex-io-documentation-store-builder"
 excerpt: "Learn how to use the VTEX IO Store builder."
 hidden: false
 createdAt: "2024-05-02T09:33:00.000Z"
-updatedAt: "2024-05-02T09:33:00.000Z"
+updatedAt: "2024-05-06T17:15:00.000Z"
 category: "App Development"
 ---
 
-The `store` builder enables the development of [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) storefronts, empowering the development of both [storefront components](LINK) and unique store themes. The main use cases of the `store` builder include:
+The `store` builder enables the development of [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) storefronts, empowering the development of both [storefront components](https://developers.vtex.com/docs/guides/getting-started-3) and unique store themes. The main use cases of the `store` builder include:
 
-- **Frontend apps**: When used alongside the [`react` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder), the `store` builder allows integrating a [frontend component](LINK) with Site Editor. It enables mapping a React component to a block, grouping store blocks, and defining route handling within a component.
+- **Frontend apps**: When used alongside the [`react` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder), the `store` builder allows integrating a [frontend component](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) with Site Editor. It enables mapping a React component to a block, grouping store blocks, and defining route handling within a component.
 - **Store Theme apps**: Defines block usage and store routes.
 
->ℹ️ Note that if your store uses a different [storefront solution](LINK), the `store` builder is not necessary, as this builder is specifically designed for developing apps for Store Framework.
+>ℹ️ Note that if your store uses a different [storefront solution](https://developers.vtex.com/docs/storefront-development), the `store` builder is not necessary, as this builder is specifically designed for developing apps for Store Framework.
 
 This builder interprets and validates the [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#blocks), [interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface), and [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes) contained in the theme app’s `/store` directory.
 
