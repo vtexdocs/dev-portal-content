@@ -38,7 +38,7 @@ To use the `assets` builder in your app, follow these steps:
 
    ```json
    "builders": {
-  	   "assets": "0.x"
+      "assets": "0.x"
    }
    ```
 
