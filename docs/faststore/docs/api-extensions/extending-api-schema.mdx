@@ -81,16 +81,17 @@ Your new type definitions set the data structure for your new fields, extended f
 
 2. To extend `StoreProduct`, let's add a `customData` required field in `product.graphql`, which should return a string value. This field can store custom information related to a product in your store. For example, you might use this field to store additional product details that are not in the native FastStore API schema. 
 
-```graphql graphql/vtex/typeDefs/product.graphql
+	```graphql graphql/vtex/typeDefs/product.graphql
+	
+	extend type StoreProduct {
+	  """
+	  Custom data extending StoreProduct
+	  """
+	  customData: String!
+	}
+	
+	```
 
-extend type StoreProduct {
-  """
-  Custom data extending StoreProduct
-  """
-  customData: String!
-}
-
-```
     > ⚠️ The typeDefs files must have a `.graphql` extension. Also, `index.ts` is necessary for resolvers but not required for typeDefs.
 
 Refer to the next step to create the resolvers to provide the actual data to the `customData` field. 
@@ -106,39 +107,39 @@ example. That means the name of the file will be `product.ts`.
 
 2. Define the resolver in the `product.ts` file. This resolver specifies how to fetch the data for the `customData` field based on the root object, which represents the `StoreProduct`.
 
-```ts graphql/vtex/resolvers/product.ts
-
-import type { StoreProductRoot } from '@faststore/api'
-
-const productResolver = {
-  StoreProduct: {
-    customData: (root: StoreProductRoot) => {
-      return 'My item id: ' + root.itemId
-    },
-  },
-}
-
-export default productResolver
-```
+	```ts graphql/vtex/resolvers/product.ts
+	
+	import type { StoreProductRoot } from '@faststore/api'
+	
+	const productResolver = {
+	  StoreProduct: {
+	    customData: (root: StoreProductRoot) => {
+	      return 'My item id: ' + root.itemId
+	    },
+	  },
+	}
+	
+	export default productResolver
+	```
 
 Note that you can leverage the use of TypeScript by typing the root param as [StoreProductRoot](https://v1.faststore.dev/reference/api/root-object-fields#root-product):
 
-![using-root-field-type](https://vtexhelp.vtexassets.com/assets/docs/src/root-field-ts___3a10ec8a1aeba9770c7ee982995d55bc.gif)
+	![using-root-field-type](https://vtexhelp.vtexassets.com/assets/docs/src/root-field-ts___3a10ec8a1aeba9770c7ee982995d55bc.gif)
 
 3. Open the `index.ts` file inside the `vtex/resolvers` folder and import the resolver, `StoreProductResolver`, you created in the previous step. 
 
 4. Create a `resolvers` object that includes the imported resolvers.
 
-```ts graphql/vtex/resolvers/index.ts
-
-import { default as StoreProductResolver } from './product'
-
-const resolvers = {
-  ...StoreProductResolver,
-}
-
-export default resolvers
-```
+	```ts graphql/vtex/resolvers/index.ts
+	
+	import { default as StoreProductResolver } from './product'
+	
+	const resolvers = {
+	  ...StoreProductResolver,
+	}
+	
+	export default resolvers
+	```
 
 Once you have defined these files in the `vtex` folder, the new fields are available to use.
 
@@ -153,7 +154,7 @@ This means your FastStore website may need to consume new data from third-party 
 
 #### Step 1 - Preparing the folders and files
 
-> ⚠️ If you already have the directory structure created in the [Extending VTEX API schemas](/docs/api-extension/extending--api-schema#step-1---preparing-the-folders-and-files), add the `thirdParty` folder inside `src/graphql`.
+> ⚠️ If you already have the directory structure created in the [Extending VTEX API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema), add the `thirdParty` folder inside `src/graphql`.
 
 1. In your store repository, go to the `src` folder and create the `graphql` subfolder. You can do this by running the following command in your terminal:
 
@@ -208,67 +209,67 @@ Below, you'll find a code example for implementing a third-party extension.
 
 1. Create the `extra.graphql` file inside the `graphql/thirdParty/typeDefs` folder. The `extra.graphql` defines the type definitions in a GraphQL schema file.
 
-```ts graphql/thirdParty/typeDefs/extra.graphql
-
-type ExtraData {
-  """
-  Data customizing ExtraData
-  """
-  data: String!
-}
-
-type Query {
-  extraData: ExtraData
-  namedExtraData(name: String!): ExtraData
-}
-```
+	```ts graphql/thirdParty/typeDefs/extra.graphql
+	
+	type ExtraData {
+	  """
+	  Data customizing ExtraData
+	  """
+	  data: String!
+	}
+	
+	type Query {
+	  extraData: ExtraData
+	  namedExtraData(name: String!): ExtraData
+	}
+	```
 
 2. Create the `extra.ts` file inside the `graphql/thirdParty/resolvers` folder. This file defines the resolvers that handle the logic for the defined queries or mutations. 
 
-```ts graphql/thirdParty/resolvers/extra.ts
-
-const extraDataResolver = {
-  Query: {
-    extraData: () => {
-      return {
-        data: 'Extra data',
-      }
-    },
-    namedExtraData: (_, { name }) => {
-      return {
-        data: `Named extra data: ${name}`,
-      }
-    },
-  },
-}
-
-export default extraDataResolver
-```
+	```ts graphql/thirdParty/resolvers/extra.ts
+	
+	const extraDataResolver = {
+	  Query: {
+	    extraData: () => {
+	      return {
+	        data: 'Extra data',
+	      }
+	    },
+	    namedExtraData: (_, { name }) => {
+	      return {
+	        data: `Named extra data: ${name}`,
+	      }
+	    },
+	  },
+	}
+	
+	export default extraDataResolver
+	```
 3. In the `graphql/thirdParty/resolvers` folder, create the `index.ts` file to combine all the resolvers into a single object.
 
-```ts graphql/thirdParty/resolvers/index.ts
-
-import { default as StoreExtraResolver } from './extra'
-
-const resolvers = {
-  ...StoreExtraResolver,
-}
-
-export default resolvers
-```
+	```ts graphql/thirdParty/resolvers/index.ts
+	
+	import { default as StoreExtraResolver } from './extra'
+	
+	const resolvers = {
+	  ...StoreExtraResolver,
+	}
+	
+	export default resolvers
+	```
 
 4. With the schema and resolvers in place, query the data using GraphQL queries. Here's an example query to access the extra data:
 
-```ts 
-query {
-	extraData {
-		data
+	```ts 
+	query {
+		extraData {
+			data
+		}
+		namedExtraData(name: "Hello") {
+			data
+		}
 	}
-	namedExtraData(name: "Hello") {
-		data
-	}
-}
-```
+	```
 
 Once you have defined these files in the `thirdParty` folder, you can query the specified data.
 
