@@ -43,6 +43,7 @@ store
 To use the `store` builder in your app, follow these steps:
 
 Add the `store` builder to your app’s builder list in the `manifest.json` file, as follows:
+
 ```json
   "builders": {
       "store": "3.x"
