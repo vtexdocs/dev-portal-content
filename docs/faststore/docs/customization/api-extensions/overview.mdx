@@ -1,10 +1,10 @@
-# API extensions
+---
+title: "API Extensions"
+---
 
-In this track, learn how to extend the FastStore API schema by adding new
-data to the existing [queries](https://v1.faststore.dev/reference/api/queries).
+This track will teach you how to extend the FastStore API schema by adding new data to the existing [queries](https://v1.faststore.dev/reference/api/queries).
 
-While the [FastStore API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) provides a [GraphQL schema](https://v1.faststore.dev/reference/api/queries) for ecommerce websites that caters to common use cases, 
-some stores may require access to additional and more specific data. If you need to retrieve data not natively provided by the FastStore API, you can achieve this by extending the FastStore API schema and incorporating new data into the existing [queries](https://v1.faststore.dev/reference/api/queries).
+While the [FastStore API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) provides a [GraphQL schema](https://v1.faststore.dev/reference/api/queries) that caters to common use cases, some stores may require access to additional and more specific data. If you need to retrieve data not natively provided by the FastStore API, you can achieve this by extending the FastStore API schema and incorporating new data into the existing [queries](https://v1.faststore.dev/reference/api/queries).
 
 > ⚠️ Please be aware that introducing additional API endpoints to your storefront can potentially affect site performance, as already covered in 
 [Best practices for fetching data](#best-practices-for-fetching-data). 
@@ -19,6 +19,7 @@ GraphQL optimizations are seamlessly executed, requiring no direct intervention 
 - Build-time generated mappings of declared queries.
 - Improved efficiency and security.
 - Enforcement of predefined operations.
+
 They are automatically triggered every time you start a development server (`yarn dev`) or build the store (`yarn build`).
 Resolver changes are automatically and instantly visible without the need for manual optimization generation.
 Without these optimizations, any changes to the GraphQL schema, such as adding or removing fields from a query or changing a GraphQL type, won't be reflected in the store. 

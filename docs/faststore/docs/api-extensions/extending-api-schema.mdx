@@ -1,15 +1,19 @@
-# Extending API schemas
+---
+title: 'Extending API schemas'
+---
+
+This guide will teach you how to extend VTEX and third-party APIs to suit your store's needs. By extending these APIs, you'll gain the ability to efficiently access and modify essential data, ensuring seamless customization to meet your specific needs.
 
 ## Before you begin
 
 <Steps>
 ### Ensure consistency with API extension best practices
 
-Even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. Check the [best practices for fetching data on your storefront](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview#best-practices-for-fetching-data).
+When extending the FastStore API schema, avoid overfetching data on your storefront. Refer to the [Best practices for fetching data on your storefront](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview#best-practices-for-fetching-data) for more information.
 
 ### Ensure your development server is active
 
-Ensure that your development server is up and running while developing to observe the changes you make. You can do this by running the command `yarn dev` in your terminal, which will monitor and reflect the changes promptly.
+Ensure that your development server is up and running while developing to observe changes promptly. Use the command `yarn dev` in the terminal to run the development server and monitor changes effectively.
 
 </Steps>
 
@@ -18,7 +22,7 @@ Ensure that your development server is up and running while developing to observ
 FastStore streamlines the data utilization from VTEX APIs not directly exposed by the FastStore API.
 
 Since FastStore uses GraphQL, you need to include [type definitions](https://graphql.org/learn/schema/#object-types-and-fields) and [resolvers](https://graphql.org/learn/execution/#root-fields-resolvers) to fetch the desired data. 
-To define new type definitions and resolvers for FastStore using GraphQL, follow the instructions below to create a specific directory structure. 
+To define new type definitions and resolvers for FastStore using GraphQL, follow the instructions below. 
 
 ### Step by step
 
@@ -48,7 +52,7 @@ To declare a new type definition and resolver, create the following directory st
 
 4. Create an `index.ts` file inside the `resolvers` folder.
 
-Once you have created the essential folders, you will have a folder structure for the VTEX API Schema Extensions in the `src/graphql/vtex` folder similar to the following:
+Once you have created the necessary folders, you will have a folder structure for the VTEX API Schema Extensions in the `src/graphql/vtex` folder similar to the following:
 
     ```ts
     starter.store/
@@ -66,18 +70,16 @@ Once you have created the essential folders, you will have a folder structure fo
 
     > ℹ️ Note that in the code example above, the type definitions and resolvers files were created at `<resolverName>.ts` and `<typeName>.graphql`.
 
-#### Step 2 - Creating type definitions (`typeDefs`)Your new type definitions set the data structure for your new fields, extended from the existing FastStore API GraphQL queries and types
+#### Step 2 - Creating type definitions (`typeDefs`)
 
 Your new type definitions set the data structure for your new fields, extended from the existing FastStore API GraphQL queries and types.
 
-1. Create a new `<typeName>.graphql` file inside the `vtex/typeDefs` folder. For example, if we extend the [StoreProduct](https://v1.faststore.dev/reference/api/objects#storeproduct) type
-from the FastStore API, the name of the file should be `product.graphql`.
+1. Create a new `<typeName>.graphql` file inside the `vtex/typeDefs` folder. For example, if we extend the [StoreProduct](https://v1.faststore.dev/reference/api/objects#storeproduct) type from the FastStore API, the name of the file should be `product.graphql`.
 
-    > ℹ️  The organization inside this folder is flexible. You can create multiple typeDefs files or group them all together in one file.
+    > ℹ️  The organization inside the `vtex/typeDefs` folder is flexible. You can create multiple typeDefs files or group them all together in one file.
   During the build process and when running the local server file, all `.graphql` files under this directory will be considered.
 
-2. To extend `StoreProduct`, let's add a `customData` required field in `product.graphql`, which should return a string value.
-This field can store custom information related to a product in your store. For example, you might use this field to store additional product details that are not in the native FastStore API schema. 
+2. To extend `StoreProduct`, let's add a `customData` required field in `product.graphql`, which should return a string value. This field can store custom information related to a product in your store. For example, you might use this field to store additional product details that are not in the native FastStore API schema. 
 
 ```graphql graphql/vtex/typeDefs/product.graphql
 
@@ -89,7 +91,7 @@ extend type StoreProduct {
 }
 
 ```
-    > ⚠️ The typeDefs files must have a `.graphql` extension. Also, `index.ts` is not needed for typeDefs It is only needed for resolvers.
+    > ⚠️ The typeDefs files must have a `.graphql` extension. Also, `index.ts` is necessary for resolvers but not required for typeDefs.
 
 Refer to the next step to create the resolvers to provide the actual data to the `customData` field. 
 
@@ -145,14 +147,13 @@ Once you have defined these files in the `vtex` folder, the new fields are avail
 ## Extending FastStore API with third-party API schemas
 
 As stores grow, so does the possibility of consuming new data that is not provided by default in the FastStore API or other VTEX APIs. 
-This means FastStore must consume new data from third-party APIs.
+This means your FastStore website may need to consume new data from third-party APIs.
 
 ### Step by step
 
 #### Step 1 - Preparing the folders and files
 
-> ⚠️ If you already have the directory structure created in the [Extending VTEX API schemas](/docs/api-extension/extending--api-schema#step-1---preparing-the-folders-and-files),
-  for third-party API schemas, you only need to add the `thirdParty` folder inside `src/graphql`.
+> ⚠️ If you already have the directory structure created in the [Extending VTEX API schemas](/docs/api-extension/extending--api-schema#step-1---preparing-the-folders-and-files), add the `thirdParty` folder inside `src/graphql`.
 
 1. In your store repository, go to the `src` folder and create the `graphql` subfolder. You can do this by running the following command in your terminal:
 
@@ -243,7 +244,7 @@ const extraDataResolver = {
 
 export default extraDataResolver
 ```
-3 - In the `graphql/thirdParty/resolvers` folder, create an `index.ts` file to combine all the resolvers into a single object.
+3. In the `graphql/thirdParty/resolvers` folder, create the `index.ts` file to combine all the resolvers into a single object.
 
 ```ts graphql/thirdParty/resolvers/index.ts
 
@@ -256,7 +257,7 @@ const resolvers = {
 export default resolvers
 ```
 
-4 - With the schema and resolvers in place, you can query the data using GraphQL queries. Here's an example query to access the extra data:
+4. With the schema and resolvers in place, query the data using GraphQL queries. Here's an example query to access the extra data:
 
 ```ts 
 query {

@@ -62,9 +62,9 @@ const context = usePage<PLPContext | SearchPageContext>()
 
 </details>
 
-Also, you can use type assertion functions to leverage t typescript and get the correct types.
+Also, you can use type assertion functions to leverage Typescript and get the correct types.
 
-```ts copy
+```ts
 import { isPDP, isPLP, isSearchPage } from "@faststore/core";
 
 const context = usePage()
@@ -85,6 +85,7 @@ To illustrate how to consume API extension data from custom sections, let's cons
 ```ts src/components/CallToAction.tsx
 import { usePLP }  from "@faststore/core";
 ```
+
 3. Inside the component, call the `usePLP` hook to get the context data related to Product Listing Pages. The result is stored in the `context` variable.
 
 ```tsx
