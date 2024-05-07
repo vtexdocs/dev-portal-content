@@ -1,4 +1,4 @@
-title: "Teste - Conversão Markdwon"
+title: "Test - Markdown Conversion"
 
 slug: "markdown-new-file"
 
@@ -8,23 +8,23 @@ createdAt: "2024-04-08T00:00:15.623Z"
 
 updatedAt: ""
 
-Título Principal
+Main title
 
-# Título Nível 1
+# Title level 1
 
-## Título Nível 2
+## Title level 2
 
-### Título Nível 3
+### Title level 3
 
-#### Título Nível 4
+#### Title level 4
 
 Para se tornar um provedor VTEX integrado , é necessário utilizar uma das seguintes soluções:
 
-* A infraestrutura **onde o conector será construído** precisa ter o certificado PCI-DSS assinado por um QSA (Qualified Security Assessor). Maiores informações no [Conselho de Normas de Segurança do PCI](https://www.pcisecuritystandards.org/).
+- A infraestrutura **onde o conector será construído** precisa ter o certificado PCI-DSS assinado por um QSA (Qualified Security Assessor). Maiores informações no [Conselho de Normas de Segurança do PCI](https://www.pcisecuritystandards.org/).
 
-* Caso não possua o certificado, implementar o provedor utilizando o [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
+- Caso não possua o certificado, implementar o provedor utilizando o [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
-1. A infraestrutura onde o **conector será construído** precisa ter o certificado PCI-DSS assinado por um QSA *(Qualified Security Assessor)*. Maiores informações no [Conselho de Normas de Segurança do PCI](https://www.pcisecuritystandards.org/).
+1. A infraestrutura onde o **conector será construído** precisa ter o certificado PCI-DSS assinado por um QSA _(Qualified Security Assessor)_. Maiores informações no [Conselho de Normas de Segurança do PCI](https://www.pcisecuritystandards.org/).
 
 2. Caso não possua o certificado, implementar o provedor utilizando o [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
@@ -72,15 +72,15 @@ Para se tornar um provedor VTEX integrado , é necessário utilizar uma das segu
 
 O provedor deve encaminhar à VTEX, o [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) totalmente preenchido, observando os seguintes pontos:
 
-* **Nome da empresa**: o campo "URL" (Parte 1a.) deve ser o mesmo da empresa que está solicitando o procedimento de integração. Caso seja preenchido com outro nome (exemplo: empresa adquirida por outra), será necessário encaminhar a documentação extra que comprove a relação entre as empresas, e que a URL de serviço do provedor foi avaliada pelo PCI DSS.
+- **Nome da empresa**: o campo "URL" (Parte 1a.) deve ser o mesmo da empresa que está solicitando o procedimento de integração. Caso seja preenchido com outro nome (exemplo: empresa adquirida por outra), será necessário encaminhar a documentação extra que comprove a relação entre as empresas, e que a URL de serviço do provedor foi avaliada pelo PCI DSS.
 
-* **Assinatura**: Documento assinado pelo representante da empresa e pelo QSA.
+- **Assinatura**: Documento assinado pelo representante da empresa e pelo QSA.
 
-* **Data de expiração**: a validade do AOC é de 1 ano após a data de assinatura. Um AOC emitido a mais de 11 meses não deve ser encaminhado à VTEX, ou seja, com tempo inferior a 30 dias para a data de expiração.
+- **Data de expiração**: a validade do AOC é de 1 ano após a data de assinatura. Um AOC emitido a mais de 11 meses não deve ser encaminhado à VTEX, ou seja, com tempo inferior a 30 dias para a data de expiração.
 
 > ❗ Os documentos SAQ (Self-Assessment Questionnaire) e AOC (Attestation of Compliance for Onsite Assessments – Merchants Version) não são aceitos no processo de integração da VTEX.
 
-> ℹ️ [Provedores de pagamentos com boletos, promissórias ou cartões de loja com bandeira própria (Private Label ou cartões em geral, mas que envolvam soluções com redirect)](https://help.vtex.com/pt/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m?&utm_source=autocomplete#provedores-de-pagamentos-com-boletos-promissorias-ou-cartoes-de-loja-com-bandeira-propria-private-label-ou-cartoes-em-geral-mas-que-envolvam-solucoes-com-redirect)
+> ℹ️ [Provedores de pagamentos com boletos, promissórias ou cartões de loja com bandeira própria (Private Label ou cartões em geral, mas que envolvam soluções com redirect)](https://help.vtex.com/pt/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m?\&utm_source=autocomplete#provedores-de-pagamentos-com-boletos-promissorias-ou-cartoes-de-loja-com-bandeira-propria-private-label-ou-cartoes-em-geral-mas-que-envolvam-solucoes-com-redirect)
 
 > ⚠️ O provedor deve encaminhar à VTEX, o [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) totalmente preenchido, observando os eguintes pontos:
 
