@@ -1,5 +1,5 @@
 files:
   - source: /docs/localization/*_en.md
-    translation: /%original_path%/%two_letters_code%_%file_name%.md
+    translation: /%original_path%/%original_file_name%_%two_letters-code%.md
     translation_replace:
       "_en": ""
