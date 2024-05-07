@@ -1,4 +1,4 @@
-title: "Teste - Conversão Markdwon"
+title: "Test - Markdown Conversion"
 
 slug: "markdown-new-file"
 
@@ -8,15 +8,15 @@ createdAt: "2024-04-08T00:00:15.623Z"
 
 updatedAt: ""
 
-Título Principal
+Main title
 
-# Título Nível 1
+# Title level 1
 
-## Título Nível 2
+## Title level 2
 
-### Título Nível 3
+### Title level 3
 
-#### Título Nível 4
+#### Title level 4
 
 Para se tornar um provedor VTEX integrado , é necessário utilizar uma das seguintes soluções:
 
