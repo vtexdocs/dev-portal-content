@@ -1,6 +1,6 @@
 ---
-title: Can I order my product as I want?
-slug: can-i-order-my-product-as-i-want
+title: Can I order my product as I wish?
+slug: can-i-order-my-product-as-i-wish
 hidden: false
 createdAt: 2022-09-08T14:19:54.761Z
 updatedAt: 2022-09-08T14:19:54.761Z
@@ -11,7 +11,7 @@ By default, VTEX system orders products according to their relevance on the site
 However, there are ways to change this order: either through the Score field or by using Querystring.
 How the Score field works is explained in [this article](https://help.vtex.com/en/tutorial/how-the-score-field-works--1BUZC0mBYEEIUgeQYAKcae).
 
-The Querystring process is simpler: simply incert the parameter into the URL to change the order in which products are displayed.
+The Querystring process is simpler: simply insert the parameter into the URL to change the order in which products are displayed.
 
 The parameters are as follows:
 
