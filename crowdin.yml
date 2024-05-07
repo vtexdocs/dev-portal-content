@@ -1,3 +1,5 @@
 files:
-  - source: /docs/localization/*.md
+  - source: /docs/localization/*_en.md
     translation: /%original_path%/%two_letters_code%_%file_name%.md
+    translation_replace:
+      "_en": ""
