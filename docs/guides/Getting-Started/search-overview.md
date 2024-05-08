@@ -60,7 +60,7 @@ The [Search Control](https://developers.vtex.com/vtex-rest-api/docs/search-contr
 
 ## Customizing the search result
 
-You can provide your customers with a more customized experience navigating the search result. You may want to present custom search results for each customer or even engage your users with specific products through an URL.
+You can provide your customers with a more customized experience navigating the search result. You may want to present custom search results for each customer or even engage your users with specific products through a URL.
 
 - [Segmenting the search result](https://developers.vtex.com/docs/guides/vtex-io-documentation-segmenting-the-search-result)
 - [Building a search results page with multiple layouts](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts)
