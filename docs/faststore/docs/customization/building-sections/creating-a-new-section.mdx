@@ -1,6 +1,5 @@
 ---
 title: 'Creating a new section'
-sidebar_label: 'Building and Customizing sections'
 ---
 
 In this guide, you will learn how to create a new section for your storefront and make it available in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). This solution is useful when your project requires a section not natively available in FastStore.
@@ -9,9 +8,7 @@ For this guide, we will create two sections:
 - `Call to Action` Gets a specific action from the user.
 - `OurStores`: Indicates the closest store for the user.
 
-> ℹ️ Sections are page components that wrap up other components, enabling you to create cohesive and functional content for your store. For example, the Hero section is a native section that includes the following components: `Hero`, `HeroImage`, and `HeroHeader`.
-
----
+  > ℹ️ Sections are page components that wrap up other components, enabling you to create cohesive and functional content for your store. For example, the Hero section is a native section that includes the following components: `Hero`, `HeroImage`, and `HeroHeader`.
 
 ## Before you start
 
@@ -40,48 +37,48 @@ Make sure to install the FastStore CLI to use its commands locally. Refer to the
 3. Within the `cms/faststore` folder, create `sections.json` file.
 4. In the `sections.json` file, add the new section that you want to display in the Headless CMS. The schema below defines how the Headless CMS renders a section:
 
-```json sections.json
-  [
-    {
-      "name": "CallToAction",
-      "schema": {
-        "title": "Call To Action",
-        "description": "Get your 20% off on the first purchase!",
-        "type": "object",
-        "required": [
-          "title",
-          "link"
-        ],
-        "properties": {
-          "title": {
-            "title": "Title",
-            "type": "string"
-          },
-          "link": {
-            "title": "Link Path",
-            "type": "object",
-            "required": [
-              "text",
-              "url"
-            ],
-            "properties": {
-              "text": {
-                "title": "Text",
-                "type": "string"
-              },
-              "url": {
-                "title": "URL",
-                "type": "string"
+  ```json sections.json
+    [
+      {
+        "name": "CallToAction",
+        "schema": {
+          "title": "Call To Action",
+          "description": "Get your 20% off on the first purchase!",
+          "type": "object",
+          "required": [
+            "title",
+            "link"
+          ],
+          "properties": {
+            "title": {
+              "title": "Title",
+              "type": "string"
+            },
+            "link": {
+              "title": "Link Path",
+              "type": "object",
+              "required": [
+                "text",
+                "url"
+              ],
+              "properties": {
+                "text": {
+                  "title": "Text",
+                  "type": "string"
+                },
+                "url": {
+                  "title": "URL",
+                  "type": "string"
+                }
               }
             }
           }
         }
       }
-    }
-  ]
-```
+    ]
+  ```
 
-> ℹ️ This new section receives a title and a link pointing to a specific location.
+  > ℹ️ This new section receives a title and a link pointing to a specific location.
 
 ### Step 2: Creating the new section
 
@@ -90,40 +87,40 @@ To render the `CallToAction` section you created in the previous step, you need 
 1. If you don't already have it, create a folder named `components` inside the `src` directory.
 2. Inside the `components` folder, create a file named `CallToAction.tsx` and add the following code:
 
-```tsx src/components/CallToAction.tsx
-import React from "react";
+  ```tsx src/components/CallToAction.tsx
+  import React from "react";
 
-export interface CallToActionProps {
-  title: string;
-  link: {
-    text: string;
-    url: string;
-  };
-}
+  export interface CallToActionProps {
+    title: string;
+    link: {
+      text: string;
+      url: string;
+    };
+  }
 
-export default function CallToAction(props: CallToActionProps) {
-  return (
-    <section>
-      <h2>{props.title}</h2>
-      <a href={props.link.url}>{props.link.text}</a>
-    </section>
-  );
-}
-```
+  export default function CallToAction(props: CallToActionProps) {
+    return (
+      <section>
+        <h2>{props.title}</h2>
+        <a href={props.link.url}>{props.link.text}</a>
+      </section>
+    );
+  }
+  ```
 
 This section will receive the `link` and `title` defined previously in the `sections.json` file.
 
 3. Create a file named `index.tsx` inside the components folder.
 
-> ℹ️ The `index.tsx` file provides an entry point for importing and using the `CallToAction` component. It acts as a container for all the components within the components folder and allows for easier organization and reusability of code.
+  > ℹ️ The `index.tsx` file provides an entry point for importing and using the `CallToAction` component. It acts as a container for all the components within the components folder and allows for easier organization and reusability of code.
 
 Open the `index.tsx` file and add the following code:
 
-```tsx src/components/index.tsx
-import CallToAction from './CallToAction'
+  ```tsx src/components/index.tsx
+  import CallToAction from './CallToAction'
 
-export default { CallToAction }
-```
+  export default { CallToAction }
+  ```
 
 ### Step 3: Synchronizing the new section with the Headless CMS
 
@@ -142,93 +139,93 @@ export default { CallToAction }
 1. After [creating the files and folders](#step-1-creating-folders-and-files-related-to-the-headless-cms), In the `sections.json` file, add the new section that you want to display in the Headless CMS. 
 The schema below defines how the Headless CMS renders the `OurStores` section that we will use in the example:
 
-```json sections.json
-[
-  {
-    "name": "OurStores",
-    "schema": {
-      "title": "Our Stores",
-      "description": "Search stores near to the users",
-      "type": "object",
-      "required": ["title", "description"],
-      "properties": {
-        "title": {
-          "title": "Title",
-          "type": "string",
-          "default": "Explore Nearby Stores"
-        },
-        "description": {
-          "title": "Link Path",
-          "type": "string",
-          "default": "Discover the closest store to you and pay us a visit."
+  ```json sections.json
+  [
+    {
+      "name": "OurStores",
+      "schema": {
+        "title": "Our Stores",
+        "description": "Search stores near to the users",
+        "type": "object",
+        "required": ["title", "description"],
+        "properties": {
+          "title": {
+            "title": "Title",
+            "type": "string",
+            "default": "Explore Nearby Stores"
+          },
+          "description": {
+            "title": "Link Path",
+            "type": "string",
+            "default": "Discover the closest store to you and pay us a visit."
+          }
         }
       }
     }
-  }
-]
-```
+  ]
+  ```
 
 2.  Inside the `components` folder, create a file named `OurStores.tsx` and add the following code:
 
-```tsx src/components/OurStores.tsx
-import React from 'react'
-import { Button, Icon, SelectField } from '@faststore/ui'
+  ```tsx src/components/OurStores.tsx
+  import React from 'react'
+  import { Button, Icon, SelectField } from '@faststore/ui'
 
-export interface OurStoresProps {
-  title: string
-  description: string
-}
+  export interface OurStoresProps {
+    title: string
+    description: string
+  }
 
-export default function OurStores(props: OurStoresProps) {
-  return (
-    <section>
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-      <div>
-        <SelectField
-          id="select-state-store"
-          label="State:"
-          options={{
-            newYork: 'New York',
-            arizona: 'Arizona',
-            massachusetts: 'Massachusetts',
-            hawaii: 'Hawaii',
-          }}
-        />
-        <SelectField
-          id="select-city-store"
-          label="City:"
-          options={{
-            newYorkCity: 'New York City',
-            phoenix: 'Phoenix',
-            boston: 'Boston',
-            honolulu: 'Honolulu',
-          }}
-        />
-        <Button
-          variant="secondary"
-          icon={<Icon name="ArrowRight" />}
-          iconPosition="right"
-        >
-          Find Store
-        </Button>
-      </div>
-    </section>
-  )
-}
-```
+  export default function OurStores(props: OurStoresProps) {
+    return (
+      <section>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+        <div>
+          <SelectField
+            id="select-state-store"
+            label="State:"
+            options={{
+              newYork: 'New York',
+              arizona: 'Arizona',
+              massachusetts: 'Massachusetts',
+              hawaii: 'Hawaii',
+            }}
+          />
+          <SelectField
+            id="select-city-store"
+            label="City:"
+            options={{
+              newYorkCity: 'New York City',
+              phoenix: 'Phoenix',
+              boston: 'Boston',
+              honolulu: 'Honolulu',
+            }}
+          />
+          <Button
+            variant="secondary"
+            icon={<Icon name="ArrowRight" />}
+            iconPosition="right"
+          >
+            Find Store
+          </Button>
+        </div>
+      </section>
+    )
+  }
+  ```
 
 For this section, we will use the following components from the Faststore UI: [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button), [Icon](https://developers.vtex.com/docs/guides/faststore/atoms-icon) and [SelectField](https://developers.vtex.com/docs/guides/faststore/molecules/select-field).
 
 3. Create a file named `index.tsx` inside the components folder, and add the following code:
 
-```tsx src/components/index.tsx
-import OurStores from './OurStores'
+  ```tsx src/components/index.tsx
+  import OurStores from './OurStores'
 
-export default { OurStores }
-```
+  export default { OurStores }
+  ```
 
 4. Repeat the steps in [Step 3: Synchronizing the new section with the Headless CMS](#step3-synchronizing-the-new-section-with-the-headless-cms), and you should see the new section but without styles as in the example below:
 
-![new-section-structure-without-styles](https://vtexhelp.vtexassets.com/assets/docs/src/section-structure-without-styles___7be40088d6137bdd63cbb4940c2fa599.png)
+  ![new-section-structure-without-styles](https://vtexhelp.vtexassets.com/assets/docs/src/section-structure-without-styles___7be40088d6137bdd63cbb4940c2fa599.png)
 
