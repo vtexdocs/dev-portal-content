@@ -1,0 +1,45 @@
+---
+title: 'Overriding section styles'
+---
+
+To customize the styles of a native section, you can use the `className` property, which works similarly to [React's className](https://react.dev/reference/react-dom/components/common#applying-css-styles).
+
+## Before you begin
+
+Before delving into this guide, make sure you have already overridden a component, as presented in the [getOverriddenSection function] guide.
+
+## Step by step
+
+
+Let’s use the example provided in the [getOverriddenSection function](LINK) guide,where the `Simple Alert` styles are being overridden via the `className`:
+
+    ```tsx 
+    import { getOverriddenSection } from '@faststore/core';
+    import { AlertSection } from '@faststore/core';
+    import styles from './simple-alert.module.scss'
+
+    const SimpleAlert = getOverriddenSection({
+    Section: AlertSection,
+    className: styles.simpleAlert,
+    components: { Icon: { props: { weight: "bold" } } },
+    });
+
+    export default SimpleAlert;
+
+    ```
+
+1. Create the `simple-alert.module.scss` file within the `sections` folder. 
+2. In the `simple-alert.module.scss` file, declare the class that you have added to the Simple Alert component. In this case, `.simpleAlert`.
+3. Add the `scss` styles you desire to override:
+
+    ```css
+    .simpleAlert{
+        [data-fs-alert-content] {
+            color: Blue;
+            font-weight: bold;
+        }
+    }
+
+    ```
+    
+4. Run `yarn dev` to sync your changes.
