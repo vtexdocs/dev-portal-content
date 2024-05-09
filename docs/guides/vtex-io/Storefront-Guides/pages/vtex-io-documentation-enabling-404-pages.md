@@ -10,7 +10,7 @@ The 404 error is an HTTP standard response code for when the server was not able
 
 When navigating the internet, it's quite common to run across 404 pages or page Not Found when we ask the browser to perform an action that cannot be executed by the server, such as accessing a product page that was deactivated from the store's catalog.
 
-For e-commerce companies, **one of the main advantages of enabling 404 pages is to avoid that Google indexes pages with paths that do not exist**, thereby harming the store's SEO and its customer experience.
+For ecommerce companies, **one of the main advantages of enabling 404 pages is to avoid that Google indexes pages with paths that do not exist**, thereby harming the store's SEO and its customer experience.
 
 In VTEX IO, 404 pages are **natively** enabled for inexistent product pages and for URLs that have more than one invalid segment. But in addition, it is also possible to allow 404 pages when URLs have a **single** invalid segment, as shown in the step by step section below.
 

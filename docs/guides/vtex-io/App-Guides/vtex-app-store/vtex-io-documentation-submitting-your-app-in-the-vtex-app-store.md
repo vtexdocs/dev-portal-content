@@ -21,7 +21,7 @@ seeAlso:
 > - Only partners that already signed the new contract can publish apps as usual, following the homologation process.
 > - We are not accepting new partners for publishing apps in the App Store.
 
-Learn how to successfully submit your app for distribution in the VTEX App Store by following this guide. The VTEX App Store is a marketplace where VTEX clients can discover and install applications that enhance their e-commerce experience. Before your app can be featured in the VTEX App Store, it must pass the homologation process, which involves evaluation in three key areas: business, user experience (UX), and security/performance. This process applies to all apps, regardless of their functionality, such as storefront, admin, backend, or pixel.
+Learn how to successfully submit your app for distribution in the VTEX App Store by following this guide. The VTEX App Store is a marketplace where VTEX clients can discover and install applications that enhance their ecommerce experience. Before your app can be featured in the VTEX App Store, it must pass the homologation process, which involves evaluation in three key areas: business, user experience (UX), and security/performance. This process applies to all apps, regardless of their functionality, such as storefront, admin, backend, or pixel.
 
 > ⚠️ Keep in mind that the homologation process may take 45 days from [the moment the app data is sent for validation](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-2-sending-the-app-data-for-validation).
 

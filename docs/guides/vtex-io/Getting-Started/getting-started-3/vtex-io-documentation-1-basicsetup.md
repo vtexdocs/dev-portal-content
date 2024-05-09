@@ -11,9 +11,9 @@ seeAlso:
   - "/docs/guides/vtex-io-documentation-workspace"
 ---
 
-This guide will teach you the essential steps to configure your development environment. By the end of this part, you'll be well-prepared to build a Store Theme app for your online store. This app defines the visual and interactive aspects of your e-commerce website, shaping how it appears and functions for your customers.
+This guide will teach you the essential steps to configure your development environment. By the end of this part, you'll be well-prepared to build a Store Theme app for your online store. This app defines the visual and interactive aspects of your ecommerce website, shaping how it appears and functions for your customers.
 
-When you work with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), you are essentially developing within [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io/). This means you have access to a comprehensive suite of frontend and backend [VTEX IO apps](https://developers.vtex.com/docs/vtex-io-apps) to help you build and customize your storefront.
+When working with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), you are essentially developing within [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io/). This means you have access to a comprehensive suite of frontend and backend [VTEX IO apps](https://developers.vtex.com/docs/vtex-io-apps) to help you build and customize your storefront.
 
 ## Step by step
 
@@ -37,7 +37,7 @@ Once logged in, you'll see a message in your web browser: "You may now close thi
 
 ### Step 3 - Creating a development workspace
 
-In VTEX IO, all your interactions with your account occur within a specific [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/), which acts as a separate version of your account where you can experiment with changes without affecting the live version of your store.
+On VTEX IO, all your interactions with your account occur within a specific [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/), which acts as a separate version of your account where you can experiment with changes without affecting the live version of your store.
 
 By default, when you log in to a VTEX store using VTEX IO, you are in the `master` workspace, representing the version accessible to your shoppers.
 
@@ -51,7 +51,7 @@ Note that if the workspace already exists, the command will switch to it. If not
 
 ![workspace-examplename EN](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-1-basicsetup-1.png)
 
-> ℹ️ The `vtex use` command command ensures that all your operations run in the specified workspace. To switch back to the main workspace (`master`), run `vtex use master` in the VTEX IO CLI.
+> ℹ️ The `vtex use` command ensures that all your operations run in the specified workspace. To switch back to the main workspace (`master`), run `vtex use master` in the VTEX IO CLI.
 
 To confirm the `account` and `workspace` you are using, run the `vtex whoami` command in your terminal.
 
@@ -59,8 +59,8 @@ To confirm the `account` and `workspace` you are using, run the `vtex whoami` co
 
 ### Step 4 - Accessing your store using a workspace
 
-Now that you've created your development workspace in VTEX IO, you can access your store by visiting `https://{workspace}--{accountName}.myvtex.com`, replacing `{workspace}` with the name of your workspace and `{accountName}` with your VTEX account name. Alternatively, use the `vtex browse` command in your terminal to open your browser with the correct workspace and account settings.
+Now that you've created your development workspace on VTEX IO, you can access your store by visiting `https://{workspace}--{accountName}.myvtex.com`, replacing `{workspace}` with the name of your workspace and `{accountName}` with your VTEX account name. Alternatively, use the `vtex browse` command in your terminal to open your browser with the correct workspace and account settings.
 
 ![VTEX IO CLI-whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-1-basicsetup-4.png)
 
-Congratulations! Your account is now connected to the VTEX IO platform, and you're ready to dive into implementing a Store Theme with the Store Framework!
+Your account is now connected to the VTEX IO platform, and you are ready to dive into implementing a Store Theme with Store Framework.

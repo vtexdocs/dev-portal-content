@@ -32,7 +32,7 @@ Start by creating your Departments, then your Categories, then your Subcategorie
 
 The category tree is very important for your VTEX store and it is possible that the category structure represented in your Enterprise Resource Planning (ERP) software or Product Information Manager (PIM) is not optimized for that end. In this case, your ecommerce category tree may end up being different from the tree in your previous system.
 
-If you find yourself in that situation, we recommend creating an inactive mock category called, for example, **Integration,** that will not be used in the storefront but can receive each and every product and SKU when importing. After all of your catalog has been imported, the products can be manually arranged into their new categories appropriate for your e-commerce. This can be done in the Admin or with a spreadsheet, with the [Google Drive Import app](https://github.com/vtex-apps/google-import).
+If you find yourself in that situation, we recommend creating an inactive mock category called, for example, **Integration,** that will not be used in the storefront but can receive each and every product and SKU when importing. After all of your catalog has been imported, the products can be manually arranged into their new categories appropriate for your ecommerce. This can be done in the Admin or with a spreadsheet, with the [Google Drive Import app](https://github.com/vtex-apps/google-import).
 
 > For more details, see our [Catalog categories integration guide](https://developers.vtex.com/docs/guides/categories).
 

@@ -6,7 +6,7 @@ createdAt: "2020-09-01T13:42:40.894Z"
 updatedAt: "2020-09-01T23:36:28.475Z"
 ---
 
-In our native multi-seller architecture, VTEX stores decouple different aspects of an e-commerce operation in order to clearly divide responsibilities between marketplace and seller.
+In our native multi-seller architecture, VTEX stores decouple different aspects of an ecommerce operation in order to clearly divide responsibilities between marketplace and seller.
 
 ![VTEX Seller and VTEX Marketplace](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-guide-0.png)
 

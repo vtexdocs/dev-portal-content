@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-11-11T12:55:23.952Z"
 updatedAt: "2022-12-13T20:17:44.058Z"
 ---
-We understand that *site performance* is a common concern among e-commerce stores since it directly impacts the number of visited pages, sales conversion rate, user session time, bounce rate, and more.
+We understand that *site performance* is a common concern among ecommerce stores since it directly impacts the number of visited pages, sales conversion rate, user session time, bounce rate, and more.
 
 Thus, to help you guarantee the success of your brand's online presence, we'll teach you, in the following step by step, how to test and implement our [recommendations for optimizing your store's performance](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance).
 

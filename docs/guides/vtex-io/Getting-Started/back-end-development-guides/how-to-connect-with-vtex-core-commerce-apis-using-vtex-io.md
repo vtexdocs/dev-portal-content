@@ -7,7 +7,7 @@ createdAt: "2020-10-08T02:47:14.995Z"
 updatedAt: "2021-03-25T14:40:29.493Z"
 ---
 
-VTEX IO apps are designed designed to seamlessly interface with [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference). These APIs provide a set of functionalities and data access points for managing and interacting with the VTEX e-commerce platform, enabling developers to perform various operations, such as managing orders, products, and customer data.
+VTEX IO apps are designed designed to seamlessly interface with [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference). These APIs provide a set of functionalities and data access points for managing and interacting with the VTEX ecommerce platform, enabling developers to perform various operations, such as managing orders, products, and customer data.
 
 In this guide, you will learn how to create a custom client that can handle HTTP requests to these VTEX Core Commerce APIs, allowing your application to retrieve and manipulate data within the VTEX ecosystem.
 
