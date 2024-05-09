@@ -1,4 +1,4 @@
-title: "Conversão de conteúdo em markdown e tradução automática no GitHub"
+title: "Content conversion"
 
 slug: "conversao-de-conteudo-em-markdown-e-traducao-automatica-no-github"
 
