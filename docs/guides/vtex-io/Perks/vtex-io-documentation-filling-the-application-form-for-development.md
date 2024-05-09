@@ -27,7 +27,7 @@ To help answer some of these questions, we've put together **guidelines regardin
 
 Faced with a more complex project, that involves storefront components and a backend service, for example, developers tens to request permissions to develop multiple apps aimed at each of these well defined platform functions.
 
-The problem with this code segmentation is that it's done from a developer's point of view, someone who unlike the end user, has technical know-how about the platform. For end users, micro-services done behind the scenes on the platform are not what matter.
+The problem with this code segmentation is that it's done from a developer's point of view, someone who unlike the end user, has technical know-how about the platform. For end users, microservices done behind the scenes on the platform are not what matter.
 
 Therefore, the existence of several small apps that when put together solve a single problem can become frustrating from a user's perspective - and with good reason.
 

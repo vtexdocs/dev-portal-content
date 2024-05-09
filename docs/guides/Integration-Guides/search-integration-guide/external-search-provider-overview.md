@@ -6,7 +6,7 @@ createdAt: "2020-09-11T16:46:12.406Z"
 updatedAt: "2020-10-30T20:44:33.600Z"
 ---
 
-A search engine is a crucial part of e-commerce. It can drive more sales if the search results are good and it can worsen the user experience if they are bad.
+A search engine is a crucial part of ecommerce. It can drive more sales if the search results are good and it can worsen the user experience if they are bad.
 
 Changing the search provider usually involved changing code both in the frontend and in the backend, creating unnecessary friction.
 
@@ -16,7 +16,7 @@ Search protocol benefits both developers and VTEX stores!
 
 ## How it Works
 
-The **VTEX Search Protocol** is a set of definitions and GraphQL schemas that allows VTEX IO applications to serve **e-commerce search results** that can be used by VTEX Store Framework.
+The **VTEX Search Protocol** is a set of definitions and GraphQL schemas that allows VTEX IO applications to serve **ecommerce search results** that can be used by VTEX Store Framework.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/search-integration-guide/b4ac10c-search-protocol_22.png)
 Creating a **search-resolver** service app on VTEX IO, which implements VTEX Search Protocol, allows any VTEX Account using VTEX IO to **install such an application** and, instantly, **change the store's provider for search results.** This is really useful as no frontend modification is required. It's also possible to distribute the search provider on [VTEX App Store](https://apps.vtex.com/) to make the installation process even simpler.

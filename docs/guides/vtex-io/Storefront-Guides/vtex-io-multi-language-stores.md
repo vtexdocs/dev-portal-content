@@ -4,10 +4,10 @@ slug: "vtex-io-multi-language-stores"
 hidden: false
 createdAt: "2020-08-31T17:15:01.754Z"
 updatedAt: "2021-03-17T13:43:00.948Z"
-excerpt: "Get to know the internationalization process for creating a multi-language e-commerce store using Store Framework."
+excerpt: "Get to know the internationalization process for creating a multi-language ecommerce store using Store Framework."
 ---
 
-This document outlines the internationalization process for creating a multi-language e-commerce store using Store Framework. Internationalization is crucial for reaching global markets and providing a seamless shopping experience for customers from different locales. This guide covers how Store Framework handles internationalization for both storefront content and catalog data, highlighting the tools and libraries used for translations.
+This document outlines the internationalization process for creating a multi-language ecommerce store using Store Framework. Internationalization is crucial for reaching global markets and providing a seamless shopping experience for customers from different locales. This guide covers how Store Framework handles internationalization for both storefront content and catalog data, highlighting the tools and libraries used for translations.
 
 ## Before you begin
 

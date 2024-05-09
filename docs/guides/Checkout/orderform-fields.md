@@ -101,9 +101,9 @@ __Example:__
 
 Object containing the data of the customer who placed the order.
 
-If the customer has not yet informed her or his e-mail, much of the data may be empty (`null`).
+If the customer has not yet informed her or his email, much of the data may be empty (`null`).
 
-If the customer's e-mail has not yet been confirmed, several personal data will be censored, that is, some of its parts will be hidden by asterisks to avoid identification.
+If the customer's email has not yet been confirmed, several personal data will be censored, that is, some of its parts will be hidden by asterisks to avoid identification.
 
 __Example:__
 

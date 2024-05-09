@@ -6,7 +6,7 @@ createdAt: "2020-10-08T13:26:34.527Z"
 updatedAt: "2020-10-08T13:26:34.527Z"
 ---
 
-VTEX IO powers big e-commerce operations, and for most of that it's necessary to **run code on a server**. Services are how we run **Node.js or .NET** code on VTEX IO infrastructure, backed by API abstractions to improve developer experience.
+VTEX IO powers big ecommerce operations, and for most of that it's necessary to **run code on a server**. Services are how we run **Node.js or .NET** code on VTEX IO infrastructure, backed by API abstractions to improve developer experience.
 
 Services can export **HTTP Routes**, **GraphQL resolvers** or **event handlers.**
 

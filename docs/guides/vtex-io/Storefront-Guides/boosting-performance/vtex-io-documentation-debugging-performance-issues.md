@@ -6,7 +6,7 @@ createdAt: "2021-04-07T18:18:23.849Z"
 updatedAt: "2022-12-13T20:17:44.952Z"
 ---
 
-In the e-commerce business, website performance and user experience are closely connected. That means that performance can directly impact sales conversion rate, user session time, among other relevant metrics.
+In the ecommerce business, website performance and user experience are closely connected. That means that performance can directly impact sales conversion rate, user session time, among other relevant metrics.
 
 A series of tools are available to measure website performance, such as [Lighthouse](https://developers.google.com/web/tools/lighthouse)/[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) and [SpeedCurve](https://speedcurve.com/).
 
