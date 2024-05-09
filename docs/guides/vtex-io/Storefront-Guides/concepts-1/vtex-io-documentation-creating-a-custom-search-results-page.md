@@ -9,7 +9,7 @@ When [creating a brand new landing page](https://developers.vtex.com/docs/guides
 
 Even though custom pages do not have the needed context to fetch search data, since they are build from scratch, the `search-result-layout.customQuery` block from the [Search Result app](https://developers.vtex.com/docs/guides/vtex-search-result/) is able to specify which query should be performed in order to get and render the desired search results for your users.
 
-**Engage your users with specific products through an URL path!** Check out the instructions below:
+**Engage your users with specific products through a URL path!** Check out the instructions below:
 
 ## Step by step
 

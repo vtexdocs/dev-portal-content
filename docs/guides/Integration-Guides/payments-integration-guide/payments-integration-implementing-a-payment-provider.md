@@ -153,7 +153,7 @@ When a customer makes a purchase at the checkout, the provider must create a pay
 }
 ```
 
-The `callbackURL` is an URL used to make retries in the operation flow. In addition, if the partner adopts redirect as a payment flow, you should also include the `returnURL` in the request payload. Thus, VTEX will be able to realize the redirect flow, if necessary.
+The `callbackURL` is a URL used to make retries in the operation flow. In addition, if the partner adopts redirect as a payment flow, you should also include the `returnURL` in the request payload. Thus, VTEX will be able to realize the redirect flow, if necessary.
 
 > ⚠️ Both `callbackURL` and `returnURL` are developed by the provider.
 
@@ -286,7 +286,7 @@ Refer to the [Post Refund Payment](https://developers.vtex.com/docs/api-referenc
 
 **6. POST Inbound Request (BETA)**
 
-The Inbound Request (BETA) implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider.
+The Inbound Request (BETA) implements a URL that facilitates a direct connection between our Gateway service and the Payment Provider.
 
 It is responsible for the communication with the provider's backend through our gateway, relying on the security of sending the context of the transaction by VTEX.
 

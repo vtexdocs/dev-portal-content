@@ -63,7 +63,7 @@ See below an example of some personal data contained in a shopping cart:
 
 ## Removing all personal data from the shopping cart
 
-To remove all personal data from a shopping cart, you can use your browser to create an URL based on the  `orderFormId` value. See an example below:
+To remove all personal data from a shopping cart, you can use your browser to create a URL based on the  `orderFormId` value. See an example below:
 
 - **ordeFormId**: `9620cbb7ebc34ca68a86621428816c5a`
 - **New URL**: `https://{accountname}.{environment.com.br}/checkout/changeToAnonymousUser/9620cbb7ebc34ca68a86621428816c5a`

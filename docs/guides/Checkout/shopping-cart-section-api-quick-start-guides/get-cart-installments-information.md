@@ -23,7 +23,7 @@ With the `orderFormId` information available, you must use the [Cart installment
 - **Path Param**: `orderFormId` value.
 - **Query Param**: `paymentSystem`. Payment method Id in which the installments information will be consulted.
 
-See an URL example below:
+See a URL example below:
 
 `https://{accountname}.{environment.com.br}/api/checkout/pub/orderForm/9420cbb7ebc34ca68a86621428816c5a?paymentSystem=2`
 

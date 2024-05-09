@@ -35,7 +35,7 @@ With the `orderFormId` information available, you must use the [Change price](ht
 - **orderFormId**: value.
 - **itemIndex**: a string indicating the index of the item in the cart. Each cart item is identified by an index, starting with `0`.
 
-See an URL example below:
+See a URL example below:
 
 `https://{accountname}.{environment.com.br}/api/checkout/pub/orderForm/36a1646105f243e1a9012c915631344b/items/0/price`
 

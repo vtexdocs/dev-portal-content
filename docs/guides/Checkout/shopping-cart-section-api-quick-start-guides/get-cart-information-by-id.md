@@ -32,7 +32,7 @@ With the `orderFormId` information available, you must use the [Get cart informa
 - **Path param**: `orderFormId` value.
 - **Query param**: `refreshOutdatedData`. You can set up this query as `false` or `true` to define whether some cart information can be updated by the [Update cart items](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/update) endpoint.
 
-See an URL example below:
+See a URL example below:
 
 `https://{accountname}.{environment.com.br}/api/checkout/pub/orderForm/ede846222cd44046ba6c638442c3505a?refreshOutdatedData=true`
 
