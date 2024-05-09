@@ -6,7 +6,7 @@ createdAt: "2020-06-03T16:02:44.190Z"
 updatedAt: "2022-12-13T20:17:44.467Z"
 ---
 
-The 404 error is a HTTP standard response code for when the server was not able to return what the browser request or was configured to not handle that request.
+The 404 error is an HTTP standard response code for when the server was not able to return what the browser request or was configured to not handle that request.
 
 When navigating the internet, it's quite common to run across 404 pages or page Not Found when we ask the browser to perform an action that cannot be executed by the server, such as accessing a product page that was deactivated from the store's catalog.
 

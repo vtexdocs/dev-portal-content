@@ -31,7 +31,7 @@ The Package lifecycle ends when it is delivered.
 
 ## Integration
 
-The endpoint described in this document is responsible for creating the Shipping Labels of all the packages associated with an order. Given an `orderId`, it will provide an URL that when accessed downloads a pdf file containing the Shipping Labels.
+The endpoint described in this document is responsible for creating the Shipping Labels of all the packages associated with an order. Given an `orderId`, it will provide a URL that when accessed downloads a pdf file containing the Shipping Labels.
 
 >❗ The URL returned by the API is valid for 5 days from the moment it was requested, and expires after that period. If the file is required after the link has expired, only a new request with the same `orderId` will provide a new valid URL.
 

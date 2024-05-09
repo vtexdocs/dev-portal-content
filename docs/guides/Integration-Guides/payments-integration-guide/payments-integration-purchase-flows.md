@@ -74,7 +74,7 @@ To break this cycle of asynchronous retries, there are two possible flows depend
 
 #### Callback URL
 
-The `callbackUrl` field contains an URL that the payment provider uses to make a callback and inform our gateway of the final payment status: `approved` or `denied`.
+The `callbackUrl` field contains a URL that the payment provider uses to make a callback and inform our gateway of the final payment status: `approved` or `denied`.
 
 This URL has some query parameters, including the `X-VTEX-signature`. This parameter is mandatory and contains a signature token to identify that the request has been generated from VTEX as a security measure. The signature token has at most 32 characters. You can check an example of callback URL with the signature token below:
 

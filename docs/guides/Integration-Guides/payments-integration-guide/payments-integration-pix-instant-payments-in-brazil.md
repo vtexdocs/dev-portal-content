@@ -327,7 +327,7 @@ For more information, access the [Refund Payment endpoint](https://developers.vt
 
 ### Communicate with the Gateway
 
-The last endpoint, the <span class="api pg-type type-post">POST</span> [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), implements an URL that facilitates a direct connection between our Gateway service and the Payment Provider.
+The last endpoint, the <span class="api pg-type type-post">POST</span> [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), implements a URL that facilitates a direct connection between our Gateway service and the Payment Provider.
 
 See an example of the Inbound Request (BETA) request:
 
