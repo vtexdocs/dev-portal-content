@@ -91,11 +91,8 @@ This code overrides the `BuyButton` props `size` and `iconPosition`. You'll see 
 To integrate the section into the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), follow the steps below:
 
 1. Create a folder named `cms` in the FastStore root directory.
-
 2. Inside `cms`, create the `faststore` folder.
-
 3. Within the `cms/faststore` folder, create the `sections.json` file.
-
 4. Add the schema of the new section to the `sections.json` file, named `ProductDetailsWithCustomButton`, to the `sections.json` file:
 
     ```json sections.json
@@ -239,7 +236,6 @@ To integrate the section into the [Headless CMS](https://developers.vtex.com/doc
 This schema Adds the new `Product Details with custom button` section to the Headless CMS.
 
 5. Open a new terminal window and log in to your vtex account by running `vtex login {accountName}`.
-
 6. run the following command to sync your changes with the Headless CMS:
 
     ```bash
@@ -247,11 +243,8 @@ This schema Adds the new `Product Details with custom button` section to the Hea
     ```
 
 7. Access the VTEX Admin and proceed to **Storefront > Headless CMS**.
-
 8. Click on the page you desire to add the new section.
-
 9. Click the add button (`+`) and add the new section and complete values from the sections fields.
-
 10. Click `Save`.
 
     > ⚠️ Remember: props changed via Headless CMS overlap the changes made through [overrides](/tbs). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
