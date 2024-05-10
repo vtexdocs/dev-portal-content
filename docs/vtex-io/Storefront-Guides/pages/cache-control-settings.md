@@ -7,7 +7,7 @@ updatedAt: "2024-03-27T11:00:00.000Z"
 ---
 Cache-control headers are directives used in HTTP responses to specify caching parameters for a client. These headers help in improving performance and reducing server load by allowing clients to cache resources locally for a certain period and serve stale content while updating it in the background, thus minimizing the impact of network latency. You can find more details in the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html).
 
-The [Render Server](https://developers.vtex.com/docs/apps/vtex.render-server) app offer settings that allow merchants to control the cache behavior when Cache-control headers are used.
+The [Render Server](https://developers.vtex.com/docs/apps/vtex.render-server) app offers settings that allow merchants to control the cache behavior when Cache-control headers are used.
 
 Follow the steps below to access and edit the app's settings:
 
