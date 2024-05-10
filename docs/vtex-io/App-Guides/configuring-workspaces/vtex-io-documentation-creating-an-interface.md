@@ -3,42 +3,40 @@ title: "Creating an interface for your app settings"
 slug: "vtex-io-documentation-creating-an-interface"
 hidden: false
 createdAt: "2024-02-20T15:29:55.338Z"
-updatedAt: "2024-02-20T15:29:55.338Z"
-excerpt: "Learn how to create an interface for your app settings and retrieve its data"
+updatedAt: "2024-05-10T15:45:21.000Z"
+excerpt: "Learn how to create an interface for your app settings and retrieve its data."
 ---
 
-When developing a [VTEX IO app](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app), you can create an interface for accepting custom user settings.  This app interface displays configuration forms for each app installed on the account, and it uses the `settingsSchema` field on `manifest.json` that an app may declare the schema of its configuration.
+Creating an interface for your app settings
 
-See the Google Tag Manager app interface in the example below, with the appropriate configuration of the `settingsSchema` field in the `manifest.json` file:
+When developing a [VTEX IO app](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app), you can create an interface for accepting custom user settings. The app settings interface allows you to retrieve data provided by the user and, based on that, enable or modify an app behavior. The configuration possibilities depend on the type of data collected by the interface and what one intends to do with that information.
 
-![GTM_PixelApp](https://github.com/vtexdocs/dev-portal-content/assets/112641072/fe615b04-add7-47fe-aa86-9aa2c24f62c9)
+This guide outlines the process of creating such an interface and utilizing the data input by users within your app.
 
-In addition to building an interface for your app, you can also consume the data provided by the app’s user. Considering the Google Tag Manager example, retrieving the GTM ID, for instance. In a more general sense, it is possible to retrieve some data imputed in the app interface and, based on that, allow or disallow a user action within the app.
+## Usage example
 
-The configuration possibilities depend on the type of data collected by the interface and what one intends to do with that information.
+The app settings interface displays configuration forms for installed apps in the [App Store](https://help.vtex.com/en/tracks/extensions-hub--AW7klkYMh557y5IUOgzco/2LDRvGujYsumxi7IlE7CEJ). This interface is defined via the `settingsSchema` field on [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest), where an app may declare the schema of its configuration.
 
-Based on the Google Tag Manager example above, below is a step-by-step guide on how to create an interface for your app, and how to retrieve this data for use within the app.
+See the Google Tag Manager app interface in the example below, with the appropriate configuration of the `settingsSchema` field in the `manifest.json` file.
+
+![GTM_image](https://github.com/vtexdocs/dev-portal-content/assets/112641072/d916b8da-0039-4364-b21e-a8cf8ba629dd) | ![carbon (6)](https://github.com/vtexdocs/dev-portal-content/assets/112641072/db87ac7e-7e36-4656-8ddb-b7735b5b92f4)
+:--- | ---: 
+
+After building the settings interface for your app, you need to consume the data provided by the app’s user. Considering the Google Tag Manager example, retrieving the GTM ID. 
+
+Based on the given example, below is a step-by-step guide on how to create an interface for your app, and how to retrieve this data for use within the app.
 
 ## Step by step
 
-### Creating an interface
+### Step 1 - Creating the settings interface
 
-Open the `manifest.json` file.
-Ensure that the appropriate [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) are properly declared within it, as shown in the following example:
+Open your app project in any code editor of your preference and open the `manifest.json` file. 
 
-```json
- "builders": {
-    "react": "3.x",
-    "store": "0.x",
-    "pixel": "0.x",
-    "docs": "0.x"
-```
+Define the `settingsSchema` object, declaring a JSON Schema containing the fields that meet your business needs. Refer to the [JSON Schema documentation](http://json-schema.org/understanding-json-schema/) to build the `settingsSchema` field correctly. 
 
-Within the `settingsSchema` object, declare a JSON Schema containing the fields that meet your business needs.
+> ℹ️ The JSON Schema offers a predefined model that outlines how the settings should be formatted in your app. Note that, according to the JSON Schema specification, the types accepted within a property include: `string`, `number`, `integer`, `boolean`, `object`, `array`, or `null`. It is also possible to use arrays of types (e.g., `[string, number]`) to indicate that the property accepts multiple types.
 
-Refer to the [JSON Schema documentation](http://json-schema.org/understanding-json-schema/) to build the `settingsSchema` field correctly. The JSON Schema offers a predefined model that outlines how the settings should be formatted in your app. Using it, it is possible to accept multiple field with multiple data types.
-
-Considering the example of the Google Tag Manager interface shown previously, the `settingsSchema` object was configured as follows:
+Considering the example of the Google Tag Manager interface previously presented, the `settingsSchema` object was configured as follows:
 
 ```json
   "settingsSchema": {
@@ -62,38 +60,33 @@ Considering the example of the Google Tag Manager interface shown previously, th
         "type": "boolean"
       }
     }
-  }
+  },
 ```
 
 This code defines a schema for settings UI that interacts with Google Tag Manager app. Below, you can better understand the configured fields:
 
-- `title` - App name.
-- `type` - Json Schema type (this must always be completed as `object`).
-- `description` (optional) - Description of the `settingsSchema` field.
-- `properties` - Key-values pairs that define what will be displayed to the app users, with their own definition within this object. Possible keys for `properties` are: `title`, `description`, and `type`.
+- `title`: App name presented in the app settings interface. It is recommended to use the same app name configured in the [`title` field of the manifest.json file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#title).
+- `type`: JSON Schema type (this must always be set as `object`).
+- `description` (Optional): Description of the `settingsSchema` field.
+- `properties`: Key-value pairs that define the fields that will be displayed to the app users, with their own definition within this object. Each defined key accepts the following `properties`: `title`, `description`, and `type`.
+    - `gtmId`: String-type property that represents the Google Tag Manager ID. In the settings UI, this property is shown as a text box.
+    - `allowCustomHtmlTags`: Bolean-type property that determines whether custom HTML tags are allowed. In the settings UI, this property is shown as a checkbox.
+    - `sendGA4Events`: Boolean-type property that indicates whether to send Google Analytics 4 events. In the settings UI, this property is shown as a checkbox.
 
-According to the JSON Schema specification, the types accepted within a property include: `”string”`, `“number”`, `“integer”`, `“boolean”`, `“object”`, `“array”` or `“null”`. It is also possible to use arrays of types (e.g. `[“string”, “number”]`) to indicate that the property accepts multiple types.
-
-In the case of the Google Tag Manager app, the following `properties` were configured:
-
-- `gtmId` - A string-type property that represents the Google Tag Manager ID. In the settings UI, this property is shown as a text box.
-- `allowCustomHtmlTags` - A boolean-type property that determines whether custom HTML tags are allowed. In the settings UI, this property is shown as a checkbox.
-- `sendGA4Events` - A boolean-type property that indicates whether to send Google Analytics 4 events. In the settings UI, this property is shown as a checkbox.
-
-### Fetching the app settings data
+### Step 2 - Retrieving and consuming the app settings data
 
 On your app’s code, it is possible to retrieve the app settings in two ways:
 
-- With a GraphQL query from the frontend to the `vtex.apps-graphql`
-- On the backend, using the `getAppSettings` method from `ctx.clients.apps` client
+- [Frontend apps](#frontend-apps): Fetch the data using a GraphQL query.
+- [Backend apps](#backend-apps): Use the `getAppSettings` method from the `ctx.clients.apps` client.
 
 Below is an example of each case.
 
-#### Storefront apps
+#### Frontend apps
 
-The [storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) are composed by React components that provide frontend solutions.
-
-Below is an example of how to retrieve into your React app the app settings configured within the `settingsSchema` field.
+1. In the `manifest.json` file, add the `vtex.apps-graphql` 3.x within the `dependencies` field.
+2. In the `react` directory, create a new folder named `queries`.
+3. Create a new `graphql` file (e.g., `AppSettings.graphql`) and query the settings options as in the following.
 
 ```gql
 query getSettings {
@@ -104,19 +97,71 @@ query getSettings {
 }
 ```
 
+>⚠ Replace `vendor`, `app.name` and `0.x` with values according to your scenario.
+
 The example above is a GraphQL query that fetches the data of a specific app, declared in the arguments of `publicSettingsForApp` field: the app and its version. Below, you can better understand the other configured fields:
 
-- `@context(provider: “vtex.apps-graphql”)` - The context for the query. In this case, it specifies the provider as “vtex.apps-graphql”.
-- `message` - The field message to be included in the query result, which is a field within the `publicSettingsForApp` object with specific filtering criteria for the app and version arguments, and it includes context information specifying the provider.
+- `@context(provider: “vtex.apps-graphql”)`: The context for the query. In this case, it must be configured as “vtex.apps-graphql”.
+- `message`: The message field to be included in the query result, which is a field within the `publicSettingsForApp` object. Note that the message may vary according to the app's settingsSchema
+
+This query will return an object like the following:
+
+```json
+{
+  "data": {
+    "publicSettingsForApp": {
+      "message": "{\"maxNumberOfItemsToCompare\":2}"
+    }
+  }
+}
+```
+
+>⚠ Please be aware that only settings labeled with `public` `access` in the `settingsSchema` will be returned.
+
+4. Open the `tsx` file of the React component that will consume this information (e.g., `ProductComparisonContext.tsx`) and import the GraphQL query:
+
+```
+import AppSettings from './queries/AppSettings.graphql'
+```
+
+5. Parse and use the defined query (e.g., `AppSettings`) value according to your needs. Check the example below:
+
+```tsx
+const { data: appSettingsData } = useQuery(AppSettings, {
+    variables: {
+      // eslint-disable-next-line no-undef
+      version: process.env.VTEX_APP_VERSION,
+    },
+    ssr: false,
+  })
+
+  useEffect(() => {
+    const appSettings = JSON.parse(
+      pathOr(`{}`, ['publicSettingsForApp', 'message'], appSettingsData)
+    )
+
+    dispatch({
+      type: 'SET_MAX_LIMIT',
+      args: {
+        maxLimit: pathOr(
+          MAX_ITEMS_TO_COMPARE,
+          ['maxNumberOfItemsToCompare'],
+          appSettings
+        ),
+      },
+    })
+  }, [appSettingsData])
+```
+
+The code above interacts with an API through a GraphQL query, which is managed by the `useQuery` hook, to fetch the app settings. It then parses and updates the app’s state with these settings using a `useEffect` hook whenever the settings data changes.
 
 #### Backend apps
 
-The [backend apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-service) are Node or .NET Core services that speed up connections with Storefront or Admin apps.
+1. Open your `node` app in any code editor of your preference.
+2. Declare a new function (e.g., `getConfig`) and use the `getAppSettings` method to retrieve and return the app settings data. Consider the example below:
 
-Below is an example of how to retrieve the app settings from a Node app:
-
-```sh
-getConfig: async (_: any, __: any, ctx: Context) => {
+```ts
+export async function getConfig: async (_: any, __: any, ctx: Context) => {
    const {
      clients: { apps },
      vtex: { logger },
@@ -130,7 +175,9 @@ getConfig: async (_: any, __: any, ctx: Context) => {
        error,
      })
    })
- }
+ },
 ```
 
-This code is part of a GraphQL server within a VTEX IO context, where interaction with apps occurs through specific clients, such as the `apps` client used in this example. When the `getConfig` query is employed, it retrieves the app settings defined in the `manifest.json` file for that specific app.
+The `getConfig` function returns a promise as it fetches the app settings and handles errors. It retrieves an app ID from environment variables, uses it to request settings, and logs any errors that occur. 
+
+3. Import the defined function and consume it according to your needs.
