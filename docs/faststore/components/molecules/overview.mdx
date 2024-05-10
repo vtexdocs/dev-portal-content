@@ -198,9 +198,15 @@ title: "Molecules"
   <CardItem
     title="Product Title"
     description="Used on Product Details Page, wraps the product name, a product label and the rating."
-    actionPath="/docs/guides/faststore/molecules-product-title"
-    zoomOut
+    actionPath="/docs/guides/faststore/molecules-product-title"    
   >
+    <ProductTitle
+      title={<h1>Apple Magic Mouse</h1>}
+      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+      refNumber="99995945"
+      ratingValue={4}
+    />
+</CardItem>
   <CardItem
     title="Product Price"
     description="Displays product's selling and listing prices."
@@ -210,13 +216,6 @@ title: "Molecules"
       value={950.04}
       listPrice={999}
       formatter={useFormattedPrice}
-    />
-  </CardItem>
-    <ProductTitle
-      title={<h1>Apple Mouse</h1>}
-      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-      refNumber="99995945"
-      ratingValue={4}
     />
   </CardItem>
   <CardItem
