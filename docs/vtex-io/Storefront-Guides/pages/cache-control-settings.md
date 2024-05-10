@@ -7,17 +7,17 @@ updatedAt: "2024-03-27T11:00:00.000Z"
 ---
 Cache-control headers are directives used in HTTP responses to specify caching parameters for a client. These headers help in improving performance and reducing server load by allowing clients to cache resources locally for a certain period and serve stale content while updating it in the background, thus minimizing the impact of network latency. You can find more details in the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html).
 
-The [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) and the [Render Server](https://developers.vtex.com/docs/apps/vtex.render-server) apps offer settings that allow merchants to control the cache behavior when Cache-control headers are used. The Rewriter app is responsible for Product Detail Pages (PDP) and Product Listing Pages (PLP), while the Render Server app is responsible for the homepage and landing pages.
+The [Render Server](https://developers.vtex.com/docs/apps/vtex.render-server) app offer settings that allow merchants to control the cache behavior when Cache-control headers are used.
 
-Follow the steps below to access and edit these apps’ settings:
+Follow the steps below to access and edit the app's settings:
 
 1. On VTEX Admin, go to **Apps** > **Extensions Hub** > **App Management**.
-2. Search for **Rewriter** or **Render Server**, depending on the app you want to configure.
-3. In the corresponding app’s box, click on ⚙ **Settings**.
+2. Search for **Render Server**.
+3. In the app's box, click on ⚙ **Settings**.
 4. Edit the fields as you want. For details about each field, see the table below.
 5. Click on **Save**.
 
-By default, these apps have defined times to update the cache, and the following settings allow you to override these times.
+By default, the Render Server app has defined times to update the cache, and the following settings allow you to override these times.
 
 |Name|Type|Description|
 |-|-|-|
@@ -27,6 +27,6 @@ By default, these apps have defined times to update the cache, and the following
 
 ![Cache-control settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/cache-control-settings.jpg)
 
-To view all the settings available on each app, check the [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) and [Render Server](https://developers.vtex.com/docs/apps/vtex.render-server) articles.
+To view all the settings available, check the [Render Server](https://developers.vtex.com/docs/apps/vtex.render-server) article.
 
 >⚠ We suggest changing those settings carefully since they can affect the time cached on a page. These settings may impact how long changes made to the platform take effect in the storefront. If you are not sure which values to use, we suggest keeping the default values.
