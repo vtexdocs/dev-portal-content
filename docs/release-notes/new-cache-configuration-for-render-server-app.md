@@ -1,17 +1,17 @@
 ---
-title: "New cache configuration for Rewriter and Render Server apps"
-slug: "2024-05-03-new-cache-configuration-for-rewriter-and-render-server-apps"
+title: "New cache configuration for Render Server app"
+slug: "2024-05-03-new-cache-configuration-for-render-server-app"
 type: "added"
 createdAt: "2024-03-27T11:00:00.000Z"
 updatedAt: "2024-03-27T11:00:00.000Z"
 hidden: false
 excerpt: "The new settings allow client-side cache to be available for longer periods, which can improve page loading latency."
 ---
-We are releasing an update to the [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) and the [Render Server](https://developers.vtex.com/docs/apps/vtex.rewriter) apps that allows merchants to overwrite cache-control default settings in the Admin.
+We are releasing an update to the [Render Server](https://developers.vtex.com/docs/apps/vtex.rewriter) app that allows merchants to overwrite cache-control default settings in the Admin.
 
 ## What has changed?
 
-Within the apps’ settings page, there are three new settings that merchants can use:
+Within the app's settings page, there are three new settings that merchants can use:
 
 |Name|Type|Description|
 |-|-|-|
@@ -27,6 +27,6 @@ By increasing the `max-age` and `stale-while-revalidate` times, clients will be 
 
 ## What needs to be done?
 
-The new settings are available in every store using VTEX IO. To access them, open your store’s Admin and navigate to the Rewriter and the Render Server page settings, where you will be able to define the new cache-control values.
+The new settings are available in every store using VTEX IO. To access them, open your store’s Admin and navigate to the Render Server page settings, where you will be able to define the new cache-control values.
 
 For more information, see the [Cache-control settings](https://developers.vtex.com/docs/guides/cache-control-settings) article.
