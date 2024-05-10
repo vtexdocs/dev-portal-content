@@ -20,7 +20,8 @@ Tables display information in a friendly way, allowing users to scan for details
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection>
+    <OverviewSection
+      containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
       <Table>
         <TableHead>
           <TableRow>
