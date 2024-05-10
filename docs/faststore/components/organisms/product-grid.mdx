@@ -51,30 +51,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
 <OverviewSection>
-  <ProductGrid>
-    {products.map(({ product }, idx) => (
-        <ProductGridItem>
-          <ProductCard>
-            <ProductCardImage>
-              <img
-                data-fs-image
-                src={product.image[0].url}
-                alt={product.image[0].alternateName}
-              />
-            </ProductCardImage>
-            <ProductCardContent
-              title={product.isVariantOf.name}
-              price={{
-                value: product.offers.offers[0].price,
-                listPrice: product.offers.offers[0].listPrice,
-                formatter: useFormattedPrice,
-              }}
-            />
-          </ProductCard>
-        </ProductGridItem>
-    ))}
-    </ProductGrid>
-
+  <ProductGridUsage />
 </OverviewSection>
 
   </Tab>
