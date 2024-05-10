@@ -80,7 +80,7 @@ O provedor deve encaminhar à VTEX, o [AOC](https://www.pcisecuritystandards.org
 
 > ❗ Os documentos SAQ (Self-Assessment Questionnaire) e AOC (Attestation of Compliance for Onsite Assessments – Merchants Version) não são aceitos no processo de integração da VTEX.
 
-> ℹ️ [Provedores de pagamentos com boletos, promissórias ou cartões de loja com bandeira própria (Private Label ou cartões em geral, mas que envolvam soluções com redirect)](https://help.vtex.com/pt/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m?\&utm_source=autocomplete#provedores-de-pagamentos-com-boletos-promissorias-ou-cartoes-de-loja-com-bandeira-propria-private-label-ou-cartoes-em-geral-mas-que-envolvam-solucoes-com-redirect)
+> ℹ️ [Provedores de pagamentos com boletos, promissórias ou cartões de loja com bandeira própria (Private Label ou cartões em geral, mas que envolvam soluções com redirect)](https://help.vtex.com/pt/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m?\\&utm_source=autocomplete#provedores-de-pagamentos-com-boletos-promissorias-ou-cartoes-de-loja-com-bandeira-propria-private-label-ou-cartoes-em-geral-mas-que-envolvam-solucoes-com-redirect)
 
 > ⚠️ O provedor deve encaminhar à VTEX, o [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) totalmente preenchido, observando os eguintes pontos:
 
