@@ -94,6 +94,50 @@ For example:
 - Department template: `/office` alternative for products within a department, ignoring category.
 - Generic PLP template: Used if no other matches are found.
 
+#### Using Rewrites with PLP template
+
+FastStore enables the use of [rewrites from Next.js](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites) to create a custom route.
+It's possible to enable the multiple page template feature for the custom route as well by adding your rewrites function into the `faststore.config.js` file as the Next.js doc suggests:
+
+```js
+async rewrites() {
+  return [
+    {
+      source: '/my-office',
+      destination: `/office`,
+    },
+  ]
+},
+```
+
+or
+
+```js
+async rewrites() {
+  return {
+    beforeFiles: [
+      {
+        source: '/my-office',
+        destination: `/office`,
+      },
+    ],
+    afterFiles: [],
+    fallback: [],
+  }
+},
+```
+
+In the example above, the new `source` route `/my-office` will be rewrite to the existing `destination` route `/office`, which will use the `/office` template but without changing the URL.
+In that way, you can use the existing `destination` route `/office` to map this template in the hCMS.
+
+From the version `3.0.X` of the `@faststore/core` package, it's also possible to use the `source` route in the hCMS to map the template.
+
+Update your store’s `@faststore/core` package to the `3.0.X` by running the following command:
+
+```bash
+yarn add @faststore/core@3.0.X
+```
+
 ### Main difference between PDP and PLP template selection criteria
 
 To sum up, here's the difference between the two template hierarchies:
