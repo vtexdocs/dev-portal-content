@@ -1,5 +1,5 @@
 ---
-title: 'Multiple page templates'
+title: "Multiple page templates"
 ---
 
 Multiple page templates allow the creation of flexible layouts for Product Details and Product Listing Pages (PDPs and PLPs) in Headless CMS. This feature allows you to create and manage pages hierarchically, leveraging product information, user context, product type, brand specifications, and template hierarchy.
@@ -38,7 +38,7 @@ To add multiple templates to your FastStore project, follow the steps below:
 
 1. Go to the VTEX Admin and navigate to **Storefront > Headless CMS**.
 2. Select your FastStore project.
-3. Click  `Create Document` and choose between `Product Page` and `Product List Page`.
+3. Click `Create Document` and choose between `Product Page` and `Product List Page`.
 4. Now that you have created the template, check the [Template hierarchy logic] section to learn how to use and edit the template.
 
 > ℹ️ Check the [Managing pages in the Headless CMS](https://help.vtex.com/tutorial/managing-pages--3DO6rBhZ1p3zndnFu5BgRt) guide to learn how to edit the name, publish, duplicate, or delete the template.
@@ -49,10 +49,10 @@ Both PDPs and PLPs use a similar logic for selecting the appropriate template to
 
 Here's the difference between Product Details and Product Listing Page template hierarchy:
 
-| Feature | PDP hierarchy logic | PLP hierarchy logic |
-| ---------- | ---------------------------- | ---------------------------- |
-| Matching Criteria | Slug, Subcategory, Category, Department, Generic. | Slug (subcategory, category, department implied), Generic. |
-| Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details beyond the slug. |
+| Feature                         | PDP hierarchy logic                                            | PLP hierarchy logic                                        |
+| ------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------- |
+| Matching Criteria               | Slug, Subcategory, Category, Department, Generic.              | Slug (subcategory, category, department implied), Generic. |
+| Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details beyond the slug.                   |
 
 ### Product Details Page (PDP) template selection criteria
 
@@ -72,9 +72,10 @@ J --> M{No} --> N{Product Department match?}
 N --> O{Yes} --> P(Use matching template)
 N --> Q{No} --> R{Use generic template}
 ```
-The system first searches for a template named after the product slug. For example, if the product slug is `/blue-shirts`, FastStore will look for a template named `/blue-shirts`. 
 
-1. If no template matches the slug, FastStore searches for a template based on the product subcategory. For example, if the subcategory is `summer clothing`, the system might look for `/clothing/shirts/summer-clothing/`. 
+The system first searches for a template named after the product slug. For example, if the product slug is `/blue-shirts`, FastStore will look for a template named `/blue-shirts`.
+
+1. If no template matches the slug, FastStore searches for a template based on the product subcategory. For example, if the subcategory is `summer clothing`, the system might look for `/clothing/shirts/summer-clothing/`.
 2. Following the subcategory, the system checks for a template matching the product category. For example, if the category is `shirts`, the system might look for `/clothing/shirts/`.
 3. If no match is found at the category level, FastStore searches for a template based on the product department. For example, if the department is `clothing`, the system might look for `/clothing/`.
 4. If none of the above criteria match, the generic Product Page template is used. This template has an empty Template section value in the settings.
@@ -142,10 +143,10 @@ yarn add @faststore/core@3.0.X
 
 To sum up, here's the difference between the two template hierarchies:
 
-| Feature | PDP Hierarchy logic | PLP Hierarchy logic |
-| ---------- | ---------------------------- | ---------------------------- |
-| Matching Criteria | Slug, Subcategory, Category, Department, Generic. | Slug (subcategory, category, department implied), Generic. |
-| Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details beyond the slug. |
+| Feature                         | PDP Hierarchy logic                                            | PLP Hierarchy logic                                        |
+| ------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------- |
+| Matching Criteria               | Slug, Subcategory, Category, Department, Generic.              | Slug (subcategory, category, department implied), Generic. |
+| Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details beyond the slug.                   |
 
 ## Examples
 
@@ -190,6 +191,7 @@ If no matches are found for the slug or department, the generic template will be
 ### Product Listing Page (PLP) template selection example
 
 For PLPs, we will go over the following possible templates:
+
 - [Slug](#rendering-within-slugs)
 - [Product Listing Page generic template](#rendering-the-generic-product-listing-page).
 
