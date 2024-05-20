@@ -25,6 +25,7 @@ Different colors are used to identify the characteristics of the modules present
 Understand the meaning of each representation below:
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/legend-and-colors.jpg)
+
 1. **Module code developed exclusively by VTEX with execution in VTEX infrastructure**: Pink background and pink border.
 2. **Module code not developed exclusively by VTEX (customizations) with execution in VTEX infrastructure**: White background and pink border.
 3. **Module code not developed exclusively by VTEX (customizations) with execution outside VTEX infrastructure**: White background and black border.
