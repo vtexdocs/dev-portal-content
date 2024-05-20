@@ -24,6 +24,7 @@ Different colors are used to identify the characteristics of the modules present
 
 Understand the meaning of each representation below:
 
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/legend-and-colors.jpg)
 
 1. **Module code developed exclusively by VTEX with execution in VTEX infrastructure**: Pink background and pink border.
 2. **Module code not developed exclusively by VTEX (customizations) with execution in VTEX infrastructure**: White background and pink border.
@@ -40,6 +41,8 @@ The connection between modules and systems should be represented with arrows, wh
 
 The macro elements represent the entities involved in the project. In general, four major layers are considered: **Merchant Channels**, **VTEX Core Services**, **Third-Party**, and **Back Office**.
 
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/macro-elements-layers.jpg)
+
 Within each of these blocks, there are micro elements, which are the components that constitute the project. These components can be modules, apps, integration systems, sellers, sales channels, or any other component relevant to the architecture.
 
 ## Micro elements: Components
@@ -52,11 +55,15 @@ The merchant channels are the different digital sales channels used by the store
 
 From the architecture standpoint of ecommerce, the multiple channels should be highlighted to ensure that all stakeholders understand how the store interfaces with the end customer.
 
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/merchant-channels.jpg)
+
 ### VTEX Core Services
 
 VTEX Core Services are the essential components or frameworks provided by VTEX within the platform. These services include modules such as [Catalog](https://developers.vtex.com/docs/guides/catalog-overview), [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview), [Pricing](https://developers.vtex.com/docs/guides/pricing-overview), among others. They constitute the foundation of the VTEX platform, empowering businesses to effectively manage and conduct their ecommerce strategies.
 
 Considering the architecture of a B2C store (#LINK), the diagram below presents the blocks with pink background and border, representing the native components of VTEX.
+
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/vtex-core-services.jpg)
 
 Within the main block, there is the VTEX IO - Apps, which contains the custom apps for [frontend](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io), [backend](https://developers.vtex.com/docs/guides/developing-services-on-vtex-io), and [Admin](https://learn.vtex.com/docs/course-admin-lang-en).
 
@@ -68,11 +75,15 @@ Also within the VTEX IO - Apps block, you will find the [VTEX App](https://devel
 
 Third-party systems or modules executed and maintained externally to VTEX include payment providers, data monitoring systems, and customization services. According to business needs, third-party systems or modules could replace a native VTEX feature or provide a completely new one.
 
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/third-party.jpg)
+
 ### Back Office
 
 An ecommerce operation may use several external systems to manage its resources and information, such as Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), and Warehouse Management System (WMS), among others.
 
 These systems belong to the [Merchant Back Office](https://developers.vtex.com/docs/guides/erp-integration-guide) layer, as you can see in the following diagram:
+
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/back-office.jpg)
 
 ## Learn more
 
