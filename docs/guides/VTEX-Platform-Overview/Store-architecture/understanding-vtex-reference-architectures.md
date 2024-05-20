@@ -5,11 +5,14 @@ hidden: false
 createdAt: "2024-05-20T10:45:55.338Z"
 updatedAt: "2024-05-20T10:45:55.338Z"
 excerpt: "Learn how each element is represented in VTEX reference architectures."
+seeAlso:
+ - "/docs/guides/store-architecture"
+ - "/docs/guides/store-architecture-use-cases"
 ---
 
 The VTEX reference architectures follow a common market methodology that segments the main agents involved in the solution in a simple, orderly, and logical manner. The structure of the design highlights the systems in blocks, colors, and objective descriptions of connections, facilitating visualization and understanding by all stakeholders.
 
-In this guide, you will learn how each element is represented in the VTEX architectures, considering the [characteristics of the modules](captions-colors-and-connections):
+In this guide, you will learn how each element is represented in the VTEX architectures, considering the [characteristics of the modules](#captions-colors-and-connections):
 
 - [Macro elements: Layers](#macro-elements-layers)
 - [Micro elements: Components](#micro-elements-components)
@@ -61,11 +64,11 @@ From the architecture standpoint of ecommerce, the multiple channels should be h
 
 VTEX Core Services are the essential components or frameworks provided by VTEX within the platform. These services include modules such as [Catalog](https://developers.vtex.com/docs/guides/catalog-overview), [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview), [Pricing](https://developers.vtex.com/docs/guides/pricing-overview), among others. They constitute the foundation of the VTEX platform, empowering businesses to effectively manage and conduct their ecommerce strategies.
 
-Considering the architecture of a B2C store (#LINK), the diagram below presents the blocks with pink background and border, representing the native components of VTEX.
+Considering the architecture of a [B2C store](https://developers.vtex.com/docs/guides/store-architecture-use-cases), the diagram below presents the blocks with pink background and border, representing the native components of VTEX.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/vtex-core-services.jpg)
 
-Within the main block, there is the VTEX IO - Apps, which contains the custom apps for [frontend](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io), [backend](https://developers.vtex.com/docs/guides/developing-services-on-vtex-io), and [Admin](https://learn.vtex.com/docs/course-admin-lang-en).
+Within the main block, there is the **VTEX IO - Apps** block, which contains the custom apps for [frontend](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io), [backend](https://developers.vtex.com/docs/guides/developing-services-on-vtex-io), and [Admin](https://learn.vtex.com/docs/course-admin-lang-en).
 
 >ℹ️ Although they are executed in VTEX infrastructure, the development and maintenance of custom apps for frontend, backend, and VTEX Admin are responsibility of the store development team.
 
@@ -77,15 +80,11 @@ Third-party systems or modules executed and maintained externally to VTEX includ
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/third-party.jpg)
 
-### Back Office
+### Back office
 
 An ecommerce operation may use several external systems to manage its resources and information, such as Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), and Warehouse Management System (WMS), among others.
 
-These systems belong to the [Merchant Back Office](https://developers.vtex.com/docs/guides/erp-integration-guide) layer, as you can see in the following diagram:
+These systems belong to the [Merchant Back office](https://developers.vtex.com/docs/guides/erp-integration-guide) layer, as you can see in the following diagram:
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/back-office.jpg)
 
-## Learn more
-
-- [Store architecture overview](#LINK)
-- [Store architecture use cases](#LINK)
