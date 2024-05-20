@@ -37,20 +37,19 @@ Ensure that you have installed the VTEX IO CLI on your machine. This CLI is requ
 
 ### Step 1 - Setting up the command-line environment
 
-1. Access the VTEX IO CLI and Log in to your VTEX account:
+1. Open the terminal and log in to your VTEX account using the VTEX IO CLI:
 
-> ⚠️ Remember to replace the values between curly brackets according to your
-  account name.
+    > ⚠️ Remember to replace the values between curly brackets according to your account name.
 
-  ```bash
-  vtex login {account}
-  ```
+    ```bash
+    vtex login {account}
+    ```
 
 2. Install the Headless CMS plugin:
 
-  ```bash
-  vtex plugins install cms
-  ```
+    ```bash
+    vtex plugins install cms
+    ```
 
 Now, check if the installation of the Headless CMS plugin was successful by running `vtex cms`.
 
@@ -58,9 +57,9 @@ Now, check if the installation of the Headless CMS plugin was successful by runn
 
 > ⚠️
 >
-> - **Windows user:** if you find problems while installing the plugin, please refer to the [Troubleshooting](https://developers.vtex.com/docs/guides/faststore/error-installing-headless-cms) article
+> - **Windows user:** If you find problems while installing the plugin, please refer to the [Troubleshooting](https://developers.vtex.com/docs/guides/faststore/troubleshooting-error-installing-headless-cms) article
 >
-> - **macOS user:** if you find problems, run `yarn config set ignore-engines true` to ignore the Node.js incompatibility version, then run `vtex plugins install cms` again.
+> - **macOS user:** If you find problems, run `yarn config set ignore-engines true` to ignore the Node.js incompatibility version, then run `vtex plugins install cms` again.
 >
 > Remember, we recommend using the latest Node.js version or a version higher than `15.0.0`.
 
@@ -69,32 +68,33 @@ Now, check if the installation of the Headless CMS plugin was successful by runn
 Let's configure the URLs of the webhooks used by the Headless CMS app.
 
 1. In the VTEX Admin, access **Storefront > Headless CMS**. 
-2. In the FastStore project interface, click on Settings.
-3. In **Settings** click the **Build** tab.
+2. In the FastStore project interface, click on `Settings`.
+3. In **Settings**, click the `Build` tab.
 
-  ![cms-settings](https://vtexhelp.vtexassets.com/assets/docs/src/build-url___c220e60df37fbf4fc612eeebd4c90602.gif)
+    ![cms-settings](https://vtexhelp.vtexassets.com/assets/docs/src/build-url___c220e60df37fbf4fc612eeebd4c90602.gif)
 
 4. In **Build Webhook URL**, click `Add`.
 5. In the field, enter the following value. _Replace the values between curly brackets according to your scenario._
 
-```sh
-https://app.io.vtex.com/vtex.cms-builder-sf-jamstack/v1/{account}/{workspace}/build-releases
-```
-6. Click on **SAVE**.
+    ```sh
+    https://app.io.vtex.com/vtex.cms-builder-sf-jamstack/v1/{account}/{workspace}/build-releases
+    ```
 
-> ℹ️ When an editor clicks to publish a page using the Headless CMS interface, the CMS calls the **Build Webhook URL**, which changes the page's status to `published`. The CMS then waits for the content to be built in the background.
+6. Click **SAVE**.
+
+    > ℹ️ When an editor clicks to publish a page using the Headless CMS interface, the CMS calls the **Build Webhook URL**, which changes the page's status to `published`. The CMS then waits for the content to be built in the background.
 
 7. Fill in the **Preview URL** field with your production URL. This URL activates the button on Headless CMS so you can preview the changes made on a page. _Replace the values between curly brackets according to your scenario._
 
-```sh
-https://{account}.vtex.app/api/preview
-```
+    ```sh
+    https://{account}.vtex.app/api/preview
+    ```
 
 8. Fill in the **Production base URL** field with your store's endpoint to preview changes in the Headless CMS before publishing them. _Replace the values between curly brackets according to your scenario._
 
-```sh
-https://{account}.vtex.com/
-```
+    ```sh
+    https://{account}.vtex.com/
+    ```
 
 9. Click on **SAVE**.
 
@@ -106,13 +106,13 @@ Now, if you are developing your FastStore project with CI/CD and Headless CMS, y
 2. Edit the `faststore.config.js` file in the root directory of your project.
 3. In the Headless CMS configuration, add the `webhookUrls` property corresponding to your store website as in the following:
 
-```js faststore.config.js
-"vtexHeadlessCms": {
-  webhookUrls: [
-    "https://{account}.myvtex.com/cms-releases/webhook-releases"
-  ]
-}
-```
+    ```js faststore.config.js
+    "vtexHeadlessCms": {
+      webhookUrls: [
+        "https://{account}.myvtex.com/cms-releases/webhook-releases"
+      ]
+    }
+    ```
 
 4. Open a Pull Request in your project including the previous changes.
 5. Merge the Pull Request.
