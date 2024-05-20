@@ -11,12 +11,12 @@ The VTEX reference architectures follow a common market methodology that segment
 
 In this guide, you will learn how each element is represented in the VTEX architectures, considering the [characteristics of the modules](captions-colors-and-connections):
 
-  - [Macro elements: Layers](#macro-elements-layers)
-  - [Micro elements: Components](#micro-elements-components)
-    - [Merchant Channels](#merchant-channels)
-    - [VTEX Core Services](#vtex-core-services)
-    - [Third-Party](#third-party)
-    - [Back Office](#back-office)
+- [Macro elements: Layers](#macro-elements-layers)
+- [Micro elements: Components](#micro-elements-components)
+  - [Merchant Channels](#merchant-channels)
+  - [VTEX Core Services](#vtex-core-services)
+  - [Third-Party](#third-party)
+  - [Back Office](#back-office)
 
 ## Captions, colors, and connections
 
@@ -25,7 +25,6 @@ Different colors are used to identify the characteristics of the modules present
 Understand the meaning of each representation below:
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/legend-and-colors.jpg)
-
 1. **Module code developed exclusively by VTEX with execution in VTEX infrastructure**: Pink background and pink border.
 2. **Module code not developed exclusively by VTEX (customizations) with execution in VTEX infrastructure**: White background and pink border.
 3. **Module code not developed exclusively by VTEX (customizations) with execution outside VTEX infrastructure**: White background and black border.
