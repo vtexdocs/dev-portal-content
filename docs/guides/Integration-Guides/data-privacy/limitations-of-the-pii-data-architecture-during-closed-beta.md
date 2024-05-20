@@ -1,18 +1,26 @@
 ---
 title: "Limitations of the PII data architecture during closed beta"
 slug: "limitations-of-the-pii-data-architecture-during-closed-beta"
-hidden: true
+hidden: false
 createdAt: "2022-02-22T22:29:28.541Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
 seeAlso:
+ - "/docs/guides/data-protection-plus"
  - "/docs/guides/pii-data-architecture-specifications"
  - "/docs/guides/data-residency"
  - "/docs/guides/profile-system"
  - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
 ---
->❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
-Some commerce features of the VTEX platform are not available for accounts using the current [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) closed beta version, as we are working to evolve it and ensure data privacy best practices across the platform.
+>⚠️ **Closed beta:** [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta and is only available in select regions.
+
+>❗ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh), meaning *additional fees may apply.* 
+> 
+> If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ).
+>
+> If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/). 
+
+Some commerce features of the VTEX platform are unavailable for accounts using the PII data architecture during the closed beta phase of [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus). We are actively enhancing this feature to ensure the best data privacy practices across the platform.
 
 In this guide, you can learn about the current limitations you must be aware of when managing your customers' information with the [Profile System](https://developers.vtex.com/docs/guides/profile-system).
 

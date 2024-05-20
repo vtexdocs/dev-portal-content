@@ -1,7 +1,7 @@
 ---
-title: "PII data architecture"
-slug: "pii-data-architecture"
-hidden: true
+title: "Data Protection Plus"
+slug: "data-protection-plus"
+hidden: false
 createdAt: "2022-02-22T22:27:02.330Z"
 updatedAt: "2023-06-14T43:38:36.446Z"
 seeAlso:
@@ -13,11 +13,17 @@ seeAlso:
  - "/docs/guides/erasing-customer-data"
 ---
 
->❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
+>⚠️ **Closed beta:** [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta and is only available in select regions.
 
-The VTEX platform allows stores to process shoppers’ Personal Identifiable Information (PII) in compliance with data privacy regulations such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/).
+>❗ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh), meaning *additional fees may apply.* 
+> 
+> If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ).
+>
+> If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/). 
 
-In the PII data architecture, all PII is stored in the **Profile System**. Other VTEX modules, such as **Order Management** and **Checkout**, store only pseudonymized data associated with a **Profile System** token. These modules may also access PII from the **Profile System**, as described in the [PII data architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications).
+The VTEX platform allows stores to process shoppers' Personal Identifiable Information (PII) in compliance with data privacy regulations such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/).
+
+When using Data Protection Plus, accounts follow the PII data architecture, where all PII is stored in the [Profile System](https://developers.vtex.com/docs/guides/profile-system). Other VTEX modules, such as **Order Management** and **Checkout**, store only pseudonymized data associated with a **Profile System** token. These modules may also access PII from the **Profile System**, as described in the [PII data architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications).
 
 >ℹ️ See the [Trust Hub](https://vtex.com/us-en/trust/) to learn more about VTEX's vision regarding data privacy, including certifications, internal policies and commitments.
 
