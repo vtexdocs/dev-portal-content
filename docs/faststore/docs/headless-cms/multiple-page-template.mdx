@@ -73,7 +73,9 @@ N --> O{Yes} --> P(Use matching template)
 N --> Q{No} --> R{Use generic template}
 ```
 
-The system first searches for a template named after the product slug. For example, if the product slug is `/blue-shirts`, FastStore will look for a template named `/blue-shirts`.
+The system first searches for a template named after the product slug. For example, if the product slug is `/blue-shirts/p`, FastStore will look for a template named `/blue-shirts/p`.
+
+> ⚠️ Keep in mind that if a more specific slug template with the product sku id is found, such as `/blue-shirts-99988212/p`, exists, it will take precedence when the slug matches the product slug without the sku id `/blue-shirts/p`.
 
 1. If no template matches the slug, FastStore searches for a template based on the product subcategory. For example, if the subcategory is `summer clothing`, the system might look for `/clothing/shirts/summer-clothing/`.
 2. Following the subcategory, the system checks for a template matching the product category. For example, if the category is `shirts`, the system might look for `/clothing/shirts/`.
