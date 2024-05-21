@@ -3,7 +3,7 @@ title: "Understanding VTEX reference architectures"
 slug: "understanding-vtex-reference-architectures"
 hidden: false
 createdAt: "2024-05-20T10:45:55.338Z"
-updatedAt: "2024-05-20T10:45:55.338Z"
+updatedAt: "2024-05-21T10:10:00.000Z"
 excerpt: "Learn how each element is represented in VTEX reference architectures."
 seeAlso:
  - "/docs/guides/store-architecture"
@@ -56,8 +56,6 @@ Now equipped with knowledge about the macro elements, it is possible to understa
 
 The merchant channels are the different digital sales channels used by the store, such as the website, PWA, and mobile app.
 
-From the architecture standpoint of ecommerce, the multiple channels should be highlighted to ensure that all stakeholders understand how the store interfaces with the end customer.
-
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/merchant-channels.jpg)
 
 ### VTEX Core Services
@@ -74,11 +72,15 @@ Within the main block, there is the **VTEX IO - Apps** block, which contains the
 
 Also within the VTEX IO - Apps block, you will find the [VTEX App](https://developers.vtex.com/docs/vtex-io-apps), which are plug-and-play solutions developed and maintained by VTEX.
 
+To learn what you can accomplish with each microservice on the VTEX Platform, check out our [Composability](https://developers.vtex.com/docs/guides/composability-guide) guide.
+
 ### Third-Party
 
 Third-party systems or modules executed and maintained externally to VTEX include payment providers, data monitoring systems, and customization services. According to business needs, third-party systems or modules could replace a native VTEX feature or provide a completely new one.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/third-party.jpg)
+
+To learn how to extend the cababilites of the VTEX Platform, check out our [Extensibility](https://developers.vtex.com/docs/guides/extensibility-guide) guide.
 
 ### Back office
 
@@ -87,4 +89,3 @@ An ecommerce operation may use several external systems to manage its resources 
 These systems belong to the [Merchant Back office](https://developers.vtex.com/docs/guides/erp-integration-guide) layer, as you can see in the following diagram:
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/back-office.jpg)
-
