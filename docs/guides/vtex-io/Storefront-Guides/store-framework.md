@@ -132,7 +132,7 @@ This quickstart guide is a brief introduction to the VTEX Store Framework. For m
 1. [Install VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install). You will need it to run commands in the following steps.
 2. Log in to your VTEX account:
 
-   ```
+   ```sh
    vtex login {accountName}
    ```
 
@@ -143,38 +143,38 @@ This quickstart guide is a brief introduction to the VTEX Store Framework. For m
 
 1. Navigate to a local file directory where you want our [boilerplate store theme](https://github.com/vtex-apps/store-theme) to be saved:
 
-   ```
+   ```sh
    cd {folderName}
    ```
    
 2. Start a new project:
 
-   ```
+   ```sh
    vtex init
    ```
    
 3. Select `store` by navigating with your arrow keys and pressing `Enter`. When prompted to confirm, type `y` to clone the `minimum-boilerplate-theme` to your folder.
 4. Create a workspace:
 
-   ```
+   ```sh
    vtex use {workspaceName}
    ```
    
 5. Navigate to the `minimum-boilerplate-theme` directory:
 
-   ```
+   ```sh
    cd minimum-boilerplate-theme
    ```
 
 6. Link your local repository with the workspace:
 
-   ```
+   ```sh
    vtex link
    ```
    
 7. Access your workspace:
 
-    ```
+   ```sh
    vtex browse
    ```
 
