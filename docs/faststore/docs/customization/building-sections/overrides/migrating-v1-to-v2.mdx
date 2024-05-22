@@ -1,10 +1,10 @@
 ---
-title: 'Migrating Overrides v1 to v2'
+title: 'Differences between Section Override v1 and v2'
 ---
 
-Section overrides v2, allow you to customize the appearance and functionality of existing components in your store. Compared to v1, Section overrides v2 offers an adaptable approach. We strongly recommend updating your customization methods to take advantage of these benefits.
+Section Override v2 allows you to customize the appearance and functionality of existing components in your store. Compared to v1, v2 offers an adaptable approach. We strongly recommend updating your customization methods to use Section Override v2 in your project.
 
-    > ⚠️ If you choose to continue using Overrides v1, please refer to the [Overriding components (v1)](https://developers.vtex.com/docs/guides/faststore/overrides-components-and-props-v1).
+    > ⚠️ If you choose to continue using Section Override v1, please refer to the [Overriding components (v1)](https://developers.vtex.com/docs/guides/faststore/overrides-components-and-props-v1).
 
 ## Main differences
 
@@ -16,38 +16,26 @@ Section overrides v2, allow you to customize the appearance and functionality of
 | Headless CMS property schema  | No customization, limited to native schemas.           | Customizable schema allowing definition of new properties.            |
 | Feature availability          | Experimental feature and may not function as expected. | Stable feature.                                                       |
 
+Check out the main differences related to the code syntax:
 
-## Step by step
-
-<Steps>
-
-### Update `@faststore/core` Package
-
-Ensure your store's `@faststore/core` package is version 3.x or higher to utilize Overrides v2. For update instructions, refer to the [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
-
-### Review existing overrides
-
-Identify all overrides currently implemented using Overrides v1 (refer to the [Overrides v1](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props) documentation). Once identified, you have the option to update these overrides to the latest version. For instructions on migrating overrides to v2, refer to the [Migrate overrides](#) section.
-
-If you wish to maintain existing v1 overrides alongside new v2 overrides, avoid modifying the v1-overridden components. Instead, create new overrides using v2, following the guide on [Overriding a component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component).
-
-### Migrate overrides
-
-Previously, in Section overrides v1, you passed the section name as a string to the `section` key within the `getOverriddenSection` method's overrides object. 
-Here's an example:
+- Previously, in Section Override v1, you passed the section name as a string to the `section` key within the `getOverriddenSection` method's overrides object:
 
     ```js
-    const NewAlert = getOverriddenSection({  
-    section: 'Alert',  
-    components: {  
-        Alert: { Component: CustomAlert },  
-    },  
-    });  
+    import { SectionOverride } from "@faststore/core";
 
-    export default NewAlert;  
+    const SECTION = "Alert" as const;
+
+    const override: SectionOverride = {
+        section: SECTION,
+        components: {
+            Alert: { Component: CustomAlert },  
+        },
+    };
+
+    export { override };
     ```
 
-Section overrides v2 introduces a clearer syntax. Now you import the section component (e.g., `AlertSection` from `@faststore/core`) and pass it to the `Section` key (uppercase `S`) within the overrides object. This emphasizes the component-based approach of v2.
+- Section Override v2 introduces a clearer syntax. Now you import the section component (e.g., `AlertSection` from `@faststore/core`) and pass it to the `Section` key (uppercase `S`) within the overrides object. This emphasizes the component-based approach of v2.
 
     ```js
     import { AlertSection, getOverriddenSection } from "@faststore/core";  
@@ -62,6 +50,14 @@ Section overrides v2 introduces a clearer syntax. Now you import the section com
     export default NewAlert;  
     ```
 
-After importing the section, ensure to synchronize your changes with the Headless CMS. Refer to the [Override a component prop](https://developers.vtex.com/docs/guides/faststore/component-props) or [Override a component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component) for instructions, from fixing the syntax to syncing the changes with Headless CMS.
+## Updating your project to Section Overrides v2
 
-</Steps>
+Make sure your store's `@faststore/core` package is version 3.0.0 or higher to work with Overrides v2. For update instructions, refer to the [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
+
+### Review existing overrides
+
+Identify all overrides currently implemented using Overrides v1 (refer to the [Overrides v1](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props) documentation). Once identified, you can keep these v1 overrides as they will continue to work in your project or create new ones using v2.
+
+    > ⚠️ We strongly recommend using Section Override v2 instead of Section Override v1.
+
+If you wish to maintain existing v1 overrides alongside new v2 overrides, avoid modifying the v1-overridden components. Instead, create new overrides using v2, following the guide on [Overriding a component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component).
