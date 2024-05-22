@@ -4,23 +4,19 @@ title: '2. Configuring external DNS'
 
 In this guide, you will learn how to configure external domains for your **FastStore** and **VTEX** website. The process involves the following steps:
 
-- Setting up your external DNS provider to point your custom domain to your VTEX website. Custom domains can be purchased from any **domain registration platform**.
-- Configuring your custom domains in **VTEX Account Settings**.
-- Associating your custom domains with your **FastStore** project.
+   - Setting up your external DNS provider to point your custom domain to your VTEX website. Custom domains can be purchased from any **domain registration platform**.
+   - Configuring your custom domains in **VTEX Account Settings**.
+   - Associating your custom domains with your **FastStore** project.
 
 Besides making your FastStore website accessible via a custom domain, **VTEX Checkout** will also be operational as soon as you complete this guide. You'll then be ready to continue configuring other VTEX solutions, such as **Order Placed**, **Login**, and **My Account**.
 
----
-
 ## Before you begin
 
-- [Set up your VTEX account.](https://developers.vtex.com/docs/guides/faststore/go-live-1-setting-up-vtex-account-for-faststore)
-- Develop your FastStore project with **Next.js** by following the [Getting Started track](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
-- Deploy your FastStore project.
-- Buy the desired domain.
-- [Redirect the **root domain** to the `www` subdomain.](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www)
-
----
+   - [Set up your VTEX account.](https://developers.vtex.com/docs/guides/faststore/go-live-1-setting-up-vtex-account-for-faststore)
+   - Develop your FastStore project with **Next.js** by following the [Getting Started track](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
+   - Deploy your FastStore project.
+   - Buy the desired domain.
+   - [Redirect the **root domain** to the `www` subdomain.](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www)
 
 ## Step by step
 
@@ -69,31 +65,31 @@ Back to your FastStore project, you must also configure your project to point to
 
 Take the following example of how this code block would look after configuring a store with the `www.mystore.com` domain and `secure` subdomain:
 
-```diff /faststore.config.js
-...
-
-// Default channel
-channel: '1',
-
-+  // Production URLs
-+  storeUrl: 'https://www.mystore.com',
-+  secureSubdomain: 'https://secure.mystore.com',
-+  checkoutUrl: 'https://secure.mystore.com/checkout',
-+  loginUrl: 'https://secure.mystore.com/api/io/login',
-+  accountUrl: 'https://secure.mystore.com/api/io/account',
-
-// Lighthouse CI
-lighthouse: {
-...
-```
+   ```diff /faststore.config.js
+   ...
+   
+   // Default channel
+   channel: '1',
+   
+   +  // Production URLs
+   +  storeUrl: 'https://www.mystore.com',
+   +  secureSubdomain: 'https://secure.mystore.com',
+   +  checkoutUrl: 'https://secure.mystore.com/checkout',
+   +  loginUrl: 'https://secure.mystore.com/api/io/login',
+   +  accountUrl: 'https://secure.mystore.com/api/io/account',
+   
+   // Lighthouse CI
+   lighthouse: {
+   ...
+   ```
 
 4. Save your changes.
 5. Open the `vtex.env` file.
 6. Add the `SITE_HOST` key with the main domain specified in [Configuring domains in VTEX Account Settings](https://developers.vtex.com/docs/guides/faststore/go-live-2-configuring-external-dns#step-2---configuring-domains-in-vtex-account-management) as the value.
 
-```diff /vtex.env
-+ SITE_HOST=www.mystore.com
-```
+   ```diff /vtex.env
+   + SITE_HOST=www.mystore.com
+   ```
 
 7. Save your changes.
 8. Open a Pull Request, commit your changes, and deploy them to `main`/`master`.
@@ -104,14 +100,12 @@ If your FastStore website is going live for the first time, [open a ticket with 
 
 Remember to include the following information in your ticket:
 
-- Your VTEX **account name**.
-- The **secure** and **main** domains of your store.
+   - Your VTEX **account name**.
+   - The **secure** and **main** domains of your store.
 
-The VTEX team will evaluate your request and take the necessary actions to configure the CDN workflow for your account.
-
----
+The VTEX team will evaluate your request and take the necessary actions to configure your account's CDN workflow.
 
 ## Related Resources
 
-- [Setting up DNS pointing to VTEX](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing)
-- [How to insert a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services)
+   - [Setting up DNS pointing to VTEX](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing)
+   - [How to insert a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services)
