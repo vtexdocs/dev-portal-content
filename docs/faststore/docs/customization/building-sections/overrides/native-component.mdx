@@ -2,11 +2,9 @@
 title: 'Overriding a native component'
 ---
 
-Now that you know how to [override a component's prop](LINK), learn how to override a native component to use a custom component.
+Now that you know how to [override a component's prop](https://developers.vtex.com/docs/guides/faststore/overrides-component-props), learn how to override a native component to use a custom component.
 
-For example, you may want to replace the current `BuyButton` component from the `ProductDetails` section to meet your business needs.
-
-Currently, when the [`BuyButton`](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button) is clicked, it opens the `CartSideBar` as its default behavior:
+For example, you may want to replace the current `BuyButton` component from the `ProductDetails` section to meet your business needs. Currently, when the [`BuyButton`](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button) is clicked, it opens the `CartSideBar` as its default behavior:
 
     ![overrides-PDP-buy-button-component](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-buy-button-open-cart___a5853a88238fa31610a93e8a1333bb00.gif)
 
@@ -16,7 +14,7 @@ For this guide we will create a custom Buy Button that once you click on it, it 
 
 ## Before you begin
 
-Make sure your `@faststore/core` package has the 3.x version or above. If you need to update
+Make sure your `@faststore/core` package has the 3.0.0 version or above. If you need to update
 it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
 
 ## Step by step
@@ -33,7 +31,6 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
     </Tabs>
 
 3. In the `sections` folder, create a new file for your customized section. For example, create a new file named `ProductDetailsWithCustomButton.tsx` under the `src/components/sections` directory.
-
 4. Open the `ProductDetailsWithCustomButton.tsx` file and update it with the following code:
 
     ```tsx ProductDetailsWithCustomButton.tsx mark=8-9
@@ -53,7 +50,6 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
 
 1. Choose a component to override from the [list of overridable components of each native section](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections). 
 In this example, we are overriding the `BuyButton` component in the `ProductDetails` section.
-
 2. In the `components` folder, if you don't have already the `index.tsx` file, create the file and add the following:
 
     ```tsx components/index.tsx
@@ -63,16 +59,13 @@ In this example, we are overriding the `BuyButton` component in the `ProductDeta
 
     ```
 
-### Step 3 - Adding the component to the CMS
+### Step 3 - Adding the component to the Headless CMS
 
 To integrate the section into the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), follow the steps below:
 
 1. Create a folder named `cms` in the FastStore root directory.
-
 2. Inside `cms`, create the `faststore` folder.
-
 3. Within the `cms/faststore` folder, create the `sections.json` file.
-
 4. Add the schema of the new section to the `sections.json` file, named `CustomBuyButton`, to the `sections.json` file:
 
     ```json sections.json
@@ -203,24 +196,17 @@ To integrate the section into the [Headless CMS](https://developers.vtex.com/doc
 
 This schema Adds the new `Custom Buy Button` section to the Headless CMS.
 
-5. Open a new terminal window and log in to your vtex account by running `vtex login {accountName}`.
-
+5. Open a new terminal window and log in to your VTEX account by running `vtex login {accountName}`.
 6. run the following command to sync your changes with the Headless CMS:
 
     ```bash
     yarn cms-sync
     ```
+
 7. Access the VTEX Admin and proceed to **Storefront > Headless CMS**.
-
 8. Click on the page you desire to add the new section.
-
 9. Click the add button (`+`) and add the new section and complete values from the sections fields.
-
 10. Click `Save`.
-
-    > ⚠️ Remember: props changed via Headless CMS overlap the changes made through [overrides](LINK).
-    For example, if you change a prop through override and also change it using
-    Headless CMS, the final prop's value will be the one added using CMS.
 
 ### Step 4 - Visualizing the component on the page locally
 
