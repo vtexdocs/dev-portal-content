@@ -64,11 +64,11 @@ Data in transit is protected by the TLS 1.2 security standard. Connections that 
 
 When working with storage or data at rest, VTEX can use one of the following algorithms to support applications that need to encrypt data:
 
-- Two-way encryption:
-  - RSA with keys of 2048 bits or more
-  - AES-256
-- One-way encryption:
-  - PBKDF2 based on SHA-256
+* Two-way encryption:
+  * RSA with keys of 2048 bits or more
+  * AES-256
+* One-way encryption:
+  * PBKDF2 based on SHA-256
 
 All relevant systems make automatic backups at a daily frequency by default, but this can be adjusted as necessary to ensure data integrity and availability.
 
