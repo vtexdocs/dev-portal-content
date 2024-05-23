@@ -8,7 +8,7 @@ title: 'Upgrading from Section Override v1 to v2'
 
 ## Main differences
 
-| Feature                       | Section Override v1                                           | Section Overrides v2                                                          |
+| Feature                       | Section Override v1                                           | Section Override v2                                                          |
 | ----------------------------- | ------------------------------------------------------ | --------------------------------------------------------------------- |
 | Overrides per section         | One override per section.                              | Multiple overrides per section.                                       |
 | Importing Section             | String passed to `section` key.                        | Section component imported and passed to `Section` key (uppercase S). |
@@ -56,8 +56,8 @@ Make sure your store's `@faststore/core` package is version 3.0.0 or higher to w
 
 ### Identify existing overrides (v1)
 
-Identify all overrides currently implemented using [Section Override v1]](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props). Once identified, you can keep these v1 overrides as they will continue to work in your project or create new ones using v2.
+Identify all overrides currently implemented using [Section Override v1](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props). Once identified, adjust your code to use [Section Override v2](https://developers.vtex.com/docs/guides/faststore/overrides-overview).
 
     > ⚠️ We strongly recommend using Section Override v2 instead of Section Override v1.
 
-If you wish to maintain existing v1 overrides alongside new v2 overrides, avoid modifying the v1-overridden components. Instead, create new overrides using v2, following the guide on [Overriding a component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component).
+
