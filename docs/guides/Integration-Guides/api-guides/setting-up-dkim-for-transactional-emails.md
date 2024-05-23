@@ -87,7 +87,7 @@ Now that you have generated a DKIM key for your domain, you need to add the valu
 
 1. Sign in to the management console for your domain host.
 2. Locate the page where you update DNS records.
-3. Add a TXT record corresponding to your DKIM keys.
+3. Add a CNAME record for each corresponding DKIM key.
 4. Save changes.
 
 In up to 72 hours, all settings will be applied automatically, and our servers will start adding a DKIM signature to all outgoing messages.
