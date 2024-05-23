@@ -12,20 +12,21 @@ seeAlso:
 
 Store architecture communicates project vision, translating business needs into software requirements, and offering references for technical and business teams. This guide will explore the main VTEX reference architectures to learn how the VTEX platform integrates with different digital commerce strategies.
 
-The diagrams were conceived according to the [Understanding the reference architectures](LINK) guide.
+>ℹ️ The diagrams were conceived according to the [Understanding VTEX reference architectures](https://developers.vtex.com/docs/guides/understanding-vtex-reference-architectures) guide.
+
 ## Business-to-customer (B2C)
 
 The business-to-customer (B2C) is the most common business model in VTEX and the base for the other business models.
 
 The diagram below shows the main components of a B2C commerce implementation, highlighting in pink the ones offered out-of-the-box (OOTB) by VTEX, also showing the other parts that may come from customers’ internal systems or third-party providers.
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2c.png)
 
 >ℹ️ This diagram represents one single VTEX account and assumes that the customer is using the VTEX storefront solution.
 
 Below is an integration flow diagram in a B2C architecture, where the asynchronous calls (not in real time) are represented by the black arrows, and synchronous calls represented by the blue arrows (real time).
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/b2c-integration-flow.png)
 
 An example of an asynchronous call is the stock update, which is represented by a black arrow pointing from the ERP to the Inventory module. A real-time update of rates in a payment is represented by a blue arrow, with information exchange in both blocks. This last scenario is synchronous because it is a sensitive stage of the customer’s purchase flow.
 
@@ -35,23 +36,21 @@ The architecture suggested here may go further than just B2C, as you can see in 
 
 The main characteristic of a [business-to-business (B2B)](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC) model is that transactions occur between two or more legal entities. 
 
-The diagram below presents an example where the business model is a B2B using the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite), which is represented within the B2B Core Modules. In this architecture, the main account acts as a marketplace for other VTEX sellers.
+The diagram below presents an example where the business model is a B2B using the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite), which is represented within the **B2B Core Modules**. In this architecture, the main account acts as a marketplace for other VTEX sellers.
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2b.png)
 
 The B2B Suite is a set of VTEX IO apps tailored to streamline B2B store management. This collection of apps empower the store to oversee organizations (the companies enable to make purchases in the store), as well as other functions and permissions for storefront and checkout. For instance, it prevents an organization from changing its address, offers special price tables, custom payments methods, user roles, among others settings.
 
 The main account has more modules than the sellers, sharing just some, such as the [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview) and [Catalog](https://developers.vtex.com/docs/guides/catalog-overview), as you can see in the diagram below.
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2b-suite.png)
 
 Declaring these modules in the architecture not only makes the process clearer but also makes the visualization of player responsibilities easier to understand. In this case, for example, [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) remains with the sellers because customer approval is done at the seller level.
 
 In B2B scenarios, real-time communication between the B2B Suite and sellers is common, as the information is always up-to-date, and also for any calculations of fees and taxes at checkout, since the end customer needs to have a smooth purchasing experience.
 
-In the diagram below you can see the synchronous communication between [Organizations](https://developers.vtex.com/docs/apps/vtex.b2b-organizations) component in the main account and the sellers.
-
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+In the diagram above you can see the synchronous communication between [Organizations](https://developers.vtex.com/docs/apps/vtex.b2b-organizations) component in the main account and the sellers.
 
 ### Why choose this architecture?
 
@@ -63,7 +62,7 @@ In the diagram below you can see the synchronous communication between [Organiza
 
 ### Learn more
 
-[B2B Suite - Overview](https://help.vtex.com/pt/tutorial/b2b-suite-overview--5eG6UfveWrai7looK0kVG3)
+- [B2B Suite - Overview](https://help.vtex.com/pt/tutorial/b2b-suite-overview--5eG6UfveWrai7looK0kVG3)
 
 ## Franchise accounts (Omnichannel)
 
@@ -71,15 +70,15 @@ This is a very common architecture model that integrates physical stores with ec
 
 A franchise account is linked to a main account and has the following characteristics, which you can see in the reference architecture below:
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+- **No separate website**: Franchise accounts do not have their own dedicated website, as they operate within the main account’s one, effectively acting as part of a larger [marketplace](https://help.vtex.com/pt/tutorial/o-que-e-um-marketplace--680lLJTnmEAmekcC0MIea8).
+- **Customer Data Storage**: Customer data is stored in the main account’s [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
+- **Seller Type**: Each franchise account automatically functions as a [white label seller](https://help.vtex.com/en/tutorial/seller-white-label--5orlGHyDHGAYciQ64oEgKa) within the main account.
+- **Catalog**: Franchise accounts inherit their [catalog](https://developers.vtex.com/docs/guides/catalog-overview) from the main account.
+- **Logistics and OMS**: Each franchise account has its own [Logistics](https://developers.vtex.com/docs/guides/fulfillment) and performs its own [Order Management](https://developers.vtex.com/docs/guides/orders-overview).
+- **Prices and Payments**: Each franchise can have its own [price](https://developers.vtex.com/docs/guides/pricing-overview) and [payment](https://developers.vtex.com/docs/guides/payments-overview) methods, or you can choose to inherit them from the main account.
+- **Promotions**: It is possible to create [promotions](https://developers.vtex.com/docs/guides/promotions-overview) for each franchise account and for the main one.
 
-**No separate website**: Franchise accounts do not have their own dedicated website, as they operate within the main account’s one, effectively acting as part of a larger [marketplace](https://help.vtex.com/pt/tutorial/o-que-e-um-marketplace--680lLJTnmEAmekcC0MIea8).
-**Customer Data Storage**: Customer data is stored in the main account’s [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
-**Seller Type**: Each franchise account automatically functions as a [white label seller](https://help.vtex.com/en/tutorial/seller-white-label--5orlGHyDHGAYciQ64oEgKa) within the main account.
-**Catalog**: Franchise accounts inherit their [catalog](https://developers.vtex.com/docs/guides/catalog-overview) from the main account.
-**Logistics and OMS**: Each franchise account has its own [Logistics](https://developers.vtex.com/docs/guides/fulfillment) and performs its own [Order Management](https://developers.vtex.com/docs/guides/orders-overview).
-**Prices and Payments**: Each franchise can have its own [price](https://developers.vtex.com/docs/guides/pricing-overview) and [payment](https://developers.vtex.com/docs/guides/payments-overview) methods, or you can choose to inherit them from the main account.
-**Promotions**: It is possible to create [promotions](https://developers.vtex.com/docs/guides/promotions-overview) for each franchise account and for the main one.
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/franchises-omni.png)
 
 This architecture model works well for brands that have multiple physical stores, franchisees, or representatives. In these cases, each of them can have a franchise account in VTEX integrated into the brand’s main account. This allows them to deliver the products sold through the brand’s ecommerce from an Omnichannel perspective.
 
@@ -116,7 +115,7 @@ The reference architecture below exemplifies its main characteristics:
 - **Prices and Promotions**: It is possible to configure different prices and promotions for each store, as you can segment by the sales channel. But prices and promotions for all stores are managed in the same panel.
 - **Message Center**: One single [Message Center](https://help.vtex.com/en/tutorial/conhecendo-o-message-center--tutorials_84) for all stores.
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-single-account.png)
 
 #### Why choose this architecture?
 
@@ -144,16 +143,17 @@ The reference architecture below exemplifies its main characteristics:
 - **Promotions**: Independent Promotions system per store.
 - **Message Center**: Independent Message Center per store
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-multi-account.png)
 
 #### Why choose this architecture?
 
 - The seller (main account) as catalog owner and marketplaces per country allows a way to make a multi-language solution, as each store can manage the language and currency locally, in its own store.
 - Each account maintains its own catalog information since the information coming from the main account is always in the standard language set there.
 - Support better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you do not need to rely on Messages or Catalog translation app.
-- Promotions from the main account have limited capabilities, as every information that comes from the customer will not be accessible by the main account. For example, if you want to create promotions for a customer cluster in the main account, it will not work because it does not have access to the marketplace’s Master Data.
 
 >⚠ [Assembly options](https://developers.vtex.com/docs/guides/assembly-options-app), [attachments](https://developers.vtex.com/docs/guides/cart-attachments-section-api-quick-start-guides), and [services](https://developers.vtex.com/docs/guides/vtex-io-documentation-service) are not supported.
+
+Promotions from the main account have limited capabilities, as every information that comes from the customer will not be accessible by the main account. For example, if you want to create promotions for a customer cluster in the main account, it will not work because it does not have access to the marketplace’s Master Data.
 
 This architecture is recommended for operations in more than one country, requiring the configuration of different languages and currencies, where different teams manage each localized store.
 
