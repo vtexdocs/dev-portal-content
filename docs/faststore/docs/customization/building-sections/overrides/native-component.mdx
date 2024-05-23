@@ -33,17 +33,17 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
 3. In the `sections` folder, create a new file for your customized section. For example, create a new file named `ProductDetailsWithCustomButton.tsx` under the `src/components/sections` directory.
 4. Open the `ProductDetailsWithCustomButton.tsx` file and update it with the following code:
 
-    ```tsx ProductDetailsWithCustomButton.tsx mark=8-9
-        import { ProductDetailsSection, getOverriddenSection } from '@faststore/core'
+    ```tsx ProductDetailsWithCustomButton.tsx
+    import { ProductDetailsSection, getOverriddenSection } from '@faststore/core'
 
-        const ProductDetailsWithCustomButton = getOverriddenSection({
+    const ProductDetailsWithCustomButton = getOverriddenSection({
         Section: ProductDetailsSection,
         components: {
             BuyButton: { Component: CustomBuyButton },
         },
-        })
+    })
 
-        export default ProductDetailsWithCustomButton;
+    export default ProductDetailsWithCustomButton;
     ```
 
 #### Step 2 - Overriding the component
