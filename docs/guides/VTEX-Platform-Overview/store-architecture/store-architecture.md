@@ -14,14 +14,14 @@ Store architecture is the main way to communicate a unified vision of a particul
 
 There are different types and levels of architecture, but as a general rule, it should work as a reference for both technical and business teams. Moreover, store architectures define and make it clear to all stakeholders what are the roles and responsibilities of each player, how different systems interoperate, and how data is transmitted between them.
 
-To enhance the understanding of the related aspects and show how VTEX connects with the ecosystem, we designed VTEX reference models of architecture, which are based on the more common digital commerce strategies. These reference architectures, also known as blueprints, are diagrams created to represent the interactions between VTEX modules and the business and are conceived as a starting point for a project. These reference architectures were designed following the guidelines which are in the [Understanding reference architectures](#LINK) guide.
+To enhance the understanding of the related aspects and show how VTEX connects with the ecosystem, we designed VTEX reference models of architecture, which are based on the more common digital commerce strategies. These reference architectures, also known as blueprints, are diagrams created to represent the interactions between VTEX modules and the business and are conceived as a starting point for a project. These reference architectures were designed following the guidelines which are in the [Understanding VTEX reference architectures](https://developers.vtex.com/docs/guides/understanding-vtex-reference-architectures) guide.
 
 >ℹ️ To learn more about the main characteristics of the accounts that relate to the planning of your store’s architecture, check out the [Accounts and architecture](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl) guide.
 
 Below are an overview of the main use cases for common scenarios:
 
 - [Business-to-customer (B2C)](#business-to-customer-b2c)
-- [Business-to-business (B2B)](#businesss-to-business-b2b)
+- [Business-to-business (B2B)](#business-to-business-b2b)
 - [Franchise accounts (Omnichannel)](#franchise-accounts-omnichannel)
 - [Multi-language and Multi-currency](#multi-language-and-multi-currency)
   - [Single account, multi-bindings](#single-account-multi-bindings)
