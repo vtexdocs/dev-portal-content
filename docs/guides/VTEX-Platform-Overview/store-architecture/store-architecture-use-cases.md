@@ -34,7 +34,7 @@ The architecture suggested here may go further than just B2C, as you can see in 
 
 ## Business-to-business (B2B) with B2B Suite
 
-The main characteristic of a [business-to-business (B2B)](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC) model is that transactions occur between two or more legal entities. 
+The main characteristic of a [business-to-business (B2B)](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC) model is that transactions occur between two or more legal entities.
 
 The diagram below presents an example where the business model is a B2B using the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite), which is represented within the **B2B Core Modules**. In this architecture, the main account acts as a marketplace for other VTEX sellers.
 
@@ -66,7 +66,7 @@ In the diagram above you can see the synchronous communication between [Organiza
 
 ## Franchise accounts (Omnichannel)
 
-This is a very common architecture model that integrates physical stores with ecommerce as [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) in VTEX. 
+This is a very common architecture model that integrates physical stores with ecommerce as [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) in VTEX.
 
 A franchise account is linked to a main account and has the following characteristics, which you can see in the reference architecture below:
 
@@ -92,7 +92,7 @@ This architecture model works well for brands that have multiple physical stores
 
 ### Learn more
 
-- [Unified Commerce Strategies](https://help.vtex.com/en/tracks/estrategias-de-comercio-unificado--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3) 
+- [Unified Commerce Strategies](https://help.vtex.com/en/tracks/estrategias-de-comercio-unificado--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3)
 
 ## Multi-language and Multi-currency
 
@@ -105,7 +105,7 @@ In this architecture, a single VTEX account is configured to support multiple la
 The reference architecture below exemplifies its main characteristics:
 
 - **Separated website**: One single account, but each store with its own domain, bound to different [sales channels](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4EPwTXx5oFdSG1dA3zIchz#trade-policy) by [bindings](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W?&utm_source=autocomplete).  
-- **Search**: [Settings](https://developers.vtex.com/docs/guides/search-overview) are the same for all websites. 
+- **Search**: [Settings](https://developers.vtex.com/docs/guides/search-overview) are the same for all websites.
 - **CMS**: Shared access to [Content Management System (CMS)](https://developers.vtex.com/docs/guides/vtex-io-documentation-cms) between websites.
 - **Customer Data Storage**: One single [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) for all stores.
 - **Catalog**: One single catalog, segmented by sales channels.
@@ -120,9 +120,9 @@ The reference architecture below exemplifies its main characteristics:
 #### Why choose this architecture?
 
 - Supports [multi-currency](https://developers.vtex.com/docs/guides/vtex-io-documentation-internationalizing-product-prices) natively.
-- Supports multi-language with [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and [Catalog Translation App](https://developers.vtex.com/docs/guides/catalog-internationalization). 
+- Supports multi-language with [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and [Catalog Translation App](https://developers.vtex.com/docs/guides/catalog-internationalization).
 
->⚠ Product names are not translated on the [Checkout](https://help.vtex.com/en/tutorial/checkout-vtex-overview--7wcprkM7yZUflOqbzAN5SI) and [My Account pages](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh?&utm_source=autocomplete), as these modules call directly the catalog API to get product data, so the information does not pass through the Messages API. 
+>⚠ Product names are not translated on the [Checkout](https://help.vtex.com/en/tutorial/checkout-vtex-overview--7wcprkM7yZUflOqbzAN5SI) and [My Account pages](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh?&utm_source=autocomplete), as these modules call directly the catalog API to get product data, so the information does not pass through the Messages API.
 
 This model is easier to set up, integrate, and maintain compared to the [multi-account](#multi-account) approach, but it may not be efficient for large and complex operations. This architecture is recommended for operations present in more than one country, requiring the configuration of different languages and currencies, but without the need for data segregation, as all core services are shared. Therefore, it may work well for operations managed by a single, centralized team.
 
@@ -159,5 +159,5 @@ This architecture is recommended for operations in more than one country, requir
 
 ### Learn more
 
-- [Accounts and architecture](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl) 
+- [Accounts and architecture](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl)
 - [Choosing between a multi-store architecture or an additional environment](https://help.vtex.com/en/tutorial/escolhendo-entre-arquitetura-multi-loja-ou-ambiente-adicional--4HRNpa1OCKZ5YzP8yiilBL)
