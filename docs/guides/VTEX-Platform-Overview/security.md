@@ -170,7 +170,7 @@ With a Business Continuity Plan, we address challenges from emergencies, ensurin
 
 ## VTEX Shield
 
-[VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh) is an add-on product that offers supplementary, customizable protection layers for stores that prioritize platform resilience and the security standards guaranteed by VTEX's existing security[ certifications and practices](https://vtex.com/br-pt/security/security-practices/).
+[VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh) is an add-on product that offers supplementary, customizable protection layers for stores that prioritize platform resilience and the security standards guaranteed by VTEX's existing security [certifications and practices](https://vtex.com/br-pt/security/security-practices/).
 
 When requesting VTEX Shield, you can choose from the following features:
 
