@@ -9,18 +9,164 @@ Authenticated content fosters a more controlled and secure shopping environment 
 In this guide, learn how to create an authenticated component using the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) component as an example.
 
 ## Before you begin
+
 ### Update the `@faststore/core` package
 
 Ensure your store is using `@faststore/core@v3.0.39` or later. To benefit from this feature, follow the steps below:
 
-Update your store’s `@faststore/core` package to the `v3.0.39` by running the following command:
+1. Update your store’s `@faststore/core` package to the `v3.0.39` by running the following command:
 
-```bash
-yarn add @faststore/core@3.0.39
-```
+    ```bash
+    yarn add @faststore/core@3.0.39
+    ```
 
-Run `yarn dev` to apply the changes to your project.
+2. Run `yarn dev` to apply the changes to your project.
 
 ### Understand Section Override
+
 Make sure you understand the concepts of [Section Override](https://developers.vtex.com/docs/guides/faststore/overrides-overview) to follow along.
+
 ## Step by step
+
+### Step 1 - Override a component
+
+Choose the component you want to restrict access to. To check the available components, refer to the [UI components](https://developers.vtex.com/docs/guides/faststore/components-index) guide.
+
+Once you have chosen the component, you will need to override the component using the feature [Section Override](https://developers.vtex.com/docs/guides/faststore/overrides-overview). In this guide we will use the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) component as an example.
+
+1. In `src/components/overrides` create the `Hero.tsx` file.
+2. Add the following to the `Hero.tsx` file:
+
+    ```tsx
+    import { SectionOverride } from "@faststore/core";
+    import { HeroHeader, HeroImage } from "@faststore/ui";
+
+    const SECTION = "Hero" as const;
+
+    const override: SectionOverride = {
+    section: SECTION,
+    components: {
+        HeroImage: {
+        Component: (props) => (
+            <HeroImage {...props} />
+        ),
+        },
+    },
+    };
+
+    export { override };
+
+    ```
+	The code above overrides the `HeroImage` component to not show any images.
+
+3. Open the terminal and run `yarn dev`.
+4. Access your store's local development URL (localhost). So far, you will have the following `Hero`:
+
+    ![]()
+
+    At this point, the Hero component will not display an image, and logging in won't change that.
+
+### Step 2 - Wrap the component with `ProfileChallenge`
+
+The `ProfileChallenge` component checks if a user is logged in and has sales channel access. If both conditions are met, it displays your customized version (the overridden component). Otherwise, it displays the default Hero component or your [fallback component](#step-3-create-a-component-fallback-optional).
+
+1. In the `Hero.tsx` file, add the following code:
+
+    ```tsx
+    import { SectionOverride } from "@faststore/core";
+    import { ProfileChallenge_unstable as ProfileChallenge } from "@faststore/core/experimental";
+
+    import { HeroHeader, HeroImage } from "@faststore/ui";
+
+    const SECTION = "Hero" as const;
+
+    const override: SectionOverride = {
+    section: SECTION,
+    components: {
+        HeroImage: {
+        Component: (props) => (
+            <ProfileChallenge>
+            <HeroImage {...props} />
+            </ProfileChallenge>
+        ),
+        },
+    },
+    };
+
+    export { override };
+    ```
+
+    - The code above imports the `ProfileChallenge` component.
+    - The `override` object defines the section (`Hero`) and the components to be overridden.
+    - Inside `components`, the `HeroImage` component is being overridden.
+    - The overridden `HeroImage` is wrapped with `ProfileChallenge`.
+    - When `ProfileChallenge` renders the `HeroImage`, it checks for user login status and sales channel access.
+
+2. Run `yarn dev` to sync the changes locally.
+3. To test the changes, access your store's local development URL (localhost). 
+4. On the store home page, click on Sign in to enter your account.
+5. Once you are logged in, you will be able to see the customized Hero section:
+
+    ![]()
+
+### Step 3 - Create a component fallback
+
+The `ProfileChallenge` has a property called `fallback`. This property allows you to display a custom component when a user is not logged in. If not provided, the default component with the original content will be displayed.
+
+1. To create a fallback component, open the override component file, in this case, `Hero.tsx`, and add the following:
+
+```tsx
+import { SectionOverride } from "@faststore/core";
+import { ProfileChallenge_unstable as ProfileChallenge } from "@faststore/core/experimental";
+
+import { HeroHeader, HeroImage } from "@faststore/ui";
+
+const SECTION = "Hero" as const;
+
+const override: SectionOverride = {
+  section: SECTION,
+  components: {
+    HeroImage: {
+      Component: (props) => (
+        <ProfileChallenge>
+          <HeroImage {...props} />
+        </ProfileChallenge>
+      ),
+    },
+    HeroHeader: {
+      Component: (props) => {
+        return (
+          <ProfileChallenge
+            fallback={
+              <HeroHeader
+                title="🔒 Auth Hero"
+                subtitle="You should be logged in to see this content"
+              />
+            }
+          >
+            <HeroHeader {...props} />
+          </ProfileChallenge>
+        );
+      },
+    },
+  },
+};
+
+export { override };
+
+```
+{EXPLICAR O EXEMPLO}
+
+2. Run `yarn dev` to sync the changes locally.
+3. Access the localhost available in the terminal, and without signing in to your account, you will see the following:
+
+    ![]()
+
+### Step 3 - Promoting your changes
+
+After testing locally, you can promote your changes to production by doing the following:
+
+1. In your local store code, create a new branch with the changes you made.
+2. Push the changes to the new branch and publish it.
+3. Open a pull request in the store repository.
+4. If the checks and reviews are all good, merge the branch with the main one.
