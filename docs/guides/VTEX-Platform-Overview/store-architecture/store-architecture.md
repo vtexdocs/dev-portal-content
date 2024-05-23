@@ -4,13 +4,11 @@ slug: "store-architecture"
 hidden: false
 createdAt: "2024-05-23T10:18:55.338Z"
 updatedAt: "2024-05-23T10:18:55.338Z"
-excerpt: ""
+excerpt: "Learn about the VTEX reference architectures"
 seeAlso:
  - "/docs/guides/understanding-vtex-reference-architectures"
  - "/docs/guides/store-architecture-use-cases"
 ---
-
-# Store architecture
 
 Store architecture is the main way to communicate a unified vision of a particular project to all stakeholders, ensuring clarity for everyone involved and translating business needs into software components and project requirements.
 
@@ -20,20 +18,20 @@ To enhance the understanding of the related aspects and show how VTEX connects w
 
 >ℹ️ To learn more about the main characteristics of the accounts that relate to the planning of your store’s architecture, check out the [Accounts and architecture](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl) guide.
 
-Below are the use cases with examples of architectures for common scenarios:
+Below are an overview of the main use cases for common scenarios:
 
-- [Business-to-customer (B2C)](#business-to-customer)
-- [Business-to-business (B2B)](#businesss-to-business)
-- [Franchise accounts (Omnichannel)](#franchise-accounts)
+- [Business-to-customer (B2C)](#business-to-customer-b2c)
+- [Business-to-business (B2B)](#businesss-to-business-b2b)
+- [Franchise accounts (Omnichannel)](#franchise-accounts-omnichannel)
 - [Multi-language and Multi-currency](#multi-language-and-multi-currency)
-  - [Single account](#single-account)
+  - [Single account, multi-bindings](#single-account-multi-bindings)
   - [Multi-account](#multi-account)
 
 ## Business-to-customer (B2C)
 
 The business-to-customer (B2C) is the most common business model in VTEX and the base for the other business models.
 
-![image]()
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2c.png)
 
 ## Business-to-business (B2B) 
 
@@ -43,26 +41,28 @@ B2B projects are usually more extensive and complex than projects in the B2C bus
 
 Below, you can see a reference architecture of a B2B store using [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite).
 
-![image]()
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/Basic B2B.png)
 
 ## Franchise accounts (Omnichannel)
 
 This is a very common architecture model that integrates physical stores with ecommerce as [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) in VTEX. 
 
-![image]()
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/franchises-omni.png)
 
 ## Multi-language and Multi-currency
 
 Some of our customers are present in multiple countries and want to have every local store running on VTEX. To serve this customer, we provide the multi-language and multi-currency architectures.
 
-### Multi-binding
+### Single account, multi-bindings
 
 In this architecture, there is a single VTEX account bound to multiple languages and currencies, in a [multidomain](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#multistore) perspective.
 
-![image]()
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-single-account.png)
 
 ### Multi-account
 
 In this architecture, there is a main VTEX account that will act as a seller in all secondary VTEX accounts, acting as [marketplaces](https://help.vtex.com/en/tutorial/estrategias-de-marketplace-na-vtex--tutorials_402#being-a-vtex-marketplace). These secondary accounts are conceived as [new environments](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#additional-environment).
 
->ℹ️ To learn more about these blueprints, check out the [Store architecture use cases](https://developers.vtex.com/docs/guides/store-architecture-use-cases) guide.
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-multi-account.png)
+
+>ℹ️ To deep dive into these store architectures, check out the [Store architecture use cases](https://developers.vtex.com/docs/guides/store-architecture-use-cases) guide.
