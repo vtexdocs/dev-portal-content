@@ -1,0 +1,63 @@
+---
+title: 'Upgrading from Section Override v1 to v2'
+---
+
+[Section Override v2](https://developers.vtex.com/docs/guides/faststore/overrides-overview) allows you to customize the appearance and functionality of existing components in your store. Compared to v1, v2 offers an adaptable approach. 
+
+    > ⚠️ We strongly recommend using [Section Override v2](https://developers.vtex.com/docs/guides/faststore/overrides-overview) in favor of [Section Override v1](https://developers.vtex.com/docs/guides/faststore/overrides-components-and-props-v1).
+
+## Main differences
+
+| Feature                       | Section Override v1                                           | Section Override v2                                                          |
+| ----------------------------- | ------------------------------------------------------ | --------------------------------------------------------------------- |
+| Overrides per section         | One override per section.                              | Multiple overrides per section.                                       |
+| Importing Section             | String passed to `section` key.                        | Section component imported and passed to `Section` key (uppercase S). |
+| Native section                | The new component overrides the native one.            | The new component is based on the native one and can coexist with it. |
+| Headless CMS property schema  | No customization, limited to native schemas.           | Customizable schema allowing definition of new properties.            |
+| Feature availability          | Experimental feature and may not function as expected. | Stable feature.                                                       |
+
+Check out the main differences related to the code syntax:
+
+- In Section Override v1, a section is overridden by specifying the section name and component:
+
+    ```js
+    import { SectionOverride } from "@faststore/core";
+
+    const SECTION = "Alert" as const;
+
+    const override: SectionOverride = {
+        section: SECTION,
+        components: {
+            Alert: { Component: CustomAlert },  
+        },
+    };
+
+    export { override };
+    ```
+
+- Section Override v2 introduces a more component-centric approach. It directly references the section component (e.g., `AlertSection` from `@faststore/core`) using a dedicated function (`getOverriddenSection`) and builds the override object around it, emphasizing the component being overridden. This shift in v2 promotes clearer code and offers more control during the override creation process.
+
+    ```js
+    import { AlertSection, getOverriddenSection } from "@faststore/core";  
+
+    const NewAlert = getOverriddenSection({ 
+    Section: AlertSection, 
+    components: {  
+        Alert: { Component: CustomAlert },  
+    }, 
+    });  
+
+    export default NewAlert;  
+    ```
+
+## Updating your project to Section Override v2
+
+Make sure your store's `@faststore/core` package is version 3.0.0 or higher to work with Section Override v2. For update instructions, refer to the [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
+
+### Identify existing overrides (v1)
+
+Identify all overrides currently implemented using [Section Override v1](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props). Once identified, adjust your code to use [Section Override v2](https://developers.vtex.com/docs/guides/faststore/overrides-overview).
+
+    > ⚠️ We strongly recommend using Section Override v2 instead of Section Override v1.
+
+
