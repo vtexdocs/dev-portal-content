@@ -41,7 +41,7 @@ B2B projects are usually more extensive and complex than projects in the B2C bus
 
 Below, you can see a reference architecture of a B2B store using [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite).
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/Basic B2B.png)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2b.png)
 
 ## Franchise accounts (Omnichannel)
 
