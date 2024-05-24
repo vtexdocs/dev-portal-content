@@ -3,7 +3,7 @@ title: "Store architecture"
 slug: "store-architecture"
 hidden: false
 createdAt: "2024-05-23T13:08:55.338Z"
-updatedAt: "2024-05-24T15:56:00.000Z"
+updatedAt: "2024-05-24T17:56:00.000Z"
 excerpt: "Learn how our store architecture models are tailored to meet diverse business needs."
 seeAlso:
  - "/docs/guides/understanding-vtex-reference-architectures"
@@ -23,7 +23,7 @@ The main use cases for common scenarios are the following:
 - [Multi-language and Multi-currency](#multi-language-and-multi-currency)
   - [Single account, multi-bindings](#single-account-multi-bindings)
   - [Multi-account](#multi-account)
- 
+
 >ℹ️ The following diagrams represent one single VTEX account and assume that the customer is using the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) as a storefront solution.
 
 ## Business-to-customer (B2C)
@@ -50,7 +50,7 @@ The diagram below presents an example where the business model is a B2B using th
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2b.png)
 
-The B2B Suite is a set of VTEX IO apps tailored to streamline B2B store management. This collection of apps empower the store to oversee organizations (the companies enabled to make purchases in the store), as well as other functions and permissions for storefront and checkout. For instance, the store can offer specific price tables, collections, and custom payments methods for organizations, customers can have different user roles within organizations, among other features.
+The B2B Suite is a set of VTEX IO apps tailored to streamline B2B store management. This collection of apps empower the store to oversee organizations (the companies enabled to make purchases in the store), as well as other functions and permissions for storefront and checkout. For instance, the store can offer specific price tables, collections, and custom payment methods for organizations, customers can have different user roles within organizations, among other features.
 
 The main account has more modules than the sellers, sharing just some, such as the [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview) and [Catalog](https://developers.vtex.com/docs/guides/catalog-overview), as you can see in the diagram below.
 
@@ -100,7 +100,7 @@ This architecture model works well for brands that have multiple physical stores
 - Physical stores can function as small warehouses, operating in the [ship from store](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/50GAmxxFsJoLWqcnMysWdl) strategy.
 - Possible gain from inventory reduction through the implementation of the [Endless Aisle](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/40KMlmGI5tN0r0KPCDWgGn) strategy, which is done by using the [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf).
 
->ℹ️ The VTEX Sales App is available in Brazil and some LATAM countries. To know if it is available in your country, open a ticket to [VTEX Support](https://help.vtex.com/en/tutorial/abrir-chamados-para-o-suporte-vtex--16yOEqpO32UQYygSmMSSAM?locale=pt).
+>ℹ️ The VTEX Sales App is available in Brazil and some LATAM countries. To find out if it is available in your country, open a ticket to [VTEX Support](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM).
 
 ## Multi-language and Multi-currency
 
