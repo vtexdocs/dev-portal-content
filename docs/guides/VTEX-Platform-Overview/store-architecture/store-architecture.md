@@ -136,7 +136,7 @@ This model is easier to set up, integrate, and maintain compared to the [multi-a
 
 ### Multi-account
 
-In this architecture, one main account will act as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520). 
+In this architecture, one main account will act as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520).
 
 The reference architecture below exemplifies its main characteristics:
 
