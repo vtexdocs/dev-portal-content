@@ -6,7 +6,7 @@ createdAt: "2024-05-24T10:18:55.338Z"
 updatedAt: "2024-05-24T10:18:55.338Z"
 excerpt: "Learn how our platform enhances the developer experience."
 seeAlso:
- - "docs/guides/getting-started-with-storefront-solutions"
+ - "/docs/guides/getting-started-with-storefront-solutions"
  - "/docs/guides/faststore-onboarding"
  - "/docs/guides/store-framework-onboarding"
 ---
