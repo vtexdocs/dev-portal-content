@@ -49,9 +49,9 @@ Each microservice has its lifecycle independent of others, including its environ
 
 Such choices ensure speed and flexibility in the evolution of platform services, and guarantee exclusive resources for each service, eliminating competition between distinct operations and thus ensuring greater availability.
 
-### Virtual Private Network (VPC)
+### Virtual Private Cloud (VPC)
 
-Given our microservices architecture, it is common for an application to need to query others to process a request. To ensure good processing performance while also safeguarding against unwanted external access, the microservices run within the same Virtual Private Network (VPC) – unless in cases where an exclusive VPC is a legal or security prerequisite, as is the case with VTEX's [Payment Gateway](https://help.vtex.com/tutorial/what-is-a-payment-gateway--2KH9Wdi7F6swOU4amECSOk), with [PCI](https://help.vtex.com/tutorial/what-is-the-pci-ssc) certification.
+Given our microservices architecture, it is common for an application to need to query others to process a request. To ensure good processing performance while also safeguarding against unwanted external access, the microservices run within the same Virtual Private Cloud (VPC) network – unless in cases where an exclusive VPC is a legal or security prerequisite, as is the case with VTEX's [Payment Gateway](https://help.vtex.com/tutorial/what-is-a-payment-gateway--2KH9Wdi7F6swOU4amECSOk), with [PCI](https://help.vtex.com/tutorial/what-is-the-pci-ssc) certification.
 
 Within the VPC, [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) apps have access control based on [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) that only allow access to necessary resources, thus ensuring greater security.
 
