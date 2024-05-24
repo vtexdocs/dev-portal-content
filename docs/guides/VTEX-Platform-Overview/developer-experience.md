@@ -99,7 +99,7 @@ Once your new app has been developed, it must be deployed to the VTEX IO product
 
 To [deploy a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available), follow these steps:
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/making-an-app-publicly-available.png)
 
 - [**Releasing a new app version**](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version): Marks the beginning by releasing the app using Git, updating the version in `manifest.json`, and documenting changes in CHANGELOG.md.
 - [**Publishing**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app): The app version becomes a candidate version, ready for testing and validation in a production workspace.
