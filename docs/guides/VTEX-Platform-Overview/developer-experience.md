@@ -15,7 +15,7 @@ This guide provides an overview of the developer experience on the VTEX platform
 
 ## App development
 
-[VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is a low-code development platform that simplifies building, managing, and scaling ecommerce solutions by offering a comprehensive suite of tools and services,  manual coding efforts while ensuring performance, scalability, and security for your projects. 
+[VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is a low-code development platform that simplifies building, managing, and scaling ecommerce solutions by offering a comprehensive suite of tools and services,  manual coding efforts while ensuring performance, scalability, and security for your projects.
 
 Within the VTEX IO platform, you can leverage familiar technologies and frameworks like [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), [GraphQL](https://graphql.org/), and [Node](https://nodejs.org/en) to enable rapid development and evolution. This set of technologies allows you to build custom web storefronts, customize the shopper experience, integrate with third-party systems, and create custom applications or other components to extend the VTEX IO’s functionalities.
 
@@ -23,7 +23,7 @@ Next, you will find an overview of the main capabilities of the VTEX IO platform
 
 ### Developer tools
 
-Learn about the essential developer tools, which equip you with the knowledge to streamline your app development journey with VTEX IO. 
+Learn about the essential developer tools, which equip you with the knowledge to streamline your app development journey with VTEX IO.
 
 #### Command Line Interface (CLI)
 
@@ -35,15 +35,15 @@ To build and develop any project in the VTEX IO, use the pre-configured [**VTEX 
 
 #### Workspaces
 
-[Workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) are isolated environments for app development, acting as separate versions of the same account. 
+[Workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) are isolated environments for app development, acting as separate versions of the same account.
 
-There are three types of workspaces in VTEX: 
+There are three types of workspaces in VTEX:
 
 - **Master**: A unique production workspace that reflects the live store content.
 - [**Development workspaces**](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace): Provide you freedom in code development without affecting user traffic and the live store. You must use a development workspace when making changes or developing a new VTEX IO app.
 - [**Production workspaces**](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace): Mainly used to validate VTEX IO apps. These workspaces handle traffic, so they can be used to run [A/B tests](#ab-tests) and can be [promoted to master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master).
 
-To learn how to manage workspaces effectively in your projects, check out the [Best practices on workspaces management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices) guide. 
+To learn how to manage workspaces effectively in your projects, check out the [Best practices on workspaces management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices) guide.
 
 #### A/B Tests
 
@@ -70,7 +70,7 @@ We offer two native Edition Apps:
 
 ### VTEX Apps
 
-[VTEX Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) expand VTEX platform capabilities across various aspects of digital commerce, such as marketing, analytics, logistics, security, and store design. 
+[VTEX Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) expand VTEX platform capabilities across various aspects of digital commerce, such as marketing, analytics, logistics, security, and store design.
 
 We offer the following types of apps:
 
@@ -91,7 +91,7 @@ We provide some ready-to-use [code templates](https://developers.vtex.com/docs/g
 
 You can make your apps available to the VTEX ecosystem on the [VTEX App Store](https://developers.vtex.com/docs/guides/vtex-app-store), a marketplace for VTEX IO plug-and-play solutions.
 
->ℹ️ To learn about the homologation requirements for the VTEX App Store, check out the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store). 
+>ℹ️ To learn about the homologation requirements for the VTEX App Store, check out the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store).
 
 #### Deployment
 
@@ -102,7 +102,7 @@ To [deploy a new app version](https://developers.vtex.com/docs/guides/vtex-io-do
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/
 
 - [**Releasing a new app version**](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version): Marks the beginning by releasing the app using Git, updating the version in `manifest.json`, and documenting changes in CHANGELOG.md.
-- [**Publishing**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app): The app version becomes a candidate version, ready for testing and validation in a production workspace. 
+- [**Publishing**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app): The app version becomes a candidate version, ready for testing and validation in a production workspace.
 - [**Testing**](https://developers.vtex.com/docs/guides/ab-tests): Run [A/B tests](#ab-tests) and others, such as performance and security testing.
 - [**Deploying**](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version): Update the app version across all accounts where the app is installed.
 - [**Promotiong**](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master): Optional step to promote the production workspace to master.
