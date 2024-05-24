@@ -61,7 +61,8 @@ Once you have chosen the component, you will need to override the component usin
     export { override };
 
     ```
-	The code above overrides the `HeroImage` component to not show any images.
+
+   The code above overrides the `HeroImage` component to not show any images.
 
 3. Open the terminal and run `yarn dev`.
 4. Access your store's local development URL (localhost). So far, you will have the following `Hero`:
@@ -108,7 +109,7 @@ The `ProfileChallenge` component checks if a user is logged in and has sales cha
 
 2. Run `yarn dev` to sync the changes locally.
 3. To test the changes, access your store's local development URL (localhost). 
-4. On the store home page, click on Sign in to enter your account.
+4. On the store home page, click on **Sign in** to enter your account.
 5. Once you are logged in, you will be able to see the customized Hero section:
 
     ![hero-auth-content](https://vtexhelp.vtexassets.com/assets/docs/src/hero-component-login___cb5cecfe909ff084771b45ae99eebc93.png)
@@ -159,6 +160,7 @@ The `ProfileChallenge` has a property called `fallback`. This property allows yo
   export { override };
 
   ```
+
   - Inside the `components` section, specific components (`HeroImage` and `HeroHeader`) are targeted for customization.
   - HeroImage Override:
     - A new component function is defined that wraps the original `HeroImage` component with `ProfileChallenge`. This ensures `ProfileChallenge` logic is applied to `HeroImage`.
