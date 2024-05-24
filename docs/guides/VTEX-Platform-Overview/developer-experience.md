@@ -5,6 +5,10 @@ hidden: false
 createdAt: "2024-05-24T10:18:55.338Z"
 updatedAt: "2024-05-24T10:18:55.338Z"
 excerpt: "Learn how our platform enhances the developer experience."
+seeAlso:
+ - "docs/guides/getting-started-with-storefront-solutions"
+ - "/docs/guides/faststore-onboarding"
+ - "/docs/guides/store-framework-onboarding"
 ---
 
 This guide offers an overview of the tools and resources available to development teams. In the following sections, you will learn about the various features we provide for developers in our ecosystem and the opportunities for sharing knowledge and collaborating within the community.
@@ -15,7 +19,7 @@ This guide offers an overview of the tools and resources available to developmen
 
 ## App development
 
-[VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is a low-code development platform that simplifies building, managing, and scaling ecommerce solutions by offering a comprehensive suite of tools and services,  manual coding efforts while ensuring performance, scalability, and security for your projects.
+[VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is our development platform that simplifies building, managing, and scaling ecommerce solutions by offering a comprehensive suite of tools and services,  manual coding efforts while ensuring performance, scalability, and security for your projects.
 
 Within the VTEX IO platform, you can leverage familiar technologies and frameworks like [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), [GraphQL](https://graphql.org/), and [Node](https://nodejs.org/en) to enable rapid development and evolution. This set of technologies allows you to build custom web storefronts, customize the shopper experience, integrate with third-party systems, and create custom applications or other components to extend the VTEX IO’s functionalities.
 
@@ -61,8 +65,8 @@ By leveraging builders, developers can extend the functionality of the VTEX plat
 
 We offer two native Edition Apps:
 
-- **Edition Business**: For Legacy CMS Portal stores.
 - **Edition Store**: For Store Framework stores.
+- **Edition Business**: For Legacy CMS Portal stores.
 
 >ℹ️ To learn how to develop your own Edition App, check out the [Developing an Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-configuring-an-edition-app) guide.
 
@@ -99,7 +103,7 @@ Once a new app has been developed, it must be deployed to the VTEX IO production
 
 - [**Releasing a new app version**](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version): Marks the beginning by releasing the app using Git, updating the version in `manifest.json`, and documenting changes in CHANGELOG.md.
 - [**Publishing**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app): The app version becomes a candidate version, ready for testing and validation in a production workspace.
-- [**Testing**](https://developers.vtex.com/docs/guides/ab-tests): Run [A/B tests](#ab-tests) and others, such as performance and security testing.
+- [**Testing**](https://developers.vtex.com/docs/guides/ab-tests): Run [A/B tests](#ab-tests).
 - [**Deploying**](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version): Update the app version across all accounts where the app is installed.
 - [**Promoting**](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master): Optional step to promote the production workspace to master.
 
@@ -115,12 +119,6 @@ VTEX provides different options for storefront development, each with its own ch
 - [**FastStore**](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore): Innovative storefront technology based on the [Jamstack](https://jamstack.org/) architecture. FastStore prioritizes performance and stability, offering development teams an easily maintainable solution for editing store pages.
 - [**Store Framework**](https://developers.vtex.com/docs/guides/store-framework): Composable and flexible commerce model, allowing integration of [VTEX IO apps](https://developers.vtex.com/docs/vtex-io-apps) for dynamic storefronts.
 - [**Legacy CMS Portal**](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io): Legacy storefront technology, that relies on HTML, CSS, and JavaScript, with code management exclusively through the VTEX Admin. This technology is no longer available to new stores starting with VTEX.
-
-### Learn more
-
-- [Getting started with storefront solutions](https://developers.vtex.com/docs/guides/getting-started-with-storefront-solutions)
-- [FastStore onboarding](https://developers.vtex.com/docs/guides/faststore-onboarding)
-- [Store Framework onboarding](https://developers.vtex.com/docs/guides/store-framework-onboarding)
 
 ## Contributions and collaboration
 
