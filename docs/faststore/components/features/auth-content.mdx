@@ -4,6 +4,10 @@ title: 'Authenticated content'
 
 Authenticated content is a feature that restricts access to specific store content based on whether a user is logged in. This ensures that only registered and logged-in users can view exclusive content, like prices, detailed product descriptions, and special offers. Non-logged-in users will see generic content instead.
 
+| Before log in | After log in |
+| ------------- | ------------ |
+| ![auth-content-before-log-in](https://vtexhelp.vtexassets.com/assets/docs/src/before-login___1c428d5e4b755d2c94fb64968893290c.png) | ![auth-content-after-log-in](https://vtexhelp.vtexassets.com/assets/docs/src/after-login___de2dbeae277be2cae93ecc9ec51b3929.png) |
+
 Authenticated content fosters a more controlled and secure shopping environment for stores and customers, enhancing the shopping experience. For example, in B2B settings, this allows for customized access to product catalogs, ensuring that businesses only see relevant products and pricing. For segmented promotions, authenticated content enables merchants to tailor special offers and discounts to specific customer segments, increasing engagement and conversion rates.
 
 In this guide, learn how to create an authenticated component using the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) component as an example.
@@ -62,9 +66,9 @@ Once you have chosen the component, you will need to override the component usin
 3. Open the terminal and run `yarn dev`.
 4. Access your store's local development URL (localhost). So far, you will have the following `Hero`:
 
-    ![]()
+    ![hero-before-log-in](https://vtexhelp.vtexassets.com/assets/docs/src/hero-component___d833f1abca8976e439c5d2e37ebda450.png)
 
-    At this point, the Hero component will not display an image, and logging in won't change that.
+At this point, the Hero component will not display an image, and logging in won't change that.
 
 ### Step 2 - Wrap the component with `ProfileChallenge`
 
@@ -107,7 +111,7 @@ The `ProfileChallenge` component checks if a user is logged in and has sales cha
 4. On the store home page, click on Sign in to enter your account.
 5. Once you are logged in, you will be able to see the customized Hero section:
 
-    ![]()
+    ![hero-auth-content](https://vtexhelp.vtexassets.com/assets/docs/src/hero-component-login___cb5cecfe909ff084771b45ae99eebc93.png)
 
 ### Step 3 - Create a component fallback
 
@@ -115,52 +119,61 @@ The `ProfileChallenge` has a property called `fallback`. This property allows yo
 
 1. To create a fallback component, open the override component file, in this case, `Hero.tsx`, and add the following:
 
-```tsx
-import { SectionOverride } from "@faststore/core";
-import { ProfileChallenge_unstable as ProfileChallenge } from "@faststore/core/experimental";
+  ```tsx
+  import { SectionOverride } from "@faststore/core";
+  import { ProfileChallenge_unstable as ProfileChallenge } from "@faststore/core/experimental";
 
-import { HeroHeader, HeroImage } from "@faststore/ui";
+  import { HeroHeader, HeroImage } from "@faststore/ui";
 
-const SECTION = "Hero" as const;
+  const SECTION = "Hero" as const;
 
-const override: SectionOverride = {
-  section: SECTION,
-  components: {
-    HeroImage: {
-      Component: (props) => (
-        <ProfileChallenge>
-          <HeroImage {...props} />
-        </ProfileChallenge>
-      ),
-    },
-    HeroHeader: {
-      Component: (props) => {
-        return (
-          <ProfileChallenge
-            fallback={
-              <HeroHeader
-                title="🔒 Auth Hero"
-                subtitle="You should be logged in to see this content"
-              />
-            }
-          >
-            <HeroHeader {...props} />
+  const override: SectionOverride = {
+    section: SECTION,
+    components: {
+      HeroImage: {
+        Component: (props) => (
+          <ProfileChallenge>
+            <HeroImage {...props} />
           </ProfileChallenge>
-        );
+        ),
+      },
+      HeroHeader: {
+        Component: (props) => {
+          return (
+            <ProfileChallenge
+              fallback={
+                <HeroHeader
+                  title="🔒 Auth Hero"
+                  subtitle="You should be logged in to see this content"
+                />
+              }
+            >
+              <HeroHeader {...props} />
+            </ProfileChallenge>
+          );
+        },
       },
     },
-  },
-};
+  };
 
-export { override };
+  export { override };
 
-```
-{EXPLICAR O EXEMPLO}
+  ```
+  - Inside the `components` section, specific components (`HeroImage` and `HeroHeader`) are targeted for customization.
+  - HeroImage Override:
+    - A new component function is defined that wraps the original `HeroImage` component with `ProfileChallenge`. This ensures `ProfileChallenge` logic is applied to `HeroImage`.
+  
+  - HeroHeader Override:
+    - A new component function is defined for `HeroHeader`.
+    - It uses `ProfileChallenge` with a `fallback` property.
+    - The `fallback` property defines what to display if the user isn't logged in.
+    - Inside the `fallback`, a custom `HeroHeader` component is created with two editable properties, title (`Auth Hero`), and subtitle (`You should be logged in to see this content`).
+    - If the user is logged in, the original `HeroHeader` content is displayed.
 
 2. Run `yarn dev` to sync the changes locally.
 3. Access the localhost available in the terminal, and without signing in to your account, you will see the following:
 
-    ![]()
+    ![hero-auth-content-before](https://vtexhelp.vtexassets.com/assets/docs/src/before-login___1c428d5e4b755d2c94fb64968893290c.png)
 
 ### Step 3 - Promoting your changes
 
