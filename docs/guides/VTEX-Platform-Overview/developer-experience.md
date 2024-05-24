@@ -108,6 +108,7 @@ Once a new app has been developed, it must be deployed to the VTEX IO production
 - [**Promoting**](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master): Optional step to promote the production workspace to master.
 
 >ℹ Check [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) for more details on this flow.
+
 >ℹ️ To learn about app versioning in VTEX IO, refer to [SemVer standard](https://semver.org/) and our [Understanding app versioning](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) article.
 
 Our deployment process integrates an automated Continuous Integration and Continuous Delivery (CI/CD) framework, facilitating seamless building and testing whenever changes occur in the source code. Through this CI/CD pipeline, we ensure swift and dependable delivery of new features and updates, while maintaining high standards of code quality.
