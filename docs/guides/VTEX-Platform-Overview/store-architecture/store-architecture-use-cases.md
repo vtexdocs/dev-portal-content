@@ -3,7 +3,7 @@ title: "Store architecture"
 slug: "store-architecture"
 hidden: false
 createdAt: "2024-05-23T13:08:55.338Z"
-updatedAt: "2024-05-24T11:08:55.338Z"
+updatedAt: "2024-05-24T15:56:00.000Z"
 excerpt: "Learn how our store architecture models are tailored to meet diverse business needs."
 seeAlso:
  - "/docs/guides/understanding-vtex-reference-architectures"
@@ -136,22 +136,20 @@ This model is easier to set up, integrate, and maintain compared to the [multi-a
 
 ### Multi-account
 
-In this architecture, one main account will act as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520). The main account - the seller - will be the source of truth for the [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), such as catalog, pricing, logistics, and others.
+In this architecture, one main account will act as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520). 
 
 The reference architecture below exemplifies its main characteristics:
 
 - **Separated VTEX account**: Each store has its own VTEX account.
 - **Separated website**: Each store has its own website and may customize its frontend with a different style per store.
 - **Customer Data Storage**: Segregated by marketplace account. There is no customer information within the main account’s [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
-- **VTEX Core services**: The [core services](https://developers.vtex.com/docs/guides/getting-started), suh as [Catalog](https://developers.vtex.com/docs/guides/catalog-overview), [Checkout](https://developers.vtex.com/docs/guides/checkout-overview), [Logistics](https://developers.vtex.com/docs/guides/fulfillment), [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview), [Payments](https://developers.vtex.com/docs/guides/payments-overview), [Princing](https://developers.vtex.com/docs/guides/pricing-overview), [Promotions](https://developers.vtex.com/docs/guides/promotions-overview), and [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) are independent, meaning each store manage its operation in its own Admin panel.
-
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-multi-account.png)
-
-The catalog management is independent, but the product assortment for each account is based on the main account's catalog, as the main account holds ownership of it.
-
-Promotions from the main account have limited capabilities, as every information that comes from the customer will not be accessible by the main account. For example, if you want to create promotions for a customer cluster in the main account, it will not work because it does not have access to the marketplace’s Master Data.
+- **Promotions**: Promotions from the main account have limited capabilities, as every information that comes from the customer will not be accessible by the main account. For example, if you want to create promotions for a customer cluster in the main account, it will not work because it does not have access to the marketplace’s Master Data.
+- **Checkout, Order Management System (OMS), Payments, and Message Center**: Each store manages these modules independently in its own Admin panel, without relying on the main account.
+- **Catalog, Pricing, and Logistics**: The main account is the source of truth for these [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), but the management of them are independent, as each account has its own Admin panel. The product assortment can vary between accounts but is always based on the main account's catalog, as the main account is the owner of the it.
 
 >⚠ [Assembly options](https://developers.vtex.com/docs/guides/assembly-options-app), [attachments](https://help.vtex.com/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm), and [services](https://help.vtex.com/en/tutorial/what-is-a-service--46Ha8CEEQoC6Y40i6akG0y) are not supported.
+
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-multi-account.png)
 
 This architecture is recommended for operations in more than one country, requiring the configuration of different languages and currencies, where different teams manage each localized store.
 
