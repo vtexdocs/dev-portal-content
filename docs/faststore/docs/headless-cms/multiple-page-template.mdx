@@ -62,23 +62,27 @@ FastStore checks for templates in the following order:
 
 ```mermaid
 graph TB
-A[Finding the Product Page] --> B{Product Slug match?}
-B --> C{Yes} --> D(Use matching template)
-B --> E{No} --> F{Product Subcategory match?}
+A[Start] --> B{SKU Template exists?}
+B --> C{Yes} --> D(Use SKU Template)
+B --> E{No} --> F{Product Slug match?}
 F --> G{Yes} --> H(Use matching template)
-F --> I{No} --> J{Product Category match?}
+F --> I{No} --> J{Product Subcategory match?}
 J --> K{Yes} --> L(Use matching template)
-J --> M{No} --> N{Product Department match?}
+J --> M{No} --> N{Product Category match?}
 N --> O{Yes} --> P(Use matching template)
-N --> Q{No} --> R{Use generic template}
+N --> Q{No} --> R{Product Department match?}
+R --> S{Yes} --> T(Use matching template)
+R --> U{No} --> V{Use generic template}
 ```
 
-The system first searches for a template named after the product slug. For example, if the product slug is `/blue-shirts`, FastStore will look for a template named `/blue-shirts`.
+The system first searches for a template named after the product slug. For example, if the product slug is `/blue-shirts/p`, FastStore will look for a template named `/blue-shirts/p`.
 
-1. If no template matches the slug, FastStore searches for a template based on the product subcategory. For example, if the subcategory is `summer clothing`, the system might look for `/clothing/shirts/summer-clothing/`.
-2. Following the subcategory, the system checks for a template matching the product category. For example, if the category is `shirts`, the system might look for `/clothing/shirts/`.
-3. If no match is found at the category level, FastStore searches for a template based on the product department. For example, if the department is `clothing`, the system might look for `/clothing/`.
-4. If none of the above criteria match, the generic Product Page template is used. This template has an empty Template section value in the settings.
+1. If an SKU template is available, it takes precedence over the product template. For example, if a template is available for slugs containing the SKU ID (e.g., `/blue-shirts-99988212/p`), this template will take precedence over a more generic product template for `/blue-shirts/p`.
+2. If no SKU template is available, the system searches for one template based on the product slug.
+3. If no template matches the slug, FastStore searches for a template based on the product subcategory. For example, if the subcategory is `summer clothing`, the system might look for `/clothing/shirts/summer-clothing/`.
+4. Following the subcategory, the system checks for a template matching the product category. For example, if the category is `shirts`, the system might look for `/clothing/shirts/`.
+5. If no match is found at the category level, FastStore searches for a template based on the product department. For example, if the department is `clothing`, the system might look for `/clothing/`.
+6. If none of the above criteria match, the generic Product Page template is used. This template has an empty Template section value in the settings.
 
 ![pdp-page-list](https://vtexhelp.vtexassets.com/assets/docs/src/pdplist___d6f00d8bcfc23aecc477c97d487eebca.png)
 
