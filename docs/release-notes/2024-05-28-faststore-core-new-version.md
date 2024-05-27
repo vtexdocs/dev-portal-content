@@ -50,13 +50,13 @@ After running `yarn dev`, update each topic mentioned before as follows:
 
 1. Open your store’s `package.json` file and, in `dependencies`, edit the `next` entry:
 
-	```bash
-	"dependencies": {
-	...
-	"next": "^13.5.6",
-	...
-	},
-	```
+   ```bash
+   "dependencies": {
+   ...
+   "next": "^13.5.6",
+   ...
+   },
+   ```
 
 2. After updating the `next` dependency, refer to the [Upgrading from 12 to 13](https://nextjs.org/docs/pages/building-your-application/upgrading/version-13#upgrading-from-12-to-13) official Next.js documentation for more information on how to migrate to version 13.
 
