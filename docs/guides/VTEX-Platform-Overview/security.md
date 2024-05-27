@@ -16,7 +16,7 @@ VTEX regularly audits its Information Security controls through independent prof
 At the application layer, VTEX has the following accreditations:
 
 * SOC 1 – Type 2: Reports covering internal controls over financial reporting systems
-* SOC 1 – Type 2: Reports covering Security, Availability, Integrity, Confidentiality, and Privacy
+* SOC 2 – Type 2: Reports covering Security, Availability, Integrity, Confidentiality, and Privacy
 * PCI – Validation of controls around cardholder data to reduce credit card fraud
 
 See [Our Certifications](https://vtex.com/us-en/compliance/certifications) for more details.
