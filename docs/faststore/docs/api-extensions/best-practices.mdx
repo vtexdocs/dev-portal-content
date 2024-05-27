@@ -1,0 +1,113 @@
+---
+title: 'Best practices for using API extensions'
+---
+ 
+The `@faststore/core` package version 3.x introduces enhancements to API extension with a more efficient GraphQL query handling and security measures enhancements. 
+
+In this guide, learn to configure API extensions, ensuring the following:
+
+    - Use the `gql` helper usage for smoother and more efficient GraphQL query handling.
+
+    - Implement a more secure method for invoking queries and mutations to safeguard your store's data.
+
+    - Optimize call processes for queries or mutations defined within `@faststore/core`.
+ 
+## Before you begin
+
+Make sure your store version is updated to v3.0.0 or above.  If it’s not updated, refer to the [Updating your `@fastore/core` package version](#updating-your-@fastore/core-package-version) section. 
+
+## Updating the `gql` helper usage
+
+The `gql` helper serves as a function to define GraphQL operations such as queries, mutations, or fragments within the store code. See the example below:
+
+    ```tsx /fragments/ClientProduct.tsx
+    import { gql } from '@faststore/graphql-utils'
+
+    export const fragment = gql`
+    fragment ClientProduct on Query {
+        product(locator: $locator) {
+        id: productID
+        breadcrumbList {
+            itemListElement {
+            item
+            name
+            position
+            }
+        }
+        }
+    }
+    `
+    ```
+
+Import the `gql` helper from `@faststore/core/api`and call it as a function - with the argument between parenthesis. This also applies to query and mutation definitions inside the components. For example:
+
+    ```tsx fragments/ClientProduct.tsx
+    import { gql } from '@faststore/core/api'
+
+    export const fragment = gql(`
+    fragment ClientProduct on Query {
+        product(locator: $locator) {
+        id: productID
+        breadcrumbList {
+            itemListElement {
+            item
+            name
+            position
+            }
+        }
+        }
+    }
+    `)
+    ```
+
+## Using `useQuery` hook to call queries and mutations
+Queries, and mutations are must be invoked using secure hashes, which are randomly generated. To that, pass the query or mutation object - the result of the `gql` call - to `useQuery` directly. For example:
+
+    ```tsx
+    import { gql } from '@faststore/core/api'
+    import { useQuery_unstable as useQuery } from '@faststore/core/experimental'
+
+    const query = gql(`
+    query MyCustomQuery {
+        customQuery() {
+        data
+        }
+    }
+    `)
+
+    // useQuery apropriately calls MyCustomQuery
+    function CustomComponent() {
+        // ...
+        const result = useQuery(query, variables)
+        // ...
+    }
+    ```
+
+## Calling queries or mutations defined by `@faststore/core`
+
+A custom component can call a query or mutation defined by `@faststore/core`, such as `ClientManyProductsQuery`. In these cases, replace the `useQuery` hook call with a call to the specific hook for that query. 
+
+    ```tsx
+    import { useClientManyProducts_unstable as useClientManyProducts } from '@faststore/core/experimental'
+
+    // ClientManyProductsQuery will be called with the variables passed by CustomComponent
+    function CustomComponent() {
+        // ...
+        const result = useClientManyProducts(variables)
+        // ...
+    }
+    ```
+
+
+# Updating your `@fastore/core` package version
+If you need to update the `@fastore/core` package, follow the instructions below:
+
+1. Open your FastStore code and navigate to the `package.json` file.
+
+2. In `dependencies` > `@faststore/core`, change the version to the following. In the example above, we will use `^3.0.0`.
+
+    ```json
+    "@faststore/core": "^3.0.0",
+    ```
+
+3. Open the terminal and run `yarn` to update the version.
