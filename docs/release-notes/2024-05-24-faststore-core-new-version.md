@@ -34,6 +34,7 @@ Next.js 13 simplifies app directories, introduces Server Components for optimal 
 
 To benefit from these changes, you first need to update your store’s `@faststore/core` version:
 In your local FastStore project, install the latest version of `@faststore/core`:
+
  ```bash
 yarn add @faststore/core@ˆ3.0.0
 
