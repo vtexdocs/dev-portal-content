@@ -1,7 +1,7 @@
 ---
 title: "Changes in authentication requirements for external gift card providers"
 slug: "2024-05-27-changes-in-authentication-requirements-for-external-gift-card-providers"
-type: "added"
+type: "info"
 excerpt: "Authentication is required on requests to Gift Card Provider Protocol endpoints."
 createdAt: "2024-05-27T00:00:00.000Z"
 updatedAt: ""
