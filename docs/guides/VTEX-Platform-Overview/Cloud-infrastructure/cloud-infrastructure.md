@@ -17,7 +17,7 @@ A key element of our platform's architecture is the concept of multi-tenancy. Te
 
 The multi-tenant architecture diagram below illustrates how VTEX supports multiple accounts on a shared infrastructure:
 
-![Multi-tenant](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/cloud-infrastructure/multi-tenant.png)
+![Multi-tenant](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Cloud-infrastructure/multi-tenant.png)
 
 * **Tenants:** _Tenant 1_ and _Tenant n_ represent different accounts using the VTEX platform. Each tenant sends and receives requests and responses to and from the platform.
 * **Application Runtime (Kernel):** Atomic Requests are individual operations processed by the application runtime. Each tenant's requests are handled as atomic requests, ensuring isolation and security.
@@ -43,7 +43,7 @@ Given our demand aggregation capability due to SaaS multi-tenancy architecture, 
 
 Our core commerce capabilities consist of over 70 shared microservices. Unlike a monolithic solution of tightly integrated capabilities, microservices are assembled into distinct functional modules, such as Checkout, Promotions, Catalog, or Pricing services, each with their own responsibilities and APIs.
 
-![Microservices](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/cloud-infrastructure/microservices.png)
+![Microservices](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Cloud-infrastructure/microservices.png)
 
 Each microservice has its lifecycle independent of others, including its environment, [deployment](#deployment-strategy-and-change-management), and codebase, which allows us to use the most appropriate technologies and design patterns for each case. Teams can deploy services independently, enabling continuous improvement and faster updates. Each microservice is independently scalable as demand increases.
 
@@ -93,7 +93,7 @@ In a cloud-native architecture, optimizing content delivery involves leveraging 
 
 Check the diagram and the following explanation to learn more about our resilient layered approach to content delivery:
 
-![CDN](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/cloud-infrastructure/cdn.png)
+![CDN](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Cloud-infrastructure/cdn.png)
 
 1. VTEX maintains [CDN](#cdn) servers across multiple global regions. These servers deliver cached content from the closest location to the user, significantly reducing load times.
 2. In scenarios with no [cache](#cache) in the CDN, or during actions like placing an order, requests are directed to the [router](#router). The router's region (AWS zones) being distributed across multiple regions enhances our resilience. Other zones are not fallbacks, they operate concurrently, bolstering our resilience. Even in the event of a failure, it is nearly imperceptible to final customers. Each session loads information independently, not relying on a single server from a specific application. In case of critical scenarios, we are able to maintain performance for active sessions.
@@ -124,7 +124,7 @@ Leveraging technologies like [Clusters](https://aws.amazon.com/what-is/kubernete
 
 Our multi-tenant architecture ensures elastic scalability, allowing stores to easily adapt to changing business requirements and handle traffic peaks on events such as Black Friday. As your operation grows, our platform accommodates increased demand without compromising performance.
 
-![Scalability](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/cloud-infrastructure/scalability.jpg)
+![Scalability](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Cloud-infrastructure/scalability.jpg)
 
 ### Reliability
 
