@@ -10,7 +10,7 @@ Merchants need flexibility when receiving their payments according to the charac
 
 The VTEX platform allows payment providers to implement a feature that gives merchants the possibility to set a custom delay interval for automatic payment capture.
 
-> ⚠️ If you noticed that the fields indicated in this article are not available to your connector, please submit a request to VTEX to update the connector.
+> ⚠️ If you notice that the fields indicated in this article are not available to your connector, please submit a [request](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) to VTEX to update the connector.
 
 ## Setting up Custom Auto Capture
 
