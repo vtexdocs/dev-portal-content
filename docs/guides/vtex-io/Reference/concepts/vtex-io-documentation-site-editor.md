@@ -12,4 +12,4 @@ Site Editor works as a [CMS](https://developers.vtex.com/docs/guides/vtex-io-doc
 
 The Site Editor reflects the VTEX account's Store Theme. According to what was defined in the source code, the admin section displays the website storefront, enabling non-technical users to manage as desired the content, including components and their behavior, through a friendly interface.
 
-You can check out the available tutorials to support the Site Editor usage [here](https://help.vtex.com/tutorial/--531cHtUCUi3puRXNDmKziw).
+You can check out the available tutorials to support the Site Editor usage [here](https://help.vtex.com/tutorial/site-editor-overview--299Dbeb9mFczUTyNQ9xPe1).
