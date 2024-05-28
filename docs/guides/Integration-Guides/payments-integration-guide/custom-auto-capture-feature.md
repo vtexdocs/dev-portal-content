@@ -26,7 +26,7 @@ The **Payment capture** field is composed of the following options:
 - **Scheduled: Schedules The Automatic Capture**: By selecting this option, the field **Scheduled time frame in hours for automatic capture** will be displayed, and it must be completed with the period in which the automatic capture will take place. This period must be in accordance with the limits allowed by the payment provider.
 - **Deactivated: Not Automatically Captured**: Capture takes place only when the order is invoiced. If you select this behavior, it is important to pay attention to the invoicing time, as invoicing can exceed the capture time agreed with the payment provider and lead to the cancellation of the transaction.
 
-> ⚠️ Enable the `usesAutoSettleOptions` will override any other behavior available for the  `earlySecurityCapture`.
+> ⚠️ Enable the `usesAutoSettleOptions` will override any other behavior available for the `earlySecurityCapture` field.
 
 2. **autoSettleDelay**: provides a customized capture option for merchants based on hourly intervals. The "minimum" and "maximum" interval values must be defined by the provider in their manifest.
 
