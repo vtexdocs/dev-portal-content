@@ -31,7 +31,7 @@ In the endpoint response, the `taxConfiguration` object has the tax information 
     "taxConfiguration": {
             "url": "https://{accountName}.myvtex.com/tax-service/order-tax",
             "authorizationHeader": "99b9935b048dfd86893d0bf9gas628849",
-    	      "appId": "tradeincart",
+            "appId": "tradeincart",
             ...
     },
     "isMarketplaceResponsibleForTaxes": false,
@@ -62,12 +62,11 @@ Here is an example of the `taxConfiguration` object with the expected informatio
         "url": "{Tax provider URL}",
         "authorizationHeader": "{Tax provider authorization header}",
         "appId": "tradeincart",
+        "isMarketplaceResponsibleForTaxes": true,
         ...
   },
-  "isMarketplaceResponsibleForTaxes": true,
   ...
 }
-
 ```
 
 >⚠️ You must send the entire `orderForm` in the request body in the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
