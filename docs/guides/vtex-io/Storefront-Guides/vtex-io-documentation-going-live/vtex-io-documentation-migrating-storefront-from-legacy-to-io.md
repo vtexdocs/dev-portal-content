@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-10-25T18:41:04.323Z"
 updatedAt: "2022-12-13T20:17:44.182Z"
 ---
-VTEX provides different storefront solutions for you to choose from, according to your operation’s needs: [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) and [FastStore]([https://www.faststore.dev/](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore)). However, there are still stores running the [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj).
+VTEX provides different storefront solutions for you to choose from, according to your operation’s needs: [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) and [FastStore](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore). However, there are still stores running the [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj).
 
 > ℹ️ Learn more about [VTEX CMS options](https://help.vtex.com/tracks/cms--2YcpgIljVaLVQYMzxQbc3z).
 
