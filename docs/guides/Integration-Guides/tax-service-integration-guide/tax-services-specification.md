@@ -32,9 +32,7 @@ In the endpoint response, the `taxConfiguration` object has the tax information 
             "url": "https://{accountName}.myvtex.com/tax-service/order-tax",
             "authorizationHeader": "99b9935b048dfd86893d0bf9gas628849",
             "appId": "tradeincart",
-            ...
-    },
-    "isMarketplaceResponsibleForTaxes": false,
+            "isMarketplaceResponsibleForTaxes": false,
        ...
 }
     
