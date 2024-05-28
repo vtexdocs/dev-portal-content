@@ -37,7 +37,7 @@ The implementation of new features and updates can take place across the entire 
 
 With a single, shared code base and infrastructure, updates, bug fixes and maintenance tasks are centralized, reducing the time and effort required to keep the platform running smoothly across all tenants.
 
-Given our demand aggregation capability due to SaaS multi-tenancy architecture, VTEX is capable of handling traffic peaks smoothly. Learn more on the [Scalability](#scaling) section.
+Given our demand aggregation capability due to SaaS multi-tenancy architecture, VTEX is capable of handling traffic peaks smoothly. Learn more on the [Scalability](#scalability) section.
 
 ## Microservices
 
@@ -110,7 +110,7 @@ Our CDN plays a crucial role in caching delivered content, particularly static c
 
 #### Router
 
-A router is responsible for performing operations on the platform that are common to all services, such as throttling, as well as distributing requests to internal services, acting as the single entry point in the [VPC](#vpc). As the traffic orchestrator, the router ensures control in change management, resulting in lower risks with progressive rollouts and quick rollback in case of failures.
+A router is responsible for performing operations on the platform that are common to all services, such as throttling, as well as distributing requests to internal services, acting as the single entry point in the [VPC](#virtual-private-cloud-vpc). As the traffic orchestrator, the router ensures control in change management, resulting in lower risks with progressive rollouts and quick rollback in case of failures.
 
 #### Cache
 
