@@ -4,7 +4,7 @@ slug: "vtex-composable-components"
 hidden: false
 createdAt: "2024-05-29T10:00:00.000Z"
 updatedAt: ""
-excerpt: "Learn about the components VTEX offers to build a composable store"
+excerpt: "Learn about the components VTEX offers to build a composable store."
 ---
 
 Various components are available in a VTEX store to fulfill the multiple types of digital commerce businesses. This guide details each component of the platform and explains their composable features.
@@ -177,7 +177,7 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
 
 ## Platform interaction
 
-There are two ways for merchants to interact with a VTEX store: VTEX Admin and Developer Tooling.
+There are two ways for merchants to interact with a VTEX store: VTEX Admin and Developer Tooling. Learn more about their components in the following sections.
 
 ### VTEX Admin
 
@@ -285,7 +285,15 @@ Various tools to create new features for the VTEX platform. Development can be d
 
 ## Integrations
 
-Integrations allow external providers to provide their solutions for VTEX stores by leveraging [VTEX APIs](https://developers.vtex.com/docs/api-reference). Many integrations are readily available from our partner ecosystem, which merchants only need to install and configure before using. It is also possible to develop new integrations following our integration guides or to request from our [partners](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#implementation-partners). For more information about how integrations work, see our [Backend integrations overview](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/7euXDZR5CCnVFSrXyczIhu) and the **Integration Guides** section in our [Developer Portal](https://developers.vtex.com/docs/guides). The types of integrations available at VTEX are:
+Integrations allow external providers to integrate their solutions with VTEX stores by leveraging [VTEX APIs](https://developers.vtex.com/docs/api-reference). Many integrations are readily available from our partner ecosystem, which merchants only need to install and configure before using. It is also possible to develop new integrations following our integration guides or to request this service from our [partners](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#implementation-partners).
+
+For more information about how integrations work, see our [Backend integrations overview](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/7euXDZR5CCnVFSrXyczIhu) and the **Integration Guides** section in our [Developer Portal](https://developers.vtex.com/docs/guides).
+
+The types of integrations available at VTEX are:
+
+For more information about how integrations work, see our [Backend integrations overview](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/7euXDZR5CCnVFSrXyczIhu) and the **Integration Guides** section in our [Developer Portal](https://developers.vtex.com/docs/guides).
+
+The types of integrations available at VTEX are:
 
 <table>
   <tr>
@@ -364,7 +372,7 @@ Integrations allow external providers to provide their solutions for VTEX stores
   <tr>
     <td>Third-party Sellers</td>
     <td>For <a href="https://help.vtex.com/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w">sellers</a> not integrated with VTEX but want to sell their products on a VTEX marketplace, a custom connector can be developed for this integration. VTEX provides a set of APIs and instructions to facilitate the process. For more information, see our <a href="https://developers.vtex.com/docs/guides/external-seller-integration-guide">External Seller</a> integration guide.</td>
-    <td>Plug-and-play if the seller integration is implemented. Requires implementation otherwise.</td>
+    <td>Requires implementation</td>
   </tr>
 </table>
 
@@ -376,7 +384,7 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
   <tr>
     <td><b>Component</b></td>
     <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <td><a href="https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf">VTEX Sales App</a> is our main solution for <a href="https://help.vtex.com/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv">Unified Commerce</a> operations. It includes a mobile app that enables sales associates from physical stores to serve customers and complete the entire sales process from helping to choose the right products to payment and delivery.</td>
   </tr>
   <tr>
     <td>Sales App</td>
@@ -395,9 +403,9 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
   </tr>
   <tr>
     <td>Assisted Sales (SuiteShare)</td>
-    <td><a href="https://help.vtex.com/pt/tracks/suiteshare--khP0p8mjIYRIpvM7Cb4Zr">Assisted Sales (SuiteShare)</a>, previously known as Conversational Commerce, is a marketing platform for WhatsApp, helping to attract more clients, capture customer data, and integrate with sales tools. The platform allows for organizing customer support, integrating with major CRMs, and measuring results. The solution is based on the official WhatsApp API.</td>
+    <td><a href="https://help.vtex.com/pt/tracks/suiteshare--khP0p8mjIYRIpvM7Cb4Zr">Assisted Sales (SuiteShare)</a>, previously known as Conversational Commerce, is a marketing platform for WhatsApp, helping to attract more clients, capture customer data, and integrate with sales tools. The platform allows for organizing customer support, integrating with major CRMs, and measuring results. The solution is based on the <a href="https://developers.facebook.com/docs/whatsapp/cloud-api">official WhatsApp API</a>.</td>
     <td>Plug-and-play, upon subscription / additional costs</td>
-  </tr>
+      <a href="https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU">VTEX Pick and Pack</a> helps merchants manage the order fulfillment process, including picking, packing, and delivery, from physical stores and warehouses to customers' addresses or pickup points. It provides real-time tracking, route optimization, and data analytics to improve efficiency and performance. The solution consists of:
   <tr>
     <td>Pick and Pack</td>
     <td>
