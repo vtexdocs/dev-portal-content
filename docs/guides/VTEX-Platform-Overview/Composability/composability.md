@@ -19,7 +19,6 @@ In this guide, we will show VTEX’s approach to composability and provide an ov
 
 Our platform stands out for its composability and comprehensive features, offering a flexible and robust solution for digital commerce.
 
-
 VTEX provides **composability** by:
 
 - Allowing businesses to choose and customize services and integrations.
