@@ -409,7 +409,7 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
   <tr>
     <td>Pick and Pack</td>
     <td>
-      <a href="https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU">VTEX Pick and Pack</a> is a solution that helps merchants manage the order fulfillment process, including picking, packing, and delivery, from physical stores and warehouses to customers' addresses or pickup points. It provides real-time tracking, route optimization, and data analytics to improve efficiency and performance. The solution consists of:
+      <a href="https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU">VTEX Pick and Pack</a> helps merchants manage the order fulfillment process, including picking, packing, and delivery, from physical stores and warehouses to customers' addresses or pickup points. It provides real-time tracking, route optimization, and data analytics to improve efficiency and performance. The solution consists of:
       <ul>
         <li>Fulfillment: Admin app for store operators to manage orders in the store or warehouse.</li>
       </ul>
