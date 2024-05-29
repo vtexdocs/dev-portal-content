@@ -31,7 +31,7 @@ VTEX offers a **complete** platform through:
 - Multiple combinations of native services, extensions, integrations, and add-ons.
 - Development frameworks for creating custom solutions.
 
-To take full advantage of our composable capabilities, use VTEX as the commerce engine and combine it with integrations, extensions, and add-ons. The platform is flexible enough so merchants can change the store configuration over time. Start using as many native features as possible, then gradually extend and exchange for external solutions.
+To take full advantage of our composable capabilities, we recommend using VTEX as the commerce engine and combining it with integrations, extensions, and add-ons. The platform is flexible enough so merchants can change the store configuration over time. Start using as many native features as possible, then gradually extend and exchange for external solutions.
 
 Here are some features that demonstrate how VTEX is composable and complete:
 
