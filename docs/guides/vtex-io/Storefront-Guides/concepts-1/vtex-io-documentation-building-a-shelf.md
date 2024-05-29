@@ -3,7 +3,7 @@ title: "Building a Shelf"
 slug: "vtex-io-documentation-building-a-shelf"
 hidden: false
 createdAt: "2021-10-28T00:08:33.278Z"
-updatedAt: "2024-05-28T13:00:00.565Z"
+updatedAt: "2024-05-29T13:00:00.565Z"
 ---
 
 The Shelf component is a product list that helps you to build your own shop window and work on your store's visual merchandising.
@@ -58,16 +58,16 @@ Check out the instructions below for how it can be done.
 
   },
 
-  "product-summary.shelf#demo1": {
-    "children": [
-      "product-summary-name",
-      "product-summary-description",
-      "product-summary-image",
-      "product-summary-price",
-      "product-summary-sku-selector",
-      "product-summary-buy-button"
-    ]
-  }
++ "product-summary.shelf#demo1": {
++   "children": [
++    "product-summary-name",
++    "product-summary-description",
++    "product-summary-image",
++    "product-summary-price",
++    "product-summary-sku-selector",
++    "product-summary-buy-button"
++   ]
++ }
 }
 ```
 
@@ -81,30 +81,30 @@ Check out the instructions below for how it can be done.
 
   },
 
-   "product-summary.shelf#demo1": {
-    "children": [
-     "product-summary-name",
-     "product-summary-description",
-     "product-summary-image",
-     "product-summary-price",
-     "product-summary-sku-selector",
-     "product-summary-buy-button"
+    "product-summary.shelf#demo1": {
+     "children": [
+      "product-summary-name",
+      "product-summary-description",
+      "product-summary-image",
+      "product-summary-price",
+      "product-summary-sku-selector",
+      "product-summary-buy-button"
     ]
-   },
-
-   "slider-layout#demo-products": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": true,
-      "showNavigationArrows": "desktopOnly",
-      "blockClass": "carousel"
-    },
-    "children": ["rich-text#1", "rich-text#2", "rich-text#3"]
   },
+
++ "slider-layout#demo-products": {
++    "props": {
++      "itemsPerPage": {
++        "desktop": 1,
++        "tablet": 1,
++        "phone": 1
++      },
++      "infinite": true,
++      "showNavigationArrows": "desktopOnly",
++      "blockClass": "carousel"
++    },
++    "children": ["rich-text#1", "rich-text#2", "rich-text#3"]
++  },
 }
 ```
 
