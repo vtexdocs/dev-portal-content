@@ -37,7 +37,7 @@ VTEX does not sell, monetize, enrich or transfer any personal data of shoppers t
 
 All data on the platform has a life cycle from creation to deletion, including four phases: Creation, Storage, Processing and Disposal. This flow is illustrated below:
 
-![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Data-privacy/data-lifecycle.jpg)
+![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Data-privacy/data-lifecycle.png)
 
 1. **Creation:** Process for creating or collecting data.
 2. **Storage:** Data that will be reused is stored.
