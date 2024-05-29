@@ -7,7 +7,6 @@ updatedAt: "2024-05-21T10:10:00.000Z"
 excerpt: "Learn how each element is represented in VTEX reference architectures."
 seeAlso:
  - "/docs/guides/store-architecture"
- - "/docs/guides/store-architecture-use-cases"
 ---
 
 The VTEX reference architectures follow a common market methodology that segments the main agents involved in the solution in a simple, orderly, and logical manner. The structure of the design highlights the systems in blocks, colors, and objective descriptions of connections, facilitating visualization and understanding by all stakeholders.
