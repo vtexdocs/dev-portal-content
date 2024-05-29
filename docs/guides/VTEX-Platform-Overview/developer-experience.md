@@ -6,9 +6,7 @@ createdAt: "2024-05-24T10:18:55.338Z"
 updatedAt: "2024-05-24T10:18:55.338Z"
 excerpt: "Learn how our platform enhances the developer experience."
 seeAlso:
- - "/docs/guides/getting-started-with-storefront-solutions"
- - "/docs/guides/faststore-onboarding"
- - "/docs/guides/store-framework-onboarding"
+ - "/docs/guides/store-framework"
 ---
 
 This guide offers an overview of the tools and resources available to development teams. In the following sections, you will learn about the various features we provide for developers in our ecosystem and the opportunities for sharing knowledge and collaborating within the community.
