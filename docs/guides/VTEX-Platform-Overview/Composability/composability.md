@@ -19,16 +19,17 @@ In this guide, we will show VTEX’s approach to composability and provide an ov
 
 Our platform stands out for its composability and comprehensive features, offering a flexible and robust solution for digital commerce.
 
-VTEX is composable because:
 
-- Allows businesses to choose and customize services and integrations.
-- Supports both native services and third-party providers.
+VTEX provides **composability** by:
 
-VTEX is complete because:
+- Allowing businesses to choose and customize services and integrations.
+- Supporting native services and third-party providers.
 
-- Core modules support running a full ecommerce operation.
-- Combines native services, extensions, integrations, and add-ons.
-- Provides a development framework for creating custom solutions.
+VTEX offers a **complete** platform through:
+
+- Core modules that support running a full ecommerce operation.
+- Multiple combinations of native services, extensions, integrations, and add-ons.
+- Development frameworks for creating custom solutions.
 
 To take full advantage of our composable capabilities, use VTEX as the commerce engine and combine it with integrations, extensions, and add-ons. The platform is flexible enough so merchants can change the store configuration over time. Start using as many native features as possible, then gradually extend and exchange for external solutions.
 
