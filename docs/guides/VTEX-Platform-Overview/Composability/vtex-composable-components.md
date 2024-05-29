@@ -388,7 +388,7 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
   </tr>
   <tr>
     <td>Sales App</td>
-    <td><a href="https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf">VTEX Sales App</a> is our main solution for <a href="https://help.vtex.com/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv">Unified Commerce</a> operations. The solution includes a mobile app used by sales associates from physical stores. The app enables sales associates to serve customers and complete the entire sales process from helping to choose the right products to payment and delivery.</td>
+    <td><a href="https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf">VTEX Sales App</a> is our main solution for <a href="https://help.vtex.com/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv">Unified Commerce</a> operations. It includes a mobile app that enables sales associates from physical stores to serve customers and complete the entire sales process from helping to choose the right products to payment and delivery.</td>
     <td>Plug-and-play, upon subscription / additional costs</td>
   </tr>
   <tr>
