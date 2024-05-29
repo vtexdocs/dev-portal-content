@@ -91,12 +91,12 @@ C((appKey-x))
 end
 
 subgraph Role
-D(Order Details
-&lpar;Custom role&rpar;)
-E(OMS - Read only
-&lpar;Predefined role&rpar;)
-F(Logistics - Read only
-&lpar;Predefined role&rpar;)
+D["Order Details
+(Custom role)"]
+E["OMS - Read only
+(Predefined role)"]
+F["Logistics - Read only
+(Predefined role)"]
 end
 
 subgraph Resource
