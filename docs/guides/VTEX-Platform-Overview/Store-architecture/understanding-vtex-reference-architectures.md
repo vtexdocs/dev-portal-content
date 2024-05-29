@@ -7,7 +7,6 @@ updatedAt: "2024-05-21T10:10:00.000Z"
 excerpt: "Learn how each element is represented in VTEX reference architectures."
 seeAlso:
  - "/docs/guides/store-architecture"
- - "/docs/guides/store-architecture-use-cases"
 ---
 
 The VTEX reference architectures follow a common market methodology that segments the main agents involved in the solution in a simple, orderly, and logical manner. The structure of the design highlights the systems in blocks, colors, and objective descriptions of connections, facilitating visualization and understanding by all stakeholders.
@@ -72,15 +71,11 @@ Within the main block, there is the **VTEX IO - Apps** block, which contains the
 
 Also within the VTEX IO - Apps block, you will find the [VTEX App](https://developers.vtex.com/docs/vtex-io-apps), which are plug-and-play solutions developed and maintained by VTEX.
 
-To learn what you can accomplish with each microservice on the VTEX Platform, check out our [Composability](https://developers.vtex.com/docs/guides/composability-guide) guide.
-
 ### Third-Party
 
 Third-party systems or modules executed and maintained externally to VTEX include payment providers, data monitoring systems, and customization services. According to business needs, third-party systems or modules could replace a native VTEX feature or provide a completely new one.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/third-party.jpg)
-
-To learn how to extend the cababilites of the VTEX Platform, check out our [Extensibility](https://developers.vtex.com/docs/guides/extensibility-guide) guide.
 
 ### Back office
 
