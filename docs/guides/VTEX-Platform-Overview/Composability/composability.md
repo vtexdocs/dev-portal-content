@@ -55,7 +55,7 @@ At VTEX, merchants can choose how composable their stores will be. They can be c
 
 The most appropriate model will depend on the level of digital maturity and specialization needed for each business. In these cases, merchants use VTEX as the commerce engine and choose which components of the commerce experience will be decoupled.
 
-It should also be noted that choosing a case or set of features at the beginning does not exclude the possibility of changing the architecture later. Adding new features and decoupling functions with third-party integrations is possible over time.
+Choosing a case or set of features at the beginning does not exclude the possibility of changing the architecture later. Adding new features and decoupling functions with third-party integrations is possible over time.
 
 Learn more about each model in the following sections.
 
