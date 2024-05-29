@@ -4,7 +4,7 @@ slug: "interactive-marchitecture-tool"
 hidden: false
 createdAt: "2024-05-29T10:00:00.000Z"
 updatedAt: ""
-excerpt: "Learn how to use the Interactive Marchitecture tool and simulate a composable VTEX store architecture"
+excerpt: "Learn how to use the Interactive Marchitecture tool and simulate a composable VTEX store architecture."
 ---
 
 The Interactive Marchitecture tool allows you to simulate the store architecture interactively by choosing which services and add-ons will be used, along with third-party providers for integrations.
