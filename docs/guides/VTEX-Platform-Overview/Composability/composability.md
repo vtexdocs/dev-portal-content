@@ -4,7 +4,7 @@ slug: "composability"
 hidden: false
 createdAt: "2024-05-29T10:00:00.000Z"
 updatedAt: ""
-excerpt: "Understand what makes VTEX a Composable and Complete ecommerce solution"
+excerpt: "Understand what makes VTEX a Composable and Complete ecommerce solution."
 ---
 
 Composability in ecommerce allows merchants to build and customize online shopping experiences by combining modular components or services. A composable commerce platform consists of loosely coupled microservices, enabling merchants to:
