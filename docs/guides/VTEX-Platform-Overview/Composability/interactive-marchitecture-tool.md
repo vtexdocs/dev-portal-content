@@ -36,4 +36,4 @@ After selecting all the desired options for your store planning, you should have
 
 ![Interactive Marchitecture tool filled](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Composability/marchitecture-filled.png)
 
-> ℹ️ If you want to reset your architecture planning, click on the <i class="fa fa-refresh"></i> 🔃 refresh button on the top right corner or refresh the page in your browser.
+> ℹ️ If you want to reset your architecture planning, click on the 🔃 refresh button on the top right corner or refresh the page in your browser.
