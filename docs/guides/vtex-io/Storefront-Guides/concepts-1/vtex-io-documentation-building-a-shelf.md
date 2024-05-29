@@ -10,9 +10,9 @@ The Shelf component is a product list that helps you to build your own shop wind
 
 ![shelf](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-shelf-0.png)
 
-Aiming to display a flexible product list in your home page, the Shelf component is configured using the [Product Summary List](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/docs/guides/vtex-product-summary/), and the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-slider-layout/) blocks, which can be combined to create flexible and dynamic product lists.
+To create a product list, you can configure the Shelf component to use the [Product Summary List](https://developers.vtex.com/docs/apps/vtex.product-summary/productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/docs/apps/vtex.product-summary), and the [Slider Layout](https://developers.vtex.com/docs/apps/vtex.slider-layout) blocks.
 
->ℹ️ Since these three blocks come from the [**Product Summary**](https://github.com/vtex-apps/product-summary) and the [**Slider-Layout**](https://github.com/vtex-apps/slider-layout) app, it is strongly recommended to check out each documentation in order to understand how the blocks work as well as the props available to set their behavior and consequently the Shelf behavior.
+>ℹ️ Refer to the [**Product Summary**](https://developers.vtex.com/docs/apps/vtex.product-summary) and [**Slider-Layout**](https://developers.vtex.com/docs/apps/vtex.slider-layout) documentation to explore the available props for configuring their behavior. Use this information to adjust the Shelf behavior accordingly.
 
 Check out the instructions below for how it can be done.
 
