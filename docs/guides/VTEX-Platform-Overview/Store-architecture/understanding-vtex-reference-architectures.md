@@ -72,15 +72,11 @@ Within the main block, there is the **VTEX IO - Apps** block, which contains the
 
 Also within the VTEX IO - Apps block, you will find the [VTEX App](https://developers.vtex.com/docs/vtex-io-apps), which are plug-and-play solutions developed and maintained by VTEX.
 
-To learn what you can accomplish with each microservice on the VTEX Platform, check out our [Composability](https://developers.vtex.com/docs/guides/composability-guide) guide.
-
 ### Third-Party
 
 Third-party systems or modules executed and maintained externally to VTEX include payment providers, data monitoring systems, and customization services. According to business needs, third-party systems or modules could replace a native VTEX feature or provide a completely new one.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Store-architecture/third-party.jpg)
-
-To learn how to extend the cababilites of the VTEX Platform, check out our [Extensibility](https://developers.vtex.com/docs/guides/extensibility-guide) guide.
 
 ### Back office
 
