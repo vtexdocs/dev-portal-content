@@ -64,8 +64,8 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
   </tr>
   <tr>
     <td>Channel Management</td>
-    <td>At VTEX, we have <a href="https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3">Unified Commerce Strategies</a> to deal with different sales channels. Merchants can sell through multiple channels including directly from their website, physical stores, Sales App, and more. This strategy allows all the data (order processing, payment transactions, etc.) to be shared between channels and accessible from the Admin. Besides that, order processing and fulfillment can be mixed between channels. For instance, an ecommerce sale can have the option to pick up specific items in the physical store, or a physical store sale can be delivered to the customer’s address.<br><br>
-      Among the available sales channel options, we have the <a href="https://help.vtex.com/en/tutorial/marketplace-strategies-at-vtex--tutorials_402">Marketplace Strategies</a>, which allows merchants to sell products on marketplaces, or for their store to become a marketplace and sell products from sellers.</td>
+    <td>VTEX supports <a href="https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3">Unified Commerce Strategies</a> to deal with different sales channels. Merchants can sell through multiple channels including directly from their website, physical stores, Sales App, and more. This strategy allows all the data (order processing, payment transactions, etc.) to be shared between channels and accessible from the Admin. Besides that, order processing and fulfillment can be mixed between channels. For instance, an ecommerce sale can have the option to pick up specific items in the physical store, or a physical store sale can be delivered to the customer’s address.<br><br>
+      Among the available sales channel options, we support <a href="https://help.vtex.com/en/tutorial/marketplace-strategies-at-vtex--tutorials_402">Marketplace Strategies</a>, which allows merchants to sell products on marketplaces, or for their store to become a marketplace and sell products from sellers.</td>
     <td>Built-in</td>
   </tr>
   <tr>
@@ -346,9 +346,9 @@ The types of integrations available at VTEX are:
   </tr>
   <tr>
     <td>Search & Personalization</td>
-    <td>By default, VTEX offers <a href="https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG">Intelligent Search</a> as a search engine, but merchants can use other search solutions instead. Our <a href="https://developers.vtex.com/docs/guides/search-integration-guide">Search Protocol</a> enables third-party search solutions to integrate with VTEX. The protocol allows integration with the minimum amount of work and VTEX customers to easily switch between search providers without changes in the storefront.<br><br>
+    <td>By default, VTEX offers <a href="https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG">Intelligent Search</a> as a search engine, but merchants can use other search solutions instead. Our <a href="https://developers.vtex.com/docs/guides/search-integration-guide">Search Protocol</a> enables third-party search solutions to integrate with VTEX. Stores can easily switch between search providers without changes in the storefront.<br><br>
       At its core, the Search Protocol is a set of definitions and GraphQL schemas that allows IO apps to serve ecommerce search results that can be used by the <a href="https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework">VTEX Store Framework</a>.<br><br>
-      For easy integration of already implemented solutions, you can find search provider apps on the <a href="https://apps.vtex.com">App Store</a>.</td>
+      For plug-and-play implementation of pre-integrated solutions, you can find search provider apps on the <a href="https://apps.vtex.com">App Store</a>.</td>
     <td>Plug-and-play if the search integration is implemented. Requires implementation otherwise.</td>
   </tr>
   <tr>
@@ -384,11 +384,11 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
   <tr>
     <td><b>Component</b></td>
     <td><b>Description</b></td>
-    <td><a href="https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf">VTEX Sales App</a> is our main solution for <a href="https://help.vtex.com/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv">Unified Commerce</a> operations. It includes a mobile app that enables sales associates from physical stores to serve customers and complete the entire sales process from helping to choose the right products to payment and delivery.</td>
+    <td><b>Type</b></td>
   </tr>
   <tr>
     <td>Sales App</td>
-    <td><a href="https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf">VTEX Sales App</a> is our main solution for <a href="https://help.vtex.com/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv">Unified Commerce</a> operations. The solution includes a mobile app used by sales associates from physical stores. The app enables sales associates to serve customers and complete the entire sales process from helping to choose the right products to payment and delivery.</td>
+    <td><a href="https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf">VTEX Sales App</a> is our main solution for <a href="https://help.vtex.com/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv">Unified Commerce</a> operations. It includes a mobile app that enables sales associates from physical stores to serve customers and complete the entire sales process from helping to choose the right products to payment and delivery.</td>
     <td>Plug-and-play, upon subscription / additional costs</td>
   </tr>
   <tr>

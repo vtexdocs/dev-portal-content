@@ -52,9 +52,9 @@ At VTEX, merchants can choose how composable their stores will be. They can be c
 
 ![Pragmatic composability](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Composability/pragmatic-composability.png)
 
-The most appropriate model will depend on the level of digital maturity and specialization needed for each business. In these cases, merchants use VTEX as the commerce engine and choose which components of the commerce experience will be decoupled.
-
-Choosing a case or set of features at the beginning does not exclude the possibility of changing the architecture later. Adding new features and decoupling functions with third-party integrations is possible over time.
+> ℹ️ The most appropriate model will depend on the level of digital maturity and specialization needed for each business. In these cases, merchants use VTEX as the commerce engine and choose which components of the commerce experience will be decoupled.
+>
+> Choosing a case or set of features at the beginning does not exclude the possibility of changing the architecture later. Adding new features and decoupling functions with third-party integrations is possible over time.
 
 Learn more about each model in the following sections.
 
@@ -82,4 +82,4 @@ For maximum composability and flexibility, businesses with a mature development 
 
 Projects of this kind may take years to implement, but merchants can progressively integrate each module. VTEX has the advantage of having native solutions for each module to achieve a faster time to market.
 
-> ℹ️ Although we identify these four cases, pragmatic composability allows for many other combinations of composing your architecture.
+> ℹ️ Although we identify these four cases, pragmatic composability allows for many other combinations of composing your architecture. For details of types of architectures in specific scenarios, see our [Store architecture](https://developers.vtex.com/docs/guides/store-architecture) guide.
