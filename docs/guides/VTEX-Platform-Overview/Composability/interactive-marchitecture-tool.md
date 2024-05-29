@@ -11,7 +11,7 @@ The [Interactive Marchitecture tool](https://assets.vtex.com/4524045/) allows yo
 
 ![Interactive Marchitecture tool](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Composability/interactive-marchitecture-tool.png)
 
-By opening the [Interactive Marchitecture tool](https://assets.vtex.com/4524045/), you first have to choose the desired region to plan the store architecture. The region selection defines the available partners for third-party integrations.
+When you open the [Interactive Marchitecture tool](https://assets.vtex.com/4524045/), you first have to choose the desired region to plan the store architecture. The region selection defines the available partners for third-party integrations.
 
 With the tool open, you can access all the services, add-ons, and integrations described in the [VTEX Composable Components](https://developers.vtex.com/docs/guides/vtex-composable-components) guide. You can identify each component type by its color:
 
