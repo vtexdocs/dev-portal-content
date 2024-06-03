@@ -47,7 +47,7 @@ To learn how to manage workspaces effectively in your projects, check out the [B
 
 #### A/B Tests
 
-After [publishing your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app), it is possible to run an [A/B test](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) to compare traffic and choose the workspace that performs better in terms of user engagement and conversions.
+After [installing your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace), it is possible to run an [A/B test](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) to compare traffic and choose the workspace that performs better in terms of user engagement and conversions.
 
 #### Builders
 
