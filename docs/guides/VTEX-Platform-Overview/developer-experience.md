@@ -3,12 +3,10 @@ title: "Developer experience"
 slug: "developer-experience"
 hidden: false
 createdAt: "2024-05-24T10:18:55.338Z"
-updatedAt: "2024-05-24T10:18:55.338Z"
+updatedAt: "2024-06-03T10:18:55.338Z"
 excerpt: "Learn how our platform enhances the developer experience."
 seeAlso:
  - "/docs/guides/getting-started-with-storefront-solutions"
- - "/docs/guides/faststore-onboarding"
- - "/docs/guides/store-framework-onboarding"
 ---
 
 This guide offers an overview of the tools and resources available to development teams. In the following sections, you will learn about the various features we provide for developers in our ecosystem and the opportunities for sharing knowledge and collaborating within the community.
@@ -49,7 +47,7 @@ To learn how to manage workspaces effectively in your projects, check out the [B
 
 #### A/B Tests
 
-After [linking your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) in a production workspace, it is possible to run an [A/B test](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) to compare traffic and choose the workspace that performs better in terms of user engagement and conversions.
+After [installing your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace), it is possible to run an [A/B test](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing) to compare traffic and choose the workspace that performs better in terms of user engagement and conversions.
 
 #### Builders
 
@@ -107,11 +105,9 @@ Once a new app has been developed, it must be deployed to the VTEX IO production
 - [**Deploying**](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version): Update the app version across all accounts where the app is installed.
 - [**Promoting**](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master): Optional step to promote the production workspace to master.
 
->ℹ Check [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) for more details on this flow.
+Check [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) for more details on this flow.
 
 >ℹ️ To learn about app versioning in VTEX IO, refer to [SemVer standard](https://semver.org/) and our [Understanding app versioning](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) article.
-
-Our deployment process integrates an automated Continuous Integration and Continuous Delivery (CI/CD) framework, facilitating seamless building and testing whenever changes occur in the source code. Through this CI/CD pipeline, we ensure swift and dependable delivery of new features and updates, while maintaining high standards of code quality.
 
 ## Storefront development
 
