@@ -291,10 +291,6 @@ For more information about how integrations work, see our [Backend integrations 
 
 The types of integrations available at VTEX are:
 
-For more information about how integrations work, see our [Backend integrations overview](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/7euXDZR5CCnVFSrXyczIhu) and the **Integration Guides** section in our [Developer Portal](https://developers.vtex.com/docs/guides).
-
-The types of integrations available at VTEX are:
-
 <table>
   <tr>
     <td><b>Component</b></td>
@@ -405,7 +401,6 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
     <td>Assisted Sales (SuiteShare)</td>
     <td><a href="https://help.vtex.com/pt/tracks/suiteshare--khP0p8mjIYRIpvM7Cb4Zr">Assisted Sales (SuiteShare)</a>, previously known as Conversational Commerce, is a marketing platform for WhatsApp, helping to attract more clients, capture customer data, and integrate with sales tools. The platform allows for organizing customer support, integrating with major CRMs, and measuring results. The solution is based on the <a href="https://developers.facebook.com/docs/whatsapp/cloud-api">official WhatsApp API</a>.</td>
     <td>Plug-and-play, upon subscription / additional costs</td>
-      <a href="https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU">VTEX Pick and Pack</a> helps merchants manage the order fulfillment process, including picking, packing, and delivery, from physical stores and warehouses to customers' addresses or pickup points. It provides real-time tracking, route optimization, and data analytics to improve efficiency and performance. The solution consists of:
   <tr>
     <td>Pick and Pack</td>
     <td>
