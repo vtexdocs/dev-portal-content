@@ -401,6 +401,7 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
     <td>Assisted Sales (SuiteShare)</td>
     <td><a href="https://help.vtex.com/pt/tracks/suiteshare--khP0p8mjIYRIpvM7Cb4Zr">Assisted Sales (SuiteShare)</a>, previously known as Conversational Commerce, is a marketing platform for WhatsApp, helping to attract more clients, capture customer data, and integrate with sales tools. The platform allows for organizing customer support, integrating with major CRMs, and measuring results. The solution is based on the <a href="https://developers.facebook.com/docs/whatsapp/cloud-api">official WhatsApp API</a>.</td>
     <td>Plug-and-play, upon subscription / additional costs</td>
+  </tr>
   <tr>
     <td>Pick and Pack</td>
     <td>
