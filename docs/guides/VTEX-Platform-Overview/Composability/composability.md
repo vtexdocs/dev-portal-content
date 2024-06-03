@@ -43,6 +43,8 @@ Here are some features that demonstrate how VTEX is composable and complete:
 - [Multi-tenant infrastructure](https://developers.vtex.com/docs/guides/cloud-infrastructure#saas-multi-tenancy)
 - [Auto-scalable servers](https://developers.vtex.com/docs/guides/cloud-infrastructure#scalability)
 - [Extensible VTEX IO apps](https://apps.vtex.com/)
+- [Documented integration protocols to guide and accelerate implementation](https://developers.vtex.com/docs/guides/erp-integration-guide)
+- [Customizable and extensible data models](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw)
 
 ## Pragmatic Composability
 
@@ -60,7 +62,7 @@ Learn more about each model in the following sections.
 
 ### Complete Platform
 
-The complete platform case uses mostly VTEX's native features including frontend application and infrastructure, [CMS (Content Management System)](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC), [Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG), [commerce modules](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/75MX4aorniD0BYAB8Nwbo7), and [APIs](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis). This option often offers the quickest time to market and the lowest total cost of ownership. VTEX takes care of all maintenance and updates of its native modules, while also allowing frontend and backend customizations via [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) if merchants wish to create them.
+The complete platform case uses mostly VTEX's native features including frontend application and infrastructure, [CMS (Content Management System)](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC), [Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG), [commerce modules](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/75MX4aorniD0BYAB8Nwbo7), and [APIs](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis). This option often offers the quickest time to market and the lowest total cost of ownership. VTEX takes care of all maintenance and updates of its native modules, while also allowing frontend and backend customizations via [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) if merchants wish to create them. Besides that, there is no time spent configuring or implementing integrations and no additional cost from third-party providers.
 
 ### Headless Commerce
 
