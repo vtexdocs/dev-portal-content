@@ -35,7 +35,7 @@ Each storefront solution offers varying levels of composability and extensibilit
 
 |     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
-| **GitHub integration** | ✅   | ✅   | ❌   |
+| **GitHub WebOps workflow** | ✅   | ❌  | ❌   |
 | **Support to VTEX IO backend apps** | ✅   | ✅   | ❌   |
 | **Support to VTEX IO frontend apps** | ❌   | ✅   | ❌   |
 | **Native support to cross-border and multi-language stores** | ❌   | ✅   | ❌   |
