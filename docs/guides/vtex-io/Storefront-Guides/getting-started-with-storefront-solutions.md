@@ -4,7 +4,7 @@ slug: "getting-started-with-storefront-solutions"
 hidden: false
 excerpt: "Learn about the main differences between VTEX storefront solutions"
 createdAt: "2024-05-20t12:59:27.687z"
-updatedAt: "2024-05-29t16:59:27.687z"
+updatedAt: "2024-06-03t10:49:27.000z"
 ---
 
 The VTEX platform offers three options for storefront development, each with distinct characteristics to meet the needs of our clients:
@@ -36,7 +36,6 @@ Each storefront solution offers varying levels of composability and extensibilit
 |     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
 | **GitHub WebOps workflow** | ✅   | ❌  | ❌   |
-| **Support to VTEX IO backend apps** | ✅   | ✅   | ❌   |
 | **Support to VTEX IO frontend apps** | ❌   | ✅   | ❌   |
 | **Native support to cross-border and multi-language stores** | ❌   | ✅   | ❌   |
 | **Native support to B2B capabilities** | ❌   | ✅   | ❌   |
