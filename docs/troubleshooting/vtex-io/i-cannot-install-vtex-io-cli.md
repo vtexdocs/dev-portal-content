@@ -33,7 +33,7 @@ To solve this problem, follow these steps:
   2. Run the following command in the terminal:
 
   ```sh
- 	ln -s /usr/local/Cellar/vtex/2.119.2/libexec /usr/local/Cellar/vtex/2.119.2/libexec/node_modules/vtex
+  ln -s /usr/local/Cellar/vtex/2.119.2/libexec /usr/local/Cellar/vtex/2.119.2/libexec/node_modules/vtex
   ```
 
 - Linux:
@@ -42,7 +42,7 @@ To solve this problem, follow these steps:
 
   ```sh
   ln -s /usr/local/lib/vtex /usr/local/lib/vtex/node_modules/vtex
- 	```
+  ```
 
 - Windows
   1. Run the `yarn global bin` command in your terminal.
