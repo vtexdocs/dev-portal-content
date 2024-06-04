@@ -46,25 +46,25 @@ The Multilevel Omnichannel Inventory also affects an order's flow. The order flo
     <tr>
         <td>VTEX store is the <strong>source</strong> of an order →</td>
         <td><a
-                href="https://help.vtex.com/en/tutorial/fluxo-e-status-de-pedidos--tutorials_196#marketplace-flow">Marketplaceorder</a>
+                href="https://help.vtex.com/en/tutorial/fluxo-e-status-de-pedidos--tutorials_196#marketplace-flow">Marketplace order</a>
             with Checkout Workflow.</td>
     </tr>
     <tr>
         <td>VTEX store is <strong>intermediate</strong> in the order flow →</td>
         <td><a
-                href="https://help.vtex.com/en/tutorial/fluxo-e-status-de-pedidos--tutorials_196#chain-flow">Chainorder</a>
+                href="https://help.vtex.com/en/tutorial/fluxo-e-status-de-pedidos--tutorials_196#chain-flow">Chain order</a>
             with Chain Workflow.</td>
     </tr>
     <tr>
         <td>VTEX store is the <strong>destination</strong> of an order →</td>
         <td><a
-                href="https://help.vtex.com/en/tutorial/fluxo-e-status-de-pedidos--tutorials_196#seller-flow">Sellerorder</a>
+                href="https://help.vtex.com/en/tutorial/fluxo-e-status-de-pedidos--tutorials_196#seller-flow">Seller order</a>
             with Fulfillment Workflow.</td>
     </tr>
     <tr>
         <td>VTEX store is both the <strong>source</strong> and the <strong>destination</strong> →</td>
         <td><a
-                href="https://help.vtex.com/en/tutorial/fluxo-e-status-de-pedidos--tutorials_196#complete-flow">Completeorder</a>
+                href="https://help.vtex.com/en/tutorial/fluxo-e-status-de-pedidos--tutorials_196#complete-flow">Complete order</a>
             flow with Fulfillment workflow.</td>
     </tr>
 </table>
@@ -94,21 +94,15 @@ The setup for Multilevel Omnichannel Inventory must be made by the marketplace [
 To configure Multilevel Omnichannel Inventory via REST API:
 
 1. The marketplace must call the endpoint [Configure Seller Account](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/seller-register/pvt/sellers).
-
 2. Fill the `fulfillmentEndpoint` field with the seller's checkout endpoint, following the example below:
 
-```
-https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{affiliateId}}&sc={{salesChannel
-```
+   ```
+   https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{affiliateId}}&sc={{salesChannel}}
+   ```
+3. Replace the placeholders with the following values:
 
-3. Substitute the placeholders for the following values:
+   - **sellerAccount**: [Account name](https://help.vtex.com/pt/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC) of the seller in VTEX.
+   - **affiliateId**: 3-digit [afiliate](https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0) identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
+   - **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
 
-- **sellerAccount**: [account name](https://help.vtex.com/pt/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC) of the seller in VTEX.
-
-- **affiliateId**: the 3-digit [afiliate](https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0) identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
-
-- **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
-
------
-
-Checkout the [API Integration](https://developers.vtex.com/docs/guides/api-integration) article to learn how to  external marketplace integrations, and headless architectures can make Multilevel omnichannel inventory available for their sellers.
+> Check out the [Multilevel Omnichannel Inventory API integration](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory-api-integration) guide to learn how to  external marketplace integrations, and headless architectures can make Multilevel omnichannel inventory available for their sellers.
