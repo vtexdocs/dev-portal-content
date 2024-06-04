@@ -99,6 +99,7 @@ To configure Multilevel Omnichannel Inventory via REST API:
    ```
    https://{{sellerAccount}}.vtexcommercestable.com.br/api/checkout?affiliateid={{affiliateId}}&sc={{salesChannel}}
    ```
+
 3. Replace the placeholders with the following values:
 
    - **sellerAccount**: [Account name](https://help.vtex.com/pt/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC) of the seller in VTEX.
