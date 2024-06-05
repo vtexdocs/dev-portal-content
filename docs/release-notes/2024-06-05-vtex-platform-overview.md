@@ -3,7 +3,7 @@ title: "VTEX Platform Overview: a new set of technical guides"
 slug: "2024-06-05-vtex-platform-overview"
 type: info
 createdAt: "2024-06-03T10:45:55.338Z"
-updatedAt: "2024-06-03T10:45:55.338Z"
+updatedAt: "2024-06-05T10:45:55.338Z"
 hidden: false
 excerpt: "Discover how our engineering decisions can leverage your business with the VTEX Platform Overview documentation."
 ---
@@ -22,5 +22,3 @@ The **VTEX Platform Overview** is a comprehensive new set of guides that showcas
 | [**Composability**](https://developers.vtex.com/docs/guides/composability) | Presents how our platform enables the creation of customized solutions tailored to specific business needs. |
 | [**Store Architecture**](https://developers.vtex.com/docs/guides/store-architecture) | Introduces VTEX reference architectures designed to fit different business models. |
 | [**Developer experience**](https://developers.vtex.com/docs/guides/developer-experience) | Explores the key tools we offer to enhance the developer experience. |
-
-For more details about each guide and the reason behind creating this collection, see the [announcement in the Help Center](LINK).
