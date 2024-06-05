@@ -9,6 +9,7 @@ excerpt: "Discover how our engineering decisions can leverage your business with
 ---
 
 We have published a new collection of guides called [VTEX Platform Overview](https://developers.vtex.com/docs/guides/vtex-platform-overview) to streamline access to technical information about the platform and help you discover how VTEX can meet your business and technical requirements.
+
 ## What is the VTEX Platform Overview?
 
 The **VTEX Platform Overview** is a comprehensive new set of guides that showcase the essential technical aspects of the VTEX platform. See below the content included in this collection:
@@ -21,6 +22,5 @@ The **VTEX Platform Overview** is a comprehensive new set of guides that showcas
 | [**Composability**](https://developers.vtex.com/docs/guides/composability) | Presents how our platform enables the creation of customized solutions tailored to specific business needs. |
 | [**Store Architecture**](https://developers.vtex.com/docs/guides/store-architecture) | Introduces VTEX reference architectures designed to fit different business models. |
 | [**Developer experience**](https://developers.vtex.com/docs/guides/developer-experience) | Explores the key tools we offer to enhance the developer experience. |
-
 
 For more details about each guide and the reason behind creating this collection, see the [announcement in the Help Center](LINK).
