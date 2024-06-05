@@ -32,7 +32,7 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
   <tr>
     <th style="width: 120px;"><b>Component</b></th>
     <th><b>Description</b></th>
-    <th style="width: 130px;"><b>Type</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
  </thead>
  <tbody>
@@ -91,7 +91,7 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
   <tr>
     <th style="width: 120px;"><b>Component</b></th>
     <th><b>Description</b></th>
-    <th style="width: 130px;"><b>Type</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
  </thead>
  <tbody>
@@ -126,7 +126,7 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
   <tr>
     <th style="width: 120px;"><b>Component</b></th>
     <th><b>Description</b></th>
-    <th style="width: 130px;"><b>Type</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
  </thead>
  <tbody>
@@ -159,7 +159,7 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
   <tr>
     <th style="width: 120px;"><b>Component</b></th>
     <th><b>Description</b></th>
-    <th style="width: 130px;"><b>Type</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
  </thead>
  <tbody>
@@ -204,7 +204,7 @@ A panel to manage the entire digital commerce experience in one place with a com
   <tr>
     <th style="width: 120px;"><b>Component</b></th>
     <th><b>Description</b></th>
-    <th style="width: 130px;"><b>Type</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
  </thead>
  <tbody>
@@ -268,7 +268,7 @@ Various tools to create new features for the VTEX platform. Development can be d
   <tr>
     <th style="width: 120px;"><b>Component</b></th>
     <th><b>Description</b></th>
-    <th style="width: 130px;"><b>Type</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
  </thead>
  <tbody>
@@ -320,7 +320,7 @@ The types of integrations available at VTEX are:
   <tr>
     <th style="width: 120px;"><b>Component</b></th>
     <th><b>Description</b></th>
-    <th style="width: 130px;"><b>Type</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
  </thead>
  <tbody>
@@ -409,7 +409,7 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
   <tr>
     <th style="width: 120px;"><b>Component</b></th>
     <th><b>Description</b></th>
-    <th style="width: 130px;"><b>Type</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
  </thead>
  <tbody>
