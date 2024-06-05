@@ -28,11 +28,14 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
 ### Digital Commerce
 
 <table>
+ <thead>
   <tr>
-    <td><b>Component</b></td>
-    <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <th style="width: 120px;"><b>Component</b></th>
+    <th><b>Description</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td>Catalog</td>
     <td>In the <a href="https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/75MX4aorniD0BYAB8Nwbo7#catalog">Catalog</a>, merchants can manage the category tree (departments, categories, and subcategories), brands, products, SKUs, and specifications. Merchants can use this module natively through the Admin or <a href="https://developers.vtex.com/docs/api-reference/catalog-api">Catalog API</a>, import the data from a spreadsheet, or integrate it with an external back office tool. For more details, see <b>ERP</b> and <b>PIM/CPQ</b> in <a href="#integrations">Integrations</a>.</td>
@@ -78,16 +81,20 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
     <td><a href="https://developers.vtex.com/docs/apps/vtex.b2b-quotes">B2B Quotes & Carts</a> is a <a href="https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app">VTEX IO app</a> from the <a href="https://developers.vtex.com/docs/apps/vtex.b2b-suite">B2B Suite</a>. It allows B2B users to create quotes and saved carts, which are then shared with the other members of their organization. This enables price negotiations between them and the store’s sales representatives, and order approval flows within their organization.</td>
     <td>Plug-and-play</td>
   </tr>
+ </tbody>
 </table>
 
 ### Experience Management
 
 <table>
+ <thead>
   <tr>
-    <td><b>Component</b></td>
-    <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <th style="width: 120px;"><b>Component</b></th>
+    <th><b>Description</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td>Headless CMS</td>
     <td><a href="https://developers.vtex.com/docs/guides/faststore/headless-cms-overview">Headless CMS</a> is part of our <a href="https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore">FastStore toolkit</a>. It allows merchants to store content in a decoupled data layer and deliver it as structured data to a VTEX store with FastStore via an API.</td>
@@ -109,16 +116,20 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
     <td>Progressive Web Application (PWA) is natively available for every VTEX IO store. Merchants can configure a push notification to install the store’s PWA on the customer’s device. For more details, see <a href="https://help.vtex.com/en/tutorial/enabling-pwa-push-notifications-in-your-store--1be3ZPhbsgZSbE7h5H46pG">Enabling PWA push notifications in your store</a>.</td>
     <td>Built-in</td>
   </tr>
+ </tbody>
 </table>
 
 ### Distributed Order Management
 
 <table>
+ <thead>
   <tr>
-    <td><b>Component</b></td>
-    <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <th style="width: 120px;"><b>Component</b></th>
+    <th><b>Description</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td>Inventory Management</td>
     <td><a href="https://help.vtex.com/en/tutorial/managing-stock-items--tutorials_139">Inventory management</a> is a page in the Admin where merchants can view SKU (Stock Keeping Unit) inventory data and define SKU quantities in <a href="https://help.vtex.com/en/tutorial/warehouse--6oIxvsVDTtGpO7y6zwhGpb">warehouses</a>.<br><br>
@@ -138,16 +149,20 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
       ⚠️ <i>This feature is only available in Brazil.</i></td>
     <td>Plug-and-play, upon subscription / additional costs</td>
   </tr>
+ </tbody>
 </table>
 
 ### Marketplace Management
 
 <table>
+ <thead>
   <tr>
-    <td><b>Component</b></td>
-    <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <th style="width: 120px;"><b>Component</b></th>
+    <th><b>Description</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td>Seller Management</td>
     <td><a href="https://help.vtex.com/en/tutorial/seller-management--6eEiOISwxuAWJ8w6MtK7iv">Seller Management</a> is a VTEX Admin page where marketplace operators can <a href="https://help.vtex.com/en/tutorial/adicionar-seller--tutorials_392">add sellers</a>, input their information, and manage their status. The page features metrics that allow marketplaces to assess their operation. It supports both VTEX sellers with a VTEX account, and external sellers integrated with VTEX. For more details, see <b>Third-party Sellers</b> in <a href="#integrations">Integrations</a>.</td>
@@ -173,6 +188,7 @@ VTEX Commerce Platform provides a set of core commerce features out-of-the-box f
       External marketplaces are marketplace stores that are not VTEX customers and, after <a href="https://developers.vtex.com/docs/guides/external-marketplace-integration-guide">developing a connector</a> to integrate with VTEX, they become available for sellers to connect at the <b>Marketplaces and Integrations</b> page. For more details, see <b>Third-Party Marketplaces</b> in <a href="#integrations">Integrations</a>.</td>
     <td>Built-in</td>
   </tr>
+ </tbody>
 </table>
 
 ## Platform interaction
@@ -184,11 +200,14 @@ There are two ways for merchants to interact with a VTEX store: VTEX Admin and D
 A panel to manage the entire digital commerce experience in one place with a complete feature set out-of-the-box. The [Admin](https://help.vtex.com/en/tutorial/vtex-admin-start-here--531cHtUCUi3puRXNDmKziw) has pages with dashboards, settings, and detailed information from our [core modules](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/75MX4aorniD0BYAB8Nwbo7). For instance, in the Admin, merchants can manage catalog, prices, and inventory, add payment options, view transactions, order status, customer data, sales performance, and more. Adding new features in the Admin to the store is also possible through the Extensions Hub.
 
 <table>
+ <thead>
   <tr>
-    <td><b>Component</b></td>
-    <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <th style="width: 120px;"><b>Component</b></th>
+    <th><b>Description</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td>Dashboards</td>
     <td>
@@ -237,6 +256,7 @@ A panel to manage the entire digital commerce experience in one place with a com
     </td>
     <td>Built-in</td>
   </tr>
+ </tbody>
 </table>
 
 ### Developer Tooling
@@ -244,11 +264,14 @@ A panel to manage the entire digital commerce experience in one place with a com
 Various tools to create new features for the VTEX platform. Development can be done by the merchant’s tech team or by [partner agencies](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#implementation-partners). There are many ways to build new features at VTEX including apps and storefront features using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io), custom behaviors with data in [Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw), and [integrations](#integrations) using our [APIs](https://developers.vtex.com/docs/api-reference), which extend VTEX’s out-of-the-box capabilities.
 
 <table>
+ <thead>
   <tr>
-    <td><b>Component</b></td>
-    <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <th style="width: 120px;"><b>Component</b></th>
+    <th><b>Description</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td>VTEX IO Storefront Platform</td>
     <td>
@@ -281,6 +304,7 @@ Various tools to create new features for the VTEX platform. Development can be d
       See our <a href="https://developers.vtex.com/docs/guides/developer-experience">Developer Experience</a> guide and <a href="https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/7euXDZR5CCnVFSrXyczIhu#extensions-and-apps">Extensions and apps overview</a> for more details about developing and using IO apps.</td>
     <td>Built-in</td>
   </tr>
+ </tbody>
 </table>
 
 ## Integrations
@@ -292,11 +316,14 @@ For more information about how integrations work, see our [Backend integrations 
 The types of integrations available at VTEX are:
 
 <table>
+ <thead>
   <tr>
-    <td><b>Component</b></td>
-    <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <th style="width: 120px;"><b>Component</b></th>
+    <th><b>Description</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td>ERP</td>
     <td>ERP (Enterprise Resource Planning) is the main back office software, responsible for managing the essential parts of the operation related to Catalog, Pricing, Logistics, and Orders.<br><br>
@@ -370,6 +397,7 @@ The types of integrations available at VTEX are:
     <td>For <a href="https://help.vtex.com/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w">sellers</a> not integrated with VTEX but want to sell their products on a VTEX marketplace, a custom connector can be developed for this integration. VTEX provides a set of APIs and instructions to facilitate the process. For more information, see our <a href="https://developers.vtex.com/docs/guides/external-seller-integration-guide">External Seller</a> integration guide.</td>
     <td>Requires implementation</td>
   </tr>
+ </tbody>
 </table>
 
 ## Add-ons
@@ -377,11 +405,14 @@ The types of integrations available at VTEX are:
 Add-ons are additional solutions offered by VTEX to meet specific business needs. They can be purchased separately through a subscription agreement. You can find more details on [Add-on products](https://help.vtex.com/en/tracks/next-steps-after-the-go-live--3J7WFZyvTcoiwkcIVFVhIS/1t2QBZvrOBSLgvHaAV9fYm). Some add-ons available at VTEX are:
 
 <table>
+ <thead>
   <tr>
-    <td><b>Component</b></td>
-    <td><b>Description</b></td>
-    <td><b>Type</b></td>
+    <th style="width: 120px;"><b>Component</b></th>
+    <th><b>Description</b></th>
+    <th style="min-width: 110px;"><b>Type</b></th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td>Sales App</td>
     <td><a href="https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf">VTEX Sales App</a> is our main solution for <a href="https://help.vtex.com/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv">Unified Commerce</a> operations. It includes a mobile app that enables sales associates from physical stores to serve customers and complete the entire sales process from helping to choose the right products to payment and delivery.</td>
@@ -428,4 +459,5 @@ Add-ons are additional solutions offered by VTEX to meet specific business needs
     <td><a href="https://help.vtex.com/en/tutorial/vtex-ad-network-beta--2cgqXcBuJmXN2livQvClur">VTEX Ad Network</a> connects VTEX stores with brands interested in advertising their products. This connection allows advertisers and merchants to boost their business.</td>
     <td>Plug-and-play, upon subscription / additional costs</td>
   </tr>
+ </tbody>
 </table>
