@@ -3,7 +3,7 @@ title: "Making a custom component available in the Site Editor"
 slug: "vtex-io-documentation-making-custom-component-available-site-editor"
 hidden: false
 createdAt: "2024-06-03T14:03:00.000Z"
-updatedAt: "2024-06-03T14:03:00.000Z"
+updatedAt: "2024-06-05T12:18:00.000Z"
 excerpt: "Learn how to allow component customization directly in the Site Editor."
 seeAlso:
 - “/docs/guides/vtex-io-documentation-react-builder”
@@ -86,7 +86,7 @@ The JSON schema definitions provide a structured way to describe the format of d
 
 In the `/react` root directory, create a new file and import the custom component:
 
-```
+```js
 import CustomComponent from './components/CustomComponent';
 
 export default CustomComponent;
@@ -125,8 +125,8 @@ Consider that this custom component should be available on the store’s main pa
 
 ```json
 {
-   “store.home”: {
-       “blocks: [“custom-component”]
+   "store.home": {
+       "blocks": ["custom-component"]
    }
 }
 ```
