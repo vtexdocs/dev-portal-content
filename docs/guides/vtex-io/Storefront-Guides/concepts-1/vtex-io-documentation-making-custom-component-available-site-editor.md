@@ -94,7 +94,6 @@ export default CustomComponent;
 
 >ℹ️ You can define your custom component directly within the `react/components/CustomComponent` folder, by creating a file named `CustomComponent.tsx`, for example. For better organization and management, especially in stores with many custom components, it is recommended to create separate folders for each component within `react/components` and then export them from individual files in the `/react` root directory.
 
-
 ### Step 3 - Referencing definitions within the interfaces file
 
 Now, you need to reference your custom component in the [`interfaces.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) within the `/store` folder. This file establishes a relationship between blocks and a React component, allowing the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) to build the store's frontend.
@@ -153,7 +152,7 @@ You can use the following types of data to configure your schemas:
 - [Object](#object)
 - [Array](#array)
 
-### String 
+### String
 
 Below are examples of content schemas using images and dates as props.
 
@@ -205,7 +204,7 @@ In the Site Editor, this custom component will look like this:
 
 Consider a component that allows users to input an initial and a final date:
 
-```js	
+```js 
 function CustomComponent({ initialDate, finalDate }) {
    return(
       <div>
@@ -216,7 +215,7 @@ function CustomComponent({ initialDate, finalDate }) {
 }
 ```
 
-In the `schema`, the `initialDate` and `finalDate` props define the configuration for date input fields. 
+In the `schema`, the `initialDate` and `finalDate` props define the configuration for date input fields.
 
 ```js
 CustomComponent.schema = {
@@ -340,7 +339,7 @@ In the Site Editor, this component will look like this:
 
 ### Array
 
-Consider a component where the displayed images adapt to the screen size: 
+Consider a component where the displayed images adapt to the screen size:
 
 ```js
 function CustomComponent({ images }) {
@@ -411,7 +410,7 @@ In the Site Editor, this component will look like this:
 
 ![Array](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/array-custom-component.png)
 
-If you want to allow users to change the name of each item in the `images` array within the Site Editor, add the `__editorItemTitle` prop to the item configuration. 
+If you want to allow users to change the name of each item in the `images` array within the Site Editor, add the `__editorItemTitle` prop to the item configuration.
 
 ```js
 CustomComponent.schema = {
