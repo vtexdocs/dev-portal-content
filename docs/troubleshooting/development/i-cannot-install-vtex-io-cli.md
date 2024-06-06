@@ -4,7 +4,7 @@ slug: "i-cannot-install-vtex-io-cli"
 hidden: false
 createdAt: "2024-06-04T11:15:35.508Z"
 updatedAt: "2024-06-04T11:15:35.508Z"
-excerpt: "When installing VTEX IO CLI, there is an error."
+excerpt: "When installing VTEX IO CLI, there is the error `Error: Cannot find module vtex`."
 tags:
     - store-framework
     - app-development
