@@ -3,7 +3,7 @@ title: "My store is slow or unavailable"
 slug: "my-store-is-slow-or-unavailable"
 hidden: false
 createdAt: "2023-05-11T10:17:18.615Z"
-updatedAt: "2023-05-11T10:17:18.615Z"
+updatedAt: "2024-06-06T07:30:00.615Z"
 ---
 
 If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons.
@@ -11,6 +11,8 @@ If you are experiencing slow or non-functional operations in your store, there c
 You can always refer to the [VTEX status page](https://status.vtex.com) to check if the platform is undergoing some instability. If the status page indicates that the platform is functioning normally, please proceed with the troubleshooting instructions outlined below.
 
 > Please note that there may be unreported instabilities when you initially check the status page, especially if it is a recent incident. Therefore, it is recommended to periodically monitor the status page while following the troubleshooting steps provided.
+
+## Solution
 
 Below are various troubleshooting checks and instructions you can use to solve your store's issue:
 
@@ -100,7 +102,7 @@ If your store is slow, check this [performance optimization guide](https://devel
 
 ## FastStore
 
-If your store uses [FastStore](https://faststore.dev) and the topics above have not helped you, see the instructions below.
+If your store uses [FastStore](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore) and the topics above have not helped you, see the instructions below.
 
 ### Publishing failures
 
