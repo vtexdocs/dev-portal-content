@@ -52,6 +52,7 @@ const {
     },
   },
 } = ctx;
+```
 
 If necessary, break down the URL path into separate parts and filter out any empty segments as follows:
 
