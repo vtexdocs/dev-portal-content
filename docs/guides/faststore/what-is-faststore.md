@@ -110,7 +110,7 @@ These are the tools that developers use to build and deploy FastStore projects. 
 
 ### Package layer
 
-FastStore consists of five main packages that enable the store to work: 
+FastStore consists of five main packages that enable the store to work:
 
 - [Core](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson): Provides the starter source code to get your store up and running. It contains four sub-packages: Components, SDK, UI, and API packages.
 
@@ -128,9 +128,9 @@ To work with FastStore, you should be familiar with the following technologies:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://react.dev/)
-- [Next.js](http://Next.js)
+- [Next.js](https://nextjs.org/)
 - [GraphQL](https://graphql.org/)
-- [Node.js](http://Node.js)
+- [Node.js](https://nodejs.org/en)
 
 ## Quickstart
 
