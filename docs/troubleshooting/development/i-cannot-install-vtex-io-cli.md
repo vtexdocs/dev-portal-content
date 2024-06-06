@@ -57,7 +57,7 @@ To solve this problem, follow these steps:
 
       ![system-properties](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/vtex-io/environment-variables-en.png)
 
-  6. In the **Environment Variables** settings, double-click **Path**. 
+  6. In the **Environment Variables** settings, double-click **Path**.
 
       >⚠️ If you want to configure the variables only for your user, click Path within **User variables for {your.user}**. If the configuration is for all system users, click Path within **System variables**.
 
