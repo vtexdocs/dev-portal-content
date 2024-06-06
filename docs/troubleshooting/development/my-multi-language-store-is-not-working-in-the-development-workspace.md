@@ -4,7 +4,7 @@ slug: "my-multi-language-store-is-not-working-in-the-development-workspace"
 hidden: false
 createdAt: "2024-05-29T15:45:35.508Z"
 updatedAt: "2024-05-29T15:45:35.508Z"
-excerpt: "After creating a development workspace in a multi-language store, there is an error"
+excerpt: "After creating a development workspace in a multi-language store, there is an error in my website."
 tags:
     - store-framework
     - app-development
