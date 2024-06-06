@@ -1,6 +1,6 @@
 ---
 title: "Deprecation of vtex.order-sms-notification"
-slug: "2024-06-06-deprecation-of-vtex.order-sms-notification"
+slug: "2024-06-06-deprecation-of-vtex-order-sms-notification"
 hidden: false
 createdAt: 2024-06-06T10:00:00.000Z
 type: "deprecated"
