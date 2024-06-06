@@ -33,9 +33,9 @@ See how the `service.json` file may be configured to consult the API route menti
 
 ```json
 "productSearch": {
-      "path": "/_v/api/intelligent-search/product_search/*path",
-      "public": true
-    },
+   "path": "/_v/api/intelligent-search/product_search/*path",
+   "public": true
+},
 ```
 
 >ℹ️ Note that the `*` wildcard notation captures variable-length paths dynamically, allowing the endpoint to handle URLs with diverse structures and query parameters.This wildcard notation signals to the service that the endpoint's path can accommodate any number of segments beyond the specified prefix. For instance, in the configuration `"path"`: `"/_v/api/intelligent-search/product_search/*path"`, the `*/path` segment implies that the endpoint can handle URLs like `/_v/api/intelligent-search/product_search/segment1/segment2/.../segmentN`, where `segment1`, `segment2`, and so forth can vary in number and content.
@@ -44,19 +44,18 @@ See how the `service.json` file may be configured to consult the API route menti
 
 Open the file where your route handler is defined and use the following structure to access the `path` value:
 
-```json
-   const {
-     vtex: {
-       route: {
-         params: { path = '' },
-       },
-     },
-   } = ctx;
-```
+```tsx
+const {
+  vtex: {
+    route: {
+      params: { path = '' },
+    },
+  },
+} = ctx;
 
 If necessary, break down the URL path into separate parts and filter out any empty segments as follows:
 
-```json
+```tsx
 const segments = path.split('/').filter(segment => segment !== '');
 ```
 
