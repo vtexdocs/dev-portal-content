@@ -3,18 +3,22 @@ title: "My store is slow or unavailable"
 slug: "my-store-is-slow-or-unavailable"
 hidden: false
 createdAt: "2023-05-11T10:17:18.615Z"
-updatedAt: "2023-05-11T10:17:18.615Z"
+updatedAt: "2024-06-06T07:30:00.615Z"
+excerpt: "If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons."
+tags:
+    - faststore
+    - store-framework
 ---
 
-If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons.
+You can always refer to the [VTEX status page](https://status.vtex.com) to check if the platform is undergoing some instability. If the status page indicates that the platform is functioning normally, please follow the troubleshooting instructions outlined below.
 
-You can always refer to the [VTEX status page](https://status.vtex.com) to check if the platform is undergoing some instability. If the status page indicates that the platform is functioning normally, please proceed with the troubleshooting instructions outlined below.
+> Please note that when you initially check the status page, there may be unreported instabilities, especially if it is a recent incident. Therefore, it is recommended that you periodically monitor the status page while following the troubleshooting steps provided.
 
-> Please note that there may be unreported instabilities when you initially check the status page, especially if it is a recent incident. Therefore, it is recommended to periodically monitor the status page while following the troubleshooting steps provided.
+## Solution
 
 Below are various troubleshooting checks and instructions you can use to solve your store's issue:
 
-- [Checking your connection](#checking-your-connection) - Your internet connection fails when attempting to access your store.
+- [Checking your connection](#checking-your-connection) - Your internet connection fails when accessing your store.
 - [Store is unavilable](#store-is-unavailable) - The store stopped functioning or had a go-live failure.
 - [Store is slow](#store-is-slow) - Shopping operations work, but slowly.
 - [Store Framework](#store-framework) - Additional checks and instructions for stores using [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) as their storefront solution.
@@ -24,7 +28,7 @@ Below are various troubleshooting checks and instructions you can use to solve y
 
 Verify your internet connection by visiting other websites to ensure it is functioning properly. Alternatively, attempt to access your store using a different internet connection.
 
-If the issues persists, refer to the specific recommendations below based on the issue you are experiencing.
+If the issues persist, refer to the specific recommendations below based on the issue you are experiencing.
 
 ## Store is unavailable
 
@@ -100,22 +104,22 @@ If your store is slow, check this [performance optimization guide](https://devel
 
 ## FastStore
 
-If your store uses [FastStore](https://faststore.dev) and the topics above have not helped you, see the instructions below.
+If your store uses [FastStore](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore) and the topics above have not helped you, see the instructions below.
 
 ### Publishing failures
 
-See this guide on [Debugging Releases and VTEX Headless CMS publishing errors](https://www.faststore.dev/how-to-guides/troubleshooting/debugging-releases-publishing).
+See this guide on [Debugging Releases and VTEX Headless CMS publishing errors](https://v1.faststore.dev/how-to-guides/troubleshooting/debugging-releases-publishing).
 
 ### Lighthouse tests
 
-[Lighthouse](https://www.faststore.dev/how-to-guides/performance/lighthouse) is an open source tool that helps developers assess website performance. Note that if you use [WebOps](https://www.faststore.dev/glossary#vtex-io-webops) in your FastStore project, it runs automatic Lighthouse tests with every pull request. It is very important that you mind these automatic tests' results so as to identify and mitigate any performance issues before they impact your store in production.
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) is an open-source tool that helps developers assess website performance. FastStore projects run automatic Lighthouse tests with every pull request. It is very important that you consider the results of these automatic tests to identify and mitigate any performance issues before they impact your store in production.
 
->ℹ️ Learn more about [using Lighthouse in your FastStore project](https://www.faststore.dev/how-to-guides/performance/lighthouse#how-to-run-lighthouse-audits).
+>ℹ️ Learn more about [using Lighthouse in your FastStore project](https://v1.faststore.dev/how-to-guides/performance/lighthouse#how-to-run-lighthouse-audits).
 
 ### Best practices for fetching data with FastStore
 
-Data fetching can have a negative impact on the performance of your storefront if not done correctly. See the [Best practices for fetching data on your storefront](https://www.faststore.dev/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data) and make sure they are implemented.
+Data fetching can negatively impact your storefront's performance if not done correctly. See the [Best practices for fetching data on your storefront](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview#best-practices-for-fetching-data) and make sure they are implemented.
 
-### Third party scripts on FastStore
+### Third-party scripts on FastStore
 
-[Third party scripts](https://www.faststore.dev/how-to-guides/performance/handling-the-impact-of-third-party-scripts) may also cause your site to be slow, see this article to learn [how to handle the impact of third-party scripts](https://www.faststore.dev/how-to-guides/performance/handling-the-impact-of-third-party-scripts) on your FastStore project.
+[Third-party scripts](https://developers.vtex.com/docs/guides/faststore/project-structure-handling-third-party-scripts) may also cause your site to be slow. See this article to learn [how to handle the impact of third-party scripts](https://developers.vtex.com/docs/guides/faststore/project-structure-handling-third-party-scripts) on your FastStore project.
