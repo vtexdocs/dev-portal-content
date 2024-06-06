@@ -5,10 +5,14 @@ hidden: false
 createdAt: "2024-06-04T11:15:35.508Z"
 updatedAt: "2024-06-04T11:15:35.508Z"
 excerpt: "When installing VTEX IO CLI, there is the error `Error: Cannot find module vtex`."
-status: App development
+tags:
+    - store-framework
+    - vtex-io
+    - cli
+
 ---
 
-**Keywords:** VTEX IO CLI, plugins
+**Keywords:** VTEX IO CLI | Plugins
 
 When [installing VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install), I receive the following error message: `Error: Cannot find module ‘vtex’`.
 

@@ -1,8 +1,17 @@
 ---
 title: "I cannot complete a purchase on a FastStore website"
+slug: "i-cannot-complete-a-purchase-on-a-faststore-website"
+hidden: false
+createdAt: "2024-06-06T10:17:18.615Z"
+updatedAt: "2024-06-06T14:00:00.615Z"
+excerpt: "While trying to checkout on a FastStore website, you might see a 'This Connection Is Not Private' error."
+tags:
+    - faststore
+    - checkout
+    - dns
 ---
 
-**Tags/Keywords:** FastStore, checkout, DNS, SSL
+**Keywords:** FastStore | Checkout | DNS | SSL
 
 When trying to complete a purchase on your FastStore website, you may receive the following error message: `This Connection Is Not Private`
 
@@ -14,8 +23,8 @@ This error occurs when your browser cannot verify whether a website is safe to v
 
 To solve this problem, there are two troubleshooting checks and instructions you can use:
 
-- [Configuring an external DNS](#configuring-an-external-dns): Ensure your FastStore website is accessible via a custom domain and that the checkout works properly.
-- [Check the `secure` subdomain pointing](#check-the-secure-subdomain-pointing): If the error persists after configuring an external DNS, check if the `secure` subdomain is pointing to VTEX.
+- [Configuring an external DNS](#step-1-configuring-an-external-dns): Ensure your FastStore website is accessible via a custom domain and that the checkout works properly.
+- [Check the `secure` subdomain pointing](#step-2-check-the-secure-subdomain-pointing): If the error persists after configuring an external DNS, check if the `secure` subdomain is pointing to VTEX.
 
 ### Step 1 - Configuring an external DNS
 
@@ -31,5 +40,5 @@ If the error continues, check if your website's `secure` subdomain is pointing t
 4. Check if the `secure` subdomain is pointing to the `secure.{hostname}.cdn.vtex.com`, as in the example below:
 
    ![dns-checker](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/store-performance/secure-hostname-2.png)
-	
+
 If the `secure` subdomain is pointing to `secure.{hostname}.cdn.vtex.com` but the problem continues, open a ticket to [VTEX Support](https://help.vtex.com/en/support).

@@ -5,6 +5,9 @@ hidden: false
 createdAt: "2023-05-11T10:17:18.615Z"
 updatedAt: "2024-06-06T07:30:00.615Z"
 excerpt: "If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons."
+tags:
+    - faststore
+    - store-framework
 ---
 
 You can always refer to the [VTEX status page](https://status.vtex.com) to check if the platform is undergoing some instability. If the status page indicates that the platform is functioning normally, please follow the troubleshooting instructions outlined below.

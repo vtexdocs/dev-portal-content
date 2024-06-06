@@ -10,7 +10,7 @@ tags:
     - app-development
 ---
 
-**Keywords:** development workspace, internationalization, messages, multi-language
+**Keywords:** Development workspace | Internationalization| Messages | Multi-language
 
 After [creating a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) in a multi-language store, the following error is returned when trying to access the website:
 

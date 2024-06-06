@@ -7,6 +7,8 @@ tags:
     - license-manager
 ---
 
+**Keywords:** Headless CMS | FastStore| CLI
+
 If you encounter the error `Error: Permission denied` or `Error: User indicated by VtexIdclientAutCookie is not authorized to access the indicated resource` when using `faststore cms-sync` or `vtex cms sync`, this issue is related to the user permissions needed to execute the command and save resources.
 
 ## Solution
