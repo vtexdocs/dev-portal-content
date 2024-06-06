@@ -1,10 +1,12 @@
 ---
 title: "FastStore"
-updatedAt: "2024-06-03T10:00:00.813Z"
+slug: "faststore"
+hidden: false
+updatedAt: "2024-06-06T12:50:00.813Z"
 excerpt: "The ultimate toolkit for building blazing-fast storefronts."
 ---
 
-[FastStore](https://github.com/vtex/faststore) is a toolkit based on [Jamstack](https://jamstack.org/) that helps developers build high-performance stores. 
+[FastStore](https://github.com/vtex/faststore) is a toolkit based on [Jamstack](https://jamstack.org/) that helps developers build high-performance stores.
 
 It supports integration with [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), offers analytics functionalities to inform storefront decision-making, and gives developers the flexibility to customize the store based on the brand’s vision, creating a unique shopping experience for users.
 
@@ -92,43 +94,43 @@ It supports integration with [Headless CMS](https://developers.vtex.com/docs/gui
 
 The diagram above shows a FastStore architectural flow, which includes the following components:
 
-  - **Codebase:** Source code of the FastStore project hosted on GitHub.
-  - **Build process:** Process of converting the source code into a deployable project through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview).
-  - **Deployment:** Process of deploying the project to a production environment through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) and quality assurance bots.
-  - **Business user touchpoint:** Environment where admin users interact with storefront settings on VTEX Headless CMS.
-  - **Customer touchpoint:** Environment where customers interact with the storefront, in this case, the store website.
+- **Codebase:** Source code of the FastStore project hosted on GitHub.
+- **Build process:** Process of converting the source code into a deployable project through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview).
+- **Deployment:** Process of deploying the project to a production environment through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) and quality assurance bots.
+- **Business user touchpoint:** Environment where admin users interact with storefront settings on VTEX Headless CMS.
+- **Customer touchpoint:** Environment where customers interact with the storefront, in this case, the store website.
 
 ### Developer tools
- 
+
 These are the tools that developers use to build and deploy FastStore projects. They include:
 
-  - [FastStore CLI](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli): Command-line interface (CLI) that can be used to interact with FastStore.
-  - [VTEX IO CLI:](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) CLI used when the project needs to interact with the VTEX platform.
-  - Localhost preview: Tool that allows developers to preview their FastStore projects locally.
+- [FastStore CLI](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli): Command-line interface (CLI) that can be used to interact with FastStore.
+- [VTEX IO CLI:](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) CLI used when the project needs to interact with the VTEX platform.
+- Localhost preview: Tool that allows developers to preview their FastStore projects locally.
 
 ### Package layer
 
 FastStore consists of five main packages that enable the store to work: 
 
-  - [Core](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson): Provides the starter source code to get your store up and running. It contains four sub-packages: Components, SDK, UI, and API packages.
+- [Core](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson): Provides the starter source code to get your store up and running. It contains four sub-packages: Components, SDK, UI, and API packages.
 
-  - [SDK](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson): Provides developers with a set of tools that handle all meaningful states an ecommerce store might have, such as Session, Cart, Component, and Search. The SDKs also provide GA4-compatible analytics functions to help you create powerful analytics capabilities in your ecommerce store.
+- [SDK](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson): Provides developers with a set of tools that handle all meaningful states an ecommerce store might have, such as Session, Cart, Component, and Search. The SDKs also provide GA4-compatible analytics functions to help you create powerful analytics capabilities in your ecommerce store.
 
-  - [UI](https://developers.vtex.com/docs/guides/faststore/components-index): Gathers the design system based on FastStore components, using [Sass](https://sass-lang.com/) for styling.
+- [UI](https://developers.vtex.com/docs/guides/faststore/components-index): Gathers the design system based on FastStore components, using [Sass](https://sass-lang.com/) for styling.
 
-  - [API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview): Connects your project to your favorite ecommerce provider by creating interfaces for querying products, collections, and handling carts.
+- [API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview): Connects your project to your favorite ecommerce provider by creating interfaces for querying products, collections, and handling carts.
 
-  - [CLI](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli): Unifies the VTEX source code in `@faststore/core` with the customizations and extensions the store will create in the `/src` folder.
+- [CLI](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli): Unifies the VTEX source code in `@faststore/core` with the customizations and extensions the store will create in the `/src` folder.
 
 ### Technologies
 
 To work with FastStore, you should be familiar with the following technologies:
 
-  - [TypeScript](https://www.typescriptlang.org/)
-  - [React](https://react.dev/)
-  - [Next.js](http://Next.js)
-  - [GraphQL](https://graphql.org/)
-  - [Node.js](http://Node.js)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [Next.js](http://Next.js)
+- [GraphQL](https://graphql.org/)
+- [Node.js](http://Node.js)
 
 ## Quickstart
 
