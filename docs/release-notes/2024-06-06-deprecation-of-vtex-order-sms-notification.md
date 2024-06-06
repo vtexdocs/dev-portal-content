@@ -11,7 +11,7 @@ On June 6, 2024, the `vtex.order-sms-notification` app will be removed from all 
 
 ## What has changed?
 
-The `vtex.order-sms-notification` app is deprecated due to its low usage and dependence on a discontinued internal service. As a result, the app will be uninstalled from all accounts on June 7, 2024.
+The `vtex.order-sms-notification` app is deprecated due to its low usage and dependence on a discontinued internal service. As a result, the app will be uninstalled from all accounts on June 6, 2024.
 
 ## What needs to be done?
 
