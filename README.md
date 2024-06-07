@@ -41,7 +41,7 @@ We're so glad you're here! Thanks for being interested.
 ### How can I add new articles or release notes?
 
 1. Open a branch in the [dev-portal-content](https://github.com/vtexdocs/dev-portal-content) repository.
-2. Add a new file in the [desired folder](#in-this-repository), following our [guide template](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guide_template.md) or our [release notes template](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/release_notes_template.md).
+2. Add a new file in the [desired folder](#in-this-repository), following our [guide template](https://github.com/vtexdocs/dev-portal-content/blob/main/templates/guide_template.md) or our [release notes template](https://github.com/vtexdocs/dev-portal-content/blob/main/templates/release_notes_template.md).
 3. Complete the [frontmatter](#what-information-goes-in-the-frontmatter).
    > For release notes, the `excerpt` and `type` fields are mandatory. The file name and the slug should contain the inversed publication date, as in `yyyy-mm-dd-title`, to avoid duplicate URLs. E.g. `2024-03-07-faststore-content-in-the-developer-portal`.
 4. Add your content in markdown.
