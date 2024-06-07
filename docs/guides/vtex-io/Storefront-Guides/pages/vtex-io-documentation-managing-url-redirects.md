@@ -3,12 +3,12 @@ title: "Managing URL redirects"
 slug: "vtex-io-documentation-managing-url-redirects"
 hidden: false
 createdAt: "2020-06-03T16:02:44.302Z"
-updatedAt: "2022-12-13T20:17:44.350Z"
+updatedAt: "2024-06-07T13:43:00.268Z"
 ---
 
 URL redirection is a method of forwarding website visitors and search engines from one URL to another. Redirects might be useful when you need to move content to a new URL, remove an old product page, or forward users from a specific region to a custom page. Implementing the appropriate redirects can improve the user experience by preventing visitors from hitting 404 error pages.
 
-Check the following sections to learn how to [create](#creating-url-redirects), [remove](#deleting-url-redirects) and [verify](#verifying-url-redirects) your store's URL redirects.
+Check the following sections to learn how to [create](#creating-url-redirects), [remove](#deleting-url-redirects), and [verify](#verifying-url-redirects) your store's URL redirects.
 
 ## Before you begin
 
@@ -74,9 +74,9 @@ Notice that the file must contain a row with four columns and the following valu
 | `type`        | Redirect type. `TEMPORARY` or `PERMANENT`                                                     | `TEMPORARY`               |
 | `endDate`     | (Only for `TEMPORARY` redirects.) Expiration date of the redirect on the format `mm/dd/yyyy`. | `5/20/2020`               |
 
-> ⚠️ You must not modify this row. Otherwise, you won't be able to create or delete redirects.
+> ⚠️ You must not modify this row. Otherwise, you will not be able to create or delete redirects.
 
-Under the first row of your `.csv` file, you must enter the `from`, `to`, `type`, and `endDate` values corresponding to the redirects you want to create or delete, as in the following example:
+Under the first row of your `.csv` file, enter the `from`, `to`, `type`, and `endDate` values corresponding to the redirects you want to create or delete, as in the following example:
 
 ![urls-redirect-csv-file](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-managing-url-redirects-1.png)
 
@@ -84,6 +84,9 @@ Keep in mind that:
 
 - The `from` column can only receive relative paths.
 - The `to` column can receive either relative paths (e.g., `/blouse/p?skuId=200`) or full URLs (e.g., `https://myotherstore.com`).
+
+> ⚠️ It is not possible to create redirects using wildcards or viariables. You must specify each redirect using relative paths or full URLs.
+  
 - `TEMPORARY` redirects receive the `302` status code, while `PERMANENT` redirects receive the `301` status code.
 - The `endDate` must be left empty if the redirect is `PERMANENT`.
 
