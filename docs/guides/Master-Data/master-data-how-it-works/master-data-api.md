@@ -29,7 +29,7 @@ Master Data V2 has the `/schema` and `/indices` APIs and allows users to create 
 
 >⚠️ Creating and updating JSON Schemas changes the Data Plane behavior. JSON Schemas only exist in Master Data V2.
 
-## Master Data API
+## Master Data API endpoints
 
 The table below shows what endpoints from Master Data API belong to which category and Master Data version.
 
