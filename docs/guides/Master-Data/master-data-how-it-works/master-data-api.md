@@ -23,7 +23,7 @@ An Index is a configuration which enables a shortcut to retrieve documents faste
 
 The Control Plane is the category that lets you manage how Data Plane behaves. Developers can configure validation, search and triggers within Data Entities. Since the Control Plane only deals with the structure, and not the records themselves, access to the Control Plane happens less frequently than to the Data Plane.
 
-Master Data V1 does not have a Control Plane API. All configuration is handled by the Admin through the Dynamic Storage, which can be accessed using the link `https://{{account}}.ds.vtexcrm.com.br` or through Admin, on **Store Settings > Storefront > Master Data**.
+Master Data V1 does not have a Control Plane API. All configuration is handled by the Admin through the Dynamic Storage, which can be accessed using the link `https://{{account}}.ds.vtexcrm.com.br` or through Admin, on **Store Settings > Storefront > Master Data > ⚙ > Data structure**.
 
 Master Data V2 has the `/schema` and `/indices` APIs and allows users to create and update [JSON Schemas](https://spacetelescope.github.io/understanding-json-schema/) to any Data Entity at Master Data V2.
 
