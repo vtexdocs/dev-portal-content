@@ -16,7 +16,7 @@ It supports integration with [Headless CMS](https://developers.vtex.com/docs/gui
 | **Stability** | Built to be stable and avoid crashes, so your store doesn't lose sales due to provider issues.  |
 | **Analytics/SEO** | Works with analytics tools to understand store customers and with SEO tools to improve store visibility in search results. |
 
-### FastStore architecture
+## FastStore architecture
 
   ```mermaid
   flowchart LR
@@ -100,7 +100,7 @@ The diagram above shows a FastStore architectural flow, which includes the follo
 - **Business user touchpoint:** Environment where admin users interact with storefront settings on VTEX Headless CMS.
 - **Customer touchpoint:** Environment where customers interact with the storefront, in this case, the store website.
 
-### Developer tools
+## Developer tools
 
 These are the tools that developers use to build and deploy FastStore projects. They include:
 
@@ -108,7 +108,7 @@ These are the tools that developers use to build and deploy FastStore projects. 
 - [VTEX IO CLI:](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) CLI used when the project needs to interact with the VTEX platform.
 - Localhost preview: Tool that allows developers to preview their FastStore projects locally.
 
-### Package layer
+## Package layer
 
 FastStore consists of five main packages that enable the store to work:
 
@@ -122,7 +122,7 @@ FastStore consists of five main packages that enable the store to work:
 
 - [CLI](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli): Unifies the VTEX source code in `@faststore/core` with the customizations and extensions the store will create in the `/src` folder.
 
-### Technologies
+## Technologies
 
 To work with FastStore, you should be familiar with the following technologies:
 
@@ -162,7 +162,7 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Using hemes"
+title="Using themes"
 description="Explore the look-and-feel of your store by using Themes, FastStore CSS stylesheets."
 linkTo="https://developers.vtex.com/docs/guides/faststore/using-themes-overview"
 linkTitle="See more"
