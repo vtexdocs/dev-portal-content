@@ -50,7 +50,7 @@ Now, you must set up your VTEX account to use the DNS records created in the pre
    - `mysite.com` (root domain)
    - `secure.mysite.com` (checkout/myaccount subdomain)
 
-> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. For instance, if your store uses another subdomain, such as `shop.mysite.com`, you need to register both `shop.mysite.com` and `mysite.com`. 
+> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. In other words, you must include both the `www.` and non-`www.` domains in the hosts' list. Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
 
 8. Click the **Save** button.
 
