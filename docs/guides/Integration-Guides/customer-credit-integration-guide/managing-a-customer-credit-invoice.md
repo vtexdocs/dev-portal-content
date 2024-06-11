@@ -36,7 +36,7 @@ See an example below using the account `11111111111_CPF` and invoice `7583E36F10
 
 __GET - Retrieve invoice by ID__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01```
 
 Response body example
 
@@ -64,13 +64,13 @@ Response body example
 
 ## Checking invoice details on a Customer Credit account
 
-To check details of all invoices issued on a customer credit account, you can use the [Retrieve invoices by customer credit account ID](https://developers.vtex.com/docs/api-reference/customer-credit-api#get-/api/creditcontrol/accounts/-creditAccountId-/invoices) endpoint. In this request, you must send the account identification (`creditAccountId`) as a path parameter.
+To check details of all invoices issued on a Customer Credit account, you can use the [Retrieve invoices by Customer Credit account ID](https://developers.vtex.com/docs/api-reference/customer-credit-api#get-/api/creditcontrol/accounts/-creditAccountId-/invoices) endpoint. In this request, you must send the account identification (`creditAccountId`) as a path parameter.
 
 See an example below using the account `111111111_CPF`:
 
-__GET - Retrieve invoices by customer credit account ID__
+__GET - Retrieve invoices by Customer Credit account ID__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/```
 
 Response body example
 
@@ -122,7 +122,7 @@ Response body example
 }
 ```
 
-> ℹ️ You can also use VTEX Admin to check the list of all invoices issued to a customer credit account. To do that, go to __Apps > Customer Credit > Accounts__, and click on the desired invoice.
+> ℹ️ You can also use VTEX Admin to check the list of all invoices issued to a Customer Credit account. To do that, go to __Apps > Customer Credit > Accounts__, and click on the desired invoice.
 
 ## Checking details of all Customer Credit invoices in a VTEX store
 
@@ -130,7 +130,7 @@ To list all invoices created in Customer Credit accounts of a VTEX store, you ca
 
 __GET - Search all invoices__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/invoices/`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/invoices/```
 
 Response body example
 
@@ -202,7 +202,7 @@ See the example below, modifying the status, creating a observation note and add
 
 __PUT - Change invoice__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01```
 
 Request body example
 
@@ -265,7 +265,7 @@ See the example below, where a store is configured to allow invoice expiration d
 
 __PUT - Create or change store configuration__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/storeconfig`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/storeconfig```
 
 Request body example
 
@@ -316,7 +316,7 @@ Once invoice postponement is enabled, you can postpone a specific invoice. See t
 
 __PUT - Postpone an invoice__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01/postponement`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01/postponement```
 
 Request body example
 
@@ -332,7 +332,7 @@ To confirm that the new invoice due date has been modified, use the [Retrieve in
 
 __GET - Retrieve invoice by ID__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01```
 
 Response body example
 
@@ -362,13 +362,13 @@ You can also verify the new invoice due date through your store Admin (__Apps > 
 
 ## Confirming payment of a Customer Credit invoice
 
-To confirm payment of a customer credit invoice, you can use the [Mark an invoice as paid](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-/payments) endpoint.
+To confirm payment of a Customer Credit invoice, you can use the [Mark an invoice as paid](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-/payments) endpoint.
 
 See example of payment of invoice `7583E36F101C461094AB6CA68FA8EE2C-01` in account `111111111_CPF`:
 
 __POST - Mark an invoice as paid__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01/payments`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01/payments```
 
 Response body example
 
@@ -409,7 +409,7 @@ See an example of canceling the invoice `7583E36F101C461094AB6CA68FA8EE2C-01` on
 
 __DEL - Cancel invoice__
 
-`https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01`
+```https://{accountName}.{environment}.com.br/api/creditcontrol/accounts/11111111111_CPF/invoices/7583E36F101C461094AB6CA68FA8EE2C-01```
 
 > ⚠️ The success of this call is confirmed by the __200 OK__ status and the empty response body.
 
