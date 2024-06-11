@@ -17,7 +17,7 @@ In the case of a seller change, the marketplace is responsible for choosing the 
 
 ## Cart simulation
 
-With the information of the sellers in hand, you can simulate carts to check the availability of the products. To do this, you may use our [Fulfillment simulation endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation?endpoint=post-/api/checkout/pub/orderForms/simulation).
+With the information of the sellers in hand, you can simulate carts to check the availability of the products. To do this, you may use our [Fulfillment simulation endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation).
 
 ## Window to change seller
 
@@ -50,4 +50,4 @@ This is an example of what the body of this request should look like:
 }
 ```
 
->❗ When a change of seller is successfully completed, the marketplace order loses courier information, since the array in `shippingData.logisticsInfo.deliveryIds` is now empty. In order to get the updated information, it is necessary to make a [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder) request to the new seller's endpoint, such as `https://{newSeller}.{environment}.com.br/api/oms/pvt/orders/{orderId}`.
+>❗ When a change of seller is successfully completed, the marketplace order loses courier information, since the array in `shippingData.logisticsInfo.deliveryIds` is now empty. In order to get the updated information, it is necessary to make a [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) request to the new seller's endpoint, such as `https://{newSeller}.{environment}.com.br/api/oms/pvt/orders/{orderId}`.
