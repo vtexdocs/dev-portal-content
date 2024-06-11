@@ -31,6 +31,7 @@ Once you have all the information you need and are ready to actually change the 
 `{marketplace_host}/api/checkout/pvt/orders/{marketplace_order_id}/sellers`
 
 This is an example of what the body of this request should look like:
+
 ```json
 {
   "marketplacePaymentValue": 1000,
