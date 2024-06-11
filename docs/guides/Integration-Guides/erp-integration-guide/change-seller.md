@@ -18,7 +18,7 @@ In the case of a seller change, the marketplace is responsible for choosing the 
 
 ## Cart simulation
 
-With the information of the sellers in hand, you can simulate carts to check the availability of the products. To do this, you may use our [Fulfillment simulation endpoint](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation).
+With the information of the sellers in hand, you can simulate carts to check the availability of the products. To do this, you may use our [Fulfillment simulation endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation?endpoint=post-/api/checkout/pub/orderForms/simulation).
 
 
 ## Window to change seller
