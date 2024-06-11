@@ -1,7 +1,5 @@
 ---
 title: "Testing the server-side rendering"
-tags: 
-    - performance
 ---
 
 JavaScript handles data fetching, templating, and routing on the client-side rather than on the server-side. However, the amount of JavaScript shipped to the browser tends to increase as the complexity of an application grows. As a result, JavaScript code competes for processing power and delays the rendering task while striving to be processed before the browser finishes rendering the page content.
@@ -14,7 +12,7 @@ To ensure your server-side rendering (SSR) HTML is functional and free of bugs, 
 
     - For example, if you are using Google Chrome, refer to Google's documentation on [Disabling JavaScript.](https://developers.google.com/web/tools/chrome-devtools/javascript/disable).
 
-2. Access your store website and observe if its core functionalities are working as expected. Your store will not function exactly as planned but check below which are the expected and undesired behaviors when disabling JavaScript:
+2. Access your store website and observe if its [core functionalities](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), such as product searching, shopping cart and checkout process, are working as expected. Your store will not function exactly as planned but check below which are the expected and undesired behaviors when disabling JavaScript:
 
     - **Undesired behaviors**
 
@@ -24,6 +22,6 @@ To ensure your server-side rendering (SSR) HTML is functional and free of bugs, 
 
     - **Expected behaviors**
 
-        - Simpler design.
+        - Simpler design, presenting basic layout similar to a static webpage.
         - Animations and interactive menus do not work.
         - The below-the-fold content does not render.
