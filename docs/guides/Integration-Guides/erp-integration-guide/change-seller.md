@@ -3,7 +3,7 @@ title: "Change seller"
 slug: "change-seller"
 hidden: false
 createdAt: "2021-07-29T19:25:33.532Z"
-updatedAt: "2022-08-30T18:13:03.813Z"
+updatedAt: "2024-06-11T14:11:03.813Z"
 ---
 Marketplaces have the autonomy to change a seller that has been designated to fulfill an order. This can only be done under specific circumstances described in this [article on the Change seller feature](https://help.vtex.com/en/tutorial/how-to-use-the-change-seller--5TBAwO2kOAMw44uyaaQMQO#).
 
