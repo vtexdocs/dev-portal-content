@@ -10,11 +10,11 @@ To ensure your server-side rendering (SSR) HTML is functional and free of bugs, 
 
 ## Step by step
 
-1. Check the documentation of your web browser and search how to disable JavaScript.
+1. Check the documentation of your web browser and search for how to disable JavaScript.
 
-    - If you are using Google Chrome, refer to Google's documentation on [Disabling JavaScript.](https://developers.google.com/web/tools/chrome-devtools/javascript/disable).
+    - For example, if you are using Google Chrome, refer to Google's documentation on [Disabling JavaScript.](https://developers.google.com/web/tools/chrome-devtools/javascript/disable).
 
-2. Access your website and observe if its core functionalities are working as expected. Your store will not function exactly as planned but check below which are the expected and undesired behaviors when disabling JavaScript:
+2. Access your store website and observe if its core functionalities are working as expected. Your store will not function exactly as planned but check below which are the expected and undesired behaviors when disabling JavaScript:
 
     - **Undesired behaviors**
 
