@@ -15,18 +15,15 @@ There are a few different APIs that can be useful to execute a seller change. He
 
 In the case of a seller change, the marketplace is responsible for choosing the new seller. VTEX does not have any automated system to make this choice, but we do suggest you use the [Get seller list API request](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/seller-register/pvt/sellers) to see the list of sellers associated with your marketplace. It is also possible to filter sellers returned by this call using query params.
 
-
 ## Cart simulation
 
 With the information of the sellers in hand, you can simulate carts to check the availability of the products. To do this, you may use our [Fulfillment simulation endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation?endpoint=post-/api/checkout/pub/orderForms/simulation).
-
 
 ## Window to change seller
 
 When a seller cancels an order, the marketplace has a limited period of time to choose a new seller to fulfill that order. This period of time is the window to change seller, and the default is of two days.
 
 This value can be checked using the [Get window to change seller request](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/checkout/pvt/configuration/window-to-change-seller) and configured with the [Update window to change seller endpoint](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/checkout/pvt/configuration/window-to-change-seller).
-
 
 ## Change seller
 
