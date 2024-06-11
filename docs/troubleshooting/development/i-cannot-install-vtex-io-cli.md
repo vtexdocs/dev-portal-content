@@ -48,30 +48,30 @@ To solve this problem, follow these steps:
   1. Run the `yarn global bin` command in your terminal.
   2. Copy the path. In the example below, `C:\Users\Barbara Celi\AppData\Local\Yarn\bin`
 
-      ![windows-yarn-global-bin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/vtex-io/windows-yarn-global-bin.png)
+      ![windows-yarn-global-bin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/windows-yarn-global-bin.png)
 
   3. In the Windows search bar, write Edit the system environment variables.
   4. Click `Open`.
 
-      ![edit-variables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/vtex-io/windows-search-en.png)
+      ![edit-variables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/windows-search-en.png)
 
   5. In the System Properties settings, go to the Advanced section and click Environment Variables.
 
-      ![system-properties](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/vtex-io/environment-variables-en.png)
+      ![system-properties](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/environment-variables-en.png)
 
   6. In the **Environment Variables** settings, double-click **Path**.
 
       >⚠️ If you want to configure the variables only for your user, click Path within **User variables for {your.user}**. If the configuration is for all system users, click Path within **System variables**.
 
-      ![system-variables-user](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/vtex-io/system-variables-en.png)
+      ![system-variables-user](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/system-variables-en.png)
 
   7. In the Edit environment variable settings, click `New`.
 
-      ![edit-environment-variable](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/vtex-io/new-variable-en.png)
+      ![edit-environment-variable](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/new-variable-en.png)
 
   8. Paste the path you copied in step 2.
   9. Click `OK`.
 
-      ![new-variable](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/vtex-io/new-variable-2-en.png)
+      ![new-variable](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/new-variable-2-en.png)
 
   If the error continues, [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
