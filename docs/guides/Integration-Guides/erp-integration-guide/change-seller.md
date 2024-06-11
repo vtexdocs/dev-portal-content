@@ -13,7 +13,7 @@ There are a few different APIs that can be useful to execute a seller change. He
 
 ## Seller listing
 
-In the case of a seller change, the marketplace is responsible for choosing the new seller. VTEX does not have any automated system to make this choice, but we do suggest you use the [Get seller list API request](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers) to see the list of sellers associated with your marketplace. It is also possible to filter sellers returned by this call using query params.
+In the case of a seller change, the marketplace is responsible for choosing the new seller. VTEX does not have any automated system to make this choice, but we do suggest you use the [Get seller list API request](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/seller-register/pvt/sellers) to see the list of sellers associated with your marketplace. It is also possible to filter sellers returned by this call using query params.
 
 
 ## Cart simulation
