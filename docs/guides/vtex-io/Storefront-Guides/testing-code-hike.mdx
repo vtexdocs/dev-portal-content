@@ -180,5 +180,45 @@ Learn how to make it available in the [Deploying a new app version](https://deve
 
 When the process is finished, the component will appear as follows in the live account’s Site Editor:
 
-![default-schema](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@testing-code-hike/docs/guides/vtex-io/Storefront-Guides/default-schema.png) | ![custom-component](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@testing-code-hike/docs/guides/vtex-io/Storefront-Guides/custom-component.png)
-:--- | ---: 
+<CH.Fold>
+
+<CH.Code show={["react/CustomComponent/index.tsx"]}>	
+
+```tsx  
+import React from 'react';
+
+  const CustomComponent = ({ title, subtitle }: CustomComponentProps) => (
+    <>
+      <p>{title}</p>
+      <p>{subtitle}</p>
+    </>
+  );
+
+  CustomComponent.defaultProps = {
+    title: "VTEX",
+    subtitle: "The Composable and Complete Commerce Platform.",
+  };
+
+  CustomComponent.schema = {
+    title: 'Custom Component',
+    type: 'object',
+    properties: {
+      title: {
+        type: 'string',
+        title: 'Título',
+      },
+      subtitle: {
+        type: 'string',
+        title: 'Subtítulo',
+      },
+    },
+  };
+
+export default CustomComponent;
+```
+
+</CH.Code>
+
+![default-schema](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@testing-code-hike/docs/guides/vtex-io/Storefront-Guides/default-schema.png)
+
+</CH.Fold>
