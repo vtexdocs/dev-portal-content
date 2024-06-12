@@ -10,7 +10,6 @@ excerpt: "Learn how to allow component customization directly in the Site Editor
 To allow component customization in [Site Editor](https://help.vtex.com/en/tutorial/site-editor-overview--299Dbeb9mFczUTyNQ9xPe1?&utm_source=autocomplete), you need to define the schema for each editable property and reference these definitions in the `interfaces.json` file.
 
 In this guide, you will learn how to configure the schema definitions in your components, allowing users to customize them directly in the Site Editor.
-Follow the steps below to configure the schema definitions for your custom components.
 
 ## Before you begin
 
@@ -29,12 +28,12 @@ For your block to accept user customizations, export the React component respons
 
 1. Create a new folder in the `/react` root directory. Follow the pattern `react/components/{ComponentName}/index.tsx`. For example, for a component named `CustomComponent`, the folder structure is as follows:
 
-```txt
-react
- ┣ 📂 components
-      ┣ 📂 CustomComponent
-           ┣ index.tsx
-```
+   ```txt
+   react
+    ┣ 📂 components
+         ┣ 📂 CustomComponent
+              ┣ index.tsx
+   ```
 
 <CH.Scrollycoding>
 
@@ -111,17 +110,7 @@ CustomComponent.schema = {
     },
   },
 };
-```
 
-</CH.Code>
-
----
-
-**Export the component:** Export the component, making it available. By setting `CustomComponent` as the default export, you can import it into other app parts.
-
-<CH.Code show={["react/CustomComponent/index.tsx"]}>
-
-```tsx
 export default CustomComponent;
 ```
 
