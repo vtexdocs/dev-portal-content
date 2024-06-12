@@ -60,7 +60,7 @@ interface CustomComponentProps {
 
 **Component definition:** The functional component `CustomComponent` takes an object with `title` and `subtitle` props as its argument, allowing easy access to these props.
 
-<CH.Code show={[]}>
+<CH.Code show={["react/CustomComponent/index.tsx"]}>
 
 ```tsx
 const CustomComponent = ({ title, subtitle }: CustomComponentProps) => {
@@ -80,6 +80,7 @@ const CustomComponent = ({ title, subtitle }: CustomComponentProps) => {
 **Default props:** The `defaultProps` specifies the default values for the props of the `CustomComponent`. If the user does not define props in the Site Editor, the `defaultProps` values will be returned.
 
 <CH.Code show={["react/CustomComponent/index.tsx"]}>	
+
 ```tsx
 CustomComponent.defaultProps = {
   title: "VTEX",
