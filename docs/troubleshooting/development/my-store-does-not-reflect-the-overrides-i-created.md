@@ -3,12 +3,12 @@ title: "My store does not reflect the overrides I created"
 slug: "my-store-does-not-reflect-the-overrides-i-created"
 hidden: false
 createdAt: "2024-06-13T08:47:00.508Z"
-excerpt: "The overriding process is not working."
+excerpt: "During the Section overriding process], you can experience issues such as overridden components not appearing or not behaving as you expected."
 tags:
     - faststore
 ---
 
-During the [Section overriding process](https://developers.vtex.com/docs/guides/faststore/overrides-overview), you can experience issues such as overridden components not appearing or not behaving as you expected.
+[Section override](https://developers.vtex.com/docs/guides/faststore/overrides-overview) is a feature for customizing and creating new components for your FastStore storefront. However, you may encounter situations where the overridden components don't appear or function as intended. 
 
 Below are various troubleshooting checks and instructions you can use to solve your store's issue:
 
