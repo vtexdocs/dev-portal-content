@@ -1,3 +1,4 @@
+
 ---
 title: "Making a custom component available in the Site Editor"
 slug: "making-custom-component-available-site-editor"
@@ -27,9 +28,7 @@ Check if the [Builders](https://developers.vtex.com/docs/guides/vtex-io-document
 For your block to accept user customizations, export the React component responsible for the block. This component should include a schema that allows editing directly in the Site Editor.
 
 
-1. Create a new folder in the `/react` root directory. Follow the pattern `react/components/{ComponentName}/index.tsx`.
-
-    For example, for a component named `CustomComponent`, the folder structure is as follows:
+1. Create a new folder in the `/react` root directory. Follow the pattern `react/components/{ComponentName}/index.tsx`. For example, for a component named `CustomComponent`, the folder structure is as follows:
 
    ```txt
    react
@@ -37,10 +36,10 @@ For your block to accept user customizations, export the React component respons
          ┣ 📂 CustomComponent
               ┣ index.tsx
    ```
+   
+<CH.Scrollycoding>
 
 2. Open the `index.tsx` file and define your custom component. Let’s break down the code into parts:
-
-<CH.Spotlight>
 
 ```tsx react/CustomComponent/index.tsx
 import React from 'react';
@@ -84,37 +83,43 @@ export default CustomComponent;
 
 ---
 
-- **Interface definition:** The `CustomComponentProps` defines the type for the component’s props, specifying `title` and `subtitle` as the expected string props.
-
+- **Interface definition**
+  
+  The `CustomComponentProps` defines the type for the component’s props, specifying `title` and `subtitle` as the expected string props.
 
 ```tsx react/CustomComponent/index.tsx focus=1:6
 ```
 
 ---
 
-- **Component definition:** The functional component `CustomComponent` takes an object with `title` and `subtitle` props as its argument, allowing easy access to these props.
+- **Component definition**
+  
+  The functional component `CustomComponent` takes an object with `title` and `subtitle` props as its argument, allowing easy access to these props.
 
 ```tsx react/CustomComponent/index.tsx focus=8:15
 ```
 
 ---
 
-- **Default props:** The `defaultProps` specifies the default values for the props of the `CustomComponent`. If the user does not define props in the Site Editor, the `defaultProps` values will be returned.
+- **Default props**
+  
+  The `defaultProps` specifies the default values for the props of the `CustomComponent`. If the user does not define props in the Site Editor, the `defaultProps` values will be returned.
 
 ```tsx react/CustomComponent/index.tsx focus=17:20
 ```
 
 ---
 
-- **Schema definition:** The `schema` defines the structure and types of the props, allowing the component to be customized within the Site Editor.
+- **Schema definition**
+
+  The `schema` defines the structure and types of the props, allowing the component to be customized within the Site Editor.
 
 ```tsx react/CustomComponent/index.tsx focus=22:37
 ```
 
 ---
 
-</CH.Spotlight>
-
+</CH.Scrollycoding>
 
 >ℹ️ Ensure you define the `defaultProps` and `schema` objects for the component in [JSON Schema](https://json-schema.org/) format, a declarative language that provides a standardized way to describe and validate JSON data.
 
