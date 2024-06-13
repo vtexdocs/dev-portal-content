@@ -8,7 +8,7 @@ tags:
     - faststore
 ---
 
-[Section override](https://developers.vtex.com/docs/guides/faststore/overrides-overview) is a feature for customizing and creating new components for your FastStore storefront. However, you may encounter situations where the overridden components don't appear or function as intended. 
+[Section override](https://developers.vtex.com/docs/guides/faststore/overrides-overview) is a feature for customizing and creating new components for your FastStore storefront. However, you may encounter situations where the overridden components don't appear or function as intended.
 
 Below are various troubleshooting checks and instructions you can use to solve your store's issue:
 
