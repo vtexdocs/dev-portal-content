@@ -54,7 +54,7 @@ This function is important for displaying product overrides within your store, a
 
 If you can’t see the changes in the Headless CMS after [overriding a prop](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) or a [section](https://developers.vtex.com/docs/guides/faststore/overrides-native-component), this may be due to a schema. The Headless CMS won’t display your custom section without one.
 
-1. [Add the schema](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms) for the new section to the Headless CMS
+1. [Add the schema](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms) for the new section to the Headless CMS.
 2. Replace the native section with your custom one. For detailed instructions, see the guide [Syncing components with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 
 ### Removing default props
