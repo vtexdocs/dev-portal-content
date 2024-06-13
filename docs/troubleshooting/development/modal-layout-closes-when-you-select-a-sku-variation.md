@@ -1,6 +1,6 @@
 ---
-title: "Modal Layout closes when you click a SKU"
-slug: "modal-layout-closes-when-you-click-a-sku"
+title: "Modal Layout closes when I click a SKU"
+slug: "modal-layout-closes-when-i-click-a-sku"
 hidden: false
 createdAt: "2024-06-04T11:15:35.508Z"
 updatedAt: "2024-06-04T11:15:35.508Z"
