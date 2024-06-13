@@ -36,85 +36,80 @@ For your block to accept user customizations, export the React component respons
               ┣ index.tsx
    ```
    
-<CH.Scrollycoding>
-
 2. Open the `index.tsx` file and define your custom component. Let’s break down the code into parts:
 
-```tsx react/CustomComponent/index.tsx
-import React from 'react';
-
-interface CustomComponentProps {
-  title: string;
-  subtitle: string;
-}
-
-const CustomComponent = ({ title, subtitle }: CustomComponentProps) => {
-   return (
-      <>
-         <p>{title}</p>
-         <p>{subtitle}</p>
-      </>
-   );
-};
-
-CustomComponent.defaultProps = {
-  title: "VTEX",
-  subtitle: "The Composable and Complete Commerce Platform.",
-};
-
-CustomComponent.schema = {
-  title: 'Custom Component',
-  type: 'object',
-  properties: {
-    title: {
-      type: 'string',
-      title: 'Título',
-    },
-    subtitle: {
-      type: 'string',
-      title: 'Subtítulo',
-    },
-  },
-};
-
-export default CustomComponent;
-```
-
----
+<CH.Scrollycoding>
 
 - **Interface definition**
-  
-  The `CustomComponentProps` defines the type for the component’s props, specifying `title` and `subtitle` as the expected string props.
 
-```tsx react/CustomComponent/index.tsx focus=1:6
-```
+   The `CustomComponentProps` defines the type for the component’s props, specifying `title` and `subtitle` as the expected string props.
+
+   ```tsx react/CustomComponent/index.tsx focus=1:5
+   import React from 'react';
+
+   interface CustomComponentProps {
+     title: string;
+     subtitle: string;
+   }
+
+   const CustomComponent = ({ title, subtitle }: CustomComponentProps) => {
+      return (
+         <>
+            <p>{title}</p>
+            <p>{subtitle}</p>
+         </>
+      );
+   };
+
+   CustomComponent.defaultProps = {
+     title: "VTEX",
+     subtitle: "The Composable and Complete Commerce Platform.",
+   };
+
+   CustomComponent.schema = {
+     title: 'Custom Component',
+     type: 'object',
+     properties: {
+       title: {
+         type: 'string',
+         title: 'Título',
+       },
+       subtitle: {
+         type: 'string',
+         title: 'Subtítulo',
+       },
+     },
+   };
+
+   export default CustomComponent;
+   ```
 
 ---
 
 - **Component definition**
-  
-  The functional component `CustomComponent` takes an object with `title` and `subtitle` props as its argument, allowing easy access to these props.
+   
+   The functional component `CustomComponent` takes an object with `title` and `subtitle` props as its argument, allowing easy access to these props.
 
-```tsx react/CustomComponent/index.tsx focus=8:15
-```
+   ```tsx react/CustomComponent/index.tsx focus=8:15
+   ```
 
 ---
 
 - **Default props**
-  
-  The `defaultProps` specifies the default values for the props of the `CustomComponent`. If the user does not define props in the Site Editor, the `defaultProps` values will be returned.
 
-```tsx react/CustomComponent/index.tsx focus=17:20
-```
+   The `defaultProps` specifies the default values for the props of the `CustomComponent`. If the user does not define props in the Site Editor, the `defaultProps` values will be returned.
+
+   ```tsx react/CustomComponent/index.tsx focus=17:20
+   ```
 
 ---
 
 - **Schema definition**
 
-  The `schema` defines the structure and types of the props, allowing the component to be customized within the Site Editor.
+   The `schema` defines the structure and types of the props, allowing the component to be customized within the Site Editor.
 
-```tsx react/CustomComponent/index.tsx focus=22:37
-```
+   ```tsx react/CustomComponent/index.tsx focus=22:37
+   ```
 
 ---
 
