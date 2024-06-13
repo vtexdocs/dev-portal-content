@@ -3,7 +3,7 @@ title: "My store does not reflect the overrides I created"
 slug: "my-store-does-not-reflect-the-overrides-i-created"
 hidden: false
 createdAt: "2024-06-13T08:47:00.508Z"
-excerpt: "After creating a development workspace in a multi-language store, there is an error in my website."
+excerpt: "The overriding process is not working."
 tags:
     - faststore
 ---
