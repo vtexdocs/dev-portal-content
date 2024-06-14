@@ -9,9 +9,7 @@ To query the Master Data, you can use the `search` or the `scroll` endpoints
 
 ## Search
 
-The `search` route is the best solution for cases where we need to find a collection of documents directly in the store.
-
-The `search` route is mainly used for paginated queries. However, the greater the interval of documents, the slower the query will be.
+The `search` route is the best solution for cases where we need to find a collection of documents directly in the store. This route is mainly used for paginated queries. However, the greater the interval of documents, the slower the query will be.
 
 To get better performance in these cases, create a filter. Reducing the number of documents in the final result is the best way to achieve an efficient query.
 
@@ -23,14 +21,8 @@ To use `scroll` send your API request using the same filtering resources availab
 
 Use this token for your next requests until an empty list is returned.
 
-### Scroll limitations
-
-1. You can only do one operation at a time. This means that when you receive a token on your first request, you must complete the search, or wait until the token expires;
-2. If Master Data receives no more requests with the same token, it will expire in 20 minutes and you can then make new requests of the `scroll` type;
-3. The maximum number of documents per request is 1.000.
-[block:callout]
-{
-  "type": "info",
-  "body": "For more details, see our [documentation for MasterData APIs](https://developers.vtex.com/docs/api-reference/masterdata-api#overview)."
-}
-[/block]
+> ⚠️ **Scroll limitations**
+>
+> 1. **Only one operation is allowed at a time.** This means that when you receive a token on your first request, you must complete the search, or wait until the token expires.
+> 2. If Master Data stops receiving requests with the token, it will expire in **20 minutes**. After that, you can then make new scroll requests.
+> 3. The maximum number of documents per request is **1000**.
