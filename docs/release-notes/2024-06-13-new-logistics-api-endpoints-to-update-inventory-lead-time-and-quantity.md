@@ -7,7 +7,7 @@ createdAt: "2024-06-14T12:04:00.219Z"
 excerpt: "Manage SKU quantity and lead time in separate endpoints."
 ---
 
-In order to facilitate your [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139) management, we have launched new endpoints in our **Logistics API**. In addition to the previous [Update inventory by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-), you can now, if desired, use an endpoint to configure only lead time and another just to update SKU quantity.
+In order to facilitate your [inventory management](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139), we have launched new endpoints in our **Logistics API**. In addition to the previous [Update inventory by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-), you can now, if desired, use an endpoint to configure only lead time and another just to update SKU quantity.
 
 The new routes are the following:
 
