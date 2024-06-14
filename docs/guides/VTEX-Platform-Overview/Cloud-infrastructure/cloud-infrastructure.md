@@ -79,7 +79,7 @@ Using our REST APIs with our development platform (VTEX IO) and data service (Ma
 
 ## Cloud-native
 
-In our infrastructure, we align with market trends in hosting and computing. VTEX core commerce services are built on top of Amazon Elastic Beanstalk, which monitors and controls the deployment of new servers. VTEX IO is built on [AWS Kubernetes](https://aws.amazon.com/kubernetes/?nc1=h_ls), using Amazon Elastic Compute Cloud (EC2) clusters and containers on those instances. Kubernetes controls the deployment, maintenance, and scaling processes on VTEX IO.
+In our infrastructure, we align with market trends in hosting and computing. VTEX core commerce services utilize advanced cloud solutions, which monitor and control the deployment of new servers. VTEX IO leverages containerization and clustering technologies to manage deployment, maintenance, and scaling processes.
 
 Our cloud-native, multi-tenant SaaS solution allows tenants to run the same version of the platform and benefit from frequent and seamless upgrades on top of high scalability.
 
@@ -120,7 +120,7 @@ Our cache layers follow the best practices and are continuously improved to prov
 
 ### Scalability
 
-Leveraging technologies like [Clusters](https://aws.amazon.com/what-is/kubernetes-cluster/?nc1=h_ls), [Kubernetes](https://kubernetes.io/), and microservices enables us to efficiently manage and scale our resources based on demand, thanks to built-in features like autoscaling.
+Leveraging cloud technology and microservices enables us to efficiently manage and scale our resources based on demand, thanks to built-in features like autoscaling.
 
 Our multi-tenant architecture ensures elastic scalability, allowing stores to easily adapt to changing business requirements and handle traffic peaks on events such as Black Friday. As your operation grows, our platform accommodates increased demand without compromising performance.
 
@@ -132,9 +132,9 @@ We deliver high availability, as defined in our [SLA agreement](https://vtex.com
 
 You can monitor the platform's stability in real time and access the full incident and maintenance history at [VTEX Status](https://status.vtex.com/). Learn more about all the information available on this page at our [VTEX Status page](https://help.vtex.com/en/tutorial/vtex-status-page--gPhqDn9IQ3c67wbJEX3JJ) guide.
 
-Additionally, we provision our infrastructure in an automated manner using the [Infrastructure as Code (IaC)](https://aws.amazon.com/what-is/iac/?nc1=h_ls) concept. VTEX is built on top of [AWS Elastic Beanstalk](https://aws.amazon.com/pt/elasticbeanstalk/), so we autoscale our applications and microservices. For each service, we control Latency and CPU usage so that we can identify if a specific module needs more or fewer servers, keeping safe thresholds so changes occur ahead of time. AWS Elastic Beanstalk also helps in load-balancing, deploying and rolling-back versions of our systems, so we can provide scalable and stable up-to-date systems to VTEX customers.
+Additionally, we provision our infrastructure in an automated manner using the [Infrastructure as Code (IaC)](https://aws.amazon.com/what-is/iac/?nc1=h_ls) concept. We autoscale our applications and microservices. For each service, we control latency and CPU usage so that we can identify if a specific module needs more or fewer servers, keeping safe thresholds so changes occur ahead of time. Our infrastructure also supports load balancing, deploying, and rolling back versions of our systems, providing scalable and stable up-to-date systems to VTEX customers.
 
-VTEX IO is built on [AWS Kubernetes](https://aws.amazon.com/kubernetes/?nc1=h_ls), using [Amazon Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/?nc1=h_ls) clusters and containers on those instances. Kubernetes controls the deployment, maintenance, and scaling processes on VTEX IO.
+VTEX IO leverages containerization and clustering technologies to manage deployment, maintenance, and scaling processes.
 
 VTEX teams constantly execute load tests to ensure the platform is ready to scale with our customer's demands, gaining visibility and fixing bottlenecks.
 
