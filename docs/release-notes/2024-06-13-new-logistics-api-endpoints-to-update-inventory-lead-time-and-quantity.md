@@ -13,5 +13,5 @@ The new routes are the following:
 
 | **Endpoint** | **Description** |
 | :--- | :--- |
-| PATCH - [Update inventory lead time by SKU and warehouse](link) | Configure exclusively the [lead time](https://help.vtex.com/en/tutorial/lead_time-shipping-time-at-sku-level--16yv5Mkj6bTyWR1hCN2f4B) for a SKU from a warehouse. |
-| PATCH - [Update inventory quantity by SKU and warehouse](link) | Configure exclusively the quantity for a SKU from a warehouse. You can either update the SKU count or turn on the infinite inventory configuration. |
+| PATCH - [Update inventory lead time by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#patch-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/lead-time) | Configure exclusively the [lead time](https://help.vtex.com/en/tutorial/lead_time-shipping-time-at-sku-level--16yv5Mkj6bTyWR1hCN2f4B) for a SKU from a warehouse. |
+| PATCH - [Update inventory quantity by SKU and warehouse](https://developers.vtex.com/docs/api-reference/logistics-api#patch-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/quantity) | Configure exclusively the quantity for a SKU from a warehouse. You can either update the SKU count or turn on the infinite inventory configuration. |
