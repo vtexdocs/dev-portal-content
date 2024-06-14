@@ -108,14 +108,23 @@ The `defaultProps` specifies the default values for the props of the `CustomComp
 
 The `schema` defines the structure and types of the props, allowing the component to be customized within the Site Editor.
 
-```tsx react/CustomComponent/index.tsx focus=22:37
+```tsx react/CustomComponent/index.tsx focus=22:35
 ```
 
 ---
 
-Ensure you define the `defaultProps` and `schema` objects for the component in [JSON Schema](https://json-schema.org/) format, a declarative language that provides a standardized way to describe and validate JSON data.
+**Exporting the component**
+
+By setting `CustomComponent` as the default export, you can import it into other parts of the app or other apps.
+
+```tsx react/CustomComponent/index.tsx focus=37
+```
+
+---
 
 </CH.Scrollycoding>
+
+>ℹ️ Ensure you define the `defaultProps` and `schema` objects for the component in [JSON Schema](https://json-schema.org/) format, a declarative language that provides a standardized way to describe and validate JSON data.
 
 ### Step 2 - Exporting the custom component
 
