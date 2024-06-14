@@ -23,7 +23,7 @@ You can use our [native components](#native-components), customize them as neede
 
 Within the VTEX IO ecosystem, different types of components cater to different aspects of store development. Below are the main types of components:
 
- - [**Basic components**](https://developers.vtex.com/docs/guides/basic-components): Reusable UI elements such as buttons, forms, input fields, and other fundamental interface elements. These components provide the building blocks for constructing more complex UI elements and features.
+- [**Basic components**](https://developers.vtex.com/docs/guides/basic-components): Reusable UI elements such as buttons, forms, input fields, and other fundamental interface elements. These components provide the building blocks for constructing more complex UI elements and features.
 
 The [Product Summary](https://developers.vtex.com/docs/apps/vtex.product-summary) exemplifies a basic storefront component, summarizing essential product information like name, price, and image, which can be seamlessly integrated into other store blocks, such as the [Shelf](https://developers.vtex.com/docs/apps/vtex.shelf).
 
