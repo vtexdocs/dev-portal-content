@@ -78,6 +78,8 @@ Hook works as a complement to Feed, because it allows an integration to consume 
 
 There are several actions a VTEX store can perform on orders. In the following sections, you will find the main actions related to a store’s order management routine.
 
+> This module may process personal or sensitive information. Learn more about how VTEX handles data privacy at our [Data privacy](https://developers.vtex.com/docs/guides/data-privacy) guide.
+
 ### Placing an order
 
 Placing an order involves the Order Management module and [Checkout](https://developers.vtex.com/vtex-rest-api/docs/checkout-overview). There are different paths to create orders. For more information about placing orders, see the links below.
