@@ -1,10 +1,13 @@
 ---
-title: 'Queries'
-sidebar_label: 'API Extensions'
-slug: queries
+title: "Queries"
 ---
 
-## Query
+Arguments must be provided by the user.
+
+Arguments preeceded by an exclamation mark (`!`) are not nullable.
+
+## Product
+
 <table>
 <thead>
 <tr>
@@ -32,7 +35,41 @@ Returns the details of a product based on the specified locator.
 An array of selected search facets.
 
 </td>
+<tr>
+<td colspan="2" valign="top"><strong>allProducts</strong></td>
+<td valign="top"><a href="#storeproductconnection">StoreProductConnection</a>!</td>
+<td>
+
+Returns information about all products.
+
+</td>
 </tr>
+<tr>
+<td colspan="2" align="right" valign="top">first</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Product pagination argument, indicating how many items should be returned from the complete result list.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">after</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Product pagination argument, indicating the cursor corresponding with the item after which the items should be fetched.
+
+</td>
+</tr>
+</thead>
+</table>
+
+## Collection
+
+<table>
+<thead>
+<tr>
 <tr>
 <td colspan="2" valign="top"><strong>collection</strong></td>
 <td valign="top"><a href="#storecollection">StoreCollection</a>!</td>
@@ -51,6 +88,41 @@ Collection slug.
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>allCollections</strong></td>
+<td valign="top"><a href="#storecollectionconnection">StoreCollectionConnection</a>!</td>
+<td>
+
+Returns information about all collections.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">first</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Collection pagination argument, indicating how many items should be returned from the complete result list.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">after</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Collection pagination argument, indicating the cursor corresponding with the item after which the items should be fetched.
+
+</td>
+</tr>
+</tr>
+</thead>
+</table>
+
+## Search
+
+<table>
+<thead>
 <tr>
 <td colspan="2" valign="top"><strong>search</strong></td>
 <td valign="top"><a href="#storesearchresult">StoreSearchResult</a>!</td>
@@ -105,60 +177,41 @@ Array of selected search facets.
 
 </td>
 </tr>
+
 <tr>
-<td colspan="2" valign="top"><strong>allProducts</strong></td>
-<td valign="top"><a href="#storeproductconnection">StoreProductConnection</a>!</td>
+<td colspan="2" valign="top"><strong>redirect</strong></td>
+<td valign="top"><a href="#storeredirect">StoreRedirect</a></td>
 <td>
 
-Returns information about all products.
+Returns if there's a redirect for a search.
 
 </td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">first</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td>
-
-Product pagination argument, indicating how many items should be returned from the complete result list.
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">after</td>
+<td colspan="2" align="right" valign="top">term</td>
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-Product pagination argument, indicating the cursor corresponding with the item after which the items should be fetched.
+Search term.
 
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>allCollections</strong></td>
-<td valign="top"><a href="#storecollectionconnection">StoreCollectionConnection</a>!</td>
+<td colspan="2" align="right" valign="top">selectedFacets</td>
+<td valign="top">[<a href="#istoreselectedfacet">IStoreSelectedFacet</a>!]</td>
 <td>
 
-Returns information about all collections.
+Array of selected search facets.
 
 </td>
 </tr>
-<tr>
-<td colspan="2" align="right" valign="top">first</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td>
+</tbody>
+</table>
 
-Collection pagination argument, indicating how many items should be returned from the complete result list.
+## Shipping
 
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">after</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Collection pagination argument, indicating the cursor corresponding with the item after which the items should be fetched.
-
-</td>
-</tr>
+<table>
+<thead>
 <tr>
 <td colspan="2" valign="top"><strong>shipping</strong></td>
 <td valign="top"><a href="#shippingdata">ShippingData</a></td>
@@ -195,33 +248,13 @@ Country of postal code
 
 </td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>redirect</strong></td>
-<td valign="top"><a href="#storeredirect">StoreRedirect</a></td>
-<td>
+</tbody>
+</table>
 
-Returns if there's a redirect for a search.
+## Sellers
 
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">term</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Search term.
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">selectedFacets</td>
-<td valign="top">[<a href="#istoreselectedfacet">IStoreSelectedFacet</a>!]</td>
-<td>
-
-Array of selected search facets.
-
-</td>
-</tr>
+<table>
+<thead>
 <tr>
 <td colspan="2" valign="top"><strong>sellers</strong></td>
 <td valign="top"><a href="#sellersdata">SellersData</a></td>
@@ -269,4 +302,3 @@ Sales channel of the navigation
 </tr>
 </tbody>
 </table>
-
