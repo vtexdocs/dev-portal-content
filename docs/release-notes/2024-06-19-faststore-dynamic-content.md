@@ -26,4 +26,4 @@ Dynamic Content can offer:
 
 ## What needs to be done?
 
-Check out the [Dynamic content](/LINK) guide for more information.
+Check out the [Dynamic content](https://developers.vtex.com/docs/guides/faststore/dynamic-content-overview) guide for more information.
