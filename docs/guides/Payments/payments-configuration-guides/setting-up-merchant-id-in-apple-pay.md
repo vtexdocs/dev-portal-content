@@ -186,9 +186,6 @@ Afterwards, proceed to the following steps:
 5. Give the **certificate** a name.
 6. Select the **.p12** export format.
 7. Click on **OK**.
+8. Save the certificate on your computer.
 
-As a final step, save the certificate on your computer. This file should be loaded in the gateway affiliation setting's **Apple Merchant Certificate (.p12)** field, affiliation that will process Apple Pay in your VTEX store.
-
-After completing all the steps above, you will have a Merchant ID set up for Apple Pay, a `.p12` certificate saved on your computer, and an access password. All this data will be requested during the process of setting up the gateway affiliation that will process payments with Apple Pay.
-
-To learn how to do this, access this [Help article](https://help.vtex.com/en/tutorial/setting-up-rede-acquirer-with-erederest).
+After completing all the steps above, you will have a Merchant ID set up for Apple Pay, a `.p12` certificate saved on your computer, and an access password. All this data will be requested during the process of setting up the [payment provider](https://help.vtex.com/en/tutorial/registering-gateway-affiliations--tutorials_444) that will process payments with Apple Pay in your store.
