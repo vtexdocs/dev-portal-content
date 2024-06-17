@@ -22,7 +22,7 @@ Dynamic Content can offer:
 - **Improved performance**: Faster initial page load by fetching data on the server side.
 - **Enhanced SEO**: Dynamically generated content is more easily indexed by search engines.
 - **Greater flexibility**: Server-side data fetching allows for more customization of your home and landing pages.
-- **Advanced data fetching**: Dynamic Content supports data fetching mechanisms like GraphQL queries, enabling flexible data retrieval from various APIs. 
+- **Advanced data fetching**: Dynamic Content supports data fetching mechanisms like GraphQL queries, enabling flexible data retrieval from various APIs.
 
 ## What needs to be done?
 
