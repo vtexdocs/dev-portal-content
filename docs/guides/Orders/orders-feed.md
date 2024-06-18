@@ -168,7 +168,7 @@ The following is an example of a complete `filter` object with a more complex an
 
 You should validate the events of the configured expression before implementing the filter in your integration. There are three useful tests:
 
-- [The API endpoint for JSONata Testing](https://developers.vtex.com/vtex-rest-api/reference/testjsonataexpression).
+- [The API endpoint for JSONata Testing](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata).
 - [JSONata Exerciser](https://try.jsonata.org/) which tests the expression against a real JSON file. To run this test, copy the order to JSONata Exerciser and simulate different expressions and requests. Use an order extracted from the [Get Order API endpoint](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-).
 - Configure a test feed or hook with a test [appKey](https://developers.vtex.com/docs/guides/getting-started-authentication) and check whether the events behave as expected.
 
