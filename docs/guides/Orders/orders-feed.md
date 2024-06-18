@@ -271,7 +271,7 @@ Hook is a counterpart to Feed. It allows integrations to consume order update da
 
 >⚠️ Since Hook is a counterpart, [access](#access) follows the same principles described for Feed above. This means each appKey can configure or access only one hook. Different users that sharing the same appKey access the same hook. We recommend configuring one hook per appKey per user, ensuring that each user has access to their own hook.
 
-### Configuration
+### Hook configuration
 
 Similar to a feed, a hook can be configured through a POST call to the [Create or update hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) endpoint of the Orders API. Here are a couple of body examples for the request, each using a different filter type:
 
