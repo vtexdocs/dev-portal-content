@@ -152,7 +152,7 @@ $count(packageAttachment.packages.restitutions.Refund.value) > 0
 status = "invoiced" and (packageAttachment.packages[$[$contains($string(courier), "Carrier Name")]])
 ```
 
-> ❗ Keep in mind that the `expression` field receives only strings and all JSONata expressions have to be escaped. For example, the expression `status = “canceled”` has to be passed as `”status = \\”canceled\\””` to be read correctly by the API.
+>❗ Keep in mind that the `expression` field receives only strings and all JSONata expressions have to be escaped. For example, the expression `status = “canceled”` has to be passed as `”status = \\”canceled\\””` to be read correctly by the API.
 
 The following is an example of a complete `filter` object with a more complex and escaped JSONata expression.
 
@@ -175,7 +175,8 @@ You should validate the events of the configured expression before implementing 
 ##### `disableSingleFire`
 
 This field limits how often a specific order shows in the feed after it meets the filter conditions. If this field is `false`, orders will appear in the feed only once.
-> ❗ The `FromOrders` filter receives order updates whenever any change is made to the order JSON document, provided the order meets the criteria set in the `expression` field. Because of this, if the `disableSingleFire` field is set to `true`, orders may appear more than once in a feed — even hundreds of times in some cases. To prevent that from happening, keep `disableSingleFire` set to `false`.
+
+>❗ The `FromOrders` filter receives order updates whenever any change is made to the order JSON document, provided the order meets the criteria set in the `expression` field. Because of this, if the `disableSingleFire` field is set to `true`, orders may appear more than once in a feed — even hundreds of times in some cases. To prevent that from happening, keep `disableSingleFire` set to `false`.
 
 ### `queue`
 
@@ -241,9 +242,9 @@ Here are two complete example bodies for the [Feed configuration response](https
 }
 ```
 
- >ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
+>ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
 
-> ❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
+>❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
 
 ## Feed readout
 
@@ -336,7 +337,8 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
 If configured, the Hook notifies the integration endpoint whenever an order update is made and meets the conditions specified in the `filter`.
 
 If a new event is not correctly notified to the endpoint, the interval for future retries is recalculated based on an internal geometric progression algorithm.
-> ❗ If the hook has no notifications for three days, your configuration will be removed, and you will have to reconfigure it with the [Hook configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) to continue using it. Therefore, it's important to be mindful of your filter configuration. You can check it any time using the [Get hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/hook/config) endpoint.
+
+>❗ If the hook has no notifications for three days, your configuration will be removed, and you will have to reconfigure it with the [Hook configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) to continue using it. Therefore, it's important to be mindful of your filter configuration. You can check it any time using the [Get hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/hook/config) endpoint.
 
 >⚠️ When notified, the configured endpoint must always respond with HTTP status 200 within 5000 ms.
 Below is an example of a hook notification request body made to the integration endpoint.
