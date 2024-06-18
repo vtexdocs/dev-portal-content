@@ -103,7 +103,7 @@ This filter offers many possibilities that can't be achieved with the `FromWorkf
 
 - Delivered orders
 
-```
+```json
 isAllDelivered = true
 ```
 
@@ -150,6 +150,7 @@ $count(packageAttachment.packages.restitutions.Refund.value) > 0
 ```
 status = "invoiced" and (packageAttachment.packages[$[$contains($string(courier), "Carrier Name")]])
 ```
+
 > ❗ Keep in mind that the `expression` field receives only strings and all JSONata expressions have to be escaped. For example, the expression `status = “canceled”` has to be passed as `”status = \\”canceled\\””` to be read correctly by the API.
 
 The following is an example of a complete `filter` object with a more complex and escaped JSONata expression.
