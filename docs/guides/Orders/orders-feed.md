@@ -246,7 +246,7 @@ Here are two complete example bodies for the [Feed configuration response](https
 
 ## Feed readout
 
-Every system that depends on order updates should consume the feed to be able to take the necessary actions based on that information. The most common behavior is a store system or an integration reading every event in the feed and, based on its status, making a decision for each one. 
+Every system that depends on order updates should consume the feed to be able to take the necessary actions based on that information. The most common behavior is a store system or an integration reading every event in the feed and, based on its status, making a decision for each one.
 >⚠️ When filtering statuses, be aware that all possible order statuses must be dealt with during integration to avoid errors. Particular attention should be paid to `Status Null`, which may be unidentified and end up being mapped as another status, which can potentially lead to errors.
 
 ### Example
@@ -322,7 +322,7 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
 
 ```json
 {
-    “hookConfig”: “ping”
+    "hookConfig": "ping"
 }
 ```
 
