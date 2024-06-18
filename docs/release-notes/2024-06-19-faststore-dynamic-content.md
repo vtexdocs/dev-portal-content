@@ -9,7 +9,7 @@ excerpt: "FastStore: Customize your store home and landing pages with server-sid
 
 [Dynamic Content](https://developers.vtex.com/docs/guides/faststore/dynamic-content-overview) is a new FastStore feature that allows you to customize your store home and landing pages using server-side data fetching. This means the content on these pages can be dynamically retrieved from the server, improving both performance and SEO.
 
-## What changed?
+## What has changed?
 
 Previously, this type of customization was only available for Product Listing (PLP) and Product Details Pages (PDP) through [API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview).
 
