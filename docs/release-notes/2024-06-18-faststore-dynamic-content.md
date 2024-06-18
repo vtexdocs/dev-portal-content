@@ -1,9 +1,10 @@
 ---
 title: "FastStore: Customize your home and landing pages with Dynamic Content"
-slug: "2024-06-19-faststore-dynamic-content"
+slug: "2024-06-18-faststore-dynamic-content"
 hidden: false
 type: "added"
 createdAt: "2024-06-14T12:04:00.219Z"
+updatedAt: "2024-06-18T09:55:00.219Z"
 excerpt: "FastStore: Customize your store home and landing pages with server-side data to improve store performance and SEO."
 ---
 
