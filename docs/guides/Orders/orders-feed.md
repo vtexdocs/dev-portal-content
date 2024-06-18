@@ -35,6 +35,7 @@ Some stores use the List orders API request to check order status changes. Howev
 - Because the `list` method depends on indexing, it's slower and performs less than the feed.
 
 On the other hand, the feed has been specifically developed to track order updates. It runs before indexing and doesn't depend on it, making it the most reliable and fastest method to track order updates.
+
 >⚠️ If you have an integration based on the List orders API request, you should migrate it to the feed. However, keep in mind that this means changing the integration flow. Read the [order integration guide](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) to learn how to implement this change.
 
 ## Access
