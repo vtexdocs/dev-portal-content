@@ -353,7 +353,8 @@ Below is an example of a hook notification request body made to the integration 
 ```
 
 >⚠️ When using a hook, it's important to be aware that it's a reactive feature. This means your middleware or ERP system must be ready to deal with whatever volume of data the hook sends. Large peaks in sales – due to Black Friday, for example – tend to increase hook notifications. If the implementation is not prepared for this peak, it may cause problems in the integration, compromising the store’s ability to handle orders and receive further notifications. Learn more about how to deal with this issue in the next section.
-Getting order updates from a feed requires the integration to make periodical API calls, returning whatever number of updates is available each time. A hook, on the other hand, notifies the integration whenever a new update is available. This means a feed is active, whereas a hook is reactive.
+
+Getting order updates from a feed requires the integration to make periodical API calls, returning whatever number of available updates each time, with no guarantee of ordination due to the infrastructure and technology used. A hook, on the other hand, notifies the integration whenever a new update is available. This means a feed is active, whereas a hook is reactive.
 
 Because of this, a hook can be more efficient and provide a lower response time for each order update. But as a reactive feature, the integration must have scalability to handle great variations in data volume, such as can be caused by a Black Friday sales peak, for example.
 
