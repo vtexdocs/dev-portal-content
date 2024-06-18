@@ -7,7 +7,7 @@ createdAt: "2024-06-14T12:04:00.219Z"
 excerpt: "FastStore: Customize your store home and landing pages with server-side data to improve store performance and SEO."
 ---
 
-[Dynamic Content](LINK) is a new FastStore feature that allows you to customize your store home and landing pages using server-side data fetching. This means the content on these pages can be dynamically retrieved from the server, improving both performance and SEO.
+[Dynamic Content](https://developers.vtex.com/docs/guides/faststore/dynamic-content-overview) is a new FastStore feature that allows you to customize your store home and landing pages using server-side data fetching. This means the content on these pages can be dynamically retrieved from the server, improving both performance and SEO.
 
 ## What changed?
 
