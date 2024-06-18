@@ -104,25 +104,25 @@ This filter offers many possibilities that can't be achieved with the `FromWorkf
 
 - Delivered orders
 
-```json
+```JSONata
 isAllDelivered = true
 ```
 
 - Orders with added items
 
-```
+```JSONata
 $count(changesAttachment.changesData.itemsAdded) > 0
 ```
 
 - Orders with removed items
 
-```
+```JSONata
 $count(changesAttachment.changesData.itemsRemoved) > 0
 ```
 
 You can also filter multiple properties at the same time. For example, the following is an expression that filters orders that contain at least one refrigerator that costs at least $1000.00:
 
-```
+```JSONata
 $count(items[name ~> /.*refrigerator.*/i and price>=1000]) > 0
 ```
 
@@ -130,25 +130,25 @@ Here are some additional expression examples:
 
 - Order in specific status and trade policy (sales channel)
 
-```
+```JSONata
 (status = "ready-for-handling" and salesChannel="2")
 ```
 
 - Orders from a seller that don't have a specific [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV) (sales channel)
 
-```
+```JSONata
 (salesChannel.Id != "3" and sellers.id ="sellerId")
 ```
 
 - Order with refund/item return
 
-```
+```JSONata
 $count(packageAttachment.packages.restitutions.Refund.value) > 0
 ```
 
 - Order invoiced with a specific shipping policy
 
-```
+```JSONata
 status = "invoiced" and (packageAttachment.packages[$[$contains($string(courier), "Carrier Name")]])
 ```
 
