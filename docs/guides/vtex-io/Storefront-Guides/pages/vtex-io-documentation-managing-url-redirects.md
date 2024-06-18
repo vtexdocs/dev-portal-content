@@ -3,7 +3,7 @@ title: "Managing URL redirects"
 slug: "vtex-io-documentation-managing-url-redirects"
 hidden: false
 createdAt: "2020-06-03T16:02:44.302Z"
-updatedAt: "2024-06-07T13:43:00.268Z"
+updatedAt: "2024-06-18T14:48:09.566Z"
 ---
 
 URL redirection is a method of forwarding website visitors and search engines from one URL to another. Redirects might be useful when you need to move content to a new URL, remove an old product page, or forward users from a specific region to a custom page. Implementing the appropriate redirects can improve the user experience by preventing visitors from hitting 404 error pages.
@@ -85,7 +85,7 @@ Keep in mind that:
 - The `from` column can only receive relative paths.
 - The `to` column can receive either relative paths (e.g., `/blouse/p?skuId=200`) or full URLs (e.g., `https://myotherstore.com`).
 
-> ⚠️ It is not possible to create redirects using wildcards or viariables. You must specify each redirect using relative paths or full URLs.
+> ⚠️ You cannot create redirects using wildcards or variables. You must specify each redirect using relative paths or full URLs.
   
 - `TEMPORARY` redirects receive the `302` status code, while `PERMANENT` redirects receive the `301` status code.
 - The `endDate` must be left empty if the redirect is `PERMANENT`.
