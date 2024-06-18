@@ -18,9 +18,9 @@ The app settings interface displays configuration forms for installed apps in th
 See the Google Tag Manager app interface in the example below, with the appropriate configuration of the `settingsSchema` field in the `manifest.json` file.
 
 ![GTM_image](https://github.com/vtexdocs/dev-portal-content/assets/112641072/d916b8da-0039-4364-b21e-a8cf8ba629dd) | ![carbon (6)](https://github.com/vtexdocs/dev-portal-content/assets/112641072/db87ac7e-7e36-4656-8ddb-b7735b5b92f4)
-:--- | ---: 
+:--- | ---:
 
-After building the settings interface for your app, you need to consume the data provided by the app’s user. Consider the Google Tag Manager example above retrieving the GTM ID. 
+After building the settings interface for your app, you need to consume the data provided by the app’s user. Consider the Google Tag Manager example above retrieving the GTM ID.
 
 Based on the given example, below is a step-by-step guide for creating an interface for your app and retrieving the data to use within the app.
 
@@ -28,9 +28,9 @@ Based on the given example, below is a step-by-step guide for creating an interf
 
 ### Step 1 - Creating the settings interface
 
-Open your app project in any code editor of your choice and open the `manifest.json` file. 
+Open your app project in any code editor of your choice and open the `manifest.json` file.
 
-Define the `settingsSchema` object, declaring a JSON Schema containing the fields that meet your business needs. See the [JSON Schema documentation](http://json-schema.org/understanding-json-schema/) to build the `settingsSchema` field correctly. 
+Define the `settingsSchema` object, declaring a JSON Schema containing the fields that meet your business needs. See the [JSON Schema documentation](http://json-schema.org/understanding-json-schema/) to build the `settingsSchema` field correctly.
 
 > ℹ️ The JSON Schema offers a predefined model that outlines how the settings should be formatted in your app. Note that, according to the JSON Schema specification, the types accepted within a property include: `string`, `number`, `integer`, `boolean`, `object`, `array`, or `null`. It is also possible to use arrays of types (e.g., `[string, number]`) to indicate that the property accepts multiple types.
 
@@ -151,7 +151,8 @@ const { data: appSettingsData } = useQuery(AppSettings, {
   }, [appSettingsData])
 ```
 
-The code above interacts with an API through a GraphQL query, which is managed by the `useQuery` hook, to fetch the app settings. It then parses and updates the app’s state with these settings using a `useEffect` hook whenever the settings data changes. 
+The code above interacts with an API through a GraphQL query, which is managed by the `useQuery` hook, to fetch the app settings. It then parses and updates the app’s state with these settings using a `useEffect` hook whenever the settings data changes.
+
 #### Backend apps
 
 1. Open your `node` app in any code editor of your choice.
@@ -175,6 +176,6 @@ export async function getConfig: async (_: any, __: any, ctx: Context) => {
  },
 ```
 
-The `getConfig` function returns a promise as it fetches the app settings and handles errors. It retrieves an app ID from environment variables, uses it to request settings, and logs any errors that occur. 
+The `getConfig` function returns a promise as it fetches the app settings and handles errors. It retrieves an app ID from environment variables, uses it to request settings, and logs any errors that occur.
 
 3. Import the defined function and consume it based on your needs.
