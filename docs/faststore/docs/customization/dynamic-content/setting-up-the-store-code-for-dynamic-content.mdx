@@ -35,7 +35,8 @@ Let’s dive deep into `dynamicContent` and the pages allowed to be customized w
 <details>
 <summary><b><code>dynamicContent</code></b></summary>
 
-The `dynamicContent` object stores key-value pairs: 
+The `dynamicContent` object stores key-value pairs:
+
 - The key represents the page slug (e.g., `home` for the Home page and `my-landing-page` for a specific Landing page).
 - The value is the corresponding data-fetching function responsible for fetching data for that page. In this example, `fetchDataMyLandingPage`.
 
@@ -64,7 +65,7 @@ Now that we've established the file for mapping pages to data fetching functions
 After [mapping pages and data-fetching functions](#step-1-mapping-pages-and-data-fetching-functions), you need to define these functions and create the logic to fetch the data from other data sources. There are two ways for fetching data:
 
 - [Using API extensions](#using-api-extensions): Leverage the existing [API Extension](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) feature to fetch the data.
-- [Using fetch API or any requesting library](#using-fetch-api-or-any-request-library): Request Fetch API or any HTTP library to directly fetch the data ([Axios](https://axios-http.com/docs/intro), fetch, etc). 
+- [Using fetch API or any requesting library](#using-fetch-api-or-any-request-library): Request Fetch API or any HTTP library to directly fetch the data ([Axios](https://axios-http.com/docs/intro), fetch, etc).
 
 ### Using API Extensions
 
@@ -73,8 +74,8 @@ After [mapping pages and data-fetching functions](#step-1-mapping-pages-and-data
 3. Create two other folders inside the `thirdParty`: `resolvers` and `typeDefs`.
 4. Inside `typeDefs` create the `extra.graphql` file.
 5. Add the following code:
-	
-    ```graphql 
+
+    ```extra.graphql
     type Rating {
     rate: String
     count: Int
@@ -119,7 +120,7 @@ After [mapping pages and data-fetching functions](#step-1-mapping-pages-and-data
 
     - The field `Query` defines queries for fetching extraData and namedExtraData.
 
-Now, create the logic to fill these fields:
+    Now, create the logic to fill these fields:
 
 6. Create a file called `query` inside the' resolvers' folder.
 7. Add the following code to it:
@@ -163,7 +164,7 @@ Now, create the logic to fill these fields:
 8. Create a file called `extra.ts` inside the' resolvers' folder.
 9. Add the following code to it:
 
-    ```
+    ```extra.ts
     import { ExtraDataRoot } from "./query";
 
     export const ExtraData = {
@@ -183,7 +184,7 @@ Now, create the logic to fill these fields:
 
 10. Inside the `resolvers` folder, create a file called `index.ts` and add the following code:
 
-    ```
+    ```index.ts
     import { ExtraData } from "./extraData";
     import { Query } from "./query";
 
@@ -248,14 +249,14 @@ Now, create the logic to fill these fields:
         - Query named `ServerDynamicContent` accepts a `name` parameter.
         - Fetches fields under `extraData` including nested `rating`.
         - Fetches `namedExtraData` based on the name parameter.
-    - `fetchDataUsingApiExtension`: 
+    - `fetchDataUsingApiExtension`:
         - It executes to run the GraphQL query with specified variables.
         - Returns the result data or logs and returns an error if it fails.
     - `dynamicContent`:
         - Maps the slug `my-landing-page-api-extensions` to the `fetchDataUsingApiExtension function`.
         - This slug identifies in the code which content we want to bring to the page.
 
-You can render this data in your store sections once you've set up your dynamic content fetching functions and mappings. See the [Rendering the data in custom sections](#rendering-the-data-in-custom-sections) guide for more information on using this data in a new section.
+You can render this data in your store sections once you've set up your dynamic content fetching functions and mappings. See the [consuming-the-dynamic-content-in-custom-sections](https://developers.vtex.com/docs/guides/faststore/dynamic-content-consuming-the-dynamic-content-in-custom-sections) guide for more information on using this data in a new section.
 
 ### Using Fetch API or any request library
 
@@ -263,85 +264,83 @@ You can render this data in your store sections once you've set up your dynamic 
 
 You can use [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to directly fetch data from an endpoint.
 
-    ``` src/dynamicContent/index.ts
+```src/dynamicContent/index.ts
+async function fetchDataMyLandingPage() {
+const response = await fetch("https://fakestoreapi.com/products");
+const data = await response.json();
+return { data };
+}
 
-    async function fetchDataMyLandingPage() {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const data = await response.json();
-    return { data };
-    }
+// Mapping slug to the data-fetching function
+const dynamicContent = {
+"my-landing-page": fetchDataMyLandingPage,
+};
 
-    // Mapping slug to the data-fetching function
-    const dynamicContent = {
-    "my-landing-page": fetchDataMyLandingPage,
-    };
+export default dynamicContent;
+```
 
-    export default dynamicContent;
-    ```
-
-    - `fetchDataMyLandingPage`:
-        - Fetches data from https://fakestoreapi.com/products.
-        - Returns the fetched data as an object with a data key.
-
+- `fetchDataMyLandingPage`:
+  - Fetches data from `https://fakestoreapi.com/products``.
+  - Returns the fetched data as an object with a data key.
 
 #### Multiple Requests Example
 
 Use `Promise.all` to fetch data from multiple endpoints concurrently.
 
-    ```src/dynamicContent/index.ts
-    async function fetchDataHomepage() {
-    try {
-        const [apiData1, apiData2] = await Promise.all([
-        fetch("https://fakestoreapi.com/products/1").then(res => res.json()),
-        fetch("https://fakestoreapi.com/products/2").then(res => res.json())
-        ]);
+```src/dynamicContent/index.ts
+async function fetchDataHomepage() {
+try {
+    const [apiData1, apiData2] = await Promise.all([
+    fetch("https://fakestoreapi.com/products/1").then(res => res.json()),
+    fetch("https://fakestoreapi.com/products/2").then(res => res.json())
+    ]);
 
-        return {
-        data: {
-            product1: apiData1,
-            product2: apiData2,
-        },
-        };
-    } catch (error) {
-        console.error("Error fetching data from APIs:", error);
-        return { data: null, error: "Error fetching data from APIs" };
-    }
-    }
-
-    // Mapping slugs to their respective data-fetching functions
-    const dynamicContent = {
-    home: fetchDataHomepage,
-    "my-landing-page": fetchDataMyLandingPage,
+    return {
+    data: {
+        product1: apiData1,
+        product2: apiData2,
+    },
     };
+} catch (error) {
+    console.error("Error fetching data from APIs:", error);
+    return { data: null, error: "Error fetching data from APIs" };
+}
+}
 
-    export default dynamicContent;
-    ```
-    - `fetchDataHomepage`:
-        - Concurrently fetches data from two endpoints.
-        - Returns the data from both endpoints in a single data object with separate keys for each product.
+// Mapping slugs to their respective data-fetching functions
+const dynamicContent = {
+home: fetchDataHomepage,
+"my-landing-page": fetchDataMyLandingPage,
+};
 
+export default dynamicContent;
+```
 
-Once you've set up your dynamic content fetching functions and mappings, you can render this data in your store sections. For more information on using this data in a new section, see the [Rendering the data in custom sections](#rendering-the-data-in-custom-sections) guide.
+- `fetchDataHomepage`:
+  - Concurrently fetches data from two endpoints.
+  - Returns the data from both endpoints in a single data object with separate keys for each product.
+
+Once you've set up your dynamic content fetching functions and mappings, you can render this data in your store sections. For more information on using this data in a new section, see the [Consuming the Dynamic Content in custom sections](https://developers.vtex.com/docs/guides/faststore/dynamic-content-consuming-the-dynamic-content-in-custom-sections) guide.
 
 ### Returning the data Object
 
 For both approaches, [data fetching using Fetch API] or Data Fetching using API Extensions feature, the data-fetching function must return an object with data as the root key in the following format:
 
-    ```ts
-    return {
-    data: {
-        // data fetched
-    },
-    };
-    ```
+```ts
+return {
+data: {
+    // data fetched
+},
+};
+```
 
 The data object can contain other objects inside:
 
-    ```ts
-    return {
-    data: {
-        key1: result1,
-        key2: result2,
-    },
-    };
-    ```
+```ts
+return {
+data: {
+    key1: result1,
+    key2: result2,
+},
+};
+```
