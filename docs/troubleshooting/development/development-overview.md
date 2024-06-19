@@ -1,9 +1,8 @@
 ---
 title: "Troubleshooting - Development"
-slug: "development-troubleshooting"
+slug: "development-overview"
 hidden: false
-createdAt: "2024-06-04T11:15:35.508Z"
-updatedAt: "2024-06-04T11:15:35.508Z"
+createdAt: "2024-06-19T11:15:35.508Z"
 excerpt: "Guides addressing errors related to storefront and app development"
 ---
 
