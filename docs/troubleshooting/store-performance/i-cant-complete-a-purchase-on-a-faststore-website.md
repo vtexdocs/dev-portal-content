@@ -1,6 +1,6 @@
 ---
-title: "I cannot complete a purchase on a FastStore website"
-slug: "i-cannot-complete-a-purchase-on-a-faststore-website"
+title: "I can't complete a purchase on a FastStore website"
+slug: "i-cant-complete-a-purchase-on-a-faststore-website"
 hidden: false
 createdAt: "2024-06-06T10:17:18.615Z"
 updatedAt: "2024-06-06T14:00:00.615Z"
