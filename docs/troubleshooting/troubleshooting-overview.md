@@ -63,3 +63,17 @@ linkTitle="See more"
 />
 
 </Flex>
+
+## Still having trouble?
+
+[Help Center - Troubleshooting](https://help.vtex.com/category/troubleshooting--39pDkp8qxSll6mGj0tWViz)
+
+Find solutions for common platform and ecommerce operation problems.
+
+[Community](https://community.vtex.com/?_ga=2.198523433.743584735.1647618303-1974737580.1645714642)
+
+The VTEX Community is an ecosystem where our clients and partners can interact, ask questions, and exchange information among themselves. It is the go-to place to find answers and talk about VTEX products.
+
+[Support](https://help.vtex.com/en/support)
+
+All customers have access to the services provided by our Technical Support team. These specialists are extensively prepared to give you the best experience possible when solving your tickets. To contact them, you need to open a ticket to VTEX support.
