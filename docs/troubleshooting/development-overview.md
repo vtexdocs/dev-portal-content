@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting - Development"
+title: "Development"
 slug: "development-overview"
 hidden: false
 createdAt: "2024-06-19T11:15:35.508Z"

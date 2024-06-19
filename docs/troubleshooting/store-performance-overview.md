@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting - Store performance"
+title: "Store performance"
 slug: "store-performance-overview"
 hidden: false
 createdAt: "2024-06-19T11:15:35.508Z"
