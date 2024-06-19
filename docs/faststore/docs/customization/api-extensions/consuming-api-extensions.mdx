@@ -1,127 +1,137 @@
 ---
-title: 'Consuming FastStore API extension with custom components'
-sidebar_label: 'API Extensions'
-slug: consuming-api-extensions
+title: "Consuming FastStore API extension with custom components"
 ---
 
-In this guide, learn how to consume new fields from [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) and [overridable components](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props).
+In this guide, learn how to consume new fields from [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) and [overridable components](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions).
 
-FastStore exposes the data that comes from FastStore API along with FastStore API Extensions inside a provider.
-This data comes as a `context` in the provider, and you can use the following hooks to access it:
+FastStore extends its capabilities through API Extensions, which provide additional data for customization. This guide focuses on using different hooks to access and manipulate data based on the page type or section you are working with.
+
+## Hooks for consuming API extension data
+
+FastStore exposes the data from both the FastStore API and FastStore API Extensions within a provider.
+The data is provided as a `context` within the provider, and specific hooks are available for different scenarios:
 
 <details>
 <summary>`usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).</summary>
 
-```ts
-import { usePDP } from "@faststore/core"
+  ```ts copy
+  import { usePDP } from "@faststore/core"
 
-const context = usePDP()
-```
-
+  const context = usePDP()
+  ```
 </details>
 
 <details>
 <summary>`usePLP()`: Use this hook when integrating your section with a Product Listing Page (PLP).</summary>
 
-```ts
-import { usePLP } from "@faststore/core"
+  ```ts
+  import { usePLP } from "@faststore/core"
 
-const context = usePLP()
-```
+  const context = usePLP()
+  ```
 
 </details>
 
 <details>
 <summary>`useSearchPage()`: Use this hook when integrating your section on the Search Page.</summary>
 
-```ts
-import { useSearchPage } from "@faststore/core"
+  ```ts
+  import { useSearchPage } from "@faststore/core"
 
-const context = useSearchPage()
-```
+  const context = useSearchPage()
+  ```
 
 </details>
 
 <details>
-<summary>`usePage()`: Use this hook when you have a single section that is used in more than one type of page.</summary>
+<summary>`usePage()`: Use this hook when a single section is used in more than one page type.</summary>
 
-```ts
-import { usePage } from "@faststore/core"
+  ```ts
+  import { usePage } from "@faststore/core"
 
-const context = usePage()
-```
+  const context = usePage()
+  ```
 
-This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
+This hook returns one of the following context types: `PDPContext`, `PLPContext`, or `SearchPageContext`. You can decide how to handle it depending on the page using this hook by passing these types as generics.
 
-```ts
-import { usePage } from "@faststore/core"
+  ```ts
+  import { usePage } from "@faststore/core"
 
-const context = usePage<PLPContext | SearchPageContext>()
-```
+  const context = usePage<PLPContext | SearchPageContext>()
+  ```
 
 </details>
 
-Also, you can use type assertion functions so that you can leverage the use of typescript and get the correct types
+Also, you can use type assertion functions to leverage Typescript and get the correct types.
 
-```ts
-import { isPDP, isPLP, isSearchPage } from "@faststore/core";
+  ```ts
+  import { isPDP, isPLP, isSearchPage } from "@faststore/core";
 
-const context = usePage()
+  const context = usePage()
 
-isPDP(context)
-isPLP(context)
-isSearchPage(context)
-```
+  isPDP(context)
+  isPLP(context)
+  isSearchPage(context)
+  ```
 
 ## Consuming API Extensions data from custom sections
 
-To illustrate how to consume API extension data from custom sections, we'll use the **Call To Action** example from the [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) guide inside a Product Listing Page (PLP).
-So, ensure to have followed this guide mentioned before to have a new section.
+To illustrate how to consume API extension data from custom sections, let's consider a practical example using the **Call To Action** section within a PLP. Make sure you have followed the steps described in the [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) guide. 
 
-Once you have the `CallToAction` section, add the following import statement inside `src/components/CallToAction.tsx`:
+1. Create a new section as explained in the [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) guide. 
+2. Import the `usePLP` hook in the component file (`src/components/CallToAction.tsx`) to access data related to PLPs:
 
-```ts mark=1,12 src/components/CallToAction.tsx
-import { usePLP }  from "@faststore/core";
+  ```ts src/components/CallToAction.tsx
+  import { usePLP }  from "@faststore/core";
+  ```
 
-export interface CallToActionProps {
-  title: string
-  link: {
-    text: string
-    url: string
+3. Inside the component, call the `usePLP` hook to get the context data related to Product Listing Pages. The result is stored in the `context` variable.
+
+  ```tsx
+  export interface CallToActionProps {
+    title: string
+    link: {
+      text: string
+      url: string
+    }
   }
-}
 
-export default function CallToAction(props: CallToActionProps) {
-  const context = usePLP()
-  return (
-    <section>
-      <h2>{`${props.title} ${context?.data?.namedExtraData?.data}`}</h2>
-    </section>
-  )
-}
-```
+  export default function CallToAction(props: CallToActionProps) {
+    const context = usePLP()
+    return (
+      <section>
+        <h2>{`${props.title} ${context?.data?.namedExtraData?.data}`}</h2>
+      </section>
+    )
+  ```
+Now, you can use the data from `context` as needed. In the provided example, the component returns a `<section>` element containing an `<h2>` element, which combines the `title` prop from the component's props with the data extracted from the context. The optional chaining ensures safe navigation through properties that may be undefined or null. Feel free to customize this approach to suit your needs and leverage the retrieved data for your desired functionality.
 
 ## Consuming API Extensions data from custom components in section overrides
 
-After [overriding native components and props](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#overriding-a-native-component), you can also use the hooks inside custom components to consume custom data, just as in [custom sections](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections).
+After [overriding native components and props](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#overriding-a-native-component), you can extend your customization by using hooks within custom components to consume custom data, similar to [custom sections](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections).
 In the following example, the `CustomBuyButton` component overrides the native `BuyButton` component from the `ProductDetails` section inside the Product Details Page (PDP).
 
-```ts mark=2,5 src/components/CustomBuyButton.tsx
-import { Button as UIButton } from '@faststore/ui'
-import { usePDP }  from "@faststore/core"
+1. Open the component file and import the `usePDP` hook from `@faststore/core`.
+2. Use the `usePDP` hook to obtain the context specific to the PDP, which contains relevant information about the product displayed on the page.
 
-export function CustomBuyButton(props) {
-  const context = usePDP()
+  ```ts src/components/CustomBuyButton.tsx mark=2,5
+  import { Button as UIButton } from '@faststore/ui'
+  import { usePDP }  from "@faststore/core"
 
-  return (
-    <UIButton
-      variant="primary"
-      onClick={() => {
-        alert('Hello User!')
-      }}
-    >
-      {context?.data?.product.customData}
-    </UIButton>
-  )
-}
-```
+  export function CustomBuyButton(props) {
+    const context = usePDP()
+
+    return (
+      <UIButton
+        variant="primary"
+        onClick={() => {
+          alert('Hello User!')
+        }}
+      >
+        {context?.data?.product.customData}
+      </UIButton>
+    )
+  }
+
+  ```
+In this scenario, the `CustomBuyButton` component leverages the `usePDP` hook to access the PDP-specific context. It seamlessly integrates with the `UIButton` component from the FastStore UI library, overriding the default behavior of the native `BuyButton` within the `ProductDetails` section. The content displayed within the button, dynamically retrieves and displays custom data associated with the product from the PDP context. The optional chaining ensures safe navigation through properties that may be undefined or null.
