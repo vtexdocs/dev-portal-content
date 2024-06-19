@@ -1,6 +1,6 @@
 ---
-title: "Trubleshooting - Development"
-slug: "i-cant-install-vtex-io-cli"
+title: "Troubleshooting - Development"
+slug: "development-troubleshooting"
 hidden: false
 createdAt: "2024-06-04T11:15:35.508Z"
 updatedAt: "2024-06-04T11:15:35.508Z"
