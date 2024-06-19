@@ -1,12 +1,12 @@
 ---
-title: 'Consuming the Dynamic Content in custom sections'
+title: "Consuming the Dynamic Content in custom sections"
 ---
 
 After [mapping pages and data-fetching functions](https://developers.vtex.com/docs/guides/faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content#step-1-mapping-pages-and-data-fetching-functions) and choosing one of the methods for [creating Dynamic Content via API fetching](https://developers.vtex.com/docs/guides/faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content#step-2-creating-dynamic-content-via-api-fetching), use the data to render it in a store section. In this step, we will create a new Hero section, placed on a landing page, to render the image from the data.
 
-| *Before*: Using [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) native section with an image uploaded from the Headless CMS. | *After:* Using a custom Hero section fetching the image content from an API. |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| ![without-dynamic-content](https://vtexhelp.vtexassets.com/assets/docs/src/without-dynamic-content___9e65e7a095029f020fe64599348b695a.png) | ![with-dynamic-content](https://vtexhelp.vtexassets.com/assets/docs/src/dynamic-content-new-section___82b343ceeef6504de8bdf7233f30d199.png) |
+| _Before_: Using [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) native section with an image uploaded from the Headless CMS. | _After:_ Using a custom Hero section fetching the image content from an API.                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![without-dynamic-content](https://vtexhelp.vtexassets.com/assets/docs/src/without-dynamic-content___9e65e7a095029f020fe64599348b695a.png)            | ![with-dynamic-content](https://vtexhelp.vtexassets.com/assets/docs/src/dynamic-content-new-section___82b343ceeef6504de8bdf7233f30d199.png) |
 
 ### 1. Creating the section
 
@@ -16,69 +16,72 @@ Create and display a [section](https://developers.vtex.com/docs/guides/faststore
 2. Inside `components`, create a subfolder named `sections`.
 3. Inside `sections` create a file called `ProductHero.tsx`, and paste the following code:
 
-    ``` tsx
-        import {
-            HeroSection,
-            getOverriddenSection,
-            useDynamicContent,
-        } from "@faststore/core";
-        import { ServerDynamicContentQuery } from "@faststore/core/api";
-        
-        const OverridenHero = getOverriddenSection({
-            Section: HeroSection,
-            components: {
-            HeroImage: {
-                Component: CustomHeroImage,
-            },
-            },
-        });
-        
-        function CustomHeroImage() {
-            const context = useDynamicContent<ServerDynamicContentQuery>();
-        
-            return (
-            <img
-                src={
-                context.data?.extraData?.customFieldFromRoot ??
-                "https://via.placeholder.com/350"
-                }
-                width={400}
-                alt={context.data?.extraData?.customField ?? "Hero section image"}
-            />
-            );
-        }
-        
-        export default function ProductHero(
-            props: React.ComponentProps<typeof OverridenHero>
-        ) {
-            const context = useDynamicContent<ServerDynamicContentQuery>();
-            return (
-            <OverridenHero
-                {...props}
-                image={{ src: "noop", alt: "noop" }}
-                title={context.data?.extraData?.customField ?? "Add the Hero section title here"}
-            />
-            );
-        }
-    ```
+   ```tsx
+   import {
+     HeroSection,
+     getOverriddenSection,
+     useDynamicContent,
+   } from "@faststore/core";
+   import { ServerDynamicContentQuery } from "@faststore/core/api";
 
-    - The `useDynamicContent` hook brings the data from the [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) package.
-    - The `ServerDynamicContentQuery` specifies the type of data that we will get from the FastStore API package.
-    - Since we are working with Hero, we import the Hero component and its styles.
-    - The `useDynamicContent` hook holds the information in the `data` variable.
-    - In return, we validate the data and display the image in the Hero and the product's name using some HTML elements.
+   const OverridenHero = getOverriddenSection({
+     Section: HeroSection,
+     components: {
+       HeroImage: {
+         Component: CustomHeroImage,
+       },
+     },
+   });
+
+   function CustomHeroImage() {
+     const context = useDynamicContent<ServerDynamicContentQuery>();
+
+     return (
+       <img
+         src={
+           context.data?.extraData?.customFieldFromRoot ??
+           "https://via.placeholder.com/350"
+         }
+         width={400}
+         alt={context.data?.extraData?.customField ?? "Hero section image"}
+       />
+     );
+   }
+
+   export default function ProductHero(
+     props: React.ComponentProps<typeof OverridenHero>
+   ) {
+     const context = useDynamicContent<ServerDynamicContentQuery>();
+     return (
+       <OverridenHero
+         {...props}
+         image={{ src: "noop", alt: "noop" }}
+         title={
+           context.data?.extraData?.customField ??
+           "Add the Hero section title here"
+         }
+       />
+     );
+   }
+   ```
+
+   - The `useDynamicContent` hook brings the data from the [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) package.
+   - The `ServerDynamicContentQuery` specifies the type of data that we will get from the FastStore API package.
+   - Since we are working with Hero, we import the Hero component and its styles.
+   - The `useDynamicContent` hook holds the information in the `data` variable.
+   - In return, we validate the data and display the image in the Hero and the product's name using some HTML elements.
 
 4. Create an `index.tsx` file inside the components folder and paste the following code:
 
-    ```tsx
-        import ProductHero from “./sections/ProductHero”
+   ```tsx
+   import ProductHero from “./sections/ProductHero”
 
-        export default { ProductHero };
-    ```
+   export default { ProductHero };
+   ```
 
 This file helps import and export our new component. Now that the component is ready, let’s create its section schema for the Headless CMS.
 
-### 2. Synchronizing the component with Headless CMS 
+### 2. Synchronizing the component with Headless CMS
 
 To define a schema for the `ProductHero` component within the Headless CMS, follow the steps below:
 
@@ -86,60 +89,60 @@ To define a schema for the `ProductHero` component within the Headless CMS, foll
 2. Inside `faststore`, create the `sections.json` file.
 3. Paste the following code:
 
-    ```json
-        [
-            {
-                "name": "ProductHero",
-                "schema": {
-                "title": "Hero with a Fixed Image",
-                "description": "Add a quick promotion with an image/action pair",
-                "type": "object",
-                "required": ["title"],
-                "properties": {
-                    "title": {
-                    "title": "Title",
-                    "type": "string"
-                    },
-                    "subtitle": {
-                    "title": "Subtitle",
-                    "type": "string"
-                    },
-                    "link": {
-                    "title": "Call to Action",
-                    "type": "object",
-                    "properties": {
-                        "text": {
-                        "type": "string",
-                        "title": "Text"
-                        },
-                        "url": {
-                        "type": "string",
-                        "title": "URL"
-                        },
-                        "linkTargetBlank": {
-                        "type": "boolean",
-                        "title": "Open link in new window?",
-                        "default": false
-                        }
-                    }
-                    },
-                    "colorVariant": {
-                    "type": "string",
-                    "title": "Color variant",
-                    "enumNames": ["Main", "Light", "Accent"],
-                    "enum": ["main", "light", "accent"]
-                    },
-                    "variant": {
-                    "type": "string",
-                    "title": "Variant",
-                    "enumNames": ["Primary", "Secondary"],
-                    "enum": ["primary", "secondary"]
-                    }
-                }
-                }
-            }
-        ]
-    ```
+   ```json
+   [
+     {
+       "name": "ProductHero",
+       "schema": {
+         "title": "Hero with a Fixed Image",
+         "description": "Add a quick promotion with an image/action pair",
+         "type": "object",
+         "required": ["title"],
+         "properties": {
+           "title": {
+             "title": "Title",
+             "type": "string"
+           },
+           "subtitle": {
+             "title": "Subtitle",
+             "type": "string"
+           },
+           "link": {
+             "title": "Call to Action",
+             "type": "object",
+             "properties": {
+               "text": {
+                 "type": "string",
+                 "title": "Text"
+               },
+               "url": {
+                 "type": "string",
+                 "title": "URL"
+               },
+               "linkTargetBlank": {
+                 "type": "boolean",
+                 "title": "Open link in new window?",
+                 "default": false
+               }
+             }
+           },
+           "colorVariant": {
+             "type": "string",
+             "title": "Color variant",
+             "enumNames": ["Main", "Light", "Accent"],
+             "enum": ["main", "light", "accent"]
+           },
+           "variant": {
+             "type": "string",
+             "title": "Variant",
+             "enumNames": ["Primary", "Secondary"],
+             "enum": ["primary", "secondary"]
+           }
+         }
+       }
+     }
+   ]
+   ```
 
 4. Run `yarn cms-sync` to synchronize the changes.
 5. Go to the VTEX Admin, and access **Storefront > Headless CMS**.
