@@ -11,19 +11,18 @@ Create a file to map the home and landing Pages to their data-fetching functions
 3. Inside the `dynamicContent` folder, create the `index.ts` file.
 4. Inside `index.ts`, add the following code:
 
-    ```ts src/dynamicContent/index.ts
-    const fetchDataMyLandingPage = async () => {
-        const response = await fetch("https://fakestoreapi.com/products").then((res) => res.json());
+    ```ts
+        const fetchDataMyLandingPage = async () => {
+            const response = await fetch("https://fakestoreapi.com/products").then((res) => res.json());
 
-        return { data: response };
-    };
+            return { data: response };
+        };
 
-    const dynamicContent = {
-        "my-landing-page": fetchDataMyLandingPage,
-    }
+        const dynamicContent = {
+            "my-landing-page": fetchDataMyLandingPage,
+        }
 
-    export default dynamicContent;
-
+        export default dynamicContent;
     ```
 
     - First, we define the `fetchDataMyLandingPage`, which calls for an external API (`https://fakestoreapi.com/products`) to fetch the product information.
@@ -75,43 +74,42 @@ After [mapping pages and data-fetching functions](#step-1-mapping-pages-and-data
 4. Inside `typeDefs` create the `extra.graphql` file.
 5. Add the following code:
 
-    ```extra.graphql
-    type Rating {
-    rate: String
-    count: Int
-    }
+    ```graphql
+        type Rating {
+        rate: String
+        count: Int
+        }
 
-    type ProductsExtraData {
-    id: Int
-    title: String
-    price: Float
-    description: String
-    category: String
-    image: String
-    rating: Rating
-    }
+        type ProductsExtraData {
+        id: Int
+        title: String
+        price: Float
+        description: String
+        category: String
+        image: String
+        rating: Rating
+        }
 
-    type ExtraData {
-    """
-    Data customizing ExtraData
-    """
-    data: [ProductsExtraData]
-    customFieldFromRoot: String
-    customField: String
-    }
+        type ExtraData {
+        """
+        Data customizing ExtraData
+        """
+        data: [ProductsExtraData]
+        customFieldFromRoot: String
+        customField: String
+        }
 
-    type NamedExtraData {
-    """
-    Data customizing NamedExtraData
-    """
-    data: String!
-    }
+        type NamedExtraData {
+        """
+        Data customizing NamedExtraData
+        """
+        data: String!
+        }
 
-    type Query {
-    extraData: ExtraData
-    namedExtraData(name: String!): NamedExtraData
-    }
-
+        type Query {
+        extraData: ExtraData
+        namedExtraData(name: String!): NamedExtraData
+        }
     ```
 
     - The field `ProductsExtraData` represents product data, with fields for id, title, price, description, category, image, and rating.
@@ -125,36 +123,34 @@ After [mapping pages and data-fetching functions](#step-1-mapping-pages-and-data
 6. Create a file called `query` inside the' resolvers' folder.
 7. Add the following code to it:
 
-    ```src/graphql/thirdParty/resolvers/query.ts
+    ```ts
+        export type ProductsExtraData = {
+        id: number;
+        title: string;
+        price: number;
+        description: string;
+        category: string;
+        image: string;
+        rating: {
+            rate: number;
+            count: number;
+        };
+        };
 
-    export type ProductsExtraData = {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-    rating: {
-        rate: number;
-        count: number;
-    };
-    };
+        async function getProductsFromAPI() {
+        const response = await fetch("https://fakestoreapi.com/products");
+        return response.json();
+        }
 
-    async function getProductsFromAPI() {
-    const response = await fetch("https://fakestoreapi.com/products");
-    return response.json();
-    }
-
-    export const Query = {
-    extraData: async (): Promise<{ data: ProductsExtraData[] }> => {
-        const products = await getProductsFromAPI();
-        return { data: products };
-    },
-    namedExtraData: (_: unknown, { name }: { name: string }) => ({
-        data: `Named extra data: ${name}`,
-    }),
-    };
-
+        export const Query = {
+        extraData: async (): Promise<{ data: ProductsExtraData[] }> => {
+            const products = await getProductsFromAPI();
+            return { data: products };
+        },
+        namedExtraData: (_: unknown, { name }: { name: string }) => ({
+            data: `Named extra data: ${name}`,
+        }),
+        };
     ```
 
     - `getProductsFromAPI` fetches product data from an external API.
@@ -164,82 +160,81 @@ After [mapping pages and data-fetching functions](#step-1-mapping-pages-and-data
 8. Create a file called `extra.ts` inside the' resolvers' folder.
 9. Add the following code to it:
 
-    ```extra.ts
-    import { ExtraDataRoot } from "./query";
+    ```ts
+        import { ExtraDataRoot } from "./query";
 
-    export const ExtraData = {
-    data: (root: ExtraDataRoot) => root.data,
-    customFieldFromRoot: (root: ExtraDataRoot) => root?.data?.[0]?.image ?? "",
-    customField: async (_: ExtraDataRoot) => {
-        const res = await fetch(
-        "https://fakestoreapi.com/products/category/jewelery"
-        );
-        const customField = await res.json();
-        return (customField?.[0]?.title as string) ?? "";
-    },
-    };
+        export const ExtraData = {
+        data: (root: ExtraDataRoot) => root.data,
+        customFieldFromRoot: (root: ExtraDataRoot) => root?.data?.[0]?.image ?? "",
+        customField: async (_: ExtraDataRoot) => {
+            const res = await fetch(
+            "https://fakestoreapi.com/products/category/jewelery"
+            );
+            const customField = await res.json();
+            return (customField?.[0]?.title as string) ?? "";
+        },
+        };
     ```
 
     - The `Query` function returns the API data in the field `extraData` through a request on an external API.
 
 10. Inside the `resolvers` folder, create a file called `index.ts` and add the following code:
 
-    ```index.ts
-    import { ExtraData } from "./extraData";
-    import { Query } from "./query";
+    ```ts
+        import { ExtraData } from "./extraData";
+        import { Query } from "./query";
 
-    const resolvers = {
-    ExtraData,
-    Query,
-    };
+        const resolvers = {
+        ExtraData,
+        Query,
+        };
 
-    export default resolvers;
+        export default resolvers;
     ```
 
 11. Combine your resolvers and queries into the store's dynamic content in the `index.tsx` file inside the `dynamicContent` folder.
 
-    ```src/dynamicContent/index.ts mark=1:33
-    import { gql } from "@faststore/core/api";
-    import { execute_unstable as execute } from "@faststore/core/experimental";
+    ```ts mark=1:33
+        import { gql } from "@faststore/core/api";
+        import { execute_unstable as execute } from "@faststore/core/experimental";
 
-    const query = gql(`
-    query ServerDynamicContent($name: String!){
-        extraData {
-        data {
-            title
-            rating {
-            rate
-            count
+        const query = gql(`
+        query ServerDynamicContent($name: String!){
+            extraData {
+            data {
+                title
+                rating {
+                rate
+                count
+                }
+            }
+            customField
+            customFieldFromRoot
+            }
+            namedExtraData(name: $name) {
+            data
             }
         }
-        customField
-        customFieldFromRoot
+        `);
+
+        async function fetchDataUsingApiExtension() {
+        try {
+            const result = await execute({
+            variables: { name: "example-name" },
+            operation: query,
+            });
+            return { data: result.data };
+        } catch (error) {
+            return { data: null, errors: ["Error fetching data from API Extensions"] };
         }
-        namedExtraData(name: $name) {
-        data
         }
-    }
-    `);
 
-    async function fetchDataUsingApiExtension() {
-    try {
-        const result = await execute({
-        variables: { name: "example-name" },
-        operation: query,
-        });
-        return { data: result.data };
-    } catch (error) {
-        return { data: null, errors: ["Error fetching data from API Extensions"] };
-    }
-    }
+        // Map slugs to data-fetching functions
+        const dynamicContent = {
+        "my-landing-page-api-extensions": fetchDataUsingApiExtension,
+        };
 
-    // Map slugs to data-fetching functions
-    const dynamicContent = {
-    "my-landing-page-api-extensions": fetchDataUsingApiExtension,
-    };
-
-    export default dynamicContent;
-
+        export default dynamicContent;
     ```
 
     - Imports:
@@ -264,20 +259,20 @@ You can render this data in your store sections once you've set up your dynamic 
 
 You can use [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to directly fetch data from an endpoint.
 
-```src/dynamicContent/index.ts
-async function fetchDataMyLandingPage() {
-const response = await fetch("https://fakestoreapi.com/products");
-const data = await response.json();
-return { data };
-}
+    ```ts
+        async function fetchDataMyLandingPage() {
+        const response = await fetch("https://fakestoreapi.com/products");
+        const data = await response.json();
+        return { data };
+        }
 
-// Mapping slug to the data-fetching function
-const dynamicContent = {
-"my-landing-page": fetchDataMyLandingPage,
-};
+        // Mapping slug to the data-fetching function
+        const dynamicContent = {
+        "my-landing-page": fetchDataMyLandingPage,
+        };
 
-export default dynamicContent;
-```
+        export default dynamicContent;
+    ```
 
 - `fetchDataMyLandingPage`:
   - Fetches data from `https://fakestoreapi.com/products``.
@@ -287,34 +282,34 @@ export default dynamicContent;
 
 Use `Promise.all` to fetch data from multiple endpoints concurrently.
 
-```src/dynamicContent/index.ts
-async function fetchDataHomepage() {
-try {
-    const [apiData1, apiData2] = await Promise.all([
-    fetch("https://fakestoreapi.com/products/1").then(res => res.json()),
-    fetch("https://fakestoreapi.com/products/2").then(res => res.json())
-    ]);
+    ```ts
+        async function fetchDataHomepage() {
+        try {
+            const [apiData1, apiData2] = await Promise.all([
+            fetch("https://fakestoreapi.com/products/1").then(res => res.json()),
+            fetch("https://fakestoreapi.com/products/2").then(res => res.json())
+            ]);
 
-    return {
-    data: {
-        product1: apiData1,
-        product2: apiData2,
-    },
-    };
-} catch (error) {
-    console.error("Error fetching data from APIs:", error);
-    return { data: null, error: "Error fetching data from APIs" };
-}
-}
+            return {
+            data: {
+                product1: apiData1,
+                product2: apiData2,
+            },
+            };
+        } catch (error) {
+            console.error("Error fetching data from APIs:", error);
+            return { data: null, error: "Error fetching data from APIs" };
+        }
+        }
 
-// Mapping slugs to their respective data-fetching functions
-const dynamicContent = {
-home: fetchDataHomepage,
-"my-landing-page": fetchDataMyLandingPage,
-};
+        // Mapping slugs to their respective data-fetching functions
+        const dynamicContent = {
+        home: fetchDataHomepage,
+        "my-landing-page": fetchDataMyLandingPage,
+        };
 
-export default dynamicContent;
-```
+        export default dynamicContent;
+    ```
 
 - `fetchDataHomepage`:
   - Concurrently fetches data from two endpoints.
@@ -326,21 +321,21 @@ Once you've set up your dynamic content fetching functions and mappings, you can
 
 For both approaches, [data fetching using Fetch API] or Data Fetching using API Extensions feature, the data-fetching function must return an object with data as the root key in the following format:
 
-```ts
-return {
-data: {
-    // data fetched
-},
-};
-```
+    ```ts
+        return {
+        data: {
+            // data fetched
+        },
+        };
+    ```
 
 The data object can contain other objects inside:
 
-```ts
-return {
-data: {
-    key1: result1,
-    key2: result2,
-},
-};
-```
+    ```ts
+        return {
+        data: {
+            key1: result1,
+            key2: result2,
+        },
+        };
+    ```
