@@ -3,7 +3,7 @@ title: "Troubleshooting - Store performance"
 slug: "store-performance-overview"
 hidden: false
 createdAt: "2024-06-19T11:15:35.508Z"
-excerpt: "Guides addressing errors related to storefront and app development"
+excerpt: "Debug errors and restore store functionality in case of outages."
 ---
 
 <Flex>
@@ -23,4 +23,3 @@ linkTitle="See more"
 />
 
 </Flex>
-
