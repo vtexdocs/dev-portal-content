@@ -1,10 +1,10 @@
 ---
-title: "I cannot install VTEX IO CLI"
-slug: "i-cannot-install-vtex-io-cli"
+title: "I can't install VTEX IO CLI"
+slug: "i-cant-install-vtex-io-cli"
 hidden: false
 createdAt: "2024-06-04T11:15:35.508Z"
 updatedAt: "2024-06-04T11:15:35.508Z"
-excerpt: "When installing VTEX IO CLI, there is the error `Error: Cannot find module vtex`."
+excerpt: "When installing VTEX IO CLI, there is the error "Error: Cannot find module vtex`."
 tags:
     - store-framework
     - vtex-io
