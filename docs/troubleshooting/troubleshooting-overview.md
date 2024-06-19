@@ -44,7 +44,7 @@ linkTitle="See more"
 
 ## Store performance
 
-### Debug errors and restore store functionality in case of outages.
+Debug errors and restore store functionality in case of outages.
 
 <Flex>
 
