@@ -1,7 +1,7 @@
 ---
 title: "VTEX Troubleshooting overview"
 slug: "troubleshooting-overview"
-hidden: false
+hidden: true
 createdAt: "2024-06-19T11:15:35.508Z"
 excerpt: "Find practical solutions to development issues in our troubleshooting guides."
 ---
