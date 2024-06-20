@@ -1,7 +1,7 @@
 ---
-title: "VTEX Torubleshooting overview"
+title: "VTEX Troubleshooting overview"
 slug: "troubleshooting-overview"
-hidden: false
+hidden: true
 createdAt: "2024-06-19T11:15:35.508Z"
 excerpt: "Find practical solutions to development issues in our troubleshooting guides."
 ---
@@ -14,14 +14,14 @@ Guides addressing errors related to storefront and app development
 
 <WhatsNextCard
 title="I can’t access the Headless CMS"
-description="Permission denied error in faststore cms-sync or vtex cms sync indicates user access issues."
+description="Permission denied error in 'faststore cms-sync' or 'vtex cms sync' indicates user access issues."
 linkTo="https://developers.vtex.com/docs/troubleshooting/unable-to-access-headless-cms"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="I can't install VTEX IO CLI"
-description="When installing VTEX IO CLI, there is the error `Error: Cannot find module vtex.`"
+description="When installing VTEX IO CLI, there is the error 'Error: Cannot find module vtex.'"
 linkTo="https://developers.vtex.com/docs/troubleshooting/i-cant-install-vtex-io-cli"
 linkTitle="See more"
 />
@@ -44,7 +44,7 @@ linkTitle="See more"
 
 ## Store performance
 
-Debug errors and restore store functionality in case of outages.
+Debug errors and restore store functionality in case of outages
 
 <Flex>
 
