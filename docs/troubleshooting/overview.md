@@ -13,16 +13,16 @@ Guides addressing errors related to storefront and app development
 <Flex>
 
 <WhatsNextCard
-title="I can't install VTEX IO CLI"
-description="When installing VTEX IO CLI, there is the error `Error: Cannot find module vtex.`"
-linkTo="https://developers.vtex.com/docs/troubleshooting/i-cant-install-vtex-io-cli"
+title="I can’t access the Headless CMS"
+description="Permission denied error in faststore cms-sync or vtex cms sync indicates user access issues."
+linkTo="https://developers.vtex.com/docs/troubleshooting/unable-to-access-headless-cms"
 linkTitle="See more"
 />
 
 <WhatsNextCard
-title="I can’t access the Headless CMS"
-description="Permission denied error in faststore cms-sync or vtex cms sync indicates user access issues."
-linkTo="https://developers.vtex.com/docs/troubleshooting/unable-to-access-headless-cms"
+title="I can't install VTEX IO CLI"
+description="When installing VTEX IO CLI, there is the error `Error: Cannot find module vtex.`"
+linkTo="https://developers.vtex.com/docs/troubleshooting/i-cant-install-vtex-io-cli"
 linkTitle="See more"
 />
 
@@ -49,16 +49,16 @@ Debug errors and restore store functionality in case of outages.
 <Flex>
 
 <WhatsNextCard
-title="My store is slow or unavailable"
-description="If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons."
-linkTo="https://developers.vtex.com/docs/troubleshooting/my-store-is-slow-or-unavailable"
+title="I can't complete a purchase on a FastStore website"
+description="While trying to checkout on a FastStore website, you might see a 'This Connection Is Not Private' error."
+linkTo="https://developers.vtex.com/docs/troubleshooting/i-cant-complete-a-purchase-on-a-faststore-website"
 linkTitle="See more"
 />
 
 <WhatsNextCard
-title="I can't complete a purchase on a FastStore website"
-description="While trying to checkout on a FastStore website, you might see a 'This Connection Is Not Private' error."
-linkTo="https://developers.vtex.com/docs/troubleshooting/i-cant-complete-a-purchase-on-a-faststore-website"
+title="My store is slow or unavailable"
+description="If you are experiencing slow or non-functional operations in your store, there could be several underlying reasons."
+linkTo="https://developers.vtex.com/docs/troubleshooting/my-store-is-slow-or-unavailable"
 linkTitle="See more"
 />
 
