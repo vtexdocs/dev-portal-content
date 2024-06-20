@@ -1,0 +1,446 @@
+---
+title: "Site Editor schema examples"
+slug: "site-editor-schema-examples"
+hidden: false
+createdAt: "2024-06-20T19:43:59.470Z"
+updatedAt: "2024-06-20T19:43:59.470Z"
+excerpt: "Explore practical schema examples for configuring custom components in the Site Editor"
+seeAlso: 
+  - "/docs/guides/vtex-io-documentation-making-a-custom-component-editable-in-the-site-editor"
+---
+
+When configuring a custom component, you need to define a schema within it to make it editable by user administrators directly in the Site Editor. To learn how to configure the schema definitions, check out the [Making your component available in Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-a-custom-component-editable-in-the-site-editor) guide.
+
+To create your schemas, use the [JSON Schema](https://json-schema.org/) format, a declarative language that provides a standardized way to describe and validate JSON data.
+
+You can use the following data types to configure your schemas:
+
+- [String](#string)
+- [Boolean](#boolean)
+- [Object](#object)
+- [Array](#array)
+
+In this guide, you will learn how to use each data type effectively.
+
+<CH.Scrollycoding>
+
+## String 
+
+Below are examples of content schemas using images and dates as props.
+
+### **Images**
+
+Consider a component that displays different images based on device type (desktop or mobile).
+
+To enable users to select an image from their computer or paste an image URL link, provide options for both methods in your component’s `schema` object.
+
+<CH.Code>
+
+```js StringImages
+function CustomComponent({ imageDesktop, imageMobile }) {
+   return(
+      <div>
+         <img src={imageDesktop} />
+         <img src={imageMobile} />
+      </div>
+   );
+}
+```
+
+---
+
+```js SchemaStringImages
+CustomComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      imageDesktop: {
+         type: 'string',
+         title: 'Image Desktop',
+         default: '',
+         description: 'Paste the URL'
+      },
+      imageMobile: {
+         title: 'Image Mobile',
+         default: '',
+         type: 'string',
+         widget: {//here you can choose a file in your computer
+            "ui:widget": "image-uploader"
+         }
+      }
+   }
+};
+```
+
+</CH.Code>
+
+In the Site Editor, this custom component will look like this:
+
+![string-image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/string-image-custom-component.png)
+
+---
+
+### **Dates**
+
+Consider a component that allows users to input an initial and a final date.
+
+In the `schema`, the `initialDate` and `finalDate` props define the configuration for date input fields.
+
+<CH.Code>
+
+```js	StringDates
+function CustomComponent({ initialDate, finalDate }) {
+   return(
+      <div>
+         <p>{initialDate}</p>
+         <p>{finalDate}</p>
+      </div>
+   );
+}
+```
+
+---
+
+```js SchemaStringDates
+CustomComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      initialDate: {
+         type: 'string',
+         title: 'Initial Date',
+         default: '',
+         description: '{year}/{month}/{day}'
+      },
+      finalDate: {
+         title: 'Final Date', //2022-02-23T02:20:42.074Z
+         default: new Date().toISOString(), //Set current date in select input
+         type: 'string', //to user select a date.
+         format: 'date-time',
+         widget: {
+            "ui:widget": "datetime"
+         }
+      }
+   }
+};
+```
+
+</CH.Code>
+
+The `initialDate` prop has an empty string as its default value and a description indicating the expected date format `'{year}/{month}/{day}'`. The `finalDate` prop has the default value set to the current date and time in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. It includes a custom UI widget for a date-time picker, streamlining the selection of both date and time.
+
+In the Site Editor, this component will look like this:
+
+![string-date](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/string-date-custom-component.png)
+
+---
+
+## Boolean
+
+Consider a component that allows users to toggle its active or inactive state.
+
+To allow users to activate or deactivate the component, define the `schema` as shown alongside.
+
+<CH.Code>
+
+```js Boolean
+function CustomComponent({ active }) {
+  if(!active) return;
+
+   return(
+      <div>
+        <h2>Now the component is active!</h2>
+      </div>
+   );
+}
+```
+
+---
+
+```js SchemaBoolean
+CustomComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      active: {
+         type: 'boolean',
+         title: 'Active Component',
+         default: true,
+      }
+   }
+};
+```
+
+</CH.Code>
+
+The `active` prop is a boolean, meaning it can be either `true` or `false`. The default value set as `true` ensures that the component starts in an active state unless specified otherwise.
+
+In the Site Editor, this custom component will look like this:
+
+![boolean](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/boolean-custom-component.png)
+
+---
+
+## Object
+
+Consider a component that renders an image, taking an `image` prop, which includes the URL, alt text, and title.
+
+The `schema` alongside defines the structure of the component, specifying that it expects an `image` prop, which is an object containing `url, `alt`, and `title` props.
+
+<CH.Code>
+
+```js Object
+function CustomComponent({ image }) {
+   return(
+      <div>
+        <img
+          src={image.url}
+          alt={image.alt}
+          title={image.title}
+        />
+      </div>
+   );
+}
+```
+
+---
+
+```js SchemaObject
+CustomComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      image: {
+         title: 'Image Prop',
+         type: 'object',
+         properties: {
+            url: {
+               type: 'string',
+               title: 'Image URL',
+               description: 'URL image'
+            },
+            alt: {
+               type: 'string',
+               title: 'Image Text Alternative',
+            },
+            title: {
+               type: 'string',
+               title: 'Attribute title',
+            },
+         }
+      }
+   }
+};
+```
+
+</CH.Code>
+
+In the Site Editor, this component will look like this:
+
+![object](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/object-custom-component.png)
+
+---
+
+## Array
+
+Consider a component where the displayed images adapt to the screen size.
+
+The component checks if the viewport width is less than 768 pixels to determine if it is a mobile view and selects the appropriate image source. It then renders the images inside a `div`, with each `img` element receiving the correct source and `alt` text based on the viewport size, ensuring each image has a unique key.
+
+In the `schema`, the `images` prop is specified as an array of objects, ensuring it will hold multiple items. Each item within the `images` array is defined as an object with three specific props, `src`, `alt`, and `mobileSrc`.
+
+<CH.Code>
+
+```js Array
+function CustomComponent({ images }) {
+   const isMobile = window.innerWidth < 768;
+
+   return(
+      <div>
+        {
+           images.map((image, index) => (
+              <img
+alt={image.alt}
+key={index}
+src={isMobile ? image.mobileSrc : image.src}
+              />
+           ))
+        }
+      </div>
+   );
+}
+```
+
+---
+
+```js SchemaArray focus=5:6,15:33
+CustomComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      images: {
+         type: 'array',
+         title: 'Images',
+         default: [
+            {
+               src: '',
+               alt: 'Text alternative',
+               mobileSrc: ''
+            }
+         ],
+         items: {//item configuration
+            type: 'object',
+            title: 'Image',
+            properties: {
+               src: {
+                  type: 'string',
+                  title: 'Image SRC',
+                  description: 'Image URL [desktop]'
+               },
+               alt: {
+                  type: 'string',
+                  title: 'Image Text Alternative',
+                  description: 'Image URL'
+               },
+               mobileSrc: {
+                  type: 'string',
+                  title: 'Image SRC [mobile]',
+                  description: 'Image URL'
+               },
+            }
+         }
+      }
+   }
+};
+```
+
+</CH.Code>
+
+In the Site Editor, this component will look like this:
+
+![array](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/array-custom-component.png)
+
+---
+
+### **Making the item name editable**
+
+If you want to allow users to change the name of each item in the `images` array within the Site Editor, add the `__editorItemTitle` prop to the item configuration. 
+
+```js SchemaCustomItem focus=19:23
+CustomComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      images: {
+         type: 'array',
+         title: 'Images',
+         default: [
+            {
+               src: '',
+               alt: 'Text alternative',
+               mobileSrc: ''
+            }
+         ],
+         items: { //item configuration
+            type: 'object',
+            title: 'Image',
+            properties: {
+             __editorItemTitle: { // now change name is available
+                  default: 'Image Item',
+                  title: 'Change item name',
+                  type: 'string'
+               },
+               src: {
+                  type: 'string',
+                  title: 'Image SRC',
+                  description: 'Image URL [desktop]'
+               },
+               alt: {
+                  type: 'string',
+                  title: 'Image Text Alternative',
+                  description: 'Image URL'
+               },
+               mobileSrc: {
+                  type: 'string',
+                  title: 'Image SRC [mobile]',
+                  description: 'Image URL'
+               },
+            }
+         }
+      }
+   }
+};
+```
+
+In the Site Editor, this component will look like this:
+
+![array-item](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/array-item-custom-component.png)
+
+---
+
+## `enum` and `enumNames` props
+
+There are some props used to define a set of allowed values for a particular prop, such as `enum` and `enumNames`.
+
+When using `enum`, the prop's value must be one of the values in the array.
+
+The `enumNames` prop is used in conjunction with `enum` to provide a set of human-readable names for the values specified in the `enum` array. This is particularly useful in UI components such as dropdowns and radio buttons, where you want to display a user-friendly name instead of the actual value.
+
+---
+
+### **`enum` example**
+
+Imagine you have a schema with `colors` as a prop, and the possible values are `red`, `blue`, or `black`.
+
+<CH.Code>
+
+```js schemaEnum focus=9
+CustomComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      colors: {
+         type: 'string',
+         title: 'Color',
+         default: 'red',
+         enum: ['red', 'blue', 'black'] // allowed values for the `colors` prop
+      }
+   }
+};
+```
+
+---
+
+```js schemaEnumNames focus=9:10
+CustomComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      colors: {
+         type: 'string',
+         title: 'Color',
+         default: 'red',
+         enumNames: ['green', 'blue', 'black'],
+         enum: [`#0ff102`,`#1038c9`, `#000000`]
+      }
+   }
+};
+```
+
+</CH.Code>
+
+In the Site Editor, you will see the component like this:
+
+![enum](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/enum-example.png)
+
+### **`enumNames` example**
+
+Imagine you have a schema with `colors` as prop and the possible values are `#0ff102`, `#1038c9` or `#000000`. However, for the user, you need to show the names `green`, `blue`, or `black`, respectively.
+
+In the Site Editor, you will see this component like this:
+
+![enum-enumname](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/enum-enumname-example.png)
+
+If the user selects the value `green`, for example, the prop returns `#0ff102`.
+
+</CH.Scrollycoding>
