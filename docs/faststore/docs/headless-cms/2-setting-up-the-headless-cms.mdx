@@ -37,40 +37,23 @@ If your project already includes any of the following files: `content-types.json
 1. Open the terminal and change to the root directory of your FastStore project.
 2. Create a new folder named `cms` at the root of your FastStore project and a subfolder named `faststore` inside the `cms`. Run the following command to create them:
 
-<Tabs items={['macOs and Linux', 'Windows']}>
-  <Tab>
-
-```bash
-mkdir -p cms/faststore
-```
-
-  </Tab>
-
-  <Tab>
-   ```bash
-  mkdir cms\faststore
-  ```
-  </Tab>
+<Tabs items={["macOs and Linux", "Windows"]} defaultIndex="0">
+  <Tab>```bash mkdir -p cms/faststore ```</Tab>
+  <Tab>```bash mkdir cms\faststore ```</Tab>
 </Tabs>
 
 3. Create the two files below inside the `faststore` folder by running the following command:
 
 > ⚠️ If your project already includes the CMS-related files: `content-types.json` or `sections.json`, create only the necessary files for your project's requirements.
 
-<Tabs items={['macOs and Linux', 'Windows']}>
+<Tabs items={["macOs and Linux", "Windows"]} defaultIndex="0">
   <Tab>
-
-```bash
-touch cms/faststore/content-types.json cms/faststore/sections.json
-```
-
+    ```bash touch cms/faststore/content-types.json cms/faststore/sections.json
+    ```
   </Tab>
-
   <Tab>
-   ```bash
-  type nul > cms\faststore\content-types.json
-  type nul > cms\faststore\sections.json
-  ```
+    ```bash type nul > cms\faststore\content-types.json type nul >
+    cms\faststore\sections.json ```
   </Tab>
 </Tabs>
 
