@@ -14,11 +14,18 @@ According to your operating system, follow the respective steps to install VTEX 
 
   > ⚠️ For computers running on an Apple M1 chip, before installing VTEX IO CLI, install [Rosetta](https://support.apple.com/en-us/HT211861) and enable your computer to use the command-line interface for a Mac with an Intel processor.  To install Rosetta, run the following in your terminal: `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`.
 
-  1. Install **Homebrew** by following the instructions on the [**Homebrew website**](https://brew.sh/index).
+
+  1. Install Xcode by running the following command.
+ 
+  ```sh
+  xcode-select --install
+  ```
+  
+  2. Install **Homebrew** by following the instructions on the [**Homebrew website**](https://brew.sh/index).
 
   ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
 
-  2. Then, install **VTEX IO CLI** by running the following command.
+  3. Then, install **VTEX IO CLI** by running the following command.
 
   ```sh
   brew tap vtex/vtex
