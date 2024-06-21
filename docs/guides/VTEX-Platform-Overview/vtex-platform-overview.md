@@ -4,10 +4,10 @@ slug: "vtex-platform-overview"
 hidden: false
 createdAt: "2024-05-20T10:45:55.338Z"
 updatedAt: "2024-05-21T10:10:00.000Z"
-excerpt: "Discover how our engineering decisions can leverage your business with the VTEX Platform Overview documentation."
+excerpt: "Discover how our engineering decisions can benefit your business with the VTEX Platform Overview documentation."
 ---
 
-This collection of guides provides a comprehensive view of our platform, highlighting key technical aspects that can empower your team and drive your business forward.
+This collection of guides provides a comprehensive overview of our platform, highlighting key technical aspects that can empower your team and drive your business forward.
 
 Explore the following guides to discover how VTEX can meet your business requirements and support your goals, whether you are exploring new solutions or looking to optimize your existing setup.
 
@@ -29,7 +29,7 @@ linkTitle="See more"
 
 <WhatsNextCard
 title="Data privacy"
-description="Understand our commitment to data privacy and how we ensure compliance with regulations to safeguard personal data."
+description="Learn about our commitment to data privacy and how we ensure compliance to safeguard personal data."
 linkTo="https://developers.vtex.com/docs/guides/data-privacy"
 linkTitle="See more"
 />
@@ -43,7 +43,7 @@ linkTitle="See more"
 
 <WhatsNextCard
 title="Store architecture"
-description="Dive into store architecture models within our platform, tailored to various business needs."
+description="Dive into store architecture models within our platform that are tailored to various business needs."
 linkTo="https://developers.vtex.com/docs/guides/store-architecture"
 linkTitle="See more"
 />
@@ -61,12 +61,12 @@ linkTitle="See more"
 
 [Help Center](https://help.vtex.com/)
 
-The Help Center contains beginner tutorials, reference guides and troubleshooting articles about the VTEX Admin panel.
+The Help Center contains beginner tutorials, reference guides, and troubleshooting articles about the VTEX Admin panel.
 
 [Community](https://community.vtex.com/?_ga=2.198523433.743584735.1647618303-1974737580.1645714642)
 
-The VTEX Community is an ecosystem where our clients and partners can interact, ask questions, and exchange information among themselves. It is the go-to place to find answers and talk about VTEX products.
+VTEX Community is an ecosystem where our clients and partners can interact, ask questions, and exchange information among themselves. It is the go-to place to find answers and talk about VTEX products.
 
 [Support](https://help.vtex.com/en/support)
 
-All customers have access to the services provided by our Technical Support team. These specialists are extensively prepared to give you the best experience possible when solving your tickets. To contact them, you need to open a ticket to VTEX support.
+All customers have access to the services provided by our Technical Support team. These specialists are extensively prepared to give you the best experience possible when solving your tickets. To contact them, you need to open a ticket with VTEX support.
