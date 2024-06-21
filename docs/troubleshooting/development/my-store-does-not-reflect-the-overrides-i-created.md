@@ -3,7 +3,7 @@ title: "My store does not reflect the overrides I created"
 slug: "my-store-does-not-reflect-the-overrides-i-created"
 hidden: false
 createdAt: "2024-06-13T08:47:00.508Z"
-excerpt: "During the Section overriding process], you can experience issues such as overridden components not appearing or not behaving as you expected."
+excerpt: "During the Section overriding process, you can experience issues such as overridden components not appearing or not behaving as expected."
 tags:
     - faststore
 ---
