@@ -30,7 +30,7 @@ Alongside you can see the [`HeaderComponentProps`](focus://3:5) interface, which
 
 The [`HeaderComponent`](focus://8:15) is a functional component that accepts `title` and `subtitle` as props, which are destructured from the props objet defined by the interface.
 
-> ℹ️ Below are additional examples of content schemas using String for image and date fields.
+>ℹ️ Below are additional examples of content schemas using String for image and date fields.
 
 <CH.Code>
 
@@ -80,13 +80,13 @@ export default CustomComponent;
 
 ### Images
 
-Consider a component that displays different images based on device type (desktop or mobile) (e.g., `ImageComponent.tsx`).
+Consider a [component](focus://8:15) that displays different images based on device type (desktop or mobile) (e.g., `ImageComponent.tsx`).
 
-To enable users to select an image from their computer or paste an image URL link, provide options for both methods in your component’s `schema` object.
+To enable users to select an image from their computer or paste an image URL link, provide options for both methods in your component’s [`schema`](focus://17:36) object.
 
 <CH.Code>
 
-```js ImageComponent.tsx mark=11:12,17:36
+```js ImageComponent.tsx
 import React from 'react';
 
 interface ImageComponentProps {
@@ -137,13 +137,13 @@ In the Site Editor, this custom component will look like this:
 
 ### Dates
 
-Consider a component that allows users to input an initial and a final date (e.g., `DateComponentProps.tsx`).
+Consider a [component](focus://8:15) that allows users to input an initial and a final date (e.g., `DateComponentProps.tsx`).
 
-In the `schema`, the `initialDate` and `finalDate` props define the configuration for date input fields.
+In the [`schema`](focus://17:37), the `initialDate` and `finalDate` props define the configuration for date input fields.
 
 <CH.Code>
 
-```js	DateComponent.tsx mark=11:12,17:37
+```js	DateComponent.tsx
 import React from 'react';
 
 interface DateComponentProps {
@@ -187,17 +187,17 @@ export default DateComponent;
 
 </CH.Code>
 
-The `initialDate` prop has an empty string as its default value and a description indicating the expected date format `'{year}/{month}/{day}'`. The `finalDate` prop has the default value set to the current date and time in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. It includes a custom UI widget for a date-time picker, streamlining the selection of both date and time.
+The [`initialDate`](focus://21:25) prop has an empty string as its default value and a description indicating the expected date format `'{year}/{month}/{day}'`. The [`finalDate`](focus://27:33) prop has the default value set to the current date and time in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. It includes a custom UI widget for a date-time picker, streamlining the selection of both date and time.
 
 In the Site Editor, this component will look like this:
 
-![string-date](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@/feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/string-date-custom-component.png)
+![string-date](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/string-date-custom-component.png)
 
 ---
 
 ## Boolean
 
-Consider a [component](focus://7:15) that allows users to toggle its active or inactive state. To allow users to activate or deactivate the component, define the [`schema`](focus://17:27) as follows.
+Consider a [component](focus://7:15) that allows users to toggle its active or inactive state. To allow users to activate or deactivate the component, define the [`schema`](focus://21:31) as follows.
 
 <CH.Code>
 
@@ -249,9 +249,9 @@ In the Site Editor, this custom component will look like this:
 
 ## Object
 
-Consider a [component](focus://CustomComponent) that renders an image, taking an `image` prop, which includes the URL, alt text, and title.
+Consider a [component](focus://13:23) that renders an image, taking an [`image`](focus://3:7,9:10) prop, which includes the URL, alt text, and title.
 
-The [`schema`](focus://schema) below defines the structure of the component, specifying that it expects an `image` prop, which is an object containing `url, `alt`, and `title` props.
+The [`schema`](focus://25:49) below defines the structure of the component, specifying that it expects an `image` prop, which is an object containing `url`, `alt`, and `title` props.
 
 <CH.Code>
 
@@ -319,11 +319,11 @@ In the Site Editor, this component will look like this:
 
 ## Array
 
-Consider a [component](focus://3:19) where the displayed images adapt to the screen size.
+Consider a [component](focus://13:29) where the displayed images adapt to the screen size.
 
 The component checks if the viewport width is less than 768 pixels to determine if it is a mobile view and selects the appropriate image source. It then renders the images inside a `div`, with each `img` element receiving the correct source and `alt` text based on the viewport size, ensuring each image has a unique key.
 
-In the [`schema`](focus://), the `images` prop is specified as an array of objects, ensuring it will hold multiple items. Each item within the `images` array is defined as an object with three specific props, `src`, `alt`, and `mobileSrc`.
+In the [`schema`](focus://31:68), the `images` prop is specified as an array of objects, ensuring it will hold multiple items. Each item within the `images` array is defined as an object with three specific props, `src`, `alt`, and `mobileSrc`.
 
 <CH.Code>
 
@@ -410,7 +410,7 @@ In the Site Editor, this component will look like this:
 
 ### Making the item name editable
 
-If you want to allow users to change the name of each item in the `images` array within the Site Editor, add the `__editorItemTitle` prop to the item configuration. 
+If you want to allow users to change the name of each item in the `images` array within the Site Editor, add the [`__editorItemTitle`](focus://49:53) prop to the item configuration. 
 
 ```js ArrayComponent.tsx mark=49:53
 import React from 'react'
@@ -508,7 +508,7 @@ The `enumNames` prop is used in conjunction with `enum` to provide a set of huma
 
 ### **`enum` example**
 
-Imagine you have a schema with `colors` as a prop, and the possible values are `red`, `blue`, or `black`.
+Imagine you have a [schema](focus://19:30) with `colors` as a prop, and the possible values are `red`, `blue`, or `black`.
 
 ```js EnumComponent.tsx mark=9
 import React from 'react';
@@ -553,7 +553,7 @@ In the Site Editor, you will see the component like this:
 
 ### **`enumNames` example**
 
-Imagine you have a schema with `colors` as prop and the possible values are `#0ff102`, `#1038c9` or `#000000`. However, for the user, you need to show the names `green`, `blue`, or `black`, respectively.
+Imagine you have a [schema](focus://25:37) with `colors` as prop and the possible values are `#0ff102`, `#1038c9` or `#000000`. However, for the user, you need to show the names `green`, `blue`, or `black`, respectively.
 
 ```js EnumNamesComponent.tsx
 import React from 'react';
