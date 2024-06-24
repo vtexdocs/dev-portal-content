@@ -2,8 +2,8 @@
 title: "Site Editor schema examples"
 slug: "site-editor-schema-examples"
 hidden: false
-createdAt: "2024-06-13T14:58:51.217Z"
-updatedAt: "2024-06-13T14:58:51.217Z"
+createdAt: "2024-06-24T12:55:00.347Z"
+updatedAt: "2024-06-24T12:55:00.347Z"
 excerpt: "Explore practical schema examples for configuring custom components in the Site Editor"
 seeAlso: 
   - “/docs/guides/vtex-io-documentation-making-a-custom-component-editable-in-the-site-editor”
@@ -26,9 +26,9 @@ In this guide, you will learn how to use each data type effectively.
 
 ## String 
 
-Alongside you can see the [`HeaderComponentProps`](focus://3:5) interface, which specifies the types of the props `title` and `subtitle`. This interface is used to type-check the props that are passed to the `HeaderComponent`.
+Alongside, you can see the [`HeaderComponentProps`](focus://3:5) interface, which specifies the types of the `title` and `subtitle` props. This interface is used to type-check the props that are passed to the `HeaderComponent`.
 
-The [`HeaderComponent`](focus://8:15) is a functional component that accepts `title` and `subtitle` as props, which are destructured from the props objet defined by the interface.
+The [`HeaderComponent`](focus://8:15) is a functional component that accepts `title` and `subtitle` as props, which are destructured from the props object defined by the interface.
 
 >ℹ️ Below are additional examples of content schemas using String for image and date fields.
 
@@ -498,7 +498,7 @@ In the Site Editor, this component will look like this:
 
 ## `enum` and `enumNames` props
 
-There are some props used to define a set of allowed values for a particular prop, such as [`enum`](#enum-example) and [`enumNames`](#enumnames-example).
+Some props are used to define a set of allowed values for a particular prop, such as [`enum`](#enum-example) and [`enumNames`](#enumnames-example).
 
 When using `enum`, the prop's value must be one of the values in the array.
 
