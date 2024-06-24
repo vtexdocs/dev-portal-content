@@ -13,7 +13,7 @@ To enhance the customer experience, some stores may want to display precise ship
 
 ## Enable the `useIndividualShippingEstimates` flag
 
-First, it is necessary to enable the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) behavior to fill the `shippingEstimateDate` with the SLA information. To do so, you must update the store's `orderForm` with the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm). You must include the flag `useIndividualShippingEstimates = true` as the example below:
+First, it is necessary to enable the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) behavior to fill the `shippingEstimateDate` with the SLA information. To do so, you must update the store's `orderForm` with the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint. You must include the flag `useIndividualShippingEstimates = true` as the example below:
 
 ```json
 {
@@ -67,7 +67,7 @@ Once you enable the `useIndividualShippingEstimates`, you can test if the config
 
 ## Send shipping data attachment
 
-Send the item shipping data to the `orderForm` by using the [Add shipping address and select delivery option](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) as the example below:
+Send the item shipping data to the `orderForm` by using the [Add shipping address and select delivery option](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) endpoint as the example below:
 
 ```json
 {
