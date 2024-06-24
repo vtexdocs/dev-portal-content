@@ -75,6 +75,6 @@ After running `yarn dev`, update each topic mentioned before as follows:
 <details>
 <summary>Enhanced API extensions</summary>
 
-Follow the [Best practices for using API extensions](https://developers.vtex.com/docs/faststore/api-extensions-best-practices) guide for more information.
+Follow the [Best practices for API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-best-practices) guide for more information.
 
 </details>
