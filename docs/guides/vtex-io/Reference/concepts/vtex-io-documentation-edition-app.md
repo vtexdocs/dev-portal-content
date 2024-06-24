@@ -49,4 +49,4 @@ All Edition apps must depend, either directly or indirectly, on either `vtex.edi
 
 Apps included as [`dependencies`](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies) within an Edition App are considered inherited apps. Moreover, all apps bundled within an Edition App must share the same [`vendor`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) as the Edition App itself.
 
->ℹ️ Sponsored Accounts cannot modify apps and configurations installed through an Edition App. Only the Sponsor Account has the authority to make changes by releasing a new version of its Edition App and requesting a reinstallation.
+>ℹ️ Sponsored Accounts can't modify apps and configurations installed through an Edition App. Only the Sponsor Account has the permission to make changes by releasing a new version of its Edition App and requesting a reinstallation.
