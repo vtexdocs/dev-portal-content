@@ -15,6 +15,7 @@ Below are various troubleshooting checks and instructions you can use to solve y
 | Issue | Troubleshooting instructions |
 | ----- | ---------------------------- |
 | Overrides fail to display in your store. | [Check the `getOverriddenSection` function](#checking-the-getoverriddensection-function). |
+| The custom section is not available in the Headless CMS.  | [Add the section’s schema in the Headless CMS](#adding-the-sections-schema-in-the-headless-cms). |
 | Overrides are not reflected in the Headless CMS. | [Remove default props](#removing-default-props). |
 | Styles are not being applied to the component. | [Check custom section class names](#checking-custom-section-class-names).|
 
