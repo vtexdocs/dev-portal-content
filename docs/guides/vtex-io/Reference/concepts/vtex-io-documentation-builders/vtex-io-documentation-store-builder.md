@@ -46,7 +46,7 @@ Add the `store` builder to your app’s builder list in the `manifest.json` file
 
 ```json
   "builders": {
-      "store": "3.x"
+      "store": "0.x"
   }
 ```
 
