@@ -894,13 +894,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Displaying SLA by item in Checkout",
-                  "slug": "displaying-sla-by-item-in-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -12923,29 +12916,6 @@
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
       "categories": [
-        {
-          "name": "2024",
-          "slug": "2024-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "June",
-              "slug": "june-2023",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Enhanced shipping estimate display in Checkout",
-                  "slug": "2024-06-24-displaying-sla-by-item-in-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
         {
           "name": "2023",
           "slug": "2023-category",
