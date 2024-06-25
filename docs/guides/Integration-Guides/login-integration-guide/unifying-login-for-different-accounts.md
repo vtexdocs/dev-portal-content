@@ -74,43 +74,43 @@ Now that you have set an OAuth identity provider in your **primary account** and
 
 #### 1. Provider Details
 
-| **Field**           | **Specification** |
-| ------------------- | ----------------- |
-| **Client ID** key   | `client_id`       |
-| **Client ID** value | `client_secret`   |
+| **Field** | **Specification** |
+| - | - |
+| **Client ID** key | `client_id` |
+| **Client ID** value | `client_secret` |
 
 #### 2. Authorization Code
 
-| **Field**                                                                                                               | **Specification**                                    |
-| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| **URL**                                                                                                                 | `https://{primaryAccountHost}/api/io/_v/oauth2/auth` |
-| Custom query string parameter                                                                                           | `response_type`: `code`                              |
-| **Callback Request Information** authorization code query string parameter key                                          | `code`                                               |
+| **Field** | **Specification** |
+| - | - |
+| **URL** | `https://{primaryAccountHost}/api/io/_v/oauth2/auth` |
+| Custom query string parameter | `response_type`: `code` |
+| **Callback Request Information** authorization code query string parameter key  | `code` |
 
 > ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
 
 #### 3. Access Token Exchange
 
-| **Field**                                                                                                               | **Specification**                                     |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| **URL**                                                                                                                 | `https://{primaryAccountHost}/api/io/_v/oauth2/token` |
-| **Set Content-Type**                                                                                                    | `application/x-www-form-urlencoded`                   |
-| **Authorization code** parameter key                                                                                    | `code`                                                |
-| Custom request query string parameter                                                                                   | `grant_type`: `authorization_code`                    |
-| Response **access token** parameter key                                                                                 | `access_token`                                        |
-| Response **expires in** parameter key                                                                                   | `expires_in`                                          |
+| **Field** | **Specification** |
+| - | - |
+| **URL** | `https://{primaryAccountHost}/api/io/_v/oauth2/token` |
+| **Set Content-Type** | `application/x-www-form-urlencoded` |
+| **Authorization code** parameter key | `code` |
+| Custom request query string parameter | `grant_type`: `authorization_code` |
+| Response **access token** parameter key | `access_token` |
+| Response **expires in** parameter key | `expires_in` |
 
 > ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
 
 #### 4. Get User Info
 
-| **Field**                                                                                                               | **Specification**                                         |
-| ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **URL**                                                                                                                 | `https://{primaryAccountHost}/api/io/_v/oauth2/userinfo/` |
-| **Where to send Access Token** - **Send on query string** toggle                                                        | Disabled                                                  |
-| Response **User e-mail** parameter key                                                                                  | email                                                    |
-| Response **User ID** parameter key                                                                                      | userId                                                    |
-| Response **User name** parameter key                                                                                    | username                                                  |
+| **Field** | **Specification** |
+| - | - |
+| **URL** | `https://{primaryAccountHost}/api/io/_v/oauth2/userinfo/` |
+| **Where to send Access Token** - **Send on query string** toggle | `Disabled |
+| Response **User e-mail** parameter key | `email` |
+| Response **User ID** parameter key | `userId` |
+| Response **User name** parameter key | `username` |
 
 > ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
 
