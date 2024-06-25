@@ -46,6 +46,8 @@ First, it is necessary to enable the [Checkout API](https://developers.vtex.com/
 
 By enabling this flag, the `shippingEstimateDate` will be updated with the SLA information configured by the sellers.
 
+---
+
 ## Add items to cart
 
 Once you enable the `useIndividualShippingEstimates`, test if the configuration is correct by adding items to a shopping cart using the [Add cart items](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items) endpoint. See the request body example presented.
@@ -67,9 +69,13 @@ Once you enable the `useIndividualShippingEstimates`, test if the configuration 
 }
 ```
 
+---
+
 ## Send shipping data attachment
 
 Send the item shipping data to the `orderForm` using the [Add shipping address and select delivery option](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) endpoint as in the example shown.
+
+Once configured, the `orderForm` will retrieve the variable `shippingEstimateDate`, which will display the shipping estimate date instead of only the shipping estimate in business days.
 
 <CH.Code>
 
@@ -112,7 +118,7 @@ Send the item shipping data to the `orderForm` using the [Add shipping address a
 }
 ```
 
-Once configured, the `orderForm` will retrieve the variable `shippingEstimateDate`, which will display the shipping estimate date instead of only the shipping estimate in business days.
+---
 
 ```json Response
 {
