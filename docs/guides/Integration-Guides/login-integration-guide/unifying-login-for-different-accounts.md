@@ -108,7 +108,7 @@ Now that you have set an OAuth identity provider in your **primary account** and
 | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
 | **URL**                                                                                                                 | `https://{primaryAccountHost}/api/io/_v/oauth2/userinfo/` |
 | **Where to send Access Token** - **Send on query string** toggle                                                        | Disabled                                                  |
-| Response **User e-mail** parameter key                                                                                  | e-mail                                                    |
+| Response **User e-mail** parameter key                                                                                  | email                                                    |
 | Response **User ID** parameter key                                                                                      | userId                                                    |
 | Response **User name** parameter key                                                                                    | username                                                  |
 
