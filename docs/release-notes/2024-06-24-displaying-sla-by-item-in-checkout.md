@@ -2,7 +2,8 @@
 title: "Enhanced shipping estimate display in Checkout"
 slug: "2024-06-24-displaying-sla-by-item-in-checkout"
 type: "added"
-createdAt: "2024-06-24T10:00:00.661Z"
+hidden: true
+createdAt: ""
 updatedAt: ""
 excerpt: "Introducing the useIndividualShippingEstimates variable in the Checkout API to display specific shipping dates for each item in the cart."
 ---
