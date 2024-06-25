@@ -1,0 +1,43 @@
+---
+title: 'Previewing Headless CMS in development mode'
+---
+
+During the implementation of a new section or component in the Headless CMS, you can use the `dev mode` to preview the Headless CMS before pushing the changes to your live store.
+
+## Instructions
+
+1. Open your FastStore project and start a development server.
+2. After making changes to your FastStore project directory and syncing them with the Headless CMS, access the VTEX Admin and navigate to **Storefront > Headless CMS**.
+3. Open the **Developer Tool** or right-click on the page and choose **Inspect**.
+4. In the Developer Tool terminal, run the following command:
+
+   ```bash 
+   localStorage.setItem('cmsDevMode', 1)
+   ```
+
+5. Refresh the page, and you should see the section **Development Mode** in the right sidebar.
+
+   ![development-mode](https://vtexhelp.vtexassets.com/assets/docs/src/development-mode___5cd79e364aea0785e98ce6bb379f2acc.png)
+
+6. Click the `Preview` button. A new tab will open.
+7. Copy the link from this tab, which will contain the `contentType`, `documentId`, and `versionId` parameters. The link should be similar to the following:
+
+   ```
+   https://faststore.vtex.app/?contentType=page&documentId=bd9e01d6-534e-4e54-aa76-f864dcbad024&versionId=405118e9-7509-11ed-83ab-0eeee363631w
+   ```
+
+7. Now, access the local preview by replacing the following parameters accordingly:
+
+   ```
+   localhost:3000/api/preview/?contentType={contentType}&documentId={documentId}&versionId={versionId}
+   ```
+
+        > ⚠️ Replace `{contentType}`, `{documentId}`, and `{versionId}` with the values from your preview link.
+
+8. Once you have reviewed your changes, open the terminal in the `Developer Tools` and run the following command in the Headless CMS page to terminate the development mode:
+
+   ```bash 
+   localStorage.removeItem('cmsDevMode')
+   ```
+
+9. Refresh the page, and the development mode session will now be ended.
