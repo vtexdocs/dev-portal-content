@@ -1,7 +1,7 @@
 ---
 title: "Displaying SLA by item in Checkout"
 slug: "displaying-sla-by-item-in-checkout"
-hidden: false
+hidden: true
 createdAt: ""
 updatedAt: ""
 excerpt: "This guide describes how to display individual shipping estimates for items in a customer's cart on an ecommerce platform using the Checkout API."
