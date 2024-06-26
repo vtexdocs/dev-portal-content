@@ -27,15 +27,15 @@ This guide illustrates a common use case for [`getOverriddenSection`](https://de
 
 By leveraging `getOverriddenSection`, you can customize the Alert section's Headless CMS schema to offer additional icon options. Follow the steps below:
 
-1.  In the `src/components/sections` folder, create the folder `CustomIconsAlert` folder.
-2.  In the `CustomIconsAlert` folder, create the `CustomIconsAlert.tsx` file.
-3.  Import the following to the `CustomIconsAlert.tsx` file:
+1. In the `src/components/sections` folder, create the folder `CustomIconsAlert` folder.
+2. In the `CustomIconsAlert` folder, create the `CustomIconsAlert.tsx` file.
+3. Import the following to the `CustomIconsAlert.tsx` file:
 
         ```tsx
         import { getOverriddenSection } from '@faststore/core'
         ```
 
-4.  Define the `CustomIconsAlert` component:
+4. Define the `CustomIconsAlert` component:
 
         ```tsx focus=3:7
         import { AlertSection, getOverriddenSection } from '@faststore/core'
