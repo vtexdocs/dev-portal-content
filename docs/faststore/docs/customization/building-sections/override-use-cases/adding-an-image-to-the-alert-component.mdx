@@ -1,0 +1,151 @@
+---
+title: 'Adding an image to the Alert component'
+---
+
+This guide illustrates an advanced use case for [`getOverriddenSection`](https://developers.vtex.com/docs/guides/faststore/overrides-getoverriddensection-function) in FastStore. It focuses on customizing the Alert section's icon to display an image instead. 
+
+> ℹ️ For detailed instructions on overriding components, refer to [Overriding native component’s props](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) and [Overriding a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component).
+
+## Context
+
+- The native Alert section provides an `icon` prop for customization, but you want more control and flexibility over the displayed content.
+- You want to display a custom image alongside the text in your alert messages.
+
+## Implementation
+
+By leveraging `getOverriddenSection`, you can create a custom component called `AlertWithImage` that achieves the desired functionality. Follow the steps below:
+
+1. In the `src/components/sections` folder, create the folder `AlertWithImage` folder.
+2. In the `AlertWithImage` folder, create the `AlertWithImage.tsx` file.
+3. Import the following to the `AlertWithImage.tsx` file:
+
+    ```tsx
+    import { getOverriddenSection } from "@faststore/core";
+    import Image from "next/image";
+    import { useMemo } from "react";
+    ```
+
+4. Define the `AlertWithImageProps` interface:
+
+    ```tsx
+    interface AlertWithImageProps
+                    extends Omit<React.ComponentProps<typeof AlertSection>, "icon"> {
+                    src: string;
+                    alt: string;
+                }
+    ```
+
+   - This interface defines the props accepted by the `AlertWithImage` component.
+   - It inherits all props from the native Alert component, excluding the icon prop, which we intend to replace with an image.
+   - It adds a new prop named `src`, which specifies the image source URL.
+
+5. Create the `AlertWithImage` component:
+
+    ```tsx
+    import { useMemo } from "react";
+    import { AlertSection, getOverriddenSection } from "@faststore/core";
+    import { Image_unstable as Image } from "@faststore/core/experimental";
+
+
+    interface AlertWithImageProps
+        extends Omit<React.ComponentProps<typeof AlertSection>, "icon"> {
+        src: string;
+        alt: string;
+    }
+
+    export default function AlertWithImage(props: AlertWithImageProps) {
+        const { src, alt, ...otherProps } = props;
+
+        const OverriddenAlert = useMemo(
+            () =>
+            getOverriddenSection({
+                Section: AlertSection,
+                className: styles.alertWithImage,
+                components: {
+                    Icon: {
+                        Component: () => (
+                            <Image src={props.src} alt={props.alt} width={24} height={24} />
+                        ),
+                    },
+                },
+            }),
+        []
+    );
+
+    return <OverriddenAlert {...otherProps} icon="" />;
+    }
+    ```
+
+    - This function receives the `AlertWithImageProps`.
+    - It destructures the `src` prop containing the image source and remaining props using the spread operator (`...otherProps`).
+    - The core functionality lies within the `useMemo` hook.
+      - It defines the `OverriddenAlert` constant using `getOverriddenSection`.
+      - The override options specify:
+        - **`Section`:** The section to be overridden (Alert).
+        - **`components`:** An object containing the override for the Icon component.
+
+    - Inside the Icon override:
+      - **`Component`:** A function returning an `Image` component. This displays the image specified by the `src` prop.
+      - **`width`** and **`height`:** Optional props to set the size of the image.
+
+    - The use of `useMemo` ensures this override is only created once, improving performance.
+    - The function returns the `OverriddenAlert` component, spreading the `otherProps` and setting the `icon` prop to `noop` (effectively disabling the default icon behavior).
+
+    > ℹ️ For further details on code implementation, see the `AlertWithImage` folder available in the playground.store repository.
+
+6. Add the section to the Headless CMS by following the instructions available for sending components to the Headless CMS.
+
+The following schema was used as an example:
+
+    ```json 
+    [
+        {
+        "name": "AlertWithImage",
+        "schema": {
+        "title": "Alert with image",
+        "description": "Add an Alert that has an Image as an icon",
+        "type": "object",
+        "required": ["src", "content", "dismissible"],
+        "properties": {
+            "src": {
+            "type": "string",
+            "title": "Image source",
+            "description": "Source of the Alert icon image"
+            },
+            "content": { "type": "string", "title": "Content" },
+            "link": {
+            "title": "Link",
+            "type": "object",
+            "properties": {
+                "text": { "type": "string", "title": "Link Text" },
+                "to": { "type": "string", "title": "Action link" }
+            }
+            },
+            "dismissible": {
+            "type": "boolean",
+            "default": false,
+            "title": "Is dismissible?"
+            }
+        }
+        }
+    }
+    ]
+    ```
+
+> ℹ️ For further details on code implementation, see the `sections.json` file available in the playground.store repository.
+
+## Results
+
+Once you have [set your development mode](https://developers.vtex.com/docs/guides/faststore/headless-cms-previewing-changes-in-development-mode) to see the changes locally, you can see the image as an icon in the alert:
+
+- **Before**
+  
+  The native Alert displays one of the default icons, the `BellRinging`, following the sentence `Get 15% off today: NEW15! Buy now`.
+
+  ![before- alert-with-image](https://vtexhelp.vtexassets.com/assets/docs/src/before-custom-alert-image___fbd2316b0a78c7756fcc8523e7e6b181.png) 
+  
+- **After**
+  
+  The native Alert was replaced with the custom one, which features a pink image in the form of an icon added through Headless CMS.
+  
+  ![after - alert-with-image](https://vtexhelp.vtexassets.com/assets/docs/src/after-custom-alert-image___c4f735821a289a0fd0ce72947371e154.png)
