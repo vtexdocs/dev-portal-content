@@ -25,7 +25,7 @@ By leveraging `getOverriddenSection`, you can create a custom component called `
     import { useMemo } from "react";
     ```
 
-4. Define the `AlertWithImageProps` interface (from line 5 to 9):
+4. Define the `AlertWithImageProps` interface:
 
     ```tsx focus=5:9
     import { getOverriddenSection } from "@faststore/core";
@@ -43,9 +43,9 @@ By leveraging `getOverriddenSection`, you can create a custom component called `
    - It inherits all props from the native Alert component, excluding the icon prop, which we intend to replace with an image.
    - It adds a new prop named `src`, which specifies the image source URL.
 
-5. Create the `AlertWithImage` component (from line 10 to 30):
+5. Create the `AlertWithImage` component:
 
-    ```tsx focus=10:20
+    ```tsx focus=10:31
     import { useMemo } from "react";
     import { AlertSection, getOverriddenSection } from "@faststore/core";
     import { Image_unstable as Image } from "@faststore/core/experimental";
