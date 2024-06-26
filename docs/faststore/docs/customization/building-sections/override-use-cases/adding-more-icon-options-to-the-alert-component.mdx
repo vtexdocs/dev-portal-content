@@ -19,7 +19,7 @@ This guide illustrates a common use case for [`getOverriddenSection`](https://de
     | `Truck`                 | ![truck-icon](https://vtexhelp.vtexassets.com/assets/docs/src/truck-icon___ec3a7f0fcf2c02580d49444b71e8fc36.png)   |
     | `User`                  | ![user-icon](https://vtexhelp.vtexassets.com/assets/docs/src/user-icon___999dffa96120d0e51ead18263423ddad.png) |
 
-- You want to allow Headless CMS editors to select in the Alert section from a wider range of icons supported by the `@faststore/ui` [iconography library](https://developers.vtex.com/docs/guides/faststore/reference-icons#usage).
+- You want to allow Headless CMS editors to select in the Alert section from a wider range of icons supported by the `@faststore/ui` [iconography](https://developers.vtex.com/docs/guides/faststore/reference-icons#usage) library.
 
 ## Implementation
 
@@ -37,7 +37,7 @@ By leveraging `getOverriddenSection`, you can customize the Alert section's Head
 
 4. Define the `CustomIconsAlert` component:
 
-        ```tsx
+        ```tsx focus=3:5
         import { AlertSection, getOverriddenSection } from '@faststore/core'
 
         const CustomIconsAlert = getOverriddenSection({
@@ -52,11 +52,11 @@ By leveraging `getOverriddenSection`, you can customize the Alert section's Head
     - The override options specify:
       - **`Section`:** The section to be overridden (Alert).
 
-    > ℹ️ For further details on code implementation, see the `CustomIconsAlert` folder available in the playground.store repository.
+    > ℹ️ For further details on code implementation, see the [`CustomIconsAlert`](https://github.com/vtex-sites/playground.store/tree/main/src/components/sections/CustomIconsAlert) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
 ### Synchronizing the changes with the Headless CMS
 
-Add the section to the Headless CMS by following the instructions available in [Sending components to the Headless CMS](https://developers.vtex.com/docs/guides/building-sections/overrides/sending-components-to-the-headless-cms). The following schema was used as an example:
+Add the section to the Headless CMS by following the instructions available in [syncing components to the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms). The following schema was used as an example:
 
         ```json
         {
@@ -104,20 +104,20 @@ Add the section to the Headless CMS by following the instructions available in [
         }
         ```
 
-> ℹ️ For further details on code implementation, see the `sections.json` file available in the playground.store repository.
+> ℹ️ For further details on code implementation, see the [`sections.json`](https://github.com/vtex-sites/playground.store/blob/main/cms/faststore/sections.json#L1-L55) file available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
 ## Results
 
-Once you have [set your development mode](https://developers.vtex.com/docs/guides/building-sections/overrides/sending-components-to-the-headless-cms#previewing-changes-in-the-development-mode) to see the changes locally, you can see the new Alert icon. Below, you can check an example storefront before and after the instructions in this guide:
+Once you have [set your development mode](https://developers.vtex.com/docs/guides/faststore/headless-cms-previewing-changes-in-development-mode) to see the changes locally, you can see the new Alert icon. Below, you can check an example storefront before and after the instructions in this guide:
 
 - **Before**
 
-    The native Alert displays one of the default icons, the `BellRinging`, following the sentence `Get 15% off today: NEW15! Buy now`.
+    The native Alert displays one of the default icons, `BellRinging`, alongside the text `Get 15% off today: NEW15! Buy now`.
 
     ![before-custom-icon](https://vtexhelp.vtexassets.com/assets/docs/src/before-alert-icon___86e395e9cfc731f1f70b56cf3760af08.png)
 
 - **After**
   
-    The native Alert was replaced with the custom one, which brings a new icon, the `Star`, from the `@faststore/ui` iconography library, following the sentence `Rate your favorite item`.
+    The native Alert was replaced with the custom one, which brings a new icon, `Star`, from the `@faststore/ui` [iconography](https://developers.vtex.com/docs/guides/faststore/reference-icons#usage) library, alongside the text `Rate your favorite item`.
 
     ![after-custom-icon](https://vtexhelp.vtexassets.com/assets/docs/src/after-custom-alert-icon___87cd248c0c406640aaaac4ef9238e101.png)
