@@ -105,36 +105,49 @@ By leveraging `getOverriddenSection`, you can create a custom component called `
 
 6. Add the section to the Headless CMS by following the instructions available in [syncing components to the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 
-    The following schema was used as an example in [`cms/faststore/sections.json`](https://github.com/vtex-sites/playground.store/blob/main/cms/faststore/sections.json#L58-L101):
+   The following schema was used as an example in [`cms/faststore/sections.json`](https://github.com/vtex-sites/playground.store/blob/main/cms/faststore/sections.json#L58-L101):
 
     ```json
     [
-        {
+      {
         "name": "AlertWithImage",
         "schema": {
-        "title": "Alert with image",
-        "description": "Add an Alert that has an Image as an icon",
-        "type": "object",
-        "required": ["src", "content", "dismissible"],
-        "properties": {
+          "title": "Alert with image",
+          "description": "Add an Alert that has an Image as an icon",
+          "type": "object",
+          "required": [
+            "src",
+            "content",
+            "dismissible"
+          ],
+          "properties": {
             "src": {
-            "type": "string",
-            "title": "Image source",
-            "description": "Source of the Alert icon image"
+              "type": "string",
+              "title": "Image source",
+              "description": "Source of the Alert icon image"
             },
-            "content": { "type": "string", "title": "Content" },
+            "content": {
+              "type": "string",
+              "title": "Content"
+            },
             "link": {
-            "title": "Link",
-            "type": "object",
-            "properties": {
-                "text": { "type": "string", "title": "Link Text" },
-                "to": { "type": "string", "title": "Action link" }
-            }
+              "title": "Link",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "title": "Link Text"
+                },
+                "to": {
+                  "type": "string",
+                  "title": "Action link"
+                }
+              }
             },
             "dismissible": {
-            "type": "boolean",
-            "default": false,
-            "title": "Is dismissible?"
+              "type": "boolean",
+              "default": false,
+              "title": "Is dismissible?"
             }
           }
         }
