@@ -59,49 +59,51 @@ By leveraging `getOverriddenSection`, you can customize the Alert section's Head
 Add the section to the Headless CMS by following the instructions available in [syncing components to the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms). The following schema was used as an example:
 
         ```json
-        {
-        "name": "CustomIconsAlert",
-        "schema": {
-            "title": "Alert with more Icon options",
-            "description": "Add an alert that has more Icon options",
-            "type": "object",
-            "required": ["icon", "content", "dismissible"],
-            "properties": {
-            "icon": {
-                "type": "string",
-                "title": "Icon",
-                "enumNames": [
-                "Bell",
-                "BellRinging",
-                "Checked",
-                "Info",
-                "Truck",
-                "User",
-                "Plus",
-                "PlusCircle",
-                "Ruler",
-                "Star",
-                "Storefront",
-                "Twitter"
-                ],
-                "enum": [
-                "Bell",
-                "BellRinging",
-                "Checked",
-                "Info",
-                "Truck",
-                "User",
-                "Plus",
-                "PlusCircle",
-                "Ruler",
-                "Star",
-                "Storefront",
-                "Twitter"
-                ]
+        [    
+            {
+            "name": "CustomIconsAlert",
+            "schema": {
+                "title": "Alert with more Icon options",
+                "description": "Add an alert that has more Icon options",
+                "type": "object",
+                "required": ["icon", "content", "dismissible"],
+                "properties": {
+                "icon": {
+                    "type": "string",
+                    "title": "Icon",
+                    "enumNames": [
+                    "Bell",
+                    "BellRinging",
+                    "Checked",
+                    "Info",
+                    "Truck",
+                    "User",
+                    "Plus",
+                    "PlusCircle",
+                    "Ruler",
+                    "Star",
+                    "Storefront",
+                    "Twitter"
+                    ],
+                    "enum": [
+                    "Bell",
+                    "BellRinging",
+                    "Checked",
+                    "Info",
+                    "Truck",
+                    "User",
+                    "Plus",
+                    "PlusCircle",
+                    "Ruler",
+                    "Star",
+                    "Storefront",
+                    "Twitter"
+                    ]
+                  }
+                }
+              }
             }
-            }
-        }
-        }
+        ]
         ```
 
 > ℹ️ For further details on code implementation, see the [`sections.json`](https://github.com/vtex-sites/playground.store/blob/main/cms/faststore/sections.json#L1-L55) file available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
