@@ -185,12 +185,84 @@ Check the available Headless CMS schema that you can customize for this componen
 
 ---
 
+---
+
+### CrossSellingShelf
+
+| Type                              | Availability                                                                                                                     |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Overridable components            | <ul className="doc-list"><li>[`ProductShelf`](https://developers.vtex.com/docs/guides/faststore/organisms-product-shelf)</li><li>`__experimentalCarousel`</li><li>`__experimentalProductCard`</li></ul> |
+| Headless CMS: props customization |                                                                         |
+
+<details>
+<summary><b>CrossSellingShelf - Available schema</b></summary> 
+
+Check the available Headless CMS schema that you can customize for this component:
+
+```json
+{
+    "name": "NewSectionName",
+    "requiredScopes": ["pdp", "custom"],
+    "schema": {
+      "title": "Add the Section name",
+      "description": "Short description for the the section's purpose",
+      "type": "object",
+      "required": ["title", "numberOfItems", "kind"],
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "numberOfItems": {
+          "title": "Total number of items",
+          "type": "integer",
+          "default": 5,
+          "description": "Total number of items. The quantity may be smaller if the query returns fewer products."
+        },
+        "itemsPerPage": {
+          "type": "integer",
+          "title": "Number of items per page",
+          "default": 5,
+          "description": "Number of items to display per page in carousel"
+        },
+        "kind": {
+          "title": "Kind",
+          "description": "Change cross selling types",
+          "default": "buy",
+          "enum": ["buy", "view"],
+          "enumNames": ["Who bought also bought", "Who saw also saw"]
+        },
+        "taxesConfiguration": {
+          "title": "Taxes Configuration",
+          "type": "object",
+          "properties": {
+            "usePriceWithTaxes": {
+              "title": "Should use taxes to calculate the price?",
+              "type": "boolean",
+              "default": false
+            },
+            "taxesLabel": {
+              "title": "Tax label to be displayed",
+              "type": "string",
+              "default": "Tax included"
+            }
+          }
+        }
+      }
+    }
+},
+```
+
+</details>
+
+---
+
 ### Empty State
 
 | Type                              | Availability                                                                                                                     |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Overridable components            | <ul className="doc-list"><li>[`Breadcrumb`](https://developers.vtex.com/docs/guides/faststore/molecules-breadcrumb)</li><li>[`Icon`](https://developers.vtex.com/docs/guides/faststore/atoms-icon)</li></ul> |
-| Headless CMS: props customization | <ul className="doc-list"><li>`Icon (HomeIcon)`</li></ul>                                                                         |
+| Headless CMS: props customization |                                                                     |
 
 <details>
 <summary><b>Empty State - Available schema</b></summary> 
@@ -200,26 +272,77 @@ Check the available Headless CMS schema that you can customize for this componen
 ```json
 {
     "name": "NewSectionName",
-    "requiredScopes": ["pdp", "plp"],
     "schema": {
       "title": "Add the Section name",
-      "description": "Short description for the the section's purpose",
       "type": "object",
-      "required": ["icon", "alt"],
+      "description": "Short description for the the section's purpose",
       "properties": {
-        "icon": {
-          "title": "Icon",
-          "type": "string",
-          "enumNames": ["House"],
-          "enum": ["House"]
-        },
-        "alt": {
-          "title": "Alternative Label",
+        "title": {
+          "title": "Title",
           "type": "string"
+        },
+        "titleIcon": {
+          "title": "Title Icon",
+          "type": "object",
+          "properties": {
+            "icon": {
+              "title": "Icon",
+              "type": "string",
+              "enumNames": ["CircleWavy Warning"],
+              "enum": ["CircleWavyWarning"]
+            },
+            "alt": {
+              "title": "Alternative Label",
+              "type": "string"
+            }
+          }
+        },
+        "subtitle": {
+          "title": "Subtitle",
+          "type": "string"
+        },
+        "showLoader": {
+          "type": "boolean",
+          "title": "Show loader?",
+          "default": false
+        },
+        "errorState": {
+          "title": "Error state used for shown errorId and fromUrl properties in 500 and 404 pages",
+          "type": "object",
+          "properties": {
+            "errorId": {
+              "title": "errorId used in 500 and 404 pages",
+              "type": "object",
+              "properties": {
+                "show": {
+                  "type": "boolean",
+                  "title": "Show errorId in the end of message?"
+                },
+                "description": {
+                  "type": "string",
+                  "title": "Description shown before the errorId"
+                }
+              }
+            },
+            "fromUrl": {
+              "title": "fromUrl used in 500 and 404 pages",
+              "type": "object",
+              "properties": {
+                "show": {
+                  "type": "boolean",
+                  "title": "Show fromUrl in the end of message?"
+                },
+                "description": {
+                  "type": "string",
+                  "title": "Description shown before the fromUrl"
+                }
+              }
+            }
+          }
         }
       }
     }
-  }
+}
 ```
 
 </details>
