@@ -15,13 +15,13 @@ FastStore v2 users can now update their`@faststore/core` package version and ben
 
 ### Enhanced API extensions
 
-To reduce bundle sizes, align with GraphQL community standards, and get up to date with the latest bundling and compilation tools, the latest `@faststore/core` package version 3.0.0 deprecates the `@faststore/graphql-utils` package in favor of the [`client-preset`](https://the-guild.dev/graphql/codegen/plugins/presets/preset-client) plugin.
+To reduce bundle sizes, align with GraphQL community standards, and get up to date with the latest bundling and compilation tools, `@faststore/core` 3.x deprecates the `@faststore/graphql-utils` package in favor of the [`client-preset`](https://the-guild.dev/graphql/codegen/plugins/presets/preset-client) plugin.
 
 ### Streamlined error page customization in the Headless CMS
 
 Before, FastStore had a more limited scope for customizing content on pages such as Login, 404 Error, and 500 Error within the Headless CMS. Customizing these pages was only possible through code, which limited users’ ability to tailor these pages to their specific needs within the Headless CMS.
 
-Now, these new content types are part of the latest `@faststore/core` package version 3.0, and users can customize them within the Headless CMS.
+These content types are now part of `@faststore/core` 3.x, and users can customize them within the Headless CMS.
 
 ![gif](https://vtexhelp.vtexassets.com/assets/docs/src/release-note-hcms___480683289080e473473504654c4e4697.gif)
 
@@ -52,9 +52,9 @@ After running `yarn dev`, update each topic mentioned before as follows:
 
    ```bash
    "dependencies": {
-   ...
-   "next": "^13.5.6",
-   ...
+      ...
+      "next": "^13.5.6",
+      ...
    },
    ```
 
