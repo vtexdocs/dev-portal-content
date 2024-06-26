@@ -78,8 +78,8 @@ Check the available Headless CMS schema that you can customize for this componen
 
 | Type                              | Availability                                                                                                                                                                   |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Overridable components            | <ul className="doc-list"><li> [`BannerText`](https://developers.vtex.com/docs/guides/faststore/organisms-banner-text)</li> <li> [`BannerTextContent`](https://developers.vtex.com/docs/guides/faststore/organisms-banner-text#banner-text-content)</li></ul> |
-| Headless CMS: props customization | <ul className="doc-list"><li> `ColorVariant`</li><li> `Variant`</li></ul>                                                                                                      |
+| Overridable components            | [`Empty State`](https://developers.vtex.com/docs/guides/faststore/organisms-empty-state) |
+| Headless CMS: props customization | <ul className="doc-list"><li> `Variant`</li><li> `bkgColor`</li></ul>                                                                                                      |
 
 <details>
 <summary><b>BannerText - Available schema</b></summary> 
@@ -153,6 +153,47 @@ Check the available Headless CMS schema that you can customize for this componen
 
 <details>
 <summary><b>Breadcrumb - Available schema</b></summary> 
+
+Check the available Headless CMS schema that you can customize for this component:
+
+```json
+{
+    "name": "NewSectionName",
+    "requiredScopes": ["pdp", "plp"],
+    "schema": {
+      "title": "Add the Section name",
+      "description": "Short description for the the section's purpose",
+      "type": "object",
+      "required": ["icon", "alt"],
+      "properties": {
+        "icon": {
+          "title": "Icon",
+          "type": "string",
+          "enumNames": ["House"],
+          "enum": ["House"]
+        },
+        "alt": {
+          "title": "Alternative Label",
+          "type": "string"
+        }
+      }
+    }
+  }
+```
+
+</details>
+
+---
+
+### Empty State
+
+| Type                              | Availability                                                                                                                     |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Overridable components            | <ul className="doc-list"><li>[`Breadcrumb`](https://developers.vtex.com/docs/guides/faststore/molecules-breadcrumb)</li><li>[`Icon`](https://developers.vtex.com/docs/guides/faststore/atoms-icon)</li></ul> |
+| Headless CMS: props customization | <ul className="doc-list"><li>`Icon (HomeIcon)`</li></ul>                                                                         |
+
+<details>
+<summary><b>Empty State - Available schema</b></summary> 
 
 Check the available Headless CMS schema that you can customize for this component:
 
@@ -491,6 +532,7 @@ Check the available Headless CMS schema that you can customize for this componen
 
 <details>
 <summary><b>Newsletter - Available schema</b></summary> 
+
 Check the available Headless CMS schema that you can customize for this component:
 
 ```json
