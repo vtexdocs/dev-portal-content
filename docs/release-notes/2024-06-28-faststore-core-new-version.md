@@ -1,13 +1,13 @@
 ---
 title: "FastStore: New @faststore/core package version"
-slug: "2024-05-28-faststore-core-new-version"
+slug: "2024-06-28-faststore-core-new-version"
 type: "new"
 excerpt: "Upgrade your `@faststore/core` package version to leverage enhanced API extensions, customizable error pages, and support for Next.js 13."
 createdAt: "2024-05-23T10:30:00.000Z"
-updateAt: "2024-06-25T10:30:00.000Z"
+updateAt: "2024-06-26T10:30:00.000Z"
 ---
 
-FastStore v2 users can now update their`@faststore/core` package version and benefit from enhanced API extensions, streamlined error page customization in the Headless CMS, and support for Next.js 13.
+FastStore v2 users can now update the `@faststore/core` package version and benefit from enhanced API extensions, streamlined error page customization in the Headless CMS, and support for Next.js 13.
 
 > ℹ️ For more information on this update, check out [FastStore GitHub releases](https://github.com/vtex/faststore/releases/tag/v3.0.0).
 
@@ -15,7 +15,7 @@ FastStore v2 users can now update their`@faststore/core` package version and ben
 
 ### Enhanced API extensions
 
-To reduce bundle sizes, align with GraphQL community standards, and get up to date with the latest bundling and compilation tools, `@faststore/core` 3.x deprecates the `@faststore/graphql-utils` package in favor of the [`client-preset`](https://the-guild.dev/graphql/codegen/plugins/presets/preset-client) plugin.
+To reduce bundle sizes, align with GraphQL community standards, and get up to date with the latest bundling and compilation tools,`@faststore/core` 3.x deprecates the `@faststore/graphql-utils` package in favor of the [`client-preset`](https://the-guild.dev/graphql/codegen/plugins/presets/preset-client) plugin.
 
 ### Streamlined error page customization in the Headless CMS
 
