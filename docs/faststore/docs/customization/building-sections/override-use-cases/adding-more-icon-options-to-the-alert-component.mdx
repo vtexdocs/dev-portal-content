@@ -1,5 +1,5 @@
 ---
-title: 'Adding more icon options to the Alert component'
+title: "Adding more icon options to the Alert component"
 ---
 
 This guide illustrates a common use case for [`getOverriddenSection`](https://developers.vtex.com/docs/guides/faststore/overrides-getoverriddensection-function) in FastStore. It focuses on customizing the Headless CMS schema for a section to provide more icon options.
@@ -8,16 +8,16 @@ This guide illustrates a common use case for [`getOverriddenSection`](https://de
 
 ## Context
 
-- The native [Alert](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#alert ) section provides the following icon options by default:
+- The native [Alert](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#alert) section provides the following icon options by default:
 
-    | Alert default icon name | Icon                |
-    | ----------------------- | ------------------- |
-    | `Bell`                  | ![bell-icon](https://vtexhelp.vtexassets.com/assets/docs/src/bell-icon___78c462f54a529a5b68f696ebb9256e47.png) |
-    | `BellRinging`           | ![bell-ringing-icon](https://vtexhelp.vtexassets.com/assets/docs/src/bell-ringing-icon___ebaea6a1dfef58f1c76b14070703704b.png) |
-    | `Checked`               | ![checked-icon](https://vtexhelp.vtexassets.com/assets/docs/src/checked-icon___c4dc5aa336fca566ec361125a9eb846e.png) |
-    | `Info`                  | ![icon-info](https://vtexhelp.vtexassets.com/assets/docs/src/info-icon___f8c0cd591967892ec72328f277efa9d1.png) |
-    | `Truck`                 | ![truck-icon](https://vtexhelp.vtexassets.com/assets/docs/src/truck-icon___ec3a7f0fcf2c02580d49444b71e8fc36.png)   |
-    | `User`                  | ![user-icon](https://vtexhelp.vtexassets.com/assets/docs/src/user-icon___999dffa96120d0e51ead18263423ddad.png) |
+  | Alert default icon name | Icon                                                                                                                           |
+  | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+  | `Bell`                  | ![bell-icon](https://vtexhelp.vtexassets.com/assets/docs/src/bell-icon___78c462f54a529a5b68f696ebb9256e47.png)                 |
+  | `BellRinging`           | ![bell-ringing-icon](https://vtexhelp.vtexassets.com/assets/docs/src/bell-ringing-icon___ebaea6a1dfef58f1c76b14070703704b.png) |
+  | `Checked`               | ![checked-icon](https://vtexhelp.vtexassets.com/assets/docs/src/checked-icon___c4dc5aa336fca566ec361125a9eb846e.png)           |
+  | `Info`                  | ![icon-info](https://vtexhelp.vtexassets.com/assets/docs/src/info-icon___f8c0cd591967892ec72328f277efa9d1.png)                 |
+  | `Truck`                 | ![truck-icon](https://vtexhelp.vtexassets.com/assets/docs/src/truck-icon___ec3a7f0fcf2c02580d49444b71e8fc36.png)               |
+  | `User`                  | ![user-icon](https://vtexhelp.vtexassets.com/assets/docs/src/user-icon___999dffa96120d0e51ead18263423ddad.png)                 |
 
 - You want to allow Headless CMS editors to select in the Alert section from a wider range of icons supported by the `@faststore/ui` [iconography](https://developers.vtex.com/docs/guides/faststore/reference-icons#usage) library.
 
@@ -27,15 +27,15 @@ This guide illustrates a common use case for [`getOverriddenSection`](https://de
 
 By leveraging `getOverriddenSection`, you can customize the Alert section's Headless CMS schema to offer additional icon options. Follow the steps below:
 
-1. In the `src/components/sections` folder, create the folder `CustomIconsAlert` folder.
-2. In the `CustomIconsAlert` folder, create the `CustomIconsAlert.tsx` file.
-3. Import the following to the `CustomIconsAlert.tsx` file:
+1.  In the `src/components/sections` folder, create the folder `CustomIconsAlert` folder.
+2.  In the `CustomIconsAlert` folder, create the `CustomIconsAlert.tsx` file.
+3.  Import the following to the `CustomIconsAlert.tsx` file:
 
         ```tsx
         import { getOverriddenSection } from '@faststore/core'
         ```
 
-4. Define the `CustomIconsAlert` component:
+4.  Define the `CustomIconsAlert` component:
 
         ```tsx focus=3:7
         import { AlertSection, getOverriddenSection } from '@faststore/core'
@@ -57,55 +57,55 @@ By leveraging `getOverriddenSection`, you can customize the Alert section's Head
 
 Add the section to the Headless CMS by following the instructions available in [syncing components to the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 
-The following schema was used as an example:
+The following schema was used as an example in [`cms/faststore/sections.json`](https://github.com/vtex-sites/playground.store/blob/main/cms/faststore/sections.json#L2-L57):
 
-        ```json
-        [    
-            {
-            "name": "CustomIconsAlert",
-            "schema": {
-                "title": "Alert with more Icon options",
-                "description": "Add an alert that has more Icon options",
-                "type": "object",
-                "required": ["icon", "content", "dismissible"],
-                "properties": {
-                "icon": {
-                    "type": "string",
-                    "title": "Icon",
-                    "enumNames": [
-                    "Bell",
-                    "BellRinging",
-                    "Checked",
-                    "Info",
-                    "Truck",
-                    "User",
-                    "Plus",
-                    "PlusCircle",
-                    "Ruler",
-                    "Star",
-                    "Storefront",
-                    "Twitter"
-                    ],
-                    "enum": [
-                    "Bell",
-                    "BellRinging",
-                    "Checked",
-                    "Info",
-                    "Truck",
-                    "User",
-                    "Plus",
-                    "PlusCircle",
-                    "Ruler",
-                    "Star",
-                    "Storefront",
-                    "Twitter"
-                    ]
-                  }
-                }
-              }
-            }
-        ]
-        ```
+```json
+[
+  {
+    "name": "CustomIconsAlert",
+    "schema": {
+      "title": "Alert with more Icon options",
+      "description": "Add an alert that has more Icon options",
+      "type": "object",
+      "required": ["icon", "content", "dismissible"],
+      "properties": {
+        "icon": {
+          "type": "string",
+          "title": "Icon",
+          "enumNames": [
+            "Bell",
+            "BellRinging",
+            "Checked",
+            "Info",
+            "Truck",
+            "User",
+            "Plus",
+            "PlusCircle",
+            "Ruler",
+            "Star",
+            "Storefront",
+            "Twitter"
+          ],
+          "enum": [
+            "Bell",
+            "BellRinging",
+            "Checked",
+            "Info",
+            "Truck",
+            "User",
+            "Plus",
+            "PlusCircle",
+            "Ruler",
+            "Star",
+            "Storefront",
+            "Twitter"
+          ]
+        }
+      }
+    }
+  }
+]
+```
 
 > ℹ️ For further details on code implementation, see the [`sections.json`](https://github.com/vtex-sites/playground.store/blob/main/cms/faststore/sections.json#L1-L55) file available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
@@ -115,12 +115,12 @@ Once you have [set your development mode](https://developers.vtex.com/docs/guide
 
 - **Before**
 
-    The native Alert displays one of the default icons, `BellRinging`, alongside the text `Get 15% off today: NEW15! Buy now`.
+  The native Alert displays one of the default icons, `BellRinging`, alongside the text `Get 15% off today: NEW15! Buy now`.
 
-    ![before-custom-icon](https://vtexhelp.vtexassets.com/assets/docs/src/before-alert-icon___86e395e9cfc731f1f70b56cf3760af08.png)
+  ![before-custom-icon](https://vtexhelp.vtexassets.com/assets/docs/src/alert-default___12bbbaf326628380e71339c779d20f22.png)
 
 - **After**
-  
-    The native Alert was replaced with the custom one, which brings a new icon, `Star`, from the `@faststore/ui` [iconography](https://developers.vtex.com/docs/guides/faststore/reference-icons#usage) library, alongside the text `Rate your favorite item`.
 
-    ![after-custom-icon](https://vtexhelp.vtexassets.com/assets/docs/src/after-custom-alert-icon___87cd248c0c406640aaaac4ef9238e101.png)
+  The native Alert was replaced with the custom one, which brings a new icon, `Star`, from the `@faststore/ui` [iconography](https://developers.vtex.com/docs/guides/faststore/reference-icons#usage) library, alongside the text `Rate your favorite item`.
+
+  ![after-custom-icon](https://vtexhelp.vtexassets.com/assets/docs/src/alert-custom-icon___8a316b6e33417b6fda47a37c44f6b953.png)
