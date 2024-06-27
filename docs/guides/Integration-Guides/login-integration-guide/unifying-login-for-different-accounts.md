@@ -27,38 +27,35 @@ To set up your OAuth Provider, follow these steps:
 
 1. Use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) to log in to your **primary account** by running the following command:
 
-```shell
-vtex login {accountName}
-```
+   ```shell
+   vtex login {accountName}
+   ```
 
 2. Run this command to install the [OAuth Provider](https://github.com/vtex/oauth-provider) app:
 
-```shell
-vtex install vtex.oauth-provider-admin
-```
+   ```shell
+   vtex install vtex.oauth-provider-admin
+   ```
 
-3. On the Admin panel of your **primary account**, go to `ACCOUNT SETTINGS` > `OAuth Provider`. This will take you to the [OAuth Provider](https://github.com/vtex/oauth-provider) app tab.
-
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/unifying-login-for-different-accounts-0.PNG)
-
+3. On the Admin panel of your **primary account**, go to **Apps > Installed apps > OAuth Provider**. This will take you to the [OAuth Provider](https://github.com/vtex/oauth-provider) app settings page.
 4. Click `ADD OAUTH CLIENT`.
 5. Fill in the new OAuth client information, which is the **secondary account**.
 
    ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/unifying-login-for-different-accounts-1.PNG)
 
-- **Name**: this identifies the OAuth client. For instance, you may use the name of the corresponding **secondary account**.
-- **Allowed URI’s**:
+   - **Name**: this identifies the OAuth client. For instance, you may use the name of the corresponding **secondary account**.
+   - **Allowed URI’s**:
 
-```
-https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx
-```
+      ```
+      https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx
+      ```
 
-- **Credential Type**: `Web Store`.
-- **Login URL**:
+   - **Credential Type**: `Web Store`.
+   - **Login URL**:
 
-```
-/login?returnUrl=
-```
+      ```
+      /login?returnUrl=
+      ```
 
 6. Click `SAVE`.
 7. Once you have saved your new OAuth client, you will be able to see it on the OAuth Provider Admin tab. Click on the client’s name to see its details.
@@ -68,54 +65,50 @@ https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx
 
 ### Set up OAuth connection in the secondary account
 
-Now that you have set an OAuth identity provider in your **primary account** and registered your **secondary account** as an OAuth client, you must head to the Admin panel of your **secondary account** and set up the connection between the accounts according to the [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration). For the purpose of this method, there is some custom OAuth configuration information that you must fill in specific ways. See the specification below to learn how to fill in this information for each configuration step of the [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration).
+Now that you have set an OAuth identity provider in your **primary account** and registered your **secondary account** as an OAuth client, you must head to the Admin panel of your **secondary account** and set up the connection between the accounts according to the [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration).
+
+For the purpose of this method, there is some custom OAuth configuration information that you must fill in specific ways. See the specification below to learn how to fill in this information for each configuration step of the [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration).
 
 >⚠️ The information below is meant for VTEX accounts using VTEX ID as identity providers. If you want to use a custom OAuth identity provider, see the  [custom OAuth integration guide](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#integration).
 
 #### 1. Provider Details
 
-| **Field**           | **Specification** |
-| ------------------- | ----------------- |
-| **Client ID** key   | `client_id`       |
-| **Client ID** value | `client_secret`   |
+| **Field** | **Specification** |
+| - | - |
+| **Client ID** key | `client_id` |
+| **Client ID** value | `client_secret` |
 
 #### 2. Authorization Code
 
-| **Field**                                                                                                               | **Specification**                                    |
-| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| **URL**                                                                                                                 | `https://{primaryAccountHost}/api/io/_v/oauth2/auth` |
-| Custom query string parameter                                                                                           | `response_type`: `code`                              |
-| **Callback Request Information** authorization code query string parameter key                                          | `code`                                               |
+| **Field** | **Specification** |
+| - | - |
+| **URL** | `https://{primaryAccountHost}/api/io/_v/oauth2/auth` |
+| Custom query string parameter | `response_type`: `code` |
+| **Callback Request Information** authorization code query string parameter key  | `code` |
 
-> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
+> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](https://help.vtex.com/tutorial/configuring-the-store-domain--tutorials_2450#registering-a-new-host).
 
 #### 3. Access Token Exchange
 
-| **Field**                                                                                                               | **Specification**                                     |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| **URL**                                                                                                                 | `https://{primaryAccountHost}/api/io/_v/oauth2/token` |
-| **Set Content-Type**                                                                                                    | `application/x-www-form-urlencoded`                   |
-| **Authorization code** parameter key                                                                                    | `code`                                                |
-| Custom request query string parameter                                                                                   | `grant_type`: `authorization_code`                    |
-| Response **access token** parameter key                                                                                 | `access_token`                                        |
-| Response **expires in** parameter key                                                                                   | `expires_in`                                          |
+| **Field** | **Specification** |
+| - | - |
+| **URL** | `https://{primaryAccountHost}/api/io/_v/oauth2/token` |
+| **Set Content-Type** | `application/x-www-form-urlencoded` |
+| **Authorization code** parameter key | `code` |
+| Custom request query string parameter | `grant_type`: `authorization_code` |
+| Response **access token** parameter key | `access_token` |
+| Response **expires in** parameter key | `expires_in` |
 
-> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
+> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](https://help.vtex.com/tutorial/configuring-the-store-domain--tutorials_2450#registering-a-new-host).
 
 #### 4. Get User Info
 
-| **Field**                                                                                                               | **Specification**                                         |
-| ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **URL**                                                                                                                 | `https://{primaryAccountHost}/api/io/_v/oauth2/userinfo/` |
-| **Where to send Access Token** - **Send on query string** toggle                                                        | Disabled                                                  |
-| Response **User e-mail** parameter key                                                                                  | e-mail                                                    |
-| Response **User ID** parameter key                                                                                      | userId                                                    |
-| Response **User name** parameter key                                                                                    | username                                                  |
+| **Field** | **Specification** |
+| - | - |
+| **URL** | `https://{primaryAccountHost}/api/io/_v/oauth2/userinfo/` |
+| **Where to send Access Token** - **Send on query string** toggle | `Disabled |
+| Response **User e-mail** parameter key | `email` |
+| Response **User ID** parameter key | `userId` |
+| Response **User name** parameter key | `username` |
 
-> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](#account-host).
-
-#### Account host
-
-The account host, used in the **URLs** for some of the configuration steps above, can be defined in the VTEX Admin panel by going to `ACCOUNT SETTINGS` > `Account management` > `Account`.
-
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/unifying-login-for-different-accounts-4.PNG)
+> ℹ️ The **URL** above requires your account host. Learn more about how to set your [account host](https://help.vtex.com/tutorial/configuring-the-store-domain--tutorials_2450#registering-a-new-host).
