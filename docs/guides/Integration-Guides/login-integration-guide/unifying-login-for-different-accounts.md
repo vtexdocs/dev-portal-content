@@ -37,10 +37,7 @@ To set up your OAuth Provider, follow these steps:
    vtex install vtex.oauth-provider-admin
    ```
 
-3. On the Admin panel of your **primary account**, go to **Apps > Installed apps > OAuth Provider**. This will take you to the [OAuth Provider](https://github.com/vtex/oauth-provider) app tab.
-
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/unifying-login-for-different-accounts-0.PNG)
-
+3. On the Admin panel of your **primary account**, go to **Apps > Installed apps > OAuth Provider**. This will take you to the [OAuth Provider](https://github.com/vtex/oauth-provider) app settings page.
 4. Click `ADD OAUTH CLIENT`.
 5. Fill in the new OAuth client information, which is the **secondary account**.
 
