@@ -308,7 +308,7 @@ To remove the API content from `devportal`, follow the steps below:
 
 Next, to remove the API content from `openapi-schemas`, follow the steps below:
 
-1. Open a branch in the `openapi-schemas` repository.
+1. Open a branch in the [openapi-schemas](https://github.com/vtex/openapi-schemas) repository.
 2. Remove the desired API `.json` file.
 3. Open a PR with the changes.
 4. Send the PR in `#dev-portal-pr` Slack channel for approval.
