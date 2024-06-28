@@ -302,9 +302,11 @@ To remove the API content from `devportal` repository, follow the steps below:
 1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
 2. In the `src/pages/api/openapi/[slug].tsx` file, remove the content that refers to the API. It follows this syntax: `'{schemaFileName}': '{slug}'`.
 3. In the `src/utils/getReferencePaths.ts` file, remove the content that refers to the API. It follows this syntax: `'{schemaFileName}': '{slug}'`.
-4. Open a PR with the changes.
-5. Send the PR in `#dev-portal-pr` Slack channel for approval.
-6. After approval, merge the PR.
+4. In the `navigation.json` file, remove the content that refers to the API.
+5. Optional: Create a redirect from the API overview page.
+6. Open a PR with the changes.
+7. Send the PR in `#dev-portal-pr` Slack channel for approval.
+8. After approval, merge the PR.
 
 Next, to remove the API content from [openapi-schemas](https://github.com/vtex/openapi-schemas) repository, follow the steps below:
 
