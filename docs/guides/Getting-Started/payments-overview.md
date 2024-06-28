@@ -18,11 +18,7 @@ VTEX's payment systems offer extensive resources to support various payment meth
 
 ## Developing a payment integration at VTEX
 
-Once you understand how payments are processed on VTEX, you can join our platform by developing integrations as a:
-
-- [Payment provider](#payment-provider-integration)
-- [Anti-fraud provider](#anti-fraud-provider-integration)
-- [External gift card provider](#external-gift-card-provider-integration)
+Once you understand how payments are processed on VTEX, you can join our platform by developing integrations as a payment, anti-fraud, or external gift card provider:  
 
 ### Payment provider integration
 
