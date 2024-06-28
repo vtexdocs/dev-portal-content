@@ -295,7 +295,7 @@ To update the left navigation after changing an endpoint's path follow the steps
 
 ### How to remove an API reference from Developer Portal?
 
-You will need to create two pull requests in the following order: one for `devportal` repository and other for `openapi-schemas`.
+You will need to create two pull requests, the first one in [devportal](https://github.com/vtexdocs/devportal), and the second one in [openapi-schemas](https://github.com/vtex/openapi-schemas). Changes are detailed below.
 
 To remove the API content from `devportal`, follow the steps below:
 
