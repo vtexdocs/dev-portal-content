@@ -36,7 +36,7 @@ To learn all the steps necessary to develop and customize your payment integrati
 
 ### Anti-fraud provider integration
 
-Anti-fraud solutions are essential to ensure secure payment transactions by carrying out risk analyses. VTEX offers integration capabilities for anti-fraud systems through the [Anti-fraud Provider Protocol](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud- companies -works). This protocol is an agreement between VTEX and providers, defining a set of rules that must be implemented during the development of integrations. Each integration must include a set of endpoints defined in our [Anti-fraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#overview).
+Anti-fraud solutions are essential to ensure secure payment transactions by carrying out risk analyses. VTEX offers integration capabilities for anti-fraud systems through the [Anti-fraud Provider Protocol](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works). This protocol is an agreement between VTEX and providers, defining a set of rules that must be implemented during the development of integrations. Each integration must include a set of endpoints defined in our [Anti-fraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#overview).
 
 
 ### External gift card provider integration
