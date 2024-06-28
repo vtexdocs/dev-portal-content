@@ -306,7 +306,7 @@ To remove the API content from `devportal`, follow the steps below:
 5. Send the PR in `#dev-portal-pr` Slack channel for approval.
 6. After approval, merge the PR.
 
-Next, to remove the API content from [openapi-schemas](https://github.com/vtex/openapi-schemas) repository, follow the steps below:
+Next, to remove the API content from `openapi-schemas`, follow the steps below:
 
 1. Open a branch in the `openapi-schemas` repository.
 2. Remove the desired API `.json` file.
