@@ -27,7 +27,7 @@ The multi-tenant architecture diagram below illustrates how VTEX supports multip
 
 ### Logical separation
 
-With a multi-tenant architecture, tenants don't have exclusive resources, such as physically separate databases, but we guarantee logical separation. Our clients' information is contained in one account, isolated and protected from other accounts. There is no method of accessing data from different accounts since all our services require an explicit [account specification] (https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types) and [authorized credentials](https://developers.vtex.com/docs/guides/authentication).
+With a multi-tenant architecture, tenants don't have exclusive resources, such as physically separate databases, but we guarantee logical separation. Our clients' information is contained in one account, isolated and protected from other accounts. There is no method of accessing data from different accounts since all our services require an explicit [account specification](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types) and [authorized credentials](https://developers.vtex.com/docs/guides/authentication).
 
 Each request belongs to a specific tenant (account) and is processed atomically, which means each request has its own lifecycle. This allows for elastic operation and scalability and improved performance.
 
