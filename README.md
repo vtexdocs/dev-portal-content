@@ -297,7 +297,7 @@ To update the left navigation after changing an endpoint's path follow the steps
 
 You will need to create two pull requests in the following order: one for `devportal` repository and other for `openapi-schemas`.
 
-To remove the API content from `devportal` repository, follow the steps below:
+To remove the API content from `devportal`, follow the steps below:
 
 1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
 2. In the `src/pages/api/openapi/[slug].tsx` file, remove the content that refers to the API. It follows this syntax: `'{schemaFileName}': '{slug}'`.
