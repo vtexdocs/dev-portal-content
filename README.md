@@ -293,6 +293,31 @@ To update the left navigation after changing an endpoint's path follow the steps
 4. Send the PR in `#dev-portal-pr` Slack channel for approval.
 5. After approval, merge the PR.
 
+### How to remove an API reference from Developer Portal?
+
+You will need to create two pull requests, the first one in [devportal](https://github.com/vtexdocs/devportal), and the second one in [openapi-schemas](https://github.com/vtex/openapi-schemas). Changes are detailed below.
+
+To remove the API content from `devportal`, follow the steps below:
+
+1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
+2. In the `src/pages/api/openapi/[slug].tsx` file, remove the content that refers to the API. It follows this syntax: `'{schemaFileName}': '{slug}'`.
+3. In the `src/utils/getReferencePaths.ts` file, remove the content that refers to the API. It follows this syntax: `'{schemaFileName}': '{slug}'`.
+4. In the `navigation.json` file, remove the content that refers to the API.
+5. Optional: Create a redirect from the deprecated API overview page to the current version or the API that replaces it.
+6. Open a PR with the changes.
+7. Send the PR in `#dev-portal-pr` Slack channel for approval.
+8. After approval, merge the PR.
+
+Next, to remove the API content from `openapi-schemas`, follow the steps below:
+
+1. Open a branch in the [openapi-schemas](https://github.com/vtex/openapi-schemas) repository.
+2. Remove the desired API `.json` file.
+3. Open a PR with the changes.
+4. Send the PR in `#dev-portal-pr` Slack channel for approval.
+5. After approval, merge the PR.
+
+>ℹ️ Consider communicating the deprecation via release note.
+
 ### How can I add different colored callouts?
 
 We recommend using a simple markdown syntax to add callouts:
