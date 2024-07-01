@@ -312,9 +312,10 @@ Next, to remove the API content from `openapi-schemas`, follow the steps below:
 
 1. Open a branch in the [openapi-schemas](https://github.com/vtex/openapi-schemas) repository.
 2. Remove the desired API `.json` file.
-3. Open a PR with the changes.
-4. Send the PR in `#dev-portal-pr` Slack channel for approval.
-5. After approval, merge the PR.
+3. In `README.md` file, in the `VTEX APIs` section, remove the mention to the API.
+4. Open a PR with the changes.
+5. Send the PR in `#dev-portal-pr` Slack channel for approval.
+6. After approval, merge the PR.
 
 >ℹ️ Consider communicating the deprecation via release note.
 
