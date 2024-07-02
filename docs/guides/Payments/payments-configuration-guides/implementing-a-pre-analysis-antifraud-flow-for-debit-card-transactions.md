@@ -27,8 +27,6 @@ See below an example of a debit card transaction using the anti-fraud system:
 
 ## How to activate the anti-fraud flow for debit card transactions
 
-Before starting the configuration to enable the anti-fraud flow for debit card transactions, check whether the [Send Antifraud Pre-Analysis Data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/pre-analysis) endpoint is already implemented in your anti-fraud provider's internal settings.
-
 To implement the debit card anti-fraud provider flow in your system, during the homologation process, you should contact the [Support VTEX](https://help.vtex.com/support) and request its activation.
 
 Upon your request, our team will add the parameter `shouldUseAntifraudOnDebit` to your provider settings. This is a boolean field, with the default value being `false`.
