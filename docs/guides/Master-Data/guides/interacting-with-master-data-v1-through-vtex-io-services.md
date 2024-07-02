@@ -81,9 +81,9 @@ Create a client class in TypeScript to extend the functionality of `MasterData` 
 
    In this class, we will have access to several methods extended from the **Master Data** class, including:
 
-   - `getDocumentById`
-   - `searchDocuments`
-   - `scrollDocuments`
+   * `getDocumentById`
+   * `searchDocuments`
+   * `scrollDocuments`
 
 5. Add a method. The example below uses the **getDocumentById** method:
 
@@ -175,7 +175,7 @@ Configure a dedicated route in your service that will be accessed through your s
 
    ```typescript
     masterdata: method({
-	    GET: [masterdataMiddleware],
+        GET: [masterdataMiddleware],
     }),
    ```
 
@@ -191,8 +191,8 @@ Finalize setup by linking your project to a development workspace and testing th
 2. Run the command `vtex link`.
 
    After linking, you should see the following message:
-   
-   ```
+
+   ```sh
    **info:** *Available service routes: https://{{workspace}}--{{accountName}}.myvtex.com/{{path}}
    ```
 
@@ -208,6 +208,7 @@ Finalize setup by linking your project to a development workspace and testing th
       }
     }
     ```
+
 ## Conclusion
 
 These instructions enable you to configure clients, middleware, and routes to set up a VTEX IO service for interacting with Master Data v1. Note that there are various methods and configurations beyond this guide to further customize and optimize your integration with VTEX IO and Master Data.
