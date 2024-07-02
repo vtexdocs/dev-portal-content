@@ -15,6 +15,7 @@ VTEX regularly audits its information security controls through independent prof
 
 At the application layer, VTEX has the following accreditations:
 
+* ISO 27001 – Information Security Management System
 * SOC 1 – Type 2: Reports covering internal controls over financial reporting systems
 * SOC 2 – Type 2: Reports covering security, availability, integrity, confidentiality, and privacy
 * PCI – Validation of controls around cardholder data to reduce credit card fraud
