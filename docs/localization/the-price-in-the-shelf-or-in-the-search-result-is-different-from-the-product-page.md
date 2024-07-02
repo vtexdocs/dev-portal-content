@@ -1,16 +1,15 @@
 ---
-title: "The price in the shelf or in the search result is different from the product page"
-slug: "the-price-in-the-shelf-or-in-the-search-result-is-different-from-the-product-page"
+title: The price in the shelf or in the search result is different from the product page
+slug: the-price-in-the-shelf-or-in-the-search-result-is-different-from-the-product-page
 hidden: false
-createdAt: "2024-06-04T11:15:35.508Z"
-updatedAt: "2024-06-04T11:15:35.508Z"
-excerpt: "Inconsistent pricing when comparing shelves or search results with product pages in stores using Intelligent Search."
+createdAt: 2024-06-04T11:15:35.508Z
+updatedAt: 2024-06-04T11:15:35.508Z
+excerpt: Inconsistent pricing when comparing shelves or search results with product pages in stores using Intelligent Search.
 tags:
-    - intelligent-search
-    - store-framework
-    - pricing
-    - promotions
-
+  - intelligent-search
+  - store-framework
+  - pricing
+  - promotions
 ---
 
 **Keywords:** Price | PDP | Product | SKU | Shelf | Search | Search Result | Promotion
@@ -19,42 +18,43 @@ When [updating a SKU price](https://help.vtex.com/en/tutorial/alteracao-de-preco
 
 The Search Result component's configuration, specifically the `simulationBehavior` property set to `skip`, can cause outdated prices to display in shelves and search results. This happens because, with this configuration, the component relies on cached data rather than fetching the latest price updates.
 
->⚠️ The `skip` setting is only recommended for stores where prices are not updated frequently and promotions are not used often. In these cases, this configuration can increase loading speed by displaying cached information. Learn more at [Displaying asynchronous prices](https://developers.vtex.com/docs/guides/vtex-io-documentation-displaying-asynchronous-prices).
+> ⚠️ The `skip` setting is only recommended for stores where prices are not updated frequently and promotions are not used often. In these cases, this configuration can increase loading speed by displaying cached information. Learn more at [Displaying asynchronous prices](https://developers.vtex.com/docs/guides/vtex-io-documentation-displaying-asynchronous-prices).
 
 ## Solution
 
 To ensure consistent and up-to-date pricing across your store, follow the instructions below:
 
 1. Locate the theme files that define the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) component.
+
 2. Locate the `simulationBehavior` property in your theme’s code, as in the example below. You can also find an example in the [store theme boilerplate ](https://github.com/vtex-apps/store-theme/blob/main/store/blocks/search.jsonc)repository.
 
-    ```json
-    "store.search": {
-        "blocks": [
-            "search-result-layout"
-        ],
-        "props": {
-            "context": {
-                "simulationBehavior": "skip"
-            }
-        }
-    }
-    ```
+   ```json
+   "store.search": {
+       "blocks": [
+           "search-result-layout"
+       ],
+       "props": {
+           "context": {
+               "simulationBehavior": "skip"
+           }
+       }
+   }
+   ```
 
 3. Change the value of `simulationBehavior` from `skip` to `default`, as in the example below. This adjustment instructs the component always to fetch the latest data, eliminating the discrepancy caused by cached information.
 
-    ```json
-    "store.search": {
-        "blocks": [
-            "search-result-layout"
-        ],
-        "props": {
-            "context": {
-                "simulationBehavior": "default"
-            }
-        }
-    }
-    ```
+   ```json
+   "store.search": {
+       "blocks": [
+           "search-result-layout"
+       ],
+       "props": {
+           "context": {
+               "simulationBehavior": "default"
+           }
+       }
+   }
+   ```
 
 4. Run `vtex link` to see your changes reflected in the workspace.
 
