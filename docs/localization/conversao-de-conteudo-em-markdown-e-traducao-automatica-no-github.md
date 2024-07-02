@@ -12,9 +12,9 @@ updatedAt: ""
 
 Este artigo teste foi criados para os seguintes propósitos:
 
-* **Validar apps script** de conversão de conteúdos na [linguagem markdown](https://www.markdownguide.org/) e,
+- **Validar apps script** de conversão de conteúdos na [linguagem markdown](https://www.markdownguide.org/) e,
 
-* Simular os passos necessários para publicar um *arquivo.md* após ter sido traduzido automaticamente no [GitHub](https://github.com/vtexdocs/dev-portal-content/tree/main/docs/localization).
+- Simular os passos necessários para publicar um _arquivo.md_ após ter sido traduzido automaticamente no [GitHub](https://github.com/vtexdocs/dev-portal-content/tree/main/docs/localization).
 
 As seguintes ações são necessárias:
 
@@ -22,11 +22,11 @@ As seguintes ações são necessárias:
 
 2. Abrir uma PR no Dev. Portal.
 
-3. Abrir uma tarefa no JIRA e solicitar a tradução para *Inglês* ou verificação gramatical do conteúdo em *Inglês*.
+3. Abrir uma tarefa no JIRA e solicitar a tradução para _Inglês_ ou verificação gramatical do conteúdo em _Inglês_.
 
 4. Acionar a integração **Crowdin**.
 
-5. Modificar o *arquivo.md* criado para o diretório correto e publicar a PR.
+5. Modificar o _arquivo.md_ criado para o diretório correto e publicar a PR.
 
 Se necessário, utilize este código:
 
@@ -41,4 +41,3 @@ Se necessário, utilize este código:
 ```
 
 > ℹ️ Caso encontre alguma discrepância na tradução, entre em contato com time de localization.
-
