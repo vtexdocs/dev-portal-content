@@ -1,5 +1,5 @@
 ---
-title: The price in the shelf or in the search result is different from the product page
+title: The Price in the shelf or in the search result is different from the product page
 slug: the-price-in-the-shelf-or-in-the-search-result-is-different-from-the-product-page
 hidden: false
 createdAt: 2024-06-04T11:15:35.508Z
