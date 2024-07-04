@@ -254,10 +254,11 @@ After creating a file for a new API reference in [openapi-schemas](https://githu
 1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
 2. In the `src/pages/api/openapi/[slug].tsx` file, edit `referencePaths` by adding the API schema file name exactly as saved in openapi-schemas and its corresponding slug on Developer Portal. Follow this syntax: `'{schemaFileName}': '{slug}'`.
 3. Repeat step 2 in the `src/utils/getReferencePaths.ts` file, editing `fileSlugMap` with the same information.
-4. Add the API category and all its endpoints in `public/navigation.json`, following [these instructions](#what-determines-the-left-navigations-order-and-organization) and making sure endpoints are added in [this format](#how-to-update-the-left-navigation-after-changing-an-endpoints-path).
-5. Open a PR with all the changes.
-6. Send the PR in `#dev-portal-pr` Slack channel for approval.
-7. After approval, merge the PR.
+4. Repeat step 2 in the `src/pages/api/postman/[slug].tsx` file, editing `referencePaths` with the same information.
+5. Add the API category and all its endpoints in `public/navigation.json`, following [these instructions](#what-determines-the-left-navigations-order-and-organization) and making sure endpoints are added in [this format](#how-to-update-the-left-navigation-after-changing-an-endpoints-path).
+6. Open a PR with all the changes.
+7. Send the PR in `#dev-portal-pr` Slack channel for approval.
+8. After approval, merge the PR.
 
 >ℹ️ If you have any questions about this process, check out [this example pull request](https://github.com/vtexdocs/devportal/pull/300/files) to publish the Shipping Network API.
 
@@ -302,11 +303,12 @@ To remove the API content from `devportal`, follow the steps below:
 1. Open a branch in the [devportal](https://github.com/vtexdocs/devportal) repository.
 2. In the `src/pages/api/openapi/[slug].tsx` file, remove the content that refers to the API. It follows this syntax: `'{schemaFileName}': '{slug}'`.
 3. In the `src/utils/getReferencePaths.ts` file, remove the content that refers to the API. It follows this syntax: `'{schemaFileName}': '{slug}'`.
-4. In the `navigation.json` file, remove the content that refers to the API.
-5. Optional: Create a redirect from the deprecated API overview page to the current version or the API that replaces it.
-6. Open a PR with the changes.
-7. Send the PR in `#dev-portal-pr` Slack channel for approval.
-8. After approval, merge the PR.
+4. In the `src/pages/api/postman/[slug].tsx` file, remove the content that refers to the API. It follows this syntax: `'{schemaFileName}': '{slug}'`.
+5. In the `navigation.json` file, remove the content that refers to the API.
+6. Optional: Create a redirect from the deprecated API overview page to the current version or the API that replaces it.
+7. Open a PR with the changes.
+8. Send the PR in `#dev-portal-pr` Slack channel for approval.
+9. After approval, merge the PR.
 
 Next, to remove the API content from `openapi-schemas`, follow the steps below:
 
