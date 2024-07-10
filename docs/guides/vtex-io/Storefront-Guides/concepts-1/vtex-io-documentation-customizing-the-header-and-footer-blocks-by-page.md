@@ -5,9 +5,9 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.275Z"
 updatedAt: "2022-12-13T20:17:44.048Z"
 ---
-The Header and Footer are the two blocks that come up the most during a user's store navigation. From the homepage to the product page, from checkout to the Order Placed page: whatever a template's content may be, these two blocks will probably be present.
+The Header and Footer are the two blocks that appear the most during a user's store navigation. From the homepage to the product page, from checkout to the Order Placed page, whatever a template's content may be, these two blocks will probably be present.
 
-With that constancy in mind, you just need to declare these blocks **once** in the `blocks.jsonc` file, in a template of your choosing (usually it's `store.home`).
+With that constancy in mind, you just need to declare these blocks once in the `blocks.jsonc` file, in a template of your choosing (usually it's `store.home`).
 
 This is only possible because both Header and Footer have been previously defined behind the scenes as **default store interface elements**, allowing the Framework to identify the Header and Footer block as default for any other templates as well.
 
@@ -17,9 +17,9 @@ All of the above and more may be easily customized in the Header and Footer bloc
 
 ## Step 1 - Overwriting automatic duplication
 
-In the desired template, declare the code given as example below to overwrite the Header and Footer automatic duplication.  
+In the desired template, declare the code given as an example below to overwrite the Header and Footer automatic duplication.  
 
-> ℹ *Remember to replace the `{headerBlock}` and `{footerBlock}` values with real block names. Also, replace the `{templateName}` value with a valid theme template, such as `product`, `search#category` and `custom`.*
+> ℹ Replace the `{headerBlock}` and `{footerBlock}` values with real block names. Also, replace the `{templateName}` value with a valid theme template, such as `product`, `search#category`, and `custom`.
 
 ```json
 {
@@ -77,7 +77,7 @@ If you want to apply new customizations to the blocks, simply follow the usual f
 }
 ```
 
-It is possible, however, that you **don't want new configurations**, but rather want to **delete** the blocks from the template. In such a scenario, you need to declare the desired blocks and leave the `children` blank, as shown in the following example:
+It is possible, however, that you do not want new configurations, but rather want to remove the blocks from the template. In such a scenario, you need to declare the desired blocks and leave the `children` blank, as shown in the following example:
 
 ```json
 {
@@ -114,4 +114,4 @@ It is possible, however, that you **don't want new configurations**, but rather 
 }
 ```
 
-**Done!** Once you save the changes and link your app, you'll be able to see the new configurations for these blocks reflected onto the desired page.
+Once you save the changes and link your app, you'll see the new configurations for these blocks reflected on the desired page.
