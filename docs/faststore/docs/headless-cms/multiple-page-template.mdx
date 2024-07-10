@@ -101,8 +101,8 @@ For example:
 
 #### Using Rewrites with PLP template
 
-FastStore allows you to create custom routes using [Next.js rewrites](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites).
-It's possible to enable the Multiple page template feature for the custom route as well by adding your rewrites function into the `faststore.config.js` file as suggested in the [Next.js documentation](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites):
+FastStore allows you to create custom routes using [Next.js rewrites](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites). It is possible to enable the multiple page template feature for the custom route as well by adding your rewrites function into the `faststore.config.js` file as suggested in the [Next.js documentation](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites):
+
 1. Add your rewrite function to faststore.config.js:
 
 ```js
@@ -137,7 +137,7 @@ async rewrites() {
 
 This format offers more flexibility for advanced rewrite scenarios.
 
-From the version `3.0.61` of the `@faststore/core` package, it's also possible to use the `source` route in the Headless CMS to map the template. To update your store's `@faststore/core` package to the `3.0.61`, run the following command:
+From version `3.0.61` of the `@faststore/core` package, it's also possible to use the `source` route in the Headless CMS to map the template. To update your store's `@faststore/core` package to the `3.0.61`, run the following command:
 
 
 ```bash
@@ -155,7 +155,7 @@ To sum up, here's the difference between the two template hierarchies:
 
 ## Examples
 
-In this section, we'll delve into different scenarios for selecting PDPs and PLPs templates.
+In this section, we'll delve into different scenarios for selecting PDP and PLP templates.
 
 ### PDP template selection example
 
@@ -167,7 +167,7 @@ For this example, we will explore three template scenarios to render in Headless
 
 #### Rendering within a slug
 
-When using PDPs, this type of page template is recognized by the slug pattern. In the example, we will use the [Apple Magic Mouse product page](https://starter.vtex.app/apple-magic-mouse/p) which has the slug `/apple-magic-mouse/p`.
+When using PDPs, this type of page template is recognized by the slug pattern. In the example, we will use the [Apple Magic Mouse product page](https://starter.vtex.app/apple-magic-mouse/p), which has the slug `/apple-magic-mouse/p`.
 
 ![PDP Slug template](https://vtexhelp.vtexassets.com/assets/docs/src/pdpslug___95ada5a5b24e23e34c04f4837d11ade7.png)
 
@@ -204,7 +204,7 @@ When using PLPs, this type of page template is recognized by the slug pattern. I
 
 #### Rendering within slugs
 
-Products in catalog are organized within a category tree, structured as `/department/category/subcategory`. If a slug template exists for any of these options, it will be rendered accordingly.
+Products in the catalog are organized within a category tree, structured as `/department/category/subcategory`. If a slug template exists for any of these options, it will be rendered accordingly.
 
 For example, if you want to render a specific template for products inside a [department](https://help.vtex.com/en/tutorial/what-is-a-department--22rKjmYWVmmKAK8CWa8yKw?&utm_source=autocomplete) without considering the category or subcategory, you can create a Department template [/office](https://starter.vtex.app/office/chairs).
 
