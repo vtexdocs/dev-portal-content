@@ -18,16 +18,16 @@ Stores are made up of several different pages, each one having a different layou
 
 > ℹ️ You can manage each page's title and template in the Pages section, within the admin's CMS.
 
-However, you may want to create a new custom page to attend your store's specific needs. In this case, a new URL and content to go with it must be created by you from scratch.
+However, you may want to create a new custom page to meet your store's specific needs. In this case, you must create a new URL and template to accompany it.
 
-## Step by step
+## Instructions
 
 Follow the steps below and learn how to define a different layout and path for a new store page:
 
-1. Create a **new template** in your Store Theme.
-2. Create your **new page's path**.
-3. **Add content** to your page.
-4. Making your new theme content **publicly available**.
+1. Create a new template in your Store Theme.
+2. Create your new page's path.
+3. Add content to your page.
+4. Make your new theme content **publicly available**.
 
 ### Creating the new template
 
@@ -35,15 +35,13 @@ A template sets the page layout, so if you want to create a custom page for your
 
 In order to do so, you first must choose one of three template types to host your new page:
 
-- **Product** - For pages that must deal with the content of a single product. For instance, a product details page. Adding any new product automatically generates a new Product page.
-
+- **Product** - For pages that must deal with the content of a single product, such as a product details page. Adding any new product automatically generates a new product page.
 - **Product collections** - For pages containing a group of products, such as the Search Result page.
-
 - **Standard** - For pages with no specific product content. For instance, the Home page.
 
-> ℹ️ Even though `Standard` pages are not directly linked to any specific product, they may display shelves or lists of any chosen group of products. The main difference is that the group of products shown in such page does not depend on the URL query, but only on the setting of the shelf itself.
+> ℹ️ Even though `Standard` pages are not directly linked to any specific product, they may display shelves or lists of any chosen group of products. The main difference is that the group of products shown on such a page does not depend on the URL query but only on the setting of the shelf itself.
 
-Let's suppose we are going to create a simple About Us page for a store. As such the page is not directly connected to any specific product, we should create a custom `Standard` template for it with an image in its left column and a a title and text content in its right column:
+Let's suppose we are going to create a simple About Us page for a store. At first, the page is not directly connected to any specific product, we should create a custom `Standard` template for it with an image in its left column and a title and text content in its right column:
 
 ![store-product-exp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-0.png)
 
@@ -103,7 +101,7 @@ Let's suppose we are going to create a simple About Us page for a store. As such
 }
 ```
 
-To learn more about how the Flex Layout works, access its [documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout).
+For more information, refer to the [Flex Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout) documentation.
 
 ### Creating the new page's path
 
@@ -135,7 +133,7 @@ Once your changes are set up in a Production workspace, you will be able to use 
 
 ![custom-pages-pages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-1.png)
 
-Notice that a template only sets the page layout, hence any new template becomes available to be set on any page that accepts templates of the same type as the page itself.
+Notice that a template only sets the page layout. Hence, any new template can be set on any page that accepts templates of the same type as the page itself.
 
 > ℹ️ When editing any content using the CMS section, it's always good to make your changes in a production workspace. Therefore, make sure you are not creating your new custom page in the store's master workspace.
 
@@ -143,7 +141,7 @@ Notice that a template only sets the page layout, hence any new template becomes
 
 Your new page now has a custom layout, thanks to the newly created template, and can be accessed thanks to its route creation. The next step is editing its content.
 
-You can define your page content performing changes directly to your Store Theme app or using the admin's Site Editor. When using this last one, you can browse to your custom page or simply write its URL in the `Page URL` field. For example:
+You can define your page content by performing changes directly to your Store Theme app or using the admin's Site Editor. When using this last one, you can browse to your custom page or simply write its URL in the `Page URL` field. For example:
 
 ![custom-pages-siteeditor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-2.png)
 
