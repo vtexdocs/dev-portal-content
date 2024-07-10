@@ -1,7 +1,6 @@
 ---
 title: 'enableCypressExtension'
 sidebar_label: 'Configuration options for faststore.config.js'
-slug: custom-cypress-test
 ---
 
 > ⚠️ This is an experimental feature.
@@ -32,8 +31,7 @@ Learn how to add custom integration tests in the following steps.
 ## Step 1: Enabling `enableCypressExtension`
 
 1. Open the `faststore.config.js` file.
-2. Add the `experimental` object with the `enableCypressExtension` as it property.
-3. Set the `enableCypressExtension` value to `true`:
+2. Add the `experimental` object and set the `enableCypressExtension` value to `true`:
 
 ```js faststore.config.js mark=1:3
   experimental: {
@@ -47,7 +45,7 @@ Like any other project using Cypress, you'll follow standard practices, includin
 
 1. In the root directory of your storefront project, create a new folder named `cypress`.
 2. Add your custom integration tests within the `cypress/integration` folder.
-3. With the local server running, run `yarn test` to open the Cypress app and to check your tests execution.
+3. With the local server running, run `yarn test` to open the Cypress app and check your test execution.
 4. Open a pull request with the changes you have made.
 5. Within the pull request, navigate to **Checks > Integration Tests** and check the **Details** section.
 
@@ -78,7 +76,7 @@ describe('Custom PLP tests', () => {
 
 > ⚠️ Although exclusive execution of custom tests is possible for projects using Cypress version 12.x, we do not recommend this approach. If possible, keep the default Cypress tests.
 
-Some projects may prefer exclusive execution of its custom Cypress tests. Although it is not our recommendation, for projects using Cypress version 12.x or higher there is the possibility of running the **Integration Tests** check only for your custom tests.
+Some projects may prefer exclusive execution of its custom Cypress tests. Although it is not our recommendation, for projects using Cypress version 12.x or higher, there is the possibility of running the **Integration Tests** check only for your custom tests.
 
 Follow the steps below to configure your project to only run custom Cypress tests:
 
