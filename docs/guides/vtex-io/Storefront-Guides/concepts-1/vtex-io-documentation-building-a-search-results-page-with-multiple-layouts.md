@@ -6,20 +6,18 @@ createdAt: "2021-01-15T12:20:54.182Z"
 updatedAt: "2022-12-13T20:17:44.097Z"
 ---
 
-Your results presentation on the search results page doesn't need to be always the same for your users: thanks to enhancements in the Search Result app, you can provide them a more **customized experience** to navigate between the fetched products.
+Creating a versatile search results page is crucial for providing a seamless user experience in your online store. In this guide, you will learn how to build a search results page with multiple layouts, allowing users to switch between grid and list views.
 
 ![multiple-layouts](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts-0.png)
 
-Note that the search results page above works with two different layouts: `grid` and `list`.
+## Before you begin
 
-The flexibility to offer multiple layouts, which can help the sales tax rates by enhancing the shopping experience, is at hands! Check out the step-by-step section below.
+Before proceeding, ensure you are familiar with the [Flex Layout](https://developers.vtex.com/docs/apps/vtex.flex-layout) and the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) apps. Also, check the [Building a Horizontal Product Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-horizontal-product-summary) guide to understand how to create similar results on your search results page.
 
-> ⚠️ To obtain successful results with this recipe, it is strongly recommended to understand previously how the [Flex Layout](https://developers.vtex.com/docs/apps/vtex.flex-layout) and the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) apps work. We also advise you to go through the [Building a Horizontal Product Summary recipe](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-horizontal-product-summary) to achieve similar results on your search results page.
+## Instructions
 
-## Step by step
-
-1. Implement the Search Result app in your Store Theme according to the instructions in the [documentation](https://developers.vtex.com/docs/apps/vtex.search-result/).
-2. Declare the `gallery` block responsible for structuring the page layout, use its `layouts` prop to define the desired layouts for the search results page. For example:
+1. Implement the Search Result app in your Store Theme according to the instructions in the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result/) guide.
+2. Declare the `gallery` block responsible for structuring the page layout, and use its `layouts` prop to define the desired layouts for the search results page. For example:
 
     ```json
     "gallery": {
@@ -46,15 +44,15 @@ The flexibility to offer multiple layouts, which can help the sales tax rates by
     }
     ```
 
-    Notice that all of the `layouts`'s three properties are mandatory and must be provided for each layout.
+    All three of the `layouts` properties are mandatory and must be provided for each layout.
 
     | Property      | Description                                                                                                                                                                                                                                                                                                     |
     | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `name`        | specifies the search result layout. It can be `grid` or `list`.                                                                                                                                                                                                                                                 |
+    | `name`        | Specifies the search result layout. It can be `grid` or `list`.                                                                                                                                                                                                                                                 |
     | `component`   | Defines the parent block responsible for defining the layout's components. For the `grid` layout, we define the component `GridSummary` that will then present items vertically and horizontally from each other. For the `list` layout, we define the `ListSummary` to show a list of items below one another. |
-    | `itemsPerRow` | controls how many items per row will be displayed by each layout. You can use media queries to define the layouts' widths properties for desktop, tablet, and phone, such as `min-width` and `max-width`, or you can use the layouts' name, such as `desktop`, `tablet` and `phone`.                            |
+    | `itemsPerRow` | Controls how many items per row will be displayed by each layout. You can use media queries to define the layouts' widths properties for desktop, tablet, and phone, such as `min-width` and `max-width`, or you can use the layouts' name, such as `desktop`, `tablet` and `phone`.                            |
 
-    Choosing to use the layouts' name, such as `desktop`, `tablet` and `phone`, in `itemsPerRow`, you should declare them as the example below:
+    Choosing to use the layouts' name, such as `desktop`, `tablet`, and `phone`, in `itemsPerRow`, you should declare them as the example below:
 
     ```json
     {
@@ -74,7 +72,7 @@ The flexibility to offer multiple layouts, which can help the sales tax rates by
     | `ListSummary` | `product-summary.shelf#listLayout` block |
     | `GridSummary` | `product-summary.shelf` block            |
 
-3. Define the default layout i.e. which layout will be first presented to your users using the `defaultGalleryLayout` prop, from the `search-result-layout.mobile` and `search-result-layout.desktop` blocks:
+3. Define the default layout, i.e., which layout will be first presented to customers, using the `defaultGalleryLayout` prop from the `search-result-layout.mobile` and `search-result-layout.desktop` blocks:
 
     ```json
     "search-result-layout.desktop": {
@@ -90,8 +88,6 @@ The flexibility to offer multiple layouts, which can help the sales tax rates by
       }
     }
     ```
-
-    > ℹ️ Until now, you have a functioning search page with multiple layouts but with no flexibility to switch between them. For this purpose, we are going to declare next the `gallery-layout-switcher` block.
 
 4. Declare the `gallery-layout-switcher` block in the search results template (`store.search`):
 
@@ -149,7 +145,7 @@ The flexibility to offer multiple layouts, which can help the sales tax rates by
     }
     ```
 
-    > ℹ️ As seen above, each `gallery-layout-option` block receives the `name` prop with the name of the layout it corresponds to - this is a **mandatory** prop. In addition to this, you can also declare other blocks as its children and customize the selected layout option using the `galleryLayoutOptionButton--selected` [CSS Handle](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization/).
+    Each `gallery-layout-option` block receives the `name` prop with the name of the layout it corresponds to. This is a mandatory prop. Additionally, you can declare other blocks as its children and customize the selected layout option using the `galleryLayoutOptionButton--selected` [CSS Handle](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization/).
 
 5. Add the `gallery-layout-switcher` block as a child of the `search-result-layout.mobile` and `search-result-layout.desktop` blocks to display the switcher button on the page for both devices (mobile and desktop). For example:
 
