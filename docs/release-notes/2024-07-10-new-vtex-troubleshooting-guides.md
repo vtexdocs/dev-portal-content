@@ -23,4 +23,4 @@ The Troubleshooting guides are a collection that consolidates our problem-solvin
 
 ## How can you help?
 
-We are committed to continuously expanding and improving this initiative, analyzing new problem scenarios, and publishing more Troubleshooting guides regularly. Help us improve these guides by sharing your thoughts and suggestions through our feedback form: [Feedback form](https://forms.gle/J2S3qL7hbrMcCYii7).
+We are committed to continuously expanding and improving this initiative, analyzing new problem scenarios, and publishing more Troubleshooting guides regularly. Help us improve these guides by sharing your thoughts and suggestions through our feedback form: [Feedback form](https://forms.gle/PdVNZmMDMjiDfJaf8).

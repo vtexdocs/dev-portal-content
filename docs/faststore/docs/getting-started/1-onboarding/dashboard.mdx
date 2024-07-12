@@ -4,7 +4,7 @@ title: 'FastStore WebOps - Dashboard'
 
 Once you have [created your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project) or are already working on customizing it, you can use the WebOps Dashboard to have an overview of your website’s deployments and performance.
 
-The WebOps Dashboard gives you a comprehensive overview of website builds and deploy previews, along with suggestions on how to improve your storefront performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
+The WebOps Dashboard provides a comprehensive overview of website builds and deploy previews and offers suggestions on how to improve your storefront's performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
 
     ![dashboard-overview](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-webops___5bfc079a32f4d0b5facb70dfb3422152.png)
 
@@ -24,9 +24,23 @@ The **Production Overview** section provides the following information about the
 | :-------------------- | :----------------------------------------------------------------------------------------------- |
 | **Live Store**        | URL for your production environment, accessible to shoppers.                                     |
 | **Repository**        | GitHub repository associated with the project.                                                   |
-| **Deploy**            | Commit for the current deploy, including the date, time, and who made it.                        |
+| **Deploy**            | Commit for the current deployment, including the date, time, and who made it.                        |
 | **CMS Provider**      | Link to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
 | **CMS Project**       | Link to the FastStore project in Headless CMS.                                                   |
+
+#### Live store ID
+
+After onboarding with the WebOps app, you can access your store through a live store URL. To find the live store URL, access **Storefront > FastStore WebOps** in the VTEX Admin. In the [**Production Overview**](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#production-overview) card, locate the **Live Store** URL.
+
+The live store URL includes a `liveStoreId`, a unique identifier for your store. It combines your store account name and a live store ID number, for example: `https://mystore-clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b.vtex.app`. Let's break down the example to understand the `liveStoreId`:
+
+- `mystore-clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b`: the `liveStoreId`.
+- `mystore`: the account name.
+- `clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b`: the live store ID number.
+
+> The live store ID also helps you [set up the Preview URL in the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-2-configuring-the-headless-cms), enabling you to preview changes to your pages via the Headless CMS.
+
+#### Live deployment statuses
 
 This section also displays the status of the live deployment:
 
