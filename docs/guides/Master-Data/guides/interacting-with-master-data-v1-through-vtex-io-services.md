@@ -81,11 +81,23 @@ Create a client class in TypeScript to extend the functionality of `MasterData` 
 
    In this class, we will have access to several methods extended from the **Master Data** class, including:
 
-   * `getDocumentById`
-   * `searchDocuments`
-   * `scrollDocuments`
+    | Method name | Description |
+    |-------------|-------------|
+    | `getSchema` | Retrieves the schema for a given data entity and schema name. |
+    | `createOrUpdateSchema` | Creates or updates a schema for a given data entity. |
+    | `getPublicSchema` | Retrieves the public schema for a given data entity and schema name. |
+    | `getDocument` | Retrieves a document by its ID for a given data entity, with specified fields. |
+    | `createDocument` | Creates a new document in the specified data entity. |
+    | `createOrUpdateEntireDocument` | Creates or updates an entire document in the specified data entity. |
+    | `createOrUpdatePartialDocument` | Partially creates or updates a document in the specified data entity. |
+    | `updateEntireDocument` | Updates an entire document by its ID for a given data entity. |
+    | `updatePartialDocument` | Partially updates a document by its ID for a given data entity. |
+    | `searchDocuments` | Searches for documents in the specified data entity, with various search parameters and pagination. |
+    | `searchDocumentsWithPaginationInfo` | Searches for documents and returns data with pagination information. |
+    | `scrollDocuments` | Scrolls through documents in the specified data entity with various search parameters. |
+    | `deleteDocument` | Deletes a document by its ID for a given data entity. |
 
-5. Add the desired method. The example below uses the `getDocumentById` method:
+5. Add the desired method. The example below uses the `getDocument` method:
 
    ```typescript
    public getDocumentById(
