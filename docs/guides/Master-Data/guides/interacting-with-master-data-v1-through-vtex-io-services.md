@@ -20,7 +20,7 @@ Make sure you meet the technical requirements to complete this project:
 
 To begin setting up your service to interact with Master Data v1 on VTEX IO, follow these steps to initialize your project using the service-example template:
 
-1. Open your terminal.
+1. Open the terminal.
 2. Type the command `vtex init`.
 3. Select the `service-example` template.
 4. Enter a folder name or use the default name, which is the same as the selected template.
@@ -31,7 +31,7 @@ Configure permissions for your application to access Master Data by following th
 
 1. Open the project folder in your preferred code editor.
 2. Open the `manifest.json` file located at the root of the project.
-3. Add the following structure to the **policies** section:
+3. Add the following structure to the `policies` section:
 
     ```json
     {
@@ -46,7 +46,7 @@ Configure permissions for your application to access Master Data by following th
     }
     ```
 
-### Step 3: Creating a client
+## Step 3: Creating a client
 
 Create a client class in TypeScript to extend the functionality of `MasterData` from the `@vtex/api` module:
 
@@ -61,7 +61,7 @@ Create a client class in TypeScript to extend the functionality of `MasterData` 
 
 4. Modify the class to include the constructor and headers:
 
-   In this class, we will call the constructor and within it the super method, passing the context and options received in the class constructor.
+   In this class, we will call the `constructor` and, within it, the `super` method, passing the `context` and `options` received in the `constructor` class.
 
    ```typescript
    import { IOContext, InstanceOptions, MasterData } from '@vtex/api'
@@ -85,7 +85,7 @@ Create a client class in TypeScript to extend the functionality of `MasterData` 
    * `searchDocuments`
    * `scrollDocuments`
 
-5. Add a method. The example below uses the **getDocumentById** method:
+5. Add the desired method. The example below uses the `getDocumentById` method:
 
    ```typescript
    public getDocumentById(
@@ -97,12 +97,12 @@ Create a client class in TypeScript to extend the functionality of `MasterData` 
    }
    ```
 
-### Step 4: Registering the Client
+## Step 4: Registering the Client
 
 After creating our Client class, you need to register it in the `index.ts` file within the same `clients` folder:
 
 1. Open the `index.ts` file in the `clients` folder.
-2. Add imports and code, as illustrated below:
+2. Import the new client (e.g., `MD`) and add it to the `Clients` class, as exemplified below:
 
    ```typescript
    import { IOClients } from '@vtex/api'
@@ -116,9 +116,9 @@ After creating our Client class, you need to register it in the `index.ts` file 
    }
    ```
 
-### Step 5: Creating the middleware
+## Step 5: Creating the middleware
 
-Implement a middleware function that will handle interactions between your service and Master Data, executing the method we created and returning the response based on the context:
+Implement a middleware function to handle interactions between your service and Master Data, executing the method we created and returning the response based on the context:
 
 1. Inside the `node` folder, create a `middlewares` folder if it does not exist.
 2. Create a file named `masterdataMiddleware.ts` in the `middlewares` folder.
@@ -151,12 +151,12 @@ Implement a middleware function that will handle interactions between your servi
    }
    ```
 
-### Step 6: Configuring the route
+## Step 6: Configuring the route
 
 Configure a dedicated route in your service that will be accessed through your store's endpoint:
 
 1. Open the `service.json` file in the `node` folder.
-2. In the **routes** section, create a route structure as shown below. In this example, we will define the **path** as `/_v/md/get-document` and make this route public.
+2. In the `routes` section, define the `routes` object as shown below. In this example, we will define the `path` as `/_v/md/get-document` and make this route public.
 
     ```json
     "routes": {
@@ -169,7 +169,7 @@ Configure a dedicated route in your service that will be accessed through your s
 
 3. Open the `index.ts` file in the `node` folder.
 
-   In this file, you will see a new instance of service created. You will register your route within the **routes** object.
+   In this file, you will see a new instance of service created. You will register your route within the `routes` object.
 
 4. Register the route  within the `routes` object.
 
@@ -187,7 +187,7 @@ The `masterdata` attribute receives a function containing an object where we can
 
 Finalize setup by linking your project to a development workspace and testing the configured service routes:
 
-1. In your terminal, navigate to the root of the project.
+1. In the terminal, navigate to the root of the project.
 2. Run the command `vtex link`.
 
    After linking, you should see the following message:
