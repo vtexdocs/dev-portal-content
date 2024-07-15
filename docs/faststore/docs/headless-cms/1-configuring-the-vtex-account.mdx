@@ -70,16 +70,17 @@ Let's configure the URLs of the webhooks used by the Headless CMS app.
 1. In the VTEX Admin, access **Storefront > Headless CMS**. 
 2. In the FastStore project interface, click on `Settings` (⚙️).
 3. In **Settings**, click the `Build` tab.
-4. Fill the **Preview URL** field with your production URL. This URL activates the button on Headless CMS so you can preview the changes made on a page. _Replace the values between curly brackets according to your scenario._
+4. Fill the **Preview URL** field with your live store URL. This URL activates the button on Headless CMS so you can preview the changes made on a page. 
 
     ```sh
-    https://{account}.vtex.app/api/preview
+    https://{liveStoreId}.vtex.app/api/preview
     ```
+    > ⚠️ Replace the values between curly brackets according to your [live store ID from WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#production-overview). To find the live store ID in, refer to the [Live store ID](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#production-overview#live-store-id) instructions.
 
 8. Fill in the **Production base URL** field with your store's endpoint to preview changes in the Headless CMS before publishing them. _Replace the values between curly brackets according to your scenario._
 
     ```sh
-    https://{account}.vtex.com/
+    https://{liveStoreId}.vtex.app
     ```
 
 9. Click on **SAVE**.
