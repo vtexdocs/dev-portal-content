@@ -1,5 +1,5 @@
 ---
-title: PaymentProvider builder"
+title: "PaymentProvider builder"
 slug: "vtex-io-documentation-paymentprovider-builder"
 hidden: false
 createdAt: "2024-07-11T11:00:00.000Z"
