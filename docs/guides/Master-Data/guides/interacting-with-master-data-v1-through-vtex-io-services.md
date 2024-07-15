@@ -7,7 +7,9 @@ updatedAt: "2024-06-21T11:40:35.480Z"
 excerpt: "Setting up a service in VTEX IO to interact with Master Data v1."
 ---
 
-This guide provides step-by-step instructions on how to create a VTEX IO service to interact with [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw). Discover how to effectively leverage Master Data capabilities through your service in the upcoming sections.
+This guide provides step-by-step instructions on how to create a VTEX IO [service](https://developers.vtex.com/docs/guides/developing-services-on-vtex-io) to interact with [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw). This solution is recommended if you need to update Master Data v1 field values based on a trigger or whenever adding or updating a document.
+
+Discover how to effectively leverage Master Data capabilities through your service in the upcoming sections.
 
 ## Before you begin
 
