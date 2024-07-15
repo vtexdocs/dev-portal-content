@@ -171,7 +171,7 @@ Configure a dedicated route in your service that will be accessed through your s
 
    In this file, you will see a new instance of service created. You will register your route within the **routes** object.
 
-4. Register the route  within the **routes** object.
+4. Register the route  within the `routes` object.
 
    ```typescript
     masterdata: method({
@@ -179,9 +179,9 @@ Configure a dedicated route in your service that will be accessed through your s
     }),
    ```
 
-> The *masterdata* attribute is the route ID created in the `service.json` file.
+> The `masterdata` attribute is the route ID created in the `service.json` file.
 
-The *masterdata* attribute receives a function containing an object where we can pass various middleware mappings. In this case, we will use the HTTP method **GET**, which receives an *array* where we must declare the middleware created in previous sections.
+The `masterdata` attribute receives a function containing an object where we can pass various middleware mappings. In this case, we will use the HTTP method **GET**, which receives an *array* where we must declare the middleware created in previous sections.
 
 ## Step 7: Running the project
 
