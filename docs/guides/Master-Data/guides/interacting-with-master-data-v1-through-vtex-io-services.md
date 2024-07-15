@@ -83,9 +83,6 @@ Create a client class in TypeScript to extend the functionality of `MasterData` 
 
     | Method name | Description |
     |-------------|-------------|
-    | `getSchema` | Retrieves the schema for a given data entity and schema name. |
-    | `createOrUpdateSchema` | Creates or updates a schema for a given data entity. |
-    | `getPublicSchema` | Retrieves the public schema for a given data entity and schema name. |
     | `getDocument` | Retrieves a document by its ID for a given data entity, with specified fields. |
     | `createDocument` | Creates a new document in the specified data entity. |
     | `createOrUpdateEntireDocument` | Creates or updates an entire document in the specified data entity. |
