@@ -20,9 +20,9 @@ The tool displays all the services, add-ons, and integrations described in the [
 - Integrations: Dark blue boxes.
 - Platform interaction tools: Light blue boxes.
 
-You can enable and disable services, add-ons, User Admin featuresfunctionalities, and Developer Tooling by clicking on them. If you double-click twice on an add-on, it opens a pop-up opens with a video explaining itthat add-on.
+You can enable and disable services, add-ons, User Admin features, and Developer Tooling by clicking them. If you double-click an add-on, a pop-up opens with a video explaining it.
 
-When you click on onea type of integration, e.g., Ccarriers, it opens a pop-up opens with the available partners for that type of integration and the selected region. and yYou can choose up to four partners. Then, you can click on the X in the top-right corner to close the pop-up.
+When you click a type of integration, e.g., Carriers, a pop-up opens with the available partners for that type of integration and the selected region. You can choose up to four partners. Then, you can click the X in the top-right corner to close the pop-up.
 
 ![Marchitecture carriers options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Composability/marchitecture-carriers-options.png)
 
@@ -32,8 +32,8 @@ When you click on onea type of integration, e.g., Ccarriers, it opens a pop-up o
 
 *Selected carriers in the architecture planning*
 
-After selecting all the desired options for your store planning, you should have something like the imagepicture below.
+After selecting all the desired options for your store planning, you should have something like the image below.
 
 ![Interactive Marchitecture tool filled](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Composability/marchitecture-filled.png)
 
-> ℹ️ If you want to reset your architecture planning, click on the 🔃 refresh button ion the top right corner or refresh the page in your browser.
+> ℹ️ If you want to reset your architecture planning, click the 🔃refresh button in the top right corner or refresh the page in your browser.
