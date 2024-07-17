@@ -31,7 +31,7 @@ First, you need to set up the necessary GraphQL files to retrieve and structure 
 
 Now that we have our file structure in place, let's define the data structure for our installment information using GraphQL.
 
-In the `typeDefs` folder, create a `product.graphql` file to define the schema. Add the following schema definitions:
+In the `typeDefs` folder, create a `product.graphql` file to define the schema. Add the following schema definitions.
 
 <CH.Code show={["product.graphql"]}>
 
@@ -67,7 +67,7 @@ Each installment has properties for:
 
 Now that we've defined the structure of our installment data (GraphQL types), let's create the logic to retrieve and format this data using a resolver function. Resolvers essentially act as gateways between your frontend and backend, processing data requests.
 
-In the `resolvers` folder, create a `product.ts` file to handle the installment data logic. Add the following:
+In the `resolvers` folder, create a `product.ts` file to handle the installment data logic. Add the following code.
 
 <CH.Code show={["product.ts"]}>
 
@@ -161,9 +161,9 @@ Now that we've defined the `availableInstallments` field using GraphQL types and
 
   </CH.Code>
 
-  - `gql`: Imported from @faststore/core/api to construct the GraphQL fragment.
-  - `ClientProduct`: Fragment to indicate it extends the product query.
-  - The fragment defines the specific fields we want to retrieve from the `availableInstallments` data structure.
+    - `gql`: Imported from @faststore/core/api to construct the GraphQL fragment.
+    - `ClientProduct`: Fragment to indicate it extends the product query.
+    - The fragment defines the specific fields we want to retrieve from the `availableInstallments` data structure.
 
 ---
 
@@ -280,17 +280,17 @@ Now that we've established the logic for retrieving installment data, let's crea
 
   </CH.Code>
 
-  - `priceFormatter`: Format installment values.
-  - `styles`: Stylesheet for the BuyButtonWithDeatils imported from the `.scss` file.
-  - [`usePDP`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions): Hook to retrieve the PDP context containing product and extension data.
-  - We conditionally display the first installment option if it's interest-free (you can modify this to show all installments).
-  - The component renders a section containing the installment information and the buy button.
+    - `priceFormatter`: Format installment values.
+    - `styles`: Stylesheet for the BuyButtonWithDeatils imported from the `.scss` file.
+    - [`usePDP`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions): Hook to retrieve the PDP context containing product and extension data.
+    - We conditionally display the first installment option if it's interest-free (you can modify this to show all installments).
+    - The component renders a section containing the installment information and the buy button.
 
 ---
 
 ### Creating the stylesheet for the component
 
-Inside the `buy-button-with-details.module.scss`, add the following:
+Inside the `buy-button-with-details.module.scss`, add the following code. The stylesheet styles the component using SCSS. It defines styles for the installment information container and the buy button itself.
 
 <CH.Code show={["buy-button-with-details.module.scss"]}>
 
@@ -314,8 +314,6 @@ Inside the `buy-button-with-details.module.scss`, add the following:
 ```
 
 </CH.Code>
-
-This code styles the component using SCSS. It defines styles for the installment information container and the buy button itself.
 
 ---
 
