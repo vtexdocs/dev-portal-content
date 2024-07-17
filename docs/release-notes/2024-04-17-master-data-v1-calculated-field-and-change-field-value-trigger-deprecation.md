@@ -9,7 +9,10 @@ updatedAt: "2024-04-17T09:30:00.000Z"
 
 On June 17, we will deprecate the following settings in [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw): **Calculated Field** and the **Change field value** trigger action.
 
-Instead of using these settings, we recommend [creating an app to communicate with Master Data](https://developers.vtex.com/docs/guides/create-master-data-crud-app) and update field values if necessary.
+Instead of using these settings, we recommend one of the following alternatives to update field values, depending on which Master Data version you want to use:
+
+- [Creating a VTEX IO service to interact with Master Data v1](https://developers.vtex.com/docs/guides/interacting-with-master-data-v1-through-vtex-io-services)
+- [Creating an app to communicate with Master Data v2](https://developers.vtex.com/docs/guides/create-master-data-crud-app)
 
 ## What has changed?
 
@@ -37,4 +40,7 @@ The **Change field value** option, illustrated below, will no longer be availabl
 
 If you need to update Master Data field values based on a trigger, we recommend setting up a trigger that [sends an HTTP request](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270#sending-an-http-request) to a VTEX IO app that communicates with Master Data. This must be done before June 17.
 
-For instructions on how to create this type of app, check [Creating a Master Data CRUD app](https://developers.vtex.com/docs/guides/create-master-data-crud-app).
+For instructions on how to create this type of app, check the following guides:
+
+- [Creating a VTEX IO service to interact with Master Data v1](https://developers.vtex.com/docs/guides/interacting-with-master-data-v1-through-vtex-io-services)
+- [Creating an app to communicate with Master Data v2](https://developers.vtex.com/docs/guides/create-master-data-crud-app)
