@@ -14,7 +14,7 @@ This guide illustrates how to handle data from a Contact Us form and send it to 
 
 ## implementation
 
-<CH.Scrollycoding rows={6}>
+<CH.Scrollycoding
 
 ### Create the GraphQL files
 
@@ -23,7 +23,7 @@ First, you need to set up the necessary GraphQL files to handle data submissions
 1. In your store repository, go to the `src` folder, and create a new `graphql` subfolder:
 
 <CH.Code rows={1}>
-```bash
+```bash Bash
 mkdir -p src/graphql/thirdParty/{resolvers,typeDefs}
 ```
 </CH.Code>
@@ -41,7 +41,7 @@ Next, define the GraphQL types for your contact form.
 2. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
 3. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions:
 
-<CH.Code rows={6} show={["contactForm.graphql"]}>
+<CH.Code rows={7} show={["contactForm.graphql"]}>
 
 ```graphql contactForm.graphql
 type ContactFormResponse {
@@ -74,7 +74,7 @@ Now, let's create the resolver function to process the form submission.
 
 1. In the `contactForm.ts` file, add the following:
 
-<CH.Code show={["contactForm.ts"]} rows={17}>
+<CH.Code rows={7} show={["contactForm.ts"]}>
 
 ```ts contactForm.ts mark=10,12
 type SubmitContactFormData = {
@@ -129,7 +129,7 @@ export default contactFormResolver;
 
 In the `graphql/thirdParty/resolvers` folder, create an `index.ts` file to consolidate the resolvers:
 
-<CH.Code show={["index.ts"]} rows={7}>
+<CH.Code rows={7} show={["index.ts"]}>
 
 ```ts index.ts
 import contactFormResolver from "./contactForm";
@@ -160,7 +160,7 @@ Create a new section to receive the Contact Form data.
 
 3. Add the following to the `ContactForm.tsx`:
 
-<CH.Code show={["ContactForm.tsx"]} rows={27}>
+<CH.Code rows={7} show={["ContactForm.tsx"]}>
 
 ```tsx ContactForm.tsx
 import { useCallback, useState } from "react";
@@ -276,7 +276,7 @@ export default ContactForm;
 
 In the `contact-form.module.scss` file, add the following:
 
-<CH.Code show={["contact-form.module.scss"]} rows={17}>
+<CH.Code rows={7} show={["contact-form.module.scss"]}>
 
 ```scss contact-form.module.scss
 .contactForm {
@@ -337,7 +337,7 @@ This stylesheet applies specific styles to the Contact Form component, including
 Add the section to the Headless CMS by following the instructions available in [syncing components with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 The following schema was used as an example:
 
-<CH.Code show={["sections.json"]} rows={11}>
+<CH.Code rows={7} show={["sections.json"]}>
 
 ```json sections.json
 [
