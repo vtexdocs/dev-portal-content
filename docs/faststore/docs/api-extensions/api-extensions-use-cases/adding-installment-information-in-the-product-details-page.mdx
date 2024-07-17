@@ -19,8 +19,9 @@ First, you need to set up the necessary GraphQL files to retrieve and structure 
 1. In your store repository, go to the `src` folder, if you don’t have one already, create a new `graphql` folder.
 2. Inside `graphql`, create the `vtex` folder.
 3. In the `vtex` folder, create two other subfolders:
-  - `resolvers`
-  - `typeDefs`
+
+   - `resolvers`
+   - `typeDefs`
 
   > ℹ️ For further details on code implementation, see the [`vtex`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/vtex) folder available in the playground.store repository.
 
@@ -28,7 +29,7 @@ First, you need to set up the necessary GraphQL files to retrieve and structure 
 
 ### Define the types
 
-Now that we have our file structure in place, let's define the data structure for our installment information using GraphQL. 
+Now that we have our file structure in place, let's define the data structure for our installment information using GraphQL.
 
 In the `typeDefs` folder, create a `product.graphql` file to define the schema. Add the following schema definitions:
 
@@ -49,6 +50,7 @@ extend type StoreProduct {
   availableInstallments: [Installments!]!
 }
 ```
+
 </CH.Code>
 
 - `Installments`: Specifies the structure of each installment option.
@@ -132,11 +134,14 @@ Now that we've defined the `availableInstallments` field using GraphQL types and
 
 1. In the `src` folder of your store code, create a `fragments` folder.
 2. In the `fragments` folder, create the following files:
-  - `ClientProduct.ts`: Defines the Client-Side fragment.
-  - `ServerProduct.ts`: Defines the Server-Side fragment.
+
+   - `ClientProduct.ts`: Defines the Client-Side fragment.
+   - `ServerProduct.ts`: Defines the Server-Side fragment.
+
 3. In the `ClientProduct.ts` file, define the GraphQL fragment for retrieving installment data:
 
   <CH.Code show={["ClientProduct.ts"]}>
+
   ```ts ClientProduct.ts
   import { gql } from "@faststore/core/api";
 
@@ -153,6 +158,7 @@ Now that we've defined the `availableInstallments` field using GraphQL types and
     }
   `);
   ```
+
   </CH.Code>
 
   - `gql`: Imported from @faststore/core/api to construct the GraphQL fragment.
@@ -198,6 +204,7 @@ For a more user-friendly display, you can format the installment values to inclu
 2. Inside `utils`, create the file `priceFormatter.ts` and add the following:
 
   <CH.Code show={["priceFormatter.ts"]}>
+
   ```ts priceFormatter.ts
   import FaststoreConfig from "../../faststore.config.js";
 
@@ -208,10 +215,11 @@ For a more user-friendly display, you can format the installment values to inclu
     });
   };
   ```
+
   </CH.Code>
 
-  - `FaststoreConfig`: Imported to access the current store's locale and currency settings.
-  - `priceFormatter`: This function takes a numeric value and formats it according to the store's locale and currency.
+   - `FaststoreConfig`: Imported to access the current store's locale and currency settings.
+   - `priceFormatter`: This function takes a numeric value and formats it according to the store's locale and currency.
 
   > ℹ️ For further details on code implementation, see the [`utils`](https://github.com/vtex-sites/playground.store/tree/main/src/utils) folder available in the playground.store repository.
 
@@ -222,16 +230,19 @@ For a more user-friendly display, you can format the installment values to inclu
 Now that we've established the logic for retrieving installment data, let's create a new component to display this information alongside the buy button on the PDP.
 
 1. In the `src/components` folder, create two new folders:
-  - `BuyButtonWithDetails`: This folder keeps the component for our enhanced buy button with installment details.
-  - `sections/CustomProductDetails`: This folder keeps the logic for overriding the default PDP buy button component.
+
+   - `BuyButtonWithDetails`: This folder keeps the component for our enhanced buy button with installment details.
+   - `sections/CustomProductDetails`: This folder keeps the logic for overriding the default PDP buy button component.
 
 2. Inside `BuyButtonWithDetails` folder, create two new files:
-  - `BuyButtonWithDetails.tsx`
-  - `buy-button-with-details.module.scss`
+
+   - `BuyButtonWithDetails.tsx`
+   - `buy-button-with-details.module.scss`
 
 3. Inside `BuyButtonWithDetails.tsx` add the following:
 
   <CH.Code show={["BuyButtonWithDetails.tsx"]}>
+
   ```tsx BuyButtonWithDetails.tsx
   import { usePDP } from "@faststore/core";
   import { Button as UIButton, ButtonProps } from "@faststore/ui";
@@ -266,6 +277,7 @@ Now that we've established the logic for retrieving installment data, let's crea
 
   export default BuyButtonWithDetails;
   ```
+
   </CH.Code>
 
   - `priceFormatter`: Format installment values.
@@ -281,6 +293,7 @@ Now that we've established the logic for retrieving installment data, let's crea
 Inside the `buy-button-with-details.module.scss`, add the following:
 
 <CH.Code show={["buy-button-with-details.module.scss"]}>
+
 ```scss buy-button-with-details.module.scss
 .buyButtonWithDetails {
   > span {
@@ -299,9 +312,10 @@ Inside the `buy-button-with-details.module.scss`, add the following:
   }
 }
 ```
+
 </CH.Code>
 
-This code styles the component using SCSS. It defines styles for the installment information container and the buy button itself. 
+This code styles the component using SCSS. It defines styles for the installment information container and the buy button itself.
 
 ---
 
@@ -312,6 +326,7 @@ By including the `CustomProductDetails` section in the PDP, you replace the defa
 In the folder `CustomProductDetails`, create the `CustomProductDetails.tsx` and add the following:
 
 <CH.Code show={["CustomProductDetails.tsx"]}>
+
 ```tsx CustomProductDetails.tsx
 import { getOverriddenSection, ProductDetailsSection } from "@faststore/core";
 import { BuyButtonWithDetails } from "../../BuyButtonWithDetails/BuyButtonWithDetails";
@@ -325,6 +340,7 @@ const CustomProductDetails = getOverriddenSection({
 
 export default CustomProductDetails;
 ```
+
 </CH.Code>
 
 > ℹ️ For further details on code implementation, see the [`utils`](https://github.com/vtex-sites/playground.store/tree/main/src/utils) folder available in the playground.store repository.
@@ -340,7 +356,6 @@ Once you have [set your development mode](https://developers.vtex.com/docs/guide
 The PDP before adding the installment.
 
 ![before-installment](https://vtexhelp.vtexassets.com/assets/docs/src/before-installment___c06c92a26445e0dc97a33981f893358e.png)
-	
 
 ### After
 
