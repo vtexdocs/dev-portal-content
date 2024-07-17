@@ -37,32 +37,32 @@ Next, define the GraphQL types for your contact form.
 
 1. Create a `contactForm.graphql` file in the `thirdParty` folder. This file will contain type definitions for your GraphQL schema.
 2. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
-3. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions:
+3. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions.
 
-<CH.Code rows={7} show={["contactForm.graphql"]}>
+   - `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
+   - `ContactFormInput`: Specifies the input fields required for the contact form.
+   - `Mutation`: Declares a mutation for submitting the contact form data.
 
-```graphql contactForm.graphql
-type ContactFormResponse {
-  message: String!
-}
+  <CH.Code rows={7} show={["contactForm.graphql"]}>
 
-input ContactFormInput {
-  name: String!
-  email: String!
-  subject: String!
-  message: String!
-}
+  ```graphql contactForm.graphql
+  type ContactFormResponse {
+    message: String!
+  }
 
-type Mutation {
-  submitContactForm(input: ContactFormInput!): ContactFormResponse
-}
-```
+  input ContactFormInput {
+    name: String!
+    email: String!
+    subject: String!
+    message: String!
+  }
 
-</CH.Code>
+  type Mutation {
+    submitContactForm(input: ContactFormInput!): ContactFormResponse
+  }
+  ```
 
-- `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
-- `ContactFormInput`: Specifies the input fields required for the contact form.
-- `Mutation`: Declares a mutation for submitting the contact form data.
+  </CH.Code>
 
 ---
 
@@ -70,7 +70,10 @@ type Mutation {
 
 Now, let's create the resolver function to process the form submission.
 
-1. In the `contactForm.ts` file, add the following:
+In the `contactForm.ts` file, add the following code.
+
+- `SubmitContactFormData`: Defines the structure of the expected input data.
+- `contactFormResolver`: Implements the `submitContactForm` mutation, sending the form data to the specified API endpoint and handling the response.
 
 <CH.Code rows={7} show={["contactForm.ts"]}>
 
@@ -118,9 +121,6 @@ export default contactFormResolver;
 
 </CH.Code>
 
-- `SubmitContactFormData`: Defines the structure of the expected input data.
-- `contactFormResolver`: Implements the `submitContactForm` mutation, sending the form data to the specified API endpoint and handling the response.
-
 ---
 
 #### Consolidating the resolvers
@@ -156,123 +156,123 @@ Create a new section to receive the Contact Form data.
    - `ContactForm.tsx`: The main component file.
    - `contant-form.module.scss`: The stylesheet for the component.
 
-3. Add the following to the `ContactForm.tsx`:
+3. Add the following code to the `ContactForm.tsx`.
 
-<CH.Code rows={7} show={["ContactForm.tsx"]}>
+   - This component renders a contact form with name, email, subject, and message fields.
+   - The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
 
-```tsx ContactForm.tsx
-import { useCallback, useState } from "react";
-import { gql } from "@faststore/core/api";
-import { useLazyQuery_unstable as useLazyQuery } from "@faststore/core/experimental";
+  <CH.Code rows={7} show={["ContactForm.tsx"]}>
 
-import {
-  InputField as UIInputField,
-  Button as UIButton,
-  TextArea as UITextArea,
-} from "@faststore/ui";
+  ```tsx ContactForm.tsx
+  import { useCallback, useState } from "react";
+  import { gql } from "@faststore/core/api";
+  import { useLazyQuery_unstable as useLazyQuery } from "@faststore/core/experimental";
 
-import styles from "./contact-form.module.scss";
+  import {
+    InputField as UIInputField,
+    Button as UIButton,
+    TextArea as UITextArea,
+  } from "@faststore/ui";
 
-export const mutation = gql(`
-      mutation SubmitContactForm($data: ContactFormInput!) {
-        submitContactForm(input: $data) {
-          message
+  import styles from "./contact-form.module.scss";
+
+  export const mutation = gql(`
+        mutation SubmitContactForm($data: ContactFormInput!) {
+          submitContactForm(input: $data) {
+            message
+          }
         }
-      }
-    `);
+      `);
 
-export const ContactForm = () => {
-  const [submitContactForm, { data, error }] = useLazyQuery(mutation, {
-    data: { name: "", email: "", subject: "", message: "" },
-  });
+  export const ContactForm = () => {
+    const [submitContactForm, { data, error }] = useLazyQuery(mutation, {
+      data: { name: "", email: "", subject: "", message: "" },
+    });
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
 
-  const onSubmit = useCallback(
-    (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
+    const onSubmit = useCallback(
+      (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
 
-      const formValues = {
-        name,
-        email,
-        subject,
-        message,
-      };
+        const formValues = {
+          name,
+          email,
+          subject,
+          message,
+        };
 
-      submitContactForm({ data: formValues });
+        submitContactForm({ data: formValues });
 
-      if (error) {
-        console.error(error);
-      }
+        if (error) {
+          console.error(error);
+        }
 
-      if (data) {
-        setName("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
-      }
-    },
-    [submitContactForm]
-  );
+        if (data) {
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        }
+      },
+      [submitContactForm]
+    );
 
-  return (
-    <section className={styles.contactForm}>
-      <div>
-        <h2>Contact Us</h2>
-        <p>
-          Need to get in touch with us? Please fill out the form, we'll get in
-          touch with you soon.
-        </p>
-      </div>
-      <form onSubmit={onSubmit}>
-        <UIInputField
-          id="name"
-          label="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <UIInputField
-          id="email"
-          label="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <UIInputField
-          id="subject"
-          label="Subject"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-        />
-        <UITextArea
-          id="message"
-          placeholder="Write here your message."
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <UIButton type="submit" variant="primary">
-          Send
-        </UIButton>
-      </form>
-    </section>
-  );
-};
+    return (
+      <section className={styles.contactForm}>
+        <div>
+          <h2>Contact Us</h2>
+          <p>
+            Need to get in touch with us? Please fill out the form, we'll get in
+            touch with you soon.
+          </p>
+        </div>
+        <form onSubmit={onSubmit}>
+          <UIInputField
+            id="name"
+            label="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <UIInputField
+            id="email"
+            label="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <UIInputField
+            id="subject"
+            label="Subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+          <UITextArea
+            id="message"
+            placeholder="Write here your message."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <UIButton type="submit" variant="primary">
+            Send
+          </UIButton>
+        </form>
+      </section>
+    );
+  };
 
-export default ContactForm;
-```
+  export default ContactForm;
+  ```
 
-</CH.Code>
-
-- This component renders a contact form with name, email, subject, and message fields.
-- The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
+  </CH.Code>
 
 ---
 
 ### Creating the stylesheet for the section
 
-In the `contact-form.module.scss` file, add the following:
+In the `contact-form.module.scss` file, add the following code. The stylesheet applies specific styles to the Contact Form component, including layout and spacing adjustments.
 
 <CH.Code rows={7} show={["contact-form.module.scss"]}>
 
@@ -325,9 +325,8 @@ In the `contact-form.module.scss` file, add the following:
 
 </CH.Code>
 
-This stylesheet applies specific styles to the Contact Form component, including layout and spacing adjustments.
-
 > ℹ️ For further details on code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
+
 ---
 
 ### Synchronizing the changes with the Headless CMS
@@ -354,6 +353,7 @@ The following schema was used as an example:
 </CH.Code>
 
 > ℹ️ For further details on code implementation, see the `sections.json` file available in the playground.store repository.
+
 </CH.Scrollycoding>
 
 ### Creating a new landing page
