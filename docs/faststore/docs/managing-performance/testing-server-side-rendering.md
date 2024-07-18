@@ -10,7 +10,6 @@ To ensure your server-side rendering (SSR) HTML is functional and free of bugs, 
 
 1. Check the documentation of your web browser and search for how to disable JavaScript. For example, if you are using Google Chrome, check Google's documentation on [Disabling JavaScript](https://developers.google.com/web/tools/chrome-devtools/javascript/disable).
 
-   For example, if you are using Google Chrome, check Google's documentation on [Disabling JavaScript](https://developers.google.com/web/tools/chrome-devtools/javascript/disable).
 
 3. Access your store website and check if its [core features](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), such as product searching, shopping cart, and checkout process are working as expected. Your store will not function exactly as planned, but check below which are the expected and undesired behaviors when disabling JavaScript:
 
