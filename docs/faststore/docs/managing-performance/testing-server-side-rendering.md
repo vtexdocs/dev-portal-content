@@ -8,7 +8,7 @@ To ensure your server-side rendering (SSR) HTML is functional and free of bugs, 
 
 ## Instructions
 
-1. Check the documentation of your web browser and search for how to disable JavaScript.
+1. Check the documentation of your web browser and search for how to disable JavaScript. For example, if you are using Google Chrome, check Google's documentation on [Disabling JavaScript](https://developers.google.com/web/tools/chrome-devtools/javascript/disable).
 
    For example, if you are using Google Chrome, check Google's documentation on [Disabling JavaScript](https://developers.google.com/web/tools/chrome-devtools/javascript/disable).
 
