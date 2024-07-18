@@ -3,7 +3,7 @@ title: "5. Defining styles"
 slug: "vtex-io-documentation-5-definingstyles"
 hidden: false
 createdAt: "2020-08-11T07:03:18.383Z"
-updatedAt: "2022-12-13T20:17:44.175Z"
+updatedAt: "2024-07-18T19:37:33.939Z"
 category: "Storefront Development"
 excerpt: "Learn how to set specific styles for your store components to enhance your store's user experience."
 seeAlso:
@@ -12,7 +12,7 @@ seeAlso:
 
 Your website’s visual style is fundamental to building your store’s identity.
 
-Once you understand what blocks and templates are and how they render interface components, it's time to learn how to customize them.
+Once you understand what blocks and templates are and how they render interface components, it is time to learn how to customize them.
 
 The Store Theme will allow you to:
 
@@ -21,9 +21,9 @@ The Store Theme will allow you to:
 
 ## Setting a default style for all store components
 
-To set the default visual style for your entire store, you can utilize the `style.json` file located in the `style` folder of the Store Theme app. This single file allows you to customize the appearance of your store by modifying the default definitions declared within it. With this approach, you can avoid the need to customize individual components on each page.
+To set the default visual style for your entire store, you can use the `style.json` file located in the `style` folder of the Store Theme app. This single file allows you to customize the appearance of your store by modifying the default definitions declared within it. This approach avoids the need to customize individual components on each page.
 
-For example, we can set the default theme background color to blue by changing the `semanticColors` block’s `base` property:
+For example, you can set the default theme background color to blue by changing the `semanticColors` block’s `base` property:
 
 ```json
 "semanticColors": {
@@ -48,6 +48,8 @@ For example, we can set the default theme background color to blue by changing t
   },
 }
 ```
+
+>⚠ The `styles.json` file only accepts [HEX values](https://www.w3schools.com/html/html_colors_hex.asp) to define a color. Using other formats, such as RGB, may break the PWA module.
 
 For detailed instructions on customizing your theme, refer to the [VTEX Styleguide](https://styleguide.vtex.com/#/Styles), a comprehensive CSS framework that provides guidelines for defining component styles. It includes a detailed explanation of the `styles.json` file structure to assist you in your customization efforts.
 
