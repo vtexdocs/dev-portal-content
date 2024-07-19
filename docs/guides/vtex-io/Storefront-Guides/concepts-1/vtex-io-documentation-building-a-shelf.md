@@ -3,20 +3,16 @@ title: "Building a Shelf"
 slug: "vtex-io-documentation-building-a-shelf"
 hidden: false
 createdAt: "2021-10-28T00:08:33.278Z"
-updatedAt: "2022-12-13T20:17:44.565Z"
+updatedAt: "2024-05-29T13:00:00.565Z"
 ---
 
 The Shelf component is a product list that helps you to build your own shop window and work on your store's visual merchandising.
 
 ![shelf](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-building-a-shelf-0.png)
 
-Using VTEX Store Framework, you can build two different shelves in your store: one to be rendered in the store home page, displaying any products you desire, and another one to be rendered in the product details page, displaying related products that may be interesting for users.
+To create a product list, you can configure the Shelf component to use the [Product Summary List](https://developers.vtex.com/docs/apps/vtex.product-summary/productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/docs/apps/vtex.product-summary), and the [Slider Layout](https://developers.vtex.com/docs/apps/vtex.slider-layout) blocks.
 
-By installing the [Shelf app](https://developers.vtex.com/docs/guides/vtex-shelf), you can use the `shelf.RelatedProducts` block to build the Shelf in your store. However, when building the traditional Shelf to be displayed on your store home page, the Shelf app will not suffice since the `shelf` block was deprecated.
-
-Aiming to display a flexible product list in your home page, the traditional shelf component as we know is now configured using the [Product Summary List](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummarylist), the [Product Summary Shelf](https://developers.vtex.com/docs/guides/vtex-product-summary/) and the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-slider-layout/) blocks.
-
-> ℹ️ Since these three blocks come from the [**Product Summary**](https://github.com/vtex-apps/product-summary) and the [**Slider-Layout**](https://github.com/vtex-apps/slider-layout) app, it is strongly recommended to check out each documentation in order to understand how the blocks work as well as the props available to set their behavior and consequently the Shelf behavior.
+>ℹ️ Refer to the [**Product Summary**](https://developers.vtex.com/docs/apps/vtex.product-summary) and [**Slider-Layout**](https://developers.vtex.com/docs/apps/vtex.slider-layout) documentation to explore the available props for configuring their behavior. Use this information to adjust the Shelf behavior accordingly.
 
 Check out the instructions below for how it can be done.
 

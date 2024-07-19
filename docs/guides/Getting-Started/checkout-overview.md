@@ -50,6 +50,8 @@ To request additional customer information besides what the `orderForm` collects
 * [PUT - Set single custom field value](https://developers.vtex.com/vtex-rest-api/reference/setsinglecustomfieldvalue)
 * [DELETE - Remove single custom field value](https://developers.vtex.com/vtex-rest-api/reference/removesinglecustomfieldvalue)
 
+> This module may process personal or sensitive information. Learn more about how VTEX handles data privacy at our [Data privacy](https://developers.vtex.com/docs/guides/data-privacy) guide.
+
 ## Accessing customer information
 
 Once you have the customer information, you can check their profile information or even add them to a specific cart. See the links below to access endpoints related to customer information.

@@ -19,6 +19,8 @@ Master Data currently has two versions (V1 and V2). In V1, a Data Entity is refe
 
 In Master Data v1, the CL Data Entity is used to keep all customer data related to personal information such as name, email, document and others stored in the same place, and the AD Data Entity is used to store all customers addresses with their respective information such as: receiver name, street, city, etc.
 
+> This module may process personal or sensitive information. Learn more about how VTEX handles data privacy at our [Data privacy](https://developers.vtex.com/docs/guides/data-privacy) guide.
+
 ### Document
 
 A Document is a record (a row of the table) inside a Data Entity with an identifier (a Field named `id`). Inside CL Data Entity, for example, each person is represented by a document that has an `id` and other information.

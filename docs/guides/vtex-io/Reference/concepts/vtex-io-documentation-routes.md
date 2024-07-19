@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-07-16T19:36:59.239Z"
 updatedAt: "2022-12-13T20:17:44.554Z"
 ---
-A route maps a URL pattern and an HTTP request method to an action. It's, therefore, a way of setting the application expected behavior for client requests to specific endpoints.
+A route maps a URL pattern and an HTTP request method to an action. It's, therefore, a way of setting the application's expected behavior for client requests to specific endpoints.
 
 In VTEX IO, however, you don't need to worry about routing and HTTP request methods, since this is handled by the [Rewriter app](https://developers.vtex.com/docs/guides/rewriter) or by the VTEX IO native builder called [Store](https://github.com/vtex-apps/store), depending on the route type.
 
@@ -24,9 +24,9 @@ The Store builder, in turn, is responsible for managing custom routes. Hence, cu
 
 ## Routes in Rewriter
 
-Commonly, routes stored in the Rewriter have complex paths since they communicate with other systems and databases. For example, when a user registers a new category, subcategory, or product in the VTEX IO Admin, its related pages are automatically created in the Rewriter database.
+Routes stored in the Rewriter often have complex paths since they communicate with other systems and databases. For example, when a user registers a new category, subcategory, or product in the VTEX IO Admin, its related pages are automatically created in the Rewriter database.
 
-Take the product route as an example. Its standard path is `/_v/segment/routing/vtex.store@2.x/product/:id/:slug/p`. Notice that this path is not user-friendly in the client-side context and, consequently, a solution that provides a more personable path is needed.
+Take the product route as an example. Its standard path is `/_v/segment/routing/vtex.store@2.x/product/:id/:slug/p`. Notice that this path is not user-friendly in the client-side context, and consequently, a solution that provides a more personable path is needed.
 
 Hence, in Rewriter, besides the path itself, a route definition must include a canonical path for client-side usage and enhanced SEO rankings.
 
@@ -58,7 +58,7 @@ These routes must be declared in a `routes.json` file inside the store's `store`
 
 Where `store.custom#{templatename}` is the name of the custom template declared within the store's `blocks` folder, and `path` is the root-relative URL where the page will be available.
 
-> ℹ️ **Tip**: A path can accept URL parameters and optional parameters as in: `/path/:param(/:optional-param)`. But we recommend that you keep it simple since paths of custom pages are the ones used in the client-side and search engines.
+> ℹ️ A path can accept URL parameters and optional parameters as in: `/path/:param(/:optional-param)`. But we recommend that you keep it simple since paths of custom pages are the ones used in the client-side and search engines.
 
 Optional props such as the ones presented in the following table can also be added to a custom route definition.
 

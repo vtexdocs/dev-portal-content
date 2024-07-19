@@ -34,7 +34,7 @@ In order for a  VTEX IO app to access external resources, it requires authorizat
 }
 ```
 
->ℹNote that License Manager policies are declared in a different way than outbound-access policies. While outbound-access policies require the explicit host and path for each resource, License Manager policies operate based on predefined roles.
+>ℹ Note that License Manager policies are declared in a different way than outbound-access policies. While outbound-access policies require the explicit host and path for each resource, License Manager policies operate based on predefined roles.
 
 Below is a table listing the role-based VTEX IO policies for the License Manager resources. The table indicates which [Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) the policy is associated with.
 
@@ -201,4 +201,4 @@ Below is a table listing the role-based VTEX IO policies for the License Manager
   </tbody>
 </table>
 
->ℹIf you know about a policy that needs to be described in the table and want it to be documented, open a request using our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSfmnotPvPjw-SjiE7lt2Nt3RQgNUe10ixXZmuO2v9enOJReoQ/viewform).
+>ℹ If you know about a policy that needs to be described in the table and wants it to be documented, open a request using our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSfmnotPvPjw-SjiE7lt2Nt3RQgNUe10ixXZmuO2v9enOJReoQ/viewform).

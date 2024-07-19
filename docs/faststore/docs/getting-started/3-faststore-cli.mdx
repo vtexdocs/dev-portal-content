@@ -2,88 +2,97 @@
 title: '3. FastStore CLI'
 ---
 
-The FastStore Command Line Interface (CLI) is the main pre-configured tool for initializing, building and developing FastStore projects.
+The FastStore Command Line Interface (CLI) provides pre-configured scripts for starting, building, and developing FastStore projects. It also helps keep FastStore projects up to date with the [`@faststore/core`](/docs/getting-started/3-project-structure#faststorecore) package.
 
-Also the CLI is the responsible on keeping the stores up-to-date with the [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#faststorecore) package and enables the cloud platform to understand the FastStore project.
+## Running FastStore CLI on the project
 
----
-
-## Runnig FastStore CLI on the project
-
-The CLI is a dependency in the `package.json` file of the FastStore project, so once you run `yarn install` during the [set up of the project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project) you can start using it on the project.
-
-### Commands
-
-#### `dev`
-
-Starts the project in the development environment and usually servers it at `http://localhost:3000`. It allows you to make changes to the project and see the results in real-time locally on your machine without affecting the production environment.
-
-```bash
-  yarn dev
-```
-
-#### `build`
-
-Generates a store in the production environment by compiling the project and optimizing it for production usage.
-
-```bash
-  yarn build
-```
-
-#### `start`
-
-Executes a Next.js project in the root directory and usually servers it at `http://localhost:3000`.
-
-```bash
-  yarn start
-```
-
-#### `cms-sync`
-
-Sync your FastStore repository cms folder changes with the Headless CMS app.
-
-```bash
-  yarn cms-sync
-```
-
----
+The CLI is automatically added as a dependency in your project's `package.json` file, so once you run `yarn install` during the [project setup](/docs/getting-started/2-setting-up-the-project), you can start using it in the project.
 
 ## Installing FastStore CLI globally using `npm`
 
-Installing the CLI via `npm` allows you to use its commands in your machine. To install [`@faststore/cli`](https://www.npmjs.com/package/@faststore/cli) package, run the following in the terminal:
+To use FastStore CLI commands globally on your machine, install the [`@faststore/cli`](https://www.npmjs.com/package/@faststore/cli) using `npm`, and run the following command in the terminal:
 
 ```bash
   npm install -g @faststore/cli
 ```
 
-### Commands
+## Default commands
+Below is a brief description of the default commands available in the FastStore CLI. For detailed information about each command, click the respective command name.
 
-#### `dev`
+> ⚠️ Running the commands through `yarn` is already enough to develop part of your store. However, to set up your project with Headless CMS and create new sections, you need to install the FastStore CLI and use its commands.
 
-```bash
+| Command name | Description |
+| ------------ | ----------- |
+| [`build`](#build) | Generates a production-ready storefront.  It compiles the project and optimizes it for production usage. |
+| [`cms-sync`](#cms-sync) | Syncs the `cms` folder of your FastStore project with [Headless CMS](). |
+| [`dev`](#dev) | Starts the project in the development environment and uses`http://localhost:3000` as server by default. It allows you to make changes to the project and see the results locally on your machine in real time without affecting the production environment. |
+| [`help`](#help) | Displays help for FastStore CLI commands. |
+| [`generate`](#generate) | Generates the GraphQL types and optimizations from the FastStore project. |
+| [`start`](#start) | Executes the FastStore project in the root directory and uses`http://localhost:3000` as server by default. |
+
+### `dev`
+Starts the project in the development environment and uses `http://localhost:3000` as server by default. It allows you to make changes to the project and see the results locally on your machine in real time without affecting the production environment.
+
+#### Usage
+
+```bash 
+  yarn dev
+```
+
+```bash 
   faststore dev
 ```
 
-#### `build`
+### `build`
+Generates a production-ready storefront.  It compiles the project and optimizes it for production usage.
 
-```bash
+#### Usage
+
+```bash 
+  yarn build
+```
+
+```bash 
   faststore build
 ```
 
-#### `start`
+### `start`
+Executes the FastStore project in the root directory and uses `http://localhost:3000` as server by default.
 
-```bash
+#### Usage
+
+```bash 
+  yarn start
+```
+
+```bash 
   faststore start
 ```
 
-#### `cms-sync`
+### `cms-sync`
+Syncs the `cms` folder of your FastStore project with Headless CMS.
 
-```bash
+#### Usage
+
+```bash 
+  yarn faststore cms-sync
+```
+
+
+```bash 
   faststore cms-sync
 ```
 
-#### `help`
+### `help`
 
-```bash
-  yarn faststore help [COMMAND] [-n]
+Displays help for FastStore CLI commands.
+
+#### Usage
+
+```bash 
+  yarn faststore help
+```
+
+```bash 
+  faststore help [COMMAND] [-n]
 ```

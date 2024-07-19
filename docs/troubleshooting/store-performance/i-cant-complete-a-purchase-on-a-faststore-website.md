@@ -39,6 +39,6 @@ If the error continues, check if your website's `secure` subdomain is pointing t
 3. Choose `CNAME` in the dropdown menu.
 4. Check if the `secure` subdomain is pointing to the `secure.{hostname}.cdn.vtex.com`, as in the example below:
 
-![dns-checker](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/store-performance/secure-hostname-2.png)
-
+   ![dns-checker](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/store-performance/secure-hostname-2.png)
+   
 If the `secure` subdomain is pointing to `secure.{hostname}.cdn.vtex.com` but the problem continues, open a ticket with [VTEX Support](https://help.vtex.com/en/support).

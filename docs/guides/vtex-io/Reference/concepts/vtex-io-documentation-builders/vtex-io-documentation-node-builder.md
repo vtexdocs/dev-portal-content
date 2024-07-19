@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-node-builder"
 excerpt: "Learn how to use the VTEX IO Node builder."
 hidden: false
 createdAt: "2024-03-26T11:00:00.000Z"
-updatedAt: "2024-03-26T11:00:00.000Z"
+updatedAt: "2024-06-05T17:53:00.000Z"
 category: "App Development"
 ---
 The `node` builder is used to develop [backend apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-service) with TypeScript code executed by the [Node.js runtime](https://nodejs.org/en). This guide aims to provide a comprehensive understanding of how to utilize this builder effectively. For further insights, refer to [Developing services on VTEX IO](https://developers.vtex.com/docs/guides/developing-services-on-vtex-io).
@@ -16,11 +16,11 @@ An app that uses the `node` builder has a `node` folder on its root, where are l
 ```txt
 node
   ┣ 📂 clients
-    ┗ 📄 {ClientCodeFileName}.ts
+      ┗ 📄 {ClientCodeFileName}.ts
   ┣ 📂 middlewares
-   ┗ 📄 {MiddlewareCodeFileName}.ts
+      ┗ 📄 {MiddlewareCodeFileName}.ts
   ┣ 📂 event
-   ┗ 📄 {EventCodeFileName}.ts
+      ┗ 📄 {EventCodeFileName}.ts
   ┣ 📄 {TypeScriptCodeFileName}.ts
   ┣ 📄 index.ts
   ┣ 📄 package.json

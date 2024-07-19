@@ -1,19 +1,26 @@
 ---
 title: "Data residency"
 slug: "data-residency"
-hidden: true
+hidden: false
 createdAt: "2023-05-16T09:38:36.446Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
 seeAlso:
+ - "/docs/guides/data-protection-plus"
  - "/docs/guides/pii-data-architecture-specifications"
  - "/docs/guides/profile-system"
  - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
  - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
 ---
 
->❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
+>⚠️ **Closed beta:** [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta and is only available in select regions.
 
-The VTEX data residency feature enables stores implementing the [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) to select the specific geographic region where all data saved in the [Profile System](https://developers.vtex.com/docs/guides/profile-system) is stored, such as name, email, and shipping address, among others.
+>❗ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh), meaning *additional fees may apply.* 
+> 
+> If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ).
+>
+> If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/). 
+
+The VTEX data residency feature enables stores implementing [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) to select the specific geographic region where all data saved in the [Profile System](https://developers.vtex.com/docs/guides/profile-system) is stored, such as name, email, and shipping address, among others.
 
 It is possible to choose the data residency location from two available options:
 

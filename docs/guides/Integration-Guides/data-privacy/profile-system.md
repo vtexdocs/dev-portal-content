@@ -1,23 +1,26 @@
 ---
 title: "Profile System integration"
 slug: "profile-system"
-hidden: true
+hidden: false
 createdAt: "2022-02-22T22:28:50.366Z"
 updatedAt: "2022-08-19T18:42:00.613Z"
 seeAlso:
+ - "/docs/guides/data-protection-plus"
  - "/docs/guides/pii-data-architecture-specifications"
  - "/docs/guides/data-residency"
  - "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
  - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
 ---
->❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
-The **Profile System** is VTEX's single source of truth regarding shoppers' profile data. Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
+>⚠️ [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta phase, only available in select regions.<br /><br />
+> This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
+
+The **Profile System** is VTEX's single source of truth regarding shoppers' profile data for stores using [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus). Other modules, such as **Checkout** and **Order Management**, can request data from the **Profile System** when necessary.
 
 The Profile System API enables stores to:
 
 - Communicate with a single source of truth for shoppers' data.
-- Safely store [PII](https://developers.vtex.com/docs/guides/pii-data-architecture) and sensitive information.
+- Safely store PII and sensitive information.
 
 Below you can learn more about some of the Profile System's features and how to integrate with the APIs.
 

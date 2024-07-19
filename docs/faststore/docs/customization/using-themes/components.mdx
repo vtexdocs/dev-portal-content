@@ -6,9 +6,9 @@ seeAlso:
   - "/docs/guides/faststore/building-sections-overview"
 ---
 
-Customize the styling of a component by using design tokens that align with your store's branding.In this guide, you'll learn how to customize the style of a FastStore component using its local tokens. For the sake of this tutorial, We will use the `Listing` variant from the [Price Component](https://developers.vtex.com/docs/guides/faststore/atoms-price).
+Customize a component's styling using design tokens that align with your store's branding. In this guide, you'll learn how to customize the style of a FastStore component using its local tokens. For this tutorial, we will use the `Listing` variant from the [Price Component](https://developers.vtex.com/docs/guides/faststore/atoms-price).
 
-This is how Prices looks like in our current homepage (with the default color black) :
+This is how prices look like in our current homepage (with the default color black) :
 
 ![homepage-prices-default-color-black](https://vtexhelp.vtexassets.com/assets/docs/src/homepage-prices-default___2751f604ab85b1dcfa47c942e318a7cd.png)
 
@@ -25,7 +25,7 @@ This is how Prices looks like in our current homepage (with the default color bl
   [data-fs-price] {}
 ```
 
-> ℹ️ Each FastStore UI component has a list of data attributes that can be used for further customization. You can find it in the component's [Customization section](https://developers.vtex.com/docs/guides/faststore/atoms-price#customization).
+> ℹ️ Each FastStore UI component has a list of data attributes that can be used for further customization. You can find it in the component's [customization section](https://developers.vtex.com/docs/guides/faststore/atoms-price#customization).
 
 2. Now, change the color of the `Listing` variant using the `Price` [local token](https://developers.vtex.com/docs/guides/faststore/atoms-price#design-tokens). For this tutorial, we will use the shade of red `#cb4242`:
 
@@ -47,14 +47,12 @@ This is how Prices looks like in our current homepage (with the default color bl
 Since we are not specifying the `Price` component context, we are applying this change to all the `Price (data-fs-price)` occurrences where the variant is `listing`.
 If you want to apply this change in only one store component, follow the next step [Customizing a component within a section](https://developers.vtex.com/docs/guides/faststore/using-themes-components#customizing-a-component-within-a-section).
 
----
-
 ## Customizing a component within a section
 
-The starter provides a set of [native sections](https://developers.vtex.com/docs/guides/faststore/reference-list-of-native-sections), each consisting of different components with unique functionalities. You can customize the components inside its section using the available section and the component's data attributes.
+The starter provides a set of [native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections), each consisting of different components with unique functionalities. You can customize the components inside its section using the available section and the component's data attributes.
 
 In the example below, we will change the color of the [Price](https://developers.vtex.com/docs/guides/faststore/atoms-price#customization) component with the `listing` variant.
-But we only want to apply this change in the `ProductShelf` section. So, we can use the `data-fs-product-shelf` data-attribute to select the [ProductShelf component](https://developers.vtex.com/docs/guides/faststore/organisms-product-shelf#customization) in this section.
+However, we only want to apply this change to the `ProductShelf` section. So, we can use the `data-fs-product-shelf` data-attribute to select the [ProductShelf component](https://developers.vtex.com/docs/guides/faststore/organisms-product-shelf#customization) in this section.
 
 1. In your `custom-theme.scss` theme file , add the following code:
 
@@ -78,24 +76,22 @@ But we only want to apply this change in the `ProductShelf` section. So, we can 
 
 ![homepage-prices-section-background](https://vtexhelp.vtexassets.com/assets/docs/src/homepage-prices-section-background___a71b4bbf2239e560c8d61bf66cb6395d.png)
 
-Notice that in this example, only one section received the change, the `ProductShelf`. You can use this same approach whenever you need to syle FastStore UI Components.
-
----
+Notice that in this example, only one section, the `ProductShelf,` received the change. You can use this same approach whenever you need to sync FastStore UI Components.
 
 ## Customizing a new component when using override
 
 To customize a native component in FastStore to suit your store's needs, you can use the **override** feature.
-When [overriding a native component](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props#overriding-a-native-component) and using your custom component,
+When [overriding a native component](https://developers.vtex.com/docs/guides/faststore/overrides-components-and-props-v1#overriding-a-native-component) and using your custom component,
 you may need to style it from scratch. In this section, you'll learn how to style a custom component.
 
 ### Before you begin
 
-Make sure you have a basic understanding of [overriding native components and props](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props).
-Additionally, we recommend to use [CSS Module](https://nextjs.org/docs/app/building-your-application/styling/css-modules) for styling your new component.
+Make sure you have a basic understanding of [overriding native components and props](https://developers.vtex.com/docs/guides/faststore/overrides-components-and-props-v1).
+Additionally, we recommend using [CSS Module](https://nextjs.org/docs/app/building-your-application/styling/css-modules) to style your new component.
 
 > ℹ️ FastStore components support [Sass](https://sass-lang.com/) for styling by default, but you can work with your desired tool.
 
-For better understanding, we will use the example from the [Overriding Native Components and Props](https://developers.vtex.com/docs/guides/faststore/building-sections-overriding-components-and-props) guide.
+For better understanding, we will use the example from the [Overriding Native Components and Props](https://developers.vtex.com/docs/guides/faststore/overrides-components-and-props-v1) guide.
 This example demonstrates how to create a new `BuyButton`, the `CustomBuyButton` in the `ProductDetails` section.
 To follow along this section, make sure to create the `CustomBuyButton`.
 
@@ -122,7 +118,7 @@ To follow along this section, make sure to create the `CustomBuyButton`.
 
 > ℹ️ You can use FastStore UI components' customization data attribute to ease your styling process. In this example, we used `data-fs-button-wrapper`.
 
-To ensure visual consistency with your store's theme, we highly recommend utilizing the [global tokens](https://deploy-preview-563--elated-hoover-5c29bf.netlify.app/docs/guides/faststore/global-tokens-overview) whenever possible. Also, you can take advantage of the design tokens set provided by [FastStore UI Components](https://developers.vtex.com/docs/guides/docs-what-is-faststore/).
+To ensure visual consistency with your store's theme, we highly recommend utilizing the [global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) whenever possible. You can also take advantage of the design tokens set provided by [FastStore UI Components](https://developers.vtex.com/docs/guides/faststore/components-index).
 
 3. Restart the server and check the color and shape of your `CustomBuyButton` component:
 

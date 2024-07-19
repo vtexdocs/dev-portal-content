@@ -1,5 +1,5 @@
 ---
-title: "Admin builders"
+title: "Admin builder"
 slug: "vtex-io-documentation-admin-builder"
 excerpt: "Learn how to use the VTEX IO Admin builder."
 hidden: false
@@ -7,6 +7,7 @@ createdAt: "2024-03-26T11:00:00.000Z"
 updatedAt: "2024-03-26T11:00:00.000Z"
 category: "App Development"
 ---
+
 The `admin` builder is used to develop apps for the [VTEX Admin](https://help.vtex.com/en/tutorial/vtex-admin-start-here--531cHtUCUi3puRXNDmKziw) in combination with [React](https://react.dev). To understand better how to develop apps using this builder, access our [Admin Applications course](https://learn.vtex.com/docs/course-admin-lang-en).
 
 ## Folder structure

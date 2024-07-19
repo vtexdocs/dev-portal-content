@@ -1,18 +1,26 @@
 ---
 title: "Changes in VTEX features behavior to handle PII data"
 slug: "changes-in-vtex-features-behavior-to-handle-pii-data"
-hidden: true
+hidden: false
 createdAt: "2022-02-22T22:29:28.541Z"
 updatedAt: "2023-05-16T09:38:36.446Z"
 seeAlso:
+ - "/docs/guides/data-protection-plus"
  - "/docs/guides/pii-data-architecture-specifications"
  - "/docs/guides/data-residency"
  - "/docs/guides/profile-system"
  - "/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta"
 ---
->❗ This feature is in closed beta phase, meaning we are evolving it to support all scenarios. Do not share this documentation with people outside of your company.
 
-This document outlines the changes in the default behavior of certain VTEX features, which apply to stores using the [PII data architecture](https://developers.vtex.com/docs/guides/pii-data-architecture) provided by VTEX.
+>⚠️ **Closed beta:** [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus) is in closed beta and is only available in select regions.
+
+>❗ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh), meaning *additional fees may apply.*
+> 
+> If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ).
+>
+> If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
+
+This document outlines the changes in the default behavior of certain VTEX features, which apply to stores using [Data Protection Plus](https://developers.vtex.com/docs/guides/data-protection-plus).
 
 To handle PII data, we provide alternative approaches that are necessary to ensure data privacy best practices. As a result, some commerce features of the VTEX platform require adaptations when implemented by the store.
 
