@@ -22,7 +22,7 @@ See this [boilerplate implementation of an order feed consumer in C#](https://gi
 
 ## Configuring the order feed
 
-Before using the order feed to track status changes, you should configure the filtering rule applied to it using the [Update feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed/config) endpoint in the Orders API. You can use the [Retrieve feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed) endpoint to check the current feed configuration at any time.
+Before using the order feed to track status changes, you should configure the filtering rule applied to it using the [Update feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed/config) endpoint in the Orders API. You can use the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint to check the current feed configuration at any time.
 
 ### Filter
 
