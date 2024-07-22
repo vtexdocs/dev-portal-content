@@ -29,7 +29,7 @@ First, you need to set up the necessary GraphQL files to handle data submissions
 
   > ℹ️ For further details on code implementation, see the [`thirdParty`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/thirdParty) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
-<CH.Scrollycoding>
+<CH.Scrollycoding rows={7}>
 
 ### Define the types
 
@@ -39,7 +39,7 @@ Next, define the GraphQL types for your contact form.
 2. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
 3. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions.
 
-  <CH.Code rows={7} show={["contactForm.graphql"]}>
+  <CH.Code show={["contactForm.graphql"]}>
 
   ```graphql contactForm.graphql
   type ContactFormResponse {
@@ -72,7 +72,7 @@ Now, let's create the resolver function to process the form submission.
 
 In the `contactForm.ts` file, add the following code. This file imports the `contactFormResolver` and combines it with other potential resolvers into a single object.
 
-<CH.Code rows={7} show={["contactForm.ts"]}>
+<CH.Code show={["contactForm.ts"]}>
 
 ```ts contactForm.ts mark=10,12
 type SubmitContactFormData = {
@@ -124,7 +124,7 @@ export default contactFormResolver;
 
 In the `graphql/thirdParty/resolvers` folder, create an `index.ts` file to consolidate the resolvers:
 
-<CH.Code rows={7} show={["index.ts"]}>
+<CH.Code show={["index.ts"]}>
 
 ```ts index.ts
 import contactFormResolver from "./contactForm";
@@ -153,7 +153,7 @@ Create a new section to receive the Contact Form data.
 
 3. Add the following code to the `ContactForm.tsx`.
 
-  <CH.Code rows={7} show={["ContactForm.tsx"]}>
+  <CH.Code show={["ContactForm.tsx"]}>
 
   ```tsx ContactForm.tsx
   import { useCallback, useState } from "react";
@@ -269,7 +269,7 @@ Create a new section to receive the Contact Form data.
 
 In the `contact-form.module.scss` file, add the following code. The stylesheet applies specific styles to the Contact Form component, including layout and spacing adjustments.
 
-<CH.Code rows={7} show={["contact-form.module.scss"]}>
+<CH.Code show={["contact-form.module.scss"]}>
 
 ```scss contact-form.module.scss
 .contactForm {
@@ -329,7 +329,7 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 Add the section to the Headless CMS by following the instructions available in [syncing components with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 The following schema was used as an example:
 
-<CH.Code rows={7} show={["sections.json"]}>
+<CH.Code show={["sections.json"]}>
 
 ```json sections.json
 [
