@@ -349,6 +349,6 @@ There are multiple apps publicly availble that address all kinds of ecommerce sc
 
 ### App Store apps
 
-Another way to use composition in a VTEX store is with Plug-and-Play apps from the [VTEX App Store](https://apps.vtex/com). Merchants can navigate the App Store and install apps with just a few steps, without code interaction.
+Another way to use composition in a VTEX store is with Plug-and-Play apps from the [VTEX App Store](https://apps.vtex.com). Merchants can navigate the App Store and install apps with just a few steps, without code interaction.
 
 There are more than 100 available apps developed by VTEX and third-party vendors, offering many commerce solutions. Some available functionalities are social marketing integrations, data collection and analytics, marketplace integrations, gift lists, and more. See more details in the [App Store](https://help.vtex.com/tracks/extensions-hub--AW7klkYMh557y5IUOgzco/2LDRvGujYsumxi7IlE7CEJ) article.
