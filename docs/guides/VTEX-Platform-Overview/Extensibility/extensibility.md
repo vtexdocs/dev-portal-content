@@ -16,7 +16,7 @@ In this guide, we demonstrate VTEX’s extensibility in four types explained in 
 - Development Platform
 - Composable SaaS (Software as a Service)
 
-![Extensibility overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Verview/Extensibility/extensibility-overview.png)
+![Extensibility overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Extensibility/extensibility-overview.png)
 
 ## Data Services
 
