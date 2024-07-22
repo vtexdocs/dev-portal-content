@@ -11,7 +11,7 @@ VTEX is a [complete platform](https://developers.vtex.com/docs/guides/composabil
 
 In this guide, we demonstrate VTEX’s extensibility in four types explained in the sections below:
 
-- Data Services
+- [Data Services](#data-services)
 - Commerce APIs
 - Development Platform
 - Composable SaaS (Software as a Service)
