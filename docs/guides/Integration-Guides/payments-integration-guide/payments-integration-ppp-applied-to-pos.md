@@ -1,5 +1,5 @@
 ---
-title: "Payment Provider Protocol applied to payments with POS"
+title: "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App"
 slug: "payments-integration-ppp-applied-to-pos"
 hidden: false
 createdAt: "2022-09-28T22:39:13.979Z"
