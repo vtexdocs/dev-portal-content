@@ -2,9 +2,10 @@
 title: "VTEX Troubleshooting guides: Your new resource for problem-solving"
 slug: "2024-07-10-new-vtex-troubleshooting-guides"
 type: added
-createdAt: “2024-07-10T19:01:00.361Z”
-updatedAt: “2024-07-24T09:30:00.361Z”
+createdAt: "2024-07-10T19:01:00.361Z"
+updatedAt: "2024-07-24T09:30:00.361Z"
 hidden: false
+excerpt: "VTEX now offers self-service Troubleshooting Guides to streamline problem-solving for both store operations and development tasks."
 ---
 
 To simplify the VTEX support process by improving the self-service experience for solving issues in store operations and during store or app development, we now offer Troubleshooting guides available in the [Help Center](https://help.vtex.com/subcategory/store-operations--2Q0IQjRcOqSgJTh6wRHVMB) and [Developer Portal](https://developers.vtex.com/docs/troubleshooting).
