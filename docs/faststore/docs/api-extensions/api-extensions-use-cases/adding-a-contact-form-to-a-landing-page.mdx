@@ -5,7 +5,6 @@ title: 'Adding a contact form to a landing page'
 This guide illustrates how to handle data from a Contact Us form and send it to a third-party API. To this end, we will create a Contact Us page with a Contact form.
 
 > ℹ️ For detailed instructions on API extensions, refer to [API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) guide.
-
 ## Context
 
 - You want to create a Contact Us page so shoppers can contact your store.
@@ -39,7 +38,7 @@ Next, define the GraphQL types for your contact form.
 2. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
 3. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions.
 
-  <CH.Code show={["contactForm.graphql"]}>
+  <CH.Code>
 
   ```graphql contactForm.graphql
   type ContactFormResponse {
@@ -72,7 +71,7 @@ Now, let's create the resolver function to process the form submission.
 
 In the `contactForm.ts` file, add the following code. This file imports the `contactFormResolver` and combines it with other potential resolvers into a single object.
 
-<CH.Code show={["contactForm.ts"]}>
+<CH.Code>
 
 ```ts contactForm.ts mark=10,12
 type SubmitContactFormData = {
@@ -124,7 +123,7 @@ export default contactFormResolver;
 
 In the `graphql/thirdParty/resolvers` folder, create an `index.ts` file to consolidate the resolvers:
 
-<CH.Code show={["index.ts"]}>
+<CH.Code>
 
 ```ts index.ts
 import contactFormResolver from "./contactForm";
@@ -153,7 +152,7 @@ Create a new section to receive the Contact Form data.
 
 3. Add the following code to the `ContactForm.tsx`.
 
-  <CH.Code show={["ContactForm.tsx"]}>
+  <CH.Code>
 
   ```tsx ContactForm.tsx
   import { useCallback, useState } from "react";
@@ -269,7 +268,7 @@ Create a new section to receive the Contact Form data.
 
 In the `contact-form.module.scss` file, add the following code. The stylesheet applies specific styles to the Contact Form component, including layout and spacing adjustments.
 
-<CH.Code show={["contact-form.module.scss"]}>
+<CH.Code>
 
 ```scss contact-form.module.scss
 .contactForm {
@@ -321,7 +320,6 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 </CH.Code>
 
 > ℹ️ For further details on code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
-
 ---
 
 ### Synchronizing the changes with the Headless CMS
@@ -329,7 +327,7 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 Add the section to the Headless CMS by following the instructions available in [syncing components with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 The following schema was used as an example:
 
-<CH.Code show={["sections.json"]}>
+<CH.Code>
 
 ```json sections.json
 [
@@ -348,7 +346,6 @@ The following schema was used as an example:
 </CH.Code>
 
 > ℹ️ For further details on code implementation, see the `sections.json` file available in the playground.store repository.
-
 </CH.Scrollycoding>
 
 ### Creating a new landing page
