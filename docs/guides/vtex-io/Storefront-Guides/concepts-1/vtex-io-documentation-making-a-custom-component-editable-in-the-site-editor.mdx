@@ -1,45 +1,47 @@
 ---
-title: "Making a custom component editable in the Site Editor"
-slug: "making-a-custom-component-editable-in-the-site-editor"
+title: "Making a custom component editable in Site Editor"
+slug: "making-a-custom-component-editable-in-site-editor"
 hidden: false
-createdAt: "2024-06-17T20:45:34.646Z"
-updatedAt: "2024-06-17T20:45:34.646Z"
-excerpt: "Learn how to allow component customization directly in the Site Editor."
+createdAt: "2024-07-24T09:45:34.646Z"
+updatedAt: ""
+excerpt: "Learn how to allow component customization directly in Site Editor."
+seeAlso:
+   - "/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io"
 ---
 
-To allow component customization in [Site Editor](https://help.vtex.com/en/tutorial/site-editor-overview--299Dbeb9mFczUTyNQ9xPe1?&utm_source=autocomplete), you need to define the schema for each editable property and reference these definitions in the `interfaces.json` file.
+To allow component customization in [Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-site-editor), you need to define the schema for each editable property and reference these definitions in the `interfaces.json` file.
 
-In this guide, you will learn how to configure the schema definitions in your components, allowing users to customize them directly in the Site Editor.
+In this guide, you will learn how to configure the schema definitions in your components, allowing users to customize them directly in Site Editor.
 
 ## Before you begin
 
-- Ensure your store have a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed with [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [Store Framework](https://developers.vtex.com/docs/guides/store-framework), according to the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
+- Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed with [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [Store Framework](https://developers.vtex.com/docs/guides/store-framework), following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
 - Check if the [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) are properly installed in your Store Theme. You must have at least the following builders configured:
-   - [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
-   - [react builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions. 
+   - [Store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
+   - [React builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions. 
 
-## Step by step
+## Instructions
 
 <CH.Scrollycoding>
 
 ### Step 1 - Creating the files for your custom component
 
-For your block to accept user customizations, export the React component responsible for the block. This component should include a schema that allows editing directly in the Site Editor.
+For your block to accept user customizations, export the React component responsible for the block. This component should include a schema that allows editing directly in Site Editor.
 
-1. Create a new folder in the `/react` root directory. Follow the pattern `react/components/{ComponentName}/index.tsx`. For example, for a component named `CustomComponent`, the folder structure is as follows:
+1. Create a new folder in the `/react` root directory. Follow the `react/components/{ComponentName}/index.tsx` pattern. For example, for a component named `CustomComponent`, the folder structure is as follows:
    
-2. Open the `index.tsx` file and define your custom component as in the following steps.
+2. Open the `index.tsx` file and define your custom component.
 
-```txt
-react
-   ┣ 📂 components
-      ┣ 📂 CustomComponent
-         ┣ index.tsx
-```
+   ```txt
+   react
+      ┣ 📂 components
+         ┣ 📂 CustomComponent
+            ┣ index.tsx
+   ```
 
 ---
 
-### Step 2 - Defining the component's interface
+### Step 2 - Defining the component interface
   
 The `CustomComponentProps` defines the type for the component’s props, specifying `title` and `subtitle` as the expected string props.
 
@@ -94,9 +96,9 @@ The functional component `CustomComponent` takes an object with `title` and `sub
 
 ---
 
-### Step 4 - Defining the component's props
+### Step 4 - Defining the component props
   
-The `defaultProps` specifies the default values for the props of the `CustomComponent`. If the user does not define props in the Site Editor, the `defaultProps` values will be returned.
+The `defaultProps` specifies the default values for the props of the `CustomComponent`. If the user does not define props in Site Editor, the `defaultProps` values are returned.
 
 ```tsx react/CustomComponent/index.tsx focus=17:20
 ```
@@ -105,7 +107,7 @@ The `defaultProps` specifies the default values for the props of the `CustomComp
 
 ### Step 5 - Configuring the Site Editor schema
 
-The `schema` defines the structure and types of the props, allowing the component to be customized within the Site Editor.
+The `schema` defines the structure and types of the props, allowing the component to be customized in Site Editor.
 
 >ℹ️ Ensure you define the `defaultProps` and `schema` objects for the component in [JSON Schema](https://json-schema.org/) format, a declarative language that provides a standardized way to describe and validate JSON data.
 
@@ -116,7 +118,7 @@ The `schema` defines the structure and types of the props, allowing the componen
 
 ### Step 6 - Exporting the component
 
-By setting `CustomComponent` as the default export, you can import it into other parts of the app or other apps. For better organization and management, especially for apps with many custom components, it is recommended to create separate folders for each component within `react/components` and then export them from individual files in the `/react` root directory.
+By setting `CustomComponent` as the default export, you can import it into other parts of the app or other apps. For better organization and management, especially for apps with many custom components, we recommend creating separate folders for each component within `react/components` and then exporting them from individual files in the `/react` root directory.
 
 In the `/react` root directory, create a new file to export your component:
 
@@ -140,7 +142,7 @@ export default CustomComponent;
 
 Now, you need to reference your custom component in the [`interfaces.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) within the `/store` folder. This file establishes the relationship between a block and a React component, allowing the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) to build the store's frontend.
 
-In the app's repository where you are developing your custom component, open the `interfaces.json` file within the `/store` folder. Declare the schema definitions for your component as follows:
+In the app repository where you are developing your custom component, open the `interfaces.json` file within the `/store` folder. Declare the schema definitions for your component as follows:
 
 ```json store/interfaces.json
 {
@@ -154,9 +156,9 @@ In the app's repository where you are developing your custom component, open the
 
 ---
 
-### Step 8 - Using the component within a store page
+### Step 8 - Using the component in a store page
 
-To use the new component, declare it within the desired page template. For example, to use the `CustomComponent` on the store’s main page, the `custom-component` block must be declared within the `home` block:
+To use the new component, declare it in the desired page template. For example, to use the `CustomComponent` on the store’s main page, the `custom-component` block must be declared within the `home` block:
 
 ```json
 {
@@ -166,7 +168,7 @@ To use the new component, declare it within the desired page template. For examp
 }
 ```
 
-By [linking the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app), your component will be available to visualize and test in the Site Editor within the corresponding [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
+By [linking the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app), your component will be available for visualization and test in Site Editor within the corresponding [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
 
 ---
 
