@@ -69,6 +69,7 @@ type Mutation {
   submitContactForm(input: ContactFormInput!): ContactFormResponse
 }
 ```
+
 - `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
 - `ContactFormInput`: Specifies the input fields required for the contact form.
 - `Mutation`: Declares a mutation for submitting the contact form data.
@@ -268,6 +269,7 @@ export const ContactForm = () => {
 
 export default ContactForm;
 ```
+
 - This component renders a contact form with name, email, subject, and message fields.
 - The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
 
@@ -327,6 +329,7 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
   }
 }
 ```
+
 > ℹ️ For further details on code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
 </CH.Code>
@@ -354,6 +357,7 @@ The following schema was used as an example:
   }
 ]
 ```
+
 > ℹ️ For further details on code implementation, see the `sections.json` file available in the playground.store repository.
 
 </CH.Code>
