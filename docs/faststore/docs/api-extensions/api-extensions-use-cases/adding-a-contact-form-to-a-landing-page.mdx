@@ -53,6 +53,10 @@ Next, define the GraphQL types for your contact form in a file called `contactFo
 1. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
 2. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions.
 
+- `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
+- `ContactFormInput`: Specifies the input fields required for the contact form.
+- `Mutation`: Declares a mutation for submitting the contact form data.
+
 <CH.Code>
 
 ```graphql contactForm.graphql
@@ -71,10 +75,6 @@ type Mutation {
   submitContactForm(input: ContactFormInput!): ContactFormResponse
 }
 ```
-
-- `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
-- `ContactFormInput`: Specifies the input fields required for the contact form.
-- `Mutation`: Declares a mutation for submitting the contact form data.
 
 </CH.Code>
 
@@ -166,6 +166,9 @@ Create a new section to receive the Contact Form data.
    - `contant-form.module.scss`: The stylesheet for the component.
 
 3. Add the following code to the `ContactForm.tsx`.
+
+- This component renders a contact form with name, email, subject, and message fields.
+- The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
 
 <CH.Code>
 
@@ -272,9 +275,6 @@ export const ContactForm = () => {
 export default ContactForm;
 ```
 
-- This component renders a contact form with name, email, subject, and message fields.
-- The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
-
 </CH.Code>
 
 ---
@@ -282,6 +282,8 @@ export default ContactForm;
 ### Creating the stylesheet for the section
 
 In the `contact-form.module.scss` file, add the following code. The stylesheet applies specific styles to the Contact Form component, including layout and spacing adjustments.
+
+> ℹ️ For further details on code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
 <CH.Code>
 
@@ -332,8 +334,6 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 }
 ```
 
-> ℹ️ For further details on code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
-
 </CH.Code>
 
 ---
@@ -342,7 +342,9 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 
 Add the section to the Headless CMS by following the instructions available in [syncing components with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 
-The following schema was used as an example:
+The following schema was used as an example.
+
+> ℹ️ For further details on code implementation, see the `sections.json` file available in the playground.store repository.
 
 <CH.Code>
 
@@ -359,8 +361,6 @@ The following schema was used as an example:
   }
 ]
 ```
-
-> ℹ️ For further details on code implementation, see the `sections.json` file available in the playground.store repository.
 
 </CH.Code>
 

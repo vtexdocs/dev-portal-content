@@ -22,6 +22,8 @@ First, you need to set up the necessary GraphQL files to retrieve and structure 
 2. Inside `graphql`, create the `vtex` folder.
 3. In the `vtex` folder, create two other subfolders, `resolvers` and `typeDefs`.
 
+> ℹ️ For further details on code implementation, see the [`vtex`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/vtex) folder available in the playground.store repository.
+
 <CH.Code>
 
 ```txt  
@@ -34,8 +36,6 @@ src
 
 </CH.Code>
 
-> ℹ️ For further details on code implementation, see the [`vtex`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/vtex) folder available in the playground.store repository.
-
 ---
 
 ### Define the types
@@ -43,6 +43,14 @@ src
 Now that we have our file structure in place, let's define the data structure for our installment information using GraphQL.
 
 In the `typeDefs` folder, create a `product.graphql` file to define the schema. Add the following schema definitions.
+
+- `Installments`: Specifies the structure of each installment option.
+  Each installment has properties for:
+- `installmentPaymentSystemName`: The name of the payment system used (e.g., Credit Card).
+- `installmentValue`: The value of each installment.
+- `installmentInterest`: The interest rate applied per installment.
+- `installmentNumber`: The total number of installments offered.
+- `StoreProduct`: This type is being extended to include a new field called `availableInstallments`. This field is a list of installment objects, representing all the available installment options for the product.
 
 <CH.Code>
 
@@ -62,14 +70,6 @@ extend type StoreProduct {
 }
 ```
 
-- `Installments`: Specifies the structure of each installment option.
-  Each installment has properties for:
-- `installmentPaymentSystemName`: The name of the payment system used (e.g., Credit Card).
-- `installmentValue`: The value of each installment.
-- `installmentInterest`: The interest rate applied per installment.
-- `installmentNumber`: The total number of installments offered.
-- `StoreProduct`: This type is being extended to include a new field called `availableInstallments`. This field is a list of installment objects, representing all the available installment options for the product.
-
 </CH.Code>
 
 ---
@@ -79,6 +79,11 @@ extend type StoreProduct {
 Now that we've defined the structure of our installment data (GraphQL types), let's create the logic to retrieve and format this data using a resolver function. Resolvers essentially act as gateways between your frontend and backend, processing data requests.
 
 In the `resolvers` folder, create a `product.ts` file to handle the installment data logic. Add the following code.
+
+- `productResolver`: Defines a resolver for the `StoreProduct` type.
+- `availableInstallments`: Function that retrieves the Installments data from the `commertialOffer` property of the first seller (`sellers[0]`).
+- `installments.length`: Check if there are any installments (`installments.length`). If not, an empty array is returned.
+- The code iterates through each installment and maps it to a new object with the desired properties (`installmentPaymentSystemName`, `installmentValue`, etc.).
 
 <CH.Code>
 
@@ -107,18 +112,16 @@ const productResolver = {
 export default productResolver;
 ```
 
-- `productResolver`: Defines a resolver for the `StoreProduct` type.
-- `availableInstallments`: Function that retrieves the Installments data from the `commertialOffer` property of the first seller (`sellers[0]`).
-- `installments.length`: Check if there are any installments (`installments.length`). If not, an empty array is returned.
-- The code iterates through each installment and maps it to a new object with the desired properties (`installmentPaymentSystemName`, `installmentValue`, etc.).
-
 </CH.Code>
 
 ---
 
 #### Consolidating the resolvers
 
-In the `resolvers` folder, create an `index.ts` file to consolidate the resolvers:
+In the `resolvers` folder, create an `index.ts` file to consolidate the resolvers.
+
+- By default exporting resolvers, this file acts as a central hub for all your resolvers.
+- `resolvers`:Combines the imported resolver with any other resolvers you might have in your project (represented by the ellipsis `...`).
 
 <CH.Code>
 
@@ -131,9 +134,6 @@ const resolvers = {
 
 export default resolvers;
 ```
-
-- By default exporting resolvers, this file acts as a central hub for all your resolvers.
-- `resolvers`:Combines the imported resolver with any other resolvers you might have in your project (represented by the ellipsis `...`).
 
 </CH.Code>
 
@@ -149,7 +149,11 @@ Now that we've defined the `availableInstallments` field using GraphQL types and
    - `ClientProduct.ts`: Defines the Client-Side fragment.
    - `ServerProduct.ts`: Defines the Server-Side fragment.
 
-3. In the `ClientProduct.ts` file, define the GraphQL fragment for retrieving installment data:
+3. In the `ClientProduct.ts` file, define the GraphQL fragment for retrieving installment data.
+
+- `gql`: Imported from @faststore/core/api to construct the GraphQL fragment.
+- `ClientProduct`: Fragment to indicate it extends the product query.
+- The fragment defines the specific fields we want to retrieve from the `availableInstallments` data structure.
 
 <CH.Code>
 
@@ -170,17 +174,15 @@ export const fragment = gql(`
 `);
 ```
 
-- `gql`: Imported from @faststore/core/api to construct the GraphQL fragment.
-- `ClientProduct`: Fragment to indicate it extends the product query.
-- The fragment defines the specific fields we want to retrieve from the `availableInstallments` data structure.
-
 </CH.Code>
 
 ---
 
 #### Adding server-side product fragment for installment details
 
-To ensure consistency in data retrieval across client-side and server-side, add a product fragment focusing on installment details. In the `ServerProduct.ts` file, add the following:
+To ensure consistency in data retrieval across client-side and server-side, add a product fragment focusing on installment details. In the `ServerProduct.ts` file, add the following code.
+
+> ℹ️ For further details on code implementation, see the [`fragments`](https://github.com/vtex-sites/playground.store/tree/main/src/fragments) folder available in the playground.store repository.
 
 <CH.Code>
 
@@ -201,8 +203,6 @@ export const fragment = gql(`
 `);
 ```
 
-> ℹ️ For further details on code implementation, see the [`fragments`](https://github.com/vtex-sites/playground.store/tree/main/src/fragments) folder available in the playground.store repository.
-
 </CH.Code>
 
 ---
@@ -212,7 +212,12 @@ export const fragment = gql(`
 For a more user-friendly display, you can format the installment values to include currency symbols and proper locale formatting.
 
 1. In the `src` folder of your store code, create a `utils` folder.
-2. Inside `utils`, create the file `priceFormatter.ts` and add the following:
+2. Inside `utils`, create the file `priceFormatter.ts` and add the following.
+
+> ℹ️ For further details on code implementation, see the [`utils`](https://github.com/vtex-sites/playground.store/tree/main/src/utils) folder available in the playground.store repository.
+
+- `FaststoreConfig`: Imported to access the current store's locale and currency settings.
+- `priceFormatter`: This function takes a numeric value and formats it according to the store's locale and currency.
 
 <CH.Code>
 
@@ -226,11 +231,6 @@ export const priceFormatter = (value: number) => {
   });
 };
 ```
-
-- `FaststoreConfig`: Imported to access the current store's locale and currency settings.
-- `priceFormatter`: This function takes a numeric value and formats it according to the store's locale and currency.
-
-> ℹ️ For further details on code implementation, see the [`utils`](https://github.com/vtex-sites/playground.store/tree/main/src/utils) folder available in the playground.store repository.
 
 </CH.Code>
 
@@ -250,7 +250,13 @@ Now that we've established the logic for retrieving installment data, let's crea
    - `BuyButtonWithDetails.tsx`
    - `buy-button-with-details.module.scss`
 
-3. Inside `BuyButtonWithDetails.tsx` add the following:
+3. Inside `BuyButtonWithDetails.tsx` add the following code.
+
+- `priceFormatter`: Format installment values.
+- `styles`: Stylesheet for the BuyButtonWithDeatils imported from the `.scss` file.
+- [`usePDP`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions): Hook to retrieve the PDP context containing product and extension data.
+- We conditionally display the first installment option if it's interest-free (you can modify this to show all installments).
+- The component renders a section containing the installment information and the buy button.
 
 <CH.Code>
 
@@ -289,12 +295,6 @@ export function BuyButtonWithDetails(props: ButtonProps) {
 export default BuyButtonWithDetails;
 ```
 
-- `priceFormatter`: Format installment values.
-- `styles`: Stylesheet for the BuyButtonWithDeatils imported from the `.scss` file.
-- [`usePDP`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions): Hook to retrieve the PDP context containing product and extension data.
-- We conditionally display the first installment option if it's interest-free (you can modify this to show all installments).
-- The component renders a section containing the installment information and the buy button.
-
 </CH.Code>
 
 ---
@@ -332,7 +332,9 @@ Inside the `buy-button-with-details.module.scss`, add the following code. The st
 
 By including the `CustomProductDetails` section in the PDP, you replace the default buy button component with your enhanced `BuyButtonWithDetails` component, which displays both the buy button and the installment information.
 
-In the folder `CustomProductDetails`, create the `CustomProductDetails.tsx` and add the following:
+In the folder `CustomProductDetails`, create the `CustomProductDetails.tsx` and add the following code.
+
+> ℹ️ For further details on code implementation, see the [`utils`](https://github.com/vtex-sites/playground.store/tree/main/src/utils) folder available in the playground.store repository.
 
 <CH.Code>
 
@@ -349,8 +351,6 @@ const CustomProductDetails = getOverriddenSection({
 
 export default CustomProductDetails;
 ```
-
-> ℹ️ For further details on code implementation, see the [`utils`](https://github.com/vtex-sites/playground.store/tree/main/src/utils) folder available in the playground.store repository.
 
 </CH.Code>
 
