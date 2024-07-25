@@ -5,6 +5,9 @@ title: 'Adding Installment Information in the Product Details Page'
 This guide illustrates how you can display available installment options for products on your Product Details Page (PDP).
 
 > ℹ️ For detailed instructions on API extensions, refer to [API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) guide.
+
+<CH.Scrollycoding>
+
 ## Context
 
 You want to display installment details (number, value, payment system) on the PDP for products with installments. This functionality allows customers to see installment details directly on the product page, aiding their purchase decision.
@@ -23,8 +26,6 @@ First, you need to set up the necessary GraphQL files to retrieve and structure 
    - `typeDefs`
 
   > ℹ️ For further details on code implementation, see the [`vtex`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/vtex) folder available in the playground.store repository.
-
-<CH.Scrollycoding rows={7}>
 
 ### Define the types
 
@@ -343,7 +344,6 @@ export default CustomProductDetails;
 </CH.Code>
 
 > ℹ️ For further details on code implementation, see the [`utils`](https://github.com/vtex-sites/playground.store/tree/main/src/utils) folder available in the playground.store repository.
-</CH.Scrollycoding>
 
 ## Results
 
@@ -360,3 +360,5 @@ The PDP before adding the installment.
 After applying the logic for the installments, the information is available above the `Buy Button`.
 
 ![after-installment](https://vtexhelp.vtexassets.com/assets/docs/src/after-installment___77227bfcffcf9a25800effe9790100e1.png)
+
+</CH.Scrollycoding>
