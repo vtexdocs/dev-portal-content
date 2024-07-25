@@ -94,9 +94,6 @@ When a shopper is interested in a product, it may be a good idea to display rela
 
 See this guide  to learn [how to set up cross selling](https://help.vtex.com/en/tutorial/configurando-produto-similar-sugestoes-acessorios-e-genericos--tutorials_280) capabilities and use the endpoints below to retrieve this information on your storefront:
 
-- [Get Product Search of Who Saw Also Saw](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/whosawalsosaw/-productId-)
-- [Get Product Search of Who Saw Also Bought](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/whosawalsobought/-productId-)
-- [Get Product Search of Who Bought Also Bought](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/whoboughtalsobought/-productId-)
 - [Get Product Search of Show Together](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/showtogether/-productId-)
 - [Get Product Search of Accessories](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/accessories/-productId-)
 - [Get Product Search of Similars](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/crossselling/similars/-productId-)
