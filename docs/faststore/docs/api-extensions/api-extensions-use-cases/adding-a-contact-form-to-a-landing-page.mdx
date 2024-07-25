@@ -5,6 +5,9 @@ title: 'Adding a contact form to a landing page'
 This guide illustrates how to handle data from a Contact Us form and send it to a third-party API. To this end, we will create a Contact Us page with a Contact form.
 
 > ℹ️ For detailed instructions on API extensions, refer to [API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) guide.
+
+<CH.Scrollycoding>
+
 ## Context
 
 - You want to create a Contact Us page so shoppers can contact your store.
@@ -27,8 +30,6 @@ First, you need to set up the necessary GraphQL files to handle data submissions
 4. Create an `index.ts` file inside the `resolvers` folder to set up the base structure for your resolver functions.
 
   > ℹ️ For further details on code implementation, see the [`thirdParty`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/thirdParty) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
-
-<CH.Scrollycoding rows={7}>
 
 ### Define the types
 
@@ -356,10 +357,10 @@ Let’s create a new landing page for the Contact Us page to add the new Contact
 4. Go to the `Settings` tab and add the following path in the **Path** field: `/contact-us.`
 5. Click `Save`.
 
-</CH.Scrollycoding>
-
 ## Results
 
 Once you have [set your development mode](https://developers.vtex.com/docs/guides/building-sections/overrides/sending-components-to-the-headless-cms#previewing-changes-in-the-development-mode) to see the changes locally, access the `https://localhost:3000/contact-us` and you will see the new landing page with the Contact us form. Below, you can check a storefront example:
 
 ![contact-form-component](https://vtexhelp.vtexassets.com/assets/docs/src/api-extension-example-one___ceffcf6726b7316bbe61eaf4c013e069.png)
+
+</CH.Scrollycoding>
