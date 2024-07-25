@@ -53,12 +53,12 @@ The Minimum Boilerplate Theme should be used only when you want to start a new s
 
 The [**Store Theme**](https://github.com/vtex-apps/store-theme) is a boilerplate with pre-set configurations to create a store using [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io).
 
-![store-theme-gif](https://user-images.githubusercontent.com/67270558/169829563-6ac39b89-7c9e-4d5e-a2ac-c2139e70e34a.gif) 
+![store-theme-gif](https://user-images.githubusercontent.com/67270558/169829563-6ac39b89-7c9e-4d5e-a2ac-c2139e70e34a.gif)
 
 This boilerplate gives you a ready-to-go default storefront structure, including:
 
 - **Pre-configured layouts:** A variety of files organized in different folders within the `/store/blocks` folder. These files combine our native [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) to create templates for different parts of the store, such as the homepage, product details page, and order-placed page.
 - **Default styles:** A customizable set of styles that helps you achieve a professional look and feel without extensive custom styling.
-- **Sitemap:** An example of a [Sitemap](https://github.com/vtex-apps/store-theme/blob/master/sitemap/sitemap.json) use case. 
+- **Sitemap:** An example of a [Sitemap](https://github.com/vtex-apps/store-theme/blob/master/sitemap/sitemap.json) use case.
 
 >ℹ️ Learn how to start a project with this boilerplate in the [Creating a Store Theme project](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-settingyourstoretheme) guide.
