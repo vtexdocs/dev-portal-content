@@ -6,7 +6,6 @@ This guide illustrates how to handle data from a Contact Us form and send it to 
 
 > ℹ️ For detailed instructions on API extensions, refer to [API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) guide.
 
-<CH.Scrollycoding>
 
 ## Context
 
@@ -16,6 +15,8 @@ This guide illustrates how to handle data from a Contact Us form and send it to 
 
 
 ## Implementation
+
+<CH.Scrollycoding>
 
 ### Create the GraphQL files
 
@@ -36,8 +37,9 @@ First, you need to set up the necessary GraphQL files to handle data submissions
 ### Define the types
 
 Next, define the GraphQL types for your contact form in a file called `contactForm.graphql` inside the `thirdParty` folder. This file will contain type definitions for your GraphQL schema.
-2. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
-3. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions.
+
+1. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
+2. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions.
 
   <CH.Code>
 
