@@ -59,9 +59,7 @@ To solve this problem, follow these steps:
      ![windows-yarn-global-bin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/windows-yarn-global-bin.png)
 
   2. Copy the path that the terminal returns after running the `yarn global bin` command.
- 
   3. In the Windows search bar, write Edit the system environment variables.
-     
   4. Click `Open`.
 
       ![edit-variables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/windows-search-en.png)
@@ -81,7 +79,6 @@ To solve this problem, follow these steps:
       ![edit-environment-variable](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/new-variable-en.png)
 
   8. Paste the path you copied in step 2.
-      
   9. Click `OK`.
 
       ![new-variable](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/new-variable-2-en.png)
