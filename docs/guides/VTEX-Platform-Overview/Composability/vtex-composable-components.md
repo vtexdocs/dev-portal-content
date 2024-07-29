@@ -309,7 +309,7 @@ Various tools are available for creating new features on the VTEX platform. Deve
 
 ## Integrations
 
-Integrations allow external providers to integrate their solutions with VTEX stores by leveraging [VTEX APIs](https://developers.vtex.com/docs/api-reference). Many integrations are readily available from our partner ecosystem. Merchants juat need to install and configure them before use. You can also develop new integrations by following our integration guides or request this service from our [partners](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#implementation-partners).
+Integrations allow external providers to integrate their solutions with VTEX stores by leveraging [VTEX APIs](https://developers.vtex.com/docs/api-reference). Many integrations are readily available from our partner ecosystem. Merchants just need to install and configure them before use. You can also develop new integrations by following our integration guides or request this service from our [partners](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#implementation-partners).
 
 For more information about how integrations work, see our [Backend integrations overview](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/7euXDZR5CCnVFSrXyczIhu) and the **Integration Guides** section in our [Developer Portal](https://developers.vtex.com/docs/guides).
 
