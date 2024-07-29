@@ -6,7 +6,7 @@ createdAt: "2024-07-29T14:00:15.623Z"
 updatedAt: ""
 ---
 
-`scopes` and `requiredScopes` are Headless CMS schema definitions that define which store sections can be added to specific pages (defined within [Content Types](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms)).
+`scopes` and `requiredScopes` are Headless CMS schema definitions that define which store sections can be added to specific pages, defined within [Content Types](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms).
 
 These features help manage the content structure and ensure store sections are used in appropriate contexts. For example, you might make the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) available only for the home page or also on other pages, such as the Product Details Page (PDP).
 
@@ -110,50 +110,50 @@ In the following example, let’s set a new Content Type `Custom Page` to displa
 
     ```json content-types.json
     {
-    "id": "customPage",
-    "name": "Custom Page",
-    "scopes": ["custom"],
-    "configurationSchemaSets": [
-        {
-        "name": "Settings",
-        "configurations": [
+        "id": "customPage",
+        "name": "Custom Page",
+        "scopes": ["custom"],
+        "configurationSchemaSets": [
             {
-            "name": "seo",
-            "schema": {
-                "title": "SEO",
-                "description": "Search Engine Optimization options",
-                "type": "object",
-                "widget": {
-                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
-                },
-                "required": ["slug", "title", "description"],
-                "properties": {
-                "slug": {
-                    "title": "Path",
-                    "type": "string",
-                    "default": "/"
-                },
-                "title": {
-                    "title": "Default page title",
-                    "description": "Display this title when no other title is available",
-                    "type": "string",
-                    "default": "FastStore Starter"
-                },
-                "description": {
-                    "title": "Meta tag description",
-                    "type": "string",
-                    "default": "A beautifully designed store"
-                },
-                "canonical": {
-                    "title": "Canonical url for the page",
-                    "type": "string"
-                }
-                }
-            }
+                "name": "Settings",
+                "configurations": [
+                    {
+                        "name": "seo",
+                        "schema": {
+                            "title": "SEO",
+                            "description": "Search Engine Optimization options",
+                            "type": "object",
+                            "widget": {
+                                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+                            },
+                            "required": ["slug", "title", "description"],
+                            "properties": {
+                                "slug": {
+                                    "title": "Path",
+                                    "type": "string",
+                                    "default": "/"
+                                },
+                                "title": {
+                                    "title": "Default page title",
+                                    "description": "Display this title when no other title is available",
+                                    "type": "string",
+                                    "default": "FastStore Starter"
+                                },
+                                "description": {
+                                    "title": "Meta tag description",
+                                    "type": "string",
+                                    "default": "A beautifully designed store"
+                                },
+                                "canonical": {
+                                    "title": "Canonical url for the page",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
             }
         ]
-        }
-    ]
     }
     ```
 
@@ -163,43 +163,43 @@ In the following example, let’s set a new Content Type `Custom Page` to displa
 
     ```json sections.json
     [
-    {
-        "name": "CallToAction",
-        "requiredScopes": ["custom"],
-        "schema": {
-        "title": "Call To Action",
-        "description": "Get your 20% off on the first purchase!",
-        "type": "object",
-        "required": [
-            "title",
-            "link"
-        ],
-        "properties": {
-            "title": {
-            "title": "Title",
-            "type": "string"
-            },
-            "link": {
-            "title": "Link Path",
-            "type": "object",
-            "required": [
-                "text",
-                "url"
-            ],
-            "properties": {
-                "text": {
-                "title": "Text",
-                "type": "string"
-                },
-                "url": {
-                "title": "URL",
-                "type": "string"
+        {
+            "name": "CallToAction",
+            "requiredScopes": ["custom"],
+            "schema": {
+                "title": "Call To Action",
+                "description": "Get your 20% off on the first purchase!",
+                "type": "object",
+                "required": [
+					"title",
+					"link"
+				],
+                "properties": {
+                    "title": {
+                        "title": "Title",
+                        "type": "string"
+                    },
+                    "link": {
+                        "title": "Link Path",
+                        "type": "object",
+                        "required": [
+							"text",
+							"url"
+						],
+                        "properties": {
+                            "text": {
+                                "title": "Text",
+                                "type": "string"
+                            },
+                            "url": {
+                                "title": "URL",
+                                "type": "string"
+                            }
+                        }
+                    }
                 }
             }
-            }
         }
-        }
-    }
     ]
     ```
 
