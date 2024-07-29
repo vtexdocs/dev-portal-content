@@ -16,7 +16,7 @@ This guide explains how to use the [Message Center API](https://developers.vtex.
 
 It is necessary to use the `POST` [Generate DKIM keys](https://developers.vtex.com/docs/api-reference/message-center-api?endpoint=post-/api/mail-service/pvt/providers/-EmailProvider-/dkim) endpoint from Message Center API, as follows:
 
-`POST https://{accountName}.{environment}.com/api/mail-service/pvt/providers/{EmailProvider}/dkim`
+`POST https://{accountName}.{environment}.com.br/api/mail-service/pvt/providers/{EmailProvider}/dkim`
 
 - `{accountName}` should be replaced with your store account name (e.g. `apiexamples`).
 - `{environment}` should be replaced with the environment you are using (e.g. `vtexcommercestable`).
