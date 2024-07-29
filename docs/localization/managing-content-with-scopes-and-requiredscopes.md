@@ -1,9 +1,9 @@
 ---
-title: "Managing content with ‘scopes’ and ‘requiredScopes’"
+title: "Managing content with 'scopes' and 'requiredScopes'"
 slug: "managing-content-with-scopes-and-requiredscopes"
 hidden: false
 createdAt: "2024-07-29T14:00:15.623Z"
-updatedAt: ""
+updatedAt: "2024-07-29T15:12:15.623Z"
 ---
 
 `scopes` and `requiredScopes` are Headless CMS schema definitions that define which store sections can be added to specific pages (defined within [Content Types](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms)).
@@ -50,7 +50,7 @@ When [creating custom sections](https://developers.vtex.com/docs/guides/faststor
 | ------------- | ------------- |
 |`custom`|Landing Page|
 |`global`|Global Sections|
-|`landing`|Landing Page and |
+|`landing`|Landing Page |
 |`pdp`|Product Details Page|
 |`plp`|Product Listing Page|
 |`search`|Search Page|
@@ -65,7 +65,7 @@ In the following example, the [`ProductShelf` section](https://developers.vtex.c
 
 ```json
 {
-  "name": "ProductSheld",
+  "name": "ProductShelf",
   "requiredScopes": ["pdp"],
   "schema": {...},
 }
@@ -101,11 +101,9 @@ In the following example, let’s set a new Content Type `Custom Page` to displa
 ![create-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-sections-final-result___0b7a9ad190b98753b7a99edec657f3f5.png)
 
 > ⚠️ To better understand this tutorial, make sure you create the new `Call To Action` component by following the instructions in the [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section#call-to-action) guide.
-
 ### Setting up the Headless CMS files
 
 > ⚠️ Make sure to have set the Headless CMS files `content-types.json` and `sections.json` in your store project by following the guide [Setting up the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms). These files keep the store’s custom Content Types and sections.
-
 1. In the `content-types.json` file, create a new `Custom Page` Content Type by adding the following:
 
     ```json content-types.json
@@ -157,56 +155,55 @@ In the following example, let’s set a new Content Type `Custom Page` to displa
     }
     ```
 
-    We defined the "scopes": ["custom"] for the new `customPage` Content Type. The `custom` scope is also the [`landingPage` default scope defined in FastStore](#default-faststore-scopes).
+    We defined the `"scopes": ["custom"]` for the new `customPage` Content Type. The `custom` scope is also the [`landingPage` default scope defined in FastStore](#default-faststore-scopes).
 
 2. In the `sections.json` file, add the following:
 
-```json sections.json
-[
-  {
-    "name": "CallToAction",
-    "requiredScopes": ["custom"],
-    "schema": {
-      "title": "Call To Action",
-      "description": "Get your 20% off on the first purchase!",
-      "type": "object",
-      "required": [
-        "title",
-        "link"
-      ],
-      "properties": {
-        "title": {
-          "title": "Title",
-          "type": "string"
-        },
-        "link": {
-          "title": "Link Path",
-          "type": "object",
-          "required": [
-            "text",
-            "url"
-          ],
-          "properties": {
-            "text": {
-              "title": "Text",
-              "type": "string"
+    ```json sections.json
+    [
+    {
+        "name": "CallToAction",
+        "requiredScopes": ["custom"],
+        "schema": {
+        "title": "Call To Action",
+        "description": "Get your 20% off on the first purchase!",
+        "type": "object",
+        "required": [
+            "title",
+            "link"
+        ],
+        "properties": {
+            "title": {
+            "title": "Title",
+            "type": "string"
             },
-            "url": {
-              "title": "URL",
-              "type": "string"
+            "link": {
+            "title": "Link Path",
+            "type": "object",
+            "required": [
+                "text",
+                "url"
+            ],
+            "properties": {
+                "text": {
+                "title": "Text",
+                "type": "string"
+                },
+                "url": {
+                "title": "URL",
+                "type": "string"
+                }
             }
-          }
+            }
         }
-      }
+        }
     }
-  }
-]
-```
+    ]
+    ```
 
 For the `Call To Action` section, we defined that it will be available only for `customPage` and `landingPage` Content Types.
 
 > ℹ️ Remember that the `Call To Action` section is also available for the `landingPage` Content Type because the [`custom` scope is default for it in FastStore](#default-faststore-scopes).
-
 - When editing the `Custom Page` Content Type, the Headless CMS checks its scopes (`custom`) and matches them against the sections' `requiredScopes` (`custom`).
 - Since the Call to Action section matches the Custom Page and Landing Page scope, the section is available to use in these two Content Types.
 
@@ -217,12 +214,12 @@ For the `Call To Action` section, we defined that it will be available only for 
 3. Click on the `Create Document` dropdown.
 4. Click on `Custom Page`:
 
-![create-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-sections___9b707a54b4807b9de9bae3e0616d10eb.gif)
+    ![create-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-sections___9b707a54b4807b9de9bae3e0616d10eb.gif)
 
-1. In the `Sections` tab, click on `Add Section` (`+`).
-2. Select the **Call To Action** section.
-3. Set the section fields as you wish.
-4. Click `Save`.
-5. Click `Preview` to preview the saved content. You will see a section similar to the image below with a title **Shop deals in Fashion** and a Call To Action button `See all deals`.
+5. In the `Sections` tab, click on `Add Section` (`+`).
+6. Select the **Call To Action** section.
+7. Set the section fields as you wish.
+8. Click `Save`.
+9. Click `Preview` to preview the saved content. You will see a section similar to the image below with a title **Shop deals in Fashion** and a Call To Action button `See all deals`.
 
-![create-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-sections-final-result___0b7a9ad190b98753b7a99edec657f3f5.png)
+    ![create-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-sections-final-result___0b7a9ad190b98753b7a99edec657f3f5.png)
