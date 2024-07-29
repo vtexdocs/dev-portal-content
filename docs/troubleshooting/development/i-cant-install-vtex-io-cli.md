@@ -3,7 +3,7 @@ title: "I can't install VTEX IO CLI"
 slug: "i-cant-install-vtex-io-cli"
 hidden: false
 createdAt: "2024-06-04T11:15:35.508Z"
-updatedAt: "2024-06-04T11:15:35.508Z"
+updatedAt: "2024-07-26T14:32:31.327Z"
 excerpt: 'When installing VTEX IO CLI, there is the error "Error: Cannot find module vtex."'
 tags:
     - store-framework
@@ -29,7 +29,9 @@ To solve this problem, follow these steps:
 3. If the problem continues, you need to follow the steps below according to your operating system:
 
 - MacOS:
+  
   1. Create a [symlink](https://en.wikipedia.org/wiki/Symbolic_link) from {vtex-folder}/node_modules/vtex to {vtex-folder}/.
+  
   2. Run the following command in the terminal:
 
     ```sh
@@ -37,7 +39,9 @@ To solve this problem, follow these steps:
     ```
 
 - Linux:
+  
   1. Create a [symlink](https://en.wikipedia.org/wiki/Symbolic_link) from {vtex-folder}/node_modules/vtex to {vtex-folder}/.
+  
   2. Run the following command in the terminal:
 
     ```sh
@@ -45,11 +49,16 @@ To solve this problem, follow these steps:
     ```
 
 - Windows
+  
   1. Run the `yarn global bin` command in your terminal.
-  2. Copy the path. In the example below, `C:\Users\Barbara Celi\AppData\Local\Yarn\bin`
+  
+     The expected output is a path, which is the location where globally installed Yarn packages are stored on your computer. It might follow the pattern: `{UserProfileDirectory}\AppData\Local\Yarn\bin`, where `{UserProfileDirectory}` refers to the directory for your user profile, typically found at `C:\Users\{YourUserName}` on Windows systems.
 
-      ![windows-yarn-global-bin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/windows-yarn-global-bin.png)
+     In the example below, the output is `C:\Users\Barbara Celi\AppData\Local\Yarn\bin`:
 
+     ![windows-yarn-global-bin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/windows-yarn-global-bin.png)
+
+  2. Copy the path that the terminal returns after running the `yarn global bin` command.
   3. In the Windows search bar, write Edit the system environment variables.
   4. Click `Open`.
 
