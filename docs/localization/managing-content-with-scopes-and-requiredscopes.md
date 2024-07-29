@@ -1,0 +1,228 @@
+---
+title: "Managing content with ‘scopes’ and ‘requiredScopes’"
+slug: "managing-content-with-scopes-and-requiredscopes"
+hidden: false
+createdAt: "2024-07-29T14:00:15.623Z"
+updatedAt: ""
+---
+
+`scopes` and `requiredScopes` are Headless CMS schema definitions that define which store sections can be added to specific pages (defined within [Content Types](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms)).
+
+These features help manage the content structure and ensure store sections are used in appropriate contexts. For example, you might make the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) available only for the home page or also on other pages, such as the Product Details Page (PDP).
+
+## Before you begin
+
+<Steps>
+
+### Update `@faststore/core` package version
+
+Make sure you have `@faststore/core` at version `3.0.18` or greater to benefit from this feature. If you do not have the package updated, follow the instructions available in [Updating the `@fastore/core` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-core-package-version).
+
+### Set the Headless CMS
+
+Make sure to have set the Headless CMS files `content-types.json` and `sections.json` in your store project by following the guide [Setting up the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms). These files keep the store’s custom Content Types and sections.
+
+</Steps>
+
+## `scopes`
+
+`scopes` are labels that define the context provided by a Content Type. They help categorize Content Types based on their capabilities.
+
+The `scopes` are string arrays within your Content Type's definition in the [`content-types.json` file](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms). For example:
+
+```json
+{
+  "id": "home",
+  "name": "Home",
+  "scopes": ["home"],
+  "isSingleton": true,
+  "configurationSchemaSets": [...]
+}
+```
+
+In this example, the `Home` Content Type stores content for your home page and has a `scopes` named `home`. These `scopes` mean only sections designed for the home page context can be used with this Content Type.
+
+### Default FastStore `scopes`
+
+When [creating custom sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections), you can restrict their usage to specific Content Types using these default scopes:
+
+| `scopes` name | Content Types |
+| ------------- | ------------- |
+|`custom`|Landing Page|
+|`global`|Global Sections|
+|`landing`|Landing Page and |
+|`pdp`|Product Details Page|
+|`plp`|Product Listing Page|
+|`search`|Search Page|
+
+## `requiredScopes`
+
+`requiredScopes` defines which Content Types a section can be used within. Similar to `scopes`, they are specified as string arrays within the section definition in the [`sections.json` file](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms).
+
+A section is only available for a Content Type in the Headless CMS if the Content Type's `scopes` include at least one matching `scopes` from the section's `requiredScopes`. Sections without any `requiredScopes` can be used in any Content Type.
+
+In the following example, the [`ProductShelf` section](https://developers.vtex.com/docs/guides/faststore/organisms-product-shelf) is only available for PDPs:
+
+```json
+{
+  "name": "ProductSheld",
+  "requiredScopes": ["pdp"],
+  "schema": {...},
+}
+```
+
+### Empty `requiredScopes`
+
+When a section has an empty `requiredScopes` (`[]`), the section is available for all Content Types. In the following example, the [`Navbar` section](https://developers.vtex.com/docs/guides/faststore/organisms-navbar) is available to use in any Content Type since it has no required `scopes`:
+
+```json
+{
+  "name": "Navbar",
+  "requiredScopes": [ ],
+  "schema": {...}
+}
+```
+
+### Default FastStore `requiredScopes`
+
+When [creating custom sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms) for the Headless CMS, you can use these default `requiredScopes` for specific Content Types:
+
+| `requiredScopes` name | Section name |
+| --------------------- | ------------ |
+|`custom`|`CrossSelingShelf`.|
+|`pdp`|`CrossSelingShelf`, `Breadcrumb`, and `ProductDetails`.|
+|`plp`|`Breadcrumb` and `ProductGallery`.|
+|`search`|`ProductGallery`.|
+
+## Using `scopes` and `requiredScopes`
+
+In the following example, let’s set a new Content Type `Custom Page` to display a new `Call To Action` section.
+
+![create-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-sections-final-result___0b7a9ad190b98753b7a99edec657f3f5.png)
+
+> ⚠️ To better understand this tutorial, make sure you create the new `Call To Action` component by following the instructions in the [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section#call-to-action) guide.
+
+### Setting up the Headless CMS files
+
+> ⚠️ Make sure to have set the Headless CMS files `content-types.json` and `sections.json` in your store project by following the guide [Setting up the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms). These files keep the store’s custom Content Types and sections.
+
+1. In the `content-types.json` file, create a new `Custom Page` Content Type by adding the following:
+
+    ```json content-types.json
+    {
+    "id": "customPage",
+    "name": "Custom Page",
+    "scopes": ["custom"],
+    "configurationSchemaSets": [
+        {
+        "name": "Settings",
+        "configurations": [
+            {
+            "name": "seo",
+            "schema": {
+                "title": "SEO",
+                "description": "Search Engine Optimization options",
+                "type": "object",
+                "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+                },
+                "required": ["slug", "title", "description"],
+                "properties": {
+                "slug": {
+                    "title": "Path",
+                    "type": "string",
+                    "default": "/"
+                },
+                "title": {
+                    "title": "Default page title",
+                    "description": "Display this title when no other title is available",
+                    "type": "string",
+                    "default": "FastStore Starter"
+                },
+                "description": {
+                    "title": "Meta tag description",
+                    "type": "string",
+                    "default": "A beautifully designed store"
+                },
+                "canonical": {
+                    "title": "Canonical url for the page",
+                    "type": "string"
+                }
+                }
+            }
+            }
+        ]
+        }
+    ]
+    }
+    ```
+
+    We defined the "scopes": ["custom"] for the new `customPage` Content Type. The `custom` scope is also the [`landingPage` default scope defined in FastStore](#default-faststore-scopes).
+
+2. In the `sections.json` file, add the following:
+
+```json sections.json
+[
+  {
+    "name": "CallToAction",
+    "requiredScopes": ["custom"],
+    "schema": {
+      "title": "Call To Action",
+      "description": "Get your 20% off on the first purchase!",
+      "type": "object",
+      "required": [
+        "title",
+        "link"
+      ],
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "link": {
+          "title": "Link Path",
+          "type": "object",
+          "required": [
+            "text",
+            "url"
+          ],
+          "properties": {
+            "text": {
+              "title": "Text",
+              "type": "string"
+            },
+            "url": {
+              "title": "URL",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+]
+```
+
+For the `Call To Action` section, we defined that it will be available only for `customPage` and `landingPage` Content Types.
+
+> ℹ️ Remember that the `Call To Action` section is also available for the `landingPage` Content Type because the [`custom` scope is default for it in FastStore](#default-faststore-scopes).
+
+- When editing the `Custom Page` Content Type, the Headless CMS checks its scopes (`custom`) and matches them against the sections' `requiredScopes` (`custom`).
+- Since the Call to Action section matches the Custom Page and Landing Page scope, the section is available to use in these two Content Types.
+
+### Syncing the Headless CMS changes
+
+1. Open the terminal and run `yarn cms-sync` to sync the new files created in the previous step.
+2. In the VTEX Admin, go to **Storefront > Headless CMS**, and open the FastStore project.
+3. Click on the `Create Document` dropdown.
+4. Click on `Custom Page`:
+
+![create-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-sections___9b707a54b4807b9de9bae3e0616d10eb.gif)
+
+1. In the `Sections` tab, click on `Add Section` (`+`).
+2. Select the **Call To Action** section.
+3. Set the section fields as you wish.
+4. Click `Save`.
+5. Click `Preview` to preview the saved content. You will see a section similar to the image below with a title **Shop deals in Fashion** and a Call To Action button `See all deals`.
+
+![create-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-sections-final-result___0b7a9ad190b98753b7a99edec657f3f5.png)
