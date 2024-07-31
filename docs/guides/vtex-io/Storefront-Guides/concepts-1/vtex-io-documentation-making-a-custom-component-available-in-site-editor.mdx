@@ -36,7 +36,7 @@ For your block to accept user customizations, export the React component respons
   react
      ┣ 📂 components
         ┣ 📂 CustomComponent
-           ┣ index.tsx
+           ┗ 📄 index.tsx
 ```
 
 ---
@@ -146,9 +146,9 @@ In the app repository where you are developing your custom component, open the `
 
 ```json store/interfaces.json
 {
-"custom-component": {
-   "component": "CustomComponent",
-   }
+  "custom-component": {
+    "component": "CustomComponent",
+  }
 }
 ```
 
@@ -162,9 +162,9 @@ To use the new component, declare it in the desired page template. For example, 
 
 ```json
 {
-"store.home": {
-   "blocks": ["custom-component"]
-}
+  "store.home": {
+    "blocks": ["custom-component"]
+  }
 }
 ```
 
@@ -177,6 +177,7 @@ By [linking the app](https://developers.vtex.com/docs/guides/vtex-io-documentati
 After configuring and testing your component, deploy the new version of your app to make it available in the live store’s Site Editor.
 
 Learn how to make it available in the [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide.
+
 When the process is finished, the component will appear as follows in the live account’s Site Editor:
 
 ![default-schema](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/default-schema.png)
