@@ -120,7 +120,7 @@ The feature Price Table is identified by the sessions system in the namespace `p
 
 ### Region
 
-The region feature is identified by the sessions system in the namespace `checkout`, with the `regionId` property, which is generated when a `postalCode` and a `country` are added to a session. The feature’s objective is to regionalize the experience of the user in the store. It allows, for example, sellers to configure their own prices and marketplaces to display according to the customer’s region. To configure price and availability according to the customer’s region, access our article about [setting up SKU price and availability by Region](https://help.vtex.com/en/tutorial/setting-up-price-and-availability-of-skus-by-region).
+The region feature is identified by the sessions system in the namespace `checkout`, with the `regionId` property, which is generated when a `postalCode` and a `country` are added to a session. The feature’s objective is to regionalize the experience of the user in the store. It allows, for example, sellers to configure their own prices and marketplaces to display according to the customer’s region. To configure price and availability according to the customer’s region, access our article about [setting up SKU price and availability by Region](https://help.vtex.com/en/tutorial/setting-up-price-and-availability-of-skus-by-region--12ne58BmvYsYuGsimmugoc).
 
 ### Campaign Audiences
 
