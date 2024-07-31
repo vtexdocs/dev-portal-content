@@ -62,7 +62,7 @@ Below you will find a list of possible namespaces that can be returned by the AP
 - `cookie`: Namespace with information on the authentication cookies of the user.
 - `impersonate`: Namespace that identifies if the logged in user has permission to impersonate another user and browse on that user’s behalf.
 - `profile`: Namespace with information related to the customer’s profile logged into that session. Eligible price tables for that customer are listed in this namespace.
-- `public`: Namespace with general information on a session, `utm_campaign`, `utm_source` and `utmi_campaign`. In this namespace, we also find information about `country` and `post Code`, which are given to VTEX’s checkout so that it can return the `regionId`, require in the namespace `checkout`.
+- `public`: Namespace with general information on a session, `utm_campaign`, `utm_source` and `utmi_campaign`. In this namespace, we also find information about `country` and `postalCode`, which are given to VTEX’s checkout so that it can return the `regionId`, require in the namespace `checkout`.
 - `authentication`: Namespace with user authentication data in the context of the session.
 - `rnb`: Namespace that gives information related to applicable Campaign Audiences and promotions for that session.
 
@@ -120,7 +120,7 @@ The feature Price Table is identified by the sessions system in the namespace `p
 
 ### Region
 
-The region feature is identified by the sessions system in the namespace `checkout`, with the `regionId` property, which is generated when a `post Code` and a `country` are added to a session. The feature’s objective is to regionalize the experience of the user in the store. It allows, for example, sellers to configure their own prices and marketplaces to display according to the customer’s region. To configure price and availability according to the customer’s region, access our article about [setting up SKU price and availability by Region](https://help.vtex.com/en/tutorial/%20setting-up-price-and-availability-of-skus-by-region).
+The region feature is identified by the sessions system in the namespace `checkout`, with the `regionId` property, which is generated when a `postalCode` and a `country` are added to a session. The feature’s objective is to regionalize the experience of the user in the store. It allows, for example, sellers to configure their own prices and marketplaces to display according to the customer’s region. To configure price and availability according to the customer’s region, access our article about [setting up SKU price and availability by Region](https://help.vtex.com/en/tutorial/%20setting-up-price-and-availability-of-skus-by-region).
 
 ### Campaign Audiences
 
