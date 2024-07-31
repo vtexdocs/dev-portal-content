@@ -1,7 +1,7 @@
 ---
 title: "Test"
 slug: "payment-provider-list-test"
-hidden: false
+hidden: true
 createdAt: "2024-07-31T00:0:00.139Z"
 updatedAt: ""
 ---
