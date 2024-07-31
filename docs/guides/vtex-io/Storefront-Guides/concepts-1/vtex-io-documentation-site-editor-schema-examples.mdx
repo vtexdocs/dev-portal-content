@@ -2,14 +2,14 @@
 title: "Site Editor schema examples"
 slug: "site-editor-schema-examples"
 hidden: false
-createdAt: "2024-06-24T12:55:00.347Z"
-updatedAt: "2024-06-24T12:55:00.347Z"
-excerpt: "Explore practical schema examples for configuring custom components in the Site Editor"
+createdAt: "2024-07-31T18:01:27.599Z"
+updatedAt: ""
+excerpt: "Explore practical schema examples for configuring custom components in Site Editor"
 seeAlso: 
-  - “/docs/guides/vtex-io-documentation-making-a-custom-component-editable-in-the-site-editor”
+  - “/docs/guides/vtex-io-documentation-making-a-custom-component-available-in-site-editor”
 ---
 
-When configuring a custom component, you need to define a schema within it to make it editable by user administrators directly in the Site Editor. To learn how to configure the schema definitions, check out the [Making your component available in Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-a-custom-component-editable-in-the-site-editor) guide.
+When configuring a custom component, you need to define a schema within it to make it editable by user administrators directly in Site Editor. Learn how to configure the schema definitions in the [Making a custom component available in Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-a-custom-component-editable-in-the-site-editor) guide.
 
 To create your schemas, use the [JSON Schema](https://json-schema.org/) format, a declarative language that provides a standardized way to describe and validate JSON data.
 
@@ -26,7 +26,7 @@ In this guide, you will learn how to use each data type effectively.
 
 ## String 
 
-Alongside, you can see the [`HeaderComponentProps`](focus://3:5) interface, which specifies the types of the `title` and `subtitle` props. This interface is used to type-check the props that are passed to the `HeaderComponent`.
+Alongside, you can see the [`HeaderComponentProps`](focus://3:5) interface, which specifies the types of the `title` and `subtitle` props. This interface is used to type-check the props passed to the `HeaderComponent`.
 
 The [`HeaderComponent`](focus://8:15) is a functional component that accepts `title` and `subtitle` as props, which are destructured from the props object defined by the interface.
 
@@ -129,15 +129,17 @@ export default ImageComponent;
 
 </CH.Code>
 
-In the Site Editor, this custom component will look like this:
+In Site Editor, this custom component will look like this:
 
-![string-image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/string-image-custom-component.png)
+
+
+![string-image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/string-image-custom-component.png)
 
 ---
 
 ### Dates
 
-Consider a [component](focus://8:15) that allows users to input an initial and a final date (e.g., `DateComponentProps.tsx`).
+Consider a [component](focus://8:15) that allows users to input a start and end date (e.g., `DateComponentProps.tsx`).
 
 In the [`schema`](focus://17:37), the `initialDate` and `finalDate` props define the configuration for date input fields.
 
@@ -189,9 +191,11 @@ export default DateComponent;
 
 The [`initialDate`](focus://21:25) prop has an empty string as its default value and a description indicating the expected date format `'{year}/{month}/{day}'`. The [`finalDate`](focus://27:33) prop has the default value set to the current date and time in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. It includes a custom UI widget for a date-time picker, streamlining the selection of both date and time.
 
-In the Site Editor, this component will look like this:
+In Site Editor, this component will look like this:
 
-![string-date](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/string-date-custom-component.png)
+
+
+![string-date](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/string-date-custom-component.png)
 
 ---
 
@@ -241,9 +245,11 @@ export default BooleanComponent;
 
 The [`active`](focus://4) prop is a boolean, meaning it can be either `true` or `false`. The [default value](focus://17:19) set as `true` ensures that the component starts in an active state unless specified otherwise.
 
-In the Site Editor, this custom component will look like this:
+In Site Editor, this custom component will look like this:
 
-![boolean](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/boolean-custom-component.png)
+
+
+![boolean](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/boolean-custom-component.png)
 
 ---
 
@@ -311,9 +317,11 @@ export default ObjectComponent;
 
 </CH.Code>
 
-In the Site Editor, this component will look like this:
+In Site Editor, this component will look like this:
 
-![object](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/object-custom-component.png)
+
+
+![object](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/object-custom-component.png)
 
 ---
 
@@ -402,15 +410,17 @@ export default ArrayComponent;
 
 </CH.Code>
 
-In the Site Editor, this component will look like this:
+In Site Editor, this component will look like this:
 
-![array](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/array-custom-component.png)
+
+
+![array](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/array-custom-component.png)
 
 ---
 
 ### Making the item name editable
 
-If you want to allow users to change the name of each item in the `images` array within the Site Editor, add the [`__editorItemTitle`](focus://49:53) prop to the item configuration. 
+If you want to allow users to change the name of each item in the `images` array within Site Editor, add the [`__editorItemTitle`](focus://49:53) prop to the item configuration. 
 
 ```js ArrayComponent.tsx
 import React from 'react'
@@ -490,9 +500,11 @@ ArrayComponent.schema = {
 export default ArrayComponent;
 ```
 
-In the Site Editor, this component will look like this:
+In Site Editor, this component will look like this:
 
-![array-item](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/array-item-custom-component.png)
+
+
+![array-item](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/array-item-custom-component.png)
 
 ---
 
@@ -502,7 +514,7 @@ Some props are used to define a set of allowed values for a particular prop, suc
 
 When using `enum`, the prop's value must be one of the values in the array.
 
-The `enumNames` prop is used in conjunction with `enum` to provide a set of human-readable names for the values specified in the `enum` array. This is particularly useful in UI components such as dropdowns and radio buttons, where you want to display a user-friendly name instead of the actual value.
+The `enumNames` prop is used in conjunction with `enum` to provide a set of human-readable names for the values specified in the `enum` array. This is particularly useful in UI components, such as dropdowns and radio buttons, where you want to display a user-friendly name instead of the actual value.
 
 ---
 
@@ -545,15 +557,17 @@ EnumComponent.schema = {
 export default  EnumComponent
 ```
 
-In the Site Editor, you will see the component like this:
+In Site Editor, you will see the component like this:
 
-![enum](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/enum-example.png)
+
+
+![enum](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/enum-example.png)
 
 ---
 
 ### **`enumNames` example**
 
-Imagine you have a [schema](focus://25:37) with `colors` as prop and the possible values are `#0ff102`, `#1038c9` or `#000000`. However, for the user, you need to show the names `green`, `blue`, or `black`, respectively.
+Imagine you have a [schema](focus://25:37) with `colors` as a prop, and the possible values are `#0ff102`, `#1038c9`, or `#000000`. However, for the user, you need to show the names `green`, `blue`, or `black`, respectively.
 
 ```js EnumNamesComponent.tsx
 import React from 'react';
@@ -597,9 +611,11 @@ EnumNamesComponent.schema = {
 export default EnumComponent;
 ```
 
-In the Site Editor, you will see this component like this:
+In Site Editor, you will see this component like this:
 
-![enum-enumname](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@feat/EDU-12762-site-editor-schemas/docs/guides/vtex-io/Storefront-Guides/images/enum-enumname-example.png)
+
+
+![enum-enumname](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/enum-enumname-example.png)
 
 If the user selects the value `green`, for example, the prop returns `#0ff102`.
 
