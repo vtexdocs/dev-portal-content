@@ -41,13 +41,19 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 ```tsx
 export const flags = [
   { icon: { icon: 'Visa' }, alt: 'Visa' },
+  { icon: { icon: 'Amex' }, alt: 'Amex' },
+  { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
+  { icon: { icon: 'EloCard' }, alt: 'Elo Card' },
   { icon: { icon: 'Diners' }, alt: 'Diners Club' },
+  { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
   { icon: { icon: 'Mastercard' }, alt: 'Mastercard' },
   { icon: { icon: 'EloCard' }, alt: 'Elo Card' },
   { icon: { icon: 'PayPal' }, alt: 'PayPal' },
+  { icon: { icon: 'Pix' }, alt: 'Pix' },
   { icon: { icon: 'Stripe' }, alt: 'Stripe' },
   { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
   { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
+  { icon: { icon: 'Visa' }, alt: 'Visa' },
 ]
 
 <PaymentMethods title={<h3>Payment Methods</h3>} flagList={flags} />
@@ -107,6 +113,11 @@ export const flags = [
   <TokenRow
     token="--fs-payment-methods-flag-height"
     value="var(--fs-spacing-4)"
+  />
+  <TokenRow
+    token="--fs-payment-methods-flag-bkg-color"
+    value="var(--fs-color-neutral-0)"
+    isColor
   />
   <TokenRow
     token="--fs-payment-methods-flag-border-width"
