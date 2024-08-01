@@ -1,0 +1,608 @@
+---
+title: "Site Editor schema examples"
+slug: "site-editor-schema-examples"
+hidden: false
+createdAt: "2024-07-31T18:01:27.599Z"
+updatedAt: ""
+excerpt: "Explore practical schema examples for configuring custom components in Site Editor."
+seeAlso: 
+  - “/docs/guides/vtex-io-documentation-making-a-custom-component-available-in-site-editor”
+---
+
+When configuring a custom component, you need to define a schema within it to make it editable by user administrators directly in Site Editor. Learn how to configure the schema definitions in the [Making a custom component available in Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-a-custom-component-editable-in-the-site-editor) guide.
+
+To create your schemas, use the [JSON Schema](https://json-schema.org/) format, a declarative language that provides a standardized way to describe and validate JSON data.
+
+You can use the following data types to configure your schemas:
+
+- [String](#string)
+- [Boolean](#boolean)
+- [Object](#object)
+- [Array](#array)
+
+In this guide, you will learn how to use each data type effectively.
+
+<CH.Scrollycoding>
+
+## String 
+
+Alongside, you can see the [`HeaderComponentProps`](focus://3:5) interface, which specifies the types of the `title` and `subtitle` props. This interface is used to type-check the props passed to the `HeaderComponent`.
+
+The [`HeaderComponent`](focus://8:15) is a functional component that accepts `title` and `subtitle` as props, which are destructured from the props object defined by the interface.
+
+>ℹ️ Below are additional examples of content schemas using String for image and date fields.
+
+<CH.Code>
+
+```js HeaderComponent.tsx mark=11:12,17:36
+import React from 'react';
+
+interface HeaderComponentProps {
+  title: string;
+  subtitle: string;
+}
+
+const HeaderComponent = ({ title, subtitle }: HeaderComponentProps) => {
+   return (
+      <>
+         <p>{title}</p>
+         <p>{subtitle}</p>
+      </>
+   );
+};
+
+HeaderComponent.defaultProps = {
+  title: "VTEX",
+  subtitle: "The Composable and Complete Commerce Platform.",
+};
+
+HeaderComponent.schema = {
+  title: 'Custom Component',
+  type: 'object',
+  properties: {
+    title: {
+      type: 'string',
+      title: 'Título',
+    },
+    subtitle: {
+      type: 'string',
+      title: 'Subtítulo',
+    },
+  },
+};
+
+export default CustomComponent;
+```
+
+</CH.Code>
+
+---
+
+### Images
+
+Consider a [component](focus://8:15) that displays different images based on device type (desktop or mobile) (e.g., `ImageComponent.tsx`).
+
+To enable users to select an image from their computer or paste an image URL link, provide options for both methods in your component’s [`schema`](focus://17:36) object.
+
+<CH.Code>
+
+```js ImageComponent.tsx
+import React from 'react';
+
+interface ImageComponentProps {
+  imageDesktop: string;
+  imageMobile: string;
+}
+
+function ImageComponent({ imageDesktop, imageMobile }: ImageComponentProps) {
+   return(
+      <div>
+         <img src={imageDesktop} />
+         <img src={imageMobile} />
+      </div>
+   );
+}
+
+ImageComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      imageDesktop: {
+         type: 'string',
+         title: 'Image Desktop',
+         default: '',
+         description: 'Paste the URL'
+      },
+      imageMobile: {
+         title: 'Image Mobile',
+         default: '',
+         type: 'string',
+         widget: {//here you can choose a file in your computer
+            "ui:widget": "image-uploader"
+         }
+      }
+   }
+};
+
+export default ImageComponent;
+```
+
+</CH.Code>
+
+In Site Editor, this custom component will look like this:
+
+![string-image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/string-image-custom-component.png)
+
+---
+
+### Dates
+
+Consider a [component](focus://8:15) that allows users to input a start and end date (e.g., `DateComponentProps.tsx`).
+
+In the [`schema`](focus://17:37), the `initialDate` and `finalDate` props define the configuration for date input fields.
+
+<CH.Code>
+
+```js DateComponent.tsx
+import React from 'react';
+
+interface DateComponentProps {
+  initialDate: string;
+  finalDate: string;
+}
+
+function DateComponent({ initialDate, finalDate }: DateComponentProps) {
+   return(
+      <div>
+         <p>{initialDate}</p>
+         <p>{finalDate}</p>
+      </div>
+   );
+}
+
+DateComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      initialDate: {
+         type: 'string',
+         title: 'Initial Date',
+         default: '',
+         description: '{year}/{month}/{day}'
+      },
+      finalDate: {
+         title: 'Final Date', //2022-02-23T02:20:42.074Z
+         default: new Date().toISOString(), //Set current date in select input
+         type: 'string', //to user select a date.
+         format: 'date-time',
+         widget: {
+            "ui:widget": "datetime"
+         }
+      }
+   }
+};
+
+export default DateComponent;
+```
+
+</CH.Code>
+
+The [`initialDate`](focus://21:25) prop has an empty string as its default value and a description indicating the expected date format `'{year}/{month}/{day}'`. The [`finalDate`](focus://27:33) prop has the default value set to the current date and time in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. It includes a custom UI widget for a date-time picker, streamlining the selection of both date and time.
+
+In Site Editor, this component will look like this:
+
+![string-date](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/string-date-custom-component.png)
+
+---
+
+## Boolean
+
+Consider a [component](focus://7:15) that allows users to toggle its active or inactive state. To allow users to activate or deactivate the component, define the [`schema`](focus://21:31) as follows.
+
+<CH.Code>
+
+```js BooleanComponent.tsx
+import React from 'react';
+
+interface BooleanComponentProps {
+   active: boolean;
+}
+
+function BooleanComponent ({ active }: BooleanComponentProps) {
+  if(!active) return;
+
+   return(
+      <div>
+        <h2>Now the component is active!</h2>
+      </div>
+   );
+}
+
+BooleanComponent.defaultProps = {
+   active: true,
+};
+
+BooleanComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      active: {
+         type: 'boolean',
+         title: 'Active Component',
+         default: true,
+      }
+   }
+};
+
+export default BooleanComponent;
+```
+
+</CH.Code>
+
+The [`active`](focus://4) prop is a boolean, meaning it can be either `true` or `false`. The [default value](focus://17:19) set as `true` ensures that the component starts in an active state unless specified otherwise.
+
+In Site Editor, this custom component will look like this:
+
+![boolean](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/boolean-custom-component.png)
+
+---
+
+## Object
+
+Consider a [component](focus://13:23) that renders an image, taking an [`image`](focus://3:7,9:10) prop, which includes the URL, alt text, and title.
+
+The [`schema`](focus://25:49) below defines the structure of the component, specifying that it expects an `image` prop, which is an object containing `url`, `alt`, and `title` props.
+
+<CH.Code>
+
+```js ObjectComponent.tsx
+import React from 'react';
+
+interface ImageProps {
+   url: string;
+   alt: string;
+   title: string;
+}
+
+interface ObjectComponentProps {
+   image: ImageProps;
+}
+
+function ObjectComponent({ image }: ObjectComponentProps) {
+   return(
+      <div>
+        <img
+          src={image.url}
+          alt={image.alt}
+          title={image.title}
+        />
+      </div>
+   );
+}
+
+ObjectComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      image: {
+         title: 'Image Prop',
+         type: 'object',
+         properties: {
+            src: {
+               type: 'string',
+               title: 'Image URL',
+               description: 'URL image'
+            },
+            alt: {
+               type: 'string',
+               title: 'Image Text Alternative',
+            },
+            title: {
+               type: 'string',
+               title: 'Attribute title',
+            },
+         }
+      }
+   }
+};
+
+export default ObjectComponent;
+```
+
+</CH.Code>
+
+In Site Editor, this component will look like this:
+
+![object](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/object-custom-component.png)
+
+---
+
+## Array
+
+Consider a [component](focus://13:29) where the displayed images adapt to the screen size.
+
+The component checks if the viewport width is less than 768 pixels to determine if it is a mobile view and selects the appropriate image source. It then renders the images inside a `div`, with each `img` element receiving the correct source and `alt` text based on the viewport size, ensuring each image has a unique key.
+
+In the [`schema`](focus://31:68), the `images` prop is specified as an array of objects, ensuring it will hold multiple items. Each item within the `images` array is defined as an object with three specific props, `src`, `alt`, and `mobileSrc`.
+
+<CH.Code>
+
+```js ArrayComponent.tsx
+import React from 'react'
+
+interface ImageProps {
+   src: string;
+   alt: string;
+   mobileSrc: string;
+}
+
+interface ArrayComponentProps
+   images: ImageProps[];
+}
+
+function ArrayComponent({ images }: ArrayComponentProps) {
+   const isMobile = window.innerWidth < 768;
+
+   return(
+      <div>
+        {
+           images.map((image, index) => (
+              <img
+          alt={image.alt}
+          key={index}
+          src={isMobile ? image.mobileSrc : image.src}
+              />
+           ))
+        }
+      </div>
+   );
+}
+
+ArrayComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      images: {
+         type: 'array',
+         title: 'Images',
+         default: [
+            {
+               src: '',
+               alt: 'Text alternative',
+               mobileSrc: ''
+            }
+         ],
+         items: {//item configuration
+            type: 'object',
+            title: 'Image',
+            properties: {
+               src: {
+                  type: 'string',
+                  title: 'Image SRC',
+                  description: 'Image URL [desktop]'
+               },
+               alt: {
+                  type: 'string',
+                  title: 'Image Text Alternative',
+                  description: 'Image URL'
+               },
+               mobileSrc: {
+                  type: 'string',
+                  title: 'Image SRC [mobile]',
+                  description: 'Image URL'
+               },
+            }
+         }
+      }
+   }
+};
+
+export default ArrayComponent;
+```
+
+</CH.Code>
+
+In Site Editor, this component will look like this:
+
+![array](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/array-custom-component.png)
+
+---
+
+### Making the item name editable
+
+If you want to allow users to change the name of each item in the `images` array within Site Editor, add the [`__editorItemTitle`](focus://49:53) prop to the item configuration. 
+
+```js ArrayComponent.tsx
+import React from 'react'
+
+interface ImageProps {
+   src: string;
+   alt: string;
+   mobileSrc: string;
+}
+
+interface ArrayComponentProps
+   images: ImageProps[];
+}
+
+function ArrayComponent({ images }: ArrayComponentProps) {
+   const isMobile = window.innerWidth < 768;
+
+   return(
+      <div>
+        {
+           images.map((image, index) => (
+              <img
+          alt={image.alt}
+          key={index}
+          src={isMobile ? image.mobileSrc : image.src}
+              />
+           ))
+        }
+      </div>
+   );
+}
+
+ArrayComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      images: {
+         type: 'array',
+         title: 'Images',
+         default: [
+            {
+               src: '',
+               alt: 'Text alternative',
+               mobileSrc: ''
+            }
+         ],
+         items: { //item configuration
+            type: 'object',
+            title: 'Image',
+            properties: {
+             __editorItemTitle: { // now change name is available
+                  default: 'Image Item',
+                  title: 'Change item name',
+                  type: 'string'
+               },
+               src: {
+                  type: 'string',
+                  title: 'Image SRC',
+                  description: 'Image URL [desktop]'
+               },
+               alt: {
+                  type: 'string',
+                  title: 'Image Text Alternative',
+                  description: 'Image URL'
+               },
+               mobileSrc: {
+                  type: 'string',
+                  title: 'Image SRC [mobile]',
+                  description: 'Image URL'
+               },
+            }
+         }
+      }
+   }
+};
+
+export default ArrayComponent;
+```
+
+In Site Editor, this component will look like this:
+
+![array-item](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/array-item-custom-component.png)
+
+---
+
+## `enum` and `enumNames` props
+
+Some props are used to define a set of allowed values for a particular prop, such as [`enum`](#enum-example) and [`enumNames`](#enumnames-example).
+
+When using `enum`, the prop's value must be one of the values in the array.
+
+The `enumNames` prop is used in conjunction with `enum` to provide a set of human-readable names for the values specified in the `enum` array. This is particularly useful in UI components, such as dropdowns and radio buttons, where you want to display a user-friendly name instead of the actual value.
+
+---
+
+### **`enum` example**
+
+Imagine you have a [schema](focus://19:30) with `colors` as a prop, and the possible values are `red`, `blue`, or `black`.
+
+```js EnumComponent.tsx
+import React from 'react';
+
+interface EnumComponentProps {
+   colors: 'red' | 'blue' | 'black';
+}
+
+const EnumComponent = ({ colors }: EnumComponentProps) => {
+   return (
+      <div>
+         <p>{`Selected color: ${colors}`}</p>
+      </div>
+   );
+};
+
+EnumComponent.defaultProps = {
+  colors: 'red',
+};
+
+EnumComponent.schema = {
+   title: 'Custom Component',
+   type: 'object',
+   properties: {
+      colors: {
+         type: 'string',
+         title: 'Color',
+         default: 'red',
+         enum: ['red', 'blue', 'black'] // allowed values for the `colors` prop
+      }
+   }
+};
+
+export default  EnumComponent
+```
+
+In Site Editor, you will see the component like this:
+
+
+
+![enum](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/enum-example.png)
+
+---
+
+### **`enumNames` example**
+
+Imagine you have a [schema](focus://25:37) with `colors` as a prop, and the possible values are `#0ff102`, `#1038c9`, or `#000000`. However, for the user, you need to show the names `green`, `blue`, or `black`, respectively.
+
+```js EnumNamesComponent.tsx
+import React from 'react';
+
+interface EnumNamesComponentProps {
+   colors: '#0ff102' | '#1038c9' | '#000000';
+}
+
+const EnumNamesComponent = ({ colors }: EnumNamesComponentProps) => {
+   const colorNames: { [key: string]: string } = {
+      '#0ff102': 'green',
+      '#1038c9': 'blue',
+      '#000000': 'black',
+   };
+
+   return (
+      <div>
+      <p>{`Selected color: ${colorNames[colors]}`}</p>
+    </div>
+  );
+};
+
+EnumNamesComponent.defaultProps = {
+  colors: '#0ff102',
+};
+
+EnumNamesComponent.schema = {
+  title: 'Custom Component',
+  type: 'object',
+  properties: {
+    colors: {
+      type: 'string',
+      title: 'Color',
+      default: '#0ff102',
+      enumNames: ['green', 'blue', 'black'],
+      enum: ['#0ff102', '#1038c9', '#000000'], // allowed values for the `colors` prop
+    },
+  },
+};
+
+export default EnumComponent;
+```
+
+In Site Editor, you will see this component like this:
+
+![enum-enumname](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/enum-enumname-example.png)
+
+If the user selects the value `green`, for example, the prop returns `#0ff102`.
+
+</CH.Scrollycoding>
