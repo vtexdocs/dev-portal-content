@@ -68,7 +68,7 @@ After running `yarn dev`, update each topic mentioned before as follows:
 1. To sync the updated version, open a new terminal and run `faststore cms-sync`.
 2. Access the VTEX Admin and go to **Headless CMS > FastStore**. You should be able to see the three new content types listed there.
 3. Click one of the content types, and then`Add section` ( `+`).
-4. Choose the `EmptyState` section and update its fields according to your store's requirements.
+4. Choose the [`EmptyState`](https://developers.vtex.com/docs/guides/faststore/organisms-empty-state) section and update its fields according to your store's requirements.
 
 </details>
 
