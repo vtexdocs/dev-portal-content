@@ -4,12 +4,12 @@ title: "Updating the '@fastore/core' package version"
 
 If you need to update the [`@fastore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) package, follow the instructions below:
 
-1. Open your FastStore code and navigate to the `package.json` file.
+1. Open your FastStore codebase in the code editor of your preference.
 
-2. In `dependencies` > `@faststore/core`, change the version to the latest one. In the example above, we will use `^3.0.0`.
+2. Open the terminal and run the following:
 
-    ```json
-    "@faststore/core": "^3.0.0",
+    ```bash
+    yarn add @faststore/core@latest
     ```
 
-3. Open the terminal and run `yarn` to update the version.
+3. Run `yarn dev` to sync the changes to your project.
