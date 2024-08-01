@@ -1,0 +1,97 @@
+---
+title: 'Scalars'
+---
+
+## Scalars
+
+### ActiveVariations
+
+The `ActiveVariations` scalar type represents a combination of active product variations.
+
+Example:
+
+```json
+{
+  Color: 'Red', Size: '42'
+}
+```
+
+### Boolean
+
+The `Boolean` scalar type represents `true` or `false`.
+
+### Float
+
+The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
+
+### FormattedVariants
+
+The `FormattedVariants` scalar type represents a collection of product variations with additional details like image source, description, and values.
+
+Example:
+
+```json
+{
+  Color: [
+    {
+      src: "https://storecomponents.vtexassets.com/...",
+      alt: "...",
+      label: "...",
+      value: "..."
+    },
+    {
+      src: "https://storecomponents.vtexassets.com/...",
+      alt: "...",
+      label: "...",
+      value: "..."
+    }
+  ],
+  Size: [
+    {
+      src: "https://storecomponents.vtexassets.com/...",
+      alt: "...",
+      label: "...",
+      value: "..."
+    }
+  ]
+}
+```
+
+### ID
+
+The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
+
+### Int
+
+The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.
+
+### ObjectOrString
+
+A string or the string representation of an object (a stringified object).
+
+### SlugsMap
+
+Example:
+
+```json
+{
+  'Color-Red-Size-40': 'classic-shoes-37'
+}
+```
+
+### String
+
+The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
+
+### VariantsByName
+
+The `VariantsByName` scalar type represents a collection of variations listed by their names, like a list of available `Color` options or `Size` options.
+
+Example:
+
+```json
+{
+  Color: [ "Red", "Blue", "Green" ],
+  Size: [ "40", "41" ]
+}
+```

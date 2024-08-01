@@ -1,7 +1,2993 @@
 ---
 title: 'Objects'
-sidebar_label: 'API Extensions'
-slug: objects
 ---
 
-> ⚠️ This documentation is currently under development.
+## Objects
+
+### Address
+
+Address information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>postalCode</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address postal code.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address city.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>state</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address state.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address country.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>street</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address street.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>number</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address number.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>neighborhood</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address neighborhood.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>complement</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address complement.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reference</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Address reference.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>geoCoordinates</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>]</td>
+<td>
+
+Address geoCoordinates.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### AvailableDeliveryWindows
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>startDateUtc</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Available delivery window start date in UTC.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>endDateUtc</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Available delivery window end date in UTC.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>price</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+Available delivery window price.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>listPrice</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+Available delivery window list price.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>tax</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+Available delivery window tax.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### DeliveryIds
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>courierId</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+DeliveryIds courier id.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>warehouseId</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+DeliveryIds warehouse id.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>dockId</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+DeliveryIds dock id.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>courierName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+DeliveryIds courier name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>quantity</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+DeliveryIds quantity.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### LogisticsInfo
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>itemIndex</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+LogisticsInfo itemIndex.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>selectedSla</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+LogisticsInfo selectedSla.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>slas</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#shippingsla">ShippingSLA</a>]</td>
+<td>
+
+List of LogisticsInfo ShippingSLA.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### LogisticsItem
+
+Shipping Simulation Logistic Item.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+LogisticsItem ID or SKU.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>requestIndex</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>quantity</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+Number of items.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>seller</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Seller responsible for the ShippingItem.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>sellerChain</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>]</td>
+<td>
+
+List of Sellers.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>tax</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+LogisticsItem tax.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>priceValidUntil</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Next date in which price is scheduled to change. If there is no scheduled change, this will be set a year in the future from current time.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>price</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+LogisticsItem price.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>listPrice</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+LogisticsItem listPrice.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>rewardValue</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+LogisticsItem rewardValue.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>sellingPrice</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+LogisticsItem sellingPrice.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>measurementUnit</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+LogisticsItem measurementUnit.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>unitMultiplier</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td>
+
+LogisticsItem unitMultiplier.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>availability</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+LogisticsItem availability.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### MessageFields
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>itemIndex</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+MessageFields item index.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>ean</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+MessageFields ean.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>skuName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+MessageFields sku name.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### MessageInfo
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>code</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+MessageInfo code.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>text</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+MessageInfo text.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+MessageInfo status.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fields</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#messagefields">MessageFields</a></td>
+<td>
+
+MessageInfo fields.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### PersonNewsletter
+
+Newsletter information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Person's ID in the newsletter list.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### PickupAddress
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>addressType</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress address type.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>receiverName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress receiver name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>addressId</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress address id.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postalCode</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress postal code.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress city.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>state</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress state.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress country.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>street</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress street.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>number</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress number.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>neighborhood</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress neighborhood.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>complement</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress complement.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reference</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupAddress reference.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>geoCoordinates</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>]</td>
+<td>
+
+PickupAddress geo coordinates.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### PickupStoreInfo
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>friendlyName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupStoreInfo friendly name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>address</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#pickupaddress">PickupAddress</a></td>
+<td>
+
+PickupStoreInfo address.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>additionalInfo</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupStoreInfo additional information.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>dockId</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+PickupStoreInfo dock id.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isPickupStore</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string#boolean">Boolean</a></td>
+<td>
+
+Information if the store has pickup enable.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### SearchMetadata
+
+Search result.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>isTermMisspelled</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#boolean">Boolean</a>!</td>
+<td>
+
+Indicates if the search term was misspelled.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>logicalOperator</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Logical operator used to run the search.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fuzzy</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Indicates how the search engine corrected the misspelled word by using fuzzy logic.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### SellerInfo
+
+Information of sellers.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Identification of the seller.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Name of the seller.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>logo</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Logo of the seller.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### SellersData
+
+Regionalization with sellers information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Identification of region.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>sellers</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">SellerInfo</a>]</td>
+<td>
+
+List of sellers.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### ShippingData
+
+Shipping Simulation information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>items</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#logisticsitem">LogisticsItem</a>]</td>
+<td>
+
+List of LogisticsItem.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>logisticsInfo</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#logisticsinfo">LogisticsInfo</a>]</td>
+<td>
+
+List of LogisticsInfo.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>messages</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#messageinfo">MessageInfo</a>]</td>
+<td>
+
+List of MessageInfo.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>address</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#address">Address</a></td>
+<td>
+
+Address information.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### ShippingSLA
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA id.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>price</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a></td>
+<td>
+
+ShippingSLA price.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>shippingEstimate</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA shipping estimate.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>localizedEstimates</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA localized shipping estimate.
+Note: this will always return a localized string for locale `en-US`.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>availableDeliveryWindows</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-object#availabledeliverywindows">AvailableDeliveryWindows</a>]</td>
+<td>
+
+ShippingSLA available delivery windows.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>shippingEstimateDate</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA shipping estimate date.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deliveryIds</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#deliveryids">DeliveryIds</a>]</td>
+<td>
+
+List of ShippingSLA delivery ids.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deliveryChannel</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA delivery channel.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>friendlyName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA friendly name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>carrier</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA carrier.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>pickupPointId</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+ShippingSLA pickup point id.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>pickupStoreInfo</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#pickupstoreinfo">PickupStoreInfo</a></td>
+<td>
+
+ShippingSLA pickup store info.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>pickupDistance</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a></td>
+<td>
+
+ShippingSLA pickup distance.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### SkuVariants
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>activeVariations</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#activevariations">ActiveVariations</a></td>
+<td>
+
+SKU property values for the current SKU.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>allVariantsByName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#variantsbyname">VariantsByName</a></td>
+<td>
+
+All available options for each SKU variant property, indexed by their name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>slugsMap</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#slugsmap">SlugsMap</a></td>
+<td>
+
+Maps property value combinations to their respective SKU's slug. Enables
+us to retrieve the slug for the SKU that matches the currently selected
+variations in O(1) time.
+If `dominantVariantName` is not present, the first variant will be 
+considered the dominant one.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">dominantVariantName</td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>availableVariations</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#formattedvariants">FormattedVariants</a></td>
+<td>
+
+Available options for each varying SKU property, taking into account the
+`dominantVariantName` property. Returns all available options for the
+dominant property, and only options that can be combined with its current
+value for other properties.
+If `dominantVariantName` is not present, the first variant will be 
+considered the dominant one.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">dominantVariantName</td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### StoreAggregateOffer
+
+Aggregate offer information, for a given SKU that is available to be fulfilled by multiple sellers.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>highPrice</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Highest price among all sellers.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lowPrice</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Lowest price among all sellers.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>offerCount</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a>!</td>
+<td>
+
+Number of sellers selling this SKU.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>priceCurrency</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+ISO code of the currency used for the offer prices.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>offers</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeoffer">StoreOffer</a>!]!</td>
+<td>
+
+Array with information on each available offer.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreAggregateRating
+
+Average rating, based on multiple ratings or reviews.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>ratingValue</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Value of the aggregate rating.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reviewCount</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a>!</td>
+<td>
+
+Total number of ratings.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreAuthor
+
+information about the author of a product review or rating.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Author name.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreBrand
+
+Brand of a given product.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Brand name.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreBreadcrumbList
+
+List of items consisting of chain linked web pages, ending with the current page.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>itemListElement</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storelistitem">StoreListItem</a>!]!</td>
+<td>
+
+Array with breadcrumb elements.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>numberOfItems</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a>!</td>
+<td>
+
+Number of breadcrumbs in the list.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreCart
+
+Shopping cart information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>order</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeorder">StoreOrder</a>!</td>
+<td>
+
+Order information, including `orderNumber` and `acceptedOffer`.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>messages</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storecartmessage">StoreCartMessage</a>!]!</td>
+<td>
+
+List of shopping cart messages.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreCartMessage
+
+Shopping cart message.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>text</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Shopping cart message text.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-enums#storestatus">StoreStatus</a>!</td>
+<td>
+
+Shopping cart message status, which can be `INFO`, `WARNING` or `ERROR`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreCollection
+
+Product collection information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>seo</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeseo">StoreSeo</a>!</td>
+<td>
+
+Meta tag data.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>breadcrumbList</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storebreadcrumblist">StoreBreadcrumbList</a>!</td>
+<td>
+
+List of items consisting of chain linked web pages, ending with the current page.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>meta</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storecollectionmeta">StoreCollectionMeta</a>!</td>
+<td>
+
+Collection meta information. Used for search.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#id">ID</a>!</td>
+<td>
+
+Collection ID.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>slug</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Corresponding collection URL slug, with which to retrieve this entity.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-enums#storecollectiontype">StoreCollectionType</a>!</td>
+<td>
+
+Collection type.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreCollectionConnection
+
+Collection connections, including pagination information and collections returned by the query.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>pageInfo</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storepageinfo">StorePageInfo</a>!</td>
+<td>
+
+Collection pagination information.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>edges</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storecollectionedge">StoreCollectionEdge</a>!]!</td>
+<td>
+
+Array with collection connection page edges, each containing a collection and a corresponding cursor.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreCollectionEdge
+
+Each collection edge contains a `node`, with product collection information, and a `cursor`, that can be used as a reference for pagination.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>node</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storecollection">StoreCollection</a>!</td>
+<td>
+
+Each collection node contains the information of a product collection returned by the query.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cursor</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Collection cursor. Used as pagination reference.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreCollectionFacet
+
+Product collection facet, used for search.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>key</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet key.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet value.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreCollectionMeta
+
+Collection meta information. Used for search.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>selectedFacets</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storecollectionfacet">StoreCollectionFacet</a>!]!</td>
+<td>
+
+List of selected collection facets.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreCurrency
+
+Currency information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>code</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Currency code (e.g: `USD`).
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>symbol</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Currency symbol (e.g: `$`).
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreDeliveryMode
+
+Delivery mode information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>deliveryChannel</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+The delivery channel information of the session.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deliveryMethod</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+The delivery method information of the session.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deliveryWindow</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storedeliverywindow">StoreDeliveryWindow</a></td>
+<td>
+
+The delivery window information of the session.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreDeliveryWindow
+
+Delivery window information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>startDate</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+The delivery window start date information.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>endDate</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+The delivery window end date information.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreFacetBoolean
+
+Search facet boolean information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>key</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet key.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>label</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet label.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>values</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storefacetvalueboolean">StoreFacetValueBoolean</a>!]!</td>
+<td>
+
+Array with information on each facet value.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreFacetRange
+
+Search facet range information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>key</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet key.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>label</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet label.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>min</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storefacetvaluerange">StoreFacetValueRange</a>!</td>
+<td>
+
+Minimum facet range value.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>max</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storefacetvaluerange">StoreFacetValueRange</a>!</td>
+<td>
+
+Maximum facet range value.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreFacetValueBoolean
+
+Information of a specific facet value.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet value.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>label</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet value label.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>selected</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#boolean">Boolean</a>!</td>
+<td>
+
+Indicates whether facet is selected.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>quantity</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a>!</td>
+<td>
+
+Number of items with this facet.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreFacetValueRange
+
+Search facet range value information. Used for minimum and maximum range values.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>absolute</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Search facet range absolute value.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>selected</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Search facet range selected value.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreGeoCoordinates
+
+Geographic coordinates information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>latitude</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+The latitude of the geographic coordinates.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>longitude</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+The longitude of the geographic coordinates.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreImage
+
+Image.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>url</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Image URL.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>alternateName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Alias for the image.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreListItem
+
+Item of a list.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>item</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+List item value.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Name of the list item.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>position</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a>!</td>
+<td>
+
+Position of the item in the list.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreOffer
+
+Offer information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>listPrice</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+This is displayed as the "from" price in the context of promotions' price comparison. This may change before it reaches the shelf.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>sellingPrice</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Computed price before applying coupons, taxes or benefits. This may change before it reaches the shelf.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>priceCurrency</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+ISO code of the currency used for the offer prices.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>price</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Also known as spot price.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>priceValidUntil</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Next date in which price is scheduled to change. If there is no scheduled change, this will be set a year in the future from current time.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>itemCondition</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Offer item condition.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>availability</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Offer item availability.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>seller</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeorganization">StoreOrganization</a>!</td>
+<td>
+
+Seller responsible for the offer.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>itemOffered</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct">StoreProduct</a>!</td>
+<td>
+
+Information on the item being offered.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>quantity</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a>!</td>
+<td>
+
+Number of items offered.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreOrder
+
+Information of a specific order.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>orderNumber</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+ID of the order in [VTEX order management](https://help.vtex.com/en/tutorial/license-manager-resources-oms--60QcBsvWeum02cFi3GjBzg#).
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>acceptedOffer</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeoffer">StoreOffer</a>!]!</td>
+<td>
+
+Array with information on each accepted offer.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreOrganization
+
+Organization.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>identifier</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Organization ID.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StorePageInfo
+
+Whenever you make a query that allows for pagination, such as `allProducts` or `allCollections`, you can check `StorePageInfo` to learn more about the complete set of items and use it to paginate your queries.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>hasNextPage</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#boolean">Boolean</a>!</td>
+<td>
+
+Indicates whether there is at least one more page with items after the ones returned in the current query.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasPreviousPage</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#boolean">Boolean</a>!</td>
+<td>
+
+Indicates whether there is at least one more page with items before the ones returned in the current query.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>startCursor</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Cursor corresponding to the first possible item.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>endCursor</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Cursor corresponding to the last possible item.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>totalCount</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a>!</td>
+<td>
+
+Total number of items (products or collections), not pages.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StorePerson
+
+Client profile data.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Client ID.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>email</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Client email.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>givenName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Client first name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>familyName</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Client last name.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreProduct
+
+Product information. Products are variants within product groups, equivalent to VTEX [SKUs](https://help.vtex.com/en/tutorial/what-is-an-sku--1K75s4RXAQyOuGUYKMM68u#). For example, you may have a **Shirt** product group with associated products such as **Blue shirt size L**, **Green shirt size XL** and so on.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>seo</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeseo">StoreSeo</a>!</td>
+<td>
+
+Meta tag data.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>breadcrumbList</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storebreadcrumblist">StoreBreadcrumbList</a>!</td>
+<td>
+
+List of items consisting of chain linked web pages, ending with the current page.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>slug</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Corresponding collection URL slug, with which to retrieve this entity.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Product name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>productID</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Product ID, such as [ISBN](https://www.isbn-international.org/content/what-isbn) or similar global IDs.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>brand</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storebrand">StoreBrand</a>!</td>
+<td>
+
+Product brand.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Product description.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>image</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeimage">StoreImage</a>!]!</td>
+<td>
+
+Array of images.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">context</td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">limit</td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>offers</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeaggregateoffer">StoreAggregateOffer</a>!</td>
+<td>
+
+Aggregate offer information.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>sku</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Stock Keeping Unit. Merchant-specific ID for the product.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>gtin</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Global Trade Item Number.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>review</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storereview">StoreReview</a>!]!</td>
+<td>
+
+Array with review information.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>aggregateRating</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeaggregaterating">StoreAggregateRating</a>!</td>
+<td>
+
+Aggregate ratings data.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isVariantOf</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproductgroup">StoreProductGroup</a>!</td>
+<td>
+
+Indicates product group related to this product.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>additionalProperty</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storepropertyvalue">StorePropertyValue</a>!]!</td>
+<td>
+
+Array of additional properties.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>releaseDate</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+The product's release date. Formatted using <a href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601<a>. 
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreProductConnection
+
+Product connections, including pagination information and products returned by the query.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>pageInfo</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storepageinfo">StorePageInfo</a>!</td>
+<td>
+
+Product pagination information.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>edges</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproductedge">StoreProductEdge</a>!]!</td>
+<td>
+
+Array with product connection edges, each containing a product and a corresponding cursor.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreProductEdge
+
+Each product edge contains a `node`, with product information, and a `cursor`, that can be used as a reference for pagination.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>node</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct">StoreProduct</a>!</td>
+<td>
+
+Each product node contains the information of a product returned by the query.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cursor</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Product cursor. Used as pagination reference.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreProductGroup
+
+Product group information. Product groups are catalog entities that may contain variants. They are equivalent to VTEX [Products](https://help.vtex.com/en/tutorial/what-is-a-product--2zrB2gFCHyQokCKKE8kuAw#), whereas each variant is equivalent to a VTEX [SKU](https://help.vtex.com/en/tutorial/what-is-an-sku--1K75s4RXAQyOuGUYKMM68u#). For example, you may have a **Shirt** product group with associated products such as **Blue shirt size L**, **Green shirt size XL** and so on.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>hasVariant</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct">StoreProduct</a>!]!</td>
+<td>
+
+Array of variants related to product group. Variants are equivalent to VTEX [SKUs](https://help.vtex.com/en/tutorial/what-is-an-sku--1K75s4RXAQyOuGUYKMM68u#).
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>productGroupID</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Product group ID.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Product group name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>additionalProperty</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storepropertyvalue">StorePropertyValue</a>!]!</td>
+<td>
+
+Array of additional properties.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>skuVariants</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#skuvariants">SkuVariants</a></td>
+<td>
+
+Object containing data structures to facilitate handling different SKU
+variant properties. Specially useful for implementing SKU selection 
+components.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StorePropertyValue
+
+Properties that can be associated with products and products groups.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>propertyID</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Property id. This propert changes according to the content of the object.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#objectorstring">ObjectOrString</a>!</td>
+<td>
+
+Property value. May hold a string or the string representation of an object.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Property name.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>valueReference</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Specifies the nature of the value.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreRedirect
+
+Redirect informations, including url returned by the query.
+https://schema.org/Thing
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>url</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+URL to redirect.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreReview
+
+Information of a given review.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>reviewRating</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storereviewrating">StoreReviewRating</a>!</td>
+<td>
+
+Review rating information.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>author</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeauthor">StoreAuthor</a>!</td>
+<td>
+
+Review author.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreReviewRating
+
+Information of a given review rating.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>ratingValue</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Rating value.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bestRating</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#float">Float</a>!</td>
+<td>
+
+Best rating value.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreSearchResult
+
+Search result.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>products</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproductconnection">StoreProductConnection</a>!</td>
+<td>
+
+Search result products.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>facets</strong></td>
+<td valign="top">[<a href="#storefacet">StoreFacet</a>!]!</td>
+<td>
+
+Array of search result facets.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>suggestions</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storesuggestions">StoreSuggestions</a>!</td>
+<td>
+
+Search result suggestions.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>metadata</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-onbjects#searchmetadata">SearchMetadata</a></td>
+<td>
+
+Search result metadata. Additional data can be used to send analytics events.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreSeo
+
+Search Engine Optimization (SEO) tags data.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>title</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Title tag.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>titleTemplate</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Title template tag.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Description tag.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>canonical</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Canonical tag.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreSession
+
+Session information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>locale</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Session locale.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>currency</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storecurrency">StoreCurrency</a>!</td>
+<td>
+
+Session currency.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Session country.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>channel</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Session channel.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deliveryMode</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storedeliverymode">StoreDeliveryMode</a></td>
+<td>
+
+Session delivery mode.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>addressType</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Session address type.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postalCode</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a></td>
+<td>
+
+Session postal code.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>geoCoordinates</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storegeocoordinates">StoreGeoCoordinates</a></td>
+<td>
+
+Session input geoCoordinates.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>person</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeperson">StorePerson</a></td>
+<td>
+
+Session input person.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreSuggestionTerm
+
+Suggestion term.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+The term.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>count</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#int">Int</a>!</td>
+<td>
+
+Its occurrences count.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### StoreSuggestions
+
+Suggestions information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>terms</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storesuggestionterm">StoreSuggestionTerm</a>!]!</td>
+<td>
+
+Array with suggestion terms.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>products</strong></td>
+<td valign="top">[<a href="https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct">StoreProduct</a>!]!</td>
+<td>
+
+Array with suggestion products' information.
+
+</td>
+</tr>
+</tbody>
+</table>
