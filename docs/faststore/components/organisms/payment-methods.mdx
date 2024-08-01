@@ -14,7 +14,7 @@ The PaymentMethods component displays the logos of the available payment options
 Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
 
 ```tsx
-import { PaymentMethods } from '@faststore/ui'
+import { PaymentMethods } from "@faststore/ui";
 ```
 
 ### Import Styles into your FastStore project
@@ -22,7 +22,7 @@ import { PaymentMethods } from '@faststore/ui'
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/organisms/PaymentMethods/styles.scss';
+@import "@faststore/ui/src/components/organisms/PaymentMethods/styles.scss";
 ```
 
 Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
@@ -38,23 +38,38 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     </OverviewSection>
   </Tab>
   <Tab>
-```tsx
-export const flags = [
-  { icon: { icon: 'Visa' }, alt: 'Visa' },
-  { icon: { icon: 'Diners' }, alt: 'Diners Club' },
-  { icon: { icon: 'Mastercard' }, alt: 'Mastercard' },
-  { icon: { icon: 'EloCard' }, alt: 'Elo Card' },
-  { icon: { icon: 'PayPal' }, alt: 'PayPal' },
-  { icon: { icon: 'Stripe' }, alt: 'Stripe' },
-  { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
-  { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
-]
+    ```tsx
+    export const flags = [
+      { icon: { icon: 'Amex' }, alt: 'Amex' },
+      { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
+      { icon: { icon: 'EloCard' }, alt: 'Elo Card' },
+      { icon: { icon: 'Diners' }, alt: 'Diners Club' },
+      { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
+      { icon: { icon: 'Mastercard' }, alt: 'Mastercard' },
+      { icon: { icon: 'PayPal' }, alt: 'PayPal' },
+      { icon: { icon: 'Pix' }, alt: 'Pix' },
+      { icon: { icon: 'Stripe' }, alt: 'Stripe' },
+      { icon: { icon: 'Visa' }, alt: 'Visa' },
+    ]
 
-<PaymentMethods title={<h3>Payment Methods</h3>} flagList={flags} />
-```
+    <PaymentMethods title={<h3>Payment Methods</h3>} flagList={flags} />
+    ```
 
   </Tab>
 </Tabs>
+
+export const flags = [
+  { icon: { icon: 'Amex' }, alt: 'Amex' },
+  { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
+  { icon: { icon: 'EloCard' }, alt: 'Elo Card' },
+  { icon: { icon: 'Diners' }, alt: 'Diners Club' },
+  { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
+  { icon: { icon: 'Mastercard' }, alt: 'Mastercard' },
+  { icon: { icon: 'PayPal' }, alt: 'PayPal' },
+  { icon: { icon: 'Pix' }, alt: 'Pix' },
+  { icon: { icon: 'Stripe' }, alt: 'Stripe' },
+  { icon: { icon: 'Visa' }, alt: 'Visa' },
+]
 
 ---
 
