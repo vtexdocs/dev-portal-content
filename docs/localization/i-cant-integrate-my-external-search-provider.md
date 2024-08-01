@@ -14,7 +14,7 @@ tags:
 
 **Keywords:** Integration | VTEX Protocol | Search Protocol | Search Resolver | External Search Provider
 
-When attempting to integrate an external search provider with the VTEX Platform according to the [Implementing a Custom Search Resolver App](https://developers.vtex.com/docs/guides/external-search-provider-recipe) guide, you may encounter “Unknown errors” that prevent successful integration. 
+When attempting to integrate an external search provider with the VTEX Platform according to the [Implementing a Custom Search Resolver App](https://developers.vtex.com/docs/guides/external-search-provider-recipe) guide, you may encounter “Unknown errors” that prevent successful integration.
 
 These errors may occur due to outdated dependencies in your app.
 
