@@ -147,9 +147,9 @@ Widgets can help when you have [created a new store section](https://developers.
 2. Open the `sections.json` file.
 3. In the `sections.json` file, find the section where you want to add the widget. In the following `sections.json` file example, the new section, `Custom Newsletter`, receives the [`media-gallery`](#media-gallery) widget.
 
-  <CH.Code>
+<CH.Code>
 
-  ```json sections.json mark[34:39]
+```json sections.json mark[34:39]
     …
     {
       "name": "CustomNewsletter",
@@ -297,20 +297,20 @@ Widgets can help when you have [created a new store section](https://developers.
 
   ```
 
-  </CH.Code>
+</CH.Code>
 
 ---
 
 ### Synchronize the changes with Headless CMS
 
-4. Open the terminal and run `yarn cms-sync` to synchronize your changes with the Headless CMS. Once the changes are synchronized, you will see the following message: `info: CMS synced successfully...`.
-5. Go to the VTEX Admin and access **Storefront > Headless CMS**.
-6. Open the page where you want to add the new section. In this context, we will add the `Custom Newsletter` to the `Home`.
-7. Add the section to the page, and you will notice the widget you have added, the [`media-gallery`](#media-gallery).
+1. Open the terminal and run `yarn cms-sync` to synchronize your changes with the Headless CMS. Once the changes are synchronized, you will see the following message: `info: CMS synced successfully...`.
+2. Go to the VTEX Admin and access **Storefront > Headless CMS**.
+3. Open the page where you want to add the new section. In this context, we will add the `Custom Newsletter` to the `Home`.
+4. Add the section to the page, and you will notice the widget you have added, the [`media-gallery`](#media-gallery).
 
     ![newsletter-hcms-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-one___6c8c5e28b43487efc6f6048afd8d8d15.gif)
 
-8. Click `Preview` to see the new component with the new image.
+5. Click `Preview` to see the new component with the new image.
 
     ![newsletter-store-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-two___9c76a69ce03639b33faa85eb2a7cb367.png)
 
