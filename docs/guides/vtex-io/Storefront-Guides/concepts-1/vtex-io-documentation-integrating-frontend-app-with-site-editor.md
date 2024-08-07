@@ -16,6 +16,7 @@ Once you have developed a [frontend app](https://developers.vtex.com/docs/guides
 This step is essential to make your custom frontend app available in [Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-site-editor).
 
 In this guide, you will learn how to integrate your custom frontend app with Site Editor.
+
 ## Before you begin
 
 - Create your frontend app following the guide [Creating the new app](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-creating-the-new-app).
