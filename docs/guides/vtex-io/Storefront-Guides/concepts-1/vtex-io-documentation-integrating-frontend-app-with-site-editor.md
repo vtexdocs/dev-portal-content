@@ -1,6 +1,6 @@
 ---
 title: "Integrating a frontend app with Site Editor"
-slug: "integrating-frontend-app-with-site-editor"
+slug: "vtex-io-documentation-integrating-frontend-app-with-site-editor"
 hidden: false
 createdAt: "2024-08-07T15:11:18.590Z"
 updatedAt: ""
