@@ -25,12 +25,13 @@ In this guide, you will learn how to integrate your custom frontend app with Sit
   - [react builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions.
 
 ## Instructions
+
 ### Step 1 - Declaring your app in Store Theme dependencies
 
 Follow the steps below to update your Store Theme dependencies with the name and version of your frontend app.
 
 1. Open the Store Theme app folder in your local files using the code editor of your choice, such as Visual Studio Code.
-2. In the Store Theme `manifest.json` file, add your app to `dependencies`, following this pattern: `”{accountName}.{appName}”: “{appVersion}”`. See the example below:
+2. In the Store Theme `manifest.json` file, add your app to `dependencies`, following this pattern: `"{accountName}.{appName}": "{appVersion}"`. See the example below:
 
    ```js
    "dependencies": {
@@ -46,6 +47,7 @@ Follow the steps below to update your Store Theme dependencies with the name and
    ...
    }
    ```
+
 ### Step 2 - Using a component of your frontend app within a store page
 
 Consider your frontend app has a component named `CustomComponent`, which is declared in a block [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) as `custom-component`:
