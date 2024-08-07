@@ -16,17 +16,15 @@ Once you have developed a [frontend app](https://developers.vtex.com/docs/guides
 This step is essential to make your custom frontend app available in [Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-site-editor).
 
 In this guide, you will learn how to integrate your custom frontend app with Site Editor.
-                                                                                   
 ## Before you begin
 
 - Create your frontend app following the guide [Creating the new app](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-creating-the-new-app).
 - Develop a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) for your store, following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
 - Check if your Store Theme has the [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) properly installed. You must have at least the following builders configured:
   - [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
-  - [react builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions. 
+  - [react builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions.
 
 ## Instructions
-                
 ### Step 1 - Declaring your app in Store Theme dependencies
 
 Follow the steps below to update your Store Theme dependencies with the name and version of your frontend app.
@@ -48,7 +46,6 @@ Follow the steps below to update your Store Theme dependencies with the name and
    ...
    }
    ```
-                    
 ### Step 2 - Using a component of your frontend app within a store page
 
 Consider your frontend app has a component named `CustomComponent`, which is declared in a block [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) as `custom-component`:
