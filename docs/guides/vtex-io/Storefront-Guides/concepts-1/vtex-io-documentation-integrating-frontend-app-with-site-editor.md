@@ -11,9 +11,7 @@ seeAlso:
   - "docs/guides/vtex-io-documentation-making-a-custom-component-available-in-site-editor"
 ---
 
-Once you have developed a [frontend app](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io), the next step is to declare this app in the [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies) of the Store Theme app.
-
-This step is essential to make your custom frontend app available in [Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-site-editor).
+Once you have developed a [frontend app](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io), the next step is to declare this app in the [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies) of the Store Theme app. This step is essential to make your custom frontend app available in [Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-site-editor).
 
 In this guide, you will learn how to integrate your custom frontend app with Site Editor.
 
