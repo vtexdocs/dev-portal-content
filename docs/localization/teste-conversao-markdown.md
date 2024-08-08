@@ -24,7 +24,7 @@ Para se tornar um provedor VTEX integrado , é necessário utilizar uma das segu
 
 * Caso não possua o certificado, implementar o provedor utilizando o [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
-1. A infraestrutura onde o **conector será construído** precisa ter o certificado PCI-DSS assinado por um QSA *(Qualified Security Assessor)*. Maiores informações no [Conselho de Normas de Segurança do PCI](https://www.pcisecuritystandards.org/).
+1. A infraestrutura onde o **conector será construído** precisa ter o certificado PCI-DSS assinado por um QSA _(Qualified Security Assessor)_. Maiores informações no [Conselho de Normas de Segurança do PCI](https://www.pcisecuritystandards.org/).
 
 2. Caso não possua o certificado, implementar o provedor utilizando o [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
@@ -80,7 +80,7 @@ O provedor deve encaminhar à VTEX, o [AOC](https://www.pcisecuritystandards.org
 
 > ❗ Os documentos SAQ (Self-Assessment Questionnaire) e AOC (Attestation of Compliance for Onsite Assessments – Merchants Version) não são aceitos no processo de integração da VTEX.
 
-> ℹ️ [Provedores de pagamentos com boletos, promissórias ou cartões de loja com bandeira própria (Private Label ou cartões em geral, mas que envolvam soluções com redirect)](https://help.vtex.com/pt/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m?&utm_source=autocomplete#provedores-de-pagamentos-com-boletos-promissorias-ou-cartoes-de-loja-com-bandeira-propria-private-label-ou-cartoes-em-geral-mas-que-envolvam-solucoes-com-redirect)
+> ℹ️ [Provedores de pagamentos com boletos, promissórias ou cartões de loja com bandeira própria (Private Label ou cartões em geral, mas que envolvam soluções com redirect)](https://help.vtex.com/pt/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m?\&utm_source=autocomplete#provedores-de-pagamentos-com-boletos-promissorias-ou-cartoes-de-loja-com-bandeira-propria-private-label-ou-cartoes-em-geral-mas-que-envolvam-solucoes-com-redirect)
 
 > ⚠️ O provedor deve encaminhar à VTEX, o [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) totalmente preenchido, observando os eguintes pontos:
 
