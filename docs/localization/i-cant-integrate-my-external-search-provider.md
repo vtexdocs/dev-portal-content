@@ -1,15 +1,14 @@
 ---
-title: "I can’t integrate my external Search Provider"
-slug: "i-cant-integrate-my-external-search-provider"
+title: I can’t integrate my external Search Provider
+slug: i-cant-integrate-my-external-search-provider
 hidden: false
-createdAt: "2024-08-01T15:08:23.602Z"
+createdAt: 2024-08-01T15:08:23.602Z
 updatedAt: ""
-excerpt: 'Learn how to fix "Unknown errors" when integrating an external search provider with VTEX.'
+excerpt: Learn how to fix "Unknown errors" when integrating an external search provider with VTEX.
 tags:
   - integration
   - vtex-protocol
   - search-protocol
-
 ---
 
 **Keywords:** Integration | VTEX Protocol | Search Protocol | Search Resolver | External Search Provider
@@ -31,9 +30,9 @@ Ensure that the `vtex.search-graphql` dependency in your `node/package.json` fil
 3. Compare the version listed in your `node/package.json` with the [latest version available for the `vtex.search-graphql` app](https://github.com/vtex-apps/search-graphql/blob/master/manifest.json#L4).
 4. If your `vtex.search-graphql` dependency is outdated, update it to the latest version.
 
-    a. Edit the `node/package. json` file, updating the version number for `vtex.search-graphql`.
-  
-    b. Save the changes to the `node/package. json` file.
+   a. Edit the `node/package. json` file, updating the version number for `vtex.search-graphql`.
+
+   b. Save the changes to the `node/package. json` file.
 
 ### Step 2 - Install Updated Dependencies
 
