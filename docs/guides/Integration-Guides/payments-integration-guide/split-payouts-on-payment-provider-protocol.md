@@ -459,7 +459,7 @@ curl --location --request POST 'https://{{providerApiEndpoint}}/payments/{{payme
 
 ### Cancellation Stage
 
-> ℹ️ In this version of the Split Payouts, there is no change in the normal Cancellation payload.
+> ℹ️ In this version of the Split Payouts, there are no changes in the normal cancellation payload.
 
 See below an example of the cancellation request:
 
