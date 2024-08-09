@@ -10,7 +10,7 @@ seeAlso:
   - "/docs/guides/vtex-io-documentation-6-buildingyourownstoretheme"
 ---
 
-Your website’s style is fundamental to building your store’s identity.
+Your website’s visual style is fundamental to building your store’s identity.
 
 Once you understand what blocks and templates are and how they render interface components, it’s time to learn how to customize them.
 
