@@ -304,8 +304,8 @@ Split example:
 2. The cart is made up of products from sellerA.
 3. An order with the value of 45.00 is registered.
 4. The following containers will be sent with these values:
-   a. 7.2 for the Marketplace.
-   b. 37.8 for sellerA.
+   a. 7.2 for the marketplace.
+   b. 37.8 for seller A.
 
 > ℹ️ For transactions where the split in _authorization_ is disabled, there are no changes in the normal catch payload.
 
