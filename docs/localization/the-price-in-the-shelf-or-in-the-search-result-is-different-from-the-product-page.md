@@ -1,10 +1,10 @@
 ---
-title: The Price in the shelf or in the search results is different from the product page
-slug: the-price-in-the-shelf-or-in-the-search-results-is-different-from-the-product-page
+title: "The Price in the shelf or in the search results is different from the product page"
+slug: "the-price-in-the-shelf-or-in-the-search-results-is-different-from-the-product-page"
 hidden: false
-createdAt: 2024-06-04T11:15:35.508Z
-updatedAt: 2024-06-04T11:15:35.508Z
-excerpt: Inconsistent pricing when comparing shelves or search results with product pages in stores using Intelligent Search.
+createdAt: "2024-06-04T11:15:35.508Z"
+updatedAt: "2024-06-04T11:15:35.508Z"
+excerpt: "Inconsistent pricing when comparing shelves or search results with product pages in stores using Intelligent Search."
 tags:
   - intelligent-search
   - store-framework
