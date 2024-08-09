@@ -475,4 +475,4 @@ curl --location --request POST 'https://{{providerBaseUrl}}/payments/{{paymentId
 }'
 ```
 
-For more information about payment splits on VTEX, see [Split Payment](https://help.vtex.com/en/tutorial/split-de-pagamento--6k5JidhYRUxileNolY2VLx?&utm_source=autocomplete#).
+For more information about payment splits on VTEX, see [Split Payment](https://help.vtex.com/en/tutorial/split-payment--6k5JidhYRUxileNolY2VLx).
