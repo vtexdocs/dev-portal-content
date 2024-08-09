@@ -32,7 +32,7 @@ In this scenario, the VTEX gateway is responsible for:
 
 > ⚠️ The split payload is sent only if the payment provider supports this scenario.
 
-A supposed situation is shown below to explain how a **calculation breakdown** for split is performed:
+An illustrative example is shown below to explain how a **calculation breakdown** for split is performed:
 
 1. The registered commission is:
    a. 16% for the Marketplace when buying the product from sellerX.
