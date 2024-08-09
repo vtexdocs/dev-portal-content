@@ -12,41 +12,33 @@ The VTEX platform allows the merchant to register sellers, configure commission 
 ## Cart Scenarios
 
 When an order is placed, one of three scenarios are present in the cart:
+
 1. Products only from the Marketplace.
 2. Products from the Marketplace, and one or more sellers.
 3. Products only from seller(s).
 
-
 ### Marketplace Products only
 
 As the order contains products only from the Marketplace, there is no split of payment, calculation of commissioning, or split payload to be sent. The Marketplace will receive the full order payment value.
-
 
 ### Marketplace and Sellers Products only
 
 When an order contains products from the Marketplace and sellers (or only from sellers), a split payout is required.
 In this scenario, the VTEX gateway is responsible for:
 
-  * Calculate commissioning per seller of each order.
-  * Send split payload data to the payment processor.
-  * Process the complete or partial refund in split operations, if required.
+* Calculate commissioning per seller of each order.
+* Send split payload data to the payment processor.
+* Process the complete or partial refund in split operations, if required.
 
-[block:callout]
-{
-  "type": "warning",
-  "body": "The split payload is sent only if the payment provider supports this scenario."
-}
-[/block]
+> ⚠️ The split payload is sent only if the payment provider supports this scenario.
+
 A supposed situation is shown below to explain how a **calculation breakdown** for split is performed:
 
-1. The registered commission is: 
-a. 16% for the Marketplace when buying the product from sellerX. 
-b. 20% for the Marketplace when buying products from sellerY.  
-
+1. The registered commission is:
+   a. 16% for the Marketplace when buying the product from sellerX.
+   b. 20% for the Marketplace when buying products from sellerY.
 2. The cart is made up of products from sellerX, sellerY, and the Marketplace itself.
-
 3. An Order with the value of 199.62 is registered. See below:
-
 
 ```json
 "items": [
@@ -74,11 +66,10 @@ b. 20% for the Marketplace when buying products from sellerY.
 ]
 ```
 
-4. The following containers will be sent with these values: 
-a. 92.36 for the Marketplace.
-b. 73.18 for sellerX.
-c. 34.08 for sellerY.
-
+4. The following containers will be sent with these values:
+   a. 92.36 for the Marketplace.
+   b. 73.18 for sellerX.
+   c. 34.08 for sellerY.
 
 **Calculation Breakdown**
 [block:parameters]
@@ -106,19 +97,17 @@ c. 34.08 for sellerY.
 }
 [/block]
 
-
 ## Split Time Settings
 
 It is also possible to configure the following characteristics of the split process:
 
-  * **Automatic Capture Time**: The payment processor has the permission to control if the automatic capture will occur before or after approval of anti-fraud (setting the fields as `delayToAutoSettle` or `delayToAutoSettleAfterAntifraud`).
-  * **Split Payload Sending Time**: This moment can be set according to each method of payment associated with the transaction. For processors within the PPP (Payment Provider Protocol), it can be done through setting the field on the manifest as `onAuthorize`, `onCapture` or `disabled`.
+* **Automatic Capture Time**: The payment processor has the permission to control if the automatic capture will occur before or after approval of anti-fraud (setting the fields as `delayToAutoSettle` or `delayToAutoSettleAfterAntifraud`).
+* **Split Payload Sending Time**: This moment can be set according to each method of payment associated with the transaction. For processors within the PPP (Payment Provider Protocol), it can be done through setting the field on the manifest as `onAuthorize`, `onCapture` or `disabled`.
 
-       If not specified by the processor, the default behavior is:
+  If not specified by the processor, the default behavior is:
 
-       * **Credit card transaction**: The sending of the split is in the capture call.
-       * **Transaction with boleto**: The sending of the split is in the authorization call.
-
+  * **Credit card transaction**: The sending of the split is in the capture call.
+  * **Transaction with boleto**: The sending of the split is in the authorization call.
 
 ## Split Payout Solution for Payment Provider Protocol
 
@@ -170,7 +159,7 @@ In this section, we will describe modifications applied to our payment protocol 
 
 ### Authorization Stage
 
-For transactions where the split in _authorization_ is enabled, we send the _recipients_ in the authorization payload. The _“recipient’s”_ object array contains data on the values ​​to be passed on to each seller and the Marketplace involved in the order.
+For transactions where the split in _authorization_ is enabled, we send the _recipients_ in the authorization payload. The _“recipient’s”_ object array contains data on the values to be passed on to each seller and the Marketplace involved in the order.
 
 See below an example of the authorization request:
 
@@ -303,13 +292,7 @@ curl --location --request POST 'https://{{providerApiEndpoint}}/payments' \\
 
 ```
 
-[block:callout]
-{
-  "type": "info",
-  "body": "For transactions where the split in _authorization_ is disabled, there are no changes in the normal authorization payload."
-}
-[/block]
-
+> ℹ️ For transactions where the split in _authorization_ is disabled, there are no changes in the normal authorization payload.
 
 ### Capture Stage
 
@@ -321,14 +304,10 @@ Split example:
 2. The cart is made up of products from sellerA.
 3. An order with the value of 45.00 is registered.
 4. The following containers will be sent with these values:
-a. 7.2 for the Marketplace.
-b. 37.8 for sellerA.
-[block:callout]
-{
-  "type": "info",
-  "body": "For transactions where the split in _authorization_ is disabled, there are no changes in the normal catch payload."
-}
-[/block]
+   a. 7.2 for the Marketplace.
+   b. 37.8 for sellerA.
+
+> ℹ️ For transactions where the split in _authorization_ is disabled, there are no changes in the normal catch payload.
 
 See below the capture request for this split example:
 
@@ -372,12 +351,8 @@ curl --location --request POST 'https://{{providerApiEndpoint}}/payments/{{payme
 ```
 
 ### Complete Refund Stage
-[block:callout]
-{
-  "type": "info",
-  "body": "There is no change in the normal complete refund payload."
-}
-[/block]
+
+> ℹ️ There is no change in the normal complete refund payload.
 
 See below an example of the complete refund request:
 
@@ -396,8 +371,9 @@ curl --location --request POST 'https://{{providerApiEndpoint}}/payments/{{payme
 }'
 ```
 
-
 ### Partial Refund Stage
+
+> ⚠️ To allow the use of the split partial refund functionality, you must request the Partner Support team to enable the `acceptSplitPartialRefund` parameter as `true` during the payment provider homologation process.
 
 The _“recipient’s”_ object array will contain the sellers involved in the chargeback. If the chargeback is only applicable for Marketplace items, the _“recipient’s”_ object array will be sent containing only the Marketplace data.
 
@@ -408,8 +384,8 @@ Split example of a partial refund of a seller item:
 3. The cart was made up of items from sellerA.
 4. The value to be refunded from sellerA item is 20.00.
 5. The following containers will be sent with these values:
-a. 3.2 for the Marketplace.
-b. 16.8 for sellerA.
+   a. 3.2 for the Marketplace.
+   b. 16.8 for sellerA.
 
 See below the partial refund request for this split example:
 
@@ -453,7 +429,6 @@ Split example of a partial refund of a Marketplace item:
 2. The value to be refunded from the Marketplace item is 20.00.
 3. A _recipient_ object with a value of 20.00 will be sent to the Marketplace.
 
-
 See below the partial refund request for this split example:
 
 ```json
@@ -482,15 +457,10 @@ curl --location --request POST 'https://{{providerApiEndpoint}}/payments/{{payme
 }'
 ```
 
-
 ### Cancellation Stage
-[block:callout]
-{
-  "type": "info",
-  "title": "",
-  "body": "In this version of the Split Payouts, there is no change in the normal Cancellation payload."
-}
-[/block]
+
+> ℹ️ In this version of the Split Payouts, there is no change in the normal Cancellation payload.
+
 See below an example of the cancellation request:
 
 ```json
