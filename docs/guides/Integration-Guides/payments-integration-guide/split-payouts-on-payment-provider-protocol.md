@@ -159,7 +159,7 @@ In this section, we will describe modifications applied to our payment protocol 
 
 ### Authorization Stage
 
-For transactions where the split in _authorization_ is enabled, we send the _recipients_ in the authorization payload. The _“recipient’s”_ object array contains data on the values to be passed on to each seller and the Marketplace involved in the order.
+For transactions where the split in _authorization_ is enabled, we send the _recipients_ in the authorization payload. The _“recipient’s”_ object array contains data on the values to be passed on to each seller and the marketplace involved in the order.
 
 See below an example of the authorization request:
 
