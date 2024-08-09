@@ -384,8 +384,8 @@ Split example of a partial refund of a seller item:
 3. The cart was made up of items from sellerA.
 4. The value to be refunded from sellerA item is 20.00.
 5. The following containers will be sent with these values:
-   a. 3.2 for the Marketplace.
-   b. 16.8 for sellerA.
+   a. 3.2 for the marketplace.
+   b. 16.8 for seller A.
 
 See below the partial refund request for this split example:
 
