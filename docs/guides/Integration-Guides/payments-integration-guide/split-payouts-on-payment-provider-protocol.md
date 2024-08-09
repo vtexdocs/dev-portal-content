@@ -67,9 +67,9 @@ An illustrative example is shown below to explain how a **calculation breakdown*
 ```
 
 4. The following containers will be sent with these values:
-   a. 92.36 for the Marketplace.
-   b. 73.18 for sellerX.
-   c. 34.08 for sellerY.
+   a. 92.36 for the marketplace.
+   b. 73.18 for seller X.
+   c. 34.08 for seller Y.
 
 **Calculation Breakdown**
 [block:parameters]
